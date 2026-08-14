@@ -230,6 +230,9 @@ data-initiatives-atlas/
 ├── CONTRIBUTING.md
 ├── LICENSE
 │
+├── .github/
+│   └── workflows/          # validation runs on every pull request
+│
 ├── initiatives/
 ├── legislation/
 ├── policies/
