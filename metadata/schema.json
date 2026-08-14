@@ -32,6 +32,7 @@
   ],
   "confidence_levels": ["high", "medium", "low"],
   "coverage_levels": ["low", "medium", "high"],
+  "verification_levels": ["primary-source", "search-only", "unverified"],
   "relationship_source_values": ["fact", "interpretation"],
   "relationship_types": [
     "related-to", "influences", "implements", "implemented-by",
@@ -44,6 +45,6 @@
     "id", "type", "name", "description", "level", "country",
     "status", "confidence", "coverage"
   ],
-  "id_scope_pattern": "^(UN|EU|INTL|[A-Z]{2})(-[A-Z0-9]+(-[A-Z0-9]+)*)?$",
+  "id_scope_pattern": "^(UN|EU|INTL|DOMAIN|[A-Z]{2})(-[A-Z0-9]+(-[A-Z0-9]+)*)?$",
   "anchor_ids": ["NL", "EU", "UN"]
 }

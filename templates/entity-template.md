@@ -14,6 +14,7 @@ region: null                     # e.g. EU — optional, not a substitute for co
 status: unknown                  # see metadata/controlled-vocabularies.md#status
 confidence: low                  # high | medium | low — confidence in THIS Atlas entry
 coverage: low                    # high | medium | low — how thoroughly researched
+verification: unverified         # primary-source | search-only | unverified
 
 start_date: null
 end_date: null

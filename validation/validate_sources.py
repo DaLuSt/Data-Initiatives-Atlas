@@ -27,6 +27,10 @@ def main() -> int:
             continue
 
         if not sources:
+            # Domains are taxonomy/classification nodes rather than researched
+            # entities: they carry no factual claims, so they need no sources.
+            if fm.get("type") == "domain":
+                continue
             if fm.get("status") not in ("unknown", "proposed") or fm.get("coverage") not in ("low",):
                 report.warn(f"{e.rel_path}: no sources listed for an entity with status "
                             f"'{fm.get('status')}' / coverage '{fm.get('coverage')}'")

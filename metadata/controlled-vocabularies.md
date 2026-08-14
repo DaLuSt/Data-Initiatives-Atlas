@@ -31,6 +31,13 @@ distinction between this and `status`.
 
 `low`, `medium`, `high`
 
+## `verification`
+
+`primary-source`, `search-only`, `unverified` — how the entity's sources
+were actually consulted. See `metadata/metadata-schema.md`. Validation
+rejects `confidence: high` on any entity whose `verification` is
+`search-only` or `unverified`.
+
 ## `country`
 
 ISO 3166-1 alpha-2 codes only (e.g. `NL`, `DE`, `BE`, `FR`), or `null`.

@@ -6,11 +6,16 @@ validation (`CONTRIBUTING.md` — Batch workflow).
 
 ## Netherlands
 
-- [ ] **Batch 1 — Netherlands: Core Data Governance.** Forum
-  Standaardisatie, Federatief Datastelsel, IBDS, NORA, Common Ground, MIDO,
-  Data Agenda Overheid, NL Digitaal, and related government data
-  programmes: organisations, policies, strategies, legislation, standards,
-  frameworks, programmes, domains, relationships.
+- [x] **Batch 1 — Netherlands: Core Data Governance.** Done 2026-08-14, 16
+  entities. **Search-only sourcing — owes a primary-source re-verification
+  pass** (`grep -rl "verification: search-only" .`). See
+  `progress/completed.md`.
+- [ ] **Batch 1b — Re-verification of Batch 1.** Fetch and read the sources
+  already cited on the 16 Batch 1 entities; confirm/correct claims; set
+  `verification: primary-source`, `last_verified` and per-source
+  `accessed:` dates; close the open rows in `discovery/unresolved.md`.
+  Requires an environment with outbound HTTPS to public
+  government/EU/standards domains. **Precondition for Batch 6.**
 - [ ] **Batch 2 — Netherlands: Organisations.** Expand the Dutch
   organisation graph (ministries, executive agencies, public authorities,
   standards bodies, research organisations, sector organisations) — only

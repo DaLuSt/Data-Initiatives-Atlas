@@ -7,21 +7,21 @@ so they aren't lost.
 
 ---
 
-## Batch 1 — Netherlands: Core Data Governance (BLOCKED, see below)
+## Batch 1 — Netherlands: Core Data Governance (COMPLETED search-only; needs re-verification)
 
-Batch 1 research was started on 2026-08-14 but could not be completed to the
-Atlas's evidence standard: the session's network egress policy blocks all
-direct page retrieval, so no authoritative source could actually be read.
-Only search-engine results were available, and the brief (§21) forbids using
-search snippets as evidence. See `discovery/unresolved.md` for the blocker
-record.
+Batch 1 was completed on 2026-08-14 from search-engine results only. The
+session's network egress policy blocked all direct page retrieval, so no
+authoritative source was read. This trade-off was raised and then accepted
+explicitly; every resulting entity carries `verification: search-only` and
+`confidence: low`/`medium`.
 
-The candidate source URLs below were returned by web search, which
-establishes that they exist and what their titles are — **but none of them
-have been read, and nothing on them has been verified.** They are recorded
-here so the research can be completed quickly once page retrieval is
-available. Do not promote any of these into an entity's `sources:` list
-until the page has actually been fetched and read.
+**The URLs below are now cited as `sources:` on the Batch 1 entities, but
+none of them have been read.** They remain listed here as the worklist for
+the re-verification pass: fetch each, confirm or correct the claims in the
+corresponding entity, then set `verification: primary-source`,
+`last_verified`, and per-source `accessed:` dates.
+
+Find all affected entities with: `grep -rl "verification: search-only" .`
 
 ### Forum Standaardisatie / open standards
 
@@ -92,19 +92,20 @@ of time-sensitive fact that must be read from the source, not inferred);
 confirm the relationship between MIDO, the GDI and the Meerjarenvisie
 Digitale Overheid.
 
-### Still to be searched/researched for Batch 1
+### Additional sources located during Batch 1
 
-- Data Agenda Overheid — status, publication date, whether superseded.
-- NL DIGIbeter / Agenda Digitale Overheid — status, and whether superseded
-  by a later agenda (temporal accuracy matters here; see brief §11).
-- Overheidsbreed Beleidsoverleg Digitale Overheid (OBDO) — organisation entity.
-- Standaardisatieraad — organisation entity, relationship to Forum Standaardisatie.
-- Ministerie van Binnenlandse Zaken en Koninkrijksrelaties (BZK) — organisation.
-- Logius — organisation, GDI operator.
-- ICTU — organisation, NORA beheerder.
-- VNG (Vereniging van Nederlandse Gemeenten) — organisation.
-- IPO (Interprovinciaal Overleg), UvW (Unie van Waterschappen) — organisations.
-- Generieke Digitale Infrastructuur (GDI) — likely `framework` or `platform`.
+| Candidate source | URL | Relevant to |
+|---|---|---|
+| Overheidsbreed Beleidsoverleg Digitale Overheid (OBDO) | https://www.digitaleoverheid.nl/dossiers/regie-op-gegevens/dossierpostcontext/overheidsbrede-beleidsoverleg-digitale-overheid-obdo/ | NL-OBDO |
+| Governance Digitale Overheid (VNG) | https://vng.nl/artikelen/governance-digitale-overheid | NL-OBDO, NL-VNG |
+| Staatscourant 2018, 9728 | https://zoek.officielebekendmakingen.nl/stcrt-2018-9728.html | NL-OBDO / NL-FORUM-STANDAARDISATIE instellingsbesluit (suspected) |
+| Staatscourant 2022, 18861 | https://zoek.officielebekendmakingen.nl/stcrt-2022-18861.html | NL-OBDO / NL-FORUM-STANDAARDISATIE instellingsbesluit (suspected) |
+| Forum Standaardisatie — Over ons | https://www.forumstandaardisatie.nl/over-ons | NL-FORUM-STANDAARDISATIE |
+| Contactgegevens Stichting ICTU | https://organisaties.overheid.nl/27912852/Stichting_ICTU | NL-ICTU |
+| Rapport Governance ICTU (Eerste Kamer) | https://www.eerstekamer.nl/overig/20220816/toelichting_op_governance_ictu/document | NL-ICTU |
+| 5.2 Logius — Memorie van toelichting | https://www.rijksfinancien.nl/memorie-van-toelichting/2022/owb/vii/onderdeel/1060049 | NL-LOGIUS, NL-BZK |
+| NL DIGITAAL: Data Agenda Overheid (PDF) | https://zoek.officielebekendmakingen.nl/blg-876545.pdf | NL-DATA-AGENDA-OVERHEID |
+| Kabinetsbeleid Digitalisering | https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/kabinetsbeleid-digitalisering/ | NL-DIGIBETER successor question |
 
 ---
 
@@ -112,4 +113,11 @@ Digitale Overheid.
 
 | Area / entity | Why it needs research | Suggested batch | Noted by / date |
 |---|---|---|---|
-| _(none yet)_ | | | |
+| Interprovinciaal Overleg (IPO) | Named as an OBDO member; belongs in the organisation graph | Batch 2 | Batch 1 / 2026-08-14 |
+| Unie van Waterschappen (UvW) | Named as an OBDO member; belongs in the organisation graph | Batch 2 | Batch 1 / 2026-08-14 |
+| CIO Rijk | Named as an OBDO member | Batch 2 | Batch 1 / 2026-08-14 |
+| College Standaardisatie | Established in 2006 alongside Forum Standaardisatie; current status unknown — may be superseded, which would need a `supersedes` link | Batch 2 | Batch 1 / 2026-08-14 |
+| Individual GDI services (DigiD, DigiD Machtigen, MijnOverheid, Digipoort) | Referenced by NL-GDI and NL-LOGIUS but not yet entities; decide whether they warrant separate entities | Batch 2 or 5 | Batch 1 / 2026-08-14 |
+| GEMMA, EAR, ROSA, PETRA | NORA's derived reference architectures; need `derived-from`/`based-on` links to NL-NORA | Batch 4 | Batch 1 / 2026-08-14 |
+| Individual open standards on the 'pas toe of leg uit' list | Referenced by NL-PAS-TOE-OF-LEG-UIT | Batch 4 | Batch 1 / 2026-08-14 |
+| Meerjarenvisie Digitale Overheid; GDI programmeringsplan | Named as MIDO components; may warrant entities or may be publications | Batch 4 | Batch 1 / 2026-08-14 |

@@ -88,6 +88,18 @@ def main() -> int:
         if coverage is not None and coverage not in schema["coverage_levels"]:
             report.error(f"{e.rel_path}: invalid coverage '{coverage}'")
 
+        verification = fm.get("verification")
+        if verification is not None and verification not in schema["verification_levels"]:
+            report.error(f"{e.rel_path}: invalid verification '{verification}'")
+
+        # An entity may only claim high confidence if a human/agent actually
+        # read a primary source for it.
+        if verification in ("search-only", "unverified") and fm.get("confidence") == "high":
+            report.error(
+                f"{e.rel_path}: confidence 'high' is not permitted with "
+                f"verification '{verification}' — no primary source has been read"
+            )
+
         country = fm.get("country")
         if country is not None and not ISO2_RE.match(str(country)):
             report.error(
@@ -95,7 +107,14 @@ def main() -> int:
                 f"ISO 3166-1 alpha-2 code (use null if not applicable)"
             )
 
-        if status == "active" and not fm.get("last_verified"):
+        # A search-only/unverified entity correctly has no last_verified date
+        # (nothing was verified), so the reminder would be pure noise there —
+        # the verification field already flags it for a re-verification pass.
+        if (
+            status == "active"
+            and not fm.get("last_verified")
+            and verification not in ("search-only", "unverified")
+        ):
             report.warn(f"{e.rel_path}: status is 'active' but 'last_verified' is not set")
 
     return report.print_and_exit_code()

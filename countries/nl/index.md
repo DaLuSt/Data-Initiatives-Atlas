@@ -7,30 +7,58 @@ belong on the country's front page (`CONTRIBUTING.md`).
 
 Anchor entity: [[NL]]
 
+> **Batch 1 sourcing caveat.** Every Dutch entity below was compiled from
+> search-engine results only: the cited pages were confirmed to exist but
+> were **not read**, because the working environment blocked page
+> retrieval. They carry `verification: search-only` and need a
+> re-verification pass against primary sources. See
+> `progress/current-batch.md`.
+
 ## Strategies
 
-_None yet — populated starting Batch 1._
+- [[NL-IBDS]] — Interbestuurlijke Datastrategie
+- [[NL-DIGIBETER]] — NL DIGIbeter: Agenda Digitale Overheid
+- [[NL-DATA-AGENDA-OVERHEID]] — NL DIGITAAL: Data Agenda Overheid
 
-## Legislation
+## Policies
 
-_None yet._
-
-## Organisations
-
-_None yet._
+- [[NL-PAS-TOE-OF-LEG-UIT]] — 'Pas toe of leg uit'-beleid (open standards)
 
 ## Standards and Frameworks
 
-_None yet._
+- [[NL-NORA]] — Nederlandse Overheid Referentie Architectuur
+- [[NL-FDS]] — Federatief Datastelsel
+
+_Individual open standards, GEMMA, EAR, ROSA and PETRA are Batch 4 scope._
 
 ## Programmes and Initiatives
 
-_None yet._
+- [[NL-MIDO]] — Meerjarenprogramma Infrastructuur Digitale Overheid
+- [[NL-COMMON-GROUND]] — Common Ground
+
+## Platforms
+
+- [[NL-GDI]] — Generieke Digitale Infrastructuur
+
+## Organisations
+
+- [[NL-BZK]] — Ministerie van Binnenlandse Zaken en Koninkrijksrelaties
+- [[NL-FORUM-STANDAARDISATIE]] — Forum Standaardisatie
+- [[NL-OBDO]] — Overheidsbreed Beleidsoverleg Digitale Overheid
+- [[NL-LOGIUS]] — Logius
+- [[NL-ICTU]] — Stichting ICTU
+- [[NL-VNG]] — Vereniging van Nederlandse Gemeenten
+
+_IPO and Unie van Waterschappen are queued for Batch 2._
 
 ## Domains
 
-_None yet._
+- [[DOMAIN-GOVERNMENT]] — Government
+
+## Legislation
+
+_None yet — Batch 3._
 
 ---
 
-Last updated: 2026-08-14 (Batch 0 — structure only, no content yet).
+Last updated: 2026-08-14 (Batch 1).

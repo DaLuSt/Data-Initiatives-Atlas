@@ -24,6 +24,7 @@ region:                # optional — e.g. EU, UN; not a substitute for country
 status:                # required — controlled vocabulary, see below
 confidence:            # required — high | medium | low (confidence in the Atlas's representation)
 coverage:              # required — low | medium | high (how thoroughly researched)
+verification:          # optional — primary-source | search-only | unverified
 
 start_date:            # optional — ISO date
 end_date:              # optional — ISO date
@@ -67,6 +68,19 @@ sources:               # required for any entity making factual claims
   parent domain/country marked `high`) from "this area has not yet been
   researched" (`coverage: low` on whatever entity represents that area, plus
   a `discovery/research-queue.md` entry).
+- **verification**: how the entity's sources were actually consulted.
+  - `primary-source` — the cited sources were retrieved and read.
+  - `search-only` — the entity was compiled from search-engine results.
+    The cited URLs were confirmed by a search index to exist, but **were
+    not read**. Such entities carry no `accessed:` dates (nothing was
+    accessed) and must not claim `confidence: high` — validation enforces
+    this. They need a re-verification pass against the primary sources.
+  - `unverified` — asserted without either; should be rare and paired with
+    a `discovery/unresolved.md` entry.
+
+  Omitting the field is treated as "not stated"; prefer stating it
+  explicitly on any entity added under constrained sourcing conditions, so
+  a later pass can find them with a single grep.
 - **last_verified**: the date a human/agent last checked the sources still
   support the current field values. Required once an entity is anything
   other than a stub.

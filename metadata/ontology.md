@@ -65,6 +65,9 @@ commit that introduces the first entity of that type.
   - `EU` — European Union
   - `<ISO2>` — a national scope, using the ISO 3166-1 alpha-2 code (`NL`, `DE`, `BE`, ...)
   - `INTL` — international/global entities that are not UN-system (e.g. ISO, W3C, IETF, OECD)
+  - `DOMAIN` — subject-matter domain entities (`metadata/taxonomy.md` §1),
+    which are cross-cutting classification nodes rather than entities
+    belonging to any one geography
 - `SLUG` is an uppercase, hyphen-separated short form of the entity's name,
   stable once assigned.
 

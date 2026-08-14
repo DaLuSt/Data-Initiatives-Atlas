@@ -36,8 +36,11 @@ def check_relationships(e: common.EntityFile, schema: dict, ids: set[str], repor
             report.error(f"{where}: invalid relationship type '{rel_type}'")
 
         target = rel.get("target")
+        own_id = e.frontmatter.get("id")
         if not target:
             report.error(f"{where}: missing 'target'")
+        elif target == own_id:
+            report.error(f"{where}: target '{target}' is the entity itself — relationships must point at another entity")
         elif target not in ids:
             report.error(f"{where}: target '{target}' does not resolve to a known id")
 
