@@ -89,8 +89,36 @@ _Individual open standards, GEMMA, EAR, ROSA and PETRA are Batch 4 scope._
 
 ## Legislation
 
-_None yet — Batch 3._
+### Dutch implementation legislation (EU-originated)
+
+- [[NL-UAVG]] — Uitvoeringswet AVG → implements [[EU-GDPR]]
+- [[NL-WHO]] — Wet hergebruik van overheidsinformatie → implements [[EU-OPEN-DATA-DIRECTIVE]]
+- [[NL-CBW]] — Cyberbeveiligingswet → implements [[EU-NIS2]] _(in force 15 Aug 2026)_
+
+### Dutch national legislation
+
+- [[NL-WOO]] — Wet open overheid _(supersedes [[NL-WOB]])_
+- [[NL-WDO]] — Wet digitale overheid
+- [[NL-ARCHIEFWET-1995]] — Archiefwet 1995
+- [[NL-WET-BRP]] — Wet basisregistratie personen
+- [[NL-WET-CBS]] — Wet op het Centraal bureau voor de statistiek
+- [[NL-TNO-WET]] — TNO-wet
+
+### Superseded / forthcoming
+
+- [[NL-WOB]] — Wet openbaarheid van bestuur _(superseded 1 May 2022)_
+- [[NL-WBNI]] — Wet beveiliging netwerk- en informatiesystemen _(ends 15 Aug 2026)_
+- [[NL-ARCHIEFWET-2026]] — Archiefwet 2026 _(in force 1 Jan 2027)_
+
+## Applicable EU legislation
+
+Recorded once, country-neutrally, with `applies-in → NL`:
+
+- [[EU-GDPR]] · [[EU-OPEN-DATA-DIRECTIVE]] · [[EU-NIS2]]
+
+_Minimal anchors created in Batch 3 to carry the implementation chain;
+Batch 8 deepens them._
 
 ---
 
-Last updated: 2026-08-14 (Batch 2).
+Last updated: 2026-08-14 (Batch 3).

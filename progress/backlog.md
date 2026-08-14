@@ -20,11 +20,13 @@ validation (`CONTRIBUTING.md` — Batch workflow).
   entities (13 organisations + 1 framework + 1 strategy + 2 domains).
   **Search-only sourcing — included in the Batch 1b re-verification debt.**
   See `progress/completed.md`.
-- [ ] **Batch 3 — Netherlands: Legislation and Regulation.** Dutch and
-  applicable EU legislation on data, privacy, data sharing, digital
-  government, open data, public information, archives, digital identity,
-  AI, cybersecurity, interoperability, digital infrastructure, information
-  management — classified per `metadata/taxonomy.md` §2.
+- [x] **Batch 3 — Netherlands: Legislation and Regulation.** Done
+  2026-08-14, 15 entities (3 EU anchors + 12 Dutch acts, including 3
+  retained superseded/forthcoming instruments). Established the first
+  complete EU→national→authority vertical chains. **Search-only sourcing —
+  included in the Batch 1b re-verification debt.** AI legislation was *not*
+  covered (no Dutch AI-specific act identified; the AI Act is Batch 8).
+  See `progress/completed.md`.
 - [ ] **Batch 4 — Netherlands: Standards, Frameworks and Architecture.**
   Forum Standaardisatie standards, NORA, GEMMA, EAR, MIDO, ROSA, PETRA,
   metadata/API/interoperability/data-quality/security standards, connected

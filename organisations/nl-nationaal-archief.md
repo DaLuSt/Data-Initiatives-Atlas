@@ -28,8 +28,17 @@ successor: null
 domains:
   - DOMAIN-GOVERNMENT
 organisations: []
-related_entities: []
-relationships: []
+related_entities:
+  - NL-ARCHIEFWET-1995
+  - NL-ARCHIEFWET-2026
+relationships:
+  - type: governed-by
+    target: NL-ARCHIEFWET-1995
+    source: fact
+    evidence: "Government organisations must in principle transfer records after twenty years to the Nationaal Archief or a local/regional archive service under the Archiefwet (nationaalarchief.nl kennisbank). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: 2027-01-01
 
 sources:
   - title: "Archiefwet — Kennisbank"
@@ -63,18 +72,20 @@ and to destroy it once retention periods expire. Government organisations
 must in principle transfer records after twenty years to the Nationaal
 Archief or to a local or regional archive service.
 
-Research surfaced a revision: search results state that a revised Archiefwet
-takes effect on 1 January 2027, better aligned with digital practice. That
-date lies in the future relative to this entry and was not verified; the
-Archiefwet and its revision are legislation and belong in `legislation/` in
-Batch 3, where the date must be confirmed before it is recorded. The
-relationship from this organisation to that legislation should be created
-then.
+Batch 3 added both the current [[NL-ARCHIEFWET-1995]] and its successor
+[[NL-ARCHIEFWET-2026]], which takes effect on 1 January 2027 and shortens
+the transfer period from twenty years to ten — a change that bears directly
+on this organisation's intake.
 
 ## Relationships
 
-None recorded yet. The governing relationship — `governed-by` the Archiefwet
-— cannot be asserted until that legislation exists as an entity in Batch 3.
+- Governed by [[NL-ARCHIEFWET-1995]], with `valid_until: 2027-01-01`
+  recording that this relationship is time-bounded.
+- [[NL-ARCHIEFWET-2026]] will govern it from 1 January 2027. That
+  relationship is deliberately **not** yet asserted as current: the
+  `valid_until` on the existing one, plus the successor chain between the
+  two acts, already expresses the transition without claiming a governing
+  relationship that has not yet commenced.
 
 ## Sources
 

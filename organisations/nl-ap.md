@@ -29,8 +29,24 @@ successor: null
 domains:
   - DOMAIN-GOVERNMENT
 organisations: []
-related_entities: []
-relationships: []
+related_entities:
+  - EU-GDPR
+  - NL-UAVG
+relationships:
+  - type: governed-by
+    target: NL-UAVG
+    source: fact
+    evidence: "The AP is the Dutch supervisory authority designated by law; the UAVG is the Dutch implementing act for the GDPR under which it operates (autoriteitpersoonsgegevens.nl UAVG document page). NOT READ — search-only."
+    confidence: medium
+    valid_from: 2018-05-25
+    valid_until: null
+  - type: implements-requirement-from
+    target: EU-GDPR
+    source: fact
+    evidence: "Under the GDPR every member state must designate an independent supervisory authority; the AP is that authority for the Netherlands, and its tasks derive from the regulation (rijksoverheid.nl; noraonline.nl). NOT READ — search-only."
+    confidence: medium
+    valid_from: 2018-05-25
+    valid_until: null
 
 sources:
   - title: "Autoriteit Persoonsgegevens (AP) — Contactgids"
@@ -66,16 +82,18 @@ others, and must have sufficient resources to do its work.
 
 ## Relationships
 
-No relationships are recorded yet, and this is a deliberate gap rather than
-an oversight. The AP's defining relationship is to the GDPR and, through it,
-to the European Data Protection Board — both EU-level entities scheduled for
-Batches 8 and 9. Once `EU-GDPR` exists, this entity should gain an
-`implements-requirement-from` relationship to it, and the Dutch
-implementation act (UAVG, Batch 3) should link here too. Recorded in
-`discovery/research-queue.md`.
+- Governed by [[NL-UAVG]], the Dutch implementing act.
+- Designated under [[EU-GDPR]], which requires every member state to
+  appoint an independent supervisory authority.
 
-This is exactly the vertical EU→national chain the Atlas is meant to make
-visible, and it will only be assertable once the EU layer is populated.
+Both relationships were added in Batch 3, closing the gap this entity
+carried when created in Batch 2. Together with
+[[NL-UAVG]] → [[EU-GDPR]] they form the Atlas's first complete vertical
+chain: EU regulation → national implementing act → national authority.
+
+Still outstanding: the European Data Protection Board and EDPS (Batch 9),
+and the Wet bescherming persoonsgegevens (Wbp) which the GDPR regime
+replaced.
 
 ## Sources
 

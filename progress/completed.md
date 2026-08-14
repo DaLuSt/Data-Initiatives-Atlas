@@ -1,5 +1,110 @@
 # Completed Batches
 
+## Batch 3 — Netherlands: Legislation and Regulation
+
+**Date:** 2026-08-14
+
+**Scope:** Dutch and applicable European legislation on data, privacy, data
+sharing, digital government, open data, public information, archives,
+digital identity, cybersecurity and information management, classified per
+`metadata/taxonomy.md` §2.
+
+**⚠ Evidence standard:** unchanged — page retrieval remained blocked, so all
+entities are `verification: search-only`.
+
+**Entities added (15):**
+
+*EU legislation (minimal anchors — Batch 8 deepens):*
+
+| ID | Type | Note |
+|---|---|---|
+| `EU-GDPR` | regulation | Regulation (EU) 2016/679 |
+| `EU-OPEN-DATA-DIRECTIVE` | directive | Directive (EU) 2019/1024 |
+| `EU-NIS2` | directive | Directive (EU) 2022/2555 |
+
+*Dutch implementation legislation (`region: EU`):*
+
+| ID | Implements | Note |
+|---|---|---|
+| `NL-UAVG` | `EU-GDPR` | In force 25 May 2018 |
+| `NL-WHO` | `EU-OPEN-DATA-DIRECTIVE` | Amended 2024 by Wet implementatie Open data richtlijn |
+| `NL-CBW` | `EU-NIS2` | `status: planned`, in force 15 Aug 2026 |
+
+*Dutch national legislation (`region: null`):*
+
+| ID | Note |
+|---|---|
+| `NL-WOO` | In force 1 May 2022; supersedes `NL-WOB` |
+| `NL-WDO` | Phased from 1 July 2023 |
+| `NL-ARCHIEFWET-1995` | Superseded from 1 Jan 2027 |
+| `NL-WET-BRP` | In force 6 Jan 2014 |
+| `NL-WET-CBS` | CBS became a ZBO 1 Jan 2004 |
+| `NL-TNO-WET` | 1930, in force 1932 |
+
+*Retained for temporal integrity:*
+
+| ID | Status |
+|---|---|
+| `NL-WOB` | `superseded` (1 May 2022), `successor: NL-WOO` |
+| `NL-WBNI` | `active` with `end_date: 2026-08-15`, `successor: NL-CBW` |
+| `NL-ARCHIEFWET-2026` | `planned`, in force 1 Jan 2027 |
+
+**The first complete vertical chain.** Batch 3's main structural achievement
+is that the Atlas can now express what it was built for:
+
+```
+EU-GDPR  →  NL-UAVG  →  NL-AP
+(regulation) (implementing act) (supervisory authority)
+```
+
+with `applies-in → NL` on the EU entity rather than a Dutch copy of it.
+Two further chains follow the same shape via `NL-WHO` and `NL-CBW`.
+
+**Dangling Batch 2 relationships closed (5):** `NL-AP` (→ UAVG + GDPR),
+`NL-NATIONAAL-ARCHIEF` (→ Archiefwet 1995, with `valid_until: 2027-01-01`),
+`NL-CBS` (→ Wet op het CBS), `NL-TNO` (→ TNO-wet),
+`NL-BASISREGISTRATIES` (→ Wet BRP, at `confidence: low` — see below).
+
+**Relationships added:** 19 provenanced entries, including 4
+`implements-requirement-from`, 3 `applies-in`, 3 `supersedes`, 4
+`governed-by`, 4 `applies-to`, 1 `influences`.
+
+**Sources added:** 42 source entries.
+
+**Temporal modelling exercised for the first time.** Three supersession
+chains are now represented with both `successor`/`previous_version` fields
+and `supersedes` relationships carrying `valid_from` dates, and one
+relationship (`NL-NATIONAAL-ARCHIEF` → Archiefwet 1995) carries a
+`valid_until`. `NL-CBW` is recorded as `planned` with a commencement date of
+15 August 2026 — the day after this batch was written — which makes it a
+live demonstration of why `status` must never be read from a stale snapshot.
+
+**Known gaps and honest weak points:**
+- `NL-WHO` has **no `start_date`**: two sources gave conflicting
+  entry-into-force dates (19 June vs 2 August 2024) and neither was
+  preferred over the other.
+- `NL-ARCHIEFWET-2026` appears under three different names across sources
+  (Archiefwet 2021 / 2026 / "20xx"). The name is provisional; the ID is not.
+- `NL-TNO-WET` is the weakest entity: a 1930 act with no located
+  consolidated text and a Wikipedia secondary source.
+- `NL-BASISREGISTRATIES` → `NL-WET-BRP` is recorded at `confidence: low`
+  because the Wet BRP governs one registration, not the stelsel; the link
+  should move to a BRP entity once the individual registrations exist.
+- `NL-WDO` is classified as purely national, but its subject matter overlaps
+  EU digital identity law; flagged for re-examination when eIDAS lands.
+- Handelsregisterwet was **not** created — no adequate source was located,
+  so `NL-KVK`'s statutory basis remains open rather than being filled with
+  a guess.
+
+**Validation result:** all 5 checks pass, 0 errors, 0 warnings, across 51
+entities.
+
+**Next batch:** Batch 4 — Netherlands: Standards, Frameworks and
+Architecture (Forum Standaardisatie standards, GEMMA, EAR, ROSA, PETRA,
+BOMOS, metadata/API/interoperability standards).
+
+---
+
 ## Batch 2 — Netherlands: Organisations
 
 **Date:** 2026-08-14

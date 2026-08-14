@@ -34,7 +34,15 @@ related_entities:
   - NL-KADASTER
   - NL-KVK
   - NL-RDW
-relationships: []
+  - NL-WET-BRP
+relationships:
+  - type: governed-by
+    target: NL-WET-BRP
+    source: fact
+    evidence: "The Wet BRP governs the Basisregistratie Personen, one of the registrations within the stelsel (rvig.nl; digitaleoverheid.nl BRP page). This governs one registration, not the stelsel as a whole. NOT READ — search-only."
+    confidence: low
+    valid_from: 2014-01-06
+    valid_until: null
 
 sources:
   - title: "10 basisregistraties — Stelsel van basisregistraties"
@@ -89,6 +97,11 @@ part of one data system rather than three unrelated agencies.
 ## Relationships
 
 - Registrations held by [[NL-KADASTER]], [[NL-KVK]] and [[NL-RDW]].
+- [[NL-WET-BRP]] governs the BRP registration within the stelsel. Note this
+  relationship is recorded at `confidence: low`: the Wet BRP governs *one*
+  registration, not the stelsel as a whole, and each registration has its
+  own statutory basis. Once the individual registrations become entities,
+  this link should move down to the BRP entity.
 - Policy responsibility within [[NL-BZK]]'s digital-government remit
   (asserted by the digitaleoverheid.nl placement of the topic, not by a
   read source).

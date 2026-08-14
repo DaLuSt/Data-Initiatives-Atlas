@@ -31,7 +31,15 @@ domains:
 organisations: []
 related_entities:
   - NL-GEONOVUM
-relationships: []
+  - NL-TNO-WET
+relationships:
+  - type: governed-by
+    target: NL-TNO-WET
+    source: fact
+    evidence: "The TNO-wet of 30 October 1930, in force 1 May 1932, established TNO's task, organisational form, legal status and relationship with government. NOT READ — search-only."
+    confidence: medium
+    valid_from: 1932-05-01
+    valid_until: null
 
 sources:
   - title: "Contactgegevens Nederlandse organisatie voor toegepast-natuurwetenschappelijk onderzoek"
@@ -71,6 +79,7 @@ rather than any later reorganisation.
 
 ## Relationships
 
+- Governed by [[NL-TNO-WET]].
 - Co-funder of [[NL-GEONOVUM]] through the Geological Survey of the
   Netherlands.
 

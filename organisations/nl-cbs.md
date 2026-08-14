@@ -30,8 +30,16 @@ successor: null
 domains:
   - DOMAIN-GOVERNMENT
 organisations: []
-related_entities: []
-relationships: []
+related_entities:
+  - NL-WET-CBS
+relationships:
+  - type: governed-by
+    target: NL-WET-CBS
+    source: fact
+    evidence: "The Wet op het Centraal bureau voor de statistiek (2003) is the CBS's legal basis; the CBS became a ZBO under it on 1 January 2004 (Eerste Kamer dossier 28.277). NOT READ — search-only."
+    confidence: medium
+    valid_from: 2004-01-01
+    valid_until: null
 
 sources:
   - title: "Wet op het Centraal bureau voor de statistiek (28.277)"
@@ -67,19 +75,19 @@ the responsible minister, the CCS and the CBS. It is described as
 guaranteeing the CBS's independent position relative to government and other
 public institutions.
 
-Two things are deliberately **not** recorded here. The Wet op het CBS is
-legislation and belongs in `legislation/` as its own entity in Batch 3; it
-appears here only as a source. And the responsible ministry — named in
-research as Economic Affairs — is not linked, because Dutch ministry names
-and portfolio boundaries have changed repeatedly and no ministry entity for
-it exists yet; see `discovery/unresolved.md`.
+Batch 3 added the act itself as [[NL-WET-CBS]], closing the relationship
+this entity carried as a gap in Batch 2.
 
-The CCS is likewise not yet an entity and is queued for research.
+The responsible ministry — named in research as Economic Affairs — is still
+not linked, because Dutch ministry names and portfolio boundaries have
+changed repeatedly and no ministry entity for it exists yet; see
+`discovery/unresolved.md`. The CCS is likewise not yet an entity.
 
 ## Relationships
 
-- Statistical authority within the Dutch government data landscape. Its
-  relationships to [[NL-BASISREGISTRATIES]] and to European statistical
+- Governed by [[NL-WET-CBS]], under which it became a ZBO on
+  1 January 2004.
+- Relationships to [[NL-BASISREGISTRATIES]] and to European statistical
   governance (Eurostat, Batch 9) are not yet established.
 
 ## Sources
