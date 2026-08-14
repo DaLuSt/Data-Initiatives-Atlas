@@ -16,10 +16,10 @@ validation (`CONTRIBUTING.md` — Batch workflow).
   `accessed:` dates; close the open rows in `discovery/unresolved.md`.
   Requires an environment with outbound HTTPS to public
   government/EU/standards domains. **Precondition for Batch 6.**
-- [ ] **Batch 2 — Netherlands: Organisations.** Expand the Dutch
-  organisation graph (ministries, executive agencies, public authorities,
-  standards bodies, research organisations, sector organisations) — only
-  where there is a meaningful relationship to the data/digital ecosystem.
+- [x] **Batch 2 — Netherlands: Organisations.** Done 2026-08-14, 17
+  entities (13 organisations + 1 framework + 1 strategy + 2 domains).
+  **Search-only sourcing — included in the Batch 1b re-verification debt.**
+  See `progress/completed.md`.
 - [ ] **Batch 3 — Netherlands: Legislation and Regulation.** Dutch and
   applicable EU legislation on data, privacy, data sharing, digital
   government, open data, public information, archives, digital identity,

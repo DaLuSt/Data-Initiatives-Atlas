@@ -1,5 +1,92 @@
 # Completed Batches
 
+## Batch 2 — Netherlands: Organisations
+
+**Date:** 2026-08-14
+
+**Scope:** Expand the Dutch organisation graph across data governance,
+digital government, information management, interoperability, standards,
+public-sector data, statistics, research and digital infrastructure.
+
+**⚠ Evidence standard:** unchanged from Batch 1 — page retrieval remained
+blocked, so all substantive entities are `verification: search-only` with no
+`accessed:` dates, `last_verified: null`, no `confidence: high`, and a
+visible caveat in each body.
+
+**Entities added (17):**
+
+| ID | Type | Note |
+|---|---|---|
+| `NL-IPO` | organisation | Provinces (koepel) |
+| `NL-UVW` | organisation | Water authorities (koepel) |
+| `NL-CBS` | organisation | National statistical office, ZBO since 2004 |
+| `NL-KADASTER` | organisation | Holds BRK |
+| `NL-KVK` | organisation | Holds Handelsregister |
+| `NL-RDW` | organisation | Holds BRV since 2008 |
+| `NL-GEONOVUM` | organisation | Geo-standards |
+| `NL-NEN` | organisation | National standards institute |
+| `NL-NICTIZ` | organisation | Health information standards (`level: sectoral`) |
+| `NL-AP` | organisation | Data protection authority |
+| `NL-NATIONAAL-ARCHIEF` | organisation | Archives / information management |
+| `NL-SURF` | organisation | Education & research ICT cooperative |
+| `NL-TNO` | organisation | Applied research |
+| `NL-BASISREGISTRATIES` | framework | Stelsel van Basisregistraties |
+| `NL-NDS` | strategy | Nederlandse Digitaliseringsstrategie (July 2025) |
+| `DOMAIN-GEOSPATIAL` | domain | Connects Kadaster + Geonovum |
+| `DOMAIN-RESEARCH` | domain | Connects SURF + TNO |
+
+**Entities updated:** `countries/nl/index.md` (restructured with grouped
+organisation sections).
+
+**Relationships added:** 9 provenanced entries (4 `participates-in` to the
+base-registry system, 2 `participates-in` to OBDO/IBDS, 1 `references`,
+1 `aligned-with`, 1 additional), plus lightweight reference lists.
+
+**Sources added:** 45 source entries across the 17 entities.
+
+**Two deliberate out-of-scope additions.** Batch 2 is nominally
+organisations only; two non-organisation entities were added and the reason
+is recorded in a "Scope note" section in each file:
+- `NL-BASISREGISTRATIES` (framework) — without it, Kadaster, KVK and RDW
+  would be three disconnected agency nodes rather than participants in one
+  data system. Graph coherence was judged to outrank batch purity.
+- `NL-NDS` (strategy) — surfaced during organisation research, is a
+  high-priority national strategy that Batch 1 missed, and directly narrows
+  the open question about whether NL DIGIbeter was superseded.
+
+**Taxonomy discipline held.** `DOMAIN-HEALTH` (for Nictiz) and
+`DOMAIN-EDUCATION` (for SURF) were **not** created, because
+`metadata/taxonomy.md` §1 requires a domain to connect two or more entities
+and each would currently connect one. Both are queued for Batch 5, and both
+entities carry a note explaining the gap. `DOMAIN-EDUCATION` was caught by
+`validate_relationships.py` after being referenced before creation — the
+validator did its job.
+
+**Validation result:** `python validation/run_all.py` — all 5 checks pass,
+0 errors, 0 warnings, across 36 entities.
+
+**Known gaps:**
+- All 30 search-only entities (Batches 1+2) still need primary-source
+  re-verification.
+- `discovery/unresolved.md` now holds 20 open questions; 5 new ones from
+  this batch concern NDS continuity under a new cabinet, the
+  basisregistraties↔FDS relationship, CBS's responsible ministry, the
+  reported 1 Jan 2027 Archiefwet revision, and three entity-typing calls.
+- 21 items queued in `discovery/research-queue.md`, including CIO Rijk, Het
+  Waterschapshuis, VNG Realisatie, CCS, AcICT, DANS/Health-RI/RIVM/NWO,
+  SIDN, BOMOS, and the ten individual basisregistraties.
+- Several organisations (`NL-AP`, `NL-NEN`, `NL-NATIONAAL-ARCHIEF`) have
+  **no relationships recorded**, because their defining links are to
+  legislation (Batch 3) or to EU/international bodies (Batches 8–13) that
+  do not yet exist. These are documented gaps, not omissions.
+- `NL-KVK` is the weakest entity in the batch: its only general-profile
+  source is Wikipedia, low in the README's source preference order.
+
+**Next batch:** Batch 3 — Netherlands: Legislation and Regulation. This is
+where several currently-dangling organisation relationships get closed.
+
+---
+
 ## Batch 1 — Netherlands: Core Data Governance
 
 **Date:** 2026-08-14

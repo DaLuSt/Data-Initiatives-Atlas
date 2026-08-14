@@ -113,9 +113,27 @@ Digitale Overheid.
 
 | Area / entity | Why it needs research | Suggested batch | Noted by / date |
 |---|---|---|---|
-| Interprovinciaal Overleg (IPO) | Named as an OBDO member; belongs in the organisation graph | Batch 2 | Batch 1 / 2026-08-14 |
-| Unie van Waterschappen (UvW) | Named as an OBDO member; belongs in the organisation graph | Batch 2 | Batch 1 / 2026-08-14 |
-| CIO Rijk | Named as an OBDO member | Batch 2 | Batch 1 / 2026-08-14 |
+| ~~Interprovinciaal Overleg (IPO)~~ | Added in Batch 2 as [[NL-IPO]] | — | Done |
+| ~~Unie van Waterschappen (UvW)~~ | Added in Batch 2 as [[NL-UVW]] | — | Done |
+| CIO Rijk | Named as an OBDO member; not yet researched | Batch 3 or later | Batch 1 / 2026-08-14 |
+| Het Waterschapshuis | Develops and manages shared ICT facilities for the 21 water authorities; sourcing in Batch 2 was a single passing mention | Batch 3 or later | Batch 2 / 2026-08-14 |
+| VNG Realisatie | VNG's implementation arm; not yet researched | Batch 3 or later | Batch 2 / 2026-08-14 |
+| Centrale Commissie voor de Statistiek (CCS) | Statutory supervisor of the CBS under the Wet op het CBS | Batch 3 or later | Batch 2 / 2026-08-14 |
+| Ministerie responsible for CBS (Economic Affairs) | Needed to complete CBS governance; Dutch ministry naming is volatile and must be read from a current source | Batch 3 or later | Batch 2 / 2026-08-14 |
+| Adviescollege ICT-toetsing (AcICT) | ICT oversight body; surfaced in Batch 1 search results | Batch 3 or later | Batch 2 / 2026-08-14 |
+| DANS, Health-RI, RIVM, NWO | Research/health data infrastructure organisations | Batch 5 | Batch 2 / 2026-08-14 |
+| SIDN | .nl registry / internet infrastructure | Batch 5 | Batch 2 / 2026-08-14 |
+| BOMOS | Dutch standards-management model referenced by Geonovum | Batch 4 | Batch 2 / 2026-08-14 |
+| Programmaraad (geo-standaarden) | Commissioning body for Geonovum's standards management | Batch 4 | Batch 2 / 2026-08-14 |
+| The ten individual basisregistraties (BRK, BAG, BRP, Handelsregister, BRV, …) | Referenced by [[NL-BASISREGISTRATIES]]; the full list of ten has not been enumerated from a source | Batch 4 or 5 | Batch 2 / 2026-08-14 |
+| `DOMAIN-HEALTH` | Needed by [[NL-NICTIZ]]; withheld because taxonomy §1 requires a domain to connect 2+ entities | Batch 5 | Batch 2 / 2026-08-14 |
+| `DOMAIN-EDUCATION` | Needed by [[NL-SURF]]; withheld for the same reason | Batch 5 | Batch 2 / 2026-08-14 |
+| Handelsregisterwet | Statutory basis of the Handelsregister held by [[NL-KVK]] | Batch 3 | Batch 2 / 2026-08-14 |
+| Archiefwet (and its revision) | Governs [[NL-NATIONAAL-ARCHIEF]]; a revision reportedly takes effect 1 Jan 2027 | Batch 3 | Batch 2 / 2026-08-14 |
+| Wet op het Centraal bureau voor de statistiek | Statutory basis of [[NL-CBS]] | Batch 3 | Batch 2 / 2026-08-14 |
+| TNO-wet (1930) | Statutory basis of [[NL-TNO]] | Batch 3 | Batch 2 / 2026-08-14 |
+| EU-GDPR → [[NL-AP]] link | The AP's defining relationship; needs `EU-GDPR` (Batch 8) and the Dutch UAVG (Batch 3) | Batch 8 | Batch 2 / 2026-08-14 |
+| ISO / IEC / CEN → [[NL-NEN]] links | NEN's most significant relationships; need the international standards bodies | Batch 9 / 13 | Batch 2 / 2026-08-14 |
 | College Standaardisatie | Established in 2006 alongside Forum Standaardisatie; current status unknown — may be superseded, which would need a `supersedes` link | Batch 2 | Batch 1 / 2026-08-14 |
 | Individual GDI services (DigiD, DigiD Machtigen, MijnOverheid, Digipoort) | Referenced by NL-GDI and NL-LOGIUS but not yet entities; decide whether they warrant separate entities | Batch 2 or 5 | Batch 1 / 2026-08-14 |
 | GEMMA, EAR, ROSA, PETRA | NORA's derived reference architectures; need `derived-from`/`based-on` links to NL-NORA | Batch 4 | Batch 1 / 2026-08-14 |

@@ -1,0 +1,87 @@
+---
+id: NL-CBS
+type: organisation
+name: Centraal Bureau voor de Statistiek
+alternative_names:
+  - CBS
+  - Statistics Netherlands
+description: >
+  The Dutch national statistical office. An independent administrative body
+  (zelfstandig bestuursorgaan) since 1 January 2004, with its legal basis in
+  the Wet op het Centraal bureau voor de statistiek (2003). Its task is to
+  conduct statistical research for practice, policy and science and to
+  publish the resulting statistics.
+
+level: national
+country: NL
+region: null
+
+status: active
+confidence: medium
+coverage: medium
+verification: search-only
+
+start_date: null
+end_date: null
+last_verified: null
+previous_version: null
+successor: null
+
+domains:
+  - DOMAIN-GOVERNMENT
+organisations: []
+related_entities: []
+relationships: []
+
+sources:
+  - title: "Wet op het Centraal bureau voor de statistiek (28.277)"
+    url: "https://www.eerstekamer.nl/wetsvoorstel/28277_wet_op_het_centraal_bureau"
+    publisher: "Eerste Kamer der Staten-Generaal"
+  - title: "Wet van 20 november 2003, houdende vaststelling van een wet op het Centraal bureau voor de statistiek"
+    url: "https://archief.rijksbegroting.nl/algemeen/gerefereerd/8/1/5/stb8156.html"
+    publisher: "Rijksbegroting.nl"
+  - title: "Kamerstuk 28277, nr. 3"
+    url: "https://zoek.officielebekendmakingen.nl/kst-28277-3.html"
+    publisher: "Overheid.nl — Officiële bekendmakingen"
+---
+
+# Centraal Bureau voor de Statistiek (CBS)
+
+> **Sourcing caveat.** This entity was compiled from search-engine results
+> only; the cited pages were confirmed to exist but were not read. See
+> `discovery/unresolved.md` and `progress/current-batch.md`.
+
+## Description
+
+The CBS is the national statistical office of the Netherlands. Its statutory
+task is to conduct statistical research on behalf of practice, policy and
+science, and to publish the statistics compiled from that research.
+
+Its legal basis is the *Wet op het Centraal bureau voor de statistiek*,
+enacted 20 November 2003. Under that act the CBS became a zelfstandig
+bestuursorgaan (independent administrative body) on 1 January 2004. The act
+sets rules on the acquisition, use and provision of data for statistical
+information services, strengthens the supervisory powers of the Centrale
+Commissie voor de Statistiek (CCS), and clarifies the relationship between
+the responsible minister, the CCS and the CBS. It is described as
+guaranteeing the CBS's independent position relative to government and other
+public institutions.
+
+Two things are deliberately **not** recorded here. The Wet op het CBS is
+legislation and belongs in `legislation/` as its own entity in Batch 3; it
+appears here only as a source. And the responsible ministry — named in
+research as Economic Affairs — is not linked, because Dutch ministry names
+and portfolio boundaries have changed repeatedly and no ministry entity for
+it exists yet; see `discovery/unresolved.md`.
+
+The CCS is likewise not yet an entity and is queued for research.
+
+## Relationships
+
+- Statistical authority within the Dutch government data landscape. Its
+  relationships to [[NL-BASISREGISTRATIES]] and to European statistical
+  governance (Eurostat, Batch 9) are not yet established.
+
+## Sources
+
+Listed in frontmatter.
