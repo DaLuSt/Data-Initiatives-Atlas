@@ -32,7 +32,12 @@ domains:
 organisations:
   - NL-ICTU
   - NL-BZK
-related_entities: []
+related_entities:
+  - NL-GEMMA
+  - NL-EAR
+  - NL-RORA
+  - NL-PETRA
+  - NL-ROSA
 relationships:
   - type: maintained-by
     target: NL-ICTU
@@ -81,10 +86,21 @@ expectations and technological change.
 [[NL-BZK]] is the contracting authority (opdrachtgever); management
 (beheer) is entrusted to [[NL-ICTU]], where the NORA user council meets.
 
-NORA sits at the top of a family of Dutch reference architectures — GEMMA
-(municipalities), EAR, ROSA and PETRA are the commonly cited derivatives.
-Those are Batch 4 scope and are not yet Atlas entities; the derivation
-relationships should be created when they are added.
+NORA sits at the top of a family of Dutch reference architectures, added in
+Batch 4:
+
+| Tier | Architecture |
+|---|---|
+| Municipalities | [[NL-GEMMA]] |
+| Central government | [[NL-EAR]] → [[NL-RORA]] (successor since 2024) |
+| Provinces | [[NL-PETRA]] |
+| Education sector | [[NL-ROSA]] |
+| Water authorities | WILMA — not yet an entity, queued |
+
+Only [[NL-GEMMA]] carries a sourced `based-on` relationship to NORA. For the
+others the derivation is likely but was not sourced, so it is **not**
+asserted — the family membership is recorded through `related_entities`
+instead, which claims association without claiming derivation.
 
 ## Relationships
 

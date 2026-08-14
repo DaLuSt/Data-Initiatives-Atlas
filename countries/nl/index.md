@@ -25,13 +25,32 @@ Anchor entity: [[NL]]
 
 - [[NL-PAS-TOE-OF-LEG-UIT]] — 'Pas toe of leg uit'-beleid (open standards)
 
-## Standards and Frameworks
+## Frameworks and Architecture
 
-- [[NL-NORA]] — Nederlandse Overheid Referentie Architectuur
+### Reference architectures
+
+- [[NL-NORA]] — Nederlandse Overheid Referentie Architectuur _(the root)_
+  - [[NL-GEMMA]] — municipalities _(based-on NORA)_
+  - [[NL-EAR]] — central government _(superseded)_ → [[NL-RORA]] _(since 2024)_
+  - [[NL-PETRA]] — provinces
+  - [[NL-ROSA]] — education sector
+
+### Data and governance frameworks
+
 - [[NL-FDS]] — Federatief Datastelsel
 - [[NL-BASISREGISTRATIES]] — Stelsel van Basisregistraties
+- [[NL-BOMOS]] — Beheer- en OntwikkelModel voor Open Standaarden
+- [[NL-BIO]] — Baseline Informatiebeveiliging Overheid _(current version BIO2)_
 
-_Individual open standards, GEMMA, EAR, ROSA and PETRA are Batch 4 scope._
+## Standards
+
+- [[NL-DIGIKOPPELING]] — message exchange _(Logius, mandatory)_
+- [[NL-ADR]] — NLGov REST API Design Rules _(Logius, mandatory)_
+- [[NL-DCAT-AP-NL]] — metadata profile _(Geonovum)_
+- [[NL-NEN-3610]] — base model for geo-information _(NEN / Geonovum)_
+
+_The wider 'pas toe of leg uit' list is not yet enumerated entity-by-entity;
+see `discovery/research-queue.md`._
 
 ## Programmes and Initiatives
 
@@ -121,4 +140,4 @@ Batch 8 deepens them._
 
 ---
 
-Last updated: 2026-08-14 (Batch 3).
+Last updated: 2026-08-14 (Batch 4).

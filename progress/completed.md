@@ -1,5 +1,89 @@
 # Completed Batches
 
+## Batch 4 — Netherlands: Standards, Frameworks and Architecture
+
+**Date:** 2026-08-14
+
+**Scope:** Dutch reference architectures, standards-management models,
+security baselines, and metadata/API/interoperability standards, each
+connected to its maintaining organisation as the batch brief requires.
+
+**⚠ Evidence standard:** unchanged — page retrieval remained blocked; all
+entities are `verification: search-only`.
+
+**Entities added (11):**
+
+*Reference architectures — the NORA family:*
+
+| ID | Tier | Note |
+|---|---|---|
+| `NL-GEMMA` | Municipalities | Only member with a **sourced** `based-on` → NORA |
+| `NL-EAR` | Central government | `superseded`, `successor: NL-RORA` |
+| `NL-RORA` | Central government | Successor since 2024 |
+| `NL-PETRA` | Provinces | Weakest entity in the Atlas — see below |
+| `NL-ROSA` | Education sector | `level: sectoral` |
+
+*Frameworks:*
+
+| ID | Note |
+|---|---|
+| `NL-BOMOS` | The Dutch "standard for running a standard" |
+| `NL-BIO` | Security baseline for all government tiers; current version BIO2 |
+
+*Standards (all connected to a maintainer):*
+
+| ID | Maintainer | Note |
+|---|---|---|
+| `NL-DIGIKOPPELING` | Logius | On the mandatory list |
+| `NL-ADR` | Logius | On the mandatory list |
+| `NL-DCAT-AP-NL` | Geonovum | Bridges to European data catalogues |
+| `NL-NEN-3610` | Geonovum / NEN | Custody split — see below |
+
+**Entities updated:** `NL-NORA` (family table + `related_entities`),
+`NL-GEONOVUM` (BOMOS alignment), `countries/nl/index.md`.
+
+**Relationships added:** 10 provenanced entries — 5 `maintained-by`,
+2 `part-of` (onto the mandatory standards list), 1 `based-on`,
+1 `supersedes`, 1 `applies-in`, plus `derived-from` and `aligned-with`.
+
+**Sources added:** 33 source entries.
+
+**Where derivation was refused.** Only [[NL-GEMMA]] carries a sourced
+`based-on` → NORA. For PETRA, ROSA and EAR the derivation from NORA is
+highly likely but was not stated by any source, so it is recorded as
+`related_entities` association rather than asserted as a relationship. This
+is the single most repeated judgement in the batch: family membership is
+claimable, derivation is not.
+
+**Honest weak points:**
+- **`NL-PETRA` is the weakest entity in the Atlas.** It rests on one
+  sentence in one Wikipedia article. Its maintainer, its NORA relationship
+  and even its acronym expansion are unsourced, and its `organisations:
+  [NL-IPO]` link is an explicit Atlas assumption. It is included because
+  Batch 4's scope names PETRA; the weakness is stated in the entity itself.
+- **WILMA was deliberately not created**, though named in the same source
+  sentence as PETRA — it is not in the batch scope and rests on the same
+  single mention. The asymmetry is recorded in both entities' notes.
+- **StUF was searched for and not created**: the search returned no usable
+  source, and inventing one was not an option.
+- `NL-RORA`'s `start_date: 2024-01-01` is a placeholder for "during 2024".
+- `NL-BOMOS` has **no `maintained-by`** — custody is genuinely split across
+  Forum Standaardisatie, NOiV, ECP and Logius.
+- `NL-NEN-3610`'s `maintained-by` → Geonovum is `confidence: low`: the
+  source says *aanspreekpunt*, which is weaker than the relationship claims.
+
+**Threshold now met:** `DOMAIN-EDUCATION` connects two entities
+([[NL-SURF]], [[NL-ROSA]]) and so qualifies under taxonomy §1. It was
+**not** created here — Batch 4 is standards, not domains — and is queued for
+Batch 5.
+
+**Validation result:** all 5 checks pass, 0 errors, 0 warnings, across 62
+entities.
+
+**Next batch:** Batch 5 — Netherlands: Domains and Data Ecosystems.
+
+---
+
 ## Batch 3 — Netherlands: Legislation and Regulation
 
 **Date:** 2026-08-14

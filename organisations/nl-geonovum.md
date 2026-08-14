@@ -33,6 +33,13 @@ related_entities:
   - NL-BZK
 relationships:
   - type: aligned-with
+    target: NL-BOMOS
+    source: fact
+    evidence: "Geonovum uses BOMOS for all standards it manages to guarantee these are open according to BOMOS's definition, and has held the Forum Standaardisatie 'excellent management process' designation since December 2014 (geonovum.nl; ecp.nl). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: aligned-with
     target: NL-FORUM-STANDAARDISATIE
     source: interpretation
     evidence: "Both maintain open standards for Dutch public bodies, Geonovum for the geo domain and Forum Standaardisatie government-wide. No sourced statement of a formal relationship between them was found; recorded as interpretation."

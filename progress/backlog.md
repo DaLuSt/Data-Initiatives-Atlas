@@ -27,10 +27,14 @@ validation (`CONTRIBUTING.md` — Batch workflow).
   included in the Batch 1b re-verification debt.** AI legislation was *not*
   covered (no Dutch AI-specific act identified; the AI Act is Batch 8).
   See `progress/completed.md`.
-- [ ] **Batch 4 — Netherlands: Standards, Frameworks and Architecture.**
-  Forum Standaardisatie standards, NORA, GEMMA, EAR, MIDO, ROSA, PETRA,
-  metadata/API/interoperability/data-quality/security standards, connected
-  to their maintaining organisation.
+- [x] **Batch 4 — Netherlands: Standards, Frameworks and Architecture.**
+  Done 2026-08-14, 11 entities (5 reference architectures, 2 frameworks,
+  4 standards), each standard connected to its maintainer. NORA family
+  assembled; EAR→RORA succession recorded. **Search-only sourcing —
+  included in the Batch 1b re-verification debt.** Not covered: the wider
+  'pas toe of leg uit' standards list beyond Digikoppeling and ADR, StUF
+  (no source found), WILMA, and data-quality standards specifically.
+  See `progress/completed.md`.
 - [ ] **Batch 5 — Netherlands: Domains and Data Ecosystems.** Government,
   Mobility, Health, Finance, Geospatial, Environment, Energy, Education,
   Justice, Public Safety, Economy, Agriculture, Social Security, Research,
