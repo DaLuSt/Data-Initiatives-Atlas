@@ -1,0 +1,110 @@
+---
+id: NL-BIO
+type: framework
+name: Baseline Informatiebeveiliging Overheid
+alternative_names:
+  - BIO
+  - BIO2
+description: >
+  The common information security framework for all tiers of Dutch
+  government — central government, municipalities, provinces and water
+  authorities. It sets the minimum security requirements and measures, and
+  is aligned to the NEN-EN-ISO/IEC 27001 and 27002 standards.
+
+level: national
+country: NL
+region: null
+
+status: active
+confidence: medium
+coverage: medium
+verification: search-only
+
+start_date: null
+end_date: null
+last_verified: null
+previous_version: null
+successor: null
+
+domains:
+  - DOMAIN-GOVERNMENT
+organisations: []
+related_entities:
+  - NL-NEN
+relationships:
+  - type: applies-in
+    target: NL
+    source: fact
+    evidence: "The BIO is the basic framework for information security within all government tiers: Rijk, gemeenten, provincies and waterschappen (digitaleoverheid.nl BIO page; bio-overheid.nl). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+
+sources:
+  - title: "Baseline Informatiebeveiliging Overheid (BIO)"
+    url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/cybersecurity/bio-en-ensia/baseline-informatiebeveiliging-overheid/"
+    publisher: "Digitale Overheid (Ministerie van BZK)"
+  - title: "Home NL — bio-overheid"
+    url: "https://www.bio-overheid.nl/"
+    publisher: "BIO-overheid"
+  - title: "Baseline Informatiebeveiliging Overheid 2 (BIO2) v1.3 def"
+    url: "https://www.bio-overheid.nl/media/dr4inbhc/20260109-baseline-informatiebeveiliging-overheid-2-bio2-v13-def.pdf"
+    publisher: "BIO-overheid"
+  - title: "Baseline Informatiebeveiliging Overheid (BIO) & NEN-ISO/IEC 27001 en 27002"
+    url: "https://www.communicatierijk.nl/vakkennis/rijkswebsites/verplichte-richtlijnen/baseline-informatiebeveiliging-rijksdienst"
+    publisher: "CommunicatieRijk"
+---
+
+# BIO (Baseline Informatiebeveiliging Overheid)
+
+> **Sourcing caveat.** This entity was compiled from search-engine results
+> only; the cited pages were confirmed to exist but were not read. See
+> `discovery/unresolved.md` and `progress/current-batch.md`.
+
+## Description
+
+The BIO is the common basic framework for information security across all
+tiers of Dutch government — central government, municipalities, provinces
+and water authorities. Within Dutch government it forms the basis for
+information security, containing the minimum requirements and security
+measures.
+
+## Versions
+
+**BIO2** is the current major revision. It reflects NEN-EN-ISO/IEC
+27001:2023 and NEN-EN-ISO/IEC 27002:2022, and replaces the earlier BIO's
+categorisation into three Basis Beveiligingsniveaus (BBN) with an explicitly
+risk-driven approach. Under BIO2, ISO 27001 is applied to formulate
+requirements for establishing an information security management system, and
+ISO 27002 is applied in a risk-driven way to select control measures; where
+control measures follow from assessed risk, government organisations are at
+minimum obliged to apply the government measures from BIO2. Where BIO1 was
+often used as a checklist, BIO2 is described as requiring genuine
+risk-driven working and active governance.
+
+A BIO2 document dated 9 January 2026 was located, which suggests BIO2 is
+current, though the formal date on which BIO2 replaced BIO1 was not
+established.
+
+## Modelling note
+
+BIO and BIO2 are modelled as **one entity with versions**, unlike
+[[NL-WOB]]/[[NL-WOO]] or [[NL-ARCHIEFWET-1995]]/[[NL-ARCHIEFWET-2026]],
+which are separate entities. The reasoning: those are distinct statutes with
+distinct official titles, whereas BIO2 is a new version of a continuously
+named baseline. This is a judgement call, and if re-verification shows BIO2
+is treated as a distinct instrument it should be split out — recorded in
+`discovery/unresolved.md`.
+
+## Relationships
+
+- Applies in [[NL]] across all government tiers.
+- Based on ISO/IEC 27001 and 27002, published in the Netherlands by
+  [[NL-NEN]]. The `based-on` relationship to the ISO standards themselves
+  cannot be asserted until those exist as entities (Batch 14).
+- ENSIA, the accountability system paired with the BIO in its
+  digitaleoverheid.nl placement, is not yet an entity; queued.
+
+## Sources
+
+Listed in frontmatter.

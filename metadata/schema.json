@@ -1,0 +1,50 @@
+{
+  "$comment": "Machine-readable companion to metadata/metadata-schema.md, metadata/ontology.md and metadata/relationship-types.md. Consumed by validation/*.py. Keep in sync with those documents.",
+  "types": [
+    "initiative", "organisation", "country", "region", "policy", "law",
+    "regulation", "directive", "strategy", "standard", "framework",
+    "programme", "data-space", "platform", "technology", "domain",
+    "publication"
+  ],
+  "type_folder_map": {
+    "initiative": "initiatives",
+    "law": "legislation",
+    "regulation": "legislation",
+    "directive": "legislation",
+    "policy": "policies",
+    "strategy": "strategies",
+    "standard": "standards",
+    "framework": "frameworks",
+    "programme": "programmes",
+    "organisation": "organisations",
+    "data-space": "data-spaces",
+    "platform": "platforms",
+    "technology": "platforms",
+    "publication": "publications",
+    "domain": "domains",
+    "country": "countries",
+    "region": "regions"
+  },
+  "levels": ["international", "regional", "national", "sectoral", "local"],
+  "statuses": [
+    "proposed", "planned", "active", "implemented", "superseded",
+    "replaced", "completed", "archived", "unknown"
+  ],
+  "confidence_levels": ["high", "medium", "low"],
+  "coverage_levels": ["low", "medium", "high"],
+  "verification_levels": ["primary-source", "search-only", "unverified"],
+  "relationship_source_values": ["fact", "interpretation"],
+  "relationship_types": [
+    "related-to", "influences", "implements", "implemented-by",
+    "depends-on", "derived-from", "based-on", "references",
+    "supersedes", "replaces", "part-of", "governed-by", "applies-to",
+    "applies-in", "produces", "maintained-by", "owned-by",
+    "participates-in", "aligned-with", "implements-requirement-from"
+  ],
+  "required_fields": [
+    "id", "type", "name", "description", "level", "country",
+    "status", "confidence", "coverage"
+  ],
+  "id_scope_pattern": "^(UN|EU|INTL|DOMAIN|[A-Z]{2})(-[A-Z0-9]+(-[A-Z0-9]+)*)?$",
+  "anchor_ids": ["NL", "EU", "UN"]
+}
