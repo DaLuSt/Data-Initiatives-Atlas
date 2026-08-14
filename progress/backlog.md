@@ -35,13 +35,20 @@ validation (`CONTRIBUTING.md` — Batch workflow).
   'pas toe of leg uit' standards list beyond Digikoppeling and ADR, StUF
   (no source found), WILMA, and data-quality standards specifically.
   See `progress/completed.md`.
-- [ ] **Batch 5 — Netherlands: Domains and Data Ecosystems.** Government,
-  Mobility, Health, Finance, Geospatial, Environment, Energy, Education,
-  Justice, Public Safety, Economy, Agriculture, Social Security, Research,
-  Infrastructure; plus data spaces, federated ecosystems, national/open-data
-  platforms, sectoral initiatives — only where they add real relationships.
+- [x] **Batch 5 — Netherlands: Domains and Data Ecosystems.** Done
+  2026-08-14, 10 entities (3 domains, 4 platforms, 3 data spaces/frameworks
+  — counting `NL-ISHARE` as a framework). Domains created only on meeting
+  the 2-entity threshold; Energy, Environment, Finance, Justice,
+  Agriculture, Social Security and Built Environment remain below it and
+  were deliberately not created. **Search-only sourcing — included in the
+  Batch 1b re-verification debt.** See `progress/completed.md`.
 - [ ] **Batch 6 — Netherlands Validation.** Full duplicate/ID/link/metadata/
   source/relationship/status audit of everything added in Batches 1–5.
+  ⚠ **Blocked in substance by the search-only debt** — see
+  `progress/current-batch.md`. The automated suite already passes; what
+  Batch 6 additionally asks for (outdated information, incorrect statuses,
+  missing sources, unsupported relationships) requires reading primary
+  sources. Do Batch 1b first.
 
 ## European Union
 

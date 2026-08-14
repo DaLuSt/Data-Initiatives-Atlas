@@ -24,7 +24,8 @@ last_verified: null
 previous_version: null
 successor: null
 
-domains: []
+domains:
+  - DOMAIN-HEALTH
 organisations: []
 related_entities: []
 relationships: []
@@ -72,15 +73,13 @@ more accurately.
 
 ## Relationships
 
-`domains:` is deliberately left empty. A Health domain is plainly needed,
-but `metadata/taxonomy.md` §1 requires a domain to connect two or more
-entities before it is created, and Nictiz is currently the only health
-entity in the Atlas. `DOMAIN-HEALTH` is queued in
-`discovery/research-queue.md` for Batch 5, at which point this entity should
-be updated.
+Tagged [[DOMAIN-HEALTH]], created in Batch 5 once [[NL-HEALTH-RI]] brought
+the domain to the two-entity threshold required by
+`metadata/taxonomy.md` §1. This entity was created in Batch 2 with an empty
+`domains:` list and a note explaining the gap; that gap is now closed.
 
 Nictiz's relationships to HL7 and to the European Health Data Space (Batch
-10) are likewise not yet assertable.
+10) are still not assertable.
 
 ## Sources
 

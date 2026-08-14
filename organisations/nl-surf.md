@@ -29,6 +29,7 @@ successor: null
 
 domains:
   - DOMAIN-RESEARCH
+  - DOMAIN-EDUCATION
 organisations: []
 related_entities: []
 relationships: []
@@ -73,11 +74,10 @@ coöperatie).
 
 ## Relationships
 
-SURF spans both research and education, but only [[DOMAIN-RESEARCH]] is
-tagged. An Education domain would currently connect this entity alone, and
-`metadata/taxonomy.md` §1 requires a domain to connect two or more entities
-before it is created; `DOMAIN-EDUCATION` is queued for Batch 5, the same
-treatment given to Health for [[NL-NICTIZ]].
+SURF spans both research and education, and is now tagged
+[[DOMAIN-RESEARCH]] and [[DOMAIN-EDUCATION]]. The latter was withheld in
+Batch 2 because it would have connected this entity alone; it was created
+in Batch 5 once [[NL-ROSA]] brought it to the two-entity threshold.
 
 Beyond that, SURF's most significant Atlas relationships are likely to
 be to research data infrastructure and European research-data initiatives

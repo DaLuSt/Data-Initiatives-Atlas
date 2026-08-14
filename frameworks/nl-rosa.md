@@ -26,7 +26,8 @@ last_verified: null
 previous_version: null
 successor: null
 
-domains: []
+domains:
+  - DOMAIN-EDUCATION
 organisations: []
 related_entities:
   - NL-NORA
@@ -62,12 +63,9 @@ unasserted rather than pointed at an approximation.
 `level: sectoral` rather than `national`, following the same reasoning
 applied to [[NL-NICTIZ]]: national in reach, but bounded to one sector.
 
-`domains:` is empty for the same reason it is empty on [[NL-NICTIZ]] —
-`DOMAIN-EDUCATION` would now connect ROSA and [[NL-SURF]], which does meet
-the two-entity threshold in `metadata/taxonomy.md` §1. It is **not** created
-in this batch because Batch 4 is standards and frameworks, not domains;
-Batch 5 should create it and tag both entities. Recorded in the research
-queue.
+Tagged [[DOMAIN-EDUCATION]], created in Batch 5 — ROSA's own creation in
+Batch 4 is what brought that domain to the two-entity threshold in
+`metadata/taxonomy.md` §1, alongside [[NL-SURF]].
 
 ## Relationships
 

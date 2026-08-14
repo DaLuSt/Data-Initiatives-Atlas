@@ -60,6 +60,17 @@ see `discovery/research-queue.md`._
 ## Platforms
 
 - [[NL-GDI]] — Generieke Digitale Infrastructuur
+- [[NL-DATA-OVERHEID]] — national open data portal
+- [[NL-PDOK]] — geodata platform
+- [[NL-NDW]] — national road traffic data portal
+  - [[NL-NTM]] — national access point for mobility data _(EU obligation)_
+
+## Data Spaces and Ecosystems
+
+- [[NL-FDS]] — Federatief Datastelsel _(government-wide, listed under Frameworks)_
+- [[NL-HEALTH-RI]] — national health data infrastructure
+- [[NL-DSGO]] — Digitaal Stelsel Gebouwde Omgeving _(built environment)_
+- [[NL-ISHARE]] — trust framework used to establish data spaces
 
 ## Organisations
 
@@ -105,6 +116,14 @@ see `discovery/research-queue.md`._
 - [[DOMAIN-GOVERNMENT]] — Government
 - [[DOMAIN-GEOSPATIAL]] — Geospatial
 - [[DOMAIN-RESEARCH]] — Research
+- [[DOMAIN-EDUCATION]] — Education
+- [[DOMAIN-HEALTH]] — Health
+- [[DOMAIN-MOBILITY]] — Mobility
+
+_Domains are created only once they connect two or more entities
+(`metadata/taxonomy.md` §1). Energy, Environment, Finance, Justice,
+Agriculture, Social Security and Built Environment remain below that
+threshold and are queued._
 
 ## Legislation
 
@@ -140,4 +159,4 @@ Batch 8 deepens them._
 
 ---
 
-Last updated: 2026-08-14 (Batch 4).
+Last updated: 2026-08-14 (Batch 5).

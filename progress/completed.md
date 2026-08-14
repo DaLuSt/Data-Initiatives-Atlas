@@ -1,5 +1,97 @@
 # Completed Batches
 
+## Batch 5 — Netherlands: Domains and Data Ecosystems
+
+**Date:** 2026-08-14
+
+**Scope:** Dutch data domains, data spaces, federated data ecosystems,
+national and open-data platforms, and sectoral data initiatives.
+
+**⚠ Evidence standard:** unchanged — page retrieval remained blocked; all
+substantive entities are `verification: search-only`.
+
+**Entities added (10):**
+
+*Domains (created only on meeting the 2-entity threshold):*
+
+| ID | Members that justified it |
+|---|---|
+| `DOMAIN-EDUCATION` | `NL-SURF`, `NL-ROSA` |
+| `DOMAIN-HEALTH` | `NL-NICTIZ`, `NL-HEALTH-RI` |
+| `DOMAIN-MOBILITY` | `NL-NDW`, `NL-NTM` |
+
+*Platforms:*
+
+| ID | Note |
+|---|---|
+| `NL-DATA-OVERHEID` | National open data portal; depends on `NL-DCAT-AP-NL` |
+| `NL-PDOK` | Geodata platform, founded 2013 |
+| `NL-NDW` | National road traffic data portal, opened 2009 |
+| `NL-NTM` | National access point for mobility data — an EU obligation |
+
+*Data spaces and ecosystems:*
+
+| ID | Note |
+|---|---|
+| `NL-HEALTH-RI` | Federated national health data infrastructure |
+| `NL-DSGO` | Built-environment agreement framework |
+| `NL-ISHARE` | Trust framework used to establish data spaces |
+
+**Entities updated:** `NL-SURF`, `NL-ROSA`, `NL-NICTIZ` retro-tagged with
+their new domains, and the notes explaining the previously-missing domains
+rewritten to record that the gap is closed. Plus `countries/nl/index.md`.
+
+**The domain threshold held, and paid off.** `DOMAIN-EDUCATION` was withheld
+in Batch 2 (SURF alone) and again in Batch 4 (SURF + ROSA, but wrong batch);
+`DOMAIN-HEALTH` was withheld in Batch 2 (Nictiz alone). Both were created
+here only once genuinely justified. Seven further domains named in the Batch
+5 brief — Energy, Environment, Finance, Justice, Agriculture, Social
+Security, Built Environment — remain **below the threshold and were not
+created**, which is the rule working as intended rather than the batch being
+incomplete.
+
+**Relationships added:** 4 provenanced entries (`depends-on`,
+`participates-in`, `part-of`, and one interpretation), plus domain tagging
+across 6 entities.
+
+**Sources added:** 26 source entries.
+
+**A near-complete EU chain, deliberately left open.** [[NL-NTM]] exists
+because every European country must have a national access point for
+mobility data. The obligation is sourced; **the instrument imposing it is
+not** — no source located named it. So `region: EU` is set and the
+obligation described in prose, but no `implements-requirement-from` is
+asserted. Batch 8 should close it.
+
+**Honest weak points:**
+- [[NL-ISHARE]] is recorded `country: NL` on its Dutch origin, but presents
+  at ishare.eu in a European context. This is the country-neutral model's
+  hardest case — a national initiative that went cross-border — and is
+  flagged for resolution in Batch 10 rather than guessed now.
+- [[NL-DSGO]]'s `start_date` combines two separate statements ("launched 18
+  June" + "programme ended June 2024") into one date. That inference is
+  marked as an inference.
+- [[NL-DATA-OVERHEID]]'s `organisations: [NL-BZK]` is an Atlas association,
+  not a sourced operator claim.
+- [[NL-HEALTH-RI]] and [[NL-NDW]] both have genuine typing ambiguity
+  (infrastructure vs organisation; platform vs organisation).
+
+**New schema question raised.** Four entities now carry a `YYYY-01-01`
+`start_date` meaning "year known, day unknown" ([[NL-RORA]], [[NL-PDOK]],
+[[NL-ISHARE]], partly [[NL-DSGO]]). A January-1st placeholder is
+indistinguishable from a real 1 January date — a genuine data-quality
+problem. Recorded in `discovery/unresolved.md` as a schema question:
+either adopt a convention or add a `date_precision` field.
+
+**Validation result:** all 5 checks pass, 0 errors, 0 warnings, across 72
+entities.
+
+**Next batch:** Batch 6 — Netherlands Validation. Note that Batch 6 cannot
+be completed properly while the search-only sourcing debt stands; see
+`progress/current-batch.md`.
+
+---
+
 ## Batch 4 — Netherlands: Standards, Frameworks and Architecture
 
 **Date:** 2026-08-14
