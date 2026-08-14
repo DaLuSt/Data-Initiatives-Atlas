@@ -1,4 +1,4 @@
-##Data Initiatives Atlas
+Data Initiatives Atlas
 
 «Mapping the data landscape across the UN, EU and participating countries as an open, connected knowledge graph.»
 
