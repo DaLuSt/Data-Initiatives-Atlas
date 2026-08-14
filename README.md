@@ -250,14 +250,17 @@ data-initiatives-atlas/
 │   └── un/
 │
 └── metadata/
-    ├── ontology.md
-    └── taxonomy.md
-
- discovery/
-├── candidates.md
-├── unresolved.md
-├── duplicates.md
-└── research-queue.md
+├── ontology.md
+├── taxonomy.md
+├── relationship-types.md
+├── controlled-vocabularies.md
+└── validation-rules.md
+|
+|--- discovery/
+     ├── candidates.md
+     ├── unresolved.md
+     ├── duplicates.md
+     └── research-queue.md
 
 As additional countries participate:
 
