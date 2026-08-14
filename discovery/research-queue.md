@@ -164,6 +164,13 @@ Digitale Overheid.
 | Nationaal Wegenbestand (NWB) | Part of the [[NL-NDW]] expansion | Batch 5+ | Batch 5 / 2026-08-14 |
 | EU ITS Directive / mobility data legislation | Imposes the national access point obligation behind [[NL-NTM]] | Batch 8 | Batch 5 / 2026-08-14 |
 | DANS, ODISSEI, RIVM, NWO, SIDN | Research/health/internet-infrastructure organisations still unqueued from Batch 2 | Batch 5+ | Batch 2; carried |
+| **Official EUR-Lex text for eIDAS 2.0 (Reg. 2024/1183)** | [[EU-EIDAS2]] and [[EU-EUDI-WALLET]] currently rest entirely on secondary sources | Batch 8 | Batch 7 / 2026-08-14 |
+| Original eIDAS Regulation (910/2014) | Likely the instrument relevant to [[NL-WDO]], not eIDAS 2.0 | Batch 8 | Batch 7 / 2026-08-14 |
+| CER Directive (critical entities resilience) | Third element of the Dec 2020 cybersecurity package alongside NIS2 | Batch 8 | Batch 7 / 2026-08-14 |
+| Interoperable Europe Act; Interoperable Europe Board | Governance around [[EU-EIF]]; the Board adopts new EIF versions | Batch 8, 9 | Batch 7 / 2026-08-14 |
+| The 14 common European data spaces | Enumerated in prose on [[EU-COMMON-DATA-SPACES]]: agriculture, cultural heritage, energy, finance, green deal, health, industry, language, media, mobility, public administrations, research and innovation, skills, tourism. Deliberately not created as 14 thin entities | Batch 10 | Batch 7 / 2026-08-14 |
+| EU AI strategy (if distinct from the AI Act) | Named in Batch 7 scope; no clearly identifiable standalone strategy document found | Batch 8 | Batch 7 / 2026-08-14 |
+| Digital Europe Programme; EuroHPC | EU digital infrastructure funding instruments, not researched in Batch 7 | Batch 9 | Batch 7 / 2026-08-14 |
 | Energy, Environment, Finance, Justice, Agriculture, Social Security, Built Environment domains | All named in the Batch 5 brief but each currently below the 2-entity threshold in taxonomy §1. Create as the ecosystems that would populate them are researched | Later | Batch 5 / 2026-08-14 |
 | College Standaardisatie | Established in 2006 alongside Forum Standaardisatie; current status unknown — may be superseded, which would need a `supersedes` link | Batch 2 | Batch 1 / 2026-08-14 |
 | Individual GDI services (DigiD, DigiD Machtigen, MijnOverheid, Digipoort) | Referenced by NL-GDI and NL-LOGIUS but not yet entities; decide whether they warrant separate entities | Batch 2 or 5 | Batch 1 / 2026-08-14 |

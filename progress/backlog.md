@@ -52,10 +52,14 @@ validation (`CONTRIBUTING.md` — Batch workflow).
 
 ## European Union
 
-- [ ] **Batch 7 — EU Core Initiatives.** European Data Strategy, Digital
-  Decade, European interoperability initiatives, European data spaces,
-  European digital identity, digital sovereignty, digital infrastructure,
-  AI strategy, cybersecurity strategy.
+- [x] **Batch 7 — EU Core Initiatives.** Done 2026-08-14, 7 entities.
+  Established the Atlas's first full strategy → EU law → national law
+  chain. **Search-only sourcing**, and two entities (`EU-EIDAS2`,
+  `EU-EUDI-WALLET`) rest entirely on **secondary** sources and need
+  rebuilding in Batch 8. Not covered: digital sovereignty and EU AI
+  strategy — no distinct, sourceable initiative found for either;
+  digital-infrastructure funding instruments (Digital Europe Programme,
+  EuroHPC) not researched. See `progress/completed.md`.
 - [ ] **Batch 8 — EU Legislation.** GDPR, Data Governance Act, Data Act,
   Open Data Directive, eIDAS/European Digital Identity, AI Act, NIS2,
   Cybersecurity Act, Interoperable Europe Act, Single Digital Gateway, and

@@ -1,5 +1,93 @@
 # Completed Batches
 
+## Batch 7 — EU Core Initiatives
+
+**Date:** 2026-08-14
+
+**Scope:** European Data Strategy, Digital Decade, European interoperability
+initiatives, European data spaces, European digital identity, digital
+sovereignty, digital infrastructure, AI strategy, cybersecurity strategy.
+
+**⚠ Evidence standard:** unchanged — page retrieval remained blocked; all
+entities are `verification: search-only`. **Two entities are additionally
+weak** — see below.
+
+**Note on batch order:** Batch 6 (Netherlands Validation) was skipped, on
+the reasoning recorded in `progress/current-batch.md`: it cannot be
+completed in substance while the sourcing debt stands. Proceeding to the EU
+layer under the declared constraint was chosen over producing a hollow
+validation report.
+
+**Entities added (7):**
+
+| ID | Type | Note |
+|---|---|---|
+| `EU-DATA-STRATEGY` | strategy | COM(2020) 66, 19 Feb 2020 |
+| `EU-COMMON-DATA-SPACES` | initiative | Pillar 4 of the data strategy |
+| `EU-DIGITAL-DECADE` | programme | Decision (EU) 2022/2481 |
+| `EU-EIF` | framework | European Interoperability Framework |
+| `EU-CYBERSECURITY-STRATEGY` | strategy | 16 Dec 2020 |
+| `EU-EIDAS2` | regulation | Reg. 2024/1183 — **weakly sourced** |
+| `EU-EUDI-WALLET` | initiative | **weakly sourced** |
+
+**The Atlas's first full three-level chain.** Batch 7's main structural
+result:
+
+```
+EU-CYBERSECURITY-STRATEGY   (strategy, Dec 2020)
+        │ influences
+EU-NIS2                     (directive, Dec 2022)
+        │ implements-requirement-from
+NL-CBW                      (Dutch act, in force Aug 2026)
+        │ supersedes
+NL-WBNI                     (predecessor Dutch act)
+```
+
+Strategy → EU legislation → national implementation → superseded
+predecessor, all with provenanced relationships. This is the vertical
+pattern the brief's final relationship pass calls for.
+
+**Relationships added:** 7 provenanced entries — 3 `applies-in` (to NL),
+1 `influences`, 1 `produces`, 1 `part-of`, 1 `based-on`.
+
+**Sources added:** 15 source entries.
+
+**⚠ Two entities are materially weaker than the rest.** [[EU-EIDAS2]] and
+[[EU-EUDI-WALLET]] rest **entirely on secondary sources** — law-firm
+articles, vendor blogs and Wikipedia. No EUR-Lex or Commission citation was
+located for either, unlike [[EU-GDPR]], [[EU-NIS2]] and
+[[EU-OPEN-DATA-DIRECTIVE]]. Both carry `confidence: low` and an explicit
+in-file warning, and **Batch 8 should rebuild them** rather than merely
+deepen them.
+
+**Two scope items produced no entity, deliberately:**
+- **Digital sovereignty** — named in the batch scope, but sources treat it
+  as a framing within [[EU-DIGITAL-DECADE]] rather than a named initiative
+  with its own governance. An entity for a theme would have nothing
+  verifiable attached.
+- **EU AI strategy** — searches returned AI-and-cybersecurity material
+  rather than a clearly identifiable standalone strategy document. The AI
+  Act is Batch 8. Recorded as an open scope question rather than invented.
+
+**The 14 data spaces were deliberately not created.** They are listed in
+prose on [[EU-COMMON-DATA-SPACES]] and queued for Batch 10, where the brief
+requires researching each one's purpose, governance, standards, legislation
+and participating countries. Fourteen thin entities from a single list would
+be precisely the shallow-entity failure the brief warns against.
+
+**Highest-value open question raised:** is [[NL-NORA]] formally the
+Netherlands' National Interoperability Framework under [[EU-EIF]]?
+Confirming it would connect the EU and Dutch framework layers directly. Only
+an association is recorded; no relationship asserted.
+
+**Validation result:** all 5 checks pass, 0 errors, 0 warnings, across 79
+entities.
+
+**Next batch:** Batch 8 — EU Legislation. Priority: rebuild `EU-EIDAS2` and
+`EU-EUDI-WALLET` on official sources.
+
+---
+
 ## Batch 5 — Netherlands: Domains and Data Ecosystems
 
 **Date:** 2026-08-14
