@@ -253,6 +253,12 @@ data-initiatives-atlas/
     ├── ontology.md
     └── taxonomy.md
 
+ discovery/
+├── candidates.md
+├── unresolved.md
+├── duplicates.md
+└── research-queue.md
+
 As additional countries participate:
 
 countries/
