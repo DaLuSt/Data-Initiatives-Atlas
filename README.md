@@ -239,6 +239,8 @@ data-initiatives-atlas/
 ├── programmes/
 ├── organisations/
 ├── data-spaces/
+├── platforms/
+├── publications/
 ├── domains/
 ├── countries/
 │   └── nl/
@@ -249,9 +251,18 @@ data-initiatives-atlas/
 ├── international/
 │   └── un/
 │
-└── metadata/
-    ├── ontology.md
-    └── taxonomy.md
+├── metadata/
+│   ├── ontology.md
+│   ├── taxonomy.md
+│   ├── relationship-types.md
+│   ├── metadata-schema.md
+│   ├── controlled-vocabularies.md
+│   └── schema.json
+│
+├── templates/
+├── discovery/
+├── validation/
+└── progress/
 
 As additional countries participate:
 
