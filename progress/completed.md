@@ -1162,3 +1162,46 @@ questions are recorded in `discovery/unresolved.md`; omitted entities in
 `discovery/research-queue.md`.
 
 **Full report:** `validation/germany-second-country-report.md`.
+
+---
+
+# Batch 16 — Interactive Knowledge Graph and GitHub Pages (2026-08-15)
+
+**Scope:** publish the Atlas as an interactive knowledge graph, generated
+automatically from the repository and deployed to GitHub Pages. An
+implementation batch — **no Atlas content was researched or added**, and no
+entity file, frontmatter field or wikilink was changed.
+
+**Added:**
+
+- `tools/build_graph.py` — the generator. Reuses `validation/common.py` as
+  its parser so the graph and the validation suite cannot disagree.
+- `tools/test_build_graph.py` — 32 tests (in CI).
+- `tools/test_ui.mjs` — 47 browser checks (local; needs Playwright).
+- `site/` — the static application: `index.html`, `app.css`, `app.js`,
+  generated `graph.json` + `details.json`, and Cytoscape.js 3.34.1 (MIT)
+  vendored under `site/vendor/`.
+- `.github/workflows/pages.yml` — build and deploy, `main` only.
+- `docs/graph.md`, `docs/graph-architecture.md`,
+  `docs/graph-development.md`, `docs/github-pages.md`.
+
+**Modified:** `.github/workflows/validate.yml` (now also runs the generator
+tests and a build check), `README.md` (Explore the Atlas + No Manual Graph
+Maintenance), `CONTRIBUTING.md` (regenerate the graph after editing data).
+
+**Graph produced:** 164 nodes, 1,307 edges — 189 typed relationships, 473
+associations, 645 wikilinks. The three edge classes are kept distinct
+rather than flattened; only typed relationships are drawn by default.
+
+**Validation result:** `validation/run_all.py` 5/5 passed, 0 errors;
+`tools/test_build_graph.py` 32 tests OK; `tools/test_ui.mjs` 47/47.
+
+**Defects found by the new tests, and fixed:** two inverted edge directions
+(`governed-by` on the wrong entity, `maintained-by` reversed) — neither
+would have failed validation, because the graph stays connected while the
+meaning reverses — and unreadable label density in the default view.
+
+**Known gaps:** the GitHub Pages *deployment* is unverified until the
+repository's Pages source is switched to GitHub Actions (a settings change
+no workflow can make). The graph canvas is not keyboard-traversable; the
+List view is the accessible route.
