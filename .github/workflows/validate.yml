@@ -1,10 +1,16 @@
 name: Validate Atlas
 
+# Validation only. This workflow never deploys — publishing to GitHub Pages
+# happens in pages.yml, and only from `main` (brief §17).
 on:
   pull_request:
     branches: [main]
   push:
     branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   validate:
@@ -19,6 +25,18 @@ jobs:
       - name: Install dependencies
         run: pip install -r validation/requirements.txt
 
+      # YAML parses · IDs unique · relationships resolve · links resolve · sources present
       - name: Run validation suite
         working-directory: validation
         run: python run_all.py
+
+      # Parsing, node/edge generation, direction preservation, refusal behaviour.
+      - name: Test the graph generator
+        run: python tools/test_build_graph.py
+
+      # Proves the graph can still be generated from this branch's data before
+      # it is allowed to reach main. Staleness of the committed graph.json is
+      # asserted by the test step above (it compares content, not timestamps —
+      # a raw `git diff` would always differ because `generated_at` moves).
+      - name: Check the graph builds
+        run: python tools/build_graph.py --check

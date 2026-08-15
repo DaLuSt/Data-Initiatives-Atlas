@@ -38,6 +38,12 @@ this document assumes them.
    that geography's hub page, add a wikilink to `countries/nl/index.md`,
    `regions/eu/index.md` or `international/un/index.md`.
 8. Run the validation suite (below) and fix anything it flags.
+9. Regenerate the interactive graph and commit the result:
+
+       python tools/build_graph.py
+
+   `site/graph.json` and `site/details.json` are generated — never hand-edit
+   them. See `docs/graph-development.md`.
 
 ## Changing an existing entity
 

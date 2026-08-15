@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data Initiatives Atlas — Interactive Knowledge Graph</title>
+<meta name="description" content="Interactive knowledge graph of international, EU and national data, digital, governance, standards and policy initiatives. Generated from the Data Initiatives Atlas repository.">
+<link rel="stylesheet" href="app.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='13' font-size='13'>🕸️</text></svg>">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark" aria-hidden="true">🕸️</span>
+    <div>
+      <h1>Data Initiatives Atlas</h1>
+      <p class="brand-sub">Interactive knowledge graph</p>
+    </div>
+  </div>
+
+  <div class="search-wrap">
+    <label class="sr-only" for="search">Search entities by name, ID, alias, type, country or domain</label>
+    <input id="search" type="search" autocomplete="off" spellcheck="false"
+           placeholder="Search entities, IDs, countries, domains…"
+           role="combobox" aria-expanded="false" aria-controls="suggestions"
+           aria-autocomplete="list">
+    <ul id="suggestions" role="listbox" aria-label="Search results" hidden></ul>
+  </div>
+
+  <nav class="views" aria-label="View">
+    <button id="view-atlas" class="view-btn is-active" aria-pressed="true">Global Atlas</button>
+    <button id="view-explorer" class="view-btn" aria-pressed="false">Entity Explorer</button>
+    <button id="view-list" class="view-btn" aria-pressed="false">List</button>
+  </nav>
+
+  <button id="filters-toggle" class="icon-btn" aria-expanded="false" aria-controls="sidebar">
+    Filters
+  </button>
+</header>
+
+<div class="layout" id="main">
+
+  <!-- ───────────────────────── filters ───────────────────────── -->
+  <aside class="sidebar" id="sidebar" aria-label="Filters and statistics">
+    <div class="sidebar-inner">
+
+      <section class="panel" aria-labelledby="stats-h">
+        <h2 id="stats-h">Statistics</h2>
+        <dl class="stats" id="stats"></dl>
+        <p class="generated" id="generated"></p>
+      </section>
+
+      <section class="panel" aria-labelledby="explorer-h" id="explorer-panel" hidden>
+        <h2 id="explorer-h">Explorer</h2>
+        <p class="hint" id="explorer-hint">Select an entity to focus the graph on its neighbourhood.</p>
+        <label class="field">
+          <span>Neighbourhood depth</span>
+          <select id="depth">
+            <option value="1">1 hop — direct links</option>
+            <option value="2" selected>2 hops</option>
+            <option value="3">3 hops</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="panel" aria-labelledby="edges-h">
+        <h2 id="edges-h">Connections shown</h2>
+        <div class="checks" id="edge-classes"></div>
+        <details class="sub">
+          <summary>Relationship types <span class="count" id="reltype-count"></span></summary>
+          <div class="checks scroll" id="rel-types"></div>
+          <div class="btn-row">
+            <button class="mini" data-all="rel-types">All</button>
+            <button class="mini" data-none="rel-types">None</button>
+          </div>
+        </details>
+      </section>
+
+      <section class="panel" aria-labelledby="filters-h">
+        <h2 id="filters-h">Filters</h2>
+
+        <details class="sub" open>
+          <summary>Geographic level <span class="count" id="level-count"></span></summary>
+          <div class="checks" id="f-level"></div>
+        </details>
+
+        <details class="sub" open>
+          <summary>Country <span class="count" id="country-count"></span></summary>
+          <div class="checks" id="f-country"></div>
+        </details>
+
+        <details class="sub">
+          <summary>Region <span class="count" id="region-count"></span></summary>
+          <div class="checks" id="f-region"></div>
+        </details>
+
+        <details class="sub">
+          <summary>Entity type <span class="count" id="type-count"></span></summary>
+          <div class="checks scroll" id="f-type"></div>
+        </details>
+
+        <details class="sub">
+          <summary>Status <span class="count" id="status-count"></span></summary>
+          <div class="checks" id="f-status"></div>
+        </details>
+
+        <button id="reset-filters" class="secondary">Reset all filters</button>
+      </section>
+
+      <section class="panel" aria-labelledby="legend-h">
+        <h2 id="legend-h">Legend</h2>
+        <ul class="legend" id="legend"></ul>
+      </section>
+
+    </div>
+  </aside>
+
+  <!-- ───────────────────────── graph ───────────────────────── -->
+  <main class="stage" id="stage">
+    <div id="cy" role="application" tabindex="0"
+         aria-label="Knowledge graph. Use the List view or search for a non-graph alternative."></div>
+
+    <div class="stage-overlay" id="loading">
+      <div class="spinner" aria-hidden="true"></div>
+      <p>Loading the Atlas…</p>
+    </div>
+
+    <div class="stage-overlay" id="load-error" hidden>
+      <h2>The graph could not be loaded</h2>
+      <p id="load-error-msg"></p>
+      <p>The Atlas is still fully browsable in the repository.</p>
+    </div>
+
+    <p class="empty-note" id="empty-note" hidden>
+      No entities match the current filters. <button class="linklike" id="empty-reset">Reset filters</button>
+    </p>
+
+    <div class="stage-controls" role="group" aria-label="Graph controls">
+      <button id="zoom-in" class="icon-btn" aria-label="Zoom in">+</button>
+      <button id="zoom-out" class="icon-btn" aria-label="Zoom out">−</button>
+      <button id="fit" class="icon-btn" aria-label="Fit graph to view">Fit</button>
+      <button id="relayout" class="icon-btn" aria-label="Recalculate layout">Re-layout</button>
+    </div>
+
+    <div class="stage-status" id="stage-status" role="status" aria-live="polite"></div>
+  </main>
+
+  <!-- ───────────────────────── list view ───────────────────────── -->
+  <section class="listview" id="listview" hidden aria-labelledby="list-h">
+    <div class="listview-inner">
+      <h2 id="list-h">All entities</h2>
+      <p class="hint">
+        A searchable, non-graph route into the Atlas. Respects the filters in
+        the sidebar. Every row links to the entity's Markdown source on GitHub.
+      </p>
+      <p class="list-count" id="list-count" role="status" aria-live="polite"></p>
+      <div class="table-wrap">
+        <table class="entity-table">
+          <caption class="sr-only">Atlas entities matching the current filters</caption>
+          <thead>
+            <tr>
+              <th scope="col"><button class="sortbtn" data-sort="label">Name</button></th>
+              <th scope="col"><button class="sortbtn" data-sort="id">ID</button></th>
+              <th scope="col"><button class="sortbtn" data-sort="type">Type</button></th>
+              <th scope="col"><button class="sortbtn" data-sort="level">Level</button></th>
+              <th scope="col"><button class="sortbtn" data-sort="scope">Scope</button></th>
+              <th scope="col"><button class="sortbtn" data-sort="status">Status</button></th>
+              <th scope="col"><button class="sortbtn" data-sort="rel_degree">Links</button></th>
+              <th scope="col">Source</th>
+            </tr>
+          </thead>
+          <tbody id="list-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────────────── detail panel ───────────────────────── -->
+  <aside class="detail" id="detail" hidden aria-labelledby="detail-title" tabindex="-1">
+    <div class="detail-inner">
+      <button id="detail-close" class="icon-btn detail-close" aria-label="Close entity details">✕</button>
+      <div id="detail-body"></div>
+    </div>
+  </aside>
+
+</div>
+
+<footer class="footer">
+  <p>
+    Generated from the <a id="repo-link" href="#">Data Initiatives Atlas</a> repository.
+    The repository is the source of truth; this graph is a derived view.
+    Graph rendering by <a href="https://js.cytoscape.org/" rel="noopener">Cytoscape.js</a> (MIT).
+  </p>
+</footer>
+
+<script src="vendor/cytoscape.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
