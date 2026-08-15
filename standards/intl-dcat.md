@@ -15,8 +15,8 @@ country: null
 region: null
 
 status: active
-confidence: low
-coverage: low
+confidence: medium
+coverage: medium
 verification: search-only
 
 start_date: null
@@ -27,18 +27,29 @@ successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
-organisations: []
+organisations:
+  - INTL-W3C
 related_entities:
   - EU-DCAT-AP
-relationships: []
+relationships:
+  - type: maintained-by
+    target: INTL-W3C
+    source: fact
+    evidence: "DCAT Version 3 was published as a W3C Recommendation on 22 August 2024 by the Dataset Exchange Working Group (w3.org/TR/vocab-dcat-3/; w3.org news). NOT READ — search-only."
+    confidence: high
+    valid_from: 2024-08-22
+    valid_until: null
 
 sources:
-  - title: "Get started with DCAT-AP (describing DCAT-AP as based on W3C's DCAT)"
-    url: "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-data-portals-europe/news/get-started-dcat-ap"
-    publisher: "European Commission — Interoperable Europe Portal"
-  - title: "DCAT — standaarden.overheid.nl (describing DCAT as a W3C metadata standard)"
-    url: "https://standaarden.overheid.nl/dcat"
-    publisher: "Overheid.nl"
+  - title: "Data Catalog Vocabulary (DCAT) - Version 3"
+    url: "https://www.w3.org/TR/vocab-dcat-3/"
+    publisher: "World Wide Web Consortium (W3C)"
+  - title: "Data Catalog Vocabulary (DCAT) - Version 3 is a W3C Recommendation"
+    url: "https://www.w3.org/news/2024/data-catalog-vocabulary-dcat-version-3-is-a-w3c-recommendation/"
+    publisher: "World Wide Web Consortium (W3C)"
+  - title: "Data Catalog Vocabulary (DCAT) - Version 2"
+    url: "https://www.w3.org/TR/vocab-dcat-2/"
+    publisher: "World Wide Web Consortium (W3C)"
 ---
 
 # DCAT (Data Catalog Vocabulary)
@@ -47,36 +58,38 @@ sources:
 > only; the cited pages were confirmed to exist but were not read. See
 > `discovery/unresolved.md` and `progress/current-batch.md`.
 
+## Rebuilt in Batch 14
+
+Batch 9 created this entity from **second-hand descriptions only** — one
+European Commission page, one Dutch government page — with no w3.org
+citation, and flagged the top of the Atlas's flagship standards chain as its
+weakest link. **It has been rebuilt here on W3C material**, and
+`confidence` moves from `low` to `medium`.
+
 ## Description
 
-DCAT is the W3C's vocabulary for describing datasets in data catalogues. It
-is the root of the metadata-standards chain the Atlas has been assembling
-across three batches: [[EU-DCAT-AP]] is a specification based on it, and
-[[NL-DCAT-AP-NL]] is the Dutch profile of that. DCAT 3 is the recommendation
-[[EU-DCAT-AP]] 3.0.1 is aligned with.
+DCAT is an **RDF vocabulary**, published by [[INTL-W3C]], purpose-built to
+let data catalogues published by different organisations describe their
+holdings in a common machine-readable structure so the catalogues can be
+harvested, aggregated and searched together.
 
-## ⚠ No W3C source was located
+It enables a publisher to describe datasets and data services in a catalogue
+using a standard model and vocabulary, increasing discoverability and
+supporting a decentralised approach to publishing catalogues with federated
+search across multiple sites.
 
-`confidence: low` for a specific reason: **neither source below is from the
-W3C.** Both are second-hand descriptions — one European Commission, one
-Dutch government — that characterise DCAT as a W3C standard. No w3.org
-citation was returned by any search in this batch.
-
-For a standard this structurally important, that is unsatisfactory. The
-entity is created anyway because the alternative was leaving the top of the
-chain missing while both derived profiles exist. **Batch 14 should rebuild
-it on W3C material**, in the same way Batch 8 rebuilt [[EU-EIDAS2]].
+**Version 3** was published as a W3C Recommendation on **22 August 2024** by
+the Dataset Exchange Working Group. DCAT 3 keeps the DCAT namespace and
+preserves backward compatibility with DCAT 2 — it relaxes constraints and
+adds classes and properties without breaking previous term definitions.
+[[EU-DCAT-AP]] 3.0.1 is aligned with DCAT 3.
 
 ## Scope note
 
 W3C is an international, non-UN organisation, so this entity takes the
-`INTL` ID scope per `metadata/ontology.md` §2.1 — the first `INTL` entity in
-the Atlas. The W3C itself is not yet modelled (Batch 13), so no
-`maintained-by` relationship is asserted.
-
-Creating this in Batch 9 is a small scope stretch — DCAT is international
-rather than EU — but Batch 9's brief names DCAT explicitly in its standards
-list, and the chain is only meaningful with its root present.
+`INTL` ID scope per `metadata/ontology.md` §2.1. [[INTL-W3C]] was added in
+Batch 13, so the `maintained-by` relationship — pending since Batch 9 — is
+now recorded.
 
 ## The completed chain
 
@@ -94,8 +107,9 @@ end-to-end.
 
 ## Relationships
 
+- Published by [[INTL-W3C]].
 - Basis for [[EU-DCAT-AP]] (recorded on that entity).
 
 ## Sources
 
-Listed in frontmatter — both indirect.
+Listed in frontmatter — now all three from w3.org.

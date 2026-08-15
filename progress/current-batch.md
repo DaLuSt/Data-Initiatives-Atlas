@@ -1,18 +1,22 @@
 # Current Batch
 
-**Status:** Batch 10 complete (search-only sourcing) and validated. No batch
-currently in progress.
+**Status:** Batches 12–14 complete (search-only sourcing) and validated. No
+batch currently in progress.
 
-The Netherlands layer (Batches 1–5) and the EU layer (Batches 7–10) are
-populated. **Batches 6 and 11 — the two validation batches — are both
-deferred** for the same reason; see below.
+**All three layers are now populated** — Netherlands (Batches 1–5), EU
+(Batches 7–10) and international (Batches 12–14). **All three validation
+batches — 6, 11 and 15 — are deferred** for the same reason; see below.
 
 ## Why the validation batches are deferred
 
-Batch 6 (Netherlands Validation) and Batch 11 (EU Validation) cannot be
-completed in substance while the sourcing debt stands: **101 of the Atlas's
-110 entities** are `verification: search-only`, compiled from search results
+Batches 6, 11 and 15 (Netherlands, EU and Global Validation) cannot be
+completed in substance while the sourcing debt stands: **117 of the Atlas's
+126 entities** are `verification: search-only`, compiled from search results
 with no cited page actually read.
+
+Batch 15 is the most affected: the international layer is the
+**weakest-sourced** part of the Atlas, with un.org and ietf.org material
+largely unreachable through search.
 
 The automated suite already checks and passes everything checkable without
 sources — IDs, links, relationship types, vocabularies, placement. What
@@ -21,7 +25,8 @@ missing sources, unsupported relationships — requires reading primary
 sources. Running it now would produce a report that reads like assurance
 without being any.
 
-**Do the re-verification pass first**, then Batches 6 and 11.
+**Do the re-verification pass first**, then Batches 6, 11 and 15, then the
+Final Quality Gate.
 
 ## Priority fixes for the next verification pass
 
@@ -41,6 +46,9 @@ Ranked by how far a wrong value would propagate:
 | [[NL-RORA]] / [[NL-EAR]] | The 2024 succession and site-naming oddity |
 | [[NL-FDS]] | Was the afsprakenstelsel established Feb 2026? |
 | [[NL-NDS]] / [[NL-DIGIBETER]] | Is NDS operative, and did it supersede DIGIbeter? |
+| [[UN-DATA-COMMONS]] | Cites **Grokipedia** — the weakest source in the Atlas |
+| [[UN-DATA-STRATEGY]] | No source dedicated to the strategy exists in the record |
+| [[INTL-ISO-IEC-27002]] | Cited URL resolves to the superseded 2013 edition |
 
 ## Cross-level chains established so far
 
@@ -68,7 +76,15 @@ EU-EIF ──applies-in──→ NL   (NORA link unconfirmed)
 Standards — the first end-to-end international → EU → national descent:
 
 ```
-INTL-DCAT (W3C) → EU-DCAT-AP (SEMIC) → NL-DCAT-AP-NL (Geonovum)
+INTL-DCAT (W3C)             → EU-DCAT-AP (SEMIC) → NL-DCAT-AP-NL (Geonovum)
+INTL-ISO-IEC-27001 + -27002 → NL-BIO / BIO2
+```
+
+Incomplete — the statistics chain stops at the EU because no source connects
+the European Statistical System to the UN system:
+
+```
+UN-UNSD + UN-FPOS  ⋮ (no source)  EU-EUROSTAT → NL-CBS
 ```
 
 Membership chains (each from a sourced composition rule, not a source naming

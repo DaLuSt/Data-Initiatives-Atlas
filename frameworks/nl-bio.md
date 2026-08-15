@@ -31,7 +31,23 @@ domains:
 organisations: []
 related_entities:
   - NL-NEN
+  - INTL-ISO-IEC-27001
+  - INTL-ISO-IEC-27002
 relationships:
+  - type: based-on
+    target: INTL-ISO-IEC-27001
+    source: fact
+    evidence: "BIO2 is based on NEN-EN-ISO/IEC 27001:2023, applied to formulate requirements for establishing and implementing an information security management system (bio-overheid.nl BIO2). NOTE: BIO2 cites the 2023 NEN-EN adoption; the ISO edition located is 27001:2022 — very likely the same standard under its Dutch designation, but the equivalence is inferred. NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: based-on
+    target: INTL-ISO-IEC-27002
+    source: fact
+    evidence: "BIO2 is based on NEN-EN-ISO/IEC 27002:2022, applied in a risk-driven manner to formulate appropriate control measures (bio-overheid.nl BIO2). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: applies-in
     target: NL
     source: fact
@@ -99,9 +115,13 @@ is treated as a distinct instrument it should be split out — recorded in
 ## Relationships
 
 - Applies in [[NL]] across all government tiers.
-- Based on ISO/IEC 27001 and 27002, published in the Netherlands by
-  [[NL-NEN]]. The `based-on` relationship to the ISO standards themselves
-  cannot be asserted until those exist as entities (Batch 14).
+- Based on [[INTL-ISO-IEC-27001]] and [[INTL-ISO-IEC-27002]], added in
+  Batch 14, closing the gap this entity carried since Batch 4. This gives a
+  second international → national standards chain alongside the DCAT one.
+  Note the edition caveat recorded in the relationship evidence: BIO2 cites
+  the NEN-EN 2023/2022 adoptions, and the equivalence to the ISO editions is
+  inferred rather than sourced.
+- Published in the Netherlands by [[NL-NEN]].
 - ENSIA, the accountability system paired with the BIO in its
   digitaleoverheid.nl placement, is not yet an entity; queued.
 
