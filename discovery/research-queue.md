@@ -174,7 +174,30 @@ Digitale Overheid.
 | Wet weerbaarheid kritieke entiteiten | Dutch CER transposition, approved 15 Apr 2026; should mirror [[NL-CBW]] → [[EU-NIS2]] | Batch 9+ | Batch 3; raised again Batch 8 |
 | EUR-Lex citation for the AI Act | [[EU-AI-ACT]] lacks an Official Journal link | Batch 9 | Batch 8 / 2026-08-14 |
 | Dutch EUDI Wallet implementation | Every member state must provide one; no Dutch arrangement researched | Batch 9+ | Batch 8 / 2026-08-14 |
-| The 14 common European data spaces | Enumerated in prose on [[EU-COMMON-DATA-SPACES]]: agriculture, cultural heritage, energy, finance, green deal, health, industry, language, media, mobility, public administrations, research and innovation, skills, tourism. Deliberately not created as 14 thin entities | Batch 10 | Batch 7 / 2026-08-14 |
+| **The 10 remaining common European data spaces** | Batch 10 created Health, Mobility, Green Deal and Agriculture. **Not created:** cultural heritage, energy, finance, industry, language, media, public administrations, research and innovation, skills, tourism — research returned only their names in the list of fourteen | Later | Batch 7; narrowed Batch 10 |
+| ~~ENISA~~ | Added in Batch 9 as [[EU-ENISA]] | — | Done |
+| ~~W3C source for DCAT~~ | Found in Batch 14; [[INTL-DCAT]] rebuilt on w3.org, confidence low → medium | — | Done |
+| ~~W3C (the organisation)~~ | Added in Batch 13 as [[INTL-W3C]] | — | Done |
+| ~~ISO/IEC 27001 & 27002~~ | Added in Batch 14; [[NL-BIO]] gap closed | — | Done |
+| UN DESA, UNDP, UNESCO, WHO, UNECE | Named in Batch 13's scope; **no usable source located for any**, so none created | Later | Batch 13 / 2026-08-14 |
+| World Bank | Named in Batch 13's scope; omitted deliberately — its institutions are technically UN specialised agencies and misclassifying it is the specific error the brief warns against | Later | Batch 13 / 2026-08-14 |
+| IEEE | Named in the standards-ecosystem source alongside ISO/IEC/ITU/IETF/W3C; not created | Later | Batch 13 / 2026-08-14 |
+| ISO/IEC JTC 1 and SC 27 | Arguably the actual producer of the 27000-family standards | Later | Batch 14 / 2026-08-14 |
+| Current-edition URL for ISO/IEC 27002:2022 | The cited ISO OBP link resolves to the superseded 2013 edition | Later | Batch 14 / 2026-08-14 |
+| IETF RFCs behind [[NL-PAS-TOE-OF-LEG-UIT]] | HTTPS, DNSSEC, DMARC/SPF/DKIM, TLS all originate in IETF RFCs and are mandatory Dutch standards — a real international → national chain, entirely unmodelled | Later | Batch 13 / 2026-08-14 |
+| OECD Privacy Guidelines / data governance recommendations | [[INTL-OECD]] exists but no OECD instrument is modelled | Later | Batch 13 / 2026-08-14 |
+| ITU standards | [[UN-ITU]] exists but no ITU standard is modelled | Later | Batch 13 / 2026-08-14 |
+| UNCTAD CSTD working group on data governance | May warrant an `initiative` entity if its outputs are substantive | Later | Batch 13 / 2026-08-14 |
+| Data quality, information management, digital identity, AI, data sharing, API and knowledge-graph standards | Batch 14's scope lists all of these; **only information security (27001/27002) and metadata (DCAT) were covered** | Later | Batch 14 / 2026-08-14 |
+| ~~Interoperable Europe Board~~ | Still not created — two passing mentions only | Later | Batch 7; carried |
+| W3C source for DCAT | [[INTL-DCAT]] rests on second-hand descriptions; the top of the flagship standards chain | Batch 14 | Batch 9 / 2026-08-14 |
+| W3C (the organisation) | Needed for [[INTL-DCAT]]'s `maintained-by` | Batch 13 | Batch 9 / 2026-08-14 |
+| GeoDCAT-AP and StatDCAT-AP | Extensions of [[EU-DCAT-AP]]; GeoDCAT-AP would likely connect [[NL-GEONOVUM]]'s geo and metadata work | Later | Batch 9 / 2026-08-14 |
+| ETSI standards | [[EU-ETSI]] exists but **no ETSI standard is modelled**, despite ICT standardisation being central to this Atlas | Later | Batch 9 / 2026-08-14 |
+| Regulation (EU) 1025/2012; Regulation (EC) 223/2009 | Legal bases of the ESOs and the European Statistical System; described but not modelled | Later | Batch 9 / 2026-08-14 |
+| EUR-Lex citation for EHDS Reg. (EU) 2025/327 | [[EU-EHDS]]'s strongest source is the Parliament's Legislative Observatory | Later | Batch 10 / 2026-08-14 |
+| IDSA / IDS architecture | [[NL-ISHARE]]'s documented route into the EU data-space world | Later | Batch 5; carried |
+| Environment / Energy / Agriculture domains | Still below the 2-entity threshold even after Batch 10 | Later | Batch 5; rechecked Batch 10 |
 | EU AI strategy (if distinct from the AI Act) | Named in Batch 7 scope; no clearly identifiable standalone strategy document found | Batch 8 | Batch 7 / 2026-08-14 |
 | Digital Europe Programme; EuroHPC | EU digital infrastructure funding instruments, not researched in Batch 7 | Batch 9 | Batch 7 / 2026-08-14 |
 | Energy, Environment, Finance, Justice, Agriculture, Social Security, Built Environment domains | All named in the Batch 5 brief but each currently below the 2-entity threshold in taxonomy §1. Create as the ecosystems that would populate them are researched | Later | Batch 5 / 2026-08-14 |

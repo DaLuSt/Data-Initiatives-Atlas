@@ -1,17 +1,22 @@
 # Current Batch
 
-**Status:** Batch 8 complete (search-only sourcing) and validated. No batch
-currently in progress.
+**Status:** Batches 12–14 complete (search-only sourcing) and validated. No
+batch currently in progress.
 
-The Netherlands layer (Batches 1–5) and the EU layer (Batches 7–8) are
-populated. **Batch 6 was skipped** — see below.
+**All three layers are now populated** — Netherlands (Batches 1–5), EU
+(Batches 7–10) and international (Batches 12–14). **All three validation
+batches — 6, 11 and 15 — are deferred** for the same reason; see below.
 
-## Why Batch 6 was skipped, and when to do it
+## Why the validation batches are deferred
 
-Batch 6 is "Netherlands Validation". It cannot be completed in substance
-while the sourcing debt stands: 81 of the Atlas's 90 entities are
-`verification: search-only`, compiled from search results with no cited page
-actually read.
+Batches 6, 11 and 15 (Netherlands, EU and Global Validation) cannot be
+completed in substance while the sourcing debt stands: **116 of the Atlas's
+125 entities** are `verification: search-only`, compiled from search results
+with no cited page actually read.
+
+Batch 15 is the most affected: the international layer is the
+**weakest-sourced** part of the Atlas, with un.org and ietf.org material
+largely unreachable through search.
 
 The automated suite already checks and passes everything checkable without
 sources — IDs, links, relationship types, vocabularies, placement. What
@@ -20,7 +25,8 @@ missing sources, unsupported relationships — requires reading primary
 sources. Running it now would produce a report that reads like assurance
 without being any.
 
-**Do Batch 1b (re-verification) first**, then Batch 6.
+**Do the re-verification pass first**, then Batches 6, 11 and 15, then the
+Final Quality Gate.
 
 ## Priority fixes for the next verification pass
 
@@ -40,6 +46,9 @@ Ranked by how far a wrong value would propagate:
 | [[NL-RORA]] / [[NL-EAR]] | The 2024 succession and site-naming oddity |
 | [[NL-FDS]] | Was the afsprakenstelsel established Feb 2026? |
 | [[NL-NDS]] / [[NL-DIGIBETER]] | Is NDS operative, and did it supersede DIGIbeter? |
+| [[UN-DATA-COMMONS]] | Cites **Grokipedia** — the weakest source in the Atlas |
+| [[UN-DATA-STRATEGY]] | No source dedicated to the strategy exists in the record |
+| [[INTL-ISO-IEC-27002]] | Cited URL resolves to the superseded 2013 edition |
 
 ## Cross-level chains established so far
 
@@ -56,12 +65,33 @@ NL-CBW   ◄──supersedes── NL-WBNI
 Others:
 
 ```
-EU-GDPR                → NL-UAVG → NL-AP
+EU-GDPR                → NL-UAVG → NL-AP → (participates-in) EU-EDPB
 EU-OPEN-DATA-DIRECTIVE → NL-WHO
 EU-ITS-DIRECTIVE       → NL-NTM  → (part-of) NL-NDW
 EU-EIDAS  ──amended-by──→ EU-EIDAS2 → EU-EUDI-WALLET
 EU-DIGITAL-DECADE ──applies-in──→ NL
 EU-EIF ──applies-in──→ NL   (NORA link unconfirmed)
+```
+
+Standards — the first end-to-end international → EU → national descent:
+
+```
+INTL-DCAT (W3C)             → EU-DCAT-AP (SEMIC) → NL-DCAT-AP-NL (Geonovum)
+INTL-ISO-IEC-27001 + -27002 → NL-BIO / BIO2
+```
+
+Incomplete — the statistics chain stops at the EU because no source connects
+the European Statistical System to the UN system:
+
+```
+UN-UNSD + UN-FPOS  ⋮ (no source)  EU-EUROSTAT → NL-CBS
+```
+
+Membership chains (each from a sourced composition rule, not a source naming
+the Dutch body):
+
+```
+NL-AP → EU-EDPB    NL-NEN → EU-CEN    NL-CBS → EU-EUROSTAT
 ```
 
 Pending (proposal, not adopted):
@@ -81,21 +111,28 @@ EU-DIGITAL-OMNIBUS ──proposes-to-supersede──→ EU-DGA
 
 ## Dangling relationships awaiting later batches
 
+Batches 9–10 closed several of these. What remains:
+
 | Entity | Awaiting | Batch |
 |---|---|---|
-| [[EU-CYBERSECURITY-ACT]] | ENISA | 9 |
-| [[EU-EIF]] | Interoperable Europe Board | 9 |
-| [[NL-AP]] | EDPB, EDPS | 9 |
-| [[NL-NEN]] | ISO, IEC, CEN | 9, 13 |
-| [[NL-DCAT-AP-NL]] | EU DCAT-AP, W3C DCAT | 9, 14 |
-| [[EU-CER]] | Wet weerbaarheid kritieke entiteiten (NL) | 9+ |
-| [[EU-COMMON-DATA-SPACES]] | The 14 sectoral data spaces | 10 |
-| [[NL-HEALTH-RI]] / [[NL-NICTIZ]] | European Health Data Space, HL7 | 10 |
-| [[NL-ISHARE]] | Topsector Logistiek, DMI, IDSA | 10 |
-| [[NL-DSGO]] | digiGO | 10 |
+| [[EU-EIF]] | Interoperable Europe Board | later |
+| [[NL-NEN]] | ISO, IEC | 13 |
+| [[INTL-DCAT]] | W3C (the organisation), and a W3C source | 13, 14 |
 | [[NL-BIO]] | ISO/IEC 27001 & 27002 | 14 |
-| [[EU-DIGITAL-OMNIBUS]] | Free Flow of Non-Personal Data Regulation | 9 |
-| [[NL-GEMMA]] | VNG Realisatie | 9+ |
-| [[NL-ROSA]] | Edustandaard | 9+ |
-| [[NL-KVK]] | Handelsregisterwet | 9+ |
-| [[EU-EUDI-WALLET]] | Dutch wallet implementation | 9+ |
+| [[EU-CER]] | Wet weerbaarheid kritieke entiteiten (NL) | later |
+| [[EU-COMMON-DATA-SPACES]] | The 10 remaining sectoral data spaces | later |
+| [[EU-EHDS]] | Dutch health data access body designation (2027–2029) | later |
+| [[EU-EMDS]] | Whether it builds on the national access point network | later |
+| [[EU-DSSC-BLUEPRINT]] | Whether Dutch afsprakenstelsels map to its rulebook model | later |
+| [[NL-NICTIZ]] | HL7 | later |
+| [[NL-ISHARE]] | Topsector Logistiek, DMI, IDSA | later |
+| [[NL-DSGO]] | digiGO | later |
+| [[EU-DIGITAL-OMNIBUS]] | Free Flow of Non-Personal Data Regulation | later |
+| [[NL-GEMMA]] | VNG Realisatie | later |
+| [[NL-ROSA]] | Edustandaard | later |
+| [[NL-KVK]] | Handelsregisterwet | later |
+| [[EU-EUDI-WALLET]] | Dutch wallet implementation | later |
+| [[EU-ETSI]] | Any ETSI standard at all | later |
+
+**Closed in Batches 9–10:** `EU-CYBERSECURITY-ACT` → ENISA; `NL-AP` → EDPB;
+`NL-NEN` → CEN; `NL-CBS` → Eurostat; `NL-DCAT-AP-NL` → DCAT-AP → DCAT.

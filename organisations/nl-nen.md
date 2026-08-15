@@ -31,7 +31,15 @@ domains:
 organisations: []
 related_entities:
   - NL-FORUM-STANDAARDISATIE
-relationships: []
+  - EU-CEN
+relationships:
+  - type: participates-in
+    target: EU-CEN
+    source: fact
+    evidence: "CEN brings together the national standardisation bodies of 33 European countries; NEN is the standardisation institute of the Netherlands. Membership follows from the sourced composition rule rather than from a source naming NEN. NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Over NEN"
@@ -77,9 +85,12 @@ arrangement are not separately modelled, which may need revisiting.
   national standards infrastructure, while Forum Standaardisatie governs
   which open standards public bodies must apply. No relationship is
   asserted between them, as none was sourced.
-- NEN's relationships to ISO, IEC and CEN are its most significant, and
-  cannot be recorded until those entities exist in Batches 9 and 13.
-  Queued in `discovery/research-queue.md`.
+- Participates in [[EU-CEN]], added in Batch 9. As with [[NL-AP]] and the
+  EDPB, the evidence is a composition rule rather than a source naming NEN.
+- ISO and IEC remain unmodelled (Batch 13), so those relationships are still
+  unassertable. [[EU-CENELEC]] is the European counterpart of the Dutch NEC,
+  with which NEN has cooperated since 2000 — see the open modelling question
+  about whether NEC warrants its own entity.
 
 ## Sources
 

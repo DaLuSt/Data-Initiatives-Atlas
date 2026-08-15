@@ -1,5 +1,251 @@
 # Completed Batches
 
+## Batches 12–14 — UN and International Layer
+
+**Date:** 2026-08-14
+
+**⚠ Evidence standard:** unchanged — all entities `verification: search-only`.
+The international layer is the **weakest-sourced** in the Atlas: un.org and
+ietf.org material proved largely unreachable through search, and several
+entities rest on a single indirect citation.
+
+### Batch 12 — UN Core (5 entities)
+
+| ID | Type | Note |
+|---|---|---|
+| `UN-2-0` | initiative | Sept 2023 policy brief; the quintet of change |
+| `UN-DATA-STRATEGY` | strategy | ⚠ **weakest in the batch** — one indirect source |
+| `UN-GDC` | policy | Global Digital Compact; only an EU source located |
+| `UN-FPOS` | framework | Fundamental Principles of Official Statistics |
+| `UN-DATA-COMMONS` | platform | ⚠ **single Grokipedia source** |
+
+### Batch 13 — Agencies and International Organisations (7 entities)
+
+The brief's warning — *"Do not incorrectly classify non-UN organisations as
+UN organisations"* — is implemented **in the ID scheme**, not just in prose:
+
+| UN system (`UN-`) | Non-UN (`INTL-`) |
+|---|---|
+| `UN-UNSD` — Statistics Division | `INTL-ISO` |
+| `UN-UNCTAD` — data governance working group | `INTL-IEC` |
+| `UN-ITU` — **specialised agency** | `INTL-W3C` |
+| | `INTL-OECD` |
+| | `INTL-IETF` ⚠ thinnest |
+
+`UN-ITU` is the case where the distinction bites: it appears in
+standards-ecosystem listings alongside ISO, IEC, W3C, IETF and ETSI, but is
+a UN specialised agency and carries the `UN` scope accordingly.
+
+### Batch 14 — International Standards (2 new, 1 rebuilt)
+
+*(Batches 12–14 added **15** entities in total, plus the `INTL-DCAT`
+rebuild. An earlier draft of this report and the Batch 12–14 commit message
+said 14 and 126 respectively; both were off by one. Corrected here.)*
+
+| ID | Note |
+|---|---|
+| `INTL-ISO-IEC-27001` | Closes the `NL-BIO` gap open since Batch 4 |
+| `INTL-ISO-IEC-27002` | ⚠ cited URL resolves to the superseded 2013 edition |
+| `INTL-DCAT` | **Rebuilt** on w3.org; confidence low → medium |
+
+### Two international → national chains now complete
+
+```
+INTL-DCAT (W3C) → EU-DCAT-AP (SEMIC) → NL-DCAT-AP-NL (Geonovum)
+INTL-ISO-IEC-27001 + -27002 (ISO/IEC) → NL-BIO / BIO2
+```
+
+The DCAT rebuild matters: Batch 9 flagged the top of that chain as its
+weakest link because no W3C source could be found. Batch 14 found
+`w3.org/TR/vocab-dcat-3/` and the chain is now sourced end to end.
+
+**Relationships added:** 9 provenanced entries.
+**Sources added:** 24 source entries.
+
+### Scope items deliberately not delivered
+
+- **UN DESA, UNDP, UNESCO, WHO, UNECE** — all named in Batch 13's scope; **no
+  usable source was located for any**, so none was created.
+- **World Bank** — omitted deliberately. Its institutions are technically UN
+  specialised agencies, making the UN/non-UN call genuinely tricky, and
+  misclassifying it is the precise error the brief warns against.
+- **Batch 14's standards list** names data governance, metadata, data
+  quality, interoperability, information management, digital identity,
+  cybersecurity, AI, data sharing, APIs and knowledge graphs. **Only
+  information security and metadata were covered.** This is a substantial
+  under-delivery and is recorded as such.
+
+### Honest weak points
+
+- `UN-DATA-COMMONS` cites **Grokipedia** — an AI-generated encyclopedia and
+  the weakest citation anywhere in this Atlas.
+- `UN-DATA-STRATEGY` has no source dedicated to it.
+- `UN-GDC`, a UN instrument, is sourced **only to a European Commission news
+  page**.
+- `INTL-IETF` carries almost nothing beyond its category — yet IETF RFCs
+  underpin the HTTPS/DNSSEC/mail standards mandated by
+  `NL-PAS-TOE-OF-LEG-UIT`, a real chain left entirely unmodelled.
+- `INTL-ISO` → `NL-NEN` is **not asserted**: unlike CEN, no membership
+  composition rule was sourced.
+- `UN-UNSD` → `EU-EUROSTAT` is **not asserted**: no source connects the
+  European Statistical System to the UN statistical system, leaving the
+  statistics chain stopping at the EU.
+
+**Validation result:** all 5 checks pass, 0 errors, 0 warnings, across 125
+entities.
+
+**Next:** Batch 15 (Global Validation) and the Final Quality Gate — both of
+which, like Batches 6 and 11, need primary sources before they mean
+anything.
+
+---
+
+## Batch 10 — EU Data Spaces
+
+**Date:** 2026-08-14
+
+**Scope:** The common European data spaces — health, mobility, energy,
+finance, agriculture, manufacturing, skills, tourism, public
+administration, green deal, research, media — with purpose, governance,
+responsible organisations, standards, legislation, infrastructure and
+participating countries for each.
+
+**⚠ Evidence standard:** unchanged — all entities `verification: search-only`.
+
+**Entities added (6):**
+
+| ID | Type | Note |
+|---|---|---|
+| `EU-EHDS` | data-space | Health — Reg. (EU) 2025/327, the only one with its own regulation |
+| `EU-EMDS` | data-space | Mobility — purpose statement only |
+| `EU-GREEN-DEAL-DATA-SPACE` | data-space | Green Deal — purpose statement only |
+| `EU-AGRI-DATA-SPACE` | data-space | Agriculture — purpose statement only |
+| `EU-DSSC` | organisation | Data Spaces Support Centre |
+| `EU-DSSC-BLUEPRINT` | framework | Shared reference architecture for data spaces |
+
+**Ten of the fourteen data spaces were deliberately not created.** Research
+returned **only their names** for cultural heritage, energy, finance,
+industry, language, media, public administrations, research and innovation,
+skills and tourism — no purpose, governance, standards or infrastructure.
+Batch 10's brief asks for exactly those attributes; ten entities whose whole
+content would be "this is one of the fourteen" is the shallow-entity failure
+the brief warns against. All ten are enumerated on
+[[EU-COMMON-DATA-SPACES]] and queued.
+
+**This batch is therefore a partial delivery of its scope, and says so.**
+Three of the four created are thin (one sourced purpose sentence each) and
+each states that in its own body. Only `EU-EHDS` is substantively
+researched.
+
+**The most useful entity is `EU-DSSC-BLUEPRINT`.** Its rulebook and
+governance-framework model is the EU-level analogue of the Dutch
+*afsprakenstelsel* pattern running through [[NL-FDS]], [[NL-DSGO]],
+[[NL-ISHARE]] and [[NL-HEALTH-RI]]. **No relationship is asserted** — the
+resemblance is an Atlas observation, recorded as interpretation and queued.
+Confirming it would connect the Dutch and EU data-space layers structurally
+rather than thematically.
+
+**Two high-value links left unasserted**, both on the same principle that
+has served this project well:
+- `EU-EHDS` → `NL-HEALTH-RI`: Health-RI is the obvious candidate for the
+  Dutch health data access body, but the HDAB designation phase runs
+  2027–2029 and nothing sources it yet.
+- `EU-EMDS` → `NL-NTM`: national access points look like the natural
+  building blocks of a mobility data space, but no source says so.
+
+**Relationships added:** 6 provenanced entries.
+**Sources added:** 13 source entries.
+
+**Honest weak points:**
+- `EU-EHDS` has **no EUR-Lex citation** — the strongest source is the
+  Parliament's Legislative Observatory file.
+- `EU-EMDS`, `EU-GREEN-DEAL-DATA-SPACE` and `EU-AGRI-DATA-SPACE` are
+  `confidence: low` placeholders with citations, not researched content.
+- Two sources are third-party copies or project sites rather than
+  Commission material.
+
+**Validation result:** all 5 checks pass, 0 errors, 0 warnings, across 110
+entities.
+
+**Next batch:** Batch 11 — EU Validation. The same caveat applies as to
+Batch 6: it cannot be completed in substance while the sourcing debt stands.
+
+---
+
+## Batch 9 — EU Organisations and Standards
+
+**Date:** 2026-08-14
+
+**Scope:** European Commission and DGs, Eurostat, EDPB, EDPS, ENISA,
+European Parliament, Council of the EU, Publications Office, CEN, CENELEC,
+ETSI, SEMIC; plus DCAT, DCAT-AP and related standards.
+
+**⚠ Evidence standard:** unchanged — all entities `verification: search-only`.
+
+**Entities added (14):**
+
+*Institutions:* `EU-COMMISSION`, `EU-PARLIAMENT`, `EU-COUNCIL`
+*Agencies and supervisors:* `EU-ENISA`, `EU-EDPB`, `EU-EDPS`,
+`EU-EUROSTAT`, `EU-PUBLICATIONS-OFFICE`
+*Standards bodies:* `EU-CEN`, `EU-CENELEC`, `EU-ETSI`, `EU-SEMIC`
+*Standards:* `EU-DCAT-AP`, `INTL-DCAT`
+
+**The first end-to-end standards chain.** Batch 4 sketched it in prose and
+refused to assert it; Batch 9 completed it:
+
+```
+INTL-DCAT (W3C) → EU-DCAT-AP (SEMIC) → NL-DCAT-AP-NL (Geonovum)
+```
+
+This is the international → EU → national standards descent the brief's
+final relationship pass calls for, and the first the Atlas holds
+end-to-end. `INTL-DCAT` is also the Atlas's first `INTL`-scoped entity.
+
+**Four dangling links closed:** `NL-AP` → `EU-EDPB`, `NL-NEN` → `EU-CEN`,
+`NL-CBS` → `EU-EUROSTAT`, `EU-CYBERSECURITY-ACT` → `EU-ENISA`.
+
+**A recurring evidence pattern, marked consistently.** Three of those
+closures rest on **composition rules** rather than sources naming the Dutch
+body: "the EDPB comprises representatives from each national supervisory
+authority", "CEN brings together the national standardisation bodies of 33
+European countries", "the ESS is the partnership between Eurostat and the
+national statistical institutes". Each is a reasonable inference from a
+sourced rule — not a guess, but not a direct citation either. Every one says
+so in its `evidence` field at `confidence: medium`.
+
+**Relationships added:** 10 provenanced entries.
+**Sources added:** 27 source entries.
+
+**Deliberate omissions:**
+- **Directorates-General were not created.** DG CONNECT is named once as a
+  DCAT-AP co-initiator; no DG structure research was done. Creating DG
+  entities from a passing mention would repeat the `NL-PETRA` mistake.
+- **No adoption relationships from Parliament/Council to the 16 legislative
+  entities.** That would add 32 edges conveying one fact already implied by
+  entity type, drowning the substantive chains. Recorded as a modelling
+  question instead.
+- **Interoperable Europe Board** not created — two passing mentions only.
+- **Regulation 1025/2012 and Regulation 223/2009** described but not
+  modelled; both are legislation and outside this batch's scope.
+
+**Honest weak points:**
+- `INTL-DCAT` has **no W3C source** — both citations are second-hand
+  descriptions. The top of the flagship chain is its weakest link.
+  Batch 14 should rebuild it, as Batch 8 rebuilt `EU-EIDAS2`.
+- `EU-PUBLICATIONS-OFFICE` has no source describing it; its EUR-Lex
+  publisher role is asserted from the Atlas's own citation practice, which
+  is circular.
+- `EU-ETSI` is the clearest incompleteness: ICT standardisation is central
+  to this Atlas's subject, and **no ETSI standard was modelled**.
+- `EU-EDPB` cites a commercial blog for an EU institution.
+
+**Validation result:** all 5 checks pass, 0 errors, 0 warnings, across 104
+entities.
+
+**Next batch:** Batch 10 — EU Data Spaces.
+
+---
+
 ## Batch 8 — EU Legislation
 
 **Date:** 2026-08-14

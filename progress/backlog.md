@@ -68,33 +68,56 @@ validation (`CONTRIBUTING.md` — Batch workflow).
   legislation beyond mobility (ITS) and cybersecurity; the Free Flow of
   Non-Personal Data Regulation; a EUR-Lex citation for the AI Act.
   See `progress/completed.md`.
-- [ ] **Batch 9 — EU Organisations and Standards.** European Commission and
-  relevant DGs, Eurostat, EDPB, EDPS, ENISA, European Parliament, Council of
-  the EU, Publications Office, CEN, CENELEC, ETSI, SEMIC, relevant
-  programmes/partnerships; DCAT, DCAT-AP, interoperability frameworks,
-  SEMIC specs, data-space/API/cloud/AI/cybersecurity standards.
-- [ ] **Batch 10 — EU Data Spaces.** Health, Mobility, Energy, Finance,
-  Agriculture, Manufacturing, Skills, Tourism, Public Administration, Green
-  Deal, Research, Media — purpose, governance, standards, legislation,
-  infrastructure, participating countries, related initiatives.
+- [x] **Batch 9 — EU Organisations and Standards.** Done 2026-08-14, 14
+  entities. Completed the first end-to-end international → EU → national
+  standards chain (DCAT → DCAT-AP → DCAT-AP-NL) and closed four dangling
+  NL→EU links. **Search-only sourcing.** Not covered: Directorates-General
+  (insufficient sourcing), Interoperable Europe Board, ETSI standards, API/
+  cloud/AI/cybersecurity standards specifically, GeoDCAT-AP and StatDCAT-AP.
+  See `progress/completed.md`.
+- [x] **Batch 10 — EU Data Spaces.** Done 2026-08-14, 6 entities.
+  ⚠ **Partial delivery of scope, deliberately.** Only 4 of the 14 data
+  spaces were created — health (EHDS, well sourced), mobility, green deal
+  and agriculture (purpose statements only). The other **ten were not
+  created**: research returned only their names, and the brief asks for
+  purpose/governance/standards/infrastructure. All ten are enumerated on
+  `EU-COMMON-DATA-SPACES` and queued. Also added the Data Spaces Support
+  Centre and its Blueprint. **Search-only sourcing.**
+  See `progress/completed.md`.
 - [ ] **Batch 11 — EU Validation.** Full audit, with particular attention to
   the EU→national legislative chain and EU→national standards chain.
+  ⚠ **Blocked in substance by the search-only debt**, exactly as Batch 6 is.
+  The automated suite passes; status/source/relationship accuracy needs
+  primary sources. Do the re-verification pass first.
 
 ## International / UN
 
-- [ ] **Batch 12 — UN Core.** UN Data Strategy, UN Digital Strategy, UN 2.0,
-  Global Digital Compact, SDG data initiatives, UN statistical initiatives,
-  UN Data Commons, UN digital-government initiatives.
-- [ ] **Batch 13 — UN Agencies and International Organisations.** UN DESA,
-  UNDP, UNCTAD, UNESCO, WHO, UNECE, OECD, World Bank, ITU, ISO, IEC, W3C,
-  IETF, other authoritative international organisations — correctly typed
-  and leveled, UN-system vs. non-UN kept distinct.
-- [ ] **Batch 14 — International Standards and Frameworks.** Global
-  standards/frameworks for data governance, metadata, data quality,
-  interoperability, information management, digital identity,
-  cybersecurity, AI, data sharing, APIs, knowledge graphs.
+- [x] **Batch 12 — UN Core.** Done 2026-08-14, 5 entities. **Search-only, and
+  the weakest-sourced layer in the Atlas** — un.org material was largely
+  unreachable through search. `UN-DATA-COMMONS` rests on a Grokipedia page;
+  `UN-DATA-STRATEGY` has no dedicated source; `UN-GDC` is sourced only to an
+  EU page. Not covered: UN Digital Strategy as a distinct entity, SDG data
+  initiatives, UN digital-government initiatives (e.g. the E-Government
+  Survey). See `progress/completed.md`.
+- [x] **Batch 13 — UN Agencies and International Organisations.** Done
+  2026-08-14, 7 entities. UN/non-UN distinction implemented in the ID scheme
+  (`UN-` vs `INTL-`). **Not created: UN DESA, UNDP, UNESCO, WHO, UNECE** (no
+  usable source found for any) and **World Bank** (omitted deliberately —
+  its institutions are technically UN specialised agencies and
+  misclassifying it is the error the brief warns against).
+  See `progress/completed.md`.
+- [x] **Batch 14 — International Standards and Frameworks.** Done
+  2026-08-14, 2 new entities plus `INTL-DCAT` rebuilt on w3.org.
+  ⚠ **Substantially under-delivered against its scope.** Of the eleven
+  standard areas listed, **only information security (ISO/IEC 27001/27002)
+  and metadata (DCAT) were covered.** Data quality, interoperability,
+  information management, digital identity, AI, data sharing, APIs and
+  knowledge graphs are all uncovered and queued.
+  See `progress/completed.md`.
 - [ ] **Batch 15 — Global Validation.** Validate the international layer and
-  its relationships to the EU layer.
+  its relationships to the EU layer. ⚠ **Blocked in substance by the
+  search-only debt**, as Batches 6 and 11 are — and most acutely here, since
+  the international layer is the weakest-sourced in the Atlas.
 
 ## Final passes (after all batches above)
 

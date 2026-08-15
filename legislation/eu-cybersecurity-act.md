@@ -29,7 +29,8 @@ successor: null
 domains:
   - DOMAIN-GOVERNMENT
 organisations: []
-related_entities: []
+related_entities:
+  - EU-ENISA
 relationships:
   - type: applies-in
     target: NL
@@ -63,11 +64,8 @@ functioning of the internal market by raising the level of cybersecurity in
 the Union and enabling a harmonised approach to European cybersecurity
 certification schemes.
 
-ENISA has contributed to EU network and information security since 2004 and
-is based in Athens with a branch in Heraklion. **ENISA is not yet an Atlas
-entity** — it is Batch 9 scope — so the obvious `governed-by` /
-`establishes` relationship between this regulation and the agency cannot yet
-be recorded. Queued.
+[[EU-ENISA]] was added in Batch 9, closing the gap this entity carried when
+created. The `governed-by` relationship is recorded on the agency.
 
 `coverage: low`: the certification framework's schemes and mechanisms were
 not researched.
@@ -85,7 +83,7 @@ find a hole without it.
 ## Relationships
 
 - Applies in [[NL]].
-- ENISA relationship pending Batch 9.
+- Governs [[EU-ENISA]] (recorded on that entity).
 
 ## Sources
 

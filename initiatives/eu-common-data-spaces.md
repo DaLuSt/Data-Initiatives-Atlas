@@ -32,6 +32,11 @@ domains:
 organisations: []
 related_entities:
   - EU-DATA-STRATEGY
+  - EU-EHDS
+  - EU-EMDS
+  - EU-GREEN-DEAL-DATA-SPACE
+  - EU-AGRI-DATA-SPACE
+  - EU-DSSC
 relationships:
   - type: part-of
     target: EU-DATA-STRATEGY
@@ -72,22 +77,39 @@ A Commission staff working document of January 2024 is reported to identify
 health, industry, language, media, mobility, public administrations,
 research and innovation, skills, and tourism.
 
-**None of these is created as an entity in this batch.** They are Batch 10
-scope, where each is to be researched for its purpose, governance,
-responsible organisations, standards, legislation, technical infrastructure
-and participating countries. Creating fourteen thin entities from a single
-list would be exactly the "thousands of shallow entities" the brief warns
-against; the list is recorded here in prose and queued instead.
+**Batch 10 created four of the fourteen**, and deliberately not the rest:
 
-`coverage: low` reflects that: this entity is the umbrella, and the
-substance sits in the individual data spaces that do not yet exist.
+| Data space | Status in the Atlas |
+|---|---|
+| Health | [[EU-EHDS]] — has its own regulation; best sourced |
+| Mobility | [[EU-EMDS]] — purpose only |
+| Green deal | [[EU-GREEN-DEAL-DATA-SPACE]] — purpose only |
+| Agriculture | [[EU-AGRI-DATA-SPACE]] — purpose only |
+| Cultural heritage, energy, finance, industry, language, media, public administrations, research and innovation, skills, tourism | **Not created** |
+
+The ten not created are ones for which research returned **only their name
+in the list of fourteen** — no purpose statement, governance, standards or
+infrastructure. Batch 10's brief asks for exactly those attributes, and
+creating ten entities whose entire content would be "this is one of the
+fourteen" is the shallow-entity failure the brief warns against. They are
+enumerated here and queued in `discovery/research-queue.md`.
+
+Even the three created beyond EHDS are thin — one sourced purpose sentence
+each — and say so in their own bodies.
+
+## Horizontal support
+
+[[EU-DSSC]] supports the formation of data spaces across sectors, and
+publishes [[EU-DSSC-BLUEPRINT]], the shared reference architecture for
+building and governing them.
 
 ## Anticipated national connections
 
-Two Dutch entities already in the Atlas are the obvious counterparts when
-Batch 10 lands — [[NL-HEALTH-RI]] against the health data space, and
-[[NL-NTM]] against mobility. Neither relationship is asserted, because no
-source connects them and the EU-side entities do not exist yet.
+Two Dutch entities are the obvious counterparts: [[NL-HEALTH-RI]] against
+the health data space, and [[NL-NTM]] against mobility. **Neither
+relationship is asserted** — no source connects them, and in both cases the
+national body's designated role under the EU space is exactly what has not
+been established.
 
 ## Relationships
 

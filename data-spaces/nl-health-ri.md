@@ -32,6 +32,7 @@ domains:
 organisations: []
 related_entities:
   - NL-NICTIZ
+  - EU-EHDS
 relationships: []
 
 sources:
@@ -92,7 +93,11 @@ them: the resemblance is real but no source connects them.
 - Adjacent to [[NL-NICTIZ]], which maintains the health information
   standards that such an infrastructure relies on. No relationship
   asserted, as none was sourced.
-- Expected to connect to the European Health Data Space in Batch 10.
+- [[EU-EHDS]] was added in Batch 10. **No relationship is asserted.**
+  Health-RI is the obvious candidate to become or host the Dutch health data
+  access body the EHDS requires, but no source says so, and the member-state
+  HDAB designation phase runs 2027–2029 — after this entry was written.
+  Recorded as a high-value open question rather than a guess.
 
 ## Sources
 

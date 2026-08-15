@@ -80,19 +80,62 @@ NL-CBW   ◄──supersedes── NL-WBNI
 Data protection, open data and mobility:
 
 ```
-EU-GDPR                → NL-UAVG → NL-AP
+EU-GDPR                → NL-UAVG → NL-AP → (participates-in) EU-EDPB
 EU-OPEN-DATA-DIRECTIVE → NL-WHO
 EU-ITS-DIRECTIVE       → NL-NTM  → (part-of) NL-NDW
 ```
 
-## Organisations and Standards
+Standards — the first end-to-end international → EU → national descent:
 
-_None yet — Batch 9._
+```
+INTL-DCAT (W3C) → EU-DCAT-AP (SEMIC) → NL-DCAT-AP-NL (Geonovum)
+```
+
+Membership chains, each resting on a sourced composition rule rather than a
+source naming the Dutch body:
+
+```
+NL-AP  ──participates-in──→ EU-EDPB
+NL-NEN ──participates-in──→ EU-CEN
+NL-CBS ──participates-in──→ EU-EUROSTAT  (European Statistical System)
+```
+
+## Organisations
+
+### Institutions
+- [[EU-COMMISSION]] · [[EU-PARLIAMENT]] · [[EU-COUNCIL]]
+- [[EU-PUBLICATIONS-OFFICE]] — publisher of EUR-Lex and the Official Journal
+
+### Agencies and supervisors
+- [[EU-ENISA]] — cybersecurity _(under [[EU-CYBERSECURITY-ACT]])_
+- [[EU-EDPB]] — data protection board _(members include [[NL-AP]])_
+- [[EU-EDPS]] — data protection supervisor
+- [[EU-EUROSTAT]] — statistics _(ESS partner of [[NL-CBS]])_
+
+### Standardisation
+- [[EU-CEN]] _(members include [[NL-NEN]])_ · [[EU-CENELEC]] · [[EU-ETSI]]
+- [[EU-SEMIC]] — semantic interoperability
+
+### Data spaces support
+- [[EU-DSSC]] — Data Spaces Support Centre
+
+## Standards and reference architectures
+
+- [[EU-EIF]] — European Interoperability Framework
+- [[EU-DCAT-AP]] — metadata profile _(maintained by [[EU-SEMIC]])_
+- [[EU-DSSC-BLUEPRINT]] — data spaces reference architecture
 
 ## Data Spaces
 
-_None yet — Batch 10._
+- [[EU-COMMON-DATA-SPACES]] — the umbrella; 14 areas identified
+  - [[EU-EHDS]] — Health _(Reg. (EU) 2025/327 — the only one with its own regulation)_
+  - [[EU-EMDS]] — Mobility
+  - [[EU-GREEN-DEAL-DATA-SPACE]] — Green Deal
+  - [[EU-AGRI-DATA-SPACE]] — Agriculture
+
+_Ten of the fourteen were **not created**: research returned only their names.
+See [[EU-COMMON-DATA-SPACES]] for the full list and the reasoning._
 
 ---
 
-Last updated: 2026-08-14 (Batch 8).
+Last updated: 2026-08-14 (Batch 10).
