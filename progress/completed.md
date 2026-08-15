@@ -1,5 +1,83 @@
 # Completed Batches
 
+## Batches 6, 11 and 15 — Validation
+
+**Date:** 2026-08-14
+
+**Full findings:** `validation/reports.md`. New tool: `validation/audit.py`.
+
+### What was and was not checkable
+
+An earlier position in this project — that the validation batches could not
+run at all until sourcing was fixed — **was too absolute.** Most of what the
+batch briefs ask for is checkable without sources, and doing so found real
+defects.
+
+Checkable and checked: duplicates, invalid IDs, broken links, inconsistent
+metadata, missing sources, weak-source reliance, unsupported relationships,
+missing relationships/orphans, country-specific assumptions.
+
+**Not checkable, not checked:** outdated information, incorrect statuses,
+whether cited sources say what the Atlas claims, whether cited URLs resolve
+at all. 119 of 125 entities rest on sources nobody has read.
+
+### Three defects found and fixed
+
+| Batch | Defect | Fix |
+|---|---|---|
+| 6 | `NL-ISHARE` fully disconnected — no inbound or outbound edges | Explicit `related-to` → `NL-DSGO`, marked `source: interpretation`, `confidence: low` |
+| 6 | **`NL`, `EU`, `UN` anchors cite URLs written from background knowledge in Batch 0**, never confirmed by search or fetch | Marked `verification: unverified`; `confidence: high` → `medium` |
+| 11 | `EU` anchor fully disconnected, while `UN` was not | `part-of` → `EU` added from Commission, Parliament and Council |
+
+The anchor defect is the notable one: **self-inflicted in Batch 0**, against
+the brief's explicit "never invent URLs". And the confidence downgrade was
+*forced* by this repository's own validation rule — `validate_frontmatter.py`
+rejects `confidence: high` on `unverified` entities. The rule caught its
+author.
+
+The `EU` anchor defect was an **inconsistency between layers**: the UN layer
+modelled institutional membership and the EU layer did not.
+
+### ⚠ Principal finding: the international layer is an island
+
+| Direction | Count |
+|---|---|
+| EU → NL | 15 |
+| NL → EU | 10 |
+| NL → INTL | 2 |
+| EU → INTL | 1 |
+| **UN → anything** | **0** |
+
+The 9 UN-scoped entities connect only to each other. The brief's target is
+UN → EU → National → Sector; what exists is a connected EU↔NL graph plus an
+**unattached UN component**.
+
+Two links would close most of it — `UN-UNSD` → `EU-EUROSTAT` and
+`UN-FPOS` → `NL-WET-CBS` — and **both were examined and refused for want of
+a source.** Closing them is the highest-value research remaining.
+
+### Clean results
+
+- No duplicate names or aliases across 125 entities.
+- No orphans remaining, no broken links, no invalid IDs, no vocabulary
+  violations.
+- **No country-scoped copies of supra-national entities** — README §16
+  holds. 17 `applies-in` relationships, all targeting `NL`; the mechanism is
+  exercised but untested with a second country.
+- Every non-domain entity has ≥1 source. Only two entities rely solely on
+  weak sources: `NL-PETRA` and `UN-DATA-COMMONS`.
+- 119 provenanced relationships: 108 `fact`, 11 `interpretation`, every
+  interpretation labelled.
+- **No entity claims `confidence: high` or `coverage: high`.**
+
+### Verdict
+
+The graph is **internally coherent and honestly labelled**. It is **not
+verified**. These reports certify structure, not truth, and should be re-run
+after the re-verification pass.
+
+---
+
 ## Batches 12–14 — UN and International Layer
 
 **Date:** 2026-08-14

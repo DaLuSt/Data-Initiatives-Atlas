@@ -9,7 +9,7 @@ one of these — resolve it with a real source, or leave it open.
 
 | Entity / topic | Question | Why it's unresolved | Noted by / date | Status |
 |---|---|---|---|---|
-| All search-only Batch 1–14 entities (116 of 125) | Every factual claim | The environment's network egress policy blocks all direct page retrieval (`EGRESS_BLOCKED` for forumstandaardisatie.nl, digitaleoverheid.nl, noraonline.nl, vng.nl, logius.nl, eur-lex.europa.eu, wikipedia.org and every other host tested). Batch 1 was completed from search-engine results on explicit instruction, with the trade-off accepted knowingly. Every entity carries `verification: search-only`. | Batch 1 / 2026-08-14 | **Open — needs full re-verification pass** |
+| All unread-source entities (**119 of 125**: 116 `search-only` + 3 `unverified`) | Every factual claim | The environment's network egress policy blocks all direct page retrieval (`EGRESS_BLOCKED` for forumstandaardisatie.nl, digitaleoverheid.nl, noraonline.nl, vng.nl, logius.nl, eur-lex.europa.eu, wikipedia.org and every other host tested). Batch 1 was completed from search-engine results on explicit instruction, with the trade-off accepted knowingly. Every entity carries `verification: search-only`. | Batch 1 / 2026-08-14 | **Open — needs full re-verification pass** |
 
 To find every affected entity: `grep -rl "verification: search-only" .`
 
@@ -102,6 +102,17 @@ To find every affected entity: `grep -rl "verification: search-only" .`
 | [[EU-SEMIC]], [[EU-DSSC]] | Are these organisations, programmes, or something else? | SEMIC is described as an "action"; DSSC's legal form is unclear. `organisation` is the best available fit for both, with reservations. | Batches 9–10 | Open (modelling) |
 | [[EU-PARLIAMENT]] / [[EU-COUNCIL]] | Should legislative adoption be modelled? | Currently **not** — it would add 32 edges conveying one fact already implied by entity type. If wanted, do it systematically with a dedicated relationship type. | Batch 9 / 2026-08-14 | Open (modelling) |
 | Directorates-General | Which DGs are relevant, and should they be entities? | DG CONNECT is named once as a DCAT-AP co-initiator. No DG research was done; none created. | Batch 9 / 2026-08-14 | Open |
+
+## Batches 6, 11, 15 — validation findings
+
+| Entity / topic | Question | Why it matters | Noted by / date | Status |
+|---|---|---|---|---|
+| **The UN layer is unconnected** | Nothing links the 9 UN entities to any EU or NL entity | The brief's target architecture is UN → EU → National → Sector. What exists is a connected EU↔NL graph plus a **separate, unattached UN component**. The single most significant structural gap in the Atlas. | Batch 15 / 2026-08-14 | **Open — structural, highest value** |
+| [[UN-UNSD]] → [[EU-EUROSTAT]] | Is the European Statistical System part of the global statistical system? | Would close most of the UN-layer gap on its own. Plainly true in substance; **no source read says it**. | Batch 13; confirmed Batch 15 | Open |
+| [[UN-FPOS]] → [[NL-WET-CBS]] | Does Dutch statistical legislation align with the Fundamental Principles? | Countries are tracked on exactly this. Would give a UN → national chain. | Batch 12; confirmed Batch 15 | Open |
+| [[NL]], [[EU]], [[UN]] anchors | Do their cited URLs exist? | **Written in Batch 0 from background knowledge, never confirmed by search or fetch** — the brief says never invent URLs. Now marked `verification: unverified`, worse than the `search-only` majority. Self-inflicted, caught by the Batch 6 audit. | Batch 6 / 2026-08-14 | **Open — priority** |
+| `applies-in` with one country | Is the country-neutral model actually reusable? | All 17 `applies-in` relationships target `NL`. The mechanism is exercised but **untested with a second country**, which is the only real proof. | Batch 15 / 2026-08-14 | Open |
+| 35 entities with no provenanced relationship | Are these legitimately terminal or under-linked? | Many are terminal by nature (legislation nothing implements). Worth reviewing when sources are available. | Batch 15 / 2026-08-14 | Open |
 
 ## Batches 12–14 — UN and international
 

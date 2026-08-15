@@ -42,13 +42,10 @@ validation (`CONTRIBUTING.md` — Batch workflow).
   Agriculture, Social Security and Built Environment remain below it and
   were deliberately not created. **Search-only sourcing — included in the
   Batch 1b re-verification debt.** See `progress/completed.md`.
-- [ ] **Batch 6 — Netherlands Validation.** Full duplicate/ID/link/metadata/
-  source/relationship/status audit of everything added in Batches 1–5.
-  ⚠ **Blocked in substance by the search-only debt** — see
-  `progress/current-batch.md`. The automated suite already passes; what
-  Batch 6 additionally asks for (outdated information, incorrect statuses,
-  missing sources, unsupported relationships) requires reading primary
-  sources. Do Batch 1b first.
+- [x] **Batch 6 — Netherlands Validation.** Done 2026-08-14. Found and fixed
+  2 defects (disconnected `NL-ISHARE`; `NL` anchor citing unconfirmed URLs).
+  ⚠ **Partial by necessity** — status accuracy, currency and source content
+  remain unchecked and need primary sources. See `validation/reports.md`.
 
 ## European Union
 
@@ -84,11 +81,10 @@ validation (`CONTRIBUTING.md` — Batch workflow).
   `EU-COMMON-DATA-SPACES` and queued. Also added the Data Spaces Support
   Centre and its Blueprint. **Search-only sourcing.**
   See `progress/completed.md`.
-- [ ] **Batch 11 — EU Validation.** Full audit, with particular attention to
-  the EU→national legislative chain and EU→national standards chain.
-  ⚠ **Blocked in substance by the search-only debt**, exactly as Batch 6 is.
-  The automated suite passes; status/source/relationship accuracy needs
-  primary sources. Do the re-verification pass first.
+- [x] **Batch 11 — EU Validation.** Done 2026-08-14. Found and fixed 1
+  defect (disconnected `EU` anchor — an inconsistency with how the UN layer
+  models membership). EU→national legislative and standards chains verified
+  structurally. ⚠ **Partial by necessity.** See `validation/reports.md`.
 
 ## International / UN
 
@@ -114,10 +110,10 @@ validation (`CONTRIBUTING.md` — Batch workflow).
   information management, digital identity, AI, data sharing, APIs and
   knowledge graphs are all uncovered and queued.
   See `progress/completed.md`.
-- [ ] **Batch 15 — Global Validation.** Validate the international layer and
-  its relationships to the EU layer. ⚠ **Blocked in substance by the
-  search-only debt**, as Batches 6 and 11 are — and most acutely here, since
-  the international layer is the weakest-sourced in the Atlas.
+- [x] **Batch 15 — Global Validation.** Done 2026-08-14. **Principal
+  finding: the UN layer is an island** — zero relationships connect its 9
+  entities to any EU or NL entity. Country-neutrality holds; no duplicates;
+  no orphans. ⚠ **Partial by necessity.** See `validation/reports.md`.
 
 ## Final passes (after all batches above)
 

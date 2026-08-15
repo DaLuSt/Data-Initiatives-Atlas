@@ -31,7 +31,14 @@ organisations: []
 related_entities:
   - EU-COUNCIL
   - EU-COMMISSION
-relationships: []
+relationships:
+  - type: part-of
+    target: EU
+    source: fact
+    evidence: "The European Parliament is one of the EU's two co-legislators under the ordinary legislative procedure (europarl.europa.eu). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Ordinary legislative procedure — overview"

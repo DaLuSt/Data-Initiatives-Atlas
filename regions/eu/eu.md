@@ -15,8 +15,9 @@ country: null
 region: EU
 
 status: active
-confidence: high
+confidence: medium
 coverage: low
+verification: unverified
 
 start_date: null
 end_date: null
@@ -52,7 +53,28 @@ Architecture").
 anchor node. Substantive EU content is researched starting in Batch 7 (see
 `progress/backlog.md`).
 
+## ⚠ Verification note (added in Batch 6)
+
+`verification: unverified` — see the identical note on [[NL]]. This entity
+was written in Batch 0 with a source URL composed from background knowledge
+rather than confirmed by search or fetch. Surfaced by the Batch 6 audit and
+recorded in `discovery/unresolved.md`.
+
 ## Relationships
+
+The **Batch 11 audit found this anchor fully disconnected** — nothing
+pointed at it and it pointed at nothing, unlike [[UN]], which the UN-system
+bodies reference via `part-of`.
+
+That was an inconsistency rather than a deliberate choice: the UN layer
+modelled institutional membership and the EU layer did not. Fixed by adding
+`part-of` relationships from [[EU-COMMISSION]], [[EU-PARLIAMENT]] and
+[[EU-COUNCIL]].
+
+Note the asymmetry with [[NL]] is *not* a defect and remains: `NL` is the
+target of `applies-in` relationships from supra-national instruments, while
+`EU` is the scope those instruments are tagged with. A country is a place
+law applies in; a region here is the level law comes from.
 
 See `regions/eu/index.md` for the curated index of EU entities, built up
 batch by batch.

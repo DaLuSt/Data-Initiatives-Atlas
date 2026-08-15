@@ -34,6 +34,13 @@ related_entities:
   - EU-PARLIAMENT
   - EU-COUNCIL
 relationships:
+  - type: part-of
+    target: EU
+    source: fact
+    evidence: "The European Commission is the EU's executive body and holds the right of legislative initiative under the ordinary legislative procedure (consilium.europa.eu; europarl.europa.eu). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: produces
     target: EU-DATA-STRATEGY
     source: fact

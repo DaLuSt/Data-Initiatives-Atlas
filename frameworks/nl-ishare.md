@@ -29,8 +29,17 @@ successor: null
 
 domains: []
 organisations: []
-related_entities: []
-relationships: []
+related_entities:
+  - NL-FDS
+  - NL-DSGO
+relationships:
+  - type: related-to
+    target: NL-DSGO
+    source: interpretation
+    evidence: "Both are Dutch afsprakenstelsels governing sectoral data sharing through uniform agreements. No source connects them; recorded as an Atlas observation to stop this entity sitting fully disconnected from the graph, which the Batch 6 audit flagged."
+    confidence: low
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Data spaces — iSHARE"
@@ -87,11 +96,22 @@ researched, rather than guessed now.
 
 ## Relationships
 
-None asserted. Topsector Logistiek, the DMI ecosystem and the IDSA are all
-named in sources but none is an Atlas entity yet; all are queued in
-`discovery/research-queue.md`. Asserting relationships to entities that do
-not exist is not possible, and inventing approximations for them would be
-worse than the gap.
+Topsector Logistiek, the DMI ecosystem and the IDSA are all named in sources
+but none is an Atlas entity yet; all are queued in
+`discovery/research-queue.md`.
+
+The **Batch 6 audit found this entity fully disconnected** — no inbound or
+outbound edges at all, the only such case in the Netherlands layer. That is
+a defect in a knowledge graph even when every individual omission was
+justified: an entity nothing reaches is effectively invisible.
+
+The fix is an explicit `related-to` [[NL-DSGO]] marked
+`source: interpretation` at `confidence: low`. Both are Dutch
+afsprakenstelsels governing sectoral data sharing through uniform
+agreements — the same family observation already recorded on
+[[EU-DSSC-BLUEPRINT]]. It is an Atlas reading, not a sourced link, and it is
+labelled as one. The alternative — leaving the entity unreachable — was
+judged worse than a clearly-marked interpretation.
 
 ## Sources
 
