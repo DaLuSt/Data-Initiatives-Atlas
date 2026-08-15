@@ -31,6 +31,7 @@ domains:
 organisations: []
 related_entities:
   - NL-NORA
+  - EU-INTEROPERABLE-EUROPE-ACT
 relationships:
   - type: applies-in
     target: NL
@@ -102,8 +103,12 @@ to this entry's date (August 2026) that revision may already have been
 adopted, which would make the "revised in 2017" description stale.
 `last_verified` is null and this is flagged in `discovery/unresolved.md`.
 
-The Interoperable Europe Board and the Interoperable Europe Act are not yet
-Atlas entities (Batches 8–9).
+Batch 8 added [[EU-INTEROPERABLE-EUROPE-ACT]]. **No relationship between the
+Act and this Framework is asserted**, because no source read states how they
+relate — whether the Act gives the EIF legal standing, supersedes it, or
+provides governance around it. That question determines whether the EU
+interoperability layer has one root or two, and is queued. The Interoperable
+Europe Board remains uncreated (Batch 9).
 
 ## Relationships
 

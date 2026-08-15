@@ -32,6 +32,7 @@ domains:
 organisations: []
 related_entities:
   - NL-WHO
+  - EU-DIGITAL-OMNIBUS
 relationships:
   - type: applies-in
     target: NL
@@ -75,10 +76,28 @@ As a **directive** rather than a regulation, it requires transposition into
 national law — which is precisely the distinction `metadata/taxonomy.md` §2
 exists to capture. Its Dutch transposition is recorded on [[NL-WHO]].
 
+## ⚠ A repeal has been proposed
+
+[[EU-DIGITAL-OMNIBUS]], the Commission proposal of 19 November 2025, would
+**repeal this directive** and transfer its provisions into
+[[EU-DATA-ACT]], together with [[EU-DGA]] and the Free Flow of Non-Personal
+Data Regulation.
+
+**`status` remains `active`.** The Omnibus is a proposal before the
+Parliament and Council, with adoption reported as expected around end-2026.
+The relationship is recorded from the Omnibus side using
+`proposes-to-supersede`, a type added in Batch 8 so that pending repeals are
+visible without falsely retiring the instruments they target.
+
+If adopted, this would also put [[NL-WHO]] — the Dutch transposition — in an
+unusual position, since the directive it transposes would cease to exist as
+a separate instrument. That consequence is noted, not modelled.
+
 ## Scope note
 
-Minimal EU anchor entity created in Batch 3 to support the
-transposition chain. Batch 8 should deepen it.
+Created in Batch 3 as a minimal anchor to support the transposition chain,
+and reviewed in Batch 8. Its substantive content beyond the high-value
+dataset regime is still unresearched (`coverage: low`).
 
 ## Relationships
 

@@ -31,7 +31,15 @@ domains:
 organisations: []
 related_entities:
   - NL-NDW
+  - EU-ITS-DIRECTIVE
 relationships:
+  - type: implements-requirement-from
+    target: EU-ITS-DIRECTIVE
+    source: fact
+    evidence: "Under delegated regulations supplementing Directive 2010/40/EU, Member States have established national access points organising access to and reuse of transport-related data (transport.ec.europa.eu National Access Points). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: part-of
     target: NL-NDW
     source: fact

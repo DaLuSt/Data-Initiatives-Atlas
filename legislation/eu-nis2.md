@@ -24,7 +24,7 @@ verification: search-only
 start_date: null
 end_date: null
 last_verified: null
-previous_version: null
+previous_version: EU-NIS
 successor: null
 
 domains:
@@ -32,7 +32,16 @@ domains:
 organisations: []
 related_entities:
   - NL-CBW
+  - EU-NIS
+  - EU-CYBERSECURITY-STRATEGY
 relationships:
+  - type: supersedes
+    target: EU-NIS
+    source: fact
+    evidence: "The NIS2 Directive repeals Directive (EU) 2016/1148 with effect from 18 October 2024 (EUR-Lex consolidated text of Dir. 2022/2555). NOT READ — search-only."
+    confidence: medium
+    valid_from: 2024-10-18
+    valid_until: null
   - type: applies-in
     target: NL
     source: fact

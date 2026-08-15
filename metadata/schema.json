@@ -37,9 +37,10 @@
   "relationship_types": [
     "related-to", "influences", "implements", "implemented-by",
     "depends-on", "derived-from", "based-on", "references",
-    "supersedes", "replaces", "part-of", "governed-by", "applies-to",
-    "applies-in", "produces", "maintained-by", "owned-by",
-    "participates-in", "aligned-with", "implements-requirement-from"
+    "supersedes", "replaces", "proposes-to-supersede", "part-of",
+    "governed-by", "applies-to", "applies-in", "produces", "maintained-by",
+    "owned-by", "participates-in", "aligned-with",
+    "implements-requirement-from"
   ],
   "required_fields": [
     "id", "type", "name", "description", "level", "country",

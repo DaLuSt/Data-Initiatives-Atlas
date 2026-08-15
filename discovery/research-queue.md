@@ -143,11 +143,11 @@ Digitale Overheid.
 | ~~EU-GDPR → [[NL-AP]] link~~ | Closed in Batch 3: [[NL-AP]] now links to both [[NL-UAVG]] and [[EU-GDPR]] | — | Done |
 | Wet bescherming persoonsgegevens (Wbp) | Predecessor regime replaced by GDPR/UAVG on 25 May 2018; needed for temporal completeness | Batch 4 or later | Batch 3 / 2026-08-14 |
 | Aanpassingswet AVG (dossier 34.939) | Adjusted other Dutch legislation to the GDPR | Batch 4 or later | Batch 3 / 2026-08-14 |
-| Original NIS Directive | Predecessor to [[EU-NIS2]]; implemented by [[NL-WBNI]] | Batch 8 | Batch 3 / 2026-08-14 |
+| ~~Original NIS Directive~~ | Added in Batch 8 as [[EU-NIS]]; the [[NL-WBNI]] chain is now closed | — | Done |
 | Wet weerbaarheid kritieke entiteiten (CER implementation) | Passed alongside the Cyberbeveiligingswet; adjacent to but distinct from NIS2 | Batch 4 or later | Batch 3 / 2026-08-14 |
 | Rijksdienst voor Identiteitsgegevens (RvIG) | Administers the BRP under [[NL-WET-BRP]] | Batch 4 or later | Batch 3 / 2026-08-14 |
 | NCSC / NCTV | Cybersecurity authorities named in Cyberbeveiligingswet sources | Batch 4 or later | Batch 3 / 2026-08-14 |
-| eIDAS / European Digital Identity | Needed to resolve whether [[NL-WDO]] has an EU origin | Batch 8 | Batch 3 / 2026-08-14 |
+| eIDAS → [[NL-WDO]] link | Both eIDAS entities now exist; eIDAS 2.0 ruled out on dates, but the transposition from 910/2014 remains **unsourced** and unasserted | Batch 9+ | Batch 3; updated Batch 8 |
 | Wet elektronische publicaties; Wet politiegegevens; Telecommunicatiewet | Further Dutch legislation with data relevance, not assessed in Batch 3 | Batch 4 or later | Batch 3 / 2026-08-14 |
 | ISO / IEC / CEN → [[NL-NEN]] links | NEN's most significant relationships; need the international standards bodies | Batch 9 / 13 | Batch 2 / 2026-08-14 |
 | ISO/IEC 27001 & 27002 → [[NL-BIO]] link | BIO2 is explicitly based on NEN-EN-ISO/IEC 27001:2023 and 27002:2022; the `based-on` relationship is unassertable until those entities exist | Batch 14 | Batch 4 / 2026-08-14 |
@@ -162,12 +162,18 @@ Digitale Overheid.
 | Ministeries van VWS, EZK, OCW | Named partners of [[NL-HEALTH-RI]] | Batch 5+ | Batch 5 / 2026-08-14 |
 | Nationaal Groeifonds | Funds [[NL-HEALTH-RI]] | Batch 5+ | Batch 5 / 2026-08-14 |
 | Nationaal Wegenbestand (NWB) | Part of the [[NL-NDW]] expansion | Batch 5+ | Batch 5 / 2026-08-14 |
-| EU ITS Directive / mobility data legislation | Imposes the national access point obligation behind [[NL-NTM]] | Batch 8 | Batch 5 / 2026-08-14 |
+| ~~EU ITS Directive~~ | Added in Batch 8 as [[EU-ITS-DIRECTIVE]]; the [[NL-NTM]] chain is now closed | — | Done |
 | DANS, ODISSEI, RIVM, NWO, SIDN | Research/health/internet-infrastructure organisations still unqueued from Batch 2 | Batch 5+ | Batch 2; carried |
-| **Official EUR-Lex text for eIDAS 2.0 (Reg. 2024/1183)** | [[EU-EIDAS2]] and [[EU-EUDI-WALLET]] currently rest entirely on secondary sources | Batch 8 | Batch 7 / 2026-08-14 |
-| Original eIDAS Regulation (910/2014) | Likely the instrument relevant to [[NL-WDO]], not eIDAS 2.0 | Batch 8 | Batch 7 / 2026-08-14 |
-| CER Directive (critical entities resilience) | Third element of the Dec 2020 cybersecurity package alongside NIS2 | Batch 8 | Batch 7 / 2026-08-14 |
-| Interoperable Europe Act; Interoperable Europe Board | Governance around [[EU-EIF]]; the Board adopts new EIF versions | Batch 8, 9 | Batch 7 / 2026-08-14 |
+| ~~Official EUR-Lex text for eIDAS 2.0~~ | Found in Batch 8; both entities rebuilt | — | Done |
+| ~~Original eIDAS Regulation (910/2014)~~ | Added in Batch 8 as [[EU-EIDAS]] | — | Done |
+| ~~CER Directive~~ | Added in Batch 8 as [[EU-CER]] | — | Done |
+| ~~Interoperable Europe Act~~ | Added in Batch 8 as [[EU-INTEROPERABLE-EUROPE-ACT]] | — | Done |
+| Interoperable Europe Board | Adopts new EIF versions; needed to resolve the EIF/Act relationship | Batch 9 | Batch 7; carried |
+| ENISA | Established under [[EU-CYBERSECURITY-ACT]]; relationship unassertable without it | Batch 9 | Batch 8 / 2026-08-14 |
+| Free Flow of Non-Personal Data Regulation | Third repeal target of [[EU-DIGITAL-OMNIBUS]] | Batch 9 | Batch 8 / 2026-08-14 |
+| Wet weerbaarheid kritieke entiteiten | Dutch CER transposition, approved 15 Apr 2026; should mirror [[NL-CBW]] → [[EU-NIS2]] | Batch 9+ | Batch 3; raised again Batch 8 |
+| EUR-Lex citation for the AI Act | [[EU-AI-ACT]] lacks an Official Journal link | Batch 9 | Batch 8 / 2026-08-14 |
+| Dutch EUDI Wallet implementation | Every member state must provide one; no Dutch arrangement researched | Batch 9+ | Batch 8 / 2026-08-14 |
 | The 14 common European data spaces | Enumerated in prose on [[EU-COMMON-DATA-SPACES]]: agriculture, cultural heritage, energy, finance, green deal, health, industry, language, media, mobility, public administrations, research and innovation, skills, tourism. Deliberately not created as 14 thin entities | Batch 10 | Batch 7 / 2026-08-14 |
 | EU AI strategy (if distinct from the AI Act) | Named in Batch 7 scope; no clearly identifiable standalone strategy document found | Batch 8 | Batch 7 / 2026-08-14 |
 | Digital Europe Programme; EuroHPC | EU digital infrastructure funding instruments, not researched in Batch 7 | Batch 9 | Batch 7 / 2026-08-14 |
