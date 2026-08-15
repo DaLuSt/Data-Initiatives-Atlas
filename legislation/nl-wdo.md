@@ -95,10 +95,19 @@ have not been established.
 
 ## Classification
 
-Dutch national legislation. Note that the Wdo's subject matter overlaps with
-EU eIDAS/European Digital Identity, but no EU instrument was established as
-originating its obligations, so `region` is `null` rather than `EU`. This
-should be re-examined in Batch 8 when eIDAS is added.
+Dutch national legislation: `region` is `null` rather than `EU`.
+
+**Batch 8 examined this and left it unchanged.** Both [[EU-EIDAS]]
+(Regulation 910/2014) and [[EU-EIDAS2]] (Regulation 2024/1183) now exist as
+entities, and eIDAS 2.0 can be ruled out on dates — the Wdo came into force
+in July 2023, before eIDAS 2.0 entered into force in May 2024. The original
+eIDAS Regulation remains the plausible candidate.
+
+But plausible is not sourced. No source read states that the Wdo transposes
+910/2014, and the inference "both concern digital identity, therefore one
+transposes the other" is precisely what the Atlas's provenance rules
+exclude. `region` stays `null` and no relationship is asserted until a
+source says otherwise. See `discovery/unresolved.md`.
 
 ## Relationships
 

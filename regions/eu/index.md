@@ -7,10 +7,8 @@ judged important enough to belong on the region's front page.
 Anchor entity: [[EU]]
 
 > **Sourcing caveat.** Every entity below was compiled from search-engine
-> results only and carries `verification: search-only`. Two of them —
-> [[EU-EIDAS2]] and [[EU-EUDI-WALLET]] — rest **entirely on secondary
-> sources** (no official EU citation was located) and should be rebuilt in
-> Batch 8. See `progress/current-batch.md`.
+> results only and carries `verification: search-only`. See
+> `progress/current-batch.md`.
 
 ## Strategies
 
@@ -32,35 +30,59 @@ Anchor entity: [[EU]]
 
 ## Legislation
 
-- [[EU-GDPR]] — General Data Protection Regulation (Reg. 2016/679)
-  - implemented in the Netherlands by [[NL-UAVG]]
-- [[EU-OPEN-DATA-DIRECTIVE]] — Open Data Directive (Dir. 2019/1024)
-  - transposed in the Netherlands via [[NL-WHO]]
-- [[EU-NIS2]] — NIS2 Directive (Dir. 2022/2555)
-  - transposed in the Netherlands by [[NL-CBW]]
-- [[EU-EIDAS2]] — European Digital Identity Regulation (Reg. 2024/1183)
+### Data
 
-_Batch 8 deepens these and adds the Data Governance Act, Data Act, AI Act,
-Cybersecurity Act, Interoperable Europe Act and Single Digital Gateway._
+- [[EU-GDPR]] — General Data Protection Regulation (Reg. 2016/679) → [[NL-UAVG]]
+- [[EU-DGA]] — Data Governance Act (Reg. 2022/868) ⚠ repeal proposed
+- [[EU-DATA-ACT]] — Data Act (Reg. 2023/2854)
+- [[EU-OPEN-DATA-DIRECTIVE]] — Open Data Directive (Dir. 2019/1024) ⚠ repeal proposed → [[NL-WHO]]
+
+### Digital identity
+
+- [[EU-EIDAS]] — eIDAS Regulation (Reg. 910/2014)
+- [[EU-EIDAS2]] — European Digital Identity Framework (Reg. 2024/1183)
+
+### Cybersecurity
+
+- [[EU-NIS]] — NIS Directive (Dir. 2016/1148) _(superseded 18 Oct 2024)_ → [[NL-WBNI]]
+- [[EU-NIS2]] — NIS2 Directive (Dir. 2022/2555) → [[NL-CBW]]
+- [[EU-CER]] — Critical Entities Resilience Directive (Dir. 2022/2557)
+- [[EU-CYBERSECURITY-ACT]] — Cybersecurity Act (Reg. 2019/881)
+
+### Public services, interoperability and mobility
+
+- [[EU-INTEROPERABLE-EUROPE-ACT]] — Interoperable Europe Act (Reg. 2024/903)
+- [[EU-SDG]] — Single Digital Gateway Regulation (Reg. 2018/1724)
+- [[EU-ITS-DIRECTIVE]] — ITS Directive (Dir. 2010/40/EU) → [[NL-NTM]]
+
+### AI
+
+- [[EU-AI-ACT]] — Artificial Intelligence Act (Reg. 2024/1689)
+
+### Pending
+
+- [[EU-DIGITAL-OMNIBUS]] — Commission proposal, 19 Nov 2025. **Not adopted.**
+  Would repeal [[EU-DGA]] and [[EU-OPEN-DATA-DIRECTIVE]] into
+  [[EU-DATA-ACT]], and amend [[EU-GDPR]] and [[EU-AI-ACT]].
 
 ## Cross-level chains established
 
-The Atlas's first full strategy → EU law → national law descent:
+Cybersecurity — the fullest chain in the Atlas, with both generations:
 
 ```
 EU-CYBERSECURITY-STRATEGY  (Dec 2020)
-   │ influences
-EU-NIS2                    (Dec 2022)
-   │ implements-requirement-from
-NL-CBW                     (in force Aug 2026)
-   │ supersedes
-NL-WBNI
+   │ influences                    ╲ influences
+EU-NIS2  ◄──supersedes── EU-NIS     EU-CER
+   │                        │
+NL-CBW   ◄──supersedes── NL-WBNI
 ```
 
-And the data-protection chain:
+Data protection, open data and mobility:
 
 ```
-EU-GDPR → NL-UAVG → NL-AP
+EU-GDPR                → NL-UAVG → NL-AP
+EU-OPEN-DATA-DIRECTIVE → NL-WHO
+EU-ITS-DIRECTIVE       → NL-NTM  → (part-of) NL-NDW
 ```
 
 ## Organisations and Standards
@@ -73,4 +95,4 @@ _None yet — Batch 10._
 
 ---
 
-Last updated: 2026-08-14 (Batch 7).
+Last updated: 2026-08-14 (Batch 8).

@@ -31,7 +31,15 @@ domains:
 organisations: []
 related_entities:
   - EU-NIS2
+  - EU-CER
 relationships:
+  - type: influences
+    target: EU-CER
+    source: fact
+    evidence: "The December 2020 cybersecurity package comprised the Strategy, the NIS2 proposal and the proposal for the directive on the resilience of critical entities (digital-strategy.ec.europa.eu; encavibs.uni.lu). NOT READ — search-only."
+    confidence: medium
+    valid_from: 2020-12-16
+    valid_until: null
   - type: influences
     target: EU-NIS2
     source: fact
@@ -105,10 +113,13 @@ sourced statement is about co-presentation.
 
 ## Relationships
 
-- Influences [[EU-NIS2]].
-- The CER directive, the third element of the package, is not yet an Atlas
-  entity; its Dutch counterpart (Wet weerbaarheid kritieke entiteiten) is
-  already queued from Batch 3.
+- Influences [[EU-NIS2]] and [[EU-CER]].
+
+Batch 8 added [[EU-CER]], so **all three elements of the December 2020
+package are now represented**: the strategy itself plus both directives it
+was presented alongside. The Dutch counterpart to CER (Wet weerbaarheid
+kritieke entiteiten, approved by the Tweede Kamer on 15 April 2026 alongside
+the Cyberbeveiligingswet) remains queued from Batch 3.
 
 ## Sources
 

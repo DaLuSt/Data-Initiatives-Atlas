@@ -29,7 +29,15 @@ domains:
 organisations: []
 related_entities:
   - NL-CBW
-relationships: []
+  - EU-NIS
+relationships:
+  - type: implements-requirement-from
+    target: EU-NIS
+    source: fact
+    evidence: "The Wbni is the Dutch act on security of network and information systems implementing the original EU NIS regime; NIS2 (which the Cyberbeveiligingswet implements) repealed Directive (EU) 2016/1148. NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Cyberbeveiligingswet (NIS2)"

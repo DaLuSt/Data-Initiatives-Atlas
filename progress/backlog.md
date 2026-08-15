@@ -60,10 +60,14 @@ validation (`CONTRIBUTING.md` — Batch workflow).
   strategy — no distinct, sourceable initiative found for either;
   digital-infrastructure funding instruments (Digital Europe Programme,
   EuroHPC) not researched. See `progress/completed.md`.
-- [ ] **Batch 8 — EU Legislation.** GDPR, Data Governance Act, Data Act,
-  Open Data Directive, eIDAS/European Digital Identity, AI Act, NIS2,
-  Cybersecurity Act, Interoperable Europe Act, Single Digital Gateway, and
-  relevant sector-specific legislation — relevance assessed, not assumed.
+- [x] **Batch 8 — EU Legislation.** Done 2026-08-14, 11 new entities plus 2
+  rebuilt (`EU-EIDAS2`, `EU-EUDI-WALLET`) and 7 updated. Added the
+  `proposes-to-supersede` relationship type for pending repeals. Closed
+  three dangling EU→national chains. **Search-only sourcing**, but most new
+  entities now carry EUR-Lex citations. Not covered: sector-specific
+  legislation beyond mobility (ITS) and cybersecurity; the Free Flow of
+  Non-Personal Data Regulation; a EUR-Lex citation for the AI Act.
+  See `progress/completed.md`.
 - [ ] **Batch 9 — EU Organisations and Standards.** European Commission and
   relevant DGs, Eurostat, EDPB, EDPS, ENISA, European Parliament, Council of
   the EU, Publications Office, CEN, CENELEC, ETSI, SEMIC, relevant

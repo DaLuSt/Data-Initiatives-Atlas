@@ -86,6 +86,7 @@ type from §2.2.
 | `references` | One entity cites another without a structural dependency |
 | `supersedes` | This entity has formally replaced another (see also `status: superseded` + `successor` on the old entity) |
 | `replaces` | Synonym of `supersedes`, used when "replace" is the natural English for the domain (e.g. a platform replacing another) |
+| `proposes-to-supersede` | A **pending** instrument (typically `status: proposed`) that would supersede or repeal the target *if adopted*. Distinct from `supersedes`, which asserts that supersession has actually happened. Use this so that proposals are visible in the graph without falsely retiring the instruments they target — the target keeps `status: active` until adoption is sourced. Added in Batch 8 for the EU Digital Omnibus proposal, which would repeal the Data Governance Act and the Open Data Directive |
 | `part-of` | Structural containment (a program is part of a strategy; a domain is part of a broader domain) |
 | `governed-by` | This entity's operation is governed by the target (usually an organisation or framework) |
 | `applies-to` | A rule, standard or framework applies to a class of entities |

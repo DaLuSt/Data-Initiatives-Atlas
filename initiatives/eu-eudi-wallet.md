@@ -4,20 +4,21 @@ type: initiative
 name: European Digital Identity Wallet
 alternative_names:
   - EUDI Wallet
-  - EU Digital Identity Wallet
+  - EDIW
 description: >
-  Standardised, government-issued digital identity application to be made
-  available to EU citizens, residents and businesses under the European
-  Digital Identity Regulation. Every member state must provide at least one
-  wallet, with the practical deadline reported as late 2026.
+  Secure electronic identification tool established under the European
+  Digital Identity Framework Regulation, allowing individuals and businesses
+  to store, manage and share identity data and electronic attestations for
+  public and private services across borders. Member states must provide at
+  least one wallet by the end of 2026.
 
 level: regional
 country: null
 region: EU
 
 status: planned
-confidence: low
-coverage: low
+confidence: medium
+coverage: medium
 verification: search-only
 
 start_date: null
@@ -35,18 +36,18 @@ relationships:
   - type: based-on
     target: EU-EIDAS2
     source: fact
-    evidence: "The EUDI Wallet is the flagship component of Regulation (EU) 2024/1183, which introduces it (multiple secondary sources). NOT READ — search-only."
-    confidence: low
-    valid_from: null
+    evidence: "The establishment of an EU-wide framework for European Digital Identity Wallet schemes is the central reform introduced by Regulation (EU) 2024/1183 (EUR-Lex; European Commission digital-building-blocks). NOT READ — search-only."
+    confidence: medium
+    valid_from: 2024-05-20
     valid_until: null
 
 sources:
-  - title: "EU Digital Identity Wallet"
-    url: "https://en.wikipedia.org/wiki/EU_Digital_Identity_Wallet"
-    publisher: "Wikipedia"
-  - title: "EUDI Wallet: how prepared are the various EU countries?"
-    url: "https://www.namirial.com/en/blog/stories/status-check-eudi-wallet/"
-    publisher: "Namirial"
+  - title: "Regulation (EU) 2024/1183 — Official Journal"
+    url: "https://eur-lex.europa.eu/eli/reg/2024/1183/oj/eng"
+    publisher: "EUR-Lex (Publications Office of the European Union)"
+  - title: "The European Digital Identity Regulation — EU Digital Identity Wallet"
+    url: "https://ec.europa.eu/digital-building-blocks/sites/spaces/EUDIGITALIDENTITYWALLET/pages/915931811/The+European+Digital+Identity+Regulation"
+    publisher: "European Commission — Digital Building Blocks"
 ---
 
 # European Digital Identity Wallet (EUDI Wallet)
@@ -55,45 +56,44 @@ sources:
 > only; the cited pages were confirmed to exist but were not read. See
 > `discovery/unresolved.md` and `progress/current-batch.md`.
 
+## Rebuilt in Batch 8
+
+Batch 7 created this entity on Wikipedia and a vendor blog and flagged it
+for rebuilding. **It has been rebuilt here** on the EUR-Lex text of
+[[EU-EIDAS2]] and the Commission's Digital Building Blocks pages. The
+`confidence` has moved from `low` to `medium` accordingly.
+
 ## Description
 
-The EUDI Wallet is a standardised, government-issued digital identity
-application to be made available to every EU citizen, resident and business
-under [[EU-EIDAS2]]. It is described as a secure mobile app in which
-individuals and businesses can store, manage and present digital
-credentials — identity documents, professional certificates, business
-licences, education diplomas, health credentials and more.
+The EUDI Wallet is a secure electronic identification tool established under
+[[EU-EIDAS2]]. It lets individuals and businesses store, manage and share
+identity data and electronic attestations of attributes for both public and
+private services, across borders within the Union. Reported credential types
+include identity documents, professional certificates, business licences,
+education diplomas and health credentials.
 
-Member states must provide at least one wallet within 24 months of the
-implementing acts, giving a reported practical deadline of late 2026. Large
-online platforms and organisations in regulated sectors must then accept the
-wallet as an authentication method within a further year.
+Member states are mandated to provide wallets **by the end of 2026**.
 
-## Status reasoning
+## Status reasoning, revisited
 
-`status: planned` rather than `active`. As at this entry's date
-(August 2026) the reported member-state deadline of "late 2026" has not yet
-passed, and no source located established that wallets are in production in
-any particular member state — including the Netherlands.
+`status: planned` is retained. The regulation's deadline is the end of 2026;
+this entry is written in August 2026, so the deadline has not passed, and no
+source located establishes that any particular member state — the
+Netherlands included — has a wallet in production.
 
-This is deliberately conservative: `active` would assert deployment that has
-not been evidenced. If the rollout has since occurred, the status is wrong
-in the safe direction, and the `discovery/unresolved.md` entry says what to
-check.
+The conservative reading is deliberate: `active` would assert deployment
+that has not been evidenced. If wallets have since been issued, this entity
+is wrong in the safe direction, and `discovery/unresolved.md` records
+exactly what to check.
 
-## Sourcing weakness
+## Dutch relevance, still unasserted
 
-As with [[EU-EIDAS2]], **no official EU source was located** — citations are
-Wikipedia and a vendor blog. This entity should be treated as a placeholder
-carrying a real concept rather than as researched content, and rebuilt in
-Batch 8 from the Commission's own material.
-
-## Dutch relevance, unasserted
-
-The Netherlands must provide a wallet like every member state, and the
-obvious Dutch counterparts are the identity services within [[NL-GDI]]
-operated by [[NL-LOGIUS]], plus the assurance-level regime in [[NL-WDO]].
-No relationship is asserted: no source located connects them.
+The Netherlands must provide a wallet like every member state. The obvious
+Dutch counterparts are the identity services within [[NL-GDI]] operated by
+[[NL-LOGIUS]], and the assurance-level regime in [[NL-WDO]]. **No
+relationship is asserted** — no source located connects the Dutch
+implementation to this initiative, and the Dutch wallet arrangements were
+not researched. This is a concrete gap for a future Netherlands batch.
 
 ## Relationships
 
@@ -101,4 +101,4 @@ No relationship is asserted: no source located connects them.
 
 ## Sources
 
-Listed in frontmatter. **Both are secondary sources.**
+Listed in frontmatter — now official EU sources.

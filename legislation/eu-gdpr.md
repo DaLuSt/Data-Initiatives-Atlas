@@ -33,6 +33,7 @@ organisations: []
 related_entities:
   - NL-UAVG
   - NL-AP
+  - EU-DIGITAL-OMNIBUS
 relationships:
   - type: applies-in
     target: NL
@@ -71,9 +72,20 @@ chain — [[NL-UAVG]] → GDPR — could not be expressed at all, which is the
 Atlas's central purpose. `coverage: low` reflects that it has not been
 researched in its own right.
 
-**Batch 8 should deepen this entity**, adding the full citation, the
-legislative history, the relationship to the EDPB and EDPS, and
-applicability to further countries as they join.
+**Batch 8 reviewed but did not fully deepen this entity.** The full Official
+Journal citation, legislative history, and the EDPB/EDPS relationships are
+still outstanding — the latter awaiting Batch 9. `coverage` stays `low`.
+
+## ⚠ Amendment proposed
+
+[[EU-DIGITAL-OMNIBUS]] (19 November 2025) proposes to amend the GDPR,
+notably by adding a lawful basis of legitimate interest for processing
+personal data when developing or operating AI systems, subject to
+safeguards. The proposal is reported to face strong opposition from data
+protection authorities, NGOs and academics on exactly this point.
+
+`status` remains `active` and unchanged — an amendment proposal changes
+nothing until adopted.
 
 ## Relationships
 

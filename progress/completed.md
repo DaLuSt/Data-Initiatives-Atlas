@@ -1,5 +1,113 @@
 # Completed Batches
 
+## Batch 8 — EU Legislation
+
+**Date:** 2026-08-14
+
+**Scope:** GDPR, Data Governance Act, Data Act, Open Data Directive, eIDAS /
+European Digital Identity, AI Act, NIS2, Cybersecurity Act, Interoperable
+Europe Act, Single Digital Gateway, and relevant sector-specific
+legislation — relevance assessed rather than assumed.
+
+**⚠ Evidence standard:** unchanged — page retrieval remained blocked; all
+entities are `verification: search-only`. Sourcing quality nonetheless
+improved markedly: **most new entities carry EUR-Lex Official Journal
+citations**, unlike Batch 7.
+
+**Entities added (11):**
+
+| ID | Type | Citation |
+|---|---|---|
+| `EU-DGA` | regulation | Reg. (EU) 2022/868 — EUR-Lex ✓ |
+| `EU-DATA-ACT` | regulation | Reg. (EU) 2023/2854 — EUR-Lex ✓ |
+| `EU-AI-ACT` | regulation | Reg. (EU) 2024/1689 — no EUR-Lex link found |
+| `EU-EIDAS` | regulation | Reg. (EU) No 910/2014 — indirect only |
+| `EU-NIS` | directive | Dir. (EU) 2016/1148 — superseded 18 Oct 2024 |
+| `EU-CER` | directive | Dir. (EU) 2022/2557 — EUR-Lex ✓ |
+| `EU-CYBERSECURITY-ACT` | regulation | Reg. (EU) 2019/881 — EUR-Lex summary ✓ |
+| `EU-INTEROPERABLE-EUROPE-ACT` | regulation | Reg. (EU) 2024/903 — EUR-Lex ✓ |
+| `EU-SDG` | regulation | Reg. (EU) 2018/1724 — EUR-Lex summary ✓ |
+| `EU-ITS-DIRECTIVE` | directive | Dir. 2010/40/EU — EUR-Lex ✓ |
+| `EU-DIGITAL-OMNIBUS` | regulation | COM(2025) 836 — **proposal, not adopted** |
+
+**Entities rebuilt (2):** `EU-EIDAS2` and `EU-EUDI-WALLET` — Batch 7 flagged
+both as resting entirely on secondary sources. Both are now built on the
+EUR-Lex Official Journal text of Reg. (EU) 2024/1183 and the Commission's
+Digital Building Blocks pages, with `confidence` raised low → medium. This
+was Batch 8's stated first priority and it is done.
+
+**Entities updated (7):** `EU-NIS2` (supersedes NIS), `NL-WBNI` (implements
+NIS), `NL-NTM` (implements ITS Directive), `EU-CYBERSECURITY-STRATEGY`
+(influences CER), `EU-GDPR` and `EU-OPEN-DATA-DIRECTIVE` (Omnibus notes),
+`EU-EIF` (Interoperable Europe Act association), `NL-WDO` (eIDAS question
+narrowed).
+
+**New relationship type: `proposes-to-supersede`.** The Digital Omnibus
+proposes to repeal the DGA and the Open Data Directive. `supersedes` would
+assert something untrue — the repeal has not happened — while `references`
+would understate it to the point of hiding a pending repeal from anyone
+reading those entities. A purpose-built type was added and documented in
+`metadata/relationship-types.md`, `controlled-vocabularies.md` and
+`schema.json`. Pending legislation is a permanent feature of this domain, so
+this will recur.
+
+**Three dangling chains closed:**
+
+| Chain | Closed by |
+|---|---|
+| `EU-NIS` → `NL-WBNI` | New `EU-NIS` entity |
+| `EU-ITS-DIRECTIVE` → `NL-NTM` | New `EU-ITS-DIRECTIVE` entity |
+| `EU-CYBERSECURITY-STRATEGY` → `EU-CER` | New `EU-CER` entity |
+
+The ITS one is worth noting: Batch 5 refused to assert the relationship
+because no source named the instrument. Three batches later the instrument
+was found and the link made with a real citation — the honest gap was
+closable, whereas a guess would have needed correcting.
+
+The cybersecurity picture is now the Atlas's most complete, with both
+generations and all three package elements:
+
+```
+EU-CYBERSECURITY-STRATEGY  (Dec 2020)
+   │ influences                    ╲ influences
+EU-NIS2  ◄──supersedes── EU-NIS     EU-CER
+   │                        │
+NL-CBW   ◄──supersedes── NL-WBNI
+```
+
+**Relationships added:** 18 provenanced entries.
+**Sources added:** 26 source entries, the majority official.
+
+**Relevance assessed, not assumed.** The brief warns against classifying
+every digital regulation as a data initiative. Each borderline inclusion
+carries an explicit justification in-file: the AI Act on training-data
+governance and the proposed GDPR AI lawful basis; the Cybersecurity Act on
+certification as a precondition for trusted data infrastructure; the SDG
+Regulation on the once-only principle.
+
+**Honest weak points:**
+- `EU-AI-ACT` has **no EUR-Lex citation** — sourced to a specialist
+  reference site and Wikipedia. Weakest of the new legislation entities.
+- `EU-DIGITAL-OMNIBUS` has only a CELEX reference; all substance comes from
+  law-firm commentary. Its **current** legislative status is unverified and
+  time-sensitive.
+- `EU-EIDAS` was created for structural reasons only; its own content is
+  unresearched.
+- The EIF ↔ Interoperable Europe Act relationship is **not asserted** — no
+  source states how they relate, and it determines whether the EU
+  interoperability layer has one root or two.
+- `NL-WDO`'s EU origin remains unresolved: eIDAS 2.0 ruled out on dates,
+  910/2014 plausible but unsourced. `region` stays `null`.
+
+**Validation result:** all 5 checks pass, 0 errors, 0 warnings, across 90
+entities.
+
+**Next batch:** Batch 9 — EU Organisations and Standards. It would close
+ENISA, the Interoperable Europe Board, EDPB/EDPS, and the
+DCAT → DCAT-AP → DCAT-AP-NL standards chain.
+
+---
+
 ## Batch 7 — EU Core Initiatives
 
 **Date:** 2026-08-14
