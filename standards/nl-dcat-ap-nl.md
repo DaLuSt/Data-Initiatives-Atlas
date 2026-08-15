@@ -30,8 +30,17 @@ domains:
   - DOMAIN-GEOSPATIAL
 organisations:
   - NL-GEONOVUM
-related_entities: []
+related_entities:
+  - EU-DCAT-AP
+  - INTL-DCAT
 relationships:
+  - type: based-on
+    target: EU-DCAT-AP
+    source: fact
+    evidence: "DCAT-AP provides a minimal common basis within Europe to share datasets cross-border; DCAT-AP-NL is the Dutch metadata profile enabling exchange between Dutch data catalogues and with European data catalogues (geonovum.nl; interoperable-europe.ec.europa.eu). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: maintained-by
     target: NL-GEONOVUM
     source: fact
@@ -81,20 +90,22 @@ DCAT-AP-NL is a national profile of the European DCAT-AP, which is itself a
 profile of W3C DCAT:
 
 ```
-W3C DCAT  →  EU DCAT-AP  →  NL DCAT-AP-NL
-(Batch 14)   (Batch 9)      (this entity)
+INTL-DCAT (W3C) → EU-DCAT-AP (SEMIC) → NL-DCAT-AP-NL (this entity)
 ```
 
-Neither upstream entity exists yet, so no `based-on` or `derived-from`
-relationship is asserted. When Batches 9 and 14 land, this chain should be
-completed — it is a clean example of the international → EU → national
-standards descent the brief's final relationship pass calls for. Recorded in
-`discovery/research-queue.md`.
+**Batch 9 completed this chain.** Both upstream entities now exist and the
+`based-on` relationship to [[EU-DCAT-AP]] is asserted. This is the first
+international → EU → national standards descent the Atlas holds end-to-end,
+and the pattern the brief's final relationship pass calls for.
+
+One caveat carries up the chain: [[INTL-DCAT]] itself rests on second-hand
+descriptions rather than a W3C source, so the top link is weaker than the
+two below it.
 
 ## Relationships
 
+- Based on [[EU-DCAT-AP]], itself based on [[INTL-DCAT]].
 - Maintained by [[NL-GEONOVUM]].
-- Upstream relationships to EU DCAT-AP and W3C DCAT pending (see above).
 
 ## Sources
 

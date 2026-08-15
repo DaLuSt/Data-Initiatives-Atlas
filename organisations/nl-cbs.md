@@ -32,7 +32,15 @@ domains:
 organisations: []
 related_entities:
   - NL-WET-CBS
+  - EU-EUROSTAT
 relationships:
+  - type: participates-in
+    target: EU-EUROSTAT
+    source: fact
+    evidence: "The European Statistical System is the partnership between the Commission (Eurostat) and the national statistical institutes; the ESS Committee consists of the heads of Eurostat and of the NSIs. CBS is the Dutch NSI. Membership follows from the sourced composition rule. NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: governed-by
     target: NL-WET-CBS
     source: fact
@@ -87,8 +95,10 @@ changed repeatedly and no ministry entity for it exists yet; see
 
 - Governed by [[NL-WET-CBS]], under which it became a ZBO on
   1 January 2004.
-- Relationships to [[NL-BASISREGISTRATIES]] and to European statistical
-  governance (Eurostat, Batch 9) are not yet established.
+- Participates in the European Statistical System with [[EU-EUROSTAT]],
+  added in Batch 9 — again on a composition rule rather than a source naming
+  CBS. Regulation (EC) No 223/2009, the ESS's legal basis, is not modelled.
+- The relationship to [[NL-BASISREGISTRATIES]] is still not established.
 
 ## Sources
 

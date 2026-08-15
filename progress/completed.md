@@ -1,5 +1,79 @@
 # Completed Batches
 
+## Batch 9 — EU Organisations and Standards
+
+**Date:** 2026-08-14
+
+**Scope:** European Commission and DGs, Eurostat, EDPB, EDPS, ENISA,
+European Parliament, Council of the EU, Publications Office, CEN, CENELEC,
+ETSI, SEMIC; plus DCAT, DCAT-AP and related standards.
+
+**⚠ Evidence standard:** unchanged — all entities `verification: search-only`.
+
+**Entities added (14):**
+
+*Institutions:* `EU-COMMISSION`, `EU-PARLIAMENT`, `EU-COUNCIL`
+*Agencies and supervisors:* `EU-ENISA`, `EU-EDPB`, `EU-EDPS`,
+`EU-EUROSTAT`, `EU-PUBLICATIONS-OFFICE`
+*Standards bodies:* `EU-CEN`, `EU-CENELEC`, `EU-ETSI`, `EU-SEMIC`
+*Standards:* `EU-DCAT-AP`, `INTL-DCAT`
+
+**The first end-to-end standards chain.** Batch 4 sketched it in prose and
+refused to assert it; Batch 9 completed it:
+
+```
+INTL-DCAT (W3C) → EU-DCAT-AP (SEMIC) → NL-DCAT-AP-NL (Geonovum)
+```
+
+This is the international → EU → national standards descent the brief's
+final relationship pass calls for, and the first the Atlas holds
+end-to-end. `INTL-DCAT` is also the Atlas's first `INTL`-scoped entity.
+
+**Four dangling links closed:** `NL-AP` → `EU-EDPB`, `NL-NEN` → `EU-CEN`,
+`NL-CBS` → `EU-EUROSTAT`, `EU-CYBERSECURITY-ACT` → `EU-ENISA`.
+
+**A recurring evidence pattern, marked consistently.** Three of those
+closures rest on **composition rules** rather than sources naming the Dutch
+body: "the EDPB comprises representatives from each national supervisory
+authority", "CEN brings together the national standardisation bodies of 33
+European countries", "the ESS is the partnership between Eurostat and the
+national statistical institutes". Each is a reasonable inference from a
+sourced rule — not a guess, but not a direct citation either. Every one says
+so in its `evidence` field at `confidence: medium`.
+
+**Relationships added:** 10 provenanced entries.
+**Sources added:** 27 source entries.
+
+**Deliberate omissions:**
+- **Directorates-General were not created.** DG CONNECT is named once as a
+  DCAT-AP co-initiator; no DG structure research was done. Creating DG
+  entities from a passing mention would repeat the `NL-PETRA` mistake.
+- **No adoption relationships from Parliament/Council to the 16 legislative
+  entities.** That would add 32 edges conveying one fact already implied by
+  entity type, drowning the substantive chains. Recorded as a modelling
+  question instead.
+- **Interoperable Europe Board** not created — two passing mentions only.
+- **Regulation 1025/2012 and Regulation 223/2009** described but not
+  modelled; both are legislation and outside this batch's scope.
+
+**Honest weak points:**
+- `INTL-DCAT` has **no W3C source** — both citations are second-hand
+  descriptions. The top of the flagship chain is its weakest link.
+  Batch 14 should rebuild it, as Batch 8 rebuilt `EU-EIDAS2`.
+- `EU-PUBLICATIONS-OFFICE` has no source describing it; its EUR-Lex
+  publisher role is asserted from the Atlas's own citation practice, which
+  is circular.
+- `EU-ETSI` is the clearest incompleteness: ICT standardisation is central
+  to this Atlas's subject, and **no ETSI standard was modelled**.
+- `EU-EDPB` cites a commercial blog for an EU institution.
+
+**Validation result:** all 5 checks pass, 0 errors, 0 warnings, across 104
+entities.
+
+**Next batch:** Batch 10 — EU Data Spaces.
+
+---
+
 ## Batch 8 — EU Legislation
 
 **Date:** 2026-08-14

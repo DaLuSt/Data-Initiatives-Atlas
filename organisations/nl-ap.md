@@ -32,7 +32,15 @@ organisations: []
 related_entities:
   - EU-GDPR
   - NL-UAVG
+  - EU-EDPB
 relationships:
+  - type: participates-in
+    target: EU-EDPB
+    source: fact
+    evidence: "The EDPB comprises representatives from each national supervisory authority; the AP is the Netherlands' designated supervisory authority under the GDPR. Membership follows from the sourced composition rule rather than from a source naming the AP. NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: governed-by
     target: NL-UAVG
     source: fact
@@ -91,9 +99,13 @@ carried when created in Batch 2. Together with
 [[NL-UAVG]] → [[EU-GDPR]] they form the Atlas's first complete vertical
 chain: EU regulation → national implementing act → national authority.
 
-Still outstanding: the European Data Protection Board and EDPS (Batch 9),
-and the Wet bescherming persoonsgegevens (Wbp) which the GDPR regime
-replaced.
+Batch 9 added [[EU-EDPB]] and the `participates-in` relationship, closing
+that gap. Note the evidence is a composition rule ("representatives from
+each national supervisory authority") rather than a source naming the AP —
+a reasonable inference from a sourced rule, and marked as such.
+
+Still outstanding: the Wet bescherming persoonsgegevens (Wbp), which the
+GDPR regime replaced.
 
 ## Sources
 

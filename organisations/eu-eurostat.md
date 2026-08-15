@@ -1,0 +1,90 @@
+---
+id: EU-EUROSTAT
+type: organisation
+name: Eurostat
+alternative_names:
+  - Statistical Office of the European Union
+description: >
+  The statistical authority of the European Union. With the national
+  statistical institutes of the member states it forms the European
+  Statistical System, the partnership responsible for developing, producing
+  and disseminating European statistics.
+
+level: regional
+country: null
+region: EU
+
+status: active
+confidence: medium
+coverage: low
+verification: search-only
+
+start_date: null
+end_date: null
+last_verified: null
+previous_version: null
+successor: null
+
+domains:
+  - DOMAIN-GOVERNMENT
+organisations: []
+related_entities:
+  - NL-CBS
+relationships: []
+
+sources:
+  - title: "Eurostat and the European Statistical System — Statistics Explained"
+    url: "https://ec.europa.eu/eurostat/statistics-explained/SEPDF/cache/10129.pdf"
+    publisher: "Eurostat (European Commission)"
+  - title: "Regulation (EC) No 223/2009 on European statistics"
+    url: "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=celex%3A32009R0223"
+    publisher: "EUR-Lex (Publications Office of the European Union)"
+  - title: "Regulation (EC) No 223/2009 — summary"
+    url: "https://eur-lex.europa.eu/legal-content/EN/LSU/?uri=celex:32009R0223"
+    publisher: "EUR-Lex (Publications Office of the European Union)"
+---
+
+# Eurostat
+
+> **Sourcing caveat.** This entity was compiled from search-engine results
+> only; the cited pages were confirmed to exist but were not read. See
+> `discovery/unresolved.md` and `progress/current-batch.md`.
+
+## Description
+
+Eurostat is the EU's statistical authority. The **European Statistical
+System (ESS)** is the partnership between Eurostat and the national
+statistical institutes and other national authorities responsible in each
+member state for developing, producing and disseminating European
+statistics. The ESS was formalised by Regulation (EC) No 223/2009 —
+informally the EU Statistical Law — amended by Regulation (EU) 2015/759 and
+again by Regulation (EU) 2024/3018, which entered into force on
+6 December 2024.
+
+The nucleus of the ESS is the European Statistical System Committee (ESSC),
+made up of the heads of Eurostat and of the national statistical institutes.
+It decides on matters such as the annual European Statistical Programme,
+response burden, cost effectiveness and statistical confidentiality.
+
+## The CBS connection
+
+[[NL-CBS]] is the Netherlands' national statistical institute, which makes
+it an ESS participant and an ESSC member by the composition rule above. The
+`participates-in` relationship is recorded on `NL-CBS`, with evidence noting
+that the rule is sourced generically rather than by a source naming CBS.
+
+**Regulation 223/2009 is not modelled as an entity.** It is arguably in
+scope as EU legislation with a Dutch counterpart ([[NL-WET-CBS]]), and the
+ESS would be better represented with it. Queued rather than added, to keep
+Batch 9 within organisations and standards.
+
+`coverage: low`: Eurostat's data holdings, dissemination infrastructure and
+relationship to [[EU-DATA-STRATEGY]] were not researched.
+
+## Relationships
+
+- Partners with [[NL-CBS]] in the European Statistical System.
+
+## Sources
+
+Listed in frontmatter.

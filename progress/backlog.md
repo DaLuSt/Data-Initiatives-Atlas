@@ -68,11 +68,13 @@ validation (`CONTRIBUTING.md` — Batch workflow).
   legislation beyond mobility (ITS) and cybersecurity; the Free Flow of
   Non-Personal Data Regulation; a EUR-Lex citation for the AI Act.
   See `progress/completed.md`.
-- [ ] **Batch 9 — EU Organisations and Standards.** European Commission and
-  relevant DGs, Eurostat, EDPB, EDPS, ENISA, European Parliament, Council of
-  the EU, Publications Office, CEN, CENELEC, ETSI, SEMIC, relevant
-  programmes/partnerships; DCAT, DCAT-AP, interoperability frameworks,
-  SEMIC specs, data-space/API/cloud/AI/cybersecurity standards.
+- [x] **Batch 9 — EU Organisations and Standards.** Done 2026-08-14, 14
+  entities. Completed the first end-to-end international → EU → national
+  standards chain (DCAT → DCAT-AP → DCAT-AP-NL) and closed four dangling
+  NL→EU links. **Search-only sourcing.** Not covered: Directorates-General
+  (insufficient sourcing), Interoperable Europe Board, ETSI standards, API/
+  cloud/AI/cybersecurity standards specifically, GeoDCAT-AP and StatDCAT-AP.
+  See `progress/completed.md`.
 - [ ] **Batch 10 — EU Data Spaces.** Health, Mobility, Energy, Finance,
   Agriculture, Manufacturing, Skills, Tourism, Public Administration, Green
   Deal, Research, Media — purpose, governance, standards, legislation,
