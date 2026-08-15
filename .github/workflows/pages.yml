@@ -1,0 +1,110 @@
+name: Build and deploy Atlas graph
+
+# Deployment runs only for `main` — pull requests are validated by
+# validate.yml and never reach the production GitHub Pages site (brief §17).
+on:
+  push:
+    branches: [main]
+    paths:
+      # Entity data (the source of truth) …
+      - "initiatives/**"
+      - "legislation/**"
+      - "policies/**"
+      - "strategies/**"
+      - "standards/**"
+      - "frameworks/**"
+      - "programmes/**"
+      - "organisations/**"
+      - "data-spaces/**"
+      - "platforms/**"
+      - "publications/**"
+      - "domains/**"
+      - "countries/**"
+      - "regions/**"
+      - "international/**"
+      # … the vocabularies that shape it, the generator, and the site itself.
+      - "metadata/**"
+      - "tools/**"
+      - "validation/**"
+      - "site/**"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Never run two deployments at once; let a newer commit win.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Validate, generate graph, build site
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r validation/requirements.txt
+
+      # A broken repository must never be published. This is the same suite
+      # that guards pull requests.
+      - name: Validate the Atlas
+        working-directory: validation
+        run: python run_all.py
+
+      - name: Test the graph generator
+        run: python tools/test_build_graph.py
+
+      - name: Generate the graph
+        env:
+          ATLAS_BRANCH: ${{ github.event.repository.default_branch }}
+        run: python tools/build_graph.py
+
+      # Note: the graph is regenerated above, so what ships is always current
+      # even if the committed copy had drifted. Content-level staleness of the
+      # committed graph.json is asserted by the test step (a raw `git diff`
+      # would always differ, because `generated_at` moves on every build).
+
+      - name: Report graph statistics
+        run: |
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          g = json.load(open("site/graph.json"))
+          s = g["stats"]
+          print("## Atlas graph\n")
+          print(f"Generated: `{g['generated_at']}`\n")
+          print("| Metric | Value |")
+          print("|---|---|")
+          for k in ("entities", "relationships", "associations", "wikilinks",
+                    "countries", "regions", "organisations", "legislation",
+                    "standards", "frameworks", "data_spaces", "initiatives"):
+              print(f"| {k.replace('_', ' ').title()} | {s.get(k, 0):,} |")
+          print()
+          print("Countries: " + ", ".join(
+              f"{c['label']} ({c['code']}, {c['count']})" for c in g["facets"]["countries"]))
+          PY
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -6,6 +6,27 @@ Data Initiatives Atlas is an open, machine-readable knowledge base for mapping a
 
 The Netherlands is the first participating country and Germany the second. The underlying information model is deliberately designed to support the addition of other countries over time — a design that was an assertion while one country was modelled and is a demonstrated property now that two are. See `validation/germany-second-country-report.md`.
 
+
+## 🕸️ Explore the Atlas
+
+Explore the interactive knowledge graph of data and digital initiatives.
+
+**[Open the Interactive Atlas →](https://dalust.github.io/Data-Initiatives-Atlas/)**
+
+Search by name, ID, country, type or domain; filter by geographic level,
+country, region, entity type, status and relationship type; click any entity
+to read its metadata, sourced relationships and citations — and to open the
+underlying Markdown file on GitHub.
+
+The graph is **generated automatically** from this repository by
+`tools/build_graph.py` and redeployed whenever the data changes. The
+repository stays the source of truth; the graph is a derived view, and so is
+the local graph you get by opening this repository as an Obsidian vault.
+
+See [`docs/graph.md`](docs/graph.md) for a tour, and
+[`docs/graph-architecture.md`](docs/graph-architecture.md) for how entity
+files become nodes and edges.
+
 ---
 
 🌍 Why Data Initiatives Atlas?
@@ -235,7 +256,9 @@ data-initiatives-atlas/
 ├── LICENSE
 │
 ├── .github/
-│   └── workflows/          # validation runs on every pull request
+│   └── workflows/
+│       ├── validate.yml    # validation — runs on every pull request
+│       └── pages.yml       # build + deploy the graph — main only
 │
 ├── initiatives/
 ├── legislation/
@@ -250,7 +273,8 @@ data-initiatives-atlas/
 ├── publications/
 ├── domains/
 ├── countries/
-│   └── nl/
+│   ├── nl/
+│   └── de/
 │
 ├── regions/
 │   └── eu/
@@ -269,7 +293,26 @@ data-initiatives-atlas/
 ├── templates/
 ├── discovery/
 ├── validation/
-└── progress/
+├── progress/
+│
+├── tools/                  # graph generator + its tests
+│   ├── build_graph.py
+│   ├── test_build_graph.py
+│   └── test_ui.mjs
+│
+├── site/                   # the published GitHub Pages application
+│   ├── index.html
+│   ├── app.css
+│   ├── app.js
+│   ├── graph.json          # GENERATED — do not hand-edit
+│   ├── details.json        # GENERATED — do not hand-edit
+│   └── vendor/             # Cytoscape.js (MIT), vendored, no CDN
+│
+└── docs/
+    ├── graph.md
+    ├── graph-architecture.md
+    ├── graph-development.md
+    └── github-pages.md
 
 As additional countries participate:
 
@@ -282,6 +325,31 @@ countries/
 └── ...
 
 The repository should not require a redesign when a new country is introduced.
+
+---
+
+🔁 No Manual Graph Maintenance
+
+`site/graph.json` and `site/details.json` are **generated artefacts**.
+
+Contributors never edit them, and never edit `site/index.html` to add an
+entity. The source remains:
+
+    Markdown  +  YAML frontmatter  +  [[wikilinks]]
+
+Regenerate after changing entity data:
+
+    python tools/build_graph.py
+
+The graph must always be reproducible from the repository. A test
+(`tools/test_build_graph.py`) fails if the committed graph no longer matches
+the entity files, and the deployment workflow regenerates it before
+publishing regardless.
+
+The same rule is what keeps the two views consistent: Obsidian reads the
+Markdown and the wikilinks directly, and the web graph reads them through
+the generator. Neither is authoritative over the source.
+
 
 ---
 
