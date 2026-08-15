@@ -1201,7 +1201,12 @@ rather than flattened; only typed relationships are drawn by default.
 would have failed validation, because the graph stays connected while the
 meaning reverses — and unreadable label density in the default view.
 
-**Known gaps:** the GitHub Pages *deployment* is unverified until the
-repository's Pages source is switched to GitHub Actions (a settings change
-no workflow can make). The graph canvas is not keyboard-traversable; the
-List view is the accessible route.
+**Deployment:** verified. `pages.yml` run 31893120291 completed
+successfully on 2026-08-15 — `configure-pages`, `upload-pages-artifact` and
+`deploy-pages` all green — after the repository's Pages source was switched
+to GitHub Actions. The first attempt failed at `configure-pages` because
+that setting had not yet been made; no workflow can make it.
+
+**Known gaps:** the graph canvas is not keyboard-traversable; the List view
+is the accessible route. Large-graph performance figures come from a
+synthetic 1,500-node stress test, not from real data at that size.

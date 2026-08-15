@@ -14,10 +14,18 @@ The repository is rendered as an interactive knowledge graph at
 wikilinks), all derived — nothing about the graph is hand-maintained, and no
 entity file changed, so the repository still works as an Obsidian vault.
 
-**One outstanding manual step:** GitHub Pages must be pointed at Actions
-under *Settings → Pages → Build and deployment → Source → GitHub Actions*.
-No workflow can set this. Until it is set, the deploy job fails at
-`configure-pages` and the site does not exist. See `docs/github-pages.md`.
+**The site is live and the deployment is verified.** GitHub Pages was
+pointed at Actions (*Settings → Pages → Build and deployment → Source →
+GitHub Actions*) and `pages.yml` run 31893120291 completed successfully on
+2026-08-15: `configure-pages`, `upload-pages-artifact` and `deploy-pages`
+all green.
+
+The first attempt of that run failed at `configure-pages` — *"Get Pages
+site failed… verify that the repository has Pages enabled"* — because the
+setting had not yet been made. Every step before it passed, so the fix was
+simply to re-run once the setting was in place. This is the one part of the
+pipeline no workflow can perform for itself; it is documented in
+`docs/github-pages.md` under one-time repository setup.
 
 **The Atlas is structurally complete and evidentially unverified**, and it
 now covers **two countries**. See
