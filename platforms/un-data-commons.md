@@ -30,7 +30,14 @@ organisations:
   - UN
 related_entities:
   - UN-UNSD
-relationships: []
+relationships:
+  - type: part-of
+    target: UN
+    source: fact
+    evidence: "The UN Data Commons aggregates SDG-related data from UN agencies. NOTE: sourced only to a Grokipedia page, the weakest citation in this Atlas. NOT READ — search-only."
+    confidence: low
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "United Nations Statistics Division"

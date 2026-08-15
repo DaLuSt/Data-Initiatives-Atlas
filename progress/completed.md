@@ -1,5 +1,56 @@
 # Completed Batches
 
+## Final Global Relationship Pass and Quality Gate
+
+**Date:** 2026-08-14 · **Full report:** `validation/final-quality-gate.md`
+
+### Relationship pass (§26)
+
+Added **12 sourced relationships** (119 → 131); entities with no
+relationship of their own fell from 35 to 29. `part-of` is now the most
+common type (25).
+
+- **Institutional membership**, extending the fix Batch 11 began: the UN
+  layer modelled `part-of` and the EU layer did not. Added for Eurostat and
+  SEMIC (→ Commission), ENISA/EDPB/EDPS/Publications Office (→ EU), and the
+  four UN instruments (→ UN).
+- **Links stated in prose but missing from frontmatter:** Commission
+  `produces` the Cybersecurity Strategy; DSSC Blueprint `applies-to` the
+  common data spaces.
+
+Of the four patterns §26 asks for: **standards** and **legislative** chains
+are complete; **organisational** is partial; **vertical is not** — UN → EU
+remains 0, and the two links that would close it were examined and refused
+again for want of a source.
+
+### Quality gate (§27)
+
+**Two further defects found and fixed**, both Batch 0 residue:
+
+1. Four sources claimed `accessed` dates — **asserting access that never
+   happened**. Removed.
+2. The `NL`/`EU`/`UN` anchors claimed `last_verified` while marked
+   `verification: unverified` — a direct contradiction. Set to null.
+
+Together with Batches 6/11/15, **every defect this project's validation has
+surfaced originated in its own earliest work** — an argument for running
+gates earlier, not only at the end.
+
+**Passes:** ontology coherence, ID uniqueness and stability, temporal
+integrity (5 successor + 6 previous_version chains, 0 mismatches, 3
+superseded entities retained), country-neutrality (no country-scoped copies
+of supra-national entities), provenance labelling (120 fact / 11
+interpretation), technical integrity (5/5 checks, 0 errors).
+
+**Does not pass:** source verification. 119 of 125 entities rest on sources
+nobody has read; **no URL in the repository has been fetched.** No entity
+claims `confidence: high` or `coverage: high`, correctly.
+
+**Structurally incomplete:** the UN layer connects to nothing outside
+itself.
+
+---
+
 ## Batches 6, 11 and 15 — Validation
 
 **Date:** 2026-08-14

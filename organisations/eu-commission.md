@@ -33,6 +33,9 @@ organisations: []
 related_entities:
   - EU-PARLIAMENT
   - EU-COUNCIL
+  - EU-CYBERSECURITY-STRATEGY
+  - EU-EUROSTAT
+  - EU-SEMIC
 relationships:
   - type: part-of
     target: EU
@@ -47,6 +50,13 @@ relationships:
     evidence: "The European Commission published the Communication 'A European strategy for data' on 19 February 2020 (COM(2020) 66; digital-strategy.ec.europa.eu). NOT READ — search-only."
     confidence: medium
     valid_from: 2020-02-19
+    valid_until: null
+  - type: produces
+    target: EU-CYBERSECURITY-STRATEGY
+    source: fact
+    evidence: "On 16 December 2020 the European Commission and the High Representative presented the EU Cybersecurity Strategy (digital-strategy.ec.europa.eu). Co-authored with the High Representative, who is not an Atlas entity. NOT READ — search-only."
+    confidence: medium
+    valid_from: 2020-12-16
     valid_until: null
   - type: produces
     target: EU-DIGITAL-OMNIBUS

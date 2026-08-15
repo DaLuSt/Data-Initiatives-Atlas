@@ -33,6 +33,13 @@ related_entities:
   - EU-DCAT-AP
   - EU-EIF
 relationships:
+  - type: part-of
+    target: EU-COMMISSION
+    source: fact
+    evidence: "SEMIC is the European Commission's semantic interoperability action, operating within Interoperable Europe (interoperable-europe.ec.europa.eu). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: maintained-by
     target: EU-DCAT-AP
     source: interpretation

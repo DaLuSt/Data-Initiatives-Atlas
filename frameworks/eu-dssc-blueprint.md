@@ -32,6 +32,13 @@ organisations:
 related_entities:
   - EU-COMMON-DATA-SPACES
 relationships:
+  - type: applies-to
+    target: EU-COMMON-DATA-SPACES
+    source: fact
+    evidence: "The blueprint serves as Europe's shared reference architecture for building, governing and scaling data spaces; the DSSC contributes to the creation of common European data spaces (blueprint.dssc.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: maintained-by
     target: EU-DSSC
     source: fact

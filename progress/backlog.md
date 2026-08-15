@@ -117,12 +117,24 @@ validation (`CONTRIBUTING.md` — Batch workflow).
 
 ## Final passes (after all batches above)
 
-- [ ] **Final Global Relationship Pass** — vertical (UN→EU→National→Sector),
-  horizontal (country↔country), standards, legislative and organisational
-  relationship sweeps.
-- [ ] **Final Quality Gate** — repository-wide ontology, metadata, sources,
-  relationships, geography and technical-integrity review per the task
-  brief §27.
+- [x] **Final Global Relationship Pass** — done 2026-08-14. 12 sourced
+  relationships added. Standards and legislative chains complete;
+  organisational partial; **vertical incomplete — UN → EU is still 0**, and
+  the two links that would close it were refused for want of a source.
+- [x] **Final Quality Gate** — done 2026-08-14. Passes on ontology,
+  metadata, temporal integrity, country-neutrality and technical integrity.
+  **Does not pass on source verification** — no URL in the repository has
+  been fetched. Two further Batch 0 defects found and fixed.
+  See `validation/final-quality-gate.md`.
+
+## Remaining work
+
+- [ ] **Re-verification pass** — the single highest-value item. Needs
+  outbound HTTPS; every URL is already recorded in entities' `sources:`.
+- [ ] **Connect the UN layer** — `UN-UNSD` → `EU-EUROSTAT` and
+  `UN-FPOS` → `NL-WET-CBS` would close most of the vertical gap.
+- [ ] **Add a second country** — the only real test of the country-neutral
+  model.
 
 ## Explicitly out of scope for now
 

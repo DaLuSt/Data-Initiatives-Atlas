@@ -33,6 +33,13 @@ related_entities:
   - EU-EDPS
   - NL-AP
 relationships:
+  - type: part-of
+    target: EU
+    source: fact
+    evidence: "The EDPB is an EU body established under the GDPR to ensure consistent application of data protection law across member states (edpb.europa.eu). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: governed-by
     target: EU-GDPR
     source: fact

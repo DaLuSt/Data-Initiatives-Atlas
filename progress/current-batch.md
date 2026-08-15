@@ -1,7 +1,12 @@
 # Current Batch
 
-**Status:** Batches 12–14 complete (search-only sourcing) and validated. No
-batch currently in progress.
+**Status:** All batches complete, including the validation batches (6, 11,
+15), the Final Relationship Pass and the Final Quality Gate. No batch in
+progress.
+
+**The Atlas is structurally complete and evidentially unverified.** See
+`validation/final-quality-gate.md` for the verdict and the three things that
+would close the remaining gaps.
 
 **All three layers are now populated** — Netherlands (Batches 1–5), EU
 (Batches 7–10) and international (Batches 12–14). **All three validation
