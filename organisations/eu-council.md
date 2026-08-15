@@ -31,7 +31,14 @@ organisations: []
 related_entities:
   - EU-PARLIAMENT
   - EU-COMMISSION
-relationships: []
+relationships:
+  - type: part-of
+    target: EU
+    source: fact
+    evidence: "The Council of the European Union represents member state governments and is one of the EU's two co-legislators (consilium.europa.eu). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "The ordinary legislative procedure"

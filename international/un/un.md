@@ -14,8 +14,9 @@ country: null
 region: null
 
 status: active
-confidence: high
+confidence: medium
 coverage: low
+verification: unverified
 
 start_date: null
 end_date: null
@@ -48,6 +49,13 @@ statistical initiatives, etc.) reference this entity, typically via
 `coverage: low` is deliberate — this Batch 0 commit only establishes the
 anchor node. Substantive UN/international content is researched starting in
 Batch 12 (see `progress/backlog.md`).
+
+## ⚠ Verification note (added in Batch 6)
+
+`verification: unverified` — see the identical note on [[NL]]. This entity
+was written in Batch 0 with a source URL composed from background knowledge
+rather than confirmed by search or fetch. Surfaced by the Batch 6 audit and
+recorded in `discovery/unresolved.md`.
 
 ## Relationships
 

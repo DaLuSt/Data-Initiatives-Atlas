@@ -15,8 +15,9 @@ country: NL
 region: null
 
 status: active
-confidence: high
+confidence: medium
 coverage: low
+verification: unverified
 
 start_date: null
 end_date: null
@@ -53,6 +54,21 @@ that apply to the Netherlands reference it via an `applies-in` relationship.
 `coverage: low` is deliberate — this Batch 0 commit only establishes the
 anchor node. Substantive Dutch content is researched and added starting in
 Batch 1 (see `progress/backlog.md`).
+
+## ⚠ Verification note (added in Batch 6)
+
+`verification: unverified` — stronger than the `search-only` label carried by
+most of the Atlas, and worse.
+
+This entity was written in Batch 0, before the network block was discovered
+and before the `verification` field existed. Its source URLs were composed
+from background knowledge rather than confirmed by a search index or
+fetched. They are very likely correct — these are among the best-known URLs
+in existence — but "very likely correct" is precisely the standard the brief
+rules out, and the Atlas should not hold itself to a lower bar for easy
+facts than for hard ones.
+
+The Batch 6 audit surfaced this. Recorded in `discovery/unresolved.md`.
 
 ## Relationships
 
