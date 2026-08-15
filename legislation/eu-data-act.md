@@ -40,6 +40,13 @@ relationships:
     confidence: medium
     valid_from: 2025-09-12
     valid_until: null
+  - type: applies-in
+    target: DE
+    source: fact
+    evidence: "As an EU regulation the Data Act is directly applicable in all member states, Germany included; published in the OJ on 13 December 2023 and applicable from 12 September 2025 (EUR-Lex ELI reg/2023/2854). NOT READ — search-only. No German implementing or accompanying instrument is recorded in this Atlas."
+    confidence: medium
+    valid_from: 2025-09-12
+    valid_until: null
 
 sources:
   - title: "Regulation (EU) 2023/2854 (Data Act) — Official Journal"

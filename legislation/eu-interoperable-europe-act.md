@@ -39,6 +39,13 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: applies-in
+    target: DE
+    source: fact
+    evidence: "The regulation establishes a framework for cross-border interoperability of systems used to provide or manage public services in the EU, covering member-state public sector bodies in all member states including Germany (EUR-Lex ELI reg/2024/903; EUR-Lex summary). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Regulation (EU) 2024/903 — Official Journal"

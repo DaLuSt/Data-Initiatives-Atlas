@@ -48,6 +48,13 @@ relationships:
     confidence: medium
     valid_from: 2025-03-26
     valid_until: null
+  - type: applies-in
+    target: DE
+    source: fact
+    evidence: "As an EU regulation it is directly applicable in all member states, Germany included; EU countries create health data access bodies during the 2027-2029 preparation phase (Reg. (EU) 2025/327; multiple legal analyses). NOT READ — search-only. No German health data access body or implementing instrument is recorded in this Atlas."
+    confidence: medium
+    valid_from: 2025-03-26
+    valid_until: null
 
 sources:
   - title: "European Health Data Space — legislative procedure file"

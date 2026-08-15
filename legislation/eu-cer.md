@@ -40,6 +40,13 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: applies-in
+    target: DE
+    source: fact
+    evidence: "As an EU directive it requires transposition by all member states, Germany included (EUR-Lex ELI dir/2022/2557). NOT READ — search-only. Unlike the Netherlands entry above, NO German transposing instrument has been identified: none was returned by search, and none is recorded in this Atlas. The relationship rests solely on the directive binding every member state."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Directive (EU) 2022/2557 (CER) — Official Journal"

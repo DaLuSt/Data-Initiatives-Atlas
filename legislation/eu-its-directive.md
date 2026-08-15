@@ -39,6 +39,13 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: applies-in
+    target: DE
+    source: fact
+    evidence: "The Mobilithek is Germany's National Access Point for mobility data, having replaced the Mobility Data Marketplace in that role, and implements requirements from the delegated regulations on the European ITS Directive (bmv.de 'Mobilithek'; forschungsinformationssystem.de). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Directive 2010/40/EU"

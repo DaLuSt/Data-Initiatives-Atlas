@@ -42,6 +42,13 @@ relationships:
     confidence: medium
     valid_from: 2018-05-25
     valid_until: null
+  - type: applies-in
+    target: DE
+    source: fact
+    evidence: "As an EU regulation the GDPR is directly applicable in all member states; Germany adopted the Bundesdatenschutzgesetz as part of the Datenschutz-Anpassungs- und -Umsetzungsgesetz EU, applicable since 25 May 2018, which supplements and concretises the GDPR where its opening clauses permit (dsgvo-gesetz.de/bdsg; activemind.de). NOT READ — search-only."
+    confidence: medium
+    valid_from: 2018-05-25
+    valid_until: null
 
 sources:
   - title: "General data protection regulation (GDPR) — summary"

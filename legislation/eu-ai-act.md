@@ -39,6 +39,13 @@ relationships:
     confidence: medium
     valid_from: 2024-08-01
     valid_until: null
+  - type: applies-in
+    target: DE
+    source: fact
+    evidence: "As an EU regulation the AI Act is directly applicable in all member states, Germany included; it entered into force on 1 August 2024 with phased application (artificialintelligenceact.eu Article 113; EUR-Lex). NOT READ — search-only. No German implementing or accompanying instrument is recorded in this Atlas."
+    confidence: medium
+    valid_from: 2024-08-01
+    valid_until: null
 
 sources:
   - title: "Article 113: Entry into Force and Application"

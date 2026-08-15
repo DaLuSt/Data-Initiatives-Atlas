@@ -41,6 +41,13 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: applies-in
+    target: DE
+    source: fact
+    evidence: "The Datennutzungsgesetz implements the requirements of Directive (EU) 2019/1024 and replaced the Informationsweiterverwendungsgesetz; it came into force on 23 July 2021 (de.wikipedia.org 'Datennutzungsgesetz'; bho-legal.com; de.digital). NOT READ — search-only."
+    confidence: medium
+    valid_from: 2021-07-23
+    valid_until: null
 
 sources:
   - title: "Directive - 2019/1024 - EN - psi directive"

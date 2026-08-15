@@ -41,6 +41,13 @@ relationships:
     confidence: medium
     valid_from: 2024-05-20
     valid_until: null
+  - type: applies-in
+    target: DE
+    source: fact
+    evidence: "The Regulation mandates all Member States, Germany included, to provide European Digital Identity Wallets by the end of 2026 (Reg. (EU) 2024/1183; EUR-Lex ELI reg/2024/1183). NOT READ — search-only. Germany's BundID/DeutschlandID is recorded in this Atlas but is NOT asserted to implement this regulation — no source read connects them."
+    confidence: medium
+    valid_from: 2024-05-20
+    valid_until: null
   - type: produces
     target: EU-EUDI-WALLET
     source: fact
