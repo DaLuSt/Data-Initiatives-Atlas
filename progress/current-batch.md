@@ -10,8 +10,8 @@ batches — 6, 11 and 15 — are deferred** for the same reason; see below.
 ## Why the validation batches are deferred
 
 Batches 6, 11 and 15 (Netherlands, EU and Global Validation) cannot be
-completed in substance while the sourcing debt stands: **117 of the Atlas's
-126 entities** are `verification: search-only`, compiled from search results
+completed in substance while the sourcing debt stands: **116 of the Atlas's
+125 entities** are `verification: search-only`, compiled from search results
 with no cited page actually read.
 
 Batch 15 is the most affected: the international layer is the

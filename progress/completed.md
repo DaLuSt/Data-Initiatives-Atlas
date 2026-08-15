@@ -38,6 +38,10 @@ a UN specialised agency and carries the `UN` scope accordingly.
 
 ### Batch 14 — International Standards (2 new, 1 rebuilt)
 
+*(Batches 12–14 added **15** entities in total, plus the `INTL-DCAT`
+rebuild. An earlier draft of this report and the Batch 12–14 commit message
+said 14 and 126 respectively; both were off by one. Corrected here.)*
+
 | ID | Note |
 |---|---|
 | `INTL-ISO-IEC-27001` | Closes the `NL-BIO` gap open since Batch 4 |
@@ -87,7 +91,7 @@ weakest link because no W3C source could be found. Batch 14 found
   European Statistical System to the UN statistical system, leaving the
   statistics chain stopping at the EU.
 
-**Validation result:** all 5 checks pass, 0 errors, 0 warnings, across 126
+**Validation result:** all 5 checks pass, 0 errors, 0 warnings, across 125
 entities.
 
 **Next:** Batch 15 (Global Validation) and the Final Quality Gate — both of
