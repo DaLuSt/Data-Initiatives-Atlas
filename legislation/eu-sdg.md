@@ -38,6 +38,13 @@ relationships:
     confidence: medium
     valid_from: 2020-12-12
     valid_until: null
+  - type: applies-in
+    target: DE
+    source: fact
+    evidence: "The regulation establishes a single digital gateway for citizens and businesses across the internal market and has applied since 12 December 2020, binding all member states including Germany (EUR-Lex summary of the single digital gateway). NOT READ — search-only. Germany's once-only vehicle, the Registermodernisierungsgesetz, is recorded in this Atlas but is NOT asserted to implement this regulation — no source read connects them."
+    confidence: medium
+    valid_from: 2020-12-12
+    valid_until: null
 
 sources:
   - title: "The single digital gateway — summary"

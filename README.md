@@ -4,7 +4,7 @@ Data Initiatives Atlas
 
 Data Initiatives Atlas is an open, machine-readable knowledge base for mapping and connecting data-related initiatives, legislation, policies, standards, frameworks, programmes, organisations and data ecosystems across international, regional and national levels.
 
-The Netherlands is the first participating country, providing the initial national implementation of the Atlas. The underlying information model is deliberately designed to support the addition of other countries over time.
+The Netherlands is the first participating country and Germany the second. The underlying information model is deliberately designed to support the addition of other countries over time — a design that was an assertion while one country was modelled and is a demonstrated property now that two are. See `validation/germany-second-country-report.md`.
 
 ---
 
@@ -48,7 +48,11 @@ European Initiative
       │                    ├── Framework
       │                    └── Data ecosystem
       │
-      ├──────────────► Country B
+      ├──────────────► Germany
+      │                    │
+      │                    ├── National initiative
+      │                    ├── Framework
+      │                    └── Data ecosystem
       │
       └──────────────► Country C
 
@@ -95,7 +99,7 @@ National
 
 National initiatives, legislation, strategies, frameworks, organisations and data ecosystems.
 
-The Netherlands is the first participating country.
+The Netherlands is the first participating country; Germany is the second.
 
 Additional countries can be added without changing the fundamental information model.
 
@@ -285,7 +289,7 @@ The repository should not require a redesign when a new country is introduced.
 
 Data Initiatives Atlas is intended to grow through participation.
 
-The Netherlands provides the initial national contribution, but the Atlas is designed as an internationally extensible project.
+The Netherlands provided the initial national contribution and Germany the second, but the Atlas is designed as an internationally extensible project.
 
 Future contributors may:
 

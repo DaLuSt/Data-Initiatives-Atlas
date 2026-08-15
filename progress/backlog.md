@@ -132,14 +132,42 @@ validation (`CONTRIBUTING.md` — Batch workflow).
 - [ ] **Re-verification pass** — the single highest-value item. Needs
   outbound HTTPS; every URL is already recorded in entities' `sources:`.
 - [ ] **Connect the UN layer** — `UN-UNSD` → `EU-EUROSTAT` and
-  `UN-FPOS` → `NL-WET-CBS` would close most of the vertical gap.
-- [ ] **Add a second country** — the only real test of the country-neutral
-  model.
+  `UN-FPOS` → `NL-WET-CBS` would close most of the vertical gap. The
+  Germany batch added two more candidates of the same shape
+  (`DE-DESTATIS` → `EU-EUROSTAT`, `DE-BSTATG` → `UN-FPOS`), all four
+  refused for want of a source and clustered in
+  `discovery/unresolved.md`.
+- [x] **Add a second country** — the only real test of the country-neutral
+  model. **Done 2026-08-15: Germany**, 39 entities, no ontology change, no
+  `DE-EU-*` duplicate, `applies-in` targets now `['DE', 'NL']`. See
+  `validation/germany-second-country-report.md`.
+
+## Opened by the Germany batch
+
+- [ ] **Resolve the federal modelling gap.** The `level` vocabulary has no
+  term between `national` and `local`, so no German Land is representable.
+  This is the Germany batch's principal finding and blocks several queued
+  items. It will matter for Austria, Belgium, Spain or Switzerland.
+- [ ] **Decide on an amendment relationship type.**
+  `DE-NIS2UMSUCG` → `DE-BSIG` is recorded as `supersedes` at
+  `confidence: low` for what is an amending act, with the two entities
+  deliberately not agreeing. `relationship-types.md` §2.3 permits adding a
+  type; it was not done on unread sources.
+- [ ] **Settle what `country` means for a data space.** `DE-CATENA-X` and
+  `NL-ISHARE` are two independent instances of the same problem — the field
+  conflates origin, governance and operation.
+- [ ] **`EU-INSPIRE` → `NL`.** Added with an `applies-in` to `DE` only,
+  making an EU directive look German-specific. First-priority gap.
+- [ ] **A cybersecurity domain entity.** Ten entities across three layers
+  qualify under the taxonomy §1 threshold.
+- [ ] **A third country.** Germany proved the model reusable and revealed
+  one real limitation. A federal state was the useful second case; a third
+  would test whether the limitation is general.
 
 ## Explicitly out of scope for now
 
-- Countries other than the Netherlands (structure supports them; no content
-  until a country is actually researched — README §"Country Participation
-  Model").
+- Countries other than the Netherlands and Germany (structure supports
+  them; no content until a country is actually researched — README
+  §"Country Participation Model").
 - Any graph database — Git + Markdown/YAML remains the sole source of truth
   (README §"Source of Truth").

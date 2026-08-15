@@ -1,143 +1,86 @@
 # Current Batch
 
-**Status:** All batches complete, including the validation batches (6, 11,
-15), the Final Relationship Pass and the Final Quality Gate. No batch in
-progress.
+**Status:** No batch in progress. The **Germany second-country batch** was
+completed on 2026-08-15.
 
-**The Atlas is structurally complete and evidentially unverified.** See
-`validation/final-quality-gate.md` for the verdict and the three things that
-would close the remaining gaps.
+**The Atlas is structurally complete and evidentially unverified**, and it
+now covers **two countries**. See
+`validation/germany-second-country-report.md` for the second-country result
+and `validation/final-quality-gate.md` for the standing verdict.
 
-**All three layers are now populated** — Netherlands (Batches 1–5), EU
-(Batches 7–10) and international (Batches 12–14). **All three validation
-batches — 6, 11 and 15 — are deferred** for the same reason; see below.
+## What was done on 2026-08-15 — Germany as a second country
 
-## Why the validation batches are deferred
+Germany was added as the second national scope, which was the outstanding
+item from the Final Quality Gate: *"a second country — the only real test
+of the country-neutral model."*
 
-Batches 6, 11 and 15 (Netherlands, EU and Global Validation) cannot be
-completed in substance while the sourcing debt stands: **116 of the Atlas's
-125 entities** are `verification: search-only`, compiled from search results
-with no cited page actually read.
+**The model holds.** 125 → **164 entities**, 131 → **189 provenanced
+relationships**, validation **5/5, 0 errors, 0 warnings**. 33 `applies-in`
+relationships now target **both `NL` and `DE`**.
 
-Batch 15 is the most affected: the international layer is the
-**weakest-sourced** part of the Atlas, with un.org and ietf.org material
-largely unreachable through search.
+Adding a country required no change to `metadata/schema.json`,
+`metadata/ontology.md`, `metadata/taxonomy.md`,
+`metadata/relationship-types.md`, the folder structure or any validation
+rule. **No `DE-EU-*` entity was created.**
 
-The automated suite already checks and passes everything checkable without
-sources — IDs, links, relationship types, vocabularies, placement. What
-Batch 6 *additionally* asks for — outdated information, incorrect statuses,
-missing sources, unsupported relationships — requires reading primary
-sources. Running it now would produce a report that reads like assurance
-without being any.
+39 entities added: 37 German (`countries/de/`, plus entries in the existing
+flat type folders) and 2 supra-national reached through German research
+([[EU-INSPIRE]], [[EU-GAIA-X]] — both `country: null`).
 
-**Do the re-verification pass first**, then Batches 6, 11 and 15, then the
-Final Quality Gate.
+### Principal finding
 
-## Priority fixes for the next verification pass
+**The model is lossy for federal states.** The `level` vocabulary has no
+term between `national` and `local`, so Germany's sixteen Länder are not
+representable — including the sixteen Land acts that jointly transpose
+[[EU-INSPIRE]] with [[DE-GEOZG]], the sixteen Land data protection
+authorities alongside [[DE-BFDI]], and [[DE-KOSIT]]'s hosting in the Bremen
+administration. The Atlas cites Land governments as sources while unable to
+model them.
 
-Ranked by how far a wrong value would propagate:
+No sub-national level was invented — doing so for one country would be the
+country-specific ontology change the model exists to prevent. Logged in
+`discovery/unresolved.md`; it will matter for any federal state added
+later.
 
-| Entity | What to check |
-|---|---|
-| [[EU-DIGITAL-OMNIBUS]] | **Current legislative status.** Three proposed repeals hang off it, and the record dates from Nov 2025 |
-| [[NL-CBW]] / [[NL-WBNI]] | Did the 15 Aug 2026 commencement happen? |
-| [[EU-AI-ACT]] | Which obligations the omnibus postponed; find a EUR-Lex citation |
-| [[NL-PETRA]] | Does this entity survive contact with a real source at all? |
-| [[EU-EIF]] ↔ [[EU-INTEROPERABLE-EUROPE-ACT]] | How do they relate? One root or two? |
-| [[EU-EIF]] → [[NL-NORA]] | Is NORA formally the Dutch NIF? |
-| [[NL-ISHARE]] | Dutch or European now? Affects the country model |
-| [[NL-WHO]] | Which entry-into-force date (19 Jun vs 2 Aug 2024)? |
-| [[NL-ARCHIEFWET-2026]] | The act's actual name |
-| [[NL-RORA]] / [[NL-EAR]] | The 2024 succession and site-naming oddity |
-| [[NL-FDS]] | Was the afsprakenstelsel established Feb 2026? |
-| [[NL-NDS]] / [[NL-DIGIBETER]] | Is NDS operative, and did it supersede DIGIbeter? |
-| [[UN-DATA-COMMONS]] | Cites **Grokipedia** — the weakest source in the Atlas |
-| [[UN-DATA-STRATEGY]] | No source dedicated to the strategy exists in the record |
-| [[INTL-ISO-IEC-27002]] | Cited URL resolves to the superseded 2013 edition |
+## The sourcing position is unchanged
 
-## Cross-level chains established so far
+**155 of 164 entities are `verification: search-only`.** Page retrieval was
+blocked throughout the Germany batch as it was for every earlier one
+(`EGRESS_BLOCKED`; 403 at the proxy tunnel, re-tested at the start of this
+batch, and `WebFetch` re-tested and blocked too).
 
-Cybersecurity — both generations, all three package elements:
+Every German entity carries the sourcing caveat block. **No `accessed`
+dates were written and `last_verified` is null throughout**, because
+nothing was accessed or verified.
 
-```
-EU-CYBERSECURITY-STRATEGY  (Dec 2020)
-   │ influences                    ╲ influences
-EU-NIS2  ◄──supersedes── EU-NIS     EU-CER
-   │                        │
-NL-CBW   ◄──supersedes── NL-WBNI
-```
+One improvement worth noting: the [[DE]] anchor is
+`verification: search-only`, not `unverified`. [[NL]], [[EU]] and [[UN]]
+are `unverified` because Batch 0 composed their URLs from background
+knowledge. The [[DE]] anchor's single cited URL was returned by a search
+index. The second country was written to the corrected standard from the
+start rather than retro-fitted into it.
 
-Others:
+**The re-verification pass remains the single highest-value outstanding
+piece of work**, and it is blocked on outbound HTTPS, not on effort. Every
+URL is already recorded in the entities' `sources:` lists.
 
-```
-EU-GDPR                → NL-UAVG → NL-AP → (participates-in) EU-EDPB
-EU-OPEN-DATA-DIRECTIVE → NL-WHO
-EU-ITS-DIRECTIVE       → NL-NTM  → (part-of) NL-NDW
-EU-EIDAS  ──amended-by──→ EU-EIDAS2 → EU-EUDI-WALLET
-EU-DIGITAL-DECADE ──applies-in──→ NL
-EU-EIF ──applies-in──→ NL   (NORA link unconfirmed)
-```
+## Immediate next steps, in priority order
 
-Standards — the first end-to-end international → EU → national descent:
-
-```
-INTL-DCAT (W3C)             → EU-DCAT-AP (SEMIC) → NL-DCAT-AP-NL (Geonovum)
-INTL-ISO-IEC-27001 + -27002 → NL-BIO / BIO2
-```
-
-Incomplete — the statistics chain stops at the EU because no source connects
-the European Statistical System to the UN system:
-
-```
-UN-UNSD + UN-FPOS  ⋮ (no source)  EU-EUROSTAT → NL-CBS
-```
-
-Membership chains (each from a sourced composition rule, not a source naming
-the Dutch body):
-
-```
-NL-AP → EU-EDPB    NL-NEN → EU-CEN    NL-CBS → EU-EUROSTAT
-```
-
-Pending (proposal, not adopted):
-
-```
-EU-DIGITAL-OMNIBUS ──proposes-to-supersede──→ EU-DGA
-                   ──proposes-to-supersede──→ EU-OPEN-DATA-DIRECTIVE
-```
-
-## Open schema questions
-
-1. **Date precision.** Several entities carry a `YYYY-01-01` `start_date`
-   meaning "year known, day unknown", indistinguishable from a real
-   1 January date. Adopt a convention or add a `date_precision` field.
-2. **Office-holders.** Deliberately not modelled (see [[NL-MIDO]]). Confirm
-   that is the intended long-term rule.
-
-## Dangling relationships awaiting later batches
-
-Batches 9–10 closed several of these. What remains:
-
-| Entity | Awaiting | Batch |
-|---|---|---|
-| [[EU-EIF]] | Interoperable Europe Board | later |
-| [[NL-NEN]] | ISO, IEC | 13 |
-| [[INTL-DCAT]] | W3C (the organisation), and a W3C source | 13, 14 |
-| [[NL-BIO]] | ISO/IEC 27001 & 27002 | 14 |
-| [[EU-CER]] | Wet weerbaarheid kritieke entiteiten (NL) | later |
-| [[EU-COMMON-DATA-SPACES]] | The 10 remaining sectoral data spaces | later |
-| [[EU-EHDS]] | Dutch health data access body designation (2027–2029) | later |
-| [[EU-EMDS]] | Whether it builds on the national access point network | later |
-| [[EU-DSSC-BLUEPRINT]] | Whether Dutch afsprakenstelsels map to its rulebook model | later |
-| [[NL-NICTIZ]] | HL7 | later |
-| [[NL-ISHARE]] | Topsector Logistiek, DMI, IDSA | later |
-| [[NL-DSGO]] | digiGO | later |
-| [[EU-DIGITAL-OMNIBUS]] | Free Flow of Non-Personal Data Regulation | later |
-| [[NL-GEMMA]] | VNG Realisatie | later |
-| [[NL-ROSA]] | Edustandaard | later |
-| [[NL-KVK]] | Handelsregisterwet | later |
-| [[EU-EUDI-WALLET]] | Dutch wallet implementation | later |
-| [[EU-ETSI]] | Any ETSI standard at all | later |
-
-**Closed in Batches 9–10:** `EU-CYBERSECURITY-ACT` → ENISA; `NL-AP` → EDPB;
-`NL-NEN` → CEN; `NL-CBS` → Eurostat; `NL-DCAT-AP-NL` → DCAT-AP → DCAT.
+1. **Re-verification pass** (blocked on egress). Precondition for
+   re-running Batches 6, 11 and 15 meaningfully.
+2. **[[NL-CBW]] status check.** Its `start_date` is 2026-08-15 — today. Its
+   own body instructs a reader after that date to verify and, if confirmed,
+   move it to `active` and [[NL-WBNI]] to `superseded`. Not done: it cannot
+   be verified without page retrieval.
+3. **[[EU-INSPIRE]] → [[NL]]**. This batch added the directive with an
+   `applies-in` to `DE` only, because the Dutch transposition is unsourced.
+   The directive currently looks German-specific, which is misleading.
+   Near-certainly one page read.
+4. **Connect the UN layer.** Unchanged by this batch and still the largest
+   structural gap: `UN → anything` is 0. The statistics cluster in
+   `discovery/unresolved.md` now holds **four** refused links that one
+   afternoon with readable sources would probably resolve.
+5. **A cybersecurity domain entity.** Ten entities across three layers
+   would qualify — well over the taxonomy §1 threshold. Deliberately not
+   created in a country batch, to avoid silently retagging ten existing
+   files in a PR about Germany.

@@ -109,6 +109,31 @@ Digitale Overheid.
 
 ---
 
+## Germany — queued from the second-country batch (2026-08-15)
+
+Every German entity in the Atlas is `verification: search-only`. The items
+below are things **not created**, with the reason. Nothing here was omitted
+by accident.
+
+| Area / entity | Why it needs research | Suggested batch | Noted by / date |
+|---|---|---|---|
+| **EN 16931 and Directive 2014/55/EU** | The European e-invoicing norm and its directive. Would connect [[DE-XRECHNUNG]] to [[EU-CEN]] and give the Atlas a standards-body EU→national chain. **Highest-value German item** | Next | Germany batch |
+| **IDSA and the IDS reference architecture** | Now referenced by **two** entities in two countries — [[DE-CATENA-X]] follows the IDS-RAM, and [[NL-ISHARE]] records the IDSA incorporating iSHARE into it. Best-evidenced gap in the international layer. Was already queued from Batch 5; the German batch strengthens the case | Next | Batch 5; reinforced Germany batch |
+| The sixteen Land INSPIRE transposition acts | Jointly with [[DE-GEOZG]] they constitute Germany's transposition. **Blocked on the `level` ontology question**, not on sourcing | Blocked | Germany batch |
+| Land data protection authorities | [[DE-BFDI]] covers federal bodies only; sixteen Land authorities cover the rest. Same blocker | Blocked | Germany batch |
+| Individual XÖV standards | XPersonenstand, XMeld, XBau, XPlanung and others. Only [[DE-XRECHNUNG]] is modelled. Creating one entity per standard would inflate the layer without adding structure (brief §1) | Later | Germany batch |
+| FIM (Föderales Informationsmanagement) | Named as a third body under the [[DE-FITKO]]'s roof alongside [[DE-KOSIT]] and [[DE-GOVDATA]]; nothing else established. A single mention in a list is not enough | Next | Germany batch |
+| DKE | German electrotechnical standards commission, [[DE-DIN]]'s counterpart towards [[EU-CENELEC]] | Later | Germany batch |
+| National Gaia-X hubs | Germany's and Austria's hubs are cited as sources on [[EU-GAIA-X]]. A `DE-GAIA-X-HUB` would be a legitimate national entity, not a duplicate — but nothing beyond website existence was established | Later | Germany batch |
+| Manufacturing-X and the wider X-family | [[DE-CATENA-X]] sits in a broader German industrial data-space family. No industry domain entity created — Catena-X alone is below the taxonomy §1 threshold | Later | Germany batch |
+| Mobility Data Marketplace (MDM) | Replaced by [[DE-MOBILITHEK]] as National Access Point. **No superseded entity created** — unlike [[DE-IWG]], nothing beyond the replacement is established | Later | Germany batch |
+| BMWK / BMWE, BMDV / BMV | Co-authors of [[DE-DATENSTRATEGIE]] and publisher of [[DE-MOBILITHEK]] sources. Both ministries have been renamed or reorganised around [[DE-BMDS]] | Next | Germany batch |
+| gematik, Gesundheitsdatennutzungsgesetz | German health data infrastructure and legislation. Would connect [[DOMAIN-HEALTH]] to the German layer and possibly to [[EU-EHDS]] | Later | Germany batch |
+| Bundesdruckerei; ITZBund | Federal printing/eID body and the federal IT service centre. ITZBund is already cited as a source on [[DE-XOEV]] | Later | Germany batch |
+| OZG-Änderungsgesetz | A substantial amending act, deliberately **not** given its own entity — doing so would force the same `supersedes` compromise as [[DE-NIS2UMSUCG]] → [[DE-BSIG]]. Revisit if an amendment relationship type is added | Blocked | Germany batch |
+| Lenkungsgremium GDI-DE | Governing committee of [[DE-GDI-DE]]; would be reachable only from that one entity | Later | Germany batch |
+| A cybersecurity domain entity | [[DE-BSI]], [[DE-BSIG]], [[DE-NIS2UMSUCG]], [[DE-IT-GRUNDSCHUTZ]], [[EU-NIS2]], [[EU-CER]], [[EU-CYBERSECURITY-ACT]], [[EU-ENISA]], [[NL-BIO]], [[NL-CBW]] would all qualify — **well over the taxonomy §1 threshold**. Not created in this batch to keep a country PR from silently retagging ten existing entities | Next | Germany batch |
+
 ## Other queued research
 
 | Area / entity | Why it needs research | Suggested batch | Noted by / date |

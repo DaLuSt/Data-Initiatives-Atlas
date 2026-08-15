@@ -41,6 +41,13 @@ relationships:
     confidence: medium
     valid_from: 2023-09-24
     valid_until: null
+  - type: applies-in
+    target: DE
+    source: fact
+    evidence: "As an EU regulation the DGA is directly applicable in all member states, Germany included; it entered into force 23 June 2022 and applies from 24 September 2023 (EUR-Lex ELI reg/2022/868). NOT READ — search-only."
+    confidence: medium
+    valid_from: 2023-09-24
+    valid_until: null
   - type: implements
     target: EU-DATA-STRATEGY
     source: interpretation

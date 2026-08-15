@@ -49,6 +49,13 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: applies-in
+    target: DE
+    source: fact
+    evidence: "The NIS-2-Umsetzungsgesetz implements the EU minimum cybersecurity standards of the NIS2 Directive into German law; it was published in the Bundesgesetzblatt on 5 December 2025 and entered into force on 6 December 2025 with no transition period (bsi.bund.de press release 251205; twobirds.com; deloitte.com). NOT READ — search-only."
+    confidence: medium
+    valid_from: 2025-12-06
+    valid_until: null
 
 sources:
   - title: "Directive - 2022/2555 - EN"

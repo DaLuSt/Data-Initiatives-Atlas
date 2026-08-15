@@ -40,6 +40,13 @@ relationships:
     confidence: medium
     valid_from: 2022-12-14
     valid_until: null
+  - type: applies-in
+    target: DE
+    source: fact
+    evidence: "The programme requires annual progress reports and national strategic roadmaps from member states, Germany included (EUR-Lex summary of Decision (EU) 2022/2481). NOT READ — search-only."
+    confidence: medium
+    valid_from: 2022-12-14
+    valid_until: null
 
 sources:
   - title: "Decision (EU) 2022/2481 establishing the Digital Decade Policy Programme 2030"

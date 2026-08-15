@@ -40,6 +40,13 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: applies-in
+    target: DE
+    source: fact
+    evidence: "The EIF provides support to Member States to design and update their national interoperability frameworks (NIFs), Germany included, and the EIF Toolbox exists to help national administrations align their NIFs with the EIF (interoperable-europe.ec.europa.eu). NOT READ — search-only. No German NIF is identified: whether the Foederale IT-Architekturrichtlinien serve that role is unsourced and is NOT asserted."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "European Interoperability Framework (EIF)"

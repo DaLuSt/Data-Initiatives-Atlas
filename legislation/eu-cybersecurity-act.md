@@ -39,6 +39,13 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: applies-in
+    target: DE
+    source: fact
+    evidence: "As an EU regulation it is directly applicable in all member states, Germany included; it establishes the European Cybersecurity Certification Framework to improve the functioning of the internal market (EUR-Lex summary of the EU Cybersecurity Act). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "The EU Cybersecurity Act — summary"

@@ -1,0 +1,135 @@
+# Germany — Index
+
+Curated navigation hub for all Germany-scoped (`country: DE`) entities in
+the Atlas. This is a human-maintained page, not a generated one — add a
+wikilink here whenever a new DE-scoped entity is judged important enough to
+belong on the country's front page (`CONTRIBUTING.md`).
+
+Anchor entity: [[DE]]
+
+> **Sourcing caveat.** Every German entity below was compiled from
+> search-engine results only: the cited pages were confirmed to exist but
+> were **not read**, because the working environment blocked page
+> retrieval. They carry `verification: search-only` and need a
+> re-verification pass against primary sources. See
+> `progress/current-batch.md`.
+
+## Strategies
+
+- [[DE-DIGITALSTRATEGIE]] — Digitalstrategie Deutschland (2022) _(status
+  unknown — its 2025 horizon has passed)_
+- [[DE-DATENSTRATEGIE]] — Nationale Datenstrategie (2023)
+- [[DE-MODERNISIERUNGSAGENDA-BUND]] — federal modernisation agenda (Oct 2025)
+- [[DE-MODERNISIERUNGSAGENDA-FOEDERAL]] — Bund-Länder agenda (Dec 2025)
+
+## Initiatives
+
+- [[DE-DEUTSCHLAND-STACK]] — sovereign national technology platform, target 2028
+- [[DE-GDI-DE]] — Geodateninfrastruktur Deutschland
+
+## Organisations
+
+### Ministries
+
+- [[DE-BMDS]] — Digital and State Modernisation _(created May 2025)_
+- [[DE-BMI]] — Interior
+
+### Federal-state coordination
+
+- [[DE-IT-PLANUNGSRAT]] — central political steering body
+- [[DE-FITKO]] — Föderale IT-Kooperation _(the hinge of the German layer)_
+- [[DE-KOSIT]] — Koordinierungsstelle für IT-Standards
+
+### Agencies and independent authorities
+
+- [[DE-BSI]] — information security
+- [[DE-DESTATIS]] — Statistisches Bundesamt
+- [[DE-BFDI]] — data protection and freedom of information _(federal only)_
+
+### Standardisation
+
+- [[DE-DIN]] — national standards body; member of [[EU-CEN]] and [[INTL-ISO]]
+
+## Legislation
+
+### Data protection and transparency
+
+- [[DE-BDSG]] — Bundesdatenschutzgesetz _(implements [[EU-GDPR]])_
+- [[DE-IFG]] — Informationsfreiheitsgesetz _(since 2006)_
+- [[DE-DNG]] — Datennutzungsgesetz _(implements [[EU-OPEN-DATA-DIRECTIVE]])_
+  - [[DE-IWG]] — Informationsweiterverwendungsgesetz _(superseded 2021)_
+
+### Administration and registers
+
+- [[DE-EGOVG]] — E-Government-Gesetz _(2013)_
+- [[DE-OZG]] — Onlinezugangsgesetz
+- [[DE-REGMOG]] — Registermodernisierungsgesetz _(once-only via the Steuer-ID)_
+
+### Cybersecurity
+
+- [[DE-BSIG]] — BSI-Gesetz
+- [[DE-NIS2UMSUCG]] — NIS-2-Umsetzungsgesetz _(implements [[EU-NIS2]])_
+
+### Statistics and geospatial
+
+- [[DE-BSTATG]] — Bundesstatistikgesetz
+- [[DE-GEOZG]] — Geodatenzugangsgesetz _(implements [[EU-INSPIRE]])_
+
+## Standards and frameworks
+
+- [[DE-XOEV]] — XML in der öffentlichen Verwaltung _(standards family)_
+  - [[DE-XRECHNUNG]] — e-invoicing to public authorities _(mandatory since Nov 2020)_
+- [[DE-DCAT-AP-DE]] — German adaptation of [[EU-DCAT-AP]]
+- [[DE-IT-GRUNDSCHUTZ]] — BSI information security methodology
+- [[DE-IT-ARCHITEKTURRICHTLINIEN]] — Föderale IT-Architekturrichtlinien
+
+## Platforms
+
+- [[DE-GOVDATA]] — national open data portal
+- [[DE-BUNDID]] — central citizen account _(becoming DeutschlandID)_
+- [[DE-MOBILITHEK]] — National Access Point for mobility data
+
+## Data spaces
+
+- [[DE-MDS]] — Mobility Data Space _(traded data)_
+- [[DE-CATENA-X]] — automotive data ecosystem, based on [[EU-GAIA-X]]
+
+---
+
+## EU instruments that apply in Germany
+
+**No German copy of any EU instrument exists**, and none should be created
+(README §"Country-Neutral Architecture"). The instruments below are single
+Atlas entities carrying an `applies-in` → [[DE]] relationship alongside
+their existing `applies-in` → [[NL]]:
+
+[[EU-GDPR]] · [[EU-NIS2]] · [[EU-CER]] · [[EU-DATA-ACT]] · [[EU-DGA]] ·
+[[EU-OPEN-DATA-DIRECTIVE]] · [[EU-AI-ACT]] · [[EU-CYBERSECURITY-ACT]] ·
+[[EU-EIDAS2]] · [[EU-SDG]] · [[EU-INTEROPERABLE-EUROPE-ACT]] ·
+[[EU-ITS-DIRECTIVE]] · [[EU-INSPIRE]] · [[EU-EHDS]] · [[EU-EIF]] ·
+[[EU-DIGITAL-DECADE]]
+
+### Where an EU instrument has a German implementing act
+
+| EU instrument | German | Dutch |
+|---|---|---|
+| [[EU-GDPR]] | [[DE-BDSG]] | [[NL-UAVG]] |
+| [[EU-NIS2]] | [[DE-NIS2UMSUCG]] | [[NL-CBW]] |
+| [[EU-OPEN-DATA-DIRECTIVE]] | [[DE-DNG]] | [[NL-WHO]] |
+| [[EU-ITS-DIRECTIVE]] | [[DE-MOBILITHEK]] | [[NL-NTM]] |
+| [[EU-INSPIRE]] | [[DE-GEOZG]] | _(not yet sourced)_ |
+| [[EU-DCAT-AP]] | [[DE-DCAT-AP-DE]] | [[NL-DCAT-AP-NL]] |
+
+## Not modelled
+
+- **Any Land or municipality.** The Atlas `level` vocabulary has no term
+  between `national` and `local`, so the sixteen Länder — and the sixteen
+  INSPIRE transposition acts, the sixteen Land data protection authorities,
+  and the Land-hosted [[DE-KOSIT]] — are not representable. This is the
+  German batch's principal finding about the ontology and is logged in
+  `discovery/unresolved.md`.
+- **Verwaltungsvereinbarungen** — the Bund-Länder administrative agreements
+  underpinning [[DE-GOVDATA]] and [[DE-GDI-DE]]. No entity type fits.
+- Individual XÖV standards, DKE, FIM, gematik, national Gaia-X hubs,
+  Manufacturing-X, the IDSA/IDS-RAM. All queued in
+  `discovery/research-queue.md`.

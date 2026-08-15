@@ -16,7 +16,31 @@ Country-scoped entities themselves (initiatives, legislation, organisations,
 | Country | Code | Folder |
 |---|---|---|
 | Netherlands | NL | [`nl/`](nl/) |
+| Germany | DE | [`de/`](de/) |
 
 Adding a new country means creating its sub-folder with an anchor entity and
 an index — the ontology requires no other change (README
 §"Country-Neutral Architecture").
+
+## That claim has now been tested
+
+Germany was added as the second country after the Netherlands layer was
+complete. What it required, in full:
+
+- a new `de/` sub-folder with an anchor entity and an index;
+- German entities added to the **existing flat type folders**, tagged
+  `country: DE`;
+- `applies-in` → `DE` relationships added to the EU instruments that
+  already carried `applies-in` → `NL`.
+
+What it did **not** require: any change to `metadata/schema.json`,
+`metadata/ontology.md`, `metadata/taxonomy.md`,
+`metadata/relationship-types.md`, the folder structure, or any validation
+rule. No entity type, relationship type, status or level was added. No
+`DE-EU-*` entity was created.
+
+One genuine limitation surfaced, and it is a limitation of the model rather
+than of the country-neutral design: the `level` vocabulary has no term
+between `national` and `local`, so Germany's sixteen Länder cannot be
+represented. That matters for any federal state added later. See
+`de/de.md` and `discovery/unresolved.md`.

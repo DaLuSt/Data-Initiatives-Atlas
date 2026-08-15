@@ -1103,3 +1103,62 @@ Standaardisatie, Federatief Datastelsel, IBDS, NORA, Common Ground, MIDO,
 Data Agenda Overheid, NL Digitaal, and related programmes). Awaiting
 approval before starting, per the task brief's instruction to stop after
 Batch 0.
+
+---
+
+# Germany — Second Country (2026-08-15)
+
+**Scope:** Germany as the second national scope, following the Final
+Quality Gate's identification of *"a second country — the only real test of
+the country-neutral model"* as one of three outstanding items.
+
+**Entities added: 39.** 125 → **164**.
+
+- **Country anchor (1):** `DE` (`countries/de/de.md` + `index.md`).
+- **Strategies (4):** `DE-DIGITALSTRATEGIE`, `DE-DATENSTRATEGIE`,
+  `DE-MODERNISIERUNGSAGENDA-BUND`, `DE-MODERNISIERUNGSAGENDA-FOEDERAL`.
+- **Initiatives (2):** `DE-DEUTSCHLAND-STACK`, `DE-GDI-DE`.
+- **Organisations (9):** `DE-BMDS`, `DE-BMI`, `DE-IT-PLANUNGSRAT`,
+  `DE-FITKO`, `DE-KOSIT`, `DE-BSI`, `DE-DESTATIS`, `DE-BFDI`, `DE-DIN`.
+- **Legislation (11):** `DE-BDSG`, `DE-IFG`, `DE-DNG`, `DE-IWG`
+  (superseded), `DE-EGOVG`, `DE-OZG`, `DE-REGMOG`, `DE-BSIG`,
+  `DE-NIS2UMSUCG`, `DE-BSTATG`, `DE-GEOZG`.
+- **Standards and frameworks (5):** `DE-XOEV`, `DE-XRECHNUNG`,
+  `DE-DCAT-AP-DE`, `DE-IT-GRUNDSCHUTZ`, `DE-IT-ARCHITEKTURRICHTLINIEN`.
+- **Platforms (3):** `DE-GOVDATA`, `DE-BUNDID`, `DE-MOBILITHEK`.
+- **Data spaces (2):** `DE-MDS`, `DE-CATENA-X`.
+- **Supra-national, reached through German research (2):** `EU-INSPIRE`,
+  `EU-GAIA-X` — both `country: null`, deliberately not German-scoped.
+
+**Existing entities modified: 15.** `applies-in` → `DE` added alongside the
+existing `applies-in` → `NL` on `EU-GDPR`, `EU-NIS2`, `EU-CER`,
+`EU-DATA-ACT`, `EU-DGA`, `EU-OPEN-DATA-DIRECTIVE`, `EU-AI-ACT`,
+`EU-CYBERSECURITY-ACT`, `EU-EIDAS2`, `EU-SDG`,
+`EU-INTEROPERABLE-EUROPE-ACT`, `EU-ITS-DIRECTIVE`, `EU-EHDS`, `EU-EIF`,
+`EU-DIGITAL-DECADE`.
+
+**Validation result:** `python validation/run_all.py` — all 5 checks pass,
+0 errors, 0 warnings, against 164 entities. `audit.py` reports no
+duplicates, no fully disconnected entities, no weak-source-only German
+entity, and country-neutrality holding: `targets: ['DE', 'NL']`.
+
+**Result:** the country-neutral architecture holds. Adding a country
+required **no change** to `metadata/schema.json`, `metadata/ontology.md`,
+`metadata/taxonomy.md`, `metadata/relationship-types.md`, the folder
+structure or any validation rule, and produced **no `DE-EU-*` entity**.
+Four EU instruments now have two national implementations each; the DCAT
+standards chain forks across both countries.
+
+**Principal finding — negative:** the model is **lossy for federal
+states**. The `level` vocabulary has no term between `national` and
+`local`, so Germany's sixteen Länder are not representable. No sub-national
+level was invented.
+
+**Known gaps:** unchanged sourcing position — 155 of 164 entities are
+`verification: search-only` and no URL has been fetched. `EU-INSPIRE`
+carries `applies-in` → `DE` but not → `NL`, making it look German-specific.
+The UN layer remains isolated. Ten refused links and the batch's modelling
+questions are recorded in `discovery/unresolved.md`; omitted entities in
+`discovery/research-queue.md`.
+
+**Full report:** `validation/germany-second-country-report.md`.
