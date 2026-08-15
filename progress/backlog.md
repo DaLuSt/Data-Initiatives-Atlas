@@ -75,12 +75,20 @@ validation (`CONTRIBUTING.md` — Batch workflow).
   (insufficient sourcing), Interoperable Europe Board, ETSI standards, API/
   cloud/AI/cybersecurity standards specifically, GeoDCAT-AP and StatDCAT-AP.
   See `progress/completed.md`.
-- [ ] **Batch 10 — EU Data Spaces.** Health, Mobility, Energy, Finance,
-  Agriculture, Manufacturing, Skills, Tourism, Public Administration, Green
-  Deal, Research, Media — purpose, governance, standards, legislation,
-  infrastructure, participating countries, related initiatives.
+- [x] **Batch 10 — EU Data Spaces.** Done 2026-08-14, 6 entities.
+  ⚠ **Partial delivery of scope, deliberately.** Only 4 of the 14 data
+  spaces were created — health (EHDS, well sourced), mobility, green deal
+  and agriculture (purpose statements only). The other **ten were not
+  created**: research returned only their names, and the brief asks for
+  purpose/governance/standards/infrastructure. All ten are enumerated on
+  `EU-COMMON-DATA-SPACES` and queued. Also added the Data Spaces Support
+  Centre and its Blueprint. **Search-only sourcing.**
+  See `progress/completed.md`.
 - [ ] **Batch 11 — EU Validation.** Full audit, with particular attention to
   the EU→national legislative chain and EU→national standards chain.
+  ⚠ **Blocked in substance by the search-only debt**, exactly as Batch 6 is.
+  The automated suite passes; status/source/relationship accuracy needs
+  primary sources. Do the re-verification pass first.
 
 ## International / UN
 

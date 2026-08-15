@@ -1,5 +1,77 @@
 # Completed Batches
 
+## Batch 10 — EU Data Spaces
+
+**Date:** 2026-08-14
+
+**Scope:** The common European data spaces — health, mobility, energy,
+finance, agriculture, manufacturing, skills, tourism, public
+administration, green deal, research, media — with purpose, governance,
+responsible organisations, standards, legislation, infrastructure and
+participating countries for each.
+
+**⚠ Evidence standard:** unchanged — all entities `verification: search-only`.
+
+**Entities added (6):**
+
+| ID | Type | Note |
+|---|---|---|
+| `EU-EHDS` | data-space | Health — Reg. (EU) 2025/327, the only one with its own regulation |
+| `EU-EMDS` | data-space | Mobility — purpose statement only |
+| `EU-GREEN-DEAL-DATA-SPACE` | data-space | Green Deal — purpose statement only |
+| `EU-AGRI-DATA-SPACE` | data-space | Agriculture — purpose statement only |
+| `EU-DSSC` | organisation | Data Spaces Support Centre |
+| `EU-DSSC-BLUEPRINT` | framework | Shared reference architecture for data spaces |
+
+**Ten of the fourteen data spaces were deliberately not created.** Research
+returned **only their names** for cultural heritage, energy, finance,
+industry, language, media, public administrations, research and innovation,
+skills and tourism — no purpose, governance, standards or infrastructure.
+Batch 10's brief asks for exactly those attributes; ten entities whose whole
+content would be "this is one of the fourteen" is the shallow-entity failure
+the brief warns against. All ten are enumerated on
+[[EU-COMMON-DATA-SPACES]] and queued.
+
+**This batch is therefore a partial delivery of its scope, and says so.**
+Three of the four created are thin (one sourced purpose sentence each) and
+each states that in its own body. Only `EU-EHDS` is substantively
+researched.
+
+**The most useful entity is `EU-DSSC-BLUEPRINT`.** Its rulebook and
+governance-framework model is the EU-level analogue of the Dutch
+*afsprakenstelsel* pattern running through [[NL-FDS]], [[NL-DSGO]],
+[[NL-ISHARE]] and [[NL-HEALTH-RI]]. **No relationship is asserted** — the
+resemblance is an Atlas observation, recorded as interpretation and queued.
+Confirming it would connect the Dutch and EU data-space layers structurally
+rather than thematically.
+
+**Two high-value links left unasserted**, both on the same principle that
+has served this project well:
+- `EU-EHDS` → `NL-HEALTH-RI`: Health-RI is the obvious candidate for the
+  Dutch health data access body, but the HDAB designation phase runs
+  2027–2029 and nothing sources it yet.
+- `EU-EMDS` → `NL-NTM`: national access points look like the natural
+  building blocks of a mobility data space, but no source says so.
+
+**Relationships added:** 6 provenanced entries.
+**Sources added:** 13 source entries.
+
+**Honest weak points:**
+- `EU-EHDS` has **no EUR-Lex citation** — the strongest source is the
+  Parliament's Legislative Observatory file.
+- `EU-EMDS`, `EU-GREEN-DEAL-DATA-SPACE` and `EU-AGRI-DATA-SPACE` are
+  `confidence: low` placeholders with citations, not researched content.
+- Two sources are third-party copies or project sites rather than
+  Commission material.
+
+**Validation result:** all 5 checks pass, 0 errors, 0 warnings, across 110
+entities.
+
+**Next batch:** Batch 11 — EU Validation. The same caveat applies as to
+Batch 6: it cannot be completed in substance while the sourcing debt stands.
+
+---
+
 ## Batch 9 — EU Organisations and Standards
 
 **Date:** 2026-08-14

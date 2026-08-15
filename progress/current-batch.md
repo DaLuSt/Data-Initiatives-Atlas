@@ -1,17 +1,18 @@
 # Current Batch
 
-**Status:** Batch 8 complete (search-only sourcing) and validated. No batch
+**Status:** Batch 10 complete (search-only sourcing) and validated. No batch
 currently in progress.
 
-The Netherlands layer (Batches 1–5) and the EU layer (Batches 7–8) are
-populated. **Batch 6 was skipped** — see below.
+The Netherlands layer (Batches 1–5) and the EU layer (Batches 7–10) are
+populated. **Batches 6 and 11 — the two validation batches — are both
+deferred** for the same reason; see below.
 
-## Why Batch 6 was skipped, and when to do it
+## Why the validation batches are deferred
 
-Batch 6 is "Netherlands Validation". It cannot be completed in substance
-while the sourcing debt stands: 81 of the Atlas's 90 entities are
-`verification: search-only`, compiled from search results with no cited page
-actually read.
+Batch 6 (Netherlands Validation) and Batch 11 (EU Validation) cannot be
+completed in substance while the sourcing debt stands: **101 of the Atlas's
+110 entities** are `verification: search-only`, compiled from search results
+with no cited page actually read.
 
 The automated suite already checks and passes everything checkable without
 sources — IDs, links, relationship types, vocabularies, placement. What
@@ -20,7 +21,7 @@ missing sources, unsupported relationships — requires reading primary
 sources. Running it now would produce a report that reads like assurance
 without being any.
 
-**Do Batch 1b (re-verification) first**, then Batch 6.
+**Do the re-verification pass first**, then Batches 6 and 11.
 
 ## Priority fixes for the next verification pass
 

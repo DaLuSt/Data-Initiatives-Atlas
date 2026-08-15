@@ -32,6 +32,7 @@ organisations: []
 related_entities:
   - NL-NDW
   - EU-ITS-DIRECTIVE
+  - EU-EMDS
 relationships:
   - type: implements-requirement-from
     target: EU-ITS-DIRECTIVE
@@ -88,9 +89,12 @@ which instrument imposes it is not.
 
 ## Relationships
 
+- Implements requirements from [[EU-ITS-DIRECTIVE]] (added Batch 8).
 - Part of [[NL-NDW]].
-- Awaiting an `implements-requirement-from` link to the EU ITS instrument
-  (Batch 8).
+- [[EU-EMDS]], the common European mobility data space, was added in
+  Batch 10. National access points look like its natural building blocks,
+  but **no relationship is asserted** — no source states that the EMDS
+  builds on the NAP network. Association only.
 
 ## Sources
 
