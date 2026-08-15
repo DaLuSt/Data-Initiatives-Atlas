@@ -31,6 +31,13 @@ organisations: []
 related_entities:
   - EU-EDPB
 relationships:
+  - type: part-of
+    target: EU
+    source: fact
+    evidence: "The EDPS is the independent authority supervising processing of personal data by EU institutions and bodies (edps.europa.eu). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: participates-in
     target: EU-EDPB
     source: fact

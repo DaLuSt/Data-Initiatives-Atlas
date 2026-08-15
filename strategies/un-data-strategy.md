@@ -30,7 +30,14 @@ organisations:
   - UN
 related_entities:
   - UN-2-0
-relationships: []
+relationships:
+  - type: part-of
+    target: UN
+    source: fact
+    evidence: "The UN Secretary-General's Data Strategy underpins the data element of the UN 2.0 quintet of change (un.org quintet PDF). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "UN 2.0 — Quintet of Change"

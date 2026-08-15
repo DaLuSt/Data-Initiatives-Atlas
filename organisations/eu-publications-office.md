@@ -30,7 +30,14 @@ domains:
 organisations: []
 related_entities:
   - EU-DCAT-AP
-relationships: []
+relationships:
+  - type: part-of
+    target: EU
+    source: fact
+    evidence: "The Publications Office of the European Union is the EU's official publisher, responsible for the Official Journal and EUR-Lex. NOTE: asserted from the Atlas's own citation practice rather than a source describing the Office — see the entity body. NOT READ — search-only."
+    confidence: low
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Get started with DCAT-AP"

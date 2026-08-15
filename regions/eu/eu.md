@@ -21,7 +21,7 @@ verification: unverified
 
 start_date: null
 end_date: null
-last_verified: "2026-08-14"
+last_verified: null
 previous_version: null
 successor: null
 
@@ -34,7 +34,6 @@ sources:
   - title: "European Union — official website"
     url: "https://european-union.europa.eu/"
     publisher: "European Union"
-    accessed: "2026-08-14"
 ---
 
 # European Union
@@ -81,4 +80,7 @@ batch by batch.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter. **No `accessed` dates and no `last_verified`** — the
+Final Quality Gate found both being claimed here when nothing had in fact
+been accessed or verified, and removed them. Nothing about this entity has
+been checked against a source.

@@ -32,6 +32,13 @@ related_entities:
   - EU-CYBERSECURITY-ACT
   - EU-EDPB
 relationships:
+  - type: part-of
+    target: EU
+    source: fact
+    evidence: "ENISA is the European Union Agency for Cybersecurity, established under Regulation (EU) 2019/881 (EUR-Lex summary of the Cybersecurity Act). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: governed-by
     target: EU-CYBERSECURITY-ACT
     source: fact

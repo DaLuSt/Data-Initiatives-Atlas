@@ -30,7 +30,14 @@ domains:
 organisations:
   - UN
 related_entities: []
-relationships: []
+relationships:
+  - type: part-of
+    target: UN
+    source: fact
+    evidence: "The Global Digital Compact was adopted by UN member states at the Summit of the Future (European Commission news page — the only source located, itself a recorded weakness). NOT READ — search-only."
+    confidence: low
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "The United Nations members adopted a Global Digital Compact shaping a safe and sustainable digital future for all"

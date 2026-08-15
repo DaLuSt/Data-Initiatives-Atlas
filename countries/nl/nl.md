@@ -21,7 +21,7 @@ verification: unverified
 
 start_date: null
 end_date: null
-last_verified: "2026-08-14"
+last_verified: null
 previous_version: null
 successor: null
 
@@ -34,11 +34,9 @@ sources:
   - title: "NL — ISO 3166-1 country code"
     url: "https://www.iso.org/obp/ui/#iso:code:3166:NL"
     publisher: "International Organization for Standardization (ISO)"
-    accessed: "2026-08-14"
   - title: "Government of the Netherlands"
     url: "https://www.government.nl/"
     publisher: "Government of the Netherlands"
-    accessed: "2026-08-14"
 ---
 
 # Netherlands
@@ -77,4 +75,7 @@ up batch by batch.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter. **No `accessed` dates and no `last_verified`** — the
+Final Quality Gate found both being claimed here when nothing had in fact
+been accessed or verified, and removed them. Nothing about this entity has
+been checked against a source.

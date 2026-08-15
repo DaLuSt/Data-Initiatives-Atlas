@@ -30,7 +30,14 @@ domains:
 organisations: []
 related_entities:
   - NL-CBS
-relationships: []
+relationships:
+  - type: part-of
+    target: EU-COMMISSION
+    source: fact
+    evidence: "The European Statistical System is the partnership between the Community statistical authority, which is the Commission (Eurostat), and the national statistical institutes (eurostat Statistics Explained; Reg. (EC) 223/2009). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Eurostat and the European Statistical System — Statistics Explained"
