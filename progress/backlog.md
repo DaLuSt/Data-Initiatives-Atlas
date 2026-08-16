@@ -162,17 +162,29 @@ validation (`CONTRIBUTING.md` — Batch workflow).
   making an EU directive look German-specific. First-priority gap.
 - [ ] **A cybersecurity domain entity.** Thirteen entities across three
   layers and three countries qualify under the taxonomy §1 threshold.
-- [ ] **Belgium's Open Data Directive transposition.** Not identified; the
-  2016 act found is PSI-era and chronologically cannot be it. Belgium is
-  the only Atlas country without one recorded.
+- [ ] **The Open Data Directive transpositions for Belgium and France.**
+  Neither identified. Both countries have a well-known *earlier* open data
+  act (2016 in both cases) that looks like the answer and chronologically
+  cannot be it. Two of four countries now have this gap.
+- [ ] **Resolve [[FR-NIS2-LOI]]'s status.** Sources contradict each other
+  on whether France's NIS2 transposition is in force. The only entity in
+  the Atlas with that problem.
+- [ ] **Connect the DPAs to the EDPB.** Four national data protection
+  authorities, one sourced link. Four page reads.
 - [x] **A third country.** **Done 2026-08-15: Belgium**, 14 entities.
   Confirmed the model reusable a third time, and confirmed the federal
   limitation is **general** — and worse in Belgium, where `regional` is
   already taken by the supra-national meaning. See `progress/completed.md`.
-- [ ] **A fourth country — a *unitary* one.** All three tests so far have
-  been the Netherlands plus two federal states. A second unitary country
-  (France, Spain, Ireland) would show whether anything else in the model is
-  Netherlands-shaped, which the two federal cases could not isolate.
+- [x] **A fourth country — a *unitary* one.** **Done 2026-08-16: France**,
+  11 entities. Raised **no new ontology question at all** — the first
+  country of which that is true — which isolates the federal `level` gap as
+  the model's single real defect. See `progress/completed.md`.
+- [ ] **A fifth country outside the founding-six / Benelux-DACH group.**
+  All four so far are neighbouring western European states with similar
+  administrative traditions. A Nordic, southern or central European state
+  (Ireland, Spain, Poland, Estonia) would test whether the model is
+  *western-European*-shaped rather than merely country-neutral — a question
+  four similar countries cannot answer.
 
 ## Explicitly out of scope for now
 

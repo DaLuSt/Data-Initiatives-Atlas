@@ -54,6 +54,13 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: applies-in
+    target: FR
+    source: fact
+    evidence: "As an EU directive it requires transposition by all member states, France included (EUR-Lex ELI dir/2022/2557). NOT READ — search-only. France's 'loi Resilience' is sourced as transposing REC, NIS2 and DORA together, but that instrument's status is contested and no relationship to it is asserted from this entity; see FR-NIS2-LOI."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Directive (EU) 2022/2557 (CER) — Official Journal"
@@ -103,7 +110,7 @@ researched.
 
 ## Relationships
 
-- Applies in [[NL]], [[DE]] and [[BE]] — one entity, three
+- Applies in [[NL]], [[DE]], [[BE]] and [[FR]] — one entity, four
   countries. Every other member state belongs here too; the
   `applies-in` relationships are added as countries join the Atlas.
 - Companion to [[EU-NIS2]]; both stem from [[EU-CYBERSECURITY-STRATEGY]].

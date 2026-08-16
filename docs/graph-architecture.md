@@ -178,7 +178,7 @@ and asserts the build refuses.
 
 |  | `graph.json` | `details.json` |
 |---|---|---|
-| Size (164 entities) | ~158 KB (~14 KB gzipped) | ~210 KB (~53 KB gzipped) |
+| Size (189 entities) | ~194 KB (~20 KB gzipped) | ~262 KB (~62 KB gzipped) |
 | When fetched | immediately, blocking first render | in the background after first paint |
 | Contains | ids, labels, types, levels, countries, regions, statuses, aliases, domains, degrees, paths, all edges | descriptions, sources, evidence, dates, verification, confidence, coverage, organisations, lineage |
 
@@ -190,7 +190,7 @@ match them from the first keystroke, before `details.json` has landed. When
 it does land, its fields are folded onto the in-memory node records so the
 list view and search can use them too.
 
-At 164 entities this split is not strictly necessary. It is there because
+At 189 entities this split is not strictly necessary. It is there because
 §24 asks the design to assume 1,000+ nodes, and at that size a single
 2 MB blob before first paint would be the wrong architecture.
 

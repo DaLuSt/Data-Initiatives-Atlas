@@ -152,6 +152,21 @@ by accident.
 | **The Dutch NCSC** | Not an Atlas entity, so [[NL-CBW]] has a NIS2 act with **no authority attached**, while Belgium ([[BE-CCB]]) and Germany ([[DE-BSI]]) both have one. Visible only now that two other countries do | Next | Belgium batch |
 | Belgian statistics act | No statutory basis for [[BE-STATBEL]] was found | Later | Belgium batch |
 
+## France — queued from the fourth-country batch (2026-08-16)
+
+| Area / entity | Why it needs research | Suggested batch | Noted by / date |
+|---|---|---|---|
+| **France's Open Data Directive transposition** | Understood to be a 2021 ordinance; not identified. France joins Belgium as the second country with this gap | Next | France batch |
+| **INSEE** | National statistical office. Would be the fourth in the Atlas — all of which are unconnected to Eurostat or the UN statistical system. Only a passing mention found | Next | France batch |
+| **A French DCAT application profile** | data.gouv.fr exposes DCAT and the European portal harvests it, but no named profile was found. Would complete the DCAT fork across four countries | Next | France batch |
+| **The Dutch open-data portal custodian** | [[NL-DATA-OVERHEID]] is the only national portal in the Atlas with no custodian modelled. Three other countries now have one | Next | France batch |
+| AFNOR | French national standards body — the fourth leg of the CEN/ISO membership pattern after [[DE-DIN]], [[NL-NEN]] and Belgium's NBN | Later | France batch |
+| RGS and RGAA | France's security and accessibility reference frameworks, siblings of [[FR-RGI]] | Later | France batch |
+| France Identité | Recorded in prose on [[FR-FRANCECONNECT]]; not its own entity | Later | France batch |
+| Health Data Hub | France's health data platform — would connect [[DOMAIN-HEALTH]] to the French layer and possibly to [[EU-EHDS]] | Later | France batch |
+| Ordonnance n° 2005-1516 | Legal basis of [[FR-RGI]]; not modelled | Later | France batch |
+| Ordonnance of 21 October 2010 | France's INSPIRE transposition, cited on [[EU-INSPIRE]]'s `applies-in`; its number was not established so no entity was created | Later | France batch |
+
 ## Other queued research
 
 | Area / entity | Why it needs research | Suggested batch | Noted by / date |

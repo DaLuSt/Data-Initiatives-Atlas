@@ -55,6 +55,13 @@ relationships:
     confidence: medium
     valid_from: 2023-09-24
     valid_until: null
+  - type: applies-in
+    target: FR
+    source: fact
+    evidence: "As an EU regulation the DGA is directly applicable in all member states, France included; it entered into force 23 June 2022 and applies from 24 September 2023 (EUR-Lex ELI reg/2022/868). NOT READ — search-only."
+    confidence: medium
+    valid_from: 2023-09-24
+    valid_until: null
   - type: implements
     target: EU-DATA-STRATEGY
     source: interpretation
@@ -110,7 +117,7 @@ instruments they target.
 
 ## Relationships
 
-- Applies in [[NL]], [[DE]] and [[BE]] — one entity, three
+- Applies in [[NL]], [[DE]], [[BE]] and [[FR]] — one entity, four
   countries. Every other member state belongs here too; the
   `applies-in` relationships are added as countries join the Atlas.
 - Gives legal effect to pillar 1 of [[EU-DATA-STRATEGY]] (Atlas

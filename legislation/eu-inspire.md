@@ -52,6 +52,13 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: applies-in
+    target: FR
+    source: fact
+    evidence: "The INSPIRE Directive was transposed into French law by an ordonnance of 21 October 2010, according to the Etalab and data.gouv.fr open data legal chronologies (guides.etalab.gouv.fr/juridique/chronologie; guides.data.gouv.fr; datactivist.coop). NOT READ — search-only. The ordonnance's number was not established, so no entity was created for it."
+    confidence: medium
+    valid_from: 2010-10-21
+    valid_until: null
 
 sources:
   - title: "The EU's infrastructure for spatial information (Inspire)"

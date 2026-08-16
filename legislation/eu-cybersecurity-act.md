@@ -53,6 +53,13 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: applies-in
+    target: FR
+    source: fact
+    evidence: "As an EU regulation it is directly applicable in all member states, France included (EUR-Lex summary of the EU Cybersecurity Act). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "The EU Cybersecurity Act — summary"
@@ -96,7 +103,7 @@ find a hole without it.
 
 ## Relationships
 
-- Applies in [[NL]], [[DE]] and [[BE]] — one entity, three
+- Applies in [[NL]], [[DE]], [[BE]] and [[FR]] — one entity, four
   countries. Every other member state belongs here too; the
   `applies-in` relationships are added as countries join the Atlas.
 - Governs [[EU-ENISA]] (recorded on that entity).

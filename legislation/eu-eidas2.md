@@ -55,6 +55,13 @@ relationships:
     confidence: medium
     valid_from: 2024-05-20
     valid_until: null
+  - type: applies-in
+    target: FR
+    source: fact
+    evidence: "The Regulation mandates all Member States, France included, to provide European Digital Identity Wallets by the end of 2026 (Reg. (EU) 2024/1183). NOT READ — search-only. FranceConnect and France Identite are recorded in this Atlas but neither is asserted to implement this regulation — no source read connects them."
+    confidence: medium
+    valid_from: 2024-05-20
+    valid_until: null
   - type: produces
     target: EU-EUDI-WALLET
     source: fact
@@ -127,7 +134,7 @@ operative instrument as modified. This differs from the
 
 - Amends [[EU-EIDAS]] (lineage recorded via `previous_version`).
 - Produces / establishes [[EU-EUDI-WALLET]].
-- Applies in [[NL]], [[DE]] and [[BE]] — one entity, three
+- Applies in [[NL]], [[DE]], [[BE]] and [[FR]] — one entity, four
   countries. Every other member state belongs here too; the
   `applies-in` relationships are added as countries join the Atlas.
 
