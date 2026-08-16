@@ -28,6 +28,7 @@ successor: EU-NIS2
 
 domains:
   - DOMAIN-GOVERNMENT
+  - DOMAIN-CYBERSECURITY
 organisations: []
 related_entities:
   - EU-NIS2

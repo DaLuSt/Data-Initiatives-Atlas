@@ -26,6 +26,7 @@ successor: NL-CBW
 
 domains:
   - DOMAIN-GOVERNMENT
+  - DOMAIN-CYBERSECURITY
 organisations: []
 related_entities:
   - NL-CBW

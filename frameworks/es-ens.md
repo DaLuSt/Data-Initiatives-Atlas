@@ -35,6 +35,7 @@ successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
+  - DOMAIN-CYBERSECURITY
 organisations:
   - ES-CCN
 related_entities:

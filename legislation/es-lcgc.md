@@ -37,6 +37,7 @@ successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
+  - DOMAIN-CYBERSECURITY
 organisations:
   - ES-INCIBE
   - ES-CCN

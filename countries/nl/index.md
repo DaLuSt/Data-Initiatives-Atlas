@@ -133,6 +133,7 @@ see `discovery/research-queue.md`._
 - [[DOMAIN-EDUCATION]] — Education
 - [[DOMAIN-HEALTH]] — Health
 - [[DOMAIN-MOBILITY]] — Mobility
+- [[DOMAIN-CYBERSECURITY]] — Cybersecurity _([[NL-WBNI]], [[NL-CBW]], [[NL-BIO]])_
 
 _Domains are created only once they connect two or more entities
 (`metadata/taxonomy.md` §1). Energy, Environment, Finance, Justice,

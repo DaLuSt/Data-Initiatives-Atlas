@@ -140,7 +140,7 @@ graph comparable: Obsidian's local graph is built from exactly these.
 Merging the three would triple the apparent connectivity of the Atlas and
 destroy the distinction between "a sourced, provenanced claim" and "these
 two entities are mentioned together". The default view shows only the 320
-typed relationships; the other 1,864 edges are one checkbox away.
+typed relationships; the other 1,916 edges are one checkbox away.
 
 ---
 
@@ -178,7 +178,7 @@ and asserts the build refuses.
 
 |  | `graph.json` | `details.json` |
 |---|---|---|
-| Size (233 entities) | ~251 KB (~25 KB gzipped) | ~365 KB (~87 KB gzipped) |
+| Size (234 entities) | ~256 KB (~26 KB gzipped) | ~366 KB (~87 KB gzipped) |
 | When fetched | immediately, blocking first render | in the background after first paint |
 | Contains | ids, labels, types, levels, countries, regions, statuses, aliases, domains, degrees, paths, all edges | descriptions, sources, evidence, dates, verification, confidence, coverage, organisations, lineage |
 
@@ -190,7 +190,7 @@ match them from the first keystroke, before `details.json` has landed. When
 it does land, its fields are folded onto the in-memory node records so the
 list view and search can use them too.
 
-At 233 entities this split is not strictly necessary. It is there because
+At 234 entities this split is not strictly necessary. It is there because
 §24 asks the design to assume 1,000+ nodes, and at that size a single
 2 MB blob before first paint would be the wrong architecture.
 
@@ -227,7 +227,7 @@ someone else's CDN changed. `tools/test_build_graph.py` asserts that
 
 The default view is deliberately not "everything at full detail":
 
-1. **Typed relationships only by default** — 320 edges instead of 2,184.
+1. **Typed relationships only by default** — 320 edges instead of 2,236.
 2. **Level-of-detail labels** — `min-zoomed-font-size` hides labels that
    would render too small to read, and they return on zoom. Above 260
    visible nodes labels are dropped entirely.

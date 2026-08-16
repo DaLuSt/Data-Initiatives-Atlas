@@ -29,6 +29,7 @@ successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
+  - DOMAIN-CYBERSECURITY
 organisations: []
 related_entities:
   - BE-NIS2-WET

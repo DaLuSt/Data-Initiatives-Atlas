@@ -1,8 +1,34 @@
 # Current Batch
 
-**Status:** No batch in progress. The **basisregistraties batch** was
-completed on 2026-08-16, after the UN-connection and Spain batches the same
-day.
+**Status:** No batch in progress. The **cybersecurity domain** was added on
+2026-08-16, after the basisregistraties, UN-connection and Spain batches the
+same day.
+
+## Cybersecurity domain
+
+**234 entities.** [[DOMAIN-CYBERSECURITY]] connects **23 entities across
+three layers and five countries** — a threshold `metadata/taxonomy.md` §1
+had passed several batches ago. One entity added, 23 tagged, one taxonomy
+row.
+
+**What a domain view is for.** Three things became legible that no single
+entity shows: **one directive with five different national states** (two of
+which are unclear in *different* ways — `unknown` versus `proposed`); **the
+national authority is not one institution** (Spain has two split by
+audience, and the **Netherlands has none in the Atlas at all** — the NCSC is
+unmodelled); and **two three-layer chains that do not meet**, since nothing
+connects the ISO/EU standards layer to the national baselines.
+
+The Dutch gap is the point: invisible looking at Dutch entities one at a
+time, obvious the moment the domain is assembled.
+
+**Boundary calls, both judgements rather than facts.** [[EU-CER]] is
+**excluded** — it governs physical resilience, not network and information
+security — even though [[FR-NIS2-LOI]] is a single French instrument
+transposing NIS2, CER and DORA together, so the domain boundary cuts through
+one national law. Data protection is excluded for the same kind of reason.
+
+See `progress/completed.md` for the full entry.
 
 ## Basisregistraties — the ten registers modelled
 
@@ -224,8 +250,9 @@ later.
 
 ## The sourcing position is unchanged
 
-**224 of 233 entities are `verification: search-only`**, and 227 of 233 are
-unread in total. Page retrieval was blocked throughout the basisregistraties
+**224 of 234 entities are `verification: search-only`**, and 227 of 234 are
+unread in total ([[DOMAIN-CYBERSECURITY]] is a taxonomy node carrying no
+factual claims, so it is `primary-source` like the other domains). Page retrieval was blocked throughout the basisregistraties
 batch as it was for every earlier one
 (`EGRESS_BLOCKED`; 403 at the proxy tunnel, re-tested at the start of this
 batch, and `WebFetch` re-tested and blocked too — the proxy reports
@@ -251,7 +278,7 @@ URL is already recorded in the entities' `sources:` lists.
 
 ## Immediate next steps, in priority order
 
-1. **Re-verification pass** (blocked on egress). 214 of 220 entities are
+1. **Re-verification pass** (blocked on egress). 227 of 234 entities are
    unread; `discovery/reverification-allowlist.md` is the generated
    worklist. Still the single highest-value outstanding work.
 2. **[[NL-CBW]] status check.** Its `start_date` is 2026-08-15. Its own body
@@ -289,5 +316,7 @@ URL is already recorded in the entities' `sources:` lists.
 11. **Resolve the federal modelling gap.** Three of five countries have an
     unrepresentable sub-national tier, in three constitutionally distinct
     forms, and the Atlas fails on all three identically.
-12. **A cybersecurity domain entity**, and **a sixth country outside western
-    Europe**. See `progress/backlog.md`.
+12. **A sixth country outside western Europe.** All five are western
+    European EU member states, which leaves two assumptions untested: that
+    the EU layer is the right regional parent, and that `applies-in` is the
+    right way to attach a country. See `progress/backlog.md`.

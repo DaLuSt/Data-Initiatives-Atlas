@@ -27,6 +27,7 @@ successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
+  - DOMAIN-CYBERSECURITY
 organisations: []
 related_entities:
   - EU-CYBERSECURITY-ACT
