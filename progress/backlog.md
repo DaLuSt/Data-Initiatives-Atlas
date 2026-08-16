@@ -266,6 +266,37 @@ validation (`CONTRIBUTING.md` — Batch workflow).
   entirely by a participant — one Eurostat page — which gives it two
   competing names (CSSP / CSTAT) and no independent confirmation.
 
+## Opened by the basisregistraties batch
+
+- [ ] **Propose relationship types for data movement.** The single clearest
+  outstanding vocabulary decision, and now supported by **five** sourced
+  examples across two batches:
+  **authorised use** ([[NL-BELASTINGDIENST]] → [[NL-WOZ]], [[NL-RDW]] →
+  [[NL-BRP]]), **key-sharing couplings** ([[NL-BRK]] ↔ [[NL-NHR]],
+  [[NL-BAG]] ↔ [[NL-BRP]]), and the two EU↔UN cooperation acts from the UN
+  batch. `metadata/relationship-types.md` §2.3's threshold is two.
+- [ ] **Decide whether `authentiek gegeven` needs a field.** The legal status
+  that makes a base registry authoritative — data other bodies must use and
+  may not independently re-determine — appears in ten descriptions and
+  nowhere in the structured data.
+- [ ] **Model the Dutch statutes behind the registers.** Wet BAG, Wet BGT,
+  Wet BRO, Wet WOZ, AWR Chapter IVA, Handelsregisterwet, Kadasterwet,
+  Wegenverkeerswet. Named in descriptions, no entities. A legislation batch,
+  not a registry one — and **[[NL-BRT]] has no sourced statute at all**.
+- [ ] **Decide how to model Dutch municipalities.** They hold the [[NL-BAG]]
+  and determine [[NL-WOZ]] values, and are absent from the graph. **Not** the
+  federal `level` gap — `local` exists — but there is no obvious entity to
+  create. Same question covers the [[NL-BGT]]'s seven bronhouder categories
+  and SVB-BGT.
+- [ ] **Settle the register typing.** The ten are `platform`; a
+  basisregistratie is arguably a dataset with a legal status, and there is no
+  `register` or `dataset` type.
+- [ ] **Resolve [[NL-FDS]] ↔ [[NL-BASISREGISTRATIES]].** Open since Batch 2,
+  untouched by this batch, and now more visible with the stelsel fully
+  modelled.
+- [ ] **Digimelding**, the stelsel's error-reporting facility, and
+  **SVB-BGT**. Named in single sources, not created.
+
 ## Explicitly out of scope for now
 
 - Countries beyond the five modelled (structure supports them; no content

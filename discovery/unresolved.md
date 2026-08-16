@@ -400,6 +400,89 @@ re-reading every instrument.
 | [[UN-CES]] | Typed `programme`. It is a standing intergovernmental conference with a Bureau, so `organisation` is arguable; typed `programme` because it is convened *by* [[UN-UNECE]] rather than existing beside it, the same reading applied to [[UN-GGIM]] |
 | [[INTL-OECD-CSSP]] | The sources give **two names and two acronyms** — *committee on statistics and statistical policy* (CSSP) and *statistics committee* (CSTAT) — and differ on whether Eurostat represents "the EU" or "the European Commission". Recorded at `confidence: low` with both names. **No OECD source is cited at all**; the committee is described only by a participant |
 
+## Basisregistraties batch (2026-08-16)
+
+### The headline: the Atlas cannot express how data moves
+
+Ten base registries, three organisations and a rewired stelsel entity were
+added. The batch's finding is not about the Netherlands — it is about the
+relationship vocabulary.
+
+**Five sourced connections could not be recorded**, in three distinct
+shapes:
+
+| Shape | Examples | Why no edge |
+|---|---|---|
+| **Authorised use** ("afnemer") | [[NL-BELASTINGDIENST]] uses [[NL-WOZ]]; [[NL-RDW]] receives [[NL-BRP]] data | No type says "is an authorised user of". `applies-to` inverts it, `depends-on` overstates it |
+| **Key-sharing coupling** | [[NL-BRK]] products carry the KvK number from [[NL-NHR]]; [[NL-BAG]] ↔ [[NL-BRP]] via documented RvIG guidance | No type for "carries the identifier of". `references` implies citation, `derived-from` is plainly wrong |
+| **`Authentiek gegeven`** | the legal status that makes a base registry authoritative — data others must use and may not re-determine | No metadata field at all |
+
+Taken together: **the Atlas models what entities *are* and what they
+*descend from*, and has almost no vocabulary for how data actually moves
+between them.** For a system whose whole purpose is data movement, that is
+the honest result.
+
+With the UN batch's two (the UNESCO–Commission agreement and the EU
+voluntary review), **five sourced connections are now unmodelled for want of
+a type** — well past the §2.3 threshold for proposing one.
+
+### Dutch municipalities are unmodelled — and this one is not the `level` gap
+
+| Register | Who actually holds the data | What the graph shows |
+|---|---|---|
+| [[NL-BAG]] | municipalities | [[NL-KADASTER]] (national facility) |
+| [[NL-BGT]] | **seven** categories of bronhouder, organised in SVB-BGT | [[NL-KADASTER]] (national facility) |
+| [[NL-WOZ]] | municipalities determine the values | [[NL-WAARDERINGSKAMER]] (functional manager) |
+
+Unlike the German Länder, Belgian Regions and Spanish Comunidades
+Autónomas, **the `level` vocabulary is not the obstacle** — `local` exists.
+The obstacle is that there is no obvious entity to create: there are
+hundreds of municipalities, and one node for "the municipalities" would be
+an invention. [[NL-VNG]] is their association, which is a different thing.
+
+Also unmodelled: **SVB-BGT** (the BGT bronhouders' cooperative, named in one
+source), **Rijkswaterstaat, ProRail, Defence and RVO** as BGT bronhouders,
+and **Digimelding**, the stelsel's error-reporting facility.
+
+### Every register carries one `maintained-by`, and three of them shouldn't
+
+The stelsel's own documentation describes **four roles** — initiator,
+supervisor, provider, holder — and says one organisation can be several at
+once. The Atlas has one type. Where the roles diverge, the caveat is written
+into the relationship's **own `evidence` string**, so it is visible in the
+graph data rather than only in prose. That is the mitigation, not a fix.
+
+### Statutes named but not modelled
+
+Nine registers have a statutory basis; only [[NL-BRP]] carries a
+`governed-by` edge, to the pre-existing [[NL-WET-BRP]]. The Wet BAG, Wet
+BGT, Wet BRO, Wet WOZ and AWR Chapter IVA are named in descriptions and
+**have no entities**. Creating six Dutch statutes would be a legislation
+batch; doing half would leave the layer inconsistent.
+
+⚠ **[[NL-BRT]] has no sourced statute at all** — the only one of the ten.
+
+### Typing question
+
+| Entity | Question |
+|---|---|
+| The ten registers | Typed `platform` — *"a concrete technical platform or system"* (`metadata/ontology.md` §1). A basisregistratie is arguably a **dataset with a legal status** rather than a platform; the *landelijke voorziening* is the platform. `framework` fits the stelsel but not a single register, and there is no `register` or `dataset` type. Applied consistently to all ten so at least the set is coherent |
+
+### Still open
+
+- **[[NL-FDS]] ↔ the stelsel.** Whether the Federatief Datastelsel extends,
+  replaces or sits beside it is unestablished, as it has been since Batch 2.
+  Untouched by this batch.
+- **[[NL-BRO]] is phased.** `status: active` is correct — the Act is in
+  force — but sources say implementation is *in phases*. No status value
+  covers "in force and partially implemented".
+- **[[NL-BRO]]'s predecessors** DINO and BIS are described as things the
+  register *builds on*, which is weaker than supersession. Neither is
+  modelled and no `supersedes` was asserted.
+- **[[NL-BRV]] holds personal data** and is therefore in scope for
+  [[EU-GDPR]] and [[NL-UAVG]]. Nothing read says so, so nothing is asserted
+  — an obviously-true statement kept out until a source states it.
+
 ## Factual details flagged in entity bodies
 
 | Entity | Question | Noted by / date | Status |

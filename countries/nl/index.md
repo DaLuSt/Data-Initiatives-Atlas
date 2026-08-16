@@ -38,7 +38,17 @@ Anchor entity: [[NL]]
 ### Data and governance frameworks
 
 - [[NL-FDS]] — Federatief Datastelsel
-- [[NL-BASISREGISTRATIES]] — Stelsel van Basisregistraties
+- [[NL-BASISREGISTRATIES]] — Stelsel van Basisregistraties _(the ten below)_
+  - [[NL-BRP]] — persons _(RvIG)_
+  - [[NL-NHR]] — businesses and legal entities _(KvK)_
+  - [[NL-BAG]] — addresses and buildings _(municipalities; Kadaster runs the facility)_
+  - [[NL-BRT]] — topography, small/medium scale _(Kadaster)_
+  - [[NL-BRK]] — property ownership _(Kadaster)_
+  - [[NL-BGT]] — topography, large scale, 20 cm _(seven kinds of bronhouder)_
+  - [[NL-WOZ]] — property values _(municipalities; Waarderingskamer supervises)_
+  - [[NL-BRV]] — vehicles _(RDW)_
+  - [[NL-BRI]] — income _(Belastingdienst)_
+  - [[NL-BRO]] — the subsurface _(TNO / Geologische Dienst)_
 - [[NL-BOMOS]] — Beheer- en OntwikkelModel voor Open Standaarden
 - [[NL-BIO]] — Baseline Informatiebeveiliging Overheid _(current version BIO2)_
 
@@ -96,10 +106,14 @@ see `discovery/research-queue.md`._
 
 ### Registries and statistics
 
-- [[NL-KADASTER]] — Kadaster (BRK, geospatial)
-- [[NL-KVK]] — Kamer van Koophandel (Handelsregister)
-- [[NL-RDW]] — RDW (BRV, vehicles)
-- [[NL-CBS]] — Centraal Bureau voor de Statistiek
+- [[NL-KADASTER]] — Kadaster _(BRK, BRT; national facility for BAG, BGT, WOZ)_
+- [[NL-KVK]] — Kamer van Koophandel _(Handelsregister)_
+- [[NL-RDW]] — RDW _(BRV, vehicles)_
+- [[NL-RVIG]] — Rijksdienst voor Identiteitsgegevens _(BRP)_
+- [[NL-WAARDERINGSKAMER]] — Waarderingskamer _(WOZ supervisor and functional manager)_
+- [[NL-BELASTINGDIENST]] — Belastingdienst _(BRI)_
+- [[NL-TNO]] — TNO / Geologische Dienst Nederland _(BRO facility)_
+- [[NL-CBS]] — Centraal Bureau voor de Statistiek _(part-of [[EU-ESS]])_
 
 ### Oversight and information management
 
