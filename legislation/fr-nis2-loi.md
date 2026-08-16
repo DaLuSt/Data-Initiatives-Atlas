@@ -30,6 +30,7 @@ successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
+  - DOMAIN-CYBERSECURITY
 organisations:
   - FR-ANSSI
 related_entities:

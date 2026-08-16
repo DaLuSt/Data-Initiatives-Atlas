@@ -32,6 +32,7 @@ successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
+  - DOMAIN-CYBERSECURITY
 organisations:
   - BE-CCB
 related_entities:

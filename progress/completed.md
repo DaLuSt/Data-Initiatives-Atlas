@@ -1716,3 +1716,102 @@ ten — and is `coverage: low` as a result.
 
 Sourcing position unchanged — every new entity is `search-only`,
 `last_verified: null`, no `accessed` dates.
+
+---
+
+# Cybersecurity domain (2026-08-16)
+
+**Scope:** the outstanding backlog item *"a cybersecurity domain entity —
+well over twenty entities across three layers and five countries qualify
+under the taxonomy §1 threshold. Deliberately not created inside a country
+batch."*
+
+**Entities added: 1.** 233 → **234**. `DOMAIN-CYBERSECURITY` connects **23
+entities** by `domains:` association — three layers, five countries.
+
+- **International (2):** `INTL-ISO-IEC-27001`, `INTL-ISO-IEC-27002`.
+- **European (5):** `EU-NIS`, `EU-NIS2`, `EU-CYBERSECURITY-ACT`,
+  `EU-ENISA`, `EU-CYBERSECURITY-STRATEGY`.
+- **National (16):** NL — `NL-WBNI`, `NL-CBW`, `NL-BIO`; DE — `DE-BSI`,
+  `DE-BSIG`, `DE-NIS2UMSUCG`, `DE-IT-GRUNDSCHUTZ`; BE — `BE-CCB`,
+  `BE-NIS1-WET`, `BE-NIS2-WET`; FR — `FR-ANSSI`, `FR-NIS2-LOI`; ES —
+  `ES-CCN`, `ES-INCIBE`, `ES-LCGC`, `ES-ENS`.
+
+A row was added to `metadata/taxonomy.md` §1.3 in the same commit, as that
+section requires. `countries/nl/index.md` gained the domain.
+
+**Validation:** `run_all.py` 5/5; `test_build_graph.py` 32 tests OK;
+`test_ui.mjs` 47/47; `audit.py` clean. The graph shows exactly 23
+association edges into the new node and no relationship edges — domains are
+referenced *by* entities, never the reverse.
+
+## Why a domain earns its place
+
+`metadata/taxonomy.md` §1.1 says domains are *"the cross-cutting axis of the
+graph: they let you ask 'what connects to Mobility?' regardless of type,
+level or country."* This one demonstrates the point — **three things became
+legible that no single entity shows**:
+
+### One directive, five different national states
+
+Every country in the Atlas has a NIS2 position and no two are alike:
+Belgium in force Oct 2024, Germany Dec 2025 by *amending* an existing act,
+the Netherlands Aug 2026, France `status: unknown` because its sources
+contradict each other, Spain `status: proposed` because it is still a draft.
+
+Two of five are neither "done" nor "not started", **and they are unclear in
+different ways** — `unknown` means the Atlas does not know, `proposed` means
+it knows the thing has not happened.
+
+### The national authority is not one institution
+
+Germany, Belgium and France each have one named body. **Spain has two**,
+split by audience — `ES-CCN` for the public sector under the intelligence
+centre, `ES-INCIBE` for citizens and business — with `ES-LCGC` proposing a
+third on top.
+
+**The Netherlands has none in the Atlas at all.** The NCSC is not modelled.
+Four of five countries have a cyber authority; the founding country does
+not.
+
+That gap is the batch's most useful output. It is invisible looking at Dutch
+entities one at a time and obvious the moment the domain is assembled —
+which is the argument for domains in one example.
+
+### Two three-layer chains that do not meet
+
+ISO/IEC 27001–27002 sit above the national baselines (`NL-BIO`,
+`DE-IT-GRUNDSCHUTZ`, `ES-ENS`); `EU-NIS` → `EU-NIS2` sits above the national
+transpositions. **Nothing connects the two chains**, and no source read
+joins the NIS2 obligations to the baselines that would carry them in
+practice. Recorded as an observation, not closed with an invented edge.
+
+## Boundary decisions — both judgements, both documented
+
+**`EU-CER` is excluded.** The Critical Entities Resilience Directive is
+NIS2's sibling, adopted the same day for the same operators, but it governs
+**physical** resilience rather than network and information security.
+
+The boundary is genuinely awkward and the Atlas shows where: `FR-NIS2-LOI`
+is a **single French instrument transposing NIS2, CER and DORA together**,
+tagged to this domain for its NIS2 content — so the domain boundary cuts
+through one national law.
+
+**Data protection is excluded** on the same reasoning, even though several
+authorities hold both remits and `FR-CNIL`'s body records that it is
+described as strengthening collaboration with `FR-ANSSI`.
+
+## Not connected
+
+The Dutch NCSC (the largest hole), the Centro Nacional de Ciberseguridad
+that `ES-LCGC` would create, CERT functions named in several bodies
+(CCN-CERT, INCIBE-CERT), and `EU-ETSI` — a European standards body active in
+cybersecurity with **no ETSI standard modelled**, so nothing to tag.
+
+## Also fixed
+
+`progress/current-batch.md` carried **"214 of 220 entities are unread"** in
+its priority list — stale since the register batch, where the sourcing
+paragraph was updated and the priority list was not. Corrected to 227 of
+234 (224 `search-only` + 3 `unverified`). Same class of defect as the statistics-cluster claim the UN batch
+found: **prose figures in progress files are not validated by anything.**

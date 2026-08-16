@@ -31,6 +31,7 @@ successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
+  - DOMAIN-CYBERSECURITY
 organisations:
   - DE-BSI
 related_entities:

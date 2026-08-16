@@ -166,9 +166,11 @@ validation (`CONTRIBUTING.md` — Batch workflow).
   conflates origin, governance and operation.
 - [ ] **`EU-INSPIRE` → `NL`.** Added with an `applies-in` to `DE` only,
   making an EU directive look German-specific. First-priority gap.
-- [ ] **A cybersecurity domain entity.** Well over twenty entities across
-  three layers and five countries qualify under the taxonomy §1 threshold.
-  Deliberately not created inside a country batch.
+- [x] **A cybersecurity domain entity.** **Done 2026-08-16:**
+  [[DOMAIN-CYBERSECURITY]], connecting **23 entities** across three layers
+  and five countries. Deliberately created outside a country batch, which is
+  why it could be scoped by subject rather than by country. See
+  `progress/completed.md`.
 - [ ] **The Open Data Directive transpositions for Belgium and France.**
   Neither identified. Both countries have a well-known *earlier* open data
   act (2016 in both cases) that looks like the answer and chronologically

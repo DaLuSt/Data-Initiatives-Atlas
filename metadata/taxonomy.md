@@ -43,6 +43,7 @@ useful graph relationships").
 | `DOMAIN-HEALTH` | Health |
 | `DOMAIN-FINANCE` | Finance |
 | `DOMAIN-GEOSPATIAL` | Geospatial |
+| `DOMAIN-CYBERSECURITY` | Cybersecurity |
 | `DOMAIN-ENVIRONMENT` | Environment |
 | `DOMAIN-ENERGY` | Energy |
 | `DOMAIN-EDUCATION` | Education |

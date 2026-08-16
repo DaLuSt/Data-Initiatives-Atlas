@@ -29,6 +29,7 @@ successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
+  - DOMAIN-CYBERSECURITY
 organisations:
   - INTL-ISO
   - INTL-IEC
