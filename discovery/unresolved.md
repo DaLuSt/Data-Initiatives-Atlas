@@ -13,6 +13,13 @@ one of these — resolve it with a real source, or leave it open.
 
 To find every affected entity: `grep -rl "verification: search-only" .`
 
+**The worklist for closing this is generated:**
+`discovery/reverification-allowlist.md` lists every host the Atlas cites,
+derived from the entity files by `tools/source_hosts.py`. Page retrieval is
+blocked by an **environment-level egress policy** — the proxy answers
+`403 to CONNECT` — which no change inside a session can lift. The allowlist
+is what to request.
+
 ## Status and temporal questions
 
 | Entity | Question | Why it matters | Noted by / date | Status |
