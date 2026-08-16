@@ -69,6 +69,13 @@ relationships:
     confidence: medium
     valid_from: 2025-03-26
     valid_until: null
+  - type: applies-in
+    target: ES
+    source: fact
+    evidence: "As an EU regulation it is directly applicable in all member states, Spain included; EU countries create health data access bodies during the 2027-2029 preparation phase (Reg. (EU) 2025/327). NOT READ - search-only. No Spanish health data access body is recorded in this Atlas."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "European Health Data Space — legislative procedure file"
@@ -144,7 +151,7 @@ Parliament's Legislative Observatory file. Queued.
 ## Relationships
 
 - Part of [[EU-COMMON-DATA-SPACES]].
-- Applies in [[NL]], [[DE]], [[BE]] and [[FR]] — one entity, four
+- Applies in [[NL]], [[DE]], [[BE]], [[FR]] and [[ES]] — one entity, five
   countries. Every other member state belongs here too; the
   `applies-in` relationships are added as countries join the Atlas.
 

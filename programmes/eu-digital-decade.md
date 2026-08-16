@@ -61,6 +61,13 @@ relationships:
     confidence: medium
     valid_from: 2022-12-14
     valid_until: null
+  - type: applies-in
+    target: ES
+    source: fact
+    evidence: "The programme requires annual progress reports and national strategic roadmaps from member states, Spain included (EUR-Lex summary of Decision (EU) 2022/2481). NOT READ - search-only. Espana Digital 2026 is Spain's national digital roadmap but no source read connects it to this Decision, so no relationship is asserted."
+    confidence: medium
+    valid_from: 2022-12-14
+    valid_until: null
 
 sources:
   - title: "Decision (EU) 2022/2481 establishing the Digital Decade Policy Programme 2030"
@@ -122,7 +129,7 @@ warrants a separate `legislation/` entity is queued.
 
 ## Relationships
 
-- Applies in [[NL]], [[DE]], [[BE]] and [[FR]] through the national
+- Applies in [[NL]], [[DE]], [[BE]], [[FR]] and [[ES]] through the national
   strategic roadmap obligation.
 
 ## Sources

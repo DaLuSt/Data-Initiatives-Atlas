@@ -88,10 +88,10 @@ It was brought into conformity with [[EU-GDPR]] by:
 The reform moved [[FR-CNIL]] **from prior control to posterior control**,
 based on the accountability of organisations.
 
-## Four countries, four techniques — and France's is the outlier
+## Five countries, four techniques — and France's is the outlier
 
-[[EU-GDPR]] is one Atlas entity with four national implementations, and the
-*legislative technique* differs in each:
+[[EU-GDPR]] is one Atlas entity with five national implementations, and the
+*legislative technique* differs across them:
 
 | Country | Instrument | Technique |
 |---|---|---|
@@ -99,6 +99,7 @@ based on the accountability of organisations.
 | Netherlands | [[NL-UAVG]] | new implementing act |
 | Germany | [[DE-BDSG]] | new act, replacing the earlier BDSG |
 | Belgium | [[BE-GDPR-WET]] | new act, repealing the 1992 privacy act |
+| Spain | [[ES-LOPDGDD]] | new organic law, carrying digital rights beyond data protection |
 
 The French choice was **explicit and symbolic**, not incidental: the
 sources record that the decision was made to *preserve* the 1978 act and
@@ -111,7 +112,7 @@ the regulation it implements**, and older than every other instrument in
 this Atlas except [[BE-KSZ-WET]] (1990) — which it also predates by twelve
 years, making it the oldest entity here.
 
-**No relationship between the four national acts is asserted.** They are
+**No relationship between the national acts is asserted.** They are
 siblings under [[EU-GDPR]].
 
 ## The amendment question, answered from the other side

@@ -62,6 +62,13 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: applies-in
+    target: ES
+    source: fact
+    evidence: "As an EU directive it requires transposition by all member states, Spain included; Spain transposed it through Real Decreto-ley 24/2021 of 2 November, an omnibus instrument transposing eight directives, which amended Ley 37/2007 on the re-use of public sector information - ten articles, an additional provision, the sole transitory provision and the annex modified, three new articles added (BOE-A-2021-17910; ecija.com; datos.gob.es). NOT READ - search-only. See ES-LEY-37-2007."
+    confidence: medium
+    valid_from: 2021-11-02
+    valid_until: null
 
 sources:
   - title: "Directive - 2019/1024 - EN - psi directive"
@@ -122,7 +129,7 @@ dataset regime is still unresearched (`coverage: low`).
 
 ## Relationships
 
-- Applies in [[NL]], [[DE]], [[BE]] and [[FR]] — one entity, four
+- Applies in [[NL]], [[DE]], [[BE]], [[FR]] and [[ES]] — one entity, five
   countries. Every other member state belongs here too; the
   `applies-in` relationships are added as countries join the Atlas.
 - Transposed into Dutch law through [[NL-WHO]], as amended by the Wet

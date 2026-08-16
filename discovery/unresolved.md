@@ -9,7 +9,7 @@ one of these — resolve it with a real source, or leave it open.
 
 | Entity / topic | Question | Why it's unresolved | Noted by / date | Status |
 |---|---|---|---|---|
-| All unread-source entities (**183 of 189**: 180 `search-only` + 3 `unverified`; regenerate the count with `python tools/source_hosts.py`) | Every factual claim | The environment's network egress policy blocks all direct page retrieval (`EGRESS_BLOCKED` for forumstandaardisatie.nl, digitaleoverheid.nl, noraonline.nl, vng.nl, logius.nl, eur-lex.europa.eu, wikipedia.org and every other host tested). Batch 1 was completed from search-engine results on explicit instruction, with the trade-off accepted knowingly. Every entity carries `verification: search-only`. | Batch 1 / 2026-08-14 | **Open — needs full re-verification pass** |
+| All unread-source entities (**200 of 206**: 197 `search-only` + 3 `unverified` ([[NL]], [[EU]], [[UN]]); regenerate the count with `python tools/source_hosts.py`) | Every factual claim | The environment's network egress policy blocks all direct page retrieval (`EGRESS_BLOCKED` for forumstandaardisatie.nl, digitaleoverheid.nl, noraonline.nl, vng.nl, logius.nl, eur-lex.europa.eu, wikipedia.org and every other host tested). Batch 1 was completed from search-engine results on explicit instruction, with the trade-off accepted knowingly. Every entity carries `verification: search-only`. | Batch 1 / 2026-08-14 | **Open — needs full re-verification pass** |
 
 To find every affected entity: `grep -rl "verification: search-only" .`
 
@@ -262,6 +262,79 @@ stands unchanged.
 | [[FR-RGI]] | The specification PDF is cited from **april.org**, an advocacy association hosting a copy, because no numerique.gouv.fr URL for it was returned. | Open |
 | French DCAT profile | **Not established.** data.gouv.fr certainly exposes DCAT — the European portal harvests it — but no named French application profile was found, so the DCAT fork stops at three countries instead of four. | Open |
 | INSEE | Not modelled — only a passing mention in an unrelated article. The statistics cluster therefore stays at three unconnected national offices. | Open |
+
+## Spain batch — fifth country (2026-08-16)
+
+### The model is not western-European-shaped
+
+Spain is the first country outside the founding-six / Benelux-DACH group,
+added specifically to test the objection that four neighbouring states with
+similar administrative traditions cannot demonstrate country-neutrality. It
+required **no ontology, schema, taxonomy, relationship-type, folder,
+validation or generator change**, and produced no `ES-EU-*` entity. The
+objection is answered.
+
+### The federal gap has a third shape — and that localises it
+
+| Country | Sub-national tier | What the Atlas can express |
+|---|---|---|
+| Germany | 16 Länder (federal) | nothing |
+| Belgium | Regions and Communities (federal) | nothing — and `regional` is already taken by the supra-national meaning |
+| **Spain** | **17 Comunidades Autónomas (State of Autonomies — neither federal nor unitary)** | **nothing** |
+
+Three constitutionally distinct arrangements; **the Atlas fails on all three
+identically**. That is the strongest evidence yet that the defect is in the
+`level` vocabulary and not in any country's constitutional shape. Three of
+five countries are now affected.
+
+Spanish cost, specifically: **seventeen regional open data portals** (over
+14,000 datasets by 2019), regional data protection authorities, autonomous
+communities managing **over 35 % of consolidated public spending**, and
+*cogobernanza del Estado y las Comunidades Autónomas* — **one of two
+cross-cutting axes** of [[ES-ESPANA-DIGITAL-2026]], of which the Atlas can
+model only the state half.
+
+### Closed by Spain
+
+| Item | How |
+|---|---|
+| **Open Data Directive transposition** | [[ES-LEY-37-2007]], as amended by Real Decreto-ley 24/2021. **Three of five countries now closed**; Belgium and France stay open. The "obvious earlier act" trap is confirmed as a research hazard in three of five countries — 2016 in Belgium and France, **2007** in Spain. |
+| **First national link to [[EU-AI-ACT]]** | [[ES-AESIA]] `governed-by` the AI Act. Spain created the agency in 2023, before the Regulation applied — the first EU member state to have one. |
+| **First edge in the statistics cluster** | [[ES-INE]] `related-to` [[EU-EUROSTAT]], `source: interpretation`, `confidence: low`. See the caveat below. |
+| **Fourth branch of the DCAT chain** | [[ES-NTI-RISP]] `based-on` [[EU-DCAT-AP]] — and the only branch that is a legally mandatory norm rather than a profile. |
+
+### Refused links — Spain
+
+| Link | Why refused | Status |
+|---|---|---|
+| [[ES-ENI]] → [[EU-EIF]] | Nothing read mentions the EIF or the NIF concept. **Refused for the third time** (Germany, France, now Spain), and for the same reason each time: the pattern makes it look expected, which is not evidence. [[EU-EIF]] now has five countries and one national-framework link. | Open |
+| [[ES-CLAVE]] → [[EU-EIDAS]] / [[EU-EIDAS2]] | Nothing read mentions eIDAS or cross-border recognition. **The eIDAS2 wallet deadline is now roughly four months away and no country in the Atlas is linked to it.** [[FR-FRANCECONNECT]] predicted this would become a factual question; it now is one. | **Open — time-critical** |
+| [[ES-AEPD]] → [[EU-EDPB]] | No source read mentions the Board. **Five national DPAs, one sourced link.** Five page reads would fix four edges. | **Open — cheap, high value** |
+| [[ES-ESPANA-DIGITAL-2026]] → [[EU-DIGITAL-DECADE]] | Nothing read connects them, though the strategy is aligned with the Recovery Plan. Same refusal as [[NL-DIGIBETER]] and [[DE-DIGITALSTRATEGIE]] — three national strategies, three refusals. | Open |
+| [[ES-INCIBE]] / [[ES-CCN]] → [[ES-LCGC]] | Reporting describes an institutional dispute over a draft allocation of competences. **A dispute is not a relationship**, and the law is not in force. | Open (deliberate) |
+| [[ES-ENI]] ↔ [[ES-ENS]] | Consistently presented together in Spanish practice; no source read establishes a relationship between the instruments. | Open |
+| [[ES-DATOS-GOB-ES]] → Red.es | Red.es operates the portal but is not an entity — a single mention of its promoting role is too thin. **This portal therefore has no `maintained-by` edge**, unlike [[NL-DATA-OVERHEID]] and [[DE-GOVDATA]]. | Open |
+
+### The one asserted link that needs scrutiny
+
+| Link | Concern | Status |
+|---|---|---|
+| [[ES-INE]] → [[EU-EUROSTAT]] | The sources describe a **three-party structure** — the European Statistical System comprises Eurostat *and* the member states' statistical offices — not a bilateral relationship. The Atlas records `related-to` at `source: interpretation`, `confidence: low`, and states the gap in the `evidence` string. **The correct fix is an `EU-ESS` entity** with `part-of` edges from Eurostat and from all national offices; it was deliberately not created inside a country batch. That single entity would connect four national statistical offices at once. | **Open — modelling, high value** |
+
+### Factual gaps — Spain
+
+| Entity | Question | Status |
+|---|---|---|
+| [[ES-AESIA]] | **No BOE citation for Real Decreto 729/2023**, the decree that creates it — no search result returned the BOE identifier. First thing to fetch for this entity. | Open |
+| [[ES-NTI-RISP]] | The DCAT-AP-ES model is described as **in administrative processing**, so the `based-on` descent from [[EU-DCAT-AP]] may not yet be in force. Recorded at `confidence: low` with `valid_from: null`. | Open |
+| [[ES-LCGC]] | No BOE citation exists to give — the instrument is a draft. Its passage would also make the Centro Nacional de Ciberseguridad modellable. | Open |
+| [[ES-ENI]] | Legal base not modelled: sources say it was established by article 42 of Ley 11/2007, an act since replaced by the 2015 administrative-procedure legislation. The chain from the current base was not established, and the repealed act was not asserted as its parent. | Open |
+| [[ES-LOPDGDD]] | **The `Ley Orgánica` rank is not modelled.** Spain's constitutional hierarchy distinguishes organic from ordinary laws, and only the organic rank lets its Title X bind. `type: law` flattens it — as it already flattens *Gesetz*/*Verordnung*, *wet*/*koninklijk besluit* and *loi*/*ordonnance*. No field was added: five countries have been modelled without one, and adding it would require re-reading every instrument in the Atlas. | Open (ontology question) |
+| [[ES-LOPDGDD]] | **Partial implementation is not expressible.** Title X on digital rights does not descend from any EU instrument; the single `implements-requirement-from` edge is whole-entity to whole-entity and silent about it. No partial-implementation type proposed on one example. | Open (modelling) |
+| [[ES-AEAD]] | `supersedes` records the succession but cannot say it was a **transformation** — same functions and remit under a new legal form — rather than an abolition and replacement. Not worth a new relationship type on one example. | Open (modelling) |
+| [[ES-CLAVE]] | Operator, legal basis, the relationship between Cl@ve PIN and Cl@ve Permanente, and the status of any Spanish digital identity wallet are all unrecorded. | Open |
+| Spanish organic law on AI | Sources refer to one landing the AI Act domestically with sanctions and sandboxes, at a stage they describe inconsistently. **Not created** — the Atlas already carries one instrument whose sources contradict each other and does not need a second on weaker evidence. | Open |
+| Ley 39/2015 / Ley 40/2015 | Spain's electronic-administration acts. Well sourced but not modelled in this batch; they are the current legal base for much of what [[ES-AEAD]] does. | Open |
 
 ## Factual details flagged in entity bodies
 

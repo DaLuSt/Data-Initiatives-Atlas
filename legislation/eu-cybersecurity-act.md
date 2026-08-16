@@ -60,6 +60,13 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: applies-in
+    target: ES
+    source: fact
+    evidence: "As an EU regulation it is directly applicable in all member states, Spain included. NOT READ - search-only. No Spanish national certification arrangement is recorded in this Atlas; the Centro Criptologico Nacional operates a national evaluation and certification scheme, but no source read connects it to this Regulation."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "The EU Cybersecurity Act — summary"
@@ -103,7 +110,7 @@ find a hole without it.
 
 ## Relationships
 
-- Applies in [[NL]], [[DE]], [[BE]] and [[FR]] — one entity, four
+- Applies in [[NL]], [[DE]], [[BE]], [[FR]] and [[ES]] — one entity, five
   countries. Every other member state belongs here too; the
   `applies-in` relationships are added as countries join the Atlas.
 - Governs [[EU-ENISA]] (recorded on that entity).

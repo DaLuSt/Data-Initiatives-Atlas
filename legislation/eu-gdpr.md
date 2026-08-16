@@ -63,6 +63,13 @@ relationships:
     confidence: medium
     valid_from: 2018-06-20
     valid_until: null
+  - type: applies-in
+    target: ES
+    source: fact
+    evidence: "As an EU regulation the GDPR is directly applicable in all member states; Spain adopted Ley Organica 3/2018 of 5 December, in force from 7 December 2018, which supplements the GDPR with national provisions and adds a catalogue of digital rights the previous data protection law did not contemplate (BOE-A-2018-16673; aepd.es). NOT READ - search-only."
+    confidence: medium
+    valid_from: 2018-12-07
+    valid_until: null
 
 sources:
   - title: "General data protection regulation (GDPR) — summary"
@@ -110,7 +117,7 @@ nothing until adopted.
 
 ## Relationships
 
-- Applies in [[NL]], [[DE]], [[BE]] and [[FR]] — and in every other member
+- Applies in [[NL]], [[DE]], [[BE]], [[FR]] and [[ES]] — and in every other member
   state; those `applies-in` relationships are added as countries join the
   Atlas, per the country-neutral model.
 - Implemented by **four** national acts: [[NL-UAVG]], [[DE-BDSG]],

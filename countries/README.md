@@ -19,6 +19,7 @@ Country-scoped entities themselves (initiatives, legislation, organisations,
 | Germany | DE | [`de/`](de/) |
 | Belgium | BE | [`be/`](be/) |
 | France | FR | [`fr/`](fr/) |
+| Spain | ES | [`es/`](es/) |
 
 Adding a new country means creating its sub-folder with an anchor entity and
 an index — the ontology requires no other change (README
@@ -65,6 +66,28 @@ Netherlands-shaped. A second unitary state separates the two: the ontology
 is sound for unitary states and lossy for federal ones, and the loss is
 confined to the `level` vocabulary.
 
+**Spain, added fifth, answered the remaining question and gave the defect a
+third shape.** The first four countries are neighbours with similar
+administrative traditions, so a reasonable objection was that the ontology
+might be *western-European*-shaped rather than country-neutral. Spain is
+southern European, joined the EU in a later enlargement, and organises its
+state on a constitutional principle none of the others use — and it too
+required no ontology, schema, folder, validation or generator change.
+
+It also sharpened the `level` finding rather than repeating it. Spain is a
+**State of Autonomies**: seventeen Comunidades Autónomas with devolved
+competences of differing scope, which is neither a federation nor a unitary
+state. Germany's Länder, Belgium's Regions and Spain's Comunidades Autónomas
+are three constitutionally distinct things, and **the Atlas fails on all
+three identically**. That is the strongest available evidence that the
+defect sits in the `level` vocabulary rather than in any one country's
+constitutional shape.
+
+Three of five countries are now affected, and the cost is measurable: in
+Spain it hides seventeen regional open data portals and half of a named
+axis of the national digital strategy.
+
 No sub-national level has been invented, because doing so for one country
 is exactly the country-specific change the model exists to prevent. See
-`de/de.md`, `be/be.md`, `fr/fr.md` and `discovery/unresolved.md`.
+`de/de.md`, `be/be.md`, `fr/fr.md`, `es/es.md` and
+`discovery/unresolved.md`.

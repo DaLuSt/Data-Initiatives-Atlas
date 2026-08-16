@@ -7,11 +7,11 @@ Generated: 2026-08-16
 
 ## Why this exists
 
-**183 of the Atlas's 189 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
+**200 of the Atlas's 206 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
 
 Closing that debt — the re-verification pass — needs outbound HTTPS to the hosts those URLs point at. In an environment with a restricted egress policy, this is the allowlist to request. A denial shows up as `403 to CONNECT` from the proxy, which is an environment-level network policy and cannot be changed from inside a session. See `discovery/unresolved.md` for the standing record of the sourcing debt.
 
-The Atlas currently cites **583 source URLs** across **231 hosts**, collapsing to **173 registrable domains**.
+The Atlas currently cites **647 source URLs** across **261 hosts**, collapsing to **192 registrable domains**.
 
 ## Highest value first
 
@@ -19,16 +19,18 @@ Allowing just these covers the bulk of the pass:
 
 | Domain | URLs | Entities |
 |---|---|---|
-| `europa.eu` | 68 | 43 |
+| `europa.eu` | 69 | 44 |
 | `wikipedia.org` | 36 | 36 |
 | `bund.de` | 34 | 16 |
 | `digitaleoverheid.nl` | 28 | 19 |
 | `gouv.fr` | 27 | 9 |
+| `gob.es` | 26 | 12 |
 | `belgium.be` | 17 | 9 |
 | `rijksoverheid.nl` | 14 | 10 |
+| `boe.es` | 12 | 10 |
 | `forumstandaardisatie.nl` | 12 | 5 |
+| `iso.org` | 12 | 10 |
 | `fitko.de` | 11 | 6 |
-| `iso.org` | 11 | 9 |
 | `vng.nl` | 10 | 6 |
 | `un.org` | 9 | 5 |
 | `overheid.nl` | 9 | 9 |
@@ -37,8 +39,6 @@ Allowing just these covers the bulk of the pass:
 | `logius.nl` | 7 | 4 |
 | `geonovum.nl` | 7 | 3 |
 | `officielebekendmakingen.nl` | 5 | 5 |
-| `github.com` | 5 | 4 |
-| `w3.org` | 5 | 2 |
 
 ## Institutional domains
 
@@ -87,8 +87,10 @@ Trade press, law firms, encyclopedias and vendor pages. Lower value, but cited s
 ```
 activemind.de
 ad4gd.eu
+aepd.es
 aftermarket-trends.de
 agoria.be
+anabad.org
 anwalt.org
 april.org
 arena2036.de
@@ -102,6 +104,7 @@ bayern.de
 bho-legal.com
 bipt.be
 bmv.de
+boe.es
 bosa.be
 bpb.de
 brandenburg.de
@@ -111,9 +114,13 @@ bundestag.de
 buzer.de
 cci-paris-idf.fr
 cci.fr
+ciberseguridad.blog
+ciberseguridad.com
 cloix-mendesgil.com
+cni.es
 cnil.fr
 communicatierijk.nl
+cuatrecasas.com
 d-velop.de
 data-spaces-symposium.eu
 datactivist.coop
@@ -121,6 +128,7 @@ dcat-ap.de
 de.digital
 decideo.fr
 deloitte.com
+diariodeleon.es
 digigo.nu
 digitale-verwaltung.de
 dnb.de
@@ -130,6 +138,7 @@ dsgvo-gesetz.de
 dssc.eu
 e-recht24.de
 earonline.nl
+ecija.com
 ecp.nl
 edustandaard.nl
 eerstekamer.nl
@@ -140,6 +149,7 @@ europadecentraal.nl
 europeansources.info
 eversheds-sutherland.com
 ey.com
+finreg360.com
 forschungsinformationssystem.de
 fraunhofer.de
 gabler.de
@@ -151,6 +161,7 @@ geostandaarden.nl
 github.com
 github.io
 glomas.de
+gob.es
 gouv.fr
 grokipedia.com
 haufe.de
@@ -158,12 +169,16 @@ health-ri.nl
 hessen.de
 hypotheses.org
 ictu.nl
+incibe.es
+ine.es
 informationssicherheitsbeauftragter-dresden.de
 ing-ism.de
 ipo.nl
 ishare.eu
 its-mobility.de
 jtc1info.org
+juntadeandalucia.es
+juridicas.com
 kadaster.nl
 kbvg.nl
 legiscope.com
@@ -182,6 +197,7 @@ netzpolitik.org
 nictiz.nl
 niedersachsen.de
 nis-2-directive.com
+nisd2.eu
 oecd-ilibrary.org
 oecd.org
 officielebekendmakingen.nl
@@ -194,8 +210,11 @@ pdok.nl
 personalausweisportal.de
 prodwaregroup.com
 prosoz.de
+protecciondata.es
+protecciondatos-lopd.com
 quality.de
 rdw.nl
+red.es
 rehm-verlag.de
 rijksbegroting.nl
 rijksfinancien.nl

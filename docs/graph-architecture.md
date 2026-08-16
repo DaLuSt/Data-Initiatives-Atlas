@@ -139,8 +139,8 @@ graph comparable: Obsidian's local graph is built from exactly these.
 
 Merging the three would triple the apparent connectivity of the Atlas and
 destroy the distinction between "a sourced, provenanced claim" and "these
-two entities are mentioned together". The default view shows only the 189
-typed relationships; the other 1,118 edges are one checkbox away.
+two entities are mentioned together". The default view shows only the 269
+typed relationships; the other 1,605 edges are one checkbox away.
 
 ---
 
@@ -178,7 +178,7 @@ and asserts the build refuses.
 
 |  | `graph.json` | `details.json` |
 |---|---|---|
-| Size (189 entities) | ~194 KB (~20 KB gzipped) | ~262 KB (~62 KB gzipped) |
+| Size (206 entities) | ~217 KB (~22 KB gzipped) | ~301 KB (~70 KB gzipped) |
 | When fetched | immediately, blocking first render | in the background after first paint |
 | Contains | ids, labels, types, levels, countries, regions, statuses, aliases, domains, degrees, paths, all edges | descriptions, sources, evidence, dates, verification, confidence, coverage, organisations, lineage |
 
@@ -190,7 +190,7 @@ match them from the first keystroke, before `details.json` has landed. When
 it does land, its fields are folded onto the in-memory node records so the
 list view and search can use them too.
 
-At 189 entities this split is not strictly necessary. It is there because
+At 206 entities this split is not strictly necessary. It is there because
 §24 asks the design to assume 1,000+ nodes, and at that size a single
 2 MB blob before first paint would be the wrong architecture.
 
@@ -227,7 +227,7 @@ someone else's CDN changed. `tools/test_build_graph.py` asserts that
 
 The default view is deliberately not "everything at full detail":
 
-1. **Typed relationships only by default** — 189 edges instead of 1,307.
+1. **Typed relationships only by default** — 269 edges instead of 1,874.
 2. **Level-of-detail labels** — `min-zoomed-font-size` hides labels that
    would render too small to read, and they return on zoom. Above 260
    visible nodes labels are dropped entirely.

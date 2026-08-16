@@ -60,6 +60,13 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: applies-in
+    target: ES
+    source: fact
+    evidence: "As an EU directive it requires transposition by all member states, Spain included. NOT READ - search-only. No Spanish transposing instrument was identified in this batch and none is asserted."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Directive 2010/40/EU"
@@ -118,7 +125,7 @@ source rather than modelled as its own entity.
 
 ## Relationships
 
-- Applies in [[NL]], [[DE]], [[BE]] and [[FR]] — one entity, four
+- Applies in [[NL]], [[DE]], [[BE]], [[FR]] and [[ES]] — one entity, five
   countries. Every other member state belongs here too; the
   `applies-in` relationships are added as countries join the Atlas.
 - Underpins [[NL-NTM]] (relationship recorded on that entity).
