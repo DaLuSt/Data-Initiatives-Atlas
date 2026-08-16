@@ -56,6 +56,13 @@ relationships:
     confidence: medium
     valid_from: 2025-12-06
     valid_until: null
+  - type: applies-in
+    target: BE
+    source: fact
+    evidence: "The Belgian law of 26 April 2024 transposes Directive (EU) 2022/2555 into Belgian law and replaces the NIS1 law of 7 April 2019; it was published in the Belgisch Staatsblad on 17 May 2024 and entered into force, with its royal decree, on 18 October 2024 (ccb.belgium.be/nl/nis2; eubelius.com). NOT READ — search-only."
+    confidence: medium
+    valid_from: 2024-10-18
+    valid_until: null
 
 sources:
   - title: "Directive - 2022/2555 - EN"
@@ -79,6 +86,23 @@ high common level of cybersecurity across the Union. It requires
 organisations in designated critical sectors to meet cybersecurity
 requirements, report incidents and register with a supervisory authority.
 
+## Three national transpositions, three techniques
+
+| Country | Act | In force | Technique |
+|---|---|---|---|
+| Belgium | [[BE-NIS2-WET]] | **18 Oct 2024** | new act replacing [[BE-NIS1-WET]] |
+| Germany | [[DE-NIS2UMSUCG]] | 6 Dec 2025 | **revises** the existing [[DE-BSIG]] |
+| Netherlands | [[NL-CBW]] | 15 Aug 2026 | new act superseding [[NL-WBNI]] |
+
+Belgium transposed nearly two years before the Netherlands, and Germany
+amended a standing act where the other two enacted new ones. One directive
+entity carries all three, and the Atlas can show the spread at a glance —
+something it could not do with a single country.
+
+The German case is the awkward one to model: an amending act recorded as
+`supersedes` at `confidence: low`, with [[DE-BSIG]] deliberately left
+`active`. See [[DE-NIS2UMSUCG]].
+
 Its Dutch transposition is the [[NL-CBW]] (Cyberbeveiligingswet), which
 replaces the earlier [[NL-WBNI]]. The Dutch transposition ran late: search
 results indicate the Netherlands publicly acknowledged delay in
@@ -91,8 +115,12 @@ transposition chain. Batch 8 should deepen it.
 
 ## Relationships
 
-- Applies in [[NL]].
-- Transposed into Dutch law by [[NL-CBW]].
+- Applies in [[NL]], [[DE]] and [[BE]] — one entity, three
+  countries. Every other member state belongs here too; the
+  `applies-in` relationships are added as countries join the Atlas.
+- Transposed by [[NL-CBW]], [[DE-NIS2UMSUCG]] and [[BE-NIS2-WET]].
+  **No relationship between the three national acts is asserted** —
+  they are siblings, and this entity is the relationship they share.
 
 ## Sources
 

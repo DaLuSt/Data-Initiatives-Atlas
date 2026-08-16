@@ -1210,3 +1210,61 @@ that setting had not yet been made; no workflow can make it.
 **Known gaps:** the graph canvas is not keyboard-traversable; the List view
 is the accessible route. Large-graph performance figures come from a
 synthetic 1,500-node stress test, not from real data at that size.
+
+---
+
+# Belgium — Third Country (2026-08-15)
+
+**Scope:** Belgium as the third national scope. Requested directly; also the
+outstanding backlog item *"a third country — Germany proved the model
+reusable and revealed one real limitation; a third would test whether the
+limitation is general."*
+
+**Entities added: 14.** 164 → **178**. Relationships 189 → **218**.
+
+- **Country anchor (1):** `BE` (`countries/be/be.md` + `index.md`).
+- **Organisations (5):** `BE-BOSA`, `BE-CCB`, `BE-APD`, `BE-STATBEL`,
+  `BE-KSZ`.
+- **Legislation (5):** `BE-GDPR-WET`, `BE-NIS2-WET`, `BE-NIS1-WET`
+  (superseded), `BE-HERGEBRUIK-WET`, `BE-KSZ-WET`.
+- **Frameworks and standards (2):** `BE-BELGIF`, `BE-DCAT-AP-BE`.
+- **Platforms (1):** `BE-DATA-GOV-BE`.
+
+**Existing entities modified:** `applies-in` → `BE` added to 16 EU
+instruments, and the stale "Applies in [[NL]]" prose in all of them
+corrected to name all three countries — those bodies had never been updated
+for Germany either.
+
+**Validation result:** `run_all.py` 5/5, 0 errors; `test_build_graph.py`
+32 tests OK; `audit.py` reports `targets: ['BE', 'DE', 'NL']`.
+
+**Result:** the country-neutral model held for a third time, again with no
+change to `metadata/schema.json`, `metadata/ontology.md`,
+`metadata/taxonomy.md`, `metadata/relationship-types.md`, the folder
+structure, any validation rule or the graph generator. No `BE-EU-*` entity.
+
+**Structural gains:**
+
+- **[[EU-GDPR]] now has three national implementing acts** and remains one
+  entity.
+- **[[EU-NIS2]] has three transpositions** differing in date and technique —
+  Belgium 18 Oct 2024 (new act), Germany 6 Dec 2025 (amends [[DE-BSIG]]),
+  Netherlands 15 Aug 2026 (new act). Belgium transposed nearly two years
+  before the Netherlands.
+- **The DCAT chain forks three ways** — one W3C standard, one European
+  profile, three national profiles, each recorded once.
+- **[[EU-EIF]] → [[BE-BELGIF]]** closes a link Germany had to refuse: the
+  Atlas's first EIF → national-framework descent.
+
+**Principal finding — the federal gap is general, and worse in Belgium.**
+Germany showed no `level` term fits a Land. Belgium shows the term that
+would fit is **already taken**: `regional` means supra-national here. The
+cost is concrete — **OSLO**, a major Flemish semantic-interoperability
+programme squarely in this Atlas's subject matter, is not modelled at all.
+No sub-national level was invented.
+
+**Known gaps:** Belgium's Open Data Directive transposition was not
+identified (the 2016 act found is PSI-era and chronologically cannot be
+it); three national statistical offices now sit in the Atlas and none
+connects upward; only one of three national DPAs connects to the EDPB.
+Sourcing position unchanged — every Belgian entity is `search-only`.

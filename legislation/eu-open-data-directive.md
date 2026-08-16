@@ -48,6 +48,13 @@ relationships:
     confidence: medium
     valid_from: 2021-07-23
     valid_until: null
+  - type: applies-in
+    target: BE
+    source: fact
+    evidence: "As an EU directive it requires transposition by all member states, Belgium included (EUR-Lex Directive (EU) 2019/1024). NOT READ — search-only. NO Belgian transposing instrument is recorded in this Atlas: the Belgian open data act found by search is the wet van 4 mei 2016, which PREDATES this directive and is sourced as aligning with the earlier PSI Directive instead. See BE-HERGEBRUIK-WET."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Directive - 2019/1024 - EN - psi directive"
@@ -108,7 +115,9 @@ dataset regime is still unresearched (`coverage: low`).
 
 ## Relationships
 
-- Applies in [[NL]].
+- Applies in [[NL]], [[DE]] and [[BE]] — one entity, three
+  countries. Every other member state belongs here too; the
+  `applies-in` relationships are added as countries join the Atlas.
 - Transposed into Dutch law through [[NL-WHO]], as amended by the Wet
   implementatie Open data richtlijn (2024).
 

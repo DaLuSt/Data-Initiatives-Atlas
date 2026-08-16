@@ -47,6 +47,13 @@ relationships:
     confidence: medium
     valid_from: 2022-12-14
     valid_until: null
+  - type: applies-in
+    target: BE
+    source: fact
+    evidence: "The programme requires annual progress reports and national strategic roadmaps from member states, Belgium included (EUR-Lex summary of Decision (EU) 2022/2481). NOT READ — search-only."
+    confidence: medium
+    valid_from: 2022-12-14
+    valid_until: null
 
 sources:
   - title: "Decision (EU) 2022/2481 establishing the Digital Decade Policy Programme 2030"
@@ -108,7 +115,8 @@ warrants a separate `legislation/` entity is queued.
 
 ## Relationships
 
-- Applies in [[NL]] through the national strategic roadmap obligation.
+- Applies in [[NL]], [[DE]] and [[BE]] through the national strategic
+  roadmap obligation.
 
 ## Sources
 

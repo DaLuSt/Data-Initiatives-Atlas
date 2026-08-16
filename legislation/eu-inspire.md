@@ -45,6 +45,13 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: applies-in
+    target: BE
+    source: fact
+    evidence: "Federal DCAT-AP 2 is the profile developed by the Belgian federal administrations involved in the implementation of the INSPIRE Directive, and contains a mapping between INSPIRE and DCAT-AP elements (belgif.be/page/specification/dcat-ap.en.html; github.com/belgif/inspire-dcat). NOT READ — search-only. Note this evidences Belgian INSPIRE implementation activity, not a Belgian transposing act, which was not identified."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "The EU's infrastructure for spatial information (Inspire)"
@@ -86,7 +93,7 @@ specified through common **implementing rules** in five areas: metadata,
 data specifications, network services, data and service sharing, and
 monitoring and reporting.
 
-## An EU entity added by the German batch
+## An EU entity added by the German batch, extended by the Belgian one
 
 This directive is not a German entity and does not belong to Germany. It is
 recorded here because the German batch reached it: [[DE-GEOZG]] is
@@ -114,18 +121,32 @@ and the Dutch one is not, because the Dutch geospatial batch was researched
 before this directive was an Atlas entity and none of its sources named
 INSPIRE.
 
-Recording the German link and not the Dutch one produces a directive that
-looks German-specific, which is misleading in the opposite direction from
-the usual failure mode. It is flagged here and logged in
-`discovery/unresolved.md` as a **first-priority gap**: unlike most refused
-links in this Atlas, this one is near-certain to be closable by a single
-page read.
+Recording the German link and not the Dutch one produced a directive that
+looked German-specific, which is misleading in the opposite direction from
+the usual failure mode.
+
+Belgium has since been added — [[BE-DCAT-AP-BE]]'s federal profile was
+built by the administrations implementing INSPIRE and maps between INSPIRE
+and DCAT-AP elements — so the directive now reaches two of the Atlas's
+three countries and still not the Netherlands. **A third country touched
+this directive without closing the Dutch gap**, which makes it harder to
+keep describing as an oversight.
+
+It remains a **first-priority gap** in `discovery/unresolved.md`: unlike
+most refused links in this Atlas, this one is near-certain to be closable
+by a single page read.
 
 ## Relationships
 
-- `applies-in` [[DE]].
+- `applies-in` [[DE]] and [[BE]] — **not** [[NL]], see above.
 
-Inbound: [[DE-GEOZG]] implements requirements from this directive.
+Inbound: [[DE-GEOZG]] implements requirements from this directive, and
+[[BE-DCAT-AP-BE]] `references` it through the INSPIRE↔DCAT-AP mapping.
+
+Note the two are different in kind. Germany's is a transposing act;
+Belgium's is a metadata mapping produced by the administrations doing the
+implementing. **No Belgian transposing act was identified**, and none is
+asserted.
 
 ## Sources
 

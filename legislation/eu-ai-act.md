@@ -46,6 +46,13 @@ relationships:
     confidence: medium
     valid_from: 2024-08-01
     valid_until: null
+  - type: applies-in
+    target: BE
+    source: fact
+    evidence: "As an EU regulation the AI Act is directly applicable in all member states, Belgium included; it entered into force on 1 August 2024 with phased application (artificialintelligenceact.eu Article 113; EUR-Lex). NOT READ — search-only."
+    confidence: medium
+    valid_from: 2024-08-01
+    valid_until: null
 
 sources:
   - title: "Article 113: Entry into Force and Application"
@@ -118,7 +125,9 @@ Official Journal links. Queued for correction.
 
 ## Relationships
 
-- Applies in [[NL]].
+- Applies in [[NL]], [[DE]] and [[BE]] — one entity, three
+  countries. Every other member state belongs here too; the
+  `applies-in` relationships are added as countries join the Atlas.
 - Amended by the proposals in [[EU-DIGITAL-OMNIBUS]].
 
 ## Sources

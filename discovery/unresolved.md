@@ -183,6 +183,43 @@ To find every affected entity: `grep -rl "verification: search-only" .`
 | [[DE-CATENA-X]] | No catena-x.net source; described entirely through Fraunhofer institutes and trade press | Open |
 | [[NL-CBW]] | `start_date: 2026-08-15` — **today**. The entity's own body asks a reader after that date to verify and, if confirmed, move it to `active` and [[NL-WBNI]] to `superseded`. Not done: it cannot be verified without page retrieval | **Open — actionable the moment egress is available** |
 
+## Belgium batch — third country (2026-08-15)
+
+### The federal modelling gap is general, and Belgium sharpens it
+
+| Topic | Question | Why it matters | Status |
+|---|---|---|---|
+| **No sub-national level — confirmed general** | Germany found no term fits a Land. Belgium finds the term that *would* fit is **already taken**: `level: regional` means supra-national in this Atlas ([[EU]] carries it). | The cost is now concrete and large: **OSLO** — a Flemish semantic-interoperability and linked-data standards programme squarely in this Atlas's subject matter — is not modelled at all, nor are Digitaal Vlaanderen, the Agence du Numérique, Paradigm, or any Region or Community. Belgium's coverage **understates** its reality more than any other country's. Two federal states, two different failure modes, same root cause. | **Open — ontology, the Atlas's best-evidenced defect** |
+| Multilingual names | Belgium has three official languages; `name` uses the Dutch form where the sources found were Dutch, French in `alternative_names`. | A sourcing artefact presented as a naming decision. `FOD BOSA`/`SPF BOSA` and `KSZ`/`BCSS` are equally official. The Atlas has no multilingual name field and did not gain one. | Open (ontology) |
+| `level: sectoral` for nationally-constituted bodies | [[BE-KSZ]] joins [[NL-NICTIZ]] and [[NL-ROSA]] in being recorded `sectoral` — a national body whose authority is bounded to one sector. | The convention is now used four times across three countries on precedent alone. It should be written into `metadata/taxonomy.md` or abandoned. | Open (ontology) |
+
+### Refused links — Belgium
+
+| Link | Why refused | Status |
+|---|---|---|
+| [[BE-HERGEBRUIK-WET]] → [[EU-OPEN-DATA-DIRECTIVE]] | **Chronologically impossible**: the act is 2016, the directive 2019/1024. Sources say it aligns with the earlier PSI Directive, which is not an Atlas entity. **Belgium's actual Open Data Directive transposition was not identified.** The sharpest pattern-matching trap in the batch — the shape of the Atlas made a wrong answer attractive. | **Open — priority** |
+| [[BE-NIS1-WET]] → [[EU-NIS]] | Near-certain, and [[EU-NIS]] *is* an Atlas entity so the link has somewhere to point — but every source cited is about the successor act and none states what the 2019 act transposed. Would give a second `EU-NIS` → national descent. | **Open — one page read** |
+| [[BE-APD]] → [[EU-EDPB]] | No source read mentions the EDPB. Three national DPAs now sit in the Atlas and **only [[NL-AP]] connects to the Board** — a sourcing artefact, not a fact about European data protection governance. | Open |
+| [[BE-STATBEL]] → [[EU-EUROSTAT]] / [[UN-FPOS]] | Nothing found. **Three national statistical offices now sit in the Atlas and none connects upward.** The statistics cluster has survived three countries. | **Open — structural** |
+| [[BE-KSZ]] → [[EU-SDG]] | The KSZ predates the regulation by 28 years and no source connects them — the same refusal made for [[DE-REGMOG]]. | Open |
+| [[BE-DATA-GOV-BE]] → [[BE-HERGEBRUIK-WET]] | Portal and open-data act, obviously related, no source states it. Same call as [[DE-GOVDATA]] / [[DE-DNG]]. | Open |
+| [[BE-BOSA]] → [[BE-BELGIF]] | BELGIF is sourced as co-owned by the federal state, Regions and Communities — precisely not something BOSA owns. | Open (deliberate) |
+
+### Closed by Belgium
+
+| Link | Result |
+|---|---|
+| [[EU-EIF]] → a national interoperability framework | ✅ **Closed.** [[BE-BELGIF]] is sourced as Belgium's NIF and as taking the EIF's 12 principles as its basis. The Atlas's **first EIF → national-framework descent**. The equivalent German question ([[DE-IT-ARCHITEKTURRICHTLINIEN]]) and Dutch question ([[NL-NORA]]) stay open, and are now sharper for having a worked example. |
+
+### Factual gaps — Belgium
+
+| Entity | Question | Status |
+|---|---|---|
+| [[BE-NIS2-WET]] | No Belgisch Staatsblad ELI URI cited; publication and entry-into-force dates rest on CCB reporting. | Open |
+| [[BE-KSZ-WET]] | Only two sources, one of them the KSZ's page about its own founding act. Act content unknown. | Open |
+| [[BE-STATBEL]] | **No statutory basis found** — no Belgian equivalent of [[DE-BSTATG]] or [[NL-WET-CBS]], so no `governed-by` is recorded. | Open |
+| [[BE-HERGEBRUIK-WET]] | Scope, obligations and relationship to the current EU regime all unknown. | Open |
+
 ## Factual details flagged in entity bodies
 
 | Entity | Question | Noted by / date | Status |

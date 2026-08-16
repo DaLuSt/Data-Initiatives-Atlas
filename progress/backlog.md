@@ -145,9 +145,11 @@ validation (`CONTRIBUTING.md` — Batch workflow).
 ## Opened by the Germany batch
 
 - [ ] **Resolve the federal modelling gap.** The `level` vocabulary has no
-  term between `national` and `local`, so no German Land is representable.
-  This is the Germany batch's principal finding and blocks several queued
-  items. It will matter for Austria, Belgium, Spain or Switzerland.
+  term between `national` and `local`, so no German Land and no Belgian
+  Region is representable — and `regional` cannot be reused because it
+  already means supra-national. Confirmed general by the Belgium batch, and
+  now the Atlas's best-evidenced ontology defect. Blocks OSLO, Digitaal
+  Vlaanderen, the Länder, and several other queued items.
 - [ ] **Decide on an amendment relationship type.**
   `DE-NIS2UMSUCG` → `DE-BSIG` is recorded as `supersedes` at
   `confidence: low` for what is an amending act, with the two entities
@@ -158,11 +160,19 @@ validation (`CONTRIBUTING.md` — Batch workflow).
   conflates origin, governance and operation.
 - [ ] **`EU-INSPIRE` → `NL`.** Added with an `applies-in` to `DE` only,
   making an EU directive look German-specific. First-priority gap.
-- [ ] **A cybersecurity domain entity.** Ten entities across three layers
-  qualify under the taxonomy §1 threshold.
-- [ ] **A third country.** Germany proved the model reusable and revealed
-  one real limitation. A federal state was the useful second case; a third
-  would test whether the limitation is general.
+- [ ] **A cybersecurity domain entity.** Thirteen entities across three
+  layers and three countries qualify under the taxonomy §1 threshold.
+- [ ] **Belgium's Open Data Directive transposition.** Not identified; the
+  2016 act found is PSI-era and chronologically cannot be it. Belgium is
+  the only Atlas country without one recorded.
+- [x] **A third country.** **Done 2026-08-15: Belgium**, 14 entities.
+  Confirmed the model reusable a third time, and confirmed the federal
+  limitation is **general** — and worse in Belgium, where `regional` is
+  already taken by the supra-national meaning. See `progress/completed.md`.
+- [ ] **A fourth country — a *unitary* one.** All three tests so far have
+  been the Netherlands plus two federal states. A second unitary country
+  (France, Spain, Ireland) would show whether anything else in the model is
+  Netherlands-shaped, which the two federal cases could not isolate.
 
 ## Explicitly out of scope for now
 

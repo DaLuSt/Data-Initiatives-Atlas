@@ -47,6 +47,13 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: applies-in
+    target: BE
+    source: fact
+    evidence: "BelgIF is the National Interoperability Framework (NIF) for Belgium, and the federal government and the regions have agreed to use the 12 principles of the EIF as the basis for defining their interoperability (belgif.be/eif3/about.en.html). NOT READ — search-only. Unlike the Netherlands and Germany above, the Belgian national framework IS identified: see BE-BELGIF, which carries a based-on relationship to this entity."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "European Interoperability Framework (EIF)"
@@ -119,7 +126,12 @@ Europe Board remains uncreated (Batch 9).
 
 ## Relationships
 
-- Applies in [[NL]] through the NIF alignment mechanism.
+- Applies in [[NL]], [[DE]] and [[BE]] through the NIF alignment mechanism.
+- **[[BE-BELGIF]] is `based-on` this framework** — the Atlas's first and
+  so far only EIF → national-framework descent. The Belgian sources state
+  that BELGIF is Belgium's NIF and takes the EIF's 12 principles as its
+  basis. No equivalent statement was found for the Netherlands or Germany,
+  so neither carries the link; see the NORA question above.
 - Associated with [[NL-NORA]] — see the NORA question above.
 
 ## Sources
