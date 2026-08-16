@@ -20,6 +20,7 @@ Country-scoped entities themselves (initiatives, legislation, organisations,
 | Belgium | BE | [`be/`](be/) |
 | France | FR | [`fr/`](fr/) |
 | Spain | ES | [`es/`](es/) |
+| Poland | PL | [`pl/`](pl/) |
 
 Adding a new country means creating its sub-folder with an anchor entity and
 an index — the ontology requires no other change (README
@@ -87,7 +88,22 @@ Three of five countries are now affected, and the cost is measurable: in
 Spain it hides seventeen regional open data portals and half of a named
 axis of the national digital strategy.
 
+**Poland, added sixth, tested the last untested assumption.** The five
+before it are all western European; Poland acceded in **2004**, in a
+different enlargement, with a post-1989 administrative tradition none of
+them share. `progress/backlog.md` had asked whether the EU layer is the
+right regional parent for such a state, and whether `applies-in` is the
+right way to attach it. **Both held**, with no ontology, schema, folder,
+validation or generator change and no `PL-EU-*` entity.
+
+Poland raised two new questions, and both are about **time** rather than
+structure: an instrument can be *in force* while the member state is in
+infringement proceedings over the delay ([[PL-KSC]]), and a national system
+can be *subject to* an EU requirement it **cannot meet**
+([[PL-MOBYWATEL]] and eIDAS 2.0). Neither is expressible in the current
+vocabulary.
+
 No sub-national level has been invented, because doing so for one country
 is exactly the country-specific change the model exists to prevent. See
-`de/de.md`, `be/be.md`, `fr/fr.md`, `es/es.md` and
+`de/de.md`, `be/be.md`, `fr/fr.md`, `es/es.md`, `pl/pl.md` and
 `discovery/unresolved.md`.

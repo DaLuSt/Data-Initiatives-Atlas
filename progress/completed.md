@@ -1815,3 +1815,129 @@ its priority list — stale since the register batch, where the sourcing
 paragraph was updated and the priority list was not. Corrected to 227 of
 234 (224 `search-only` + 3 `unverified`). Same class of defect as the statistics-cluster claim the UN batch
 found: **prose figures in progress files are not validated by anything.**
+
+---
+
+# Poland — Sixth Country (2026-08-16)
+
+**Scope:** Poland as the sixth national scope, and specifically as the first
+**outside western Europe**. `progress/backlog.md` asked for it by name and
+stated what it was meant to test: *"that the EU layer is the right regional
+parent, and that `applies-in` is the right way to attach a country to it"* —
+two assumptions six western EU members could not check.
+
+**Entities added: 10.** 234 → **244**. Relationships 320 → **346**.
+
+- **Country anchor (1):** `PL`.
+- **Organisations (4):** `PL-MC`, `PL-COI`, `PL-UODO`, `PL-GUS`.
+- **Legislation (3):** `PL-ODO`, `PL-KSC`, `PL-OTWARTE-DANE`.
+- **Platforms (2):** `PL-MOBYWATEL`, `PL-DANE-GOV-PL`.
+
+**Existing entities modified:** `applies-in` → `PL` on 17 EU instruments
+**and on `UN-AARHUS`** — the first time a country batch has attached to a UN
+instrument as well as EU ones. Five-country prose updated to six across 16
+files; the NIS2 table gained a sixth row.
+
+**Validation:** `run_all.py` 5/5; `test_build_graph.py` 32 tests OK;
+`test_ui.mjs` 47/47; `audit.py` → `targets: ['BE', 'DE', 'ES', 'FR', 'NL',
+'PL']`, no disconnected entities.
+
+## Principal result: both assumptions held
+
+Poland acceded in **2004**, in a different enlargement from any of the five,
+with a post-1989 administrative tradition none of them share. It required
+**no schema, ontology, taxonomy, relationship-type, folder, validation or
+generator change**, and produced no `PL-EU-*` entity.
+
+The EU layer is the right regional parent for a 2004 accession state exactly
+as for a founding member, and `applies-in` attached Poland unmodified.
+
+## Second result: the new questions are about *time*, not structure
+
+Unlike Spain, which sharpened the `level` finding, Poland raised two
+questions the `level` vocabulary has nothing to do with — and **neither is
+expressible**.
+
+### An instrument in force, and a member state before the CJEU
+
+`PL-KSC` implements NIS2 with effect from **3 April 2026**. Poland missed
+the 17 October 2024 deadline and **is in proceedings before the Court of
+Justice**. `status: active` is correct and carries none of that.
+
+This is a sixth NIS2 state and the first that is **not on the
+done/not-done axis**:
+
+| Country | State |
+|---|---|
+| Belgium | in force 18 Oct 2024 |
+| Germany | in force 6 Dec 2025 — amends the existing act |
+| Netherlands | in force 15 Aug 2026 |
+| France | `unknown` — sources contradict each other |
+| Spain | `proposed` — draft; **reasoned opinion** received |
+| **Poland** | **in force — and referred to the CJEU** |
+
+Spain and Poland are at different stages of the *same* infringement
+process, and the Atlas records neither.
+
+### A national system subject to a requirement it cannot meet
+
+`PL-MOBYWATEL` is reported **architecturally incompatible with eIDAS 2.0**,
+unable to function as an EUDI Wallet, with adaptation deemed technically
+impossible and replacement promised by end of 2026.
+
+Four batches recorded that **no country in the Atlas was linked to
+`EU-EIDAS2`**. Poland provides the first sourced link, and it is **negative**.
+
+The relationship is recorded as `related-to` at `confidence: low` with the
+substance in the evidence string, because no type expresses a requirement an
+entity *fails* to meet: `implements-requirement-from` asserts the opposite,
+`governed-by` implies the arrangement works.
+
+**That is a sixth sourced connection the vocabulary cannot express**, after
+the register batch's three and the UN batch's two — and the one with the
+shortest fuse.
+
+## What Poland confirmed
+
+- **The 2016-act trap has a documented answer.** Poland had the identical
+  2016 open data act that caught Belgium and France, and
+  `PL-OTWARTE-DANE` **explicitly and fully repeals it**. Four of six
+  countries are now closed, and the two open gaps have a known shape: a
+  later act that either repeals the earlier one (Poland) or amends it in
+  place (Spain).
+- **The best-sourced `EU-ESS` membership so far.** `PL-GUS` describes the
+  European Statistical System on its own pages and states its obligation to
+  transmit statistics to Eurostat — where the other four attach on the
+  composition rule. Five offices now; **France is the only modelled country
+  without one**.
+- **A third institutional transformation.** Spain's `ES-SGAD` → `ES-AEAD`
+  completed; Poland's `PL-COI` → *Agencja Informatyzacji* is a **draft law
+  in consultation**; Poland's GIODO → `PL-UODO` was **partial** (the
+  President took over only part of the predecessor's competencies). Only the
+  Spanish one is modelled as a succession. Three cases in two countries is
+  starting to look like a shape worth handling deliberately.
+- **Six DPAs, one EDPB link.** `PL-UODO` joins four others with no sourced
+  link to `EU-EDPB`. Six page reads would fix five edges; the item has now
+  survived four country batches.
+
+## Refused / not modelled
+
+- **CSIRT NASK, CSIRT GOV, CSIRT MON** — Poland joins the Netherlands as a
+  country with cybersecurity legislation modelled and **no cyber authority**
+  in `DOMAIN-CYBERSECURITY`, which now shows two such countries of six.
+- **PESEL** — Poland's population register, the counterpart of the ten Dutch
+  base registries, named in one list and nothing more.
+- **The Agencja Informatyzacji** — does not exist; same refusal as Spain's
+  Centro Nacional de Ciberseguridad.
+- **GIODO** — no clean succession in the sources, so none asserted.
+- **Krajowe Ramy Interoperacyjności**, a Polish DCAT profile, the operator
+  of `PL-DANE-GOV-PL`, and the Act on Public Statistics. All named, none
+  modelled.
+
+⚠ **`PL-ODO` has no Dz.U. or ISAP citation** — the weakest-sourced of the
+six national GDPR instruments, resting on secondary commentary and a UODO
+annual report. `PL-OTWARTE-DANE` is the best, with a full Dziennik Ustaw
+reference.
+
+Sourcing position unchanged — every Polish entity is `search-only`,
+`last_verified: null`, no `accessed` dates. 237 of 244 entities are unread.

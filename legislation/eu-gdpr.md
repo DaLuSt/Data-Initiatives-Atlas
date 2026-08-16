@@ -70,6 +70,13 @@ relationships:
     confidence: medium
     valid_from: 2018-12-07
     valid_until: null
+  - type: applies-in
+    target: PL
+    source: fact
+    evidence: "As an EU regulation the GDPR is directly applicable in all member states; Poland adopted the ustawa z dnia 10 maja 2018 r. o ochronie danych osobowych, and from 25 May 2018 the President of the Office for Personal Data Protection became the competent supervisory body, replacing the Generalny Inspektor Ochrony Danych Osobowych (uodo.gov.pl; politykabezpieczenstwa.pl). NOT READ - search-only. See PL-ODO."
+    confidence: medium
+    valid_from: 2018-05-25
+    valid_until: null
 
 sources:
   - title: "General data protection regulation (GDPR) — summary"
@@ -117,7 +124,7 @@ nothing until adopted.
 
 ## Relationships
 
-- Applies in [[NL]], [[DE]], [[BE]], [[FR]] and [[ES]] — and in every other member
+- Applies in [[NL]], [[DE]], [[BE]], [[FR]], [[ES]] and [[PL]] — and in every other member
   state; those `applies-in` relationships are added as countries join the
   Atlas, per the country-neutral model.
 - Implemented by **four** national acts: [[NL-UAVG]], [[DE-BDSG]],

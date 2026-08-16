@@ -66,6 +66,13 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: applies-in
+    target: PL
+    source: fact
+    evidence: "As an EU regulation the Single Digital Gateway Regulation is directly applicable in all member states, Poland included (EUR-Lex ELI reg/2018/1724). NOT READ - search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "The single digital gateway — summary"
@@ -107,7 +114,7 @@ likewise unresearched — a plausible connection to [[NL-GDI]] and
 
 ## Relationships
 
-- Applies in [[NL]], [[DE]], [[BE]], [[FR]] and [[ES]] — one entity, five
+- Applies in [[NL]], [[DE]], [[BE]], [[FR]], [[ES]] and [[PL]] — one entity, six
   countries. Every other member state belongs here too; the
   `applies-in` relationships are added as countries join the Atlas.
 

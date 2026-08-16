@@ -68,6 +68,13 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: applies-in
+    target: PL
+    source: fact
+    evidence: "The EIF provides support to Member States to design and update their national interoperability frameworks (NIFs), Poland included (interoperable-europe.ec.europa.eu). NOT READ - search-only. As with the other five countries, the Polish national framework is NOT identified: the Krajowe Ramy Interoperacyjnosci were not researched in this batch and nothing is asserted."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "European Interoperability Framework (EIF)"
@@ -140,7 +147,7 @@ Europe Board remains uncreated (Batch 9).
 
 ## Relationships
 
-- Applies in [[NL]], [[DE]], [[BE]], [[FR]] and [[ES]] through the NIF alignment
+- Applies in [[NL]], [[DE]], [[BE]], [[FR]], [[ES]] and [[PL]] through the NIF alignment
   mechanism.
 - **[[BE-BELGIF]] is `based-on` this framework** — the Atlas's first and
   so far only EIF → national-framework descent. The Belgian sources state

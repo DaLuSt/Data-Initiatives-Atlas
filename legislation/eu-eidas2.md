@@ -69,6 +69,13 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: applies-in
+    target: PL
+    source: fact
+    evidence: "As an EU regulation it is directly applicable in all member states, Poland included, and requires every member state to offer a European Digital Identity Wallet. NOT READ - search-only. Reporting states Poland's mObywatel application is architecturally incompatible with eIDAS 2.0 and cannot function as an EUDI Wallet, with replacement promised by the end of 2026 - the Atlas's first sourced national link to this Regulation, and a negative one. See PL-MOBYWATEL."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: produces
     target: EU-EUDI-WALLET
     source: fact
@@ -141,7 +148,7 @@ operative instrument as modified. This differs from the
 
 - Amends [[EU-EIDAS]] (lineage recorded via `previous_version`).
 - Produces / establishes [[EU-EUDI-WALLET]].
-- Applies in [[NL]], [[DE]], [[BE]], [[FR]] and [[ES]] — one entity, five
+- Applies in [[NL]], [[DE]], [[BE]], [[FR]], [[ES]] and [[PL]] — one entity, six
   countries. Every other member state belongs here too; the
   `applies-in` relationships are added as countries join the Atlas.
 

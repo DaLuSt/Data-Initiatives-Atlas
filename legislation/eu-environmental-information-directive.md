@@ -84,6 +84,13 @@ relationships:
     confidence: medium
     valid_from: 2005-02-14
     valid_until: null
+  - type: applies-in
+    target: PL
+    source: fact
+    evidence: "As an EU directive it requires transposition by all member states, Poland included; the implementation date was 14 February 2005 (eur-lex.europa.eu CELEX 32003L0004). NOT READ - search-only. No Polish transposing instrument was identified and none is asserted."
+    confidence: medium
+    valid_from: 2005-02-14
+    valid_until: null
 
 sources:
   - title: "EUR-Lex — 32003L0004 — Directive 2003/4/EC"

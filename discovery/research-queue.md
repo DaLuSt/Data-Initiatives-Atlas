@@ -197,6 +197,21 @@ by accident.
 | **DINO and BIS** | [[NL-BRO]]'s predecessors, described as registrations it *builds on*. Whether either continues to exist determines if `supersedes` is ever right | Later | Register batch |
 | **Geonovum's role in BRO standards** | Geonovum publishes BRO geo-standards; whether it maintains them or publishes them for the programme was not established, so no relationship was asserted | Later | Register batch |
 
+## Poland — queued from the sixth-country batch (2026-08-16)
+
+| Area / entity | Why it needs research | Suggested batch | Noted by / date |
+|---|---|---|---|
+| **Dz.U./ISAP citation for [[PL-ODO]]** | The weakest-sourced of the six national GDPR instruments — no primary legal citation found, and its substantive GDPR-specification provisions are entirely unestablished | **Next** | Poland batch |
+| **A ministry or Commission source for the eIDAS 2.0 incompatibility** | [[PL-MOBYWATEL]]'s edge to [[EU-EIDAS2]] — the Atlas's **only** eIDAS2 link — rests on press reporting alone | **Next** | Poland batch |
+| **CSIRT NASK, CSIRT GOV, CSIRT MON** | Poland's operational cybersecurity bodies. Two of six countries now have cybersecurity legislation modelled and no cyber authority | **Next** | Poland batch |
+| **PESEL** | Poland's population register, the direct counterpart of [[NL-BRP]] and the ten Dutch base registries | Next | Poland batch |
+| **The operator of [[PL-DANE-GOV-PL]]** | Not identified by any source found. Three of six national open data portals still have no custodian in the graph | Next | Poland batch |
+| **Krajowe Ramy Interoperacyjności** | Poland's national interoperability framework — the sixth national NIF, and the sixth potential [[EU-EIF]] descent | Later | Poland batch |
+| **A Polish DCAT application profile** | [[EU-DCAT-AP]] has four national children; whether Poland has a fifth was not researched | Later | Poland batch |
+| **Ustawa o statystyce publicznej (1995)** | [[PL-GUS]]'s legal basis, named and dated, not modelled — same treatment as the Dutch and Spanish statutes | Later | Poland batch |
+| **GIODO** | The predecessor data protection authority. Whether the succession to [[PL-UODO]] can be modelled depends on establishing what happened to the competencies the President did **not** take over | Later | Poland batch |
+| **Agencja Informatyzacji** | Would replace [[PL-COI]]. **Blocked** — the draft law is in consultation and the body does not exist | Blocked | Poland batch |
+
 ## Other queued research
 
 | Area / entity | Why it needs research | Suggested batch | Noted by / date |

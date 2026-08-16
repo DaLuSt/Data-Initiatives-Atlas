@@ -7,11 +7,11 @@ Generated: 2026-08-16
 
 ## Why this exists
 
-**227 of the Atlas's 234 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
+**237 of the Atlas's 244 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
 
 Closing that debt — the re-verification pass — needs outbound HTTPS to the hosts those URLs point at. In an environment with a restricted egress policy, this is the allowlist to request. A denial shows up as `403 to CONNECT` from the proxy, which is an environment-level network policy and cannot be changed from inside a session. See `discovery/unresolved.md` for the standing record of the sourcing debt.
 
-The Atlas currently cites **757 source URLs** across **289 hosts**, collapsing to **211 registrable domains**.
+The Atlas currently cites **795 source URLs** across **306 hosts**, collapsing to **219 registrable domains**.
 
 ## Highest value first
 
@@ -23,22 +23,22 @@ Allowing just these covers the bulk of the pass:
 | `digitaleoverheid.nl` | 40 | 28 |
 | `wikipedia.org` | 36 | 36 |
 | `bund.de` | 34 | 16 |
+| `gov.pl` | 28 | 11 |
 | `gouv.fr` | 27 | 9 |
 | `gob.es` | 26 | 12 |
 | `belgium.be` | 17 | 9 |
 | `un.org` | 16 | 9 |
 | `unece.org` | 14 | 5 |
 | `rijksoverheid.nl` | 14 | 10 |
+| `iso.org` | 13 | 11 |
 | `boe.es` | 12 | 10 |
 | `overheid.nl` | 12 | 12 |
 | `forumstandaardisatie.nl` | 12 | 5 |
-| `iso.org` | 12 | 10 |
 | `vng.nl` | 11 | 7 |
 | `fitko.de` | 11 | 6 |
 | `noraonline.nl` | 11 | 11 |
 | `kadaster.nl` | 10 | 7 |
 | `eerstekamer.nl` | 9 | 9 |
-| `rvig.nl` | 8 | 4 |
 
 ## Institutional domains
 
@@ -106,6 +106,7 @@ bayern.de
 belastingdienst.nl
 bho-legal.com
 bipt.be
+biznesinfo.pl
 bmv.de
 boe.es
 bosa.be
@@ -186,12 +187,15 @@ ing-ism.de
 ipo.nl
 ishare.eu
 its-mobility.de
+itwiz.pl
 jtc1info.org
 juntadeandalucia.es
 juridicas.com
 kadaster.nl
 kbvg.nl
+legalgeek.pl
 legiscope.com
+lexlege.pl
 medialaws.eu
 mobilithek.info
 mobility-data-space.de
@@ -209,6 +213,7 @@ nictiz.nl
 niedersachsen.de
 nis-2-directive.com
 nisd2.eu
+odoserwis.pl
 oecd-ilibrary.org
 oecd.org
 officialstatistics.org
@@ -217,9 +222,11 @@ om.nl
 openjustice.be
 openkritis.de
 opennederland.nl
+pap-mediaroom.pl
 parlementairemonitor.nl
 pdok.nl
 personalausweisportal.de
+politykabezpieczenstwa.pl
 prodwaregroup.com
 prosoz.de
 protecciondata.es
@@ -244,6 +251,7 @@ sva.nl
 taylorwessing.com
 tcontas.pt
 telusio.com
+trecom.pl
 tweedekamer.nl
 twobirds.com
 un-dco.org

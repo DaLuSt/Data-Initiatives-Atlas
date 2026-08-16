@@ -78,6 +78,13 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: applies-in
+    target: PL
+    source: fact
+    evidence: "As an EU directive it requires transposition by all member states, Poland included (EUR-Lex ELI dir/2022/2555). NOT READ - search-only. Poland transposed it by amending the ustawa o krajowym systemie cyberbezpieczenstwa, in force 3 April 2026; Poland exceeded the 17 October 2024 deadline and is in proceedings before the Court of Justice of the European Union (gov.pl/web/baza-wiedzy; itwiz.pl). See PL-KSC."
+    confidence: medium
+    valid_from: 2026-04-03
+    valid_until: null
 
 sources:
   - title: "Directive - 2022/2555 - EN"
@@ -101,7 +108,7 @@ high common level of cybersecurity across the Union. It requires
 organisations in designated critical sectors to meet cybersecurity
 requirements, report incidents and register with a supervisory authority.
 
-## Five national transpositions, five different answers
+## Six national transpositions, six different answers
 
 | Country | Act | In force | Technique |
 |---|---|---|---|
@@ -110,6 +117,7 @@ requirements, report incidents and register with a supervisory authority.
 | Netherlands | [[NL-CBW]] | 15 Aug 2026 | new act superseding [[NL-WBNI]] |
 | France | [[FR-NIS2-LOI]] | **unknown** | one vehicle for NIS2 + CER + DORA |
 | Spain | [[ES-LCGC]] | **not in force** | draft; would create a national cybersecurity centre |
+| Poland | [[PL-KSC]] | 3 Apr 2026 | **amends** the 2018 KSC act — and Poland is **before the CJEU** for the delay |
 
 Belgium transposed nearly two years before the Netherlands, and Germany
 amended a standing act where the other two enacted new ones. **France
@@ -142,7 +150,7 @@ transposition chain. Batch 8 should deepen it.
 
 ## Relationships
 
-- Applies in [[NL]], [[DE]], [[BE]], [[FR]] and [[ES]] — one entity, five
+- Applies in [[NL]], [[DE]], [[BE]], [[FR]], [[ES]] and [[PL]] — one entity, six
   countries. Every other member state belongs here too; the
   `applies-in` relationships are added as countries join the Atlas.
 - Transposed by [[NL-CBW]], [[DE-NIS2UMSUCG]], [[BE-NIS2-WET]] and

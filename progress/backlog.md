@@ -199,11 +199,20 @@ validation (`CONTRIBUTING.md` — Batch workflow).
   **third distinct shape** (Comunidades Autónomas), which localises the
   defect in the vocabulary rather than in any country's constitution. See
   `progress/completed.md`.
-- [ ] **A sixth country outside western Europe entirely.** All five are
-  western European EU member states. A central or northern European state
-  (Poland, Estonia) — or a non-EU one — would test the two assumptions five
-  EU members cannot: that the EU layer is the right regional parent, and
-  that `applies-in` is the right way to attach a country to it.
+- [x] **A sixth country outside western Europe entirely.** **Done
+  2026-08-16: Poland**, 10 entities. A 2004 accession state with a post-1989
+  administrative tradition. **Both assumptions held** — the EU layer is the
+  right regional parent and `applies-in` attached it unchanged. It raised
+  two new questions, both about **time** rather than structure: an
+  instrument in force *while the member state is before the CJEU*
+  ([[PL-KSC]]), and a national system *subject to* a requirement it cannot
+  meet ([[PL-MOBYWATEL]] and eIDAS 2.0). See `progress/completed.md`.
+- [ ] **A seventh country outside the EU entirely.** All six are EU member
+  states, so `applies-in` from EU instruments has never been tested against
+  a country the EU cannot bind. A non-EU European state (Norway,
+  Switzerland, the UK) would test whether the `region: EU` field and the
+  `applies-in` mechanism still behave, or whether the Atlas has quietly
+  assumed EU membership.
 
 ## Opened by the Spain batch
 
@@ -298,6 +307,34 @@ validation (`CONTRIBUTING.md` — Batch workflow).
   modelled.
 - [ ] **Digimelding**, the stelsel's error-reporting facility, and
   **SVB-BGT**. Named in single sources, not created.
+
+## Opened by the Poland batch
+
+- [ ] **A relationship type for an unmet obligation.** [[PL-MOBYWATEL]] is
+  subject to [[EU-EIDAS2]] and **cannot satisfy it**; the edge is recorded
+  as `related-to` with the substance in the evidence string, because
+  `implements-requirement-from` asserts the opposite and `governed-by`
+  implies the arrangement works. This is a **sixth** sourced connection the
+  vocabulary cannot express, and the one with the shortest fuse.
+- [ ] **Model infringement status.** [[PL-KSC]] is `status: active` and
+  Poland is before the CJEU for the delay that preceded it; [[ES-LCGC]] drew
+  a reasoned opinion, the stage before referral. Neither fact is in the
+  structured data.
+- [ ] **The Polish cybersecurity authorities.** CSIRT NASK, CSIRT GOV and
+  CSIRT MON. Poland and the Netherlands are now both countries with
+  cybersecurity legislation modelled and **no cyber authority** — see
+  [[DOMAIN-CYBERSECURITY]].
+- [ ] **PESEL**, Poland's population register and the counterpart of
+  [[NL-BRP]]. Named in [[PL-COI]]'s list of systems and nothing more.
+- [ ] **Dz.U. citation for [[PL-ODO]]**, the weakest-sourced of the six
+  national GDPR instruments — no ISAP or Dziennik Ustaw reference found.
+- [ ] **Krajowe Ramy Interoperacyjności**, a Polish DCAT profile, the
+  operator of [[PL-DANE-GOV-PL]], and the Act on Public Statistics behind
+  [[PL-GUS]]. All named, none modelled.
+- [ ] **GIODO**, the predecessor data protection authority. The sources say
+  the President took over only *part* of its competencies, so no clean
+  succession was asserted — the third institutional transformation the Atlas
+  has touched, after Spain's completed one and Poland's pending COI one.
 
 ## Explicitly out of scope for now
 

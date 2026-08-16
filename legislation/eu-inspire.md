@@ -66,6 +66,13 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: applies-in
+    target: PL
+    source: fact
+    evidence: "As an EU directive it requires transposition by all member states, Poland included (EUR-Lex ELI dir/2007/2). NOT READ - search-only. No Polish transposing instrument was identified in this batch and none is asserted."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "The EU's infrastructure for spatial information (Inspire)"

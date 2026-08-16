@@ -7,7 +7,7 @@ as an open, connected knowledge graph.**
 
 ### [**→ Open the Interactive Atlas**](https://dalust.github.io/Data-Initiatives-Atlas/)
 
-*Search, filter and explore 234 entities and 2,236 connections across five
+*Search, filter and explore 244 entities and 2,420 connections across six
 countries — no install, no account.*
 
 [![Validation](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/validate.yml/badge.svg)](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/validate.yml)
@@ -32,9 +32,9 @@ hand-maintained.
 
 | | |
 |---|---|
-| **Entities** | 234 |
-| **Connections** | 2,236 — of which **320** are sourced, typed relationships |
-| **Countries** | 🇳🇱 Netherlands · 🇩🇪 Germany · 🇧🇪 Belgium · 🇫🇷 France · 🇪🇸 Spain |
+| **Entities** | 244 |
+| **Connections** | 2,420 — of which **346** are sourced, typed relationships |
+| **Countries** | 🇳🇱 Netherlands · 🇩🇪 Germany · 🇧🇪 Belgium · 🇫🇷 France · 🇪🇸 Spain · 🇵🇱 Poland |
 | **Layers** | UN · EU · national · sectoral |
 | **Source of truth** | Git + Markdown/YAML — no database |
 | **Licence** | CC0 1.0 |
@@ -124,7 +124,13 @@ European Initiative
       │                    ├── Framework
       │                    └── Data ecosystem
       │
-      └──────────────► Country F
+      ├──────────────► Poland
+      │                    │
+      │                    ├── National initiative
+      │                    ├── Framework
+      │                    └── Data ecosystem
+      │
+      └──────────────► Country G
 ```
 
 The Netherlands is the starting point, not the boundary of the project.
@@ -156,8 +162,8 @@ added later.
 National initiatives, legislation, strategies, frameworks, organisations and
 data ecosystems.
 
-The Netherlands is the first participating country; Germany, Belgium, France
-and Spain followed. Additional countries can be added **without changing the
+The Netherlands is the first participating country; Germany, Belgium,
+France, Spain and Poland followed. Additional countries can be added **without changing the
 fundamental information model**:
 
 ```
@@ -167,6 +173,7 @@ countries/
 ├── be/
 ├── fr/
 ├── es/
+├── pl/
 ├── uk/
 └── ...
 ```
@@ -175,8 +182,8 @@ Countries should only be added when there is sufficient information and,
 preferably, an active contributor or participating community maintaining
 that national scope.
 
-> **That claim has been tested five times.** Adding Germany, Belgium, France
-> and Spain each required no change to the schema, ontology, taxonomy,
+> **That claim has been tested six times.** Adding Germany, Belgium, France,
+> Spain and Poland each required no change to the schema, ontology, taxonomy,
 > relationship types, folder structure or any validation rule — and produced
 > no country-specific copies of EU or UN instruments. See
 > [`countries/README.md`](countries/README.md) and
@@ -272,7 +279,11 @@ EU Regulation
         │                    │
         │                    └── National implementation
         │
-        └──────────────► Spain
+        ├──────────────► Spain
+        │                    │
+        │                    └── National implementation
+        │
+        └──────────────► Poland
                              │
                              └── National implementation
 ```
@@ -328,7 +339,8 @@ data-initiatives-atlas/
 │   ├── de/
 │   ├── be/
 │   ├── fr/
-│   └── es/
+│   ├── es/
+│   └── pl/
 │
 ├── regions/
 │   └── eu/
@@ -378,6 +390,7 @@ countries/
 ├── be/
 ├── fr/
 ├── es/
+├── pl/
 └── ...
 ```
 

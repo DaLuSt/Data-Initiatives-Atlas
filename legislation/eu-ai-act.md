@@ -67,6 +67,13 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: applies-in
+    target: PL
+    source: fact
+    evidence: "As an EU regulation it is directly applicable in all member states, Poland included. NOT READ - search-only. No Polish AI supervisory authority was identified in this batch and none is asserted."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Article 113: Entry into Force and Application"
@@ -139,7 +146,7 @@ Official Journal links. Queued for correction.
 
 ## Relationships
 
-- Applies in [[NL]], [[DE]], [[BE]], [[FR]] and [[ES]] — one entity, five
+- Applies in [[NL]], [[DE]], [[BE]], [[FR]], [[ES]] and [[PL]] — one entity, six
   countries. Every other member state belongs here too; the
   `applies-in` relationships are added as countries join the Atlas.
 - Amended by the proposals in [[EU-DIGITAL-OMNIBUS]].
