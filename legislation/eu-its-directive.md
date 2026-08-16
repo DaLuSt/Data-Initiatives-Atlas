@@ -46,6 +46,13 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: applies-in
+    target: BE
+    source: fact
+    evidence: "Member States have established national access points (NAPs) under the delegated regulations supplementing Directive 2010/40/EU (transport.ec.europa.eu National Access Points; EUR-Lex CELEX 32010L0040). NOT READ — search-only. No Belgian national access point is recorded in this Atlas."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Directive 2010/40/EU"
@@ -104,7 +111,9 @@ source rather than modelled as its own entity.
 
 ## Relationships
 
-- Applies in [[NL]].
+- Applies in [[NL]], [[DE]] and [[BE]] — one entity, three
+  countries. Every other member state belongs here too; the
+  `applies-in` relationships are added as countries join the Atlas.
 - Underpins [[NL-NTM]] (relationship recorded on that entity).
 
 ## Sources

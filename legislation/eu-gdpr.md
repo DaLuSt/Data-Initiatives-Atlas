@@ -49,6 +49,13 @@ relationships:
     confidence: medium
     valid_from: 2018-05-25
     valid_until: null
+  - type: applies-in
+    target: BE
+    source: fact
+    evidence: "As an EU regulation the GDPR is directly applicable in all member states; Belgium adopted the wet van 30 juli 2018 as implementing legislation, in force from 5 September 2018, supplementing the GDPR where it left room for national legislators (ejustice.just.fgov.be ELI wet/2018/07/30; gegevensbeschermingsautoriteit.be). NOT READ — search-only."
+    confidence: medium
+    valid_from: 2018-09-05
+    valid_until: null
 
 sources:
   - title: "General data protection regulation (GDPR) — summary"
@@ -96,11 +103,17 @@ nothing until adopted.
 
 ## Relationships
 
-- Applies in [[NL]] (and in every other EU member state — those
-  `applies-in` relationships should be added as those countries join the
-  Atlas, per the country-neutral model).
-- Implemented in Dutch law by [[NL-UAVG]].
+- Applies in [[NL]], [[DE]] and [[BE]] — and in every other member state;
+  those `applies-in` relationships are added as countries join the Atlas,
+  per the country-neutral model.
+- Implemented by three national acts: [[NL-UAVG]], [[DE-BDSG]] and
+  [[BE-GDPR-WET]]. **This entity was not duplicated to accommodate any of
+  them** — there is no `NL-EU-GDPR`, `DE-EU-GDPR` or `BE-EU-GDPR`, which is
+  the whole point of the country-neutral model.
 - [[NL-AP]] is the Dutch supervisory authority designated under it.
+  [[BE-APD]] supervises the Belgian act. [[DE-BFDI]] supervises German
+  federal bodies, but is *not* linked to [[DE-BDSG]] — no source read
+  states it, and German supervision is split across the Länder.
 
 ## Sources
 

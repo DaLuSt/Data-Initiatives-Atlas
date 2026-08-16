@@ -47,6 +47,13 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: applies-in
+    target: BE
+    source: fact
+    evidence: "As an EU directive it requires transposition by all member states, Belgium included (EUR-Lex ELI dir/2022/2557). NOT READ — search-only. As with Germany above, NO Belgian transposing instrument has been identified; the relationship rests solely on the directive binding every member state."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Directive (EU) 2022/2557 (CER) — Official Journal"
@@ -96,7 +103,9 @@ researched.
 
 ## Relationships
 
-- Applies in [[NL]].
+- Applies in [[NL]], [[DE]] and [[BE]] — one entity, three
+  countries. Every other member state belongs here too; the
+  `applies-in` relationships are added as countries join the Atlas.
 - Companion to [[EU-NIS2]]; both stem from [[EU-CYBERSECURITY-STRATEGY]].
 
 ## Sources

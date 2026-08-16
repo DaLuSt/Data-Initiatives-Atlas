@@ -45,6 +45,13 @@ relationships:
     confidence: medium
     valid_from: 2020-12-12
     valid_until: null
+  - type: applies-in
+    target: BE
+    source: fact
+    evidence: "The regulation establishes a single digital gateway and has applied since 12 December 2020, binding all member states including Belgium (EUR-Lex summary of the single digital gateway). NOT READ — search-only. Belgium's once-only mechanism, the Kruispuntbank van de Sociale Zekerheid, is recorded in this Atlas but is NOT asserted to implement this regulation — it predates it by 28 years and no source read connects them."
+    confidence: medium
+    valid_from: 2020-12-12
+    valid_until: null
 
 sources:
   - title: "The single digital gateway — summary"
@@ -86,7 +93,9 @@ likewise unresearched — a plausible connection to [[NL-GDI]] and
 
 ## Relationships
 
-- Applies in [[NL]].
+- Applies in [[NL]], [[DE]] and [[BE]] — one entity, three
+  countries. Every other member state belongs here too; the
+  `applies-in` relationships are added as countries join the Atlas.
 
 ## Sources
 

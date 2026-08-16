@@ -48,6 +48,13 @@ relationships:
     confidence: medium
     valid_from: 2023-09-24
     valid_until: null
+  - type: applies-in
+    target: BE
+    source: fact
+    evidence: "As an EU regulation the DGA is directly applicable in all member states, Belgium included; it entered into force 23 June 2022 and applies from 24 September 2023 (EUR-Lex ELI reg/2022/868). NOT READ — search-only."
+    confidence: medium
+    valid_from: 2023-09-24
+    valid_until: null
   - type: implements
     target: EU-DATA-STRATEGY
     source: interpretation
@@ -103,7 +110,9 @@ instruments they target.
 
 ## Relationships
 
-- Applies in [[NL]].
+- Applies in [[NL]], [[DE]] and [[BE]] — one entity, three
+  countries. Every other member state belongs here too; the
+  `applies-in` relationships are added as countries join the Atlas.
 - Gives legal effect to pillar 1 of [[EU-DATA-STRATEGY]] (Atlas
   interpretation).
 - Targeted for repeal by [[EU-DIGITAL-OMNIBUS]] (recorded on that entity).

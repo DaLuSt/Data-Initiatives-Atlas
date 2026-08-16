@@ -48,6 +48,13 @@ relationships:
     confidence: medium
     valid_from: 2024-05-20
     valid_until: null
+  - type: applies-in
+    target: BE
+    source: fact
+    evidence: "The Regulation mandates all Member States, Belgium included, to provide European Digital Identity Wallets by the end of 2026 (Reg. (EU) 2024/1183; EUR-Lex ELI reg/2024/1183). NOT READ — search-only. No Belgian digital identity scheme is recorded in this Atlas."
+    confidence: medium
+    valid_from: 2024-05-20
+    valid_until: null
   - type: produces
     target: EU-EUDI-WALLET
     source: fact
@@ -120,7 +127,9 @@ operative instrument as modified. This differs from the
 
 - Amends [[EU-EIDAS]] (lineage recorded via `previous_version`).
 - Produces / establishes [[EU-EUDI-WALLET]].
-- Applies in [[NL]].
+- Applies in [[NL]], [[DE]] and [[BE]] — one entity, three
+  countries. Every other member state belongs here too; the
+  `applies-in` relationships are added as countries join the Atlas.
 
 ## Sources
 

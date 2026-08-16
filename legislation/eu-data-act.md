@@ -47,6 +47,13 @@ relationships:
     confidence: medium
     valid_from: 2025-09-12
     valid_until: null
+  - type: applies-in
+    target: BE
+    source: fact
+    evidence: "As an EU regulation the Data Act is directly applicable in all member states, Belgium included; published in the OJ on 13 December 2023 and applicable from 12 September 2025 (EUR-Lex ELI reg/2023/2854). NOT READ — search-only."
+    confidence: medium
+    valid_from: 2025-09-12
+    valid_until: null
 
 sources:
   - title: "Regulation (EU) 2023/2854 (Data Act) — Official Journal"
@@ -89,7 +96,9 @@ None of this changes any `status` today: the Omnibus is a proposal.
 
 ## Relationships
 
-- Applies in [[NL]].
+- Applies in [[NL]], [[DE]] and [[BE]] — one entity, three
+  countries. Every other member state belongs here too; the
+  `applies-in` relationships are added as countries join the Atlas.
 - Would absorb [[EU-DGA]] and [[EU-OPEN-DATA-DIRECTIVE]] under
   [[EU-DIGITAL-OMNIBUS]] (recorded on that entity).
 - Gives effect to parts of [[EU-DATA-STRATEGY]]; the specific pillar was not

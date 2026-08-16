@@ -17,6 +17,7 @@ Country-scoped entities themselves (initiatives, legislation, organisations,
 |---|---|---|
 | Netherlands | NL | [`nl/`](nl/) |
 | Germany | DE | [`de/`](de/) |
+| Belgium | BE | [`be/`](be/) |
 
 Adding a new country means creating its sub-folder with an anchor entity and
 an index — the ontology requires no other change (README
@@ -42,5 +43,17 @@ rule. No entity type, relationship type, status or level was added. No
 One genuine limitation surfaced, and it is a limitation of the model rather
 than of the country-neutral design: the `level` vocabulary has no term
 between `national` and `local`, so Germany's sixteen Länder cannot be
-represented. That matters for any federal state added later. See
-`de/de.md` and `discovery/unresolved.md`.
+represented.
+
+**Belgium, added third, confirmed the limitation is general and made it
+worse.** In Germany no term fits; in Belgium the term that would fit is
+already taken, because `level: regional` means *supra-national* in this
+Atlas — it is what [[EU]] carries. A Belgian Region cannot even borrow the
+word. The cost is concrete: **OSLO**, one of Europe's most developed
+public-sector semantic interoperability programmes, is a Flemish product
+and is therefore not modelled at all.
+
+After three countries this is the Atlas's best-evidenced ontology defect.
+No sub-national level has been invented, because doing so for one country
+is exactly the country-specific change the model exists to prevent. See
+`de/de.md`, `be/be.md` and `discovery/unresolved.md`.
