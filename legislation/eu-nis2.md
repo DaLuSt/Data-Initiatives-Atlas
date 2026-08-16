@@ -63,6 +63,13 @@ relationships:
     confidence: medium
     valid_from: 2024-10-18
     valid_until: null
+  - type: applies-in
+    target: FR
+    source: fact
+    evidence: "France transposes the directive through the 'loi Resilience' on the resilience of critical infrastructures and the strengthening of cybersecurity, which designates ANSSI as competent national authority (aventris.fr; nis-2-directive.com France; eversheds-sutherland). NOT READ — search-only. WARNING: the instrument's status is contested across sources and France missed the 17 October 2024 transposition deadline; see FR-NIS2-LOI."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Directive - 2022/2555 - EN"
@@ -86,16 +93,21 @@ high common level of cybersecurity across the Union. It requires
 organisations in designated critical sectors to meet cybersecurity
 requirements, report incidents and register with a supervisory authority.
 
-## Three national transpositions, three techniques
+## Four national transpositions
 
 | Country | Act | In force | Technique |
 |---|---|---|---|
 | Belgium | [[BE-NIS2-WET]] | **18 Oct 2024** | new act replacing [[BE-NIS1-WET]] |
 | Germany | [[DE-NIS2UMSUCG]] | 6 Dec 2025 | **revises** the existing [[DE-BSIG]] |
 | Netherlands | [[NL-CBW]] | 15 Aug 2026 | new act superseding [[NL-WBNI]] |
+| France | [[FR-NIS2-LOI]] | **unknown** | one vehicle for NIS2 + CER + DORA |
 
 Belgium transposed nearly two years before the Netherlands, and Germany
-amended a standing act where the other two enacted new ones. One directive
+amended a standing act where the other two enacted new ones. **France
+missed the 17 October 2024 deadline and its transposing instrument's status
+could not be established at all** — sources contradict each other on
+whether it has been promulgated, so [[FR-NIS2-LOI]] is recorded
+`status: unknown` rather than given a guessed date. One directive
 entity carries all three, and the Atlas can show the spread at a glance —
 something it could not do with a single country.
 
@@ -115,10 +127,11 @@ transposition chain. Batch 8 should deepen it.
 
 ## Relationships
 
-- Applies in [[NL]], [[DE]] and [[BE]] — one entity, three
+- Applies in [[NL]], [[DE]], [[BE]] and [[FR]] — one entity, four
   countries. Every other member state belongs here too; the
   `applies-in` relationships are added as countries join the Atlas.
-- Transposed by [[NL-CBW]], [[DE-NIS2UMSUCG]] and [[BE-NIS2-WET]].
+- Transposed by [[NL-CBW]], [[DE-NIS2UMSUCG]], [[BE-NIS2-WET]] and
+  [[FR-NIS2-LOI]].
   **No relationship between the three national acts is asserted** —
   they are siblings, and this entity is the relationship they share.
 

@@ -1,13 +1,35 @@
 # Current Batch
 
-**Status:** No batch in progress. **Belgium — the third country** was
-completed on 2026-08-15, after Batch 16 (Interactive Knowledge Graph) and
-the Germany second-country batch the same day.
+**Status:** No batch in progress. **France — the fourth country** was
+completed on 2026-08-16.
+
+## France — fourth country
+
+**189 entities, 242 relationships, four countries.** `applies-in` targets
+`['BE', 'DE', 'FR', 'NL']`. No ontology, schema, folder, validation or
+generator change; no `FR-EU-*` entity.
+
+**The result is a negative, and that is what makes it useful.** France is
+unitary and was added to test whether anything besides the federal `level`
+gap was Netherlands-shaped. It raised **no new ontology question at all** —
+the first country of which that is true. Combined with Germany and Belgium
+this isolates the defect: the ontology is sound for unitary states and
+lossy for federal ones, and the loss is confined to `level`.
+
+Also found: a **third GDPR implementation technique** (France amended a
+1978 act in place); a **fourth national DPA with still only one EDPB link**;
+and the Atlas's **only entity whose sources contradict each other about
+whether it is in force** ([[FR-NIS2-LOI]], recorded `status: unknown`).
+
+See `progress/completed.md` for the full entry.
 
 ## Belgium — third country
 
-**178 entities, 218 relationships, three countries.** `applies-in` now
-targets `['BE', 'DE', 'NL']`. Adding a third country again required no
+Completed 2026-08-15, after Batch 16 (Interactive Knowledge Graph) and the
+Germany second-country batch the same day.
+
+**178 entities, 218 relationships, three countries** at the time.
+`applies-in` targeted `['BE', 'DE', 'NL']`. Adding a third country again required no
 ontology, schema, folder, validation or generator change, and produced no
 `BE-EU-*` entity.
 
@@ -52,8 +74,8 @@ pipeline no workflow can perform for itself; it is documented in
 `docs/github-pages.md` under one-time repository setup.
 
 **The Atlas is structurally complete and evidentially unverified**, and it
-now covers **three countries** (this section describes the state at the
-time of Batch 16; see the Belgium entry above for the current figures). See
+now covers **four countries** (this section describes the state at the
+time of Batch 16; see the France entry above for the current figures). See
 `validation/germany-second-country-report.md` for the second-country result
 and `validation/final-quality-gate.md` for the standing verdict.
 
@@ -93,14 +115,18 @@ later.
 
 ## The sourcing position is unchanged
 
-**155 of 164 entities are `verification: search-only`.** Page retrieval was
-blocked throughout the Germany batch as it was for every earlier one
+**180 of 189 entities are `verification: search-only`.** Page retrieval was
+blocked throughout the France batch as it was for every earlier one
 (`EGRESS_BLOCKED`; 403 at the proxy tunnel, re-tested at the start of this
-batch, and `WebFetch` re-tested and blocked too).
+batch, and `WebFetch` re-tested and blocked too — the proxy reports
+`connect_rejected`, an environment egress policy that cannot be changed
+from inside the session).
 
-Every German entity carries the sourcing caveat block. **No `accessed`
+Every French entity carries the sourcing caveat block. **No `accessed`
 dates were written and `last_verified` is null throughout**, because
-nothing was accessed or verified.
+nothing was accessed or verified. The hosts that would need to be reachable
+are enumerated in `discovery/reverification-allowlist.md`, which is
+generated from the entities themselves by `tools/source_hosts.py`.
 
 One improvement worth noting: the [[DE]] anchor is
 `verification: search-only`, not `unverified`. [[NL]], [[EU]] and [[UN]]
@@ -122,16 +148,24 @@ URL is already recorded in the entities' `sources:` lists.
    move it to `active` and [[NL-WBNI]] to `superseded`. Not done: it cannot
    be verified without page retrieval.
 3. **[[EU-INSPIRE]] → [[NL]]**. The directive now carries `applies-in` to
-   `DE` and `BE` but **not** `NL`, because the Dutch transposition is
-   unsourced. A third country has touched it without closing the Dutch gap.
-   Near-certainly one page read.
-4. **Connect the UN layer.** Unchanged by Germany *and* Belgium, and still
-   the largest structural gap: `UN → anything` is 0. The statistics cluster
-   in `discovery/unresolved.md` now holds **five** refused links — three
+   `DE`, `BE` and `FR` but **not** `NL`, because the Dutch transposition is
+   unsourced. Three countries have now touched it without closing the Dutch
+   gap. Near-certainly one page read.
+4. **Resolve [[FR-NIS2-LOI]]'s status.** The Atlas's only entity whose
+   sources contradict each other about whether the instrument is in force;
+   recorded `status: unknown`, `confidence: low`. One page read on
+   Légifrance settles it.
+5. **Connect the UN layer.** Unchanged by Germany, Belgium *and* France, and
+   still the largest structural gap: `UN → anything` is 0. The statistics
+   cluster in `discovery/unresolved.md` holds **five** refused links — three
    national statistical offices sit in the Atlas and none connects upward.
-5. **Resolve the federal modelling gap.** Two of the Atlas's three
-   countries are federal, and both are under-represented because there is
-   no `level` term between `national` and `local`. See `countries/be/be.md`.
-6. **A cybersecurity domain entity.** Now thirteen entities across three
-   layers and three countries would qualify — well over the taxonomy §1
+   France did not add a fourth: INSEE was not modelled for want of a source.
+6. **Resolve the federal modelling gap.** Two of the Atlas's four countries
+   are federal, and both are under-represented because there is no `level`
+   term between `national` and `local`. France's addition made this
+   diagnosis precise — see `countries/fr/fr.md` and `countries/be/be.md`.
+7. **A cybersecurity domain entity.** Now sixteen entities across three
+   layers and four countries would qualify — well over the taxonomy §1
    threshold. Deliberately not created inside a country batch.
+8. **A fifth country outside this group.** All four are neighbouring western
+   European states. See `progress/backlog.md`.

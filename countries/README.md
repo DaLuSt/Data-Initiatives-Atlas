@@ -18,6 +18,7 @@ Country-scoped entities themselves (initiatives, legislation, organisations,
 | Netherlands | NL | [`nl/`](nl/) |
 | Germany | DE | [`de/`](de/) |
 | Belgium | BE | [`be/`](be/) |
+| France | FR | [`fr/`](fr/) |
 
 Adding a new country means creating its sub-folder with an anchor entity and
 an index — the ontology requires no other change (README
@@ -53,7 +54,17 @@ word. The cost is concrete: **OSLO**, one of Europe's most developed
 public-sector semantic interoperability programmes, is a Flemish product
 and is therefore not modelled at all.
 
-After three countries this is the Atlas's best-evidenced ontology defect.
+**France, added fourth, isolated the defect.** France is unitary, and it is
+the first country whose addition raised **no new ontology question at all** —
+every entity fitted an existing type, level, status and relationship type,
+and nothing needed a caveat about what the Atlas could not express.
+
+That negative result is what makes the finding precise. With only Germany
+and Belgium it was unclear whether the model was federal-lossy or simply
+Netherlands-shaped. A second unitary state separates the two: the ontology
+is sound for unitary states and lossy for federal ones, and the loss is
+confined to the `level` vocabulary.
+
 No sub-national level has been invented, because doing so for one country
 is exactly the country-specific change the model exists to prevent. See
-`de/de.md`, `be/be.md` and `discovery/unresolved.md`.
+`de/de.md`, `be/be.md`, `fr/fr.md` and `discovery/unresolved.md`.

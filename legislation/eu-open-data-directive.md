@@ -55,6 +55,13 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: applies-in
+    target: FR
+    source: fact
+    evidence: "As an EU directive it requires transposition by all member states, France included (EUR-Lex Directive (EU) 2019/1024). NOT READ — search-only. NO French transposing instrument is recorded: the French open data act found by search is the loi pour une Republique numerique of 2016, which PREDATES this directive and sits in the earlier PSI lineage. See FR-LRN. France is the second country in this Atlas with this gap, after Belgium."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Directive - 2019/1024 - EN - psi directive"
@@ -115,7 +122,7 @@ dataset regime is still unresearched (`coverage: low`).
 
 ## Relationships
 
-- Applies in [[NL]], [[DE]] and [[BE]] — one entity, three
+- Applies in [[NL]], [[DE]], [[BE]] and [[FR]] — one entity, four
   countries. Every other member state belongs here too; the
   `applies-in` relationships are added as countries join the Atlas.
 - Transposed into Dutch law through [[NL-WHO]], as amended by the Wet

@@ -52,6 +52,13 @@ relationships:
     confidence: medium
     valid_from: 2020-12-12
     valid_until: null
+  - type: applies-in
+    target: FR
+    source: fact
+    evidence: "The regulation establishes a single digital gateway and has applied since 12 December 2020, binding all member states including France (EUR-Lex summary). NOT READ — search-only. FranceConnect is recorded in this Atlas but is NOT asserted to implement this regulation — no source read connects them."
+    confidence: medium
+    valid_from: 2020-12-12
+    valid_until: null
 
 sources:
   - title: "The single digital gateway — summary"
@@ -93,7 +100,7 @@ likewise unresearched — a plausible connection to [[NL-GDI]] and
 
 ## Relationships
 
-- Applies in [[NL]], [[DE]] and [[BE]] — one entity, three
+- Applies in [[NL]], [[DE]], [[BE]] and [[FR]] — one entity, four
   countries. Every other member state belongs here too; the
   `applies-in` relationships are added as countries join the Atlas.
 

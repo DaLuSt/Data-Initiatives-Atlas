@@ -7,11 +7,11 @@ Generated: 2026-08-16
 
 ## Why this exists
 
-**172 of the Atlas's 178 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
+**183 of the Atlas's 189 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
 
 Closing that debt — the re-verification pass — needs outbound HTTPS to the hosts those URLs point at. In an environment with a restricted egress policy, this is the allowlist to request. A denial shows up as `403 to CONNECT` from the proxy, which is an environment-level network policy and cannot be changed from inside a session. See `discovery/unresolved.md` for the standing record of the sourcing debt.
 
-The Atlas currently cites **533 source URLs** across **202 hosts**, collapsing to **158 registrable domains**.
+The Atlas currently cites **583 source URLs** across **231 hosts**, collapsing to **173 registrable domains**.
 
 ## Highest value first
 
@@ -20,15 +20,16 @@ Allowing just these covers the bulk of the pass:
 | Domain | URLs | Entities |
 |---|---|---|
 | `europa.eu` | 68 | 43 |
+| `wikipedia.org` | 36 | 36 |
 | `bund.de` | 34 | 16 |
-| `wikipedia.org` | 31 | 31 |
 | `digitaleoverheid.nl` | 28 | 19 |
+| `gouv.fr` | 27 | 9 |
 | `belgium.be` | 17 | 9 |
 | `rijksoverheid.nl` | 14 | 10 |
 | `forumstandaardisatie.nl` | 12 | 5 |
 | `fitko.de` | 11 | 6 |
+| `iso.org` | 11 | 9 |
 | `vng.nl` | 10 | 6 |
-| `iso.org` | 10 | 8 |
 | `un.org` | 9 | 5 |
 | `overheid.nl` | 9 | 9 |
 | `noraonline.nl` | 9 | 9 |
@@ -38,7 +39,6 @@ Allowing just these covers the bulk of the pass:
 | `officielebekendmakingen.nl` | 5 | 5 |
 | `github.com` | 5 | 4 |
 | `w3.org` | 5 | 2 |
-| `brandenburg.de` | 4 | 4 |
 
 ## Institutional domains
 
@@ -90,11 +90,14 @@ ad4gd.eu
 aftermarket-trends.de
 agoria.be
 anwalt.org
+april.org
 arena2036.de
 atlassian.net
 automotiveit.eu
 autoriteitpersoonsgegevens.nl
+aventris.fr
 b3-it.de
+banquedesterritoires.fr
 bayern.de
 bho-legal.com
 bipt.be
@@ -106,11 +109,17 @@ bundesrechnungshof.de
 bundesregierung.de
 bundestag.de
 buzer.de
+cci-paris-idf.fr
+cci.fr
+cloix-mendesgil.com
+cnil.fr
 communicatierijk.nl
 d-velop.de
 data-spaces-symposium.eu
+datactivist.coop
 dcat-ap.de
 de.digital
+decideo.fr
 deloitte.com
 digigo.nu
 digitale-verwaltung.de
@@ -129,6 +138,7 @@ errin.eu
 eubelius.com
 europadecentraal.nl
 europeansources.info
+eversheds-sutherland.com
 ey.com
 forschungsinformationssystem.de
 fraunhofer.de
@@ -141,10 +151,12 @@ geostandaarden.nl
 github.com
 github.io
 glomas.de
+gouv.fr
 grokipedia.com
 haufe.de
 health-ri.nl
 hessen.de
+hypotheses.org
 ictu.nl
 informationssicherheitsbeauftragter-dresden.de
 ing-ism.de
@@ -159,6 +171,7 @@ medialaws.eu
 mobilithek.info
 mobility-data-space.de
 mobility-dataspace.eu
+moirouxavocats.com
 nationaalarchief.nl
 nationaalgroeifonds.nl
 ncsc.nl
@@ -168,6 +181,7 @@ nen.nl
 netzpolitik.org
 nictiz.nl
 niedersachsen.de
+nis-2-directive.com
 oecd-ilibrary.org
 oecd.org
 officielebekendmakingen.nl
@@ -178,6 +192,7 @@ opennederland.nl
 parlementairemonitor.nl
 pdok.nl
 personalausweisportal.de
+prodwaregroup.com
 prosoz.de
 quality.de
 rdw.nl

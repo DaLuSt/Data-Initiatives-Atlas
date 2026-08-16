@@ -62,6 +62,13 @@ relationships:
     confidence: medium
     valid_from: 2025-03-26
     valid_until: null
+  - type: applies-in
+    target: FR
+    source: fact
+    evidence: "As an EU regulation it is directly applicable in all member states, France included; EU countries create health data access bodies during the 2027-2029 preparation phase (Reg. (EU) 2025/327). NOT READ — search-only. No French health data access body is recorded in this Atlas."
+    confidence: medium
+    valid_from: 2025-03-26
+    valid_until: null
 
 sources:
   - title: "European Health Data Space — legislative procedure file"
@@ -137,7 +144,7 @@ Parliament's Legislative Observatory file. Queued.
 ## Relationships
 
 - Part of [[EU-COMMON-DATA-SPACES]].
-- Applies in [[NL]], [[DE]] and [[BE]] — one entity, three
+- Applies in [[NL]], [[DE]], [[BE]] and [[FR]] — one entity, four
   countries. Every other member state belongs here too; the
   `applies-in` relationships are added as countries join the Atlas.
 

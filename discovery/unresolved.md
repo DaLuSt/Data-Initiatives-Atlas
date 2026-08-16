@@ -9,7 +9,7 @@ one of these — resolve it with a real source, or leave it open.
 
 | Entity / topic | Question | Why it's unresolved | Noted by / date | Status |
 |---|---|---|---|---|
-| All unread-source entities (**172 of 178**: 169 `search-only` + 3 `unverified`; was 119 of 125 before the Germany and Belgium batches) | Every factual claim | The environment's network egress policy blocks all direct page retrieval (`EGRESS_BLOCKED` for forumstandaardisatie.nl, digitaleoverheid.nl, noraonline.nl, vng.nl, logius.nl, eur-lex.europa.eu, wikipedia.org and every other host tested). Batch 1 was completed from search-engine results on explicit instruction, with the trade-off accepted knowingly. Every entity carries `verification: search-only`. | Batch 1 / 2026-08-14 | **Open — needs full re-verification pass** |
+| All unread-source entities (**183 of 189**: 180 `search-only` + 3 `unverified`; regenerate the count with `python tools/source_hosts.py`) | Every factual claim | The environment's network egress policy blocks all direct page retrieval (`EGRESS_BLOCKED` for forumstandaardisatie.nl, digitaleoverheid.nl, noraonline.nl, vng.nl, logius.nl, eur-lex.europa.eu, wikipedia.org and every other host tested). Batch 1 was completed from search-engine results on explicit instruction, with the trade-off accepted knowingly. Every entity carries `verification: search-only`. | Batch 1 / 2026-08-14 | **Open — needs full re-verification pass** |
 
 To find every affected entity: `grep -rl "verification: search-only" .`
 
@@ -226,6 +226,42 @@ is what to request.
 | [[BE-KSZ-WET]] | Only two sources, one of them the KSZ's page about its own founding act. Act content unknown. | Open |
 | [[BE-STATBEL]] | **No statutory basis found** — no Belgian equivalent of [[DE-BSTATG]] or [[NL-WET-CBS]], so no `governed-by` is recorded. | Open |
 | [[BE-HERGEBRUIK-WET]] | Scope, obligations and relationship to the current EU regime all unknown. | Open |
+
+## France batch — fourth country (2026-08-16)
+
+### The result is a negative, and that is the point
+
+France is unitary, and was added specifically to test whether anything in
+the model besides the federal `level` gap was Netherlands-shaped
+(`progress/backlog.md`). **It raised no new ontology question at all** —
+every entity fitted an existing type, level, status and relationship type.
+
+Combined with Germany and Belgium this isolates the defect: **the ontology
+is sound for unitary states and lossy for federal ones**, and the loss is
+confined to the `level` vocabulary rather than being a general
+country-shape problem. Nothing new is opened here; the federal row above
+stands unchanged.
+
+### Refused links — France
+
+| Link | Why refused | Status |
+|---|---|---|
+| [[FR-RGI]] → [[EU-EIF]] | The RGI is very probably France's NIF, which is exactly why it is refused: nothing read mentions the EIF, the NIF concept or European interoperability. [[BE-BELGIF]] is sourced on both counts; the RGI is sourced on neither. **[[EU-EIF]] now has four countries and one national-framework link.** | Open |
+| [[FR-LRN]] → [[EU-OPEN-DATA-DIRECTIVE]] | **Chronologically impossible** — the act is 2016, the directive 2019/1024. The same trap Belgium sprang. France's actual transposition (understood to be a 2021 ordinance) was not identified. **Two of four countries now have this gap.** | **Open — priority** |
+| [[FR-CNIL]] → [[EU-EDPB]] | No source read mentions the EDPB. **Four national DPAs now sit in the Atlas and only [[NL-AP]] connects to the Board** — the clearest single example in the Atlas of a sourcing artefact masquerading as structure. Four pages would close it. | **Open — cheap, high value** |
+| [[FR-FRANCECONNECT]] → [[EU-EIDAS]] / [[EU-EIDAS2]] | Nothing read mentions eIDAS or cross-border recognition, even though a national identity federation is precisely what eIDAS governs. The eIDAS2 wallet deadline (end 2026) is now four months away and **no country in the Atlas is linked to it**. | **Open — becoming time-critical** |
+| [[FR-NIS2-LOI]] → [[EU-CER]] | The vehicle is sourced as transposing REC, NIS2 and DORA together, but the instrument's own status is unresolved; the relationship would inherit that. | Open (deliberate) |
+| [[FR-DATA-GOUV]] → [[FR-LRN]] | Portal and open-data act, obviously related, nowhere stated. Same call as the German and Belgian equivalents — now made four times. | Open |
+
+### Factual gaps — France
+
+| Entity | Question | Status |
+|---|---|---|
+| [[FR-NIS2-LOI]] | **Sources directly contradict each other**: one says transposition is by Law n° 2025-90 of 26 February 2025; another says the bill was adopted by the Senate on 12 March 2025 and awaits promulgation, expected mid-2026. Both cannot be true. `status: unknown`, `start_date: null`, no law number recorded. **The only entity in the Atlas whose sources conflict about whether the instrument is in force.** | **Open — priority** |
+| [[FR-LIL]] | No Légifrance citation for loi 78-17 itself; the 1978 date rests on the CNIL and secondary commentary. Three of five sources are chamber-of-commerce or law-firm material. | Open |
+| [[FR-RGI]] | The specification PDF is cited from **april.org**, an advocacy association hosting a copy, because no numerique.gouv.fr URL for it was returned. | Open |
+| French DCAT profile | **Not established.** data.gouv.fr certainly exposes DCAT — the European portal harvests it — but no named French application profile was found, so the DCAT fork stops at three countries instead of four. | Open |
+| INSEE | Not modelled — only a passing mention in an unrelated article. The statistics cluster therefore stays at three unconnected national offices. | Open |
 
 ## Factual details flagged in entity bodies
 

@@ -56,6 +56,13 @@ relationships:
     confidence: medium
     valid_from: 2018-09-05
     valid_until: null
+  - type: applies-in
+    target: FR
+    source: fact
+    evidence: "As an EU regulation the GDPR is directly applicable in all member states; France brought the loi n° 78-17 of 6 January 1978 into conformity by the law of 20 June 2018 and the ordinance of 12 December 2018, deliberately amending the existing act rather than replacing it (cnil.fr; entreprises.cci-paris-idf.fr). NOT READ — search-only."
+    confidence: medium
+    valid_from: 2018-06-20
+    valid_until: null
 
 sources:
   - title: "General data protection regulation (GDPR) — summary"
@@ -103,13 +110,17 @@ nothing until adopted.
 
 ## Relationships
 
-- Applies in [[NL]], [[DE]] and [[BE]] — and in every other member state;
-  those `applies-in` relationships are added as countries join the Atlas,
-  per the country-neutral model.
-- Implemented by three national acts: [[NL-UAVG]], [[DE-BDSG]] and
-  [[BE-GDPR-WET]]. **This entity was not duplicated to accommodate any of
-  them** — there is no `NL-EU-GDPR`, `DE-EU-GDPR` or `BE-EU-GDPR`, which is
-  the whole point of the country-neutral model.
+- Applies in [[NL]], [[DE]], [[BE]] and [[FR]] — and in every other member
+  state; those `applies-in` relationships are added as countries join the
+  Atlas, per the country-neutral model.
+- Implemented by **four** national acts: [[NL-UAVG]], [[DE-BDSG]],
+  [[BE-GDPR-WET]] and [[FR-LIL]]. **This entity was not duplicated to
+  accommodate any of them** — there is no `NL-EU-GDPR`, `DE-EU-GDPR`,
+  `BE-EU-GDPR` or `FR-EU-GDPR`, which is the whole point of the
+  country-neutral model.
+- The four differ in legislative technique, and France is the outlier: it
+  **amended a 1978 act in place** rather than passing a new one. See
+  [[FR-LIL]].
 - [[NL-AP]] is the Dutch supervisory authority designated under it.
   [[BE-APD]] supervises the Belgian act. [[DE-BFDI]] supervises German
   federal bodies, but is *not* linked to [[DE-BDSG]] — no source read

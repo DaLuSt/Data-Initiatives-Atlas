@@ -1268,3 +1268,65 @@ identified (the 2016 act found is PSI-era and chronologically cannot be
 it); three national statistical offices now sit in the Atlas and none
 connects upward; only one of three national DPAs connects to the EDPB.
 Sourcing position unchanged — every Belgian entity is `search-only`.
+
+---
+
+# France — Fourth Country (2026-08-16)
+
+**Scope:** France as the fourth national scope, and specifically as a
+**unitary** state. `progress/backlog.md` asked for this: *"a fourth country
+— a unitary one. All three tests so far have been the Netherlands plus two
+federal states. A second unitary country would show whether anything else
+in the model is Netherlands-shaped, which the two federal cases could not
+isolate."*
+
+**Entities added: 11.** 178 → **189**. Relationships 218 → **242**.
+
+- **Country anchor (1):** `FR`.
+- **Organisations (4):** `FR-DINUM`, `FR-ETALAB`, `FR-CNIL`, `FR-ANSSI`.
+- **Legislation (3):** `FR-LIL`, `FR-LRN`, `FR-NIS2-LOI`.
+- **Frameworks (1):** `FR-RGI`.
+- **Platforms (2):** `FR-DATA-GOUV`, `FR-FRANCECONNECT`.
+
+**Existing entities modified:** `applies-in` → `FR` on 16 EU instruments,
+with the three-country prose updated to four.
+
+**Validation:** `run_all.py` 5/5, 0 errors; `test_build_graph.py` 32 tests
+OK; `audit.py` → `targets: ['BE', 'DE', 'FR', 'NL']`.
+
+**Principal result — a negative.** France is the **first country whose
+addition raised no new ontology question at all.** Every entity fitted an
+existing type, level, status and relationship type; nothing needed a caveat
+about what the Atlas could not express.
+
+That isolates the defect. With only Germany and Belgium it was unclear
+whether the model was federal-lossy or simply Netherlands-shaped. A second
+unitary state separates the two: **the ontology is sound for unitary states
+and lossy for federal ones**, and the loss is confined to the `level`
+vocabulary.
+
+**Other findings:**
+
+- **A third GDPR technique.** France amended the 1978 loi Informatique et
+  Libertés *in place* — a deliberate, sourced choice — where the other
+  three countries passed new acts. The entity implementing the GDPR in
+  France is 40 years older than the regulation.
+- **The amendment-lineage question, answered from the other side.**
+  Germany's [[DE-NIS2UMSUCG]] → [[DE-BSIG]] needed a `supersedes`
+  compromise because the amending act has its own name. France records the
+  amending instruments as facts in the amended act's body and needs no
+  relationship type at all. Two countries, two workarounds — the clearest
+  evidence yet that the missing type is worth adding.
+- **Four DPAs, one EDPB link.** [[FR-CNIL]] joins Germany and Belgium in
+  having no sourced link to [[EU-EDPB]]. The Atlas now shows a Board with
+  one member, which is a sourcing artefact rather than structure.
+- **Four national open data portals**, and their institutional weight
+  tracks the constitutional structure of the state — from a department
+  inside a Prime Minister's directorate to an agreement among seventeen
+  governments.
+
+**Known gaps:** France's Open Data Directive transposition was not
+identified (second country with this gap after Belgium); [[FR-NIS2-LOI]] is
+`status: unknown` because sources contradict each other on whether it is in
+force — the only such entity in the Atlas; no French DCAT profile was
+found, so the DCAT fork stops at three countries; INSEE is not modelled.
