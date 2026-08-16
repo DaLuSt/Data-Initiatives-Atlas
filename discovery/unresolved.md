@@ -9,9 +9,16 @@ one of these — resolve it with a real source, or leave it open.
 
 | Entity / topic | Question | Why it's unresolved | Noted by / date | Status |
 |---|---|---|---|---|
-| All unread-source entities (**119 of 125**: 116 `search-only` + 3 `unverified`) | Every factual claim | The environment's network egress policy blocks all direct page retrieval (`EGRESS_BLOCKED` for forumstandaardisatie.nl, digitaleoverheid.nl, noraonline.nl, vng.nl, logius.nl, eur-lex.europa.eu, wikipedia.org and every other host tested). Batch 1 was completed from search-engine results on explicit instruction, with the trade-off accepted knowingly. Every entity carries `verification: search-only`. | Batch 1 / 2026-08-14 | **Open — needs full re-verification pass** |
+| All unread-source entities (**172 of 178**: 169 `search-only` + 3 `unverified`; was 119 of 125 before the Germany and Belgium batches) | Every factual claim | The environment's network egress policy blocks all direct page retrieval (`EGRESS_BLOCKED` for forumstandaardisatie.nl, digitaleoverheid.nl, noraonline.nl, vng.nl, logius.nl, eur-lex.europa.eu, wikipedia.org and every other host tested). Batch 1 was completed from search-engine results on explicit instruction, with the trade-off accepted knowingly. Every entity carries `verification: search-only`. | Batch 1 / 2026-08-14 | **Open — needs full re-verification pass** |
 
 To find every affected entity: `grep -rl "verification: search-only" .`
+
+**The worklist for closing this is generated:**
+`discovery/reverification-allowlist.md` lists every host the Atlas cites,
+derived from the entity files by `tools/source_hosts.py`. Page retrieval is
+blocked by an **environment-level egress policy** — the proxy answers
+`403 to CONNECT` — which no change inside a session can lift. The allowlist
+is what to request.
 
 ## Status and temporal questions
 

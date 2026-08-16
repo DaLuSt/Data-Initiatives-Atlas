@@ -5,6 +5,10 @@ worked yet, beyond the batch plan itself (`progress/backlog.md`). Use this
 for gaps discovered mid-batch that fall outside the current batch's scope,
 so they aren't lost.
 
+**See also `discovery/reverification-allowlist.md`** — the generated list of
+every host the Atlas cites, which is the worklist for the re-verification
+pass and the allowlist to request if outbound HTTPS is restricted.
+
 ---
 
 ## Batch 1 — Netherlands: Core Data Governance (COMPLETED search-only; needs re-verification)
