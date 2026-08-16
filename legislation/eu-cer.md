@@ -68,6 +68,13 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: applies-in
+    target: PL
+    source: fact
+    evidence: "As an EU directive it requires transposition by all member states, Poland included (EUR-Lex ELI dir/2022/2557). NOT READ - search-only. No Polish transposing instrument was identified in this batch and none is asserted."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Directive (EU) 2022/2557 (CER) — Official Journal"
@@ -117,7 +124,7 @@ researched.
 
 ## Relationships
 
-- Applies in [[NL]], [[DE]], [[BE]], [[FR]] and [[ES]] — one entity, five
+- Applies in [[NL]], [[DE]], [[BE]], [[FR]], [[ES]] and [[PL]] — one entity, six
   countries. Every other member state belongs here too; the
   `applies-in` relationships are added as countries join the Atlas.
 - Companion to [[EU-NIS2]]; both stem from [[EU-CYBERSECURITY-STRATEGY]].

@@ -9,7 +9,7 @@ one of these — resolve it with a real source, or leave it open.
 
 | Entity / topic | Question | Why it's unresolved | Noted by / date | Status |
 |---|---|---|---|---|
-| All unread-source entities (**227 of 234**: 224 `search-only` + 3 `unverified` ([[NL]], [[EU]], [[UN]]); regenerate the count with `python tools/source_hosts.py`) | Every factual claim | The environment's network egress policy blocks all direct page retrieval (`EGRESS_BLOCKED` for forumstandaardisatie.nl, digitaleoverheid.nl, noraonline.nl, vng.nl, logius.nl, eur-lex.europa.eu, wikipedia.org and every other host tested). Batch 1 was completed from search-engine results on explicit instruction, with the trade-off accepted knowingly. Every entity carries `verification: search-only`. | Batch 1 / 2026-08-14 | **Open — needs full re-verification pass** |
+| All unread-source entities (**237 of 244**: 234 `search-only` + 3 `unverified` ([[NL]], [[EU]], [[UN]]); regenerate the count with `python tools/source_hosts.py`) | Every factual claim | The environment's network egress policy blocks all direct page retrieval (`EGRESS_BLOCKED` for forumstandaardisatie.nl, digitaleoverheid.nl, noraonline.nl, vng.nl, logius.nl, eur-lex.europa.eu, wikipedia.org and every other host tested). Batch 1 was completed from search-engine results on explicit instruction, with the trade-off accepted knowingly. Every entity carries `verification: search-only`. | Batch 1 / 2026-08-14 | **Open — needs full re-verification pass** |
 
 To find every affected entity: `grep -rl "verification: search-only" .`
 
@@ -482,6 +482,56 @@ batch; doing half would leave the layer inconsistent.
 - **[[NL-BRV]] holds personal data** and is therefore in scope for
   [[EU-GDPR]] and [[NL-UAVG]]. Nothing read says so, so nothing is asserted
   — an obviously-true statement kept out until a source states it.
+
+## Poland batch — sixth country (2026-08-16)
+
+### Both untested assumptions held
+
+Poland acceded in **2004**, in a different enlargement from the five western
+European states before it. `progress/backlog.md` asked whether the EU layer
+is the right regional parent for such a state and whether `applies-in` is
+the right attachment mechanism. **Both held**, with no ontology, schema,
+folder, validation or generator change and no `PL-EU-*` entity.
+
+### The new questions are about *time*, and neither is expressible
+
+| Question | Case | Why it cannot be recorded |
+|---|---|---|
+| An instrument in force **while the member state is before the CJEU** | [[PL-KSC]] — NIS2 amendment in force 3 Apr 2026, Poland referred for the delay | `status: active` is correct and carries none of it. [[ES-LCGC]] is at the **earlier** stage of the same process (reasoned opinion). Neither is in the structured data |
+| A national system **subject to a requirement it cannot meet** | [[PL-MOBYWATEL]] is reported architecturally incompatible with eIDAS 2.0 and unable to serve as an EUDI Wallet | No type expresses a failed obligation. `implements-requirement-from` asserts the opposite; `governed-by` implies it works. Recorded as `related-to` at `confidence: low` with the substance in the evidence string |
+
+**The eIDAS2 edge is the sixth sourced connection the vocabulary cannot
+express** — after the register batch's three (authorised use, key-sharing
+couplings, `authentiek gegeven`) and the UN batch's two (cooperation acts).
+It is also the first eIDAS2 link of any kind in the Atlas, after four
+batches recorded that none existed.
+
+### Closed by Poland
+
+| Item | How |
+|---|---|
+| **The 2016-act trap has a documented answer** | Poland had the identical 2016 open data act that caught Belgium and France, and [[PL-OTWARTE-DANE]] **explicitly and fully repeals it**. Four of six countries closed; the two open gaps now have a known shape — repeal (Poland) or amendment in place (Spain) |
+| **Best-sourced [[EU-ESS]] membership** | [[PL-GUS]] describes the ESS on its own pages and states its Eurostat obligation, where the other four attach on the composition rule. Five offices; **France is the only modelled country without one** |
+
+### Refused / not modelled — Poland
+
+| Item | Why |
+|---|---|
+| **CSIRT NASK, CSIRT GOV, CSIRT MON** | Not researched. Poland joins the Netherlands as a country with cybersecurity legislation modelled and **no cyber authority** — [[DOMAIN-CYBERSECURITY]] now shows two such countries of six |
+| **PESEL** | Poland's population register, the counterpart of [[NL-BRP]]. Named in [[PL-COI]]'s list of systems and nothing more |
+| **Agencja Informatyzacji** | The body a draft law would create from [[PL-COI]]. Does not exist; same refusal as Spain's Centro Nacional de Ciberseguridad |
+| **GIODO** | The predecessor DPA. Sources say the President took over only *part* of its competencies — not the clean succession [[ES-AEAD]] → [[ES-SGAD]] records, so nothing asserted |
+| **Krajowe Ramy Interoperacyjności**, a Polish DCAT profile, the operator of [[PL-DANE-GOV-PL]], the Act on Public Statistics | All named in sources, none researched |
+
+### Factual gaps — Poland
+
+| Entity | Question | Status |
+|---|---|---|
+| [[PL-ODO]] | ⚠ **No Dz.U. or ISAP citation** — the weakest-sourced of the six national GDPR instruments, resting on secondary commentary and a UODO annual report. Its substantive GDPR-specification provisions were not established at all; the `implements-requirement-from` evidence string says so | **Open — priority** |
+| [[PL-KSC]] | The **CJEU proceedings** rest on industry commentary; only one of four sources is a government page | Open |
+| [[PL-MOBYWATEL]] | The **eIDAS 2.0 incompatibility rests on press reporting only** — no ministry or Commission document among the sources found. This is why the edge is `confidence: low` | **Open — priority** |
+| [[PL-DANE-GOV-PL]] | ⚠ **Not one source is the portal's own site.** Everything comes from descriptions of the Act that establishes it; the operator was not identified | Open |
+| Institutional transformations | Three now touched in two countries — Spain's completed, Poland's COI one **pending**, Poland's GIODO one **partial**. Only the Spanish one is modelled as a succession. Worth handling deliberately rather than case by case | Open (modelling) |
 
 ## Factual details flagged in entity bodies
 

@@ -81,6 +81,13 @@ relationships:
     confidence: medium
     valid_from: 2001-10-30
     valid_until: null
+  - type: applies-in
+    target: PL
+    source: fact
+    evidence: "The EU and its 27 Member States are all Parties to the Aarhus Convention (environment.ec.europa.eu/law-and-governance/aarhus_en). NOT READ - search-only. No Polish instrument of ratification is cited and none is asserted."
+    confidence: medium
+    valid_from: 2001-10-30
+    valid_until: null
 
 sources:
   - title: "Introduction: Aarhus Convention"
@@ -124,7 +131,7 @@ had **49 Parties: 48 states and the European Union.**
 ## This is the Atlas's first UN → national relationship
 
 Every `applies-in` relationship in the Atlas until now has run from an **EU**
-instrument to a country. This one runs from a **UN** instrument to five
+instrument to a country. This one runs from a **UN** instrument to six
 countries, because the EU and all 27 member states are Parties in their own
 right.
 
@@ -146,7 +153,7 @@ own access-to-information law was written to satisfy.
    EU-ENVIRONMENTAL-INFORMATION-DIRECTIVE  (2003/4/EC)
         │  applies-in
         ▼
-   NL · DE · BE · FR · ES
+   NL · DE · BE · FR · ES · PL
 ```
 
 Batch 15 called the DCAT descent *"the template for what the UN layer
@@ -159,9 +166,9 @@ recommendation. This starts at a UN treaty.
 
 - **No national ratification instruments.** The claim sourced here is
   "the EU and all 27 member states are Parties", which supports
-  `applies-in`. It does **not** identify the Dutch, German, Belgian, French
-  or Spanish instrument of ratification, and none is named. Each evidence
-  string says so explicitly.
+  `applies-in`. It does **not** identify the Dutch, German, Belgian, French,
+  Spanish or Polish instrument of ratification, and none is named. Each
+  evidence string says so explicitly.
 - **No relationship to [[EU-OPEN-DATA-DIRECTIVE]] or [[EU-INSPIRE]].**
   Environmental information access is adjacent to both — INSPIRE is a
   geospatial environmental data directive, and the open data directive

@@ -68,6 +68,13 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: applies-in
+    target: PL
+    source: fact
+    evidence: "As an EU regulation it is directly applicable in all member states, Poland included. NOT READ - search-only. No Polish national certification arrangement is recorded in this Atlas."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "The EU Cybersecurity Act — summary"
@@ -111,7 +118,7 @@ find a hole without it.
 
 ## Relationships
 
-- Applies in [[NL]], [[DE]], [[BE]], [[FR]] and [[ES]] — one entity, five
+- Applies in [[NL]], [[DE]], [[BE]], [[FR]], [[ES]] and [[PL]] — one entity, six
   countries. Every other member state belongs here too; the
   `applies-in` relationships are added as countries join the Atlas.
 - Governs [[EU-ENISA]] (recorded on that entity).

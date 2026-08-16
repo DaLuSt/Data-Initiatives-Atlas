@@ -1,8 +1,42 @@
 # Current Batch
 
-**Status:** No batch in progress. The **cybersecurity domain** was added on
-2026-08-16, after the basisregistraties, UN-connection and Spain batches the
-same day.
+**Status:** No batch in progress. **Poland — the sixth country** was
+completed on 2026-08-16, after the cybersecurity domain, basisregistraties,
+UN-connection and Spain batches the same day.
+
+## Poland — sixth country
+
+**244 entities, 346 relationships, six countries.** `applies-in` targets
+`['BE', 'DE', 'ES', 'FR', 'NL', 'PL']`. No ontology, schema, folder,
+validation or generator change; no `PL-EU-*` entity. 10 entities added.
+
+**Principal result: both untested assumptions held.** Poland acceded in
+**2004**, in a different enlargement from the five western European states
+before it. `progress/backlog.md` asked whether the EU layer is the right
+regional parent for such a state and whether `applies-in` is the right way
+to attach it. Both are.
+
+**Second result: the new questions are about *time*, not structure** — and
+neither is expressible.
+
+- [[PL-KSC]] is **in force (3 Apr 2026) while Poland is before the CJEU**
+  for the delay that preceded it. `status: active` carries none of that, and
+  [[ES-LCGC]] sits at the earlier stage of the same process.
+- [[PL-MOBYWATEL]] is reported **architecturally incompatible with eIDAS
+  2.0** and unable to serve as an EUDI Wallet. This is the Atlas's **first
+  eIDAS2 link of any kind**, after four batches recorded that none existed —
+  and it is negative. No relationship type expresses a requirement an entity
+  *fails* to meet, so it is `related-to` at `confidence: low` with the
+  substance in the evidence string. **A sixth sourced connection the
+  vocabulary cannot express.**
+
+**Also:** the first country batch to attach to a **UN** instrument as well
+as EU ones ([[UN-AARHUS]]); the 2016-act trap now has a documented answer
+([[PL-OTWARTE-DANE]] repeals Poland's 2016 act, so four of six countries are
+closed); and the best-sourced [[EU-ESS]] membership yet ([[PL-GUS]]), leaving
+France the only modelled country with no statistical office.
+
+See `progress/completed.md` for the full entry.
 
 ## Cybersecurity domain
 
@@ -250,16 +284,16 @@ later.
 
 ## The sourcing position is unchanged
 
-**224 of 234 entities are `verification: search-only`**, and 227 of 234 are
-unread in total ([[DOMAIN-CYBERSECURITY]] is a taxonomy node carrying no
-factual claims, so it is `primary-source` like the other domains). Page retrieval was blocked throughout the basisregistraties
+**234 of 244 entities are `verification: search-only`**, and 237 of 244 are
+unread in total (the seven domain entities are taxonomy nodes carrying no
+factual claims, so they are `primary-source`). Page retrieval was blocked throughout the basisregistraties
 batch as it was for every earlier one
 (`EGRESS_BLOCKED`; 403 at the proxy tunnel, re-tested at the start of this
 batch, and `WebFetch` re-tested and blocked too — the proxy reports
 `connect_rejected`, an environment egress policy that cannot be changed
 from inside the session).
 
-Every entity added in these batches carries the sourcing caveat block. **No `accessed`
+Every Polish entity carries the sourcing caveat block. **No `accessed`
 dates were written and `last_verified` is null throughout**, because
 nothing was accessed or verified. The hosts that would need to be reachable
 are enumerated in `discovery/reverification-allowlist.md`, which is
@@ -278,45 +312,44 @@ URL is already recorded in the entities' `sources:` lists.
 
 ## Immediate next steps, in priority order
 
-1. **Re-verification pass** (blocked on egress). 227 of 234 entities are
-   unread; `discovery/reverification-allowlist.md` is the generated
-   worklist. Still the single highest-value outstanding work.
-2. **[[NL-CBW]] status check.** Its `start_date` is 2026-08-15. Its own body
-   instructs a reader after that date to verify and, if confirmed, move it
-   to `active` and [[NL-WBNI]] to `superseded`.
-3. **Propose a relationship type for cooperation acts.** The UN batch found
-   two real EU↔UN interactions the vocabulary cannot express — the
-   UNESCO–Commission agreement and the 2023 EU voluntary review. Two
-   examples is `metadata/relationship-types.md` §2.3's threshold. **This is
-   the clearest live candidate for the next vocabulary change.**
-4. **The eIDAS2 wallet deadline.** Roughly four months away, and **no
-   country in the Atlas is linked to [[EU-EIDAS2]]** — five national
-   identity systems, zero edges. A factual question now, not a modelling
-   one.
-5. **Finish the geospatial cluster.** [[UN-GGIM]] and [[UN-GGIM-EUROPE]]
+1. **Propose the missing relationship types.** **Six** sourced connections
+   across three batches cannot be recorded, in four shapes: **authorised
+   use** ([[NL-BELASTINGDIENST]] → [[NL-WOZ]], [[NL-RDW]] → [[NL-BRP]]),
+   **key-sharing couplings** ([[NL-BRK]] ↔ [[NL-NHR]]), **cooperation acts**
+   (the UNESCO–Commission agreement, the 2023 EU voluntary review), and now
+   an **unmet obligation** ([[PL-MOBYWATEL]] ↛ [[EU-EIDAS2]]). §2.3's
+   threshold is two. **This needs no page access at all** — the evidence is
+   already in the repository.
+2. **Re-verification pass** (blocked on egress). 237 of 244 entities are
+   unread; `discovery/reverification-allowlist.md` is the generated worklist.
+3. **The eIDAS2 deadline.** Now weeks away. Poland is the only country with
+   an edge to [[EU-EIDAS2]], and it says the national system **cannot
+   comply**. The other five have no edge — not because they comply, but
+   because nothing has been read either way.
+4. **[[NL-CBW]] status check.** Its `start_date` is 2026-08-15; its own body
+   instructs a reader after that date to verify and, if confirmed, move
+   [[NL-WBNI]] to `superseded`.
+5. **Connect the DPAs to the EDPB.** **Six** national authorities, one
+   sourced link. Six page reads fix five edges — still the cheapest
+   high-value item, now survived four country batches.
+6. **Model infringement status.** [[PL-KSC]] is in force with Poland before
+   the CJEU; [[ES-LCGC]] is a draft with a reasoned opinion received. Two
+   stages of one process, neither in the structured data.
+7. **The cyber authorities of the Netherlands and Poland.** Two of six
+   countries have cybersecurity legislation modelled and no authority — see
+   [[DOMAIN-CYBERSECURITY]].
+8. **Finish the geospatial cluster.** [[UN-GGIM]] and [[UN-GGIM-EUROPE]]
    exist; no edge reaches [[EU-INSPIRE]]. The missing middle is probably
-   **EuroGeographics**, playing [[EU-ESS]]'s role for geospatial.
-6. **Connect the DPAs to the EDPB.** Five national data protection
-   authorities, one sourced link. Five page reads fix four edges — still the
-   cheapest high-value item.
-7. **The national transpositions of
-   [[EU-ENVIRONMENTAL-INFORMATION-DIRECTIVE]].** Five `applies-in` edges and
-   not one transposing instrument named. ⚠ The trap is live: general
-   open-government acts already in the Atlas ([[NL-WOO]],
-   [[ES-LEY-37-2007]]) are **not** the environmental-information
-   transpositions.
-8. **[[EU-INSPIRE]] → [[NL]]**. The directive carries `applies-in` to `DE`,
-   `BE`, `FR` and `ES` but **not** `NL`. Four countries have touched it
-   without closing the Dutch gap.
-9. **`UN-FPOS` → national statistical legislation.** The UN batch connected
-   the statistical *offices*; the *legislation* ([[NL-WET-CBS]],
-   [[DE-BSTATG]]) still has no UN link.
-10. **Resolve [[FR-NIS2-LOI]]'s status.** The Atlas's only entity whose
-    sources contradict each other about whether the instrument is in force.
-11. **Resolve the federal modelling gap.** Three of five countries have an
-    unrepresentable sub-national tier, in three constitutionally distinct
-    forms, and the Atlas fails on all three identically.
-12. **A sixth country outside western Europe.** All five are western
-    European EU member states, which leaves two assumptions untested: that
-    the EU layer is the right regional parent, and that `applies-in` is the
-    right way to attach a country. See `progress/backlog.md`.
+   **EuroGeographics**.
+9. **INSEE.** France is the only one of six countries with no statistical
+   office in [[EU-ESS]].
+10. **[[EU-INSPIRE]] → [[NL]]**, still the one country the directive does
+    not reach; **[[FR-NIS2-LOI]]'s status**; and the **Belgian and French
+    Open Data Directive transpositions**, whose shape is now known from
+    Poland and Spain.
+11. **Resolve the federal modelling gap.** Three of six countries have an
+    unrepresentable sub-national tier in three constitutionally distinct
+    forms.
+12. **A seventh country outside the EU.** All six are EU member states, so
+    `applies-in` has never been tested against a country the EU cannot bind.
+    See `progress/backlog.md`.

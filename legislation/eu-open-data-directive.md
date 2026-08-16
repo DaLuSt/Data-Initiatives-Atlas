@@ -69,6 +69,13 @@ relationships:
     confidence: medium
     valid_from: 2021-11-02
     valid_until: null
+  - type: applies-in
+    target: PL
+    source: fact
+    evidence: "As an EU directive it requires transposition by all member states, Poland included; Poland transposed it by the ustawa z dnia 11 sierpnia 2021 r. o otwartych danych i ponownym wykorzystywaniu informacji sektora publicznego (Dz.U. 2021 poz. 1641), effective 8 December 2021, which fully repeals the earlier act of 25 February 2016 (isap.sejm.gov.pl WDU20210001641; gov.pl/web/ia). NOT READ - search-only. See PL-OTWARTE-DANE."
+    confidence: medium
+    valid_from: 2021-12-08
+    valid_until: null
 
 sources:
   - title: "Directive - 2019/1024 - EN - psi directive"
@@ -129,7 +136,7 @@ dataset regime is still unresearched (`coverage: low`).
 
 ## Relationships
 
-- Applies in [[NL]], [[DE]], [[BE]], [[FR]] and [[ES]] — one entity, five
+- Applies in [[NL]], [[DE]], [[BE]], [[FR]], [[ES]] and [[PL]] — one entity, six
   countries. Every other member state belongs here too; the
   `applies-in` relationships are added as countries join the Atlas.
 - Transposed into Dutch law through [[NL-WHO]], as amended by the Wet

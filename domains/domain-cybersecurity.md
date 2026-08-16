@@ -41,7 +41,7 @@ sources: []
 ## Description
 
 Classification node for the security of network and information systems.
-Created because it connects **23 entities across three layers and five
+Created because it connects **24 entities across three layers and six
 countries** — far past the two-entity threshold in
 `metadata/taxonomy.md` §1, which it passed several batches ago.
 
@@ -61,7 +61,7 @@ already holds, not a new assertion.
 [[EU-NIS]] · [[EU-NIS2]] · [[EU-CYBERSECURITY-ACT]] · [[EU-ENISA]] ·
 [[EU-CYBERSECURITY-STRATEGY]]
 
-**National (16)**
+**National (17)**
 
 | Country | Authority | Legislation | Baseline / scheme |
 |---|---|---|---|
@@ -70,6 +70,7 @@ already holds, not a new assertion.
 | 🇧🇪 Belgium | [[BE-CCB]] | [[BE-NIS1-WET]] · [[BE-NIS2-WET]] | — |
 | 🇫🇷 France | [[FR-ANSSI]] | [[FR-NIS2-LOI]] | — |
 | 🇪🇸 Spain | [[ES-CCN]] · [[ES-INCIBE]] | [[ES-LCGC]] | [[ES-ENS]] |
+| 🇵🇱 Poland | — | [[PL-KSC]] | — |
 
 ## What the domain view makes visible
 
@@ -77,7 +78,7 @@ A domain is a cross-cutting axis: it lets you ask *"what connects to
 cybersecurity?"* regardless of type, level or country. Three things become
 legible that were not, and none of them is visible from any single entity.
 
-### 1. One directive, five different national states
+### 1. One directive, six different national states
 
 Every country in the Atlas has a NIS2 position, and no two are alike:
 
@@ -88,10 +89,15 @@ Every country in the Atlas has a NIS2 position, and no two are alike:
 | Netherlands | [[NL-CBW]] | in force 15 Aug 2026 |
 | France | [[FR-NIS2-LOI]] | **`status: unknown`** — sources contradict each other |
 | Spain | [[ES-LCGC]] | **`status: proposed`** — still a draft |
+| Poland | [[PL-KSC]] | in force **3 Apr 2026** — and Poland is **before the CJEU** for the delay |
 
-Two of the five are neither "done" nor "not started", and they are unclear
+Two of the six are neither "done" nor "not started", and they are unclear
 in *different ways*: `unknown` means the Atlas does not know, `proposed`
-means it knows the thing has not happened.
+means it knows the thing has not happened. Poland adds a third kind that is
+**not on that axis at all** — in force, *and* the member state is in
+infringement proceedings over the delay that preceded it. Spain and Poland
+are at different stages of the same process (reasoned opinion, referral) and
+the Atlas records neither.
 
 ### 2. The national authority is not one institution
 
@@ -103,13 +109,15 @@ Every country has a cyber authority, and the shape differs:
   under the intelligence centre, [[ES-INCIBE]] for citizens and business —
   with [[ES-LCGC]] proposing a third body on top and redistributing
   competences between them.
-- **The Netherlands** — **none in the Atlas at all.** The NCSC is not
-  modelled. Four of five countries have an authority; the founding country
-  does not.
+- **The Netherlands and Poland** — **none in the Atlas at all.** The Dutch
+  NCSC is not modelled, and Poland's CSIRT NASK, CSIRT GOV and CSIRT MON
+  were not researched. **Four of six countries have an authority; two do
+  not**, including the founding country.
 
 That last row is the kind of gap a domain view is good at surfacing: it is
-invisible while looking at Dutch entities one at a time, and obvious the
-moment the domain is assembled.
+invisible while looking at one country's entities at a time, and obvious the
+moment the domain is assembled. The Poland batch added the second instance
+of it.
 
 ### 3. A three-layer chain that is nearly complete
 
@@ -161,8 +169,9 @@ does not assert because it was not established well enough to model.
 ## Not connected here
 
 - **[[EU-CER]]** — excluded, see above.
-- **The Dutch NCSC** — not an Atlas entity. The largest single hole in this
-  domain.
+- **The Dutch NCSC** and **Poland's CSIRT NASK / CSIRT GOV / CSIRT MON** —
+  not Atlas entities. Together the largest hole in this domain: two of six
+  countries have no cyber authority modelled.
 - **The Centro Nacional de Ciberseguridad** that [[ES-LCGC]] would create —
   deliberately not modelled, because it does not exist yet.
 - **CERT functions** — CCN-CERT, INCIBE-CERT and their equivalents are named
