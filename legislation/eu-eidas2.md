@@ -62,6 +62,13 @@ relationships:
     confidence: medium
     valid_from: 2024-05-20
     valid_until: null
+  - type: applies-in
+    target: ES
+    source: fact
+    evidence: "As an EU regulation it is directly applicable in all member states, Spain included, and requires every member state to offer a European Digital Identity Wallet. NOT READ - search-only. No Spanish wallet is recorded in this Atlas; Cl@ve is an identification scheme and no source read connects it to this Regulation. See ES-CLAVE."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: produces
     target: EU-EUDI-WALLET
     source: fact
@@ -134,7 +141,7 @@ operative instrument as modified. This differs from the
 
 - Amends [[EU-EIDAS]] (lineage recorded via `previous_version`).
 - Produces / establishes [[EU-EUDI-WALLET]].
-- Applies in [[NL]], [[DE]], [[BE]] and [[FR]] — one entity, four
+- Applies in [[NL]], [[DE]], [[BE]], [[FR]] and [[ES]] — one entity, five
   countries. Every other member state belongs here too; the
   `applies-in` relationships are added as countries join the Atlas.
 

@@ -70,6 +70,13 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: applies-in
+    target: ES
+    source: fact
+    evidence: "As an EU directive it requires transposition by all member states, Spain included (EUR-Lex ELI dir/2022/2555). NOT READ - search-only. Spain has NOT transposed it: the Anteproyecto de Ley de Coordinacion y Gobernanza de la Ciberseguridad was approved by the Council of Ministers on 14 January 2025 and remains in process, Spain missed the 17 October 2024 deadline, and the Commission issued a reasoned opinion in May 2025 (dsn.gob.es; cuatrecasas.com). See ES-LCGC."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Directive - 2022/2555 - EN"
@@ -93,7 +100,7 @@ high common level of cybersecurity across the Union. It requires
 organisations in designated critical sectors to meet cybersecurity
 requirements, report incidents and register with a supervisory authority.
 
-## Four national transpositions
+## Five national transpositions, five different answers
 
 | Country | Act | In force | Technique |
 |---|---|---|---|
@@ -101,14 +108,21 @@ requirements, report incidents and register with a supervisory authority.
 | Germany | [[DE-NIS2UMSUCG]] | 6 Dec 2025 | **revises** the existing [[DE-BSIG]] |
 | Netherlands | [[NL-CBW]] | 15 Aug 2026 | new act superseding [[NL-WBNI]] |
 | France | [[FR-NIS2-LOI]] | **unknown** | one vehicle for NIS2 + CER + DORA |
+| Spain | [[ES-LCGC]] | **not in force** | draft; would create a national cybersecurity centre |
 
 Belgium transposed nearly two years before the Netherlands, and Germany
 amended a standing act where the other two enacted new ones. **France
 missed the 17 October 2024 deadline and its transposing instrument's status
 could not be established at all** — sources contradict each other on
 whether it has been promulgated, so [[FR-NIS2-LOI]] is recorded
-`status: unknown` rather than given a guessed date. One directive
-entity carries all three, and the Atlas can show the spread at a glance —
+`status: unknown` rather than given a guessed date. **Spain also missed the
+deadline, drew a reasoned opinion from the Commission in May 2025, and its
+transposition is still a draft** — recorded `status: proposed`.
+
+The France/Spain pair is what makes the table worth having. Both are
+unimplemented; only one is *uncertain*. `unknown` means the Atlas does not
+know; `proposed` means the Atlas knows it has not happened. One directive
+entity carries all five, and the Atlas can show the spread at a glance —
 something it could not do with a single country.
 
 The German case is the awkward one to model: an amending act recorded as
@@ -127,7 +141,7 @@ transposition chain. Batch 8 should deepen it.
 
 ## Relationships
 
-- Applies in [[NL]], [[DE]], [[BE]] and [[FR]] — one entity, four
+- Applies in [[NL]], [[DE]], [[BE]], [[FR]] and [[ES]] — one entity, five
   countries. Every other member state belongs here too; the
   `applies-in` relationships are added as countries join the Atlas.
 - Transposed by [[NL-CBW]], [[DE-NIS2UMSUCG]], [[BE-NIS2-WET]] and

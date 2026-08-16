@@ -145,11 +145,13 @@ validation (`CONTRIBUTING.md` — Batch workflow).
 ## Opened by the Germany batch
 
 - [ ] **Resolve the federal modelling gap.** The `level` vocabulary has no
-  term between `national` and `local`, so no German Land and no Belgian
-  Region is representable — and `regional` cannot be reused because it
-  already means supra-national. Confirmed general by the Belgium batch, and
-  now the Atlas's best-evidenced ontology defect. Blocks OSLO, Digitaal
-  Vlaanderen, the Länder, and several other queued items.
+  term between `national` and `local`, so no German Land, no Belgian Region
+  and no Spanish Comunidad Autónoma is representable — and `regional` cannot
+  be reused because it already means supra-national. Confirmed general by
+  Belgium and given a **third distinct shape** by Spain; three of five
+  countries are affected. The Atlas's best-evidenced ontology defect by a
+  wide margin. Blocks OSLO, Digitaal Vlaanderen, the Länder, seventeen
+  Spanish regional open data portals, and several other queued items.
 - [ ] **Decide on an amendment relationship type.**
   `DE-NIS2UMSUCG` → `DE-BSIG` is recorded as `supersedes` at
   `confidence: low` for what is an amending act, with the two entities
@@ -160,17 +162,21 @@ validation (`CONTRIBUTING.md` — Batch workflow).
   conflates origin, governance and operation.
 - [ ] **`EU-INSPIRE` → `NL`.** Added with an `applies-in` to `DE` only,
   making an EU directive look German-specific. First-priority gap.
-- [ ] **A cybersecurity domain entity.** Thirteen entities across three
-  layers and three countries qualify under the taxonomy §1 threshold.
+- [ ] **A cybersecurity domain entity.** Well over twenty entities across
+  three layers and five countries qualify under the taxonomy §1 threshold.
+  Deliberately not created inside a country batch.
 - [ ] **The Open Data Directive transpositions for Belgium and France.**
   Neither identified. Both countries have a well-known *earlier* open data
   act (2016 in both cases) that looks like the answer and chronologically
-  cannot be it. Two of four countries now have this gap.
+  cannot be it. **Spain closed its equivalent gap** — [[ES-LEY-37-2007]] as
+  amended in 2021 — and had the same trap dated 2007, so three of five
+  countries have it and it is a research hazard, not a coincidence. Two of
+  five gaps remain.
 - [ ] **Resolve [[FR-NIS2-LOI]]'s status.** Sources contradict each other
   on whether France's NIS2 transposition is in force. The only entity in
   the Atlas with that problem.
-- [ ] **Connect the DPAs to the EDPB.** Four national data protection
-  authorities, one sourced link. Four page reads.
+- [ ] **Connect the DPAs to the EDPB.** **Five** national data protection
+  authorities, one sourced link. Five page reads would fix four edges.
 - [x] **A third country.** **Done 2026-08-15: Belgium**, 14 entities.
   Confirmed the model reusable a third time, and confirmed the federal
   limitation is **general** — and worse in Belgium, where `regional` is
@@ -179,17 +185,52 @@ validation (`CONTRIBUTING.md` — Batch workflow).
   11 entities. Raised **no new ontology question at all** — the first
   country of which that is true — which isolates the federal `level` gap as
   the model's single real defect. See `progress/completed.md`.
-- [ ] **A fifth country outside the founding-six / Benelux-DACH group.**
-  All four so far are neighbouring western European states with similar
-  administrative traditions. A Nordic, southern or central European state
-  (Ireland, Spain, Poland, Estonia) would test whether the model is
-  *western-European*-shaped rather than merely country-neutral — a question
-  four similar countries cannot answer.
+- [x] **A fifth country outside the founding-six / Benelux-DACH group.**
+  **Done 2026-08-16: Spain**, 17 entities. Southern European, a later
+  enlargement, and a constitutional form none of the others use — and still
+  no ontology, schema, folder, validation or generator change. The model is
+  **not western-European-shaped**. It also gave the federal `level` gap a
+  **third distinct shape** (Comunidades Autónomas), which localises the
+  defect in the vocabulary rather than in any country's constitution. See
+  `progress/completed.md`.
+- [ ] **A sixth country outside western Europe entirely.** All five are
+  western European EU member states. A central or northern European state
+  (Poland, Estonia) — or a non-EU one — would test the two assumptions five
+  EU members cannot: that the EU layer is the right regional parent, and
+  that `applies-in` is the right way to attach a country to it.
+
+## Opened by the Spain batch
+
+- [ ] **Create an `EU-ESS` entity for the European Statistical System.** The
+  single highest-value modelling fix available. The sources describe
+  Eurostat and the national statistical offices as members of one system;
+  the Atlas currently expresses that as one weak `related-to` edge marked
+  `source: interpretation` ([[ES-INE]]). One entity with `part-of` edges
+  would connect **four** national statistical offices at once and close most
+  of the statistics cluster properly.
+- [ ] **Decide whether the national legal-instrument rank should be
+  modelled.** Spain's `Ley Orgánica` has constitutional rank and can only be
+  amended by absolute majority; `type: law` flattens that, as it already
+  flattens *Gesetz*/*Verordnung*, *wet*/*koninklijk besluit* and
+  *loi*/*ordonnance*. Five countries have been modelled without the field;
+  adding it now means re-reading every instrument.
+- [ ] **Decide whether partial implementation is expressible.**
+  [[ES-LOPDGDD]] implements the GDPR *with part of itself* — its Title X on
+  digital rights descends from nothing European. Relationships are
+  whole-entity to whole-entity. One example so far; do not add a type on one.
+- [ ] **Resolve [[ES-LCGC]]'s passage.** When Spain's NIS2 transposition
+  becomes law, the Centro Nacional de Ciberseguridad becomes a real entity
+  and the INCIBE/CCN competence split becomes modellable.
+- [ ] **Confirm the DCAT-AP-ES alignment is in force.** [[ES-NTI-RISP]]'s
+  `based-on` [[EU-DCAT-AP]] is `confidence: low` because the model is in
+  administrative processing.
+- [ ] **Model Red.es**, so [[ES-DATOS-GOB-ES]] can carry a `maintained-by`
+  edge like the Dutch and German portals do.
 
 ## Explicitly out of scope for now
 
-- Countries other than the Netherlands and Germany (structure supports
-  them; no content until a country is actually researched — README
-  §"Country Participation Model").
+- Countries beyond the five modelled (structure supports them; no content
+  until a country is actually researched — README §"Country Participation
+  Model").
 - Any graph database — Git + Markdown/YAML remains the sole source of truth
   (README §"Source of Truth").

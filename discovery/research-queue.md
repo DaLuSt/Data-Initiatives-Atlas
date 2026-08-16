@@ -167,6 +167,22 @@ by accident.
 | Ordonnance n° 2005-1516 | Legal basis of [[FR-RGI]]; not modelled | Later | France batch |
 | Ordonnance of 21 October 2010 | France's INSPIRE transposition, cited on [[EU-INSPIRE]]'s `applies-in`; its number was not established so no entity was created | Later | France batch |
 
+## Spain — queued from the fifth-country batch (2026-08-16)
+
+| Area / entity | Why it needs research | Suggested batch | Noted by / date |
+|---|---|---|---|
+| **European Statistical System (`EU-ESS`)** | The single highest-value item this batch produced. The sources describe Eurostat and the national statistical offices as members of one system; the Atlas currently carries that as one weak `related-to` edge on [[ES-INE]] marked `source: interpretation`. One entity with `part-of` edges would connect **four** national statistical offices at once. Deliberately not created inside a country batch | **Next** | Spain batch |
+| **BOE citation for Real Decreto 729/2023** | The decree creating [[ES-AESIA]]. No search result returned its BOE identifier, so the Atlas's first AI Act link rests on secondary sources and government press material | **Next** | Spain batch |
+| **Red.es** | Public business entity operating [[ES-DATOS-GOB-ES]]. Cited but too thinly sourced to create, which is why that portal is the only national open data portal in the Atlas besides the Dutch one with no `maintained-by` edge | Next | Spain batch |
+| **Spanish organic law on artificial intelligence** | Sources refer to one landing the AI Act domestically with sanctions and sandboxes, at a stage they describe inconsistently. Not created — the Atlas already carries one instrument whose sources conflict ([[FR-NIS2-LOI]]) and does not need a second on weaker evidence | Next | Spain batch |
+| **Ley 39/2015 and Ley 40/2015** | Spain's common administrative procedure and public-sector legal regime acts — the current legal base for much of what [[ES-AEAD]] does, and the successors to Ley 11/2007 which established [[ES-ENI]] | Next | Spain batch |
+| **Spain's INSPIRE transposition** | [[EU-INSPIRE]] now carries `applies-in` → `ES` with no transposing instrument identified | Later | Spain batch |
+| **AENOR / UNE** | Spanish national standards body — the fifth leg of the CEN/ISO membership pattern after [[DE-DIN]], [[NL-NEN]], Belgium's NBN and France's AFNOR | Later | Spain batch |
+| **INCIBE's founding instrument** | Its legal form, its relationship to the earlier INTECO, and how INCIBE-CERT relates to CCN-CERT are all unrecorded. [[ES-INCIBE]] is `coverage: low` because of it | Later | Spain batch |
+| **Cl@ve's legal basis and operator** | Plus the relationship between Cl@ve PIN and Cl@ve Permanente, and the status of any Spanish digital identity wallet under [[EU-EIDAS2]] | Later | Spain batch |
+| **Centro Nacional de Ciberseguridad** | Would be created by [[ES-LCGC]]. **Deliberately not modelled** — it does not exist, and a node for it would be indistinguishable in the graph from a body that does | Blocked | Spain batch |
+| **The Comunidades Autónomas** | Seventeen regional open data portals, regional data protection authorities, and the co-governance half of [[ES-ESPANA-DIGITAL-2026]]. **Blocked on the `level` vocabulary**, not on sourcing | Blocked | Spain batch |
+
 ## Other queued research
 
 | Area / entity | Why it needs research | Suggested batch | Noted by / date |

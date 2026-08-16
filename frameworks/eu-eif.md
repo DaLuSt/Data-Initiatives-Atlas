@@ -61,6 +61,13 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: applies-in
+    target: ES
+    source: fact
+    evidence: "The EIF provides support to Member States to design and update their national interoperability frameworks (NIFs), Spain included (interoperable-europe.ec.europa.eu). NOT READ - search-only. As with the Netherlands, Germany and France, the Spanish national framework is NOT identified: whether the Esquema Nacional de Interoperabilidad serves that role is unsourced and is not asserted. See ES-ENI."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "European Interoperability Framework (EIF)"
@@ -133,7 +140,7 @@ Europe Board remains uncreated (Batch 9).
 
 ## Relationships
 
-- Applies in [[NL]], [[DE]], [[BE]] and [[FR]] through the NIF alignment
+- Applies in [[NL]], [[DE]], [[BE]], [[FR]] and [[ES]] through the NIF alignment
   mechanism.
 - **[[BE-BELGIF]] is `based-on` this framework** — the Atlas's first and
   so far only EIF → national-framework descent. The Belgian sources state

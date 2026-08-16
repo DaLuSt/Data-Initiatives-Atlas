@@ -59,6 +59,13 @@ relationships:
     confidence: medium
     valid_from: 2020-12-12
     valid_until: null
+  - type: applies-in
+    target: ES
+    source: fact
+    evidence: "As an EU regulation the Single Digital Gateway Regulation is directly applicable in all member states, Spain included (EUR-Lex ELI reg/2018/1724). NOT READ - search-only. Spain's Punto de Acceso General (administracion.gob.es) is cited as a source in this batch but no source read connects it to this Regulation, so no relationship is asserted."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "The single digital gateway — summary"
@@ -100,7 +107,7 @@ likewise unresearched — a plausible connection to [[NL-GDI]] and
 
 ## Relationships
 
-- Applies in [[NL]], [[DE]], [[BE]] and [[FR]] — one entity, four
+- Applies in [[NL]], [[DE]], [[BE]], [[FR]] and [[ES]] — one entity, five
   countries. Every other member state belongs here too; the
   `applies-in` relationships are added as countries join the Atlas.
 

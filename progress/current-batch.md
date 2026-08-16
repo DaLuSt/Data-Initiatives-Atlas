@@ -1,7 +1,40 @@
 # Current Batch
 
-**Status:** No batch in progress. **France — the fourth country** was
+**Status:** No batch in progress. **Spain — the fifth country** was
 completed on 2026-08-16.
+
+## Spain — fifth country
+
+**206 entities, 269 relationships, five countries.** `applies-in` targets
+`['BE', 'DE', 'ES', 'FR', 'NL']`. No ontology, schema, folder, validation or
+generator change; no `ES-EU-*` entity.
+
+**Principal result: the model is not western-European-shaped.** Spain is the
+first country outside the founding-six / Benelux-DACH group — southern
+European, a later enlargement, a constitutional form none of the others use
+— and it fitted unchanged. The standing objection that four neighbouring
+states cannot demonstrate country-neutrality is answered.
+
+**Second result: the federal `level` gap has a third shape.** Comunidades
+Autónomas are neither Länder nor Regions, and the Atlas fails on all three
+identically — which localises the defect in the vocabulary rather than in
+any country's constitution. Three of five countries are affected. In Spain
+it hides seventeen regional open data portals and half of a named axis of
+the national digital strategy.
+
+**Four things closed:** the first national link to [[EU-AI-ACT]]
+([[ES-AESIA]], the EU's first AI supervisory agency, created *before* the
+Regulation applied); the Open Data Directive transposition on the third
+attempt ([[ES-LEY-37-2007]]); a fourth branch of the DCAT chain
+([[ES-NTI-RISP]], the only legally mandatory one); and the first edge in the
+statistics cluster ([[ES-INE]] → [[EU-EUROSTAT]], recorded honestly as an
+interpretation).
+
+**Also:** the Atlas's first *organisational* succession ([[ES-AEAD]]
+supersedes [[ES-SGAD]]), and five countries now showing **five different
+NIS2 states** — including `proposed` and `unknown` side by side.
+
+See `progress/completed.md` for the full entry.
 
 ## France — fourth country
 
@@ -74,8 +107,8 @@ pipeline no workflow can perform for itself; it is documented in
 `docs/github-pages.md` under one-time repository setup.
 
 **The Atlas is structurally complete and evidentially unverified**, and it
-now covers **four countries** (this section describes the state at the
-time of Batch 16; see the France entry above for the current figures). See
+now covers **five countries** (this section describes the state at the
+time of Batch 16; see the Spain entry above for the current figures). See
 `validation/germany-second-country-report.md` for the second-country result
 and `validation/final-quality-gate.md` for the standing verdict.
 
@@ -115,14 +148,15 @@ later.
 
 ## The sourcing position is unchanged
 
-**180 of 189 entities are `verification: search-only`.** Page retrieval was
-blocked throughout the France batch as it was for every earlier one
+**197 of 206 entities are `verification: search-only`**, and 200 of 206 are
+unread in total. Page retrieval was blocked throughout the Spain batch as it
+was for every earlier one
 (`EGRESS_BLOCKED`; 403 at the proxy tunnel, re-tested at the start of this
 batch, and `WebFetch` re-tested and blocked too — the proxy reports
 `connect_rejected`, an environment egress policy that cannot be changed
 from inside the session).
 
-Every French entity carries the sourcing caveat block. **No `accessed`
+Every Spanish entity carries the sourcing caveat block. **No `accessed`
 dates were written and `last_verified` is null throughout**, because
 nothing was accessed or verified. The hosts that would need to be reachable
 are enumerated in `discovery/reverification-allowlist.md`, which is
@@ -142,30 +176,42 @@ URL is already recorded in the entities' `sources:` lists.
 ## Immediate next steps, in priority order
 
 1. **Re-verification pass** (blocked on egress). Precondition for
-   re-running Batches 6, 11 and 15 meaningfully.
-2. **[[NL-CBW]] status check.** Its `start_date` is 2026-08-15 — today. Its
-   own body instructs a reader after that date to verify and, if confirmed,
-   move it to `active` and [[NL-WBNI]] to `superseded`. Not done: it cannot
-   be verified without page retrieval.
-3. **[[EU-INSPIRE]] → [[NL]]**. The directive now carries `applies-in` to
-   `DE`, `BE` and `FR` but **not** `NL`, because the Dutch transposition is
-   unsourced. Three countries have now touched it without closing the Dutch
-   gap. Near-certainly one page read.
-4. **Resolve [[FR-NIS2-LOI]]'s status.** The Atlas's only entity whose
-   sources contradict each other about whether the instrument is in force;
-   recorded `status: unknown`, `confidence: low`. One page read on
-   Légifrance settles it.
-5. **Connect the UN layer.** Unchanged by Germany, Belgium *and* France, and
-   still the largest structural gap: `UN → anything` is 0. The statistics
-   cluster in `discovery/unresolved.md` holds **five** refused links — three
-   national statistical offices sit in the Atlas and none connects upward.
-   France did not add a fourth: INSEE was not modelled for want of a source.
-6. **Resolve the federal modelling gap.** Two of the Atlas's four countries
-   are federal, and both are under-represented because there is no `level`
-   term between `national` and `local`. France's addition made this
-   diagnosis precise — see `countries/fr/fr.md` and `countries/be/be.md`.
-7. **A cybersecurity domain entity.** Now sixteen entities across three
-   layers and four countries would qualify — well over the taxonomy §1
-   threshold. Deliberately not created inside a country batch.
-8. **A fifth country outside this group.** All four are neighbouring western
-   European states. See `progress/backlog.md`.
+   re-running Batches 6, 11 and 15 meaningfully. 200 of 206 entities are
+   unread; `discovery/reverification-allowlist.md` is the generated worklist.
+2. **[[NL-CBW]] status check.** Its `start_date` is 2026-08-15 — yesterday.
+   Its own body instructs a reader after that date to verify and, if
+   confirmed, move it to `active` and [[NL-WBNI]] to `superseded`. Not done:
+   it cannot be verified without page retrieval.
+3. **Create an `EU-ESS` entity for the European Statistical System.** The
+   highest-value modelling fix now available. [[ES-INE]] carries the Atlas's
+   only statistics-cluster edge, deliberately weak and marked
+   `source: interpretation`, because the sources describe a three-party
+   system rather than a bilateral link. One entity would connect **four**
+   national statistical offices properly and close most of the cluster.
+4. **The eIDAS2 wallet deadline.** Roughly four months away, and **no
+   country in the Atlas is linked to [[EU-EIDAS2]]** — five national
+   identity systems, zero edges. This has moved from a modelling question to
+   a factual one.
+5. **[[EU-INSPIRE]] → [[NL]]**. The directive now carries `applies-in` to
+   `DE`, `BE`, `FR` and `ES` but **not** `NL`, because the Dutch
+   transposition is unsourced. Four countries have now touched it without
+   closing the Dutch gap. Near-certainly one page read.
+6. **Connect the DPAs to the EDPB.** Five national data protection
+   authorities, one sourced link. Five page reads fix four edges — still the
+   cheapest high-value item.
+7. **Resolve [[FR-NIS2-LOI]]'s status.** The Atlas's only entity whose
+   sources contradict each other about whether the instrument is in force.
+   One page read on Légifrance settles it.
+8. **Connect the UN layer.** Unchanged by Germany, Belgium, France *and*
+   Spain: `UN → anything` is still 0. An `EU-ESS` entity (step 3) would give
+   [[UN-UNSD]] something to attach to.
+9. **Resolve the federal modelling gap.** Three of the Atlas's five
+   countries have an unrepresentable sub-national tier, in three
+   constitutionally distinct forms, and the Atlas fails on all three
+   identically. See `countries/es/es.md`, `countries/be/be.md` and
+   `countries/de/de.md`.
+10. **A cybersecurity domain entity.** Well over twenty entities across
+    three layers and five countries would qualify. Deliberately not created
+    inside a country batch.
+11. **A sixth country outside western Europe.** All five are western
+    European EU member states. See `progress/backlog.md`.

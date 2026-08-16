@@ -60,6 +60,13 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: applies-in
+    target: ES
+    source: fact
+    evidence: "As an EU regulation it is directly applicable in all member states, Spain included (EUR-Lex ELI reg/2024/903). NOT READ - search-only. No Spanish Interoperable Europe national competent authority is recorded in this Atlas."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Regulation (EU) 2024/903 — Official Journal"
@@ -105,7 +112,7 @@ it determines whether the EU interoperability layer has one root or two.
 
 ## Relationships
 
-- Applies in [[NL]], [[DE]], [[BE]] and [[FR]] — one entity, four
+- Applies in [[NL]], [[DE]], [[BE]], [[FR]] and [[ES]] — one entity, five
   countries. Every other member state belongs here too; the
   `applies-in` relationships are added as countries join the Atlas.
 - Associated with [[EU-EIF]] — see above.

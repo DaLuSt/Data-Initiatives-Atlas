@@ -4,7 +4,7 @@ Data Initiatives Atlas
 
 Data Initiatives Atlas is an open, machine-readable knowledge base for mapping and connecting data-related initiatives, legislation, policies, standards, frameworks, programmes, organisations and data ecosystems across international, regional and national levels.
 
-The Netherlands is the first participating country, followed by Germany, Belgium and France. The underlying information model is deliberately designed to support the addition of other countries over time — a design that was an assertion while one country was modelled and is a demonstrated property now that four are, none of which required an ontology, schema, folder or validation change. See `validation/germany-second-country-report.md` and `countries/README.md`.
+The Netherlands is the first participating country, followed by Germany, Belgium, France and Spain. The underlying information model is deliberately designed to support the addition of other countries over time — a design that was an assertion while one country was modelled and is a demonstrated property now that five are, none of which required an ontology, schema, folder or validation change. See `validation/germany-second-country-report.md` and `countries/README.md`.
 
 
 ## 🕸️ Explore the Atlas
@@ -87,7 +87,13 @@ European Initiative
       │                    ├── Framework
       │                    └── Data ecosystem
       │
-      └──────────────► Country E
+      ├──────────────► Spain
+      │                    │
+      │                    ├── National initiative
+      │                    ├── Framework
+      │                    └── Data ecosystem
+      │
+      └──────────────► Country F
 
 The Netherlands is the starting point, not the boundary of the project.
 
@@ -132,7 +138,7 @@ National
 
 National initiatives, legislation, strategies, frameworks, organisations and data ecosystems.
 
-The Netherlands is the first participating country; Germany, Belgium and France followed.
+The Netherlands is the first participating country; Germany, Belgium, France and Spain followed.
 
 Additional countries can be added without changing the fundamental information model.
 
@@ -143,6 +149,7 @@ countries/
 ├── de/
 ├── be/
 ├── fr/
+├── es/
 ├── uk/
 └── ...
 
@@ -237,7 +244,11 @@ EU Regulation
         │                    │
         │                    └── National implementation
         │
-        └──────────────► France
+        ├──────────────► France
+        │                    │
+        │                    └── National implementation
+        │
+        └──────────────► Spain
                              │
                              └── National implementation
 
@@ -292,7 +303,8 @@ data-initiatives-atlas/
 │   ├── nl/
 │   ├── de/
 │   ├── be/
-│   └── fr/
+│   ├── fr/
+│   └── es/
 │
 ├── regions/
 │   └── eu/
@@ -375,7 +387,7 @@ the generator. Neither is authoritative over the source.
 
 Data Initiatives Atlas is intended to grow through participation.
 
-The Netherlands provided the initial national contribution, and Germany, Belgium and France followed, but the Atlas is designed as an internationally extensible project.
+The Netherlands provided the initial national contribution, and Germany, Belgium, France and Spain followed, but the Atlas is designed as an internationally extensible project.
 
 Future contributors may:
 

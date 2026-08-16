@@ -92,8 +92,9 @@ recorded. That leaves the four-country picture:
 | Germany | [[DE-DNG]] — recorded |
 | Belgium | **not identified** |
 | France | **not identified** |
+| Spain | [[ES-LEY-37-2007]] — recorded, as amended in 2021 |
 
-Two of four countries now have a visible gap here, both for the same
+Two of five countries now have a visible gap here, both for the same
 reason: each has a well-known, easily-found *earlier* open data act that
 looks like the answer and is not. The Atlas records the earlier acts and
 declines to mislabel them.

@@ -1330,3 +1330,117 @@ identified (second country with this gap after Belgium); [[FR-NIS2-LOI]] is
 `status: unknown` because sources contradict each other on whether it is in
 force — the only such entity in the Atlas; no French DCAT profile was
 found, so the DCAT fork stops at three countries; INSEE is not modelled.
+
+---
+
+# Spain — Fifth Country (2026-08-16)
+
+**Scope:** Spain as the fifth national scope, and specifically as the first
+country **outside the founding-six / Benelux-DACH group**.
+`progress/backlog.md` asked for this: *"A fifth country outside the
+founding-six / Benelux-DACH group. All four so far are neighbouring western
+European states with similar administrative traditions. A Nordic, southern
+or central European state (Ireland, Spain, Poland, Estonia) would test
+whether the model is western-European-shaped rather than merely
+country-neutral — a question four similar countries cannot answer."*
+
+**Entities added: 17.** 189 → **206**. Relationships 242 → **269**.
+
+- **Country anchor (1):** `ES`.
+- **Organisations (7):** `ES-AEAD`, `ES-SGAD`, `ES-AEPD`, `ES-AESIA`,
+  `ES-INCIBE`, `ES-CCN`, `ES-INE`.
+- **Legislation (3):** `ES-LOPDGDD`, `ES-LEY-37-2007`, `ES-LCGC`.
+- **Frameworks (2):** `ES-ENI`, `ES-ENS`.
+- **Standards (1):** `ES-NTI-RISP`.
+- **Platforms (2):** `ES-DATOS-GOB-ES`, `ES-CLAVE`.
+- **Strategies (1):** `ES-ESPANA-DIGITAL-2026`.
+
+**Existing entities modified:** `applies-in` → `ES` on 16 EU instruments,
+with the four-country prose updated to five; the NIS2 transposition table,
+the GDPR technique table and the Open Data Directive table each gained a
+fifth row.
+
+**Validation:** `run_all.py` 5/5, 0 errors, 0 warnings;
+`test_build_graph.py` 32 tests OK; `test_ui.mjs` 47/47;
+`audit.py` → `targets: ['BE', 'DE', 'ES', 'FR', 'NL']`.
+
+**Principal result — the model is not western-European-shaped.** Spain is
+southern European, joined the EU in a later enlargement than any of the
+first four, and organises its state on a constitutional principle none of
+them use. It required **no ontology, schema, taxonomy, relationship-type,
+folder, validation or generator change**, and produced no `ES-EU-*` entity.
+The standing objection that four neighbouring states cannot demonstrate
+country-neutrality is answered.
+
+**Second result — the federal gap has a third shape, which localises it.**
+Spain is a **State of Autonomies**: seventeen Comunidades Autónomas with
+devolved competences of differing scope, neither a federation nor a unitary
+state. Germany's Länder, Belgium's Regions and Spain's Comunidades
+Autónomas are three constitutionally distinct arrangements, and **the Atlas
+fails on all three identically.** That is the strongest evidence yet that
+the defect sits in the `level` vocabulary rather than in any country's
+constitutional shape. Three of five countries are now affected.
+
+The Spanish cost is measurable: seventeen regional open data portals (over
+14,000 datasets by 2019), regional data protection authorities, autonomous
+communities managing over 35 % of consolidated public spending, and
+*cogobernanza del Estado y las Comunidades Autónomas* as **one of two
+cross-cutting axes** of `ES-ESPANA-DIGITAL-2026` — of which the Atlas can
+model only the state half.
+
+**Four things Spain closed:**
+
+- **The first national link to [[EU-AI-ACT]].** [[ES-AESIA]] is the first
+  AI supervisory agency in the EU, created in 2023 **before** the
+  Regulation applied, and designated under Article 70. Four countries had
+  been added without any national AI body at all. Recorded as `governed-by`
+  rather than `implements-requirement-from`, which is reserved for legal
+  instruments.
+- **The Open Data Directive transposition, on the third attempt.**
+  [[ES-LEY-37-2007]] as amended by Real Decreto-ley 24/2021 — an omnibus
+  instrument transposing eight directives, produced late and under threat
+  of infringement proceedings. The "obvious earlier act" trap that caught
+  Belgium and France (2016 in both) exists in Spain too, dated **2007**;
+  three of five countries have it, so it is a research hazard rather than a
+  coincidence.
+- **The fourth branch of the DCAT chain.** [[ES-NTI-RISP]] is the only one
+  of the four national profiles that is a **legally mandatory technical
+  norm** rather than an agreed profile — recorded at `confidence: low`
+  because the DCAT-AP-ES model is still in administrative processing.
+- **The first edge in the statistics cluster**, after five refusals across
+  four countries. [[ES-INE]] `related-to` [[EU-EUROSTAT]], deliberately at
+  `source: interpretation`, `confidence: low`, because the sources describe
+  a three-party structure (the European Statistical System) rather than a
+  bilateral relationship. The correct fix — an `EU-ESS` entity — was **not**
+  created inside a country batch.
+
+**Also recorded:**
+
+- **The Atlas's first organisational succession.** [[ES-AEAD]] `supersedes`
+  [[ES-SGAD]], constituted 21 February 2025. `supersedes` was introduced for
+  legislation and carried an organisational transformation unmodified — a
+  reusability result. What it cannot express is that this was a
+  *transformation* rather than an abolition and replacement.
+- **Five countries, five NIS2 states.** [[ES-LCGC]] is `status: proposed`;
+  [[FR-NIS2-LOI]] is `status: unknown`. *We know it has not happened* versus
+  *we do not know* — both expressible, and side by side for the first time
+  on instruments transposing one directive.
+- **Five DPAs, still one EDPB link.** [[ES-AEPD]] joins Germany, Belgium and
+  France in having none. The artefact is now more expensive to leave open
+  rather than clearer.
+- **A third national identity architecture.** [[ES-CLAVE]] is neither
+  federation ([[FR-FRANCECONNECT]]) nor central account ([[DE-BUNDID]]) but
+  a credential scheme, and it is the only one that treats identification and
+  signature as separate problems. The eIDAS2 wallet deadline is now roughly
+  four months away with **no country in the Atlas linked to it**.
+
+**Known gaps:** no BOE citation for Real Decreto 729/2023, the decree
+creating AESIA; the `Ley Orgánica` constitutional rank is not modelled, and
+neither is partial implementation (LOPDGDD's Title X implements nothing
+European); Red.es is cited but not created, so `ES-DATOS-GOB-ES` has no
+`maintained-by` edge; the Centro Nacional de Ciberseguridad that
+[[ES-LCGC]] would create was **not** given a node, because it does not
+exist; Ley 39/2015 and 40/2015 were not modelled.
+
+Sourcing position unchanged — every Spanish entity is `search-only`,
+`last_verified: null`, no `accessed` dates. 200 of 206 entities are unread.
