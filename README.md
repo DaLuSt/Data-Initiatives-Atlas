@@ -416,8 +416,7 @@ generator. Neither is authoritative over the source.
 ## 🤝 An open participation model
 
 The Atlas is intended to grow through participation. The Netherlands
-provided the initial national contribution, and Germany, Belgium, France and
-Spain followed — but the Atlas is designed as an internationally extensible
+provided the initial national contribution. But the Atlas is designed as an internationally extensible
 project.
 
 Contributors may:
