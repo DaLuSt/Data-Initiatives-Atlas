@@ -170,6 +170,64 @@ class TestGraphGeneration(unittest.TestCase):
         for code, name in anchors.items():
             self.assertEqual(labels.get(code), name)
 
+    def test_domains_discovered_dynamically(self):
+        """taxonomy.md §1.1 — the domain facet is the cross-cutting axis."""
+        from_data = {
+            d for e in self.entities
+            for d in (e.frontmatter.get("domains") or [])
+        }
+        from_graph = {d["code"] for d in self.graph["facets"]["domains"]}
+        self.assertEqual(from_data, from_graph)
+
+    def test_domain_labels_come_from_domain_entities(self):
+        """A domain facet row is named by its entity, not by its id."""
+        labels = {d["code"]: d["label"] for d in self.graph["facets"]["domains"]}
+        domains = {
+            e.frontmatter["id"]: e.frontmatter["name"]
+            for e in self.entities if e.frontmatter.get("type") == "domain"
+        }
+        self.assertTrue(domains, "expected at least one domain entity")
+        for code, name in domains.items():
+            if code in labels:          # a domain nobody tags has no facet row
+                self.assertEqual(labels[code], name)
+
+    def test_domain_counts_match_the_tagging(self):
+        for row in self.graph["facets"]["domains"]:
+            tagged = sum(
+                1 for e in self.entities
+                if row["code"] in (e.frontmatter.get("domains") or [])
+            )
+            self.assertEqual(row["count"], tagged, row["code"])
+
+    def test_provenance_and_confidence_facets_are_relationship_only(self):
+        """Only typed relationships carry provenance and confidence."""
+        rels = [e for e in self.graph["edges"] if e["class"] == "relationship"]
+        for facet, key in (("provenances", "provenance"), ("confidences", "confidence")):
+            rows = self.graph["facets"][facet]
+            self.assertTrue(rows, f"{facet} facet is empty")
+            self.assertEqual(
+                sum(r["count"] for r in rows),
+                sum(1 for e in rels if e.get(key)),
+                f"{facet} counts must total the relationship edges carrying {key}",
+            )
+            for row in rows:
+                self.assertEqual(
+                    row["count"],
+                    sum(1 for e in rels if e.get(key) == row["code"]),
+                    row["code"],
+                )
+
+    def test_provenance_and_confidence_use_the_controlled_vocabulary(self):
+        schema = load_schema()
+        self.assertTrue(
+            {r["code"] for r in self.graph["facets"]["provenances"]}
+            <= set(schema["relationship_source_values"])
+        )
+        self.assertTrue(
+            {r["code"] for r in self.graph["facets"]["confidences"]}
+            <= set(schema["confidence_levels"])
+        )
+
     def test_levels_cover_the_schema_vocabulary(self):
         allowed = set(load_schema()["levels"])
         used = {lv["code"] for lv in self.graph["facets"]["levels"]}

@@ -59,13 +59,29 @@ country, level, type or status is hard-coded in the application.
 | Geographic level | `level` field (`metadata/schema.json` → `levels`) |
 | Country | `country` field; labels come from the country anchor entities themselves |
 | Region | `region` field |
+| Domain | `domains:` field; labels come from the domain entities themselves |
 | Entity type | `type` field |
 | Status | `status` field |
 | Relationship type | `relationships[].type` |
+| Provenance | `relationships[].source` — `fact` or `interpretation` |
+| Confidence | `relationships[].confidence` |
 | Connections shown | which of the three edge classes to draw |
 
-When a new country joins the Atlas it appears in the country filter
+When a new country or domain joins the Atlas it appears in its filter
 automatically. Nothing in `site/` needs editing.
+
+The **domain** filter is the cross-cutting axis described in
+`metadata/taxonomy.md` §1.1: it answers *"what connects to cybersecurity?"*
+regardless of type, level or country. Selecting a domain keeps the entities
+tagged with it **and the domain entity itself** — the hub they all point at,
+which carries no `domains:` of its own.
+
+**Provenance** and **confidence** apply to typed relationships only, because
+associations and wikilinks carry neither. Filtering to `interpretation`
+isolates the connections the Atlas concluded rather than read; filtering to
+`low` shows where the Atlas is least sure of its own edges. Both are the
+audit route into the graph, and both were previously visible in the detail
+panel but impossible to select on.
 
 ### Connections shown
 

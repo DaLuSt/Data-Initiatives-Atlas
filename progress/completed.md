@@ -1941,3 +1941,77 @@ reference.
 
 Sourcing position unchanged — every Polish entity is `search-only`,
 `last_verified: null`, no `accessed` dates. 237 of 244 entities are unread.
+
+---
+
+# 2026-08-16 — Domain, provenance and confidence filters on the site
+
+**No entity changed.** This is a site and generator change: three new facets
+in `tools/build_graph.py`, three new filter groups in the interactive Atlas.
+Graph regenerated with identical content — 244 entities, 2,420 edges.
+
+## Why these two
+
+The Atlas already held both axes and neither was reachable from the UI.
+
+**Domain.** `metadata/taxonomy.md` §1.1 says domains are "the cross-cutting
+axis of the graph" — they exist so a reader can ask *"what connects to
+cybersecurity?"* regardless of type, level or country. Seven domains tag
+**214 of 244 entities**, `DOMAIN-CYBERSECURITY` was written the same day to make
+exactly that question answerable, and **the site could not ask it.** The
+domain view existed only as prose in `domains/domain-cybersecurity.md`.
+
+**Provenance and confidence.** Every typed relationship carries
+`source: fact | interpretation` and a `confidence`. Interpretation edges were
+already drawn dashed and both fields already appeared in the detail panel —
+but per-edge, one at a time. There was no way to ask *"show me only the
+interpretations"*, which is the question that makes the Atlas auditable
+rather than merely annotated. The answer turns out to be **13 edges of 346**,
+and that number was previously obtainable only by grepping the repository.
+
+## What the filters show
+
+| Filter | Rows | Notable |
+|---|---|---|
+| Domain | 7 | Government 193, Cybersecurity 24, Geospatial 16, Mobility 7, Research 4, Health 3, Education 2 |
+| Provenance | 2 | fact **333**, interpretation **13** |
+| Confidence | 3 | medium **317**, low **27**, high **2** |
+
+Two facts became visible in building it, both about the Atlas rather than
+about Europe: **only two edges in the entire graph are `confidence: high`**,
+and **96% of typed relationships are `medium`** — the confidence field is
+close to being a constant, which is worth knowing before anyone reads it as
+a signal.
+
+## Three decisions worth recording
+
+**1. A domain filter must keep the domain entity itself.** A domain entity
+carries no `domains:` of its own — it is the hub every tagged entity points
+at. Filtering naively on the field would return 24 cybersecurity entities
+with the node connecting them removed. `passesNodeFilters()` therefore admits
+a node whose *id* is the selected domain, and a UI test asserts it (25 nodes,
+not 24).
+
+**2. Provenance and confidence narrow relationships only.** Associations and
+wikilinks carry neither field. If the filters applied to all classes,
+selecting `interpretation` would silently delete every association from the
+view. `passesEdgeFilters()` returns early for non-relationship classes.
+
+**3. Confidence is ordinal, so it is not sorted by count.** Facets sort by
+frequency, which would render confidence as *medium, low, high* — a scale
+printed in scrambled order. `facetInto()` gained an `opts.order` parameter
+(generalised from the existing `levelOrder` special case), and a UI test
+asserts the first row is `high` and the last is `low`.
+
+## Verification
+
+`validation/run_all.py` 5/5, 0 errors, 0 warnings.
+`tools/test_build_graph.py` **37 tests** (was 32 — five added: dynamic domain
+discovery, domain labels from domain entities, domain counts against the
+tagging, provenance/confidence totals against the relationship edges, and
+vocabulary conformance for both).
+`tools/test_ui.mjs` **55 checks** (was 47 — eight added, including that the
+domain filter keeps its own hub and that confidence is ordered high → low).
+
+Docs updated: `docs/graph.md` filter table, `docs/graph-development.md`
+"adding a filter" with the ordering and hub-node notes, `README.md`.

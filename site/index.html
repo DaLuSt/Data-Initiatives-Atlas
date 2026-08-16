@@ -76,6 +76,20 @@
             <button class="mini" data-none="rel-types">None</button>
           </div>
         </details>
+
+        <details class="sub">
+          <summary>Provenance <span class="count" id="prov-count"></span></summary>
+          <p class="hint">How the Atlas knows: <strong>fact</strong> is stated by a
+            source, <strong>interpretation</strong> is the Atlas's own reading.
+            Interpretations are drawn dashed.</p>
+          <div class="checks" id="f-provenance"></div>
+        </details>
+
+        <details class="sub">
+          <summary>Confidence <span class="count" id="conf-count"></span></summary>
+          <p class="hint">How sure the Atlas is of the connection itself.</p>
+          <div class="checks" id="f-confidence"></div>
+        </details>
       </section>
 
       <section class="panel" aria-labelledby="filters-h">
@@ -94,6 +108,11 @@
         <details class="sub">
           <summary>Region <span class="count" id="region-count"></span></summary>
           <div class="checks" id="f-region"></div>
+        </details>
+
+        <details class="sub" open>
+          <summary>Domain <span class="count" id="domain-count"></span></summary>
+          <div class="checks scroll" id="f-domain"></div>
         </details>
 
         <details class="sub">

@@ -203,6 +203,62 @@ async function search(page, q) {
   await page.click('#reset-filters');
   await page.waitForTimeout(400);
 
+  // ── domain filter (taxonomy.md §1.1 — the cross-cutting axis) ──
+  const domains = await page.$$eval('#f-domain .check .cname', els => els.map(e => e.textContent));
+  check('domains discovered from data (not hard-coded)',
+    domains.length >= 2 && domains.includes('Cybersecurity'), domains.join(','));
+
+  await page.click('#f-domain label:has-text("Cybersecurity")');
+  await page.waitForTimeout(600);
+  const domStatus = await page.textContent('#stage-status');
+  const m5 = domStatus.match(/^([\d,]+) of/);
+  const n5 = m5 ? +m5[1].replace(/,/g, '') : -1;
+  check('domain filter narrows the graph to that domain', n5 > 1 && n5 < n1, `${n1} → ${n5}`);
+
+  // The domain entity itself carries no `domains:` of its own; it must
+  // survive its own filter, or the tagged entities lose their shared hub.
+  await page.click('#view-list');
+  await page.waitForTimeout(400);
+  const domRows = await page.$$eval('#list-body tr td:first-child', els => els.map(e => e.textContent.trim()));
+  check('domain filter keeps the domain entity itself',
+    domRows.some(r => /Cybersecurity/i.test(r)), `${domRows.length} rows`);
+  check('domain filter keeps entities tagged with it',
+    domRows.length === n5 && domRows.length > 2, `${domRows.length} rows vs ${n5} nodes`);
+  await page.click('#view-atlas');
+  await page.waitForTimeout(400);
+  await page.click('#reset-filters');
+  await page.waitForTimeout(400);
+
+  // ── provenance and confidence (auditability) ──
+  await page.click('summary:has-text("Provenance")');
+  await page.waitForTimeout(200);
+  const provs = await page.$$eval('#f-provenance .check .cname', els => els.map(e => e.textContent));
+  check('provenance facet uses the repository vocabulary',
+    provs.includes('fact') && provs.includes('interpretation'), provs.join(','));
+
+  await page.click('#f-provenance label:has-text("interpretation")');
+  await page.waitForTimeout(600);
+  const provStatus = await page.textContent('#stage-status');
+  const e4 = +(provStatus.match(/· ([\d,]+) connections/) || [0, '0'])[1].replace(/,/g, '');
+  check('provenance filter isolates the Atlas\'s own interpretations',
+    e4 > 0 && e4 < e1, `${e1} → ${e4}`);
+  await page.click('#reset-filters');
+  await page.waitForTimeout(400);
+
+  await page.click('summary:has-text("Confidence")');
+  await page.waitForTimeout(200);
+  const confs = await page.$$eval('#f-confidence .check .cname', els => els.map(e => e.textContent));
+  check('confidence facet is ordered high → low, not alphabetically',
+    confs[0] === 'high' && confs[confs.length - 1] === 'low', confs.join(','));
+
+  await page.click('#f-confidence label:has-text("low")');
+  await page.waitForTimeout(600);
+  const confStatus = await page.textContent('#stage-status');
+  const e5 = +(confStatus.match(/· ([\d,]+) connections/) || [0, '0'])[1].replace(/,/g, '');
+  check('confidence filter narrows edges', e5 > 0 && e5 < e1, `${e1} → ${e5}`);
+  await page.click('#reset-filters');
+  await page.waitForTimeout(400);
+
   // ── list view ──
   await page.fill('#search', '');
   await page.waitForTimeout(250);

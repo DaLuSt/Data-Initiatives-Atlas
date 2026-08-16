@@ -72,14 +72,15 @@ build_graph: wrote site/details.json (392 KB)
 ## Tests
 
 ```bash
-python tools/test_build_graph.py          # required — 32 tests, no extra deps
+python tools/test_build_graph.py          # required — 37 tests, no extra deps
 ```
 
 Covers: YAML parsing, file discovery, ID uniqueness, required fields, node
 generation, edge generation, **relationship direction**, vocabulary
-conformance, phantom-node refusal, dynamic country discovery, dynamic
-statistics, the payload split, and whether the committed `site/graph.json`
-still matches the repository.
+conformance, phantom-node refusal, dynamic country and **domain** discovery,
+provenance and confidence facet totals, dynamic statistics, the payload
+split, and whether the committed `site/graph.json` still matches the
+repository.
 
 ```bash
 # optional browser tests — need Playwright + Chromium
@@ -88,7 +89,7 @@ npm install playwright && npx playwright install chromium
 node tools/test_ui.mjs
 ```
 
-47 checks across desktop, mobile (390×844) and accessibility: search by
+55 checks across desktop, mobile (390×844) and accessibility: search by
 name/ID/country, keyboard navigation, detail panel content, GitHub links,
 deep links, every filter, edge-class toggles, the list view and its sorting,
 and console-error freedom throughout.
@@ -169,8 +170,21 @@ every build, so a byte comparison would always report staleness.
 4. Add the key to the `filters` object and handle it in `passesNodeFilters()`
    or `passesEdgeFilters()`.
 
-The generic `change` listener wires the checkboxes automatically — there is
-no per-filter event handling to write.
+The generic `change` listener wires the checkboxes automatically, and
+`resetFilters()` iterates the `filters` object, so a new key is cleared by
+the reset button without being named there — there is no per-filter event
+handling to write.
+
+Two things worth knowing when you get there:
+
+- **Ordering.** Facet rows sort by count. If the vocabulary is ordinal —
+  `high, medium, low` — pass `{ order: [...] }` to `facetInto()`, as the
+  confidence filter does; alphabetical or by-count ordering makes a scale
+  read as an unordered list.
+- **Hub nodes.** If the facet is an ID reference to another entity (the
+  domain filter is), decide whether the referenced entity passes its own
+  filter. `passesNodeFilters()` admits it explicitly, because filtering to a
+  domain and dropping the domain entity leaves its entities with no centre.
 
 ### A new node property
 
