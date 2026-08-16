@@ -1,60 +1,91 @@
-Data Initiatives Atlas
+<div align="center">
 
-«Mapping the data landscape across the UN, EU and participating countries as an open, connected knowledge graph.»
+# 🌍 Data Initiatives Atlas
 
-Data Initiatives Atlas is an open, machine-readable knowledge base for mapping and connecting data-related initiatives, legislation, policies, standards, frameworks, programmes, organisations and data ecosystems across international, regional and national levels.
+**Mapping the data landscape across the UN, EU and participating countries
+as an open, connected knowledge graph.**
 
-The Netherlands is the first participating country, followed by Germany, Belgium, France and Spain. The underlying information model is deliberately designed to support the addition of other countries over time — a design that was an assertion while one country was modelled and is a demonstrated property now that five are, none of which required an ontology, schema, folder or validation change. See `validation/germany-second-country-report.md` and `countries/README.md`.
+### [**→ Open the Interactive Atlas**](https://dalust.github.io/Data-Initiatives-Atlas/)
 
+*Search, filter and explore 233 entities and 2,184 connections across five
+countries — no install, no account.*
 
-## 🕸️ Explore the Atlas
+[![Validation](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/validate.yml/badge.svg)](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/validate.yml)
+[![Pages](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/pages.yml/badge.svg)](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/pages.yml)
+[![Licence: CC0-1.0](https://img.shields.io/badge/licence-CC0--1.0-blue.svg)](LICENSE)
 
-Explore the interactive knowledge graph of data and digital initiatives.
-
-**[Open the Interactive Atlas →](https://dalust.github.io/Data-Initiatives-Atlas/)**
-
-Search by name, ID, country, type or domain; filter by geographic level,
-country, region, entity type, status and relationship type; click any entity
-to read its metadata, sourced relationships and citations — and to open the
-underlying Markdown file on GitHub.
-
-The graph is **generated automatically** from this repository by
-`tools/build_graph.py` and redeployed whenever the data changes. The
-repository stays the source of truth; the graph is a derived view, and so is
-the local graph you get by opening this repository as an Obsidian vault.
-
-See [`docs/graph.md`](docs/graph.md) for a tour, and
-[`docs/graph-architecture.md`](docs/graph-architecture.md) for how entity
-files become nodes and edges.
+</div>
 
 ---
 
-🌍 Why Data Initiatives Atlas?
+## What it is
 
-Data governance is increasingly shaped by initiatives operating at different levels.
+An open, machine-readable knowledge base connecting data-related
+**initiatives, legislation, policies, standards, frameworks, programmes,
+organisations and data ecosystems** across international, regional and
+national levels.
 
-An international principle can influence an EU strategy.
-An EU regulation can lead to national implementation.
-A national programme can establish a framework.
-A framework can reference standards.
-Standards can underpin data spaces and technical ecosystems.
+Every entity is a Markdown file with YAML frontmatter. Every relationship
+carries its own provenance — whether it is a sourced fact or the Atlas's own
+interpretation, with the evidence attached. Nothing in the graph is
+hand-maintained.
 
-These relationships are often distributed across many websites, documents and organisations.
+| | |
+|---|---|
+| **Entities** | 233 |
+| **Connections** | 2,184 — of which **320** are sourced, typed relationships |
+| **Countries** | 🇳🇱 Netherlands · 🇩🇪 Germany · 🇧🇪 Belgium · 🇫🇷 France · 🇪🇸 Spain |
+| **Layers** | UN · EU · national · sectoral |
+| **Source of truth** | Git + Markdown/YAML — no database |
+| **Licence** | CC0 1.0 |
 
-Data Initiatives Atlas brings them together into one connected knowledge base.
+*Figures as of 2026-08-16. The live counts are always on the site itself.*
 
-«The objective is not simply to create a catalogue, but to make the relationships between initiatives visible.»
+### Explore it
+
+| Where | What you get |
+|---|---|
+| **[The interactive graph](https://dalust.github.io/Data-Initiatives-Atlas/)** | Search by name, ID, country, type or domain. Filter by level, country, region, type, status and relationship type. Click any entity for its metadata, sourced relationships and citations — and a link to the underlying Markdown. |
+| **This repository** | The source of truth. Browse `countries/`, `legislation/`, `organisations/` and the rest directly. |
+| **As an Obsidian vault** | Open the repository folder in Obsidian and the `[[wikilinks]]` become a local graph. |
+
+📖 [`docs/graph.md`](docs/graph.md) is a tour of the site ·
+[`docs/graph-architecture.md`](docs/graph-architecture.md) explains how
+entity files become nodes and edges.
 
 ---
 
-🧭 Vision
+## Why
 
-The long-term vision is to create a global, open Data Governance Atlas that connects international, regional and national data initiatives.
+Data governance is shaped by initiatives operating at different levels:
 
-The Atlas should allow users to navigate from an international initiative to its regional and national implications, related standards, responsible organisations and affected data domains.
+```
+An international principle   →   influences an EU strategy
+An EU regulation             →   leads to national implementation
+A national programme         →   establishes a framework
+A framework                  →   references standards
+Standards                    →   underpin data spaces and technical ecosystems
+```
 
-For example:
+Each of those pieces is documented somewhere. **The connections between them
+usually are not** — they are scattered across many websites, documents and
+organisations.
 
+The Atlas brings them into one connected knowledge base.
+
+> *The objective is not simply to create a catalogue, but to make the
+> relationships between initiatives visible.*
+
+---
+
+## 🧭 Vision
+
+A global, open Data Governance Atlas connecting international, regional and
+national data initiatives — one you can navigate from an international
+initiative down to its regional and national implications, related
+standards, responsible organisations and affected data domains.
+
+```
 United Nations
       │
       ▼
@@ -94,56 +125,42 @@ European Initiative
       │                    └── Data ecosystem
       │
       └──────────────► Country F
+```
 
 The Netherlands is the starting point, not the boundary of the project.
 
 ---
 
-🌐 Geographic Scope
+## 🌐 Geographic scope
 
 The Atlas uses a multi-level geographic model.
 
-International
+### International
 
-International initiatives and organisations, including the United Nations and other global institutions.
+International initiatives and organisations, including the United Nations
+and other global institutions — international principles, global strategies
+and frameworks, international standards, global programmes, cross-border
+initiatives.
 
-Examples include:
+### Regional
 
-- International principles
-- Global strategies
-- International frameworks
-- International standards
-- Global programmes
-- Cross-border initiatives
+Regional initiatives and organisations, with the European Union as the
+initial focus — EU legislation, strategies, policies and programmes,
+European standards, European data spaces, European governance frameworks.
 
-Regional
+The model also allows other regional organisations and ecosystems to be
+added later.
 
-Regional initiatives and organisations.
+### National
 
-The European Union is the initial regional focus.
+National initiatives, legislation, strategies, frameworks, organisations and
+data ecosystems.
 
-Examples include:
+The Netherlands is the first participating country; Germany, Belgium, France
+and Spain followed. Additional countries can be added **without changing the
+fundamental information model**:
 
-- EU legislation
-- EU strategies
-- EU policies
-- EU programmes
-- European standards
-- European data spaces
-- European governance frameworks
-
-The model should also allow other regional organisations and ecosystems to be added in the future.
-
-National
-
-National initiatives, legislation, strategies, frameworks, organisations and data ecosystems.
-
-The Netherlands is the first participating country; Germany, Belgium, France and Spain followed.
-
-Additional countries can be added without changing the fundamental information model.
-
-For example:
-
+```
 countries/
 ├── nl/
 ├── de/
@@ -152,27 +169,39 @@ countries/
 ├── es/
 ├── uk/
 └── ...
+```
 
-Countries should only be added when there is sufficient information and, preferably, an active contributor or participating community maintaining that national scope.
+Countries should only be added when there is sufficient information and,
+preferably, an active contributor or participating community maintaining
+that national scope.
+
+> **That claim has been tested five times.** Adding Germany, Belgium, France
+> and Spain each required no change to the schema, ontology, taxonomy,
+> relationship types, folder structure or any validation rule — and produced
+> no country-specific copies of EU or UN instruments. See
+> [`countries/README.md`](countries/README.md) and
+> [`validation/germany-second-country-report.md`](validation/germany-second-country-report.md).
 
 ---
 
-🗺️ Country Participation Model
+## 🗺️ Country participation model
 
-A country is not required to have the same depth or coverage as another country.
+A country is not required to match another country's depth or coverage. The
+Atlas supports **incremental participation**.
 
-The Atlas supports incremental participation.
+A country can start with:
 
-A country can initially contribute:
-
+```
 Country
  ├── National strategies
  ├── Key legislation
  ├── Major data initiatives
  └── Principal organisations
+```
 
 and progressively expand towards:
 
+```
 Country
  ├── Legislation
  ├── Strategies
@@ -184,46 +213,41 @@ Country
  ├── Data spaces
  ├── Domains
  └── Relationships to EU / international initiatives
+```
 
-This makes the project suitable for both individual contributors and organised national communities.
-
----
-
-🧩 What is being mapped?
-
-The Atlas is designed around a common ontology that can be applied at international, regional and national levels.
-
-Core entity types include:
-
-Initiative
-Organisation
-Country
-Region
-Policy
-Law
-Regulation
-Strategy
-Standard
-Framework
-Programme
-Data Space
-Platform
-Technology
-Domain
-Publication
-
-The ontology is intentionally country-neutral.
-
-Country-specific concepts can be represented through metadata and relationships rather than hard-coded into the core model.
+This makes the project suitable for both individual contributors and
+organised national communities.
 
 ---
 
-🔗 Cross-Border Relationships
+## 🧩 What is being mapped
 
-A key purpose of the Atlas is to make relationships between geographic levels visible.
+The Atlas is built on a common ontology applied identically at
+international, regional and national levels.
 
-For example:
+**Core entity types**
 
+`initiative` · `organisation` · `country` · `region` · `policy` · `law` ·
+`regulation` · `directive` · `strategy` · `standard` · `framework` ·
+`programme` · `data-space` · `platform` · `technology` · `domain` ·
+`publication`
+
+The ontology is **intentionally country-neutral**. Country-specific concepts
+are represented through metadata and relationships rather than hard-coded
+into the core model.
+
+📄 Full definitions: [`metadata/ontology.md`](metadata/ontology.md) ·
+[`metadata/taxonomy.md`](metadata/taxonomy.md) ·
+[`metadata/relationship-types.md`](metadata/relationship-types.md)
+
+---
+
+## 🔗 Cross-border relationships
+
+A key purpose of the Atlas is to make relationships between geographic
+levels visible.
+
+```
 International Initiative
         │
         ▼
@@ -251,31 +275,30 @@ EU Regulation
         └──────────────► Spain
                              │
                              └── National implementation
+```
 
-This allows the Atlas to represent both horizontal relationships between countries and vertical relationships between international, regional and national levels.
+This lets the Atlas represent **horizontal** relationships between countries
+and **vertical** relationships between international, regional and national
+levels.
 
-Examples of relationships include:
+**Relationship types include**
 
-influences
-implements
-implements-in
-applies-to
-derived-from
-based-on
-references
-related-to
-depends-on
-supersedes
-implemented-by
-governed-by
-part-of
+`influences` · `implements` · `implements-requirement-from` · `applies-to` ·
+`applies-in` · `derived-from` · `based-on` · `references` · `related-to` ·
+`depends-on` · `supersedes` · `implemented-by` · `governed-by` ·
+`maintained-by` · `participates-in` · `part-of`
+
+Every relationship records whether it is a **sourced fact** or an **Atlas
+interpretation**, with the evidence and a confidence level attached.
 
 ---
 
-🗂️ Repository Structure
+## 🗂️ Repository structure
 
-The repository should remain structured around entities rather than individual countries.
+The repository is structured around **entities**, not around individual
+countries.
 
+```
 data-initiatives-atlas/
 │
 ├── README.md
@@ -299,6 +322,7 @@ data-initiatives-atlas/
 ├── platforms/
 ├── publications/
 ├── domains/
+│
 ├── countries/
 │   ├── nl/
 │   ├── de/
@@ -343,9 +367,11 @@ data-initiatives-atlas/
     ├── graph-architecture.md
     ├── graph-development.md
     └── github-pages.md
+```
 
-As additional countries participate:
+As additional countries participate, only `countries/` grows:
 
+```
 countries/
 ├── nl/
 ├── de/
@@ -353,43 +379,48 @@ countries/
 ├── fr/
 ├── es/
 └── ...
+```
 
-The repository should not require a redesign when a new country is introduced.
+The repository does not require a redesign when a new country is introduced.
 
 ---
 
-🔁 No Manual Graph Maintenance
+## 🔁 No manual graph maintenance
 
 `site/graph.json` and `site/details.json` are **generated artefacts**.
 
 Contributors never edit them, and never edit `site/index.html` to add an
 entity. The source remains:
 
-    Markdown  +  YAML frontmatter  +  [[wikilinks]]
+```
+Markdown  +  YAML frontmatter  +  [[wikilinks]]
+```
 
 Regenerate after changing entity data:
 
-    python tools/build_graph.py
+```bash
+python tools/build_graph.py
+```
 
-The graph must always be reproducible from the repository. A test
-(`tools/test_build_graph.py`) fails if the committed graph no longer matches
+The graph must always be reproducible from the repository.
+`tools/test_build_graph.py` fails if the committed graph no longer matches
 the entity files, and the deployment workflow regenerates it before
 publishing regardless.
 
-The same rule is what keeps the two views consistent: Obsidian reads the
-Markdown and the wikilinks directly, and the web graph reads them through
-the generator. Neither is authoritative over the source.
-
+The same rule keeps the two views consistent: **Obsidian** reads the
+Markdown and wikilinks directly, and the **web graph** reads them through the
+generator. Neither is authoritative over the source.
 
 ---
 
-🤝 An Open Participation Model
+## 🤝 An open participation model
 
-Data Initiatives Atlas is intended to grow through participation.
+The Atlas is intended to grow through participation. The Netherlands
+provided the initial national contribution, and Germany, Belgium, France and
+Spain followed — but the Atlas is designed as an internationally extensible
+project.
 
-The Netherlands provided the initial national contribution, and Germany, Belgium, France and Spain followed, but the Atlas is designed as an internationally extensible project.
-
-Future contributors may:
+Contributors may:
 
 - add a new country;
 - establish a national knowledge area;
@@ -402,52 +433,34 @@ Future contributors may:
 
 A country does not need to wait for the Atlas to be complete before joining.
 
-«Countries can join incrementally and build their national representation over time.»
+> *Countries can join incrementally and build their national representation
+> over time.*
+
+📋 Start with [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ---
 
-🎯 Design Principles
+## 🎯 Design principles
 
-Open by design
-
-The Atlas should be open to contributions from countries, organisations, researchers and individuals.
-
-Country-neutral ontology
-
-The core data model should not be designed specifically around Dutch government structures.
-
-Local context, global connections
-
-National initiatives should retain their local context while being connected to international and regional developments.
-
-Interoperability
-
-The same entity and relationship model should work across countries.
-
-Evidence-based
-
-Factual information should be supported by authoritative sources wherever possible.
-
-Relationship-first
-
-Relationships between initiatives are as important as the initiatives themselves.
-
-Incremental participation
-
-Countries can start small and expand their representation over time.
-
-Version-controlled
-
-Git provides a transparent history of changes and enables distributed collaboration.
+| Principle | What it means |
+|---|---|
+| **Open by design** | Open to contributions from countries, organisations, researchers and individuals. |
+| **Country-neutral ontology** | The core model is not designed around Dutch government structures. |
+| **Local context, global connections** | National initiatives keep their local context while connecting to regional and international developments. |
+| **Interoperability** | The same entity and relationship model works across countries. |
+| **Evidence-based** | Factual claims are supported by authoritative sources wherever possible, with provenance recorded per relationship. |
+| **Relationship-first** | The relationships between initiatives matter as much as the initiatives. |
+| **Incremental participation** | Countries can start small and expand over time. |
+| **Version-controlled** | Git gives a transparent history and enables distributed collaboration. |
 
 ---
 
-🚀 Future Vision
+## 🚀 Future vision
 
-The long-term ambition is for Data Initiatives Atlas to become a shared international knowledge layer for data governance and data ecosystems.
+The long-term ambition is for the Atlas to become a shared international
+knowledge layer for data governance and data ecosystems.
 
-A future Atlas could look conceptually like:
-
+```
                          GLOBAL
                            │
                     ┌──────┴──────┐
@@ -474,26 +487,30 @@ A future Atlas could look conceptually like:
           │
    ┌──────┼───────┐
  Mobility Health Government
+```
 
-The Netherlands is therefore the first node in the national layer, not the endpoint.
-
-«Start local. Connect globally. Build together.»
-
----
-
-📜 Licence
-
-The repository uses Creative Commons Zero v1.0 Universal (CC0 1.0) for original content contributed to the Atlas.
-
-CC0 is intended to maximise reuse and minimise barriers for countries, organisations, researchers, developers and other projects consuming or contributing to the Atlas.
-
-Third-party source material remains subject to its own licensing and reuse conditions.
+The Netherlands is the first node in the national layer, not the endpoint.
 
 ---
 
-🌍 The Principle
+## 📜 Licence
 
-«One global landscape.
-Many countries.
-Connected initiatives.
-Shared knowledge.»
+Original content contributed to the Atlas is released under
+**[Creative Commons Zero v1.0 Universal (CC0 1.0)](LICENSE)**, to maximise
+reuse and minimise barriers for countries, organisations, researchers,
+developers and other projects.
+
+Third-party source material remains subject to its own licensing and reuse
+conditions.
+
+---
+
+<div align="center">
+
+### One global landscape. Many countries. Connected initiatives.
+
+**Start local. Connect globally. Build together.**
+
+[**→ Open the Interactive Atlas**](https://dalust.github.io/Data-Initiatives-Atlas/)
+
+</div>
