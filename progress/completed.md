@@ -1444,3 +1444,153 @@ exist; Ley 39/2015 and 40/2015 were not modelled.
 
 Sourcing position unchanged — every Spanish entity is `search-only`,
 `last_verified: null`, no `accessed` dates. 200 of 206 entities are unread.
+
+---
+
+# UN-Connection Batch — the island is connected (2026-08-16)
+
+**Scope:** the connections proposed in `discovery/candidates.md`, which was
+filled the same day and scoped to the Atlas's largest standing structural
+defect. `validation/reports.md` (Batch 15) had recorded it and five country
+batches had not touched it:
+
+> **The UN layer is an island** — zero relationships connect its entities to
+> any EU or national entity. `UN → anything` is **0**.
+
+**Entities added: 14.** 206 → **220**. Relationships 269 → **300**.
+
+- **Organisations (5):** `UN-UNECE`, `UN-UNSC`, `UN-UNESCO`, `UN-CEFACT`,
+  and `INTL-OECD-CSSP` (typed `programme`).
+- **Programmes (4):** `UN-CES`, `UN-GGIM`, `UN-GGIM-EUROPE`,
+  `INTL-OECD-CSSP`.
+- **Frameworks (4):** `EU-ESS`, `UN-AI-ETHICS-RECOMMENDATION`,
+  `UN-SDG-INDICATORS`, `EU-SDG-INDICATORS`.
+- **Legislation (2):** `UN-AARHUS`, `EU-ENVIRONMENTAL-INFORMATION-DIRECTIVE`.
+
+**Existing entities rewired: 7.** `EU-EUROSTAT` (+4 edges), `UN-UNSD`,
+`NL-CBS`, `DE-DESTATIS`, `BE-STATBEL`, `ES-INE`, plus the records in
+`discovery/`.
+
+**Validation:** `run_all.py` 5/5, 0 errors, 0 warnings;
+`test_build_graph.py` 32 tests OK; `test_ui.mjs` 47/47; `audit.py` reports
+**no fully disconnected entities**.
+
+## The result
+
+| | Before | After |
+|---|---|---|
+| `UN → anything` | **0** | **5** (`UN → NL/DE/BE/FR/ES`) |
+| `EU → UN` | **0** | **4** |
+| UN entities | 9, unattached | 17, in three connected clusters |
+
+**No relationship type was added and no sourcing standard was lowered.**
+
+## Principal finding: the refusals were right, the target was missing
+
+`discovery/candidates.md` argued that the gap was *"less a research problem
+than a missing intermediate entity problem"*, and that held in every
+cluster.
+
+`UN-UNSD` → `EU-EUROSTAT` had been examined and refused three times. The
+refusals were **correct**: UNSD is a secretariat, and Eurostat does not
+relate to it directly. What Eurostat's own cooperation page says is that it
+represents the EU **in forums** — the UN Statistical Commission, the
+Conference of European Statisticians, and the OECD statistics committee. The
+Atlas had no node for any of the three.
+
+Once `UN-UNSC` and `UN-CES` existed, the edge became statable from evidence
+that had been available all along. The same applied to `EU-ESS`: five
+national-statistical-office edges had been refused because the partnership
+they all belong to was not modelled.
+
+**This is the batch's transferable lesson.** A refused edge that keeps
+recurring is worth re-reading as a question about the *nodes*, not the
+sources.
+
+## Four clusters, three closed
+
+1. **Statistics — closed.** `EU-EUROSTAT` `participates-in` `UN-UNSC` and
+   `UN-CES`, and is `part-of` `EU-ESS` along with `NL-CBS`, `DE-DESTATIS`,
+   `BE-STATBEL` and `ES-INE`. `UN-UNSD` is `governed-by` `UN-UNSC`, which
+   also resolves the Batch 13 modelling question about whether the
+   secretariat and the intergovernmental body should be one entity.
+2. **Environmental information — closed, and it is the important one.**
+   `UN-AARHUS` (UNECE convention, 1998, in force 2001) →
+   `EU-ENVIRONMENTAL-INFORMATION-DIRECTIVE` (2003/4/EC) → `applies-in` to
+   all five countries. **The Atlas's first complete UN → EU → national
+   chain**, and its first `applies-in` relationships from a UN instrument.
+3. **UNESCO / AI ethics — closed as far as the sources allow.** The Batch 13
+   refusal was reversed for UNESCO and UNECE. The Recommendation is attached
+   to UNESCO.
+4. **Geospatial — deliberately left incomplete.** `UN-GGIM` and
+   `UN-GGIM-EUROPE` exist and attach to `UN`; **no edge reaches
+   `EU-INSPIRE`**, because what the sources show is a EuroGeographics
+   presentation *about* UN-GGIM given to an INSPIRE audience. Two
+   communities talking is not two instruments relating.
+
+## The vocabulary held, once
+
+`EU-ENVIRONMENTAL-INFORMATION-DIRECTIVE` `implements-requirement-from`
+`UN-AARHUS` uses the type Batch 3 introduced for the EU→national chain. Its
+definition reads *"an EU (or other higher-level) legal instrument"* — the
+parenthesis, written two years before there was an instrument to use it on,
+turned out to cover the UN→EU step exactly. **No type was added.**
+
+## The vocabulary failed, twice
+
+Two genuine EU↔UN interactions could **not** be recorded:
+
+- the **UNESCO–European Commission agreement** on accelerating AI ethics
+  implementation — a funding-and-cooperation arrangement to help *other*
+  countries, not adoption or implementation by the Commission;
+- the **2023 EU voluntary review** submitted to UN global SDG monitoring — a
+  one-off report to a UN process.
+
+Neither is adoption, implementation, governance or reference. **Two examples
+is the threshold `metadata/relationship-types.md` §2.3 sets for proposing a
+new type**, and it was deliberately not proposed by a batch that could not
+read the sources.
+
+## A record that had been wrong for three batches
+
+`discovery/unresolved.md`, `discovery/candidates.md` and three batch entries
+all repeated that *"three/four national statistical offices sit in the Atlas
+and none connects upward"*. **`NL-CBS` already carried a `participates-in`
+edge to `EU-EUROSTAT`**, added early, with ESS-membership reasoning in its
+own evidence string.
+
+The claim was carried forward from batch to batch without being checked
+against the entity files. Corrected, and the edge repointed to `EU-ESS` with
+the other four. The lesson is recorded in `discovery/unresolved.md`: cluster
+narratives in the discovery files are prose, and **prose is not validated**.
+
+## Refused, and why
+
+- **`EU-AI-ACT` → `UN-AI-ETHICS-RECOMMENDATION`.** The dates line up —
+  UNESCO Nov 2021, `ES-AESIA` Aug 2023, AI Act 2024 — and nothing read says
+  they relate. This was the batch's most attractive available error: a
+  UN → EU → national AI chain is exactly the shape it was looking for.
+  Chronology is not causation.
+- **`UN-AARHUS` → `EU-OPEN-DATA-DIRECTIVE` / `EU-INSPIRE`.** Adjacent
+  subject matter, flagged in `candidates.md` as *"a reason to research, not
+  a finding"*, and left there.
+- **National transpositions of 2003/4/EC.** Five `applies-in` edges are
+  asserted and **not one transposing instrument is named**. The trap is
+  live: several countries have general open-government acts already in the
+  Atlas (`NL-WOO`, `ES-LEY-37-2007`) that are *not* the environmental
+  information transpositions — the same shape as the 2016 open-data acts in
+  Belgium and France.
+- **EuroGeographics**, **the 2030 Agenda**, **Regulation (EC) 223/2009**,
+  and any **UN/CEFACT standard**. All named in sources, none sourced well
+  enough to create inside this batch.
+
+## Newly opened
+
+**Soft law is indistinguishable from binding law.** `UN-AARHUS` binds its
+Parties; the `UN-AI-ETHICS-RECOMMENDATION` does not. Nothing in the metadata
+says so. This is the **same missing property** the Spain batch found from
+the other direction, where `type: law` flattened Spain's constitutional
+`Ley Orgánica` rank. Two independent batches, one gap. No field added.
+
+Sourcing position unchanged — every new entity is `search-only`,
+`last_verified: null`, no `accessed` dates. 214 of 220 entities are unread.

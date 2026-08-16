@@ -131,12 +131,16 @@ validation (`CONTRIBUTING.md` — Batch workflow).
 
 - [ ] **Re-verification pass** — the single highest-value item. Needs
   outbound HTTPS; every URL is already recorded in entities' `sources:`.
-- [ ] **Connect the UN layer** — `UN-UNSD` → `EU-EUROSTAT` and
-  `UN-FPOS` → `NL-WET-CBS` would close most of the vertical gap. The
-  Germany batch added two more candidates of the same shape
-  (`DE-DESTATIS` → `EU-EUROSTAT`, `DE-BSTATG` → `UN-FPOS`), all four
-  refused for want of a source and clustered in
-  `discovery/unresolved.md`.
+- [x] **Connect the UN layer** — **Done 2026-08-16.** `UN → anything` was 0
+  through five country batches; it is now `EU → UN` = 4 and
+  `UN → national` = 5. 14 entities added, 7 rewired, no relationship type
+  added and no sourcing standard lowered. The refused edges had been
+  pointing at nodes that did not exist — [[EU-ESS]] and [[UN-UNSC]] are
+  those nodes. See `progress/completed.md`.
+- [ ] **Connect the UN layer's *legislative* half.** The batch connected the
+  organisational statistics layer. `UN-FPOS` → `NL-WET-CBS` and
+  `UN-FPOS` → `DE-BSTATG` are untouched: national statistical *legislation*
+  still has no UN link, while the offices themselves now do.
 - [x] **Add a second country** — the only real test of the country-neutral
   model. **Done 2026-08-15: Germany**, 39 entities, no ontology change, no
   `DE-EU-*` duplicate, `applies-in` targets now `['DE', 'NL']`. See
@@ -201,19 +205,20 @@ validation (`CONTRIBUTING.md` — Batch workflow).
 
 ## Opened by the Spain batch
 
-- [ ] **Create an `EU-ESS` entity for the European Statistical System.** The
-  single highest-value modelling fix available. The sources describe
-  Eurostat and the national statistical offices as members of one system;
-  the Atlas currently expresses that as one weak `related-to` edge marked
-  `source: interpretation` ([[ES-INE]]). One entity with `part-of` edges
-  would connect **four** national statistical offices at once and close most
-  of the statistics cluster properly.
-- [ ] **Decide whether the national legal-instrument rank should be
-  modelled.** Spain's `Ley Orgánica` has constitutional rank and can only be
-  amended by absolute majority; `type: law` flattens that, as it already
-  flattens *Gesetz*/*Verordnung*, *wet*/*koninklijk besluit* and
-  *loi*/*ordonnance*. Five countries have been modelled without the field;
-  adding it now means re-reading every instrument.
+- [x] **Create an `EU-ESS` entity for the European Statistical System.**
+  **Done 2026-08-16.** [[EU-ESS]] now carries [[EU-EUROSTAT]] and four
+  national statistical offices by `part-of`, sourced to the composition rule
+  in Regulation (EC) No 223/2009. [[ES-INE]]'s weak `related-to` edge was
+  removed rather than left beside it.
+- [ ] **Decide whether the binding force of an instrument should be
+  modelled.** Two batches have now hit the same missing property from
+  opposite directions. Spain: `type: law` flattens the constitutional rank
+  of a `Ley Orgánica`, as it already flattens *Gesetz*/*Verordnung*,
+  *wet*/*koninklijk besluit* and *loi*/*ordonnance*. The UN batch:
+  [[UN-AARHUS]] is a binding convention and the
+  [[UN-AI-ETHICS-RECOMMENDATION]] is non-binding soft law, and nothing
+  distinguishes them. Six batches have run without the field; adding it now
+  means re-reading every instrument.
 - [ ] **Decide whether partial implementation is expressible.**
   [[ES-LOPDGDD]] implements the GDPR *with part of itself* — its Title X on
   digital rights descends from nothing European. Relationships are
@@ -226,6 +231,40 @@ validation (`CONTRIBUTING.md` — Batch workflow).
   administrative processing.
 - [ ] **Model Red.es**, so [[ES-DATOS-GOB-ES]] can carry a `maintained-by`
   edge like the Dutch and German portals do.
+
+## Opened by the UN-connection batch
+
+- [ ] **Propose a relationship type for cooperation acts.** Two real EU↔UN
+  interactions could not be recorded: the **UNESCO–European Commission
+  agreement** on AI ethics implementation, and the **2023 EU voluntary
+  review** submitted to UN SDG monitoring. Neither is adoption,
+  implementation, governance or reference. Two examples is the threshold
+  `metadata/relationship-types.md` §2.3 sets — this is the clearest live
+  candidate for the next vocabulary change, and it should be decided by a
+  batch that can read the sources.
+- [ ] **Finish the geospatial cluster.** [[UN-GGIM]] and
+  [[UN-GGIM-EUROPE]] exist and connect to [[UN]]; **no edge reaches
+  [[EU-INSPIRE]]**. The missing middle is probably **EuroGeographics**,
+  playing the role [[EU-ESS]] plays for statistics — not created, because
+  every source found is its own site or trade press.
+- [ ] **Connect UN/CEFACT to anything European.** [[UN-CEFACT]] is attached
+  to [[UN-UNECE]] and to nothing else. The narrow, answerable question:
+  *does any instrument already in this Atlas reference a UN/CEFACT
+  standard?* UN/EDIFACT, UN/LOCODE and the Core Component Library are
+  unmodelled.
+- [ ] **`UN-FPOS` → national statistical legislation.** The batch connected
+  the statistical *offices*; the *legislation* ([[NL-WET-CBS]],
+  [[DE-BSTATG]]) still has no UN link.
+- [ ] **INSEE.** France is now the only one of five countries with no
+  statistical office in [[EU-ESS]] — a visible hole in a modelled structure
+  rather than one absence among unconnected nodes.
+- [ ] **Model Regulation (EC) No 223/2009**, [[EU-ESS]]'s legal base, and
+  Regulation (EU) 1025/2012 for the European standardisation organisations.
+  Deliberately left as a pair so the Atlas stays consistent about statutory
+  bases.
+- [ ] **Source [[INTL-OECD-CSSP]] from the OECD.** It is currently described
+  entirely by a participant — one Eurostat page — which gives it two
+  competing names (CSSP / CSTAT) and no independent confirmation.
 
 ## Explicitly out of scope for now
 

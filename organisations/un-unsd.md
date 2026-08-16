@@ -39,6 +39,13 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: governed-by
+    target: UN-UNSC
+    source: fact
+    evidence: "The Statistical Commission oversees the work of the United Nations Statistics Division, and the Statistics Division of the Department of Economic and Social Affairs acts as the Commission's secretariat (unstats.un.org/UNSDWebsite/statcom/; un.org/en/desa 'Shaping the future of global statistics'; officialstatistics.org handbook §17.3). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Fundamental Principles of Official Statistics"

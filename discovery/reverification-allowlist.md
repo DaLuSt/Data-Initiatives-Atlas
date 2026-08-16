@@ -7,11 +7,11 @@ Generated: 2026-08-16
 
 ## Why this exists
 
-**200 of the Atlas's 206 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
+**214 of the Atlas's 220 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
 
 Closing that debt — the re-verification pass — needs outbound HTTPS to the hosts those URLs point at. In an environment with a restricted egress policy, this is the allowlist to request. A denial shows up as `403 to CONNECT` from the proxy, which is an environment-level network policy and cannot be changed from inside a session. See `discovery/unresolved.md` for the standing record of the sourcing debt.
 
-The Atlas currently cites **647 source URLs** across **261 hosts**, collapsing to **192 registrable domains**.
+The Atlas currently cites **703 source URLs** across **279 hosts**, collapsing to **203 registrable domains**.
 
 ## Highest value first
 
@@ -19,26 +19,26 @@ Allowing just these covers the bulk of the pass:
 
 | Domain | URLs | Entities |
 |---|---|---|
-| `europa.eu` | 69 | 44 |
+| `europa.eu` | 87 | 52 |
 | `wikipedia.org` | 36 | 36 |
 | `bund.de` | 34 | 16 |
 | `digitaleoverheid.nl` | 28 | 19 |
 | `gouv.fr` | 27 | 9 |
 | `gob.es` | 26 | 12 |
 | `belgium.be` | 17 | 9 |
+| `un.org` | 16 | 9 |
+| `unece.org` | 14 | 5 |
 | `rijksoverheid.nl` | 14 | 10 |
 | `boe.es` | 12 | 10 |
 | `forumstandaardisatie.nl` | 12 | 5 |
 | `iso.org` | 12 | 10 |
 | `fitko.de` | 11 | 6 |
 | `vng.nl` | 10 | 6 |
-| `un.org` | 9 | 5 |
 | `overheid.nl` | 9 | 9 |
 | `noraonline.nl` | 9 | 9 |
 | `eerstekamer.nl` | 8 | 8 |
 | `logius.nl` | 7 | 4 |
 | `geonovum.nl` | 7 | 3 |
-| `officielebekendmakingen.nl` | 5 | 5 |
 
 ## Institutional domains
 
@@ -60,6 +60,7 @@ gdi-de.org
 geonovum.nl
 gesetze-im-internet.de
 gov.be
+gov.pl
 govdata.de
 government.nl
 iso.org
@@ -120,8 +121,10 @@ cloix-mendesgil.com
 cni.es
 cnil.fr
 communicatierijk.nl
+cso.ie
 cuatrecasas.com
 d-velop.de
+dagdok.org
 data-spaces-symposium.eu
 datactivist.coop
 dcat-ap.de
@@ -144,7 +147,9 @@ edustandaard.nl
 eerstekamer.nl
 epc.ac.uk
 errin.eu
+esdn.eu
 eubelius.com
+eurogeographics.org
 europadecentraal.nl
 europeansources.info
 eversheds-sutherland.com
@@ -200,6 +205,7 @@ nis-2-directive.com
 nisd2.eu
 oecd-ilibrary.org
 oecd.org
+officialstatistics.org
 officielebekendmakingen.nl
 om.nl
 openjustice.be
@@ -234,7 +240,12 @@ tcontas.pt
 telusio.com
 twobirds.com
 un-dco.org
+un-ggim-europe.org
 unctad.org
+unece.org
+unesco.org
+unesco.org.uk
+ungeneva.org
 unievanwaterschappen.nl
 unsceb.org
 vbo-feb.be

@@ -51,6 +51,13 @@ relationships:
     valid_from: null
     valid_until: null
 
+  - type: part-of
+    target: EU-ESS
+    source: fact
+    evidence: "The European Statistical System is the partnership between the Community statistical authority, which is the Commission (Eurostat), and the national statistical institutes and other national authorities responsible in each member state for the development, production and dissemination of European statistics; the ESS Committee is composed of NSI representatives and chaired by Eurostat (ec.europa.eu/eurostat/web/european-statistical-system; EUR-Lex CELEX 32009R0223; cso.ie European Statistical System page). Destatis is the German NSI. NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 sources:
   - title: "Aufgaben — Statistisches Bundesamt"
     url: "https://www.destatis.de/DE/Ueber-uns/Aufgaben/_inhalt.html"
