@@ -17,7 +17,8 @@
   var depth = 2;
   var filters = {          // Set per facet; empty Set = "all"
     level: new Set(), country: new Set(), region: new Set(),
-    type: new Set(), status: new Set(), relType: new Set(),
+    type: new Set(), status: new Set(), domain: new Set(),
+    relType: new Set(), provenance: new Set(), confidence: new Set(),
     edgeClass: new Set(["relationship"])
   };
   var listSort = { key: "label", dir: 1 };
@@ -28,6 +29,9 @@
   var LOD_LAYOUT = 700;
 
   var LEVEL_ORDER = ["international", "regional", "national", "sectoral", "local"];
+  // Confidence is ordinal, not alphabetical — "high, medium, low" reads as a
+  // scale, "high, low, medium" reads as a list of three unrelated words.
+  var CONFIDENCE_ORDER = ["high", "medium", "low"];
   var LEVEL_COLOR = {
     international: "--lvl-international", regional: "--lvl-regional",
     national: "--lvl-national", sectoral: "--lvl-sectoral", local: "--lvl-local"
@@ -138,12 +142,19 @@
     }).join("");
 
     facetInto("rel-types", "relType", G.facets.relationship_types, "reltype-count", { raw: true });
+    facetInto("f-provenance", "provenance", G.facets.provenances, "prov-count", { raw: true });
+    facetInto("f-confidence", "confidence", G.facets.confidences, "conf-count",
+      { raw: true, order: CONFIDENCE_ORDER });
     facetInto("f-level", "level", G.facets.levels, "level-count", { levelOrder: true });
     facetInto("f-country", "country",
       (G.facets.countries || []).map(function (c) {
         return { code: c.code, count: c.count, label: c.label };
       }), "country-count");
     facetInto("f-region", "region", G.facets.regions, "region-count");
+    facetInto("f-domain", "domain",
+      (G.facets.domains || []).map(function (d) {
+        return { code: d.code, count: d.count, label: d.label };
+      }), "domain-count");
     facetInto("f-type", "type", G.facets.types, "type-count");
     facetInto("f-status", "status", G.facets.statuses, "status-count");
 
@@ -175,9 +186,10 @@
   function facetInto(elId, group, facet, countElId, opts) {
     opts = opts || {};
     var items = (facet || []).slice();
-    if (opts.levelOrder) {
+    var order = opts.levelOrder ? LEVEL_ORDER : opts.order;
+    if (order) {
       items.sort(function (a, b) {
-        return LEVEL_ORDER.indexOf(a.code) - LEVEL_ORDER.indexOf(b.code);
+        return order.indexOf(a.code) - order.indexOf(b.code);
       });
     }
     $(elId).innerHTML = items.map(function (f) {
@@ -379,12 +391,24 @@
     if (filters.status.size && !filters.status.has(n.status)) return false;
     if (filters.country.size && !(n.country && filters.country.has(n.country))) return false;
     if (filters.region.size && !(n.region && filters.region.has(n.region))) return false;
+    // A domain matches an entity tagged with it — and the domain entity
+    // itself, which carries no `domains` of its own but is the hub every
+    // tagged entity points at. Excluding it would filter the graph down to
+    // a set of nodes with their shared centre missing.
+    if (filters.domain.size && !filters.domain.has(n.id) &&
+        !(n.domains || []).some(function (d) { return filters.domain.has(d); })) return false;
     return true;
   }
 
   function passesEdgeFilters(e) {
     if (!filters.edgeClass.has(e.class)) return false;
-    if (e.class === "relationship" && filters.relType.size && !filters.relType.has(e.type)) return false;
+    if (e.class !== "relationship") return true;
+    // Provenance and confidence exist only on relationship edges, so they
+    // narrow that class alone — an association is neither a fact nor an
+    // interpretation and is not silently dropped by these filters.
+    if (filters.relType.size && !filters.relType.has(e.type)) return false;
+    if (filters.provenance.size && !filters.provenance.has(e.provenance)) return false;
+    if (filters.confidence.size && !filters.confidence.has(e.confidence)) return false;
     return true;
   }
 

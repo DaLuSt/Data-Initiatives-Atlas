@@ -1,8 +1,38 @@
 # Current Batch
 
-**Status:** No batch in progress. **Poland — the sixth country** was
-completed on 2026-08-16, after the cybersecurity domain, basisregistraties,
-UN-connection and Spain batches the same day.
+**Status:** No batch in progress. **Domain, provenance and confidence
+filters** were added to the interactive Atlas on 2026-08-16, after the
+Poland, cybersecurity-domain, basisregistraties, UN-connection and Spain
+batches the same day.
+
+## Site — domain, provenance and confidence filters
+
+**No entity changed.** Three facets added to `tools/build_graph.py`, three
+filter groups added to the site. The graph regenerated to identical content:
+244 entities, 2,420 edges.
+
+Both axes were already in the data and neither was reachable from the UI.
+`metadata/taxonomy.md` §1.1 calls domains "the cross-cutting axis of the
+graph", [[DOMAIN-CYBERSECURITY]] was written the same day to make *"what
+connects to cybersecurity?"* answerable — and **the site could not ask it**.
+Provenance and confidence were visible per-edge in the detail panel and
+nowhere in aggregate, so *"show me only the interpretations"* had no answer
+short of grepping the repository.
+
+**Two things the aggregate view revealed, both about the Atlas rather than
+about Europe:** only **2 of 346** typed relationships are
+`confidence: high`, and **317 are `medium`** — the field is close to a
+constant and should not be read as a signal. Interpretations are **13**.
+
+**Three decisions recorded in `progress/completed.md`:** a domain filter must
+keep the domain entity itself (it carries no `domains:` of its own, and is
+the hub the tagged entities point at); provenance and confidence narrow
+typed relationships only, or selecting `interpretation` would silently drop
+every association; and confidence is ordinal, so it is ordered high → low
+rather than by count.
+
+**Verification:** `run_all.py` 5/5 · `test_build_graph.py` 37 tests (was 32)
+· `test_ui.mjs` 55/55 (was 47).
 
 ## Poland — sixth country
 

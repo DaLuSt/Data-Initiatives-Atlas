@@ -325,6 +325,19 @@ def build(strict_wikilinks: bool = True) -> tuple[dict, list[str], list[str]]:
     region_counts = Counter(n["region"] for n in nodes if n.get("region"))
     scope_counts = Counter(n["scope"] for n in nodes)
 
+    # Domain labels come from the domain entities themselves, exactly as
+    # country labels come from country entities. A domain tagged on an entity
+    # but never created as an entity still gets a facet row, labelled by its
+    # id — the facet reports what the data says rather than hiding the gap.
+    domain_names: dict[str, str] = {}
+    for n in nodes:
+        if n.get("type") == "domain":
+            domain_names[n["id"]] = n.get("label") or n["id"]
+
+    domain_counts = Counter(d for n in nodes for d in (n.get("domains") or []))
+    for code in domain_counts:
+        domain_names.setdefault(code, code)
+
     facets = {
         "countries": [
             {"code": c, "label": country_names.get(c, c), "count": n}
@@ -362,6 +375,29 @@ def build(strict_wikilinks: bool = True) -> tuple[dict, list[str], list[str]]:
             {"code": f, "count": n} for f, n in
             sorted(Counter(e.get("field") for e in edges
                            if e["class"] == "association" and e.get("field")).items(),
+                   key=lambda kv: (-kv[1], kv[0]))
+        ],
+        # Domains are the cross-cutting axis (metadata/taxonomy.md §1.1):
+        # "what connects to Cybersecurity?" regardless of type, level or
+        # country. The label comes from the domain entity itself so the
+        # facet never hard-codes a name.
+        "domains": [
+            {"code": d, "label": domain_names.get(d, d), "count": n}
+            for d, n in sorted(domain_counts.items(), key=lambda kv: (-kv[1], kv[0]))
+        ],
+        # Provenance and confidence come off relationship edges. They are
+        # what makes the Atlas auditable: a reader can isolate the Atlas's
+        # own interpretations from sourced facts.
+        "provenances": [
+            {"code": p, "count": n} for p, n in
+            sorted(Counter(e["provenance"] for e in edges
+                           if e["class"] == "relationship" and e.get("provenance")).items(),
+                   key=lambda kv: (-kv[1], kv[0]))
+        ],
+        "confidences": [
+            {"code": c, "count": n} for c, n in
+            sorted(Counter(e["confidence"] for e in edges
+                           if e["class"] == "relationship" and e.get("confidence")).items(),
                    key=lambda kv: (-kv[1], kv[0]))
         ],
     }

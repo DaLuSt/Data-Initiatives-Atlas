@@ -336,6 +336,23 @@ validation (`CONTRIBUTING.md` — Batch workflow).
   succession was asserted — the third institutional transformation the Atlas
   has touched, after Spain's completed one and Poland's pending COI one.
 
+## Opened by the site filter batch
+
+- [ ] **Filter state is not in the URL.** `applyRoute()` reads only an entity
+  ID from the hash, so a filtered view cannot be shared or bookmarked. "Every
+  cybersecurity entity in Poland" is now one click away and **zero clicks
+  away for the next reader**, which undercuts the point of a public atlas.
+- [ ] **`confidence` is close to a constant.** 317 of 346 typed relationships
+  are `medium`, 27 are `low` and **2 are `high`**. That distribution is now
+  visible in one glance, and it means the field currently carries almost no
+  information. Either the criteria for `high` are unusable in practice, or
+  the Atlas has been under-claiming; both are worth a deliberate pass rather
+  than a per-entity fix.
+- [ ] **A domain with no entity still gets a facet row**, labelled by its ID
+  rather than a name. Nothing currently triggers this — `metadata/taxonomy.md`
+  §1.3 requires a taxonomy row with the entity — but the generator reports it
+  instead of hiding it, and a validator rule would catch it earlier.
+
 ## Explicitly out of scope for now
 
 - Countries beyond the five modelled (structure supports them; no content

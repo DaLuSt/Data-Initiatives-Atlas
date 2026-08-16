@@ -182,5 +182,5 @@ does not assert because it was not established well enough to model.
 ## Relationships
 
 None. Domains are referenced *by* other entities through their `domains:`
-field, which is how all 23 connections above are recorded — the same pattern
+field, which is how all 24 connections above are recorded — the same pattern
 as [[DOMAIN-GOVERNMENT]] and [[DOMAIN-GEOSPATIAL]].
