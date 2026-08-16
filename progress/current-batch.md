@@ -1,7 +1,48 @@
 # Current Batch
 
-**Status:** No batch in progress. **Spain — the fifth country** was
-completed on 2026-08-16.
+**Status:** No batch in progress. The **UN-connection batch** was completed
+on 2026-08-16, after the Spain fifth-country batch the same day.
+
+## UN-connection batch — the island is connected
+
+**220 entities, 300 relationships.** `UN → anything` was **0** through five
+country batches; it is now **`EU → UN` = 4** and **`UN → national` = 5**.
+14 entities added, 7 rewired, **no relationship type added and no sourcing
+standard lowered**.
+
+**Principal finding: the refusals were right, the target was missing.**
+`UN-UNSD` → [[EU-EUROSTAT]] had been refused three times, correctly — UNSD
+is a secretariat and Eurostat does not relate to it directly. Eurostat's own
+page says it represents the EU **in forums**, and the Atlas had no node for
+any of them. Once [[UN-UNSC]], [[UN-CES]] and [[EU-ESS]] existed, six
+previously-refused edges became statable on evidence that was already
+available.
+
+**The chain that matters:** [[UN-AARHUS]] (UNECE convention, 1998) →
+[[EU-ENVIRONMENTAL-INFORMATION-DIRECTIVE]] (2003/4/EC) → `applies-in` to all
+five countries. The Atlas's **first complete UN → EU → national chain**, and
+its first `applies-in` from a UN instrument. `implements-requirement-from`
+covered the UN→EU step unchanged — its Batch 3 definition says *"an EU (or
+other higher-level) legal instrument"*, and the parenthesis turned out to
+have anticipated this exact case.
+
+**Three of four clusters closed.** Geospatial was left incomplete on
+purpose: [[UN-GGIM]] and [[UN-GGIM-EUROPE]] exist, and no edge reaches
+[[EU-INSPIRE]], because a EuroGeographics presentation *about* UN-GGIM given
+to an INSPIRE audience shows two communities talking, not two instruments
+relating.
+
+**Two failures worth keeping:** the UNESCO–Commission agreement and the 2023
+EU voluntary review are real EU↔UN interactions that **no relationship type
+can express**. Two examples is §2.3's threshold for proposing a new type;
+deliberately not proposed by a batch that could not read sources.
+
+**A record corrected:** the claim that *"no national statistical office
+connects upward"* had been repeated for three batches and was wrong —
+[[NL-CBS]] already had an edge. Cluster narratives in `discovery/` are
+prose, and prose is not validated.
+
+See `progress/completed.md` for the full entry.
 
 ## Spain — fifth country
 
@@ -148,15 +189,15 @@ later.
 
 ## The sourcing position is unchanged
 
-**197 of 206 entities are `verification: search-only`**, and 200 of 206 are
-unread in total. Page retrieval was blocked throughout the Spain batch as it
-was for every earlier one
+**211 of 220 entities are `verification: search-only`**, and 214 of 220 are
+unread in total. Page retrieval was blocked throughout the UN-connection
+batch as it was for every earlier one
 (`EGRESS_BLOCKED`; 403 at the proxy tunnel, re-tested at the start of this
 batch, and `WebFetch` re-tested and blocked too — the proxy reports
 `connect_rejected`, an environment egress policy that cannot be changed
 from inside the session).
 
-Every Spanish entity carries the sourcing caveat block. **No `accessed`
+Every entity added in these batches carries the sourcing caveat block. **No `accessed`
 dates were written and `last_verified` is null throughout**, because
 nothing was accessed or verified. The hosts that would need to be reachable
 are enumerated in `discovery/reverification-allowlist.md`, which is
@@ -175,43 +216,43 @@ URL is already recorded in the entities' `sources:` lists.
 
 ## Immediate next steps, in priority order
 
-1. **Re-verification pass** (blocked on egress). Precondition for
-   re-running Batches 6, 11 and 15 meaningfully. 200 of 206 entities are
-   unread; `discovery/reverification-allowlist.md` is the generated worklist.
-2. **[[NL-CBW]] status check.** Its `start_date` is 2026-08-15 — yesterday.
-   Its own body instructs a reader after that date to verify and, if
-   confirmed, move it to `active` and [[NL-WBNI]] to `superseded`. Not done:
-   it cannot be verified without page retrieval.
-3. **Create an `EU-ESS` entity for the European Statistical System.** The
-   highest-value modelling fix now available. [[ES-INE]] carries the Atlas's
-   only statistics-cluster edge, deliberately weak and marked
-   `source: interpretation`, because the sources describe a three-party
-   system rather than a bilateral link. One entity would connect **four**
-   national statistical offices properly and close most of the cluster.
+1. **Re-verification pass** (blocked on egress). 214 of 220 entities are
+   unread; `discovery/reverification-allowlist.md` is the generated
+   worklist. Still the single highest-value outstanding work.
+2. **[[NL-CBW]] status check.** Its `start_date` is 2026-08-15. Its own body
+   instructs a reader after that date to verify and, if confirmed, move it
+   to `active` and [[NL-WBNI]] to `superseded`.
+3. **Propose a relationship type for cooperation acts.** The UN batch found
+   two real EU↔UN interactions the vocabulary cannot express — the
+   UNESCO–Commission agreement and the 2023 EU voluntary review. Two
+   examples is `metadata/relationship-types.md` §2.3's threshold. **This is
+   the clearest live candidate for the next vocabulary change.**
 4. **The eIDAS2 wallet deadline.** Roughly four months away, and **no
    country in the Atlas is linked to [[EU-EIDAS2]]** — five national
-   identity systems, zero edges. This has moved from a modelling question to
-   a factual one.
-5. **[[EU-INSPIRE]] → [[NL]]**. The directive now carries `applies-in` to
-   `DE`, `BE`, `FR` and `ES` but **not** `NL`, because the Dutch
-   transposition is unsourced. Four countries have now touched it without
-   closing the Dutch gap. Near-certainly one page read.
+   identity systems, zero edges. A factual question now, not a modelling
+   one.
+5. **Finish the geospatial cluster.** [[UN-GGIM]] and [[UN-GGIM-EUROPE]]
+   exist; no edge reaches [[EU-INSPIRE]]. The missing middle is probably
+   **EuroGeographics**, playing [[EU-ESS]]'s role for geospatial.
 6. **Connect the DPAs to the EDPB.** Five national data protection
    authorities, one sourced link. Five page reads fix four edges — still the
    cheapest high-value item.
-7. **Resolve [[FR-NIS2-LOI]]'s status.** The Atlas's only entity whose
-   sources contradict each other about whether the instrument is in force.
-   One page read on Légifrance settles it.
-8. **Connect the UN layer.** Unchanged by Germany, Belgium, France *and*
-   Spain: `UN → anything` is still 0. An `EU-ESS` entity (step 3) would give
-   [[UN-UNSD]] something to attach to.
-9. **Resolve the federal modelling gap.** Three of the Atlas's five
-   countries have an unrepresentable sub-national tier, in three
-   constitutionally distinct forms, and the Atlas fails on all three
-   identically. See `countries/es/es.md`, `countries/be/be.md` and
-   `countries/de/de.md`.
-10. **A cybersecurity domain entity.** Well over twenty entities across
-    three layers and five countries would qualify. Deliberately not created
-    inside a country batch.
-11. **A sixth country outside western Europe.** All five are western
-    European EU member states. See `progress/backlog.md`.
+7. **The national transpositions of
+   [[EU-ENVIRONMENTAL-INFORMATION-DIRECTIVE]].** Five `applies-in` edges and
+   not one transposing instrument named. ⚠ The trap is live: general
+   open-government acts already in the Atlas ([[NL-WOO]],
+   [[ES-LEY-37-2007]]) are **not** the environmental-information
+   transpositions.
+8. **[[EU-INSPIRE]] → [[NL]]**. The directive carries `applies-in` to `DE`,
+   `BE`, `FR` and `ES` but **not** `NL`. Four countries have touched it
+   without closing the Dutch gap.
+9. **`UN-FPOS` → national statistical legislation.** The UN batch connected
+   the statistical *offices*; the *legislation* ([[NL-WET-CBS]],
+   [[DE-BSTATG]]) still has no UN link.
+10. **Resolve [[FR-NIS2-LOI]]'s status.** The Atlas's only entity whose
+    sources contradict each other about whether the instrument is in force.
+11. **Resolve the federal modelling gap.** Three of five countries have an
+    unrepresentable sub-national tier, in three constitutionally distinct
+    forms, and the Atlas fails on all three identically.
+12. **A cybersecurity domain entity**, and **a sixth country outside western
+    Europe**. See `progress/backlog.md`.

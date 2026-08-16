@@ -114,8 +114,8 @@ is what to request.
 
 | Entity / topic | Question | Why it matters | Noted by / date | Status |
 |---|---|---|---|---|
-| **The UN layer is unconnected** | Nothing links the 9 UN entities to any EU or NL entity | The brief's target architecture is UN → EU → National → Sector. What exists is a connected EU↔NL graph plus a **separate, unattached UN component**. The single most significant structural gap in the Atlas. | Batch 15 / 2026-08-14 | **Open — structural, highest value** |
-| [[UN-UNSD]] → [[EU-EUROSTAT]] | Is the European Statistical System part of the global statistical system? | Would close most of the UN-layer gap on its own. Plainly true in substance; **no source read says it**. | Batch 13; confirmed Batch 15 | Open |
+| **The UN layer is unconnected** | Nothing links the 9 UN entities to any EU or NL entity | The brief's target architecture is UN → EU → National → Sector. What exists is a connected EU↔NL graph plus a **separate, unattached UN component**. The single most significant structural gap in the Atlas. | Batch 15 / 2026-08-14 | ✅ **Resolved — UN-connection batch, 2026-08-16.** `EU → UN` is now 4 and `UN → national` is 5. The diagnosis in `discovery/candidates.md` held: in every cluster the refused edge pointed at a node that did not exist. Creating [[EU-ESS]], [[UN-UNSC]], [[UN-UNECE]] and [[UN-CES]] made the statistics edges statable, and [[UN-AARHUS]] → [[EU-ENVIRONMENTAL-INFORMATION-DIRECTIVE]] gave the first complete UN → EU → national chain. **No sourcing standard was lowered and no relationship type was added.** |
+| [[UN-UNSD]] → [[EU-EUROSTAT]] | Is the European Statistical System part of the global statistical system? | Would close most of the UN-layer gap on its own. Plainly true in substance; **no source read says it**. | Batch 13; confirmed Batch 15 | ✅ **Resolved differently — UN batch, 2026-08-16.** The edge as posed was never correct: UNSD is a secretariat and Eurostat does not relate to it directly. Eurostat `participates-in` [[UN-UNSC]] and [[UN-CES]] — forums, sourced to Eurostat's own cooperation page — and [[UN-UNSD]] is `governed-by` the Commission. **Three refusals of this row were right.** |
 | [[UN-FPOS]] → [[NL-WET-CBS]] | Does Dutch statistical legislation align with the Fundamental Principles? | Countries are tracked on exactly this. Would give a UN → national chain. | Batch 12; confirmed Batch 15 | Open |
 | [[NL]], [[EU]], [[UN]] anchors | Do their cited URLs exist? | **Written in Batch 0 from background knowledge, never confirmed by search or fetch** — the brief says never invent URLs. Now marked `verification: unverified`, worse than the `search-only` majority. Self-inflicted, caught by the Batch 6 audit. | Batch 6 / 2026-08-14 | **Open — priority** |
 | `applies-in` with one country | Is the country-neutral model actually reusable? | All 17 `applies-in` relationships target `NL`. The mechanism is exercised but **untested with a second country**, which is the only real proof. | Batch 15 / 2026-08-14 | ✅ **Resolved — Germany batch, 2026-08-15.** 33 `applies-in` relationships now target `['DE', 'NL']`. Adding a second country required no ontology, schema, folder or validation change, and produced no `DE-EU-*` entity. See `countries/README.md`. |
@@ -132,9 +132,9 @@ is what to request.
 | [[INTL-ISO-IEC-27002]] | Cited URL points at **edition 2 (2013)**, a superseded edition | The current edition is 27002:2022, which is what BIO2 references. The ISO OBP link located resolves to the older edition and older title. | Batch 14 / 2026-08-14 | Open |
 | [[NL-BIO]] → ISO editions | Is NEN-EN-ISO/IEC 27001:**2023** the same standard as ISO/IEC 27001:**2022**? | BIO2 cites the NEN-EN adoption years; the ISO editions differ by one year. Almost certainly the Dutch/European adoption of the same standard, but the equivalence is **inferred, not sourced**. | Batch 14 / 2026-08-14 | Open |
 | [[INTL-ISO]] → [[NL-NEN]] | Is NEN a member of ISO? | Batch 2 recorded NEN as a 1947 ISO co-founder, but no composition rule was sourced (unlike CEN's "33 national bodies"), so **no relationship is asserted** — unlike the CEN, EDPB and Eurostat membership links. Should be easy to close. | Batch 13 / 2026-08-14 | Open |
-| [[UN-UNSD]] → [[EU-EUROSTAT]] | Does the European Statistical System connect to the UN statistical system? | **No source read connects the levels.** One of the clearest remaining gaps in the Atlas's vertical structure — the statistics chain stops at the EU. | Batch 13 / 2026-08-14 | **Open — structural** |
+| [[UN-UNSD]] → [[EU-EUROSTAT]] | Does the European Statistical System connect to the UN statistical system? | **No source read connects the levels.** One of the clearest remaining gaps in the Atlas's vertical structure — the statistics chain stops at the EU. | Batch 13 / 2026-08-14 | ✅ **Resolved — UN batch, 2026-08-16.** See the Batch 15 row above; the connection runs through forums, not between the two organisations. |
 | [[UN-FPOS]] → [[NL-WET-CBS]] | Does Dutch statistical legislation align with the FPOS? | Countries are tracked on exactly this. Establishing it would give an international → national chain in statistics, parallel to DCAT in metadata. | Batch 12 / 2026-08-14 | Open |
-| [[UN-UNSD]] | Should UNSD and the UN Statistical Commission be separate entities? | UNSD is the secretariat; the Commission is the intergovernmental body. Folded into one on a single sourced sentence. | Batch 13 / 2026-08-14 | Open (modelling) |
+| [[UN-UNSD]] | Should UNSD and the UN Statistical Commission be separate entities? | UNSD is the secretariat; the Commission is the intergovernmental body. Folded into one on a single sourced sentence. | Batch 13 / 2026-08-14 | ✅ **Resolved — UN batch, 2026-08-16.** Split. A source distinguishes them: the Commission **oversees the work of** UNSD, and UNSD **acts as the Commission's secretariat**. The split is what made [[EU-EUROSTAT]]'s edge statable — it sits in the Commission, not in the Division. |
 | ISO/IEC JTC 1 | Should the joint technical committee be an entity? | It is arguably what actually produces the 27000-family standards, sitting between the two organisations and the standards. Not modelled. | Batch 14 / 2026-08-14 | Open (modelling) |
 | [[UN-2-0]] | The quintet PDF sits under a `2021/09` path while the policy brief is dated Sept 2023 | Suggests the quintet framing predates the brief, or the file was re-filed. `start_date: 2023-09-01` is a placeholder. | Batch 12 / 2026-08-14 | Open |
 | World Bank | Not modelled | Named in Batch 13's scope. Its institutions are technically UN specialised agencies, making the UN/non-UN call genuinely tricky — **omitted rather than risk misclassifying it**, which is the specific error the brief warns about. | Batch 13 / 2026-08-14 | Open (deliberate) |
@@ -162,7 +162,7 @@ is what to request.
 
 | Link | Why refused | Value if closed | Status |
 |---|---|---|---|
-| [[DE-DESTATIS]] → [[EU-EUROSTAT]] | Destatis's sourced remit includes "harmonisation of statistics for the purposes of the European Union" but **does not name Eurostat** | Third member of the statistics cluster below | **Open — structural** |
+| [[DE-DESTATIS]] → [[EU-EUROSTAT]] | Destatis's sourced remit includes "harmonisation of statistics for the purposes of the European Union" but **does not name Eurostat** | Third member of the statistics cluster below | ✅ **Resolved — UN batch, 2026-08-16.** Destatis is now `part-of` [[EU-ESS]], sourced to the ESS composition rule. The edge to Eurostat itself is still not asserted and does not need to be. |
 | [[DE-BSTATG]] → [[UN-FPOS]] | The act's principles read as a restatement of the Fundamental Principles; no source says so | Fourth member of the cluster | **Open — structural** |
 | [[DE-XRECHNUNG]] → [[EU-CEN]] / EN 16931 | XRechnung is in all likelihood the German CIUS of the European e-invoicing norm under Directive 2014/55/EU. **No source read states it**; neither the directive nor EN 16931 is an Atlas entity | A fifth EU→DE chain, and one running through a **standards body** rather than a legislature — the DCAT shape Batch 15 asked for more of | **Open — high value, low effort** |
 | [[EU-INSPIRE]] → [[NL]] | INSPIRE certainly applies in the Netherlands, but the Dutch geospatial batch predates this entity and none of its sources named the directive | Removes the false impression that INSPIRE is German-specific | **Open — first priority, near-certainly one page read** |
@@ -207,7 +207,7 @@ is what to request.
 | [[BE-HERGEBRUIK-WET]] → [[EU-OPEN-DATA-DIRECTIVE]] | **Chronologically impossible**: the act is 2016, the directive 2019/1024. Sources say it aligns with the earlier PSI Directive, which is not an Atlas entity. **Belgium's actual Open Data Directive transposition was not identified.** The sharpest pattern-matching trap in the batch — the shape of the Atlas made a wrong answer attractive. | **Open — priority** |
 | [[BE-NIS1-WET]] → [[EU-NIS]] | Near-certain, and [[EU-NIS]] *is* an Atlas entity so the link has somewhere to point — but every source cited is about the successor act and none states what the 2019 act transposed. Would give a second `EU-NIS` → national descent. | **Open — one page read** |
 | [[BE-APD]] → [[EU-EDPB]] | No source read mentions the EDPB. Three national DPAs now sit in the Atlas and **only [[NL-AP]] connects to the Board** — a sourcing artefact, not a fact about European data protection governance. | Open |
-| [[BE-STATBEL]] → [[EU-EUROSTAT]] / [[UN-FPOS]] | Nothing found. **Three national statistical offices now sit in the Atlas and none connects upward.** The statistics cluster has survived three countries. | **Open — structural** |
+| [[BE-STATBEL]] → [[EU-EUROSTAT]] / [[UN-FPOS]] | Nothing found. ⚠ **The claim that "none connects upward" was wrong when written and was repeated for three batches** — [[NL-CBS]] already carried a `participates-in` edge to Eurostat, with ESS-membership reasoning in its evidence. Corrected in the UN batch. | ✅ **Partly resolved — UN batch, 2026-08-16.** Statbel is now `part-of` [[EU-ESS]]. The [[UN-FPOS]] half is still open. |
 | [[BE-KSZ]] → [[EU-SDG]] | The KSZ predates the regulation by 28 years and no source connects them — the same refusal made for [[DE-REGMOG]]. | Open |
 | [[BE-DATA-GOV-BE]] → [[BE-HERGEBRUIK-WET]] | Portal and open-data act, obviously related, no source states it. Same call as [[DE-GOVDATA]] / [[DE-DNG]]. | Open |
 | [[BE-BOSA]] → [[BE-BELGIF]] | BELGIF is sourced as co-owned by the federal state, Regions and Communities — precisely not something BOSA owns. | Open (deliberate) |
@@ -261,7 +261,7 @@ stands unchanged.
 | [[FR-LIL]] | No Légifrance citation for loi 78-17 itself; the 1978 date rests on the CNIL and secondary commentary. Three of five sources are chamber-of-commerce or law-firm material. | Open |
 | [[FR-RGI]] | The specification PDF is cited from **april.org**, an advocacy association hosting a copy, because no numerique.gouv.fr URL for it was returned. | Open |
 | French DCAT profile | **Not established.** data.gouv.fr certainly exposes DCAT — the European portal harvests it — but no named French application profile was found, so the DCAT fork stops at three countries instead of four. | Open |
-| INSEE | Not modelled — only a passing mention in an unrelated article. The statistics cluster therefore stays at three unconnected national offices. | Open |
+| INSEE | Not modelled — only a passing mention in an unrelated article. France is therefore the **only one of the five countries with no statistical office in [[EU-ESS]]**, which is now a visible hole in a modelled structure rather than a missing entity among unconnected ones. | **Open — more visible since the UN batch** |
 
 ## Spain batch — fifth country (2026-08-16)
 
@@ -300,7 +300,7 @@ model only the state half.
 |---|---|
 | **Open Data Directive transposition** | [[ES-LEY-37-2007]], as amended by Real Decreto-ley 24/2021. **Three of five countries now closed**; Belgium and France stay open. The "obvious earlier act" trap is confirmed as a research hazard in three of five countries — 2016 in Belgium and France, **2007** in Spain. |
 | **First national link to [[EU-AI-ACT]]** | [[ES-AESIA]] `governed-by` the AI Act. Spain created the agency in 2023, before the Regulation applied — the first EU member state to have one. |
-| **First edge in the statistics cluster** | [[ES-INE]] `related-to` [[EU-EUROSTAT]], `source: interpretation`, `confidence: low`. See the caveat below. |
+| **First edge in the statistics cluster** | [[ES-INE]] `related-to` [[EU-EUROSTAT]], `source: interpretation`, `confidence: low`. **Superseded by the UN batch:** replaced with `part-of` [[EU-ESS]] at `source: fact`, which is what the Spain batch itself said the correct fix would be. |
 | **Fourth branch of the DCAT chain** | [[ES-NTI-RISP]] `based-on` [[EU-DCAT-AP]] — and the only branch that is a legally mandatory norm rather than a profile. |
 
 ### Refused links — Spain
@@ -335,6 +335,70 @@ model only the state half.
 | [[ES-CLAVE]] | Operator, legal basis, the relationship between Cl@ve PIN and Cl@ve Permanente, and the status of any Spanish digital identity wallet are all unrecorded. | Open |
 | Spanish organic law on AI | Sources refer to one landing the AI Act domestically with sanctions and sandboxes, at a stage they describe inconsistently. **Not created** — the Atlas already carries one instrument whose sources contradict each other and does not need a second on weaker evidence. | Open |
 | Ley 39/2015 / Ley 40/2015 | Spain's electronic-administration acts. Well sourced but not modelled in this batch; they are the current legal base for much of what [[ES-AEAD]] does. | Open |
+
+## UN-connection batch (2026-08-16)
+
+### The island is connected
+
+`UN → anything` was 0 through five country batches. It is now `EU → UN` = 4
+and `UN → national` = 5, with 14 entities added and 7 rewired.
+
+**Nothing about the sourcing standard changed.** Every previously-refused
+edge was refused correctly; what was missing was the node it should have
+pointed at. [[EU-ESS]] and [[UN-UNSC]] are those nodes, and creating them
+made five statistics edges statable on evidence that was already available.
+
+### A record that was wrong for three batches
+
+| Claim | Reality |
+|---|---|
+| *"Three/four national statistical offices sit in the Atlas and none connects upward"* — repeated in this file, `candidates.md` and three batch entries | **[[NL-CBS]] already had `participates-in` → [[EU-EUROSTAT]]**, added in an early batch with ESS-membership reasoning in its evidence string |
+
+The claim was never checked against the entity files; it was carried forward
+from batch to batch. It is corrected here, and the NL-CBS edge has been
+repointed to [[EU-ESS]] with the other four. **Worth a lesson: cluster
+narratives in this file are prose, and prose does not get validated.**
+
+### Newly opened — two EU↔UN interactions the vocabulary cannot express
+
+| Interaction | Why it could not be modelled | Status |
+|---|---|---|
+| **UNESCO–European Commission agreement** on AI ethics implementation | A funding-and-cooperation agreement to help *other* countries implement the Recommendation. The Commission is not adopting or implementing it. No type says "has an agreement with" | Open (vocabulary) |
+| **The 2023 EU voluntary review** submitted to UN SDG monitoring | A one-off report submitted to a UN process. `references` is the nearest type and would misstate it | Open (vocabulary) |
+
+**Two examples is the threshold `metadata/relationship-types.md` §2.3 sets
+for proposing a new type.** Deliberately not proposed by a batch that could
+not read the sources.
+
+### Newly opened — soft law is indistinguishable from binding law
+
+[[UN-AARHUS]] is a convention that binds its Parties. The
+[[UN-AI-ETHICS-RECOMMENDATION]] is a non-binding UNESCO recommendation.
+Nothing in the Atlas's metadata distinguishes them.
+
+This is **the same missing property** the Spain batch found from the other
+direction, where `type: law` flattened Spain's constitutional `Ley Orgánica`
+rank. Two independent batches have now hit it. No field was added: six
+batches have run without one and populating it honestly would mean
+re-reading every instrument.
+
+### Still open after the batch
+
+| Item | Why it stayed open |
+|---|---|
+| [[EU-INSPIRE]] → the UN-GGIM structure | A EuroGeographics presentation *about* UN-GGIM given to an INSPIRE audience is evidence the communities talk, not that the instruments relate. The geospatial cluster has its UN parent and no European edge |
+| Any EU/national reference to a **UN/CEFACT** standard | Searched; nothing found. [[UN-CEFACT]] is attached to [[UN-UNECE]] and connects to the European layer not at all |
+| **EuroGeographics** | Probably the missing European node, playing [[EU-ESS]]'s role for geospatial. Every source found is its own site or trade press — creating it on that basis would repeat the error this batch existed to correct |
+| [[UN-FPOS]] → national statistical legislation | Untouched. The batch connected the *organisational* statistics layer; the **legislative** one ([[NL-WET-CBS]], [[DE-BSTATG]]) still has no UN link |
+| [[EU-AI-ACT]] → [[UN-AI-ETHICS-RECOMMENDATION]] | The dates line up — UNESCO 2021, [[ES-AESIA]] 2023, AI Act 2024 — and **nothing read says they relate**. Chronology is not causation, and this was the batch's most attractive available error |
+| [[EU-SDG-INDICATORS]] `applies-in` | Not asserted. An indicator set is not an instrument that applies in a member state, and no national SDG indicator set is modelled for any of the five countries |
+
+### Typing questions opened
+
+| Entity | Question |
+|---|---|
+| [[UN-CES]] | Typed `programme`. It is a standing intergovernmental conference with a Bureau, so `organisation` is arguable; typed `programme` because it is convened *by* [[UN-UNECE]] rather than existing beside it, the same reading applied to [[UN-GGIM]] |
+| [[INTL-OECD-CSSP]] | The sources give **two names and two acronyms** — *committee on statistics and statistical policy* (CSSP) and *statistics committee* (CSTAT) — and differ on whether Eurostat represents "the EU" or "the European Commission". Recorded at `confidence: low` with both names. **No OECD source is cited at all**; the committee is described only by a participant |
 
 ## Factual details flagged in entity bodies
 

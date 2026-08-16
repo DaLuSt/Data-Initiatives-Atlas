@@ -36,11 +36,11 @@ organisations: []
 related_entities:
   - EU-EUROSTAT
 relationships:
-  - type: related-to
-    target: EU-EUROSTAT
-    source: interpretation
-    evidence: "Ley 12/1989 assigns the INE responsibility for, among other functions, managing statistical relations with international organisations such as Eurostat; separately, the European Statistical System is described as comprising Eurostat, the statistical offices of all EU member states and other bodies producing European statistics, with the European Statistical System Committee made up of Eurostat and the presidents of member states' national statistical institutes (ine.es 'Qué es el SEE y cómo funciona'; ine.es 'El Instituto Nacional de Estadística'; eur-lex.europa.eu summary 'Estadísticas europeas'). ATLAS INTERPRETATION: the sources describe a three-party structure — INE and Eurostat both within the European Statistical System — not a direct bilateral relationship. NOT READ — search-only."
-    confidence: low
+  - type: part-of
+    target: EU-ESS
+    source: fact
+    evidence: "The European Statistical System is the partnership between the Community statistical authority, which is the Commission (Eurostat), and the national statistical institutes and other national authorities responsible in each member state for the development, production and dissemination of European statistics; the INE's own explanation describes the SEE as comprising Eurostat, the statistical offices of all EU member states and other bodies, with the ESS Committee made up of Eurostat and the presidents of member states' national statistical institutes. INE is the Spanish NSI (ine.es 'Qué es el SEE y cómo funciona'; ec.europa.eu/eurostat/web/european-statistical-system; EUR-Lex CELEX 32009R0223). NOT READ — search-only."
+    confidence: medium
     valid_from: null
     valid_until: null
 

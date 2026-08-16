@@ -38,6 +38,34 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: part-of
+    target: EU-ESS
+    source: fact
+    evidence: "The European Statistical System is the partnership between the Community statistical authority, which is the Commission (Eurostat), and the national statistical institutes and other national authorities responsible in each member state for the development, production and dissemination of European statistics; the ESS Committee is chaired by Eurostat (ec.europa.eu/eurostat/web/european-statistical-system; EUR-Lex CELEX 32009R0223; cso.ie European Statistical System page). NOT READ — search-only."
+    confidence: medium
+    valid_from: 2009-03-11
+    valid_until: null
+  - type: participates-in
+    target: UN-UNSC
+    source: fact
+    evidence: "Eurostat represents the EU in key international forums such as the United Nations Statistical Commission (UNSC), in the Conference of European Statisticians (CES) organised by the UNECE and in the OECD's committee on statistics and statistical policy (CSSP) (ec.europa.eu/eurostat Statistics Explained 'Statistical cooperation – introduction'). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: participates-in
+    target: UN-CES
+    source: fact
+    evidence: "Eurostat represents the EU in key international forums such as the United Nations Statistical Commission (UNSC), in the Conference of European Statisticians (CES) organised by the UNECE and in the OECD's committee on statistics and statistical policy (CSSP) (ec.europa.eu/eurostat Statistics Explained 'Statistical cooperation – introduction'). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: participates-in
+    target: INTL-OECD-CSSP
+    source: fact
+    evidence: "Eurostat represents the EU in key international forums such as the United Nations Statistical Commission (UNSC), in the Conference of European Statisticians (CES) organised by the UNECE and in the OECD's committee on statistics and statistical policy (CSSP); a parallel passage on the same page says Eurostat represents the European Commission in the OECD's statistics committee (CSTAT) (ec.europa.eu/eurostat Statistics Explained 'Statistical cooperation – introduction'). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Eurostat and the European Statistical System — Statistics Explained"

@@ -34,10 +34,10 @@ related_entities:
   - NL-WET-CBS
   - EU-EUROSTAT
 relationships:
-  - type: participates-in
-    target: EU-EUROSTAT
+  - type: part-of
+    target: EU-ESS
     source: fact
-    evidence: "The European Statistical System is the partnership between the Commission (Eurostat) and the national statistical institutes; the ESS Committee consists of the heads of Eurostat and of the NSIs. CBS is the Dutch NSI. Membership follows from the sourced composition rule. NOT READ — search-only."
+    evidence: "The European Statistical System is the partnership between the Community statistical authority, which is the Commission (Eurostat), and the national statistical institutes and other national authorities responsible in each member state for the development, production and dissemination of European statistics; the ESS Committee is composed of NSI representatives and chaired by Eurostat. CBS is the Dutch NSI. Membership follows from the sourced composition rule (ec.europa.eu/eurostat/web/european-statistical-system; EUR-Lex CELEX 32009R0223). NOT READ — search-only."
     confidence: medium
     valid_from: null
     valid_until: null
