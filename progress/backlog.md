@@ -353,6 +353,32 @@ validation (`CONTRIBUTING.md` — Batch workflow).
   §1.3 requires a taxonomy row with the entity — but the generator reports it
   instead of hiding it, and a validator rule would catch it earlier.
 
+## Opened by the comparison matrix
+
+All three were produced by putting the countries side by side; none is
+visible from any single entity.
+
+- [ ] **The GDPR supervisory authority is modelled inconsistently.** Seven
+  entities carry `implements-requirement-from` [[EU-GDPR]]. Six are national
+  laws. The seventh is [[NL-AP]] — an **organisation**, and the only
+  supervisory authority in the Atlas that carries the edge.
+  [[BE-APD]], [[DE-BFDI]], [[ES-AEPD]], [[FR-CNIL]] and [[PL-UODO]] do not.
+  Decide which pattern is right and apply it to all six: either the
+  authority implements the GDPR's Chapter VI requirement in every country,
+  or it does so in none and the Dutch edge belongs on [[NL-UAVG]] alone.
+- [ ] **[[EU-EIDAS]] has no `applies-in` edges**, although it is `active`
+  and [[DE-BUNDID]] implements it. Every other active EU instrument in the
+  matrix attaches to all six countries. ([[EU-NIS]] is also empty and that
+  is correct — it is `superseded`.)
+- [ ] **[[EU-INSPIRE]] applies in five countries and not the Netherlands.**
+  `['BE', 'DE', 'ES', 'FR', 'PL']` — the founding country is the gap,
+  despite [[DOMAIN-GEOSPATIAL]] and a national geo-portal. Almost certainly
+  an omission predating the `applies-in` convention.
+- [ ] **13 of 20 instruments apply in all six countries with no national
+  instrument modelled at all** — 88 of the matrix's 120 cells. That is the
+  single largest content gap the Atlas can now state precisely, and it is a
+  research queue rather than a defect.
+
 ## Explicitly out of scope for now
 
 - Countries beyond the five modelled (structure supports them; no content

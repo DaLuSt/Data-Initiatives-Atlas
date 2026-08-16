@@ -154,7 +154,11 @@ a:hover { text-decoration: none; }
 
 /* ───────────────────────── layout ───────────────────────── */
 
-.layout { flex: 1 1 auto; display: flex; min-height: 0; position: relative; }
+/* overflow-x: a flex child wider than the viewport (the comparison matrix on
+   a phone) otherwise pushes the document itself sideways. Horizontal
+   scrolling belongs to the element that is too wide — .table-wrap — not to
+   the page. `body` already carries the same guard. */
+.layout { flex: 1 1 auto; display: flex; min-height: 0; position: relative; overflow-x: hidden; }
 
 .sidebar {
   flex: 0 0 var(--sidebar-w); width: var(--sidebar-w);
@@ -287,6 +291,50 @@ a:hover { text-decoration: none; }
   background: none; border: none; padding: 0; font: inherit; font-weight: 600;
   color: var(--accent); cursor: pointer; text-align: left;
 }
+
+/* ───────────────────────── comparison matrix ───────────────────────── */
+
+.compare-inner { max-width: 92rem; }
+
+.matrix-legend {
+  list-style: none; margin: .6rem 0; padding: 0;
+  display: flex; flex-wrap: wrap; gap: .3rem 1.1rem;
+  font-size: .78rem; color: var(--text-dim);
+}
+/* Each legend row is exactly two flex children — the key and one wrapper span.
+   Leaving the label as bare text plus <code> would make every <code> its own
+   flex item and shred the sentence. */
+.matrix-legend li { display: flex; align-items: baseline; gap: .4rem; }
+/* Wide rather than square: a small bordered box next to the sidebar's real
+   checkboxes reads as a checkbox, not as a colour key. */
+.cell-key {
+  width: 1.7rem; height: .7rem; border-radius: 2px; flex: none;
+  border: 1px solid var(--border-strong);
+}
+.cell-key.is-implemented { background: var(--accent-weak); border-color: var(--accent); }
+.cell-key.is-applies     { background: var(--surface-2); }
+.cell-key.is-none        { background: transparent; }
+
+.matrix th[scope="row"] {
+  position: sticky; left: 0; background: var(--surface); z-index: 1;
+  min-width: 13rem; border-right: 1px solid var(--border);
+}
+.matrix tbody tr:hover th[scope="row"] { background: var(--surface-2); }
+.matrix thead th { text-align: left; white-space: nowrap; }
+.matrix thead th:first-child { left: 0; z-index: 2; }
+.matrix td { min-width: 8.5rem; }
+
+/* The three cell states are distinguished by text as well as by tint —
+   colour alone would make the matrix unreadable without it. */
+.matrix td.is-implemented { background: var(--accent-weak); }
+.matrix td.is-applies     { background: var(--surface-2); }
+
+.cell-applies, .cell-none { font-size: .78rem; color: var(--text-dim); }
+.cell-entity { display: block; margin-bottom: .2rem; }
+.cell-entity:last-child { margin-bottom: 0; }
+.cell-status { font-size: .72rem; color: var(--text-dim); display: block; }
+.row-note { display: block; font-weight: 400; font-size: .75rem; color: var(--text-dim); margin-top: .15rem; }
+.row-id { display: block; font-weight: 400; font-size: .72rem; color: var(--text-dim); }
 
 /* ───────────────────────── detail panel ───────────────────────── */
 

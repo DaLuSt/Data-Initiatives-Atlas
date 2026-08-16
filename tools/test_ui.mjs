@@ -259,6 +259,70 @@ async function search(page, q) {
   await page.click('#reset-filters');
   await page.waitForTimeout(400);
 
+  // ── comparison matrix ──
+  await page.click('#view-compare');
+  await page.waitForSelector('#compareview:not([hidden])');
+  const cmpHead = await page.$$eval('#compare-head th', e => e.map(x => x.textContent.trim()));
+  check('compare view renders a country column per country',
+    cmpHead[0] === 'Instrument' && cmpHead.length >= 3, cmpHead.join(','));
+
+  const cmpRows = await page.$$eval('#compare-body tr', r => r.length);
+  check('compare view renders supra-national instruments as rows', cmpRows >= 5, `${cmpRows} rows`);
+
+  const cmpCount = await page.textContent('#compare-count');
+  check('compare view reports implemented vs applies-only',
+    /\d+ implemented · \d+ applying/.test(cmpCount), cmpCount.trim());
+
+  // The three cell states must all be present and textually distinguishable —
+  // the tint alone is not the signal.
+  const cellKinds = await page.$$eval('#compare-body td', tds => ({
+    implemented: tds.filter(t => t.classList.contains('is-implemented')).length,
+    applies: tds.filter(t => t.classList.contains('is-applies')).length,
+    none: tds.filter(t => !t.className).length
+  }));
+  check('compare cells carry all three states',
+    cellKinds.implemented > 0 && cellKinds.applies > 0 && cellKinds.none > 0,
+    JSON.stringify(cellKinds));
+  const appliesText = await page.textContent('#compare-body td.is-applies');
+  check('applies-only cells say so in words, not only by colour',
+    /none modelled/i.test(appliesText), appliesText.trim());
+
+  // GDPR and NIS2 are the two instruments implemented in all six countries.
+  const firstRow = await page.textContent('#compare-body tr:first-child th');
+  check('compare rows are ranked by how much each instrument records',
+    /General Data Protection|NIS2/i.test(firstRow), firstRow.replace(/\s+/g, ' ').trim());
+
+  // A national implementer with no country of its own (the EU implementing a
+  // UN convention) belongs to no column and must not be dropped.
+  const rowNotes = await page.$$eval('#compare-body .row-note', e => e.map(x => x.textContent.trim()));
+  check('supra-national implementers are reported, not dropped',
+    rowNotes.length > 0 && /above the national level/i.test(rowNotes[0]), rowNotes.join(' | '));
+
+  // Rows are instruments with country: null — the country filter must move
+  // the columns, not empty the table.
+  await page.click('#f-country label:has-text("Germany")');
+  await page.waitForTimeout(500);
+  const narrowedHead = await page.$$eval('#compare-head th', e => e.map(x => x.textContent.trim()));
+  const narrowedRows = await page.$$eval('#compare-body tr', r => r.length);
+  check('country filter narrows compare columns, not rows',
+    narrowedHead.length === 2 && narrowedRows === cmpRows,
+    `${narrowedHead.join(',')} · ${narrowedRows} rows`);
+  await page.click('#reset-filters');
+  await page.waitForTimeout(400);
+
+  // Domain, by contrast, describes the instruments and must narrow the rows.
+  await page.click('#f-domain label:has-text("Cybersecurity")');
+  await page.waitForTimeout(500);
+  const domRowsCmp = await page.$$eval('#compare-body tr', r => r.length);
+  check('domain filter narrows compare rows', domRowsCmp > 0 && domRowsCmp < cmpRows,
+    `${cmpRows} → ${domRowsCmp}`);
+  await page.click('#reset-filters');
+  await page.waitForTimeout(400);
+
+  await page.click('#compare-body .namebtn');
+  await page.waitForSelector('#detail:not([hidden])');
+  check('clicking a compare cell opens the entity', true);
+
   // ── list view ──
   await page.fill('#search', '');
   await page.waitForTimeout(250);
@@ -323,6 +387,23 @@ async function search(page, q) {
   check('mobile: filters drawer opens', sidebarOpen);
 
   await page.click('#filters-toggle');
+  await page.waitForTimeout(300);
+
+  // A 7-column matrix is the widest thing the site renders. It must scroll
+  // inside its own wrapper, never widen the page.
+  await page.click('#view-compare');
+  await page.waitForSelector('#compareview:not([hidden])');
+  await page.waitForTimeout(300);
+  const mCompare = await page.evaluate(() => ({
+    page: document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1,
+    wrapScrolls: (() => {
+      const w = document.querySelector('#compareview .table-wrap');
+      return w.scrollWidth > w.clientWidth;
+    })()
+  }));
+  check('mobile: compare matrix scrolls in its wrapper, not the page',
+    mCompare.page && mCompare.wrapScrolls, JSON.stringify(mCompare));
+  await page.click('#view-atlas');
   await page.waitForTimeout(300);
 
   await page.fill('#search', 'NORA');
