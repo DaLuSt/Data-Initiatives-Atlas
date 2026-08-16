@@ -9,15 +9,22 @@ description: >
   The Dutch system of base registries: ten designated national registrations
   plus supporting system services, established so that core data of each
   kind is collected and managed in one authoritative place and reused across
-  government rather than re-collected.
+  government rather than re-collected. The ten are the BRP, the
+  Handelsregister, the BAG, the BRT, the BRK, the BRV, the BRI, the WOZ, the
+  BGT and the BRO. System facilities support data exchange between the
+  registrations and the accuracy of the data: Digikoppeling for exchange
+  between government organisations, and Digimelding for reporting suspected
+  errors. Each registration has an initiating organisation, a supervisor, a
+  provider and one or more holders, and one organisation can be provider,
+  holder and user at the same time.
 
 level: national
 country: NL
 region: null
 
 status: active
-confidence: low
-coverage: low
+confidence: medium
+coverage: medium
 verification: search-only
 
 start_date: null
@@ -31,29 +38,39 @@ domains:
 organisations:
   - NL-BZK
 related_entities:
-  - NL-KADASTER
-  - NL-KVK
-  - NL-RDW
-  - NL-WET-BRP
-relationships:
-  - type: governed-by
-    target: NL-WET-BRP
-    source: fact
-    evidence: "The Wet BRP governs the Basisregistratie Personen, one of the registrations within the stelsel (rvig.nl; digitaleoverheid.nl BRP page). This governs one registration, not the stelsel as a whole. NOT READ — search-only."
-    confidence: low
-    valid_from: 2014-01-06
-    valid_until: null
+  - NL-BRP
+  - NL-NHR
+  - NL-BAG
+  - NL-BRT
+  - NL-BRK
+  - NL-BGT
+  - NL-WOZ
+  - NL-BRV
+  - NL-BRI
+  - NL-BRO
+  - NL-DIGIKOPPELING
+  - NL-FDS
+relationships: []
 
 sources:
   - title: "10 basisregistraties — Stelsel van basisregistraties"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/10-basisregistraties/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
-  - title: "Basisregistraties — Kadaster"
-    url: "https://www.kadaster.nl/zakelijk/registraties/basisregistraties"
-    publisher: "Kadaster"
+  - title: "Rollen — Stelsel van basisregistraties"
+    url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/rollen-stelsel-basisregistraties/"
+    publisher: "Digitale Overheid (Ministerie van BZK)"
+  - title: "Stelsel van Basisregistraties — toegankelijke beschrijving"
+    url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/stelsel-van-basisregistraties-toegankelijke-beschrijving/"
+    publisher: "Digitale Overheid (Ministerie van BZK)"
+  - title: "Het huidige Stelsel van Basisregistraties — NORA Online"
+    url: "https://www.noraonline.nl/wiki/Het_huidige_Stelsel_van_Basisregistraties"
+    publisher: "NORA Online"
   - title: "Basisregistraties: de 10 basisregistraties"
     url: "https://data.overheid.nl/community/group/basisregistraties_10"
     publisher: "data.overheid.nl"
+  - title: "Basisregistraties | Geobasisregistraties"
+    url: "https://www.geobasisregistraties.nl/basisregistraties"
+    publisher: "Geobasisregistraties (Ministerie van BZK)"
 ---
 
 # Stelsel van Basisregistraties
@@ -65,46 +82,128 @@ sources:
 ## Description
 
 The Stelsel van Basisregistraties is the Dutch system of base registries.
-Ten designated basisregistraties, together with a set of supporting system
-services, form the stelsel. The organising principle is single-point
-collection and management: central government decided to introduce the
-system so that the core data of each type is collected and maintained in one
-authoritative place, then reused across government rather than repeatedly
-re-collected.
+Ten designated registrations, plus supporting system services, form the
+stelsel. The organising principle is **single-point collection**: core data
+of each kind is collected and maintained in one authoritative place, then
+reused across government rather than repeatedly re-collected.
 
-Registrations named in Batch 2 research include the BRK (Basisregistratie
-Kadaster, held by [[NL-KADASTER]]), the BAG (Basisregistratie Adressen en
-Gebouwen), the Handelsregister (held by [[NL-KVK]]), the BRV
-(Basisregistratie Voertuigen, held by [[NL-RDW]] since 1 July 2008) and the
-BRP (Basisregistratie Personen). The registrations cross-reference one
-another — the Kadaster relates the BRK to the BAG, the Handelsregister and
-the BRP.
+## The ten registrations
 
-`coverage: low`: the individual registrations are not yet Atlas entities,
-and the full list of ten has not been enumerated from a source. The
-governance of the stelsel as a whole — who owns it, and how it relates to
-[[NL-FDS]], which addresses overlapping federated-data-sharing ground — has
-not been established and is recorded in `discovery/unresolved.md`.
+All ten are now Atlas entities:
 
-## Scope note
+| Register | What it answers | Holder / provider modelled |
+|---|---|---|
+| [[NL-BRP]] | who people are, and where they live | [[NL-RVIG]] |
+| [[NL-NHR]] | which businesses and legal entities exist | [[NL-KVK]] |
+| [[NL-BAG]] | addresses and buildings | [[NL-KADASTER]] (national facility) |
+| [[NL-BRT]] | topography, small and medium scale | [[NL-KADASTER]] |
+| [[NL-BRK]] | who owns real property | [[NL-KADASTER]] |
+| [[NL-BGT]] | topography, large scale, 20 cm accuracy | [[NL-KADASTER]] (national facility) |
+| [[NL-WOZ]] | what property is worth | [[NL-WAARDERINGSKAMER]] (functional manager) |
+| [[NL-BRV]] | vehicles and their keepers | [[NL-RDW]] |
+| [[NL-BRI]] | what people earn | [[NL-BELASTINGDIENST]] |
+| [[NL-BRO]] | what is underneath the ground | [[NL-TNO]] (national facility) |
 
-This is a `framework`, not an organisation, and so sits outside Batch 2's
-nominal scope. It was added here because without it the register-holding
-organisations added in this batch would be disconnected nodes: it is the
-structure that makes [[NL-KADASTER]], [[NL-KVK]] and [[NL-RDW]] cohere as
-part of one data system rather than three unrelated agencies.
+The **geo** subset — BAG, BRT, BRK, BGT, WOZ, BRO — is described as a
+division of labour over the same physical object: the address (BAG), the
+function of a location and its dimensions (BRT/BGT), ownership (BRK), value
+(WOZ) and the subsurface (BRO). See [[NL-BRK]] for that table.
+
+## System services
+
+The stelsel is not only the registrations. System facilities support
+exchange between them and the accuracy of the data:
+
+- **[[NL-DIGIKOPPELING]]** — data exchange between government organisations;
+- **Digimelding** — reporting suspected errors in the registrations.
+
+Digimelding is **not** an Atlas entity: it is named in one sentence of one
+source and nothing else about it was established. Queued.
+
+## Roles, not owners — and why the graph shows fewer parties than exist
+
+The stelsel's own documentation does not describe a register as having an
+owner. It describes **four roles**: an initiating organisation, a
+supervisor, a provider, and one or more holders — and states that one
+organisation can be provider, holder and user at the same time, giving
+[[NL-RDW]] as the example.
+
+**The Atlas has one relationship type for this**, `maintained-by`, and every
+register carries exactly one. Where the roles diverge, the edge points at
+the party the Atlas can name, and the divergence is written into the
+relationship's own `evidence` string so it is visible in the graph data
+rather than only in prose.
+
+The cost is concentrated in three registers:
+
+| Register | Who actually holds the data | What the graph shows |
+|---|---|---|
+| [[NL-BAG]] | municipalities | Kadaster (national facility) |
+| [[NL-BGT]] | **seven** categories of bronhouder, organised in SVB-BGT | Kadaster (national facility) |
+| [[NL-WOZ]] | municipalities | Waarderingskamer (functional manager) |
+
+**Dutch municipalities are not modelled.** Unlike the German Länder, Belgian
+Regions and Spanish Comunidades Autónomas, this is *not* blocked by the
+`level` vocabulary — `local` exists. It is blocked by there being no obvious
+entity to create: there are hundreds of municipalities, and a single node
+for "the municipalities" would be an invention. Logged in
+`discovery/unresolved.md`.
+
+## What this batch could not express, and why it matters here
+
+Three distinct gaps surfaced, and they may be one gap:
+
+1. **Authorised use.** No relationship type says "is an authorised user
+   of". The [[NL-BELASTINGDIENST]] consumes [[NL-WOZ]]; the [[NL-RDW]]
+   consumes [[NL-BRP]]. Neither is recorded.
+2. **Key-sharing couplings.** [[NL-BRK]] products carry the KvK number from
+   [[NL-NHR]]; [[NL-BAG]] couples to [[NL-BRP]] through documented RvIG
+   guidance. Neither is recorded.
+3. **`Authentiek gegeven`.** The legal status that makes a base registry a
+   base registry — data other bodies are obliged to use and may not
+   independently re-determine — has no field.
+
+Taken together: **the Atlas models what these registers *are* and what they
+*descend from*, and has almost no vocabulary for how data actually moves
+between them.** For a system whose entire purpose is data movement, that is
+the honest headline finding of this batch.
+
+It is the same shape as the two failures the UN batch recorded, which brings
+the count to five sourced connections left unmodelled for want of a type —
+past the threshold `metadata/relationship-types.md` §2.3 sets for proposing
+one.
+
+## Statutes: named, not modelled
+
+Nine of the ten registers have a statutory basis, and where it was sourced
+it is named in the register's description — the Wet BAG (partially in force
+1 July 2009), the Wet BGT (1 January 2016), the Wet BRO (1 January 2018),
+Chapter IVA of the AWR for the BRI (1 January 2009), the Wet WOZ.
+
+**No law entity was created for any of them.** Only [[NL-BRP]] carries a
+`governed-by` edge, to [[NL-WET-BRP]], which already existed from Batch 3.
+Creating six or seven Dutch statutes would be a legislation batch, not a
+registry batch, and doing half of it would leave the layer inconsistent.
+Queued in `discovery/research-queue.md`.
+
+**[[NL-BRT]] has no sourced statute at all** — the one register of the ten
+where none was found.
+
+## Relationship to [[NL-FDS]] is still open
+
+Whether the Federatief Datastelsel extends, replaces or sits beside the
+stelsel remains unestablished, as it has since Batch 2. Nothing in this
+batch touched it, and nothing is asserted.
 
 ## Relationships
 
-- Registrations held by [[NL-KADASTER]], [[NL-KVK]] and [[NL-RDW]].
-- [[NL-WET-BRP]] governs the BRP registration within the stelsel. Note this
-  relationship is recorded at `confidence: low`: the Wet BRP governs *one*
-  registration, not the stelsel as a whole, and each registration has its
-  own statutory basis. Once the individual registrations become entities,
-  this link should move down to the BRP entity.
-- Policy responsibility within [[NL-BZK]]'s digital-government remit
-  (asserted by the digitaleoverheid.nl placement of the topic, not by a
-  read source).
+None asserted from this entity. All ten registers carry `part-of` edges
+pointing here — `part-of` belongs on the part, not the whole.
+
+**The `governed-by` edge to [[NL-WET-BRP]] has been removed from this
+entity** and moved to [[NL-BRP]], where it belongs. This file previously
+said so itself: *"Once the individual registrations become entities, this
+link should move down to the BRP entity."* They have, and it has.
 
 ## Sources
 

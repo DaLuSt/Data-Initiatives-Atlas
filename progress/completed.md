@@ -1594,3 +1594,125 @@ the other direction, where `type: law` flattened Spain's constitutional
 
 Sourcing position unchanged — every new entity is `search-only`,
 `last_verified: null`, no `accessed` dates. 214 of 220 entities are unread.
+
+---
+
+# Basisregistraties — the ten registers modelled (2026-08-16)
+
+**Scope:** the `stelsel van basisregistraties`, which [[NL-BASISREGISTRATIES]]
+itself had been asking for since Batch 2: *"the individual registrations are
+not yet Atlas entities, and the full list of ten has not been enumerated
+from a source"*, and *"once the individual registrations become entities,
+this link should move down to the BRP entity."*
+
+**Entities added: 13.** 220 → **233**. Relationships 300 → **320**.
+
+- **Registers (10, typed `platform`):** `NL-BRP`, `NL-NHR`, `NL-BAG`,
+  `NL-BRT`, `NL-BRK`, `NL-BGT`, `NL-WOZ`, `NL-BRV`, `NL-BRI`, `NL-BRO`.
+- **Organisations (3):** `NL-RVIG`, `NL-WAARDERINGSKAMER`,
+  `NL-BELASTINGDIENST`.
+
+**Existing entities rewired:** `NL-BASISREGISTRATIES` rewritten;
+`countries/nl/index.md` restructured to show the ten registers under the
+stelsel and the holders under Registries.
+
+**Validation:** `run_all.py` 5/5, 0 errors, 0 warnings;
+`test_build_graph.py` 32 tests OK; `test_ui.mjs` 47/47; `audit.py` reports
+no fully disconnected entities.
+
+## Every register has a description, a holder and a place in the system
+
+| Register | Answers | `maintained-by` | Statute named |
+|---|---|---|---|
+| BRP | who people are, where they live | RvIG | Wet BRP — **modelled** |
+| NHR | which businesses exist | KvK | none found |
+| BAG | addresses and buildings | Kadaster (facility) | Wet BAG, 1 Jul 2009 |
+| BRT | topography, small/medium scale | Kadaster | **none found** |
+| BRK | who owns real property | Kadaster | Kadasterwet (weak) |
+| BGT | topography, 20 cm accuracy | Kadaster (facility) | Wet BGT, 1 Jan 2016 |
+| WOZ | what property is worth | Waarderingskamer | Wet WOZ |
+| BRV | vehicles and keepers | RDW | none found |
+| BRI | what people earn | Belastingdienst | AWR ch. IVA, 1 Jan 2009 |
+| BRO | what is underground | TNO (facility) | Wet BRO, 1 Jan 2018 |
+
+## Principal finding: the Atlas cannot express how data moves
+
+This is a finding about the vocabulary, not about the Netherlands.
+
+**Five sourced connections could not be recorded**, in three shapes:
+
+1. **Authorised use.** The Belastingdienst consumes the WOZ; the RDW
+   receives BRP data. No relationship type says "is an authorised user of".
+   The stelsel's *own* documentation uses the RDW as its worked example of
+   an organisation that is holder, provider and user at once — and the Atlas
+   can record one of those three.
+2. **Key-sharing couplings.** BRK products carry the KvK number from the
+   NHR; the BAG couples to the BRP through documented RvIG guidance. No type
+   for "carries the identifier of".
+3. **`Authentiek gegeven`.** The legal status that makes a base registry
+   authoritative — data other bodies must use and may not independently
+   re-determine — has no metadata field.
+
+**The Atlas models what entities *are* and what they *descend from*, and has
+almost no vocabulary for how data moves between them.** For a system whose
+entire purpose is data movement, that is the honest headline.
+
+With the UN batch's two, **five sourced connections are now unmodelled for
+want of a type**, well past the `metadata/relationship-types.md` §2.3
+threshold for proposing one.
+
+## Roles, not owners
+
+The stelsel describes four roles — initiator, supervisor, provider, holder —
+and states one organisation can be several at once. The Atlas has one type,
+`maintained-by`, and every register carries exactly one.
+
+Where the roles diverge the edge points at the party the Atlas can name, and
+**the divergence is written into the relationship's own `evidence` string**
+rather than only into prose, so it is visible in the graph data. That is a
+mitigation, not a fix.
+
+The cost concentrates in three registers, where the party that actually
+creates the data is absent from the graph: BAG and WOZ (municipalities) and
+BGT (seven categories of bronhouder).
+
+## Dutch municipalities — a different gap from the federal one
+
+Unlike the German Länder, Belgian Regions and Spanish Comunidades Autónomas,
+this is **not** the `level` vocabulary: `local` exists. It is that there is
+no obvious entity to create — hundreds of municipalities, and one node for
+"the municipalities" would be an invention. `NL-VNG` is their association,
+which is a different thing.
+
+Three of five countries have an unrepresentable sub-national tier for
+ontology reasons; the Netherlands has one for a different reason entirely.
+
+## Deliberate limits
+
+- **No law entities created.** Only `NL-BRP` carries `governed-by`, to the
+  pre-existing `NL-WET-BRP`. The Wet BAG, Wet BGT, Wet BRO, Wet WOZ and AWR
+  Chapter IVA are named in descriptions and have no entities: six Dutch
+  statutes is a legislation batch, and doing half would leave the layer
+  inconsistent.
+- **No inter-register relationships**, despite several being well sourced —
+  see the vocabulary finding above.
+- **Digimelding, SVB-BGT, Rijkswaterstaat, ProRail, RVO** — all named in
+  sources as parts of the system, none created.
+- **`NL-BRO`'s predecessors DINO and BIS** — described as things the register
+  *builds on*, which is weaker than supersession. No `supersedes` asserted;
+  DINO appears to continue to exist.
+- **`NL-BRV` holds personal data** and is plainly in scope for the GDPR and
+  the UAVG. Nothing read says so, so nothing is asserted.
+
+## Typing
+
+All ten are `platform` — *"a concrete technical platform or system"*. A
+basisregistratie is arguably a **dataset with a legal status** rather than a
+platform, and there is no `register` or `dataset` type. Applied consistently
+so the set is at least coherent; logged as a typing question.
+
+⚠ **`NL-BRT` has no sourced statutory basis at all** — the only one of the
+ten — and is `coverage: low` as a result.
+
+Sourcing position unchanged — every new entity is `search-only`,
+`last_verified: null`, no `accessed` dates.

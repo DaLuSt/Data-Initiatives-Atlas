@@ -7,11 +7,11 @@ Generated: 2026-08-16
 
 ## Why this exists
 
-**214 of the Atlas's 220 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
+**227 of the Atlas's 233 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
 
 Closing that debt — the re-verification pass — needs outbound HTTPS to the hosts those URLs point at. In an environment with a restricted egress policy, this is the allowlist to request. A denial shows up as `403 to CONNECT` from the proxy, which is an environment-level network policy and cannot be changed from inside a session. See `discovery/unresolved.md` for the standing record of the sourcing debt.
 
-The Atlas currently cites **703 source URLs** across **279 hosts**, collapsing to **203 registrable domains**.
+The Atlas currently cites **757 source URLs** across **289 hosts**, collapsing to **211 registrable domains**.
 
 ## Highest value first
 
@@ -20,9 +20,9 @@ Allowing just these covers the bulk of the pass:
 | Domain | URLs | Entities |
 |---|---|---|
 | `europa.eu` | 87 | 52 |
+| `digitaleoverheid.nl` | 40 | 28 |
 | `wikipedia.org` | 36 | 36 |
 | `bund.de` | 34 | 16 |
-| `digitaleoverheid.nl` | 28 | 19 |
 | `gouv.fr` | 27 | 9 |
 | `gob.es` | 26 | 12 |
 | `belgium.be` | 17 | 9 |
@@ -30,15 +30,15 @@ Allowing just these covers the bulk of the pass:
 | `unece.org` | 14 | 5 |
 | `rijksoverheid.nl` | 14 | 10 |
 | `boe.es` | 12 | 10 |
+| `overheid.nl` | 12 | 12 |
 | `forumstandaardisatie.nl` | 12 | 5 |
 | `iso.org` | 12 | 10 |
+| `vng.nl` | 11 | 7 |
 | `fitko.de` | 11 | 6 |
-| `vng.nl` | 10 | 6 |
-| `overheid.nl` | 9 | 9 |
-| `noraonline.nl` | 9 | 9 |
-| `eerstekamer.nl` | 8 | 8 |
-| `logius.nl` | 7 | 4 |
-| `geonovum.nl` | 7 | 3 |
+| `noraonline.nl` | 11 | 11 |
+| `kadaster.nl` | 10 | 7 |
+| `eerstekamer.nl` | 9 | 9 |
+| `rvig.nl` | 8 | 4 |
 
 ## Institutional domains
 
@@ -101,7 +101,9 @@ autoriteitpersoonsgegevens.nl
 aventris.fr
 b3-it.de
 banquedesterritoires.fr
+basisregistratieondergrond.nl
 bayern.de
+belastingdienst.nl
 bho-legal.com
 bipt.be
 bmv.de
@@ -113,6 +115,7 @@ bundesrechnungshof.de
 bundesregierung.de
 bundestag.de
 buzer.de
+cbs.nl
 cci-paris-idf.fr
 cci.fr
 ciberseguridad.blog
@@ -162,6 +165,8 @@ gaia-x-hub.de
 gaia-x.at
 gaia-x.eu
 gegevensbeschermingsautoriteit.be
+geobasisregistraties.nl
+geologischedienst.nl
 geostandaarden.nl
 github.com
 github.io
@@ -196,6 +201,7 @@ nationaalarchief.nl
 nationaalgroeifonds.nl
 ncsc.nl
 nctv.nl
+ndfr.nl
 ndw.nu
 nen.nl
 netzpolitik.org
@@ -238,6 +244,7 @@ sva.nl
 taylorwessing.com
 tcontas.pt
 telusio.com
+tweedekamer.nl
 twobirds.com
 un-dco.org
 un-ggim-europe.org
@@ -251,6 +258,7 @@ unsceb.org
 vbo-feb.be
 vng.nl
 vngrealisatie.nl
+waarderingskamer.nl
 walhalla.de
 whitecase.com
 wikipedia.org

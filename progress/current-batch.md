@@ -1,7 +1,42 @@
 # Current Batch
 
-**Status:** No batch in progress. The **UN-connection batch** was completed
-on 2026-08-16, after the Spain fifth-country batch the same day.
+**Status:** No batch in progress. The **basisregistraties batch** was
+completed on 2026-08-16, after the UN-connection and Spain batches the same
+day.
+
+## Basisregistraties — the ten registers modelled
+
+**233 entities, 320 relationships.** All ten Dutch base registries are now
+entities, with a description, a holder and a place in the stelsel. 13
+entities added: the ten registers plus [[NL-RVIG]],
+[[NL-WAARDERINGSKAMER]] and [[NL-BELASTINGDIENST]].
+
+[[NL-BASISREGISTRATIES]] had been asking for this since Batch 2 — *"once the
+individual registrations become entities, this link should move down to the
+BRP entity"*. It has: `governed-by` [[NL-WET-BRP]] now sits on [[NL-BRP]].
+
+**Principal finding — about the vocabulary, not the Netherlands.** Five
+sourced connections could not be recorded, in three shapes: **authorised
+use** (the Belastingdienst consumes the WOZ; the RDW receives BRP data),
+**key-sharing couplings** (BRK products carry the KvK number; the BAG
+couples to the BRP), and **`authentiek gegeven`**, the legal status that
+makes a base registry authoritative and has no field.
+
+**The Atlas models what entities *are* and what they *descend from*, and has
+almost no vocabulary for how data moves between them.** For a system whose
+entire purpose is data movement, that is the honest result. With the UN
+batch's two, five sourced connections are now unmodelled for want of a type.
+
+**Roles, not owners.** The stelsel describes four roles and says one
+organisation can be several at once; the Atlas has one `maintained-by` per
+register. Where they diverge the caveat is written into the relationship's
+own `evidence` string, so it is visible in the graph data. For the BAG, BGT
+and WOZ the party that actually creates the data — municipalities, seven
+kinds of bronhouder — is **absent from the graph**. Unlike the federal
+`level` gap this is not an ontology limit: `local` exists. There is simply
+no obvious entity to create.
+
+See `progress/completed.md` for the full entry.
 
 ## UN-connection batch — the island is connected
 
@@ -189,8 +224,8 @@ later.
 
 ## The sourcing position is unchanged
 
-**211 of 220 entities are `verification: search-only`**, and 214 of 220 are
-unread in total. Page retrieval was blocked throughout the UN-connection
+**224 of 233 entities are `verification: search-only`**, and 227 of 233 are
+unread in total. Page retrieval was blocked throughout the basisregistraties
 batch as it was for every earlier one
 (`EGRESS_BLOCKED`; 403 at the proxy tunnel, re-tested at the start of this
 batch, and `WebFetch` re-tested and blocked too — the proxy reports

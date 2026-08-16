@@ -183,6 +183,20 @@ by accident.
 | **Centro Nacional de Ciberseguridad** | Would be created by [[ES-LCGC]]. **Deliberately not modelled** — it does not exist, and a node for it would be indistinguishable in the graph from a body that does | Blocked | Spain batch |
 | **The Comunidades Autónomas** | Seventeen regional open data portals, regional data protection authorities, and the co-governance half of [[ES-ESPANA-DIGITAL-2026]]. **Blocked on the `level` vocabulary**, not on sourcing | Blocked | Spain batch |
 
+## Basisregistraties — queued from the register batch (2026-08-16)
+
+| Area / entity | Why it needs research | Suggested batch | Noted by / date |
+|---|---|---|---|
+| **Wet BAG, Wet BGT, Wet BRO, Wet WOZ, AWR ch. IVA** | Statutory bases named in the ten register descriptions with **no entities**. Six-plus Dutch statutes is a legislation batch; doing half would leave the layer inconsistent | **Next** | Register batch |
+| **[[NL-BRT]]'s statutory basis** | The only one of the ten where **no statute was found at all**. Its scale levels and products are also unrecorded — the weakest of the ten | **Next** | Register batch |
+| **Handelsregisterwet, Kadasterwet, Wegenverkeerswet** | The statutes behind [[NL-NHR]], [[NL-BRK]] and [[NL-BRV]]; none sourced with a year | Next | Register batch |
+| **Digimelding** | The stelsel's facility for reporting suspected errors in the registrations, alongside [[NL-DIGIKOPPELING]]. Named in one sentence of one source | Next | Register batch |
+| **SVB-BGT** | Samenwerkingsverband Bronhouders voor de BGT — the cooperative organising seven categories of bronhouder into one national map. Named in one source | Later | Register batch |
+| **Rijkswaterstaat, ProRail, RVO** | BGT and BRO bronhouders; none is an Atlas entity | Later | Register batch |
+| **Dutch municipalities as entities** | They hold the [[NL-BAG]] and determine [[NL-WOZ]] values. `level: local` exists, so this is **not** the federal gap — the question is what entity to create | Blocked (design) | Register batch |
+| **DINO and BIS** | [[NL-BRO]]'s predecessors, described as registrations it *builds on*. Whether either continues to exist determines if `supersedes` is ever right | Later | Register batch |
+| **Geonovum's role in BRO standards** | Geonovum publishes BRO geo-standards; whether it maintains them or publishes them for the programme was not established, so no relationship was asserted | Later | Register batch |
+
 ## Other queued research
 
 | Area / entity | Why it needs research | Suggested batch | Noted by / date |
