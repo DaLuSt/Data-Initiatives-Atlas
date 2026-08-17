@@ -3,15 +3,15 @@
 > **Generated file — do not hand-edit.** Regenerate with
 > `python tools/source_hosts.py --markdown -o discovery/reverification-allowlist.md`
 
-Generated: 2026-08-16
+Generated: 2026-08-17
 
 ## Why this exists
 
-**237 of the Atlas's 244 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
+**251 of the Atlas's 258 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
 
 Closing that debt — the re-verification pass — needs outbound HTTPS to the hosts those URLs point at. In an environment with a restricted egress policy, this is the allowlist to request. A denial shows up as `403 to CONNECT` from the proxy, which is an environment-level network policy and cannot be changed from inside a session. See `discovery/unresolved.md` for the standing record of the sourcing debt.
 
-The Atlas currently cites **795 source URLs** across **306 hosts**, collapsing to **219 registrable domains**.
+The Atlas currently cites **852 source URLs** across **332 hosts**, collapsing to **244 registrable domains**.
 
 ## Highest value first
 
@@ -21,16 +21,16 @@ Allowing just these covers the bulk of the pass:
 |---|---|---|
 | `europa.eu` | 87 | 52 |
 | `digitaleoverheid.nl` | 40 | 28 |
-| `wikipedia.org` | 36 | 36 |
+| `wikipedia.org` | 38 | 38 |
 | `bund.de` | 34 | 16 |
 | `gov.pl` | 28 | 11 |
 | `gouv.fr` | 27 | 9 |
 | `gob.es` | 26 | 12 |
 | `belgium.be` | 17 | 9 |
 | `un.org` | 16 | 9 |
-| `unece.org` | 14 | 5 |
+| `unece.org` | 16 | 6 |
 | `rijksoverheid.nl` | 14 | 10 |
-| `iso.org` | 13 | 11 |
+| `iso.org` | 14 | 12 |
 | `boe.es` | 12 | 10 |
 | `overheid.nl` | 12 | 12 |
 | `forumstandaardisatie.nl` | 12 | 5 |
@@ -49,6 +49,7 @@ artificialintelligenceact.eu
 belgif.be
 belgium.be
 bio-overheid.nl
+blog.gov.uk
 bund.de
 cencenelec.eu
 destatis.de
@@ -61,6 +62,8 @@ geonovum.nl
 gesetze-im-internet.de
 gov.be
 gov.pl
+gov.scot
+gov.uk
 govdata.de
 government.nl
 iso.org
@@ -71,11 +74,15 @@ just.fgov.be
 ksz-bcss.fgov.be
 legislation.gov.uk
 logius.nl
+ncsc.gov.uk
 noraonline.nl
+ons.gov.uk
 open-government-deutschland.de
 overheid.nl
 rijksoverheid.nl
+service.gov.uk
 statbel.fgov.be
+statisticsauthority.gov.uk
 un.org
 verwaltungsvorschriften-im-internet.de
 w3.org
@@ -91,6 +98,7 @@ ad4gd.eu
 aepd.es
 aftermarket-trends.de
 agoria.be
+alston.com
 anabad.org
 anwalt.org
 april.org
@@ -121,7 +129,9 @@ cci-paris-idf.fr
 cci.fr
 ciberseguridad.blog
 ciberseguridad.com
+cliffordchance.com
 cloix-mendesgil.com
+cms.law
 cni.es
 cnil.fr
 communicatierijk.nl
@@ -131,6 +141,8 @@ d-velop.de
 dagdok.org
 data-spaces-symposium.eu
 datactivist.coop
+dataportals.org
+datopian.com
 dcat-ap.de
 de.digital
 decideo.fr
@@ -138,6 +150,8 @@ deloitte.com
 diariodeleon.es
 digigo.nu
 digitale-verwaltung.de
+dlapiper.com
+dma.org.uk
 dnb.de
 dnb.nl
 dnv.de
@@ -171,6 +185,7 @@ geologischedienst.nl
 geostandaarden.nl
 github.com
 github.io
+globalpolicywatch.com
 glomas.de
 gob.es
 gouv.fr
@@ -178,7 +193,9 @@ grokipedia.com
 haufe.de
 health-ri.nl
 hessen.de
+hoganlovells.com
 hypotheses.org
+ico.org.uk
 ictu.nl
 incibe.es
 ine.es
@@ -195,6 +212,7 @@ kadaster.nl
 kbvg.nl
 legalgeek.pl
 legiscope.com
+lexisnexis.com
 lexlege.pl
 medialaws.eu
 mobilithek.info
@@ -219,18 +237,23 @@ oecd.org
 officialstatistics.org
 officielebekendmakingen.nl
 om.nl
+oneid.uk
 openjustice.be
 openkritis.de
 opennederland.nl
+osborneclarke.com
 pap-mediaroom.pl
 parlementairemonitor.nl
+parliament.uk
 pdok.nl
 personalausweisportal.de
 politykabezpieczenstwa.pl
+privacyworld.blog
 prodwaregroup.com
 prosoz.de
 protecciondata.es
 protecciondatos-lopd.com
+publictechnology.net
 quality.de
 rdw.nl
 red.es
@@ -251,9 +274,11 @@ sva.nl
 taylorwessing.com
 tcontas.pt
 telusio.com
+thinkdigitalpartners.com
 trecom.pl
 tweedekamer.nl
 twobirds.com
+ukauthority.com
 un-dco.org
 un-ggim-europe.org
 unctad.org

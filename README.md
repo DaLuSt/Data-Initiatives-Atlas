@@ -7,7 +7,7 @@ as an open, connected knowledge graph.**
 
 ### [**→ Open the Interactive Atlas**](https://dalust.github.io/Data-Initiatives-Atlas/)
 
-*Search, filter and explore 244 entities and 2,420 connections across six
+*Search, filter and explore 258 entities and 2,649 connections across seven
 countries — no install, no account.*
 
 [![Validation](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/validate.yml/badge.svg)](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/validate.yml)
@@ -32,14 +32,14 @@ hand-maintained.
 
 | | |
 |---|---|
-| **Entities** | 244 |
-| **Connections** | 2,420 — of which **346** are sourced, typed relationships |
-| **Countries** | 🇳🇱 Netherlands · 🇩🇪 Germany · 🇧🇪 Belgium · 🇫🇷 France · 🇪🇸 Spain · 🇵🇱 Poland |
+| **Entities** | 258 |
+| **Connections** | 2,649 — of which **354** are sourced, typed relationships |
+| **Countries** | 🇳🇱 Netherlands · 🇩🇪 Germany · 🇧🇪 Belgium · 🇫🇷 France · 🇪🇸 Spain · 🇵🇱 Poland · 🇬🇧 United Kingdom |
 | **Layers** | UN · EU · national · sectoral |
 | **Source of truth** | Git + Markdown/YAML — no database |
 | **Licence** | CC0 1.0 |
 
-*Figures as of 2026-08-16. The live counts are always on the site itself.*
+*Figures as of 2026-08-17. The live counts are always on the site itself.*
 
 ### Explore it
 
@@ -131,9 +131,17 @@ European Initiative
       │                    └── Data ecosystem
       │
       └──────────────► Country G
+
+United Kingdom  ◄── not below the EU branch: a non-member state
+      │
+      ├── National initiative
+      ├── Framework
+      └── Data ecosystem
 ```
 
-The Netherlands is the starting point, not the boundary of the project.
+The Netherlands is the starting point, not the boundary of the project — and
+since the United Kingdom joined, the EU is not the only route into a national
+scope either.
 
 ---
 
@@ -163,8 +171,8 @@ National initiatives, legislation, strategies, frameworks, organisations and
 data ecosystems.
 
 The Netherlands is the first participating country; Germany, Belgium,
-France, Spain and Poland followed. Additional countries can be added **without changing the
-fundamental information model**:
+France, Spain, Poland and the United Kingdom followed. Additional countries
+can be added **without changing the fundamental information model**:
 
 ```
 countries/
@@ -174,7 +182,7 @@ countries/
 ├── fr/
 ├── es/
 ├── pl/
-├── uk/
+├── gb/
 └── ...
 ```
 
@@ -182,10 +190,13 @@ Countries should only be added when there is sufficient information and,
 preferably, an active contributor or participating community maintaining
 that national scope.
 
-> **That claim has been tested six times.** Adding Germany, Belgium, France,
-> Spain and Poland each required no change to the schema, ontology, taxonomy,
-> relationship types, folder structure or any validation rule — and produced
-> no country-specific copies of EU or UN instruments. See
+> **That claim has been tested seven times, and the seventh was the real
+> test.** Adding Germany, Belgium, France, Spain and Poland each required no
+> change to the schema, ontology, taxonomy, relationship types, folder
+> structure or any validation rule — but all five are EU member states. The
+> **United Kingdom is not**, so no EU instrument carries `applies-in` to it
+> and its entities are the first with `region: null`. That needed no change
+> either. See
 > [`countries/README.md`](countries/README.md) and
 > [`validation/germany-second-country-report.md`](validation/germany-second-country-report.md).
 

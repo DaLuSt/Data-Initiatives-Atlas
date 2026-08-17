@@ -1,9 +1,64 @@
 # Current Batch
 
-**Status:** No batch in progress. **The comparison matrix** was added to the
-interactive Atlas on 2026-08-16, after the domain/provenance/confidence
-filters, Poland, cybersecurity-domain, basisregistraties, UN-connection and
-Spain batches the same day.
+**Status:** No batch in progress. **The United Kingdom — the seventh country
+and the first outside the EU** was completed on 2026-08-17, after the
+comparison matrix, the domain/provenance/confidence filters and the Poland
+batch.
+
+## United Kingdom — seventh country, first non-EU
+
+**258 entities, 354 relationships, seven countries.** 14 entities added.
+`applies-in` targets unchanged — `['BE', 'DE', 'ES', 'FR', 'NL', 'PL']` —
+and **that is the result, not an omission**.
+
+**Principal result: the first assumption finally broke, and nothing else
+did.** Six batches produced six EU member states, so the country-neutral
+claim had never been tested against a country with no regional parent. The
+UK has none: `region: null` on every entity, no `applies-in` edge, and **no
+schema, ontology, taxonomy, relationship-type, folder, validation or
+generator change** — and no `GB-EU-*` entity.
+
+**The ID is `GB`, not `UK`.** `metadata/schema.json` requires an ISO 3166-1
+alpha-2 code and `GB` is the alpha-2 assignment. The README's folder tree
+had carried a speculative `uk/` placeholder since batch 0; it is corrected.
+
+**Two European edges, neither `applies-in`:**
+
+- [[GB-UK-GDPR]] **`derived-from`** [[EU-GDPR]] — assimilated law: the
+  Regulation's own text, domesticated and now diverging. Six batches have
+  each added to a list of *connections the vocabulary cannot express*;
+  **this is not a seventh**. `derived-from` already meant exactly this.
+- [[GB-NIS-REGULATIONS]] **`implements-requirement-from`** [[EU-NIS]] — a
+  2018 transposition made **while a member state**, still in force, never
+  repealed by [[EU-NIS2]]. In the Compare view it puts the UK beside the
+  Netherlands on the [[EU-NIS]] row, spanning a member state and a former
+  one. The UK is correspondingly **absent from the NIS2 table**.
+
+**The statistical office joins through the UN.** [[GB-ONS]]
+`participates-in` [[UN-CES]] — the first office in the Atlas to reach the
+international layer without [[EU-ESS]], and possible **only because the UN
+batch created [[UN-CES]]**.
+
+**What the UK exposed:** ⚠ **`country` is a field, not an edge.** `GB` is
+the Atlas's first orphan anchor — `audit.py` reports
+`1 fully disconnected: ['GB']`. The other six anchors are reachable through
+frontmatter only because EU instruments point `applies-in` at them.
+Deliberately **not fixed here**: it is a design change across all seven
+countries, not a country addition. In `progress/backlog.md`.
+
+**Three findings about time and institutions:** the Atlas's **first
+abolition** ([[GB-DSIT]], 21 Jul 2026) and with it a **fan-out succession
+that `successor` cannot express**; a **third kind of unverifiable status**
+([[GB-ICO]] → Information Commission, completion date unknown); and the
+**amendment question for the fourth time**, now with no workaround left
+because [[GB-DUAA]] amends two instruments that both remain in force.
+
+⚠ **[[GB-DCMS]] is the weakest entity in the batch** — `confidence: low`,
+all three sources trade press, no machinery-of-government order found.
+
+See `progress/completed.md` for the full entry.
+
+## Site — the comparison matrix
 
 ## Site — the comparison matrix
 

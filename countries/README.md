@@ -21,6 +21,7 @@ Country-scoped entities themselves (initiatives, legislation, organisations,
 | France | FR | [`fr/`](fr/) |
 | Spain | ES | [`es/`](es/) |
 | Poland | PL | [`pl/`](pl/) |
+| United Kingdom | GB | [`gb/`](gb/) |
 
 Adding a new country means creating its sub-folder with an anchor entity and
 an index — the ontology requires no other change (README
@@ -103,7 +104,28 @@ can be *subject to* an EU requirement it **cannot meet**
 ([[PL-MOBYWATEL]] and eIDAS 2.0). Neither is expressible in the current
 vocabulary.
 
+**The United Kingdom, added seventh, was the first real test.** Six batches
+produced six EU member states, so every "no change was needed" result until
+now was measured against countries that share a regional parent. The UK does
+not have one: it is **not an EU member state**, no EU instrument carries
+`applies-in` to it, and its entities are the first in the Atlas with
+`region: null`.
+
+**That needed no change either** — no schema, ontology, taxonomy,
+relationship-type, folder, validation or generator change, and no `GB-EU-*`
+entity. The UK reaches the European layer by two edges that already existed
+in the vocabulary: `derived-from` for assimilated law
+(`GB-UK-GDPR` ← `EU-GDPR`) and `implements-requirement-from` for a
+transposition made **while still a member state** and never repealed
+(`GB-NIS-REGULATIONS` ← `EU-NIS`).
+
+It also exposed one thing six member states could not. **`country` is a
+field, not an edge.** The other six anchors are reachable in the graph only
+because EU instruments point `applies-in` at them; with no such edges, `GB`
+is the Atlas's first country anchor with no frontmatter-level connection at
+all. See `progress/backlog.md`.
+
 No sub-national level has been invented, because doing so for one country
 is exactly the country-specific change the model exists to prevent. See
-`de/de.md`, `be/be.md`, `fr/fr.md`, `es/es.md`, `pl/pl.md` and
+`de/de.md`, `be/be.md`, `fr/fr.md`, `es/es.md`, `pl/pl.md`, `gb/gb.md` and
 `discovery/unresolved.md`.

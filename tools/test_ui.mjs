@@ -266,6 +266,12 @@ async function search(page, q) {
   check('compare view renders a country column per country',
     cmpHead[0] === 'Instrument' && cmpHead.length >= 3, cmpHead.join(','));
 
+  const cmpHeading = await page.textContent('#compare-h');
+  check('compare heading counts countries from the data',
+    new RegExp(`One instrument, (no|one|two|three|four|five|six|seven|eight|nine|ten|\\d+) countries`).test(cmpHeading)
+      && cmpHeading.includes(['no','one','two','three','four','five','six','seven','eight','nine','ten'][cmpHead.length - 1] || ''),
+    cmpHeading.trim());
+
   const cmpRows = await page.$$eval('#compare-body tr', r => r.length);
   check('compare view renders supra-national instruments as rows', cmpRows >= 5, `${cmpRows} rows`);
 
