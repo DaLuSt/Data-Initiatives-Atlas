@@ -2323,3 +2323,71 @@ null`, no `accessed` dates. **251 of 258 entities are unread.**
 `validation/audit.py`: `targets: ['BE', 'DE', 'ES', 'FR', 'NL', 'PL']`, no
 country-scoped copies of EU/UN entities, **1 fully disconnected: `['GB']`**
 — explained above.
+
+---
+
+# 2026-08-17 — Code of Conduct and security policy
+
+**No entity changed; `graph.json` and `details.json` are byte-identical.**
+Two community health files at the repository root, plus links from
+`README.md` and `CONTRIBUTING.md`.
+
+## Contact channel: GitHub-native, no email published
+
+The maintainer commits under GitHub's `noreply` address, which is a
+deliberate choice to keep a personal email out of the repository. Publishing
+one in a policy file would have undone it, so **neither file contains an
+email address.**
+
+Both route through **GitHub private vulnerability reporting**
+(`/security/advisories/new`) — the repository's only built-in private channel
+to the maintainer — with a GitHub DM to [@DaLuSt](https://github.com/DaLuSt)
+as the fallback, and GitHub's abuse reporting as an independent escalation
+for conduct that also breaks GitHub's own policies.
+
+⚠ **That link 404s until private reporting is switched on** in
+*Settings → Advanced Security*. `SECURITY.md` carries the instruction as a
+visible maintainer note rather than assuming it.
+
+## Both files are adapted to what this repository actually is
+
+Boilerplate would have been wrong in two specific ways.
+
+**The Code of Conduct** carries a section on the fact that the Atlas
+describes the laws and institutions of seven countries, so the subject matter
+is political and contributors *will* disagree about characterisation. It
+separates two things that generic templates conflate:
+
+- **being wrong is not a violation** — 251 of 258 entities are
+  `search-only`, and good-faith error and correction are the normal working
+  mode here;
+- **knowingly contributing fabricated sources or invented evidence is** a
+  violation, because it damages every reader who trusts the graph.
+
+**The security policy** opens by stating what the project is — *a dataset,
+not a service* — because that determines what is worth reporting. It records
+the site's posture as verified rather than asserted: no cookies, no
+`localStorage`/`sessionStorage`, no analytics or beacons, no third-party
+scripts or fonts, no external network requests (the only two `fetch()` calls
+are same-origin, for `graph.json` and `details.json`), no inline event
+handlers, and Cytoscape.js 3.34.1 vendored rather than pulled from a CDN.
+It names `esc()` as the single escaping path and says plainly that a route by
+which entity content reaches the DOM unescaped is exactly what the policy is
+for.
+
+It also draws a line the project needs and no template provides: **a
+vulnerability in a system the Atlas *describes* is out of scope** — report it
+to that system's operator — and **a citation that does not support its claim
+is not a security issue at all**. The latter belongs in a *public* issue,
+because the correction is the point.
+
+## Verification
+
+`validation/run_all.py` 5/5. `tools/build_graph.py --check` reports 258
+entities, 2,649 edges — unchanged, because root-level Markdown is outside
+`FLAT_ENTITY_DIRS`/`GEOGRAPHY_ROOTS` and is never scanned as an entity.
+`tools/test_build_graph.py` 37 tests.
+
+Both files use ordinary relative Markdown links rather than `[[wikilinks]]`:
+`validate_links` does not scan the repository root, so wikilinks there would
+be unchecked and free to rot.

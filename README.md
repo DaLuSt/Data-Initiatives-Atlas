@@ -459,7 +459,10 @@ A country does not need to wait for the Atlas to be complete before joining.
 > *Countries can join incrementally and build their national representation
 > over time.*
 
-📋 Start with [`CONTRIBUTING.md`](CONTRIBUTING.md).
+📋 Start with [`CONTRIBUTING.md`](CONTRIBUTING.md) ·
+🤝 [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) sets the ground rules ·
+🔐 [`SECURITY.md`](SECURITY.md) covers vulnerability reporting **and how to
+report a sourcing or data-integrity problem**.
 
 ---
 
@@ -525,6 +528,10 @@ developers and other projects.
 
 Third-party source material remains subject to its own licensing and reuse
 conditions.
+
+[`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) is adapted from the Contributor
+Covenant and keeps that document's own **CC BY 4.0** licence and attribution,
+as its terms require. Everything else in this repository is CC0.
 
 ---
 

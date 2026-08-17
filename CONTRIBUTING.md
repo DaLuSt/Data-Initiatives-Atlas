@@ -6,6 +6,15 @@ entities. Read `metadata/ontology.md`, `metadata/taxonomy.md`,
 `metadata/relationship-types.md` and `metadata/metadata-schema.md` first —
 this document assumes them.
 
+By taking part you agree to the [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md).
+Two things it says that matter especially here: characterise other countries'
+laws and institutions **neutrally**, and treat **fabricated sources or
+evidence** as a conduct violation rather than a content slip.
+
+Found a security problem, or a citation that does not support the claim
+attached to it? [`SECURITY.md`](SECURITY.md) says where each goes —
+vulnerabilities privately, data-integrity problems in a public issue.
+
 ## Before you start
 
 1. **Search first.** Check `initiatives/`, `organisations/`, etc. (by name
