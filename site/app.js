@@ -22,10 +22,19 @@
     edgeClass: new Set(["relationship"])
   };
   var listSort = { key: "label", dir: 1 };
+  // grouped | force. Session-only on purpose: the page stores nothing between
+  // visits (see SECURITY.md), so this is deliberately not persisted.
+  var layoutMode = "grouped";
   var sugIndex = -1, sugItems = [];
 
   // Above this many visible nodes, drop labels.
   var LOD_LABELS = 260;
+  // Above this many, refuse the force layout and stay grouped. Unlike the
+  // grouped layout — pure arithmetic, no threshold needed — a force
+  // simulation costs iterations over every node pair, and blocking the UI
+  // thread for several seconds is worse than declining. Measured at 258
+  // nodes: ~1.0s on relationships only, ~1.8s with every edge class on.
+  var FORCE_MAX = 900;
 
   var LEVEL_ORDER = ["international", "regional", "national", "sectoral", "local"];
   // Confidence is ordinal, not alphabetical — "high, medium, low" reads as a
@@ -234,6 +243,12 @@
     $("depth").addEventListener("change", function (e) {
       depth = parseInt(e.target.value, 10) || 2;
       if (view === "explorer") refresh();
+    });
+
+    $("layout-mode").addEventListener("change", function (e) {
+      layoutMode = e.target.value === "force" ? "force" : "grouped";
+      if (view === "atlas") refresh();
+      else updateLayoutHint(cy ? cy.nodes().length : 0);
     });
 
     $("zoom-in").addEventListener("click", function () { cy.zoom({ level: cy.zoom() * 1.35, renderedPosition: centre() }); });
@@ -471,7 +486,7 @@
         data: {
           id: "e" + i, source: e.source, target: e.target,
           type: e.type || e.field || "", cls: e.class,
-          provenance: e.provenance || ""
+          provenance: e.provenance || "", confidence: e.confidence || ""
         }
       });
     });
@@ -589,13 +604,100 @@
       return;
     }
 
-    // Note: there is no size threshold here. `layeredPositions` is O(n log n)
-    // arithmetic with no simulation to converge, so it costs the same at 258
-    // nodes as at 2,580 — a branch on node count would only ever have chosen
-    // between two identical calls. LOD_LABELS still thins labels; see
-    // applyLOD().
+    // The grouped layout is O(n log n) arithmetic with no simulation to
+    // converge, so it needs no size threshold. LOD_LABELS still thins labels;
+    // see applyLOD().
     var positions = layeredPositions(cy.nodes());
-    cy.layout({ name: "preset", positions: positions, fit: true, padding: 50, animate: false }).run();
+    var groupedOnly = view !== "atlas" || layoutMode !== "force" || n > FORCE_MAX;
+    cy.layout({
+      name: "preset", positions: positions,
+      fit: groupedOnly, padding: 50, animate: false
+    }).run();
+    updateLayoutHint(n);
+    if (groupedOnly) return;
+
+    // Force-directed relaxation, seeded by the grouped layout above rather
+    // than randomised. Two things follow from that: the result is
+    // reproducible for a given graph, and the simulation starts from an
+    // arrangement that already means something instead of from noise.
+    cy.layout(forceOptions()).run();
+  }
+
+  /** Edge weight drives distance — "strongly connected nodes closer".
+   *
+   *  Rest lengths follow the Atlas's own hierarchy of evidence. Two things
+   *  about how much of that actually survives the simulation, both measured
+   *  rather than assumed:
+   *
+   *  - **It works where the spring is strong.** Typed relationships are the
+   *    tightest class (mean 72px against 132px for associations with every
+   *    edge class on), and low-confidence relationships sit visibly further
+   *    apart than medium ones — 203px against 166px, over 27 edges and 317.
+   *  - **A slack spring is not a long one.** Wikilinks are given almost no
+   *    elasticity so 1,392 of them cannot reshape the graph; the cost is that
+   *    they do not hold their rest length either. They float at whatever
+   *    ambient spacing the other forces produce (~82px), *shorter* than
+   *    associations. Springs pull; they do not push.
+   *
+   *  `confidence: high` has no visible effect and no claim is made for it:
+   *  only 2 of 354 typed relationships carry it, so any mean over them is
+   *  noise. See progress/backlog.md — the field is close to a constant.
+   */
+  function idealEdgeLength(edge) {
+    var cls = edge.data("cls");
+    if (cls === "wikilink") return 420;
+    if (cls === "association") return 230;
+    if (edge.data("provenance") === "interpretation") return 140;
+    var c = edge.data("confidence");
+    return c === "high" ? 40 : c === "low" ? 130 : 70;
+  }
+
+  function forceOptions() {
+    return {
+      name: "cose",
+      randomize: false,          // seeded from the grouped layout — see above
+      animate: false, fit: true, padding: 50,
+      // The default view is 44 disconnected components. Without generous
+      // spacing they are flung apart and the canvas becomes mostly whitespace.
+      componentSpacing: 130,
+      nodeOverlap: 14,
+      nodeRepulsion: function (node) {
+        // Damp the mega-hubs. DOMAIN-GOVERNMENT touches 206 of 258 entities;
+        // at uniform repulsion it drags the entire graph into a ball around
+        // itself. Letting repulsion grow with degree makes a hub hold its
+        // neighbours at arm's length instead of swallowing them.
+        return 9000 + Math.min(node.degree(), 60) * 2600;
+      },
+      idealEdgeLength: idealEdgeLength,
+      edgeElasticity: function (edge) {
+        // Only typed relationships get to pull hard; the other two classes
+        // are navigational and should not reshape the graph.
+        var cls = edge.data("cls");
+        return cls === "relationship" ? 160 : cls === "association" ? 20 : 5;
+      },
+      gravity: 40, numIter: 900,
+      initialTemp: 200, coolingFactor: 0.95, minTemp: 1
+    };
+  }
+
+  function updateLayoutHint(n) {
+    var el = $("layout-hint");
+    if (!el) return;
+    if (layoutMode !== "force") {
+      el.textContent = "Bands are geographic levels; blocks inside a band are " +
+        "scopes, and each block is ordered by how connected its members are " +
+        "in the current view.";
+    } else if (n > FORCE_MAX) {
+      el.textContent = "Too many entities on screen (" + n.toLocaleString() +
+        ") to lay out by simulation — showing the grouped layout instead. " +
+        "Narrow the filters to below " + FORCE_MAX.toLocaleString() + ".";
+    } else {
+      el.textContent = "Connected entities are pulled together, and typed " +
+        "relationships pull hardest — low-confidence ones are held further " +
+        "apart than the rest. Associations pull loosely; wikilinks barely at " +
+        "all, so they sit wherever the other forces leave them. Geographic " +
+        "level is no longer shown by position — only by colour.";
+    }
   }
 
   function cssEscape(s) { return String(s).replace(/[^a-zA-Z0-9_-]/g, "\\$&"); }
@@ -923,6 +1025,10 @@
     $("listview").hidden = v !== "list";
     $("compareview").hidden = v !== "compare";
     $("explorer-panel").hidden = v !== "explorer";
+    // The switcher governs the Global Atlas only — the Explorer's rings by
+    // hop distance are the whole point of that view, and Compare/List have
+    // no canvas at all.
+    $("layout-panel").hidden = v !== "atlas";
     if (v === "explorer" && !focusId) {
       $("explorer-hint").textContent =
         "No entity selected. Search above, or switch to Global Atlas and click a node.";
