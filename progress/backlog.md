@@ -379,6 +379,61 @@ visible from any single entity.
   single largest content gap the Atlas can now state precisely, and it is a
   research queue rather than a defect.
 
+## Opened by the United Kingdom batch
+
+- [ ] **The EU adequacy decisions for the UK.** Renewed **19 December 2025**
+  for six years, to **27 December 2031**, following [[GB-DUAA]]. This is the
+  most important single link between the UK and the EU data layer and **no
+  entity or edge represents it**. It is also the only route by which a
+  non-member country connects to the EU layer *as a matter of present EU
+  law* rather than by history ([[GB-NIS-REGULATIONS]]) or derivation
+  ([[GB-UK-GDPR]]).
+- [ ] **`country` is a field, not an edge — and `GB` is an orphan anchor.**
+  `validation/audit.py` reports `1 fully disconnected: ['GB']`. The other
+  six anchors are reachable through frontmatter only because EU instruments
+  point `applies-in` at them; the UK's 13 entities carry `country: GB`,
+  which the generator does not emit as an association edge. Options: emit
+  `country` as an association (≈250 new edges, changes every country's graph
+  shape), or accept that a country anchor's reachability depends on EU
+  membership. **The second is what the Atlas currently asserts, and it is
+  wrong.**
+- [ ] **A fan-out succession is not expressible.** [[GB-DSIT]]'s functions
+  went three ways. `successor` is a single field, described in
+  `metadata/metadata-schema.md` as a way to *chain* superseded entities, and
+  a chain is the wrong shape for a split. Set to `null`, with the split in
+  prose.
+- [ ] **A status for "mandated, commencement unverified".** [[GB-ICO]] is
+  being replaced by an Information Commission under [[GB-DUAA]] s.117, and
+  the Atlas cannot establish whether that has happened. Distinct from
+  [[FR-NIS2-LOI]]'s `unknown` (sources conflict) and [[ES-LCGC]]'s
+  `proposed` (still a draft). [[GB-CSRB]] has the same problem.
+- [ ] **An amendment relationship type — fourth data point, first with no
+  workaround.** [[GB-DUAA]] amends [[GB-UK-GDPR]] *and* [[GB-DPA-2018]],
+  both still in force, so neither Germany's `supersedes` nor France's and
+  Poland's absorption is available. [[GB-CSRB]] → [[GB-NIS-REGULATIONS]] is
+  a fifth case. This item has now survived four batches.
+- [ ] **A UK geospatial entity.** Ordnance Survey is unmodelled and the
+  Geospatial Commission was merged into [[GB-GDS]] in January 2025. The UK
+  is the only country in the Atlas with **no entity in
+  [[DOMAIN-GEOSPATIAL]]**.
+- [ ] **The Cyber Assessment Framework**, the UK counterpart to [[NL-BIO]],
+  [[DE-IT-GRUNDSCHUTZ]] and [[ES-ENS]] — all three modelled. Central to
+  [[GB-CSRB]] and named by [[GB-NCSC]].
+- [ ] **The UK Statistics Authority and the Office for Statistics
+  Regulation.** Their absence weakens [[GB-ONS]]'s [[UN-CES]] edge, whose
+  sources establish that *the UK* holds the seat without saying which body
+  does.
+- [ ] **A UK open data instrument.** Whether the Re-use of Public Sector
+  Information Regulations survive as assimilated law was not researched, so
+  [[GB-DATA-GOV-UK]] connects to [[EU-OPEN-DATA-DIRECTIVE]] not at all while
+  four other countries have a sourced transposition.
+- [ ] **A government source for the July 2026 machinery-of-government
+  change.** [[GB-DCMS]] rests entirely on trade press; [[GB-DSIT]]'s
+  abolition is reported, not cited.
+- [ ] **A legislation.gov.uk citation for [[GB-DPA-2018]]** — every source
+  found describes it through [[GB-DUAA]]'s changes to it, the same failure
+  mode as [[PL-ODO]].
+
 ## Explicitly out of scope for now
 
 - Countries beyond the five modelled (structure supports them; no content

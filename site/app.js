@@ -1014,6 +1014,14 @@
       totals.applies += tally[n.id].applies;
     });
 
+    // The heading counts countries rather than stating a number, so adding a
+    // country cannot leave it saying "six" forever.
+    var NUMBER = ["no", "one", "two", "three", "four", "five", "six", "seven",
+                  "eight", "nine", "ten"];
+    $("compare-h").textContent = "One instrument, " +
+      (NUMBER[cols.length] || cols.length) + " countr" +
+      (cols.length === 1 ? "y" : "ies");
+
     $("compare-head").innerHTML = '<th scope="col">Instrument</th>' +
       cols.map(function (c) {
         return '<th scope="col">' + esc(c.label) + "</th>";

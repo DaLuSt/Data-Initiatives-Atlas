@@ -2115,3 +2115,211 @@ byte-identical, which is the point: this view added no data.
 `tools/test_ui.mjs` **66 checks** (was 55 — eleven added, including that the
 country filter moves the columns and not the rows, that supra-national
 implementers survive, and that the matrix scrolls in its wrapper on mobile).
+
+---
+
+# 2026-08-17 — United Kingdom, the seventh country and the first outside the EU
+
+**258 entities, 354 relationships, seven countries.** 14 entities added.
+`applies-in` targets are unchanged — `['BE', 'DE', 'ES', 'FR', 'NL', 'PL']`
+— and **that is the result**, not an omission.
+
+## Principal result: the first assumption finally broke, and nothing else did
+
+Six batches produced six EU member states. Every "no change was needed"
+result until now was measured against countries that share a regional
+parent, so the country-neutral claim had never actually been tested against
+the thing it was designed for.
+
+The United Kingdom is **not an EU member state**:
+
+| | Six member states | United Kingdom |
+|---|---|---|
+| `region:` on national entities | `EU` | **`null`** |
+| `applies-in` from EU instruments | 17–18 each | **none** |
+| Route to the European layer | membership | `derived-from` + a transposition that predates leaving |
+| Route to the international layer | via `EU-ESS` | **directly, via `UN-CES`** |
+
+**No schema, ontology, taxonomy, relationship-type, folder, validation or
+generator change. No `GB-EU-*` entity.** The design absorbed a non-member
+state without modification, which is a stronger result than Poland's,
+because Poland was the same kind of thing as its five predecessors and the
+UK is not.
+
+## The ID is `GB`
+
+`metadata/schema.json` fixes the ID scope to an ISO 3166-1 alpha-2 code, and
+the alpha-2 assignment for the United Kingdom is **`GB`**. `UK` is reserved
+at ISO's request but is not the alpha-2. Every other anchor is an alpha-2
+code, so `UK` would have been the only ID in the Atlas that is not. `UK` is
+carried in `alternative_names`, and the README's folder tree — which had
+carried a speculative `uk/` placeholder since batch 0 — is corrected to
+`gb/`.
+
+## Two European edges, neither of them `applies-in`
+
+**1. `GB-UK-GDPR` `derived-from` `EU-GDPR`.** UK GDPR is *assimilated law*:
+the EU Regulation's own text, carried into UK domestic law at the end of
+transition, renamed from "retained EU law" by the Retained EU Law
+(Revocation and Reform) Act 2023 with effect from 1 January 2024, and
+amended since.
+
+This breaks a six-batch streak. Every batch since the register work has
+added to a list of *sourced connections the vocabulary cannot express* —
+now six items long. **This is not a seventh.** `derived-from` is defined in
+`metadata/relationship-types.md` as *"one entity was produced by adapting
+another"*, which is exactly what assimilated law is. A vocabulary written
+for a Dutch-and-EU Atlas described a post-Brexit constitutional relationship
+without amendment.
+
+The GDPR technique table gets a seventh row that does not fit the column:
+six countries each *wrote something* to give effect to a regulation that
+already applied to them; the UK wrote nothing of the kind.
+
+**2. `GB-NIS-REGULATIONS` `implements-requirement-from` `EU-NIS`.** SI
+2018/506 gave effect to Directive (EU) 2016/1148 in May 2018, while the UK
+was a member state. It is **still in force**, as assimilated law, and
+`EU-NIS2` never repealed it because the UK was outside its scope by then.
+
+So the Atlas now holds a **transposition of an EU directive asserted from a
+country that has left the EU**, needing no qualification. In the Compare
+view it puts the UK next to the Netherlands on the `EU-NIS` row — the only
+two countries with a modelled NIS Directive implementation, spanning a
+member state and a former one.
+
+The UK is correspondingly **absent from the NIS2 table** that six batches
+built. It runs a NIS1-era regime the EU has superseded and is replacing it
+on its own timetable with `GB-CSRB`, a bill that transposes nothing.
+
+## The statistical office joins through the UN, not the EU
+
+`GB-ONS` `participates-in` `UN-CES`. Five member states reach the
+international statistical system **through** `EU-ESS`; the UK cannot,
+because the ESS comprises Eurostat and the member states' authorities.
+
+It reaches it directly instead, via the Conference of European
+Statisticians — a UNECE body with ~65 members, on whose **Bureau the UK
+sits**, and which the ONS has hosted in Cardiff.
+
+**That edge exists only because the UN batch created `UN-CES`.** At the
+time, the CES looked like completeness work on the statistics chain. It
+turned out to be the connector for a country that did not yet exist in the
+Atlas — and without it the UK's statistical office would have had no upward
+link of any kind.
+
+## What the UK exposed that six member states could not
+
+⚠ **`country` is a field, not an edge, and `GB` is the Atlas's first orphan
+anchor.** `validation/audit.py` reports `1 fully disconnected: ['GB']`.
+
+The other six anchors are reachable through frontmatter only because EU
+instruments point `applies-in` at them. Nothing points at `GB`: its 13
+entities carry `country: GB`, and the generator emits `domains`,
+`organisations`, `related_entities`, `previous_version` and `successor` as
+association edges — **not `country`**.
+
+`GB` still has degree 16 in the rendered graph, all of it body wikilinks, so
+it is not visibly isolated. But at the frontmatter level it is unreachable,
+and no query that walks associations will find it from its own entities.
+
+This was **not fixed in this batch.** Making `country` an association edge
+would add ~250 edges across all seven countries and change every country's
+graph shape — a design change, not a country addition. Populating
+`related_entities` on `GB` alone would make it the only anchor that does
+that. Recorded in `progress/backlog.md` instead.
+
+## Three findings about time and institutions
+
+**1. The Atlas's first abolition.** `GB-DSIT` — the Department for Science,
+Innovation and Technology, created February 2023 — was **abolished on 21
+July 2026**. Three institutional transformations were recorded before it
+(`ES-SGAD` → `ES-AEAD`, `PL-COI`'s pending conversion, GIODO → `PL-UODO`)
+and all three were continuations. This is the first entity in the Atlas to
+stop existing.
+
+⚠ **A fan-out succession is not expressible.** DSIT's functions went three
+ways: business/innovation/science/trade to a new DBIST; digital
+transformation, cyber, digital identity and `GB-GDS` to `GB-DCMS`; AI policy
+to the Cabinet Office. `successor` is a **single** field described as a way
+to *chain* superseded entities, and a chain is the wrong shape. `successor`
+is `null` and the split is in prose. Two of the three destinations are not
+Atlas entities, so even a list-valued field would be one-third populated.
+
+**2. A status the vocabulary cannot carry.** `GB-DUAA` s.117 establishes an
+**Information Commission** to replace `GB-ICO`, with the change reported as
+expected "spring/summer 2026". This batch is dated 17 August 2026 and
+**cannot establish whether it has happened**. No successor entity was
+created — the same refusal applied to Spain's *Centro Nacional de
+Ciberseguridad* and Poland's *Agencja Informatyzacji* — and "Information
+Commission" went into `alternative_names` instead. `FR-NIS2-LOI` is
+`unknown` because sources conflict; `ES-LCGC` is `proposed` because it is a
+draft; this is a third kind, where the instrument is in force and the
+institutional change it mandates has an unverified completion date.
+
+**3. The amendment question, for the fourth time — and the first with no
+workaround left.** `GB-DUAA` amends **two** instruments (`GB-UK-GDPR` and
+`GB-DPA-2018`), both still in force. Germany's `DE-NIS2UMSUCG` could be
+`supersedes`-d because the amending act is separately named; France's and
+Poland's amendments were absorbed into the amended entity because they had
+no independent identity. **Neither escape is available here**, so both edges
+are `related-to` with the amendment in the evidence string. `GB-CSRB` →
+`GB-NIS-REGULATIONS` is a fifth case.
+
+## A cyber authority that is deliberately not a regulator
+
+`GB-NCSC` is the UK's technical authority and is **explicitly not** a
+competent authority under `GB-NIS-REGULATIONS`. The UK took a
+sector-by-sector approach: Schedule 1 names the responsible departments,
+Ofcom for digital infrastructure and **`GB-ICO` for digital service
+providers**.
+
+`DOMAIN-CYBERSECURITY` now holds three arrangements rather than two: one
+body that advises and regulates (DE, BE, FR); two split by audience (ES);
+and a technical authority separated from distributed sectoral regulators
+(GB). Spain's split looked like the outlier when written; it is now one of
+three, and the UK's is the only one where the data protection authority is
+also a cyber regulator.
+
+## Refused / not modelled
+
+- **The EU adequacy decisions** — renewed 19 December 2025 for six years to
+  27 December 2031, following the DUAA. The most important single link
+  between the UK and the EU data layer, recorded in prose in `GB` and
+  `countries/gb/index.md` and **represented by no edge**. First item in the
+  backlog's UK section.
+- **Ordnance Survey and the Geospatial Commission** — the latter merged into
+  `GB-GDS` in January 2025 and no longer exists independently. **The UK
+  joins with no geospatial entity at all**, unlike every other country in
+  `DOMAIN-GEOSPATIAL`.
+- **The Cyber Assessment Framework** — the UK counterpart to `NL-BIO`,
+  `DE-IT-GRUNDSCHUTZ` and `ES-ENS`, all three modelled.
+- **The UK Statistics Authority and the Office for Statistics Regulation** —
+  `GB-ONS`'s parent and its regulator. Their absence weakens the `UN-CES`
+  edge, whose sources establish that *the UK* is a member without
+  distinguishing which body holds the seat; the evidence string says so.
+- **DBIST and the Cabinet Office**, **Ofcom and the sectoral competent
+  authorities**, **CDDO / i.AI / the Responsible Technology Adoption Unit**
+  (merged into GDS), the **GOV.UK Wallet** and the **national digital ID
+  scheme**, and the **Re-use of Public Sector Information Regulations**.
+
+## Sourcing
+
+⚠ **`GB-DCMS` is the weakest entity in the batch — `confidence: low`, all
+three sources trade press.** No machinery-of-government order, departmental
+page or statutory instrument was found for the post-July-2026 arrangement.
+It exists so that `GB-GDS`'s `governed-by` edge has an uninvented target.
+
+⚠ **`GB-DPA-2018` has no legislation.gov.uk citation of its own** — every
+source describes it through the DUAA's changes to it, the same failure mode
+as `PL-ODO`. Joint-weakest in the batch.
+
+Unchanged otherwise: every UK entity is `search-only`, `last_verified:
+null`, no `accessed` dates. **251 of 258 entities are unread.**
+
+## Verification
+
+`validation/run_all.py` 5/5, 0 errors, 0 warnings.
+`tools/test_build_graph.py` 37 tests. `tools/test_ui.mjs` 66 checks.
+`validation/audit.py`: `targets: ['BE', 'DE', 'ES', 'FR', 'NL', 'PL']`, no
+country-scoped copies of EU/UN entities, **1 fully disconnected: `['GB']`**
+— explained above.
