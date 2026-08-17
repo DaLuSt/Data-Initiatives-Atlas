@@ -1,7 +1,44 @@
 # Current Batch
 
-**Status:** No batch in progress. **The Global Atlas layout** was reworked on
-2026-08-17, after the Code of Conduct and security policy.
+**Status:** No batch in progress. **A switchable force-directed layout** was
+added on 2026-08-17, after the grouped-layout rework.
+
+## Site — force-directed layout, weighted by evidence
+
+**No entity changed.** Part two of the layout question, and still **no new
+dependency** — `cose` is in the vendored build and `idealEdgeLength` takes a
+per-edge callback.
+
+**A switch, not a replacement.** The force layout trades away the one thing
+the grouped layout exists to show: geographic level stops being positional
+and survives only as colour. Global Atlas only. **Seeded** from the grouped
+positions so it is reproducible, and **not persisted**, because
+`SECURITY.md` says the page stores nothing between visits.
+
+**Two mitigations the earlier measurements demanded:** `componentSpacing`
+for the 44 components and 28 isolated nodes, and degree-scaled
+`nodeRepulsion` so `DOMAIN-GOVERNMENT`'s 206 edges do not pull everything
+into a ball.
+
+**What the weighting actually achieves — the claim had to be narrowed
+twice.** Typed relationships are the tightest class (72 px vs 132 px for
+associations); low-confidence relationships sit **~22% further apart** than
+medium (203 vs 166). But ⚠ **a slack spring is not a long one** — wikilinks
+were given almost no elasticity so 1,392 of them could not reshape the
+graph, and the cost is they float at ambient spacing (~82 px), *shorter*
+than associations. And `confidence: high` gets **no claim at all**: only 2
+of 354 relationships carry it.
+
+**The size guard is not dead this time.** `LOD_LAYOUT` was removed last
+batch because both sides of its branch were identical. `FORCE_MAX = 900`
+declines the simulation and says why; a test proves it by padding the graph
+to 1,258 nodes.
+
+**Verification:** `run_all.py` 5/5 · `test_build_graph.py` 37 tests ·
+`test_ui.mjs` 81/81 (was 72) · graph byte-identical. A switch costs ~2.8 s
+at 258 nodes, which is why the guard exists.
+
+See `progress/completed.md` for the full entry.
 
 ## Site — layout blocks by scope, ordered by connectivity
 

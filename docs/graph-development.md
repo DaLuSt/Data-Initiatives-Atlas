@@ -89,7 +89,7 @@ npm install playwright && npx playwright install chromium
 node tools/test_ui.mjs
 ```
 
-72 checks across desktop, mobile (390×844) and accessibility: search by
+81 checks across desktop, mobile (390×844) and accessibility: search by
 name/ID/country, keyboard navigation, detail panel content, GitHub links,
 deep links, every filter, edge-class toggles, **the layered layout's block
 grouping and band order**, the comparison matrix, the list view and its
@@ -211,11 +211,23 @@ first.
 
 ### Restyling
 
-Node **position** is `layeredPositions()`: bands by level, blocks by scope
-within a band, and connectivity order within a block. It is pure arithmetic
-— there is no force simulation on the full graph, and no size threshold,
-because the cost does not depend on convergence. `LOD_LABELS` still thins
-labels above 260 visible nodes.
+Node **position** has two modes, switched from the sidebar and dispatched in
+`runLayout()`:
+
+- **Grouped** (default) — `layeredPositions()`: bands by level, blocks by
+  scope within a band, connectivity order within a block. Pure arithmetic,
+  no threshold needed.
+- **Force** — `cose` with `forceOptions()`, seeded from the grouped
+  positions (`randomize: false`) so it is reproducible. Gated by `FORCE_MAX`;
+  above it the grouped layout is kept and the sidebar explains why. Tune
+  distance in `idealEdgeLength()`.
+
+`LOD_LABELS` still thins labels above 260 visible nodes.
+
+Two things to know before tuning `idealEdgeLength()`: a **slack spring is
+not a long one** — dropping `edgeElasticity` makes an edge class stop
+mattering, not stretch — and `confidence: high` is currently on only 2 of
+354 relationships, so it cannot demonstrate anything.
 
 Node colour is driven by `level` and shape by `type`, both in the Cytoscape
 stylesheet at the top of `initGraph()`. Colours come from CSS custom

@@ -328,6 +328,65 @@ async function search(page, q) {
     bandOrder.every((l, i) => i === 0 || layout.meanY[bandOrder[i - 1]] < layout.meanY[l]),
     bandOrder.map(l => `${l}:${Math.round(layout.meanY[l])}`).join(' < '));
 
+  // ── force-directed layout (switchable) ──
+  const groupedBox = await page.evaluate(() => {
+    const bb = document.getElementById('cy')._cyreg.cy.elements().boundingBox();
+    return { w: Math.round(bb.w), h: Math.round(bb.h) };
+  });
+  await page.selectOption('#layout-mode', 'force');
+  await page.waitForTimeout(2600);
+  const force = await page.evaluate(() => {
+    const cy = document.getElementById('cy')._cyreg.cy;
+    const bb = cy.elements().boundingBox();
+    // mean edge length per confidence, typed relationships only
+    const byConf = {};
+    cy.edges().filter(e => e.data('cls') === 'relationship').forEach(e => {
+      const a = e.source().position(), b = e.target().position();
+      (byConf[e.data('confidence') || '?'] ||= []).push(Math.hypot(a.x - b.x, a.y - b.y));
+    });
+    const mean = v => v.reduce((x, y) => x + y, 0) / v.length;
+    // the grouped layout puts every national node on a shared grid line;
+    // a force layout should not
+    const ys = new Set(cy.nodes().map(n => Math.round(n.position().y)));
+    return { box: { w: Math.round(bb.w), h: Math.round(bb.h) },
+             distinctY: ys.size, nodes: cy.nodes().length,
+             lowLen: byConf.low ? Math.round(mean(byConf.low)) : null,
+             medLen: byConf.medium ? Math.round(mean(byConf.medium)) : null };
+  });
+
+  check('force layout rearranges the graph off the grid',
+    force.distinctY > force.nodes * 0.8,
+    `${force.distinctY} distinct y for ${force.nodes} nodes`);
+  check('force layout does not collapse the graph to a point',
+    force.box.w > 400 && force.box.h > 400, JSON.stringify(force.box));
+  // The one weighting effect with enough edges behind it to be real: only 2
+  // relationships are confidence: high, so no claim is tested for those.
+  check('low-confidence relationships are held further apart than medium',
+    force.lowLen > force.medLen, `low ${force.lowLen} vs medium ${force.medLen}`);
+
+  const forceHint = await page.textContent('#layout-hint');
+  check('force layout says level is no longer positional',
+    /only by colour/i.test(forceHint), forceHint.trim().slice(0, 50) + '…');
+
+  await page.selectOption('#layout-mode', 'grouped');
+  await page.waitForTimeout(900);
+  const regrouped = await page.evaluate(() => {
+    const cy = document.getElementById('cy')._cyreg.cy;
+    const ys = new Set(cy.nodes().map(n => Math.round(n.position().y)));
+    return { distinctY: ys.size, nodes: cy.nodes().length };
+  });
+  check('switching back restores the grouped grid',
+    regrouped.distinctY < regrouped.nodes * 0.3,
+    `${regrouped.distinctY} distinct y for ${regrouped.nodes} nodes`);
+
+  // The layout switcher governs the Global Atlas only.
+  await page.click('#view-explorer');
+  await page.waitForTimeout(400);
+  check('layout switcher is hidden outside the Global Atlas',
+    await page.isHidden('#layout-panel'));
+  await page.click('#view-atlas');
+  await page.waitForTimeout(700);
+
   // ── comparison matrix ──
   await page.click('#view-compare');
   await page.waitForSelector('#compareview:not([hidden])');
@@ -526,6 +585,50 @@ async function search(page, q) {
   const focused = await page.evaluate(() => document.activeElement.id);
   check('a11y: "/" focuses search', focused === 'search');
 
+  await ctx.close();
+}
+
+// ──────────────── force-layout size guard ────────────────
+// The previous layout threshold (LOD_LAYOUT) was dead: both sides of its
+// branch were identical. This one is supposed to gate something real, so it
+// is tested against a graph too big for it by intercepting graph.json and
+// padding the node list past FORCE_MAX.
+{
+  const { ctx, page, errors } = await newPage({ width: 1400, height: 900 });
+  await page.route('**/graph.json', async route => {
+    const res = await route.fetch();
+    const g = await res.json();
+    const base = g.nodes.length;
+    for (let i = 0; i < 1000; i++) {
+      g.nodes.push({ id: 'PAD-' + i, label: 'Padding ' + i, type: 'organisation',
+        level: 'national', country: 'NL', region: 'EU', scope: 'NL',
+        status: 'active', rel_degree: 0, degree: 0, path: 'organisations/pad-' + i + '.md' });
+    }
+    g.stats.entities = base + 1000;
+    await route.fulfill({ response: res, body: JSON.stringify(g) });
+  });
+  await page.goto(BASE + '/index.html', { waitUntil: 'networkidle' });
+  await page.waitForFunction(() => document.getElementById('loading').hidden, null, { timeout: 20000 });
+  await page.waitForTimeout(1500);
+
+  const before = await page.evaluate(() =>
+    new Set(document.getElementById('cy')._cyreg.cy.nodes()
+      .map(n => Math.round(n.position().y))).size);
+  await page.selectOption('#layout-mode', 'force');
+  await page.waitForTimeout(2000);
+  const after = await page.evaluate(() => ({
+    distinctY: new Set(document.getElementById('cy')._cyreg.cy.nodes()
+      .map(n => Math.round(n.position().y))).size,
+    nodes: document.getElementById('cy')._cyreg.cy.nodes().length,
+    hint: document.getElementById('layout-hint').textContent
+  }));
+
+  check('force layout declines above the size guard and stays grouped',
+    after.distinctY === before, `${after.nodes} nodes · ${before} → ${after.distinctY} distinct y`);
+  check('the size guard explains itself rather than failing silently',
+    /too many entities/i.test(after.hint) && /grouped layout instead/i.test(after.hint),
+    after.hint.trim().slice(0, 70) + '…');
+  check('size-guard path logs no errors', errors.length === 0, errors.slice(0, 2).join(' | '));
   await ctx.close();
 }
 

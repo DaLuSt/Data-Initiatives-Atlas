@@ -184,6 +184,38 @@ Connectivity is measured over the **edges currently on screen**, not the
 whole Atlas, so turning wikilinks on re-orders the blocks. That is
 deliberate: the ordering describes what you are looking at.
 
+### Force-directed as an alternative
+
+The sidebar's **Layout** control offers a second arrangement for the Global
+Atlas, in which connected entities are pulled together by simulation instead
+of placed on a grid.
+
+It is an alternative, not a replacement, because it trades away the one
+thing the grouped layout exists to show: **geographic level stops being
+positional and survives only as colour.** Use it to see clusters and
+bridges; use the grouped layout to see the UN → EU → national descent.
+
+Edge weight drives distance, and it is worth knowing how much of that
+actually survives the simulation:
+
+| | Effect |
+|---|---|
+| Typed relationships | **Pull hardest** — the tightest class, ~72 px against ~132 px for associations |
+| Low-confidence relationships | **Held ~22% further apart** than medium ones — 203 px against 166 px |
+| `confidence: high` | **No claim.** Only 2 of 354 relationships carry it, so any average over them is noise |
+| Wikilinks | Given almost no pull, so 1,392 of them cannot reshape the graph — but a slack spring is not a long one, and they end up floating at whatever spacing the other forces leave |
+
+The layout is **seeded from the grouped positions rather than randomised**,
+so the same graph produces the same picture rather than a different one each
+time.
+
+Above **900 visible entities** the simulation is declined and the grouped
+layout is kept, with the sidebar saying so. Narrow the filters to use it on
+a large graph.
+
+Your choice of layout is **not remembered between visits** — the page stores
+nothing about you (see `SECURITY.md`).
+
 Labels fade out when they would be too small to read and return as you zoom
 in. In a dense view the status line tells you so.
 

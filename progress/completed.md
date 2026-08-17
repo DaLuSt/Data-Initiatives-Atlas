@@ -2487,3 +2487,90 @@ alternative rather than a replacement. Both are possible with the vendored
 Cytoscape build: `cose` is registered, and `idealEdgeLength` accepts a
 per-edge callback. `fcose`, `cola`, `dagre`, `elk` and `euler` are **not**
 registered and would each mean vendoring a new file.
+
+---
+
+# 2026-08-17 — A switchable force-directed layout, weighted by evidence
+
+**No entity changed; `graph.json` and `details.json` are byte-identical.**
+Part two of *"can strongly connected nodes be drawn closer together?"* — the
+half that uses a simulation. Still **no new dependency**: `cose` is in the
+vendored Cytoscape build, and `idealEdgeLength` takes a per-edge callback.
+
+## A switch, not a replacement
+
+The grouped layout stays the default. The force layout trades away the one
+thing the grouped layout exists to show — **geographic level stops being
+positional and survives only as colour** — so making it the default would
+have thrown away the Atlas's core claim to gain a prettier picture. The
+sidebar hint says exactly that while the mode is active.
+
+It governs the **Global Atlas only**. The Explorer's rings by hop distance
+are the point of that view, and Compare and List have no canvas.
+
+**Seeded, not randomised.** `randomize: false` starts the simulation from the
+grouped positions, so the same graph yields the same picture instead of a
+different one per visit, and the relaxation begins from an arrangement that
+already means something.
+
+**Not persisted.** `SECURITY.md` states the page keeps no cookies and no
+`localStorage`/`sessionStorage`, so the layout choice is a session variable
+and nothing more. Remembering it would have meant amending that policy.
+
+## Two mitigations the measurements demanded
+
+Both come straight from the numbers in the previous batch:
+
+- **44 components and 28 isolated nodes** on the default view — without
+  `componentSpacing: 130` a force layout flings them apart and the canvas
+  becomes mostly whitespace. They now pack into tidy rows below the main
+  cluster.
+- **`DOMAIN-GOVERNMENT` has degree 206 of 258** — at uniform repulsion it
+  drags the whole graph into a ball around itself. `nodeRepulsion` now grows
+  with degree, so a hub holds its neighbours at arm's length instead of
+  swallowing them.
+
+## What edge weighting actually achieves — measured, not assumed
+
+This is the part where the first attempt was wrong and the claim had to be
+narrowed twice.
+
+| | Result |
+|---|---|
+| Typed relationships | **Tightest class** — mean 72 px against 132 px for associations, with every edge class on |
+| Low-confidence relationships | **~22% further apart** than medium — 203 px against 166 px, over 27 edges and 317 |
+| `confidence: high` | **No effect, and no claim made.** Only 2 of 354 relationships carry it; a mean over two edges is noise |
+| Wikilinks | Float at ~82 px — *shorter* than associations |
+
+⚠ **A slack spring is not a long one.** The first tuning gave wikilinks
+almost no elasticity, on the reasoning that 1,392 navigational links should
+not reshape the graph. That part worked. But weak springs do not hold their
+rest length either: they go slack and the nodes settle at whatever ambient
+spacing the other forces produce. Springs pull; they do not push. So the
+intended order — relationship < association < wikilink — is **not** what the
+graph shows, and the hint text was rewritten to describe what it does.
+
+The first attempt was worse still: at the original weights, association came
+out *longer* than wikilink and the whole graph compressed into a 630 × 528
+box. Retuning widened it to 825 × 655 and put typed relationships first.
+
+## The size guard is not dead this time
+
+The previous threshold, `LOD_LAYOUT`, was removed last batch because **both
+sides of its branch were byte-identical**. `FORCE_MAX = 900` replaces it and
+does gate something: above it the simulation is declined, the grouped layout
+is kept, and the sidebar explains why rather than silently doing nothing.
+
+A UI test proves it by intercepting `graph.json` and padding the node list to
+1,258 — the layout does not move and the hint reads *"Too many entities on
+screen (1,258) to lay out by simulation"*. Given the last threshold shipped
+dead for months, testing this one seemed the minimum.
+
+## Verification
+
+`validation/run_all.py` 5/5. `tools/build_graph.py --check` 258 entities,
+2,649 edges — unchanged. `tools/test_build_graph.py` 37 tests.
+`tools/test_ui.mjs` **81 checks** (was 72 — nine added).
+
+Measured cost of a switch: **~2.8 s wall time** at 258 nodes and 354 edges,
+on the UI thread. That is the reason for the guard.
