@@ -32,6 +32,7 @@
   <nav class="views" aria-label="View">
     <button id="view-atlas" class="view-btn is-active" aria-pressed="true">Global Atlas</button>
     <button id="view-explorer" class="view-btn" aria-pressed="false">Entity Explorer</button>
+    <button id="view-compare" class="view-btn" aria-pressed="false">Compare</button>
     <button id="view-list" class="view-btn" aria-pressed="false">List</button>
   </nav>
 
@@ -193,6 +194,39 @@
           <tbody id="list-body"></tbody>
         </table>
       </div>
+    </div>
+  </section>
+
+  <!-- ───────────────────────── comparison matrix ───────────────────────── -->
+  <section class="listview" id="compareview" hidden aria-labelledby="compare-h">
+    <div class="listview-inner compare-inner">
+      <h2 id="compare-h">One instrument, six countries</h2>
+      <p class="hint">
+        Every supra-national instrument the Atlas records as applying in, or
+        being implemented by, at least one country. Generated from
+        <code>applies-in</code> and <code>implements-requirement-from</code>
+        edges — nothing here is hand-maintained.
+        <strong>Rows</strong> respect the sidebar filters;
+        <strong>columns</strong> respect the country filter only.
+      </p>
+      <p class="list-count" id="compare-count" role="status" aria-live="polite"></p>
+      <ul class="matrix-legend">
+        <li><span class="cell-key is-implemented"></span><span>Implemented — a national entity carries <code>implements-requirement-from</code></span></li>
+        <li><span class="cell-key is-applies"></span><span>Applies — <code>applies-in</code> is recorded, but no national instrument is modelled</span></li>
+        <li><span class="cell-key is-none"></span><span>Nothing recorded — neither edge exists</span></li>
+      </ul>
+      <div class="table-wrap">
+        <table class="entity-table matrix">
+          <caption class="sr-only">
+            Supra-national instruments by country. Each cell states whether the
+            country implements the instrument, is recorded as covered by it, or
+            has nothing recorded.
+          </caption>
+          <thead><tr id="compare-head"></tr></thead>
+          <tbody id="compare-body"></tbody>
+        </table>
+      </div>
+      <p class="hint" id="compare-note"></p>
     </div>
   </section>
 

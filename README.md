@@ -45,7 +45,7 @@ hand-maintained.
 
 | Where | What you get |
 |---|---|
-| **[The interactive graph](https://dalust.github.io/Data-Initiatives-Atlas/)** | Search by name, ID, country, type or domain. Filter by level, country, region, **domain**, type, status, relationship type — and by **provenance and confidence**, so you can isolate what a source states from what the Atlas concludes. Click any entity for its metadata, sourced relationships and citations — and a link to the underlying Markdown. |
+| **[The interactive graph](https://dalust.github.io/Data-Initiatives-Atlas/)** | Search by name, ID, country, type or domain. Filter by level, country, region, **domain**, type, status, relationship type — and by **provenance and confidence**, so you can isolate what a source states from what the Atlas concludes. The **Compare** view puts one supra-national instrument per row and one country per column, so you can see who implemented what — generated from the graph, not hand-written. Click any entity for its metadata, sourced relationships and citations, and a link to the underlying Markdown. |
 | **This repository** | The source of truth. Browse `countries/`, `legislation/`, `organisations/` and the rest directly. |
 | **As an Obsidian vault** | Open the repository folder in Obsidian and the `[[wikilinks]]` become a local graph. |
 

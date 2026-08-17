@@ -12,7 +12,7 @@
   var D = null;            // details.json (may still be loading)
   var cy = null;
   var nodeById = Object.create(null);
-  var view = "atlas";      // atlas | explorer | list
+  var view = "atlas";      // atlas | explorer | compare | list
   var focusId = null;
   var depth = 2;
   var filters = {          // Set per facet; empty Set = "all"
@@ -229,6 +229,7 @@
 
     $("view-atlas").addEventListener("click", function () { setView("atlas"); });
     $("view-explorer").addEventListener("click", function () { setView("explorer"); });
+    $("view-compare").addEventListener("click", function () { setView("compare"); });
     $("view-list").addEventListener("click", function () { setView("list"); });
 
     $("depth").addEventListener("change", function (e) {
@@ -385,11 +386,15 @@
     });
   }
 
-  function passesNodeFilters(n) {
+  // `ignoreCountry` exists for the comparison matrix, where country selects
+  // the columns. Rows there are supra-national instruments with `country:
+  // null`, so applying the country filter to them would empty the table.
+  function passesNodeFilters(n, ignoreCountry) {
     if (filters.level.size && !filters.level.has(n.level)) return false;
     if (filters.type.size && !filters.type.has(n.type)) return false;
     if (filters.status.size && !filters.status.has(n.status)) return false;
-    if (filters.country.size && !(n.country && filters.country.has(n.country))) return false;
+    if (!ignoreCountry &&
+        filters.country.size && !(n.country && filters.country.has(n.country))) return false;
     if (filters.region.size && !(n.region && filters.region.has(n.region))) return false;
     // A domain matches an entity tagged with it — and the domain entity
     // itself, which carries no `domains` of its own but is the hub every
@@ -552,6 +557,7 @@
   function refresh() {
     if (!cy) return;
     if (view === "list") { renderList(); return; }
+    if (view === "compare") { renderCompare(); return; }
 
     var els = currentElements();
     cy.elements().remove();
@@ -845,33 +851,38 @@
 
   function pick(id) {
     hideSuggestions();
-    if (view === "list") setView("explorer");
+    if (view === "list" || view === "compare") setView("explorer");
     selectEntity(id, false);
   }
 
   // ── views ────────────────────────────────────────────────────────────
   function setView(v) {
     view = v;
-    [["view-atlas", "atlas"], ["view-explorer", "explorer"], ["view-list", "list"]]
+    [["view-atlas", "atlas"], ["view-explorer", "explorer"],
+     ["view-compare", "compare"], ["view-list", "list"]]
       .forEach(function (p) {
         var b = $(p[0]), on = p[1] === v;
         b.classList.toggle("is-active", on);
         b.setAttribute("aria-pressed", String(on));
       });
-    $("stage").hidden = v === "list";
+    $("stage").hidden = v === "list" || v === "compare";
     $("listview").hidden = v !== "list";
+    $("compareview").hidden = v !== "compare";
     $("explorer-panel").hidden = v !== "explorer";
     if (v === "explorer" && !focusId) {
       $("explorer-hint").textContent =
         "No entity selected. Search above, or switch to Global Atlas and click a node.";
     }
     refresh();
-    if (v !== "list" && cy) cy.resize();
+    if (v !== "list" && v !== "compare" && cy) cy.resize();
   }
 
   function renderList() {
     var q = $("search").value;
-    var rows = (q.trim() ? matches(q) : G.nodes.slice()).filter(passesNodeFilters);
+    // Not `.filter(passesNodeFilters)` — Array#filter passes the index as the
+    // second argument, which would land in `ignoreCountry`.
+    var rows = (q.trim() ? matches(q) : G.nodes.slice())
+      .filter(function (n) { return passesNodeFilters(n); });
     var k = listSort.key, dir = listSort.dir;
     rows.sort(function (a, b) {
       if (k === "rel_degree") {
@@ -903,6 +914,168 @@
     }).join("");
 
     $("list-body").querySelectorAll("[data-goto]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        setView("explorer");
+        selectEntity(b.dataset.goto, false);
+      });
+    });
+  }
+
+  // ── comparison matrix ────────────────────────────────────────────────
+  // Rows are supra-national instruments, columns are countries, and each cell
+  // says what that country did about that instrument. Several entity bodies
+  // maintain tables like this by hand, where they go stale; this derives them
+  // from `applies-in` and `implements-requirement-from` edges instead.
+  function compareModel() {
+    // "Supra-national" is whatever the generator says is not a country scope,
+    // so a new region or international scope needs no change here.
+    var supra = Object.create(null);
+    (G.facets.scopes || []).forEach(function (s) {
+      if (!s.is_country) supra[s.code] = true;
+    });
+
+    var applies = Object.create(null);    // instrument → { country: true }
+    var implts = Object.create(null);     // instrument → { country: [ids] }
+    var supraImpl = Object.create(null);  // instrument → [ids], no country
+
+    G.edges.forEach(function (e) {
+      if (e.class !== "relationship") return;
+      var src = nodeById[e.source];
+      if (!src || !nodeById[e.target]) return;
+
+      if (e.type === "applies-in" && supra[src.scope]) {
+        applies[e.source] = applies[e.source] || Object.create(null);
+        applies[e.source][e.target] = true;
+      } else if (e.type === "implements-requirement-from") {
+        if (src.country) {
+          implts[e.target] = implts[e.target] || Object.create(null);
+          (implts[e.target][src.country] = implts[e.target][src.country] || []).push(e.source);
+        } else {
+          // An implementer with no country of its own — the EU implementing a
+          // UN convention. It belongs in no column, so it is reported on the
+          // row rather than quietly dropped.
+          (supraImpl[e.target] = supraImpl[e.target] || []).push(e.source);
+        }
+      }
+    });
+
+    var ids = Object.create(null);
+    [applies, implts, supraImpl].forEach(function (map) {
+      Object.keys(map).forEach(function (id) { ids[id] = true; });
+    });
+
+    return {
+      applies: applies, implts: implts, supraImpl: supraImpl,
+      rows: Object.keys(ids).map(function (id) { return nodeById[id]; })
+        .filter(function (n) { return n && supra[n.scope]; })
+    };
+  }
+
+  function renderCompare() {
+    var m = compareModel();
+
+    // Columns follow the country filter alone. The other filters describe
+    // instruments, and applying them to the columns would empty the matrix
+    // the moment someone filtered by type or level.
+    var cols = G.nodes.filter(function (n) {
+      return n.type === "country" && (!filters.country.size || filters.country.has(n.id));
+    }).sort(function (a, b) { return a.label.localeCompare(b.label); });
+
+    var rows = m.rows.filter(function (n) { return passesNodeFilters(n, true); });
+
+    function cellState(rowId, countryId) {
+      var im = (m.implts[rowId] || {})[countryId];
+      if (im && im.length) return { kind: "implemented", ids: im };
+      if ((m.applies[rowId] || {})[countryId]) return { kind: "applies" };
+      return { kind: "none" };
+    }
+
+    // Rank by how much each instrument actually says: implementations first,
+    // then recorded applicability.
+    var tally = Object.create(null);
+    rows.forEach(function (n) {
+      var t = { implemented: 0, applies: 0 };
+      cols.forEach(function (c) {
+        var s = cellState(n.id, c.id);
+        if (s.kind === "implemented") t.implemented++;
+        else if (s.kind === "applies") t.applies++;
+      });
+      tally[n.id] = t;
+    });
+    rows.sort(function (a, b) {
+      return (tally[b.id].implemented - tally[a.id].implemented) ||
+        (tally[b.id].applies - tally[a.id].applies) ||
+        a.label.localeCompare(b.label);
+    });
+
+    var totals = { implemented: 0, applies: 0 };
+    rows.forEach(function (n) {
+      totals.implemented += tally[n.id].implemented;
+      totals.applies += tally[n.id].applies;
+    });
+
+    $("compare-head").innerHTML = '<th scope="col">Instrument</th>' +
+      cols.map(function (c) {
+        return '<th scope="col">' + esc(c.label) + "</th>";
+      }).join("");
+
+    $("compare-body").innerHTML = rows.map(function (n) {
+      var extra = m.supraImpl[n.id] || [];
+      var head = '<th scope="row">' +
+        '<button class="namebtn" data-goto="' + esc(n.id) + '">' + esc(n.label) + "</button>" +
+        '<span class="row-id">' + esc(n.id) + "</span>" +
+        (extra.length ? '<span class="row-note">Implemented above the national level by ' +
+          extra.map(function (id) {
+            return esc((nodeById[id] || {}).label || id);
+          }).join(", ") + "</span>" : "") +
+        "</th>";
+
+      return "<tr>" + head + cols.map(function (c) {
+        var s = cellState(n.id, c.id);
+        if (s.kind === "implemented") {
+          // The ID is the scannable key in a matrix — several of these
+          // entities carry full official titles a dozen words long. The name
+          // stays in the accessible name and the tooltip, not in the grid.
+          return '<td class="is-implemented">' + s.ids.map(function (id) {
+            var e = nodeById[id] || {};
+            return '<button class="namebtn cell-entity" data-goto="' + esc(id) + '"' +
+              (e.label ? ' title="' + esc(e.label) + '"' : "") + ">" +
+              esc(id) + (e.label ? '<span class="sr-only"> — ' + esc(e.label) + "</span>" : "") +
+              (e.status ? '<span class="cell-status">' + esc(titly(e.status)) + "</span>" : "") +
+              "</button>";
+          }).join("") + "</td>";
+        }
+        if (s.kind === "applies") {
+          return '<td class="is-applies"><span class="cell-applies">' +
+            "Applies — none modelled</span></td>";
+        }
+        return '<td><span class="cell-none">—</span></td>';
+      }).join("") + "</tr>";
+    }).join("");
+
+    $("compare-count").textContent = rows.length
+      ? rows.length.toLocaleString() + " instrument" + (rows.length === 1 ? "" : "s") +
+        " × " + cols.length + " countr" + (cols.length === 1 ? "y" : "ies") + " · " +
+        totals.implemented.toLocaleString() + " implemented · " +
+        totals.applies.toLocaleString() + " applying with no national instrument modelled."
+      : "No supra-national instrument matches the current filters.";
+
+    // The gap is the point of the view, so it is stated rather than left to
+    // be counted off the tinting.
+    var fullyImplemented = rows.filter(function (n) {
+      return cols.length && tally[n.id].implemented === cols.length;
+    });
+    $("compare-note").textContent = rows.length
+      ? fullyImplemented.length +
+        " of " + rows.length + " instruments are implemented in every country shown" +
+        (fullyImplemented.length
+          ? " (" + fullyImplemented.map(function (n) { return n.label; }).join(", ") + ")"
+          : "") +
+        ". An empty cell is not a claim that the instrument does not apply — it means " +
+        "the Atlas records nothing either way."
+      : "";
+
+    $("compare-body").querySelectorAll("[data-goto]").forEach(function (b) {
       b.addEventListener("click", function () {
         setView("explorer");
         selectEntity(b.dataset.goto, false);

@@ -89,10 +89,10 @@ npm install playwright && npx playwright install chromium
 node tools/test_ui.mjs
 ```
 
-55 checks across desktop, mobile (390×844) and accessibility: search by
+66 checks across desktop, mobile (390×844) and accessibility: search by
 name/ID/country, keyboard navigation, detail panel content, GitHub links,
-deep links, every filter, edge-class toggles, the list view and its sorting,
-and console-error freedom throughout.
+deep links, every filter, edge-class toggles, the comparison matrix, the
+list view and its sorting, and console-error freedom throughout.
 
 These are **not** in CI: they would require installing a browser on every
 pull request for a static page whose data is already covered by the Python
@@ -195,9 +195,18 @@ payload.
 
 ### A new view
 
-`setView()` toggles `#stage` and `#listview` and calls `refresh()`.
-`refresh()` dispatches on `view`. `currentElements()` is where a view decides
-which subgraph to show.
+`setView()` toggles `#stage`, `#listview` and `#compareview`, then calls
+`refresh()`. `refresh()` dispatches on `view`. `currentElements()` is where a
+graph view decides which subgraph to show; a non-graph view (List, Compare)
+returns from `refresh()` before touching Cytoscape.
+
+If the view interprets a filter differently from the graph — Compare treats
+`country` as its columns rather than as a row predicate — say so in the view's
+own hint text. `passesNodeFilters(n, ignoreCountry)` takes a second argument
+for exactly that case. Call it with an explicit wrapper, never as
+`.filter(passesNodeFilters)`: `Array#filter` passes the index as the second
+argument, which would silently switch the flag on for every element but the
+first.
 
 ### Restyling
 

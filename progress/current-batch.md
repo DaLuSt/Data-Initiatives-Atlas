@@ -1,9 +1,47 @@
 # Current Batch
 
-**Status:** No batch in progress. **Domain, provenance and confidence
-filters** were added to the interactive Atlas on 2026-08-16, after the
-Poland, cybersecurity-domain, basisregistraties, UN-connection and Spain
-batches the same day.
+**Status:** No batch in progress. **The comparison matrix** was added to the
+interactive Atlas on 2026-08-16, after the domain/provenance/confidence
+filters, Poland, cybersecurity-domain, basisregistraties, UN-connection and
+Spain batches the same day.
+
+## Site — the comparison matrix
+
+**No entity changed, and `graph.json` is byte-identical.** A fourth view:
+rows are supra-national instruments, columns are countries, cells say what
+each country did. Derived in the browser from `applies-in` and
+`implements-requirement-from` edges that were already there.
+
+**Why:** the Atlas's most valuable content is cross-country comparison, and
+it existed **only as prose tables hand-written inside entity bodies** — the
+GDPR technique table, the NIS2 state table, the 2016-act trap. All of them
+had to be re-edited by hand on every new country, and several went stale.
+
+**20 instruments × 6 countries · 21 implemented · 88 applying with no
+national instrument modelled.** Only **two** instruments are implemented in
+all six countries — the GDPR and NIS2 — and those are the only two the prose
+tables ever covered.
+
+**Three findings, none visible from any single entity:**
+
+1. **The GDPR supervisory authority is modelled inconsistently.** Six
+   countries attach `implements-requirement-from EU-GDPR` to a national law;
+   the Netherlands attaches it to a law *and* to [[NL-AP]], the authority
+   itself. No other country's authority carries it.
+2. **[[EU-EIDAS]] has no `applies-in` edges at all**, though it is `active`
+   and [[DE-BUNDID]] implements it. [[EU-NIS]]'s empty row is correct by
+   contrast — it is `superseded`.
+3. **[[EU-INSPIRE]] applies in five countries and not the Netherlands** —
+   the founding country, which has a geospatial domain and a geo-portal.
+
+**Two traps recorded in `progress/completed.md`:** rows are instruments with
+`country: null`, so the country filter had to move the *columns* rather than
+filter the rows; and `.filter(passesNodeFilters)` passes the array index as
+the new second argument, which would have silently disabled the country
+filter in the List view.
+
+**Verification:** `run_all.py` 5/5 · `test_build_graph.py` 37 tests
+(unchanged) · `test_ui.mjs` 66/66 (was 55).
 
 ## Site — domain, provenance and confidence filters
 

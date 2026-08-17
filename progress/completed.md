@@ -2015,3 +2015,103 @@ domain filter keeps its own hub and that confidence is ordered high → low).
 
 Docs updated: `docs/graph.md` filter table, `docs/graph-development.md`
 "adding a filter" with the ordering and hub-node notes, `README.md`.
+
+---
+
+# 2026-08-16 — The comparison matrix
+
+**No entity changed.** A fourth view on the interactive Atlas: rows are
+supra-national instruments, columns are countries, cells say what each
+country did. Derived entirely in the browser from edges already in
+`graph.json` — **no payload change, no generator change**.
+
+## Why
+
+The most valuable content the Atlas holds is cross-country comparison, and
+it existed **only as prose tables hand-written inside entity bodies**: the
+GDPR technique table in six national acts, the NIS2 state table in six more,
+the Open Data Directive's 2016-act trap. Every one of them had to be edited
+by hand whenever a country was added, and several went stale between batches
+— stale counts have been corrected in this repository more than once.
+
+All of it is derivable. `applies-in` and `implements-requirement-from` are
+already on the edges; the view groups them by country.
+
+## What it shows
+
+**20 instruments × 6 countries · 21 implemented · 88 applying with no
+national instrument modelled.**
+
+| Cell | Meaning | Source |
+|---|---|---|
+| A national entity | That country implements it | `implements-requirement-from` → the row |
+| Applies — none modelled | Recorded as covering that country, nothing modelled | `applies-in` from the row |
+| — | Nothing recorded either way | neither edge |
+
+**Only two instruments are implemented in all six countries: the GDPR and
+NIS2.** They are also the only two the prose tables ever covered. The other
+18 rows are what the prose never showed.
+
+## Three findings the matrix produced immediately
+
+None of these is visible from any single entity, and all three are real.
+
+**1. The GDPR supervisory authority is modelled inconsistently.**
+Seven entities carry `implements-requirement-from EU-GDPR`. Six are national
+laws — one per country. The seventh is **[[NL-AP]], an organisation**: the
+Netherlands is the only country whose *supervisory authority* also carries
+the edge. Either the other five are missing it or the Dutch one is
+misplaced, and the matrix is the only place the asymmetry is visible.
+
+**2. [[EU-EIDAS]] has no `applies-in` edges at all** — yet it is `active`
+and [[DE-BUNDID]] implements it. Every other active EU instrument in the
+matrix attaches to all six countries. [[EU-NIS]]'s empty row is different
+and correct: it is `superseded`.
+
+**3. [[EU-INSPIRE]] applies in five countries and not the Netherlands** —
+`['BE', 'DE', 'ES', 'FR', 'PL']`. The founding country, with a geospatial
+domain and a national geo-portal, is the one missing. Almost certainly an
+omission from before the `applies-in` convention settled.
+
+## Design decisions
+
+**Rows respect the sidebar filters; columns respect the country filter
+only.** Rows are supra-national instruments with `country: null`. Running
+the country filter over them empties the table — which is exactly what the
+first implementation did, caught by a UI test written to check the columns.
+`passesNodeFilters()` gained an `ignoreCountry` argument for this.
+
+⚠ That argument introduced a trap worth recording: `renderList()` called
+`.filter(passesNodeFilters)`, and **`Array#filter` passes the index as the
+second argument** — so `ignoreCountry` would have been truthy for every row
+but the first, silently disabling the country filter in the List view. Both
+call sites are now explicit wrappers, and the reason is a comment.
+
+**An implementer with no country belongs to no column.** The EU implementing
+a UN convention ([[EU-ENVIRONMENTAL-INFORMATION-DIRECTIVE]] →
+[[UN-AARHUS]]) is reported on the row instead of being dropped.
+
+**Cells key on the entity ID, not the name.** Several of these carry full
+official titles a dozen words long; the name stays in the tooltip and the
+accessible name.
+
+**The three states are distinguished by words, not only by tint.** "Applies
+— none modelled" says so, and an empty cell is explicitly *not* a claim that
+the instrument does not apply — it means the Atlas records nothing either
+way. A UI check asserts the wording is present.
+
+## One CSS fix outside the view
+
+`.layout` gained `overflow-x: hidden`. A 7-column matrix on a 390px phone
+was pushing the **document** sideways by 561px rather than scrolling inside
+its own wrapper. `body` already carried the same guard; the flex row below
+it did not. Now covered by a mobile UI check.
+
+## Verification
+
+`validation/run_all.py` 5/5, 0 errors, 0 warnings.
+`tools/test_build_graph.py` **37 tests** — unchanged, and `graph.json` is
+byte-identical, which is the point: this view added no data.
+`tools/test_ui.mjs` **66 checks** (was 55 — eleven added, including that the
+country filter moves the columns and not the rows, that supra-national
+implementers survive, and that the matrix scrolls in its wrapper on mobile).

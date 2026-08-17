@@ -25,13 +25,44 @@ locally.
 
 ## What you can do with it
 
-### Three views
+### Four views
 
 | View | What it is for |
 |---|---|
 | **Global Atlas** | The whole landscape, laid out in bands by geographic level — international at the top, regional below it, national below that, sectoral at the bottom. Use it to see shape and scale. |
 | **Entity Explorer** | One entity and its neighbourhood, drawn as rings by hop distance. Use it to actually read a part of the graph without being overwhelmed. |
+| **Compare** | One supra-national instrument per row, one country per column. Use it to ask *"who did what about this directive?"* — see below. |
 | **List** | A sortable, searchable table of every entity. Use it if you would rather not use a graph at all — it is a complete, non-visual route into the Atlas. |
+
+### Compare — one instrument, many countries
+
+The most valuable thing the Atlas holds is cross-country comparison, and for a
+long time it existed only as prose tables hand-written inside entity bodies —
+where they went stale every time a country was added.
+
+The Compare view generates them instead. Rows are supra-national instruments,
+columns are countries, and each cell is one of three states:
+
+| Cell | Meaning | Comes from |
+|---|---|---|
+| **A national entity** | That country implements the instrument | an `implements-requirement-from` edge pointing at the row |
+| **Applies — none modelled** | The Atlas records that the instrument covers that country, but models no national instrument for it | an `applies-in` edge from the row |
+| **—** | Nothing recorded either way | neither edge |
+
+The third state is **not** a claim that the instrument does not apply there.
+It means the Atlas has not established anything, which is a different
+statement and is labelled as such.
+
+Two details worth knowing:
+
+- **Rows respect the sidebar filters; columns respect the country filter
+  only.** Rows are supra-national instruments with `country: null`, so
+  applying the country filter to them would empty the table. Selecting
+  Germany and Poland narrows the *columns*; selecting the Cybersecurity
+  domain narrows the *rows*.
+- **An implementer with no country of its own** — the EU implementing a UN
+  convention — belongs in no column. It is reported on the row rather than
+  dropped.
 
 ### Search
 
