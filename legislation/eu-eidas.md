@@ -31,8 +31,56 @@ domains:
   - DOMAIN-GOVERNMENT
 organisations: []
 related_entities:
+  - PL
+  - NL
+  - FR
+  - ES
+  - DE
+  - BE
   - EU-EIDAS2
-relationships: []
+relationships:
+  - type: applies-in
+    target: BE
+    source: fact
+    evidence: "As an EU regulation, Regulation (EU) No 910/2014 (eIDAS) is directly applicable in all member states without national transposition; it establishes mutual recognition of notified electronic identification schemes, requiring each member state to recognise eIDs notified to the Commission by any other, and Belgium is a member state (digital-strategy.ec.europa.eu 'eIDAS Regulation'; ec.europa.eu digital-building-blocks 'How to notify an eID scheme?'; enisa.europa.eu 'Cross recognition of national eID schemes in the EU'). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: DE
+    source: fact
+    evidence: "As an EU regulation, Regulation (EU) No 910/2014 (eIDAS) is directly applicable in all member states without national transposition; it establishes mutual recognition of notified electronic identification schemes, requiring each member state to recognise eIDs notified to the Commission by any other, and Germany is a member state (digital-strategy.ec.europa.eu 'eIDAS Regulation'; ec.europa.eu digital-building-blocks 'How to notify an eID scheme?'; enisa.europa.eu 'Cross recognition of national eID schemes in the EU'). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: ES
+    source: fact
+    evidence: "As an EU regulation, Regulation (EU) No 910/2014 (eIDAS) is directly applicable in all member states without national transposition; it establishes mutual recognition of notified electronic identification schemes, requiring each member state to recognise eIDs notified to the Commission by any other, and Spain is a member state (digital-strategy.ec.europa.eu 'eIDAS Regulation'; ec.europa.eu digital-building-blocks 'How to notify an eID scheme?'; enisa.europa.eu 'Cross recognition of national eID schemes in the EU'). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: FR
+    source: fact
+    evidence: "As an EU regulation, Regulation (EU) No 910/2014 (eIDAS) is directly applicable in all member states without national transposition; it establishes mutual recognition of notified electronic identification schemes, requiring each member state to recognise eIDs notified to the Commission by any other, and France is a member state (digital-strategy.ec.europa.eu 'eIDAS Regulation'; ec.europa.eu digital-building-blocks 'How to notify an eID scheme?'; enisa.europa.eu 'Cross recognition of national eID schemes in the EU'). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: NL
+    source: fact
+    evidence: "As an EU regulation, Regulation (EU) No 910/2014 (eIDAS) is directly applicable in all member states without national transposition; it establishes mutual recognition of notified electronic identification schemes, requiring each member state to recognise eIDs notified to the Commission by any other, and the Netherlands is a member state (digital-strategy.ec.europa.eu 'eIDAS Regulation'; ec.europa.eu digital-building-blocks 'How to notify an eID scheme?'; enisa.europa.eu 'Cross recognition of national eID schemes in the EU'). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: PL
+    source: fact
+    evidence: "As an EU regulation, Regulation (EU) No 910/2014 (eIDAS) is directly applicable in all member states without national transposition; it establishes mutual recognition of notified electronic identification schemes, requiring each member state to recognise eIDs notified to the Commission by any other, and Poland is a member state (digital-strategy.ec.europa.eu 'eIDAS Regulation'; ec.europa.eu digital-building-blocks 'How to notify an eID scheme?'; enisa.europa.eu 'Cross recognition of national eID schemes in the EU'). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Regulation (EU) 2024/1183 — Official Journal (amending Regulation (EU) No 910/2014)"

@@ -2717,3 +2717,130 @@ Graph regenerated: **265 entities, 2,801 edges**.
 
 Sourcing unchanged — every new entity is `search-only`, `last_verified:
 null`, no `accessed` dates. **258 of 265 entities unread.**
+
+---
+
+# 2026-08-17 — Connecting the loose nodes
+
+**No new entities. 14 relationships added**, 376 → 390. The graph's
+relationship layer was fragmented into **39 components**; it is now **31**,
+and the largest has grown from **184 to 224 of 265 entities**.
+
+Every edge below was researched and sourced. Where the Atlas had already
+looked and refused for want of a source, that refusal was **left standing** —
+this batch adds no edge it could not evidence.
+
+## What connected, and what it pulled in
+
+| Edge | Nodes brought into the main component |
+|---|---|
+| [[EU-EIDAS]] `applies-in` × 6 member states | **7** — the whole German identity/OZG cluster |
+| [[NL-PDOK]] `aligned-with` [[EU-INSPIRE]] | **21** — the entire basisregistraties system |
+| [[FR-RGI]] `based-on` [[EU-EIF]] | **5** — the French DINUM/Etalab cluster |
+| [[NL-EAR]] `based-on` [[NL-NORA]] | **2** — with [[NL-RORA]] |
+| [[DE-BFDI]] `applies-to` [[DE-BDSG]] | **2** — with [[DE-IFG]] |
+| [[NL-ROSA]], [[NL-PETRA]] `based-on` [[NL-NORA]] | 2 previously isolated frameworks |
+| [[EU-INSPIRE]] `applies-in` [[NL]] | completes INSPIRE across all six member states |
+| [[ES-CLAVE]] `implements-requirement-from` [[EU-EIDAS]] | 1 previously isolated platform |
+
+## Two of these were open backlog items
+
+**[[EU-EIDAS]] had no `applies-in` edges at all** — flagged by the
+comparison-matrix batch as an anomaly, since every other active EU
+instrument attached to all six countries. It is a **regulation**, so the
+evidence is the same reasoning [[EU-GDPR]]'s edges already use: directly
+applicable in all member states without transposition. Adding it turned out
+to reconnect seven German entities that had been orphaned since the German
+batch.
+
+**[[EU-INSPIRE]] applied in five countries and not the Netherlands** — the
+founding country, with a geospatial domain and a national geo-portal. The
+gap was real: the Netherlands transposed INSPIRE through the
+*Implementatiewet EG-richtlijn infrastructuur ruimtelijke informatie*, in
+force **1 September 2009**.
+
+## The single most valuable edge was not obvious
+
+[[NL-PDOK]] `aligned-with` [[EU-INSPIRE]] connected **21 entities** — every
+Dutch base registry, [[NL-KADASTER]], [[NL-KVK]], [[NL-RDW]], the
+[[NL-BASISREGISTRATIES]] stelsel itself. The whole system had been a sealed
+island since the register batch: internally dense, externally unconnected.
+
+PDOK is the Dutch national geo-platform, and its own pages state that its
+services **comply with the European INSPIRE standard**. One sourced sentence
+about a platform's standards conformance was the door into a fifth of the
+Atlas.
+
+⚠ The edge is `aligned-with`, not `implements-requirement-from`, and the
+evidence says why: the sources establish standards compliance, **not** that
+PDOK is the designated INSPIRE network-service infrastructure under the
+Dutch implementing act. The stronger claim is probably true and is not
+sourced.
+
+## The NORA family, sourced at last
+
+[[NL-ROSA]] said its NORA relationship was *"likely… but was not sourced"*.
+[[NL-PETRA]] said the obvious edges were *"precisely what could not be"*
+sourced. NORA's own wiki enumerates its **dochters**: EAR for central
+government, GEMMA for municipalities, PETRA for the provinces, WILMA for the
+water boards, and domain and chain architectures including ROSA for
+education.
+
+One page sourced **three** edges, and the prose in both entities was
+rewritten — they had been telling readers the connection was unsourceable.
+
+## What was deliberately left disconnected
+
+Ten clusters and thirteen entities remain detached. Each was examined; none
+is left out through inattention.
+
+**Refusals the Atlas already made, and this batch did not override:**
+
+- **[[ES-INCIBE]] ↔ [[ES-LCGC]]** — the Spanish draft law would redistribute
+  competences between INCIBE and [[ES-CCN]], and [[ES-LCGC]] states the
+  reasoning plainly: *"a contested draft allocation of competences is not a
+  relationship; it becomes one if and when the law passes."* Still true.
+- **[[NL-HEALTH-RI]] ↔ [[EU-EHDS]]** — Health-RI is the obvious candidate to
+  become the Dutch health data access body, but the member-state designation
+  phase runs **2027–2029**. Recorded as a high-value open question, not a
+  guess.
+- **[[INTL-IETF]] ↔ [[INTL-W3C]]** — the IETF entity describes W3C as a
+  "peer direct-membership standards body". That is a *comparison*, not a
+  relationship, and no liaison was sourced.
+
+**The seven `DOMAIN-*` entities are isolated by design** and were not
+touched. `domains/domain-cybersecurity.md` says it explicitly: domains are
+referenced *by* other entities through their `domains:` field, which is an
+association, and they carry no typed relationships of their own.
+
+**Organisation-only pairs** — [[GB-DCMS]]/[[GB-GDS]], [[ES-AEAD]]/[[ES-SGAD]],
+[[PL-COI]]/[[PL-MC]] — are internally connected and have no sourced edge to
+anything else. The vocabulary has no defensible "this public body belongs to
+this country" relationship, and inventing one is exactly what the brief
+forbids.
+
+## A convention question this batch answered by *not* acting
+
+72 national instruments lack `applies-in` to their own country. Adding all
+72 would have resolved the inconsistency the UK batch opened — and **25 of
+them are the detached ones**, so it would also have connected most of what
+remains.
+
+It was **not done**, and the backlog item is rewritten rather than closed.
+Reason: `applies-in` is defined as *"the primary mechanism for
+country-neutral applicability"* — one supra-national instrument reaching
+many countries. Using it for "this Dutch law applies in the Netherlands"
+makes the type mean two different things, and 72 of 181 `applies-in` edges
+would become tautological. The Compare view already has to filter the type
+by scope for exactly this reason.
+
+**The right resolution is probably to reconsider the UK edges, not to extend
+them.** That is now what the backlog says.
+
+## Verification
+
+`validation/run_all.py` 5/5, 0 errors, 0 warnings.
+`tools/test_build_graph.py` 37 tests. `tools/test_ui.mjs` 81 checks.
+`validation/audit.py`: no fully disconnected entities.
+Graph regenerated: **265 entities, 2,825 edges, 390 relationships**.
+Sourcing unchanged: 258 of 265 entities unread.

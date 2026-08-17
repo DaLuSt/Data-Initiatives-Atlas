@@ -40,7 +40,14 @@ related_entities:
   - EU-EIDAS2
   - FR-FRANCECONNECT
   - DE-BUNDID
-relationships: []
+relationships:
+  - type: implements-requirement-from
+    target: EU-EIDAS
+    source: fact
+    evidence: "Cl@ve 2.0 is the main Spanish eGovernment solution used by local, regional and national public electronic services to authenticate citizens, and includes the eIDAS node service; the Spanish eIDAS node facilitates cross-border identification both for Spanish citizens accessing services in other European countries and for citizens of other European countries accessing Spanish public services (eidas.redsara.es; cef.uv.es eID4Spain2020 'Scope and objectives'; viafirma.com 'The eIDAS Regulation in Spain'). NOT READ — search-only. CAVEAT: the sources establish that Cl@ve incorporates the eIDAS node; they indicate the notified electronic identification MEANS for Spain is the DNIe rather than Cl@ve itself, so this edge covers the eIDAS infrastructure role and not a notification of Cl@ve as a scheme."
+    confidence: low
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Cl@ve — Sistema Cl@ve: qué es y cómo funciona"

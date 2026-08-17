@@ -36,6 +36,13 @@ related_entities:
   - DE-IFG
 relationships:
   - type: applies-to
+    target: DE-BDSG
+    source: fact
+    evidence: "The BfDI is the independent supreme federal authority for data protection and freedom of information in Germany and the data-protection supervisory authority for all federal public bodies, certain social security institutions, the fiscal authorities and telecommunications and postal undertakings; the Bundesdatenschutzgesetz is the federal act under which that supervision is exercised (bfdi.bund.de 'Aufgaben des BfDI'; de.wikipedia.org 'Bundesbeauftragter fuer den Datenschutz und die Informationsfreiheit'; wirtschaftslexikon.gabler.de). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-to
     target: DE-IFG
     source: fact
     evidence: "Among the BfDI's tasks is helping persons who consider their fundamental right of access to information under the IFG to have been violated (bfdi.bund.de 'Aufgaben und Befugnisse der BfDI'; de.wikipedia.org). NOT READ — search-only."

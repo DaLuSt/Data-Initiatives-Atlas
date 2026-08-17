@@ -227,7 +227,7 @@ someone else's CDN changed. `tools/test_build_graph.py` asserts that
 
 The default view is deliberately not "everything at full detail":
 
-1. **Typed relationships only by default** — 376 edges instead of 2,801.
+1. **Typed relationships only by default** — 390 edges instead of 2,825.
 2. **Level-of-detail labels** — `min-zoomed-font-size` hides labels that
    would render too small to read, and they return on zoom. Above 260
    visible nodes labels are dropped entirely.

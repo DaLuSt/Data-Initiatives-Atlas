@@ -38,6 +38,13 @@ related_entities:
   - EU-EIF
   - NL-PAS-TOE-OF-LEG-UIT
 relationships:
+  - type: based-on
+    target: EU-EIF
+    source: fact
+    evidence: "The European Commission defines a European-level framework, the European Interoperability Framework (EIF), and national interoperability frameworks (NIF) defined by member states; the RGI corresponds to the French NIF, and its evolution is entrusted to DINUM, which ensures its strategic management and coordinates its updates (numerique.gouv.fr 'Referentiel general d interoperabilite (RGI)'; fr.wikipedia.org 'Referentiel general d interoperabilite'; numerique360.banquedesterritoires.fr). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: maintained-by
     target: FR-DINUM
     source: fact
