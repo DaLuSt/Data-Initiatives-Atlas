@@ -24,9 +24,8 @@
   var listSort = { key: "label", dir: 1 };
   var sugIndex = -1, sugItems = [];
 
-  // Above this many visible nodes, drop labels and use the cheap layout.
+  // Above this many visible nodes, drop labels.
   var LOD_LABELS = 260;
-  var LOD_LAYOUT = 700;
 
   var LEVEL_ORDER = ["international", "regional", "national", "sectoral", "local"];
   // Confidence is ordinal, not alphabetical — "high, medium, low" reads as a
@@ -481,7 +480,22 @@
 
   /** Deterministic layered layout: rows by geographic level (brief §6/§11). */
   function layeredPositions(nodes) {
-    var w = Math.max($("cy").clientWidth, 900);
+    var gapX = 165, gapY = 105;       // spacing between nodes inside a block
+    var blockGapX = 110, blockGapY = 70, bandGap = 150;
+    var width = Math.max($("cy").clientWidth, 900);
+
+    // Connectivity is measured over the *visible* edges, not the whole Atlas.
+    // The ordering should describe the graph actually on screen, so turning
+    // wikilinks on re-orders the blocks rather than leaving a stale ranking.
+    var deg = Object.create(null);
+    if (cy) {
+      cy.edges().forEach(function (e) {
+        var s = e.data("source"), t = e.data("target");
+        deg[s] = (deg[s] || 0) + 1;
+        deg[t] = (deg[t] || 0) + 1;
+      });
+    }
+
     var rows = Object.create(null);
     nodes.forEach(function (n) {
       var lv = n.data("level") || "unknown";
@@ -491,26 +505,68 @@
       .concat(Object.keys(rows).filter(function (l) { return LEVEL_ORDER.indexOf(l) < 0; }));
 
     var pos = Object.create(null), y = 0;
+
     order.forEach(function (lv) {
-      var list = rows[lv];
-      // Group by scope then type, so countries and layers read as bands.
-      list.sort(function (a, b) {
-        return (a.data("scope") || "").localeCompare(b.data("scope") || "") ||
-          (a.data("type") || "").localeCompare(b.data("type") || "") ||
-          (a.data("label") || "").localeCompare(b.data("label") || "");
+      // ── split the band into blocks, one per scope ──────────────────────
+      // For national entities `scope` is the country code, so this is what
+      // makes the seven countries read as seven clumps instead of one
+      // continuous ribbon wrapped at an arbitrary row width.
+      var groups = Object.create(null);
+      rows[lv].forEach(function (n) {
+        var k = n.data("scope") || "—";
+        (groups[k] || (groups[k] = [])).push(n);
       });
-      // Keep rows short enough that a band reads as a band, and give each
-      // node room for its label rather than packing to the window width.
-      var perRow = Math.max(5, Math.min(14, Math.ceil(Math.sqrt(list.length * 1.6))));
-      var gapX = 165, gapY = 105;
-      var lines = Math.ceil(list.length / perRow);
-      list.forEach(function (n, i) {
-        pos[n.id()] = {
-          x: (i % perRow) * gapX - ((perRow - 1) * gapX) / 2,
-          y: y + Math.floor(i / perRow) * gapY
-        };
+
+      // Largest block first: it packs tighter, and keeps the biggest scope
+      // in a band from being split across a wrap.
+      var blocks = Object.keys(groups).sort(function (a, b) {
+        return groups[b].length - groups[a].length || a.localeCompare(b);
+      }).map(function (k) {
+        var list = groups[k];
+        // Most-connected first, so each block leads with its own hub and
+        // its periphery trails behind it.
+        list.sort(function (a, b) {
+          return (deg[b.id()] || 0) - (deg[a.id()] || 0) ||
+            (b.data("rel_degree") || 0) - (a.data("rel_degree") || 0) ||
+            (a.data("label") || "").localeCompare(b.data("label") || "");
+        });
+        var cols = Math.max(2, Math.min(8, Math.ceil(Math.sqrt(list.length * 1.4))));
+        return { list: list, cols: cols, rows: Math.ceil(list.length / cols) };
       });
-      y += lines * gapY + 150;
+
+      // ── pack blocks across the band, wrapping when it runs out of room ─
+      // The budget scales with the band's own size rather than the viewport:
+      // the canvas pans and zooms, so a band holding 171 national entities
+      // should be allowed to be wide, and "Fit" brings it into view. Using
+      // the viewport width instead stacks every block on its own line.
+      var budget = Math.max(width, Math.ceil(Math.sqrt(rows[lv].length)) * gapX * 1.8);
+      var lines = [], lineBlocks = [], lineW = 0;
+      blocks.forEach(function (b) {
+        var bw = b.cols * gapX;
+        if (lineBlocks.length && lineW + blockGapX + bw > budget) {
+          lines.push({ blocks: lineBlocks, w: lineW });
+          lineBlocks = []; lineW = 0;
+        }
+        lineW += (lineBlocks.length ? blockGapX : 0) + bw;
+        lineBlocks.push(b);
+      });
+      if (lineBlocks.length) lines.push({ blocks: lineBlocks, w: lineW });
+
+      lines.forEach(function (line) {
+        var x = -line.w / 2, tallest = 0;
+        line.blocks.forEach(function (b) {
+          b.list.forEach(function (n, i) {
+            pos[n.id()] = {
+              x: x + (i % b.cols) * gapX,
+              y: y + Math.floor(i / b.cols) * gapY
+            };
+          });
+          x += b.cols * gapX + blockGapX;
+          tallest = Math.max(tallest, b.rows);
+        });
+        y += tallest * gapY + blockGapY;
+      });
+      y += bandGap;
     });
     return pos;
   }
@@ -533,13 +589,11 @@
       return;
     }
 
-    if (n > LOD_LAYOUT && !force) {
-      // Too big to lay out organically: use the deterministic layered map.
-      var pos = layeredPositions(cy.nodes());
-      cy.layout({ name: "preset", positions: pos, fit: true, padding: 50, animate: false }).run();
-      return;
-    }
-
+    // Note: there is no size threshold here. `layeredPositions` is O(n log n)
+    // arithmetic with no simulation to converge, so it costs the same at 258
+    // nodes as at 2,580 — a branch on node count would only ever have chosen
+    // between two identical calls. LOD_LABELS still thins labels; see
+    // applyLOD().
     var positions = layeredPositions(cy.nodes());
     cy.layout({ name: "preset", positions: positions, fit: true, padding: 50, animate: false }).run();
   }

@@ -232,8 +232,10 @@ The default view is deliberately not "everything at full detail":
    would render too small to read, and they return on zoom. Above 260
    visible nodes labels are dropped entirely.
 3. **Deterministic layered layout** — the Global Atlas uses computed
-   positions (O(n)) grouped into bands by level, then by scope and type. No
-   force simulation runs on the full graph, so layout cost does not explode.
+   positions grouped into bands by level, and within a band into one block
+   per scope, ordered by visible connectivity. It is `O(n log n)` arithmetic
+   with no simulation to converge, so layout cost does not explode and the
+   same repository always produces the same picture.
 4. **Entity Explorer** — a bounded breadth-first traversal to a chosen depth
    (1–3 hops) over the *filtered* edge set. This is the answer to "the Atlas
    may eventually contain thousands of nodes": you look at a neighbourhood,

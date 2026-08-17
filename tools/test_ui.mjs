@@ -259,6 +259,75 @@ async function search(page, q) {
   await page.click('#reset-filters');
   await page.waitForTimeout(400);
 
+  // ── layered layout: bands by level, blocks by scope ──
+  // The layout is deterministic arithmetic, so it can be asserted on. The
+  // Cytoscape instance lives in a closure; it is reachable through the
+  // container's own registration rather than by exposing a test hook.
+  await page.click('#view-atlas');
+  await page.waitForTimeout(900);
+  const layout = await page.evaluate(() => {
+    const cy = document.getElementById('cy')._cyreg.cy;
+    const deg = {};
+    cy.edges().forEach(e => {
+      deg[e.data('source')] = (deg[e.data('source')] || 0) + 1;
+      deg[e.data('target')] = (deg[e.data('target')] || 0) + 1;
+    });
+    // per-level mean y, to check the bands still stack in order
+    const bandY = {};
+    cy.nodes().forEach(n => { (bandY[n.data('level') || '?'] ||= []).push(n.position().y); });
+    const meanY = Object.fromEntries(Object.entries(bandY)
+      .map(([k, v]) => [k, v.reduce((a, x) => a + x, 0) / v.length]));
+
+    // national band, grouped into blocks by scope (= country)
+    const by = {};
+    cy.nodes().filter(n => n.data('level') === 'national')
+      .forEach(n => { (by[n.data('scope')] ||= []).push(n); });
+
+    const box = {}, cent = {}, spread = {}, leadIsHub = {};
+    for (const k in by) {
+      const ns = by[k], ps = ns.map(n => n.position());
+      const cx = ps.reduce((a, q) => a + q.x, 0) / ps.length;
+      const cyy = ps.reduce((a, q) => a + q.y, 0) / ps.length;
+      cent[k] = { x: cx, y: cyy };
+      spread[k] = ps.reduce((a, q) => a + Math.hypot(q.x - cx, q.y - cyy), 0) / ps.length;
+      box[k] = { x1: Math.min(...ps.map(q => q.x)), x2: Math.max(...ps.map(q => q.x)),
+                 y1: Math.min(...ps.map(q => q.y)), y2: Math.max(...ps.map(q => q.y)) };
+      // the block's top-left node should be one of its better-connected members
+      const lead = ns.slice().sort((a, b) =>
+        a.position().y - b.position().y || a.position().x - b.position().x)[0];
+      const degs = ns.map(n => deg[n.id()] || 0).sort((a, b) => a - b);
+      leadIsHub[k] = (deg[lead.id()] || 0) >= degs[Math.floor(degs.length / 2)];
+    }
+    const ks = Object.keys(box);
+    let overlaps = [], minSep = Infinity;
+    for (let i = 0; i < ks.length; i++) for (let j = i + 1; j < ks.length; j++) {
+      const a = box[ks[i]], c = box[ks[j]];
+      if (a.x1 <= c.x2 && c.x1 <= a.x2 && a.y1 <= c.y2 && c.y1 <= a.y2) overlaps.push(ks[i] + '/' + ks[j]);
+      minSep = Math.min(minSep, Math.hypot(cent[ks[i]].x - cent[ks[j]].x, cent[ks[i]].y - cent[ks[j]].y));
+    }
+    return { countries: ks.length, overlaps, minSep, maxSpread: Math.max(...Object.values(spread)),
+             meanY, leadIsHub };
+  });
+
+  check('layout groups the national band into one block per country',
+    layout.countries >= 6, `${layout.countries} blocks`);
+  check('country blocks do not overlap',
+    layout.overlaps.length === 0, layout.overlaps.join(',') || 'none');
+  check('country blocks are further apart than they are wide',
+    layout.minSep > layout.maxSpread,
+    `min separation ${Math.round(layout.minSep)} vs max spread ${Math.round(layout.maxSpread)}`);
+  check('each block leads with a better-connected-than-median node',
+    Object.values(layout.leadIsHub).every(Boolean),
+    JSON.stringify(layout.leadIsHub));
+
+  // The bands must still stack in geographic order — that hierarchy is the
+  // Atlas's core claim and grouping must not have disturbed it.
+  const bandOrder = ['international', 'regional', 'national', 'sectoral']
+    .filter(l => layout.meanY[l] != null);
+  check('bands still stack international → regional → national → sectoral',
+    bandOrder.every((l, i) => i === 0 || layout.meanY[bandOrder[i - 1]] < layout.meanY[l]),
+    bandOrder.map(l => `${l}:${Math.round(layout.meanY[l])}`).join(' < '));
+
   // ── comparison matrix ──
   await page.click('#view-compare');
   await page.waitForSelector('#compareview:not([hidden])');

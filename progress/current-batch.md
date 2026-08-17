@@ -1,7 +1,39 @@
 # Current Batch
 
-**Status:** No batch in progress. **A Code of Conduct and a security policy**
-were added on 2026-08-17, after the United Kingdom batch.
+**Status:** No batch in progress. **The Global Atlas layout** was reworked on
+2026-08-17, after the Code of Conduct and security policy.
+
+## Site — layout blocks by scope, ordered by connectivity
+
+**No entity changed.** A rewrite of `layeredPositions()`; the first half of a
+two-part answer to *"can strongly connected nodes be drawn closer?"*, and the
+half that needs no layout engine.
+
+**Why not just use a force layout:** measured first. On relationships only
+the graph has **44 components and 28 isolated nodes** — a physics layout
+scatters them. With associations on, `DOMAIN-GOVERNMENT` has **degree 206 of
+258** and running `cose` collapses the bounding box from 1686 px to 426 px.
+That is a hairball.
+
+**The strongest signal in the data is one physics would not surface:** every
+typed relationship between two country-attributed entities stays **inside one
+country — 131 of 131**. So the layout draws that instead: bands by level
+(unchanged — the hierarchy is the Atlas's core claim), **blocks by scope**
+within a band, and **connectivity order** within a block. Seven country
+clumps, non-overlapping, centroids 715 px apart against a max spread of 431.
+
+Connectivity is counted over the **visible** edges, so toggling wikilinks
+re-orders the blocks.
+
+⚠ **`LOD_LAYOUT` was dead** — `runLayout()` branched on it and both branches
+were byte-identical. Removed. ⚠ The first attempt stacked every block on its
+own line because the packing budget was the viewport width; the budget now
+scales with the band.
+
+**Verification:** `run_all.py` 5/5 · `test_build_graph.py` 37 tests ·
+`test_ui.mjs` 72/72 (was 67) · graph byte-identical.
+
+See `progress/completed.md` for the full entry.
 
 ## Governance — Code of Conduct and security policy
 

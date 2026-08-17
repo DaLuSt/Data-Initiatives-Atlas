@@ -29,7 +29,7 @@ locally.
 
 | View | What it is for |
 |---|---|
-| **Global Atlas** | The whole landscape, laid out in bands by geographic level — international at the top, regional below it, national below that, sectoral at the bottom. Use it to see shape and scale. |
+| **Global Atlas** | The whole landscape, laid out in bands by geographic level — international at the top, regional below it, national below that, sectoral at the bottom — and within each band, one block per scope. Use it to see shape and scale. |
 | **Entity Explorer** | One entity and its neighbourhood, drawn as rings by hop distance. Use it to actually read a part of the graph without being overwhelmed. |
 | **Compare** | One supra-national instrument per row, one country per column. Use it to ask *"who did what about this directive?"* — see below. |
 | **List** | A sortable, searchable table of every entity. Use it if you would rather not use a graph at all — it is a complete, non-visual route into the Atlas. |
@@ -162,6 +162,27 @@ navigate, so any view of the graph can be shared or bookmarked.
 
 Colour and shape carry different facets on purpose, so neither is the only
 cue.
+
+### Position
+
+The Global Atlas places nodes rather than simulating them, so the same
+repository always produces the same picture.
+
+- **Vertical band = geographic level**, in order: international, regional,
+  national, sectoral. This is the Atlas's core claim about how instruments
+  descend, and it is the one thing the layout will not trade away.
+- **Block within a band = scope.** For national entities the scope is the
+  country, so the national band reads as seven separate clumps rather than
+  one continuous ribbon. It is worth knowing why that works so cleanly:
+  **every typed relationship between two country-attributed entities stays
+  inside one country — 131 of 131.** Not one crosses a border. The blocks
+  are not a drawing convention; they are what the data does.
+- **Position inside a block = connectivity.** Each block leads with its
+  best-connected member and trails off into its periphery.
+
+Connectivity is measured over the **edges currently on screen**, not the
+whole Atlas, so turning wikilinks on re-orders the blocks. That is
+deliberate: the ordering describes what you are looking at.
 
 Labels fade out when they would be too small to read and return as you zoom
 in. In a dense view the status line tells you so.
