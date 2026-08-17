@@ -1,9 +1,28 @@
 # Current Batch
 
-**Status:** No batch in progress. **The United Kingdom — the seventh country
-and the first outside the EU** was completed on 2026-08-17, after the
-comparison matrix, the domain/provenance/confidence filters and the Poland
-batch.
+**Status:** No batch in progress. **A Code of Conduct and a security policy**
+were added on 2026-08-17, after the United Kingdom batch.
+
+## Governance — Code of Conduct and security policy
+
+**No entity changed.** `CODE_OF_CONDUCT.md` (Contributor Covenant 2.1, with a
+project-specific section) and `SECURITY.md`, linked from `README.md` and
+`CONTRIBUTING.md`.
+
+**No email address is published anywhere.** The maintainer commits under
+GitHub's `noreply` address; both files route through **GitHub private
+vulnerability reporting** instead, with a GitHub DM as fallback. ⚠ That link
+404s until private reporting is enabled in *Settings → Advanced Security*.
+
+Both are adapted rather than boilerplate. The CoC separates **being wrong**
+(normal — 251 of 258 entities are `search-only`) from **fabricating sources**
+(a violation). `SECURITY.md` states the site's posture as verified — no
+cookies, no storage, no analytics, no external requests, Cytoscape vendored —
+and draws two lines no template provides: a vulnerability in a system the
+Atlas *describes* is out of scope, and a citation that does not support its
+claim is a **public issue**, not a security report.
+
+See `progress/completed.md` for the full entry.
 
 ## United Kingdom — seventh country, first non-EU
 
@@ -57,8 +76,6 @@ because [[GB-DUAA]] amends two instruments that both remain in force.
 all three sources trade press, no machinery-of-government order found.
 
 See `progress/completed.md` for the full entry.
-
-## Site — the comparison matrix
 
 ## Site — the comparison matrix
 
