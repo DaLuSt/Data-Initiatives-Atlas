@@ -89,10 +89,11 @@ npm install playwright && npx playwright install chromium
 node tools/test_ui.mjs
 ```
 
-66 checks across desktop, mobile (390×844) and accessibility: search by
+72 checks across desktop, mobile (390×844) and accessibility: search by
 name/ID/country, keyboard navigation, detail panel content, GitHub links,
-deep links, every filter, edge-class toggles, the comparison matrix, the
-list view and its sorting, and console-error freedom throughout.
+deep links, every filter, edge-class toggles, **the layered layout's block
+grouping and band order**, the comparison matrix, the list view and its
+sorting, and console-error freedom throughout.
 
 These are **not** in CI: they would require installing a browser on every
 pull request for a static page whose data is already covered by the Python
@@ -209,6 +210,12 @@ argument, which would silently switch the flag on for every element but the
 first.
 
 ### Restyling
+
+Node **position** is `layeredPositions()`: bands by level, blocks by scope
+within a band, and connectivity order within a block. It is pure arithmetic
+— there is no force simulation on the full graph, and no size threshold,
+because the cost does not depend on convergence. `LOD_LABELS` still thins
+labels above 260 visible nodes.
 
 Node colour is driven by `level` and shape by `type`, both in the Cytoscape
 stylesheet at the top of `initGraph()`. Colours come from CSS custom

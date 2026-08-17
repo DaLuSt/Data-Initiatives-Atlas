@@ -2391,3 +2391,99 @@ entities, 2,649 edges — unchanged, because root-level Markdown is outside
 Both files use ordinary relative Markdown links rather than `[[wikilinks]]`:
 `validate_links` does not scan the repository root, so wikilinks there would
 be unchecked and free to rot.
+
+---
+
+# 2026-08-17 — Layout: blocks by scope, ordered by connectivity
+
+**No entity changed; `graph.json` and `details.json` are byte-identical.** A
+rewrite of `layeredPositions()` in `site/app.js`. The first half of a
+two-part answer to *"can strongly connected nodes be drawn closer together?"*
+— this part needs no layout engine at all.
+
+## Why not just switch to a force layout
+
+Measured first, on the actual payload, rather than assumed:
+
+| Edge classes | Edges | Components | What a force layout would do |
+|---|---|---|---|
+| Relationships only (default) | 354 | **44**, plus **28 isolated nodes** | scatter the fragments as drifting debris |
+| + associations | 1,257 | 2 | `DOMAIN-GOVERNMENT` has **degree 206 of 258** — one star pulling everything into a ball |
+
+Running `cose` confirmed it: the bounding box collapses from 1686 px wide on
+relationships-only to **426 px** with everything on. That is a hairball, and
+"strongly connected nodes closer" would have meant "the country anchors and
+one domain hub dominate the picture".
+
+The strongest clustering signal in the data is one a physics layout would
+**not** surface: **every typed relationship between two country-attributed
+entities stays inside a single country — 131 of 131.** Not one crosses a
+border. So the layout was changed to draw that instead.
+
+## What it does now
+
+Three levels of grouping, all deterministic arithmetic:
+
+1. **Band = geographic level**, unchanged, and deliberately so. That
+   hierarchy is the Atlas's core claim and the layout will not trade it away.
+   A UI check asserts the bands still stack in order.
+2. **Block = scope within a band.** For national entities `scope` is the
+   country code, so the national band now reads as **seven separate clumps**
+   instead of one continuous ribbon wrapped at an arbitrary row width. The
+   international band splits into UN / INTL / DOMAIN the same way.
+3. **Position within a block = connectivity.** Each block leads with its
+   best-connected member and trails into its periphery.
+
+Measured result: **no two country blocks overlap**, and the minimum distance
+between block centroids is **715 px against a maximum block spread of 431**.
+
+**Connectivity is counted over the edges currently on screen**, not over the
+whole Atlas. Turning wikilinks on re-orders the blocks, because the ordering
+should describe what the reader is looking at. This is why the visible degree
+is computed in `layeredPositions()` rather than read from the `rel_degree`
+baked into `graph.json`.
+
+## Two things fixed on the way
+
+⚠ **`LOD_LAYOUT` was dead.** `runLayout()` branched on it, and **both
+branches were byte-identical** — same `layeredPositions()` call, same
+`preset` layout. The comment promised *"too big to lay out organically"*, so
+the organic path was either removed or never written. The branch and the
+constant are gone; there is no size threshold because the cost does not
+depend on convergence. `LOD_LABELS` still thins labels at 260 nodes. A
+threshold will come back with the force layout, where it will gate something
+real.
+
+⚠ **The first attempt stacked every block on its own line**, because the
+packing budget was the viewport width and a single block (`NL`, 8 columns ×
+165 px) already exceeded it. The canvas pans and zooms, so the budget now
+scales with the band's own size. Caught by looking at the render, not by a
+test.
+
+## Testing a layout without a production hook
+
+The Cytoscape instance lives in a closure and is not exported. Rather than
+add a `window.__test` hook to the shipped page — after a security policy that
+makes a point of the small surface — the tests reach it through Cytoscape's
+own container registration, `document.getElementById('cy')._cyreg.cy`. That
+is an internal, but it is read-only, test-only, and adds nothing to
+production.
+
+Five checks added: one block per country, blocks do not overlap, blocks are
+further apart than they are wide, each block leads with a
+better-connected-than-median node, and the bands still stack
+international → regional → national → sectoral.
+
+## Verification
+
+`validation/run_all.py` 5/5. `tools/build_graph.py --check` 258 entities,
+2,649 edges — unchanged. `tools/test_build_graph.py` 37 tests.
+`tools/test_ui.mjs` **72 checks** (was 67).
+
+## Still to come
+
+The force-directed layout and per-edge weighting, as a **switchable**
+alternative rather than a replacement. Both are possible with the vendored
+Cytoscape build: `cose` is registered, and `idealEdgeLength` accepts a
+per-edge callback. `fcose`, `cola`, `dagre`, `elk` and `euler` are **not**
+registered and would each mean vendoring a new file.
