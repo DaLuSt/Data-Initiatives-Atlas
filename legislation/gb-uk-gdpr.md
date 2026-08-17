@@ -35,6 +35,7 @@ domains:
 organisations:
   - GB-ICO
 related_entities:
+  - GB
   - EU-GDPR
   - GB-DPA-2018
   - GB-DUAA
@@ -45,6 +46,13 @@ related_entities:
   - ES-LOPDGDD
   - PL-ODO
 relationships:
+  - type: applies-in
+    target: GB
+    source: fact
+    evidence: "UK GDPR is the United Kingdom's general data protection regime, consisting of the text of Regulation (EU) 2016/679 as carried into United Kingdom domestic law and amended since; it applies in the United Kingdom alongside the Data Protection Act 2018 (legislation.gov.uk REUL Act 2023 explanatory notes; gov.scot 'Assimilated law (Retained EU law)'; commonslibrary.parliament.uk CBP-9841). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: derived-from
     target: EU-GDPR
     source: fact
@@ -118,10 +126,12 @@ relationship it was never designed for, without amendment.
 
 What `derived-from` does **not** say is anything about equivalence, adequacy
 or divergence. It says the UK text came from the EU text. Everything after
-that — how far the two have moved apart, and whether the Commission still
-considers them essentially equivalent — is not in the structured data. See
-[[GB]] for the adequacy decisions, which are recorded in prose and refused
-as edges.
+that — how far the two have moved apart — is not in the structured data.
+
+Whether the Commission still considers the two regimes essentially
+equivalent **now is**: [[EU-UK-ADEQUACY]] `references` this entity, and it is
+the only edge in the Atlas running *from* the European Union *to* a
+non-member state's instrument.
 
 ## What the Data (Use and Access) Act changed
 
@@ -145,9 +155,11 @@ Regulation into domestic law identified by name.
 
 ## Relationships
 
+- `applies-in` [[GB]].
 - `derived-from` [[EU-GDPR]].
 
-[[GB-ICO]] carries the `applies-to` edge pointing here.
+[[GB-ICO]] carries the `applies-to` edge pointing here, and
+[[EU-UK-ADEQUACY]] the `references` edge.
 
 ## Sources
 

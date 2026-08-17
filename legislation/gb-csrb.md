@@ -37,10 +37,18 @@ domains:
 organisations:
   - GB-NCSC
 related_entities:
+  - GB-CAF
   - GB-NIS-REGULATIONS
   - EU-NIS2
   - ES-LCGC
 relationships:
+  - type: references
+    target: GB-CAF
+    source: fact
+    evidence: "The Cyber Security and Resilience Bill places the NCSC Cyber Assessment Framework on a firmer statutory footing as the baseline standard for in-scope organisations (commonslibrary.parliament.uk CBP-10442; gov.uk 'Summary of the Bill'; ncsc.gov.uk policy statement; globalpolicywatch.com). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: related-to
     target: GB-NIS-REGULATIONS
     source: fact
@@ -114,13 +122,17 @@ obligation** and has drawn a reasoned opinion for it; the UK is **under no
 obligation at all** and is legislating on its own schedule. The status value
 is identical and carries none of that difference.
 
-## The Cyber Assessment Framework is not modelled
+## The Cyber Assessment Framework, now modelled
 
-The CAF is central to this bill and is **not an Atlas entity**. Neither is
-Ofcom, nor the sectoral competent authorities the bill would empower. The
-CAF is the UK counterpart to [[NL-BIO]], [[DE-IT-GRUNDSCHUTZ]] and
-[[ES-ENS]], all three of which are modelled — see [[GB-NCSC]], where the
-same gap is recorded.
+The CAF is central to this bill and is now an Atlas entity — [[GB-CAF]] —
+which this bill `references`. It is the UK counterpart to [[NL-BIO]],
+[[DE-IT-GRUNDSCHUTZ]] and [[ES-ENS]], and it is `aligned-with`
+[[INTL-ISO-IEC-27001]], so the chain from an international standard down
+through a national baseline to an EU directive is complete on the UK side.
+
+[[GB-OFCOM]] is modelled too. **The sectoral competent authorities the bill
+would empower — the departments for energy, transport, health and drinking
+water — still are not.**
 
 ## `status: proposed`
 
@@ -132,6 +144,8 @@ will be wrong the moment the bill passes.
 
 ## Relationships
 
+- `references` [[GB-CAF]] — the framework this bill would put on a statutory
+  footing.
 - `related-to` [[GB-NIS-REGULATIONS]] — amendment, in the evidence string
   because no type carries it. The **fifth** amendment case in the Atlas; see
   [[GB-DUAA]] for the running tally.

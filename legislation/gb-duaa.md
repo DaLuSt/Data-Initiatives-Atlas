@@ -39,11 +39,19 @@ domains:
 organisations:
   - GB-ICO
 related_entities:
+  - GB
   - GB-UK-GDPR
   - GB-DPA-2018
   - DE-NIS2UMSUCG
   - PL-KSC
 relationships:
+  - type: applies-in
+    target: GB
+    source: fact
+    evidence: "The Data (Use and Access) Act 2025 received Royal Assent on 19 June 2025 and is a United Kingdom act amending UK data protection law, with the majority of its data protection provisions in force from 5 February 2026 (legislation.gov.uk Data (Use and Access) Act 2025 Part 5; cliffordchance.com; privacymatters.dlapiper.com). NOT READ — search-only."
+    confidence: medium
+    valid_from: 2025-06-19
+    valid_until: null
   - type: related-to
     target: GB-UK-GDPR
     source: fact
@@ -139,8 +147,13 @@ the two instruments, not at the institutional change.
 
 ## Relationships
 
+- `applies-in` [[GB]].
 - `related-to` [[GB-UK-GDPR]] — amendment, from 5 February 2026.
 - `related-to` [[GB-DPA-2018]] — amendment, from 5 February 2026.
+
+[[EU-UK-ADEQUACY]] carries a `references` edge pointing here: the European
+Commission renewed the UK's adequacy **after** this Act, having satisfied
+itself the changes did not break equivalence.
 
 Both carry the amendment in the `evidence` string because the type does not
 carry it.

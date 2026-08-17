@@ -31,9 +31,17 @@ domains:
 organisations:
   - GB-ICO
 related_entities:
+  - GB
   - GB-UK-GDPR
   - GB-DUAA
-relationships: []
+relationships:
+  - type: applies-in
+    target: GB
+    source: fact
+    evidence: "The Data Protection Act 2018 sits alongside UK GDPR and completes the United Kingdom's domestic data protection framework (privacyworld.blog 'The Data (Use and Access) Act 2025'; cms.law 'UK Data Protection 2025'; legislation.gov.uk Data (Use and Access) Act 2025 Part 5). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "The Data (Use and Access) Act 2025: A New Chapter in the UK's Data Protection Framework"
@@ -95,7 +103,10 @@ and the first thing a re-verification pass should fetch.
 
 ## Relationships
 
-None asserted. [[GB-DUAA]] carries the `related-to` edge pointing here.
+- `applies-in` [[GB]].
+
+[[GB-DUAA]] carries the `related-to` edge pointing here, and [[GB-ICO]] an
+`applies-to` edge — the ICO regulates this Act as well as [[GB-UK-GDPR]].
 
 ## Sources
 

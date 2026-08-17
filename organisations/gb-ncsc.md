@@ -33,13 +33,21 @@ domains:
   - DOMAIN-CYBERSECURITY
 organisations: []
 related_entities:
+  - GB-CAF
   - GB-NIS-REGULATIONS
   - GB-CSRB
   - DE-BSI
   - BE-CCB
   - FR-ANSSI
   - ES-CCN
-relationships: []
+relationships:
+  - type: produces
+    target: GB-CAF
+    source: fact
+    evidence: "The National Cyber Security Centre publishes the Cyber Assessment Framework, which the Cyber Security and Resilience Bill would place on a firmer statutory footing as the baseline standard for organisations in scope (ncsc.gov.uk Cyber Security and Resilience Bill policy statement; commonslibrary.parliament.uk CBP-10442; cyberfortgroup.com 'NCSC Cyber Assessment Framework: Structure and Scope'). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Cyber Security and Resilience Bill — policy statement"
@@ -98,22 +106,24 @@ also a cyber regulator.
 
 ## `coverage: low`
 
-The NCSC's founding, its relationship to GCHQ, its statutory basis if any,
-and the Cyber Assessment Framework itself are **all unrecorded**. The CAF is
-named in two of the three sources and is **not modelled as an entity**,
-which means the UK — like the Netherlands, Germany and Spain — has a
-national cyber baseline that the Atlas does not hold.
+The NCSC's founding, its relationship to GCHQ and its statutory basis if any
+are unrecorded.
 
-That is the clearest single research target in this batch: [[NL-BIO]],
-[[DE-IT-GRUNDSCHUTZ]] and [[ES-ENS]] are all modelled, and the CAF is their
-UK counterpart.
+**The Cyber Assessment Framework is now modelled** — see [[GB-CAF]] — closing
+what an earlier version of this entity called "the clearest single research
+target in this batch". The UK now has a national baseline in the Atlas
+alongside [[NL-BIO]], [[DE-IT-GRUNDSCHUTZ]] and [[ES-ENS]].
 
 ## Relationships
 
-None asserted. The NCSC's role under [[GB-NIS-REGULATIONS]] is coordination
-rather than competence, and no relationship type expresses "named in the
-statute as a coordinator without regulatory power". Recorded in prose
-instead of forced into `governed-by` or `applies-to`.
+- `produces` [[GB-CAF]].
+
+**Still nothing for the coordination role.** The NCSC's position under
+[[GB-NIS-REGULATIONS]] is coordination without competence, and no
+relationship type expresses "named in the statute as a coordinator without
+regulatory power". [[GB-OFCOM]] and [[GB-ICO]] carry `applies-to` edges to
+that instrument because they *are* competent authorities; the NCSC
+deliberately carries none, and the absence is the accurate statement.
 
 ## Sources
 

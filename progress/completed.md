@@ -2574,3 +2574,146 @@ dead for months, testing this one seemed the minimum.
 
 Measured cost of a switch: **~2.8 s wall time** at 258 nodes and 354 edges,
 on the UI thread. That is the reason for the guard.
+
+---
+
+# 2026-08-17 — Connecting the United Kingdom
+
+**258 → 265 entities, 354 → 376 relationships.** Seven entities added, eight
+edges added to existing ones. The UK batch left the country technically
+correct and practically isolated; this closes that.
+
+## The problem, measured
+
+| | Before | After |
+|---|---|---|
+| Typed relationships touching a GB entity | **8** | **29** |
+| GB relationship endpoints (rank of 7 countries) | **13 — last** | **45 — third** |
+| Edges leaving the UK for the rest of the Atlas | **3** | **13** |
+| Non-wikilink edges into the `GB` anchor | **0** | **7** |
+| `audit.py` connectivity | `⚠ 1 fully disconnected: ['GB']` | **no fully disconnected entities** |
+
+NL 179, DE 90, **GB 45**, BE 40, ES 34, FR 32, PL 29.
+
+## The anchor was orphaned because `country` is a field, not an edge
+
+The UK batch recorded this and deliberately left it: the other six anchors
+are reachable through frontmatter **only** because EU instruments point
+`applies-in` at them, and no EU instrument points at [[GB]].
+
+The fix uses an existing precedent rather than a new convention. [[NL-BIO]]
+and [[NL-PAS-TOE-OF-LEG-UIT]] already carry `applies-in` to their **own**
+country, and `metadata/relationship-types.md` defines the type as *"a
+regulation, standard or initiative is applicable within a given
+country/region"* — which is exactly what a UK act is in the UK. So
+[[GB-UK-GDPR]], [[GB-DPA-2018]], [[GB-DUAA]], [[GB-NIS-REGULATIONS]] and
+[[GB-CAF]] now carry it.
+
+⚠ **This is applied to the UK only, and it should not stay that way.** The
+same edges are equally true for the other six countries' national
+instruments, and adding them there is a consistency pass this batch did not
+do. In the backlog.
+
+The Compare view is unaffected: its row set requires a **supra-national**
+scope, so `applies-in` edges originating from a `GB`-scoped instrument are
+correctly excluded and the UK column still shows what non-membership looks
+like.
+
+## Seven new entities, chosen for what they connect
+
+| Entity | Bridges to |
+|---|---|
+| [[GB-BSI]] — British Standards Institution | [[INTL-ISO]], [[INTL-IEC]], [[EU-CEN]], [[EU-CENELEC]], [[EU-ETSI]] |
+| [[GB-OS]] — Ordnance Survey | [[UN-GGIM]] |
+| [[GB-CAF]] — Cyber Assessment Framework | [[INTL-ISO-IEC-27001]] |
+| [[EU-UK-ADEQUACY]] — the Commission's adequacy decisions | [[EU-GDPR]] → [[GB-UK-GDPR]], [[GB-DUAA]] |
+| [[GB-UKSA]] — UK Statistics Authority | [[UN-CES]] |
+| [[GB-OFCOM]] — Ofcom | [[GB-NIS-REGULATIONS]] |
+| [[GB-GEOSPATIAL-STRATEGY]] — UK Geospatial Strategy 2030 | — (policy layer above [[GB-OS]]) |
+
+## Principal finding: leaving the EU did not remove the UK from European standards
+
+[[GB-BSI]] is the single most connective UK entity — five bridges on its
+own, more than the whole country had before — and what it shows is a genuine
+asymmetry:
+
+- **No EU instrument** carries `applies-in` to the United Kingdom, and none
+  will while it is outside the Union.
+- BSI nonetheless sits inside **CEN, CENELEC and ETSI**, because those are
+  **European standards organisations, not EU institutions** — their members
+  are national standards bodies, not member states — and its membership
+  survived Brexit.
+
+Those two facts are not in tension. They are what "left the European Union"
+actually means in this domain, and neither is visible without the other.
+The Atlas could not previously show either half.
+
+## Two more things the new entities settle — and one they do not
+
+**Settled: the geospatial gap.** The UK joined with **no entity in
+[[DOMAIN-GEOSPATIAL]]**, the only country without one, because the
+Geospatial Commission had been merged into [[GB-GDS]]. [[GB-OS]] closes it
+and adds a **second UN-layer link** — so the UK now reaches the
+international layer twice ([[UN-CES]], [[UN-GGIM]]) and the EU layer never
+by membership. For a country with no regional parent, the UN layer is
+carrying the connections.
+
+**Settled: the cyber chain.** [[DOMAIN-CYBERSECURITY]] recorded two
+three-layer chains that *do not meet*. [[GB-CAF]] joins them on the UK side:
+
+```
+INTL-ISO-IEC-27001 ←aligned-with— GB-CAF ←references— GB-CSRB
+                                              → amends → GB-NIS-REGULATIONS
+                                              → implements → EU-NIS
+```
+
+The UK is now the only country where a national baseline, a national cyber
+instrument and an EU directive connect end to end — and it got there without
+being in the EU, because the NIS Regulations were made while it still was.
+
+**Not settled: who holds the UK's CES seat.** [[GB-UKSA]] was created
+specifically to resolve the caveat on [[GB-ONS]]'s [[UN-CES]] edge, and the
+sources do not say whether the seat belongs to the Authority or the Office.
+The participation is therefore recorded on **both**, at `confidence: low` on
+the Authority, with the ambiguity in both evidence strings. Two edges where
+one belongs is worse than a clean answer and better than a confident guess.
+
+## The adequacy decisions, refused once and now made
+
+The UK batch called these *"the single most important connective fact between
+the UK and the EU data layer"* and asserted nothing, because they are
+Commission acts that had not been researched. [[EU-UK-ADEQUACY]] records
+them: renewed **19 December 2025**, expiring **27 December 2031** under a
+sunset clause.
+
+It is filed `level: regional`, `region: EU` — a **Commission act, not a UK
+one** — so it is the first entity in the Atlas that is *about* one country
+while belonging to another scope. And it is the only edge running **from**
+the EU **to** a non-member state's instrument; the UK's other two European
+links both run outward and are both historical.
+
+⚠ It also uses `end_date` in a way the Atlas has not before: **a future date
+on an `active` entity**. Most entities with an `end_date` have already ended.
+This one lapses on a known date unless the Commission acts, which is a third
+variant of the status problem [[GB-ICO]] opened.
+
+## Prose corrected, not just added
+
+Seven existing entities asserted things that this batch made false —
+"the CAF is **not** modelled", "Ofcom and the sectoral departments are not
+modelled", "the UK Statistics Authority is not modelled", "no `applies-in`
+edge targets GB", "the adequacy decisions are recorded in prose and refused
+as edges". All were rewritten. Stale prose has been a repeated defect in this
+repository, and adding entities without revisiting what they contradict is
+how it happens.
+
+## Verification
+
+`validation/run_all.py` 5/5, 0 errors, 0 warnings.
+`tools/test_build_graph.py` 37 tests.
+`validation/audit.py`: **no fully disconnected entities**; `applies-in`
+targets unchanged for EU instruments.
+Graph regenerated: **265 entities, 2,801 edges**.
+
+Sourcing unchanged — every new entity is `search-only`, `last_verified:
+null`, no `accessed` dates. **258 of 265 entities unread.**

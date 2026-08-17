@@ -91,7 +91,7 @@ say so.**
 | `region:` on national entities | `EU` | **`null`** |
 | `applies-in` from EU instruments | 17–18 each | **none** |
 | Route to the European layer | membership | **`derived-from` and an adequacy decision** |
-| Route to the international layer | via [[EU-ESS]] | **directly, via [[UN-CES]]** |
+| Route to the international layer | via [[EU-ESS]] | **directly, via [[UN-CES]] and [[UN-GGIM]]** |
 
 No schema, ontology, taxonomy, relationship-type, folder, validation or
 generator change was needed. **The country-neutral design absorbed a
@@ -103,10 +103,15 @@ predecessors and the UK is not.
 it. What is new is that the UK's *national entities* carry it too. All 97
 `region: EU` entities in the Atlas belong to the six member states.
 
-## The EU layer is still reachable — by a different edge
+## The EU layer is still reachable — by three edges, none of them membership
 
-The Atlas connects the UK to Europe twice, and **neither link is
-`applies-in`**:
+**No *EU instrument* carries `applies-in` to [[GB]]**, and none ever will
+while the UK is outside the Union. The anchor is reached instead by the UK's
+own instruments — [[GB-UK-GDPR]], [[GB-DPA-2018]], [[GB-DUAA]],
+[[GB-NIS-REGULATIONS]] and [[GB-CAF]] all carry `applies-in` [[GB]], the
+same treatment [[NL-BIO]] carries for the Netherlands.
+
+The links to Europe are these:
 
 1. **[[GB-UK-GDPR]] `derived-from` [[EU-GDPR]].** UK GDPR is *assimilated
    law*: the EU regulation's own text, carried into UK domestic law at the
@@ -119,6 +124,13 @@ The Atlas connects the UK to Europe twice, and **neither link is
    state**, and still in force. It is the only edge of its kind from a
    non-member country, and it makes the UK the second country on the
    [[EU-NIS]] row of the Compare view, next to the Netherlands.
+3. **[[EU-UK-ADEQUACY]] `references` [[GB-UK-GDPR]] and [[GB-DUAA]].** The
+   only edge in the Atlas running *from* the EU *to* a non-member state — and
+   the only one of the three that is current rather than historical.
+
+A fourth route runs through standards rather than law: [[GB-BSI]]
+`participates-in` [[EU-CEN]], [[EU-CENELEC]] and [[EU-ETSI]], **because those
+are not EU institutions** and its membership survived Brexit.
 
 ## The Compare view will show the UK as a nearly empty column
 
@@ -134,16 +146,19 @@ UK. Some do, through the Trade and Cooperation Agreement, through adequacy,
 or through extraterritorial scope. The Atlas has established none of that
 and says so.
 
-## What the Atlas does not record
+## The EU adequacy decisions — now recorded
 
-**The EU adequacy decisions.** The European Commission renewed both UK
-adequacy decisions — GDPR and Law Enforcement Directive — on **19 December
-2025**, for a six-year term expiring **27 December 2031**, following the
-changes made by [[GB-DUAA]]. This is the single most important connective
-fact between the UK and the EU data layer, and **no entity or edge in this
-batch represents it**: the decisions are Commission implementing acts that
-have not been researched, and inventing an edge for them was refused. It is
-the first item in `progress/backlog.md`'s UK section.
+The batch that created this entity said the adequacy decisions were *"the
+single most important connective fact between the UK and the EU data layer"*
+and that no edge represented them. [[EU-UK-ADEQUACY]] now does: renewed
+**19 December 2025**, expiring **27 December 2031** under a sunset clause,
+following the changes made by [[GB-DUAA]].
+
+It is filed at `level: regional`, `region: EU` — because it is a **Commission
+act, not a UK one** — and it is the only edge in the Atlas running *from* the
+European Union *to* a non-member state's instrument. The other two EU links
+run the other way and are both historical; this one is current and carries an
+expiry date.
 
 ## Relationships
 

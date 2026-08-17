@@ -7,11 +7,11 @@ Generated: 2026-08-17
 
 ## Why this exists
 
-**251 of the Atlas's 258 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
+**258 of the Atlas's 265 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
 
 Closing that debt — the re-verification pass — needs outbound HTTPS to the hosts those URLs point at. In an environment with a restricted egress policy, this is the allowlist to request. A denial shows up as `403 to CONNECT` from the proxy, which is an environment-level network policy and cannot be changed from inside a session. See `discovery/unresolved.md` for the standing record of the sourcing debt.
 
-The Atlas currently cites **852 source URLs** across **332 hosts**, collapsing to **244 registrable domains**.
+The Atlas currently cites **879 source URLs** across **343 hosts**, collapsing to **253 registrable domains**.
 
 ## Highest value first
 
@@ -19,16 +19,16 @@ Allowing just these covers the bulk of the pass:
 
 | Domain | URLs | Entities |
 |---|---|---|
-| `europa.eu` | 87 | 52 |
+| `europa.eu` | 88 | 53 |
+| `wikipedia.org` | 40 | 40 |
 | `digitaleoverheid.nl` | 40 | 28 |
-| `wikipedia.org` | 38 | 38 |
 | `bund.de` | 34 | 16 |
 | `gov.pl` | 28 | 11 |
 | `gouv.fr` | 27 | 9 |
 | `gob.es` | 26 | 12 |
+| `un.org` | 17 | 10 |
 | `belgium.be` | 17 | 9 |
-| `un.org` | 16 | 9 |
-| `unece.org` | 16 | 6 |
+| `unece.org` | 17 | 7 |
 | `rijksoverheid.nl` | 14 | 10 |
 | `iso.org` | 14 | 12 |
 | `boe.es` | 12 | 10 |
@@ -38,7 +38,7 @@ Allowing just these covers the bulk of the pass:
 | `fitko.de` | 11 | 6 |
 | `noraonline.nl` | 11 | 11 |
 | `kadaster.nl` | 10 | 7 |
-| `eerstekamer.nl` | 9 | 9 |
+| `legislation.gov.uk` | 9 | 8 |
 
 ## Institutional domains
 
@@ -83,6 +83,7 @@ rijksoverheid.nl
 service.gov.uk
 statbel.fgov.be
 statisticsauthority.gov.uk
+trade.gov
 un.org
 verwaltungsvorschriften-im-internet.de
 w3.org
@@ -101,8 +102,10 @@ agoria.be
 alston.com
 anabad.org
 anwalt.org
+aoshearman.com
 april.org
 arena2036.de
+arnoldporter.com
 atlassian.net
 automotiveit.eu
 autoriteitpersoonsgegevens.nl
@@ -120,6 +123,7 @@ boe.es
 bosa.be
 bpb.de
 brandenburg.de
+bsigroup.com
 bundesrechnungshof.de
 bundesregierung.de
 bundestag.de
@@ -137,6 +141,7 @@ cnil.fr
 communicatierijk.nl
 cso.ie
 cuatrecasas.com
+cyberfortgroup.com
 d-velop.de
 dagdok.org
 data-spaces-symposium.eu
@@ -167,6 +172,7 @@ epc.ac.uk
 errin.eu
 esdn.eu
 eubelius.com
+eucrim.eu
 eurogeographics.org
 europadecentraal.nl
 europeansources.info
@@ -238,9 +244,11 @@ officialstatistics.org
 officielebekendmakingen.nl
 om.nl
 oneid.uk
+ontolocy.com
 openjustice.be
 openkritis.de
 opennederland.nl
+ordnancesurvey.co.uk
 osborneclarke.com
 pap-mediaroom.pl
 parlementairemonitor.nl
@@ -274,6 +282,7 @@ sva.nl
 taylorwessing.com
 tcontas.pt
 telusio.com
+theodi.org
 thinkdigitalpartners.com
 trecom.pl
 tweedekamer.nl

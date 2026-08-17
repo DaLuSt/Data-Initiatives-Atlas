@@ -1,7 +1,54 @@
 # Current Batch
 
-**Status:** No batch in progress. **A switchable force-directed layout** was
-added on 2026-08-17, after the grouped-layout rework.
+**Status:** No batch in progress. **Connecting the United Kingdom** was
+completed on 2026-08-17, after the layout work.
+
+## Connecting the United Kingdom
+
+**258 → 265 entities, 354 → 376 relationships.** The UK batch left the
+country technically correct and practically isolated; this closes that.
+
+| | Before | After |
+|---|---|---|
+| Typed relationships touching a GB entity | **8** | **29** |
+| GB relationship endpoints (rank of 7) | **13 — last** | **45 — third** |
+| Edges leaving the UK | **3** | **13** |
+| Non-wikilink edges into the [[GB]] anchor | **0** | **7** |
+| `audit.py` | `⚠ 1 fully disconnected: ['GB']` | **none** |
+
+**The orphaned anchor is fixed with an existing precedent, not a new
+convention.** [[NL-BIO]] already carries `applies-in` to its own country, so
+[[GB-UK-GDPR]], [[GB-DPA-2018]], [[GB-DUAA]], [[GB-NIS-REGULATIONS]] and
+[[GB-CAF]] now do too. ⚠ Applied to the UK only; the same is true of the
+other six countries' instruments and is a consistency pass still owed.
+
+**Principal finding: leaving the EU did not remove the UK from European
+standards.** [[GB-BSI]] alone adds five bridges — [[INTL-ISO]], [[INTL-IEC]],
+[[EU-CEN]], [[EU-CENELEC]], [[EU-ETSI]] — more than the whole country had
+before. **CEN and CENELEC are not EU institutions**; their members are
+national standards bodies, so BSI's membership survived Brexit. No EU
+instrument applies in the UK *and* the UK sits in three European
+standardisation bodies. Both true, neither visible without the other.
+
+**Also settled:** the [[DOMAIN-GEOSPATIAL]] gap ([[GB-OS]], which adds a
+second UN-layer link via [[UN-GGIM]]); the cybersecurity chain, now complete
+end to end on the UK side via [[GB-CAF]]; and the **adequacy decisions**
+([[EU-UK-ADEQUACY]]), refused by the UK batch and now the only edge in the
+Atlas running *from* the EU *to* a non-member state.
+
+**Not settled:** [[GB-UKSA]] was created to resolve who holds the UK's
+[[UN-CES]] seat and did not. Recorded on both bodies with the ambiguity in
+both evidence strings.
+
+**Prose corrected, not just added:** seven existing entities asserted things
+this batch made false. Stale prose is a repeated defect here, and adding
+entities without revisiting what they contradict is how it happens.
+
+**Verification:** `run_all.py` 5/5 · `test_build_graph.py` 37 tests ·
+`audit.py` no disconnected entities · 265 entities, 2,801 edges · 258 of 265
+unread.
+
+See `progress/completed.md` for the full entry.
 
 ## Site — force-directed layout, weighted by evidence
 

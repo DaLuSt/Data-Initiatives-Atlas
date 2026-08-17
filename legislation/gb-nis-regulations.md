@@ -42,10 +42,18 @@ organisations:
   - GB-ICO
   - GB-NCSC
 related_entities:
+  - GB
   - EU-NIS
   - GB-CSRB
   - NL-WBNI
 relationships:
+  - type: applies-in
+    target: GB
+    source: fact
+    evidence: "The Network and Information Systems Regulations 2018, SI 2018/506, gave effect in the United Kingdom to Directive (EU) 2016/1148 and came into force on 10 May 2018, imposing obligations on operators of essential services and relevant digital service providers in the UK (legislation.gov.uk SI 2018/506; gov.uk 'The NIS Regulations 2018'; lexisnexis.com). NOT READ — search-only."
+    confidence: medium
+    valid_from: 2018-05-10
+    valid_until: null
   - type: implements-requirement-from
     target: EU-NIS
     source: fact
@@ -134,13 +142,17 @@ water**, **Ofcom** for digital infrastructure, and **[[GB-ICO]]** for
 relevant digital service providers. [[GB-NCSC]] is **explicitly not a
 competent authority**, and coordinates instead.
 
-**Ofcom and the sectoral departments are not modelled.** Only the ICO among
-the named authorities is an Atlas entity, which means the `organisations:`
-list here is two entries where the statute names many.
+**[[GB-OFCOM]] is now modelled**, so two of the named competent authorities
+are Atlas entities and both carry `applies-to` edges to this instrument.
+**The sectoral departments — energy, transport, health, drinking water — are
+still not**, so the statute names more authorities than the graph shows.
 
 ## Relationships
 
+- `applies-in` [[GB]].
 - `implements-requirement-from` [[EU-NIS]], valid from 10 May 2018.
+
+[[GB-ICO]] and [[GB-OFCOM]] carry the `applies-to` edges pointing here.
 
 ## Sources
 

@@ -32,7 +32,25 @@ Kingdom. See [[GB]].
   [[UN-CES]] — the **only** statistical office in the Atlas that reaches
   the international layer without [[EU-ESS]])_
 - [[GB-NCSC]] — National Cyber Security Centre _(technical authority,
-  explicitly **not** the NIS competent authority)_
+  explicitly **not** the NIS competent authority; `produces` [[GB-CAF]])_
+- [[GB-UKSA]] — UK Statistics Authority _([[GB-ONS]] is its executive
+  office; ⚠ did **not** settle which body holds the CES seat)_
+- [[GB-BSI]] — British Standards Institution _(**the most connective UK
+  entity**: [[INTL-ISO]], [[INTL-IEC]], [[EU-CEN]], [[EU-CENELEC]],
+  [[EU-ETSI]])_
+- [[GB-OS]] — Ordnance Survey _(`participates-in` [[UN-GGIM]]; closes the
+  UK's [[DOMAIN-GEOSPATIAL]] gap — but maps **Great Britain**, not the UK)_
+- [[GB-OFCOM]] — Ofcom _(NIS competent authority for digital
+  infrastructure, alongside [[GB-ICO]] for digital service providers)_
+
+## Frameworks and strategies
+
+- [[GB-CAF]] — Cyber Assessment Framework _(`aligned-with`
+  [[INTL-ISO-IEC-27001]]; the UK counterpart to [[NL-BIO]],
+  [[DE-IT-GRUNDSCHUTZ]] and [[ES-ENS]])_
+- [[GB-GEOSPATIAL-STRATEGY]] — UK Geospatial Strategy 2030 _(⚠
+  `confidence: low`; no owner establishable after the Geospatial Commission
+  was merged into [[GB-GDS]])_
 
 ## Legislation
 
@@ -65,10 +83,12 @@ Kingdom. See [[GB]].
 
 Every other country page in the Atlas ends with a list of EU instruments
 carrying `applies-in` to that country. The UK is not an EU member state, so
-there is no such list, and **no `applies-in` edge targets [[GB]]**.
+there is no such list, and **no EU instrument carries `applies-in` to
+[[GB]]**. The anchor is reached instead by the UK's *own* instruments, which
+do — the same treatment [[NL-BIO]] carries for the Netherlands.
 
-The UK reaches the European layer by two other edges, neither of which is
-`applies-in`:
+The UK reaches the European layer by three edges, none of them `applies-in`
+from an EU instrument:
 
 - [[GB-UK-GDPR]] **`derived-from`** [[EU-GDPR]] — assimilated law: the
   Regulation's own text, domesticated and now diverging.
@@ -76,34 +96,44 @@ The UK reaches the European layer by two other edges, neither of which is
   2018 transposition, made while the UK was a member state, still in force
   as assimilated law, and never repealed by [[EU-NIS2]] because the UK was
   outside its scope by then.
+- [[EU-UK-ADEQUACY]] **`references`** [[GB-UK-GDPR]] and [[GB-DUAA]] — the
+  only edge in the Atlas running *from* the EU *to* a non-member state.
 
 An empty cell in the Compare view's UK column is **not** a claim that an EU
 instrument does not reach the UK. Some do — through the Trade and
 Cooperation Agreement, through adequacy, or through extraterritorial scope.
 The Atlas has established none of that.
 
-## Not connected upward at all
+## The EU adequacy decisions
 
-⚠ **The EU adequacy decisions are not modelled.** The Commission renewed
-both — GDPR and Law Enforcement Directive — on **19 December 2025**, for six
-years to **27 December 2031**, following [[GB-DUAA]]. This is the most
-important single link between the UK and the EU data layer and **no entity
-or edge represents it**. First item in the UK section of
-`progress/backlog.md`.
+[[EU-UK-ADEQUACY]] — renewed **19 December 2025**, expiring **27 December
+2031** under a sunset clause. Filed as an **EU** entity, because the
+decisions are Commission acts, and it carries the only edge in the Atlas
+running *from* the European Union *to* a non-member state's instrument.
+
+## Standards — the link Brexit did not cut
+
+[[GB-BSI]] `participates-in` [[INTL-ISO]], [[INTL-IEC]], [[EU-CEN]],
+[[EU-CENELEC]] and [[EU-ETSI]].
+
+**CEN and CENELEC are not EU institutions** — their members are national
+standards bodies, not member states — so BSI's membership survived the UK's
+departure. The UK therefore takes no `applies-in` edge from any EU
+instrument while sitting inside three European standardisation bodies. Both
+facts are true and neither is visible without the other.
 
 ## Not modelled
 
-- **Ordnance Survey** and the **Geospatial Commission** — the latter was
-  merged into [[GB-GDS]] in January 2025 and no longer exists independently.
-  The UK joins the Atlas with **no geospatial entity**, unlike every other
-  country in [[DOMAIN-GEOSPATIAL]].
-- **The Cyber Assessment Framework** — the UK counterpart to [[NL-BIO]],
-  [[DE-IT-GRUNDSCHUTZ]] and [[ES-ENS]], all three of which are modelled.
-- **The UK Statistics Authority** and the **Office for Statistics
-  Regulation** — [[GB-ONS]]'s parent and its regulator.
-- **Ofcom** and the sectoral competent authorities named in
-  [[GB-NIS-REGULATIONS]] Schedule 1.
+- **The Office for Statistics Regulation** — [[GB-ONS]]'s regulator.
+- **Ordnance Survey of Northern Ireland**, leaving a UK-wide geospatial gap:
+  [[GB-OS]] maps Great Britain only.
+- **The sectoral NIS competent authorities** — energy, transport, health and
+  drinking water — although [[GB-OFCOM]] and [[GB-ICO]] are now both
+  modelled.
 - **DBIST** and the **Cabinet Office** — two of the three destinations of
   [[GB-DSIT]]'s functions.
 - **The Re-use of Public Sector Information Regulations** — whether any UK
-  open data instrument survives as assimilated law was not researched.
+  open data instrument survives as assimilated law was not researched, so
+  [[GB-DATA-GOV-UK]] still connects to [[EU-OPEN-DATA-DIRECTIVE]] not at all.
+- **Any British Standard**, so [[GB-BSI]] participates in five standards
+  bodies while maintaining nothing the Atlas holds.
