@@ -48,6 +48,13 @@ related_entities:
   - PL-UODO
 relationships:
   - type: applies-to
+    target: GB-DPA-2018
+    source: fact
+    evidence: "The Information Commissioner's Office is the UK's independent regulator for data protection and information rights and the supervisory authority under the UK GDPR and the Data Protection Act 2018 (ico.org.uk 'The Information Commission'; en.wikipedia.org 'Information Commissioner's Office'; legislation.gov.uk Data (Use and Access) Act 2025 Part 5). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-to
     target: GB-UK-GDPR
     source: fact
     evidence: "The Information Commissioner's Office is the UK's independent regulator for data protection and information rights and the supervisory authority under the UK GDPR and the Data Protection Act 2018; the Data (Use and Access) Act 2025 refers throughout to the Information Commission's functions under those instruments (ico.org.uk 'The Information Commission'; legislation.gov.uk Data (Use and Access) Act 2025 Part 5; en.wikipedia.org 'Information Commissioner's Office'). NOT READ — search-only."
@@ -143,7 +150,16 @@ remit over the instrument — which is a different claim from any of the six.
 
 ## Relationships
 
-- `applies-to` [[GB-UK-GDPR]].
+- `applies-to` [[GB-UK-GDPR]] and [[GB-DPA-2018]] — the ICO regulates both
+  halves of the UK data protection framework, so both edges are asserted.
+
+Note that this entity is also a **competent authority under
+[[GB-NIS-REGULATIONS]]** for relevant digital service providers, alongside
+[[GB-OFCOM]] for digital infrastructure. No edge is asserted for that here:
+[[GB-OFCOM]] carries the `applies-to` edge to the Regulations and the ICO's
+cyber role is recorded in prose, because asserting it from a data protection
+authority would overstate a remit the sources describe as one line in
+Schedule 1.
 
 ## Sources
 

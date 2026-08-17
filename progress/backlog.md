@@ -434,6 +434,35 @@ visible from any single entity.
   found describes it through [[GB-DUAA]]'s changes to it, the same failure
   mode as [[PL-ODO]].
 
+## Opened by the UK connection batch
+
+- [ ] **`applies-in` to one's own country, for the other six.** The UK's
+  national instruments now carry `applies-in` to [[GB]], which is what
+  reconnected the orphaned anchor. The same is equally true of every
+  national instrument in [[NL]], [[DE]], [[BE]], [[FR]], [[ES]] and [[PL]],
+  and only [[NL-BIO]] and [[NL-PAS-TOE-OF-LEG-UIT]] carry it. Either do it
+  everywhere or decide the convention is UK-specific and say why.
+- [ ] **Who holds the UK's [[UN-CES]] seat?** [[GB-UKSA]] was created to
+  settle it and did not. The participation is recorded on both the Authority
+  and [[GB-ONS]]; one of those two edges is wrong.
+- [ ] **The Office for Statistics Regulation**, and whether the other six
+  countries have an oversight body above their statistical office that the
+  Atlas simply has not researched. [[GB-UKSA]] is currently the only one.
+- [ ] **Ordnance Survey of Northern Ireland.** [[GB-OS]] maps **Great
+  Britain**; the UK-wide geospatial picture is incomplete without OSNI.
+- [ ] **A British Standard, any British Standard.** [[GB-BSI]] participates
+  in five standards bodies and maintains nothing the Atlas holds. The same
+  is true of [[NL-NEN]] and [[DE-DIN]].
+- [ ] **The Law Enforcement Directive** (Directive 2016/680), one of the two
+  legal bases of [[EU-UK-ADEQUACY]] and not an Atlas entity, so that entity's
+  `governed-by` edge names only [[EU-GDPR]].
+- [ ] **A status for a future-dated lapse.** [[EU-UK-ADEQUACY]] is `active`
+  with `end_date: 2031-12-27` — a sunset clause, not a historical end. Third
+  variant of the status gap [[GB-ICO]] opened.
+- [ ] **The sectoral NIS competent authorities** — energy, transport, health,
+  drinking water. [[GB-OFCOM]] and [[GB-ICO]] are modelled; Schedule 1 names
+  more.
+
 ## Explicitly out of scope for now
 
 - Countries beyond the five modelled (structure supports them; no content

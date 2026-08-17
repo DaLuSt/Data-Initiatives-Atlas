@@ -34,6 +34,7 @@ domains:
   - DOMAIN-GOVERNMENT
 organisations: []
 related_entities:
+  - GB-UKSA
   - UN-CES
   - UN-UNECE
   - NL-CBS
@@ -42,6 +43,13 @@ related_entities:
   - ES-INE
   - PL-GUS
 relationships:
+  - type: part-of
+    target: GB-UKSA
+    source: fact
+    evidence: "The Office for National Statistics is the executive office of the UK Statistics Authority, reporting through the Authority to Parliament and the devolved governments rather than to ministers (ons.gov.uk 'About us'; ons.gov.uk 'What we do'; uksa.statisticsauthority.gov.uk). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: participates-in
     target: UN-CES
     source: fact
@@ -121,19 +129,22 @@ European Statistical System and none is asserted. This is the first time the
 Atlas has had a national statistical office that *cannot* join the structure
 the previous five share, and the absence is the informative part.
 
-**The UK Statistics Authority and the Office for Statistics Regulation are
-not modelled.** Both are named in the sources — the Authority as the ONS's
-parent, the OSR as the regulator that sets the code of practice — and
-neither was researched. This is the same shape as Poland's unmodelled CSIRTs
-and the Netherlands' unmodelled NCSC.
+**The Office for Statistics Regulation is not modelled** — the regulator
+that sets the code of practice for UK official statistics.
 
-⚠ That gap weakens the edge asserted here. The sources establish that **the
-UK** is a CES member and Bureau member; they do not clearly distinguish
-whether the seat belongs to the ONS or to the UK Statistics Authority. The
-`evidence` string says so, and `confidence` is `medium` rather than high.
+⚠ **[[GB-UKSA]] is now modelled, and it did not resolve the caveat.** The
+sources establish that **the UK** is a CES and Bureau member; they do not
+say whether the seat belongs to the ONS or to the Authority. Researching the
+Authority was the obvious way to settle it and produced no answer, so the
+participation is recorded on **both** entities — here at `confidence: medium`
+and on [[GB-UKSA]] at `low` — with the ambiguity written into both evidence
+strings. Two edges where one belongs is worse than a clean answer and better
+than a confident guess.
 
 ## Relationships
 
+- `part-of` [[GB-UKSA]] — the ONS is the Authority's executive office. This
+  is the best-founded edge on this entity.
 - `participates-in` [[UN-CES]] — with the caveat above.
 
 ## Sources
