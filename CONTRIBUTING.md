@@ -43,6 +43,16 @@ vulnerabilities privately, data-integrity problems in a public issue.
 6. Wire up relationships both ways where useful: add this entity's ID to
    any related entity's `related_entities:`/`organisations:` list or add a
    provenanced entry to its `relationships:` list, and vice versa.
+6a. **Make sure it connects to something.** Every entity must carry at
+   least one provenanced relationship, in or out — `validate_relationships`
+   fails the build otherwise. If you cannot yet source a substantive edge,
+   give it an **anchor edge** to its scope (`metadata/relationship-types.md`
+   §2.3): `applies-in` its country for an instrument, `part-of` its country
+   for a state body or public platform, `part-of` `EU`/`UN` for an
+   EU- or UN-scoped entity — and `related-to` rather than `part-of` for a
+   national body that is not part of the state. An anchor edge asserts scope
+   and nothing more; log the missing substantive edge in
+   `discovery/unresolved.md`. `type: domain` entities are exempt.
 7. If this entity is NL/EU/UN-scoped, and is important enough to belong on
    that geography's hub page, add a wikilink to `countries/nl/index.md`,
    `regions/eu/index.md` or `international/un/index.md`.
@@ -71,6 +81,14 @@ straightforward associations, and the provenanced `relationships:` list
 whenever the type of connection or its evidence matters — see
 `metadata/relationship-types.md` §1. Never present Atlas interpretation as
 fact (`source: interpretation` must be used honestly).
+
+**An anchor edge still needs provenance.** It is a real relationship with
+real evidence, not a placeholder — every anchor edge in this repository ends
+its evidence with a sentence naming itself as one, so they can be found and
+revisited when the substantive edge turns up. Do not use an anchor edge to
+make a claim the sources do not support: `part-of` means structural
+containment, so a member-owned cooperative or a foundation takes
+`related-to` instead.
 
 ## Validation
 

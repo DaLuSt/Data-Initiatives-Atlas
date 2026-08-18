@@ -31,8 +31,16 @@ domains:
   - DOMAIN-RESEARCH
   - DOMAIN-EDUCATION
 organisations: []
-related_entities: []
-relationships: []
+related_entities:
+  - NL
+relationships:
+  - type: related-to
+    target: NL
+    source: fact
+    evidence: "SURF is the Dutch ICT cooperative of education and research institutions, founded in 1986 and owned by its members — more than 100 universities, universities of applied sciences, vocational institutions, university medical centres and research institutes (surf.nl). NOT READ — search-only. `related-to` and not `part-of`: SURF is member-owned, not a body of the Dutch state, so structural containment is not claimed. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "SURF is de ict-coöperatie van onderwijs en onderzoek"

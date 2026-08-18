@@ -34,9 +34,17 @@ domains:
   - DOMAIN-GOVERNMENT
 organisations: []
 related_entities:
+  - GB
   - GB-GDS
   - GB-DCMS
-relationships: []
+relationships:
+  - type: part-of
+    target: GB
+    source: fact
+    evidence: "The Department for Science, Innovation and Technology was a department of the United Kingdom government; it was abolished on 21 July 2026 (gov.uk; trade press cited on this entity). NOT READ — search-only. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    confidence: medium
+    valid_from: null
+    valid_until: 2026-07-21
 
 sources:
   - title: "DSIT to be scrapped with 'strengthened DCMS to take responsibility for digital transformation'"

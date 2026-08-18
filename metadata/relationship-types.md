@@ -107,7 +107,54 @@ not invent ad hoc inverse types beyond what is listed here; if a batch finds
 it genuinely needs one, add it to this table with a definition in the same
 commit.
 
-### 2.3 Extending the vocabulary
+### 2.3 Every entity must reach its scope anchor
+
+**Rule: every entity carries at least one provenanced relationship, in or
+out.** An entity that connects to nothing is invisible in the graph, and the
+Atlas exists to be a graph.
+
+Where an entity has no substantive relationship yet — because its statutory
+basis was not identified, its custodian was not named, or the obvious edge
+rests on a page that was found but not read — it takes an **anchor edge** to
+the scope it belongs to. Which type depends on what the entity is:
+
+| Entity | Edge | Target |
+|---|---|---|
+| An instrument — `law`, `regulation`, `directive`, `policy`, `strategy`, `framework`, `standard`, `programme`, `data-space` | `applies-in` | its country |
+| A body or platform **of the state** — `organisation`, `platform` | `part-of` | its country |
+| A national body that is **not** part of the state (member-owned, a foundation, a private association) | `related-to` | its country |
+| An EU-scoped entity | `part-of` | `EU` |
+| A UN-scoped entity | `part-of` | `UN` |
+
+These follow the two conventions the repository already had: country anchors
+are reached by `applies-in`, and the [[EU]] and [[UN]] anchors by `part-of`.
+
+Three things an anchor edge is **not**:
+
+- **It is not a substitute for research.** It asserts scope and nothing more.
+  The substantive edge is still missing, and belongs in
+  `discovery/unresolved.md` until it is found.
+- **It is not licence to blur a type.** `part-of` means structural
+  containment. [[NL-SURF]] is a cooperative owned by its members and
+  [[NL-NICTIZ]] is a foundation; neither is part of the Dutch state, so both
+  take `related-to` instead. Getting this wrong would turn a filing
+  convention into a false claim about ownership.
+- **It is not exempt from provenance.** An anchor edge carries evidence like
+  any other, and every one in this repository ends with a sentence naming
+  itself as an anchor edge so it can be found and revisited.
+
+**Domains are exempt.** `type: domain` entities are classification nodes:
+they carry no factual claims, are exempt from the source requirement
+(`validate_sources`), and are reached by **association** through every
+entity's `domains:` list rather than by typed relationships. They are not
+weakly connected — the three largest nodes in the Atlas's association layer
+are `DOMAIN-GOVERNMENT` (degree 232), `DOMAIN-NATIONAL-SECURITY` (47) and
+`DOMAIN-CYBERSECURITY` (35). Giving them typed edges would mean inventing a
+hierarchy that does not exist.
+
+`validate_relationships.py` enforces this rule and names the exemption.
+
+### 2.4 Extending the vocabulary
 
 New relationship types are added only when an existing type cannot express
 the connection (README §15: "Add new relationship types only when there is

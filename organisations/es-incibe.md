@@ -34,9 +34,17 @@ domains:
   - DOMAIN-CYBERSECURITY
 organisations: []
 related_entities:
+  - ES
   - ES-LCGC
   - ES-CCN
-relationships: []
+relationships:
+  - type: part-of
+    target: ES
+    source: fact
+    evidence: "INCIBE is the Spanish national cybersecurity body, belonging to the Ministry for Digital Transformation and the Civil Service through the State Secretariat for Telecommunications and Digital Infrastructures (incibe.es). NOT READ — search-only. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "What is INCIBE"

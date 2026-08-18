@@ -31,9 +31,17 @@ domains:
   - DOMAIN-RESEARCH
 organisations: []
 related_entities:
+  - NL
   - NL-NICTIZ
   - EU-EHDS
-relationships: []
+relationships:
+  - type: applies-in
+    target: NL
+    source: fact
+    evidence: "Health-RI is the Dutch national health data infrastructure for research, policy and innovation, making data nationally usable through a network of regional nodes around a central hub (health-ri.nl). NOT READ — search-only. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Health-RI Afsprakenstelsel — Nationale Gezondheidsdata-infrastructuur"

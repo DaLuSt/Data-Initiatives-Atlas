@@ -31,9 +31,17 @@ domains:
   - DOMAIN-GOVERNMENT
 organisations: []
 related_entities:
+  - BE
   - BE-DATA-GOV-BE
   - EU-OPEN-DATA-DIRECTIVE
-relationships: []
+relationships:
+  - type: applies-in
+    target: BE
+    source: fact
+    evidence: "The act of 4 May 2016 is a Belgian federal act on open data and the re-use of public sector information, described as the regulatory framework for open data in Belgium (etaamb.openjustice.be; ejustice.just.fgov.be). NOT READ — search-only. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Wet van 04/05/2016 inzake het hergebruik van overheidsinformatie"

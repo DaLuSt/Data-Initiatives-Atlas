@@ -35,10 +35,18 @@ domains:
 organisations:
   - GB-GDS
 related_entities:
+  - GB
   - NL-DATA-OVERHEID
   - PL-DANE-GOV-PL
   - EU-OPEN-DATA-DIRECTIVE
-relationships: []
+relationships:
+  - type: part-of
+    target: GB
+    source: fact
+    evidence: "data.gov.uk is the United Kingdom government's official open data catalogue, listing datasets from government departments, local councils and other public bodies (data.gov.uk). NOT READ — search-only. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Data.gov.uk"

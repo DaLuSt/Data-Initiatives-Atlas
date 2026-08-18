@@ -34,8 +34,16 @@ domains:
   - DOMAIN-CYBERSECURITY
   - DOMAIN-NATIONAL-SECURITY
 organisations: []
-related_entities: []
-relationships: []
+related_entities:
+  - "NO"
+relationships:
+  - type: part-of
+    target: "NO"
+    source: fact
+    evidence: "Nasjonal sikkerhetsmyndighet is a Norwegian directorate, administratively subordinate to the Ministry of Justice and Public Security and reporting on a technical line to the Ministry of Defence for the military sector (nsm.no; regjeringen.no). NOT READ — search-only. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Dette er NSM"

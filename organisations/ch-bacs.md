@@ -33,8 +33,16 @@ successor: null
 domains:
   - DOMAIN-CYBERSECURITY
 organisations: []
-related_entities: []
-relationships: []
+related_entities:
+  - CH
+relationships:
+  - type: part-of
+    target: CH
+    source: fact
+    evidence: "The Bundesamt für Cybersicherheit is a federal office of the Swiss Confederation and the country's competence centre for cybersecurity (staatskalender.admin.ch; ncsc.admin.ch). NOT READ — search-only. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Bundesamt für Cybersicherheit (BACS)"

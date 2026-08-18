@@ -62,6 +62,43 @@ def check_relationships(e: common.EntityFile, schema: dict, ids: set[str], repor
             report.error(f"{where}: invalid confidence '{confidence}'")
 
 
+def check_every_entity_is_reachable(entities, report: common.Report) -> None:
+    """metadata/relationship-types.md §2.3 — every entity carries at least one
+    provenanced relationship, in or out. An entity that connects to nothing is
+    invisible in the graph.
+
+    `type: domain` entities are exempt: they are classification nodes carrying
+    no factual claims, and are reached by *association* through every entity's
+    `domains:` list. They are not weakly connected — the largest nodes in the
+    association layer are domains."""
+    connected: set[str] = set()
+    for e in entities:
+        if e.parse_error:
+            continue
+        own_id = e.frontmatter.get("id")
+        for rel in e.frontmatter.get("relationships") or []:
+            if not isinstance(rel, dict):
+                continue
+            target = rel.get("target")
+            if target:
+                connected.add(own_id)
+                connected.add(target)
+
+    for e in entities:
+        if e.parse_error:
+            continue
+        fm = e.frontmatter
+        if fm.get("type") == "domain":
+            continue  # classification node — see the docstring
+        if fm.get("id") not in connected:
+            report.error(
+                f"{e.rel_path}: no provenanced relationship in either direction — "
+                f"every entity must reach its scope anchor "
+                f"(metadata/relationship-types.md §2.3). Add the substantive edge, "
+                f"or an anchor edge to its country, EU or UN."
+            )
+
+
 def main() -> int:
     schema = common.load_schema()
     entities = common.load_all_entities()
@@ -76,6 +113,8 @@ def main() -> int:
         check_id_list(e, "related_entities", ids, report)
         check_id_list(e, "domains", ids, report)
         check_relationships(e, schema, ids, report)
+
+    check_every_entity_is_reachable(entities, report)
 
     return report.print_and_exit_code()
 

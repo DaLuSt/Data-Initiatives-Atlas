@@ -466,6 +466,32 @@ visible from any single entity.
   drinking water. [[GB-OFCOM]] and [[GB-ICO]] are modelled; Schedule 1 names
   more.
 
+## Resolved 2026-08-18 — own-country `applies-in`
+
+Earlier batches recorded that own-country `applies-in` should be
+**reconsidered rather than extended**, and declined to add it to eighteen
+national acts.
+
+**That is now settled the other way, on the maintainer's instruction**, and
+written into `metadata/relationship-types.md` §2.3: every entity must reach
+its scope anchor, and an instrument with no other edge takes `applies-in` to
+its own country.
+
+The original objection was not wrong — the edge does give `applies-in` a
+second, weaker meaning alongside the EU-instrument-reaches-member-state one
+that makes the Atlas country-neutral. The trade was judged worth it: a second
+meaning that is documented, enforced and visible in the ontology costs less
+than two dozen entities being invisible in the graph.
+
+What remains open is the **presentation** question, not the modelling one:
+the site does not distinguish an anchor edge from a researched one, so a
+reader counting `applies-in` edges will over-count cross-border
+applicability. Anchor edges are identifiable — every one ends its evidence
+with a sentence saying so — so a filter or a badge is buildable.
+
+- [ ] **Distinguish anchor edges in the interactive graph**, so the
+  `applies-in` count means one thing again.
+
 ## Opened by the structural review of 2026-08-18
 
 A review after the intelligence-services batch, prompted by the question

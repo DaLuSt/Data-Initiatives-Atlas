@@ -66,6 +66,44 @@ class TestDataParsing(unittest.TestCase):
         self.assertGreater(len(norwegian), 1,
                            "no entities carry country 'NO' as a string — check for YAML boolean coercion")
 
+    def test_every_entity_reaches_its_scope_anchor(self):
+        """metadata/relationship-types.md §2.3 — every entity carries at least
+        one provenanced relationship, in or out. Domains are exempt: they are
+        classification nodes reached by association through every entity's
+        `domains:` list, and are in fact the largest nodes in that layer."""
+        connected = set()
+        for e in self.entities:
+            own = e.frontmatter.get("id")
+            for rel in e.frontmatter.get("relationships") or []:
+                if isinstance(rel, dict) and rel.get("target"):
+                    connected.add(own)
+                    connected.add(rel["target"])
+
+        orphans = sorted(
+            e.frontmatter["id"] for e in self.entities
+            if e.frontmatter.get("type") != "domain"
+            and e.frontmatter.get("id") not in connected
+        )
+        self.assertEqual(
+            orphans, [],
+            f"entities with no provenanced relationship in either direction: {orphans}")
+
+    def test_domains_are_the_exemption_and_earn_it(self):
+        """The domain exemption rests on domains being reached by association.
+        If a domain stopped being referenced by any entity's `domains:` list it
+        would be genuinely unreachable, and the exemption would be hiding it."""
+        referenced = set()
+        for e in self.entities:
+            for d in e.frontmatter.get("domains") or []:
+                referenced.add(d)
+        domains = {e.frontmatter["id"] for e in self.entities
+                   if e.frontmatter.get("type") == "domain"}
+        unreferenced = sorted(domains - referenced)
+        self.assertEqual(
+            unreferenced, [],
+            f"domains referenced by no entity's `domains:` list, so exempt from "
+            f"§2.3 and unreachable in both layers: {unreferenced}")
+
     def test_every_entity_has_required_fields(self):
         required = load_schema()["required_fields"]
         for e in self.entities:

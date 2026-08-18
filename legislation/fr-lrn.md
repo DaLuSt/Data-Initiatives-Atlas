@@ -30,9 +30,17 @@ domains:
   - DOMAIN-GOVERNMENT
 organisations: []
 related_entities:
+  - FR
   - FR-DATA-GOUV
   - EU-OPEN-DATA-DIRECTIVE
-relationships: []
+relationships:
+  - type: applies-in
+    target: FR
+    source: fact
+    evidence: "The loi pour une République numérique is a French act of 7 October 2016 establishing open data by default for public administrations and making open data an obligation for local authorities with more than 3,500 inhabitants (legifrance.gouv.fr; numerique.gouv.fr). NOT READ — search-only. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "LOI n° 2016-1321 du 7 octobre 2016 pour une République numérique"
