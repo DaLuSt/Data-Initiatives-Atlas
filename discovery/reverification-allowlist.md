@@ -3,15 +3,15 @@
 > **Generated file — do not hand-edit.** Regenerate with
 > `python tools/source_hosts.py --markdown -o discovery/reverification-allowlist.md`
 
-Generated: 2026-08-17
+Generated: 2026-08-18
 
 ## Why this exists
 
-**258 of the Atlas's 265 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
+**305 of the Atlas's 312 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
 
 Closing that debt — the re-verification pass — needs outbound HTTPS to the hosts those URLs point at. In an environment with a restricted egress policy, this is the allowlist to request. A denial shows up as `403 to CONNECT` from the proxy, which is an environment-level network policy and cannot be changed from inside a session. See `discovery/unresolved.md` for the standing record of the sourcing debt.
 
-The Atlas currently cites **879 source URLs** across **343 hosts**, collapsing to **253 registrable domains**.
+The Atlas currently cites **1024 source URLs** across **380 hosts**, collapsing to **279 registrable domains**.
 
 ## Highest value first
 
@@ -20,25 +20,25 @@ Allowing just these covers the bulk of the pass:
 | Domain | URLs | Entities |
 |---|---|---|
 | `europa.eu` | 88 | 53 |
-| `wikipedia.org` | 40 | 40 |
+| `wikipedia.org` | 62 | 62 |
+| `bund.de` | 41 | 23 |
 | `digitaleoverheid.nl` | 40 | 28 |
-| `bund.de` | 34 | 16 |
-| `gov.pl` | 28 | 11 |
-| `gouv.fr` | 27 | 9 |
-| `gob.es` | 26 | 12 |
+| `gov.pl` | 40 | 18 |
+| `gouv.fr` | 36 | 13 |
+| `gob.es` | 28 | 14 |
 | `un.org` | 17 | 10 |
 | `belgium.be` | 17 | 9 |
 | `unece.org` | 17 | 7 |
-| `rijksoverheid.nl` | 14 | 10 |
+| `rijksoverheid.nl` | 16 | 12 |
+| `bundestag.de` | 15 | 11 |
+| `legislation.gov.uk` | 15 | 14 |
+| `boe.es` | 14 | 12 |
 | `iso.org` | 14 | 12 |
-| `boe.es` | 12 | 10 |
-| `overheid.nl` | 12 | 12 |
+| `overheid.nl` | 13 | 13 |
+| `eerstekamer.nl` | 12 | 12 |
 | `forumstandaardisatie.nl` | 12 | 5 |
 | `vng.nl` | 11 | 7 |
 | `fitko.de` | 11 | 6 |
-| `noraonline.nl` | 11 | 11 |
-| `kadaster.nl` | 10 | 7 |
-| `legislation.gov.uk` | 9 | 8 |
 
 ## Institutional domains
 
@@ -57,6 +57,7 @@ digitaleoverheid.nl
 europa.eu
 fitko.de
 forumstandaardisatie.nl
+gchq.gov.uk
 gdi-de.org
 geonovum.nl
 gesetze-im-internet.de
@@ -73,6 +74,7 @@ itzbund.de
 just.fgov.be
 ksz-bcss.fgov.be
 legislation.gov.uk
+loc.gov
 logius.nl
 ncsc.gov.uk
 noraonline.nl
@@ -97,8 +99,11 @@ Trade press, law firms, encyclopedias and vendor pages. Lower value, but cited s
 activemind.de
 ad4gd.eu
 aepd.es
+afdsd.fr
 aftermarket-trends.de
 agoria.be
+aivd.nl
+akademicka.pl
 alston.com
 anabad.org
 anwalt.org
@@ -106,6 +111,7 @@ aoshearman.com
 april.org
 arena2036.de
 arnoldporter.com
+arslege.pl
 atlassian.net
 automotiveit.eu
 autoriteitpersoonsgegevens.nl
@@ -136,10 +142,13 @@ ciberseguridad.com
 cliffordchance.com
 cloix-mendesgil.com
 cms.law
+cnctr.fr
 cni.es
 cnil.fr
+comiteri.be
 communicatierijk.nl
 cso.ie
+ctivd.nl
 cuatrecasas.com
 cyberfortgroup.com
 d-velop.de
@@ -151,6 +160,7 @@ datopian.com
 dcat-ap.de
 de.digital
 decideo.fr
+defensie.nl
 deloitte.com
 diariodeleon.es
 digigo.nu
@@ -178,6 +188,7 @@ europadecentraal.nl
 europeansources.info
 eversheds-sutherland.com
 ey.com
+fas.org
 finreg360.com
 forschungsinformationssystem.de
 fraunhofer.de
@@ -186,6 +197,7 @@ gaia-x-hub.de
 gaia-x.at
 gaia-x.eu
 gegevensbeschermingsautoriteit.be
+geheimdienste.org
 geobasisregistraties.nl
 geologischedienst.nl
 geostandaarden.nl
@@ -201,12 +213,15 @@ health-ri.nl
 hessen.de
 hoganlovells.com
 hypotheses.org
+iberley.es
 ico.org.uk
 ictu.nl
 incibe.es
 ine.es
 informationssicherheitsbeauftragter-dresden.de
 ing-ism.de
+investigatorypowerstribunal.org.uk
+ipco.org.uk
 ipo.nl
 ishare.eu
 its-mobility.de
@@ -218,6 +233,8 @@ kadaster.nl
 kbvg.nl
 legalgeek.pl
 legiscope.com
+lejdd.fr
+lexisnexis.co.uk
 lexisnexis.com
 lexlege.pl
 medialaws.eu
@@ -237,6 +254,7 @@ nictiz.nl
 niedersachsen.de
 nis-2-directive.com
 nisd2.eu
+njb.nl
 odoserwis.pl
 oecd-ilibrary.org
 oecd.org
@@ -275,18 +293,22 @@ sachsen-anhalt.de
 safeonweb.be
 secjur.com
 security-insider.de
+sgrs.be
 smartcountry.berlin
 springerprofessional.de
 surf.nl
 sva.nl
 taylorwessing.com
+taz.de
 tcontas.pt
 telusio.com
 theodi.org
 thinkdigitalpartners.com
+tib-ivd.nl
 trecom.pl
 tweedekamer.nl
 twobirds.com
+ugr.es
 ukauthority.com
 un-dco.org
 un-ggim-europe.org
@@ -296,10 +318,14 @@ unesco.org
 unesco.org.uk
 ungeneva.org
 unievanwaterschappen.nl
+unizar.es
 unsceb.org
 vbo-feb.be
+vlex.be
 vng.nl
 vngrealisatie.nl
+vorwaerts.de
+vsse.be
 waarderingskamer.nl
 walhalla.de
 whitecase.com

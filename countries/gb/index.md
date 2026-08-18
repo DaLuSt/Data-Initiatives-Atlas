@@ -122,6 +122,58 @@ departure. The UK therefore takes no `applies-in` edge from any EU
 instrument while sitting inside three European standardisation bodies. Both
 facts are true and neither is visible without the other.
 
+## Intelligence and security services
+
+Added with the intelligence-services batch. The UK **avowed its services one
+at a time**, rather than passing a single organic act:
+
+| Year | Act | Service |
+|---|---|---|
+| 1989 | [[GB-SSA-1989]] | [[GB-MI5]] — domestic, Home Office |
+| 1994 | [[GB-ISA-1994]] | [[GB-SIS]] and [[GB-GCHQ]] — both Foreign Office |
+
+The 1994 pairing follows the **ministerial line, not the discipline**: human
+and signals intelligence share an act because they share a minister.
+
+Cutting across all three: [[GB-IPA-2016]], which governs **powers** rather
+than bodies — the same choice France made in
+[[FR-LOI-RENSEIGNEMENT-2015]], but layered on top of existing agency acts
+rather than filling their absence.
+
+Oversight:
+
+- [[GB-ISC]] — parliamentary, under [[GB-JSA-2013]]. The 1994 act had
+  already created an ISC covering *expenditure, administration and policy*;
+  2013 re-founded it and added **operations**. One word, and the committee
+  moved from scrutinising how the agencies are run to what they do.
+- [[GB-IPCO]] — independent, under [[GB-IPA-2016]]. It merged three
+  predecessor commissioner offices and oversees **over 600 public
+  authorities**, far beyond the three agencies.
+
+### The UK legislates its services *into* data protection law
+
+Unlike every other country in this batch, the UK did not leave the
+national-security carve-out empty. **Part 4 of [[GB-DPA-2018]] is a data
+protection regime built for the intelligence services** — [[GB-MI5]],
+[[GB-SIS]] and [[GB-GCHQ]] — separate from [[GB-UK-GDPR]], with
+[[GB-ICO]] as the regulator of the act containing it. Belgium reaches a
+comparable result through [[BE-GDPR-WET]], by a different route.
+
+### [[GB-NCSC]] is part of [[GB-GCHQ]]
+
+Established October 2016 from CESG — GCHQ's own information security arm —
+plus CPNI, CERT-UK and the Centre for Cyber Assessment.
+
+The body that publishes [[GB-CAF]] and advises British industry is a
+component of a **signals intelligence agency**. Only Spain is arranged the
+same way ([[ES-CCN]] inside [[ES-CNI]]); [[DE-BSI]], [[FR-ANSSI]] and
+[[BE-CCB]] all sit outside their countries' intelligence structures.
+
+### Not an intelligence service, and not modelled
+
+**Defence Intelligence** has no avowal act and was not researched, so the UK
+appears here with three services where France has four and Poland four.
+
 ## Not modelled
 
 - **The Office for Statistics Regulation** — [[GB-ONS]]'s regulator.

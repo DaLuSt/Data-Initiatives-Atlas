@@ -97,6 +97,43 @@ entity concerned rather than left to read as absence of fact.
 - **The first statistics-cluster edge**, recorded as an interpretation
   rather than a fact. See [[ES-INE]].
 
+## Intelligence and security services
+
+Added with the intelligence-services batch. **Spain is the one-service
+country**: [[ES-CNI]] covers both the civilian/military and the
+domestic/foreign split that every other country here divides between two or
+more bodies.
+
+- [[ES-CNI]] — integrated in the **Ministry of Defence** with functional
+  autonomy and its own legal personality, reporting to the President of the
+  Government.
+
+Legislation — two acts, **same day**, 6 May 2002:
+
+- [[ES-LEY-11-2002]] — the ordinary act creating and regulating the CNI.
+- [[ES-LO-2-2002]] — the **organic** act, which does one thing: amend the
+  Ley Orgánica del Poder Judicial so that CNI activities touching Articles
+  18.2 and 18.3 of the Constitution need **prior judicial authorisation**.
+
+Article 12 of the first required the second. Establishing judicial control
+meant amending the judiciary's own organic law, which ordinary legislation
+cannot do.
+
+**Spain is the only country in the batch where a judge authorises in
+advance.**
+
+## [[ES-CCN]] is part of [[ES-CNI]]
+
+The batch's most consequential Spanish finding. The Centro Criptológico
+Nacional — the authority behind [[ES-ENS]], an Atlas entity since the Spain
+batch — was created by Real Decreto 421/2004 *adscrito al* CNI, shares its
+means and resources, and is governed by [[ES-LEY-11-2002]].
+
+So **Spain's public-sector cyber-security authority is a component of its
+intelligence service.** Only the United Kingdom is arranged the same way,
+with [[GB-NCSC]] inside [[GB-GCHQ]]. [[ES-INCIBE]] sits outside that
+structure entirely.
+
 ## Not modelled
 
 - **The seventeen Comunidades Autónomas**, their open data portals and their

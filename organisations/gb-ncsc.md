@@ -40,7 +40,15 @@ related_entities:
   - BE-CCB
   - FR-ANSSI
   - ES-CCN
+  - GB-GCHQ
 relationships:
+  - type: part-of
+    target: GB-GCHQ
+    source: fact
+    evidence: "The National Cyber Security Centre, a part of GCHQ, was established in October 2016; it brought together CESG — the information security arm of GCHQ — the Centre for the Protection of National Infrastructure, CERT-UK and the Centre for Cyber Assessment into one organisation (gchq.gov.uk 'Britain enters a new era of online opportunity with opening of the National Cyber Security Centre' and 'new national cyber security centre becomes operational'; ncsc.gov.uk 'what we do'). NOT READ — search-only."
+    confidence: medium
+    valid_from: 2016-10-01
+    valid_until: null
   - type: produces
     target: GB-CAF
     source: fact
@@ -128,3 +136,26 @@ deliberately carries none, and the absence is the accurate statement.
 ## Sources
 
 Listed in frontmatter.
+
+## The NCSC is part of GCHQ
+
+Added with the intelligence-services batch: the NCSC is a **component of
+[[GB-GCHQ]]**, the UK's signals intelligence agency. It was established in
+October 2016 by merging CESG — GCHQ's own information security arm — with
+the Centre for the Protection of National Infrastructure, CERT-UK and the
+Centre for Cyber Assessment.
+
+This is worth stating on this entity and not only on [[GB-GCHQ]], because
+the rest of this file describes a body that publishes [[GB-CAF]], advises
+industry and is explicitly *not* the NIS competent authority. All of that
+remains true, and it is done from inside an intelligence agency.
+
+Only one other country in the Atlas is arranged this way: [[ES-CCN]] is
+`part-of` [[ES-CNI]]. Five keep the two functions apart — [[DE-BSI]] under
+[[DE-BMI]], [[FR-ANSSI]] under the SGDSN, [[BE-CCB]], and the Dutch and
+Polish arrangements.
+
+The domain list here is unchanged: the NCSC keeps
+[[DOMAIN-CYBERSECURITY]] and [[DOMAIN-GOVERNMENT]] and does **not** take
+[[DOMAIN-NATIONAL-SECURITY]]. It is a cyber-security body that sits inside
+an intelligence agency, not an intelligence service.

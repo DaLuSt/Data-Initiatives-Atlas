@@ -84,6 +84,30 @@ Atlas entity now carrying `applies-in` → [[BE]] alongside [[NL]] and
 The blanks are as informative as the entries, and each is explained in the
 entity concerned rather than left to be read as absence of fact.
 
+## Intelligence and security services
+
+Added with the intelligence-services batch.
+
+- [[BE-VSSE]] — the **only civilian** service, a department of FPS Justice
+- [[BE-ADIV]] / SGRS — military service, under Defence
+- [[BE-COMITE-I]] — democratic oversight, reporting to Parliament
+
+Legislation:
+
+- [[BE-WIV-1998]] — the organic act, prescribing the duties of **both**
+  services. Its title uses the **singular** while governing two of them.
+- [[BE-TOEZICHTSWET-1991]] — the oversight act, creating Comité I *and*
+  Comité P.
+
+**Belgium regulated the watchers seven years before the watched.** The
+oversight act is 1991; the organic act is 1998. That ordering is unique in
+the Atlas — everywhere else the oversight instrument is the later one, by up
+to 27 years in the UK.
+
+Both services also carry `governed-by` [[BE-GDPR-WET]]: the 2018 act has a
+dedicated subtitle for processing by the intelligence and security services,
+and routes verification through [[BE-COMITE-I]] rather than [[BE-APD]].
+
 ## Not modelled
 
 - **Any Region or Community**, and therefore **OSLO**, Digitaal Vlaanderen,

@@ -39,7 +39,23 @@ organisations: []
 related_entities:
   - ES-ENS
   - ES-INCIBE
-relationships: []
+  - ES-CNI
+  - ES-LEY-11-2002
+relationships:
+  - type: part-of
+    target: ES-CNI
+    source: fact
+    evidence: "The Centro Criptológico Nacional was created in 2004 by Real Decreto 421/2004 and is adscrito al Centro Nacional de Inteligencia, sharing with it means, procedures, rules and resources, and is governed by Ley 11/2002, de 6 de mayo, reguladora del Centro Nacional de Inteligencia, which entrusts to the CNI the functions relating to the security of information technologies (ccn.cni.es; ccn-cert.cni.es 'Centro Criptológico Nacional'; boe.es BOE-A-2004-5051 Real Decreto 421/2004). NOT READ — search-only."
+    confidence: medium
+    valid_from: 2004-03-12
+    valid_until: null
+  - type: governed-by
+    target: ES-LEY-11-2002
+    source: fact
+    evidence: "The Centro Criptológico Nacional shares with the Centro Nacional de Inteligencia its means, procedures, rules and resources and is governed by Ley 11/2002, de 6 de mayo, reguladora del Centro Nacional de Inteligencia; that act entrusts to the CNI the exercise of the functions relating to the security of information technologies, and Real Decreto 421/2004 regulates and defines the CCN's scope and functions (ccn.cni.es; ccn-cert.cni.es 'Centro Criptológico Nacional'; oc.ccn.cni.es 'Normativa'). NOT READ — search-only."
+    confidence: medium
+    valid_from: 2004-03-12
+    valid_until: null
 
 sources:
   - title: "Actualizadas las preguntas frecuentes del nuevo ENS"
@@ -88,3 +104,24 @@ maintained thing.
 
 Listed in frontmatter — the CCN's own ENS FAQ notice, the BOE text of the
 decree that assigns it these roles, and a ministry page.
+
+## The CCN is part of the CNI
+
+Added with the intelligence-services batch. The CCN was created in 2004 by
+**Real Decreto 421/2004** and is *adscrito al* [[ES-CNI]] — Spain's national
+intelligence service — sharing the CNI's means, procedures, rules and
+resources.
+
+It is governed by [[ES-LEY-11-2002]], the act regulating the CNI, which
+entrusts to the CNI the functions relating to the security of information
+technologies. The CCN is how the CNI discharges that part of its statutory
+mandate.
+
+So the authority behind [[ES-ENS]], Spain's national security framework for
+public-sector information systems, is a component of the intelligence
+service. The United Kingdom is the only other country in the Atlas arranged
+this way, with [[GB-NCSC]] inside [[GB-GCHQ]]; [[ES-INCIBE]], by contrast,
+sits outside that structure entirely.
+
+Real Decreto 421/2004 is **not** modelled as an entity. It is a royal decree
+rather than an act, and the Atlas holds the statute it implements.
