@@ -32,6 +32,7 @@ domains:
   - DOMAIN-CYBERSECURITY
 organisations: []
 related_entities:
+  - IE
   - NL-CBW
   - EU-NIS
   - EU-CYBERSECURITY-STRATEGY
@@ -42,6 +43,13 @@ relationships:
     evidence: "The NIS2 Directive repeals Directive (EU) 2016/1148 with effect from 18 October 2024 (EUR-Lex consolidated text of Dir. 2022/2555). NOT READ — search-only."
     confidence: medium
     valid_from: 2024-10-18
+    valid_until: null
+  - type: applies-in
+    target: IE
+    source: fact
+    evidence: "NIS2 is binding on every member state as to the result to be achieved and required transposition by 17 October 2024; Ireland did not meet that deadline and intends to transpose through the National Cyber Security Bill, assigning competent-authority functions to the National Cyber Security Centre and CSIRT-IE (digital-strategy.ec.europa.eu 'NIS2 Directive implementation in Ireland'; ncsc.gov.ie/nis2; williamfry.com). NOT READ — search-only. See IE-NCS-BILL — the transposition is overdue and not yet enacted."
+    confidence: medium
+    valid_from: null
     valid_until: null
   - type: applies-in
     target: NL

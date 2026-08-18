@@ -30,9 +30,17 @@ domains:
   - DOMAIN-GOVERNMENT
 organisations: []
 related_entities:
+  - IE
   - EU-DATA-STRATEGY
   - EU-DIGITAL-OMNIBUS
 relationships:
+  - type: applies-in
+    target: IE
+    source: fact
+    evidence: "As an EU regulation, Data Act is binding in its entirety and directly applicable in all member states without national transposition, and Ireland is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu; consilium.europa.eu). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: applies-in
     target: NL
     source: fact

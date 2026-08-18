@@ -60,6 +60,12 @@ def main() -> int:
 
         fm = e.frontmatter
 
+        if isinstance(fm.get("id"), bool):
+            report.error(
+                f"{e.rel_path}: id parsed as the boolean {fm['id']} — an unquoted "
+                f"YAML 1.1 boolean keyword. Quote it: id: \"NO\""
+            )
+
         for field_name in schema["required_fields"]:
             if field_name not in fm:
                 report.error(f"{e.rel_path}: missing required field '{field_name}'")
@@ -101,7 +107,16 @@ def main() -> int:
             )
 
         country = fm.get("country")
-        if country is not None and not ISO2_RE.match(str(country)):
+        if isinstance(country, bool):
+            # YAML 1.1 resolves NO/ON/OFF/YES/N/Y to booleans, so an unquoted
+            # `country: NO` silently becomes False. PyYAML's safe_load follows
+            # YAML 1.1 here. Norway is the only ISO 3166-1 alpha-2 code the
+            # Atlas uses that collides, but the same trap catches `id: NO`.
+            report.error(
+                f"{e.rel_path}: country parsed as the boolean {country} — an "
+                f"unquoted YAML 1.1 boolean keyword. Quote it: country: \"NO\""
+            )
+        elif country is not None and not ISO2_RE.match(str(country)):
             report.error(
                 f"{e.rel_path}: country '{country}' is not a plausible "
                 f"ISO 3166-1 alpha-2 code (use null if not applicable)"

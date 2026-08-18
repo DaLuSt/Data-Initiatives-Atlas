@@ -15,7 +15,14 @@ def check_id_list(e: common.EntityFile, field_name: str, ids: set[str], report: 
         report.error(f"{e.rel_path}: '{field_name}' must be a list")
         return
     for target in values:
-        if target not in ids:
+        if isinstance(target, bool):
+            # YAML 1.1 resolves NO/YES/ON/OFF/Y/N to booleans, so `- NO` in a
+            # list silently becomes False. Same trap as `country: NO`.
+            report.error(
+                f"{e.rel_path}: {field_name} contains the boolean {target} — an "
+                f'unquoted YAML 1.1 boolean keyword. Quote it: - "NO"'
+            )
+        elif target not in ids:
             report.error(f"{e.rel_path}: {field_name} references unknown id '{target}'")
 
 

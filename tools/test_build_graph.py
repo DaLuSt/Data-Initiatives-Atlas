@@ -45,6 +45,27 @@ class TestDataParsing(unittest.TestCase):
             self.assertNotIn(eid, seen, f"duplicate id {eid}: {e.rel_path} / {seen.get(eid)}")
             seen[eid] = e.rel_path
 
+    def test_no_id_or_country_parsed_as_a_yaml_boolean(self):
+        """YAML 1.1 resolves NO/YES/ON/OFF/Y/N to booleans, so an unquoted
+        `country: NO` silently becomes False and the Norwegian entities
+        vanish from every country filter. Caught the hard way when Norway
+        was added; `validate_frontmatter` now names the trap explicitly."""
+        for e in self.entities:
+            for field in ("id", "country"):
+                value = e.frontmatter.get(field)
+                self.assertNotIsInstance(
+                    value, bool,
+                    f"{e.rel_path}: '{field}' parsed as the boolean {value} — "
+                    f'quote it in the YAML, e.g. {field}: "NO"')
+
+    def test_norway_survives_yaml_parsing(self):
+        """The regression this repository actually hit, pinned by name."""
+        by_id = {e.frontmatter.get("id"): e for e in self.entities}
+        self.assertIn("NO", by_id, "the Norway anchor is missing or its id is not the string 'NO'")
+        norwegian = [e for e in self.entities if e.frontmatter.get("country") == "NO"]
+        self.assertGreater(len(norwegian), 1,
+                           "no entities carry country 'NO' as a string — check for YAML boolean coercion")
+
     def test_every_entity_has_required_fields(self):
         required = load_schema()["required_fields"]
         for e in self.entities:

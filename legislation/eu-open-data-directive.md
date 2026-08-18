@@ -31,9 +31,17 @@ domains:
   - DOMAIN-GOVERNMENT
 organisations: []
 related_entities:
+  - IE
   - NL-WHO
   - EU-DIGITAL-OMNIBUS
 relationships:
+  - type: applies-in
+    target: IE
+    source: fact
+    evidence: "As an EU directive the Open Data Directive is binding on every member state as to the result to be achieved and requires national transposition, and Ireland is a member state; Ireland operates the national open data portal data.gov.ie (eur-lex.europa.eu; digital-strategy.ec.europa.eu 'Open Data Directive'; data.gov.ie). NOT READ — search-only. Ireland's transposing instrument was NOT identified — see IE-DATA-GOV-IE."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: applies-in
     target: NL
     source: fact

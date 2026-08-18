@@ -1,9 +1,171 @@
 # Current Batch
 
-**Status:** No batch in progress. **The intelligence and security services**
-was completed on 2026-08-18, after connecting the loose nodes.
+**Status:** No batch in progress. **Norway, Switzerland and Ireland** was
+completed on 2026-08-18, after the intelligence and security services.
 
-## The intelligence and security services
+## Norway, Switzerland and Ireland
+
+**27 new entities** across three countries, plus 18 `applies-in` edges to
+Ireland. 312 → **339 entities**, 466 → **495 relationships**. The Atlas goes
+from seven countries to **ten**.
+
+The three were chosen from a structural review recorded in
+`discovery/candidates.md`, and chosen for what each **proves** rather than
+for size.
+
+### The Atlas now holds all four relationships to EU law
+
+| Position | Country | How EU law reaches it |
+|---|---|---|
+| Member state | NL, DE, BE, FR, ES, PL, **IE** | Directly applicable, or transposed |
+| Former member state | GB | Assimilated law, adequacy, extraterritorial scope |
+| **EEA EFTA state** | **NO** | **Incorporation by EEA Joint Committee decision, then national implementation** |
+| **Neither** | **CH** | **Autonomous law, plus adequacy and bilateral agreements** |
+
+Before this batch the Atlas had two of the four.
+
+### Norway — incorporation is not direct applicability
+
+The batch's sharpest finding, and it is datable:
+
+| Date | Event |
+|---|---|
+| 25 May 2018 | [[EU-GDPR]] applicable **in the member states** |
+| 15 June 2018 | [[NO-PERSONOPPLYSNINGSLOVEN]] adopted |
+| **6 July 2018** | **JCD No 154/2018 incorporates the GDPR into Annex XI of the EEA Agreement** |
+| **20 July 2018** | The Act enters into force — the GDPR takes effect in Norway |
+
+**Eight weeks** in which the Regulation was in force across the Union and
+had no effect in Norway. That cannot happen in a member state, and it is why
+**no `applies-in` edge points at [[NO]]**.
+
+The incorporation carried an adaptation with a visible consequence: Norway
+notifies its supervisory authority to the **EEA Joint Committee**, not the
+Commission — which is why [[NO-DATATILSYNET]] carries no
+`participates-in` [[EU-EDPB]] edge.
+
+### Switzerland — a fourth relationship type for a national data act
+
+[[CH-REVDSG]] carries **`aligned-with`** [[EU-GDPR]], not
+`implements-requirement-from`. No requirement obliged Switzerland to pass
+it; the Swiss legislature harmonised to preserve **adequacy** under Article
+45 and to avoid competitive disadvantage. The Atlas now records four answers
+to "how does a national data protection act relate to the GDPR":
+
+`implements-requirement-from` (NL, DE, ES, PL, IE, **NO**) ·
+`derived-from` (GB) · **`aligned-with` (CH)** · direct applicability (BE, FR).
+
+[[CH-EMBAG]] is the Atlas's **first statutory open-source mandate** —
+"Public Money – Public Code" written into a statute rather than a policy.
+
+### Ireland — the one-stop-shop, finally in the graph
+
+[[IE-DPC]] is lead supervisory authority under [[EU-GDPR]] Article 56 for
+much of the technology sector established in the Union. Before this batch
+the Atlas held **eight** national data protection authorities and modelled
+no mechanism connecting any of them.
+
+[[EU-EDPB]] had **two** incoming edges. It now has three. **The general fix
+— connecting the remaining five member-state authorities — was not done**
+and remains the highest-value item in `discovery/candidates.md`.
+
+[[IE-NCS-BILL]] is `proposed`: Ireland missed the 17 October 2024 NIS2
+deadline. It is the Atlas's second pending cyber instrument after
+[[GB-CSRB]], and **not the same kind of thing** — one is a sovereign choice,
+the other a member state overdue on an obligation.
+
+### ⚠ `NO` parses as the boolean `false` in YAML
+
+Found the hard way. YAML 1.1 — which PyYAML implements — resolves `NO`,
+`YES`, `ON`, `OFF`, `Y` and `N` to booleans, so an unquoted `country: NO`
+silently became `False` and every Norwegian entity failed validation.
+
+Fixed by quoting (`id: "NO"`, `country: "NO"`), and then **guarded**:
+
+- `validate_frontmatter.py` now reports the boolean coercion by name, for
+  both `id` and `country`, instead of "missing or non-string field".
+- `tools/test_build_graph.py` gains two tests — a general one asserting no
+  entity's `id` or `country` is a bool, and one pinning Norway by name.
+
+Norway is the only ISO 3166-1 alpha-2 code in the Atlas that collides. The
+guard is there for the next contributor, not for this batch.
+
+### What the batch deliberately did not do
+
+- **No `applies-in` edge to [[NO]] or [[CH]].** Both are argued at length on
+  the anchors rather than forced into a type that means member-state
+  applicability.
+- **[[UN-AARHUS]] carries no Irish edge.** It is a mixed agreement and
+  Ireland's ratification was not researched; the other six member states
+  carry the edge on evidence this batch did not gather.
+- **[[IE-NSAI]] carries no `participates-in` edges.** The CEN-CENELEC
+  members page was returned by search and, like everything else here, not
+  read — so the Atlas has a URL that almost certainly lists NSAI and no
+  confirmation that it does.
+- **[[CH-OPENDATA-SWISS]] is not linked to [[CH-EMBAG]]**, though the act
+  creates the legal basis for open government data and this is the federal
+  OGD portal. No source read connects them by name.
+- **[[NO-ALTINN]] gets no `maintained-by` edge** where [[NO-ID-PORTEN]]
+  does — Digdir's own page lists the solutions it operates and Altinn is not
+  among them.
+
+### ⚠ Connectivity got worse, and that is the honest cost
+
+| | Before | After |
+|---|---:|---:|
+| Entities | 312 | **340** |
+| Typed relationships | 466 | **498** |
+| Components | 31 | **45** |
+| Largest component | 272 | **283** |
+| Isolated entities | 21 | **32** |
+
+**Eleven of the twenty-eight new entities carry no typed relationship at
+all**: [[NO-NSM]], [[NO-SSB]], [[NO-KARTVERKET]], [[NO-ALTINN]],
+[[CH-BACS]], [[CH-DVS]], [[CH-SWISSTOPO]], [[CH-EMBAG]], [[IE-TAILTE]],
+[[IE-NSAI]] and [[IE-DATA-GOV-IE]].
+
+Every one is a refusal, not an oversight — the statutory basis was not
+identified, the custodian was not named, or the obvious edge rests on a page
+that was returned by search and not read. Each is argued on its entity and
+logged in `discovery/unresolved.md`.
+
+This is the same debt the **loose nodes** batch of 2026-08-17 paid down, and
+it is the natural follow-up: eleven entities, each needing one source.
+
+Two anchors were rescued from isolation rather than left:
+
+- **[[NO]]** by [[INTL-EEA-AGREEMENT]] `applies-in` [[NO]] — correct,
+  because the EEA Agreement genuinely applies in Norway, and it turns the
+  batch's central finding into a relationship.
+- **[[CH]]** by [[CH-REVDSG]] `applies-in` [[CH]] — the [[GB-UK-GDPR]]
+  precedent, an own-country edge, taken deliberately and flagged on the
+  entity as an extension of a pattern `progress/backlog.md` says to
+  reconsider. Switzerland has no supra-national instrument in the Atlas to
+  reach it, because the bilateral agreements are unmodelled.
+
+### Weakest entities, named
+
+- [[IE-TAILTE]] — `confidence: low`. The merger of Ordnance Survey Ireland,
+  the Property Registration Authority and the Valuation Office was not
+  confirmed against a primary source; neither citation is a government legal
+  source.
+- [[CH-DVS]], [[NO-SSB]], [[NO-KARTVERKET]], [[CH-SWISSTOPO]],
+  [[IE-NSAI]], [[IE-DATA-GOV-IE]] — all `coverage: low`.
+- **No Fedlex citation appears anywhere in the Swiss set**, including on
+  [[CH-REVDSG]], which carries the batch's most comparative weight.
+- [[NO-DATATILSYNET]] rests on two commercial law-firm surveys; no
+  Datatilsynet page describing its own mandate was returned.
+
+### Best-sourced
+
+[[IE-DPC]] — its claims rest on the Commission's own published decisions and
+an EDPB news release, not on secondary description.
+
+---
+
+## The intelligence and security services — previous batch
+
+**Status:** completed 2026-08-18.
 
 **47 new entities** — 19 services, 9 oversight bodies, 18 acts and one new
 domain — across all seven countries. 265 → **312 entities**;

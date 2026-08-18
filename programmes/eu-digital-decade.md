@@ -34,6 +34,13 @@ organisations: []
 related_entities: []
 relationships:
   - type: applies-in
+    target: IE
+    source: fact
+    evidence: "Digital Decade Policy Programme 2030 is an EU-level instrument addressed to the member states, and Ireland is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-in
     target: NL
     source: fact
     evidence: "The programme requires annual progress reports and national strategic roadmaps from member states (EUR-Lex summary of Decision (EU) 2022/2481). NOT READ — search-only."
