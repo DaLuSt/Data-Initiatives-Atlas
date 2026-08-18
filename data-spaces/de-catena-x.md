@@ -31,8 +31,17 @@ successor: null
 domains: []
 organisations: []
 related_entities:
+  - INTL-IDS-RAM
+  - INTL-IDSA
   - EU-GAIA-X
 relationships:
+  - type: based-on
+    target: INTL-IDS-RAM
+    source: fact
+    evidence: "Catena-X follows the IDS Reference Architecture Model, the conceptual basis of IDS-compliant data exchange between organisations maintained by the International Data Spaces Association (internationaldataspaces.org 'IDS Reference Architecture Model'; catena-x.net; the IDSA and IDS-RAM references already recorded on this entity). NOT READ — search-only. This closes a gap queued in discovery/research-queue.md since Batch 5: the entity referred to the IDS-RAM in prose with no entity to point at."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: based-on
     target: EU-GAIA-X
     source: fact

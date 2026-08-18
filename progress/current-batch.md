@@ -1,9 +1,117 @@
 # Current Batch
 
-**Status:** No batch in progress. **Every entity reaches its scope anchor**
-was completed on 2026-08-18, after Norway, Switzerland and Ireland.
+**Status:** No batch in progress. **Data spaces — completing the fourteen**
+was completed on 2026-08-18, after the scope-anchor rule.
 
-## Every entity reaches its scope anchor
+## Data spaces — completing the fourteen
+
+**13 new entities.** 341 → **354 entities**, 522 → **539 relationships**.
+The data-space layer goes from **8 entities to 19**.
+
+### All fourteen common European data spaces now exist
+
+Batch 10 created four and deliberately left the other ten, because research
+had returned only their names and creating shallow entities was the failure
+its brief warned against. That was right at the time.
+
+What changed: **six of the ten turned out to have real content** once
+searched for individually rather than as a list — deployment programmes,
+named operators, funding instruments, live infrastructure.
+
+| Sector | Entity | What it turned out to have |
+|---|---|---|
+| Energy | [[EU-CEEDS]] | Digital Europe Programme deployment; INSIEME with 50+ partners and 15+ member-state pilots; anchored in the Commission's Strategic Roadmap of 3 June 2026 |
+| Research and innovation | [[EU-EOSC]] | **Already running** — EU Node live since October 2024, federation of 13 candidate nodes demonstrated 2025, including CERN and EMBL |
+| Cultural heritage | [[EU-CULTURAL-HERITAGE-DATA-SPACE]] | Built on **Europeana** — 60M+ digitised items, Europeana Foundation plus 18 partners selected to steward it |
+| Industry | [[EU-MANUFACTURING-DATA-SPACE]] | UNDERPIN and SM4RTENANCE deployment actions |
+| Finance | [[EU-FINANCIAL-DATA-SPACE]] | **FIDA** named as one of three components |
+| Language | [[EU-LANGUAGE-DATA-SPACE]] | Publishing, language-technology and press participants; stated purpose includes **monetising** data |
+
+The remaining four — [[EU-TOURISM-DATA-SPACE]], [[EU-MEDIA-DATA-SPACE]],
+[[EU-SKILLS-DATA-SPACE]], [[EU-PUBLIC-ADMIN-DATA-SPACE]] — are `coverage:
+low` and say so. They are created anyway because **holding thirteen of
+fourteen would misrepresent the set**. Completeness is the claim;
+depth is claimed only where `coverage` says so.
+
+### Having all fourteen makes the differences visible
+
+Four could not show this; fourteen can:
+
+- **One has a Regulation** ([[EU-EHDS]]) and is the **only one carrying
+  `applies-in` edges to countries.** The rest are programmes and initiatives,
+  not instruments, and do not apply in a member state in the sense that
+  relationship carries here. One has legislation in progress
+  ([[EU-FINANCIAL-DATA-SPACE]], via FIDA).
+- **One already runs** ([[EU-EOSC]]).
+- **One inverts the usual order** ([[EU-CULTURAL-HERITAGE-DATA-SPACE]]) —
+  designating a data space over infrastructure that had run for a decade.
+- **Participants differ**: health systems, energy operators, public
+  administrations — and publishers and the press, expected to *sell* into
+  the language data space.
+
+### The IDSA layer — a gap carried since Batch 5
+
+`discovery/research-queue.md` has listed the IDSA and its reference
+architecture since the Dutch platform batch, reinforced in the German one,
+calling it the **best-evidenced gap in the international layer**: two
+entities in two countries referred to it in prose with nothing to point at.
+
+- [[INTL-IDSA]] — the association, formed 2016.
+- [[INTL-IDS-RAM]] — the reference architecture model: five layers
+  (business, functional, process, information, system), each addressed for
+  security, certification and governance.
+
+Both refusals are now closed: [[DE-CATENA-X]] `based-on` the IDS-RAM, and
+[[NL-ISHARE]] `references` it — the latter deliberately not `based-on`,
+because the direction the sources describe is the **IDSA incorporating
+iSHARE**, not iSHARE deriving from the model.
+
+**And an unexpected bridge.** DIN SPEC 27070, published 21 February 2020,
+standardises the IDS security gateway. [[DE-DIN]] has been an Atlas entity
+since the Germany batch and was recorded there as a standards body that
+**maintained nothing the Atlas held**. This is the first specification to
+connect to it from the standards side. The edge is `references`, not
+`maintained-by`: DIN standardised one component, it does not own the model.
+
+### A national lineage
+
+[[DE-MANUFACTURING-X]] is the Atlas's first data space with an **ancestor**.
+The sources state it plainly: the BMWK launched [[DE-CATENA-X]] for cars,
+Manufacturing-X followed, and its goal is a data ecosystem for factory
+equipment suppliers **on the basis of Catena-X**. `based-on`, not `part-of` —
+it builds on Catena-X, it does not contain it.
+
+Germany's family as the sources describe it: Catena-X for cars,
+Manufacturing-X for factories, energy data-X for power, with Factory-X (2024)
+and Aerospace-X as lighthouse projects. Only the first two are modelled.
+
+### Refusals worth naming
+
+- **No edge between [[DE-MANUFACTURING-X]] and
+  [[EU-MANUFACTURING-DATA-SPACE]].** Same sector is not evidence of a
+  relationship; the EU data space's own deployment projects are UNDERPIN and
+  SM4RTENANCE, and no source connects either to the German initiative.
+- **No edges from [[EU-PUBLIC-ADMIN-DATA-SPACE]]** to
+  [[EU-INTEROPERABLE-EUROPE-ACT]], [[EU-EIF]] or [[EU-SDG]]. Every one would
+  be plausible; none is sourced. This is the entity where the temptation was
+  strongest, being closest to the Atlas's own subject matter.
+- **No cultural-heritage ↔ media/tourism edges**, though the cultural
+  heritage sources say it *will explore cooperation* with both. Intent is not
+  connection.
+- **No `DOMAIN-ENERGY`.** CEEDS would be its only member, below the
+  two-entity threshold the domain entities record.
+
+### Connectivity
+
+Components 22 → **20**, largest component 302 → **319**, isolated entities
+unchanged at **8** — still only the domains, as the scope-anchor rule
+requires.
+
+---
+
+## Every entity reaches its scope anchor — previous batch
+
+**Status:** completed 2026-08-18.
 
 A rule, 24 edges, one new entity, and enforcement so it holds.
 

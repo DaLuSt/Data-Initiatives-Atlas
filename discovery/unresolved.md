@@ -9,7 +9,7 @@ one of these — resolve it with a real source, or leave it open.
 
 | Entity / topic | Question | Why it's unresolved | Noted by / date | Status |
 |---|---|---|---|---|
-| All unread-source entities (**332 of 339**: 329 `search-only` + 3 `unverified` ([[NL]], [[EU]], [[UN]]); regenerate the count with `python tools/source_hosts.py`) | Every factual claim | The environment's network egress policy blocks all direct page retrieval (`EGRESS_BLOCKED` for forumstandaardisatie.nl, digitaleoverheid.nl, noraonline.nl, vng.nl, logius.nl, eur-lex.europa.eu, wikipedia.org and every other host tested). Batch 1 was completed from search-engine results on explicit instruction, with the trade-off accepted knowingly. Every entity carries `verification: search-only`. | Batch 1 / 2026-08-14 | **Open — needs full re-verification pass** |
+| All unread-source entities (**347 of 354**: 344 `search-only` + 3 `unverified` ([[NL]], [[EU]], [[UN]]); regenerate the count with `python tools/source_hosts.py`) | Every factual claim | The environment's network egress policy blocks all direct page retrieval (`EGRESS_BLOCKED` for forumstandaardisatie.nl, digitaleoverheid.nl, noraonline.nl, vng.nl, logius.nl, eur-lex.europa.eu, wikipedia.org and every other host tested). Batch 1 was completed from search-engine results on explicit instruction, with the trade-off accepted knowingly. Every entity carries `verification: search-only`. | Batch 1 / 2026-08-14 | **Open — needs full re-verification pass** |
 
 To find every affected entity: `grep -rl "verification: search-only" .`
 
@@ -602,4 +602,24 @@ batches recorded that none existed.
 | [[UN-AARHUS]] | Ireland's ratification date and terms. | The other six member states carry `applies-in`; Ireland does not, because this batch did not gather the evidence for a mixed agreement | 2026-08-18 | Open |
 | [[IE-DATA-GOV-IE]] | Ireland's **Open Data Directive transposition** (an S.I.) was not identified. | Ireland joins Belgium, France and Spain on that list — four countries is a batch of its own | 2026-08-18 | Open |
 | [[IE-DPA-2018]] | The **Law Enforcement Directive** (2016/680) is still not an Atlas entity. | Part 5 of the Irish Act transposes it, and it is one of the two legal bases of [[EU-UK-ADEQUACY]]. Queued since the UK batch and now blocking a second entity | 2026-08-18 | Open |
+
+## Data spaces (batch of 2026-08-18)
+
+| Entity | Question | Why it matters | Noted by / date | Status |
+|---|---|---|---|---|
+| [[EU-MANUFACTURING-DATA-SPACE]] / [[DE-MANUFACTURING-X]] | Is the German initiative part of, feeding into, or independent of the common European manufacturing data space? | They occupy the same sector, and the EU data space's named deployments (UNDERPIN, SM4RTENANCE) are not connected to Manufacturing-X by any source read. Same sector is not a relationship | 2026-08-18 | Open |
+| [[EU-PUBLIC-ADMIN-DATA-SPACE]] | How does it relate to [[EU-INTEROPERABLE-EUROPE-ACT]], [[EU-EIF]] and [[EU-SDG]]? | This is the data space closest to the Atlas's own subject matter — 232 entities carry [[DOMAIN-GOVERNMENT]] — and the entity where drawing unsourced edges would be most tempting. None is asserted | 2026-08-18 | Open |
+| [[EU-FINANCIAL-DATA-SPACE]] | **What are the other two components?** | The sources name FIDA as one of three and do not name the rest. An entity whose own description admits it is one-third specified | 2026-08-18 | Open |
+| [[EU-FINANCIAL-DATA-SPACE]] | **FIDA** is not an entity, nor is **PSD2**. | FIDA is the only named legislative component of any of the fourteen apart from the EHDS Regulation | 2026-08-18 | Open |
+| [[EU-CULTURAL-HERITAGE-DATA-SPACE]] | **Europeana** and the Europeana Foundation are not modelled. | The operator of the data space, holding 60M+ items — the batch's most conspicuous missing organisation. The **Europeana Data Model** would also connect to the metadata layer around [[INTL-DCAT]] | 2026-08-18 | **Open — next** |
+| [[EU-CULTURAL-HERITAGE-DATA-SPACE]] | Cooperation with [[EU-MEDIA-DATA-SPACE]] and [[EU-TOURISM-DATA-SPACE]] | The sources say it "will explore opportunities for cooperation" with both. Intent is not connection, so no edge is asserted from either side | 2026-08-18 | Open |
+| [[EU-TOURISM-DATA-SPACE]], [[EU-MEDIA-DATA-SPACE]], [[EU-SKILLS-DATA-SPACE]], [[EU-PUBLIC-ADMIN-DATA-SPACE]] | Deployment projects, governance, operators, scope. | All four are `coverage: low`, created for completeness of the fourteen. Their thinness is the honest state | 2026-08-18 | Open |
+| [[EU-EOSC]] | Does the **EOSC Federation** admit non-member states? | Its federated design is the closest thing in the Atlas to what [[NO]] and the EEA states would need. Not researched | 2026-08-18 | Open |
+| [[EU-EOSC]] | The **EOSC Association** is a distinct body from the Federation and from the Commission's EU Node, and is not modelled. | Three things share the name EOSC and only one is an entity | 2026-08-18 | Open |
+| [[EU-SKILLS-DATA-SPACE]] | **ESCO**, **Europass** and the **European Skills Agenda** are not modelled. | The existing EU skills-data machinery this data space presumably builds on. Presuming is not sourcing | 2026-08-18 | Open |
+| [[INTL-IDS-RAM]] | The **IDS Connector** is not modelled. | It is the central technical component — a security gateway with Base, Trust and Trust+ profiles, the last protecting against manipulation by malicious administrators. `technology` is a type the Atlas defines and still does not use | 2026-08-18 | Open — and see the unused-type item |
+| [[INTL-IDS-RAM]] | Version. | The entity describes **IDS-RAM 3.0** (April 2019), the version search returned. Version 4 exists and was not established | 2026-08-18 | Open |
+| [[INTL-IDSA]] | Membership, given by one source as 133 companies, is unverified; the **Eclipse Dataspace Connector** implementations are unmodelled | | 2026-08-18 | Open |
+| [[DE-MANUFACTURING-X]] | **Factory-X**, **Aerospace-X**, **energy data-X** and **Plattform Industrie 4.0** are not modelled. | Named in the sources as lighthouse projects, siblings and the concept base | 2026-08-18 | Open |
+| [[EU-CEEDS]] | **INSIEME** and the six Horizon Europe energy data space projects are not modelled; nor is Germany's **ENDA**. | The concrete deployment layer beneath the data space | 2026-08-18 | Open |
 
