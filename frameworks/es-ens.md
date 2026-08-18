@@ -40,9 +40,17 @@ organisations:
   - ES-CCN
 related_entities:
   - ES-CCN
+  - INTL-ISO-IEC-27001
   - ES-ENI
   - NL-BIO
 relationships:
+  - type: aligned-with
+    target: INTL-ISO-IEC-27001
+    source: fact
+    evidence: "The ENS follows the PDCA continuous-improvement model, inspired by ISO 27001, and information systems may meet the ENS requirements for the LOW security level on the basis of an information security management system certified to ISO/IEC 27001 (portal.mineco.gob.es 'Esquema Nacional de Seguridad'; BOE-A-2022-7191 Real Decreto 311/2022; pmg-ssi.com '¿Qué es el Real Decreto 311/2022?'). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: maintained-by
     target: ES-CCN
     source: fact
@@ -129,3 +137,24 @@ claim to know how they relate.
 
 Listed in frontmatter — the BOE text, the CCN's own notice, a ministry page
 and a technical commentary.
+
+## `aligned-with` [[INTL-ISO-IEC-27001]]
+
+Added with the intelligence-services batch, which made this entity's
+isolation visible: [[ES-ENS]] and [[ES-CCN]] were a two-node island in the
+graph, reachable from nothing else in the Atlas.
+
+The edge is sourced and not merely convenient. The ENS follows the **PDCA
+continuous-improvement model, inspired by ISO 27001**, and an information
+security management system certified to ISO/IEC 27001 can be used to meet
+the ENS requirements at the **LOW** security level.
+
+`aligned-with` is the right type — "two entities are deliberately kept
+consistent without one implementing the other". The ENS is a Spanish royal
+decree, not an implementation of an international standard, and the
+certification route applies to one of three levels rather than to the scheme
+as a whole.
+
+[[GB-CAF]] already carries the same relationship to the same standard. The
+Atlas can now show two national public-sector security frameworks aligned to
+one ISO standard, from either side of the EU border.

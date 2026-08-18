@@ -82,6 +82,43 @@ countries:
   the ESS on its own pages rather than being attached by the composition
   rule.
 
+## Intelligence and security services
+
+Added with the intelligence-services batch. Poland has the **most
+symmetrical** structure in the Atlas — four services, two acts, one axis
+repeated twice:
+
+```
+            civilian              military
+internal    PL-ABW      2002      PL-SKW      2006
+external    PL-AW       2002      PL-SWW      2006
+```
+
+- [[PL-ABW]] — internal security _(head reports **directly** to the Prime
+  Minister)_
+- [[PL-AW]] — foreign intelligence
+- [[PL-SKW]] — military counter-intelligence _(⚠ `coverage: low`)_
+- [[PL-SWW]] — military intelligence _(⚠ `coverage: low`)_
+- [[PL-KSS]] — the Sejm's oversight committee
+
+Legislation:
+
+- [[PL-UABWAW-2002]] — names **both** civilian agencies in its own title.
+  The best-sourced statute in the batch: ISAP, the ABW's BIP, and the AW's
+  own *Ramy prawne* page.
+- [[PL-USKWSWW-2006]] — the military pair. ⚠ **No official Polish
+  government URL could be found for it**, in contrast to its civilian
+  counterpart.
+
+**[[PL-ABW]] `implements` [[PL-KSC]]**: CSIRT GOV, one of the three
+national-level CSIRTs under the national cybersecurity system act, is led by
+the Head of the ABW.
+
+⚠ [[PL-KSS]] carries **no `governed-by` edge**, and that is the finding.
+Every other oversight body in the batch is created by statute; the KSS comes
+from **Chapter 12 of the Sejm's Regulamin** — the chamber's own standing
+orders, which the chamber can change.
+
 ## Not modelled
 
 - **CSIRT NASK, CSIRT GOV, CSIRT MON** — the operational bodies of the

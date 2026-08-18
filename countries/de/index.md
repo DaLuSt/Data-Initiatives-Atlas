@@ -120,6 +120,35 @@ their existing `applies-in` → [[NL]]:
 | [[EU-INSPIRE]] | [[DE-GEOZG]] | _(not yet sourced)_ |
 | [[EU-DCAT-AP]] | [[DE-DCAT-AP-DE]] | [[NL-DCAT-AP-NL]] |
 
+## Intelligence and security services
+
+Added with the intelligence-services batch. Germany is the Atlas's clearest
+case of **one statute per service**.
+
+| Service | Act | Reports to |
+|---|---|---|
+| [[DE-BND]] — foreign | [[DE-BNDG]] | Federal Chancellery |
+| [[DE-BFV]] — domestic | [[DE-BVERFSCHG]] | [[DE-BMI]] |
+| [[DE-BAMAD]] — military | [[DE-MADG]] | Federal Ministry of Defence |
+
+Cutting across all three: [[DE-G10]], the Artikel 10-Gesetz, which restricts
+the constitutional secrecy of correspondence, post and telecommunications
+and sets the conditions for interfering with it. Every service carries two
+`governed-by` edges — its own act, and this one.
+
+Oversight:
+
+- [[DE-PKGR]] — the Bundestag's control panel, under [[DE-PKGRG]]. Disputes
+  with the Federal Government go to the **Bundesverfassungsgericht**.
+- [[DE-UKR]] — independent legality control for [[DE-BND]]. ⚠
+  `confidence: low`: its provisions were moved **out** of [[DE-BNDG]] after
+  the Constitutional Court's decision of 28 September 2022, and where they
+  landed could not be established. It is the only oversight body in the
+  batch with **no** `governed-by` edge.
+
+[[DE-BFV]] `part-of` [[DE-BMI]] puts the domestic intelligence service in the
+same ministry as [[DE-BSI]] and [[DE-DESTATIS]].
+
 ## Not modelled
 
 - **Any Land or municipality.** The Atlas `level` vocabulary has no term

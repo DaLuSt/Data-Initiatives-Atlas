@@ -1,9 +1,105 @@
 # Current Batch
 
-**Status:** No batch in progress. **Connecting the loose nodes** was
-completed on 2026-08-17, after the UK connection batch.
+**Status:** No batch in progress. **The intelligence and security services**
+was completed on 2026-08-18, after connecting the loose nodes.
 
-## Connecting the loose nodes
+## The intelligence and security services
+
+**47 new entities** — 19 services, 9 oversight bodies, 18 acts and one new
+domain — across all seven countries. 265 → **312 entities**;
+390 → **465 relationships**.
+
+The relationship layer stays at **31 components** and the largest grows from
+**224 to 272 of 312**. Six of the seven country clusters joined the main
+component on the day they were written; Spain needed one extra edge, below.
+
+### What was added
+
+| Country | Services | Oversight | Acts |
+|---|---|---|---|
+| NL | [[NL-AIVD]], [[NL-MIVD]] | [[NL-TIB]], [[NL-CTIVD]] | [[NL-WIV-2017]], [[NL-TWCO]] |
+| DE | [[DE-BND]], [[DE-BFV]], [[DE-BAMAD]] | [[DE-PKGR]], [[DE-UKR]] | [[DE-BNDG]], [[DE-BVERFSCHG]], [[DE-MADG]], [[DE-G10]], [[DE-PKGRG]] |
+| BE | [[BE-VSSE]], [[BE-ADIV]] | [[BE-COMITE-I]] | [[BE-WIV-1998]], [[BE-TOEZICHTSWET-1991]] |
+| FR | [[FR-DGSE]], [[FR-DGSI]], [[FR-DRM]], [[FR-DRSD]] | [[FR-CNCTR]] | [[FR-LOI-RENSEIGNEMENT-2015]] |
+| ES | [[ES-CNI]] | — | [[ES-LEY-11-2002]], [[ES-LO-2-2002]] |
+| PL | [[PL-ABW]], [[PL-AW]], [[PL-SKW]], [[PL-SWW]] | [[PL-KSS]] | [[PL-UABWAW-2002]], [[PL-USKWSWW-2006]] |
+| GB | [[GB-MI5]], [[GB-SIS]], [[GB-GCHQ]] | [[GB-IPCO]], [[GB-ISC]] | [[GB-SSA-1989]], [[GB-ISA-1994]], [[GB-IPA-2016]], [[GB-JSA-2013]] |
+
+Plus [[DOMAIN-NATIONAL-SECURITY]].
+
+### The bridges into the Atlas that already existed
+
+A new cluster of 47 entities would have been an island. Six edges prevented
+that, and each was researched rather than assumed:
+
+| Edge | What it joins |
+|---|---|
+| [[GB-NCSC]] `part-of` [[GB-GCHQ]] | the UK cyber layer to signals intelligence |
+| [[ES-CCN]] `part-of` [[ES-CNI]] | the Spanish cyber layer to the intelligence service |
+| [[GB-MI5]]/[[GB-SIS]]/[[GB-GCHQ]] `governed-by` [[GB-DPA-2018]] | **Part 4** — the UK legislates its services *into* data protection law |
+| [[BE-VSSE]]/[[BE-ADIV]] `governed-by` [[BE-GDPR-WET]] | Belgium's subtitle on intelligence processing |
+| [[PL-ABW]] `implements` [[PL-KSC]] | CSIRT GOV is led by the Head of the ABW |
+| [[FR-DGSI]] `governed-by` [[FR-LIL]] | ⚠ `confidence: low` — Title IV, state security and defence |
+| [[DE-BFV]] `part-of` [[DE-BMI]], [[NL-AIVD]] `part-of` [[NL-BZK]] | the two services the Atlas can place in a ministry it holds |
+
+One incidental fix: **[[ES-ENS]] `aligned-with` [[INTL-ISO-IEC-27001]]**.
+[[ES-ENS]] and [[ES-CCN]] were a pre-existing two-node island; this batch
+grew it to five and then closed it. The ENS follows the PDCA model inspired
+by ISO 27001, and an ISO/IEC 27001-certified ISMS can satisfy ENS
+requirements at the LOW level.
+
+### The finding this batch exists to record
+
+Article 4(2) TEU reserves national security to the member states, and
+[[EU-GDPR]] Article 2(2)(a) excludes it from the Regulation's scope.
+**No EU instrument carries `applies-in` to any entity in this batch, and
+none should.** Each country builds its own review machinery instead. That is
+why [[DOMAIN-NATIONAL-SECURITY]] exists as a domain and says so at length —
+an empty EU column here is a finding, not a gap.
+
+Two countries qualify it. The UK put its services **inside** its data
+protection act ([[GB-DPA-2018]] Part 4) and Belgium gave them a dedicated
+subtitle in [[BE-GDPR-WET]]. The Union does not regulate here; a state still
+may.
+
+### No own-country `applies-in` was added
+
+The preceding batch recorded in `progress/backlog.md` that own-country
+`applies-in` should be **reconsidered rather than extended**. Eighteen new
+national acts were the obvious opportunity to extend it, and it was not
+taken. The countries are reached through the services and their ministries
+instead.
+
+### Weakest entities, named
+
+- [[DE-UKR]] — `confidence: low`. Its provisions were moved **out** of
+  [[DE-BNDG]] after the Constitutional Court's decision of 28 September
+  2022, and where they went could not be established. **The only oversight
+  body in the batch with no `governed-by` edge.**
+- [[DE-BVERFSCHG]], [[DE-MADG]] — no official statute URL found.
+- [[PL-USKWSWW-2006]], [[PL-SKW]], [[PL-SWW]] — no Polish government URL,
+  in contrast to the very well-sourced civilian pair.
+- [[ES-LEY-11-2002]] — no BOE link, unlike [[ES-LO-2-2002]].
+- [[FR-DRM]] — `coverage: low`; nothing from the service's own site.
+
+### Known scope limits, recorded on the entities
+
+- **France's délégation parlementaire au renseignement** is not modelled, so
+  France shows independent control and no parliamentary control.
+- **DNRED and TRACFIN** — two of the six *premier cercle* services — are
+  absent, so [[FR-CNCTR]]'s remit is understated by two.
+- **Germany's G10-Kommission** is not modelled.
+- **UK Defence Intelligence** has no avowal act and was not researched.
+- **Belgium's BIM-wet (2010)** and **OCAD** are not modelled.
+- **Poland's CBA** is not modelled.
+- The **sixteen German Landesämter für Verfassungsschutz** are out of scope:
+  the Atlas has no sub-national level.
+
+---
+
+## Connecting the loose nodes — previous batch
+
+**Status:** completed 2026-08-17.
 
 **No new entities. 14 relationships added**, 376 → 390. The relationship
 layer was fragmented into **39 components**; it is now **31**, and the

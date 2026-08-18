@@ -1,5 +1,76 @@
 # Completed Batches
 
+## The intelligence and security services
+
+**Date:** 2026-08-18
+
+**47 new entities** across all seven countries: **19 intelligence services**,
+**9 oversight bodies**, **18 acts**, and [[DOMAIN-NATIONAL-SECURITY]].
+265 → **312 entities**, 390 → **465 relationships**. The relationship layer
+holds at **31 components**; the largest grows from **224 to 272 of 312**.
+
+### Why a new domain
+
+Every other domain in the Atlas groups entities that sit **inside** EU data
+law. This one groups entities carved **out** of it: Article 4(2) TEU
+reserves national security to the member states, and [[EU-GDPR]] Article
+2(2)(a) excludes it from the Regulation's material scope.
+
+**No EU instrument carries `applies-in` to any entity in this batch.** That
+is the structural point — an empty EU column here is a finding, not missing
+research. Each country builds its own review machinery instead:
+[[NL-TIB]]/[[NL-CTIVD]], [[DE-PKGR]]/[[DE-UKR]], [[BE-COMITE-I]],
+[[FR-CNCTR]], [[GB-ISC]]/[[GB-IPCO]], [[PL-KSS]].
+
+Two countries partly refuse the carve-out. **Part 4 of [[GB-DPA-2018]]** is
+a data protection regime written for [[GB-MI5]], [[GB-SIS]] and
+[[GB-GCHQ]]; **[[BE-GDPR-WET]]** carries a subtitle on processing by the
+intelligence and security services, with verification routed through
+[[BE-COMITE-I]] rather than [[BE-APD]]. The Union does not regulate here; a
+member state still may.
+
+### Five patterns the Atlas could not compare before
+
+1. **One act per service** — Germany: [[DE-BNDG]], [[DE-BVERFSCHG]],
+   [[DE-MADG]], with [[DE-G10]] cutting across all three.
+2. **One organic act for all services** — the Netherlands
+   ([[NL-WIV-2017]]) and Belgium ([[BE-WIV-1998]]).
+3. **An act about techniques, not bodies** — France
+   ([[FR-LOI-RENSEIGNEMENT-2015]], codified as CSI Book VIII) and the UK
+   ([[GB-IPA-2016]]). France legislated powers because it had no agency
+   acts; the UK layered powers on top of agency acts it already had.
+4. **Acts of avowal, one service at a time** — the UK: [[GB-SSA-1989]],
+   then [[GB-ISA-1994]] five years later.
+5. **Paired agencies, paired acts** — Poland: [[PL-UABWAW-2002]] (civilian)
+   and [[PL-USKWSWW-2006]] (military), four years apart on the same
+   internal/external axis.
+
+And three answers to *who authorises intrusive measures*: a **judge** in
+advance (Spain, [[ES-LO-2-2002]]); a minister followed by **binding**
+review (the Netherlands, [[NL-TIB]]); a Prime Minister acting on an
+**opinion**, with recourse to the Conseil d'État (France, [[FR-CNCTR]]).
+
+### Two countries put cyber security inside intelligence
+
+[[GB-NCSC]] is `part-of` [[GB-GCHQ]]; [[ES-CCN]] is `part-of` [[ES-CNI]].
+Five countries keep them apart — [[DE-BSI]] under [[DE-BMI]],
+[[FR-ANSSI]] under the SGDSN, [[BE-CCB]], and the Dutch and Polish
+arrangements. Both cyber bodies were already Atlas entities; nothing showed
+where they sat until now.
+
+### Recorded limits
+
+Named on the entities and in `discovery/unresolved.md`: [[DE-UKR]]'s missing
+statutory basis after the Constitutional Court's 28 September 2022 decision;
+France's unmodelled délégation parlementaire au renseignement; the two
+*premier cercle* services (DNRED, TRACFIN) that are absent; Germany's
+G10-Kommission; UK Defence Intelligence; Belgium's BIM-wet and OCAD;
+Poland's CBA; and the sixteen German Landesämter, which are out of scope
+because the Atlas has no sub-national level.
+
+**No own-country `applies-in` edges were added**, honouring the decision
+recorded in `progress/backlog.md` in the preceding batch.
+
 ## Final Global Relationship Pass and Quality Gate
 
 **Date:** 2026-08-14 · **Full report:** `validation/final-quality-gate.md`

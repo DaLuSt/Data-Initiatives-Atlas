@@ -175,3 +175,25 @@ Batch 8 deepens them._
 ---
 
 Last updated: 2026-08-14 (Batch 5).
+
+## Intelligence and security services
+
+Added with the intelligence-services batch. These entities sit **outside**
+EU data law — see [[DOMAIN-NATIONAL-SECURITY]] — so none of them appears in
+the *Applicable EU legislation* list above, and that absence is deliberate.
+
+- [[NL-AIVD]] — civilian service, `part-of` [[NL-BZK]] _(the only service in
+  this batch the Atlas can place in a ministry alongside [[DE-BFV]])_
+- [[NL-MIVD]] — military service, under Defence _(no ministry edge: the
+  Ministry of Defence is not an Atlas entity)_
+- [[NL-TIB]] — **binding prior** review of intended use of special powers
+- [[NL-CTIVD]] — **retrospective** oversight of how powers were used
+
+Legislation:
+
+- [[NL-WIV-2017]] — one act for **both** services, and for both reviewers.
+  The Netherlands and Belgium are the two single-organic-act countries in
+  the Atlas.
+- [[NL-TWCO]] — temporary act, in force 1 July 2024, **expiring four years
+  later**. The first Atlas entity whose `status: active` is known in advance
+  to be temporary.
