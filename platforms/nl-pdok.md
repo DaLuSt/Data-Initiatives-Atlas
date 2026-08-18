@@ -33,6 +33,13 @@ organisations:
   - NL-BZK
 related_entities: []
 relationships:
+  - type: aligned-with
+    target: EU-INSPIRE
+    source: fact
+    evidence: "PDOK services comply with national and international standards, including the European INSPIRE standard, HVD and Dutch e-government standards; PDOK is the platform providing geodatasets from Dutch government authorities via geo-webservices and OGC APIs, and Kadaster has independently operated the portal since 2018 (pdok.nl/over-pdok; kadaster.nl 'PDOK - platform voor open data'; opennederland.nl 'PDOK'). NOT READ — search-only. CAVEAT: the sources establish standards compliance, not that PDOK is the designated INSPIRE network-service infrastructure for the Netherlands under the Implementatiewet."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: participates-in
     target: NL-BASISREGISTRATIES
     source: interpretation

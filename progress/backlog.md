@@ -436,12 +436,15 @@ visible from any single entity.
 
 ## Opened by the UK connection batch
 
-- [ ] **`applies-in` to one's own country, for the other six.** The UK's
-  national instruments now carry `applies-in` to [[GB]], which is what
-  reconnected the orphaned anchor. The same is equally true of every
-  national instrument in [[NL]], [[DE]], [[BE]], [[FR]], [[ES]] and [[PL]],
-  and only [[NL-BIO]] and [[NL-PAS-TOE-OF-LEG-UIT]] carry it. Either do it
-  everywhere or decide the convention is UK-specific and say why.
+- [ ] **Reconsider `applies-in` to one's own country — probably by removing
+  it, not extending it.** The loose-nodes batch examined the blanket pass and
+  declined it. 72 national instruments lack the edge; adding all 72 would
+  make **72 of 181** `applies-in` edges tautological, and the type is defined
+  as *"the primary mechanism for country-neutral applicability"* — one
+  supra-national instrument reaching many countries. The Compare view already
+  filters `applies-in` by scope for exactly this reason. The eight existing
+  cases ([[NL-BIO]], [[NL-PAS-TOE-OF-LEG-UIT]] and the six UK ones) are the
+  anomaly. Decide deliberately; do not let it spread by default.
 - [ ] **Who holds the UK's [[UN-CES]] seat?** [[GB-UKSA]] was created to
   settle it and did not. The participation is recorded on both the Authority
   and [[GB-ONS]]; one of those two edges is wrong.

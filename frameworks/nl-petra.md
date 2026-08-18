@@ -33,7 +33,14 @@ organisations:
 related_entities:
   - NL-NORA
   - NL-GEMMA
-relationships: []
+relationships:
+  - type: based-on
+    target: NL-NORA
+    source: fact
+    evidence: "NORA has daughter architectures (NORA dochters) from government domains, including EAR for central government, GEMMA for municipalities, PETRA for the provinces and WILMA for the water boards, alongside domain and chain architectures such as ROSA for education, KARWEI for work and income and SRK for the criminal justice chain (noraonline.nl/wiki/NORA_dochters; noraonline.nl/wiki/Visie_op_dochters; nl.wikipedia.org 'Nederlandse Overheid Referentie Architectuur'). NOT READ — search-only. This entity is PETRA, the provincial architecture, named in that list."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Nederlandse Overheid Referentie Architectuur"
@@ -75,8 +82,13 @@ scope and rests on the same single mention. It is queued in
 
 ## Relationships
 
-No relationships are asserted. The obvious ones — `based-on` [[NL-NORA]],
-`maintained-by` a provincial body — are precisely what could not be
+`based-on` [[NL-NORA]] is **now sourced** — NORA's own wiki lists PETRA
+among its *dochters*, as the architecture for the provinces, alongside EAR,
+GEMMA, WILMA and [[NL-ROSA]]. That closes the more important of the two gaps
+below.
+
+`maintained-by` a provincial body is still unasserted, and the rest of this
+entity's weaknesses stand. The remaining unsourced items are what could not be
 sourced, and asserting them would be guessing.
 
 ## Sources

@@ -31,7 +31,14 @@ organisations: []
 related_entities:
   - NL-NORA
   - NL-RORA
-relationships: []
+relationships:
+  - type: based-on
+    target: NL-NORA
+    source: fact
+    evidence: "NORA has daughter architectures (NORA dochters) from government domains, including EAR for central government, GEMMA for municipalities, PETRA for the provinces and WILMA for the water boards, alongside domain and chain architectures such as ROSA for education, KARWEI for work and income and SRK for the criminal justice chain (noraonline.nl/wiki/NORA_dochters; noraonline.nl/wiki/Visie_op_dochters; nl.wikipedia.org 'Nederlandse Overheid Referentie Architectuur'). NOT READ — search-only. This entity is EAR, the central-government architecture, named in that list."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Wat is de Enterprise Architectuur Rijksdienst"

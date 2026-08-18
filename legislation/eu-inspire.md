@@ -35,9 +35,17 @@ domains:
   - DOMAIN-GEOSPATIAL
 organisations: []
 related_entities:
+  - NL
   - DE-GEOZG
   - DE-GDI-DE
 relationships:
+  - type: applies-in
+    target: NL
+    source: fact
+    evidence: "The Netherlands transposed the INSPIRE directive through the Implementatiewet EG-richtlijn infrastructuur ruimtelijke informatie and the INSPIRE Besluit, which came into force on 1 September 2009; Geonovum supported Dutch data providers with INSPIRE implementation at the request of the Ministry of the Interior and Kingdom Relations (geonovum.nl 'Nederlandse INSPIRE-wet treedt in werking'; geonovum.nl 'Wetsvoorstel implementatie INSPIRE behandeld in Tweede Kamer'; europadecentraal.nl 'INSPIRE-richtlijn'). NOT READ — search-only."
+    confidence: medium
+    valid_from: 2009-09-01
+    valid_until: null
   - type: applies-in
     target: DE
     source: fact

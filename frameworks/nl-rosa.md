@@ -31,7 +31,14 @@ domains:
 organisations: []
 related_entities:
   - NL-NORA
-relationships: []
+relationships:
+  - type: based-on
+    target: NL-NORA
+    source: fact
+    evidence: "NORA has daughter architectures (NORA dochters) from government domains, including EAR for central government, GEMMA for municipalities, PETRA for the provinces and WILMA for the water boards, alongside domain and chain architectures such as ROSA for education, KARWEI for work and income and SRK for the criminal justice chain (noraonline.nl/wiki/NORA_dochters; noraonline.nl/wiki/Visie_op_dochters; nl.wikipedia.org 'Nederlandse Overheid Referentie Architectuur'). NOT READ — search-only. This entity is ROSA, the education chain architecture, named in that list."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Ketenreferentie-architectuur ROSA"
@@ -69,8 +76,15 @@ Batch 4 is what brought that domain to the two-entity threshold in
 
 ## Relationships
 
-None asserted. ROSA's relationship to [[NL-NORA]] is likely (the Dutch
-reference architectures generally descend from NORA) but was not sourced.
+- `based-on` [[NL-NORA]] — **now sourced.** An earlier version of this entity
+  said the NORA relationship was "likely… but was not sourced". NORA's own
+  wiki enumerates its *dochters*: EAR for central government, GEMMA for
+  municipalities, PETRA for the provinces, WILMA for the water boards, and
+  domain and chain architectures including **ROSA for education**. The same
+  page sources [[NL-PETRA]] and [[NL-EAR]].
+
+The `maintained-by` edge to Edustandaard is still unasserted — that body is
+still not an Atlas entity.
 
 ## Sources
 

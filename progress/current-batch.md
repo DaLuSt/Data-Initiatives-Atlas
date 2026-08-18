@@ -1,7 +1,66 @@
 # Current Batch
 
-**Status:** No batch in progress. **Connecting the United Kingdom** was
-completed on 2026-08-17, after the layout work.
+**Status:** No batch in progress. **Connecting the loose nodes** was
+completed on 2026-08-17, after the UK connection batch.
+
+## Connecting the loose nodes
+
+**No new entities. 14 relationships added**, 376 → 390. The relationship
+layer was fragmented into **39 components**; it is now **31**, and the
+largest has grown from **184 to 224 of 265 entities**.
+
+Every edge was researched and sourced. Where the Atlas had already looked
+and refused for want of a source, **that refusal was left standing**.
+
+| Edge | Nodes pulled into the main component |
+|---|---|
+| [[EU-EIDAS]] `applies-in` × 6 | **7** — the German identity/OZG cluster |
+| [[NL-PDOK]] `aligned-with` [[EU-INSPIRE]] | **21** — the whole basisregistraties system |
+| [[FR-RGI]] `based-on` [[EU-EIF]] | **5** — the French DINUM/Etalab cluster |
+| [[NL-EAR]] `based-on` [[NL-NORA]] | 2, with [[NL-RORA]] |
+| [[DE-BFDI]] `applies-to` [[DE-BDSG]] | 2, with [[DE-IFG]] |
+| [[NL-ROSA]], [[NL-PETRA]] `based-on` [[NL-NORA]] | 2 isolated frameworks |
+| [[EU-INSPIRE]] `applies-in` [[NL]] | completes INSPIRE 6/6 |
+| [[ES-CLAVE]] → [[EU-EIDAS]] | 1 isolated platform |
+
+**Two were open backlog items.** [[EU-EIDAS]] had **no `applies-in` edges at
+all** despite being an active EU regulation — flagged by the
+comparison-matrix batch — and fixing it reconnected seven German entities.
+[[EU-INSPIRE]] applied in five countries and not the Netherlands; the Dutch
+*Implementatiewet* of **1 September 2009** closed it.
+
+**The most valuable edge was not obvious.** [[NL-PDOK]] `aligned-with`
+[[EU-INSPIRE]] connected **21 entities** — every Dutch base registry, the
+stelsel, [[NL-KADASTER]], [[NL-KVK]], [[NL-RDW]]. The whole system had been
+a sealed island since the register batch. One sourced sentence about a
+platform's standards conformance was the door into a fifth of the Atlas.
+
+**The NORA family is sourced at last.** [[NL-ROSA]] said its NORA link was
+*"likely… but was not sourced"*; [[NL-PETRA]] said the obvious edges were
+*"precisely what could not be"* sourced. NORA's own wiki enumerates its
+**dochters** — one page sourced three edges, and both entities' prose was
+rewritten.
+
+**What was left disconnected, deliberately:** [[ES-INCIBE]] ↔ [[ES-LCGC]]
+(*"a contested draft allocation of competences is not a relationship"*),
+[[NL-HEALTH-RI]] ↔ [[EU-EHDS]] (designation phase runs 2027–2029),
+[[INTL-IETF]] ↔ [[INTL-W3C]] (a comparison, not a relationship), the seven
+`DOMAIN-*` entities (isolated **by design**), and three organisation-only
+pairs with no sourced edge to anything.
+
+⚠ **A convention question answered by not acting.** 72 national instruments
+lack `applies-in` to their own country, and 25 of them are the detached
+ones — so the blanket pass would have connected most of what remains. It was
+**not done**: `applies-in` is defined as the country-neutral applicability
+mechanism, and using it for "this Dutch law applies in the Netherlands"
+would make 72 of 181 such edges tautological. The backlog item is rewritten
+to say the UK edges should probably be **reconsidered rather than
+extended**.
+
+**Verification:** `run_all.py` 5/5 · `test_build_graph.py` 37 tests ·
+`test_ui.mjs` 81/81 · 265 entities, 2,825 edges, 390 relationships.
+
+See `progress/completed.md` for the full entry.
 
 ## Connecting the United Kingdom
 
