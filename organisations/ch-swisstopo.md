@@ -28,8 +28,16 @@ successor: null
 domains:
   - DOMAIN-GEOSPATIAL
 organisations: []
-related_entities: []
-relationships: []
+related_entities:
+  - CH
+relationships:
+  - type: part-of
+    target: CH
+    source: fact
+    evidence: "swisstopo is the Swiss federal office of topography, responsible for official national mapping and the federal geodata infrastructure (swisstopo.admin.ch; geo.admin.ch). NOT READ — search-only. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "swisstopo — Bundesamt für Landestopografie"

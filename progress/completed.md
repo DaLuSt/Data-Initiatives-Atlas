@@ -1,5 +1,70 @@
 # Completed Batches
 
+## Every entity reaches its scope anchor
+
+**Date:** 2026-08-18
+
+A rule, 24 edges, one new entity, and enforcement. 340 → **341 entities**,
+498 → **522 relationships**; components **45 → 22**, largest **283 → 302**,
+entities with no typed relationship **32 → 8, all of them domains**.
+
+### The rule
+
+`metadata/relationship-types.md` **§2.3**: every entity carries at least one
+provenanced relationship, in or out. Where no substantive edge could be
+sourced, the entity takes an **anchor edge** to its scope — following the two
+conventions already in the repository, `applies-in` for country anchors and
+`part-of` for [[EU]] and [[UN]].
+
+| Entity kind | Edge | Count |
+|---|---|---|
+| Instruments | `applies-in` its country | 7 |
+| State bodies and public platforms | `part-of` its country | 14 |
+| National bodies **not** part of the state | `related-to` its country | 2 |
+| [[INTL-IETF]] | `part-of` [[INTL-ISOC]] | 1 |
+
+An anchor edge asserts scope and nothing more. Each carries evidence ending
+in a sentence naming itself as an anchor edge, so they can be found and
+replaced; the missing substantive edges stay in `discovery/unresolved.md`.
+
+### Two entities that could not take `part-of`
+
+[[NL-SURF]] is member-owned and [[NL-NICTIZ]] is a foundation. `part-of`
+means structural containment, so using it would have turned a filing
+convention into a false claim about ownership. Both take `related-to`.
+
+### [[INTL-ISOC]] — the batch's only new entity
+
+[[INTL-IETF]] belongs to no country and is not part of the EU or UN. Its
+actual parent is the Internet Society, via the IETF Administration LLC — a
+single-member disregarded entity of ISOC. The LLC is not modelled, so the
+edge collapses two hops into one, stated on both entities.
+
+### Why domains are exempt
+
+They are classification nodes reached by **association**, and in that layer
+they are the three largest nodes in the Atlas: [[DOMAIN-GOVERNMENT]] at
+degree **232**, [[DOMAIN-NATIONAL-SECURITY]] at 47,
+[[DOMAIN-CYBERSECURITY]] at 35. A test asserts the exemption **earns
+itself** — that every domain is still referenced by some entity's `domains:`
+list, so it is not unreachable in both layers at once.
+
+### Enforcement
+
+`validate_relationships.py` fails the build on any orphan and names the
+exemption; verified against a deliberately broken entity. Two tests added
+(39 → **41**). `CONTRIBUTING.md` gains step 6a.
+
+### A reversal, recorded rather than buried
+
+Two batches ago the Atlas argued own-country `applies-in` should be
+reconsidered rather than extended, and declined it for eighteen national
+acts. This batch extends it on the maintainer's instruction and makes it a
+documented rule. The original objection stands — it does give `applies-in` a
+second meaning — but a documented second meaning costs less than 24 entities
+being invisible. `progress/backlog.md` is updated so the note no longer
+contradicts the ontology.
+
 ## Norway, Switzerland and Ireland — countries eight, nine and ten
 
 **Date:** 2026-08-18

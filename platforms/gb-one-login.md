@@ -37,11 +37,19 @@ domains:
 organisations:
   - GB-GDS
 related_entities:
+  - GB
   - FR-FRANCECONNECT
   - DE-BUNDID
   - PL-MOBYWATEL
   - EU-EIDAS2
-relationships: []
+relationships:
+  - type: part-of
+    target: GB
+    source: fact
+    evidence: "GOV.UK One Login is the United Kingdom government's single sign-in and identity verification service across government services (sign-in.service.gov.uk; gds.blog.gov.uk). NOT READ — search-only. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "GOV.UK One Login — technical documentation"

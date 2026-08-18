@@ -28,10 +28,18 @@ domains:
   - DOMAIN-GOVERNMENT
 organisations: []
 related_entities:
+  - IE
   - EU-CEN
   - EU-CENELEC
   - INTL-ISO
-relationships: []
+relationships:
+  - type: part-of
+    target: IE
+    source: fact
+    evidence: "The National Standards Authority of Ireland is Ireland's national standards body (nsai.ie). NOT READ — search-only. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "National Standards Authority of Ireland"

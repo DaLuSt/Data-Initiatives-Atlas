@@ -30,8 +30,16 @@ successor: null
 domains:
   - DOMAIN-GEOSPATIAL
 organisations: []
-related_entities: []
-relationships: []
+related_entities:
+  - "NO"
+relationships:
+  - type: part-of
+    target: "NO"
+    source: fact
+    evidence: "Kartverket is Norway's national mapping and cadastral authority (kartverket.no; geonorge.no). NOT READ — search-only. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Kartverket"

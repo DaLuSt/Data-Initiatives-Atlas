@@ -31,8 +31,16 @@ successor: null
 domains:
   - DOMAIN-GEOSPATIAL
 organisations: []
-related_entities: []
-relationships: []
+related_entities:
+  - IE
+relationships:
+  - type: part-of
+    target: IE
+    source: fact
+    evidence: "Tailte Éireann holds Ireland's national mapping, land registration and property valuation functions, formed from Ordnance Survey Ireland, the Property Registration Authority and the Valuation Office (tailte.ie). NOT READ — search-only. Carried at low confidence in line with the rest of this entity, whose merger was not confirmed against a primary source. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    confidence: low
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Tailte Éireann"

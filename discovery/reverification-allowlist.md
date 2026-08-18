@@ -7,11 +7,11 @@ Generated: 2026-08-18
 
 ## Why this exists
 
-**333 of the Atlas's 340 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
+**334 of the Atlas's 341 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
 
 Closing that debt — the re-verification pass — needs outbound HTTPS to the hosts those URLs point at. In an environment with a restricted egress policy, this is the allowlist to request. A denial shows up as `403 to CONNECT` from the proxy, which is an environment-level network policy and cannot be changed from inside a session. See `discovery/unresolved.md` for the standing record of the sourcing debt.
 
-The Atlas currently cites **1104 source URLs** across **417 hosts**, collapsing to **308 registrable domains**.
+The Atlas currently cites **1107 source URLs** across **419 hosts**, collapsing to **309 registrable domains**.
 
 ## Highest value first
 
@@ -229,6 +229,7 @@ hypotheses.org
 iberley.es
 ico.org.uk
 ictu.nl
+ietf.org
 incibe.es
 ine.es
 informationssicherheitsbeauftragter-dresden.de

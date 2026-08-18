@@ -1,9 +1,122 @@
 # Current Batch
 
-**Status:** No batch in progress. **Norway, Switzerland and Ireland** was
-completed on 2026-08-18, after the intelligence and security services.
+**Status:** No batch in progress. **Every entity reaches its scope anchor**
+was completed on 2026-08-18, after Norway, Switzerland and Ireland.
 
-## Norway, Switzerland and Ireland
+## Every entity reaches its scope anchor
+
+A rule, 24 edges, one new entity, and enforcement so it holds.
+
+**The rule** — now `metadata/relationship-types.md` §2.3: *every entity
+carries at least one provenanced relationship, in or out.* An entity that
+connects to nothing is invisible in the graph, and the Atlas exists to be a
+graph.
+
+### The result
+
+| | Before | After |
+|---|---:|---:|
+| Entities | 340 | **341** |
+| Typed relationships | 498 | **522** |
+| Components | 45 | **22** |
+| Largest component | 283 | **302** |
+| Entities with no typed relationship | 32 | **8 — all domains** |
+
+### What an anchor edge is
+
+Where an entity had no substantive relationship — its statutory basis
+unidentified, its custodian unnamed, or the obvious edge resting on a page
+found but not read — it now takes an **anchor edge** to the scope it belongs
+to. This follows the two conventions the repository already had: country
+anchors are reached by `applies-in`, [[EU]] and [[UN]] by `part-of`.
+
+| Entity | Edge | Count |
+|---|---|---|
+| Instruments — `law`, `strategy`, `data-space` | `applies-in` its country | 7 |
+| State bodies and public platforms | `part-of` its country | 14 |
+| National bodies **not** part of the state | `related-to` its country | 2 |
+| [[INTL-IETF]] | `part-of` [[INTL-ISOC]] | 1 |
+
+Every anchor edge carries evidence, and every one ends with a sentence
+naming itself as an anchor edge, so they can be found and revisited when the
+substantive edge turns up. **An anchor edge asserts scope and nothing more**
+— the missing substantive edges stay in `discovery/unresolved.md`.
+
+### The distinction that mattered
+
+[[NL-SURF]] is a cooperative **owned by its members** and [[NL-NICTIZ]] is a
+foundation. Neither is part of the Dutch state, so `part-of` would have been
+a false claim about ownership dressed up as a filing convention. Both take
+**`related-to`** instead, and say so in their evidence.
+
+That is the whole risk of a rule like this: it makes it cheap to blur a
+type. Fourteen bodies took `part-of` because their own sources describe them
+as federal offices, directorates, departments or government services; two
+did not.
+
+### [[INTL-IETF]] was the hard case
+
+It belongs to no country, is not part of the EU or the UN, and the Atlas has
+no `INTL` anchor to fall back on. Rather than attach it somewhere
+convenient, this batch found its **actual** parent: the IETF Administration
+LLC is the corporate home of the IETF, the IAB and the IRTF, and is a
+*single-member disregarded entity* of the **Internet Society**.
+
+[[INTL-ISOC]] was created for it — the batch's only new entity, and
+deliberately a stub with a job. The IETF LLC itself is not modelled, so the
+edge collapses `IETF → IETF LLC → ISOC` into one hop, which both entities
+state rather than hide.
+
+### Domains are exempt, and they earn it
+
+The 8 `DOMAIN-*` entities carry no typed relationships and never will. They
+are classification nodes: they carry no factual claims, are already exempt
+from the source requirement, and are reached by **association** through
+every entity's `domains:` list.
+
+Calling them unconnected is an artefact of looking at one layer. In the
+association layer they are the **three largest nodes in the Atlas**:
+
+| Node | Association degree |
+|---|---:|
+| [[DOMAIN-GOVERNMENT]] | **232** — the most connected node in the repository |
+| [[DOMAIN-NATIONAL-SECURITY]] | 47 |
+| [[DOMAIN-CYBERSECURITY]] | 35 |
+
+Giving them typed edges would mean inventing a hierarchy that does not
+exist.
+
+### Enforcement, so the rule is not just a paragraph
+
+- **`validate_relationships.py`** fails the build on any entity with no
+  provenanced relationship in either direction, naming §2.3 and the domain
+  exemption. Verified against a deliberately broken entity before shipping.
+- **`tools/test_build_graph.py`** gains two tests (39 → **41**): one
+  asserting no orphans, and one asserting the domain exemption **earns
+  itself** — if a domain stopped being referenced by any entity's `domains:`
+  list it would be unreachable in *both* layers, and the exemption would be
+  hiding it rather than explaining it.
+- **`CONTRIBUTING.md`** step 6a tells a contributor what to do when they
+  cannot source a substantive edge.
+
+### A reversal, recorded
+
+Two batches ago this repository argued that own-country `applies-in` should
+be **reconsidered rather than extended**, and declined to add it to eighteen
+national acts. This batch extends it deliberately, on the maintainer's
+instruction, and makes it a documented rule rather than an inconsistency.
+
+The earlier objection was that an edge asserting only "a national instrument
+applies in its own country" gives `applies-in` a second meaning. That is
+still true. What changed is the trade: a second, clearly documented meaning
+is worth less than 24 entities being invisible in the graph. The backlog
+note is updated to say so rather than left contradicting the ontology.
+
+---
+
+## Norway, Switzerland and Ireland — previous batch
+
+**Status:** completed 2026-08-18.
 
 **27 new entities** across three countries, plus 18 `applies-in` edges to
 Ireland. 312 → **339 entities**, 466 → **495 relationships**. The Atlas goes

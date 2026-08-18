@@ -27,8 +27,16 @@ successor: null
 domains:
   - DOMAIN-HEALTH
 organisations: []
-related_entities: []
-relationships: []
+related_entities:
+  - NL
+relationships:
+  - type: related-to
+    target: NL
+    source: fact
+    evidence: "Nictiz is the Dutch knowledge organisation for digital information provision in healthcare, developing and managing the information standards used in Dutch care (nictiz.nl). NOT READ — search-only. `related-to` and not `part-of`: Nictiz is a foundation, not a body of the Dutch state, so structural containment is not claimed. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Wat we doen"

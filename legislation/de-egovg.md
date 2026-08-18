@@ -34,9 +34,17 @@ domains:
   - DOMAIN-GOVERNMENT
 organisations: []
 related_entities:
+  - DE
   - DE-DNG
   - DE-OZG
-relationships: []
+relationships:
+  - type: applies-in
+    target: DE
+    source: fact
+    evidence: "The E-Government-Gesetz is a German federal act, enacted as Article 1 of the act of 25 July 2013 and largely in force from 31 August 2013, removing federal-law obstacles to electronic communication with and within the administration (gesetze-im-internet.de/egovg; bmi.bund.de). NOT READ — search-only. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "EGovG — Gesetz zur Förderung der elektronischen Verwaltung"

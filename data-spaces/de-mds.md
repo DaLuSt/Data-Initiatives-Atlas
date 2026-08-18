@@ -32,9 +32,17 @@ domains:
   - DOMAIN-MOBILITY
 organisations: []
 related_entities:
+  - DE
   - DE-MOBILITHEK
   - EU-EMDS
-relationships: []
+relationships:
+  - type: applies-in
+    target: DE
+    source: fact
+    evidence: "The Mobility Data Space is a German data space for the mobility sector, promoting cross-sectoral data-driven collaboration between transport undertakings, the automotive industry, mobility service providers and municipalities (mobility-dataspace.eu; bmdv.bund.de). NOT READ — search-only. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Mobility Data Space"

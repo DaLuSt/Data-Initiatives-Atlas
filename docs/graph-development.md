@@ -61,10 +61,10 @@ Environment:
 Output on success:
 
 ```
-build_graph: 340 entities, 3932 edges (498 relationship, 1307 association, 2127 wikilink)
+build_graph: 341 entities, 3986 edges (522 relationship, 1333 association, 2131 wikilink)
              10 countries, 1 region(s), 15 entity types in use
-build_graph: wrote site/graph.json (421 KB)
-build_graph: wrote site/details.json (574 KB)
+build_graph: wrote site/graph.json (426 KB)
+build_graph: wrote site/details.json (586 KB)
 ```
 
 ---
@@ -72,13 +72,14 @@ build_graph: wrote site/details.json (574 KB)
 ## Tests
 
 ```bash
-python tools/test_build_graph.py          # required — 39 tests, no extra deps
+python tools/test_build_graph.py          # required — 41 tests, no extra deps
 ```
 
 Covers: YAML parsing (including the **`NO` boolean trap** — `country: NO`
 unquoted parses as `False` under YAML 1.1), file discovery, ID uniqueness,
-required fields, node
-generation, edge generation, **relationship direction**, vocabulary
+required fields, **scope-anchor reachability** (§2.3 — every entity carries
+at least one provenanced relationship, domains excepted), node generation,
+edge generation, **relationship direction**, vocabulary
 conformance, phantom-node refusal, dynamic country and **domain** discovery,
 provenance and confidence facet totals, dynamic statistics, the payload
 split, and whether the committed `site/graph.json` still matches the

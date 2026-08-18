@@ -37,13 +37,21 @@ domains:
 organisations:
   - ES-AEAD
 related_entities:
+  - ES
   - ES-AEAD
   - ES-SGAD
   - ES-AESIA
   - EU-DIGITAL-DECADE
   - NL-DIGIBETER
   - DE-DIGITALSTRATEGIE
-relationships: []
+relationships:
+  - type: applies-in
+    target: ES
+    source: fact
+    evidence: "España Digital 2026 is Spain's national digital transformation roadmap, an update to the strategy launched in July 2020, including an axis on co-governance between the State and the Autonomous Communities (digital.gob.es; lamoncloa.gob.es). NOT READ — search-only. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "España Digital 2026 | Portal MTDFP"

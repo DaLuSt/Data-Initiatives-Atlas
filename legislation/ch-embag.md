@@ -35,9 +35,17 @@ domains:
   - DOMAIN-GOVERNMENT
 organisations: []
 related_entities:
+  - CH
   - CH-OPENDATA-SWISS
   - CH-DVS
-relationships: []
+relationships:
+  - type: applies-in
+    target: CH
+    source: fact
+    evidence: "The EMBAG is a Swiss federal act creating the legal basis for the digital transformation of the federal administration; it came into force for central administrative units on 1 January 2024 and for decentralised units in May 2025 (digital.swiss; netzwoche.ch). NOT READ — search-only. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Bundesgesetz über den Einsatz elektronischer Mittel zur Erfüllung von Behördenaufgaben (EMBAG)"
