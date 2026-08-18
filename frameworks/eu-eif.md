@@ -30,9 +30,17 @@ domains:
   - DOMAIN-GOVERNMENT
 organisations: []
 related_entities:
+  - IE
   - NL-NORA
   - EU-INTEROPERABLE-EUROPE-ACT
 relationships:
+  - type: applies-in
+    target: IE
+    source: fact
+    evidence: "European Interoperability Framework is an EU-level instrument addressed to the member states, and Ireland is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: applies-in
     target: NL
     source: fact

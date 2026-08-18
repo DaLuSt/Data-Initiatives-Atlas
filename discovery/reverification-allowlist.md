@@ -7,11 +7,11 @@ Generated: 2026-08-18
 
 ## Why this exists
 
-**305 of the Atlas's 312 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
+**333 of the Atlas's 340 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
 
 Closing that debt — the re-verification pass — needs outbound HTTPS to the hosts those URLs point at. In an environment with a restricted egress policy, this is the allowlist to request. A denial shows up as `403 to CONNECT` from the proxy, which is an environment-level network policy and cannot be changed from inside a session. See `discovery/unresolved.md` for the standing record of the sourcing debt.
 
-The Atlas currently cites **1024 source URLs** across **380 hosts**, collapsing to **279 registrable domains**.
+The Atlas currently cites **1104 source URLs** across **417 hosts**, collapsing to **308 registrable domains**.
 
 ## Highest value first
 
@@ -19,8 +19,8 @@ Allowing just these covers the bulk of the pass:
 
 | Domain | URLs | Entities |
 |---|---|---|
-| `europa.eu` | 88 | 53 |
-| `wikipedia.org` | 62 | 62 |
+| `europa.eu` | 100 | 62 |
+| `wikipedia.org` | 64 | 64 |
 | `bund.de` | 41 | 23 |
 | `digitaleoverheid.nl` | 40 | 28 |
 | `gov.pl` | 40 | 18 |
@@ -29,16 +29,16 @@ Allowing just these covers the bulk of the pass:
 | `un.org` | 17 | 10 |
 | `belgium.be` | 17 | 9 |
 | `unece.org` | 17 | 7 |
+| `iso.org` | 17 | 15 |
 | `rijksoverheid.nl` | 16 | 12 |
 | `bundestag.de` | 15 | 11 |
 | `legislation.gov.uk` | 15 | 14 |
 | `boe.es` | 14 | 12 |
-| `iso.org` | 14 | 12 |
+| `admin.ch` | 13 | 7 |
 | `overheid.nl` | 13 | 13 |
 | `eerstekamer.nl` | 12 | 12 |
 | `forumstandaardisatie.nl` | 12 | 5 |
 | `vng.nl` | 11 | 7 |
-| `fitko.de` | 11 | 6 |
 
 ## Institutional domains
 
@@ -62,10 +62,12 @@ gdi-de.org
 geonovum.nl
 gesetze-im-internet.de
 gov.be
+gov.ie
 gov.pl
 gov.scot
 gov.uk
 govdata.de
+government.is
 government.nl
 iso.org
 it-planungsrat.de
@@ -98,6 +100,7 @@ Trade press, law firms, encyclopedias and vendor pages. Lower value, but cited s
 ```
 activemind.de
 ad4gd.eu
+admin.ch
 aepd.es
 afdsd.fr
 aftermarket-trends.de
@@ -105,9 +108,11 @@ agoria.be
 aivd.nl
 akademicka.pl
 alston.com
+altinn.no
 anabad.org
 anwalt.org
 aoshearman.com
+app.ch
 april.org
 arena2036.de
 arnoldporter.com
@@ -156,6 +161,8 @@ dagdok.org
 data-spaces-symposium.eu
 datactivist.coop
 dataportals.org
+dataprotection.ie
+datatilsynet.no
 datopian.com
 dcat-ap.de
 de.digital
@@ -163,9 +170,13 @@ decideo.fr
 defensie.nl
 deloitte.com
 diariodeleon.es
+digdir.no
 digigo.nu
+digital.swiss
+digitale-verwaltung-schweiz.ch
 digitale-verwaltung.de
 dlapiper.com
+dlapiperdataprotection.com
 dma.org.uk
 dnb.de
 dnb.nl
@@ -196,10 +207,12 @@ gabler.de
 gaia-x-hub.de
 gaia-x.at
 gaia-x.eu
+gdprregulation.eu
 gegevensbeschermingsautoriteit.be
 geheimdienste.org
 geobasisregistraties.nl
 geologischedienst.nl
+geonorge.no
 geostandaarden.nl
 github.com
 github.io
@@ -223,6 +236,7 @@ ing-ism.de
 investigatorypowerstribunal.org.uk
 ipco.org.uk
 ipo.nl
+irishstatutebook.ie
 ishare.eu
 its-mobility.de
 itwiz.pl
@@ -230,6 +244,8 @@ jtc1info.org
 juntadeandalucia.es
 juridicas.com
 kadaster.nl
+kalaidos-fh.ch
+kartverket.no
 kbvg.nl
 legalgeek.pl
 legiscope.com
@@ -237,6 +253,8 @@ lejdd.fr
 lexisnexis.co.uk
 lexisnexis.com
 lexlege.pl
+linklaters.com
+lovdata.no
 medialaws.eu
 mobilithek.info
 mobility-data-space.de
@@ -250,11 +268,14 @@ ndfr.nl
 ndw.nu
 nen.nl
 netzpolitik.org
+netzwoche.ch
 nictiz.nl
 niedersachsen.de
 nis-2-directive.com
 nisd2.eu
 njb.nl
+nsai.ie
+nsm.no
 odoserwis.pl
 oecd-ilibrary.org
 oecd.org
@@ -263,16 +284,19 @@ officielebekendmakingen.nl
 om.nl
 oneid.uk
 ontolocy.com
+opendata.swiss
 openjustice.be
 openkritis.de
 opennederland.nl
 ordnancesurvey.co.uk
 osborneclarke.com
 pap-mediaroom.pl
+parldigi.ch
 parlementairemonitor.nl
 parliament.uk
 pdok.nl
 personalausweisportal.de
+piwikpro.de
 politykabezpieczenstwa.pl
 privacyworld.blog
 prodwaregroup.com
@@ -283,6 +307,7 @@ publictechnology.net
 quality.de
 rdw.nl
 red.es
+regjeringen.no
 rehm-verlag.de
 rijksbegroting.nl
 rijksfinancien.nl
@@ -295,9 +320,12 @@ secjur.com
 security-insider.de
 sgrs.be
 smartcountry.berlin
+snl.no
 springerprofessional.de
+ssb.no
 surf.nl
 sva.nl
+tailte.ie
 taylorwessing.com
 taz.de
 tcontas.pt
@@ -330,6 +358,7 @@ waarderingskamer.nl
 walhalla.de
 whitecase.com
 wikipedia.org
+williamfry.com
 xoev.de
 ```
 

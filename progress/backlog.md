@@ -466,6 +466,65 @@ visible from any single entity.
   drinking water. [[GB-OFCOM]] and [[GB-ICO]] are modelled; Schedule 1 names
   more.
 
+## Opened by the structural review of 2026-08-18
+
+A review after the intelligence-services batch, prompted by the question
+"what should be added next". The full ranked detail is in
+`discovery/candidates.md`; this is the actionable summary.
+
+**Acted on immediately:** Norway, Switzerland and Ireland were added in the
+batch of 2026-08-18. What follows is what that review found and did **not**
+act on.
+
+### Better value than any new country
+
+- [ ] **Connect the national DPAs to [[EU-EDPB]].** `EU-EDPB` has **2**
+  incoming edges ([[NL-AP]] and [[EU-EDPS]]) against [[EU-ESS]]'s **6**.
+  The Atlas holds eight data protection authorities and links one. The
+  Spain batch called [[EU-ESS]] "the single highest-value item this batch
+  produced"; the identical play is unplayed here and **needs no new
+  entity**.
+- [ ] **INSEE.** France is the only Atlas country with no statistical
+  office, and a free [[EU-ESS]] member. Queued since the France batch.
+- [ ] **NBN, AFNOR, UNE, PKN** — the four missing national standards
+  bodies. [[GB-BSI]] is the most connective UK entity; the pattern works.
+- [ ] **A Dutch cyber authority.** [[NL-CBW]] is a NIS2 act with no
+  authority attached.
+
+### The vocabulary the Atlas defines and does not use
+
+- [ ] **`technology`** — 0 of 17 types. X-Road and the IDS-RAM are the
+  best-evidenced candidates and are already queued.
+- [ ] **`publication`** — 0 uses. Oversight reports; then DESI and the
+  eGovernment Benchmark, which would give the Atlas a comparative-
+  measurement layer it entirely lacks.
+- [ ] **`region` entities** — only [[EU]] exists. **The EEA Agreement is
+  now a live gap**, not a theoretical one: [[NO]] carries EEA-route
+  relationships whose target is described only in prose.
+- [ ] **`level: local`** — **0 uses** against 224 `national`. Named as a
+  blocker in four separate batches (Flanders, the Comunidades Autónomas,
+  the German Länder, Dutch municipalities). A **design decision**, and the
+  single item gating the most queued work.
+
+### The domain layer is lopsided
+
+Cybersecurity, government and national-security are 7/7. Geospatial is 3/7,
+mobility 2/7, and **health, education and research are 1/7 — the
+Netherlands only.**
+
+- [ ] **A health-data batch across DE, FR, ES, BE, PL and GB.** Six of
+  seven countries have no health entity at all, in an Atlas that holds
+  [[EU-EHDS]]. The largest single correction available to the domain layer.
+
+### Countries, ranked
+
+Italy, Estonia (+ Finland, for NIIS/X-Road), Denmark, Sweden, Austria,
+Czechia, Portugal. Reasoning and the structural argument for each are in
+`discovery/candidates.md`.
+
+- [ ] **Iceland and Liechtenstein** would show whether the Norwegian EEA
+  pattern generalises or is Norway-specific.
+
 ## Explicitly out of scope for now
 
 - Countries beyond the five modelled (structure supports them; no content

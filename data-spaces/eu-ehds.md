@@ -31,6 +31,7 @@ domains:
   - DOMAIN-HEALTH
 organisations: []
 related_entities:
+  - IE
   - EU-COMMON-DATA-SPACES
   - NL-HEALTH-RI
 relationships:
@@ -38,6 +39,13 @@ relationships:
     target: EU-COMMON-DATA-SPACES
     source: fact
     evidence: "Health is one of the 14 common European data spaces identified in the Commission's January 2024 staff working document (SWD(2024) 21; digital-strategy.ec.europa.eu data-spaces). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: IE
+    source: fact
+    evidence: "European Health Data Space is an EU-level instrument addressed to the member states, and Ireland is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
     confidence: medium
     valid_from: null
     valid_until: null

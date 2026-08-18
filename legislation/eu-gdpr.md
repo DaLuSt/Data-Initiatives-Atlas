@@ -31,10 +31,18 @@ domains:
   - DOMAIN-GOVERNMENT
 organisations: []
 related_entities:
+  - IE
   - NL-UAVG
   - NL-AP
   - EU-DIGITAL-OMNIBUS
 relationships:
+  - type: applies-in
+    target: IE
+    source: fact
+    evidence: "As an EU regulation the GDPR is binding in its entirety and directly applicable in all member states; Ireland gave it further effect through the Data Protection Act 2018, which establishes the Data Protection Commission as the supervisory authority, and the Commission conducts inquiries in accordance with that Act and Article 60 of the GDPR (dataprotection.ie 'Inquiry into TikTok Technology Limited'; irishstatutebook.ie No. 7 of 2018; edpb.europa.eu). NOT READ — search-only. See IE-DPA-2018."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: applies-in
     target: NL
     source: fact

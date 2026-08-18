@@ -30,9 +30,17 @@ domains:
   - DOMAIN-GOVERNMENT
 organisations: []
 related_entities:
+  - IE
   - EU-NIS2
   - EU-CYBERSECURITY-STRATEGY
 relationships:
+  - type: applies-in
+    target: IE
+    source: fact
+    evidence: "As an EU directive, Critical Entities Resilience Directive is binding on every member state as to the result to be achieved and requires national transposition, and Ireland is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: applies-in
     target: NL
     source: fact

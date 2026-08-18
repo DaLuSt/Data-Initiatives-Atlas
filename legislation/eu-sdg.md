@@ -32,6 +32,13 @@ organisations: []
 related_entities: []
 relationships:
   - type: applies-in
+    target: IE
+    source: fact
+    evidence: "As an EU regulation, Single Digital Gateway Regulation is binding in its entirety and directly applicable in all member states without national transposition, and Ireland is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu; consilium.europa.eu). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-in
     target: NL
     source: fact
     evidence: "The regulation establishes a single digital gateway for citizens and businesses across the internal market and has applied since 12 December 2020 (EUR-Lex summary of the single digital gateway). NOT READ — search-only."

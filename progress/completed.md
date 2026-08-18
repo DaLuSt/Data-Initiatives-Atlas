@@ -1,5 +1,90 @@
 # Completed Batches
 
+## Norway, Switzerland and Ireland — countries eight, nine and ten
+
+**Date:** 2026-08-18
+
+**27 new entities** plus 18 `applies-in` edges to Ireland.
+312 → **339 entities**, 466 → **495 relationships**, seven countries → **ten**.
+
+Chosen from the structural review recorded in `discovery/candidates.md`, and
+chosen for what each **proves**.
+
+### The four relationships to EU law are now all represented
+
+| Position | Country | Mechanism |
+|---|---|---|
+| Member state | NL, DE, BE, FR, ES, PL, **IE** | Direct applicability or transposition |
+| Former member state | GB | Assimilated law, adequacy, extraterritorial scope |
+| **EEA EFTA state** | **NO** | **EEA Joint Committee incorporation, then national implementation** |
+| **Neither** | **CH** | **Autonomous law, adequacy, bilateral agreements** |
+
+The Norwegian case is datable and is the batch's sharpest result: the GDPR
+was applicable in the member states on **25 May 2018** and took effect in
+Norway on **20 July 2018**, after **JCD No 154/2018** incorporated it into
+Annex XI of the EEA Agreement on 6 July. **Eight weeks of divergence that a
+member state cannot have** — and the reason [[NO]] carries no `applies-in`
+edge.
+
+### A fourth type for a national data protection act
+
+[[CH-REVDSG]] carries `aligned-with` [[EU-GDPR]]. No requirement obliged
+Switzerland to legislate; it harmonised to keep **adequacy** under Article
+45. Alongside `implements-requirement-from` (six countries),
+`derived-from` ([[GB-UK-GDPR]]) and direct applicability (BE, FR), that
+completes the set.
+
+[[CH-EMBAG]] is the Atlas's **first statutory open-source mandate**.
+
+### The one-stop-shop enters the graph
+
+[[IE-DPC]] is Article 56 lead supervisory authority for much of the
+technology sector established in the Union, worked through the €530m TikTok
+Article 60 decision. [[EU-EDPB]] went from **two** incoming edges to three.
+The general fix — the other five member-state authorities — was **not done**
+and remains the top item in `discovery/candidates.md`.
+
+### Tooling: the YAML boolean trap
+
+`NO` is a YAML 1.1 boolean. An unquoted `country: NO` silently parsed as
+`False`, and every Norwegian entity failed validation. Fixed by quoting, then
+guarded so it cannot recur silently:
+
+- `validate_frontmatter.py` names the coercion for `id` and `country`.
+- `tools/test_build_graph.py` gains two tests (37 → **39**): a general one,
+  and one pinning Norway by name.
+
+This is the first defect in this repository caused by the **serialisation
+format** rather than by research or modelling, and the only ISO 3166-1
+alpha-2 code the Atlas uses that collides.
+
+### Domain effect
+
+[[DOMAIN-GEOSPATIAL]] goes from **3 of 7** countries to **6 of 10**
+([[NO-KARTVERKET]], [[CH-SWISSTOPO]], [[IE-TAILTE]]). Belgium, Spain,
+France and Poland remain without any geospatial entity, which is now the
+more conspicuous gap.
+
+### Connectivity
+
+312 → 340 entities, 466 → 498 relationships; components 31 → **45**,
+largest 272 → **283**, isolated 21 → **32**. **Eleven of the twenty-eight
+new entities carry no typed relationship**, each a documented refusal rather
+than an oversight. That is the same debt the loose-nodes batch paid down and
+is the natural follow-up.
+
+[[INTL-EEA-AGREEMENT]] was created to reach [[NO]] honestly;
+[[CH-REVDSG]] `applies-in` [[CH]] uses the [[GB-UK-GDPR]] own-country
+precedent, flagged on the entity as an extension of a pattern the backlog
+says to reconsider.
+
+### Recorded refusals
+
+No `applies-in` to [[NO]] or [[CH]]; no Irish edge on [[UN-AARHUS]]; no
+`participates-in` edges for [[IE-NSAI]]; no [[CH-EMBAG]] →
+[[CH-OPENDATA-SWISS]] edge; no `maintained-by` for [[NO-ALTINN]]. Each is
+argued on its entity.
+
 ## The intelligence and security services
 
 **Date:** 2026-08-18
