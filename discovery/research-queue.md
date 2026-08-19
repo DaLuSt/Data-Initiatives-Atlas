@@ -49,6 +49,34 @@
 > **Still open:** portal custodians (six national portals lack one),
 > `PL-PESEL`-equivalent population registers, [[NL-BRI]]'s AWR Chapter IVA
 > basis, and the Spanish and Polish primary-citation gaps.
+>
+> **Updated 2026-08-19 (European country batch).** Thirty-seven **base
+> country anchors** were created, taking the Atlas from 13 country scopes to
+> **50** — every EU member state, every EFTA/EEA state, every Council of
+> Europe member, every EU candidate and potential candidate, plus Belarus and
+> the Holy See. They carry membership facts and nothing else, and each one is
+> a research queue in its own right.
+>
+> **The highest-value items this created, in order:**
+>
+> 1. **[[EE]] — Estonia.** X-Road and e-Residency are the most cited
+>    digital-government components in Europe and the Atlas holds nothing
+>    about either. X-Road is the direct counterpart of
+>    [[NL-DIGIKOPPELING]] and has been adopted outside Estonia, which no
+>    Dutch component has.
+> 2. **Convention 108 and Convention 108+.** The Council of Europe's data
+>    protection treaty — the *only binding international treaty* on the
+>    subject, and open to non-European accession, which [[EU-GDPR]] is not.
+>    [[INTL-COE]] exists now; the conventions do not.
+> 3. **The Bulgarian and Latvian Open Data Directive transpositions.**
+>    [[BG]] and [[LV]] are two of the four member states referred to the
+>    Court of Justice in February 2023; the other two are modelled
+>    ([[BE-HERGEBRUIK-WET-2023]], [[NL-WHO]]).
+> 4. **`applies-in` edges to the 17 new EU member states.** Every EU
+>    instrument in the Atlas applies in all 27; it currently names 10.
+> 5. **The EFTA Surveillance Authority, the EFTA Court and the EEA Joint
+>    Committee.** [[INTL-EFTA]] exists now and these three do not, which
+>    leaves [[IS]], [[LI]] and [[NO]] supervised by nobody in the graph.
 
 
 Confirmed-relevant areas that are known to need research but haven't been
@@ -365,3 +393,9 @@ by accident.
 | ONTSI and the `.es` domain registry | The other two Red.es roles. ONTSI is an observatory (publications); the `.es` registry is naming-authority infrastructure with no Atlas counterpart yet | Later | RQ3 batch / 2026-08-19 |
 | Ordonnance n° 2016-307 and décret n° 2021-1559 | The French codification instrument and the licence decree, recorded in prose on [[FR-LOI-VALTER]]. Both fall below the threshold the Atlas has used for `type: law`; revisit if the CRPA is ever modelled as an entity | Later | RQ3 batch / 2026-08-19 |
 | An `amended-by` inverse | `amends` was added this batch as a single directed type. The graph shows incoming edges, so the inverse is readable without being stored — but `implements`/`implemented-by` exist as a pair, so the vocabulary is now inconsistent with itself | Later (design) | RQ3 batch / 2026-08-19 |
+| The 37 base country anchors | Each of [[AD]], [[AL]], [[AM]], [[AT]], [[AZ]], [[BA]], [[BG]], [[BY]], [[CY]], [[DK]], [[EE]], [[FI]], [[GE]], [[GR]], [[HR]], [[HU]], [[IS]], [[IT]], [[LI]], [[LT]], [[LV]], [[MC]], [[MD]], [[ME]], [[MK]], [[MT]], [[RO]], [[RS]], [[RU]], [[SE]], [[SI]], [[SK]], [[SM]], [[TR]], [[UA]], [[VA]] and [[XK]] carries membership facts and nothing else — no DPA, no portal, no statistics office, no legislation | Later, one country at a time | European country batch / 2026-08-19 |
+| Convention 108 and Convention 108+ | The Council of Europe's data protection convention, opened 1981 and modernised 2018. The **only binding international treaty** on data protection, and open to accession by non-European states, which [[EU-GDPR]] is not. [[INTL-COE]] was created for it to hang from | **Next** | European country batch / 2026-08-19 |
+| EFTA Surveillance Authority, EFTA Court, EEA Joint Committee | The EEA EFTA states' counterparts to the Commission and the Court of Justice, and the body that takes the incorporation decisions [[INTL-EEA-AGREEMENT]] runs on. Carried from [[NO]] since the Norway batch; now three countries wide | Next | Norway batch; widened 2026-08-19 |
+| `applies-in` to the 17 new EU member states | Every EU instrument the Atlas holds applies in all 27 member states. It names 10. Filling this is mechanical rather than research, but it is 17 × the instrument count | Next | European country batch / 2026-08-19 |
+| Greece's `EL` / `GR` code split | The EU keys Greece as `EL`; ISO keys it as `GR`. The Atlas uses `GR`. Any future harvest of Eurostat or EUR-Lex data will not join without a mapping | Later (design) | European country batch / 2026-08-19 |
+| Cyprus's suspended *acquis* | `applies-in` is a whole-country predicate; the *acquis* is suspended in the areas of [[CY]] not under the Republic's effective control. The Atlas cannot express this | Blocked (design) | European country batch / 2026-08-19 |

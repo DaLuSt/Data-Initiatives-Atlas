@@ -30,10 +30,21 @@ successor: null
 
 domains: []
 organisations: []
-related_entities: []
-relationships: []
+related_entities:
+  - INTL-COE
+relationships:
+  - type: part-of
+    target: INTL-COE
+    source: fact
+    evidence: "the United Kingdom is one of the 46 member states of the Council of Europe, an intergovernmental organisation separate from the European Union (coe.int 'The Council of Europe's 46 member states'). NOT READ — search-only. Anchor edge under metadata/relationship-types.md §2.3: it records Council of Europe membership and asserts no more than that. Added in the European country batch so that all fifty anchors carry the same membership edge."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
+  - title: "The Council of Europe's 46 member states"
+    url: "https://www.coe.int/en/web/portal/46-members-states"
+    publisher: "Council of Europe"
   - title: "GB — United Kingdom of Great Britain and Northern Ireland (ISO 3166-1 country code)"
     url: "https://www.iso.org/obp/ui/#iso:code:3166:GB"
     publisher: "International Organization for Standardization (ISO)"

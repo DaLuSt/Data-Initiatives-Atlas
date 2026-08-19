@@ -1,5 +1,81 @@
 # Completed Batches
 
+## The European country anchors
+
+**Date:** 2026-08-19
+
+Thirty-seven base country anchors, taking the Atlas from **13 country scopes
+to 50**. **39 new entities, 65 relationships.** 400 → **439 entities**, 676 →
+**728 relationships**.
+
+Each anchor carries its country's position in the European legal and
+institutional frameworks and nothing else — no authority, no portal, no
+legislation. The point is that the next contributor reaching for Estonia or
+Italy finds a scope waiting rather than having to create one.
+
+### The scope rule is written down
+
+There is no authoritative list of European countries, so `countries/README.md`
+states the rule: a state gets an anchor if it satisfies **any** of EU
+membership, EFTA/EEA membership, Council of Europe membership, or a live EU
+accession relationship — plus [[BY]] and [[VA]], which satisfy none.
+
+It is a union, not a geography. It admits [[AM]], [[AZ]], [[GE]] and [[TR]],
+which the UN M49 geoscheme places in Western Asia, on Council of Europe
+membership. Each entity says so on its own page.
+
+### Two new international organisations
+
+- **[[INTL-COE]]** — the anchor the twenty non-EU European states needed, and
+  the home of **Convention 108 and 108+**, the only binding international
+  treaty on data protection. The conventions are now the highest-value item
+  on the research queue.
+- **[[INTL-EFTA]]** — listed under "not modelled" on [[NO]] since the Norway
+  batch; the gap became three countries wide when [[IS]] and [[LI]] arrived.
+
+### Two membership facts that are not the same
+
+[[RU]] carries `part-of` [[INTL-COE]] with `valid_from: 1996-02-28` and
+`valid_until: 2022-03-16` — the Atlas's first closed validity interval on a
+membership edge, recording the first expulsion in the organisation's history.
+[[BY]] carries `related-to` instead: it has never been a member.
+
+### One anchor is not an ISO code
+
+[[XK]] has no ISO 3166-1 code; `XK` is user-assigned and is what the European
+Commission, IMF and World Bank use. `metadata/ontology.md` §3.1 now names the
+exception rather than being quietly broken, and the entity states that
+recording it is not a position on recognition.
+
+### The existing thirteen were normalised
+
+Every country anchor previously had `relationships: []`, reaching the graph
+only through entities pointing at it. All fifty now carry the same membership
+edge, and `region: EU` is set consistently rather than on four member states
+out of ten.
+
+### A layout test that was asserting the wrong thing
+
+`tools/test_ui.mjs` compared the smallest centroid gap anywhere in the
+national band against the largest block radius anywhere in it. That held while
+blocks were similar sizes; with [[NL]] at 85 entities and [[AD]] at one, it
+demanded two one-entity blocks sit 464 apart.
+
+The assertion now asks the question it was always trying to ask — per pair, is
+the separation greater than *those two* blocks' radii — with bounding-box
+non-overlap still checked separately. The tightest pair is BE/NO at 585
+against 463, so it is not vacuous. **The layout constants were not touched;
+the test was wrong, not the layout.**
+
+### Verification
+
+439 entities, 4,985 edges (728 relationship, 1,627 association, 2,630
+wikilink), 50 countries. `validation/run_all.py` 5/5;
+`tools/test_build_graph.py` 41 OK; `tools/test_ui.mjs` 81/81;
+`validation/audit.py` reports no fully disconnected entities. All 39 new
+entities are `verification: search-only`; accession years come from general
+reference knowledge rather than the cited pages, and each anchor says so.
+
 ## The Open Data Directive transpositions
 
 **Date:** 2026-08-19

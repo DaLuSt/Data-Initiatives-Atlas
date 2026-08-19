@@ -299,23 +299,42 @@ async function search(page, q) {
       leadIsHub[k] = (deg[lead.id()] || 0) >= degs[Math.floor(degs.length / 2)];
     }
     const ks = Object.keys(box);
-    let overlaps = [], minSep = Infinity;
+    // Separation is judged per pair, against the two blocks' own radii.
+    //
+    // This check used to compare the single smallest centroid gap anywhere in
+    // the band against the single largest block radius anywhere in the band.
+    // That proxy held only while every country block was roughly the same
+    // size. Once the Atlas carried 50 country scopes it became the wrong
+    // invariant: the largest block (NL, 85 entities, radius ~464) would have
+    // demanded that two *one-entity* blocks — Andorra and San Marino, radius
+    // 0 each — sit 464 apart, which is not a legibility requirement, it is
+    // wasted canvas. What "these two blocks read as separate clumps" actually
+    // means is that their centroids are further apart than their own radii
+    // sum, and that is what is asserted now. Bounding-box non-overlap is
+    // checked separately and independently, so small blocks are still
+    // guaranteed not to collide.
+    let overlaps = [], tightest = null, tightestSlack = Infinity;
     for (let i = 0; i < ks.length; i++) for (let j = i + 1; j < ks.length; j++) {
       const a = box[ks[i]], c = box[ks[j]];
       if (a.x1 <= c.x2 && c.x1 <= a.x2 && a.y1 <= c.y2 && c.y1 <= a.y2) overlaps.push(ks[i] + '/' + ks[j]);
-      minSep = Math.min(minSep, Math.hypot(cent[ks[i]].x - cent[ks[j]].x, cent[ks[i]].y - cent[ks[j]].y));
+      const sep = Math.hypot(cent[ks[i]].x - cent[ks[j]].x, cent[ks[i]].y - cent[ks[j]].y);
+      const need = spread[ks[i]] + spread[ks[j]];
+      if (sep - need < tightestSlack) {
+        tightestSlack = sep - need;
+        tightest = { pair: ks[i] + '/' + ks[j], sep: Math.round(sep), need: Math.round(need) };
+      }
     }
-    return { countries: ks.length, overlaps, minSep, maxSpread: Math.max(...Object.values(spread)),
-             meanY, leadIsHub };
+    return { countries: ks.length, overlaps, tightest, tightestSlack,
+             maxSpread: Math.max(...Object.values(spread)), meanY, leadIsHub };
   });
 
   check('layout groups the national band into one block per country',
     layout.countries >= 6, `${layout.countries} blocks`);
   check('country blocks do not overlap',
     layout.overlaps.length === 0, layout.overlaps.join(',') || 'none');
-  check('country blocks are further apart than they are wide',
-    layout.minSep > layout.maxSpread,
-    `min separation ${Math.round(layout.minSep)} vs max spread ${Math.round(layout.maxSpread)}`);
+  check('every pair of country blocks is further apart than the two are wide',
+    layout.tightestSlack > 0,
+    `tightest ${layout.tightest.pair}: separation ${layout.tightest.sep} vs combined radius ${layout.tightest.need}`);
   check('each block leads with a better-connected-than-median node',
     Object.values(layout.leadIsHub).every(Boolean),
     JSON.stringify(layout.leadIsHub));

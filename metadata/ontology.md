@@ -63,7 +63,13 @@ commit that introduces the first entity of that type.
 - `SCOPE` is one of:
   - `UN` — United Nations and UN-system bodies/initiatives
   - `EU` — European Union
-  - `<ISO2>` — a national scope, using the ISO 3166-1 alpha-2 code (`NL`, `DE`, `BE`, ...)
+  - `<ISO2>` — a national scope, using the ISO 3166-1 alpha-2 code (`NL`, `DE`, `BE`, ...).
+    **One exception:** `XK` for Kosovo, which has no ISO 3166-1 code. `XK` is a
+    *user-assigned* code — the range ISO reserves for this case — and is what the
+    European Commission, the IMF and the World Bank use operationally. The
+    exception is named here rather than left as an undocumented break in the rule;
+    creating the entity records what the sources describe and takes no position on
+    recognition. See `countries/README.md`.
   - `INTL` — international/global entities that are not UN-system (e.g. ISO, W3C, IETF, OECD)
   - `DOMAIN` — subject-matter domain entities (`metadata/taxonomy.md` §1),
     which are cross-cutting classification nodes rather than entities

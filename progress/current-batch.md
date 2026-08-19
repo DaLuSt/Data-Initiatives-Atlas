@@ -1,9 +1,126 @@
 # Current Batch
 
-**Status:** No batch in progress. **The Open Data Directive transpositions**
-was completed on 2026-08-19, on the third research-queue pass.
+**Status:** No batch in progress. **The European country anchors** was
+completed on 2026-08-19.
 
-## The Open Data Directive transpositions
+## The European country anchors
+
+Thirty-seven base country anchors, taking the Atlas from **13 country
+scopes to 50**. **39 new entities, 65 relationships.** 400 → **439
+entities**, 676 → **728 relationships**.
+
+These are deliberately *base* entities: each carries its country's position
+in the European legal and institutional frameworks, and nothing else. No
+data protection authority, no portal, no statistics office, no legislation.
+The purpose is that the next contributor to reach for Estonia or Italy finds
+somewhere to attach rather than having to create the scope first.
+
+### The scope rule is stated, not implied
+
+There is no authoritative list of "European countries", so the batch wrote
+its rule down in `countries/README.md` rather than drawing a line and hoping
+nobody asked. A state gets an anchor if it satisfies **any** of: EU
+membership; EFTA or EEA membership; Council of Europe membership; or a live
+EU accession relationship. [[BY]] and [[VA]] are added on top, satisfying
+none of the four.
+
+The rule is a **union, not a geography**, and it admits four states the UN
+M49 geoscheme places in Western Asia — [[AM]], [[AZ]], [[GE]] and [[TR]] —
+on their Council of Europe membership. Each says so on its own page.
+
+### Two new international organisations
+
+Both were created because the country layer needed them, and both close gaps
+the Atlas had already recorded:
+
+- **[[INTL-COE]]** — the Council of Europe. EU member states can anchor on
+  [[EU]]; the twenty European states that are not EU members had nowhere to
+  anchor at all. It is also the home of **Convention 108 and 108+**, the only
+  binding international treaty on data protection and the highest-value item
+  this batch surfaced.
+- **[[INTL-EFTA]]** — listed under "not modelled" on [[NO]] since the Norway
+  batch. The gap became three countries wide when [[IS]] and [[LI]] arrived.
+
+### A membership that ended, and one that never was
+
+[[RU]] carries `part-of` [[INTL-COE]] with **`valid_from: 1996-02-28` and
+`valid_until: 2022-03-16`** — the Atlas's first closed validity interval on a
+membership edge. Russia's expulsion on 16 March 2022 was the first in the
+organisation's history.
+
+[[BY]] carries `related-to` [[INTL-COE]] instead. Belarus has never been a
+member; its special guest status was suspended in 1997. A membership that
+ended and a membership that never existed are different facts, and the two
+edge types record the difference.
+
+### ⚠ One anchor is not an ISO code
+
+[[XK]] — Kosovo — has **no ISO 3166-1 alpha-2 code**. `XK` is a user-assigned
+code, which is what the European Commission, the IMF and the World Bank use.
+
+`metadata/ontology.md` §3.1 said the national scope segment *is* the ISO
+code. Rather than quietly break that rule, §3.1 now names the exception. The
+entity records what the sources describe and states explicitly that creating
+an entity is not a position on recognition.
+
+### The existing thirteen were normalised too
+
+Before this batch, every country anchor had `relationships: []` and reached
+the graph only through the national entities pointing at it. That works for a
+country with a modelled layer and fails for one just created.
+
+All fifty anchors now carry the same membership edge — `part-of` [[EU]] for
+the 27 member states, `part-of` [[INTL-COE]] for the rest — and `region: EU`
+is now set consistently on member states rather than on four of them.
+
+### A layout test that was asserting the wrong thing
+
+`tools/test_ui.mjs` failed at 80/81 once 50 country blocks existed:
+*"country blocks are further apart than they are wide — min separation 295
+vs max spread 464."*
+
+The check compared the **single smallest** centroid gap anywhere in the band
+against the **single largest** block radius anywhere in the band. That proxy
+held while every country block was roughly the same size. With [[NL]] at 85
+entities and [[AD]] at one, it demanded that two *one-entity* blocks sit 464
+apart — not a legibility requirement, just wasted canvas.
+
+The assertion was rewritten to the question it was always trying to ask:
+**for each pair, is the separation greater than those two blocks' own
+radii?** Bounding-box non-overlap is still checked separately, so small
+blocks are still guaranteed not to collide.
+
+It is not vacuous — the tightest pair is now **BE/NO at 585 against a
+combined radius of 463**. The layout constants were not touched; the test
+was wrong, not the layout.
+
+### The five highest-value gaps this created
+
+1. **[[EE]]** — X-Road and e-Residency, the most cited digital-government
+   components in Europe, and the Atlas holds nothing about either.
+2. **Convention 108 / 108+** — see above.
+3. **[[BG]] and [[LV]]'s Open Data Directive transpositions** — two of the
+   four member states referred to the Court of Justice in February 2023. The
+   other two are modelled.
+4. **`applies-in` to the 17 new member states** — every EU instrument the
+   Atlas holds applies in all 27; it names 10.
+5. **The EFTA Surveillance Authority, EFTA Court and EEA Joint Committee** —
+   [[IS]], [[LI]] and [[NO]] are supervised by nobody in the graph.
+
+### Verification
+
+- **439 entities, 4,985 edges** (728 relationship, 1,627 association, 2,630
+  wikilink), **50 countries**
+- `validation/run_all.py` — 5/5
+- `tools/test_build_graph.py` — 41 OK
+- `tools/test_ui.mjs` — **81/81**
+- `validation/audit.py` — no fully disconnected entities
+
+All 39 new entities are `verification: search-only`. Accession **years** in
+the framework tables come from general reference knowledge rather than from
+the cited pages, and every anchor says so in a note under its own table.
+
+## The Open Data Directive transpositions — previous batch
 
 The largest remaining item on `discovery/research-queue.md`, carried since
 the Belgium, France and Spain batches:
