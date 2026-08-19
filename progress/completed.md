@@ -1,5 +1,57 @@
 # Completed Batches
 
+## Portugal, Luxembourg and Czechia — countries eleven, twelve and thirteen
+
+**Date:** 2026-08-18
+
+**23 new entities** plus 54 `applies-in` edges. 361 → **384 entities**,
+555 → **641 relationships**. Ten countries → **thirteen**; eight EU member
+states → **eleven**.
+
+[[EU-EDPB]] 8 → **11** incoming, [[EU-ESS]] 8 → **11**, [[EU-CEN]] 7 →
+**10**. Every EU member state in the Atlas now has an authority on the Board,
+an institute in the ESS and a standards body in CEN.
+
+### What each added
+
+- **Czechia**: [[CZ-ZAKON-60-2026]], an act on **data management and
+  controlled access**, making [[CZ-DIA]] the state's single information point
+  and the node to the European data portal. The Atlas had almost no law about
+  how a state manages its *own* data. The Netherlands built the arrangement
+  ([[NL-IBDS]], [[NL-FDS]]); Czechia legislated it.
+- **Luxembourg**: the smallest country here, and through [[LU-ILNAS]] one of
+  only two whose standards body holds all five standardisation memberships —
+  the other being [[GB-BSI]]. Plus small-state concentration: ILNAS is
+  standards, accreditation and product safety; [[LU-CTIE]] is government IT
+  and State infrastructure security.
+- **Portugal**: [[PT-LEI-58-2019]] *executes* the GDPR — an eighth verb for
+  one operation — and [[PT-AMA]] carries a **regulatory** simplification
+  mandate no comparable Atlas body records.
+
+### Three name collisions
+
+[[PT-CNPD]]/[[LU-CNPD]], [[PT-INE]]/[[ES-INE]], and [[LU-STATEC]] whose full
+name is word-for-word [[FR-INSEE]]'s. All genuine, all handled by scoped IDs.
+
+### The one that needed care
+
+[[CZ-UNMZ]] holds Czechia's standardisation **membership**; **ČAS** does the
+work. No other country splits it, and ČAS is the more visible body — an
+entity built from its pages would have claimed a membership it does not hold.
+
+### Refusals
+
+No [[LU]] ↔ [[EU-PUBLICATIONS-OFFICE]] edge despite the Luxembourg seat
+(hosting is not participating); no custodian for any of the three new portals
+(a publisher page proves publication, not custodianship); no separate entity
+for the Czech NCKB, which the sources present as a section of [[CZ-NUKIB]].
+
+### Connectivity
+
+Components unchanged at 20, largest 326 → **349**, isolated unchanged at 8.
+Twenty-three new entities and no orphans — the scope-anchor rule is enforced
+at build time.
+
 ## The cheap structural fixes
 
 **Date:** 2026-08-18

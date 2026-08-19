@@ -9,7 +9,7 @@ one of these — resolve it with a real source, or leave it open.
 
 | Entity / topic | Question | Why it's unresolved | Noted by / date | Status |
 |---|---|---|---|---|
-| All unread-source entities (**347 of 354**: 344 `search-only` + 3 `unverified` ([[NL]], [[EU]], [[UN]]); regenerate the count with `python tools/source_hosts.py`) | Every factual claim | The environment's network egress policy blocks all direct page retrieval (`EGRESS_BLOCKED` for forumstandaardisatie.nl, digitaleoverheid.nl, noraonline.nl, vng.nl, logius.nl, eur-lex.europa.eu, wikipedia.org and every other host tested). Batch 1 was completed from search-engine results on explicit instruction, with the trade-off accepted knowingly. Every entity carries `verification: search-only`. | Batch 1 / 2026-08-14 | **Open — needs full re-verification pass** |
+| All unread-source entities (**377 of 384**: 374 `search-only` + 3 `unverified` ([[NL]], [[EU]], [[UN]]); regenerate the count with `python tools/source_hosts.py`) | Every factual claim | The environment's network egress policy blocks all direct page retrieval (`EGRESS_BLOCKED` for forumstandaardisatie.nl, digitaleoverheid.nl, noraonline.nl, vng.nl, logius.nl, eur-lex.europa.eu, wikipedia.org and every other host tested). Batch 1 was completed from search-engine results on explicit instruction, with the trade-off accepted knowingly. Every entity carries `verification: search-only`. | Batch 1 / 2026-08-14 | **Open — needs full re-verification pass** |
 
 To find every affected entity: `grep -rl "verification: search-only" .`
 
@@ -622,4 +622,21 @@ batches recorded that none existed.
 | [[INTL-IDSA]] | Membership, given by one source as 133 companies, is unverified; the **Eclipse Dataspace Connector** implementations are unmodelled | | 2026-08-18 | Open |
 | [[DE-MANUFACTURING-X]] | **Factory-X**, **Aerospace-X**, **energy data-X** and **Plattform Industrie 4.0** are not modelled. | Named in the sources as lighthouse projects, siblings and the concept base | 2026-08-18 | Open |
 | [[EU-CEEDS]] | **INSIEME** and the six Horizon Europe energy data space projects are not modelled; nor is Germany's **ENDA**. | The concrete deployment layer beneath the data space | 2026-08-18 | Open |
+
+## Portugal, Luxembourg and Czechia (batch of 2026-08-18)
+
+| Entity | Question | Why it matters | Noted by / date | Status |
+|---|---|---|---|---|
+| [[LU-CNPD]] | **Luxembourg's GDPR implementation act** (understood to be the law of 1 August 2018) was not identified from a citable source. | Luxembourg is the **only member state in the Atlas** with no national GDPR instrument. Ten others have one | 2026-08-18 | **Open — next** |
+| [[PT-CNCS]], [[CZ-NUKIB]] | **NIS2 transpositions not identified** for Portugal or Czechia. | Both cyber authorities carry anchor edges to their country rather than a relationship to an act, unlike [[BE-CCB]], [[DE-BSI]], [[FR-ANSSI]] and [[IE-NCSC]]. Czechia's cyber security act No 181/2014 is also unmodelled | 2026-08-18 | Open |
+| [[LU-CTIE]] | **Luxembourg's NIS2 competent authority and CSIRT** are unmodelled. | CTIE secures the State's own infrastructure, which is a different job from supervising a country's essential entities. GOVCERT.LU was not researched | 2026-08-18 | Open |
+| [[CZ-UNMZ]] | **ČAS is not modelled.** | Czechia splits standardisation: ÚNMZ holds the membership, ČAS does the technical committees, drafting and publication. The body that actually produces ČSN standards is absent from the graph | 2026-08-18 | Open |
+| [[PT-DADOS-GOV]] | **Portugal's Open Data Directive transposition** was not identified. | Joins Belgium, France, Spain and Ireland. Five countries is comfortably a batch of its own | 2026-08-18 | **Open — next** |
+| [[PT-DADOS-GOV]], [[LU-DATA-PUBLIC]], [[CZ-DATA-GOV]] | **No custodian modelled** for any of the three. | [[PT-AMA]], [[LU-CTIE]] and [[CZ-DIA]] are the obvious operators and none is sourced. Seven national portals now lack a custodian; only [[CH-OPENDATA-SWISS]] has one | 2026-08-18 | Open |
+| [[CZ-ZAKON-60-2026]] | What does the act contain beyond [[CZ-DIA]]'s role? | `coverage: low`. What "controlled access" covers, which data, what rights it creates — all unestablished. `start_date` is deliberately null: the sources give the Sb. citation, not a date of effect | 2026-08-18 | Open |
+| [[CZ-DIA]] | **Act No 12/2020** on the right to digital services, DIA's constituting statute, is not modelled. | DIA carries `implements` [[CZ-ZAKON-60-2026]] but no `governed-by` edge to the act that created it | 2026-08-18 | Open |
+| [[LU]] | Should hosting an EU institution be modelled at all? | The Court of Justice, the Court of Auditors, the EIB and [[EU-PUBLICATIONS-OFFICE]] are seated in Luxembourg and **no relationship is asserted**. Modelling it would make every host state look like a participant in what it hosts. Recorded as a deliberate design position, not a gap | 2026-08-18 | **Closed — by decision** |
+| [[LU-ILNAS]] | Its **accreditation** (OLAS) and market-surveillance functions are unmodelled. | Two-thirds of what the institute does | 2026-08-18 | Open |
+| [[PT-AMA]] | **ePortugal**, the **Chave Móvel Digital**, the **Cartão de Cidadão** and the **iAP** are unmodelled. | Portugal's identity means would be the [[EU-EIDAS]] counterparts; the iAP is its interoperability platform | 2026-08-18 | Open |
+| Standards bodies generally | The membership counts in the Atlas are what is **sourced**, not what is true. | [[LU-ILNAS]] and [[GB-BSI]] show five, [[PT-IPQ]] three, most others two — because the CEN membership rule was the only source available for the four created in the structural-fixes batch. The column invites a comparison it cannot fully support | 2026-08-18 | Open |
 

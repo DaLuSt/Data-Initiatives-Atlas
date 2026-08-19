@@ -7,11 +7,11 @@ Generated: 2026-08-19
 
 ## Why this exists
 
-**354 of the Atlas's 361 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
+**377 of the Atlas's 384 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
 
 Closing that debt — the re-verification pass — needs outbound HTTPS to the hosts those URLs point at. In an environment with a restricted egress policy, this is the allowlist to request. A denial shows up as `403 to CONNECT` from the proxy, which is an environment-level network policy and cannot be changed from inside a session. See `discovery/unresolved.md` for the standing record of the sourcing debt.
 
-The Atlas currently cites **1181 source URLs** across **444 hosts**, collapsing to **327 registrable domains**.
+The Atlas currently cites **1241 source URLs** across **469 hosts**, collapsing to **341 registrable domains**.
 
 ## Highest value first
 
@@ -19,17 +19,18 @@ Allowing just these covers the bulk of the pass:
 
 | Domain | URLs | Entities |
 |---|---|---|
-| `europa.eu` | 127 | 73 |
-| `wikipedia.org` | 64 | 64 |
+| `europa.eu` | 131 | 77 |
+| `wikipedia.org` | 66 | 66 |
 | `bund.de` | 41 | 23 |
 | `digitaleoverheid.nl` | 40 | 28 |
 | `gov.pl` | 40 | 18 |
 | `gouv.fr` | 36 | 13 |
 | `gob.es` | 30 | 16 |
+| `iso.org` | 23 | 20 |
 | `un.org` | 17 | 10 |
 | `belgium.be` | 17 | 9 |
 | `unece.org` | 17 | 7 |
-| `iso.org` | 17 | 15 |
+| `cencenelec.eu` | 17 | 10 |
 | `rijksoverheid.nl` | 16 | 12 |
 | `bundestag.de` | 15 | 11 |
 | `legislation.gov.uk` | 15 | 14 |
@@ -38,7 +39,6 @@ Allowing just these covers the bulk of the pass:
 | `overheid.nl` | 13 | 13 |
 | `eerstekamer.nl` | 12 | 12 |
 | `forumstandaardisatie.nl` | 12 | 5 |
-| `cencenelec.eu` | 12 | 7 |
 
 ## Institutional domains
 
@@ -62,8 +62,10 @@ gdi-de.org
 geonovum.nl
 gesetze-im-internet.de
 gov.be
+gov.cz
 gov.ie
 gov.pl
+gov.pt
 gov.scot
 gov.uk
 govdata.de
@@ -113,6 +115,7 @@ akademicka.pl
 alston.com
 altinn.no
 anabad.org
+anacom.pt
 anwalt.org
 aoshearman.com
 app.ch
@@ -155,12 +158,14 @@ cms.law
 cnctr.fr
 cni.es
 cnil.fr
+cnpd.pt
 comiteri.be
 communicatierijk.nl
 cso.ie
 ctivd.nl
 cuatrecasas.com
 cyberfortgroup.com
+czso.cz
 d-velop.de
 dagdok.org
 data-spaces-symposium.eu
@@ -193,6 +198,7 @@ e-recht24.de
 earonline.nl
 ecija.com
 ecp.nl
+ecs-org.eu
 edustandaard.nl
 eerstekamer.nl
 eosc.eu
@@ -230,6 +236,7 @@ globalpolicywatch.com
 glomas.de
 gob.es
 gouv.fr
+gouvernement.lu
 grokipedia.com
 haufe.de
 health-ri.nl
@@ -242,14 +249,17 @@ ictu.nl
 ietf.org
 incibe.es
 ine.es
+ine.pt
 informationssicherheitsbeauftragter-dresden.de
 ing-ism.de
 insee.fr
 investigatorypowerstribunal.org.uk
 ipco.org.uk
 ipo.nl
+ipq.pt
 irishstatutebook.ie
 ishare.eu
+isvs.cz
 its-mobility.de
 itwiz.pl
 jtc1info.org
@@ -319,6 +329,7 @@ prodwaregroup.com
 prosoz.de
 protecciondata.es
 protecciondatos-lopd.com
+public.lu
 publictechnology.net
 quality.de
 rdw.nl
@@ -340,6 +351,7 @@ smartcountry.berlin
 snl.no
 springerprofessional.de
 ssb.no
+stcpservicos.pt
 surf.nl
 sva.nl
 tailte.ie
@@ -366,6 +378,7 @@ unesco.org.uk
 ungeneva.org
 unievanwaterschappen.nl
 unizar.es
+unmz.cz
 unsceb.org
 vbo-feb.be
 vlex.be
@@ -379,6 +392,7 @@ whitecase.com
 wikipedia.org
 williamfry.com
 xoev.de
+zakonyprolidi.cz
 ```
 
 ## After the pass

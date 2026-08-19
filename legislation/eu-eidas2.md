@@ -31,10 +31,34 @@ domains:
   - DOMAIN-GOVERNMENT
 organisations: []
 related_entities:
+  - CZ
+  - LU
+  - PT
   - IE
   - EU-EIDAS
   - EU-EUDI-WALLET
 relationships:
+  - type: applies-in
+    target: PT
+    source: fact
+    evidence: "As an EU regulation, European Digital Identity Framework Regulation is binding in its entirety and directly applicable in all member states without national transposition, and Portugal is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: LU
+    source: fact
+    evidence: "As an EU regulation, European Digital Identity Framework Regulation is binding in its entirety and directly applicable in all member states without national transposition, and Luxembourg is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: CZ
+    source: fact
+    evidence: "As an EU regulation, European Digital Identity Framework Regulation is binding in its entirety and directly applicable in all member states without national transposition, and Czechia is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: applies-in
     target: IE
     source: fact

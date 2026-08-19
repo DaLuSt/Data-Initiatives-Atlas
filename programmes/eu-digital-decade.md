@@ -34,6 +34,27 @@ organisations: []
 related_entities: []
 relationships:
   - type: applies-in
+    target: PT
+    source: fact
+    evidence: "Digital Decade Policy Programme 2030 is an EU-level instrument addressed to the member states, and Portugal is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: LU
+    source: fact
+    evidence: "Digital Decade Policy Programme 2030 is an EU-level instrument addressed to the member states, and Luxembourg is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: CZ
+    source: fact
+    evidence: "Digital Decade Policy Programme 2030 is an EU-level instrument addressed to the member states, and Czechia is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-in
     target: IE
     source: fact
     evidence: "Digital Decade Policy Programme 2030 is an EU-level instrument addressed to the member states, and Ireland is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."

@@ -31,10 +31,34 @@ domains:
   - DOMAIN-GOVERNMENT
 organisations: []
 related_entities:
+  - CZ
+  - LU
+  - PT
   - IE
   - NL-WHO
   - EU-DIGITAL-OMNIBUS
 relationships:
+  - type: applies-in
+    target: PT
+    source: fact
+    evidence: "As an EU directive, Open Data Directive is binding on every member state as to the result to be achieved and requires national transposition, and Portugal is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: LU
+    source: fact
+    evidence: "As an EU directive, Open Data Directive is binding on every member state as to the result to be achieved and requires national transposition, and Luxembourg is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: CZ
+    source: fact
+    evidence: "As an EU directive, Open Data Directive is binding on every member state as to the result to be achieved and requires national transposition, and Czechia is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: applies-in
     target: IE
     source: fact

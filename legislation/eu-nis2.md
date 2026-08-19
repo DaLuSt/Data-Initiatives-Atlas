@@ -32,6 +32,9 @@ domains:
   - DOMAIN-CYBERSECURITY
 organisations: []
 related_entities:
+  - CZ
+  - LU
+  - PT
   - IE
   - NL-CBW
   - EU-NIS
@@ -43,6 +46,27 @@ relationships:
     evidence: "The NIS2 Directive repeals Directive (EU) 2016/1148 with effect from 18 October 2024 (EUR-Lex consolidated text of Dir. 2022/2555). NOT READ — search-only."
     confidence: medium
     valid_from: 2024-10-18
+    valid_until: null
+  - type: applies-in
+    target: PT
+    source: fact
+    evidence: "As an EU directive, NIS2 Directive is binding on every member state as to the result to be achieved and requires national transposition, and Portugal is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: LU
+    source: fact
+    evidence: "As an EU directive, NIS2 Directive is binding on every member state as to the result to be achieved and requires national transposition, and Luxembourg is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: CZ
+    source: fact
+    evidence: "As an EU directive, NIS2 Directive is binding on every member state as to the result to be achieved and requires national transposition, and Czechia is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
     valid_until: null
   - type: applies-in
     target: IE
