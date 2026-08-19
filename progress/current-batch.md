@@ -1,9 +1,136 @@
 # Current Batch
 
-**Status:** No batch in progress. **Working the research queue** was
-completed on 2026-08-18, after Portugal, Luxembourg and Czechia.
+**Status:** No batch in progress. **The Dutch register statutes** was
+completed on 2026-08-18, after the first research-queue pass.
 
-## Working the research queue
+## The Dutch register statutes
+
+The second of the two clusters the research-queue pass left open, and the one
+the register batch itself had deferred with a reason:
+
+> *"Creating six or seven Dutch statutes would be a legislation batch, not a
+> registry batch, and doing half of it would leave the layer inconsistent."*
+
+That legislation batch is now done. **7 new entities, 15 relationships.**
+389 → **396 entities**, 651 → **666 relationships**.
+
+**Nine of the ten basisregistraties now carry a `governed-by` edge**, against
+one before.
+
+| Register | Statute |
+|---|---|
+| [[NL-BAG]] | [[NL-WET-BAG]] |
+| [[NL-BGT]] | [[NL-WET-BGT]] — in force 1 January 2016 |
+| [[NL-BRO]] | [[NL-WET-BRO]] — in force 1 January 2018 |
+| [[NL-WOZ]] | [[NL-WET-WOZ]] |
+| [[NL-NHR]] | [[NL-HANDELSREGISTERWET]] |
+| [[NL-BRV]] | [[NL-WEGENVERKEERSWET-1994]] |
+| [[NL-BRK]] | [[NL-KADASTERWET]] |
+| [[NL-BRT]] | [[NL-KADASTERWET]] — **the same act** |
+| [[NL-BRP]] | [[NL-WET-BRP]] — from Batch 3 |
+| [[NL-BRI]] | **still none** |
+
+### The weakest of the ten, closed
+
+`discovery/research-queue.md` recorded [[NL-BRT]] as *"the only one of the
+ten where **no statute was found at all** … the weakest of the ten."*
+
+It is the **[[NL-KADASTERWET]]** of 3 May 1989, and the reason it resisted
+searching is that **there is no "Wet basisregistratie topografie"**. The
+Kadasterwet's rules on the public registers and the cadastre carry *both* the
+cadastral and the topographic base registration as authentic data.
+
+A gap that looked like missing research was a wrong assumption about the
+shape of the law.
+
+### Seven statutes for nine registers
+
+The stelsel's legal underpinning is **not one-to-one**, and that is what this
+layer produces:
+
+- **One act carries two registers** — [[NL-KADASTERWET]], for [[NL-BRK]] and
+  [[NL-BRT]].
+- **Three of the seven are general statutes** that happen to contain a
+  registration: the Kadasterwet, [[NL-WET-WOZ]] (a *valuation* act) and
+  [[NL-WEGENVERKEERSWET-1994]] (a *road traffic* act). Only four were written
+  to constitute a registration.
+
+Neither fact is visible from the register entities; both are visible from the
+statutes. That is the argument for having created them, and it is why doing
+half would genuinely have been worse than doing none.
+
+### Two commencement patterns, both now held
+
+[[NL-WET-BGT]] came into force in **three stages by provision** — the
+register's content and the bronhouder obligations on 1 January 2016, articles
+23–24 on 1 July 2017, articles 29–30 on 30 April 2018. That is the
+[[GB-DUAA]] pattern. [[CH-EMBAG]] stages by *organisational scope* instead.
+The Atlas now holds both and can tell them apart.
+
+### A wrong identifier caught before it shipped
+
+A search for the Kadasterwet's BWBR identifier returned **BWBR0007376** in a
+plausible-looking context. That is the **Archiefwet 1995**, not the
+Kadasterwet, which is **BWBR0004541**.
+
+Every one of these seven entities is keyed on a BWBR identifier, and one
+wrong digit would produce a citation that resolves to a real but unrelated
+act — the kind of error that is invisible on review because the URL works.
+Worth recording as the specific hazard of this batch.
+
+### What is still open
+
+- **[[NL-BRI]]** — Chapter IVA of the Algemene wet inzake rijksbelastingen is
+  named in the sources as its basis, and no citable identifier for that
+  chapter as a distinct instrument was found. One register of ten.
+- **The Organisatiewet Kadaster** (BWBR0006463), which constitutes
+  [[NL-KADASTER]] as a body where the Kadasterwet governs the registers. The
+  cleanest body/registers statute pair in the Atlas, and only one half is
+  modelled.
+- **The implementing decrees and ministerial regulations** beneath all seven
+  acts — Besluit and Regeling instruments. A consistent scoping decision, not
+  an oversight.
+- **Belgium, France and Spain's Open Data Directive transpositions** — the
+  one remaining cluster from the first research-queue pass.
+
+### A layout regression the browser tests caught
+
+Adding seven Dutch entities pushed the national band's largest block past a
+threshold, and `tools/test_ui.mjs` failed:
+
+```
+FAIL  country blocks are further apart than they are wide
+      — min separation 463 vs max spread 464
+```
+
+**One pixel.** The assertion is that no two country-block centroids sit
+closer than the largest block's own mean radius — the property that makes
+blocks read as blocks rather than as one ribbon.
+
+The first two fixes were aimed at the wrong axis. Widening `blockGapX` made
+it *worse* (463 → 461, by changing which blocks wrap onto which line), and a
+minimum horizontal footprint for small blocks helped the wrong pair.
+Instrumenting the layout showed why: the binding pair was **PL/PT, stacked
+vertically** at Δy 444, not two blocks side by side.
+
+Blocks wrap onto new lines within a band, so it is the **vertical** distance
+that a growing country eats into. `blockGapY` 70 → **190** fixes it with real
+headroom — **579 vs 464** — and `docs/graph-development.md` now says to raise
+that constant and not `blockGapX`, which does not move the binding pair.
+
+Worth recording because the failure was one pixel and the two obvious fixes
+were both wrong.
+
+### Connectivity
+
+Components unchanged at **20**, largest 354 → **361**, isolated unchanged at
+**8**.
+
+---
+
+## Working the research queue — previous batch
+
+**Status:** completed 2026-08-18.
 
 `discovery/research-queue.md` had drifted: six items it still listed as open
 had been closed by later batches and never marked. This batch **reconciled

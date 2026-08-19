@@ -61,10 +61,10 @@ Environment:
 Output on success:
 
 ```
-build_graph: 389 entities, 4608 edges (651 relationship, 1520 association, 2437 wikilink)
+build_graph: 396 entities, 4672 edges (666 relationship, 1542 association, 2464 wikilink)
              13 countries, 1 region(s), 15 entity types in use
-build_graph: wrote site/graph.json (495 KB)
-build_graph: wrote site/details.json (686 KB)
+build_graph: wrote site/graph.json (503 KB)
+build_graph: wrote site/details.json (697 KB)
 ```
 
 ---
@@ -220,6 +220,13 @@ Node **position** has two modes, switched from the sidebar and dispatched in
 - **Grouped** (default) — `layeredPositions()`: bands by level, blocks by
   scope within a band, connectivity order within a block. Pure arithmetic,
   no threshold needed.
+  - `blockGapY` is deliberately much larger than `blockGapX` (190 vs 110).
+    Blocks wrap onto new lines, so it is the **vertical** distance between
+    two blocks that a growing country eats into, and `test_ui.mjs` asserts
+    that no two block centroids sit closer than the largest block's own
+    radius. That margin ran out at 447 vs 464 when the Dutch block reached
+    85 entities. If it fails again, raise `blockGapY` — not `blockGapX`,
+    which does not move the binding pair.
 - **Force** — `cose` with `forceOptions()`, seeded from the grouped
   positions (`randomize: false`) so it is reproducible. Gated by `FORCE_MAX`;
   above it the grouped layout is kept and the sidebar explains why. Tune

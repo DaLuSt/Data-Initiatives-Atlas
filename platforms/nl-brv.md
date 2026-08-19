@@ -37,10 +37,18 @@ domains:
 organisations:
   - NL-RDW
 related_entities:
+  - NL-WEGENVERKEERSWET-1994
   - NL-BASISREGISTRATIES
   - NL-RDW
   - NL-BRP
 relationships:
+  - type: governed-by
+    target: NL-WEGENVERKEERSWET-1994
+    source: fact
+    evidence: "The Wegenverkeerswet 1994 is the Dutch road traffic act and the statutory basis of the vehicle registration (wetten.overheid.nl/BWBR0006622). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: part-of
     target: NL-BASISREGISTRATIES
     source: fact

@@ -37,12 +37,20 @@ domains:
 organisations:
   - NL-KADASTER
 related_entities:
+  - NL-KADASTERWET
   - NL-BASISREGISTRATIES
   - NL-KADASTER
   - NL-NHR
   - NL-BAG
   - NL-BRP
 relationships:
+  - type: governed-by
+    target: NL-KADASTERWET
+    source: fact
+    evidence: "The Kadasterwet of 3 May 1989 contains rules on the public registers for registered property and on the cadastre; the cadastral base registration and the topographic base registration are maintained under it as authentic data, with database rights reserved to the Dienst voor het kadaster en de openbare registers (wetten.overheid.nl/BWBR0004541). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: part-of
     target: NL-BASISREGISTRATIES
     source: fact

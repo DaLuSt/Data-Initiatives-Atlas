@@ -7,11 +7,11 @@ Generated: 2026-08-19
 
 ## Why this exists
 
-**382 of the Atlas's 389 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
+**389 of the Atlas's 396 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
 
 Closing that debt — the re-verification pass — needs outbound HTTPS to the hosts those URLs point at. In an environment with a restricted egress policy, this is the allowlist to request. A denial shows up as `403 to CONNECT` from the proxy, which is an environment-level network policy and cannot be changed from inside a session. See `discovery/unresolved.md` for the standing record of the sourcing debt.
 
-The Atlas currently cites **1257 source URLs** across **473 hosts**, collapsing to **344 registrable domains**.
+The Atlas currently cites **1276 source URLs** across **474 hosts**, collapsing to **344 registrable domains**.
 
 ## Highest value first
 
@@ -20,12 +20,13 @@ Allowing just these covers the bulk of the pass:
 | Domain | URLs | Entities |
 |---|---|---|
 | `europa.eu` | 138 | 80 |
-| `wikipedia.org` | 68 | 68 |
+| `wikipedia.org` | 70 | 70 |
 | `bund.de` | 41 | 23 |
 | `digitaleoverheid.nl` | 40 | 28 |
 | `gov.pl` | 40 | 18 |
 | `gouv.fr` | 36 | 13 |
 | `gob.es` | 30 | 16 |
+| `overheid.nl` | 27 | 20 |
 | `iso.org` | 23 | 20 |
 | `un.org` | 17 | 10 |
 | `belgium.be` | 17 | 9 |
@@ -36,8 +37,7 @@ Allowing just these covers the bulk of the pass:
 | `legislation.gov.uk` | 15 | 14 |
 | `boe.es` | 14 | 12 |
 | `admin.ch` | 13 | 7 |
-| `overheid.nl` | 13 | 13 |
-| `eerstekamer.nl` | 12 | 12 |
+| `eerstekamer.nl` | 13 | 13 |
 | `forumstandaardisatie.nl` | 12 | 5 |
 
 ## Institutional domains

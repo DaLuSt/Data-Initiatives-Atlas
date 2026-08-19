@@ -41,10 +41,18 @@ domains:
 organisations:
   - NL-TNO
 related_entities:
+  - NL-WET-BRO
   - NL-BASISREGISTRATIES
   - NL-TNO
   - NL-GEONOVUM
 relationships:
+  - type: governed-by
+    target: NL-WET-BRO
+    source: fact
+    evidence: "The Wet basisregistratie ondergrond is the statutory basis of the Basisregistratie Ondergrond and entered into force on 1 January 2018, with articles 27 and 29 following on 1 July 2018 (wetten.overheid.nl/BWBR0037095; basisregistratieondergrond.nl 'Wet Bro'; wetten.overheid.nl/BWBR0040439). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: part-of
     target: NL-BASISREGISTRATIES
     source: fact

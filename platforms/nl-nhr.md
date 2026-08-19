@@ -35,10 +35,18 @@ domains:
 organisations:
   - NL-KVK
 related_entities:
+  - NL-HANDELSREGISTERWET
   - NL-BASISREGISTRATIES
   - NL-KVK
   - NL-BRK
 relationships:
+  - type: governed-by
+    target: NL-HANDELSREGISTERWET
+    source: fact
+    evidence: "The Handelsregisterwet 2007 is the statutory basis of the Handelsregister, the Dutch commercial register (wetten.overheid.nl/BWBR0021777). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: part-of
     target: NL-BASISREGISTRATIES
     source: fact

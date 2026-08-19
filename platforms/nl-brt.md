@@ -36,11 +36,19 @@ domains:
 organisations:
   - NL-KADASTER
 related_entities:
+  - NL-KADASTERWET
   - NL-BASISREGISTRATIES
   - NL-KADASTER
   - NL-BGT
   - NL-BAG
 relationships:
+  - type: governed-by
+    target: NL-KADASTERWET
+    source: fact
+    evidence: "The Kadasterwet of 3 May 1989 contains rules on the public registers for registered property and on the cadastre; the cadastral base registration and the topographic base registration are maintained under it as authentic data, with database rights reserved to the Dienst voor het kadaster en de openbare registers (wetten.overheid.nl/BWBR0004541). NOT READ — search-only. This closes the item recorded in discovery/research-queue.md as the only one of the ten registers where no statute was found at all."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: part-of
     target: NL-BASISREGISTRATIES
     source: fact
@@ -94,25 +102,42 @@ confusing and is the main thing this entity exists to make clear:
 | Scale | small and medium, multiple scale levels | **large scale** |
 | Precision | not established in sources read | **20 centimetres** |
 | Holder | Kadaster | many bronhouders; Kadaster runs the national facility |
-| Statute | not established | Wet BGT, in force 1 January 2016 |
+| Statute | **[[NL-KADASTERWET]]** — shared with [[NL-BRK]] | [[NL-WET-BGT]], in force 1 January 2016 |
 
 They are not versions of each other and neither supersedes the other. **No
 relationship between them is asserted** — no source read states one, and
 `related-to` would add nothing a reader cannot see from both being
 topographic registers in the same stelsel.
 
-## `coverage: low`
+## Its statutory basis — found, and shared
 
-This is the least well-sourced of the ten. **Its statutory basis was not
-established**, its scale levels are described only as "various", its
-products are not enumerated and no date is recorded. The Kadaster's registry
-overview and the digitaleoverheid.nl register page carry it, and neither was
-read.
+This entity was recorded as **the only one of the ten registers where no
+statute was found at all**, and `discovery/research-queue.md` called it the
+weakest of the ten for that reason.
+
+The statute is the **[[NL-KADASTERWET]]** of 3 May 1989, and the reason it
+took a dedicated search to find is that **there is no "Wet basisregistratie
+topografie"**. The Kadasterwet's rules on the public registers and the
+cadastre carry *both* the cadastral base registration and the topographic
+base registration as authentic data, with database rights reserved to the
+Dienst voor het kadaster en de openbare registers.
+
+So [[NL-BRK]] and this register share one statute — the only such pair among
+the ten, and the reason the stelsel's legal underpinning is **seven statutes
+for nine registers** rather than one each.
+
+## `coverage: low` still, for everything else
+
+The statute is now sourced. Its scale levels are still described only as
+"various", its products are not enumerated and no date is recorded. The
+Kadaster's registry overview and the digitaleoverheid.nl register page carry
+it, and neither was read.
 
 ## Relationships
 
 - `part-of` [[NL-BASISREGISTRATIES]].
 - `maintained-by` [[NL-KADASTER]].
+- `governed-by` [[NL-KADASTERWET]] — shared with [[NL-BRK]].
 
 ## Sources
 

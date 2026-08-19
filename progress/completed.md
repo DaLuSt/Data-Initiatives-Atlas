@@ -1,5 +1,58 @@
 # Completed Batches
 
+## The Dutch register statutes
+
+**Date:** 2026-08-18
+
+The second cluster left open by the research-queue pass, and the one the
+register batch itself deferred because *"doing half of it would leave the
+layer inconsistent."* **7 new entities, 15 relationships.** 389 → **396
+entities**, 651 → **666 relationships**.
+
+**Nine of the ten basisregistraties now carry a `governed-by` edge**, against
+one before: [[NL-WET-BAG]], [[NL-WET-BGT]], [[NL-WET-BRO]], [[NL-WET-WOZ]],
+[[NL-HANDELSREGISTERWET]], [[NL-WEGENVERKEERSWET-1994]] and
+[[NL-KADASTERWET]], joining [[NL-WET-BRP]] from Batch 3.
+
+### The weakest of the ten, closed
+
+[[NL-BRT]] was recorded as the one register where **no statute was found at
+all**. It is the [[NL-KADASTERWET]] of 3 May 1989 — and it resisted searching
+because **there is no "Wet basisregistratie topografie"**. That act carries
+both the cadastral and the topographic base registration. A gap that looked
+like missing research was a wrong assumption about the shape of the law.
+
+### Seven statutes for nine registers
+
+One act carries two registers, and three of the seven are **general
+statutes** that happen to contain a registration — a valuation act, a road
+traffic act and the Kadasterwet. Only four were written to constitute one.
+Neither fact is visible from the register entities.
+
+### A wrong identifier caught before it shipped
+
+A search returned **BWBR0007376** for the Kadasterwet. That is the
+**Archiefwet 1995**; the Kadasterwet is **BWBR0004541**. All seven entities
+are keyed on BWBR identifiers, and a wrong one resolves to a real but
+unrelated act — an error invisible on review because the URL works.
+
+### A layout regression, caught by one pixel
+
+Seven new Dutch entities failed `tools/test_ui.mjs`: *"country blocks are
+further apart than they are wide — min separation 463 vs max spread 464."*
+
+Two obvious fixes were both wrong. Widening `blockGapX` made it worse by
+changing which blocks wrap onto which line; a minimum horizontal footprint
+for small blocks moved the wrong pair. Instrumenting showed the binding pair
+was **PL/PT stacked vertically**. `blockGapY` 70 → **190** fixes it with
+headroom (579 vs 464), and the docs now say which constant to reach for.
+
+### Still open
+
+[[NL-BRI]] (Chapter IVA of the AWR, no citable identifier found), the
+Organisatiewet Kadaster, the implementing decrees beneath all seven acts, and
+Belgium, France and Spain's Open Data Directive transpositions.
+
 ## Working the research queue
 
 **Date:** 2026-08-18

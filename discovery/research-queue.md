@@ -12,18 +12,20 @@
 > and the IDS reference architecture, INSEE, the European Statistical
 > System, the Dutch NCSC, CSIRT NASK, and the cybersecurity domain entity.
 >
-> **Still open and clustered — the two largest remaining items:**
+> **Updated 2026-08-18 (second pass).** The **Dutch basisregistraties
+> statutory bases** — the second of the two clusters named below — is now
+> **done**: seven statutes created, nine of the ten registers carry a
+> `governed-by` edge, and [[NL-BRT]]'s missing basis turned out to be the
+> [[NL-KADASTERWET]], shared with [[NL-BRK]]. Only [[NL-BRI]] is left, on
+> Chapter IVA of the AWR.
+>
+> **Still open and clustered — the largest remaining item:**
 >
 > 1. **The Open Data Directive transpositions for Belgium, France and
 >    Spain.** All three amended existing law rather than passing a standalone
 >    act, and none of the three instruments was identified. Ireland's and
 >    Portugal's are now entities, so this is a three-country gap rather than
 >    a five-country one.
-> 2. **The Dutch basisregistraties statutory bases** — Wet BAG, Wet BGT, Wet
->    BRO, Wet WOZ, AWR ch. IVA, Handelsregisterwet, Kadasterwet,
->    Wegenverkeerswet. The queue's own note says six-plus Dutch statutes is a
->    legislation batch and doing half would leave the layer inconsistent.
->    That judgement still holds.
 >
 > **Also open:** portal custodians (seven national portals lack one),
 > `PL-PESEL`-equivalent population registers, Red.es, a French DCAT
@@ -217,9 +219,9 @@ by accident.
 
 | Area / entity | Why it needs research | Suggested batch | Noted by / date |
 |---|---|---|---|
-| **Wet BAG, Wet BGT, Wet BRO, Wet WOZ, AWR ch. IVA** | Statutory bases named in the ten register descriptions with **no entities**. Six-plus Dutch statutes is a legislation batch; doing half would leave the layer inconsistent | **Next** | Register batch |
-| **[[NL-BRT]]'s statutory basis** | The only one of the ten where **no statute was found at all**. Its scale levels and products are also unrecorded — the weakest of the ten | **Next** | Register batch |
-| **Handelsregisterwet, Kadasterwet, Wegenverkeerswet** | The statutes behind [[NL-NHR]], [[NL-BRK]] and [[NL-BRV]]; none sourced with a year | Next | Register batch |
+| ~~**Wet BAG, Wet BGT, Wet BRO, Wet WOZ**~~ **— DONE 2026-08-18** ([[NL-WET-BAG]], [[NL-WET-BGT]], [[NL-WET-BRO]], [[NL-WET-WOZ]]); **AWR ch. IVA still open** | Statutory bases named in the ten register descriptions with **no entities**. Six-plus Dutch statutes is a legislation batch; doing half would leave the layer inconsistent | **Next** | Register batch |
+| ~~**[[NL-BRT]]'s statutory basis**~~ **— DONE 2026-08-18**: it is the [[NL-KADASTERWET]], shared with [[NL-BRK]]. There is no *Wet basisregistratie topografie*, which is why it was not found | The only one of the ten where **no statute was found at all**. Its scale levels and products are also unrecorded — the weakest of the ten | **Next** | Register batch |
+| ~~**Handelsregisterwet, Kadasterwet, Wegenverkeerswet**~~ **— DONE 2026-08-18** ([[NL-HANDELSREGISTERWET]], [[NL-KADASTERWET]], [[NL-WEGENVERKEERSWET-1994]]) | The statutes behind [[NL-NHR]], [[NL-BRK]] and [[NL-BRV]]; none sourced with a year | Next | Register batch |
 | **Digimelding** | The stelsel's facility for reporting suspected errors in the registrations, alongside [[NL-DIGIKOPPELING]]. Named in one sentence of one source | Next | Register batch |
 | **SVB-BGT** | Samenwerkingsverband Bronhouders voor de BGT — the cooperative organising seven categories of bronhouder into one national map. Named in one source | Later | Register batch |
 | **Rijkswaterstaat, ProRail, RVO** | BGT and BRO bronhouders; none is an Atlas entity | Later | Register batch |

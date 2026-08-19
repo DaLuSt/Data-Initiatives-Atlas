@@ -37,12 +37,20 @@ domains:
 organisations:
   - NL-KADASTER
 related_entities:
+  - NL-WET-BAG
   - NL-BASISREGISTRATIES
   - NL-KADASTER
   - NL-BRP
   - NL-BRK
   - NL-BRT
 relationships:
+  - type: governed-by
+    target: NL-WET-BAG
+    source: fact
+    evidence: "The Wet basisregistratie adressen en gebouwen is the statutory basis of the Basisregistratie Adressen en Gebouwen; the act of 10 February 2017 amending it and other acts on the modernisation and simplification of registration and supervision (Stb. 2017, 60) entered into force on 1 July 2018 (wetten.overheid.nl/BWBR0023466; geobasisregistraties.nl 'Overzicht wet- en regelgeving basisregistratie adressen en gebouwen (BAG 2.0)'). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: part-of
     target: NL-BASISREGISTRATIES
     source: fact
