@@ -60,23 +60,28 @@ sources:
 
 NSAI is Ireland's national standards body.
 
-## ⚠ No `participates-in` edges are asserted
+## The refusal recorded here has been closed
 
-[[GB-BSI]] carries five — to [[INTL-ISO]], [[INTL-IEC]], [[EU-CEN]],
-[[EU-CENELEC]] and [[EU-ETSI]] — and is recorded as the most connective UK
-entity in the Atlas. [[DE-DIN]] and [[NL-NEN]] carry the same pattern.
+An earlier version of this entity asserted **no** `participates-in` edges.
+The reasoning was that the CEN-CENELEC members page had been returned by
+search and not read, so the Atlas had a URL that almost certainly listed NSAI
+and no confirmation that it did — and that inferring membership from a page
+title would be guessing.
 
-The obvious move is to give NSAI the same edges. **It is not made here.**
-The CEN-CENELEC members page was returned by search and, like everything
-else in this repository, **was not read** — so the Atlas has a URL that
-almost certainly lists NSAI and no confirmation that it does. Asserting
-membership of three or five standards bodies on that basis would be
-inferring from a page title.
+What closed it was not reading that page. It was finding CEN-CENELEC's own
+**statement of the rule**: *CEN's National Members are the National
+Standardization Bodies of the 27 European Union countries*, and CENELEC's
+are the National Committees of the same set. Ireland is a member state and
+NSAI is its national standards body, so the membership follows from the rule
+rather than from a list the Atlas cannot read.
 
-This entity therefore closes half a gap: Ireland now **has** a standards
-body, where Belgium, France, Spain and Poland still have none. Wiring it to
-the European and international standardisation layer is a separate,
-one-source job and is logged in `discovery/unresolved.md`.
+`participates-in` [[EU-CEN]] and [[EU-CENELEC]] are now asserted on that
+basis, together with the four bodies created in the same batch —
+[[BE-NBN]], [[FR-AFNOR]], [[ES-UNE]] and [[PL-PKN]].
+
+**[[INTL-ISO]] is still not asserted.** The rule covers the European
+organisations and says nothing about ISO. [[GB-BSI]] and [[DE-DIN]] carry
+ISO edges because their own sources state it; NSAI's do not.
 
 ## Not modelled
 
@@ -88,3 +93,7 @@ one-source job and is logged in `discovery/unresolved.md`.
 ## Sources
 
 Listed in frontmatter.
+
+## Relationships
+
+- `participates-in` [[EU-CEN]] and [[EU-CENELEC]].

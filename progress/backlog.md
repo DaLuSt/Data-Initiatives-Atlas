@@ -266,7 +266,7 @@ validation (`CONTRIBUTING.md` — Batch workflow).
 - [ ] **`UN-FPOS` → national statistical legislation.** The batch connected
   the statistical *offices*; the *legislation* ([[NL-WET-CBS]],
   [[DE-BSTATG]]) still has no UN link.
-- [ ] **INSEE.** France is now the only one of five countries with no
+- [x] **INSEE.** France is now the only one of five countries with no
   statistical office in [[EU-ESS]] — a visible hole in a modelled structure
   rather than one absence among unconnected nodes.
 - [ ] **Model Regulation (EC) No 223/2009**, [[EU-ESS]]'s legal base, and
@@ -502,9 +502,15 @@ A review after the intelligence-services batch, prompted by the question
 batch of 2026-08-18. What follows is what that review found and did **not**
 act on.
 
-### Better value than any new country
+### Better value than any new country — **all four done 2026-08-18**
 
-- [ ] **Connect the national DPAs to [[EU-EDPB]].** `EU-EDPB` has **2**
+Completed in the cheap-structural-fixes batch. [[EU-EDPB]] went from 2 to 8
+incoming edges, [[EU-CEN]] from 3 to 7, [[EU-ESS]] from 7 to 8.
+[[FR-INSEE]], [[BE-NBN]], [[FR-AFNOR]], [[ES-UNE]], [[PL-PKN]],
+[[NL-NCSC]] and [[PL-NASK]] were created. The items below are kept as the
+record of what was outstanding.
+
+- [x] **Connect the national DPAs to [[EU-EDPB]].** `EU-EDPB` has **2**
   incoming edges ([[NL-AP]] and [[EU-EDPS]]) against [[EU-ESS]]'s **6**.
   The Atlas holds eight data protection authorities and links one. The
   Spain batch called [[EU-ESS]] "the single highest-value item this batch
@@ -512,9 +518,9 @@ act on.
   entity**.
 - [ ] **INSEE.** France is the only Atlas country with no statistical
   office, and a free [[EU-ESS]] member. Queued since the France batch.
-- [ ] **NBN, AFNOR, UNE, PKN** — the four missing national standards
+- [x] **NBN, AFNOR, UNE, PKN** — the four missing national standards
   bodies. [[GB-BSI]] is the most connective UK entity; the pattern works.
-- [ ] **A Dutch cyber authority.** [[NL-CBW]] is a NIS2 act with no
+- [x] **A Dutch cyber authority.** [[NL-CBW]] is a NIS2 act with no
   authority attached.
 
 ### The vocabulary the Atlas defines and does not use

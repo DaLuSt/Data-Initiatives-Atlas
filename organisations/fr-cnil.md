@@ -32,8 +32,16 @@ domains:
   - DOMAIN-GOVERNMENT
 organisations: []
 related_entities:
+  - EU-EDPB
   - FR-LIL
 relationships:
+  - type: participates-in
+    target: EU-EDPB
+    source: fact
+    evidence: "Article 68(3) GDPR provides that the European Data Protection Board shall be composed of the head of one supervisory authority of each Member State and of the European Data Protection Supervisor, or their respective representatives; the CNIL is France's supervisory authority (gdpr-info.eu 'Art. 68 GDPR — European Data Protection Board'; gdprhub.eu 'Article 68 GDPR'; edpb.europa.eu). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: applies-to
     target: FR-LIL
     source: fact
@@ -43,6 +51,12 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Art. 68 GDPR — European Data Protection Board"
+    url: "https://gdpr-info.eu/art-68-gdpr/"
+    publisher: "gdpr-info.eu (Intersoft Consulting)"
+  - title: "Article 68 GDPR"
+    url: "https://gdprhub.eu/Article_68_GDPR"
+    publisher: "GDPRhub (noyb)"
   - title: "Entrée en vigueur de la nouvelle loi Informatique et Libertés"
     url: "https://www.cnil.fr/fr/entree-en-vigueur-de-la-nouvelle-loi-informatique-et-libertes"
     publisher: "Commission nationale de l'informatique et des libertés (CNIL)"

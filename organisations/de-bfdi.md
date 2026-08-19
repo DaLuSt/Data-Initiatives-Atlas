@@ -32,9 +32,17 @@ domains:
   - DOMAIN-GOVERNMENT
 organisations: []
 related_entities:
+  - EU-EDPB
   - DE-BDSG
   - DE-IFG
 relationships:
+  - type: participates-in
+    target: EU-EDPB
+    source: fact
+    evidence: "Article 68(3) GDPR provides that the European Data Protection Board shall be composed of the head of one supervisory authority of each Member State and of the European Data Protection Supervisor, or their respective representatives; Article 68(3) further provides that where in a Member State more than one supervisory authority is responsible for monitoring the application of the Regulation, a joint representative shall be appointed in accordance with that Member State's law — which is the arrangement that applies to Germany, with a federal commissioner and seventeen authorities in total (gdpr-info.eu 'Art. 68 GDPR — European Data Protection Board'; gdprhub.eu 'Article 68 GDPR'; edpb.europa.eu). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: applies-to
     target: DE-BDSG
     source: fact
@@ -51,6 +59,12 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Art. 68 GDPR — European Data Protection Board"
+    url: "https://gdpr-info.eu/art-68-gdpr/"
+    publisher: "gdpr-info.eu (Intersoft Consulting)"
+  - title: "Article 68 GDPR"
+    url: "https://gdprhub.eu/Article_68_GDPR"
+    publisher: "GDPRhub (noyb)"
   - title: "Aufgaben und Befugnisse der BfDI"
     url: "https://www.bfdi.bund.de/DE/BfDI/Inhalte/BfDI/AufgabenBFDI.html"
     publisher: "Bundesbeauftragte für den Datenschutz und die Informationsfreiheit (BfDI)"
@@ -117,16 +131,39 @@ national coverage would be wrong.
   discuss the supervisory regime. But no source read states the connection
   in terms the Atlas can cite, and the BfDI's own task page describes
   powers without being quoted on their statutory basis.
-- **`participates-in` → [[EU-EDPB]].** [[NL-AP]] carries exactly this
-  relationship, and the German federal and Land authorities are certainly
-  represented in the European Data Protection Board. **No source read says
-  so**, and the German representation arrangement is precisely the kind of
-  detail — which authority represents Germany, and how — that should not be
-  guessed at. Refusing this one costs the Atlas a DE→EU edge it would
-  otherwise gain for free, which is why it is recorded here rather than
-  passed over silently.
+The `participates-in` → [[EU-EDPB]] refusal that used to stand here is
+**now closed** — see below.
 
-Both are logged in `discovery/unresolved.md`.
+The remaining one is logged in `discovery/unresolved.md`.
+
+## The EDPB refusal, and how it was closed
+
+An earlier version of this entity refused `participates-in` [[EU-EDPB]]. The
+reasoning was that the German federal and Land authorities are certainly
+represented on the Board, that no source read said so, and that **the German
+representation arrangement — which authority represents Germany, and how —
+was precisely the kind of detail that should not be guessed at.**
+
+That refusal was right, and the answer turned out to be in the Regulation
+itself.
+
+**[[EU-GDPR]] Article 68(3)** composes the Board of *the head of one
+supervisory authority of each Member State and of the European Data
+Protection Supervisor, or their respective representatives* — and then adds
+the sentence that resolves exactly the German question:
+
+> where in a Member State more than one supervisory authority is responsible
+> for monitoring the application of the provisions pursuant to this
+> Regulation, **a joint representative shall be appointed in accordance with
+> that Member State's law**.
+
+So the multi-authority case is not an obstacle to the edge; it is anticipated
+by the provision that creates the Board. The edge is now asserted, and the
+`joint representative` mechanism is named in its evidence rather than
+glossed over.
+
+Which German authority holds that role in practice is **still not
+established**, and the entity does not claim to know.
 
 ## Relationships
 

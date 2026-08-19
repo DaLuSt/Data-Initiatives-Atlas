@@ -1,9 +1,120 @@
 # Current Batch
 
-**Status:** No batch in progress. **Data spaces — completing the fourteen**
-was completed on 2026-08-18, after the scope-anchor rule.
+**Status:** No batch in progress. **The cheap structural fixes** was
+completed on 2026-08-18, after the data spaces batch.
 
-## Data spaces — completing the fourteen
+## The cheap structural fixes
+
+All four items on `discovery/candidates.md`'s "cheap structural fixes" list,
+done. **7 new entities and 16 relationships.** 354 → **361 entities**,
+539 → **555 relationships**.
+
+The list was written on the premise that these cost one or a few entities and
+connect many. They did.
+
+| Hub | Incoming edges before | After |
+|---|---:|---:|
+| [[EU-EDPB]] | **3** | **8** |
+| [[EU-CEN]] | 3 | **7** |
+| [[EU-ESS]] | 7 | **8** |
+
+### 1. The DPAs reach the Board — and a refusal was wrong for an instructive reason
+
+[[EU-EDPB]] had **two** incoming edges when the review flagged it, against
+[[EU-ESS]]'s six, in a repository holding **eight** data protection
+authorities.
+
+The blocker was recorded on [[DE-BFDI]]: the German federal and Land
+authorities are certainly represented, **no source read said so**, and *which
+authority represents a member state with seventeen of them* was "precisely
+the kind of detail that should not be guessed at."
+
+That refusal was correct in method and the answer was in the Regulation. **
+[[EU-GDPR]] Article 68(3)** composes the Board of the head of one supervisory
+authority per member state and the [[EU-EDPS]] — and adds:
+
+> where in a Member State more than one supervisory authority is responsible
+> …, **a joint representative shall be appointed in accordance with that
+> Member State's law**.
+
+The provision that creates the Board anticipates the exact case that had
+blocked the edge. Five edges added — [[DE-BFDI]], [[BE-APD]], [[FR-CNIL]],
+[[ES-AEPD]], [[PL-UODO]] — joining [[NL-AP]] and [[IE-DPC]]. **No new
+entity.**
+
+The three authorities that do **not** get the edge are now a clean set of
+three different reasons: [[GB-ICO]] (not a member state), [[NO-DATATILSYNET]]
+(EEA cooperation runs through EEA-specific channels), [[CH-EDOEB]] (outside
+the Union and the EEA entirely).
+
+### 2. [[FR-INSEE]] — the last missing statistical office
+
+France was the **only Atlas country with no statistical office**, queued
+since the France batch. [[EU-ESS]] now holds **every EU member state in the
+Atlas**: [[NL-CBS]], [[DE-DESTATIS]], [[BE-STATBEL]], [[ES-INE]],
+[[PL-GUS]], [[IE-CSO]] and INSEE.
+
+The three non-member states remain outside it, each for its own reason —
+[[GB-ONS]] via [[UN-CES]], [[NO-SSB]] and [[CH-BFS]] with no ESS edge at all.
+
+### 3. Four standards bodies, and the same lesson twice
+
+[[BE-NBN]], [[FR-AFNOR]], [[ES-UNE]] and [[PL-PKN]] created; [[EU-CEN]] and
+[[EU-CENELEC]] each gain four members.
+
+The [[IE-NSAI]] refusal — asserted last batch, that the CEN members page had
+been *found but not read*, so membership could not be claimed — is also
+closed, and **not by reading it**. CEN-CENELEC states the **rule**: its
+national members are the standardization bodies of the 27 EU countries.
+Ireland is a member state; NSAI is its standards body; the membership follows
+from the rule rather than from a list.
+
+Twice in one batch, a refusal for want of a source turned out to be a source
+not yet found. **That is not the same as a fact being unknowable**, and both
+entities now say so where the refusal used to stand.
+
+**[[INTL-ISO]] is still not asserted** for any of the five. The CEN rule
+covers the European organisations and says nothing about ISO;
+[[GB-BSI]] and [[DE-DIN]] carry ISO edges because their own sources state it.
+
+### 4. The Dutch and Polish cyber authorities
+
+- **[[NL-NCSC]]** — the gap recorded since the Belgium batch, that
+  [[NL-CBW]] was a NIS2 act with no authority attached. On **1 January 2026**
+  the Digital Trust Center merged into the NCSC, creating a single
+  strengthened body serving **2.4 million** Dutch organisations.
+- **[[PL-NASK]]** — conducts **CSIRT NASK**, one of the three national CSIRTs
+  under [[PL-KSC]]. [[PL-ABW]] already carried the CSIRT GOV role; **CSIRT
+  MON remains unmodelled**, because the Polish defence ministry is not an
+  entity.
+
+### ⚠ The one weak edge, named
+
+[[NL-NCSC]] `applies-to` [[NL-CBW]] is `source: interpretation`,
+`confidence: low` — the only edge in the batch that is not a plain fact.
+
+The sources establish that the NCSC is the national cyber security body and
+that it is guiding organisations through the Cyberbeveiligingswet. **None
+read states that it is the competent authority or CSIRT designated under
+it**, and the Dutch act distributes competent-authority roles across sectoral
+regulators. Compare [[BE-CCB]] (`governed-by` **and** `produces` its act),
+[[DE-BSI]] (`governed-by`) and [[FR-ANSSI]] (`applies-to`) — all on firmer
+ground.
+
+### Connectivity
+
+Components unchanged at **20**, largest 319 → **326**, isolated entities
+unchanged at **8** — still only the domains.
+
+The components number not moving is the point: these fixes did not rescue
+islands, they **thickened the middle**. Three hub entities went from thin to
+properly connected.
+
+---
+
+## Data spaces — completing the fourteen — previous batch
+
+**Status:** completed 2026-08-18.
 
 **13 new entities.** 341 → **354 entities**, 522 → **539 relationships**.
 The data-space layer goes from **8 entities to 19**.
