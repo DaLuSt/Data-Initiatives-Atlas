@@ -1,9 +1,123 @@
 # Current Batch
 
-**Status:** No batch in progress. **The cheap structural fixes** was
-completed on 2026-08-18, after the data spaces batch.
+**Status:** No batch in progress. **Portugal, Luxembourg and Czechia** was
+completed on 2026-08-18, after the cheap structural fixes.
 
-## The cheap structural fixes
+## Portugal, Luxembourg and Czechia
+
+**23 new entities** plus **54 `applies-in` edges**. 361 → **384 entities**,
+555 → **641 relationships**. The Atlas goes from ten countries to
+**thirteen**, and from eight EU member states to **eleven**.
+
+The three hubs the previous batch thickened gained three each:
+
+| Hub | Before | After |
+|---|---:|---:|
+| [[EU-EDPB]] | 8 | **11** |
+| [[EU-ESS]] | 8 | **11** |
+| [[EU-CEN]] | 7 | **10** |
+
+Every EU member state in the Atlas now has a data protection authority on the
+Board, a statistical institute in the ESS, and a standards body in CEN. The
+pattern established by the structural-fixes batch held for three new
+countries without needing new research into how it works — which is what a
+good pattern is for.
+
+### What each country brought
+
+**Czechia — an act about how the state manages its own data.**
+[[CZ-ZAKON-60-2026]], *zákon o správě dat a řízeném přístupu*, makes
+[[CZ-DIA]] Czechia's **single information point** and the node connecting
+Czech data sources to the European data portal.
+
+The Atlas holds a great deal of law *about* data — protection acts, open data
+transpositions, cyber acts. It had almost none about **how a state manages
+its own data and lets others reach it**. The nearest comparators are Dutch
+and are not statutes: [[NL-IBDS]] is a strategy, [[NL-FDS]] a system. **The
+Netherlands built the arrangement; Czechia legislated it.**
+
+**Luxembourg — the case against reading size into the graph.** The smallest
+country here, and through [[LU-ILNAS]] one of only **two** whose standards
+body belongs to all five standardisation organisations the Atlas holds. The
+other is the United Kingdom, through [[GB-BSI]], recorded as "the most
+connective UK entity". Luxembourg matches it and beats eight larger member
+states.
+
+It also shows **small-state concentration** twice: ILNAS is standards,
+accreditation *and* product safety; [[LU-CTIE]] runs government IT *and*
+implements the State's infrastructure security — functions the Netherlands
+splits between [[NL-LOGIUS]] and [[NL-NCSC]].
+
+**Portugal — a verb, and a mandate.** [[PT-LEI-58-2019]] *executes* the GDPR,
+where the Dutch act implements it, the German supplements and concretises it,
+the Irish gives it further effect and the British simply *is* it. All carry
+the same relationship type; the varied language is how each tradition
+describes one operation. And [[PT-AMA]]'s remit covers **regulatory**
+simplification, which no comparable body in the Atlas records.
+
+### Three name collisions in one batch
+
+| Collision | Entities |
+|---|---|
+| **CNPD** | [[PT-CNPD]] (Comissão Nacional de Proteção de Dados) and [[LU-CNPD]] (Commission nationale pour la protection des données) |
+| **INE** | [[PT-INE]] (Instituto Nacional de Estatística) and [[ES-INE]] (Instituto Nacional de Estadística) |
+| **The exact same name** | [[LU-STATEC]]'s full name is *Institut national de la statistique et des études économiques* — **word for word** [[FR-INSEE]]'s |
+
+All three are genuine ambiguities in the world, not Atlas artefacts, and all
+three are why the repository keys on **scoped IDs rather than names**. Each
+entity says so.
+
+### The one that needed care rather than a template
+
+Czechia splits standardisation between two bodies: **[[CZ-UNMZ]] holds the
+formal membership** at ISO, IEC, CEN and CENELEC and the legal responsibility
+on behalf of the state, while **ČAS** performs the operational work —
+technical committees, drafting, publication.
+
+No other country in the Atlas splits it. The `participates-in` edges are
+asserted on ÚNMZ because that is what membership means. Getting it wrong
+would have been easy: **ČAS is the more visible body** and publishes the
+English-language standards pages, and an entity built from those would have
+claimed a membership ČAS does not hold.
+
+**ČAS is not modelled**, which understates Czech standardisation — the body
+that actually produces ČSN standards is absent.
+
+### Refusals
+
+- **No relationship between [[LU]] and [[EU-PUBLICATIONS-OFFICE]]**, though
+  the Publications Office is seated in Luxembourg. Hosting an institution is
+  not participating in it, and modelling it as one would make every host
+  state look like a participant in what it hosts.
+- **No `maintained-by` on any of the three new portals.** [[LU-CTIE]] has a
+  *publisher page* on data.public.lu — that proves publication, not
+  custodianship. Seven national portals in the Atlas now lack a custodian and
+  one has it.
+- **[[CZ-NUKIB]]'s NCKB is not a separate entity.** The sources present it as
+  a section of NÚKIB, and a node for an internal division would imply a
+  standing it does not have.
+
+### Known gaps, named
+
+- **Luxembourg's GDPR implementation act** (1 August 2018) was not
+  identified — the **only member state in the Atlas** without one.
+- **NIS2 transpositions for Portugal and Czechia**, so [[PT-CNCS]] and
+  [[CZ-NUKIB]] carry anchor edges rather than relationships to acts.
+- **Luxembourg's NIS2 competent authority and CSIRT.**
+- **Portugal's Open Data Directive transposition**, joining Belgium, France,
+  Spain and Ireland on that list — five countries, comfortably a batch.
+
+### Connectivity
+
+Components unchanged at **20**, largest 326 → **349**, isolated entities
+unchanged at **8** — still only the domains. Twenty-three new entities and
+not one orphan, because the scope-anchor rule is now enforced at build time.
+
+---
+
+## The cheap structural fixes — previous batch
+
+**Status:** completed 2026-08-18.
 
 All four items on `discovery/candidates.md`'s "cheap structural fixes" list,
 done. **7 new entities and 16 relationships.** 354 → **361 entities**,

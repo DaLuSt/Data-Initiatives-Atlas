@@ -38,6 +38,9 @@ domains:
   - DOMAIN-GOVERNMENT
 organisations: []
 related_entities:
+  - CZ
+  - LU
+  - PT
   - IE
   - UN-AARHUS
   - EU-OPEN-DATA-DIRECTIVE
@@ -49,6 +52,27 @@ relationships:
     evidence: "Directive 2003/4/EC was adopted when the EU became a party to the 1998 UNECE Convention on Access to Information, Public Participation in Decision-making and Access to Justice in Environmental Matters (the Aarhus Convention); provisions of Community law must be consistent with that Convention with a view to its conclusion by the European Community (eur-lex.europa.eu CELEX 32003L0004; environment.ec.europa.eu/law-and-governance/aarhus_en). NOT READ — search-only."
     confidence: medium
     valid_from: 2003-01-28
+    valid_until: null
+  - type: applies-in
+    target: PT
+    source: fact
+    evidence: "As an EU directive, Directive 2003/4/EC on public access to environmental information is binding on every member state as to the result to be achieved and requires national transposition, and Portugal is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: LU
+    source: fact
+    evidence: "As an EU directive, Directive 2003/4/EC on public access to environmental information is binding on every member state as to the result to be achieved and requires national transposition, and Luxembourg is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: CZ
+    source: fact
+    evidence: "As an EU directive, Directive 2003/4/EC on public access to environmental information is binding on every member state as to the result to be achieved and requires national transposition, and Czechia is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
     valid_until: null
   - type: applies-in
     target: IE
