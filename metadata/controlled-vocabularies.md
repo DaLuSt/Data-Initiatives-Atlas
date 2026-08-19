@@ -19,8 +19,17 @@ Definitions: `metadata/ontology.md` §1. Folder mapping: `metadata/ontology.md` 
 
 ## `status`
 
-`proposed`, `planned`, `active`, `implemented`, `superseded`, `replaced`,
-`completed`, `archived`, `unknown`
+`proposed`, `planned`, `adopted`, `active`, `implemented`, `superseded`,
+`replaced`, `completed`, `archived`, `unknown`
+
+`adopted` means a formally adopted instrument that is **not yet in force** —
+a treaty opened for signature and awaiting the ratifications its own entry
+clause requires, or an act adopted with deferred application. It sits
+between `proposed` (a draft or a proposal) and `active` (operative law).
+Added for [[INTL-CONVENTION-108-PLUS]], which 34 states have ratified and
+which binds nobody: `proposed` would have called a ratified treaty a
+proposal, and `active` would have called a treaty that is not in force
+operative law
 
 ## `confidence` / relationship `confidence`
 

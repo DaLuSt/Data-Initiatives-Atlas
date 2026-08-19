@@ -38,7 +38,15 @@ related_entities:
   - NL-UAVG
   - NL-AP
   - EU-DIGITAL-OMNIBUS
+  - INTL-CONVENTION-108
 relationships:
+  - type: references
+    target: INTL-CONVENTION-108
+    source: fact
+    evidence: "Recital 105 of the GDPR indicates that the European Commission will take into account a third country's accession to Convention 108 in its adequacy findings; the modernised Convention and the GDPR are described as compatible instruments addressing similar challenges (iapp.org 'Modernized CoE Convention 108: A global standard on data protection'; caseguard.com 'The Modernization of Convention 108'; ambitcompliance.ie 'From Convention 108 to GDPR'). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: applies-in
     target: PT
     source: fact

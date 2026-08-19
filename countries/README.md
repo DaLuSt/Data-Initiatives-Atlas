@@ -17,8 +17,10 @@ Country-scoped entities themselves (initiatives, legislation, organisations,
 
 ## Participating countries
 
-**Fifty**, of which thirteen have a modelled national layer and thirty-seven
-are base anchors created in the European country batch of 2026-08-19.
+**Fifty-eight**, of which thirteen have a modelled national layer,
+thirty-seven are European base anchors created on 2026-08-19, and **eight are
+outside Europe entirely** — the non-European parties to
+[[INTL-CONVENTION-108]], added with that treaty on the same day.
 
 | Country | Code | Folder | State |
 |---|---|---|---|
@@ -72,6 +74,27 @@ are base anchors created in the European country batch of 2026-08-19.
 | Ukraine | `UA` | [`ua/`](ua/) | anchor only |
 | Holy See | `VA` | [`va/`](va/) | anchor only |
 | Kosovo | `XK` | [`xk/`](xk/) | anchor only |
+
+### Eight countries that are not European
+
+| Argentina | `AR` | [`ar/`](ar/) | Convention 108 party |
+| Cabo Verde | `CV` | [`cv/`](cv/) | Convention 108 party |
+| Mauritius | `MU` | [`mu/`](mu/) | Convention 108 party |
+| Mexico | `MX` | [`mx/`](mx/) | Convention 108 party |
+| Morocco | `MA` | [`ma/`](ma/) | Convention 108 party |
+| Senegal | `SN` | [`sn/`](sn/) | Convention 108 party |
+| Tunisia | `TN` | [`tn/`](tn/) | Convention 108 party |
+| Uruguay | `UY` | [`uy/`](uy/) | Convention 108 party |
+
+These eight are **not** in the Atlas under the European rule below. They are
+here because [[INTL-CONVENTION-108]] — the only binding international treaty
+on data protection — is open to accession by any state, and they acceded.
+Modelling that treaty without them would have modelled it as the regional
+instrument it is expressly not.
+
+They are base anchors and are **not the start of a global country layer**.
+The Atlas's scope is European data governance; these eight are the reach of
+one treaty. Each says so on its own page.
 
 ### Which states count as European
 

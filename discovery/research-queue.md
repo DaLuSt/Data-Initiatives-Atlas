@@ -77,6 +77,25 @@
 > 5. **The EFTA Surveillance Authority, the EFTA Court and the EEA Joint
 >    Committee.** [[INTL-EFTA]] exists now and these three do not, which
 >    leaves [[IS]], [[LI]] and [[NO]] supervised by nobody in the graph.
+>
+> **Updated 2026-08-19 (Convention 108 batch).** Item 2 above is **done**:
+> [[INTL-CONVENTION-108]], [[INTL-CONVENTION-108-PROTOCOL]] (ETS 181, 2001)
+> and [[INTL-CONVENTION-108-PLUS]] (CETS 223, 2018) now exist, together with
+> the **eight non-European parties** to the Convention — the Atlas's first
+> entities outside Europe and the UN system.
+>
+> A new `status` value, **`adopted`**, was added for Convention 108+: it has
+> been ratified by 34 states and is not in force, which neither `proposed`
+> nor `active` could say.
+>
+> **What the batch could not do:** assert `applies-in` for the ~46 European
+> parties. Sources state that all Council of Europe member states are
+> parties, but the only source found for the rule gives a stale member count
+> (47, wrong since [[RU]]'s expulsion), and [[RU]]'s own status as a party
+> after expulsion is unaddressed anywhere found. The Council of Europe's
+> chart of signatures and ratifications settles it and **`coe.int` is blocked
+> by the egress proxy**. This is the first item where the verification debt
+> has blocked *new* modelling rather than only re-verification.
 
 
 Confirmed-relevant areas that are known to need research but haven't been
@@ -394,8 +413,13 @@ by accident.
 | Ordonnance n° 2016-307 and décret n° 2021-1559 | The French codification instrument and the licence decree, recorded in prose on [[FR-LOI-VALTER]]. Both fall below the threshold the Atlas has used for `type: law`; revisit if the CRPA is ever modelled as an entity | Later | RQ3 batch / 2026-08-19 |
 | An `amended-by` inverse | `amends` was added this batch as a single directed type. The graph shows incoming edges, so the inverse is readable without being stored — but `implements`/`implemented-by` exist as a pair, so the vocabulary is now inconsistent with itself | Later (design) | RQ3 batch / 2026-08-19 |
 | The 37 base country anchors | Each of [[AD]], [[AL]], [[AM]], [[AT]], [[AZ]], [[BA]], [[BG]], [[BY]], [[CY]], [[DK]], [[EE]], [[FI]], [[GE]], [[GR]], [[HR]], [[HU]], [[IS]], [[IT]], [[LI]], [[LT]], [[LV]], [[MC]], [[MD]], [[ME]], [[MK]], [[MT]], [[RO]], [[RS]], [[RU]], [[SE]], [[SI]], [[SK]], [[SM]], [[TR]], [[UA]], [[VA]] and [[XK]] carries membership facts and nothing else — no DPA, no portal, no statistics office, no legislation | Later, one country at a time | European country batch / 2026-08-19 |
-| Convention 108 and Convention 108+ | The Council of Europe's data protection convention, opened 1981 and modernised 2018. The **only binding international treaty** on data protection, and open to accession by non-European states, which [[EU-GDPR]] is not. [[INTL-COE]] was created for it to hang from | **Next** | European country batch / 2026-08-19 |
+| ~~Convention 108 and Convention 108+~~ **— DONE 2026-08-19** ([[INTL-CONVENTION-108]], [[INTL-CONVENTION-108-PROTOCOL]], [[INTL-CONVENTION-108-PLUS]]) | The Council of Europe's data protection convention, opened 1981 and modernised 2018. The **only binding international treaty** on data protection, and open to accession by non-European states, which [[EU-GDPR]] is not | **Next** | European country batch / 2026-08-19 |
 | EFTA Surveillance Authority, EFTA Court, EEA Joint Committee | The EEA EFTA states' counterparts to the Commission and the Court of Justice, and the body that takes the incorporation decisions [[INTL-EEA-AGREEMENT]] runs on. Carried from [[NO]] since the Norway batch; now three countries wide | Next | Norway batch; widened 2026-08-19 |
 | `applies-in` to the 17 new EU member states | Every EU instrument the Atlas holds applies in all 27 member states. It names 10. Filling this is mechanical rather than research, but it is 17 × the instrument count | Next | European country batch / 2026-08-19 |
 | Greece's `EL` / `GR` code split | The EU keys Greece as `EL`; ISO keys it as `GR`. The Atlas uses `GR`. Any future harvest of Eurostat or EUR-Lex data will not join without a mapping | Later (design) | European country batch / 2026-08-19 |
 | Cyprus's suspended *acquis* | `applies-in` is a whole-country predicate; the *acquis* is suspended in the areas of [[CY]] not under the Republic's effective control. The Atlas cannot express this | Blocked (design) | European country batch / 2026-08-19 |
+| **`applies-in` for the European parties to Convention 108** | Sources say all Council of Europe member states are parties — roughly 46 edges. **Blocked on reading `coe.int`'s chart of signatures and ratifications**, which the egress proxy denies. The one source found for the rule gives a stale member count, and [[RU]]'s status as a party after its 2022 expulsion is unaddressed. The first time the sourcing debt has blocked *new* modelling rather than re-verification | Blocked (egress) | Convention 108 batch / 2026-08-19 |
+| Committee of Convention 108 (T-PD) | The Convention's consultative committee — its counterpart to [[EU-EDPB]] — which met for its 50th plenary and is the body pressing state parties to ratify [[INTL-CONVENTION-108-PLUS]]. Named in two Council of Europe sources; not modelled | **Next** | Convention 108 batch / 2026-08-19 |
+| The descent from ETS 181 to the national DPAs and to adequacy | [[INTL-CONVENTION-108-PROTOCOL]] required independent supervisory authorities in 2001 and introduced adequacy-based transfer rules. The Atlas holds eleven national DPAs and [[EU-UK-ADEQUACY]] and asserts no relationship to it, because no source read states the descent. Recorded in prose on that entity | Later | Convention 108 batch / 2026-08-19 |
+| Argentina's and Uruguay's EU adequacy decisions | Both are recorded in prose on [[AR]] and [[UY]] and neither is an entity. They would connect the Convention 108 parties to the EU adequacy machinery the Atlas already holds through [[EU-UK-ADEQUACY]] | Later | Convention 108 batch / 2026-08-19 |
+| Data Protection Day (28 January) | Marked across Europe as the anniversary of Convention 108's opening for signature. Recorded in prose on [[INTL-CONVENTION-108]]; whether an observance is an Atlas entity at all is an open question | Later (design) | Convention 108 batch / 2026-08-19 |

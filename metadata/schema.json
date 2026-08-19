@@ -27,7 +27,7 @@
   },
   "levels": ["international", "regional", "national", "sectoral", "local"],
   "statuses": [
-    "proposed", "planned", "active", "implemented", "superseded",
+    "proposed", "planned", "adopted", "active", "implemented", "superseded",
     "replaced", "completed", "archived", "unknown"
   ],
   "confidence_levels": ["high", "medium", "low"],

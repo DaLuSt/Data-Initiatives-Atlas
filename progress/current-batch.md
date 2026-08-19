@@ -1,9 +1,115 @@
 # Current Batch
 
-**Status:** No batch in progress. **The European country anchors** was
-completed on 2026-08-19.
+**Status:** No batch in progress. **Convention 108 and 108+** was completed
+on 2026-08-19.
 
-## The European country anchors
+## Convention 108 and 108+
+
+The first item on the research queue after the European country batch, and
+the one that came with a correction to how the Atlas presented European data
+protection.
+
+**11 new entities, 22 relationships.** 439 → **450 entities**, 728 → **750
+relationships**. One new `status` value. 50 → **58 country scopes**.
+
+| Entity | Instrument | Status |
+|---|---|---|
+| [[INTL-CONVENTION-108]] | ETS 108, opened 28 Jan 1981 | in force since 1 Oct 1985 |
+| [[INTL-CONVENTION-108-PROTOCOL]] | ETS 181, opened 8 Nov 2001 | in force |
+| [[INTL-CONVENTION-108-PLUS]] | CETS 223, opened 10 Oct 2018 | **`adopted` — not in force** |
+
+Plus eight country anchors: [[AR]], [[CV]], [[MU]], [[MX]], [[MA]], [[SN]],
+[[TN]] and [[UY]].
+
+### What this corrects
+
+The Atlas presented [[EU-GDPR]] as the origin of European data protection.
+It is not. Convention 108 opened for signature on **28 January 1981** —
+thirty-five years before the GDPR became applicable, and thirteen years
+before the Directive the GDPR replaced. Fair and lawful processing, purpose
+limitation, data minimisation, accuracy, storage limitation, security,
+special protection for sensitive data, access and rectification: all of it is
+in the 1981 text. **28 January is Data Protection Day** for that reason.
+
+The GDPR now points back at it: **Recital 105** makes a third country's
+accession to Convention 108 a factor in EU adequacy assessment. That edge is
+asserted.
+
+### The first entities outside Europe
+
+Convention 108 is **the only instrument in the Atlas that is not regional**.
+Every other binding instrument here is an EU act binding 27 states or a
+national act binding one. This one is open to accession by any state, and
+eight non-European states have acceded — five African, three Latin American.
+
+They were created as base anchors because modelling the treaty without them
+would have modelled it as the regional instrument it is expressly not. They
+are **not the start of a global country layer**, and `countries/README.md`
+and each anchor say so.
+
+[[MU]] Mauritius has ratified **both** Convention 108 and the amending
+protocol, putting it ahead of most European parties on the modernised
+instrument.
+
+### ⚠ Adopted, ratified by 34 states, binding nobody
+
+[[INTL-CONVENTION-108-PLUS]] needs **38** ratifications. [[MD]] Moldova
+became the **34th on 15 May 2026**. After nearly eight years it is four
+short, and the Council of Europe has published a specific appeal to EU
+member states to ratify.
+
+That is a different kind of failure from the transposition delays the Atlas
+already records. Belgium was twenty-nine months late on
+[[EU-OPEN-DATA-DIRECTIVE]] and the Netherlands three years — but those
+instruments were in force and being breached. This one has never come into
+force at all.
+
+### A `status` value had to be added
+
+No existing value could say it.
+
+- `proposed` would have called a treaty **34 sovereign states have ratified**
+  a proposal.
+- `active` would have called a treaty **not in force** operative law.
+
+**`adopted`** was added to `metadata/schema.json`,
+`metadata/controlled-vocabularies.md` and `metadata/metadata-schema.md`:
+formally adopted, not yet in force. It is the third vocabulary addition in
+three batches, after `proposes-to-supersede` and `amends`, and it meets the
+same test — an existing value would have had to assert something untrue.
+
+[[INTL-CONVENTION-108-PLUS]] also carries the **second use of `amends`**, and
+the first outside a national transposition.
+
+### ⚠ The verification debt blocked new modelling for the first time
+
+Sources state that **all Council of Europe member states are parties** to
+Convention 108 — roughly 46 more `applies-in` edges.
+
+They were **not asserted**. The one source found for the rule gives a stale
+member count (47, wrong since [[RU]]'s expulsion in 2022), and [[RU]]'s own
+status as a party after expulsion is unaddressed by anything found. The
+Council of Europe's chart of signatures and ratifications settles it, and
+**`coe.int` is blocked by the egress proxy** — confirmed by probe, not
+assumed.
+
+Every previous batch's sourcing problem was *re-verification*: the facts were
+recorded and unread. This is the first time the block has prevented the Atlas
+from **recording a fact at all**. It is queued as `Blocked (egress)`.
+
+### Verification
+
+- **450 entities, 5,090 edges** (750 relationship, 1,653 association, 2,687
+  wikilink), **58 country scopes**
+- `validation/run_all.py` — 5/5
+- `tools/test_build_graph.py` — 41 OK
+- `tools/test_ui.mjs` — **81/81**
+- `validation/audit.py` — no fully disconnected entities
+
+All 11 new entities are `verification: search-only`; `coe.int`, `rm.coe.int`
+and `eur-lex.europa.eu` are all blocked.
+
+## The European country anchors — previous batch
 
 Thirty-seven base country anchors, taking the Atlas from **13 country
 scopes to 50**. **39 new entities, 65 relationships.** 400 → **439
