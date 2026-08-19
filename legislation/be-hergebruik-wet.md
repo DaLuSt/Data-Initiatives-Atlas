@@ -31,10 +31,18 @@ domains:
   - DOMAIN-GOVERNMENT
 organisations: []
 related_entities:
+  - EU-PSI-DIRECTIVE
   - BE
   - BE-DATA-GOV-BE
   - EU-OPEN-DATA-DIRECTIVE
 relationships:
+  - type: implements-requirement-from
+    target: EU-PSI-DIRECTIVE
+    source: fact
+    evidence: "The Belgian federal act of 4 May 2016 on open data and the re-use of public sector information is described as the regulatory framework for open data in Belgium and as aligned with the European PSI Directive on the re-use of public sector information; that directive is Directive 2003/98/EC as amended by Directive 2013/37/EU, later recast as Directive (EU) 2019/1024 (etaamb.openjustice.be 'Wet van 4 mei 2016'; eur-lex.europa.eu ELI dir/2003/98). NOT READ — search-only. Recorded against the PSI Directive rather than the Open Data Directive because the 2016 act predates the 2019 recast; see EU-PSI-DIRECTIVE."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: applies-in
     target: BE
     source: fact

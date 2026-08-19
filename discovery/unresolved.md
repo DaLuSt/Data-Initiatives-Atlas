@@ -9,7 +9,7 @@ one of these — resolve it with a real source, or leave it open.
 
 | Entity / topic | Question | Why it's unresolved | Noted by / date | Status |
 |---|---|---|---|---|
-| All unread-source entities (**377 of 384**: 374 `search-only` + 3 `unverified` ([[NL]], [[EU]], [[UN]]); regenerate the count with `python tools/source_hosts.py`) | Every factual claim | The environment's network egress policy blocks all direct page retrieval (`EGRESS_BLOCKED` for forumstandaardisatie.nl, digitaleoverheid.nl, noraonline.nl, vng.nl, logius.nl, eur-lex.europa.eu, wikipedia.org and every other host tested). Batch 1 was completed from search-engine results on explicit instruction, with the trade-off accepted knowingly. Every entity carries `verification: search-only`. | Batch 1 / 2026-08-14 | **Open — needs full re-verification pass** |
+| All unread-source entities (**382 of 389**: 379 `search-only` + 3 `unverified` ([[NL]], [[EU]], [[UN]]); regenerate the count with `python tools/source_hosts.py`) | Every factual claim | The environment's network egress policy blocks all direct page retrieval (`EGRESS_BLOCKED` for forumstandaardisatie.nl, digitaleoverheid.nl, noraonline.nl, vng.nl, logius.nl, eur-lex.europa.eu, wikipedia.org and every other host tested). Batch 1 was completed from search-engine results on explicit instruction, with the trade-off accepted knowingly. Every entity carries `verification: search-only`. | Batch 1 / 2026-08-14 | **Open — needs full re-verification pass** |
 
 To find every affected entity: `grep -rl "verification: search-only" .`
 
@@ -639,4 +639,19 @@ batches recorded that none existed.
 | [[LU-ILNAS]] | Its **accreditation** (OLAS) and market-surveillance functions are unmodelled. | Two-thirds of what the institute does | 2026-08-18 | Open |
 | [[PT-AMA]] | **ePortugal**, the **Chave Móvel Digital**, the **Cartão de Cidadão** and the **iAP** are unmodelled. | Portugal's identity means would be the [[EU-EIDAS]] counterparts; the iAP is its interoperability platform | 2026-08-18 | Open |
 | Standards bodies generally | The membership counts in the Atlas are what is **sourced**, not what is true. | [[LU-ILNAS]] and [[GB-BSI]] show five, [[PT-IPQ]] three, most others two — because the CEN membership rule was the only source available for the four created in the structural-fixes batch. The column invites a comparison it cannot fully support | 2026-08-18 | Open |
+
+## Research-queue batch (2026-08-18)
+
+| Entity | Question | Why it matters | Noted by / date | Status |
+|---|---|---|---|---|
+| [[EU-OPEN-DATA-DIRECTIVE]] | **The Atlas cannot model enforcement against a member state.** | Nineteen member states faced infringement proceedings over this directive and four — Belgium, Bulgaria, Latvia and the **Netherlands** — were referred to the Court of Justice in February 2023. There is no entity type for an infringement procedure, no relationship type for "was referred to the Court over", and no Court of Justice entity. A reader sees that [[NL-WHO]] was amended in 2024 and cannot see why | 2026-08-18 | **Open — ontology gap** |
+| Belgium, France, Spain | **Open Data Directive transpositions still unidentified.** | All three amended existing law rather than passing a standalone act, which is why they are harder to find than Ireland's S.I. Down from five countries to three | 2026-08-18 | **Open — next** |
+| [[PT-LEI-26-2016]] | **Which amendment transposed the Directive, and when?** | The sources say "third amendment" without a number or date, so the relationship's `valid_from` is null rather than a guessed 2021 or 2022 | 2026-08-18 | Open |
+| [[PT-LEI-26-2016]] | A general European survey places Portugal among the **standalone-legislation** countries; the Portugal-specific sources describe an amendment. | The Atlas follows the specific source. If the survey is right, this entity is the wrong instrument | 2026-08-18 | **Open — conflict recorded** |
+| [[EU-OPEN-DATA-DIRECTIVE]] | **Commission Implementing Regulation (EU) 2023/138** on high-value datasets is not modelled. | It applies across the Union and is named by the Portuguese sources. A gap affecting every member state, not one | 2026-08-18 | Open |
+| [[EU-PSI-DIRECTIVE]] | **Directive 2013/37/EU**, the amending directive, is not modelled. | Its content was not established, and an entity for an amendment that was itself repealed would add a node and no clarity | 2026-08-18 | Open — scoping |
+| [[EU-EN-16931]] | **CEN/TC 434** is not modelled, nor the **UBL and CII syntax bindings** or the CIUS mechanism. | The committee is a committee, not a body — the same reasoning that keeps the Czech NCKB out. The syntax bindings are what make the semantic model usable | 2026-08-18 | Open — scoping |
+| [[EU-EN-16931]] | Other national **CIUSes** — Italy's, France's, the Peppol BIS profile. | [[DE-XRECHNUNG]] is the only one modelled, which makes the German case look unique when it is one of several | 2026-08-18 | Open |
+| [[IE-PSI-REGULATIONS-2021]] | The Atlas's `type: law` **flattens primary and secondary legislation.** | This is a statutory instrument; [[IE-DPA-2018]] is an Act of the Oireachtas. Both are `law`, and only the names and the entity bodies record the difference | 2026-08-18 | Open — ontology |
+| Poland | **CSIRT MON** is still unmodelled. | [[PL-NASK]] and [[PL-ABW]] cover CSIRT NASK and CSIRT GOV; the third national CSIRT sits at the Ministry of National Defence, which is not an Atlas entity | 2026-08-18 | Open |
 

@@ -31,8 +31,17 @@ domains:
 organisations:
   - DE-KOSIT
 related_entities:
+  - EU-EINVOICING-DIRECTIVE
+  - EU-EN-16931
   - DE-XOEV
 relationships:
+  - type: based-on
+    target: EU-EN-16931
+    source: fact
+    evidence: "XRechnung in Germany is a CIUS — a Core Invoice Usage Specification — of EN 16931 for business-to-government invoicing, and supports both the UBL and CII syntaxes; EN 16931 is the European standard for electronic invoices issued by CEN in 2017 under Directive 2014/55/EU and defines a semantic data model of 176 business terms (cleartax.com 'EN 16931 Standard Germany'; ec.europa.eu digital-building-blocks 'EN 16931 compliance'; xoev.de XRechnung). NOT READ — search-only. This closes the item carried in discovery/research-queue.md since the Germany batch as the highest-value German item."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: maintained-by
     target: DE-KOSIT
     source: fact

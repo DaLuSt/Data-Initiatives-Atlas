@@ -30,8 +30,16 @@ domains:
   - DOMAIN-GOVERNMENT
 organisations: []
 related_entities:
+  - EU-PSI-DIRECTIVE
   - DE-DNG
-relationships: []
+relationships:
+  - type: implements-requirement-from
+    target: EU-PSI-DIRECTIVE
+    source: fact
+    evidence: "Directive 2003/98/EC on the re-use of public sector information, as amended by Directive 2013/37/EU, was the EU instrument the German Informationsweiterverwendungsgesetz was enacted to transpose; the directive was later recast as Directive (EU) 2019/1024, which repealed it (eur-lex.europa.eu ELI dir/2003/98; eur-lex.europa.eu ELI dir/2019/1024; gesetze-im-internet.de/iwg). NOT READ — search-only. Recorded against the PSI Directive rather than the Open Data Directive because the IWG predates the recast; see EU-PSI-DIRECTIVE."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Datennutzungsgesetz"
