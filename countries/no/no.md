@@ -31,10 +31,21 @@ successor: null
 
 domains: []
 organisations: []
-related_entities: []
-relationships: []
+related_entities:
+  - INTL-COE
+relationships:
+  - type: part-of
+    target: INTL-COE
+    source: fact
+    evidence: "Norway is one of the 46 member states of the Council of Europe, an intergovernmental organisation separate from the European Union (coe.int 'The Council of Europe's 46 member states'). NOT READ — search-only. Anchor edge under metadata/relationship-types.md §2.3: it records Council of Europe membership and asserts no more than that. Added in the European country batch so that all fifty anchors carry the same membership edge."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
+  - title: "The Council of Europe's 46 member states"
+    url: "https://www.coe.int/en/web/portal/46-members-states"
+    publisher: "Council of Europe"
   - title: "NO — Norway (ISO 3166-1 country code)"
     url: "https://www.iso.org/obp/ui/#iso:code:3166:NO"
     publisher: "International Organization for Standardization (ISO)"
@@ -118,11 +129,14 @@ relationship exists.
 
 ## Not modelled
 
-- **The EEA Agreement itself**, the **EEA Joint Committee**, **EFTA**, the
-  **EFTA Surveillance Authority** and the **EFTA Court** — the last two being
-  Norway's counterparts to the Commission and the Court of Justice, and the
-  reason Norway is supervised at all without being a member state.
-- **Iceland and Liechtenstein**, the other EEA EFTA states.
+- The **EFTA Surveillance Authority** and the **EFTA Court** — Norway's
+  counterparts to the Commission and the Court of Justice, and the reason
+  Norway is supervised at all without being a member state — and the **EEA
+  Joint Committee**, which takes the incorporation decisions.
+- ~~**The EEA Agreement itself**~~ — now [[INTL-EEA-AGREEMENT]].
+- ~~**EFTA**~~ — now [[INTL-EFTA]], created in the European country batch.
+- ~~**Iceland and Liechtenstein**, the other EEA EFTA states~~ — now [[IS]]
+  and [[LI]], created in the same batch as base anchors.
 - **The Schengen and Dublin association agreements**, under which Norway
   participates in instruments outside the EEA framework entirely.
 - Any **sub-national** level. Norway's counties and municipalities are out

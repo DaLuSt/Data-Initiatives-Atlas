@@ -7,21 +7,101 @@ Each sub-folder holds exactly two things (`metadata/ontology.md` §3.1):
 2. A curated `index.md` of wikilinks into the flat type folders
    (`initiatives/`, `legislation/`, ...) for that country's key entities.
 
+A country whose national layer has not been researched still has both: the
+anchor carries its position in the European frameworks, and the index is the
+standard empty skeleton. Those are marked **anchor only** in the table below.
+
 Country-scoped entities themselves (initiatives, legislation, organisations,
 ...) do **not** live here — they live in their type folder, tagged with
 `country: <ISO2>`.
 
 ## Participating countries
 
-| Country | Code | Folder |
-|---|---|---|
-| Netherlands | NL | [`nl/`](nl/) |
-| Germany | DE | [`de/`](de/) |
-| Belgium | BE | [`be/`](be/) |
-| France | FR | [`fr/`](fr/) |
-| Spain | ES | [`es/`](es/) |
-| Poland | PL | [`pl/`](pl/) |
-| United Kingdom | GB | [`gb/`](gb/) |
+**Fifty**, of which thirteen have a modelled national layer and thirty-seven
+are base anchors created in the European country batch of 2026-08-19.
+
+| Country | Code | Folder | State |
+|---|---|---|---|
+| Andorra | `AD` | [`ad/`](ad/) | anchor only |
+| Albania | `AL` | [`al/`](al/) | anchor only |
+| Armenia | `AM` | [`am/`](am/) | anchor only |
+| Austria | `AT` | [`at/`](at/) | anchor only |
+| Azerbaijan | `AZ` | [`az/`](az/) | anchor only |
+| Bosnia and Herzegovina | `BA` | [`ba/`](ba/) | anchor only |
+| Belgium | `BE` | [`be/`](be/) | modelled |
+| Bulgaria | `BG` | [`bg/`](bg/) | anchor only |
+| Belarus | `BY` | [`by/`](by/) | anchor only |
+| Switzerland | `CH` | [`ch/`](ch/) | modelled |
+| Cyprus | `CY` | [`cy/`](cy/) | anchor only |
+| Czechia | `CZ` | [`cz/`](cz/) | modelled |
+| Germany | `DE` | [`de/`](de/) | modelled |
+| Denmark | `DK` | [`dk/`](dk/) | anchor only |
+| Estonia | `EE` | [`ee/`](ee/) | anchor only |
+| Spain | `ES` | [`es/`](es/) | modelled |
+| Finland | `FI` | [`fi/`](fi/) | anchor only |
+| France | `FR` | [`fr/`](fr/) | modelled |
+| United Kingdom | `GB` | [`gb/`](gb/) | modelled |
+| Georgia | `GE` | [`ge/`](ge/) | anchor only |
+| Greece | `GR` | [`gr/`](gr/) | anchor only |
+| Croatia | `HR` | [`hr/`](hr/) | anchor only |
+| Hungary | `HU` | [`hu/`](hu/) | anchor only |
+| Ireland | `IE` | [`ie/`](ie/) | modelled |
+| Iceland | `IS` | [`is/`](is/) | anchor only |
+| Italy | `IT` | [`it/`](it/) | anchor only |
+| Liechtenstein | `LI` | [`li/`](li/) | anchor only |
+| Lithuania | `LT` | [`lt/`](lt/) | anchor only |
+| Luxembourg | `LU` | [`lu/`](lu/) | modelled |
+| Latvia | `LV` | [`lv/`](lv/) | anchor only |
+| Monaco | `MC` | [`mc/`](mc/) | anchor only |
+| Moldova | `MD` | [`md/`](md/) | anchor only |
+| Montenegro | `ME` | [`me/`](me/) | anchor only |
+| North Macedonia | `MK` | [`mk/`](mk/) | anchor only |
+| Malta | `MT` | [`mt/`](mt/) | anchor only |
+| Netherlands | `NL` | [`nl/`](nl/) | modelled |
+| Norway | `NO` | [`no/`](no/) | modelled |
+| Poland | `PL` | [`pl/`](pl/) | modelled |
+| Portugal | `PT` | [`pt/`](pt/) | modelled |
+| Romania | `RO` | [`ro/`](ro/) | anchor only |
+| Serbia | `RS` | [`rs/`](rs/) | anchor only |
+| Russia | `RU` | [`ru/`](ru/) | anchor only |
+| Sweden | `SE` | [`se/`](se/) | anchor only |
+| Slovenia | `SI` | [`si/`](si/) | anchor only |
+| Slovakia | `SK` | [`sk/`](sk/) | anchor only |
+| San Marino | `SM` | [`sm/`](sm/) | anchor only |
+| Türkiye | `TR` | [`tr/`](tr/) | anchor only |
+| Ukraine | `UA` | [`ua/`](ua/) | anchor only |
+| Holy See | `VA` | [`va/`](va/) | anchor only |
+| Kosovo | `XK` | [`xk/`](xk/) | anchor only |
+
+### Which states count as European
+
+There is no single authoritative list, so the Atlas states its rule instead
+of implying one. A state gets an anchor if it satisfies **any** of:
+
+1. **EU membership** — the 27 member states.
+2. **EFTA or EEA membership** — [[IS]], [[LI]], [[NO]], [[CH]].
+3. **Council of Europe membership** — the 46 member states, plus [[RU]],
+   whose membership was terminated in 2022.
+4. **A live EU accession relationship** — the nine candidate countries and
+   [[XK]] as a potential candidate.
+
+Plus [[BY]] and [[VA]], which are European states satisfying none of the
+four: Belarus has never been a Council of Europe member, and the Holy See is
+an observer rather than a member.
+
+The rule is a **union, not a geography**. It admits [[AM]], [[AZ]], [[GE]]
+and [[TR]], which the UN M49 geoscheme places in Western Asia, on their
+Council of Europe membership. Each of those four entities says so on its own
+page rather than leaving the reader to wonder. Drawing a tighter line was
+possible; drawing it silently was not.
+
+### One code is not an ISO code
+
+[[XK]] is the single exception to `metadata/ontology.md` §3.1's rule that a
+national scope segment is the ISO 3166-1 alpha-2 code. Kosovo has no ISO
+code; `XK` is a user-assigned code used operationally by the European
+Commission, the IMF and the World Bank. §3.1 now names the exception rather
+than being quietly broken by it.
 
 Adding a new country means creating its sub-folder with an anchor entity and
 an index — the ontology requires no other change (README
