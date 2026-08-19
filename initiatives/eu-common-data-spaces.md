@@ -77,25 +77,55 @@ A Commission staff working document of January 2024 is reported to identify
 health, industry, language, media, mobility, public administrations,
 research and innovation, skills, and tourism.
 
-**Batch 10 created four of the fourteen**, and deliberately not the rest:
+**All fourteen now exist.** Batch 10 created four and deliberately left the
+rest, because research had returned only their names; the data-spaces batch
+of 2026-08-18 created the other ten.
 
-| Data space | Status in the Atlas |
-|---|---|
-| Health | [[EU-EHDS]] — has its own regulation; best sourced |
-| Mobility | [[EU-EMDS]] — purpose only |
-| Green deal | [[EU-GREEN-DEAL-DATA-SPACE]] — purpose only |
-| Agriculture | [[EU-AGRI-DATA-SPACE]] — purpose only |
-| Cultural heritage, energy, finance, industry, language, media, public administrations, research and innovation, skills, tourism | **Not created** |
+| Data space | Entity | Note |
+|---|---|---|
+| Health | [[EU-EHDS]] | Reg. (EU) 2025/327 — **the only one with its own regulation** |
+| Mobility | [[EU-EMDS]] | |
+| Green deal | [[EU-GREEN-DEAL-DATA-SPACE]] | |
+| Agriculture | [[EU-AGRI-DATA-SPACE]] | |
+| Energy | [[EU-CEEDS]] | Digital Europe Programme deployment; 15+ member-state pilots |
+| Cultural heritage | [[EU-CULTURAL-HERITAGE-DATA-SPACE]] | built on Europeana, 60M+ items |
+| Industry | [[EU-MANUFACTURING-DATA-SPACE]] | UNDERPIN and SM4RTENANCE deployments |
+| Research and innovation | [[EU-EOSC]] | **the most operational** — EU Node live since Oct 2024 |
+| Finance | [[EU-FINANCIAL-DATA-SPACE]] | FIDA is one of three components |
+| Language | [[EU-LANGUAGE-DATA-SPACE]] | the one that names **monetisation** |
+| Public administrations | [[EU-PUBLIC-ADMIN-DATA-SPACE]] | ⚠ `coverage: low` |
+| Skills | [[EU-SKILLS-DATA-SPACE]] | ⚠ `coverage: low` |
+| Tourism | [[EU-TOURISM-DATA-SPACE]] | ⚠ `coverage: low` |
+| Media | [[EU-MEDIA-DATA-SPACE]] | ⚠ `coverage: low` |
 
-The ten not created are ones for which research returned **only their name
-in the list of fourteen** — no purpose statement, governance, standards or
-infrastructure. Batch 10's brief asks for exactly those attributes, and
-creating ten entities whose entire content would be "this is one of the
-fourteen" is the shallow-entity failure the brief warns against. They are
-enumerated here and queued in `discovery/research-queue.md`.
+**Four of the ten are still thin**, and say so in their own bodies. Batch 10
+declined to create shallow entities and was right to at the time; what
+changed is that six of the ten turned out to have real content — deployment
+programmes, operators, funding instruments, live infrastructure — once
+searched for individually rather than as a list.
 
-Even the three created beyond EHDS are thin — one sourced purpose sentence
-each — and say so in their own bodies.
+The four that remain thin are created anyway, because **holding thirteen of
+fourteen would misrepresent the set**. Completeness is the claim the table
+above makes; depth is claimed only where `coverage` says so.
+
+## Not uniform, and now visible
+
+Having all fourteen makes the differences legible in a way four could not:
+
+- **One has a Regulation** ([[EU-EHDS]]). One has a named legislative
+  component in progress ([[EU-FINANCIAL-DATA-SPACE]], via FIDA). The rest
+  rest on funding programmes and governance.
+- **One already runs** ([[EU-EOSC]]), with a federation of thirteen
+  candidate nodes.
+- **One inverts the usual order** ([[EU-CULTURAL-HERITAGE-DATA-SPACE]]),
+  designating a data space over infrastructure that had existed for a decade.
+- **Their participants differ**: health systems, energy operators, public
+  administrations, and — in the language data space — publishers and the
+  press, whose stated purpose includes **monetising** their data.
+
+Only [[EU-EHDS]] carries `applies-in` edges to countries. The others are
+programmes and initiatives, not instruments, and do not apply in a member
+state in the sense that relationship carries here.
 
 ## Horizontal support
 

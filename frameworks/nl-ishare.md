@@ -30,9 +30,18 @@ successor: null
 domains: []
 organisations: []
 related_entities:
+  - INTL-IDS-RAM
+  - INTL-IDSA
   - NL-FDS
   - NL-DSGO
 relationships:
+  - type: references
+    target: INTL-IDS-RAM
+    source: fact
+    evidence: "iSHARE records the International Data Spaces Association incorporating iSHARE into the IDS Reference Architecture Model, the conceptual basis of IDS-compliant data exchange between organisations (internationaldataspaces.org 'IDS Reference Architecture Model'; ishare.eu; the IDSA reference already recorded on this entity). NOT READ — search-only. `references` and not `based-on`: the direction the sources describe is the IDSA incorporating iSHARE, not iSHARE deriving from the IDS-RAM. This closes a gap queued in discovery/research-queue.md since Batch 5."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: related-to
     target: NL-DSGO
     source: interpretation

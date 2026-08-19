@@ -127,15 +127,43 @@ NL-CBS ──participates-in──→ EU-EUROSTAT  (European Statistical System)
 
 ## Data Spaces
 
-- [[EU-COMMON-DATA-SPACES]] — the umbrella; 14 areas identified
-  - [[EU-EHDS]] — Health _(Reg. (EU) 2025/327 — the only one with its own regulation)_
+- [[EU-COMMON-DATA-SPACES]] — the umbrella; **all fourteen areas are now
+  entities**
+  - [[EU-EHDS]] — Health _(Reg. (EU) 2025/327 — **the only one with its own
+    regulation**, and the only one carrying `applies-in` edges)_
+  - [[EU-EOSC]] — Research and innovation _(**the most operational**: the EU
+    Node has run since October 2024 and a federation of thirteen candidate
+    nodes was demonstrated in 2025)_
+  - [[EU-CEEDS]] — Energy _(Digital Europe Programme deployment; 15+ pilots
+    across member states)_
+  - [[EU-CULTURAL-HERITAGE-DATA-SPACE]] — Cultural heritage _(built on
+    Europeana and its 60M+ digitised items — the one that started with the
+    data already there)_
+  - [[EU-MANUFACTURING-DATA-SPACE]] — Industry
+  - [[EU-FINANCIAL-DATA-SPACE]] — Finance _(FIDA is one of three components;
+    the other two are unidentified)_
+  - [[EU-LANGUAGE-DATA-SPACE]] — Language _(the one whose stated purpose
+    includes **monetising** data)_
   - [[EU-EMDS]] — Mobility
   - [[EU-GREEN-DEAL-DATA-SPACE]] — Green Deal
   - [[EU-AGRI-DATA-SPACE]] — Agriculture
+  - [[EU-PUBLIC-ADMIN-DATA-SPACE]] — Public administrations _(⚠ `coverage: low`)_
+  - [[EU-SKILLS-DATA-SPACE]] — Skills _(⚠ `coverage: low`)_
+  - [[EU-TOURISM-DATA-SPACE]] — Tourism _(⚠ `coverage: low`)_
+  - [[EU-MEDIA-DATA-SPACE]] — Media _(⚠ `coverage: low`)_
 
-_Ten of the fourteen were **not created**: research returned only their names.
-See [[EU-COMMON-DATA-SPACES]] for the full list and the reasoning._
+Four are still thin and say so. Completeness of the set is the claim; depth
+is claimed only where `coverage` says so. See [[EU-COMMON-DATA-SPACES]].
+
+## The international layer beneath the data spaces
+
+- [[INTL-IDSA]] — International Data Spaces Association _(formed 2016)_
+- [[INTL-IDS-RAM]] — its reference architecture model _(five layers;
+  standardised in part as **DIN SPEC 27070** by [[DE-DIN]] — the first
+  specification to connect to that entity from the standards side)_
+- [[EU-GAIA-X]] — federated data infrastructure _([[DE-CATENA-X]] is
+  `based-on` it)_
 
 ---
 
-Last updated: 2026-08-14 (Batch 10).
+Last updated: 2026-08-18 (data spaces batch).

@@ -1,5 +1,58 @@
 # Completed Batches
 
+## Data spaces — completing the fourteen
+
+**Date:** 2026-08-18
+
+**13 new entities.** 341 → **354 entities**, 522 → **539 relationships**;
+the data-space layer goes from **8 to 19**. Components 22 → **20**, largest
+302 → **319**.
+
+### All fourteen common European data spaces now exist
+
+Batch 10 created four and left ten, because research had returned only their
+names. Six of those ten turned out to have real content once searched
+individually: [[EU-CEEDS]] (Digital Europe deployment, 15+ member-state
+pilots), [[EU-EOSC]] (already running — EU Node since October 2024, thirteen
+federated candidate nodes), [[EU-CULTURAL-HERITAGE-DATA-SPACE]] (Europeana,
+60M+ items), [[EU-MANUFACTURING-DATA-SPACE]], [[EU-FINANCIAL-DATA-SPACE]]
+(FIDA) and [[EU-LANGUAGE-DATA-SPACE]].
+
+Four remain `coverage: low` and say so — tourism, media, skills and public
+administration. They are created anyway, because holding thirteen of fourteen
+would misrepresent the set.
+
+**Only [[EU-EHDS]] carries `applies-in` edges.** It is the only one backed by
+a Regulation; the rest are programmes and initiatives and do not apply in a
+member state in the sense that relationship carries here.
+
+### The IDSA layer, queued since Batch 5, is closed
+
+[[INTL-IDSA]] and [[INTL-IDS-RAM]] created. Two long-standing refusals
+resolved: [[DE-CATENA-X]] `based-on` the IDS-RAM, [[NL-ISHARE]] `references`
+it — not `based-on`, because the sources describe the IDSA incorporating
+iSHARE rather than the reverse.
+
+**DIN SPEC 27070** (21 February 2020) standardises the IDS security gateway,
+giving [[DE-DIN]] its first inbound specification edge — that entity was
+recorded in the Germany batch as a standards body maintaining nothing the
+Atlas held.
+
+### The first data-space lineage
+
+[[DE-MANUFACTURING-X]] is `based-on` [[DE-CATENA-X]]: the sources state that
+Manufacturing-X followed Catena-X and builds a factory-equipment data
+ecosystem on its basis. `based-on`, not `part-of`.
+
+### Refusals
+
+No German-to-EU manufacturing edge (same sector is not a relationship); no
+edges from [[EU-PUBLIC-ADMIN-DATA-SPACE]] to
+[[EU-INTEROPERABLE-EUROPE-ACT]], [[EU-EIF]] or [[EU-SDG]] despite the
+obvious adjacency; no cultural-heritage ↔ media/tourism edges, because
+"will explore cooperation" is intent, not connection; no `DOMAIN-ENERGY`,
+which would have one member.
+
 ## Every entity reaches its scope anchor
 
 **Date:** 2026-08-18

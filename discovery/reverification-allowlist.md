@@ -7,11 +7,11 @@ Generated: 2026-08-18
 
 ## Why this exists
 
-**334 of the Atlas's 341 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
+**347 of the Atlas's 354 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
 
 Closing that debt — the re-verification pass — needs outbound HTTPS to the hosts those URLs point at. In an environment with a restricted egress policy, this is the allowlist to request. A denial shows up as `403 to CONNECT` from the proxy, which is an environment-level network policy and cannot be changed from inside a session. See `discovery/unresolved.md` for the standing record of the sourcing debt.
 
-The Atlas currently cites **1107 source URLs** across **419 hosts**, collapsing to **309 registrable domains**.
+The Atlas currently cites **1149 source URLs** across **432 hosts**, collapsing to **318 registrable domains**.
 
 ## Highest value first
 
@@ -19,13 +19,13 @@ Allowing just these covers the bulk of the pass:
 
 | Domain | URLs | Entities |
 |---|---|---|
-| `europa.eu` | 100 | 62 |
+| `europa.eu` | 125 | 72 |
 | `wikipedia.org` | 64 | 64 |
 | `bund.de` | 41 | 23 |
 | `digitaleoverheid.nl` | 40 | 28 |
 | `gov.pl` | 40 | 18 |
 | `gouv.fr` | 36 | 13 |
-| `gob.es` | 28 | 14 |
+| `gob.es` | 30 | 16 |
 | `un.org` | 17 | 10 |
 | `belgium.be` | 17 | 9 |
 | `unece.org` | 17 | 7 |
@@ -69,6 +69,8 @@ gov.uk
 govdata.de
 government.is
 government.nl
+internationaldataspaces.org
+intnet.eu
 iso.org
 it-planungsrat.de
 itu.int
@@ -138,10 +140,12 @@ bsigroup.com
 bundesrechnungshof.de
 bundesregierung.de
 bundestag.de
+bundeswirtschaftsministerium.de
 buzer.de
 cbs.nl
 cci-paris-idf.fr
 cci.fr
+ceeds.energy
 ciberseguridad.blog
 ciberseguridad.com
 cliffordchance.com
@@ -162,6 +166,7 @@ data-spaces-symposium.eu
 datactivist.coop
 dataportals.org
 dataprotection.ie
+dataspace-culturalheritage.eu
 datatilsynet.no
 datopian.com
 dcat-ap.de
@@ -189,6 +194,7 @@ ecija.com
 ecp.nl
 edustandaard.nl
 eerstekamer.nl
+eosc.eu
 epc.ac.uk
 errin.eu
 esdn.eu
@@ -196,6 +202,7 @@ eubelius.com
 eucrim.eu
 eurogeographics.org
 europadecentraal.nl
+europeana.eu
 europeansources.info
 eversheds-sutherland.com
 ey.com
@@ -298,6 +305,7 @@ parliament.uk
 pdok.nl
 personalausweisportal.de
 piwikpro.de
+plattform-i40.de
 politykabezpieczenstwa.pl
 privacyworld.blog
 prodwaregroup.com
@@ -317,6 +325,7 @@ roraonline.nl
 rvig.nl
 sachsen-anhalt.de
 safeonweb.be
+sciencedirect.com
 secjur.com
 security-insider.de
 sgrs.be
