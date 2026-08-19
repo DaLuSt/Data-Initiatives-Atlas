@@ -1,5 +1,63 @@
 # Completed Batches
 
+## Working the research queue
+
+**Date:** 2026-08-18
+
+The queue had drifted: six items it listed as open had been closed by later
+batches and never marked. **Reconciled**, then its two highest-value
+remaining clusters worked. **5 new entities, 10 relationships.**
+384 → **389 entities**, 641 → **651 relationships**.
+
+### Reconciliation
+
+Marked done with the closing entity named in place: the IDSA and IDS-RAM,
+INSEE, the European Statistical System, the Dutch NCSC, CSIRT NASK (partly —
+CSIRT MON is still open) and the cybersecurity domain. A queue that lists
+finished work as pending hides what is actually open.
+
+### The e-invoicing chain
+
+The queue's "highest-value German item", carried since the Germany batch.
+[[EU-EINVOICING-DIRECTIVE]] → [[EU-EN-16931]] → [[DE-XRECHNUNG]], with the
+standard `maintained-by` [[EU-CEN]].
+
+The directive is unusual: it does not tell member states to act, it
+**commissions a standard**. And **[[EU-CEN]] now maintains something** —
+eleven national members point at it and, until now, no standard did.
+
+### The Open Data Directive gap, halved
+
+[[IE-PSI-REGULATIONS-2021]] (S.I. 376/2021, standalone, five days late) and
+[[PT-LEI-26-2016]] (an amendment, folding open data into Portugal's access to
+administrative and environmental information act). Belgium, France and Spain
+remain unidentified — all three amended existing law.
+
+A general survey called Portugal a standalone-legislation country; the
+Portugal-specific sources say otherwise. The Atlas follows the specific
+source and records the conflict.
+
+### [[EU-PSI-DIRECTIVE]]
+
+A repealed directive, created because two **live** national acts —
+[[BE-HERGEBRUIK-WET]] and [[DE-IWG]] — transpose it and had nowhere to point.
+`status: superseded` with the successor named.
+
+### Enforcement the Atlas cannot model
+
+Nineteen member states faced infringement proceedings over the Open Data
+Directive, and four were referred to the Court of Justice in February 2023 —
+including the Netherlands, whose transposition the Atlas dates to 2024. There
+is no entity type for an infringement procedure and no Court of Justice
+entity, so the graph shows the outcome and not the enforcement. Recorded on
+the instrument and queued.
+
+### Left deliberately
+
+Belgium, France and Spain's transpositions; and the eight Dutch
+basisregistraties statutes, because the queue's own note says doing half
+would leave that layer inconsistent.
+
 ## Portugal, Luxembourg and Czechia — countries eleven, twelve and thirteen
 
 **Date:** 2026-08-18

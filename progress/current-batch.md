@@ -1,9 +1,140 @@
 # Current Batch
 
-**Status:** No batch in progress. **Portugal, Luxembourg and Czechia** was
-completed on 2026-08-18, after the cheap structural fixes.
+**Status:** No batch in progress. **Working the research queue** was
+completed on 2026-08-18, after Portugal, Luxembourg and Czechia.
 
-## Portugal, Luxembourg and Czechia
+## Working the research queue
+
+`discovery/research-queue.md` had drifted: six items it still listed as open
+had been closed by later batches and never marked. This batch **reconciled
+the queue** and then worked its two highest-value remaining clusters.
+
+**5 new entities, 10 relationships.** 384 → **389 entities**, 641 →
+**651 relationships**.
+
+### First, the queue was wrong
+
+Marked done, with the closing entity named in place:
+
+| Item | Closed by |
+|---|---|
+| IDSA and the IDS reference architecture | data spaces batch — [[INTL-IDSA]], [[INTL-IDS-RAM]] |
+| INSEE | cheap structural fixes — [[FR-INSEE]] |
+| European Statistical System | UN-connection batch — [[EU-ESS]], now 11 institutes |
+| The Dutch NCSC | cheap structural fixes — [[NL-NCSC]] |
+| CSIRT NASK / GOV / MON | **partly** — [[PL-NASK]] and [[PL-ABW]]; **CSIRT MON still open** |
+| A cybersecurity domain entity | [[DOMAIN-CYBERSECURITY]] |
+
+A queue that lists finished work as pending is worse than no queue: it hides
+what is actually open. The reconciliation is the least interesting part of
+this batch and probably the most useful.
+
+### The e-invoicing chain — the queue's "highest-value German item"
+
+Carried since the Germany batch, on the grounds that it *"would connect
+[[DE-XRECHNUNG]] to [[EU-CEN]] and give the Atlas a standards-body EU→national
+chain"*. It does exactly that:
+
+```
+EU-EINVOICING-DIRECTIVE  →  EU-EN-16931  →  DE-XRECHNUNG
+   (Directive 2014/55/EU)   (CEN, 2017)     (German CIUS)
+                                 ↑
+                            maintained by
+                               EU-CEN
+```
+
+[[EU-EINVOICING-DIRECTIVE]] is unusual among the Atlas's directives: it does
+not tell member states to do something, it **commissions a standard**. CEN
+established CEN/TC 434 in 2014 and produced [[EU-EN-16931]] in 2017 — a
+**semantic data model of 176 business terms, not a file format**.
+
+**[[EU-CEN]] now maintains something.** It has had national members pointing
+at it since the Germany batch — eleven of them now — and never a standard.
+The same note is recorded on [[GB-BSI]] ("maintaining nothing the repository
+holds") and on the four bodies added in the structural-fixes batch. This is
+CEN's first, and [[DE-DIN]] got its first in the data-spaces batch via DIN
+SPEC 27070.
+
+### The Open Data Directive gap, halved
+
+Five countries were recorded as having an unidentified transposition. Two are
+now identified, and the reason they were hard is that **they are not the same
+kind of instrument**:
+
+| Country | Instrument | Approach |
+|---|---|---|
+| **Ireland** | [[IE-PSI-REGULATIONS-2021]] — S.I. 376/2021, made 22 July 2021 | **standalone** |
+| **Portugal** | [[PT-LEI-26-2016]], third amendment | **amend an existing act** |
+| Netherlands | [[NL-WHO]], amended 2024 | amend |
+| Belgium, France, Spain | **still unidentified** | amend |
+
+Ireland transposed **five days late**. Portugal folded open data into the act
+that already governed **access to administrative and environmental
+information** — one Portuguese statute covering what takes three in Germany.
+
+### A source conflict, resolved toward the specific one
+
+A general European survey placed **Ireland and Portugal** as the two member
+states with standalone open data legislation. The Portugal-specific sources
+say Portugal amended [[PT-LEI-26-2016]] — the amendment pattern.
+
+The Atlas follows the specific source and **records the conflict** on that
+entity rather than picking a side silently. Ireland's standalone instrument
+is independently confirmed from the Irish Statute Book, so the survey is
+right about Ireland and appears wrong about Portugal.
+
+### [[EU-PSI-DIRECTIVE]] — a repealed directive that two live acts needed
+
+Queued from the Belgium batch with a precise reason: it would *"give
+[[BE-HERGEBRUIK-WET]] and [[DE-IWG]] somewhere to point."*
+
+Both are national instruments **still in force** that transpose the **2003**
+directive, not the 2019 recast. Before this entity the Atlas could either
+point them at [[EU-OPEN-DATA-DIRECTIVE]] — dating a 2016 Belgian act to a
+2019 instrument — or leave them pointing at nothing. It left them pointing at
+nothing.
+
+`status: superseded`, `successor: EU-OPEN-DATA-DIRECTIVE`, and the recast
+edge asserted from the successor.
+
+### ⚠ Enforcement the Atlas cannot model
+
+The Commission opened infringement proceedings against **nineteen member
+states** over the Open Data Directive, and in **February 2023 referred
+Belgium, Bulgaria, Latvia and the Netherlands to the Court of Justice**.
+
+The Atlas has **no way to represent this**: no entity type for an
+infringement procedure, no relationship type for "was referred to the Court
+over", and no Court of Justice entity.
+
+So a reader can see that [[NL-WHO]] was amended in 2024 — three years after
+the deadline — and cannot see from the graph that the Netherlands was taken
+to court in between. Recorded on [[EU-OPEN-DATA-DIRECTIVE]] and queued in
+`discovery/candidates.md`.
+
+### Connectivity
+
+Components unchanged at **20**, largest 349 → **354**, isolated unchanged at
+**8**. [[EU-CEN]] 10 → **11** incoming, and for the first time one of those
+is a standard rather than a member.
+
+### What is still open, honestly
+
+The two largest remaining clusters, both left deliberately:
+
+1. **Belgium, France and Spain's Open Data Directive transpositions.** All
+   three amended existing law and none was identified. A three-country gap
+   now rather than five.
+2. **The Dutch basisregistraties statutory bases** — eight statutes. The
+   queue's own note says six-plus Dutch statutes is a legislation batch and
+   that doing half would leave the layer inconsistent. That judgement still
+   holds, so none was done.
+
+---
+
+## Portugal, Luxembourg and Czechia — previous batch
+
+**Status:** completed 2026-08-18.
 
 **23 new entities** plus **54 `applies-in` edges**. 361 → **384 entities**,
 555 → **641 relationships**. The Atlas goes from ten countries to

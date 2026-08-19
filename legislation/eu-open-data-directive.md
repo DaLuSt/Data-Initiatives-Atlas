@@ -31,6 +31,7 @@ domains:
   - DOMAIN-GOVERNMENT
 organisations: []
 related_entities:
+  - EU-PSI-DIRECTIVE
   - CZ
   - LU
   - PT
@@ -38,6 +39,13 @@ related_entities:
   - NL-WHO
   - EU-DIGITAL-OMNIBUS
 relationships:
+  - type: supersedes
+    target: EU-PSI-DIRECTIVE
+    source: fact
+    evidence: "Directive 2003/98/EC on the re-use of public sector information, as amended by Directive 2013/37/EU, was recast as Directive (EU) 2019/1024 on open data and the re-use of public sector information, which repealed it (eur-lex.europa.eu ELI dir/2019/1024; eur-lex.europa.eu ELI dir/2003/98; eur-lex.europa.eu summary 'Open data and the reuse of public-sector information'). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: applies-in
     target: PT
     source: fact
@@ -177,3 +185,49 @@ dataset regime is still unresearched (`coverage: low`).
 ## Sources
 
 Listed in frontmatter.
+
+## The recast, and why the predecessor is an entity
+
+This directive is a **recast** of [[EU-PSI-DIRECTIVE]] (2003/98/EC, as
+amended by Directive 2013/37/EU), which it repealed.
+
+That matters for reading the graph. Several national instruments in the Atlas
+were written to transpose the **old** directive and are still in force:
+[[BE-HERGEBRUIK-WET]] (2016) and [[DE-IWG]] both now point at
+[[EU-PSI-DIRECTIVE]], not at this entity. Pointing them here would date a
+2016 act to a 2019 instrument.
+
+## Two ways member states transposed it
+
+The transposition deadline was **17 July 2021**, and the sources describe two
+distinct approaches:
+
+| Approach | Countries | In the Atlas |
+|---|---|---|
+| **Amend an existing act** | Belgium, France, Spain, the Netherlands, Portugal | [[NL-WHO]] (amended 2024 by the Wet implementatie Open data richtlijn); [[PT-LEI-26-2016]] (third amendment) |
+| **A standalone instrument** | Ireland | [[IE-PSI-REGULATIONS-2021]] — S.I. 376/2021, made 22 July 2021 |
+
+A general European survey placed **Portugal** in the standalone column. The
+Portugal-specific sources place it in the amendment column, and the Atlas
+follows the specific source — see [[PT-LEI-26-2016]], which records the
+conflict rather than resolving it silently.
+
+## ⚠ Enforcement the Atlas cannot model
+
+The Commission opened infringement proceedings against **nineteen member
+states** over this directive, and in **February 2023 referred Belgium,
+Bulgaria, Latvia and the Netherlands to the Court of Justice** for failing to
+transpose it.
+
+The Atlas has **no way to represent this**. It holds instruments, bodies and
+the relationships between them; it has no entity type for an infringement
+procedure, no relationship type for "was referred to the Court over", and no
+Court of Justice entity to point at.
+
+That is a real limitation and worth stating on the instrument where it bites
+hardest. It means a reader can see *that* the Netherlands transposed in 2024
+— three years after the deadline — and cannot see from the graph that it was
+taken to court in between. `discovery/candidates.md` records the gap.
+
+The Dutch case is the one the Atlas can partly show: [[NL-WHO]] carries the
+2024 amending act, which is the end of the story whose middle is missing.

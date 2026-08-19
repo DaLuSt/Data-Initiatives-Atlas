@@ -68,11 +68,17 @@ source read says so.
 Only [[CH-OPENDATA-SWISS]] has a sourced custodian, because [[CH-BFS]] says
 in its own words that it operates the portal. One in five.
 
-## Portugal's Open Data Directive transposition is not identified
+## Portugal's Open Data Directive transposition — now identified
 
-Joining Belgium, France, Spain and Ireland on that list. Five countries is
-comfortably a batch of its own, and it is recorded as such in
-`discovery/research-queue.md`.
+Recorded here as unidentified when this entity was created. It is
+**[[PT-LEI-26-2016]]**, the LADA, whose **third amendment** approved general
+principles on open data and transposed the Directive.
+
+Portugal did not pass a standalone open data act. It folded open data into
+the statute that already governed **access to administrative and
+environmental information** — one act where Germany has three.
+
+Belgium, France and Spain are still unidentified.
 
 ## Relationships
 

@@ -215,3 +215,12 @@ that created the thing.
 | **INSEE** | France is the **only** Atlas country with no statistical office | A free [[EU-ESS]] member. Already queued from the France batch and still open | **Next** |
 | **National standards bodies** | 3 of 8 countries have one | [[DE-DIN]], [[NL-NEN]], [[GB-BSI]] exist; **NBN (BE), AFNOR (FR), UNE (ES), PKN (PL)** do not. [[GB-BSI]] is recorded as the most connective UK entity, so the pattern has proven value | **Next** |
 | **Dutch and Polish cyber authorities** | 5 of 7 countries had one before this batch | [[NL-CBW]] is a NIS2 act with **no authority attached**; Poland's CSIRT NASK/GOV/MON are unmodelled — though [[PL-ABW]] now carries `implements` [[PL-KSC]] | **Next** |
+
+## Ontology gaps surfaced 2026-08-18
+
+| Gap | Why it matters | Status |
+|---|---|---|
+| **No way to model enforcement against a member state.** | Nineteen member states faced infringement proceedings over [[EU-OPEN-DATA-DIRECTIVE]], and four were referred to the Court of Justice in February 2023. The Atlas has no entity type for an infringement procedure, no relationship type for it, and no **Court of Justice of the European Union** entity. Non-compliance is a large part of how EU data law actually operates and none of it is visible | **Open — would need a type, a relationship and at least one new entity** |
+| **`type: law` flattens primary and secondary legislation.** | [[IE-PSI-REGULATIONS-2021]] is a statutory instrument; [[IE-DPA-2018]] is an Act. Both are `law`. The same flattening applies to Portuguese decreto-lei versus lei, and to German Gesetz versus Verordnung | Open |
+| **`technology` and `publication` are still unused**, and `level: local` is still unused. | Carried from the structural review of 2026-08-18; nothing in the intervening batches changed it | Open |
+

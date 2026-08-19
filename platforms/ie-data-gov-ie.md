@@ -69,18 +69,18 @@ one — [[CH-BFS]] says in its own words that it operates the portal. Two
 portals written on the same day, one with a custodian and one without, on
 exactly the difference in what the sources say.
 
-## Ireland's Open Data Directive transposition is not modelled
+## Ireland's Open Data Directive transposition — now identified
 
-[[EU-OPEN-DATA-DIRECTIVE]] has transpositions in the Atlas for the
-Netherlands ([[NL-WHO]]), Germany ([[DE-DNG]]) and Belgium
-([[BE-HERGEBRUIK-WET]]). Ireland's — an S.I. rather than an Act — was **not
-identified**, so this portal points at the Directive through
-`related_entities` and no relationship is asserted.
+An earlier version of this entity recorded the transposing instrument as
+**not identified**, noting only that it would be an S.I. rather than an Act.
 
-Ireland now joins Belgium, France and Spain on the list of countries whose
-Open Data Directive transposition is unidentified. That list is long enough
-to be a batch of its own, and it is recorded as such in
-`discovery/research-queue.md`.
+It is **[[IE-PSI-REGULATIONS-2021]]** — S.I. No. 376/2021, made **22 July
+2021**, five days after the Directive's 17 July deadline. Ireland is the one
+member state in the Atlas that transposed by a **standalone** instrument
+rather than by amending an existing act.
+
+Belgium, France and Spain remain unidentified; Portugal's turned out to be
+[[PT-LEI-26-2016]], an amendment.
 
 ## Sources
 

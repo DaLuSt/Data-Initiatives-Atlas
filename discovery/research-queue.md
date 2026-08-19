@@ -1,5 +1,35 @@
 # Research Queue
 
+> **Reconciled 2026-08-18.** Rows struck through were closed by later
+> batches; the reason and the entity are named in place. What follows this
+> banner is the queue as it now stands.
+>
+> **Closed in the research-queue batch of 2026-08-18:** the PSI Directive,
+> EN 16931 and Directive 2014/55/EU, and the Open Data Directive
+> transpositions for **Ireland** and **Portugal**.
+>
+> **Closed by earlier batches and marked here for the first time:** the IDSA
+> and the IDS reference architecture, INSEE, the European Statistical
+> System, the Dutch NCSC, CSIRT NASK, and the cybersecurity domain entity.
+>
+> **Still open and clustered — the two largest remaining items:**
+>
+> 1. **The Open Data Directive transpositions for Belgium, France and
+>    Spain.** All three amended existing law rather than passing a standalone
+>    act, and none of the three instruments was identified. Ireland's and
+>    Portugal's are now entities, so this is a three-country gap rather than
+>    a five-country one.
+> 2. **The Dutch basisregistraties statutory bases** — Wet BAG, Wet BGT, Wet
+>    BRO, Wet WOZ, AWR ch. IVA, Handelsregisterwet, Kadasterwet,
+>    Wegenverkeerswet. The queue's own note says six-plus Dutch statutes is a
+>    legislation batch and doing half would leave the layer inconsistent.
+>    That judgement still holds.
+>
+> **Also open:** portal custodians (seven national portals lack one),
+> `PL-PESEL`-equivalent population registers, Red.es, a French DCAT
+> profile, and the Spanish and Polish primary-citation gaps.
+
+
 Confirmed-relevant areas that are known to need research but haven't been
 worked yet, beyond the batch plan itself (`progress/backlog.md`). Use this
 for gaps discovered mid-batch that fall outside the current batch's scope,
@@ -121,8 +151,8 @@ by accident.
 
 | Area / entity | Why it needs research | Suggested batch | Noted by / date |
 |---|---|---|---|
-| **EN 16931 and Directive 2014/55/EU** | The European e-invoicing norm and its directive. Would connect [[DE-XRECHNUNG]] to [[EU-CEN]] and give the Atlas a standards-body EU→national chain. **Highest-value German item** | Next | Germany batch |
-| **IDSA and the IDS reference architecture** | Now referenced by **two** entities in two countries — [[DE-CATENA-X]] follows the IDS-RAM, and [[NL-ISHARE]] records the IDSA incorporating iSHARE into it. Best-evidenced gap in the international layer. Was already queued from Batch 5; the German batch strengthens the case | Next | Batch 5; reinforced Germany batch |
+| ~~**EN 16931 and Directive 2014/55/EU**~~ **— DONE 2026-08-18** ([[EU-EN-16931]], [[EU-EINVOICING-DIRECTIVE]], [[DE-XRECHNUNG]] wired) | The European e-invoicing norm and its directive. Would connect [[DE-XRECHNUNG]] to [[EU-CEN]] and give the Atlas a standards-body EU→national chain. **Highest-value German item** | Next | Germany batch |
+| ~~**IDSA and the IDS reference architecture**~~ **— DONE 2026-08-18** | Now referenced by **two** entities in two countries — [[DE-CATENA-X]] follows the IDS-RAM, and [[NL-ISHARE]] records the IDSA incorporating iSHARE into it. Best-evidenced gap in the international layer. Was already queued from Batch 5; the German batch strengthens the case | Next | Batch 5; reinforced Germany batch |
 | The sixteen Land INSPIRE transposition acts | Jointly with [[DE-GEOZG]] they constitute Germany's transposition. **Blocked on the `level` ontology question**, not on sourcing | Blocked | Germany batch |
 | Land data protection authorities | [[DE-BFDI]] covers federal bodies only; sixteen Land authorities cover the rest. Same blocker | Blocked | Germany batch |
 | Individual XÖV standards | XPersonenstand, XMeld, XBau, XPlanung and others. Only [[DE-XRECHNUNG]] is modelled. Creating one entity per standard would inflate the layer without adding structure (brief §1) | Later | Germany batch |
@@ -136,20 +166,20 @@ by accident.
 | Bundesdruckerei; ITZBund | Federal printing/eID body and the federal IT service centre. ITZBund is already cited as a source on [[DE-XOEV]] | Later | Germany batch |
 | OZG-Änderungsgesetz | A substantial amending act, deliberately **not** given its own entity — doing so would force the same `supersedes` compromise as [[DE-NIS2UMSUCG]] → [[DE-BSIG]]. Revisit if an amendment relationship type is added | Blocked | Germany batch |
 | Lenkungsgremium GDI-DE | Governing committee of [[DE-GDI-DE]]; would be reachable only from that one entity | Later | Germany batch |
-| A cybersecurity domain entity | [[DE-BSI]], [[DE-BSIG]], [[DE-NIS2UMSUCG]], [[DE-IT-GRUNDSCHUTZ]], [[EU-NIS2]], [[EU-CER]], [[EU-CYBERSECURITY-ACT]], [[EU-ENISA]], [[NL-BIO]], [[NL-CBW]] would all qualify — **well over the taxonomy §1 threshold**. Not created in this batch to keep a country PR from silently retagging ten existing entities | Next | Germany batch |
+| ~~A cybersecurity domain entity~~ **— DONE** ([[DOMAIN-CYBERSECURITY]]) | [[DE-BSI]], [[DE-BSIG]], [[DE-NIS2UMSUCG]], [[DE-IT-GRUNDSCHUTZ]], [[EU-NIS2]], [[EU-CER]], [[EU-CYBERSECURITY-ACT]], [[EU-ENISA]], [[NL-BIO]], [[NL-CBW]] would all qualify — **well over the taxonomy §1 threshold**. Not created in this batch to keep a country PR from silently retagging ten existing entities | Next | Germany batch |
 
 ## Belgium — queued from the third-country batch (2026-08-15)
 
 | Area / entity | Why it needs research | Suggested batch | Noted by / date |
 |---|---|---|---|
 | **Belgium's Open Data Directive transposition** | The instrument transposing Directive (EU) 2019/1024 was **not identified**. [[BE-HERGEBRUIK-WET]] (2016) is not it. Belgium is the only Atlas country without one recorded | Next | Belgium batch |
-| **The PSI Directive (2003/98/EC, as amended 2013/37/EU)** | Predecessor of [[EU-OPEN-DATA-DIRECTIVE]], not an Atlas entity. Would give [[BE-HERGEBRUIK-WET]] and [[DE-IWG]] somewhere to point | Next | Belgium batch; DE-IWG carried |
+| ~~**The PSI Directive (2003/98/EC, as amended 2013/37/EU)**~~ **— DONE 2026-08-18** ([[EU-PSI-DIRECTIVE]]) | Predecessor of [[EU-OPEN-DATA-DIRECTIVE]], not an Atlas entity. Would give [[BE-HERGEBRUIK-WET]] and [[DE-IWG]] somewhere to point | Next | Belgium batch; DE-IWG carried |
 | **OSLO and Digitaal Vlaanderen** | A major European semantic-interoperability programme, entirely unmodelled. **Blocked on the `level` ontology question**, not on sourcing | Blocked | Belgium batch |
 | Agence du Numérique; Paradigm; the Regions and Communities | Same blocker | Blocked | Belgium batch |
 | The other five public service integrators | BELGIF names six; only [[BE-KSZ]] is modelled | Later | Belgium batch |
 | Belgian eID / itsme; eHealth platform; Kruispuntbank van Ondernemingen | Belgium's digital identity and registry infrastructure, none modelled. itsme is one of Europe's more distinctive national identity schemes | Later | Belgium batch |
 | NBN (Bureau voor Normalisatie) | Belgium's national standards body — the counterpart to [[DE-DIN]] and [[NL-NEN]], and the third leg of the CEN/ISO membership pattern | Later | Belgium batch |
-| **The Dutch NCSC** | Not an Atlas entity, so [[NL-CBW]] has a NIS2 act with **no authority attached**, while Belgium ([[BE-CCB]]) and Germany ([[DE-BSI]]) both have one. Visible only now that two other countries do | Next | Belgium batch |
+| ~~**The Dutch NCSC**~~ **— DONE 2026-08-18** ([[NL-NCSC]]) | Not an Atlas entity, so [[NL-CBW]] has a NIS2 act with **no authority attached**, while Belgium ([[BE-CCB]]) and Germany ([[DE-BSI]]) both have one. Visible only now that two other countries do | Next | Belgium batch |
 | Belgian statistics act | No statutory basis for [[BE-STATBEL]] was found | Later | Belgium batch |
 
 ## France — queued from the fourth-country batch (2026-08-16)
@@ -157,9 +187,9 @@ by accident.
 | Area / entity | Why it needs research | Suggested batch | Noted by / date |
 |---|---|---|---|
 | **France's Open Data Directive transposition** | Understood to be a 2021 ordinance; not identified. France joins Belgium as the second country with this gap | Next | France batch |
-| **INSEE** | National statistical office. Would be the fourth in the Atlas — all of which are unconnected to Eurostat or the UN statistical system. Only a passing mention found | Next | France batch |
+| ~~**INSEE**~~ **— DONE 2026-08-18** ([[FR-INSEE]]) | National statistical office. Would be the fourth in the Atlas — all of which are unconnected to Eurostat or the UN statistical system. Only a passing mention found | Next | France batch |
 | **A French DCAT application profile** | data.gouv.fr exposes DCAT and the European portal harvests it, but no named profile was found. Would complete the DCAT fork across four countries | Next | France batch |
-| **The Dutch open-data portal custodian** | [[NL-DATA-OVERHEID]] is the only national portal in the Atlas with no custodian modelled. Three other countries now have one | Next | France batch |
+| **The Dutch open-data portal custodian** *(still open; now **seven** portals lack one)* | [[NL-DATA-OVERHEID]] is the only national portal in the Atlas with no custodian modelled. Three other countries now have one | Next | France batch |
 | AFNOR | French national standards body — the fourth leg of the CEN/ISO membership pattern after [[DE-DIN]], [[NL-NEN]] and Belgium's NBN | Later | France batch |
 | RGS and RGAA | France's security and accessibility reference frameworks, siblings of [[FR-RGI]] | Later | France batch |
 | France Identité | Recorded in prose on [[FR-FRANCECONNECT]]; not its own entity | Later | France batch |
@@ -171,7 +201,7 @@ by accident.
 
 | Area / entity | Why it needs research | Suggested batch | Noted by / date |
 |---|---|---|---|
-| **European Statistical System (`EU-ESS`)** | The single highest-value item this batch produced. The sources describe Eurostat and the national statistical offices as members of one system; the Atlas currently carries that as one weak `related-to` edge on [[ES-INE]] marked `source: interpretation`. One entity with `part-of` edges would connect **four** national statistical offices at once. Deliberately not created inside a country batch | **Next** | Spain batch |
+| ~~**European Statistical System (`EU-ESS`)**~~ **— DONE** ([[EU-ESS]], now 11 national institutes) | The single highest-value item this batch produced. The sources describe Eurostat and the national statistical offices as members of one system; the Atlas currently carries that as one weak `related-to` edge on [[ES-INE]] marked `source: interpretation`. One entity with `part-of` edges would connect **four** national statistical offices at once. Deliberately not created inside a country batch | **Next** | Spain batch |
 | **BOE citation for Real Decreto 729/2023** | The decree creating [[ES-AESIA]]. No search result returned its BOE identifier, so the Atlas's first AI Act link rests on secondary sources and government press material | **Next** | Spain batch |
 | **Red.es** | Public business entity operating [[ES-DATOS-GOB-ES]]. Cited but too thinly sourced to create, which is why that portal is the only national open data portal in the Atlas besides the Dutch one with no `maintained-by` edge | Next | Spain batch |
 | **Spanish organic law on artificial intelligence** | Sources refer to one landing the AI Act domestically with sanctions and sandboxes, at a stage they describe inconsistently. Not created — the Atlas already carries one instrument whose sources conflict ([[FR-NIS2-LOI]]) and does not need a second on weaker evidence | Next | Spain batch |
@@ -203,7 +233,7 @@ by accident.
 |---|---|---|---|
 | **Dz.U./ISAP citation for [[PL-ODO]]** | The weakest-sourced of the six national GDPR instruments — no primary legal citation found, and its substantive GDPR-specification provisions are entirely unestablished | **Next** | Poland batch |
 | **A ministry or Commission source for the eIDAS 2.0 incompatibility** | [[PL-MOBYWATEL]]'s edge to [[EU-EIDAS2]] — the Atlas's **only** eIDAS2 link — rests on press reporting alone | **Next** | Poland batch |
-| **CSIRT NASK, CSIRT GOV, CSIRT MON** | Poland's operational cybersecurity bodies. Two of six countries now have cybersecurity legislation modelled and no cyber authority | **Next** | Poland batch |
+| ~~**CSIRT NASK, CSIRT GOV, CSIRT MON**~~ **— PARTLY DONE**: [[PL-NASK]] created and [[PL-ABW]] carries CSIRT GOV; **CSIRT MON still open** | Poland's operational cybersecurity bodies. Two of six countries now have cybersecurity legislation modelled and no cyber authority | **Next** | Poland batch |
 | **PESEL** | Poland's population register, the direct counterpart of [[NL-BRP]] and the ten Dutch base registries | Next | Poland batch |
 | **The operator of [[PL-DANE-GOV-PL]]** | Not identified by any source found. Three of six national open data portals still have no custodian in the graph | Next | Poland batch |
 | **Krajowe Ramy Interoperacyjności** | Poland's national interoperability framework — the sixth national NIF, and the sixth potential [[EU-EIF]] descent | Later | Poland batch |
