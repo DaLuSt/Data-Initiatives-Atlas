@@ -89,7 +89,7 @@ sources.
 |---|---|
 | Internally coherent model | ✅ 17 entity types, all defined in `metadata/ontology.md` |
 | Entity types used consistently | ✅ no type used outside its documented folder |
-| Relationships semantically meaningful | ✅ 21 types, each defined; `proposes-to-supersede` added when `supersedes` would have asserted an untruth |
+| Relationships semantically meaningful | ✅ 22 types, each defined; `proposes-to-supersede` added when `supersedes` would have asserted an untruth, and `amends` when it would have retired an instrument still in force |
 | Domains justified | ✅ all 6 connect ≥2 entities; 7 more withheld below threshold |
 
 ### Metadata

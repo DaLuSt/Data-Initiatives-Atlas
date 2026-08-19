@@ -37,7 +37,15 @@ related_entities:
   - ES-LEY-37-2007
   - NL-DATA-OVERHEID
   - DE-GOVDATA
+  - ES-RED-ES
 relationships:
+  - type: maintained-by
+    target: ES-RED-ES
+    source: fact
+    evidence: "datos.gob.es is promoted by the Ministry for Digital Transformation and the Civil Service through the public business entity Red.es; Red.es lists 'Aporta - datos.gob.es' among its own initiatives, and datos.gob.es organises and manages the public sector's Cat\u00e1logo de Informaci\u00f3n P\u00fablica under the Iniciativa Aporta (red.es 'Aporta - datos.gob.es'; datos.gob.es 'Qu\u00e9 hacemos'; datos.gob.es 'Iniciativa Aporta'). NOT READ \u2014 search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: applies-to
     target: ES-NTI-RISP
     source: interpretation

@@ -1,9 +1,142 @@
 # Current Batch
 
-**Status:** No batch in progress. **The Dutch register statutes** was
-completed on 2026-08-18, after the first research-queue pass.
+**Status:** No batch in progress. **The Open Data Directive transpositions**
+was completed on 2026-08-19, on the third research-queue pass.
 
-## The Dutch register statutes
+## The Open Data Directive transpositions
+
+The largest remaining item on `discovery/research-queue.md`, carried since
+the Belgium, France and Spain batches:
+
+> *"**The Open Data Directive transpositions for Belgium, France and
+> Spain.** All three amended existing law rather than passing a standalone
+> act, and none of the three instruments was identified."*
+
+**4 new entities, 10 relationships.** 396 → **400 entities**, 666 → **676
+relationships**. One new relationship type.
+
+The prediction was right for two of the three, and wrong in a way worth
+having.
+
+| Country | Instrument | Pattern |
+|---|---|---|
+| Belgium | [[BE-HERGEBRUIK-WET-2023]] — federal act of 25 Dec 2023 | `amends` [[BE-HERGEBRUIK-WET]] |
+| Spain | [[ES-RDL-24-2021]] — decree-law of 2 Nov 2021, Book Three | `amends` [[ES-LEY-37-2007]] |
+| France | **none** — [[FR-LOI-VALTER]] explains why | no ODD-era instrument exists |
+
+### Belgium had not transposed yet when the Belgium batch ran
+
+The Belgium batch could not have found this instrument. Belgium's federal
+transposition was adopted on **21 December 2023** and published on **25
+December 2023** — after the sources that batch searched were written.
+
+The gap the queue recorded as a research failure was a **timing** fact.
+
+Its lateness is the extreme of the Atlas's range. Against
+[[IE-PSI-REGULATIONS-2021]] at five days late, Belgium is **twenty-nine
+months** late, and was referred to the Court of Justice ten months before
+the act passed.
+
+### Belgium's regions beat its federal state
+
+Belgium transposed four times, because the competence is shared:
+
+| Level | Instrument | Date |
+|---|---|---|
+| Flanders | Decreet amending the Bestuursdecreet | 2 July 2021 — **inside the deadline** |
+| Brussels-Capital | Ordonnance amending that of 27 Oct 2016 | 10 December 2021 |
+| Wallonia | Two décrets on dissemination and re-use | 24 November 2022 |
+| Federal | [[BE-HERGEBRUIK-WET-2023]] | 25 December 2023 |
+
+Flanders met the deadline with a fortnight to spare. Belgium was referred to
+the Court anyway, because a member state answers for its whole territory.
+
+Only the federal act is modelled. `level: regional` in this Atlas means
+*supra*-national — every EU instrument carries it — so there is no value for
+a Belgian Region. That is the same blocker recorded against OSLO and
+Digitaal Vlaanderen, and this batch did not resolve it; it recorded the
+three instruments in prose and queued the design question.
+
+### France's 2021 ordinance does not exist
+
+The France batch recorded the transposition as *"understood to be a 2021
+ordinance; not identified."*
+
+There is no such ordinance. **Ordonnance n° 2021-1518 du 24 novembre 2021**
+is real, is French, is from 2021, and "complète la transposition" of a 2019
+directive — but that directive is **2019/790**, on copyright in the digital
+single market, not **2019/1024**.
+
+France's regime predates the Directive: [[FR-LOI-VALTER]] of 28 December
+2015, codified into Title II of Book III of the Code des relations entre le
+public et l'administration in March 2016. The confirming evidence is a
+**documented negative**: France is absent from the nineteen member states
+the Commission served with letters of formal notice on 30 September 2021.
+
+So **no French entity asserts `implements-requirement-from` to the
+Directive**, and the comparison matrix shows France with an empty implementer
+cell. That is the finding rather than a gap, and it is the only deliberately
+empty cell in the matrix.
+
+This is the second near-miss of its kind in three batches. The register
+batch caught a search returning the **Archiefwet's** BWBR identifier for the
+Kadasterwet; this one caught **2019/790** standing in for **2019/1024**. In
+both fields a wrong citation resolves to a real instrument about something
+else, which is worse than resolving to nothing.
+
+### Spain had the edge but not the instrument
+
+[[ES-LEY-37-2007]] has carried `implements-requirement-from`
+[[EU-OPEN-DATA-DIRECTIVE]] since the Spain batch, with RDL 24/2021 named in
+the evidence text. The edge was right and the graph was wrong: it attributed
+to a **2007** act the transposition of a **2019** directive.
+
+[[ES-RDL-24-2021]] separates them. Spain issued it as a *decree-law* — the
+urgent form — five weeks after receiving its letter of formal notice.
+
+### New relationship type: `amends`
+
+Four of the six modelled transpositions are amendments to statutes that
+already existed. The vocabulary had no way to say so: `supersedes` would
+have retired instruments that are still in force, and
+`implements-requirement-from` records the EU obligation, not the domestic
+edit.
+
+`amends` was added to `metadata/relationship-types.md`,
+`metadata/controlled-vocabularies.md` and `metadata/schema.json`, and is used
+twice — 22 types in the vocabulary now.
+
+Its inverse was **not** added. `implements`/`implemented-by` exist as a pair,
+so the vocabulary is now inconsistent with itself; that is queued as a design
+question rather than settled by reflex.
+
+### Also closed
+
+- **Red.es** → [[ES-RED-ES]]. The Spain batch judged it "too thinly sourced
+  to create". The missing statement was on red.es itself, which lists
+  *"Aporta - datos.gob.es"* among its own initiatives. [[ES-DATOS-GOB-ES]]
+  now has a `maintained-by` edge, taking the portal-custodian gap from seven
+  national portals to six.
+- **A French DCAT application profile** — closed as a negative. None exists;
+  the sources describe France being measured on conformity with **DCAT-AP
+  itself**. Recorded on [[FR-DATA-GOUV]]. Spain's profile turned out to be
+  already modelled, folded into [[ES-NTI-RISP]] rather than standing alone,
+  so no duplicate was created.
+
+### Verification
+
+- **400 entities, 4,733 edges** (676 relationship, 1,571 association, 2,486
+  wikilink), 13 countries
+- `validation/run_all.py` — 5/5
+- `tools/test_build_graph.py` — 41 OK
+- `tools/test_ui.mjs` — **81/81**
+- `validation/audit.py` — "no fully disconnected entities"
+
+All four new entities are `verification: search-only`; the egress proxy
+blocks eur-lex.europa.eu and legifrance.gouv.fr outright, so no primary text
+was read.
+
+## The Dutch register statutes — previous batch
 
 The second of the two clusters the research-queue pass left open, and the one
 the register batch itself had deferred with a reason:

@@ -43,6 +43,9 @@ Anchor entity: [[BE]]
 
 - [[BE-HERGEBRUIK-WET]] — Wet van 4 mei 2016 _(PSI-era; **not** the Open
   Data Directive transposition — see the entity)_
+  - [[BE-HERGEBRUIK-WET-2023]] — Wet van 25 december 2023 _(**the** Open Data
+    Directive transposition, and the amendment that closes the gap the 2016
+    entity has flagged since the Belgium batch — twenty-nine months late)_
 - [[BE-KSZ-WET]] — Wet van 15 januari 1990 _(the oldest instrument in the Atlas)_
 
 ## Frameworks and standards

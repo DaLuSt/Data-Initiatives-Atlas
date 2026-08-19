@@ -23,13 +23,17 @@ Anchor entity: [[ES]]
 - [[ES-INCIBE]] — cybersecurity institute _(society-facing)_
 - [[ES-CCN]] — Centro Criptológico Nacional _(public sector)_
 - [[ES-INE]] — national statistical office
+- [[ES-RED-ES]] — public business entity operating [[ES-DATOS-GOB-ES]]
+  _(also the `.es` registry, RedIRIS and ONTSI)_
 
 ## Legislation
 
 - [[ES-LOPDGDD]] — Ley Orgánica 3/2018 _(implements [[EU-GDPR]]; adds a
   digital-rights title with no EU counterpart)_
 - [[ES-LEY-37-2007]] — public sector information re-use, **as amended in
-  2021** _(the Open Data Directive transposition)_
+  2021** _(the standing Spanish re-use regime)_
+  - [[ES-RDL-24-2021]] — the omnibus decree-law whose Book Three did the
+    amending _(the actual Open Data Directive transposition)_
 - [[ES-LCGC]] — NIS2 transposition _(⚠ `status: proposed` — still a draft)_
 
 ## Frameworks and standards
@@ -71,8 +75,8 @@ Atlas entity now carrying `applies-in` → [[ES]] alongside [[NL]], [[DE]],
 |---|---|---|---|---|---|
 | [[EU-GDPR]] | [[ES-LOPDGDD]] | [[FR-LIL]] | [[BE-GDPR-WET]] | [[DE-BDSG]] | [[NL-UAVG]] |
 | [[EU-NIS2]] | [[ES-LCGC]] ⚠ draft | [[FR-NIS2-LOI]] ⚠ unknown | [[BE-NIS2-WET]] | [[DE-NIS2UMSUCG]] | [[NL-CBW]] |
-| [[EU-OPEN-DATA-DIRECTIVE]] | **[[ES-LEY-37-2007]]** | _(not identified)_ | _(not identified)_ | [[DE-DNG]] | [[NL-WHO]] |
-| [[EU-DCAT-AP]] | **[[ES-NTI-RISP]]** | _(none found)_ | [[BE-DCAT-AP-BE]] | [[DE-DCAT-AP-DE]] | [[NL-DCAT-AP-NL]] |
+| [[EU-OPEN-DATA-DIRECTIVE]] | **[[ES-RDL-24-2021]]** | _(none — see [[FR-LOI-VALTER]])_ | **[[BE-HERGEBRUIK-WET-2023]]** | [[DE-DNG]] | [[NL-WHO]] |
+| [[EU-DCAT-AP]] | **[[ES-NTI-RISP]]** | _(none — searched and not found)_ | [[BE-DCAT-AP-BE]] | [[DE-DCAT-AP-DE]] | [[NL-DCAT-AP-NL]] |
 | [[EU-AI-ACT]] | **[[ES-AESIA]]** | _(none)_ | _(none)_ | _(none)_ | _(none)_ |
 | [[EU-EIF]] | _(refused)_ | _(refused)_ | **[[BE-BELGIF]]** | _(refused)_ | _(refused)_ |
 | [[EU-INSPIRE]] | _(not identified)_ | ✅ ordonnance 2010 | mapping only | [[DE-GEOZG]] | _(gap)_ |
@@ -93,7 +97,10 @@ entity concerned rather than left to read as absence of fact.
   is designated under.
 - **The Open Data Directive gap closes on the third attempt.** See
   [[ES-LEY-37-2007]], and note that the 2016-act trap that caught Belgium
-  and France has a 2007-act equivalent here.
+  and France has a 2007-act equivalent here. The third research-queue batch
+  finished the job by giving the amending instrument its own node,
+  [[ES-RDL-24-2021]] — the edge had been hanging off a 2007 act that could
+  not have transposed a 2019 directive.
 - **The first statistics-cluster edge**, recorded as an interpretation
   rather than a fact. See [[ES-INE]].
 

@@ -55,7 +55,7 @@ entity is created for it (`metadata/ontology.md` §3.1).
 See `metadata/relationship-types.md` §2.1 for the full list and definitions:
 `related-to`, `influences`, `implements`, `implemented-by`, `depends-on`,
 `derived-from`, `based-on`, `references`, `supersedes`, `replaces`,
-`proposes-to-supersede`, `part-of`, `governed-by`, `applies-to`,
+`proposes-to-supersede`, `amends`, `part-of`, `governed-by`, `applies-to`,
 `applies-in`, `produces`, `maintained-by`, `owned-by`, `participates-in`,
 `aligned-with`, `implements-requirement-from`.
 

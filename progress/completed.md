@@ -1,5 +1,74 @@
 # Completed Batches
 
+## The Open Data Directive transpositions
+
+**Date:** 2026-08-19
+
+The largest remaining item on the research queue, carried since the Belgium,
+France and Spain batches. **4 new entities, 10 relationships.** 396 → **400
+entities**, 666 → **676 relationships**. One new relationship type.
+
+| Country | Instrument | Pattern |
+|---|---|---|
+| Belgium | [[BE-HERGEBRUIK-WET-2023]] — 25 December 2023 | `amends` [[BE-HERGEBRUIK-WET]] |
+| Spain | [[ES-RDL-24-2021]] — 2 November 2021, Book Three | `amends` [[ES-LEY-37-2007]] |
+| France | **none exists** | see [[FR-LOI-VALTER]] |
+
+### Three findings
+
+**Belgium's transposition post-dates the Belgium batch.** The federal act was
+published on 25 December 2023, after the sources that batch searched. What
+the queue recorded as a research failure was a timing fact. At twenty-nine
+months late it is the extreme of the Atlas's range, against
+[[IE-PSI-REGULATIONS-2021]] at five days.
+
+**Belgium's regions beat its federal state.** Flanders transposed by decree
+on 2 July 2021, a fortnight inside the deadline; Brussels followed in
+December 2021 and Wallonia in November 2022. Belgium was still referred to
+the Court of Justice, because a member state answers for its whole
+territory. Only the federal act is modelled — `level: regional` means
+*supra*-national in this Atlas, the same blocker recorded against OSLO.
+
+**France's "2021 ordinance" does not exist.** Ordonnance n° 2021-1518 of 24
+November 2021 is real and does complete the transposition of a 2019
+directive — **2019/790**, on copyright. France's regime predates the Open
+Data Directive ([[FR-LOI-VALTER]], 2015, codified into the CRPA in 2016), and
+France is absent from the nineteen member states served with letters of
+formal notice in September 2021. No French entity asserts
+`implements-requirement-from` to the Directive; the empty matrix cell is the
+finding.
+
+That is the second near-miss of this shape in three batches, after the
+Archiefwet/Kadasterwet BWBR confusion. In both fields a wrong citation
+resolves to a real instrument about something else.
+
+### New relationship type: `amends`
+
+Four of the six modelled transpositions edit statutes that already existed.
+`supersedes` would have retired instruments still in force;
+`implements-requirement-from` records the EU obligation, not the domestic
+edit. `amends` was added across the three metadata files — 22 types now. Its
+inverse was deliberately not added, and the resulting asymmetry with
+`implements`/`implemented-by` is queued rather than resolved by reflex.
+
+### Also closed
+
+- **Red.es** → [[ES-RED-ES]], giving [[ES-DATOS-GOB-ES]] a `maintained-by`
+  and taking the portal-custodian gap from seven to six. The statement the
+  Spain batch wanted was on red.es itself.
+- **A French DCAT application profile** — none exists; France is measured on
+  conformity with DCAT-AP itself. Spain's profile was already modelled inside
+  [[ES-NTI-RISP]], so no duplicate was created.
+
+### Verification
+
+400 entities, 4,733 edges (676 relationship, 1,571 association, 2,486
+wikilink), 13 countries. `validation/run_all.py` 5/5;
+`tools/test_build_graph.py` 41 OK; `tools/test_ui.mjs` 81/81;
+`validation/audit.py` reports no fully disconnected entities. All four new
+entities are `verification: search-only` — the egress proxy blocks
+eur-lex.europa.eu and legifrance.gouv.fr outright.
+
 ## The Dutch register statutes
 
 **Date:** 2026-08-18

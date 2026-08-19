@@ -33,6 +33,7 @@ related_entities:
   - FR
   - FR-DATA-GOUV
   - EU-OPEN-DATA-DIRECTIVE
+  - FR-LOI-VALTER
 relationships:
   - type: applies-in
     target: FR

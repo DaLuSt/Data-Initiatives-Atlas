@@ -36,6 +36,7 @@ related_entities:
   - EU-OPEN-DATA-DIRECTIVE
   - BE-HERGEBRUIK-WET
   - DE-IWG
+  - FR-LOI-VALTER
 relationships:
   - type: applies-in
     target: EU

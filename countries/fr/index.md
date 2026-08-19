@@ -25,6 +25,9 @@ Anchor entity: [[FR]]
 
 - [[FR-LIL]] — Loi Informatique et Libertés, **1978**, amended for the GDPR
   in 2018 _(implements [[EU-GDPR]])_
+- [[FR-LOI-VALTER]] — Loi n° 2015-1779 _(public sector information re-use;
+  the reason France passed **no** Open Data Directive instrument — see the
+  entity)_
 - [[FR-LRN]] — Loi pour une République numérique, 2016 _(open data by
   default; **not** the Open Data Directive transposition)_
 - [[FR-NIS2-LOI]] — Loi Résilience _(⚠ `status: unknown` — sources conflict)_
