@@ -9,7 +9,7 @@ one of these — resolve it with a real source, or leave it open.
 
 | Entity / topic | Question | Why it's unresolved | Noted by / date | Status |
 |---|---|---|---|---|
-| All unread-source entities (**382 of 389**: 379 `search-only` + 3 `unverified` ([[NL]], [[EU]], [[UN]]); regenerate the count with `python tools/source_hosts.py`) | Every factual claim | The environment's network egress policy blocks all direct page retrieval (`EGRESS_BLOCKED` for forumstandaardisatie.nl, digitaleoverheid.nl, noraonline.nl, vng.nl, logius.nl, eur-lex.europa.eu, wikipedia.org and every other host tested). Batch 1 was completed from search-engine results on explicit instruction, with the trade-off accepted knowingly. Every entity carries `verification: search-only`. | Batch 1 / 2026-08-14 | **Open — needs full re-verification pass** |
+| All unread-source entities (**389 of 396**: 386 `search-only` + 3 `unverified` ([[NL]], [[EU]], [[UN]]); regenerate the count with `python tools/source_hosts.py`) | Every factual claim | The environment's network egress policy blocks all direct page retrieval (`EGRESS_BLOCKED` for forumstandaardisatie.nl, digitaleoverheid.nl, noraonline.nl, vng.nl, logius.nl, eur-lex.europa.eu, wikipedia.org and every other host tested). Batch 1 was completed from search-engine results on explicit instruction, with the trade-off accepted knowingly. Every entity carries `verification: search-only`. | Batch 1 / 2026-08-14 | **Open — needs full re-verification pass** |
 
 To find every affected entity: `grep -rl "verification: search-only" .`
 
@@ -654,4 +654,16 @@ batches recorded that none existed.
 | [[EU-EN-16931]] | Other national **CIUSes** — Italy's, France's, the Peppol BIS profile. | [[DE-XRECHNUNG]] is the only one modelled, which makes the German case look unique when it is one of several | 2026-08-18 | Open |
 | [[IE-PSI-REGULATIONS-2021]] | The Atlas's `type: law` **flattens primary and secondary legislation.** | This is a statutory instrument; [[IE-DPA-2018]] is an Act of the Oireachtas. Both are `law`, and only the names and the entity bodies record the difference | 2026-08-18 | Open — ontology |
 | Poland | **CSIRT MON** is still unmodelled. | [[PL-NASK]] and [[PL-ABW]] cover CSIRT NASK and CSIRT GOV; the third national CSIRT sits at the Ministry of National Defence, which is not an Atlas entity | 2026-08-18 | Open |
+
+## The Dutch register statutes (batch of 2026-08-18)
+
+| Entity | Question | Why it matters | Noted by / date | Status |
+|---|---|---|---|---|
+| [[NL-BRI]] | **Chapter IVA of the AWR** — no citable identifier found for it as a distinct instrument. | The one register of ten still without a `governed-by` edge. The sources name the chapter; the Atlas has no way to cite a chapter of an act as an entity, and creating a `NL-AWR` for the whole Algemene wet inzake rijksbelastingen would overstate what the register rests on | 2026-08-18 | **Open — and an ontology question** |
+| [[NL-KADASTER]] | The **Organisatiewet Kadaster** (BWBR0006463) is not modelled. | It constitutes the Dienst voor het kadaster en de openbare registers as a body, where [[NL-KADASTERWET]] governs the registers. The cleanest body/registers statute pair in the Atlas, with only one half modelled | 2026-08-18 | Open |
+| All seven new statutes | The **Besluit** and **Regeling** instruments beneath each act are not modelled. | [[NL-WET-BRO]]'s are the best evidenced (BWBR0040205, BWBR0040482). A consistent scoping decision rather than an oversight, recorded so it is not mistaken for one | 2026-08-18 | Open — scoping |
+| [[NL-WET-BAG]] | The **original** commencement date. | `start_date` is null: the sources give the 2017 amending act (Stb. 2017, 60) in force 1 July 2018, not the original act's commencement | 2026-08-18 | Open |
+| [[NL-WET-BRO]] | The **2024 amendment** on bronhouderschap of models and quality control. | Recorded by the Tweede Kamer as a pending change; its content and status were not established | 2026-08-18 | Open |
+| [[NL-NHR]] | **BRIS** and the Company Law Directive are not modelled. | The Dutch commercial register is part of an EU-wide interconnection system, and the Atlas shows it as purely national | 2026-08-18 | Open |
+| All seven new statutes | **No statute text was read.** | `wetten.overheid.nl` is blocked by this environment's egress proxy. Every entity is keyed on a BWBR identifier confirmed by search and not retrieved — and a search for the Kadasterwet's identifier returned BWBR0007376, which is the **Archiefwet 1995**. A wrong identifier resolves to a real but unrelated act, so these seven should be verified first when retrieval is possible | 2026-08-18 | **Open — high priority for re-verification** |
 

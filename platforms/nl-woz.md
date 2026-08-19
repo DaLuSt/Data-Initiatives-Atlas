@@ -40,12 +40,20 @@ domains:
 organisations:
   - NL-WAARDERINGSKAMER
 related_entities:
+  - NL-WET-WOZ
   - NL-BASISREGISTRATIES
   - NL-WAARDERINGSKAMER
   - NL-KADASTER
   - NL-BELASTINGDIENST
   - NL-BRK
 relationships:
+  - type: governed-by
+    target: NL-WET-WOZ
+    source: fact
+    evidence: "The Wet waardering onroerende zaken, adopted in 1994, regulates the valuation of all real estate in the Netherlands for tax collection and the housing valuation system, and is the statutory basis of the Basisregistratie Waarde Onroerende Zaken (wetten.overheid.nl/BWBR0007119; nl.wikipedia.org 'Wet waardering onroerende zaken'). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: part-of
     target: NL-BASISREGISTRATIES
     source: fact

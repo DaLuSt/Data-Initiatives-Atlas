@@ -40,11 +40,19 @@ domains:
 organisations:
   - NL-KADASTER
 related_entities:
+  - NL-WET-BGT
   - NL-BASISREGISTRATIES
   - NL-KADASTER
   - NL-BRT
   - NL-VNG
 relationships:
+  - type: governed-by
+    target: NL-WET-BGT
+    source: fact
+    evidence: "The Wet basisregistratie grootschalige topografie is the statutory basis of the Basisregistratie Grootschalige Topografie; its provisions on the register's content and on the obligations of bronhouders and the register holder entered into force on 1 January 2016 (wetten.overheid.nl/BWBR0034026; eerstekamer.nl dossier 33.527). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: part-of
     target: NL-BASISREGISTRATIES
     source: fact

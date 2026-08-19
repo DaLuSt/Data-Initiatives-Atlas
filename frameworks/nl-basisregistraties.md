@@ -173,21 +173,47 @@ the count to five sourced connections left unmodelled for want of a type —
 past the threshold `metadata/relationship-types.md` §2.3 sets for proposing
 one.
 
-## Statutes: named, not modelled
+## Statutes: modelled, as of 2026-08-18
 
-Nine of the ten registers have a statutory basis, and where it was sourced
-it is named in the register's description — the Wet BAG (partially in force
-1 July 2009), the Wet BGT (1 January 2016), the Wet BRO (1 January 2018),
-Chapter IVA of the AWR for the BRI (1 January 2009), the Wet WOZ.
+The register batch named the statutes and created none, on the grounds that
+*"creating six or seven Dutch statutes would be a legislation batch, not a
+registry batch, and doing half of it would leave the layer inconsistent."*
+That legislation batch has now been done.
 
-**No law entity was created for any of them.** Only [[NL-BRP]] carries a
-`governed-by` edge, to [[NL-WET-BRP]], which already existed from Batch 3.
-Creating six or seven Dutch statutes would be a legislation batch, not a
-registry batch, and doing half of it would leave the layer inconsistent.
-Queued in `discovery/research-queue.md`.
+**Nine of the ten registers carry a `governed-by` edge:**
 
-**[[NL-BRT]] has no sourced statute at all** — the one register of the ten
-where none was found.
+| Register | Statute |
+|---|---|
+| [[NL-BAG]] | [[NL-WET-BAG]] |
+| [[NL-BGT]] | [[NL-WET-BGT]] — in force 1 January 2016 |
+| [[NL-BRO]] | [[NL-WET-BRO]] — in force 1 January 2018 |
+| [[NL-WOZ]] | [[NL-WET-WOZ]] |
+| [[NL-NHR]] | [[NL-HANDELSREGISTERWET]] |
+| [[NL-BRV]] | [[NL-WEGENVERKEERSWET-1994]] |
+| [[NL-BRK]] | [[NL-KADASTERWET]] |
+| [[NL-BRT]] | [[NL-KADASTERWET]] — **the same act** |
+| [[NL-BRP]] | [[NL-WET-BRP]] — from Batch 3 |
+| [[NL-BRI]] | **still none** — Chapter IVA of the AWR, not identified |
+
+### Seven statutes, nine registers
+
+The legal underpinning of the stelsel is **not one-to-one**, and that is the
+finding this layer produces:
+
+- **[[NL-KADASTERWET]] carries two registers** — the cadastre and the
+  topography. There is no *Wet basisregistratie topografie*, which is why
+  [[NL-BRT]] was recorded as the one register with no statute at all.
+- **Three of the seven acts are general statutes** that happen to contain a
+  registration: [[NL-KADASTERWET]], [[NL-WET-WOZ]] (a valuation act) and
+  [[NL-WEGENVERKEERSWET-1994]] (a road traffic act). Four were written to
+  constitute a registration.
+
+Neither fact is visible from the register entities. Both are visible from
+the statutes, which is the argument for having created them.
+
+**[[NL-BRI]] is the one still open.** Chapter IVA of the Algemene wet inzake
+rijksbelastingen is named in the sources as its basis, and no citable
+identifier for that chapter as a distinct instrument was found.
 
 ## Relationship to [[NL-FDS]] is still open
 

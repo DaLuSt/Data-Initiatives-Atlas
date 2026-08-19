@@ -496,7 +496,16 @@
   /** Deterministic layered layout: rows by geographic level (brief §6/§11). */
   function layeredPositions(nodes) {
     var gapX = 165, gapY = 105;       // spacing between nodes inside a block
-    var blockGapX = 110, blockGapY = 70, bandGap = 150;
+    // blockGapY is deliberately larger than blockGapX. Blocks wrap onto new
+    // lines within a band, so the *vertical* distance between two blocks is
+    // what a growing country eats into: as one block gains rows, the line
+    // below it moves down by that block's height, but the centroids of two
+    // vertically adjacent blocks stay a fixed gap apart. The browser test
+    // asserts that no two block centroids are closer than the largest
+    // block's own radius, and at 70 that margin was gone once the Dutch
+    // block reached 85 entities — the closest pair was PL/PT, stacked, at
+    // 447 against a radius of 464.
+    var blockGapX = 110, blockGapY = 190, bandGap = 150;
     var width = Math.max($("cy").clientWidth, 900);
 
     // Connectivity is measured over the *visible* edges, not the whole Atlas.
