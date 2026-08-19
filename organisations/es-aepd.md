@@ -32,8 +32,16 @@ domains:
   - DOMAIN-GOVERNMENT
 organisations: []
 related_entities:
+  - EU-EDPB
   - ES-LOPDGDD
 relationships:
+  - type: participates-in
+    target: EU-EDPB
+    source: fact
+    evidence: "Article 68(3) GDPR provides that the European Data Protection Board shall be composed of the head of one supervisory authority of each Member State and of the European Data Protection Supervisor, or their respective representatives; the Agencia Española de Protección de Datos is Spain's supervisory authority (gdpr-info.eu 'Art. 68 GDPR — European Data Protection Board'; gdprhub.eu 'Article 68 GDPR'; edpb.europa.eu). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: applies-to
     target: ES-LOPDGDD
     source: fact
@@ -43,6 +51,12 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Art. 68 GDPR — European Data Protection Board"
+    url: "https://gdpr-info.eu/art-68-gdpr/"
+    publisher: "gdpr-info.eu (Intersoft Consulting)"
+  - title: "Article 68 GDPR"
+    url: "https://gdprhub.eu/Article_68_GDPR"
+    publisher: "GDPRhub (noyb)"
   - title: "Ley Orgánica 3/2018, de 5 de diciembre — novedades para el sector privado"
     url: "https://www.aepd.es/guias/novedades-lopd-sector-privado.pdf"
     publisher: "Agencia Española de Protección de Datos (AEPD)"

@@ -1,5 +1,54 @@
 # Completed Batches
 
+## The cheap structural fixes
+
+**Date:** 2026-08-18
+
+All four items on `discovery/candidates.md`'s "cheap structural fixes" list.
+**7 new entities, 16 relationships.** 354 → **361 entities**, 539 → **555
+relationships**. [[EU-EDPB]] **3 → 8** incoming, [[EU-CEN]] **3 → 7**,
+[[EU-ESS]] **7 → 8**.
+
+**The DPAs reach the Board.** Five edges — [[DE-BFDI]], [[BE-APD]],
+[[FR-CNIL]], [[ES-AEPD]], [[PL-UODO]] — on [[EU-GDPR]] **Article 68(3)**,
+which composes the Board of one supervisory-authority head per member state
+plus the [[EU-EDPS]], and provides for a **joint representative** where a
+member state has more than one authority. That last clause resolves the exact
+German question [[DE-BFDI]] had recorded as unguessable. No new entity.
+
+**[[FR-INSEE]]** closes the last missing statistical office; every EU member
+state in the Atlas is now in [[EU-ESS]].
+
+**[[BE-NBN]], [[FR-AFNOR]], [[ES-UNE]], [[PL-PKN]]** created, and the
+[[IE-NSAI]] refusal closed — not by reading the CEN member list, but by
+finding CEN-CENELEC's statement of the **rule** that its national members are
+the standardization bodies of the 27 EU countries.
+
+**[[NL-NCSC]]** (DTC merged in on 1 January 2026; 2.4 million organisations
+served) and **[[PL-NASK]]** (conducts CSIRT NASK under [[PL-KSC]]) close the
+cyber-authority gap. CSIRT MON stays unmodelled.
+
+### The lesson the batch produced twice
+
+A refusal for want of a source is **not** the same as a fact being
+unknowable. Both refusals closed here were correct in method and wrong in
+conclusion, and in both cases the source was in the instrument that created
+the thing — Article 68(3) for the Board, CEN-CENELEC's membership rule for
+the standards bodies. Both entities now record how the refusal fell rather
+than quietly dropping it.
+
+### The one weak edge
+
+[[NL-NCSC]] `applies-to` [[NL-CBW]] is `source: interpretation`,
+`confidence: low`: the sources make the NCSC the national cyber body and put
+it in front of the Cyberbeveiligingswet, but none states that it is the
+authority **designated under** the act.
+
+### Connectivity
+
+Components unchanged at 20, largest 319 → **326**, isolated unchanged at 8.
+These fixes thickened the middle rather than rescuing islands.
+
 ## Data spaces — completing the fourteen
 
 **Date:** 2026-08-18

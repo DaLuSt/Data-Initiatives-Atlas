@@ -173,9 +173,41 @@ Six of seven countries have **no health-data entity at all**, in an Atlas
 that holds [[EU-EHDS]]. A health batch across DE, FR, ES, BE, PL and GB
 would be the single largest correction available to the domain layer.
 
-## Cheap structural fixes — better value than any new country (2026-08-18)
+## Cheap structural fixes — **all four done, 2026-08-18**
 
-Each of these costs one or a few entities and connects many.
+Each cost one or a few entities and connected many. All four were acted on
+in the batch of 2026-08-18; the table below is kept as the record of what
+they were and what they produced.
+
+| Fix | Result |
+|---|---|
+| National DPAs → [[EU-EDPB]] | **3 → 8** incoming edges. No new entity |
+| [[FR-INSEE]] | **8** national statistical institutes in [[EU-ESS]]; every EU member state in the Atlas now represented |
+| Standards bodies | [[EU-CEN]] **3 → 7** incoming; [[BE-NBN]], [[FR-AFNOR]], [[ES-UNE]], [[PL-PKN]] created, and the [[IE-NSAI]] refusal closed |
+| Cyber authorities | [[NL-NCSC]] and [[PL-NASK]] created |
+
+**What actually unlocked the DPA fix is worth remembering.** The edge had
+been refused on [[DE-BFDI]] because the German representation arrangement —
+which authority represents a member state with seventeen of them — "should
+not be guessed at". The answer was in [[EU-GDPR]] **Article 68(3)** all
+along: the Board is composed of the head of one supervisory authority per
+member state plus the [[EU-EDPS]], *and where a member state has more than
+one authority, a joint representative is appointed under that member state's
+law.* The provision that creates the Board anticipates the exact case that
+had blocked the edge.
+
+The [[IE-NSAI]] refusal closed the same way: not by reading the CEN member
+list the Atlas cannot retrieve, but by finding CEN-CENELEC's **statement of
+the rule** — its national members are the standardization bodies of the 27
+EU countries. Membership follows from the rule.
+
+Both are the same lesson: **a refusal for want of a source is not the same
+as a fact being unknowable**, and the source is sometimes in the instrument
+that created the thing.
+
+---
+
+### The original entries, for the record
 
 | Item | Measurement | Why | Status |
 |---|---|---|---|

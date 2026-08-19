@@ -61,10 +61,10 @@ Environment:
 Output on success:
 
 ```
-build_graph: 354 entities, 4089 edges (539 relationship, 1360 association, 2190 wikilink)
+build_graph: 361 entities, 4204 edges (555 relationship, 1386 association, 2263 wikilink)
              10 countries, 1 region(s), 15 entity types in use
-build_graph: wrote site/graph.json (439 KB)
-build_graph: wrote site/details.json (608 KB)
+build_graph: wrote site/graph.json (450 KB)
+build_graph: wrote site/details.json (626 KB)
 ```
 
 ---

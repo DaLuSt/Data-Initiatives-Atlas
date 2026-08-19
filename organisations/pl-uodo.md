@@ -39,8 +39,16 @@ domains:
   - DOMAIN-GOVERNMENT
 organisations: []
 related_entities:
+  - EU-EDPB
   - PL-ODO
 relationships:
+  - type: participates-in
+    target: EU-EDPB
+    source: fact
+    evidence: "Article 68(3) GDPR provides that the European Data Protection Board shall be composed of the head of one supervisory authority of each Member State and of the European Data Protection Supervisor, or their respective representatives; the President of the Personal Data Protection Office is Poland's supervisory authority (gdpr-info.eu 'Art. 68 GDPR — European Data Protection Board'; gdprhub.eu 'Article 68 GDPR'; edpb.europa.eu). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: applies-to
     target: PL-ODO
     source: fact
@@ -50,6 +58,12 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Art. 68 GDPR — European Data Protection Board"
+    url: "https://gdpr-info.eu/art-68-gdpr/"
+    publisher: "gdpr-info.eu (Intersoft Consulting)"
+  - title: "Article 68 GDPR"
+    url: "https://gdprhub.eu/Article_68_GDPR"
+    publisher: "GDPRhub (noyb)"
   - title: "Sprawozdanie z działalności Prezesa Urzędu Ochrony Danych Osobowych w roku 2018"
     url: "https://uodo.gov.pl/pl/file/3909"
     publisher: "Urząd Ochrony Danych Osobowych (UODO)"

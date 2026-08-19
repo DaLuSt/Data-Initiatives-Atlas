@@ -3,15 +3,15 @@
 > **Generated file — do not hand-edit.** Regenerate with
 > `python tools/source_hosts.py --markdown -o discovery/reverification-allowlist.md`
 
-Generated: 2026-08-18
+Generated: 2026-08-19
 
 ## Why this exists
 
-**347 of the Atlas's 354 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
+**354 of the Atlas's 361 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
 
 Closing that debt — the re-verification pass — needs outbound HTTPS to the hosts those URLs point at. In an environment with a restricted egress policy, this is the allowlist to request. A denial shows up as `403 to CONNECT` from the proxy, which is an environment-level network policy and cannot be changed from inside a session. See `discovery/unresolved.md` for the standing record of the sourcing debt.
 
-The Atlas currently cites **1149 source URLs** across **432 hosts**, collapsing to **318 registrable domains**.
+The Atlas currently cites **1181 source URLs** across **444 hosts**, collapsing to **327 registrable domains**.
 
 ## Highest value first
 
@@ -19,7 +19,7 @@ Allowing just these covers the bulk of the pass:
 
 | Domain | URLs | Entities |
 |---|---|---|
-| `europa.eu` | 125 | 72 |
+| `europa.eu` | 127 | 73 |
 | `wikipedia.org` | 64 | 64 |
 | `bund.de` | 41 | 23 |
 | `digitaleoverheid.nl` | 40 | 28 |
@@ -38,7 +38,7 @@ Allowing just these covers the bulk of the pass:
 | `overheid.nl` | 13 | 13 |
 | `eerstekamer.nl` | 12 | 12 |
 | `forumstandaardisatie.nl` | 12 | 5 |
-| `vng.nl` | 11 | 7 |
+| `cencenelec.eu` | 12 | 7 |
 
 ## Institutional domains
 
@@ -105,6 +105,7 @@ ad4gd.eu
 admin.ch
 aepd.es
 afdsd.fr
+afnor.org
 aftermarket-trends.de
 agoria.be
 aivd.nl
@@ -214,6 +215,8 @@ gabler.de
 gaia-x-hub.de
 gaia-x.at
 gaia-x.eu
+gdpr-info.eu
+gdprhub.eu
 gdprregulation.eu
 gegevensbeschermingsautoriteit.be
 geheimdienste.org
@@ -241,6 +244,7 @@ incibe.es
 ine.es
 informationssicherheitsbeauftragter-dresden.de
 ing-ism.de
+insee.fr
 investigatorypowerstribunal.org.uk
 ipco.org.uk
 ipo.nl
@@ -268,8 +272,10 @@ mobilithek.info
 mobility-data-space.de
 mobility-dataspace.eu
 moirouxavocats.com
+nask.pl
 nationaalarchief.nl
 nationaalgroeifonds.nl
+nbn.be
 ncsc.nl
 nctv.nl
 ndfr.nl
@@ -305,6 +311,7 @@ parliament.uk
 pdok.nl
 personalausweisportal.de
 piwikpro.de
+pkn.pl
 plattform-i40.de
 politykabezpieczenstwa.pl
 privacyworld.blog
@@ -339,6 +346,7 @@ tailte.ie
 taylorwessing.com
 taz.de
 tcontas.pt
+techzine.nl
 telusio.com
 theodi.org
 thinkdigitalpartners.com
@@ -351,6 +359,7 @@ ukauthority.com
 un-dco.org
 un-ggim-europe.org
 unctad.org
+une.org
 unece.org
 unesco.org
 unesco.org.uk
