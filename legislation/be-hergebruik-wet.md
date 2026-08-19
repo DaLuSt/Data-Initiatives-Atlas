@@ -35,6 +35,7 @@ related_entities:
   - BE
   - BE-DATA-GOV-BE
   - EU-OPEN-DATA-DIRECTIVE
+  - BE-HERGEBRUIK-WET-2023
 relationships:
   - type: implements-requirement-from
     target: EU-PSI-DIRECTIVE

@@ -19,17 +19,36 @@
 > [[NL-KADASTERWET]], shared with [[NL-BRK]]. Only [[NL-BRI]] is left, on
 > Chapter IVA of the AWR.
 >
-> **Still open and clustered — the largest remaining item:**
+> **Updated 2026-08-19 (third pass).** The **Open Data Directive
+> transpositions for Belgium, France and Spain** — the largest remaining
+> item — are **done**, and the prediction that "all three amended existing
+> law rather than passing a standalone act" was right for two of the three
+> and wrong in an interesting way for the third:
 >
-> 1. **The Open Data Directive transpositions for Belgium, France and
->    Spain.** All three amended existing law rather than passing a standalone
->    act, and none of the three instruments was identified. Ireland's and
->    Portugal's are now entities, so this is a three-country gap rather than
->    a five-country one.
+> - **Belgium** — [[BE-HERGEBRUIK-WET-2023]], the federal act of 25 December
+>   2023, `amends` [[BE-HERGEBRUIK-WET]]. It did not exist when the Belgium
+>   batch ran. Flanders, Brussels and Wallonia transposed separately and
+>   earlier; only the federal act is modelled, because the sub-federal ones
+>   are blocked on the same `level` question as OSLO.
+> - **Spain** — [[ES-RDL-24-2021]] `amends` [[ES-LEY-37-2007]]. The edge to
+>   the Directive already existed; the transposing instrument did not.
+> - **France** — **there is no such instrument.** The regime was already in
+>   place ([[FR-LOI-VALTER]], 2015, codified into the CRPA in 2016) and
+>   France is absent from the Commission's list of nineteen. The "2021
+>   ordinance" the France batch recorded transposes Directive 2019/790, on
+>   copyright.
 >
-> **Also open:** portal custodians (seven national portals lack one),
-> `PL-PESEL`-equivalent population registers, Red.es, a French DCAT
-> profile, and the Spanish and Polish primary-citation gaps.
+> A new relationship type, **`amends`**, was added for this: four of the six
+> modelled transpositions are amendments and the graph could not say so.
+>
+> **Also closed this pass:** **Red.es** ([[ES-RED-ES]]), which gives
+> [[ES-DATOS-GOB-ES]] its `maintained-by` and takes the custodian gap from
+> seven portals to six; and **the French DCAT profile**, closed as a
+> negative — none exists, data.gouv.fr conforms to DCAT-AP itself.
+>
+> **Still open:** portal custodians (six national portals lack one),
+> `PL-PESEL`-equivalent population registers, [[NL-BRI]]'s AWR Chapter IVA
+> basis, and the Spanish and Polish primary-citation gaps.
 
 
 Confirmed-relevant areas that are known to need research but haven't been
@@ -174,8 +193,9 @@ by accident.
 
 | Area / entity | Why it needs research | Suggested batch | Noted by / date |
 |---|---|---|---|
-| **Belgium's Open Data Directive transposition** | The instrument transposing Directive (EU) 2019/1024 was **not identified**. [[BE-HERGEBRUIK-WET]] (2016) is not it. Belgium is the only Atlas country without one recorded | Next | Belgium batch |
+| ~~**Belgium's Open Data Directive transposition**~~ **— DONE 2026-08-19** ([[BE-HERGEBRUIK-WET-2023]]) | The instrument transposing Directive (EU) 2019/1024 was **not identified**. [[BE-HERGEBRUIK-WET]] (2016) is not it. Belgium is the only Atlas country without one recorded. **Resolved:** the federal act of 25 December 2023 *amends* the 2016 act. It was adopted after the Belgium batch's sources were written, which is why no search could have found it then | Next | Belgium batch |
 | ~~**The PSI Directive (2003/98/EC, as amended 2013/37/EU)**~~ **— DONE 2026-08-18** ([[EU-PSI-DIRECTIVE]]) | Predecessor of [[EU-OPEN-DATA-DIRECTIVE]], not an Atlas entity. Would give [[BE-HERGEBRUIK-WET]] and [[DE-IWG]] somewhere to point | Next | Belgium batch; DE-IWG carried |
+| **Belgium's three sub-federal ODD instruments** | Flanders (decreet 2 July 2021, amending the Bestuursdecreet — *inside* the deadline), Brussels-Capital (ordonnance 10 December 2021) and Wallonia (two décrets 24 November 2022). All three identified and recorded in prose on [[BE-HERGEBRUIK-WET-2023]]; **not modelled**, because `level: regional` means *supra*-national in this Atlas. Same blocker as OSLO | Blocked (design) | RQ3 batch / 2026-08-19 |
 | **OSLO and Digitaal Vlaanderen** | A major European semantic-interoperability programme, entirely unmodelled. **Blocked on the `level` ontology question**, not on sourcing | Blocked | Belgium batch |
 | Agence du Numérique; Paradigm; the Regions and Communities | Same blocker | Blocked | Belgium batch |
 | The other five public service integrators | BELGIF names six; only [[BE-KSZ]] is modelled | Later | Belgium batch |
@@ -188,10 +208,10 @@ by accident.
 
 | Area / entity | Why it needs research | Suggested batch | Noted by / date |
 |---|---|---|---|
-| **France's Open Data Directive transposition** | Understood to be a 2021 ordinance; not identified. France joins Belgium as the second country with this gap | Next | France batch |
+| ~~**France's Open Data Directive transposition**~~ **— DONE 2026-08-19: there isn't one** ([[FR-LOI-VALTER]]) | Understood to be a 2021 ordinance; not identified. **Resolved:** no 2021 ordinance transposes 2019/1024. Ordonnance n° 2021-1518 transposes **2019/790**, on copyright — the near-miss that produced the belief. France's regime predates the Directive and France is absent from the Commission's list of nineteen | Next | France batch |
 | ~~**INSEE**~~ **— DONE 2026-08-18** ([[FR-INSEE]]) | National statistical office. Would be the fourth in the Atlas — all of which are unconnected to Eurostat or the UN statistical system. Only a passing mention found | Next | France batch |
-| **A French DCAT application profile** | data.gouv.fr exposes DCAT and the European portal harvests it, but no named profile was found. Would complete the DCAT fork across four countries | Next | France batch |
-| **The Dutch open-data portal custodian** *(still open; now **seven** portals lack one)* | [[NL-DATA-OVERHEID]] is the only national portal in the Atlas with no custodian modelled. Three other countries now have one | Next | France batch |
+| ~~**A French DCAT application profile**~~ **— CLOSED 2026-08-19: none exists** | data.gouv.fr exposes DCAT and the European portal harvests it, but no named profile was found. **Searched again:** the sources describe France being measured on conformity with **DCAT-AP itself**, not a French profile between DCAT-AP and the portal. Recorded on [[FR-DATA-GOUV]]. Spain's profile is folded into [[ES-NTI-RISP]] rather than standing alone | Next | France batch |
+| **The Dutch open-data portal custodian** *(still open; now **six** portals lack one)* | [[NL-DATA-OVERHEID]] is the only national portal in the Atlas with no custodian modelled. Three other countries now have one; Spain joined them on 2026-08-19 via [[ES-RED-ES]] | Next | France batch |
 | AFNOR | French national standards body — the fourth leg of the CEN/ISO membership pattern after [[DE-DIN]], [[NL-NEN]] and Belgium's NBN | Later | France batch |
 | RGS and RGAA | France's security and accessibility reference frameworks, siblings of [[FR-RGI]] | Later | France batch |
 | France Identité | Recorded in prose on [[FR-FRANCECONNECT]]; not its own entity | Later | France batch |
@@ -205,7 +225,7 @@ by accident.
 |---|---|---|---|
 | ~~**European Statistical System (`EU-ESS`)**~~ **— DONE** ([[EU-ESS]], now 11 national institutes) | The single highest-value item this batch produced. The sources describe Eurostat and the national statistical offices as members of one system; the Atlas currently carries that as one weak `related-to` edge on [[ES-INE]] marked `source: interpretation`. One entity with `part-of` edges would connect **four** national statistical offices at once. Deliberately not created inside a country batch | **Next** | Spain batch |
 | **BOE citation for Real Decreto 729/2023** | The decree creating [[ES-AESIA]]. No search result returned its BOE identifier, so the Atlas's first AI Act link rests on secondary sources and government press material | **Next** | Spain batch |
-| **Red.es** | Public business entity operating [[ES-DATOS-GOB-ES]]. Cited but too thinly sourced to create, which is why that portal is the only national open data portal in the Atlas besides the Dutch one with no `maintained-by` edge | Next | Spain batch |
+| ~~**Red.es**~~ **— DONE 2026-08-19** ([[ES-RED-ES]]) | Public business entity operating [[ES-DATOS-GOB-ES]]. Cited but too thinly sourced to create. **Resolved:** red.es publishes 'Aporta - datos.gob.es' among its own initiatives, which is the statement the Spain batch was missing. Its RedIRIS, ONTSI and `.es` registry roles are now named gaps | Next | Spain batch |
 | **Spanish organic law on artificial intelligence** | Sources refer to one landing the AI Act domestically with sanctions and sandboxes, at a stage they describe inconsistently. Not created — the Atlas already carries one instrument whose sources conflict ([[FR-NIS2-LOI]]) and does not need a second on weaker evidence | Next | Spain batch |
 | **Ley 39/2015 and Ley 40/2015** | Spain's common administrative procedure and public-sector legal regime acts — the current legal base for much of what [[ES-AEAD]] does, and the successors to Ley 11/2007 which established [[ES-ENI]] | Next | Spain batch |
 | **Spain's INSPIRE transposition** | [[EU-INSPIRE]] now carries `applies-in` → `ES` with no transposing instrument identified | Later | Spain batch |
@@ -341,3 +361,7 @@ by accident.
 | GEMMA, EAR, ROSA, PETRA | NORA's derived reference architectures; need `derived-from`/`based-on` links to NL-NORA | Batch 4 | Batch 1 / 2026-08-14 |
 | Individual open standards on the 'pas toe of leg uit' list | Referenced by NL-PAS-TOE-OF-LEG-UIT | Batch 4 | Batch 1 / 2026-08-14 |
 | Meerjarenvisie Digitale Overheid; GDI programmeringsplan | Named as MIDO components; may warrant entities or may be publications | Batch 4 | Batch 1 / 2026-08-14 |
+| RedIRIS | Spain's research and education network, run by [[ES-RED-ES]] — the counterpart of [[NL-SURF]]. Named on Red.es's own pages; not modelled | Later | RQ3 batch / 2026-08-19 |
+| ONTSI and the `.es` domain registry | The other two Red.es roles. ONTSI is an observatory (publications); the `.es` registry is naming-authority infrastructure with no Atlas counterpart yet | Later | RQ3 batch / 2026-08-19 |
+| Ordonnance n° 2016-307 and décret n° 2021-1559 | The French codification instrument and the licence decree, recorded in prose on [[FR-LOI-VALTER]]. Both fall below the threshold the Atlas has used for `type: law`; revisit if the CRPA is ever modelled as an entity | Later | RQ3 batch / 2026-08-19 |
+| An `amended-by` inverse | `amends` was added this batch as a single directed type. The graph shows incoming edges, so the inverse is readable without being stored — but `implements`/`implemented-by` exist as a pair, so the vocabulary is now inconsistent with itself | Later (design) | RQ3 batch / 2026-08-19 |

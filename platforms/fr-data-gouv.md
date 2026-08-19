@@ -105,11 +105,15 @@ The Dutch cell is a gap rather than a finding — see [[FR-ETALAB]].
 
 ## What is not recorded
 
-- **No DCAT profile.** France has no `FR-DCAT-AP-FR` entity, unlike the
-  Dutch, German and Belgian layers, because **no source read establishes
-  one**. data.gouv.fr certainly exposes DCAT — the European portal harvests
-  it — but the Atlas does not record what it has not seen stated. This
-  breaks the three-way DCAT fork at three rather than four, and is queued.
+- **No DCAT profile — and searching for one has now been done.** France has
+  no `FR-DCAT-AP-FR` entity, unlike the Dutch, German and Belgian layers.
+  The third research-queue batch went looking, and the finding is negative:
+  what the sources describe is France being measured on **conformity with
+  DCAT-AP itself** — the European profile — and data.gouv.fr supporting
+  DCAT harvesting, not a French application profile sitting between the two.
+  The DCAT fork stays at three national children plus Spain's, which is
+  folded into [[ES-NTI-RISP]] rather than standing alone. The queue item is
+  closed as "no such profile found", not carried.
 - **No relationship to [[FR-LRN]]**, though the 2016 act's open-data
   obligations are what much of this portal carries. Same call as
   [[DE-GOVDATA]]/[[DE-DNG]] and [[BE-DATA-GOV-BE]]/[[BE-HERGEBRUIK-WET]]:

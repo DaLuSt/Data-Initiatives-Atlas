@@ -38,6 +38,9 @@ related_entities:
   - IE
   - NL-WHO
   - EU-DIGITAL-OMNIBUS
+  - BE-HERGEBRUIK-WET-2023
+  - ES-RDL-24-2021
+  - FR-LOI-VALTER
 relationships:
   - type: supersedes
     target: EU-PSI-DIRECTIVE
@@ -204,13 +207,46 @@ distinct approaches:
 
 | Approach | Countries | In the Atlas |
 |---|---|---|
-| **Amend an existing act** | Belgium, France, Spain, the Netherlands, Portugal | [[NL-WHO]] (amended 2024 by the Wet implementatie Open data richtlijn); [[PT-LEI-26-2016]] (third amendment) |
+| **Amend an existing act** | Belgium, Spain, the Netherlands, Portugal | [[BE-HERGEBRUIK-WET-2023]] `amends` [[BE-HERGEBRUIK-WET]]; [[ES-RDL-24-2021]] `amends` [[ES-LEY-37-2007]]; [[NL-WHO]] (amended 2024 by the Wet implementatie Open data richtlijn); [[PT-LEI-26-2016]] (third amendment) |
 | **A standalone instrument** | Ireland | [[IE-PSI-REGULATIONS-2021]] — S.I. 376/2021, made 22 July 2021 |
+| **Nothing new at all** | France | [[FR-LOI-VALTER]] and the CRPA already carried the regime — see below |
 
 A general European survey placed **Portugal** in the standalone column. The
 Portugal-specific sources place it in the amendment column, and the Atlas
 follows the specific source — see [[PT-LEI-26-2016]], which records the
 conflict rather than resolving it silently.
+
+The `amends` relationship type was added in the third research-queue batch
+precisely because this table's first row is the majority: four of the six
+member states here transposed by editing a statute that already existed, and
+until that batch the graph had no way to say so.
+
+### France is a third case, not a missing one
+
+France is listed above as amending an existing act, and that is close but
+not right. France passed **no ODD-era instrument at all**. Its regime was
+already in place — [[FR-LOI-VALTER]] of 2015, codified into the Code des
+relations entre le public et l'administration in 2016 — and France is
+**absent from the list of nineteen member states** the Commission served
+with letters of formal notice on 30 September 2021.
+
+The France batch recorded a belief that a 2021 ordinance existed. It does
+not; the ordinance that fits the description transposes Directive
+**2019/790** on copyright. [[FR-LOI-VALTER]] sets that out.
+
+Consequently **no French entity carries `implements-requirement-from` to
+this directive**, and the comparison matrix shows France with an `applies-in`
+edge and an empty implementer cell. That is the finding rather than a gap,
+and it is the only cell in the matrix where the emptiness is deliberate.
+
+### Belgium transposed four times, and its regions beat its federal state
+
+Belgium's row hides a federal structure. Flanders transposed by decree on
+**2 July 2021**, a fortnight *inside* the deadline; Brussels-Capital
+followed in December 2021, Wallonia in November 2022, and the federal
+legislator only on **25 December 2023** — twenty-nine months late, and ten
+months after the referral recorded below. Only the federal act is an Atlas
+entity; [[BE-HERGEBRUIK-WET-2023]] explains why the other three are not.
 
 ## ⚠ Enforcement the Atlas cannot model
 
@@ -231,3 +267,6 @@ taken to court in between. `discovery/candidates.md` records the gap.
 
 The Dutch case is the one the Atlas can partly show: [[NL-WHO]] carries the
 2024 amending act, which is the end of the story whose middle is missing.
+[[BE-HERGEBRUIK-WET-2023]] now carries the Belgian one, with the referral
+recorded in its body as a dated table — prose standing in for structure the
+ontology does not have.
