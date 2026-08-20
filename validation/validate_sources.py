@@ -54,6 +54,17 @@ def main() -> int:
             # this repository is trying to pay down — so it is an error, not a
             # warning. Found by the first full run of tools/reverify.py, which
             # it crashed. Percent-encode the offending characters.
+            # Plain HTTP is a warning, not an error: a handful of legacy
+            # academic and government hosts genuinely do not serve https, and
+            # that is outside this repository's control. But a government
+            # citation over http is usually a stale URL rather than a real
+            # constraint — all three espanadigital.gob.es citations were,
+            # found when the repository owner manually checked the
+            # highest-value hosts on 2026-08-20 and reported gob.es as the one
+            # inaccurate domain.
+            if url.startswith("http://"):
+                report.warn(f"{where}: url is plain http, not https — check whether "
+                            f"the citation is stale: {url}")
             if url and re.search(r"[\s\x00-\x1f]", url):
                 report.error(f"{where}: url contains whitespace or a control "
                              f"character and cannot be fetched — percent-encode "
