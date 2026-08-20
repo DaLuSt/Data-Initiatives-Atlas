@@ -52,6 +52,11 @@ LINK_CHECKED = {
     "overheid.nl": _LC_OK, "belgium.be": _LC_OK, "un.org": _LC_OK,
     "unece.org": _LC_OK, "cencenelec.eu": _LC_OK, "rijksoverheid.nl": _LC_OK,
     "bundestag.de": _LC_OK, "boe.es": _LC_OK, "legislation.gov.uk": _LC_OK,
+    # Checked in a second pass, after `gob.es` raised the question of whether
+    # other government namespaces in the Atlas's citations also lack an apex
+    # site. All three serve one. That settles it: `gob.es` is the sole
+    # exception among the government namespaces cited here.
+    "gov.cz": _LC_OK, "gov.pt": _LC_OK, "public.lu": _LC_OK,
 }
 
 _HOST_RE = re.compile(r"^https?://([^/\s]+)", re.I)
@@ -195,6 +200,14 @@ def render_markdown(d: dict) -> str:
     w("**So no entity's `verification` changed.** Every entity in the Atlas "
       "remains `search-only`.")
     w("")
+    also = [k for k in LINK_CHECKED if k not in {dom for dom, _ in top}]
+    if also:
+        w("**Also checked, outside the table above:** " +
+          ", ".join(f"`{k}`" for k in sorted(also)) +
+          " — the other government namespaces among the Atlas's citations. All "
+          "serve a site at the apex, which settles the question `gob.es` "
+          "raised: it is the **sole exception**, not the first of several.")
+        w("")
     w("## Institutional domains")
     w("")
     w("Government, EU, UN and standards-body sources — the ones that carry "

@@ -52,6 +52,8 @@ What the check **does** establish is that these citations point somewhere real. 
 
 **So no entity's `verification` changed.** Every entity in the Atlas remains `search-only`.
 
+**Also checked, outside the table above:** `gov.cz`, `gov.pt`, `public.lu` — the other government namespaces among the Atlas's citations. All serve a site at the apex, which settles the question `gob.es` raised: it is the **sole exception**, not the first of several.
+
 ## Institutional domains
 
 Government, EU, UN and standards-body sources — the ones that carry evidential weight.

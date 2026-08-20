@@ -35,6 +35,22 @@ The fix is an **`Example host` column**, so every row offers something a
 reader can open, and a line saying a domain here is an allowlist pattern
 rather than a URL.
 
+**A second pass settled whether it was the first of several.** `gov.cz`,
+`gov.pt` and `public.lu` are the other government namespaces among the
+Atlas's citations, and none was in the original nineteen. All three were
+opened by hand and all three serve a site:
+
+```
+gov.cz     -> 94.199.45.233
+gov.pt     -> 62.28.186.239
+public.lu  -> 185.106.24.133
+gob.es     -> no address associated with hostname
+```
+
+**Twenty-two domains have now been opened by hand, and exactly one does not
+resolve.** `gob.es` is the sole exception rather than the leading edge of a
+pattern, which is worth knowing before anyone generalises from it.
+
 ### A wrong first reading, corrected the same day
 
 The first pass read the report as *"the Spanish citations are wrong"* and:
