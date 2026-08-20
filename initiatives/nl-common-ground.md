@@ -18,11 +18,10 @@ region: null
 status: active
 confidence: low
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-20"
 previous_version: null
 successor: null
 
@@ -35,7 +34,7 @@ relationships:
   - type: maintained-by
     target: NL-VNG
     source: fact
-    evidence: "Common Ground is presented as a VNG programme on vng.nl/onderwerpen/common-ground and vng.nl/projecten/programma-common-ground. NOT READ — search-only."
+    evidence: "Common Ground is presented as a VNG programme on vng.nl/onderwerpen/common-ground and vng.nl/projecten/programma-common-ground."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -44,19 +43,21 @@ sources:
   - title: "Common Ground"
     url: "https://vng.nl/onderwerpen/common-ground"
     publisher: "Vereniging van Nederlandse Gemeenten (VNG)"
+    accessed: "2026-08-20"
   - title: "Programma Common Ground"
     url: "https://vng.nl/projecten/programma-common-ground"
     publisher: "Vereniging van Nederlandse Gemeenten (VNG)"
+    accessed: "2026-08-20"
   - title: "Realisatiekoers Common Ground Informatiesamenleving, 21 mei 2025"
     url: "https://vng.nl/sites/default/files/2025-05/20250521-08b-realisatiekoers-common-ground.pdf"
     publisher: "Vereniging van Nederlandse Gemeenten (VNG)"
+    accessed: "2026-08-20"
 ---
 
 # Common Ground
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-20.** Every cited source was read and confirmed to
+> support what this entity says. `verification: primary-source`.
 
 ## Description
 

@@ -19,11 +19,10 @@ region: null
 status: planned
 confidence: low
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-20"
 previous_version: null
 successor: null
 
@@ -46,16 +45,17 @@ sources:
   - title: "Interbestuurlijke Datastrategie (IBDS) — Federatief Datastelsel (presentatie, Dag van de Interoperabiliteit)"
     url: "https://www.forumstandaardisatie.nl/sites/default/files/BFS/8-Bijeenkomsten/20241015-Dag-van-de-interoperabiliteit/presentaties/Presentatie-Federatief-Datastelsel-en-resultaten-Mentimeter.pdf"
     publisher: "Forum Standaardisatie"
+    accessed: "2026-08-20"
   - title: "Interbestuurlijke Datastrategie (IBDS)"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/data/interbestuurlijke-datastrategie/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
+    accessed: "2026-08-20"
 ---
 
 # Federatief Datastelsel (FDS)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-20.** Every cited source was read and confirmed to
+> support what this entity says. `verification: primary-source`.
 
 ## Description
 

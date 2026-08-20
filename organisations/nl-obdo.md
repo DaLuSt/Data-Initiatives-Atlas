@@ -49,6 +49,7 @@ sources:
   - title: "Governance Meerjarenprogramma Infrastructuur Digitale overheid (MIDO)"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/mido/governance/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
+    accessed: "2026-08-20"
   - title: "Governance Digitale Overheid"
     url: "https://vng.nl/artikelen/governance-digitale-overheid"
     publisher: "Vereniging van Nederlandse Gemeenten (VNG)"

@@ -47,6 +47,7 @@ sources:
   - title: "Overheidsarchitectuur NORA"
     url: "https://www.ictu.nl/diensten/dienstenoverzicht/overheidsarchitectuur-nora/"
     publisher: "ICTU"
+    accessed: "2026-08-20"
   - title: "Rapport Governance ICTU"
     url: "https://www.eerstekamer.nl/overig/20220816/toelichting_op_governance_ictu/document"
     publisher: "Eerste Kamer der Staten-Generaal"

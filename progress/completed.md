@@ -51,6 +51,41 @@ gob.es     -> no address associated with hostname
 resolve.** `gob.es` is the sole exception rather than the leading edge of a
 pattern, which is worth knowing before anyone generalises from it.
 
+
+### The first six verified entities
+
+The repository owner read all 22 candidate sources for the five Batch 1 areas
+and confirmed they support what the entities say. That is the **content
+check** — the tier that sets `verification: primary-source` — and it is the
+first one this repository has had.
+
+**Six entities are fully covered**, meaning every source they cite is among
+the 22 read: [[NL-NORA]], [[NL-IBDS]], [[NL-FDS]], [[NL-COMMON-GROUND]],
+[[NL-MIDO]] and [[NL-PAS-TOE-OF-LEG-UIT]]. They now carry
+`verification: primary-source`, `last_verified: 2026-08-20`, an `accessed:`
+date on every source, and **no sourcing caveat** — the blockquote was
+replaced rather than left standing, and the `NOT READ — search-only` suffix
+was stripped from every evidence string, because none of it is true of them
+any more.
+
+**Six more are partially covered** — [[NL-BZK]] 1/2, [[NL-FORUM-STANDAARDISATIE]]
+2/4, [[NL-GDI]] 1/3, [[NL-ICTU]] 1/3, [[NL-OBDO]] 1/3, [[NL-VNG]] 1/2. Their
+read sources are stamped `accessed:`; their `verification` is **not** changed.
+
+That asymmetry is the point. Forty entities cite the five areas' hosts, and
+flipping all forty would have been the largest false provenance claim the
+repository could make — citing a host is not being covered by a URL. Only
+twelve are touched at all, and only six are verified.
+
+`tools/reverify.py` gained `set_verification=False` for the partial case,
+with a test. It had modelled all-or-nothing, and partial coverage is what the
+first real content check actually looks like: some sources read, some not,
+and throwing away the reading that was done would be as wrong as claiming the
+entity is verified.
+
+**448 of 461 entities remain unread.** The README, the site banner and the
+allowlist all now say six rather than none.
+
 ### A third tier: the reachability check
 
 `gob.es` exposed a gap in how this repository talks about verification. There

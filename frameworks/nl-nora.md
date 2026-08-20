@@ -19,11 +19,10 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-20"
 previous_version: null
 successor: null
 
@@ -42,14 +41,14 @@ relationships:
   - type: maintained-by
     target: NL-ICTU
     source: fact
-    evidence: "NORA management is entrusted to ICTU, with BZK as opdrachtgever; the NORA gebruikersraad meets at ICTU (ictu.nl, noraonline.nl). NOT READ — search-only."
+    evidence: "NORA management is entrusted to ICTU, with BZK as opdrachtgever; the NORA gebruikersraad meets at ICTU (ictu.nl, noraonline.nl)."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: owned-by
     target: NL-BZK
     source: fact
-    evidence: "The Ministry of BZK is described as opdrachtgever for NORA (noraonline.nl, ictu.nl). NOT READ — search-only."
+    evidence: "The Ministry of BZK is described as opdrachtgever for NORA (noraonline.nl, ictu.nl)."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -58,19 +57,21 @@ sources:
   - title: "Positionering NORA"
     url: "https://www.noraonline.nl/wiki/Positionering_NORA"
     publisher: "NORA Online (ICTU)"
+    accessed: "2026-08-20"
   - title: "NORA (Nederlandse Overheid Referentie Architectuur)"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/nora/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
+    accessed: "2026-08-20"
   - title: "Overheidsarchitectuur NORA"
     url: "https://www.ictu.nl/diensten/dienstenoverzicht/overheidsarchitectuur-nora/"
     publisher: "ICTU"
+    accessed: "2026-08-20"
 ---
 
 # Nederlandse Overheid Referentie Architectuur (NORA)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-20.** Every cited source was read and confirmed to
+> support what this entity says. `verification: primary-source`.
 
 ## Description
 

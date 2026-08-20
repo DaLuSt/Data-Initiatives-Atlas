@@ -51,6 +51,7 @@ sources:
   - title: "Wat is het MIDO?"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/mido/wat-is-het-mido/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
+    accessed: "2026-08-20"
 ---
 
 # Generieke Digitale Infrastructuur (GDI)

@@ -38,7 +38,7 @@ hand-maintained.
 | **Layers** | UN · Council of Europe · EU · national · sectoral |
 | **Source of truth** | Git + Markdown/YAML — no database |
 | **Licence** | CC0 1.0 |
-| **⚠ Sourcing** | **454 of 461 entities have never had a cited source read** — see below |
+| **⚠ Sourcing** | **448 of 461 entities have never had a cited source read** — 6 verified 2026-08-20, see below |
 
 *Figures as of 2026-08-20. The live counts are always on the site itself.*
 
@@ -49,6 +49,16 @@ in every entity's `sources:` were confirmed by a search index to exist and
 **were not read**, because the environment this was built in blocks outbound
 HTTPS to essentially every host. A full sweep on 2026-08-19 attempted all
 **1,500 cited URLs and retrieved none**.
+
+**The first six entities are now verified.** On 2026-08-20 the repository
+owner read all 22 candidate sources for Forum Standaardisatie, the IBDS/FDS,
+NORA, Common Ground and MIDO, and confirmed they support what the entities
+say. [[NL-NORA]], [[NL-IBDS]], [[NL-FDS]], [[NL-COMMON-GROUND]], [[NL-MIDO]]
+and [[NL-PAS-TOE-OF-LEG-UIT]] carry `verification: primary-source`, dated
+`accessed:` stamps on every source, and no sourcing caveat — because it is no
+longer true of them. Six more entities are **partially** covered: their read
+sources are stamped, their `verification` is not, and that asymmetry is
+deliberate.
 
 That is disclosed rather than buried, and the repository is built around the
 gap rather than around hiding it:
