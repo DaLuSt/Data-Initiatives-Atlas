@@ -146,10 +146,13 @@ whole point of the `verification` field.
 
 Only the second is `verification: primary-source`. On **2026-08-20** the
 repository owner manually opened the nineteen highest-value domains in
-`discovery/reverification-allowlist.md` and found them all accurate **except
-`gob.es`** — the Atlas's first primary-source signal of any kind. **No
-entity's `verification` changed**, and none should have: a link check upgrades
-what is known about the *citations*, not about the *entities*.
+`discovery/reverification-allowlist.md` — the Atlas's first primary-source
+signal of any kind. Eighteen resolved to what the Atlas claims; `gob.es` did
+not, because Spain's government namespace has **no apex site**. That was a
+defect in the report, which listed an allowlist pattern where a reader would
+try a URL, and not in any citation. **No entity's `verification` changed**,
+and none should have: a link check upgrades what is known about the
+*citations*, not about the *entities*.
 
 `tools/reverify.py` sits between the two. Its identifier matching is stronger
 than a link check — it confirms the page contains the citation the entity

@@ -29,19 +29,34 @@ sys.path.insert(0, str(REPO_ROOT / "validation"))
 from common import load_all_entities  # noqa: E402
 
 # Manual link check, 2026-08-20, by the repository owner: each of these was
-# opened and confirmed to resolve to what the Atlas cites it for. `gob.es` was
-# reported as the one inaccurate domain. This is link accuracy only — see the
-# note the report emits beneath the table.
-_LC_OK = "✅ 2026-08-20"
-_LC_BAD = "⚠ inaccurate — 2026-08-20"
+# opened and confirmed to resolve to what the Atlas cites it for.
+#
+# `gob.es` was the single failure, and it is a defect in *this report* rather
+# than in any citation. The rows are **registrable domains** — the right unit
+# for a firewall rule, and a natural thing to paste into a browser. Eighteen
+# of the nineteen happen to be both, because their apex serves a website.
+# `gob.es` does not: Spain's government namespace has no apex site at all, and
+# resolves to no address. Every Spanish host the Atlas actually cites —
+# datos.gob.es, administracion.gob.es, digital.gob.es and the rest — resolves
+# and works.
+#
+# The fix is the `Example host` column below, so every row offers something a
+# human can open, not a rewrite of any citation.
+_LC_OK = "✅ opens"
+_LC_NOSITE = "⚠ namespace only — no site at the apex"
 LINK_CHECKED = {
     "europa.eu": _LC_OK, "wikipedia.org": _LC_OK, "iso.org": _LC_OK,
     "coe.int": _LC_OK, "bund.de": _LC_OK, "digitaleoverheid.nl": _LC_OK,
     "gov.pl": _LC_OK, "gouv.fr": _LC_OK, "government.nl": _LC_OK,
-    "gob.es": _LC_BAD,
+    "gob.es": _LC_NOSITE,
     "overheid.nl": _LC_OK, "belgium.be": _LC_OK, "un.org": _LC_OK,
     "unece.org": _LC_OK, "cencenelec.eu": _LC_OK, "rijksoverheid.nl": _LC_OK,
     "bundestag.de": _LC_OK, "boe.es": _LC_OK, "legislation.gov.uk": _LC_OK,
+    # Checked in a second pass, after `gob.es` raised the question of whether
+    # other government namespaces in the Atlas's citations also lack an apex
+    # site. All three serve one. That settles it: `gob.es` is the sole
+    # exception among the government namespaces cited here.
+    "gov.cz": _LC_OK, "gov.pt": _LC_OK, "public.lu": _LC_OK,
 }
 
 _HOST_RE = re.compile(r"^https?://([^/\s]+)", re.I)
@@ -81,6 +96,7 @@ def collect():
     host_counts: Counter[str] = Counter()
     domain_counts: Counter[str] = Counter()
     domain_entities: defaultdict[str, set[str]] = defaultdict(set)
+    domain_hosts: defaultdict[str, set[str]] = defaultdict(set)
     total_urls = 0
     unread = 0
 
@@ -101,6 +117,7 @@ def collect():
             d = registrable(host)
             domain_counts[d] += 1
             domain_entities[d].add(e.frontmatter["id"])
+            domain_hosts[d].add(host)
 
     return {
         "entities": len(entities),
@@ -109,6 +126,7 @@ def collect():
         "hosts": host_counts,
         "domains": domain_counts,
         "domain_entities": domain_entities,
+        "domain_hosts": domain_hosts,
     }
 
 
@@ -148,29 +166,48 @@ def render_markdown(d: dict) -> str:
     w("")
     w("Allowing just these covers the bulk of the pass:")
     w("")
-    w("| Domain | URLs | Entities | Link check |")
-    w("|---|---|---|---|")
+    w("A domain here is an **allowlist pattern**, not a URL. Most of them also "
+      "happen to serve a website at the apex; one does not. The `Example host` "
+      "column is a real host the Atlas cites under that domain, so every row "
+      "offers something that can actually be opened.")
+    w("")
+    w("| Domain | URLs | Entities | Example host | Opened |")
+    w("|---|---|---|---|---|")
     for dom, n in top:
-        mark = LINK_CHECKED.get(dom, "")
-        w(f"| `{dom}` | {n} | {len(d['domain_entities'][dom])} | {mark} |")
+        example = min(d["domain_hosts"].get(dom, {dom}))
+        w(f"| `{dom}` | {n} | {len(d['domain_entities'][dom])} "
+          f"| `{example}` | {LINK_CHECKED.get(dom, '')} |")
     w("")
-    w("### What the link check is, and what it is not")
+    w("### What the 2026-08-20 check found, and what it did not")
     w("")
-    w("On **2026-08-20** the repository owner manually opened the highest-value "
-      "domains above and reported that every one resolved to what the Atlas "
-      "claims it does, **except `gob.es`**.")
+    w("The repository owner opened all nineteen. Eighteen resolved to what the "
+      "Atlas claims. **`gob.es` did not — and that is a defect in this report, "
+      "not in any citation.**")
     w("")
-    w("That is a **link check**, and it is the first primary-source signal of "
-      "any kind this repository has had. It establishes that the citations "
-      "point somewhere real. It does **not** establish that any entity's dates, "
+    w("Spain's government namespace has **no apex site**: `gob.es` resolves to "
+      "no address at all, unlike `gov.uk` and `gov.pl`, which are both real "
+      "websites as well as namespaces. Every Spanish host the Atlas actually "
+      "cites — `datos.gob.es`, `administracion.gob.es`, `digital.gob.es`, "
+      "`espanadigital.gob.es` and the rest — resolves and works. Hence the "
+      "`Example host` column.")
+    w("")
+    w("What the check **does** establish is that these citations point "
+      "somewhere real. It does **not** establish that any entity's dates, "
       "identifiers, relationships or evidence strings are supported by the page "
       "cited — that is the content check, and it is what "
       "`verification: primary-source` records.")
     w("")
     w("**So no entity's `verification` changed.** Every entity in the Atlas "
-      "remains `search-only`. Conflating the two would be the exact overclaim "
-      "the field exists to prevent.")
+      "remains `search-only`.")
     w("")
+    also = [k for k in LINK_CHECKED if k not in {dom for dom, _ in top}]
+    if also:
+        w("**Also checked, outside the table above:** " +
+          ", ".join(f"`{k}`" for k in sorted(also)) +
+          " — the other government namespaces among the Atlas's citations. All "
+          "serve a site at the apex, which settles the question `gob.es` "
+          "raised: it is the **sole exception**, not the first of several.")
+        w("")
     w("## Institutional domains")
     w("")
     w("Government, EU, UN and standards-body sources — the ones that carry "

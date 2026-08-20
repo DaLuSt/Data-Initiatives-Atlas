@@ -72,7 +72,7 @@ sources:
     url: "https://datos.gob.es/es/documentacion/guia-de-aplicacion-de-la-norma-tecnica-de-interoperabilidad-de-reutilizacion-de"
     publisher: "datos.gob.es"
   - title: "Nuevo impulso a la interoperabilidad de los datos abiertos en España"
-    url: "https://espanadigital.gob.es/en/actualidad/nuevo-impulso-la-interoperabilidad-de-los-datos-abiertos-en-espana"
+    url: "http://espanadigital.gob.es/en/actualidad/nuevo-impulso-la-interoperabilidad-de-los-datos-abiertos-en-espana"
     publisher: "España Digital 2026"
 ---
 

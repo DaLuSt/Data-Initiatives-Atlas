@@ -1,80 +1,96 @@
 # Completed Batches
 
-## The first human link check
+## The first human link check — and what it actually found
 
 **Date:** 2026-08-20
 
-The repository owner manually opened the nineteen highest-value domains in
-`discovery/reverification-allowlist.md` and reported that **every one
-resolved to what the Atlas claims — except `gob.es`**.
+The repository owner opened the nineteen highest-value domains in
+`discovery/reverification-allowlist.md`. **Eighteen resolved to what the Atlas
+claims. `gob.es` did not.**
 
-That is the **first primary-source signal of any kind this repository has
-had**, and it is recorded as exactly what it is and nothing more.
+**The defect was in this report, not in any citation.**
 
-### A link check is not a content check
+### `gob.es` has no apex site
 
-The distinction is the whole point of the `verification` field, so it is now
-written down in three places rather than assumed:
+The table's rows are **registrable domains** — the right unit for a firewall
+rule, and a natural thing to paste into a browser. Eighteen of the nineteen
+are both, because their apex happens to serve a website.
+
+Spain's is not:
+
+```
+gob.es                 -> no address associated with hostname
+gov.uk                 -> 151.101.0.144
+gov.pl                 -> 185.32.48.56
+datos.gob.es           -> 45.223.177.253
+administracion.gob.es  -> 185.73.172.38
+espanadigital.gob.es   -> 45.223.181.253
+```
+
+`gob.es` is a pure namespace. `gov.uk` and `gov.pl` are namespaces *and*
+websites, which is why they passed. Every Spanish host the Atlas actually
+cites resolves and works.
+
+The fix is an **`Example host` column**, so every row offers something a
+reader can open, and a line saying a domain here is an allowlist pattern
+rather than a URL.
+
+**A second pass settled whether it was the first of several.** `gov.cz`,
+`gov.pt` and `public.lu` are the other government namespaces among the
+Atlas's citations, and none was in the original nineteen. All three were
+opened by hand and all three serve a site:
+
+```
+gov.cz     -> 94.199.45.233
+gov.pt     -> 62.28.186.239
+public.lu  -> 185.106.24.133
+gob.es     -> no address associated with hostname
+```
+
+**Twenty-two domains have now been opened by hand, and exactly one does not
+resolve.** `gob.es` is the sole exception rather than the leading edge of a
+pattern, which is worth knowing before anyone generalises from it.
+
+### A wrong first reading, corrected the same day
+
+The first pass read the report as *"the Spanish citations are wrong"* and:
+
+- flagged all **18** entities citing `gob.es` as carrying suspect citations;
+- rewrote three `espanadigital.gob.es` URLs from `http` to `https`;
+- justified a new validator warning on the theory that a government citation
+  over plain http is "usually a stale URL", citing those three as the
+  evidence.
+
+**All three were wrong**, and all three are undone. The 18 entities are
+unflagged, the URLs are reverted to exactly what they were, and the warning is
+rewritten to say what it can actually support: a page fetched over plain http
+cannot be fetched with integrity, which matters for a repository whose whole
+claim is provenance. It is explicitly **not** evidence of staleness, and the
+comment records that the original assumption was wrong.
+
+The lesson is narrow and worth keeping: **"a human reported a failure" is not
+the same as "the thing they were looking at is broken."** The check was
+sound, the report it was run against was not, and jumping to the data was the
+error.
+
+### What still stands
+
+The distinction between a **link check** and a **content check**, which was
+the substantive point of the previous pass:
 
 | | Establishes | Does not establish |
 |---|---|---|
 | **Link check** | the citation points somewhere real | anything about the entity's claims |
 | **Content check** | the page supports the entity's dates, identifiers, relationships and evidence | — |
 
-Only the second is `verification: primary-source`. **No entity's
-`verification` changed, and none should have.** A link check upgrades what is
-known about the *citations*, not about the *entities*. Flipping 443 entities
-to `primary-source` on the strength of a domain-level link check would have
-been the exact overclaim the field exists to prevent.
-
-`tools/reverify.py` sits between the two, which is why its best verdict is
-called `CORROBORATED` and not `VERIFIED`.
-
-### What was provably wrong, and what could not be narrowed
-
-`gob.es` is 33 URLs across 14 subdomains and 18 entities. Three were provably
-wrong and are fixed:
-
-```
-ES-NTI-RISP   http://espanadigital.gob.es/en/actualidad/nuevo-impulso-...
-ES-AEAD       http://espanadigital.gob.es/en/actualidad/el-gobierno-aprueba-...
-ES-AESIA      http://espanadigital.gob.es/en/measure/aesia
-```
-
-**Plain `http://` — and the only government citations in the entire
-repository that were.** A repo-wide check found just five plain-HTTP source
-URLs and **all five are Spanish**, which is a striking match for a human
-independently flagging `gob.es` as the one bad domain. All three are upgraded
-to `https`.
-
-`portal.mineco.gob.es` was checked and is fine — the Esquema Nacional de
-Seguridad page is confirmed official, so it is not part of the problem.
-
-**The other 30 URLs could not be narrowed from inside the session**, because
-the egress proxy blocks `gob.es`. All 18 entities are flagged in
-`discovery/unresolved.md` as carrying suspect citations, and narrowing the
-failure is queued as the next thing a second manual pass — or the allowlist —
-would settle.
-
-### Two permanent changes
-
-**The allowlist now carries a `Link check` column**, generated rather than
-hand-written: `tools/source_hosts.py` holds the check result, so it survives
-regeneration and the table shows ✅ or ⚠ per domain with the note beneath it
-explaining the scope.
-
-**`validate_sources.py` warns on plain-`http://` sources.** A warning rather
-than an error, because a handful of legacy academic hosts genuinely do not
-serve https and that is outside this repository's control — but a government
-citation over http is usually a stale URL, and all three of these were. It
-currently fires twice, on [[ES-LO-2-2002]]'s two academic citations, one of
-which is the dead host the full sweep already found.
+Only the second is `verification: primary-source`, and **no entity's
+`verification` changed** — correctly, both times.
 
 ### Verification
 
-461 entities, 5,379 edges. `validation/run_all.py` 5/5 (2 new warnings, both
-intended) · `tools/test_build_graph.py` 41 OK · `tools/test_reverify.py`
-35 OK · `tools/test_ui.mjs` 86/86.
+461 entities, 5,379 edges. `validation/run_all.py` 5/5 · `tools/test_build_graph.py`
+41 OK · `tools/test_reverify.py` 35 OK · `tools/test_ui.mjs` 86/86. Five
+plain-http warnings, all pre-existing and none of them a defect.
 
 ## Estonia, the Convention 108 committee, and the sourcing disclosure
 

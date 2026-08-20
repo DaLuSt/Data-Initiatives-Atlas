@@ -55,7 +55,7 @@ sources:
     url: "https://www.boe.es/buscar/doc.php?id=BOE-A-2024-22935"
     publisher: "Boletín Oficial del Estado (BOE)"
   - title: "El Gobierno aprueba la creación de la Agencia Estatal de Administración Digital para acelerar la transformación tecnológica de las Administraciones Públicas"
-    url: "https://espanadigital.gob.es/en/actualidad/el-gobierno-aprueba-la-creacion-de-la-agencia-estatal-de-administracion-digital-para"
+    url: "http://espanadigital.gob.es/en/actualidad/el-gobierno-aprueba-la-creacion-de-la-agencia-estatal-de-administracion-digital-para"
     publisher: "España Digital 2026"
 ---
 
