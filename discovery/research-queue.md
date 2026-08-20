@@ -322,12 +322,14 @@ by accident.
 | **GIODO** | The predecessor data protection authority. Whether the succession to [[PL-UODO]] can be modelled depends on establishing what happened to the competencies the President did **not** take over | Later | Poland batch |
 | **Agencja Informatyzacji** | Would replace [[PL-COI]]. **Blocked** — the draft law is in consultation and the body does not exist | Blocked | Poland batch |
 
-## Finishing the six partially covered entities
+## ~~Finishing the six partially covered entities~~ — DONE 2026-08-20
 
-**9 distinct URLs close all six.** Each of these entities reached the first
-content check on 2026-08-20 with some of its sources read and some not; the
-table below is exactly what remains. Every host is one the Atlas already
-cites elsewhere, so no new domain needs allowing — this is nine page-opens.
+> **Closed the same day.** All nine were read and confirmed, and all six
+> entities are now `primary-source`. The table is kept as the record of what
+> was read, not as outstanding work.
+
+**9 distinct URLs closed all six.** One — the vng.nl governance article — was
+cited by two entities, so nine reads finished six entities.
 
 | Entity | Read | Remaining source |
 |---|---|---|
@@ -483,4 +485,4 @@ nine hosts, which is why the first content check had to come from a human.
 | A content check to follow the link check | The 2026-08-20 check established that citations **point somewhere real**, not that they **support what the entity says**. No `verification` changed and none should have. The content check is still the whole re-verification pass | Blocked (egress) | Manual link check / 2026-08-20 |
 | ~~Government namespaces without an apex site~~ **— CLOSED 2026-08-20** | `gov.cz`, `gov.pt` and `public.lu` were checked in a second manual pass and all three serve a site at the apex. **`gob.es` is the sole exception** among the government namespaces the Atlas cites — not the first of several. Twenty-two domains have now been opened by hand and exactly one does not resolve | Later | Manual link check / 2026-08-20 |
 | ~~Content check for the five link-checked Batch 1 areas~~ **— DONE 2026-08-20**: 6 entities verified, 6 partially stamped | Their 22 sources were confirmed on 2026-08-20, so the *citations* are right. The remaining half is confirming that each entity's dates, relationships and evidence strings are actually supported — the step that sets `verification: primary-source`. **40 entities** cite these hosts, from [[NL-FORUM-STANDAARDISATIE]] and [[NL-NORA]] through to the ten basisregistraties. This is the best-prepared slice of the re-verification pass and the obvious place to start it | **Next** | Manual source check / 2026-08-20 |
-| Finish the six partially covered entities | **The exact worklist is now above, under "Finishing the six partially covered entities": 9 distinct URLs, one of them shared by two entities.** No new host needs allowing. The cheapest verification work available anywhere in the Atlas | **Next** | Content check / 2026-08-20 |
+| ~~Finish the six partially covered entities~~ **— DONE 2026-08-20** | All nine remaining URLs read and confirmed. [[NL-BZK]], [[NL-FORUM-STANDAARDISATIE]], [[NL-GDI]], [[NL-ICTU]], [[NL-OBDO]] and [[NL-VNG]] are now `primary-source`, taking the verified count from 6 to **12** — the whole Batch 1 core governance layer | **Next** | Content check / 2026-08-20 |

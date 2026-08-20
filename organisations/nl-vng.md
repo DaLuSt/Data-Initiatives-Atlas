@@ -18,11 +18,10 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-20"
 previous_version: null
 successor: null
 
@@ -43,7 +42,7 @@ relationships:
   - type: participates-in
     target: NL-OBDO
     source: fact
-    evidence: "VNG is listed among OBDO members alongside ministries, CIO Rijk, IPO and UvW, per digitaleoverheid.nl MIDO governance page. NOT READ — search-only."
+    evidence: "VNG is listed among OBDO members alongside ministries, CIO Rijk, IPO and UvW, per digitaleoverheid.nl MIDO governance page."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -56,13 +55,13 @@ sources:
   - title: "Governance Digitale Overheid"
     url: "https://vng.nl/artikelen/governance-digitale-overheid"
     publisher: "Vereniging van Nederlandse Gemeenten (VNG)"
+    accessed: "2026-08-20"
 ---
 
 # Vereniging van Nederlandse Gemeenten (VNG)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-20.** Every cited source was read and confirmed to
+> support what this entity says. `verification: primary-source`.
 
 ## Description
 

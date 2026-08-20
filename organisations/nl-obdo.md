@@ -18,11 +18,10 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-20"
 previous_version: null
 successor: null
 
@@ -37,7 +36,7 @@ relationships:
   - type: governed-by
     target: NL-BZK
     source: fact
-    evidence: "The OBDO chair is the BZK Deputy Director-General for Digitalisation and Government Organisations (DGDOO), per digitaleoverheid.nl MIDO governance page. NOT READ — search-only."
+    evidence: "The OBDO chair is the BZK Deputy Director-General for Digitalisation and Government Organisations (DGDOO), per digitaleoverheid.nl MIDO governance page."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -46,6 +45,7 @@ sources:
   - title: "Overheidsbreed Beleidsoverleg Digitale Overheid (OBDO)"
     url: "https://www.digitaleoverheid.nl/dossiers/regie-op-gegevens/dossierpostcontext/overheidsbrede-beleidsoverleg-digitale-overheid-obdo/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
+    accessed: "2026-08-20"
   - title: "Governance Meerjarenprogramma Infrastructuur Digitale overheid (MIDO)"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/mido/governance/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
@@ -53,13 +53,13 @@ sources:
   - title: "Governance Digitale Overheid"
     url: "https://vng.nl/artikelen/governance-digitale-overheid"
     publisher: "Vereniging van Nederlandse Gemeenten (VNG)"
+    accessed: "2026-08-20"
 ---
 
 # Overheidsbreed Beleidsoverleg Digitale Overheid (OBDO)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-20.** Every cited source was read and confirmed to
+> support what this entity says. `verification: primary-source`.
 
 ## Description
 

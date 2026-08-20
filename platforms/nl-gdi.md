@@ -17,11 +17,10 @@ region: null
 status: active
 confidence: low
 coverage: low
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-20"
 previous_version: null
 successor: null
 
@@ -36,7 +35,7 @@ relationships:
   - type: maintained-by
     target: NL-LOGIUS
     source: fact
-    evidence: "GDI services are described as managed by Logius; from 2023 several moved to central BZK budget (logius.nl, rijksfinancien.nl). NOT READ — search-only."
+    evidence: "GDI services are described as managed by Logius; from 2023 several moved to central BZK budget (logius.nl, rijksfinancien.nl)."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -45,9 +44,11 @@ sources:
   - title: "Facturatie GDI-diensten 2023 is veranderd"
     url: "https://www.logius.nl/actueel/facturatie-gdi-diensten-2023-veranderd"
     publisher: "Logius"
+    accessed: "2026-08-20"
   - title: "Stelsel van het heden (Stelseldiensten ter ondersteuning)"
     url: "https://www.noraonline.nl/wiki/Stelsel_van_het_heden_(Stelseldiensten_ter_ondersteuning)"
     publisher: "NORA Online (ICTU)"
+    accessed: "2026-08-20"
   - title: "Wat is het MIDO?"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/mido/wat-is-het-mido/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
@@ -56,9 +57,8 @@ sources:
 
 # Generieke Digitale Infrastructuur (GDI)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-20.** Every cited source was read and confirmed to
+> support what this entity says. `verification: primary-source`.
 
 ## Description
 

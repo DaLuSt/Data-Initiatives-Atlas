@@ -17,11 +17,10 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: 2001-04-11
 end_date: null
-last_verified: null
+last_verified: "2026-08-20"
 previous_version: null
 successor: null
 
@@ -44,6 +43,7 @@ sources:
   - title: "Contactgegevens Stichting ICTU"
     url: "https://organisaties.overheid.nl/27912852/Stichting_ICTU"
     publisher: "Overheid.nl"
+    accessed: "2026-08-20"
   - title: "Overheidsarchitectuur NORA"
     url: "https://www.ictu.nl/diensten/dienstenoverzicht/overheidsarchitectuur-nora/"
     publisher: "ICTU"
@@ -51,13 +51,13 @@ sources:
   - title: "Rapport Governance ICTU"
     url: "https://www.eerstekamer.nl/overig/20220816/toelichting_op_governance_ictu/document"
     publisher: "Eerste Kamer der Staten-Generaal"
+    accessed: "2026-08-20"
 ---
 
 # Stichting ICTU
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-20.** Every cited source was read and confirmed to
+> support what this entity says. `verification: primary-source`.
 
 ## Description
 
