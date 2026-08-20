@@ -322,6 +322,39 @@ by accident.
 | **GIODO** | The predecessor data protection authority. Whether the succession to [[PL-UODO]] can be modelled depends on establishing what happened to the competencies the President did **not** take over | Later | Poland batch |
 | **Agencja Informatyzacji** | Would replace [[PL-COI]]. **Blocked** — the draft law is in consultation and the body does not exist | Blocked | Poland batch |
 
+## Finishing the six partially covered entities
+
+**9 distinct URLs close all six.** Each of these entities reached the first
+content check on 2026-08-20 with some of its sources read and some not; the
+table below is exactly what remains. Every host is one the Atlas already
+cites elsewhere, so no new domain needs allowing — this is nine page-opens.
+
+| Entity | Read | Remaining source |
+|---|---|---|
+| [[NL-BZK]] | 1/2 | <https://www.rijksfinancien.nl/memorie-van-toelichting/2022/owb/vii/onderdeel/1060049> |
+| [[NL-FORUM-STANDAARDISATIE]] | 2/4 | <https://www.forumstandaardisatie.nl/over-ons> |
+| | | <https://www.forumstandaardisatie.nl/over-forum-standaardisatie/diensten-en-expertise> |
+| [[NL-ICTU]] | 1/3 | <https://organisaties.overheid.nl/27912852/Stichting_ICTU> |
+| | | <https://www.eerstekamer.nl/overig/20220816/toelichting_op_governance_ictu/document> |
+| [[NL-OBDO]] | 1/3 | <https://www.digitaleoverheid.nl/dossiers/regie-op-gegevens/dossierpostcontext/overheidsbrede-beleidsoverleg-digitale-overheid-obdo/> |
+| | | ⭑ <https://vng.nl/artikelen/governance-digitale-overheid> |
+| [[NL-VNG]] | 1/2 | ⭑ *(the same URL — one read closes two entities)* |
+| [[NL-GDI]] | 1/3 | <https://www.logius.nl/actueel/facturatie-gdi-diensten-2023-veranderd> |
+| | | <https://www.noraonline.nl/wiki/Stelsel_van_het_heden_(Stelseldiensten_ter_ondersteuning)> |
+
+⭑ **One URL, two entities.** `vng.nl/artikelen/governance-digitale-overheid`
+is cited by both [[NL-OBDO]] and [[NL-VNG]], so nine reads finish six
+entities.
+
+Reading a page is only half of it. The check is whether the page **supports
+what the entity says** — its dates, its relationships and the evidence
+strings on them. Confirm or correct, then the entity can go
+`primary-source`; `docs/re-verification.md` has the procedure and
+`tools/reverify.py --write` does the stamping.
+
+**These cannot be read from inside a session.** The egress proxy refuses all
+nine hosts, which is why the first content check had to come from a human.
+
 ## Other queued research
 
 | Area / entity | Why it needs research | Suggested batch | Noted by / date |
@@ -450,4 +483,4 @@ by accident.
 | A content check to follow the link check | The 2026-08-20 check established that citations **point somewhere real**, not that they **support what the entity says**. No `verification` changed and none should have. The content check is still the whole re-verification pass | Blocked (egress) | Manual link check / 2026-08-20 |
 | ~~Government namespaces without an apex site~~ **— CLOSED 2026-08-20** | `gov.cz`, `gov.pt` and `public.lu` were checked in a second manual pass and all three serve a site at the apex. **`gob.es` is the sole exception** among the government namespaces the Atlas cites — not the first of several. Twenty-two domains have now been opened by hand and exactly one does not resolve | Later | Manual link check / 2026-08-20 |
 | ~~Content check for the five link-checked Batch 1 areas~~ **— DONE 2026-08-20**: 6 entities verified, 6 partially stamped | Their 22 sources were confirmed on 2026-08-20, so the *citations* are right. The remaining half is confirming that each entity's dates, relationships and evidence strings are actually supported — the step that sets `verification: primary-source`. **40 entities** cite these hosts, from [[NL-FORUM-STANDAARDISATIE]] and [[NL-NORA]] through to the ten basisregistraties. This is the best-prepared slice of the re-verification pass and the obvious place to start it | **Next** | Manual source check / 2026-08-20 |
-| Finish the six partially covered entities | [[NL-BZK]] 1/2, [[NL-FORUM-STANDAARDISATIE]] 2/4, [[NL-GDI]] 1/3, [[NL-ICTU]] 1/3, [[NL-OBDO]] 1/3, [[NL-VNG]] 1/2. Each needs only its **remaining** sources read — between one and three URLs apiece — to reach `primary-source`. The cheapest verification work available anywhere in the Atlas | **Next** | Content check / 2026-08-20 |
+| Finish the six partially covered entities | **The exact worklist is now above, under "Finishing the six partially covered entities": 9 distinct URLs, one of them shared by two entities.** No new host needs allowing. The cheapest verification work available anywhere in the Atlas | **Next** | Content check / 2026-08-20 |
