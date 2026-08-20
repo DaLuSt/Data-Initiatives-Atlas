@@ -49,6 +49,7 @@ import ssl
 import sys
 import urllib.error
 import urllib.request
+from http.client import InvalidURL
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -216,8 +217,11 @@ _BLOCKED_MARKERS = (
 
 
 def fetch(url: str, timeout: float) -> FetchResult:
-    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
     try:
+        # Request construction is inside the guard too: it validates the URL
+        # and raises on a malformed one, so leaving it outside made a bad
+        # source crash the sweep just as surely as a bad request would.
+        req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
         with urllib.request.urlopen(req, timeout=timeout,
                                     context=_ssl_context()) as resp:
             raw = resp.read(2_000_000)
@@ -225,17 +229,50 @@ def fetch(url: str, timeout: float) -> FetchResult:
             return FetchResult(url=url, ok=True, status=resp.status,
                                text=raw.decode(charset, errors="replace"))
     except urllib.error.HTTPError as exc:
-        # A 403 from the *origin* is not the proxy refusing to connect. Only
-        # a failed CONNECT is an egress block, and that arrives as URLError.
+        # Not every egress denial arrives as a failed CONNECT. A plain-`http://`
+        # URL goes to the proxy as an ordinary forward request, so its refusal
+        # comes back as an HTTP *response* — a 403 that looks exactly like the
+        # origin turning us away. The first full sweep of this repository
+        # reported ten such sources as UNREACHABLE when nine of them were the
+        # network policy, which is precisely the distinction this tool exists
+        # to keep straight.
+        #
+        # The agent proxy labels its own refusals with `x-deny-reason`, so that
+        # header is the signal. A 403 without it is left as the origin's, and
+        # the response body is surfaced so a reader can see for themselves
+        # rather than trusting this classification.
+        deny = exc.headers.get("x-deny-reason") if exc.headers else None
+        try:
+            body = exc.read(400).decode("utf-8", "replace").strip().replace("\n", " ")
+        except Exception:
+            body = ""
+        detail = f"HTTP {exc.code} {exc.reason}"
+        if deny:
+            detail = f"egress policy: {deny} — {body or detail}"
+        elif body:
+            detail = f"{detail} — {body[:160]}"
         return FetchResult(url=url, ok=False, status=exc.code,
-                           error=f"HTTP {exc.code} {exc.reason}")
+                           error=detail, blocked=bool(deny))
     except urllib.error.URLError as exc:
         detail = str(exc.reason)
         low = detail.casefold()
         blocked = any(m in low for m in _BLOCKED_MARKERS)
         return FetchResult(url=url, ok=False, error=detail, blocked=blocked)
-    except (TimeoutError, OSError, ValueError) as exc:  # pragma: no cover
-        return FetchResult(url=url, ok=False, error=f"{type(exc).__name__}: {exc}")
+    except Exception as exc:
+        # Breadth is deliberate. One unfetchable source must never take down a
+        # sweep of four hundred entities — the run is a report, and an entity
+        # that could not be checked is a line in it, not a crash.
+        #
+        # The case that forced this: `http.client.InvalidURL`, raised for a
+        # source URL containing a literal space. On Python 3.11 it inherits
+        # from HTTPException, *not* from ValueError, so a tidy tuple of
+        # expected exception types missed it and the first full sweep died six
+        # minutes in. A malformed URL is also the one failure here that is the
+        # repository's fault rather than the network's, so it says so.
+        kind = type(exc).__name__
+        hint = (" — malformed URL in the entity's sources, not a network problem"
+                if isinstance(exc, InvalidURL) else "")
+        return FetchResult(url=url, ok=False, error=f"{kind}: {exc}{hint}")
 
 
 def strip_markup(html: str) -> str:

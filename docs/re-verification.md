@@ -79,11 +79,48 @@ succeeds — a wrong identifier in this field does not 404, it silently returns
 another real act. Only checking for the identifier the entity *claims* catches
 that class of error.
 
+### The current baseline
+
+A full sweep on 2026-08-19, for reference when you run your own:
+
+```
+python tools/reverify.py --search-only --timeout 8
+```
+
+| | |
+|---|---|
+| Entities swept | **443** |
+| Sources attempted | **1,500** |
+| Retrieved | **0** |
+| Refused by egress policy | **1,494** (99.6%) |
+| Other | **6** |
+
+Roughly six minutes. Not one page was read.
+
+The six are worth knowing, because they are three different things and only
+one of them is fixable by an allowlist:
+
+- **5 × `github.com`** — refused by the *GitHub* proxy, which scopes a session
+  to its configured repositories. A different policy from the egress
+  allowlist, and it will not lift by adding a host. The tool surfaces the
+  gateway's own message so this is visible rather than inferred.
+- **1 × `catedrapsyd.unizar.es`** (cited on `ES-LO-2-2002`) — did not resolve
+  at all, while every other host tested resolved to the interceptor. That
+  points at a genuinely dead host rather than a blocked one. Recorded in
+  `discovery/unresolved.md`.
+- **1 entity with no sources** — `DOMAIN-NATIONAL-SECURITY`, and correctly so:
+  domains are classification nodes and carry no factual claims.
+
+Six entities have **no checkable claims** — `RO`, `UA`, `FR-ETALAB`,
+`NL-LOGIUS`, `NL-NICTIZ`, `NO-ALTINN`. Short names, no legal identifier. The
+tool says so rather than passing them silently: an entity it cannot check is
+not an entity it has checked.
+
 ### Verdicts
 
 | Verdict | Meaning |
 |---|---|
-| `BLOCKED` | The egress policy refused every source. Nothing to judge; fix the allowlist. |
+| `BLOCKED` | The egress policy refused every source. Nothing to judge; fix the allowlist. Includes 403s carrying the proxy's `x-deny-reason` header, which arrive over plain `http://` as ordinary responses rather than as failed CONNECTs. |
 | `UNREACHABLE` | Hosts answered, but no source came back. Dead links, or a mix of blocked and dead. |
 | `NEEDS REVIEW` | Something came back, and something needs looking at — an unretrieved source, or a claim nobody corroborated. |
 | `CORROBORATED` | Every source retrieved, and every claim appears on one of them. |
