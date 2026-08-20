@@ -7,7 +7,7 @@ as an open, connected knowledge graph.**
 
 ### [**→ Open the Interactive Atlas**](https://dalust.github.io/Data-Initiatives-Atlas/)
 
-*Search, filter and explore 450 entities and 5,090 connections across fifty-eight
+*Search, filter and explore 461 entities and 5,379 connections across fifty-eight
 countries — no install, no account.*
 
 [![Validation](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/validate.yml/badge.svg)](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/validate.yml)
@@ -32,14 +32,42 @@ hand-maintained.
 
 | | |
 |---|---|
-| **Entities** | 450 |
-| **Connections** | 5,090 — of which **750** are sourced, typed relationships |
-| **Countries** | 🇳🇱 Netherlands · 🇩🇪 Germany · 🇧🇪 Belgium · 🇫🇷 France · 🇪🇸 Spain · 🇵🇱 Poland · 🇬🇧 United Kingdom |
-| **Layers** | UN · EU · national · sectoral |
+| **Entities** | 461 |
+| **Connections** | 5,379 — of which **922** are sourced, typed relationships |
+| **Country scopes** | **58** — 14 with a researched national layer, the rest base anchors |
+| **Layers** | UN · Council of Europe · EU · national · sectoral |
 | **Source of truth** | Git + Markdown/YAML — no database |
 | **Licence** | CC0 1.0 |
+| **⚠ Sourcing** | **454 of 461 entities have never had a cited source read** — see below |
 
-*Figures as of 2026-08-17. The live counts are always on the site itself.*
+*Figures as of 2026-08-20. The live counts are always on the site itself.*
+
+### ⚠ Read this before you cite anything
+
+Almost everything in this Atlas is **`verification: search-only`**. The URLs
+in every entity's `sources:` were confirmed by a search index to exist and
+**were not read**, because the environment this was built in blocks outbound
+HTTPS to essentially every host. A full sweep on 2026-08-19 attempted all
+**1,500 cited URLs and retrieved none**.
+
+That is disclosed rather than buried, and the repository is built around the
+gap rather than around hiding it:
+
+- every entity carries `verification` in its frontmatter and a sourcing
+  caveat in its body, and the site says so on every page;
+- `validate_frontmatter.py` **refuses `confidence: high`** on any entity that
+  is still `search-only`;
+- `discovery/unresolved.md` is the standing register of what is unknown, and
+  `discovery/reverification-allowlist.md` is the generated worklist —
+  1,500 URLs, 486 hosts, 353 domains, ranked by how many entities each
+  unblocks;
+- `tools/reverify.py` runs the pass and `docs/re-verification.md` is the
+  procedure.
+
+**Use it as a map of the territory, not as a legal source.** Structure,
+relationships and the questions it raises are the value here; every specific
+date, identifier and citation needs checking against the primary source
+before you rely on it.
 
 ### Explore it
 

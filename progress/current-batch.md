@@ -1,9 +1,119 @@
 # Current Batch
 
-**Status:** No batch in progress. **Explorer depth** was completed on
-2026-08-20.
+**Status:** No batch in progress. **Estonia, T-PD and the sourcing
+disclosure** was completed on 2026-08-20.
 
-## Explorer depth — 4 hops, and the counts to go with it
+## Estonia, the Convention 108 committee, and the sourcing disclosure
+
+The batch that precedes pointing people at the site. **12 new entities, 176
+relationships.** 450 → **461 entities**, 750 → **922 relationships**.
+
+### The disclosure, which was the gate
+
+Individual entities already carried a sourcing caveat in their detail panel.
+**Nothing stated the aggregate** — and a reader seeing one caveat reasonably
+infers it is the exception. It is the rule: **454 of 461 entities have never
+had a cited source read.**
+
+Two fixes, both permanent:
+
+- **A standing banner on every page of the site**, deliberately not
+  dismissible, and **counted from the data at load** rather than hard-coded —
+  `verification` rides in `details.json`, so the banner runs twice and keeps
+  honest generic wording until the real number exists.
+- **A `⚠ Sourcing` row in the README's fact table**, and a *"Read this before
+  you cite anything"* section under it that states the position and lists the
+  machinery built around it — the `confidence: high` refusal, the unresolved
+  register, the allowlist, the runner.
+
+The framing is: **a map of the territory, not a legal source.** Structure and
+the questions it raises are the value; every date and identifier needs
+checking before anyone relies on it.
+
+### Estonia — the largest content gap, closed
+
+Nine new entities. The Atlas held the Dutch idea of a register stelsel plus
+an exchange standard and not the Estonian one, while Estonia is the more
+cited of the two internationally.
+
+| Entity | |
+|---|---|
+| [[EE-RIA]] | Information System Authority — operates all three platforms below |
+| [[EE-X-TEE]] | the data exchange layer; **data never sits in a central repository** |
+| [[EE-RIHA]] | administration system for the state information system |
+| [[EE-ANDMEPORTAAL]] | the data portal, **established 2025** |
+| [[EE-AKI]] | data protection authority — the **twelfth** on [[EU-EDPB]] |
+| [[EE-IKS]] | GDPR implementation, in force **15 January 2019** |
+| [[EE-ATS]] | Public Information Act — the one Estonian statutory anchor found |
+| [[EE-E-RESIDENCY]] | launched **1 December 2014** |
+| [[INTL-NIIS]] + [[INTL-X-ROAD]] | the international half |
+
+**Four findings the country produced:**
+
+**A national system that became an international product.** X-Road began as
+Estonia's exchange layer, passed into joint Estonian–Finnish ownership under
+[[INTL-NIIS]] in 2017, and now runs well beyond its members. Nothing else in
+the Atlas has done that — [[NL-DIGIKOPPELING]] and [[BE-BELGIF]] stayed
+national. It forced a split the Atlas already makes for specifications:
+[[INTL-X-ROAD]] is the software, [[EE-X-TEE]] is Estonia's deployment.
+
+**The first jointly-governed infrastructure body.** [[INTL-NIIS]] is owned by
+[[EE]], [[FI]] and [[IS]] together — not a standards body publishing for
+others to adopt, and not one country's agency. It gave [[FI]] and [[IS]]
+their first substantive entity.
+
+**Digital identity without territory.** [[EE-E-RESIDENCY]] issues a
+state-backed identity to people with no residence, presence or citizenship in
+the issuing country. Every other identity platform in the Atlas identifies
+residents to their own state. Writing that comparison exposed that **the
+Netherlands has no DigiD entity** — now queued.
+
+**Nearly eight months late, and not a transposition failure.** [[EE-IKS]]
+entered into force on 15 January 2019, against the GDPR applying on 25 May
+2018. Nothing was unprotected — a regulation applies of its own force — but
+the derogations a member state is *permitted* to make did not exist for eight
+months. It is the latest of the eight national GDPR instruments the Atlas
+holds.
+
+### [[INTL-TPD]] — the Convention's answer to the EDPB
+
+Created `coverage: low` and honestly so: `coe.int` is blocked, and its
+composition, mandate and cadence are all unestablished.
+
+What it does show is the shape of a problem. T-PD is the body that has
+**strongly encouraged all state parties to ratify [[INTL-CONVENTION-108-PLUS]]
+as soon as possible** — and the protocol still stands four ratifications short
+of 38, nearly eight years after opening. A treaty committee urging its own
+members to ratify its own protocol, for eight years, is visible in the graph
+only because both the committee and the protocol are now entities.
+
+### 153 `applies-in` edges, and the ones deliberately not added
+
+Every EU instrument named **10 of the 27 member states**, which understated
+applicability rather than recording a finding.
+
+The nine EU **regulations** now name all 27. That is a rule, not research: a
+regulation is binding in its entirety and directly applicable in all member
+states under **TFEU Article 288**, and the evidence says so, matching the
+phrasing the existing edges already used.
+
+The five **directives** were left at 10 on purpose. Extending them is equally
+true, but a directive's interesting content in this Atlas is *who transposed*
+— and 17 more `applies-in` edges per directive would add 17 blank
+transposition cells each. Recorded as a decision in
+`discovery/research-queue.md`, not an oversight.
+
+### Verification
+
+- **461 entities, 5,379 edges** (922 relationship, 1,704 association, 2,753
+  wikilink), 58 country scopes
+- `validation/run_all.py` 5/5 · `tools/test_build_graph.py` 41 OK ·
+  `tools/test_reverify.py` 35 OK · `tools/test_ui.mjs` **86/86**
+- `validation/audit.py` — no fully disconnected entities
+
+All 12 new entities are `verification: search-only`.
+
+## Explorer depth — 4 hops, and the counts to go with it — previous batch
 
 Two changes to the Entity Explorer's neighbourhood control, both driven by
 measuring the graph rather than guessing at it. No entity content changed.

@@ -89,6 +89,7 @@
       .then(function (data) {
         G = data;
         G.nodes.forEach(function (n) { nodeById[n.id] = n; });
+        updateSourcingBanner();
         buildChrome();
         initGraph();
         $("loading").hidden = true;
@@ -105,6 +106,7 @@
                 if (nodeById[id]) Object.assign(nodeById[id], D.nodes[id]);
               });
             }
+            updateSourcingBanner();   // now that verification is loaded
             if (focusId && !$("detail").hidden) showDetail(focusId);
           })
           .catch(function () { /* detail panel degrades gracefully */ });
@@ -813,6 +815,34 @@
 
     updateStatus();
     if (focusId && cy.getElementById(focusId).length) highlight(focusId);
+  }
+
+  /** Fill the standing sourcing banner from the graph itself.
+   *
+   *  Hard-coding "443 of 450" would be wrong within a batch. The whole point
+   *  of the banner is that the number is true, so it is counted at load. */
+  function updateSourcingBanner() {
+    var el = $("sourcing-figure");
+    if (!el || !G || !G.nodes) return;
+    // `verification` rides in details.json, not graph.json, so this runs twice:
+    // once at boot, where it finds nothing and leaves the honest generic
+    // wording in place, and again once details land and the real count exists.
+    // The banner is never blank and never guesses.
+    var unread = 0, known = 0;
+    G.nodes.forEach(function (n) {
+      var v = (nodeById[n.id] || n).verification;
+      if (!v) return;
+      known++;
+      if (v !== "primary-source") unread++;
+    });
+    if (!known) return;   // the field is not in the graph payload — say nothing
+    // The verb travels with the subject: "443 of 450 entities … were", but
+    // "nearly every entity … was". Leaving it in the surrounding markup made
+    // the counted form ungrammatical.
+    el.textContent = unread === known
+      ? "Every one of the " + known.toLocaleString() + " entities in this Atlas were"
+      : unread.toLocaleString() + " of " + known.toLocaleString() +
+        " entities in this Atlas were";
   }
 
   function updateStatus() {

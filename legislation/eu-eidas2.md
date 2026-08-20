@@ -115,6 +115,125 @@ relationships:
     confidence: medium
     valid_from: 2024-05-20
     valid_until: null
+  - type: applies-in
+    target: AT
+    source: fact
+    evidence: "As an EU regulation, European Digital Identity Framework Regulation is binding in its entirety and directly applicable in all member states without national transposition (TFEU Article 288), and Austria is a member state (eur-lex.europa.eu; european-union.europa.eu 'EU countries'). NOT READ — search-only. Added in the member-state completion pass: the Atlas named 10 of the 27 member states on every EU instrument, which understated applicability rather than recording a finding."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: BG
+    source: fact
+    evidence: "As an EU regulation, European Digital Identity Framework Regulation is binding in its entirety and directly applicable in all member states without national transposition (TFEU Article 288), and Bulgaria is a member state (eur-lex.europa.eu; european-union.europa.eu 'EU countries'). NOT READ — search-only. Added in the member-state completion pass: the Atlas named 10 of the 27 member states on every EU instrument, which understated applicability rather than recording a finding."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: CY
+    source: fact
+    evidence: "As an EU regulation, European Digital Identity Framework Regulation is binding in its entirety and directly applicable in all member states without national transposition (TFEU Article 288), and Cyprus is a member state (eur-lex.europa.eu; european-union.europa.eu 'EU countries'). NOT READ — search-only. Added in the member-state completion pass: the Atlas named 10 of the 27 member states on every EU instrument, which understated applicability rather than recording a finding."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: DK
+    source: fact
+    evidence: "As an EU regulation, European Digital Identity Framework Regulation is binding in its entirety and directly applicable in all member states without national transposition (TFEU Article 288), and Denmark is a member state (eur-lex.europa.eu; european-union.europa.eu 'EU countries'). NOT READ — search-only. Added in the member-state completion pass: the Atlas named 10 of the 27 member states on every EU instrument, which understated applicability rather than recording a finding."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: EE
+    source: fact
+    evidence: "As an EU regulation, European Digital Identity Framework Regulation is binding in its entirety and directly applicable in all member states without national transposition (TFEU Article 288), and Estonia is a member state (eur-lex.europa.eu; european-union.europa.eu 'EU countries'). NOT READ — search-only. Added in the member-state completion pass: the Atlas named 10 of the 27 member states on every EU instrument, which understated applicability rather than recording a finding."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: FI
+    source: fact
+    evidence: "As an EU regulation, European Digital Identity Framework Regulation is binding in its entirety and directly applicable in all member states without national transposition (TFEU Article 288), and Finland is a member state (eur-lex.europa.eu; european-union.europa.eu 'EU countries'). NOT READ — search-only. Added in the member-state completion pass: the Atlas named 10 of the 27 member states on every EU instrument, which understated applicability rather than recording a finding."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: GR
+    source: fact
+    evidence: "As an EU regulation, European Digital Identity Framework Regulation is binding in its entirety and directly applicable in all member states without national transposition (TFEU Article 288), and Greece is a member state (eur-lex.europa.eu; european-union.europa.eu 'EU countries'). NOT READ — search-only. Added in the member-state completion pass: the Atlas named 10 of the 27 member states on every EU instrument, which understated applicability rather than recording a finding."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: HR
+    source: fact
+    evidence: "As an EU regulation, European Digital Identity Framework Regulation is binding in its entirety and directly applicable in all member states without national transposition (TFEU Article 288), and Croatia is a member state (eur-lex.europa.eu; european-union.europa.eu 'EU countries'). NOT READ — search-only. Added in the member-state completion pass: the Atlas named 10 of the 27 member states on every EU instrument, which understated applicability rather than recording a finding."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: HU
+    source: fact
+    evidence: "As an EU regulation, European Digital Identity Framework Regulation is binding in its entirety and directly applicable in all member states without national transposition (TFEU Article 288), and Hungary is a member state (eur-lex.europa.eu; european-union.europa.eu 'EU countries'). NOT READ — search-only. Added in the member-state completion pass: the Atlas named 10 of the 27 member states on every EU instrument, which understated applicability rather than recording a finding."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: IT
+    source: fact
+    evidence: "As an EU regulation, European Digital Identity Framework Regulation is binding in its entirety and directly applicable in all member states without national transposition (TFEU Article 288), and Italy is a member state (eur-lex.europa.eu; european-union.europa.eu 'EU countries'). NOT READ — search-only. Added in the member-state completion pass: the Atlas named 10 of the 27 member states on every EU instrument, which understated applicability rather than recording a finding."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: LT
+    source: fact
+    evidence: "As an EU regulation, European Digital Identity Framework Regulation is binding in its entirety and directly applicable in all member states without national transposition (TFEU Article 288), and Lithuania is a member state (eur-lex.europa.eu; european-union.europa.eu 'EU countries'). NOT READ — search-only. Added in the member-state completion pass: the Atlas named 10 of the 27 member states on every EU instrument, which understated applicability rather than recording a finding."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: LV
+    source: fact
+    evidence: "As an EU regulation, European Digital Identity Framework Regulation is binding in its entirety and directly applicable in all member states without national transposition (TFEU Article 288), and Latvia is a member state (eur-lex.europa.eu; european-union.europa.eu 'EU countries'). NOT READ — search-only. Added in the member-state completion pass: the Atlas named 10 of the 27 member states on every EU instrument, which understated applicability rather than recording a finding."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: MT
+    source: fact
+    evidence: "As an EU regulation, European Digital Identity Framework Regulation is binding in its entirety and directly applicable in all member states without national transposition (TFEU Article 288), and Malta is a member state (eur-lex.europa.eu; european-union.europa.eu 'EU countries'). NOT READ — search-only. Added in the member-state completion pass: the Atlas named 10 of the 27 member states on every EU instrument, which understated applicability rather than recording a finding."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: RO
+    source: fact
+    evidence: "As an EU regulation, European Digital Identity Framework Regulation is binding in its entirety and directly applicable in all member states without national transposition (TFEU Article 288), and Romania is a member state (eur-lex.europa.eu; european-union.europa.eu 'EU countries'). NOT READ — search-only. Added in the member-state completion pass: the Atlas named 10 of the 27 member states on every EU instrument, which understated applicability rather than recording a finding."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: SE
+    source: fact
+    evidence: "As an EU regulation, European Digital Identity Framework Regulation is binding in its entirety and directly applicable in all member states without national transposition (TFEU Article 288), and Sweden is a member state (eur-lex.europa.eu; european-union.europa.eu 'EU countries'). NOT READ — search-only. Added in the member-state completion pass: the Atlas named 10 of the 27 member states on every EU instrument, which understated applicability rather than recording a finding."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: SI
+    source: fact
+    evidence: "As an EU regulation, European Digital Identity Framework Regulation is binding in its entirety and directly applicable in all member states without national transposition (TFEU Article 288), and Slovenia is a member state (eur-lex.europa.eu; european-union.europa.eu 'EU countries'). NOT READ — search-only. Added in the member-state completion pass: the Atlas named 10 of the 27 member states on every EU instrument, which understated applicability rather than recording a finding."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: SK
+    source: fact
+    evidence: "As an EU regulation, European Digital Identity Framework Regulation is binding in its entirety and directly applicable in all member states without national transposition (TFEU Article 288), and Slovakia is a member state (eur-lex.europa.eu; european-union.europa.eu 'EU countries'). NOT READ — search-only. Added in the member-state completion pass: the Atlas named 10 of the 27 member states on every EU instrument, which understated applicability rather than recording a finding."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Regulation (EU) 2024/1183 — Official Journal"

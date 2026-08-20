@@ -17,7 +17,7 @@ Country-scoped entities themselves (initiatives, legislation, organisations,
 
 ## Participating countries
 
-**Fifty-eight**, of which thirteen have a modelled national layer,
+**Fifty-eight**, of which fourteen have a modelled national layer,
 thirty-seven are European base anchors created on 2026-08-19, and **eight are
 outside Europe entirely** — the non-European parties to
 [[INTL-CONVENTION-108]], added with that treaty on the same day.
@@ -38,7 +38,7 @@ outside Europe entirely** — the non-European parties to
 | Czechia | `CZ` | [`cz/`](cz/) | modelled |
 | Germany | `DE` | [`de/`](de/) | modelled |
 | Denmark | `DK` | [`dk/`](dk/) | anchor only |
-| Estonia | `EE` | [`ee/`](ee/) | anchor only |
+| Estonia | `EE` | [`ee/`](ee/) | modelled |
 | Spain | `ES` | [`es/`](es/) | modelled |
 | Finland | `FI` | [`fi/`](fi/) | anchor only |
 | France | `FR` | [`fr/`](fr/) | modelled |
