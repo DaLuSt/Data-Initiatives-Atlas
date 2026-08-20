@@ -84,8 +84,31 @@ first real content check actually looks like: some sources read, some not,
 and throwing away the reading that was done would be as wrong as claiming the
 entity is verified.
 
-**448 of 461 entities remain unread.** The README, the site banner and the
-allowlist all now say six rather than none.
+**442 of 461 entities remain unread.** The README, the site banner and the
+allowlist all now say twelve rather than none.
+
+### All twelve, the same day
+
+The six partials were finished within hours of being identified. All nine
+remaining URLs were read and confirmed, and [[NL-BZK]],
+[[NL-FORUM-STANDAARDISATIE]], [[NL-GDI]], [[NL-ICTU]], [[NL-OBDO]] and
+[[NL-VNG]] joined the first six.
+
+**Twelve entities are `primary-source`**, on 31 sources read by hand. That is
+the **whole of Batch 1's core governance layer** — Forum Standaardisatie, the
+IBDS and the Federatief Datastelsel, NORA, Common Ground, MIDO, the GDI, the
+'pas toe of leg uit' regime, and the four bodies that govern them.
+
+It is worth stating what that changes. Until today the honest answer to "is
+any of this checked?" was *no, none of it*. It is now *yes — that layer,
+entirely, by hand, on a stated date*. **442 of 461 entities remain unread**,
+so the disclosure stays, but it is no longer the whole story.
+
+The partial-coverage machinery added a few hours earlier turned out to have a
+lifespan of one afternoon, which is the right outcome: it existed to avoid
+overclaiming during the gap, and the gap closed. It stays in
+`tools/reverify.py` because the next content check will open the same gap
+again.
 
 ### A third tier: the reachability check
 
