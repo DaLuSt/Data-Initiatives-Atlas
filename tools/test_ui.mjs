@@ -152,6 +152,49 @@ async function search(page, q) {
   const st1 = await page.textContent('#stage-status');
   check('explorer shows a neighbourhood, not everything', /neighbourhood/.test(st1), st1.trim());
 
+  // ── neighbourhood depth ──
+  // The control tops out at 4 on purpose: every chain the Atlas is built to
+  // show completes inside it, and past 4 the median neighbourhood is most of
+  // the graph. The options carry live counts because depth is not a dial a
+  // reader can predict on a hub-heavy graph — one more hop through a country
+  // anchor can multiply the result several times over.
+  const depthOpts = await page.$$eval('#depth option', os =>
+    os.map(o => ({ value: o.value, text: o.textContent.trim() })));
+  check('depth control offers 1 to 4 hops and stops there',
+    depthOpts.map(o => o.value).join(',') === '1,2,3,4',
+    depthOpts.map(o => o.value).join(','));
+
+  const counted = depthOpts.map(o => {
+    const m = o.text.match(/([\d,]+) entit/);
+    return m ? +m[1].replace(/,/g, '') : null;
+  });
+  check('every depth option states how many entities it would show',
+    counted.every(n => n !== null && n >= 1), JSON.stringify(depthOpts.map(o => o.text)));
+  check('the counts are cumulative and non-decreasing with depth',
+    counted.every((n, i) => i === 0 || n >= counted[i - 1]), counted.join(' ≤ '));
+
+  // Picking a depth must produce exactly the count the option promised —
+  // otherwise the number is decoration rather than information.
+  await page.selectOption('#depth', '4');
+  await page.waitForTimeout(1200);
+  const shown = await page.evaluate(() =>
+    document.getElementById('cy')._cyreg.cy.nodes().length);
+  check('choosing a depth renders the neighbourhood its label promised',
+    shown === counted[3], `label said ${counted[3]}, canvas has ${shown}`);
+
+  // Counts describe the *filtered* graph, so they must move when filters do.
+  const beforeDepthFilter = await page.$$eval('#depth option', os => os.map(o => o.textContent.trim()));
+  await page.click('#f-country label:has-text("Germany")');
+  await page.waitForTimeout(800);
+  const afterDepthFilter = await page.$$eval('#depth option', os => os.map(o => o.textContent.trim()));
+  check('depth counts respond to filters rather than describing the raw graph',
+    JSON.stringify(beforeDepthFilter) !== JSON.stringify(afterDepthFilter),
+    afterDepthFilter[3]);
+  await page.click('#reset-filters');
+  await page.waitForTimeout(600);
+  await page.selectOption('#depth', '2');
+  await page.waitForTimeout(600);
+
   // ── filters ──
   await page.click('#view-atlas');
   await page.waitForTimeout(500);
