@@ -445,3 +445,21 @@ a:hover { text-decoration: none; }
   .topbar h1 { font-size: .92rem; }
   .stage-controls { flex-direction: row; }
 }
+
+/* ─────────────────────── sourcing banner ───────────────────────
+   Deliberately not dismissible. The per-entity caveat in the detail panel
+   tells a reader about one entity; this tells them about the corpus, and a
+   reader who never clicks a node would otherwise never learn it. */
+.sourcing-banner {
+  padding: .5rem .9rem;
+  font-size: .8rem;
+  line-height: 1.45;
+  color: var(--text-dim);
+  background: var(--surface-2, rgba(255, 200, 0, .06));
+  border-bottom: 1px solid var(--border);
+  border-left: 3px solid #d79b00;
+}
+.sourcing-banner strong { color: var(--text); }
+.sourcing-banner code { font-size: .95em; }
+.sourcing-banner a { color: inherit; text-decoration: underline; white-space: nowrap; }
+@media (max-width: 700px) { .sourcing-banner { font-size: .74rem; } }
