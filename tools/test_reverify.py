@@ -278,6 +278,23 @@ class TestWriteBack(unittest.TestCase):
         self.assertEqual(parsed.frontmatter["verification"], "primary-source")
         self.assertEqual(parsed.frontmatter["sources"][0]["accessed"], "2026-08-19")
 
+    def test_partial_coverage_stamps_accessed_but_not_verification(self):
+        """Some sources read, some not: the entity is not primary-source yet.
+
+        Throwing away the reading that *was* done would be as wrong as
+        claiming the entity is verified. Six entities were in this state when
+        the first content check landed on 2026-08-20."""
+        rv.apply_verification(self.path, {"https://example.org/one"},
+                              "2026-08-19", set_verification=False)
+        out = self.path.read_text(encoding="utf-8")
+        self.assertIn("verification: search-only", out,
+                      "partial coverage must not claim primary-source")
+        self.assertIn("last_verified: null", out,
+                      "last_verified belongs to the whole entity, not one source")
+        one, two = out.index("Pub One"), out.index("Pub Two")
+        self.assertIn("accessed", out[one:two], "the read source must be stamped")
+        self.assertNotIn("accessed", out[two:], "the unread source must not be")
+
     def test_writing_twice_does_not_duplicate_accessed(self):
         for _ in range(2):
             rv.apply_verification(self.path, {"https://example.org/one"}, "2026-08-19")

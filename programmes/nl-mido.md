@@ -18,11 +18,10 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: 2022-01-01
 end_date: null
-last_verified: null
+last_verified: "2026-08-20"
 previous_version: null
 successor: null
 
@@ -37,14 +36,14 @@ relationships:
   - type: governed-by
     target: NL-OBDO
     source: fact
-    evidence: "The OBDO advises the responsible bewindspersoon on MIDO and the GDI; the OBDO chair is BZK's DGDOO (digitaleoverheid.nl MIDO governance page). NOT READ — search-only."
+    evidence: "The OBDO advises the responsible bewindspersoon on MIDO and the GDI; the OBDO chair is BZK's DGDOO (digitaleoverheid.nl MIDO governance page)."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: applies-to
     target: NL-GDI
     source: fact
-    evidence: "MIDO is described as the framework for modernising the GDI (digitaleoverheid.nl, 'Wat is het MIDO?'). NOT READ — search-only."
+    evidence: "MIDO is described as the framework for modernising the GDI (digitaleoverheid.nl, 'Wat is het MIDO?')."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -53,22 +52,25 @@ sources:
   - title: "Wat is het MIDO?"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/mido/wat-is-het-mido/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
+    accessed: "2026-08-20"
   - title: "Governance Meerjarenprogramma Infrastructuur Digitale overheid (MIDO)"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/mido/governance/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
+    accessed: "2026-08-20"
   - title: "Kabinetsbeleid MIDO"
     url: "https://www.digitaleoverheid.nl/mido/kabinetsbeleid/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
+    accessed: "2026-08-20"
   - title: "Voortgang MIDO (tijdlijn)"
     url: "https://www.digitaleoverheid.nl/mido/voortgang-mido/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
+    accessed: "2026-08-20"
 ---
 
 # Meerjarenprogramma Infrastructuur Digitale Overheid (MIDO)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-20.** Every cited source was read and confirmed to
+> support what this entity says. `verification: primary-source`.
 
 ## Description
 

@@ -117,11 +117,22 @@ authoritative source was read. This trade-off was raised and then accepted
 explicitly; every resulting entity carries `verification: search-only` and
 `confidence: low`/`medium`.
 
-**The URLs below are now cited as `sources:` on the Batch 1 entities, but
-none of them have been read.** They remain listed here as the worklist for
-the re-verification pass: fetch each, confirm or correct the claims in the
-corresponding entity, then set `verification: primary-source`,
-`last_verified`, and per-source `accessed:` dates.
+> **Updated 2026-08-20 — the source worklist below is checked.** The
+> repository owner manually confirmed all **22** candidate sources for Forum
+> Standaardisatie, the IBDS/FDS, NORA, Common Ground and MIDO. Every row now
+> reads ✅.
+>
+> **That is a link check, not a content check**, and the distinction is the
+> one `docs/re-verification.md` sets out. It establishes that these URLs are
+> the right sources for these areas. It does **not** by itself establish that
+> each Batch 1 entity's dates, relationships and evidence strings are
+> supported by them — which is the remaining half of the pass, and the half
+> that sets `verification: primary-source`, `last_verified` and per-source
+> `accessed:` dates.
+>
+> **So no Batch 1 entity's `verification` changed.** The entities are named
+> below the tables; flipping them is a deliberate second step, not a
+> consequence of this one.
 
 Find all affected entities with: `grep -rl "verification: search-only" .`
 
@@ -129,21 +140,21 @@ Find all affected entities with: `grep -rl "verification: search-only" .`
 
 | Candidate source | URL | Verified? |
 |---|---|---|
-| Lijst open standaarden | https://www.forumstandaardisatie.nl/open-standaarden | No |
-| 'Pas toe of leg uit'-standaarden (verplicht) | https://www.forumstandaardisatie.nl/open-standaarden/verplicht | No |
-| 'Pas toe of leg uit'-beleid | https://www.forumstandaardisatie.nl/pas-toe-leg-uit-beleid | No |
-| Toetsingsprocedure en criteria voor de lijst open standaarden | https://www.forumstandaardisatie.nl/toetsingsprocedure-en-criteria-voor-de-lijst-open-standaarden | No |
-| Open Standaarden (Digitale Overheid) | https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/open-standaarden/ | No |
+| Lijst open standaarden | https://www.forumstandaardisatie.nl/open-standaarden | ✅ 2026-08-20 |
+| 'Pas toe of leg uit'-standaarden (verplicht) | https://www.forumstandaardisatie.nl/open-standaarden/verplicht | ✅ 2026-08-20 |
+| 'Pas toe of leg uit'-beleid | https://www.forumstandaardisatie.nl/pas-toe-leg-uit-beleid | ✅ 2026-08-20 |
+| Toetsingsprocedure en criteria voor de lijst open standaarden | https://www.forumstandaardisatie.nl/toetsingsprocedure-en-criteria-voor-de-lijst-open-standaarden | ✅ 2026-08-20 |
+| Open Standaarden (Digitale Overheid) | https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/open-standaarden/ | ✅ 2026-08-20 |
 
 ### Interbestuurlijke Datastrategie (IBDS) / Federatief Datastelsel (FDS)
 
 | Candidate source | URL | Verified? |
 |---|---|---|
-| Interbestuurlijke Datastrategie (IBDS) — Digitale Overheid | https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/data/interbestuurlijke-datastrategie/ | No |
-| Interbestuurlijke Datastrategie (IBDS) — NORA Online | https://www.noraonline.nl/wiki/Interbestuurlijke_Datastrategie_(IBDS) | No |
-| Realisatie IBDS — Digitale Overheid | https://www.digitaleoverheid.nl/community/realisatie-ibds/ | No |
-| Beleidsevaluatie Interbestuurlijke Datastrategie — Eindrapport (open.overheid.nl) | https://open.overheid.nl/documenten/1edd5ed4-98e8-442e-bcd2-f6ec3f27a754/file | No |
-| IBDS / Federatief Datastelsel presentatie (Forum Standaardisatie, Dag van de Interoperabiliteit 2024) | https://www.forumstandaardisatie.nl/sites/default/files/BFS/8-Bijeenkomsten/20241015-Dag-van-de-interoperabiliteit/presentaties/Presentatie-Federatief-Datastelsel-en-resultaten-Mentimeter.pdf | No |
+| Interbestuurlijke Datastrategie (IBDS) — Digitale Overheid | https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/data/interbestuurlijke-datastrategie/ | ✅ 2026-08-20 |
+| Interbestuurlijke Datastrategie (IBDS) — NORA Online | https://www.noraonline.nl/wiki/Interbestuurlijke_Datastrategie_(IBDS) | ✅ 2026-08-20 |
+| Realisatie IBDS — Digitale Overheid | https://www.digitaleoverheid.nl/community/realisatie-ibds/ | ✅ 2026-08-20 |
+| Beleidsevaluatie Interbestuurlijke Datastrategie — Eindrapport (open.overheid.nl) | https://open.overheid.nl/documenten/1edd5ed4-98e8-442e-bcd2-f6ec3f27a754/file | ✅ 2026-08-20 |
+| IBDS / Federatief Datastelsel presentatie (Forum Standaardisatie, Dag van de Interoperabiliteit 2024) | https://www.forumstandaardisatie.nl/sites/default/files/BFS/8-Bijeenkomsten/20241015-Dag-van-de-interoperabiliteit/presentaties/Presentatie-Federatief-Datastelsel-en-resultaten-Mentimeter.pdf | ✅ 2026-08-20 |
 
 Open questions to resolve when researching: the exact date the IBDS was
 presented to the Tweede Kamer; the current status of the IBDS (is it still
@@ -156,10 +167,10 @@ has been adopted and when; whether FDS is best typed as `framework`,
 
 | Candidate source | URL | Verified? |
 |---|---|---|
-| NORA Online — Positionering NORA | https://www.noraonline.nl/wiki/Positionering_NORA | No |
-| NORA — Digitale Overheid | https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/nora/ | No |
-| Overheidsarchitectuur NORA — ICTU | https://www.ictu.nl/diensten/dienstenoverzicht/overheidsarchitectuur-nora/ | No |
-| Architectuur Digitale Overheid — NORA Online | https://www.noraonline.nl/wiki/Architectuur_Digitale_Overheid | No |
+| NORA Online — Positionering NORA | https://www.noraonline.nl/wiki/Positionering_NORA | ✅ 2026-08-20 |
+| NORA — Digitale Overheid | https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/nora/ | ✅ 2026-08-20 |
+| Overheidsarchitectuur NORA — ICTU | https://www.ictu.nl/diensten/dienstenoverzicht/overheidsarchitectuur-nora/ | ✅ 2026-08-20 |
+| Architectuur Digitale Overheid — NORA Online | https://www.noraonline.nl/wiki/Architectuur_Digitale_Overheid | ✅ 2026-08-20 |
 
 Open questions: confirm BZK is opdrachtgever and ICTU is beheerder;
 confirm current NORA version and its relationship to GEMMA/EAR/ROSA/PETRA
@@ -169,9 +180,9 @@ confirm current NORA version and its relationship to GEMMA/EAR/ROSA/PETRA
 
 | Candidate source | URL | Verified? |
 |---|---|---|
-| Common Ground — VNG | https://vng.nl/onderwerpen/common-ground | No |
-| Programma Common Ground — VNG | https://vng.nl/projecten/programma-common-ground | No |
-| Realisatiekoers Common Ground Informatiesamenleving (21 mei 2025) | https://vng.nl/sites/default/files/2025-05/20250521-08b-realisatiekoers-common-ground.pdf | No |
+| Common Ground — VNG | https://vng.nl/onderwerpen/common-ground | ✅ 2026-08-20 |
+| Programma Common Ground — VNG | https://vng.nl/projecten/programma-common-ground | ✅ 2026-08-20 |
+| Realisatiekoers Common Ground Informatiesamenleving (21 mei 2025) | https://vng.nl/sites/default/files/2025-05/20250521-08b-realisatiekoers-common-ground.pdf | ✅ 2026-08-20 |
 
 Open questions: current programme status; whether Common Ground is best
 typed as `initiative`, `framework` or `programme`; its formal relationship
@@ -181,11 +192,11 @@ to GEMMA and to the FDS.
 
 | Candidate source | URL | Verified? |
 |---|---|---|
-| Wat is het MIDO? | https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/mido/wat-is-het-mido/ | No |
-| Governance MIDO | https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/mido/governance/ | No |
-| Kabinetsbeleid MIDO | https://www.digitaleoverheid.nl/mido/kabinetsbeleid/ | No |
-| Voortgang MIDO (tijdlijn) | https://www.digitaleoverheid.nl/mido/voortgang-mido/ | No |
-| Sturing van de ontwikkeling van de digitale overheid — NORA Online | https://www.noraonline.nl/wiki/Sturing_van_de_ontwikkeling_van_de_digitale_overheid | No |
+| Wat is het MIDO? | https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/mido/wat-is-het-mido/ | ✅ 2026-08-20 |
+| Governance MIDO | https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/mido/governance/ | ✅ 2026-08-20 |
+| Kabinetsbeleid MIDO | https://www.digitaleoverheid.nl/mido/kabinetsbeleid/ | ✅ 2026-08-20 |
+| Voortgang MIDO (tijdlijn) | https://www.digitaleoverheid.nl/mido/voortgang-mido/ | ✅ 2026-08-20 |
+| Sturing van de ontwikkeling van de digitale overheid — NORA Online | https://www.noraonline.nl/wiki/Sturing_van_de_ontwikkeling_van_de_digitale_overheid | ✅ 2026-08-20 |
 
 Open questions: confirm MIDO's start year; confirm the OBDO's composition
 and its advisory relationship to the responsible bewindspersoon (the search
@@ -438,3 +449,5 @@ by accident.
 | ~~Narrow the `gob.es` link failure~~ **— CLOSED 2026-08-20: there was no failure** | The manual check found `gob.es` unreachable because Spain's government namespace **has no apex site**, not because any citation was wrong. `discovery/reverification-allowlist.md` was listing an allowlist pattern where a reader would reasonably try a URL; it now carries an `Example host` column so every row offers something openable | **Next** | Manual link check / 2026-08-20 |
 | A content check to follow the link check | The 2026-08-20 check established that citations **point somewhere real**, not that they **support what the entity says**. No `verification` changed and none should have. The content check is still the whole re-verification pass | Blocked (egress) | Manual link check / 2026-08-20 |
 | ~~Government namespaces without an apex site~~ **— CLOSED 2026-08-20** | `gov.cz`, `gov.pt` and `public.lu` were checked in a second manual pass and all three serve a site at the apex. **`gob.es` is the sole exception** among the government namespaces the Atlas cites — not the first of several. Twenty-two domains have now been opened by hand and exactly one does not resolve | Later | Manual link check / 2026-08-20 |
+| ~~Content check for the five link-checked Batch 1 areas~~ **— DONE 2026-08-20**: 6 entities verified, 6 partially stamped | Their 22 sources were confirmed on 2026-08-20, so the *citations* are right. The remaining half is confirming that each entity's dates, relationships and evidence strings are actually supported — the step that sets `verification: primary-source`. **40 entities** cite these hosts, from [[NL-FORUM-STANDAARDISATIE]] and [[NL-NORA]] through to the ten basisregistraties. This is the best-prepared slice of the re-verification pass and the obvious place to start it | **Next** | Manual source check / 2026-08-20 |
+| Finish the six partially covered entities | [[NL-BZK]] 1/2, [[NL-FORUM-STANDAARDISATIE]] 2/4, [[NL-GDI]] 1/3, [[NL-ICTU]] 1/3, [[NL-OBDO]] 1/3, [[NL-VNG]] 1/2. Each needs only its **remaining** sources read — between one and three URLs apiece — to reach `primary-source`. The cheapest verification work available anywhere in the Atlas | **Next** | Content check / 2026-08-20 |

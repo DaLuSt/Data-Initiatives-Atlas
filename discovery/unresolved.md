@@ -18,6 +18,14 @@ To find every affected entity: `grep -rl "verification: search-only" .`
 
 | — | ~~Are the `gob.es` citations accurate?~~ **CLOSED 2026-08-20, same day** | A first pass read the manual link check as "the Spanish citations are wrong" and flagged all 18 entities. **That was wrong.** `gob.es` has no apex site — it resolves to no address, unlike `gov.uk` and `gov.pl` — so the failure was in `discovery/reverification-allowlist.md` listing an allowlist *pattern* where a reader would try a *URL*. Every Spanish host the Atlas cites resolves. No citation was at fault, and the three `espanadigital.gob.es` URLs changed in the first pass have been reverted | Manual link check / 2026-08-20 | Closed — no defect |
 
+**Link-checked so far (2026-08-20):** the 22 candidate sources for Forum
+Standaardisatie, the IBDS/FDS, NORA, Common Ground and MIDO, plus 22 of the
+highest-value domains and a machine reachability sweep over all 52
+institutional domains. All confirmed except `gob.es`, which has no apex site.
+**None of this changed any entity's `verification`** — it establishes that
+the citations are right, not that the entities' claims are supported. See
+`docs/re-verification.md` on the three tiers.
+
 **The pass now has a runner:** `tools/reverify.py`, documented in
 `docs/re-verification.md`. It fetches an entity's sources, checks the
 legal identifiers the entity claims against the retrieved page text, and

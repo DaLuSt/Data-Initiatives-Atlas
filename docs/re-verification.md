@@ -141,10 +141,17 @@ whole point of the `verification` field.
 
 | | What it establishes | What it does not |
 |---|---|---|
+| **Reachability check** | the host resolves | anything about the page, let alone the entity |
 | **Link check** | the citation points somewhere real | anything about the entity's claims |
 | **Content check** | the page supports the entity's dates, identifiers, relationships and evidence | — |
 
-Only the second is `verification: primary-source`. On **2026-08-20** the
+Only the third is `verification: primary-source`.
+
+The first is the only one that runs **without egress** — a DNS resolution of
+every cited host — and it is worth running precisely because it is cheap. It
+is what would have caught `gob.es` before a human had to: that domain has no
+address at all, while every Spanish host the Atlas actually cites resolves
+fine. A sweep on 2026-08-20 resolved all 52 institutional domains. On **2026-08-20** the
 repository owner manually opened the nineteen highest-value domains in
 `discovery/reverification-allowlist.md` — the Atlas's first primary-source
 signal of any kind. Eighteen resolved to what the Atlas claims; `gob.es` did

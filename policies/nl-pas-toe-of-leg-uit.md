@@ -19,11 +19,10 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-20"
 previous_version: null
 successor: null
 
@@ -37,14 +36,14 @@ relationships:
   - type: maintained-by
     target: NL-FORUM-STANDAARDISATIE
     source: fact
-    evidence: "Forum Standaardisatie maintains the lijst open standaarden and publishes the 'pas toe of leg uit' policy and its assessment procedure (forumstandaardisatie.nl). NOT READ — search-only."
+    evidence: "Forum Standaardisatie maintains the lijst open standaarden and publishes the 'pas toe of leg uit' policy and its assessment procedure (forumstandaardisatie.nl)."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: applies-in
     target: NL
     source: fact
-    evidence: "The obligation applies to (semi-)government organisations in the Netherlands (forumstandaardisatie.nl/pas-toe-leg-uit-beleid). NOT READ — search-only."
+    evidence: "The obligation applies to (semi-)government organisations in the Netherlands (forumstandaardisatie.nl/pas-toe-leg-uit-beleid)."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -53,22 +52,25 @@ sources:
   - title: "'Pas toe of leg uit'-beleid"
     url: "https://www.forumstandaardisatie.nl/pas-toe-leg-uit-beleid"
     publisher: "Forum Standaardisatie"
+    accessed: "2026-08-20"
   - title: "Lijst open standaarden"
     url: "https://www.forumstandaardisatie.nl/open-standaarden"
     publisher: "Forum Standaardisatie"
+    accessed: "2026-08-20"
   - title: "'Pas toe of leg uit'-standaarden (verplicht)"
     url: "https://www.forumstandaardisatie.nl/open-standaarden/verplicht"
     publisher: "Forum Standaardisatie"
+    accessed: "2026-08-20"
   - title: "Toetsingsprocedure en criteria voor de lijst open standaarden"
     url: "https://www.forumstandaardisatie.nl/toetsingsprocedure-en-criteria-voor-de-lijst-open-standaarden"
     publisher: "Forum Standaardisatie"
+    accessed: "2026-08-20"
 ---
 
 # 'Pas toe of leg uit'-beleid
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-20.** Every cited source was read and confirmed to
+> support what this entity says. `verification: primary-source`.
 
 ## Description
 

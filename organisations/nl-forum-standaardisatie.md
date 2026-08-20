@@ -50,9 +50,11 @@ sources:
   - title: "Lijst open standaarden"
     url: "https://www.forumstandaardisatie.nl/open-standaarden"
     publisher: "Forum Standaardisatie"
+    accessed: "2026-08-20"
   - title: "Toetsingsprocedure en criteria voor de lijst open standaarden"
     url: "https://www.forumstandaardisatie.nl/toetsingsprocedure-en-criteria-voor-de-lijst-open-standaarden"
     publisher: "Forum Standaardisatie"
+    accessed: "2026-08-20"
 ---
 
 # Forum Standaardisatie

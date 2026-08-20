@@ -364,8 +364,16 @@ def review_entity(e: EntityFile, timeout: float, offline: bool) -> EntityReport:
 
 
 # ── writing back ─────────────────────────────────────────────────────────
-def apply_verification(path: Path, retrieved_urls: set[str], today: str) -> list[str]:
+def apply_verification(path: Path, retrieved_urls: set[str], today: str,
+                       set_verification: bool = True) -> list[str]:
     """Stamp the frontmatter after a human has judged the report.
+
+    `set_verification=False` stamps `accessed:` on the sources that were
+    confirmed and leaves `verification:` alone. That is the **partial
+    coverage** case: some of an entity's sources have been read and some have
+    not, so the entity is not `primary-source` yet, but the reading that was
+    done should not be thrown away. Six entities were in exactly this state
+    when the first content check landed on 2026-08-20.
 
     Edits the raw text rather than round-tripping the YAML, because dumping
     would reflow every hand-written `evidence:` block in the file and bury the
@@ -379,13 +387,14 @@ def apply_verification(path: Path, retrieved_urls: set[str], today: str) -> list
     text = path.read_text(encoding="utf-8")
     changes: list[str] = []
 
-    new_text, n = re.subn(r"(?m)^verification:\s*\S+\s*$",
-                          "verification: primary-source", text, count=1)
-    if n and new_text != text:
-        changes.append("verification \u2192 primary-source")
-        text = new_text
+    if set_verification:
+        new_text, n = re.subn(r"(?m)^verification:\s*\S+\s*$",
+                              "verification: primary-source", text, count=1)
+        if n and new_text != text:
+            changes.append("verification \u2192 primary-source")
+            text = new_text
 
-    if re.search(r"(?m)^last_verified:", text):
+    if set_verification and re.search(r"(?m)^last_verified:", text):
         text, n = re.subn(r"(?m)^last_verified:\s*.*$",
                           f'last_verified: "{today}"', text, count=1)
         if n:

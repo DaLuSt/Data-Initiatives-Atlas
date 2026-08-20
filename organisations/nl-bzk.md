@@ -40,6 +40,7 @@ sources:
   - title: "Governance Meerjarenprogramma Infrastructuur Digitale overheid (MIDO)"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/mido/governance/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
+    accessed: "2026-08-20"
   - title: "5.2 Logius — Memorie van toelichting"
     url: "https://www.rijksfinancien.nl/memorie-van-toelichting/2022/owb/vii/onderdeel/1060049"
     publisher: "Ministerie van Financiën"

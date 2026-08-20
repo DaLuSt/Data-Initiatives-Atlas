@@ -59,6 +59,22 @@ LINK_CHECKED = {
     "gov.cz": _LC_OK, "gov.pt": _LC_OK, "public.lu": _LC_OK,
 }
 
+# Reachability sweep, 2026-08-20. Every institutional domain was resolved at
+# both the apex and `www.`. This is the weakest of the three checks this
+# repository distinguishes — it establishes that a host exists, nothing about
+# what it serves — but it is the one that can be run without egress, and it is
+# what would have caught `gob.es` before a human had to.
+REACHABILITY = {
+    "date": "2026-08-20",
+    "checked": 52,
+    "resolved": 52,
+    # Apex has no address; only the www. host does. Not a defect — the Atlas
+    # cites www./rm. hosts under all three — but worth recording so nobody
+    # repeats the gob.es inference from an apex that does not answer.
+    "www_only": ("coe.int", "gesetze-im-internet.de",
+                 "verwaltungsvorschriften-im-internet.de"),
+}
+
 _HOST_RE = re.compile(r"^https?://([^/\s]+)", re.I)
 
 # Suffixes where the registrable domain needs three labels, not two.
@@ -212,6 +228,23 @@ def render_markdown(d: dict) -> str:
     w("")
     w("Government, EU, UN and standards-body sources — the ones that carry "
       "evidential weight.")
+    w("")
+    r = REACHABILITY
+    w(f"**Reachability sweep, {r['date']}: {r['resolved']} of {r['checked']} "
+      f"resolve.** Every domain below was resolved at both the apex and "
+      f"`www.`, and none is a dead namespace — `gob.es` remains the only one "
+      f"of those in the Atlas.")
+    w("")
+    w("Three resolve at `www.` but not at the apex: " +
+      ", ".join(f"`{x}`" for x in r["www_only"]) +
+      ". That is not a defect — the Atlas cites `www.` or `rm.` hosts under "
+      "all three — but it is recorded so that nobody repeats the `gob.es` "
+      "inference from an apex that does not answer.")
+    w("")
+    w("This is the **weakest** of the three checks named in this file: it "
+      "establishes that a host exists, and nothing about what it serves. It is "
+      "also the only one that runs without egress, and it is what would have "
+      "caught `gob.es` before a human had to.")
     w("")
     w("```")
     for x in inst:

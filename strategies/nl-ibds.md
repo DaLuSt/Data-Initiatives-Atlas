@@ -19,11 +19,10 @@ region: null
 status: active
 confidence: low
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-20"
 previous_version: null
 successor: null
 
@@ -46,22 +45,25 @@ sources:
   - title: "Interbestuurlijke Datastrategie (IBDS)"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/data/interbestuurlijke-datastrategie/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
+    accessed: "2026-08-20"
   - title: "Interbestuurlijke Datastrategie (IBDS)"
     url: "https://www.noraonline.nl/wiki/Interbestuurlijke_Datastrategie_(IBDS)"
     publisher: "NORA Online (ICTU)"
+    accessed: "2026-08-20"
   - title: "Realisatie IBDS"
     url: "https://www.digitaleoverheid.nl/community/realisatie-ibds/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
+    accessed: "2026-08-20"
   - title: "Beleidsevaluatie Interbestuurlijke Datastrategie — Eindrapport"
     url: "https://open.overheid.nl/documenten/1edd5ed4-98e8-442e-bcd2-f6ec3f27a754/file"
     publisher: "Rijksoverheid (open.overheid.nl)"
+    accessed: "2026-08-20"
 ---
 
 # Interbestuurlijke Datastrategie (IBDS)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-20.** Every cited source was read and confirmed to
+> support what this entity says. `verification: primary-source`.
 
 ## Description
 

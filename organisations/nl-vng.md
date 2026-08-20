@@ -52,6 +52,7 @@ sources:
   - title: "Common Ground"
     url: "https://vng.nl/onderwerpen/common-ground"
     publisher: "Vereniging van Nederlandse Gemeenten (VNG)"
+    accessed: "2026-08-20"
   - title: "Governance Digitale Overheid"
     url: "https://vng.nl/artikelen/governance-digitale-overheid"
     publisher: "Vereniging van Nederlandse Gemeenten (VNG)"
