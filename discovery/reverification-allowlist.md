@@ -17,36 +17,40 @@ The Atlas currently cites **1529 source URLs** across **492 hosts**, collapsing 
 
 Allowing just these covers the bulk of the pass:
 
-| Domain | URLs | Entities | Link check |
-|---|---|---|---|
-| `europa.eu` | 190 | 118 | ✅ 2026-08-20 |
-| `wikipedia.org` | 85 | 85 | ✅ 2026-08-20 |
-| `iso.org` | 67 | 64 | ✅ 2026-08-20 |
-| `coe.int` | 52 | 42 | ✅ 2026-08-20 |
-| `bund.de` | 41 | 23 | ✅ 2026-08-20 |
-| `digitaleoverheid.nl` | 40 | 28 | ✅ 2026-08-20 |
-| `gov.pl` | 40 | 18 | ✅ 2026-08-20 |
-| `gouv.fr` | 39 | 14 | ✅ 2026-08-20 |
-| `government.nl` | 39 | 39 | ✅ 2026-08-20 |
-| `gob.es` | 33 | 18 | ⚠ inaccurate — 2026-08-20 |
-| `overheid.nl` | 27 | 20 | ✅ 2026-08-20 |
-| `belgium.be` | 18 | 10 | ✅ 2026-08-20 |
-| `un.org` | 17 | 10 | ✅ 2026-08-20 |
-| `unece.org` | 17 | 7 | ✅ 2026-08-20 |
-| `cencenelec.eu` | 17 | 10 | ✅ 2026-08-20 |
-| `rijksoverheid.nl` | 16 | 12 | ✅ 2026-08-20 |
-| `bundestag.de` | 15 | 11 | ✅ 2026-08-20 |
-| `boe.es` | 15 | 13 | ✅ 2026-08-20 |
-| `legislation.gov.uk` | 15 | 14 | ✅ 2026-08-20 |
-| `admin.ch` | 13 | 7 |  |
+A domain here is an **allowlist pattern**, not a URL. Most of them also happen to serve a website at the apex; one does not. The `Example host` column is a real host the Atlas cites under that domain, so every row offers something that can actually be opened.
 
-### What the link check is, and what it is not
+| Domain | URLs | Entities | Example host | Opened |
+|---|---|---|---|---|
+| `europa.eu` | 190 | 118 | `data.europa.eu` | ✅ opens |
+| `wikipedia.org` | 85 | 85 | `cs.wikipedia.org` | ✅ opens |
+| `iso.org` | 67 | 64 | `www.iso.org` | ✅ opens |
+| `coe.int` | 52 | 42 | `rm.coe.int` | ✅ opens |
+| `bund.de` | 41 | 23 | `bmds.bund.de` | ✅ opens |
+| `digitaleoverheid.nl` | 40 | 28 | `www.digitaleoverheid.nl` | ✅ opens |
+| `gov.pl` | 40 | 18 | `archiwum.giodo.gov.pl` | ✅ opens |
+| `gouv.fr` | 39 | 14 | `aide.monespacenis2.cyber.gouv.fr` | ✅ opens |
+| `government.nl` | 39 | 39 | `www.government.nl` | ✅ opens |
+| `gob.es` | 33 | 18 | `administracion.gob.es` | ⚠ namespace only — no site at the apex |
+| `overheid.nl` | 27 | 20 | `data.overheid.nl` | ✅ opens |
+| `belgium.be` | 18 | 10 | `bosa.belgium.be` | ✅ opens |
+| `un.org` | 17 | 10 | `ecosoc.un.org` | ✅ opens |
+| `unece.org` | 17 | 7 | `aarhusclearinghouse.unece.org` | ✅ opens |
+| `cencenelec.eu` | 17 | 10 | `standards.cencenelec.eu` | ✅ opens |
+| `rijksoverheid.nl` | 16 | 12 | `www.rijksoverheid.nl` | ✅ opens |
+| `bundestag.de` | 15 | 11 | `dserver.bundestag.de` | ✅ opens |
+| `boe.es` | 15 | 13 | `www.boe.es` | ✅ opens |
+| `legislation.gov.uk` | 15 | 14 | `www.legislation.gov.uk` | ✅ opens |
+| `admin.ch` | 13 | 7 | `www.bfs.admin.ch` |  |
 
-On **2026-08-20** the repository owner manually opened the highest-value domains above and reported that every one resolved to what the Atlas claims it does, **except `gob.es`**.
+### What the 2026-08-20 check found, and what it did not
 
-That is a **link check**, and it is the first primary-source signal of any kind this repository has had. It establishes that the citations point somewhere real. It does **not** establish that any entity's dates, identifiers, relationships or evidence strings are supported by the page cited — that is the content check, and it is what `verification: primary-source` records.
+The repository owner opened all nineteen. Eighteen resolved to what the Atlas claims. **`gob.es` did not — and that is a defect in this report, not in any citation.**
 
-**So no entity's `verification` changed.** Every entity in the Atlas remains `search-only`. Conflating the two would be the exact overclaim the field exists to prevent.
+Spain's government namespace has **no apex site**: `gob.es` resolves to no address at all, unlike `gov.uk` and `gov.pl`, which are both real websites as well as namespaces. Every Spanish host the Atlas actually cites — `datos.gob.es`, `administracion.gob.es`, `digital.gob.es`, `espanadigital.gob.es` and the rest — resolves and works. Hence the `Example host` column.
+
+What the check **does** establish is that these citations point somewhere real. It does **not** establish that any entity's dates, identifiers, relationships or evidence strings are supported by the page cited — that is the content check, and it is what `verification: primary-source` records.
+
+**So no entity's `verification` changed.** Every entity in the Atlas remains `search-only`.
 
 ## Institutional domains
 
