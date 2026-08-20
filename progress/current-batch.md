@@ -1,9 +1,120 @@
 # Current Batch
 
-**Status:** No batch in progress. **Convention 108 and 108+** was completed
-on 2026-08-19.
+**Status:** No batch in progress. **The re-verification runner** was
+completed on 2026-08-19.
 
-## Convention 108 and 108+
+## The re-verification runner
+
+`tools/reverify.py` — the missing half of a pass the repository has described
+since Batch 1 and never had a way to run. **443 of 450 entities** have never
+had a cited source read.
+
+No entity content changed in this batch. 450 entities, 5,090 edges, unchanged.
+
+### What it does
+
+- fetches each `sources[].url`, honouring `HTTPS_PROXY` and the system CA
+  bundle;
+- extracts the entity's **checkable claims** and looks for each on the
+  retrieved page;
+- reports a verdict — `BLOCKED`, `UNREACHABLE`, `NEEDS REVIEW`,
+  `CORROBORATED`, `NO SOURCES`;
+- on `--write`, stamps `accessed:` on the sources that actually came back,
+  sets `last_verified:`, and flips `verification:` to `primary-source`.
+
+### The check exists because of one specific near-miss
+
+A search returned **BWBR0007376** for the Kadasterwet. That identifier is the
+**Archiefwet 1995**.
+
+A wrong identifier in this field **does not 404** — it silently returns
+another real act. Fetching the page succeeds and looks entirely convincing.
+The only thing that catches it is checking the page for the identifier the
+entity *claims*, which is what the tool does and what a human skim-reading a
+plausible page would not.
+
+That case is a test: `test_the_near_miss_this_tool_exists_for`.
+
+### What it deliberately does not do
+
+**Corroboration is not verification.** A `CORROBORATED` verdict means the
+identifiers are on the pages. It says nothing about whether the entity's
+dates, description, relationships or evidence strings are right — the part
+that matters, and the part only a reader can do.
+
+So: `--write` takes exactly one `--id`, refuses on `BLOCKED` and
+`UNREACHABLE`, refuses when a claim went uncorroborated unless `--force`, and
+never touches `confidence`. Raising confidence stays a hand judgment, gated by
+the existing rule that `confidence: high` cannot sit on a `search-only`
+entity.
+
+### TLS is not negotiable
+
+The tool has no switch to relax certificate verification, and
+`test_source_has_no_verification_escape_hatch` asserts that against the
+module's **syntax tree** — not its text.
+
+That distinction was not academic. The first version of the test did a
+substring search and failed on the module's own prose about never disabling
+verification. A text search would also have passed happily on
+`# verify=False` in a comment while missing `ctx.verify_mode = x` where
+`x = ssl.CERT_NONE`. The AST version checks what the code does.
+
+A `primary-source` claim made over an unverified connection is worth less than
+the `search-only` claim it replaced.
+
+### Run against the priority seven
+
+The seven Dutch register statutes, flagged high-priority in
+`discovery/unresolved.md` precisely because of the BWBR problem:
+
+```
+BLOCKED: 7
+```
+
+Every source, every statute. That is the correct output for this environment:
+`curl "$HTTPS_PROXY/__agentproxy/status"` reports `403 to CONNECT` for every
+host. The tool degrades to a truthful report rather than a crash or a false
+pass, and it exits `1` so a sweep cannot be mistaken for success.
+
+`discovery/reverification-allowlist.md` was regenerated and is the list of
+hosts to request: **1,500 URLs across 486 hosts, 353 registrable domains**.
+`europa.eu` alone unblocks 80 entities.
+
+
+### ⚠ CI caught what local testing could not
+
+The first push failed on GitHub Actions with `PermissionError: [Errno 13]
+Permission denied: '/root/.ccr/ca-bundle.crt'`.
+
+`Path.exists()` **raises** rather than returning `False` when a parent
+directory is unreadable. The agent proxy's CA bundle lives under `/root/`,
+which is readable in the container this repository is normally worked in and
+**not** readable by the `runner` user in CI. Every local run passed; the
+failure needed a machine that simply does not have the file.
+
+Extra trust anchors are an optimisation for one environment, and the fix is
+that they can no longer break the tool in another: `_readable()` returns
+`False` on any `OSError` instead of propagating it.
+
+Two regression tests were added, and the guard was confirmed load-bearing by
+re-creating the old unguarded implementation and watching it reproduce the CI
+failure under the same mocks that the new one survives. 29 → **31 tests**.
+
+### Verification
+
+- `tools/test_reverify.py` — **31 tests**, no network, added to both CI
+  workflows
+- `validation/run_all.py` — 5/5
+- `tools/test_build_graph.py` — 41 OK
+- `tools/test_ui.mjs` — 81/81
+- The write path was exercised on a copy of a real entity: frontmatter
+  stamped, sources and relationships preserved, **body byte-identical**, and
+  the result re-parses.
+
+`docs/re-verification.md` is the procedure, linked from the README.
+
+## Convention 108 and 108+ — previous batch
 
 The first item on the research queue after the European country batch, and
 the one that came with a correction to how the Atlas presented European data

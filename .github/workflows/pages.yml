@@ -63,6 +63,11 @@ jobs:
       - name: Test the graph generator
         run: python tools/test_build_graph.py
 
+      # The re-verification runner. Pure-function tests only — no network, so
+      # this passes identically on a runner with egress and one without.
+      - name: Test the re-verification runner
+        run: python tools/test_reverify.py
+
       - name: Generate the graph
         env:
           ATLAS_BRANCH: ${{ github.event.repository.default_branch }}

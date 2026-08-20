@@ -3,15 +3,15 @@
 > **Generated file — do not hand-edit.** Regenerate with
 > `python tools/source_hosts.py --markdown -o discovery/reverification-allowlist.md`
 
-Generated: 2026-08-19
+Generated: 2026-08-20
 
 ## Why this exists
 
-**389 of the Atlas's 396 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
+**443 of the Atlas's 450 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
 
 Closing that debt — the re-verification pass — needs outbound HTTPS to the hosts those URLs point at. In an environment with a restricted egress policy, this is the allowlist to request. A denial shows up as `403 to CONNECT` from the proxy, which is an environment-level network policy and cannot be changed from inside a session. See `discovery/unresolved.md` for the standing record of the sourcing debt.
 
-The Atlas currently cites **1276 source URLs** across **474 hosts**, collapsing to **344 registrable domains**.
+The Atlas currently cites **1500 source URLs** across **486 hosts**, collapsing to **353 registrable domains**.
 
 ## Highest value first
 
@@ -19,26 +19,26 @@ Allowing just these covers the bulk of the pass:
 
 | Domain | URLs | Entities |
 |---|---|---|
-| `europa.eu` | 138 | 80 |
-| `wikipedia.org` | 70 | 70 |
+| `europa.eu` | 188 | 116 |
+| `wikipedia.org` | 79 | 79 |
+| `iso.org` | 67 | 64 |
+| `coe.int` | 49 | 41 |
 | `bund.de` | 41 | 23 |
 | `digitaleoverheid.nl` | 40 | 28 |
 | `gov.pl` | 40 | 18 |
-| `gouv.fr` | 36 | 13 |
-| `gob.es` | 30 | 16 |
+| `gouv.fr` | 39 | 14 |
+| `government.nl` | 39 | 39 |
+| `gob.es` | 33 | 18 |
 | `overheid.nl` | 27 | 20 |
-| `iso.org` | 23 | 20 |
+| `belgium.be` | 18 | 10 |
 | `un.org` | 17 | 10 |
-| `belgium.be` | 17 | 9 |
 | `unece.org` | 17 | 7 |
 | `cencenelec.eu` | 17 | 10 |
 | `rijksoverheid.nl` | 16 | 12 |
 | `bundestag.de` | 15 | 11 |
+| `boe.es` | 15 | 13 |
 | `legislation.gov.uk` | 15 | 14 |
-| `boe.es` | 14 | 12 |
 | `admin.ch` | 13 | 7 |
-| `eerstekamer.nl` | 13 | 13 |
-| `forumstandaardisatie.nl` | 12 | 5 |
 
 ## Institutional domains
 
@@ -52,8 +52,10 @@ bio-overheid.nl
 blog.gov.uk
 bund.de
 cencenelec.eu
+coe.int
 destatis.de
 digitaleoverheid.nl
+efta.int
 europa.eu
 fitko.de
 forumstandaardisatie.nl
@@ -203,6 +205,7 @@ edustandaard.nl
 eerstekamer.nl
 eosc.eu
 epc.ac.uk
+epic.org
 errin.eu
 esdn.eu
 eubelius.com
@@ -214,6 +217,7 @@ europeansources.info
 eversheds-sutherland.com
 ey.com
 fas.org
+febis.org
 finreg360.com
 forschungsinformationssystem.de
 fraunhofer.de
@@ -243,7 +247,9 @@ health-ri.nl
 hessen.de
 hoganlovells.com
 hypotheses.org
+iapp.org
 iberley.es
+ibpt.be
 ico.org.uk
 ictu.nl
 ietf.org
@@ -331,6 +337,7 @@ prodwaregroup.com
 prosoz.de
 protecciondata.es
 protecciondatos-lopd.com
+pubaffairsbruxelles.eu
 public.lu
 publictechnology.net
 quality.de
@@ -348,6 +355,7 @@ safeonweb.be
 sciencedirect.com
 secjur.com
 security-insider.de
+senat.fr
 sgrs.be
 smartcountry.berlin
 snl.no
@@ -394,6 +402,7 @@ walhalla.de
 whitecase.com
 wikipedia.org
 williamfry.com
+wto.org
 xoev.de
 zakonyprolidi.cz
 ```

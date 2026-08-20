@@ -51,7 +51,9 @@ hand-maintained.
 
 📖 [`docs/graph.md`](docs/graph.md) is a tour of the site ·
 [`docs/graph-architecture.md`](docs/graph-architecture.md) explains how
-entity files become nodes and edges.
+entity files become nodes and edges ·
+[`docs/re-verification.md`](docs/re-verification.md) is the procedure for
+turning `search-only` entities into read ones.
 
 ---
 
@@ -372,9 +374,12 @@ data-initiatives-atlas/
 ├── validation/
 ├── progress/
 │
-├── tools/                  # graph generator + its tests
+├── tools/                  # graph generator, re-verification runner, tests
 │   ├── build_graph.py
+│   ├── reverify.py         # runs the re-verification pass over an entity's sources
+│   ├── source_hosts.py     # generates the egress allowlist that pass needs
 │   ├── test_build_graph.py
+│   ├── test_reverify.py
 │   └── test_ui.mjs
 │
 ├── site/                   # the published GitHub Pages application
@@ -389,6 +394,7 @@ data-initiatives-atlas/
     ├── graph.md
     ├── graph-architecture.md
     ├── graph-development.md
+    ├── re-verification.md
     └── github-pages.md
 ```
 
