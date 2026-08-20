@@ -1,9 +1,93 @@
 # Current Batch
 
-**Status:** No batch in progress. **The re-verification runner** was
-completed on 2026-08-19.
+**Status:** No batch in progress. **Explorer depth** was completed on
+2026-08-20.
 
-## The re-verification runner
+## Explorer depth — 4 hops, and the counts to go with it
+
+Two changes to the Entity Explorer's neighbourhood control, both driven by
+measuring the graph rather than guessing at it. No entity content changed.
+
+### Why 4, and not 6
+
+The question was whether to raise the ceiling from 3 to 6. Measured across
+all 450 entities, median entities reached from a seed:
+
+| hops | relationships only (default) | all edges (wikilinks on) |
+|---|---|---|
+| 1 | 3 (1%) | 11 (2%) |
+| 2 | 14 (3%) | 295 (**66%**) |
+| 3 | 34 (8%) | 424 (**94%**) |
+| 4 | 108 (24%) | 450 (**100%**) |
+| 5 | 214 (47%) | 450 |
+| 6 | **296 (66%)** | 450 |
+
+Two conclusions fall straight out. **With wikilinks on the control is already
+maxed at 3** — four hops reaches the entire graph from the median seed, so
+options 4, 5 and 6 would be three ways to spell "everything". And **on the
+default edge set 6 hops shows two-thirds of the Atlas**, which is not a
+neighbourhood.
+
+**4 is where the real chains finish.** Every signature descent in the Atlas
+completes inside it:
+
+| | hops |
+|---|---|
+| [[EU-GDPR]] → [[NL-AP]] | 1 |
+| [[INTL-DCAT]] → [[NL-DCAT-AP-NL]] | 2 |
+| [[INTL-W3C]] → [[NL-DCAT-AP-NL]] | 3 |
+| [[UN-AARHUS]] → [[NL-AP]] | 3 |
+| [[UY]] → [[NL]] | 3 |
+| [[INTL-CONVENTION-108-PLUS]] → [[FR-CNIL]] | **4** |
+
+So 4 buys the full treaty → protocol → regulation → authority descent at a
+median of 108 entities, still a readable subset. Five and six buy scale and
+nothing else.
+
+### The counts matter more than the extra hop
+
+Each option now states what it would show, recomputed against the current
+focus **and the current filters**:
+
+```
+1 hop — direct links — 3 entities        [1% of the Atlas]
+2 hops — 36 entities                     [8% of the Atlas]
+3 hops — 105 entities                    [23% of the Atlas]
+4 hops — the longest chains — 188 entities  [42% of the Atlas]
+```
+
+This graph is **hub-heavy**: almost every entity touches its country anchor,
+[[EU]], [[UN]] or a domain node, so one extra hop through a hub can multiply
+the result several times over. Depth is not a dial a reader can predict, and
+the useful moment for a number is *before* the click, not in the status line
+afterwards. A depth that would show more than half the Atlas says so beneath
+the control.
+
+### The lever is still the wrong one
+
+Both changes work around the real problem rather than fixing it. The reason
+two hops explodes to 66% with wikilinks on is that a path `A → EU → B` exists
+between almost any pair — and that path means "both are European", not that
+A and B are related.
+
+**Not traversing *through* anchors and domain nodes** would make depth
+meaningful instead of explosive, and would make wikilinks-on mode usable at
+depth, which it currently is not. That is a genuine design change and is
+queued rather than taken unilaterally.
+
+### Verification
+
+- `tools/test_ui.mjs` — 81 → **86 checks**, five of them new: the ceiling is
+  4; every option carries a count; the counts are cumulative; **choosing a
+  depth renders exactly the count its label promised**; and the counts move
+  when filters do.
+- `validation/run_all.py` 5/5 · `tools/test_build_graph.py` 41 OK ·
+  `tools/test_reverify.py` 35 OK
+
+The traversal was extracted into a shared `neighbourhood()` helper so the
+control and the renderer cannot disagree about what a hop is.
+
+## The re-verification runner — previous batch
 
 `tools/reverify.py` — the missing half of a pass the repository has described
 since Batch 1 and never had a way to run. **443 of 450 entities** have never

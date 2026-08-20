@@ -237,9 +237,27 @@ The default view is deliberately not "everything at full detail":
    with no simulation to converge, so layout cost does not explode and the
    same repository always produces the same picture.
 4. **Entity Explorer** — a bounded breadth-first traversal to a chosen depth
-   (1–3 hops) over the *filtered* edge set. This is the answer to "the Atlas
+   (1–4 hops) over the *filtered* edge set. This is the answer to "the Atlas
    may eventually contain thousands of nodes": you look at a neighbourhood,
    not the hairball.
+
+   **The ceiling is 4 on purpose.** Every chain the Atlas is built to show
+   completes inside it — `INTL-CONVENTION-108-PLUS` to a national data
+   protection authority is exactly 4 hops and is the longest of them; the
+   W3C→EU→national DCAT descent is 3, and Aarhus to a national DPA is 3.
+   Past 4 the numbers stop meaning "neighbourhood": measured across all 450
+   entities on the typed-relationship edge set, the median seed reaches 24%
+   of the graph at 4 hops, 47% at 5 and 66% at 6. With wikilinks on it is
+   worse — 66% at *2* hops and 94% at 3 — so above 3 in that mode the control
+   would be three ways to spell "everything".
+
+   **Each option states the count it would produce**, recomputed against the
+   current focus and filters. That is not decoration: this graph is
+   hub-heavy, almost every entity touches its country anchor, `EU`, `UN` or a
+   domain node, and one extra hop through a hub can multiply the result
+   several times over. Depth is not a dial a reader can predict, so the
+   control answers instead of making them guess and re-render. A depth that
+   would show more than half the Atlas says so beneath the control.
 5. **Search-first** — the search box, deep links and List view all land the
    user on a specific entity rather than on the whole graph.
 6. **Rendering hints** — `textureOnViewport`, `hideEdgesOnViewport`, no

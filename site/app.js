@@ -15,6 +15,16 @@
   var view = "atlas";      // atlas | explorer | compare | list
   var focusId = null;
   var depth = 2;
+  // 4 is the ceiling on purpose. Every chain the Atlas is built to show
+  // completes inside it — Convention 108+ to a national data protection
+  // authority is exactly 4 hops, and it is the longest of them. Past 4 the
+  // median neighbourhood is 47% of the graph at 5 hops and 66% at 6, which is
+  // not a neighbourhood, and with wikilinks on 4 already reaches everything.
+  var MAX_DEPTH = 4;
+  var DEPTH_LABEL = {
+    1: "1 hop — direct links", 2: "2 hops", 3: "3 hops",
+    4: "4 hops — the longest chains"
+  };
   var filters = {          // Set per facet; empty Set = "all"
     level: new Set(), country: new Set(), region: new Set(),
     type: new Set(), status: new Set(), domain: new Set(),
@@ -241,7 +251,8 @@
     $("view-list").addEventListener("click", function () { setView("list"); });
 
     $("depth").addEventListener("change", function (e) {
-      depth = parseInt(e.target.value, 10) || 2;
+      depth = Math.min(MAX_DEPTH, Math.max(1, parseInt(e.target.value, 10) || 2));
+      updateDepthLabels();
       if (view === "explorer") refresh();
     });
 
@@ -431,6 +442,90 @@
     return true;
   }
 
+  /** Breadth-first neighbourhood over a filtered edge set (brief §11/§12).
+   *  Returns { id: hopDistance }, focus included at 0. */
+  function neighbourhood(edges, startId, maxDepth) {
+    var adj = Object.create(null);
+    edges.forEach(function (e) {
+      (adj[e.source] || (adj[e.source] = [])).push(e.target);
+      (adj[e.target] || (adj[e.target] = [])).push(e.source);
+    });
+    var seen = Object.create(null); seen[startId] = 0;
+    var frontier = [startId];
+    for (var d = 0; d < maxDepth; d++) {
+      var next = [];
+      frontier.forEach(function (id) {
+        (adj[id] || []).forEach(function (nb) {
+          if (!(nb in seen)) { seen[nb] = d + 1; next.push(nb); }
+        });
+      });
+      frontier = next;
+      if (!frontier.length) break;
+    }
+    return seen;
+  }
+
+  /** How many entities each depth would show, for the current focus and
+   *  filters — cumulative, so index 2 is "everything within 2 hops".
+   *
+   *  This graph is hub-heavy: almost every entity touches its country anchor,
+   *  EU, UN or a domain node, so a neighbourhood can go from a dozen entities
+   *  to most of the Atlas in one extra hop. With wikilinks on, the median
+   *  entity reaches 66% of the graph at 2 hops and 94% at 3. Depth is
+   *  therefore not a dial a reader can predict, which is why the control
+   *  states the answer instead of making them guess and re-render. */
+  function depthCounts() {
+    var okNodes = Object.create(null);
+    G.nodes.forEach(function (n) { if (passesNodeFilters(n)) okNodes[n.id] = n; });
+    if (!focusId || !okNodes[focusId]) return null;
+    var edges = G.edges.filter(function (e) {
+      return passesEdgeFilters(e) && okNodes[e.source] && okNodes[e.target];
+    });
+    var seen = neighbourhood(edges, focusId, MAX_DEPTH);
+    var counts = [];
+    for (var d = 0; d <= MAX_DEPTH; d++) counts[d] = 0;
+    Object.keys(seen).forEach(function (id) {
+      for (var d = seen[id]; d <= MAX_DEPTH; d++) counts[d]++;
+    });
+    return counts;
+  }
+
+  /** Write those counts into the depth control's own option labels.
+   *
+   *  Deliberately on the options rather than in the status line: the status
+   *  line reports what you already chose, and the useful moment is before the
+   *  click. A depth that would show the whole Atlas is worth knowing about
+   *  while it is still an option. */
+  function updateDepthLabels() {
+    var sel = $("depth");
+    if (!sel) return;
+    var counts = depthCounts();
+    var total = G.stats.entities;
+    Array.prototype.forEach.call(sel.options, function (opt) {
+      var d = parseInt(opt.value, 10);
+      var base = DEPTH_LABEL[d] || (d + " hops");
+      if (!counts) { opt.textContent = base; opt.title = ""; return; }
+      var n = counts[d];
+      opt.textContent = base + " — " + n.toLocaleString() +
+        (n === 1 ? " entity" : " entities");
+      opt.title = n === total
+        ? "the whole Atlas"
+        : Math.round((n / total) * 100) + "% of the Atlas";
+    });
+    var hint = $("depth-note");
+    if (hint) {
+      if (!counts) {
+        hint.textContent = "";
+      } else if (counts[depth] === total) {
+        hint.textContent = "At this depth the neighbourhood is the whole Atlas.";
+      } else if (counts[depth] > total / 2) {
+        hint.textContent = "More than half the Atlas — hub nodes connect almost everything.";
+      } else {
+        hint.textContent = "";
+      }
+    }
+  }
+
   /** Nodes+edges for the current view, filters and focus. */
   function currentElements() {
     var hops = null;
@@ -443,24 +538,7 @@
 
     var keep = okNodes;
     if (view === "explorer" && focusId && okNodes[focusId]) {
-      // Neighbourhood traversal over the filtered edge set (brief §11/§12).
-      var adj = Object.create(null);
-      edges.forEach(function (e) {
-        (adj[e.source] || (adj[e.source] = [])).push(e.target);
-        (adj[e.target] || (adj[e.target] = [])).push(e.source);
-      });
-      var seen = Object.create(null); seen[focusId] = 0;
-      var frontier = [focusId];
-      for (var d = 0; d < depth; d++) {
-        var next = [];
-        frontier.forEach(function (id) {
-          (adj[id] || []).forEach(function (nb) {
-            if (!(nb in seen)) { seen[nb] = d + 1; next.push(nb); }
-          });
-        });
-        frontier = next;
-        if (!frontier.length) break;
-      }
+      var seen = neighbourhood(edges, focusId, depth);
       keep = Object.create(null);
       Object.keys(seen).forEach(function (id) { keep[id] = okNodes[id]; });
       edges = edges.filter(function (e) { return keep[e.source] && keep[e.target]; });
@@ -721,6 +799,9 @@
 
   function refresh() {
     if (!cy) return;
+    // Before the early returns: the counts describe the current focus and
+    // filters, and must not go stale behind a view the control is hidden in.
+    updateDepthLabels();
     if (view === "list") { renderList(); return; }
     if (view === "compare") { renderCompare(); return; }
 
