@@ -81,6 +81,67 @@ hosts to request: **1,500 URLs across 486 hosts, 353 registrable domains**.
 `europa.eu` alone unblocks 80 entities.
 
 
+
+### Running it found three more bugs
+
+The first full sweep is what tested this tool, not the unit suite. In order:
+
+1. **`http.client.InvalidURL` crashed the run six minutes in.** A source URL
+   on [[GB-OS]] contained a literal space. On Python 3.11 `InvalidURL`
+   inherits from `HTTPException` and **not** from `ValueError`, so a tidy
+   tuple of expected exception types missed it. One unfetchable source must
+   never take down a sweep of four hundred entities, so the guard is now
+   deliberately broad — and it names a malformed URL as the repository's
+   fault rather than the network's.
+2. **`Request()` construction sat outside the guard**, so a nonsense URL
+   crashed before any handling could apply. Found by the test written for
+   bug 1.
+3. **Nine egress denials were misreported as origin failures.** A plain
+   `http://` URL reaches the proxy as an ordinary forward request, so its
+   refusal comes back as an HTTP **403 response** rather than a failed
+   CONNECT. That is precisely the distinction this tool exists to keep
+   straight. The proxy labels its own refusals with `x-deny-reason`, so that
+   header is now the signal, and the response body is surfaced either way so
+   a reader can check the classification rather than trust it.
+
+The malformed URL also exposed a gap in `validation/validate_sources.py`,
+which checked only that a URL starts with `http`. A URL containing raw
+whitespace **cannot be fetched at all** — it is silently un-re-verifiable,
+which is exactly the debt this repository is trying to pay down. It is now an
+error, and the rule was confirmed to fire by reintroducing the bad URL.
+
+31 → **35 tests**.
+
+### The first full sweep
+
+```
+python tools/reverify.py --search-only --timeout 8
+```
+
+| | |
+|---|---|
+| Entities swept | **443** |
+| Sources attempted | **1,500** |
+| Retrieved | **0** |
+| Refused by egress policy | **1,494** (99.6%) |
+| Other | **6** |
+
+Six minutes; not one page read. The six are three different things, and only
+one is fixable by an allowlist:
+
+- **5 × `github.com`**, refused by the **GitHub** proxy, which scopes a
+  session to its configured repositories. Adding a host will not lift it.
+- **1 × `catedrapsyd.unizar.es`** on [[ES-LO-2-2002]], which **did not
+  resolve at all** while every other host tested resolved to the
+  interceptor — pointing at a genuinely dead host. Recorded in
+  `discovery/unresolved.md` as a citation to replace.
+- **1 entity with no sources**, [[DOMAIN-NATIONAL-SECURITY]], correctly:
+  domains carry no factual claims.
+
+Six entities have **no checkable claims** — [[RO]], [[UA]], [[FR-ETALAB]],
+[[NL-LOGIUS]], [[NL-NICTIZ]], [[NO-ALTINN]]. Short names, no legal
+identifier. The tool reports that rather than passing them silently.
+
 ### ⚠ CI caught what local testing could not
 
 The first push failed on GitHub Actions with `PermissionError: [Errno 13]
@@ -102,7 +163,7 @@ failure under the same mocks that the new one survives. 29 → **31 tests**.
 
 ### Verification
 
-- `tools/test_reverify.py` — **31 tests**, no network, added to both CI
+- `tools/test_reverify.py` — **35 tests**, no network, added to both CI
   workflows
 - `validation/run_all.py` — 5/5
 - `tools/test_build_graph.py` — 41 OK

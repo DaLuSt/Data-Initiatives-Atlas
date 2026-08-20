@@ -14,6 +14,8 @@ one of these — resolve it with a real source, or leave it open.
 To find every affected entity: `grep -rl "verification: search-only" .`
 
 **The worklist for closing this is generated:**
+| [[ES-LO-2-2002]] | Is `catedrapsyd.unizar.es` still a live host? | The first full sweep with `tools/reverify.py` found this cited source **did not resolve at all**, while every other host tested resolved. In this environment all known hosts resolve to the proxy's interceptor, so a non-resolving host points at a genuinely dead one rather than a blocked one. Replace or drop the citation on re-verification. | Full sweep / 2026-08-19 | Open |
+
 **The pass now has a runner:** `tools/reverify.py`, documented in
 `docs/re-verification.md`. It fetches an entity's sources, checks the
 legal identifiers the entity claims against the retrieved page text, and

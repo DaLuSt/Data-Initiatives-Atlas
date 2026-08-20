@@ -86,6 +86,59 @@ class TestMatching(unittest.TestCase):
         self.assertTrue(rv.page_contains(archiefwet_page, "bwbr0007376"))
 
 
+class TestFetchRobustness(unittest.TestCase):
+    def test_a_malformed_url_is_reported_not_raised(self):
+        """One unfetchable source must never take down a sweep.
+
+        A source URL containing a literal space raises `http.client.InvalidURL`,
+        which on Python 3.11 inherits from HTTPException and *not* from
+        ValueError — so the original tuple of expected exception types missed
+        it and the first full sweep of the repository died six minutes in."""
+        result = rv.fetch("https://example.org/a path with spaces.pdf", timeout=1)
+        self.assertFalse(result.ok)
+        self.assertIn("InvalidURL", result.error)
+        self.assertIn("malformed URL", result.error)
+        self.assertFalse(result.blocked, "a bad URL is not an egress block")
+
+    def test_a_proxy_403_is_classified_as_blocked(self):
+        """An egress denial does not always arrive as a failed CONNECT.
+
+        A plain-`http://` URL reaches the proxy as an ordinary forward request,
+        so a refusal comes back as an HTTP 403 that looks exactly like the
+        origin turning us away. The proxy labels its own with `x-deny-reason`;
+        the first full sweep miscounted nine such sources as UNREACHABLE
+        before this was handled."""
+        import email.message, io, urllib.error
+        headers = email.message.Message()
+        headers["x-deny-reason"] = "host_not_allowed"
+        err = urllib.error.HTTPError(
+            "http://example.gob.es/x", 403, "Forbidden", headers,
+            io.BytesIO(b"Host not in allowlist: example.gob.es."))
+        with unittest.mock.patch.object(rv.urllib.request, "urlopen", side_effect=err):
+            result = rv.fetch("http://example.gob.es/x", timeout=1)
+        self.assertTrue(result.blocked)
+        self.assertIn("egress policy", result.error)
+        self.assertIn("host_not_allowed", result.error)
+
+    def test_an_origin_403_is_not_blocked(self):
+        """A 403 without the proxy's marker is the origin's own answer, and
+        calling it an egress block would send someone to fix the wrong thing."""
+        import email.message, io, urllib.error
+        err = urllib.error.HTTPError(
+            "https://example.org/x", 403, "Forbidden", email.message.Message(),
+            io.BytesIO(b"Access denied by the site."))
+        with unittest.mock.patch.object(rv.urllib.request, "urlopen", side_effect=err):
+            result = rv.fetch("https://example.org/x", timeout=1)
+        self.assertFalse(result.blocked)
+        self.assertIn("HTTP 403", result.error)
+        self.assertIn("Access denied by the site", result.error)
+
+    def test_a_nonsense_scheme_is_reported_not_raised(self):
+        result = rv.fetch("not-a-url-at-all", timeout=1)
+        self.assertFalse(result.ok)
+        self.assertTrue(result.error)
+
+
 class TestMarkupStripping(unittest.TestCase):
     def test_tags_are_removed_and_text_kept(self):
         html = "<html><body><p>ETS <b>No. 108</b></p></body></html>"

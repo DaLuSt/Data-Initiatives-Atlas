@@ -54,7 +54,7 @@ sources:
     url: "https://www.ordnancesurvey.co.uk/"
     publisher: "Ordnance Survey"
   - title: "UN-GGIM 11th Session — Agenda item 3, United Kingdom"
-    url: "https://ggim.un.org/meetings/GGIM-committee/11th-Session/documents/Agenda_item-3 - UK.pdf"
+    url: "https://ggim.un.org/meetings/GGIM-committee/11th-Session/documents/Agenda_item-3%20-%20UK.pdf"
     publisher: "United Nations Committee of Experts on Global Geospatial Information Management (UN-GGIM)"
   - title: "The UN-GGIM 14th session: flying the flag"
     url: "https://gdsgeospatial.blog.gov.uk/2024/09/19/the-un-ggim-14th-session-flying-the-flag/"

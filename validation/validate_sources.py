@@ -4,6 +4,7 @@ warning (not a hard failure) when a non-stub entity has no sources at all."""
 
 from __future__ import annotations
 
+import re
 import sys
 
 import common
@@ -47,6 +48,16 @@ def main() -> int:
             url = src.get("url", "")
             if url and not (url.startswith("http://") or url.startswith("https://")):
                 report.error(f"{where}: url '{url}' does not look like a real http(s) URL")
+            # A URL containing raw whitespace or a control character cannot be
+            # fetched: http.client refuses to put it in a request line. Every
+            # such URL is silently un-re-verifiable, which is exactly the debt
+            # this repository is trying to pay down — so it is an error, not a
+            # warning. Found by the first full run of tools/reverify.py, which
+            # it crashed. Percent-encode the offending characters.
+            if url and re.search(r"[\s\x00-\x1f]", url):
+                report.error(f"{where}: url contains whitespace or a control "
+                             f"character and cannot be fetched — percent-encode "
+                             f"it: {url!r}")
 
     return report.print_and_exit_code()
 
