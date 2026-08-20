@@ -52,6 +52,32 @@ gob.es     -> no address associated with hostname
 resolve.** `gob.es` is the sole exception rather than the leading edge of a
 pattern, which is worth knowing before anyone generalises from it.
 
+### A third tier: the reachability check
+
+`gob.es` exposed a gap in how this repository talks about verification. There
+were two named checks; there are really three.
+
+| | Establishes | Runs without egress? |
+|---|---|---|
+| **Reachability** | the host resolves | **yes** |
+| **Link check** | the citation points to what the Atlas claims | no |
+| **Content check** | the page supports the entity's claims → `primary-source` | no |
+
+A reachability sweep on **2026-08-20 resolved all 52 institutional domains**,
+at the apex and at `www.`. Three answer only at `www.` — `coe.int`,
+`gesetze-im-internet.de`, `verwaltungsvorschriften-im-internet.de` — which is
+not a defect, since the Atlas cites `www.` or `rm.` hosts under all three, but
+is recorded so nobody repeats the `gob.es` inference from an apex that does
+not answer.
+
+**`gob.es` remains the only dead namespace in the Atlas.** Twenty-two domains
+have now been opened by hand and fifty-two resolved by machine; exactly one
+does not exist.
+
+The point of naming the weakest tier is that it is the only one available
+here, and it is the one that would have caught `gob.es` before a human had
+to.
+
 ### A wrong first reading, corrected the same day
 
 The first pass read the report as *"the Spanish citations are wrong"* and:

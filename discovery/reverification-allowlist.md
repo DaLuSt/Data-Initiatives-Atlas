@@ -58,6 +58,12 @@ What the check **does** establish is that these citations point somewhere real. 
 
 Government, EU, UN and standards-body sources — the ones that carry evidential weight.
 
+**Reachability sweep, 2026-08-20: 52 of 52 resolve.** Every domain below was resolved at both the apex and `www.`, and none is a dead namespace — `gob.es` remains the only one of those in the Atlas.
+
+Three resolve at `www.` but not at the apex: `coe.int`, `gesetze-im-internet.de`, `verwaltungsvorschriften-im-internet.de`. That is not a defect — the Atlas cites `www.` or `rm.` hosts under all three — but it is recorded so that nobody repeats the `gob.es` inference from an apex that does not answer.
+
+This is the **weakest** of the three checks named in this file: it establishes that a host exists, and nothing about what it serves. It is also the only one that runs without egress, and it is what would have caught `gob.es` before a human had to.
+
 ```
 artificialintelligenceact.eu
 belgif.be
