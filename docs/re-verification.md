@@ -134,6 +134,28 @@ pages. It says nothing about whether the entity's description, dates,
 relationships or evidence strings are right — which is the part that actually
 matters and the part only a reader can do.
 
+## A link check is not a content check
+
+Worth stating plainly, because the two get conflated and the difference is the
+whole point of the `verification` field.
+
+| | What it establishes | What it does not |
+|---|---|---|
+| **Link check** | the citation points somewhere real | anything about the entity's claims |
+| **Content check** | the page supports the entity's dates, identifiers, relationships and evidence | — |
+
+Only the second is `verification: primary-source`. On **2026-08-20** the
+repository owner manually opened the nineteen highest-value domains in
+`discovery/reverification-allowlist.md` and found them all accurate **except
+`gob.es`** — the Atlas's first primary-source signal of any kind. **No
+entity's `verification` changed**, and none should have: a link check upgrades
+what is known about the *citations*, not about the *entities*.
+
+`tools/reverify.py` sits between the two. Its identifier matching is stronger
+than a link check — it confirms the page contains the citation the entity
+claims — and weaker than a content check, which is why its best verdict is
+called `CORROBORATED` and not `VERIFIED`.
+
 ## Completing an entity
 
 Read the pages. Then, for each field the sources support: confirm it, or

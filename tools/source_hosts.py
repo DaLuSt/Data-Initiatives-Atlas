@@ -28,6 +28,22 @@ sys.path.insert(0, str(REPO_ROOT / "validation"))
 
 from common import load_all_entities  # noqa: E402
 
+# Manual link check, 2026-08-20, by the repository owner: each of these was
+# opened and confirmed to resolve to what the Atlas cites it for. `gob.es` was
+# reported as the one inaccurate domain. This is link accuracy only — see the
+# note the report emits beneath the table.
+_LC_OK = "✅ 2026-08-20"
+_LC_BAD = "⚠ inaccurate — 2026-08-20"
+LINK_CHECKED = {
+    "europa.eu": _LC_OK, "wikipedia.org": _LC_OK, "iso.org": _LC_OK,
+    "coe.int": _LC_OK, "bund.de": _LC_OK, "digitaleoverheid.nl": _LC_OK,
+    "gov.pl": _LC_OK, "gouv.fr": _LC_OK, "government.nl": _LC_OK,
+    "gob.es": _LC_BAD,
+    "overheid.nl": _LC_OK, "belgium.be": _LC_OK, "un.org": _LC_OK,
+    "unece.org": _LC_OK, "cencenelec.eu": _LC_OK, "rijksoverheid.nl": _LC_OK,
+    "bundestag.de": _LC_OK, "boe.es": _LC_OK, "legislation.gov.uk": _LC_OK,
+}
+
 _HOST_RE = re.compile(r"^https?://([^/\s]+)", re.I)
 
 # Suffixes where the registrable domain needs three labels, not two.
@@ -132,10 +148,28 @@ def render_markdown(d: dict) -> str:
     w("")
     w("Allowing just these covers the bulk of the pass:")
     w("")
-    w("| Domain | URLs | Entities |")
-    w("|---|---|---|")
+    w("| Domain | URLs | Entities | Link check |")
+    w("|---|---|---|---|")
     for dom, n in top:
-        w(f"| `{dom}` | {n} | {len(d['domain_entities'][dom])} |")
+        mark = LINK_CHECKED.get(dom, "")
+        w(f"| `{dom}` | {n} | {len(d['domain_entities'][dom])} | {mark} |")
+    w("")
+    w("### What the link check is, and what it is not")
+    w("")
+    w("On **2026-08-20** the repository owner manually opened the highest-value "
+      "domains above and reported that every one resolved to what the Atlas "
+      "claims it does, **except `gob.es`**.")
+    w("")
+    w("That is a **link check**, and it is the first primary-source signal of "
+      "any kind this repository has had. It establishes that the citations "
+      "point somewhere real. It does **not** establish that any entity's dates, "
+      "identifiers, relationships or evidence strings are supported by the page "
+      "cited — that is the content check, and it is what "
+      "`verification: primary-source` records.")
+    w("")
+    w("**So no entity's `verification` changed.** Every entity in the Atlas "
+      "remains `search-only`. Conflating the two would be the exact overclaim "
+      "the field exists to prevent.")
     w("")
     w("## Institutional domains")
     w("")

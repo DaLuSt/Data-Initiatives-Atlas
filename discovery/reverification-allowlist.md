@@ -7,38 +7,46 @@ Generated: 2026-08-20
 
 ## Why this exists
 
-**443 of the Atlas's 450 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
+**454 of the Atlas's 461 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
 
 Closing that debt — the re-verification pass — needs outbound HTTPS to the hosts those URLs point at. In an environment with a restricted egress policy, this is the allowlist to request. A denial shows up as `403 to CONNECT` from the proxy, which is an environment-level network policy and cannot be changed from inside a session. See `discovery/unresolved.md` for the standing record of the sourcing debt.
 
-The Atlas currently cites **1500 source URLs** across **486 hosts**, collapsing to **353 registrable domains**.
+The Atlas currently cites **1529 source URLs** across **492 hosts**, collapsing to **359 registrable domains**.
 
 ## Highest value first
 
 Allowing just these covers the bulk of the pass:
 
-| Domain | URLs | Entities |
-|---|---|---|
-| `europa.eu` | 188 | 116 |
-| `wikipedia.org` | 79 | 79 |
-| `iso.org` | 67 | 64 |
-| `coe.int` | 49 | 41 |
-| `bund.de` | 41 | 23 |
-| `digitaleoverheid.nl` | 40 | 28 |
-| `gov.pl` | 40 | 18 |
-| `gouv.fr` | 39 | 14 |
-| `government.nl` | 39 | 39 |
-| `gob.es` | 33 | 18 |
-| `overheid.nl` | 27 | 20 |
-| `belgium.be` | 18 | 10 |
-| `un.org` | 17 | 10 |
-| `unece.org` | 17 | 7 |
-| `cencenelec.eu` | 17 | 10 |
-| `rijksoverheid.nl` | 16 | 12 |
-| `bundestag.de` | 15 | 11 |
-| `boe.es` | 15 | 13 |
-| `legislation.gov.uk` | 15 | 14 |
-| `admin.ch` | 13 | 7 |
+| Domain | URLs | Entities | Link check |
+|---|---|---|---|
+| `europa.eu` | 190 | 118 | ✅ 2026-08-20 |
+| `wikipedia.org` | 85 | 85 | ✅ 2026-08-20 |
+| `iso.org` | 67 | 64 | ✅ 2026-08-20 |
+| `coe.int` | 52 | 42 | ✅ 2026-08-20 |
+| `bund.de` | 41 | 23 | ✅ 2026-08-20 |
+| `digitaleoverheid.nl` | 40 | 28 | ✅ 2026-08-20 |
+| `gov.pl` | 40 | 18 | ✅ 2026-08-20 |
+| `gouv.fr` | 39 | 14 | ✅ 2026-08-20 |
+| `government.nl` | 39 | 39 | ✅ 2026-08-20 |
+| `gob.es` | 33 | 18 | ⚠ inaccurate — 2026-08-20 |
+| `overheid.nl` | 27 | 20 | ✅ 2026-08-20 |
+| `belgium.be` | 18 | 10 | ✅ 2026-08-20 |
+| `un.org` | 17 | 10 | ✅ 2026-08-20 |
+| `unece.org` | 17 | 7 | ✅ 2026-08-20 |
+| `cencenelec.eu` | 17 | 10 | ✅ 2026-08-20 |
+| `rijksoverheid.nl` | 16 | 12 | ✅ 2026-08-20 |
+| `bundestag.de` | 15 | 11 | ✅ 2026-08-20 |
+| `boe.es` | 15 | 13 | ✅ 2026-08-20 |
+| `legislation.gov.uk` | 15 | 14 | ✅ 2026-08-20 |
+| `admin.ch` | 13 | 7 |  |
+
+### What the link check is, and what it is not
+
+On **2026-08-20** the repository owner manually opened the highest-value domains above and reported that every one resolved to what the Atlas claims it does, **except `gob.es`**.
+
+That is a **link check**, and it is the first primary-source signal of any kind this repository has had. It establishes that the citations point somewhere real. It does **not** establish that any entity's dates, identifiers, relationships or evidence strings are supported by the page cited — that is the content check, and it is what `verification: primary-source` records.
+
+**So no entity's `verification` changed.** Every entity in the Atlas remains `search-only`. Conflating the two would be the exact overclaim the field exists to prevent.
 
 ## Institutional domains
 
@@ -114,6 +122,7 @@ aftermarket-trends.de
 agoria.be
 aivd.nl
 akademicka.pl
+aki.ee
 alston.com
 altinn.no
 anabad.org
@@ -196,6 +205,7 @@ dnb.nl
 dnv.de
 dsgvo-gesetz.de
 dssc.eu
+e-estonia.com
 e-recht24.de
 earonline.nl
 ecija.com
@@ -301,6 +311,7 @@ netzpolitik.org
 netzwoche.ch
 nictiz.nl
 niedersachsen.de
+niis.org
 nis-2-directive.com
 nisd2.eu
 njb.nl
@@ -345,6 +356,7 @@ rdw.nl
 red.es
 regjeringen.no
 rehm-verlag.de
+ria.ee
 rijksbegroting.nl
 rijksfinancien.nl
 rlp.de
@@ -353,6 +365,7 @@ rvig.nl
 sachsen-anhalt.de
 safeonweb.be
 sciencedirect.com
+scoop4c.eu
 secjur.com
 security-insider.de
 senat.fr
@@ -391,6 +404,7 @@ unievanwaterschappen.nl
 unizar.es
 unmz.cz
 unsceb.org
+urbact.eu
 vbo-feb.be
 vlex.be
 vng.nl
