@@ -12,6 +12,7 @@ from __future__ import annotations
 import sys
 import tempfile
 import unittest
+import unittest.mock
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -240,6 +241,45 @@ class TestTlsPolicy(unittest.TestCase):
         self.assertTrue(ctx.check_hostname)
         import ssl
         self.assertEqual(ctx.verify_mode, ssl.CERT_REQUIRED)
+
+    def test_an_unreadable_ca_bundle_does_not_break_the_context(self):
+        """`Path.exists()` raises on a path inside an unreadable directory.
+
+        The agent proxy's bundle lives under `/root/`, which is readable in the
+        container this repository is normally worked in and **not** readable by
+        the `runner` user in CI. The first version of this module called
+        `.exists()` directly and died with PermissionError on GitHub Actions —
+        a machine that simply does not have the file. Extra trust anchors are
+        an optimisation for one environment; they must never be able to break
+        the tool in another."""
+        class Unreadable:
+            def __fspath__(self):
+                return "/root/.ccr/ca-bundle.crt"
+
+        original = rv.CA_BUNDLE
+        try:
+            rv.CA_BUNDLE = Unreadable()
+            # Both are patched so this test fails for *any* implementation
+            # that does not guard the filesystem probe, not just the one
+            # written today.
+            with unittest.mock.patch.object(
+                    rv.Path, "is_file", side_effect=PermissionError(13, "denied")), \
+                 unittest.mock.patch.object(
+                    rv.Path, "exists", side_effect=PermissionError(13, "denied")):
+                ctx = rv._ssl_context()
+        finally:
+            rv.CA_BUNDLE = original
+
+        import ssl
+        self.assertTrue(ctx.check_hostname)
+        self.assertEqual(ctx.verify_mode, ssl.CERT_REQUIRED)
+
+    def test_readable_is_false_rather_than_raising(self):
+        self.assertFalse(rv._readable(None))
+        self.assertFalse(rv._readable("/nonexistent/path/to/nothing"))
+        self.assertTrue(rv._readable(REPO_ROOT / "tools" / "reverify.py"))
+        # a directory is not a usable CA bundle
+        self.assertFalse(rv._readable(REPO_ROOT / "tools"))
 
     def test_source_has_no_verification_escape_hatch(self):
         """Checked against the syntax tree, not the text.

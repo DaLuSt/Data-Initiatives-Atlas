@@ -167,6 +167,25 @@ class FetchResult:
         return UNREACHABLE
 
 
+def _readable(path: Path | str | None) -> bool:
+    """`True` only if the path exists and we are allowed to look at it.
+
+    `Path.exists()` *raises* PermissionError rather than returning False when
+    a parent directory is unreadable. The agent proxy's bundle lives under
+    `/root/`, which is readable in the container this repository is usually
+    worked in and not readable by the `runner` user in CI — so the plain
+    `.exists()` call took the whole tool down on a machine that simply does
+    not have the file. Extra trust anchors are an optimisation for one
+    environment and must never be able to break the tool in another.
+    """
+    if not path:
+        return False
+    try:
+        return Path(path).is_file()
+    except OSError:
+        return False
+
+
 def _ssl_context() -> ssl.SSLContext:
     """Default verification, plus the agent proxy's CA when present.
 
@@ -178,10 +197,10 @@ def _ssl_context() -> ssl.SSLContext:
     ctx = ssl.create_default_context()
     for candidate in (os.environ.get("REQUESTS_CA_BUNDLE"),
                       os.environ.get("SSL_CERT_FILE"),
-                      str(CA_BUNDLE) if CA_BUNDLE.exists() else None):
-        if candidate and Path(candidate).exists():
+                      CA_BUNDLE):
+        if _readable(candidate):
             try:
-                ctx.load_verify_locations(candidate)
+                ctx.load_verify_locations(str(candidate))
             except (OSError, ssl.SSLError):
                 pass
     return ctx

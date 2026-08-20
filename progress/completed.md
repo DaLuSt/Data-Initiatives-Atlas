@@ -80,9 +80,29 @@ pass, and it exits `1` so a sweep cannot be mistaken for success.
 hosts to request: **1,500 URLs across 486 hosts, 353 registrable domains**.
 `europa.eu` alone unblocks 80 entities.
 
+
+### ⚠ CI caught what local testing could not
+
+The first push failed on GitHub Actions with `PermissionError: [Errno 13]
+Permission denied: '/root/.ccr/ca-bundle.crt'`.
+
+`Path.exists()` **raises** rather than returning `False` when a parent
+directory is unreadable. The agent proxy's CA bundle lives under `/root/`,
+which is readable in the container this repository is normally worked in and
+**not** readable by the `runner` user in CI. Every local run passed; the
+failure needed a machine that simply does not have the file.
+
+Extra trust anchors are an optimisation for one environment, and the fix is
+that they can no longer break the tool in another: `_readable()` returns
+`False` on any `OSError` instead of propagating it.
+
+Two regression tests were added, and the guard was confirmed load-bearing by
+re-creating the old unguarded implementation and watching it reproduce the CI
+failure under the same mocks that the new one survives. 29 → **31 tests**.
+
 ### Verification
 
-- `tools/test_reverify.py` — **29 tests**, no network, added to both CI
+- `tools/test_reverify.py` — **31 tests**, no network, added to both CI
   workflows
 - `validation/run_all.py` — 5/5
 - `tools/test_build_graph.py` — 41 OK
