@@ -37,6 +37,8 @@ organisations: []
 related_entities:
   - EU
   - EU-GDPR
+  - INTL-CONVENTION-108
+  - INTL-CONVENTION-108-PLUS
 relationships:
   - type: related-to
     target: EU
@@ -95,9 +97,13 @@ Convention 108+ is open to accession by states outside Europe entirely. A
 data governance atlas that holds the GDPR and not Convention 108 is missing
 the older and geographically wider of the two.
 
-**Convention 108 and 108+ are not yet Atlas entities.** They are queued in
-`discovery/research-queue.md` as the highest-value item this batch
-surfaced. This entity exists first because the country anchors needed it.
+**Both are now Atlas entities**, created in the batch immediately after this
+one: [[INTL-CONVENTION-108]], [[INTL-CONVENTION-108-PROTOCOL]] (ETS 181,
+2001) and [[INTL-CONVENTION-108-PLUS]] (CETS 223, 2018 — adopted, ratified by
+34 states, **not in force**).
+
+Between them they brought the Atlas's first eight entities outside Europe and
+the UN system: the non-European parties to Convention 108.
 
 ## Three organisations that are not each other
 
@@ -127,8 +133,10 @@ never been a member, and its special guest status was suspended in 1997.
 
 ## Not modelled
 
-- **Convention 108 and Convention 108+** — queued, and the reason this
-  entity is worth more than its anchoring role.
+- The **Committee of Convention 108 (T-PD)** — the treaty's consultative
+  committee, which met for its 50th plenary and is the body pressing state
+  parties to ratify [[INTL-CONVENTION-108-PLUS]]. It is the Convention's
+  counterpart to [[EU-EDPB]] and it is not modelled.
 - The **European Court of Human Rights**, the **Committee of Ministers**,
   the **Parliamentary Assembly** and the **Venice Commission**.
 - The **Convention 108 Committee** and the accession of non-European states.

@@ -56,10 +56,13 @@ sources:               # required for any entity making factual claims
   entries with `source: interpretation`, or in a clearly labelled
   "Atlas interpretation" prose subsection, never in `description`.
 - **level / country / region**: see `ontology.md` §4.
-- **status**: one of `proposed`, `planned`, `active`, `implemented`,
-  `superseded`, `replaced`, `completed`, `archived`, `unknown`. Never infer
-  `active` purely from "the website still resolves" — require an actual
-  source dated recently enough to support it, otherwise use `unknown`.
+- **status**: one of `proposed`, `planned`, `adopted`, `active`,
+  `implemented`, `superseded`, `replaced`, `completed`, `archived`,
+  `unknown`. Never infer `active` purely from "the website still resolves" —
+  require an actual source dated recently enough to support it, otherwise use
+  `unknown`. Use `adopted` for an instrument that has been formally adopted
+  but has **not entered into force**; it is a real instrument that binds
+  nobody yet, which neither `proposed` nor `active` can say.
 - **confidence**: how much the Atlas trusts its *own representation* of the
   entity — not the entity's real-world status. `status: unknown` +
   `confidence: low` is a normal, honest combination.
