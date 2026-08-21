@@ -44,6 +44,13 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: cooperates-with
+    target: EU-COMMISSION
+    source: fact
+    evidence: "UNESCO and the European Commission signed an agreement to accelerate global implementation of the UNESCO Recommendation on the Ethics of Artificial Intelligence adopted in November 2021 by the 193 Member States; a budget of EUR 4 million is dedicated to supporting the least developed countries in the establishment of their national legislation, and under it UNESCO establishes the 'AI Ethics Experts without Borders' facility, delivers an annual Global Forum on the Ethics of AI and develops a toolkit for judicial operators (unesco.org 'Artificial intelligence: Partnership between UNESCO and the EU to speed implementation of ethical rules'). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "UNESCO in brief"

@@ -98,6 +98,7 @@ type from §2.2.
 | `participates-in` | An organisation or country participates in a programme, data space or initiative |
 | `aligned-with` | Two entities are deliberately kept consistent without one implementing the other |
 | `implements-requirement-from` | A national legal instrument transposes/implements obligations from an EU (or other higher-level) legal instrument — the specific case of `implements` used for the EU→national legislative chain (README §"Cross-Border Relationships" and Batch 3) |
+| `cooperates-with` | Two organisations have entered a formal cooperation arrangement — an agreement, a partnership, a memorandum — under which neither implements, governs, contains or is aligned with the other. Symmetric: assert it once, on whichever party the source is about, not twice. Added in the candidate-clearing batch of 2026-08-21 for the UNESCO–European Commission agreement on accelerating implementation of the Recommendation on the Ethics of Artificial Intelligence, where the Commission funds UNESCO to help *other* countries implement an instrument the Commission neither adopts nor is bound by |
 
 ### 2.2 Natural inverse pairs
 
@@ -161,6 +162,27 @@ New relationship types are added only when an existing type cannot express
 the connection (README §15: "Add new relationship types only when there is
 a clear semantic need"). Document the addition here, including at least one
 real example, before using it in an entity file.
+
+**Worked example — `cooperates-with`, and the two cases that were not two
+cases.** `discovery/candidates.md` recorded two EU↔UN interactions the
+vocabulary could not express and concluded that "two examples is the
+threshold §2.3 sets for proposing a new type". Two things were wrong with
+that, and both are worth recording because they are easy mistakes to repeat:
+
+1. **The threshold is one, not two.** This section asks for "at least one
+   real example". Nothing in §2.3 sets a threshold for new types at all —
+   §2.3 is the anchor-edge rule.
+2. **The two cases were not instances of the same missing type.** One was a
+   cooperation agreement between two organisations. The other was a report
+   submitted to a UN process — and that turned out not to need a
+   relationship type at all, only the `publication` entity type the ontology
+   had defined and nothing had used. It is now
+   [[EU-VOLUNTARY-REVIEW-2023]].
+
+So one genuine gap remained, and it is filled by `cooperates-with` on the
+strength of the single well-sourced example the type was added for. A count
+of unmodellable things is not the same as a count of instances of one
+missing type.
 
 ---
 

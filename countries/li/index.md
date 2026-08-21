@@ -7,18 +7,25 @@ to belong on the country's front page (`CONTRIBUTING.md`).
 
 Anchor entity: [[LI]]
 
-> **This country has no entities yet.** The anchor exists so that Liechtenstein
-> entities have somewhere to attach; the sections below are the standard
-> skeleton, kept empty rather than removed so that the first contributor has
-> somewhere to put things.
+> **Sourcing caveat.** Every entity below was compiled from search-engine
+> results only: the cited pages were confirmed to exist but were **not
+> read**, because the working environment blocked page retrieval. They carry
+> `verification: search-only`.
 
 ## Organisations
 
-_None yet._
+- [[LI-DATENSCHUTZSTELLE]] — data protection authority _(Commissioner
+  appointed by the **Landtag** for a five-year renewable term; participates
+  in the [[EU-EDPB]] under [[INTL-EEA-JCD-154-2018]])_
 
 ## Legislation
 
-_None yet._
+- [[LI-DSG]] — Datenschutzgesetz _(⚠ **supplements** an already-applicable
+  GDPR rather than giving it effect — the exception to the pattern
+  [[NO-PERSONOPPLYSNINGSLOVEN]] and [[IS-PERSONUVERNDARLOG]] share)_
+
+Applicable through the EEA route rather than scoped to Liechtenstein:
+[[INTL-EEA-AGREEMENT]], [[INTL-EEA-JCD-154-2018]], [[EU-GDPR]].
 
 ## Frameworks and standards
 

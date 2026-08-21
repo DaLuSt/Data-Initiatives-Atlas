@@ -34,9 +34,12 @@ domains:
 organisations: []
 related_entities:
   - "NO"
+  - IS
+  - LI
   - CH
   - EU
   - NO-PERSONOPPLYSNINGSLOVEN
+  - INTL-EEA-JCD-154-2018
 relationships:
   - type: applies-in
     target: "NO"
@@ -108,16 +111,28 @@ The distinction is the whole point.
 So [[NO]] is reached, correctly, through the instrument that actually
 reaches it.
 
-## ⚠ The individual Joint Committee decisions are not modelled
+## The chain's middle is now an entity
 
-**JCD No 154/2018 is not an entity**, and neither is any other. Cataloguing
-the decisions that incorporate each EU act into the EEA Agreement is a large
-piece of work, and without them the Atlas cannot draw
-`EU-GDPR → JCD 154/2018 → INTL-EEA-AGREEMENT → NO` as a chain.
+This section previously warned that **JCD No 154/2018 was not an entity**,
+that the Atlas could therefore draw only the endpoints of the EEA route, and
+that the chain's middle was *"recorded in prose here and on
+[[NO-PERSONOPPLYSNINGSLOVEN]]"*.
 
-What it can now draw is the endpoints. The chain's middle is recorded in
-prose here and on [[NO-PERSONOPPLYSNINGSLOVEN]], and the decisions are
-queued in `discovery/candidates.md`.
+[[INTL-EEA-JCD-154-2018]] now exists, and the chain is drawable end to end:
+
+```
+EU-GDPR ◀─ references ─ INTL-EEA-JCD-154-2018 ─ amends ─▶ INTL-EEA-AGREEMENT
+                                 │ applies-in
+                     ┌───────────┼───────────┐
+                     ▼           ▼           ▼
+                    NO          IS          LI
+```
+
+**Only this one decision is modelled**, and the original caution still holds
+for the rest: cataloguing every Joint Committee decision that incorporates an
+EU act into this Agreement is a large piece of work, and none of the others
+is an entity. This one was created because three national data protection
+acts and this Agreement were all describing it in prose.
 
 ## Switzerland signed it and never joined
 

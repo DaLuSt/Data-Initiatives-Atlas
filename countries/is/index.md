@@ -7,18 +7,25 @@ to belong on the country's front page (`CONTRIBUTING.md`).
 
 Anchor entity: [[IS]]
 
-> **This country has no entities yet.** The anchor exists so that Iceland
-> entities have somewhere to attach; the sections below are the standard
-> skeleton, kept empty rather than removed so that the first contributor has
-> somewhere to put things.
+> **Sourcing caveat.** Every entity below was compiled from search-engine
+> results only: the cited pages were confirmed to exist but were **not
+> read**, because the working environment blocked page retrieval. They carry
+> `verification: search-only`.
 
 ## Organisations
 
-_None yet._
+- [[IS-PERSONUVERND]] — data protection authority _(participates in the
+  [[EU-EDPB]] under [[INTL-EEA-JCD-154-2018]], without a vote under Article
+  68(3))_
 
 ## Legislation
 
-_None yet._
+- [[IS-PERSONUVERNDARLOG]] — Act No. 90/2018 on Data Protection and the
+  Processing of Personal Data _(enacted **27 June 2018**, nine days before
+  the Joint Committee decision that put the GDPR into the EEA Agreement)_
+
+Applicable through the EEA route rather than scoped to Iceland:
+[[INTL-EEA-AGREEMENT]], [[INTL-EEA-JCD-154-2018]], [[EU-GDPR]].
 
 ## Frameworks and standards
 
@@ -26,7 +33,8 @@ _None yet._
 
 ## Platforms and portals
 
-_None yet._
+_None yet._ Iceland is the third member of [[INTL-NIIS]] and the only one
+with no X-Road deployment modelled — see `discovery/research-queue.md`.
 
 ## Strategies and initiatives
 

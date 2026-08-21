@@ -34,11 +34,19 @@ organisations:
 related_entities:
   - UN-UNSC
   - EU-SDG-INDICATORS
+  - UN-2030-AGENDA
 relationships:
   - type: governed-by
     target: UN-UNSC
     source: fact
     evidence: "The global SDG indicator framework was revised in 2020 and 2025, resulting in a framework consisting of 234 unique indicators, and was designed by an Inter-Agency and Expert Group under the supervision of the UN Statistical Commission (ec.europa.eu/eurostat 'SDG – Introduction'; ec.europa.eu/eurostat/web/sdi/information-data). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: implements
+    target: UN-2030-AGENDA
+    source: fact
+    evidence: "The global indicator framework is the framework for monitoring the Sustainable Development Goals of the 2030 Agenda, adopted by the General Assembly on 25 September 2015 as resolution A/RES/70/1 with 17 goals and 169 targets; the SDGs are monitored against the framework at global, regional, national, local and thematic levels (sdgs.un.org/2030agenda; ec.europa.eu/eurostat 'SDG - Introduction'). NOT READ — search-only."
     confidence: medium
     valid_from: null
     valid_until: null

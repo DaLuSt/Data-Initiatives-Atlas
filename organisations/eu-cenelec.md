@@ -51,7 +51,7 @@ sources:
 
 CENELEC is the European Standardisation Organisation responsible for
 standardisation in electrotechnical engineering, and one of the three ESOs
-recognised by Regulation (EU) No 1025/2012 alongside [[EU-CEN]] and
+recognised by [[EU-REG-1025-2012]] alongside [[EU-CEN]] and
 [[EU-ETSI]]. It works in close partnership with CEN, sharing a joint web
 presence and management structure.
 

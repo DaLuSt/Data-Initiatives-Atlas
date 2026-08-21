@@ -10,7 +10,7 @@
 > portals; `PL-PESEL`-equivalent population registers; [[NL-BRI]]'s AWR
 > Chapter IVA basis; and the Spanish and Polish primary-citation gaps.
 >
-> **Blocked on egress:** the re-verification pass. 421 of 461 entities are
+> **Blocked on egress:** the re-verification pass. 462 of 502 entities are
 > still unread — see `discovery/reverification-allowlist.md`.
 
 Confirmed-relevant areas that are known to need research but haven't been
@@ -289,7 +289,6 @@ by accident.
 | W3C (the organisation) | Needed for [[INTL-DCAT]]'s `maintained-by` | Batch 13 | Batch 9 / 2026-08-14 |
 | GeoDCAT-AP and StatDCAT-AP | Extensions of [[EU-DCAT-AP]]; GeoDCAT-AP would likely connect [[NL-GEONOVUM]]'s geo and metadata work | Later | Batch 9 / 2026-08-14 |
 | ETSI standards | [[EU-ETSI]] exists but **no ETSI standard is modelled**, despite ICT standardisation being central to this Atlas | Later | Batch 9 / 2026-08-14 |
-| Regulation (EU) 1025/2012; Regulation (EC) 223/2009 | Legal bases of the ESOs and the European Statistical System; described but not modelled | Later | Batch 9 / 2026-08-14 |
 | EUR-Lex citation for EHDS Reg. (EU) 2025/327 | [[EU-EHDS]]'s strongest source is the Parliament's Legislative Observatory | Later | Batch 10 / 2026-08-14 |
 | IDSA / IDS architecture | [[NL-ISHARE]]'s documented route into the EU data-space world | Later | Batch 5; carried |
 | Environment / Energy / Agriculture domains | Still below the 2-entity threshold even after Batch 10 | Later | Batch 5; rechecked Batch 10 |
@@ -333,3 +332,8 @@ by accident.
 | PagoPA and the Piano triennale | Italy's payments platform and the three-year plan for public-administration IT, both named around [[IT-AGID]] and neither modelled | Later | Country expansion / 2026-08-20 |
 | An Icelandic X-Road deployment | [[IS]] is the third member of [[INTL-NIIS]] and the only one with no national deployment modelled, now that [[EE-X-TEE]] and [[FI-PALVELUVAYLA]] both exist | Later | Country expansion / 2026-08-20 |
 | Austria's federal digital policy ministry | [[AT-BRZ]] is a service provider rather than a policy agency, so it appears as the hub of the Austrian layer in a way that reflects what is modelled rather than how Austria is governed | Later | Country expansion / 2026-08-20 |
+| The eFTI Regulation (EU) 2020/1056 | Secondary sources describe its data set as built on the UN/CEFACT MMT-RDM model, which would be a second EU→UN/CEFACT edge after [[EU-EMSWE]]. The claim is in a UNECE presentation and a project site, not in the regulation | Next | Candidate batch / 2026-08-21 |
+| The High-level Political Forum (`UN-HLPF`) | [[EU-VOLUNTARY-REVIEW-2023]] was presented at it and can only say so in prose. The forum receives every voluntary national review, so it would be an attachment point for more than one entity | Next | Candidate batch / 2026-08-21 |
+| Iceland and Liechtenstein beyond data protection | Both now have a national layer — a DPA and a data protection act each — and nothing else. [[IS]] is a member of [[INTL-NIIS]] with no X-Road deployment modelled; neither has a statistical office, a mapping authority or a cyber authority | Later | Candidate batch / 2026-08-21 |
+| The other EEA Joint Committee decisions | [[INTL-EEA-JCD-154-2018]] is the only one modelled, created because four entities were describing it in prose. Every other EU act with effect in the EEA EFTA states reaches them the same way and the Atlas draws none of those routes | Later | Candidate batch / 2026-08-21 |
+| A `measures` relationship type | [[EU-DESI]] and [[EU-EGOV-BENCHMARK]] measure 27 and 35 countries respectively and carry no edge to any of them. Deliberately not decided in the batch that created them — see `discovery/candidates.md` §3 | Next (design) | Candidate batch / 2026-08-21 |

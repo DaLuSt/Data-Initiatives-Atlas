@@ -77,13 +77,17 @@ that the membership is inferred from a sourced composition rule rather than
 from a source naming NEN specifically — the same treatment applied to
 [[NL-CBS]] in the ESS and [[NL-AP]] in the EDPB.
 
-## Regulation 1025/2012 not modelled
+## Regulation 1025/2012 — now modelled
 
-The regulation is described here but **not created as an entity**. It is EU
-legislation and would belong in `legislation/`, but Batch 9 is organisations
-and standards, and Batch 8's legislation sweep did not cover it. Queued.
+This section previously read *"Regulation 1025/2012 not modelled"*: the
+regulation was described here but not created, because Batch 9 covered
+organisations and standards and Batch 8's legislation sweep had not reached
+it.
 
-`coverage: low`.
+It is now [[EU-REG-1025-2012]], created on 2026-08-21 together with
+[[EU-REG-223-2009]] — the other statutory base the Atlas had been describing
+without modelling — so that the pair closes in one move. The `applies-to`
+edges live on the regulation, which is the instrument doing the recognising.
 
 ## Relationships
 

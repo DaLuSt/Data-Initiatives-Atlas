@@ -66,7 +66,7 @@ See `metadata/relationship-types.md` §2.1 for the full list and definitions:
 `derived-from`, `based-on`, `references`, `supersedes`, `replaces`,
 `proposes-to-supersede`, `amends`, `part-of`, `governed-by`, `applies-to`,
 `applies-in`, `produces`, `maintained-by`, `owned-by`, `participates-in`,
-`aligned-with`, `implements-requirement-from`.
+`aligned-with`, `implements-requirement-from`, `cooperates-with`.
 
 ## Relationship `source`
 

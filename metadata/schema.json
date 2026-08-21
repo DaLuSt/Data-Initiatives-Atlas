@@ -40,7 +40,7 @@
     "supersedes", "replaces", "proposes-to-supersede", "amends", "part-of",
     "governed-by", "applies-to", "applies-in", "produces", "maintained-by",
     "owned-by", "participates-in", "aligned-with",
-    "implements-requirement-from"
+    "implements-requirement-from", "cooperates-with"
   ],
   "required_fields": [
     "id", "type", "name", "description", "level", "country",

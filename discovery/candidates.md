@@ -18,185 +18,172 @@ Do not add anything here without noting where it was seen.
 > `validate_links` does **not** scan `discovery/` — so wikilinks here are
 > unchecked by tooling and must be verified by hand.
 
----
-
-## Status: the European → UN leads have been worked
-
-The 2026-08-16 UN-connection batch acted on this page. **The UN layer is no
-longer an island.**
-
-| Before | After |
-|---|---|
-| `UN → anything` = **0** | `UN → national` = **5**, `EU → UN` = **4** |
-| 9 UN entities, unattached | 17 UN entities, attached in three clusters |
-
-14 entities were created and 7 existing ones rewired. See
-`progress/completed.md` for the full entry. **Rows that produced entities
-have been removed from this page**; what remains below is what is still
-open, plus what the batch newly opened.
-
-The batch's own diagnosis was confirmed: in every closed cluster the refused
-edge had been pointing at a node that did not exist. Creating [[EU-ESS]] and
-[[UN-UNSC]] made five previously-refused statistics edges statable without
-lowering the sourcing standard at all.
+> **Rows are removed when they close, not struck through.** The record of
+> what closed and why lives in `progress/completed.md` and on the entities
+> themselves.
 
 ---
 
-## 1. Still open — the geospatial cluster is structurally incomplete
+## Status: worked through 2026-08-21
 
-[[UN-GGIM]] and [[UN-GGIM-EUROPE]] now exist and are connected to each
-other and to [[UN]]. **The edge to the European layer does not exist**, and
-was looked for.
+The candidate-clearing batch of 2026-08-21 acted on this page and closed
+**eleven** of its rows, including every row in three whole sections — the
+EEA and Switzerland section, the EU↔UN vocabulary section, and the unused
+entity types. Sixteen entities were created. See `progress/completed.md`.
+
+What remains below is what is genuinely still open, plus what that batch
+newly opened.
+
+---
+
+## 1. Still open — the INSPIRE ↔ UN-GGIM edge
+
+[[EU-EUROGEOGRAPHICS]] now exists and the geospatial cluster has its middle
+layer: five national mapping and cadastral authorities attach to it by
+`participates-in`, mirroring [[EU-ESS]] for statistics. **The edge from the
+European instrument to the UN structure still does not exist**, and creating
+EuroGeographics did not create it.
 
 | Name | Suspected type | Suspected scope | Why it might matter | Where seen | Noted by / date | Status |
 |---|---|---|---|---|---|---|
-| **EuroGeographics** — `EU-EUROGEOGRAPHICS` | organisation | EU, `level: regional` | Probably the missing European node, playing the role [[EU-ESS]] plays for statistics: the association of national mapping, cadastral and land registry authorities. It appears throughout the UN-GGIM: Europe material and authored the INSPIRE-facing presentation cited on [[UN-GGIM-EUROPE]]. **Not created in the UN batch** — every source found is its own site or trade press, and creating it on that basis would repeat the error the batch existed to correct | eurogeographics.org; gim-international.com; the EuroGeographics INSPIRE KEN deck cited on [[UN-GGIM-EUROPE]] | Spain follow-up 2026-08-16; carried through UN batch | **Candidate — the cluster's missing middle** |
-| **[[EU-INSPIRE]] → the UN-GGIM structure** | relationship | — | The one edge that would finish the geospatial vertical. What exists is a 2016 EuroGeographics presentation *about* UN-GGIM delivered to an INSPIRE audience, and general discussion of INSPIRE harmonisation in UN-GGIM: Europe working groups. **That is evidence the communities talk, not that the instruments relate**, and no edge was asserted | un-ggim-europe.org working groups; eurogeographics.org INSPIRE KEN deck | UN batch / 2026-08-16 | **Open — needs a real source** |
+| **[[EU-INSPIRE]] → the UN-GGIM structure** | relationship | — | The one edge that would finish the geospatial vertical. What exists is a 2016 EuroGeographics presentation *about* UN-GGIM delivered to an INSPIRE audience, and general discussion of INSPIRE harmonisation in UN-GGIM: Europe working groups. **That is evidence the communities talk, not that the instruments relate**, and no edge was asserted | un-ggim-europe.org working groups; eurogeographics.org INSPIRE KEN deck | UN batch / 2026-08-16; re-checked 2026-08-21 | **Open — needs a real source** |
 
-## 2. Still open — UN/CEFACT connects to nothing European
+**Creating the missing node did not close this one, and that is the useful
+finding.** [[EU-ESS]] closed five refused edges because the missing node was
+what every one of them had been pointing at. Here the missing node was also
+genuinely missing — but it was never what this refusal turned on. The two
+cases look identical on this page and are not.
 
-[[UN-CEFACT]] was created and attached to [[UN-UNECE]]. Searching for EU
-adoption of its standards returned material about the body and its outputs
-and **nothing establishing that any EU instrument or member state adopts
-them**.
+The nearest thing to a bridge that now exists is incidental: [[GB-OS]]
+carries `participates-in` to **both** [[UN-GGIM]] and
+[[EU-EUROGEOGRAPHICS]]. A path through a shared member is not a relationship
+between the instruments.
+
+## 2. Still open — one UN/CEFACT output remains
+
+[[UN-LOCODE]] and [[UN-EDIFACT]] now exist, and [[EU-EMSWE]] — Regulation
+(EU) 2019/1239 — is the EU instrument that names UN/LOCODE, which closes the
+"does anything European reference a UN/CEFACT standard" question.
 
 | Name | Suspected type | Suspected scope | Why it might matter | Where seen | Noted by / date | Status |
 |---|---|---|---|---|---|---|
-| **UN/EDIFACT, UN/LOCODE, Core Component Library** | standard | UN (UNECE), `level: international` | The actual UN/CEFACT outputs, and exactly the kind of artefact this Atlas models. None is an entity; none was researched | unece.org/trade/uncefact | UN batch / 2026-08-16 | Candidate |
-| **Any EU or national reference to a UN/CEFACT standard** | relationship | — | The narrow question that would connect the trade/e-business cluster: *does any instrument already in this Atlas reference one?* Quick to answer with page access | — | UN batch / 2026-08-16 | **Open — narrow, answerable** |
+| **UN/CEFACT Core Component Library** | standard | UN (UNECE), `level: international` | The third of the three UN/CEFACT outputs named in the UN batch. Nothing beyond the name was found; a node built on that is the thin encyclopedic entity the taxonomy threshold prevents | unece.org/trade/uncefact | UN batch / 2026-08-16; narrowed 2026-08-21 | Candidate |
+| **eFTI Regulation (EU) 2020/1056** | law | EU, `level: regional` | Secondary sources describe the eFTI data set as built on the UN/CEFACT **MMT-RDM** model, which would be a second EU→UN/CEFACT edge. The claim was found in a UNECE presentation and a project website, **not in the regulation**, so it was left out in favour of the better-sourced UN/LOCODE case | unece.org ECE-TRANS-SC.1 presentation; digitaltrade4.eu; europarl.europa.eu legislative train | Candidate batch / 2026-08-21 | Candidate |
 
-## 3. Newly opened — two real EU↔UN interactions the vocabulary cannot express
+## 3. Newly opened — measurement has no relationship type
 
-Both were found by the UN batch, both are genuine European↔UN connections,
-and **neither could be recorded as a relationship**.
+[[EU-DESI]] and [[EU-EGOV-BENCHMARK]] are the Atlas's first
+`type: publication` entities and its first comparative-measurement layer.
+Both measure countries. **Neither carries a single edge to a country it
+measures**, because no relationship type means "measures".
 
-| Interaction | Why it was not modelled | Where seen | Noted by / date | Status |
+| Gap | Why it matters | Where seen | Noted by / date | Status |
 |---|---|---|---|---|
-| **UNESCO–European Commission agreement** on accelerating implementation of the AI ethics Recommendation | It is a funding-and-cooperation agreement to help *other* countries implement the Recommendation (€4 m for least developed countries). The Commission is not adopting, implementing or governed by it. No relationship type says "has an agreement with" | unesco.org partnership article; dig.watch | UN batch / 2026-08-16 | Open (vocabulary) |
-| **The 2023 EU voluntary review** submitted to UN global SDG monitoring | A one-off report submitted to a UN process. `references` would be the closest type and would misstate it | ec.europa.eu/eurostat SDG pages | UN batch / 2026-08-16 | Open (vocabulary) |
+| **No `measures` relationship type** | DESI covers the 27 member states; the eGovernment Benchmark covers 35 countries, **every one of which is already an Atlas anchor**. That is 62 potential edges the Atlas can see and cannot state. `applies-in` would turn a study into an instrument; `references` would suggest citation rather than assessment | [[EU-DESI]], [[EU-EGOV-BENCHMARK]] | Candidate batch / 2026-08-21 | **Open (vocabulary) — two instances, deliberately not decided in the batch that created them** |
 
-**Two examples is the threshold `metadata/relationship-types.md` §2.3 sets
-for proposing a new type.** It was deliberately not proposed by a batch that
-could not read the sources. This is the clearest live candidate for the next
-vocabulary change.
+**Deliberately not decided here.** `cooperates-with` was added in the same
+batch on a single well-sourced example, and that was the right call for a
+type with one instance and no scaling consequence. `measures` has the
+opposite shape: it would immediately want 62 edges, and a type added in the
+same batch that creates its only users has not been tested against anything.
+See `metadata/relationship-types.md` §2.4.
 
 ## 4. Carried leads, unchanged
 
 | Name | Suspected type | Suspected scope | Why it might matter | Where seen | Noted by / date | Status |
 |---|---|---|---|---|---|---|
-| **The 2030 Agenda itself** — `UN-2030-AGENDA` | policy | UN, `level: international` | [[UN-SDG-INDICATORS]] models the indicator framework and has **no link to the policy instrument it serves**. Nothing was found for the Agenda beyond passing references; a node built from those would be the thin encyclopedic entity the taxonomy threshold prevents | ec.europa.eu/eurostat SDG pages | UN batch / 2026-08-16 | Candidate |
 | **UN Global Platform / Committee of Experts on Big Data** — `UN-GLOBAL-PLATFORM` | platform | UN, `level: international` | A second, independent attachment point for national statistical offices, alongside [[EU-ESS]] | ggim.un.org; unstats.un.org (not opened) | Spain follow-up / 2026-08-16 | Weak lead |
 | **ITU standards** — no ID proposed | standard | UN (ITU), `level: international` | [[UN-ITU]] exists and **no ITU standard is modelled** | `discovery/research-queue.md`, Batch 13 | Batch 13; carried | Carried lead |
 | **UNCTAD data governance work** — no ID proposed | initiative | UN, `level: international` | [[UN-UNCTAD]] exists with no instrument beneath it; its CSTD working group on data governance is queued | `discovery/research-queue.md`, Batch 13 | Batch 13; carried | Carried lead |
 | **UN DESA, UNDP, WHO** | organisation | UN, `level: international` | Named in Batch 13's scope and refused for want of sources. The UN batch reversed that refusal for **UNESCO and UNECE** but did not go looking for these three | Batch 13 scope | Batch 13; carried | Carried lead |
-| **Regulation (EC) No 223/2009** | law | EU, `level: regional` | [[EU-ESS]]'s legal basis, cited as a source and **not modelled**. Deliberately left with Regulation (EU) 1025/2012 (the ESO legal base) so the Atlas stays consistent about statutory bases rather than creating one of the pair | EUR-Lex CELEX 32009R0223 | Batch 9; re-raised UN batch | Candidate |
+| **High-level Political Forum on Sustainable Development** — `UN-HLPF` | organisation | UN, `level: international` | The UN body that receives voluntary national reviews. [[EU-VOLUNTARY-REVIEW-2023]] was *presented at* it and can say so only in prose, because the forum has no node | hlpf.un.org; ec.europa.eu IP/23/3801 | Candidate batch / 2026-08-21 | Candidate |
+| **IMO, GISIS and the SafeSeaNet codes** | organisation / standard | international | [[EU-EMSWE]]'s common location database holds UN/LOCODE **alongside** the SafeSeaNet codes and the IMO port facility codes registered in GISIS. The IMO is not in the Atlas at all, and creating it to carry one code list would be a thin entity | eur-lex.europa.eu CELEX 32019R1239 | Candidate batch / 2026-08-21 | Weak lead |
 
----
+## 5. Entity types and levels — what the vocabulary allows and nothing uses (measured 2026-08-21)
 
-## What the UN batch closed, for the record
-
-Removed from this page because the entities now exist:
-
-| Was queued as | Became |
-|---|---|
-| `UN-UNECE` — "the missing joint" | [[UN-UNECE]], parent of three clusters |
-| `UN-CES` | [[UN-CES]], with [[EU-EUROSTAT]] `participates-in` |
-| `UN-UNSC` | [[UN-UNSC]], splitting the intergovernmental body from [[UN-UNSD]] |
-| `EU-ESS` | [[EU-ESS]], with Eurostat and four national offices `part-of` |
-| `INTL-OECD-CSSP` | [[INTL-OECD-CSSP]] — the OECD gap closed by the same page, as predicted |
-| `UN-AARHUS` + `EU-ENVIRONMENTAL-INFORMATION-DIRECTIVE` | both created; the Atlas's **first complete UN → EU → national chain** |
-| `UN-UNESCO` + the AI ethics Recommendation | both created; the Batch 13 refusal reversed |
-| `UN-CEFACT`, `UN-GGIM`, `UN-GGIM-EUROPE` | created, attached to their UN parents, European edges still open |
-| `UN-SDG-INDICATORS` / `EU-SDG-INDICATORS` | both created, avoiding the [[EU-SDG]] collision |
-
----
-
-## EEA and Switzerland — still open
-
-| Item | Why | Status |
-|---|---|---|
-| **The EEA Agreement as an entity** (`INTL-EEA-AGREEMENT` or a `region`) | [[NO]] now carries EEA-route relationships whose target is described in prose. Modelling the Agreement itself would let `implements-requirement-from` point somewhere real | **Next** |
-| **EEA Joint Committee Decision No 154/2018** | The instrument incorporating [[EU-GDPR]] into Annex XI of the EEA Agreement. [[NO-PERSONOPPLYSNINGSLOVEN]] rests on it in prose | **Next** |
-| **The EU–Switzerland adequacy decision** | The Atlas holds [[EU-UK-ADEQUACY]] and nothing equivalent for Switzerland, although the same Commission act type covers it | **Next** |
-| **Iceland and Liechtenstein** | The other two EEA EFTA states. Adding either would show whether the Norwegian EEA pattern generalises or is Norway-specific | Later |
-
-## Entity types and levels — what the vocabulary allows and nothing uses (2026-08-18)
+`technology` and `publication` were both on this list and are both now in
+use — [[INTL-X-ROAD]] for the first, [[EU-DESI]], [[EU-EGOV-BENCHMARK]] and
+[[EU-VOLUNTARY-REVIEW-2023]] for the second. **All 17 entity types are now
+in use.** What remains is the level vocabulary and the region layer.
 
 | Item | Measurement | Why it matters | Status |
 |---|---|---|---|
-| **`technology`** | **0 of 17 defined types in use** | Best-evidenced candidates are already on this page and in `discovery/research-queue.md`: **X-Road** and the **IDS-RAM**, the latter referenced by two entities in two countries | **Next** |
-| **`publication`** | **0 uses** | Oversight reports are the obvious seed after the intelligence batch — CTIVD and [[GB-ISC]] annual reports, the *Verfassungsschutzbericht*. Higher value: **DESI** and the **eGovernment Benchmark**, which would give the Atlas its first comparative-measurement layer | **Next** |
-| **`level: local`** | **0 uses**, against 224 `national` | The recurring blocker, named in four separate batches: Digitaal Vlaanderen and Flanders, the seventeen Comunidades Autónomas, the German Länder, Dutch municipalities. This is a **design decision, not research** — it gates more queued work than any other single item | **Blocked (design)** |
+| **`level: local`** | **0 uses**, against 377 `national`, 68 `regional`, 52 `international` and 6 `sectoral` | The recurring blocker, named in five separate batches: Digitaal Vlaanderen and Flanders, the seventeen Comunidades Autónomas, the German Länder, Dutch municipalities. This is a **design decision, not research** — it gates more queued work than any other single item | **Blocked (design)** |
 | **`level: sectoral`** | 6 uses | Barely exercised. Whether that reflects the subject matter or under-use is unexamined | Later |
-| **`region` entities** | **1** — only [[EU]] | EEA, EFTA, the Nordic Council, the Council of Europe and Benelux are all absent. **EEA is a prerequisite for doing the Norwegian pattern properly**, and for Iceland and Liechtenstein | **Next** |
+| **`region` entities** | **1** — only [[EU]] | EFTA, the Nordic Council, the Council of Europe and Benelux are absent. The **EEA** is now modelled as [[INTL-EEA-AGREEMENT]] (`type: law`) rather than as a region, which turned out to be the more useful shape: [[INTL-EEA-JCD-154-2018]] `amends` it, and an amendment to a region would be meaningless | Later |
 
-## Domain coverage is lopsided (2026-08-18)
+## 6. Domain coverage is lopsided (re-measured 2026-08-21)
 
-Measured across the seven countries as at the intelligence-services batch:
+Counted as **distinct countries having at least one entity that lists the
+domain**, across all 58 country anchors:
 
 | Domain | Countries | |
 |---|---|---|
-| [[DOMAIN-CYBERSECURITY]] | 7/7 | ✅ |
-| [[DOMAIN-GOVERNMENT]] | 7/7 | ✅ |
-| [[DOMAIN-NATIONAL-SECURITY]] | 7/7 | ✅ |
-| [[DOMAIN-GEOSPATIAL]] | 3/7 | BE, ES, FR, PL missing |
-| [[DOMAIN-MOBILITY]] | 2/7 | five missing |
-| [[DOMAIN-HEALTH]] | **1/7** | **NL only** |
-| [[DOMAIN-EDUCATION]] | **1/7** | **NL only** |
-| [[DOMAIN-RESEARCH]] | **1/7** | **NL only** |
+| [[DOMAIN-GOVERNMENT]] | 21 | |
+| [[DOMAIN-CYBERSECURITY]] | 13 | |
+| [[DOMAIN-NATIONAL-SECURITY]] | 8 | |
+| [[DOMAIN-GEOSPATIAL]] | 6 | |
+| [[DOMAIN-MOBILITY]] | **2** | |
+| [[DOMAIN-HEALTH]] | **1** | **NL only** |
+| [[DOMAIN-EDUCATION]] | **1** | **NL only** |
+| [[DOMAIN-RESEARCH]] | **1** | **NL only** |
 
-Six of seven countries have **no health-data entity at all**, in an Atlas
-that holds [[EU-EHDS]]. A health batch across DE, FR, ES, BE, PL and GB
-would be the single largest correction available to the domain layer.
+The 2026-08-18 version of this table read "3/7", "2/7", "1/7" and so on
+against seven countries. The country expansion has since taken the Atlas to
+58 anchors, and **the absolute counts went up while the coverage got
+thinner**: a domain present in 1 of 7 countries is a gap, and the same domain
+present in 1 of 58 is a much larger one.
 
-## Cheap structural fixes — **all four done, 2026-08-18**
+**Health remains the single largest correction available.** Fifty-seven of
+fifty-eight countries have no health-data entity at all, in an Atlas that
+holds [[EU-EHDS]]. [[DOMAIN-MOBILITY]] gained its first EU-level instrument
+in [[EU-EMSWE]] and its second entity in [[UN-LOCODE]], but still no second
+country.
 
-Each cost one or a few entities and connected many. All four were acted on
-in the batch of 2026-08-18; the table below is kept as the record of what
-they were and what they produced.
+## 7. Ontology gaps
 
-| Fix | Result |
-|---|---|
-| National DPAs → [[EU-EDPB]] | **3 → 8** incoming edges. No new entity |
-| [[FR-INSEE]] | **8** national statistical institutes in [[EU-ESS]]; every EU member state in the Atlas now represented |
-| Standards bodies | [[EU-CEN]] **3 → 7** incoming; [[BE-NBN]], [[FR-AFNOR]], [[ES-UNE]], [[PL-PKN]] created, and the [[IE-NSAI]] refusal closed |
-| Cyber authorities | [[NL-NCSC]] and [[PL-NASK]] created |
-
-**What actually unlocked the DPA fix is worth remembering.** The edge had
-been refused on [[DE-BFDI]] because the German representation arrangement —
-which authority represents a member state with seventeen of them — "should
-not be guessed at". The answer was in [[EU-GDPR]] **Article 68(3)** all
-along: the Board is composed of the head of one supervisory authority per
-member state plus the [[EU-EDPS]], *and where a member state has more than
-one authority, a joint representative is appointed under that member state's
-law.* The provision that creates the Board anticipates the exact case that
-had blocked the edge.
-
-The [[IE-NSAI]] refusal closed the same way: not by reading the CEN member
-list the Atlas cannot retrieve, but by finding CEN-CENELEC's **statement of
-the rule** — its national members are the standardization bodies of the 27
-EU countries. Membership follows from the rule.
-
-Both are the same lesson: **a refusal for want of a source is not the same
-as a fact being unknowable**, and the source is sometimes in the instrument
-that created the thing.
+| Gap | Why it matters | Noted | Status |
+|---|---|---|---|
+| **No way to model enforcement against a member state.** | Nineteen member states faced infringement proceedings over [[EU-OPEN-DATA-DIRECTIVE]], and four were referred to the Court of Justice in February 2023. The Atlas has no entity type for an infringement procedure, no relationship type for it, and no **Court of Justice of the European Union** entity. Non-compliance is a large part of how EU data law actually operates and none of it is visible | 2026-08-18 | **Open — would need a type, a relationship and at least one new entity** |
+| **`type: law` flattens primary and secondary legislation.** | [[IE-PSI-REGULATIONS-2021]] is a statutory instrument; [[IE-DPA-2018]] is an Act. Both are `law`. The same flattening applies to Portuguese decreto-lei versus lei, to German Gesetz versus Verordnung, and now to [[INTL-EEA-JCD-154-2018]], which is a Joint Committee *decision* filed as a `law` | 2026-08-18; extended 2026-08-21 | Open |
+| **`implements-requirement-from` cannot say "supplements".** | [[LI-DSG]] does not transpose the GDPR — the GDPR is directly applicable in Liechtenstein — it exercises the regulation's national opening clauses. The edge asserted is the closest available type and slightly overstates, which is recorded on the entity. A `supplements` type would today have exactly one instance | 2026-08-21 | Open (vocabulary) |
+| **No way to record "modelled on".** | [[LI-DSG]] is described by its sources as modelled on the German BDSG. `based-on` claims the legislature adapted a specific text, which is more than a law-firm commentary supports. Left in prose | 2026-08-21 | Open |
 
 ---
 
-### The original entries, for the record
+## What the cheap structural fixes taught, for the record
 
-| Item | Measurement | Why | Status |
-|---|---|---|---|
-| **National DPAs → [[EU-EDPB]]** | `EU-EDPB` has **2** incoming edges; [[EU-ESS]] has **6** | The Atlas holds **eight** data protection authorities and connects one of them ([[NL-AP]]) to the Board. The Spain batch called [[EU-ESS]] "the single highest-value item this batch produced" and it delivered — connecting four statistical offices at once. **The identical play is unplayed for data protection**, and costs no new entity at all | **Next — highest value on this page** |
-| **INSEE** | France is the **only** Atlas country with no statistical office | A free [[EU-ESS]] member. Already queued from the France batch and still open | **Next** |
-| **National standards bodies** | 3 of 8 countries have one | [[DE-DIN]], [[NL-NEN]], [[GB-BSI]] exist; **NBN (BE), AFNOR (FR), UNE (ES), PKN (PL)** do not. [[GB-BSI]] is recorded as the most connective UK entity, so the pattern has proven value | **Next** |
-| **Dutch and Polish cyber authorities** | 5 of 7 countries had one before this batch | [[NL-CBW]] is a NIS2 act with **no authority attached**; Poland's CSIRT NASK/GOV/MON are unmodelled — though [[PL-ABW]] now carries `implements` [[PL-KSC]] | **Next** |
+The four "cheap structural fixes" identified on 2026-08-18 — national DPAs to
+[[EU-EDPB]], [[FR-INSEE]], the four missing national standards bodies, and
+the Dutch and Polish cyber authorities — were all completed in the batch of
+2026-08-18. Their rows are gone. **What they taught is kept**, because it has
+since proved right twice more.
 
-## Ontology gaps surfaced 2026-08-18
+**What actually unlocked the DPA fix.** The edge had been refused on
+[[DE-BFDI]] because the German representation arrangement — which authority
+represents a member state with seventeen of them — "should not be guessed
+at". The answer was in [[EU-GDPR]] **Article 68(3)** all along: the Board is
+composed of the head of one supervisory authority per member state plus the
+[[EU-EDPS]], *and where a member state has more than one authority, a joint
+representative is appointed under that member state's law.* The provision
+that creates the Board anticipates the exact case that had blocked the edge.
 
-| Gap | Why it matters | Status |
-|---|---|---|
-| **No way to model enforcement against a member state.** | Nineteen member states faced infringement proceedings over [[EU-OPEN-DATA-DIRECTIVE]], and four were referred to the Court of Justice in February 2023. The Atlas has no entity type for an infringement procedure, no relationship type for it, and no **Court of Justice of the European Union** entity. Non-compliance is a large part of how EU data law actually operates and none of it is visible | **Open — would need a type, a relationship and at least one new entity** |
-| **`type: law` flattens primary and secondary legislation.** | [[IE-PSI-REGULATIONS-2021]] is a statutory instrument; [[IE-DPA-2018]] is an Act. Both are `law`. The same flattening applies to Portuguese decreto-lei versus lei, and to German Gesetz versus Verordnung | Open |
-| **`technology` and `publication` are still unused**, and `level: local` is still unused. | Carried from the structural review of 2026-08-18; nothing in the intervening batches changed it | Open |
+The [[IE-NSAI]] refusal closed the same way: not by reading the CEN member
+list the Atlas cannot retrieve, but by finding CEN-CENELEC's **statement of
+the rule** — its national members are the standardization bodies of the 27 EU
+countries. Membership follows from the rule.
 
+**Both are the same lesson: a refusal for want of a source is not the same as
+a fact being unknowable**, and the source is sometimes in the instrument that
+created the thing.
+
+Two more instances, from 2026-08-21:
+
+- **The 2030 Agenda** was refused as "nothing found beyond passing
+  references". It had been searched for on Eurostat's SDG pages, where it
+  appears only as context. Searching for the **resolution** — A/RES/70/1 —
+  returns the resolution. It is now [[UN-2030-AGENDA]].
+- **The EEA supervisory authorities' seat at the [[EU-EDPB]]** is asserted
+  for [[IS-PERSONUVERND]] and [[LI-DATENSCHUTZSTELLE]] on the same kind of
+  composition rule: [[INTL-EEA-JCD-154-2018]] states that the supervisory
+  authorities of the EFTA States participate in the Board's activities.

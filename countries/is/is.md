@@ -11,8 +11,10 @@ description: >
   Association and a party to the Agreement on the European Economic Area,
   and not a member of the European Union. It is a base anchor: it carries
   the country's position in the European legal and institutional
-  frameworks so that entities scoped to it have somewhere to attach, and
-  no national entities are modelled yet.
+  frameworks so that entities scoped to it have somewhere to attach. Its
+  first national entities are the data protection authority Persónuvernd
+  and Act No. 90/2018 on data protection and the processing of personal
+  data.
 
 level: national
 country: IS
@@ -65,9 +67,9 @@ sources:
 
 ## Description
 
-Iceland (ISO 3166-1 alpha-2: **`IS`**) is a **base country anchor**,
-created so that entities scoped to it have somewhere to attach. No Iceland
-entity is modelled yet.
+Iceland (ISO 3166-1 alpha-2: **`IS`**) is a country anchor, created so
+that entities scoped to it have somewhere to attach. Two Icelandic entities
+are now modelled: [[IS-PERSONUVERND]] and [[IS-PERSONUVERNDARLOG]].
 
 ## Position in the European frameworks
 
@@ -95,15 +97,24 @@ once incorporated into the EEA Agreement by a decision of the **EEA Joint
 Committee** and then implemented in Icelandic law, which is why no
 `applies-in` edge from an EU instrument points here.
 
+One such decision is now modelled: [[INTL-EEA-JCD-154-2018]], which
+incorporated [[EU-GDPR]] and carries `applies-in` to [[IS]], [[LI]] and
+[[NO]].
+
 Iceland, [[LI]] and [[NO]] are the three **EEA EFTA states**; [[CH]] is the
 fourth EFTA member and is in neither the EU nor the EEA.
 
 ## What this anchor does not yet carry
 
-Nothing beyond membership. There is no national data protection authority,
-no open data portal, no statistics office, no interoperability framework
-and no legislation attached to this entity. Each of those exists in
-reality; none has been researched.
+The **data protection layer only**. [[IS-PERSONUVERND]] and
+[[IS-PERSONUVERNDARLOG]] were added on 2026-08-21 to test whether the
+Norwegian EEA pattern generalises — see [[IS-PERSONUVERNDARLOG]] for the
+three-way comparison, and `discovery/research-queue.md` for what is still
+missing.
+
+There is no open data portal, no statistics office, no interoperability
+framework and no cyber authority. Iceland is also the only member of
+[[INTL-NIIS]] with no X-Road deployment modelled.
 
 ## Sources
 
