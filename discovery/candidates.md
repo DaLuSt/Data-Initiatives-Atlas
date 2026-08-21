@@ -124,15 +124,12 @@ Ranked by what each country would *prove*, not by size alone.
 |---|---|---|---|
 | 1 | **Italy** — `IT` | Largest unmodelled member state. AgID, SPID + CIE, PagoPA, and the **Codice dell'Amministrazione Digitale** — a *codified* digital administration act, a legislative form no Atlas country has. The Garante is among the most active DPAs | **Candidate — highest value** |
 | 2 | **Estonia** — `EE` | **X-Road.** Every platform in the Atlas is one country's own instance; X-Road is jointly owned with Finland through **NIIS**, and would be the first genuinely shared cross-border platform in the graph. Needs `FI` to demonstrate | **Candidate — pairs with FI** |
-| 3 | ~~Ireland — `IE`~~ | ~~GDPR one-stop-shop lead supervisory authority; the only common-law EU member~~ | **Done 2026-08-18** |
 | 4 | **Finland** — `FI` | Only pays off alongside Estonia. Suomi.fi; the other half of NIIS | **Candidate** |
 | 5 | **Denmark** — `DK` | *Grunddata*, the Danish basic-data programme — the direct analogue of the ten Dutch basisregistraties the Atlas models in depth. The best available comparison case for work already done | **Candidate** |
-| 6 | ~~Norway — `NO`~~ | ~~EEA, not EU: incorporation by Joint Committee decision rather than direct applicability~~ | **Done 2026-08-18** |
 | 7 | **Sweden** — `SE` | DIGG and a long open-data record. Completes the Nordic set with DK and FI | **Candidate** |
 | 8 | **Austria** — `AT` | Second federal state after Germany — would show whether the Bund/Länder shape is federal-general or German-specific | **Candidate** |
 | 9 | **Czechia** — `CZ` | Doubles the CEE sample, currently Poland alone | **Candidate** |
 | 10 | **Portugal** — `PT` | AMA and the iAP interoperability platform; a southern-European counterweight to Spain | **Candidate** |
-| — | ~~Switzerland — `CH`~~ | ~~Neither EU nor EEA; bilateral agreements. The hardest test of `applies-in`~~ | **Done 2026-08-18** |
 | — | **Greece, Romania** | Named for completeness; no structural argument beyond coverage | Later |
 
 ### Still open after the 2026-08-18 batch

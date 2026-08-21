@@ -86,6 +86,40 @@ entity is verified.
 **442 of 461 entities remain unread.** The README, the site banner and the
 allowlist all now say twelve rather than none.
 
+### Discovery cleaned out
+
+Closed items are now **removed** from `discovery/`, not struck through. **44
+rows** went: 39 from the research queue, 3 from `candidates.md`, 2 from
+`unresolved.md`. The queue is 488 → **329 lines**.
+
+The old convention made the queue longer every time it got shorter, and a
+reader had to skim past a growing archive to find the work. The record of
+what closed, and why, is in `progress/completed.md` and on the entities —
+every finding was checked as preserved there before its row was deleted.
+
+Three rows were **not** deleted, and they are the reason this was not a
+one-line `grep -v`:
+
+- **Interoperable Europe Board** was struck through, but its own text said
+  *"Still not created — two passing mentions only."* It is open, and it is
+  now un-struck rather than removed.
+- **Wet BAG / BGT / BRO / WOZ** was marked done with *"AWR ch. IVA still
+  open"* trailing it. Rewritten as its own row for [[NL-BRI]]'s missing
+  statutory basis.
+- **CSIRT NASK / GOV / MON** was *"PARTLY DONE … CSIRT MON still open"*.
+  Rewritten as a row for CSIRT MON alone.
+
+A partly-closed row is an open row with history attached. Deleting those
+three would have quietly dropped three real gaps.
+
+Seven headings in `unresolved.md` looked empty after the sweep and were left
+alone — they are parent headings with `###` subsections beneath, still full
+of open questions.
+
+The research queue's banner was replaced too. It described a strike-through
+convention and narrated closures whose rows no longer exist; it now states
+what is open and what is blocked.
+
 ### Twenty-one member states verified, six held back
 
 A verification pass supplied all 27 EU member states with their accession
