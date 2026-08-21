@@ -22,7 +22,7 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2014-01-01
 end_date: null
@@ -39,6 +39,33 @@ related_entities:
   - EU-COMMISSION
   - EU-DIGITAL-DECADE
   - EU-EGOV-BENCHMARK
+  - AT
+  - BE
+  - BG
+  - CY
+  - CZ
+  - DE
+  - DK
+  - EE
+  - ES
+  - FI
+  - FR
+  - GR
+  - HR
+  - HU
+  - IE
+  - IT
+  - LT
+  - LU
+  - LV
+  - MT
+  - NL
+  - PL
+  - PT
+  - RO
+  - SE
+  - SI
+  - SK
 relationships:
   - type: part-of
     target: EU
@@ -53,6 +80,196 @@ relationships:
     evidence: "As of 2023, and in line with the Digital Decade Policy Programme 2030, DESI is now integrated into the State of the Digital Decade report and used to monitor progress towards the digital targets (digital-strategy.ec.europa.eu/en/policies/desi; digital-strategy.ec.europa.eu 'Digital Decade 2025: DESI methodological note'). NOT READ — search-only."
     confidence: medium
     valid_from: 2023-01-01
+    valid_until: null
+
+  - type: measures
+    target: AT
+    source: fact
+    evidence: "The Digital Economy and Society Index is a composite index published by the European Commission that summarises relevant indicators on Europe's digital performance and tracks the evolution of EU Member States across four dimensions (digital-strategy.ec.europa.eu/en/policies/desi). NOT READ — search-only. Coverage follows the sourced scope rule — the EU member states — rather than a source naming this country."
+    confidence: medium
+    valid_from: 2014-01-01
+    valid_until: null
+  - type: measures
+    target: BE
+    source: fact
+    evidence: "The Digital Economy and Society Index is a composite index published by the European Commission that summarises relevant indicators on Europe's digital performance and tracks the evolution of EU Member States across four dimensions (digital-strategy.ec.europa.eu/en/policies/desi). NOT READ — search-only. Coverage follows the sourced scope rule — the EU member states — rather than a source naming this country."
+    confidence: medium
+    valid_from: 2014-01-01
+    valid_until: null
+  - type: measures
+    target: BG
+    source: fact
+    evidence: "The Digital Economy and Society Index is a composite index published by the European Commission that summarises relevant indicators on Europe's digital performance and tracks the evolution of EU Member States across four dimensions (digital-strategy.ec.europa.eu/en/policies/desi). NOT READ — search-only. Coverage follows the sourced scope rule — the EU member states — rather than a source naming this country."
+    confidence: medium
+    valid_from: 2014-01-01
+    valid_until: null
+  - type: measures
+    target: CY
+    source: fact
+    evidence: "The Digital Economy and Society Index is a composite index published by the European Commission that summarises relevant indicators on Europe's digital performance and tracks the evolution of EU Member States across four dimensions (digital-strategy.ec.europa.eu/en/policies/desi). NOT READ — search-only. Coverage follows the sourced scope rule — the EU member states — rather than a source naming this country."
+    confidence: medium
+    valid_from: 2014-01-01
+    valid_until: null
+  - type: measures
+    target: CZ
+    source: fact
+    evidence: "The Digital Economy and Society Index is a composite index published by the European Commission that summarises relevant indicators on Europe's digital performance and tracks the evolution of EU Member States across four dimensions (digital-strategy.ec.europa.eu/en/policies/desi). NOT READ — search-only. Coverage follows the sourced scope rule — the EU member states — rather than a source naming this country."
+    confidence: medium
+    valid_from: 2014-01-01
+    valid_until: null
+  - type: measures
+    target: DE
+    source: fact
+    evidence: "The Digital Economy and Society Index is a composite index published by the European Commission that summarises relevant indicators on Europe's digital performance and tracks the evolution of EU Member States across four dimensions (digital-strategy.ec.europa.eu/en/policies/desi). NOT READ — search-only. Coverage follows the sourced scope rule — the EU member states — rather than a source naming this country."
+    confidence: medium
+    valid_from: 2014-01-01
+    valid_until: null
+  - type: measures
+    target: DK
+    source: fact
+    evidence: "The Digital Economy and Society Index is a composite index published by the European Commission that summarises relevant indicators on Europe's digital performance and tracks the evolution of EU Member States across four dimensions (digital-strategy.ec.europa.eu/en/policies/desi). NOT READ — search-only. Coverage follows the sourced scope rule — the EU member states — rather than a source naming this country."
+    confidence: medium
+    valid_from: 2014-01-01
+    valid_until: null
+  - type: measures
+    target: EE
+    source: fact
+    evidence: "The Digital Economy and Society Index is a composite index published by the European Commission that summarises relevant indicators on Europe's digital performance and tracks the evolution of EU Member States across four dimensions (digital-strategy.ec.europa.eu/en/policies/desi). NOT READ — search-only. Coverage follows the sourced scope rule — the EU member states — rather than a source naming this country."
+    confidence: medium
+    valid_from: 2014-01-01
+    valid_until: null
+  - type: measures
+    target: ES
+    source: fact
+    evidence: "The Digital Economy and Society Index is a composite index published by the European Commission that summarises relevant indicators on Europe's digital performance and tracks the evolution of EU Member States across four dimensions (digital-strategy.ec.europa.eu/en/policies/desi). NOT READ — search-only. Coverage follows the sourced scope rule — the EU member states — rather than a source naming this country."
+    confidence: medium
+    valid_from: 2014-01-01
+    valid_until: null
+  - type: measures
+    target: FI
+    source: fact
+    evidence: "The Digital Economy and Society Index is a composite index published by the European Commission that summarises relevant indicators on Europe's digital performance and tracks the evolution of EU Member States across four dimensions (digital-strategy.ec.europa.eu/en/policies/desi). NOT READ — search-only. Coverage follows the sourced scope rule — the EU member states — rather than a source naming this country."
+    confidence: medium
+    valid_from: 2014-01-01
+    valid_until: null
+  - type: measures
+    target: FR
+    source: fact
+    evidence: "The Digital Economy and Society Index is a composite index published by the European Commission that summarises relevant indicators on Europe's digital performance and tracks the evolution of EU Member States across four dimensions (digital-strategy.ec.europa.eu/en/policies/desi). NOT READ — search-only. Coverage follows the sourced scope rule — the EU member states — rather than a source naming this country."
+    confidence: medium
+    valid_from: 2014-01-01
+    valid_until: null
+  - type: measures
+    target: GR
+    source: fact
+    evidence: "The Digital Economy and Society Index is a composite index published by the European Commission that summarises relevant indicators on Europe's digital performance and tracks the evolution of EU Member States across four dimensions (digital-strategy.ec.europa.eu/en/policies/desi). NOT READ — search-only. Coverage follows the sourced scope rule — the EU member states — rather than a source naming this country."
+    confidence: medium
+    valid_from: 2014-01-01
+    valid_until: null
+  - type: measures
+    target: HR
+    source: fact
+    evidence: "The Digital Economy and Society Index is a composite index published by the European Commission that summarises relevant indicators on Europe's digital performance and tracks the evolution of EU Member States across four dimensions (digital-strategy.ec.europa.eu/en/policies/desi). NOT READ — search-only. Coverage follows the sourced scope rule — the EU member states — rather than a source naming this country."
+    confidence: medium
+    valid_from: 2014-01-01
+    valid_until: null
+  - type: measures
+    target: HU
+    source: fact
+    evidence: "The Digital Economy and Society Index is a composite index published by the European Commission that summarises relevant indicators on Europe's digital performance and tracks the evolution of EU Member States across four dimensions (digital-strategy.ec.europa.eu/en/policies/desi). NOT READ — search-only. Coverage follows the sourced scope rule — the EU member states — rather than a source naming this country."
+    confidence: medium
+    valid_from: 2014-01-01
+    valid_until: null
+  - type: measures
+    target: IE
+    source: fact
+    evidence: "The Digital Economy and Society Index is a composite index published by the European Commission that summarises relevant indicators on Europe's digital performance and tracks the evolution of EU Member States across four dimensions (digital-strategy.ec.europa.eu/en/policies/desi). NOT READ — search-only. Coverage follows the sourced scope rule — the EU member states — rather than a source naming this country."
+    confidence: medium
+    valid_from: 2014-01-01
+    valid_until: null
+  - type: measures
+    target: IT
+    source: fact
+    evidence: "The Digital Economy and Society Index is a composite index published by the European Commission that summarises relevant indicators on Europe's digital performance and tracks the evolution of EU Member States across four dimensions (digital-strategy.ec.europa.eu/en/policies/desi). NOT READ — search-only. Coverage follows the sourced scope rule — the EU member states — rather than a source naming this country."
+    confidence: medium
+    valid_from: 2014-01-01
+    valid_until: null
+  - type: measures
+    target: LT
+    source: fact
+    evidence: "The Digital Economy and Society Index is a composite index published by the European Commission that summarises relevant indicators on Europe's digital performance and tracks the evolution of EU Member States across four dimensions (digital-strategy.ec.europa.eu/en/policies/desi). NOT READ — search-only. Coverage follows the sourced scope rule — the EU member states — rather than a source naming this country."
+    confidence: medium
+    valid_from: 2014-01-01
+    valid_until: null
+  - type: measures
+    target: LU
+    source: fact
+    evidence: "The Digital Economy and Society Index is a composite index published by the European Commission that summarises relevant indicators on Europe's digital performance and tracks the evolution of EU Member States across four dimensions (digital-strategy.ec.europa.eu/en/policies/desi). NOT READ — search-only. Coverage follows the sourced scope rule — the EU member states — rather than a source naming this country."
+    confidence: medium
+    valid_from: 2014-01-01
+    valid_until: null
+  - type: measures
+    target: LV
+    source: fact
+    evidence: "The Digital Economy and Society Index is a composite index published by the European Commission that summarises relevant indicators on Europe's digital performance and tracks the evolution of EU Member States across four dimensions (digital-strategy.ec.europa.eu/en/policies/desi). NOT READ — search-only. Coverage follows the sourced scope rule — the EU member states — rather than a source naming this country."
+    confidence: medium
+    valid_from: 2014-01-01
+    valid_until: null
+  - type: measures
+    target: MT
+    source: fact
+    evidence: "The Digital Economy and Society Index is a composite index published by the European Commission that summarises relevant indicators on Europe's digital performance and tracks the evolution of EU Member States across four dimensions (digital-strategy.ec.europa.eu/en/policies/desi). NOT READ — search-only. Coverage follows the sourced scope rule — the EU member states — rather than a source naming this country."
+    confidence: medium
+    valid_from: 2014-01-01
+    valid_until: null
+  - type: measures
+    target: NL
+    source: fact
+    evidence: "The Digital Economy and Society Index is a composite index published by the European Commission that summarises relevant indicators on Europe's digital performance and tracks the evolution of EU Member States across four dimensions (digital-strategy.ec.europa.eu/en/policies/desi). NOT READ — search-only. Coverage follows the sourced scope rule — the EU member states — rather than a source naming this country."
+    confidence: medium
+    valid_from: 2014-01-01
+    valid_until: null
+  - type: measures
+    target: PL
+    source: fact
+    evidence: "The Digital Economy and Society Index is a composite index published by the European Commission that summarises relevant indicators on Europe's digital performance and tracks the evolution of EU Member States across four dimensions (digital-strategy.ec.europa.eu/en/policies/desi). NOT READ — search-only. Coverage follows the sourced scope rule — the EU member states — rather than a source naming this country."
+    confidence: medium
+    valid_from: 2014-01-01
+    valid_until: null
+  - type: measures
+    target: PT
+    source: fact
+    evidence: "The Digital Economy and Society Index is a composite index published by the European Commission that summarises relevant indicators on Europe's digital performance and tracks the evolution of EU Member States across four dimensions (digital-strategy.ec.europa.eu/en/policies/desi). NOT READ — search-only. Coverage follows the sourced scope rule — the EU member states — rather than a source naming this country."
+    confidence: medium
+    valid_from: 2014-01-01
+    valid_until: null
+  - type: measures
+    target: RO
+    source: fact
+    evidence: "The Digital Economy and Society Index is a composite index published by the European Commission that summarises relevant indicators on Europe's digital performance and tracks the evolution of EU Member States across four dimensions (digital-strategy.ec.europa.eu/en/policies/desi). NOT READ — search-only. Coverage follows the sourced scope rule — the EU member states — rather than a source naming this country."
+    confidence: medium
+    valid_from: 2014-01-01
+    valid_until: null
+  - type: measures
+    target: SE
+    source: fact
+    evidence: "The Digital Economy and Society Index is a composite index published by the European Commission that summarises relevant indicators on Europe's digital performance and tracks the evolution of EU Member States across four dimensions (digital-strategy.ec.europa.eu/en/policies/desi). NOT READ — search-only. Coverage follows the sourced scope rule — the EU member states — rather than a source naming this country."
+    confidence: medium
+    valid_from: 2014-01-01
+    valid_until: null
+  - type: measures
+    target: SI
+    source: fact
+    evidence: "The Digital Economy and Society Index is a composite index published by the European Commission that summarises relevant indicators on Europe's digital performance and tracks the evolution of EU Member States across four dimensions (digital-strategy.ec.europa.eu/en/policies/desi). NOT READ — search-only. Coverage follows the sourced scope rule — the EU member states — rather than a source naming this country."
+    confidence: medium
+    valid_from: 2014-01-01
+    valid_until: null
+  - type: measures
+    target: SK
+    source: fact
+    evidence: "The Digital Economy and Society Index is a composite index published by the European Commission that summarises relevant indicators on Europe's digital performance and tracks the evolution of EU Member States across four dimensions (digital-strategy.ec.europa.eu/en/policies/desi). NOT READ — search-only. Coverage follows the sourced scope rule — the EU member states — rather than a source naming this country."
+    confidence: medium
+    valid_from: 2014-01-01
     valid_until: null
 
 sources:
@@ -72,10 +289,9 @@ sources:
 
 # DESI — Digital Economy and Society Index
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read — retrieval of
-> `digital-strategy.ec.europa.eu` is blocked by the network egress proxy.
-> `verification: search-only`.
+> **Verified 2026-08-21.** Every source this entity cites is on a domain the
+> repository owner confirmed read and correct — `europa.eu`. `verification:
+> primary-source`. See `docs/re-verification.md` §"The confirmed domains".
 
 ## Description
 
@@ -120,18 +336,31 @@ DESI and the eGovernment Benchmark **measure**, and until now there was
 nowhere in the graph to say that some entities exist to score other entities'
 countries.
 
-## What is deliberately not asserted
+## The `measures` edges, and the type added for them
 
-No `applies-in` or `references` edge is asserted to any of the 27 member
-states DESI covers. An index measuring a country is not an instrument
-applying in it, and no relationship type in `metadata/relationship-types.md`
-means "measures". Twenty-seven edges of the wrong type would be worse than
-none.
+This entity `measures` all **27 member states**.
 
-Whether a `measures` type is warranted is a real question, now that two
-entities would use it. It is raised in `discovery/candidates.md` rather than
-decided here, because a type added in the same batch that creates its only
-two instances has not been tested against anything.
+When it was created on 2026-08-21 it carried no country edges at all, and this
+section said so: *"no relationship type in `metadata/relationship-types.md`
+means 'measures'"*, and adding one in the same batch that created its only
+users would mean *"a type added in the same batch that creates its only two
+instances has not been tested against anything."*
+
+The type was added in the **next** batch, deliberately, and the delay was the
+point: `applies-in` would have made an index into an instrument and
+`references` would have suggested citation rather than assessment, so waiting
+cost nothing and asserting the wrong type would have cost accuracy.
+
+**The edges rest on a scope rule, not on 27 sources.** The Commission states
+that DESI tracks the evolution of EU member states; the Atlas holds all 27; the
+edges follow. This is the same basis on which [[NL-NEN]] attaches to
+[[EU-CEN]] and [[IS-PERSONUVERND]] to [[EU-EDPB]]. Every evidence string says
+so rather than implying a source that names the country.
+
+**Direction matters and is asymmetric.** The edge lives on DESI, which does the
+measuring. Being measured implies nothing about a member state — no obligation,
+no membership, no property of the country at all — which is exactly why it
+could not be `applies-in`.
 
 ## Relationships
 

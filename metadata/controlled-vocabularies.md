@@ -15,7 +15,27 @@ Definitions: `metadata/ontology.md` §1. Folder mapping: `metadata/ontology.md` 
 
 ## `level`
 
-`international`, `regional`, `national`, `sectoral`, `local`
+`international`, `regional`, `national`, `subnational`, `sectoral`, `local`
+
+**`regional` means *supra*-national in this Atlas** — above the state, not
+below it. It is what all 68 EU-scoped entities carry. The word is doing an
+unusual job and the Atlas is stuck with it: renaming it to `supranational`
+would touch every one of those files, the site's filter and the docs, to buy
+nothing a definition cannot.
+
+`subnational` is the tier **below** the state but **above** the municipality:
+a Belgian Region or Community, a Spanish Comunidad Autónoma, a German Land, a
+Swiss canton. These are constituent units with their own legislatures and
+their own legislative competence — the Flemish decreet of 2 July 2021 is
+primary legislation, not a by-law.
+
+`local` is the municipal tier and below.
+
+**Do not use `local` for a constituent state.** That was the tempting
+shortcut, because `local` already existed and `subnational` did not, and it
+would have flattened the distinction between a parliament that legislates and
+a council that administers. Added 2026-08-21, having blocked four separate
+queued items across three countries since the Belgium batch.
 
 ## `status`
 
@@ -66,7 +86,8 @@ See `metadata/relationship-types.md` §2.1 for the full list and definitions:
 `derived-from`, `based-on`, `references`, `supersedes`, `replaces`,
 `proposes-to-supersede`, `amends`, `part-of`, `governed-by`, `applies-to`,
 `applies-in`, `produces`, `maintained-by`, `owned-by`, `participates-in`,
-`aligned-with`, `implements-requirement-from`, `cooperates-with`.
+`aligned-with`, `implements-requirement-from`, `cooperates-with`,
+`measures`.
 
 ## Relationship `source`
 

@@ -11,6 +11,7 @@ Anchor entity: [[DK]]
 
 ## Organisations
 
+- [[DK-SUNDHEDSDATASTYRELSEN]] — Danish Health Data Authority _(holds the national health registers; part of the Ministry of the Interior and Health)_
 - [[DK-DATATILSYNET]] — Datatilsynet
 - [[DK-DIGST]] — Agency for Digital Government
 - [[DK-DST]] — Statistics Denmark

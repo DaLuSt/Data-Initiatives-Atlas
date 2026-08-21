@@ -24,15 +24,21 @@ Do not add anything here without noting where it was seen.
 
 ---
 
-## Status: worked through 2026-08-21
+## Status: worked through 2026-08-21 (twice)
 
-The candidate-clearing batch of 2026-08-21 acted on this page and closed
-**eleven** of its rows, including every row in three whole sections — the
-EEA and Switzerland section, the EU↔UN vocabulary section, and the unused
-entity types. Sixteen entities were created. See `progress/completed.md`.
+Two batches ran on 2026-08-21.
 
-What remains below is what is genuinely still open, plus what that batch
-newly opened.
+The **candidate-clearing batch** acted on this page and closed **eleven**
+rows, emptying three whole sections — the EEA and Switzerland section, the
+EU↔UN vocabulary section, and the unused entity types. Sixteen entities.
+
+The **follow-on batch** then closed the two largest things this page had left
+open: the `measures` relationship type (§3) and the `level` vocabulary (§5),
+and acted on the domain coverage §6 measured. Fourteen more entities.
+
+What remains below is what is genuinely still open. **Section 5's
+ontology-gap table is now the largest thing on this page**, and every row in
+it is a modelling decision rather than research.
 
 ---
 
@@ -70,23 +76,23 @@ between the instruments.
 | **UN/CEFACT Core Component Library** | standard | UN (UNECE), `level: international` | The third of the three UN/CEFACT outputs named in the UN batch. Nothing beyond the name was found; a node built on that is the thin encyclopedic entity the taxonomy threshold prevents | unece.org/trade/uncefact | UN batch / 2026-08-16; narrowed 2026-08-21 | Candidate |
 | **eFTI Regulation (EU) 2020/1056** | law | EU, `level: regional` | Secondary sources describe the eFTI data set as built on the UN/CEFACT **MMT-RDM** model, which would be a second EU→UN/CEFACT edge. The claim was found in a UNECE presentation and a project website, **not in the regulation**, so it was left out in favour of the better-sourced UN/LOCODE case | unece.org ECE-TRANS-SC.1 presentation; digitaltrade4.eu; europarl.europa.eu legislative train | Candidate batch / 2026-08-21 | Candidate |
 
-## 3. Newly opened — measurement has no relationship type
+## 3. Closed — `measures` was added the same day
 
-[[EU-DESI]] and [[EU-EGOV-BENCHMARK]] are the Atlas's first
-`type: publication` entities and its first comparative-measurement layer.
-Both measure countries. **Neither carries a single edge to a country it
-measures**, because no relationship type means "measures".
+[[EU-DESI]] and [[EU-EGOV-BENCHMARK]] carried no edge to any country they
+measure, because no relationship type meant "measures". This section argued
+for waiting: *"a type added in the same batch that creates its only users has
+not been tested against anything."*
 
-| Gap | Why it matters | Where seen | Noted by / date | Status |
-|---|---|---|---|---|
-| **No `measures` relationship type** | DESI covers the 27 member states; the eGovernment Benchmark covers 35 countries, **every one of which is already an Atlas anchor**. That is 62 potential edges the Atlas can see and cannot state. `applies-in` would turn a study into an instrument; `references` would suggest citation rather than assessment | [[EU-DESI]], [[EU-EGOV-BENCHMARK]] | Candidate batch / 2026-08-21 | **Open (vocabulary) — two instances, deliberately not decided in the batch that created them** |
+**`measures` was added on 2026-08-21**, in the follow-on batch, and the two
+publications now carry **62 edges** — 27 from DESI and 35 from the benchmark.
+`metadata/relationship-types.md` carries the definition; the edges rest on
+each publication's sourced scope rule rather than on 62 individual sources,
+which is the same basis [[NL-NEN]] attaches to [[EU-CEN]] on.
 
-**Deliberately not decided here.** `cooperates-with` was added in the same
-batch on a single well-sourced example, and that was the right call for a
-type with one instance and no scaling consequence. `measures` has the
-opposite shape: it would immediately want 62 edges, and a type added in the
-same batch that creates its only users has not been tested against anything.
-See `metadata/relationship-types.md` §2.4.
+The one-batch separation cost nothing and is worth keeping as the pattern:
+`cooperates-with` was added on a single example because it had one instance
+and no scaling consequence; `measures` immediately wanted 62 edges and got a
+batch of separation from the entities that would use it.
 
 ## 4. Carried leads, unchanged
 
@@ -99,46 +105,52 @@ See `metadata/relationship-types.md` §2.4.
 | **High-level Political Forum on Sustainable Development** — `UN-HLPF` | organisation | UN, `level: international` | The UN body that receives voluntary national reviews. [[EU-VOLUNTARY-REVIEW-2023]] was *presented at* it and can say so only in prose, because the forum has no node | hlpf.un.org; ec.europa.eu IP/23/3801 | Candidate batch / 2026-08-21 | Candidate |
 | **IMO, GISIS and the SafeSeaNet codes** | organisation / standard | international | [[EU-EMSWE]]'s common location database holds UN/LOCODE **alongside** the SafeSeaNet codes and the IMO port facility codes registered in GISIS. The IMO is not in the Atlas at all, and creating it to carry one code list would be a thin entity | eur-lex.europa.eu CELEX 32019R1239 | Candidate batch / 2026-08-21 | Weak lead |
 
-## 5. Entity types and levels — what the vocabulary allows and nothing uses (measured 2026-08-21)
+## 5. Entity types and levels (re-measured 2026-08-21)
 
 `technology` and `publication` were both on this list and are both now in
 use — [[INTL-X-ROAD]] for the first, [[EU-DESI]], [[EU-EGOV-BENCHMARK]] and
 [[EU-VOLUNTARY-REVIEW-2023]] for the second. **All 17 entity types are now
-in use.** What remains is the level vocabulary and the region layer.
+in use.**
+
+The **`level` vocabulary gained a sixth value on 2026-08-21**: `subnational`,
+for the tier below the state and above the municipality. It has four uses —
+the three Belgian sub-federal Open Data Directive instruments and the 2016
+Brussels ordonnance one of them amends. See
+`metadata/controlled-vocabularies.md` §`level` for why `local` would have been
+the wrong answer.
 
 | Item | Measurement | Why it matters | Status |
 |---|---|---|---|
-| **`level: local`** | **0 uses**, against 377 `national`, 68 `regional`, 52 `international` and 6 `sectoral` | The recurring blocker, named in five separate batches: Digitaal Vlaanderen and Flanders, the seventeen Comunidades Autónomas, the German Länder, Dutch municipalities. This is a **design decision, not research** — it gates more queued work than any other single item | **Blocked (design)** |
+| **`level: local`** | **0 uses**, against 385 `national`, 69 `regional`, 52 `international`, 6 `sectoral` and 4 `subnational` | **No longer the blocker it was.** What blocked Flanders, the Comunidades Autónomas and the German Länder was that `regional` means *supra*-national here and nothing meant *sub*-national; `level: subnational` was added 2026-08-21 and those three became ordinary research. `local` remains unused and now gates one thing only — the Dutch municipalities — where the open question is **what entity to create**, not what to call it | Open (design), much narrower |
 | **`level: sectoral`** | 6 uses | Barely exercised. Whether that reflects the subject matter or under-use is unexamined | Later |
 | **`region` entities** | **1** — only [[EU]] | EFTA, the Nordic Council, the Council of Europe and Benelux are absent. The **EEA** is now modelled as [[INTL-EEA-AGREEMENT]] (`type: law`) rather than as a region, which turned out to be the more useful shape: [[INTL-EEA-JCD-154-2018]] `amends` it, and an amendment to a region would be meaningless | Later |
 
-## 6. Domain coverage is lopsided (re-measured 2026-08-21)
+## 6. Domain coverage (re-measured 2026-08-21, after the health batch)
 
 Counted as **distinct countries having at least one entity that lists the
 domain**, across all 58 country anchors:
 
-| Domain | Countries | |
+| Domain | Countries | Change this batch |
 |---|---|---|
-| [[DOMAIN-GOVERNMENT]] | 21 | |
-| [[DOMAIN-CYBERSECURITY]] | 13 | |
-| [[DOMAIN-NATIONAL-SECURITY]] | 8 | |
-| [[DOMAIN-GEOSPATIAL]] | 6 | |
-| [[DOMAIN-MOBILITY]] | **2** | |
-| [[DOMAIN-HEALTH]] | **1** | **NL only** |
-| [[DOMAIN-EDUCATION]] | **1** | **NL only** |
-| [[DOMAIN-RESEARCH]] | **1** | **NL only** |
+| [[DOMAIN-GOVERNMENT]] | 21 | — |
+| [[DOMAIN-CYBERSECURITY]] | 13 | — |
+| [[DOMAIN-NATIONAL-SECURITY]] | 8 | — |
+| [[DOMAIN-GEOSPATIAL]] | 6 | — |
+| [[DOMAIN-HEALTH]] | **5** | **from 1** |
+| [[DOMAIN-MOBILITY]] | 2 | — |
+| [[DOMAIN-RESEARCH]] | **2** | **from 1** |
+| [[DOMAIN-EDUCATION]] | **2** | **from 1** |
 
-The 2026-08-18 version of this table read "3/7", "2/7", "1/7" and so on
-against seven countries. The country expansion has since taken the Atlas to
-58 anchors, and **the absolute counts went up while the coverage got
-thinner**: a domain present in 1 of 7 countries is a gap, and the same domain
-present in 1 of 58 is a much larger one.
+The three domains that stood at **1 of 58** are the three that moved. Health
+was called *"the single largest correction available"* and got four new
+countries: [[DE]], [[FR]], [[FI]] and [[DK]], each with a materially
+different national regime — pool, license, custody — which is recorded on
+[[DOMAIN-HEALTH]].
 
-**Health remains the single largest correction available.** Fifty-seven of
-fifty-eight countries have no health-data entity at all, in an Atlas that
-holds [[EU-EHDS]]. [[DOMAIN-MOBILITY]] gained its first EU-level instrument
-in [[EU-EMSWE]] and its second entity in [[UN-LOCODE]], but still no second
-country.
+**[[DOMAIN-MOBILITY]] is now the thinnest at 2**, and unlike health it has no
+obvious set of national counterparts to add: [[EU-EMSWE]] and [[UN-LOCODE]]
+are both supra-national, and the national mobility layer would be transport
+ministries and traffic-data agencies that no batch has surveyed.
 
 ## 7. Ontology gaps
 

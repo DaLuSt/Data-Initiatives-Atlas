@@ -33,11 +33,19 @@ domains:
 organisations: []
 related_entities:
   - NL
+  - EU-GEANT
 relationships:
   - type: related-to
     target: NL
     source: fact
     evidence: "SURF is the Dutch ICT cooperative of education and research institutions, founded in 1986 and owned by its members — more than 100 universities, universities of applied sciences, vocational institutions, university medical centres and research institutes (surf.nl). NOT READ — search-only. `related-to` and not `part-of`: SURF is member-owned, not a body of the Dutch state, so structural containment is not claimed. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: participates-in
+    target: EU-GEANT
+    source: fact
+    evidence: "The GÉANT Association comprises 37 national research and education networks plus NORDUnet; GÉANT provides the pan-European backbone and coordinates shared services while each NREN delivers those capabilities at national level, and the NRENs are not-for-profit and mainly publicly funded (about.geant.org/nrens; geant.org 'National Research and Education Networks'). NOT READ — search-only. Membership follows from the sourced composition rule rather than from a source naming SURF."
     confidence: medium
     valid_from: null
     valid_until: null

@@ -19,11 +19,11 @@ region: EU
 status: planned
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-21"
 previous_version: null
 successor: null
 
@@ -52,9 +52,9 @@ sources:
 
 # European Digital Identity Wallet (EUDI Wallet)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-21.** Every source this entity cites is on a domain the
+> repository owner confirmed read and correct — `europa.eu`. `verification:
+> primary-source`. See `docs/re-verification.md` §"The confirmed domains".
 
 ## Rebuilt in Batch 8
 

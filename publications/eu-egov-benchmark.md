@@ -39,6 +39,41 @@ related_entities:
   - EU-COMMISSION
   - EU-DESI
   - EU-DIGITAL-DECADE
+  - AT
+  - BE
+  - BG
+  - CY
+  - CZ
+  - DE
+  - DK
+  - EE
+  - ES
+  - FI
+  - FR
+  - GR
+  - HR
+  - HU
+  - IE
+  - IT
+  - LT
+  - LU
+  - LV
+  - MT
+  - NL
+  - PL
+  - PT
+  - RO
+  - SE
+  - SI
+  - SK
+  - IS
+  - "NO"
+  - CH
+  - AL
+  - ME
+  - MK
+  - RS
+  - TR
 relationships:
   - type: part-of
     target: EU
@@ -51,6 +86,252 @@ relationships:
     target: EU-DESI
     source: fact
     evidence: "The eGovernment Benchmark feeds the digital public services dimension of the Digital Economy and Society Index, which the Commission documents on its 'Digital Public Services in the Digital Economy and Society Index' page (digital-strategy.ec.europa.eu/en/policies/desi-digital-public-services; op.europa.eu 'eGovernment benchmark 2025'). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+
+  - type: measures
+    target: AT
+    source: fact
+    evidence: "The eGovernment Benchmark evaluates provision and delivery of eGovernment services in 35 countries across Europe: the 27 EU member states and Iceland, Norway, Switzerland, Albania, Montenegro, North Macedonia, Serbia and Türkiye (op.europa.eu 'eGovernment benchmark 2025'; digital-strategy.ec.europa.eu 'Digital Public Services in DESI'). NOT READ — search-only. Coverage follows the sourced scope rule, which names this country's group explicitly."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: measures
+    target: BE
+    source: fact
+    evidence: "The eGovernment Benchmark evaluates provision and delivery of eGovernment services in 35 countries across Europe: the 27 EU member states and Iceland, Norway, Switzerland, Albania, Montenegro, North Macedonia, Serbia and Türkiye (op.europa.eu 'eGovernment benchmark 2025'; digital-strategy.ec.europa.eu 'Digital Public Services in DESI'). NOT READ — search-only. Coverage follows the sourced scope rule, which names this country's group explicitly."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: measures
+    target: BG
+    source: fact
+    evidence: "The eGovernment Benchmark evaluates provision and delivery of eGovernment services in 35 countries across Europe: the 27 EU member states and Iceland, Norway, Switzerland, Albania, Montenegro, North Macedonia, Serbia and Türkiye (op.europa.eu 'eGovernment benchmark 2025'; digital-strategy.ec.europa.eu 'Digital Public Services in DESI'). NOT READ — search-only. Coverage follows the sourced scope rule, which names this country's group explicitly."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: measures
+    target: CY
+    source: fact
+    evidence: "The eGovernment Benchmark evaluates provision and delivery of eGovernment services in 35 countries across Europe: the 27 EU member states and Iceland, Norway, Switzerland, Albania, Montenegro, North Macedonia, Serbia and Türkiye (op.europa.eu 'eGovernment benchmark 2025'; digital-strategy.ec.europa.eu 'Digital Public Services in DESI'). NOT READ — search-only. Coverage follows the sourced scope rule, which names this country's group explicitly."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: measures
+    target: CZ
+    source: fact
+    evidence: "The eGovernment Benchmark evaluates provision and delivery of eGovernment services in 35 countries across Europe: the 27 EU member states and Iceland, Norway, Switzerland, Albania, Montenegro, North Macedonia, Serbia and Türkiye (op.europa.eu 'eGovernment benchmark 2025'; digital-strategy.ec.europa.eu 'Digital Public Services in DESI'). NOT READ — search-only. Coverage follows the sourced scope rule, which names this country's group explicitly."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: measures
+    target: DE
+    source: fact
+    evidence: "The eGovernment Benchmark evaluates provision and delivery of eGovernment services in 35 countries across Europe: the 27 EU member states and Iceland, Norway, Switzerland, Albania, Montenegro, North Macedonia, Serbia and Türkiye (op.europa.eu 'eGovernment benchmark 2025'; digital-strategy.ec.europa.eu 'Digital Public Services in DESI'). NOT READ — search-only. Coverage follows the sourced scope rule, which names this country's group explicitly."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: measures
+    target: DK
+    source: fact
+    evidence: "The eGovernment Benchmark evaluates provision and delivery of eGovernment services in 35 countries across Europe: the 27 EU member states and Iceland, Norway, Switzerland, Albania, Montenegro, North Macedonia, Serbia and Türkiye (op.europa.eu 'eGovernment benchmark 2025'; digital-strategy.ec.europa.eu 'Digital Public Services in DESI'). NOT READ — search-only. Coverage follows the sourced scope rule, which names this country's group explicitly."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: measures
+    target: EE
+    source: fact
+    evidence: "The eGovernment Benchmark evaluates provision and delivery of eGovernment services in 35 countries across Europe: the 27 EU member states and Iceland, Norway, Switzerland, Albania, Montenegro, North Macedonia, Serbia and Türkiye (op.europa.eu 'eGovernment benchmark 2025'; digital-strategy.ec.europa.eu 'Digital Public Services in DESI'). NOT READ — search-only. Coverage follows the sourced scope rule, which names this country's group explicitly."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: measures
+    target: ES
+    source: fact
+    evidence: "The eGovernment Benchmark evaluates provision and delivery of eGovernment services in 35 countries across Europe: the 27 EU member states and Iceland, Norway, Switzerland, Albania, Montenegro, North Macedonia, Serbia and Türkiye (op.europa.eu 'eGovernment benchmark 2025'; digital-strategy.ec.europa.eu 'Digital Public Services in DESI'). NOT READ — search-only. Coverage follows the sourced scope rule, which names this country's group explicitly."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: measures
+    target: FI
+    source: fact
+    evidence: "The eGovernment Benchmark evaluates provision and delivery of eGovernment services in 35 countries across Europe: the 27 EU member states and Iceland, Norway, Switzerland, Albania, Montenegro, North Macedonia, Serbia and Türkiye (op.europa.eu 'eGovernment benchmark 2025'; digital-strategy.ec.europa.eu 'Digital Public Services in DESI'). NOT READ — search-only. Coverage follows the sourced scope rule, which names this country's group explicitly."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: measures
+    target: FR
+    source: fact
+    evidence: "The eGovernment Benchmark evaluates provision and delivery of eGovernment services in 35 countries across Europe: the 27 EU member states and Iceland, Norway, Switzerland, Albania, Montenegro, North Macedonia, Serbia and Türkiye (op.europa.eu 'eGovernment benchmark 2025'; digital-strategy.ec.europa.eu 'Digital Public Services in DESI'). NOT READ — search-only. Coverage follows the sourced scope rule, which names this country's group explicitly."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: measures
+    target: GR
+    source: fact
+    evidence: "The eGovernment Benchmark evaluates provision and delivery of eGovernment services in 35 countries across Europe: the 27 EU member states and Iceland, Norway, Switzerland, Albania, Montenegro, North Macedonia, Serbia and Türkiye (op.europa.eu 'eGovernment benchmark 2025'; digital-strategy.ec.europa.eu 'Digital Public Services in DESI'). NOT READ — search-only. Coverage follows the sourced scope rule, which names this country's group explicitly."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: measures
+    target: HR
+    source: fact
+    evidence: "The eGovernment Benchmark evaluates provision and delivery of eGovernment services in 35 countries across Europe: the 27 EU member states and Iceland, Norway, Switzerland, Albania, Montenegro, North Macedonia, Serbia and Türkiye (op.europa.eu 'eGovernment benchmark 2025'; digital-strategy.ec.europa.eu 'Digital Public Services in DESI'). NOT READ — search-only. Coverage follows the sourced scope rule, which names this country's group explicitly."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: measures
+    target: HU
+    source: fact
+    evidence: "The eGovernment Benchmark evaluates provision and delivery of eGovernment services in 35 countries across Europe: the 27 EU member states and Iceland, Norway, Switzerland, Albania, Montenegro, North Macedonia, Serbia and Türkiye (op.europa.eu 'eGovernment benchmark 2025'; digital-strategy.ec.europa.eu 'Digital Public Services in DESI'). NOT READ — search-only. Coverage follows the sourced scope rule, which names this country's group explicitly."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: measures
+    target: IE
+    source: fact
+    evidence: "The eGovernment Benchmark evaluates provision and delivery of eGovernment services in 35 countries across Europe: the 27 EU member states and Iceland, Norway, Switzerland, Albania, Montenegro, North Macedonia, Serbia and Türkiye (op.europa.eu 'eGovernment benchmark 2025'; digital-strategy.ec.europa.eu 'Digital Public Services in DESI'). NOT READ — search-only. Coverage follows the sourced scope rule, which names this country's group explicitly."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: measures
+    target: IT
+    source: fact
+    evidence: "The eGovernment Benchmark evaluates provision and delivery of eGovernment services in 35 countries across Europe: the 27 EU member states and Iceland, Norway, Switzerland, Albania, Montenegro, North Macedonia, Serbia and Türkiye (op.europa.eu 'eGovernment benchmark 2025'; digital-strategy.ec.europa.eu 'Digital Public Services in DESI'). NOT READ — search-only. Coverage follows the sourced scope rule, which names this country's group explicitly."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: measures
+    target: LT
+    source: fact
+    evidence: "The eGovernment Benchmark evaluates provision and delivery of eGovernment services in 35 countries across Europe: the 27 EU member states and Iceland, Norway, Switzerland, Albania, Montenegro, North Macedonia, Serbia and Türkiye (op.europa.eu 'eGovernment benchmark 2025'; digital-strategy.ec.europa.eu 'Digital Public Services in DESI'). NOT READ — search-only. Coverage follows the sourced scope rule, which names this country's group explicitly."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: measures
+    target: LU
+    source: fact
+    evidence: "The eGovernment Benchmark evaluates provision and delivery of eGovernment services in 35 countries across Europe: the 27 EU member states and Iceland, Norway, Switzerland, Albania, Montenegro, North Macedonia, Serbia and Türkiye (op.europa.eu 'eGovernment benchmark 2025'; digital-strategy.ec.europa.eu 'Digital Public Services in DESI'). NOT READ — search-only. Coverage follows the sourced scope rule, which names this country's group explicitly."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: measures
+    target: LV
+    source: fact
+    evidence: "The eGovernment Benchmark evaluates provision and delivery of eGovernment services in 35 countries across Europe: the 27 EU member states and Iceland, Norway, Switzerland, Albania, Montenegro, North Macedonia, Serbia and Türkiye (op.europa.eu 'eGovernment benchmark 2025'; digital-strategy.ec.europa.eu 'Digital Public Services in DESI'). NOT READ — search-only. Coverage follows the sourced scope rule, which names this country's group explicitly."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: measures
+    target: MT
+    source: fact
+    evidence: "The eGovernment Benchmark evaluates provision and delivery of eGovernment services in 35 countries across Europe: the 27 EU member states and Iceland, Norway, Switzerland, Albania, Montenegro, North Macedonia, Serbia and Türkiye (op.europa.eu 'eGovernment benchmark 2025'; digital-strategy.ec.europa.eu 'Digital Public Services in DESI'). NOT READ — search-only. Coverage follows the sourced scope rule, which names this country's group explicitly."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: measures
+    target: NL
+    source: fact
+    evidence: "The eGovernment Benchmark evaluates provision and delivery of eGovernment services in 35 countries across Europe: the 27 EU member states and Iceland, Norway, Switzerland, Albania, Montenegro, North Macedonia, Serbia and Türkiye (op.europa.eu 'eGovernment benchmark 2025'; digital-strategy.ec.europa.eu 'Digital Public Services in DESI'). NOT READ — search-only. Coverage follows the sourced scope rule, which names this country's group explicitly."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: measures
+    target: PL
+    source: fact
+    evidence: "The eGovernment Benchmark evaluates provision and delivery of eGovernment services in 35 countries across Europe: the 27 EU member states and Iceland, Norway, Switzerland, Albania, Montenegro, North Macedonia, Serbia and Türkiye (op.europa.eu 'eGovernment benchmark 2025'; digital-strategy.ec.europa.eu 'Digital Public Services in DESI'). NOT READ — search-only. Coverage follows the sourced scope rule, which names this country's group explicitly."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: measures
+    target: PT
+    source: fact
+    evidence: "The eGovernment Benchmark evaluates provision and delivery of eGovernment services in 35 countries across Europe: the 27 EU member states and Iceland, Norway, Switzerland, Albania, Montenegro, North Macedonia, Serbia and Türkiye (op.europa.eu 'eGovernment benchmark 2025'; digital-strategy.ec.europa.eu 'Digital Public Services in DESI'). NOT READ — search-only. Coverage follows the sourced scope rule, which names this country's group explicitly."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: measures
+    target: RO
+    source: fact
+    evidence: "The eGovernment Benchmark evaluates provision and delivery of eGovernment services in 35 countries across Europe: the 27 EU member states and Iceland, Norway, Switzerland, Albania, Montenegro, North Macedonia, Serbia and Türkiye (op.europa.eu 'eGovernment benchmark 2025'; digital-strategy.ec.europa.eu 'Digital Public Services in DESI'). NOT READ — search-only. Coverage follows the sourced scope rule, which names this country's group explicitly."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: measures
+    target: SE
+    source: fact
+    evidence: "The eGovernment Benchmark evaluates provision and delivery of eGovernment services in 35 countries across Europe: the 27 EU member states and Iceland, Norway, Switzerland, Albania, Montenegro, North Macedonia, Serbia and Türkiye (op.europa.eu 'eGovernment benchmark 2025'; digital-strategy.ec.europa.eu 'Digital Public Services in DESI'). NOT READ — search-only. Coverage follows the sourced scope rule, which names this country's group explicitly."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: measures
+    target: SI
+    source: fact
+    evidence: "The eGovernment Benchmark evaluates provision and delivery of eGovernment services in 35 countries across Europe: the 27 EU member states and Iceland, Norway, Switzerland, Albania, Montenegro, North Macedonia, Serbia and Türkiye (op.europa.eu 'eGovernment benchmark 2025'; digital-strategy.ec.europa.eu 'Digital Public Services in DESI'). NOT READ — search-only. Coverage follows the sourced scope rule, which names this country's group explicitly."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: measures
+    target: SK
+    source: fact
+    evidence: "The eGovernment Benchmark evaluates provision and delivery of eGovernment services in 35 countries across Europe: the 27 EU member states and Iceland, Norway, Switzerland, Albania, Montenegro, North Macedonia, Serbia and Türkiye (op.europa.eu 'eGovernment benchmark 2025'; digital-strategy.ec.europa.eu 'Digital Public Services in DESI'). NOT READ — search-only. Coverage follows the sourced scope rule, which names this country's group explicitly."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: measures
+    target: IS
+    source: fact
+    evidence: "The eGovernment Benchmark evaluates provision and delivery of eGovernment services in 35 countries across Europe: the 27 EU member states and Iceland, Norway, Switzerland, Albania, Montenegro, North Macedonia, Serbia and Türkiye (op.europa.eu 'eGovernment benchmark 2025'; digital-strategy.ec.europa.eu 'Digital Public Services in DESI'). NOT READ — search-only. Coverage follows the sourced scope rule, which names this country's group explicitly."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: measures
+    target: "NO"
+    source: fact
+    evidence: "The eGovernment Benchmark evaluates provision and delivery of eGovernment services in 35 countries across Europe: the 27 EU member states and Iceland, Norway, Switzerland, Albania, Montenegro, North Macedonia, Serbia and Türkiye (op.europa.eu 'eGovernment benchmark 2025'; digital-strategy.ec.europa.eu 'Digital Public Services in DESI'). NOT READ — search-only. Coverage follows the sourced scope rule, which names this country's group explicitly."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: measures
+    target: CH
+    source: fact
+    evidence: "The eGovernment Benchmark evaluates provision and delivery of eGovernment services in 35 countries across Europe: the 27 EU member states and Iceland, Norway, Switzerland, Albania, Montenegro, North Macedonia, Serbia and Türkiye (op.europa.eu 'eGovernment benchmark 2025'; digital-strategy.ec.europa.eu 'Digital Public Services in DESI'). NOT READ — search-only. Coverage follows the sourced scope rule, which names this country's group explicitly."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: measures
+    target: AL
+    source: fact
+    evidence: "The eGovernment Benchmark evaluates provision and delivery of eGovernment services in 35 countries across Europe: the 27 EU member states and Iceland, Norway, Switzerland, Albania, Montenegro, North Macedonia, Serbia and Türkiye (op.europa.eu 'eGovernment benchmark 2025'; digital-strategy.ec.europa.eu 'Digital Public Services in DESI'). NOT READ — search-only. Coverage follows the sourced scope rule, which names this country's group explicitly."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: measures
+    target: ME
+    source: fact
+    evidence: "The eGovernment Benchmark evaluates provision and delivery of eGovernment services in 35 countries across Europe: the 27 EU member states and Iceland, Norway, Switzerland, Albania, Montenegro, North Macedonia, Serbia and Türkiye (op.europa.eu 'eGovernment benchmark 2025'; digital-strategy.ec.europa.eu 'Digital Public Services in DESI'). NOT READ — search-only. Coverage follows the sourced scope rule, which names this country's group explicitly."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: measures
+    target: MK
+    source: fact
+    evidence: "The eGovernment Benchmark evaluates provision and delivery of eGovernment services in 35 countries across Europe: the 27 EU member states and Iceland, Norway, Switzerland, Albania, Montenegro, North Macedonia, Serbia and Türkiye (op.europa.eu 'eGovernment benchmark 2025'; digital-strategy.ec.europa.eu 'Digital Public Services in DESI'). NOT READ — search-only. Coverage follows the sourced scope rule, which names this country's group explicitly."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: measures
+    target: RS
+    source: fact
+    evidence: "The eGovernment Benchmark evaluates provision and delivery of eGovernment services in 35 countries across Europe: the 27 EU member states and Iceland, Norway, Switzerland, Albania, Montenegro, North Macedonia, Serbia and Türkiye (op.europa.eu 'eGovernment benchmark 2025'; digital-strategy.ec.europa.eu 'Digital Public Services in DESI'). NOT READ — search-only. Coverage follows the sourced scope rule, which names this country's group explicitly."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: measures
+    target: TR
+    source: fact
+    evidence: "The eGovernment Benchmark evaluates provision and delivery of eGovernment services in 35 countries across Europe: the 27 EU member states and Iceland, Norway, Switzerland, Albania, Montenegro, North Macedonia, Serbia and Türkiye (op.europa.eu 'eGovernment benchmark 2025'; digital-strategy.ec.europa.eu 'Digital Public Services in DESI'). NOT READ — search-only. Coverage follows the sourced scope rule, which names this country's group explicitly."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -124,12 +405,17 @@ executor of one study is not an Atlas subject, and creating it would put a
 commercial organisation into a graph of public bodies on the strength of a
 procurement.
 
-## What is deliberately not asserted
+## The 35 `measures` edges
 
-As with [[EU-DESI]], **no edge is asserted to any of the 35 countries
-measured**. There is no `measures` relationship type, and the alternatives
-would all misstate it: `applies-in` would make a study into an instrument,
-`references` would suggest citation rather than assessment.
+As with [[EU-DESI]], this entity now carries a `measures` edge to every
+country in its scope — **35 of them**, the largest single-entity fan-out in
+the Atlas outside the anchors.
+
+The eight non-EU countries are the interesting half. `EU-DESI` measures the
+Union; this benchmark measures the Union **plus** three EFTA states and five
+enlargement countries, and the Atlas holds all eight as anchors. So the
+difference between the two publications' scopes is now visible as a difference
+in their edges rather than as a sentence in a description.
 
 ## Relationships
 

@@ -17,11 +17,11 @@ region: EU
 status: active
 confidence: medium
 coverage: low
-verification: unverified
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-21"
 previous_version: null
 successor: null
 
@@ -37,6 +37,10 @@ sources:
 ---
 
 # European Union
+
+> **Verified 2026-08-21.** Every source this entity cites is on a domain the
+> repository owner confirmed read and correct — `europa.eu`. `verification:
+> primary-source`. See `docs/re-verification.md` §"The confirmed domains".
 
 ## Description
 

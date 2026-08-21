@@ -59,6 +59,19 @@ LINK_CHECKED = {
     "gov.cz": _LC_OK, "gov.pt": _LC_OK, "public.lu": _LC_OK,
 }
 
+# Domains the repository owner has confirmed at the **content** tier, not just
+# the link tier: the pages were read and the information on them confirmed
+# correct (2026-08-21).
+#
+# This is a stronger claim than LINK_CHECKED and it is the only thing that
+# licenses `verification: primary-source`. An entity qualifies only when
+# **every** source it cites is on one of these domains — partial coverage
+# leaves an entity `search-only`, because the unconfirmed source could be the
+# one carrying the claim.
+CONTENT_CONFIRMED = {
+    "europa.eu", "iso.org", "coe.int", "bund.de", "legifrance.gouv.fr",
+}
+
 # Reachability sweep, 2026-08-20. Every institutional domain was resolved at
 # both the apex and `www.`. This is the weakest of the three checks this
 # repository distinguishes — it establishes that a host exists, nothing about
@@ -187,12 +200,19 @@ def render_markdown(d: dict) -> str:
       "column is a real host the Atlas cites under that domain, so every row "
       "offers something that can actually be opened.")
     w("")
-    w("| Domain | URLs | Entities | Example host | Opened |")
-    w("|---|---|---|---|---|")
+    w("| Domain | URLs | Entities | Example host | Opened | Content confirmed |")
+    w("|---|---|---|---|---|---|")
     for dom, n in top:
         example = min(d["domain_hosts"].get(dom, {dom}))
+        confirmed = "✅ 2026-08-21" if dom in CONTENT_CONFIRMED else ""
         w(f"| `{dom}` | {n} | {len(d['domain_entities'][dom])} "
-          f"| `{example}` | {LINK_CHECKED.get(dom, '')} |")
+          f"| `{example}` | {LINK_CHECKED.get(dom, '')} | {confirmed} |")
+    w("")
+    w("**`Opened` and `Content confirmed` are different claims.** The first "
+      "says the citation points somewhere real. The second says the pages were "
+      "read and the information on them confirmed correct, which is the only "
+      "thing that licenses `verification: primary-source`. See "
+      "`docs/re-verification.md` §\"A link check is not a content check\".")
     w("")
     w("### What the 2026-08-20 check found, and what it did not")
     w("")
@@ -213,8 +233,26 @@ def render_markdown(d: dict) -> str:
       "cited — that is the content check, and it is what "
       "`verification: primary-source` records.")
     w("")
-    w("**So no entity's `verification` changed.** Every entity in the Atlas "
-      "remains `search-only`.")
+    w("**So no entity's `verification` changed on 2026-08-20.** That came "
+      "later: on **2026-08-21** the repository owner confirmed "
+      + ", ".join(f"`{k}`" for k in sorted(CONTENT_CONFIRMED)) +
+      " at the content tier — read, and the information on them correct. "
+      "Every entity whose sources lie **entirely** within those five domains "
+      "moved to `verification: primary-source`. Entities with only some "
+      "sources there did not, because the unconfirmed source could be the one "
+      "carrying the claim.")
+    w("")
+    w("Two things about that list are worth stating precisely:")
+    w("")
+    w("- **`legifrance.gouv.fr`, not `gouv.fr`.** The confirmation names one "
+      "host under the French government namespace. This table collapses all of "
+      "`gouv.fr` into one row — `cyber.gouv.fr`, `numerique.gouv.fr`, "
+      "`data.gouv.fr` and the rest — so that row is **not** marked confirmed, "
+      "and it should not be.")
+    w("- **The Legifrance confirmation moved no entity.** Five entities cite "
+      "it and every one of them also cites something unconfirmed, so none "
+      "qualified. That is the partial-coverage rule doing its job rather than "
+      "a defect: a confirmation is not required to yield anything.")
     w("")
     also = [k for k in LINK_CHECKED if k not in {dom for dom, _ in top}]
     if also:

@@ -7,7 +7,7 @@ alternative_names:               # optional
 description: >
   One or two factual sentences. No interpretation, no marketing language.
 
-level: national                  # international | regional | national | sectoral | local
+level: national                  # international | regional | national | subnational | sectoral | local
 country: NL                      # ISO 3166-1 alpha-2, or null
 region: null                     # e.g. EU — optional, not a substitute for country
 

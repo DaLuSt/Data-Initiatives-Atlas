@@ -198,7 +198,7 @@ relationships").
 
 ## 4. Geographic model
 
-`level` (controlled vocabulary): `international`, `regional`, `national`,
+`level` (controlled vocabulary): `international`, `regional`, `national`, `subnational`,
 `sectoral`, `local`.
 
 - `country`: ISO 3166-1 alpha-2 code, or `null` for EU/UN/international

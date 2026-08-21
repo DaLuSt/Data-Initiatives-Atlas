@@ -7,7 +7,7 @@ as an open, connected knowledge graph.**
 
 ### [**→ Open the Interactive Atlas**](https://dalust.github.io/Data-Initiatives-Atlas/)
 
-*Search, filter and explore 502 entities and 5,856 connections across fifty-eight
+*Search, filter and explore 516 entities and 6,170 connections across fifty-eight
 countries — no install, no account.*
 
 [![Validation](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/validate.yml/badge.svg)](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/validate.yml)
@@ -32,13 +32,13 @@ hand-maintained.
 
 | | |
 |---|---|
-| **Entities** | 502 |
-| **Connections** | 5,856 — of which **1,010** are sourced, typed relationships |
+| **Entities** | 516 |
+| **Connections** | 6,170 — of which **1,095** are sourced, typed relationships |
 | **Country scopes** | **58** — 16 with a researched national layer, the rest base anchors |
 | **Layers** | UN · Council of Europe · EU · national · sectoral |
 | **Source of truth** | Git + Markdown/YAML — no database |
 | **Licence** | CC0 1.0 |
-| **⚠ Sourcing** | **462 of 502 entities have never had a cited source read** — 40 verified, see below |
+| **⚠ Sourcing** | **435 of 516 entities have never had a cited source read** — 81 verified against five owner-confirmed domains, see below |
 
 *Figures as of 2026-08-21. The live counts are always on the site itself.*
 
@@ -82,7 +82,7 @@ gap rather than around hiding it:
   is still `search-only`;
 - `discovery/unresolved.md` is the standing register of what is unknown, and
   `discovery/reverification-allowlist.md` is the generated worklist —
-  1,635 URLs, 532 hosts, 385 domains, ranked by how many entities each
+  1,677 URLs, 550 hosts, 399 domains, ranked by how many entities each
   unblocks;
 - `tools/reverify.py` runs the pass and `docs/re-verification.md` is the
   procedure.

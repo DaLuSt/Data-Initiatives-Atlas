@@ -11,6 +11,7 @@ Anchor entity: [[FI]]
 
 ## Organisations
 
+- [[FI-FINDATA]] — social and health data permit authority
 - [[FI-DVV]] — Digital and Population Data Services Agency
 - [[FI-TIETOSUOJA]] — Office of the Data Protection Ombudsman
 - [[FI-TILASTOKESKUS]] — Statistics Finland
@@ -19,3 +20,9 @@ Anchor entity: [[FI]]
 
 - [[FI-PALVELUVAYLA]] — Suomi.fi Data Exchange Layer
 - [[FI-SUOMI-FI]] — Suomi.fi
+
+## Legislation
+
+- [[FI-SECONDARY-USE-ACT]] — Act on the Secondary Use of Health and Social
+  Data (552/2019) _(the statutory basis for [[FI-FINDATA]]; **not** applied to
+  clinical trials)_

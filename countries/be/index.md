@@ -30,6 +30,14 @@ Anchor entity: [[BE]]
 
 ## Legislation
 
+### Sub-federal (`level: subnational`, added 2026-08-21)
+
+- [[BE-VL-BESTUURSDECREET-2021]] — Flanders _(adopted 2 July, in force 17 July 2021 — the deadline to the day)_
+- [[BE-BRU-ORDONNANCE-2021]] — Brussels-Capital _(amends [[BE-BRU-ORDONNANCE-2016]])_
+- [[BE-WAL-DECRET-2022]] — Wallonia
+- [[BE-BRU-ORDONNANCE-2016]] — the Brussels 2016 open data ordonnance the
+  2021 one amends _(predates the directive by two and a half years)_
+
 ### Data protection
 
 - [[BE-GDPR-WET]] — Wet van 30 juli 2018 _(implements [[EU-GDPR]])_
