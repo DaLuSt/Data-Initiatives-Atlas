@@ -87,6 +87,47 @@ entity is verified.
 **442 of 461 entities remain unread.** The README, the site banner and the
 allowlist all now say twelve rather than none.
 
+### Twenty-one member states verified, six held back
+
+A verification pass supplied all 27 EU member states with their accession
+dates, and confirmed the sources cited on each country anchor.
+
+**Twenty-one agreed with the Atlas exactly** and are now `primary-source`:
+[[AT]], [[BG]], [[CY]], [[CZ]], [[DK]], [[EE]], [[ES]], [[FI]], [[GR]],
+[[HR]], [[HU]], [[IE]], [[LT]], [[LV]], [[MT]], [[PL]], [[PT]], [[RO]],
+[[SE]], [[SI]], [[SK]].
+
+**Six did not**, and they are exactly the founding members — [[BE]], [[DE]],
+[[FR]], [[IT]], [[LU]], [[NL]]:
+
+| Date | Event |
+|---|---|
+| **25 March 1957** | the Treaty of Rome was **signed** |
+| **1 January 1958** | the Treaty **entered into force** |
+
+Strictly neither is an accession: the six founded the Communities rather than
+joining them, and "accession date" is a column borrowed from the twenty-one
+that did join later.
+
+The Atlas keeps **1958**, because that is what its own cited source says —
+the Union's list of EU countries records the founding six under 1958, and
+that page is the `part-of` [[EU]] evidence on all six entities. Adopting 1957
+would put each entity in contradiction with the source it names.
+
+**So those six stay `search-only`.** Both dates are now recorded on each of
+them, and `discovery/unresolved.md` carries the choice as an open modelling
+question. Verifying an entity against a date its own citation contradicts
+would be worse than leaving it unverified.
+
+Two other things in the supplied table are worth noting and did **not**
+change anything: it gives Hungary's official name as *Republic of Hungary*,
+which has been simply *Hungary* since the 2012 Fundamental Law — the Atlas
+already had this right — and its population and MEP figures are early-2000s
+vintage (Germany at 99 MEPs predates Lisbon). The Atlas records neither, so
+neither could propagate.
+
+**33 entities verified, 421 of 461 still unread.**
+
 ### All twelve, the same day
 
 The six partials were finished within hours of being identified. All nine
