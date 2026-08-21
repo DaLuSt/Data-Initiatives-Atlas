@@ -29,6 +29,9 @@ Anchor entity: [[DE]]
 
 ## Organisations
 
+- [[DE-GEMATIK]] — Telematikinfrastruktur _(defines the legally binding standards for health data exchange)_
+- [[DE-NFDI]] — national research data infrastructure _(e.V.; member of the [[EU-EOSC]] Association)_
+- [[DE-DFN]] — DFN-Verein, the national research and education network _(one of [[EU-GEANT]]'s 37 NRENs)_
 ### Ministries
 
 - [[DE-BMDS]] — Digital and State Modernisation _(created May 2025)_
@@ -51,6 +54,11 @@ Anchor entity: [[DE]]
 - [[DE-DIN]] — national standards body; member of [[EU-CEN]] and [[INTL-ISO]]
 
 ## Legislation
+
+### Health
+
+- [[DE-GDNG]] — Gesundheitsdatennutzungsgesetz _(provides for the
+  Forschungsdatenzentrum Gesundheit; ⚠ no date sourced)_
 
 ### Data protection and transparency
 

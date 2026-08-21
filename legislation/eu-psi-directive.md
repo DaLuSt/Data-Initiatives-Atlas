@@ -21,11 +21,11 @@ region: EU
 status: superseded
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2003-11-17
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-21"
 previous_version: null
 successor: EU-OPEN-DATA-DIRECTIVE
 
@@ -60,9 +60,9 @@ sources:
 
 # PSI Directive (2003/98/EC)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-21.** Every source this entity cites is on a domain the
+> repository owner confirmed read and correct — `europa.eu`. `verification:
+> primary-source`. See `docs/re-verification.md` §"The confirmed domains".
 
 ## Description
 

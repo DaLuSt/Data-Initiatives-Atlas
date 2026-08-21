@@ -16,6 +16,7 @@ Anchor entity: [[FR]]
 
 ## Organisations
 
+- [[FR-HEALTH-DATA-HUB]] — Plateforme des données de santé _(GIP of 56 members, created 1 December 2019)_
 - [[FR-DINUM]] — Direction interministérielle du numérique _(a service of the Prime Minister)_
   - [[FR-ETALAB]] — open data department _(inside DINUM)_
 - [[FR-CNIL]] — data protection authority

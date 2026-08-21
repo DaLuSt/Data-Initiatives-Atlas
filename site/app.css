@@ -19,6 +19,7 @@
   --lvl-international: #7b4fbd;
   --lvl-regional:      #1668b8;
   --lvl-national:      #1b7f5e;
+  --lvl-subnational:   #6f8f2a;
   --lvl-sectoral:      #b3701a;
   --lvl-local:         #99562c;
 
@@ -43,6 +44,7 @@
     --lvl-international: #b48ce8;
     --lvl-regional:      #63a9ec;
     --lvl-national:      #59c7a0;
+    --lvl-subnational:   #a8c95c;
     --lvl-sectoral:      #e3ac5e;
     --lvl-local:         #e0a184;
   }
@@ -63,6 +65,7 @@
   --lvl-international: #b48ce8;
   --lvl-regional:      #63a9ec;
   --lvl-national:      #59c7a0;
+  --lvl-subnational:   #a8c95c;
   --lvl-sectoral:      #e3ac5e;
   --lvl-local:         #e0a184;
 }

@@ -166,6 +166,62 @@ than a link check — it confirms the page contains the citation the entity
 claims — and weaker than a content check, which is why its best verdict is
 called `CORROBORATED` and not `VERIFIED`.
 
+## The confirmed domains
+
+On **2026-08-21** the repository owner confirmed five domains at the **content**
+tier — the pages were read and the information on them confirmed correct:
+
+| Domain | URLs | Entities citing it |
+|---|---|---|
+| `europa.eu` | 231 | 144 |
+| `iso.org` | 67 | 64 |
+| `coe.int` | 52 | 42 |
+| `bund.de` | 41 | 23 |
+| `legifrance.gouv.fr` | 5 | 5 |
+
+This is the first content-tier confirmation the Atlas has had, and the only
+thing that licenses `verification: primary-source`.
+
+### The rule it is applied under: all sources, or none
+
+**An entity moves to `primary-source` only when *every* source it cites is on
+a confirmed domain.** Partial coverage leaves it `search-only`.
+
+That is deliberately strict, and the reason is mechanical: an entity's claims
+are distributed across its sources, and the Atlas does not record which source
+supports which claim. If four of five sources are confirmed, the fifth may be
+the one carrying the date, the identifier or the relationship — so the entity
+as a whole is not confirmed. This is the same rule `tools/reverify.py` already
+implements as `set_verification=False` for partial retrieval.
+
+Applied on 2026-08-21:
+
+| | Entities |
+|---|---|
+| Fully covered → moved to `primary-source` | **41** |
+| Partially covered → unchanged, still `search-only` | 161 |
+| Not covered | 291 |
+| No sources (domains and anchors, exempt) | 8 |
+
+### Two results worth recording
+
+**`legifrance.gouv.fr` yielded nothing.** Five entities cite it and all five
+also cite something unconfirmed, so none qualified. A confirmation is not
+required to move anything; the partial-coverage rule is what decides.
+
+**`europa.eu` did most of the work.** Thirty-eight of the 41 are EU-scoped, and
+that is a fact about how the Atlas was built rather than about the Union:
+EU-level entities tend to cite one publisher, because EUR-Lex and the
+Commission's own domains carry the whole instrument. A national entity
+typically cites a statute database, a ministry and a commentary — three
+domains, three confirmations needed.
+
+**So the sweep's yield is front-loaded.** The next four domains by URL count
+(`wikipedia.org`, `digitaleoverheid.nl`, `gov.pl`, `gouv.fr`) would convert far
+fewer entities each, because the entities citing them cite other things too.
+`discovery/reverification-allowlist.md` ranks by URL count, which overstates
+how much each remaining domain would unlock.
+
 ## Completing an entity
 
 Read the pages. Then, for each field the sources support: confirm it, or

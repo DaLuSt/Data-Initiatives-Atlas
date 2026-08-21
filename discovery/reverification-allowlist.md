@@ -7,11 +7,11 @@ Generated: 2026-08-21
 
 ## Why this exists
 
-**462 of the Atlas's 502 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
+**435 of the Atlas's 516 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
 
 Closing that debt — the re-verification pass — needs outbound HTTPS to the hosts those URLs point at. In an environment with a restricted egress policy, this is the allowlist to request. A denial shows up as `403 to CONNECT` from the proxy, which is an environment-level network policy and cannot be changed from inside a session. See `discovery/unresolved.md` for the standing record of the sourcing debt.
 
-The Atlas currently cites **1635 source URLs** across **532 hosts**, collapsing to **385 registrable domains**.
+The Atlas currently cites **1677 source URLs** across **550 hosts**, collapsing to **399 registrable domains**.
 
 ## Highest value first
 
@@ -19,28 +19,30 @@ Allowing just these covers the bulk of the pass:
 
 A domain here is an **allowlist pattern**, not a URL. Most of them also happen to serve a website at the apex; one does not. The `Example host` column is a real host the Atlas cites under that domain, so every row offers something that can actually be opened.
 
-| Domain | URLs | Entities | Example host | Opened |
-|---|---|---|---|---|
-| `europa.eu` | 231 | 144 | `data.europa.eu` | ✅ opens |
-| `wikipedia.org` | 90 | 90 | `cs.wikipedia.org` | ✅ opens |
-| `iso.org` | 67 | 64 | `www.iso.org` | ✅ opens |
-| `coe.int` | 52 | 42 | `rm.coe.int` | ✅ opens |
-| `bund.de` | 41 | 23 | `bmds.bund.de` | ✅ opens |
-| `digitaleoverheid.nl` | 40 | 28 | `www.digitaleoverheid.nl` | ✅ opens |
-| `gov.pl` | 40 | 18 | `archiwum.giodo.gov.pl` | ✅ opens |
-| `gouv.fr` | 39 | 14 | `aide.monespacenis2.cyber.gouv.fr` | ✅ opens |
-| `government.nl` | 39 | 39 | `www.government.nl` | ✅ opens |
-| `gob.es` | 33 | 18 | `administracion.gob.es` | ⚠ namespace only — no site at the apex |
-| `overheid.nl` | 27 | 20 | `data.overheid.nl` | ✅ opens |
-| `unece.org` | 21 | 9 | `aarhusclearinghouse.unece.org` | ✅ opens |
-| `un.org` | 20 | 12 | `docs.un.org` | ✅ opens |
-| `belgium.be` | 18 | 10 | `bosa.belgium.be` | ✅ opens |
-| `cencenelec.eu` | 17 | 10 | `standards.cencenelec.eu` | ✅ opens |
-| `legislation.gov.uk` | 16 | 15 | `www.legislation.gov.uk` | ✅ opens |
-| `rijksoverheid.nl` | 16 | 12 | `www.rijksoverheid.nl` | ✅ opens |
-| `admin.ch` | 15 | 8 | `www.bfs.admin.ch` |  |
-| `bundestag.de` | 15 | 11 | `dserver.bundestag.de` | ✅ opens |
-| `boe.es` | 15 | 13 | `www.boe.es` | ✅ opens |
+| Domain | URLs | Entities | Example host | Opened | Content confirmed |
+|---|---|---|---|---|---|
+| `europa.eu` | 233 | 146 | `data.europa.eu` | ✅ opens | ✅ 2026-08-21 |
+| `wikipedia.org` | 90 | 90 | `cs.wikipedia.org` | ✅ opens |  |
+| `iso.org` | 67 | 64 | `www.iso.org` | ✅ opens | ✅ 2026-08-21 |
+| `coe.int` | 52 | 42 | `rm.coe.int` | ✅ opens | ✅ 2026-08-21 |
+| `gouv.fr` | 44 | 16 | `aide.monespacenis2.cyber.gouv.fr` | ✅ opens |  |
+| `bund.de` | 41 | 23 | `bmds.bund.de` | ✅ opens | ✅ 2026-08-21 |
+| `digitaleoverheid.nl` | 40 | 28 | `www.digitaleoverheid.nl` | ✅ opens |  |
+| `gov.pl` | 40 | 18 | `archiwum.giodo.gov.pl` | ✅ opens |  |
+| `government.nl` | 39 | 39 | `www.government.nl` | ✅ opens |  |
+| `gob.es` | 33 | 18 | `administracion.gob.es` | ⚠ namespace only — no site at the apex |  |
+| `overheid.nl` | 27 | 20 | `data.overheid.nl` | ✅ opens |  |
+| `unece.org` | 21 | 9 | `aarhusclearinghouse.unece.org` | ✅ opens |  |
+| `un.org` | 20 | 12 | `docs.un.org` | ✅ opens |  |
+| `belgium.be` | 18 | 10 | `bosa.belgium.be` | ✅ opens |  |
+| `cencenelec.eu` | 17 | 10 | `standards.cencenelec.eu` | ✅ opens |  |
+| `legislation.gov.uk` | 16 | 15 | `www.legislation.gov.uk` | ✅ opens |  |
+| `rijksoverheid.nl` | 16 | 12 | `www.rijksoverheid.nl` | ✅ opens |  |
+| `admin.ch` | 15 | 8 | `www.bfs.admin.ch` |  |  |
+| `bundestag.de` | 15 | 11 | `dserver.bundestag.de` | ✅ opens |  |
+| `boe.es` | 15 | 13 | `www.boe.es` | ✅ opens |  |
+
+**`Opened` and `Content confirmed` are different claims.** The first says the citation points somewhere real. The second says the pages were read and the information on them confirmed correct, which is the only thing that licenses `verification: primary-source`. See `docs/re-verification.md` §"A link check is not a content check".
 
 ### What the 2026-08-20 check found, and what it did not
 
@@ -50,7 +52,12 @@ Spain's government namespace has **no apex site**: `gob.es` resolves to no addre
 
 What the check **does** establish is that these citations point somewhere real. It does **not** establish that any entity's dates, identifiers, relationships or evidence strings are supported by the page cited — that is the content check, and it is what `verification: primary-source` records.
 
-**So no entity's `verification` changed.** Every entity in the Atlas remains `search-only`.
+**So no entity's `verification` changed on 2026-08-20.** That came later: on **2026-08-21** the repository owner confirmed `bund.de`, `coe.int`, `europa.eu`, `iso.org`, `legifrance.gouv.fr` at the content tier — read, and the information on them correct. Every entity whose sources lie **entirely** within those five domains moved to `verification: primary-source`. Entities with only some sources there did not, because the unconfirmed source could be the one carrying the claim.
+
+Two things about that list are worth stating precisely:
+
+- **`legifrance.gouv.fr`, not `gouv.fr`.** The confirmation names one host under the French government namespace. This table collapses all of `gouv.fr` into one row — `cyber.gouv.fr`, `numerique.gouv.fr`, `data.gouv.fr` and the rest — so that row is **not** marked confirmed, and it should not be.
+- **The Legifrance confirmation moved no entity.** Five entities cite it and every one of them also cites something unconfirmed, so none qualified. That is the partial-coverage rule doing its job rather than a defect: a confirmation is not required to yield anything.
 
 **Also checked, outside the table above:** `gov.cz`, `gov.pt`, `public.lu` — the other government namespaces among the Atlas's citations. All serve a site at the apex, which settles the question `gob.es` raised: it is the **sole exception**, not the first of several.
 
@@ -167,6 +174,7 @@ bosettiegatti.eu
 bpb.de
 brandenburg.de
 bsigroup.com
+bundesaerztekammer.de
 bundesrechnungshof.de
 bundesregierung.de
 bundestag.de
@@ -211,6 +219,8 @@ de.digital
 decideo.fr
 defensie.nl
 deloitte.com
+dfg.de
+dfn.de
 diariodeleon.es
 digdir.no
 digg.se
@@ -252,6 +262,7 @@ eversheds-sutherland.com
 ey.com
 fas.org
 febis.org
+findata.fi
 finreg360.com
 forschungsinformationssystem.de
 fraunhofer.de
@@ -263,8 +274,10 @@ garanteprivacy.it
 gdpr-info.eu
 gdprhub.eu
 gdprregulation.eu
+geant.org
 gegevensbeschermingsautoriteit.be
 geheimdienste.org
+gematik.de
 geobasisregistraties.nl
 geologischedienst.nl
 geonorge.no
@@ -287,6 +300,7 @@ hypotheses.org
 iapp.org
 iberley.es
 ibpt.be
+ibsa.brussels
 ico.org.uk
 ictu.nl
 ietf.org
@@ -340,6 +354,7 @@ ndw.nu
 nen.nl
 netzpolitik.org
 netzwoche.ch
+nfdi.de
 nictiz.nl
 niedersachsen.de
 niis.org
@@ -410,6 +425,8 @@ ssb.no
 stat.fi
 statistik.at
 stcpservicos.pt
+stm.fi
+sundhedsdatastyrelsen.dk
 suomi.fi
 surf.nl
 sva.nl
@@ -427,6 +444,7 @@ tietosuoja.fi
 trecom.pl
 tweedekamer.nl
 twobirds.com
+uef.fi
 ugr.es
 ukauthority.com
 un-dco.org
@@ -444,6 +462,8 @@ unmz.cz
 unsceb.org
 urbact.eu
 vbo-feb.be
+vdek.com
+vlaanderen.be
 vlex.be
 vng.nl
 vngrealisatie.nl
@@ -451,6 +471,7 @@ vorwaerts.de
 vsse.be
 waarderingskamer.nl
 walhalla.de
+wallonie.be
 whitecase.com
 wikipedia.org
 williamfry.com

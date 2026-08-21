@@ -19,11 +19,11 @@ region: EU
 status: active
 confidence: low
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: 2018-05-25
 end_date: null
-last_verified: null
+last_verified: "2026-08-21"
 previous_version: null
 successor: null
 
@@ -245,9 +245,9 @@ sources:
 
 # General Data Protection Regulation (GDPR)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited page was confirmed to exist but was not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-21.** Every source this entity cites is on a domain the
+> repository owner confirmed read and correct — `europa.eu`. `verification:
+> primary-source`. See `docs/re-verification.md` §"The confirmed domains".
 
 ## Description
 

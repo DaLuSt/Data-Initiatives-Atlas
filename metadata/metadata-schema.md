@@ -17,7 +17,7 @@ name:                  # required — official or commonly recognised name
 alternative_names:     # optional — list of known aliases/abbreviations
 description:           # required — short factual description, no interpretation
 
-level:                 # required — international | regional | national | sectoral | local
+level:                 # required — international | regional | national | subnational | sectoral | local
 country:               # required — ISO 3166-1 alpha-2, or null
 region:                # optional — e.g. EU, UN; not a substitute for country
 

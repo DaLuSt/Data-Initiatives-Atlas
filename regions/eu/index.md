@@ -142,6 +142,15 @@ NL-CBS ──participates-in──→ EU-EUROSTAT  (European Statistical System)
   authorities _(members include [[NL-KADASTER]], [[NO-KARTVERKET]],
   [[CH-SWISSTOPO]], [[GB-OS]], [[IE-TAILTE]])_ — the geospatial analogue of
   [[EU-ESS]]
+- [[EU-GEANT]] — the national research and education networks _(37 NRENs plus
+  NORDUnet; members include [[NL-SURF]] and [[DE-DFN]])_
+
+The three associations follow one pattern — [[EU-ESS]] for statistics,
+EuroGeographics for geospatial, GÉANT for research and education — and each
+was invisible until it was modelled. The **edge type differs by legal shape**:
+`part-of` for the ESS, whose members are constitutionally components of it
+under [[EU-REG-223-2009]], and `participates-in` for the other two, whose
+members are members of an association.
 
 ## Publications — the measurement layer
 
@@ -155,8 +164,11 @@ The Atlas's first `type: publication` entities, added 2026-08-21.
 - [[EU-VOLUNTARY-REVIEW-2023]] — the Union's first voluntary review to the
   UN High-level Political Forum
 
-⚠ **None of these carries an edge to a country it measures.** There is no
-`measures` relationship type — see `discovery/candidates.md` §3.
+All three now carry `measures` edges to the countries they assess — **62 of
+them**, 27 from DESI and 35 from the benchmark. The `measures` relationship
+type was added on 2026-08-21, one batch after the entities that needed it;
+see `metadata/relationship-types.md` and `discovery/candidates.md` §3 for why
+the separation was deliberate.
 
 ## Standards and reference architectures
 

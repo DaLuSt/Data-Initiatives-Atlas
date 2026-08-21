@@ -39,6 +39,9 @@ related_entities:
   - BE-HERGEBRUIK-WET
   - BE
   - BE-DATA-GOV-BE
+  - BE-VL-BESTUURSDECREET-2021
+  - BE-BRU-ORDONNANCE-2021
+  - BE-WAL-DECRET-2022
 relationships:
   - type: implements-requirement-from
     target: EU-OPEN-DATA-DIRECTIVE
@@ -129,23 +132,30 @@ competence is shared. The federal act recorded here is the **last** of them:
 
 | Level | Instrument | Date |
 |---|---|---|
-| Flanders | Decreet tot wijziging van het Bestuursdecreet | 2 July 2021 |
-| Brussels-Capital Region | Ordonnance modifying the ordonnance of 27 October 2016 | 10 December 2021 |
-| Wallonia | Two décrets on the dissemination and re-use of public sector information | 24 November 2022 |
+| Flanders | [[BE-VL-BESTUURSDECREET-2021]] | 2 July 2021 (in force 17 July) |
+| Brussels-Capital Region | [[BE-BRU-ORDONNANCE-2021]] | 10 December 2021 |
+| Wallonia | [[BE-WAL-DECRET-2022]] (and an assent décret) | 24 November 2022 |
 | **Federal** | **This act** | **25 December 2023** |
 
-**Flanders met the deadline.** Its decree of 2 July 2021 preceded 17 July
-2021 by a fortnight. Belgium was nonetheless referred to the Court of
+**Flanders met the deadline.** Its decree was adopted on 2 July 2021 and in
+force on 17 July 2021. Belgium was nonetheless referred to the Court of
 Justice in February 2023, because a member state answers for the whole of
 its territory and the federal legislator had not acted.
 
-Only the federal act is modelled. The three sub-federal instruments are
-recorded here in prose and in `discovery/research-queue.md`, because the
-Atlas's `level` vocabulary uses `regional` for the **supra**-national tier —
-`level: regional` is what every EU instrument carries — and has no settled
-value for a Belgian Region or Community. That is the same open ontology
-question that blocks OSLO and Digitaal Vlaanderen, and this batch did not
-resolve it.
+**All four are now modelled.** When this entity was written, only the federal
+act was: the Atlas's `level` vocabulary used `regional` for the
+**supra**-national tier — `level: regional` is what every EU instrument
+carries — and had no value for a Belgian Region or Community.
+
+`level: subnational` was added on 2026-08-21 for exactly that tier, and the
+three sub-federal instruments are [[BE-VL-BESTUURSDECREET-2021]],
+[[BE-BRU-ORDONNANCE-2021]] and [[BE-WAL-DECRET-2022]]. The Brussels
+instrument amends [[BE-BRU-ORDONNANCE-2016]], which predates the directive by
+two and a half years and is modelled too.
+
+One correction the research produced: Flanders did not transpose *early*. Its
+decree was **adopted** on 2 July 2021 and its open-data provisions **entered
+into force on 17 July 2021** — the deadline itself, to the day.
 
 ## Relationships
 

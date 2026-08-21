@@ -99,6 +99,7 @@ type from §2.2.
 | `aligned-with` | Two entities are deliberately kept consistent without one implementing the other |
 | `implements-requirement-from` | A national legal instrument transposes/implements obligations from an EU (or other higher-level) legal instrument — the specific case of `implements` used for the EU→national legislative chain (README §"Cross-Border Relationships" and Batch 3) |
 | `cooperates-with` | Two organisations have entered a formal cooperation arrangement — an agreement, a partnership, a memorandum — under which neither implements, governs, contains or is aligned with the other. Symmetric: assert it once, on whichever party the source is about, not twice. Added in the candidate-clearing batch of 2026-08-21 for the UNESCO–European Commission agreement on accelerating implementation of the Recommendation on the Ethics of Artificial Intelligence, where the Commission funds UNESCO to help *other* countries implement an instrument the Commission neither adopts nor is bound by |
+| `measures` | This entity assesses, scores or indexes the target — a study, index or benchmark against a country or an organisation. Directional and asymmetric: the measuring entity carries the edge, and being measured implies nothing about the target. Distinct from `applies-to`, which would make a study into a rule, and from `references`, which would suggest citation rather than assessment. Added 2026-08-21 for [[EU-DESI]] and [[EU-EGOV-BENCHMARK]], the Atlas's first `type: publication` entities |
 
 ### 2.2 Natural inverse pairs
 

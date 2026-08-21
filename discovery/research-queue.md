@@ -5,12 +5,19 @@
 > the entities themselves. Nothing here is struck through, because struck-out
 > rows made the queue longer every time it got shorter.
 >
-> **Largest open items:** the sub-federal Belgian ODD instruments and the
-> `level` vocabulary that blocks them; portal custodians for six national
-> portals; `PL-PESEL`-equivalent population registers; [[NL-BRI]]'s AWR
-> Chapter IVA basis; and the Spanish and Polish primary-citation gaps.
+> **Largest open items:** portal custodians for six national portals;
+> `PL-PESEL`-equivalent population registers; [[NL-BRI]]'s AWR Chapter IVA
+> basis; the Spanish and Polish primary-citation gaps; and the Comunidades
+> Autónomas, now unblocked and unstarted.
 >
-> **Blocked on egress:** the re-verification pass. 462 of 502 entities are
+> **The `level` vocabulary is no longer a blocker.** `level: subnational` was
+> added 2026-08-21 and the three Belgian sub-federal ODD instruments are
+> modelled under it. OSLO/Digitaal Vlaanderen and the Comunidades Autónomas
+> became ordinary research the same day. `level: local` remains unused and
+> still gates the Dutch municipalities, which is a different question — what
+> to create, not what to call it.
+>
+> **Blocked on egress:** the re-verification pass. 421 of 502 entities are
 > still unread — see `discovery/reverification-allowlist.md`.
 
 Confirmed-relevant areas that are known to need research but haven't been
@@ -163,8 +170,7 @@ by accident.
 
 | Area / entity | Why it needs research | Suggested batch | Noted by / date |
 |---|---|---|---|
-| **Belgium's three sub-federal ODD instruments** | Flanders (decreet 2 July 2021, amending the Bestuursdecreet — *inside* the deadline), Brussels-Capital (ordonnance 10 December 2021) and Wallonia (two décrets 24 November 2022). All three identified and recorded in prose on [[BE-HERGEBRUIK-WET-2023]]; **not modelled**, because `level: regional` means *supra*-national in this Atlas. Same blocker as OSLO | Blocked (design) | RQ3 batch / 2026-08-19 |
-| **OSLO and Digitaal Vlaanderen** | A major European semantic-interoperability programme, entirely unmodelled. **Blocked on the `level` ontology question**, not on sourcing | Blocked | Belgium batch |
+| **OSLO and Digitaal Vlaanderen** | A major European semantic-interoperability programme, entirely unmodelled. **No longer blocked**: `level: subnational` was added 2026-08-21 and the three Belgian sub-federal ODD instruments are modelled under it. This is now ordinary research | Next | Belgium batch; unblocked 2026-08-21 |
 | Agence du Numérique; Paradigm; the Regions and Communities | Same blocker | Blocked | Belgium batch |
 | The other five public service integrators | BELGIF names six; only [[BE-KSZ]] is modelled | Later | Belgium batch |
 | Belgian eID / itsme; eHealth platform; Kruispuntbank van Ondernemingen | Belgium's digital identity and registry infrastructure, none modelled. itsme is one of Europe's more distinctive national identity schemes | Later | Belgium batch |
@@ -195,7 +201,7 @@ by accident.
 | **INCIBE's founding instrument** | Its legal form, its relationship to the earlier INTECO, and how INCIBE-CERT relates to CCN-CERT are all unrecorded. [[ES-INCIBE]] is `coverage: low` because of it | Later | Spain batch |
 | **Cl@ve's legal basis and operator** | Plus the relationship between Cl@ve PIN and Cl@ve Permanente, and the status of any Spanish digital identity wallet under [[EU-EIDAS2]] | Later | Spain batch |
 | **Centro Nacional de Ciberseguridad** | Would be created by [[ES-LCGC]]. **Deliberately not modelled** — it does not exist, and a node for it would be indistinguishable in the graph from a body that does | Blocked | Spain batch |
-| **The Comunidades Autónomas** | Seventeen regional open data portals, regional data protection authorities, and the co-governance half of [[ES-ESPANA-DIGITAL-2026]]. **Blocked on the `level` vocabulary**, not on sourcing | Blocked | Spain batch |
+| **The Comunidades Autónomas** | Seventeen regional open data portals, regional data protection authorities, and the co-governance half of [[ES-ESPANA-DIGITAL-2026]]. **No longer blocked**: `level: subnational` was added 2026-08-21. Seventeen is a large batch, so the sensible start is the two or three with their own DPAs | Next | Spain batch; unblocked 2026-08-21 |
 
 ## Basisregistraties — queued from the register batch (2026-08-16)
 
@@ -205,7 +211,7 @@ by accident.
 | **Digimelding** | The stelsel's facility for reporting suspected errors in the registrations, alongside [[NL-DIGIKOPPELING]]. Named in one sentence of one source | Next | Register batch |
 | **SVB-BGT** | Samenwerkingsverband Bronhouders voor de BGT — the cooperative organising seven categories of bronhouder into one national map. Named in one source | Later | Register batch |
 | **Rijkswaterstaat, ProRail, RVO** | BGT and BRO bronhouders; none is an Atlas entity | Later | Register batch |
-| **Dutch municipalities as entities** | They hold the [[NL-BAG]] and determine [[NL-WOZ]] values. `level: local` exists, so this is **not** the federal gap — the question is what entity to create | Blocked (design) | Register batch |
+| **Dutch municipalities as entities** | They hold the [[NL-BAG]] and determine [[NL-WOZ]] values. `level: local` is the right value and remains unused; the open question is **what entity to create** — 342 municipalities individually is not obviously right, and one collective entity would misdescribe 342 separate controllers | Blocked (design) | Register batch |
 | **DINO and BIS** | [[NL-BRO]]'s predecessors, described as registrations it *builds on*. Whether either continues to exist determines if `supersedes` is ever right | Later | Register batch |
 | **Geonovum's role in BRO standards** | Geonovum publishes BRO geo-standards; whether it maintains them or publishes them for the programme was not established, so no relationship was asserted | Later | Register batch |
 
@@ -306,7 +312,6 @@ by accident.
 | An `amended-by` inverse | `amends` was added this batch as a single directed type. The graph shows incoming edges, so the inverse is readable without being stored — but `implements`/`implemented-by` exist as a pair, so the vocabulary is now inconsistent with itself | Later (design) | RQ3 batch / 2026-08-19 |
 | The 37 base country anchors | Each of [[AD]], [[AL]], [[AM]], [[AT]], [[AZ]], [[BA]], [[BG]], [[BY]], [[CY]], [[DK]], [[EE]], [[FI]], [[GE]], [[GR]], [[HR]], [[HU]], [[IS]], [[IT]], [[LI]], [[LT]], [[LV]], [[MC]], [[MD]], [[ME]], [[MK]], [[MT]], [[RO]], [[RS]], [[RU]], [[SE]], [[SI]], [[SK]], [[SM]], [[TR]], [[UA]], [[VA]] and [[XK]] carries membership facts and nothing else — no DPA, no portal, no statistics office, no legislation | Later, one country at a time | European country batch / 2026-08-19 |
 | EFTA Surveillance Authority, EFTA Court, EEA Joint Committee | The EEA EFTA states' counterparts to the Commission and the Court of Justice, and the body that takes the incorporation decisions [[INTL-EEA-AGREEMENT]] runs on. Carried from [[NO]] since the Norway batch; now three countries wide | Next | Norway batch; widened 2026-08-19 |
-| `applies-in` to the 17 new EU member states | Every EU instrument the Atlas holds applies in all 27 member states. It names 10. Filling this is mechanical rather than research, but it is 17 × the instrument count | Next | European country batch / 2026-08-19 |
 | Greece's `EL` / `GR` code split | The EU keys Greece as `EL`; ISO keys it as `GR`. The Atlas uses `GR`. Any future harvest of Eurostat or EUR-Lex data will not join without a mapping | Later (design) | European country batch / 2026-08-19 |
 | Cyprus's suspended *acquis* | `applies-in` is a whole-country predicate; the *acquis* is suspended in the areas of [[CY]] not under the Republic's effective control. The Atlas cannot express this | Blocked (design) | European country batch / 2026-08-19 |
 | **`applies-in` for the European parties to Convention 108** | Sources say all Council of Europe member states are parties — roughly 46 edges. **Blocked on reading `coe.int`'s chart of signatures and ratifications**, which the egress proxy denies. The one source found for the rule gives a stale member count, and [[RU]]'s status as a party after its 2022 expulsion is unaddressed. The first time the sourcing debt has blocked *new* modelling rather than re-verification | Blocked (egress) | Convention 108 batch / 2026-08-19 |
@@ -325,7 +330,7 @@ by accident.
 | Estonian eID card and Mobile-ID | The identity infrastructure [[EE-E-RESIDENCY]] is built on, and the link to [[EU-EIDAS2]] and the European Digital Identity Wallet | Later | Estonia batch / 2026-08-20 |
 | NIIS member vs partner status | Ukraine, the Faroe Islands and the Government of Åland are **partners** of [[INTL-NIIS]] rather than members. The relationship vocabulary has `part-of` and `participates-in` and no way to say "associate", so [[UA]]'s partnership is prose only | Later (design) | Estonia batch / 2026-08-20 |
 | `applies-in` for the EU **directives** | The member-state completion pass extended the nine EU **regulations** to all 27 states, because a regulation's applicability follows from TFEU Article 288 and needs no country-specific source. The five directives — [[EU-NIS2]], [[EU-CER]], [[EU-INSPIRE]], [[EU-ITS-DIRECTIVE]], [[EU-OPEN-DATA-DIRECTIVE]] — still name 10 states each. Extending them is defensible but would show 17 blank transposition cells per directive, so it was left as a deliberate decision rather than a sweep | Next (design) | Member-state completion / 2026-08-20 |
-| A content check to follow the link check | The 2026-08-20 check established that citations **point somewhere real**, not that they **support what the entity says**. No `verification` changed and none should have. The content check is still the whole re-verification pass | Blocked (egress) | Manual link check / 2026-08-20 |
+| A content check to follow the link check | **Started 2026-08-21.** The repository owner confirmed `europa.eu`, `iso.org`, `coe.int`, `bund.de` and `legifrance.gouv.fr` at the content tier, moving **41** entities to `primary-source` — every one whose sources lie entirely within those five domains. 421 of 502 remain, and the yield is front-loaded: the next domains by URL count convert far fewer entities each, because the entities citing them cite other things too. See `docs/re-verification.md` §"The confirmed domains" | Partly done | Manual link check / 2026-08-20; content check / 2026-08-21 |
 | Klimadatastyrelsen | Operates [[DK-DATAFORDELER]], the single channel through which all Danish basic data is distributed, and is not modelled. The Danish counterpart of the ten Dutch register holders collapsed into one body | Next | Country expansion / 2026-08-20 |
 | Austria's E-Government-Gesetz, Meldegesetz, Personenstandsgesetz and Passgesetz | All four were amended to introduce [[AT-ID-AUSTRIA]] and the oesterreich.gv.at platform. None is modelled, so the Austrian identity layer has a platform with no legal basis attached | Next | Country expansion / 2026-08-20 |
 | Italy's CIE and CNS | [[IT-CAD]] admits three credentials for the citizen's right of digital access — [[IT-SPID]], the electronic identity card CIE, and the services card CNS. Only SPID is modelled | Next | Country expansion / 2026-08-20 |
@@ -336,4 +341,3 @@ by accident.
 | The High-level Political Forum (`UN-HLPF`) | [[EU-VOLUNTARY-REVIEW-2023]] was presented at it and can only say so in prose. The forum receives every voluntary national review, so it would be an attachment point for more than one entity | Next | Candidate batch / 2026-08-21 |
 | Iceland and Liechtenstein beyond data protection | Both now have a national layer — a DPA and a data protection act each — and nothing else. [[IS]] is a member of [[INTL-NIIS]] with no X-Road deployment modelled; neither has a statistical office, a mapping authority or a cyber authority | Later | Candidate batch / 2026-08-21 |
 | The other EEA Joint Committee decisions | [[INTL-EEA-JCD-154-2018]] is the only one modelled, created because four entities were describing it in prose. Every other EU act with effect in the EEA EFTA states reaches them the same way and the Atlas draws none of those routes | Later | Candidate batch / 2026-08-21 |
-| A `measures` relationship type | [[EU-DESI]] and [[EU-EGOV-BENCHMARK]] measure 27 and 35 countries respectively and carry no edge to any of them. Deliberately not decided in the batch that created them — see `discovery/candidates.md` §3 | Next (design) | Candidate batch / 2026-08-21 |
