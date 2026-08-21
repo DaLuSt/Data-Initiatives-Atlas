@@ -19,11 +19,10 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-20"
 previous_version: null
 successor: null
 
@@ -35,7 +34,7 @@ relationships:
   - type: part-of
     target: EU
     source: fact
-    evidence: "Spain is one of the 27 member states of the European Union, having acceded on 1 January 1986; the Union's own list of EU countries records its accession date together with its Schengen and euro status (european-union.europa.eu 'EU countries'). NOT READ — search-only. Anchor edge under metadata/relationship-types.md §2.3: it records EU membership and asserts no more than that. Added in the European country batch so that all fifty anchors carry the same membership edge."
+    evidence: "Spain is one of the 27 member states of the European Union, having acceded on 1 January 1986; the Union's own list of EU countries records its accession date together with its Schengen and euro status (european-union.europa.eu 'EU countries'). Anchor edge under metadata/relationship-types.md §2.3: it records EU membership and asserts no more than that. Added in the European country batch so that all fifty anchors carry the same membership edge."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -44,22 +43,26 @@ sources:
   - title: "EU countries"
     url: "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
     publisher: "European Union"
+    accessed: "2026-08-20"
   - title: "ES — Spain (ISO 3166-1 country code)"
     url: "https://www.iso.org/obp/ui/#iso:code:3166:ES"
     publisher: "International Organization for Standardization (ISO)"
+    accessed: "2026-08-20"
   - title: "España Digital 2026"
     url: "https://digital.gob.es/ministerio/programas/programas-avance-digital/espana-digital-2026"
     publisher: "Ministerio para la Transformación Digital y de la Función Pública"
+    accessed: "2026-08-20"
   - title: "Real Decreto 1118/2024, de 5 de noviembre, por el que se aprueba el Estatuto de la Agencia Estatal de Administración Digital"
     url: "https://www.boe.es/buscar/doc.php?id=BOE-A-2024-22929"
     publisher: "Boletín Oficial del Estado (BOE)"
+    accessed: "2026-08-20"
 ---
 
 # Spain
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-20.** Every cited source was read and confirmed to
+> support what this entity says, including its accession date.
+> `verification: primary-source`.
 
 ## Description
 

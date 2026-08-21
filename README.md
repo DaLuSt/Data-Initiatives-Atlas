@@ -38,7 +38,7 @@ hand-maintained.
 | **Layers** | UN · Council of Europe · EU · national · sectoral |
 | **Source of truth** | Git + Markdown/YAML — no database |
 | **Licence** | CC0 1.0 |
-| **⚠ Sourcing** | **442 of 461 entities have never had a cited source read** — 12 verified 2026-08-20, see below |
+| **⚠ Sourcing** | **421 of 461 entities have never had a cited source read** — 33 verified 2026-08-20, see below |
 
 *Figures as of 2026-08-20. The live counts are always on the site itself.*
 
@@ -64,6 +64,14 @@ no sourcing caveat — because it is no longer true of them.
 **That is the whole of Batch 1's core governance layer**, and it is the
 answer to "is any of this actually checked": yes, that part, entirely, by
 hand, on a stated date.
+
+**Twenty-one of the 27 EU member-state anchors were verified the same day**,
+against the Union's own list of member states. The six founding members are
+deliberately **not** among them: the verification pass supplied 25 March 1957
+(the Treaty of Rome's signature) where the Atlas records 1 January 1958 (its
+entry into force). Both dates are now on each of those six entities, and
+`discovery/unresolved.md` records the choice rather than resolving it
+quietly.
 
 That is disclosed rather than buried, and the repository is built around the
 gap rather than around hiding it:

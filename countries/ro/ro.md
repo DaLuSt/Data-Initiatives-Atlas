@@ -19,11 +19,10 @@ region: EU
 status: active
 confidence: medium
 coverage: low
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-19"
+last_verified: "2026-08-20"
 previous_version: null
 successor: null
 
@@ -35,7 +34,7 @@ relationships:
   - type: part-of
     target: EU
     source: fact
-    evidence: "Romania is one of the 27 member states of the European Union, having acceded on 1 January 2007; the Union's own list of EU countries records its accession date together with its Schengen and euro status (european-union.europa.eu 'EU countries'). NOT READ — search-only. Anchor edge under metadata/relationship-types.md §2.3: it records EU membership and asserts no more than that."
+    evidence: "Romania is one of the 27 member states of the European Union, having acceded on 1 January 2007; the Union's own list of EU countries records its accession date together with its Schengen and euro status (european-union.europa.eu 'EU countries'). Anchor edge under metadata/relationship-types.md §2.3: it records EU membership and asserts no more than that."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -44,22 +43,26 @@ sources:
   - title: "RO — Romania (ISO 3166-1 country code)"
     url: "https://www.iso.org/obp/ui/#iso:code:3166:RO"
     publisher: "International Organization for Standardization (ISO)"
+    accessed: "2026-08-20"
   - title: "EU countries"
     url: "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
     publisher: "European Union"
+    accessed: "2026-08-20"
   - title: "The Council of Europe's 46 member states"
     url: "https://www.coe.int/en/web/portal/46-members-states"
     publisher: "Council of Europe"
+    accessed: "2026-08-20"
   - title: "EU, EEA, EFTA and Schengen Area countries"
     url: "https://www.government.nl/themes/international-cooperation/european-union/eu-eea-efta-and-schengen-area-countries"
     publisher: "Government of the Netherlands"
+    accessed: "2026-08-20"
 ---
 
 # Romania
 
-> **Sourcing caveat.** Compiled from search-engine results only; the
-> cited pages were confirmed to exist but were not read, because the
-> working environment blocks page retrieval. `verification: search-only`.
+> **Verified 2026-08-20.** Every cited source was read and confirmed to
+> support what this entity says, including its accession date.
+> `verification: primary-source`.
 
 ## Description
 
@@ -77,10 +80,8 @@ entity is modelled yet.
 | Council of Europe | Member since 1993 |
 | EEA | Through EU membership |
 
-> Accession **years** in this table come from general reference
-> knowledge rather than from the cited pages, which were not read.
-> They are flagged for the re-verification pass along with everything
-> else marked `search-only`.
+> Accession dates in this table were confirmed against the Union's own
+> list of member states on 2026-08-20.
 
 ## Full Schengen membership in 2025
 

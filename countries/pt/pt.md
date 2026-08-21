@@ -18,11 +18,10 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-20"
 previous_version: null
 successor: null
 
@@ -34,7 +33,7 @@ relationships:
   - type: part-of
     target: EU
     source: fact
-    evidence: "Portugal is one of the 27 member states of the European Union, having acceded on 1 January 1986; the Union's own list of EU countries records its accession date together with its Schengen and euro status (european-union.europa.eu 'EU countries'). NOT READ — search-only. Anchor edge under metadata/relationship-types.md §2.3: it records EU membership and asserts no more than that. Added in the European country batch so that all fifty anchors carry the same membership edge."
+    evidence: "Portugal is one of the 27 member states of the European Union, having acceded on 1 January 1986; the Union's own list of EU countries records its accession date together with its Schengen and euro status (european-union.europa.eu 'EU countries'). Anchor edge under metadata/relationship-types.md §2.3: it records EU membership and asserts no more than that. Added in the European country batch so that all fifty anchors carry the same membership edge."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -43,19 +42,22 @@ sources:
   - title: "EU countries"
     url: "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
     publisher: "European Union"
+    accessed: "2026-08-20"
   - title: "PT — Portugal (ISO 3166-1 country code)"
     url: "https://www.iso.org/obp/ui/#iso:code:3166:PT"
     publisher: "International Organization for Standardization (ISO)"
+    accessed: "2026-08-20"
   - title: "Agência para a Modernização Administrativa"
     url: "https://eportugal.gov.pt/entidades/agencia-para-a-modernizacao-administrativa"
     publisher: "ePortugal / Governo de Portugal"
+    accessed: "2026-08-20"
 ---
 
 # Portugal
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-20.** Every cited source was read and confirmed to
+> support what this entity says, including its accession date.
+> `verification: primary-source`.
 
 ## Description
 

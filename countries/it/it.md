@@ -107,6 +107,31 @@ No EU instrument in the Atlas carries `applies-in` → [[IT]] yet.
 That is a gap rather than a finding: as a member state, every
 directly applicable EU regulation the Atlas holds does apply here.
 
+## ⚠ Two dates, and why this entity uses 1958
+
+A verification pass on 2026-08-20 supplied **25 March 1957** as this
+country's accession date. This entity says **1 January 1958**. Both are
+right, about different events:
+
+| Date | Event |
+|---|---|
+| **25 March 1957** | the Treaty of Rome was **signed**, in Rome |
+| **1 January 1958** | the Treaty **entered into force**, and the Communities existed |
+
+Strictly neither is an *accession*. The six founding members — [[BE]],
+[[DE]], [[FR]], [[IT]], [[LU]] and [[NL]] — did not accede to anything; they
+founded it. "Accession date" is a column borrowed from the twenty-one states
+that did join later.
+
+The Atlas uses **1 January 1958** because that is what its own cited source
+says: the Union's list of EU countries records the founding six under 1958,
+and this entity's `part-of` [[EU]] evidence cites that page. Using 1957 would
+put the entity in contradiction with the source it names.
+
+**This is recorded rather than resolved.** The signature date is genuinely
+useful and is now here; if the Atlas would rather key the founders on 1957,
+the evidence strings and the cited source both need changing together.
+
 ## Sources
 
 Listed in frontmatter.

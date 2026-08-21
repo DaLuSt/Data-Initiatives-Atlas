@@ -18,6 +18,8 @@ To find every affected entity: `grep -rl "verification: search-only" .`
 
 | — | ~~Are the `gob.es` citations accurate?~~ **CLOSED 2026-08-20, same day** | A first pass read the manual link check as "the Spanish citations are wrong" and flagged all 18 entities. **That was wrong.** `gob.es` has no apex site — it resolves to no address, unlike `gov.uk` and `gov.pl` — so the failure was in `discovery/reverification-allowlist.md` listing an allowlist *pattern* where a reader would try a *URL*. Every Spanish host the Atlas cites resolves. No citation was at fault, and the three `espanadigital.gob.es` URLs changed in the first pass have been reverted | Manual link check / 2026-08-20 | Closed — no defect |
 
+| [[BE]], [[DE]], [[FR]], [[IT]], [[LU]], [[NL]] | Should the founding six be keyed on 25 March 1957 or 1 January 1958? | A verification pass on 2026-08-20 supplied **25 March 1957** — the day the Treaty of Rome was *signed*. The Atlas uses **1 January 1958**, the day it *entered into force*, because that is what the Union's own list of EU countries says and that page is the cited source on every one of these entities. Strictly neither is an accession: the six founded the Communities rather than joining them. Both dates are now recorded on each entity. **Deciding for 1957 means changing the evidence strings and the cited source together** | Verification pass / 2026-08-20 | Open (modelling) |
+
 **Link-checked so far (2026-08-20):** the 22 candidate sources for Forum
 Standaardisatie, the IBDS/FDS, NORA, Common Ground and MIDO, plus 22 of the
 highest-value domains and a machine reachability sweep over all 52

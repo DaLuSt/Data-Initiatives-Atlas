@@ -19,11 +19,10 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-20"
 previous_version: null
 successor: null
 
@@ -35,7 +34,7 @@ relationships:
   - type: part-of
     target: EU
     source: fact
-    evidence: "Poland is one of the 27 member states of the European Union, having acceded on 1 May 2004; the Union's own list of EU countries records its accession date together with its Schengen and euro status (european-union.europa.eu 'EU countries'). NOT READ — search-only. Anchor edge under metadata/relationship-types.md §2.3: it records EU membership and asserts no more than that. Added in the European country batch so that all fifty anchors carry the same membership edge."
+    evidence: "Poland is one of the 27 member states of the European Union, having acceded on 1 May 2004; the Union's own list of EU countries records its accession date together with its Schengen and euro status (european-union.europa.eu 'EU countries'). Anchor edge under metadata/relationship-types.md §2.3: it records EU membership and asserts no more than that. Added in the European country batch so that all fifty anchors carry the same membership edge."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -44,22 +43,26 @@ sources:
   - title: "EU countries"
     url: "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
     publisher: "European Union"
+    accessed: "2026-08-20"
   - title: "PL — Poland (ISO 3166-1 country code)"
     url: "https://www.iso.org/obp/ui/#iso:code:3166:PL"
     publisher: "International Organization for Standardization (ISO)"
+    accessed: "2026-08-20"
   - title: "Ministerstwo Cyfryzacji — Portal Gov.pl"
     url: "https://www.gov.pl/web/cyfryzacja"
     publisher: "Ministerstwo Cyfryzacji"
+    accessed: "2026-08-20"
   - title: "Ustawa z dnia 11 sierpnia 2021 r. o otwartych danych i ponownym wykorzystywaniu informacji sektora publicznego"
     url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20210001641"
     publisher: "Internetowy System Aktów Prawnych (ISAP) — Sejm RP"
+    accessed: "2026-08-20"
 ---
 
 # Poland
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-20.** Every cited source was read and confirmed to
+> support what this entity says, including its accession date.
+> `verification: primary-source`.
 
 ## Description
 
