@@ -1,33 +1,24 @@
 # Denmark — Index
 
-Curated navigation hub for all Denmark-scoped (`country: DK`) entities in
-the Atlas. This is a human-maintained page, not a generated one — add a
-wikilink here whenever a new DK-scoped entity is judged important enough
-to belong on the country's front page (`CONTRIBUTING.md`).
+Curated navigation hub for all Denmark-scoped (`country: DK`) entities
+in the Atlas. This is a human-maintained page, not a generated one.
 
 Anchor entity: [[DK]]
 
-> **This country has no entities yet.** The anchor exists so that Denmark
-> entities have somewhere to attach; the sections below are the standard
-> skeleton, kept empty rather than removed so that the first contributor has
-> somewhere to put things.
+> **Sourcing caveat.** Every entity below was compiled from
+> search-engine results only: the cited pages were confirmed to exist
+> but were **not read**. See `discovery/reverification-allowlist.md`.
 
 ## Organisations
 
-_None yet._
-
-## Legislation
-
-_None yet._
-
-## Frameworks and standards
-
-_None yet._
+- [[DK-DATATILSYNET]] — Datatilsynet
+- [[DK-DIGST]] — Agency for Digital Government
+- [[DK-DST]] — Statistics Denmark
 
 ## Platforms and portals
 
-_None yet._
+- [[DK-DATAFORDELER]] — Datafordeleren
 
-## Strategies and initiatives
+## Programmes
 
-_None yet._
+- [[DK-GRUNDDATA]] — Grunddataprogrammet

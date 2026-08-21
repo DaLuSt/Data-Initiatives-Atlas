@@ -1,33 +1,25 @@
 # Italy — Index
 
-Curated navigation hub for all Italy-scoped (`country: IT`) entities in
-the Atlas. This is a human-maintained page, not a generated one — add a
-wikilink here whenever a new IT-scoped entity is judged important enough
-to belong on the country's front page (`CONTRIBUTING.md`).
+Curated navigation hub for all Italy-scoped (`country: IT`) entities
+in the Atlas. This is a human-maintained page, not a generated one.
 
 Anchor entity: [[IT]]
 
-> **This country has no entities yet.** The anchor exists so that Italy
-> entities have somewhere to attach; the sections below are the standard
-> skeleton, kept empty rather than removed so that the first contributor has
-> somewhere to put things.
+> **Sourcing caveat.** Every entity below was compiled from
+> search-engine results only: the cited pages were confirmed to exist
+> but were **not read**. See `discovery/reverification-allowlist.md`.
 
 ## Organisations
 
-_None yet._
+- [[IT-AGID]] — Agenzia per l'Italia Digitale
+- [[IT-GARANTE]] — Garante per la protezione dei dati personali
+- [[IT-ISTAT]] — Istituto nazionale di statistica
 
 ## Legislation
 
-_None yet._
-
-## Frameworks and standards
-
-_None yet._
+- [[IT-CAD]] — Codice dell'Amministrazione Digitale
 
 ## Platforms and portals
 
-_None yet._
-
-## Strategies and initiatives
-
-_None yet._
+- [[IT-DATI-GOV-IT]] — dati.gov.it
+- [[IT-SPID]] — Sistema Pubblico di Identita Digitale
