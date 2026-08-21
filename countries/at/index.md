@@ -1,33 +1,21 @@
 # Austria — Index
 
-Curated navigation hub for all Austria-scoped (`country: AT`) entities in
-the Atlas. This is a human-maintained page, not a generated one — add a
-wikilink here whenever a new AT-scoped entity is judged important enough
-to belong on the country's front page (`CONTRIBUTING.md`).
+Curated navigation hub for all Austria-scoped (`country: AT`) entities
+in the Atlas. This is a human-maintained page, not a generated one.
 
 Anchor entity: [[AT]]
 
-> **This country has no entities yet.** The anchor exists so that Austria
-> entities have somewhere to attach; the sections below are the standard
-> skeleton, kept empty rather than removed so that the first contributor has
-> somewhere to put things.
+> **Sourcing caveat.** Every entity below was compiled from
+> search-engine results only: the cited pages were confirmed to exist
+> but were **not read**. See `discovery/reverification-allowlist.md`.
 
 ## Organisations
 
-_None yet._
-
-## Legislation
-
-_None yet._
-
-## Frameworks and standards
-
-_None yet._
+- [[AT-BRZ]] — Bundesrechenzentrum
+- [[AT-DSB]] — Datenschutzbehorde
+- [[AT-STATISTIK]] — Statistics Austria
 
 ## Platforms and portals
 
-_None yet._
-
-## Strategies and initiatives
-
-_None yet._
+- [[AT-DATA-GV-AT]] — data.gv.at
+- [[AT-ID-AUSTRIA]] — ID Austria

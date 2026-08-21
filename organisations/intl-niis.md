@@ -35,6 +35,8 @@ related_entities:
   - FI
   - IS
   - UA
+  - FI-PALVELUVAYLA
+  - FI-DVV
 relationships:
   - type: part-of
     target: EE
@@ -107,3 +109,12 @@ or autonomous territories the `level` vocabulary cannot express.
 
 Listed in frontmatter.
 
+## Both deployments are now modelled
+
+When this entity was created, only Estonia's side existed. [[FI-PALVELUVAYLA]]
+— the Suomi.fi Data Exchange Layer, maintained by [[FI-DVV]] — completes the
+pair, so the graph shows what NIIS is actually for: **one codebase,
+[[INTL-X-ROAD]], deployed by two of its three member states and governed
+jointly by all of them.**
+
+[[IS]] is the third member and has no deployment modelled.

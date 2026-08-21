@@ -1,33 +1,21 @@
 # Finland — Index
 
-Curated navigation hub for all Finland-scoped (`country: FI`) entities in
-the Atlas. This is a human-maintained page, not a generated one — add a
-wikilink here whenever a new FI-scoped entity is judged important enough
-to belong on the country's front page (`CONTRIBUTING.md`).
+Curated navigation hub for all Finland-scoped (`country: FI`) entities
+in the Atlas. This is a human-maintained page, not a generated one.
 
 Anchor entity: [[FI]]
 
-> **This country has no entities yet.** The anchor exists so that Finland
-> entities have somewhere to attach; the sections below are the standard
-> skeleton, kept empty rather than removed so that the first contributor has
-> somewhere to put things.
+> **Sourcing caveat.** Every entity below was compiled from
+> search-engine results only: the cited pages were confirmed to exist
+> but were **not read**. See `discovery/reverification-allowlist.md`.
 
 ## Organisations
 
-_None yet._
-
-## Legislation
-
-_None yet._
-
-## Frameworks and standards
-
-_None yet._
+- [[FI-DVV]] — Digital and Population Data Services Agency
+- [[FI-TIETOSUOJA]] — Office of the Data Protection Ombudsman
+- [[FI-TILASTOKESKUS]] — Statistics Finland
 
 ## Platforms and portals
 
-_None yet._
-
-## Strategies and initiatives
-
-_None yet._
+- [[FI-PALVELUVAYLA]] — Suomi.fi Data Exchange Layer
+- [[FI-SUOMI-FI]] — Suomi.fi

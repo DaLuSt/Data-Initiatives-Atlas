@@ -86,6 +86,59 @@ entity is verified.
 **442 of 461 entities remain unread.** The README, the site banner and the
 allowlist all now say twelve rather than none.
 
+### The country-expansion shortlist, acted on and deleted
+
+`discovery/candidates.md` ranked eight countries by **what each would prove**,
+not by size. Three of the eight already had layers — Estonia, Czechia and
+Portugal — so the shortlist was stale on those. The other five are now
+modelled. **25 new entities.**
+
+| # | Country | What it was ranked to prove | Now |
+|---|---|---|---|
+| 1 | **Italy** | Largest unmodelled member state; a *codified* digital administration act | [[IT-CAD]], [[IT-AGID]], [[IT-SPID]], [[IT-GARANTE]], [[IT-ISTAT]], [[IT-DATI-GOV-IT]] |
+| 4 | **Finland** | The other half of NIIS — *"only pays off alongside Estonia"* | [[FI-PALVELUVAYLA]], [[FI-DVV]], [[FI-SUOMI-FI]], [[FI-TIETOSUOJA]], [[FI-TILASTOKESKUS]] |
+| 5 | **Denmark** | *Grunddata*, the analogue of the Dutch basisregistraties | [[DK-GRUNDDATA]], [[DK-DATAFORDELER]], [[DK-DIGST]], [[DK-DATATILSYNET]], [[DK-DST]] |
+| 7 | **Sweden** | DIGG and a long open-data record | [[SE-DIGG]], [[SE-DATAPORTAL]], [[SE-IMY]], [[SE-SCB]] |
+| 8 | **Austria** | Second federal state after Germany | [[AT-BRZ]], [[AT-DATA-GV-AT]], [[AT-ID-AUSTRIA]], [[AT-DSB]], [[AT-STATISTIK]] |
+
+Each paid off in the way the ranking predicted, which is worth recording
+because the ranking was a bet made two days earlier.
+
+**Italy.** [[IT-CAD]] is a **code** — Italian practice consolidates a whole
+field into one numbered instrument amended in place, so digital identity,
+electronic documents, signatures, registers and citizens' digital rights all
+live at one citation. Every other national digital-government instrument here
+is a single act on a single subject. And [[IT-SPID]] is not a system the
+state provides but **one of three credentials** for exercising a right the
+Code confers.
+
+**Finland closed the loop Estonia opened.** [[FI-PALVELUVAYLA]] and
+[[EE-X-TEE]] are two national deployments of one shared codebase,
+[[INTL-X-ROAD]], governed jointly through [[INTL-NIIS]]. That could not be
+shown with Estonia alone — which is exactly why the shortlist ranked them as
+a pair, and it is now the only jointly-governed platform in the Atlas.
+
+**Denmark gave the Atlas its first controlled comparison.** The ten Dutch
+[[NL-BASISREGISTRATIES]] are modelled in more depth than anything else here,
+and there was nothing to compare them against. [[DK-GRUNDDATA]] is the same
+idea in another jurisdiction, and the *differences* are the value: the Dutch
+stelsel rests on **seven statutes**, the Danish programme on a
+**digitalisation strategy**; Dutch registers are served by their own holders,
+Denmark built **one distributor** ([[DK-DATAFORDELER]]). The edge between
+them is deliberately `related-to` — neither derives from the other.
+
+**Austria tested the federal question and answered it.** [[AT-DSB]] is a
+**single federal** data protection authority, where [[DE-BFDI]] sits
+alongside sixteen Land authorities. So the Bund/Länder shape is *not*
+federal-general; it is German. That is a real comparative finding and it
+needed a second federal state to make.
+
+[[EU-EDPB]] goes 12 → **17** incoming edges, [[EU-ESS]] 11 → **16**.
+
+The shortlist section is **removed** from `discovery/candidates.md`, per the
+convention adopted this session: closed items leave the list rather than
+being struck through.
+
 ### Discovery cleaned out
 
 Closed items are now **removed** from `discovery/`, not struck through. **44
