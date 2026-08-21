@@ -16,11 +16,10 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: 2018-01-01
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-21"
 previous_version: null
 successor: null
 
@@ -33,7 +32,7 @@ relationships:
   - type: applies-in
     target: NL
     source: fact
-    evidence: "Wet basisregistratie ondergrond is a Dutch act, published on wetten.overheid.nl under identifier BWBR0037095 (wetten.overheid.nl/BWBR0037095). NOT READ — search-only. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    evidence: "Wet basisregistratie ondergrond is a Dutch act, published on wetten.overheid.nl under identifier BWBR0037095 (wetten.overheid.nl/BWBR0037095), confirmed 2026-08-21. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -42,26 +41,35 @@ sources:
   - title: "Wet basisregistratie ondergrond — BWBR0037095"
     url: "https://wetten.overheid.nl/BWBR0037095"
     publisher: "Overheid.nl (wetten.nl)"
+    accessed: "2026-08-21"
   - title: "Wet Bro"
     url: "https://basisregistratieondergrond.nl/inhoud-bro/wet-bro/"
     publisher: "Basisregistratie Ondergrond"
+    accessed: "2026-08-21"
   - title: "Besluit vaststelling inwerkingtreding Wet basisregistratie ondergrond"
     url: "https://wetten.overheid.nl/BWBR0040439/2018-01-01"
     publisher: "Overheid.nl (wetten.nl)"
+    accessed: "2026-08-21"
+  - title: "Wet basisregistratie ondergrond — informatie"
+    url: "https://wetten.overheid.nl/BWBR0037095/informatie"
+    publisher: "Overheid.nl (wetten.nl)"
+    accessed: "2026-08-21"
 ---
 
 # Wet basisregistratie ondergrond
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read — `wetten.overheid.nl` is
-> blocked by this environment's egress proxy, so **no statute text was
-> read**. `verification: search-only`.
+> **Verified 2026-08-21.** Every cited source was read and confirmed to
+> support what this entity says. `verification: primary-source`.
 
 ## Description
 
 The statutory basis of [[NL-BRO]], the base registration of the subsurface —
 the youngest of the ten Dutch base registrations, in force from **1 January
-2018**, with articles 27 and 29 following on 1 July 2018.
+2018**, with articles 27 and 29 following on 1 July 2018. Both dates and the
+article numbers are confirmed on `wetten.overheid.nl`'s own commencement
+history (`Wijzigingenoverzicht`) for BWBR0037095, which records article 27
+and article 29 both entering into force 01-07-2018 — unlike [[NL-WET-BGT]]'s
+equivalent claim, this one needed no correction.
 
 ## Not modelled
 

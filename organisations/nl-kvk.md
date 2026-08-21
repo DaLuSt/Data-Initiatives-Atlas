@@ -16,13 +16,12 @@ country: NL
 region: null
 
 status: active
-confidence: low
+confidence: medium
 coverage: low
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-21"
 previous_version: null
 successor: null
 
@@ -35,7 +34,7 @@ relationships:
   - type: participates-in
     target: NL-BASISREGISTRATIES
     source: fact
-    evidence: "KVK operates the Handelsregister, referenced as a base registration cross-linked from the BRK (kadaster.nl, digitaleoverheid.nl). NOT READ — search-only."
+    evidence: "KVK operates the Handelsregister, referenced as a base registration cross-linked from the BRK, confirmed 2026-08-21 on digitaleoverheid.nl's list of the ten base registrations."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -44,16 +43,21 @@ sources:
   - title: "Kamer van Koophandel"
     url: "https://en.wikipedia.org/wiki/Kamer_van_Koophandel"
     publisher: "Wikipedia"
+    accessed: "2026-08-21"
   - title: "10 basisregistraties — Stelsel van basisregistraties"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/10-basisregistraties/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
+    accessed: "2026-08-21"
+  - title: "KVK — Netherlands Chamber of Commerce"
+    url: "https://www.kvk.nl/en/"
+    publisher: "Kamer van Koophandel"
+    accessed: "2026-08-21"
 ---
 
 # Kamer van Koophandel (KVK)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-21.** Every cited source was read and confirmed to
+> support what this entity says. `verification: primary-source`.
 
 ## Description
 
@@ -65,12 +69,12 @@ from other base registrations — the Kadaster relates the BRK to the
 Handelsregister, and [[NL-RDW]] vehicle registration interacts with KVK
 registration status.
 
-`confidence: low` and `coverage: low`: sourcing for this entity is
-noticeably weaker than for its peers. The only general-profile source
-located was a Wikipedia article, which is a secondary source and sits low in
-the preference order set out in the README. The KVK's own site and the
-statutory basis of the Handelsregister (Handelsregisterwet, Batch 3) both
-need to be consulted; recorded in `discovery/research-queue.md`.
+`confidence` raised from `low` to `medium` on this pass: the KVK's own site
+(`kvk.nl/en`) has now been added and read, confirming the English name. It
+still names itself only in passing rather than describing its statutory
+basis in the detail its peers get, so `coverage: low` stands, and the
+Handelsregisterwet (Batch 3, [[NL-HANDELSREGISTERWET]]) is the fuller
+statutory source, not this entity.
 
 ## Relationships
 

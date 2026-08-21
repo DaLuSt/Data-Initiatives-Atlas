@@ -1,5 +1,88 @@
 # Completed Batches
 
+## The re-verification pass, batch 1 — the first pages a machine actually read
+
+**Date:** 2026-08-21
+
+With outbound HTTPS finally open, `tools/reverify.py` ran for the first time
+against live hosts rather than a blocked proxy. This batch worked the
+densest, best-structured slice of the 435-entity `search-only` backlog: the
+seven Dutch base-registration statutes flagged high priority in
+`discovery/unresolved.md`, plus a cluster of EU-scoped organisations
+(national statistics institutes citing `ec.europa.eu`, national data
+protection authorities citing `edpb.europa.eu`). **Twenty-one entities moved
+to `verification: primary-source`.**
+
+### The finding that mattered more than the count: egress open ≠ every host readable
+
+`eur-lex.europa.eu`, `www.iso.org`, `www.coe.int` and `unece.org` — four of
+the highest-value hosts on the allowlist — answer every automated fetch
+attempt with a bot-defense challenge page (AWS WAF or Cloudflare) rather
+than content, regardless of `User-Agent`, regardless of whether the request
+comes from `curl`, from `tools/reverify.py`'s own `urllib` fetch, or from a
+headless Chromium (which additionally cannot route through this session's
+proxy at all, a second and independent problem). This is not the egress
+policy — the TLS handshake completes and the site answers, just not with
+the page. Entities citing *only* those hosts are correctly still
+`search-only`; no amount of retrying converts them from inside this
+environment. See `docs/re-verification.md` §"A machine-corroborated pass"
+for the full account, including which `europa.eu` subdomains **do** work
+(`ec.europa.eu`, `digital-strategy.ec.europa.eu`, `edpb.europa.eu` and
+others — `eur-lex` is the one exception, not the rule).
+
+### Two corrections, and they are the point of the exercise
+
+- **[[NL-WET-BGT]]'s third commencement stage was mis-dated.** The entity
+  said articles 29 and 30 took effect 30 April 2018; `wetten.overheid.nl`'s
+  own commencement history gives **1 July 2018**. 30 April 2018 is when the
+  commencement decree (Stb. 2018, 122) was *published* in the Staatsblad,
+  confirmed independently on the Eerste Kamer's dossier, which titles the
+  same document "publicatie inwerkingtreding artikelen 29 en 30" — a
+  publication date mistaken for an effective date.
+- **[[NL-KADASTERWET]] carried an unattested alternative name.**
+  "Kadasterwet 1989" was listed in `alternative_names`; the statute's own
+  `wetten.overheid.nl` metadata records `Niet officiële titel: Geen`. Removed.
+
+Neither of the seven BWBR-keyed statutes resolved to the wrong act — the
+Kadasterwet/Archiefwet near-miss this tool exists to catch did not recur —
+but three diacritic typos did: `Datenschutzbehorde` → `Datenschutzbehörde`,
+`Bundesanstalt Statistik Osterreich` → `... Österreich`,
+`Dataombudsmannens byra` → `... byrå`. Each was an exact-string mismatch
+between `alternative_names` and the authority's own site, invisible on a
+skim and caught only because the check is literal.
+
+Several entities also had unattested English glosses dropped rather than
+kept unread — "Austrian Data Protection Authority", "Italian Data
+Protection Authority", "Finnish Data Protection Ombudsman" — none findable
+on the authority's own site or a Wikipedia page under that title.
+[[NL-KVK]]'s `confidence` was raised from `low` to `medium` after its own
+site (`kvk.nl/en`) was added and read, the specific gap its `low` rating had
+named.
+
+### Two entities attempted, not moved
+
+- **[[LU-STATEC]]** — `name` carries an Atlas-added disambiguator,
+  `"... (Luxembourg)"`, to distinguish it from France's identically-named
+  INSEE. No external source will ever write that suffix verbatim, so the
+  full-name claim cannot corroborate by exact-string match. Needs the
+  disambiguator moved out of `name`, not another source.
+- **[[PT-INE]]** — `ine.pt` returns `HTTP 403` specifically to
+  `tools/reverify.py`'s declared `User-Agent`, consistently across repeated
+  attempts, while occasionally serving a browser-identified request. A
+  site-level block on the tool's identity rather than a network flake.
+
+### Counts
+
+| | Before | After |
+|---|---|---|
+| `verification: primary-source` | 81 | **102** |
+| `verification: search-only` / `unverified` | 435 | **414** |
+| Cited source URLs | 1,677 | 1,689 |
+
+All required suites green: `validation/run_all.py` 5/5 (7 pre-existing
+plain-http warnings), `tools/test_build_graph.py` 41/41,
+`tools/test_reverify.py` 36/36, `tools/test_ui.mjs` 86/86.
+
 ## The four proposals, and the first content-tier verification
 
 **Date:** 2026-08-21

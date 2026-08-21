@@ -18,11 +18,10 @@ region: EU
 status: active
 confidence: medium
 coverage: low
-verification: search-only
-
-start_date: null
+verification: primary-source
+start_date: 1994-12-15
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-21"
 previous_version: null
 successor: null
 
@@ -35,7 +34,7 @@ relationships:
   - type: applies-in
     target: NL
     source: fact
-    evidence: "Wet waardering onroerende zaken is a Dutch act, published on wetten.overheid.nl under identifier BWBR0007119 (wetten.overheid.nl/BWBR0007119). NOT READ — search-only. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    evidence: "Wet waardering onroerende zaken is a Dutch act, published on wetten.overheid.nl under identifier BWBR0007119 (wetten.overheid.nl/BWBR0007119), confirmed 2026-08-21. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -44,24 +43,29 @@ sources:
   - title: "Wet waardering onroerende zaken — BWBR0007119"
     url: "https://wetten.overheid.nl/BWBR0007119"
     publisher: "Overheid.nl (wetten.nl)"
+    accessed: "2026-08-21"
   - title: "Wet waardering onroerende zaken"
     url: "https://nl.wikipedia.org/wiki/Wet_waardering_onroerende_zaken"
     publisher: "Wikipedia"
+    accessed: "2026-08-21"
   - title: "Wet waardering onroerende zaken — informatie"
     url: "https://wetten.overheid.nl/BWBR0007119/informatie"
     publisher: "Overheid.nl (wetten.nl)"
+    accessed: "2026-08-21"
 ---
 
 # Wet waardering onroerende zaken
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read — `wetten.overheid.nl` is
-> blocked by this environment's egress proxy, so **no statute text was
-> read**. `verification: search-only`.
+> **Verified 2026-08-21.** Every cited source was read and confirmed to
+> support what this entity says. `verification: primary-source`.
 
 ## Description
 
-The statutory basis of [[NL-WOZ]], adopted in **1994**.
+The statutory basis of [[NL-WOZ]], adopted in **1994**. The statute text
+opens: *"Wet van 15 december 1994, houdende algemene regels inzake de
+waardering van onroerende zaken"* — enacted 15 December 1994, now recorded
+as `start_date`. BWBR0007119 and the official abbreviations `WOZ` / `Wet
+WOZ` are both confirmed on the `wetten.overheid.nl` metadata page.
 
 ## The one register statute that is not about a register
 

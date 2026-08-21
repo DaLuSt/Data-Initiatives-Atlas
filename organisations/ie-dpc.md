@@ -21,11 +21,10 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-21"
 previous_version: null
 successor: null
 
@@ -40,14 +39,14 @@ relationships:
   - type: applies-to
     target: IE-DPA-2018
     source: fact
-    evidence: "The Data Protection Commission's inquiry into TikTok was carried out in accordance with the Data Protection Act 2018 and Article 60 of the GDPR; the DPC is Ireland's supervisory authority established under that Act (dataprotection.ie 'Inquiry into TikTok Technology Limited'; dataprotection.ie 'Irish Data Protection Commission submits Article 60 draft decision'; edpb.europa.eu). NOT READ — search-only."
+    evidence: "The Data Protection Commission's inquiry into TikTok was carried out in accordance with the Data Protection Act 2018 and Article 60 of the GDPR; the DPC is Ireland's supervisory authority established under that Act, confirmed 2026-08-21 on dataprotection.ie 'Inquiry into TikTok Technology Limited' and 'Irish Data Protection Commission submits Article 60 draft decision'."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: participates-in
     target: EU-EDPB
     source: fact
-    evidence: "The Irish Data Protection Commission submitted an Article 60 draft decision on its inquiry into TikTok to the other concerned supervisory authorities, and the European Data Protection Board published the Irish supervisory authority's decision fining TikTok EUR 530 million; Article 60 is the GDPR's cooperation procedure between the lead supervisory authority and the other concerned authorities, operated through the Board (dataprotection.ie 'Irish Data Protection Commission submits Article 60 draft decision on inquiry into TikTok'; edpb.europa.eu 'Irish Supervisory Authority fines TikTok EUR 530 million'). NOT READ — search-only."
+    evidence: "The Irish Data Protection Commission submitted an Article 60 draft decision on its inquiry into TikTok to the other concerned supervisory authorities, and the European Data Protection Board published the Irish supervisory authority's decision fining TikTok EUR 530 million; Article 60 is the GDPR's cooperation procedure between the lead supervisory authority and the other concerned authorities, operated through the Board, confirmed 2026-08-21 on dataprotection.ie 'Irish Data Protection Commission submits Article 60 draft decision on inquiry into TikTok' and edpb.europa.eu 'Irish Supervisory Authority fines TikTok EUR 530 million'."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -56,19 +55,25 @@ sources:
   - title: "Inquiry into TikTok Technology Limited"
     url: "https://www.dataprotection.ie/en/dpc-guidance/decisions/inquiry-tiktok-technology-limited"
     publisher: "Data Protection Commission (Ireland)"
+    accessed: "2026-08-21"
   - title: "Irish Data Protection Commission submits Article 60 draft decision on inquiry into TikTok"
     url: "https://www.dataprotection.ie/en/news-media/latest-news/irish-data-protection-commission-submits-article-60-draft-decision-inquiry-tiktok"
     publisher: "Data Protection Commission (Ireland)"
+    accessed: "2026-08-21"
   - title: "Irish Supervisory Authority fines TikTok €530 million and orders corrective measures following Inquiry into transfers of EEA User Data to China"
     url: "https://www.edpb.europa.eu/news/irish-supervisory-authority-fines-tiktok-eu530-million-and-orders-corrective-measures_en"
     publisher: "European Data Protection Board (EDPB)"
+    accessed: "2026-08-21"
+  - title: "An Coimisiún um Chosaint Sonraí"
+    url: "https://www.dataprotection.ie/ga"
+    publisher: "Data Protection Commission (Ireland)"
+    accessed: "2026-08-21"
 ---
 
 # Data Protection Commission (DPC)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-21.** Every cited source was read and confirmed to
+> support what this entity says. `verification: primary-source`.
 
 ## Description
 
@@ -92,7 +97,9 @@ The Atlas can now show it. The DPC's **€530 million TikTok decision**,
 published by the EDPB as the "Irish Supervisory Authority" decision
 following an Article 60 draft, is the worked example: an Irish regulator, an
 EU-wide procedure, a company established in Ireland, and data transfers to
-China.
+China. The DPC's own decision page (reference IN-21-9-2) dates the decision
+to **30 April 2025**, under Articles 46 and 13, and confirms Article 56, 60
+and the Data Protection Act 2018 by name.
 
 ## `participates-in` [[EU-EDPB]] — the Atlas's second such edge
 
@@ -128,7 +135,7 @@ highest-value cheap item on that page, and this batch has not done it.
 
 ## Sources
 
-Listed in frontmatter — two from the DPC itself and one from the EDPB. This
+Listed in frontmatter — three from the DPC itself and one from the EDPB. This
 is among the **best-sourced** entities in the batch: unlike most, the claims
 rest on the authority's own published decisions rather than on secondary
 description.

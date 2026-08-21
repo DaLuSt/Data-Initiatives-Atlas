@@ -16,11 +16,10 @@ region: EU
 status: active
 confidence: medium
 coverage: low
-verification: search-only
-
-start_date: null
+verification: primary-source
+start_date: 1994-04-21
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-21"
 previous_version: null
 successor: null
 
@@ -33,7 +32,7 @@ relationships:
   - type: applies-in
     target: NL
     source: fact
-    evidence: "Wegenverkeerswet 1994 is a Dutch act, published on wetten.overheid.nl under identifier BWBR0006622 (wetten.overheid.nl/BWBR0006622). NOT READ — search-only. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    evidence: "Wegenverkeerswet 1994 is a Dutch act, published on wetten.overheid.nl under identifier BWBR0006622 (wetten.overheid.nl/BWBR0006622), confirmed 2026-08-21. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -42,21 +41,25 @@ sources:
   - title: "Wegenverkeerswet 1994 — BWBR0006622"
     url: "https://wetten.overheid.nl/BWBR0006622"
     publisher: "Overheid.nl (wetten.nl)"
+    accessed: "2026-08-21"
   - title: "Wegenverkeerswet 1994 — informatie"
     url: "https://wetten.overheid.nl/BWBR0006622/informatie"
     publisher: "Overheid.nl (wetten.nl)"
+    accessed: "2026-08-21"
 ---
 
 # Wegenverkeerswet 1994
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read — `wetten.overheid.nl` is
-> blocked by this environment's egress proxy, so **no statute text was
-> read**. `verification: search-only`.
+> **Verified 2026-08-21.** Every cited source was read and confirmed to
+> support what this entity says. `verification: primary-source`.
 
 ## Description
 
-The statutory basis of [[NL-BRV]], the base registration of vehicles.
+The statutory basis of [[NL-BRV]], the base registration of vehicles. The
+statute text opens: *"Wet van 21 april 1994, houdende vervanging van de
+Wegenverkeerswet"* — enacted 21 April 1994, which is now recorded as
+`start_date`. BWBR0006622 and the official abbreviations `WVW` / `WVW 1994`
+are both confirmed on the `wetten.overheid.nl` metadata page.
 
 ## A general act that happens to contain a base registration
 

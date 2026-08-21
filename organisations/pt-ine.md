@@ -42,7 +42,7 @@ relationships:
 
 sources:
   - title: "INE — Instituto Nacional de Estatística"
-    url: "https://www.ine.pt/"
+    url: "https://www.ine.pt/xportal/xmain?xpgid=ine_main&xpid=INE"
     publisher: "Instituto Nacional de Estatística (Portugal)"
   - title: "European Statistical System (ESS)"
     url: "https://ec.europa.eu/eurostat/web/european-statistical-system"

@@ -19,11 +19,10 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-21"
 previous_version: null
 successor: null
 
@@ -37,7 +36,7 @@ relationships:
   - type: part-of
     target: "NO"
     source: fact
-    evidence: "Statistisk sentralbyrå is Norway's national statistical institute (ssb.no). NOT READ — search-only. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    evidence: "Statistisk sentralbyrå is Norway's national statistical institute (ssb.no), confirmed 2026-08-21. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -46,16 +45,22 @@ sources:
   - title: "Statistisk sentralbyrå"
     url: "https://www.ssb.no/"
     publisher: "Statistisk sentralbyrå (SSB)"
+    accessed: "2026-08-21"
   - title: "European Statistical System (ESS)"
     url: "https://ec.europa.eu/eurostat/web/european-statistical-system"
     publisher: "Eurostat / European Commission"
+    accessed: "2026-08-21"
+  - title: "Statistics Norway — English"
+    url: "https://www.ssb.no/en"
+    publisher: "Statistisk sentralbyrå (SSB)"
+    accessed: "2026-08-21"
 ---
 
 # Statistisk sentralbyrå (SSB)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`. ⚠ `coverage: low` — see below.
+> **Verified 2026-08-21.** Every cited source was read and confirmed to
+> support what this entity says. `verification: primary-source`. ⚠
+> `coverage: low` — see below.
 
 ## Description
 

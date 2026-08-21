@@ -7,7 +7,7 @@ as an open, connected knowledge graph.**
 
 ### [**→ Open the Interactive Atlas**](https://dalust.github.io/Data-Initiatives-Atlas/)
 
-*Search, filter and explore 516 entities and 6,170 connections across fifty-eight
+*Search, filter and explore 516 entities and 6,172 connections across fifty-eight
 countries — no install, no account.*
 
 [![Validation](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/validate.yml/badge.svg)](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/validate.yml)
@@ -33,12 +33,12 @@ hand-maintained.
 | | |
 |---|---|
 | **Entities** | 516 |
-| **Connections** | 6,170 — of which **1,095** are sourced, typed relationships |
+| **Connections** | 6,172 — of which **1,095** are sourced, typed relationships |
 | **Country scopes** | **58** — 16 with a researched national layer, the rest base anchors |
 | **Layers** | UN · Council of Europe · EU · national · sectoral |
 | **Source of truth** | Git + Markdown/YAML — no database |
 | **Licence** | CC0 1.0 |
-| **⚠ Sourcing** | **435 of 516 entities have never had a cited source read** — 81 verified against five owner-confirmed domains, see below |
+| **⚠ Sourcing** | **414 of 516 entities have never had a cited source read** — 102 now `verification: primary-source`, see below |
 
 *Figures as of 2026-08-21. The live counts are always on the site itself.*
 
@@ -73,6 +73,25 @@ entry into force). Both dates are now on each of those six entities, and
 `discovery/unresolved.md` records the choice rather than resolving it
 quietly.
 
+**On 2026-08-21, with outbound HTTPS open, `tools/reverify.py` read its first
+pages.** Twenty-one entities moved to `verification: primary-source` this
+way — the seven Dutch base-registration statutes (BWBR-keyed, the class of
+citation the tool exists to guard, per the Kadasterwet/Archiefwet near-miss
+below) plus fourteen EU-scoped organisations. Two errors were found and
+corrected in the process: [[NL-WET-BGT]] had its third commencement stage
+dated 30 April 2018 (a decree's *publication* date) when `wetten.overheid.nl`
+gives 1 July 2018 (when the articles actually took effect), and
+[[NL-KADASTERWET]] carried an alternative name, "Kadasterwet 1989", that the
+statute's own metadata does not attest. Several umlaut/diacritic typos were
+also fixed (`Datenschutzbehorde` → `Datenschutzbehörde`,
+`Bundesanstalt Statistik Osterreich` → `... Österreich`). Not every host
+cooperates: `eur-lex.europa.eu`, `www.iso.org`, `www.coe.int` and
+`unece.org` answer every automated fetch with a bot-defense challenge page
+rather than content, in this environment as in any other — so the entities
+citing only those hosts are still `search-only`, and moving them needs a
+different approach than this pass took. See `docs/re-verification.md` §"A
+machine-corroborated pass" for the full account.
+
 That is disclosed rather than buried, and the repository is built around the
 gap rather than around hiding it:
 
@@ -82,7 +101,7 @@ gap rather than around hiding it:
   is still `search-only`;
 - `discovery/unresolved.md` is the standing register of what is unknown, and
   `discovery/reverification-allowlist.md` is the generated worklist —
-  1,677 URLs, 550 hosts, 399 domains, ranked by how many entities each
+  1,689 URLs, 552 hosts, 400 domains, ranked by how many entities each
   unblocks;
 - `tools/reverify.py` runs the pass and `docs/re-verification.md` is the
   procedure.
