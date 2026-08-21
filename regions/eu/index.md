@@ -37,6 +37,24 @@ Anchor entity: [[EU]]
 - [[EU-DATA-ACT]] — Data Act (Reg. 2023/2854)
 - [[EU-OPEN-DATA-DIRECTIVE]] — Open Data Directive (Dir. 2019/1024) ⚠ repeal proposed → [[NL-WHO]]
 
+### Statutory bases of the European systems
+
+- [[EU-REG-223-2009]] — European statistics _(the legal basis of [[EU-ESS]])_
+- [[EU-REG-1025-2012]] — European standardisation _(recognises [[EU-CEN]],
+  [[EU-CENELEC]] and [[EU-ETSI]])_
+
+### Third-country adequacy
+
+- [[EU-UK-ADEQUACY]] — two decisions, 2021, with a sunset clause
+- [[EU-CH-ADEQUACY]] — one decision, **2000**, with none _(Decision
+  2000/518/EC, still in force under Article 45(9) GDPR)_
+
+### Transport and trade
+
+- [[EU-EMSWE]] — European Maritime Single Window environment (Reg.
+  2019/1239) _(names [[UN-LOCODE]] in its common location database — the
+  Atlas's only EU→UN/CEFACT edge)_
+
 ### Digital identity
 
 - [[EU-EIDAS]] — eIDAS Regulation (Reg. 910/2014)
@@ -118,6 +136,27 @@ NL-CBS ──participates-in──→ EU-EUROSTAT  (European Statistical System)
 
 ### Data spaces support
 - [[EU-DSSC]] — Data Spaces Support Centre
+
+### Membership associations
+- [[EU-EUROGEOGRAPHICS]] — the national mapping, cadastral and land registry
+  authorities _(members include [[NL-KADASTER]], [[NO-KARTVERKET]],
+  [[CH-SWISSTOPO]], [[GB-OS]], [[IE-TAILTE]])_ — the geospatial analogue of
+  [[EU-ESS]]
+
+## Publications — the measurement layer
+
+The Atlas's first `type: publication` entities, added 2026-08-21.
+
+- [[EU-DESI]] — Digital Economy and Society Index _(four dimensions;
+  standalone 2014–2022, then absorbed into the State of the Digital Decade
+  report)_
+- [[EU-EGOV-BENCHMARK]] — eGovernment Benchmark _(**35 countries**, every
+  one of them already an Atlas anchor)_
+- [[EU-VOLUNTARY-REVIEW-2023]] — the Union's first voluntary review to the
+  UN High-level Political Forum
+
+⚠ **None of these carries an edge to a country it measures.** There is no
+`measures` relationship type — see `discovery/candidates.md` §3.
 
 ## Standards and reference architectures
 

@@ -7,7 +7,7 @@ as an open, connected knowledge graph.**
 
 ### [**→ Open the Interactive Atlas**](https://dalust.github.io/Data-Initiatives-Atlas/)
 
-*Search, filter and explore 486 entities and 5,602 connections across fifty-eight
+*Search, filter and explore 502 entities and 5,856 connections across fifty-eight
 countries — no install, no account.*
 
 [![Validation](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/validate.yml/badge.svg)](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/validate.yml)
@@ -32,15 +32,15 @@ hand-maintained.
 
 | | |
 |---|---|
-| **Entities** | 486 |
-| **Connections** | 5,602 — of which **967** are sourced, typed relationships |
-| **Country scopes** | **58** — 14 with a researched national layer, the rest base anchors |
+| **Entities** | 502 |
+| **Connections** | 5,856 — of which **1,010** are sourced, typed relationships |
+| **Country scopes** | **58** — 16 with a researched national layer, the rest base anchors |
 | **Layers** | UN · Council of Europe · EU · national · sectoral |
 | **Source of truth** | Git + Markdown/YAML — no database |
 | **Licence** | CC0 1.0 |
-| **⚠ Sourcing** | **421 of 461 entities have never had a cited source read** — 33 verified 2026-08-20, see below |
+| **⚠ Sourcing** | **462 of 502 entities have never had a cited source read** — 40 verified, see below |
 
-*Figures as of 2026-08-20. The live counts are always on the site itself.*
+*Figures as of 2026-08-21. The live counts are always on the site itself.*
 
 ### ⚠ Read this before you cite anything
 
@@ -82,7 +82,7 @@ gap rather than around hiding it:
   is still `search-only`;
 - `discovery/unresolved.md` is the standing register of what is unknown, and
   `discovery/reverification-allowlist.md` is the generated worklist —
-  1,500 URLs, 486 hosts, 353 domains, ranked by how many entities each
+  1,635 URLs, 532 hosts, 385 domains, ranked by how many entities each
   unblocks;
 - `tools/reverify.py` runs the pass and `docs/re-verification.md` is the
   procedure.

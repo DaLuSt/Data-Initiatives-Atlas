@@ -30,11 +30,19 @@ domains:
 organisations: []
 related_entities:
   - CH
+  - EU-EUROGEOGRAPHICS
 relationships:
   - type: part-of
     target: CH
     source: fact
     evidence: "swisstopo is the Swiss federal office of topography, responsible for official national mapping and the federal geodata infrastructure (swisstopo.admin.ch; geo.admin.ch). NOT READ — search-only. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: participates-in
+    target: EU-EUROGEOGRAPHICS
+    source: fact
+    evidence: "EuroGeographics is the membership association for the European National Mapping, Cadastral and Land Registry Authorities, an international not-for-profit association (AISBL/IVZW under Belgian law, BCE 833 607 112) bringing together 63 organisations from 46 countries covering the whole of geographical Europe (eurogeographics.org/our-members/; eurogeographics.org). NOT READ — search-only. Membership follows from the sourced composition rule rather than from a source naming this authority, the same basis on which the national standardisation bodies were attached to EU-CEN. This entity is Switzerland's federal office of topography."
     confidence: medium
     valid_from: null
     valid_until: null

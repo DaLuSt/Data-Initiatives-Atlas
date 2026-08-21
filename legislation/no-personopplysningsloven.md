@@ -34,11 +34,21 @@ organisations: []
 related_entities:
   - EU-GDPR
   - NO-DATATILSYNET
+  - INTL-EEA-JCD-154-2018
+  - IS-PERSONUVERNDARLOG
+  - LI-DSG
 relationships:
   - type: implements-requirement-from
     target: EU-GDPR
     source: fact
     evidence: "The new Norwegian Personal Data Act (LOV-2018-06-15-38) implements the GDPR and became effective on 20 July 2018; the GDPR was incorporated into Annex XI of the EEA Agreement by Decision of the EEA Joint Committee No 154/2018 of 6 July 2018, and the Act designates Datatilsynet as the supervisory authority (lovdata.no LOV-2018-06-15-38; EUR-Lex OJ L 183 of 19.7.2018 p. 23, JCD No 154/2018; linklaters.com 'Data Protected — Norway'; dlapiperdataprotection.com Norway). NOT READ — search-only."
+    confidence: medium
+    valid_from: 2018-07-20
+    valid_until: null
+  - type: references
+    target: INTL-EEA-JCD-154-2018
+    source: fact
+    evidence: "The GDPR was incorporated into Annex XI of the EEA Agreement by Decision of the EEA Joint Committee No 154/2018 of 6 July 2018, which is the route by which it reaches Norway; this Act gives it effect in Norwegian law from 20 July 2018 (eur-lex.europa.eu ELI dec/2018/1022/oj, OJ L 183 of 19.7.2018 p. 23; lovdata.no LOV-2018-06-15-38). NOT READ — search-only."
     confidence: medium
     valid_from: 2018-07-20
     valid_until: null
@@ -69,6 +79,18 @@ sources:
 Norway's Personal Data Act, adopted **15 June 2018** and in force from
 **20 July 2018**. It gives [[EU-GDPR]] effect in Norwegian law and
 designates [[NO-DATATILSYNET]] as the supervisory authority.
+
+## The decision in the middle is now an entity
+
+When this act was written, [[INTL-EEA-JCD-154-2018]] existed only as a
+citation — named in the description, in the `implements-requirement-from`
+evidence, and in the sources. It is now modelled, and this act carries a
+`references` edge to it.
+
+Two sibling acts were written at the same time: [[IS-PERSONUVERNDARLOG]] and
+[[LI-DSG]]. `discovery/candidates.md` had asked whether the pattern this
+entity established *"generalises or is Norway-specific"* — see
+[[IS-PERSONUVERNDARLOG]] for the three-way comparison that answers it.
 
 ## The two-month gap that proves the point
 

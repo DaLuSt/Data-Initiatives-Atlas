@@ -40,11 +40,19 @@ related_entities:
   - GB-GEOSPATIAL-STRATEGY
   - GB-ONS
   - NL-KADASTER
+  - EU-EUROGEOGRAPHICS
 relationships:
   - type: participates-in
     target: UN-GGIM
     source: fact
     evidence: "Ordnance Survey acts as the Secretariat for the UK Delegation, leads and coordinates UK involvement, and acts as Head of UK Delegation during Committee of Experts meetings on behalf of the Geospatial Commission; the United Kingdom, through Ordnance Survey and supported by the UN-GGIM Europe Regional Committee, agreed to lead a review in close collaboration with the UN-GGIM Secretariat (ggim.un.org 11th Session agenda item 3 — UK; gdsgeospatial.blog.gov.uk 'The UN-GGIM 14th session: flying the flag'; geospatialworld.net). NOT READ — search-only."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: participates-in
+    target: EU-EUROGEOGRAPHICS
+    source: fact
+    evidence: "EuroGeographics is the membership association for the European National Mapping, Cadastral and Land Registry Authorities, an international not-for-profit association (AISBL/IVZW under Belgian law, BCE 833 607 112) bringing together 63 organisations from 46 countries covering the whole of geographical Europe (eurogeographics.org/our-members/; eurogeographics.org). NOT READ — search-only. Membership follows from the sourced composition rule rather than from a source naming this authority, the same basis on which the national standardisation bodies were attached to EU-CEN. This entity is Great Britain's national mapping agency."
     confidence: medium
     valid_from: null
     valid_until: null

@@ -44,7 +44,15 @@ related_entities:
   - BE-STATBEL
   - ES-INE
   - UN-CES
-relationships: []
+  - EU-REG-223-2009
+relationships:
+  - type: governed-by
+    target: EU-REG-223-2009
+    source: fact
+    evidence: "The ESS was formalised in March 2009 when the European Parliament and the Council adopted Regulation (EC) No 223/2009 on European statistics, which consolidated the activities of the ESS and clarified the roles of Eurostat, the national statistical institutes and other national authorities; the ESS Committee is established under the regulation (eur-lex.europa.eu CELEX 32009R0223; ec.europa.eu/eurostat 'European Statistical System'). NOT READ — search-only."
+    confidence: medium
+    valid_from: 2009-03-11
+    valid_until: null
 
 sources:
   - title: "Regulation (EC) No 223/2009 of the European Parliament and of the Council on European statistics"
@@ -126,26 +134,30 @@ only because there was nowhere correct to point; leaving it beside the
 correct one would double-count the relationship and keep an inference in the
 graph that the data no longer needs.
 
-## Regulation (EC) No 223/2009 is cited, not modelled
+## Regulation (EC) No 223/2009 — now modelled
 
-The regulation is this entity's legal basis and its first source. **No entity
-was created for it**, and that is a deliberate limit rather than an
-oversight: `discovery/research-queue.md` has carried Regulation 223/2009
-since Batch 9 as an unmodelled legal base, alongside Regulation (EU)
-1025/2012 for the European standardisation organisations. Creating one of
-that pair inside this batch and not the other would leave the Atlas
-inconsistent about how statutory bases are handled.
+This section previously read *"Regulation (EC) No 223/2009 is cited, not
+modelled"*, and explained the deferral: `discovery/research-queue.md` had
+carried the regulation since Batch 9 alongside Regulation (EU) 1025/2012, the
+legal base of the European standardisation organisations, and creating one of
+the pair without the other would leave the Atlas inconsistent about statutory
+bases.
 
-The consequence is recorded rather than hidden: this framework has **no
-`governed-by` edge**, and the instrument that establishes it appears only as
-a citation.
+**The pair was closed together** on 2026-08-21. This framework is now
+`governed-by` [[EU-REG-223-2009]], and [[EU-CEN]], [[EU-CENELEC]] and
+[[EU-ETSI]] are covered by [[EU-REG-1025-2012]]. The consequence this section
+used to record — *"this framework has no `governed-by` edge, and the
+instrument that establishes it appears only as a citation"* — no longer
+holds.
 
 ## Relationships
 
-None asserted from this entity. Every edge in the diagram above lives on the
-member — `part-of` belongs on the part, not the whole — which is the same
-direction convention [[EU-EUROSTAT]] already used for `part-of`
-[[EU-COMMISSION]].
+- `governed-by` [[EU-REG-223-2009]], the regulation that constitutes the
+  system.
+
+Every membership edge in the diagram above lives on the member — `part-of`
+belongs on the part, not the whole — which is the same direction convention
+[[EU-EUROSTAT]] already used for `part-of` [[EU-COMMISSION]].
 
 ## Sources
 

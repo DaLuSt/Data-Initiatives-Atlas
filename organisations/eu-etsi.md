@@ -51,7 +51,7 @@ sources:
 
 ETSI is the European Standardisation Organisation for information and
 communications technology, and produces globally applicable ICT standards.
-It is one of the three ESOs recognised by Regulation (EU) No 1025/2012,
+It is one of the three ESOs recognised by [[EU-REG-1025-2012]],
 alongside [[EU-CEN]] and [[EU-CENELEC]].
 
 Of the three ESOs, ETSI is the most likely to matter to the Atlas's

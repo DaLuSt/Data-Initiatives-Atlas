@@ -89,7 +89,7 @@ sources.
 |---|---|
 | Internally coherent model | ✅ 17 entity types, all defined in `metadata/ontology.md` |
 | Entity types used consistently | ✅ no type used outside its documented folder |
-| Relationships semantically meaningful | ✅ 22 types, each defined; `proposes-to-supersede` added when `supersedes` would have asserted an untruth, and `amends` when it would have retired an instrument still in force. `status` gained `adopted` on the same test: a treaty ratified by 34 states and not in force is neither `proposed` nor `active` |
+| Relationships semantically meaningful | ✅ 23 types, each defined; `proposes-to-supersede` added when `supersedes` would have asserted an untruth, and `amends` when it would have retired an instrument still in force. `status` gained `adopted` on the same test: a treaty ratified by 34 states and not in force is neither `proposed` nor `active` |
 | Domains justified | ✅ all 6 connect ≥2 entities; 7 more withheld below threshold |
 
 ### Metadata

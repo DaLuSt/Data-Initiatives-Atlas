@@ -11,8 +11,9 @@ description: >
   Trade Association and a party to the Agreement on the European Economic
   Area, and not a member of the European Union. It is a base anchor: it
   carries the country's position in the European legal and institutional
-  frameworks so that entities scoped to it have somewhere to attach, and
-  no national entities are modelled yet.
+  frameworks so that entities scoped to it have somewhere to attach. Its
+  first national entities are the data protection authority Datenschutzstelle
+  and the Datenschutzgesetz.
 
 level: national
 country: LI
@@ -65,9 +66,9 @@ sources:
 
 ## Description
 
-Liechtenstein (ISO 3166-1 alpha-2: **`LI`**) is a **base country anchor**,
-created so that entities scoped to it have somewhere to attach. No
-Liechtenstein entity is modelled yet.
+Liechtenstein (ISO 3166-1 alpha-2: **`LI`**) is a country anchor, created so
+that entities scoped to it have somewhere to attach. Two Liechtenstein
+entities are now modelled: [[LI-DATENSCHUTZSTELLE]] and [[LI-DSG]].
 
 ## Position in the European frameworks
 
@@ -95,12 +96,21 @@ It is in the Schengen area and in a customs and currency union with [[CH]],
 using the Swiss franc — so it is simultaneously inside the EEA and inside a
 monetary arrangement with a state that is not.
 
+One Joint Committee decision is modelled: [[INTL-EEA-JCD-154-2018]], which
+incorporated [[EU-GDPR]]. Liechtenstein is the case where that mattered
+least — the GDPR became **directly applicable** here on 20 July 2018, and
+[[LI-DSG]] did not come into force until 1 January 2019, because the national
+act supplements the regulation rather than giving it effect.
+
 ## What this anchor does not yet carry
 
-Nothing beyond membership. There is no national data protection authority,
-no open data portal, no statistics office, no interoperability framework
-and no legislation attached to this entity. Each of those exists in
-reality; none has been researched.
+The **data protection layer only**. [[LI-DATENSCHUTZSTELLE]] and [[LI-DSG]]
+were added on 2026-08-21 alongside Iceland's, to test whether the Norwegian
+EEA pattern generalises. It does, with Liechtenstein as the informative
+exception — see [[LI-DSG]].
+
+There is no open data portal, no statistics office, no interoperability
+framework and no cyber authority.
 
 ## Sources
 

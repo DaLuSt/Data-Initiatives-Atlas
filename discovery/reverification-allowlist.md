@@ -7,11 +7,11 @@ Generated: 2026-08-21
 
 ## Why this exists
 
-**421 of the Atlas's 461 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
+**462 of the Atlas's 502 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
 
 Closing that debt — the re-verification pass — needs outbound HTTPS to the hosts those URLs point at. In an environment with a restricted egress policy, this is the allowlist to request. A denial shows up as `403 to CONNECT` from the proxy, which is an environment-level network policy and cannot be changed from inside a session. See `discovery/unresolved.md` for the standing record of the sourcing debt.
 
-The Atlas currently cites **1529 source URLs** across **492 hosts**, collapsing to **359 registrable domains**.
+The Atlas currently cites **1635 source URLs** across **532 hosts**, collapsing to **385 registrable domains**.
 
 ## Highest value first
 
@@ -21,8 +21,8 @@ A domain here is an **allowlist pattern**, not a URL. Most of them also happen t
 
 | Domain | URLs | Entities | Example host | Opened |
 |---|---|---|---|---|
-| `europa.eu` | 190 | 118 | `data.europa.eu` | ✅ opens |
-| `wikipedia.org` | 85 | 85 | `cs.wikipedia.org` | ✅ opens |
+| `europa.eu` | 231 | 144 | `data.europa.eu` | ✅ opens |
+| `wikipedia.org` | 90 | 90 | `cs.wikipedia.org` | ✅ opens |
 | `iso.org` | 67 | 64 | `www.iso.org` | ✅ opens |
 | `coe.int` | 52 | 42 | `rm.coe.int` | ✅ opens |
 | `bund.de` | 41 | 23 | `bmds.bund.de` | ✅ opens |
@@ -32,15 +32,15 @@ A domain here is an **allowlist pattern**, not a URL. Most of them also happen t
 | `government.nl` | 39 | 39 | `www.government.nl` | ✅ opens |
 | `gob.es` | 33 | 18 | `administracion.gob.es` | ⚠ namespace only — no site at the apex |
 | `overheid.nl` | 27 | 20 | `data.overheid.nl` | ✅ opens |
+| `unece.org` | 21 | 9 | `aarhusclearinghouse.unece.org` | ✅ opens |
+| `un.org` | 20 | 12 | `docs.un.org` | ✅ opens |
 | `belgium.be` | 18 | 10 | `bosa.belgium.be` | ✅ opens |
-| `un.org` | 17 | 10 | `ecosoc.un.org` | ✅ opens |
-| `unece.org` | 17 | 7 | `aarhusclearinghouse.unece.org` | ✅ opens |
 | `cencenelec.eu` | 17 | 10 | `standards.cencenelec.eu` | ✅ opens |
+| `legislation.gov.uk` | 16 | 15 | `www.legislation.gov.uk` | ✅ opens |
 | `rijksoverheid.nl` | 16 | 12 | `www.rijksoverheid.nl` | ✅ opens |
+| `admin.ch` | 15 | 8 | `www.bfs.admin.ch` |  |
 | `bundestag.de` | 15 | 11 | `dserver.bundestag.de` | ✅ opens |
 | `boe.es` | 15 | 13 | `www.boe.es` | ✅ opens |
-| `legislation.gov.uk` | 15 | 14 | `www.legislation.gov.uk` | ✅ opens |
-| `admin.ch` | 13 | 7 | `www.bfs.admin.ch` |  |
 
 ### What the 2026-08-20 check found, and what it did not
 
@@ -86,6 +86,7 @@ gesetze-im-internet.de
 gov.be
 gov.cz
 gov.ie
+gov.it
 gov.pl
 gov.pt
 gov.scot
@@ -117,6 +118,7 @@ trade.gov
 un.org
 verwaltungsvorschriften-im-internet.de
 w3.org
+wipo.int
 ```
 
 ## Remaining domains
@@ -161,6 +163,7 @@ biznesinfo.pl
 bmv.de
 boe.es
 bosa.be
+bosettiegatti.eu
 bpb.de
 brandenburg.de
 bsigroup.com
@@ -169,6 +172,7 @@ bundesregierung.de
 bundestag.de
 bundeswirtschaftsministerium.de
 buzer.de
+capgemini.com
 cbs.nl
 cci-paris-idf.fr
 cci.fr
@@ -193,10 +197,14 @@ d-velop.de
 dagdok.org
 data-spaces-symposium.eu
 datactivist.coop
+datafordeler.dk
+dataportal.se
 dataportals.org
 dataprotection.ie
 dataspace-culturalheritage.eu
+datatilsynet.dk
 datatilsynet.no
+datenschutzstelle.li
 datopian.com
 dcat-ap.de
 de.digital
@@ -205,10 +213,12 @@ defensie.nl
 deloitte.com
 diariodeleon.es
 digdir.no
+digg.se
 digigo.nu
 digital.swiss
 digitale-verwaltung-schweiz.ch
 digitale-verwaltung.de
+digst.dk
 dlapiper.com
 dlapiperdataprotection.com
 dma.org.uk
@@ -217,6 +227,8 @@ dnb.nl
 dnv.de
 dsgvo-gesetz.de
 dssc.eu
+dst.dk
+dvv.fi
 e-estonia.com
 e-recht24.de
 earonline.nl
@@ -247,6 +259,7 @@ gabler.de
 gaia-x-hub.de
 gaia-x.at
 gaia-x.eu
+garanteprivacy.it
 gdpr-info.eu
 gdprhub.eu
 gdprregulation.eu
@@ -264,6 +277,8 @@ gob.es
 gouv.fr
 gouvernement.lu
 grokipedia.com
+grunddata.dk
+gv.at
 haufe.de
 health-ri.nl
 hessen.de
@@ -275,6 +290,7 @@ ibpt.be
 ico.org.uk
 ictu.nl
 ietf.org
+imy.se
 incibe.es
 ine.es
 ine.pt
@@ -287,6 +303,7 @@ ipo.nl
 ipq.pt
 irishstatutebook.ie
 ishare.eu
+istat.it
 isvs.cz
 its-mobility.de
 itwiz.pl
@@ -310,6 +327,8 @@ mobilithek.info
 mobility-data-space.de
 mobility-dataspace.eu
 moirouxavocats.com
+mynewsdesk.com
+naegele.law
 nask.pl
 nationaalarchief.nl
 nationaalgroeifonds.nl
@@ -350,6 +369,7 @@ parlementairemonitor.nl
 parliament.uk
 pdok.nl
 personalausweisportal.de
+personuvernd.is
 pgdlisboa.pt
 piwikpro.de
 pkn.pl
@@ -376,6 +396,7 @@ roraonline.nl
 rvig.nl
 sachsen-anhalt.de
 safeonweb.be
+scb.se
 sciencedirect.com
 scoop4c.eu
 secjur.com
@@ -386,7 +407,10 @@ smartcountry.berlin
 snl.no
 springerprofessional.de
 ssb.no
+stat.fi
+statistik.at
 stcpservicos.pt
+suomi.fi
 surf.nl
 sva.nl
 tailte.ie
@@ -399,6 +423,7 @@ theinvoicinghub.com
 theodi.org
 thinkdigitalpartners.com
 tib-ivd.nl
+tietosuoja.fi
 trecom.pl
 tweedekamer.nl
 twobirds.com
@@ -411,6 +436,7 @@ une.org
 unece.org
 unesco.org
 unesco.org.uk
+unfpa.org
 ungeneva.org
 unievanwaterschappen.nl
 unizar.es
