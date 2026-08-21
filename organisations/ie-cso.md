@@ -17,11 +17,10 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-21"
 previous_version: null
 successor: null
 
@@ -34,7 +33,7 @@ relationships:
   - type: part-of
     target: EU-ESS
     source: fact
-    evidence: "The European Statistical System is the partnership between the Community statistical authority, which is the Commission (Eurostat), and the national statistical institutes and other national authorities responsible in each member state for the development, production and dissemination of European statistics; the ESS Committee is composed of NSI representatives and chaired by Eurostat (ec.europa.eu/eurostat/web/european-statistical-system; EUR-Lex CELEX 32009R0223; cso.ie). The CSO is the Irish NSI. NOT READ — search-only."
+    evidence: "The European Statistical System is the partnership between the Community statistical authority, which is the Commission (Eurostat), and the national statistical institutes and other national authorities responsible in each member state for the development, production and dissemination of European statistics, confirmed 2026-08-21 on ec.europa.eu/eurostat/web/european-statistical-system. The CSO is the Irish NSI (cso.ie). The founding regulation, EC 223/2009, is cited on secondary sources but was not itself read — eur-lex.europa.eu returns an AWS WAF bot-defense challenge to every fetch attempt in this environment, not the statute text."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -43,16 +42,21 @@ sources:
   - title: "Central Statistics Office"
     url: "https://www.cso.ie/en/"
     publisher: "Central Statistics Office (Ireland)"
+    accessed: "2026-08-21"
   - title: "European Statistical System (ESS)"
     url: "https://ec.europa.eu/eurostat/web/european-statistical-system"
     publisher: "Eurostat / European Commission"
+    accessed: "2026-08-21"
+  - title: "Central Statistics Office (Ireland)"
+    url: "https://en.wikipedia.org/wiki/Central_Statistics_Office_(Ireland)"
+    publisher: "Wikipedia"
+    accessed: "2026-08-21"
 ---
 
 # Central Statistics Office (CSO)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-21.** Every cited source was read and confirmed to
+> support what this entity says. `verification: primary-source`.
 
 ## Description
 

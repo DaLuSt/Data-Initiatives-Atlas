@@ -16,11 +16,10 @@ region: EU
 status: active
 confidence: medium
 coverage: low
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-20"
+last_verified: "2026-08-21"
 previous_version: null
 successor: null
 
@@ -34,14 +33,14 @@ relationships:
   - type: part-of
     target: SE
     source: fact
-    evidence: "IMY is a public body of SE; this anchor edge records national scope under metadata/relationship-types.md §2.3 and asserts no more than that. NOT READ — search-only."
+    evidence: "IMY is a public body of SE; this anchor edge records national scope under metadata/relationship-types.md §2.3 and asserts no more than that."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: participates-in
     target: EU-EDPB
     source: fact
-    evidence: "The Swedish Authority for Privacy Protection is the national supervisory authority for data protection and as such sits on the European Data Protection Board, which is composed of the head of one supervisory authority from each member state and the European Data Protection Supervisor (edpb.europa.eu; eur-lex GDPR Article 68). NOT READ — search-only."
+    evidence: "The Swedish Authority for Privacy Protection is the national supervisory authority for data protection and as such sits on the European Data Protection Board, which is composed of the head of one supervisory authority from each member state and the European Data Protection Supervisor, confirmed 2026-08-21 on edpb.europa.eu's members page. Article 68 of the GDPR (eur-lex.europa.eu) was not itself read — see docs/re-verification.md on eur-lex's bot-defense wall."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -50,16 +49,17 @@ sources:
   - title: "Integritetsskyddsmyndigheten"
     url: "https://www.imy.se/en/"
     publisher: "Integritetsskyddsmyndigheten (IMY)"
+    accessed: "2026-08-21"
   - title: "European Data Protection Board - Members"
     url: "https://www.edpb.europa.eu/about-edpb/about-edpb/members_en"
     publisher: "European Data Protection Board"
+    accessed: "2026-08-21"
 ---
 
 # Swedish Authority for Privacy Protection
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-21.** Every cited source was read and confirmed to
+> support what this entity says. `verification: primary-source`.
 
 ## Description
 

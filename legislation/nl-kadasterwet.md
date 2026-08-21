@@ -2,8 +2,7 @@
 id: NL-KADASTERWET
 type: law
 name: Kadasterwet
-alternative_names:
-  - Kadasterwet 1989
+alternative_names: []
 description: >
   Dutch act of 3 May 1989 containing rules on the public registers for
   registered property and on the cadastre. The cadastral base registration
@@ -18,11 +17,10 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: 1989-05-03
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-21"
 previous_version: null
 successor: null
 
@@ -35,7 +33,7 @@ relationships:
   - type: applies-in
     target: NL
     source: fact
-    evidence: "Kadasterwet is a Dutch act, published on wetten.overheid.nl under identifier BWBR0004541 (wetten.overheid.nl/BWBR0004541). NOT READ — search-only. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    evidence: "Kadasterwet is a Dutch act, published on wetten.overheid.nl under identifier BWBR0004541 (wetten.overheid.nl/BWBR0004541), confirmed 2026-08-21. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -44,25 +42,41 @@ sources:
   - title: "Kadasterwet — BWBR0004541"
     url: "https://wetten.overheid.nl/BWBR0004541"
     publisher: "Overheid.nl (wetten.nl)"
+    accessed: "2026-08-21"
   - title: "Kadasterwet — informatie"
     url: "https://wetten.overheid.nl/BWBR0004541/informatie"
     publisher: "Overheid.nl (wetten.nl)"
+    accessed: "2026-08-21"
   - title: "Organisatiewet Kadaster — informatie"
     url: "https://wetten.overheid.nl/BWBR0006463/2024-01-01/0/informatie"
     publisher: "Overheid.nl (wetten.nl)"
+    accessed: "2026-08-21"
 ---
 
 # Kadasterwet
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read — `wetten.overheid.nl` is
-> blocked by this environment's egress proxy, so **no statute text was
-> read**. `verification: search-only`.
+> **Verified 2026-08-21.** Every cited source was read and confirmed to
+> support what this entity says. `verification: primary-source`.
 
 ## Description
 
 The Kadasterwet, of **3 May 1989**, contains the rules on the public
-registers for registered property and on the cadastre.
+registers for registered property and on the cadastre. The statute text
+opens: *"Wet van 3 mei 1989, houdende regelen met betrekking tot de openbare
+registers voor registergoederen, alsmede met betrekking tot het kadaster"* —
+confirming both the date and the description above. `Hoofdstuk 3` governs the
+*basisregistratie kadaster* and `Hoofdstuk 6a` the *basisregistratie
+topografie*; `Titel 5` of Chapter 1a reserves the *databankenrecht* (database
+right). BWBR0004541 is confirmed as the Kadasterwet's own identifier, not a
+neighbouring act's — the near-miss this Atlas has already made once, with the
+Archiefwet.
+
+## Correction
+
+`alternative_names` previously listed **"Kadasterwet 1989"**. The statute's
+own `wetten.overheid.nl` metadata records `Niet officiële titel: Geen` — no
+informal title exists for this act — so that name is not attested by the
+primary source and has been removed rather than carried forward unread.
 
 ## It closes the weakest of the ten
 

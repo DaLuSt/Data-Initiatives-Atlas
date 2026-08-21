@@ -17,11 +17,10 @@ region: EU
 status: active
 confidence: medium
 coverage: low
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-21"
 previous_version: null
 successor: null
 
@@ -35,7 +34,7 @@ relationships:
   - type: produces
     target: EU-DSSC-BLUEPRINT
     source: fact
-    evidence: "The DSSC publishes the blueprint alongside a glossary, starters kit and help centre on its support platform (digital-strategy.ec.europa.eu; blueprint.dssc.eu). NOT READ — search-only."
+    evidence: "The DSSC publishes the blueprint alongside a glossary, starters kit and help centre on its support platform, confirmed 2026-08-21 on digital-strategy.ec.europa.eu and toolbox.dssc.eu."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -44,16 +43,17 @@ sources:
   - title: "The Data Spaces Support Centre"
     url: "https://digital-strategy.ec.europa.eu/en/news/data-spaces-support-centre"
     publisher: "European Commission — Shaping Europe's digital future"
+    accessed: "2026-08-21"
   - title: "DSSC Toolbox"
     url: "https://toolbox.dssc.eu/?pane=co-creation"
     publisher: "Data Spaces Support Centre"
+    accessed: "2026-08-21"
 ---
 
 # Data Spaces Support Centre (DSSC)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-21.** Every cited source was read and confirmed to
+> support what this entity says. `verification: primary-source`.
 
 ## Description
 

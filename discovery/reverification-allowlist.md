@@ -7,11 +7,11 @@ Generated: 2026-08-21
 
 ## Why this exists
 
-**435 of the Atlas's 516 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
+**414 of the Atlas's 516 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
 
 Closing that debt — the re-verification pass — needs outbound HTTPS to the hosts those URLs point at. In an environment with a restricted egress policy, this is the allowlist to request. A denial shows up as `403 to CONNECT` from the proxy, which is an environment-level network policy and cannot be changed from inside a session. See `discovery/unresolved.md` for the standing record of the sourcing debt.
 
-The Atlas currently cites **1677 source URLs** across **550 hosts**, collapsing to **399 registrable domains**.
+The Atlas currently cites **1689 source URLs** across **552 hosts**, collapsing to **400 registrable domains**.
 
 ## Highest value first
 
@@ -22,7 +22,7 @@ A domain here is an **allowlist pattern**, not a URL. Most of them also happen t
 | Domain | URLs | Entities | Example host | Opened | Content confirmed |
 |---|---|---|---|---|---|
 | `europa.eu` | 233 | 146 | `data.europa.eu` | ✅ opens | ✅ 2026-08-21 |
-| `wikipedia.org` | 90 | 90 | `cs.wikipedia.org` | ✅ opens |  |
+| `wikipedia.org` | 93 | 93 | `cs.wikipedia.org` | ✅ opens |  |
 | `iso.org` | 67 | 64 | `www.iso.org` | ✅ opens | ✅ 2026-08-21 |
 | `coe.int` | 52 | 42 | `rm.coe.int` | ✅ opens | ✅ 2026-08-21 |
 | `gouv.fr` | 44 | 16 | `aide.monespacenis2.cyber.gouv.fr` | ✅ opens |  |
@@ -31,7 +31,7 @@ A domain here is an **allowlist pattern**, not a URL. Most of them also happen t
 | `gov.pl` | 40 | 18 | `archiwum.giodo.gov.pl` | ✅ opens |  |
 | `government.nl` | 39 | 39 | `www.government.nl` | ✅ opens |  |
 | `gob.es` | 33 | 18 | `administracion.gob.es` | ⚠ namespace only — no site at the apex |  |
-| `overheid.nl` | 27 | 20 | `data.overheid.nl` | ✅ opens |  |
+| `overheid.nl` | 29 | 20 | `data.overheid.nl` | ✅ opens |  |
 | `unece.org` | 21 | 9 | `aarhusclearinghouse.unece.org` | ✅ opens |  |
 | `un.org` | 20 | 12 | `docs.un.org` | ✅ opens |  |
 | `belgium.be` | 18 | 10 | `bosa.belgium.be` | ✅ opens |  |
@@ -328,6 +328,7 @@ kadaster.nl
 kalaidos-fh.ch
 kartverket.no
 kbvg.nl
+kvk.nl
 legalgeek.pl
 legiscope.com
 lejdd.fr

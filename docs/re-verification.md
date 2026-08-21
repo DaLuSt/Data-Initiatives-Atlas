@@ -222,6 +222,84 @@ fewer entities each, because the entities citing them cite other things too.
 `discovery/reverification-allowlist.md` ranks by URL count, which overstates
 how much each remaining domain would unlock.
 
+## A machine-corroborated pass
+
+On **2026-08-21**, with the egress policy actually open, `tools/reverify.py`
+fetched and read pages for the first time — a different and stronger thing
+than the domain-level confirmation above, which was a human opening
+nineteen pages by hand. This is the tool doing its own fetch, its own
+identifier match, and a human reading the retrieved text before stamping
+`--write`.
+
+**Confirming egress is open is not the same as confirming a page will load.**
+`curl` and `tools/reverify.py`'s own `urllib` fetch both complete the TLS
+handshake to `eur-lex.europa.eu`, `www.iso.org`, `www.coe.int` and
+`unece.org` — the CONNECT succeeds, the connection is real — but each of
+those hosts answers with a bot-defense challenge page (AWS WAF on EUR-Lex,
+Cloudflare on the other three) instead of content. A plain HTTP client gets
+a `202` or `403` carrying no statute or standard text, whatever the
+`User-Agent` header says. A headless Chromium routed through this session's
+proxy cannot reach any host at all — the proxy integration issue is
+independent of the WAF question. So the twenty-five entities citing only
+those four hosts are not verifiable from inside this environment by any
+method available to it, and remain `search-only` for that reason rather
+than for lack of trying. This is a narrower and more precise finding than
+"the pass cannot run without egress" above: egress can be open and specific
+hosts can still be closed.
+
+Every other host this batch touched — `europa.eu` subdomains other than
+`eur-lex` (`ec.europa.eu`, `digital-strategy.ec.europa.eu`,
+`edpb.europa.eu`, `enlargement.ec.europa.eu`, `interoperable-europe.ec.europa.eu`),
+`wikipedia.org`, `wetten.overheid.nl`, `gov.uk`, `gob.pt`, `gv.at`, `.dk`,
+`.fi`, `.ie`, `.it`, `.se` government domains and `gdprhub.eu` — returned
+real page text to a plain fetch.
+
+### Batch 1 result
+
+| | Entities |
+|---|---|
+| Moved to `verification: primary-source` | **21** |
+| Corrections found and fixed in the process | **2** substantive, several typos |
+| Could not verify — sources on a bot-walled host | 2 attempted, not moved (`LU-STATEC`, `PT-INE`; see below) |
+
+The seven Dutch base-registration statutes flagged high priority in "Where
+to start" below are now all verified: `NL-WET-BAG`, `NL-WET-BGT`,
+`NL-WET-BRO`, `NL-WET-WOZ`, `NL-HANDELSREGISTERWET`,
+`NL-WEGENVERKEERSWET-1994` and `NL-KADASTERWET`. None of the seven BWBR
+identifiers resolved to the wrong act — the specific failure mode this tool
+was built to catch did not recur, though a different error did:
+
+- **`NL-WET-BGT`'s staged commencement date was wrong.** The entity recorded
+  articles 29 and 30 as taking effect 30 April 2018. `wetten.overheid.nl`'s
+  own commencement history gives 1 July 2018; 30 April 2018 is when the
+  commencement decree (Stb. 2018, 122) was *published*, not when the
+  articles took effect. Confirmed independently on the Eerste Kamer's own
+  dossier, which titles the same document "publicatie inwerkingtreding
+  artikelen 29 en 30" — a publication, not a commencement.
+- **`NL-KADASTERWET`'s alternative name was unattested.** "Kadasterwet 1989"
+  was listed in `alternative_names`; the statute's own metadata records
+  `Niet officiële titel: Geen` — no informal title. Removed rather than kept
+  on the assumption that no source read it either.
+
+Several diacritic/umlaut typos were also caught by the identifier-and-name
+check itself: `Datenschutzbehorde` (missing the umlaut Austria's own DSB
+site uses), `Bundesanstalt Statistik Osterreich` (missing umlaut),
+`Dataombudsmannens byra` (missing the Swedish ring accent). Each was a case
+where `alternative_names` and the page text disagreed by exactly one
+diacritic — invisible on a skim, caught because the check is a literal
+string match.
+
+**Two entities were attempted and not moved.** `LU-STATEC`'s `name` field
+carries an Atlas-added disambiguator, `"... (Luxembourg)"`, to distinguish it
+from France's identically-named INSEE (see the entity body); no external
+source will ever write that suffix, so the name claim can never corroborate
+by exact-string match, and the entity needs a different fix (moving the
+disambiguator out of `name`) rather than another source. `PT-INE`'s only
+national source, `ine.pt`, returns `HTTP 403` specifically to
+`tools/reverify.py`'s declared `User-Agent`, consistently across repeated
+attempts, while occasionally serving a browser-identified `curl` request —
+a site-level block on the tool's identity, not a network flake.
+
 ## Completing an entity
 
 Read the pages. Then, for each field the sources support: confirm it, or
@@ -256,18 +334,22 @@ Finally, close or annotate the entity's row in `discovery/unresolved.md`.
 
 ## Where to start
 
-`discovery/unresolved.md` flags the **seven Dutch register statutes** as high
-priority — `NL-WET-BAG`, `NL-WET-BGT`, `NL-WET-BRO`, `NL-WET-WOZ`,
-`NL-HANDELSREGISTERWET`, `NL-WEGENVERKEERSWET-1994` and `NL-KADASTERWET`.
-They are keyed entirely on BWBR identifiers, so a wrong one resolves to a real
-but unrelated act rather than to nothing. `tools/test_reverify.py` asserts
-that the tool can extract a BWBR identifier from all seven.
+**The seven Dutch register statutes are done** — `NL-WET-BAG`, `NL-WET-BGT`,
+`NL-WET-BRO`, `NL-WET-WOZ`, `NL-HANDELSREGISTERWET`,
+`NL-WEGENVERKEERSWET-1994` and `NL-KADASTERWET` all carry
+`verification: primary-source` as of 2026-08-21; see "A machine-corroborated
+pass" above. They were keyed entirely on BWBR identifiers, so a wrong one
+would have resolved to a real but unrelated act rather than to nothing;
+`tools/test_reverify.py` still asserts that the tool can extract a BWBR
+identifier from all seven, as a regression guard.
 
-```bash
-python tools/reverify.py \
-  --id NL-WET-BAG --id NL-WET-BGT --id NL-WET-BRO --id NL-WET-WOZ \
-  --id NL-HANDELSREGISTERWET --id NL-WEGENVERKEERSWET-1994 --id NL-KADASTERWET
-```
-
-After them, `discovery/reverification-allowlist.md`'s ranking is the order
-that clears the most entities per host unblocked.
+From here, skip any entity whose sources are **only** `eur-lex.europa.eu`,
+`www.iso.org`, `www.coe.int` or `unece.org` — those hosts return a
+bot-defense challenge page to every fetch attempt in this environment, egress
+policy notwithstanding, so time spent on them will not convert. Otherwise,
+`discovery/reverification-allowlist.md`'s ranking is the order that clears
+the most entities per host unblocked. Batch 1 worked the EU-scoped
+organisation cluster (national statistics institutes citing `ec.europa.eu`,
+national DPAs citing `edpb.europa.eu`) as a dense, well-structured next
+target; a similar cluster likely exists for the next batch to find via the
+allowlist.
