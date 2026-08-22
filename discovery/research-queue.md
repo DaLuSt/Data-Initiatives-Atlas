@@ -38,30 +38,56 @@ pass and the allowlist to request if outbound HTTPS is restricted.
 
 ---
 
-## Batch 1 — Netherlands: Core Data Governance (COMPLETED search-only; needs re-verification)
+## Batch 1 — Netherlands: Core Data Governance (re-verified 2026-08-21)
 
-Batch 1 was completed on 2026-08-14 from search-engine results only. The
-session's network egress policy blocked all direct page retrieval, so no
-authoritative source was read. This trade-off was raised and then accepted
-explicitly; every resulting entity carries `verification: search-only` and
-`confidence: low`/`medium`.
+Batch 1 was completed on 2026-08-14 from search-engine results only, then
+link-checked by hand on 2026-08-20, then content-verified with pages
+actually read on 2026-08-21 once outbound HTTPS opened. All twelve core
+entities (Forum Standaardisatie, IBDS, FDS, NORA, Common Ground, MIDO, BZK,
+VNG, ICTU, OBDO, GDI, Pas toe of leg uit) carry `verification:
+primary-source`. What follows is what the 2026-08-21 pass actually found,
+per area — kept rather than deleted wholesale, because two of the open
+questions it closed turned into real corrections.
 
-> **Updated 2026-08-20 — the source worklist below is checked.** The
-> repository owner manually confirmed all **22** candidate sources for Forum
-> Standaardisatie, the IBDS/FDS, NORA, Common Ground and MIDO. Every row now
-> reads ✅.
->
-> **That is a link check, not a content check**, and the distinction is the
-> one `docs/re-verification.md` sets out. It establishes that these URLs are
-> the right sources for these areas. It does **not** by itself establish that
-> each Batch 1 entity's dates, relationships and evidence strings are
-> supported by them — which is the remaining half of the pass, and the half
-> that sets `verification: primary-source`, `last_verified` and per-source
-> `accessed:` dates.
->
-> **So no Batch 1 entity's `verification` changed.** The entities are named
-> below the tables; flipping them is a deliberate second step, not a
-> consequence of this one.
+**IBDS/FDS — closed, with a status correction.** The exact presentation
+date to the Tweede Kamer (18 November 2021) is now confirmed on two
+independent sources. The IBDS→FDS relationship moved from an Atlas
+interpretation to a sourced fact: noraonline.nl states the IBDS develops
+the FDS directly. **The February 2026 OBDO adoption of the Afsprakenstelsel
+Federatief Datastelsel — previously an unconfirmed search result — is now
+confirmed on digitaleoverheid.nl**, and [[NL-FDS]]'s `status` has been
+corrected from `planned` to `active` accordingly. FDS's typing
+(`framework` vs `initiative`) stays genuinely open: noraonline.nl attests
+both readings on the same page.
+
+**NORA — closed, and answered a separately-flagged high-value question.**
+BZK-as-owner and ICTU-as-manager are now confirmed a second time via
+Kamerstuk 26643-128 (the 2008 Kabinetsbesluit inzake ICT), which also
+answered `discovery/unresolved.md`'s "is NORA the Dutch NIF" question:
+[[NL-NORA]] now carries `based-on` → [[EU-EIF]], sourced to that decree,
+scoped narrowly to the cross-border-interoperability portion of NORA rather
+than a blanket NIF designation.
+
+**MIDO/OBDO — closed, with a placeholder date corrected.** The two
+"Additional sources" Staatscourant items below turned out to be exactly
+what they were suspected to be: Stcrt. 2018, 9728 is [[NL-OBDO]]'s founding
+Instellingsbesluit (19 January 2018, now `start_date`); Stcrt. 2022, 18861
+is the 2022 amendment introducing MIDO's multi-year programming, so
+[[NL-MIDO]]'s `start_date` moved from a `2022-01-01` placeholder to the
+decree's actual signing date, **12 July 2022**. Two sources cited on
+2026-08-20 (a digitaleoverheid.nl OBDO dossier page, and the "Voortgang
+MIDO" timeline page) now 404 — the site was reorganised sometime after the
+link check. No replacement URLs were found; both entities remain fully
+corroborated by their other sources.
+
+**Common Ground — attempted, not closed.** vng.nl returned `403 Forbidden`
+to every fetch attempt during this pass (`Request forbidden by
+administrative rules`) — a rate-limit or bot-defense response distinct from
+the four hosts known to be permanently bot-walled (see the top of this
+file), since one vng.nl path answered normally earlier in the same session
+before the block kicked in. Common Ground's current programme status and
+its typing (`initiative` vs `framework`/`programme`) remain open; retry
+vng.nl on a future pass, ideally spaced out rather than in a burst.
 
 Find all affected entities with: `grep -rl "verification: search-only" .`
 
@@ -85,12 +111,11 @@ Find all affected entities with: `grep -rl "verification: search-only" .`
 | Beleidsevaluatie Interbestuurlijke Datastrategie — Eindrapport (open.overheid.nl) | https://open.overheid.nl/documenten/1edd5ed4-98e8-442e-bcd2-f6ec3f27a754/file | ✅ 2026-08-20 |
 | IBDS / Federatief Datastelsel presentatie (Forum Standaardisatie, Dag van de Interoperabiliteit 2024) | https://www.forumstandaardisatie.nl/sites/default/files/BFS/8-Bijeenkomsten/20241015-Dag-van-de-interoperabiliteit/presentaties/Presentatie-Federatief-Datastelsel-en-resultaten-Mentimeter.pdf | ✅ 2026-08-20 |
 
-Open questions to resolve when researching: the exact date the IBDS was
-presented to the Tweede Kamer; the current status of the IBDS (is it still
-running, or superseded/absorbed?); the governance status of the Federatief
-Datastelsel and whether a formal "Afsprakenstelsel Federatief Datastelsel"
-has been adopted and when; whether FDS is best typed as `framework`,
-`initiative` or `programme`.
+✅ Resolved 2026-08-21: presentation date (18 November 2021), current status
+(active, per the 2026 evaluation report), and the Afsprakenstelsel's
+February 2026 adoption — see the summary above and [[NL-IBDS]] / [[NL-FDS]].
+**Still open:** whether FDS is best typed as `framework`, `initiative` or
+`programme` — noraonline.nl attests both readings on the same page.
 
 ### NORA
 
@@ -101,9 +126,11 @@ has been adopted and when; whether FDS is best typed as `framework`,
 | Overheidsarchitectuur NORA — ICTU | https://www.ictu.nl/diensten/dienstenoverzicht/overheidsarchitectuur-nora/ | ✅ 2026-08-20 |
 | Architectuur Digitale Overheid — NORA Online | https://www.noraonline.nl/wiki/Architectuur_Digitale_Overheid | ✅ 2026-08-20 |
 
-Open questions: confirm BZK is opdrachtgever and ICTU is beheerder;
-confirm current NORA version and its relationship to GEMMA/EAR/ROSA/PETRA
-(the latter are Batch 4 scope but the relationship should be captured).
+✅ Resolved 2026-08-21: BZK-opdrachtgever and ICTU-beheerder confirmed a
+second time via Kamerstuk 26643-128, which also answered the separately
+flagged EU-EIF → NORA question — see the summary above and [[NL-NORA]].
+**Still open:** NORA's current version number, and NORA's formal relationship
+to GEMMA/EAR/ROSA/PETRA (only GEMMA carries a sourced `based-on` link).
 
 ### Common Ground
 
@@ -113,9 +140,9 @@ confirm current NORA version and its relationship to GEMMA/EAR/ROSA/PETRA
 | Programma Common Ground — VNG | https://vng.nl/projecten/programma-common-ground | ✅ 2026-08-20 |
 | Realisatiekoers Common Ground Informatiesamenleving (21 mei 2025) | https://vng.nl/sites/default/files/2025-05/20250521-08b-realisatiekoers-common-ground.pdf | ✅ 2026-08-20 |
 
-Open questions: current programme status; whether Common Ground is best
-typed as `initiative`, `framework` or `programme`; its formal relationship
-to GEMMA and to the FDS.
+**Still open — vng.nl blocked this pass** (see summary above): current
+programme status; whether Common Ground is best typed as `initiative`,
+`framework` or `programme`; its formal relationship to GEMMA and to the FDS.
 
 ### MIDO (Meerjarenprogramma Infrastructuur Digitale Overheid)
 
@@ -127,27 +154,21 @@ to GEMMA and to the FDS.
 | Voortgang MIDO (tijdlijn) | https://www.digitaleoverheid.nl/mido/voortgang-mido/ | ✅ 2026-08-20 |
 | Sturing van de ontwikkeling van de digitale overheid — NORA Online | https://www.noraonline.nl/wiki/Sturing_van_de_ontwikkeling_van_de_digitale_overheid | ✅ 2026-08-20 |
 
-Open questions: confirm MIDO's start year; confirm the OBDO's composition
-and its advisory relationship to the responsible bewindspersoon (the search
-result named a specific serving State Secretary, which is exactly the kind
-of time-sensitive fact that must be read from the source, not inferred);
-confirm the relationship between MIDO, the GDI and the Meerjarenvisie
-Digitale Overheid.
+✅ Resolved 2026-08-21: MIDO's precise start date (12 July 2022, not just
+"2022") and its legal basis in the OBDO's amended Instellingsbesluit — see
+the summary above and [[NL-MIDO]]. The office-holder question is **closed
+by decision**: the Atlas deliberately does not model who currently holds the
+bewindspersoon role (see `discovery/unresolved.md`). The relationship
+between MIDO, the GDI and the Meerjarenvisie Digitale Overheid is recorded
+in [[NL-MIDO]]'s body as three components of the same programme.
 
-### Additional sources located during Batch 1
-
-| Candidate source | URL | Relevant to |
-|---|---|---|
-| Overheidsbreed Beleidsoverleg Digitale Overheid (OBDO) | https://www.digitaleoverheid.nl/dossiers/regie-op-gegevens/dossierpostcontext/overheidsbrede-beleidsoverleg-digitale-overheid-obdo/ | NL-OBDO |
-| Governance Digitale Overheid (VNG) | https://vng.nl/artikelen/governance-digitale-overheid | NL-OBDO, NL-VNG |
-| Staatscourant 2018, 9728 | https://zoek.officielebekendmakingen.nl/stcrt-2018-9728.html | NL-OBDO / NL-FORUM-STANDAARDISATIE instellingsbesluit (suspected) |
-| Staatscourant 2022, 18861 | https://zoek.officielebekendmakingen.nl/stcrt-2022-18861.html | NL-OBDO / NL-FORUM-STANDAARDISATIE instellingsbesluit (suspected) |
-| Forum Standaardisatie — Over ons | https://www.forumstandaardisatie.nl/over-ons | NL-FORUM-STANDAARDISATIE |
-| Contactgegevens Stichting ICTU | https://organisaties.overheid.nl/27912852/Stichting_ICTU | NL-ICTU |
-| Rapport Governance ICTU (Eerste Kamer) | https://www.eerstekamer.nl/overig/20220816/toelichting_op_governance_ictu/document | NL-ICTU |
-| 5.2 Logius — Memorie van toelichting | https://www.rijksfinancien.nl/memorie-van-toelichting/2022/owb/vii/onderdeel/1060049 | NL-LOGIUS, NL-BZK |
-| NL DIGITAAL: Data Agenda Overheid (PDF) | https://zoek.officielebekendmakingen.nl/blg-876545.pdf | NL-DATA-AGENDA-OVERHEID |
-| Kabinetsbeleid Digitalisering | https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/kabinetsbeleid-digitalisering/ | NL-DIGIBETER successor question |
+All candidate sources this batch located are now on their target entities'
+frontmatter (checked 2026-08-21): [[NL-OBDO]], [[NL-FORUM-STANDAARDISATIE]]
+and [[NL-ICTU]] cite them and are `primary-source`; [[NL-LOGIUS]],
+[[NL-DATA-AGENDA-OVERHEID]] and [[NL-DIGIBETER]] cite them too but are
+still `search-only` — reading those three is a re-verification task for a
+future pass, not a source-discovery one, so it belongs in
+`discovery/reverification-allowlist.md`'s worklist rather than here.
 
 ---
 
