@@ -23,11 +23,11 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-19"
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -39,31 +39,36 @@ relationships:
   - type: part-of
     target: INTL-COE
     source: fact
-    evidence: "Iceland is one of the 46 member states of the Council of Europe, an intergovernmental organisation separate from the European Union (coe.int 'The Council of Europe's 46 member states'). NOT READ — search-only. Anchor edge under metadata/relationship-types.md §2.3: it records Council of Europe membership and asserts no more than that."
+    evidence: "NOT independently re-confirmed 2026-08-22: coe.int returns a bot-defense challenge (403, Cloudflare) even with an honest, identifying User-Agent — unlike efta.int, this is a genuine block. The claim (Iceland is one of the 46 member states of the Council of Europe, an intergovernmental organisation separate from the European Union) is retained rather than removed. Anchor edge under metadata/relationship-types.md §2.3: it records Council of Europe membership and asserts no more than that."
     confidence: medium
     valid_from: null
     valid_until: null
 
 sources:
+  - title: "The European Free Trade Association"
+    url: "https://www.efta.int/about-efta/european-free-trade-association"
+    publisher: "European Free Trade Association (EFTA)"
+    accessed: "2026-08-22"
+  - title: "EU, EEA, EFTA and Schengen Area countries"
+    url: "https://www.government.nl/themes/international-cooperation/european-union/eu-eea-efta-and-schengen-area-countries"
+    publisher: "Government of the Netherlands"
+    accessed: "2026-08-22"
   - title: "IS — Iceland (ISO 3166-1 country code)"
     url: "https://www.iso.org/obp/ui/#iso:code:3166:IS"
     publisher: "International Organization for Standardization (ISO)"
   - title: "The Council of Europe's 46 member states"
     url: "https://www.coe.int/en/web/portal/46-members-states"
     publisher: "Council of Europe"
-  - title: "The European Free Trade Association"
-    url: "https://www.efta.int/about-efta/european-free-trade-association"
-    publisher: "European Free Trade Association (EFTA)"
-  - title: "EU, EEA, EFTA and Schengen Area countries"
-    url: "https://www.government.nl/themes/international-cooperation/european-union/eu-eea-efta-and-schengen-area-countries"
-    publisher: "Government of the Netherlands"
 ---
 
 # Iceland
 
-> **Sourcing caveat.** Compiled from search-engine results only; the
-> cited pages were confirmed to exist but were not read, because the
-> working environment blocks page retrieval. `verification: search-only`.
+> **Verified 2026-08-22.** `efta.int` and `government.nl` were both read
+> directly and confirm Iceland's EFTA and EEA membership verbatim.
+> `coe.int` and `iso.org` remain bot-walled (403) even with an honest,
+> identifying User-Agent — unlike `efta.int`, whose apparent block
+> earlier this session turned out to be User-Agent-specific, these two
+> are genuinely closed and stay cited but unread.
 
 ## Description
 
@@ -81,12 +86,23 @@ are now modelled: [[IS-PERSONUVERND]] and [[IS-PERSONUVERNDARLOG]].
 | Council of Europe | Member since 1950 |
 | EFTA / EEA | Member of [[INTL-EFTA]]; party to [[INTL-EEA-AGREEMENT]] |
 
-> Accession **years** in this table come from general reference
-> knowledge rather than from the cited pages, which were not read.
-> They are flagged for the re-verification pass along with everything
-> else marked `search-only`.
+> Accession **years** other than EFTA/EEA come from general reference
+> knowledge rather than from a cited page and are flagged for a future
+> pass. The **EFTA/EEA row** is now directly confirmed — see below.
 
 ## The second EEA EFTA state in the Atlas
+
+Confirmed by reading efta.int's own "The European Free Trade
+Association" page directly (2026-08-22, fetched with an honest,
+identifying User-Agent — efta.int returns a bot-defense challenge to a
+browser User-Agent but real content to one that names itself as a bot):
+"The European Free Trade Association (EFTA) is the intergovernmental
+organisation of Iceland, Liechtenstein, Norway and Switzerland," and
+"three of the four EFTA States – Iceland, Liechtenstein and Norway – in
+a single market" under the EEA Agreement. Corroborated by reading
+government.nl's own "EU, EEA, EFTA and Schengen Area countries" page
+directly: Iceland is listed among both "The 30 EEA countries" and "The
+4 EFTA countries."
 
 Iceland is a party to [[INTL-EEA-AGREEMENT]] and a member of
 [[INTL-EFTA]], not of the European Union — the same position as [[NO]], and
@@ -118,4 +134,6 @@ framework and no cyber authority. Iceland is also the only member of
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter. `efta.int` and `government.nl` were read directly
+this pass; `coe.int` and `iso.org` remain bot-walled (403) even with an
+honest User-Agent.

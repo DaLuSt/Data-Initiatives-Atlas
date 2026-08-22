@@ -7,10 +7,16 @@ to belong on the country's front page (`CONTRIBUTING.md`).
 
 Anchor entity: [[LI]]
 
-> **Sourcing caveat.** Every entity below was compiled from search-engine
-> results only: the cited pages were confirmed to exist but were **not
-> read**, because the working environment blocked page retrieval. They carry
-> `verification: search-only`.
+> **Re-verified 2026-08-22.** Both entities below, plus [[LI]] itself, now
+> carry `verification: primary-source`. A finding: `naegele.law`'s English
+> translation of [[LI-DSG]]'s own dates contained two typos ("October 2th",
+> "January 1st of 2018") that its German original did not; the
+> Datenschutzstelle's own page independently confirms the correct dates
+> (4 October 2018, 1 January 2019). The Commissioner's Landtag-appointed
+> five-year term could not be independently re-confirmed on the authority's
+> own pages and is retained rather than removed — see [[LI-DATENSCHUTZSTELLE]].
+> `coe.int` and `iso.org` remain bot-walled (403) even with an honest
+> User-Agent and stay cited but unread.
 
 ## Organisations
 
