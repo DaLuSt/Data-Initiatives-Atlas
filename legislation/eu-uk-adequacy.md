@@ -1,10 +1,9 @@
 ---
 id: EU-UK-ADEQUACY
 type: regulation
-name: European Commission adequacy decisions for the United Kingdom
+name: UK adequacy decisions
 alternative_names:
-  - UK adequacy decisions
-  - UK data adequacy
+  - adequacy decisions for the UK
 description: >
   Two European Commission adequacy decisions permitting the free flow of
   personal data from the European Union to the United Kingdom, one adopted
@@ -22,11 +21,10 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: 2025-12-19
 end_date: 2031-12-27
-last_verified: null
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -44,21 +42,21 @@ relationships:
   - type: governed-by
     target: EU-GDPR
     source: fact
-    evidence: "The European Commission adopted two adequacy decisions for the United Kingdom, one based on the General Data Protection Regulation and one based on Directive 2016/680, the Law Enforcement Directive; the European Data Protection Board adopted opinions on the Commission's draft decisions extending the validity of the UK adequacy decisions under the GDPR and the Law Enforcement Directive (eucrim.eu 'Commission Renewed Adequacy Decisions for Data Transfers to the UK'; edpb.europa.eu 'Draft UK adequacy decisions: EDPB adopts opinions'; hunton.com; aoshearman.com). NOT READ — search-only."
+    evidence: "Confirmed by reading eucrim.eu directly (2026-08-22): 'On 19 December 2025, the European Commission reaffirmed that the United Kingdom (UK) ensures an adequate level of data protection ... The Commission adopted two adequacy decisions: one based on the General Data Protection Regulation (GDPR) and one based on Directive 2016/680 (the \"Law Enforcement Directive\", LED).' Confirmed independently on edpb.europa.eu: 'draft decisions on the extension of the validity of the UK adequacy decisions under the General Data Protection Regulation (GDPR) and the Law Enforcement Directive (LED)... adopted on 16 October 2025.'"
     confidence: medium
     valid_from: 2025-12-19
     valid_until: null
   - type: references
     target: GB-UK-GDPR
     source: fact
-    evidence: "The adequacy decisions assess the United Kingdom's data protection regime; the Commission indicated that the UK remains adequate following the introduction of the Data (Use and Access) Act 2025, and renewed both decisions on 19 December 2025 with a sunset clause expiring 27 December 2031 (arnoldporter.com 'European Commission Indicates That the UK Remains Adequate Following the Introduction of the Data (Use and Access) Act 2025'; eucrim.eu; shepwedd.com; ico.org.uk 'Receiving personal information from the EEA'). NOT READ — search-only."
+    evidence: "Confirmed by reading ico.org.uk directly (2026-08-22): 'The European Commission has renewed its two original adequacy decisions for the UK. The amended decisions were adopted on 19 December 2025 ... Both adequacy decisions last until 27 December 2031.' eucrim.eu confirms the sunset clause verbatim: 'The adequacy decision is subject to a \"sunset clause\", as it will expire on 27 December 2031 unless it is extended ... the Commission needed time to review the UK's latest legislative reforms by the Data (Use and Access) Act.'"
     confidence: medium
     valid_from: 2025-12-19
     valid_until: 2031-12-27
   - type: references
     target: GB-DUAA
     source: fact
-    evidence: "The renewal followed the changes made by the Data (Use and Access) Act 2025; the European Commission indicated that the UK remains adequate following the introduction of that Act, and the extension to December 2031 was adopted after it (arnoldporter.com; aoshearman.com 'EU confirms UK adequacy decisions under EU GDPR and Law Enforcement Directive'; eucrim.eu). NOT READ — search-only."
+    evidence: "Confirmed by reading aoshearman.com directly (2026-08-22): 'On December 19, 2025, the European Commission renewed its adequacy decisions for the free flow of personal data to the UK under both the EU GDPR and [the LED] ... The adequacy decisions now apply until December 27, 2031.' arnoldporter.com confirms the Commission's review of the Act verbatim: 'The European Commission (EC) has indicated, by publishing its draft adequacy decision of July 22, 2025 ... that the level of protection for personal data ensured by the United Kingdom (UK) remain[s]' adequate, following 'the Draft Adequacy Decision consider[ing] the impact of the changes to the UK data protection landscape' made by the Act."
     confidence: medium
     valid_from: 2025-12-19
     valid_until: null
@@ -67,34 +65,51 @@ sources:
   - title: "Commission Renewed Adequacy Decisions for Data Transfers to the UK"
     url: "https://eucrim.eu/news/commission-renewed-adequacy-decisions-for-data-transfers-to-the-uk/"
     publisher: "eucrim — The European Criminal Law Associations' Forum"
+    accessed: "2026-08-22"
   - title: "Draft UK adequacy decisions: EDPB adopts opinions"
     url: "https://www.edpb.europa.eu/news/news/2025/draft-uk-adequacy-decisions-edpb-adopts-opinions_en"
     publisher: "European Data Protection Board (EDPB)"
+    accessed: "2026-08-22"
   - title: "EU confirms UK adequacy decisions under EU GDPR and Law Enforcement Directive"
     url: "https://www.aoshearman.com/en/insights/ao-shearman-on-data/eu-confirms-uk-adequacy-decisions-under-eu-gdpr-and-law-enforcement-directive"
     publisher: "A&O Shearman"
+    accessed: "2026-08-22"
   - title: "European Commission Indicates That the UK Remains Adequate Following the Introduction of the Data (Use and Access) Act 2025"
     url: "https://www.arnoldporter.com/en/perspectives/advisories/2025/07/uk-remains-adequate-following-intro-of-duaa-2025"
     publisher: "Arnold & Porter"
+    accessed: "2026-08-22"
   - title: "Receiving personal information from the EEA"
     url: "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/international-transfers/receiving-personal-information-from-the-eea/"
     publisher: "Information Commissioner's Office (UK)"
+    accessed: "2026-08-22"
 ---
 
-# EU adequacy decisions for the United Kingdom
+# UK adequacy decisions
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-22.** All five cited pages were read directly and
+> confirmed the claims below, verbatim in places. The entity's name has
+> been changed from a compiled description ("European Commission adequacy
+> decisions for the United Kingdom") to "UK adequacy decisions" — the
+> phrase actually used, verbatim, across the EDPB's and A&O Shearman's own
+> pages. The unattested alternative name "UK data adequacy" has been
+> removed and replaced with "adequacy decisions for the UK," confirmed
+> verbatim on ico.org.uk.
 
 ## Description
 
-Two European Commission decisions permitting personal data to flow freely
+Confirmed by reading eucrim.eu directly (2026-08-22): "On 19 December
+2025, the European Commission reaffirmed that the United Kingdom (UK)
+ensures an adequate level of data protection." Two European Commission
+decisions permitting personal data to flow freely
 from the EU to the United Kingdom — one under [[EU-GDPR]], one under the Law
-Enforcement Directive. Both were **renewed on 19 December 2025** for six
-years, after the European Data Protection Board gave opinions on the drafts,
-and both **expire on 27 December 2031** under a sunset clause unless
-extended.
+Enforcement Directive. Both were **renewed on 19 December 2025**, after the
+European Data Protection Board gave opinions on the drafts, and both
+**expire on 27 December 2031** under a sunset clause unless extended —
+confirmed verbatim on ico.org.uk ("Both adequacy decisions last until 27
+December 2031") and eucrim.eu (the decision "is subject to a 'sunset
+clause,' as it will expire on 27 December 2031 unless it is extended").
+The renewal term is confirmed as six years on edpb.europa.eu: "the
+proposed six-year extension of the two UK adequacy decisions."
 
 ## The connection the UK batch refused, now made
 
@@ -167,7 +182,8 @@ with a *known* date on which it stops being in force absent action. Neither
 
 ## Sources
 
-Listed in frontmatter. One is an EU institution (EDPB) and one a UK regulator
-(ICO); the remaining three are legal commentary, which is why the whole
-entity is `confidence: medium` and why the Commission's own decision texts
-are the obvious first fetch.
+Listed in frontmatter, all five read directly this pass. One is an EU
+institution (EDPB) and one a UK regulator (ICO); the remaining three are
+legal commentary, which is why the whole entity is still `confidence:
+medium` and why the Commission's own decision texts remain the obvious
+next fetch.
