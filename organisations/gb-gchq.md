@@ -19,11 +19,10 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -44,21 +43,21 @@ relationships:
   - type: governed-by
     target: GB-DPA-2018
     source: fact
-    evidence: "Part 4 of the Data Protection Act 2018 is separate from the UK GDPR regime and sets out a data protection regime for intelligence services processing; the intelligence services are the Security Service (MI5), the Secret Intelligence Service (MI6) and GCHQ, and all processing of personal data they undertake is governed by Part 4 (ico.org.uk 'Guide to Intelligence Services Processing' and 'Scope and key definitions'; assets.publishing.service.gov.uk 'Data Protection Act 2018 Factsheet — Intelligence services processing'). NOT READ — search-only."
+    evidence: "Confirmed by reading the DPA 2018 statute text at legislation.gov.uk (2026-08-22), Part 4, § 82(2): 'In this Part, \"intelligence service\" means— (a) the Security Service; (b) the Secret Intelligence Service; (c) the Government Communications Headquarters.'"
     confidence: medium
     valid_from: null
     valid_until: null
   - type: governed-by
     target: GB-ISA-1994
     source: fact
-    evidence: "The Intelligence Services Act 1994 establishes and regulates the Secret Intelligence Service and the Government Communications Headquarters, providing a statutory basis for their activities, and sets out GCHQ's function as a foreign-focused signals intelligence agency (legislation.gov.uk ukpga/1994/13; gchq.gov.uk 'Legal Framework'; en.wikipedia.org 'Intelligence Services Act 1994'). NOT READ — search-only."
+    evidence: "Confirmed by reading the ISA 1994 statute text at legislation.gov.uk (2026-08-22), § 3(1): 'There shall continue to be a Government Communications Headquarters ... and ... its functions shall be— (a) to monitor, make use of or interfere with electromagnetic, acoustic and other emissions and any equipment producing such emissions and to obtain and provide information derived from or related to such emissions.'"
     confidence: medium
     valid_from: 1994-01-01
     valid_until: null
   - type: governed-by
     target: GB-IPA-2016
     source: fact
-    evidence: "The Investigatory Powers Act 2016 provides a modernised framework to govern the use and oversight of investigatory powers by law enforcement and the security and intelligence agencies; GCHQ publishes its legal framework covering these acts (gchq.gov.uk 'Legal Framework'; legislation.gov.uk ukpga/2016/25; ipco.org.uk). NOT READ — search-only."
+    evidence: "Confirmed by reading gchq.gov.uk's 'Legal Framework' page and the IPA 2016 statute text at legislation.gov.uk (2026-08-22): the Act's long title covers 'the interception of communications, equipment interference and the acquisition and retention of communications data, bulk personal datasets and other information', enacted 29 November 2016, and GCHQ's own page places this regime at the centre of its governance."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -67,23 +66,31 @@ sources:
   - title: "Legal Framework"
     url: "https://www.gchq.gov.uk/section/governance/legal-framework"
     publisher: "Government Communications Headquarters (GCHQ)"
+    accessed: "2026-08-22"
   - title: "Britain enters a new era of online opportunity with opening of the National Cyber Security Centre"
     url: "https://www.gchq.gov.uk/news/britain-enters-new-era-online-opportunity-opening-ncsc"
     publisher: "Government Communications Headquarters (GCHQ)"
+    accessed: "2026-08-22"
   - title: "Intelligence Services Act 1994"
     url: "https://www.legislation.gov.uk/ukpga/1994/13"
     publisher: "The National Archives (legislation.gov.uk)"
+    accessed: "2026-08-22"
 ---
 
 # Government Communications Headquarters (GCHQ)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-22.** gchq.gov.uk's own "Legal Framework" page and the
+> ISA 1994 and DPA 2018 statute texts at legislation.gov.uk were read
+> directly and confirmed the claims below, verbatim in places.
 
 ## Description
 
-GCHQ is the UK's **signals intelligence** and information assurance agency.
+Confirmed verbatim on gchq.gov.uk's "Legal Framework" page (2026-08-22):
+"The Intelligence Services Act 1994 sets out GCHQ's function as a
+foreign-focused signals intelligence agency. The Investigatory Powers Act
+2016 provides a modernised framework to govern the use and oversight of
+investigatory powers by law enforcement and the security and intelligence
+agencies." GCHQ is the UK's **signals intelligence** and information assurance agency.
 [[GB-ISA-1994]] sets out its function as a foreign-focused signals
 intelligence agency and placed it on a statutory basis alongside
 [[GB-SIS]].

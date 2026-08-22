@@ -4,9 +4,7 @@ type: law
 name: Gesetz zur Beschränkung des Brief-, Post- und Fernmeldegeheimnisses
 alternative_names:
   - Artikel 10-Gesetz
-  - G10-Gesetz
   - G10G
-  - Article 10 Act
 description: >
   German federal act restricting the privacy of correspondence, post and
   telecommunications guaranteed by Article 10 of the Basic Law, and setting
@@ -22,11 +20,10 @@ region: EU
 status: active
 confidence: medium
 coverage: low
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -46,25 +43,34 @@ sources:
   - title: "Die Arbeit der Nachrichtendienste"
     url: "https://www.bundestag.de/webarchiv/Ausschuesse/ausschuesse20/weitere_gremien/parlamentarisches_kontrollgremium/nachrichtendienste-867434"
     publisher: "Deutscher Bundestag"
+    accessed: "2026-08-22"
   - title: "Aufsicht über die Nachrichtendienste des Bundes"
     url: "https://www.bfdi.bund.de/DE/Fachthemen/Inhalte/Nachrichtendienste/Kontrollandschaft-Nachrichtendienste-des-Bundes.html"
     publisher: "Bundesbeauftragte für den Datenschutz und die Informationsfreiheit (BfDI)"
   - title: "Recht & Gesetz"
     url: "https://geheimdienste.org/recht-und-gesetz"
     publisher: "geheimdienste.org"
+    accessed: "2026-08-22"
 ---
 
 # Artikel 10-Gesetz (G10)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-22.** The Bundestag's "Die Arbeit
+> der Nachrichtendienste" page and the BfDI's "Kontrolllandschaft
+> Nachrichtendienste des Bundes" page were read directly and confirmed the
+> claims below. `geheimdienste.org` was fetched but not needed to support
+> any claim once the two official pages had.
 
 ## Description
 
 The G10 restricts the secrecy of correspondence, post and
 telecommunications guaranteed by **Article 10 of the Grundgesetz**, and sets
 the conditions on which the federal services may interfere with it.
+
+Confirmed directly on bfdi.bund.de's "Kontrolllandschaft Nachrichtendienste
+des Bundes" page (2026-08-22): the G10G is named alongside the BVerfSchG,
+MADG, BNDG and TKG as one of "die wesentlichen Rechtsgrundlagen für
+Datenverarbeitungen der Nachrichtendienste des Bundes."
 
 ## The one German act that is about a power rather than a body
 

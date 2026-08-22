@@ -5,7 +5,6 @@ name: Gesetz über den Militärischen Abschirmdienst
 alternative_names:
   - MAD-Gesetz
   - MADG
-  - Military Counterintelligence Service Act
 description: >
   German federal act constituting the Militärischer Abschirmdienst and
   defining its tasks and powers. It is one of the three service-specific
@@ -20,11 +19,10 @@ region: EU
 status: active
 confidence: medium
 coverage: low
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -42,24 +40,34 @@ sources:
   - title: "Die Arbeit der Nachrichtendienste"
     url: "https://www.bundestag.de/webarchiv/Ausschuesse/ausschuesse20/weitere_gremien/parlamentarisches_kontrollgremium/nachrichtendienste-867434"
     publisher: "Deutscher Bundestag"
+    accessed: "2026-08-22"
   - title: "Aufsicht über die Nachrichtendienste des Bundes"
     url: "https://www.bfdi.bund.de/DE/Fachthemen/Inhalte/Nachrichtendienste/Kontrollandschaft-Nachrichtendienste-des-Bundes.html"
     publisher: "Bundesbeauftragte für den Datenschutz und die Informationsfreiheit (BfDI)"
+    accessed: "2026-08-22"
   - title: "Recht & Gesetz"
     url: "https://geheimdienste.org/recht-und-gesetz"
     publisher: "geheimdienste.org"
+    accessed: "2026-08-22"
 ---
 
 # MAD-Gesetz (MADG)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-22.** The Bundestag's "Die Arbeit
+> der Nachrichtendienste" page and the BfDI's "Kontrolllandschaft
+> Nachrichtendienste des Bundes" page were read directly and confirmed the
+> claims below. `geheimdienste.org` was fetched but not needed to support
+> any claim once the two official pages had.
 
 ## Description
 
 The MADG constitutes [[DE-BAMAD]], Germany's military counter-intelligence
 service, and completes the triad with [[DE-BNDG]] and [[DE-BVERFSCHG]].
+
+Confirmed directly on bfdi.bund.de's "Kontrolllandschaft Nachrichtendienste
+des Bundes" page (2026-08-22): the MADG is named alongside the BVerfSchG,
+BNDG, G10G and TKG as one of "die wesentlichen Rechtsgrundlagen für
+Datenverarbeitungen der Nachrichtendienste des Bundes."
 
 ## Germany is the only country here with a dedicated military-intelligence act
 

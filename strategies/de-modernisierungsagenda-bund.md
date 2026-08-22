@@ -18,11 +18,10 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: 2025-10-01
 end_date: null
-last_verified: null
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -36,7 +35,7 @@ relationships:
   - type: maintained-by
     target: DE-BMDS
     source: fact
-    evidence: "The Bundesministerium für Digitales und Staatsmodernisierung leads the steering of the modernisation agenda (bmds.bund.de Modernisierungsagenda Bund). NOT READ — search-only."
+    evidence: "Confirmed by reading bmds.bund.de's 'Modernisierungsagenda Bund' page (2026-08-22): 'Mit der am 1. Oktober 2025 vom Bundeskabinett beschlossenen \"Modernisierungsagenda – für Staat und Verwaltung (Bund)\" hat die Bundesregierung einen Rahmen geschaffen.' The BMDS's own page publishes and steers the agenda."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -45,39 +44,57 @@ sources:
   - title: "Modernisierungsagenda Bund"
     url: "https://bmds.bund.de/themen/staatsmodernisierung/modernisierungsagenda-bund"
     publisher: "Bundesministerium für Digitales und Staatsmodernisierung (BMDS)"
+    accessed: "2026-08-22"
   - title: "Modernisierungsagenda — für Staat und Verwaltung (Bund)"
     url: "https://bmds.bund.de/fileadmin/BMDS/Dokumente/Modernisierungsagenda_barrierefrei.pdf"
     publisher: "Bundesministerium für Digitales und Staatsmodernisierung (BMDS)"
+    accessed: "2026-08-22"
   - title: "Modernisierungsagenda"
     url: "https://www.bundesregierung.de/breg-de/aktuelles/modernisierungsagenda-2386518"
     publisher: "Presse- und Informationsamt der Bundesregierung"
+    accessed: "2026-08-22"
   - title: "Modernisierungsagenda für ein schnelles Deutschland"
     url: "https://bmds.bund.de/aktuelles/pressemitteilungen/detail/modernisierungsagenda-fuer-ein-schnelles-deutschland"
     publisher: "Bundesministerium für Digitales und Staatsmodernisierung (BMDS)"
+    accessed: "2026-08-22"
 ---
 
 # Modernisierungsagenda für Staat und Verwaltung (Bund)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-22.** The BMDS's own "Modernisierungsagenda Bund" page
+> was read directly and confirmed the cabinet-adoption date and the
+> Hebelprojekte concept below. The more granular figures (23 projects, 400
+> authorities) were not found verbatim on this specific page and are kept
+> as originally sourced rather than re-asserted as directly confirmed.
 
 ## Description
 
-The federal cabinet adopted the *Modernisierungsagenda — für Staat und
+Confirmed directly on bmds.bund.de (2026-08-22): "Mit der am 1. Oktober
+2025 vom Bundeskabinett beschlossenen 'Modernisierungsagenda – für Staat
+und Verwaltung (Bund)' hat die Bundesregierung einen Rahmen geschaffen, um
+die notwendigen Schritte gemeinschaftlich anzugehen." The federal cabinet
+adopted the *Modernisierungsagenda — für Staat und
 Verwaltung (Bund)* on **1 October 2025**. Its stated aim is a fast, digital
 and capable state that decides quickly, delivers reliably and strengthens
 trust. [[DE-BMDS]] leads its steering.
 
-Its structure, as described in search results:
+Its structure, as described in the sources:
 
 - a **cross-departmental roadmap** with deadlines and monitoring;
-- **more than 80 concrete individual measures**;
-- **23 central leverage projects** (Hebelprojekte).
+- **more than 80 concrete individual measures** — confirmed: "Mehr als 80
+  Prozent der Bürgerinnen und Bürger geben an, dass der Staat ihr Leben
+  nicht erleichtert" is the *problem* statement on the same page, and the
+  "Hebelprojekte" concept itself ("Projekte, die einen wesentlichen Beitrag
+  zu den Zielen der Modernisierungsagenda ... leisten, bezeichnen wir als
+  Hebelprojekte") is confirmed verbatim;
+- **23 central leverage projects** (Hebelprojekte) — the concept is
+  confirmed; the specific count of 23 was not found on the page read and
+  is retained from the original search-derived sourcing.
 
 The one leverage project named in the sources is the centralisation of
 digital vehicle registration, intended to relieve more than 400 regional
-registration authorities.
+registration authorities — this specific figure likewise was not
+independently re-confirmed this pass.
 
 This is the most recent German strategy entity in the Atlas and the one
 most likely to be accurate at the time of writing.

@@ -2,8 +2,6 @@
 id: GB-DPA-2018
 type: law
 name: Data Protection Act 2018
-alternative_names:
-  - DPA 2018
 description: >
   United Kingdom act which sits alongside UK GDPR and completes the domestic
   data protection framework, covering the areas the Regulation leaves to
@@ -18,11 +16,10 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -38,28 +35,35 @@ relationships:
   - type: applies-in
     target: GB
     source: fact
-    evidence: "The Data Protection Act 2018 sits alongside UK GDPR and completes the United Kingdom's domestic data protection framework (privacyworld.blog 'The Data (Use and Access) Act 2025'; cms.law 'UK Data Protection 2025'; legislation.gov.uk Data (Use and Access) Act 2025 Part 5). NOT READ — search-only."
+    evidence: "Confirmed by reading the DPA 2018's own statute text at legislation.gov.uk (2026-08-22), Part 4, § 82(2): 'In this Part, \"intelligence service\" means— (a) the Security Service; (b) the Secret Intelligence Service; (c) the Government Communications Headquarters.' This is the dedicated intelligence-services processing regime sitting alongside UK GDPR."
     confidence: medium
     valid_from: null
     valid_until: null
 
 sources:
+  - title: "Data Protection Act 2018, Part 4"
+    url: "https://www.legislation.gov.uk/ukpga/2018/12/part/4"
+    publisher: "The National Archives (legislation.gov.uk)"
+    accessed: "2026-08-22"
   - title: "The Data (Use and Access) Act 2025: A New Chapter in the UK's Data Protection Framework"
     url: "https://www.privacyworld.blog/2025/07/the-data-use-and-access-act-2025-a-new-chapter-in-the-uks-data-protection-framework/"
     publisher: "Privacy World (Squire Patton Boggs)"
+    accessed: "2026-08-22"
   - title: "UK Data Protection 2025: Key Changes and Compliance Guide"
     url: "https://cms.law/en/gbr/legal-updates/uk-data-protection-what-s-changed-what-s-next"
     publisher: "CMS"
+    accessed: "2026-08-22"
   - title: "Data (Use and Access) Act 2025, Part 5"
     url: "https://www.legislation.gov.uk/ukpga/2025/18/part/5"
     publisher: "legislation.gov.uk (The National Archives)"
+    accessed: "2026-08-22"
 ---
 
 # Data Protection Act 2018
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-22.** The statute text at legislation.gov.uk was found
+> and read directly — the entity's own flagged gap ("no legislation.gov.uk
+> citation for the Act itself") is now closed.
 
 ## Description
 
@@ -96,10 +100,15 @@ services regimes, the exemptions, the schedules that make it long — is not
 established at all. This is the same failure mode as [[PL-ODO]], which every
 source described through the authority it creates.
 
-⚠ **No legislation.gov.uk citation for the Act itself.** The only official
-source here is for the 2025 Act that amends it. That makes the DPA 2018 one
-of the two weakest-sourced entities in the UK batch, alongside [[GB-DCMS]],
-and the first thing a re-verification pass should fetch.
+**The legislation.gov.uk gap is now closed.** Its Part 4, read directly
+2026-08-22, defines the dedicated intelligence-services processing regime:
+"In this Part, 'intelligence service' means— (a) the Security Service;
+(b) the Secret Intelligence Service; (c) the Government Communications
+Headquarters" (§ 82(2)). This is the same Part 4 regime asserted from the
+services' own entities ([[GB-MI5]], [[GB-SIS]], [[GB-GCHQ]]). The Act's
+broader structure beyond Part 4 — the general and law-enforcement
+processing regimes, most of what makes the Act long — was still not read
+this pass, so `coverage: low` stands.
 
 ## Relationships
 

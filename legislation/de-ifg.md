@@ -4,7 +4,6 @@ type: law
 name: Informationsfreiheitsgesetz
 alternative_names:
   - IFG
-  - German Freedom of Information Act
 description: >
   German federal freedom of information act, in force since 1 January 2006.
   Under § 1 IFG every person has an unconditional right of access to
@@ -20,11 +19,10 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: 2006-01-01
 end_date: null
-last_verified: null
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -40,27 +38,35 @@ sources:
   - title: "IFG — Gesetz zur Regelung des Zugangs zu Informationen des Bundes"
     url: "https://www.gesetze-im-internet.de/ifg/IFG.pdf"
     publisher: "Bundesministerium der Justiz / juris (Gesetze im Internet)"
+    accessed: "2026-08-22"
   - title: "Informationsfreiheitsgesetz"
     url: "https://www.bmi.bund.de/DE/themen/verfassung/verwaltungsrecht/informationsfreiheitsgesetz/informationsfreiheitsgesetz-artikel.html"
     publisher: "Bundesministerium des Innern und für Heimat (BMI)"
   - title: "Anwendungshinweise zum Informationsfreiheitsgesetz"
     url: "https://www.verwaltungsvorschriften-im-internet.de/bsvwvbund_21112005_V5a13025016.htm"
     publisher: "Verwaltungsvorschriften im Internet (Bundesministerium des Innern)"
+    accessed: "2026-08-22"
   - title: "Informationsfreiheitsgesetz (IFG)"
     url: "https://www.bva.bund.de/DE/Das-BVA/Organisation/Beauftragte/Informationsfreiheitsgesetz/informationsfreiheitsgesetz.html"
     publisher: "Bundesverwaltungsamt (BVA)"
+    accessed: "2026-08-22"
   - title: "Informationsfreiheitsgesetz"
     url: "https://de.wikipedia.org/wiki/Informationsfreiheitsgesetz"
     publisher: "Wikipedia"
+    accessed: "2026-08-22"
 ---
 
 # Informationsfreiheitsgesetz (IFG)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-22.** The IFG statute text at gesetze-im-internet.de
+> was read directly and confirmed the claims below verbatim.
 
 ## Description
+
+Confirmed directly in the statute (2026-08-22): "§ 15 Inkrafttreten. Dieses
+Gesetz tritt am 1. Januar 2006 in Kraft" and "§ 1 Grundsatz. (1) Jeder hat
+nach Maßgabe dieses Gesetzes gegenüber den Behörden des Bundes einen
+Anspruch auf Zugang zu amtlichen Informationen."
 
 The IFG came into force on **1 January 2006**. Under **§ 1 IFG** every
 person has a right of access to official information vis-à-vis federal

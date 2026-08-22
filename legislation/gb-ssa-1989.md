@@ -2,8 +2,6 @@
 id: GB-SSA-1989
 type: law
 name: Security Service Act 1989
-alternative_names:
-  - SSA 1989
 description: >
   United Kingdom act which placed the Security Service (MI5) on a statutory
   basis and enabled certain actions to be taken on the authority of warrants
@@ -18,11 +16,10 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
-start_date: 1989-01-01
+verification: primary-source
+start_date: "1989-04-27"
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -37,25 +34,38 @@ relationships: []
 
 sources:
   - title: "Security Service Act 1989"
+    url: "https://www.legislation.gov.uk/ukpga/1989/5"
+    publisher: "The National Archives (legislation.gov.uk)"
+    accessed: "2026-08-22"
+  - title: "Security Service Act 1989"
     url: "https://en.wikipedia.org/wiki/Security_Service_Act_1989"
     publisher: "Wikipedia"
+    accessed: "2026-08-22"
   - title: "Roles and Responsibilities of the Security Service and Secret Intelligence Service"
     url: "https://tile.loc.gov/storage-services/service/ll/llglrd/2024555215/2024555215.pdf"
     publisher: "Law Library of Congress"
+    accessed: "2026-08-22"
   - title: "National Intelligence Machinery"
     url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/61808/nim-november2010.pdf"
     publisher: "Cabinet Office"
+    accessed: "2026-08-22"
 ---
 
 # Security Service Act 1989
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-22.** The statute text at legislation.gov.uk, now
+> reachable in this environment, was read directly and confirmed the exact
+> enactment date and long title below.
 
 ## Description
 
-The 1989 act **placed** [[GB-MI5]] on a statutory basis and enabled certain
+Confirmed verbatim on legislation.gov.uk (2026-08-22): "An Act to place the
+Security Service on a statutory basis; to enable certain actions to be
+taken on the authority of warrants issued by the Secretary of State, with
+provision for the issue of such warrants to be kept under review by a
+Commissioner; to establish a procedure for the investigation by a Tribunal
+or, in some cases, by the Commissioner of complaints about the Service", and
+enacted **27 April 1989**. The 1989 act **placed** [[GB-MI5]] on a statutory basis and enabled certain
 actions to be taken on the authority of **warrants issued by the Secretary
 of State**.
 
@@ -93,13 +103,11 @@ seven years before [[BE-WIV-1998]]).
 - The act's **amendments**, including those made by the Security Service Act
   1996 and by later investigatory-powers legislation.
 - The **warrant procedure** in detail.
-- Any **section-level** content — `legislation.gov.uk` is blocked by this
-  environment's egress proxy, so no official statute text was read for any
-  UK entity in this batch.
+- Any **section-level** content — only the long title and enactment date
+  were read this pass.
 
 ## Sources
 
-Listed in frontmatter. The Cabinet Office's *National Intelligence
-Machinery* and the Law Library of Congress study are the substantive ones;
-**no legislation.gov.uk citation is given for this act**, unlike
-[[GB-ISA-1994]] and [[GB-JSA-2013]].
+Listed in frontmatter. The legislation.gov.uk citation was added and read
+this pass, closing the gap that made this the one UK act in the batch
+without an official-text source.

@@ -19,11 +19,10 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -42,46 +41,57 @@ relationships:
   - type: governed-by
     target: GB-DPA-2018
     source: fact
-    evidence: "Part 4 of the Data Protection Act 2018 is separate from the UK GDPR regime and sets out a data protection regime for intelligence services processing; the intelligence services are the Security Service (MI5), the Secret Intelligence Service (MI6) and GCHQ, and all processing of personal data they undertake is governed by Part 4 (ico.org.uk 'Guide to Intelligence Services Processing' and 'Scope and key definitions'; assets.publishing.service.gov.uk 'Data Protection Act 2018 Factsheet — Intelligence services processing'). NOT READ — search-only."
+    evidence: "Confirmed by reading the DPA 2018 statute text at legislation.gov.uk (2026-08-22), Part 4, § 82(2): 'In this Part, \"intelligence service\" means— (a) the Security Service; (b) the Secret Intelligence Service; (c) the Government Communications Headquarters.'"
     confidence: medium
     valid_from: null
     valid_until: null
   - type: governed-by
     target: GB-SSA-1989
     source: fact
-    evidence: "The Security Service Act 1989 placed the Security Service on a statutory basis and enabled certain actions to be taken on the authority of warrants issued by the Secretary of State (en.wikipedia.org 'Security Service Act 1989'; en.wikipedia.org 'MI5'; tile.loc.gov 'Roles and Responsibilities of the Security Service and Secret Intelligence Service'). NOT READ — search-only."
+    evidence: "Confirmed by reading the SSA 1989 statute text at legislation.gov.uk (2026-08-22): 'An Act to place the Security Service on a statutory basis; to enable certain actions to be taken on the authority of warrants issued by the Secretary of State', enacted 27 April 1989."
     confidence: medium
     valid_from: 1989-01-01
     valid_until: null
   - type: governed-by
     target: GB-IPA-2016
     source: fact
-    evidence: "The Investigatory Powers Act 2016 provides a modernised framework to govern the use and oversight of investigatory powers by law enforcement and the security and intelligence agencies (legislation.gov.uk ukpga/2016/25; ipco.org.uk 'Investigatory Powers'; gchq.gov.uk 'Legal Framework'). NOT READ — search-only."
+    evidence: "Confirmed by reading the IPA 2016 statute text at legislation.gov.uk (2026-08-22): the Act's long title covers 'the interception of communications, equipment interference and the acquisition and retention of communications data, bulk personal datasets and other information', enacted 29 November 2016."
     confidence: medium
     valid_from: null
     valid_until: null
 
 sources:
   - title: "Security Service Act 1989"
+    url: "https://www.legislation.gov.uk/ukpga/1989/5"
+    publisher: "The National Archives (legislation.gov.uk)"
+    accessed: "2026-08-22"
+  - title: "Security Service Act 1989"
     url: "https://en.wikipedia.org/wiki/Security_Service_Act_1989"
     publisher: "Wikipedia"
+    accessed: "2026-08-22"
   - title: "Roles and Responsibilities of the Security Service and Secret Intelligence Service"
     url: "https://tile.loc.gov/storage-services/service/ll/llglrd/2024555215/2024555215.pdf"
     publisher: "Law Library of Congress"
+    accessed: "2026-08-22"
   - title: "National Intelligence Machinery"
     url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/61808/nim-november2010.pdf"
     publisher: "Cabinet Office"
+    accessed: "2026-08-22"
 ---
 
 # Security Service (MI5)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-22.** The SSA 1989, IPA 2016 and DPA 2018 statute
+> texts at legislation.gov.uk, now reachable in this environment, were
+> read directly and confirmed the claims below.
 
 ## Description
 
-MI5 is the UK's **domestic** security and counter-intelligence service. The
+Confirmed directly on legislation.gov.uk (2026-08-22): "An Act to place
+the Security Service on a statutory basis; to enable certain actions to be
+taken on the authority of warrants issued by the Secretary of State", the
+SSA 1989's long title, enacted 27 April 1989. MI5 is the UK's **domestic**
+security and counter-intelligence service. The
 [[GB-SSA-1989]] placed it on a statutory basis — the operative word being
 *placed*: the service existed for decades before the act, which regularised
 rather than created it.

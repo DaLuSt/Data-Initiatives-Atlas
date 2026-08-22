@@ -6,7 +6,6 @@ alternative_names:
   - BAMAD
   - MAD
   - Militärischer Abschirmdienst
-  - Military Counterintelligence Service
 description: >
   Germany's military intelligence and counter-intelligence service, assigned
   to the Federal Ministry of Defence. It investigates anti-constitutional or
@@ -21,11 +20,10 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -42,14 +40,14 @@ relationships:
   - type: governed-by
     target: DE-MADG
     source: fact
-    evidence: "Each of the three federal intelligence services has its own law: the MAD is governed by the Gesetz über den Militärischen Abschirmdienst (MADG) (bundestag.de 'Die Arbeit der Nachrichtendienste'; geheimdienste.org 'Recht und Gesetz'; bfdi.bund.de 'Kontrolllandschaft Nachrichtendienste des Bundes'). NOT READ — search-only."
+    evidence: "Confirmed by reading bundestag.de's 'Die Arbeit der Nachrichtendienste' page (2026-08-22): 'Die drei Nachrichtendienste des Bundes sind der Bundesnachrichtendienst (BND), der Militärische Abschirmdienst (MAD) und das Bundesamt für Verfassungsschutz (BfV).' Each of the three has its own act; the MAD's is the Gesetz über den Militärischen Abschirmdienst (MADG)."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: governed-by
     target: DE-G10
     source: fact
-    evidence: "The essential legal foundations for data processing by the federal intelligence services are the BVerfSchG, the MADG, the BNDG, the G10G and the TKG; the Artikel 10-Gesetz is listed among the main legal frameworks for all three services (bfdi.bund.de 'Kontrolllandschaft Nachrichtendienste des Bundes'; geheimdienste.org 'Recht und Gesetz'). NOT READ — search-only."
+    evidence: "Confirmed by reading bfdi.bund.de's 'Kontrolllandschaft Nachrichtendienste des Bundes' page (2026-08-22): 'Die wesentlichen Rechtsgrundlagen für Datenverarbeitungen der Nachrichtendienste des Bundes ... sind das BVerfSchG, das MADG, das BNDG, das G10G und das TKG.' The Artikel 10-Gesetz (G10G) applies across all three services, including the MAD."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -58,19 +56,23 @@ sources:
   - title: "Die Arbeit der Nachrichtendienste"
     url: "https://www.bundestag.de/webarchiv/Ausschuesse/ausschuesse20/weitere_gremien/parlamentarisches_kontrollgremium/nachrichtendienste-867434"
     publisher: "Deutscher Bundestag"
+    accessed: "2026-08-22"
   - title: "Aufsicht über die Nachrichtendienste des Bundes"
     url: "https://www.bfdi.bund.de/DE/Fachthemen/Inhalte/Nachrichtendienste/Kontrollandschaft-Nachrichtendienste-des-Bundes.html"
     publisher: "Bundesbeauftragte für den Datenschutz und die Informationsfreiheit (BfDI)"
+    accessed: "2026-08-22"
   - title: "Recht & Gesetz"
     url: "https://geheimdienste.org/recht-und-gesetz"
     publisher: "geheimdienste.org"
+    accessed: "2026-08-22"
 ---
 
 # Bundesamt für den Militärischen Abschirmdienst (BAMAD / MAD)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-22.** The Bundestag's "Die Arbeit
+> der Nachrichtendienste" page and the BfDI's "Kontrolllandschaft
+> Nachrichtendienste des Bundes" page were read directly and confirmed the
+> claims below.
 
 ## Description
 

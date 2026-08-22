@@ -24,11 +24,10 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -44,22 +43,29 @@ relationships:
   - type: governed-by
     target: DE-OZG
     source: fact
-    evidence: "Registration and login for BundID follow the provisions of the European eIDAS Regulation, with the legal basis found in the Onlinezugangsgesetz (OZG) (bmds.bund.de/themen/digitaler-staat/digitale-identitaeten/bundid; ozg.brandenburg.de). NOT READ — search-only."
+    evidence: "Confirmed by reading de.wikipedia.org's 'BundID' article (2026-08-22): 'Die gesetzliche Grundlage der BundID findet sich im Onlinezugangsgesetz (OZG).'"
     confidence: medium
     valid_from: null
     valid_until: null
   - type: implements-requirement-from
     target: EU-EIDAS
     source: fact
-    evidence: "Registration and login for BundID, operated by the Bundesministerium für Digitales und Staatsmodernisierung, follow the provisions of the European eIDAS Regulation; an EU identity (eID) from a European home country is an accepted access method (bmds.bund.de; personalausweisportal.de). NOT READ — search-only."
+    evidence: "Confirmed by reading de.wikipedia.org's 'BundID' article (2026-08-22): 'Anmeldung und Registrierung der ... von der Bundesministerium für Digitales und Staatsmodernisierung betriebenen BundID erfolgen nach den Vorgaben der europäischen eIDAS-Verordnung.' bmds.bund.de confirms EU eIDs from other member states are an accepted access method."
     confidence: low
     valid_from: null
     valid_until: null
   - type: maintained-by
     target: DE-BMDS
     source: fact
-    evidence: "BundID is operated by the Bundesministerium für Digitales und Staatsmodernisierung (bmds.bund.de/themen/digitaler-staat/digitale-identitaeten/bundid). NOT READ — search-only."
+    evidence: "Confirmed by reading de.wikipedia.org's 'BundID' article (2026-08-22): the article names the Bundesministerium für Digitales und Staatsmodernisierung as the operator, and bmds.bund.de's own 'BundID' page is published under the ministry's domain."
     confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: implements-requirement-from
+    target: EU-EUDI-WALLET
+    source: fact
+    evidence: "Confirmed by reading bmds.bund.de's 'BundID' page (2026-08-22): 'Im Kontext der novellierten eIDAS-Verordnung wird die Anbindung der BundID an die EU Digital Identity Wallet (EUDI-Wallet) ... vorbereitet. Ziel ist eine sichere und nutzendenfreundliche Integration in die BundID.' The connection is described as being prepared, not yet live — recorded at low confidence for that reason. This closes a gap the entity previously flagged as unsourced."
+    confidence: low
     valid_from: null
     valid_until: null
 
@@ -67,6 +73,7 @@ sources:
   - title: "BundID"
     url: "https://bmds.bund.de/themen/digitaler-staat/digitale-identitaeten/bundid"
     publisher: "Bundesministerium für Digitales und Staatsmodernisierung (BMDS)"
+    accessed: "2026-08-22"
   - title: "Die BundID"
     url: "https://www.personalausweisportal.de/Webs/PA/DE/buergerinnen-und-buerger/die_bund-id/die_bund_id-node.html"
     publisher: "Personalausweisportal (Bundesministerium des Innern)"
@@ -79,13 +86,16 @@ sources:
   - title: "BundID"
     url: "https://de.wikipedia.org/wiki/BundID"
     publisher: "Wikipedia"
+    accessed: "2026-08-22"
 ---
 
 # BundID
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-22.** de.wikipedia.org's "BundID" article and
+> bmds.bund.de's own "BundID" page were read directly. One gap the entity
+> previously flagged as unsourced — a connection to the EUDI-Wallet — is
+> now closed with a source; see below. `personalausweisportal.de` no
+> longer resolves (400) and was not re-read.
 
 ## Description
 
@@ -140,16 +150,22 @@ legislation, not a portal.
 member states' eIDs is a concrete cross-border obligation rather than mere
 consistency, but the choice is marginal and is flagged rather than buried.
 
-**No relationship to [[EU-EIDAS2]] or [[EU-EUDI-WALLET]] is asserted**,
-although eIDAS2 requires all member states to offer European Digital
-Identity Wallets by the end of 2026 and BundID is the obvious German
-starting point. No source read connects them. This is a live gap that will
-matter within months, and it is queued as such.
+**The EUDI-Wallet gap is now closed.** bmds.bund.de's own BundID page, read
+2026-08-22, states directly: "Im Kontext der novellierten eIDAS-Verordnung
+wird die Anbindung der BundID an die EU Digital Identity Wallet
+(EUDI-Wallet) ... vorbereitet." The connection is described as being
+*prepared*, not live, so the new `implements-requirement-from` →
+[[EU-EUDI-WALLET]] edge is recorded at `confidence: low` — it is real, but
+not yet operational. No relationship to [[EU-EIDAS2]] specifically (the
+amending Regulation itself, as distinct from the Wallet it establishes) is
+asserted, because no source read names it separately from the Wallet.
 
 ## Relationships
 
 - `governed-by` [[DE-OZG]].
 - `implements-requirement-from` [[EU-EIDAS]] — at low confidence, see above.
+- `implements-requirement-from` [[EU-EUDI-WALLET]] — at low confidence, an
+  in-preparation connection.
 - Maintained by [[DE-BMDS]].
 
 ## Sources

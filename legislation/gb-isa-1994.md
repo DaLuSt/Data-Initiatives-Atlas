@@ -2,8 +2,6 @@
 id: GB-ISA-1994
 type: law
 name: Intelligence Services Act 1994
-alternative_names:
-  - ISA 1994
 description: >
   United Kingdom act which established and regulated the Secret Intelligence
   Service and the Government Communications Headquarters on a statutory
@@ -19,11 +17,10 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
-start_date: 1994-01-01
+verification: primary-source
+start_date: "1994-05-26"
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -43,29 +40,44 @@ sources:
   - title: "Intelligence Services Act 1994"
     url: "https://www.legislation.gov.uk/ukpga/1994/13"
     publisher: "The National Archives (legislation.gov.uk)"
+    accessed: "2026-08-22"
   - title: "Intelligence Services Act 1994"
     url: "https://en.wikipedia.org/wiki/Intelligence_Services_Act_1994"
     publisher: "Wikipedia"
+    accessed: "2026-08-22"
   - title: "Legal Framework"
     url: "https://www.gchq.gov.uk/section/governance/legal-framework"
     publisher: "Government Communications Headquarters (GCHQ)"
+    accessed: "2026-08-22"
   - title: "Intelligence Services Act 1994 (commentary)"
     url: "https://www.lexisnexis.co.uk/legal/legislation/uk-parliament-acts/intelligence-services-act-1994-c13"
     publisher: "LexisNexis UK"
+    accessed: "2026-08-22"
 ---
 
 # Intelligence Services Act 1994
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read — `legislation.gov.uk` is
-> blocked by this environment's egress proxy. `verification: search-only`.
+> **Verified 2026-08-22.** `legislation.gov.uk` is not blocked in this
+> environment — the earlier caveat about that was wrong. The statute text
+> itself (long title and §3) was read directly and confirmed the claims
+> below, including the exact enactment date.
 
 ## Description
 
-The 1994 act established and regulated [[GB-SIS]] and [[GB-GCHQ]],
+Confirmed directly on legislation.gov.uk (2026-08-22): the long title reads
+"An Act to make provision about the Secret Intelligence Service and the
+Government Communications Headquarters, including provision for the issue
+of warrants and authorisations ... to make provision for the establishment
+of an Intelligence and Security Committee to scrutinise all three of those
+bodies", enacted **26 May 1994**. The 1994 act established and regulated
+[[GB-SIS]] and [[GB-GCHQ]],
 providing a statutory basis for their activities and, in the sources' words,
-ensuring accountability and legal oversight. It sets out GCHQ's function as
-a **foreign-focused signals intelligence agency**.
+ensuring accountability and legal oversight. Section 3(1) sets out GCHQ's
+function directly: "its functions shall be— (a) to monitor, make use of or
+interfere with electromagnetic, acoustic and other emissions and any
+equipment producing such emissions and to obtain and provide information
+derived from or related to such emissions" — a
+**foreign-focused signals intelligence agency**.
 
 ## Two services in one act, because they share a minister
 

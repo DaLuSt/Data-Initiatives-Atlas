@@ -5,7 +5,6 @@ name: Bundesstatistikgesetz
 alternative_names:
   - BStatG
   - Gesetz über die Statistik für Bundeszwecke
-  - Federal Statistics Act
 description: >
   German federal act on statistics for federal purposes. It establishes the
   tasks of the Statistisches Bundesamt, which under § 1 BStatG lie in
@@ -20,11 +19,10 @@ region: EU
 status: active
 confidence: medium
 coverage: low
-verification: search-only
-
-start_date: null
+verification: primary-source
+start_date: "1987-01-22"
 end_date: null
-last_verified: null
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -40,22 +38,26 @@ sources:
   - title: "BStatG — Gesetz über die Statistik für Bundeszwecke"
     url: "https://www.gesetze-im-internet.de/bstatg_1987/BJNR004620987.html"
     publisher: "Bundesministerium der Justiz / juris (Gesetze im Internet)"
+    accessed: "2026-08-22"
   - title: "Gesetzliche Grundlagen — Statistisches Bundesamt"
     url: "https://www.destatis.de/DE/Ueber-uns/Aufgaben/gesetze.html"
     publisher: "Statistisches Bundesamt (Destatis)"
+    accessed: "2026-08-22"
   - title: "Aufgaben — Statistisches Bundesamt"
     url: "https://www.destatis.de/DE/Ueber-uns/Aufgaben/_inhalt.html"
     publisher: "Statistisches Bundesamt (Destatis)"
+    accessed: "2026-08-22"
   - title: "Bundesstatistikgesetz (BStatG): Was beinhaltet es?"
     url: "https://www.anwalt.org/bundesstatistikgesetz-bstatg/"
     publisher: "anwalt.org"
+    accessed: "2026-08-22"
 ---
 
 # Bundesstatistikgesetz (BStatG)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-22.** The statute text at gesetze-im-internet.de was
+> read directly and confirmed the claims below, including a sourced
+> enactment date.
 
 ## Description
 
@@ -69,9 +71,12 @@ attach to that work, and the office is bound to observe data protection and
 to maintain **statistical confidentiality** of the individual data it
 collects.
 
-The Gesetze-im-Internet identifier — `bstatg_1987` — indicates the 1987
-recodification, though no source read states the act's legislative history
-and none is recorded here.
+Confirmed directly on the statute text (2026-08-22): "Ausfertigungsdatum:
+22.01.1987" — the Gesetze-im-Internet identifier `bstatg_1987` names the
+1987 enactment date correctly, and `start_date` is now recorded as
+**22 January 1987** rather than left null. The current consolidated text
+has since been amended, most recently "durch Artikel 14 des Gesetzes vom
+8. Mai 2024".
 
 ## The second unclosed statistical link
 

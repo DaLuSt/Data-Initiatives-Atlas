@@ -5,11 +5,10 @@ name: Nationale Datenstrategie
 alternative_names:
   - Datenstrategie der Bundesregierung
   - "Fortschritt durch Datennutzung"
-  - German National Data Strategy
 description: >
   Federal government data strategy adopted by the German cabinet in 2023
-  under the title "Fortschritt durch Datennutzung — Strategie für mehr und
-  bessere Daten für eine neue, wirksame und zukunftsgerichtete
+  under the title "Fortschritt durch Datennutzung – Strategie für mehr und
+  bessere Daten für neue, effektive und zukunftsweisende
   Datennutzung". It develops the earlier national data strategy further,
   aiming at more and better data availability and a new culture of data use
   and data sharing, and carries a roadmap of concrete measures.
@@ -21,11 +20,10 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
-start_date: null
+verification: primary-source
+start_date: "2023-09-01"
 end_date: null
-last_verified: null
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -47,28 +45,39 @@ sources:
   - title: "Nationale Datenstrategie der Bundesregierung (Drucksache 20/8260)"
     url: "https://dserver.bundestag.de/btd/20/082/2008260.pdf"
     publisher: "Deutscher Bundestag"
+    accessed: "2026-08-22"
   - title: "Disput über die Weiterentwicklung der nationalen Datenstrategie"
     url: "https://www.bundestag.de/dokumente/textarchiv/2023/kw39-de-datenstrategie-967338"
     publisher: "Deutscher Bundestag"
+    accessed: "2026-08-22"
 ---
 
 # Nationale Datenstrategie
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-22.** The Bundestag's Drucksache 20/8260 (the primary
+> document itself) and its "Disput über die Weiterentwicklung" article were
+> read directly. The exact title was corrected, and the adoption-date
+> question below is now answered with a documented chain of dates rather
+> than left as an unresolved disagreement between secondary sources. Two of
+> the original four sources (the BMI and BMDV press releases) no longer
+> resolve — see the Sources section.
 
 ## Description
 
 The Nationale Datenstrategie is the German federal government's data
-strategy, titled *Fortschritt durch Datennutzung — Strategie für mehr und
-bessere Daten für eine neue, wirksame und zukunftsgerichtete Datennutzung*.
+strategy, titled *Fortschritt durch Datennutzung – Strategie für mehr und
+bessere Daten für neue, effektive und zukunftsweisende Datennutzung* —
+confirmed verbatim from the title page of Bundestag Drucksache 20/8260
+itself (2026-08-22), correcting a paraphrase in the previous title wording.
 It was developed and presented jointly by three ministries: the then
 Bundesministerium für Digitales und Verkehr (BMDV), the Bundesministerium
 für Wirtschaft und Klimaschutz (BMWK) and the Bundesministerium des Innern
 und für Heimat ([[DE-BMI]]).
 
-It builds on and develops an existing earlier national data strategy. Its
+It builds on and develops an existing earlier national data strategy —
+confirmed directly in Drucksache 20/8260 (2026-08-22): "Wir bauen auf den
+beschlossenen und teils in Umsetzung befindlichen Maßnahmen der
+Datenstrategie 2021 auf." Its
 stated emphasis is on providing more and better data and on a new culture
 of data use and data sharing, and it carries a roadmap setting out the
 concrete new measures. Search results describe its subject areas as
@@ -79,21 +88,23 @@ This is Germany's counterpart to the Dutch [[NL-IBDS]] and
 [[NL-DATA-AGENDA-OVERHEID]] in role, though **no source connects them** and
 no relationship between them is asserted.
 
-## ⚠ Unresolved: the adoption date
+## Resolved: the adoption date
 
-Sources returned by search disagree, and the disagreement is not resolvable
-without reading them:
+Reading Bundestag Drucksache 20/8260 directly (2026-08-22) gives a
+documented chain rather than a single date: the Bundesministerium für
+Digitales und Verkehr transmitted the strategy to the Bundestag by letter
+of **29 August 2023** ("Zugeleitet mit Schreiben des Bundesministeriums für
+Digitales und Verkehr vom 29. August 2023"); the Drucksache itself is dated
+**1 September 2023**; the Bundestag first debated it on **28 September
+2023** ("Der Bundestag hat am Donnerstag, 28. September 2023, erstmals über
+die Weiterentwicklung der nationalen Datenstrategie ... beraten").
 
-| Source | Implied date |
-|---|---|
-| BMI press release (URL path `/2023/08/`) | August 2023 |
-| Behörden Spiegel article | 12 September 2023 |
-| digitale-technologien.de news item (URL path `2023_09_14_`) | 14 September 2023 |
-
-`start_date` is therefore **null**, not a guess. One reading that would
-reconcile them is a cabinet decision in late August followed by press
-coverage in September, but that is an inference and the Atlas does not
-record inferences as dates. Logged in `discovery/unresolved.md`.
+This explains the previously "disagreeing" secondary sources — August and
+September dates were both right, describing different steps of the same
+process, not different events. `start_date` is recorded as the Drucksache's
+own date, **1 September 2023**, as the most citable single date for the
+document's existence; no source read states a separate federal-cabinet
+decision date distinct from this submission.
 
 ## Status caveat
 
@@ -123,4 +134,8 @@ not an Atlas entity, and BMDV has since been reorganised (see
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter. Two — the BMI and BMDV press releases — no longer
+resolve as of 2026-08-22 (the BMI one returns an error page, the BMDV one a
+404; BMDV itself was folded into [[DE-BMDS]] in 2025, which may explain the
+second). The Bundestag Drucksache and its own textarchiv article, both read
+directly, carry the weight of what's asserted here.

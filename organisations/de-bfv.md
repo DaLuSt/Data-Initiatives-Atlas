@@ -4,7 +4,6 @@ type: organisation
 name: Bundesamt für Verfassungsschutz
 alternative_names:
   - BfV
-  - Federal Office for the Protection of the Constitution
 description: >
   Germany's domestic intelligence service, in the portfolio of the Federal
   Ministry of the Interior. It is responsible for anti-constitutional and
@@ -19,11 +18,10 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -41,21 +39,21 @@ relationships:
   - type: part-of
     target: DE-BMI
     source: fact
-    evidence: "The BfV falls under the Federal Ministry of the Interior and is a domestic intelligence service responsible for anti-constitutional and security-threatening activities as well as espionage activities by foreign intelligence services in Germany (bundestag.de 'Die Arbeit der Nachrichtendienste'; geheimdienste.org 'Recht und Gesetz'). NOT READ — search-only."
+    evidence: "Confirmed verbatim by reading bundestag.de's 'Die Arbeit der Nachrichtendienste' page (2026-08-22): 'Das BfV untersteht dem Bundesministerium des Innern. Es ist ein Inlandsnachrichtendienst und für verfassungsfeindliche und sicherheitsgefährdende Bestrebungen sowie Spionageaktivitäten ausländischer Nachrichtendienste in Deutschland zuständig.'"
     confidence: medium
     valid_from: null
     valid_until: null
   - type: governed-by
     target: DE-BVERFSCHG
     source: fact
-    evidence: "Each of the three federal intelligence services has its own law: the Verfassungsschutz is governed by the Bundesverfassungsschutzgesetz (BVerfSchG) (bundestag.de 'Die Arbeit der Nachrichtendienste'; bfdi.bund.de 'Kontrolllandschaft Nachrichtendienste des Bundes'; geheimdienste.org). NOT READ — search-only."
+    evidence: "Confirmed by reading bundestag.de's 'Die Arbeit der Nachrichtendienste' page (2026-08-22), which names the BfV as one of the three federal services each with its own statute, and bfdi.bund.de's 'Kontrolllandschaft Nachrichtendienste des Bundes' page, which lists the BVerfSchG first among the essential legal foundations for the federal services' data processing."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: governed-by
     target: DE-G10
     source: fact
-    evidence: "The main legal frameworks for the federal intelligence services include the Bundesverfassungsschutzgesetz, the BND-Gesetz, the MAD-Gesetz and the Gesetz zur Beschränkung des Brief-, Post- und Fernmeldegeheimnisses (Artikel 10-Gesetz, G10); the BVerfSchG, MADG, BNDG, G10G and TKG are the essential legal foundations for data processing by the federal services (bfdi.bund.de; geheimdienste.org 'Recht und Gesetz'). NOT READ — search-only."
+    evidence: "Confirmed by reading bfdi.bund.de's 'Kontrolllandschaft Nachrichtendienste des Bundes' page (2026-08-22): 'Die wesentlichen Rechtsgrundlagen für Datenverarbeitungen der Nachrichtendienste des Bundes ... sind das BVerfSchG, das MADG, das BNDG, das G10G und das TKG.'"
     confidence: medium
     valid_from: null
     valid_until: null
@@ -64,19 +62,23 @@ sources:
   - title: "Die Arbeit der Nachrichtendienste"
     url: "https://www.bundestag.de/webarchiv/Ausschuesse/ausschuesse20/weitere_gremien/parlamentarisches_kontrollgremium/nachrichtendienste-867434"
     publisher: "Deutscher Bundestag"
+    accessed: "2026-08-22"
   - title: "Aufsicht über die Nachrichtendienste des Bundes"
     url: "https://www.bfdi.bund.de/DE/Fachthemen/Inhalte/Nachrichtendienste/Kontrollandschaft-Nachrichtendienste-des-Bundes.html"
     publisher: "Bundesbeauftragte für den Datenschutz und die Informationsfreiheit (BfDI)"
+    accessed: "2026-08-22"
   - title: "Recht & Gesetz"
     url: "https://geheimdienste.org/recht-und-gesetz"
     publisher: "geheimdienste.org"
+    accessed: "2026-08-22"
 ---
 
 # Bundesamt für Verfassungsschutz (BfV)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-22.** The Bundestag's "Die Arbeit
+> der Nachrichtendienste" page and the BfDI's "Kontrolllandschaft
+> Nachrichtendienste des Bundes" page were read directly and confirmed the
+> claims below.
 
 ## Description
 
