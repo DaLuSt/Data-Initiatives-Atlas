@@ -4,7 +4,6 @@ type: platform
 name: data.gov.uk
 alternative_names:
   - Data.gov.uk
-  - UK national open data portal
 description: >
   The United Kingdom government's official open data catalogue, publishing
   non-personal public sector data as open data. Launched in closed beta on
@@ -22,11 +21,10 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: 2010-01-01
 end_date: null
-last_verified: null
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -43,35 +41,51 @@ relationships:
   - type: part-of
     target: GB
     source: fact
-    evidence: "data.gov.uk is the United Kingdom government's official open data catalogue, listing datasets from government departments, local councils and other public bodies (data.gov.uk). NOT READ — search-only. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    evidence: "Confirmed by reading en.wikipedia.org's 'Data.gov.uk' article (2026-08-22): 'data.gov.uk is a UK Government project to make available non-personal UK government data as open data. It was launched as closed beta in 30 September 2009, and publicly launched in January 2010 ... As of February 2015, it contained over 19,343 datasets, rising to over 40,000 in 2017, and more than 47,000 by 2023.' Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
     confidence: medium
     valid_from: null
     valid_until: null
 
 sources:
+  - title: "National Data Library — the home of UK public data"
+    url: "https://www.data.gov.uk/"
+    publisher: "GOV.UK"
+    accessed: "2026-08-22"
   - title: "Data.gov.uk"
     url: "https://en.wikipedia.org/wiki/Data.gov.uk"
     publisher: "Wikipedia"
+    accessed: "2026-08-22"
   - title: "U.K. National Government Open Data Portal"
     url: "https://www.datopian.com/showcase/data-portals/data-gov-uk"
     publisher: "Datopian"
+    accessed: "2026-08-22"
   - title: "Data.gov.uk — Data Portals"
     url: "https://dataportals.org/portal/data_gov_uk/"
     publisher: "Data Portals"
+    accessed: "2026-08-22"
   - title: "Open Data White Paper: Unleashing the Potential"
     url: "https://assets.publishing.service.gov.uk/media/5a74ab5fe5274a529406937d/Open-Data.doc"
     publisher: "HM Government (UK)"
+    accessed: "2026-08-22"
 ---
 
 # data.gov.uk
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-22.** en.wikipedia.org's "Data.gov.uk" article and
+> data.gov.uk itself were read directly and confirmed the launch dates and
+> dataset counts below verbatim. A finding worth flagging: the site now
+> brands itself the **"National Data Library"** ("The home of UK public
+> data") rather than data.gov.uk — a rebrand this entity does not yet
+> record and this pass did not chase further.
 
 ## Description
 
-The UK's national open data catalogue. Closed beta **30 September 2009**,
+Confirmed verbatim on en.wikipedia.org (2026-08-22): "data.gov.uk is a UK
+Government project to make available non-personal UK government data as
+open data. It was launched as closed beta in 30 September 2009, and
+publicly launched in January 2010 ... As of February 2015, it contained
+over 19,343 datasets, rising to over 40,000 in 2017, and more than 47,000
+by 2023." The UK's national open data catalogue. Closed beta **30 September 2009**,
 public launch **January 2010**, CKAN-based, and **over 47,000 datasets** by
 2023.
 
@@ -123,5 +137,7 @@ a typed edge.
 
 Listed in frontmatter. Only one is a government source and it is a 2012
 policy paper; the rest are encyclopaedic or portal directories. **No
-data.gov.uk page of its own is cited**, which is the obvious first fetch for
-a re-verification pass.
+data.gov.uk page of its own was cited** before this pass; it has now been
+added and read directly. Its current title, "National Data Library — The
+home of UK public data," is a rebrand not otherwise recorded here and
+worth a dedicated look in a future pass.

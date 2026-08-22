@@ -3,7 +3,7 @@ id: GB-GEOSPATIAL-STRATEGY
 type: strategy
 name: UK Geospatial Strategy 2030
 alternative_names:
-  - UK's Geospatial Strategy
+  - UK’s Geospatial Strategy
   - Geospatial Strategy 2030
 description: >
   United Kingdom government strategy for location data, published by the
@@ -18,11 +18,10 @@ region: null
 status: active
 confidence: low
 coverage: low
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -39,7 +38,7 @@ relationships:
   - type: applies-in
     target: GB
     source: fact
-    evidence: "The UK Geospatial Strategy 2030 is published on GOV.UK as United Kingdom government policy for location data, following an earlier UK Geospatial Strategy published by the Geospatial Commission (gov.uk 'UK Geospatial Strategy 2030'; assets.publishing.service.gov.uk Geospatial_Strategy.pdf). NOT READ — search-only."
+    evidence: "Confirmed by reading the GOV.UK publication page directly (2026-08-22): 'UK Geospatial Strategy 2030 ... Department for Science, Innovation & Technology, Geospatial Commission ... Policy paper ... Updated 3 August 2023.' The ministerial foreword states verbatim: 'This updated UK Geospatial Strategy builds on the approach set out in the 2020 Strategy.' Three missions are named: 'Mission 1: Embrace enabling technologies to accelerate geospatial innovation', 'Mission 2: Drive greater use of geospatial applications and insights across the economy', 'Mission 3: Build confidence in the future geospatial ecosystem.'"
     confidence: medium
     valid_from: null
     valid_until: null
@@ -48,22 +47,29 @@ sources:
   - title: "UK Geospatial Strategy 2030"
     url: "https://www.gov.uk/government/publications/uk-geospatial-strategy-2030/uk-geospatial-strategy-2030"
     publisher: "GOV.UK"
+    accessed: "2026-08-22"
   - title: "UK's Geospatial Strategy"
     url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/894755/Geospatial_Strategy.pdf"
     publisher: "Geospatial Commission (UK)"
+    accessed: "2026-08-22"
 ---
 
 # UK Geospatial Strategy 2030
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-22.** The GOV.UK publication page was read directly
+> and confirmed the claims below verbatim. The Geospatial_Strategy.pdf
+> (the earlier, 2020 strategy) was fetched but not text-extracted this
+> pass; the 2030 edition's own foreword, read on the GOV.UK page, was
+> sufficient to confirm the "builds on the 2020 Strategy" relationship.
 
 ## Description
 
-The UK government's strategy for **location data**, published by the
+Confirmed by reading the GOV.UK publication page directly (2026-08-22):
+"UK Geospatial Strategy 2030 ... published under the 2022 to 2024 Sunak
+Conservative government ... Updated 3 August 2023." The UK government's strategy for **location data**, published by the
 Geospatial Commission and setting the direction for the national geospatial
-ecosystem.
+ecosystem. Its ministerial foreword states verbatim: "This updated UK
+Geospatial Strategy builds on the approach set out in the 2020 Strategy."
 
 ## `confidence: low` and `coverage: low` — and the reason is the batch's own
 
@@ -72,12 +78,16 @@ reason: it is the **policy layer** above [[GB-OS]], and without it the UK's
 geospatial presence in the Atlas is an agency with no stated national
 direction — which is exactly the shape the other countries do not have.
 
-What is **not** established:
+This pass established the **publication date** (updated 3 August 2023, under
+the 2022–2024 government) and the three **missions**: embracing enabling
+technologies, driving wider use of geospatial applications, and building
+confidence in the geospatial ecosystem. `previous_version` is left `null`
+regardless — the strategy's own foreword says it "builds on" the 2020
+strategy, which is a looser relationship than supersession, and the 2020
+document was not itself Atlas-modelled to point `previous_version` at.
 
-- its **publication date**, and therefore whether the 2030 edition supersedes
-  the earlier strategy or restates it. `previous_version` is `null` for that
-  reason, and both documents are cited rather than one;
-- its **missions or pillars** — the substance a reader would want;
+What is still **not** established:
+
 - which body owns it now. It was published by the **Geospatial Commission**,
   which was merged into [[GB-GDS]] in January 2025 and no longer exists
   independently, so the `organisations:` list names both GDS and [[GB-OS]]
@@ -98,5 +108,6 @@ would both be guesses about which way it runs.
 
 ## Sources
 
-Listed in frontmatter. Both are UK government publications and neither was
-read.
+Listed in frontmatter. Both are UK government publications; the GOV.UK
+publication page was read directly this pass, the 2020-strategy PDF was
+fetched but not text-extracted.

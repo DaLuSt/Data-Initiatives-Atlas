@@ -22,11 +22,10 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -46,14 +45,14 @@ relationships:
   - type: part-of
     target: GB-UKSA
     source: fact
-    evidence: "The Office for National Statistics is the executive office of the UK Statistics Authority, reporting through the Authority to Parliament and the devolved governments rather than to ministers (ons.gov.uk 'About us'; ons.gov.uk 'What we do'; uksa.statisticsauthority.gov.uk). NOT READ — search-only."
+    evidence: "Confirmed verbatim by reading ons.gov.uk's own 'About us' page (2026-08-22): 'We are independent of ministers and instead report through the UK Statistics Authority to Parliament and the devolved governments of Scotland, Wales and Northern Ireland. We are the executive office of the UK Statistics Authority.'"
     confidence: medium
     valid_from: null
     valid_until: null
   - type: participates-in
     target: UN-CES
     source: fact
-    evidence: "The Conference of European Statisticians and its Bureau, of which the UK is a member, drives statistical work within the UNECE region; the Office for National Statistics hosted the UNECE Conference of European Statisticians Bureau in Cardiff (uksa.statisticsauthority.gov.uk 'Multilateral Engagement'; unece.org 'Bureau of the Conference of European Statisticians (CES)'; unece.org 'About the Conference of European Statisticians'). NOT READ — search-only. CAVEAT: the sources establish UK membership of the CES and its Bureau; whether the member is the ONS or the UK Statistics Authority is not distinguished."
+    evidence: "NOT independently re-confirmed 2026-08-22: unece.org returns a bot-defense challenge (403) on both cited pages, and the UKSA 'Multilateral Engagement' URL has moved — its replacement (uksa.statisticsauthority.gov.uk/about-the-authority/working-internationally/) lists UNECE among the bodies UKSA works with but does not name the Conference of European Statisticians or its Bureau specifically. The original claim is retained rather than removed, since a page move and a bot-wall are not evidence the claim is wrong — but it is not re-verified. CAVEAT: the original sources establish UK membership of the CES and its Bureau; whether the member is the ONS or the UK Statistics Authority is not distinguished."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -62,12 +61,15 @@ sources:
   - title: "About us — Office for National Statistics"
     url: "https://www.ons.gov.uk/aboutus"
     publisher: "Office for National Statistics (UK)"
+    accessed: "2026-08-22"
   - title: "What we do — Office for National Statistics"
     url: "https://www.ons.gov.uk/aboutus/whatwedo"
     publisher: "Office for National Statistics (UK)"
-  - title: "Multilateral Engagement — UK Statistics Authority"
-    url: "https://uksa.statisticsauthority.gov.uk/what-we-do/working-internationally/multilateral-engagement/"
+    accessed: "2026-08-22"
+  - title: "Working internationally — UK Statistics Authority"
+    url: "https://uksa.statisticsauthority.gov.uk/about-the-authority/working-internationally/"
     publisher: "UK Statistics Authority"
+    accessed: "2026-08-22"
   - title: "Bureau of the Conference of European Statisticians (CES)"
     url: "https://unece.org/statistics/ces/bureau-conference-european-statisticians-ces"
     publisher: "United Nations Economic Commission for Europe (UNECE)"
@@ -78,13 +80,19 @@ sources:
 
 # Office for National Statistics
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-22.** ons.gov.uk's own "About us" page was read
+> directly and confirmed the claims below verbatim. The UN-CES/Bureau
+> claim could not be re-confirmed this pass — see that relationship's
+> evidence — because `unece.org` is bot-walled and the UKSA page that
+> originally supported it has moved to one that no longer states it. The
+> claim is retained, not removed, since neither obstacle is evidence it is
+> wrong.
 
 ## Description
 
-The ONS is the UK's recognised **national statistical institute** and its
+Confirmed verbatim on ons.gov.uk's "About us" page (2026-08-22): "We are
+the UK's largest independent producer of official statistics and its
+recognised national statistical institute." The ONS is the UK's recognised **national statistical institute** and its
 largest independent producer of official statistics. It runs the census in
 England and Wales and publishes over 600 statistical releases a year.
 
@@ -150,4 +158,6 @@ than a confident guess.
 ## Sources
 
 Listed in frontmatter — two ONS pages, one UK Statistics Authority page and
-two UNECE pages. None read.
+two UNECE pages. The two ONS pages and the (updated) UKSA page were read
+directly; the two UNECE pages remain unread, blocked by a bot-defense
+challenge.

@@ -21,11 +21,10 @@ region: null
 status: active
 confidence: low
 coverage: low
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -41,23 +40,36 @@ sources:
   - title: "DSIT to be scrapped with 'strengthened DCMS to take responsibility for digital transformation'"
     url: "https://www.publictechnology.net/2026/07/21/government-and-politics/dsit-to-be-scrapped-with-strengthened-dcms-to-take-responsibility-for-digital-transformation/"
     publisher: "PublicTechnology"
+    accessed: "2026-08-22"
   - title: "DSIT scrapped as Burnham government reshapes Whitehall tech functions"
     url: "https://www.ukauthority.com/articles/dsit-scrapped-as-burnham-government-reshapes-whitehall-tech-functions"
     publisher: "UKAuthority"
   - title: "Burnham Breaks the Mould: Government Confirms DSIT Break-Up and departmental reshuffle"
     url: "https://www.dma.org.uk/about/articles/burnham-breaks-the-mould-government-confirms-dsit-break-up-and-departmental-reshuffle"
     publisher: "Data & Marketing Association"
+    accessed: "2026-08-22"
+  - title: "Government abolishes DSIT as AI gains a seat at the Cabinet table"
+    url: "https://www.thinkdigitalpartners.com/news/2026/07/21/government-abolishes-dsit-as-ai-gains-a-seat-at-the-cabinet-table/"
+    publisher: "THINK Digital Partners"
+    accessed: "2026-08-22"
 ---
 
 # Department for Culture, Media and Sport
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-22.** Three independent trade-press accounts were read
+> directly, including a written ministerial statement they each quote.
+> `ukauthority.com` returned a bot-defense challenge (403) and was not
+> read; the naming ambiguity (DCMS vs DDCMS) is confirmed rather than
+> resolved.
 
 ## Description
 
-DCMS is the department that, since **21 July 2026**, holds the UK's digital
+Confirmed by reading thinkdigitalpartners.com (2026-08-22): "The Department
+for Culture, Media and Sport (DCMS) will be renamed the Department for
+Digital, Culture, Media and Sport (DDCMS), taking responsibility for
+digital government functions including the Government Digital Service
+(GDS)." dma.org.uk, read the same day, confirms via a written ministerial
+statement: "Online harms and digital identity ... go to DCMS." DCMS is the department that, since **21 July 2026**, holds the UK's digital
 transformation brief — including **[[GB-GDS]]**, cyber security, digital
 identity, inclusion and infrastructure, and online harms — after
 [[GB-DSIT]] was abolished.
@@ -108,6 +120,9 @@ pointing here.
 
 ## Sources
 
-Listed in frontmatter. **All three are trade press.** No government source
-for the post-July-2026 arrangement was found, and that is the single most
-important gap in this batch.
+Listed in frontmatter. **All four are trade press**, though two of them
+(dma.org.uk, thinkdigitalpartners.com) quote directly from a written
+ministerial statement rather than reporting second-hand. No government
+source for the post-July-2026 arrangement was found and read directly, and
+that remains the single most important gap in this batch.
+`ukauthority.com` is bot-walled (403) and was not read.

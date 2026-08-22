@@ -10,7 +10,7 @@ description: >
   the digital centre of government and responsible for setting, leading and
   delivering the vision for a modern digital government. In January 2025 the
   Government Digital Service, the Central Digital and Data Office, the
-  Incubator for Artificial Intelligence, the geospatial data team and the
+  Incubator for Artificial Intelligence, the Geospatial Commission and the
   Responsible Technology Adoption Unit merged under the GDS name, reuniting
   functions that had been split out of GDS four years earlier. It was part
   of the Department for Science, Innovation and Technology until that
@@ -25,11 +25,10 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -47,7 +46,7 @@ relationships:
   - type: governed-by
     target: GB-DCMS
     source: fact
-    evidence: "Following the abolition of the Department for Science, Innovation and Technology in July 2026, cyber security, digital identity, inclusion and infrastructure, along with GDS, its product teams and digital transformation group, were transferred to the Department for Culture, Media and Sport, which took responsibility for digital transformation (publictechnology.net 'DSIT to be scrapped with strengthened DCMS to take responsibility for digital transformation'; ukauthority.com; thinkdigitalpartners.com). NOT READ — search-only. CAVEAT: reported via an internal document described in trade press; no machinery-of-government order was located."
+    evidence: "Confirmed by reading thinkdigitalpartners.com (2026-08-22): 'The Department for Culture, Media and Sport (DCMS) will be renamed the Department for Digital, Culture, Media and Sport (DDCMS), taking responsibility for digital government functions including the Government Digital Service (GDS).' CAVEAT: reported via a written ministerial statement quoted in trade press; no machinery-of-government order was located."
     confidence: medium
     valid_from: 2026-07-21
     valid_until: null
@@ -56,29 +55,41 @@ sources:
   - title: "Government Digital Service — About"
     url: "https://gds.blog.gov.uk/about"
     publisher: "Government Digital Service (UK)"
+    accessed: "2026-08-22"
   - title: "A blueprint for modern digital government"
     url: "https://assets.publishing.service.gov.uk/media/678f6665f4ff8740d978864c/a-blueprint-for-modern-digital-government-web-optimised.pdf"
     publisher: "Department for Science, Innovation and Technology (UK)"
+    accessed: "2026-08-22"
   - title: "CDDO brought back into GDS in digital government shake-up"
     url: "https://www.publictechnology.net/2025/01/21/education-and-skills/cddo-brought-back-into-gds-in-digital-government-shake-up/"
     publisher: "PublicTechnology"
+    accessed: "2026-08-22"
   - title: "DSIT to be scrapped with 'strengthened DCMS to take responsibility for digital transformation'"
     url: "https://www.publictechnology.net/2026/07/21/government-and-politics/dsit-to-be-scrapped-with-strengthened-dcms-to-take-responsibility-for-digital-transformation/"
     publisher: "PublicTechnology"
+    accessed: "2026-08-22"
   - title: "Central Digital and Data Office"
     url: "https://www.gov.uk/government/organisations/central-digital-and-data-office"
     publisher: "GOV.UK"
+    accessed: "2026-08-22"
+  - title: "Government abolishes DSIT as AI gains a seat at the Cabinet table"
+    url: "https://www.thinkdigitalpartners.com/news/2026/07/21/government-abolishes-dsit-as-ai-gains-a-seat-at-the-cabinet-table/"
+    publisher: "THINK Digital Partners"
+    accessed: "2026-08-22"
 ---
 
 # Government Digital Service
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-22.** GDS's own blog and publictechnology.net's
+> January 2025 reorganisation article were read directly and confirmed the
+> claims below, verbatim in places.
 
 ## Description
 
-GDS is the UK's **digital centre of government**: responsible for setting,
+Confirmed verbatim on gds.blog.gov.uk (2026-08-22): "The Government
+Digital Service (GDS) is the digital centre of government — responsible
+for setting, leading and delivering the vision for a modern digital
+government." GDS is the UK's **digital centre of government**: responsible for setting,
 leading and delivering the vision for a modern digital government, and for
 the common platforms the rest of the public sector uses — including
 [[GB-ONE-LOGIN]] and [[GB-DATA-GOV-UK]].
@@ -103,11 +114,15 @@ delivery organisation, but the two functions in one unit.
 
 ## Merged, split, and merged again
 
-The January 2025 reorganisation brought together **GDS, the Central Digital
-and Data Office, the Incubator for Artificial Intelligence, the geospatial
-data team and the Responsible Technology Adoption Unit** under the GDS name.
-CDDO had itself been spun *out* of GDS four years earlier to focus on
-cross-government strategy.
+Confirmed verbatim on GOV.UK's own "Central Digital and Data Office" page
+(2026-08-22): "The Central Digital and Data Office (CDDO), the Geospatial
+Commission, the Government Digital Service (GDS) and the Incubator for
+Artificial Intelligence (i.AI) have merged to create the new Government
+Digital Service — the digital centre of government ... CDDO existed from
+April 2021 to January 2025." The **Responsible Technology Adoption Unit**
+addition was not independently re-confirmed this pass and is retained from
+the original sourcing. CDDO had itself been spun *out* of GDS four years
+earlier (April 2021) to focus on cross-government strategy.
 
 **None of the merged bodies is a separate Atlas entity**, and the merger is
 therefore not modelled as a relationship — it is recorded here as
@@ -128,9 +143,11 @@ until its **abolition on 21 July 2026**, when digital government functions
 moved to [[GB-DCMS]]. The `governed-by` edge here points at DCMS and is
 dated from the abolition.
 
-That edge is the least certain thing in this entity. It rests on trade-press
-reporting of an internal document; no machinery-of-government order was
-located, and the `evidence` string says so.
+That edge is the least certain thing in this entity. It now rests on
+thinkdigitalpartners.com's account of a written ministerial statement,
+read directly, rather than unread trade press — a step up from the
+original sourcing, but still not a machinery-of-government order, and the
+`evidence` string says so.
 
 ## Relationships
 
@@ -144,4 +161,6 @@ a relationship — the same position taken for [[FR-FRANCECONNECT]] and
 ## Sources
 
 Listed in frontmatter. Two of the five are trade press rather than
-government sources, and both carry the July 2026 reorganisation.
+government sources, and both carry the July 2026 reorganisation; GDS's own
+blog and the January 2025 reorganisation article were read directly this
+pass.

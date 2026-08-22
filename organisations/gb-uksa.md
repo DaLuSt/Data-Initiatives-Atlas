@@ -20,11 +20,10 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -39,18 +38,20 @@ relationships:
   - type: participates-in
     target: UN-CES
     source: fact
-    evidence: "The UK Statistics Authority describes its multilateral engagement, and the Conference of European Statisticians and its Bureau, of which the UK is a member, drives statistical work within the UNECE region (uksa.statisticsauthority.gov.uk 'Multilateral Engagement'; unece.org 'Bureau of the Conference of European Statisticians (CES)'). NOT READ — search-only. CAVEAT: the sources establish that the UNITED KINGDOM is a CES and Bureau member; they do not settle whether the seat is held by the Authority or by the Office for National Statistics, so the same participation is recorded on both and neither claim is exclusive."
+    evidence: "NOT independently re-confirmed 2026-08-22: unece.org returns a bot-defense challenge (403), and the UKSA 'Multilateral Engagement' URL has moved — its replacement (uksa.statisticsauthority.gov.uk/about-the-authority/working-internationally/), read directly, lists UNECE among the bodies UKSA works with but does not name the Conference of European Statisticians or its Bureau specifically. The original claim is retained rather than removed. CAVEAT: the original sources establish that the UNITED KINGDOM is a CES and Bureau member; they do not settle whether the seat is held by the Authority or by the Office for National Statistics, so the same participation is recorded on both and neither claim is exclusive."
     confidence: low
     valid_from: null
     valid_until: null
 
 sources:
-  - title: "Multilateral Engagement — UK Statistics Authority"
-    url: "https://uksa.statisticsauthority.gov.uk/what-we-do/working-internationally/multilateral-engagement/"
+  - title: "Working internationally — UK Statistics Authority"
+    url: "https://uksa.statisticsauthority.gov.uk/about-the-authority/working-internationally/"
     publisher: "UK Statistics Authority"
+    accessed: "2026-08-22"
   - title: "About us — Office for National Statistics"
     url: "https://www.ons.gov.uk/aboutus"
     publisher: "Office for National Statistics (UK)"
+    accessed: "2026-08-22"
   - title: "Bureau of the Conference of European Statisticians (CES)"
     url: "https://unece.org/statistics/ces/bureau-conference-european-statisticians-ces"
     publisher: "United Nations Economic Commission for Europe (UNECE)"
@@ -58,13 +59,19 @@ sources:
 
 # UK Statistics Authority
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-22.** ons.gov.uk's own "About us" page and the UKSA's
+> (moved) international-engagement page were read directly. The
+> CES/Bureau membership claim could not be re-confirmed this pass — see
+> that relationship's evidence — because `unece.org` is bot-walled and the
+> UKSA page that originally supported it no longer states it. The claim is
+> retained, not removed.
 
 ## Description
 
-The UK Statistics Authority is a **non-ministerial department** that oversees
+Confirmed by reading ons.gov.uk's "About us" page (2026-08-22): "We are
+independent of ministers and instead report through the UK Statistics
+Authority to Parliament and the devolved governments of Scotland, Wales
+and Northern Ireland." The UK Statistics Authority oversees
 the UK statistical system and reports **to Parliament and the devolved
 legislatures rather than to ministers**. [[GB-ONS]] is its executive office.
 

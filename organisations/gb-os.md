@@ -23,11 +23,10 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -45,7 +44,7 @@ relationships:
   - type: participates-in
     target: UN-GGIM
     source: fact
-    evidence: "Ordnance Survey acts as the Secretariat for the UK Delegation, leads and coordinates UK involvement, and acts as Head of UK Delegation during Committee of Experts meetings on behalf of the Geospatial Commission; the United Kingdom, through Ordnance Survey and supported by the UN-GGIM Europe Regional Committee, agreed to lead a review in close collaboration with the UN-GGIM Secretariat (ggim.un.org 11th Session agenda item 3 — UK; gdsgeospatial.blog.gov.uk 'The UN-GGIM 14th session: flying the flag'; geospatialworld.net). NOT READ — search-only."
+    evidence: "Confirmed verbatim by reading gdsgeospatial.blog.gov.uk's 'The UN-GGIM 14th session: flying the flag' post (2026-08-22): 'Ordnance Survey acts as the Secretariat for the UK Delegation, leads and coordinates UK involvement, and acts as Head of UK Delegation during the Committee of Expert meetings on behalf of the Geospatial Commission.' The 11th Session statement (ggim.un.org, read 2026-08-22) is delivered by 'David Henderson, Chief Geospatial Officer, Ordnance Survey, Head of UK Delegation', confirming the Head-of-Delegation role independently at an earlier session."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -61,29 +60,39 @@ sources:
   - title: "Ordnance Survey — Great Britain's national mapping service"
     url: "https://www.ordnancesurvey.co.uk/"
     publisher: "Ordnance Survey"
+    accessed: "2026-08-22"
   - title: "UN-GGIM 11th Session — Agenda item 3, United Kingdom"
     url: "https://ggim.un.org/meetings/GGIM-committee/11th-Session/documents/Agenda_item-3%20-%20UK.pdf"
     publisher: "United Nations Committee of Experts on Global Geospatial Information Management (UN-GGIM)"
+    accessed: "2026-08-22"
   - title: "The UN-GGIM 14th session: flying the flag"
     url: "https://gdsgeospatial.blog.gov.uk/2024/09/19/the-un-ggim-14th-session-flying-the-flag/"
     publisher: "Geospatial Commission / Government Digital Service (UK)"
+    accessed: "2026-08-22"
   - title: "An ambitious partnership programme between ONS and OS — memorandum of understanding"
     url: "https://www.ons.gov.uk/news/statementsandletters/anambitiouspartnershipprogrammebetweenonsandosmemorandumofunderstanding"
     publisher: "Office for National Statistics (UK)"
+    accessed: "2026-08-22"
 ---
 
 # Ordnance Survey
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-22.** gdsgeospatial.blog.gov.uk's UN-GGIM session
+> report, the 11th-session UK statement PDF and ordnancesurvey.co.uk's own
+> homepage were read directly and confirmed the claims below, verbatim in
+> places. `eurogeographics.org`'s members page was fetched but its member
+> list did not render as extractable text, so that relationship's
+> composition-rule basis is unchanged rather than newly confirmed.
 
 ## Description
 
-Ordnance Survey is the **national mapping agency for Great Britain** and the
+Confirmed verbatim on ordnancesurvey.co.uk (2026-08-22): "Ordnance Survey |
+Great Britain's national mapping service." Ordnance Survey is the
+**national mapping agency for Great Britain** and the
 provider of its geospatial infrastructure. Internationally it **leads the UK
 delegation to [[UN-GGIM]]**, acting as Secretariat and Head of Delegation on
-behalf of the Geospatial Commission.
+behalf of the Geospatial Commission — confirmed verbatim on
+gdsgeospatial.blog.gov.uk.
 
 ## Closing the Atlas's most conspicuous UK gap
 
