@@ -3,9 +3,7 @@ id: GB-IPA-2016
 type: law
 name: Investigatory Powers Act 2016
 alternative_names:
-  - IPA 2016
   - Investigatory Powers Act
-  - Snoopers' Charter
 description: >
   United Kingdom act providing a modernised framework governing the use and
   oversight of investigatory powers by law enforcement and the security and
@@ -20,11 +18,10 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: 2016-11-29
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -42,7 +39,7 @@ relationships:
   - type: references
     target: GB-ISA-1994
     source: fact
-    evidence: "Schedule 10, Part 2 of the Investigatory Powers Act 2016 contains provisions under the cross-heading 'Intelligence Services Act 1994', amending that act (legislation.gov.uk ukpga/2016/25/schedule/10/part/2/crossheading/intelligence-services-act-1994). NOT READ — search-only."
+    evidence: "Confirmed by reading legislation.gov.uk (2026-08-22): Schedule 10, Part 2 of the Investigatory Powers Act 2016 is headed 'Intelligence Services Act 1994' and contains provisions amending that act."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -51,26 +48,33 @@ sources:
   - title: "Investigatory Powers Act 2016 — Schedule 10 Part 2"
     url: "https://www.legislation.gov.uk/ukpga/2016/25/schedule/10/part/2/crossheading/intelligence-services-act-1994"
     publisher: "The National Archives (legislation.gov.uk)"
+    accessed: "2026-08-22"
   - title: "Investigatory Powers"
     url: "https://www.ipco.org.uk/investigatory-powers/"
     publisher: "Investigatory Powers Commissioner's Office (IPCO)"
+    accessed: "2026-08-22"
   - title: "What we do"
     url: "https://www.ipco.org.uk/what-we-do/"
     publisher: "Investigatory Powers Commissioner's Office (IPCO)"
+    accessed: "2026-08-22"
   - title: "Legal Framework"
     url: "https://www.gchq.gov.uk/section/governance/legal-framework"
     publisher: "Government Communications Headquarters (GCHQ)"
+    accessed: "2026-08-22"
 ---
 
 # Investigatory Powers Act 2016
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-22.** The statute text at legislation.gov.uk and
+> IPCO's own pages were read directly and confirmed the claims below,
+> including the exact Royal Assent date.
 
 ## Description
 
-The IPA provides a **modernised framework** governing the use and oversight
+Confirmed directly on legislation.gov.uk (2026-08-22): "An Act to make
+provision about the interception of communications, equipment interference
+and the acquisition and retention of communications data, bulk personal
+datasets and other information", enacted **29 November 2016**. The IPA provides a **modernised framework** governing the use and oversight
 of investigatory powers by law enforcement and the security and intelligence
 agencies, and created [[GB-IPCO]].
 

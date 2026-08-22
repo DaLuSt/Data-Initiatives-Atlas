@@ -19,11 +19,10 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -40,28 +39,28 @@ relationships:
   - type: governed-by
     target: GB-IPA-2016
     source: fact
-    evidence: "The Investigatory Powers Commissioner's Office is an independent oversight role created by the Investigatory Powers Act 2016, and replaces various other commissioner roles related to surveillance; the role merged the previous offices of the Office of the Surveillance Commissioners, the Interception of Communications Commissioner's Office and the Intelligence Service Commissioner's Office into one office (ipco.org.uk 'What we do'; en.wikipedia.org 'Investigatory Powers Commissioner'; wiki.openrightsgroup.org). NOT READ — search-only."
+    evidence: "Confirmed by reading en.wikipedia.org's 'Investigatory Powers Commissioner' article (2026-08-22): 'It merged the previous offices of the Office of the Surveillance Commissioners, the Interception of Communications Commissioner's Office and the Intelligence Service Commissioner's Office into one office with oversight over these areas along with the Office for Communications Data Authorisations.'"
     confidence: medium
     valid_from: null
     valid_until: null
   - type: applies-to
     target: GB-MI5
     source: fact
-    evidence: "IPCO oversees the use of covert powers by over 600 public authorities, which can be broadly categorised into six groups, of which the first is the intelligence agencies (ipco.org.uk 'What we do'; ipco.org.uk 'Investigatory Powers'). NOT READ — search-only."
+    evidence: "Confirmed by reading ipco.org.uk's 'What we do' page (2026-08-22): 'At IPCO, we oversee the use of covert investigatory powers by more than 600 public authorities, including the UK’s intelligence agencies, law enforcement agencies, police, councils and prisons.'"
     confidence: medium
     valid_from: null
     valid_until: null
   - type: applies-to
     target: GB-SIS
     source: fact
-    evidence: "IPCO oversees the use of covert powers by over 600 public authorities, of which the first category is the intelligence agencies (ipco.org.uk 'What we do'). NOT READ — search-only."
+    evidence: "Confirmed by reading ipco.org.uk's 'What we do' page (2026-08-22): 'At IPCO, we oversee the use of covert investigatory powers by more than 600 public authorities, including the UK’s intelligence agencies, law enforcement agencies, police, councils and prisons.'"
     confidence: medium
     valid_from: null
     valid_until: null
   - type: applies-to
     target: GB-GCHQ
     source: fact
-    evidence: "IPCO oversees the use of covert powers by over 600 public authorities, of which the first category is the intelligence agencies; GCHQ's own legal framework page places the Investigatory Powers Act 2016 regime at the centre of its governance (ipco.org.uk 'What we do'; gchq.gov.uk 'Legal Framework'). NOT READ — search-only."
+    evidence: "Confirmed by reading ipco.org.uk's 'What we do' page and gchq.gov.uk's 'Legal Framework' page (2026-08-22): IPCO oversees 'more than 600 public authorities, including the UK's intelligence agencies', and GCHQ's own page names the Investigatory Powers Act 2016 as the regime governing its use of investigatory powers."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -70,23 +69,30 @@ sources:
   - title: "What we do"
     url: "https://www.ipco.org.uk/what-we-do/"
     publisher: "Investigatory Powers Commissioner's Office (IPCO)"
+    accessed: "2026-08-22"
   - title: "Investigatory Powers"
     url: "https://www.ipco.org.uk/investigatory-powers/"
     publisher: "Investigatory Powers Commissioner's Office (IPCO)"
+    accessed: "2026-08-22"
   - title: "Investigatory Powers Commissioner"
     url: "https://en.wikipedia.org/wiki/Investigatory_Powers_Commissioner"
     publisher: "Wikipedia"
+    accessed: "2026-08-22"
 ---
 
 # Investigatory Powers Commissioner's Office (IPCO)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-22.** ipco.org.uk's own pages and en.wikipedia.org's
+> "Investigatory Powers Commissioner" article were read directly and
+> confirmed the claims below, verbatim in places.
 
 ## Description
 
-IPCO is the UK's independent oversight body for covert investigatory powers,
+Confirmed verbatim on ipco.org.uk's "What we do" page (2026-08-22): "At
+IPCO, we oversee the use of covert investigatory powers by more than 600
+public authorities, including the UK's intelligence agencies, law
+enforcement agencies, police, councils and prisons." IPCO is the UK's
+independent oversight body for covert investigatory powers,
 created by [[GB-IPA-2016]].
 
 ## The widest remit of any oversight body in this batch

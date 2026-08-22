@@ -2,8 +2,6 @@
 id: GB-JSA-2013
 type: law
 name: Justice and Security Act 2013
-alternative_names:
-  - JSA 2013
 description: >
   United Kingdom act which, in Part 1, re-founded the Intelligence and
   Security Committee of Parliament as a statutory committee and provided for
@@ -18,11 +16,10 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: 2013-04-25
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -39,7 +36,7 @@ relationships:
   - type: references
     target: GB-ISA-1994
     source: fact
-    evidence: "The Intelligence Services Act 1994 established the Intelligence and Security Committee, a body consisting of members of each House of Parliament, with the function of examining the expenditure, administration and policy of the Agencies; the Intelligence and Security Committee of Parliament is now a statutory Committee under Part 1 of the Justice and Security Act 2013, with responsibility for oversight of the expenditure, administration, policy and operations of the intelligence services (legislation.gov.uk ukpga/2013/18 explanatory notes; en.wikipedia.org 'Justice and Security Act 2013'). NOT READ — search-only."
+    evidence: "Confirmed by reading the statute text at legislation.gov.uk (2026-08-22), § 2(1): 'The ISC may examine or otherwise oversee the expenditure, administration, policy and operations of— (a) the Security Service, (b) the Secret Intelligence Service, and (c) the Government Communications Headquarters.' This is one word wider than the 1994 act's 'expenditure, administration and policy' remit for the original ISC."
     confidence: medium
     valid_from: 2013-04-25
     valid_until: null
@@ -48,23 +45,29 @@ sources:
   - title: "Justice and Security Act 2013 — explanatory notes"
     url: "https://www.legislation.gov.uk/ukpga/2013/18/notes/division/3/2/data.htm"
     publisher: "The National Archives (legislation.gov.uk)"
+    accessed: "2026-08-22"
   - title: "Justice and Security Act 2013"
     url: "https://en.wikipedia.org/wiki/Justice_and_Security_Act_2013"
     publisher: "Wikipedia"
+    accessed: "2026-08-22"
   - title: "Oversight and where we fit in"
     url: "https://investigatorypowerstribunal.org.uk/oversight-and-where-we-fit-in/"
     publisher: "Investigatory Powers Tribunal"
+    accessed: "2026-08-22"
 ---
 
 # Justice and Security Act 2013
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-22.** The statute text at legislation.gov.uk was read
+> directly and confirmed § 1, § 2 and the exact enactment date below.
 
 ## Description
 
-Part 1 of the 2013 act re-founded [[GB-ISC]] as a statutory committee and
+Confirmed directly on legislation.gov.uk (2026-08-22), § 1(1)-(2): "There
+is to be a body known as the Intelligence and Security Committee of
+Parliament... The ISC is to consist of nine members who are to be drawn
+both from the members of the House of Commons and from the members of the
+House of Lords." Enacted **25 April 2013**. Part 1 of the 2013 act re-founded [[GB-ISC]] as a statutory committee and
 provides for oversight of [[GB-MI5]], [[GB-SIS]], [[GB-GCHQ]] and other
 government activities relating to intelligence or security matters.
 
