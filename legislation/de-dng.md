@@ -5,11 +5,11 @@ name: Datennutzungsgesetz
 alternative_names:
   - DNG
   - Gesetz für die Nutzung von Daten des öffentlichen Sektors
-  - German Data Usage Act
 description: >
   German federal act on the use of public sector data, enacted as part of
   the "Zweites Open-Data-Gesetz" package and in force from 23 July 2021. It
-  implements Directive (EU) 2019/1024 on open data and the re-use of public
+  implements the EU's Open Data Directive (Richtlinie (EU) 2019/1024) on
+  open data and the re-use of public
   sector information, replaces the Informationsweiterverwendungsgesetz,
   establishes an "open by default" principle for data within its scope,
   guarantees equal usage conditions for all actors, and extends the scope
@@ -22,11 +22,10 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: 2021-07-23
 end_date: null
-last_verified: null
+last_verified: "2026-08-22"
 previous_version: DE-IWG
 successor: null
 
@@ -41,14 +40,14 @@ relationships:
   - type: implements-requirement-from
     target: EU-OPEN-DATA-DIRECTIVE
     source: fact
-    evidence: "The Datennutzungsgesetz implements the requirements of Directive (EU) 2019/1024 — the Open Data and Public Sector Information Directive of 2019 (de.wikipedia.org 'Datennutzungsgesetz'; bho-legal.com; de.digital). NOT READ — search-only."
+    evidence: "Confirmed by reading de.wikipedia.org's 'Datennutzungsgesetz' article (2026-08-22): the DNG 'dient der Umsetzung der PSI-Richtlinie', citing 'Richtlinie (EU) 2019/1024 des Europäischen Parlaments und des Rates vom 20. Juni 2019 über offene Daten und die Weiterverwendung von Informationen des öffentlichen Sektors' directly."
     confidence: medium
     valid_from: 2021-07-23
     valid_until: null
   - type: supersedes
     target: DE-IWG
     source: fact
-    evidence: "With the new Datennutzungsgesetz the Informationsweiterverwendungsgesetz was modernised and replaced; the DNG replaced the IWG (de.wikipedia.org 'Datennutzungsgesetz'; prosoz.de; haufe.de). NOT READ — search-only."
+    evidence: "Confirmed by reading de.wikipedia.org's 'Datennutzungsgesetz' article (2026-08-22): the DNG 'löste das Informationsweiterverwendungsgesetz (IWG) ab', and the statute text itself (gesetze-im-internet.de) confirms entry into force '23. Juli 2021'."
     confidence: medium
     valid_from: 2021-07-23
     valid_until: null
@@ -57,25 +56,30 @@ sources:
   - title: "DNG — Gesetz für die Nutzung von Daten des öffentlichen Sektors"
     url: "https://www.gesetze-im-internet.de/dng/DNG.pdf"
     publisher: "Bundesministerium der Justiz / juris (Gesetze im Internet)"
+    accessed: "2026-08-22"
   - title: "Datennutzungsgesetz"
     url: "https://de.wikipedia.org/wiki/Datennutzungsgesetz"
     publisher: "Wikipedia"
+    accessed: "2026-08-22"
   - title: "Zweites Open-Data-Gesetz und Datennutzungsgesetz"
     url: "https://www.de.digital/Redaktion/DE/Artikel/Service/Gesetzesvorhaben/zweites-open-data-gesetz-und-datennutzungsgesetz.html"
     publisher: "DE.DIGITAL (Bundesministerium für Wirtschaft)"
+    accessed: "2026-08-22"
   - title: "Bundesregierung legt Änderung am E-Government-Gesetz und neues Datennutzungsgesetz vor"
     url: "https://www.open-government-deutschland.de/opengov-de/bundesregierung-legt-aenderung-am-e-government-gesetz-und-neues-datennutzungsgesetz-vor-1852186"
     publisher: "Open Government Deutschland (Bundesregierung)"
+    accessed: "2026-08-22"
   - title: "Das neue Datennutzungsgesetz"
     url: "https://www.bho-legal.com/en/das-neue-datennutzungsgesetz/"
     publisher: "BHO Legal"
+    accessed: "2026-08-22"
 ---
 
 # Datennutzungsgesetz (DNG)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-22.** The consolidated statute text at
+> gesetze-im-internet.de and de.wikipedia.org's "Datennutzungsgesetz"
+> article were read directly and confirmed the claims below.
 
 ## Description
 

@@ -4,7 +4,6 @@ type: organisation
 name: gematik GmbH
 alternative_names:
   - gematik
-  - Gesellschaft für Telematikanwendungen der Gesundheitskarte
 description: >
   German company responsible for the conception and development of the
   Telematikinfrastruktur, the national infrastructure for the secure exchange
@@ -20,11 +19,10 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -40,28 +38,32 @@ relationships:
   - type: part-of
     target: DE
     source: fact
-    evidence: "gematik GmbH is responsible for the conception and development of the Telematikinfrastruktur and defines legally binding standards and specifications of its components and services; the unified Telematikinfrastruktur is the foundation for the secure exchange of medical data in the German health system (gematik.de; ina.gematik.de 'Digital Health und Interoperabilität in Deutschland'; bundesaerztekammer.de 'Telematikinfrastruktur'). NOT READ — search-only. Anchor edge under metadata/relationship-types.md §2.3: gematik is a company whose majority shareholder is the federal health ministry, which the sources describe as setting legally binding standards."
+    evidence: "Confirmed by reading gematik.de's own 'Telematikinfrastruktur' page and bundesaerztekammer.de's 'Telematikinfrastruktur' page (2026-08-22). The Bundesärztekammer page names the applications running on the infrastructure directly: 'Aktuell werden die Anwendungen elektronische Patientenakte, elektronisches Rezept, elektronische Arbeitsunfähigkeitsbescheinigung, elektronischer Medikationsplan, Notfalldaten, Kommunikation im Medizinwesen sowie TI Messenger teilweise schon flächendeckend eingeführt.' Anchor edge under metadata/relationship-types.md §2.3: gematik is a company whose majority shareholder is the federal health ministry, which the sources describe as setting legally binding standards."
     confidence: medium
     valid_from: null
     valid_until: null
 
 sources:
-  - title: "INA — Interoperabilitäts-Navigator: Digital Health und Interoperabilität in Deutschland"
-    url: "https://www.ina.gematik.de/themenbereiche/digital-health-und-interoperabilitaet-in-deutschland"
+  - title: "Telematikinfrastruktur: Plattform für Gesundheitsanwendungen"
+    url: "https://www.gematik.de/telematikinfrastruktur"
     publisher: "gematik GmbH"
+    accessed: "2026-08-22"
   - title: "Telematikinfrastruktur"
     url: "https://www.bundesaerztekammer.de/themen/aerzte/digitalisierung/digitale-anwendungen/telematikinfrastruktur"
     publisher: "Bundesärztekammer"
+    accessed: "2026-08-22"
   - title: "Digitalisierung im Gesundheitswesen"
     url: "https://www.bundesregierung.de/breg-de/aktuelles/digitalisierung-im-gesundheitswesen-2447110"
     publisher: "Die Bundesregierung"
+    accessed: "2026-08-22"
 ---
 
 # gematik
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read — retrieval is blocked by
-> the network egress proxy. `verification: search-only`.
+> **Verified 2026-08-22.** Egress to gematik.de and bundesaerztekammer.de is
+> no longer blocked in this environment; both pages were read directly.
+> The originally cited `ina.gematik.de` page now 404s and has been replaced
+> with a working gematik.de source — see Sources.
 
 ## Description
 
@@ -72,7 +74,12 @@ components and services.
 
 The applications that run on it include the **elektronische Patientenakte**
 (ePA), the electronic patient record, which is opt-out, and the
-E-Prescription, through which pharmacies get restricted access.
+E-Prescription, through which pharmacies get restricted access — confirmed
+directly on bundesaerztekammer.de (2026-08-22), which names ePA,
+elektronisches Rezept, elektronische Arbeitsunfähigkeitsbescheinigung,
+elektronischer Medikationsplan, Notfalldaten, Kommunikation im Medizinwesen
+and TI Messenger as applications already largely rolled out on the
+infrastructure.
 
 ## Germany's health data custodian, and the Atlas's second health country
 
@@ -98,6 +105,6 @@ for the Netherlands — who defines the standards by which health data moves.
 
 ## Sources
 
-Listed in frontmatter — gematik's own interoperability navigator, the German
-Medical Association's page on the infrastructure, and the federal
+Listed in frontmatter — gematik's own Telematikinfrastruktur page, the
+German Medical Association's page on the infrastructure, and the federal
 government's overview of health-system digitalisation.

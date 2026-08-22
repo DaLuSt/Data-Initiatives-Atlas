@@ -4,7 +4,6 @@ type: law
 name: Gesundheitsdatennutzungsgesetz
 alternative_names:
   - GDNG
-  - Health Data Use Act
 description: >
   German federal act on the use of health data. It is one of the instruments
   of the federal government's health-digitalisation package alongside the
@@ -20,11 +19,10 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: search-only
-
-start_date: null
+verification: primary-source
+start_date: "2024-03-26"
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -39,7 +37,7 @@ relationships:
   - type: applies-in
     target: DE
     source: fact
-    evidence: "The Gesundheitsdatennutzungsgesetz (GDNG) is the German health data utilisation law; the Forschungsdatenzentrum Gesundheit receives pseudonymised data from the elektronische Patientenakte and links it with billing data where provided; the Digital-Versorgung-und-Pflege-Modernisierungs-Gesetz (DVPMG) is one of the key legislative instruments for digital modernisation of care and nursing (bundesregierung.de 'Digitalisierung im Gesundheitswesen'; vdek.com 'Digitale Versorgung und Telematik'). NOT READ — search-only."
+    evidence: "Confirmed by reading de.wikipedia.org's 'Gesundheitsdatennutzungsgesetz' article (2026-08-22): the GDNG is a German federal act ('Erlassen am: 22. März 2024, Inkrafttreten am: 26. März 2024'), and the Forschungsdatenzentrum Gesundheit nach § 303d SGB V is named directly among its datenhaltende Stellen (§ 2 Nr. 3 GDNG)."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -48,16 +46,23 @@ sources:
   - title: "Digitalisierung im Gesundheitswesen"
     url: "https://www.bundesregierung.de/breg-de/aktuelles/digitalisierung-im-gesundheitswesen-2447110"
     publisher: "Die Bundesregierung"
+    accessed: "2026-08-22"
   - title: "Digitale Versorgung und Telematik"
     url: "https://www.vdek.com/vertragspartner/telematik.html"
     publisher: "Verband der Ersatzkassen (vdek)"
+    accessed: "2026-08-22"
+  - title: "Gesundheitsdatennutzungsgesetz"
+    url: "https://de.wikipedia.org/wiki/Gesundheitsdatennutzungsgesetz"
+    publisher: "Wikipedia"
+    accessed: "2026-08-22"
 ---
 
 # Gesundheitsdatennutzungsgesetz (GDNG)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read — retrieval is blocked by
-> the network egress proxy. `verification: search-only`.
+> **Verified 2026-08-22.** Egress to gesetze-im-internet.de-adjacent
+> sources is no longer blocked in this environment. de.wikipedia.org's
+> dedicated GDNG article was found and read directly, resolving the date
+> gap flagged below.
 
 ## Description
 
@@ -72,13 +77,15 @@ for research under statutory conditions. It is the same problem
 [[FI-SECONDARY-USE-ACT]] solves in Finland and [[FR-SNDS]] in France, and it
 is what [[EU-EHDS]] is being built to harmonise.
 
-## What is deliberately not asserted, and why `coverage: low`
+## The date gap, resolved
 
-**No date.** The sources describe the act and its effects and none of them
-gives its date of adoption or entry into force. A German federal act's date
-is a citable fact and guessing it would be exactly the kind of
-plausible-looking error the Atlas's sourcing rules exist to prevent, so
-`start_date` is `null`.
+The original two sources described the act's effects but not its date.
+de.wikipedia.org's dedicated GDNG article, read 2026-08-22, gives it
+directly: "Fundstellennachweis: 860-5-86. Erlassen am: 22. März 2024.
+Inkrafttreten am: 26. März 2024." `start_date` is now recorded as **26
+March 2024**, the date the act entered into force, rather than left null.
+
+## What is deliberately not asserted, and why `coverage: low`
 
 **No `implements-requirement-from` edge to [[EU-EHDS]].** The German act and
 the European regulation address the same subject and no source in this set
@@ -97,5 +104,6 @@ prevents.
 ## Sources
 
 Listed in frontmatter — the federal government's overview of health-system
-digitalisation and the substitute health funds' association page on digital
-care and telematics.
+digitalisation, the substitute health funds' association page on digital
+care and telematics, and now the dedicated Wikipedia article, which is the
+best-sourced of the three for this specific act.

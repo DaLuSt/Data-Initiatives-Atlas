@@ -1,13 +1,13 @@
 ---
 id: DE-DIGITALSTRATEGIE
 type: strategy
-name: Digitalstrategie Deutschland
+name: Digitalstrategie der Bundesregierung
 alternative_names:
-  - "Digitalstrategie — Gemeinsam digitale Werte schöpfen"
-  - German Digital Strategy 2022
+  - Digitalstrategie Deutschland
+  - "Digitalstrategie – Gemeinsam digitale Werte schöpfen"
 description: >
   Federal government digital strategy adopted on 31 August 2022 under the
-  title "Digitalstrategie — Gemeinsam digitale Werte schöpfen", setting the
+  title "Digitalstrategie – Gemeinsam digitale Werte schöpfen", setting the
   overarching framework for German digital policy to 2025. It sets
   priorities across 25 fields of action, and takes a place in the top ten
   of the European Digital Economy and Society Index (DESI) by 2025 as an
@@ -24,7 +24,7 @@ verification: search-only
 
 start_date: 2022-08-31
 end_date: null
-last_verified: null
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -60,14 +60,24 @@ sources:
 
 # Digitalstrategie Deutschland
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Sourcing caveat, updated 2026-08-22.** The Bundesrechnungshof's own
+> report on the strategy and two Bundestag textarchiv articles were read
+> directly (via `pdftotext` for the PDF) and confirmed the claims below,
+> including the exact adoption date and the DESI top-ten target. This
+> entity stays `verification: search-only` regardless: `tools/reverify.py`
+> fetches sources as raw bytes and cannot extract text from a PDF, so it
+> cannot corroborate a claim that only the Bundesrechnungshof PDF states
+> verbatim, and the entity's exact quoted title doesn't otherwise appear on
+> the two HTML sources. Forcing the write past that refusal was
+> deliberately not done. The content below is genuinely verified; the
+> field is not.
 
 ## Description
 
-On 31 August 2022 the federal government adopted *Digitalstrategie —
-Gemeinsam digitale Werte schöpfen*, creating the overarching framework for
+Confirmed directly in the Bundesrechnungshof's report (2026-08-22): "Die
+Bundesregierung beschloss am 31. August 2022 ihre 'Digitalstrategie –
+Gemeinsam digitale Werte schöpfen'." On 31 August 2022 the federal
+government adopted *Digitalstrategie – Gemeinsam digitale Werte schöpfen*, creating the overarching framework for
 German digital policy through 2025. It sets priorities across **25 fields
 of action** (Handlungsfelder), with the stated goal of improving the
 conditions for digitalisation so that civil society, business, education
@@ -78,8 +88,13 @@ fibre coverage), digital skills in the population, use of digital
 technologies and AI in business, and provision of digital public services.
 
 Its headline quantitative target was for Germany to enter the **top ten of
-the European Digital Economy and Society Index (DESI) by 2025**. Germany
-stood 13th of 27 member states in DESI 2022.
+the European Digital Economy and Society Index (DESI) by 2025** —
+confirmed verbatim in the Bundesrechnungshof report: "mindestens Platz 10
+im DESI-Ranking." Confirmed on bundestag.de's "Kritik an schwammigen
+Zielen" article (2026-08-22): then-minister Wissing himself cited Germany's
+13th-place DESI standing as unacceptable ("Dass die Bundesrepublik im Index
+für die digitale Wirtschaft und Gesellschaft (DESI) auf Platz 13 liege, sei
+etwas, das Deutschland sich nicht leisten könne").
 
 ## Why `status: unknown`
 

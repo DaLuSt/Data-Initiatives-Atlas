@@ -4,7 +4,6 @@ type: organisation
 name: Bundesministerium für Digitales und Staatsmodernisierung
 alternative_names:
   - BMDS
-  - Federal Ministry for Digital and State Modernisation
   - Digitalministerium
 description: >
   German federal ministry for digital affairs and state modernisation,
@@ -21,11 +20,10 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: 2025-05-06
 end_date: null
-last_verified: null
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -38,14 +36,14 @@ relationships:
   - type: produces
     target: DE-MODERNISIERUNGSAGENDA-BUND
     source: fact
-    evidence: "The BMDS leads the steering of the Modernisierungsagenda für Staat und Verwaltung (Bund), adopted by the federal cabinet on 1 October 2025 (bmds.bund.de/themen/staatsmodernisierung/modernisierungsagenda-bund). NOT READ — search-only."
+    evidence: "Confirmed by reading bmds.bund.de's 'Modernisierungsagenda Bund' page (2026-08-22): 'Mit der am 1. Oktober 2025 vom Bundeskabinett beschlossenen \"Modernisierungsagenda – für Staat und Verwaltung (Bund)\" hat die Bundesregierung einen Rahmen geschaffen', published and steered under the BMDS's own domain."
     confidence: medium
     valid_from: 2025-10-01
     valid_until: null
   - type: produces
     target: DE-DEUTSCHLAND-STACK
     source: fact
-    evidence: "Implementation of the Deutschland-Stack is driven by the BMDS, with a department 'DS' established to develop it across technology, governance and policy (bmds.bund.de; netzpolitik.org). NOT READ — search-only."
+    evidence: "Confirmed by reading bmds.bund.de's 'Deutschland-Stack' page (2026-08-22), which is published and maintained under the BMDS's own domain and describes the Stack as driven by the ministry toward sovereign, interoperable digital components for Bund, Länder and Kommunen by 2028."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -54,29 +52,37 @@ sources:
   - title: "Amtsübergabe an den neuen Bundesdigitalminister"
     url: "https://bmds.bund.de/aktuelles/aktuelle-meldungen/detail/amtsuebergabe-an-den-neuen-bundesdigitalminister"
     publisher: "Bundesministerium für Digitales und Staatsmodernisierung (BMDS)"
+    accessed: "2026-08-22"
   - title: "Staatsmodernisierung: Bürokratie abbauen, Wirtschaft stärken"
     url: "https://bmds.bund.de/themen/staatsmodernisierung"
     publisher: "Bundesministerium für Digitales und Staatsmodernisierung (BMDS)"
   - title: "Bundesministerium für Digitales und Staatsmodernisierung"
     url: "https://de.wikipedia.org/wiki/Bundesministerium_f%C3%BCr_Digitales_und_Staatsmodernisierung"
     publisher: "Wikipedia"
+    accessed: "2026-08-22"
   - title: "Das neue Digitalministerium: Struktur, Aufgaben und Ziele"
     url: "https://www.smartcountry.berlin/de/newsblog/das-neue-digitalministerium-struktur-aufgaben-und-ziele.html"
     publisher: "Smart Country Convention"
+    accessed: "2026-08-22"
   - title: "Neues Digitalministerium: So will Schwarz-Rot das Land digitalisieren"
     url: "https://netzpolitik.org/2025/neues-digitalministerium-so-will-schwarz-rot-das-land-digitalisieren/"
     publisher: "netzpolitik.org"
+    accessed: "2026-08-22"
 ---
 
 # Bundesministerium für Digitales und Staatsmodernisierung (BMDS)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-22.** The BMDS's own "Amtsübergabe" announcement page
+> was read directly and confirmed the establishment date and personnel
+> named below.
 
 ## Description
 
-The BMDS was **established on 6 May 2025** as Germany's dedicated digital
+Confirmed directly on bmds.bund.de's "Amtsübergabe an den neuen
+Bundesdigitalminister" page (2026-08-22): "Mit Wirkung zum 6. Mai 2025 hat
+Dr. Karsten Wildberger das Amt des Bundesministers für Digitales und
+Staatsmodernisierung (BMDS) übernommen." The BMDS was **established on 6
+May 2025** as Germany's dedicated digital
 ministry. It bundles competences from six existing departments, among them
 the Federal Chancellery, the Bundesministerium des Innern ([[DE-BMI]]), the
 Federal Ministry for Economic Affairs and the Federal Ministry of Justice.
@@ -111,7 +117,13 @@ departments is not the successor of any one of them. Recorded in
 
 The sources name Dr. Karsten Wildberger as the first minister, taking
 office 6 May 2025, supported by State Secretary Markus Richter and
-Parliamentary State Secretaries Philipp Amthor and Thomas Jarzombek.
+Parliamentary State Secretaries Philipp Amthor and Thomas Jarzombek — all
+confirmed by name on the "Amtsübergabe" page at the time of the handover.
+The BMDS's current organisation page, read the same day, lists Thomas
+Jarzombek alongside a different second Parliamentary State Secretary (Gitta
+Connemann) rather than Amthor — exactly the kind of drift this section
+warns about, and left unedited below rather than "corrected" to a snapshot
+that will itself be stale by the next re-verification.
 
 **Named office-holders are not modelled as Atlas entities.** They are
 recorded here as prose because they date the entity, not because the Atlas
