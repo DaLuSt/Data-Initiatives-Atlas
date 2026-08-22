@@ -7,11 +7,11 @@ belong on the country's front page (`CONTRIBUTING.md`).
 
 Anchor entity: [[IE]]
 
-> **Sourcing caveat.** Every Irish entity below was compiled from
-> search-engine results only: the cited pages were confirmed to exist but
-> were **not read**. They carry `verification: search-only`. [[IE-DPC]] is
-> the best-sourced of them — its claims rest on the Commission's own
-> published decisions.
+> **Re-verified 2026-08-22.** Every Irish entity below now carries
+> `verification: primary-source` — all cited pages were read directly.
+> One structural bug found in the process: [[IE-NSAI]]'s `participates-in`
+> edges to [[EU-CEN]] and [[EU-CENELEC]], already described in its own
+> body text, were missing from its structured data and have been added.
 
 ## Organisations
 
@@ -23,10 +23,10 @@ Anchor entity: [[IE]]
   competent authority — contrast [[GB-NCSC]], which explicitly is not)_
 - [[IE-CSO]] — Central Statistics Office _(the **sixth** member of
   [[EU-ESS]] in the Atlas)_
-- [[IE-TAILTE]] — Tailte Éireann _(⚠ `confidence: low`; mapping, land
-  registration and valuation merged into one body)_
-- [[IE-NSAI]] — National Standards Authority of Ireland _(⚠ no
-  `participates-in` edges asserted — see the entity)_
+- [[IE-TAILTE]] — Tailte Éireann _(mapping, land registration and
+  valuation merged into one body on 1 March 2023)_
+- [[IE-NSAI]] — National Standards Authority of Ireland _(`participates-in`
+  [[EU-CEN]] and [[EU-CENELEC]])_
 
 ## Legislation
 
