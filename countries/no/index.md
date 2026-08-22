@@ -86,8 +86,10 @@ recorded only in prose.
 
 ## Not modelled
 
-- The **EEA Joint Committee** itself (as opposed to its decisions), **EFTA**,
-  the **EFTA Surveillance Authority** and the **EFTA Court**.
+- ~~The **EEA Joint Committee** itself (as opposed to its decisions),
+  **EFTA**, the **EFTA Surveillance Authority** and the **EFTA
+  Court**~~ — now [[INTL-EEA-JOINT-COMMITTEE]], [[INTL-EFTA]],
+  [[INTL-EFTA-SURVEILLANCE-AUTHORITY]] and [[INTL-EFTA-COURT]].
 - **Norway's intelligence services** — Etterretningstjenesten and PST.
   [[NO-NSM]]'s own site now confirms it is one of Norway's three
   intelligence, surveillance and security services alongside these two —
