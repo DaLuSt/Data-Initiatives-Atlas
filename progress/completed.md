@@ -1,5 +1,96 @@
 # Completed Batches
 
+## The third verification-gap push
+
+**Date:** 2026-08-22
+
+Continued the open-ended re-verification task with a third full country
+cluster: Switzerland. 9 entities moved to `primary-source` — [[CH]] itself,
+plus [[CH-REVDSG]], [[CH-EMBAG]], [[CH-BACS]], [[CH-BFS]], [[CH-DVS]],
+[[CH-EDOEB]], [[CH-SWISSTOPO]] and [[CH-OPENDATA-SWISS]].
+
+### The Fedlex gap, half-closed
+
+[[CH-REVDSG]] and [[CH-EMBAG]] had both carried an explicit caveat since
+their creation: no citation pointed at Fedlex, the Swiss federal law
+portal, despite both entities carrying comparative weight in the Atlas.
+Guessing an ELI URL from general knowledge was rejected as exactly the
+kind of unverified specific this project exists to avoid — instead, both
+were found as **outbound links on official government pages already
+being read** (kmu.admin.ch linked `eli/cc/2022/491/de` for the DSG;
+bfs.admin.ch linked `eli/cc/2023/682/de` for the EMBAG), so the citations
+are as solid as the pages that pointed at them.
+
+Fedlex itself renders its content client-side in JavaScript. Both pages
+retrieved at HTTP 200 and neither could be read past that — the same
+tooling limit already documented for PDFs elsewhere in the Atlas, applied
+here to a different format for the first time.
+
+### A connection two entities had separately flagged as missing, now sourced
+
+[[CH-EMBAG]]'s and [[CH-OPENDATA-SWISS]]'s entities each independently
+said the same thing: the EMBAG's open-government-data provisions plainly
+concern the federal open data portal, but no source read connected them
+by name. Reading bfs.admin.ch's own "Open Government Data (OGD)" page
+directly closed it: *"Der Masterplan OGD 2024−2027 ... zielt darauf ab,
+die Daten der öffentlichen Verwaltung gemäss dem [EMBAG] frei zugänglich
+zu machen. Die Geschäftsstelle OGD ... betreibt ... das Portal
+opendata.swiss."* [[CH-OPENDATA-SWISS]] now carries `governed-by`
+[[CH-EMBAG]] on that basis — the second time this push found a
+relationship two entities' own prose had already reasoned toward but
+never landed in the structured data (the first was [[IE-NSAI]]'s
+CEN/CENELEC edges in the previous push).
+
+### A wrong alternative name, caught by re-verification rather than luck
+
+[[CH-DVS]]'s Italian abbreviation was recorded as "AND". Fetching the
+organisation's own Italian-language homepage found it calls itself
+*Amministrazione digitale Svizzera* — abbreviation **ADS**, not AND.
+Corrected. The English name ("Digital Public Services Switzerland") and
+French abbreviation (ANS) were both confirmed on the corresponding
+language pages.
+
+### A methodology correction: a `<title>` tag is not body text
+
+Several `<title>`-only confirmations from this pass's own ad-hoc checking
+script did not survive contact with `tools/reverify.py`'s actual
+extraction, which strips `<head>` (and therefore `<title>`) before
+matching — a page's browser-tab text is not something a reader of the
+page's content would ever see. [[CH-BFS]]'s "BFS", "OFS", "UST" and
+"Federal Statistical Office" and [[CH-SWISSTOPO]]'s "Federal Office of
+Topography" all initially failed the tool's write-check for exactly this
+reason, despite passing an earlier, less careful check. Each was
+re-sourced properly — a German-Wikipedia infobox for BFS's four-language
+abbreviations, swisstopo's own English homepage for its English name —
+rather than forced past the refusal or quietly dropped. `tools/reverify.py`
+itself was not changed; the lesson was in how this pass checked its own
+work before calling `--write`.
+
+### Findings flagged, not chased
+
+- [[CH-BACS]]'s English-language site still brands itself "National Cyber
+  Security Centre (NCSC)" — the German rename to BACS has not carried
+  across to the English pages.
+- [[CH-DVS]]'s homepage advertises **AGOV**, a nationwide authority-login
+  service already used by fourteen cantons with "already 2 million
+  accounts" — a Swiss analogue to [[GB-ONE-LOGIN]], not yet an Atlas
+  entity — and reports that the Federal Council and the Conference of
+  Cantonal Governments adopted a "Zielbild" in late 2025 to evolve DVS
+  toward "a political platform with binding standard-setting."
+- [[CH-OPENDATA-SWISS]]'s own homepage advertises **"opendata.swiss
+  next,"** a stated future replacement for the current site.
+
+None of these were pursued into new entities or rewritten claims this
+pass — they are recorded so a future pass does not have to rediscover
+them from nothing.
+
+### Verification
+
+`validation/run_all.py` 5/5, 0 errors (7 pre-existing warnings, all in
+entities untouched by this push). `tools/test_build_graph.py` 41 tests.
+`tools/test_reverify.py` 36 tests. `discovery/reverification-allowlist.md`
+regenerated. No `--force` used anywhere in this push.
+
 ## The second verification-gap push
 
 **Date:** 2026-08-22

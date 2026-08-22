@@ -6,6 +6,7 @@ alternative_names:
   - EDÖB
   - PFPDT
   - IFPDT
+  - FDPIC
   - Federal Data Protection and Information Commissioner
 description: >
   Switzerland's federal data protection and information commissioner,
@@ -21,11 +22,10 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -38,7 +38,7 @@ relationships:
   - type: applies-to
     target: CH-REVDSG
     source: fact
-    evidence: "The competences of the EDÖB, the Swiss Federal Data Protection and Information Commissioner, were expanded by the revised Datenschutzgesetz to better protect the rights of affected persons; the revDSG entered into force on 1 September 2023 together with the new Data Protection Ordinance (kmu.admin.ch 'Neues Datenschutzgesetz (revDSG)'; kalaidos-fh.ch; edoeb.admin.ch). NOT READ — search-only."
+    evidence: "Confirmed verbatim by reading piwikpro.de directly (2026-08-22): 'Die Kompetenzen des EDÖB (Eidgenössischer Datenschutz- und Öffentlichkeitsbeauftragter) sollten erweitert werden, um die Rechte der betroffenen Personen besser zu schützen.' edoeb.admin.ch, read directly, confirms the EDÖB's dual mandate ('Aufgaben in den Bereichen Datenschutz und Öffentlichkeitsprinzip') and its role as the mandatory contact for data-breach notifications under the revDSG, confirmed on kmu.admin.ch ('Eine rasche Meldung ist erforderlich, wenn die Datensicherheit verletzt wurde. Sie ist an den Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB) zu richten')."
     confidence: medium
     valid_from: 2023-09-01
     valid_until: null
@@ -47,28 +47,45 @@ sources:
   - title: "Eidgenössischer Datenschutz- und Öffentlichkeitsbeauftragter"
     url: "https://www.edoeb.admin.ch/"
     publisher: "Eidgenössischer Datenschutz- und Öffentlichkeitsbeauftragter (EDÖB)"
+    accessed: "2026-08-22"
   - title: "Neues Datenschutzgesetz (revDSG)"
     url: "https://www.kmu.admin.ch/de/neues-datenschutzgesetz-revdsg"
     publisher: "KMU-Portal, Staatssekretariat für Wirtschaft (SECO)"
-  - title: "Revidiertes Datenschutzgesetz ab Sept. 2023 — Was ist neu?"
-    url: "https://www.kalaidos-fh.ch/de-CH/Blog/Posts/2022/10/Digitalisierung-1086-Revidiertes-Datenschutzgesetz-2023-Was-ist-neu"
-    publisher: "Kalaidos Fachhochschule"
+    accessed: "2026-08-22"
+  - title: "Datenschutzgesetz Schweiz 2023 (revDSG): der praktische Leitfaden"
+    url: "https://piwikpro.de/blog/datenschutzgesetz-schweiz-2023-revdsg/"
+    publisher: "Piwik PRO"
+    accessed: "2026-08-22"
+  - title: "Welcome to the FDPIC"
+    url: "https://www.edoeb.admin.ch/edoeb/en/home.html"
+    publisher: "Federal Data Protection and Information Commissioner (FDPIC)"
+    accessed: "2026-08-22"
+  - title: "Benvenuti sul sito dell'IFPDT"
+    url: "https://www.edoeb.admin.ch/edoeb/it/home.html"
+    publisher: "Incaricato federale della protezione dei dati e della trasparenza (IFPDT)"
+    accessed: "2026-08-22"
 ---
 
 # Eidgenössischer Datenschutz- und Öffentlichkeitsbeauftragter (EDÖB)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-22.** All cited pages were read directly and confirm
+> the claims below, verbatim in places. Two alternative names not
+> attested on any source read — the English "FDPIC" and Italian "IFPDT"
+> abbreviations — turned out to be exactly what the office's own English
+> and Italian pages call themselves, found this pass and added.
 
 ## Description
 
-The EDÖB is Switzerland's federal data protection and information
+Confirmed by reading edoeb.admin.ch directly (2026-08-22): "Als
+unabhängige Behörde obliegen dem Eidgenössischen Datenschutz- und
+Öffentlichkeitsbeauftragten (EDÖB) Aufgaben in den Bereichen Datenschutz
+und Öffentlichkeitsprinzip." The EDÖB is Switzerland's federal data protection and information
 commissioner. Like [[DE-BFDI]], it holds **both halves of the name**: data
 protection supervision *and* freedom of information.
 
-Its competences were **expanded** by [[CH-REVDSG]] "to better protect the
-rights of affected persons".
+Confirmed verbatim on piwikpro.de (2026-08-22): its competences were
+**expanded** by [[CH-REVDSG]] "um die Rechte der betroffenen Personen
+besser zu schützen" (to better protect the rights of affected persons).
 
 ## The two-mandate pattern
 
@@ -111,4 +128,5 @@ In the Swiss case it understates it by twenty-six.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, all read directly this pass. The English and
+Italian pages were added specifically to confirm FDPIC and IFPDT.

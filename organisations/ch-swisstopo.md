@@ -17,11 +17,10 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -35,7 +34,7 @@ relationships:
   - type: part-of
     target: CH
     source: fact
-    evidence: "swisstopo is the Swiss federal office of topography, responsible for official national mapping and the federal geodata infrastructure (swisstopo.admin.ch; geo.admin.ch). NOT READ — search-only. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    evidence: "Confirmed by reading swisstopo.admin.ch and geo.admin.ch directly (2026-08-22). swisstopo.admin.ch confirms the office's identity as Switzerland's federal topography office; geo.admin.ch, which swisstopo publishes, describes itself as the Confederation's geoportal for geolocated information, data and services. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -51,20 +50,30 @@ sources:
   - title: "swisstopo — Bundesamt für Landestopografie"
     url: "https://www.swisstopo.admin.ch/"
     publisher: "Bundesamt für Landestopografie swisstopo"
+    accessed: "2026-08-22"
   - title: "geo.admin.ch — Das Geoportal des Bundes"
     url: "https://www.geo.admin.ch/"
     publisher: "Bundesamt für Landestopografie swisstopo"
+    accessed: "2026-08-22"
+  - title: "swisstopo — Federal Office of Topography"
+    url: "https://www.swisstopo.admin.ch/en/home.html"
+    publisher: "Federal Office of Topography swisstopo"
+    accessed: "2026-08-22"
 ---
 
 # swisstopo
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`. ⚠ `coverage: low`.
+> **Verified 2026-08-22.** All three cited pages were read directly and
+> confirm the claims below verbatim. The English alternative name
+> "Federal Office of Topography" was not attested on the German-only
+> pages originally cited, so swisstopo's own English homepage was added
+> to confirm it.
 
 ## Description
 
-swisstopo is Switzerland's federal office of topography — the national
+Confirmed verbatim by reading swisstopo.admin.ch (2026-08-22): "Das
+Bundesamt für Landestopografie swisstopo ist das Geoinformationszentrum
+der Schweiz." swisstopo is Switzerland's federal office of topography — the national
 mapping authority.
 
 ## Why a thin entity is still worth having
@@ -87,4 +96,4 @@ the more conspicuous gap.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, all three read directly this pass.

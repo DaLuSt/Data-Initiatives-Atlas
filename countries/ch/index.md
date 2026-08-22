@@ -7,11 +7,14 @@ belong on the country's front page (`CONTRIBUTING.md`).
 
 Anchor entity: [[CH]]
 
-> **Sourcing caveat.** Every Swiss entity below was compiled from
-> search-engine results only: the cited pages were confirmed to exist but
-> were **not read**. They carry `verification: search-only`. **No Fedlex
-> citation appears anywhere in this set** — see the caveats on
-> [[CH-REVDSG]] and [[CH-EMBAG]].
+> **Re-verified 2026-08-22.** Every Swiss entity below now carries
+> `verification: primary-source`, and [[CH]] itself does too. **A Fedlex
+> citation now exists** for both [[CH-REVDSG]] and [[CH-EMBAG]] — found
+> via outbound links on official government pages — though Fedlex renders
+> client-side in JavaScript, so neither could be read past retrieval. A
+> genuinely new connection was found and sourced this pass:
+> [[CH-OPENDATA-SWISS]] `governed-by` [[CH-EMBAG]], via the OGD office's
+> own statement that it operates the portal pursuant to the Act.
 
 ## Organisations
 
