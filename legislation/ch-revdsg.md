@@ -1,12 +1,10 @@
 ---
 id: CH-REVDSG
 type: law
-name: Bundesgesetz über den Datenschutz (revidiert)
+name: Bundesgesetz über den Datenschutz
 alternative_names:
   - revDSG
-  - nDSG
   - DSG
-  - Swiss Federal Act on Data Protection
 description: >
   Switzerland's revised Federal Act on Data Protection, in force since
   1 September 2023 together with the new Data Protection Ordinance. It
@@ -23,11 +21,10 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: 2023-09-01
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -42,14 +39,14 @@ relationships:
   - type: applies-in
     target: CH
     source: fact
-    evidence: "The revised Federal Act on Data Protection is a Swiss federal act, in force throughout Switzerland since 1 September 2023 together with the new Data Protection Ordinance; it governs the processing of personal data by federal bodies and by private persons (kmu.admin.ch 'Neues Datenschutzgesetz (revDSG)'; kalaidos-fh.ch; edoeb.admin.ch). NOT READ — search-only. Cantonal and communal bodies are governed by cantonal data protection acts, not by this one."
+    evidence: "Confirmed by reading kmu.admin.ch directly (2026-08-22): 'Die hiesigen Unternehmen müssen sich ab dem 1. September 2023 an die revidierten Regelungen anpassen. In seiner Herbstsession 2020 hat das Parlament das neue Bundesgesetz über den Datenschutz (revDSG) ... verabschiedet.' It governs the processing of personal data by federal bodies and by private persons; cantonal and communal bodies are governed by cantonal data protection acts, not by this one — this pass did not find a source stating that division explicitly, so it is retained from the original sourcing without a fresh citation."
     confidence: medium
     valid_from: 2023-09-01
     valid_until: null
   - type: aligned-with
     target: EU-GDPR
     source: fact
-    evidence: "The revised Datenschutzgesetz came into force on 1 September 2023, replacing an act dating from 1992 which was no longer up to date and did not meet the EU's level of data protection; the legislator wanted to harmonise the law with the GDPR to prevent competitive disadvantages in data exchange with EU companies, and the revision was driven by the need to maintain Switzerland's adequacy status under GDPR Article 45 (kmu.admin.ch 'Neues Datenschutzgesetz (revDSG)'; kalaidos-fh.ch 'Revidiertes Datenschutzgesetz ab Sept. 2023'; piwikpro.de 'Datenschutzgesetz Schweiz 2023 (revDSG)'). NOT READ — search-only."
+    evidence: "Confirmed verbatim by reading piwikpro.de directly (2026-08-22): 'Die Kompetenzen des EDÖB (Eidgenössischer Datenschutz- und Öffentlichkeitsbeauftragter) sollten erweitert werden, um die Rechte der betroffenen Personen besser zu schützen. Der Gesetzgeber wollte das Gesetz auch mit der EU-Datenschutz-Grundverordnung (GDPR) harmonisieren, damit beim Datenaustausch mit den EU-Unternehmen keine Nachteile entstehen.' kalaidos-fh.ch, read directly, independently confirms the 1992-act/no-longer-adequate framing. kmu.admin.ch confirms the 1 September 2023 in-force date and the Herbstsession 2020 parliamentary passage."
     confidence: medium
     valid_from: 2023-09-01
     valid_until: null
@@ -58,25 +55,50 @@ sources:
   - title: "Neues Datenschutzgesetz (revDSG)"
     url: "https://www.kmu.admin.ch/de/neues-datenschutzgesetz-revdsg"
     publisher: "KMU-Portal, Staatssekretariat für Wirtschaft (SECO)"
+    accessed: "2026-08-22"
   - title: "Revidiertes Datenschutzgesetz ab Sept. 2023 — Was ist neu?"
     url: "https://www.kalaidos-fh.ch/de-CH/Blog/Posts/2022/10/Digitalisierung-1086-Revidiertes-Datenschutzgesetz-2023-Was-ist-neu"
     publisher: "Kalaidos Fachhochschule"
+    accessed: "2026-08-22"
   - title: "Datenschutzgesetz Schweiz 2023 (revDSG): der praktische Leitfaden"
     url: "https://piwikpro.de/blog/datenschutzgesetz-schweiz-2023-revdsg/"
     publisher: "Piwik PRO"
+    accessed: "2026-08-22"
+  - title: "Bundesgesetz über den Datenschutz (DSG)"
+    url: "https://www.fedlex.admin.ch/eli/cc/2022/491/de"
+    publisher: "Fedlex — Die Publikationsplattform des Bundesrechts"
+    accessed: "2026-08-22"
 ---
 
 # Revidiertes Datenschutzgesetz (revDSG)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-22.** kmu.admin.ch, kalaidos-fh.ch and piwikpro.de
+> were read directly and confirm the claims below, verbatim in places.
+> The long-standing "no Fedlex citation" gap is partly closed: the
+> official text is at `fedlex.admin.ch/eli/cc/2022/491/de`,
+> found via an outbound link on kmu.admin.ch's own page — but Fedlex
+> renders its content client-side in JavaScript, so this pass could
+> retrieve the page (200) without being able to read or quote it, the
+> same tooling limit already documented for PDFs elsewhere in the Atlas.
+> The entity's `name` has been changed from "Bundesgesetz über den
+> Datenschutz (revidiert)" to "Bundesgesetz über den Datenschutz" — the
+> "(revidiert)" qualifier is Atlas commentary distinguishing this act from
+> its 1992 predecessor of the same name, not part of the statute's own
+> title, and it broke the exact-match check against every source. The
+> unattested alternative names "nDSG" and "Swiss Federal Act on Data
+> Protection" have been removed.
 
 ## Description
 
-Switzerland's revised Federal Act on Data Protection, in force since
+Confirmed by reading kmu.admin.ch directly (2026-08-22): "Die hiesigen
+Unternehmen müssen sich ab dem 1. September 2023 an die revidierten
+Regelungen anpassen." Switzerland's revised Federal Act on Data
+Protection, in force since
 **1 September 2023** alongside a new Data Protection Ordinance (DSV). It
-replaced an act dating from **1992**.
+replaced an act dating from **1992** — confirmed verbatim on
+kalaidos-fh.ch: "Das aktuelle DSG der Schweiz stammt aus dem Jahr 1992
+und wird aktuellen Technologien wie Social-Media-Plattformen oder
+Cloud-Diensten nicht mehr gerecht."
 
 ## `aligned-with`, not `implements-requirement-from`
 
@@ -122,10 +144,9 @@ protection act relate to the GDPR":
 
 ## Sources
 
-Listed in frontmatter. **Only the KMU-Portal citation is a federal source**,
-and no Fedlex citation for the act text was returned by search. For an
-entity carrying this much comparative weight that is the weakest point, and
-it should be re-sourced against `fedlex.admin.ch` first.
+Listed in frontmatter. kmu.admin.ch, kalaidos-fh.ch and piwikpro.de were
+read directly this pass. **The Fedlex citation is now present** — see the
+caveat above for why it does not yet carry a quote.
 
 ## `applies-in` [[CH]] — the [[GB-UK-GDPR]] precedent, not a new one
 

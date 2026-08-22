@@ -22,11 +22,10 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -38,7 +37,7 @@ relationships:
   - type: part-of
     target: INTL-COE
     source: fact
-    evidence: "Switzerland is one of the 46 member states of the Council of Europe, an intergovernmental organisation separate from the European Union (coe.int 'The Council of Europe's 46 member states'). NOT READ — search-only. Anchor edge under metadata/relationship-types.md §2.3: it records Council of Europe membership and asserts no more than that. Added in the European country batch so that all fifty anchors carry the same membership edge."
+    evidence: "NOT independently re-confirmed 2026-08-22: coe.int returns a bot-defense challenge (403, Cloudflare 'Attention Required!') and was not read, the same obstacle found on GB's identical edge. The claim (Switzerland is one of the 46 member states of the Council of Europe, an intergovernmental organisation separate from the European Union) is retained rather than removed, since a bot-wall is not evidence it is wrong. Anchor edge under metadata/relationship-types.md §2.3: it records Council of Europe membership and asserts no more than that. Added in the European country batch so that all fifty anchors carry the same membership edge."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -47,22 +46,29 @@ sources:
   - title: "The Council of Europe's 46 member states"
     url: "https://www.coe.int/en/web/portal/46-members-states"
     publisher: "Council of Europe"
-  - title: "CH — Switzerland (ISO 3166-1 country code)"
-    url: "https://www.iso.org/obp/ui/#iso:code:3166:CH"
-    publisher: "International Organization for Standardization (ISO)"
+  - title: "Switzerland"
+    url: "https://en.wikipedia.org/wiki/Switzerland"
+    publisher: "Wikipedia"
+    accessed: "2026-08-22"
   - title: "Neues Datenschutzgesetz (revDSG)"
     url: "https://www.kmu.admin.ch/de/neues-datenschutzgesetz-revdsg"
     publisher: "KMU-Portal, Staatssekretariat für Wirtschaft (SECO)"
+    accessed: "2026-08-22"
   - title: "Bundesgesetz über den Einsatz elektronischer Mittel zur Erfüllung von Behördenaufgaben (EMBAG)"
     url: "https://digital.swiss/de/aktionsplan/massnahme/bundesgesetz-uber-den-einsatz-elektronischer-mittel-zur-erfullung-von-behordenaufgaben-embag"
     publisher: "digital.swiss / Bundeskanzlei"
+    accessed: "2026-08-22"
 ---
 
 # Switzerland
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-22.** en.wikipedia.org's Switzerland article was read
+> directly and confirms "Switzerland," "Swiss Confederation," "Schweiz,"
+> "Suisse" and "Svizzera" verbatim. The ISO Online Browsing Platform
+> citation has been dropped: it is bot-walled (403) and was never read.
+> `coe.int` is also bot-walled, so the Council of Europe membership edge
+> could not be independently re-confirmed this pass and is retained
+> rather than removed — see that relationship's evidence.
 
 ## Description
 
@@ -130,4 +136,5 @@ recorded here in prose. The same distinction is drawn on [[GB]].
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter. The Wikipedia article was read directly this
+pass; `coe.int` remains cited but unread, bot-walled.

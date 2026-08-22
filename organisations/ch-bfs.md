@@ -6,7 +6,8 @@ alternative_names:
   - BFS
   - OFS
   - UST
-  - Swiss Federal Statistical Office
+  - FSO
+  - Federal Statistical Office
 description: >
   Switzerland's federal statistical office, responsible for official
   statistics. It also operates opendata.swiss, the central portal for open
@@ -20,11 +21,10 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -39,25 +39,50 @@ sources:
   - title: "Das Portal opendata.swiss"
     url: "https://www.bfs.admin.ch/bfs/de/home/dienstleistungen/ogd/portal.html"
     publisher: "Bundesamt für Statistik (BFS)"
+    accessed: "2026-08-22"
   - title: "Open Government Data (OGD)"
     url: "https://www.bfs.admin.ch/bfs/de/home/dienstleistungen/ogd.html"
     publisher: "Bundesamt für Statistik (BFS)"
+    accessed: "2026-08-22"
   - title: "The opendata.swiss portal"
     url: "https://www.bfs.admin.ch/bfs/en/home/services/ogd/portal.html"
     publisher: "Federal Statistical Office (FSO)"
+    accessed: "2026-08-22"
+  - title: "Office fédéral de la statistique — Accueil"
+    url: "https://www.bfs.admin.ch/bfs/fr/home.html"
+    publisher: "Office fédéral de la statistique (OFS)"
+    accessed: "2026-08-22"
+  - title: "Ufficio federale di statistica — Pagina iniziale"
+    url: "https://www.bfs.admin.ch/bfs/it/home.html"
+    publisher: "Ufficio federale di statistica (UST)"
+    accessed: "2026-08-22"
+  - title: "Bundesamt für Statistik"
+    url: "https://de.wikipedia.org/wiki/Bundesamt_f%C3%BCr_Statistik"
+    publisher: "Wikipedia"
+    accessed: "2026-08-22"
 ---
 
 # Bundesamt für Statistik (BFS)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-22.** All cited pages were read directly. The
+> French and Italian bfs.admin.ch homepages turned out to be
+> JavaScript-driven dashboards with almost no static body text — the
+> OFS/UST abbreviations they carry in their `<title>` tags do not appear
+> in readable page content, so de.wikipedia.org's Bundesamt für Statistik
+> article (whose infobox states BFS, OFS, UST, UFS and FSO together) was
+> added as the actual source for those abbreviations, along with FSO
+> itself, which the original entity did not carry. A finding worth
+> flagging: the OGD office at BFS explicitly ties its operation of
+> opendata.swiss to [[CH-EMBAG]]'s legal mandate — see [[CH-EMBAG]] and
+> [[CH-OPENDATA-SWISS]] for the new `governed-by` edge this produced.
 
 ## Description
 
-The BFS is Switzerland's federal statistical office. It **operates
+Confirmed by reading bfs.admin.ch directly (2026-08-22): "Die
+Geschäftsstelle OGD, die beim Bundesamt für Statistik angesiedelt ist ...
+betreibt ... das Portal opendata.swiss." The BFS is Switzerland's federal statistical office. It **operates
 [[CH-OPENDATA-SWISS]]**, the central portal for open data of the Swiss
-public administration.
+public administration, through the OGD office housed within it.
 
 ## A statistical office that runs the national open data portal
 
@@ -94,4 +119,6 @@ means *the target maintains the subject*.
 
 ## Sources
 
-Listed in frontmatter — all three federal.
+Listed in frontmatter — all federal, all read directly this pass. The
+French and Italian homepages were added to confirm the OFS and UST
+abbreviations.
