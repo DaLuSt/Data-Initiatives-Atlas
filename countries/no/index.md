@@ -7,11 +7,15 @@ the country's front page (`CONTRIBUTING.md`).
 
 Anchor entity: [[NO]]
 
-> **Sourcing caveat.** Every Norwegian entity below was compiled from
-> search-engine results only: the cited pages were confirmed to exist but
-> were **not read**, because the working environment blocked page
-> retrieval. They carry `verification: search-only`. See
-> `discovery/reverification-allowlist.md`.
+> **Re-verified 2026-08-22.** Every Norwegian entity below, plus
+> [[INTL-EEA-AGREEMENT]] and [[INTL-EEA-JCD-154-2018]], now carries
+> `verification: primary-source`. The network egress restriction this
+> caveat described no longer blocks `eur-lex.europa.eu` or
+> `europarl.europa.eu` — both were read directly this pass. A significant
+> finding: [[NO-NSM]]'s own website confirms NSM is one of Norway's three
+> intelligence, surveillance and security services, overturning the
+> entity's previous restraint on that question (see the entity for the
+> full account).
 
 > ⚠ **`NO` must be quoted in YAML.** `country: NO` unquoted parses as the
 > boolean `false` under YAML 1.1, which is what PyYAML implements. Every
@@ -31,6 +35,7 @@ Anchor entity: [[NO]]
 - [[NO-SSB]] — Statistisk sentralbyrå _(⚠ the only statistical office in the
   Atlas with **no** [[EU-ESS]] edge and no [[UN-CES]] edge)_
 - [[NO-KARTVERKET]] — national mapping and cadastral authority
+  _(`participates-in` [[UN-GGIM]], confirmed 2026-08-22)_
 
 ## Legislation
 
@@ -40,8 +45,9 @@ Anchor entity: [[NO]]
 
 - [[NO-ID-PORTEN]] — the national login solution _(**no eIDAS relationship
   in either direction**, like [[GB-ONE-LOGIN]])_
-- [[NO-ALTINN]] — the national platform for digital dialogue _(⚠ no
-  `maintained-by` edge — see the entity)_
+- [[NO-ALTINN]] — the national platform for digital dialogue _(`maintained-by`
+  [[NO-DIGDIR]] at `confidence: low`, found 2026-08-22 via the site's own
+  publisher footer)_
 
 ---
 
@@ -73,22 +79,29 @@ Commission, and the GDPR's cooperation mechanisms run through EEA-specific
 channels — which is why [[NO-DATATILSYNET]] carries no `participates-in`
 [[EU-EDPB]] edge where [[NL-AP]] and [[IE-DPC]] do.
 
-**The EEA Agreement and JCD No 154/2018 are not Atlas entities.** Until one
-of them is, Norway's route to EU instruments is recorded in prose and not in
-the graph. Both are queued in `discovery/candidates.md`.
+**[[INTL-EEA-AGREEMENT]] and [[INTL-EEA-JCD-154-2018]] are now Atlas
+entities**, both re-verified in the same pass as this index, and Norway's
+route to [[EU-GDPR]] is drawable end to end through them rather than
+recorded only in prose.
 
 ## Not modelled
 
-- The **EEA Agreement**, the **EEA Joint Committee**, **EFTA**, the **EFTA
-  Surveillance Authority** and the **EFTA Court**.
-- **Norway's intelligence services** — Etterretningstjenesten and PST. The
-  country has a national security authority ([[NO-NSM]]) and no services,
-  which is not a complete picture; contrast the seven countries covered by
-  the intelligence batch.
-- The **sikkerhetsloven** (Security Act), [[NO-NSM]]'s statutory basis, and
-  the **statistikkloven**, [[NO-SSB]]'s.
-- **Brønnøysundregistrene**, and therefore who actually operates
-  [[NO-ALTINN]].
+- The **EEA Joint Committee** itself (as opposed to its decisions), **EFTA**,
+  the **EFTA Surveillance Authority** and the **EFTA Court**.
+- **Norway's intelligence services** — Etterretningstjenesten and PST.
+  [[NO-NSM]]'s own site now confirms it is one of Norway's three
+  intelligence, surveillance and security services alongside these two —
+  see the entity — but they remain unmodelled themselves, so the country
+  still appears with one of three services; contrast the seven countries
+  covered by the intelligence batch.
+- The **sikkerhetsloven** (Security Act) — named this pass as the 1998
+  Act, though whether that is still current or superseded by a newer
+  digital-security statute was not resolved — and the **statistikkloven**,
+  [[NO-SSB]]'s statutory basis.
+- Whether [[NO-DIGDIR]] currently operates [[NO-ALTINN]] outright or
+  alongside a continuing **Brønnøysundregistrene** role — the entity now
+  carries `maintained-by` at low confidence on the strength of a site
+  footer, not a stated operating role.
 - **Standard Norge**, the national standards body — the same gap Belgium,
   France, Spain and Poland carry.
 - Whether **INSPIRE** or **eIDAS** were incorporated into the EEA Agreement.

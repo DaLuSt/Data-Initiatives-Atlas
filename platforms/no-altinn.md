@@ -15,11 +15,10 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -35,8 +34,15 @@ relationships:
   - type: part-of
     target: "NO"
     source: fact
-    evidence: "Altinn is Norway's national platform for digital dialogue between public agencies, businesses and citizens, named among the society-critical common solutions Digitaliseringsdirektoratet is modernising (altinn.no; digdir.no). NOT READ — search-only. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    evidence: "Confirmed by reading altinn.no directly (2026-08-22), whose homepage carries the Digdir logo throughout and identifies its publisher in the footer as 'Digdir Digitaliseringsdirektoratet, Postboks 1382 Vika, 0114 Oslo. Org.nr. 991 825 827.' digdir.no independently names Altinn among the society-critical common solutions Digitaliseringsdirektoratet is modernising. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
     confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: maintained-by
+    target: NO-DIGDIR
+    source: interpretation
+    evidence: "altinn.no's own site footer, read directly (2026-08-22), identifies the publisher as 'Digdir Digitaliseringsdirektoratet, Postboks 1382 Vika, 0114 Oslo. Org.nr. 991 825 827' — Digdir's own organisation number and address, appearing on Altinn's own site rather than in a third-party description. This is new evidence this pass: the entity previously found no source naming Altinn's current operator, only its historical association with Brønnøysundregistrene. A site's own publisher footer is not the same claim as an explicit 'Digdir operates Altinn' sentence, hence `source: interpretation` rather than `fact`."
+    confidence: low
     valid_from: null
     valid_until: null
 
@@ -44,42 +50,50 @@ sources:
   - title: "Altinn"
     url: "https://www.altinn.no/"
     publisher: "Altinn / Digitaliseringsdirektoratet"
+    accessed: "2026-08-22"
   - title: "Kraftig vekst i bruk av digitale fellesløsningar"
     url: "https://www.digdir.no/digdir/kraftig-vekst-i-bruk-av-felleslosninger/1206"
     publisher: "Digitaliseringsdirektoratet (Digdir)"
+    accessed: "2026-08-22"
 ---
 
 # Altinn
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`. ⚠ `coverage: low`.
+> **Verified 2026-08-22.** Both cited pages were read directly. A finding
+> changes this entity's previous conclusion: see "A custodian found after
+> all" below.
 
 ## Description
 
-Altinn is Norway's national platform for digital dialogue between public
+Confirmed by reading altinn.no directly (2026-08-22). Altinn is Norway's national platform for digital dialogue between public
 agencies, businesses and citizens. The sources name it, alongside
 [[NO-ID-PORTEN]], among the **society-critical common solutions**
 [[NO-DIGDIR]] is modernising.
 
-## ⚠ No `maintained-by` edge, unlike [[NO-ID-PORTEN]]
+## A custodian found after all — at low confidence
 
-The distinction is deliberate and rests on what the sources actually say.
+This entity previously concluded that no source named Altinn's current
+operator: Digdir's own page lists what it has *responsibility for
+operation, development and management* of — ID-porten, the contact and
+reservation register, the digital mailbox, eSignering, ELMA, eInnsyn,
+eFormidling — and Altinn is not on that list, appearing instead in a
+sentence about solutions Digdir *modernises*.
 
-Digdir's own page lists the solutions it has *responsibility for operation,
-development and management* of: ID-porten, the contact and reservation
-register, the digital mailbox, eSignering, ELMA, eInnsyn, eFormidling.
-**Altinn is not in that list.** It appears instead in a sentence about
-solutions Digdir *modernises*.
+That distinction still holds; no source states in a sentence that Digdir
+operates Altinn. But reading altinn.no's own site directly this pass
+found something the earlier search-only compile could not: the site's
+own footer publisher block reads "Digdir Digitaliseringsdirektoratet,
+Postboks 1382 Vika, 0114 Oslo. Org.nr. 991 825 827" — Digdir's own
+address and organisation number, on Altinn's own page. `maintained-by`
+[[NO-DIGDIR]] is now asserted on that basis, at `confidence: low` and
+`source: interpretation` — a publisher footer is real evidence of who
+currently runs a site, but it is not the same claim as an explicit
+operating statement.
 
-Altinn has historically been operated by the Brønnøysund Register Centre
-(Brønnøysundregistrene), with Digdir's role changing over time. Which body
-holds it today was not established, so no edge is asserted — the same
-refusal [[NL-DATA-OVERHEID]] and [[ES-DATOS-GOB-ES]] carry for want of a
-custodian.
-
-Two entities in one batch, one sentence apart in the same source, and only
-one of them gets the edge. That is the sourcing standard working.
+Altinn was historically operated by the Brønnøysund Register Centre
+(Brønnøysundregistrene). Whether that arrangement has formally ended, or
+Digdir now operates the technical platform under a continuing
+Brønnøysundregistrene role, was not established.
 
 ## Not modelled
 
@@ -88,6 +102,11 @@ one of them gets the edge. That is the sourcing standard working.
   sits.
 - Altinn's **service catalogue** and its authorisation model.
 
+## Relationships
+
+- `part-of` [[NO]].
+- `maintained-by` [[NO-DIGDIR]], at `confidence: low` — see above.
+
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, both read directly this pass.

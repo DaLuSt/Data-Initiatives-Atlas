@@ -21,11 +21,10 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -37,7 +36,7 @@ relationships:
   - type: part-of
     target: INTL-COE
     source: fact
-    evidence: "Norway is one of the 46 member states of the Council of Europe, an intergovernmental organisation separate from the European Union (coe.int 'The Council of Europe's 46 member states'). NOT READ — search-only. Anchor edge under metadata/relationship-types.md §2.3: it records Council of Europe membership and asserts no more than that. Added in the European country batch so that all fifty anchors carry the same membership edge."
+    evidence: "NOT independently re-confirmed 2026-08-22: coe.int returns a bot-defense challenge (403, Cloudflare 'Attention Required!') and was not read, the same obstacle found on GB's and CH's identical edges. The claim (Norway is one of the 46 member states of the Council of Europe, an intergovernmental organisation separate from the European Union) is retained rather than removed, since a bot-wall is not evidence it is wrong. Anchor edge under metadata/relationship-types.md §2.3: it records Council of Europe membership and asserts no more than that. Added in the European country batch so that all fifty anchors carry the same membership edge."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -46,15 +45,18 @@ sources:
   - title: "The Council of Europe's 46 member states"
     url: "https://www.coe.int/en/web/portal/46-members-states"
     publisher: "Council of Europe"
-  - title: "NO — Norway (ISO 3166-1 country code)"
-    url: "https://www.iso.org/obp/ui/#iso:code:3166:NO"
-    publisher: "International Organization for Standardization (ISO)"
+  - title: "Norway"
+    url: "https://en.wikipedia.org/wiki/Norway"
+    publisher: "Wikipedia"
+    accessed: "2026-08-22"
   - title: "Decision of the EEA Joint Committee No 154/2018 of 6 July 2018 amending Annex XI and Protocol 37 to the EEA Agreement"
     url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.L_.2018.183.01.0023.01.ENG"
     publisher: "EUR-Lex / Publications Office of the European Union"
+    accessed: "2026-08-22"
   - title: "Data Protected — Norway"
     url: "https://www.linklaters.com/en/insights/data-protected/data-protected---norway"
     publisher: "Linklaters"
+    accessed: "2026-08-22"
   - title: "Norway's agreements with the EU"
     url: "https://www.regjeringen.no/en/topics/european-policy/norway-eu/eos-avtalen/id685024/"
     publisher: "Regjeringen (Norwegian Government)"
@@ -62,10 +64,17 @@ sources:
 
 # Norway
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read, because the working
-> environment blocks page retrieval. `verification: search-only`. See
-> `discovery/reverification-allowlist.md`.
+> **Verified 2026-08-22.** en.wikipedia.org's Norway article, EUR-Lex's
+> own text of JCD No 154/2018, and the European Parliament's EEA/EFTA
+> fact sheet were all read directly this pass — the network egress
+> restriction this caveat originally described no longer applies to
+> `eur-lex.europa.eu` or `europarl.europa.eu`, matching what the UK and
+> German batches found for `legislation.gov.uk`. `coe.int` and
+> `www.iso.org` remain bot-walled; the ISO citation has been dropped
+> (unread, unattested) and Wikipedia added in its place for the
+> alternative names. `regjeringen.no` (the Norwegian government's own
+> site) is also Cloudflare-bot-walled ("Just a moment...") and stays
+> cited but unread.
 
 ## Description
 
@@ -145,4 +154,8 @@ relationship exists.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter. The Wikipedia article, the EUR-Lex JCD text and
+the European Parliament fact sheet were read directly this pass;
+`coe.int` remains cited but unread (bot-walled), and `linklaters.com` /
+`regjeringen.no` were fetched for the adjacent Norwegian entities in this
+same pass rather than for this one specifically.

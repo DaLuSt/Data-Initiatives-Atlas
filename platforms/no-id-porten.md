@@ -2,8 +2,7 @@
 id: NO-ID-PORTEN
 type: platform
 name: ID-porten
-alternative_names:
-  - ID-porten eID
+alternative_names: []
 description: >
   Norway's common public-sector login solution, providing electronic
   identification for access to national and municipal digital services. It
@@ -17,11 +16,10 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -38,19 +36,33 @@ sources:
   - title: "ID-porten"
     url: "https://samarbeid.digdir.no/id-porten/id-porten/23"
     publisher: "Digitaliseringsdirektoratet (Digdir)"
+    accessed: "2026-08-22"
   - title: "Kva er Digitaliseringsdirektoratet?"
     url: "https://www.digdir.no/digdir/kva-er-digitaliseringsdirektoratet/703"
     publisher: "Digitaliseringsdirektoratet (Digdir)"
+    accessed: "2026-08-22"
+  - title: "Kraftig vekst i bruk av digitale fellesløsningar"
+    url: "https://www.digdir.no/digdir/kraftig-vekst-i-bruk-av-felleslosninger/1206"
+    publisher: "Digitaliseringsdirektoratet (Digdir)"
+    accessed: "2026-08-22"
 ---
 
 # ID-porten
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`. ⚠ `coverage: low`.
+> **Verified 2026-08-22.** All three cited pages were fetched; two were
+> read directly (`digdir.no`'s "Kva er Digitaliseringsdirektoratet?" and
+> "Kraftig vekst" pages) and confirm ID-porten by name. The
+> `samarbeid.digdir.no` collaboration-portal page returned only
+> navigation and cookie-banner text for ID-porten's specific section —
+> the substantive page content did not load as fetched — so it is
+> retained as a source without being the basis for any claim here. The
+> unattested alternative name "ID-porten eID" has been removed.
 
 ## Description
 
+Confirmed by reading digdir.no directly (2026-08-22): "Bare det siste
+året har antall tjenester som benytter ID-porten økt med 77 prosent"
+(the number of services using ID-porten grew 77% in the last year alone).
 ID-porten is Norway's common public-sector login solution — the national
 electronic identification gateway for public digital services.
 
@@ -81,4 +93,5 @@ None asserted here. The `maintained-by` edge is asserted on
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter — see the caveat above for which were read
+directly.
