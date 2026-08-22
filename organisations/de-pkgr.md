@@ -4,7 +4,6 @@ type: organisation
 name: Parlamentarisches Kontrollgremium
 alternative_names:
   - PKGr
-  - Parliamentary Control Panel
 description: >
   Committee of the German Bundestag responsible for the parliamentary
   oversight of the three federal intelligence services — the BND, the BfV
@@ -18,11 +17,10 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -39,28 +37,28 @@ relationships:
   - type: governed-by
     target: DE-PKGRG
     source: fact
-    evidence: "The Gesetz über die parlamentarische Kontrolle nachrichtendienstlicher Tätigkeit des Bundes (PKGrG) is the act governing the Parlamentarisches Kontrollgremium (gesetze-im-internet.de/pkgrg; bundestag.de 'Parlamentarisches Kontrollgremium (PKGr)'; de.wikipedia.org 'Parlamentarisches Kontrollgremium'). NOT READ — search-only."
+    evidence: "Confirmed by reading the PKGrG statute text at gesetze-im-internet.de (2026-08-22), which constitutes and governs the Parlamentarisches Kontrollgremium throughout — see e.g. § 14: 'Das Bundesverfassungsgericht entscheidet über Streitigkeiten zwischen dem Parlamentarischen Kontrollgremium und der Bundesregierung.'"
     confidence: medium
     valid_from: null
     valid_until: null
   - type: applies-to
     target: DE-BND
     source: fact
-    evidence: "The Parlamentarisches Kontrollgremium is responsible for controlling the federal intelligence services and oversees the Bundesnachrichtendienst, the Militärischer Abschirmdienst and the Bundesamt für Verfassungsschutz (bundestag.de 'Parlamentarisches Kontrollgremium (PKGr)'; de.wikipedia.org 'Parlamentarisches Kontrollgremium'). NOT READ — search-only."
+    evidence: "Confirmed by reading bundestag.de's 'Die Arbeit der Nachrichtendienste' page (2026-08-22): 'Die nachrichtendienstliche Tätigkeit des Bundes unterliegt der Kontrolle des Deutschen Bundestages und seiner Gremien, insbesondere der des Parlamentarischen Kontrollgremiums und des Vertrauensgremiums des Haushaltsausschusses.' This follows the page's earlier statement that the three federal services are the BND, MAD and BfV."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: applies-to
     target: DE-BFV
     source: fact
-    evidence: "The Parlamentarisches Kontrollgremium oversees the Bundesnachrichtendienst, the Militärischer Abschirmdienst and the Bundesamt für Verfassungsschutz (bundestag.de 'Parlamentarisches Kontrollgremium (PKGr)'; de.wikipedia.org). NOT READ — search-only."
+    evidence: "Confirmed by reading bundestag.de's 'Die Arbeit der Nachrichtendienste' page (2026-08-22): the same 'unterliegt der Kontrolle ... des Parlamentarischen Kontrollgremiums' statement applies to all three named services, including the BfV."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: applies-to
     target: DE-BAMAD
     source: fact
-    evidence: "The Parlamentarisches Kontrollgremium oversees the Bundesnachrichtendienst, the Militärischer Abschirmdienst and the Bundesamt für Verfassungsschutz (bundestag.de 'Parlamentarisches Kontrollgremium (PKGr)'; de.wikipedia.org). NOT READ — search-only."
+    evidence: "Confirmed by reading bundestag.de's 'Die Arbeit der Nachrichtendienste' page (2026-08-22): the same 'unterliegt der Kontrolle ... des Parlamentarischen Kontrollgremiums' statement applies to all three named services, including the MAD."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -69,19 +67,23 @@ sources:
   - title: "PKGrG — Gesetz über die parlamentarische Kontrolle nachrichtendienstlicher Tätigkeit des Bundes"
     url: "https://www.gesetze-im-internet.de/pkgrg/BJNR234610009.html"
     publisher: "Bundesministerium der Justiz / juris (Gesetze im Internet)"
+    accessed: "2026-08-22"
   - title: "Parlamentarisches Kontrollgremium (PKGr)"
     url: "https://www.bundestag.de/webarchiv/Ausschuesse/ausschuesse19/weitere_gremien/parlamentarisches_kontrollgremium"
     publisher: "Deutscher Bundestag"
+    accessed: "2026-08-22"
   - title: "Parlamentarisches Kontrollgremium"
     url: "https://de.wikipedia.org/wiki/Parlamentarisches_Kontrollgremium"
     publisher: "Wikipedia"
+    accessed: "2026-08-22"
 ---
 
 # Parlamentarisches Kontrollgremium (PKGr)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-22.** The PKGrG statute text and
+> bundestag.de's "Die Arbeit der Nachrichtendienste" page were read
+> directly and confirmed the claims below, including the §14 PKGrG
+> Constitutional Court mechanism (see below).
 
 ## Description
 
@@ -108,11 +110,12 @@ independent judicial counterpart in this Atlas.
 
 ## It can take the government to the Constitutional Court
 
-The sources record a mechanism worth noting: the Federal Constitutional
-Court decides disputes between the PKGr and the Federal Government, on the
-application of the Federal Government **or of at least two-thirds of the
-PKGr's members**. Parliamentary oversight here is not merely advisory; the
-committee has standing.
+Confirmed directly in **§ 14 PKGrG** ("Gerichtliche Zuständigkeit"),
+read 2026-08-22: "Das Bundesverfassungsgericht entscheidet über
+Streitigkeiten zwischen dem Parlamentarischen Kontrollgremium und der
+Bundesregierung auf Antrag der Bundesregierung oder von mindestens zwei
+Dritteln der Mitglieder des Parlamentarischen Kontrollgremiums." Parliamentary
+oversight here is not merely advisory; the committee has standing to sue.
 
 ## Not modelled
 

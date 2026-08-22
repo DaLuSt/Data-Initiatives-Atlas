@@ -4,7 +4,6 @@ type: organisation
 name: Bundesnachrichtendienst
 alternative_names:
   - BND
-  - Federal Intelligence Service
 description: >
   Germany's foreign intelligence service, under the supervision of the Head
   of the Federal Chancellery. It gathers information of foreign and security
@@ -19,11 +18,10 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -41,14 +39,14 @@ relationships:
   - type: governed-by
     target: DE-BNDG
     source: fact
-    evidence: "Each of the three federal intelligence services has its own law: the BND is governed by the Gesetz über den Bundesnachrichtendienst (BNDG) (bundestag.de 'Die Arbeit der Nachrichtendienste'; gesetze-im-internet.de/bndg; geheimdienste.org 'Recht und Gesetz'). NOT READ — search-only."
+    evidence: "Confirmed by reading the BNDG statute text at gesetze-im-internet.de (2026-08-22), § 1(1): 'Der Bundesnachrichtendienst ist eine Bundesoberbehörde im Geschäftsbereich des Bundeskanzleramtes ... Der Bundesnachrichtendienst sammelt zur Gewinnung von Erkenntnissen über das Ausland, die von außen- und sicherheitspolitischer Bedeutung für die Bundesrepublik Deutschland sind.'"
     confidence: medium
     valid_from: null
     valid_until: null
   - type: governed-by
     target: DE-G10
     source: fact
-    evidence: "The essential legal foundations for data processing by the federal intelligence services are the BVerfSchG, the MADG, the BNDG, the G10G and the TKG; the main legal frameworks include the Gesetz zur Beschränkung des Brief-, Post- und Fernmeldegeheimnisses (Artikel 10-Gesetz, G10) (bfdi.bund.de 'Kontrolllandschaft Nachrichtendienste des Bundes'; bundestag.de; geheimdienste.org). NOT READ — search-only."
+    evidence: "Confirmed by reading bfdi.bund.de's 'Kontrolllandschaft Nachrichtendienste des Bundes' page (2026-08-22): 'Die wesentlichen Rechtsgrundlagen für Datenverarbeitungen der Nachrichtendienste des Bundes ... sind das BVerfSchG, das MADG, das BNDG, das G10G und das TKG.'"
     confidence: medium
     valid_from: null
     valid_until: null
@@ -57,22 +55,34 @@ sources:
   - title: "BNDG — Gesetz über den Bundesnachrichtendienst"
     url: "https://www.gesetze-im-internet.de/bndg/BJNR029790990.html"
     publisher: "Bundesministerium der Justiz / juris (Gesetze im Internet)"
+    accessed: "2026-08-22"
   - title: "Die Arbeit der Nachrichtendienste"
     url: "https://www.bundestag.de/webarchiv/Ausschuesse/ausschuesse20/weitere_gremien/parlamentarisches_kontrollgremium/nachrichtendienste-867434"
     publisher: "Deutscher Bundestag"
+    accessed: "2026-08-22"
   - title: "Aufsicht über die Nachrichtendienste des Bundes"
     url: "https://www.bfdi.bund.de/DE/Fachthemen/Inhalte/Nachrichtendienste/Kontrollandschaft-Nachrichtendienste-des-Bundes.html"
     publisher: "Bundesbeauftragte für den Datenschutz und die Informationsfreiheit (BfDI)"
+    accessed: "2026-08-22"
   - title: "Bundestag novelliert die Rechtsgrundlagen der Nachrichtendienste"
     url: "https://www.bundestag.de/dokumente/textarchiv/2023/kw46-de-bnd-976564"
     publisher: "Deutscher Bundestag"
+    accessed: "2026-08-22"
+  - title: "Unabhängiger Kontrollrat"
+    url: "https://de.wikipedia.org/wiki/Unabh%C3%A4ngiger_Kontrollrat"
+    publisher: "Wikipedia"
+    accessed: "2026-08-22"
 ---
 
 # Bundesnachrichtendienst (BND)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-22.** The BNDG statute text, the
+> Bundestag's "Die Arbeit der Nachrichtendienste" page, and the BfDI's
+> "Kontrolllandschaft Nachrichtendienste des Bundes" page were read directly
+> and confirmed the claims below. The "Bundestag novelliert die
+> Rechtsgrundlagen" article turned out, on reading, to concern a different
+> and unrelated 2022 Constitutional Court ruling (see below) — it is kept as
+> a source for that context, not for any relationship evidence.
 
 ## Description
 
@@ -119,13 +129,26 @@ timeline is unusual enough to record:
 - The **[[DE-PKGR]]** — the Bundestag's Parliamentary Control Panel — is the
   long-standing parliamentary control body for all three services.
 - The **[[DE-UKR]]**, an independent judicial-style control council, was
-  created for the BND specifically, and its provisions were subsequently
-  moved out of the BND-Gesetz in implementation of a Federal Constitutional
-  Court decision of **28 September 2022**.
+  legally established on 22 April 2021 (part of a BND-Gesetz amendment
+  implementing Bundesverfassungsgericht and Bundesverwaltungsgericht
+  requirements) and took over its duties on 1 January 2022. Confirmed on
+  de.wikipedia.org's "Unabhängiger Kontrollrat" page (2026-08-22): its
+  provisions are to be moved out of the BND-Gesetz and into a dedicated
+  "Gesetz über den Unabhängigen Kontrollrat", in implementation of a
+  Federal Constitutional Court decision of **28 September 2022**.
 - Reform proposals reported by the sources would upgrade the UKR to cover
   [[DE-BFV]] as well, not only the BND.
 
 The last of those is a **proposal**, and [[DE-UKR]] records it as one.
+
+**A correction on sourcing, not substance:** the "28 September 2022"
+date and the UKR/BND-Gesetz link were previously cited to the Bundestag's
+"Bundestag novelliert die Rechtsgrundlagen der Nachrichtendienste" article.
+Reading that article shows it is about a *different* Constitutional Court
+ruling from the same date (1 BvR 2354/13, on data-transmission provisions
+in §§ 20–21 of [[DE-BVERFSCHG]]) — it does not mention the UKR at all. The
+UKR/BND-Gesetz claim is correct, but the source for it is
+de.wikipedia.org's UKR article, not this one.
 
 ## Not modelled
 

@@ -4,7 +4,6 @@ type: organisation
 name: Bundesbeauftragte für den Datenschutz und die Informationsfreiheit
 alternative_names:
   - BfDI
-  - Federal Commissioner for Data Protection and Freedom of Information
 description: >
   Independent supreme federal authority for data protection and freedom of
   information in Germany, seated in Bonn. It is the data-protection
@@ -20,11 +19,10 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -39,21 +37,21 @@ relationships:
   - type: participates-in
     target: EU-EDPB
     source: fact
-    evidence: "Article 68(3) GDPR provides that the European Data Protection Board shall be composed of the head of one supervisory authority of each Member State and of the European Data Protection Supervisor, or their respective representatives; Article 68(3) further provides that where in a Member State more than one supervisory authority is responsible for monitoring the application of the Regulation, a joint representative shall be appointed in accordance with that Member State's law — which is the arrangement that applies to Germany, with a federal commissioner and seventeen authorities in total (gdpr-info.eu 'Art. 68 GDPR — European Data Protection Board'; gdprhub.eu 'Article 68 GDPR'; edpb.europa.eu). NOT READ — search-only."
+    evidence: "Confirmed by reading gdpr-info.eu's text of Article 68(3) GDPR (2026-08-22): 'the European Data Protection Board shall be composed of the head of one supervisory authority of each Member State ... Where in a Member State more than one supervisory authority is responsible for monitoring the application of the provisions pursuant to this Regulation, a joint representative shall be appointed in accordance with that Member State's law.' Germany has seventeen data-protection supervisory authorities (the BfDI plus one per Land), so this joint-representative mechanism is the basis for the BfDI's participation. Which authority currently holds that role was not established."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: applies-to
     target: DE-BDSG
     source: fact
-    evidence: "The BfDI is the independent supreme federal authority for data protection and freedom of information in Germany and the data-protection supervisory authority for all federal public bodies, certain social security institutions, the fiscal authorities and telecommunications and postal undertakings; the Bundesdatenschutzgesetz is the federal act under which that supervision is exercised (bfdi.bund.de 'Aufgaben des BfDI'; de.wikipedia.org 'Bundesbeauftragter fuer den Datenschutz und die Informationsfreiheit'; wirtschaftslexikon.gabler.de). NOT READ — search-only."
+    evidence: "Confirmed by reading bfdi.bund.de's 'Aufgaben und Befugnisse der BfDI' page (2026-08-22): 'Die BfDI ist die datenschutzrechtliche Aufsichtsbehörde über alle öffentlichen Stellen des Bundes wie auch für bestimmte Träger der sozialen Sicherung. Außerdem beaufsichtigt sie die Finanzbehörden und die Telekommunikations- und Postdienstunternehmen.' de.wikipedia.org confirms the office is bound by §11 and §12 BDSG (term of office and remuneration), which is the BfDI's own statutory basis under the Bundesdatenschutzgesetz."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: applies-to
     target: DE-IFG
     source: fact
-    evidence: "Among the BfDI's tasks is helping persons who consider their fundamental right of access to information under the IFG to have been violated (bfdi.bund.de 'Aufgaben und Befugnisse der BfDI'; de.wikipedia.org). NOT READ — search-only."
+    evidence: "Confirmed by reading bfdi.bund.de's 'Aufgaben und Befugnisse der BfDI' page (2026-08-22): 'Die BfDI gibt Auskunft, wenn eine der Aufsicht der BfDI unterliegende Stelle ihre Rechte in den Bereichen Datenschutz oder Informationsfreiheit verletzt hat.'"
     confidence: medium
     valid_from: null
     valid_until: null
@@ -62,28 +60,37 @@ sources:
   - title: "Art. 68 GDPR — European Data Protection Board"
     url: "https://gdpr-info.eu/art-68-gdpr/"
     publisher: "gdpr-info.eu (Intersoft Consulting)"
+    accessed: "2026-08-22"
   - title: "Article 68 GDPR"
     url: "https://gdprhub.eu/Article_68_GDPR"
     publisher: "GDPRhub (noyb)"
+    accessed: "2026-08-22"
   - title: "Aufgaben und Befugnisse der BfDI"
     url: "https://www.bfdi.bund.de/DE/BfDI/Inhalte/BfDI/AufgabenBFDI.html"
     publisher: "Bundesbeauftragte für den Datenschutz und die Informationsfreiheit (BfDI)"
+    accessed: "2026-08-22"
   - title: "Der Bundesbeauftragte für den Datenschutz und die Informationsfreiheit (BfDI)"
     url: "https://www.bfdi.bund.de/DE/BfDI/Inhalte/Datenschutzpfad/BfDI.html"
     publisher: "Bundesbeauftragte für den Datenschutz und die Informationsfreiheit (BfDI)"
+    accessed: "2026-08-22"
   - title: "Bundesbeauftragter für den Datenschutz und die Informationsfreiheit"
     url: "https://de.wikipedia.org/wiki/Bundesbeauftragter_f%C3%BCr_den_Datenschutz_und_die_Informationsfreiheit"
     publisher: "Wikipedia"
+    accessed: "2026-08-22"
   - title: "Bundesbeauftragter für den Datenschutz und die Informationsfreiheit (BfDI)"
     url: "https://wirtschaftslexikon.gabler.de/definition/bundesbeauftragter-fuer-den-datenschutz-und-die-informationsfreiheit-bfdi-31020"
     publisher: "Gabler Wirtschaftslexikon"
+    accessed: "2026-08-22"
 ---
 
 # Bundesbeauftragte für den Datenschutz und die Informationsfreiheit (BfDI)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-22.** The BfDI's own task pages
+> (`AufgabenBFDI.html`, `Datenschutzpfad/BfDI.html`), gdpr-info.eu's text of
+> Article 68(3) GDPR, and de.wikipedia.org were read directly and confirmed
+> the claims below. `gdprhub.eu` returned a bot-defense challenge page
+> rather than content and was not read; it remains listed as a source but
+> nothing here is attributed to it alone.
 
 ## Description
 
@@ -167,7 +174,8 @@ established**, and the entity does not claim to know.
 
 ## Relationships
 
-- `applies-to` [[DE-IFG]].
+- `applies-to` [[DE-IFG]] and [[DE-BDSG]].
+- `participates-in` [[EU-EDPB]].
 
 ## Sources
 

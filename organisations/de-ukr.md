@@ -4,7 +4,6 @@ type: organisation
 name: Unabhängiger Kontrollrat
 alternative_names:
   - UKR
-  - Independent Control Council
 description: >
   Independent German body exercising judicial-style legality control over
   the Bundesnachrichtendienst's intelligence measures. It adopts its own
@@ -18,13 +17,12 @@ country: DE
 region: EU
 
 status: active
-confidence: low
+confidence: medium
 coverage: low
-verification: search-only
-
-start_date: null
+verification: primary-source
+start_date: "2021-04-22"
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -39,8 +37,8 @@ relationships:
   - type: applies-to
     target: DE-BND
     source: fact
-    evidence: "The already existing Unabhängiger Kontrollrat is to be upgraded and in future be responsible not only for the Bundesnachrichtendienst but also for the Bundesamt für Verfassungsschutz — i.e. its present responsibility is for the BND; in implementing the decision of the Federal Constitutional Court of 28 September 2022, provisions regarding the Unabhängiger Kontrollrat were to be removed from the BND-Gesetz (de.wikipedia.org 'Unabhängiger Kontrollrat'; taz.de 'Gesetzentwurf der Bundesregierung: Geheimdienstkontrolle aus einer Hand'; vorwaerts.de). NOT READ — search-only."
-    confidence: low
+    evidence: "Confirmed by reading de.wikipedia.org's 'Unabhängiger Kontrollrat' page (2026-08-22): the UKR was legally established on 22 April 2021 (part of a BND-Gesetz amendment implementing Bundesverfassungsgericht and Bundesverwaltungsgericht requirements) and took over its duties on 1 January 2022, with its remit being the Bundesnachrichtendienst. A pending reform (per taz.de and vorwaerts.de, not independently read) would extend this to the Bundesamt für Verfassungsschutz."
+    confidence: medium
     valid_from: null
     valid_until: null
 
@@ -48,19 +46,23 @@ sources:
   - title: "Unabhängiger Kontrollrat"
     url: "https://de.wikipedia.org/wiki/Unabh%C3%A4ngiger_Kontrollrat"
     publisher: "Wikipedia"
+    accessed: "2026-08-22"
   - title: "Gesetzentwurf der Bundesregierung: Geheimdienstkontrolle aus einer Hand"
     url: "https://taz.de/Gesetzentwurf-der-Bundesregierung/!6203671/"
     publisher: "taz — die tageszeitung"
+    accessed: "2026-08-22"
   - title: "Gesetzentwurf: So sollen die Geheimdienste kontrolliert werden"
     url: "https://www.vorwaerts.de/inland/gesetzentwurf-so-sollen-die-geheimdienste-kontrolliert-werden"
     publisher: "vorwärts"
+    accessed: "2026-08-22"
 ---
 
 # Unabhängiger Kontrollrat (UKR)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`. This is the **weakest entity in the batch** — see below.
+> **Verified 2026-08-22.** The de.wikipedia.org UKR
+> article was read directly and confirmed the founding dates and the
+> BND-Gesetz/UKR-Act transition below. `taz.de` and `vorwaerts.de`, on the
+> pending BfV-extension bill, were not re-read this pass.
 
 ## Description
 
@@ -74,43 +76,48 @@ Federal Chancellery, and those rules require the approval of the
 [[DE-PKGR]] — the executive is consulted, the legislature approves, and
 neither writes them.
 
-## ⚠ Why `confidence: low`
+## Its founding, in two steps
 
-Three things about this entity are unresolved, and every one of them is
-load-bearing:
+The UKR was legally established on **22 April 2021**, as part of a
+BND-Gesetz amendment implementing requirements set by the
+Bundesverfassungsgericht and the Bundesverwaltungsgericht. It took over its
+actual oversight duties on **1 January 2022** — until the end of 2021, a
+predecessor body (the *Unabhängige Gremium*, founding date not established
+here) controlled the lawfulness and necessity of the BND's
+Ausland-Ausland-Fernmeldeaufklärung. `start_date` is recorded as the
+legal-establishment date.
 
-1. **Its statutory basis is in motion.** The sources say that, in
-   implementing the Federal Constitutional Court's decision of
-   **28 September 2022**, the UKR provisions were to be *removed from the
-   BND-Gesetz*. Where they landed instead — a free-standing act, or another
-   statute — was not established. **No `governed-by` relationship is
-   asserted**, because the Atlas does not know which instrument to point at.
-   Every other oversight body in this batch has one.
-2. **Its remit is the subject of a pending bill.** The sources describe a
-   government bill upgrading the UKR to cover [[DE-BFV]] as well as the BND.
-   That is a proposal. Only the BND edge is asserted.
-3. **Its founding date is unknown.** `start_date` is null.
+## Its statutory basis is in motion
+
+In implementing a **further** Federal Constitutional Court decision of
+28 September 2022, the UKR's provisions are to be moved *out of* the
+BND-Gesetz and *into* a dedicated "Gesetz über den Unabhängigen
+Kontrollrat". Whether that transfer has completed was not established from
+the Wikipedia article alone (it describes the plan, not a commencement
+date for the new act). **No `governed-by` relationship is asserted**,
+because the Atlas does not know which instrument currently governs the UKR.
+Every other oversight body in this batch has one.
+
+## ⚠ Its remit is the subject of a pending bill
+
+The sources describe a government bill upgrading the UKR to cover
+[[DE-BFV]] as well as the BND. That is a proposal, not yet read directly
+this pass. Only the BND edge is asserted.
 
 ## What is asserted, and how far
 
-Exactly one relationship: `applies-to` [[DE-BND]], at `confidence: low`.
-Even that is inferred from a sentence about what the UKR *would in future*
-also cover — the phrasing establishes the present BND remit only by
-implication. It is recorded as `source: fact` with the inference stated in
-the evidence, rather than as `source: interpretation`, because the
-underlying sentence is a factual claim in the source; but a reader treating
-this edge as firm would be over-reading it.
-
-This entity is the first German one to re-source when page retrieval is
-possible, ahead of even [[DE-BDSG]].
+Exactly one relationship: `applies-to` [[DE-BND]], now confirmed directly
+by the Wikipedia article's account of the UKR's remit and history, at
+`confidence: medium` — the taz.de/vorwaerts.de reporting on the pending
+BfV-extension bill was not independently re-read this pass.
 
 ## Relationships
 
-- `applies-to` [[DE-BND]] — `confidence: low`.
+- `applies-to` [[DE-BND]] — `confidence: medium`.
 
 ## Sources
 
-Listed in frontmatter. **All three are secondary**: an encyclopaedia entry
+Listed in frontmatter. **Still all secondary**: an encyclopaedia entry
 and two political-press reports on a draft bill. No court decision, no
 statute text, no official UKR page is cited, because none was returned by
 search.

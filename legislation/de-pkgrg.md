@@ -5,7 +5,6 @@ name: Gesetz über die parlamentarische Kontrolle nachrichtendienstlicher Tätig
 alternative_names:
   - PKGrG
   - Kontrollgremiumgesetz
-  - Parliamentary Control Panel Act
 description: >
   German federal act governing the parliamentary oversight of federal
   intelligence activity and the Parlamentarisches Kontrollgremium of the
@@ -20,11 +19,10 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -45,16 +43,18 @@ sources:
   - title: "Parlamentarisches Kontrollgremium (PKGr)"
     url: "https://www.bundestag.de/webarchiv/Ausschuesse/ausschuesse19/weitere_gremien/parlamentarisches_kontrollgremium"
     publisher: "Deutscher Bundestag"
+    accessed: "2026-08-22"
   - title: "Parlamentarisches Kontrollgremium"
     url: "https://de.wikipedia.org/wiki/Parlamentarisches_Kontrollgremium"
     publisher: "Wikipedia"
+    accessed: "2026-08-22"
 ---
 
 # PKGrG — Kontrollgremiumgesetz
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-22.** The PKGrG statute text at
+> gesetze-im-internet.de was read directly and confirmed the
+> Constitutional Court mechanism below (§ 14).
 
 ## Description
 
@@ -63,10 +63,14 @@ and constitutes [[DE-PKGR]].
 
 ## An oversight statute with a route to the Constitutional Court
 
-The mechanism recorded in the sources is unusual: the Federal Constitutional
-Court decides disputes between the [[DE-PKGR]] and the Federal Government,
-on the application of the government **or of at least two-thirds of the
-panel's members**.
+Confirmed directly in the statute text, **§ 14 PKGrG** ("Gerichtliche
+Zuständigkeit"), read 2026-08-22: "Das Bundesverfassungsgericht entscheidet
+über Streitigkeiten zwischen dem Parlamentarischen Kontrollgremium und der
+Bundesregierung auf Antrag der Bundesregierung oder von mindestens zwei
+Dritteln der Mitglieder des Parlamentarischen Kontrollgremiums." The
+mechanism is unusual: the Federal Constitutional Court decides disputes
+between [[DE-PKGR]] and the Federal Government, on the application of the
+government **or of at least two-thirds of the panel's members**.
 
 Parliamentary oversight of intelligence is often a matter of convention and
 comity. Here it is justiciable, and the minority-friendly threshold matters
