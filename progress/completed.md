@@ -1,5 +1,108 @@
 # Completed Batches
 
+## The verification-gap multi-batch push
+
+**Date:** 2026-08-22
+
+Picked up "close the verification gap" as an open-ended, multi-batch task
+rather than a single fixed scope: work coherent clusters of `search-only`
+entities end to end (every cited page read, corrections made,
+`tools/reverify.py --write` run per entity), commit and push after each
+cluster, and stop when the session's natural unit of work is done rather
+than at an arbitrary entity count. Four clusters, 37 entities moved to
+`primary-source`, one entity (see below) deliberately held back despite
+being fully read.
+
+### German intelligence oversight (10 entities)
+
+[[DE-BFDI]], [[DE-BVERFSCHG]], [[DE-G10]], [[DE-MADG]], [[DE-BAMAD]],
+[[DE-BFV]], [[DE-BND]], [[DE-PKGR]], [[DE-PKGRG]] and [[DE-UKR]].
+
+The PKGrG's Constitutional Court dispute-resolution mechanism — the Federal
+Government or two-thirds of the PKGr's members can bring the Bundestag's
+oversight committee into conflict with the government before the court —
+is now sourced to the statute's own § 14, not just secondary accounts:
+*"Das Bundesverfassungsgericht entscheidet über Streitigkeiten zwischen dem
+Parlamentarischen Kontrollgremium und der Bundesregierung auf Antrag der
+Bundesregierung oder von mindestens zwei Dritteln der Mitglieder des
+Parlamentarischen Kontrollgremiums."*
+
+[[DE-BND]]'s "28 September 2022" claim about [[DE-UKR]]'s provisions moving
+out of the BND-Gesetz was cited to a Bundestag article that, read closely,
+covers a *different* ruling from the same date (on [[DE-BVERFSCHG]]
+transmission provisions). The claim itself was right — confirmed instead on
+de.wikipedia.org's UKR article — but the citation was wrong. [[DE-UKR]]
+also picked up a sourced `start_date` (22 April 2021) and a confidence
+upgrade from `low` to `medium` in the process.
+
+### German digital-government legislation and strategy (14 entities)
+
+[[DE-BNDG]], [[DE-BSTATG]], [[DE-DNG]], [[DE-EGOVG]], [[DE-IFG]],
+[[DE-DATENSTRATEGIE]], [[DE-DIGITALSTRATEGIE]],
+[[DE-MODERNISIERUNGSAGENDA-BUND]], [[DE-MODERNISIERUNGSAGENDA-FOEDERAL]],
+[[DE-BMDS]], [[DE-DEUTSCHLAND-STACK]], [[DE-BUNDID]], [[DE-GDNG]] and
+[[DE-GEMATIK]].
+
+**A real date correction.** [[DE-EGOVG]] recorded its in-force date as 31
+August 2013. The statute itself says otherwise: *"Es ist gem. Art. 31 Abs.
+1 dieses G am 1.8.2013 in Kraft getreten."* — 1 August, not 31. A handful of
+individual provisions did take effect later, on a staggered schedule
+through 2020, which is likely where the wrong date was conflated from.
+
+**Two "no date established" gaps, closed.** [[DE-GDNG]] now carries a
+`start_date` of 26 March 2024 (found on a dedicated Wikipedia article the
+original search apparently missed), and [[DE-BSTATG]] one of 22 January
+1987, both read directly from primary/near-primary sources rather than
+guessed.
+
+**A flagged gap, closed.** [[DE-BUNDID]] had explicitly logged its
+EUDI-Wallet connection as unsourced. bmds.bund.de now states it directly:
+*"Im Kontext der novellierten eIDAS-Verordnung wird die Anbindung der
+BundID an die EU Digital Identity Wallet (EUDI-Wallet) ... vorbereitet."*
+Recorded at low confidence because the connection is described as being
+prepared, not live.
+
+**A tooling limit, documented rather than worked around.**
+[[DE-DIGITALSTRATEGIE]]'s claims were read and confirmed via a
+Bundesrechnungshof PDF report (extracted with `pdftotext`), but the entity
+stays `verification: search-only`: `tools/reverify.py` fetches sources as
+raw bytes and cannot extract text from a PDF, so it cannot corroborate a
+claim that only a PDF states verbatim, and the exact quoted title isn't
+repeated on the entity's other, HTML sources. Forcing the write past that
+refusal was deliberately not done — the caveat says plainly that the
+content is verified even though the field is not.
+
+### UK intelligence oversight (10 entities)
+
+[[GB-ISA-1994]], [[GB-SSA-1989]], [[GB-JSA-2013]], [[GB-IPA-2016]],
+[[GB-DPA-2018]], [[GB-GCHQ]], [[GB-MI5]], [[GB-SIS]], [[GB-ISC]] and
+[[GB-IPCO]].
+
+`legislation.gov.uk` carried a caveat on four of these entities saying it
+was blocked by this environment's egress proxy. It is not, and was fetched
+successfully throughout this cluster — the caveat was simply wrong,
+inherited from an earlier session and never re-checked. Three placeholder
+dates (`YYYY-01-01`) were replaced with the acts' actual dates: [[GB-ISA-1994]]
+enacted 26 May 1994, [[GB-SSA-1989]] 27 April 1989, and [[GB-ISC]]'s own
+founding at 25 June 2013 — the commencement date of [[GB-JSA-2013]] section
+1, two months after the Act's Royal Assent.
+
+### UK data protection (3 entities)
+
+[[GB-UK-GDPR]], [[GB-DUAA]] and [[GB-ICO]].
+
+[[GB-UK-GDPR]]'s canonical name, "UK General Data Protection Regulation",
+never appeared verbatim in any source read; every source — official and
+otherwise — calls it "UK GDPR", which the entity's own body already used
+throughout. Renamed the entity's `name` field to match actual usage rather
+than an invented full form. [[GB-DUAA]]'s § 117 was read directly:
+*"A body corporate called the Information Commission is established"* —
+confirming the DUAA/ICO succession mechanism word for word. [[GB-ICO]]'s
+open question (has the Information Commission actually replaced it?) gets
+one weak, explicitly-labelled signal: Wikipedia's infobox currently lists
+the Information Commissioner as "Vacant" — suggestive of a transition in
+progress, not proof one has completed, and recorded as exactly that.
+
 ## The Batch 1 core-governance re-verification, and a research-queue cleanup
 
 **Date:** 2026-08-21/22
