@@ -17,8 +17,15 @@
 > still gates the Dutch municipalities, which is a different question — what
 > to create, not what to call it.
 >
-> **Blocked on egress:** the re-verification pass. 421 of 502 entities are
-> still unread — see `discovery/reverification-allowlist.md`.
+> **No longer blocked on egress — but not every host cooperates.** Outbound
+> HTTPS opened 2026-08-21 and `tools/reverify.py` read its first live pages,
+> moving 21 entities to `verification: primary-source` (batch 1). 414 of 516
+> entities remain `search-only`/`unverified`. `eur-lex.europa.eu`,
+> `www.iso.org`, `www.coe.int` and `unece.org` answer every automated fetch
+> with a bot-defense challenge page rather than content — an environment
+> hard limit independent of the egress policy — so skip entities citing only
+> those hosts. See `docs/re-verification.md` §"A machine-corroborated pass"
+> and `discovery/reverification-allowlist.md` for the rest.
 
 Confirmed-relevant areas that are known to need research but haven't been
 worked yet, beyond the batch plan itself (`progress/backlog.md`). Use this
@@ -158,10 +165,8 @@ by accident.
 | FIM (Föderales Informationsmanagement) | Named as a third body under the [[DE-FITKO]]'s roof alongside [[DE-KOSIT]] and [[DE-GOVDATA]]; nothing else established. A single mention in a list is not enough | Next | Germany batch |
 | DKE | German electrotechnical standards commission, [[DE-DIN]]'s counterpart towards [[EU-CENELEC]] | Later | Germany batch |
 | National Gaia-X hubs | Germany's and Austria's hubs are cited as sources on [[EU-GAIA-X]]. A `DE-GAIA-X-HUB` would be a legitimate national entity, not a duplicate — but nothing beyond website existence was established | Later | Germany batch |
-| Manufacturing-X and the wider X-family | [[DE-CATENA-X]] sits in a broader German industrial data-space family. No industry domain entity created — Catena-X alone is below the taxonomy §1 threshold | Later | Germany batch |
 | Mobility Data Marketplace (MDM) | Replaced by [[DE-MOBILITHEK]] as National Access Point. **No superseded entity created** — unlike [[DE-IWG]], nothing beyond the replacement is established | Later | Germany batch |
 | BMWK / BMWE, BMDV / BMV | Co-authors of [[DE-DATENSTRATEGIE]] and publisher of [[DE-MOBILITHEK]] sources. Both ministries have been renamed or reorganised around [[DE-BMDS]] | Next | Germany batch |
-| gematik, Gesundheitsdatennutzungsgesetz | German health data infrastructure and legislation. Would connect [[DOMAIN-HEALTH]] to the German layer and possibly to [[EU-EHDS]] | Later | Germany batch |
 | Bundesdruckerei; ITZBund | Federal printing/eID body and the federal IT service centre. ITZBund is already cited as a source on [[DE-XOEV]] | Later | Germany batch |
 | OZG-Änderungsgesetz | A substantial amending act, deliberately **not** given its own entity — doing so would force the same `supersedes` compromise as [[DE-NIS2UMSUCG]] → [[DE-BSIG]]. Revisit if an amendment relationship type is added | Blocked | Germany batch |
 | Lenkungsgremium GDI-DE | Governing committee of [[DE-GDI-DE]]; would be reachable only from that one entity | Later | Germany batch |
@@ -174,7 +179,6 @@ by accident.
 | Agence du Numérique; Paradigm; the Regions and Communities | Same blocker | Blocked | Belgium batch |
 | The other five public service integrators | BELGIF names six; only [[BE-KSZ]] is modelled | Later | Belgium batch |
 | Belgian eID / itsme; eHealth platform; Kruispuntbank van Ondernemingen | Belgium's digital identity and registry infrastructure, none modelled. itsme is one of Europe's more distinctive national identity schemes | Later | Belgium batch |
-| NBN (Bureau voor Normalisatie) | Belgium's national standards body — the counterpart to [[DE-DIN]] and [[NL-NEN]], and the third leg of the CEN/ISO membership pattern | Later | Belgium batch |
 | Belgian statistics act | No statutory basis for [[BE-STATBEL]] was found | Later | Belgium batch |
 
 ## France — queued from the fourth-country batch (2026-08-16)
@@ -182,10 +186,8 @@ by accident.
 | Area / entity | Why it needs research | Suggested batch | Noted by / date |
 |---|---|---|---|
 | **The Dutch open-data portal custodian** *(still open; now **six** portals lack one)* | [[NL-DATA-OVERHEID]] is the only national portal in the Atlas with no custodian modelled. Three other countries now have one; Spain joined them on 2026-08-19 via [[ES-RED-ES]] | Next | France batch |
-| AFNOR | French national standards body — the fourth leg of the CEN/ISO membership pattern after [[DE-DIN]], [[NL-NEN]] and Belgium's NBN | Later | France batch |
 | RGS and RGAA | France's security and accessibility reference frameworks, siblings of [[FR-RGI]] | Later | France batch |
 | France Identité | Recorded in prose on [[FR-FRANCECONNECT]]; not its own entity | Later | France batch |
-| Health Data Hub | France's health data platform — would connect [[DOMAIN-HEALTH]] to the French layer and possibly to [[EU-EHDS]] | Later | France batch |
 | Ordonnance n° 2005-1516 | Legal basis of [[FR-RGI]]; not modelled | Later | France batch |
 | Ordonnance of 21 October 2010 | France's INSPIRE transposition, cited on [[EU-INSPIRE]]'s `applies-in`; its number was not established so no entity was created | Later | France batch |
 
@@ -197,7 +199,6 @@ by accident.
 | **Spanish organic law on artificial intelligence** | Sources refer to one landing the AI Act domestically with sanctions and sandboxes, at a stage they describe inconsistently. Not created — the Atlas already carries one instrument whose sources conflict ([[FR-NIS2-LOI]]) and does not need a second on weaker evidence | Next | Spain batch |
 | **Ley 39/2015 and Ley 40/2015** | Spain's common administrative procedure and public-sector legal regime acts — the current legal base for much of what [[ES-AEAD]] does, and the successors to Ley 11/2007 which established [[ES-ENI]] | Next | Spain batch |
 | **Spain's INSPIRE transposition** | [[EU-INSPIRE]] now carries `applies-in` → `ES` with no transposing instrument identified | Later | Spain batch |
-| **AENOR / UNE** | Spanish national standards body — the fifth leg of the CEN/ISO membership pattern after [[DE-DIN]], [[NL-NEN]], Belgium's NBN and France's AFNOR | Later | Spain batch |
 | **INCIBE's founding instrument** | Its legal form, its relationship to the earlier INTECO, and how INCIBE-CERT relates to CCN-CERT are all unrecorded. [[ES-INCIBE]] is `coverage: low` because of it | Later | Spain batch |
 | **Cl@ve's legal basis and operator** | Plus the relationship between Cl@ve PIN and Cl@ve Permanente, and the status of any Spanish digital identity wallet under [[EU-EIDAS2]] | Later | Spain batch |
 | **Centro Nacional de Ciberseguridad** | Would be created by [[ES-LCGC]]. **Deliberately not modelled** — it does not exist, and a node for it would be indistinguishable in the graph from a body that does | Blocked | Spain batch |
@@ -240,7 +241,7 @@ by accident.
 | Centrale Commissie voor de Statistiek (CCS) | Statutory supervisor of the CBS under the Wet op het CBS | Batch 3 or later | Batch 2 / 2026-08-14 |
 | Ministerie responsible for CBS (Economic Affairs) | Needed to complete CBS governance; Dutch ministry naming is volatile and must be read from a current source | Batch 3 or later | Batch 2 / 2026-08-14 |
 | Adviescollege ICT-toetsing (AcICT) | ICT oversight body; surfaced in Batch 1 search results | Batch 3 or later | Batch 2 / 2026-08-14 |
-| DANS, Health-RI, RIVM, NWO | Research/health data infrastructure organisations | Batch 5 | Batch 2 / 2026-08-14 |
+| DANS, RIVM, NWO | Research/health data infrastructure organisations. [[NL-HEALTH-RI]] was created in the health/education/research domain batch (2026-08-21); these three were not | Batch 5 | Batch 2 / 2026-08-14 |
 | SIDN | .nl registry / internet infrastructure | Batch 5 | Batch 2 / 2026-08-14 |
 | Programmaraad (geo-standaarden) | Commissioning body for Geonovum's standards management | Batch 5+ | Batch 2 / 2026-08-14 |
 | VNG Realisatie | Now doubly needed: maintains [[NL-GEMMA]], and [[NL-GEMMA]]'s `maintained-by` currently points at [[NL-VNG]] as a simplification | Batch 5+ | Batch 2; raised Batch 4 |
@@ -257,7 +258,6 @@ by accident.
 | Wet bescherming persoonsgegevens (Wbp) | Predecessor regime replaced by GDPR/UAVG on 25 May 2018; needed for temporal completeness | Batch 4 or later | Batch 3 / 2026-08-14 |
 | Aanpassingswet AVG (dossier 34.939) | Adjusted other Dutch legislation to the GDPR | Batch 4 or later | Batch 3 / 2026-08-14 |
 | Wet weerbaarheid kritieke entiteiten (CER implementation) | Passed alongside the Cyberbeveiligingswet; adjacent to but distinct from NIS2 | Batch 4 or later | Batch 3 / 2026-08-14 |
-| Rijksdienst voor Identiteitsgegevens (RvIG) | Administers the BRP under [[NL-WET-BRP]] | Batch 4 or later | Batch 3 / 2026-08-14 |
 | NCSC / NCTV | Cybersecurity authorities named in Cyberbeveiligingswet sources | Batch 4 or later | Batch 3 / 2026-08-14 |
 | eIDAS → [[NL-WDO]] link | Both eIDAS entities now exist; eIDAS 2.0 ruled out on dates, but the transposition from 910/2014 remains **unsourced** and unasserted | Batch 9+ | Batch 3; updated Batch 8 |
 | Wet elektronische publicaties; Wet politiegegevens; Telecommunicatiewet | Further Dutch legislation with data relevance, not assessed in Batch 3 | Batch 4 or later | Batch 3 / 2026-08-14 |
@@ -273,7 +273,6 @@ by accident.
 | Nationaal Wegenbestand (NWB) | Part of the [[NL-NDW]] expansion | Batch 5+ | Batch 5 / 2026-08-14 |
 | DANS, ODISSEI, RIVM, NWO, SIDN | Research/health/internet-infrastructure organisations still unqueued from Batch 2 | Batch 5+ | Batch 2; carried |
 | Interoperable Europe Board | Adopts new EIF versions; needed to resolve the EIF/Act relationship | Batch 9 | Batch 7; carried |
-| ENISA | Established under [[EU-CYBERSECURITY-ACT]]; relationship unassertable without it | Batch 9 | Batch 8 / 2026-08-14 |
 | Free Flow of Non-Personal Data Regulation | Third repeal target of [[EU-DIGITAL-OMNIBUS]] | Batch 9 | Batch 8 / 2026-08-14 |
 | Wet weerbaarheid kritieke entiteiten | Dutch CER transposition, approved 15 Apr 2026; should mirror [[NL-CBW]] → [[EU-NIS2]] | Batch 9+ | Batch 3; raised again Batch 8 |
 | EUR-Lex citation for the AI Act | [[EU-AI-ACT]] lacks an Official Journal link | Batch 9 | Batch 8 / 2026-08-14 |
@@ -302,7 +301,6 @@ by accident.
 | Energy, Environment, Finance, Justice, Agriculture, Social Security, Built Environment domains | All named in the Batch 5 brief but each currently below the 2-entity threshold in taxonomy §1. Create as the ecosystems that would populate them are researched | Later | Batch 5 / 2026-08-14 |
 | College Standaardisatie | Established in 2006 alongside Forum Standaardisatie; current status unknown — may be superseded, which would need a `supersedes` link | Batch 2 | Batch 1 / 2026-08-14 |
 | Individual GDI services (DigiD, DigiD Machtigen, MijnOverheid, Digipoort) | Referenced by NL-GDI and NL-LOGIUS but not yet entities; decide whether they warrant separate entities | Batch 2 or 5 | Batch 1 / 2026-08-14 |
-| GEMMA, EAR, ROSA, PETRA | NORA's derived reference architectures; need `derived-from`/`based-on` links to NL-NORA | Batch 4 | Batch 1 / 2026-08-14 |
 | Individual open standards on the 'pas toe of leg uit' list | Referenced by NL-PAS-TOE-OF-LEG-UIT | Batch 4 | Batch 1 / 2026-08-14 |
 | Meerjarenvisie Digitale Overheid; GDI programmeringsplan | Named as MIDO components; may warrant entities or may be publications | Batch 4 | Batch 1 / 2026-08-14 |
 | RedIRIS | Spain's research and education network, run by [[ES-RED-ES]] — the counterpart of [[NL-SURF]]. Named on Red.es's own pages; not modelled | Later | RQ3 batch / 2026-08-19 |
@@ -313,11 +311,11 @@ by accident.
 | EFTA Surveillance Authority, EFTA Court, EEA Joint Committee | The EEA EFTA states' counterparts to the Commission and the Court of Justice, and the body that takes the incorporation decisions [[INTL-EEA-AGREEMENT]] runs on. Carried from [[NO]] since the Norway batch; now three countries wide | Next | Norway batch; widened 2026-08-19 |
 | Greece's `EL` / `GR` code split | The EU keys Greece as `EL`; ISO keys it as `GR`. The Atlas uses `GR`. Any future harvest of Eurostat or EUR-Lex data will not join without a mapping | Later (design) | European country batch / 2026-08-19 |
 | Cyprus's suspended *acquis* | `applies-in` is a whole-country predicate; the *acquis* is suspended in the areas of [[CY]] not under the Republic's effective control. The Atlas cannot express this | Blocked (design) | European country batch / 2026-08-19 |
-| **`applies-in` for the European parties to Convention 108** | Sources say all Council of Europe member states are parties — roughly 46 edges. **Blocked on reading `coe.int`'s chart of signatures and ratifications**, which the egress proxy denies. The one source found for the rule gives a stale member count, and [[RU]]'s status as a party after its 2022 expulsion is unaddressed. The first time the sourcing debt has blocked *new* modelling rather than re-verification | Blocked (egress) | Convention 108 batch / 2026-08-19 |
+| **`applies-in` for the European parties to Convention 108** | Sources say all Council of Europe member states are parties — roughly 46 edges. **Blocked on reading `coe.int`'s chart of signatures and ratifications** — confirmed 2026-08-21 as a host-level bot-defense wall (Cloudflare challenge), not the egress policy; egress is open but this host still is not. The one source found for the rule gives a stale member count, and [[RU]]'s status as a party after its 2022 expulsion is unaddressed. The first time the sourcing debt has blocked *new* modelling rather than re-verification | Blocked (host) | Convention 108 batch / 2026-08-19; confirmed batch 1 / 2026-08-21 |
 | The descent from ETS 181 to the national DPAs and to adequacy | [[INTL-CONVENTION-108-PROTOCOL]] required independent supervisory authorities in 2001 and introduced adequacy-based transfer rules. The Atlas holds eleven national DPAs and [[EU-UK-ADEQUACY]] and asserts no relationship to it, because no source read states the descent. Recorded in prose on that entity | Later | Convention 108 batch / 2026-08-19 |
 | Argentina's and Uruguay's EU adequacy decisions | Both are recorded in prose on [[AR]] and [[UY]] and neither is an entity. They would connect the Convention 108 parties to the EU adequacy machinery the Atlas already holds through [[EU-UK-ADEQUACY]] | Later | Convention 108 batch / 2026-08-19 |
 | Data Protection Day (28 January) | Marked across Europe as the anniversary of Convention 108's opening for signature. Recorded in prose on [[INTL-CONVENTION-108]]; whether an observance is an Atlas entity at all is an open question | Later (design) | Convention 108 batch / 2026-08-19 |
-| Run the re-verification pass | `tools/reverify.py` exists and `docs/re-verification.md` is the procedure. **First full sweep run 2026-08-19: 443 entities, 1,500 sources, 0 retrieved, 1,494 refused by egress policy.** Blocked on the network, not on tooling: start with the seven Dutch register statutes, then work `discovery/reverification-allowlist.md` in the order it ranks | Blocked (egress) | Re-verification runner / 2026-08-19 |
+| Run the re-verification pass | `tools/reverify.py` exists and `docs/re-verification.md` is the procedure. **Egress opened 2026-08-21; batch 1 read live pages for the first time**, moving 21 entities to `primary-source`, including all seven Dutch register statutes. 414 of 516 entities remain — work `discovery/reverification-allowlist.md` in the order it ranks, skipping entities citing only `eur-lex.europa.eu`, `www.iso.org`, `www.coe.int` or `unece.org` (bot-defense walls, not egress) | Ongoing | Re-verification runner / 2026-08-19; batch 1 / 2026-08-21 |
 | Identifier patterns `tools/reverify.py` does not yet know | It extracts BWBR, BOE, JORF, C/ETS, S.I., CELEX, Dz.U., Real Decreto, Ley, Lei and zákon citations. Norwegian, Swiss, German (Bundesgesetzblatt) and UK (`legislation.gov.uk` ELI) shapes are not covered, so entities keyed on those get names-only checking | Later | Re-verification runner / 2026-08-19 |
 | The five `github.com` sources | Cited on [[BE-BELGIF]], [[EU-SEMIC]], [[BE-DCAT-AP-BE]] and [[EU-DCAT-AP]]. Refused by the **GitHub proxy**, which scopes a session to its configured repositories — a different policy from the egress allowlist, and one an allowlist entry will not lift. These five may never be re-verifiable from inside a session | Blocked (GitHub proxy) | Full sweep / 2026-08-19 |
 | Six entities with no checkable claims | [[RO]], [[UA]], [[FR-ETALAB]], [[NL-LOGIUS]], [[NL-NICTIZ]], [[NO-ALTINN]] — short names and no legal identifier, so `tools/reverify.py` can only fetch their sources, not corroborate anything against them. Either richer `alternative_names` or acceptance that these are judgment-only entities | Later | Full sweep / 2026-08-19 |
@@ -329,7 +327,7 @@ by accident.
 | Estonian eID card and Mobile-ID | The identity infrastructure [[EE-E-RESIDENCY]] is built on, and the link to [[EU-EIDAS2]] and the European Digital Identity Wallet | Later | Estonia batch / 2026-08-20 |
 | NIIS member vs partner status | Ukraine, the Faroe Islands and the Government of Åland are **partners** of [[INTL-NIIS]] rather than members. The relationship vocabulary has `part-of` and `participates-in` and no way to say "associate", so [[UA]]'s partnership is prose only | Later (design) | Estonia batch / 2026-08-20 |
 | `applies-in` for the EU **directives** | The member-state completion pass extended the nine EU **regulations** to all 27 states, because a regulation's applicability follows from TFEU Article 288 and needs no country-specific source. The five directives — [[EU-NIS2]], [[EU-CER]], [[EU-INSPIRE]], [[EU-ITS-DIRECTIVE]], [[EU-OPEN-DATA-DIRECTIVE]] — still name 10 states each. Extending them is defensible but would show 17 blank transposition cells per directive, so it was left as a deliberate decision rather than a sweep | Next (design) | Member-state completion / 2026-08-20 |
-| A content check to follow the link check | **Started 2026-08-21.** The repository owner confirmed `europa.eu`, `iso.org`, `coe.int`, `bund.de` and `legifrance.gouv.fr` at the content tier, moving **41** entities to `primary-source` — every one whose sources lie entirely within those five domains. 421 of 502 remain, and the yield is front-loaded: the next domains by URL count convert far fewer entities each, because the entities citing them cite other things too. See `docs/re-verification.md` §"The confirmed domains" | Partly done | Manual link check / 2026-08-20; content check / 2026-08-21 |
+| A content check to follow the link check | **Started 2026-08-21.** The repository owner confirmed `europa.eu`, `iso.org`, `coe.int`, `bund.de` and `legifrance.gouv.fr` at the content tier by hand (41 entities to `primary-source`); the same day, with egress open, `tools/reverify.py` did its own machine-corroborated reading (21 more entities, batch 1). 414 of 516 remain. See `docs/re-verification.md` §"The confirmed domains" and §"A machine-corroborated pass" | Ongoing | Manual link check / 2026-08-20; content check / 2026-08-21; reverify batch 1 / 2026-08-21 |
 | Klimadatastyrelsen | Operates [[DK-DATAFORDELER]], the single channel through which all Danish basic data is distributed, and is not modelled. The Danish counterpart of the ten Dutch register holders collapsed into one body | Next | Country expansion / 2026-08-20 |
 | Austria's E-Government-Gesetz, Meldegesetz, Personenstandsgesetz and Passgesetz | All four were amended to introduce [[AT-ID-AUSTRIA]] and the oesterreich.gv.at platform. None is modelled, so the Austrian identity layer has a platform with no legal basis attached | Next | Country expansion / 2026-08-20 |
 | Italy's CIE and CNS | [[IT-CAD]] admits three credentials for the citizen's right of digital access — [[IT-SPID]], the electronic identity card CIE, and the services card CNS. Only SPID is modelled | Next | Country expansion / 2026-08-20 |
