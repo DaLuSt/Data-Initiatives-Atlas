@@ -7,11 +7,11 @@ Generated: 2026-08-22
 
 ## Why this exists
 
-**414 of the Atlas's 516 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
+**354 of the Atlas's 516 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
 
 Closing that debt — the re-verification pass — needs outbound HTTPS to the hosts those URLs point at. In an environment with a restricted egress policy, this is the allowlist to request. A denial shows up as `403 to CONNECT` from the proxy, which is an environment-level network policy and cannot be changed from inside a session. See `discovery/unresolved.md` for the standing record of the sourcing debt.
 
-The Atlas currently cites **1695 source URLs** across **552 hosts**, collapsing to **400 registrable domains**.
+The Atlas currently cites **1701 source URLs** across **552 hosts**, collapsing to **401 registrable domains**.
 
 ## Highest value first
 
@@ -22,8 +22,8 @@ A domain here is an **allowlist pattern**, not a URL. Most of them also happen t
 | Domain | URLs | Entities | Example host | Opened | Content confirmed |
 |---|---|---|---|---|---|
 | `europa.eu` | 233 | 146 | `data.europa.eu` | ✅ opens | ✅ 2026-08-21 |
-| `wikipedia.org` | 93 | 93 | `cs.wikipedia.org` | ✅ opens |  |
-| `iso.org` | 67 | 64 | `www.iso.org` | ✅ opens | ✅ 2026-08-21 |
+| `wikipedia.org` | 96 | 96 | `cs.wikipedia.org` | ✅ opens |  |
+| `iso.org` | 66 | 63 | `www.iso.org` | ✅ opens | ✅ 2026-08-21 |
 | `coe.int` | 52 | 42 | `rm.coe.int` | ✅ opens | ✅ 2026-08-21 |
 | `gouv.fr` | 44 | 16 | `aide.monespacenis2.cyber.gouv.fr` | ✅ opens |  |
 | `bund.de` | 41 | 23 | `bmds.bund.de` | ✅ opens | ✅ 2026-08-21 |
@@ -34,12 +34,12 @@ A domain here is an **allowlist pattern**, not a URL. Most of them also happen t
 | `overheid.nl` | 30 | 21 | `data.overheid.nl` | ✅ opens |  |
 | `unece.org` | 21 | 9 | `aarhusclearinghouse.unece.org` | ✅ opens |  |
 | `un.org` | 20 | 12 | `docs.un.org` | ✅ opens |  |
+| `legislation.gov.uk` | 19 | 17 | `www.legislation.gov.uk` | ✅ opens |  |
 | `belgium.be` | 18 | 10 | `bosa.belgium.be` | ✅ opens |  |
 | `cencenelec.eu` | 17 | 10 | `standards.cencenelec.eu` | ✅ opens |  |
-| `legislation.gov.uk` | 16 | 15 | `www.legislation.gov.uk` | ✅ opens |  |
+| `bundestag.de` | 16 | 12 | `dserver.bundestag.de` | ✅ opens |  |
 | `rijksoverheid.nl` | 16 | 12 | `www.rijksoverheid.nl` | ✅ opens |  |
 | `admin.ch` | 15 | 8 | `www.bfs.admin.ch` |  |  |
-| `bundestag.de` | 15 | 11 | `dserver.bundestag.de` | ✅ opens |  |
 | `boe.es` | 15 | 13 | `www.boe.es` | ✅ opens |  |
 
 **`Opened` and `Content confirmed` are different claims.** The first says the citation points somewhere real. The second says the pages were read and the information on them confirmed correct, which is the only thing that licenses `verification: primary-source`. See `docs/re-verification.md` §"A link check is not a content check".
@@ -80,6 +80,7 @@ blog.gov.uk
 bund.de
 cencenelec.eu
 coe.int
+data.gov.uk
 destatis.de
 digitaleoverheid.nl
 efta.int
