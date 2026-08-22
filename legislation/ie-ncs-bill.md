@@ -2,15 +2,17 @@
 id: IE-NCS-BILL
 type: law
 name: National Cyber Security Bill
-alternative_names:
-  - NCS Bill
-  - Irish NIS2 transposition
+alternative_names: []
 description: >
-  Irish bill intended to transpose the NIS2 Directive into Irish law,
-  assigning competent-authority functions to the National Cyber Security
-  Centre and CSIRT-IE and establishing an enforcement and penalty framework.
-  Ireland did not meet the Directive's transposition deadline of 17 October
-  2024, and the Bill had not been enacted as at the date of this record.
+  Irish bill intended to transpose the NIS2 Directive into Irish law. The
+  National Cyber Security Centre and CSIRT-IE are Ireland's current
+  designated competent authority and single point of contact for NIS2,
+  respectively. Ireland did not meet the Directive's transposition deadline
+  of 17 October 2024; the Commission sent a reasoned opinion for failure to
+  notify full transposition on 7 May 2025, and in July 2026 referred
+  Ireland and three other member states to the Court of Justice of the EU
+  over the failure. The Bill had not been enacted as at the date of this
+  record.
 
 level: national
 country: IE
@@ -19,11 +21,10 @@ region: EU
 status: proposed
 confidence: low
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -37,14 +38,14 @@ relationships:
   - type: applies-to
     target: IE-NCSC
     source: fact
-    evidence: "Ireland's National Cyber Security Bill assigns competent-authority functions to the NCSC Ireland and to Ireland's Computer Security Incident Response Team (CSIRT-IE) and establishes an enforcement and penalty framework; NIS2 will be transposed through the Bill, with the National Cyber Security Centre acting as the lead authority for oversight and enforcement (williamfry.com 'NIS2, Ireland and Draft Guidance'; globallawexperts.com 'NIS2 Compliance Ireland'; ncsc.gov.ie/nis2). NOT READ — search-only. The Bill was not enacted as at the date of this record, so this describes its content, not law in force."
+    evidence: "Confirmed by reading globalpolicywatch.com directly (2026-08-22): 'the proposed bill to transpose NIS2 in Ireland (the National Cyber Security Bill) has still not been enacted.' The European Commission's own NIS2-transposition tracker for Ireland (digital-strategy.ec.europa.eu, read directly) names 'National Cyber Security Centre' as the 'National competent authority for DSPs' and 'CSIRT-IE' as the 'National CSIRT' and 'Single point of contact.' NOT independently re-confirmed this pass: which body the Bill itself designates for these roles, since the Bill's own text was not located; the roles above are the Commission's account of Ireland's current designations, not a quotation of the Bill."
     confidence: low
     valid_from: null
     valid_until: null
   - type: implements-requirement-from
     target: EU-NIS2
     source: fact
-    evidence: "In Ireland NIS2 will be transposed through the National Cyber Security Bill, with the National Cyber Security Centre acting as the lead authority for oversight and enforcement; the Bill assigns competent-authority functions to the NCSC and to CSIRT-IE and establishes an enforcement and penalty framework. The transposition deadline of 17 October 2024 was not met (williamfry.com 'NIS2, Ireland and Draft Guidance'; digital-strategy.ec.europa.eu 'NIS2 Directive implementation in Ireland'; ncsc.gov.ie/nis2; globalpolicywatch.com). NOT READ — search-only."
+    evidence: "Confirmed by reading williamfry.com directly (2026-08-22): 'the Network and Information Security Directive (EU) 2022/2555 (NIS2) took effect on 17 October 2024 across the EU,' and 'the General Scheme for the National Cybersecurity Bill is the proposed draft legislation to transpose NIS2 into Irish law.' The Commission's own tracker (digital-strategy.ec.europa.eu, read directly) confirms non-transposition: 'On 7 May 2025 the Commission sent a reasoned opinion for failure to notify full transposition.' globalpolicywatch.com, read directly, reports a further escalation not previously recorded: 'the European Commission referred Ireland and three other Member States to the CJEU for their failure to transpose NIS2' (July 2026)."
     confidence: low
     valid_from: null
     valid_until: null
@@ -53,37 +54,61 @@ sources:
   - title: "NIS2 Directive implementation in Ireland"
     url: "https://digital-strategy.ec.europa.eu/en/policies/nis2-directive-ireland"
     publisher: "European Commission — Shaping Europe's digital future"
+    accessed: "2026-08-22"
   - title: "NCSC: NIS2"
     url: "https://www.ncsc.gov.ie/nis2/"
     publisher: "National Cyber Security Centre (Ireland)"
+    accessed: "2026-08-22"
   - title: "NIS2, Ireland and Draft Guidance"
     url: "https://www.williamfry.com/knowledge/nis2-ireland-and-draft-guidance/"
     publisher: "William Fry"
+    accessed: "2026-08-22"
   - title: "Irish NCSC Issues Cyber Governance Guidance for Management Boards Ahead of NIS2 Implementation"
     url: "https://www.globalpolicywatch.com/2026/07/irish-ncsc-issues-cyber-governance-guidance-for-management-boards-ahead-of-nis2-implementation/"
     publisher: "Covington — Global Policy Watch"
+    accessed: "2026-08-22"
 ---
 
 # National Cyber Security Bill (Ireland)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`. ⚠ `status: proposed`, `confidence: low`.
+> **Verified 2026-08-22.** globalpolicywatch.com, williamfry.com and the
+> European Commission's own NIS2-transposition tracker for Ireland were
+> read directly and confirmed the claims below, verbatim in places. The
+> tracker page found this pass names the NCSC and CSIRT-IE as Ireland's
+> *current* designated authorities under the still-unamended NIS1 regime
+> — not a quotation of the Bill's own text, which was not located. The
+> unattested alternative names "NCS Bill" and "Irish NIS2 transposition"
+> have been removed.
 
 ## Description
 
-The Bill intended to transpose [[EU-NIS2]] into Irish law, assigning
-competent-authority functions to [[IE-NCSC]] and to CSIRT-IE and
-establishing an enforcement and penalty framework.
+Confirmed by reading globalpolicywatch.com directly (2026-08-22): "the
+proposed bill to transpose NIS2 in Ireland (the National Cyber Security
+Bill) has still not been enacted." The Bill intends to transpose
+[[EU-NIS2]] into Irish law. [[IE-NCSC]] and CSIRT-IE are confirmed, via
+the European Commission's own tracker, as Ireland's current designated
+competent authority and single point of contact respectively — though
+that tracker describes today's designations, not the Bill's content.
 
 ## A transposition that is overdue, not merely pending
 
 | Date | Event |
 |---|---|
 | **17 October 2024** | NIS2 transposition deadline — **not met by Ireland** |
+| **7 May 2025** | Commission sends a reasoned opinion for failure to notify full transposition |
+| **July 2026** | Commission refers Ireland and three other member states to the CJEU over the failure |
 | — | Transposition to proceed via the National Cyber Security Bill |
 | Q3 2026 | Planning assumption reported for the legislation |
 | Q4 2026 | End of Ireland's EU Council Presidency, before which transposition is reported to be intended |
+
+## A new escalation found this pass
+
+Confirmed by reading globalpolicywatch.com directly (2026-08-22): "Days
+after the publication of the guidance, the European Commission referred
+Ireland and three other Member States to the CJEU for their failure to
+transpose NIS2." This is a harder deadline consequence than the reasoned
+opinion the entity previously recorded, and it was not in the sources
+originally cited.
 
 The Atlas already holds one pending cyber instrument — [[GB-CSRB]], the UK's
 Cyber Security and Resilience Bill. **These two are not the same kind of
@@ -122,7 +147,9 @@ Atlas, because no other entity's sources give the figures.
 
 ## Not modelled
 
-- **CSIRT-IE**, which the Bill also designates.
+- **CSIRT-IE** as a separate entity. Whether the *Bill itself* designates
+  it (as opposed to CSIRT-IE already holding that role under the current,
+  NIS1-based regime) was not confirmed this pass — see the caveat above.
 - Ireland's **NIS1 transposition**, the instrument the 450 operators sit
   under today.
 - The **Cyber Fundamentals Framework (CyFun)**, named by the sources as the
@@ -133,5 +160,8 @@ Atlas, because no other entity's sources give the figures.
 
 ## Sources
 
-Listed in frontmatter. The Commission's own NIS2-implementation page is the
-strongest citation; the rest are the NCSC's page and two law-firm analyses.
+Listed in frontmatter, all four read directly this pass. The Commission's
+own NIS2-implementation page is the strongest citation; the NCSC's own
+page confirms NIS2 is not yet in force in Ireland ("the earlier version
+of NIS2 (NIS1) is still operational and continues to apply") without
+naming the Bill itself, and the remaining two are trade-press analyses.

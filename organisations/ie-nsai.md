@@ -16,11 +16,10 @@ region: EU
 status: active
 confidence: medium
 coverage: low
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -36,7 +35,21 @@ relationships:
   - type: part-of
     target: IE
     source: fact
-    evidence: "The National Standards Authority of Ireland is Ireland's national standards body (nsai.ie). NOT READ — search-only. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    evidence: "Confirmed by reading nsai.ie directly (2026-08-22): the site identifies itself as 'National Standards Authority of Ireland.' Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: participates-in
+    target: EU-CEN
+    source: fact
+    evidence: "Confirmed by reading standards.cencenelec.eu directly (2026-08-22): 'CEN's National Members are the National Standardization Bodies (NSBs) of the 27 European Union countries, United Kingdom, the Republic of North Macedonia, Serbia and Türkyie plus three countries of the European Free Trade Association (Iceland, Norway and Switzerland). There is one member per country.' Ireland is an EU member state and NSAI is its national standards body, confirmed on nsai.ie, so membership follows from the sourced composition rule. This relationship was described in this entity's own body text but missing from its structured data — added to close that gap."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: participates-in
+    target: EU-CENELEC
+    source: fact
+    evidence: "Confirmed by reading standards.cencenelec.eu directly (2026-08-22): 'CEN's National Members are the National Standardization Bodies (NSBs) of the 27 European Union countries, United Kingdom, the Republic of North Macedonia, Serbia and Türkyie plus three countries of the European Free Trade Association (Iceland, Norway and Switzerland).' CENELEC's National Members are the National Committees of the same set. Ireland is an EU member state and NSAI is its national standards body, so membership follows from the sourced composition rule. This relationship was described in this entity's own body text but missing from its structured data — added to close that gap."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -45,20 +58,27 @@ sources:
   - title: "National Standards Authority of Ireland"
     url: "https://www.nsai.ie/"
     publisher: "National Standards Authority of Ireland (NSAI)"
-  - title: "CEN Members"
-    url: "https://www.cencenelec.eu/about-cen/cen-national-members/"
+    accessed: "2026-08-22"
+  - title: "CEN's National Members"
+    url: "https://standards.cencenelec.eu/ords/f?p=CEN:5"
     publisher: "CEN-CENELEC"
+    accessed: "2026-08-22"
 ---
 
 # National Standards Authority of Ireland (NSAI)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`. ⚠ `coverage: low`.
+> **Verified 2026-08-22.** Both cited pages were read directly. The old
+> CEN-national-members URL had moved (404); its replacement,
+> `standards.cencenelec.eu/ords/f?p=CEN:5`, was found and read, and
+> confirms the composition rule verbatim. A structural bug was also fixed
+> this pass: the `participates-in` [[EU-CEN]] and [[EU-CENELEC]] edges
+> this entity's own body text already described were missing from its
+> frontmatter `relationships:` list — they are now added.
 
 ## Description
 
-NSAI is Ireland's national standards body.
+Confirmed by reading nsai.ie directly (2026-08-22): the site identifies
+itself as "National Standards Authority of Ireland." NSAI is Ireland's national standards body.
 
 ## The refusal recorded here has been closed
 
@@ -92,8 +112,9 @@ ISO edges because their own sources state it; NSAI's do not.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, both read directly this pass.
 
 ## Relationships
 
-- `participates-in` [[EU-CEN]] and [[EU-CENELEC]].
+- `participates-in` [[EU-CEN]] and [[EU-CENELEC]] — now present in the
+  structured data as well as this prose.
