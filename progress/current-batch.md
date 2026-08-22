@@ -1,6 +1,6 @@
 # Current Batch
 
-**Status:** No batch in progress. **The second research-queue pickup**
+**Status:** No batch in progress. **The third research-queue pickup**
 completed on 2026-08-22. Full detail moved to `progress/completed.md`;
 summary below. `discovery/reverification-allowlist.md` ranks the next
 re-verification targets, and `discovery/research-queue.md` carries the
@@ -13,36 +13,46 @@ but real content (200) to an honest, identifying one, the same kind
 `isap.sejm.gov.pl` — the Sejm's legal-text database — **is** genuinely
 blocked: an Incapsula JavaScript challenge page regardless of
 User-Agent, browser-spoofing or honest alike (found in the second
-research-queue pickup, researching [[PL-PESEL]]). `www.iso.org`,
-`www.coe.int` and `unece.org` remain untested against an honest
-User-Agent and are still treated as blocked. `eur-lex.europa.eu` and
+research-queue pickup, researching [[PL-PESEL]]). `riigiteataja.ee`,
+Estonia's official legal gazette, is likewise genuinely blocked — a
+plain JavaScript single-page application with no static content at all
+(found in the third research-queue pickup, researching
+[[EE-STATISTIKAAMET]]). `www.iso.org`, `www.coe.int` and `unece.org`
+remain untested against an honest User-Agent and are still treated as
+blocked. `eur-lex.europa.eu` and
 `europarl.europa.eu` are confirmed **not** blocked — both were read
 directly and successfully in the fourth verification-gap push (NO,
 NO-PERSONOPPLYSNINGSLOVEN, INTL-EEA-AGREEMENT, INTL-EEA-JCD-154-2018),
 matching the same false-blocked finding earlier pushes made for
 `legislation.gov.uk`.
 
-## Second research-queue pickup — 2026-08-22
+## Third research-queue pickup — 2026-08-22
 
-Picked up **PESEL**, Poland's population register — the "Next"-priority
-research-queue item carried since the Poland batch and named on
-[[PL-COI]]'s own entity as "named in a list of systems and nothing
-more." It is now two entities: [[PL-PESEL]] (the register and the
-eleven-digit number itself) and [[PL-EWIDENCJA-LUDNOSCI]] (the 2010 act
-that has been its legal basis since 1 March 2015), following the same
-platform+law pairing [[NL-BRP]]/[[NL-WET-BRP]] uses.
+Picked up **Statistikaamet** (Statistics Estonia) — the "Next"-priority
+research-queue item carried since the Estonia batch, "named only as a
+research-project partner in what was read." It is now
+[[EE-STATISTIKAAMET]], the twelfth national statistical office in the
+Atlas and a member of [[EU-ESS]] on the strength of its own pages, the
+same evidentiary standard [[PL-GUS]] set: stat.ee's "Legal acts" page
+lists Regulation (EC) No 223/2009 — the ESS framework regulation — among
+the agency's *own* governing legal acts, not just describing the ESS in
+the abstract.
 
-[[PL-PESEL]] is `maintained-by` [[PL-COI]] with a specific date and
-mechanism (the State Registers System, launched 1 March 2015) that
-neither PL-COI's nor PESEL's own prior mentions carried on their own —
-found by cross-reading gov.pl's own PESEL page against Polish Wikipedia.
-`isap.sejm.gov.pl` proved genuinely unreadable (see above), so the Act's
-original 2010 Dziennik Ustaw promulgation citation is not asserted —
-only the consolidated-text citation gov.pl itself quotes. Full write-up
-in `progress/completed.md` under "The second research-queue pickup".
+Anchored `part-of` [[EE]] directly rather than to an Estonian Ministry
+of Finance entity, which does not exist in the Atlas, even though
+Wikipedia names the Ministry as its parent. `riigiteataja.ee` proved to
+be a pure JavaScript single-page application (see above), so the
+Official Statistics Act is named exactly as stat.ee itself names it,
+with no date or citation number attached. Full write-up in
+`progress/completed.md` under "The third research-queue pickup".
 
 ## Earlier pushes
 
+- **Second research-queue pickup** (2026-08-22): [[PL-PESEL]] and
+  [[PL-EWIDENCJA-LUDNOSCI]], Poland's population register and its 2010
+  legal basis — closing a gap [[PL-COI]] had named as "in a list of
+  systems and nothing more." Found `isap.sejm.gov.pl` genuinely
+  bot-walled (see above). See "The second research-queue pickup".
 - **First research-queue pickup** (2026-08-22): the EFTA Surveillance
   Authority, the EFTA Court and the EEA Joint Committee — three EEA
   institutions [[NO]], [[INTL-EFTA]] and [[INTL-EEA-AGREEMENT]] had all

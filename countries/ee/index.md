@@ -18,6 +18,8 @@ Anchor entity: [[EE]]
   _(operates the data exchange layer, RIHA and the data portal)_
 - [[EE-AKI]] — Andmekaitse Inspektsioon, the data protection authority
   _(Estonia's seat on [[EU-EDPB]])_
+- [[EE-STATISTIKAAMET]] — Statistics Estonia _(`part-of` [[EU-ESS]] on its
+  own description, the same strength of evidence as [[PL-GUS]])_
 
 ## Legislation
 
@@ -62,8 +64,9 @@ Anchor entity: [[EE]]
 
 - **CERT-EE** and the Küberturvalisuse seadus — Estonia has no cybersecurity
   entity at all, where [[NL]], [[BE]], [[DE]], [[PL]], [[CZ]] and [[PT]] do.
-- **Statistikaamet**, Statistics Estonia — which would be the twelfth national
-  statistical office and another [[EU-ESS]] member.
+- ~~**Statistikaamet**, Statistics Estonia~~ — now [[EE-STATISTIKAAMET]].
+- **Eesti Pank**, the central bank — Estonia's *other* named producer of
+  official statistics, alongside [[EE-STATISTIKAAMET]].
 - Estonia's **Open Data Directive** transposition. Estonia was not among the
   nineteen member states served with letters of formal notice in September
   2021, so it appears to have notified on time; the instrument is

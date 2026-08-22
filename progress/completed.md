@@ -1,5 +1,74 @@
 # Completed Batches
 
+## The third research-queue pickup
+
+**Date:** 2026-08-22
+
+Picked up **Statistikaamet**, Statistics Estonia — logged on the
+research queue since the Estonia batch as "named only as a
+research-project partner in what was read," and named a second time in
+[[EE]]'s own index as the country's twelfth-country-statistical-office
+gap. Now [[EE-STATISTIKAAMET]].
+
+### The same evidentiary bar as Poland's GUS, met a second time
+
+[[PL-GUS]]'s entry in this file already distinguishes two tiers of
+[[EU-ESS]] evidence: most national statistical offices are attached by
+the **composition rule** — the ESS is defined as the Commission plus the
+member states' national statistical institutes, and each office is its
+country's NSI, so membership follows without the office's own pages
+saying so. GUS was the first exception, describing the ESS directly on
+its own pages.
+
+Statistikaamet is the second, and its evidence is if anything sharper.
+Reading stat.ee's own "Official statistics and European statistics" page
+directly found: "Official statistics are produced on the basis of the
+Official Statistics Act and in accordance with the principles and
+quality criteria laid down in Regulation (EC) No 223/2009 of the
+European Parliament and of the Council ... Eurostat produces European
+statistics in partnership with national statistical institutes and
+other national authorities in the EU Member States and the European
+Free Trade Agreement (EFTA) countries. This partnership is known as the
+European Statistical System (ESS)." A second page, "Legal acts," read
+the same pass, lists that same regulation among the agency's own
+governing legal acts under an "Europe" heading — not a description of
+the ESS in the abstract, but the agency naming its ESS framework
+regulation as one of its own statutes.
+
+### An anchor that had to skip a rung
+
+The anchor-edge rule (`metadata/relationship-types.md` §2.3) sends a
+state body to `part-of` its country, but en.wikipedia.org/wiki/Statistics_Estonia
+names something more specific: "It is part of the Ministry of Finance."
+No Estonian Ministry of Finance entity exists in the Atlas — Estonia has
+comparatively few organisational entities modelled so far — so the more
+specific parent relationship Wikipedia gives has nowhere to attach.
+[[EE-STATISTIKAAMET]] anchors directly to [[EE]] instead, and the
+Ministry-level detail is recorded in prose rather than as a graph edge
+that would require inventing a node for an unmodelled ministry.
+
+### `riigiteataja.ee`: a third kind of "blocked," not a repeat of either prior finding
+
+Two negative results precede this one. The first research-queue pickup
+found `efta.int` only *looked* blocked — a browser-spoofing User-Agent
+got a 403, an honest one got the real page. The second found
+`isap.sejm.gov.pl` genuinely blocked regardless of User-Agent, via an
+Incapsula JavaScript challenge.
+
+`riigiteataja.ee`, Estonia's official legal gazette, was tried for a
+precise citation of the Official Statistics Act (Riikliku statistika
+seadus). It returned neither a challenge page nor a 403 — every fetch
+tried, on two different guessed URLs, returned 200 with an identical
+117-character body: "Riigi Teataja Laeb... Ilma Javascript toeta
+lehitsejad ei ole toetatud. You need Javascript enabled to use this
+site." A third failure mode: not a bot-defense wall at all, just a pure
+client-rendered application with nothing server-side to read, matching
+`eftasurv.int`'s shape from the first research-queue pickup rather than
+either of the other two Poland-era findings. [[EE-STATISTIKAAMET]]
+therefore names the Official Statistics Act exactly as stat.ee itself
+names it — no date, no citation number, because none was independently
+confirmed.
+
 ## The second research-queue pickup
 
 **Date:** 2026-08-22
