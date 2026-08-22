@@ -138,10 +138,11 @@ relationship exists.
 
 ## Not modelled
 
-- The **EFTA Surveillance Authority** and the **EFTA Court** — Norway's
-  counterparts to the Commission and the Court of Justice, and the reason
-  Norway is supervised at all without being a member state — and the **EEA
-  Joint Committee**, which takes the incorporation decisions.
+- ~~The **EFTA Surveillance Authority** and the **EFTA Court**~~ — Norway's
+  counterparts to the Commission and the Court of Justice — ~~and the **EEA
+  Joint Committee**, which takes the incorporation decisions~~ — now
+  [[INTL-EFTA-SURVEILLANCE-AUTHORITY]], [[INTL-EFTA-COURT]] and
+  [[INTL-EEA-JOINT-COMMITTEE]].
 - ~~**The EEA Agreement itself**~~ — now [[INTL-EEA-AGREEMENT]].
 - ~~**EFTA**~~ — now [[INTL-EFTA]], created in the European country batch.
 - ~~**Iceland and Liechtenstein**, the other EEA EFTA states~~ — now [[IS]]

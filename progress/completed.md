@@ -1,5 +1,79 @@
 # Completed Batches
 
+## The first research-queue pickup
+
+**Date:** 2026-08-22
+
+A different kind of push from the four before it: instead of
+re-verifying existing entities, this pass picked a "Next"-priority item
+off `discovery/research-queue.md` and created the entities it named.
+
+The item: the **EFTA Surveillance Authority**, the **EFTA Court** and the
+**EEA Joint Committee**. All three had been logged as "not modelled" on
+[[NO]] since the Norway batch, then again on [[INTL-EFTA]] and
+[[INTL-EEA-AGREEMENT]] when those two were created — the gap was named
+in three places before it was closed in one pass. All three are now
+Atlas entities: [[INTL-EFTA-SURVEILLANCE-AUTHORITY]], [[INTL-EFTA-COURT]]
+and [[INTL-EEA-JOINT-COMMITTEE]].
+
+### The anchor question this batch had to settle
+
+None of the three fits the anchor table in `metadata/relationship-types.md`
+§2.3 cleanly — they are neither of a state, nor EU-scoped, nor UN-scoped.
+The obvious anchor by name is [[INTL-EFTA]], but that would be wrong:
+efta.int's own "Two Pillar Structure" page states plainly that "since
+Switzerland is not an EEA member, it does not participate in these
+institutions," and Switzerland is EFTA's fourth member. Anchoring to
+[[INTL-EFTA]] would silently claim jurisdiction over a state these bodies
+do not cover.
+
+All three are anchored instead to [[INTL-EEA-AGREEMENT]] — the Agreement,
+not the trade association — because its party list (Iceland,
+Liechtenstein, Norway) is the exact set these bodies serve. The EEA Joint
+Committee's anchor is the strongest of the three: it is not merely
+scoped like the Agreement, it is the Agreement's own institution, and it
+also carries a `produces` edge to [[INTL-EEA-JCD-154-2018]] — the decision
+that incorporated [[EU-GDPR]] — finally putting a body behind a decision
+the Atlas had cited four times without ever modelling its source.
+
+### `efta.int` was never actually blocked
+
+The significant finding of this pass, and a correction to standing
+guidance three pushes deep. `efta.int` has been treated as bot-walled
+(403) since the third push, and the fourth push's own write-up above
+names it as "newly confirmed" blocked. Every one of those tests used a
+browser-spoofing User-Agent.
+
+Fetched instead with an honest, identifying User-Agent — the same kind
+`tools/reverify.py` itself sends — `efta.int` returns real content: 200,
+not 403. Its "About EFTA" page, "Two Pillar Structure" overview page and
+"EEA Joint Committee" page were all read directly this pass and quoted
+verbatim in the four entities they touch (the three new ones, plus
+[[INTL-EFTA]], promoted to `primary-source` in the same pass). This is
+the reverse of the `eur-lex.europa.eu` finding two pushes ago — there, a
+host thought blocked was not blocked at all; here, the block was real but
+conditional on how the request identified itself, and identifying
+honestly rather than pretending to be a browser was the fix.
+
+Two related domains were re-tested the same way and are **not** affected
+by this correction: `eftasurv.int` (the Surveillance Authority's own
+site) is a genuine JavaScript single-page application with no static
+content regardless of User-Agent, and `eftacourt.int` (the Court's own
+site) serves only a live case-docket and hearings list regardless of
+path or User-Agent. Both remain cited but effectively unread; Wikipedia
+supplies the institutional detail neither carries.
+
+### What this means for the rest of the re-verification backlog
+
+`discovery/reverification-allowlist.md` and every prior push's "blocked
+hosts" note should be read with this in mind: a 403 from a host tested
+with a browser-spoofing User-Agent is not proof the host is closed to
+automated re-verification, only that it is closed to *that* User-Agent.
+`www.iso.org`, `www.coe.int` and `unece.org` — the three hosts still
+carried on the blocked list — have not been re-tested with an honest
+User-Agent since this finding, and are candidates for the next pass
+rather than settled dead ends.
+
 ## The fourth verification-gap push
 
 **Date:** 2026-08-22

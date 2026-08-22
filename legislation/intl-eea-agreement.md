@@ -166,8 +166,10 @@ non-member countries in this Atlas are in genuinely different positions.
 
 - **Iceland and Liechtenstein**, the other two EEA EFTA states. Adding
   either would show whether the Norwegian pattern generalises.
-- The **EEA Joint Committee**, **EFTA**, the **EFTA Surveillance Authority**
-  and the **EFTA Court**.
+- ~~The **EEA Joint Committee**, **EFTA**, the **EFTA Surveillance
+  Authority** and the **EFTA Court**~~ — now [[INTL-EEA-JOINT-COMMITTEE]],
+  [[INTL-EFTA]], [[INTL-EFTA-SURVEILLANCE-AUTHORITY]] and
+  [[INTL-EFTA-COURT]], all created in the same pass as this note.
 - The **Annexes and Protocols**. Annex XI (electronic communication,
   audiovisual services and information society) is the one that matters for
   this Atlas and is named in the evidence rather than modelled.
