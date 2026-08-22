@@ -38,6 +38,7 @@ organisations:
 related_entities:
   - PL-MC
   - PL-MOBYWATEL
+  - PL-PESEL
 relationships:
   - type: governed-by
     target: PL-MC
@@ -106,17 +107,13 @@ law proposes would be indistinguishable in the graph from one that exists.
 That the Atlas now holds the *same* institutional change at two different
 stages, in two countries, is a genuine benefit of covering six of them.
 
-## PESEL is not modelled
+## PESEL is now modelled
 
 COI maintains the **PESEL** register — Poland's population register, the
-direct counterpart of [[NL-BRP]] and the object the Dutch batch modelled in
-detail.
-
-**No entity was created for it.** It is named in a list of systems COI
-maintains and nothing was researched about its legal basis, content or
-governance. Creating it from that mention would produce exactly the thin
-node the taxonomy threshold prevents — and would invite a false parallel
-with the ten fully-described Dutch registers. Queued.
+direct counterpart of [[NL-BRP]]. It is now [[PL-PESEL]], `maintained-by`
+this entity via the State Registers System launched 1 March 2015, and
+`governed-by` [[PL-EWIDENCJA-LUDNOSCI]], the 2010 act that is its legal
+basis.
 
 ## Relationships
 

@@ -324,8 +324,9 @@ validation (`CONTRIBUTING.md` — Batch workflow).
   CSIRT MON. Poland and the Netherlands are now both countries with
   cybersecurity legislation modelled and **no cyber authority** — see
   [[DOMAIN-CYBERSECURITY]].
-- [ ] **PESEL**, Poland's population register and the counterpart of
-  [[NL-BRP]]. Named in [[PL-COI]]'s list of systems and nothing more.
+- [x] **PESEL**, Poland's population register and the counterpart of
+  [[NL-BRP]]. Modelled as [[PL-PESEL]] and [[PL-EWIDENCJA-LUDNOSCI]] in the
+  second research-queue pickup, 2026-08-22.
 - [ ] **Dz.U. citation for [[PL-ODO]]**, the weakest-sourced of the six
   national GDPR instruments — no ISAP or Dziennik Ustaw reference found.
 - [ ] **Krajowe Ramy Interoperacyjności**, a Polish DCAT profile, the

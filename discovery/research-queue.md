@@ -6,9 +6,10 @@
 > rows made the queue longer every time it got shorter.
 >
 > **Largest open items:** portal custodians for six national portals;
-> `PL-PESEL`-equivalent population registers; [[NL-BRI]]'s AWR Chapter IVA
-> basis; the Spanish and Polish primary-citation gaps; and the Comunidades
-> Autónomas, now unblocked and unstarted.
+> [[NL-BRI]]'s AWR Chapter IVA basis; the Spanish and Polish
+> primary-citation gaps; and the Comunidades Autónomas, now unblocked and
+> unstarted. [[PL-PESEL]], Poland's population register, is modelled as
+> of 2026-08-22 — the second research-queue pickup.
 >
 > **The `level` vocabulary is no longer a blocker.** `level: subnational` was
 > added 2026-08-21 and the three Belgian sub-federal ODD instruments are
@@ -244,7 +245,6 @@ by accident.
 | **Dz.U./ISAP citation for [[PL-ODO]]** | The weakest-sourced of the six national GDPR instruments — no primary legal citation found, and its substantive GDPR-specification provisions are entirely unestablished | **Next** | Poland batch |
 | **A ministry or Commission source for the eIDAS 2.0 incompatibility** | [[PL-MOBYWATEL]]'s edge to [[EU-EIDAS2]] — the Atlas's **only** eIDAS2 link — rests on press reporting alone | **Next** | Poland batch |
 | **CSIRT MON** | Poland's military CSIRT, and the last of the three still unmodelled — [[PL-NASK]] carries CSIRT NASK and [[PL-ABW]] carries CSIRT GOV | Later | Poland batch; narrowed 2026-08-18 |
-| **PESEL** | Poland's population register, the direct counterpart of [[NL-BRP]] and the ten Dutch base registries | Next | Poland batch |
 | **The operator of [[PL-DANE-GOV-PL]]** | Not identified by any source found. Three of six national open data portals still have no custodian in the graph | Next | Poland batch |
 | **Krajowe Ramy Interoperacyjności** | Poland's national interoperability framework — the sixth national NIF, and the sixth potential [[EU-EIF]] descent | Later | Poland batch |
 | **A Polish DCAT application profile** | [[EU-DCAT-AP]] has four national children; whether Poland has a fifth was not researched | Later | Poland batch |

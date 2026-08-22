@@ -537,7 +537,6 @@ batches recorded that none existed.
 | Item | Why |
 |---|---|
 | **CSIRT NASK, CSIRT GOV, CSIRT MON** | Not researched. Poland joins the Netherlands as a country with cybersecurity legislation modelled and **no cyber authority** — [[DOMAIN-CYBERSECURITY]] now shows two such countries of six |
-| **PESEL** | Poland's population register, the counterpart of [[NL-BRP]]. Named in [[PL-COI]]'s list of systems and nothing more |
 | **Agencja Informatyzacji** | The body a draft law would create from [[PL-COI]]. Does not exist; same refusal as Spain's Centro Nacional de Ciberseguridad |
 | **GIODO** | The predecessor DPA. Sources say the President took over only *part* of its competencies — not the clean succession [[ES-AEAD]] → [[ES-SGAD]] records, so nothing asserted |
 | **Krajowe Ramy Interoperacyjności**, a Polish DCAT profile, the operator of [[PL-DANE-GOV-PL]], the Act on Public Statistics | All named in sources, none researched |
