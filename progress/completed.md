@@ -1,5 +1,167 @@
 # Completed Batches
 
+## The second verification-gap push
+
+**Date:** 2026-08-22
+
+Continued the open-ended "close the verification gap" task from where the
+first push left off, this time working two full country clusters end to
+end rather than partial slices: every `country: GB` entity, every
+`country: IE` entity, and [[EU-UK-ADEQUACY]] (the one non-national entity
+the UK cluster's own index page had flagged as the single most important
+missing connective fact). 24 entities moved to `primary-source`; none held
+back.
+
+### UK cybersecurity/standards cluster (6 entities)
+
+[[GB-NCSC]], [[GB-CAF]], [[GB-NIS-REGULATIONS]], [[GB-CSRB]], [[GB-OFCOM]]
+and [[GB-BSI]].
+
+The NCSC's own PDF policy statement, cited on three of these entities, now
+404s. Replaced it on [[GB-NCSC]] with `ncsc.gov.uk/section/about-ncsc/`
+and simply dropped it — rather than re-citing it unread — on [[GB-CAF]]
+and [[GB-CSRB]]. `commonslibrary.parliament.uk` and
+`committees.parliament.uk` are both Cloudflare-bot-walled (403, "Just a
+moment...") and are recorded as such rather than silently dropped.
+[[GB-BSI]]'s "13,000 UK experts" figure could not be re-confirmed and is
+flagged as such in its own evidence string rather than quietly repeated.
+
+### UK government/statistics/geospatial cluster (10 entities)
+
+[[GB-DSIT]], [[GB-DCMS]], [[GB-GDS]], [[GB-ONS]], [[GB-UKSA]], [[GB-OS]],
+[[GB-DATA-GOV-UK]], [[GB-ONE-LOGIN]], [[GB-GEOSPATIAL-STRATEGY]] and [[GB]]
+itself.
+
+**The DSIT/DCMS/DBIST split, triangulated.** Three independent trade-press
+accounts (publictechnology.net, thinkdigitalpartners.com, dma.org.uk) of
+the same written ministerial statement corroborate the July 2026
+department reshuffle; `ukauthority.com`, cited on two of these entities,
+is bot-walled (403) and is recorded as unread rather than dropped or
+re-cited blind.
+
+**A better source displaced a worse one.** [[GB-GDS]]'s CDDO/Geospatial
+Commission/GDS/i.AI merger account previously rested on trade press. GOV.UK's
+own "Central Digital and Data Office" organisation page states it directly:
+*"The Central Digital and Data Office (CDDO), the Geospatial Commission,
+the Government Digital Service (GDS) and the Incubator for Artificial
+Intelligence (i.AI) have merged to create the new Government Digital
+Service ... CDDO existed from April 2021 to January 2025."*
+
+**A caveat that stayed a caveat, honestly.** [[GB-ONS]] and [[GB-UKSA]]
+both assert `participates-in` [[UN-CES]] on the strength of UK membership
+of the Conference of European Statisticians and its Bureau — but
+`unece.org` is Cloudflare-bot-walled, and the UKSA's own international-
+engagement page has moved to a URL that lists UNECE only generically,
+without naming CES or its Bureau. Both entities now say explicitly *"NOT
+independently re-confirmed 2026-08-22"* and keep the original claim rather
+than deleting it — a page move and a bot-wall are not evidence a claim is
+wrong, but they are not re-verification either.
+
+**A UN-GGIM anchor for the UK's geospatial gap.** [[GB-OS]]'s role as
+Secretariat and Head of UK Delegation to [[UN-GGIM]] is confirmed on
+GDS's own geospatial blog and independently on an 11th-session UN-GGIM
+statement PDF (`pdftotext`-extracted), naming the same official by name
+and title at an earlier session.
+
+**A rebrand flagged, not chased.** [[GB-DATA-GOV-UK]]'s own site now
+titles itself "National Data Library — the home of UK public data" rather
+than data.gov.uk. Recorded as a finding; not resolved into a rename this
+pass.
+
+**A tool-format quirk, not a sourcing gap.** [[GB-GEOSPATIAL-STRATEGY]]'s
+alternative name "UK's Geospatial Strategy" initially failed
+`tools/reverify.py`'s exact-match check — the source page uses a curly
+apostrophe (’) and the frontmatter used a straight one ('). Corrected to
+match the source's actual typography rather than dropped or forced.
+
+**[[GB]] itself, re-verified.** Removed the unattested alternative name
+"United Kingdom of Great Britain and Northern Ireland" — it was supported
+only by the ISO Online Browsing Platform citation, which is bot-walled
+(403) and was never read. Its `part-of` [[INTL-COE]] edge could not be
+re-confirmed (`coe.int` also bot-walled) and is retained with that stated
+explicitly, the same treatment given to the UN-CES ambiguity above.
+
+### EU-UK-ADEQUACY (1 entity)
+
+Closed the connection the UK batch's own index page had called *"the
+single most important connective fact between the UK and the EU data
+layer"* and left unread. All five cited sources (eucrim.eu, edpb.europa.eu,
+aoshearman.com, arnoldporter.com, ico.org.uk) were read directly and
+confirm the 19 December 2025 renewal and 27 December 2031 sunset clause
+verbatim, several times over.
+
+**Renamed for the same reason as [[GB-UK-GDPR]] before it.** The compiled
+name "European Commission adequacy decisions for the United Kingdom"
+never appeared verbatim on any source. Renamed to "UK adequacy decisions"
+— the phrase edpb.europa.eu and aoshearman.com both use — and the
+unattested alternative name "UK data adequacy" replaced with "adequacy
+decisions for the UK," confirmed on ico.org.uk.
+
+### Irish cluster (7 entities)
+
+[[IE-DPA-2018]], [[IE-NCS-BILL]], [[IE-PSI-REGULATIONS-2021]], [[IE-NCSC]],
+[[IE-NSAI]], [[IE-TAILTE]] and [[IE-DATA-GOV-IE]].
+
+**A structural bug, not just a sourcing gap.** [[IE-NSAI]]'s own body text
+already described `participates-in` edges to [[EU-CEN]] and [[EU-CENELEC]]
+— but they were never added to the entity's structured `relationships:`
+list, so the graph itself didn't carry them. Fixed, and re-confirmed
+against the composition rule's live source (the old CEN-national-members
+URL had moved; found and read the replacement,
+`standards.cencenelec.eu/ords/f?p=CEN:5`).
+
+**A live escalation, found mid-pass.** [[IE-NCS-BILL]]'s NIS2 transposition
+was already known to be overdue (17 October 2024 deadline, Commission
+reasoned opinion 7 May 2025). Reading globalpolicywatch.com directly
+turned up a harder consequence not in the original sources: *"the European
+Commission referred Ireland and three other Member States to the CJEU for
+their failure to transpose NIS2"* in July 2026.
+
+**A confidence upgrade earned by a better source.** [[IE-TAILTE]]'s merger
+of Ordnance Survey Ireland, the Property Registration Authority and the
+Valuation Office was previously sourced only to the merged body's own
+homepage and a general encyclopaedia link, at `confidence: low` with no
+`start_date`. en.wikipedia.org's dedicated Ordnance Survey Ireland article
+states the date directly — "Dissolved 1 March 2023" — and both `confidence`
+(raised to medium) and `start_date` are set on that basis.
+
+**Two more renames for the same "never used verbatim" reason.**
+[[IE-NCSC]]'s `name` field carried a parenthetical "(Ireland)"
+disambiguation that no source states; renamed to match how [[GB-NCSC]]
+carries the identical name, with the scoped ID doing the disambiguating
+instead. [[IE-NCS-BILL]] lost two alternative names ("NCS Bill", "Irish
+NIS2 transposition") that were never attested either.
+
+**A discrepancy flagged, not resolved.** [[IE-NCSC]]'s own homepage says
+it is "an operational arm of the Department of the Justice, Home Affairs
+and Migration"; the European Commission's NIS2 tracker (last updated 7
+July 2025) names the Department of Communications, Climate Action &
+Environment as its contact department instead. Recorded as an open
+discrepancy rather than resolved by guessing which is current.
+
+### Documentation
+
+`countries/gb/index.md` and `countries/ie/index.md` both carried a
+sourcing-caveat banner describing every entity below as unverified —
+stale as of this push, since every entity either page links to now
+carries `verification: primary-source`. Both rewritten. Two stale
+per-entity annotations on the Ireland index (IE-TAILTE's confidence, and
+IE-NSAI's "no participates-in edges") were also corrected.
+`discovery/reverification-allowlist.md` regenerated (`tools/source_hosts.py`)
+to reflect the new read/unread counts. Three rows in
+`discovery/unresolved.md` closed or updated: IE-TAILTE's merger-date
+question (resolved), IE-NSAI's CEN/CENELEC/ISO question (CEN/CENELEC now
+resolved, ISO still open), and IE-DATA-GOV-IE's transposition-instrument
+question (already resolved by an earlier pass; the row had not caught up).
+
+### Verification
+
+`validation/run_all.py` 5/5, 0 errors (7 pre-existing warnings, all in
+entities untouched by this push). `tools/test_build_graph.py` 41 tests.
+`tools/test_reverify.py` 36 tests. Graph regenerated after each cluster.
+No `--force` used anywhere in this push — every write satisfied
+`tools/reverify.py`'s corroboration check on its own terms.
+
 ## The verification-gap multi-batch push
 
 **Date:** 2026-08-22

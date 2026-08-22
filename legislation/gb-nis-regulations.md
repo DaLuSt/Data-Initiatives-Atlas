@@ -27,11 +27,10 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: 2018-05-10
 end_date: null
-last_verified: null
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -50,14 +49,14 @@ relationships:
   - type: applies-in
     target: GB
     source: fact
-    evidence: "The Network and Information Systems Regulations 2018, SI 2018/506, gave effect in the United Kingdom to Directive (EU) 2016/1148 and came into force on 10 May 2018, imposing obligations on operators of essential services and relevant digital service providers in the UK (legislation.gov.uk SI 2018/506; gov.uk 'The NIS Regulations 2018'; lexisnexis.com). NOT READ — search-only."
+    evidence: "Confirmed by reading the statute text at legislation.gov.uk (2026-08-22): 'Made 19th April 2018. Laid before Parliament 20th April 2018. Coming into force 10th May 2018.' Schedule 1 designates competent authorities including 'Digital Infrastructure ... Office of Communications (United Kingdom)'."
     confidence: medium
     valid_from: 2018-05-10
     valid_until: null
   - type: implements-requirement-from
     target: EU-NIS
     source: fact
-    evidence: "The Network and Information Systems Regulations 2018, SI 2018/506, gave effect in the UK to the Network and Information Systems Directive, Directive (EU) 2016/1148; EU member states, including at that time the UK, were required to transpose the directive by 9 May 2018, and the UK Regulations came into force on 10 May 2018 (lexisnexis.com legal guidance on the NIS Regulations 2018; legislation.gov.uk SI 2018/506; gov.uk 'The NIS Regulations 2018'; osborneclarke.com). NOT READ — search-only."
+    evidence: "Confirmed by reading the statute text at legislation.gov.uk (2026-08-22): the Regulations cite 'Directive (EU) 2016/1148 of the European Parliament and of the Council' directly and came into force 10 May 2018, one day after the Directive's 9 May 2018 transposition deadline."
     confidence: medium
     valid_from: 2018-05-10
     valid_until: null
@@ -66,26 +65,33 @@ sources:
   - title: "The Network and Information Systems Regulations 2018"
     url: "https://www.legislation.gov.uk/uksi/2018/506"
     publisher: "legislation.gov.uk (The National Archives)"
+    accessed: "2026-08-22"
   - title: "The NIS Regulations 2018"
     url: "https://www.gov.uk/government/collections/nis-directive-and-nis-regulations-2018"
     publisher: "GOV.UK"
+    accessed: "2026-08-22"
   - title: "UK NIS Regulations 2018: scope, duties and enforcement"
     url: "https://www.lexisnexis.com/en-gb/legal/guidance/the-network-information-systems-regulations-2018"
     publisher: "LexisNexis UK"
+    accessed: "2026-08-22"
   - title: "The Network and Information Systems Regulations 2018: how will they apply in practice?"
     url: "https://www.osborneclarke.com/insights/the-network-and-information-systems-regulations-2018-how-will-they-apply-in-practice"
     publisher: "Osborne Clarke"
+    accessed: "2026-08-22"
 ---
 
 # The NIS Regulations 2018
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-22.** The statutory instrument's own text at
+> legislation.gov.uk was read directly and confirmed the claims below,
+> including Schedule 1's competent-authority list verbatim.
 
 ## Description
 
-SI 2018/506 **gave effect in the UK to Directive (EU) 2016/1148** — see
+Confirmed directly on legislation.gov.uk (2026-08-22): "Made 19th April
+2018. Laid before Parliament 20th April 2018. Coming into force 10th May
+2018," citing "Directive (EU) 2016/1148 of the European Parliament and of
+the Council" throughout. SI 2018/506 **gave effect in the UK to Directive (EU) 2016/1148** — see
 [[EU-NIS]] — and came into force on **10 May 2018**, the day after the
 transposition deadline. It is still in force, and [[GB-CSRB]] would amend
 rather than replace it.
@@ -136,10 +142,14 @@ leaving the EU did to a regulatory area.
 
 ## Sector-by-sector competent authorities
 
-Schedule 1 lists competent authorities rather than naming one: the
-departments responsible for **energy, transport, health and drinking
-water**, **Ofcom** for digital infrastructure, and **[[GB-ICO]]** for
-relevant digital service providers. [[GB-NCSC]] is **explicitly not a
+Schedule 1, read directly (2026-08-22), lists competent authorities rather
+than naming one: energy (electricity, oil, gas) to the Secretary of State
+and sector regulators; transport (air, rail, water, road) to the Secretary
+of State for Transport and devolved administrations; health and drinking
+water similarly split by nation; and, in the row that matters for this
+Atlas, **"Digital Infrastructure — Office of Communications (United
+Kingdom)"** — Ofcom, named by its full statutory title. [[GB-ICO]] is named
+for relevant digital service providers. [[GB-NCSC]] is **explicitly not a
 competent authority**, and coordinates instead.
 
 **[[GB-OFCOM]] is now modelled**, so two of the named competent authorities

@@ -23,11 +23,10 @@ region: null
 status: proposed
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -45,14 +44,14 @@ relationships:
   - type: references
     target: GB-CAF
     source: fact
-    evidence: "The Cyber Security and Resilience Bill places the NCSC Cyber Assessment Framework on a firmer statutory footing as the baseline standard for in-scope organisations (commonslibrary.parliament.uk CBP-10442; gov.uk 'Summary of the Bill'; ncsc.gov.uk policy statement; globalpolicywatch.com). NOT READ — search-only."
+    evidence: "Confirmed by reading gov.uk's 'Summary of the Bill' factsheet (2026-08-22), which describes NCSC's 'recent launch of Cyber Assessment Framework version 4.0' and the bill's intent to place it on a firmer statutory footing."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: related-to
     target: GB-NIS-REGULATIONS
     source: fact
-    evidence: "The Cyber Security and Resilience Bill was introduced to Parliament in November 2025 and updates the UK's cyber security legislation covering critical national infrastructure primarily by amending the Network and Information Systems Regulations 2018; it amends rather than replaces the existing NIS framework, extending its reach to new categories of organisation, strengthening reporting and enforcement, and placing the NCSC Cyber Assessment Framework on a firmer statutory footing (commonslibrary.parliament.uk CBP-10442; gov.uk 'Summary of the Bill'; ncsc.gov.uk policy statement; globalpolicywatch.com). NOT READ — search-only. CAVEAT: recorded as related-to because the Atlas has no relationship type for amendment."
+    evidence: "Confirmed by reading gov.uk's 'Summary of the Bill' factsheet (2026-08-22): 'Since then, cyber criminals are exploiting new routes – managed service providers, data centres and critical parts of supply chains – to threaten our way of life ... By bringing into scope more of the core services.' This describes an extension of, not a replacement for, the NIS Regulations 2018 framework. CAVEAT: recorded as related-to because the Atlas has no relationship type for amendment."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -64,31 +63,37 @@ sources:
   - title: "Cyber Security and Resilience (Network and Information Systems) Bill factsheets — Summary of the Bill"
     url: "https://www.gov.uk/government/publications/cyber-security-and-resilience-network-and-information-systems-bill-factsheets/summary-of-the-bill"
     publisher: "GOV.UK"
-  - title: "Cyber Security and Resilience Bill — policy statement"
-    url: "https://www.ncsc.gov.uk/pdfs/blog-post/cyber-security-resilience-bill-policy-statement.pdf"
-    publisher: "National Cyber Security Centre (UK)"
+    accessed: "2026-08-22"
   - title: "Five major changes to the regulation of cybersecurity in the UK under the Cyber Security and Resilience Bill"
     url: "https://www.globalpolicywatch.com/2025/11/five-major-changes-to-the-regulation-of-cybersecurity-in-the-uk-under-the-cyber-security-and-resilience-bill/"
     publisher: "Global Policy Watch (Covington)"
+    accessed: "2026-08-22"
 ---
 
 # Cyber Security and Resilience Bill
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-22.** gov.uk's own "Summary of the Bill" factsheet
+> and Global Policy Watch's legal commentary were read directly and
+> confirmed the claims below. `commonslibrary.parliament.uk` returned a
+> bot-defense challenge (403) and was not read.
 
 ## Description
 
 Introduced to Parliament in **November 2025** and expected to receive Royal
 Assent in 2026, the CSRB is the most significant reform to UK cyber security
-regulation since [[GB-NIS-REGULATIONS]]. It **amends rather than replaces**
+regulation since [[GB-NIS-REGULATIONS]]. Confirmed on globalpolicywatch.com
+(2026-08-22): the Bill "will amend the existing Network and Information
+Systems Regulations 2018 ... to cover, among other things, data centers and
+managed service providers ... [and] increase potential fines—up to GBP 17m
+or 4% of the worldwide turnover." It **amends rather than replaces**
 that instrument, and would:
 
 - extend scope to **managed service providers, data centres and supply
   chains**;
-- strengthen **reporting and enforcement**;
-- put the **Cyber Assessment Framework** on a firmer statutory footing as
+- strengthen **reporting and enforcement**, with fines up to **£17 million
+  or 4% of worldwide turnover**;
+- put the **Cyber Assessment Framework** — confirmed on gov.uk to have
+  recently reached "version 4.0" — on a firmer statutory footing as
   the baseline for organisations in scope.
 
 ## Parallel evolution, not transposition
@@ -152,5 +157,7 @@ will be wrong the moment the bill passes.
 
 ## Sources
 
-Listed in frontmatter — a Commons Library briefing, a GOV.UK factsheet, an
-NCSC policy statement and legal commentary. Three of the four are official.
+Listed in frontmatter — a Commons Library briefing (bot-walled, not read
+this pass), a GOV.UK factsheet, and legal commentary. The originally cited
+NCSC policy-statement PDF now 404s and was dropped rather than re-cited
+unread.

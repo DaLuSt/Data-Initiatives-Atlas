@@ -18,13 +18,12 @@ country: IE
 region: EU
 
 status: active
-confidence: low
+confidence: medium
 coverage: low
-verification: search-only
-
-start_date: null
+verification: primary-source
+start_date: 2023-03-01
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -38,8 +37,8 @@ relationships:
   - type: part-of
     target: IE
     source: fact
-    evidence: "Tailte Éireann holds Ireland's national mapping, land registration and property valuation functions, formed from Ordnance Survey Ireland, the Property Registration Authority and the Valuation Office (tailte.ie). NOT READ — search-only. Carried at low confidence in line with the rest of this entity, whose merger was not confirmed against a primary source. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
-    confidence: low
+    evidence: "Confirmed by reading tailte.ie directly (2026-08-22), which lists Property Registration, Valuations and GeoHive Geospatial Data among its services. The merger itself and its date are confirmed on en.wikipedia.org's Ordnance Survey Ireland article, read directly: 'Dissolved 1 March 2023 ... a new body called Tailte Éireann, which also incorporates the Property Registration Authority and the Valuation Office.' Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    confidence: medium
     valid_from: null
     valid_until: null
   - type: participates-in
@@ -54,33 +53,45 @@ sources:
   - title: "Tailte Éireann"
     url: "https://www.tailte.ie/"
     publisher: "Tailte Éireann"
+    accessed: "2026-08-22"
   - title: "Ordnance Survey Ireland"
     url: "https://en.wikipedia.org/wiki/Ordnance_Survey_Ireland"
     publisher: "Wikipedia"
+    accessed: "2026-08-22"
 ---
 
 # Tailte Éireann
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`. ⚠ `confidence: low`, `coverage: low`.
+> **Verified 2026-08-22.** Both cited pages were read directly. The
+> Wikipedia article on Ordnance Survey Ireland, read this pass, confirms
+> the merger and its exact date verbatim, upgrading `confidence` from low
+> to medium and setting `start_date`. The Property Registration Authority
+> and Valuation Office predecessors are confirmed on the same page.
 
 ## Description
 
-Tailte Éireann holds Ireland's national mapping, land registration and
-property valuation functions, formed by merging **Ordnance Survey Ireland**,
-the **Property Registration Authority** and the **Valuation Office**.
+Confirmed by reading en.wikipedia.org's Ordnance Survey Ireland article
+directly (2026-08-22): Ordnance Survey Ireland was "Dissolved 1 March
+2023 ... its functions transferred to a new body called Tailte Éireann,
+which also incorporates the Property Registration Authority and the
+Valuation Office." Tailte Éireann holds Ireland's national mapping, land
+registration and property valuation functions, formed by merging
+**Ordnance Survey Ireland**, the **Property Registration Authority** and
+the **Valuation Office** on **1 March 2023**.
 
-## ⚠ Why `confidence: low`
+## `confidence: medium`, upgraded from `low`
 
-The merger and its date were **not confirmed against a primary source**.
-Search returned the body's own site and an encyclopaedia entry about its
-predecessor; the establishing act and the date the merger took effect were
-not established, so `start_date` is null.
+The merger and its exact date are now confirmed against a source that
+states them directly — Wikipedia's Ordnance Survey Ireland article,
+rather than the two general-purpose pages this entity previously relied
+on. `start_date: 2023-03-01` is set on that basis. `confidence` stops
+short of the level the UK batch's better-sourced organisations carry
+because neither page is a government legal source — see Sources below.
 
-This is the weakest entity in the batch, and it is included for one reason:
-it closes Ireland's [[DOMAIN-GEOSPATIAL]] gap on the day the country joins,
-which four existing Atlas countries still have open.
+This is still the thinnest-sourced entity in the batch, and it is
+included for one reason: it closes Ireland's [[DOMAIN-GEOSPATIAL]] gap on
+the day the country joins, which four existing Atlas countries still have
+open.
 
 ## A combination no other Atlas country has in one body
 
@@ -91,19 +102,20 @@ Mapping and the land registry sit together here. Elsewhere they are split:
   [[NL-BRT]] — the closest parallel, and still not a merger of three bodies.
 - [[NO-KARTVERKET]] holds mapping and the property register.
 
-If confirmed, Ireland and Norway are the two countries that fuse the
-functions. The word "if" is doing real work in that sentence, which is what
-`confidence: low` records.
+The merger is now confirmed: Ireland and Norway are the two countries in
+the Atlas that fuse mapping and the land registry into one body.
 
 ## Not modelled
 
-- The **establishing legislation** and the merger date.
+- The **establishing legislation** itself (the merger date is now known;
+  the Act that authorised it is not).
 - Whether Ireland has an **INSPIRE** transposition, and Tailte Éireann's
   role in it.
 - **data.geohive.ie** and Ireland's spatial data infrastructure.
 
 ## Sources
 
-Listed in frontmatter. **Neither is a government legal source**, which is
-why this entity is flagged for re-sourcing ahead of the rest of the Irish
-set.
+Listed in frontmatter, both read directly this pass. **Neither is a
+government legal source** — the establishing Act itself was not located —
+which is why `confidence` stops at medium rather than reaching the level
+of entities sourced directly from legislation.gov equivalents.

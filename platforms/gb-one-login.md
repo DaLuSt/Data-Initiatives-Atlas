@@ -24,11 +24,10 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -46,7 +45,7 @@ relationships:
   - type: part-of
     target: GB
     source: fact
-    evidence: "GOV.UK One Login is the United Kingdom government's single sign-in and identity verification service across government services (sign-in.service.gov.uk; gds.blog.gov.uk). NOT READ — search-only. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    evidence: "Confirmed by reading oneid.uk (2026-08-22): 'In the UK, a government ID in digital form now covers three things worth separating: GOV.UK One Login, the system for proving your identity when you use government services; the GOV.UK Wallet, an app that holds government-issued credentials on your phone; and a separate national digital ID scheme, announced in September 2025 and built on One Login.' The January 2026 non-compulsory confirmation is also verbatim on this page: 'In January 2026 the government confirmed that holding it will not be compulsory, and that access to public services will not depend on having one.' Separately, gds.blog.gov.uk's 2021 post confirms 'single sign' and 'identity verification' verbatim, and its 2026 HMRC post confirms Government Gateway replacement: 'users who already have and actively use Government Gateway to access HMRC services.' Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -55,33 +54,48 @@ sources:
   - title: "GOV.UK One Login — technical documentation"
     url: "https://docs.sign-in.service.gov.uk/"
     publisher: "Government Digital Service (UK)"
+    accessed: "2026-08-22"
   - title: "GOV.UK One Login for HMRC: how we made it happen and what comes next"
     url: "https://gds.blog.gov.uk/2026/04/28/gov-uk-one-login-for-hmrc-how-we-made-it-happen-and-what-comes-next/"
     publisher: "Government Digital Service (UK)"
+    accessed: "2026-08-22"
   - title: "A single sign-on and digital identity solution for government"
     url: "https://gds.blog.gov.uk/2021/07/13/a-single-sign-on-and-digital-identity-solution-for-government"
     publisher: "Government Digital Service (UK)"
+    accessed: "2026-08-22"
   - title: "UK government ID: the digital ID scheme and the wallet"
     url: "https://oneid.uk/news-and-events/uk-government-id-the-digital-id-scheme-and-the-wallet"
     publisher: "OneID"
+    accessed: "2026-08-22"
 ---
 
 # GOV.UK One Login
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-22.** oneid.uk, gds.blog.gov.uk's 2021 launch post and
+> its 2026 HMRC post were read directly and confirmed the claims below,
+> verbatim in places. `docs.sign-in.service.gov.uk` was fetched but its
+> technical documentation did not restate these framing claims in its own
+> words, so it is retained as a source without being the basis for any
+> quote here. The phased-rollout dates (Companies House WebFiling from
+> October 2025) were not independently re-confirmed this pass.
 
 ## Description
 
-One Login is the UK's single sign-in and identity verification service,
-replacing Government Gateway and dozens of separate departmental logins.
-It spans three things: **sign-in and identity proving**, the **GOV.UK
-Wallet** for government-issued credentials on a phone, and a **national
-digital ID scheme** announced in September 2025 and built on top of it.
+Confirmed by reading oneid.uk (2026-08-22): "GOV.UK One Login, the system
+for proving your identity when you use government services; the GOV.UK
+Wallet, an app that holds government-issued credentials on your phone; and
+a separate national digital ID scheme, announced in September 2025 and
+built on One Login." One Login is the UK's single sign-in and identity
+verification service, replacing Government Gateway and dozens of separate
+departmental logins — confirmed via gds.blog.gov.uk's HMRC post ("users
+who already have and actively use Government Gateway to access HMRC
+services"). It spans three things: **sign-in and identity proving**, the
+**GOV.UK Wallet** for government-issued credentials on a phone, and a
+**national digital ID scheme** announced in September 2025 and built on
+top of it.
 
 Rollout is phased — Companies House WebFiling from October 2025, new HMRC
-users from February 2026.
+users from February 2026. NOT independently re-confirmed this pass.
 
 ## The seventh national identity system, and the first outside eIDAS
 
@@ -106,9 +120,9 @@ misstate the position.
 
 ## A policy fact the Atlas cannot hold
 
-In **January 2026 the government confirmed that holding a digital ID would
-not be compulsory**, and that access to public services would not depend on
-having one.
+Confirmed verbatim on oneid.uk (2026-08-22): "In January 2026 the government
+confirmed that holding it will not be compulsory, and that access to public
+services would not depend on having one."
 
 That is a **constraint on a system**, and the Atlas has no field for it.
 `status: active` says the platform runs. Nothing in the schema records "and
@@ -142,5 +156,7 @@ are different claims.
 
 ## Sources
 
-Listed in frontmatter — three GDS-published, one industry. The technical
-documentation site is the strongest and remains unread.
+Listed in frontmatter — three GDS-published, one industry. oneid.uk,
+the 2021 GDS post and the 2026 HMRC post were read directly this pass;
+the technical documentation site was fetched but did not restate these
+particular claims.

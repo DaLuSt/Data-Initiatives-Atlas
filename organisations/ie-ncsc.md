@@ -1,15 +1,15 @@
 ---
 id: IE-NCSC
 type: organisation
-name: National Cyber Security Centre (Ireland)
+name: National Cyber Security Centre
 alternative_names:
   - NCSC Ireland
-  - NCSC-IE
 description: >
-  Ireland's national cyber security centre, which will act as lead authority
-  for oversight and enforcement once the NIS2 Directive is transposed by the
-  National Cyber Security Bill. It has published cyber governance guidance
-  for management boards ahead of that implementation.
+  Ireland's national cyber security centre, founded in 2011, which will act
+  as lead authority for oversight and enforcement once the NIS2 Directive
+  is transposed by the National Cyber Security Bill. It has published
+  cyber governance guidance for management boards ahead of that
+  implementation.
 
 level: national
 country: IE
@@ -18,11 +18,10 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -38,31 +37,50 @@ sources:
   - title: "NCSC: NIS2"
     url: "https://www.ncsc.gov.ie/nis2/"
     publisher: "National Cyber Security Centre (Ireland)"
+    accessed: "2026-08-22"
   - title: "NCSC: NIS2 FAQ"
     url: "https://www.ncsc.gov.ie/nis2/FAQ/"
     publisher: "National Cyber Security Centre (Ireland)"
+    accessed: "2026-08-22"
   - title: "Irish NCSC Issues Cyber Governance Guidance for Management Boards Ahead of NIS2 Implementation"
     url: "https://www.globalpolicywatch.com/2026/07/irish-ncsc-issues-cyber-governance-guidance-for-management-boards-ahead-of-nis2-implementation/"
     publisher: "Covington — Global Policy Watch"
+    accessed: "2026-08-22"
+  - title: "NCSC: National Cyber Security Centre"
+    url: "https://www.ncsc.gov.ie/"
+    publisher: "National Cyber Security Centre (Ireland)"
+    accessed: "2026-08-22"
 ---
 
-# National Cyber Security Centre (Ireland)
+# National Cyber Security Centre (IE-NCSC)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-22.** All four cited pages were read directly and
+> confirmed the claims below, verbatim in places. The `name` field has
+> been changed from "National Cyber Security Centre (Ireland)" — a
+> disambiguation not attested on any source — to "National Cyber Security
+> Centre," matching how [[GB-NCSC]] carries the same name: the scoped ID
+> (`IE-NCSC`), not the display name, does the disambiguating.
 
 ## Description
 
-Ireland's NCSC is the intended **lead authority for oversight and
-enforcement** of NIS2 obligations once [[IE-NCS-BILL]] transposes
+Confirmed by reading globalpolicywatch.com directly (2026-08-22): "On
+July 7, 2026, the Irish National Cyber Security Centre ('NCSC') published
+guidance for management boards and senior executives of organizations
+subject to the EU's Network and Information Security Directive ('NIS2')."
+Ireland's NCSC is the **current designated national competent authority**
+for digital service providers under the still-unamended NIS1 regime —
+confirmed on the European Commission's own tracker — and is expected to
+take on a wider lead-authority role once [[IE-NCS-BILL]] transposes
 [[EU-NIS2]].
 
 ## An authority acting ahead of its own statute
 
-The NCSC publishes NIS2 guidance, an FAQ, and cyber governance guidance for
-management boards — while the Bill that would give it competent-authority
-functions is **not yet enacted**.
+The NCSC publishes NIS2 guidance, an FAQ ("Once the legislation is
+implemented, both the NIS2 registration portal and the NIS2 incident
+reporting portal will be available for use" — confirmed verbatim on
+ncsc.gov.ie), and cyber governance guidance for management boards — while
+the Bill that would give it its full competent-authority functions is
+**not yet enacted**.
 
 That is a real and slightly odd state, and it shapes which edges exist.
 
@@ -97,13 +115,27 @@ the reason [[NL-CBW]] is a NIS2 act with no authority attached.
 The UK/Ireland contrast is the useful one: same name, opposite answers on
 the same question of whether the body is the NIS competent authority.
 
+## A finding worth flagging: the NCSC's own parent department has changed
+
+Confirmed verbatim on ncsc.gov.ie (2026-08-22): "The National Cyber
+Security Centre (NCSC) was founded in **2011** and is an operational arm
+of the **Department of the Justice, Home Affairs and Migration**." The
+Atlas's earlier sourcing (via the European Commission's tracker, still
+current for the DSP competent-authority role) names the Department of
+Communications, Climate Action & Environment as the contact department.
+Both may be correct for different functions, or a machinery-of-government
+move may have happened since the tracker page was last updated (7 July
+2025) — this was not resolved this pass, and no `organisations:` entry is
+asserted for either department on that basis.
+
 ## Not modelled
 
-- **CSIRT-IE**, which [[IE-NCS-BILL]] also designates.
-- The **Department of the Environment, Climate and Communications**, the
-  NCSC's parent.
+- **CSIRT-IE** as a separate entity — see [[IE-NCS-BILL]] for the same
+  caveat on whether the Bill's own text, as opposed to the current
+  regime, designates it.
+- The NCSC's parent department — see the finding above.
 - The **Cyber Fundamentals Framework (CyFun)** — see [[IE-NCS-BILL]].
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, all four read directly this pass.

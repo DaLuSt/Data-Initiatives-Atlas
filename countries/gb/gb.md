@@ -3,7 +3,6 @@ id: GB
 type: country
 name: United Kingdom
 alternative_names:
-  - United Kingdom of Great Britain and Northern Ireland
   - UK
   - Great Britain
 description: >
@@ -20,11 +19,10 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -36,7 +34,7 @@ relationships:
   - type: part-of
     target: INTL-COE
     source: fact
-    evidence: "the United Kingdom is one of the 46 member states of the Council of Europe, an intergovernmental organisation separate from the European Union (coe.int 'The Council of Europe's 46 member states'). NOT READ — search-only. Anchor edge under metadata/relationship-types.md §2.3: it records Council of Europe membership and asserts no more than that. Added in the European country batch so that all fifty anchors carry the same membership edge."
+    evidence: "NOT independently re-confirmed 2026-08-22: coe.int returns a bot-defense challenge (403, Cloudflare 'Attention Required!') and was not read. The claim (the UK is one of the 46 member states of the Council of Europe, an intergovernmental organisation separate from the European Union) is retained rather than removed, since a bot-wall is not evidence it is wrong. Anchor edge under metadata/relationship-types.md §2.3: it records Council of Europe membership and asserts no more than that. Added in the European country batch so that all fifty anchors carry the same membership edge."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -45,25 +43,31 @@ sources:
   - title: "The Council of Europe's 46 member states"
     url: "https://www.coe.int/en/web/portal/46-members-states"
     publisher: "Council of Europe"
-  - title: "GB — United Kingdom of Great Britain and Northern Ireland (ISO 3166-1 country code)"
-    url: "https://www.iso.org/obp/ui/#iso:code:3166:GB"
-    publisher: "International Organization for Standardization (ISO)"
   - title: "A blueprint for modern digital government"
     url: "https://assets.publishing.service.gov.uk/media/678f6665f4ff8740d978864c/a-blueprint-for-modern-digital-government-web-optimised.pdf"
     publisher: "Department for Science, Innovation and Technology (UK)"
+    accessed: "2026-08-22"
   - title: "Retained EU Law (Revocation and Reform) Act 2023 — Explanatory Notes"
     url: "https://www.legislation.gov.uk/ukpga/2023/28/notes/division/7/index.htm"
     publisher: "legislation.gov.uk (The National Archives)"
+    accessed: "2026-08-22"
   - title: "Assimilated law (Retained EU law)"
     url: "https://www.gov.scot/policies/europe/retained-eu-law/"
     publisher: "Scottish Government"
+    accessed: "2026-08-22"
 ---
 
 # United Kingdom
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-22.** The Retained EU Law (Revocation and Reform) Act
+> 2023 explanatory notes and gov.scot's assimilated-law page were read
+> directly and confirm "United Kingdom" and "Great Britain" verbatim. The
+> unattested alternative name "United Kingdom of Great Britain and
+> Northern Ireland" has been removed — it appeared only on the ISO Online
+> Browsing Platform entry, which is bot-walled (403) and was never read.
+> The Council of Europe membership claim below could not be
+> independently re-confirmed this pass — `coe.int` is also bot-walled —
+> and is retained rather than removed; see that relationship's evidence.
 
 ## Description
 
@@ -177,8 +181,9 @@ See `countries/gb/index.md` for the curated index of UK entities.
 
 ## Sources
 
-Listed in frontmatter, including the ISO Online Browsing Platform entry —
-the same citation [[DE]], [[BE]], [[FR]], [[ES]] and [[PL]] carry.
-
-**No `accessed` date and no `last_verified`** — nothing about this entity
-has been checked against a source.
+Listed in frontmatter. The REUL Act explanatory notes and gov.scot's
+assimilated-law page were read directly this pass. The ISO Online
+Browsing Platform entry — the citation [[DE]], [[BE]], [[FR]], [[ES]] and
+[[PL]] carry — has been dropped: it is bot-walled (403) and was never
+read, and it supported only the alternative name removed above. `coe.int`
+remains cited but unread, also bot-walled.

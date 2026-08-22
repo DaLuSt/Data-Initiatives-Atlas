@@ -23,11 +23,10 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -46,35 +45,35 @@ relationships:
   - type: participates-in
     target: INTL-ISO
     source: fact
-    evidence: "BSI is appointed by the UK government as the national standards body and represents UK interests at the International Organization for Standardization (ISO); it is the UK national member of ISO and holds a permanent seat on the ISO board (bsigroup.com 'The UK's National Standards Body'; committees.parliament.uk written evidence 126888; trade.gov 'United Kingdom - Standards for Trade'). NOT READ — search-only."
+    evidence: "Confirmed by reading bsigroup.com's own 'The UK's National Standards Body' page (2026-08-22): 'As the UK's NSB, BSI is the UK member of the international and European standards development organizations: ISO, IEC, CEN, CENELEC, and ETSI ... with permanent seats on the ISO and IEC Boards.'"
     confidence: medium
     valid_from: null
     valid_until: null
   - type: participates-in
     target: INTL-IEC
     source: fact
-    evidence: "BSI is the UK national member of the International Electrotechnical Commission (IEC) and holds a permanent seat on the IEC board (bsigroup.com 'The UK's National Standards Body'; committees.parliament.uk written evidence 126888). NOT READ — search-only."
+    evidence: "Confirmed by reading bsigroup.com's own page (2026-08-22): BSI 'is the UK member of the international and European standards development organizations: ISO, IEC, CEN, CENELEC, and ETSI,' with 'permanent seats on the ISO and IEC Boards.'"
     confidence: medium
     valid_from: null
     valid_until: null
   - type: participates-in
     target: EU-CEN
     source: fact
-    evidence: "BSI is the UK national member of CEN and provides the infrastructure through which over 13,000 UK experts participate in CEN/CENELEC and ISO/IEC standardisation; BSI's membership of the European standards organisations was retained after the UK left the European Union (bsigroup.com; committees.parliament.uk written evidence 126888; linkedin.com 'How BSI works with CEN, CENELEC, ETSI, ISO, IEC and ITU (before and after Brexit)'). NOT READ — search-only."
+    evidence: "Confirmed by reading bsigroup.com's own page (2026-08-22): BSI is the UK member of CEN alongside ISO, IEC, CENELEC and ETSI, and 'facilitate[s] expert participation in the technical work of these organizations, the outcomes of which form 95% of the UK's national catalogue of standards.' The specific figure of 13,000 UK experts was not found on this page and is not independently re-confirmed."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: participates-in
     target: EU-CENELEC
     source: fact
-    evidence: "BSI is the UK national member of CENELEC alongside CEN, and UK experts participate in CEN/CENELEC committees through BSI (bsigroup.com 'The UK's National Standards Body'; committees.parliament.uk written evidence 126888). NOT READ — search-only."
+    evidence: "Confirmed by reading bsigroup.com's own page (2026-08-22): BSI is the UK member of CENELEC alongside CEN, ISO, IEC and ETSI."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: participates-in
     target: EU-ETSI
     source: fact
-    evidence: "BSI represents UK interests at the European standards organisations CEN, CENELEC and ETSI (bsigroup.com 'The UK's National Standards Body'; linkedin.com 'How BSI works with CEN, CENELEC, ETSI, ISO, IEC and ITU'). NOT READ — search-only. CAVEAT: ETSI membership is direct and company-based rather than by national body in the way CEN and CENELEC are; the sources describe BSI as representing UK interests there without stating the mechanism."
+    evidence: "Confirmed by reading bsigroup.com's own page (2026-08-22): BSI names itself as the UK member of ETSI alongside ISO, IEC, CEN and CENELEC, without elaborating the membership mechanism. CAVEAT: ETSI membership is direct and company-based rather than by national body in the way CEN and CENELEC are; the source describes BSI as a member there without stating the mechanism."
     confidence: low
     valid_from: null
     valid_until: null
@@ -83,29 +82,36 @@ sources:
   - title: "The UK's National Standards Body"
     url: "https://www.bsigroup.com/en-US/about-bsi/national-standards-body/"
     publisher: "British Standards Institution (BSI)"
-  - title: "British Standards Institution (BSI) — written evidence"
-    url: "https://committees.parliament.uk/writtenevidence/126888/html/"
-    publisher: "UK Parliament Committees"
+    accessed: "2026-08-22"
   - title: "United Kingdom — Standards for Trade"
     url: "https://www.trade.gov/knowledge-product/united-kingdom-trade-standards"
     publisher: "International Trade Administration (US Department of Commerce)"
+    accessed: "2026-08-22"
   - title: "British Standards"
     url: "https://en.wikipedia.org/wiki/British_Standards"
     publisher: "Wikipedia"
+    accessed: "2026-08-22"
   - title: "British Standards Institute (BSI) — Open Standards for Data Guidebook"
     url: "https://standards.theodi.org/community/who-can-i-work-with/bsi/"
     publisher: "Open Data Institute"
+    accessed: "2026-08-22"
 ---
 
 # British Standards Institution
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-22.** bsigroup.com's own "National Standards Body"
+> page was read directly and confirmed the claims below, verbatim in
+> places. `committees.parliament.uk` returned a bot-defense challenge
+> (403) and its citation was dropped rather than re-cited unread.
 
 ## Description
 
-BSI is the UK's **National Standards Body**, appointed by government, and —
+Confirmed verbatim on bsigroup.com (2026-08-22): "Formed in 1901, BSI was
+the world's first national standards body ... As the UK's NSB, BSI is the
+UK member of the international and European standards development
+organizations: ISO, IEC, CEN, CENELEC, and ETSI ... with permanent seats on
+the ISO and IEC Boards, and managing over 175 international and European
+committees." BSI is the UK's **National Standards Body**, appointed by government, and —
 formed in **1901** — the world's first. It carries UK representation into
 five standards organisations at once: [[INTL-ISO]], [[INTL-IEC]],
 [[EU-CEN]], [[EU-CENELEC]] and [[EU-ETSI]], with permanent seats on the ISO

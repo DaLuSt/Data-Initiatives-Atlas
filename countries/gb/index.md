@@ -7,12 +7,13 @@ the country's front page (`CONTRIBUTING.md`).
 
 Anchor entity: [[GB]]
 
-> **Sourcing caveat.** Every UK entity below was compiled from
-> search-engine results only: the cited pages were confirmed to exist but
-> were **not read**, because the working environment blocked page
-> retrieval. They carry `verification: search-only` and need a
-> re-verification pass against primary sources. See
-> `discovery/reverification-allowlist.md`.
+> **Re-verified 2026-08-22.** Every UK entity below, and [[EU-UK-ADEQUACY]],
+> has now been re-verified against primary sources read directly and
+> carries `verification: primary-source`. A handful of individual claims
+> could not be independently re-confirmed this pass — the [[GB-UKSA]]/
+> [[GB-ONS]] UN-CES seat-holder ambiguity, and [[GB]]'s own Council of
+> Europe membership (`coe.int` is bot-walled) — and are recorded as such
+> in their evidence rather than silently dropped or re-asserted.
 
 **The ID scope is `GB`, not `UK`** — `metadata/schema.json` requires an
 ISO 3166-1 alpha-2 code, and `GB` is the alpha-2 assignment for the United

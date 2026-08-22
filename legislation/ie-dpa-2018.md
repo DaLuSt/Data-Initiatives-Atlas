@@ -20,11 +20,10 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: 2018-05-24
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -38,7 +37,7 @@ relationships:
   - type: implements-requirement-from
     target: EU-GDPR
     source: fact
-    evidence: "The Data Protection Commission's inquiries are carried out in accordance with the Data Protection Act 2018 and Article 60 of the GDPR; the Act gives further effect to the GDPR in Irish law and establishes the Data Protection Commission (dataprotection.ie 'Inquiry into TikTok Technology Limited'; irishstatutebook.ie No. 7 of 2018; gdprregulation.eu 'GDPR in Ireland'). NOT READ — search-only."
+    evidence: "Confirmed verbatim by reading dataprotection.ie directly (2026-08-22): the TikTok inquiry 'was carried out in accordance with the Data Protection Act 2018 and Article 60 of the EU General Data Protection Regulation (GDPR).' irishstatutebook.ie's own text of the Act, read directly, confirms it establishes the Data Protection Commission ('PART 2 Data Protection Commission ... Establishment of Data Protection Commission ... Supervisory authority'). gdprregulation.eu confirms the DPC operates under 'a national law (Data Protection Act 2018).'"
     confidence: medium
     valid_from: 2018-05-25
     valid_until: null
@@ -47,19 +46,21 @@ sources:
   - title: "Data Protection Act 2018 (No. 7 of 2018)"
     url: "https://www.irishstatutebook.ie/eli/2018/act/7/enacted/en/html"
     publisher: "Irish Statute Book / Office of the Attorney General"
+    accessed: "2026-08-22"
   - title: "Inquiry into TikTok Technology Limited"
     url: "https://www.dataprotection.ie/en/dpc-guidance/decisions/inquiry-tiktok-technology-limited"
     publisher: "Data Protection Commission (Ireland)"
+    accessed: "2026-08-22"
   - title: "GDPR in Ireland — Compliance Guide, DPC Rules & Enforcement"
     url: "https://www.gdprregulation.eu/gdpr-in-ireland/"
     publisher: "gdprregulation.eu"
+    accessed: "2026-08-22"
 ---
 
 # Data Protection Act 2018 (Ireland)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-22.** All three cited pages were read directly and
+> confirmed the claims below, verbatim in places.
 
 ## Description
 
@@ -102,4 +103,5 @@ work in twenty-seven member states.
 
 ## Sources
 
-Listed in frontmatter. The Irish Statute Book citation is official.
+Listed in frontmatter, all three read directly this pass. The Irish
+Statute Book citation is official.
