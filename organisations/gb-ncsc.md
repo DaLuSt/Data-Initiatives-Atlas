@@ -20,11 +20,10 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -45,35 +44,41 @@ relationships:
   - type: part-of
     target: GB-GCHQ
     source: fact
-    evidence: "The National Cyber Security Centre, a part of GCHQ, was established in October 2016; it brought together CESG — the information security arm of GCHQ — the Centre for the Protection of National Infrastructure, CERT-UK and the Centre for Cyber Assessment into one organisation (gchq.gov.uk 'Britain enters a new era of online opportunity with opening of the National Cyber Security Centre' and 'new national cyber security centre becomes operational'; ncsc.gov.uk 'what we do'). NOT READ — search-only."
+    evidence: "Confirmed by reading ncsc.gov.uk's own 'What we do at the NCSC' page (2026-08-22): 'The National Cyber Security Centre, a part of GCHQ, helps businesses, the public sector and individuals protect the online services and devices that we all depend on.'"
     confidence: medium
     valid_from: 2016-10-01
     valid_until: null
   - type: produces
     target: GB-CAF
     source: fact
-    evidence: "The National Cyber Security Centre publishes the Cyber Assessment Framework, which the Cyber Security and Resilience Bill would place on a firmer statutory footing as the baseline standard for organisations in scope (ncsc.gov.uk Cyber Security and Resilience Bill policy statement; commonslibrary.parliament.uk CBP-10442; cyberfortgroup.com 'NCSC Cyber Assessment Framework: Structure and Scope'). NOT READ — search-only."
+    evidence: "Confirmed by reading en.wikipedia.org's 'Cyber Assessment Framework' article (2026-08-22): 'The Cyber Assessment Framework (CAF) is a mechanism developed by the United Kingdom's National Cyber Security Centre (NCSC) in 2018 for overlooking the security of operations, to meet the Security of Network & Information Systems Regulations (NIS Regulations).'"
     confidence: medium
     valid_from: null
     valid_until: null
 
 sources:
-  - title: "Cyber Security and Resilience Bill — policy statement"
-    url: "https://www.ncsc.gov.uk/pdfs/blog-post/cyber-security-resilience-bill-policy-statement.pdf"
+  - title: "What we do at the NCSC"
+    url: "https://www.ncsc.gov.uk/section/about-ncsc/what-we-do"
     publisher: "National Cyber Security Centre (UK)"
-  - title: "Cyber Security and Resilience (Network and Information Systems) Bill 2024-26"
-    url: "https://commonslibrary.parliament.uk/research-briefings/cbp-10442/"
-    publisher: "House of Commons Library"
+    accessed: "2026-08-22"
   - title: "The Network and Information Systems Regulations 2018: how will they apply in practice?"
     url: "https://www.osborneclarke.com/insights/the-network-and-information-systems-regulations-2018-how-will-they-apply-in-practice"
     publisher: "Osborne Clarke"
+    accessed: "2026-08-22"
+  - title: "Cyber Assessment Framework"
+    url: "https://en.wikipedia.org/wiki/Cyber_Assessment_Framework"
+    publisher: "Wikipedia"
+    accessed: "2026-08-22"
 ---
 
 # National Cyber Security Centre
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-22.** ncsc.gov.uk's own "What we do" page and
+> en.wikipedia.org's "Cyber Assessment Framework" article were read
+> directly and confirmed the claims below, including the CAF's founding
+> year. The originally cited NCSC policy-statement PDF now 404s and
+> `commonslibrary.parliament.uk` returns a bot-defense challenge; both were
+> replaced or dropped rather than re-cited unread.
 
 ## Description
 

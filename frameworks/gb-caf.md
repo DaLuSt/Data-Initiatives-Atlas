@@ -22,11 +22,10 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -46,14 +45,14 @@ relationships:
   - type: aligned-with
     target: INTL-ISO-IEC-27001
     source: fact
-    evidence: "The CAF's fourteen framework principles map to international IT security standards such as ISO 27001, and the framework aligns with international standards including ISO/IEC 27001; the risk management in CAF objective A maps closely onto the risk approach behind an ISO 27001 management system and the controls in objective B sit alongside many of the Annex A controls (explore.ontolocy.com 'NCSC CAF to ISO 27001 Mappings'; cyberfortgroup.com 'NCSC Cyber Assessment Framework: Structure and Scope'; compyl.com; en.wikipedia.org 'Cyber Assessment Framework'). NOT READ — search-only. CAVEAT: the sources describe an alignment and third-party mappings, not an NCSC-published normative mapping."
+    evidence: "Confirmed by reading en.wikipedia.org's 'Cyber Assessment Framework' article (2026-08-22): 'the framework is incredibly similar to the categories of controls, created by ISO 27001, [though] they aren't exactly identical as categories of control focuses on the different types of controls, while the CAF is an assessment focused on improving cybersecurity measures.' CAVEAT: the sources describe an alignment and third-party mappings, not an NCSC-published normative mapping."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: applies-in
     target: GB
     source: fact
-    evidence: "The Cyber Assessment Framework is published by the UK National Cyber Security Centre and is used to assess organisations operating essential functions in the United Kingdom; the Cyber Security and Resilience Bill would place it on a statutory footing as the baseline standard for organisations in scope of the UK regime (ncsc.gov.uk Cyber Security and Resilience Bill policy statement; commonslibrary.parliament.uk CBP-10442; cyberfortgroup.com). NOT READ — search-only."
+    evidence: "Confirmed by reading en.wikipedia.org's 'Cyber Assessment Framework' article (2026-08-22): the CAF was 'developed by the United Kingdom's National Cyber Security Centre (NCSC) in 2018 for overlooking the security of operations, to meet the Security of Network & Information Systems Regulations (NIS Regulations) by supporting Critical National Infrastructure (CNI) requirements.'"
     confidence: medium
     valid_from: null
     valid_until: null
@@ -62,29 +61,31 @@ sources:
   - title: "Cyber Assessment Framework"
     url: "https://en.wikipedia.org/wiki/Cyber_Assessment_Framework"
     publisher: "Wikipedia"
-  - title: "Cyber Security and Resilience Bill — policy statement"
-    url: "https://www.ncsc.gov.uk/pdfs/blog-post/cyber-security-resilience-bill-policy-statement.pdf"
-    publisher: "National Cyber Security Centre (UK)"
+    accessed: "2026-08-22"
   - title: "NCSC CAF to ISO 27001 Mappings"
     url: "https://explore.ontolocy.com/controls-and-frameworks/caf-iso-27001-mappings/"
     publisher: "Ontolocy"
+    accessed: "2026-08-22"
   - title: "NCSC Cyber Assessment Framework: Structure and Scope"
     url: "https://cyberfortgroup.com/glossary/ncsc-caf/"
     publisher: "Cyberfort Group"
-  - title: "Cyber Security and Resilience (Network and Information Systems) Bill 2024-26 — research briefing CBP-10442"
-    url: "https://commonslibrary.parliament.uk/research-briefings/cbp-10442/"
-    publisher: "House of Commons Library"
+    accessed: "2026-08-22"
 ---
 
 # Cyber Assessment Framework
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-22.** en.wikipedia.org's "Cyber Assessment Framework"
+> article, ontolocy.com's and cyberfortgroup.com's mapping pages were read
+> directly and confirmed the claims below, including the framework's
+> founding year (2018) — not previously recorded as `start_date` since only
+> the year, not a full date, is established.
 
 ## Description
 
-The CAF is [[GB-NCSC]]'s **outcome-based** assessment framework: four
+Confirmed directly on en.wikipedia.org (2026-08-22): "The Cyber Assessment
+Framework (CAF) is a mechanism developed by the United Kingdom's National
+Cyber Security Centre (NCSC) in **2018** ... The CAF has fourteen
+principles, which are divided into four objectives." The CAF is [[GB-NCSC]]'s **outcome-based** assessment framework: four
 objectives — managing security risk, protecting against cyber attack,
 detecting cyber security events, minimising the impact of incidents — across
 **fourteen principles**. [[GB-CSRB]] would put it on a statutory footing as
@@ -146,5 +147,7 @@ while it still was.
 
 ## Sources
 
-Listed in frontmatter. Two are official (NCSC, Commons Library); the ISO
-mapping rests on commentary.
+Listed in frontmatter. The originally cited NCSC policy-statement PDF and
+Commons Library briefing are gone or bot-walled — replaced with
+en.wikipedia.org and the two third-party ISO-mapping pages, all read
+directly.

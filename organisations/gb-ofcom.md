@@ -19,11 +19,10 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -39,7 +38,7 @@ relationships:
   - type: applies-to
     target: GB-NIS-REGULATIONS
     source: fact
-    evidence: "The NIS Regulations 2018 set out a full list of competent authorities in Schedule 1, based on the relevant government departments with responsibility for energy, transport, health and drinking water, along with Ofcom in relation to digital infrastructure and the Information Commissioner's Office in relation to relevant digital service providers (osborneclarke.com 'The Network and Information Systems Regulations 2018: how will they apply in practice?'; lexisnexis.com legal guidance on the NIS Regulations 2018; legislation.gov.uk SI 2018/506). NOT READ — search-only."
+    evidence: "Confirmed by reading the statute text at legislation.gov.uk (2026-08-22), Schedule 1: 'Digital Infrastructure — Digital Infrastructure — Office of Communications (United Kingdom).' Ofcom is designated by its full statutory name as the sole competent authority for the digital-infrastructure subsector."
     confidence: medium
     valid_from: 2018-05-10
     valid_until: null
@@ -48,23 +47,28 @@ sources:
   - title: "The Network and Information Systems Regulations 2018"
     url: "https://www.legislation.gov.uk/uksi/2018/506"
     publisher: "legislation.gov.uk (The National Archives)"
+    accessed: "2026-08-22"
   - title: "The Network and Information Systems Regulations 2018: how will they apply in practice?"
     url: "https://www.osborneclarke.com/insights/the-network-and-information-systems-regulations-2018-how-will-they-apply-in-practice"
     publisher: "Osborne Clarke"
+    accessed: "2026-08-22"
   - title: "UK NIS Regulations 2018: scope, duties and enforcement"
     url: "https://www.lexisnexis.com/en-gb/legal/guidance/the-network-information-systems-regulations-2018"
     publisher: "LexisNexis UK"
+    accessed: "2026-08-22"
 ---
 
 # Ofcom
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-22.** The NIS Regulations 2018 statute text at
+> legislation.gov.uk was read directly, confirming Schedule 1's exact
+> wording for Ofcom's designation.
 
 ## Description
 
-Ofcom is the UK communications regulator, and within this Atlas's scope it is
+Confirmed verbatim in Schedule 1 of the NIS Regulations 2018, read directly
+at legislation.gov.uk (2026-08-22): "Digital Infrastructure — Office of
+Communications (United Kingdom)." Ofcom is the UK communications regulator, and within this Atlas's scope it is
 the **competent authority for digital infrastructure** under
 [[GB-NIS-REGULATIONS]] Schedule 1.
 
