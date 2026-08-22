@@ -1,13 +1,11 @@
 ---
 id: GB-UK-GDPR
 type: regulation
-name: UK General Data Protection Regulation
-alternative_names:
-  - UK GDPR
-  - Assimilated Regulation (EU) 2016/679
+name: UK GDPR
 description: >
   The United Kingdom's general data protection regime, consisting of the
-  text of Regulation (EU) 2016/679 as carried into United Kingdom domestic
+  text of the EU General Data Protection Regulation as carried into United
+  Kingdom domestic
   law at the end of the Brexit transition period and amended since. It was
   known as retained EU law until the Retained EU Law (Revocation and Reform)
   Act 2023 renamed that category to assimilated law with effect from 1
@@ -22,11 +20,10 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -49,14 +46,14 @@ relationships:
   - type: applies-in
     target: GB
     source: fact
-    evidence: "UK GDPR is the United Kingdom's general data protection regime, consisting of the text of Regulation (EU) 2016/679 as carried into United Kingdom domestic law and amended since; it applies in the United Kingdom alongside the Data Protection Act 2018 (legislation.gov.uk REUL Act 2023 explanatory notes; gov.scot 'Assimilated law (Retained EU law)'; commonslibrary.parliament.uk CBP-9841). NOT READ — search-only."
+    evidence: "Confirmed by reading gov.scot's 'Assimilated law (Retained EU law)' page (2026-08-22): 'was previously known as retained EU law or \"REUL\" and the terminology was changed with effect from 1 January 2024 by the UK Retained EU Law (Revocation and Reform) Act 2023.' The REUL Act 2023's own explanatory notes, also read, confirm the assimilation mechanism."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: derived-from
     target: EU-GDPR
     source: fact
-    evidence: "UK GDPR is the United Kingdom's version of the General Data Protection Regulation, carried into domestic law as retained EU law; the Retained EU Law (Revocation and Reform) Act 2023 renamed retained EU law to assimilated law with effect from 1 January 2024, and retained direct EU legislation most notably including the UK GDPR continued to take priority under that Act (legislation.gov.uk REUL Act 2023 explanatory notes; commonslibrary.parliament.uk CBP-9841; gov.scot 'Assimilated law (Retained EU law)'; hoganlovells.com). NOT READ — search-only. CAVEAT: the sources establish the derivation and the renaming; the precise commencement instrument and the extent of divergence since are not established."
+    evidence: "Confirmed by reading the REUL Act 2023's own explanatory notes and gov.scot's 'Assimilated law' page (2026-08-22): retained EU law, which included the UK GDPR as retained direct EU legislation, was renamed assimilated law with effect from 1 January 2024. `commonslibrary.parliament.uk` returned a bot-defense block (403) and was not read. CAVEAT: the sources establish the derivation and the renaming; the precise commencement instrument and the extent of divergence since are not established."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -65,22 +62,26 @@ sources:
   - title: "Retained EU Law (Revocation and Reform) Act 2023 — Explanatory Notes"
     url: "https://www.legislation.gov.uk/ukpga/2023/28/notes/division/7/index.htm"
     publisher: "legislation.gov.uk (The National Archives)"
+    accessed: "2026-08-22"
   - title: "Retained EU Law (Revocation and Reform) Act 2023 — research briefing CBP-9841"
     url: "https://commonslibrary.parliament.uk/research-briefings/cbp-9841/"
     publisher: "House of Commons Library"
   - title: "Assimilated law (Retained EU law)"
     url: "https://www.gov.scot/policies/europe/retained-eu-law/"
     publisher: "Scottish Government"
+    accessed: "2026-08-22"
   - title: "UK — Retained EU Law (Revocation and Reform) Act 2023 – quick guide on the key points"
     url: "https://www.hoganlovells.com/en/publications/uk-retained-eu-law-revocation-and-reform-act-2023-quick-guide-on-the-key-points"
     publisher: "Hogan Lovells"
+    accessed: "2026-08-22"
 ---
 
 # UK GDPR
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-22.** The REUL Act 2023's explanatory notes and
+> gov.scot's "Assimilated law" page were read directly and confirmed the
+> renaming date below. `commonslibrary.parliament.uk` returned a
+> bot-defense challenge (403) and was not read this pass.
 
 ## Description
 
