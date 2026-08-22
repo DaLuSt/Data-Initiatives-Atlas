@@ -1,5 +1,98 @@
 # Completed Batches
 
+## The fourth verification-gap push
+
+**Date:** 2026-08-22
+
+Continued the open-ended re-verification task with a fourth cluster:
+Norway, plus the two entities that carry EU law into the EEA. 10 entities
+moved to `primary-source` — [[NO]] itself, [[NO-PERSONOPPLYSNINGSLOVEN]],
+[[NO-DATATILSYNET]], [[NO-KARTVERKET]], [[NO-NSM]], [[NO-DIGDIR]],
+[[NO-ID-PORTEN]], [[NO-ALTINN]], [[INTL-EEA-AGREEMENT]] and
+[[INTL-EEA-JCD-154-2018]].
+
+### A network-policy correction that changes the map for every future pass
+
+`progress/current-batch.md` told every prior pass to skip entities citing
+only `eur-lex.europa.eu`. That guidance was wrong. Both `eur-lex.europa.eu`
+and `europarl.europa.eu` returned real content on every fetch this pass —
+the actual legal texts, not a bot-defense page. This is the same
+false-blocked finding the first push made for `legislation.gov.uk`,
+now made a third time for a different host. The guidance file is
+corrected; the true bot-walled list for this environment is `iso.org`,
+`coe.int`, `unece.org` and (newly confirmed) `efta.int`.
+
+Reading the actual EUR-Lex text of JCD No 154/2018 upgraded every claim
+built on it: the EDPB participation clause turned out to carry a specific
+carve-out (EFTA supervisory authorities have full rights except voting
+and standing for chair/deputy-chair election) that no prior citation of
+this decision had captured, because no prior pass had read it.
+
+### NSM: a restraint the entity was right to hold, until it wasn't
+
+[[NO-NSM]]'s prior text was a model of the sourcing discipline this
+project asks for: *"One source describes NSM as part of the Norwegian
+secret services; that phrasing appears in an encyclopaedia entry and not
+in the government sources, and the Atlas will not classify a body as an
+intelligence service on that basis."* That restraint was correctly
+applied to the evidence available at the time.
+
+Reading `nsm.no` directly this pass found the government source that
+restraint was waiting for: *"NSM utgjør sammen med Etterretningstjenesten
+og Politiets sikkerhetstjeneste (PST) Norges tre etterretnings-
+overvåkings- og sikkerhetstjenester"* — NSM's own official site states
+directly that it is one of Norway's three intelligence, surveillance and
+security services. The entity's classification is corrected, with the
+reasoning for the change left visible in the body rather than silently
+overwritten — a reader should be able to see that the earlier caution was
+sound, not sloppy, and see exactly what evidence overturned it. The same
+page also revealed that Norway's National Cyber Security Centre is part
+of NSM, previously unrecorded.
+
+### A relationship-direction bug pattern, caught and standardised
+
+[[NO-DIGDIR]]'s `maintained-by` edge to [[NO-ID-PORTEN]] is filed with
+Digdir as the subject and ID-porten as the target — which, read against
+this repository's own definition ("`maintained-by`: the target maintains
+the subject"), literally says ID-porten maintains Digdir, backwards from
+the intended claim. Checking the pattern found it is not unique to this
+entity: [[NL-LOGIUS]], [[NL-ICTU]], [[NL-VNG]] and [[EU-SEMIC]] all use
+the identical placement, each with the same explanatory sentence —
+"Direction expressed X→Y for navigability; the authoritative framing
+belongs on the Y entity." NO-DIGDIR was the one entity using this
+placement *without* that disclaimer, instead giving a different and
+confusing rationale. Corrected to match the other four rather than moved,
+since moving it would break an established, load-bearing convention
+rather than fix an isolated mistake.
+
+A second, unrelated error surfaced on the same entity: its own text
+claimed [[GB-GDS]] "carries `maintained-by` edges to identity platforms."
+Re-checked directly, GB-GDS carries no such edge — it explicitly declines
+one, for the reason [[GB-DATA-GOV-UK]] also declines one. Corrected.
+
+### Two findings via evidence a page's own footer, not its prose, supplied
+
+[[NO-ALTINN]]'s operator was previously unestablished — Digdir's own page
+lists what it operates and Altinn is not on that list. Reading altinn.no's
+own site directly found something the list could not: the page's
+publisher footer names Digdir's own address and organisation number.
+`maintained-by` [[NO-DIGDIR]] is now asserted, at `confidence: low` and
+`source: interpretation`, because a publisher footer is real evidence of
+who runs a site but not the same claim as an explicit operating sentence.
+
+[[NO-KARTVERKET]]'s participation in [[UN-GGIM]] was flagged as
+unresearched. kartverket.no's own homepage carried a news item about
+"broad support at the UN" for a meeting of the UN's expert committee for
+geographic information in New York — attendance evidence, not a stated
+delegation role, so the edge is asserted at `confidence: low`.
+
+### Verification
+
+`validation/run_all.py` 5/5, 0 errors (7 pre-existing warnings, all in
+entities untouched by this push). `tools/test_build_graph.py` 41 tests.
+`tools/test_reverify.py` 36 tests. `discovery/reverification-allowlist.md`
+regenerated. No `--force` used anywhere in this push.
+
 ## The third verification-gap push
 
 **Date:** 2026-08-22

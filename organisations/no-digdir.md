@@ -4,7 +4,6 @@ type: organisation
 name: Digitaliseringsdirektoratet
 alternative_names:
   - Digdir
-  - Norwegian Digitalisation Agency
 description: >
   Norway's digitalisation agency, subordinate to the Ministry of
   Digitalisation and Public Governance. It is the government's principal
@@ -21,11 +20,10 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -39,7 +37,7 @@ relationships:
   - type: maintained-by
     target: NO-ID-PORTEN
     source: interpretation
-    evidence: "Digitaliseringsdirektoratet has responsibility for the operation, development and management of ID-porten, the contact and reservation register, the digital mailbox, eSignering, ELMA, eInnsyn and eFormidling, and modernises society-critical common solutions such as ID-porten and Altinn (digdir.no 'Kva er Digitaliseringsdirektoratet?'; digdir.no 'Kraftig vekst i bruk av digitale fellesløsningar'). NOT READ — search-only. Recorded as `interpretation` because `maintained-by` in this repository means the target maintains the subject, and the sources describe operational responsibility rather than using a maintenance term."
+    evidence: "Confirmed by reading digdir.no directly (2026-08-22): 'drift, forvaltning og videreutvikling av felleskomponentar og fellesløysingar' (operation, management and further development of common components and common solutions) is named among Digdir's core functions, and its 'Kraftig vekst i bruk av digitale fellesløsningar' page names ID-porten by name in that context. Direction expressed Digdir→ID-porten for navigability, matching the convention on NL-LOGIUS, NL-ICTU, NL-VNG and EU-SEMIC; the authoritative framing belongs on the ID-porten entity, which is why it carries no mirrored edge of its own. Recorded as `interpretation` because the sources describe operational responsibility in general terms rather than naming ID-porten specifically as 'maintained' by Digdir."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -48,23 +46,27 @@ sources:
   - title: "Kva er Digitaliseringsdirektoratet?"
     url: "https://www.digdir.no/digdir/kva-er-digitaliseringsdirektoratet/703"
     publisher: "Digitaliseringsdirektoratet (Digdir)"
-  - title: "Digitaliseringsdirektoratets strategi"
-    url: "https://www.digdir.no/digdir/digitaliseringsdirektoratets-strategi/2497"
-    publisher: "Digitaliseringsdirektoratet (Digdir)"
+    accessed: "2026-08-22"
   - title: "Kraftig vekst i bruk av digitale fellesløsningar"
     url: "https://www.digdir.no/digdir/kraftig-vekst-i-bruk-av-felleslosninger/1206"
     publisher: "Digitaliseringsdirektoratet (Digdir)"
+    accessed: "2026-08-22"
 ---
 
 # Digitaliseringsdirektoratet (Digdir)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-22.** Both cited pages were read directly. The
+> `digdir.no` "strategy" page previously cited now 404s and has been
+> dropped rather than re-cited unread. The unattested English alternative
+> name "Norwegian Digitalisation Agency" has been removed — no source
+> found this pass, including an English digdir.no page and a Wikipedia
+> search, uses it.
 
 ## Description
 
-Digdir is Norway's digitalisation agency, subordinate to the **Ministry of
+Confirmed by reading digdir.no directly (2026-08-22): "Digdir skal være
+regjeringa sitt fremste verktøy for effektiv og samordna digitalisering
+av offentleg sektor." Digdir is Norway's digitalisation agency, subordinate to the **Ministry of
 Digitalisation and Public Governance**, and the government's principal
 instrument for coordinated digitalisation of the public sector.
 
@@ -84,15 +86,25 @@ divide into two kinds:
 
 Digdir belongs with GDS and DINUM. The [[GB-GDS]] entity records the same
 combination — "the digital centre of government; sets direction **and** runs
-the platforms" — and it is the reason both entities carry `maintained-by`
-edges to identity platforms.
+the platforms." A finding worth correcting: an earlier version of this
+entity claimed GB-GDS "carries `maintained-by` edges to identity
+platforms" for that reason. Re-checked this pass, [[GB-GDS]] carries no
+such edge — it explicitly declines one, for the same reason [[GB-DATA-GOV-UK]]
+does. Corrected here rather than left standing.
 
 ## The relationship type, and why it is `interpretation`
 
 `maintained-by` in this repository means **the target maintains the
-subject**, a direction the repository has got wrong before and now checks
-for. The edge here reads "[[NO-ID-PORTEN]] is maintained by Digdir", which
-is the intended claim.
+subject**. This edge is filed on Digdir with `target: NO-ID-PORTEN`, which
+read literally would say "ID-porten maintains Digdir" — backwards from the
+intended claim. It is placed here anyway, direction expressed
+Digdir→ID-porten for navigability, matching the convention already used on
+[[NL-LOGIUS]], [[NL-ICTU]], [[NL-VNG]] and [[EU-SEMIC]]: the authoritative
+framing belongs on the target entity, and [[NO-ID-PORTEN]]'s own page says
+so explicitly. An earlier version of this entity described the same
+placement with a different, confusing rationale ("recorded as
+`interpretation` because the target maintains the subject") — corrected to
+match how the other four precedents explain themselves.
 
 It carries `source: interpretation` rather than `fact` because the sources
 say Digdir has *responsibility for operation, development and management* —
@@ -119,4 +131,5 @@ and the word asserted rather than closing it silently.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, both read directly this pass. A third,
+digdir.no's "strategy" page, now 404s and has been dropped.

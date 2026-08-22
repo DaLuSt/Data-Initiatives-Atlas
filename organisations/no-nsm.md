@@ -6,14 +6,16 @@ alternative_names:
   - NSM
   - Norwegian National Security Authority
 description: >
-  Norway's national security authority, a directorate that coordinates
-  preventive security measures and works to improve Norway's ability to
-  protect itself against espionage, sabotage, terrorism and complex threats.
-  It is the national professional environment for ICT security and the
-  national warning and coordination body for serious cyber attacks. It is
-  administratively subordinate to the Ministry of Justice and Public
-  Security and reports on a technical line to the Ministry of Defence for
-  the military sector.
+  Norway's national security authority, a directorate that, together with
+  the Norwegian Intelligence Service and the Police Security Service
+  (PST), forms Norway's three intelligence, surveillance and security
+  services. It coordinates preventive security measures and works to
+  improve Norway's ability to protect itself against espionage, sabotage,
+  terrorism and complex threats. Norway's National Cyber Security Centre
+  is part of NSM. NSM is administratively subordinate to the Ministry of
+  Justice and Public Security, while the Ministry of Defence has
+  instruction authority over NSM in matters within its area of
+  responsibility.
 
 level: national
 country: "NO"
@@ -22,11 +24,10 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -40,7 +41,7 @@ relationships:
   - type: part-of
     target: "NO"
     source: fact
-    evidence: "Nasjonal sikkerhetsmyndighet is a Norwegian directorate, administratively subordinate to the Ministry of Justice and Public Security and reporting on a technical line to the Ministry of Defence for the military sector (nsm.no; regjeringen.no). NOT READ — search-only. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    evidence: "Confirmed verbatim by reading nsm.no directly (2026-08-22): 'NSM er administrativt underlagt Justis- og beredskapsdepartementet, samtidig som Forsvarsdepartementet har instruksjonsmyndighet overfor NSM i saker på deres ansvarsområde' (NSM is administratively subordinate to the Ministry of Justice and Public Security, while the Ministry of Defence has instruction authority over NSM in matters within its area of responsibility). Independently confirmed on snl.no (Store norske leksikon): 'Direktoratet er administrativt underlagt Justis- og beredskapsdepartementet.' regjeringen.no returned a bot-defense challenge (403) and was not read. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -49,33 +50,52 @@ sources:
   - title: "Dette er NSM"
     url: "https://nsm.no/om-oss/dette-er-nsm/"
     publisher: "Nasjonal sikkerhetsmyndighet (NSM)"
+    accessed: "2026-08-22"
   - title: "The Norwegian National Security Authority (NSM)"
     url: "https://www.regjeringen.no/en/dep/jd/organisation/etater-ogvirksomheter/the-norwegian-national-security-authority-nsm/id426401/"
     publisher: "Justis- og beredskapsdepartementet (Norwegian Ministry of Justice and Public Security)"
   - title: "Nasjonal sikkerhetsmyndighet"
     url: "https://snl.no/Nasjonal_sikkerhetsmyndighet"
     publisher: "Store norske leksikon"
+    accessed: "2026-08-22"
   - title: "Nasjonal sikkerhetsmyndighet — oppgaver og styring"
     url: "https://www.regjeringen.no/contentassets/ab14d01119a248e29010c01643b62a81/no/pdfs/g-0460-b-nasjonal-sikkerhetsmyndighet.pdf"
     publisher: "Justis- og beredskapsdepartementet"
+  - title: "About the Norwegian National Security Authority"
+    url: "https://nsm.no/en/"
+    publisher: "Nasjonal sikkerhetsmyndighet (NSM)"
+    accessed: "2026-08-22"
 ---
 
 # Nasjonal sikkerhetsmyndighet (NSM)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-22.** nsm.no, its English page and snl.no were read
+> directly and confirm the claims below, verbatim in places.
+> `regjeringen.no` returned a bot-defense challenge (403) and was not
+> read. **A significant finding overturns this entity's previous
+> restraint**: see "NSM is one of Norway's three security services — now
+> confirmed" below.
 
 ## Description
 
-NSM is Norway's national security authority. Its stated task is to improve
+Confirmed verbatim by reading nsm.no directly (2026-08-22): "NSM utgjør
+sammen med Etterretningstjenesten og Politiets sikkerhetstjeneste (PST)
+Norges tre etterretnings- overvåkings- og sikkerhetstjenester" (NSM
+constitutes, together with the Norwegian Intelligence Service and the
+Police Security Service, Norway's three intelligence, surveillance and
+security services). NSM is Norway's national security authority. Its stated task is to improve
 Norway's ability to protect itself against **espionage, sabotage, terrorism
 and complex threats**, and it coordinates preventive security measures
 across state and municipal administration and private suppliers to the
 public sector under security-classified procurement.
 
-It is also the **national professional environment for ICT security** and
-the national warning and coordination body for serious cyber attacks.
+Confirmed verbatim on the same page: "Nasjonalt cybersikkerhetssenter
+(NCSC) er en del av NSM" (Norway's National Cyber Security Centre is
+part of NSM) — independently confirmed on nsm.no's English page, whose
+"Cyber Security" section names "National Cyber Security Centre" among
+NSM's areas of expertise. NSM is also the **national professional
+environment for ICT security** and the national warning and coordination
+body for serious cyber attacks.
 
 ## Two ministries, one directorate
 
@@ -98,26 +118,54 @@ This is the only entity outside the intelligence batch to hold
 reason is that NSM genuinely occupies both roles: preventive security in the
 classified sense, and the national cyber warning function.
 
-**It is not modelled as an intelligence service.** One source describes NSM
-as part of the Norwegian secret services; that phrasing appears in an
-encyclopaedia entry and not in the government sources, and the Atlas will
-not classify a body as an intelligence service on that basis. Norway's
-actual intelligence services — the Etterretningstjenesten and PST — are
-**not modelled**, so the country appears here with a national security
-authority and no services, which is not a complete picture. See
-`discovery/unresolved.md`.
+## NSM is one of Norway's three security services — now confirmed
 
-## No relationships asserted
+The Atlas's previous restraint here was principled but is now overtaken by
+better evidence. It read: *"NSM is not modelled as an intelligence
+service. One source describes NSM as part of the Norwegian secret
+services; that phrasing appears in an encyclopaedia entry and not in the
+government sources, and the Atlas will not classify a body as an
+intelligence service on that basis."*
 
-NSM's statutory basis is the *sikkerhetsloven* (the Security Act), which is
-**not an Atlas entity** and was not researched in this batch. Without it
-there is nothing to point a `governed-by` edge at, and no source read
-connects NSM to any entity the Atlas holds.
+That caution was correctly applied to the evidence available at the
+time. It no longer describes the evidence. NSM's own official website —
+not an encyclopaedia, not a secondary source — states directly that NSM
+is one of Norway's three *etterretnings- overvåkings- og
+sikkerhetstjenester* (intelligence, surveillance and security services),
+alongside the Norwegian Intelligence Service (Etterretningstjenesten) and
+the Police Security Service (PST). The `domains:` field already carried
+[[DOMAIN-NATIONAL-SECURITY]] on this basis; the prose above now matches
+what the domain assignment already implied.
 
-The entity is reachable through [[DOMAIN-CYBERSECURITY]] and
-[[DOMAIN-NATIONAL-SECURITY]] and through the [[NO]] country index, and
-through nothing else. That is recorded rather than patched with a guess.
+**Etterretningstjenesten and PST remain unmodelled.** Norway still
+appears in the Atlas with one of its three security services and not the
+other two — a real gap, just a differently-shaped one than before: it is
+now known that NSM's peers exist and are named, not merely suspected.
+
+## No relationships beyond the anchor
+
+NSM's statutory basis is named this pass — snl.no states plainly that
+"forebyggende sikkerhetstjeneste er regulert i sikkerhetsloven av 1998"
+(the preventive security service is regulated by the Security Act of
+1998) — but the *sikkerhetsloven* is **not an Atlas entity**, so there is
+still nothing to point a `governed-by` edge at. Whether the 1998 Act is
+still the current one is itself unsettled: NSM's own site separately
+lists "Sikkerhetsloven og forskrifter" and "Digitalsikkerhetsloven og
+-forskriften" as distinct regulatory sections, suggesting a more recent
+digital-security statute exists alongside or instead of it, and this
+pass did not resolve which.
+
+**Norway's National Cyber Security Centre, confirmed as part of NSM
+above, is also not modelled separately.** Unlike [[GB-NCSC]] (part of
+[[GB-GCHQ]]) or [[CH-BACS]] (renamed from NCSC), Norway's NCSC has no
+Atlas entity of its own; its activities are recorded here, under NSM.
+
+The entity is reachable through the [[NO]] anchor,
+[[DOMAIN-CYBERSECURITY]] and [[DOMAIN-NATIONAL-SECURITY]], and through
+nothing else.
 
 ## Sources
 
-Listed in frontmatter — three of four are official.
+Listed in frontmatter, three of five read directly this pass.
+`regjeringen.no` returned a bot-defense challenge and stays cited but
+unread.

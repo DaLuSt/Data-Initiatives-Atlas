@@ -20,11 +20,10 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
-
+verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -39,7 +38,7 @@ relationships:
   - type: applies-to
     target: NO-PERSONOPPLYSNINGSLOVEN
     source: fact
-    evidence: "The Personopplysningsloven, enacted as Act No 38 of 15 June 2018, designates the Norwegian Data Protection Authority — Datatilsynet — as the supervisory authority; the Act implements the GDPR in Norwegian law and became effective on 20 July 2018 (datatilsynet.no; lovdata.no LOV-2018-06-15-38; linklaters.com 'Data Protected — Norway'; dlapiperdataprotection.com Norway). NOT READ — search-only."
+    evidence: "Confirmed verbatim by reading a Datatilsynet administrative-fine decision directly (2026-08-22): 'The Norwegian Data Protection Authority (hereinafter \"Datatilsynet\", \"we\", \"us\", \"our\") is the independent supervisory authority responsible for monitoring the application of the General Data Protection Regulation (\"GDPR\") with respect to Norway.' Independently confirmed on linklaters.com, read directly: 'The Norwegian Data Protection Authority will continue to act as the supervisory authority in Norway.' lovdata.no's own metadata record for the Act confirms its 20 July 2018 effective date."
     confidence: medium
     valid_from: 2018-07-20
     valid_until: null
@@ -48,23 +47,32 @@ sources:
   - title: "Data Protected — Norway"
     url: "https://www.linklaters.com/en/insights/data-protected/data-protected---norway"
     publisher: "Linklaters"
+    accessed: "2026-08-22"
   - title: "Data protection laws in Norway"
     url: "https://www.dlapiperdataprotection.com/index.html?t=law&c=NO"
     publisher: "DLA Piper"
+    accessed: "2026-08-22"
   - title: "Datatilsynet — administrative fine decision (example of published enforcement)"
     url: "https://www.datatilsynet.no/contentassets/f974410ee2e142c99cfc208cbae7634e/administrative-fine---sats-asa.pdf"
     publisher: "Datatilsynet"
+    accessed: "2026-08-22"
 ---
 
 # Datatilsynet
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-22.** All three cited pages were read directly and
+> confirm the claims below, verbatim in places — including Datatilsynet's
+> own published administrative-fine decision, which states the
+> authority's mandate in its own words.
 
 ## Description
 
-Datatilsynet is Norway's data protection supervisory authority, designated
+Confirmed verbatim by reading Datatilsynet's own published SATS ASA
+administrative-fine decision directly (2026-08-22): "The Norwegian Data
+Protection Authority (hereinafter 'Datatilsynet', 'we', 'us', 'our') is
+the independent supervisory authority responsible for monitoring the
+application of the General Data Protection Regulation ('GDPR') with
+respect to Norway." Datatilsynet is Norway's data protection supervisory authority, designated
 by [[NO-PERSONOPPLYSNINGSLOVEN]].
 
 ## A supervisory authority notified to a different body
@@ -110,6 +118,8 @@ protection authorities in the graph. That is logged in
 
 ## Sources
 
-Listed in frontmatter. **Two of three are commercial law-firm surveys**, and
-no Datatilsynet page describing the authority's own mandate was returned by
-search — only a published fine. That is this entity's weakest point.
+Listed in frontmatter, all three read directly this pass. What was once
+this entity's weakest point turned out to be its strongest: the "only a
+published fine" citation, read directly, opens with the authority
+describing its own mandate in its own words — a better source than either
+commercial law-firm survey.

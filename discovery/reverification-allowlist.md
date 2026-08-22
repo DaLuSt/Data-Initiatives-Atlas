@@ -7,11 +7,11 @@ Generated: 2026-08-22
 
 ## Why this exists
 
-**345 of the Atlas's 516 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
+**335 of the Atlas's 516 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
 
 Closing that debt — the re-verification pass — needs outbound HTTPS to the hosts those URLs point at. In an environment with a restricted egress policy, this is the allowlist to request. A denial shows up as `403 to CONNECT` from the proxy, which is an environment-level network policy and cannot be changed from inside a session. See `discovery/unresolved.md` for the standing record of the sourcing debt.
 
-The Atlas currently cites **1713 source URLs** across **554 hosts**, collapsing to **402 registrable domains**.
+The Atlas currently cites **1717 source URLs** across **555 hosts**, collapsing to **402 registrable domains**.
 
 ## Highest value first
 
@@ -22,8 +22,8 @@ A domain here is an **allowlist pattern**, not a URL. Most of them also happen t
 | Domain | URLs | Entities | Example host | Opened | Content confirmed |
 |---|---|---|---|---|---|
 | `europa.eu` | 233 | 146 | `data.europa.eu` | ✅ opens | ✅ 2026-08-21 |
-| `wikipedia.org` | 98 | 98 | `cs.wikipedia.org` | ✅ opens |  |
-| `iso.org` | 65 | 62 | `www.iso.org` | ✅ opens | ✅ 2026-08-21 |
+| `wikipedia.org` | 100 | 100 | `cs.wikipedia.org` | ✅ opens |  |
+| `iso.org` | 64 | 61 | `www.iso.org` | ✅ opens | ✅ 2026-08-21 |
 | `coe.int` | 52 | 42 | `rm.coe.int` | ✅ opens | ✅ 2026-08-21 |
 | `gouv.fr` | 44 | 16 | `aide.monespacenis2.cyber.gouv.fr` | ✅ opens |  |
 | `bund.de` | 41 | 23 | `bmds.bund.de` | ✅ opens | ✅ 2026-08-21 |
