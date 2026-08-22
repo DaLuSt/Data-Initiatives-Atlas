@@ -7,11 +7,11 @@ Generated: 2026-08-22
 
 ## Why this exists
 
-**334 of the Atlas's 519 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
+**334 of the Atlas's 521 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
 
 Closing that debt — the re-verification pass — needs outbound HTTPS to the hosts those URLs point at. In an environment with a restricted egress policy, this is the allowlist to request. A denial shows up as `403 to CONNECT` from the proxy, which is an environment-level network policy and cannot be changed from inside a session. See `discovery/unresolved.md` for the standing record of the sourcing debt.
 
-The Atlas currently cites **1731 source URLs** across **557 hosts**, collapsing to **404 registrable domains**.
+The Atlas currently cites **1736 source URLs** across **557 hosts**, collapsing to **404 registrable domains**.
 
 ## Highest value first
 
@@ -22,13 +22,13 @@ A domain here is an **allowlist pattern**, not a URL. Most of them also happen t
 | Domain | URLs | Entities | Example host | Opened | Content confirmed |
 |---|---|---|---|---|---|
 | `europa.eu` | 233 | 146 | `data.europa.eu` | ✅ opens | ✅ 2026-08-21 |
-| `wikipedia.org` | 107 | 104 | `cs.wikipedia.org` | ✅ opens |  |
+| `wikipedia.org` | 110 | 106 | `cs.wikipedia.org` | ✅ opens |  |
 | `iso.org` | 64 | 61 | `www.iso.org` | ✅ opens | ✅ 2026-08-21 |
 | `coe.int` | 52 | 42 | `rm.coe.int` | ✅ opens | ✅ 2026-08-21 |
 | `gouv.fr` | 44 | 16 | `aide.monespacenis2.cyber.gouv.fr` | ✅ opens |  |
+| `gov.pl` | 42 | 20 | `archiwum.giodo.gov.pl` | ✅ opens |  |
 | `bund.de` | 41 | 23 | `bmds.bund.de` | ✅ opens | ✅ 2026-08-21 |
 | `digitaleoverheid.nl` | 40 | 28 | `www.digitaleoverheid.nl` | ✅ opens |  |
-| `gov.pl` | 40 | 18 | `archiwum.giodo.gov.pl` | ✅ opens |  |
 | `government.nl` | 39 | 39 | `www.government.nl` | ✅ opens |  |
 | `gob.es` | 33 | 18 | `administracion.gob.es` | ⚠ namespace only — no site at the apex |  |
 | `overheid.nl` | 30 | 21 | `data.overheid.nl` | ✅ opens |  |

@@ -1,5 +1,70 @@
 # Completed Batches
 
+## The second research-queue pickup
+
+**Date:** 2026-08-22
+
+Picked up **PESEL**, Poland's population register — logged on the
+research queue since the Poland batch and, more pointedly, named on
+[[PL-COI]]'s own entity: *"COI maintains the PESEL register ... Named in
+a list of systems COI maintains and nothing was researched about its
+legal basis, content or governance. Creating it from that mention would
+produce exactly the thin node the taxonomy threshold prevents."* That
+refusal was correct at the time and is exactly what this pass reverses,
+having done the research the earlier pass explicitly declined to skip.
+
+Two entities, following the platform+law pairing [[NL-BRP]]/[[NL-WET-BRP]]
+already established for the Netherlands: [[PL-PESEL]] (the register and
+the eleven-digit number itself) and [[PL-EWIDENCJA-LUDNOSCI]] (the Act of
+24 September 2010 on population records, its legal basis since 1 March
+2015).
+
+### A specific answer to a question PL-COI could only gesture at
+
+PL-COI's entity named PESEL among the systems it maintains, without a
+date or mechanism — the standard shape of a system-list mention with
+nothing behind it. Cross-reading gov.pl's own PESEL page against Polish
+Wikipedia supplied both: on **1 March 2015**, three companion acts (on
+population records, identity cards, and civil status) took effect
+together, and the same day launched the **System Rejestrów Państwowych**
+(State Registers System), "obsługiwany przez Centralny Ośrodek
+Informatyki" — operated by COI — integrating the PESEL register with
+identity-card and civil-status records. Neither source alone gave that
+date and mechanism; reading both did.
+
+### `isap.sejm.gov.pl` is genuinely blocked — unlike `efta.int`
+
+The first research-queue pickup's headline finding was that `efta.int`
+only *looked* bot-walled: a browser-spoofing User-Agent got a 403, an
+honest one got the real page. This pass tested the same theory against
+`isap.sejm.gov.pl`, the Sejm's own legal-text database and the Atlas's
+usual source for an exact Dziennik Ustaw citation — the citation
+[[PL-ODO]] has been missing since the Poland batch, flagged in that
+entity's own text as "the first thing a re-verification pass should
+fetch for Poland."
+
+It did not work the same way. Every fetch — browser-spoofing User-Agent
+and honest, identifying one alike — returned an Incapsula "Pardon Our
+Interruption" JavaScript challenge page. This is a real, User-Agent-
+independent block, not a repeat of the `efta.int` finding, and it is
+worth recording as a negative result: not every 403-shaped wall turns
+out to be a User-Agent problem. [[PL-EWIDENCJA-LUDNOSCI]] therefore
+carries only the **consolidated-text** citation ("Dz. U. z 2015 r.
+poz. 388") that gov.pl itself quotes verbatim, not the Act's original
+2010 promulgation citation — which could be guessed from ISAP's own
+numbering convention, and was deliberately not guessed. `PL-ODO`'s own
+missing citation remains open for the same reason.
+
+### A history with a genuine discrepancy, left unresolved rather than picked
+
+Polish Wikipedia dates the PESEL system's launch to a 1977 pilot in
+Warsaw's Wola district, with numbers assigned to all citizens by 1984.
+English Wikipedia says only that the number has been "used in Poland
+since 1979," with no launch mechanism. [[PL-PESEL]] follows the more
+specific, internally consistent account for its `start_date`, but
+records the discrepancy rather than silently resolving it — the same
+discipline applied throughout this project to conflicting dates.
+
 ## The first research-queue pickup
 
 **Date:** 2026-08-22

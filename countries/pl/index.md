@@ -7,12 +7,14 @@ the country's front page (`CONTRIBUTING.md`).
 
 Anchor entity: [[PL]]
 
-> **Sourcing caveat.** Every Polish entity below was compiled from
+> **Sourcing caveat.** Most Polish entities below were compiled from
 > search-engine results only: the cited pages were confirmed to exist but
 > were **not read**, because the working environment blocked page
 > retrieval. They carry `verification: search-only` and need a
 > re-verification pass against primary sources. See
-> `discovery/reverification-allowlist.md`.
+> `discovery/reverification-allowlist.md`. [[PL-PESEL]] and
+> [[PL-EWIDENCJA-LUDNOSCI]], added 2026-08-22, are the first exceptions —
+> both `verification: primary-source`.
 
 ## Organisations
 
@@ -30,12 +32,17 @@ Anchor entity: [[PL]]
   amendment in force 3 Apr 2026; ⚠ Poland is before the CJEU for the delay)_
 - [[PL-OTWARTE-DANE]] — Ustawa o otwartych danych, 2021 _(transposes
   [[EU-OPEN-DATA-DIRECTIVE]]; repeals the 2016 act)_
+- [[PL-EWIDENCJA-LUDNOSCI]] — Ustawa o ewidencji ludności, 2010 _(legal
+  basis for [[PL-PESEL]] since 1 March 2015; ⚠ ISAP unreadable, so only
+  the consolidated-text Dz.U. citation is asserted)_
 
 ## Platforms
 
 - [[PL-MOBYWATEL]] — citizen application and mDowód _(⚠ reported
   **incompatible with eIDAS 2.0**)_
 - [[PL-DANE-GOV-PL]] — national open data portal
+- [[PL-PESEL]] — population register and identification number
+  _(`maintained-by` [[PL-COI]] since 1 March 2015)_
 
 ---
 
@@ -125,8 +132,8 @@ orders, which the chamber can change.
   national cybersecurity system. Poland therefore joins the Netherlands as a
   country with cybersecurity legislation and **no cyber authority** in
   [[DOMAIN-CYBERSECURITY]].
-- **PESEL**, the population register — the direct counterpart of
-  [[NL-BRP]], named in [[PL-COI]]'s list of systems and nothing more.
+- ~~**PESEL**, the population register~~ — now [[PL-PESEL]] and
+  [[PL-EWIDENCJA-LUDNOSCI]].
 - **The Agencja Informatyzacji** that would replace [[PL-COI]]. It does not
   exist yet.
 - **GIODO**, the predecessor data protection authority — the sources say
