@@ -1,37 +1,45 @@
 # Current Batch
 
-**Status:** No batch in progress. **The third verification-gap push**
+**Status:** No batch in progress. **The fourth verification-gap push**
 completed on 2026-08-22. Full detail moved to `progress/completed.md`;
-summary below. 346 entities remain `verification: search-only`/`unverified`
-(171 now `primary-source`); `discovery/reverification-allowlist.md` ranks
-the next targets. Skip entities citing only `eur-lex.europa.eu`,
-`www.iso.org`, `www.coe.int` or `unece.org` — those hosts return a
-bot-defense challenge page to every fetch in this environment, egress
-policy notwithstanding.
+summary below. 336 entities remain `verification: search-only`/`unverified`
+(181 now `primary-source`); `discovery/reverification-allowlist.md` ranks
+the next targets.
 
-## Third push — 2026-08-22
+**Corrected guidance on what is actually blocked, found during the
+fourth push:** `www.iso.org`, `www.coe.int`, `unece.org` and `efta.int`
+return a bot-defense challenge (403, Cloudflare) to every fetch in this
+environment and can be skipped or treated as unread. **`eur-lex.europa.eu`
+and `europarl.europa.eu` are NOT blocked** — earlier guidance here said
+otherwise and was wrong; both were read directly and successfully in the
+fourth push (NO, NO-PERSONOPPLYSNINGSLOVEN, INTL-EEA-AGREEMENT,
+INTL-EEA-JCD-154-2018), matching the same false-blocked finding earlier
+pushes made for `legislation.gov.uk`.
 
-Closed out the **entire Swiss cluster** (9 entities, plus [[CH]] itself)
-— every `country: CH` entity now carries `verification: primary-source`.
+## Fourth push — 2026-08-22
 
-Highlights: closed the long-standing "no Fedlex citation" gap on
-[[CH-REVDSG]] and [[CH-EMBAG]] by finding the real ELI URLs via outbound
-links on official government pages (Fedlex itself renders client-side in
-JavaScript, so neither could be read past retrieval — a tooling limit,
-not a sourcing gap); found and sourced a genuinely new connection,
-[[CH-OPENDATA-SWISS]] `governed-by` [[CH-EMBAG]], via bfs.admin.ch's own
-statement that its OGD office operates the portal pursuant to the Act —
-closing a gap both entities had explicitly flagged as self-evident but
-unsourced; caught and corrected a wrong alternative name ([[CH-DVS]]'s
-Italian abbreviation was "AND" and should have been "ADS"); and learned
-that a claim attested only in a page's `<title>` tag does not count as
-confirmation once checked against `tools/reverify.py`'s own extraction
-(which strips `<head>`) — re-sourced the affected names via other-language
-pages or Wikipedia infoboxes rather than dropping them. Full write-up in
-`progress/completed.md` under "The third verification-gap push".
+Closed out the **entire Norway cluster** (10 entities: [[NO]], seven
+`country: NO` entities, and the two EEA connective entities
+[[INTL-EEA-AGREEMENT]] and [[INTL-EEA-JCD-154-2018]]).
+
+Highlights: a significant finding on [[NO-NSM]] — its own official
+website states directly that NSM is one of Norway's three intelligence,
+surveillance and security services, overturning the entity's previous
+declined-to-classify stance, which had rested only on an encyclopaedia
+entry; found and sourced `participates-in` [[UN-GGIM]] on [[NO-KARTVERKET]];
+found new evidence (a site publisher footer) for who operates
+[[NO-ALTINN]]; fixed a factual error on [[NO-DIGDIR]] (it claimed
+[[GB-GDS]] carries `maintained-by` edges to identity platforms — GB-GDS
+explicitly declines one) and corrected a confusing relationship-direction
+rationale to match the established convention. Full write-up in
+`progress/completed.md` under "The fourth verification-gap push".
 
 ## Earlier pushes
 
+- **Third push** (2026-08-22): the entire Swiss cluster (9 entities plus
+  CH) — closed the "no Fedlex citation" gap on CH-REVDSG/CH-EMBAG, found
+  CH-OPENDATA-SWISS `governed-by` CH-EMBAG, corrected a wrong alternative
+  name on CH-DVS. See "The third verification-gap push".
 - **Second push** (2026-08-22): the entire UK cluster (17 entities),
   [[EU-UK-ADEQUACY]], and the entire Ireland cluster (7 entities) — 24
   entities moved. See "The second verification-gap push".
