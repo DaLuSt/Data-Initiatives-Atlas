@@ -1,5 +1,87 @@
 # Completed Batches
 
+## The fifth verification-gap push
+
+**Date:** 2026-08-22
+
+Returned to the open-ended re-verification task with a fifth cluster:
+the **Iceland and Liechtenstein** trios — [[IS]], [[IS-PERSONUVERND]],
+[[IS-PERSONUVERNDARLOG]], [[LI]], [[LI-DATENSCHUTZSTELLE]] and
+[[LI-DSG]] — created on 2026-08-21 to test whether the Norwegian EEA
+pattern generalises, and still `verification: search-only` ever since.
+All six now carry `verification: primary-source`.
+
+### The EFTA/EEA membership claim, confirmed for both at once
+
+[[IS]] and [[LI]] each carried a single relationship (`part-of`
+[[INTL-COE]]) and described their EFTA/EEA position only in prose and a
+table, sourced to pages nobody had read. Reading efta.int's own "The
+European Free Trade Association" page directly — with the honest,
+identifying User-Agent this session's first research-queue pickup
+established gets past its bot-defense challenge — confirmed both in one
+pass: "The European Free Trade Association (EFTA) is the
+intergovernmental organisation of Iceland, Liechtenstein, Norway and
+Switzerland," and "three of the four EFTA States – Iceland,
+Liechtenstein and Norway – in a single market" under the EEA Agreement.
+government.nl's own EEA/EFTA/Schengen page, read the same pass,
+corroborates independently.
+
+`coe.int` and `iso.org` remain bot-walled (403) even with the honest
+User-Agent — genuinely closed, not a repeat of the `efta.int` finding —
+so the Council of Europe membership edge on both country anchors is
+retained rather than removed, exactly as it was before this pass.
+
+### Iceland's data protection pair, confirmed to the letter
+
+WIPO Lex's own record of Act No. 90/2018, read directly, matches
+[[IS-PERSONUVERNDARLOG]]'s name field, dates and Icelandic title
+exactly — "Act No. 90/2018 of June 27, 2018 ... Entry into force: July
+15, 2018" and "Lög nr. 90/2018 frá 27. júní 2018 um persónuvernd og
+vinnslu persónuupplýsinga" — and its excerpt of the Act's own opening
+text names [[IS-PERSONUVERND]] directly as the supervisory body: "Sérstök
+stofnun, Persónuvernd, annast eftirlit með framkvæmd reglugerðar
+Evrópuþingsins og ráðsins (ESB) 2016/679." DLA Piper's Iceland page,
+read independently, confirms the Joint Committee Decision date (6 July
+2018) and the Act's role in the same terms the entity already carried.
+
+### A translation error caught by reading the source twice
+
+The most interesting finding of this pass sits on [[LI-DSG]]. Its
+citation, naegele.law's "Liechtenstein & the GDPR," carries both a
+German original and an English translation on the same page. The
+English text says the DSG "was passed on October 2th of 2018 and came
+into force on January 1st of 2018" — the second half of that sentence
+is impossible on its face, since an act cannot enter into force before
+it is passed. The German original, read the same pass, is unambiguous:
+"diese am 4. Oktober 2018 verabschiedet. Das revidierte DSG trat am
+1. Januar 2019 in Kraft" — 4 October 2018, 1 January 2019. The
+Datenschutzstelle's own "Nationale Gesetze" page, read independently,
+gives the same two correct dates.
+
+[[LI-DSG]]'s existing dates already matched the correct German reading,
+so nothing about the entity's content changed — but the *reason* to
+trust those dates is now much stronger: two independent primary sources
+agree, and one candidate source's own English rendering is shown to be
+unreliable rather than merely unread. A pass that read only the English
+half of that page would have "confirmed" a wrong date with a citation
+that looked authoritative.
+
+### A claim a re-verification pass could not confirm, and did not delete
+
+[[LI-DATENSCHUTZSTELLE]]'s entity has said since its creation that its
+Commissioner is appointed by the Landtag for a five-year renewable term.
+Three of the authority's own pages were read directly this pass —
+homepage, "Über uns," and "Team" — and none of them states an
+appointment mechanism; the "Team" page names a head, Dr. Marie-Louise
+Gächter-Alge, with a title ("Leitung") and nothing more.
+
+The claim is retained rather than removed. Absence of confirmation is
+not evidence of error, and this project's standing discipline — applied
+already to Switzerland's Fedlex citations, Norway's `coe.int` edge, and
+now here — is to say plainly what could and could not be re-confirmed,
+not to silently narrow the record to only what the current pass happened
+to find.
+
 ## The third research-queue pickup
 
 **Date:** 2026-08-22

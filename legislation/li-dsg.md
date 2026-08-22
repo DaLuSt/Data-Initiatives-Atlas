@@ -24,11 +24,11 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2019-01-01
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -45,14 +45,14 @@ relationships:
   - type: implements-requirement-from
     target: EU-GDPR
     source: fact
-    evidence: "The Datenschutzgesetz (DSG) is Liechtenstein's national Data Protection Act, enacted 4 October 2018 and in force since 1 January 2019; the GDPR applies in Liechtenstein through the EEA Agreement and became directly applicable on 20 July 2018, and the DSG supplements the GDPR by exercising national opening clauses in areas such as employment data, journalistic expression, video surveillance, national ID numbers and criminal data (datenschutzstelle.li 'Nationale Gesetze'; gdprhub.eu 'Data Protection in Liechtenstein'; naegele.law 'Liechtenstein & the GDPR'). NOT READ — search-only."
+    evidence: "Confirmed verbatim by reading datenschutzstelle.li's own 'Nationale Gesetze' page directly (2026-08-22): 'Liechtenstein nutzte diesen Gestaltungsspielraum mit der Totalrevision des Datenschutzgesetzes, welches seit dem 1. Januar 2019 in Kraft ist. Datenschutzgesetz (DSG) vom 4. Oktober 2018' (Liechtenstein used this latitude with the total revision of the Data Protection Act, in force since 1 January 2019; Data Protection Act (DSG) of 4 October 2018) — the authority's own page confirms the exact dates directly, not only a law firm's commentary. Corroborated by reading naegele.law's German-language text directly, which resolves a typo in the same page's English translation: the English says 'passed on October 2th of 2018 and came into force on January 1st of 2018', but the German original states 'diese am 4. Oktober 2018 verabschiedet. Das revidierte DSG trat am 1. Januar 2019 in Kraft' — 4 October 2018 and 1 January 2019, matching the DSS's own page and this entity's dates exactly. The GDPR's direct applicability in Liechtenstein from 20 July 2018 through the EEA Agreement is confirmed by the same naegele.law page: 'Seit dem 20. Juli 2018 ist die Europäische Datenschutz-Grundverordnung (DSGVO) ... in Liechtenstein anwendbar.' gdprhub.eu's 'Data Protection in Liechtenstein' page was also read directly and confirms the DSG by name as the national implementation law, though most of its own sections are unfilled stubs."
     confidence: medium
     valid_from: 2019-01-01
     valid_until: null
   - type: references
     target: INTL-EEA-JCD-154-2018
     source: fact
-    evidence: "The GDPR applies in Liechtenstein through the EEA Agreement and became directly applicable on 20 July 2018, the route being its incorporation into Annex XI by Decision of the EEA Joint Committee No 154/2018 of 6 July 2018 (eur-lex.europa.eu ELI dec/2018/1022/oj; gdprhub.eu 'Data Protection in Liechtenstein'). NOT READ — search-only."
+    evidence: "Confirmed by reading naegele.law directly (2026-08-22): 'Seit dem 20. Juli 2018 ist die Europäische Datenschutz-Grundverordnung (DSGVO) ... in Liechtenstein anwendbar' — the GDPR's direct applicability in Liechtenstein from 20 July 2018, via its incorporation into Annex XI of the EEA Agreement by Decision of the EEA Joint Committee No 154/2018 of 6 July 2018, already read directly on eur-lex.europa.eu in an earlier pass (see [[INTL-EEA-JCD-154-2018]])."
     confidence: medium
     valid_from: 2018-07-20
     valid_until: null
@@ -61,22 +61,31 @@ sources:
   - title: "Nationale Gesetze — Datenschutzstelle Liechtenstein"
     url: "https://www.datenschutzstelle.li/rechtsgrundlagen/nationale-gesetze"
     publisher: "Datenschutzstelle Liechtenstein"
-  - title: "Data Protection in Liechtenstein"
-    url: "https://gdprhub.eu/index.php?title=Data_Protection_in_Liechtenstein"
-    publisher: "GDPRhub — noyb"
+    accessed: "2026-08-22"
   - title: "Liechtenstein & the GDPR"
     url: "https://www.naegele.law/archiv/liechtenstein-the-gdpr"
     publisher: "NÄGELE Rechtsanwälte GmbH"
+    accessed: "2026-08-22"
+  - title: "Data Protection in Liechtenstein"
+    url: "https://gdprhub.eu/index.php?title=Data_Protection_in_Liechtenstein"
+    publisher: "GDPRhub — noyb"
+    accessed: "2026-08-22"
   - title: "Decision of the EEA Joint Committee No 154/2018 of 6 July 2018"
     url: "https://eur-lex.europa.eu/eli/dec/2018/1022/oj"
     publisher: "EUR-Lex — Publications Office of the European Union"
+    accessed: "2026-08-22"
 ---
 
 # Datenschutzgesetz (Liechtenstein)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read — retrieval is blocked by
-> the network egress proxy. `verification: search-only`.
+> **Verified 2026-08-22.** All four cited pages were read directly. A
+> finding: `naegele.law`'s own English translation contains two date
+> typos ("October 2th", "January 1st of 2018") that its German original
+> on the same page does not — "4. Oktober 2018" and "1. Januar 2019" —
+> and the DSS's own "Nationale Gesetze" page confirms the German dates
+> independently. This entity follows the corrected dates, sourced from
+> two independent readings rather than the flawed English machine/human
+> translation.
 
 ## Description
 
@@ -98,6 +107,20 @@ areas the regulation leaves to member-state law:
 The sources also note that it is **modelled on the German
 Bundesdatenschutzgesetz** rather than on Swiss law — which, for a state in
 customs and currency union with Switzerland, is a choice worth recording.
+
+## A translation error in the source, not in the Atlas
+
+Confirmed by reading naegele.law directly (2026-08-22): the page's own
+English translation states the DSG "was passed on October 2th of 2018
+and came into force on January 1st of 2018" — both wrong, and the
+second internally impossible, since an act cannot come into force
+before it is passed. The same page's German original, read the same
+pass, is unambiguous: "diese am 4. Oktober 2018 verabschiedet. Das
+revidierte DSG trat am 1. Januar 2019 in Kraft" — passed 4 October 2018,
+in force 1 January 2019. The Datenschutzstelle's own "Nationale Gesetze"
+page, read independently, gives the same two dates. This entity follows
+the German original and the authority's own page, not the English
+machine or human translation on the same commentary page.
 
 ## The case that breaks the pattern in an informative way
 
@@ -141,4 +164,4 @@ that the Liechtenstein legislature adapted a specific text — which is what
 
 Listed in frontmatter — the Datenschutzstelle's own register of national
 laws, GDPRhub, a Liechtenstein law firm's account, and the EUR-Lex record of
-the Joint Committee decision.
+the Joint Committee decision, all read directly this pass.

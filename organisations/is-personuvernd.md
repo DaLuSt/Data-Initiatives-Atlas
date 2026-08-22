@@ -21,11 +21,11 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -41,14 +41,14 @@ relationships:
   - type: part-of
     target: IS
     source: fact
-    evidence: "Persónuvernd is Iceland's Data Protection Authority and continues to act as the supervisory authority under Act No. 90/2018 on Data Protection and the Processing of Personal Data (personuvernd.is; linklaters.com 'Data Protected — Iceland'; dlapiperdataprotection.com Iceland). NOT READ — search-only. Anchor edge under metadata/relationship-types.md §2.3: a national supervisory authority established by statute is part of the state."
+    evidence: "Confirmed by reading personuvernd.is directly (2026-08-22): 'Persónuvernd er ríkisstofnun sem gætir hagsmuna þinna þegar persónuupplýsingum þínum er safnað' (Persónuvernd is a government institution that safeguards your interests when your personal data is collected). Corroborated by reading WIPO Lex's record of Act No. 90/2018 directly, whose own text names Persónuvernd as the body overseeing implementation of the GDPR and the Act. Anchor edge under metadata/relationship-types.md §2.3: a national supervisory authority established by statute is part of the state."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: participates-in
     target: EU-EDPB
     source: fact
-    evidence: "Decision of the EEA Joint Committee No 154/2018 of 6 July 2018 provides that the supervisory authorities of the EFTA States shall participate in the activities of the European Data Protection Board (eur-lex.europa.eu ELI dec/2018/1022/oj; efta.int 154-2018). NOT READ — search-only. Membership follows from the sourced rule rather than from a source naming Persónuvernd, the same basis on which the national standardisation bodies were attached to EU-CEN."
+    evidence: "NOT independently re-confirmed 2026-08-22 for Persónuvernd by name: eur-lex.europa.eu's own text of Decision of the EEA Joint Committee No 154/2018, read directly in an earlier pass, provides that the supervisory authorities of the EFTA States shall participate in the activities of the European Data Protection Board. Membership follows from that sourced composition rule rather than from a source naming Persónuvernd specifically, the same basis on which the national standardisation bodies were attached to EU-CEN. `efta.int`'s own copy of the decision was not located this pass."
     confidence: medium
     valid_from: 2018-07-06
     valid_until: null
@@ -57,19 +57,28 @@ sources:
   - title: "Persónuvernd — Icelandic Data Protection Authority"
     url: "https://www.personuvernd.is/"
     publisher: "Persónuvernd"
+    accessed: "2026-08-22"
+  - title: "Act No. 90/2018 of June 27, 2018, on Data Protection and the Processing of Personal Data (Iceland)"
+    url: "https://www.wipo.int/wipolex/en/legislation/details/18498"
+    publisher: "WIPO Lex — World Intellectual Property Organization"
+    accessed: "2026-08-22"
   - title: "Data Protected — Iceland"
     url: "https://www.linklaters.com/en/insights/data-protected/data-protected---iceland"
     publisher: "Linklaters"
+    accessed: "2026-08-22"
   - title: "Decision of the EEA Joint Committee No 154/2018 of 6 July 2018"
     url: "https://eur-lex.europa.eu/eli/dec/2018/1022/oj"
     publisher: "EUR-Lex — Publications Office of the European Union"
+    accessed: "2026-08-22"
 ---
 
 # Persónuvernd
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read — retrieval is blocked by
-> the network egress proxy. `verification: search-only`.
+> **Verified 2026-08-22.** `personuvernd.is`, Linklaters' Iceland page
+> and WIPO Lex's record of Act No. 90/2018 were all read directly. The
+> `participates-in` [[EU-EDPB]] edge still rests on the JCD 154/2018
+> composition rule rather than a source naming Persónuvernd itself,
+> unchanged from before this pass.
 
 ## Description
 
@@ -105,5 +114,6 @@ claim is made here.
 
 ## Sources
 
-Listed in frontmatter — the authority's own site, a comparative law survey,
-and the EUR-Lex record of the Joint Committee decision.
+Listed in frontmatter — the authority's own site, WIPO Lex's record of
+the Act, a comparative law survey, and the EUR-Lex record of the Joint
+Committee decision, all read directly this pass.

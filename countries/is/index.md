@@ -7,10 +7,11 @@ to belong on the country's front page (`CONTRIBUTING.md`).
 
 Anchor entity: [[IS]]
 
-> **Sourcing caveat.** Every entity below was compiled from search-engine
-> results only: the cited pages were confirmed to exist but were **not
-> read**, because the working environment blocked page retrieval. They carry
-> `verification: search-only`.
+> **Re-verified 2026-08-22.** Both entities below, plus [[IS]] itself, now
+> carry `verification: primary-source`. `coe.int` and `iso.org` remain
+> bot-walled (403) even with an honest, identifying User-Agent — unlike
+> `efta.int`, whose apparent block earlier this session turned out to be
+> User-Agent-specific — and stay cited but unread.
 
 ## Organisations
 
