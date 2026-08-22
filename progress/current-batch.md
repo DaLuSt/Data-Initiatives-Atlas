@@ -1,35 +1,35 @@
 # Current Batch
 
-**Status:** No batch in progress. **Re-verification batch 1** completed on
-2026-08-21 — the first pass where `tools/reverify.py` actually fetched and
-read live pages. Full detail moved to `progress/completed.md`; summary below.
-Batches 2+ remain: ~414 entities are still `verification: search-only` or
-`unverified`, and `discovery/reverification-allowlist.md` ranks the next
-targets. Skip entities citing only `eur-lex.europa.eu`, `www.iso.org`,
-`www.coe.int` or `unece.org` — those hosts return a bot-defense challenge
-page to every fetch in this environment, egress policy notwithstanding.
+**Status:** No batch in progress. **Batch 1 core-governance re-verification
+and a research-queue cleanup** completed on 2026-08-21/22. Full detail moved
+to `progress/completed.md`; summary below. ~414 entities remain
+`verification: search-only`/`unverified`; `discovery/reverification-allowlist.md`
+ranks the next targets. Skip entities citing only `eur-lex.europa.eu`,
+`www.iso.org`, `www.coe.int` or `unece.org` — those hosts return a
+bot-defense challenge page to every fetch in this environment, egress
+policy notwithstanding.
 
-## Re-verification batch 1, in brief
+## In brief
 
-**Date:** 2026-08-21. Twenty-one entities moved to `verification:
-primary-source`: the seven Dutch base-registration statutes
-(`NL-WET-BAG`, `NL-WET-BGT`, `NL-WET-BRO`, `NL-WET-WOZ`,
-`NL-HANDELSREGISTERWET`, `NL-WEGENVERKEERSWET-1994`, `NL-KADASTERWET`) and
-fourteen EU-scoped organisations (national statistics institutes and data
-protection authorities citing `ec.europa.eu` / `edpb.europa.eu`).
+Picked up the "Batch 1 — Netherlands: Core Data Governance (needs
+re-verification)" item directly from `discovery/research-queue.md` and
+read the pages behind its specific open questions. Found a real status
+correction ([[NL-FDS]] `planned` → `active`: the OBDO's February 2026
+adoption of the Afsprakenstelsel is now confirmed, not just a search
+result), answered a separately-flagged high-value question ([[NL-NORA]]
+now `based-on` [[EU-EIF]], narrowly scoped to cross-border interoperability,
+per the 2008 Kabinetsbesluit inzake ICT), and replaced three placeholder
+dates with sourced ones ([[NL-IBDS]] 18 November 2021, [[NL-OBDO]] 19
+January 2018, [[NL-MIDO]] 12 July 2022). Two sources went dead
+(`404`) between the 2026-08-20 link check and this pass — noted on the
+affected entities, not papered over. Common Ground's vng.nl sources hit a
+`403` rate-limit mid-session and remain unverified this round.
 
-Two substantive corrections: [[NL-WET-BGT]]'s third commencement date was
-30 April 2018 in the entity and is 1 July 2018 on `wetten.overheid.nl` (30
-April is when the commencement decree was *published*, not when it took
-effect); [[NL-KADASTERWET]]'s "Kadasterwet 1989" alternative name is not
-attested by the statute's own metadata and was removed. Three diacritic
-typos fixed (`Datenschutzbehorde`, `Bundesanstalt Statistik Osterreich`,
-`Dataombudsmannens byra`, each missing an umlaut or accent the authority's
-own site uses).
+Separately, cleaned up `discovery/research-queue.md`: removed nine rows
+asking for entities that had already been created in other batches, and
+refreshed status text describing a pre-egress-opening state that two
+verification batches had already moved past.
 
-`LU-STATEC` and `PT-INE` were attempted and not moved — see
-`progress/completed.md` for why. Full write-up, counts and the egress
-finding (open egress does not mean every host is readable — four
-high-value hosts answer with a bot-defense challenge page instead of
-content) are in `progress/completed.md` under "The re-verification pass,
-batch 1" and in `docs/re-verification.md` §"A machine-corroborated pass".
+Full write-up, evidence quotes and counts are in `progress/completed.md`
+under "The Batch 1 core-governance re-verification, and a research-queue
+cleanup".

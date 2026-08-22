@@ -145,22 +145,24 @@ fostering cross-border and cross-sectoral interoperability. The EIF Toolbox
 exists specifically to help national administrations align their NIFs with
 the EIF.
 
-## The NORA question
+## The NORA question — answered 2026-08-21, with a qualification
 
 [[NL-NORA]] is described in its own sources as "the interoperability
-framework for the Dutch government", which makes it the obvious candidate
-for the Netherlands' NIF — and would make EIF→NORA one of the cleanest
-EU→national framework chains available to the Atlas.
+framework for the Dutch government", which made it the obvious candidate
+for the Netherlands' NIF — and this looked like it would make EIF→NORA one
+of the cleanest EU→national framework chains available to the Atlas.
 
-**That relationship is not asserted.** No source located states that NORA is
-formally the Dutch NIF submitted under the EIF, and the phrase "the
-interoperability framework for the Dutch government" is a description, not a
-designation. The `related_entities` link records the association; a
-`applies-to` or `based-on` relationship awaits a source that says so.
-
-Confirming or refuting this is queued in `discovery/research-queue.md` and
-is one of the higher-value items there: it would connect the EU and Dutch
-framework layers directly.
+**The relationship is now asserted, but more narrowly than a full NIF
+designation.** Kamerstuk 26643-128 (the 2008 Kabinetsbesluit inzake ICT)
+states: *"In NORA zijn de Europese ontwikkelingen in het kader van het
+European Interoperability Framework verankerd voor wat betreft publieke
+diensten waarbij sprake is van grensoverschrijdende gegevensuitwisseling"* —
+EIF developments are anchored in NORA specifically for public services
+involving **cross-border data exchange**. That is not the same as a
+blanket statement that NORA is the Dutch NIF in full — no source states
+that — so [[NL-NORA]] carries `based-on` → this framework on that narrower,
+sourced basis rather than on the broader claim the research-queue question
+originally asked about.
 
 ## A revision in flight
 
@@ -181,12 +183,12 @@ Europe Board remains uncreated (Batch 9).
 
 - Applies in [[NL]], [[DE]], [[BE]], [[FR]], [[ES]] and [[PL]] through the NIF alignment
   mechanism.
-- **[[BE-BELGIF]] is `based-on` this framework** — the Atlas's first and
-  so far only EIF → national-framework descent. The Belgian sources state
-  that BELGIF is Belgium's NIF and takes the EIF's 12 principles as its
-  basis. No equivalent statement was found for the Netherlands or Germany,
-  so neither carries the link; see the NORA question above.
-- Associated with [[NL-NORA]] — see the NORA question above.
+- **[[BE-BELGIF]] is `based-on` this framework** — the Atlas's first
+  EIF → national-framework descent. The Belgian sources state that BELGIF
+  is Belgium's NIF and takes the EIF's 12 principles as its basis.
+- **[[NL-NORA]] is also `based-on` this framework**, added 2026-08-21 — see
+  the NORA question above for the narrower, sourced scope of that link. No
+  equivalent statement was found for Germany, so it does not carry the link.
 
 ## Sources
 

@@ -3,7 +3,7 @@
 > **Generated file — do not hand-edit.** Regenerate with
 > `python tools/source_hosts.py --markdown -o discovery/reverification-allowlist.md`
 
-Generated: 2026-08-21
+Generated: 2026-08-22
 
 ## Why this exists
 
@@ -11,7 +11,7 @@ Generated: 2026-08-21
 
 Closing that debt — the re-verification pass — needs outbound HTTPS to the hosts those URLs point at. In an environment with a restricted egress policy, this is the allowlist to request. A denial shows up as `403 to CONNECT` from the proxy, which is an environment-level network policy and cannot be changed from inside a session. See `discovery/unresolved.md` for the standing record of the sourcing debt.
 
-The Atlas currently cites **1689 source URLs** across **552 hosts**, collapsing to **400 registrable domains**.
+The Atlas currently cites **1695 source URLs** across **552 hosts**, collapsing to **400 registrable domains**.
 
 ## Highest value first
 
@@ -31,7 +31,7 @@ A domain here is an **allowlist pattern**, not a URL. Most of them also happen t
 | `gov.pl` | 40 | 18 | `archiwum.giodo.gov.pl` | ✅ opens |  |
 | `government.nl` | 39 | 39 | `www.government.nl` | ✅ opens |  |
 | `gob.es` | 33 | 18 | `administracion.gob.es` | ⚠ namespace only — no site at the apex |  |
-| `overheid.nl` | 29 | 20 | `data.overheid.nl` | ✅ opens |  |
+| `overheid.nl` | 30 | 21 | `data.overheid.nl` | ✅ opens |  |
 | `unece.org` | 21 | 9 | `aarhusclearinghouse.unece.org` | ✅ opens |  |
 | `un.org` | 20 | 12 | `docs.un.org` | ✅ opens |  |
 | `belgium.be` | 18 | 10 | `bosa.belgium.be` | ✅ opens |  |

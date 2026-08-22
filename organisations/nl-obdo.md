@@ -19,9 +19,9 @@ status: active
 confidence: medium
 coverage: medium
 verification: primary-source
-start_date: null
+start_date: 2018-01-19
 end_date: null
-last_verified: "2026-08-20"
+last_verified: "2026-08-22"
 previous_version: null
 successor: null
 
@@ -49,17 +49,22 @@ sources:
   - title: "Governance Meerjarenprogramma Infrastructuur Digitale overheid (MIDO)"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/mido/governance/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
-    accessed: "2026-08-20"
+    accessed: "2026-08-22"
   - title: "Governance Digitale Overheid"
     url: "https://vng.nl/artikelen/governance-digitale-overheid"
     publisher: "Vereniging van Nederlandse Gemeenten (VNG)"
-    accessed: "2026-08-20"
+    accessed: "2026-08-22"
+  - title: "Instellingsbesluit Sturing Digitale Overheid (Stcrt. 2018, 9728)"
+    url: "https://zoek.officielebekendmakingen.nl/stcrt-2018-9728.html"
+    publisher: "Ministerie van Binnenlandse Zaken en Koninkrijksrelaties"
+    accessed: "2026-08-22"
 ---
 
 # Overheidsbreed Beleidsoverleg Digitale Overheid (OBDO)
 
-> **Verified 2026-08-20.** Every cited source was read and confirmed to
-> support what this entity says. `verification: primary-source`.
+> **Verified 2026-08-20, deepened 2026-08-21.** Every cited source was read
+> and confirmed to support what this entity says. `verification:
+> primary-source`.
 
 ## Description
 
@@ -79,9 +84,27 @@ Digitalisation and Government Organisations (DGDOO).
 Although its formal role is advisory, the OBDO also takes decisions in
 practice — it is described as the body that decides on standards proposed by
 [[NL-FORUM-STANDAARDISATIE]]. The precise boundary between its advisory and
-decision-making functions is unresolved and needs primary sources; two
-Staatscourant publications (2018 and 2022) are queued in
-`discovery/research-queue.md` as likely instellingsbesluiten.
+decision-making functions in the decree text itself is still unresolved, but
+the founding instrument is no longer just "likely": Stcrt. 2018, 9728 is
+confirmed as the *Instellingsbesluit Sturing Digitale Overheid*, signed by
+the State Secretary for BZK on **19 January 2018** (kenmerk 2018-43396),
+which established both the OBDO and the *Programmeringsraad Logius* in a
+single decree. `start_date` is now set to this date.
+
+The decree's own recitals give useful context that was previously missing:
+it explicitly succeeds the governance of the *Nationaal Commissaris Digitale
+Overheid* ("de Digicommissaris"), which ended 17 January 2018 — two days
+before this decree was signed. The 2022 Staatscourant publication
+(Stcrt. 2022, 18861) was also read: it is a 12 July 2022 *amending* decree
+("Besluit Sturing Digitale Overheid 2022"), not a separate instellingsbesluit
+— it introduces multi-year programming (*meerjarenprogrammering*) on the
+generic digital infrastructure into the 2018 decree, which is the direct
+legal basis for [[NL-MIDO]].
+
+**One source has gone dead since 2026-08-20.** The digitaleoverheid.nl
+dossier page originally cited for the OBDO's general description now
+returns `404 Not Found`; no replacement URL for the same content was
+located. The other three sources still corroborate the entity fully.
 
 ## Relationships
 

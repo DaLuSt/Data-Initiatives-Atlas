@@ -1,5 +1,88 @@
 # Completed Batches
 
+## The Batch 1 core-governance re-verification, and a research-queue cleanup
+
+**Date:** 2026-08-21/22
+
+Picked up two open items directly from `discovery/research-queue.md`: the
+"Batch 1 — Netherlands: Core Data Governance (needs re-verification)"
+section, and a pass to remove queue rows for entities that had already been
+created in other batches.
+
+### The Batch 1 core-governance deepening
+
+All twelve Batch 1 entities already carried `verification: primary-source`
+from the 2026-08-20 link check. This pass went further: read the pages
+specifically for the open questions `discovery/unresolved.md` had recorded
+against them, using the egress opened in the prior re-verification batch.
+
+**A real status correction.** [[NL-FDS]]'s `status` was `planned`, on the
+reasoning that a search result's claim — the OBDO adopting the
+*Afsprakenstelsel Federatief Datastelsel* in February 2026 — was
+unconfirmed. It is now confirmed, word for word, on digitaleoverheid.nl:
+*"In februari 2026 heeft het Overheidsbreed Beleidsoverleg Digitale
+Overheid (OBDO) het Afsprakenstelsel Federatief Datastelsel vastgesteld."*
+`status` moves to `active`. The [[NL-IBDS]] → [[NL-FDS]] relationship, an
+Atlas interpretation until now, is also confirmed a sourced fact from the
+same source family: noraonline.nl states plainly that the IBDS develops the
+FDS.
+
+**A separately-flagged high-value question, answered.**
+`discovery/unresolved.md` had asked since Batch 7 whether [[NL-NORA]] is
+formally the Netherlands' National Interoperability Framework under
+[[EU-EIF]]. Kamerstuk 26643-128 (the 2008 Kabinetsbesluit inzake ICT)
+answers it, but more narrowly than the question assumed: EIF developments
+are anchored in NORA specifically for public services with cross-border
+data exchange, not as a blanket NIF designation. [[NL-NORA]] now carries
+`based-on` → [[EU-EIF]] on that sourced, narrower basis.
+
+**Two placeholder dates replaced with sourced ones.** [[NL-IBDS]]'s
+presentation to the Tweede Kamer — reported as "November 2021" and flagged
+unverified — is confirmed as **18 November 2021** on two independent
+sources. [[NL-MIDO]]'s `start_date` was an implicit `2022-01-01`
+placeholder for "since 2022"; the actual legal basis, an amendment to
+[[NL-OBDO]]'s founding decree, was signed **12 July 2022**, and
+[[NL-OBDO]]'s own founding Instellingsbesluit was signed **19 January
+2018** — both now sourced `start_date`s.
+
+**Two dead links found.** A digitaleoverheid.nl OBDO dossier page and the
+"Voortgang MIDO" timeline page, both cited and confirmed on 2026-08-20, now
+return `404 Not Found` — the site was reorganised in the intervening day or
+two. No replacement URLs were found; both entities remain fully
+corroborated by their other sources.
+
+**Common Ground attempted, not closed.** `vng.nl` answered one request
+normally and then returned `403 Forbidden` ("Request forbidden by
+administrative rules") to every subsequent attempt in the same session — a
+rate-limit or burst-defense response, distinct from the four permanently
+bot-walled hosts. Its programme-status and entity-typing questions remain
+open for a future, more slowly-paced pass.
+
+### The research-queue cleanup
+
+Separately, cross-checked every row in `discovery/research-queue.md`
+against the actual entity list rather than trusting the queue's own "still
+open" claims. Nine rows removed because the entity they asked for had
+already been created in another batch (Manufacturing-X, gematik/GDNG,
+Belgium's NBN, France's AFNOR and Health Data Hub, Spain's AENOR/UNE, the
+Netherlands' RvIG, ENISA, and NORA's GEMMA/EAR/ROSA/PETRA family — all
+confirmed to exist with the relationships the queue rows were waiting on).
+One row trimmed rather than removed (Health-RI existed; DANS, RIVM and NWO
+from the same row did not). Three status blocks refreshed because they
+described the pre-egress-opening state after two verification batches had
+already moved past it.
+
+### Counts
+
+| | Before | After |
+|---|---|---|
+| Edges | 6,172 | **6,175** |
+| Research-queue rows removed | — | **9** (plus 2 incorporated-source rows this batch closed) |
+
+All required suites green: `validation/run_all.py` 5/5 (7 pre-existing
+plain-http warnings), `tools/test_build_graph.py` 41/41,
+`tools/test_reverify.py` 36/36, `tools/test_ui.mjs` 86/86.
+
 ## The re-verification pass, batch 1 — the first pages a machine actually read
 
 **Date:** 2026-08-21
