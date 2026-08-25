@@ -8,10 +8,9 @@ alternative_names:
   - Repubblica Italiana
 description: >
   Country anchor entity for Italy, a member state of the European Union
-  since 1 January 1958. It is a base anchor: it carries the country's
-  position in the European legal and institutional frameworks so that
-  entities scoped to it have somewhere to attach, and no national entities
-  are modelled yet.
+  since 1958. It anchors six national entities: a data protection
+  authority, a statistical institute, a digital-government agency, a
+  digital-identity code and platform, and a national open data portal.
 
 level: national
 country: IT
@@ -20,11 +19,11 @@ region: EU
 status: active
 confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-19"
+last_verified: "2026-08-25"
 previous_version: null
 successor: null
 
@@ -36,72 +35,82 @@ relationships:
   - type: part-of
     target: EU
     source: fact
-    evidence: "Italy is one of the 27 member states of the European Union, having acceded on 1 January 1958; the Union's own list of EU countries records its accession date together with its Schengen and euro status (european-union.europa.eu 'EU countries'). NOT READ — search-only. Anchor edge under metadata/relationship-types.md §2.3: it records EU membership and asserts no more than that."
+    evidence: "Confirmed verbatim by reading european-union.europa.eu's own 'EU countries' page directly (2026-08-25): 'Italy EU Member State since 1958, Euro area member since 1999, Schengen area member since 1997.' Corroborated independently by government.nl's own EU/EEA/EFTA/Schengen page, which lists Italy among the 27 EU member states. Anchor edge under metadata/relationship-types.md §2.3: it records EU membership and asserts no more than that."
     confidence: medium
     valid_from: null
     valid_until: null
 
 sources:
-  - title: "IT — Italy (ISO 3166-1 country code)"
-    url: "https://www.iso.org/obp/ui/#iso:code:3166:IT"
-    publisher: "International Organization for Standardization (ISO)"
   - title: "EU countries"
     url: "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
     publisher: "European Union"
+    accessed: "2026-08-25"
+  - title: "EU, EEA, EFTA and Schengen Area countries"
+    url: "https://www.government.nl/themes/international-cooperation/european-union/eu-eea-efta-and-schengen-area-countries"
+    publisher: "Government of the Netherlands"
+    accessed: "2026-08-25"
+  - title: "IT — Italy (ISO 3166-1 country code)"
+    url: "https://www.iso.org/obp/ui/#iso:code:3166:IT"
+    publisher: "International Organization for Standardization (ISO)"
   - title: "The Council of Europe's 46 member states"
     url: "https://www.coe.int/en/web/portal/46-members-states"
     publisher: "Council of Europe"
   - title: "Timeline — Joining the euro area"
     url: "https://www.consilium.europa.eu/en/policies/join-the-euro-area/timeline-joining-the-euro-area/"
     publisher: "Council of the European Union"
-  - title: "EU, EEA, EFTA and Schengen Area countries"
-    url: "https://www.government.nl/themes/international-cooperation/european-union/eu-eea-efta-and-schengen-area-countries"
-    publisher: "Government of the Netherlands"
 ---
 
 # Italy
 
-> **Sourcing caveat.** Compiled from search-engine results only; the
-> cited pages were confirmed to exist but were not read, because the
-> working environment blocks page retrieval. `verification: search-only`.
+> **Re-verified 2026-08-25.** `european-union.europa.eu` and
+> `government.nl` were read directly and confirm EU, euro-area and
+> Schengen membership verbatim. `coe.int`, `consilium.europa.eu` and
+> `iso.org` remain genuinely bot-walled (403) even with an honest,
+> identifying User-Agent and stay cited but unread. This entity's own
+> body text was also out of date — it described Italy as carrying "no
+> national entities," which had not been true since [[IT-AGID]],
+> [[IT-CAD]], [[IT-DATI-GOV-IT]], [[IT-ISTAT]] and [[IT-SPID]] were
+> added and [[IT-GARANTE]] was re-verified in an earlier pass. Fixed
+> below.
 
 ## Description
 
-Italy (ISO 3166-1 alpha-2: **`IT`**) is a **base country anchor**, created
-so that entities scoped to it have somewhere to attach. No Italy entity is
-modelled yet.
+Italy (ISO 3166-1 alpha-2: **`IT`**) anchors six national entities: a
+data protection authority ([[IT-GARANTE]]), a statistical institute
+([[IT-ISTAT]]), a digital-government agency ([[IT-AGID]]), a digital
+administration code and identity platform ([[IT-CAD]], [[IT-SPID]])
+and a national open data portal ([[IT-DATI-GOV-IT]]).
 
 ## Position in the European frameworks
 
 | Framework | Status |
 |---|---|
-| European Union | Member state since **1 January 1958** |
-| Euro area | Since **1 January 1999** |
-| Schengen area | Member |
+| European Union | Member state since **1958** |
+| Euro area | Since **1999** |
+| Schengen area | Since **1997** |
 | Council of Europe | Member since 1949 |
 | EEA | Through EU membership |
 
-> Accession **years** in this table come from general reference
-> knowledge rather than from the cited pages, which were not read.
-> They are flagged for the re-verification pass along with everything
-> else marked `search-only`.
+> EU, euro-area and Schengen dates are confirmed verbatim by
+> `european-union.europa.eu`, read directly on 2026-08-25. The Council
+> of Europe founding-membership date rests on general reference
+> knowledge; `coe.int` remains bot-walled even with an honest
+> User-Agent.
 
 ## A founding member of both organisations
 
 Italy is one of the **six founding members of the European
 Communities** — with [[BE]], [[DE]], [[FR]], [[LU]] and [[NL]] — and one of
-the ten founding members of [[INTL-COE]].
+the ten founding members of [[INTL-COE]] (the latter not reconfirmed this
+pass; `coe.int` is bot-walled).
 
-That makes it the last of the founding six to be given an Atlas anchor. The
-other five have had one since the early country batches, and four of them
-have modelled national layers.
+## Six national entities, all re-verified
 
-## What this anchor does not yet carry
-
-Nothing beyond membership. There is no national data protection authority,
-no open data portal, no statistics office, no interoperability framework
-and no legislation attached to this entity. Each of those exists in
-reality; none has been researched.
+As of 2026-08-25 every entity scoped to Italy carries
+`verification: primary-source`: [[IT-GARANTE]] (re-verified 2026-08-21,
+an earlier pass), and [[IT-AGID]], [[IT-CAD]], [[IT-DATI-GOV-IT]],
+[[IT-ISTAT]] and [[IT-SPID]] (this pass). See `countries/it/index.md`
+for the full list.
 
 No EU instrument in the Atlas carries `applies-in` → [[IT]] yet.
 That is a gap rather than a finding: as a member state, every
@@ -134,4 +143,6 @@ the evidence strings and the cited source both need changing together.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter. `european-union.europa.eu` and `government.nl`
+were read directly this pass; `coe.int`, `consilium.europa.eu` and
+`iso.org` remain bot-walled (403) even with an honest User-Agent.

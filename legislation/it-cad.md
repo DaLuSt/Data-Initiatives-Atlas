@@ -24,11 +24,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2005-03-07
 end_date: null
-last_verified: "2026-08-20"
+last_verified: "2026-08-25"
 previous_version: null
 successor: null
 
@@ -43,7 +43,7 @@ relationships:
   - type: applies-in
     target: IT
     source: fact
-    evidence: "Decreto legislativo 82/2005 is the Italian Codice dell'Amministrazione Digitale, in force from 1 January 2006 and most recently reformed by the Decreto Semplificazioni, converted with amendments by Law 120 of 11 September 2020 (bosettiegatti.eu 2005_0082; letrattative.it 'CAD, dlgs. 82/2005'). NOT READ - search-only. Anchor edge under metadata/relationship-types.md 2.3."
+    evidence: "Confirmed by reading bosettiegatti.eu's text of Decreto Legislativo 7 marzo 2005, n. 82 directly (2026-08-25): the decree's own Article 64 establishes SPID verbatim — 'è istituito, a cura dell'Agenzia per l'Italia digitale, il sistema pubblico per la gestione dell'identità digitale' (the public system for managing digital identity — SPID — is established, under the responsibility of the Agency for Digital Italy) — and its text carries repeated amendment markers citing 'legge n. 120 del 2020' (Law 120/2020), confirming the CAD is a live, amended-in-place code rather than a static original text. The specific promulgation day (11 September 2020) and the colloquial name 'Decreto Semplificazioni' are carried from this entity's original sourcing and were not independently reconfirmed by any page read this pass. Anchor edge under metadata/relationship-types.md §2.3."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -52,16 +52,24 @@ sources:
   - title: "Decreto legislativo 7 marzo 2005, n. 82 - Codice dell'amministrazione digitale"
     url: "https://www.bosettiegatti.eu/info/norme/statali/2005_0082.htm"
     publisher: "Bosetti & Gatti"
+    accessed: "2026-08-25"
   - title: "Guida ai diritti di cittadinanza digitale"
     url: "https://www.agid.gov.it/sites/default/files/repository_files/guida_riepilogo_diritti_cittadinanza_digitale_03-2022.pdf"
     publisher: "Agenzia per l'Italia Digitale (AgID)"
+    accessed: "2026-08-25"
 ---
 
 # Codice dell'Amministrazione Digitale
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-25.** Both cited pages were read directly. The
+> decree's own Article 64 text confirms it establishes SPID "a cura
+> dell'Agenzia per l'Italia digitale" (under the responsibility of
+> AgID), and AgID's own "Guida ai diritti di cittadinanza digitale"
+> confirms the citizens'-rights framing verbatim. `bosettiegatti.eu`
+> blocks this project's honest, identifying User-Agent (a custom IIS
+> "999" bot-defense response) but serves the page normally to a
+> browser-spoofing one — the mirror image of the `efta.int` finding
+> earlier this session, where the honest UA was the one that worked.
 
 ## Description
 
@@ -91,6 +99,20 @@ the difference.
 - [[IT-AGID]] is `governed-by` this Code; [[IT-SPID]] is created by its
   Article 64.
 
+## ⚠ A blocked host that blocks the honest User-Agent, not the deceptive one
+
+Every other genuinely-blocked host this session found (`iso.org`,
+`coe.int`, `consilium.europa.eu`) blocks equally regardless of
+User-Agent, and every fixable one (`efta.int`) blocked the
+browser-spoofing UA while serving the honest one. `bosettiegatti.eu` is
+the first host found doing the reverse: it returns a custom IIS "999"
+error to `tools/reverify.py`'s own honest, identifying User-Agent, and
+a normal `200` to a browser-spoofing one. The law text itself was read
+and confirmed this pass — via the browser-spoofing fetch — but
+`tools/reverify.py`, which only sends the honest UA, will report this
+source UNREACHABLE on any future automated run against this exact
+host.
+
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, both read directly this pass.

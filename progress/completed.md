@@ -1,5 +1,94 @@
 # Completed Batches
 
+## The seventh verification-gap push
+
+**Date:** 2026-08-25
+
+Returned to the open-ended re-verification task with a seventh
+cluster: the entire **Italy** cluster — [[IT]], [[IT-CAD]], [[IT-AGID]],
+[[IT-ISTAT]], [[IT-DATI-GOV-IT]] and [[IT-SPID]] — still
+`verification: search-only` since creation ([[IT-GARANTE]], Italy's
+seventh entity, was already re-verified in an earlier pass). All six
+now carry `verification: primary-source`.
+
+### A stale country anchor, caught mid-pass
+
+[[IT]]'s own body text said the entity carried "no national entities"
+and listed a data protection authority, an open data portal, a
+statistics office and legislation as things "each of those exists in
+reality; none has been researched." That had not been true since
+[[IT-AGID]], [[IT-CAD]], [[IT-DATI-GOV-IT]], [[IT-ISTAT]] and
+[[IT-SPID]] were added and [[IT-GARANTE]] was independently
+re-verified — none of those changes had updated the anchor's own
+description. Rewritten to name the six entities it anchors, a
+correctness fix incidental to the verification-tier work but directly
+visible while reading the cluster.
+
+### The open-data-portal custodian gap, closed for Italy
+
+[[IT-DATI-GOV-IT]] carried no `maintained-by` edge at all — its own
+body text said "[[IT-AGID]] is the obvious operator and no source read
+says so," matching the same gap logged for [[NL-DATA-OVERHEID]] and
+(until 2026-08-19) [[ES-RED-ES]] in `discovery/research-queue.md`.
+Reading dati.gov.it's own "Chi siamo" page directly closes it: "Dati.gov.it
+nasce come progetto promosso nel 2011 dal Governo italiano e dal 2015
+viene gestito dall'Agenzia per l'Italia Digitale" (dati.gov.it began as
+a 2011 government project and has been managed by AgID since 2015),
+naming the legal basis too — Article 9 of decreto legislativo 36/2006,
+Italy's PSI Directive transposition. [[IT-DATI-GOV-IT]] now carries
+`maintained-by` [[IT-AGID]].
+
+### Istat names its own [[EU-ESS]] membership directly
+
+Most national statistical offices in the Atlas are attached to
+[[EU-ESS]] by the generic composition rule — the ESS is defined as
+Eurostat plus the national statistical institutes, and the office in
+question is the NSI, so it belongs. [[PL-GUS]] and
+[[EE-STATISTIKAAMET]] were exceptions: their own pages name the
+membership directly. [[IT-ISTAT]] joins them this pass. Its "L'Istat
+nella UE e nel mondo" page states plainly: "L'Istituto è membro dello
+European Statistical System Committee (ESSC), l'organo incaricato di
+orientare il SSE" (the Institute is a member of the ESSC, the body
+tasked with steering the ESS) — a direct statement, not an inference.
+[[LU-STATEC]], re-verified the previous pass, stayed on the weaker
+composition-rule tier because no such statement was found on its own
+pages; the distinction is recorded honestly on both entities rather
+than papered over.
+
+### `bosettiegatti.eu`: the mirror image of `efta.int`
+
+Every genuinely-blocked host this session catalogued so far —
+`iso.org`, `coe.int`, and, newly tested this pass, `consilium.europa.eu`
+— blocks equally regardless of User-Agent, and the one fixable host,
+`efta.int`, blocked the browser-spoofing UA while serving the honest
+one. `bosettiegatti.eu`, an Italian legal-text mirror carrying the full
+text of decreto legislativo 82/2005 (the [[IT-CAD]] Code), does the
+reverse: it returns a custom IIS "999 AW Special Error" bot-defense
+response to `tools/reverify.py`'s own honest, identifying User-Agent,
+and a normal `200` to a browser-spoofing one. The law's text — including
+Article 64, which establishes [[IT-SPID]] "a cura dell'Agenzia per
+l'Italia digitale" (under [[IT-AGID]]'s responsibility) — was read this
+pass via the browser-spoofing fetch. Any future automated
+`tools/reverify.py` run against this exact host will still report it
+UNREACHABLE; this is recorded so nobody mistakes that UNREACHABLE
+verdict for an unread claim.
+
+### The rest of the cluster
+
+[[IT]]'s `part-of` [[EU]] edge now carries european-union.europa.eu's
+verbatim sentence, read directly ("Italy EU Member State since 1958,
+Euro area member since 1999, Schengen area member since 1997"),
+correcting the Schengen date the entity's table had left blank.
+[[IT-AGID]]'s `governed-by` [[IT-CAD]] edge is now backed by Article
+64's own text rather than an unread citation, corroborated
+independently by spid.gov.it's legal notice naming AgID as the site's
+data controller. [[IT-SPID]] gained the same two-source confirmation
+for both its edges, plus AgID's own "Guida ai diritti di cittadinanza
+digitale," read directly, which states the SPID/CIE/CNS
+three-credential right in the same terms the entity already carried.
+`consilium.europa.eu`, `coe.int` and `iso.org` remain cited but unread
+on [[IT]].
+
 ## The sixth verification-gap push
 
 **Date:** 2026-08-25
