@@ -21,11 +21,11 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2015-11-01
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-08-25"
 previous_version: null
 successor: null
 
@@ -39,7 +39,7 @@ relationships:
   - type: part-of
     target: DK
     source: fact
-    evidence: "The Danish Health Data Authority is a part of the Ministry of the Interior and Health and was established in November 2015; it is responsible for the national health registers containing data related to the health of the entire Danish population and the services of the healthcare system (english.sundhedsdatastyrelsen.dk/about-us; english.sundhedsdatastyrelsen.dk/health-data-and-registers/national-health-registers). NOT READ — search-only."
+    evidence: "Confirmed verbatim by reading english.sundhedsdatastyrelsen.dk directly (2026-08-25): 'The Danish Health Data Authority is a part of the Ministry of the Interior and Health and was established in November 2015,' and, on its national-health-registers page, 'The Danish Health Data Authority is responsible for the national health registers that contain data related to the health of the entire Danish population and the services of the healthcare system' — matching this entity's evidence word for word."
     confidence: medium
     valid_from: 2015-11-01
     valid_until: null
@@ -48,19 +48,22 @@ sources:
   - title: "About the Danish Health Data Authority"
     url: "https://english.sundhedsdatastyrelsen.dk/about-us"
     publisher: "Sundhedsdatastyrelsen — Danish Health Data Authority"
+    accessed: "2026-08-25"
   - title: "National health registers"
     url: "https://english.sundhedsdatastyrelsen.dk/health-data-and-registers/national-health-registers"
     publisher: "Sundhedsdatastyrelsen — Danish Health Data Authority"
+    accessed: "2026-08-25"
   - title: "Research Services"
     url: "https://english.sundhedsdatastyrelsen.dk/health-data-and-registers/research-services"
     publisher: "Sundhedsdatastyrelsen — Danish Health Data Authority"
+    accessed: "2026-08-25"
 ---
 
 # Sundhedsdatastyrelsen
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read — retrieval is blocked by
-> the network egress proxy. `verification: search-only`.
+> **Verified 2026-08-25.** All three cited pages were read directly and
+> confirm the authority's identity, its November 2015 establishment,
+> and its role over the national health registers word for word.
 
 ## Description
 
@@ -106,4 +109,5 @@ models ten Dutch basisregistraties individually.
 
 ## Sources
 
-Listed in frontmatter — three pages of the authority's own English site.
+Listed in frontmatter — three pages of the authority's own English
+site, all read directly this pass.

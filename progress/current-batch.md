@@ -1,11 +1,21 @@
 # Current Batch
 
-**Status:** No batch in progress. **The seventh verification-gap push**
-completed on 2026-08-25 — the entire Italy cluster (6 entities). Full
-detail moved to `progress/completed.md`; summary below.
-`discovery/reverification-allowlist.md` ranks the next re-verification
-targets, and `discovery/research-queue.md` carries the rest of the
-research backlog.
+**Status:** No batch in progress. **The eighth verification-gap push**
+completed on 2026-08-25 — closing Denmark's remaining `search-only`
+entities, a new push shape (a "tail" push on an already-verified
+country rather than a fresh country cluster). Full detail moved to
+`progress/completed.md`; summary below. `discovery/reverification-allowlist.md`
+ranks the next re-verification targets, and `discovery/research-queue.md`
+carries the rest of the research backlog.
+
+**A new push shape: closing the tail.** Countries whose anchor and most
+entities are `primary-source` can still carry a handful of
+`verification: search-only` stragglers — entities added or left behind
+after the country's main re-verification pass. `NL` (67), `DE` (27),
+`BE` (24), `ES` (22), `PL` (18), `PT` (8), `EE` (7), `CZ` (7), `FI` (6),
+`DK` (4, now closed by this push), `SE` (3) and `AT` (3) all carry some.
+[[FR]] remains the only country whose **entire** cluster (22 entities)
+is still untouched — the next natural full-cluster push.
 
 **Corrected/added guidance on what is actually blocked:** `efta.int` is
 **not** bot-walled — it returns a 403 to a browser-spoofing User-Agent
@@ -44,6 +54,30 @@ reverse of `efta.int`**: it returns a custom IIS "999" bot-defense
 error to the honest, identifying User-Agent `tools/reverify.py` sends,
 but serves the page normally (`200`) to a browser-spoofing one — found
 in the seventh verification-gap push, researching [[IT-CAD]].
+
+## The eighth verification-gap push — 2026-08-25
+
+Closed Denmark's tail: [[DK-GRUNDDATA]], [[DK-DATATILSYNET]],
+[[DK-SUNDHEDSDATASTYRELSEN]] and [[DK-DST]], the four Danish entities
+still `verification: search-only` after Denmark's country anchor and
+other entities had already been re-verified across earlier pushes. All
+four now carry `verification: primary-source`.
+
+**A 2012 origin for [[DK-GRUNDDATA]].** A European Commission ISA2
+conference document, read directly, dates the Basic Data Programme
+precisely: established in 2012 as part of an e-government strategy
+agreed between the Danish state, Local Government Denmark and the
+Danish regions — a fact this entity did not previously carry.
+`grunddata.dk` remains dead, reconfirmed again this pass.
+
+**[[DK-DST]]'s legal basis, named but not read.** Statistics Denmark's
+own "role and mandate" page states directly it is "responsible for
+official statistics in Denmark, as established by the Act on
+Statistics Denmark" and has operated since 1850. The Act's own citation
+was not read, so no legislation entity was created from the name
+alone. Its [[EU-ESS]] membership, like [[LU-STATEC]]'s in an earlier
+pass, stays on the composition-rule tier — no page read this pass has
+Statistics Denmark describe ESS membership in its own words.
 
 ## The seventh verification-gap push — 2026-08-25
 
