@@ -3,15 +3,15 @@
 > **Generated file — do not hand-edit.** Regenerate with
 > `python tools/source_hosts.py --markdown -o discovery/reverification-allowlist.md`
 
-Generated: 2026-08-22
+Generated: 2026-08-25
 
 ## Why this exists
 
-**328 of the Atlas's 522 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
+**328 of the Atlas's 524 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
 
 Closing that debt — the re-verification pass — needs outbound HTTPS to the hosts those URLs point at. In an environment with a restricted egress policy, this is the allowlist to request. A denial shows up as `403 to CONNECT` from the proxy, which is an environment-level network policy and cannot be changed from inside a session. See `discovery/unresolved.md` for the standing record of the sourcing debt.
 
-The Atlas currently cites **1743 source URLs** across **558 hosts**, collapsing to **405 registrable domains**.
+The Atlas currently cites **1748 source URLs** across **559 hosts**, collapsing to **405 registrable domains**.
 
 ## Highest value first
 
@@ -21,8 +21,8 @@ A domain here is an **allowlist pattern**, not a URL. Most of them also happen t
 
 | Domain | URLs | Entities | Example host | Opened | Content confirmed |
 |---|---|---|---|---|---|
-| `europa.eu` | 233 | 146 | `data.europa.eu` | ✅ opens | ✅ 2026-08-21 |
-| `wikipedia.org` | 111 | 107 | `cs.wikipedia.org` | ✅ opens |  |
+| `europa.eu` | 234 | 147 | `data.europa.eu` | ✅ opens | ✅ 2026-08-21 |
+| `wikipedia.org` | 112 | 108 | `cs.wikipedia.org` | ✅ opens |  |
 | `iso.org` | 64 | 61 | `www.iso.org` | ✅ opens | ✅ 2026-08-21 |
 | `coe.int` | 52 | 42 | `rm.coe.int` | ✅ opens | ✅ 2026-08-21 |
 | `gouv.fr` | 44 | 16 | `aide.monespacenis2.cyber.gouv.fr` | ✅ opens |  |
@@ -33,8 +33,8 @@ A domain here is an **allowlist pattern**, not a URL. Most of them also happen t
 | `gob.es` | 33 | 18 | `administracion.gob.es` | ⚠ namespace only — no site at the apex |  |
 | `overheid.nl` | 30 | 21 | `data.overheid.nl` | ✅ opens |  |
 | `admin.ch` | 24 | 9 | `www.bfs.admin.ch` |  |  |
+| `un.org` | 23 | 13 | `docs.un.org` | ✅ opens |  |
 | `unece.org` | 21 | 9 | `aarhusclearinghouse.unece.org` | ✅ opens |  |
-| `un.org` | 20 | 12 | `docs.un.org` | ✅ opens |  |
 | `legislation.gov.uk` | 19 | 17 | `www.legislation.gov.uk` | ✅ opens |  |
 | `belgium.be` | 18 | 10 | `bosa.belgium.be` | ✅ opens |  |
 | `cencenelec.eu` | 17 | 10 | `standards.cencenelec.eu` | ✅ opens |  |

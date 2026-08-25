@@ -40,6 +40,7 @@ related_entities:
   - EU
   - UN-LOCODE
   - UN-CEFACT
+  - EU-EFTI-REGULATION
 relationships:
   - type: applies-in
     target: EU
@@ -119,12 +120,13 @@ added with it.
   the Atlas at all, and creating it to carry one code list would be the thin
   entity the taxonomy threshold prevents. Recorded in
   `discovery/unresolved.md`.
-- The **eFTI Regulation (EU) 2020/1056** was found in the same research and
-  is described in secondary sources as building its data set on the UN/CEFACT
-  MMT-RDM model. It is **not** created: the claim was found in a UNECE
-  presentation and a project website, not in the regulation, and UN/LOCODE in
-  EMSWe is the better-sourced instance of the same connection. Queued in
-  `discovery/research-queue.md`.
+- ~~The **eFTI Regulation (EU) 2020/1056**~~ — now [[EU-EFTI-REGULATION]].
+  Its full text was read directly and searched for "UN/CEFACT", "CEFACT",
+  "MMT" and "UNECE": none appears. The secondary-source claim that it
+  builds its data set on the UN/CEFACT MMT-RDM model is not supported by
+  the instrument itself — the actual data set is left to a future
+  delegated act the Regulation does not yet identify. [[UN-LOCODE]] in
+  EMSWe remains the only sourced EU→UN/CEFACT connection.
 
 ## Relationships
 

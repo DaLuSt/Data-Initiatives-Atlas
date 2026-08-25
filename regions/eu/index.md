@@ -162,7 +162,7 @@ The Atlas's first `type: publication` entities, added 2026-08-21.
 - [[EU-EGOV-BENCHMARK]] — eGovernment Benchmark _(**35 countries**, every
   one of them already an Atlas anchor)_
 - [[EU-VOLUNTARY-REVIEW-2023]] — the Union's first voluntary review to the
-  UN High-level Political Forum
+  [[UN-HLPF]]
 
 All three now carry `measures` edges to the countries they assess — **62 of
 them**, 27 from DESI and 35 from the benchmark. The `measures` relationship

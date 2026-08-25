@@ -1,7 +1,7 @@
 # Current Batch
 
-**Status:** No batch in progress. **The fifth verification-gap push**
-completed on 2026-08-22. Full detail moved to `progress/completed.md`;
+**Status:** No batch in progress. **The candidates pickup** completed on
+2026-08-22. Full detail moved to `progress/completed.md`;
 summary below. `discovery/reverification-allowlist.md` ranks the next
 re-verification targets, and `discovery/research-queue.md` carries the
 rest of the research backlog.
@@ -19,50 +19,54 @@ plain JavaScript single-page application with no static content at all
 (found in the third research-queue pickup, researching
 [[EE-STATISTIKAAMET]]). `www.iso.org`, `www.coe.int` and `unece.org`
 remain untested against an honest User-Agent and are still treated as
-blocked. `eur-lex.europa.eu` and
+blocked. `unece.org` was re-tested with an honest User-Agent in the
+candidates pickup and remains genuinely blocked (403) — unlike
+`efta.int`, this one really is closed. `eur-lex.europa.eu` and
 `europarl.europa.eu` are confirmed **not** blocked — both were read
 directly and successfully in the fourth verification-gap push (NO,
 NO-PERSONOPPLYSNINGSLOVEN, INTL-EEA-AGREEMENT, INTL-EEA-JCD-154-2018),
 matching the same false-blocked finding earlier pushes made for
-`legislation.gov.uk`.
+`legislation.gov.uk`. `eur-lex.europa.eu` does occasionally return an
+empty AWS WAF challenge response (`202`, `x-amzn-waf-action: challenge`)
+on a given request — the candidates pickup hit this once and got the
+real page on a bare retry, so treat a single `202` there as a flake to
+retry, not a block.
 
-## Fifth verification-gap push — 2026-08-22
+## The candidates pickup — 2026-08-22
 
-Re-verified the entire **Iceland and Liechtenstein clusters** (6
-entities: [[IS]], [[IS-PERSONUVERND]], [[IS-PERSONUVERNDARLOG]], [[LI]],
-[[LI-DATENSCHUTZSTELLE]] and [[LI-DSG]]) — the two EEA EFTA states added
-alongside Norway's cluster to test whether the Norwegian EEA pattern
-generalises, still `search-only` since they were created. All six now
-carry `verification: primary-source`.
+Picked up two items from `discovery/candidates.md` rather than
+`discovery/research-queue.md`: the **High-level Political Forum** and
+the **eFTI Regulation**, both carried since the candidate-clearing batch
+of 2026-08-21.
 
-`efta.int`'s own "European Free Trade Association" page and
-government.nl's EEA/EFTA/Schengen page were both read directly and
-confirm both countries' EFTA and EEA membership verbatim. WIPO Lex's own
-record of Iceland's Act No. 90/2018 matches the entity's name, dates and
-Icelandic title exactly, and quotes the Act's own text naming
-Persónuvernd as the supervisory body. `coe.int` and `iso.org` remain
-bot-walled (403) even with an honest User-Agent and stay cited but
-unread on both country anchors' single relationship.
+[[UN-HLPF]] closes a gap [[EU-VOLUNTARY-REVIEW-2023]] named in its own
+text: the review "was a key input to" the Forum, which "has no entity,
+so nothing here says the review was *submitted to* it." `hlpf.un.org`,
+the Forum's own domain already cited unread, is bot-walled (403) even
+with an honest User-Agent; `sustainabledevelopment.un.org`, a sibling UN
+DESA subdomain carrying the same institutional description, was not
+blocked and is the entity's primary source instead.
 
-**A translation-error finding on [[LI-DSG]].** naegele.law's English
-translation of Liechtenstein's DSG dates contains two typos — "October
-2th" and "in force ... January 1st of 2018" (impossible, since an act
-cannot enter into force before it is passed) — that its own German
-original does not: "4. Oktober 2018" and "1. Januar 2019". The
-Datenschutzstelle's own "Nationale Gesetze" page independently confirms
-the German dates. The entity follows the corrected dates, which were
-already what it had recorded before this pass.
-
-**A claim retained, not confirmed.** [[LI-DATENSCHUTZSTELLE]]'s claim
-that its Commissioner is appointed by the Landtag for a five-year
-renewable term appears on none of the authority's own pages read this
-pass (its "Team" page names a head with no appointment mechanism given)
-and is retained rather than removed, per the project's standing rule
-that a re-verification pass without a reason to think a claim wrong
-does not delete it.
+[[EU-EFTI-REGULATION]] closes the other row with a **negative result**:
+secondary sources described its data set as built on the UN/CEFACT
+MMT-RDM model, sourced only to a UNECE presentation and a project
+website, "not in the regulation." This pass reads the Regulation's full
+text directly and searches it for "UN/CEFACT", "CEFACT", "MMT" and
+"UNECE" — none appears anywhere. The claim is not merely unread, now
+that the instrument itself has been read; the actual data set is
+delegated to a future Commission act the Regulation does not identify,
+which is where any real UN/CEFACT connection would have to live. No
+such relationship is asserted. Full write-up in `progress/completed.md`
+under "The candidates pickup".
 
 ## Earlier pushes
 
+- **Fifth verification-gap push** (2026-08-22): the entire Iceland and
+  Liechtenstein clusters (6 entities), added alongside Norway's to test
+  whether the Norwegian EEA pattern generalises. Found a translation
+  error on [[LI-DSG]]'s English-language source (two date typos its own
+  German original didn't have) and confirmed `coe.int`/`iso.org`
+  genuinely bot-walled. See "The fifth verification-gap push".
 - **Third research-queue pickup** (2026-08-22): [[EE-STATISTIKAAMET]],
   Statistics Estonia, the twelfth national statistical office in the
   Atlas — an [[EU-ESS]] member on the same strong-evidence standard
