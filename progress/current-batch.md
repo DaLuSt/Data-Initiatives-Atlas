@@ -1,7 +1,9 @@
 # Current Batch
 
-**Status:** No batch in progress. **The candidates pickup** completed on
-2026-08-22. Full detail moved to `progress/completed.md`;
+**Status:** No batch in progress. **The fourth research-queue pickup**
+completed on 2026-08-25 — the first push in this run of pushes to fall
+on a later calendar day than 2026-08-22, where every prior push in this
+section landed. Full detail moved to `progress/completed.md`;
 summary below. `discovery/reverification-allowlist.md` ranks the next
 re-verification targets, and `discovery/research-queue.md` carries the
 rest of the research backlog.
@@ -30,37 +32,39 @@ matching the same false-blocked finding earlier pushes made for
 empty AWS WAF challenge response (`202`, `x-amzn-waf-action: challenge`)
 on a given request — the candidates pickup hit this once and got the
 real page on a bare retry, so treat a single `202` there as a flake to
-retry, not a block.
+retry, not a block. `grunddata.dk`, cited on [[DK-DATAFORDELER]] and
+[[DK-GRUNDDATA]], no longer resolves at all (checked https and http) —
+a dead domain, not a bot-wall, found in the fourth research-queue
+pickup.
 
-## The candidates pickup — 2026-08-22
+## The fourth research-queue pickup — 2026-08-25
 
-Picked up two items from `discovery/candidates.md` rather than
-`discovery/research-queue.md`: the **High-level Political Forum** and
-the **eFTI Regulation**, both carried since the candidate-clearing batch
-of 2026-08-21.
+Picked up **Klimadatastyrelsen** — the "Next"-priority item carried
+since 2026-08-20: "Operates [[DK-DATAFORDELER]] ... and is not
+modelled." Now [[DK-KLIMADATASTYRELSEN]]. Its own "Organisation" page
+names a dedicated internal "Kontor for Datafordeleren," and
+Datafordeleren's own homepage states directly "Klimadatastyrelsen er
+myndighed for Datafordeleren" — [[DK-DATAFORDELER]] now carries the
+`maintained-by` edge that direct statement supports, promoted to
+`primary-source` in the same pass.
 
-[[UN-HLPF]] closes a gap [[EU-VOLUNTARY-REVIEW-2023]] named in its own
-text: the review "was a key input to" the Forum, which "has no entity,
-so nothing here says the review was *submitted to* it." `hlpf.un.org`,
-the Forum's own domain already cited unread, is bot-walled (403) even
-with an honest User-Agent; `sustainabledevelopment.un.org`, a sibling UN
-DESA subdomain carrying the same institutional description, was not
-blocked and is the entity's primary source instead.
-
-[[EU-EFTI-REGULATION]] closes the other row with a **negative result**:
-secondary sources described its data set as built on the UN/CEFACT
-MMT-RDM model, sourced only to a UNECE presentation and a project
-website, "not in the regulation." This pass reads the Regulation's full
-text directly and searches it for "UN/CEFACT", "CEFACT", "MMT" and
-"UNECE" — none appears anywhere. The claim is not merely unread, now
-that the instrument itself has been read; the actual data set is
-delegated to a future Commission act the Regulation does not identify,
-which is where any real UN/CEFACT connection would have to live. No
-such relationship is asserted. Full write-up in `progress/completed.md`
-under "The candidates pickup".
+**An incidental find on [[EU-INSPIRE]].** Klimadatastyrelsen's own
+"Lovstof" page, read while researching its legal basis, names Denmark's
+INSPIRE transposition act by its exact citation — "Lbk. nr. 746 af
+15.06.2017" — closing a Danish gap on [[EU-INSPIRE]] that this pass
+wasn't looking for. `retsinformation.dk`, Denmark's official legal-text
+portal, is a JavaScript single-page application with no static content
+and remains unread; every citation rests on Klimadatastyrelsen's own
+page instead.
 
 ## Earlier pushes
 
+- **Candidates pickup** (2026-08-22): [[UN-HLPF]] and
+  [[EU-EFTI-REGULATION]], closing two `discovery/candidates.md` rows.
+  UN-HLPF closed a gap [[EU-VOLUNTARY-REVIEW-2023]] named in its own
+  text; EU-EFTI-REGULATION closed the other with a negative result —
+  reading the Regulation's full text found no trace of the UN/CEFACT
+  connection secondary sources claimed. See "The candidates pickup".
 - **Fifth verification-gap push** (2026-08-22): the entire Iceland and
   Liechtenstein clusters (6 entities), added alongside Norway's to test
   whether the Norwegian EEA pattern generalises. Found a translation

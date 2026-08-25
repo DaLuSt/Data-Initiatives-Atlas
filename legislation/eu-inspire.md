@@ -42,7 +42,15 @@ related_entities:
   - NL
   - DE-GEOZG
   - DE-GDI-DE
+  - DK
 relationships:
+  - type: applies-in
+    target: DK
+    source: fact
+    evidence: "Confirmed by reading klimadatastyrelsen.dk's own 'Lovstof' page directly (2026-08-25): 'Lov om infrastruktur for geografisk information i Den Europæiske Union (INSPIRE-loven). Loven gennemfører INSPIRE direktivet i dansk ret ... Lbk. nr. 746 af 15.06.2017' (Act on infrastructure for geographic information in the European Union — the INSPIRE Act. The Act implements the INSPIRE directive in Danish law — Consolidated Act No. 746 of 15 June 2017). `retsinformation.dk`, which would carry the primary legal text, is a JavaScript single-page application returning no static content and was not read; the citation is as Klimadatastyrelsen's own page quotes it."
+    confidence: medium
+    valid_from: 2017-06-15
+    valid_until: null
   - type: applies-in
     target: PT
     source: fact
@@ -127,6 +135,10 @@ sources:
   - title: "INSPIRE Umsetzung | Geodateninfrastruktur Deutschland"
     url: "https://www.gdi-de.org/en/praxis-projekte/inspire-umsetzung"
     publisher: "Geodateninfrastruktur Deutschland (GDI-DE)"
+  - title: "Lovstof — Klimadatastyrelsen"
+    url: "https://klimadatastyrelsen.dk/om-klimadatastyrelsen/lovstof"
+    publisher: "Klimadatastyrelsen"
+    accessed: "2026-08-25"
 ---
 
 # INSPIRE Directive
@@ -197,9 +209,20 @@ It remains a **first-priority gap** in `discovery/unresolved.md`: unlike
 most refused links in this Atlas, this one is near-certain to be closable
 by a single page read.
 
+## A Danish transposition, found while researching a different gap
+
+Confirmed by reading klimadatastyrelsen.dk's own "Lovstof" page directly
+(2026-08-25), while researching [[DK-KLIMADATASTYRELSEN]] for an
+unrelated research-queue item: "Lov om infrastruktur for geografisk
+information i Den Europæiske Union (INSPIRE-loven) ... Lbk. nr. 746 af
+15.06.2017" — Denmark's own INSPIRE transposition act, Consolidated Act
+No. 746 of 15 June 2017, which [[DK-KLIMADATASTYRELSEN]] administers.
+`retsinformation.dk` itself, which would carry the primary legal text,
+is a JavaScript single-page application and was not read.
+
 ## Relationships
 
-- `applies-in` [[DE]] and [[BE]] — **not** [[NL]], see above.
+- `applies-in` [[DE]], [[BE]] and [[DK]] — **not** [[NL]], see above.
 
 Inbound: [[DE-GEOZG]] implements requirements from this directive, and
 [[BE-DCAT-AP-BE]] `references` it through the INSPIRE↔DCAT-AP mapping.
