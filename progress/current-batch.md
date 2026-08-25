@@ -1,12 +1,11 @@
 # Current Batch
 
-**Status:** No batch in progress. **The fourth research-queue pickup**
-completed on 2026-08-25 — the first push in this run of pushes to fall
-on a later calendar day than 2026-08-22, where every prior push in this
-section landed. Full detail moved to `progress/completed.md`;
-summary below. `discovery/reverification-allowlist.md` ranks the next
-re-verification targets, and `discovery/research-queue.md` carries the
-rest of the research backlog.
+**Status:** No batch in progress. **The sixth verification-gap push**
+completed on 2026-08-25 — the entire Luxembourg cluster (6 entities).
+Full detail moved to `progress/completed.md`; summary below.
+`discovery/reverification-allowlist.md` ranks the next re-verification
+targets, and `discovery/research-queue.md` carries the rest of the
+research backlog.
 
 **Corrected/added guidance on what is actually blocked:** `efta.int` is
 **not** bot-walled — it returns a 403 to a browser-spoofing User-Agent
@@ -19,11 +18,13 @@ research-queue pickup, researching [[PL-PESEL]]). `riigiteataja.ee`,
 Estonia's official legal gazette, is likewise genuinely blocked — a
 plain JavaScript single-page application with no static content at all
 (found in the third research-queue pickup, researching
-[[EE-STATISTIKAAMET]]). `www.iso.org`, `www.coe.int` and `unece.org`
-remain untested against an honest User-Agent and are still treated as
-blocked. `unece.org` was re-tested with an honest User-Agent in the
-candidates pickup and remains genuinely blocked (403) — unlike
-`efta.int`, this one really is closed. `eur-lex.europa.eu` and
+[[EE-STATISTIKAAMET]]). `www.iso.org` and `www.coe.int` were tested
+with an honest User-Agent (fifth verification-gap push, and again in
+the sixth push on [[LU]] and [[LU-ILNAS]]) and remain genuinely
+blocked — a real Cloudflare/bot-wall block, not a User-Agent artefact.
+`unece.org` was re-tested with an honest User-Agent in the candidates
+pickup and remains genuinely blocked (403) — unlike `efta.int`, this
+one really is closed. `eur-lex.europa.eu` and
 `europarl.europa.eu` are confirmed **not** blocked — both were read
 directly and successfully in the fourth verification-gap push (NO,
 NO-PERSONOPPLYSNINGSLOVEN, INTL-EEA-AGREEMENT, INTL-EEA-JCD-154-2018),
@@ -37,28 +38,48 @@ retry, not a block. `grunddata.dk`, cited on [[DK-DATAFORDELER]] and
 a dead domain, not a bot-wall, found in the fourth research-queue
 pickup.
 
-## The fourth research-queue pickup — 2026-08-25
+## The sixth verification-gap push — 2026-08-25
 
-Picked up **Klimadatastyrelsen** — the "Next"-priority item carried
-since 2026-08-20: "Operates [[DK-DATAFORDELER]] ... and is not
-modelled." Now [[DK-KLIMADATASTYRELSEN]]. Its own "Organisation" page
-names a dedicated internal "Kontor for Datafordeleren," and
-Datafordeleren's own homepage states directly "Klimadatastyrelsen er
-myndighed for Datafordeleren" — [[DK-DATAFORDELER]] now carries the
-`maintained-by` edge that direct statement supports, promoted to
-`primary-source` in the same pass.
+Re-verified the entire Luxembourg cluster (6 entities: [[LU]],
+[[LU-CTIE]], [[LU-CNPD]], [[LU-STATEC]], [[LU-ILNAS]] and
+[[LU-DATA-PUBLIC]]), all promoted from `verification: search-only` to
+`primary-source`.
 
-**An incidental find on [[EU-INSPIRE]].** Klimadatastyrelsen's own
-"Lovstof" page, read while researching its legal basis, names Denmark's
-INSPIRE transposition act by its exact citation — "Lbk. nr. 746 af
-15.06.2017" — closing a Danish gap on [[EU-INSPIRE]] that this pass
-wasn't looking for. `retsinformation.dk`, Denmark's official legal-text
-portal, is a JavaScript single-page application with no static content
-and remains unread; every citation rests on Klimadatastyrelsen's own
-page instead.
+**A sixth [[LU-ILNAS]] membership.** ILNAS's own "Découvrir la
+normalisation" page states directly that it represents Luxembourg in
+three European standardisation organisations (CEN, CENELEC, ETSI) and
+three international ones — and the third international one is the
+**ITU**, a membership this entity did not previously carry. This breaks
+what the Atlas had recorded as a tie with [[GB-BSI]] at five
+memberships each: GB-BSI's own five do not include the ITU, so ILNAS is
+now the single most-connected national standards body in the Atlas, a
+genuine new fact rather than an artefact of uneven sourcing.
+
+**Luxembourg's GDPR act date, sourced via an ELI URL.** [[LU-CNPD]]'s
+own "Législation" page links to the implementing law under the label
+"Loi 'Protection des données'" at an ELI (European Legislation
+Identifier) URL whose date segment confirms **1 August 2018**.
+`legilux.public.lu` itself, which would carry the law's official title
+and text, is a JavaScript single-page application with no static
+content — consistent with `riigiteataja.ee` and `retsinformation.dk`'s
+pattern from earlier pushes. No law entity was created from the date
+alone; logged in `discovery/unresolved.md`.
+
+**`iso.org` re-confirmed genuinely blocked.** Tested again with the
+honest, identifying User-Agent on both [[LU]]'s and [[LU-ILNAS]]'s
+`iso.org` citations — still a 403 Cloudflare challenge regardless. This
+is a real, non-UA-fixable block, distinct from the `efta.int` pattern.
 
 ## Earlier pushes
 
+- **Fourth research-queue pickup** (2026-08-25): [[DK-KLIMADATASTYRELSEN]],
+  which Datafordeleren's own homepage names directly as its operating
+  authority — [[DK-DATAFORDELER]] promoted to `primary-source` in the
+  same pass. An incidental find on [[EU-INSPIRE]]: Klimadatastyrelsen's
+  own "Lovstof" page names Denmark's INSPIRE transposition act by its
+  exact citation. `retsinformation.dk` confirmed a JavaScript
+  single-page application with no static content. See "The fourth
+  research-queue pickup".
 - **Candidates pickup** (2026-08-22): [[UN-HLPF]] and
   [[EU-EFTI-REGULATION]], closing two `discovery/candidates.md` rows.
   UN-HLPF closed a gap [[EU-VOLUNTARY-REVIEW-2023]] named in its own

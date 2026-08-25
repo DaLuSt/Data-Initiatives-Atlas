@@ -7,11 +7,11 @@ Generated: 2026-08-25
 
 ## Why this exists
 
-**327 of the Atlas's 525 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
+**321 of the Atlas's 525 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
 
 Closing that debt — the re-verification pass — needs outbound HTTPS to the hosts those URLs point at. In an environment with a restricted egress policy, this is the allowlist to request. A denial shows up as `403 to CONNECT` from the proxy, which is an environment-level network policy and cannot be changed from inside a session. See `discovery/unresolved.md` for the standing record of the sourcing debt.
 
-The Atlas currently cites **1753 source URLs** across **560 hosts**, collapsing to **406 registrable domains**.
+The Atlas currently cites **1756 source URLs** across **561 hosts**, collapsing to **406 registrable domains**.
 
 ## Highest value first
 
@@ -37,9 +37,9 @@ A domain here is an **allowlist pattern**, not a URL. Most of them also happen t
 | `unece.org` | 21 | 9 | `aarhusclearinghouse.unece.org` | ✅ opens |  |
 | `legislation.gov.uk` | 19 | 17 | `www.legislation.gov.uk` | ✅ opens |  |
 | `belgium.be` | 18 | 10 | `bosa.belgium.be` | ✅ opens |  |
-| `cencenelec.eu` | 17 | 10 | `standards.cencenelec.eu` | ✅ opens |  |
 | `bundestag.de` | 16 | 12 | `dserver.bundestag.de` | ✅ opens |  |
 | `rijksoverheid.nl` | 16 | 12 | `www.rijksoverheid.nl` | ✅ opens |  |
+| `cencenelec.eu` | 16 | 9 | `standards.cencenelec.eu` | ✅ opens |  |
 | `boe.es` | 15 | 13 | `www.boe.es` | ✅ opens |  |
 
 **`Opened` and `Content confirmed` are different claims.** The first says the citation points somewhere real. The second says the pages were read and the information on them confirmed correct, which is the only thing that licenses `verification: primary-source`. See `docs/re-verification.md` §"A link check is not a content check".

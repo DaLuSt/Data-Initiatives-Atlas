@@ -1,5 +1,82 @@
 # Completed Batches
 
+## The sixth verification-gap push
+
+**Date:** 2026-08-25
+
+Returned to the open-ended re-verification task with a sixth cluster:
+the entire **Luxembourg** cluster — [[LU]], [[LU-CTIE]], [[LU-CNPD]],
+[[LU-STATEC]], [[LU-ILNAS]] and [[LU-DATA-PUBLIC]] — all still
+`verification: search-only` since creation. All six now carry
+`verification: primary-source`.
+
+### ILNAS's sixth membership, and a tie broken
+
+[[LU-ILNAS]] carried five `participates-in` edges (CEN, CENELEC, ETSI,
+ISO, IEC) sharing one identical generic evidence string, sourced to
+pages nobody had read. Reading ILNAS's own "Découvrir la normalisation"
+page directly found it names three European standardisation
+organisations and three international ones — and the third
+international one is the **ITU**, which this entity did not previously
+carry. Before this pass, the Atlas recorded ILNAS and [[GB-BSI]] as
+jointly "the most connective" national standards bodies, each with five
+memberships. [[GB-BSI]]'s own entity was checked and does **not**
+carry a UN-ITU edge — its five are the same ISO/IEC/CEN/CENELEC/ETSI
+set — so this is a genuine new fact about Luxembourg specifically, not
+an artefact of uneven sourcing between the two. ILNAS is now the single
+most-connected national standards body in the Atlas, at six.
+
+The same page also gave every one of the five pre-existing edges a
+verbatim, ILNAS-specific replacement for the generic evidence string
+they had shared since creation.
+
+### An ELI URL as an indirect citation
+
+[[LU-CNPD]]'s "GDPR implementation act not modelled" caveat, carried
+since creation, is one step narrower after this pass. CNPD's own
+"Législation" page, read directly, links to the law under the label
+"Loi 'Protection des données'" at
+`legilux.public.lu/eli/etat/leg/loi/2018/08/01/a686/jo` — an ELI
+(European Legislation Identifier) URL whose date segment, `2018/08/01`,
+independently confirms the 1 August 2018 date the entity's original
+sourcing already carried. `legilux.public.lu` itself, which would carry
+the law's official title and full text, returns only a JavaScript
+single-page application shell ("... n'est disponible qu'avec un
+navigateur supportant javascript") — the same shape as
+`riigiteataja.ee` and `retsinformation.dk` from earlier pushes. No law
+entity was created from a date alone: CNPD's link label is a colloquial
+short name, not necessarily the law's official title, and asserting a
+title the Atlas has not read would be exactly the kind of guess this
+project's discipline exists to prevent. Logged narrower, not closed, in
+`discovery/unresolved.md`.
+
+### `iso.org` re-tested, still genuinely blocked
+
+Both [[LU]]'s and [[LU-ILNAS]]'s `iso.org` citations were fetched again
+with the honest, identifying User-Agent — both still return a 403
+Cloudflare "Just a moment..." challenge. This reconfirms `iso.org` as a
+real, non-UA-fixable block, distinct from the `efta.int` pattern this
+session found early on: some hosts are genuinely closed regardless of
+how honestly the client identifies itself.
+
+### The rest of the cluster
+
+[[LU]]'s `part-of` [[EU]] edge now carries european-union.europa.eu's
+verbatim 1958-membership sentence, read directly, replacing an unread
+citation. [[LU-CTIE]] gained an exact legal citation for its
+IT-security mission ("the law of 24 November 2015 amending the amended
+law of 20 April 2009"), found on a page reached only by extracting real
+`href` links from its homepage after a guessed URL 404'd, plus
+confirmation of a "Digital Government Strategy 2026-2030" teaser.
+[[LU-DATA-PUBLIC]]'s own live statistics (3,173 datasets, 217
+organisations) and CTIE's own portal listing (22 datasets) replaced an
+unread citation. [[LU-STATEC]] was checked against the stronger,
+direct-statement [[EU-ESS]] evidence tier [[PL-GUS]] and
+[[EE-STATISTIKAAMET]] set — no page read this pass has STATEC name its
+own ESS membership, so the edge honestly stays on the weaker
+composition-rule tier most national statistical offices in the Atlas
+share, rather than being overclaimed.
+
 ## The fourth research-queue pickup
 
 **Date:** 2026-08-25
