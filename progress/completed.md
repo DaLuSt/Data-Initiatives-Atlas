@@ -1,5 +1,61 @@
 # Completed Batches
 
+## The fourth research-queue pickup
+
+**Date:** 2026-08-25
+
+Picked up **Klimadatastyrelsen** — the item logged since 2026-08-20:
+"Operates [[DK-DATAFORDELER]], the single channel through which all
+Danish basic data is distributed, and is not modelled." Now
+[[DK-KLIMADATASTYRELSEN]].
+
+### The organisation chart as a source
+
+[[DK-DATAFORDELER]]'s own entity has said since it was created that the
+agency operating it "is not modelled," resting only on a description
+field, not a graph edge. Two independent confirmations closed it in the
+same pass: Klimadatastyrelsen's own "Organisation" page names a
+dedicated internal office, "Kontor for Datafordeleren" (Office for the
+Data Distributor), covering "Datafordeleren, Grunddata-governance"; and
+Datafordeleren's own homepage states the relationship as plainly as a
+source can: "Klimadatastyrelsen er myndighed for Datafordeleren" —
+Klimadatastyrelsen is the governing authority for Datafordeleren.
+[[DK-DATAFORDELER]] now carries `maintained-by` [[DK-KLIMADATASTYRELSEN]]
+and moves to `verification: primary-source` in the same pass.
+
+### A dead domain, not a bot-wall
+
+`grunddata.dk`, cited on [[DK-DATAFORDELER]] since its creation, no
+longer resolves at all — checked as both `https://` and `http://`, both
+returning a DNS failure rather than any HTTP response. This is a fourth
+distinct "unreadable" shape this session has now catalogued, after
+`efta.int`'s User-Agent-dependent block, `isap.sejm.gov.pl`'s Incapsula
+challenge, and `riigiteataja.ee`'s pure JavaScript shell: a domain that
+has simply gone away. The citation is retained rather than removed — a
+dead domain is not evidence the original claim was wrong — but nobody
+should spend a future pass's time trying to fetch it again without first
+checking whether it still exists.
+
+### An incidental find: Denmark's own INSPIRE citation
+
+Klimadatastyrelsen's "Lovstof" page, read for its own legal basis, turned
+out to name Denmark's INSPIRE Directive transposition with a precise
+citation neither this entity nor [[EU-INSPIRE]] had before: "Lov om
+infrastruktur for geografisk information i Den Europæiske Union
+(INSPIRE-loven) ... Lbk. nr. 746 af 15.06.2017." [[EU-INSPIRE]] gains an
+`applies-in` [[DK]] edge it did not have, found while researching an
+entirely different gap — the same shape of find as [[EE-STATISTIKAAMET]]'s
+ESS citation and [[PL-PESEL]]'s State Registers System date: reading one
+official page's own list of "what we are responsible for" answers a
+question nobody was specifically asking that page.
+
+`retsinformation.dk`, Denmark's official legal-information portal and
+the actual holder of every primary legal text Klimadatastyrelsen's page
+cites, is a pure JavaScript single-page application returning no static
+content — the same shape as `riigiteataja.ee`. Every citation in this
+pass's entities rests on Klimadatastyrelsen's own descriptive text of
+the law, not on the law's own text.
+
 ## The candidates pickup
 
 **Date:** 2026-08-22
