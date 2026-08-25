@@ -16,11 +16,11 @@ region: EU
 status: active
 confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-25"
 previous_version: null
 successor: null
 
@@ -34,7 +34,7 @@ relationships:
   - type: part-of
     target: LU
     source: fact
-    evidence: "data.public.lu is Luxembourg's national open data portal; the Centre des technologies de l'information de l'État is among the organisations publishing on it (data.public.lu; data.public.lu organisation page for the CTIE). NOT READ — search-only. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    evidence: "Confirmed by reading data.public.lu directly (2026-08-25): it describes itself as 'La plateforme de données ouvertes luxembourgeoise' (the Luxembourgish open data platform), with 3,173 datasets, 217 organisations and 2,846 users at the time of reading. Corroborated by reading its 'Centre des technologies de l'information de l'État' organisation page directly, which lists 22 datasets published by LU-CTIE. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -43,16 +43,19 @@ sources:
   - title: "data.public.lu — Portail Open Data"
     url: "https://data.public.lu/"
     publisher: "Le gouvernement du Grand-Duché de Luxembourg"
-  - title: "Centre des technologies de l'information de l'Etat — Portail Open Data"
+    accessed: "2026-08-25"
+  - title: "Centre des technologies de l'information de l'État — Portail Open Data"
     url: "https://data.public.lu/en/organizations/centre-des-technologies-de-linformation-de-letat/"
     publisher: "data.public.lu"
+    accessed: "2026-08-25"
 ---
 
 # data.public.lu
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`. ⚠ `coverage: low`.
+> **Verified 2026-08-25.** Both pages were read directly. The portal's
+> own statistics (datasets, organisations, users) are quoted as of this
+> pass and will drift as the portal grows; they demonstrate the page was
+> read, not a claim expected to stay current.
 
 ## Description
 
@@ -75,4 +78,4 @@ The sixth national portal in the Atlas without a sourced custodian.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, both read directly this pass.

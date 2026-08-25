@@ -9,9 +9,10 @@ alternative_names:
 description: >
   Country anchor entity for Luxembourg, the twelfth national scope covered by
   the Data Initiatives Atlas and its tenth European Union member state. It is
-  the smallest country in the Atlas by population and, through ILNAS, one of
-  only two whose standards body belongs to all five European and
-  international standardisation organisations the Atlas holds.
+  the smallest country in the Atlas by population and, through ILNAS, has
+  the most-connected national standards body in the Atlas — six
+  memberships across the European and international standardisation
+  organisations the Atlas holds, one more than any other.
 
 level: national
 country: LU
@@ -20,11 +21,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-25"
 previous_version: null
 successor: null
 
@@ -36,7 +37,7 @@ relationships:
   - type: part-of
     target: EU
     source: fact
-    evidence: "Luxembourg is one of the 27 member states of the European Union, having acceded on 1 January 1958; the Union's own list of EU countries records its accession date together with its Schengen and euro status (european-union.europa.eu 'EU countries'). NOT READ — search-only. Anchor edge under metadata/relationship-types.md §2.3: it records EU membership and asserts no more than that. Added in the European country batch so that all fifty anchors carry the same membership edge."
+    evidence: "Confirmed verbatim by reading european-union.europa.eu's own 'EU countries' page directly (2026-08-25): 'Luxembourg EU Member State since 1958, Euro area member since 1999, Schengen area member since 1995.' Anchor edge under metadata/relationship-types.md §2.3: it records EU membership and asserts no more than that. Added in the European country batch so that all fifty anchors carry the same membership edge."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -45,12 +46,14 @@ sources:
   - title: "EU countries"
     url: "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
     publisher: "European Union"
-  - title: "LU — Luxembourg (ISO 3166-1 country code)"
-    url: "https://www.iso.org/obp/ui/#iso:code:3166:LU"
-    publisher: "International Organization for Standardization (ISO)"
+    accessed: "2026-08-25"
   - title: "Government IT Centre — CTIE"
     url: "https://ctie.gouvernement.lu/en.html"
     publisher: "Le gouvernement du Grand-Duché de Luxembourg"
+    accessed: "2026-08-25"
+  - title: "LU — Luxembourg (ISO 3166-1 country code)"
+    url: "https://www.iso.org/obp/ui/#iso:code:3166:LU"
+    publisher: "International Organization for Standardization (ISO)"
   - title: "ISO — ILNAS"
     url: "https://www.iso.org/member/1776.html"
     publisher: "International Organization for Standardization (ISO)"
@@ -58,9 +61,10 @@ sources:
 
 # Luxembourg
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-25.** `european-union.europa.eu` and
+> `ctie.gouvernement.lu` were read directly and confirm the 1958
+> membership date verbatim. `iso.org` remains bot-walled (403), even with
+> an honest, identifying User-Agent, and stays cited but unread.
 
 ## Description
 
@@ -70,17 +74,16 @@ Atlas and its **tenth EU member state**.
 ## The smallest country, and the case against reading size into the graph
 
 Luxembourg is by a wide margin the smallest country the Atlas holds. It is
-also, through [[LU-ILNAS]], one of **only two** countries whose national
-standards body belongs to all five standardisation organisations the Atlas
-holds — [[INTL-ISO]], [[INTL-IEC]], [[EU-CEN]], [[EU-CENELEC]] and
-[[EU-ETSI]].
-
-The other is the **United Kingdom**, through [[GB-BSI]], which the Atlas
-records as "the most connective UK entity".
+also, through [[LU-ILNAS]], home to the **most-connected national
+standards body in the Atlas**: six memberships, confirmed by reading
+ILNAS's own page directly — [[INTL-ISO]], [[INTL-IEC]], [[UN-ITU]],
+[[EU-CEN]], [[EU-CENELEC]] and [[EU-ETSI]] — one more than the **United
+Kingdom**'s [[GB-BSI]], which the Atlas had recorded as tied with ILNAS
+until this pass found ILNAS's ITU membership.
 
 A reader inferring institutional reach from population would get that
-backwards. Luxembourg matches the UK on standards connectivity and beats
-eight larger member states, several of which have no standards body in the
+backwards. Luxembourg beats the UK and eight other larger member states
+on standards connectivity, several of which have no standards body in the
 Atlas at all.
 
 ## One body does three jobs
@@ -137,4 +140,6 @@ the evidence strings and the cited source both need changing together.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter. `european-union.europa.eu` and
+`ctie.gouvernement.lu` were read directly this pass; `iso.org` remains
+bot-walled (403) even with an honest User-Agent.

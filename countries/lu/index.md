@@ -7,9 +7,14 @@ belong on the country's front page (`CONTRIBUTING.md`).
 
 Anchor entity: [[LU]]
 
-> **Sourcing caveat.** Every Luxembourg entity below was compiled from
-> search-engine results only: the cited pages were confirmed to exist but
-> were **not read**. They carry `verification: search-only`.
+> **Re-verified 2026-08-25.** All six Luxembourg entities below were
+> re-verified against primary sources and promoted to
+> `verification: primary-source`. The pass found a sixth [[LU-ILNAS]]
+> standardisation membership (the [[UN-ITU]]), making ILNAS the most
+> connected national standards body in the Atlas, and sourced the exact
+> date of Luxembourg's GDPR implementation act via an ELI URL (see
+> [[LU-CNPD]]). `iso.org` remains genuinely bot-walled even with an
+> honest, identifying User-Agent and stays cited but unread.
 
 ## Organisations
 
@@ -20,7 +25,8 @@ Anchor entity: [[LU]]
 - [[LU-STATEC]] — national statistical institute _(⚠ its full name is
   **word for word** [[FR-INSEE]]'s)_
 - [[LU-ILNAS]] — standards, accreditation and product safety in one
-  institute _(**five** standardisation memberships — matching [[GB-BSI]])_
+  institute _(**six** standardisation memberships — the most of any
+  national standards body in the Atlas, one more than [[GB-BSI]])_
 
 ## Platforms
 
@@ -34,17 +40,18 @@ Eighteen, recorded as `applies-in` edges on the instruments themselves.
 
 ## The smallest country, and the case against reading size into the graph
 
-Luxembourg is by a wide margin the smallest country in the Atlas. Through
-[[LU-ILNAS]] it is also one of **only two** whose standards body belongs to
-all five standardisation organisations the Atlas holds — [[INTL-ISO]],
-[[INTL-IEC]], [[EU-CEN]], [[EU-CENELEC]] and [[EU-ETSI]].
+Luxembourg is by a wide margin the smallest country in the Atlas. It is
+also, through [[LU-ILNAS]], home to the **most-connected national
+standards body in the Atlas**: six memberships, confirmed by reading
+ILNAS's own page directly — [[INTL-ISO]], [[INTL-IEC]], [[UN-ITU]],
+[[EU-CEN]], [[EU-CENELEC]] and [[EU-ETSI]] — one more than the **United
+Kingdom**'s [[GB-BSI]], which the Atlas had recorded as tied with ILNAS
+until this pass found ILNAS's ITU membership.
 
-The other is the **United Kingdom**, through [[GB-BSI]], which the Atlas
-records as "the most connective UK entity". Luxembourg matches it and beats
-eight larger member states, several of which have no standards body here at
-all.
-
-Inferring institutional reach from population would get this backwards.
+A reader inferring institutional reach from population would get that
+backwards. Luxembourg beats the UK and eight other larger member states
+on standards connectivity, several of which have no standards body in the
+Atlas at all.
 
 ## Small-state concentration
 
@@ -62,9 +69,12 @@ Luxembourg is where the Atlas can see it.
 
 ## Not modelled
 
-- **Luxembourg's GDPR implementation act** (the law of 1 August 2018) — the
+- **Luxembourg's GDPR implementation act.** [[LU-CNPD]]'s own "Législation"
+  page sources the exact date (1 August 2018) via an ELI URL, but
+  `legilux.public.lu`, which would carry the law's official title and
+  text, is an unreadable JavaScript single-page application — the
   **only member state in the Atlas** whose national GDPR instrument is
-  missing.
+  still missing an entity.
 - Luxembourg's **NIS2 competent authority and CSIRT**. [[LU-CTIE]] secures
   the State's own infrastructure, which is a different job.
 - **Luxembourg as an EU institutional seat.** The Court of Justice, the Court
