@@ -5,7 +5,8 @@
 > the entities themselves. Nothing here is struck through, because struck-out
 > rows made the queue longer every time it got shorter.
 >
-> **Largest open items:** portal custodians for six national portals;
+> **Largest open items:** portal custodians for several national portals
+> (Italy's closed 2026-08-25 — see the France section below);
 > [[NL-BRI]]'s AWR Chapter IVA basis; the Spanish and Polish
 > primary-citation gaps; and the Comunidades Autónomas, now unblocked and
 > unstarted. [[PL-PESEL]], Poland's population register, is modelled as
@@ -207,7 +208,7 @@ by accident.
 
 | Area / entity | Why it needs research | Suggested batch | Noted by / date |
 |---|---|---|---|
-| **The Dutch open-data portal custodian** *(still open; now **six** portals lack one)* | [[NL-DATA-OVERHEID]] is the only national portal in the Atlas with no custodian modelled. Three other countries now have one; Spain joined them on 2026-08-19 via [[ES-RED-ES]] | Next | France batch |
+| **The Dutch open-data portal custodian** *(still open)* | [[NL-DATA-OVERHEID]] is the only national portal in the Atlas with no custodian modelled. Three other countries now have one; Spain joined them on 2026-08-19 via [[ES-RED-ES]], and Italy joined them on 2026-08-25 via [[IT-DATI-GOV-IT]]'s own "Chi siamo" page, which names [[IT-AGID]] directly | Next | France batch |
 | RGS and RGAA | France's security and accessibility reference frameworks, siblings of [[FR-RGI]] | Later | France batch |
 | France Identité | Recorded in prose on [[FR-FRANCECONNECT]]; not its own entity | Later | France batch |
 | Ordonnance n° 2005-1516 | Legal basis of [[FR-RGI]]; not modelled | Later | France batch |

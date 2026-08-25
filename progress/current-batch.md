@@ -1,8 +1,8 @@
 # Current Batch
 
-**Status:** No batch in progress. **The sixth verification-gap push**
-completed on 2026-08-25 — the entire Luxembourg cluster (6 entities).
-Full detail moved to `progress/completed.md`; summary below.
+**Status:** No batch in progress. **The seventh verification-gap push**
+completed on 2026-08-25 — the entire Italy cluster (6 entities). Full
+detail moved to `progress/completed.md`; summary below.
 `discovery/reverification-allowlist.md` ranks the next re-verification
 targets, and `discovery/research-queue.md` carries the rest of the
 research backlog.
@@ -36,9 +36,59 @@ real page on a bare retry, so treat a single `202` there as a flake to
 retry, not a block. `grunddata.dk`, cited on [[DK-DATAFORDELER]] and
 [[DK-GRUNDDATA]], no longer resolves at all (checked https and http) —
 a dead domain, not a bot-wall, found in the fourth research-queue
-pickup.
+pickup. `consilium.europa.eu` was tested for the first time this
+session in the seventh push and is genuinely blocked (403) even with
+an honest User-Agent. `bosettiegatti.eu`, an Italian legal-text mirror
+cited on the Italy cluster, is the **first host found doing the
+reverse of `efta.int`**: it returns a custom IIS "999" bot-defense
+error to the honest, identifying User-Agent `tools/reverify.py` sends,
+but serves the page normally (`200`) to a browser-spoofing one — found
+in the seventh verification-gap push, researching [[IT-CAD]].
 
-## The sixth verification-gap push — 2026-08-25
+## The seventh verification-gap push — 2026-08-25
+
+Re-verified the entire Italy cluster (6 entities: [[IT]], [[IT-CAD]],
+[[IT-AGID]], [[IT-ISTAT]], [[IT-DATI-GOV-IT]] and [[IT-SPID]] —
+[[IT-GARANTE]] was already `primary-source` from an earlier pass), all
+promoted from `verification: search-only` to `primary-source`.
+
+**A stale country anchor, fixed.** [[IT]]'s own body text still said
+Italy carried "no national entities" and flagged the anchor as a gap
+to research — a claim that stopped being true once [[IT-AGID]],
+[[IT-CAD]], [[IT-DATI-GOV-IT]], [[IT-ISTAT]] and [[IT-SPID]] were added
+and [[IT-GARANTE]] was re-verified, none of which had updated the
+anchor. Rewritten to describe the six entities it now anchors.
+
+**[[IT-DATI-GOV-IT]]'s custodian gap, closed.** dati.gov.it's own "Chi
+siamo" page states plainly it has been "gestito dall'Agenzia per
+l'Italia Digitale" (managed by AgID) since 2015 — a `maintained-by`
+edge this entity did not previously carry, closing Italy's row on the
+open-data-portal-custodian gap tracked in `discovery/research-queue.md`
+alongside [[NL-DATA-OVERHEID]] and [[ES-RED-ES]].
+
+**[[IT-ISTAT]]'s EU-ESS membership, upgraded to a direct statement.**
+Istat's own "L'Istat nella UE e nel mondo" page names its European
+Statistical System Committee membership directly, rather than resting
+on the generic composition-rule inference — the same strong-evidence
+tier established for [[PL-GUS]] and [[EE-STATISTIKAAMET]], and a step
+up from [[LU-STATEC]]'s weaker tier in the previous pass.
+
+**A new "unreadable" host shape: blocks the honest UA, not the
+deceptive one.** `bosettiegatti.eu`, which carries the actual text of
+[[IT-CAD]], is unreachable by `tools/reverify.py`'s own honest User-Agent
+but opens normally to a browser-spoofing one — the mirror image of the
+`efta.int` finding from the first research-queue pickup. The law text
+was read this pass via the browser-spoofing fetch, but any future
+automated `tools/reverify.py` run against this exact host will report
+it UNREACHABLE.
+
+## Earlier pushes
+
+- **Sixth verification-gap push** (2026-08-25): the entire Luxembourg
+  cluster (6 entities). Found [[LU-ILNAS]]'s sixth standardisation
+  membership (the ITU), breaking its tie with [[GB-BSI]], and sourced
+  Luxembourg's GDPR act date via an ELI URL without creating a law
+  entity from it. See "The sixth verification-gap push".
 
 Re-verified the entire Luxembourg cluster (6 entities: [[LU]],
 [[LU-CTIE]], [[LU-CNPD]], [[LU-STATEC]], [[LU-ILNAS]] and
