@@ -39,6 +39,7 @@ related_entities:
   - UN-2030-AGENDA
   - EU-SDG-INDICATORS
   - EU-EUROSTAT
+  - UN-HLPF
 relationships:
   - type: part-of
     target: EU
@@ -61,6 +62,13 @@ relationships:
     confidence: medium
     valid_from: 2023-07-10
     valid_until: null
+  - type: references
+    target: UN-HLPF
+    source: fact
+    evidence: "Confirmed by reading sustainabledevelopment.un.org's own 'High-level Political Forum on Sustainable Development' page directly (2026-08-22, see [[UN-HLPF]]): the Forum is 'the central United Nations platform for the follow-up and review of the 2030 Agenda for Sustainable Development,' matching this entity's own description that the review 'was a key input to the United Nations High Level Political Forum held from 10 to 20 July 2023 in New York.' The Forum's own domain, hlpf.un.org, remains bot-walled (403) and unread; its listing of the EU's 2023 review is cited but not itself confirmed."
+    confidence: medium
+    valid_from: 2023-07-10
+    valid_until: null
 
 sources:
   - title: "EU Voluntary Review on the implementation of the 2030 Agenda for Sustainable Development — COM(2023) 700 final"
@@ -75,6 +83,10 @@ sources:
   - title: "EU Voluntary Review on the Implementation of the 2030 Agenda for Sustainable Development"
     url: "https://www.eeas.europa.eu/eeas/eu-voluntary-review-implementation-2030-agenda-sustainable-development_en"
     publisher: "European External Action Service"
+  - title: "High-level Political Forum on Sustainable Development"
+    url: "https://sustainabledevelopment.un.org/hlpf"
+    publisher: "United Nations Department of Economic and Social Affairs"
+    accessed: "2026-08-22"
 ---
 
 # EU Voluntary Review 2023
@@ -129,16 +141,14 @@ final**, and no source in the set gives the date the Commission adopted it.
 
 ## What is not modelled
 
-The **High-level Political Forum** itself has no entity, so nothing here says
-the review was *submitted to* it. That is the residue of the original
-problem: the forum is named in this entity's description and sources, and
-queued in `discovery/research-queue.md`. It is a smaller gap than the one
-that was recorded, and it is a missing node rather than a missing type.
+~~The **High-level Political Forum** itself has no entity~~ — it is now
+[[UN-HLPF]], and this entity carries the `references` edge that was
+missing.
 
 ## Relationships
 
 - `part-of` [[EU]] — anchor edge.
-- `references` [[UN-2030-AGENDA]] and [[EU-SDG-INDICATORS]].
+- `references` [[UN-2030-AGENDA]], [[EU-SDG-INDICATORS]] and [[UN-HLPF]].
 
 ## Sources
 

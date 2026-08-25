@@ -74,7 +74,6 @@ between the instruments.
 | Name | Suspected type | Suspected scope | Why it might matter | Where seen | Noted by / date | Status |
 |---|---|---|---|---|---|---|
 | **UN/CEFACT Core Component Library** | standard | UN (UNECE), `level: international` | The third of the three UN/CEFACT outputs named in the UN batch. Nothing beyond the name was found; a node built on that is the thin encyclopedic entity the taxonomy threshold prevents | unece.org/trade/uncefact | UN batch / 2026-08-16; narrowed 2026-08-21 | Candidate |
-| **eFTI Regulation (EU) 2020/1056** | law | EU, `level: regional` | Secondary sources describe the eFTI data set as built on the UN/CEFACT **MMT-RDM** model, which would be a second EU→UN/CEFACT edge. The claim was found in a UNECE presentation and a project website, **not in the regulation**, so it was left out in favour of the better-sourced UN/LOCODE case | unece.org ECE-TRANS-SC.1 presentation; digitaltrade4.eu; europarl.europa.eu legislative train | Candidate batch / 2026-08-21 | Candidate |
 
 ## 3. Closed — `measures` was added the same day
 
@@ -102,7 +101,6 @@ batch of separation from the entities that would use it.
 | **ITU standards** — no ID proposed | standard | UN (ITU), `level: international` | [[UN-ITU]] exists and **no ITU standard is modelled** | `discovery/research-queue.md`, Batch 13 | Batch 13; carried | Carried lead |
 | **UNCTAD data governance work** — no ID proposed | initiative | UN, `level: international` | [[UN-UNCTAD]] exists with no instrument beneath it; its CSTD working group on data governance is queued | `discovery/research-queue.md`, Batch 13 | Batch 13; carried | Carried lead |
 | **UN DESA, UNDP, WHO** | organisation | UN, `level: international` | Named in Batch 13's scope and refused for want of sources. The UN batch reversed that refusal for **UNESCO and UNECE** but did not go looking for these three | Batch 13 scope | Batch 13; carried | Carried lead |
-| **High-level Political Forum on Sustainable Development** — `UN-HLPF` | organisation | UN, `level: international` | The UN body that receives voluntary national reviews. [[EU-VOLUNTARY-REVIEW-2023]] was *presented at* it and can say so only in prose, because the forum has no node | hlpf.un.org; ec.europa.eu IP/23/3801 | Candidate batch / 2026-08-21 | Candidate |
 | **IMO, GISIS and the SafeSeaNet codes** | organisation / standard | international | [[EU-EMSWE]]'s common location database holds UN/LOCODE **alongside** the SafeSeaNet codes and the IMO port facility codes registered in GISIS. The IMO is not in the Atlas at all, and creating it to carry one code list would be a thin entity | eur-lex.europa.eu CELEX 32019R1239 | Candidate batch / 2026-08-21 | Weak lead |
 
 ## 5. Entity types and levels (re-measured 2026-08-21)

@@ -1,5 +1,85 @@
 # Completed Batches
 
+## The candidates pickup
+
+**Date:** 2026-08-22
+
+A pass over `discovery/candidates.md` rather than
+`discovery/research-queue.md` — a different backlog, compiled from
+search-engine leads rather than gaps found mid-batch, but subject to the
+same rule: a row closes by becoming a real, sourced entity (or a
+definitive answer), and is then deleted rather than struck through.
+Picked up the two rows still open from the candidate-clearing batch of
+2026-08-21: the **High-level Political Forum** and the **eFTI
+Regulation**.
+
+### [[UN-HLPF]]: the node three entities were missing
+
+[[EU-VOLUNTARY-REVIEW-2023]] has said since it was created that the
+review "was a key input to the United Nations High Level Political
+Forum," immediately followed by its own admission: "The **High-level
+Political Forum** itself has no entity, so nothing here says the review
+was *submitted to* it. That is the residue of the original problem."
+Both `discovery/candidates.md` and `discovery/research-queue.md` carried
+the same gap as a separate row.
+
+`sustainabledevelopment.un.org`'s own page, read directly, confirms it
+in the UN's own words: "The High-level Political Forum on Sustainable
+Development (HLPF) is the central United Nations platform for the
+follow-up and review of the 2030 Agenda for Sustainable Development."
+Wikipedia supplies what the UN page does not — formation on 9 July 2013,
+succeeding the Commission on Sustainable Development, and joint
+parentage under ECOSOC and the General Assembly. `hlpf.un.org`, the
+domain this Atlas had already cited unread on
+[[EU-VOLUNTARY-REVIEW-2023]], turns out to be bot-walled (403) even with
+an honest, identifying User-Agent — a different UN DESA subdomain
+carrying equivalent content was not.
+
+[[EU-VOLUNTARY-REVIEW-2023]] now carries the `references` edge to
+[[UN-HLPF]] its own text said was missing, closing the loop three
+entities and two discovery pages had been pointing at.
+
+### [[EU-EFTI-REGULATION]]: a negative result, reached by finally reading the source
+
+The more interesting of the two closures. `discovery/candidates.md` and
+[[EU-EMSWE]] both carried a claim — the eFTI Regulation's data set is
+built on the UN/CEFACT Multi-Modal Transport Reference Data Model — with
+an honest caveat: "The claim was found in a UNECE presentation and a
+project website, **not in the regulation**." That caveat was written
+when the regulation itself could not be fetched.
+
+It can be fetched now. Reading the full text of Regulation (EU)
+2020/1056 directly and searching it for "UN/CEFACT", "CEFACT", "MMT" and
+"UNECE" turns up **none of them, anywhere**. The regulation delegates
+the actual eFTI common data set to a future Commission delegated act
+(Article 2), due by 21 February 2023, which must merely "seek to ensure
+interoperability... with relevant data models that are accepted
+internationally," naming none. If the UN/CEFACT connection secondary
+sources describe is real, it lives in that unidentified delegated act,
+not in the primary instrument.
+
+This is worth recording as a pattern in its own right: a source note
+written under an egress restriction ("not in the regulation") described
+an absence its author had not actually been able to check. Reading the
+regulation directly converts "not found in a source I couldn't read"
+into "confirmed absent from a source I did read" — the same distinction
+this whole re-verification effort exists to draw, applied here to a
+negative claim instead of a positive one. [[EU-EFTI-REGULATION]] itself
+is a legitimate addition independent of the UN/CEFACT question — a
+sourced EU mobility-domain regulation the Atlas did not otherwise hold.
+
+### `unece.org`: tested against the `efta.int` theory, and it does not hold
+
+The prior push's headline finding was that a "blocked" host can turn out
+to be a User-Agent problem, not a real block. `unece.org` — cited on the
+UN/CEFACT Core Component Library row this same section of
+`discovery/candidates.md` still carries as genuinely unresearchable —
+was re-tested with the same honest, identifying User-Agent that got past
+`efta.int`. It still returns 403 on every path tried. Not every
+apparent block is the `efta.int` kind, and this negative result is worth
+keeping alongside the positive one so the next pass does not re-test it
+expecting the same fix to work twice.
+
 ## The fifth verification-gap push
 
 **Date:** 2026-08-22
