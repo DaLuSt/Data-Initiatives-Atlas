@@ -1,11 +1,20 @@
 # Current Batch
 
-**Status:** No batch in progress. **The seventh verification-gap push**
-completed on 2026-08-25 — the entire Italy cluster (6 entities). Full
-detail moved to `progress/completed.md`; summary below.
-`discovery/reverification-allowlist.md` ranks the next re-verification
-targets, and `discovery/research-queue.md` carries the rest of the
-research backlog.
+**Status:** No batch in progress. **The ninth verification-gap push**
+completed on 2026-08-25 — closing Sweden's remaining `search-only`
+entities, the second "tail" push this round (after the eighth push,
+Denmark's tail). Full detail moved to `progress/completed.md`; summary
+below. `discovery/reverification-allowlist.md` ranks the next
+re-verification targets, and `discovery/research-queue.md` carries the
+rest of the research backlog.
+
+**Tail pushes, not fresh clusters.** [[SE]]'s own anchor and [[SE-IMY]]
+were already `primary-source`; [[SE-DATAPORTAL]], [[SE-DIGG]] and
+[[SE-SCB]] were the three Swedish stragglers, closed by this push, the
+same pattern the eighth push closed for Denmark. [[NL]] (67), [[DE]]
+(27), [[BE]] (24), [[ES]] (22), [[PL]] (18), [[PT]] (8), [[EE]] (7),
+[[CZ]] (7) and [[FI]] (6) still carry such stragglers. [[FR]] remains
+the only country whose entire cluster (22 entities) is untouched.
 
 **Corrected/added guidance on what is actually blocked:** `efta.int` is
 **not** bot-walled — it returns a 403 to a browser-spoofing User-Agent
@@ -44,6 +53,35 @@ reverse of `efta.int`**: it returns a custom IIS "999" bot-defense
 error to the honest, identifying User-Agent `tools/reverify.py` sends,
 but serves the page normally (`200`) to a browser-spoofing one — found
 in the seventh verification-gap push, researching [[IT-CAD]].
+
+## The ninth verification-gap push — 2026-08-25
+
+Closed Sweden's tail: [[SE-DATAPORTAL]], [[SE-DIGG]] and [[SE-SCB]],
+the three Swedish entities still `verification: search-only` after
+Sweden's country anchor and [[SE-IMY]] had already been re-verified.
+All three now carry `verification: primary-source`.
+
+**[[SE-DIGG]]'s custodianship of [[SE-DATAPORTAL]], confirmed almost
+word for word.** dataportal.se's own "Om oss" page states directly:
+"(Digg) ansvarar för Sveriges dataportal" (DIGG is responsible for
+Sweden's data portal), matching the `maintained-by` edge and the
+"public and private organisations" framing this entity already
+carried, unread, since creation.
+
+**[[SE-SCB]]'s [[EU-ESS]] membership stays on the composition-rule
+tier.** scb.se's own "About us" page confirms Statistics Sweden's
+identity directly ("responsible for official statistics and for other
+government statistics") but does not name Eurostat or the ESS — the
+same honest call made on [[LU-STATEC]] and [[DK-DST]] in earlier
+passes.
+
+## The eighth verification-gap push — 2026-08-25 (Denmark's tail)
+
+Closed Denmark's tail in a companion push: [[DK-GRUNDDATA]],
+[[DK-DATATILSYNET]], [[DK-SUNDHEDSDATASTYRELSEN]] and [[DK-DST]], all
+promoted to `verification: primary-source`. See `progress/completed.md`
+for full detail; opened as a separate pull request from this one since
+Denmark and Sweden's tails share a shape but not a finding.
 
 ## The seventh verification-gap push — 2026-08-25
 

@@ -1,5 +1,115 @@
 # Completed Batches
 
+## The ninth verification-gap push
+
+**Date:** 2026-08-25
+
+A companion to the eighth push: rather than a fresh country cluster,
+this closes the **tail** on Sweden, whose anchor ([[SE]]) and
+[[SE-IMY]] were already `primary-source`, but three entities —
+[[SE-DATAPORTAL]], [[SE-DIGG]] and [[SE-SCB]] — still carried
+`verification: search-only`. All three now carry
+`verification: primary-source`. Opened as its own pull request rather
+than folded into the Denmark tail push, since the two countries'
+findings don't otherwise relate.
+
+### Sweden's data portal, confirmed by its own custodian
+
+[[SE-DATAPORTAL]]'s entity already described a wider remit than most
+national portals in the Atlas — data from "public and private"
+organisations, not government data alone — sourced to two pages
+neither of which had been read. dataportal.se's own "Om oss" page, read
+directly this pass, confirms it almost word for word: "(Digg) ansvarar
+för Sveriges dataportal. Sveriges dataportal gör det möjligt för
+allmänheten att söka bland data som tillhandahålls av offentliga och
+privata organisationer... Målet är att data ska bli en strategisk
+samhällsresurs" (DIGG is responsible for Sweden's data portal, which
+lets the public search data provided by public and private
+organisations... the goal is for data to become a strategic societal
+resource). [[SE-DIGG]]'s own "Our mission" page, read independently,
+confirms its two-part remit in the same terms this entity already
+carried: "We coordinate and support the digitalisation of public
+administration. We are responsible for Sweden's digital
+infrastructure."
+
+### Statistics Sweden: identity confirmed, ESS membership still inferred
+
+[[SE-SCB]]'s own "About us" page, read directly, states: "Statistics
+Sweden is responsible for official statistics and for other government
+statistics... we coordinate the system for the official statistics in
+Sweden" — a direct confirmation of identity. Neither that page nor
+scb.se's homepage names Eurostat or the [[EU-ESS]] directly, so this
+edge stays on the composition-rule tier — the same honest call made on
+[[LU-STATEC]] and [[DK-DST]] in the sixth and eighth pushes.
+
+## The eighth verification-gap push
+
+**Date:** 2026-08-25
+
+A new shape for this task: rather than a fresh country cluster, this
+push closes the **tail** left on a country whose main re-verification
+pass had already happened. Denmark's anchor ([[DK]]), its open-data
+platform ([[DK-DATAFORDELER]]) and [[DK-KLIMADATASTYRELSEN]] were all
+`primary-source` from earlier pushes, but four entities — added at
+different times, evidently missed by those passes — still carried
+`verification: search-only`: [[DK-GRUNDDATA]], [[DK-DATATILSYNET]],
+[[DK-SUNDHEDSDATASTYRELSEN]] and [[DK-DST]]. All four now carry
+`verification: primary-source`.
+
+A survey of every entity's `verification` field, not just country
+anchors, found this pattern is not unique to Denmark: [[NL]] carries
+67 such stragglers, [[DE]] 27, [[BE]] 24, [[ES]] 22, [[PL]] 18, [[PT]]
+8, [[EE]] 7, [[CZ]] 7, [[FI]] 6, and (until this pass) [[DK]] 4 and
+[[SE]] 3. [[FR]] is the only country whose entire cluster — all 22
+entities, including its own anchor — remains untouched, making it the
+next natural full-cluster push whenever this task resumes.
+
+### Grunddata's origin, dated for the first time
+
+[[DK-GRUNDDATA]]'s body already compared it to [[NL-BASISREGISTRATIES]]
+as "the same idea in another jurisdiction," noting the Dutch stelsel
+"rests on seven statutes" while "the Danish programme came out of a
+digitalisation strategy" — but carried no date for that strategy. A
+European Commission ISA2 conference document, cited since the entity's
+creation but never read, supplies one directly: "The basic data
+program was established in 2012 as part of the e-government strategy
+agreed between the Danish Government, Local Government Denmark and
+Danish Regions." `datafordeler.dk`'s own "Grunddata" page, also read
+directly, lists the registers under the programme by name — the Civil
+Registration System, the Central Business Register, the Building and
+Housing Register — matching this entity's claim exactly.
+`grunddata.dk` was tested again and remains dead: no DNS resolution
+over either https or http, the same finding the fourth research-queue
+pickup made.
+
+### Sundhedsdatastyrelsen and Datatilsynet, confirmed word for word
+
+Both entities' evidence strings, written before either page was read,
+turn out to match their sources almost verbatim.
+[[DK-SUNDHEDSDATASTYRELSEN]]'s own "About us" page states: "The Danish
+Health Data Authority is a part of the Ministry of the Interior and
+Health and was established in November 2015" — the same sentence, down
+to the date, this entity's evidence already carried unread.
+[[DK-DATATILSYNET]]'s English page confirms its identity directly, and
+edpb.europa.eu's own members page, read independently, lists a Denmark
+contact among the EDPB's member authorities.
+
+### Statistics Denmark: a legal basis found, an EU-ESS statement not
+
+[[DK-DST]]'s own "role and mandate" page, read directly, states
+plainly: "Statistics Denmark is Denmark's national statistical
+authority... responsible for official statistics in Denmark, as
+established by the Act on Statistics Denmark. We are an independent
+institution that has been providing statistics about and for Denmark
+since 1850." The Act's own citation was not read this pass, so no
+legislation entity was created from the name alone — the same
+discipline applied to [[LU-CNPD]]'s GDPR-act date in the sixth push.
+Two of dst.dk's own pages were checked for a direct [[EU-ESS]]
+membership statement, matching the standard set by [[PL-GUS]] and
+[[EE-STATISTIKAAMET]]; neither mentions Eurostat or the ESS by name, so
+the edge stays on the composition-rule tier — the same honest call made
+on [[LU-STATEC]] in the previous pass.
+
 ## The seventh verification-gap push
 
 **Date:** 2026-08-25
