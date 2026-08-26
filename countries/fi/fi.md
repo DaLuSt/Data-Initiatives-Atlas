@@ -24,7 +24,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-20"
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -66,15 +66,20 @@ sources:
 
 # Finland
 
-> **Verified 2026-08-20.** Every cited source was read and confirmed to
-> support what this entity says, including its accession date.
-> `verification: primary-source`.
+> **Verified 2026-08-26.** EU-membership sourcing unchanged since
+> 2026-08-20. This pass fixed a stale claim below: the anchor said no
+> Finland entity was modelled, which stopped being true once
+> [[FI-DVV]], [[FI-FINDATA]], [[FI-PALVELUVAYLA]],
+> [[FI-SECONDARY-USE-ACT]], [[FI-SUOMI-FI]], [[FI-TIETOSUOJA]] and
+> [[FI-TILASTOKESKUS]] were all added, none of which had updated the
+> anchor.
 
 ## Description
 
-Finland (ISO 3166-1 alpha-2: **`FI`**) is a **base country anchor**,
-created so that entities scoped to it have somewhere to attach. No Finland
-entity is modelled yet.
+Finland (ISO 3166-1 alpha-2: **`FI`**) is a **base country anchor**. It
+now anchors seven entities: a digital-identity agency, a service
+portal, a shared data-exchange layer, a health-data act and its permit
+authority, a data protection authority and a statistical office.
 
 ## Position in the European frameworks
 
@@ -100,10 +105,10 @@ ways on monetary integration.
 
 ## What this anchor does not yet carry
 
-Nothing beyond membership. There is no national data protection authority,
-no open data portal, no statistics office, no interoperability framework
-and no legislation attached to this entity. Each of those exists in
-reality; none has been researched.
+No open data portal and no general interoperability framework attached to
+this entity, though [[FI-PALVELUVAYLA]] covers the data-exchange-layer
+piece of that gap. Each of the rest exists in reality; none has been
+researched.
 
 No EU instrument in the Atlas carries `applies-in` → [[FI]] yet.
 That is a gap rather than a finding: as a member state, every
