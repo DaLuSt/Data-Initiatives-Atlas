@@ -20,11 +20,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-20"
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -41,21 +41,21 @@ relationships:
   - type: part-of
     target: FI
     source: fact
-    evidence: "The Suomi.fi Data Exchange Layer is a public body of FI; this anchor edge records national scope under metadata/relationship-types.md §2.3 and asserts no more than that. NOT READ — search-only."
+    evidence: "Confirmed by reading dvv.fi's own pages directly (2026-08-26), a government-operated service: anchor edge under metadata/relationship-types.md §2.3, asserting no more than national scope."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: based-on
     target: INTL-X-ROAD
     source: fact
-    evidence: "NIIS is a non-profit association established in 2017 by the governments of Estonia and Finland with the mission to ensure the development and strategic management of X-Road and other cross-border solutions for digital government infrastructure; X-Road is released under the MIT licence and used internationally (niis.org 'History'; e-estonia.com 'NIIS'; en.wikipedia.org 'X-Road'). NOT READ - search-only."
+    evidence: "Confirmed by reading niis.org's own history page and en.wikipedia.org's X-Road article directly (2026-08-26): cooperation began in 2013 when the Prime Ministers of Estonia and Finland signed a Memorandum of Understanding — 'considered to be the world's first digitally signed international agreement' — to develop and jointly manage X-Road; NIIS itself, per Wikipedia, 'was founded jointly in June 2017 by Finland and Estonia'; X-Road's central components were released under the MIT licence on 3 October 2016 (niis.org's history page dates the publication to '2015-2016' without a specific day); by 7 February 2018 Finland's and Estonia's data exchange layers were connected to one another."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: maintained-by
     target: FI-DVV
     source: fact
-    evidence: "DVV develops and maintains the centralised support services for e-services, which include the Suomi.fi services (dvv.fi 'About the agency'; suomi.fi organisation page). NOT READ - search-only."
+    evidence: "Confirmed by reading dvv.fi's own pages directly (2026-08-26): DVV's 'About the agency' page lists 'Identification Data Exchange Layer' among its own services, and its main agency page confirms it is 'Maintaining the Population Information System' alongside the Suomi.fi services."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -64,23 +64,43 @@ sources:
   - title: "Nordic Institute for Interoperability Solutions - History"
     url: "https://www.niis.org/history"
     publisher: "Nordic Institute for Interoperability Solutions (NIIS)"
+    accessed: "2026-08-26"
   - title: "X-Road"
     url: "https://en.wikipedia.org/wiki/X-Road"
     publisher: "Wikipedia"
+    accessed: "2026-08-26"
   - title: "Digital and Population Data Services Agency"
     url: "https://dvv.fi/en/digital-and-population-data-services-agency"
     publisher: "Digital and Population Data Services Agency (DVV)"
+    accessed: "2026-08-26"
 ---
 
 # Suomi.fi Data Exchange Layer
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-26.** All three cited pages were read directly.
+> NIIS's own history page and Wikipedia's X-Road article, read together,
+> supply a precise chronology this entity previously only had in
+> outline: the 2013 Memorandum of Understanding, NIIS's June 2017
+> founding, and the 7 February 2018 date the two countries' data
+> exchange layers were actually connected.
 
 ## Description
 
 The Finnish half of the only jointly-governed platform in the Atlas.
+
+## A precise chronology, found
+
+Confirmed by reading niis.org's own history page directly: cooperation
+between Estonia and Finland on X-Road began in **2013**, when the two
+countries' Prime Ministers — Andrus Ansip and Jyrki Katainen — signed a
+Memorandum of Understanding described as "the world's first digitally
+signed international agreement." Reading en.wikipedia.org's X-Road
+article independently adds three dates this entity did not previously
+carry: **NIIS was founded in June 2017**; X-Road's central components
+were released under the MIT licence on **3 October 2016**; and by
+**7 February 2018**, Finland's and Estonia's data exchange layers were
+actually connected to one another — the moment the "shared platform"
+description became true in practice rather than in intent.
 
 ## Why this entity completes something
 
@@ -102,4 +122,4 @@ Finland as a pair.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, all three read directly this pass.
