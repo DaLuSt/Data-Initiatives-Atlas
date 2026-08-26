@@ -23,7 +23,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-20"
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -65,15 +65,21 @@ sources:
 
 # Estonia
 
-> **Verified 2026-08-20.** Every cited source was read and confirmed to
-> support what this entity says, including its accession date.
-> `verification: primary-source`.
+> **Verified 2026-08-26.** EU-membership sourcing unchanged since
+> 2026-08-20. This pass fixed two stale claims below: the anchor said
+> no Estonia entity was modelled and separately said X-Road and
+> e-Residency were unmodelled gaps — both stopped being true once
+> [[EE-AKI]], [[EE-ANDMEPORTAAL]], [[EE-ATS]], [[EE-E-RESIDENCY]],
+> [[EE-IKS]], [[EE-RIA]], [[EE-RIHA]], [[EE-STATISTIKAAMET]] and
+> [[EE-X-TEE]] were all added, none of which had updated the anchor.
 
 ## Description
 
-Estonia (ISO 3166-1 alpha-2: **`EE`**) is a **base country anchor**,
-created so that entities scoped to it have somewhere to attach. No Estonia
-entity is modelled yet.
+Estonia (ISO 3166-1 alpha-2: **`EE`**) is a **base country anchor**. It
+now anchors nine entities: a data exchange layer, a data portal and its
+predecessor system, a digital-identity programme with no territorial
+requirement, two data protection and statistics authorities, their
+governing acts, and the agency operating the infrastructure layer.
 
 ## Position in the European frameworks
 
@@ -88,27 +94,21 @@ entity is modelled yet.
 > Accession dates in this table were confirmed against the Union's own
 > list of member states on 2026-08-20.
 
-## The largest single gap this batch exposes
+## A gap this batch once exposed, now closed
 
-Estonia is the most frequently cited digital-government model in
-Europe, and the Atlas holds **nothing** about it.
-
-**X-Road**, the distributed data exchange layer that connects Estonian public
-registries, is the direct conceptual counterpart of [[NL-DIGIKOPPELING]] and
-of the Dutch [[NL-BASISREGISTRATIES]] stelsel — and it has been adopted
-beyond Estonia, which none of the Dutch components has. **e-Residency** has
-no counterpart in the Atlas at all.
-
-Of the thirty-seven anchors created in this batch, this is the one whose
-absence most distorts the picture the graph gives of European data
-governance.
+Estonia is the most frequently cited digital-government model in Europe.
+When this anchor was created, the Atlas held nothing about it: neither
+**X-Road** — the distributed data exchange layer that connects Estonian
+public registries, and the direct conceptual counterpart of
+[[NL-DIGIKOPPELING]] and the Dutch [[NL-BASISREGISTRATIES]] stelsel —
+nor **e-Residency**, which has no counterpart anywhere else in the
+Atlas. Both are now modelled, as [[EE-X-TEE]] and [[EE-E-RESIDENCY]]
+respectively, and both are re-verified as of this pass.
 
 ## What this anchor does not yet carry
 
-Nothing beyond membership. There is no national data protection authority,
-no open data portal, no statistics office, no interoperability framework
-and no legislation attached to this entity. Each of those exists in
-reality; none has been researched.
+No general interoperability framework attached to this entity, though
+[[EE-X-TEE]] and [[EE-RIHA]] together cover much of that ground.
 
 No EU instrument in the Atlas carries `applies-in` → [[EE]] yet.
 That is a gap rather than a finding: as a member state, every

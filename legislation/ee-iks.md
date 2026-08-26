@@ -17,11 +17,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2019-01-15
 end_date: null
-last_verified: "2026-08-20"
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -36,14 +36,14 @@ relationships:
   - type: implements-requirement-from
     target: EU-GDPR
     source: fact
-    evidence: "In Estonia the GDPR is implemented by the Isikuandmete kaitse seadus; the GDPR has applied since 25 May 2018 and the Personal Data Protection Act entered into force on 15 January 2019 (gdprhub.eu 'Data Protection in Estonia'; linklaters.com 'Data Protected — Estonia'; whitecase.com 'GDPR Guide to National Implementation: Estonia'). NOT READ — search-only."
+    evidence: "Confirmed by reading all three cited pages directly (2026-08-26). gdprhub.eu states plainly: 'In Estonia the GDPR is implemented by the Isikuandmete kaitse seadus.' linklaters.com confirms the dates verbatim: 'The GDPR has applied since 25 May 2018. The Personal Data Protection Act entered into force on 15 January 2019.' whitecase.com corroborates the same date and adds a second act this entity did not previously carry: 'Personal Data Protection Act Implementation Act — Date in force: 15 March 2019' — a follow-on implementing act, not modelled as its own entity."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: applies-in
     target: EE
     source: fact
-    evidence: "The Isikuandmete kaitse seadus is the Estonian act implementing the GDPR, enforced by the Estonian Data Protection Inspectorate (gdprhub.eu 'Data Protection in Estonia'; aki.ee). NOT READ — search-only. Anchor edge under metadata/relationship-types.md §2.3."
+    evidence: "Confirmed by reading gdprhub.eu directly (2026-08-26): 'The Estonian Data Protection Inspectorate (Andmekaitse Inspektsioon) is the national data protection authority for Estonia.' Anchor edge under metadata/relationship-types.md §2.3."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -52,23 +52,31 @@ sources:
   - title: "Data Protection in Estonia"
     url: "https://gdprhub.eu/Data_Protection_in_Estonia"
     publisher: "GDPRhub"
+    accessed: "2026-08-26"
   - title: "Data Protected — Estonia"
     url: "https://www.linklaters.com/en/insights/data-protected/data-protected---estonia"
     publisher: "Linklaters"
+    accessed: "2026-08-26"
   - title: "GDPR Guide to National Implementation: Estonia"
     url: "https://www.whitecase.com/insight-our-thinking/gdpr-guide-national-implementation-estonia"
     publisher: "White & Case LLP"
+    accessed: "2026-08-26"
 ---
 
 # Isikuandmete kaitse seadus
 
-> **Sourcing caveat.** Compiled from search-engine results only; the
-> cited pages were confirmed to exist but were not read, because the
-> working environment blocks page retrieval. `verification: search-only`.
+> **Verified 2026-08-26.** All three cited pages were read directly and
+> confirm the 15 January 2019 date verbatim. White & Case's page
+> surfaced a second, related act this entity did not previously carry:
+> a Personal Data Protection Act Implementation Act, in force 15 March
+> 2019 — mentioned here in prose rather than given its own entity.
 
 ## Description
 
 Estonia's implementation of [[EU-GDPR]], **in force 15 January 2019**.
+A related follow-on act — the Personal Data Protection Act
+Implementation Act — entered into force two months later, on **15
+March 2019**; it is not modelled as a separate Atlas entity.
 
 ## Nearly eight months after the Regulation applied
 
@@ -91,5 +99,5 @@ this is the only one where a date this far after 25 May 2018 is recorded.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, all three read directly this pass.
 
