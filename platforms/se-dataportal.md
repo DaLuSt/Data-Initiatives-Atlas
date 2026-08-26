@@ -19,11 +19,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-20"
+last_verified: "2026-08-25"
 previous_version: null
 successor: null
 
@@ -37,14 +37,14 @@ relationships:
   - type: part-of
     target: SE
     source: fact
-    evidence: "Sveriges dataportal is a public body of SE; this anchor edge records national scope under metadata/relationship-types.md §2.3 and asserts no more than that. NOT READ — search-only."
+    evidence: "Sveriges dataportal is a public body of SE; this anchor edge records national scope under metadata/relationship-types.md §2.3 and asserts no more than that."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: maintained-by
     target: SE-DIGG
     source: fact
-    evidence: "DIGG is responsible for Sweden's data portal, which operates at dataportal.se, where government agencies' open data is collected and made available to public actors, businesses and civil society (digg.se; dataportal.se 'Om oss'; mynewsdesk 'DIGG lanserar Sveriges nya dataportal'). NOT READ - search-only."
+    evidence: "Confirmed verbatim by reading dataportal.se's own 'Om oss' page directly (2026-08-25): '(Digg) ansvarar för Sveriges dataportal. Sveriges dataportal gör det möjligt för allmänheten att söka bland data som tillhandahålls av offentliga och privata organisationer... Målet är att data ska bli en strategisk samhällsresurs' (DIGG is responsible for Sweden's data portal, which lets the public search data provided by public and private organisations... the goal is for data to become a strategic societal resource) — matching this entity's description almost word for word."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -53,20 +53,23 @@ sources:
   - title: "Om Sveriges dataportal"
     url: "https://www.dataportal.se/om-oss"
     publisher: "Myndigheten for digital forvaltning (DIGG)"
+    accessed: "2026-08-25"
   - title: "DIGG lanserar Sveriges nya dataportal"
     url: "https://www.mynewsdesk.com/se/digg-myndigheten-foer-digital-foervaltning/pressreleases/digg-lanserar-sveriges-nya-dataportal-3035515"
     publisher: "DIGG via Mynewsdesk"
+    accessed: "2026-08-25"
 ---
 
 # Sveriges dataportal
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-25.** Both cited pages were read directly.
+> dataportal.se's own page states DIGG's custodianship in almost the
+> same words this entity already used.
 
 ## Description
 
-Sweden's national data portal.
+Confirmed by reading dataportal.se directly (2026-08-25): Sweden's
+national data portal.
 
 ## Public *and* private data
 
@@ -85,4 +88,4 @@ listed there without one.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, both read directly this pass.

@@ -1,21 +1,22 @@
 # Current Batch
 
-**Status:** No batch in progress. **The eighth verification-gap push**
-completed on 2026-08-25 — closing Denmark's remaining `search-only`
-entities, a new push shape (a "tail" push on an already-verified
-country rather than a fresh country cluster). Full detail moved to
-`progress/completed.md`; summary below. `discovery/reverification-allowlist.md`
-ranks the next re-verification targets, and `discovery/research-queue.md`
-carries the rest of the research backlog.
+**Status:** No batch in progress. **The ninth verification-gap push**
+completed on 2026-08-25 — closing Sweden's remaining `search-only`
+entities, the second "tail" push this round (after the eighth push,
+Denmark's tail). Full detail moved to `progress/completed.md`; summary
+below. `discovery/reverification-allowlist.md` ranks the next
+re-verification targets, and `discovery/research-queue.md` carries the
+rest of the research backlog.
 
-**A new push shape: closing the tail.** Countries whose anchor and most
+**Tail pushes, not fresh clusters.** Countries whose anchor and most
 entities are `primary-source` can still carry a handful of
 `verification: search-only` stragglers — entities added or left behind
-after the country's main re-verification pass. `NL` (67), `DE` (27),
-`BE` (24), `ES` (22), `PL` (18), `PT` (8), `EE` (7), `CZ` (7), `FI` (6),
-`DK` (4, now closed by this push), `SE` (3) and `AT` (3) all carry some.
-[[FR]] remains the only country whose **entire** cluster (22 entities)
-is still untouched — the next natural full-cluster push.
+after the country's main re-verification pass. [[DK]] (4) and [[SE]]
+(3) were closed by the eighth and ninth pushes. `NL` (67), `DE` (27),
+`BE` (24), `ES` (22), `PL` (18), `PT` (8), `EE` (7), `CZ` (7), `FI` (6)
+and `AT` (3) still carry some. [[FR]] remains the only country whose
+**entire** cluster (22 entities) is still untouched — the next natural
+full-cluster push.
 
 **Corrected/added guidance on what is actually blocked:** `efta.int` is
 **not** bot-walled — it returns a 403 to a browser-spoofing User-Agent
@@ -46,14 +47,36 @@ real page on a bare retry, so treat a single `202` there as a flake to
 retry, not a block. `grunddata.dk`, cited on [[DK-DATAFORDELER]] and
 [[DK-GRUNDDATA]], no longer resolves at all (checked https and http) —
 a dead domain, not a bot-wall, found in the fourth research-queue
-pickup. `consilium.europa.eu` was tested for the first time this
-session in the seventh push and is genuinely blocked (403) even with
-an honest User-Agent. `bosettiegatti.eu`, an Italian legal-text mirror
-cited on the Italy cluster, is the **first host found doing the
-reverse of `efta.int`**: it returns a custom IIS "999" bot-defense
-error to the honest, identifying User-Agent `tools/reverify.py` sends,
-but serves the page normally (`200`) to a browser-spoofing one — found
-in the seventh verification-gap push, researching [[IT-CAD]].
+pickup, and reconfirmed dead in the eighth push. `consilium.europa.eu`
+was tested for the first time this session in the seventh push and is
+genuinely blocked (403) even with an honest User-Agent. `bosettiegatti.eu`,
+an Italian legal-text mirror cited on the Italy cluster, is the
+**first host found doing the reverse of `efta.int`**: it returns a
+custom IIS "999" bot-defense error to the honest, identifying
+User-Agent `tools/reverify.py` sends, but serves the page normally
+(`200`) to a browser-spoofing one — found in the seventh
+verification-gap push, researching [[IT-CAD]].
+
+## The ninth verification-gap push — 2026-08-25
+
+Closed Sweden's tail: [[SE-DATAPORTAL]], [[SE-DIGG]] and [[SE-SCB]],
+the three Swedish entities still `verification: search-only` after
+Sweden's country anchor and [[SE-IMY]] had already been re-verified.
+All three now carry `verification: primary-source`.
+
+**[[SE-DIGG]]'s custodianship of [[SE-DATAPORTAL]], confirmed almost
+word for word.** dataportal.se's own "Om oss" page states directly:
+"(Digg) ansvarar för Sveriges dataportal" (DIGG is responsible for
+Sweden's data portal), matching the `maintained-by` edge and the
+"public and private organisations" framing this entity already
+carried, unread, since creation.
+
+**[[SE-SCB]]'s [[EU-ESS]] membership stays on the composition-rule
+tier.** scb.se's own "About us" page confirms Statistics Sweden's
+identity directly ("responsible for official statistics and for other
+government statistics") but does not name Eurostat or the ESS — the
+same honest call made on [[LU-STATEC]] and [[DK-DST]] in earlier
+passes.
 
 ## The eighth verification-gap push — 2026-08-25
 
@@ -123,39 +146,6 @@ it UNREACHABLE.
   membership (the ITU), breaking its tie with [[GB-BSI]], and sourced
   Luxembourg's GDPR act date via an ELI URL without creating a law
   entity from it. See "The sixth verification-gap push".
-
-Re-verified the entire Luxembourg cluster (6 entities: [[LU]],
-[[LU-CTIE]], [[LU-CNPD]], [[LU-STATEC]], [[LU-ILNAS]] and
-[[LU-DATA-PUBLIC]]), all promoted from `verification: search-only` to
-`primary-source`.
-
-**A sixth [[LU-ILNAS]] membership.** ILNAS's own "Découvrir la
-normalisation" page states directly that it represents Luxembourg in
-three European standardisation organisations (CEN, CENELEC, ETSI) and
-three international ones — and the third international one is the
-**ITU**, a membership this entity did not previously carry. This breaks
-what the Atlas had recorded as a tie with [[GB-BSI]] at five
-memberships each: GB-BSI's own five do not include the ITU, so ILNAS is
-now the single most-connected national standards body in the Atlas, a
-genuine new fact rather than an artefact of uneven sourcing.
-
-**Luxembourg's GDPR act date, sourced via an ELI URL.** [[LU-CNPD]]'s
-own "Législation" page links to the implementing law under the label
-"Loi 'Protection des données'" at an ELI (European Legislation
-Identifier) URL whose date segment confirms **1 August 2018**.
-`legilux.public.lu` itself, which would carry the law's official title
-and text, is a JavaScript single-page application with no static
-content — consistent with `riigiteataja.ee` and `retsinformation.dk`'s
-pattern from earlier pushes. No law entity was created from the date
-alone; logged in `discovery/unresolved.md`.
-
-**`iso.org` re-confirmed genuinely blocked.** Tested again with the
-honest, identifying User-Agent on both [[LU]]'s and [[LU-ILNAS]]'s
-`iso.org` citations — still a 403 Cloudflare challenge regardless. This
-is a real, non-UA-fixable block, distinct from the `efta.int` pattern.
-
-## Earlier pushes
-
 - **Fourth research-queue pickup** (2026-08-25): [[DK-KLIMADATASTYRELSEN]],
   which Datafordeleren's own homepage names directly as its operating
   authority — [[DK-DATAFORDELER]] promoted to `primary-source` in the

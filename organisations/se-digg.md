@@ -19,11 +19,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-20"
+last_verified: "2026-08-25"
 previous_version: null
 successor: null
 
@@ -37,7 +37,7 @@ relationships:
   - type: part-of
     target: SE
     source: fact
-    evidence: "DIGG is a public body of SE; this anchor edge records national scope under metadata/relationship-types.md §2.3 and asserts no more than that. NOT READ — search-only."
+    evidence: "DIGG is a public body of SE; this anchor edge records national scope under metadata/relationship-types.md §2.3 and asserts no more than that."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -46,21 +46,30 @@ sources:
   - title: "Digg - Agency for Digital Government"
     url: "https://www.digg.se/en"
     publisher: "Myndigheten for digital forvaltning (DIGG)"
+    accessed: "2026-08-25"
+  - title: "Our mission - Digg"
+    url: "https://www.digg.se/en/about-us"
+    publisher: "Myndigheten for digital forvaltning (DIGG)"
+    accessed: "2026-08-25"
   - title: "Myndigheten for digital forvaltning"
     url: "https://sv.wikipedia.org/wiki/Myndigheten_f%C3%B6r_digital_f%C3%B6rvaltning"
     publisher: "Wikipedia"
+    accessed: "2026-08-25"
 ---
 
 # Agency for Digital Government
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-25.** All three cited pages were read directly.
+> DIGG's own "Our mission" page confirms the two-part remit this
+> entity already described, in almost the same words.
 
 ## Description
 
 Sweden's digital government agency, and the custodian of
-[[SE-DATAPORTAL]].
+[[SE-DATAPORTAL]]. Confirmed verbatim by reading digg.se's own "Our
+mission" page directly (2026-08-25): "We coordinate and support the
+digitalisation of public administration. We are responsible for
+Sweden's digital infrastructure."
 
 ## Relationships
 
@@ -69,4 +78,4 @@ Sweden's digital government agency, and the custodian of
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, all three read directly this pass.

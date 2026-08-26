@@ -1,5 +1,47 @@
 # Completed Batches
 
+## The ninth verification-gap push
+
+**Date:** 2026-08-25
+
+A companion to the eighth push: rather than a fresh country cluster,
+this closes the **tail** on Sweden, whose anchor ([[SE]]) and
+[[SE-IMY]] were already `primary-source`, but three entities —
+[[SE-DATAPORTAL]], [[SE-DIGG]] and [[SE-SCB]] — still carried
+`verification: search-only`. All three now carry
+`verification: primary-source`. Opened as its own pull request rather
+than folded into the Denmark tail push, since the two countries'
+findings don't otherwise relate.
+
+### Sweden's data portal, confirmed by its own custodian
+
+[[SE-DATAPORTAL]]'s entity already described a wider remit than most
+national portals in the Atlas — data from "public and private"
+organisations, not government data alone — sourced to two pages
+neither of which had been read. dataportal.se's own "Om oss" page, read
+directly this pass, confirms it almost word for word: "(Digg) ansvarar
+för Sveriges dataportal. Sveriges dataportal gör det möjligt för
+allmänheten att söka bland data som tillhandahålls av offentliga och
+privata organisationer... Målet är att data ska bli en strategisk
+samhällsresurs" (DIGG is responsible for Sweden's data portal, which
+lets the public search data provided by public and private
+organisations... the goal is for data to become a strategic societal
+resource). [[SE-DIGG]]'s own "Our mission" page, read independently,
+confirms its two-part remit in the same terms this entity already
+carried: "We coordinate and support the digitalisation of public
+administration. We are responsible for Sweden's digital
+infrastructure."
+
+### Statistics Sweden: identity confirmed, ESS membership still inferred
+
+[[SE-SCB]]'s own "About us" page, read directly, states: "Statistics
+Sweden is responsible for official statistics and for other government
+statistics... we coordinate the system for the official statistics in
+Sweden" — a direct confirmation of identity. Neither that page nor
+scb.se's homepage names Eurostat or the [[EU-ESS]] directly, so this
+edge stays on the composition-rule tier — the same honest call made on
+[[LU-STATEC]] and [[DK-DST]] in the sixth and eighth pushes.
+
 ## The eighth verification-gap push
 
 **Date:** 2026-08-25
