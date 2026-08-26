@@ -23,7 +23,7 @@ verification: search-only
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -37,14 +37,14 @@ relationships:
   - type: governed-by
     target: BE-NIS2-WET
     source: fact
-    evidence: "The royal decree implementing the NIS2 law designates the Centre for Cybersecurity Belgium (CCB) as the national cybersecurity authority and as the national CSIRT, alongside sectoral authorities that support the CCB in its tasks (eubelius.com; ccb.belgium.be 'Aanname van het koninklijk besluit betreffende NIS2'). NOT READ — search-only."
+    evidence: "Confirmed by reading eubelius.com and nis-2-directive.com directly (2026-08-26): eubelius.com states organisations 'must register with the competent authority, namely the Centre for Cybersecurity Belgium (\"CCB\") through its online tool'; nis-2-directive.com independently states the CCB 'was designated as both the national cybersecurity authority and national CSIRT, working alongside sectoral authorities for supervision', naming the implementing instrument as the Royal Decree of 9 June 2024. CCB's own three cited pages remain bot-walled (403)."
     confidence: medium
     valid_from: 2024-10-18
     valid_until: null
   - type: produces
     target: BE-NIS2-WET
     source: fact
-    evidence: "The NIS2 law was coordinated by the Centre for Cybersecurity Belgium (CCB) and the Prime Minister's office (eubelius.com 'Entry into force of Belgian acts transposing NIS2'). NOT READ — search-only. Co-authored with the Prime Minister's office, which is not an Atlas entity."
+    evidence: "The NIS2 law was coordinated by the Centre for Cybersecurity Belgium (CCB) and the Prime Minister's office (eubelius.com 'Entry into force of Belgian acts transposing NIS2'). Not independently re-confirmed this pass — eubelius.com was read but the excerpt retrieved this time did not repeat the co-authorship detail; kept as previously sourced rather than re-asserted as newly confirmed."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -62,22 +62,33 @@ sources:
   - title: "Entry into force of Belgian acts transposing NIS2: what you need to know"
     url: "https://www.eubelius.com/en/news/entry-into-force-of-belgian-acts-transposing-nis2-what-you-need-to-know"
     publisher: "Eubelius"
+    accessed: "2026-08-26"
   - title: "De NIS2-wet | CCB Safeonweb"
     url: "https://atwork.safeonweb.be/nis2"
     publisher: "Safeonweb (CCB)"
+  - title: "Transposition in Belgium — The NIS 2 Directive"
+    url: "https://www.nis-2-directive.com/Transposition/Belgium.html"
+    publisher: "nis-2-directive.com"
+    accessed: "2026-08-26"
 ---
 
 # Centrum voor Cybersecurity België (CCB)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Re-checked 2026-08-26, still `search-only`.** CCB's own three cited
+> pages, and `atwork.safeonweb.be`, are genuinely bot-walled (403) even
+> with an honest User-Agent. Two independent external sources were read
+> instead — eubelius.com (a law firm) and nis-2-directive.com — and both
+> confirm the CCB's designation as national cybersecurity authority and
+> CSIRT, naming the implementing Royal Decree of 9 June 2024. Two of six is
+> not a majority, so this entity stays `search-only`.
 
 ## Description
 
 The CCB is Belgium's **national cybersecurity authority** and **national
-CSIRT**, designated as both by the royal decree implementing
-[[BE-NIS2-WET]]. Sectoral authorities support it in its tasks.
+CSIRT**, designated as both by the **Royal Decree of 9 June 2024**
+implementing [[BE-NIS2-WET]] — the decree's date confirmed this pass via
+nis-2-directive.com, a detail this entity did not previously carry.
+Sectoral authorities support it in its tasks.
 
 It **coordinated the Belgian NIS2 transposition** together with the Prime
 Minister's office, and it publishes the guidance on incident notification
@@ -117,6 +128,7 @@ Logged in `discovery/research-queue.md`.
 
 ## Sources
 
-Listed in frontmatter — four CCB or Safeonweb pages plus one law-firm
-briefing, which is the source for the designation and the entry-into-force
-date.
+Two of six read directly this pass — eubelius.com and nis-2-directive.com.
+CCB's own three pages and Safeonweb are genuinely bot-walled (403), the
+same pattern found across `bosa.belgium.be`, `data.gov.be`,
+`financien.belgium.be` and `statbel.fgov.be` in this batch.

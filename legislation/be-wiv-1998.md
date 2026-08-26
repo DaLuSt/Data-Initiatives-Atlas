@@ -20,11 +20,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 1998-11-30
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -42,24 +42,32 @@ sources:
   - title: "Wet van 30/11/1998 houdende regeling van de inlichtingen- en veiligheidsdienst"
     url: "https://etaamb.openjustice.be/nl/wet-van-30-november-1998_n1998007272.html"
     publisher: "eTaamb / OpenJustice (Belgisch Staatsblad)"
+    accessed: "2026-08-26"
   - title: "Justel — wet van 30 november 1998"
     url: "https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=nl&la=N&table_name=wet&cn=1998113032"
     publisher: "Belgisch Staatsblad / FOD Justitie"
+    accessed: "2026-08-26"
   - title: "Het wettelijk kader"
     url: "https://vsse.be/nl/het-wettelijk-kader"
     publisher: "Veiligheid van de Staat (VSSE)"
+    accessed: "2026-08-26"
 ---
 
 # Wet van 30 november 1998 houdende regeling van de inlichtingen- en veiligheidsdienst
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-26.** All three cited sources were read directly, and
+> the act's own text (via two independent statute-book mirrors) confirms
+> Article 2's naming of both services. `verification: primary-source`.
 
 ## Description
 
 Belgium's **organic act** for its intelligence services, prescribing the
-statutory duties of [[BE-VSSE]] and [[BE-ADIV]] alike.
+statutory duties of [[BE-VSSE]] and [[BE-ADIV]] alike. Confirmed by reading
+the act's own text directly: **Article 2, §1** names "de twee inlichtingen-
+en veiligheidsdiensten van het Rijk" (the two intelligence and security
+services of the Kingdom) — the Veiligheid van de Staat, under the Minister
+of Justice, and the Algemene Dienst Inlichting en Veiligheid, under the
+Minister of Defence.
 
 ## A singular title for two services
 
@@ -84,5 +92,6 @@ civilian and a military body, where Poland legislated two named agencies.
 
 ## Sources
 
-Listed in frontmatter. Two official Belgian statute databases are cited —
-eTaamb and Justel — neither of them read.
+All three read directly this pass — the eTaamb and Justel statute-book
+mirrors (both confirm Article 2's naming of the two services) and VSSE's
+own legal-framework page.

@@ -24,7 +24,7 @@ verification: search-only
 
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -39,22 +39,22 @@ relationships:
   - type: governed-by
     target: BE-TOEZICHTSWET-1991
     source: fact
-    evidence: "The law of 18 July 1991 regulates oversight of the police and intelligence services and the Coordination Organ for Threat Analysis; two permanent oversight committees were established, one for police services and one for intelligence and security services (comiteri.be 'Wetgeving' and the consolidated codex of the 1991 act; ejustice.just.fgov.be Justel 1991009963; comitep.be 'historiek'). NOT READ — search-only."
+    evidence: "The law of 18 July 1991 regulates oversight of the police and intelligence services and the Coordination Organ for Threat Analysis; two permanent oversight committees were established, one for police services and one for intelligence and security services (comiteri.be 'Wetgeving' and the consolidated codex of the 1991 act; ejustice.just.fgov.be Justel 1991009963; comitep.be 'historiek'). Not independently re-confirmed this pass — the FAQ page read confirms Comité I's oversight role in substance but does not cite the 1991 act by name; the act's own text (attempted via a different mirror on BE-TOEZICHTSWET-1991) confirms the two-committee structure directly."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: applies-to
     target: BE-VSSE
     source: fact
-    evidence: "The VSSE and ADIV, along with the fusion centre OCAD, are subject to democratic control exercised by the Permanent Committee for Oversight of Intelligence and Security Services (Comité I), which reports to Parliament (comiteri.be 'Wat zijn inlichtingen- en veiligheidsdiensten?'; vsse.be). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading comiteri.be's FAQ page directly (2026-08-26): Comité R/I 'functions as a parliamentary supervisory body monitoring the operations, conduct, actions or failures' of VSSE, ADIV and OCAD, as 'an independent public institution, connected to the Chamber of Representatives'."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-to
     target: BE-ADIV
     source: fact
-    evidence: "The VSSE and ADIV, along with the fusion centre OCAD, are subject to democratic control exercised by the Permanent Committee for Oversight of Intelligence and Security Services (Comité I), which reports to Parliament (comiteri.be 'Wat zijn inlichtingen- en veiligheidsdiensten?'). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading comiteri.be's FAQ page directly (2026-08-26): the same parliamentary oversight covers ADIV alongside VSSE and OCAD."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -62,6 +62,7 @@ sources:
   - title: "Wat zijn inlichtingen- en veiligheidsdiensten?"
     url: "https://www.comiteri.be/index.php/nl/vast-comite-i/faq?view=article&id=105%3Awat-zijn-inlichtingen-en-veiligheidsdiensten&catid=10%3Anl"
     publisher: "Vast Comité I"
+    accessed: "2026-08-26"
   - title: "18 juli 1991 — Wet tot regeling van het toezicht op politie- en inlichtingendiensten (codex)"
     url: "https://www.comiteri.be/images/pdf/wetgeving/WToezicht_-_LContrle_-_codex.pdf"
     publisher: "Vast Comité I"
@@ -72,14 +73,21 @@ sources:
 
 # Vast Comité van Toezicht op de inlichtingen- en veiligheidsdiensten (Comité I)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Re-checked 2026-08-26, still `search-only`.** Comité I's own FAQ page
+> was read directly and confirms the `applies-to` [[BE-VSSE]] and
+> [[BE-ADIV]] edges in substance. The PDF codex of the 1991 act could not be
+> read as text (a compressed binary stream) and the `wetgeving-mainmenu-7`
+> citation is now dead (404). One of three read is not a majority, so this
+> entity stays `search-only`.
 
 ## Description
 
 Comité I exercises **democratic control**, reporting to Parliament, over
-[[BE-VSSE]] and [[BE-ADIV]].
+[[BE-VSSE]] and [[BE-ADIV]]. Confirmed by reading Comité I's own FAQ page
+directly: it is "an independent public institution, connected to the
+Chamber of Representatives, and is completely neutral and impartial,"
+functioning as "a parliamentary supervisory body monitoring the operations,
+conduct, actions or failures" of VSSE, ADIV and OCAD.
 
 ## Two committees from one act
 
@@ -118,4 +126,7 @@ both later than the agency acts.
 
 ## Sources
 
-Listed in frontmatter.
+One of three read directly this pass — the FAQ page. The PDF codex is
+unreadable as extracted text and the `wetgeving-mainmenu-7` page is dead
+(404); the same PDF and a live alternate mirror were tried again on
+[[BE-TOEZICHTSWET-1991]].

@@ -223,10 +223,10 @@ is what to request.
 
 | Link | Why refused | Status |
 |---|---|---|
-| [[BE-HERGEBRUIK-WET]] → [[EU-OPEN-DATA-DIRECTIVE]] | **Chronologically impossible**: the act is 2016, the directive 2019/1024. Sources say it aligns with the earlier PSI Directive, which is not an Atlas entity. **Belgium's actual Open Data Directive transposition was not identified.** The sharpest pattern-matching trap in the batch — the shape of the Atlas made a wrong answer attractive. | **Open — priority** |
-| [[BE-NIS1-WET]] → [[EU-NIS]] | Near-certain, and [[EU-NIS]] *is* an Atlas entity so the link has somewhere to point — but every source cited is about the successor act and none states what the 2019 act transposed. Would give a second `EU-NIS` → national descent. | **Open — one page read** |
-| [[BE-APD]] → [[EU-EDPB]] | No source read mentions the EDPB. Three national DPAs now sit in the Atlas and **only [[NL-AP]] connects to the Board** — a sourcing artefact, not a fact about European data protection governance. | Open |
-| [[BE-STATBEL]] → [[EU-EUROSTAT]] / [[UN-FPOS]] | Nothing found. ⚠ **The claim that "none connects upward" was wrong when written and was repeated for three batches** — [[NL-CBS]] already carried a `participates-in` edge to Eurostat, with ESS-membership reasoning in its evidence. Corrected in the UN batch. | ✅ **Partly resolved — UN batch, 2026-08-16.** Statbel is now `part-of` [[EU-ESS]]. The [[UN-FPOS]] half is still open. |
+| [[BE-HERGEBRUIK-WET]] → [[EU-OPEN-DATA-DIRECTIVE]] | **Chronologically impossible**: the act is 2016, the directive 2019/1024. Sources say it aligns with the earlier PSI Directive, which is not an Atlas entity. **Belgium's actual Open Data Directive transposition was not identified.** The sharpest pattern-matching trap in the batch — the shape of the Atlas made a wrong answer attractive. | ✅ **Resolved between batches, closed by re-verification pass 2026-08-26.** [[BE-HERGEBRUIK-WET-2023]] (created after this batch ran) is Belgium's transposition, amending this act. Reading the 2016 act's own consolidated (Justel) text this pass confirms the 2023 amendment inserted a direct citation to Directive (EU) 2019/1024 into its Article 1 — but per the Atlas's amends/amending convention, the `implements-requirement-from` edge stays on [[BE-HERGEBRUIK-WET-2023]], not here. |
+| [[BE-NIS1-WET]] → [[EU-NIS]] | Near-certain, and [[EU-NIS]] *is* an Atlas entity so the link has somewhere to point — but every source cited is about the successor act and none states what the 2019 act transposed. Would give a second `EU-NIS` → national descent. | ✅ **Resolved — re-verification pass, 2026-08-26.** The one page read closed it: the act's own Article 2 at etaamb.openjustice.be states "Deze wet voorziet met name in de omzetting van de Europese Richtlijn (EU) 2016/1148." `implements-requirement-from` → [[EU-NIS]] now asserted. |
+| [[BE-APD]] → [[EU-EDPB]] | No source read mentions the EDPB. Three national DPAs now sit in the Atlas and **only [[NL-AP]] connects to the Board** — a sourcing artefact, not a fact about European data protection governance. | ✅ **Resolved — re-verification pass, 2026-08-26.** Reading gdpr-info.eu directly confirms Article 68(3) GDPR requires the Board to include one supervisory authority per Member State; the GBA/APD is Belgium's. Also found: the `participates-in` [[EU-EDPB]] edge was **already present in this entity's own frontmatter** (added at some point after this table entry was written) while its body text still said the link was "refused for want of a source" — a frontmatter/body drift bug, now corrected on [[BE-APD]] itself. |
+| [[BE-STATBEL]] → [[EU-EUROSTAT]] / [[UN-FPOS]] | Nothing found. ⚠ **The claim that "none connects upward" was wrong when written and was repeated for three batches** — [[NL-CBS]] already carried a `participates-in` edge to Eurostat, with ESS-membership reasoning in its evidence. Corrected in the UN batch. | ✅ **Partly resolved — UN batch, 2026-08-16.** Statbel is now `part-of` [[EU-ESS]]. ⚠ **The re-verification pass of 2026-08-26 found the same wrong claim still standing in [[BE-STATBEL]]'s own body prose**, ten days after the frontmatter was corrected — a second instance of the frontmatter/body drift bug also found on [[BE-APD]]. Corrected this pass; Wikipedia additionally corroborates with "Statbel serves as Belgium's official representative to Eurostat." The [[UN-FPOS]] half is still open. |
 | [[BE-KSZ]] → [[EU-SDG]] | The KSZ predates the regulation by 28 years and no source connects them — the same refusal made for [[DE-REGMOG]]. | Open |
 | [[BE-DATA-GOV-BE]] → [[BE-HERGEBRUIK-WET]] | Portal and open-data act, obviously related, no source states it. Same call as [[DE-GOVDATA]] / [[DE-DNG]]. | Open |
 | [[BE-BOSA]] → [[BE-BELGIF]] | BELGIF is sourced as co-owned by the federal state, Regions and Communities — precisely not something BOSA owns. | Open (deliberate) |
@@ -241,10 +241,49 @@ is what to request.
 
 | Entity | Question | Status |
 |---|---|---|
-| [[BE-NIS2-WET]] | No Belgisch Staatsblad ELI URI cited; publication and entry-into-force dates rest on CCB reporting. | Open |
-| [[BE-KSZ-WET]] | Only two sources, one of them the KSZ's page about its own founding act. Act content unknown. | Open |
-| [[BE-STATBEL]] | **No statutory basis found** — no Belgian equivalent of [[DE-BSTATG]] or [[NL-WET-CBS]], so no `governed-by` is recorded. | Open |
-| [[BE-HERGEBRUIK-WET]] | Scope, obligations and relationship to the current EU regime all unknown. | Open |
+| [[BE-NIS2-WET]] | No Belgisch Staatsblad ELI URI cited; publication and entry-into-force dates rest on CCB reporting. | Partly resolved — re-verification pass, 2026-08-26. Two more independent external sources (kpmglaw.be, prebes.be) now corroborate the 17 May 2024 publication date and the replacement of [[BE-NIS1-WET]]; CCB's own three pages remain bot-walled and no ELI URI has yet been found. |
+| [[BE-KSZ-WET]] | Only two sources, one of them the KSZ's page about its own founding act. Act content unknown. | Partly resolved — re-verification pass, 2026-08-26. The KSZ's own page, read directly, quotes Article 1 verbatim. Remaining act content (governance, funding) still unknown; still only two sources. |
+| [[BE-STATBEL]] | **No statutory basis found** — no Belgian equivalent of [[DE-BSTATG]] or [[NL-WET-CBS]], so no `governed-by` is recorded. | Still open after re-verification pass, 2026-08-26 — `statbel.fgov.be` is CAPTCHA-walled and no statutory basis was found this pass either. |
+| [[BE-HERGEBRUIK-WET]] | Scope, obligations and relationship to the current EU regime all unknown. | Partly resolved — re-verification pass, 2026-08-26. The act's own text (both original and current consolidated versions) was read directly, confirming its 2016 PSI Directive transposition and the 2023 amendment's insertion of a Directive (EU) 2019/1024 reference. Full substantive obligations (licensing, pricing, appeals commission) remain sourced only from BIPT's secondary account. |
+
+### Belgium re-verification pass (2026-08-26)
+
+All 24 `country: BE` entities carrying `verification: search-only` were
+checked against primary sources, as the fifteenth entry in the
+verification-gap series (following the France, Austria, Finland, Estonia
+and Czechia tails). **18 of 24 promoted to `primary-source`**; 6 stayed
+`search-only` for want of a majority of readable sources. See
+`countries/be/index.md` for the full list and each entity's own `Sources`
+section for its read/unread breakdown.
+
+Two frontmatter/body drift bugs were found and fixed, both predating this
+pass — see the [[BE-APD]] and [[BE-STATBEL]] rows above. Two stale-index
+bugs were also found and fixed in `countries/be/index.md`, independent of
+the 24-entity list: its EU-instrument comparison table still showed
+[[EU-OPEN-DATA-DIRECTIVE]] as "not established" for Belgium although
+[[BE-HERGEBRUIK-WET-2023]] had already closed that gap before this pass
+began, and NBN was called "not modelled" in the index's own "Not modelled"
+section while [[BE-NBN]] already existed as an entity and was simply
+missing from the "Organisations" list above it.
+
+A genuine dating error was also caught and corrected on
+[[BE-HERGEBRUIK-WET-2023]]: it was published in the Belgisch Staatsblad on
+**23 January 2024**, not 25 December 2023 as previously recorded — 25
+December 2023 is the act's own date (promulgation). The EUR-Lex national
+implementing measures register independently corroborates 23 January 2024.
+
+A genuine host-block pattern emerged, the Belgian counterpart to the
+`.gouv.fr` block found in the France batch: `bosa.belgium.be`,
+`ccb.belgium.be`, `news.belgium.be`, `data.gov.be`, `financien.belgium.be`,
+`statbel.fgov.be` and `atwork.safeonweb.be` all returned CAPTCHA
+verification pages or plain 403s to every attempt, even with an honest
+User-Agent, while `vsse.be`, `sgrs.be`, `comiteri.be`,
+`gegevensbeschermingsautoriteit.be`, `ksz-bcss.fgov.be`,
+`ejustice.just.fgov.be`, `etaamb.openjustice.be`, `wallex.wallonie.be` and
+`codex.vlaanderen.be` were all reachable. This explains most of why
+[[BE-BOSA]], [[BE-CCB]], [[BE-STATBEL]] and [[BE-DATA-GOV-BE]] stayed
+`search-only` despite genuine effort to reach a majority via alternate
+external sources (law firms, employers' federations, Wikipedia, GitHub).
 
 ## France batch — fourth country (2026-08-16)
 

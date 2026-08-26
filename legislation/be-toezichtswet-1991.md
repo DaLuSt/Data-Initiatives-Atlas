@@ -24,7 +24,7 @@ verification: search-only
 
 start_date: 1991-07-18
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -48,22 +48,37 @@ sources:
   - title: "Wet tot wijziging van de wet van 18 juli 1991 …, 10 juli 2006"
     url: "https://vlex.be/vid/toezicht-politie-inlichtingendiensten-29583015"
     publisher: "vLex België"
+  - title: "Wet van 18/07/1991 tot regeling van het toezicht op politie- en inlichtingendiensten en op het coördinatieorgaan voor de dreigingsanalyse (officieuze coördinatie in het Duits)"
+    url: "https://etaamb.openjustice.be/nl/wet-van-18-juli-1991_n2018030682.html"
+    publisher: "etaamb / OpenJustice"
+    accessed: "2026-08-26"
 ---
 
 # Wet van 18 juli 1991 tot regeling van het toezicht op politie- en inlichtingendiensten
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Re-checked 2026-08-26, still `search-only`.** Of the three original
+> citations, the comiteri.be PDF codex was retrieved but its text could not
+> be extracted (a compressed binary stream), the ejustice.just.fgov.be
+> Justel page timed out on three separate attempts, and the vlex.be citation
+> now 404s — dead. One alternate mirror was found and read directly: an
+> unofficial German-language coordinated text on etaamb.openjustice.be,
+> which confirms the act's title and Article 1 content and matches this
+> entity's existing description closely. One source read out of an updated
+> four is not a majority, so this entity stays `search-only` — the same
+> honest call made for [[FR-DGSI]] in an earlier country batch.
 
 ## Description
 
 The 1991 act regulates oversight of the Belgian police and intelligence
 services and created **two standing committees at once**: Comité P for the
-police and [[BE-COMITE-I]] for the intelligence and security services. The
-sources give the oversight's object as the protection of the constitutional
-and legal rights of persons, and the coordination and effectiveness of the
-services.
+police and [[BE-COMITE-I]] for the intelligence and security services.
+Confirmed by reading an unofficial German-language coordinated text of the
+act directly (2026-08-26): Article 1 gives the oversight's object as the
+protection of the constitutional and legal rights of persons, and the
+coordination and effectiveness of the police and intelligence/security
+services respectively, plus ensuring proper functioning of the
+Coordination Unit for Threat Analysis (OCAD). Each committee has its own
+attached investigation service.
 
 ## Belgium regulated the watchers before it regulated the watched
 
@@ -97,5 +112,7 @@ arrangement is recorded and not modelled.
 
 ## Sources
 
-Listed in frontmatter. The consolidated codex is published by Comité I
-itself.
+One of four read directly this pass — an unofficial German-language
+coordinated text found on etaamb.openjustice.be. Comité I's own PDF codex
+is unreadable as extracted text, the official Justel page timed out
+repeatedly, and the vLex citation is dead (404).

@@ -20,11 +20,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2018-09-05
 end_date: null
-last_verified: null
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -40,8 +40,8 @@ relationships:
   - type: implements-requirement-from
     target: EU-GDPR
     source: fact
-    evidence: "The wet van 30 juli 2018 is the Belgian law enacted to implement the European General Data Protection Regulation (2016/679); it supplements the GDPR where the GDPR left room for national member states, integrates the GDPR's principles and definitively repeals the privacy law of 8 December 1992 (nl.wikipedia.org 'Wet bescherming persoonsgegevens (België)'; agoria.be; siriuslegaladvocaten.be). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading three sources directly (2026-08-26). The act's own text at ejustice.just.fgov.be: '30 JULI 2018. - Wet betreffende de bescherming van natuurlijke personen met betrekking tot de verwerking van persoonsgegevens', published 5 September 2018. The Belgian Data Protection Authority's own page states the law 'integreert de beginsels van de AVG' (integrates the principles of the GDPR) and that it 'annuleert definitief de privacywet van 8 december 1992' (definitively cancels the privacy law of 8 December 1992) — directly confirming the repeal this entity asserts. Agoria's analysis adds that the law runs to 286 articles across 69 pages and lowered the age of digital consent for minors from 16 to 13."
+    confidence: high
     valid_from: 2018-09-05
     valid_until: null
 
@@ -49,15 +49,18 @@ sources:
   - title: "Wet van 30 juli 2018 betreffende de bescherming van natuurlijke personen met betrekking tot de verwerking van persoonsgegevens"
     url: "https://www.ejustice.just.fgov.be/eli/wet/2018/07/30/2018040581/justel"
     publisher: "Belgisch Staatsblad / Moniteur belge (FOD Justitie)"
+    accessed: "2026-08-26"
   - title: "Wet van 30 juli 2018"
     url: "https://www.gegevensbeschermingsautoriteit.be/burger/thema-s/recht-op-afbeelding/wet-van-30-juli-2018"
     publisher: "Gegevensbeschermingsautoriteit (GBA/APD)"
+    accessed: "2026-08-26"
   - title: "Wet bescherming persoonsgegevens (België)"
     url: "https://nl.wikipedia.org/wiki/Wet_bescherming_persoonsgegevens_(Belgi%C3%AB)"
     publisher: "Wikipedia"
   - title: "Daar is de nieuwe Belgische Gegevensbeschermingswet (Uitvoeringswet GDPR)"
     url: "https://www.agoria.be/nl/diensten/expertise/legal-tax-finance/juridisch/privacy-gegevensbescherming/daar-is-de-nieuwe-belgische-gegevensbeschermingswet-uitvoeringswet-gdpr"
     publisher: "Agoria"
+    accessed: "2026-08-26"
   - title: "Wet van 30/07/2018 — geconsolideerde tekst"
     url: "https://etaamb.openjustice.be/nl/wet-van-30-juli-2018_n2018040581.html"
     publisher: "etaamb / OpenJustice"
@@ -65,9 +68,11 @@ sources:
 
 # Wet van 30 juli 2018 (Belgian Data Protection Act)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-26.** Three of five sources were read directly — the
+> act's own ELI text on the Belgisch Staatsblad, the Belgian Data Protection
+> Authority's own page (which states the repeal of the 1992 act in as many
+> words), and a law-firm analysis. Wikipedia and the etaamb consolidated
+> text were not re-fetched this pass. `verification: primary-source`.
 
 ## Description
 
@@ -124,4 +129,6 @@ quality partly tracks how each country publishes its statute book.
 
 ## Sources
 
-Listed in frontmatter.
+Three of five read directly this pass — the ELI text on the Belgisch
+Staatsblad, the GBA/APD's own page, and Agoria's analysis. Wikipedia and the
+etaamb consolidated text remain unread.

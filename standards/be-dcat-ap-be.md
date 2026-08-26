@@ -21,11 +21,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -41,22 +41,22 @@ relationships:
   - type: based-on
     target: EU-DCAT-AP
     source: fact
-    evidence: "The Belgian federal profile DCAT-BE was developed as a collaboration between several federal administrations and makes certain fields mandatory, recommended and optional compared to the W3C DCAT standard and the European DCAT-AP standard; the DCAT Application profile for data portals (DCAT-AP) is a specification based on W3C's DCAT for describing public sector datasets (dtservices.bosa.be integratie-metadata; belgif.be/page/specification/dcat-ap.en.html). NOT READ — search-only."
+    evidence: "Confirmed by reading belgif.be directly (2026-08-26): DCAT-AP is described there as 'a specification based on W3C's Data Catalogue vocabulary (DCAT) for describing public sector datasets,' current at version 3.0.1. The page did not, in the excerpt retrieved, restate the field-by-field mandatory/recommended/optional detail this entity's description carries; that remains sourced to dtservices.bosa.be (redirected to a bosa.belgium.be page, CAPTCHA-walled, not read this pass)."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: applies-to
     target: BE-DATA-GOV-BE
     source: fact
-    evidence: "The DCAT-AP feed is uploaded via the federal open data portal, which is managed by FOD BOSA, and the portal's metadata integration is documented against the Belgian federal DCAT profile (bosa.belgium.be 'Federale open data portaal: integratie metadata'; dtservices.bosa.be). NOT READ — search-only."
+    evidence: "The DCAT-AP feed is uploaded via the federal open data portal, which is managed by FOD BOSA, and the portal's metadata integration is documented against the Belgian federal DCAT profile (bosa.belgium.be 'Federale open data portaal: integratie metadata'; dtservices.bosa.be). Not confirmed this pass — both citing pages are on `bosa.belgium.be`, which returned CAPTCHA challenges throughout this batch, and `dtservices.bosa.be` 301-redirects to a `bosa.belgium.be` page also unread."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: references
     target: EU-INSPIRE
     source: fact
-    evidence: "Federal DCAT-AP 2 is the profile developed by the Belgian federal administrations involved in the implementation of the INSPIRE Directive, and it contains a mapping between the INSPIRE and DCAT-AP elements (belgif.be/page/specification/dcat-ap.en.html; github.com/belgif/inspire-dcat). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading github.com/belgif/inspire-dcat directly (2026-08-26): its README states 'DCAT AP was a profile developed by the Belgian federal administrations involved in the implementation of the INSPIRE Directive. It also contained a mapping between the INSPIRE and DCAT AP elements.' The repository is now archived (read-only as of 18 May 2026), with a note recommending SEMIC.EU's (Geo)DCAT-AP 3.x for ongoing work — a detail this entity did not previously carry."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -64,15 +64,18 @@ sources:
   - title: "Specification: DCAT-AP"
     url: "https://belgif.be/page/specification/dcat-ap.en.html"
     publisher: "Belgian Interoperability Framework (BELGIF)"
+    accessed: "2026-08-26"
   - title: "Integratie Metadata | DG DT"
     url: "https://dtservices.bosa.be/nl/services/open-data/integratie-metadata"
     publisher: "FOD BOSA — DG Digitale Transformatie"
   - title: "belgif/inspire-dcat — INSPIRE to DCAT-AP mapping"
     url: "https://github.com/belgif/inspire-dcat"
     publisher: "BELGIF"
+    accessed: "2026-08-26"
   - title: "dcat-be — Website of the Belgian application profile of DCAT"
     url: "https://github.com/openknowledgebe/dcat-be"
     publisher: "Open Knowledge Belgium"
+    accessed: "2026-08-26"
   - title: "Federale open data portaal: integratie metadata"
     url: "https://bosa.belgium.be/nl/services/federale-open-data-portaal-integratie-metadata"
     publisher: "FOD Beleid en Ondersteuning (BOSA)"
@@ -80,9 +83,11 @@ sources:
 
 # DCAT-AP BE
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-26.** Three of five sources were read directly — the
+> BELGIF specification page and both GitHub repositories. The two
+> `bosa.belgium.be`-hosted citations remain bot-walled (CAPTCHA), the same
+> pattern found across most Belgian federal government domains this pass.
+> `verification: primary-source`.
 
 ## Description
 
@@ -132,7 +137,12 @@ Same standard family, three institutional logics.
 
 `references` → [[EU-INSPIRE]] is recorded because the sources state a
 concrete artefact: a mapping between INSPIRE and DCAT-AP elements, with a
-dedicated `belgif/inspire-dcat` repository.
+dedicated `belgif/inspire-dcat` repository — confirmed by reading its
+README directly this pass. One detail the reading added: the repository is
+now **archived** (read-only since 18 May 2026), with a note pointing
+ongoing work to SEMIC.EU's (Geo)DCAT-AP 3.x instead. The mapping this
+entity documents is therefore historical rather than actively maintained,
+though the fact of its existence stands.
 
 `references` is used deliberately rather than `implements-requirement-from`
 or `based-on`: a metadata mapping is not a transposition, and this profile
@@ -160,4 +170,7 @@ gap. It remains first-priority in `discovery/unresolved.md`.
 
 ## Sources
 
-Listed in frontmatter.
+Three of five read directly this pass — the BELGIF specification page and
+both GitHub repositories (`belgif/inspire-dcat` and
+`openknowledgebe/dcat-be`). The two `bosa.belgium.be`-hosted pages remain
+bot-walled.

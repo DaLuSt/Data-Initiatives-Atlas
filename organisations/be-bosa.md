@@ -26,7 +26,7 @@ verification: search-only
 
 start_date: 2017-03-01
 end_date: null
-last_verified: null
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -41,6 +41,7 @@ sources:
   - title: "Federale Overheidsdienst Beleid en Ondersteuning"
     url: "https://nl.wikipedia.org/wiki/Federale_Overheidsdienst_Beleid_en_Ondersteuning"
     publisher: "Wikipedia"
+    accessed: "2026-08-26"
   - title: "Federale open data portaal"
     url: "https://bosa.belgium.be/nl/applications/federale-open-data-portaal"
     publisher: "FOD Beleid en Ondersteuning (BOSA)"
@@ -53,31 +54,52 @@ sources:
   - title: "Integratie van de Dienst Administratieve Vereenvoudiging (DAV) in de FOD Beleid en Ondersteuning (BOSA)"
     url: "https://news.belgium.be/nl/integratie-van-de-dienst-administratieve-vereenvoudiging-dav-de-fod-beleid-en-ondersteuning-bosa"
     publisher: "news.belgium.be (Belgian federal government)"
+  - title: "Koninklijk besluit van 22 februari 2017 houdende oprichting van de Federale Overheidsdienst Beleid en Ondersteuning"
+    url: "https://etaamb.openjustice.be/nl/koninklijk-besluit-van-22-februari-2017_n2017010836.html"
+    publisher: "etaamb / OpenJustice (Belgisch Staatsblad)"
+    accessed: "2026-08-26"
 ---
 
 # FOD BOSA — Federale Overheidsdienst Beleid en Ondersteuning
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Re-checked 2026-08-26, still `search-only`.** All three `bosa.belgium.be`
+> pages and the `news.belgium.be` page are genuinely bot-walled (CAPTCHA/403)
+> even with an honest User-Agent. Two sources were read directly instead:
+> Wikipedia, and — found this pass — the founding Royal Decree of 22
+> February 2017 on its official statute-book mirror, which confirms the
+> establishment date and the Directorate-General for Digital Transformation
+> directly from the primary legal text. Two of six is not a majority, so
+> this entity stays `search-only` despite the strength of what was read.
 
 ## Description
 
 BOSA is the Belgian federal public service for policy and support,
-**established on 1 March 2017**. It provides the federal government's
-supporting services — HR, ICT, communication, budget and accounting — and
-supports its users and policymakers across five domains: working in the
-public sector, **digital government and administrative simplification**,
-budget and accounting, public procurement, and strategic support.
+**established on 1 March 2017**, by **Royal Decree of 22 February 2017** —
+confirmed by reading the decree's own text directly this pass. It provides
+the federal government's supporting services — HR, ICT, communication,
+budget and accounting — and supports its users and policymakers across five
+domains: working in the public sector, **digital government and
+administrative simplification**, budget and accounting, public procurement,
+and strategic support.
 
 Its **Directorate-General for Digital Transformation (DG DT)** is the part
-within the Atlas's scope. DG DT runs the federal ICT framework contracts
-and operates [[BE-DATA-GOV-BE]], the federal open data portal, including
-its metadata integration services.
+within the Atlas's scope — confirmed as one of six directorates-general
+under Article 4 of the founding decree. DG DT runs the federal ICT
+framework contracts and operates [[BE-DATA-GOV-BE]], the federal open data
+portal, including its metadata integration services.
+
+The founding decree itself confirms BOSA was formed by merging **FOD
+Personeel en Organisatie, FOD Budget en Beheerscontrole and Fedict**, with
+**Selor and Empreva**'s functions integrated too — a fuller and slightly
+different list of predecessors than Wikipedia gives, which names all five
+but frames the merger loosely. The decree's Article 2 lists 35 functions
+across personnel, budget, digital transformation, procurement and
+health-and-safety — corroborating the "five domains" framing without using
+that exact structure.
 
 The **Dienst Administratieve Vereenvoudiging** (administrative
 simplification service) was integrated into BOSA, and **Nido** is its
-innovation lab.
+innovation lab — neither confirmed independently this pass.
 
 ## The federal counterpart to two entities elsewhere in the Atlas
 
@@ -111,6 +133,10 @@ the Communities with several public administrations, which is precisely
 
 ## Sources
 
-Listed in frontmatter. Note the first is Wikipedia — it carries the
-establishment date and the five domains, which no bosa.belgium.be page
-returned by search stated directly.
+Two of six read directly this pass — Wikipedia and, newly found, the
+founding Royal Decree of 22 February 2017 at etaamb.openjustice.be. All
+three `bosa.belgium.be` pages and the `news.belgium.be` page returned
+CAPTCHA challenges rather than content; the same wall was found on
+`ccb.belgium.be`, `data.gov.be`, `financien.belgium.be` and
+`statbel.fgov.be` across this batch. `dtservices.bosa.be` 301-redirects to
+a `bosa.belgium.be` search page, also unread.

@@ -25,7 +25,7 @@ verification: search-only
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -41,7 +41,7 @@ relationships:
   - type: maintained-by
     target: BE-BOSA
     source: fact
-    evidence: "The DCAT-AP feed is uploaded via the federal open data portal, which is managed by FOD BOSA; BOSA publishes the portal as one of its applications and documents its metadata integration services (financien.belgium.be 'Open data: DCAT-AP feed'; bosa.belgium.be 'Federale open data portaal'). NOT READ — search-only."
+    evidence: "The DCAT-AP feed is uploaded via the federal open data portal, which is managed by FOD BOSA; BOSA publishes the portal as one of its applications and documents its metadata integration services (financien.belgium.be 'Open data: DCAT-AP feed'; bosa.belgium.be 'Federale open data portaal'). Not confirmed this pass — every one of the five cited pages, including a re-attempt at the data.europa.eu factsheet as a PDF, returned either a CAPTCHA challenge or an unreadable binary stream."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -66,9 +66,15 @@ sources:
 
 # data.gov.be
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Re-checked 2026-08-26, still `search-only`.** All five cited sources
+> were attempted; none was readable. `bosa.belgium.be`, `data.gov.be` (both
+> the presentations page and the PDF asset), and `financien.belgium.be` all
+> returned CAPTCHA verification challenges rather than content, and the
+> `data.europa.eu` factsheet PDF was retrieved but its content is an
+> unreadable compressed binary stream. This is a genuine, near-total block
+> across the Belgian federal open-data web presence, not a search-only
+> shortcut — the same class of finding as bot-walled `.gouv.fr` domains in
+> the France batch.
 
 ## Description
 
@@ -125,5 +131,7 @@ portal are obviously related, and no source read states the relationship.
 
 ## Sources
 
-Listed in frontmatter, including the European Open Data Maturity factsheet
-for Belgium.
+Zero of five readable this pass, all five attempted: three CAPTCHA-walled
+pages (`bosa.belgium.be`, `data.gov.be` twice) and one bot-walled page
+(`financien.belgium.be`), plus one PDF (`data.europa.eu`) whose content
+could not be extracted as text.

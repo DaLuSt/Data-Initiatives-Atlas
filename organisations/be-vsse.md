@@ -21,11 +21,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -41,15 +41,15 @@ relationships:
   - type: governed-by
     target: BE-GDPR-WET
     source: fact
-    evidence: "The law of 30 July 2018 on the protection of natural persons with regard to the processing of personal data contains a subtitle on the protection of natural persons with regard to the processing of personal data by the intelligence and security services; where a request or complaint concerning processing covered by Title 3 reaches the supervisory authority, that authority first turns to the Vast Comité I to carry out the necessary verifications (etaamb.openjustice.be 'Wet van 30/07/2018'; jurion.fanc.fgov.be 'GDPR-wet, Ondertitel 1 — verwerking van persoonsgegevens door de inlichtingen- en veiligheidsdiensten'; gegevensbeschermingsautoriteit.be). NOT READ — search-only."
+    evidence: "The law of 30 July 2018 on the protection of natural persons with regard to the processing of personal data contains a subtitle on the protection of natural persons with regard to the processing of personal data by the intelligence and security services; where a request or complaint concerning processing covered by Title 3 reaches the supervisory authority, that authority first turns to the Vast Comité I to carry out the necessary verifications (etaamb.openjustice.be 'Wet van 30/07/2018'; jurion.fanc.fgov.be 'GDPR-wet, Ondertitel 1 — verwerking van persoonsgegevens door de inlichtingen- en veiligheidsdiensten'; gegevensbeschermingsautoriteit.be). Not independently re-confirmed this pass — the two sources read (vsse.be, etaamb wet-van-30-november-1998) are about the 1998 organic act, not the 2018 data protection act."
     confidence: medium
     valid_from: 2018-09-05
     valid_until: null
   - type: governed-by
     target: BE-WIV-1998
     source: fact
-    evidence: "The law of 30 November 1998 contains the rules governing the intelligence and security services in Belgium and prescribes the statutory duties for both the Veiligheid van de Staat (VSSE) and the Algemene Dienst Inlichting en Veiligheid (ADIV) (vsse.be 'Het wettelijk kader'; etaamb.openjustice.be 'Wet van 30/11/1998 houdende regeling van de inlichtingen- en veiligheidsdienst'; comiteri.be). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading vsse.be and the act's own text at etaamb.openjustice.be directly (2026-08-26). VSSE's own legal-framework page confirms the 1998 law defines its task of gathering information about threats to state security; the act's own Article 2, §1 names the VSSE, under the Minister of Justice, as one of the 'twee inlichtingen- en veiligheidsdiensten van het Rijk' alongside the ADIV."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -57,9 +57,11 @@ sources:
   - title: "Het wettelijk kader"
     url: "https://vsse.be/nl/het-wettelijk-kader"
     publisher: "Veiligheid van de Staat (VSSE)"
+    accessed: "2026-08-26"
   - title: "Wet van 30/11/1998 houdende regeling van de inlichtingen- en veiligheidsdienst"
     url: "https://etaamb.openjustice.be/nl/wet-van-30-november-1998_n1998007272.html"
     publisher: "eTaamb / OpenJustice (Belgisch Staatsblad)"
+    accessed: "2026-08-26"
   - title: "Dienst voor de Veiligheid van de Staat"
     url: "https://nl.wikipedia.org/wiki/Dienst_voor_de_Veiligheid_van_de_Staat"
     publisher: "Wikipedia"
@@ -67,16 +69,20 @@ sources:
 
 # Veiligheid van de Staat / Sûreté de l'État (VSSE)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-26.** Two of three sources were read directly —
+> VSSE's own legal-framework page and the organic act's own text — both
+> confirming the `governed-by` [[BE-WIV-1998]] edge directly. The
+> `governed-by` [[BE-GDPR-WET]] edge was not independently re-confirmed
+> this pass. `verification: primary-source`.
 
 ## Description
 
 The VSSE is Belgium's **only civilian** intelligence service — the sources
 put it exactly that way — and is a department of the Federal Public Service
-Justice, under the authority of the Minister of Justice. Its military
-counterpart is [[BE-ADIV]], under the Minister of Defence.
+Justice, under the authority of the Minister of Justice. Confirmed by
+reading the 1998 organic act's own Article 2, §1 directly: it names the
+VSSE, under the Minister of Justice. Its military counterpart is
+[[BE-ADIV]], under the Minister of Defence.
 
 ## A service inside a ministry, not beside one
 
@@ -138,4 +144,5 @@ cleanly different instruments **and both are modelled**.
 
 ## Sources
 
-Listed in frontmatter.
+Two of three read directly this pass — VSSE's own legal-framework page and
+the 1998 organic act's own text. Wikipedia was not re-fetched.

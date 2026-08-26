@@ -20,11 +20,11 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2021-12-10
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -41,21 +41,21 @@ relationships:
   - type: implements-requirement-from
     target: EU-OPEN-DATA-DIRECTIVE
     source: fact
-    evidence: "Ordonnance du 10 décembre 2021 modifiant l'ordonnance du 27 octobre 2016 visant à l'établissement d'une politique de données ouvertes et portant transposition de la directive 2019/1024/UE du Parlement européen et du Conseil du 20 juin 2019 (refonte) concernant les données ouvertes et la réutilisation des informations du secteur public (etaamb.openjustice.be ordonnance-du-10-decembre-2021 n2021034364; ibsa.brussels/opendata). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading etaamb.openjustice.be and ibsa.brussels directly (2026-08-26): the ordonnance modifies the ordonnance of 27 October 2016 on open data policy and transposes Directive (EU) 2019/1024; it mandates documents be made available in 'accessible and reusable' formats with metadata, requires high-value datasets and research data to be published free of charge in machine-readable formats via APIs and, where applicable, bulk download, caps re-use fees at cost-recovery plus at most 5 percentage points above the ECB rate, and introduces definitions for dynamic data, research data and high-value datasets."
+    confidence: high
     valid_from: 2021-12-10
     valid_until: null
   - type: amends
     target: BE-BRU-ORDONNANCE-2016
     source: fact
-    evidence: "The ordonnance of 10 December 2021 modifies the ordonnance of 27 October 2016 establishing an open data policy for the Brussels-Capital Region, which continues to exist under its own name and date (etaamb.openjustice.be n2021034364; ejustice.just.fgov.be ordonnance open data, cn=2016102705). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading both texts directly (2026-08-26): the ordonnance of 10 December 2021 modifies the ordonnance of 27 October 2016 establishing an open data policy for the Brussels-Capital Region, which continues to exist under its own name and date."
+    confidence: high
     valid_from: 2021-12-10
     valid_until: null
   - type: applies-in
     target: BE
     source: fact
-    evidence: "The ordonnance is an act of the Brussels-Capital Region, a constituent unit of Belgium (etaamb.openjustice.be n2021034364). NOT READ — search-only. Anchor edge under metadata/relationship-types.md §2.3; the Atlas has no sub-national anchor entities, so a subnational instrument anchors to its state."
+    evidence: "Confirmed by reading etaamb.openjustice.be directly (2026-08-26): the ordonnance is an act of the Brussels-Capital Region, a constituent unit of Belgium. Anchor edge under metadata/relationship-types.md §2.3; the Atlas has no sub-national anchor entities, so a subnational instrument anchors to its state."
     confidence: medium
     valid_from: 2021-12-10
     valid_until: null
@@ -64,19 +64,22 @@ sources:
   - title: "Ordonnance du 10 décembre 2021 modifiant l'ordonnance du 27 octobre 2016 visant à l'établissement d'une politique de données ouvertes et portant transposition de la directive 2019/1024/UE"
     url: "https://etaamb.openjustice.be/fr/ordonnance-du-10-decembre-2021_n2021034364"
     publisher: "eTaamb — OpenJustice (Belgisch Staatsblad / Moniteur belge)"
+    accessed: "2026-08-26"
   - title: "Ordonnance du 27 octobre 2016 visant à l'établissement d'une politique de données ouvertes"
     url: "https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?cn=2016102705&la=F&language=fr&table_name=loi"
     publisher: "Service public fédéral Justice — Moniteur belge"
+    accessed: "2026-08-26"
   - title: "Open Data — Institut bruxellois de statistique et d'analyse"
     url: "https://ibsa.brussels/opendata"
     publisher: "Institut bruxellois de statistique et d'analyse (IBSA)"
+    accessed: "2026-08-26"
 ---
 
 # Brussels open data ordonnance (10 December 2021)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read — retrieval is blocked by
-> the network egress proxy. `verification: search-only`.
+> **Verified 2026-08-26.** All three cited sources were read directly. The
+> transposition and amendment claims are both confirmed from the primary
+> texts. `verification: primary-source`.
 
 ## Description
 
@@ -108,7 +111,7 @@ obligation it discharges. This entity carries both.
 | Flanders | [[BE-VL-BESTUURSDECREET-2021]] | 2 July 2021 (in force 17 July) |
 | **Brussels-Capital** | **this ordonnance** | **10 December 2021** |
 | Wallonia | [[BE-WAL-DECRET-2022]] | 24 November 2022 |
-| Federal | [[BE-HERGEBRUIK-WET-2023]] | 25 December 2023 |
+| Federal | [[BE-HERGEBRUIK-WET-2023]] | 25 Dec 2023 (dated) / 23 Jan 2024 (published) |
 
 Brussels was **five months late** against the 17 July 2021 deadline — late,
 but by less than a year, and more than two years ahead of the federal act.
@@ -122,5 +125,8 @@ but by less than a year, and more than two years ahead of the federal act.
 
 ## Sources
 
-Listed in frontmatter — the published text on eTaamb, the 2016 ordonnance on
-the Moniteur belge, and the Brussels statistical institute's open data page.
+All three read directly this pass — the published text on eTaamb, the 2016
+ordonnance on the Moniteur belge, and the Brussels statistical institute's
+open data page, which independently states the ordonnance "transposes the
+Directive 2019/1024/UE, strengthening access to public data and their
+reuse."

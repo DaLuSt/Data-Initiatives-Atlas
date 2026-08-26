@@ -23,7 +23,7 @@ verification: search-only
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -36,7 +36,7 @@ relationships:
   - type: aligned-with
     target: BE-DCAT-AP-BE
     source: fact
-    evidence: "Statbel publishes a DCAT catalogue for its open data (statbel.fgov.be 'DCAT catalogue for Statbel's open data'). NOT READ — search-only. Recorded as aligned-with rather than based-on: the sources establish that Statbel publishes a DCAT catalogue, not that it conforms to the Belgian federal DCAT profile specifically."
+    evidence: "Statbel publishes a DCAT catalogue for its open data (statbel.fgov.be 'DCAT catalogue for Statbel's open data'). Not re-confirmed this pass — statbel.fgov.be returned a CAPTCHA challenge rather than content. Recorded as aligned-with rather than based-on: the sources establish that Statbel publishes a DCAT catalogue, not that it conforms to the Belgian federal DCAT profile specifically."
     confidence: low
     valid_from: null
     valid_until: null
@@ -44,7 +44,7 @@ relationships:
   - type: part-of
     target: EU-ESS
     source: fact
-    evidence: "The European Statistical System is the partnership between the Community statistical authority, which is the Commission (Eurostat), and the national statistical institutes and other national authorities responsible in each member state for the development, production and dissemination of European statistics; the ESS Committee is composed of NSI representatives and chaired by Eurostat (ec.europa.eu/eurostat/web/european-statistical-system; EUR-Lex CELEX 32009R0223; cso.ie European Statistical System page). Statbel is the Belgian NSI. NOT READ — search-only."
+    evidence: "The European Statistical System is the partnership between the Community statistical authority, which is the Commission (Eurostat), and the national statistical institutes and other national authorities responsible in each member state for the development, production and dissemination of European statistics; the ESS Committee is composed of NSI representatives and chaired by Eurostat (ec.europa.eu/eurostat/web/european-statistical-system; EUR-Lex CELEX 32009R0223; cso.ie European Statistical System page). Statbel is the Belgian NSI. Corroborated this pass by reading Wikipedia's Statistics Belgium page directly (2026-08-26), which independently states Statbel 'serves as Belgium's official representative to Eurostat and the OECD' — this relationship was added in the UN batch (2026-08-16) correcting this entity's own earlier body text, which wrongly claimed no such link existed; see below."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -61,57 +61,76 @@ sources:
   - title: "Statistics Belgium"
     url: "https://en.wikipedia.org/wiki/Statistics_Belgium"
     publisher: "Wikipedia"
+    accessed: "2026-08-26"
 ---
 
 # Statbel (Algemene Directie Statistiek)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Re-checked 2026-08-26, still `search-only`.** `statbel.fgov.be` (both
+> cited pages) and `news.belgium.be` all returned CAPTCHA/403 challenges
+> rather than content. Only Wikipedia was read directly, which corroborates
+> the already-recorded `part-of` [[EU-ESS]] edge with a new detail. One of
+> four is not a majority, so this entity stays `search-only` despite the
+> correction made to its own body text below.
 
 ## Description
 
 Statbel is Belgium's national statistical office — the Algemene Directie
-Statistiek within the FOD Economie.
+Statistiek within the FOD Economie. Confirmed by reading Wikipedia's
+Statistics Belgium page directly: it is part of the "Federal Public Service
+Economy, SMEs, Self-Employed and Energy," and "serves as Belgium's official
+representative to Eurostat and the OECD" — a detail not previously recorded
+in this entity's prose (the frontmatter relationship already existed; see
+the correction below).
 
 Its open data portal opened on **22 October 2015**, carrying datasets on
 population, income, land use and other subjects in freely reusable formats
 under a **Creative Commons Attribution 4.0** licence. It maintains a
-**DCAT catalogue** of that open data.
+**DCAT catalogue** of that open data. Neither claim was re-confirmed this
+pass — both `statbel.fgov.be` pages returned CAPTCHA challenges.
 
 `coverage: low`: unlike [[DE-DESTATIS]] and [[NL-CBS]], no statutory basis
 for Statbel was established — no Belgian equivalent of [[DE-BSTATG]] or
 [[NL-WET-CBS]] was found by search, so none is recorded and no
 `governed-by` relationship is asserted.
 
-## The statistics cluster, now with a third member
+## A stale claim in this entity's own prose, corrected
 
-The Atlas has recorded the same refused link three times:
+This section previously said, of the statistics cluster: *"no source read
+connects Statbel to Eurostat, to the European Statistical System or to the
+UN statistical system either. Three national statistical offices now sit
+in the Atlas and none of them connects upward."*
 
-| Candidate | Refused because |
-|---|---|
-| [[UN-UNSD]] → [[EU-EUROSTAT]] | no source read connects the levels |
-| [[UN-FPOS]] → [[NL-WET-CBS]] | no source connects the Dutch act to the Fundamental Principles |
-| [[DE-DESTATIS]] → [[EU-EUROSTAT]] | Destatis's remit names "the European Union", not Eurostat |
-| [[DE-BSTATG]] → [[UN-FPOS]] | the act's principles restate the FPOS without citing them |
+That was already wrong when re-verification began this pass: the
+frontmatter has carried `part-of` → [[EU-ESS]] since the UN-connection
+batch of **2026-08-16**, ten days before this prose was still claiming the
+opposite. `discovery/unresolved.md` records the correction under "Belgium
+batch — third country," flagged with a warning that the claim "was wrong
+when written and was repeated for three batches." This entity's own body
+text was the place that repetition survived until now — a second instance
+of frontmatter and body drifting apart, distinct from but the same class of
+error as the one found and fixed on [[BE-APD]] this pass.
 
-Statbel adds nothing to this list, and that is worth saying explicitly:
-**no source read connects Statbel to Eurostat, to the European Statistical
-System or to the UN statistical system either.** Three national statistical
-offices now sit in the Atlas and none of them connects upward.
-
-This is the single most persistent structural hole in the graph. It has
-survived three countries, and each country has made it more conspicuous
-without making it closable. It is not a hard research problem — it is a
-page-reading problem, and page reading is what this environment cannot do.
+The corrected picture: two of three national statistical offices in the
+Atlas connect upward — [[NL-CBS]] and now **Statbel**, both `part-of`
+[[EU-ESS]] — and [[DE-DESTATIS]] does not, because its own sources name
+only "the European Union," not Eurostat by name. The **UN** half of the
+original claim still stands: no source read connects Statbel, or any
+national statistical office in the Atlas, to the UN statistical system.
 
 ## Relationships
 
+- `part-of` [[EU-ESS]] — recorded since the UN batch; corroborated this
+  pass by Wikipedia's "official representative to Eurostat" statement.
 - `aligned-with` [[BE-DCAT-AP-BE]] — at `confidence: low`. What is sourced
   is that Statbel publishes *a* DCAT catalogue; that it conforms to the
   Belgian federal profile is the obvious reading and is not stated. The
   weaker relationship type and the low confidence carry that distinction.
+  Not re-confirmed this pass (statbel.fgov.be bot-walled).
 
 ## Sources
 
-Listed in frontmatter.
+One of four read directly this pass — Wikipedia. Both `statbel.fgov.be`
+pages and `news.belgium.be` returned CAPTCHA/403 challenges, the same
+pattern found across `bosa.belgium.be`, `ccb.belgium.be`, `data.gov.be` and
+`financien.belgium.be` in this batch.
