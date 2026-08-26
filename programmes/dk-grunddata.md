@@ -21,11 +21,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-20"
+last_verified: "2026-08-25"
 previous_version: null
 successor: null
 
@@ -41,14 +41,14 @@ relationships:
   - type: part-of
     target: DK
     source: fact
-    evidence: "The Basic Data Programme is a public body of DK; this anchor edge records national scope under metadata/relationship-types.md §2.3 and asserts no more than that. NOT READ — search-only."
+    evidence: "The Basic Data Programme is a public body of DK; this anchor edge records national scope under metadata/relationship-types.md §2.3 and asserts no more than that."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: related-to
     target: NL-BASISREGISTRATIES
     source: fact
-    evidence: "Both are national programmes that designate a defined set of public registers as authoritative base data and standardise them so they can be combined; the Danish programme names the Civil Registration System, the Central Business Register and the Building and Housing Register among its registrations, and distributes them through a shared distributor (grunddata.dk; datafordeler.dk 'Grunddata'). NOT READ - search-only. Recorded as a comparison, not a dependency - neither programme derives from the other."
+    evidence: "Confirmed by reading datafordeler.dk's own 'Grunddata' page directly (2026-08-25): it lists the registers under Grunddata by name, including 'Det Centrale Personregister (CPR)' (the Civil Registration System), 'Det Centrale Virksomhedsregister (CVR)' (the Central Business Register) and 'Bygnings- og Boligregistret (BBR)' (the Building and Housing Register), matching this entity's claim exactly. A European Commission ISA2 conference document, also read directly, adds a specific origin this entity did not previously carry: 'The basic data program was established in 2012 as part of the e-government strategy agreed between the Danish Government, Local Government Denmark and Danish Regions.' `grunddata.dk` no longer resolves (checked https and http) — a dead domain, not a bot-wall, confirmed again this pass. Recorded as a comparison, not a dependency - neither programme derives from the other."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -57,19 +57,25 @@ sources:
   - title: "Grunddata"
     url: "https://datafordeler.dk/vejledning/grunddata/"
     publisher: "Datafordeler / Klimadatastyrelsen"
-  - title: "Grunddata - English"
-    url: "http://grunddata.dk/english/"
-    publisher: "Grunddata.dk"
+    accessed: "2026-08-25"
   - title: "Good basic data for everyone - a driver for growth and efficiency"
     url: "https://ec.europa.eu/isa2/sites/isa/files/isa-2-conference/3-berneke-background-info.pdf"
     publisher: "European Commission / ISA2"
+    accessed: "2026-08-25"
+  - title: "Grunddata - English"
+    url: "http://grunddata.dk/english/"
+    publisher: "Grunddata.dk"
 ---
 
 # Grunddataprogrammet
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-25.** `datafordeler.dk` and the European
+> Commission's ISA2 document were both read directly. The programme's
+> own register list matches this entity's claims exactly, and the ISA2
+> document adds a specific origin — a 2012 e-government strategy agreed
+> between the Danish state, Local Government Denmark and the Danish
+> regions — this entity did not previously carry. `grunddata.dk`
+> remains dead (no DNS resolution).
 
 ## Description
 
@@ -96,6 +102,17 @@ distributor**.
 The `related-to` edge is deliberately weak. Neither programme derives
 from the other, and asserting anything stronger would invent a lineage.
 
+## A 2012 origin, confirmed
+
+The European Commission's own ISA2 conference document, read directly
+this pass, dates the programme precisely: "The basic data program was
+established in 2012 as part of the e-government strategy agreed
+between the Danish Government, Local Government Denmark and Danish
+Regions." This is the first specific establishment date this entity
+has carried.
+
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter. `datafordeler.dk` and the ISA2 document were
+read directly this pass; `grunddata.dk` remains dead — no DNS
+resolution over either https or http, confirmed again this pass.
