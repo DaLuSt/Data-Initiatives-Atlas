@@ -23,7 +23,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-20"
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -65,15 +65,18 @@ sources:
 
 # Austria
 
-> **Verified 2026-08-20.** Every cited source was read and confirmed to
-> support what this entity says, including its accession date.
-> `verification: primary-source`.
+> **Verified 2026-08-26.** EU-membership sourcing unchanged since
+> 2026-08-20. This pass fixed a stale claim below: the anchor said no
+> Austria entity was modelled, which stopped being true once
+> [[AT-BRZ]], [[AT-DATA-GV-AT]], [[AT-DSB]], [[AT-ID-AUSTRIA]] and
+> [[AT-STATISTIK]] were added, none of which had updated the anchor.
 
 ## Description
 
-Austria (ISO 3166-1 alpha-2: **`AT`**) is a **base country anchor**,
-created so that entities scoped to it have somewhere to attach. No Austria
-entity is modelled yet.
+Austria (ISO 3166-1 alpha-2: **`AT`**) is a **base country anchor**. It
+now anchors five entities: a federal IT provider, a national open data
+portal, a national digital identity, a data protection authority and a
+statistical office.
 
 ## Position in the European frameworks
 
@@ -101,10 +104,10 @@ tier the `level` vocabulary cannot represent.
 
 ## What this anchor does not yet carry
 
-Nothing beyond membership. There is no national data protection authority,
-no open data portal, no statistics office, no interoperability framework
-and no legislation attached to this entity. Each of those exists in
-reality; none has been researched.
+No interoperability framework and no legislation attached to this
+entity — not even the statutes behind [[AT-ID-AUSTRIA]], which are
+named in that entity's own body text but have no Atlas entity of their
+own. Each of those exists in reality; none has been researched.
 
 No EU instrument in the Atlas carries `applies-in` → [[AT]] yet.
 That is a gap rather than a finding: as a member state, every

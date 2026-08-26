@@ -1,21 +1,21 @@
 # Current Batch
 
-**Status:** No batch in progress. **The tenth verification-gap push**
-completed on 2026-08-26 — the entire France cluster (22 entities), the
-last country whose whole cluster was still untouched. Full detail moved
-to `progress/completed.md`; summary below. `discovery/reverification-allowlist.md`
-ranks the next re-verification targets, and `discovery/research-queue.md`
-carries the rest of the research backlog.
+**Status:** No batch in progress. **The eleventh verification-gap push**
+completed on 2026-08-26 — closing Austria's tail, the smallest
+remaining one. Full detail moved to `progress/completed.md`; summary
+below. `discovery/reverification-allowlist.md` ranks the next
+re-verification targets, and `discovery/research-queue.md` carries the
+rest of the research backlog.
 
 **Tail pushes, not fresh clusters.** Countries whose anchor and most
 entities are `primary-source` can still carry a handful of
 `verification: search-only` stragglers — entities added or left behind
 after the country's main re-verification pass. [[DK]] (4) and [[SE]]
 (3) were closed by the eighth and ninth pushes; [[FR]]'s entire cluster
-(22 entities, one straggler — [[FR-DGSI]]) was closed by the tenth.
-`NL` (67), `DE` (27), `BE` (24), `ES` (22), `PL` (18), `PT` (8), `EE`
-(7), `CZ` (7), `FI` (6) and `AT` (3) still carry some tail entities.
-No country now has an entirely untouched cluster.
+(22 entities, one straggler — [[FR-DGSI]]) was closed by the tenth;
+[[AT]] (3) was closed by the eleventh. `NL` (67), `DE` (27), `BE` (24),
+`ES` (22), `PL` (18), `PT` (8), `EE` (7), `CZ` (7) and `FI` (6) still
+carry tail entities — `FI` (6) is now the smallest remaining.
 
 **Corrected/added guidance on what is actually blocked:** `efta.int` is
 **not** bot-walled — it returns a 403 to a browser-spoofing User-Agent
@@ -69,6 +69,52 @@ superseded respectively by `guides.data.gouv.fr` and pages under
 returns HTTP 200 but the body is actually an HTML page carrying an
 F5/TSPD JavaScript bot-defense challenge, not a real PDF — a genuine
 block, not a parsing failure.
+
+## The eleventh verification-gap push — 2026-08-26
+
+Closed Austria's tail: [[AT-BRZ]], [[AT-DATA-GV-AT]] and
+[[AT-ID-AUSTRIA]], the three entities still `verification: search-only`
+after [[AT-DSB]] and [[AT-STATISTIK]] had already been re-verified in
+earlier passes. All three now carry `verification: primary-source`.
+
+**A stale country anchor, fixed.** [[AT]]'s own body text still said no
+Austria entity was modelled — the same bug found on [[IT]] in the
+seventh push — a claim that stopped being true once five entities were
+added and updated the anchor. Rewritten to describe the five it now
+anchors.
+
+**`data.gv.at` is a genuine JavaScript single-page application, not a
+bot-wall.** Its homepage, robots.txt, and every path tried return the
+same empty app shell (a `<div id="app">` with a loading spinner) —
+including on paths that return `404`, the same shell comes back — with
+no static content reachable at all, matching the `riigiteataja.ee`
+pattern from the third research-queue pickup rather than a bot-defense
+block. BRZ's own Open Data product page supplied everything needed
+instead, including an updated dataset count (over 27,000, up from an
+unsourced 20,700 this entity had carried since creation) and the 2014
+launch date.
+
+**A ministry that no longer exists, and where its portfolio went.**
+`bmdw.gv.at` — the Bundesministerium für Digitalisierung und
+Wirtschaftsstandort page [[AT-ID-AUSTRIA]] partly relied on — no longer
+resolves at all, checked by direct DNS lookup. oesterreich.gv.at, the
+digital-government platform ID Austria unlocks, states in its own
+imprint that it is now published by the **Bundeskanzleramt** (Federal
+Chancellery) directly, with BRZ named as technical operator. No source
+read states the reorganisation explicitly, so it is reported as an
+observation rather than asserted as fact. The specific "four statutes
+had to move" claim this entity carried, sourced only to the now-dead
+ministry page, was not found on any replacement source and is kept as
+an explicitly unconfirmed carry-forward rather than dropped or
+re-asserted.
+
+**BRZ's own founding history, confirmed in its own words.** BRZ's
+organisation page states directly that in 1997 the Finance Ministry's
+IT departments were spun off into Bundesrechenzentrum GmbH, a company
+still 100% state-owned and represented by the Ministry of Finance. No
+exact founding day is given, so `start_date` was left unset rather than
+guessed — the same discipline applied to `data.gv.at`'s 2014 launch
+year.
 
 ## The tenth verification-gap push — 2026-08-26
 
@@ -134,32 +180,14 @@ government statistics") but does not name Eurostat or the ESS — the
 same honest call made on [[LU-STATEC]] and [[DK-DST]] in earlier
 passes.
 
-## The eighth verification-gap push — 2026-08-25
-
-Closed Denmark's tail: [[DK-GRUNDDATA]], [[DK-DATATILSYNET]],
-[[DK-SUNDHEDSDATASTYRELSEN]] and [[DK-DST]], the four Danish entities
-still `verification: search-only` after Denmark's country anchor and
-other entities had already been re-verified across earlier pushes. All
-four now carry `verification: primary-source`.
-
-**A 2012 origin for [[DK-GRUNDDATA]].** A European Commission ISA2
-conference document, read directly, dates the Basic Data Programme
-precisely: established in 2012 as part of an e-government strategy
-agreed between the Danish state, Local Government Denmark and the
-Danish regions — a fact this entity did not previously carry.
-`grunddata.dk` remains dead, reconfirmed again this pass.
-
-**[[DK-DST]]'s legal basis, named but not read.** Statistics Denmark's
-own "role and mandate" page states directly it is "responsible for
-official statistics in Denmark, as established by the Act on
-Statistics Denmark" and has operated since 1850. The Act's own citation
-was not read, so no legislation entity was created from the name
-alone. Its [[EU-ESS]] membership, like [[LU-STATEC]]'s in an earlier
-pass, stays on the composition-rule tier — no page read this pass has
-Statistics Denmark describe ESS membership in its own words.
-
 ## Earlier pushes
 
+- **Eighth push** (2026-08-25): closed Denmark's tail —
+  [[DK-GRUNDDATA]], [[DK-DATATILSYNET]], [[DK-SUNDHEDSDATASTYRELSEN]]
+  and [[DK-DST]]. Dated the Basic Data Programme to 2012 via a European
+  Commission ISA2 document; found [[DK-DST]]'s legal basis named but not
+  read; `grunddata.dk` reconfirmed dead. See "The eighth
+  verification-gap push".
 - **Seventh verification-gap push** (2026-08-25): the entire Italy
   cluster (6 entities). Fixed a stale country anchor still claiming
   Italy had "no national entities"; closed [[IT-DATI-GOV-IT]]'s

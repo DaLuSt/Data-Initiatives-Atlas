@@ -1,5 +1,79 @@
 # Completed Batches
 
+## The eleventh verification-gap push
+
+**Date:** 2026-08-26
+
+A tail push, the smallest yet: Austria's remaining three
+`verification: search-only` entities — [[AT-BRZ]], [[AT-DATA-GV-AT]]
+and [[AT-ID-AUSTRIA]] — closed alongside [[AT-DSB]] and
+[[AT-STATISTIK]], both already `primary-source` from earlier passes.
+All three now carry `verification: primary-source`.
+
+### A stale country anchor, fixed
+
+[[AT]]'s own body text still said "no Austria entity is modelled yet"
+and listed data protection, open data, statistics and interoperability
+as all unresearched — a claim that stopped being true once [[AT-BRZ]],
+[[AT-DATA-GV-AT]], [[AT-DSB]], [[AT-ID-AUSTRIA]] and [[AT-STATISTIK]]
+were all added, none of which had updated the anchor. This is the same
+bug shape found on [[IT]] in the seventh push: entities get added and
+re-verified, but the anchor's own prose is never revisited unless
+something forces the question. Rewritten to describe the five entities
+it now anchors.
+
+### `data.gv.at`: a JavaScript shell, not a bot-wall
+
+Every path tried against `www.data.gv.at` — the homepage, `robots.txt`,
+`sitemap.xml`, a guessed CKAN API path, a guessed about page — returned
+the identical 5,122-byte HTML shell (`<div id="app">` with a loading
+spinner and a bundled JS entry point), including on paths that returned
+a `404` status. That rules out a bot-defense wall, which would vary its
+response, and confirms instead a genuine client-side single-page
+application with zero server-rendered content — the same shape found on
+`riigiteataja.ee` in the third research-queue pickup. BRZ's own Open
+Data product page (`brz.gv.at/.../open-data.html`), read directly,
+supplied everything the entity needed instead: the `maintained-by` edge
+in BRZ's own words, a 2014 launch date, and an updated dataset count —
+**over 27,000** datasets, current as of this reading, against the
+20,700 this entity had carried since creation without any source ever
+actually stating that number (it traced to a bare, figureless mention
+on Wikipedia).
+
+### A ministry that no longer exists
+
+[[AT-ID-AUSTRIA]]'s citation of `bmdw.gv.at` — the Bundesministerium
+für Digitalisierung und Wirtschaftsstandort — turned out to be a dead
+domain, confirmed by direct DNS lookup (`socket.gethostbyname` raised
+`[Errno -2] Name or service not known`). Reading oesterreich.gv.at, the
+digital-government platform ID Austria unlocks, found its own imprint
+states plainly: "Herausgeber: Bundeskanzleramt Österreich" (publisher:
+Federal Chancellery of Austria), with "Technische Betreuung:
+Bundesrechenzentrum GmbH" naming BRZ as technical operator in the same
+breath — independently confirming the `maintained-by` edge this entity
+already carried. Read together, Austria's digital-policy portfolio
+looks to have moved from a dedicated digitalisation ministry to the
+Chancellery itself, but no source read states that transition
+explicitly, so it is recorded as an observation rather than asserted as
+fact. The entity's specific "four statutes had to move" claim — sourced
+only to the now-dead ministry page — was not found on any replacement
+source read this pass, and is kept as an explicitly unconfirmed
+carry-forward rather than dropped or silently re-asserted.
+
+### BRZ's own history, in its own words
+
+BRZ's organisation page, read directly, states that in 1997 the Finance
+Ministry's IT departments were spun off into Bundesrechenzentrum GmbH,
+which has operated ever since as a company **wholly owned by the
+Republic of Austria**, represented by the Ministry of Finance, run on
+commercial-market principles in competition with private IT firms —
+independently corroborating (with more authority) what Wikipedia's BRZ
+article already said. No exact founding day is available from either
+source, so `start_date` was left unset on both [[AT-BRZ]] and
+[[AT-DATA-GV-AT]] rather than filled with a guessed day-of-month —
+the same discipline the session has applied to every partial date all
+along.
+
 ## The tenth verification-gap push
 
 **Date:** 2026-08-26
