@@ -19,11 +19,11 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
-start_date: 2019-01-01
+start_date: null
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -38,53 +38,74 @@ relationships:
   - type: part-of
     target: FI
     source: fact
-    evidence: "Findata is the social and health data permit authority in Finland, established in 2019 and based on the Act on the Secondary Use of Health and Social Data; it grants data permits for the secondary use of health and social data when data is needed from multiple public data controllers, from the private sector, from Findata's ready-made datasets, or from the Kanta Services (findata.fi; stm.fi 'Secondary use of health and social data'). NOT READ — search-only. Anchor edge under metadata/relationship-types.md §2.3: a permit authority established by statute is part of the state."
+    evidence: "Confirmed by reading findata.fi's own pages directly (2026-08-26): its legislation page states 'Findata is the social and health data permit authority in Finland. It was established in 2019, and its operations are based on the Act on the Secondary Use of Health and Social Data.' Its own launch announcement, dated 30 December 2019, states 'Findata will start operating in early 2020' — so legal establishment (2019, when the Act took effect) and the start of actual operations (early 2020) are two distinct dates, neither of them 1 January 2019 as this entity previously guessed. Anchor edge under metadata/relationship-types.md §2.3: a permit authority established by statute is part of the state."
     confidence: medium
-    valid_from: 2019-01-01
+    valid_from: null
     valid_until: null
   - type: governed-by
     target: FI-SECONDARY-USE-ACT
     source: fact
-    evidence: "Findata is the social and health data permit authority in Finland, established in 2019 and based on the Act on the Secondary Use of Health and Social Data (552/2019) (findata.fi/en/services-and-instructions/legislation/; findata.fi 'A new authority to start operation'). NOT READ — search-only."
+    evidence: "Confirmed by reading findata.fi's own legislation page directly (2026-08-26): 'Findata is based on the Act on the Secondary Use of Health and Social Data (552/2019) which entered into force in May 2019.' The same page names a 2025 amendment to that Act — see [[FI-SECONDARY-USE-ACT]] — that introduced a distributed permit model alongside Findata's centralised one."
     confidence: medium
-    valid_from: 2019-01-01
+    valid_from: null
     valid_until: null
 
 sources:
   - title: "Finnish Social and Health Data Permit Authority Findata"
     url: "https://findata.fi/en/"
     publisher: "Findata"
+    accessed: "2026-08-26"
   - title: "Legislation — Findata"
     url: "https://findata.fi/en/services-and-instructions/legislation/"
     publisher: "Findata"
+    accessed: "2026-08-26"
   - title: "A new authority to start operation: faster utilisation of social welfare and health care data resources"
     url: "https://findata.fi/en/news/a-new-authority-to-start-operation-faster-utilisation-of-social-welfare-and-health-care-data-resources/"
     publisher: "Findata"
+    accessed: "2026-08-26"
   - title: "Secondary use of health and social data"
     url: "https://stm.fi/en/secondary-use-of-health-and-social-data"
     publisher: "Ministry of Social Affairs and Health (Finland)"
+    accessed: "2026-08-26"
 ---
 
 # Findata
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read — retrieval is blocked by
-> the network egress proxy. `verification: search-only`.
+> **Verified 2026-08-26.** All four cited pages were read directly.
+> Findata's own launch announcement corrects this entity's founding
+> date: it was legally established in 2019 but "will start operating in
+> early 2020" — a genuine two-step founding this entity previously
+> flattened into one fabricated date (2019-01-01). Its legislation page
+> also surfaced a 2025 amendment to its governing Act — see
+> [[FI-SECONDARY-USE-ACT]] — that introduces a distributed permit model
+> this entity's design-rationale section below no longer states without
+> qualification.
 
 ## Description
 
-Finland's **social and health data permit authority**, established in 2019
-under [[FI-SECONDARY-USE-ACT]]. It grants **data permits** for secondary use
-when the data is needed:
+Finland's **social and health data permit authority**, legally
+established in 2019 under [[FI-SECONDARY-USE-ACT]] and, per Findata's
+own 30 December 2019 announcement, operational from **early 2020**. It
+grants **data permits** for secondary use when the data is needed:
 
 - from **multiple** public data controllers;
 - from the **private sector**;
 - from Findata's own **ready-made datasets**;
 - from the **Kanta Services**.
 
-The first of those conditions is the design: a single controller can license
-its own data, and the moment a request crosses controllers it becomes
-Findata's.
+## A 2025 amendment loosened the "crosses controllers" rule
+
+Confirmed by reading findata.fi's own legislation page directly: before
+a 2025 amendment (Act 1159/2025, effective 1 May 2026 for its
+non-clinical-trial provisions), the moment an application needed data
+from more than one controller, "the processing of data permits was
+largely centralised under Findata." Since the amendment, applicants may
+instead "apply for permits separately from each data controller," who
+then "agree among themselves who is responsible for compiling the
+dataset" — Findata or one of the other controllers. Findata's
+centralised route still exists and is still the entity's core design;
+what changed is that crossing controllers no longer makes Findata the
+only path.
 
 ## A permit authority is a different answer from a platform
 
@@ -110,5 +131,6 @@ in Findata's own description of its remit and have no entity. So does
 
 ## Sources
 
-Listed in frontmatter — three Findata pages including its legislation page,
-and the Ministry of Social Affairs and Health's own account of the regime.
+Listed in frontmatter, all four read directly this pass — three
+Findata pages including its legislation page, and the Ministry of
+Social Affairs and Health's own account of the regime.
