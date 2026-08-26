@@ -87,6 +87,108 @@ not established by anything read. No [[EU-ETSI]] relationship is
 asserted from either entity — recorded as an open question rather than
 resolved by inference.
 
+## The twelfth verification-gap push
+
+**Date:** 2026-08-26
+
+Closed Finland's remaining six `verification: search-only` entities —
+[[FI-SUOMI-FI]], [[FI-PALVELUVAYLA]], [[FI-SECONDARY-USE-ACT]],
+[[FI-TILASTOKESKUS]], [[FI-DVV]] and [[FI-FINDATA]] — alongside
+[[FI-TIETOSUOJA]], already `primary-source` from an earlier pass. All
+six now carry `verification: primary-source`; Finland's whole cluster
+is fully re-verified.
+
+### A stale country anchor, fixed
+
+[[FI]]'s own body text still said "no Finland entity is modelled yet"
+and listed data protection, open data, statistics and interoperability
+as all unresearched — the same bug shape found on [[IT]]'s and
+[[AT]]'s anchors in earlier pushes, now a confirmed pattern rather than
+a one-off: entities get added and re-verified, but nothing revisits the
+anchor's own prose unless a push forces the question. Rewritten to
+describe the seven entities it now anchors.
+
+### A 2025 legislative amendment neither health entity knew about
+
+Reading findata.fi's own legislation page directly surfaced an amending
+act — the **Act amending the Act on the Secondary Use of Health and
+Social Data (1159/2025)** — that neither [[FI-SECONDARY-USE-ACT]] nor
+[[FI-FINDATA]] had any record of. Its clinical-trials-related
+provisions took effect **1 January 2026**; the rest, including a
+structural change to the permit process, took effect **1 May 2026**.
+Before the amendment, "the processing of data permits was largely
+centralised under Findata" whenever an application needed data from
+more than one controller; findata.fi's own words describe what replaced
+that: "a distributed permit model was introduced, under which a data
+permit... can be applied for either through Findata or separately from
+individual data controllers." Findata's centralised route still exists
+and is still the entity's core design — what changed is that it is no
+longer the only path once a request crosses controllers.
+
+A second, independent signal pointed at the same staleness: the
+University of Eastern Finland library's own page describing the Act,
+read directly, carries its own disclaimer that its "English translation
+is not up-to-date" — a university noticing the same drift this
+re-verification pass found from a completely different source.
+
+### Two fabricated placeholder dates, corrected
+
+Both [[FI-SECONDARY-USE-ACT]] and [[FI-FINDATA]] carried `start_date:
+2019-01-01` in frontmatter, and both bodies already flagged, honestly,
+that the day was a guess rather than a sourced fact — but the guess
+itself turned out to be more wrong than anyone had reason to think.
+findata.fi's own pages, read directly this pass, give real dates
+instead: the Secondary Use Act "entered into force in May 2019" (a
+month, still not a day, but a real one), and Findata — legally
+established the same year the Act took effect — states in its own 30
+December 2019 launch announcement that it "will start operating in
+early 2020." Legal establishment and the start of actual operations
+turn out to be two distinct milestones a year apart, neither of them 1
+January 2019. Both entities now carry `start_date: null` with the real
+month-level dates recorded in prose rather than a fabricated day kept
+in frontmatter.
+
+### A precise chronology for the only jointly-governed platform in the Atlas
+
+[[FI-PALVELUVAYLA]] previously knew only "2017" for the founding of
+NIIS, the body that jointly governs X-Road for Finland and Estonia.
+Reading niis.org's own history page and en.wikipedia.org's X-Road
+article together, independently, supplied a complete chronology this
+entity did not have: cooperation began in **2013**, when the Estonian
+and Finnish Prime Ministers signed a Memorandum of Understanding niis.org
+itself calls "the world's first digitally signed international
+agreement"; NIIS was founded in **June 2017**; X-Road's core was
+released under the MIT licence on **3 October 2016**; and the two
+countries' data exchange layers were actually connected on **7 February
+2018** — the date the "shared platform" description became true in
+practice rather than in intent.
+
+### FI-TILASTOKESKUS's EU-ESS membership, upgraded to a direct statement
+
+Statistics Finland's own "National and international cooperation —
+European Statistical System" page, read directly, states plainly:
+"Statistics Finland and several other Finnish government agencies
+produce statistics for the policy needs of the European Union in
+accordance with the requirements of the European Union's Statistical
+Programme and the European Statistical System (ESS)," and names the
+ESS's constituent actors directly (Eurostat, the EU member states'
+national statistical authorities, and the EEA/EFTA statistical
+authorities). This is the same strong-evidence tier set for [[PL-GUS]],
+[[EE-STATISTIKAAMET]] and [[IT-ISTAT]], an upgrade from the
+composition-rule tier most Atlas statistical offices still carry.
+
+### FI-DVV: over 800 employees confirmed, and a queued eIDAS2 thread
+
+DVV's own "Digital and Population Data Services Agency" page confirms,
+verbatim, the "over 800 employees" and "12 towns" figures this entity
+had carried unread since creation. The same site lists "Piloting of the
+European Digital Identity Wallet" and a page on "the revised eIDAS
+Regulation" among its current projects — a genuine eIDAS2 thread no
+page read this pass develops in enough detail to turn into a
+relationship, so it is recorded as an observation, matching the eIDAS2
+gap [[FR-FRANCECONNECT]] already flagged as open across the whole
+Atlas.
+
 ## The eleventh verification-gap push
 
 **Date:** 2026-08-26

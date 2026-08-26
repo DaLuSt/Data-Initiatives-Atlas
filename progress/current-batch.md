@@ -1,11 +1,11 @@
 # Current Batch
 
 **Status:** No batch in progress. **The fourteenth verification-gap
-push** completed on 2026-08-26 — closing Czechia's tail. This push, the
-twelfth (Finland) and the thirteenth (Estonia) were opened as separate,
-independently branched PRs; whichever merges last may need a routine
-merge-conflict resolution on this file and `progress/completed.md`.
-Full detail moved to `progress/completed.md`; summary below.
+push** completed on 2026-08-26 — closing Czechia's tail, right after
+the twelfth (Finland) and thirteenth (Estonia). PR #71 (Estonia) is
+still open at the time of this merge; this file's thirteenth-push entry
+will need a further merge once it lands. Full detail moved to
+`progress/completed.md`; summary below.
 `discovery/reverification-allowlist.md` ranks the next re-verification
 targets, and `discovery/research-queue.md` carries the rest of the
 research backlog.
@@ -17,9 +17,10 @@ after the country's main re-verification pass. [[DK]] (4) and [[SE]]
 (3) were closed by the eighth and ninth pushes; [[FR]]'s entire cluster
 (22 entities, one straggler — [[FR-DGSI]]) was closed by the tenth;
 [[AT]] (3) was closed by the eleventh; [[FI]] (6) was closed by the
-twelfth; [[EE]] (7) was closed by the thirteenth; [[CZ]] (7) was closed
-by the fourteenth. `NL` (67), `DE` (27), `BE` (24), `ES` (22) and `PT`
-(8) still carry tail entities — `PT` (8) is now the smallest remaining.
+twelfth; [[EE]] (7) was closed by the thirteenth (PR #71, not yet
+merged at the time of this file); [[CZ]] (7) was closed by the
+fourteenth. `NL` (67), `DE` (27), `BE` (24), `ES` (22) and `PT` (8)
+still carry tail entities — `PT` (8) is now the smallest remaining.
 
 **Corrected/added guidance on what is actually blocked:** `efta.int` is
 **not** bot-walled — it returns a 403 to a browser-spoofing User-Agent
@@ -117,6 +118,56 @@ to `2000-01-01` from a Wikipedia infobox that gives only "Vznik 2000"
 (established 2000) — caught and corrected to unset before this push
 was finalised, the same discipline applied throughout this session.
 
+## The twelfth verification-gap push — 2026-08-26
+
+Closed Finland's tail: [[FI-SUOMI-FI]], [[FI-PALVELUVAYLA]],
+[[FI-SECONDARY-USE-ACT]], [[FI-TILASTOKESKUS]], [[FI-DVV]] and
+[[FI-FINDATA]] — the six entities still `verification: search-only`
+after [[FI-TIETOSUOJA]] had already been re-verified in an earlier
+pass. All six now carry `verification: primary-source`.
+
+**A stale country anchor, fixed.** [[FI]]'s own body text still said no
+Finland entity was modelled — the same bug shape found on [[IT]] and
+[[AT]] in earlier pushes.
+
+**A 2025 amendment neither entity knew about.** findata.fi's own
+legislation page named an amending act — 1159/2025 — to
+[[FI-SECONDARY-USE-ACT]] that came into force in two stages this year
+(1 January and 1 May 2026). It introduced a distributed permit model
+alongside [[FI-FINDATA]]'s centralised one: applicants may now apply
+for permits separately from each data controller instead of routing
+every multi-controller request through Findata. The University of
+Eastern Finland's own library page independently flagged its English
+translation of the Act as "not up-to-date" — a second, unconnected
+signal pointing at the same staleness.
+
+**Two fabricated placeholder dates, corrected.** Both
+[[FI-SECONDARY-USE-ACT]] and [[FI-FINDATA]] carried `start_date:
+2019-01-01` with no source giving that day — a guessed date, not a
+sourced one. findata.fi's own pages give month-level dates instead: the
+Act "entered into force in May 2019," and Findata itself — legally
+established the same year — "will start operating in early 2020" per
+its own 30 December 2019 launch announcement. Both entities now carry
+`start_date: null` with the real, if imprecise, dates recorded in
+prose.
+
+**A precise chronology for the Finland/Estonia data-exchange
+partnership.** [[FI-PALVELUVAYLA]] previously only knew "2017" for
+NIIS's founding. Reading niis.org's own history page and
+en.wikipedia.org's X-Road article together supplied a full chronology:
+the 2013 Estonia-Finland Memorandum of Understanding (called "the
+world's first digitally signed international agreement"), NIIS's
+founding in June 2017, the MIT-licence release of X-Road's core on 3
+October 2016, and the two countries' data exchange layers actually
+connecting on 7 February 2018.
+
+**[[FI-TILASTOKESKUS]]'s [[EU-ESS]] membership, upgraded to a direct
+statement.** stat.fi's own "European Statistical System" page states
+directly that Statistics Finland "produce[s] statistics for the policy
+needs of the European Union... in accordance with... the European
+Statistical System (ESS)" — the same strong-evidence tier set for
+[[PL-GUS]], [[EE-STATISTIKAAMET]] and [[IT-ISTAT]].
+
 ## The eleventh verification-gap push — 2026-08-26
 
 Closed Austria's tail: [[AT-BRZ]], [[AT-DATA-GV-AT]] and
@@ -213,7 +264,6 @@ rather than carried forward unverified.
   [[SE-DIGG]]'s custodianship of [[SE-DATAPORTAL]] almost word for
   word; kept [[SE-SCB]]'s [[EU-ESS]] membership on the composition-rule
   tier. See "The ninth verification-gap push".
-
 - **Eighth push** (2026-08-25): closed Denmark's tail —
   [[DK-GRUNDDATA]], [[DK-DATATILSYNET]], [[DK-SUNDHEDSDATASTYRELSEN]]
   and [[DK-DST]]. Dated the Basic Data Programme to 2012 via a European
