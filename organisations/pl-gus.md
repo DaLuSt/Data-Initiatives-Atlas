@@ -24,12 +24,12 @@ region: null
 
 status: active
 confidence: medium
-coverage: low
-verification: search-only
+coverage: medium
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -37,13 +37,21 @@ domains:
   - DOMAIN-GOVERNMENT
 organisations: []
 related_entities:
+  - PL
   - EU-ESS
   - EU-EUROSTAT
 relationships:
   - type: part-of
+    target: PL
+    source: fact
+    evidence: "Confirmed by reading bip.stat.gov.pl's own page directly (2026-08-26): 'Prezes GUS, jako centralny organ administracji rządowej właściwy w sprawach statystyki, pełni rolę koordynacyjną w systemie polskiej statystyki publicznej' (the President of GUS, as the central government administrative authority for statistics, fulfils a coordinating role within Poland's public statistics system), citing Article 25 of the Act on Public Statistics. Anchor edge under metadata/relationship-types.md §2.3."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: part-of
     target: EU-ESS
     source: fact
-    evidence: "Polish public statistics, and particularly GUS as its national coordinator, is obliged to provide statistical information on many levels, including transmitting European statistics to Eurostat; GUS describes the European Statistical System as the partnership between the Community's statistical body, the Commission (Eurostat), and the national statistical offices and other national bodies responsible in each member state for developing, producing and disseminating European statistics, with Regulation (EC) No 223/2009 as the framework legal act specifying the scope and forms of action of the ESS (stat.gov.pl 'ESS — Europejski System Statystyczny oraz Eurostat'; bip.stat.gov.pl 'Polski system statystyczny'). NOT READ — search-only."
+    evidence: "Confirmed by reading stat.gov.pl's own ESS page directly (2026-08-26): GUS describes the European Statistical System as the partnership between the Commission (Eurostat) and the national statistical offices and other national bodies responsible in each member state for developing, producing and disseminating European statistics, with Regulation (EC) No 223/2009 as the framework legal act. bip.stat.gov.pl's own page, also read directly, confirms GUS's national-coordinator role. stat.gov.pl's 'Dane Eurostatu' page was read but does not itself state the transmission obligation in those words."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -52,12 +60,15 @@ sources:
   - title: "ESS — Europejski System Statystyczny oraz Eurostat"
     url: "https://stat.gov.pl/statystyka-miedzynarodowa/instytucjeorganizacje-miedzynarodowe/ess-europejski-system-statystyczny-oraz-eurostat/"
     publisher: "Główny Urząd Statystyczny (GUS)"
+    accessed: "2026-08-26"
   - title: "Polski system statystyczny — Biuletyn Informacji Publicznej GUS"
     url: "https://bip.stat.gov.pl/dzialalnosc-statystyki-publicznej/polski-system-statystyczny/"
     publisher: "Główny Urząd Statystyczny (GUS)"
+    accessed: "2026-08-26"
   - title: "Dane Eurostatu — GUS"
     url: "https://stat.gov.pl/dla-mediow/dane-eurostatu/"
     publisher: "Główny Urząd Statystyczny (GUS)"
+    accessed: "2026-08-26"
   - title: "Rekomendacje międzynarodowe dotyczące doskonalenia jakości w statystyce publicznej"
     url: "https://bip.stat.gov.pl/dzialalnosc-statystyki-publicznej/jakosc-w-statystyce/rekomendacje-miedzynarodowe"
     publisher: "Główny Urząd Statystyczny (GUS)"
@@ -65,9 +76,7 @@ sources:
 
 # GUS — Główny Urząd Statystyczny
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-26.** Three of four cited pages were read directly.
 
 ## Description
 
@@ -127,9 +136,9 @@ the Dutch statutes.
 
 ## Relationships
 
+- `part-of` [[PL]] — anchor edge, confirmed this pass.
 - `part-of` [[EU-ESS]].
 
 ## Sources
 
-Listed in frontmatter — four GUS pages, two of them from its public
-information bulletin.
+Listed in frontmatter — four GUS pages, three read directly this pass.

@@ -23,11 +23,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
-start_date: 2010-01-01
+start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -43,7 +43,7 @@ relationships:
   - type: governed-by
     target: PL-MC
     source: fact
-    evidence: "The Ministry of Digital Affairs is the supervisory body that designates the development directions for COI, and supervises COI in the scope of the tasks entrusted to this unit (gov.pl/web/cyfryzacja/centralny-osrodek-informatyki; coi.gov.pl/o-nas). NOT READ — search-only."
+    evidence: "Confirmed by reading gov.pl's own COI page directly (2026-08-26): 'Organ nadrzędny: Ministerstwo Cyfryzacji — jednostka nadzorowana' (superior body: Ministry of Digital Affairs — supervised unit). coi.gov.pl's own 'O nas' page, also read directly, confirms COI 'realizuje zadania wyznaczane przez Ministerstwo Cyfryzacji' (carries out tasks designated by the Ministry of Digital Affairs), though it names the Minister of Internal Affairs and Administration (MSWiA), not the Ministry of Digital Affairs, as the body that established COI in 2010 — a founding detail this entity did not previously carry, and a different ministry from its current supervisor."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -52,12 +52,15 @@ sources:
   - title: "O nas | COI"
     url: "https://coi.gov.pl/o-nas"
     publisher: "Centralny Ośrodek Informatyki (COI)"
+    accessed: "2026-08-26"
   - title: "Centralny Ośrodek Informatyki — Ministerstwo Cyfryzacji"
     url: "https://www.gov.pl/web/cyfryzacja/centralny-osrodek-informatyki"
     publisher: "Ministerstwo Cyfryzacji"
+    accessed: "2026-08-26"
   - title: "Centralny Ośrodek Informatyki przekształci się w Agencję Informatyzacji"
     url: "https://www.gov.pl/web/cyfryzacja/centralny-osrodek-informatyki-przeksztalci-sie-w-agencje-informatyzacji-co-usprawni-realizacje-zadan-w-obszarze-informatyzacji-panstwa"
     publisher: "Ministerstwo Cyfryzacji"
+    accessed: "2026-08-26"
   - title: "Centralny Ośrodek Informatyki przekształci się w Agencję Informatyzacji (komunikat)"
     url: "https://pap-mediaroom.pl/polityka-i-spoleczenstwo/cyfryzacja-kprm-centralny-osrodek-informatyki-przeksztalci-sie-w-agencje"
     publisher: "PAP MediaRoom"
@@ -65,16 +68,20 @@ sources:
 
 # COI — Centralny Ośrodek Informatyki
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-26, with one date fixed.** Three of four cited pages
+> were read directly. `start_date` was previously padded to `2010-01-01`;
+> COI's own page gives only the bare year, "powołano w 2010 roku", so it
+> is now `null` with the year kept in prose.
 
 ## Description
 
-COI was established in **2010** as an institution of the public finance
-sector, and employs around **1,800 IT and programming specialists**. Its
-primary task is the protection, development and maintenance of the state's
-most important IT systems:
+COI was established in **2010** — confirmed by reading coi.gov.pl's own
+"O nas" page directly, though only as a bare year, by the **Minister of
+Internal Affairs and Administration (MSWiA)**, not by the Ministry of
+Digital Affairs that supervises it today — as an institution of the
+public finance sector, and employs around **1,800 IT and programming
+specialists**. Its primary task is the protection, development and
+maintenance of the state's most important IT systems:
 
 - **Profil Zaufany** — the trusted profile;
 - **[[PL-MOBYWATEL]]** — the citizen application;
@@ -119,12 +126,12 @@ basis.
 
 - `governed-by` [[PL-MC]].
 
-**No `maintained-by` edge from [[PL-MOBYWATEL]] to this entity.** COI is
-sourced as maintaining the application's *systems*; the mObywatel Act
-regulates the application itself, and which body is its legal operator was
-not established. See [[PL-MOBYWATEL]].
+**Still no `maintained-by` edge from [[PL-MOBYWATEL]] to this entity.**
+COI remains sourced as maintaining the application's *systems* only. The
+mObywatel Act's own text, read this pass, names [[PL-MC]] — not COI — as
+the application's legal operator; that edge is recorded there instead.
+See [[PL-MOBYWATEL]].
 
 ## Sources
 
-Listed in frontmatter — COI's own about page, two ministry pages including
-the transformation announcement, and the press-agency communiqué.
+Listed in frontmatter, three of four read directly this pass.

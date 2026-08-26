@@ -25,11 +25,11 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2022-05-03
 end_date: null
-last_verified: null
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -46,15 +46,15 @@ related_entities:
 relationships:
   - type: aligned-with
     target: INTL-ISO-IEC-27001
-    source: fact
-    evidence: "The ENS follows the PDCA continuous-improvement model, inspired by ISO 27001, and information systems may meet the ENS requirements for the LOW security level on the basis of an information security management system certified to ISO/IEC 27001 (portal.mineco.gob.es 'Esquema Nacional de Seguridad'; BOE-A-2022-7191 Real Decreto 311/2022; pmg-ssi.com '¿Qué es el Real Decreto 311/2022?'). NOT READ — search-only."
-    confidence: medium
+    source: interpretation
+    evidence: "Real Decreto 311/2022's own text, read directly at boe.es (2026-08-26), was searched for an explicit ISO/IEC 27001 reference; none was found in the articles read. The ISO alignment claim rests on secondary commentary (pmg-ssi.com, not read this pass) describing the PDCA continuous-improvement model as ISO-27001-inspired. Downgraded from `source: fact` to `interpretation` pending a direct textual confirmation."
+    confidence: low
     valid_from: null
     valid_until: null
   - type: maintained-by
     target: ES-CCN
     source: fact
-    evidence: "Real Decreto 311/2022 assigns the Centro Criptológico Nacional the role of state-level public coordinator for the technical response of incident response teams through CCN-CERT and the development of awareness, training and sensitisation programmes for public-sector personnel; the CCN is the technical authority that publishes the CCN-STIC guides and the INES measurement tool, and has published the changes and updates to the scheme on the ENS portal (ccn.cni.es 'Actualizadas las preguntas frecuentes del nuevo ENS'; BOE-A-2022-7191; inqnable.es). NOT READ — search-only."
+    evidence: "Confirmed by reading Real Decreto 311/2022's own text at boe.es directly (2026-08-26): Article 33 has the CCN 'articula la respuesta a los incidentes de seguridad' through CCN-CERT structure, exercising 'coordinación nacional de la respuesta técnica de los equipos de respuesta a incidentes de seguridad informática (CSIRT)' for public-sector network and information-system security. Additional Provision One requires the CCN, jointly with the National Institute of Public Administration, to develop awareness, sensitisation and training programmes for public-sector personnel — a joint role this entity did not previously carry precisely."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -63,6 +63,7 @@ sources:
   - title: "BOE-A-2022-7191 Real Decreto 311/2022, de 3 de mayo, por el que se regula el Esquema Nacional de Seguridad"
     url: "https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191"
     publisher: "Boletín Oficial del Estado (BOE)"
+    accessed: "2026-08-26"
   - title: "Actualizadas las preguntas frecuentes del nuevo ENS"
     url: "https://www.ccn.cni.es/index.php/es/actualidad-ccn/931-actualizadas-las-preguntas-frecuentes-del-nuevo-ens"
     publisher: "Centro Criptológico Nacional (CCN) — CNI"
@@ -76,9 +77,11 @@ sources:
 
 # ENS — Esquema Nacional de Seguridad
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-26.** The decree's own text was read directly at
+> boe.es, confirming CCN's coordination role in detail. The ISO/IEC 27001
+> alignment claim could not be confirmed directly in the articles read,
+> so it is downgraded to an Atlas interpretation at low confidence rather
+> than repeated as a stated fact — see below.
 
 ## Description
 
@@ -135,26 +138,30 @@ claim to know how they relate.
 
 ## Sources
 
-Listed in frontmatter — the BOE text, the CCN's own notice, a ministry page
-and a technical commentary.
+Listed in frontmatter, the BOE text read directly this pass. The CCN's
+own notice, the ministry page and the technical commentary were not
+attempted.
 
-## `aligned-with` [[INTL-ISO-IEC-27001]]
+## `aligned-with` [[INTL-ISO-IEC-27001]], now at reduced confidence
 
 Added with the intelligence-services batch, which made this entity's
 isolation visible: [[ES-ENS]] and [[ES-CCN]] were a two-node island in the
 graph, reachable from nothing else in the Atlas.
 
-The edge is sourced and not merely convenient. The ENS follows the **PDCA
-continuous-improvement model, inspired by ISO 27001**, and an information
-security management system certified to ISO/IEC 27001 can be used to meet
-the ENS requirements at the **LOW** security level.
+The claim — that the ENS follows a **PDCA continuous-improvement model
+inspired by ISO 27001**, and that certification to ISO/IEC 27001 can meet
+the ENS's **LOW** security level — was originally sourced to secondary
+commentary (pmg-ssi.com) rather than the decree itself. Reading Real
+Decreto 311/2022's own text directly this pass did not turn up an
+explicit ISO/IEC 27001 reference in the articles read, so the edge is
+downgraded to `source: interpretation`, `confidence: low` rather than
+repeated as a stated fact on secondary authority alone.
 
-`aligned-with` is the right type — "two entities are deliberately kept
-consistent without one implementing the other". The ENS is a Spanish royal
-decree, not an implementation of an international standard, and the
-certification route applies to one of three levels rather than to the scheme
-as a whole.
+`aligned-with` remains the right type if the claim holds — "two entities
+are deliberately kept consistent without one implementing the other" —
+but a future pass should search the decree's full text (all its chapters
+and annexes, not just the articles read this pass) for the ISO reference
+before restoring `source: fact`.
 
-[[GB-CAF]] already carries the same relationship to the same standard. The
-Atlas can now show two national public-sector security frameworks aligned to
-one ISO standard, from either side of the EU border.
+[[GB-CAF]] carries the same relationship to the same standard at full
+confidence; that comparison stands regardless of this downgrade.

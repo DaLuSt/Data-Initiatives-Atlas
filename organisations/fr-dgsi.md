@@ -22,7 +22,7 @@ confidence: medium
 coverage: medium
 verification: search-only
 
-start_date: null
+start_date: 2014-04-30
 end_date: null
 last_verified: "2026-08-26"
 previous_version: null
@@ -32,6 +32,7 @@ domains:
   - DOMAIN-NATIONAL-SECURITY
 organisations: []
 related_entities:
+  - FR
   - FR-LOI-RENSEIGNEMENT-2015
   - FR-LIL
   - FR-DGSE
@@ -42,8 +43,15 @@ relationships:
   - type: governed-by
     target: FR-LIL
     source: interpretation
-    evidence: "Title IV of the loi Informatique et Libertés contains the provisions applicable to processing concerning state security and defence; the national law remains fully applicable to files in the domain of intelligence and state security, and such processing must be authorised by decree after a reasoned and published opinion of the CNIL, with a decree in Conseil d'État where sensitive data are involved — the sources name CRISTINA, the file of the DGSI's predecessor, among the examples (cnil.fr 'La loi Informatique et Libertés'; cnil.fr 'Le cadre national'; fr.wikipedia.org 'Loi informatique et libertés'). None of the three DGSI/interieur.gouv.fr pages this entity cites for its own side could be read this pass — see below — so this edge's evidentiary basis is unchanged from before, still describing the regime rather than naming the DGSI as a controller."
+    evidence: "Confirmed by reading fr.wikipedia.org's DGSI article directly (2026-08-26): CRISTINA, the file inherited from DGSI's predecessor, is explicitly carved out rather than routinely authorised — 'Au nom de dispositions de la loi informatique et libertés concernant les fichiers de Sécurité nationale, il n'est pas soumis au contrôle de la Commission nationale de l'informatique et des libertés (CNIL)' (under national-security-file provisions of the loi Informatique et Libertés, it is not subject to CNIL oversight), though the same article notes CNIL retains a general supervisory role over personal data DGSI may otherwise collect. This is a narrower and more precise claim than this entity previously carried (that Title IV processing 'must be authorised by decree after a reasoned CNIL opinion') — the specific file most often cited, CRISTINA, is instead exempted from CNIL control outright. DGSI's own three cited pages remain bot-walled (see below), so this edge still rests on secondary corroboration rather than DGSI naming itself as subject to the Act."
     confidence: low
+    valid_from: null
+    valid_until: null
+  - type: part-of
+    target: FR
+    source: fact
+    evidence: "Confirmed by reading fr.wikipedia.org's DGSI article directly (2026-08-26): DGSI was established by decree of 30 April 2014 ('fondé par décret le 30 avril 2014'), its missions set out in Article 2 of that decree. DGSI's own three cited pages remain bot-walled; this date was not previously carried by the entity. Anchor edge under metadata/relationship-types.md §2.3."
+    confidence: medium
     valid_from: null
     valid_until: null
   - type: governed-by
@@ -68,21 +76,29 @@ sources:
   - title: "La direction générale de la Sécurité intérieure"
     url: "https://www.interieur.gouv.fr/ministere/direction-generale-de-securite-interieure"
     publisher: "Ministère de l'Intérieur"
+  - title: "Direction générale de la Sécurité intérieure"
+    url: "https://fr.wikipedia.org/wiki/Direction_g%C3%A9n%C3%A9rale_de_la_S%C3%A9curit%C3%A9_int%C3%A9rieure"
+    publisher: "Wikipédia"
+    accessed: "2026-08-26"
 ---
 
 # Direction générale de la Sécurité intérieure (DGSI)
 
-> **Partially checked 2026-08-26, still `search-only`.** All three of
-> DGSI's own and `interieur.gouv.fr`'s cited pages are genuinely
-> bot-walled (403) even with an honest User-Agent — the same block
-> found on `legifrance.gouv.fr` and other `interieur.gouv.fr` paths
-> across this cluster. cnctr.fr's own services page, read directly and
-> added as a source, independently confirms the `governed-by`
-> [[FR-LOI-RENSEIGNEMENT-2015]] edge and adds that DGSI is "un service
-> actif de la police nationale" — a detail this entity did not
-> previously carry. The `governed-by` [[FR-LIL]] edge's own citations
-> were not attempted this pass and remain unread. One of four current
-> sources read is not enough to call this entity `primary-source`.
+> **Re-checked 2026-08-26, still `search-only`.** All three of DGSI's
+> own and `interieur.gouv.fr`'s cited pages are genuinely bot-walled
+> (403) even with an honest, identifying User-Agent — confirmed again
+> this pass via both `tools/reverify.py` and a direct fetch attempt —
+> the same block found on `legifrance.gouv.fr` and other
+> `interieur.gouv.fr` paths across this cluster. Two independent
+> secondary sources were read directly instead: cnctr.fr's own services
+> page (confirming the `governed-by` [[FR-LOI-RENSEIGNEMENT-2015]] edge
+> and that DGSI is "un service actif de la police nationale"), and
+> `fr.wikipedia.org`'s DGSI article (giving a founding decree date this
+> entity did not previously carry, 30 April 2014, and a more precise
+> account of the `governed-by` [[FR-LIL]] edge). That is 2 of 5 sources
+> read — DGSI's own official channel is entirely and permanently
+> blocked here, not merely one page among several — so this still falls
+> short of the majority needed to call the entity `primary-source`.
 
 ## Description
 
@@ -116,23 +132,27 @@ recorded on [[NL-MIVD]] and [[DE-BND]].
 
 ## Relationships
 
-- `governed-by` [[FR-LOI-RENSEIGNEMENT-2015]] — confirmed this pass via
-  cnctr.fr, since DGSI's own pages remain bot-walled.
+- `part-of` [[FR]] — anchor edge, confirmed this pass via
+  `fr.wikipedia.org`'s founding-decree date (30 April 2014); DGSI's own
+  pages remain bot-walled.
+- `governed-by` [[FR-LOI-RENSEIGNEMENT-2015]] — confirmed via cnctr.fr,
+  since DGSI's own pages remain bot-walled.
 - `governed-by` [[FR-LIL]] — `confidence: low`, `source: interpretation`.
-  Title IV of the loi Informatique et Libertés holds the provisions for
-  processing concerning state security and defence, and such processing
-  must be authorised by decree after a reasoned CNIL opinion. The sources
-  describe the regime and name an intelligence file — CRISTINA, held by
-  the DGSI's predecessor — rather than naming the DGSI as a controller,
-  so this edge is weaker than the UK's Part 4 edge or Belgium's, and is
-  the only one of the four cross-cluster bridges in this batch carried
-  at low confidence. It is asserted on this entity alone; [[FR-DGSE]],
-  [[FR-DRM]] and [[FR-DRSD]] carry no equivalent, because nothing read
-  connects them to a named file. Its own citations were not attempted
-  this pass.
+  `fr.wikipedia.org`'s DGSI article, read this pass, narrows the claim
+  this entity previously carried: CRISTINA, the file most often cited in
+  this context, is specifically **exempted** from CNIL oversight under
+  the loi Informatique et Libertés's national-security-file provisions,
+  rather than routinely authorised by decree after a CNIL opinion as
+  this entity previously implied. CNIL retains a general supervisory
+  role over DGSI's other personal-data processing. This edge is weaker
+  than the UK's Part 4 edge or Belgium's, and remains the only one of
+  the four cross-cluster bridges in this batch carried at low
+  confidence, because DGSI is still nowhere named as a controller in its
+  own words — DGSI's own three pages remain bot-walled.
 
 ## Sources
 
-Listed in frontmatter. `cnctr.fr` was read directly this pass; DGSI's
-own two pages and `interieur.gouv.fr`'s page are genuinely bot-walled
-(403) even with an honest User-Agent.
+Listed in frontmatter. `cnctr.fr` and `fr.wikipedia.org` were read
+directly this pass; DGSI's own two pages and `interieur.gouv.fr`'s page
+are genuinely bot-walled (403) even with an honest User-Agent, confirmed
+again via both `tools/reverify.py` and a direct fetch attempt.

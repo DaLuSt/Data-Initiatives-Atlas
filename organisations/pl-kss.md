@@ -7,10 +7,12 @@ alternative_names:
   - Sejm Committee for Special Services
 description: >
   Standing committee of the Polish Sejm for the oversight of the special
-  services — ABW, AW, CBA, SKW and SWW. It has no more than seven deputies,
-  sits in closed session, and its members must hold security clearances. It
-  has existed in this form since 29 September 1995 and its basis is the
-  Sejm's standing orders rather than a statute.
+  services — ABW, AW, CBA, SKW and SWW. Sources disagree on its maximum
+  size (seven per Wikipedia, eight per a Regulamin mirror); it sits in
+  closed session and handles classified material under the 2010 act on
+  protecting classified information. It has existed in this form since
+  29 September 1995 and its basis is the Sejm's standing orders rather
+  than a statute.
 
 level: national
 country: PL
@@ -19,11 +21,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 1995-09-29
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -39,49 +41,53 @@ relationships:
   - type: applies-to
     target: PL-ABW
     source: fact
-    evidence: "The Komisja do Spraw Służb Specjalnych is a specialised institution for controlling the special services (ABW, AW, CBA, SKW, SWW) and is a standing parliamentary commission; its tasks include reviewing annual reports from the heads of those services and giving opinions on requests to appoint their heads and deputy heads (sejm.gov.pl KSS committee page; pl.wikipedia.org 'Komisja do Spraw Służb Specjalnych'; bip.abw.gov.pl 'Sejm'). NOT READ — search-only."
+    evidence: "Confirmed by reading pl.wikipedia.org's own article and arslege.pl's own mirror of the Sejm's Regulamin directly (2026-08-26): the Komisja do Spraw Służb Specjalnych is a standing parliamentary commission for controlling ABW, AW, CBA, SKW and SWW, in closed session (arslege.pl, Article 139.1: 'Posiedzenia Komisji do Spraw Służb Specjalnych są zamknięte'). `sejm.gov.pl` itself is genuinely CAPTCHA-blocked."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: applies-to
     target: PL-AW
     source: fact
-    evidence: "The Komisja do Spraw Służb Specjalnych is the specialised parliamentary institution for controlling the special services ABW, AW, CBA, SKW and SWW (sejm.gov.pl KSS committee page; pl.wikipedia.org 'Komisja do Spraw Służb Specjalnych'). NOT READ — search-only."
+    evidence: "Confirmed by reading pl.wikipedia.org's own article directly (2026-08-26): the Komisja do Spraw Służb Specjalnych is the specialised parliamentary institution for controlling ABW, AW, CBA, SKW and SWW. `sejm.gov.pl` itself is genuinely CAPTCHA-blocked."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: applies-to
     target: PL-SKW
     source: fact
-    evidence: "The Komisja do Spraw Służb Specjalnych is the specialised parliamentary institution for controlling the special services ABW, AW, CBA, SKW and SWW (sejm.gov.pl KSS committee page; pl.wikipedia.org 'Komisja do Spraw Służb Specjalnych'). NOT READ — search-only."
+    evidence: "Confirmed by reading pl.wikipedia.org's own article directly (2026-08-26): the Komisja do Spraw Służb Specjalnych is the specialised parliamentary institution for controlling ABW, AW, CBA, SKW and SWW. `sejm.gov.pl` itself is genuinely CAPTCHA-blocked."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: applies-to
     target: PL-SWW
     source: fact
-    evidence: "The Komisja do Spraw Służb Specjalnych is the specialised parliamentary institution for controlling the special services ABW, AW, CBA, SKW and SWW (sejm.gov.pl KSS committee page; pl.wikipedia.org 'Komisja do Spraw Służb Specjalnych'). NOT READ — search-only."
+    evidence: "Confirmed by reading pl.wikipedia.org's own article directly (2026-08-26): the Komisja do Spraw Służb Specjalnych is the specialised parliamentary institution for controlling ABW, AW, CBA, SKW and SWW. `sejm.gov.pl` itself is genuinely CAPTCHA-blocked."
     confidence: medium
     valid_from: null
     valid_until: null
 
 sources:
-  - title: "Komisja do Spraw Służb Specjalnych (KSS)"
+  - title: "Komisja do Spraw Służb Specjalnych (KSS) (currently CAPTCHA-blocked)"
     url: "https://www.sejm.gov.pl/sejm10.nsf/agent.xsp?symbol=KOMISJA&NrKadencji=10&KodKom=KSS"
     publisher: "Sejm Rzeczypospolitej Polskiej"
   - title: "Komisja do Spraw Służb Specjalnych"
     url: "https://pl.wikipedia.org/wiki/Komisja_do_Spraw_S%C5%82u%C5%BCb_Specjalnych"
     publisher: "Wikipedia"
+    accessed: "2026-08-26"
   - title: "Rozdział 12. Komisja do spraw Służb Specjalnych i postępowanie w komisji — Regulamin Sejmu"
     url: "https://arslege.pl/regulamin-sejmu-rzeczypospolitej-polskiej/k374/s3572/"
     publisher: "arslege.pl (Regulamin Sejmu RP)"
+    accessed: "2026-08-26"
 ---
 
 # Komisja do Spraw Służb Specjalnych (KSS)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Re-verified 2026-08-26, with a conflict found and recorded rather
+> than resolved.** Two of three cited pages were read directly.
+> `sejm.gov.pl` itself remains genuinely CAPTCHA-blocked. Wikipedia and
+> arslege.pl's own mirror of the Sejm's current Regulamin **disagree on
+> the Commission's size** — see below.
 
 ## Description
 
@@ -92,9 +98,28 @@ parliamentary tools do not reach these bodies.
 
 Its design is all constraint:
 
-- **No more than seven deputies.**
-- **Closed sessions.**
-- **Members must hold security clearances.**
+- **No more than seven or eight deputies** — the sources disagree; see below.
+- **Closed sessions**, confirmed by reading arslege.pl's own text of Article
+  139(1) of the Regulamin directly: "Posiedzenia Komisji do Spraw Służb
+  Specjalnych są zamknięte."
+- **Members must hold security clearances** for the classified material the
+  Commission handles — arslege.pl's own text, read directly, ties this to
+  the Act of 5 August 2010 on the protection of classified information
+  (Article 138(4)) rather than stating a standalone clearance requirement
+  in those words.
+
+## ⚠ A conflict between two sources on the Commission's size
+
+pl.wikipedia.org, read directly, gives "nie więcej niż siedmiu posłów
+(dziewięciu w latach 2001–2015)" — no more than **seven** deputies (nine
+between 2001 and 2015). arslege.pl, read directly and presented as a
+current mirror of the Sejm's own Regulamin, gives Article 137(1) as "nie
+więcej niż 8 posłów" — no more than **eight**.
+
+Both were read this pass; neither is obviously stale, and `sejm.gov.pl`
+itself — the authoritative source — is CAPTCHA-blocked. Rather than pick
+one, the Atlas records the conflict, following the same discipline
+applied to [[PT-LEI-26-2016]]'s standalone-legislation question.
 
 Its functions include opinions on draft laws affecting the services, review
 of the heads' annual reports, and opinions on appointments of heads and
@@ -141,4 +166,5 @@ not a claim that none exists.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, two of three read directly this pass.
+`sejm.gov.pl` remains genuinely CAPTCHA-blocked.

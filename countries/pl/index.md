@@ -7,29 +7,43 @@ the country's front page (`CONTRIBUTING.md`).
 
 Anchor entity: [[PL]]
 
-> **Sourcing caveat.** Most Polish entities below were compiled from
-> search-engine results only: the cited pages were confirmed to exist but
-> were **not read**, because the working environment blocked page
-> retrieval. They carry `verification: search-only` and need a
-> re-verification pass against primary sources. See
-> `discovery/reverification-allowlist.md`. [[PL-PESEL]] and
-> [[PL-EWIDENCJA-LUDNOSCI]], added 2026-08-22, are the first exceptions —
-> both `verification: primary-source`.
+> **Re-verified 2026-08-26.** Seventeen of eighteen remaining
+> `search-only` entities were promoted to `verification: primary-source`
+> in one pass. Only [[PL-DANE-GOV-PL]] remains `search-only` — its own
+> portal is a JavaScript application with no static content to fetch,
+> and its other sources are CAPTCHA-blocked or dead. `isap.sejm.gov.pl`
+> and `sejm.gov.pl` are both genuinely CAPTCHA-blocked domain-wide,
+> confirmed on many separate attempts this pass — not a one-off failure.
+> [[PL-PESEL]] and [[PL-EWIDENCJA-LUDNOSCI]], added 2026-08-22, were
+> already `verification: primary-source` before this pass.
 
 ## Organisations
 
-- [[PL-MC]] — Ministerstwo Cyfryzacji _(sets direction)_
-  - [[PL-COI]] — Centralny Ośrodek Informatyki _(runs the systems; a draft
-    law would convert it into an Agencja Informatyzacji)_
-- [[PL-UODO]] — data protection authority _(since 25 May 2018)_
+- [[PL-MC]] — Ministerstwo Cyfryzacji _(sets direction; confirmed as
+  [[PL-MOBYWATEL]]'s legal operator this pass, and as [[PL-NASK]]'s
+  supervising ministry too)_
+  - [[PL-COI]] — Centralny Ośrodek Informatyki _(runs the systems; a
+    draft law would convert it into an Agencja Informatyzacji; founded
+    2010 by the then Ministry of Internal Affairs and Administration —
+    `start_date` corrected to `null`, the source gives only the bare year)_
+  - [[PL-NASK]] — CSIRT NASK operator and .pl registry _(`governed-by`
+    [[PL-MC]], confirmed this pass — previously unestablished)_
+- [[PL-UODO]] — data protection authority _(since 25 May 2018; its own
+  annual report calls it GIODO's legal successor, stronger language than
+  this entity previously carried)_
 - [[PL-GUS]] — national statistical office _(`part-of` [[EU-ESS]])_
+- [[PL-PKN]] — standards body _(CEN/CENELEC member since 1 January 2004,
+  now dated precisely)_
+- Intelligence and security services — see below.
 
 ## Legislation
 
 - [[PL-ODO]] — Ustawa o ochronie danych osobowych, 2018 _(implements
-  [[EU-GDPR]]; ⚠ no Dz.U. citation found)_
+  [[EU-GDPR]]; still no working Dz.U. citation — ISAP is CAPTCHA-blocked)_
 - [[PL-KSC]] — Ustawa o krajowym systemie cyberbezpieczeństwa _(NIS2
-  amendment in force 3 Apr 2026; ⚠ Poland is before the CJEU for the delay)_
+  amendment in force 3 Apr 2026; **corrected 2026-08-26**: Poland
+  received a Commission letter of formal notice, not a CJEU referral as
+  previously stated)_
 - [[PL-OTWARTE-DANE]] — Ustawa o otwartych danych, 2021 _(transposes
   [[EU-OPEN-DATA-DIRECTIVE]]; repeals the 2016 act)_
 - [[PL-EWIDENCJA-LUDNOSCI]] — Ustawa o ewidencji ludności, 2010 _(legal
@@ -39,8 +53,10 @@ Anchor entity: [[PL]]
 ## Platforms
 
 - [[PL-MOBYWATEL]] — citizen application and mDowód _(⚠ reported
-  **incompatible with eIDAS 2.0**)_
-- [[PL-DANE-GOV-PL]] — national open data portal
+  **incompatible with eIDAS 2.0**; `maintained-by` [[PL-MC]], confirmed
+  this pass via the Act's own Article 19 — previously unestablished)_
+- [[PL-DANE-GOV-PL]] — national open data portal _(still `search-only`
+  — see caveat above)_
 - [[PL-PESEL]] — population register and identification number
   _(`maintained-by` [[PL-COI]] since 1 March 2015)_
 
@@ -66,7 +82,7 @@ countries:
 | Instrument | Poland | Spain | France | Belgium | Germany | Netherlands |
 |---|---|---|---|---|---|---|
 | [[EU-GDPR]] | [[PL-ODO]] | [[ES-LOPDGDD]] | [[FR-LIL]] | [[BE-GDPR-WET]] | [[DE-BDSG]] | [[NL-UAVG]] |
-| [[EU-NIS2]] | [[PL-KSC]] ⚠ CJEU | [[ES-LCGC]] ⚠ draft | [[FR-NIS2-LOI]] ⚠ unknown | [[BE-NIS2-WET]] | [[DE-NIS2UMSUCG]] | [[NL-CBW]] |
+| [[EU-NIS2]] | [[PL-KSC]] ⚠ late, formal notice | [[ES-LCGC]] ⚠ draft | [[FR-NIS2-LOI]] ⚠ unknown | [[BE-NIS2-WET]] | [[DE-NIS2UMSUCG]] | [[NL-CBW]] |
 | [[EU-OPEN-DATA-DIRECTIVE]] | **[[PL-OTWARTE-DANE]]** | [[ES-LEY-37-2007]] | _(not identified)_ | _(not identified)_ | [[DE-DNG]] | [[NL-WHO]] |
 | [[EU-EIDAS2]] | **[[PL-MOBYWATEL]]** ⚠ incompatible | _(none)_ | _(none)_ | _(none)_ | _(none)_ | _(none)_ |
 | [[EU-DCAT-AP]] | _(not researched)_ | [[ES-NTI-RISP]] | _(none found)_ | [[BE-DCAT-AP-BE]] | [[DE-DCAT-AP-DE]] | [[NL-DCAT-AP-NL]] |
@@ -80,8 +96,9 @@ countries:
 - **The first sourced eIDAS2 link — and it is negative.** [[PL-MOBYWATEL]]
   cannot serve as an EUDI Wallet and must be replaced. Four batches had
   recorded that no country was linked to [[EU-EIDAS2]] at all.
-- **A sixth NIS2 state, off the done/not-done axis.** In force *and* before
-  the CJEU. See [[PL-KSC]].
+- **A sixth NIS2 state, off the done/not-done axis.** In force, after
+  missing the deadline and drawing a Commission letter of formal notice —
+  **not** a CJEU referral, corrected 2026-08-26. See [[PL-KSC]].
 - **The 2016-act trap now has a documented answer.** [[PL-OTWARTE-DANE]]
   explicitly repeals Poland's 2016 act — showing what Belgium's and France's
   missing transpositions should look like.
@@ -111,8 +128,9 @@ external    PL-AW       2002      PL-SWW      2006
 Legislation:
 
 - [[PL-UABWAW-2002]] — names **both** civilian agencies in its own title.
-  The best-sourced statute in the batch: ISAP, the ABW's BIP, and the AW's
-  own *Ramy prawne* page.
+  The best-sourced statute in the batch: the ABW's BIP and the AW's own
+  *Ramy prawne* page were both read directly in the 2026-08-26
+  re-verification pass; ISAP itself remains genuinely CAPTCHA-blocked.
 - [[PL-USKWSWW-2006]] — the military pair. ⚠ **No official Polish
   government URL could be found for it**, in contrast to its civilian
   counterpart.
@@ -128,16 +146,23 @@ orders, which the chamber can change.
 
 ## Not modelled
 
-- **CSIRT NASK, CSIRT GOV, CSIRT MON** — the operational bodies of the
-  national cybersecurity system. Poland therefore joins the Netherlands as a
-  country with cybersecurity legislation and **no cyber authority** in
-  [[DOMAIN-CYBERSECURITY]].
+- ~~**CSIRT NASK, CSIRT GOV, CSIRT MON** — none modelled~~ — **stale as of
+  2026-08-26.** [[PL-ABW]] `implements` [[PL-KSC]] for CSIRT GOV and
+  [[PL-NASK]] `implements` it for CSIRT NASK, both added in the
+  intelligence-services batch but never cross-referenced back to
+  [[PL-KSC]]'s own "not modelled" section until this pass. Only **CSIRT
+  MON** remains unmodelled, because Poland's Ministry of National Defence
+  is not an Atlas entity.
 - ~~**PESEL**, the population register~~ — now [[PL-PESEL]] and
   [[PL-EWIDENCJA-LUDNOSCI]].
 - **The Agencja Informatyzacji** that would replace [[PL-COI]]. It does not
   exist yet.
-- **GIODO**, the predecessor data protection authority — the sources say
-  the President took over only *part* of its competencies, which is not a
-  clean succession.
+- **GIODO**, the predecessor data protection authority. **Narrower as of
+  2026-08-26**: UODO's own annual report, read directly, calls the
+  President of UODO GIODO's "następcą prawnym" (legal successor) —
+  stronger language than the "took over only part of its competencies"
+  this index previously carried. Still no GIODO entity exists: GIODO's
+  own site no longer resolves (DNS failure), so nothing in its own words
+  could be checked.
 - **Krajowe Ramy Interoperacyjności**, a Polish DCAT profile, and the Act on
   Public Statistics. All queued in `discovery/research-queue.md`.

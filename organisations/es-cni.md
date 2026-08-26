@@ -20,11 +20,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2002-05-06
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -39,14 +39,14 @@ relationships:
   - type: governed-by
     target: ES-LEY-11-2002
     source: fact
-    evidence: "The CNI was created by Ley 11/2002, de 6 de mayo, reguladora del Centro Nacional de Inteligencia; the CNI is ascribed to the Ministry of Defence as a public organisation with functional autonomy and its own legal personality, and reports to the President of the Government (defensa.gob.es 'Centro Nacional de Inteligencia'; boe.es BOE-A-2002-8628; es.wikipedia.org 'Centro Nacional de Inteligencia (España)'). NOT READ — search-only."
+    evidence: "Confirmed by reading the act's own text at boe.es directly (2026-08-26, BOE-A-2002-8628): Article 7.1 attaches the CNI to the Ministry of Defence; Article 7.2 gives it 'autonomía funcional bajo la figura de Organismo público con personalidad jurídica propia y plena capacidad de obrar'; Article 1 gives its mission of supplying the President of Government and Cabinet with information and analysis. es.wikipedia.org, also read directly, adds a fact this entity did not carry: the CNI's Ministry attachment has changed twice — under the Presidency Ministry from 2011, moved back to Defence only in 2018 by Pedro Sánchez's government. Article 7.1's Defence attachment is therefore current, not original."
     confidence: medium
     valid_from: 2002-05-06
     valid_until: null
   - type: governed-by
     target: ES-LO-2-2002
     source: fact
-    evidence: "Article 12 of Ley 11/2002 establishes that an organic law would prescribe the form of prior judicial control of CNI activities; Ley Orgánica 2/2002, de 6 de mayo, is complementary to Ley 11/2002 and modifies the Ley Orgánica del Poder Judicial to establish judicial control of CNI activities affecting the fundamental rights recognised in Articles 18.2 and 18.3 of the Spanish Constitution (boe.es BOE-A-2002-8627; catedrapsyd.unizar.es 'Los controles judiciales de la actividad del Centro Nacional de Inteligencia'; iberley.es). NOT READ — search-only."
+    evidence: "Confirmed by reading Ley Orgánica 2/2002's own text at boe.es directly (2026-08-26, BOE-A-2002-8627): it modifies Articles 125, 127 and 135 of the Ley Orgánica del Poder Judicial and adds Article 342 bis to establish judicial control of CNI activities affecting Articles 18.2 and 18.3 of the Constitution, naming a specific Supreme Court magistrate for the role."
     confidence: medium
     valid_from: 2002-05-06
     valid_until: null
@@ -55,22 +55,30 @@ sources:
   - title: "Centro Nacional de Inteligencia — organigrama"
     url: "https://www.defensa.gob.es/ministerio/organigrama/cni/"
     publisher: "Ministerio de Defensa de España"
+    accessed: "2026-08-26"
   - title: "Organización del CNI"
     url: "https://www.cni.es/sobre-el-cni/organizacion"
     publisher: "Centro Nacional de Inteligencia (CNI)"
+  - title: "BOE-A-2002-8628 Ley 11/2002, de 6 de mayo, reguladora del Centro Nacional de Inteligencia"
+    url: "https://www.boe.es/buscar/doc.php?id=BOE-A-2002-8628"
+    publisher: "Agencia Estatal Boletín Oficial del Estado (BOE)"
+    accessed: "2026-08-26"
   - title: "Ley Orgánica 2/2002, de 6 de mayo, reguladora del control judicial previo del Centro Nacional de Inteligencia"
     url: "https://www.boe.es/buscar/doc.php?id=BOE-A-2002-8627"
     publisher: "Agencia Estatal Boletín Oficial del Estado (BOE)"
+    accessed: "2026-08-26"
   - title: "Centro Nacional de Inteligencia (España)"
     url: "https://es.wikipedia.org/wiki/Centro_Nacional_de_Inteligencia_(Espa%C3%B1a)"
     publisher: "Wikipedia"
+    accessed: "2026-08-26"
 ---
 
 # Centro Nacional de Inteligencia (CNI)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-26.** Both acts' own texts were read directly at
+> boe.es, plus es.wikipedia.org. A ministry-attachment history this
+> entity did not previously carry surfaced: the CNI moved to the
+> Presidency Ministry in 2011 and back to Defence only in 2018.
 
 ## Description
 
@@ -135,7 +143,11 @@ through a body that was already present.
   common inspection regime covering them; none was researched.
 - The **Comisión Delegada del Gobierno para Asuntos de Inteligencia**, the
   government committee that sets the CNI's annual objectives.
-- The CNI's predecessor, **CESID**, and the 2002 reform that replaced it.
+- The CNI's predecessor, **CESID** (Centro Superior de Información de la
+  Defensa) — named by es.wikipedia.org, read directly this pass, but the
+  2002 reform's substance was not researched.
+- The CNI's own **ministry-attachment history** beyond the 2011/2018
+  transition named above — why it moved, and under which instrument.
 
 ## Relationships
 
@@ -143,4 +155,4 @@ through a body that was already present.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, all four read directly this pass.

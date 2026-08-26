@@ -23,7 +23,7 @@ verification: search-only
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -40,7 +40,7 @@ relationships:
   - type: governed-by
     target: PL-OTWARTE-DANE
     source: fact
-    evidence: "The Act of 11 August 2021 on open data and re-use of public sector information establishes a data portal as a database of public sector information resources, alongside the high-value and dynamic data categories, API access to dynamic data and the opening of publicly funded research data (gov.pl/web/ia 'Nowa ustawa o otwartych danych'; nim.gov.pl; isap.sejm.gov.pl WDU20210001641). NOT READ — search-only. CAVEAT: the sources establish that the Act provides for a data portal; that dane.gov.pl is that portal is the Atlas connecting the provision to the operating site."
+    evidence: "Confirmed by reading gov.pl's own Portal Interoperacyjności i Architektury page directly (2026-08-26): the Act of 11 August 2021 on open data and re-use of public sector information establishes a data portal as a database of public sector information resources, alongside the high-value and dynamic data categories, API access to dynamic data and the opening of publicly funded research data. `isap.sejm.gov.pl` remains genuinely CAPTCHA-blocked; `nim.gov.pl`'s cited page now returns HTTP 404 (dead link). dane.gov.pl's own homepage could not be read this pass either — it is a JavaScript-rendered application with no static content for an automated fetch to retrieve. CAVEAT unchanged: the sources establish that the Act provides for a data portal; that dane.gov.pl is that portal is the Atlas connecting the provision to the operating site."
     confidence: low
     valid_from: 2021-12-08
     valid_until: null
@@ -49,19 +49,24 @@ sources:
   - title: "Nowa ustawa o otwartych danych — Portal Interoperacyjności i Architektury"
     url: "https://www.gov.pl/web/ia/nowa-ustawa-o-otwartych-danych"
     publisher: "Portal Gov.pl"
-  - title: "Ustawa z dnia 11 sierpnia 2021 r. o otwartych danych i ponownym wykorzystywaniu informacji sektora publicznego (Dz.U. 2021 poz. 1641)"
+    accessed: "2026-08-26"
+  - title: "Ustawa z dnia 11 sierpnia 2021 r. o otwartych danych i ponownym wykorzystywaniu informacji sektora publicznego (Dz.U. 2021 poz. 1641) — currently CAPTCHA-blocked"
     url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20210001641"
     publisher: "Internetowy System Aktów Prawnych (ISAP) — Sejm RP"
-  - title: "Nowa ustawa o otwartych danych i ponownym wykorzystywaniu informacji sektora publicznego"
+  - title: "Nowa ustawa o otwartych danych i ponownym wykorzystywaniu informacji sektora publicznego (dead link, HTTP 404)"
     url: "https://nim.gov.pl/aktualnosci/nowa-ustawa-o-otwartych-danych-i-ponownym-wykorzystywaniu-informacji-sektora-publicznego.html"
     publisher: "Narodowy Instytut Muzealnictwa (NIM)"
 ---
 
 # dane.gov.pl
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Re-checked 2026-08-26, still `search-only`.** One of three cited
+> pages was read directly. `isap.sejm.gov.pl` remains genuinely
+> CAPTCHA-blocked and `nim.gov.pl`'s page is now a dead link (404).
+> dane.gov.pl's own homepage is a JavaScript-rendered application with no
+> static content an automated fetch can retrieve, so the portal's own
+> voice on its operator still could not be reached. One of three is not
+> enough to call this `primary-source`.
 
 ## Description
 
@@ -121,6 +126,7 @@ to a shared problem, which is not a relationship.
 
 ## Sources
 
-Listed in frontmatter. ⚠ **Not one is the portal's own site.** Everything
-recorded here comes from descriptions of the Act that establishes it, which
-is the direct cause of `coverage: low`.
+Listed in frontmatter, one of three read directly this pass. ⚠ **Not one
+is the portal's own site.** Everything recorded here comes from
+descriptions of the Act that establishes it, which is the direct cause of
+`coverage: low`.

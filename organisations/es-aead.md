@@ -23,11 +23,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2025-02-21
 end_date: null
-last_verified: null
+last_verified: "2026-08-26"
 previous_version: ES-SGAD
 successor: null
 
@@ -42,8 +42,8 @@ relationships:
   - type: supersedes
     target: ES-SGAD
     source: fact
-    evidence: "The Secretaría General de Administración Digital was transformed into the Agencia Estatal de Administración Digital by Real Decreto 1118/2024 of 5 November, which approved its statute; the Agency will replace the current General Secretariat of Digital Administration and assume its functions, and was formally constituted on 21 February 2025 (BOE-A-2024-22929; espanadigital.gob.es 'El Gobierno aprueba la creación de la Agencia Estatal de Administración Digital'). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading boe.es's own text of Real Decreto 1118/2024 directly (2026-08-26, BOE-A-2024-22929): the Agency was created by Ley 22/2021 (the 2022 General Budget Law), and upon its effective constitution the Secretaría General de Administración Digital and its dependent organs are suppressed, with the Agency 'quedará subrogada en la totalidad de los derechos y obligaciones' (subrogated into the totality of the rights and obligations) of the SGAD, assuming all its contracts and legal relationships — a more precise legal mechanism than the previous search-only evidence captured."
+    confidence: high
     valid_from: 2025-02-21
     valid_until: null
 
@@ -51,9 +51,11 @@ sources:
   - title: "Real Decreto 1118/2024, de 5 de noviembre, por el que se aprueba el Estatuto de la Agencia Estatal de Administración Digital"
     url: "https://www.boe.es/buscar/doc.php?id=BOE-A-2024-22929"
     publisher: "Boletín Oficial del Estado (BOE)"
+    accessed: "2026-08-26"
   - title: "Real Decreto 1125/2024, de 5 de noviembre, por el que se regulan la organización y los instrumentos operativos para la Administración Digital de la Administración del Estado"
     url: "https://www.boe.es/buscar/doc.php?id=BOE-A-2024-22935"
     publisher: "Boletín Oficial del Estado (BOE)"
+    accessed: "2026-08-26"
   - title: "El Gobierno aprueba la creación de la Agencia Estatal de Administración Digital para acelerar la transformación tecnológica de las Administraciones Públicas"
     url: "http://espanadigital.gob.es/en/actualidad/el-gobierno-aprueba-la-creacion-de-la-agencia-estatal-de-administracion-digital-para"
     publisher: "España Digital 2026"
@@ -61,9 +63,10 @@ sources:
 
 # AEAD — Agencia Estatal de Administración Digital
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-26.** boe.es's own text of Real Decreto 1118/2024
+> (BOE-A-2024-22929) was read directly, confirming the Agency's legal
+> mechanism for absorbing the SGAD in more precise terms than the
+> search-only evidence carried.
 
 ## Description
 
@@ -79,9 +82,24 @@ attached to or dependent on the state public sector.
 
 Two royal decrees of the same day, 5 November 2024, define it:
 
-- **RD 1118/2024** approves its statute — the instrument that creates it;
+- **RD 1118/2024** approves its statute;
 - **RD 1125/2024** regulates the organisation and operational instruments
   for the digital administration of the State.
+
+Confirmed by reading boe.es directly: the Agency itself was created
+earlier, by **Ley 22/2021** (the 2022 General Budget Law) — RD 1118/2024
+approves the statute that a body created by that law needed before it
+could operate, rather than creating the Agency outright. It reports to the
+Ministry for Digital Transformation and the Civil Service through the
+**State Secretary for the Civil Service**, who serves as its President.
+
+RD 1125/2024, also read directly, names the Agency as the pillar of the
+new ICT governance model: it "coordinará funcionalmente las unidades de
+Tecnologías de la Información y Comunicaciones" (Art. 4.3), and each
+ministerial department must set up its own ICT coordination division
+reporting functionally to the Agency (Art. 4.4) — the mechanism behind
+the "functionally coordinates the ICT units" line in this entity's
+description, previously unsourced to a specific article.
 
 It was **formally constituted on 21 February 2025**.
 
@@ -112,9 +130,11 @@ relationship type on one sourced example.
 
 ## Relationships
 
-- `supersedes` [[ES-SGAD]].
+- `supersedes` [[ES-SGAD]] — confirmed this pass via BOE's own text of RD
+  1118/2024, naming the subrogation mechanism directly; `confidence: high`.
 
 ## Sources
 
-Listed in frontmatter — two BOE entries for the constituting decrees and
-the government's own announcement.
+Listed in frontmatter, two of three read directly this pass: BOE's own
+text of Real Decreto 1118/2024 and of Real Decreto 1125/2024. The España
+Digital 2026 announcement was not re-fetched.

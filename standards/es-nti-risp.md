@@ -24,11 +24,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2013-01-01
 end_date: null
-last_verified: null
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -46,28 +46,34 @@ relationships:
   - type: derived-from
     target: ES-ENI
     source: fact
-    evidence: "Real Decreto 4/2010, which regulates the Esquema Nacional de Interoperabilidad, establishes in its first additional provision the development of a series of Technical Interoperability Standards that are mandatory for public administrations, and those standards develop specific aspects of the matters needed to ensure the practical and operational aspects of interoperability between public administrations and with citizens (anabad.org 'Normas Técnicas de Interoperabilidad — Real Decreto 4/2010'; BOE-A-2010-1331). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading boe.es's own consolidated text of Real Decreto 4/2010 directly (2026-08-26, BOE-A-2010-1331): its first additional provision states the technical interoperability norms 'serán de obligado cumplimiento por parte de las Administraciones Públicas' (will be mandatory for compliance by Public Administrations), listing roughly twenty such norms including the one behind the NTI-RISP. anabad.org was not re-read this pass."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: based-on
     target: EU-DCAT-AP
     source: fact
-    evidence: "The NTI-RISP has been updated to incorporate the DCAT-AP-ES metadata model; DCAT-AP-ES is the Spanish adaptation of the European DCAT-AP metadata exchange scheme, adopts the guidelines of the European DCAT-AP schema and is aligned with the European profiles DCAT-AP 2.1.1 and DCAT-AP-HVD 2.2.0, promoting interoperability between national and European catalogues (datos.gob.es 'DCAT-AP y la Norma Técnica de Interoperabilidad de Reutilización de Recursos de Información'; datos.gob.es 'DCAT-AP-ES: A step forward in open data interoperability'). CAVEAT: the same sources state the DCAT-AP-ES model is in administrative processing, so this descent may not yet be in force. NOT READ — search-only."
+    evidence: "Confirmed by reading datos.gob.es's own blog post and migration guide directly (2026-08-26): 'the future new version of the NTI-RISP incorporates DCAT-AP-ES as a reference model'; DCAT-AP-ES aligns with DCAT-AP 2.1.1, the DCAT-AP-HVD 2.2.0 extension, Directive (EU) 2019/1024 on open data and re-use of public sector information, and Implementing Regulation (EU) 2023/138 establishing the list of High-Value Datasets — all four citations confirmed directly in the migration guide's own text, more precisely than the previous search-only evidence. CAVEAT unchanged: the same pages state DCAT-AP-ES remains in administrative processing, and 'application will be mandatory once the modification text of the standard comes into force' — so this descent is not yet in force."
     confidence: low
     valid_from: null
     valid_until: null
 
 sources:
+  - title: "Real Decreto 4/2010, de 8 de enero, por el que se regula el Esquema Nacional de Interoperabilidad en el ámbito de la Administración Electrónica"
+    url: "https://www.boe.es/buscar/act.php?id=BOE-A-2010-1331"
+    publisher: "Boletín Oficial del Estado (BOE)"
+    accessed: "2026-08-26"
   - title: "DCAT-AP y la Norma Técnica de Interoperabilidad de Reutilización de Recursos de Información (NTI-RISP)"
     url: "https://datos.gob.es/es/conocimiento/dcat-ap-y-la-norma-tecnica-de-interoperabilidad-de-reutilizacion-de"
     publisher: "datos.gob.es"
   - title: "DCAT-AP-ES: A step forward in open data interoperability"
     url: "https://datos.gob.es/en/blog/dcat-ap-es-step-forward-open-data-interoperability"
     publisher: "datos.gob.es"
+    accessed: "2026-08-26"
   - title: "Guide to migrating to DCAT-AP-ES"
     url: "https://datos.gob.es/en/conocimiento/guide-migrating-dcat-ap-es"
     publisher: "datos.gob.es"
+    accessed: "2026-08-26"
   - title: "Guía de aplicación de la Norma Técnica de Interoperabilidad de Reutilización de Recursos de Información"
     url: "https://datos.gob.es/es/documentacion/guia-de-aplicacion-de-la-norma-tecnica-de-interoperabilidad-de-reutilizacion-de"
     publisher: "datos.gob.es"
@@ -78,9 +84,10 @@ sources:
 
 # NTI-RISP / DCAT-AP-ES
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-26.** Three of six cited pages were read directly:
+> BOE's own consolidated text of Real Decreto 4/2010, datos.gob.es's blog
+> post, and its DCAT-AP-ES migration guide — the last of which supplied
+> direct citations for both European legal instruments this entity names.
 
 ## Description
 
@@ -148,11 +155,15 @@ exist to express.
 
 ## Relationships
 
-- `derived-from` [[ES-ENI]].
-- `based-on` [[EU-DCAT-AP]] — low confidence, see above.
+- `derived-from` [[ES-ENI]] — confirmed this pass via BOE's own text of
+  Real Decreto 4/2010; `confidence: high`.
+- `based-on` [[EU-DCAT-AP]] — `confidence: low`, unchanged: the
+  administrative-processing caveat still stands, see above.
 
 ## Sources
 
-Listed in frontmatter — four datos.gob.es pages, including the migration
-guide and the NTI-RISP application guide, plus the government announcement
-of the update.
+Listed in frontmatter, three of six read directly this pass: BOE's own
+text of Real Decreto 4/2010 (newly added as a proper citation, previously
+only named in evidence text), the datos.gob.es blog post, and the
+migration guide. The application guide and the España Digital 2026
+announcement were not re-fetched.

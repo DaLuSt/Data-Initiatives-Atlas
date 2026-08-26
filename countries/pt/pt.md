@@ -21,7 +21,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-20"
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -71,11 +71,11 @@ two.
 
 ## What Portugal adds
 
-- **A one-stop administrative modernisation agency.** [[PT-AMA]] combines
-  administrative and regulatory simplification, e-government and public
-  service delivery in a single public institute — a scope closer to
-  [[GB-GDS]] and [[NO-DIGDIR]] than to the Dutch split between policy and
-  [[NL-LOGIUS]].
+- **A one-stop technological-reform agency.** [[PT-ARTE]] (until August
+  2025, [[PT-AMA]]) combines administrative and regulatory simplification,
+  e-government and public service delivery in a single public institute —
+  a scope closer to [[GB-GDS]] and [[NO-DIGDIR]] than to the Dutch split
+  between policy and [[NL-LOGIUS]].
 - **A GDPR execution law with a name that says what it does.**
   [[PT-LEI-58-2019]] *executes* the Regulation in the domestic legal order.
 - The **eleventh** country, and the **ninth** member state, against which the
