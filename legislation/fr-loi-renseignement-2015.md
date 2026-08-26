@@ -22,11 +22,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2015-07-24
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -42,31 +42,43 @@ related_entities:
 relationships: []
 
 sources:
+  - title: "10 ans de la loi du 24 juillet 2015 relative au renseignement"
+    url: "https://www.dgse.gouv.fr/fr/la-dgse/nos-actualites/10-ans-de-la-loi-du-24-juillet-2015-relative-au-renseignement"
+    publisher: "Direction générale de la Sécurité extérieure (DGSE)"
+    accessed: "2026-08-26"
+  - title: "Les techniques de renseignement contrôlées par la CNCTR"
+    url: "https://www.cnctr.fr/en/techniques-de-renseignement"
+    publisher: "Commission nationale de contrôle des techniques de renseignement (CNCTR)"
+    accessed: "2026-08-26"
+  - title: "Les finalités pouvant légalement justifier le recours à des techniques de renseignement"
+    url: "https://www.cnctr.fr/en/finalites"
+    publisher: "Commission nationale de contrôle des techniques de renseignement (CNCTR)"
+    accessed: "2026-08-26"
   - title: "LOI n° 2015-912 du 24 juillet 2015 relative au renseignement"
     url: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000030931899"
     publisher: "Légifrance / Direction de l'information légale et administrative"
   - title: "LOI n° 2015-912 du 24 juillet 2015 relative au renseignement — dossier législatif"
     url: "https://www.legifrance.gouv.fr/dossierlegislatif/JORFDOLE000030375694/"
     publisher: "Légifrance / Direction de l'information légale et administrative"
-  - title: "Les techniques de renseignement contrôlées par la CNCTR"
-    url: "https://www.cnctr.fr/en/techniques-de-renseignement"
-    publisher: "Commission nationale de contrôle des techniques de renseignement (CNCTR)"
-  - title: "Les finalités pouvant légalement justifier le recours à des techniques de renseignement"
-    url: "https://www.cnctr.fr/en/finalites"
-    publisher: "Commission nationale de contrôle des techniques de renseignement (CNCTR)"
 ---
 
 # Loi du 24 juillet 2015 relative au renseignement
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-26.** DGSE's own tenth-anniversary page and both
+> CNCTR pages were read directly. The codification is more precise
+> than this entity previously recorded: the purposes sit at Article
+> L.811-3 and the techniques at Title V of Book VIII, not just "Book
+> VIII" generally. Both Légifrance citations remain genuinely
+> bot-walled (403) even with an honest User-Agent.
 
 ## Description
 
 The 2015 intelligence law, codified as **Book VIII of the Code de la
-sécurité intérieure**, is the single instrument governing all four French
-services in the Atlas. It legislates three things:
+sécurité intérieure** — its purposes at **Article L.811-3** and its
+techniques at **Title V** of that book, confirmed by reading the
+DGSE's own tenth-anniversary page directly — is the single instrument
+governing all four French services in the Atlas. It legislates three
+things:
 
 1. **Which techniques** may be used — metadata access, categories of
    interception, and more intrusive devices capturing words and images in a
@@ -119,4 +131,7 @@ collected data**, and refer the matter to the public prosecutor.
 
 ## Sources
 
-Listed in frontmatter. Both Légifrance citations are official.
+Listed in frontmatter, three read directly this pass. Both Légifrance
+citations remain genuinely bot-walled (403) even with an honest,
+identifying User-Agent — DGSE's own page and CNCTR's two pages now
+carry the load these were meant to.

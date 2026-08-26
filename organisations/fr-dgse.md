@@ -20,11 +20,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -41,7 +41,7 @@ relationships:
   - type: governed-by
     target: FR-LOI-RENSEIGNEMENT-2015
     source: fact
-    evidence: "The first-circle agencies — DGSE, DGSI, DRM, DRSD, DNRED and TRACFIN — hold the fullest legal authority to employ intelligence-gathering techniques under the Internal Security Code, and are authorised to implement the techniques governed by the intelligence law of July 2015; the DGSE marked ten years of the law of 24 July 2015 on its own site (dgse.gouv.fr '10 ans de la loi du 24 juillet 2015 relative au renseignement'; cnctr.fr 'Les principaux services de renseignement'; legifrance.gouv.fr JORFTEXT000030931899). NOT READ — search-only."
+    evidence: "Confirmed by reading dgse.gouv.fr's own tenth-anniversary page directly (2026-08-26): 'Il y a 10 ans, le 24 juillet 2015, la France s'est dotée d'un cadre juridique afin d'encadrer les activités de ses services de renseignement' (ten years ago, on 24 July 2015, France adopted a legal framework governing its intelligence services' activities), naming the precise codification — 'Art. L. 811-3 du code de la sécurité intérieure (CSI)' for the purposes and 'Titre V du livre VIII du CSI' for the techniques. Confirmed independently by cnctr.fr's own services page, which names DGSE among the six first-circle services. `legifrance.gouv.fr`'s JORF text of the law is genuinely bot-walled (403) even with an honest User-Agent."
     confidence: medium
     valid_from: 2015-07-24
     valid_until: null
@@ -50,22 +50,27 @@ sources:
   - title: "10 ans de la loi du 24 juillet 2015 relative au renseignement"
     url: "https://www.dgse.gouv.fr/fr/la-dgse/nos-actualites/10-ans-de-la-loi-du-24-juillet-2015-relative-au-renseignement"
     publisher: "Direction générale de la Sécurité extérieure (DGSE)"
+    accessed: "2026-08-26"
   - title: "Les principaux services de renseignement"
     url: "https://www.cnctr.fr/services-de-renseignement"
     publisher: "Commission nationale de contrôle des techniques de renseignement (CNCTR)"
-  - title: "LOI n° 2015-912 du 24 juillet 2015 relative au renseignement"
-    url: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000030931899"
-    publisher: "Légifrance / Direction de l'information légale et administrative"
+    accessed: "2026-08-26"
   - title: "Direction générale de la Sécurité extérieure"
     url: "https://fr.wikipedia.org/wiki/Direction_g%C3%A9n%C3%A9rale_de_la_S%C3%A9curit%C3%A9_ext%C3%A9rieure"
     publisher: "Wikipédia"
+    accessed: "2026-08-26"
+  - title: "LOI n° 2015-912 du 24 juillet 2015 relative au renseignement"
+    url: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000030931899"
+    publisher: "Légifrance / Direction de l'information légale et administrative"
 ---
 
 # Direction générale de la Sécurité extérieure (DGSE)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-26.** All three cited pages were read directly.
+> DGSE's own page gives a more precise codification than this entity
+> previously carried — Article L.811-3 for the purposes and Title V of
+> Book VIII for the techniques. `legifrance.gouv.fr` remains genuinely
+> bot-walled.
 
 ## Description
 
@@ -121,4 +126,5 @@ circle is six, and the Atlas holds four of them.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, three read directly this pass; `legifrance.gouv.fr`
+remains genuinely bot-walled.

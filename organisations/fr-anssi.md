@@ -19,11 +19,11 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -37,46 +37,59 @@ relationships:
   - type: applies-to
     target: FR-NIS2-LOI
     source: fact
-    evidence: "The law transposing NIS2 designates ANSSI as the competent national authority for cybersecurity, and since 17 March 2026 ANSSI has made available the Cyber France reference framework (aventris.fr; legiscope.com; nis-2-directive.com France page). NOT READ — search-only. Note the transposing instrument's own status is contested — see FR-NIS2-LOI."
+    evidence: "Confirmed by reading ANSSI's own MonEspaceNIS2 page directly (2026-08-26): the bill transposing NIS2 designates ANSSI as the competent national authority. As established on FR-NIS2-LOI this pass, the bill itself was still not promulgated as of 6 August 2026, so this designation describes a role ANSSI is set to hold once the bill is enacted, not one already in force by statute — though ANSSI already runs MonEspaceNIS2 as a preparatory service in practice. Kept at `confidence: low` for that reason, unchanged from before this pass."
     confidence: low
     valid_from: null
     valid_until: null
 
 sources:
-  - title: "Au cœur d'un collectif, pour une nation cyber-résiliente — ANSSI"
-    url: "https://cyber.gouv.fr/"
-    publisher: "Agence nationale de la sécurité des systèmes d'information (ANSSI)"
   - title: "Missions — ANSSI"
     url: "https://cyber.gouv.fr/nous-connaitre/lagence/missions/"
     publisher: "Agence nationale de la sécurité des systèmes d'information (ANSSI)"
+    accessed: "2026-08-26"
   - title: "Agence nationale de la sécurité des systèmes d'information | SGDSN"
     url: "https://www.sgdsn.gouv.fr/notre-organisation/composantes/agence-nationale-de-la-securite-des-systemes-dinformation"
     publisher: "Secrétariat général de la défense et de la sécurité nationale (SGDSN)"
+    accessed: "2026-08-26"
   - title: "Avancement de la transposition de la directive NIS 2"
     url: "https://aide.monespacenis2.cyber.gouv.fr/fr/article/avancement-de-la-transposition-de-la-directive-nis-2-1b3j1da/"
     publisher: "MonEspaceNIS2 (ANSSI)"
+    accessed: "2026-08-26"
+  - title: "Au cœur d'un collectif, pour une nation cyber-résiliente — ANSSI"
+    url: "https://cyber.gouv.fr/"
+    publisher: "Agence nationale de la sécurité des systèmes d'information (ANSSI)"
+    accessed: "2026-08-26"
 ---
 
 # ANSSI — Agence nationale de la sécurité des systèmes d'information
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-26.** All four cited pages were read directly.
+> ANSSI's own missions page confirms the five missions verbatim; its
+> designation as NIS2's competent authority is confirmed on ANSSI's
+> own MonEspaceNIS2 page, but the transposing bill is now known (see
+> [[FR-NIS2-LOI]]) to still not be in force.
 
 ## Description
 
-ANSSI is France's national authority for cybersecurity and cyberdefence, a
-component of the **Secrétariat général de la défense et de la sécurité
-nationale (SGDSN)**. Its stated purpose is to build and organise, in an
-interministerial way, the nation's protection against cyberattacks and to
-contribute to the stability of cyberspace.
+Confirmed by reading cyber.gouv.fr and sgdsn.gouv.fr directly
+(2026-08-26): ANSSI is France's national authority for cybersecurity
+and cyberdefence, a component of the **Secrétariat général de la
+défense et de la sécurité nationale (SGDSN)**. SGDSN's own page: "L'ANSSI
+est l'autorité nationale en matière de cybersécurité et de
+cyberdéfense" (ANSSI is the national authority for cybersecurity and
+cyberdefence).
 
-It describes **five missions**: defend, know, share, support and regulate.
+Confirmed verbatim by reading ANSSI's own missions page directly: "Son
+action se traduit en cinq grandes missions : défendre, connaître,
+partager, accompagner, réguler" (its action translates into five major
+missions: defend, know, share, support, regulate) — matching this
+entity's description exactly.
 
 It is designated the competent national authority under France's NIS2
-transposition, and since **17 March 2026** has made available the *Cyber
-France* reference framework. It also runs **MonEspaceNIS2**, the
-registration and guidance service for entities in scope.
+transposition — currently still a bill, per [[FR-NIS2-LOI]] — and
+since **17 March 2026** has made available the *Cyber France* reference
+framework. It also runs **MonEspaceNIS2**, the registration and
+guidance service for entities in scope.
 
 `coverage: low`: the agency's founding instrument, size, and the boundary
 between its remit and the CNIL's are not recorded.
@@ -108,4 +121,4 @@ The other is [[EU-INSPIRE]] → [[NL]]. Both are logged.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, all four read directly this pass.

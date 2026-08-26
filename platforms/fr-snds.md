@@ -18,11 +18,11 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -36,7 +36,7 @@ relationships:
   - type: part-of
     target: FR
     source: fact
-    evidence: "The Plateforme des données de santé implements the major strategic orientations relating to the Système national des données de santé established by the State and in particular the Ministry of Solidarity and Health (drees.solidarites-sante.gouv.fr 'Plateforme des données de santé'; sante.gouv.fr press release 191202). NOT READ — search-only. Anchor edge under metadata/relationship-types.md §2.3: a national data system whose orientations are set by the State is part of the state."
+    evidence: "Confirmed by reading drees.solidarites-sante.gouv.fr's own page directly (2026-08-26), the same page read for [[FR-HEALTH-DATA-HUB]]: it describes the Plateforme des données de santé as implementing the strategic orientations the State sets for the Système national des données de santé. `sante.gouv.fr`'s press release remains genuinely blocked by a JavaScript bot-defense challenge regardless of User-Agent. Anchor edge under metadata/relationship-types.md §2.3: a national data system whose orientations are set by the State is part of the state."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -45,6 +45,7 @@ sources:
   - title: "Plateforme des données de santé"
     url: "https://drees.solidarites-sante.gouv.fr/sources-outils-et-enquetes/plateforme-des-donnees-de-sante"
     publisher: "DREES — Direction de la recherche, des études, de l'évaluation et des statistiques"
+    accessed: "2026-08-26"
   - title: "Le Health Data Hub est officiellement créé — communiqué de presse, 2 décembre 2019"
     url: "https://sante.gouv.fr/IMG/pdf/191202_-_cp_-_health_data_hub.pdf"
     publisher: "Ministère des Solidarités et de la Santé"
@@ -52,9 +53,13 @@ sources:
 
 # SNDS — Système national des données de santé
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read — retrieval is blocked by
-> the network egress proxy. `verification: search-only`.
+> **Verified 2026-08-26.** DREES's own page was read directly.
+> `sante.gouv.fr`'s press release remains genuinely blocked by a
+> JavaScript bot-defense challenge regardless of User-Agent. The
+> underlying thinness this entity has always flagged — no source about
+> the SNDS itself, only sources about the Plateforme that mention it in
+> passing — is unchanged by reading the page; that is a coverage limit,
+> not a verification one.
 
 ## Description
 
@@ -89,5 +94,7 @@ it.
 
 ## Sources
 
-Listed in frontmatter — both are Plateforme sources. That is the limitation
-described above, stated where it can be seen.
+Listed in frontmatter. `drees.solidarites-sante.gouv.fr` was read
+directly this pass and remains, as before, a Plateforme source rather
+than an SNDS source — the limitation described above. `sante.gouv.fr`
+remains genuinely blocked by a JavaScript challenge.

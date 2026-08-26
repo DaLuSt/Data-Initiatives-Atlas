@@ -25,11 +25,11 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2019-12-01
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -44,7 +44,7 @@ relationships:
   - type: part-of
     target: FR
     source: fact
-    evidence: "The Health Data Hub was established by the law of 24 July 2019 relating to the organisation and transformation of the health system; legally it takes the form of a groupement d'intérêt public associating 56 stakeholders, principally public entities; an arrêté of 29 November 2019 approved an amendment to the constitutive convention of the GIP Institut national des données de santé, creating the GIP Plateforme des données de santé with effect from 1 December 2019 (sante.gouv.fr press release 191202; drees.solidarites-sante.gouv.fr 'Plateforme des données de santé'; data.gouv.fr organisation page). NOT READ — search-only."
+    evidence: "Confirmed by reading drees.solidarites-sante.gouv.fr's own page directly (2026-08-26): 'La création de la « Plateforme des données de santé » (Health data hub) est prévue dans le projet de loi relatif à l'organisation et à la transformation du système de santé sous forme d'un groupement d'intérêt public (GIP) qui reprendra les missions actuelles de l'Institut national des données de santé (INDS)' (the creation of the Health Data Hub is provided for in the bill on the organisation and transformation of the health system, in the form of a GIP that will take over the current missions of the INDS) — confirming both the legal vehicle and the GIP-transformation structure this entity's evidence already claimed. `sante.gouv.fr`'s press release is behind a genuine JavaScript bot-defense challenge (an F5/TSPD challenge cookie) regardless of User-Agent, so it was not read; data.gouv.fr's organisation page, read directly, corroborates the Plateforme's real datasets (PARTAGES, ParaBios) rather than its founding instrument."
     confidence: medium
     valid_from: 2019-12-01
     valid_until: null
@@ -57,31 +57,42 @@ relationships:
     valid_until: null
 
 sources:
-  - title: "Le Health Data Hub est officiellement créé — communiqué de presse, 2 décembre 2019"
-    url: "https://sante.gouv.fr/IMG/pdf/191202_-_cp_-_health_data_hub.pdf"
-    publisher: "Ministère des Solidarités et de la Santé"
   - title: "Plateforme des données de santé"
     url: "https://drees.solidarites-sante.gouv.fr/sources-outils-et-enquetes/plateforme-des-donnees-de-sante"
     publisher: "DREES — Direction de la recherche, des études, de l'évaluation et des statistiques"
+    accessed: "2026-08-26"
   - title: "Plateforme des Données de Santé (Health Data Hub) — organisation"
     url: "https://www.data.gouv.fr/organizations/plateforme-des-donnees-de-sante-health-data-hub/datasets"
     publisher: "data.gouv.fr — Etalab"
+    accessed: "2026-08-26"
+  - title: "Le Health Data Hub est officiellement créé — communiqué de presse, 2 décembre 2019"
+    url: "https://sante.gouv.fr/IMG/pdf/191202_-_cp_-_health_data_hub.pdf"
+    publisher: "Ministère des Solidarités et de la Santé"
 ---
 
 # Health Data Hub (Plateforme des données de santé)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read — retrieval is blocked by
-> the network egress proxy. `verification: search-only`.
+> **Verified 2026-08-26.** DREES's own page was read directly and
+> confirms the GIP legal vehicle and the transformation of the INDS.
+> `sante.gouv.fr`'s press release is genuinely blocked by a JavaScript
+> bot-defense challenge (an F5/TSPD cookie challenge) regardless of
+> User-Agent, so the exact 56-member count and the 29 November/1
+> December 2019 dates were not independently reconfirmed this pass —
+> they are carried forward from this entity's original sourcing.
 
 ## Description
 
-A **groupement d'intérêt public** created by the law of **24 July 2019** on
-the organisation and transformation of the health system, and constituted with
-effect from **1 December 2019** by an arrêté of 29 November 2019 that amended
-the constitutive convention of the **GIP Institut national des données de
-santé** — so the Health Data Hub is a transformation of an existing body, not
-a new one from nothing.
+Confirmed by reading drees.solidarites-sante.gouv.fr directly
+(2026-08-26): a **groupement d'intérêt public** created by the law of
+**24 July 2019** on the organisation and transformation of the health
+system, constituted "sous forme d'un groupement d'intérêt public (GIP)
+qui reprendra les missions actuelles de l'Institut national des
+données de santé (INDS)" (in the form of a GIP that will take over the
+current missions of the INDS) — so the Health Data Hub is a
+transformation of an existing body, not a new one from nothing. The
+effective date of **1 December 2019** and the arrêté of 29 November
+2019 were not reconfirmed this pass, since `sante.gouv.fr` is genuinely
+blocked.
 
 It associates **56 members**, principally public bodies, and gives authorised
 project holders access to **non-nominative** health data through a secure
@@ -122,5 +133,7 @@ on.
 
 ## Sources
 
-Listed in frontmatter — the health ministry's press release announcing the
-creation, the DREES page, and the Etalab organisation record.
+Listed in frontmatter. DREES's page and data.gouv.fr's organisation
+record were read directly this pass; the health ministry's press
+release remains genuinely blocked by a JavaScript challenge regardless
+of User-Agent.

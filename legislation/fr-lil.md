@@ -21,11 +21,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 1978-01-06
 end_date: null
-last_verified: null
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -42,7 +42,7 @@ relationships:
   - type: implements-requirement-from
     target: EU-GDPR
     source: fact
-    evidence: "Law n° 2018-493 of 20 June 2018 modified the loi Informatique et Libertés to bring French law into conformity with the European framework, taking positions on the roughly fifty discretionary options the GDPR leaves to member states; ordinance n° 2018-1125 of 12 December 2018 completed the conformity of law n° 78-17 of 6 January 1978 with the GDPR (cnil.fr; entreprises.cci-paris-idf.fr; moirouxavocats.com). NOT READ — search-only."
+    evidence: "Confirmed by reading cnil.fr's own page directly (2026-08-26): 'La loi n° 2018-493 du 20 juin 2018, promulguée le 21 juin 2018, a modifié la loi Informatique et Libertés afin de mettre en conformité le droit national avec le cadre juridique européen' (Law n° 2018-493 of 20 June 2018, promulgated 21 June 2018, modified the loi Informatique et Libertés to bring national law into conformity with the European legal framework), and confirms this enabled 'la mise en œuvre concrète du Règlement général sur la protection des données (RGPD)' (the concrete implementation of the GDPR). Ordinance n° 2018-1125 of 12 December 2018's exact title and date are confirmed directly by reading moirouxavocats.com. `legifrance.gouv.fr` — which would carry the acts' own text — is genuinely bot-walled (403) even with an honest User-Agent, so neither text was read at first hand."
     confidence: medium
     valid_from: 2018-06-20
     valid_until: null
@@ -51,25 +51,32 @@ sources:
   - title: "Entrée en vigueur de la nouvelle loi Informatique et Libertés"
     url: "https://www.cnil.fr/fr/entree-en-vigueur-de-la-nouvelle-loi-informatique-et-libertes"
     publisher: "Commission nationale de l'informatique et des libertés (CNIL)"
-  - title: "Loi informatique et libertés"
-    url: "https://fr.wikipedia.org/wiki/Loi_informatique_et_libert%C3%A9s"
-    publisher: "Wikipédia"
-  - title: "RGPD : une ordonnance réécrit la loi informatique et libertés"
-    url: "https://www.entreprises.cci-paris-idf.fr/fiches-pratiques/la-loi-informatique-et-libertes-et-le-rgpd"
-    publisher: "CCI Paris Île-de-France"
+    accessed: "2026-08-26"
   - title: "Les modifications apportées par l'ordonnance n° 2018-1125 du 12 décembre 2018 à la loi n° 78-17 du 6 janvier 1978"
     url: "https://moirouxavocats.com/actualites/les-modifications-apportees-par-lordonnance-n-2018-1125-du-12-decembre-2018-a-la-loi-n-78-17-du-6-janvier-1978-relative-a-linformatique-aux-fichiers-et-aux-libertes/"
     publisher: "Moiroux Avocats"
+    accessed: "2026-08-26"
+  - title: "Loi informatique et libertés"
+    url: "https://fr.wikipedia.org/wiki/Loi_informatique_et_libert%C3%A9s"
+    publisher: "Wikipédia"
+    accessed: "2026-08-26"
+  - title: "RGPD : une ordonnance réécrit la loi informatique et libertés"
+    url: "https://www.entreprises.cci-paris-idf.fr/fiches-pratiques/la-loi-informatique-et-libertes-et-le-rgpd"
+    publisher: "CCI Paris Île-de-France"
+    accessed: "2026-08-26"
   - title: "DOSSIER — Réforme de la Loi informatique et Libertés"
     url: "https://www.gers.cci.fr/actualites/dossier-reforme-de-la-loi-informatique-et-libertes.html"
     publisher: "CCI Gers"
+    accessed: "2026-08-26"
 ---
 
 # Loi Informatique et Libertés (loi n° 78-17)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-26.** All five cited pages were read directly.
+> CNIL's own page confirms the 2018 reform's date and purpose verbatim.
+> `legifrance.gouv.fr`, which would carry the acts' own text, is
+> genuinely bot-walled (403) even with an honest, identifying
+> User-Agent — confirmed on several JORF pages across this cluster.
 
 ## Description
 
@@ -143,7 +150,9 @@ two countries, two workarounds, both documented.
 
 ## Sources
 
-Listed in frontmatter. **No Légifrance citation for loi 78-17 itself** —
-none was returned by search, so the act's text is not cited and the 1978
-date rests on the CNIL and secondary commentary. Three of the five sources
-are chamber-of-commerce or law-firm commentary.
+Listed in frontmatter, all five read directly this pass. **Still no
+Légifrance citation for loi 78-17 itself** — `legifrance.gouv.fr` is
+genuinely bot-walled (403) even with an honest User-Agent, so the
+1978 date continues to rest on CNIL and secondary commentary rather
+than the act's own text. Three of the five sources are
+chamber-of-commerce or law-firm commentary.

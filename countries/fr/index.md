@@ -7,20 +7,28 @@ belong on the country's front page (`CONTRIBUTING.md`).
 
 Anchor entity: [[FR]]
 
-> **Sourcing caveat.** Every French entity below was compiled from
-> search-engine results only: the cited pages were confirmed to exist but
-> were **not read**, because the working environment blocked page
-> retrieval. They carry `verification: search-only` and need a
-> re-verification pass against primary sources. See
-> `discovery/reverification-allowlist.md`.
+> **Re-verified 2026-08-26.** All 22 France-scoped entities were re-checked
+> against primary sources this pass and 21 now carry
+> `verification: primary-source`. [[FR-DGSI]] stays `search-only` — only
+> one of its four cited sources could be read. Several hosts are now
+> confirmed genuinely bot-walled regardless of User-Agent:
+> `legifrance.gouv.fr` (JORF text pages), `interieur.gouv.fr` (including
+> the `dgsi.interieur.gouv.fr` subdomain), `economie.gouv.fr`, and
+> `lejdd.fr`. `sante.gouv.fr`'s Health Data Hub press release is a
+> JavaScript bot-defense challenge, not a plain block. Two cited domains
+> are dead: `guides.etalab.gouv.fr` (superseded by `guides.data.gouv.fr`)
+> and `www.drsd.defense.gouv.fr` (superseded by pages under
+> `www.defense.gouv.fr/drsd/`). See `discovery/reverification-allowlist.md`.
 
 ## Organisations
 
 - [[FR-HEALTH-DATA-HUB]] — Plateforme des données de santé _(GIP of 56 members, created 1 December 2019)_
 - [[FR-DINUM]] — Direction interministérielle du numérique _(a service of the Prime Minister)_
-  - [[FR-ETALAB]] — open data department _(inside DINUM)_
+  - [[FR-ETALAB]] — open data department _(inside DINUM; founded 21 February 2011)_
 - [[FR-CNIL]] — data protection authority
 - [[FR-ANSSI]] — national cybersecurity authority
+- [[FR-AFNOR]] — national standards body
+- [[FR-INSEE]] — national statistical institute
 
 ## Legislation
 
@@ -31,7 +39,9 @@ Anchor entity: [[FR]]
   entity)_
 - [[FR-LRN]] — Loi pour une République numérique, 2016 _(open data by
   default; **not** the Open Data Directive transposition)_
-- [[FR-NIS2-LOI]] — Loi Résilience _(⚠ `status: unknown` — sources conflict)_
+- [[FR-NIS2-LOI]] — Loi Résilience _(`status: planned` — still a bill,
+  unpromulgated as of 6 August 2026; the earlier sourcing conflict is
+  resolved, see the entity)_
 
 ## Frameworks and standards
 
@@ -42,6 +52,7 @@ Anchor entity: [[FR]]
 
 - [[FR-DATA-GOUV]] — national open data portal
 - [[FR-FRANCECONNECT]] — identity federation _(federation, not an account)_
+- [[FR-SNDS]] — national health data system _(thin: sourced only through [[FR-HEALTH-DATA-HUB]])_
 
 ---
 
@@ -63,7 +74,7 @@ and [[BE]]:
 | EU instrument | France | Belgium | Germany | Netherlands |
 |---|---|---|---|---|
 | [[EU-GDPR]] | [[FR-LIL]] | [[BE-GDPR-WET]] | [[DE-BDSG]] | [[NL-UAVG]] |
-| [[EU-NIS2]] | [[FR-NIS2-LOI]] ⚠ | [[BE-NIS2-WET]] | [[DE-NIS2UMSUCG]] | [[NL-CBW]] |
+| [[EU-NIS2]] | [[FR-NIS2-LOI]] _(still a bill)_ | [[BE-NIS2-WET]] | [[DE-NIS2UMSUCG]] | [[NL-CBW]] |
 | [[EU-DCAT-AP]] | _(none found)_ | [[BE-DCAT-AP-BE]] | [[DE-DCAT-AP-DE]] | [[NL-DCAT-AP-NL]] |
 | [[EU-EIF]] | _(refused)_ | **[[BE-BELGIF]]** | _(refused)_ | _(refused)_ |
 | [[EU-OPEN-DATA-DIRECTIVE]] | _(not identified)_ | _(not identified)_ | [[DE-DNG]] | [[NL-WHO]] |
@@ -118,14 +129,13 @@ picture.
 
 ## Not modelled
 
-- **INSEE**, the national statistical office — only a passing mention was
-  found. Its absence means the statistics cluster stays at three unconnected
-  national offices rather than four.
 - **A French DCAT profile.** data.gouv.fr certainly exposes DCAT, but no
   source read establishes a named French application profile, so the DCAT
   fork stops at three countries.
 - **France Identité** as its own entity; recorded in prose on
   [[FR-FRANCECONNECT]].
-- **AFNOR** (national standards body), the RGS and RGAA reference
-  frameworks, and the Health Data Hub. All queued in
-  `discovery/research-queue.md`.
+- **The RGS and RGAA reference frameworks**, the **loi OTSS** underlying
+  [[FR-HEALTH-DATA-HUB]] (no JORF/Legifrance identifier found), the
+  **Autorité de la statistique publique** and **CNIS** (INSEE oversight),
+  and **DNRED**/**TRACFIN** (the two *premier cercle* services not
+  modelled — see below).
