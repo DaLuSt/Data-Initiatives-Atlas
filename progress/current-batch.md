@@ -1,11 +1,13 @@
 # Current Batch
 
-**Status:** No batch in progress. **The eleventh verification-gap push**
-completed on 2026-08-26 — closing Austria's tail, the smallest
-remaining one. Full detail moved to `progress/completed.md`; summary
-below. `discovery/reverification-allowlist.md` ranks the next
-re-verification targets, and `discovery/research-queue.md` carries the
-rest of the research backlog.
+**Status:** No batch in progress. **The thirteenth verification-gap
+push** completed on 2026-08-26 — closing Estonia's tail. This push and
+the twelfth (Finland) were opened as separate, independently branched
+PRs; whichever merges second may need a routine merge-conflict
+resolution on this file and `progress/completed.md`. Full detail moved
+to `progress/completed.md`; summary below. `discovery/reverification-allowlist.md`
+ranks the next re-verification targets, and `discovery/research-queue.md`
+carries the rest of the research backlog.
 
 **Tail pushes, not fresh clusters.** Countries whose anchor and most
 entities are `primary-source` can still carry a handful of
@@ -13,9 +15,10 @@ entities are `primary-source` can still carry a handful of
 after the country's main re-verification pass. [[DK]] (4) and [[SE]]
 (3) were closed by the eighth and ninth pushes; [[FR]]'s entire cluster
 (22 entities, one straggler — [[FR-DGSI]]) was closed by the tenth;
-[[AT]] (3) was closed by the eleventh. `NL` (67), `DE` (27), `BE` (24),
-`ES` (22), `PL` (18), `PT` (8), `EE` (7), `CZ` (7) and `FI` (6) still
-carry tail entities — `FI` (6) is now the smallest remaining.
+[[AT]] (3) was closed by the eleventh; [[FI]] (6) was closed by the
+twelfth; [[EE]] (7) was closed by the thirteenth. `NL` (67), `DE` (27),
+`BE` (24), `ES` (22), `PL` (18) and `PT` (8) still carry tail entities —
+`CZ` (7) is now the smallest remaining.
 
 **Corrected/added guidance on what is actually blocked:** `efta.int` is
 **not** bot-walled — it returns a 403 to a browser-spoofing User-Agent
@@ -68,7 +71,61 @@ superseded respectively by `guides.data.gouv.fr` and pages under
 `www.defense.gouv.fr/drsd/`. `sante.gouv.fr`'s Health Data Hub PDF
 returns HTTP 200 but the body is actually an HTML page carrying an
 F5/TSPD JavaScript bot-defense challenge, not a real PDF — a genuine
-block, not a parsing failure.
+block, not a parsing failure. `scoop4c.eu`, cited on the Estonian
+cluster, is genuinely unreachable in the thirteenth push regardless of
+User-Agent — a raw TLS connection reset, not an HTTP-level block, a
+shape distinct from every other blocked host found this session.
+**`ria.ee` is a client-fingerprint-dependent block, a new shape**:
+reading its pages by direct `curl` fetch with the honest User-Agent
+succeeds reliably (`200`, full content), but `tools/reverify.py`'s own
+fetcher — Python's `urllib`, sending the identical UA string —
+reproducibly gets a Cloudflare "Just a moment..." challenge on the same
+URLs. The block tracks the HTTP client's own network fingerprint (TLS/
+JA3 or equivalent), not the UA header or the honest-vs-browser-spoofing
+axis every earlier finding this session turned on. Content from
+`ria.ee` in the thirteenth push was verified by direct `curl` fetch;
+`tools/reverify.py --id` runs against Estonian entities citing `ria.ee`
+will report it UNREACHABLE regardless.
+
+## The thirteenth verification-gap push — 2026-08-26
+
+Closed Estonia's tail: [[EE-E-RESIDENCY]], [[EE-ANDMEPORTAAL]],
+[[EE-RIHA]], [[EE-X-TEE]], [[EE-IKS]], [[EE-ATS]] and [[EE-RIA]] — the
+seven entities still `verification: search-only` after [[EE-AKI]] and
+[[EE-STATISTIKAAMET]] had already been re-verified in earlier passes.
+All seven now carry `verification: primary-source`.
+
+**A stale country anchor, fixed twice over.** [[EE]]'s own body text
+still said no Estonia entity was modelled, and separately still framed
+X-Road and e-Residency as gaps the Atlas held nothing about — both
+claims stopped being true once nine entities were added and re-verified,
+none of which had touched the anchor. The same bug shape found on [[IT]],
+[[AT]] and [[FI]] in earlier pushes, confirmed a fourth time.
+
+**[[EE-RIHA]] is on notice.** RIA's own data-portal page, read directly,
+states RIHA "is currently still in use, but it is expected to be
+decommissioned at the end of 2026 when the legislative amendments come
+into force" — a live transition with a public target date, not the
+already-settled replacement [[EE-ANDMEPORTAAL]]'s `replaces` edge
+previously implied. Both entities' evidence was rewritten to reflect a
+transition in progress.
+
+**RIA runs Estonia's CERT, confirmed in RIA's own words.** RIA's site
+states directly: "RIA is the National Cyber Security Centre of Estonia
+(NCSC-EE)," naming CERT-EE as the incident-handling body — closing an
+uncertainty [[EE-RIA]] previously flagged as unconfirmed. CERT-EE still
+has no Atlas entity of its own. RIA's page also places the authority
+"within the administrative area of the Ministry of Justice and Digital
+Affairs," a placement this entity did not previously carry.
+
+**Two more fabricated placeholder dates, corrected.** [[EE-ATS]]
+carried `start_date: 2000-01-01` with nothing behind the day; corrected
+to unset, with the Riigi Teataja citation's year (2000) kept in prose.
+[[EE-IKS]]'s 15 January 2019 date, by contrast, is now confirmed
+verbatim by two independent legal-tracker sources (Linklaters,
+White & Case), which also surfaced a related follow-on act — a Personal
+Data Protection Act Implementation Act, in force 15 March 2019 — not
+previously known and not modelled as its own entity.
 
 ## The eleventh verification-gap push — 2026-08-26
 
@@ -159,28 +216,13 @@ claim on [[FR-INSEE]] ("French branch of Eurostat") was traced to a
 login-gated, content-free European Commission shell page and dropped
 rather than carried forward unverified.
 
-## The ninth verification-gap push — 2026-08-25
-
-Closed Sweden's tail: [[SE-DATAPORTAL]], [[SE-DIGG]] and [[SE-SCB]],
-the three Swedish entities still `verification: search-only` after
-Sweden's country anchor and [[SE-IMY]] had already been re-verified.
-All three now carry `verification: primary-source`.
-
-**[[SE-DIGG]]'s custodianship of [[SE-DATAPORTAL]], confirmed almost
-word for word.** dataportal.se's own "Om oss" page states directly:
-"(Digg) ansvarar för Sveriges dataportal" (DIGG is responsible for
-Sweden's data portal), matching the `maintained-by` edge and the
-"public and private organisations" framing this entity already
-carried, unread, since creation.
-
-**[[SE-SCB]]'s [[EU-ESS]] membership stays on the composition-rule
-tier.** scb.se's own "About us" page confirms Statistics Sweden's
-identity directly ("responsible for official statistics and for other
-government statistics") but does not name Eurostat or the ESS — the
-same honest call made on [[LU-STATEC]] and [[DK-DST]] in earlier
-passes.
-
 ## Earlier pushes
+
+- **Ninth push** (2026-08-25): closed Sweden's tail —
+  [[SE-DATAPORTAL]], [[SE-DIGG]] and [[SE-SCB]]. Confirmed
+  [[SE-DIGG]]'s custodianship of [[SE-DATAPORTAL]] almost word for
+  word; kept [[SE-SCB]]'s [[EU-ESS]] membership on the composition-rule
+  tier. See "The ninth verification-gap push".
 
 - **Eighth push** (2026-08-25): closed Denmark's tail —
   [[DK-GRUNDDATA]], [[DK-DATATILSYNET]], [[DK-SUNDHEDSDATASTYRELSEN]]

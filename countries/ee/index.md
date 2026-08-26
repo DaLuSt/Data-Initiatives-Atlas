@@ -7,10 +7,15 @@ the country's front page (`CONTRIBUTING.md`).
 
 Anchor entity: [[EE]]
 
-> **Sourcing caveat.** Every Estonian entity below was compiled from
-> search-engine results only: the cited pages were confirmed to exist but were
-> **not read**, because the working environment blocked page retrieval. They
-> carry `verification: search-only`.
+> **Re-verified 2026-08-26.** All seven remaining `verification:
+> search-only` entities in this cluster were re-checked against primary
+> sources and now carry `verification: primary-source`, alongside
+> [[EE-AKI]] and [[EE-STATISTIKAAMET]] from earlier passes — Estonia's
+> whole cluster is now fully re-verified. RIA's own page revealed
+> [[EE-RIHA]] is on notice: expected decommissioning "at the end of
+> 2026," with its role folding into [[EE-ANDMEPORTAAL]]. `scoop4c.eu`
+> is genuinely unreachable (a TLS connection reset, not a UA-specific
+> block). See `discovery/reverification-allowlist.md`.
 
 ## Organisations
 
@@ -34,6 +39,7 @@ Anchor entity: [[EE]]
   [[INTL-X-ROAD]]; data flows source-to-recipient, never through a central
   store)_
 - [[EE-RIHA]] — administration system for the state information system
+  _(on notice: RIA expects to decommission it at the end of 2026)_
 - [[EE-ANDMEPORTAAL]] — the Estonian data portal _(established **2025**;
   merges the open data catalogue with the database descriptions)_
 
