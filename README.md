@@ -44,67 +44,45 @@ hand-maintained.
 
 ### ⚠ Read this before you cite anything
 
-Almost everything in this Atlas is **`verification: search-only`**. The URLs
-in every entity's `sources:` were confirmed by a search index to exist and
-**were not read**, because the environment this was built in blocks outbound
-HTTPS to essentially every host. A full sweep on 2026-08-19 attempted all
-**1,500 cited URLs and retrieved none**.
+Every entity carries a `verification` field in its frontmatter, and it means
+exactly what it says:
 
-**Twelve entities are now verified.** On 2026-08-20 the repository owner read
-31 sources across the five Batch 1 areas — Forum Standaardisatie, the
-IBDS/FDS, NORA, Common Ground and MIDO — and confirmed they support what the
-entities say.
+- **`verification: search-only`** — the URLs in `sources:` were confirmed by
+  a search index to exist, but nobody has actually opened and read them yet.
+  The claims may well be accurate; they simply haven't been checked against
+  the primary source.
+- **`verification: primary-source`** — someone opened every cited page
+  directly, confirmed it supports what the entity says, and recorded the
+  date in `accessed:`. Entities at this level also drop the sourcing caveat
+  from their body text, because it is no longer true of them.
 
-[[NL-NORA]], [[NL-IBDS]], [[NL-FDS]], [[NL-COMMON-GROUND]], [[NL-MIDO]],
-[[NL-PAS-TOE-OF-LEG-UIT]], [[NL-FORUM-STANDAARDISATIE]], [[NL-BZK]],
-[[NL-VNG]], [[NL-ICTU]], [[NL-OBDO]] and [[NL-GDI]] carry
-`verification: primary-source`, dated `accessed:` stamps on every source, and
-no sourcing caveat — because it is no longer true of them.
+This is disclosed rather than buried, and enforced rather than just stated:
+`validate_frontmatter.py` **refuses `confidence: high`** on any entity that
+is still `search-only`, so an unverified claim can never quietly present
+itself as a checked one, and the site shows each entity's verification state
+on its own page.
 
-**That is the whole of Batch 1's core governance layer**, and it is the
-answer to "is any of this actually checked": yes, that part, entirely, by
-hand, on a stated date.
+**How to verify an entity.** Re-verification means opening every URL in an
+entity's `sources:` list, reading the page, and checking that it actually
+supports the entity's claims — not just that the page exists.
 
-**Twenty-one of the 27 EU member-state anchors were verified the same day**,
-against the Union's own list of member states. The six founding members are
-deliberately **not** among them: the verification pass supplied 25 March 1957
-(the Treaty of Rome's signature) where the Atlas records 1 January 1958 (its
-entry into force). Both dates are now on each of those six entities, and
-`discovery/unresolved.md` records the choice rather than resolving it
-quietly.
-
-**On 2026-08-21, with outbound HTTPS open, `tools/reverify.py` read its first
-pages.** Twenty-one entities moved to `verification: primary-source` this
-way — the seven Dutch base-registration statutes (BWBR-keyed, the class of
-citation the tool exists to guard, per the Kadasterwet/Archiefwet near-miss
-below) plus fourteen EU-scoped organisations. Two errors were found and
-corrected in the process: [[NL-WET-BGT]] had its third commencement stage
-dated 30 April 2018 (a decree's *publication* date) when `wetten.overheid.nl`
-gives 1 July 2018 (when the articles actually took effect), and
-[[NL-KADASTERWET]] carried an alternative name, "Kadasterwet 1989", that the
-statute's own metadata does not attest. Several umlaut/diacritic typos were
-also fixed (`Datenschutzbehorde` → `Datenschutzbehörde`,
-`Bundesanstalt Statistik Osterreich` → `... Österreich`). Not every host
-cooperates: `eur-lex.europa.eu`, `www.iso.org`, `www.coe.int` and
-`unece.org` answer every automated fetch with a bot-defense challenge page
-rather than content, in this environment as in any other — so the entities
-citing only those hosts are still `search-only`, and moving them needs a
-different approach than this pass took. See `docs/re-verification.md` §"A
-machine-corroborated pass" for the full account.
-
-That is disclosed rather than buried, and the repository is built around the
-gap rather than around hiding it:
-
-- every entity carries `verification` in its frontmatter and a sourcing
-  caveat in its body, and the site says so on every page;
-- `validate_frontmatter.py` **refuses `confidence: high`** on any entity that
-  is still `search-only`;
-- `discovery/unresolved.md` is the standing register of what is unknown, and
-  `discovery/reverification-allowlist.md` is the generated worklist —
-  1,689 URLs, 552 hosts, 400 domains, ranked by how many entities each
-  unblocks;
-- `tools/reverify.py` runs the pass and `docs/re-verification.md` is the
-  procedure.
+- `tools/reverify.py` runs this pass wherever a host allows automated
+  fetching: it fetches each source with an honest, identifying User-Agent
+  and reports what it read. `docs/re-verification.md` is the full procedure.
+- Some hosts block automated fetches outright — an HTTP 403 wall, a
+  bot-defense challenge page, a dead domain or a TLS reset — and those
+  entities need a manual read instead.
+- Once a source has genuinely been read and confirmed, set
+  `verification: primary-source`, add an `accessed:` date, rewrite the
+  evidence with what the source actually says (a verbatim quote where
+  possible), and drop the sourcing caveat from the body.
+- Never pad a partial date — a bare year or month found in a source — into a
+  fabricated `YYYY-MM-DD`. Leave `start_date`/`end_date` as `null` and record
+  the real precision in prose instead.
+- `discovery/unresolved.md` is the standing register of what is still
+  unknown, and `discovery/reverification-allowlist.md` is the generated
+  worklist of what to try next, ranked by how many entities each host
+  unblocks.
 
 **Use it as a map of the territory, not as a legal source.** Structure,
 relationships and the questions it raises are the value here; every specific
