@@ -21,12 +21,12 @@ region: null
 
 status: active
 confidence: medium
-coverage: low
-verification: search-only
+coverage: medium
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -34,12 +34,21 @@ domains:
   - DOMAIN-GOVERNMENT
 organisations: []
 related_entities:
+  - ES
   - EU-EUROSTAT
+  - EU-ESS
 relationships:
+  - type: part-of
+    target: ES
+    source: fact
+    evidence: "Confirmed by reading ine.es's own page directly (2026-08-26): 'El Instituto Nacional de Estadística es un organismo autónomo de carácter administrativo, con personalidad jurídica y patrimonio propio', attached to the Ministry of Economy, Commerce and Business through the Secretaría de Estado de Economía y Apoyo a la Empresa. Anchor edge under metadata/relationship-types.md §2.3."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: part-of
     target: EU-ESS
     source: fact
-    evidence: "The European Statistical System is the partnership between the Community statistical authority, which is the Commission (Eurostat), and the national statistical institutes and other national authorities responsible in each member state for the development, production and dissemination of European statistics; the INE's own explanation describes the SEE as comprising Eurostat, the statistical offices of all EU member states and other bodies, with the ESS Committee made up of Eurostat and the presidents of member states' national statistical institutes. INE is the Spanish NSI (ine.es 'Qué es el SEE y cómo funciona'; ec.europa.eu/eurostat/web/european-statistical-system; EUR-Lex CELEX 32009R0223). NOT READ — search-only."
+    evidence: "Upgraded from the composition-rule tier to a direct statement: confirmed by reading ine.es's own 'Qué es el SEE y cómo funciona' page directly (2026-08-26): 'Sistema Estadístico Europeo (SEE) está formado por: Eurostat (la oficina de estadística de la UE), las oficinas de estadística de todos los estados miembros (los diferentes INE) y otros organismos que elaboran estadísticas europeas' (the ESS is formed by Eurostat, the statistical offices of all member states — the various NSIs — and other bodies producing European statistics), naming INE among 'los diferentes INE' directly. This is INE's own page naming its ESS membership, the same strong-evidence tier set for [[PL-GUS]] and [[FI-TILASTOKESKUS]]."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -48,12 +57,15 @@ sources:
   - title: "BOE-A-1989-10767 Ley 12/1989, de 9 de mayo, de la Función Estadística Pública"
     url: "https://www.boe.es/buscar/doc.php?id=BOE-A-1989-10767"
     publisher: "Boletín Oficial del Estado (BOE)"
+    accessed: "2026-08-26"
   - title: "El Instituto Nacional de Estadística"
     url: "https://www.ine.es/dyngs/INE/index.htm?cid=498"
     publisher: "Instituto Nacional de Estadística (INE)"
+    accessed: "2026-08-26"
   - title: "Qué es el SEE y cómo funciona"
     url: "https://www.ine.es/ss/Satellite?L=es_ES&c=Page&cid=1254735905268&p=1254735905268&pagename=INE/INELayout"
     publisher: "Instituto Nacional de Estadística (INE)"
+    accessed: "2026-08-26"
   - title: "Estadísticas europeas: cómo funciona el Sistema Estadístico Europeo"
     url: "https://eur-lex.europa.eu/ES/legal-content/summary/european-statistics-how-the-european-statistical-system-works.html"
     publisher: "EUR-Lex — Publications Office of the European Union"
@@ -61,9 +73,10 @@ sources:
 
 # INE — Instituto Nacional de Estadística
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-26.** Three of four cited pages were read directly.
+> INE's own SEE page names its ESS membership directly, upgrading the
+> edge this entity previously carried as an Atlas interpretation to a
+> sourced fact — see below.
 
 ## Description
 
@@ -84,64 +97,43 @@ Spain, proposing norms on statistical concepts and classifications, and
 **managing statistical relations with international organisations such as
 Eurostat**.
 
-## The statistics cluster gets its first edge — and it is an interpretation
+## The statistics cluster's first edge, now a stated fact
 
-`discovery/unresolved.md` has carried a cluster of **five refused links**
+`discovery/unresolved.md` carried a cluster of **five refused links**
 across four countries: [[UN-UNSD]] → [[EU-EUROSTAT]], [[NL-CBS]] and
 [[DE-DESTATIS]] to Eurostat, and [[DE-BSTATG]] and [[NL-WET-CBS]] to
-[[UN-FPOS]]. Every one was refused for want of a source. Four national
-statistical offices sat in the Atlas and none connected upward to anything.
+[[UN-FPOS]]. Every one was refused for want of a source.
 
-Spain is the first country where a source connects the two. It is recorded,
-and it is recorded honestly as **`source: interpretation`, `confidence:
-low`**, because what the sources actually describe is not a bilateral
-relationship:
+This entity was the first to close a version of that gap, though
+originally only as an Atlas interpretation at low confidence: the
+sources available at the time described the European Statistical
+System's three-party structure (Eurostat, the member states' NSIs, and
+other bodies) without directly naming INE among them.
 
-> The European Statistical System comprises **Eurostat, the statistical
-> offices of all member states, and other bodies** producing European
-> statistics. The ESS Committee is made up of Eurostat and the presidents of
-> the member states' national statistical institutes.
+**Re-reading ine.es's own SEE page directly this pass closes that gap
+properly.** The page states outright: "Sistema Estadístico Europeo (SEE)
+está formado por: Eurostat..., las oficinas de estadística de todos los
+estados miembros (**los diferentes INE**)..." — INE names itself, in its
+own words, as one of "the various INEs" the ESS comprises. That is no
+longer a structure the Atlas infers a connection from; it is INE stating
+its own membership, the same tier of evidence [[PL-GUS]] and
+[[FI-TILASTOKESKUS]] carry.
 
-That is a **three-party structure**. INE and Eurostat are both inside the
-European Statistical System; neither is described as related to the other
-directly. The accurate model is:
-
-```
-                 EU-ESS  (European Statistical System)   ← does not exist
-                  ▲                    ▲
-             part-of                part-of
-                  │                    │
-              ES-INE            EU-EUROSTAT
-```
-
-**The ESS entity was not created**, for the same reason no sub-national
-`level` was invented: creating a supra-national entity inside a country
-batch, on evidence gathered while researching that country, is how
-country-shaped assumptions get baked into shared layers. It is queued in
-`discovery/research-queue.md` as the correct fix, and it would let all four
-national statistical offices connect at once.
-
-So the edge that exists here is deliberately the **weakest type the
-vocabulary offers**, `related-to`, marked as the Atlas's own inference. It
-records that a connection exists without claiming to know its shape.
-
-## Why this does not lower the standard
-
-The earlier five were refused because **no source said anything**. This one
-is asserted because a source says something — just not quite the thing the
-edge expresses. The provenance fields carry that difference explicitly:
-`source: interpretation` and an `evidence` string that states what the
-sources describe and what the Atlas concluded from it.
-
-A reader can therefore tell this edge apart from a `source: fact` edge
-without reading the sources, which is the entire purpose of the field.
+**Correction: the ESS entity now exists.** This entity's own prose, from
+before this pass, said no [[EU-ESS]] node had been created and that doing
+so inside a country batch would bake country-shaped assumptions into a
+shared layer. That is stale — [[EU-ESS]] was created in an intervening
+batch and already carries `part-of` edges from [[PL-GUS]] and
+[[FI-TILASTOKESKUS]]. This entity's edge now points to that existing
+node directly, rather than to [[EU-EUROSTAT]] as it did before.
 
 ## Relationships
 
-- `related-to` [[EU-EUROSTAT]] — Atlas interpretation, low confidence.
+- `part-of` [[ES]] — anchor edge, confirmed this pass.
+- `part-of` [[EU-ESS]] — upgraded to a sourced fact this pass.
 
 ## Sources
 
-Listed in frontmatter — the BOE text of Ley 12/1989, two INE pages including
-its explanation of the European Statistical System, and the EUR-Lex summary
-of how that system works.
+Listed in frontmatter, three of four read directly this pass — the BOE
+text of Ley 12/1989, INE's own "about us" page, and its own SEE
+explanation. The EUR-Lex summary was not attempted.

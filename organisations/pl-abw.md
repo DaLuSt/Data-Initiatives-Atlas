@@ -19,11 +19,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2002-05-24
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -41,35 +41,37 @@ relationships:
   - type: implements
     target: PL-KSC
     source: fact
-    evidence: "CSIRT GOV is the Computer Security Incident Response Team operating at the national level, led by the Head of the Agencja Bezpieczeństwa Wewnętrznego; Poland has three CSIRT teams at the national level under the national cybersecurity system — CSIRT GOV, CSIRT MON and CSIRT NASK — and CSIRT GOV handles or coordinates incidents reported by entities critical to state continuity, entities subordinate to the Prime Minister, the National Bank of Poland and entities in the register of critical infrastructure (csirt.gov.pl; cyberpolicy.nask.pl 'Ustawa o krajowym systemie cyberbezpieczeństwa'; archiwum.rcb.gov.pl). NOT READ — search-only."
+    evidence: "CSIRT GOV is the Computer Security Incident Response Team operating at the national level, led by the Head of the Agencja Bezpieczeństwa Wewnętrznego; Poland has three CSIRT teams at the national level under the national cybersecurity system — CSIRT GOV, CSIRT MON and CSIRT NASK. nask.pl's own page on its Cybersecurity Centre, read directly (2026-08-26), corroborates the three-way split, describing CSIRT NASK's own remit as coordinating incidents from entities not covered by the other two national CSIRTs. CSIRT GOV's own citations (csirt.gov.pl, cyberpolicy.nask.pl, archiwum.rcb.gov.pl) were not read this pass."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: governed-by
     target: PL-UABWAW-2002
     source: fact
-    evidence: "The Act of 24 May 2002 on the Agencja Bezpieczeństwa Wewnętrznego and the Agencja Wywiadu is the primary legislation for both agencies; the ABW is responsible for protecting the internal security of the state and its constitutional order, and the heads of the ABW and AW report directly to the Prime Minister (isap.sejm.gov.pl WDU20020740676; bip.abw.gov.pl 'Ustawa o Agencji Bezpieczeństwa Wewnętrznego oraz Agencji Wywiadu'; aw.gov.pl 'Ramy prawne'). NOT READ — search-only."
+    evidence: "Confirmed by reading bip.abw.gov.pl's own pages directly (2026-08-26): its list of governing legislation names the Act of 24 May 2002 as ABW's principal legal act, and its College for Special Services page separately confirms ABW's head sits on that College alongside AW, CBA, SKW and SWW. aw.gov.pl's own 'Ramy prawne' page, also read directly, confirms the same Act as AW's basis. `isap.sejm.gov.pl`, which would carry the Act's own text, is genuinely CAPTCHA-blocked, confirmed on multiple attempts this pass."
     confidence: medium
     valid_from: 2002-05-24
     valid_until: null
 
 sources:
-  - title: "Ustawa z dnia 24 maja 2002 r. o Agencji Bezpieczeństwa Wewnętrznego oraz Agencji Wywiadu"
+  - title: "Ustawa z dnia 24 maja 2002 r. o Agencji Bezpieczeństwa Wewnętrznego oraz Agencji Wywiadu (currently CAPTCHA-blocked)"
     url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=wdu20020740676"
     publisher: "Internetowy System Aktów Prawnych (ISAP), Sejm RP"
   - title: "Ustawa o Agencji Bezpieczeństwa Wewnętrznego oraz Agencji Wywiadu"
     url: "https://bip.abw.gov.pl/bip/akty-prawne/ustawy/36,Ustawa-o-Agencji-Bezpieczenstwa-Wewnetrznego-oraz-Agencji-Wywiadu.html"
     publisher: "Agencja Bezpieczeństwa Wewnętrznego (BIP)"
+    accessed: "2026-08-26"
   - title: "Kolegium ds. służb specjalnych"
     url: "https://bip.abw.gov.pl/bip/nadzor-i-kontrola/kolegium-ds-sluzb-spec/18,Kolegium-ds-sluzb-specjalnych.html"
     publisher: "Agencja Bezpieczeństwa Wewnętrznego (BIP)"
+    accessed: "2026-08-26"
 ---
 
 # Agencja Bezpieczeństwa Wewnętrznego (ABW)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-26.** Two of three cited pages were read directly.
+> `isap.sejm.gov.pl` remains genuinely CAPTCHA-blocked, confirmed on
+> multiple attempts across this batch.
 
 ## Description
 
@@ -129,4 +131,4 @@ cyber-security statute rather than to a data-protection act or a parent body.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, two of three read directly this pass.

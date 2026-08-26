@@ -22,7 +22,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-20"
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -99,7 +99,7 @@ taxonomy, relationship-type, folder, validation or generator change; no
 Unlike [[FR]], which raised no new question at all, Poland raises two — and
 both are about **time**, not structure.
 
-### A sixth NIS2 state, and a new kind
+### A sixth NIS2 state, in force despite a late start
 
 | Country | Instrument | State |
 |---|---|---|
@@ -108,12 +108,17 @@ both are about **time**, not structure.
 | Netherlands | [[NL-CBW]] | in force 15 Aug 2026 |
 | France | [[FR-NIS2-LOI]] | **`unknown`** — sources contradict each other |
 | Spain | [[ES-LCGC]] | **`proposed`** — still a draft |
-| **Poland** | **[[PL-KSC]]** | **in force 3 Apr 2026 — and Poland is before the CJEU for having been late** |
+| **Poland** | **[[PL-KSC]]** | **in force 3 Apr 2026, after a Commission letter of formal notice for the delay** |
 
 Poland is the first country in the Atlas where an instrument is **in force
-and the member state is simultaneously in infringement proceedings** over
-the delay that preceded it. `status: active` is correct and says nothing
-about that.
+after the member state missed the transposition deadline and drew
+Commission attention** over the delay. **Corrected 2026-08-26**: this
+entry previously said Poland "is before the CJEU" — a re-verification
+pass found, via the European Commission's own page, that Poland was
+named among 23 states sent a **letter of formal notice**, the first of
+several infringement stages before a Court referral. See [[PL-KSC]] for
+the full correction. `status: active` is correct and says nothing about
+the delay either way.
 
 ### The first sourced eIDAS2 link in the Atlas — and it is negative
 
@@ -148,10 +153,25 @@ struggles to express that.
 
 See `countries/pl/index.md` for the curated index of Polish entities.
 
+## The re-verification pass of 2026-08-26
+
+Seventeen of Poland's eighteen remaining `search-only` entities were
+promoted to `verification: primary-source` in one pass — every
+intelligence-services entity, both data-protection entities, the KSC and
+open-data acts, GUS, PKN, MC, COI and mObywatel. Only [[PL-DANE-GOV-PL]]
+remains `search-only`: its own portal is a JavaScript application with no
+static content an automated fetch can read, and its other two sources
+are CAPTCHA-blocked or dead.
+
+Two genuine errors were caught and fixed: the CJEU overclaim on
+[[PL-KSC]] above, and a padded `start_date` on [[PL-COI]] (was
+`2010-01-01`, corrected to `null` — the source gives only the bare year).
+[[PL-MOBYWATEL]]'s legal operator, previously unestablished, is now
+[[PL-MC]], sourced to the Act's own Article 19. See `countries/pl/index.md`
+for the full account.
+
 ## Sources
 
 Listed in frontmatter, including the ISO Online Browsing Platform entry —
-the same citation [[DE]], [[BE]], [[FR]] and [[ES]] carry.
-
-**No `accessed` date and no `last_verified`** — nothing about this entity
-has been checked against a source.
+the same citation [[DE]], [[BE]], [[FR]] and [[ES]] carry, all accessed
+2026-08-20 and re-verified 2026-08-26.

@@ -29,7 +29,7 @@ verification: search-only
 
 start_date: 2010-01-08
 end_date: null
-last_verified: null
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -37,17 +37,26 @@ domains:
   - DOMAIN-GOVERNMENT
 organisations: []
 related_entities:
+  - ES
   - ES-NTI-RISP
   - ES-ENS
   - NL-PAS-TOE-OF-LEG-UIT
   - FR-RGI
   - BE-BELGIF
-relationships: []
+relationships:
+  - type: applies-in
+    target: ES
+    source: fact
+    evidence: "Confirmed by reading Real Decreto 4/2010's own text at boe.es directly (2026-08-26): its first additional provision mandates a catalogue of mandatory Technical Interoperability Standards covering electronic documents, electronic files, electronic signature policies, data intermediation, document preservation, network connectivity, authentication registers and information re-use — approved by the competent ministry through sectoral committees and published by official resolution. One of three cited sources read this pass (noticias.juridicas.com returned HTTP 503; anabad.org not attempted) — not enough alone for `verification: primary-source` under this Atlas's majority-read rule, though the one read is the decree's own primary text. Anchor edge under metadata/relationship-types.md §2.3."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "BOE-A-2010-1331 Real Decreto 4/2010, de 8 de enero, por el que se regula el Esquema Nacional de Interoperabilidad en el ámbito de la Administración Electrónica"
     url: "https://www.boe.es/buscar/act.php?id=BOE-A-2010-1331"
     publisher: "Boletín Oficial del Estado (BOE)"
+    accessed: "2026-08-26"
   - title: "Normas Técnicas de Interoperabilidad — Real Decreto 4/2010, de 8 de enero"
     url: "https://www.anabad.org/normas-tecnicas-de-interoperabilidadreal-decreto-42010-de-8-de-enero/"
     publisher: "ANABAD"
@@ -58,9 +67,12 @@ sources:
 
 # ENI — Esquema Nacional de Interoperabilidad
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Re-checked 2026-08-26, still `search-only`.** The decree's own text
+> was read directly at boe.es and confirms the first-additional-provision
+> claim. Only one of three cited sources was read this pass
+> (`noticias.juridicas.com` returned a transient HTTP 503; `anabad.org`
+> was not attempted), short of the majority this Atlas requires for
+> `primary-source`.
 
 ## Description
 

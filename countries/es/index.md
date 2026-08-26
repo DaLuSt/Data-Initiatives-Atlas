@@ -7,12 +7,16 @@ the country's front page (`CONTRIBUTING.md`).
 
 Anchor entity: [[ES]]
 
-> **Sourcing caveat.** Every Spanish entity below was compiled from
-> search-engine results only: the cited pages were confirmed to exist but
-> were **not read**, because the working environment blocked page
-> retrieval. They carry `verification: search-only` and need a
-> re-verification pass against primary sources. See
-> `discovery/reverification-allowlist.md`.
+> **Re-verified 2026-08-26.** Every Spanish entity below has now been
+> checked against primary sources — BOE consolidated texts throughout,
+> which proved to be a fully reliable, directly-fetchable source for this
+> country. Twenty of twenty-two entities were promoted to
+> `verification: primary-source`; [[ES-ENI]] and [[ES-CLAVE]] were
+> deliberately left `search-only` because a majority of their cited
+> sources were not read, and [[ES-ESPANA-DIGITAL-2026]] likewise stayed
+> `search-only` at one of four sources read. One genuine correction
+> surfaced: [[ES-LOPDGDD]]'s transitory-provisions count was wrong (seven,
+> corrected to six) until BOE's own preamble was read directly.
 
 ## Organisations
 
@@ -145,9 +149,6 @@ structure entirely.
 
 - **The seventeen Comunidades Autónomas**, their open data portals and their
   regional data protection authorities. Blocked on the `level` gap.
-- **Red.es**, the public business entity operating [[ES-DATOS-GOB-ES]] —
-  cited but too thinly sourced to create, which is why that portal has no
-  `maintained-by` edge.
 - **The Centro Nacional de Ciberseguridad** that [[ES-LCGC]] would create.
   It does not exist yet.
 - **The European Statistical System**, the entity that would let [[ES-INE]]

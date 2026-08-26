@@ -20,11 +20,11 @@ region: EU
 status: active
 confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -38,14 +38,14 @@ relationships:
   - type: participates-in
     target: EU-CEN
     source: fact
-    evidence: "CEN's National Members are the National Standardization Bodies of the 27 European Union countries, the United Kingdom, North Macedonia, Serbia and Türkiye, plus three EFTA countries (Iceland, Norway and Switzerland); CENELEC's National Members are the National Committees of the same set, and the national bodies operate the technical groups that draw up the standards, coordinated by the CEN-CENELEC Management Centre in Brussels. NBN is the national standardization body of Belgium. (cencenelec.eu 'European Standards' and 'CEN Board members'; standards.cencenelec.eu CEN and CENELEC member lists). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading standards.cencenelec.eu's member list directly (2026-08-26): NBN (Bureau de Normalisation/Bureau voor Normalisatie), website www.nbn.be, is explicitly listed as one of CEN's National Members. cencenelec.eu's general page, also read, confirms National Members are the National Standardization Bodies of the EU, UK, North Macedonia, Serbia and Türkiye, plus Iceland, Norway and Switzerland, operating the technical groups that draw up European Standards."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: participates-in
     target: EU-CENELEC
     source: fact
-    evidence: "CEN's National Members are the National Standardization Bodies of the 27 European Union countries, the United Kingdom, North Macedonia, Serbia and Türkiye, plus three EFTA countries (Iceland, Norway and Switzerland); CENELEC's National Members are the National Committees of the same set, and the national bodies operate the technical groups that draw up the standards, coordinated by the CEN-CENELEC Management Centre in Brussels. NBN is the national standardization body of Belgium. (cencenelec.eu 'European Standards' and 'CEN Board members'; standards.cencenelec.eu CEN and CENELEC member lists). NOT READ — search-only."
+    evidence: "Confirmed only at the general level this pass: cencenelec.eu's page, read directly, states CENELEC's National Members are the National Committees of the same country set as CEN. The specific member list fetched (standards.cencenelec.eu) confirmed NBN by name for CEN but did not return the corresponding CENELEC list, so NBN's own CENELEC membership rests on the general statement rather than a name-checked list."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -54,9 +54,11 @@ sources:
   - title: "European Standards"
     url: "https://www.cencenelec.eu/european-standardization/european-standards/"
     publisher: "CEN-CENELEC"
+    accessed: "2026-08-26"
   - title: "CEN Community — List of members"
     url: "https://standards.cencenelec.eu/ords/f?p=CEN:5"
     publisher: "CEN-CENELEC"
+    accessed: "2026-08-26"
   - title: "NBN — Bureau de Normalisation"
     url: "https://www.nbn.be/"
     publisher: "NBN"
@@ -64,13 +66,16 @@ sources:
 
 # Bureau de Normalisation / Bureau voor Normalisatie (NBN)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`. ⚠ `coverage: low`.
+> **Verified 2026-08-26.** Two of three sources were read directly.
+> `nbn.be` itself could not be verified as safe to fetch by the tooling
+> used this pass. The CEN member list names NBN explicitly; CENELEC
+> membership rests on the general cross-membership statement rather than a
+> name-checked list. `verification: primary-source`. ⚠ `coverage: low`.
 
 ## Description
 
-NBN is the national standardization body of Belgium.
+NBN is the national standardization body of Belgium, confirmed by name in
+CEN's own current member list.
 
 ## Belgium's standards body, and what it is not
 
@@ -93,8 +98,12 @@ not, and the two memberships are not the same fact.
 
 ## Relationships
 
-- `participates-in` [[EU-CEN]] and [[EU-CENELEC]].
+- `participates-in` [[EU-CEN]] — confirmed by name in CEN's member list.
+- `participates-in` [[EU-CENELEC]] — confirmed only at the general
+  cross-membership level, not by a name-checked CENELEC list.
 
 ## Sources
 
-Listed in frontmatter.
+Two of three read directly this pass — the general CEN-CENELEC standards
+page and the CEN member list, which names NBN. `nbn.be` itself was not
+reachable this pass.

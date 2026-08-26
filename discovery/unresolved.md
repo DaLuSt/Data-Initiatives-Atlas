@@ -14,7 +14,7 @@ one of these — resolve it with a real source, or leave it open.
 To find every affected entity: `grep -rl "verification: search-only" .`
 
 **The worklist for closing this is generated:**
-| [[ES-LO-2-2002]] | Is `catedrapsyd.unizar.es` still a live host? | The first full sweep with `tools/reverify.py` found this cited source **did not resolve at all**, while every other host tested resolved. In this environment all known hosts resolve to the proxy's interceptor, so a non-resolving host points at a genuinely dead one rather than a blocked one. Replace or drop the citation on re-verification. | Full sweep / 2026-08-19 | Open |
+| [[ES-LO-2-2002]] | Is `catedrapsyd.unizar.es` still a live host? | The first full sweep with `tools/reverify.py` found this cited source **did not resolve at all**, while every other host tested resolved. In this environment all known hosts resolve to the proxy's interceptor, so a non-resolving host points at a genuinely dead one rather than a blocked one. | Full sweep / 2026-08-19 | ✅ **Confirmed dead on re-verification 2026-08-26** — genuinely DNS-dead. BOE's own text of the act was read directly instead and now carries the entity's `primary-source` promotion. |
 
 | [[BE]], [[DE]], [[FR]], [[IT]], [[LU]], [[NL]] | Should the founding six be keyed on 25 March 1957 or 1 January 1958? | A verification pass on 2026-08-20 supplied **25 March 1957** — the day the Treaty of Rome was *signed*. The Atlas uses **1 January 1958**, the day it *entered into force*, because that is what the Union's own list of EU countries says and that page is the cited source on every one of these entities. Strictly neither is an accession: the six founded the Communities rather than joining them. Both dates are now recorded on each entity. **Deciding for 1957 means changing the evidence strings and the cited source together** | Verification pass / 2026-08-20 | Open (modelling) |
 
@@ -223,10 +223,10 @@ is what to request.
 
 | Link | Why refused | Status |
 |---|---|---|
-| [[BE-HERGEBRUIK-WET]] → [[EU-OPEN-DATA-DIRECTIVE]] | **Chronologically impossible**: the act is 2016, the directive 2019/1024. Sources say it aligns with the earlier PSI Directive, which is not an Atlas entity. **Belgium's actual Open Data Directive transposition was not identified.** The sharpest pattern-matching trap in the batch — the shape of the Atlas made a wrong answer attractive. | **Open — priority** |
-| [[BE-NIS1-WET]] → [[EU-NIS]] | Near-certain, and [[EU-NIS]] *is* an Atlas entity so the link has somewhere to point — but every source cited is about the successor act and none states what the 2019 act transposed. Would give a second `EU-NIS` → national descent. | **Open — one page read** |
-| [[BE-APD]] → [[EU-EDPB]] | No source read mentions the EDPB. Three national DPAs now sit in the Atlas and **only [[NL-AP]] connects to the Board** — a sourcing artefact, not a fact about European data protection governance. | Open |
-| [[BE-STATBEL]] → [[EU-EUROSTAT]] / [[UN-FPOS]] | Nothing found. ⚠ **The claim that "none connects upward" was wrong when written and was repeated for three batches** — [[NL-CBS]] already carried a `participates-in` edge to Eurostat, with ESS-membership reasoning in its evidence. Corrected in the UN batch. | ✅ **Partly resolved — UN batch, 2026-08-16.** Statbel is now `part-of` [[EU-ESS]]. The [[UN-FPOS]] half is still open. |
+| [[BE-HERGEBRUIK-WET]] → [[EU-OPEN-DATA-DIRECTIVE]] | **Chronologically impossible**: the act is 2016, the directive 2019/1024. Sources say it aligns with the earlier PSI Directive, which is not an Atlas entity. **Belgium's actual Open Data Directive transposition was not identified.** The sharpest pattern-matching trap in the batch — the shape of the Atlas made a wrong answer attractive. | ✅ **Resolved between batches, closed by re-verification pass 2026-08-26.** [[BE-HERGEBRUIK-WET-2023]] (created after this batch ran) is Belgium's transposition, amending this act. Reading the 2016 act's own consolidated (Justel) text this pass confirms the 2023 amendment inserted a direct citation to Directive (EU) 2019/1024 into its Article 1 — but per the Atlas's amends/amending convention, the `implements-requirement-from` edge stays on [[BE-HERGEBRUIK-WET-2023]], not here. |
+| [[BE-NIS1-WET]] → [[EU-NIS]] | Near-certain, and [[EU-NIS]] *is* an Atlas entity so the link has somewhere to point — but every source cited is about the successor act and none states what the 2019 act transposed. Would give a second `EU-NIS` → national descent. | ✅ **Resolved — re-verification pass, 2026-08-26.** The one page read closed it: the act's own Article 2 at etaamb.openjustice.be states "Deze wet voorziet met name in de omzetting van de Europese Richtlijn (EU) 2016/1148." `implements-requirement-from` → [[EU-NIS]] now asserted. |
+| [[BE-APD]] → [[EU-EDPB]] | No source read mentions the EDPB. Three national DPAs now sit in the Atlas and **only [[NL-AP]] connects to the Board** — a sourcing artefact, not a fact about European data protection governance. | ✅ **Resolved — re-verification pass, 2026-08-26.** Reading gdpr-info.eu directly confirms Article 68(3) GDPR requires the Board to include one supervisory authority per Member State; the GBA/APD is Belgium's. Also found: the `participates-in` [[EU-EDPB]] edge was **already present in this entity's own frontmatter** (added at some point after this table entry was written) while its body text still said the link was "refused for want of a source" — a frontmatter/body drift bug, now corrected on [[BE-APD]] itself. |
+| [[BE-STATBEL]] → [[EU-EUROSTAT]] / [[UN-FPOS]] | Nothing found. ⚠ **The claim that "none connects upward" was wrong when written and was repeated for three batches** — [[NL-CBS]] already carried a `participates-in` edge to Eurostat, with ESS-membership reasoning in its evidence. Corrected in the UN batch. | ✅ **Partly resolved — UN batch, 2026-08-16.** Statbel is now `part-of` [[EU-ESS]]. ⚠ **The re-verification pass of 2026-08-26 found the same wrong claim still standing in [[BE-STATBEL]]'s own body prose**, ten days after the frontmatter was corrected — a second instance of the frontmatter/body drift bug also found on [[BE-APD]]. Corrected this pass; Wikipedia additionally corroborates with "Statbel serves as Belgium's official representative to Eurostat." The [[UN-FPOS]] half is still open. |
 | [[BE-KSZ]] → [[EU-SDG]] | The KSZ predates the regulation by 28 years and no source connects them — the same refusal made for [[DE-REGMOG]]. | Open |
 | [[BE-DATA-GOV-BE]] → [[BE-HERGEBRUIK-WET]] | Portal and open-data act, obviously related, no source states it. Same call as [[DE-GOVDATA]] / [[DE-DNG]]. | Open |
 | [[BE-BOSA]] → [[BE-BELGIF]] | BELGIF is sourced as co-owned by the federal state, Regions and Communities — precisely not something BOSA owns. | Open (deliberate) |
@@ -241,10 +241,49 @@ is what to request.
 
 | Entity | Question | Status |
 |---|---|---|
-| [[BE-NIS2-WET]] | No Belgisch Staatsblad ELI URI cited; publication and entry-into-force dates rest on CCB reporting. | Open |
-| [[BE-KSZ-WET]] | Only two sources, one of them the KSZ's page about its own founding act. Act content unknown. | Open |
-| [[BE-STATBEL]] | **No statutory basis found** — no Belgian equivalent of [[DE-BSTATG]] or [[NL-WET-CBS]], so no `governed-by` is recorded. | Open |
-| [[BE-HERGEBRUIK-WET]] | Scope, obligations and relationship to the current EU regime all unknown. | Open |
+| [[BE-NIS2-WET]] | No Belgisch Staatsblad ELI URI cited; publication and entry-into-force dates rest on CCB reporting. | Partly resolved — re-verification pass, 2026-08-26. Two more independent external sources (kpmglaw.be, prebes.be) now corroborate the 17 May 2024 publication date and the replacement of [[BE-NIS1-WET]]; CCB's own three pages remain bot-walled and no ELI URI has yet been found. |
+| [[BE-KSZ-WET]] | Only two sources, one of them the KSZ's page about its own founding act. Act content unknown. | Partly resolved — re-verification pass, 2026-08-26. The KSZ's own page, read directly, quotes Article 1 verbatim. Remaining act content (governance, funding) still unknown; still only two sources. |
+| [[BE-STATBEL]] | **No statutory basis found** — no Belgian equivalent of [[DE-BSTATG]] or [[NL-WET-CBS]], so no `governed-by` is recorded. | Still open after re-verification pass, 2026-08-26 — `statbel.fgov.be` is CAPTCHA-walled and no statutory basis was found this pass either. |
+| [[BE-HERGEBRUIK-WET]] | Scope, obligations and relationship to the current EU regime all unknown. | Partly resolved — re-verification pass, 2026-08-26. The act's own text (both original and current consolidated versions) was read directly, confirming its 2016 PSI Directive transposition and the 2023 amendment's insertion of a Directive (EU) 2019/1024 reference. Full substantive obligations (licensing, pricing, appeals commission) remain sourced only from BIPT's secondary account. |
+
+### Belgium re-verification pass (2026-08-26)
+
+All 24 `country: BE` entities carrying `verification: search-only` were
+checked against primary sources, as the fifteenth entry in the
+verification-gap series (following the France, Austria, Finland, Estonia
+and Czechia tails). **18 of 24 promoted to `primary-source`**; 6 stayed
+`search-only` for want of a majority of readable sources. See
+`countries/be/index.md` for the full list and each entity's own `Sources`
+section for its read/unread breakdown.
+
+Two frontmatter/body drift bugs were found and fixed, both predating this
+pass — see the [[BE-APD]] and [[BE-STATBEL]] rows above. Two stale-index
+bugs were also found and fixed in `countries/be/index.md`, independent of
+the 24-entity list: its EU-instrument comparison table still showed
+[[EU-OPEN-DATA-DIRECTIVE]] as "not established" for Belgium although
+[[BE-HERGEBRUIK-WET-2023]] had already closed that gap before this pass
+began, and NBN was called "not modelled" in the index's own "Not modelled"
+section while [[BE-NBN]] already existed as an entity and was simply
+missing from the "Organisations" list above it.
+
+A genuine dating error was also caught and corrected on
+[[BE-HERGEBRUIK-WET-2023]]: it was published in the Belgisch Staatsblad on
+**23 January 2024**, not 25 December 2023 as previously recorded — 25
+December 2023 is the act's own date (promulgation). The EUR-Lex national
+implementing measures register independently corroborates 23 January 2024.
+
+A genuine host-block pattern emerged, the Belgian counterpart to the
+`.gouv.fr` block found in the France batch: `bosa.belgium.be`,
+`ccb.belgium.be`, `news.belgium.be`, `data.gov.be`, `financien.belgium.be`,
+`statbel.fgov.be` and `atwork.safeonweb.be` all returned CAPTCHA
+verification pages or plain 403s to every attempt, even with an honest
+User-Agent, while `vsse.be`, `sgrs.be`, `comiteri.be`,
+`gegevensbeschermingsautoriteit.be`, `ksz-bcss.fgov.be`,
+`ejustice.just.fgov.be`, `etaamb.openjustice.be`, `wallex.wallonie.be` and
+`codex.vlaanderen.be` were all reachable. This explains most of why
+[[BE-BOSA]], [[BE-CCB]], [[BE-STATBEL]] and [[BE-DATA-GOV-BE]] stayed
+`search-only` despite genuine effort to reach a majority via alternate
+external sources (law firms, employers' federations, Wikipedia, GitHub).
 
 ## France batch — fourth country (2026-08-16)
 
@@ -328,11 +367,11 @@ model only the state half.
 |---|---|---|
 | [[ES-ENI]] → [[EU-EIF]] | Nothing read mentions the EIF or the NIF concept. **Refused for the third time** (Germany, France, now Spain), and for the same reason each time: the pattern makes it look expected, which is not evidence. [[EU-EIF]] now has five countries and one national-framework link. | Open |
 | [[ES-CLAVE]] → [[EU-EIDAS]] / [[EU-EIDAS2]] | Nothing read mentions eIDAS or cross-border recognition. **The eIDAS2 wallet deadline is now roughly four months away and no country in the Atlas is linked to it.** [[FR-FRANCECONNECT]] predicted this would become a factual question; it now is one. | **Open — time-critical** |
-| [[ES-AEPD]] → [[EU-EDPB]] | No source read mentions the Board. **Five national DPAs, one sourced link.** Five page reads would fix four edges. | **Open — cheap, high value** |
+| [[ES-AEPD]] → [[EU-EDPB]] | No source read mentions the Board. **Five national DPAs, one sourced link.** | ✅ **Resolved 2026-08-26** — gdpr-info.eu's own text of Article 68(3) GDPR, read directly, names one supervisory-authority seat per member state on the Board; AEPD now carries the edge at `confidence: medium`. [[DE-BFDI]], [[BE-APD]] and [[FR-CNIL]] remain unsourced — the same one-article read would close all three. |
 | [[ES-ESPANA-DIGITAL-2026]] → [[EU-DIGITAL-DECADE]] | Nothing read connects them, though the strategy is aligned with the Recovery Plan. Same refusal as [[NL-DIGIBETER]] and [[DE-DIGITALSTRATEGIE]] — three national strategies, three refusals. | Open |
 | [[ES-INCIBE]] / [[ES-CCN]] → [[ES-LCGC]] | Reporting describes an institutional dispute over a draft allocation of competences. **A dispute is not a relationship**, and the law is not in force. | Open (deliberate) |
 | [[ES-ENI]] ↔ [[ES-ENS]] | Consistently presented together in Spanish practice; no source read establishes a relationship between the instruments. | Open |
-| [[ES-DATOS-GOB-ES]] → Red.es | Red.es operates the portal but is not an entity — a single mention of its promoting role is too thin. **This portal therefore has no `maintained-by` edge**, unlike [[NL-DATA-OVERHEID]] and [[DE-GOVDATA]]. | Open |
+| [[ES-DATOS-GOB-ES]] → Red.es | Red.es operates the portal but was not an entity — a single mention of its promoting role was too thin. | ✅ **Resolved 2026-08-26** — [[ES-RED-ES]] created as its own entity, sourced to both sides' own pages; datos.gob.es now carries the `maintained-by` edge. |
 
 ### The one asserted link that needs scrutiny
 
@@ -344,8 +383,8 @@ model only the state half.
 
 | Entity | Question | Status |
 |---|---|---|
-| [[ES-AESIA]] | **No BOE citation for Real Decreto 729/2023**, the decree that creates it — no search result returned the BOE identifier. First thing to fetch for this entity. | Open |
-| [[ES-NTI-RISP]] | The DCAT-AP-ES model is described as **in administrative processing**, so the `based-on` descent from [[EU-DCAT-AP]] may not yet be in force. Recorded at `confidence: low` with `valid_from: null`. | Open |
+| [[ES-AESIA]] | **No BOE citation for Real Decreto 729/2023**, the decree that creates it — no search result returned the BOE identifier. | ✅ **Resolved 2026-08-26** — BOE-A-2023-18911, found via protecciondata.es and confirmed by reading boe.es directly. |
+| [[ES-NTI-RISP]] | The DCAT-AP-ES model is described as **in administrative processing**, so the `based-on` descent from [[EU-DCAT-AP]] may not yet be in force. Recorded at `confidence: low` with `valid_from: null`. | Open — confirmed still accurate on re-verification 2026-08-26. |
 | [[ES-LCGC]] | No BOE citation exists to give — the instrument is a draft. Its passage would also make the Centro Nacional de Ciberseguridad modellable. | Open |
 | [[ES-ENI]] | Legal base not modelled: sources say it was established by article 42 of Ley 11/2007, an act since replaced by the 2015 administrative-procedure legislation. The chain from the current base was not established, and the repealed act was not asserted as its parent. | Open |
 | [[ES-LOPDGDD]] | **The `Ley Orgánica` rank is not modelled.** Spain's constitutional hierarchy distinguishes organic from ordinary laws, and only the organic rank lets its Title X bind. `type: law` flattens it — as it already flattens *Gesetz*/*Verordnung*, *wet*/*koninklijk besluit* and *loi*/*ordonnance*. No field was added: five countries have been modelled without one, and adding it would require re-reading every instrument in the Atlas. | Open (ontology question) |
@@ -516,7 +555,7 @@ folder, validation or generator change and no `PL-EU-*` entity.
 
 | Question | Case | Why it cannot be recorded |
 |---|---|---|
-| An instrument in force **while the member state is before the CJEU** | [[PL-KSC]] — NIS2 amendment in force 3 Apr 2026, Poland referred for the delay | `status: active` is correct and carries none of it. [[ES-LCGC]] is at the **earlier** stage of the same process (reasoned opinion). Neither is in the structured data |
+| An instrument in force **after a Commission letter of formal notice** | [[PL-KSC]] — NIS2 amendment in force 3 Apr 2026. **Corrected 2026-08-26**: this row previously said Poland was "referred" to the CJEU; the Commission's own page instead shows a letter of formal notice, the *first* infringement stage — earlier than [[ES-LCGC]]'s reasoned opinion, not later as previously implied | `status: active` is correct and carries none of it. Neither the formal notice nor the reasoned-opinion stage is in the structured data |
 | A national system **subject to a requirement it cannot meet** | [[PL-MOBYWATEL]] is reported architecturally incompatible with eIDAS 2.0 and unable to serve as an EUDI Wallet | No type expresses a failed obligation. `implements-requirement-from` asserts the opposite; `governed-by` implies it works. Recorded as `related-to` at `confidence: low` with the substance in the evidence string |
 
 **The eIDAS2 edge is the sixth sourced connection the vocabulary cannot
@@ -536,20 +575,20 @@ batches recorded that none existed.
 
 | Item | Why |
 |---|---|
-| **CSIRT NASK, CSIRT GOV, CSIRT MON** | Not researched. Poland joins the Netherlands as a country with cybersecurity legislation modelled and **no cyber authority** — [[DOMAIN-CYBERSECURITY]] now shows two such countries of six |
+| **CSIRT MON** | [[PL-ABW]] and [[PL-NASK]] cover CSIRT GOV and CSIRT NASK respectively (confirmed 2026-08-26, cross-referenced back to [[PL-KSC]] which had gone stale on this point). Only CSIRT MON remains unmodelled, because Poland's Ministry of National Defence is not an Atlas entity |
 | **Agencja Informatyzacji** | The body a draft law would create from [[PL-COI]]. Does not exist; same refusal as Spain's Centro Nacional de Ciberseguridad |
-| **GIODO** | The predecessor DPA. Sources say the President took over only *part* of its competencies — not the clean succession [[ES-AEAD]] → [[ES-SGAD]] records, so nothing asserted |
-| **Krajowe Ramy Interoperacyjności**, a Polish DCAT profile, the operator of [[PL-DANE-GOV-PL]], the Act on Public Statistics | All named in sources, none researched |
+| **GIODO** | The predecessor DPA. **Narrower as of 2026-08-26**: UODO's own annual report calls the President its legal successor ("następcą prawnym"), stronger language than "took over only part of its competencies." Still no entity created — GIODO's own site no longer resolves (DNS failure) |
+| **Krajowe Ramy Interoperacyjności**, a Polish DCAT profile, the operator of [[PL-DANE-GOV-PL]], the Act on Public Statistics | All named in sources, none researched. dane.gov.pl's own operator remains unidentified — its homepage is a JavaScript application with no static content to fetch |
 
 ### Factual gaps — Poland
 
 | Entity | Question | Status |
 |---|---|---|
-| [[PL-ODO]] | ⚠ **No Dz.U. or ISAP citation** — the weakest-sourced of the six national GDPR instruments, resting on secondary commentary and a UODO annual report. Its substantive GDPR-specification provisions were not established at all; the `implements-requirement-from` evidence string says so | **Open — priority** |
-| [[PL-KSC]] | The **CJEU proceedings** rest on industry commentary; only one of four sources is a government page | Open |
-| [[PL-MOBYWATEL]] | The **eIDAS 2.0 incompatibility rests on press reporting only** — no ministry or Commission document among the sources found. This is why the edge is `confidence: low` | **Open — priority** |
-| [[PL-DANE-GOV-PL]] | ⚠ **Not one source is the portal's own site.** Everything comes from descriptions of the Act that establishes it; the operator was not identified | Open |
-| Institutional transformations | Three now touched in two countries — Spain's completed, Poland's COI one **pending**, Poland's GIODO one **partial**. Only the Spanish one is modelled as a succession. Worth handling deliberately rather than case by case | Open (modelling) |
+| [[PL-ODO]] | ~~No Dz.U. or ISAP citation~~ — **narrower 2026-08-26**: two of three sources now read directly (UODO's own annual report, politykabezpieczenstwa.pl), but ISAP's own text remains genuinely CAPTCHA-blocked and no Dz.U. citation was obtained. Substantive GDPR-specification provisions still not established | Open |
+| [[PL-KSC]] | ~~The CJEU proceedings rest on industry commentary~~ — **resolved 2026-08-26 by correction**: the claim itself was wrong (see above), not merely under-sourced. The corrected claim (letter of formal notice) is confirmed by the European Commission's own page | **Closed — corrected** |
+| [[PL-MOBYWATEL]] | The **eIDAS 2.0 incompatibility rests on press reporting only** — confirmed still true 2026-08-26 after reading a second press source (biznesinfo.pl) in more technical detail; still no ministry or Commission document found. This is why the edge is `confidence: low` | **Open — priority** |
+| [[PL-DANE-GOV-PL]] | ⚠ **Not one source is the portal's own site**, still true 2026-08-26: dane.gov.pl's own homepage is a JavaScript application with no static content an automated fetch can retrieve, and the operator remains unidentified | Open |
+| Institutional transformations | Three now touched in two countries — Spain's completed, Poland's COI one **pending**, Poland's GIODO one **narrower but still unmodelled** (UODO's own report now calls it a legal succession). Only the Spanish one is modelled as a succession. Worth handling deliberately rather than case by case | Open (modelling) |
 
 ## Factual details flagged in entity bodies
 
@@ -591,7 +630,7 @@ batches recorded that none existed.
 | [[PL-KSS]] | Does Poland have an **independent legality-review body** comparable to [[FR-CNCTR]] or [[NL-TIB]]? | Not researched. Poland currently shows parliamentary oversight with no independent counterpart, which may or may not reflect Polish law. | 2026-08-18 | Open |
 | [[PL-USKWSWW-2006]] | **No official Polish government URL** could be found. | Its Dz.U. reference, consolidation and amendment history are all unestablished — in sharp contrast to [[PL-UABWAW-2002]], which both agencies publish. | 2026-08-18 | Open |
 | [[DE-BVERFSCHG]], [[DE-MADG]] | **No Gesetze-im-Internet URL** was returned by search. | Their dates, structure and amendment history are unestablished, unlike [[DE-BNDG]] and [[DE-PKGRG]]. | 2026-08-18 | Open |
-| [[ES-LEY-11-2002]] | **No BOE URL** was returned by search. | A commercial legal database stands in for the official gazette on the act that creates [[ES-CNI]] — while [[ES-LO-2-2002]], passed the same day, does have its BOE citation. | 2026-08-18 | Open |
+| [[ES-LEY-11-2002]] | **No BOE URL** was returned by search. | A commercial legal database stood in for the official gazette on the act that creates [[ES-CNI]] — while [[ES-LO-2-2002]], passed the same day, does have its BOE citation. | 2026-08-18 | ✅ **Resolved** — BOE-A-2002-8628 now cited and read directly. |
 | [[NL-TWCO]] | What **are** the deviations from the [[NL-WIV-2017]] regime, and how do [[NL-TIB]]'s and [[NL-CTIVD]]'s remits change? | The sources describe the act's purpose, not its provisions. Neither oversight entity carries a relationship to this act as a result. | 2026-08-18 | Open |
 | [[NL-TWCO]] | Can the four-year expiry be extended? | `end_date` is deliberately **null**: the sources give a rule ("four years after entry into force"), not a date, and say nothing about extension. Computing 2028-07-01 and presenting it as sourced would be the Atlas doing arithmetic. | 2026-08-18 | Open |
 | [[DE-BNDG]] | What did the **2021 and 2023 amendments** change? | The Bundestag's archive records both. Neither's content was established. | 2026-08-18 | Open |
@@ -646,11 +685,10 @@ batches recorded that none existed.
 | Entity | Question | Why it matters | Noted by / date | Status |
 |---|---|---|---|---|
 | [[LU-CNPD]] | **Luxembourg's GDPR implementation act** — the date (1 August 2018) is now sourced, via an ELI URL linked from CNPD's own "Législation" page (2026-08-25), but the act's official title and text are still unread: `legilux.public.lu` is a JavaScript single-page application with no static content. | Luxembourg is the **only member state in the Atlas** with no national GDPR instrument. Ten others have one | 2026-08-18; date sourced 2026-08-25 | **Open — narrower** |
-| [[PT-CNCS]], [[CZ-NUKIB]] | **NIS2 transpositions not identified** for Portugal or Czechia. | Both cyber authorities carry anchor edges to their country rather than a relationship to an act, unlike [[BE-CCB]], [[DE-BSI]], [[FR-ANSSI]] and [[IE-NCSC]]. Czechia's cyber security act No 181/2014 is also unmodelled | 2026-08-18 | Open |
+| [[CZ-NUKIB]] | **NIS2 transposition not identified** for Czechia. | Czechia's cyber security act No 181/2014 is also unmodelled. Portugal's own gap (PT-CNCS) was closed 2026-08-26: [[PT-DECRETO-LEI-125-2025]], in force since 3 April 2026 | 2026-08-18; PT closed 2026-08-26 | Open — Czechia only |
 | [[LU-CTIE]] | **Luxembourg's NIS2 competent authority and CSIRT** are unmodelled. | CTIE secures the State's own infrastructure, which is a different job from supervising a country's essential entities. GOVCERT.LU was not researched | 2026-08-18 | Open |
 | [[CZ-UNMZ]] | **ČAS is not modelled.** | Czechia splits standardisation: ÚNMZ holds the membership, ČAS does the technical committees, drafting and publication. The body that actually produces ČSN standards is absent from the graph | 2026-08-18 | Open |
-| [[PT-DADOS-GOV]] | **Portugal's Open Data Directive transposition** was not identified. | Joins Belgium, France, Spain and Ireland. Five countries is comfortably a batch of its own | 2026-08-18 | **Open — next** |
-| [[PT-DADOS-GOV]], [[LU-DATA-PUBLIC]], [[CZ-DATA-GOV]] | **No custodian modelled** for any of the three. | [[PT-AMA]], [[LU-CTIE]] and [[CZ-DIA]] are the obvious operators and none is sourced. Seven national portals now lack a custodian; only [[CH-OPENDATA-SWISS]] has one | 2026-08-18 | Open |
+| [[LU-DATA-PUBLIC]] | **No custodian modelled.** | [[LU-CTIE]] is the obvious operator and it is not sourced. Portugal's and Czechia's equivalent gaps (PT-DADOS-GOV, CZ-DATA-GOV) were both closed by 2026-08-26 | 2026-08-18; PT and CZ closed | Open — Luxembourg only |
 | [[CZ-ZAKON-60-2026]] | What does the act contain beyond [[CZ-DIA]]'s role? | `coverage: low`. What "controlled access" covers, which data, what rights it creates — all unestablished. `start_date` is deliberately null: the sources give the Sb. citation, not a date of effect | 2026-08-18 | Open |
 | [[CZ-DIA]] | **Act No 12/2020** on the right to digital services, DIA's constituting statute, is not modelled. | DIA carries `implements` [[CZ-ZAKON-60-2026]] but no `governed-by` edge to the act that created it | 2026-08-18 | Open |
 | [[LU]] | Should hosting an EU institution be modelled at all? | The Court of Justice, the Court of Auditors, the EIB and [[EU-PUBLICATIONS-OFFICE]] are seated in Luxembourg and **no relationship is asserted**. Modelling it would make every host state look like a participant in what it hosts. Recorded as a deliberate design position, not a gap | 2026-08-18 | **Closed — by decision** |
@@ -664,8 +702,8 @@ batches recorded that none existed.
 |---|---|---|---|---|
 | [[EU-OPEN-DATA-DIRECTIVE]] | **The Atlas cannot model enforcement against a member state.** | Nineteen member states faced infringement proceedings over this directive and four — Belgium, Bulgaria, Latvia and the **Netherlands** — were referred to the Court of Justice in February 2023. There is no entity type for an infringement procedure, no relationship type for "was referred to the Court over", and no Court of Justice entity. A reader sees that [[NL-WHO]] was amended in 2024 and cannot see why | 2026-08-18 | **Open — ontology gap** |
 | Belgium, France, Spain | **Open Data Directive transpositions still unidentified.** | All three amended existing law rather than passing a standalone act, which is why they are harder to find than Ireland's S.I. Down from five countries to three | 2026-08-18 | **Open — next** |
-| [[PT-LEI-26-2016]] | **Which amendment transposed the Directive, and when?** | The sources say "third amendment" without a number or date, so the relationship's `valid_from` is null rather than a guessed 2021 or 2022 | 2026-08-18 | Open |
-| [[PT-LEI-26-2016]] | A general European survey places Portugal among the **standalone-legislation** countries; the Portugal-specific sources describe an amendment. | The Atlas follows the specific source. If the survey is right, this entity is the wrong instrument | 2026-08-18 | **Open — conflict recorded** |
+| [[PT-LEI-26-2016]] | ~~Which amendment transposed the Directive, and when?~~ **Resolved 2026-08-26**: Lei n.º 68/2021, of 26 August, confirmed by reading the Diário da República's own text directly. | Closes the gap; `valid_from: 2021-08-26` is now sourced rather than null | 2026-08-18; resolved 2026-08-26 | **Closed** |
+| [[PT-LEI-26-2016]] | A general European survey places Portugal among the **standalone-legislation** countries; the Portugal-specific sources describe an amendment. | The Atlas follows the specific source. Re-reading the primary text this pass (the amending act itself) confirms the amendment pattern directly, not just via secondary description — the general survey appears to be wrong about Portugal | 2026-08-18; re-confirmed 2026-08-26 | **Closed — conflict resolved toward the specific source** |
 | [[EU-OPEN-DATA-DIRECTIVE]] | **Commission Implementing Regulation (EU) 2023/138** on high-value datasets is not modelled. | It applies across the Union and is named by the Portuguese sources. A gap affecting every member state, not one | 2026-08-18 | Open |
 | [[EU-PSI-DIRECTIVE]] | **Directive 2013/37/EU**, the amending directive, is not modelled. | Its content was not established, and an entity for an amendment that was itself repealed would add a node and no clarity | 2026-08-18 | Open — scoping |
 | [[EU-EN-16931]] | **CEN/TC 434** is not modelled, nor the **UBL and CII syntax bindings** or the CIUS mechanism. | The committee is a committee, not a body — the same reasoning that keeps the Czech NCKB out. The syntax bindings are what make the semantic model usable | 2026-08-18 | Open — scoping |

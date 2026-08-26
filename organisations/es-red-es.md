@@ -24,11 +24,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-19"
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -44,7 +44,7 @@ relationships:
   - type: part-of
     target: ES
     source: fact
-    evidence: "Red.es is a public business entity (entidad pública empresarial) attached to the Ministry for Digital Transformation and the Civil Service through the State Secretariat for Digitalisation and Artificial Intelligence, focused on executing and deploying plans for the digitalisation of the country (red.es 'About us' and 'What we do'; administracion.gob.es ficha de unidad orgánica EA0044367; transparencia.gob.es organigrama MTDFP). NOT READ — search-only."
+    evidence: "Confirmed by reading administracion.gob.es's own ficha de unidad orgánica directly (2026-08-26): Red.es is attached to 'Ministerio para la Transformación Digital y de la Función Pública' through the 'Secretaria de Estado de Digitalización e Inteligencia Artificial', organic unit code EA0044367-v4. red.es's own 'About us' and 'What we do' pages, also read directly, confirm Red.es as 'la entidad impulsora de la Agenda Digital en España' (the driving entity behind Spain's Digital Agenda) and its connector role between ministries, public bodies, autonomous communities, local entities and international organisations."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -53,15 +53,18 @@ sources:
   - title: "About us | Red.es"
     url: "https://www.red.es/en/about-us/about-us"
     publisher: "Entidad Pública Empresarial Red.es, M.P."
+    accessed: "2026-08-26"
   - title: "What we do | Red.es"
     url: "https://www.red.es/en/about-us/what-we-do"
     publisher: "Entidad Pública Empresarial Red.es, M.P."
+    accessed: "2026-08-26"
   - title: "Aporta - datos.gob.es | Red.es"
     url: "https://www.red.es/es/iniciativas/aporta-datosgobes"
     publisher: "Entidad Pública Empresarial Red.es, M.P."
   - title: "Entidad Pública Empresarial Red.Es — ficha de unidad orgánica"
     url: "https://administracion.gob.es/pagFront/espanaAdmon/directorioOrganigrama/fichaUnidadOrganica.htm?codigoUnidad=EA0044367"
     publisher: "Punto de Acceso General (administracion.gob.es)"
+    accessed: "2026-08-26"
   - title: "Organigrama del Ministerio para la Transformación Digital y de la Función Pública"
     url: "https://transparencia.gob.es/content/dam/transparencia_home/publicidadactiva/organizacionyempleo/03estructura/legislaturaxv/mtdf/MTDF_LXV.pdf"
     publisher: "Portal de la Transparencia — Gobierno de España"
@@ -69,9 +72,9 @@ sources:
 
 # Red.es
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-26.** Three of five cited pages were read directly,
+> confirming Red.es's legal attachment and connector role in its own and
+> the government's words.
 
 ## Description
 
@@ -128,4 +131,4 @@ an unnoticed one.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, three of five read directly this pass.

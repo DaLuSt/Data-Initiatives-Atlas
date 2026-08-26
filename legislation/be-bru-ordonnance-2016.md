@@ -18,11 +18,11 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: 2016-10-27
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -36,7 +36,7 @@ relationships:
   - type: applies-in
     target: BE
     source: fact
-    evidence: "Ordonnance du 27 octobre 2016 visant à l'établissement d'une politique de données ouvertes, an act of the Brussels-Capital Region, a constituent unit of Belgium (ejustice.just.fgov.be Moniteur belge, cn=2016102705). NOT READ — search-only. Anchor edge under metadata/relationship-types.md §2.3; the Atlas has no sub-national anchor entities, so a subnational instrument anchors to its state."
+    evidence: "Confirmed by reading the Moniteur belge text directly (2026-08-26): '27 OCTOBRE 2016. - Ordonnance visant à l'établissement d'une politique de données ouvertes (Open Data)', an act of the Brussels-Capital Region, a constituent unit of Belgium. Anchor edge under metadata/relationship-types.md §2.3; the Atlas has no sub-national anchor entities, so a subnational instrument anchors to its state."
     confidence: medium
     valid_from: 2016-10-27
     valid_until: null
@@ -45,21 +45,26 @@ sources:
   - title: "Ordonnance du 27 octobre 2016 visant à l'établissement d'une politique de données ouvertes"
     url: "https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?cn=2016102705&la=F&language=fr&table_name=loi"
     publisher: "Service public fédéral Justice — Moniteur belge"
+    accessed: "2026-08-26"
   - title: "Open Data — Institut bruxellois de statistique et d'analyse"
     url: "https://ibsa.brussels/opendata"
     publisher: "Institut bruxellois de statistique et d'analyse (IBSA)"
+    accessed: "2026-08-26"
 ---
 
 # Brussels open data ordonnance (2016)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read — retrieval is blocked by
-> the network egress proxy. `verification: search-only`.
+> **Verified 2026-08-26.** Both cited sources were read directly — the
+> Moniteur belge text and IBSA's own open data page. `verification:
+> primary-source`.
 
 ## Description
 
 The ordonnance of **27 October 2016** by which the Brussels-Capital Region
-established an open data policy. It is still in force, as amended by
+established an open data policy. Confirmed directly from the Moniteur belge
+text: it transposes **Directive 2013/37/EU** (the PSI Directive as amended)
+on the re-use of public sector information — not the 2019 recast, consistent
+with its date. It is still in force, as amended by
 [[BE-BRU-ORDONNANCE-2021]].
 
 ## Why a 2016 instrument is worth a node
@@ -84,5 +89,5 @@ beyond the fact that it established the policy.
 
 ## Sources
 
-Listed in frontmatter — the Moniteur belge text and the Brussels statistical
-institute's open data page.
+Both read directly this pass — the Moniteur belge text and the Brussels
+statistical institute's open data page.

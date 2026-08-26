@@ -20,11 +20,11 @@ region: EU
 status: active
 confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: 2018-05-25
 end_date: null
-last_verified: null
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -43,7 +43,7 @@ relationships:
   - type: implements-requirement-from
     target: EU-GDPR
     source: fact
-    evidence: "As of 25 May 2018 the competent body for the protection of personal data in Poland is the President of the Office for Personal Data Protection, whose status, tasks, competencies, principles and mode of appointment are regulated by the Act of 10 May 2018 on the protection of personal data; the President replaced the Generalny Inspektor Ochrony Danych Osobowych on the date the GDPR became applicable (uodo.gov.pl; politykabezpieczenstwa.pl 'Prezes UODO zamiast Generalnego Inspektora ODO'; odoserwis.pl). NOT READ — search-only. CAVEAT: the sources establish the Act's role in constituting the supervisory authority; the Atlas has not established the Act's substantive GDPR-specification provisions."
+    evidence: "Confirmed by reading UODO's own 2018 annual report (Sprawozdanie z działalności Prezesa UODO w roku 2018) directly (2026-08-26): the report itself is submitted under 'art. 50 ustawy z dnia 10 maja 2018 r. o ochronie danych osobowych' (Article 50 of the Act of 10 May 2018), naming this Act as the President's own statutory reporting obligation. politykabezpieczenstwa.pl, also read directly, dates the replacement precisely: 'zastąpienie z dniem 25 maja 2018 roku Generalnego Inspektora Ochrony Danych Osobowych nowym organem' (replacing GIODO, on 25 May 2018, with a new body) under 'nowa krajowa ustawa z 10 maja 2018 roku o ochronie danych osobowych' (the new national act of 10 May 2018). odoserwis.pl's page was not read this pass."
     confidence: medium
     valid_from: 2018-05-25
     valid_until: null
@@ -52,19 +52,21 @@ sources:
   - title: "Prezes UODO zamiast Generalnego Inspektora ODO"
     url: "https://www.politykabezpieczenstwa.pl/pl/a/puodo-zamiast-giodo"
     publisher: "Polityka Bezpieczeństwa"
+    accessed: "2026-08-26"
   - title: "Prezes Urzędu Ochrony Danych Osobowych (PUODO)"
     url: "https://odoserwis.pl/p/405/prezes-urzedu-ochrony-danych-osobowych-puodo"
     publisher: "odoserwis.pl"
   - title: "Sprawozdanie z działalności Prezesa Urzędu Ochrony Danych Osobowych w roku 2018"
     url: "https://uodo.gov.pl/pl/file/3909"
     publisher: "Urząd Ochrony Danych Osobowych (UODO)"
+    accessed: "2026-08-26"
 ---
 
 # Ustawa o ochronie danych osobowych (2018)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-26.** Two of three cited pages were read directly,
+> including UODO's own 2018 annual report, which cites this Act as its
+> own statutory basis for reporting.
 
 ## Description
 
@@ -109,8 +111,10 @@ GDPR's opening clauses" (unknown).
 
 ⚠ **No ISAP or Dziennik Ustaw citation.** Unlike [[PL-OTWARTE-DANE]], which
 has one, this act rests entirely on secondary commentary and a UODO annual
-report. It is the weakest-sourced of the six national GDPR instruments and
-the first thing a re-verification pass should fetch for Poland.
+report — both now read directly, but ISAP's own text remains genuinely
+CAPTCHA-blocked, confirmed again this pass. It is still the
+weakest-sourced of the six national GDPR instruments in that specific
+respect.
 
 ## A naming collision worth flagging
 
@@ -128,4 +132,4 @@ reused for the other.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, two of three read directly this pass.

@@ -23,11 +23,11 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 1990-01-15
 end_date: null
-last_verified: null
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -40,8 +40,8 @@ relationships:
   - type: governed-by
     target: BE-KSZ-WET
     source: fact
-    evidence: "The KSZ was established and organised by the wet van 15 januari 1990 houdende oprichting en organisatie van een Kruispuntbank van de sociale zekerheid (ksz-bcss.fgov.be; nl.wikipedia.org 'Kruispuntbank van de Sociale Zekerheid'). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading the KSZ's own page directly (2026-08-26): its Article 1 establishes 'a public institution with legal personality' under the name Kruispuntbank van de sociale zekerheid; the KSZ's own GDPR register entry, also read directly, cites the same 1990 act as its legal basis for processing under Article 6(1)(c) GDPR."
+    confidence: high
     valid_from: 1990-01-15
     valid_until: null
 
@@ -49,39 +49,54 @@ sources:
   - title: "Wat doet de KSZ en hoe doet ze het?"
     url: "https://www.ksz-bcss.fgov.be/nl/over-de-ksz/ksz-in-het-kort/wat-doet-de-ksz-en-hoe-doet-ze-het"
     publisher: "Kruispuntbank van de Sociale Zekerheid (KSZ/BCSS)"
+    accessed: "2026-08-26"
   - title: "Wet van 15 januari 1990 houdende oprichting en organisatie van een Kruispuntbank van de sociale zekerheid"
     url: "https://www.ksz-bcss.fgov.be/nl/page/wet-van-15-januari-1990-houdende-oprichting-en-organisatie-van-een-kruispuntbank-van-de-sociale-zekerheid"
     publisher: "Kruispuntbank van de Sociale Zekerheid (KSZ/BCSS)"
+    accessed: "2026-08-26"
   - title: "Gegevens- en dienstencatalogus sociale sector"
     url: "https://www.ksz-bcss.fgov.be/nl/gegevensbescherming/gegevens-en-dienstencatalogus-sociale-sector"
     publisher: "Kruispuntbank van de Sociale Zekerheid (KSZ/BCSS)"
   - title: "Kruispuntbank van de Sociale Zekerheid"
     url: "https://nl.wikipedia.org/wiki/Kruispuntbank_van_de_Sociale_Zekerheid"
     publisher: "Wikipedia"
+    accessed: "2026-08-26"
+  - title: "Kruispuntbank van de Sociale Zekerheid — AVG Register"
+    url: "https://gdpr.belgium.be/nl/federal-institutions/kruispuntbank-van-de-sociale-zekerheid"
+    publisher: "gdpr.belgium.be (Belgian federal government)"
+    accessed: "2026-08-26"
 ---
 
 # Kruispuntbank van de Sociale Zekerheid (KSZ / BCSS)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-26.** Four of five sources were read directly. The
+> KSZ's own page quotes its founding Article 1; its own GDPR register entry
+> gives a different institution count than Wikipedia does — flagged rather
+> than resolved, below. `verification: primary-source`.
 
 ## Description
 
 The KSZ is a Belgian federal institution **established in 1990** under the
 FOD Sociale Zekerheid, acting as a **service integrator**
 (dienstenintegrator) that organises secure data exchange across an
-electronic network connecting roughly **2000 institutions** in the social
-security sector.
+electronic network connecting, per its own current GDPR register entry,
+**approximately 3000 actors** responsible for social protection — Wikipedia,
+also read this pass, instead gives "roughly 2000 institutions," matching
+what this entity previously stated. Both are genuine, dated readings; the
+discrepancy is recorded rather than resolved.
 
 Its architecture is the interesting part, and it is unusually explicit in
 the sources:
 
 - It upholds the **"only once"** principle — data already held is not
-  collected again from citizens and businesses.
+  collected again from citizens and businesses. Confirmed verbatim from the
+  KSZ's own page: "identical data are not requested twice by different
+  institutions from the same person."
 - Information exchanged through the network is **not centralised**. It is
   collected and validated by different **authentic sources** and stored in
-  their own decentralised databases.
+  their own decentralised databases — confirmed directly: "the KSZ is not a
+  central database," and wage data, for instance, "are preserved and
+  updated by the RSZ."
 - Personal data is exchanged automatically and securely **without the KSZ
   having access to it**.
 - Duplicate storage and duplicate quality control across public social
@@ -119,8 +134,11 @@ precedent. Logged in `discovery/unresolved.md`.
 
 ## Relationships
 
-- `governed-by` [[BE-KSZ-WET]].
+- `governed-by` [[BE-KSZ-WET]] — confirmed directly from the KSZ's own
+  Article 1 and its GDPR register entry.
 
 ## Sources
 
-Listed in frontmatter.
+Four of five read directly this pass — the KSZ's own "what it does" page,
+its founding-act page (quoting Article 1), Wikipedia, and its GDPR register
+entry. The data/services catalogue page was not re-fetched.

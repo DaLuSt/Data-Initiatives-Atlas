@@ -7,12 +7,27 @@ belong on the country's front page (`CONTRIBUTING.md`).
 
 Anchor entity: [[BE]]
 
-> **Sourcing caveat.** Every Belgian entity below was compiled from
-> search-engine results only: the cited pages were confirmed to exist but
-> were **not read**, because the working environment blocked page
-> retrieval. They carry `verification: search-only` and need a
-> re-verification pass against primary sources. See
-> `progress/current-batch.md`.
+> **Re-verified 2026-08-26.** All 24 Belgian entities carrying
+> `verification: search-only` were checked against primary sources this
+> pass. **18 were promoted to `primary-source`**: [[BE-BELGIF]],
+> [[BE-BRU-ORDONNANCE-2016]], [[BE-BRU-ORDONNANCE-2021]], [[BE-GDPR-WET]],
+> [[BE-HERGEBRUIK-WET-2023]], [[BE-HERGEBRUIK-WET]], [[BE-KSZ-WET]],
+> [[BE-NIS1-WET]], [[BE-NIS2-WET]], [[BE-VL-BESTUURSDECREET-2021]],
+> [[BE-WAL-DECRET-2022]], [[BE-WIV-1998]], [[BE-ADIV]], [[BE-APD]],
+> [[BE-KSZ]], [[BE-NBN]], [[BE-VSSE]] and [[BE-DCAT-AP-BE]]. **6 stayed
+> `search-only`** because a majority of their cited sources could not be
+> read: [[BE-TOEZICHTSWET-1991]], [[BE-BOSA]], [[BE-CCB]],
+> [[BE-COMITE-I]], [[BE-STATBEL]] and [[BE-DATA-GOV-BE]] — mostly because
+> `bosa.belgium.be`, `ccb.belgium.be`, `data.gov.be`, `financien.belgium.be`
+> and `statbel.fgov.be` are genuinely bot-walled (CAPTCHA/403) even with an
+> honest User-Agent, the Belgian counterpart to the `.gouv.fr` block found
+> in the France batch. Two corrections of note: [[BE-HERGEBRUIK-WET-2023]]
+> was actually published in the Moniteur belge on **23 January 2024**, not
+> 25 December 2023 as previously recorded (25 December is the act's own
+> date); and [[BE-STATBEL]]'s own body text was still claiming, ten days
+> after the fact, that no source connected it to the European Statistical
+> System — the frontmatter had carried that edge since the UN batch of
+> 2026-08-16. See each entity for its own sourcing detail.
 
 > ⚠ **This index covers the federal layer only.** Belgium's Regions and
 > Communities run much of its public-sector digitalisation — Digitaal
@@ -27,6 +42,7 @@ Anchor entity: [[BE]]
 - [[BE-APD]] — Gegevensbeschermingsautoriteit
 - [[BE-STATBEL]] — national statistical office
 - [[BE-KSZ]] — Kruispuntbank van de Sociale Zekerheid _(service integrator)_
+- [[BE-NBN]] — Bureau de Normalisation / Bureau voor Normalisatie _(national standards body — CEN member, CENELEC national committee)_
 
 ## Legislation
 
@@ -88,7 +104,7 @@ Atlas entity now carrying `applies-in` → [[BE]] alongside [[NL]] and
 | [[EU-NIS2]] | [[BE-NIS2-WET]] | [[DE-NIS2UMSUCG]] | [[NL-CBW]] |
 | [[EU-DCAT-AP]] | [[BE-DCAT-AP-BE]] | [[DE-DCAT-AP-DE]] | [[NL-DCAT-AP-NL]] |
 | [[EU-EIF]] | **[[BE-BELGIF]]** | _(none sourced)_ | _(none sourced)_ |
-| [[EU-OPEN-DATA-DIRECTIVE]] | _(not established)_ | [[DE-DNG]] | [[NL-WHO]] |
+| [[EU-OPEN-DATA-DIRECTIVE]] | [[BE-HERGEBRUIK-WET-2023]] _(federal; three sub-federal instruments too)_ | [[DE-DNG]] | [[NL-WHO]] |
 | [[EU-INSPIRE]] | [[BE-DCAT-AP-BE]] _(mapping)_ | [[DE-GEOZG]] | _(gap)_ |
 | [[EU-ITS-DIRECTIVE]] | _(none)_ | [[DE-MOBILITHEK]] | [[NL-NTM]] |
 
@@ -127,6 +143,9 @@ and routes verification through [[BE-COMITE-I]] rather than [[BE-APD]].
   supra-national. This is the batch's principal finding — see [[BE]].
 - The **six public service integrators** as a set; only [[BE-KSZ]] is
   modelled.
-- Belgium's eID / itsme digital identity scheme, the eHealth platform, the
-  Kruispuntbank van Ondernemingen, and NBN (the national standards body).
-  All queued in `discovery/research-queue.md`.
+- Belgium's eID / itsme digital identity scheme, the eHealth platform, and
+  the Kruispuntbank van Ondernemingen. Queued in
+  `discovery/research-queue.md`. **Correction (2026-08-26): NBN, the
+  national standards body, was already modelled as [[BE-NBN]]** — this line
+  was stale and NBN was missing from the "Organisations" list above, now
+  added.

@@ -27,11 +27,11 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: 2018-05-25
 end_date: null
-last_verified: null
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -45,14 +45,14 @@ relationships:
   - type: participates-in
     target: EU-EDPB
     source: fact
-    evidence: "Article 68(3) GDPR provides that the European Data Protection Board shall be composed of the head of one supervisory authority of each Member State and of the European Data Protection Supervisor, or their respective representatives; the President of the Personal Data Protection Office is Poland's supervisory authority (gdpr-info.eu 'Art. 68 GDPR — European Data Protection Board'; gdprhub.eu 'Article 68 GDPR'; edpb.europa.eu). NOT READ — search-only."
+    evidence: "Confirmed by reading gdpr-info.eu's own text of Article 68(3) GDPR directly (2026-08-26): 'The Board shall be composed of the head of one supervisory authority of each Member State and of the European Data Protection Supervisor, or their respective representatives.' The President of UODO is Poland's supervisory authority, per UODO's own annual report, also read directly. `gdprhub.eu` was not read this pass."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: applies-to
     target: PL-ODO
     source: fact
-    evidence: "The status, tasks, competencies, principles and mode of appointment of the President of the Office for Personal Data Protection are regulated by the provisions of the Act of 10 May 2018 on the protection of personal data; as of 25 May 2018 the President is the competent body for the protection of personal data, and its main task is to monitor and enforce provisions on personal data protection in Poland (uodo.gov.pl; odoserwis.pl PUODO page; politykabezpieczenstwa.pl). NOT READ — search-only."
+    evidence: "Confirmed by reading UODO's own 2018 annual report directly (2026-08-26): it is submitted under 'art. 50 ustawy z dnia 10 maja 2018 r. o ochronie danych osobowych' (Article 50 of the Act of 10 May 2018), the President's own statutory reporting obligation. odoserwis.pl, also read directly, confirms the President is appointed by the Sejm with Senate consent for a four-year term."
     confidence: medium
     valid_from: 2018-05-25
     valid_until: null
@@ -61,28 +61,34 @@ sources:
   - title: "Art. 68 GDPR — European Data Protection Board"
     url: "https://gdpr-info.eu/art-68-gdpr/"
     publisher: "gdpr-info.eu (Intersoft Consulting)"
+    accessed: "2026-08-26"
   - title: "Article 68 GDPR"
     url: "https://gdprhub.eu/Article_68_GDPR"
     publisher: "GDPRhub (noyb)"
   - title: "Sprawozdanie z działalności Prezesa Urzędu Ochrony Danych Osobowych w roku 2018"
     url: "https://uodo.gov.pl/pl/file/3909"
     publisher: "Urząd Ochrony Danych Osobowych (UODO)"
+    accessed: "2026-08-26"
   - title: "Prezes Urzędu Ochrony Danych Osobowych (PUODO)"
     url: "https://odoserwis.pl/p/405/prezes-urzedu-ochrony-danych-osobowych-puodo"
     publisher: "odoserwis.pl"
+    accessed: "2026-08-26"
   - title: "Prezes UODO zamiast Generalnego Inspektora ODO"
     url: "https://www.politykabezpieczenstwa.pl/pl/a/puodo-zamiast-giodo"
     publisher: "Polityka Bezpieczeństwa"
-  - title: "Generalny Inspektor Ochrony Danych Osobowych — archiwum GIODO"
+    accessed: "2026-08-26"
+  - title: "Generalny Inspektor Ochrony Danych Osobowych — archiwum GIODO (domain no longer resolves)"
     url: "https://archiwum.giodo.gov.pl/"
     publisher: "Generalny Inspektor Ochrony Danych Osobowych (archive)"
 ---
 
 # UODO — Urząd Ochrony Danych Osobowych
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-26.** Four of six cited pages were read directly.
+> UODO's own 2018 annual report uses stronger language for the GIODO
+> transition than this entity previously carried — see below.
+> `archiwum.giodo.gov.pl` no longer resolves at all (DNS failure, not a
+> 403); `gdprhub.eu` was not read this pass.
 
 ## Description
 
@@ -120,27 +126,38 @@ mentions the EDPB. **Six page reads would fix five edges.** It remains the
 cheapest high-value item in `discovery/unresolved.md`, and it has now
 survived four country batches.
 
-## A second organisational succession, not modelled
+## The GIODO succession — stronger language found, still no entity created
 
 The President **replaced the Generalny Inspektor Ochrony Danych Osobowych
-(GIODO)**, taking over part of that office's tasks and competencies — the
-archived GIODO site is cited above.
+(GIODO)**. This entity previously hedged that as "took over *part* of
+GIODO's competencies... not a clean succession." UODO's own 2018 annual
+report, read directly this pass, uses more definite language: it covers
+"działalność Prezesa UODO od 25 maja do 31 grudnia 2018 r. oraz działalność
+[GIODO], **którego Prezes UODO jest następcą prawnym**" (the activity of
+the President of UODO from 25 May to 31 December 2018, and the activity
+of GIODO, **whose legal successor the President of UODO is**) for the
+period before that. politykabezpieczenstwa.pl, also read directly, frames
+it even more simply as a renaming: "urząd... GIODO... został przemianowany
+na Prezesa [UODO]" (the GIODO office was renamed to the President of
+UODO).
 
-**No GIODO entity was created and no `supersedes` edge asserted.** The
-sources say the President took over *part* of GIODO's competencies, which is
-not the clean succession [[ES-AEAD]] → [[ES-SGAD]] records, and nothing read
-establishes what happened to the remainder. Creating a superseded entity on
-that basis would assert a tidier transition than the evidence supports.
+Both readings point the same way — a continuation under new law rather
+than a partial, uncertain handover — and the "not a clean succession"
+caveat this entity previously carried reads like an overcaution now.
+**Still no GIODO entity was created and no `supersedes` edge asserted**:
+`archiwum.giodo.gov.pl`'s own site, which would be GIODO's own voice on
+the matter, no longer resolves at all (DNS failure), so nothing GIODO
+itself said could be checked. Creating a predecessor entity from only the
+successor's own characterisation would be one-sided.
 
-Logged in `discovery/research-queue.md`. It is the third institutional
-transformation the Atlas has now touched — Spain's completed, Poland's COI
-one pending, and this one partial — which is starting to look like a
-recurring shape worth handling deliberately rather than case by case.
+Logged in `discovery/research-queue.md`, narrower than before: the
+succession's *character* now has primary-source support, and what
+remains open is only whether the transition merits its own entity.
 
 ## `coverage: low`
 
 The office's structure, staffing, sanctioning record and its relationship
-to sectoral regulators are unrecorded, and two of the four sources are
+to sectoral regulators are unrecorded, and several of the six sources are
 secondary commentary rather than UODO publications.
 
 ## Relationships
@@ -149,4 +166,6 @@ secondary commentary rather than UODO publications.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, four of six read directly this pass.
+`archiwum.giodo.gov.pl` no longer resolves; `gdprhub.eu` was not
+attempted.

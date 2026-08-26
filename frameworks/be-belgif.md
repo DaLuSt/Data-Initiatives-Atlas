@@ -23,11 +23,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -41,8 +41,8 @@ relationships:
   - type: based-on
     target: EU-EIF
     source: fact
-    evidence: "BelgIF is the National Interoperability Framework (NIF) for Belgium, and the federal government and the regions have agreed to use the 12 principles of the EIF as the basis for defining their interoperability; the BELGIF portal publishes a mapping of the EIF recommendations to various interoperability initiatives classified by legal, organisational, semantic and technical levels (belgif.be/eif3/about.en.html; belgif.be/eif3/recommendations.en.html). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading belgif.be and github.com/belgif directly (2026-08-26): 'For Belgium, BelgIF is the NIF', and 'The federal government and the regions have agreed to use the 12 principles of the EIF as the basis for defining their interoperability.' Belgium's 47 recommendations derived from those principles are endorsed within BelgIF 'as a valuable foundation for the definition of architecture, applications and solutions for data exchange and interoperability within and between the federal government and the communities and regions.' The github.com/belgif organisation page independently restates the same collaborative-effort description verbatim."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -50,15 +50,19 @@ sources:
   - title: "Belgif | EIF 3 — About"
     url: "https://belgif.be/eif3/about.en.html"
     publisher: "Belgian Interoperability Framework (BELGIF)"
+    accessed: "2026-08-26"
   - title: "Belgif | EIF 3 — Recommendations"
     url: "https://belgif.be/eif3/recommendations.en.html"
     publisher: "Belgian Interoperability Framework (BELGIF)"
+    accessed: "2026-08-26"
   - title: "Specification: DCAT-AP"
     url: "https://belgif.be/page/specification/dcat-ap.en.html"
     publisher: "Belgian Interoperability Framework (BELGIF)"
+    accessed: "2026-08-26"
   - title: "BelgIF — Belgian Interoperability Framework (GitHub)"
     url: "https://github.com/belgif"
     publisher: "BELGIF"
+    accessed: "2026-08-26"
   - title: "Factsheet: Access to Base Registries in Belgium"
     url: "https://interoperable-europe.ec.europa.eu/sites/default/files/inline-files/Belgium%20Factsheet%20Final.pdf"
     publisher: "European Commission — Interoperable Europe"
@@ -66,9 +70,12 @@ sources:
 
 # BELGIF — Belgian Interoperability Framework
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-26.** Four of the five cited sources were read
+> directly: both belgif.be EIF pages, the DCAT-AP specification page, and
+> the github.com/belgif organisation page, which independently restates the
+> same "collaborative effort" description. Only the European Commission
+> factsheet PDF was retrieved but not readable as text. `verification:
+> primary-source`.
 
 ## Description
 
@@ -135,5 +142,8 @@ them.
 
 ## Sources
 
-Listed in frontmatter, including a European Commission factsheet on access
-to base registries in Belgium.
+Four of five read directly this pass — the belgif.be "About" and
+"Recommendations" pages, the DCAT-AP specification page, and the
+github.com/belgif organisation page. The European Commission factsheet on
+access to base registries in Belgium was retrieved but returned as an
+unreadable binary PDF and remains unconfirmed.

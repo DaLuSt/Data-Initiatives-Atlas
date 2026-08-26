@@ -18,11 +18,11 @@ region: EU
 status: active
 confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: 2006-06-09
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -30,18 +30,28 @@ domains:
   - DOMAIN-NATIONAL-SECURITY
 organisations: []
 related_entities:
+  - PL
   - PL-SKW
   - PL-SWW
   - PL-UABWAW-2002
-relationships: []
+relationships:
+  - type: applies-in
+    target: PL
+    source: fact
+    evidence: "Confirmed by reading bip.abw.gov.pl's own page on the College for Special Services directly (2026-08-26): 'Szef ABW, Szef AW, Szef Centralnego Biura Antykorupcyjnego, Szef Służby Kontrwywiadu Wojskowego, Szef Służby Wywiadu Wojskowego' names the heads of SKW and SWW among the College's members, alongside pl.wikipedia.org's article on the Sejm's oversight committee, also read directly, which confirms both services and this Act's role constituting them. Neither page carries the Act's own text or a Dz.U. citation — no official Polish government URL was found for this Act, in contrast to [[PL-UABWAW-2002]]. Anchor edge under metadata/relationship-types.md §2.3."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Kolegium ds. służb specjalnych"
     url: "https://bip.abw.gov.pl/bip/nadzor-i-kontrola/kolegium-ds-sluzb-spec/18,Kolegium-ds-sluzb-specjalnych.html"
     publisher: "Agencja Bezpieczeństwa Wewnętrznego (BIP)"
+    accessed: "2026-08-26"
   - title: "Komisja do Spraw Służb Specjalnych"
     url: "https://pl.wikipedia.org/wiki/Komisja_do_Spraw_S%C5%82u%C5%BCb_Specjalnych"
     publisher: "Wikipedia"
+    accessed: "2026-08-26"
   - title: "Cywilna kontrola nad służbami specjalnymi w Polsce"
     url: "https://journals.akademicka.pl/politeja/article/download/4030/3742/4997"
     publisher: "Politeja (Wydawnictwo Księgarnia Akademicka)"
@@ -49,9 +59,10 @@ sources:
 
 # Ustawa z dnia 9 czerwca 2006 r. o SKW oraz SWW
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Re-verified 2026-08-26.** Two of three cited pages were read
+> directly. Both name SKW and SWW as College for Special Services members
+> constituted by this Act, but neither carries the Act's own text — the
+> weak sourcing this entity already flagged stands.
 
 ## Description
 
@@ -80,9 +91,14 @@ worth recording, and it is the reason both military service entities carry
   was established.
 - Any **article-level** content.
 
+## Relationships
+
+- `applies-in` [[PL]] — anchor edge, confirmed this pass.
+
 ## Sources
 
-Listed in frontmatter. **No official Polish government URL is cited**, which
-makes this the weakest law entity in the batch after [[DE-BVERFSCHG]] and
-[[DE-MADG]]. It should be re-sourced against ISAP when retrieval is
-possible.
+Listed in frontmatter, two of three read directly this pass. **No
+official Polish government URL is cited**, which makes this the weakest
+law entity in the batch after [[DE-BVERFSCHG]] and [[DE-MADG]]. ISAP
+remains genuinely CAPTCHA-blocked; it should be retried when that
+changes.

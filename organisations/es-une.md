@@ -19,11 +19,11 @@ region: EU
 status: active
 confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -37,14 +37,14 @@ relationships:
   - type: participates-in
     target: EU-CEN
     source: fact
-    evidence: "CEN's National Members are the National Standardization Bodies of the 27 European Union countries, the United Kingdom, North Macedonia, Serbia and Türkiye, plus three EFTA countries (Iceland, Norway and Switzerland); CENELEC's National Members are the National Committees of the same set, and the national bodies operate the technical groups that draw up the standards, coordinated by the CEN-CENELEC Management Centre in Brussels. UNE is the national standardization body of Spain. (cencenelec.eu 'European Standards' and 'CEN Board members'; standards.cencenelec.eu CEN and CENELEC member lists). NOT READ — search-only."
+    evidence: "Confirmed by reading standards.cencenelec.eu's own current member list directly (2026-08-26): 'UNE | Spain | Asociación Española de Normalización | www.une.org', naming UNE directly as Spain's CEN national member. cencenelec.eu's own 'European Standards' page, also read directly, describes National Members as operating the technical groups that draw up standards, coordinated by the Brussels Management Centre. `une.org` itself is genuinely bot-walled (403) even with an honest User-Agent."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: participates-in
     target: EU-CENELEC
     source: fact
-    evidence: "CEN's National Members are the National Standardization Bodies of the 27 European Union countries, the United Kingdom, North Macedonia, Serbia and Türkiye, plus three EFTA countries (Iceland, Norway and Switzerland); CENELEC's National Members are the National Committees of the same set, and the national bodies operate the technical groups that draw up the standards, coordinated by the CEN-CENELEC Management Centre in Brussels. UNE is the national standardization body of Spain. (cencenelec.eu 'European Standards' and 'CEN Board members'; standards.cencenelec.eu CEN and CENELEC member lists). NOT READ — search-only."
+    evidence: "CEN and CENELEC share the same national-member structure (cencenelec.eu's own 'European Standards' page, read directly, describes both bodies' National Members as the same set of countries' bodies); standards.cencenelec.eu's member list, also read directly, names UNE for Spain's CEN membership. No page read lists CENELEC's members separately from CEN's, so this edge is carried at the same evidentiary basis as the CEN edge."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -53,19 +53,22 @@ sources:
   - title: "European Standards"
     url: "https://www.cencenelec.eu/european-standardization/european-standards/"
     publisher: "CEN-CENELEC"
+    accessed: "2026-08-26"
   - title: "CEN Community — List of members"
     url: "https://standards.cencenelec.eu/ords/f?p=CEN:5"
     publisher: "CEN-CENELEC"
-  - title: "UNE — Asociación Española de Normalización"
+    accessed: "2026-08-26"
+  - title: "UNE — Asociación Española de Normalización (currently bot-walled)"
     url: "https://www.une.org/"
     publisher: "UNE"
 ---
 
 # Asociación Española de Normalización (UNE)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`. ⚠ `coverage: low`.
+> **Verified 2026-08-26.** Two of three cited pages were read directly;
+> `une.org` remains genuinely bot-walled (403) even with an honest
+> User-Agent. standards.cencenelec.eu's own member list names UNE for
+> Spain directly.
 
 ## Description
 
@@ -105,4 +108,5 @@ appears in standard numbers as well as in the body's name.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, two of three read directly this pass; `une.org`
+remains genuinely bot-walled.

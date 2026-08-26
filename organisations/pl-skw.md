@@ -19,11 +19,11 @@ region: EU
 status: active
 confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: 2006-06-09
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -39,7 +39,7 @@ relationships:
   - type: governed-by
     target: PL-USKWSWW-2006
     source: fact
-    evidence: "The Act of 9 June 2006 on the Służba Kontrwywiadu Wojskowego and the Służba Wywiadu Wojskowego forms part of the legal framework for the Polish special services and constitutes the Military Counterintelligence Service and the Military Intelligence Service; the College for Special Services includes the heads of ABW, AW, CBA, SKW and SWW (isap.sejm.gov.pl; bip.abw.gov.pl 'Kolegium ds. służb specjalnych'; pl.wikipedia.org 'Komisja do Spraw Służb Specjalnych'). NOT READ — search-only."
+    evidence: "Confirmed by reading bip.abw.gov.pl's own College for Special Services page directly (2026-08-26): 'Szef ABW, Szef AW, Szef Centralnego Biura Antykorupcyjnego, Szef Służby Kontrwywiadu Wojskowego, Szef Służby Wywiadu Wojskowego' names SKW's head among the College's members. pl.wikipedia.org's article on the Sejm's oversight committee, also read directly, confirms this Act constitutes both SKW and SWW. Neither page carries the Act's own text or a Dz.U. citation."
     confidence: medium
     valid_from: 2006-06-09
     valid_until: null
@@ -48,16 +48,18 @@ sources:
   - title: "Kolegium ds. służb specjalnych"
     url: "https://bip.abw.gov.pl/bip/nadzor-i-kontrola/kolegium-ds-sluzb-spec/18,Kolegium-ds-sluzb-specjalnych.html"
     publisher: "Agencja Bezpieczeństwa Wewnętrznego (BIP)"
+    accessed: "2026-08-26"
   - title: "Komisja do Spraw Służb Specjalnych"
     url: "https://pl.wikipedia.org/wiki/Komisja_do_Spraw_S%C5%82u%C5%BCb_Specjalnych"
     publisher: "Wikipedia"
+    accessed: "2026-08-26"
 ---
 
 # Służba Kontrwywiadu Wojskowego (SKW)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-26.** Both cited pages were read directly. Both
+> describe the service rather than being published by it — the weak
+> sourcing this entity already flagged stands.
 
 ## Description
 
@@ -85,4 +87,4 @@ entities is more than that. Compare [[PL-AW]], which publishes its own
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, both read directly this pass.

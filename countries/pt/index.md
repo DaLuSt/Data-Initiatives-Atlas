@@ -7,31 +7,43 @@ belong on the country's front page (`CONTRIBUTING.md`).
 
 Anchor entity: [[PT]]
 
-> **Sourcing caveat.** Every Portuguese entity below was compiled from
-> search-engine results only: the cited pages were confirmed to exist but
-> were **not read**. They carry `verification: search-only`.
+> **Verified 2026-08-26.** Every entity below now carries
+> `verification: primary-source`. All eight of Portugal's remaining
+> `search-only` entities were re-verified in one pass, which also
+> surfaced a genuine structural change ([[PT-AMA]] → [[PT-ARTE]]) and
+> closed two long-standing gaps (Portugal's NIS2 and Open Data Directive
+> transpositions, both previously unidentified).
 
 ## Organisations
 
-- [[PT-AMA]] — Agência para a Modernização Administrativa _(administrative
-  **and regulatory** simplification, e-government and service delivery in one
-  public institute)_
+- [[PT-ARTE]] — Agência para a Reforma Tecnológica do Estado _(created
+  August 2025 by restructuring [[PT-AMA]], which no longer exists under
+  its old name; combines administrative and regulatory simplification,
+  e-government and service delivery in one public institute)_
+- [[PT-AMA]] — the superseded predecessor, kept for historical record
+  (`status: superseded`, `successor: PT-ARTE`)
 - [[PT-CNPD]] — data protection authority _(powers conferred by the GDPR
   **in conjunction with** [[PT-LEI-58-2019]])_
 - [[PT-INE]] — Instituto Nacional de Estatística _(⚠ not to be confused with
   [[ES-INE]], Spain's identically-abbreviated office)_
-- [[PT-IPQ]] — Instituto Português da Qualidade _(the only one of the
-  recently-added standards bodies with a **sourced ISO edge**)_
-- [[PT-CNCS]] — Centro Nacional de Cibersegurança
+- [[PT-IPQ]] — Instituto Português da Qualidade, **and, confirmed this
+  pass, Portugal's national metrology institution too**
+- [[PT-CNCS]] — Centro Nacional de Cibersegurança, now with its NIS2
+  transposition identified: [[PT-DECRETO-LEI-125-2025]]
 
 ## Legislation
 
 - [[PT-LEI-58-2019]] — the act that **executes** [[EU-GDPR]] in the
   Portuguese legal order
+- [[PT-LEI-26-2016]] — the LADA; its third amendment, **Lei n.º 68/2021**,
+  now identified by number and date, transposes the Open Data Directive
+- [[PT-DECRETO-LEI-125-2025]] — transposes NIS2, in force since 3 April
+  2026
 
 ## Platforms
 
-- [[PT-DADOS-GOV]] — dados.gov.pt _(⚠ no custodian modelled)_
+- [[PT-DADOS-GOV]] — dados.gov.pt, **now with a sourced custodian**:
+  `maintained-by` [[PT-ARTE]]
 
 ---
 
@@ -48,16 +60,21 @@ relationship type; the varied language is how each legal tradition describes
 the same operation, and recording it is how the Atlas avoids implying the
 traditions are identical.
 
-**A regulatory mandate inside a digital agency.** [[PT-AMA]]'s remit covers
-regulatory simplification, not only administrative. No comparable body in the
-Atlas records that.
+**A regulatory mandate inside a digital agency.** [[PT-ARTE]] (and
+[[PT-AMA]] before it) covers regulatory simplification, not only
+administrative. No comparable body in the Atlas records that.
+
+**A live example of why `status: superseded` exists.** Re-verifying
+[[PT-AMA]] this pass found its own domain redirecting to a different
+agency entirely — not a dead link, a real 2025 government restructuring.
+The Atlas recorded it the same way it recorded [[NL-WOB]] → [[NL-WOO]],
+rather than silently editing AMA's file in place.
 
 ## Not modelled
 
 - The **Azores and Madeira** — autonomous regions with their own
   administrations. The Atlas has no sub-national level.
-- Portugal's **NIS2 transposition**, so [[PT-CNCS]] has no act beside it.
-- Portugal's **Open Data Directive transposition**, joining Belgium, France,
-  Spain and Ireland on that list.
+- The **Conselho Superior de Segurança do Ciberespaço (CSSC)**, an
+  advisory body [[PT-DECRETO-LEI-125-2025]] reportedly also establishes.
 - **ePortugal**, the **Chave Móvel Digital** and the **Cartão de Cidadão**.
 - The **iAP** interoperability platform.

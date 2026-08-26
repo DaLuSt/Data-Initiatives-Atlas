@@ -8,7 +8,8 @@ alternative_names:
   - Portuguese open data portal
 description: >
   Portugal's national open data portal, publishing datasets from Portuguese
-  public bodies.
+  public bodies, maintained by the Agência para a Reforma Tecnológica do
+  Estado (ARTE) and running on the open-source udata platform.
 
 level: national
 country: PT
@@ -16,12 +17,12 @@ region: EU
 
 status: active
 confidence: medium
-coverage: low
-verification: search-only
+coverage: medium
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -30,13 +31,29 @@ domains:
 organisations: []
 related_entities:
   - PT
+  - PT-ARTE
   - EU-OPEN-DATA-DIRECTIVE
+  - PT-LEI-26-2016
 relationships:
   - type: part-of
     target: PT
     source: fact
-    evidence: "dados.gov.pt is Portugal's national open data portal, publishing open data from Portuguese public administration bodies (dados.gov.pt). NOT READ — search-only. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    evidence: "Confirmed by reading dados.gov.pt's own homepage directly (2026-08-26): 'Aceda, explore e reutilize dados públicos de forma transparente e acessível' (Access, explore and reuse public data transparently and accessibly), footer-credited to 'República Portuguesa'. Anchor edge under metadata/relationship-types.md §2.3."
     confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: maintained-by
+    target: PT-ARTE
+    source: fact
+    evidence: "Confirmed by reading dados.gov.pt's own homepage directly (2026-08-26): the footer names the 'Agência para a Reforma Tecnológica do Estado' alongside 'República Portuguesa'. This closes the custodian gap this entity previously flagged ('the fifth portal without a custodian') — see [[PT-ARTE]], created in 2025 by restructuring [[PT-AMA]], the body previously suspected but unsourced as the operator."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: implements-requirement-from
+    target: EU-OPEN-DATA-DIRECTIVE
+    source: interpretation
+    evidence: "dados.gov.pt is Portugal's national open data portal; [[PT-LEI-26-2016]]'s third amendment is the instrument that transposes the Open Data Directive into Portuguese law, read directly this pass (mosaico.gov.pt names dados.gov as the platform this framework operates through). This entity is the technical implementation the legal transposition applies to, rather than itself being an instrument that implements the Directive — recorded as `interpretation` rather than `fact` for that reason."
+    confidence: low
     valid_from: null
     valid_until: null
 
@@ -44,45 +61,62 @@ sources:
   - title: "dados.gov.pt — Portal de Dados Abertos"
     url: "https://dados.gov.pt/"
     publisher: "Governo de Portugal"
-  - title: "Open Data Directive"
-    url: "https://digital-strategy.ec.europa.eu/en/policies/open-data"
-    publisher: "European Commission — Shaping Europe's digital future"
+    accessed: "2026-08-26"
+  - title: "Dados.GOV"
+    url: "https://mosaico.gov.pt/plataformas-comuns/dados-gov"
+    publisher: "Mosaico / Governo de Portugal"
+    accessed: "2026-08-26"
 ---
 
 # dados.gov.pt
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`. ⚠ `coverage: low`.
+> **Verified 2026-08-26.** Both cited pages were read directly. The
+> portal's own footer names its custodian — closing a gap this entity
+> had flagged since its creation — and dados.gov.pt turns out to be more
+> than a single portal: it aggregates and indexes sectoral and local open
+> data catalogues too.
 
 ## Description
 
-dados.gov.pt is Portugal's national open data portal.
+dados.gov.pt is Portugal's national open data catalogue: a central hub
+that hosts open datasets directly and also indexes sectoral (health,
+justice, environment) and local data portals. Confirmed by reading its
+own homepage directly: "qualquer utilizador pode, em nome próprio ou em
+representação de uma organização, criar uma conta e carregar dados" (any
+user may, personally or on behalf of an organisation, create an account
+and upload data) under open licences — it is a publishing platform, not
+only a read-only listing.
 
-## The fifth portal without a custodian
+## The custodian gap, closed via AMA's successor
 
-[[NL-DATA-OVERHEID]], [[ES-DATOS-GOB-ES]], [[IE-DATA-GOV-IE]] and now this
-one carry no `maintained-by` edge. [[PT-AMA]] is the obvious operator and no
-source read says so.
+This entity previously flagged itself as "the fifth portal without a
+custodian" — [[PT-AMA]] was the obvious operator and no source read said
+so. dados.gov.pt's own homepage footer, read directly this pass, credits
+the **Agência para a Reforma Tecnológica do Estado** — [[PT-ARTE]],
+created in August 2025 by restructuring [[PT-AMA]]. AMA's successor is
+this portal's sourced custodian.
 
-Only [[CH-OPENDATA-SWISS]] has a sourced custodian, because [[CH-BFS]] says
-in its own words that it operates the portal. One in five.
+## Portugal's Open Data Directive transposition — identified, weakly linked
 
-## Portugal's Open Data Directive transposition — now identified
-
-Recorded here as unidentified when this entity was created. It is
-**[[PT-LEI-26-2016]]**, the LADA, whose **third amendment** approved general
-principles on open data and transposed the Directive.
+[[PT-LEI-26-2016]], the LADA, whose **third amendment** approved general
+principles on open data and transposed the Directive, is the transposing
+instrument — confirmed by mosaico.gov.pt naming dados.gov as the platform
+this legal framework operates through. The edge is recorded at
+`confidence: low` and `source: interpretation`: the law transposes the
+Directive into Portuguese law, but nothing read states that this
+*portal specifically* is what implements the Directive's requirements,
+only that it is the platform the framework runs on.
 
 Portugal did not pass a standalone open data act. It folded open data into
 the statute that already governed **access to administrative and
 environmental information** — one act where Germany has three.
 
-Belgium, France and Spain are still unidentified.
-
 ## Relationships
 
-- `part-of` [[PT]] — an anchor edge.
+- `part-of` [[PT]] — anchor edge.
+- `maintained-by` [[PT-ARTE]] — confirmed this pass.
+- `implements-requirement-from` [[EU-OPEN-DATA-DIRECTIVE]] —
+  `confidence: low`, `source: interpretation`, via [[PT-LEI-26-2016]].
 
 ## Sources
 

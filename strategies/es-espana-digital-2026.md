@@ -28,7 +28,7 @@ verification: search-only
 
 start_date: 2022-07-05
 end_date: 2026-12-31
-last_verified: null
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -48,7 +48,7 @@ relationships:
   - type: applies-in
     target: ES
     source: fact
-    evidence: "España Digital 2026 is Spain's national digital transformation roadmap, an update to the strategy launched in July 2020, including an axis on co-governance between the State and the Autonomous Communities (digital.gob.es; lamoncloa.gob.es). NOT READ — search-only. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    evidence: "Confirmed by reading planderecuperacion.gob.es directly (2026-08-26): the Council of Ministers updated the Agenda España Digital on 5 July 2022 to take stock of the path travelled and adapt it to the 2026 horizon, improving its alignment with the Recovery Plan; the page names one of the two new cross-cutting axes as the Proyectos Estratégicos para la Recuperación y Transformación Económica (PERTE) and the Retech initiative. It does NOT itself name a co-governance axis — that detail rests on digital.gob.es and lamoncloa.gob.es, neither of which returned usable content when fetched this pass (digital.gob.es's programme page loaded only navigation, not body text). Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -60,6 +60,7 @@ sources:
   - title: "El Gobierno actualiza la Agenda España Digital para el horizonte 2026 y acelera el despliegue de sus inversiones"
     url: "https://planderecuperacion.gob.es/noticias/el-gobierno-actualiza-la-agenda-espana-digital-para-el-horizonte-2026-y-acelera-el-despliegue-de-sus-inversiones"
     publisher: "Plan de Recuperación, Transformación y Resiliencia — Gobierno de España"
+    accessed: "2026-08-26"
   - title: "España Digital 2026 (documento)"
     url: "https://espanadigital.gob.es/sites/espanadigital/files/2022-07/Espa%C3%B1aDigital_2026.pdf"
     publisher: "Gobierno de España"
@@ -70,9 +71,12 @@ sources:
 
 # España Digital 2026
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Re-checked 2026-08-26, still `search-only`.** One of four cited pages
+> was read directly (planderecuperacion.gob.es), confirming the update
+> date and one of the two new cross-cutting axes (PERTE/Retech). The
+> co-governance axis, digital.gob.es's own programme page and INCIBE's
+> summary were not readable this pass — one of four is not a majority, so
+> `verification` stays `search-only`.
 
 ## Description
 
@@ -131,6 +135,7 @@ None asserted.
 
 ## Sources
 
-Listed in frontmatter — the ministry programme page, the Recovery Plan
-announcement of the update, the strategy document itself, and INCIBE's
-summary of what it means for cybersecurity.
+Listed in frontmatter, one of four read directly this pass: the Recovery
+Plan's own announcement of the update. The ministry programme page loaded
+only navigation chrome, the strategy PDF exceeded the fetch tool's size
+limit, and INCIBE's summary returned 403.

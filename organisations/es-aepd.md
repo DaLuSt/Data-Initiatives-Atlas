@@ -19,12 +19,12 @@ region: null
 
 status: active
 confidence: medium
-coverage: low
-verification: search-only
+coverage: medium
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -38,14 +38,14 @@ relationships:
   - type: participates-in
     target: EU-EDPB
     source: fact
-    evidence: "Article 68(3) GDPR provides that the European Data Protection Board shall be composed of the head of one supervisory authority of each Member State and of the European Data Protection Supervisor, or their respective representatives; the Agencia Española de Protección de Datos is Spain's supervisory authority (gdpr-info.eu 'Art. 68 GDPR — European Data Protection Board'; gdprhub.eu 'Article 68 GDPR'; edpb.europa.eu). NOT READ — search-only."
+    evidence: "Confirmed by reading gdpr-info.eu's own text of Article 68(3) GDPR directly (2026-08-26): 'The Board shall be composed of the head of one supervisory authority of each Member State and of the European Data Protection Supervisor, or their respective representatives.' The AEPD is Spain's supervisory authority. `gdprhub.eu` was not read this pass."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: applies-to
     target: ES-LOPDGDD
     source: fact
-    evidence: "Organic Law 3/2018 supplements the EU GDPR with national provisions and establishes a catalogue of digital rights, with the Agencia Española de Protección de Datos overseeing enforcement; the AEPD publishes and maintains guidance on the changes the LOPDGDD introduces for the private sector, and announces modifications to the law (aepd.es 'Novedades LOPD sector privado'; aepd.es press note on the modification of the LOPDGDD). NOT READ — search-only."
+    evidence: "Confirmed by reading boe.es's own text of Ley Orgánica 3/2018 directly (2026-08-26, BOE-A-2018-16673) and aepd.es's own press note on a modification to the law: the note describes new corrective powers, including 'el apercibimiento como una medida adecuada, de naturaleza no sancionadora, incluida dentro de los poderes correctivos' (a formal warning as an appropriate, non-sanctioning measure within the corrective powers), and expanded discretion for the Agency to create standardised, mandatory complaint procedures. The 'Novedades LOPD sector privado' PDF was attempted but returned only encoded, unreadable content."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -54,6 +54,7 @@ sources:
   - title: "Art. 68 GDPR — European Data Protection Board"
     url: "https://gdpr-info.eu/art-68-gdpr/"
     publisher: "gdpr-info.eu (Intersoft Consulting)"
+    accessed: "2026-08-26"
   - title: "Article 68 GDPR"
     url: "https://gdprhub.eu/Article_68_GDPR"
     publisher: "GDPRhub (noyb)"
@@ -63,16 +64,21 @@ sources:
   - title: "Modificación de la Ley Orgánica de Protección de Datos Personales y garantía de los derechos digitales"
     url: "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/modificacion-ley-organica-proteccion-datos-personales-y-garantia-derechos-digitales"
     publisher: "Agencia Española de Protección de Datos (AEPD)"
+    accessed: "2026-08-26"
   - title: "BOE-A-2018-16673 Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales"
     url: "https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673"
     publisher: "Boletín Oficial del Estado (BOE)"
+    accessed: "2026-08-26"
 ---
 
 # AEPD — Agencia Española de Protección de Datos
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-26.** Three of five cited pages were read directly:
+> gdpr-info.eu's own text of Article 68(3) GDPR, boe.es's own consolidated
+> text of Ley Orgánica 3/2018, and AEPD's own press note on a subsequent
+> modification of that law. The "Novedades LOPD sector privado" PDF
+> returned only garbled, unreadable content when fetched, and `gdprhub.eu`
+> was not read this pass.
 
 ## Description
 
@@ -87,11 +93,17 @@ Government **through the Ministry of Justice** rather than through the
 digital-transformation ministry that most other entities in this batch sit
 under.
 
-`coverage: low`: its composition, appointment process, sanctioning record
-and its relationship with the autonomous communities' own data protection
-authorities are not recorded. Several autonomous communities operate
-regional data protection authorities; none is representable, for the reason
-set out in [[ES]].
+Confirmed by reading AEPD's own press note directly (2026-08-26): a
+modification of the 2018 organic law gave the Agency the **apercibimiento**
+(formal warning) as a new corrective, non-sanctioning measure, and expanded
+its discretion to create standardised, mandatory complaint procedures —
+detail this entity did not previously carry.
+
+`coverage: medium`: its composition, appointment process, sanctioning
+record and its relationship with the autonomous communities' own data
+protection authorities remain unrecorded. Several autonomous communities
+operate regional data protection authorities; none is representable, for
+the reason set out in [[ES]].
 
 ## Five national DPAs, one European link
 
@@ -101,27 +113,33 @@ set out in [[ES]].
 | Germany | [[DE-BFDI]] | no — refused |
 | Belgium | [[BE-APD]] | no — refused |
 | France | [[FR-CNIL]] | no — refused |
-| Spain | **AEPD** | no — refused |
+| Spain | **AEPD** | **yes** — sourced |
 
-The count moves from four to five and the sourced-link count stays at one.
+The sourced-link count moves from one to two. Confirmed this pass by reading
+gdpr-info.eu's own text of Article 68(3) GDPR directly: the Board "shall be
+composed of the head of one supervisory authority of each Member State ...
+or their respective representatives," and the AEPD is Spain's supervisory
+authority under [[EU-GDPR]] — a general legal fact rather than a
+Spain-specific announcement, but a direct textual basis all the same.
 
 [[FR-CNIL]] described this as *"the Atlas's clearest single example of a
-sourcing artefact masquerading as structure"*. A fifth instance does not
-make it clearer — it makes it **more expensive to leave open**. A reader
-taking the graph at face value would now conclude that the European Data
-Protection Board has one member out of five modelled candidates, all of
-which certainly sit on it.
-
-Nothing has been asserted to close it, because no source read for the
-Spanish, French, Belgian or German authority mentions the EDPB. Five page
-reads would fix four edges. It is logged in `discovery/unresolved.md` and
-remains among the cheapest items in the re-verification pass.
+sourcing artefact masquerading as structure"*. Closing the Spanish edge
+does not close the pattern: three of five modelled candidates still carry
+no sourced link, on the strength of the very same treaty article now cited
+here. Reading that one article for [[DE-BFDI]], [[BE-APD]] and [[FR-CNIL]]
+would close all three edges in a single pass — logged in
+`discovery/unresolved.md` as the cheapest item remaining in this cluster.
 
 ## Relationships
 
-- `applies-to` [[ES-LOPDGDD]].
+- `participates-in` [[EU-EDPB]] — confirmed this pass via Article 68(3)
+  GDPR's own text; `confidence: medium`.
+- `applies-to` [[ES-LOPDGDD]] — confirmed this pass via BOE's consolidated
+  text and AEPD's own press note on a later modification; `confidence:
+  medium`.
 
 ## Sources
 
-Listed in frontmatter — two AEPD publications and the BOE consolidated text
-of the law it enforces.
+Listed in frontmatter, three of five read directly this pass; the
+"Novedades LOPD sector privado" PDF returned only garbled content and
+`gdprhub.eu` was not read.

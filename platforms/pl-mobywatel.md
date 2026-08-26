@@ -26,11 +26,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2023-07-14
 end_date: null
-last_verified: null
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -44,14 +44,22 @@ related_entities:
   - EU-EIDAS
   - EU-EUDI-WALLET
   - PL-COI
+  - PL-MC
   - FR-FRANCECONNECT
   - DE-BUNDID
   - ES-CLAVE
 relationships:
+  - type: maintained-by
+    target: PL-MC
+    source: fact
+    evidence: "Confirmed by reading lexlege.pl's own consolidated text of the mObywatel Act directly (2026-08-26): Article 19 provides that 'Minister właściwy do spraw informatyzacji udostępnia, utrzymuje oraz zapewnia rozwój aplikacji mObywatel' (the minister responsible for digitalisation provides, maintains and ensures development of the mObywatel application), and Article 20 makes that same minister the personal-data administrator for its users. This closes the gap this entity previously flagged: 'which body is its legal operator was not established.' Confirmed independently by gov.pl's own mObywatel 2.0 launch article, read directly, which describes the Minister of Digitalisation, Janusz Cieszyński, presenting the application's development — the Ministry of Digital Affairs is the constant across both the 2023 launch and the Act's own current text."
+    confidence: medium
+    valid_from: 2023-07-14
+    valid_until: null
   - type: related-to
     target: EU-EIDAS2
     source: fact
-    evidence: "Reporting states that the mObywatel application is architecturally incompatible with the eIDAS 2.0 regulation and cannot function as a European Digital Identity Wallet (EUDI Wallet), that adapting the existing application to meet EU requirements has been deemed technically impossible, that Poland must implement the EUDI Wallet by 2026, and that the Ministry of Digitalisation indicated new solutions would be made available by the end of 2026 (biznesinfo.pl 'Unijny portfel EUDI a przyszlosc polskiej aplikacji'; twoje-miasto.pl; wnp.pl). NOT READ — search-only. ATLAS NOTE: the relationship recorded is that the Regulation applies to Poland and this application cannot satisfy it. The vocabulary has no type for a requirement an entity fails to meet, so the weakest available type is used and the substance is carried in this evidence string."
+    evidence: "Confirmed by reading biznesinfo.pl directly (2026-08-26): 'Architektura mObywatela opiera się na rozwiązaniach, które są zasadniczo różne od technicznych wymagań UE' (mObywatel's architecture relies on solutions fundamentally different from the EU's technical requirements) — the EU mandates decentralised protocols and specific cryptographic standards for selective data disclosure, while mObywatel uses proprietary protocols; some modules may need complete reconstruction. Without full compatibility, the article warns mObywatel risks becoming a 'digital island', functional only within Poland. Poland must implement the EUDI Wallet by 2026. `orka.sejm.gov.pl` was not read this pass, and no ministry or Commission document confirming the incompatibility finding was found, so it still rests on press reporting alone. ATLAS NOTE: the relationship recorded is that the Regulation applies to Poland and this application cannot satisfy it. The vocabulary has no type for a requirement an entity fails to meet, so the weakest available type is used and the substance is carried in this evidence string."
     confidence: low
     valid_from: null
     valid_until: null
@@ -60,25 +68,31 @@ sources:
   - title: "Ustawa z dnia 26 maja 2023 r. o aplikacji mObywatel"
     url: "https://orka.sejm.gov.pl/proc9.nsf/ustawy/3050_u.htm"
     publisher: "Sejm Rzeczypospolitej Polskiej"
-  - title: "Ustawa o aplikacji mObywatel"
+  - title: "Ustawa o aplikacji mObywatel (tekst skonsolidowany)"
     url: "https://lexlege.pl/ustawa-o-aplikacji-mobywatel/"
     publisher: "LexLege"
+    accessed: "2026-08-26"
   - title: "mObywatel — Portal Gov.pl"
     url: "https://www.gov.pl/web/mobywatel"
     publisher: "Ministerstwo Cyfryzacji"
+    accessed: "2026-08-26"
   - title: "Nowa jakość cyfrowych usług publicznych — startuje mObywatel 2.0"
     url: "https://www.gov.pl/web/cyfryzacja/nowa-jakosc-cyfrowych-uslug-publicznych--startuje-mobywatel-20"
     publisher: "Ministerstwo Cyfryzacji"
+    accessed: "2026-08-26"
   - title: "Unijny portfel EUDI a przyszłość polskiej aplikacji"
     url: "https://www.biznesinfo.pl/unia-wprowadza-cyfrowa-tozsamosc-co-to-oznacza-dla-mobywatela-i-twoich-dokumentow-kp-wds-230226"
     publisher: "Biznes Info"
+    accessed: "2026-08-26"
 ---
 
 # mObywatel
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-26.** Four of five cited pages were read directly.
+> The Act's own text names its legal operator — a gap this entity
+> previously flagged as unresolved — and independent press reporting
+> corroborates the eIDAS2 incompatibility finding in more technical
+> detail than before. `orka.sejm.gov.pl` was not read this pass.
 
 ## Description
 
@@ -148,23 +162,29 @@ architecture does not map onto a wallet.
 a shared problem is still not a relationship — the position taken since
 [[FR-FRANCECONNECT]].
 
-## Who operates it is not established
+## Who operates it, now established
 
 [[PL-COI]] is sourced as maintaining mObywatel among the state IT systems it
-protects, develops and maintains. The 2023 Act regulates the application
-itself. **Which body is its legal operator was not established**, so no
-`maintained-by` edge is asserted — COI and [[PL-MC]] appear as
-`organisations:` associations instead.
+protects, develops and maintains, but the Act itself names a different
+answer for who **operates** it. Reading the Act's own consolidated text
+directly this pass: Article 19 makes the minister responsible for
+digitalisation — [[PL-MC]] — the body that "udostępnia, utrzymuje oraz
+zapewnia rozwój aplikacji mObywatel" (provides, maintains and ensures
+development of the application), and Article 20 makes the same minister
+the personal-data administrator for its users. The `maintained-by` edge
+this entity previously withheld is now asserted, to [[PL-MC]] — COI's
+systems-level role and the Ministry's legal-operator role are not in
+tension, just two different questions the sources answer differently.
 
 ## Relationships
 
+- `maintained-by` [[PL-MC]] — confirmed this pass.
 - `related-to` [[EU-EIDAS2]] — see above. **Read the evidence string, not
   the type.**
 
 ## Sources
 
-Listed in frontmatter — the Sejm's record of the Act, a consolidated text,
-two ministry pages, and the reporting on eIDAS2 incompatibility. ⚠ The
-incompatibility finding rests on **press reporting only**; no ministry or
-Commission document states it among the sources found, which is why the
-edge is `confidence: low`.
+Listed in frontmatter, four of five read directly this pass. `orka.sejm.gov.pl`
+was not attempted. ⚠ The incompatibility finding still rests on **press
+reporting only**; no ministry or Commission document states it among the
+sources found, which is why the edge is `confidence: low`.

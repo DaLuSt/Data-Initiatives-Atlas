@@ -27,11 +27,11 @@ region: EU
 status: proposed
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -51,7 +51,7 @@ relationships:
   - type: implements-requirement-from
     target: EU-NIS2
     source: fact
-    evidence: "Directive NIS2 (EU) 2022/2555 is transposed in Spain by the Anteproyecto de Ley de Coordinación y Gobernanza de la Ciberseguridad, approved by the Council of Ministers on 14 January 2025 and still in process as of 2026 without publication in the BOE; Spain did not meet the transposition deadline of 17 October 2024 and the European Commission sent a reasoned opinion in May 2025 (dsn.gob.es 'Anteproyecto de Ley de Coordinación y Gobernanza de la Ciberseguridad'; cuatrecasas.com 'Aprobado el anteproyecto de Ley que transpone la Directiva NIS2'; nisd2.eu status page for Spain). NOT READ — search-only."
+    evidence: "Confirmed by reading dsn.gob.es's own page directly (2026-08-26): the Anteproyecto incorporates 'la Directiva (UE) 2022/2555 ... conocida como NIS2', and creates the Centro Nacional de Ciberseguridad, attached to the Presidencia del Gobierno, to overcome 'la actual dispersión competencial en materia de ciberseguridad' (the current dispersal of competences in cybersecurity matters). cuatrecasas.com, also read directly, confirms the competence split across the Interior Ministry (Cybersecurity Coordination Office), the Defence Ministry (Centro Criptológico Nacional) and the Digital Transformation Ministry, and the January-2025 approval — though it dates approval one day later than dsn.gob.es (15 January versus 14 January), a minor discrepancy left unresolved. Neither source read gave the specific 24h/72h/one-month notification deadlines or the ten-million-euro penalty figure this entity carries, which rest on nisd2.eu and legiscope.com, not read this pass."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -60,9 +60,11 @@ sources:
   - title: "Anteproyecto de Ley de Coordinación y Gobernanza de la Ciberseguridad"
     url: "https://www.dsn.gob.es/en/node/24160"
     publisher: "Departamento de Seguridad Nacional — Gobierno de España"
+    accessed: "2026-08-26"
   - title: "Aprobado el anteproyecto de Ley que transpone la Directiva NIS2"
     url: "https://www.cuatrecasas.com/es/spain/propiedad-intelectual/art/aprobado-anteproyecto-ley-transpone-la-directiva-nis2"
     publisher: "Cuatrecasas"
+    accessed: "2026-08-26"
   - title: "Estado de NIS 2 en España: proyecto de Ley de Coordinación y Gobernanza de la Ciberseguridad, CCN, INCIBE"
     url: "https://nisd2.eu/es/wiki/timelines-and-status/nis2-status-spain"
     publisher: "nisd2.eu"
@@ -73,9 +75,11 @@ sources:
 
 # LCGC — Anteproyecto de Ley de Coordinación y Gobernanza de la Ciberseguridad
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-26.** Two of four cited pages were read directly:
+> dsn.gob.es's own page on the bill and Cuatrecasas's law-firm analysis.
+> Both confirm the Centro Nacional de Ciberseguridad and the three-ministry
+> competence split; the specific notification deadlines and penalty figure
+> rest on the two sources not read this pass.
 
 ## Description
 
@@ -98,6 +102,16 @@ What it would do:
 Spain missed the transposition deadline of **17 October 2024**, and the
 European Commission sent a **reasoned opinion in May 2025** — the stage
 after a letter of formal notice.
+
+Confirmed by reading dsn.gob.es and cuatrecasas.com directly (2026-08-26):
+the Centro Nacional de Ciberseguridad would be attached to the
+**Presidencia del Gobierno**, not free-floating, and exists specifically
+to overcome "the current dispersal of competences in cybersecurity
+matters" — a more precise institutional detail than the previous
+search-only evidence carried. The two sources give the approval date one
+day apart (dsn.gob.es: 14 January 2025; cuatrecasas.com: 15 January 2025);
+this entity keeps the government's own date and records the discrepancy
+here rather than silently picking one.
 
 ## Five countries, five different NIS2 states
 
@@ -147,7 +161,8 @@ directive. The vocabulary earns its keep here.
 
 ## Sources
 
-Listed in frontmatter — the National Security Department's own page on the
-bill, a law-firm analysis, a NIS2 status tracker and a compliance
-commentary. **No BOE citation exists to give**, which is itself the
+Listed in frontmatter, two of four read directly this pass: the National
+Security Department's own page on the bill and Cuatrecasas's law-firm
+analysis. The NIS2 status tracker and compliance commentary were not
+re-fetched. **No BOE citation exists to give**, which is itself the
 substantive fact about this entity.

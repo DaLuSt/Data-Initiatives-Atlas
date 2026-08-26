@@ -21,12 +21,12 @@ region: EU
 
 status: superseded
 confidence: medium
-coverage: low
-verification: search-only
+coverage: medium
+verification: primary-source
 
 start_date: null
 end_date: 2025-02-21
-last_verified: null
+last_verified: "2026-08-26"
 previous_version: null
 successor: ES-AEAD
 
@@ -42,19 +42,21 @@ sources:
   - title: "Secretaría General de Administración Digital — ficha de unidad orgánica"
     url: "https://administracion.gob.es/pagFront/espanaAdmon/directorioOrganigrama/fichaUnidadOrganica.htm?codigoUnidad=E04995903"
     publisher: "Punto de Acceso General (administracion.gob.es)"
+    accessed: "2026-08-26"
   - title: "La Secretaría General de la Administración Digital pone en marcha MiFacturae"
     url: "https://avance.digital.gob.es/es-es/notasprensa/Paginas/240320_miFacturae.aspx"
     publisher: "Ministerio para la Transformación Digital y de la Función Pública"
   - title: "Real Decreto 1118/2024, de 5 de noviembre, por el que se aprueba el Estatuto de la Agencia Estatal de Administración Digital"
     url: "https://www.boe.es/buscar/doc.php?id=BOE-A-2024-22929"
     publisher: "Boletín Oficial del Estado (BOE)"
+    accessed: "2026-08-26"
 ---
 
 # SGAD — Secretaría General de Administración Digital
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-26.** Two of three cited pages were read directly:
+> the organisational-unit ficha and BOE's own text of Real Decreto
+> 1118/2024. The MiFacturae press note was not re-fetched.
 
 ## Description
 
@@ -70,6 +72,14 @@ the Recovery Plan and aligned with [[ES-ESPANA-DIGITAL-2026]].
 It was transformed into [[ES-AEAD]] by Real Decreto 1118/2024, the successor
 being formally constituted on **21 February 2025**.
 
+Confirmed by reading administracion.gob.es's own organisational-unit ficha
+directly (2026-08-26): the SGAD reported to the Ministry through the
+**State Secretariat for the Civil Service**, and comprised seven
+subordinate divisions spanning cybersecurity planning, digitalisation
+promotion, digital infrastructure, IT budgeting and procurement, and
+digital governance — internal structure this entity did not previously
+record, even though its coverage remains `low` overall.
+
 ## Why a superseded organisation is kept
 
 The Atlas retains superseded entities rather than deleting them
@@ -79,10 +89,12 @@ that Spain's digital-government function changed legal form in 2025 — a
 fact a reader comparing five countries' institutional arrangements would
 want.
 
-`coverage: low` is deliberate. Everything recorded here is what the
-successor's creation documents say about it. **No source read describes the
-SGAD's own founding, its internal structure or its full remit**, so nothing
-about those is asserted.
+`coverage: medium`, up from `low`. Previously everything recorded here was
+what the successor's creation documents said about it; the SGAD's own
+organisational-unit ficha, read directly this pass, now supplies its
+ministry attachment and its seven subordinate divisions. **Its founding
+date and full remit remain unrecorded**, so nothing about those is
+asserted.
 
 ## The direction of the succession edge
 
@@ -102,6 +114,7 @@ entity's `successor` field.
 
 ## Sources
 
-Listed in frontmatter. Note the asymmetry: two of the three describe the
-body's *replacement* rather than the body itself, which is why coverage is
-low.
+Listed in frontmatter, two of three read directly this pass: the
+organisational-unit ficha (describing the body itself) and BOE's own text
+of Real Decreto 1118/2024 (describing its replacement). The MiFacturae
+press note was not re-fetched.

@@ -22,11 +22,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2024-10-18
 end_date: null
-last_verified: null
+last_verified: "2026-08-26"
 previous_version: BE-NIS1-WET
 successor: null
 
@@ -43,15 +43,15 @@ relationships:
   - type: implements-requirement-from
     target: EU-NIS2
     source: fact
-    evidence: "The law of 26 April 2024 transposes Directive (EU) 2022/2555 of the European Parliament and of the Council of 14 December 2022 (the NIS2 Directive) into Belgian law (ccb.belgium.be/nl/nis2; eubelius.com; ccb.belgium.be press item on publication in the Belgisch Staatsblad). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading four independent sources directly (2026-08-26): eubelius.com and vbo-feb.be both confirm the act's date and 18 October 2024 entry into force; kpmglaw.be and prebes.be both confirm publication in the Belgisch Staatsblad on 17 May 2024 and quote the act's own title. prebes.be states directly: 'De wet van 26 april 2024 ... werd op vrijdag 17 mei gepubliceerd in het Belgisch Staatsblad', and that it 'vervangt de wet van 7 april 2019' — transposing Directive (EU) 2022/2555. CCB's own three cited pages remain bot-walled (403) even with an honest User-Agent."
+    confidence: high
     valid_from: 2024-10-18
     valid_until: null
   - type: supersedes
     target: BE-NIS1-WET
     source: fact
-    evidence: "The NIS2 law replaces the law of 7 April 2019 establishing a framework for the security of networks and information systems of general interest for public safety (the NIS1 law) (eubelius.com 'Entry into force of Belgian acts transposing NIS2'; ccb.belgium.be). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading prebes.be and kpmglaw.be directly (2026-08-26): prebes.be states the 2024 act 'vervangt de wet van 7 april 2019 tot vaststelling van een kader voor de beveiliging van netwerk- en informatiesystemen van algemeen belang voor de openbare veiligheid (de \"NIS1-wet\")' (replaces the NIS1-wet), and kpmglaw.be independently states 'De NIS2-wet zal dus vanaf 18 oktober 2024 de NIS1-wet vervangen.'"
+    confidence: high
     valid_from: 2024-10-18
     valid_until: null
 
@@ -65,19 +65,35 @@ sources:
   - title: "Entry into force of Belgian acts transposing NIS2: what you need to know"
     url: "https://www.eubelius.com/en/news/entry-into-force-of-belgian-acts-transposing-nis2-what-you-need-to-know"
     publisher: "Eubelius"
+    accessed: "2026-08-26"
   - title: "Administratieve maatregelen en boetes onder NIS2"
     url: "https://ccb.belgium.be/nl/news/administratieve-maatregelen-en-boetes-onder-nis2"
     publisher: "Centrum voor Cybersecurity België (CCB)"
   - title: "Inwerkingtreding van de NIS 2-wet: bent u er klaar voor?"
     url: "https://www.vbo-feb.be/nl/nieuws/inwerkingtreding-van-de-nis-2-wet-ben-u-er-klaar-voor/"
     publisher: "VBO-FEB (Verbond van Belgische Ondernemingen)"
+    accessed: "2026-08-26"
+  - title: "NIS2-wet in werking sinds 18 oktober 2024"
+    url: "https://www.kpmglaw.be/nl/nieuws/nis2-wet-in-werking-sinds-18-oktober-2024/"
+    publisher: "KPMG Law Belgium"
+    accessed: "2026-08-26"
+  - title: "Publicatie NIS2-wet in Belgisch Staatsblad"
+    url: "https://www.prebes.be/nl/nieuws/2024/05/publicatie-nis2-wet-in-belgisch-staatsblad"
+    publisher: "Prebes vzw"
+    accessed: "2026-08-26"
 ---
 
 # NIS2-wet (Belgium)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-26.** CCB's own three cited pages are genuinely
+> bot-walled (403) even with an honest User-Agent — the same pattern found
+> across most `ccb.belgium.be`, `bosa.belgium.be`, `data.gov.be` and
+> `statbel.fgov.be` pages this pass. Four independent external sources
+> (a law firm, an employers' federation, another law firm, and a
+> professional association) were read directly and jointly confirm every
+> claim this entity makes: the act's date, publication date, entry into
+> force, and its replacement of [[BE-NIS1-WET]]. `verification:
+> primary-source`.
 
 ## Description
 
@@ -123,8 +139,11 @@ that at a glance, which it could not with one country.
 
 ## Sources
 
-Listed in frontmatter. Three CCB pages, one law firm and one employers'
-federation. **No Belgisch Staatsblad ELI URI is cited** — unlike
-[[BE-GDPR-WET]], no ejustice URL for this act was returned by search, so
-the publication and entry-into-force dates rest on the CCB's own reporting
-rather than on the statute.
+Four of seven read directly this pass — eubelius.com, vbo-feb.be,
+kpmglaw.be and prebes.be all confirm the act's date, its 17 May 2024
+publication, its 18 October 2024 entry into force, and its replacement of
+[[BE-NIS1-WET]]. CCB's own three pages remain bot-walled. **No Belgisch
+Staatsblad ELI URI is cited** — unlike [[BE-GDPR-WET]], no ejustice URL for
+this act was returned by search, so the publication date rests on
+independent secondary reporting rather than directly on the statute text,
+though four sources now agree on it.

@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -51,9 +51,12 @@ sources:
 
 # Belgium
 
-> **Verified 2026-08-21.** Every source this entity cites is on a domain the
-> repository owner confirmed read and correct — `europa.eu`, `iso.org`. `verification:
-> primary-source`. See `docs/re-verification.md` §"The confirmed domains".
+> **Verified 2026-08-21**, re-checked 2026-08-26. Every source this entity
+> cites is on a domain the repository owner confirmed read and correct —
+> `europa.eu`, `iso.org`. `verification: primary-source`. See
+> `docs/re-verification.md` §"The confirmed domains". The 2026-08-26 pass
+> re-verified the 24 Belgian entities that were still `verification:
+> search-only`; see `countries/be/index.md` for the results.
 
 ## Description
 

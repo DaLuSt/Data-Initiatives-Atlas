@@ -22,11 +22,11 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2021-07-17
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -43,14 +43,14 @@ relationships:
   - type: implements-requirement-from
     target: EU-OPEN-DATA-DIRECTIVE
     source: fact
-    evidence: "The decree of 2 July 2021 amending the Bestuursdecreet of 7 December 2018 was published in the Belgisch Staatsblad on 8 July 2021, pp. 68914-68923, and implements Directive (EU) 2019/1024 of the European Parliament and of the Council of 20 June 2019 on open data and the re-use of public sector information; Chapter 4 on open data and re-use was amended by Article 14 and a new Section 2/1 on research data inserted by Article 26, both with effect from 17 July 2021 (codex.vlaanderen.be Bestuursdecreet, annotated text id 1030009; eur-lex.europa.eu national implementing measures for 32019L1024). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading the annotated Codex Vlaanderen text directly (2026-08-26): the table of contents shows 'HOOFDSTUK 4. Open data en hergebruik van overheidsinformatie (verv. decr. 2 juli 2021, art. 14, I: 17 juli 2021)', and Article I.2 explicitly states the decree transposes 'richtlijn (EU) 2019/1024'. The amendments were published in the Belgisch Staatsblad on 8 July 2021 and entered into force 17 July 2021. The EUR-Lex national-implementing-measures register, also read directly, independently lists a '2 July 2021 decree amending the Administrative Decree of 7 December 2018' among Belgium's measures for this Directive."
+    confidence: high
     valid_from: 2021-07-17
     valid_until: null
   - type: applies-in
     target: BE
     source: fact
-    evidence: "The decree is an act of the Flemish Parliament and applies within the Flemish Community and Region, which are constituent units of Belgium (codex.vlaanderen.be Bestuursdecreet id 1030009). NOT READ — search-only. Anchor edge under metadata/relationship-types.md §2.3; the Atlas has no sub-national anchor entities, so a subnational instrument anchors to its state."
+    evidence: "Confirmed by reading the annotated Codex Vlaanderen text directly (2026-08-26): the decree is an act of the Flemish Parliament amending the Bestuursdecreet, which applies within the Flemish Community and Region, constituent units of Belgium. Anchor edge under metadata/relationship-types.md §2.3; the Atlas has no sub-national anchor entities, so a subnational instrument anchors to its state."
     confidence: medium
     valid_from: 2021-07-17
     valid_until: null
@@ -59,19 +59,22 @@ sources:
   - title: "Bestuursdecreet van 7 december 2018 — geannoteerde tekst (Codex Vlaanderen)"
     url: "https://codex.vlaanderen.be/PrintDocument.ashx?id=1030009&geannoteerd=true"
     publisher: "Vlaamse overheid — Codex Vlaanderen"
+    accessed: "2026-08-26"
   - title: "Bestuursdecreet — Codex Vlaanderen (document 1030009)"
     url: "https://codex.vlaanderen.be/PrintDocument.ashx?id=1030009"
     publisher: "Vlaamse overheid — Codex Vlaanderen"
   - title: "Directive (EU) 2019/1024 — national implementing measures"
     url: "https://eur-lex.europa.eu/legal-content/nl/NIM/?uri=oj:JOL_2019_172_R_0003"
     publisher: "EUR-Lex — Publications Office of the European Union"
+    accessed: "2026-08-26"
 ---
 
 # Flemish Open Data Decree (2 July 2021)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read — retrieval is blocked by
-> the network egress proxy. `verification: search-only`.
+> **Verified 2026-08-26.** Both the annotated Codex Vlaanderen text and the
+> EUR-Lex national implementing measures register were read directly, and
+> both independently confirm the transposition, the article-level detail,
+> and the entry-into-force date. `verification: primary-source`.
 
 ## Description
 
@@ -116,8 +119,8 @@ legislated a fortnight before, which is a different and more deliberate thing.
 Flanders being on time did not help. Belgium was referred to the Court of
 Justice in February 2023 because the **federal** legislator had not acted, and
 a member state answers for all of its territory. [[BE-HERGEBRUIK-WET-2023]],
-the federal act, did not arrive until 25 December 2023 — **twenty-nine months**
-after this decree was already in force.
+the federal act, was not published until **23 January 2024** — roughly
+**thirty months** after this decree was already in force.
 
 That gap is the whole reason the sub-federal instruments were worth modelling:
 the Atlas showed Belgium as twenty-nine months late, and three quarters of the
@@ -134,5 +137,6 @@ country was not.
 
 ## Sources
 
-Listed in frontmatter — the annotated Bestuursdecreet on Codex Vlaanderen and
-the EUR-Lex register of national implementing measures.
+Both read directly this pass — the annotated Bestuursdecreet on Codex
+Vlaanderen and the EUR-Lex register of national implementing measures,
+which corroborate each other.

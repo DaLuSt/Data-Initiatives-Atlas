@@ -24,11 +24,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2023-08-22
 end_date: null
-last_verified: null
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -42,24 +42,30 @@ relationships:
   - type: governed-by
     target: EU-AI-ACT
     source: fact
-    evidence: "AESIA is governed by its Statute, approved by Real Decreto 729/2023 of 22 August, and by Regulation (EU) 2024/1689 of the European Parliament and of the Council laying down harmonised rules on artificial intelligence; its designation as national competent authority is made under Article 70 of that Regulation, and as a market surveillance authority it is also governed by Regulation (EU) 2019/1020 (protecciondata.es AESIA page; crowd.legal AESIA guide). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading boe.es's own text of Real Decreto 729/2023 directly (2026-08-26, BOE-A-2023-18911): AESIA's statute grounds it in Law 40/2015 and Law 28/2022 and positions it to assume obligations under the then-forthcoming EU AI Regulation, exercising 'functions of authority responsible for supervision, and where applicable sanction, of AI systems'. protecciondata.es, also read directly, confirms AESIA now operates 'como autoridad de vigilancia del mercado' under Regulation (EU) 2019/1020 and is governed by Regulation (EU) 2024/1689. lamoncloa.gob.es's press release, also read directly, gives no legal citation but confirms AESIA develops functions assigned by the EU AI Regulation and coordinates with European authorities."
+    confidence: high
     valid_from: null
     valid_until: null
 
 sources:
+  - title: "Real Decreto 729/2023, de 22 de agosto, por el que se aprueba el Estatuto de la Agencia Española de Supervisión de Inteligencia Artificial"
+    url: "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-18911"
+    publisher: "Boletín Oficial del Estado (BOE)"
+    accessed: "2026-08-26"
   - title: "AESIA | España Digital 2026"
     url: "http://espanadigital.gob.es/en/measure/aesia"
     publisher: "España Digital 2026"
   - title: "Escrivá: «La Agencia Española de Supervisión de la Inteligencia Artificial es pionera en Europa»"
     url: "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/transformacion-digital-y-funcion-publica/paginas/2024/190624-escriva-aesia-ia.aspx"
     publisher: "La Moncloa — Gobierno de España"
+    accessed: "2026-08-26"
   - title: "Presentación AESIA — A Coruña"
     url: "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/transformacion-digital-y-funcion-publica/Documents/2024/190624-Presentaci%C3%B3n-AESIA-Coru%C3%B1a.pdf"
     publisher: "La Moncloa — Gobierno de España"
   - title: "Agencia Española de Supervisión de la Inteligencia Artificial (AESIA)"
     url: "https://protecciondata.es/agencia-espanola-supervision-inteligencia-artificial-aesia/"
     publisher: "Protección Data"
+    accessed: "2026-08-26"
   - title: "Aprobado el Estatuto de la Agencia Española de Supervisión de la Inteligencia Artificial (AESIA)"
     url: "https://www.juntadeandalucia.es/datosabiertos/portal/actualidad/detalle/1636"
     publisher: "Junta de Andalucía — Portal de datos abiertos"
@@ -67,9 +73,10 @@ sources:
 
 # AESIA — Agencia Española de Supervisión de la Inteligencia Artificial
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-26.** boe.es's own text of Real Decreto 729/2023
+> (BOE-A-2023-18911) was read directly, along with protecciondata.es and
+> the lamoncloa.gob.es press release — closing the previous gap where the
+> statute's own BOE identifier had not been found.
 
 ## Description
 
@@ -95,7 +102,12 @@ With AESIA's creation Spain became **the first European Union member state
 with a body dedicated to supervising artificial intelligence**, ahead of the
 entry into force of the EU AI Regulation. The statute was approved on
 **22 August 2023** and published on **2 September 2023** — the AI Act was
-still in trilogue.
+still in trilogue. Confirmed by reading boe.es directly: Real Decreto
+729/2023 entered into force on **3 September 2023**, and its President —
+the Secretary of State for Digitalisation and AI — is designated to
+"participate in activities and meetings of the AIDA [the EU AI Board] as
+common representative of the Spanish State," a forward-looking role
+written into the statute before that Board itself existed.
 
 That ordering is the reason this entity matters to the Atlas rather than
 just to Spain. Every other national body modelled here was created to
@@ -152,7 +164,6 @@ Queued in `discovery/research-queue.md`.
 
 ## Sources
 
-Listed in frontmatter — two La Moncloa items, the España Digital 2026 entry
-and two secondary summaries. **The BOE text of Real Decreto 729/2023 is not
-cited**, because no search result returned its BOE identifier directly; that
-is the first thing a re-verification pass should fetch here.
+Listed in frontmatter, three of six read directly this pass: BOE's own text
+of Real Decreto 729/2023 (BOE-A-2023-18911, closing the previously-flagged
+missing-citation gap), protecciondata.es, and the La Moncloa press release.
