@@ -7,9 +7,15 @@ the country's front page (`CONTRIBUTING.md`).
 
 Anchor entity: [[CZ]]
 
-> **Sourcing caveat.** Every Czech entity below was compiled from
-> search-engine results only: the cited pages were confirmed to exist but
-> were **not read**. They carry `verification: search-only`.
+> **Re-verified 2026-08-26.** All seven remaining `verification:
+> search-only` entities in this cluster were re-checked against primary
+> sources and now carry `verification: primary-source`, alongside
+> [[CZ-CSU]] from an earlier pass — Czechia's whole cluster is now
+> fully re-verified. The Act's own statutory text revealed it
+> implements [[EU-DGA]], and [[CZ-DATA-GOV]]'s custodian gap is closed:
+> [[CZ-DIA]] both develops it today and will formally administer its
+> 2028–2029 successor, the National Data Catalogue. See
+> `discovery/reverification-allowlist.md`.
 
 > **The ISO short name is `Czechia`**, with *Czech Republic* recorded as an
 > alternative — the same reason the Atlas uses `GB` rather than UK.
@@ -35,7 +41,9 @@ Anchor entity: [[CZ]]
 
 ## Platforms
 
-- [[CZ-DATA-GOV]] — data.gov.cz _(⚠ no custodian modelled)_
+- [[CZ-DATA-GOV]] — data.gov.cz _(`maintained-by` [[CZ-DIA]]; being
+  expanded into a National Data Catalogue covering non-public data by
+  2029)_
 
 ---
 
@@ -45,7 +53,8 @@ Eighteen, recorded as `applies-in` edges on the instruments themselves.
 
 ## What Czechia added to the Atlas
 
-**A general act on how the state manages its own data.**
+**A general act on how the state manages its own data — and it names its
+EU parent.**
 
 The Atlas holds a great deal of law *about* data — data protection acts, open
 data transpositions, cyber security acts. It has almost none about **how a
@@ -53,7 +62,11 @@ state manages its own data and lets others reach it**.
 
 [[CZ-ZAKON-60-2026]] does exactly that, and names [[CZ-DIA]] as the **single
 information point** and the node connecting Czech data sources to the
-European data portal.
+European data portal. Its own § 1, re-verified 2026-08-26, states directly
+that it implements [[EU-DGA]] — the EU Data Governance Act — and
+"substantially extends it with specific tools," including a National Data
+Catalogue that folds [[CZ-DATA-GOV]] into a broader register covering
+non-public as well as open data by 1 January 2029.
 
 The nearest comparators are Dutch and are not statutes: [[NL-IBDS]] is a
 strategy and [[NL-FDS]] a system. **The Netherlands built the arrangement;
@@ -71,6 +84,13 @@ Everywhere else the member and the drafter are one body. The
 membership means — and **ČAS is not modelled**, which understates Czech
 standardisation, since the body that actually produces ČSN standards is
 absent from the graph.
+
+ČAS's own page, read 2026-08-26, complicates this further: it lists **ETSI**
+alongside ISO/IEC/CEN/CENELEC among its own membership and cooperation
+duties — on ČAS's page, not ÚNMZ's. Whether the ÚNMZ-holds-membership
+pattern holds for ETSI too, or ETSI is the one body where ČAS itself is
+the member, is not established by anything read. No [[EU-ETSI]]
+relationship is asserted from either entity.
 
 ## Not modelled
 
