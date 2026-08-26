@@ -131,13 +131,11 @@ turning `search-only` entities into read ones.
 
 Data governance is shaped by initiatives operating at different levels:
 
-```
-An international principle   →   influences an EU strategy
-An EU regulation             →   leads to national implementation
-A national programme         →   establishes a framework
-A framework                  →   references standards
-Standards                    →   underpin data spaces and technical ecosystems
-```
+1. An **international principle** influences an EU strategy.
+2. An **EU regulation** leads to national implementation.
+3. A **national programme** establishes a framework.
+4. A **framework** references standards.
+5. **Standards** underpin data spaces and technical ecosystems.
 
 Each of those pieces is documented somewhere. **The connections between them
 usually are not** — they are scattered across many websites, documents and
@@ -157,59 +155,14 @@ national data initiatives — one you can navigate from an international
 initiative down to its regional and national implications, related
 standards, responsible organisations and affected data domains.
 
-```
-United Nations
-      │
-      ▼
-European Union
-      │
-      ▼
-European Initiative
-      │
-      ├──────────────► Netherlands
-      │                    │
-      │                    ├── National initiative
-      │                    ├── Framework
-      │                    └── Data ecosystem
-      │
-      ├──────────────► Germany
-      │                    │
-      │                    ├── National initiative
-      │                    ├── Framework
-      │                    └── Data ecosystem
-      │
-      ├──────────────► Belgium
-      │                    │
-      │                    ├── National initiative
-      │                    ├── Framework
-      │                    └── Data ecosystem
-      │
-      ├──────────────► France
-      │                    │
-      │                    ├── National initiative
-      │                    ├── Framework
-      │                    └── Data ecosystem
-      │
-      ├──────────────► Spain
-      │                    │
-      │                    ├── National initiative
-      │                    ├── Framework
-      │                    └── Data ecosystem
-      │
-      ├──────────────► Poland
-      │                    │
-      │                    ├── National initiative
-      │                    ├── Framework
-      │                    └── Data ecosystem
-      │
-      └──────────────► Country G
+- **United Nations**
+  - **European Union**
+    - **European Initiative**, implemented nationally by each of:
+      - Netherlands, Germany, Belgium, France, Spain, Poland, ... — each
+        with its own national initiative, framework and data ecosystem
 
-United Kingdom  ◄── not below the EU branch: a non-member state
-      │
-      ├── National initiative
-      ├── Framework
-      └── Data ecosystem
-```
+- **United Kingdom** — not below the EU branch, since it is a non-member
+  state — with its own national initiative, framework and data ecosystem
 
 The Netherlands is the starting point, not the boundary of the project — and
 since the United Kingdom joined, the EU is not the only route into a national
@@ -302,7 +255,7 @@ Country
  ├── Organisations
  ├── Data spaces
  ├── Domains
- └── Relationships to EU / international initiatives
+ └── EU / international relationships
 ```
 
 This makes the project suitable for both individual contributors and
@@ -337,39 +290,11 @@ into the core model.
 A key purpose of the Atlas is to make relationships between geographic
 levels visible.
 
-```
-International Initiative
-        │
-        ▼
-EU Strategy
-        │
-        ▼
-EU Regulation
-        │
-        ├──────────────► Netherlands
-        │                    │
-        │                    └── National implementation
-        │
-        ├──────────────► Germany
-        │                    │
-        │                    └── National implementation
-        │
-        ├──────────────► Belgium
-        │                    │
-        │                    └── National implementation
-        │
-        ├──────────────► France
-        │                    │
-        │                    └── National implementation
-        │
-        ├──────────────► Spain
-        │                    │
-        │                    └── National implementation
-        │
-        └──────────────► Poland
-                             │
-                             └── National implementation
-```
+- **International Initiative**
+  - **EU Strategy**
+    - **EU Regulation**, implemented nationally by each of:
+      - Netherlands, Germany, Belgium, France, Spain, Poland — each with
+        its own national implementation
 
 This lets the Atlas represent **horizontal** relationships between countries
 and **vertical** relationships between international, regional and national
@@ -392,18 +317,17 @@ interpretation**, with the evidence and a confidence level attached.
 The repository is structured around **entities**, not around individual
 countries.
 
+<details>
+<summary>Show the full repository layout</summary>
+
 ```
 data-initiatives-atlas/
-│
 ├── README.md
 ├── CONTRIBUTING.md
 ├── LICENSE
-│
-├── .github/
-│   └── workflows/
-│       ├── validate.yml    # validation — runs on every pull request
-│       └── pages.yml       # build + deploy the graph — main only
-│
+├── .github/workflows/
+│   ├── validate.yml   # every pull request
+│   └── pages.yml      # deploy, main only
 ├── initiatives/
 ├── legislation/
 ├── policies/
@@ -416,7 +340,6 @@ data-initiatives-atlas/
 ├── platforms/
 ├── publications/
 ├── domains/
-│
 ├── countries/
 │   ├── nl/
 │   ├── de/
@@ -424,13 +347,8 @@ data-initiatives-atlas/
 │   ├── fr/
 │   ├── es/
 │   └── pl/
-│
-├── regions/
-│   └── eu/
-│
-├── international/
-│   └── un/
-│
+├── regions/eu/
+├── international/un/
 ├── metadata/
 │   ├── ontology.md
 │   ├── taxonomy.md
@@ -438,28 +356,24 @@ data-initiatives-atlas/
 │   ├── metadata-schema.md
 │   ├── controlled-vocabularies.md
 │   └── schema.json
-│
 ├── templates/
 ├── discovery/
 ├── validation/
 ├── progress/
-│
-├── tools/                  # graph generator, re-verification runner, tests
+├── tools/              # generator, reverify, tests
 │   ├── build_graph.py
-│   ├── reverify.py         # runs the re-verification pass over an entity's sources
-│   ├── source_hosts.py     # generates the egress allowlist that pass needs
+│   ├── reverify.py     # re-verification pass
+│   ├── source_hosts.py # egress allowlist
 │   ├── test_build_graph.py
 │   ├── test_reverify.py
 │   └── test_ui.mjs
-│
-├── site/                   # the published GitHub Pages application
+├── site/               # published GitHub Pages app
 │   ├── index.html
 │   ├── app.css
 │   ├── app.js
-│   ├── graph.json          # GENERATED — do not hand-edit
-│   ├── details.json        # GENERATED — do not hand-edit
-│   └── vendor/             # Cytoscape.js (MIT), vendored, no CDN
-│
+│   ├── graph.json      # generated
+│   ├── details.json    # generated
+│   └── vendor/         # Cytoscape.js, vendored
 └── docs/
     ├── graph.md
     ├── graph-architecture.md
@@ -467,6 +381,8 @@ data-initiatives-atlas/
     ├── re-verification.md
     └── github-pages.md
 ```
+
+</details>
 
 As additional countries participate, only `countries/` grows:
 
@@ -490,11 +406,8 @@ The repository does not require a redesign when a new country is introduced.
 `site/graph.json` and `site/details.json` are **generated artefacts**.
 
 Contributors never edit them, and never edit `site/index.html` to add an
-entity. The source remains:
-
-```
-Markdown  +  YAML frontmatter  +  [[wikilinks]]
-```
+entity. The source remains **Markdown + YAML frontmatter + `[[wikilinks]]`**
+— nothing else.
 
 Regenerate after changing entity data:
 
