@@ -17,11 +17,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -33,7 +33,7 @@ relationships:
   - type: part-of
     target: EU
     source: fact
-    evidence: "France is one of the 27 member states of the European Union, having acceded on 1 January 1958; the Union's own list of EU countries records its accession date together with its Schengen and euro status (european-union.europa.eu 'EU countries'). NOT READ — search-only. Anchor edge under metadata/relationship-types.md §2.3: it records EU membership and asserts no more than that. Added in the European country batch so that all fifty anchors carry the same membership edge."
+    evidence: "Confirmed verbatim by reading european-union.europa.eu's own 'EU countries' page directly (2026-08-26): 'France EU Member State since 1958, Euro area member since 1999, Schengen area member since 1995.' Anchor edge under metadata/relationship-types.md §2.3: it records EU membership and asserts no more than that."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -42,22 +42,30 @@ sources:
   - title: "EU countries"
     url: "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
     publisher: "European Union"
+    accessed: "2026-08-26"
+  - title: "La direction interministérielle du numérique (DINUM)"
+    url: "https://www.numerique.gouv.fr/numerique-etat/dinum/"
+    publisher: "DINUM — numerique.gouv.fr"
+    accessed: "2026-08-26"
   - title: "FR — France (ISO 3166-1 country code)"
     url: "https://www.iso.org/obp/ui/#iso:code:3166:FR"
     publisher: "International Organization for Standardization (ISO)"
   - title: "LOI n° 2016-1321 du 7 octobre 2016 pour une République numérique"
     url: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000033202746"
     publisher: "Légifrance (Direction de l'information légale et administrative)"
-  - title: "La direction interministérielle du numérique (DINUM)"
-    url: "https://www.numerique.gouv.fr/numerique-etat/dinum/"
-    publisher: "DINUM — numerique.gouv.fr"
 ---
 
 # France
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Re-verified 2026-08-26.** `european-union.europa.eu` was read
+> directly and confirms EU, euro-area and Schengen membership verbatim.
+> `legifrance.gouv.fr` is genuinely bot-walled (403) even with an
+> honest, identifying User-Agent — confirmed on multiple JORF text
+> pages across this cluster, contrary to this file's own earlier note
+> that Légifrance was confirmed readable on 2026-08-21 (that
+> confirmation evidently no longer holds, or covered a different part
+> of the site). `iso.org` remains bot-walled as established elsewhere
+> this session.
 
 ## Description
 
@@ -152,9 +160,7 @@ the evidence strings and the cited source both need changing together.
 
 ## Sources
 
-Listed in frontmatter, including the ISO Online Browsing Platform entry —
-the same citation [[DE]] and [[BE]] carry, and one the [[NL]] anchor still
-lacks because Batch 0 composed its URLs from background knowledge.
-
-**No `accessed` date and no `last_verified`** — nothing about this entity
-has been checked against a source.
+Listed in frontmatter. `european-union.europa.eu` and
+`numerique.gouv.fr` were read directly this pass; `iso.org` remains
+bot-walled, and `legifrance.gouv.fr`'s JORF text pages are genuinely
+bot-walled even with an honest User-Agent (see the caveat above).

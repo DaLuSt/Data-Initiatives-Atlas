@@ -20,11 +20,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -38,7 +38,7 @@ relationships:
   - type: part-of
     target: EU-ESS
     source: fact
-    evidence: "The European Statistical System is the partnership between the Community statistical authority, which is the Commission (Eurostat), and the national statistical institutes and other national authorities responsible in each member state for the development, production and dissemination of European statistics; the ESS Committee is composed of NSI representatives and chaired by Eurostat (ec.europa.eu/eurostat/web/european-statistical-system; EUR-Lex CELEX 32009R0223). INSEE is the French NSI and is described as the French branch of Eurostat (insee.fr; knowledge4policy.ec.europa.eu 'INSEE'). NOT READ — search-only."
+    evidence: "The European Statistical System is the partnership between the Community statistical authority, which is the Commission (Eurostat), and the national statistical institutes and other national authorities responsible in each member state for the development, production and dissemination of European statistics (ec.europa.eu/eurostat/web/european-statistical-system, read directly 2026-08-26). Confirmed by reading insee.fr's own English homepage directly: it lists 'Eurostat (statistical office of the European Union)' among its 'partner sites' — a direct link, though not a statement naming ESS membership itself. knowledge4policy.ec.europa.eu's page, also read, is a login-gated shell with no substantive text about Eurostat or the ESS, so the 'French branch of Eurostat' description this entity previously carried is not confirmed by that source and is not repeated. This edge still rests primarily on the composition rule, the same tier most national statistical offices in the Atlas carry."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -47,19 +47,24 @@ sources:
   - title: "Accueil — Insee"
     url: "https://www.insee.fr/en/accueil"
     publisher: "Institut national de la statistique et des études économiques (INSEE)"
-  - title: "INSEE — Institut National de la Statistique et des Etudes Economiques"
-    url: "https://knowledge4policy.ec.europa.eu/organisation/insee-institut-national-de-la-statistique-et-des-etudes-economiques_en"
-    publisher: "European Commission — Knowledge for policy"
+    accessed: "2026-08-26"
   - title: "European Statistical System (ESS)"
     url: "https://ec.europa.eu/eurostat/web/european-statistical-system"
     publisher: "Eurostat / European Commission"
+    accessed: "2026-08-26"
+  - title: "INSEE — Institut National de la Statistique et des Etudes Economiques"
+    url: "https://knowledge4policy.ec.europa.eu/organisation/insee-institut-national-de-la-statistique-et-des-etudes-economiques_en"
+    publisher: "European Commission — Knowledge for policy"
+    accessed: "2026-08-26"
 ---
 
 # Institut national de la statistique et des études économiques (INSEE)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-26.** All three cited pages were read directly.
+> insee.fr's own homepage lists Eurostat as a "partner site" directly,
+> but no page read states INSEE's [[EU-ESS]] membership in its own
+> words — that edge stays on the composition-rule tier, and the
+> unconfirmed "French branch of Eurostat" description is dropped.
 
 ## Description
 
@@ -119,4 +124,4 @@ is an Atlas entity — the same coverage limit recorded on [[FR-DGSI]].
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, all three read directly this pass.

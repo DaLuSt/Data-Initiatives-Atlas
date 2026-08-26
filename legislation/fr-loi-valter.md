@@ -24,11 +24,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2015-12-28
 end_date: null
-last_verified: "2026-08-19"
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -45,19 +45,27 @@ relationships:
   - type: implements-requirement-from
     target: EU-PSI-DIRECTIVE
     source: fact
-    evidence: "Law n° 2015-1779 of 28 December 2015, known as the loi Valter, establishes a principle of free re-use of public sector information; by transposing Directive 2013/37/EU the government consolidates, simplifies and modernises the legislative framework for opening public data (doctrine.fr JORFTEXT000031701525; legifrance.gouv.fr; opendatafrance.gitbook.io 'Ouvrir les données : une obligation légale'). Directive 2013/37/EU is the amending directive within EU-PSI-DIRECTIVE, which the Atlas models as Directive 2003/98/EC as amended. NOT READ — search-only."
+    evidence: "Confirmed by reading senat.fr's own legislative dossier directly (2026-08-26): 'Loi relative à la gratuité et aux modalités de la réutilisation des informations du secteur public — Loi n° 2015-1779 du 28 décembre 2015 parue au JO n°0301 du 29 décembre 2015' (Law on the free-of-charge nature and arrangements for the re-use of public sector information — Law n° 2015-1779 of 28 December 2015, published in the Official Journal no. 0301 of 29 December 2015), confirming the exact title, number and date this entity's name field already carried. Directive 2013/37/EU is the amending directive within EU-PSI-DIRECTIVE, which the Atlas models as Directive 2003/98/EC as amended. `legifrance.gouv.fr`, which would carry the act's own text, is genuinely bot-walled (403) even with an honest User-Agent."
     confidence: medium
     valid_from: 2015-12-28
     valid_until: null
   - type: applies-in
     target: FR
     source: fact
-    evidence: "Law n° 2015-1779 of 28 December 2015 relative à la gratuité et aux modalités de la réutilisation des informations du secteur public is a French act published in the Journal officiel de la République française (legifrance.gouv.fr JORFTEXT000031701525; senat.fr dossier législatif pjl15-034). NOT READ — search-only. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    evidence: "Confirmed by reading senat.fr's own legislative dossier directly (2026-08-26), same passage as above: the act is Loi n° 2015-1779 du 28 décembre 2015, promulgated and published in the JO. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
     confidence: medium
     valid_from: null
     valid_until: null
 
 sources:
+  - title: "Réutilisation des informations du secteur public — dossier législatif pjl15-034"
+    url: "https://www.senat.fr/dossier-legislatif/pjl15-034.html"
+    publisher: "Sénat"
+    accessed: "2026-08-26"
+  - title: "The Commission calls on 19 Member States to comply with EU rules on open data and the reuse of public sector information"
+    url: "https://www.pubaffairsbruxelles.eu/eu-institution-news/the-commission-calls-on-19-member-states-to-comply-with-eu-rules-on-open-data-and-the-reuse-of-public-sector-information/"
+    publisher: "PubAffairs Bruxelles"
+    accessed: "2026-08-26"
   - title: "LOI n° 2015-1779 du 28 décembre 2015 relative à la gratuité et aux modalités de la réutilisation des informations du secteur public"
     url: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000031701525"
     publisher: "Légifrance (Direction de l'information légale et administrative)"
@@ -67,19 +75,15 @@ sources:
   - title: "Titre II : LA RÉUTILISATION DES INFORMATIONS PUBLIQUES (Articles L321-1 à L327-1) — Code des relations entre le public et l'administration"
     url: "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000031366350/LEGISCTA000031367750/"
     publisher: "Légifrance (Direction de l'information légale et administrative)"
-  - title: "Réutilisation des informations du secteur public — dossier législatif pjl15-034"
-    url: "https://www.senat.fr/dossier-legislatif/pjl15-034.html"
-    publisher: "Sénat"
-  - title: "The Commission calls on 19 Member States to comply with EU rules on open data and the reuse of public sector information"
-    url: "https://www.pubaffairsbruxelles.eu/eu-institution-news/the-commission-calls-on-19-member-states-to-comply-with-eu-rules-on-open-data-and-the-reuse-of-public-sector-information/"
-    publisher: "PubAffairs Bruxelles"
 ---
 
 # Loi Valter (2015)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-26.** Both the Sénat's own legislative dossier and
+> the Commission compliance article were read directly and confirm the
+> act's title, number and date. `legifrance.gouv.fr`'s three JORF/code
+> citations remain genuinely bot-walled (403) even with an honest
+> User-Agent — none of the act's own text was read this pass.
 
 ## Description
 
@@ -128,11 +132,14 @@ used for `type: law` elsewhere.
 
 ## The documented negative
 
-France is **not** among the nineteen member states the Commission served
-with letters of formal notice on 30 September 2021 for failing to notify
-transposing measures. The nineteen were Austria, Belgium, Bulgaria, Croatia,
-Cyprus, Czechia, Estonia, Finland, Hungary, Ireland, Italy, Latvia,
-Luxembourg, the Netherlands, Romania, Slovakia, Slovenia, Spain and Sweden.
+Confirmed by reading pubaffairsbruxelles.eu's article directly
+(2026-08-26): the Commission's letter of formal notice named "Belgium,
+Bulgaria, Czechia, Spain, Estonia, Croatia, Ireland, Italy, Cyprus,
+Latvia, Luxembourg, Hungary, the Netherlands, Austria, Romania,
+Slovenia, Slovakia, Finland and Sweden" for failing to provide complete
+transposition information on Directive (EU) 2019/1024 — nineteen
+member states, and **France is not among them**, confirmed by name
+search of the article's text.
 
 France's absence from that list is the strongest available evidence that its
 notified measures were already in place — which is what "we transposed by
@@ -150,4 +157,6 @@ national implementer on that row. That is the finding, not a gap.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter. `senat.fr` and `pubaffairsbruxelles.eu` were
+read directly this pass; `legifrance.gouv.fr`'s three citations remain
+genuinely bot-walled.

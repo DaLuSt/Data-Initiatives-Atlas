@@ -20,11 +20,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -40,7 +40,7 @@ relationships:
   - type: maintained-by
     target: FR-DINUM
     source: fact
-    evidence: "DINUM develops shared services and resources including the interministerial state network, FranceConnect, data.gouv.fr and api.gouv.fr (numerique.gouv.fr/numerique-etat/dinum; transformation.gouv.fr DINUM page). NOT READ — search-only."
+    evidence: "Confirmed by reading numerique.gouv.fr's own DINUM page directly (2026-08-26): DINUM 'développe des services et ressources partagées comme le réseau interministériel de l'État, FranceConnect, data.gouv.fr ou api.gouv.fr' (develops shared services and resources including the interministerial state network, FranceConnect, data.gouv.fr and api.gouv.fr) — DINUM's own page, not a secondary source, names FranceConnect directly."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -49,43 +49,58 @@ sources:
   - title: "Accueil — FranceConnect"
     url: "https://www.franceconnect.gouv.fr/"
     publisher: "FranceConnect (DINUM)"
+    accessed: "2026-08-26"
   - title: "FranceConnect+"
     url: "https://www.franceconnect.gouv.fr/franceconnect-plus/"
     publisher: "FranceConnect (DINUM)"
+    accessed: "2026-08-26"
   - title: "S'authentifier à des démarches en ligne avec FranceConnect"
     url: "https://france-identite.gouv.fr/usages/s-authentifier-en-ligne/"
     publisher: "France Identité"
-  - title: "FranceConnect+ intègre France Identité"
-    url: "https://www.interieur.gouv.fr/actualites/communiques-de-presse/franceconnect-integre-france-identite-pour-offrir-plus-de-choix-et"
-    publisher: "Ministère de l'Intérieur"
+    accessed: "2026-08-26"
   - title: "API FranceConnect | data.gouv.fr"
     url: "https://www.data.gouv.fr/dataservices/api-franceconnect"
     publisher: "data.gouv.fr"
+    accessed: "2026-08-26"
+  - title: "FranceConnect+ intègre France Identité"
+    url: "https://www.interieur.gouv.fr/actualites/communiques-de-presse/franceconnect-integre-france-identite-pour-offrir-plus-de-choix-et"
+    publisher: "Ministère de l'Intérieur"
 ---
 
 # FranceConnect
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-26.** Four of five cited pages were read directly.
+> FranceConnect's own homepage confirms the "1 500 services" figure
+> verbatim, and France Identité's own page confirms the RNIPP is held
+> by **INSEE** — a detail this entity did not previously carry.
+> `interieur.gouv.fr` remains genuinely bot-walled (403) even with an
+> honest User-Agent.
 
 ## Description
 
-FranceConnect is a state service that confirms identity and authenticates a
-person when they access an online service, letting them use **an account
-they already hold** rather than creating another.
+Confirmed by reading franceconnect.gouv.fr directly (2026-08-26):
+FranceConnect is a state service that confirms identity and
+authenticates a person when they access an online service, letting
+them use **an account they already hold** rather than creating
+another: "il vous permet d'accéder à plus de 1 500 services en
+utilisant un seul identifiant et un seul mot de passe" (it lets you
+access more than 1,500 services using a single username and password).
 
 Three parties are involved:
 
 1. the **online service** — for example an administration;
-2. an **identity provider** — Impots.gouv, Ameli, or La Poste's Identité
-   Numérique;
-3. the **RNIPP**, the national register of natural persons.
+2. an **identity provider** — impots.gouv.fr, ameli.fr, or La Poste's
+   Identité Numérique (all confirmed by name on FranceConnect's own
+   page, which also names MSA and TrustMe as additional providers);
+3. the **RNIPP**, the national register of natural persons, confirmed
+   by reading france-identite.gouv.fr directly to be held by
+   **INSEE** — "le répertoire national d'identification des personnes
+   physiques (RNIPP) de l'INSEE."
 
-It gives access to **more than 1500 services**. **FranceConnect+** is the
-higher-assurance variant, and **France Identité** — a dematerialised
-national identity card on a smartphone — acts as an identity provider
-through it, taking the reachable services to over 1800.
+**FranceConnect+** is the higher-assurance variant, and **France
+Identité** — a dematerialised national identity card on a smartphone —
+acts as an identity provider through it, confirmed to take the
+reachable services to **"plus de 1800 services"**.
 
 ## Federation, not an account
 
@@ -131,4 +146,6 @@ about to become a factual question rather than a modelling one.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, four of five read directly this pass;
+`interieur.gouv.fr` remains genuinely bot-walled (403) even with an
+honest User-Agent.

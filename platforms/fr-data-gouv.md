@@ -19,11 +19,11 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -40,7 +40,7 @@ relationships:
   - type: maintained-by
     target: FR-ETALAB
     source: fact
-    evidence: "Etalab administers the interministerial portal data.gouv.fr, intended to gather and freely provide all public information of the state, its public establishments and, if they wish, territorial authorities and public or private law bodies charged with a public service mission (fr.wikipedia.org 'Etalab'; data.gouv.fr organisation pages). NOT READ — search-only."
+    evidence: "Confirmed by reading data.gouv.fr's own organisation page for Etalab directly (2026-08-26): 'Etalab est un département de la direction interministérielle du numérique (DINUM)' which 'administre' the portal — corroborated by data.gouv.fr's own homepage, read directly, which describes the platform as 'La plateforme des données publiques françaises' (the French public-data platform), 'Utilisez, partagez et améliorez les données publiques' (use, share and improve public data), matching this entity's description. fr.wikipedia.org's Etalab page, read independently, confirms the same administering relationship."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -49,28 +49,35 @@ sources:
   - title: "data.gouv.fr — plateforme ouverte des données publiques françaises"
     url: "https://www.data.gouv.fr/"
     publisher: "Etalab / DINUM"
+    accessed: "2026-08-26"
   - title: "Organisation — Etalab | data.gouv.fr"
     url: "https://www.data.gouv.fr/organizations/etalab/datasets"
     publisher: "data.gouv.fr"
-  - title: "Chronologie juridique de l'open data"
-    url: "https://guides.data.gouv.fr/guides/guide-juridique/chronologie-de-lopen-data"
-    publisher: "data.gouv.fr"
+    accessed: "2026-08-26"
   - title: "Etalab"
     url: "https://fr.wikipedia.org/wiki/Etalab"
     publisher: "Wikipédia"
+    accessed: "2026-08-26"
+  - title: "Chronologie juridique de l'open data"
+    url: "https://guides.data.gouv.fr/guides/guide-juridique/chronologie-de-lopen-data"
+    publisher: "data.gouv.fr"
+    accessed: "2026-08-26"
 ---
 
 # data.gouv.fr
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-26.** All four cited pages were read directly.
+> data.gouv.fr's own homepage confirms its identity verbatim, and its
+> Etalab organisation page confirms the `maintained-by` edge directly.
 
 ## Description
 
-data.gouv.fr is the French open data platform — the interministerial portal
-for downloading, sharing and reusing the data of the state and of
-territorial authorities.
+Confirmed by reading data.gouv.fr directly (2026-08-26): "La plateforme
+des données publiques françaises. Utilisez, partagez et améliorez les
+données publiques" (the French public-data platform; use, share and
+improve public data) — the interministerial portal for downloading,
+sharing and reusing the data of the state and of territorial
+authorities.
 
 [[FR-ETALAB]] administers it. Its intended scope is the public information
 of **the state, its public establishments**, and — **where they wish** —
@@ -125,4 +132,4 @@ The Dutch cell is a gap rather than a finding — see [[FR-ETALAB]].
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, all four read directly this pass.

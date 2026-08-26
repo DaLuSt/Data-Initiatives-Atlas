@@ -1,22 +1,21 @@
 # Current Batch
 
-**Status:** No batch in progress. **The ninth verification-gap push**
-completed on 2026-08-25 — closing Sweden's remaining `search-only`
-entities, the second "tail" push this round (after the eighth push,
-Denmark's tail). Full detail moved to `progress/completed.md`; summary
-below. `discovery/reverification-allowlist.md` ranks the next
-re-verification targets, and `discovery/research-queue.md` carries the
-rest of the research backlog.
+**Status:** No batch in progress. **The tenth verification-gap push**
+completed on 2026-08-26 — the entire France cluster (22 entities), the
+last country whose whole cluster was still untouched. Full detail moved
+to `progress/completed.md`; summary below. `discovery/reverification-allowlist.md`
+ranks the next re-verification targets, and `discovery/research-queue.md`
+carries the rest of the research backlog.
 
 **Tail pushes, not fresh clusters.** Countries whose anchor and most
 entities are `primary-source` can still carry a handful of
 `verification: search-only` stragglers — entities added or left behind
 after the country's main re-verification pass. [[DK]] (4) and [[SE]]
-(3) were closed by the eighth and ninth pushes. `NL` (67), `DE` (27),
-`BE` (24), `ES` (22), `PL` (18), `PT` (8), `EE` (7), `CZ` (7), `FI` (6)
-and `AT` (3) still carry some. [[FR]] remains the only country whose
-**entire** cluster (22 entities) is still untouched — the next natural
-full-cluster push.
+(3) were closed by the eighth and ninth pushes; [[FR]]'s entire cluster
+(22 entities, one straggler — [[FR-DGSI]]) was closed by the tenth.
+`NL` (67), `DE` (27), `BE` (24), `ES` (22), `PL` (18), `PT` (8), `EE`
+(7), `CZ` (7), `FI` (6) and `AT` (3) still carry some tail entities.
+No country now has an entirely untouched cluster.
 
 **Corrected/added guidance on what is actually blocked:** `efta.int` is
 **not** bot-walled — it returns a 403 to a browser-spoofing User-Agent
@@ -55,7 +54,64 @@ an Italian legal-text mirror cited on the Italy cluster, is the
 custom IIS "999" bot-defense error to the honest, identifying
 User-Agent `tools/reverify.py` sends, but serves the page normally
 (`200`) to a browser-spoofing one — found in the seventh
-verification-gap push, researching [[IT-CAD]].
+verification-gap push, researching [[IT-CAD]]. `legifrance.gouv.fr`
+(specifically its JORF text pages), `interieur.gouv.fr` (including the
+`dgsi.interieur.gouv.fr` subdomain), `economie.gouv.fr` and `lejdd.fr`
+were all tested with both an honest and a browser-spoofing User-Agent
+in the tenth push and are genuinely blocked (403) either way — note
+that this contradicts an earlier note elsewhere in the repo that
+Légifrance was confirmed readable on 2026-08-21; that confirmation
+evidently no longer holds, or covered different pages.
+`guides.etalab.gouv.fr` and `www.drsd.defense.gouv.fr` no longer
+resolve at all (checked via direct DNS lookup) — dead domains,
+superseded respectively by `guides.data.gouv.fr` and pages under
+`www.defense.gouv.fr/drsd/`. `sante.gouv.fr`'s Health Data Hub PDF
+returns HTTP 200 but the body is actually an HTML page carrying an
+F5/TSPD JavaScript bot-defense challenge, not a real PDF — a genuine
+block, not a parsing failure.
+
+## The tenth verification-gap push — 2026-08-26
+
+Re-verified the entire France cluster (22 entities), the last country
+whose whole cluster was still untouched. 21 entities promoted to
+`verification: primary-source`; [[FR-DGSI]] stays `search-only` — only
+one of its four cited sources (`cnctr.fr`) could be read, the other
+three being genuinely blocked `interieur.gouv.fr`/`dgsi.interieur.gouv.fr`
+pages, and a single reachable source among several is not enough to
+justify promotion (contrast the "one dead/unread source among many"
+exception used elsewhere this session for `iso.org` and similar).
+
+**[[FR-NIS2-LOI]]'s direct sourcing contradiction, resolved.** The
+entity previously carried `status: unknown` because its sources gave
+two directly contradictory accounts — one asserting the bill was
+already law (n° 2025-90 of 26 February 2025), the other that it
+remained a Senate-passed bill awaiting promulgation. Three independent
+sources plus ANSSI's own official MonEspaceNIS2 page, all read this
+pass, agree the bill was still unpromulgated as of 6 August 2026; only
+one uncorroborated source asserted the "already law" account. Status
+changed to `planned`, confidence to `medium`.
+
+**A genuine pre-existing bug found and fixed on [[FR-RGI]].** Its
+frontmatter asserted a `based-on` [[EU-EIF]] relationship that the
+entity's own body text explicitly refused. The relationship has been
+removed.
+
+**Three founding-date/legal-citation gaps closed.** [[FR-DRM]]'s
+founding decree (16 June 1992, Décret n° 92-523) and [[FR-DRSD]]'s
+precise legal basis (Article D3126-5, Code de la Défense) plus its 2016
+renaming from the DPSD, both found via an academic paper on
+`afdsd.fr`. [[FR-ETALAB]]'s actual founding date (21 February 2011) was
+found via fr.wikipedia.org, correcting a previously wrong date that
+conflated founding with its later 2019 DINUM-department reorganisation.
+
+**Two new entities created from the research queue, now populated
+rather than queued.** [[FR-INSEE]], the last Atlas country left without
+a national statistical office, closing the [[EU-ESS]] gap named since
+the France batch; [[FR-AFNOR]], the national standards body, confirmed
+by name on `standards.cencenelec.eu`'s own member list. An unsupported
+claim on [[FR-INSEE]] ("French branch of Eurostat") was traced to a
+login-gated, content-free European Commission shell page and dropped
+rather than carried forward unverified.
 
 ## The ninth verification-gap push — 2026-08-25
 
@@ -102,45 +158,16 @@ alone. Its [[EU-ESS]] membership, like [[LU-STATEC]]'s in an earlier
 pass, stays on the composition-rule tier — no page read this pass has
 Statistics Denmark describe ESS membership in its own words.
 
-## The seventh verification-gap push — 2026-08-25
-
-Re-verified the entire Italy cluster (6 entities: [[IT]], [[IT-CAD]],
-[[IT-AGID]], [[IT-ISTAT]], [[IT-DATI-GOV-IT]] and [[IT-SPID]] —
-[[IT-GARANTE]] was already `primary-source` from an earlier pass), all
-promoted from `verification: search-only` to `primary-source`.
-
-**A stale country anchor, fixed.** [[IT]]'s own body text still said
-Italy carried "no national entities" and flagged the anchor as a gap
-to research — a claim that stopped being true once [[IT-AGID]],
-[[IT-CAD]], [[IT-DATI-GOV-IT]], [[IT-ISTAT]] and [[IT-SPID]] were added
-and [[IT-GARANTE]] was re-verified, none of which had updated the
-anchor. Rewritten to describe the six entities it now anchors.
-
-**[[IT-DATI-GOV-IT]]'s custodian gap, closed.** dati.gov.it's own "Chi
-siamo" page states plainly it has been "gestito dall'Agenzia per
-l'Italia Digitale" (managed by AgID) since 2015 — a `maintained-by`
-edge this entity did not previously carry, closing Italy's row on the
-open-data-portal-custodian gap tracked in `discovery/research-queue.md`
-alongside [[NL-DATA-OVERHEID]] and [[ES-RED-ES]].
-
-**[[IT-ISTAT]]'s EU-ESS membership, upgraded to a direct statement.**
-Istat's own "L'Istat nella UE e nel mondo" page names its European
-Statistical System Committee membership directly, rather than resting
-on the generic composition-rule inference — the same strong-evidence
-tier established for [[PL-GUS]] and [[EE-STATISTIKAAMET]], and a step
-up from [[LU-STATEC]]'s weaker tier in the previous pass.
-
-**A new "unreadable" host shape: blocks the honest UA, not the
-deceptive one.** `bosettiegatti.eu`, which carries the actual text of
-[[IT-CAD]], is unreachable by `tools/reverify.py`'s own honest User-Agent
-but opens normally to a browser-spoofing one — the mirror image of the
-`efta.int` finding from the first research-queue pickup. The law text
-was read this pass via the browser-spoofing fetch, but any future
-automated `tools/reverify.py` run against this exact host will report
-it UNREACHABLE.
-
 ## Earlier pushes
 
+- **Seventh verification-gap push** (2026-08-25): the entire Italy
+  cluster (6 entities). Fixed a stale country anchor still claiming
+  Italy had "no national entities"; closed [[IT-DATI-GOV-IT]]'s
+  custodian gap ([[IT-AGID]] since 2015); upgraded [[IT-ISTAT]]'s
+  [[EU-ESS]] membership to a direct statement; found `bosettiegatti.eu`
+  blocks the honest User-Agent but not a browser-spoofing one, the
+  mirror image of the `efta.int` finding. See "The seventh
+  verification-gap push".
 - **Sixth verification-gap push** (2026-08-25): the entire Luxembourg
   cluster (6 entities). Found [[LU-ILNAS]]'s sixth standardisation
   membership (the ITU), breaking its tie with [[GB-BSI]], and sourced

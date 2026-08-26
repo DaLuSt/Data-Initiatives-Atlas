@@ -1,5 +1,109 @@
 # Completed Batches
 
+## The tenth verification-gap push
+
+**Date:** 2026-08-26
+
+The entire France cluster (22 entities: [[FR]], [[FR-RGI]], [[FR-LIL]],
+[[FR-LOI-RENSEIGNEMENT-2015]], [[FR-LOI-VALTER]], [[FR-LRN]],
+[[FR-NIS2-LOI]], [[FR-AFNOR]], [[FR-ANSSI]], [[FR-CNCTR]], [[FR-CNIL]],
+[[FR-DGSE]], [[FR-DGSI]], [[FR-DINUM]], [[FR-DRM]], [[FR-DRSD]],
+[[FR-ETALAB]], [[FR-HEALTH-DATA-HUB]], [[FR-INSEE]], [[FR-DATA-GOUV]],
+[[FR-FRANCECONNECT]] and [[FR-SNDS]]) — the last country whose whole
+cluster was still `verification: search-only`. 21 entities were
+promoted to `primary-source`; [[FR-DGSI]] stays `search-only`.
+
+### FR-NIS2-LOI: a direct sourcing contradiction, resolved
+
+This entity previously carried `status: unknown` because its cited
+sources gave two directly contradictory accounts of the same bill: one
+asserting it was already promulgated as law n° 2025-90 of 26 February
+2025, the other that it remained a Senate-passed bill still awaiting
+promulgation. Reading three independent sources this pass —
+nis-2-directive.com, Eversheds Sutherland and Prodware — plus ANSSI's
+own official MonEspaceNIS2 page, all agree the bill was still
+unpromulgated as of 6 August 2026 (twenty days before this pass).
+Only `aventris.fr` asserts the "already law" account, and it stands
+uncorroborated by any other source read. `status` changed to `planned`,
+`confidence` to `medium`, and the entity's comparison table of NIS2
+transpositions updated to say so plainly rather than "unknown."
+
+### FR-RGI: a genuine pre-existing bug, found and fixed
+
+[[FR-RGI]]'s frontmatter asserted a `based-on` relationship to
+[[EU-EIF]]. Its own body text directly contradicted this: France's
+national interoperability framework explicitly declines to base itself
+on the European one ("It is refused"). This was not a sourcing gap but
+a factual error already in the file — the relationship has been
+removed from frontmatter entirely (the wikilink is kept in
+`related_entities` for navigation, since the refusal itself is worth
+finding from either entity).
+
+### Three founding-date and legal-citation gaps closed
+
+[[FR-DRM]] had never carried a founding date; cnctr.fr and an academic
+paper on afdsd.fr, read independently, agree on its founding decree:
+**Décret n° 92-523 du 16 juin 1992** (JORF n° 139 du 17 juin 1992, p.
+7900). `start_date: 1992-06-16` was added and `coverage` raised from
+`low` to `medium`. The same afdsd.fr paper supplied [[FR-DRSD]]'s
+precise legal basis — Article D3126-5 of the Code de la Défense — and
+its 2016 renaming from the DPSD (Décret n° 2016-1337 du 7 octobre
+2016), a history this entity did not previously carry. [[FR-ETALAB]]'s
+`start_date` was corrected from 2019-10-30 to **2011-02-21**: the
+2019 date was the entity's later reorganisation as a DINUM department
+(kept as `valid_from` on the `part-of` [[FR-DINUM]] relationship), not
+its founding, which fr.wikipedia.org dates precisely: "La mission
+Etalab a été créée par décret le 21 février 2011."
+
+### Two research-queue entities created and populated
+
+[[FR-INSEE]] closes a gap named since the original France batch and
+repeated in every structural review since: France was the only Atlas
+country with no statistical office at all. It joins [[EU-ESS]] as its
+seventh national institute alongside the Netherlands, Germany, Belgium,
+Spain, Poland and Ireland — every EU member state in the Atlas is now
+represented there. An unsupported claim this entity would otherwise
+have carried forward — "described as the French branch of Eurostat" —
+was traced to `knowledge4policy.ec.europa.eu`, which turned out on
+direct reading to be a login-gated shell page with no substantive
+content, and was dropped rather than repeated unverified. [[FR-AFNOR]],
+France's national standards body, was confirmed by name on
+`standards.cencenelec.eu`'s own CEN-CENELEC member list.
+
+### FR-DGSI: caught overclaiming, corrected before commit
+
+Only one of [[FR-DGSI]]'s four cited sources — cnctr.fr — could be
+read; the other three (two `dgsi.interieur.gouv.fr` pages and one
+`interieur.gouv.fr` page) are genuinely bot-walled regardless of
+User-Agent. `verification` was briefly set to `primary-source` on the
+strength of the one new corroborating source, then reverted to
+`search-only` on the reasoning that "majority of sources unreachable"
+is a materially different situation from the "one source among several
+stays cited-but-unread" exception this session has used elsewhere
+(`iso.org`, dead domains): there, most of the substantive sourcing was
+actually read; here, three-quarters of it was not. The entity keeps
+`last_verified: "2026-08-26"` as an honest record that a genuine
+attempt was made, and its caveat states directly: "One of four current
+sources read is not enough to call this entity `primary-source`."
+
+### New host-blocking findings
+
+`legifrance.gouv.fr` (specifically its JORF legal-text pages) is
+genuinely blocked (403) with both an honest and a browser-spoofing
+User-Agent — notable because [[FR]]'s own file carried an earlier note
+that Légifrance was confirmed readable on 2026-08-21; that confirmation
+evidently no longer holds, or covered a different part of the site.
+`interieur.gouv.fr` (including the `dgsi.interieur.gouv.fr`
+subdomain), `economie.gouv.fr` and `lejdd.fr` are all genuinely blocked
+the same way. Two domains are dead, confirmed via direct DNS lookup:
+`guides.etalab.gouv.fr` (superseded by `guides.data.gouv.fr`) and
+`www.drsd.defense.gouv.fr` (superseded by pages under
+`www.defense.gouv.fr/drsd/`, found via href-extraction from a page that
+did load). [[FR-HEALTH-DATA-HUB]]'s `sante.gouv.fr` press-release PDF
+returns HTTP 200, but the body is an HTML page carrying an F5/TSPD
+JavaScript bot-defense challenge cookie, not a real PDF — a genuine
+block that simple status-code checking would have missed.
+
 ## The ninth verification-gap push
 
 **Date:** 2026-08-25

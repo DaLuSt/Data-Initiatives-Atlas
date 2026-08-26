@@ -22,11 +22,11 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -38,17 +38,10 @@ related_entities:
   - EU-EIF
   - NL-PAS-TOE-OF-LEG-UIT
 relationships:
-  - type: based-on
-    target: EU-EIF
-    source: fact
-    evidence: "The European Commission defines a European-level framework, the European Interoperability Framework (EIF), and national interoperability frameworks (NIF) defined by member states; the RGI corresponds to the French NIF, and its evolution is entrusted to DINUM, which ensures its strategic management and coordinates its updates (numerique.gouv.fr 'Referentiel general d interoperabilite (RGI)'; fr.wikipedia.org 'Referentiel general d interoperabilite'; numerique360.banquedesterritoires.fr). NOT READ — search-only."
-    confidence: medium
-    valid_from: null
-    valid_until: null
   - type: maintained-by
     target: FR-DINUM
     source: fact
-    evidence: "The RGI is published by the Direction interministérielle du numérique; the evolution of the framework is entrusted to DINUM, which is placed under the authority of the Prime Minister and ensures its strategic steering and coordinates its regular updates (numerique.gouv.fr/offre-accompagnement/reference-interoperabilite-rgi; numerique360.banquedesterritoires.fr). NOT READ — search-only."
+    evidence: "Confirmed verbatim by reading numerique.gouv.fr's own RGI page directly (2026-08-26): 'Le RGI est défini dans l'ordonnance n° 2005-1516 du 8 décembre 2005 relative aux échanges électroniques entre les usagers et les autorités administratives et entre les autorités administratives. Dans l'article 11 de cette ordonnance, le RGI fixe les règles techniques permettant d'assurer l'interopérabilité des systèmes d'information' (the RGI is defined in ordonnance n° 2005-1516 of 8 December 2005 ... under Article 11 of that ordinance, the RGI sets the technical rules ensuring interoperability of information systems) — DINUM's own page, not a hosted PDF or Wikipedia, now carries the legal-foundation claim."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -57,25 +50,34 @@ sources:
   - title: "Référentiel général d'interopérabilité (RGI)"
     url: "https://www.numerique.gouv.fr/offre-accompagnement/reference-interoperabilite-rgi/"
     publisher: "DINUM — numerique.gouv.fr"
+    accessed: "2026-08-26"
   - title: "Référentiel général d'interopérabilité (RGI)"
     url: "https://numerique360.banquedesterritoires.fr/glossaire/referentiel-general-dinteroperabilite-rgi/"
     publisher: "Banque des Territoires — Numérique 360"
-  - title: "Référentiel Général d'Interopérabilité — version 1.9.9"
-    url: "https://www.april.org/sites/default/files/Referentiel_General_Interoperabilite_V1.9.9.pdf"
-    publisher: "April (hosting the DINUM document)"
+    accessed: "2026-08-26"
   - title: "Référentiel général d'interopérabilité"
     url: "https://fr.wikipedia.org/wiki/R%C3%A9f%C3%A9rentiel_g%C3%A9n%C3%A9ral_d'interop%C3%A9rabilit%C3%A9"
     publisher: "Wikipédia"
+    accessed: "2026-08-26"
   - title: "Une nouvelle version du Référentiel général d'interopérabilité"
     url: "https://siaf.hypotheses.org/644"
     publisher: "Service interministériel des Archives de France (SIAF)"
+    accessed: "2026-08-26"
+  - title: "Référentiel Général d'Interopérabilité — version 1.9.9"
+    url: "https://www.april.org/sites/default/files/Referentiel_General_Interoperabilite_V1.9.9.pdf"
+    publisher: "April (hosting the DINUM document)"
 ---
 
 # RGI — Référentiel général d'interopérabilité
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-26, and a frontmatter bug fixed.** DINUM's own RGI
+> page was read directly and confirms the ordonnance n° 2005-1516
+> legal foundation verbatim, at Article 11. The frontmatter also
+> carried a `based-on` [[EU-EIF]] relationship that directly
+> contradicted this entity's own body text, which has refused that
+> link since creation ("It is refused"). The relationship has been
+> removed; `related_entities` still records the association for
+> navigation.
 
 ## Description
 
@@ -143,7 +145,9 @@ One of four, and the three refusals are all the same refusal. Logged in
 
 ## Sources
 
-Listed in frontmatter. Note the third: the RGI document itself is cited
-from **april.org**, an advocacy association hosting a copy, because no
-numerique.gouv.fr URL for the PDF was returned by search. The specification
-text is therefore cited at second hand.
+Listed in frontmatter, four read directly this pass. The RGI document
+itself is still cited from **april.org**, an advocacy association
+hosting a copy — DINUM's own site links to a PDF at the same
+`numerique.gouv.fr` domain now confirmed live, but the specification
+text itself was not re-fetched this pass, so the second-hand citation
+stands.

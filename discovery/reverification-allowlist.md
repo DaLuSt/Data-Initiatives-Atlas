@@ -7,11 +7,11 @@ Generated: 2026-08-26
 
 ## Why this exists
 
-**308 of the Atlas's 525 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
+**287 of the Atlas's 525 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
 
 Closing that debt — the re-verification pass — needs outbound HTTPS to the hosts those URLs point at. In an environment with a restricted egress policy, this is the allowlist to request. A denial shows up as `403 to CONNECT` from the proxy, which is an environment-level network policy and cannot be changed from inside a session. See `discovery/unresolved.md` for the standing record of the sourcing debt.
 
-The Atlas currently cites **1765 source URLs** across **561 hosts**, collapsing to **406 registrable domains**.
+The Atlas currently cites **1769 source URLs** across **561 hosts**, collapsing to **406 registrable domains**.
 
 ## Highest value first
 
@@ -25,7 +25,7 @@ A domain here is an **allowlist pattern**, not a URL. Most of them also happen t
 | `wikipedia.org` | 112 | 108 | `cs.wikipedia.org` | ✅ opens |  |
 | `iso.org` | 64 | 61 | `www.iso.org` | ✅ opens | ✅ 2026-08-21 |
 | `coe.int` | 52 | 42 | `rm.coe.int` | ✅ opens | ✅ 2026-08-21 |
-| `gouv.fr` | 44 | 16 | `aide.monespacenis2.cyber.gouv.fr` | ✅ opens |  |
+| `gouv.fr` | 46 | 16 | `aide.monespacenis2.cyber.gouv.fr` | ✅ opens |  |
 | `gov.pl` | 42 | 20 | `archiwum.giodo.gov.pl` | ✅ opens |  |
 | `bund.de` | 41 | 23 | `bmds.bund.de` | ✅ opens | ✅ 2026-08-21 |
 | `digitaleoverheid.nl` | 40 | 28 | `www.digitaleoverheid.nl` | ✅ opens |  |
