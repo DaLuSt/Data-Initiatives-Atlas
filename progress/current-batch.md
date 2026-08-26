@@ -1,11 +1,12 @@
 # Current Batch
 
-**Status:** No batch in progress. **The thirteenth verification-gap
-push** completed on 2026-08-26 — closing Estonia's tail, right after
-the twelfth (Finland). Full detail moved to `progress/completed.md`;
-summary below. `discovery/reverification-allowlist.md`
-ranks the next re-verification targets, and `discovery/research-queue.md`
-carries the rest of the research backlog.
+**Status:** No batch in progress. **The fourteenth verification-gap
+push** completed on 2026-08-26 — closing Czechia's tail, right after
+the twelfth (Finland) and thirteenth (Estonia). Full detail moved to
+`progress/completed.md`; summary below.
+`discovery/reverification-allowlist.md` ranks the next re-verification
+targets, and `discovery/research-queue.md` carries the rest of the
+research backlog.
 
 **Tail pushes, not fresh clusters.** Countries whose anchor and most
 entities are `primary-source` can still carry a handful of
@@ -14,9 +15,9 @@ after the country's main re-verification pass. [[DK]] (4) and [[SE]]
 (3) were closed by the eighth and ninth pushes; [[FR]]'s entire cluster
 (22 entities, one straggler — [[FR-DGSI]]) was closed by the tenth;
 [[AT]] (3) was closed by the eleventh; [[FI]] (6) was closed by the
-twelfth; [[EE]] (7) was closed by the thirteenth. `NL` (67), `DE` (27),
-`BE` (24), `ES` (22), `PL` (18) and `PT` (8) still carry tail entities —
-`CZ` (7) is now the smallest remaining.
+twelfth; [[EE]] (7) was closed by the thirteenth; [[CZ]] (7) was closed
+by the fourteenth. `NL` (67), `DE` (27), `BE` (24), `ES` (22) and `PT`
+(8) still carry tail entities — `PT` (8) is now the smallest remaining.
 
 **Corrected/added guidance on what is actually blocked:** `efta.int` is
 **not** bot-walled — it returns a 403 to a browser-spoofing User-Agent
@@ -84,6 +85,49 @@ axis every earlier finding this session turned on. Content from
 `ria.ee` in the thirteenth push was verified by direct `curl` fetch;
 `tools/reverify.py --id` runs against Estonian entities citing `ria.ee`
 will report it UNREACHABLE regardless.
+
+## The fourteenth verification-gap push — 2026-08-26
+
+Closed Czechia's tail: [[CZ-DATA-GOV]], [[CZ-ZAKON-110-2019]],
+[[CZ-ZAKON-60-2026]], [[CZ-NUKIB]], [[CZ-UNMZ]], [[CZ-DIA]] and
+[[CZ-UOOU]] — the seven entities still `verification: search-only`
+after [[CZ-CSU]] had already been re-verified in an earlier pass. All
+seven now carry `verification: primary-source`. Every one of the
+fourteen cited sources was reachable this pass — a first for this
+session's tail pushes.
+
+**[[CZ-ZAKON-60-2026]] implements the EU Data Governance Act — in its
+own statutory text.** § 1(1) of the Act, read directly on
+zakonyprolidi.cz, states it regulates matters "in connection with the
+directly applicable EU regulation on data governance" — [[EU-DGA]], a
+relationship this entity did not previously carry at all. isvs.cz's
+independent report corroborates: the Act "implements the European
+Digital Governance Act... and substantially extends it with specific
+tools." Precise dates were also found: enacted 15 April 2026, published
+12 May, in effect 27 May, with staggered effectiveness through 2029.
+
+**A four-year rollout revealed a custodian for the seventh portal that
+lacked one.** [[CZ-DATA-GOV]] had flagged itself as the seventh
+national portal in the Atlas without a sourced custodian. DIA's own
+project page, describing its own work expanding NKOD (data.gov.cz's
+alternative name), closes that gap directly. isvs.cz adds the rest of
+the story: the Act expands data.gov.cz into a **National Data
+Catalogue** covering non-public as well as open data, administered by
+DIA, with a controlled-access role from January 2028 and mandatory
+government-wide registration from 1 January 2029.
+
+**[[CZ-DIA]] wrote its own governing act.** isvs.cz reveals DIA was
+the bill's own proposer ("Předkladatelem zákona byla DIA"), not merely
+the body [[CZ-ZAKON-60-2026]] assigns a role to — DIA drafted the
+statute that names it as Czechia's single information point.
+
+**Two more fabricated-date near-misses, caught before commit.** Both
+[[CZ-ZAKON-110-2019]] (which gained a real 24 April 2019 effective
+date from zakonyprolidi.cz) and [[CZ-UOOU]] were candidates for a
+guessed day-of-year date; a draft edit briefly set ÚOOÚ's `start_date`
+to `2000-01-01` from a Wikipedia infobox that gives only "Vznik 2000"
+(established 2000) — caught and corrected to unset before this push
+was finalised, the same discipline applied throughout this session.
 
 ## The thirteenth verification-gap push — 2026-08-26
 

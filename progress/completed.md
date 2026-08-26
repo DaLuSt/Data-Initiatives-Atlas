@@ -1,5 +1,92 @@
 # Completed Batches
 
+## The fourteenth verification-gap push
+
+**Date:** 2026-08-26
+
+Closed Czechia's remaining seven `verification: search-only` entities
+— [[CZ-DATA-GOV]], [[CZ-ZAKON-110-2019]], [[CZ-ZAKON-60-2026]],
+[[CZ-NUKIB]], [[CZ-UNMZ]], [[CZ-DIA]] and [[CZ-UOOU]] — alongside
+[[CZ-CSU]], already `primary-source` from an earlier pass. All seven
+now carry `verification: primary-source`; Czechia's whole cluster is
+fully re-verified. Fourteen cited sources across seven entities were
+fetched, and all fourteen returned content — the first tail push this
+session with no unreachable host at all.
+
+### CZ-ZAKON-60-2026 implements the EU Data Governance Act, in its own words
+
+[[CZ-ZAKON-60-2026]] previously carried no relationship at all to any
+EU instrument, despite its central role connecting Czech data to the
+European data portal. Reading the Act's own statutory text on
+zakonyprolidi.cz found § 1(1): "Tento zákon upravuje v návaznosti na
+přímo použitelný předpis Evropské unie upravující správu dat" (this
+Act regulates, in connection with the directly applicable EU
+regulation on data governance) — naming [[EU-DGA]] as what it
+implements, in the Act's own first section. isvs.cz's independent
+report states the same thing in plainer terms: the Act "implements the
+European Digital Governance Act... and substantially extends it with
+specific tools." The same source supplied precise dates this entity
+had none of: enacted **15 April 2026**, published in the Sbírka zákonů
+on **12 May 2026**, in effect from **27 May 2026** with staggered
+effectiveness for the rest.
+
+### The seventh portal without a custodian, closed — and its successor found
+
+[[CZ-DATA-GOV]] had explicitly flagged itself, since creation, as "the
+seventh portal without a sourced custodian" — [[CZ-DIA]] was the
+obvious operator, but the previous evidence for that was only
+adjacent, not direct. DIA's own project page, titled "Rozvoj Národního
+katalogu otevřených dat (NKOD)..." (Development of the National Open
+Data Catalogue), read directly, describes DIA's own work expanding
+NKOD — data.gov.cz's own alternative name — closing the gap with a
+first-party source. isvs.cz's report on the 2026 Act supplied the rest
+of the story: data.gov.cz is being expanded into a **National Data
+Catalogue** covering non-public as well as open data, "jehož správcem
+bude DIA" (of which DIA will be the administrator), taking on a
+controlled-access-intermediary role from January 2028 and reaching
+mandatory government-wide central registration by 1 January 2029 — a
+four-year rollout with a public timeline, not a single effective date.
+
+### DIA drafted its own governing act
+
+[[CZ-DIA]] previously carried an `implements` edge to
+[[CZ-ZAKON-60-2026]] describing a role the Act assigns it. isvs.cz's
+report adds a fact that changes the shape of that relationship: "the
+bill's own proposer was DIA" ("Předkladatelem zákona byla DIA"), quoting
+DIA's director, Bohdan Urban, on the Act's aims. DIA did not just
+receive a statutory role — it wrote the statute that assigns it.
+
+### Two more near-miss fabricated dates, one caught mid-push
+
+[[CZ-ZAKON-110-2019]]'s vague "2019" became a real date once
+zakonyprolidi.cz's own legal-text record was read directly: enacted 12
+March 2019, in effect from **24 April 2019** — and the same record's
+transitional provisions confirmed, in the Act's own statutory language,
+the claim that it "no longer includes the position of inspectors,"
+which Czech Wikipedia's ÚOOÚ article corroborated independently with
+unusual specificity (all seven former inspectors named, each appointed
+by the President on the Senate's proposal for ten-year terms).
+[[CZ-UOOU]]'s own founding, by contrast, produced a near-miss: a draft
+edit briefly set `start_date: 2000-01-01` on the strength of a
+Wikipedia infobox reading "Vznik 2000" (established 2000) — a bare
+year, not a day. Caught and corrected to unset before this push was
+finalised, the same discipline this session has applied to every
+partial date it has found, most recently on [[AT-BRZ]], [[EE-ATS]] and
+[[FI-SECONDARY-USE-ACT]].
+
+### A loose end acknowledged rather than resolved: ETSI
+
+[[CZ-UNMZ]]'s carefully-reasoned membership split — ÚNMZ holds formal
+standards-body membership, ČAS does the operational work — held up
+under direct reading of both cencenelec.eu and ČAS's own site. But
+ČAS's own "Standards development" page, read directly, complicates it
+slightly: it lists ETSI alongside ISO/IEC/CEN/CENELEC among ČAS's *own*
+cooperation and membership duties. Whether ÚNMZ's membership extends to
+ETSI too, or ETSI is the one body where ČAS itself holds membership, is
+not established by anything read. No [[EU-ETSI]] relationship is
+asserted from either entity — recorded as an open question rather than
+resolved by inference.
+
 ## The thirteenth verification-gap push
 
 **Date:** 2026-08-26

@@ -19,11 +19,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -36,7 +36,7 @@ relationships:
   - type: part-of
     target: CZ
     source: fact
-    evidence: "NÚKIB — Národní úřad pro kybernetickou a informační bezpečnost — is the National Cyber and Information Security Agency serving as the supervisory authority for the Czech Republic; the National Cyber Security Centre (NCKB) and the Strategic Affairs and Engagement Division are its executive sections, and the sections oversee the activities of the Government CERT of the Czech Republic, GovCERT.CZ (nukib.gov.cz 'Cyber Security' and 'NCSC'). NOT READ — search-only. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    evidence: "Confirmed verbatim by reading nukib.gov.cz's own 'Cyber Security' page directly (2026-08-26): 'The National Cyber Security Centre (NCSC – NCKB in Czech) and the Strategic Affairs and Engagement Division are the executive sections of the National Cyber and Information Security Agency (NÚKIB). The sections oversee: The activities of the Government CERT Czech Republic (GovCERT.CZ)...' NÚKIB's own 'NCSC' page, read independently, adds that NÚKIB 'manage[s] the Public Regulated Service of the Galileo navigation system in the Czech Republic' — a function this entity did not previously carry. Anchor edge under metadata/relationship-types.md §2.3."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -45,16 +45,20 @@ sources:
   - title: "National Cyber and Information Security Agency — Cyber Security"
     url: "https://nukib.gov.cz/en/cyber-security/"
     publisher: "NÚKIB"
+    accessed: "2026-08-26"
   - title: "National Cyber and Information Security Agency — NCSC"
     url: "https://nukib.gov.cz/en/252-ncsc/"
     publisher: "NÚKIB"
+    accessed: "2026-08-26"
 ---
 
 # Národní úřad pro kybernetickou a informační bezpečnost
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-26.** Both cited pages were read directly and
+> confirm this entity's description of NÚKIB's structure in NÚKIB's
+> own words. Its NCSC page also names a function this entity did not
+> previously carry: managing the Galileo Public Regulated Service for
+> Czechia.
 
 ## Description
 
@@ -63,7 +67,8 @@ the country's cybersecurity supervisory authority.
 
 Inside it sit the **National Cyber Security Centre (NCKB)** and the Strategic
 Affairs and Engagement Division, and those sections oversee **GovCERT.CZ**,
-the government CERT.
+the government CERT. NÚKIB also manages the **Galileo Public Regulated
+Service** in Czechia, confirmed by reading its own NCSC page directly.
 
 ## The fourth "NCSC" in the Atlas, and the second one nested inside something else
 
@@ -93,4 +98,4 @@ absent. Logged in `discovery/unresolved.md`.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, both read directly this pass.
