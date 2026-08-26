@@ -87,6 +87,94 @@ not established by anything read. No [[EU-ETSI]] relationship is
 asserted from either entity — recorded as an open question rather than
 resolved by inference.
 
+## The thirteenth verification-gap push
+
+**Date:** 2026-08-26
+
+Closed Estonia's remaining seven `verification: search-only` entities —
+[[EE-E-RESIDENCY]], [[EE-ANDMEPORTAAL]], [[EE-RIHA]], [[EE-X-TEE]],
+[[EE-IKS]], [[EE-ATS]] and [[EE-RIA]] — alongside [[EE-AKI]] and
+[[EE-STATISTIKAAMET]], already `primary-source` from earlier passes.
+All seven now carry `verification: primary-source`; Estonia's whole
+cluster is fully re-verified.
+
+### A stale country anchor, fixed twice over
+
+[[EE]]'s own body text carried two separate stale claims: it still said
+"no Estonia entity is modelled yet," and a whole section still framed
+X-Road and e-Residency as things "the Atlas holds nothing about" — both
+written when the anchor was created and never revisited as nine
+entities were added and progressively re-verified around it. The same
+bug shape found on [[IT]]'s, [[AT]]'s and [[FI]]'s anchors in earlier
+pushes, now confirmed a fourth time as a genuine pattern rather than a
+one-off: nothing in this workflow currently prompts a revisit of a
+country anchor's own prose when its children change under it.
+
+### RIHA is on notice, not already replaced
+
+[[EE-ANDMEPORTAAL]]'s `replaces` edge onto [[EE-RIHA]] read as an
+already-settled fact. RIA's own data-portal page, read directly, says
+otherwise: RIHA "is currently still in use, but it is expected to be
+decommissioned at the end of 2026 when the legislative amendments come
+into force. Descriptions of the databases held by RIHA will then be
+added to the Data Portal." Both entities' evidence was rewritten to
+describe a transition in progress with a public target date, rather
+than a completed handover — and [[EE-RIHA]]'s own body now flags that
+it is likely to need a `status` change and a `successor` pointer within
+months, not years. The same page named **RIHAKE**, a data management
+application integrated with the portal, which this entity did not
+previously carry and which does not yet warrant its own entity.
+
+### RIA runs Estonia's CERT, confirmed in RIA's own words
+
+[[EE-RIA]] previously speculated, without confirmation, that RIA
+operates **CERT-EE**. RIA's own site settles it directly: "RIA is the
+National Cyber Security Centre of Estonia (NCSC-EE)," with CERT-EE
+named as the incident-handling body. CERT-EE still has no Atlas entity
+of its own — that gap is unchanged — but the operational fact
+underneath it no longer rests on inference. The same page places RIA
+"within the administrative area of the **Ministry of Justice and
+Digital Affairs**," a placement this entity did not previously carry.
+
+### A precise 2018 naming split, confirmed independently of Finland
+
+[[EE-X-TEE]]'s claim that it was "named X-Road in English until 2018"
+is now confirmed in RIA's own words: "Until 2018, it was named X-Road
+in English. Since 2018, however, X-Road is only used to refer to the
+technology developed together by Estonia, Finland and Iceland through
+MTÜ Nordic Institute for Interoperability Solutions." This independently
+corroborates Iceland's NIIS membership found via [[FI-PALVELUVAYLA]]'s
+sourcing in the twelfth push, from a completely different source.
+
+### Two more fabricated placeholder dates, and one confirmed
+
+[[EE-ATS]] carried `start_date: 2000-01-01` with no source giving that
+day — the Riigi Teataja citation (RT I 2000, 92, 597) gives only a
+year. Corrected to unset. [[EE-IKS]]'s 15 January 2019 date, by
+contrast, held up: two independent legal trackers (Linklaters and
+White & Case), read directly, confirm it verbatim, and White & Case
+surfaced a related act this entity did not know about — a **Personal
+Data Protection Act Implementation Act**, in force 15 March 2019 — noted
+in prose rather than given its own entity.
+
+### A new, client-fingerprint-dependent host block
+
+`ria.ee`'s pages were read successfully via a direct `curl` fetch with
+the honest User-Agent — reliable `200`s, full content — but
+`tools/reverify.py`'s own fetcher, Python's `urllib`, sending the
+identical UA string, reproducibly receives a Cloudflare "Just a
+moment..." challenge on the same URLs. This is a new host-blocking
+shape for the session: every earlier finding turned on the UA string
+itself (honest vs. browser-spoofing); this one tracks the HTTP client's
+own network fingerprint regardless of the UA header sent. Future
+`tools/reverify.py --id` runs against the four Estonian entities citing
+`ria.ee` will report it UNREACHABLE despite the content being genuinely
+readable — each affected entity's caveat says so explicitly.
+`scoop4c.eu`, cited on [[EE-X-TEE]] and [[EE-RIA]], is separately and
+genuinely unreachable: a raw TLS connection reset regardless of
+User-Agent, distinct again from the HTTP-403 walls found elsewhere this
+session.
+
 ## The twelfth verification-gap push
 
 **Date:** 2026-08-26

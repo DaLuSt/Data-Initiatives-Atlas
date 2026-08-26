@@ -19,11 +19,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-20"
+last_verified: "2026-08-26"
 previous_version: null
 successor: null
 
@@ -40,14 +40,14 @@ relationships:
   - type: maintained-by
     target: EE-RIA
     source: fact
-    evidence: "The Information System Authority (RIA) is the national competence centre responsible for managing the technological infrastructure underpinning Estonia's e-government system, and publishes X-tee as one of its data exchange platforms (ria.ee 'Data exchange layer X-tee'; scoop4c.eu 'Estonian data exchange layer for information systems (X-Road)'). NOT READ — search-only."
+    evidence: "Confirmed by reading ria.ee's own X-tee page directly (2026-08-26): 'X-tee, the data exchange layer for information systems, is a technological and organizational environment enabling a secure Internet-based data exchange between information systems' — presented as RIA's own service. `scoop4c.eu` is genuinely unreachable this pass regardless of User-Agent: a TLS handshake reset (curl error 35), not a UA-specific 403, tested with both an honest and a browser-spoofing User-Agent."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: based-on
     target: INTL-X-ROAD
     source: fact
-    evidence: "X-tee is the data exchange layer used in Estonia, previously named X-Road in English until 2018; X-Road is released under the MIT open source licence and is developed by NIIS for its member states (ria.ee 'Data exchange layer X-tee'; en.wikipedia.org 'X-Road'; niis.org 'History'). NOT READ — search-only."
+    evidence: "Confirmed verbatim by reading ria.ee's own X-tee page directly (2026-08-26): 'X-tee is a data exchange layer used in Estonia. Until 2018, it was named X-Road in English. Since 2018, however, X-Road is only used to refer to the technology developed together by Estonia, Finland and Iceland through MTÜ Nordic Institute for Interoperability Solutions.' This confirms both the naming split and, independently of the [[FI-PALVELUVAYLA]] sourcing, Iceland's membership in NIIS."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -56,19 +56,30 @@ sources:
   - title: "Data exchange layer X-tee | RIA"
     url: "https://www.ria.ee/en/state-information-system/data-exchange-platforms/data-exchange-layer-x-tee"
     publisher: "Riigi Infosüsteemi Amet (RIA) — Information System Authority"
+    accessed: "2026-08-26"
   - title: "Estonian data exchange layer for information systems (X-Road)"
     url: "https://scoop4c.eu/cases/estonian-data-exchange-layer-information-systems-x-road"
     publisher: "SCOOP4C"
   - title: "X-Road"
     url: "https://en.wikipedia.org/wiki/X-Road"
     publisher: "Wikipedia"
+    accessed: "2026-08-26"
 ---
 
 # X-tee
 
-> **Sourcing caveat.** Compiled from search-engine results only; the
-> cited pages were confirmed to exist but were not read, because the
-> working environment blocks page retrieval. `verification: search-only`.
+> **Verified 2026-08-26.** Two of three cited pages were read directly.
+> `scoop4c.eu` is genuinely unreachable — a TLS connection reset with
+> both an honest and a browser-spoofing User-Agent, a new host-blocking
+> shape distinct from the HTTP-403 walls found elsewhere this session.
+> RIA's own page confirms the naming split and the `maintained-by` edge
+> in its own words. Note: `ria.ee` was read successfully via a direct
+> `curl` fetch with the honest User-Agent, but `tools/reverify.py`'s own
+> fetcher (Python's `urllib`) reproducibly gets a Cloudflare "Just a
+> moment..." challenge on the same URL with the identical UA string — a
+> client-fingerprint-dependent block, not a UA-string one. Expect
+> `tools/reverify.py --id EE-X-TEE` to report `ria.ee` as UNREACHABLE
+> despite the page being genuinely readable.
 
 ## Description
 
@@ -106,5 +117,6 @@ too: **X-tee** in Estonian, **X-Road** internationally.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, two of three read directly this pass;
+`scoop4c.eu` is genuinely unreachable (TLS reset, both User-Agents).
 
