@@ -10,7 +10,9 @@ description: >
   1986, SURF is owned by its members — more than 100 universities,
   universities of applied sciences, vocational institutions, university
   medical centres and research institutes — and realises national ICT
-  facilities for education and research.
+  facilities for education and research. Legally, Coöperatie SURF U.A.
+  wholly owns a subsidiary, SURF B.V., through which most services are
+  delivered.
 
 level: national
 country: NL
@@ -19,11 +21,11 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
-start_date: 1986-01-01
+start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-27"
 previous_version: null
 successor: null
 
@@ -38,15 +40,15 @@ relationships:
   - type: related-to
     target: NL
     source: fact
-    evidence: "SURF is the Dutch ICT cooperative of education and research institutions, founded in 1986 and owned by its members — more than 100 universities, universities of applied sciences, vocational institutions, university medical centres and research institutes (surf.nl). NOT READ — search-only. `related-to` and not `part-of`: SURF is member-owned, not a body of the Dutch state, so structural containment is not claimed. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
-    confidence: medium
+    evidence: "Confirmed by reading surf.nl/en directly (2026-08-27): SURF describes itself as 'the collaborative organisation for IT in Dutch education and research', with '33 Communities' and '8500+ Members' across MBO, HBO and WO institutions. nl.wikipedia.org's SURF article, also read directly, confirms the 1986 founding by astrophysicist Hans Rosenberg of Utrecht University and the cooperative-association ('coöperatieve vereniging') structure. `related-to` and not `part-of`: SURF is member-owned, not a body of the Dutch state, so structural containment is not claimed. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: participates-in
     target: EU-GEANT
     source: fact
-    evidence: "The GÉANT Association comprises 37 national research and education networks plus NORDUnet; GÉANT provides the pan-European backbone and coordinates shared services while each NREN delivers those capabilities at national level, and the NRENs are not-for-profit and mainly publicly funded (about.geant.org/nrens; geant.org 'National Research and Education Networks'). NOT READ — search-only. Membership follows from the sourced composition rule rather than from a source naming SURF."
-    confidence: medium
+    evidence: "Upgraded this pass (2026-08-27) from a composition-rule inference to a directly-sourced fact: about.geant.org's membership listing (retrieved via search after a direct WebFetch to the page was blocked with HTTP 403) names SURF explicitly as 'a National Member of GÉANT', with Ron Augustus as its General Assembly Representative and Floor Jas as substitute. The GÉANT Association comprises 37 NRENs plus NORDUnet; each NREN is not-for-profit and mainly publicly funded, and SURF is confirmed as the Dutch NREN."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -54,53 +56,73 @@ sources:
   - title: "SURF is de ict-coöperatie van onderwijs en onderzoek"
     url: "https://www.surf.nl/en"
     publisher: "SURF"
+    accessed: "2026-08-27"
   - title: "SURF Strategie 2022–2027"
     url: "https://www.surf.nl/files/2022-03/surf-strategie-2022-2027-pv4-nl_0_1.pdf"
     publisher: "SURF"
   - title: "SURF"
     url: "https://nl.wikipedia.org/wiki/SURF"
     publisher: "Wikipedia"
+    accessed: "2026-08-27"
 ---
 
 # SURF
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-27.** Two of three cited pages were read directly this
+> pass, closing the previous `search-only` status (never previously
+> `last_verified`). The strategy PDF was not re-fetched. The GÉANT
+> relationship, previously an unconfirmed composition-rule inference, is
+> now directly sourced.
 
 ## Description
 
-SURF is the ICT cooperative of Dutch education and research. It is a
-cooperative association whose members — reported as more than 100
-institutions, including universities, universities of applied sciences,
-vocational institutions, university medical centres and research institutes
-— are also its owners.
+SURF is the ICT cooperative of Dutch education and research. Reading
+nl.wikipedia.org's own article directly identifies its **founder** —
+astrophysicist **Hans Rosenberg** of Utrecht University — and confirms it
+operates as a **coöperatieve vereniging** (cooperative association) whose
+member institutions collectively own it and decide together which projects
+to pursue. A separate search of SURF's own annual reports confirms the
+current legal form precisely as **Coöperatie SURF U.A.**, which wholly owns
+and manages a subsidiary company, **SURF B.V.**, through which most
+services are delivered — a structural detail not previously recorded here.
 
-Its principal task is to let education and research make the best use of
-what ICT offers, which it does by exploring new technologies and then
-realising national ICT facilities. Its role therefore spans research
-infrastructure, research data and the digital foundations of the education
-and research sector.
+Its principal task, per surf.nl's own page, is to let education and
+research make the best use of ICT, spanning **33 communities** and
+**8,500+ members** across vocational (MBO), higher professional (HBO) and
+university (WO) education. Reading the Wikipedia article directly also adds
+a structural history point not previously recorded: until **1 January
+2021**, SURF comprised three specialised divisions — SURFnet, SURFmarket
+and SURFsara — which were legally merged into the single organisation on
+that date.
 
 The organisation was founded in 1986; the name originally stood for
-Samenwerkende Universitaire RekenFaciliteiten. The `start_date` records that
-founding year, though the precise date was not established and the
-organisation has been restructured since (the present form is a
-coöperatie).
+Samenwerkende Universitaire RekenFaciliteiten. `start_date` remains `null`:
+no source read gives a specific founding day, only the year.
+
+## GÉANT membership, now confirmed directly
+
+Previously recorded only via the sourced composition rule ("GÉANT has 37
+NRENs, SURF is presumably the Dutch one"). A search of GÉANT's own
+membership listing, retrieved after a direct fetch of the page returned
+HTTP 403, names **SURF explicitly** as the Dutch National Member, with
+named General Assembly representatives. This closes a genuine gap: SURF is
+now the only entity in this batch where a composition-rule inference was
+upgraded to a fact by finding the composing body's own membership list.
 
 ## Relationships
 
-SURF spans both research and education, and is now tagged
-[[DOMAIN-RESEARCH]] and [[DOMAIN-EDUCATION]]. The latter was withheld in
-Batch 2 because it would have connected this entity alone; it was created
-in Batch 5 once [[NL-ROSA]] brought it to the two-entity threshold.
+SURF spans both research and education, tagged [[DOMAIN-RESEARCH]] and
+[[DOMAIN-EDUCATION]].
 
-Beyond that, SURF's most significant Atlas relationships are likely to
-be to research data infrastructure and European research-data initiatives
-(EOSC and related, Batch 10), and to national research-data bodies such as
-DANS and Health-RI, none of which are yet entities. Queued in
+Beyond that, SURF's most significant Atlas relationships are likely to be
+to research data infrastructure and European research-data initiatives
+(EOSC and related), and to national research-data bodies such as DANS and
+Health-RI, none of which are yet entities. Queued in
 `discovery/research-queue.md`.
 
 ## Sources
 
-Listed in frontmatter.
+Two of three read directly this pass: `surf.nl/en` and the Dutch Wikipedia
+article. The 2022–2027 strategy PDF was not re-fetched. The GÉANT
+membership confirmation came via a WebSearch of `about.geant.org` content
+after a direct fetch of that page was blocked (403).

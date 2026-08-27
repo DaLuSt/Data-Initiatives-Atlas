@@ -7,12 +7,15 @@ belong on the country's front page (`CONTRIBUTING.md`).
 
 Anchor entity: [[NL]]
 
-> **Sourcing caveat.** Every Dutch entity below was compiled from
+> **Sourcing caveat.** Most Dutch entities below were compiled from
 > search-engine results only: the cited pages were confirmed to exist but
 > were **not read**, because the working environment blocked page
-> retrieval. They carry `verification: search-only` and need a
+> retrieval. They carry `verification: search-only` (or worse) and need a
 > re-verification pass against primary sources. See
-> `progress/current-batch.md`.
+> `progress/current-batch.md`. Entities marked ✅ below have already been
+> re-verified against primary sources and promoted to
+> `verification: primary-source`; see each entity's own file for what was
+> read and `discovery/unresolved.md` for what remains open.
 
 ## Strategies
 
@@ -39,16 +42,16 @@ Anchor entity: [[NL]]
 
 - [[NL-FDS]] — Federatief Datastelsel
 - [[NL-BASISREGISTRATIES]] — Stelsel van Basisregistraties _(the ten below)_
-  - [[NL-BRP]] — persons _(RvIG)_
-  - [[NL-NHR]] — businesses and legal entities _(KvK)_
-  - [[NL-BAG]] — addresses and buildings _(municipalities; Kadaster runs the facility)_
-  - [[NL-BRT]] — topography, small/medium scale _(Kadaster)_
-  - [[NL-BRK]] — property ownership _(Kadaster)_
-  - [[NL-BGT]] — topography, large scale, 20 cm _(seven kinds of bronhouder)_
-  - [[NL-WOZ]] — property values _(municipalities; Waarderingskamer supervises)_
-  - [[NL-BRV]] — vehicles _(RDW)_
-  - [[NL-BRI]] — income _(Belastingdienst)_
-  - [[NL-BRO]] — the subsurface _(TNO / Geologische Dienst)_
+  - [[NL-BRP]] — persons _(RvIG)_ ✅ re-verified 2026-08-27
+  - [[NL-NHR]] — businesses and legal entities _(KvK)_ ✅ re-verified 2026-08-27
+  - [[NL-BAG]] — addresses and buildings _(municipalities; Kadaster runs the facility)_ ✅ re-verified 2026-08-27
+  - [[NL-BRT]] — topography, small/medium scale _(Kadaster)_ ✅ re-verified 2026-08-27
+  - [[NL-BRK]] — property ownership _(Kadaster)_ ✅ re-verified 2026-08-27
+  - [[NL-BGT]] — topography, large scale, 20 cm _(seven kinds of bronhouder)_ ✅ re-verified 2026-08-27
+  - [[NL-WOZ]] — property values _(municipalities; Waarderingskamer supervises)_ ✅ re-verified 2026-08-27
+  - [[NL-BRV]] — vehicles _(RDW)_ ✅ re-verified 2026-08-27
+  - [[NL-BRI]] — income _(Belastingdienst)_ ✅ re-verified 2026-08-27
+  - [[NL-BRO]] — the subsurface _(TNO / Geologische Dienst)_ ✅ re-verified 2026-08-27
 - [[NL-BOMOS]] — Beheer- en OntwikkelModel voor Open Standaarden
 - [[NL-BIO]] — Baseline Informatiebeveiliging Overheid _(current version BIO2)_
 
@@ -57,7 +60,7 @@ Anchor entity: [[NL]]
 - [[NL-DIGIKOPPELING]] — message exchange _(Logius, mandatory)_
 - [[NL-ADR]] — NLGov REST API Design Rules _(Logius, mandatory)_
 - [[NL-DCAT-AP-NL]] — metadata profile _(Geonovum)_
-- [[NL-NEN-3610]] — base model for geo-information _(NEN / Geonovum)_
+- [[NL-NEN-3610]] — base model for geo-information _(NEN / Geonovum)_ ✅ re-verified 2026-08-27
 
 _The wider 'pas toe of leg uit' list is not yet enumerated entity-by-entity;
 see `discovery/research-queue.md`._
@@ -71,8 +74,8 @@ see `discovery/research-queue.md`._
 
 - [[NL-GDI]] — Generieke Digitale Infrastructuur
 - [[NL-DATA-OVERHEID]] — national open data portal
-- [[NL-PDOK]] — geodata platform
-- [[NL-NDW]] — national road traffic data portal
+- [[NL-PDOK]] — geodata platform ✅ re-verified 2026-08-27
+- [[NL-NDW]] — national road traffic data portal ✅ re-verified 2026-08-27
   - [[NL-NTM]] — national access point for mobility data _(EU obligation)_
 
 ## Data Spaces and Ecosystems
@@ -106,19 +109,19 @@ see `discovery/research-queue.md`._
 
 ### Registries and statistics
 
-- [[NL-KADASTER]] — Kadaster _(BRK, BRT; national facility for BAG, BGT, WOZ)_
+- [[NL-KADASTER]] — Kadaster _(BRK, BRT; national facility for BAG, BGT, WOZ)_ ✅ re-verified 2026-08-27
 - [[NL-KVK]] — Kamer van Koophandel _(Handelsregister)_
-- [[NL-RDW]] — RDW _(BRV, vehicles)_
-- [[NL-RVIG]] — Rijksdienst voor Identiteitsgegevens _(BRP)_
-- [[NL-WAARDERINGSKAMER]] — Waarderingskamer _(WOZ supervisor and functional manager)_
-- [[NL-BELASTINGDIENST]] — Belastingdienst _(BRI)_
+- [[NL-RDW]] — RDW _(BRV, vehicles)_ ✅ re-verified 2026-08-27
+- [[NL-RVIG]] — Rijksdienst voor Identiteitsgegevens _(BRP)_ ✅ re-verified 2026-08-27
+- [[NL-WAARDERINGSKAMER]] — Waarderingskamer _(WOZ supervisor and functional manager)_ ✅ re-verified 2026-08-27
+- [[NL-BELASTINGDIENST]] — Belastingdienst _(BRI)_ ✅ re-verified 2026-08-27
 - [[NL-TNO]] — TNO / Geologische Dienst Nederland _(BRO facility)_
 - [[NL-CBS]] — Centraal Bureau voor de Statistiek _(part-of [[EU-ESS]])_
 
 ### Oversight and information management
 
 - [[NL-AP]] — Autoriteit Persoonsgegevens (data protection)
-- [[NL-NATIONAAL-ARCHIEF]] — Nationaal Archief
+- [[NL-NATIONAAL-ARCHIEF]] — Nationaal Archief ✅ re-verified 2026-08-27
 
 ### Research
 
@@ -152,8 +155,8 @@ threshold and are queued._
 
 - [[NL-WOO]] — Wet open overheid _(supersedes [[NL-WOB]])_
 - [[NL-WDO]] — Wet digitale overheid
-- [[NL-ARCHIEFWET-1995]] — Archiefwet 1995
-- [[NL-WET-BRP]] — Wet basisregistratie personen
+- [[NL-ARCHIEFWET-1995]] — Archiefwet 1995 ✅ re-verified 2026-08-27
+- [[NL-WET-BRP]] — Wet basisregistratie personen ✅ re-verified 2026-08-27
 - [[NL-WET-CBS]] — Wet op het Centraal bureau voor de statistiek
 - [[NL-TNO-WET]] — TNO-wet
 
@@ -161,7 +164,7 @@ threshold and are queued._
 
 - [[NL-WOB]] — Wet openbaarheid van bestuur _(superseded 1 May 2022)_
 - [[NL-WBNI]] — Wet beveiliging netwerk- en informatiesystemen _(ends 15 Aug 2026)_
-- [[NL-ARCHIEFWET-2026]] — Archiefwet 2026 _(in force 1 Jan 2027)_
+- [[NL-ARCHIEFWET-2026]] — Archiefwet 2026 _(enacted, Stb. 2026, 149; in force 1 Jan 2027 by KB)_ ✅ re-verified 2026-08-27
 
 ## Applicable EU legislation
 

@@ -17,11 +17,11 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-27"
 previous_version: null
 successor: null
 
@@ -34,8 +34,8 @@ relationships:
   - type: participates-in
     target: NL-BASISREGISTRATIES
     source: fact
-    evidence: "The kentekenregister has served as the basisregistratie voertuigen since 1 July 2008 (rdw.nl kerntaken; digitaleoverheid.nl BRV page). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading rdw.nl's own page directly (2026-08-27): 'the kentekenregister has functioned as the basisregistratie voertuigen since 1 July 2008,' and RDW 'maintains this foundational registry... a very reliable, complete and current register of vehicle data and owner/holder information.' NORA Online's BRV wiki page, also read directly, confirms the RDW's role as verstrekker (provider) but does not itself state the 1 July 2008 date. digitaleoverheid.nl's BRV page returned a bot-verification wall on this pass and is confirmed genuinely unreadable, not merely unread."
+    confidence: high
     valid_from: 2008-07-01
     valid_until: null
 
@@ -43,19 +43,22 @@ sources:
   - title: "Kentekenregister is basisregistratie voertuigen"
     url: "https://www.rdw.nl/over-rdw/organisatie/kerntaken/kentekenregister-is-basisregistratie-voertuigen"
     publisher: "RDW"
-  - title: "BRV — Stelsel van basisregistraties"
+    accessed: "2026-08-27"
+  - title: "BRV — Stelsel van basisregistraties (confirmed bot-walled, not read)"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/10-basisregistraties/brv/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
   - title: "BRV (Basisregistratie Voertuigen)"
     url: "https://www.noraonline.nl/wiki/BRV_(Basisregistratie_Voertuigen)"
     publisher: "NORA Online (ICTU)"
+    accessed: "2026-08-27"
 ---
 
 # RDW
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-27.** Two of three cited pages read directly. RDW's own
+> page confirms both the 1 July 2008 date and the "very reliable, complete
+> and current" self-description directly. digitaleoverheid.nl's BRV page
+> is confirmed genuinely bot-walled in this environment, not merely unread.
 
 ## Description
 
@@ -82,4 +85,6 @@ earlier and were not researched.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, two of three read directly this pass — RDW's own
+page and NORA Online's BRV wiki page. digitaleoverheid.nl's BRV page is
+confirmed genuinely bot-walled in this environment, not merely unread.

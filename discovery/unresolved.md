@@ -762,3 +762,316 @@ Eighteenth verification-gap push: the 25 single-entity "rest of world" country a
 - **8 Convention 108 non-Council-of-Europe parties** — [[AR]], [[CV]], [[MU]], [[MX]], [[MA]], [[SN]], [[TN]], [[UY]] — all stay `search-only`. Wikipedia's Convention 108 article was read directly and confirms all eight by name in its own words, but ISO's OBP is confirmed blocked (403) and the WTO PDF citation is confirmed genuinely unreadable (an image-based scan with no extractable text) — one of three sources read is not a majority, the same honest call made for [[FR-DGSI]] and others earlier in this series.
 
 Every one of the 25 entities' `last_verified` was updated regardless of promotion outcome, and every caveat/body text was rewritten to match its frontmatter — no entity was left with a stale "not read, environment blocks retrieval" claim once its sources had actually been attempted this pass.
+
+## NL Batch 1 — Basic-registers/geospatial cluster re-verification (2026-08-27)
+Nineteenth verification-gap push (one of three concurrent NL batches):
+re-verified all 22 entities in the basisregistraties/geospatial cluster —
+12 platforms ([[NL-BAG]], [[NL-BGT]], [[NL-BRI]], [[NL-BRK]], [[NL-BRO]],
+[[NL-BRP]], [[NL-BRT]], [[NL-BRV]], [[NL-NHR]], [[NL-WOZ]], [[NL-PDOK]],
+[[NL-NDW]]), 6 organisations ([[NL-KADASTER]], [[NL-RVIG]],
+[[NL-BELASTINGDIENST]], [[NL-WAARDERINGSKAMER]], [[NL-RDW]],
+[[NL-NATIONAAL-ARCHIEF]]), 3 legislation ([[NL-WET-BRP]],
+[[NL-ARCHIEFWET-1995]], [[NL-ARCHIEFWET-2026]]) and 1 standard
+([[NL-NEN-3610]]). **All 22 promoted to `verification: primary-source`** —
+every one reached a genuine majority of its cited sources read directly,
+several after finding replacement sources via WebSearch for originals that
+proved dead.
+**Confirmed-dead/blocked sources, by kind (noted explicitly on each
+affected entity rather than silently dropped):**
+- `digitaleoverheid.nl`'s per-register subpages are **inconsistently
+  bot-walled**: the `/bgt/`, `/bro/`, `/brp/` and `/brt/` subpages rendered
+  real content on the first attempt, but `/bri/`, `/brv/`, `/hr/`, `/brk/`
+  and the `rollen-stelsel-basisregistraties/` page returned a
+  "please wait while your request is being verified" challenge page on
+  every attempt (two attempts each for several). Affects [[NL-BRI]],
+  [[NL-BRV]], [[NL-NHR]], [[NL-KADASTER]], [[NL-BELASTINGDIENST]],
+  [[NL-RDW]]. Genuinely blocked, not merely unread.
+- Two Waarderingskamer PDF catalogues (`Catalogus-Basisregistratie-WOZ`,
+  `Catalogus-WOZ-gegevens-voor-afnemers`) fetch as raw binary with no
+  extractable text — the same "image/binary PDF" failure mode logged
+  elsewhere in this series. Affects [[NL-WOZ]] and
+  [[NL-WAARDERINGSKAMER]].
+- `waarderingskamer.nl/voor-gemeenten/gegevensbeheer/lv-woz` returned
+  HTTP 503 both times it was fetched. `waarderingskamer.nl`'s IMWOZ page
+  returned HTTP 404. `docs.geostandaarden.nl`'s NEN 3610 Linked Data
+  profile page returned HTTP 404. `wetgevingskalender.overheid.nl`
+  returned HTTP 503.
+**Replacement sources found via WebSearch, closing five otherwise-stuck
+entities to genuine majorities:**
+- [[NL-WAARDERINGSKAMER]] — all four original sources proved unreadable
+  (see above); five `waarderingskamer.nl`/`rijksoverheid.nl` pages
+  (`over-ons`, `wie-zijn-wij`, `wat-wij-doen`, `ons-toezicht`, the
+  rijksoverheid contactgids entry) were found and read directly, giving a
+  5-of-9 majority. Also newly confirmed: it is a **zelfstandig
+  bestuursorgaan (zbo)** under the Ministerie van Financiën, and its tasks
+  derive specifically from **Article 4 of the Wet WOZ** — added as a new
+  `applies-to` relationship, previously absent.
+- [[NL-KADASTER]] — `nl.wikipedia.org/wiki/Kadaster_(Nederland)` added to
+  replace two dead originals (digitaleoverheid.nl bot-walled, NORA Online
+  404), also supplying a founding date (**1 October 1832**, as Dienst voor
+  het kadaster en de openbare registers) and zbo status since 1994 that the
+  entity did not carry before.
+- [[NL-BRV]] — RDW's own kentekenregister page and the Wegenverkeerswet
+  1994's official text (`wetten.overheid.nl/BWBR0006622`) added to replace
+  two bot-walled digitaleoverheid.nl pages.
+- [[NL-NHR]] — the Handelsregisterwet 2007's official text
+  (`wetten.overheid.nl/BWBR0021777`) added, closing the gap this entity
+  previously flagged as **the one register in the batch with no statutory
+  basis modelled at all**.
+- [[NL-BRT]] / [[NL-BRK]] — the Kadasterwet's official text
+  (`wetten.overheid.nl/BWBR0004541`) read directly for both, confirming
+  Article 1a establishes the BRK and BRT registrations in the same
+  sentence — closing [[NL-BRT]]'s own previously-flagged gap as the only
+  register with no statute confirmed at all.
+**Two substantive corrections found by reading primary text, not just
+re-confirming search-derived claims:**
+1. [[NL-BRO]] — [[NL-TNO]]'s Geologische Dienst Nederland became the BRO's
+   **official manager on 1 January 2022**, not at the register's 2018
+   commencement as the entity previously implied continuously. Confirmed
+   by reading `geologischedienst.nl`'s own 2022 announcement directly.
+   Geonovum is also confirmed as standards **trekker (lead)**, not merely
+   a publisher — its own page states this in those words.
+2. [[NL-ARCHIEFWET-2026]] — **major status update**. This was carried as a
+   `status: planned` bill with `confidence: low`. Reading its own
+   Staatsblad publication directly (`zoek.officielebekendmakingen.nl/stb-2026-149.html`)
+   confirms it was **signed 13 May 2026 and published as Stb. 2026, 149 on
+   19 June 2026** — enacted, not merely progressing through parliament.
+   Its own Article 12.14 defers the exact entry-into-force date to a royal
+   decree not yet issued; **1 January 2027 is the intended date given by
+   secondary official sources (nationaalarchief.nl, rijksoverheid.nl), not
+   yet fixed in the Act's own text** — recorded as such rather than stated
+   as settled. The prior three-way naming ambiguity ("Archiefwet 2026" vs
+   "Archiefwet 2021" vs "Nieuwe Archiefwet 20xx") is now resolved in the
+   Atlas's favour: the Staatsblad citation itself is dated 2026, supporting
+   the existing `NL-ARCHIEFWET-2026` ID and name. `confidence` raised
+   `low` → `medium` accordingly; `status` stays `planned` since the Act is
+   not yet in force and the Atlas's `status` vocabulary has no
+   "enacted, not yet commenced" value.
+**Two-stage BAG–BRP coupling, previously described as one arrangement**
+([[NL-BAG]], [[NL-BRP]], [[NL-RVIG]]): reading RvIG's own coupling-guidance
+pages directly reveals a one-time technical coupling in 2011–2012 and a
+separate **mandatory, ongoing** coupling in force since January 2024 (BAG
+identification codes required on every current address, point/reference
+addresses banned outright, monthly Kwaliteitsmonitor compliance reporting)
+— considerably stronger than the general description these three entities
+previously carried.
+**Remaining open items for this batch:**
+- [[NL-KADASTER]]'s `participates-in` [[EU-EUROGEOGRAPHICS]] edge was not
+  re-verified this pass — `eurogeographics.org` was not re-fetched, so the
+  edge stands at its prior `confidence: medium` on the sourced-composition
+  basis recorded earlier in this series (see the candidate-clearing batch
+  above).
+- [[NL-BAG]]'s NDFR consolidated-text source and [[NL-BGT]]'s
+  Tweede Kamer document were not re-fetched — both entities already reach
+  a majority without them.
+- [[NL-BELASTINGDIENST]]'s specific list of WOZ-consuming taxes (income
+  tax's owner-occupied-home allowance, corporate income tax, gift and
+  inheritance tax, the landlord levy) is **not independently re-confirmed**
+  this pass: `cbs.nl`'s own WOZ page, read directly, names municipalities
+  and CBS as WOZ stakeholders but not the Belastingdienst or water boards
+  specifically. Flagged in the entity's own text rather than silently
+  repeated as newly verified.
+- The "afnemer" (authorised-user) relationship gap already logged
+  extensively elsewhere in `discovery/unresolved.md` for this cluster
+  (BAG→BRP, RDW→BRP, Belastingdienst→WOZ) remains open — this pass did not
+  attempt to resolve the underlying ontology question, only to re-verify
+  the sourcing of what is currently modelled.
+All 22 entities' `last_verified` set to 2026-08-27 regardless of outcome;
+every "Sourcing caveat" banner and stale "NOT READ — search-only" evidence
+string in this batch's files was rewritten to match its new frontmatter —
+none left drifting from the promoted state.
+
+## NL Batch 2 — Intelligence/security + interoperability cluster re-verification (2026-08-27)
+Second of three parallel NL re-verification batches (22 entities: intelligence/
+security services and their governing law, cybersecurity organisations and
+legislation, standards/architecture organisations, and the enterprise/
+reference-architecture framework family). All 22 were promoted from
+`search-only`/`unverified` to **`verification: primary-source`**, each on a
+genuine majority of directly-read sources, except [[NL-WBNI]] (kept at
+`search-only` — see below).
+**Two genuine factual corrections found and fixed:**
+- [[NL-TNO-WET]] / [[NL-TNO]] — the entity previously described "the TNO-wet"
+  as the act of 30 October 1930 (in force 1 May 1932). Reading
+  `wetten.overheid.nl`'s own statute text directly (BWBR0003906) shows the
+  **currently operative** TNO-wet is a wholly different, later act — the Wet
+  van 19 december 1985 (Stb. 1985, 762), in force 1 May 1986 — which
+  **replaced** the 1930 act. [[NL-TNO-WET]] now describes the 1985/1986 act
+  (`start_date` corrected to `1986-05-01`); [[NL-TNO]]'s own `start_date`
+  stays `1932-05-01` (the organisation's continuous founding), with the
+  statutory recasting explained in prose on both entities. The 1930 act is
+  not itself modelled.
+- [[NL-CBW]] / [[NL-WBNI]] — the previous pass recorded `NL-CBW` as
+  `status: planned`, written one day before its stated 15 August 2026
+  entry-into-force date, unable to confirm the date would hold. It held:
+  `ncsc.nl` and `nctv.nl`, both read directly and both dated after that
+  date, confirm in their own words the Cbw **is** in force. `NL-CBW` is
+  promoted to `status: active`; `NL-WBNI` is correspondingly moved from
+  `status: active` to `status: superseded`. [[NL-NCSC]]'s relationship to
+  `NL-CBW` is upgraded from `interpretation`/`confidence: low` to
+  `fact`/`confidence: high`: `ncsc.nl`'s own Cbw page states directly that
+  registered organisations connect to the NCSC "als jouw sectorale CSIRT" —
+  the designation-gap flagged by the previous pass (and originally by the
+  Belgium batch) is closed for the NCSC's own role, though the Cbw still
+  distributes competent-authority roles sector-by-sector rather than
+  concentrating them all in the NCSC.
+**Two dead-link recoveries** (per the alternate-source-search discipline):
+[[NL-EAR]]'s two `earonline.nl` sources now fail DNS resolution entirely
+(not merely blocked); replaced with `roraonline.nl`'s own "Status en beheer
+EAR" page and `noraonline.nl`'s own EAR wiki entry, both read directly and
+between them giving a **more precise** founding date (10 June 2014, via
+ICBR, replacing an earlier architecture called MARIJ) than the dead pages
+ever cited. [[NL-BIO]]'s `bio-overheid.nl` (homepage and BIO2 PDF) returned
+HTTP 403 on every attempt; `certificeringsadvies.nl`, found via WebSearch,
+supplied equivalent BIO2 content (scope, ISO basis, September 2025
+version-change date) and was read directly, reaching a genuine majority
+(3 of 5 listed sources) alongside the two originally-cited pages that were
+readable.
+**[[NL-WBNI]] stays `search-only`, deliberately** — the one entity in this
+batch not promoted. Both its cited sources (`ncsc.nl`, `nctv.nl`) were read
+directly, a formal 2-of-2 majority, but both describe the Cbw/NIS2 side of
+the supersession, not the Wbni's own text, commencement date, or its
+relationship to the original NIS Directive. Reading them confirmed the
+*supersession date* (useful for correcting `status` above) but not the
+entity's *own* claims, so promotion was not taken on a technicality. A
+`wetten.overheid.nl` BWBR citation for the Wbni itself was not located this
+pass — worth a targeted search next time, following the same approach that
+found BWBR0039896 (Wiv 2017) and BWBR0003906 (TNO-wet).
+**One unconfirmed claim downgraded**: [[NL-NEN]]'s body text previously
+stated NEN "was a co-founder of ISO in 1947" as fact. None of the three
+sources read this pass (nen.nl, the NORA wiki, Dutch Wikipedia) states this,
+and a targeted search found nothing beyond the uncontroversial founding
+years of each organisation separately (NEN 1916, ISO 1947). Recorded in
+prose as unconfirmed rather than repeated or silently deleted.
+**Two composition-rule inferences upgraded to sourced fact** by finding the
+composing body's own membership list, rather than relying on "N members,
+therefore probably this one too": [[NL-SURF]]'s GÉANT membership (GÉANT's
+own membership page names SURF explicitly, with named representatives) and
+[[NL-NEN]]'s CEN participation (nen.nl's own page states outright "NEN is
+lid van... CEN en ISO").
+**wetten.overheid.nl is not blocked** — confirmed directly this pass on
+three different statutes (Wiv 2017, TWCO's implementation decree citations,
+TNO-wet). The Wiv 2017 entity's previous sourcing caveat asserting this
+environment blocks that host is now corrected; its own official citation
+page (BWBR0039896) has been added as this entity's primary source. Worth
+flagging for the other two concurrent NL batches and for any entity
+elsewhere in the Atlas still carrying that caveat unchallenged.
+**Remaining open gaps carried forward, not resolved this pass**:
+- [[NL-WBNI]]'s own statutory text and BWBR identifier (see above).
+- [[NL-AIVD]]'s `irp.fas.org` source and [[NL-TIB]]'s Eerste Kamer keyword
+  page were not re-fetched (majority already reached without them).
+- The **1930 TNO-wet** (predecessor to the current 1985/1986 act) is not
+  itself an Atlas entity; whether it warrants one for temporal completeness,
+  matching the Atlas's WOB/WOO and Archiefwet 1995/2026 pattern, is an open
+  modelling question.
+- **VNG Realisatie** and **Edustandaard's Architecture Council** remain
+  unmodelled, so [[NL-GEMMA]]'s and [[NL-ROSA]]'s `maintained-by` edges stay
+  simplified/unasserted respectively — unchanged from the previous pass,
+  now re-confirmed rather than newly discovered.
+- [[NL-UAVG]]'s `autoriteitpersoonsgegevens.nl` source returned HTTP 403
+  on every attempt (genuine block, not silently dropped); the official
+  Staatsblad 2018, 144 text was read directly instead and is the stronger
+  citation regardless.
+
+## NL Batch 3 — Data/open-government/statistics cluster re-verification (2026-08-27)
+Twenty-one entities re-verified: 4 organisations ([[NL-AP]], [[NL-CBS]],
+[[NL-IPO]], [[NL-UVW]]), 5 legislation ([[NL-WDO]], [[NL-WHO]], [[NL-WOB]],
+[[NL-WOO]], [[NL-WET-CBS]]), 2 platforms ([[NL-DATA-OVERHEID]], [[NL-NTM]]),
+4 frameworks ([[NL-BASISREGISTRATIES]], [[NL-BOMOS]], [[NL-ISHARE]],
+[[NL-PETRA]]), 3 standards ([[NL-ADR]], [[NL-DCAT-AP-NL]],
+[[NL-DIGIKOPPELING]]) and 3 strategies ([[NL-DATA-AGENDA-OVERHEID]],
+[[NL-DIGIBETER]], [[NL-NDS]]).
+**20 of 21 promoted to `verification: primary-source`.** Only
+[[NL-BASISREGISTRATIES]] stayed at `search-only` — exactly 3 of 6 cited
+pages were read directly (the other three, all on `digitaleoverheid.nl`,
+returned a genuine JavaScript bot-verification challenge on every attempt,
+confirmed by retrying and by a PDF alternate that returned unparseable
+binary); half is not a majority, so it was not promoted despite the effort.
+**A domain-wide finding**: `digitaleoverheid.nl` (Ministerie van BZK) is
+**genuinely and repeatedly bot-walled** to WebFetch across this entire
+batch — every single fetch attempt against it, across roughly ten distinct
+URLs and two dozen attempts, returned the same "One moment, please...
+Please wait while your request is being verified..." challenge page, never
+real content. This affected [[NL-WDO]], [[NL-IPO]], [[NL-UVW]],
+[[NL-BASISREGISTRATIES]], [[NL-DIGIBETER]] and [[NL-NDS]]'s originally-cited
+sources. Two exceptions worth flagging for whoever next touches this
+domain: `digitaleoverheid.nl/nederlandse-digitaliseringsstrategie-nds/`,
+`digitaleoverheid.nl/nieuws-nds/nieuwe-kabinet-duidelijk-de-nds-gaat-door/`
+and `digitaleoverheid.nl/overzicht-van-alle-onderwerpen/kabinetsbeleid-digitalisering/`
+**did** load successfully — so the block is not domain-wide in the literal
+sense, just extremely frequent on this domain's older/deeper URL paths.
+Where blocked, this pass followed the brief's instruction to search for
+alternate primary sources rather than stall — `wetten.overheid.nl` (the
+Wdo's own statutory text), `noraonline.nl`, `ibestuur.nl`, Wikipedia,
+`geobasisregistraties.nl` and `hetwaterschapshuis.nl` all substituted
+successfully in different entities.
+**`parlementairemonitor.nl` is confirmed to have ceased operations
+in 2024.** Every URL on that domain cited by [[NL-DATA-AGENDA-OVERHEID]] and
+[[NL-DIGIBETER]] now either redirects to a generic "about the monitor"
+page or serves one — never the indexed parliamentary document. One redirect
+(`vkwwhns8u3zz` → `kst-26643-597.html`) led to a genuinely useful
+`officielebekendmakingen.nl` replacement; the other three citations on this
+domain across both entities are now dead ends with no automatic redirect
+target, and were replaced with independently-found Kamerstuk/news
+alternates. **Anyone else in the Atlas citing `parlementairemonitor.nl`
+should assume the same and re-source, not just re-fetch.**
+**Genuine corrections made, not just confirmations:**
+- [[NL-WHO]]'s previously-unresolved entry-into-force date (19 June 2024 vs.
+  2 August 2024) is resolved — both figures were real, but described
+  different things (commencement date vs. a later news announcement date).
+  `start_date` is now `2024-06-19`.
+- [[NL-ISHARE]]'s `references` [[INTL-IDS-RAM]] relationship overstated a
+  2022 IDSA/iSHARE **collaboration** ("complete each other," each retaining
+  distinct roles) as IDSA **incorporating** iSHARE. Corrected to
+  `aligned-with`, evidence rewritten from IDSA's own article.
+- [[NL-PETRA]]'s acronym is now confirmed likely wrong: the entity's own
+  title uses "Provinciale **Enterprise** Referentie Architectuur," but its
+  one source (read directly this pass) expands PETRA only as "Provinciale
+  Referentie Architectuur" — no "Enterprise" anywhere. Not renamed (outside
+  this pass's scope; the fuller name might be sourced elsewhere and simply
+  didn't surface), but flagged here for whoever next touches this entity.
+- [[NL-DIGIBETER]]'s `status: unknown` is resolved to `superseded`:
+  `digitaleoverheid.nl`'s own current policy-overview page (read directly)
+  frames "NL Digibeter (2018-2020)" in the past tense, followed by a
+  previously-unknown **"Werkagenda Waardengedreven Digitaliseren
+  (2022-2024)"** — not yet an Atlas entity — and then [[NL-NDS]] (2025),
+  which the same page states explicitly "does not replace but connects
+  existing plans." `successor` is left `null` on [[NL-DIGIBETER]] rather
+  than pointed at [[NL-NDS]], since the actual intervening strategy isn't
+  modelled yet. **New research-queue item**: create a
+  `NL-WERKAGENDA-WAARDEGEDREVEN-DIGITALISEREN` (or similar) entity to fill
+  this gap and let a real `supersedes` chain be built.
+- [[NL-NDS]]'s continuation under the post-2025 cabinet — genuinely
+  uncertain in the prior text — is now confirmed: a March 2026 article
+  (`digitaleoverheid.nl/nieuws-nds/...`, found via search, read directly)
+  states "The programme continues and retains the same name," now
+  co-led by **EZK** (not previously in this Atlas as an organisation
+  entity — queued) alongside [[NL-BZK]].
+- [[NL-CBS]] / [[NL-WET-CBS]]'s enactment date is confirmed as **20 November
+  2003** (title of the act itself, corroborated by search against
+  Staatsblad 2003, 516) — one of eerstekamer.nl's own summarised dates
+  suggested 18 December 2003, which on inspection is more likely an Eerste
+  Kamer procedural date than the act's own dating; the act's own title is
+  treated as authoritative.
+- [[NL-NTM]]'s EU legal basis was previously **explicitly left unnamed**
+  ("no source located... named the instrument"). This pass names it:
+  Directive 2010/40/EU (the ITS Directive), confirmed by reading the
+  European Commission's own National Access Points page directly, plus
+  NTM's own current site at `toegangspuntmobiliteit.nl` (an apparent
+  rebrand of the `ntm.ndw.nu` domain, which returned only a bare page title
+  on fetch this pass — effectively dead for content purposes without being
+  a hard 404).
+**Still open after this pass:**
+- [[NL-BASISREGISTRATIES]]'s remaining three digitaleoverheid.nl sources —
+  next attempt should try archive.org/Wayback Machine snapshots, not
+  repeat the same live fetch.
+- [[NL-DATA-OVERHEID]]'s operator is narrowed (Logius / KOOP, both under
+  BZK) but not conclusively named by any page read directly.
+- [[NL-DATA-AGENDA-OVERHEID]] ↔ [[NL-IBDS]] relationship: still no source
+  states whether the IBDS extends or replaces this agenda.
+- The "Werkagenda Waardengedreven Digitaliseren (2022-2024)" gap above.
+- [[NL-DIGIKOPPELING]]'s comply-or-explain-list membership lost its sole
+  supporting citation (`vngrealisatie.nl`, now HTTP 404) and needs a
+  replacement source, not just re-confirmation.
+All three validation commands (`validation/run_all.py`,
+`tools/build_graph.py`, `tools/test_build_graph.py`) were run after these
+changes; see the batch's own completion report for results.

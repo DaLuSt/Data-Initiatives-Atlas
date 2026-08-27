@@ -21,11 +21,11 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-27"
 previous_version: null
 successor: null
 
@@ -41,19 +41,26 @@ sources:
   - title: "Alles over het geregistreerde inkomen"
     url: "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/werk_en_inkomen/geregistreerde_inkomen_en_de_inkomensverklaring/alles_over_geregistreerde_inkomen/alles-over-het-geregistreerde-inkomen"
     publisher: "Belastingdienst"
-  - title: "BRI — Stelsel van basisregistraties"
+    accessed: "2026-08-27"
+  - title: "BRI — Stelsel van basisregistraties (confirmed bot-walled, not read)"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/10-basisregistraties/bri/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
   - title: "Waardering Onroerende Zaken (WOZ) | CBS"
     url: "https://www.cbs.nl/nl-nl/deelnemers-enquetes/decentrale-overheden/vastgoed-overheden/waardering-onroerende-zaken--woz--"
     publisher: "Centraal Bureau voor de Statistiek (CBS)"
+    accessed: "2026-08-27"
 ---
 
 # Belastingdienst
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-27.** Two of three cited pages read directly. The
+> Belastingdienst's own page confirms the BRI's authentic-datum logic in its
+> own words; digitaleoverheid.nl's BRI page returned a bot-verification
+> wall on two attempts and is confirmed genuinely unreadable, not merely
+> unread. CBS's own WOZ page, read directly, describes municipalities and
+> CBS as WOZ stakeholders but does not itself name the Belastingdienst or
+> water boards as users — that detail is not independently re-confirmed
+> this pass and is downgraded below.
 
 ## Description
 
@@ -62,10 +69,18 @@ in two distinct roles within the `stelsel van basisregistraties`, and the
 distinction is the point of recording it:
 
 1. **As a holder** — it holds [[NL-BRI]], determining the *authentic income
-   datum* for each tax year.
+   datum* for each tax year. Confirmed by reading belastingdienst.nl's own
+   page directly this pass: registered income is based on the verzamelinkomen
+   from a filed return, or on registered wage/benefit/pension income where no
+   return was filed.
 2. **As a user** — it consumes [[NL-WOZ]] values for income tax (the
    owner-occupied home allowance), corporate income tax, gift and
-   inheritance tax, and the landlord levy.
+   inheritance tax, and the landlord levy. **This specific list of taxes is
+   not independently re-confirmed this pass**: cbs.nl's own WOZ page, read
+   directly, describes municipalities as WOZ data sources and CBS itself as
+   a user (for municipal tax-capacity calculations), but does not name the
+   Belastingdienst or water boards — the claim here is carried over from a
+   prior pass's sourcing, not re-verified against primary text this time.
 
 ## Holder and user in one organisation
 
@@ -102,4 +117,7 @@ pointing here.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, two of three read directly this pass —
+belastingdienst.nl's own page and CBS's WOZ page. digitaleoverheid.nl's BRI
+page is confirmed genuinely bot-walled in this environment on two separate
+attempts, not merely unread.

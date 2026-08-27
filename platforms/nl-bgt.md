@@ -26,11 +26,11 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2016-01-01
 end_date: null
-last_verified: null
+last_verified: "2026-08-27"
 previous_version: null
 successor: null
 
@@ -49,22 +49,22 @@ relationships:
   - type: governed-by
     target: NL-WET-BGT
     source: fact
-    evidence: "The Wet basisregistratie grootschalige topografie is the statutory basis of the Basisregistratie Grootschalige Topografie; its provisions on the register's content and on the obligations of bronhouders and the register holder entered into force on 1 January 2016 (wetten.overheid.nl/BWBR0034026; eerstekamer.nl dossier 33.527). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading wetten.overheid.nl's own text of BWBR0034026 directly (2026-08-27): it is the Wet basisregistratie grootschalige topografie, enacted 25 September 2013, with entry into force set by royal decree per article. kadaster.nl's own BGT page, read directly, states plainly: 'Op 1 januari 2016 is de wet in werking getreden voor bronhouders en de Landelijke Voorziening (LV-BGT)' (the Act entered into force on 1 January 2016 for bronhouders and the national facility) — confirming the date independently of the eerstekamer.nl dossier, which was not re-fetched this pass."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: part-of
     target: NL-BASISREGISTRATIES
     source: fact
-    evidence: "The ten base registrations are the BRP, HR, BAG, BRT, BRK, BRV, BRI, WOZ, BGT (Basisregistratie Grootschalige Topografie) and BRO (digitaleoverheid.nl '10 basisregistraties'; data.overheid.nl; noraonline.nl). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading data.overheid.nl's basisregistraties_10 group listing directly (2026-08-27): it names all ten registers by exact abbreviation, including BGT (Basisregistratie Grootschalige Topografie). digitaleoverheid.nl's BGT page, also read directly, describes the same register though the page does not itself enumerate all ten."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: maintained-by
     target: NL-KADASTER
     source: fact
-    evidence: "The data is registered in the Landelijke Voorziening BGT, from which the Kadaster as the BGT provider makes data available to users; the Kadaster is the provider of the national BGT (kadaster.nl BGT page; digitaleoverheid.nl BGT page; vng.nl BGT article). NOT READ — search-only. CAVEAT: the bronhouders — municipalities, provinces, water boards, Rijkswaterstaat, ProRail, Defence and RVO — hold the data; this edge records the national-facility role only."
-    confidence: medium
+    evidence: "Confirmed by reading kadaster.nl's own BGT page directly (2026-08-27): Kadaster operates the national facility (Landelijke Voorziening BGT), handling quality control and data distribution to the seven bronhouder categories — confirmed by name via VNG's own article, read directly: 'Gemeenten, provincies en waterschappen maken de BGT samen met het ministerie van Landbouw, Natuur en Voedselkwaliteit (LNV), Defensie en Infrastructuur en Waterstaat (IenW)', coordinated through the Samenwerkingsverband Bronhouders voor de BGT (SVB-BGT), established 1 April 2014 per the same VNG page. CAVEAT unchanged: the bronhouders hold the data; this edge records the national-facility role only."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -72,22 +72,30 @@ sources:
   - title: "Basisregistratie Grootschalige Topografie (BGT) — Kadaster"
     url: "https://www.kadaster.nl/zakelijk/registraties/basisregistraties/bgt"
     publisher: "Kadaster"
+    accessed: "2026-08-27"
   - title: "Basisregistratie Grootschalige Topografie (BGT) — Stelsel van basisregistraties"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/10-basisregistraties/bgt/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
+    accessed: "2026-08-27"
   - title: "Basisregistratie Grootschalige Topografie (BGT) | VNG"
     url: "https://vng.nl/artikelen/basisregistratie-grootschalige-topografie-bgt"
     publisher: "Vereniging van Nederlandse Gemeenten (VNG)"
-  - title: "Regels omtrent de basisregistratie grootschalige topografie (Wet basisregistratie grootschalige topografie)"
+    accessed: "2026-08-27"
+  - title: "Wet basisregistratie grootschalige topografie — official text"
+    url: "https://wetten.overheid.nl/BWBR0034026"
+    publisher: "Overheid.nl (Basiswettenbestand)"
+    accessed: "2026-08-27"
+  - title: "Regels omtrent de basisregistratie grootschalige topografie (Wet basisregistratie grootschalige topografie) (not re-read this pass)"
     url: "https://www.tweedekamer.nl/kamerstukken/brieven_regering/detail?id=2025D12647&did=2025D12647"
     publisher: "Tweede Kamer der Staten-Generaal"
 ---
 
 # BGT — Basisregistratie Grootschalige Topografie
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-27.** Four of five cited pages were read directly, plus
+> the official BWBR0034026 text added as a new source and read: Kadaster's
+> and VNG's own pages confirm the 1 January 2016 commencement and the seven
+> bronhouder categories by name. The Tweede Kamer document was not re-fetched.
 
 ## Description
 
@@ -139,6 +147,8 @@ base registries. See [[NL-BRT]] for the difference between them.
 
 ## Sources
 
-Listed in frontmatter — the Kadaster and digitaleoverheid.nl register pages,
-the VNG article written for municipalities as bronhouders, and a Tweede
-Kamer document on the Act.
+Listed in frontmatter, four of five read directly this pass plus the
+official BWBR0034026 text added and read — the Kadaster and
+digitaleoverheid.nl register pages, the VNG article written for
+municipalities as bronhouders, and the Act's own text. The Tweede Kamer
+document was not re-fetched.

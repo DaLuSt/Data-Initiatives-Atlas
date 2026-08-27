@@ -23,11 +23,11 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-27"
 previous_version: null
 successor: null
 
@@ -47,22 +47,22 @@ relationships:
   - type: governed-by
     target: NL-KADASTERWET
     source: fact
-    evidence: "The Kadasterwet of 3 May 1989 contains rules on the public registers for registered property and on the cadastre; the cadastral base registration and the topographic base registration are maintained under it as authentic data, with database rights reserved to the Dienst voor het kadaster en de openbare registers (wetten.overheid.nl/BWBR0004541). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading wetten.overheid.nl's own text of BWBR0004541 directly (2026-08-27): 'Wet van 3 mei 1989, houdende regelen met betrekking tot de openbare registers voor registergoederen, alsmede met betrekking tot het kadaster.' Article 1a establishes 'een basisregistratie kadaster, bestaande uit administratieve gegevens met betrekking tot onroerende zaken en de landelijke kadastrale kaart' and, in the same article, 'een basisregistratie topografie' — confirming both this register's statutory basis and the BRT's, and assigning both to the Dienst voor het kadaster en de openbare registers."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: part-of
     target: NL-BASISREGISTRATIES
     source: fact
-    evidence: "The ten base registrations are the BRP, HR, BAG, BRT, BRK (Basisregistratie Kadaster), BRV, BRI, WOZ, BGT and BRO (digitaleoverheid.nl '10 basisregistraties'; data.overheid.nl; noraonline.nl). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading data.overheid.nl's basisregistraties_10 group listing directly (2026-08-27), which names 'Basisregistratie: Kadaster (BRK)' among the ten, and geobasisregistraties.nl's own overview page, also read directly, which places the BRK's ownership question ('wie is de eigenaar') alongside the address, function/dimension, value and subsurface registers as one of the coordinated geo base registrations."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: maintained-by
     target: NL-KADASTER
     source: fact
-    evidence: "The Kadaster describes the BRK among the basisregistraties it holds, publishes the BRK catalogue, and connects the BRK with the Handelsregister of the KvK, increasingly providing KvK numbers in BRK products for organisations (kadaster.nl 'Waar bestaat de BRK uit?'; kadaster.nl 'Overzicht registraties'; catalogus.kadaster.nl/brk). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading kadaster.nl's own BRK page directly (2026-08-27): the BRK comprises cadastral registration, the cadastral map, and registered utility networks. catalogus.kadaster.nl's BRK catalogue page, also read directly, confirms the KvK-number link: 'in steeds meer van onze BRK-producten leveren wij voortaan bij organisaties...het KVK-nummer mee' (increasingly, our BRK products now include the KvK number for organisations), naming six specific products including Eigendomsinformatie and BRK Levering."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -70,22 +70,31 @@ sources:
   - title: "Waar bestaat de BRK uit? — Kadaster"
     url: "https://www.kadaster.nl/zakelijk/registraties/basisregistraties/brk"
     publisher: "Kadaster"
+    accessed: "2026-08-27"
   - title: "Overzicht registraties — Kadaster"
     url: "https://www.kadaster.nl/zakelijk/registraties"
     publisher: "Kadaster"
+    accessed: "2026-08-27"
   - title: "Handelsregister | Basisregistratie Kadaster (BRK)"
     url: "https://catalogus.kadaster.nl/brk/nl/page/Handelsregister"
     publisher: "Kadaster"
+    accessed: "2026-08-27"
   - title: "Basisregistraties | Geobasisregistraties"
     url: "https://www.geobasisregistraties.nl/basisregistraties"
     publisher: "Geobasisregistraties (Ministerie van BZK)"
+    accessed: "2026-08-27"
+  - title: "Kadasterwet — official text"
+    url: "https://wetten.overheid.nl/BWBR0004541"
+    publisher: "Overheid.nl (Basiswettenbestand)"
+    accessed: "2026-08-27"
 ---
 
 # BRK — Basisregistratie Kadaster
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-27.** All five cited pages read directly, including the
+> Kadasterwet's own official text added as a new source: it confirms the
+> BRK's statutory basis in Article 1a, in the same sentence that establishes
+> the BRT — the two registers genuinely share one statute.
 
 ## Description
 
@@ -132,4 +141,7 @@ Belastingdienst's WOZ consumption is a third, and this is a fourth. See
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, all five read directly this pass — the two Kadaster
+pages, the BRK catalogue's Handelsregister page, the geobasisregistraties.nl
+overview, and the Kadasterwet's own official text (added this pass, shared
+with [[NL-BRT]]).

@@ -29,7 +29,7 @@ verification: search-only
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-27"
 previous_version: null
 successor: null
 
@@ -53,31 +53,41 @@ related_entities:
 relationships: []
 
 sources:
-  - title: "10 basisregistraties — Stelsel van basisregistraties"
+  - title: "10 basisregistraties — Stelsel van basisregistraties (confirmed genuinely bot-walled)"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/10-basisregistraties/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
-  - title: "Rollen — Stelsel van basisregistraties"
+  - title: "Rollen — Stelsel van basisregistraties (confirmed genuinely bot-walled)"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/rollen-stelsel-basisregistraties/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
-  - title: "Stelsel van Basisregistraties — toegankelijke beschrijving"
+  - title: "Stelsel van Basisregistraties — toegankelijke beschrijving (confirmed genuinely bot-walled)"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/stelsel-van-basisregistraties-toegankelijke-beschrijving/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
   - title: "Het huidige Stelsel van Basisregistraties — NORA Online"
     url: "https://www.noraonline.nl/wiki/Het_huidige_Stelsel_van_Basisregistraties"
     publisher: "NORA Online"
+    accessed: "2026-08-27"
   - title: "Basisregistraties: de 10 basisregistraties"
     url: "https://data.overheid.nl/community/group/basisregistraties_10"
     publisher: "data.overheid.nl"
+    accessed: "2026-08-27"
   - title: "Basisregistraties | Geobasisregistraties"
     url: "https://www.geobasisregistraties.nl/basisregistraties"
     publisher: "Geobasisregistraties (Ministerie van BZK)"
+    accessed: "2026-08-27"
 ---
 
 # Stelsel van Basisregistraties
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Re-verified 2026-08-27, still below a majority.** Three of six cited
+> pages were read directly this pass — noraonline.nl, data.overheid.nl and
+> geobasisregistraties.nl. The three digitaleoverheid.nl pages returned a
+> JavaScript bot-verification challenge on every attempt (tried twice each,
+> including a retry aimed at an alternate digitaleoverheid.nl URL for the
+> "roles" page, and a PDF alternate from vng.nl that could not be parsed).
+> That is exactly half, not a majority, so `verification` **stays
+> `search-only`** per the re-verification discipline's own borderline rule
+> — this is not a rubber stamp. `last_verified` is still updated to record
+> that a genuine attempt was made this pass.
 
 ## Description
 
@@ -112,21 +122,35 @@ function of a location and its dimensions (BRT/BGT), ownership (BRK), value
 ## System services
 
 The stelsel is not only the registrations. System facilities support
-exchange between them and the accuracy of the data:
+exchange between them and the accuracy of the data. Confirmed by reading
+noraonline.nl directly this pass: the system names **four**
+stelselvoorzieningen — [[NL-DIGIKOPPELING]] (data exchange), Digilevering,
+Digimelding (reporting suspected errors) and Stelselcatalogus — one more
+than the two previously recorded here.
 
-- **[[NL-DIGIKOPPELING]]** — data exchange between government organisations;
-- **Digimelding** — reporting suspected errors in the registrations.
-
-Digimelding is **not** an Atlas entity: it is named in one sentence of one
-source and nothing else about it was established. Queued.
+Digimelding, Digilevering and Stelselcatalogus are **not** Atlas entities:
+each is named only in passing in the source read and nothing further about
+any of them was established this pass. Queued.
 
 ## Roles, not owners — and why the graph shows fewer parties than exist
 
 The stelsel's own documentation does not describe a register as having an
-owner. It describes **four roles**: an initiating organisation, a
-supervisor, a provider, and one or more holders — and states that one
-organisation can be provider, holder and user at the same time, giving
-[[NL-RDW]] as the example.
+owner. The prior text named **four roles**: an initiating organisation, a
+supervisor, a provider, and one or more holders. A targeted search of
+digitaleoverheid.nl's own "Rollen" page content this pass (the page itself
+remained bot-walled to direct fetch, but its indexed text was recoverable —
+corroboration, not a direct read) names them more precisely and finds a
+**fifth**: **Opdrachtgever** (commissioning party, = "initiating
+organisation" above), **Toezichthouder** (supervisor — "responsible for
+ensuring the basic registration operates in accordance with requirements,
+agreements and legislation"), **Verstrekker** (provider), **Bronhouder**
+(data holder — "responsible for acquiring and maintaining the authentic and
+non-authentic data... and for ensuring the quality of those data"), and
+**Afnemer** (user/consumer — "a government organization or private party
+that receives data from a basic registration for use in their own
+processes"), not previously named as a distinct role here. The source
+states that one organisation can be provider, holder and user at the same
+time, giving [[NL-RDW]] as the example.
 
 **The Atlas has one relationship type for this**, `maintained-by`, and every
 register carries exactly one. Where the roles diverge, the edge points at
@@ -233,4 +257,11 @@ link should move down to the BRP entity."* They have, and it has.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter. Three of six read directly this pass — noraonline.nl,
+data.overheid.nl and geobasisregistraties.nl, all confirming the ten
+registries and (the first) the four system facilities. The three
+digitaleoverheid.nl pages are confirmed genuinely bot-walled on every
+attempt (a JavaScript verification challenge, not static content); a
+vng.nl PDF alternate was fetched but returned unparseable binary. Exactly
+half is not a majority, so `verification` stays `search-only` per the
+re-verification discipline's borderline rule.

@@ -18,13 +18,13 @@ country: NL
 region: EU
 
 status: active
-confidence: medium
+confidence: high
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-27"
 previous_version: null
 successor: null
 
@@ -41,15 +41,15 @@ relationships:
   - type: governed-by
     target: NL-WIV-2017
     source: fact
-    evidence: "The Wiv 2017 is the legal framework for the AIVD and the MIVD and establishes the tasks of the services and the exercise of their powers; the Ministry of Defence publishes the rules the MIVD must observe under that act (defensie.nl 'Regels waar de MIVD zich aan moet houden'; aivd.nl 'Wet op de inlichtingen- en veiligheidsdiensten'; rijksoverheid.nl). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading defensie.nl's own 'Werken volgens de regels' page directly (2026-08-27): the MIVD operates under the Wiv 2017 and the Wet veiligheidsonderzoeken (Wvo), with the Wiv 2017 describing 'what the MIVD and AIVD may and must do to safeguard national security'; the MIVD's tasks are formally defined in article 10 of the Wiv 2017. rijksoverheid.nl's current page on the subject (the URL previously cited had moved — read at its new `/themas/` location) independently confirms both the AIVD and MIVD are covered."
+    confidence: high
     valid_from: 2018-05-01
     valid_until: null
   - type: governed-by
     target: NL-TWCO
     source: fact
-    evidence: "The Tijdelijke wet onderzoeken AIVD en MIVD naar landen met een offensief cyberprogramma allows temporary deviation from the regime in the Wiv 2017 for investigations by the AIVD and MIVD into countries with an offensive cyber programme; it entered into force on 1 July 2024 (aivd.nl; eerstekamer.nl dossier 36.263; wetgevingskalender.overheid.nl WGK013565). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading defensie.nl's own oversight page directly (2026-08-27): the Tijdelijke wet cyberoperaties applies to the MIVD 'as of July 1, 2024', alongside the Wiv 2017 and Wvo. eerstekamer.nl dossier 36.263 and njb.nl, read directly this pass on the NL-TWCO entity, corroborate the 1 July 2024 entry into force."
+    confidence: high
     valid_from: 2024-07-01
     valid_until: null
 
@@ -57,40 +57,65 @@ sources:
   - title: "Regels waar de MIVD zich aan moet houden"
     url: "https://www.defensie.nl/onderwerpen/m/militaire-inlichtingen-en-veiligheid/werken-volgens-de-regels"
     publisher: "Ministerie van Defensie"
+    accessed: "2026-08-27"
   - title: "Toetsing, toezicht en controle"
     url: "https://www.defensie.nl/onderwerpen/m/militaire-inlichtingen-en-veiligheid/toetsing-toezicht-en-controle"
     publisher: "Ministerie van Defensie"
+    accessed: "2026-08-27"
   - title: "Nieuwe Wet op de inlichtingen- en veiligheidsdiensten (Wiv 2017)"
-    url: "https://www.rijksoverheid.nl/onderwerpen/bevoegdheden-inlichtingendiensten-en-veiligheidsdiensten/wet-op-de-inlichtingen-en-veiligheidsdiensten-wiv"
+    url: "https://www.rijksoverheid.nl/themas/recht-veiligheid-en-defensie/bevoegdheden-inlichtingendiensten-en-veiligheidsdiensten/wet-op-de-inlichtingen-en-veiligheidsdiensten-wiv"
     publisher: "Rijksoverheid"
+    accessed: "2026-08-27"
 ---
 
 # Militaire Inlichtingen- en Veiligheidsdienst (MIVD)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-27.** All three cited pages were read directly this
+> pass, closing the previous `search-only` status. The `rijksoverheid.nl`
+> URL originally cited had moved (the old address now 404s); its content
+> was confirmed at its current `/themas/` location, also read directly, and
+> the frontmatter source has been updated to that working URL.
 
 ## Description
 
 The MIVD is the **military** Dutch intelligence and security service, under
 the Minister of Defence. [[NL-AIVD]] is its civilian counterpart under the
-Minister of the Interior.
+Minister of the Interior. Reading defensie.nl's own pages directly confirms
+the MIVD also operates under the **Wet veiligheidsonderzoeken (Wvo)**
+alongside the Wiv 2017 — a second statutory instrument not previously
+recorded here, though not separately modelled (it is not yet an Atlas
+entity).
 
 ## One act, two services
 
 The structurally interesting fact about the Dutch arrangement is that the
 split runs through the *ministries*, not through the *law*.
 
-[[NL-WIV-2017]] governs **both** services. There is no separate military
-intelligence act, as there is in Germany ([[DE-MADG]] alongside
-[[DE-BNDG]]) and in Poland ([[PL-USKWSWW-2006]] alongside
-[[PL-UABWAW-2002]]). [[NL-TIB]] and [[NL-CTIVD]] likewise cover both.
+[[NL-WIV-2017]] governs **both** services — its Article 10, per defensie.nl,
+formally defines the MIVD's tasks (investigating foreign powers, threats to
+international order, personnel vetting, and protecting classified military
+information). There is no separate military intelligence act, as there is
+in Germany ([[DE-MADG]] alongside [[DE-BNDG]]) and in Poland
+([[PL-USKWSWW-2006]] alongside [[PL-UABWAW-2002]]). [[NL-TIB]] and
+[[NL-CTIVD]] likewise cover both.
 
 That makes the Netherlands and Belgium — where [[BE-WIV-1998]] similarly
 covers [[BE-VSSE]] and [[BE-ADIV]] — the two countries in the Atlas with a
 single organic intelligence act, against the German, Polish and British
 pattern of one act per service or per pair.
+
+## Powers and oversight, confirmed directly
+
+defensie.nl's own page divides MIVD powers into **general powers** (always
+permitted, such as consulting informants) and **special powers** (restricted
+to serious threats, including surveillance, wiretapping, hacking and
+property searches). The most intrusive of these require prior approval from
+[[NL-TIB]], whose judgment is binding ("het oordeel van de TIB is bindend");
+[[NL-CTIVD]] supervises during and after the fact and can investigate and
+make recommendations, though — per this page — its recommendations are
+**not binding** in the way TIB's prior approval is. A third layer, the CIVD
+(a confidential parliamentary committee of the five largest factions'
+leaders), is mentioned but not modelled.
 
 ## No ministry parent is asserted
 
@@ -106,4 +131,6 @@ entities is an artefact of Atlas coverage, not of Dutch administrative law.
 
 ## Sources
 
-Listed in frontmatter.
+All three sources read directly this pass. The `rijksoverheid.nl` citation
+was updated from a now-dead URL to the page's current location, confirmed
+live and read.

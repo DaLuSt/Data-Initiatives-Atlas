@@ -18,11 +18,11 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-27"
 previous_version: null
 successor: null
 
@@ -37,22 +37,22 @@ relationships:
   - type: participates-in
     target: EU-EDPB
     source: fact
-    evidence: "The EDPB comprises representatives from each national supervisory authority; the AP is the Netherlands' designated supervisory authority under the GDPR. Membership follows from the sourced composition rule rather than from a source naming the AP. NOT READ — search-only."
+    evidence: "Confirmed by reading gdpr-info.eu's own text of Article 68(3) GDPR directly (2026-08-27): 'The Board shall be composed of the head of one supervisory authority of each Member State and of the European Data Protection Supervisor, or their respective representatives.' The AP is the Netherlands' GDPR supervisory authority (confirmed by rijksoverheid.nl, read directly). This is the same general-composition-rule basis on which the identical edge was confirmed as `source: fact` for FR-CNIL, DE-BFDI, BE-APD and ES-AEPD in their re-verification passes; applied here for consistency rather than the stricter prior standard."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: governed-by
     target: NL-UAVG
     source: fact
-    evidence: "The AP is the Dutch supervisory authority designated by law; the UAVG is the Dutch implementing act for the GDPR under which it operates (autoriteitpersoonsgegevens.nl UAVG document page). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading rijksoverheid.nl's own contactgids page directly (2026-08-27): the AP's 'tasks and powers are established in the General Data Protection Regulation (GDPR) and the GDPR Implementation Act (UAVG)'. noraonline.nl, also read directly, confirms the AP was 'established and designated as a supervisor' for the AVG and the Uitvoeringswet AVG (UAVG)."
+    confidence: high
     valid_from: 2018-05-25
     valid_until: null
   - type: implements-requirement-from
     target: EU-GDPR
     source: fact
-    evidence: "Under the GDPR every member state must designate an independent supervisory authority; the AP is that authority for the Netherlands, and its tasks derive from the regulation (rijksoverheid.nl; noraonline.nl). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading rijksoverheid.nl directly (2026-08-27), same citation as above: the AP's tasks and powers derive from the GDPR. The GDPR requires every member state to designate an independent supervisory authority; the AP is that authority for the Netherlands."
+    confidence: high
     valid_from: 2018-05-25
     valid_until: null
 
@@ -60,53 +60,68 @@ sources:
   - title: "Autoriteit Persoonsgegevens (AP) — Contactgids"
     url: "https://www.rijksoverheid.nl/service/contact/contactgids/a/autoriteit-persoonsgegevens"
     publisher: "Rijksoverheid"
+    accessed: "2026-08-27"
   - title: "AP (Autoriteit Persoonsgegevens)"
     url: "https://www.noraonline.nl/wiki/AP_(Autoriteit_Persoonsgegevens)"
     publisher: "NORA Online (ICTU)"
+    accessed: "2026-08-27"
   - title: "Privacyregels beschermen persoonsgegevens"
     url: "https://www.rijksoverheid.nl/onderwerpen/privacy-en-persoonsgegevens/privacyregels-beschermen-persoonsgegevens"
     publisher: "Rijksoverheid"
+    accessed: "2026-08-27"
+  - title: "Art. 68 GDPR — European Data Protection Board"
+    url: "https://gdpr-info.eu/art-68-gdpr/"
+    publisher: "gdpr-info.eu (Intersoft Consulting)"
+    accessed: "2026-08-27"
 ---
 
 # Autoriteit Persoonsgegevens (AP)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-27.** All three originally-cited pages were read
+> directly, plus a fourth (gdpr-info.eu's text of Article 68(3) GDPR) added
+> to close the `participates-in` [[EU-EDPB]] gap on the same basis already
+> accepted elsewhere in the Atlas for [[FR-CNIL]], [[DE-BFDI]], [[BE-APD]]
+> and [[ES-AEPD]]. `verification` moves from `search-only` to
+> `primary-source`.
 
 ## Description
 
 The AP is the Netherlands' independent supervisory authority for the
-protection of personal data. It is a zelfstandig bestuursorgaan designated
-by law as the supervisory authority for the processing of personal data.
+protection of personal data. Confirmed by reading rijksoverheid.nl directly:
+it is "the independent supervisory authority in the Netherlands that
+promotes and monitors the protection of personal data," and its "tasks and
+powers are established in the General Data Protection Regulation (GDPR) and
+the GDPR Implementation Act (UAVG)." noraonline.nl, also read directly,
+describes it as "a self-governing administrative body with its own legal
+personality" (zelfstandig bestuursorgaan), operating on four core values:
+independence, openness, expertise and effectiveness.
 
-Its tasks derive from the EU General Data Protection Regulation, under which
-every member state must designate an independent supervisory authority. The
-AP assesses whether individuals and organisations — government included —
-comply with the regulation, and may intervene where they do not, including
-by imposing fines. Its independence is structural: in performing its tasks
-and exercising its powers it may neither seek nor accept instructions from
-others, and must have sufficient resources to do its work.
+Its tasks derive from [[EU-GDPR]], under which every member state must
+designate an independent supervisory authority. Per rijksoverheid.nl, the AP
+"can intervene if things go wrong" and may impose fines. Its independence is
+structural: in performing its tasks and exercising its powers it may neither
+seek nor accept instructions from others.
 
 ## Relationships
 
-- Governed by [[NL-UAVG]], the Dutch implementing act.
-- Designated under [[EU-GDPR]], which requires every member state to
-  appoint an independent supervisory authority.
-
-Both relationships were added in Batch 3, closing the gap this entity
-carried when created in Batch 2. Together with
-[[NL-UAVG]] → [[EU-GDPR]] they form the Atlas's first complete vertical
-chain: EU regulation → national implementing act → national authority.
-
-Batch 9 added [[EU-EDPB]] and the `participates-in` relationship, closing
-that gap. Note the evidence is a composition rule ("representatives from
-each national supervisory authority") rather than a source naming the AP —
-a reasonable inference from a sourced rule, and marked as such.
+- Governed by [[NL-UAVG]] and [[EU-GDPR]] together — both cited by name in
+  the AP's own contactgids page as the source of its tasks and powers.
+  Together with [[NL-UAVG]] → [[EU-GDPR]] they form the Atlas's vertical
+  chain: EU regulation → national implementing act → national authority.
+- `participates-in` [[EU-EDPB]] — closed this pass via gdpr-info.eu's text
+  of Article 68(3) GDPR, which states plainly that the Board comprises one
+  supervisory authority per Member State. The AP is undisputedly that
+  authority for the Netherlands, per the AP's own description. This applies
+  the same reasoning that closed the identical gap for [[FR-CNIL]],
+  [[DE-BFDI]], [[BE-APD]] and [[ES-AEPD]] — a general composition rule
+  stated directly, not an inference from something adjacent, and the prior
+  text's stricter refusal (requiring a source to name the AP specifically)
+  is corrected here for Atlas-wide consistency.
 
 Still outstanding: the Wet bescherming persoonsgegevens (Wbp), which the
-GDPR regime replaced.
+GDPR regime replaced, and the AP's relationship to [[EU-EDPB]]'s Dutch
+predecessor body (if any) — not established from any source read.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, all four read directly this pass.

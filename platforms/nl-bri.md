@@ -26,11 +26,11 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2009-01-01
 end_date: null
-last_verified: null
+last_verified: "2026-08-27"
 previous_version: null
 successor: null
 
@@ -45,45 +45,54 @@ relationships:
   - type: part-of
     target: NL-BASISREGISTRATIES
     source: fact
-    evidence: "The ten base registrations are the BRP, HR, BAG, BRT, BRK, BRV, BRI (Basisregistratie Inkomen), WOZ, BGT and BRO (digitaleoverheid.nl '10 basisregistraties'; data.overheid.nl; noraonline.nl). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading data.overheid.nl's dataset page for the BRI directly (2026-08-27): it defines a basisregistratie as an officially designated registration that all government bodies must use for public-law tasks, and lists the Belastingdienst as data owner. digitaleoverheid.nl's dedicated BRI page returned a bot-verification wall on two attempts this pass ('Please wait while your request is being verified...') and is confirmed genuinely unreadable in this environment, not merely unread."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: maintained-by
     target: NL-BELASTINGDIENST
     source: fact
-    evidence: "The BRI has existed since 1 January 2009 and is established in Chapter IVA (articles 21 to 21k) of the Algemene wet inzake rijksbelastingen; the authentic income datum is the income as determined by the Belastingdienst for the relevant tax year (nl.wikipedia.org 'Basisregistratie Inkomen'; noraonline.nl 'BRI'; digitaleoverheid.nl BRI page; belastingdienst.nl 'Alles over het geregistreerde inkomen'). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading belastingdienst.nl's own page on 'geregistreerde inkomen' directly (2026-08-27): 'het inkomen dat wij registreren in de basisregistratie inkomen (BRI)' is based on the verzamelinkomen from a filed return, or on registered wage/benefit/pension income where no return was filed — the same authentic-datum definition this entity's description gives. NORA Online's BRI page, also read directly, confirms the Belastingdienst as both 'verstrekker' (provider) and 'bronhouder' (data holder), with the Ministry of Finance as commissioning body, and describes the BRI as covering roughly thirteen million citizens. Neither page read this pass states the Chapter IVA / articles 21–21k citation or the 1 January 2009 start date explicitly — those remain as sourced to nl.wikipedia.org and digitaleoverheid.nl (the latter confirmed bot-walled this pass), not independently re-confirmed by primary text."
+    confidence: high
     valid_from: 2009-01-01
     valid_until: null
 
 sources:
-  - title: "BRI — Stelsel van basisregistraties"
+  - title: "BRI — Stelsel van basisregistraties (confirmed bot-walled, not read)"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/10-basisregistraties/bri/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
   - title: "Alles over het geregistreerde inkomen"
     url: "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/werk_en_inkomen/geregistreerde_inkomen_en_de_inkomensverklaring/alles_over_geregistreerde_inkomen/alles-over-het-geregistreerde-inkomen"
     publisher: "Belastingdienst"
+    accessed: "2026-08-27"
   - title: "BRI (Basisregistratie Inkomen) — NORA Online"
     url: "https://www.noraonline.nl/wiki/BRI_(Basisregistratie_Inkomen)"
     publisher: "NORA Online"
+    accessed: "2026-08-27"
   - title: "Basisregistratie: Inkomen (BRI)"
     url: "https://data.overheid.nl/dataset/22495-basisregistratie--inkomen--bri---donl-"
     publisher: "data.overheid.nl"
+    accessed: "2026-08-27"
 ---
 
 # BRI — Basisregistratie Inkomen
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-27.** Three of four cited pages were read directly:
+> the Belastingdienst's own page, NORA Online, and the data.overheid.nl
+> dataset page. digitaleoverheid.nl's BRI page is confirmed genuinely
+> bot-walled in this environment on two separate attempts, not merely
+> unread. The Chapter IVA / articles 21–21k statutory citation was not
+> independently re-confirmed by primary legal text this pass.
 
 ## Description
 
 The BRI has existed since **1 January 2009** and is established in **Chapter
-IVA, articles 21 to 21k, of the Algemene wet inzake rijksbelastingen**. It
-holds the **authentic income datum** of roughly **thirteen million
-citizens**.
+IVA, articles 21 to 21k, of the Algemene wet inzake rijksbelastingen** — a
+citation carried over from Wikipedia and NORA Online and not independently
+re-confirmed against primary legal text this pass; neither belastingdienst.nl
+nor NORA Online's page, both read directly this pass, states the article
+range. It holds the **authentic income datum** of roughly **thirteen
+million citizens**, a figure NORA Online's own page, read directly, repeats.
 
 The authentic datum is the income as determined by the
 [[NL-BELASTINGDIENST]] for the relevant tax year:
@@ -140,5 +149,8 @@ the nine registers whose statute was not already modelled. See
 
 ## Sources
 
-Listed in frontmatter. Note that one of the four is Wikipedia; it is the
-source of the article-range detail (21–21k), corroborated by NORA Online.
+Listed in frontmatter, three of four read directly this pass — the
+Belastingdienst's own page, NORA Online and the data.overheid.nl dataset
+page. digitaleoverheid.nl's BRI page returned a bot-verification wall on two
+separate attempts and is confirmed genuinely unreadable in this environment,
+not merely unread this pass.
