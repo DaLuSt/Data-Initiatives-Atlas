@@ -243,7 +243,7 @@ is what to request.
 |---|---|---|
 | [[BE-NIS2-WET]] | No Belgisch Staatsblad ELI URI cited; publication and entry-into-force dates rest on CCB reporting. | Partly resolved — re-verification pass, 2026-08-26. Two more independent external sources (kpmglaw.be, prebes.be) now corroborate the 17 May 2024 publication date and the replacement of [[BE-NIS1-WET]]; CCB's own three pages remain bot-walled and no ELI URI has yet been found. |
 | [[BE-KSZ-WET]] | Only two sources, one of them the KSZ's page about its own founding act. Act content unknown. | Partly resolved — re-verification pass, 2026-08-26. The KSZ's own page, read directly, quotes Article 1 verbatim. Remaining act content (governance, funding) still unknown; still only two sources. |
-| [[BE-STATBEL]] | **No statutory basis found** — no Belgian equivalent of [[DE-BSTATG]] or [[NL-WET-CBS]], so no `governed-by` is recorded. | Still open after re-verification pass, 2026-08-26 — `statbel.fgov.be` is CAPTCHA-walled and no statutory basis was found this pass either. |
+| [[BE-STATBEL]] | **No statutory basis found** — no Belgian equivalent of [[DE-BSTATG]] or [[NL-WET-CBS]], so no `governed-by` is recorded. | **Found 2026-08-27** — the Wet van 4 juli 1962 betreffende de openbare statistiek, read directly at etaamb.openjustice.be. Still no `governed-by` edge: the 1962 act is not yet its own Atlas entity. **Open — create the entity, then add the edge.** |
 | [[BE-HERGEBRUIK-WET]] | Scope, obligations and relationship to the current EU regime all unknown. | Partly resolved — re-verification pass, 2026-08-26. The act's own text (both original and current consolidated versions) was read directly, confirming its 2016 PSI Directive transposition and the 2023 amendment's insertion of a Directive (EU) 2019/1024 reference. Full substantive obligations (licensing, pricing, appeals commission) remain sourced only from BIPT's secondary account. |
 
 ### Belgium re-verification pass (2026-08-26)
@@ -284,6 +284,26 @@ User-Agent, while `vsse.be`, `sgrs.be`, `comiteri.be`,
 [[BE-BOSA]], [[BE-CCB]], [[BE-STATBEL]] and [[BE-DATA-GOV-BE]] stayed
 `search-only` despite genuine effort to reach a majority via alternate
 external sources (law firms, employers' federations, Wikipedia, GitHub).
+
+### Second Belgium pass — the six leftover tails (2026-08-27)
+
+The six entities left `search-only` above were re-attempted individually,
+using `WebSearch` to find previously-uncited alternate pages rather than
+re-fetching the same blocked URLs. **Four closed:** [[BE-TOEZICHTSWET-1991]]
+and [[BE-COMITE-I]] both promoted once `ejustice.just.fgov.be`'s Justel
+page — which had timed out three times in the first pass — succeeded on a
+fourth attempt; [[BE-CCB]] promoted on five independent law-firm analyses
+of the NIS2 royal decree (Eubelius, nis-2-directive.com, Simont Braun,
+Lydian, Eversheds Sutherland); [[BE-STATBEL]] promoted once
+etaamb.openjustice.be surfaced the 1962 public statistics act, closing a
+gap open since the first pass. **Two did not close:** [[BE-BOSA]] and
+[[BE-DATA-GOV-BE]] remain `search-only` — every new route tried
+(`dtservices.bosa.be`, `fedweb.belgium.be`, `digitall.be`, `selor.be`,
+`werkenvoor.be`) redirects or 403s back into the same blocked domains,
+confirming the block is comprehensive rather than page-specific. GitHub
+(`Fedict/dcattools`) and a third-party API directory did yield genuine new
+technical detail for [[BE-DATA-GOV-BE]] without reaching a majority of its
+sources.
 
 ## France batch — fourth country (2026-08-16)
 

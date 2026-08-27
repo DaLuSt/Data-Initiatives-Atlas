@@ -25,7 +25,7 @@ verification: search-only
 
 start_date: null
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-08-27"
 previous_version: null
 successor: null
 
@@ -62,19 +62,28 @@ sources:
   - title: "Open Data Maturity 2025 — factsheet Belgium"
     url: "https://data.europa.eu/sites/default/files/2025-12/2025_odm_factsheet_belgium.pdf"
     publisher: "data.europa.eu (Publications Office of the European Union)"
+  - title: "Fedict/dcattools — README"
+    url: "https://github.com/Fedict/dcattools/blob/master/README.md"
+    publisher: "GitHub (Fedict)"
+    accessed: "2026-08-27"
+  - title: "Open Government, Belgium API"
+    url: "https://publicapis.io/open-government-belgium-api"
+    publisher: "Public APIs Directory"
+    accessed: "2026-08-27"
 ---
 
 # data.gov.be
 
-> **Re-checked 2026-08-26, still `search-only`.** All five cited sources
-> were attempted; none was readable. `bosa.belgium.be`, `data.gov.be` (both
-> the presentations page and the PDF asset), and `financien.belgium.be` all
-> returned CAPTCHA verification challenges rather than content, and the
-> `data.europa.eu` factsheet PDF was retrieved but its content is an
-> unreadable compressed binary stream. This is a genuine, near-total block
-> across the Belgian federal open-data web presence, not a search-only
-> shortcut — the same class of finding as bot-walled `.gouv.fr` domains in
-> the France batch.
+> **Re-checked 2026-08-27, still `search-only`.** All five originally
+> cited sources remain unreadable, confirmed again this pass. Two
+> previously-uncited pages were found via search and read directly this
+> pass — GitHub's own `Fedict/dcattools` README (GitHub is not part of
+> the Belgian government's blocked web presence) and a third-party API
+> directory's description of data.gov.be — giving genuine new technical
+> and descriptive detail. That is 2 of 7 sources, still short of a
+> majority: the block across the Belgian federal open-data web presence
+> remains near-total, the same class of finding as bot-walled `.gouv.fr`
+> domains in the France batch.
 
 ## Description
 
@@ -91,6 +100,15 @@ reproduce at least part of the federal and national portals' content. A new
 version of the portal was launched alongside the publication of
 **high-value datasets**, with metadata-quality work including **SHACL
 validation** and the mapping of non-DCAT metadata to DCAT-AP.
+
+Confirmed by reading GitHub's own `Fedict/dcattools` README directly
+(2026-08-27) — genuinely readable, unlike every `belgium.be` and
+`data.gov.be` page tried for this entity — the harvesting pipeline works
+by scraping Belgian open data portals, running SPARQL scripts to enrich
+raw DCAT into DCAT-AP, uploading the enriched files to data.gov.be, then
+consolidating everything into N-Triples and XML for weekly transmission
+to the European Data Portal. This is the mechanical detail behind the
+"DCAT-AP feed" this entity's description already named.
 
 ## Three national open data portals
 
@@ -131,7 +149,8 @@ portal are obviously related, and no source read states the relationship.
 
 ## Sources
 
-Zero of five readable this pass, all five attempted: three CAPTCHA-walled
-pages (`bosa.belgium.be`, `data.gov.be` twice) and one bot-walled page
-(`financien.belgium.be`), plus one PDF (`data.europa.eu`) whose content
-could not be extracted as text.
+Two of seven readable this pass — GitHub's `Fedict/dcattools` README and
+publicapis.io's description. All five originally cited sources remain
+unreadable: three CAPTCHA-walled pages (`bosa.belgium.be`, `data.gov.be`
+twice) and one bot-walled page (`financien.belgium.be`), plus one PDF
+(`data.europa.eu`) whose content could not be extracted as text.

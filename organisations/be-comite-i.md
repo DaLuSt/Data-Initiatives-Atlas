@@ -20,11 +20,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-08-27"
 previous_version: null
 successor: null
 
@@ -39,8 +39,8 @@ relationships:
   - type: governed-by
     target: BE-TOEZICHTSWET-1991
     source: fact
-    evidence: "The law of 18 July 1991 regulates oversight of the police and intelligence services and the Coordination Organ for Threat Analysis; two permanent oversight committees were established, one for police services and one for intelligence and security services (comiteri.be 'Wetgeving' and the consolidated codex of the 1991 act; ejustice.just.fgov.be Justel 1991009963; comitep.be 'historiek'). Not independently re-confirmed this pass — the FAQ page read confirms Comité I's oversight role in substance but does not cite the 1991 act by name; the act's own text (attempted via a different mirror on BE-TOEZICHTSWET-1991) confirms the two-committee structure directly."
-    confidence: medium
+    evidence: "Confirmed by reading ejustice.just.fgov.be's own official Justel text of the 1991 act directly (2026-08-27, succeeded on retry after three prior timeouts): Article 1 establishes two permanent oversight committees, one for police services and one for intelligence and security services. A second official text, also read directly (etaamb.openjustice.be, a later statute on Comité P's investigation-service staff), cites the 1991 act's own Articles 17, 20, 20bis and 22bis–22quater on committee composition, disciplinary authority and members' statutory consequences."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-to
@@ -69,16 +69,28 @@ sources:
   - title: "Wetgeving"
     url: "https://www.comiteri.be/index.php/nl/wetgeving-mainmenu-7"
     publisher: "Vast Comité I"
+  - title: "Justel — wet van 18 juli 1991"
+    url: "https://www.ejustice.just.fgov.be/cgi_loi/change_lg_2.pl?language=nl&nm=1991009963&la=N"
+    publisher: "Belgisch Staatsblad / FOD Justitie"
+    accessed: "2026-08-27"
+  - title: "Wet statuut van de directeur-generaal en van de leden van de dienst enquêtes van het Vast Comité P"
+    url: "https://etaamb.openjustice.be/nl/wet_n2007018027.html"
+    publisher: "etaamb / OpenJustice"
+    accessed: "2026-08-27"
 ---
 
 # Vast Comité van Toezicht op de inlichtingen- en veiligheidsdiensten (Comité I)
 
-> **Re-checked 2026-08-26, still `search-only`.** Comité I's own FAQ page
-> was read directly and confirms the `applies-to` [[BE-VSSE]] and
-> [[BE-ADIV]] edges in substance. The PDF codex of the 1991 act could not be
-> read as text (a compressed binary stream) and the `wetgeving-mainmenu-7`
-> citation is now dead (404). One of three read is not a majority, so this
-> entity stays `search-only`.
+> **Verified 2026-08-27.** Comité I's own FAQ page confirms the
+> `applies-to` [[BE-VSSE]] and [[BE-ADIV]] edges in substance, and two
+> official texts of the governing 1991 act — ejustice.just.fgov.be's own
+> Justel text (which timed out three times in the prior pass, succeeded
+> on this pass's retry) and a citing etaamb.openjustice.be statute — were
+> read directly, giving this entity's `governed-by` edge a genuine
+> textual basis for the first time. Three of five cited pages are now
+> read directly. The PDF codex of the 1991 act remains unreadable (a
+> compressed binary stream) and the `wetgeving-mainmenu-7` citation
+> remains dead (404).
 
 ## Description
 
@@ -121,12 +133,13 @@ both later than the agency acts.
 
 ## Relationships
 
-- `governed-by` [[BE-TOEZICHTSWET-1991]].
+- `governed-by` [[BE-TOEZICHTSWET-1991]] — confirmed this pass via the
+  act's own official text; `confidence: high`.
 - `applies-to` [[BE-VSSE]] and [[BE-ADIV]].
 
 ## Sources
 
-One of three read directly this pass — the FAQ page. The PDF codex is
-unreadable as extracted text and the `wetgeving-mainmenu-7` page is dead
-(404); the same PDF and a live alternate mirror were tried again on
-[[BE-TOEZICHTSWET-1991]].
+Three of five read directly this pass: the FAQ page, ejustice.just.fgov.be's
+own Justel text, and a citing etaamb.openjustice.be statute. The PDF codex
+is unreadable as extracted text and the `wetgeving-mainmenu-7` page is
+dead (404).
