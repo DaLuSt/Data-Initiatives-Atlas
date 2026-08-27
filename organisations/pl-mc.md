@@ -39,6 +39,7 @@ related_entities:
   - PL-COI
   - PL-MOBYWATEL
   - PL-NASK
+  - PL-DANE-GOV-PL
 relationships: []
 
 sources:

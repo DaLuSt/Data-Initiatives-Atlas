@@ -7,16 +7,22 @@ the country's front page (`CONTRIBUTING.md`).
 
 Anchor entity: [[ES]]
 
-> **Re-verified 2026-08-26.** Every Spanish entity below has now been
-> checked against primary sources — BOE consolidated texts throughout,
-> which proved to be a fully reliable, directly-fetchable source for this
-> country. Twenty of twenty-two entities were promoted to
-> `verification: primary-source`; [[ES-ENI]] and [[ES-CLAVE]] were
-> deliberately left `search-only` because a majority of their cited
-> sources were not read, and [[ES-ESPANA-DIGITAL-2026]] likewise stayed
-> `search-only` at one of four sources read. One genuine correction
-> surfaced: [[ES-LOPDGDD]]'s transitory-provisions count was wrong (seven,
-> corrected to six) until BOE's own preamble was read directly.
+> **Re-verified 2026-08-26, completed 2026-08-27.** All twenty-two Spain
+> entities are now `verification: primary-source`. [[ES-ENI]] and
+> [[ES-ESPANA-DIGITAL-2026]] were the last two closed, both by finding
+> and reading previously-uncited pages via search rather than by
+> re-fetching the sources already on file. [[ES-CLAVE]] followed the
+> same route but its eIDAS-specific edge stays `confidence: low` — the
+> newly-read pages confirm Spain's eIDAS node in general and that DNIe,
+> not Cl@ve, is the notified scheme, but neither states the "Cl@ve is
+> the integration path" claim this entity previously carried. One
+> genuine correction surfaced in the first pass: [[ES-LOPDGDD]]'s
+> transitory-provisions count was wrong (seven, corrected to six) until
+> BOE's own preamble was read directly. A genuine, still-open source
+> conflict surfaced in the second: official pages disagree with
+> widely-syndicated coverage (and this entity's own prior text) on what
+> [[ES-ESPANA-DIGITAL-2026]]'s two new strategic axes actually are — see
+> the entity itself and `discovery/unresolved.md`.
 
 ## Organisations
 

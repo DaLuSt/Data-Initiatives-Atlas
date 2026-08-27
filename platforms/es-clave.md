@@ -24,11 +24,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-08-27"
 previous_version: null
 successor: null
 
@@ -44,7 +44,7 @@ relationships:
   - type: implements-requirement-from
     target: EU-EIDAS
     source: fact
-    evidence: "Cl@ve 2.0 is the main Spanish eGovernment solution used by local, regional and national public electronic services to authenticate citizens, and includes the eIDAS node service; the Spanish eIDAS node facilitates cross-border identification both for Spanish citizens accessing services in other European countries and for citizens of other European countries accessing Spanish public services (eidas.redsara.es; cef.uv.es eID4Spain2020 'Scope and objectives'; viafirma.com 'The eIDAS Regulation in Spain'). NOT READ — search-only. CAVEAT: the sources establish that Cl@ve incorporates the eIDAS node; they indicate the notified electronic identification MEANS for Spain is the DNIe rather than Cl@ve itself, so this edge covers the eIDAS infrastructure role and not a notification of Cl@ve as a scheme. None of the three cited sources for this specific edge (eidas.redsara.es, cef.uv.es, viafirma.com) were read this pass, so this edge's evidentiary basis is unchanged."
+    evidence: "Confirmed by reading eidas.redsara.es's own 'qué es' page and viafirma.com's eIDAS-in-Spain article directly (2026-08-27): eidas.redsara.es describes the Spanish eIDAS node as 'una plataforma que facilita la identificación electrónica transfronteriza en el ámbito de la Unión Europea' (a platform enabling cross-border electronic identification in the EU); viafirma.com confirms Spain notified the DNIe (electronic ID document), not Cl@ve, as its eIDAS-Node scheme. NEITHER page actually read confirms the specific claim this entity previously carried — that administrations integrate with the eIDAS node 'through the Cl@ve system' — eidas.redsara.es's page displays both Cl@ve and eIDAS logos together but states no textual claim about their technical relationship, and viafirma.com does not mention Cl@ve at all. cef.uv.es returned HTTP 503 both in the prior pass and this one. CAVEAT UNCHANGED: this edge covers Cl@ve's general association with Spain's eIDAS infrastructure, not a notification of Cl@ve as a scheme, and the specific integration claim remains unconfirmed by direct reading despite two of the three specific citations now being read."
     confidence: low
     valid_from: null
     valid_until: null
@@ -53,30 +53,42 @@ sources:
   - title: "Cl@ve — Sistema Cl@ve: qué es y cómo funciona"
     url: "https://clave.gob.es/en"
     publisher: "Cl@ve — Gobierno de España"
-    accessed: "2026-08-26"
+    accessed: "2026-08-27"
   - title: "Identificación Electrónica — Trámites y Servicios Electrónicos"
     url: "https://administracion.gob.es/pag_Home/Tramites/Identificacion-electronica.html"
     publisher: "Punto de Acceso General (administracion.gob.es)"
-    accessed: "2026-08-26"
+    accessed: "2026-08-27"
   - title: "Identidad digital en las AA.PP. — Ciudadanos"
     url: "https://firmaelectronica.gob.es/en/ciudadanos/cosas-deberias-saber/identidad-digital-aapp"
     publisher: "Portal de Firma Electrónica — Gobierno de España"
-    accessed: "2026-08-26"
+    accessed: "2026-08-27"
   - title: "Información general sobre el sistema de identificación Cl@ve"
     url: "https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/firma-digital-sistema-clave-pin-tecnica/informacion-general-sobre-sistema-identificacion-pin.html"
     publisher: "Agencia Tributaria"
+  - title: "¿Que es eIDAS? — Red SARA"
+    url: "https://eidas.redsara.es/EidasHome/queEs.jsp"
+    publisher: "Red SARA"
+    accessed: "2026-08-27"
+  - title: "The eIDAS Regulation in Spain"
+    url: "https://www.viafirma.com/en/eidas-spain/"
+    publisher: "Viafirma"
+    accessed: "2026-08-27"
+  - title: "eID4Spain2020 — Scope and objectives (currently HTTP 503)"
+    url: "https://cef.uv.es/eid4spain2020/"
+    publisher: "Universitat de València"
 ---
 
 # Cl@ve
 
-> **Re-checked 2026-08-26, still `search-only`.** Three general
-> descriptive pages were read directly and add real detail, but the
-> entity's one substantive relationship — `implements-requirement-from`
-> [[EU-EIDAS]] — rests entirely on three other, more specific citations
-> (eidas.redsara.es, cef.uv.es, viafirma.com) that were not read this
-> pass. Reading pages adjacent to a claim is not the same as reading the
-> pages the claim itself cites, so `confidence: low` on that edge stands
-> unchanged and the entity does not qualify for `primary-source`.
+> **Verified 2026-08-27.** Two of the three specific citations behind
+> the entity's one relationship — eidas.redsara.es and viafirma.com —
+> were found (the correct viafirma URL, via search) and read directly
+> this pass; `cef.uv.es` remains persistently unavailable (HTTP 503).
+> That is a majority of the entity's now six total sources. Reading them
+> did not confirm the specific claim previously carried — that
+> administrations integrate with the eIDAS node "through Cl@ve" — so
+> `confidence: low` on that edge stands, now for a different, more
+> precise reason: not "unread" but "read, and not stated."
 
 ## Description
 
@@ -125,11 +137,13 @@ to a shared problem is still not a relationship.
 ## The eIDAS gap now spans five countries
 
 [[DE-BUNDID]] carries `implements-requirement-from` → [[EU-EIDAS]] at low
-confidence, because a German source mentions the regulation. Nothing
-equivalent is asserted here: **no source read about Cl@ve mentions eIDAS,
-cross-border recognition, or acceptance of other member states' eIDs** —
-even though a national identification scheme is precisely what eIDAS
-governs.
+confidence, because a German source mentions the regulation. This entity's
+own edge is now similarly thin, but for a sharper reason: two sources about
+Spain's eIDAS node **were** read directly this pass, and neither states
+that Cl@ve is how it works — one displays the Cl@ve and eIDAS logos
+together with no textual claim connecting them, the other confirms the
+DNIe, not Cl@ve, as Spain's notified scheme and does not mention Cl@ve at
+all.
 
 Nor is anything asserted to [[EU-EIDAS2]], which requires every member state
 to offer a European Digital Identity Wallet by the end of 2026 — now about
@@ -154,9 +168,11 @@ in this entity's description.
 ## Relationships
 
 - `implements-requirement-from` [[EU-EIDAS]] — `confidence: low`; see the
-  caveat at the top of this entity. Its own cited sources remain unread.
+  caveat at the top of this entity. Two of its three specific citations
+  are now read directly, and neither states the claim.
 
 ## Sources
 
-Listed in frontmatter, three of four read directly this pass — though
-not the three specific citations backing the one relationship above.
+Listed in frontmatter, five of six read directly this pass, including
+two of the three specific citations behind the one relationship above.
+`cef.uv.es` remains persistently unavailable (HTTP 503).
