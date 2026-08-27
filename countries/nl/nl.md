@@ -17,11 +17,11 @@ region: EU
 status: active
 confidence: medium
 coverage: low
-verification: unverified
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-27"
 previous_version: null
 successor: null
 
@@ -33,8 +33,8 @@ relationships:
   - type: part-of
     target: EU
     source: fact
-    evidence: "the Netherlands is one of the 27 member states of the European Union, having acceded on 1 January 1958; the Union's own list of EU countries records its accession date together with its Schengen and euro status (european-union.europa.eu 'EU countries'). NOT READ — search-only. Anchor edge under metadata/relationship-types.md §2.3: it records EU membership and asserts no more than that. Added in the European country batch so that all fifty anchors carry the same membership edge."
-    confidence: medium
+    evidence: "Confirmed by reading european-union.europa.eu's own page directly (2026-08-27): 'EU Member State since 1958, Euro area member since 1999, Schengen area member since 1995.' government.nl, also read directly, describes itself as the official portal providing 'Information from the Government of the Netherlands.' ISO's OBP is confirmed genuinely bot-walled (403) elsewhere in this Atlas's re-verification work — it is a JavaScript application, not a static page. Anchor edge under metadata/relationship-types.md §2.3: it records EU membership and asserts no more than that. Added in the European country batch so that all fifty anchors carry the same membership edge."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -42,15 +42,23 @@ sources:
   - title: "EU countries"
     url: "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
     publisher: "European Union"
-  - title: "NL — ISO 3166-1 country code"
+    accessed: "2026-08-27"
+  - title: "NL — ISO 3166-1 country code (confirmed genuinely bot-walled, 403)"
     url: "https://www.iso.org/obp/ui/#iso:code:3166:NL"
     publisher: "International Organization for Standardization (ISO)"
   - title: "Government of the Netherlands"
     url: "https://www.government.nl/"
     publisher: "Government of the Netherlands"
+    accessed: "2026-08-27"
 ---
 
 # Netherlands
+
+> **Verified 2026-08-27.** Two of three cited pages were read directly,
+> closing the Batch 6 audit finding that this entity's source URLs had
+> been composed from background knowledge and never actually confirmed.
+> ISO's OBP is confirmed genuinely bot-walled (403) — a JavaScript
+> application, not a static page.
 
 ## Description
 
@@ -64,18 +72,21 @@ that apply to the Netherlands reference it via an `applies-in` relationship.
 anchor node. Substantive Dutch content is researched and added starting in
 Batch 1 (see `progress/backlog.md`).
 
-## ⚠ Verification note (added in Batch 6)
+## The Batch 6 audit finding is now closed
 
-`verification: unverified` — stronger than the `search-only` label carried by
-most of the Atlas, and worse.
+`verification` was `unverified` — stronger than the `search-only` label
+carried by most of the Atlas, and worse.
 
 This entity was written in Batch 0, before the network block was discovered
 and before the `verification` field existed. Its source URLs were composed
 from background knowledge rather than confirmed by a search index or
-fetched. They are very likely correct — these are among the best-known URLs
-in existence — but "very likely correct" is precisely the standard the brief
-rules out, and the Atlas should not hold itself to a lower bar for easy
-facts than for hard ones.
+fetched. They turned out to be correct: reading european-union.europa.eu
+directly confirms the Netherlands as an "EU Member State since 1958, Euro
+area member since 1999, Schengen area member since 1995," and
+government.nl's own front page confirms itself as the official government
+information portal. Two of the entity's three sources are now read
+directly — the ISO OBP remains confirmed genuinely bot-walled (403)
+elsewhere in this Atlas's re-verification work.
 
 The Batch 6 audit surfaced this. Recorded in `discovery/unresolved.md`.
 
@@ -111,7 +122,6 @@ the evidence strings and the cited source both need changing together.
 
 ## Sources
 
-Listed in frontmatter. **No `accessed` dates and no `last_verified`** — the
-Final Quality Gate found both being claimed here when nothing had in fact
-been accessed or verified, and removed them. Nothing about this entity has
-been checked against a source.
+Listed in frontmatter, two of three read directly this pass —
+european-union.europa.eu and government.nl. ISO's OBP is genuinely
+bot-walled (403).

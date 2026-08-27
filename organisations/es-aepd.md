@@ -105,30 +105,25 @@ protection authorities remain unrecorded. Several autonomous communities
 operate regional data protection authorities; none is representable, for
 the reason set out in [[ES]].
 
-## Five national DPAs, one European link
+## Five national DPAs, all five now on the record
 
 | Country | Authority | `participates-in` [[EU-EDPB]]? |
 |---|---|---|
 | Netherlands | [[NL-AP]] | **yes** — sourced |
-| Germany | [[DE-BFDI]] | no — refused |
-| Belgium | [[BE-APD]] | no — refused |
-| France | [[FR-CNIL]] | no — refused |
+| Germany | [[DE-BFDI]] | **yes** — sourced (2026-08-22) |
+| Belgium | [[BE-APD]] | **yes** — sourced |
+| France | [[FR-CNIL]] | **yes** — sourced |
 | Spain | **AEPD** | **yes** — sourced |
 
-The sourced-link count moves from one to two. Confirmed this pass by reading
-gdpr-info.eu's own text of Article 68(3) GDPR directly: the Board "shall be
-composed of the head of one supervisory authority of each Member State ...
-or their respective representatives," and the AEPD is Spain's supervisory
-authority under [[EU-GDPR]] — a general legal fact rather than a
-Spain-specific announcement, but a direct textual basis all the same.
-
-[[FR-CNIL]] described this as *"the Atlas's clearest single example of a
-sourcing artefact masquerading as structure"*. Closing the Spanish edge
-does not close the pattern: three of five modelled candidates still carry
-no sourced link, on the strength of the very same treaty article now cited
-here. Reading that one article for [[DE-BFDI]], [[BE-APD]] and [[FR-CNIL]]
-would close all three edges in a single pass — logged in
-`discovery/unresolved.md` as the cheapest item remaining in this cluster.
+Confirmed by reading gdpr-info.eu's own text of Article 68(3) GDPR
+directly: the Board "shall be composed of the head of one supervisory
+authority of each Member State ... or their respective representatives" —
+a general legal fact rather than a country-specific announcement, but a
+direct textual basis all the same. The same one-article reasoning closed
+this edge on all five national DPAs now in the Atlas, across four
+separate re-verification passes. What began as "the Atlas's clearest
+single example of a sourcing artefact masquerading as structure" is now
+fully closed.
 
 ## Relationships
 
