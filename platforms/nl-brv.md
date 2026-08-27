@@ -23,11 +23,11 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2008-07-01
 end_date: null
-last_verified: null
+last_verified: "2026-08-27"
 previous_version: null
 successor: null
 
@@ -45,42 +45,53 @@ relationships:
   - type: governed-by
     target: NL-WEGENVERKEERSWET-1994
     source: fact
-    evidence: "The Wegenverkeerswet 1994 is the Dutch road traffic act and the statutory basis of the vehicle registration (wetten.overheid.nl/BWBR0006622). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading wetten.overheid.nl's own text of BWBR0006622 directly (2026-08-27): it is the Wegenverkeerswet 1994, which establishes the Dienst Wegverkeer (RDW) and its vehicle-registration functions among a much broader set of road-traffic rules (conduct, type-approval, licences, inspection, enforcement)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: part-of
     target: NL-BASISREGISTRATIES
     source: fact
-    evidence: "The ten base registrations are the BRP, HR, BAG, BRT, BRK, BRV (Basisregistratie Voertuigen), BRI, WOZ, BGT and BRO (digitaleoverheid.nl '10 basisregistraties'; data.overheid.nl; noraonline.nl). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading data.overheid.nl's basisregistraties_10 group listing directly (2026-08-27), which names 'Basisregistratie: Voertuigen (BRV)' among the ten. digitaleoverheid.nl's own BRV page and its page on roles within the stelsel both returned a bot-verification wall on two separate attempts each this pass ('Please wait while your request is being verified...') and are confirmed genuinely unreadable in this environment, not merely unread."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: maintained-by
     target: NL-RDW
     source: fact
-    evidence: "The Basisregistratie Voertuigen contains vehicle data, vehicle registration certificates and information about persons to whom registration certificates are issued, with the RDW providing information from this registration; the RDW has held the BRV since 1 July 2008, and the stelsel documentation gives the RDW as its example of an organisation that is holder, provider and user at once — maintaining the licence-plate register and providing it to other users while also receiving BRP data (digitaleoverheid.nl BRV page and 'Rollen Stelsel van basisregistraties'; rdw.nl). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading rdw.nl's own page directly (2026-08-27): 'the kentekenregister has functioned as the basisregistratie voertuigen since 1 July 2008,' and the RDW 'maintains this foundational registry.' The stelsel's own worked example describing the RDW as simultaneously provider, holder and user is carried on digitaleoverheid.nl's rollen page, which is confirmed genuinely bot-walled this pass (see above) and was not independently re-read; the same quotation was, however, read directly on [[NL-RDW]]'s own cited page in a prior verification of that entity's sources and is not contradicted by anything read here."
+    confidence: high
     valid_from: 2008-07-01
     valid_until: null
 
 sources:
-  - title: "Basisregistratie Voertuigen (BRV) — Stelsel van basisregistraties"
+  - title: "Basisregistratie Voertuigen (BRV) — Stelsel van basisregistraties (confirmed bot-walled, not read)"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/10-basisregistraties/brv/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
-  - title: "Rollen — Stelsel van basisregistraties"
+  - title: "Rollen — Stelsel van basisregistraties (confirmed bot-walled, not read)"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/rollen-stelsel-basisregistraties/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
   - title: "Basisregistraties: de 10 basisregistraties"
     url: "https://data.overheid.nl/community/group/basisregistraties_10"
     publisher: "data.overheid.nl"
+    accessed: "2026-08-27"
+  - title: "Kentekenregister is basisregistratie voertuigen"
+    url: "https://www.rdw.nl/over-rdw/organisatie/kerntaken/kentekenregister-is-basisregistratie-voertuigen"
+    publisher: "RDW"
+    accessed: "2026-08-27"
+  - title: "Wegenverkeerswet 1994 — official text"
+    url: "https://wetten.overheid.nl/BWBR0006622"
+    publisher: "Overheid.nl (Basiswettenbestand)"
+    accessed: "2026-08-27"
 ---
 
 # BRV — Basisregistratie Voertuigen
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-27.** Two new sources added and read directly this
+> pass — the RDW's own kentekenregister page and the Wegenverkeerswet
+> 1994's official text — pushed this entity to a genuine majority.
+> digitaleoverheid.nl's BRV and rollen pages are confirmed genuinely
+> bot-walled in this environment, not merely unread.
 
 ## Description
 
@@ -131,4 +142,8 @@ until someone reads a page that says it.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, three of five read directly this pass — the RDW's own
+page (added this pass), the Wegenverkeerswet 1994's official text (added
+this pass), and the data.overheid.nl group listing. digitaleoverheid.nl's
+BRV and rollen pages are confirmed genuinely bot-walled in this environment
+on two separate attempts each, not merely unread.

@@ -22,11 +22,11 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-27"
 previous_version: null
 successor: null
 
@@ -45,22 +45,22 @@ relationships:
   - type: governed-by
     target: NL-KADASTERWET
     source: fact
-    evidence: "The Kadasterwet of 3 May 1989 contains rules on the public registers for registered property and on the cadastre; the cadastral base registration and the topographic base registration are maintained under it as authentic data, with database rights reserved to the Dienst voor het kadaster en de openbare registers (wetten.overheid.nl/BWBR0004541). NOT READ — search-only. This closes the item recorded in discovery/research-queue.md as the only one of the ten registers where no statute was found at all."
-    confidence: medium
+    evidence: "Confirmed by reading wetten.overheid.nl's own text of BWBR0004541 directly (2026-08-27): Article 1a establishes 'een basisregistratie topografie' (a topographic base registration) consisting of 'landsdekkend topografische bestanden' (nationwide topographic files) at various scale levels, in the same article that establishes the BRK. This closes the item recorded in discovery/research-queue.md as the only one of the ten registers where no statute was found at all — now confirmed by the Act's own text, not just search."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: part-of
     target: NL-BASISREGISTRATIES
     source: fact
-    evidence: "The ten base registrations are the BRP, HR, BAG, BRT (Basisregistratie Topografie), BRK, BRV, BRI, WOZ, BGT and BRO (digitaleoverheid.nl '10 basisregistraties'; data.overheid.nl; noraonline.nl). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading digitaleoverheid.nl's own BRT page directly (2026-08-27), which quotes the Kadaster verbatim: 'Het Kadaster is houder van de Basisregistratie Topografie (BRT)' (the Kadaster is holder of the BRT), and data.overheid.nl's basisregistraties_10 group listing (read directly for sibling entities this pass), which names 'Basisregistratie: Topografie (BRT)' among the ten."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: maintained-by
     target: NL-KADASTER
     source: fact
-    evidence: "The Kadaster holds the Basisregistratie Topografie, which consists of digital topographic files at various scale levels (kadaster.nl 'Overzicht registraties'; geobasisregistraties.nl). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading kadaster.nl's own registrations overview directly (2026-08-27), which lists the BRT among the five base registrations the Kadaster holds and describes it as 'digitale topografische bestanden op verschillende schaalniveaus.' geobasisregistraties.nl's own overview, also read directly, places the BRT's function/dimension question alongside the address, ownership, value and subsurface registers as one of the coordinated geo base registrations."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -68,19 +68,28 @@ sources:
   - title: "Overzicht registraties — Kadaster"
     url: "https://www.kadaster.nl/zakelijk/registraties"
     publisher: "Kadaster"
+    accessed: "2026-08-27"
   - title: "Basisregistratie Topografie (BRT) — Stelsel van basisregistraties"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/10-basisregistraties/brt/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
+    accessed: "2026-08-27"
   - title: "Basisregistraties | Geobasisregistraties"
     url: "https://www.geobasisregistraties.nl/basisregistraties"
     publisher: "Geobasisregistraties (Ministerie van BZK)"
+    accessed: "2026-08-27"
+  - title: "Kadasterwet — official text"
+    url: "https://wetten.overheid.nl/BWBR0004541"
+    publisher: "Overheid.nl (Basiswettenbestand)"
+    accessed: "2026-08-27"
 ---
 
 # BRT — Basisregistratie Topografie
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-27.** All three cited pages read directly, plus the
+> Kadasterwet's own official text added and read as a fourth source. This
+> closes the item this entity previously called out as the only one of the
+> ten registers with no statute confirmed at all: Article 1a of the
+> Kadasterwet now cites the topographic base registration by name.
 
 ## Description
 
@@ -117,10 +126,11 @@ weakest of the ten for that reason.
 
 The statute is the **[[NL-KADASTERWET]]** of 3 May 1989, and the reason it
 took a dedicated search to find is that **there is no "Wet basisregistratie
-topografie"**. The Kadasterwet's rules on the public registers and the
-cadastre carry *both* the cadastral base registration and the topographic
-base registration as authentic data, with database rights reserved to the
-Dienst voor het kadaster en de openbare registers.
+topografie"**. Reading the Act's own text directly this pass confirms it:
+Article 1a establishes *both* the cadastral base registration and the
+topographic base registration in the same sentence, as authentic data, with
+database rights reserved to the Dienst voor het kadaster en de openbare
+registers.
 
 So [[NL-BRK]] and this register share one statute — the only such pair among
 the ten, and the reason the stelsel's legal underpinning is **seven statutes
@@ -128,10 +138,12 @@ for nine registers** rather than one each.
 
 ## `coverage: low` still, for everything else
 
-The statute is now sourced. Its scale levels are still described only as
-"various", its products are not enumerated and no date is recorded. The
-Kadaster's registry overview and the digitaleoverheid.nl register page carry
-it, and neither was read.
+The statute is now read directly, not just sourced. Its scale levels are
+still described only as "various" in the pages read, its products are not
+enumerated and no commencement date for the topographic registration
+specifically is recorded — the Kadasterwet's own text gives 3 May 1989 as
+the Act's date, not a separate date for when the BRT provision itself took
+effect.
 
 ## Relationships
 
@@ -141,4 +153,6 @@ it, and neither was read.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, all four read directly this pass — the Kadaster and
+digitaleoverheid.nl register pages, the geobasisregistraties.nl overview,
+and the Kadasterwet's own official text (shared with [[NL-BRK]]).

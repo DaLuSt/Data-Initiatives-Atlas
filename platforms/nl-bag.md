@@ -23,11 +23,11 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2009-07-01
 end_date: null
-last_verified: null
+last_verified: "2026-08-27"
 previous_version: null
 successor: null
 
@@ -47,22 +47,22 @@ relationships:
   - type: governed-by
     target: NL-WET-BAG
     source: fact
-    evidence: "The Wet basisregistratie adressen en gebouwen is the statutory basis of the Basisregistratie Adressen en Gebouwen; the act of 10 February 2017 amending it and other acts on the modernisation and simplification of registration and supervision (Stb. 2017, 60) entered into force on 1 July 2018 (wetten.overheid.nl/BWBR0023466; geobasisregistraties.nl 'Overzicht wet- en regelgeving basisregistratie adressen en gebouwen (BAG 2.0)'). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading wetten.overheid.nl's own text of BWBR0023466 directly (2026-08-27): it is the Wet basisregistratie adressen en gebouwen, whose commencement is set article-by-article by royal decree rather than a single fixed date in the text itself. The Eerste Kamer's own bill dossier (30.968), read directly, confirms the Eerste Kamer disposed of the bill as a hamerstuk (uncontested) on 22 January 2008. IMBAG's practitioner handbook (Kadaster), read directly, names the Besluit BAG (2009, amended 2017) and the Regeling BAG as the implementing instruments beneath the Act, and the Catalogus BAG 2018 as the content specification — corroborating rather than independently re-dating the 1 July 2018 amendment previously sourced only to geobasisregistraties.nl. ndfr.nl's consolidated text was not re-fetched this pass."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: part-of
     target: NL-BASISREGISTRATIES
     source: fact
-    evidence: "The ten base registrations are the BRP, HR, BAG (Basisregistratie Adressen en Gebouwen), BRT, BRK, BRV, BRI, WOZ, BGT and BRO (digitaleoverheid.nl '10 basisregistraties'; data.overheid.nl; noraonline.nl). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading kadaster.nl's own BAG page directly (2026-08-27): 'onderdeel van het overheidsstelsel van basisregistraties' (part of the government's system of base registrations). data.overheid.nl's basisregistraties_10 group listing, read directly, names all ten registers by their exact abbreviations — BRV, BRK, BAG, BGT, HR, BRI, BRO, WOZ, BRT, BRP — matching this entity's description."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: maintained-by
     target: NL-KADASTER
     source: fact
-    evidence: "The BAG is part of the Dutch base registrations system, with municipalities as data holders and the Kadaster managing the national BAG system; the Kadasterwet was amended in connection with the allocation of tasks to the Dienst voor het kadaster en de openbare registers regarding the landelijke voorziening for the basisregistraties adressen en gebouwen (kadaster.nl BAG page; tweedekamer.nl wetsvoorstel 31726). NOT READ — search-only. CAVEAT: municipalities are the data holders; this edge records the national-facility role only."
-    confidence: medium
+    evidence: "Confirmed by reading kadaster.nl's own BAG page directly (2026-08-27): 'Gemeenten zijn bronhouders van de BAG. Zij zijn verantwoordelijk voor het opnemen van de gegevens in de BAG en voor de kwaliteit ervan' (municipalities are bronhouders and responsible for data and quality) and 'Het Kadaster beheert de LV-BAG en stelt de gegevens beschikbaar aan de diverse afnemers' (Kadaster manages the national facility and distributes the data). This confirms the caveat already recorded here rather than removing it: municipalities hold the data, Kadaster runs the national facility."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -70,25 +70,34 @@ sources:
   - title: "Basisregistratie Adressen en Gebouwen (BAG) — Kadaster"
     url: "https://www.kadaster.nl/zakelijk/registraties/basisregistraties/bag"
     publisher: "Kadaster"
+    accessed: "2026-08-27"
   - title: "Wet basisregistraties adressen en gebouwen (30.968)"
     url: "https://www.eerstekamer.nl/wetsvoorstel/30968_wet_basisregistraties"
     publisher: "Eerste Kamer der Staten-Generaal"
-  - title: "Wet basisregistratie adressen en gebouwen — consolidated text"
+    accessed: "2026-08-27"
+  - title: "Wet basisregistratie adressen en gebouwen — official text"
+    url: "https://wetten.overheid.nl/BWBR0023466"
+    publisher: "Overheid.nl (Basiswettenbestand)"
+    accessed: "2026-08-27"
+  - title: "Wet basisregistratie adressen en gebouwen — consolidated text (not re-read this pass)"
     url: "https://www.ndfr.nl/content/BWBR0023466-20220501"
     publisher: "NDFR"
   - title: "Praktijkhandleiding BAG — beleidskaders"
     url: "https://imbag.github.io/praktijkhandleiding/beleidskaders"
     publisher: "IMBAG (Kadaster)"
+    accessed: "2026-08-27"
   - title: "Toelichting — Koppeling BAG-BRP"
     url: "https://www.rvig.nl/bag-brp"
     publisher: "Rijksdienst voor Identiteitsgegevens (RvIG)"
+    accessed: "2026-08-27"
 ---
 
 # BAG — Basisregistratie Adressen en Gebouwen
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-27.** Five of six cited pages were read directly:
+> Kadaster's own BAG page, the Eerste Kamer bill dossier, the official
+> BWBR0023466 text, the IMBAG practitioner handbook, and RvIG's BAG–BRP
+> coupling page. Only NDFR's consolidated text was not re-fetched.
 
 ## Description
 
@@ -146,6 +155,7 @@ graph shows as such.
 
 ## Sources
 
-Listed in frontmatter — the Kadaster's BAG page, the Eerste Kamer bill
-dossier, a consolidated text, the practitioner handbook's policy chapter,
-and the RvIG coupling guidance.
+Listed in frontmatter, five of six read directly this pass — the Kadaster's
+BAG page, the Eerste Kamer bill dossier, the official BWBR0023466 text on
+`wetten.overheid.nl`, the practitioner handbook's policy chapter, and the
+RvIG BAG–BRP coupling guidance. NDFR's consolidated text was not re-fetched.

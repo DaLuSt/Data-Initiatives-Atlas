@@ -20,11 +20,11 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-27"
 previous_version: null
 successor: null
 
@@ -41,22 +41,28 @@ sources:
   - title: "Basisregistratie Personen | RvIG"
     url: "https://www.rvig.nl/basisregistratie-personen"
     publisher: "Rijksdienst voor Identiteitsgegevens (RvIG)"
+    accessed: "2026-08-27"
   - title: "Toelichting — Koppeling BAG-BRP"
     url: "https://www.rvig.nl/bag-brp"
     publisher: "Rijksdienst voor Identiteitsgegevens (RvIG)"
+    accessed: "2026-08-27"
   - title: "Koppeling BAG-GBA-BRP"
     url: "https://www.rvig.nl/hup/koppeling-bag-gba-brp"
     publisher: "Rijksdienst voor Identiteitsgegevens (RvIG)"
+    accessed: "2026-08-27"
   - title: "Basisregistratie Personen (BRP) — Stelsel van basisregistraties"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/10-basisregistraties/brp/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
+    accessed: "2026-08-27"
 ---
 
 # RvIG — Rijksdienst voor Identiteitsgegevens
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-27.** All four cited pages read directly. The
+> BAG–BRP coupling is confirmed to have hardened into a mandatory,
+> ongoing requirement since January 2024 — not just the one-time technical
+> link the entity's prior text implied — with a monthly compliance report
+> (Kwaliteitsmonitor) for municipalities.
 
 ## Description
 
@@ -68,7 +74,12 @@ It also publishes the guidance describing how the BRP couples to other
 registers — notably the **BAG–BRP coupling**, through which municipal
 address data from [[NL-BAG]] reaches the population register. That coupling
 is one of the clearest documented examples of the stelsel working as a
-system rather than as ten separate databases.
+system rather than as ten separate databases. Reading both of RvIG's own
+coupling pages directly this pass shows it happened in two stages: a
+one-time technical link in 2011–2012, and a **mandatory, ongoing**
+requirement in force since January 2024 that bans point addresses, location
+descriptions and reference addresses outright and is monitored through a
+monthly Kwaliteitsmonitor (KWM) report to municipalities.
 
 ## `coverage: low`
 
@@ -86,4 +97,6 @@ belongs on the register.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, all four read directly this pass — RvIG's own BRP
+page and both its coupling-guidance pages, plus the digitaleoverheid.nl BRP
+page.

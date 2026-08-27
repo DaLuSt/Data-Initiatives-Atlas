@@ -18,13 +18,13 @@ country: NL
 region: EU
 
 status: active
-confidence: low
+confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
-start_date: null
+start_date: 2024-06-19
 end_date: null
-last_verified: null
+last_verified: "2026-08-27"
 previous_version: null
 successor: null
 
@@ -38,58 +38,79 @@ relationships:
   - type: implements-requirement-from
     target: EU-OPEN-DATA-DIRECTIVE
     source: fact
-    evidence: "The Wet implementatie Open data richtlijn implements EU directive 2019/1024 into Dutch law by amending the Who (rijksoverheid.nl; Eerste Kamer dossier 36.382; BZK Handleiding Herziene Who). NOT READ — search-only."
-    confidence: medium
-    valid_from: null
+    evidence: "Confirmed by reading rijksoverheid.nl's own announcement directly (2026-08-27): 'Op 19 juni 2024 is de Wet implementatie Open data richtlijn inwerking getreden. Met deze wijziging is de Europese Open data richtlijn geïmplementeerd in de Nederlandse Wet hergebruik van overheidsinformatie.' eerstekamer.nl, also read directly, confirms the bill amends the Who to implement EU Directive 2019/1024, was adopted by the Eerste Kamer without amendment on 4 June 2024 following Tweede Kamer approval on 12 March 2024, and was published in Staatsblad nr. 164 on 18 June 2024, entering into force the following day. minbzk.github.io's own hWho guidance, read directly, confirms the same 19 June 2024 date and the mechanism (a European list of high-value datasets, six categories, machine-readable via free APIs)."
+    confidence: high
+    valid_from: 2024-06-19
     valid_until: null
 
 sources:
   - title: "Inwerkingtreding Wet implementatie Open data richtlijn"
     url: "https://www.rijksoverheid.nl/actueel/nieuws/2024/08/02/inwerkingtreding-wet-implementatie-open-data-richtlijn"
     publisher: "Rijksoverheid"
+    accessed: "2026-08-27"
   - title: "Wet implementatie Open data richtlijn (36.382)"
     url: "https://www.eerstekamer.nl/wetsvoorstel/36382_wet_implementatie_open_data"
     publisher: "Eerste Kamer der Staten-Generaal"
+    accessed: "2026-08-27"
   - title: "Handleiding Herziene Who n.a.v. de Wet implementatie open data richtlijn"
     url: "https://minbzk.github.io/publicatie/hl/hwho/"
     publisher: "Ministerie van BZK"
+    accessed: "2026-08-27"
   - title: "Wet hergebruik van overheidsinformatie"
     url: "https://vng.nl/projecten/wet-hergebruik-van-overheidsinformatie"
     publisher: "Vereniging van Nederlandse Gemeenten (VNG)"
+    accessed: "2026-08-27"
 ---
 
 # Wet hergebruik van overheidsinformatie (Who)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-27.** All four cited pages were read directly, closing
+> both the "not read" gap and the previously-unresolved entry-into-force
+> date. `verification` moves from `search-only` to `primary-source`,
+> `confidence` from `low` to `medium`.
 
 ## Description
 
 The Who governs the re-use of public sector information in the Netherlands.
-In 2024 it was amended by the *Wet implementatie Open data richtlijn*, which
-transposed [[EU-OPEN-DATA-DIRECTIVE]] (Directive (EU) 2019/1024) into Dutch
-law; the amended act is often referred to as the herziene Who (hWho).
+On **19 June 2024** it was amended by the *Wet implementatie Open data
+richtlijn*, which transposed [[EU-OPEN-DATA-DIRECTIVE]] (Directive (EU)
+2019/1024) into Dutch law; the amended act is often referred to as the
+herziene Who (hWho). Confirmed by reading eerstekamer.nl directly: the
+Tweede Kamer approved the bill on 12 March 2024, the Eerste Kamer adopted it
+without amendment on 4 June 2024, it was published as Staatsblad 2024, 164
+on 18 June 2024, and — per the bill's own commencement rule, "the day after
+publication" — entered into force on 19 June 2024.
 
-Under the revised regime, government organisations and government
-undertakings must make greater efforts to proactively make as much data as
-possible available for re-use. High-value datasets have been designated in
-the Netherlands, and municipal and provincial high-value dataset lists exist
-to support decentralised governments in opening data.
+Under the revised regime, confirmed by reading minbzk.github.io's own hWho
+guidance directly: government organisations and public undertakings (now
+including publicly-funded research organisations, an expanded scope) must
+proactively make more data available for re-use; dynamic data must in
+principle become available via APIs immediately after collection; and only
+marginal distribution costs may be charged in most cases. A European list of
+high-value datasets spans six categories — geospatial, earth observation,
+meteorological, statistics, business registers and mobility — which must be
+provided free of charge in machine-readable form via APIs. vng.nl's own
+impact analysis, also read directly, states that Dutch **municipalities
+carry no additional obligations** under this list for five of the six
+themes, as they are "geen dataprovider" (not a data provider) for those; the
+sixth (environmental data) required further investigation per that page.
 
-**Unresolved date.** Search results gave two different entry-into-force
-dates for the implementing act: 19 June 2024 in one result, while the
-rijksoverheid announcement of entry into force is dated 2 August 2024. The
-discrepancy is unresolved and `start_date` is therefore left null rather
-than guessed. Recorded in `discovery/unresolved.md`.
+**The previously-unresolved date is now resolved.** The rijksoverheid.nl
+page cited was itself dated 2 August 2024 but, read directly, states the
+law's own entry into force as 19 June 2024 — the two dates concern different
+things (a later news announcement vs. the actual commencement date), not a
+genuine conflict. `start_date` now records 19 June 2024.
 
 ## Modelling note
 
 The Who and the Wet implementatie Open data richtlijn are modelled as **one
 entity**, not two: the implementing act is an amending statute whose effect
-is carried by the Who. If Batch 3's re-verification finds the amending act
-has independent significance, it should be split out — recorded in
-`discovery/unresolved.md`.
+is carried by the Who. This pass confirms that model is defensible under
+`metadata/relationship-types.md` §2.1's `amends` type — the implementing act
+amends the Who "which continues to exist under its own name and date" — but
+leaves the existing single-entity choice unchanged rather than splitting it,
+since no source read this pass gave the amending act independent standing
+beyond its effect on the Who.
 
 ## Classification
 
@@ -106,4 +127,4 @@ Dutch implementation legislation per `metadata/taxonomy.md` §2:
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, all four read directly this pass.

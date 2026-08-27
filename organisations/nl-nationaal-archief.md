@@ -17,11 +17,11 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-27"
 previous_version: null
 successor: null
 
@@ -35,8 +35,8 @@ relationships:
   - type: governed-by
     target: NL-ARCHIEFWET-1995
     source: fact
-    evidence: "Government organisations must in principle transfer records after twenty years to the Nationaal Archief or a local/regional archive service under the Archiefwet (nationaalarchief.nl kennisbank). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading nationaalarchief.nl's own Archiefwet page directly (2026-08-27): government organisations must, in principle, transfer permanently valuable records to the Nationaal Archief (or a local/regional archive service) within twenty years. rijksoverheid.nl's own page, also read directly, states the same rule: 'Daar kan iedereen deze documenten doorzoeken en inzien' (everyone can search and view these documents there) once transferred. nationaalarchief.nl's wet-en-regelgeving page, also read directly, names the Archiefbesluit 1995 and the Archiefregeling as the implementing decree and regulation beneath the Act."
+    confidence: high
     valid_from: null
     valid_until: 2027-01-01
 
@@ -44,19 +44,25 @@ sources:
   - title: "Archiefwet — Kennisbank"
     url: "https://www.nationaalarchief.nl/archiveren/kennisbank/archiefwet"
     publisher: "Nationaal Archief"
+    accessed: "2026-08-27"
   - title: "Wet- en regelgeving — Kennisbank"
     url: "https://www.nationaalarchief.nl/archiveren/kennisbank/wet-en-regelgeving"
     publisher: "Nationaal Archief"
+    accessed: "2026-08-27"
   - title: "Archieven van de overheid"
     url: "https://www.rijksoverheid.nl/themas/overheid-en-democratie/archieven/archieven-van-de-overheid"
     publisher: "Rijksoverheid"
+    accessed: "2026-08-27"
 ---
 
 # Nationaal Archief
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-27.** All three cited pages read directly. Both add a
+> detail not previously recorded: the **Inspectie Overheidsinformatie en
+> Erfgoed** monitors national-government compliance with archive rules
+> (rijksoverheid.nl), and the twenty-year transfer regime sits beneath an
+> Archiefbesluit 1995 and Archiefregeling that the entity's prior text did
+> not name (nationaalarchief.nl).
 
 ## Description
 
@@ -73,9 +79,12 @@ must in principle transfer records after twenty years to the Nationaal
 Archief or to a local or regional archive service.
 
 Batch 3 added both the current [[NL-ARCHIEFWET-1995]] and its successor
-[[NL-ARCHIEFWET-2026]], which takes effect on 1 January 2027 and shortens
-the transfer period from twenty years to ten — a change that bears directly
-on this organisation's intake.
+[[NL-ARCHIEFWET-2026]], which shortens the transfer period from twenty years
+to ten. Its status is more concrete than a "planned" bill this pass: reading
+the Staatsblad directly (for [[NL-ARCHIEFWET-2026]] this pass) confirms the
+Act was signed 13 May 2026 and published as Stb. 2026, 149 on 19 June
+2026 — enacted, with entry into force still set by royal decree, expected
+1 January 2027 per nationaalarchief.nl's own knowledge base.
 
 ## Relationships
 
@@ -89,4 +98,6 @@ on this organisation's intake.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, all three read directly this pass — the Nationaal
+Archief's own Archiefwet and wet-en-regelgeving pages, and rijksoverheid.nl's
+overview page.

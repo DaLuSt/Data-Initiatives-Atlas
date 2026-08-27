@@ -6,10 +6,11 @@ alternative_names:
   - NEN
   - Royal Netherlands Standardization Institute
 description: >
-  The Dutch national standardisation institute. A non-profit foundation
-  holding the Royal predicate, NEN develops and manages national standards
-  and administers the internationally (ISO, IEC) and European (EN) accepted
-  standards recognised in the Netherlands.
+  The Dutch national standardisation institute, founded in 1916. A
+  non-profit foundation holding the Royal predicate since 2016, NEN
+  develops and manages national standards and administers the
+  internationally (ISO, IEC) and European (EN, CENELEC) accepted standards
+  recognised in the Netherlands.
 
 level: national
 country: NL
@@ -18,11 +19,11 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-27"
 previous_version: null
 successor: null
 
@@ -36,8 +37,8 @@ relationships:
   - type: participates-in
     target: EU-CEN
     source: fact
-    evidence: "CEN brings together the national standardisation bodies of 33 European countries; NEN is the standardisation institute of the Netherlands. Membership follows from the sourced composition rule rather than from a source naming NEN. NOT READ — search-only."
-    confidence: medium
+    evidence: "Corrected and upgraded this pass (2026-08-27): previously recorded from the composition rule alone ('membership follows... rather than from a source naming NEN'). Reading nen.nl's own 'Over NEN' page directly finds NEN named explicitly: 'NEN is lid van de Europese en internationale normalisatienetwerken CEN en ISO' (NEN is a member of the European and international standardisation networks CEN and ISO). The page also names IEC, CENELEC and ETSI as networks NEN belongs to, and states NEN manages international secretariats in areas where the Netherlands has particular expertise."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -45,19 +46,23 @@ sources:
   - title: "Over NEN"
     url: "https://www.nen.nl/over-nen"
     publisher: "NEN"
+    accessed: "2026-08-27"
   - title: "NEN (Stichting Koninklijk Nederlands Normalisatie Instituut)"
     url: "https://www.noraonline.nl/wiki/NEN_(Stichting_Koninklijk_Nederlands_Normalisatie_Instituut)"
     publisher: "NORA Online (ICTU)"
+    accessed: "2026-08-27"
   - title: "NEN"
     url: "https://nl.wikipedia.org/wiki/NEN"
     publisher: "Wikipedia"
+    accessed: "2026-08-27"
 ---
 
 # NEN
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-27.** All three cited pages were read directly this
+> pass, closing the previous `search-only` status (never previously
+> `last_verified`). Two corrections and one softened claim resulted — see
+> below.
 
 ## Description
 
@@ -66,32 +71,55 @@ without profit motive, holding the Royal predicate, which brings
 stakeholders together to reach agreements recorded in standards and
 guidelines.
 
-It manages a reported 34,000+ standards, comprising the international (ISO,
-IEC), European (EN) and national (NEN) standards recognised in the
-Netherlands, and works closely with ISO and CEN so that Dutch standards
-align with international ones. NEN was a co-founder of ISO in 1947.
+**Founding date, now sourced precisely at the year level.** Reading
+nl.wikipedia.org's own article directly: NEN's predecessor, the
+*Nederlands Normalisatie-instituut* (NNI), was established in **1916** by
+the Koninklijk Instituut van Ingenieurs (KIvI) and the Nederlandsche
+Maatschappij voor Nijverheid en Handel. The same article states NEN
+received the **Royal predicate in 2016** — its centenary year.
+`start_date` is left `null`: no source read gives an exact founding day for
+1916, and per Atlas practice a year-only claim is recorded in prose rather
+than padded into a specific date.
 
-"NEN" abbreviates *NEderlandse Norm*, and since 8 May 2000 has also been the
-name of the close cooperation between the Stichting Koninklijk Nederlands
-Normalisatie Instituut and the Stichting Koninklijk Nederlands
-Elektrotechnisch Comité (NEC), the latter specialising in electrical
-engineering, information technology and telecommunications standardisation.
-The `name` field records the foundation; the NEC and the combined
-arrangement are not separately modelled, which may need revisiting.
+It manages a reported **34,000+ standards**, comprising the international
+(ISO, IEC), European (EN, CENELEC) and national (NEN) standards recognised
+in the Netherlands, confirmed directly on nen.nl's own page, which also
+names **ETSI** as a fourth international network NEN belongs to (not
+previously recorded here).
+
+"NEN" abbreviates *NEderlandse Norm*, and since **8 May 2000** — confirmed
+directly via nl.wikipedia.org — has also been the name of the close
+cooperation between the Stichting Koninklijk Nederlands Normalisatie
+Instituut and the **Stichting Koninklijk Nederlands Elektrotechnisch
+Comité (NEC)**, the latter founded 17 March 1911 and specialising in
+electrical engineering, information technology and telecommunications
+standardisation. The two bodies maintain separate governance structures
+while sharing facilities in Delft. The `name` field records the
+foundation; the NEC and the combined arrangement are not separately
+modelled, which may need revisiting.
+
+**Unconfirmed this pass: the claim that NEN was "a co-founder of ISO in
+1947."** No page read — nen.nl, the NORA wiki, or Dutch Wikipedia —
+states this, and a targeted search for it turned up nothing beyond the
+uncontroversial facts that NEN was founded in 1916 and ISO in 1947. The
+claim is downgraded from stated fact to unconfirmed and should not be
+repeated as established without a source.
 
 ## Relationships
 
 - Complementary to [[NL-FORUM-STANDAARDISATIE]]: NEN operates the formal
   national standards infrastructure, while Forum Standaardisatie governs
   which open standards public bodies must apply. No relationship is
-  asserted between them, as none was sourced.
-- Participates in [[EU-CEN]], added in Batch 9. As with [[NL-AP]] and the
-  EDPB, the evidence is a composition rule rather than a source naming NEN.
-- ISO and IEC remain unmodelled (Batch 13), so those relationships are still
-  unassertable. [[EU-CENELEC]] is the European counterpart of the Dutch NEC,
-  with which NEN has cooperated since 2000 — see the open modelling question
-  about whether NEC warrants its own entity.
+  asserted between them, as none was sourced this pass either.
+- `participates-in` [[EU-CEN]] — now confirmed by a source naming NEN
+  directly, not only by the composition rule (see relationship evidence).
+- ISO and IEC remain unmodelled, so those relationships are still
+  unassertable, though nen.nl confirms NEN's membership in both.
+  [[EU-CENELEC]] is the European counterpart of the Dutch NEC, with which
+  NEN has cooperated since 8 May 2000 (date now sourced) — see the open
+  modelling question about whether NEC warrants its own entity.
 
 ## Sources
 
-Listed in frontmatter.
+All three read directly this pass: nen.nl's own "Over NEN" page, the NORA
+Online wiki entry, and the Dutch Wikipedia article.

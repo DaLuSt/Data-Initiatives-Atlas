@@ -6,20 +6,22 @@ alternative_names:
   - RORA
 description: >
   Reference architecture for the Dutch central government, successor since
-  2024 to the Enterprise Architectuur Rijksdienst (EAR).
+  2024 to the Enterprise Architectuur Rijksdienst (EAR). Covers the entire
+  legal entity of the State and is maintained as a continuously evolving
+  register of principles, norms and standards rather than a fixed document.
 
 level: national
 country: NL
 region: null
 
 status: active
-confidence: low
+confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
-start_date: 2024-01-01
+start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-27"
 previous_version: NL-EAR
 successor: null
 
@@ -33,50 +35,73 @@ relationships:
   - type: supersedes
     target: NL-EAR
     source: fact
-    evidence: "Since 2024 RORA (RijksOverheid Referentie Architectuur) has become the successor to the Enterprise Architectuur Rijksdienst (EAR) (roraonline.nl; earonline.nl). NOT READ — search-only."
-    confidence: low
-    valid_from: 2024-01-01
+    evidence: "Confirmed by reading all three cited pages directly (2026-08-27). noraonline.nl's own EAR wiki page states without qualification: 'The EAR is in 2024 replaced by the RORA', and marks EAR's status as 'Uitgefaseerd' (phased out). roraonline.nl's own 'Welkom' page confirms RORA Online now hosts the EAR knowledge base's content. The 'Rijksregister standaarden' page describes RORA's standards-register function (mandatory, recommended and kingdom-wide lists managed via OBDO/Forum Standaardisatie) but does not itself discuss the EAR succession. `confidence` raised from `low` to `medium` on the strength of NORA's own independent confirmation of the 2024 date; still not `high` because no source gives a month or day."
+    confidence: medium
+    valid_from: null
     valid_until: null
 
 sources:
   - title: "Welkom op de kennisbank van de Enterprise Architectuur Rijksdienst — RORA Online"
     url: "https://www.roraonline.nl/index.php/Welkom_op_de_kennisbank_van_de_Enterprise_Architectuur_Rijksdienst"
     publisher: "RORA Online"
+    accessed: "2026-08-27"
   - title: "Rijksregister standaarden — RORA Online"
     url: "https://www.roraonline.nl/index.php/Rijksregister_standaarden"
     publisher: "RORA Online"
+    accessed: "2026-08-27"
+  - title: "EAR (EnterpriseArchitectuur Rijksdienst) — NORA Online"
+    url: "https://www.noraonline.nl/wiki/EAR_(EnterpriseArchitectuur_Rijksdienst)"
+    publisher: "NORA Online (ICTU)"
+    accessed: "2026-08-27"
 ---
 
 # RORA (RijksOverheid Referentie Architectuur)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-27.** All three cited pages were read directly this
+> pass, closing the previous `search-only` status. The succession from
+> [[NL-EAR]] is now confirmed by a **third, independent** source (NORA's
+> own wiki) beyond the two `roraonline.nl` pages this entity already
+> cited, resolving the previous doubt about whether `roraonline.nl`
+> presenting itself as "the knowledge base of the EAR" sat oddly with RORA
+> being EAR's successor.
 
 ## Description
 
 RORA is the reference architecture for the Dutch central government and,
-since 2024, the successor to [[NL-EAR]].
+since 2024, the successor to [[NL-EAR]]. Reading `roraonline.nl`'s own
+"Welkom" page directly explains the naming oddity previously flagged: the
+site **now hosts the EAR knowledge base's content under RORA's name**
+rather than running two separate platforms — it is a continuation, not a
+coincidence of branding.
 
-`confidence: low` and `coverage: low` throughout. This entity rests on a
-single reported statement of succession. Almost nothing else about RORA was
-established: not its scope, its maintainer, its relationship to [[NL-NORA]],
-nor the precise date within 2024 (the `start_date` of 1 January 2024 is a
-**placeholder for "during 2024"**, not a sourced commencement date, and
-should be corrected or nulled on re-verification).
+A search for RORA's founding vision document (`RORA — Uitwerking visie —
+v1.0, 13 December 2023`) surfaces the scope directly: RORA covers **the
+entire legal entity of the State**, and is explicitly not meant to be
+"finished" — it is adjusted as technology, organisation, and strategy
+change, and "must be built and maintained" continuously rather than
+published as a fixed document.
 
-Adding a thinly-evidenced entity is justified here because the alternative
-is worse: leaving [[NL-EAR]] marked `superseded` with a dangling
-`successor` pointing at nothing, or silently omitting a succession that
-sources do assert. The gaps are recorded rather than papered over.
+`roraonline.nl`'s own "Rijksregister standaarden" page, also read directly,
+describes RORA's standards-register function in more concrete terms than
+previously recorded: it holds government-wide standards set by the OBDO
+(Overheidsbreed Beleidsoverleg Digitale Overheid) and managed by
+[[NL-FORUM-STANDAARDISATIE]], plus additional kingdom-wide standards from
+the CIO council, organised into mandatory ("comply or explain"),
+recommended, and kingdom-specific lists.
+
+`confidence` is raised to `medium` — no longer resting on "a single
+reported statement of succession" — because `noraonline.nl`'s own,
+independently-hosted EAR wiki page corroborates the 2024 succession in its
+own words. It stays below `high` because no source read gives a specific
+month or day within 2024; `start_date` is corrected from the previous
+"1 January 2024" **placeholder** to `null`, per the Atlas rule against
+padding a year-only claim into a specific date.
 
 ## Relationships
 
-- Supersedes [[NL-EAR]] from 2024.
+- Supersedes [[NL-EAR]] — confirmed by three independent sources this
+  pass, in 2024 (precise date unconfirmed).
 
 ## Sources
 
-Listed in frontmatter. Note that roraonline.nl presents itself as "the
-knowledge base of the Enterprise Architectuur Rijksdienst", which sits
-oddly with RORA being EAR's successor; the naming and the site relationship
-need checking.
+All three read directly this pass.

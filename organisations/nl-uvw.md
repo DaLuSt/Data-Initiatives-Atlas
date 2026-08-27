@@ -19,11 +19,11 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-27"
 previous_version: null
 successor: null
 
@@ -37,49 +37,82 @@ relationships:
   - type: participates-in
     target: NL-OBDO
     source: fact
-    evidence: "UvW is listed among OBDO members alongside ministries, CIO Rijk, VNG and IPO (digitaleoverheid.nl MIDO governance page). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading ibestuur.nl's article on the OBDO directly (2026-08-27), quoting the OBDO's own governance description: 'In dit overleg zijn alle departementen, Interprovinciaal Overleg (IPO), Unie van Waterschappen (UvW), CIO-Rijk en de voorzitter van de Programmeringsraad Logius vertegenwoordigd' (all ministries, IPO, UvW, CIO-Rijk and the chair of the Logius Programming Council are represented). Both originally-cited pages (unievanwaterschappen.nl and digitaleoverheid.nl) returned HTTP 403 / a bot-verification challenge on every fetch attempt this pass — genuinely blocked, not silently dropped — so this edge is now sourced to an alternate primary-adjacent report rather than to either original citation."
+    confidence: high
     valid_from: null
     valid_until: null
 
 sources:
-  - title: "Heidag digitalisering decentrale overheden"
+  - title: "Heidag digitalisering decentrale overheden (confirmed genuinely blocked, HTTP 403)"
     url: "https://unievanwaterschappen.nl/heidag-digitalisering-decentrale-overheden/"
     publisher: "Unie van Waterschappen"
-  - title: "Organisaties rondom digitalisering"
+  - title: "Organisaties rondom digitalisering (confirmed genuinely bot-walled)"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/organisaties-rondom-digitalisering/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
+  - title: "OBDO stelt Architectuur Digitale Overheid 2030 vast"
+    url: "https://ibestuur.nl/artikel/obdo-stelt-architectuur-digitale-overheid-2030-vast/"
+    publisher: "iBestuur"
+    accessed: "2026-08-27"
+  - title: "Unie van Waterschappen — Wikipedia"
+    url: "https://nl.wikipedia.org/wiki/Unie_van_Waterschappen"
+    publisher: "Wikipedia"
+    accessed: "2026-08-27"
+  - title: "Partners | Het Waterschapshuis"
+    url: "https://www.hetwaterschapshuis.nl/partners"
+    publisher: "Het Waterschapshuis"
+    accessed: "2026-08-27"
 ---
 
 # Unie van Waterschappen (UvW)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-27, sources rebuilt.** Both originally-cited pages
+> (unievanwaterschappen.nl, digitaleoverheid.nl) are confirmed genuinely
+> blocked to direct fetch on every attempt this pass — HTTP 403 and a
+> bot-verification challenge respectively. Three alternate sources were
+> found and read directly to replace them: iBestuur's OBDO reporting,
+> Wikipedia, and Het Waterschapshuis's own partners page. `verification`
+> moves from `search-only` to `primary-source` on the strength of those
+> alternates, per the Atlas's established practice of substituting reachable
+> primary-adjacent sources when an entity's original citations are
+> genuinely stuck.
 
 ## Description
 
 The Unie van Waterschappen represents the twenty-one Dutch water
-authorities. In the Atlas's scope it supports joint digital developments
-across those authorities, for example in data management and information
-security, and represents the water-authority tier in government-wide digital
-governance including the [[NL-OBDO]].
+authorities. Confirmed by reading nl.wikipedia.org directly: it was
+established in 1927 when provincial water-board associations unified into a
+national federation, and its role is "belangenbehartiging en het stimuleren
+van kennisuitwisseling, samenwerking en innovatie" (interest representation
+and fostering knowledge sharing, collaboration and innovation) — it
+represents the waterschappen nationally and internationally, with around 70
+staff. Wikipedia's own article, read directly, does not itself describe a
+digital-government or data-governance role.
 
-Shared ICT facilities for the twenty-one water authorities are developed and
-managed by Het Waterschapshuis, a separate body that is not yet an Atlas
-entity — it is queued in `discovery/research-queue.md`, since sourcing for
-it in Batch 2 amounted to a single passing mention.
+That role is confirmed by other sources read directly this pass. iBestuur's
+reporting on the [[NL-OBDO]]'s own governance names the UvW explicitly as a
+represented body. Het Waterschapshuis's own partners page, read directly,
+distinguishes the two organisations precisely: the UvW "represents the water
+authorities in the national and international arena," while Het
+Waterschapshuis is a separate, independent regieorganisatie that "the
+waterschappen themselves" established to manage shared ICT and ensure the
+authorities "benefit from collaborations" — confirming the existing text's
+description of Het Waterschapshuis as a distinct body, not a UvW subsidiary.
+Het Waterschapshuis itself is still not an Atlas entity; queued in
+`discovery/research-queue.md`.
 
-The UvW, [[NL-VNG]] and [[NL-IPO]] jointly set digitalisation priorities:
-research indicates the three umbrella organisations met to establish shared
-priorities and working agreements, though the date and standing of that
-meeting were not verified.
+The claim that the UvW, [[NL-VNG]] and [[NL-IPO]] jointly set digitalisation
+priorities was not confirmed by any page read this pass and is left as an
+unsourced association rather than an asserted relationship.
 
 ## Relationships
 
-- Participates in [[NL-OBDO]].
-- Co-signatory tier of [[NL-NDS]], with [[NL-VNG]] and [[NL-IPO]].
+- Participates in [[NL-OBDO]] — confirmed this pass via iBestuur's reporting
+  on the OBDO's own governance description, which names the UvW explicitly.
+- The claimed co-signatory role on [[NL-NDS]] with [[NL-VNG]] and [[NL-IPO]]
+  was not re-confirmed by any source read this pass; left as an unsourced
+  association. See `discovery/unresolved.md`.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter. iBestuur, Wikipedia and Het Waterschapshuis read
+directly this pass; both original sources are confirmed genuinely blocked.

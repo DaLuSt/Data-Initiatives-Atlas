@@ -18,11 +18,11 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2022-05-01
 end_date: null
-last_verified: null
+last_verified: "2026-08-27"
 previous_version: NL-WOB
 successor: null
 
@@ -36,8 +36,8 @@ relationships:
   - type: supersedes
     target: NL-WOB
     source: fact
-    evidence: "The Woo entered into force on 1 May 2022 and replaced the Wet openbaarheid van bestuur (rijksoverheid.nl Woo theme page). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading rijksoverheid.nl's own Woo theme page directly (2026-08-27): 'Sinds 1 mei 2022 regelt de Wet open overheid...' (Since 1 May 2022 the Woo has regulated...). kbvg.nl (recorded on NL-WOB) and om.nl, both also read directly, confirm the same date: 'the Woo entered into effect on May 1, 2022, replacing the previous Freedom of Information law (Wob).'"
+    confidence: high
     valid_from: 2022-05-01
     valid_until: null
 
@@ -45,38 +45,47 @@ sources:
   - title: "Wet open overheid (Woo)"
     url: "https://www.rijksoverheid.nl/themas/overheid-en-democratie/wet-open-overheid-woo"
     publisher: "Rijksoverheid"
+    accessed: "2026-08-27"
   - title: "Inwerkingtreding Wet open overheid (Woo)"
     url: "https://www.dnb.nl/nieuws-voor-de-sector/toezicht-2022/inwerkingtreding-wet-open-overheid-woo/"
     publisher: "De Nederlandsche Bank"
+    accessed: "2026-08-27"
   - title: "Wet open overheid"
     url: "https://www.om.nl/onderwerpen/w/wet-open-overheid"
     publisher: "Openbaar Ministerie"
+    accessed: "2026-08-27"
 ---
 
 # Wet open overheid (Woo)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-27.** All three cited pages were read directly.
+> `verification` moves from `search-only` to `primary-source`.
 
 ## Description
 
-The Woo is the Dutch open government act. It entered into force on
-1 May 2022, replacing the [[NL-WOB]].
+The Woo is the Dutch open government act. Confirmed by all three pages read
+directly this pass: it entered into force on 1 May 2022, replacing the
+[[NL-WOB]].
 
 Its principal innovation concerns **active** disclosure. Under the Wob,
 disclosure was primarily passive — triggered by a citizen's request (the
-Wob-verzoek). The Woo retains that route largely unchanged but adds an
-obligation on public bodies to proactively disclose designated categories of
-information in advance, including personal policy views (persoonlijke
-beleidsopvattingen). Information older than five years is presumed
-disclosable. The deadline for handling a request is four weeks, extendable
-by two.
+Wob-verzoek). The Woo retains that route largely unchanged: om.nl, read
+directly, confirms "the government has four weeks to respond, extendable by
+two weeks if needed," and adds an obligation on public bodies to
+proactively disclose designated categories of information in advance.
+DNB's own supervisory notice, read directly, adds a transitional detail not
+previously recorded: information DNB held before 1 May 2022 concerning its
+public duties cannot itself be requested under the Woo until 1 May 2025 —
+new information generated after the law's effective date is immediately
+requestable. The claims about personal policy views (persoonlijke
+beleidsopvattingen), the five-year presumption of disclosability, and the
+proactive-disclosure category list were not independently re-confirmed by
+any page read this pass and are carried over from the prior text rather
+than newly verified.
 
-Note that several of the sources located are secondary (a bank's supervisory
-notice, law-firm commentary). The rijksoverheid theme page is the
-authoritative one among them, and the statutory text itself has not been
-consulted.
+All three cited sources were read directly this pass — the government theme
+page, a supervisory authority's own notice, and a prosecution service's own
+page. The statutory text itself has still not been consulted.
 
 ## Classification
 
@@ -94,4 +103,4 @@ adjacent ground but transposing an EU directive.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, all three read directly this pass.

@@ -18,11 +18,11 @@ region: null
 status: active
 confidence: low
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-27"
 previous_version: null
 successor: null
 
@@ -37,7 +37,7 @@ relationships:
   - type: based-on
     target: NL-NORA
     source: fact
-    evidence: "NORA has daughter architectures (NORA dochters) from government domains, including EAR for central government, GEMMA for municipalities, PETRA for the provinces and WILMA for the water boards, alongside domain and chain architectures such as ROSA for education, KARWEI for work and income and SRK for the criminal justice chain (noraonline.nl/wiki/NORA_dochters; noraonline.nl/wiki/Visie_op_dochters; nl.wikipedia.org 'Nederlandse Overheid Referentie Architectuur'). NOT READ — search-only. This entity is PETRA, the provincial architecture, named in that list."
+    evidence: "Confirmed by reading nl.wikipedia.org's own 'Nederlandse Overheid Referentie Architectuur' article directly (2026-08-27): NORA has spawned sector-specific daughter architectures, and 'PETRA (Provinciale Referentie Architectuur) provides the foundation for the architecture of provinces' — alongside GEMMA for municipalities, WILMA for water authorities, and RORA (which the same article states has 'since 2024' replaced the earlier EAR) for central government. These stand to NORA as NORA stands to the European Interoperability Reference Architecture (EIRA) — hierarchical implementations of broader principles."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -46,34 +46,52 @@ sources:
   - title: "Nederlandse Overheid Referentie Architectuur"
     url: "https://nl.wikipedia.org/wiki/Nederlandse_Overheid_Referentie_Architectuur"
     publisher: "Wikipedia"
+    accessed: "2026-08-27"
 ---
 
 # PETRA (Provinciale Enterprise Referentie Architectuur)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-27.** The single cited page was read directly this
+> pass, confirming the one relationship it supports and surfacing a naming
+> discrepancy. `verification` moves from `search-only` to `primary-source`
+> — on the strength of reading the one source this entity has, not because
+> a majority of many sources was reached; this remains, honestly, a
+> thinly-sourced entity.
 
 ## Description
 
 PETRA is the reference architecture for the Dutch provinces — the
 provincial counterpart to [[NL-GEMMA]] for municipalities and
-[[NL-EAR]]/[[NL-RORA]] for central government.
+[[NL-EAR]]/[[NL-RORA]] for central government. Confirmed by reading the
+Wikipedia article directly this pass: RORA has "since 2024" replaced EAR as
+the central-government reference architecture — a detail newly confirmed
+this pass and relevant to whichever of [[NL-EAR]]/[[NL-RORA]] is current at
+any given date, though those entities belong to a different batch and are
+not edited here.
 
-**This is the weakest entity in Batch 4 and should be treated with
-caution.** It rests on a single sentence in one secondary source (a
-Wikipedia article on NORA) which named PETRA alongside the other
-architectures. No provincial or IPO source for PETRA was located, its
-maintainer was not established, its relationship to [[NL-NORA]] is not
-sourced, and even the expansion of the acronym is uncertain — sources gave
-both "Provinciale Enterprise Referentie Architectuur" and "Provinciale
-Referentie Architectuur".
+**This remains the weakest entity in its research generation and should be
+treated with caution**, even though its one source is now read directly
+rather than merely indexed. It rests on a single sentence in one secondary
+source (a Wikipedia article on NORA) which named PETRA alongside the other
+architectures — reading the page directly did not surface additional
+substance, only confirm what was already recorded. No provincial or IPO
+source for PETRA was located this pass either, its maintainer is still not
+established, and **the acronym expansion is now more clearly wrong than
+uncertain**: the Wikipedia article, read directly, expands PETRA only as
+"Provinciale Referentie Architectuur" — it does not use "Enterprise"
+anywhere. The entity's own `id`/title uses "Provinciale Enterprise
+Referentie Architectuur," which no source read (this pass or previously)
+supports; this is flagged rather than silently changed, since renaming the
+entity's title is outside this pass's scope and the source for "Enterprise"
+might exist elsewhere and simply not have surfaced. See
+`discovery/unresolved.md`.
 
 It is included because Batch 4's scope names PETRA explicitly, and
 recording a poorly-sourced entity with its weakness stated is more useful
 than silently omitting a named scope item. The `organisations: [NL-IPO]`
 association is an **Atlas assumption** from the provincial tier, not a
-sourced statement of ownership.
+sourced statement of ownership — nothing read this pass names IPO as
+PETRA's maintainer or owner.
 
 WILMA (the water authorities' reference architecture) was named in the same
 source sentence but is **not** created here: it is not named in the batch
@@ -82,16 +100,16 @@ scope and rests on the same single mention. It is queued in
 
 ## Relationships
 
-`based-on` [[NL-NORA]] is **now sourced** — NORA's own wiki lists PETRA
-among its *dochters*, as the architecture for the provinces, alongside EAR,
-GEMMA, WILMA and [[NL-ROSA]]. That closes the more important of the two gaps
-below.
+`based-on` [[NL-NORA]] — confirmed by directly reading NORA's own Wikipedia
+coverage, which lists PETRA among its *dochters*, as the architecture for
+the provinces, alongside EAR/RORA, GEMMA and WILMA.
 
-`maintained-by` a provincial body is still unasserted, and the rest of this
-entity's weaknesses stand. The remaining unsourced items are what could not be
-sourced, and asserting them would be guessing.
+`maintained-by` a provincial body is still unasserted — no source read
+names one — and the naming and maintainer weaknesses above stand. The
+remaining unsourced items are what could not be sourced, and asserting them
+would be guessing.
 
 ## Sources
 
-Listed in frontmatter — a single secondary source, low in the README's
-preference order.
+Listed in frontmatter — a single source, now read directly, still low in
+the README's preference order (secondary, Wikipedia).

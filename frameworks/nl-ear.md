@@ -5,23 +5,24 @@ name: Enterprise Architectuur Rijksdienst
 alternative_names:
   - EAR
 description: >
-  Enterprise architecture for the Dutch central government, addressing the
-  organisation of information provision for the Concern Rijksdienst and
-  describing both the current situation and the intended future arrangement.
-  Succeeded from 2024 by the RijksOverheid Referentie Architectuur (RORA).
+  Enterprise architecture for the Dutch central government, formally
+  established 10 June 2014 (replacing an earlier architecture, MARIJ),
+  addressing the organisation of information provision for the Concern
+  Rijksdienst. Replaced in 2024 by the RijksOverheid Referentie
+  Architectuur (RORA).
 
 level: national
 country: NL
 region: null
 
 status: superseded
-confidence: low
+confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-27"
 previous_version: null
 successor: NL-RORA
 
@@ -35,25 +36,37 @@ relationships:
   - type: based-on
     target: NL-NORA
     source: fact
-    evidence: "NORA has daughter architectures (NORA dochters) from government domains, including EAR for central government, GEMMA for municipalities, PETRA for the provinces and WILMA for the water boards, alongside domain and chain architectures such as ROSA for education, KARWEI for work and income and SRK for the criminal justice chain (noraonline.nl/wiki/NORA_dochters; noraonline.nl/wiki/Visie_op_dochters; nl.wikipedia.org 'Nederlandse Overheid Referentie Architectuur'). NOT READ — search-only. This entity is EAR, the central-government architecture, named in that list."
-    confidence: medium
+    evidence: "Confirmed by reading noraonline.nl's own 'NORA_dochters' page directly (2026-08-27): NORA's daughter architectures ('NORA dochters') include EAR for central government, GEMMA for municipalities, PETRA for the provinces and WILMA for the water boards, alongside domain and chain architectures such as ROSA for education. The same page marks EAR's status as 'Vervangen' (replaced) and names RORA as its replacement. This closes the previous 'NOT READ — search-only' gap."
+    confidence: high
     valid_from: null
     valid_until: null
 
 sources:
-  - title: "Wat is de Enterprise Architectuur Rijksdienst"
-    url: "https://www.earonline.nl/index.php/Wat_is_de_Enterprise_Architectuur_Rijksdienst"
-    publisher: "EAR Online"
-  - title: "Beheermodel Enterprise Architectuur Rijksdienst"
-    url: "https://www.earonline.nl/index.php/Beheermodel_Enterprise_Architectuur_Rijksdienst"
-    publisher: "EAR Online"
+  - title: "The EAR (EnterpriseArchitectuur Rijksdienst) — NORA Online"
+    url: "https://www.noraonline.nl/wiki/EAR_(EnterpriseArchitectuur_Rijksdienst)"
+    publisher: "NORA Online (ICTU)"
+    accessed: "2026-08-27"
+  - title: "Status en beheer EAR — RORA Online"
+    url: "https://www.roraonline.nl/index.php/Status_en_beheer_EAR"
+    publisher: "RORA Online"
+    accessed: "2026-08-27"
+  - title: "NORA dochters — NORA Online"
+    url: "https://www.noraonline.nl/wiki/NORA_dochters"
+    publisher: "NORA Online (ICTU)"
+    accessed: "2026-08-27"
 ---
 
 # EAR (Enterprise Architectuur Rijksdienst)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-27 — sources replaced, not just re-checked.** This
+> entity's original two cited pages, both on `earonline.nl`, are now
+> **genuinely dead**: the domain fails to resolve entirely (DNS
+> `ENOTFOUND`), not merely blocked. Per the re-verification discipline,
+> WebSearch was used to find working alternate sources covering the same
+> facts, all on the related `roraonline.nl` and `noraonline.nl` domains
+> (which host the same EAR knowledge base under new custodianship), and all
+> three were read directly. `earonline.nl` has been dropped from the
+> frontmatter `sources` list and replaced.
 
 ## Description
 
@@ -64,23 +77,43 @@ Rijksdienst. It sat alongside [[NL-GEMMA]] (municipalities) and
 [[NL-PETRA]] (provinces) as the central-government member of the Dutch
 reference-architecture family.
 
-Search results state that since 2024 [[NL-RORA]] (RijksOverheid Referentie
-Architectuur) has become the successor to the EAR. `status: superseded` is
-recorded on that basis, with `successor` set accordingly.
+**Formal establishment, now sourced precisely.** Reading
+`roraonline.nl`'s own "Status en beheer EAR" page directly (a page that
+itself discusses EAR's founding, despite being hosted on what is now the
+successor's site) gives an exact sequence: the Interdepartementale
+Commissie Chief Information Officers (ICCIO) approved the EAR on **5 June
+2014**, and the Interdepartementale Commissie Bedrijfsvoering Rijksdienst
+(ICBR) formally established it five days later, on **10 June 2014** — "
+daarmee is de EAR formeel vastgesteld." The same page states the EAR
+itself **replaced an earlier architecture, MARIJ** ("De EAR vervangt
+daarmee de MARIJ") — a predecessor not previously recorded here and not
+itself modelled.
 
-`coverage: low`: the EAR's own content, its start date, and the exact date
-and mechanism of the transition to RORA were not established. Note that
-earonline.nl still appears to be live while roraonline.nl describes itself as
-the EAR knowledge base — the relationship between the two sites is unclear
-and is recorded in `discovery/unresolved.md`. Status here follows a
-positive statement of succession, not an inference from site availability.
+**Succession by RORA, now confirmed directly rather than inferred from
+site branding.** `noraonline.nl`'s own EAR wiki page states without
+qualification: "The EAR is in 2024 replaced by the RORA," and marks the
+EAR's status as **"Uitgefaseerd"** (phased out). The `NORA_dochters` page
+independently corroborates: it lists EAR's status as "Vervangen" and RORA
+as the current central-government member of the NORA family in its place.
+`start_date` for the succession is left `null` on the [[NL-RORA]] side —
+no source read gives a month or day within 2024, only the year, so the
+previous "1 January 2024" placeholder there is corrected to `null`.
+
+The previously-recorded ambiguity about `earonline.nl` still being live
+while `roraonline.nl` calls itself "the knowledge base of the Enterprise
+Architectuur Rijksdienst" is now resolved in the domain's favour of
+`roraonline.nl`: `earonline.nl` no longer resolves at all, and
+`roraonline.nl` demonstrably hosts current EAR/RORA content, including the
+EAR's own establishment history.
 
 ## Relationships
 
-- Superseded by [[NL-RORA]] (recorded on that entity).
-- Part of the reference-architecture family descending from [[NL-NORA]];
-  the formal derivation was not sourced and is therefore not asserted.
+- Superseded by [[NL-RORA]] (recorded on that entity) — confirmed directly,
+  in 2024.
+- `based-on` [[NL-NORA]] — now `source: fact`, confirmed via NORA's own
+  "dochters" (daughters) wiki page naming EAR explicitly.
 
 ## Sources
 
-Listed in frontmatter.
+All three read directly this pass, replacing the two dead `earonline.nl`
+URLs this entity previously cited.

@@ -22,11 +22,11 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-27"
 previous_version: null
 successor: null
 
@@ -43,22 +43,22 @@ relationships:
   - type: governed-by
     target: NL-HANDELSREGISTERWET
     source: fact
-    evidence: "The Handelsregisterwet 2007 is the statutory basis of the Handelsregister, the Dutch commercial register (wetten.overheid.nl/BWBR0021777). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading wetten.overheid.nl's own text of BWBR0021777 directly (2026-08-27): 'Wet van 22 maart 2007, houdende regels omtrent een basisregister van ondernemingen en rechtspersonen (Handelsregisterwet 2007)' — rules concerning a basic register of enterprises and legal entities, maintained by the Kamer van Koophandel. This closes the item this entity previously called out as the one register with no statutory basis modelled at all: the Act is confirmed by name, date and content."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: part-of
     target: NL-BASISREGISTRATIES
     source: fact
-    evidence: "The ten base registrations are the BRP, HR (Handelsregister), BAG, BRT, BRK, BRV, BRI, WOZ, BGT and BRO (digitaleoverheid.nl '10 basisregistraties'; data.overheid.nl; noraonline.nl 'Het huidige Stelsel van Basisregistraties'). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading data.overheid.nl's basisregistraties_10 group listing directly (2026-08-27), which names 'Basisregistratie: Handelsregister (HR)' among the ten. digitaleoverheid.nl's dedicated HR page returned a bot-verification wall on two separate attempts this pass and is confirmed genuinely unreadable in this environment, not merely unread."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: maintained-by
     target: NL-KVK
     source: fact
-    evidence: "The handelsregister is a public register containing information about businesses and legal entities active in the Netherlands, managed by the Kamer van Koophandel (catalogus.kadaster.nl/brk 'Handelsregister'; digitaleoverheid.nl). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading catalogus.kadaster.nl's own BRK catalogue page directly (2026-08-27): the Handelsregister is 'gerelateerd aan' (related to) the BRK and defined there as 'a register of enterprises and legal entities,' managed by the Kamer van Koophandel — corroborated by the Handelsregisterwet 2007's own text (Article 2), also read directly this pass, which assigns the register to the Kamer van Koophandel."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -66,19 +66,28 @@ sources:
   - title: "Handelsregister | Basisregistratie Kadaster (BRK)"
     url: "https://catalogus.kadaster.nl/brk/nl/page/Handelsregister"
     publisher: "Kadaster"
-  - title: "Handelsregister (HR) — Stelsel van basisregistraties"
+    accessed: "2026-08-27"
+  - title: "Handelsregister (HR) — Stelsel van basisregistraties (confirmed bot-walled, not read)"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/10-basisregistraties/hr/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
   - title: "Basisregistraties: de 10 basisregistraties"
     url: "https://data.overheid.nl/community/group/basisregistraties_10"
     publisher: "data.overheid.nl"
+    accessed: "2026-08-27"
+  - title: "Handelsregisterwet 2007 — official text"
+    url: "https://wetten.overheid.nl/BWBR0021777"
+    publisher: "Overheid.nl (Basiswettenbestand)"
+    accessed: "2026-08-27"
 ---
 
 # NHR — Handelsregister
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-27.** Three of four cited pages read directly, plus
+> the Handelsregisterwet 2007's official text added and read as a fourth
+> source. This closes the item this entity previously flagged as the one
+> register in the batch with no statutory basis modelled at all.
+> digitaleoverheid.nl's HR page is confirmed genuinely bot-walled in this
+> environment, not merely unread.
 
 ## Description
 
@@ -91,24 +100,20 @@ records that KvK numbers are increasingly carried in BRK products for
 organisations — a concrete, sourced instance of two base registries sharing
 a key.
 
-## The one register whose statutory basis is not modelled at all
+## The statutory basis, now confirmed by the Act's own text
 
-Nine of the ten registers in this batch have at least a named statute in
-their description. This one does not: **no source read names the
-Handelsregisterwet or gives its year**, so nothing is asserted, not even in
-prose beyond this paragraph.
-
-That is a narrower gap than it looks. The Atlas has a `governed-by` edge for
-[[NL-BRP]] because [[NL-WET-BRP]] already existed as an entity from Batch 3.
-For the other nine registers the statutes are named in descriptions where
-sourced and **no law entity was created for any of them** — see
-[[NL-BASISREGISTRATIES]] for why that was a deliberate scope limit rather
-than an omission.
+This entity previously flagged itself as the one register in the batch with
+**no statutory basis modelled at all**. Reading wetten.overheid.nl's own
+text of the Handelsregisterwet 2007 (BWBR0021777) directly this pass closes
+that gap: "Wet van 22 maart 2007, houdende regels omtrent een basisregister
+van ondernemingen en rechtspersonen" — a basic register of enterprises and
+legal entities, assigned to the Kamer van Koophandel.
 
 ## Relationships
 
 - `part-of` [[NL-BASISREGISTRATIES]].
 - `maintained-by` [[NL-KVK]].
+- `governed-by` [[NL-HANDELSREGISTERWET]] — confirmed this pass; see above.
 
 **No relationship to [[NL-BRK]] is asserted**, despite the shared KvK
 number, for the reason set out on [[NL-BRP]]: the Atlas has no relationship
@@ -116,4 +121,8 @@ type for a key-sharing coupling between two registers.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, three of four read directly this pass — the BRK
+catalogue's Handelsregister page, the data.overheid.nl group listing, and
+the Handelsregisterwet 2007's own official text (added this pass).
+digitaleoverheid.nl's HR page is confirmed genuinely bot-walled in this
+environment on two separate attempts, not merely unread.
