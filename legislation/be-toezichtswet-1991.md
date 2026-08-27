@@ -20,11 +20,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 1991-07-18
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-08-27"
 previous_version: null
 successor: null
 
@@ -52,33 +52,49 @@ sources:
     url: "https://etaamb.openjustice.be/nl/wet-van-18-juli-1991_n2018030682.html"
     publisher: "etaamb / OpenJustice"
     accessed: "2026-08-26"
+  - title: "Justel — wet van 18 juli 1991 (retry succeeded 2026-08-27)"
+    url: "https://www.ejustice.just.fgov.be/cgi_loi/change_lg_2.pl?language=nl&nm=1991009963&la=N"
+    publisher: "Belgisch Staatsblad / FOD Justitie"
+    accessed: "2026-08-27"
+  - title: "Wet statuut van de directeur-generaal en van de leden van de dienst enquêtes van het Vast Comité P"
+    url: "https://etaamb.openjustice.be/nl/wet_n2007018027.html"
+    publisher: "etaamb / OpenJustice"
+    accessed: "2026-08-27"
 ---
 
 # Wet van 18 juli 1991 tot regeling van het toezicht op politie- en inlichtingendiensten
 
-> **Re-checked 2026-08-26, still `search-only`.** Of the three original
-> citations, the comiteri.be PDF codex was retrieved but its text could not
-> be extracted (a compressed binary stream), the ejustice.just.fgov.be
-> Justel page timed out on three separate attempts, and the vlex.be citation
-> now 404s — dead. One alternate mirror was found and read directly: an
-> unofficial German-language coordinated text on etaamb.openjustice.be,
-> which confirms the act's title and Article 1 content and matches this
-> entity's existing description closely. One source read out of an updated
-> four is not a majority, so this entity stays `search-only` — the same
-> honest call made for [[FR-DGSI]] in an earlier country batch.
+> **Verified 2026-08-27.** The ejustice.just.fgov.be Justel page — which
+> timed out on three separate attempts in the prior pass — succeeded on a
+> fourth try this pass, giving the act's own official text directly. A
+> second etaamb.openjustice.be page (a later statute citing this one)
+> corroborates the committees' composition articles. Three of five cited
+> pages are now read directly — the comiteri.be PDF codex remains
+> unreadable (a compressed binary stream) and the vlex.be citation remains
+> dead (404) — a genuine majority.
 
 ## Description
 
 The 1991 act regulates oversight of the Belgian police and intelligence
 services and created **two standing committees at once**: Comité P for the
 police and [[BE-COMITE-I]] for the intelligence and security services.
-Confirmed by reading an unofficial German-language coordinated text of the
-act directly (2026-08-26): Article 1 gives the oversight's object as the
-protection of the constitutional and legal rights of persons, and the
-coordination and effectiveness of the police and intelligence/security
-services respectively, plus ensuring proper functioning of the
-Coordination Unit for Threat Analysis (OCAD). Each committee has its own
-attached investigation service.
+Confirmed by reading ejustice.just.fgov.be's own official Justel text
+directly (2026-08-27) and the earlier-read German-language coordinated
+text: Article 1 gives the oversight's object as the protection of the
+constitutional and legal rights of persons, and the coordination and
+effectiveness of the police and intelligence/security services
+respectively, plus ensuring proper functioning of the Coordination Unit
+for Threat Analysis (OCAD). Each committee has its own attached
+investigation service, and oversight does not extend to judicial
+authorities' prosecutorial actions or to administrative police
+authorities — detail confirmed directly in the official text and not
+previously recorded here.
+
+A second, later statute (also read directly, at etaamb.openjustice.be)
+cites the 1991 act's own committee-composition articles by number —
+Articles 17 and 20 on membership requirements, 20bis on disciplinary
+authority over personnel, and 22bis–22quater on statutory consequences
+for members — detail this entity did not previously carry.
 
 ## Belgium regulated the watchers before it regulated the watched
 
@@ -112,7 +128,9 @@ arrangement is recorded and not modelled.
 
 ## Sources
 
-One of four read directly this pass — an unofficial German-language
-coordinated text found on etaamb.openjustice.be. Comité I's own PDF codex
-is unreadable as extracted text, the official Justel page timed out
-repeatedly, and the vLex citation is dead (404).
+Three of five read directly this pass: ejustice.just.fgov.be's own Justel
+text (which timed out three times in the prior pass but succeeded this
+one), the German-language coordinated text on etaamb.openjustice.be, and
+a second etaamb.openjustice.be page citing the act's composition
+articles. Comité I's own PDF codex remains unreadable as extracted text
+and the vLex citation remains dead (404).

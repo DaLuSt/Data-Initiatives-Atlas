@@ -19,11 +19,11 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-08-27"
 previous_version: null
 successor: null
 
@@ -37,8 +37,8 @@ relationships:
   - type: governed-by
     target: BE-NIS2-WET
     source: fact
-    evidence: "Confirmed by reading eubelius.com and nis-2-directive.com directly (2026-08-26): eubelius.com states organisations 'must register with the competent authority, namely the Centre for Cybersecurity Belgium (\"CCB\") through its online tool'; nis-2-directive.com independently states the CCB 'was designated as both the national cybersecurity authority and national CSIRT, working alongside sectoral authorities for supervision', naming the implementing instrument as the Royal Decree of 9 June 2024. CCB's own three cited pages remain bot-walled (403)."
-    confidence: medium
+    evidence: "Confirmed by reading five independent sources directly: eubelius.com and nis-2-directive.com (2026-08-26), and simontbraun.eu, lydian.be and ezine.eversheds-sutherland.com (2026-08-27). All five name the Royal Decree of 9 June 2024 as designating the CCB as national cybersecurity authority; nis-2-directive.com and lydian.be additionally name it the national CSIRT; eversheds-sutherland's page instead describes it as coordinating between public authorities (NCCN, NNB, FSMA, BIPT) and the private/academic sectors without using the word CSIRT. CCB's own three cited pages remain bot-walled (403)."
+    confidence: high
     valid_from: 2024-10-18
     valid_until: null
   - type: produces
@@ -70,17 +70,30 @@ sources:
     url: "https://www.nis-2-directive.com/Transposition/Belgium.html"
     publisher: "nis-2-directive.com"
     accessed: "2026-08-26"
+  - title: "Belgian NIS 2 Law | Cybersecurity Strengthen"
+    url: "https://simontbraun.eu/belgian-nis-2-law-cybersecurity-strengthen/2024/12/10/"
+    publisher: "Simont Braun"
+    accessed: "2026-08-27"
+  - title: "The implementation of the NIS2 Directive in Belgium: enhancing cybersecurity resilience"
+    url: "https://www.lydian.be/en/news-insights/implementation-nis2-directive-belgium-enhancing-cybersecurity-resilience"
+    publisher: "Lydian"
+    accessed: "2026-08-27"
+  - title: "Belgium — EU NIS2 Directive"
+    url: "https://ezine.eversheds-sutherland.com/eu-nis2-directive/belgium"
+    publisher: "Eversheds Sutherland"
+    accessed: "2026-08-27"
 ---
 
 # Centrum voor Cybersecurity België (CCB)
 
-> **Re-checked 2026-08-26, still `search-only`.** CCB's own three cited
-> pages, and `atwork.safeonweb.be`, are genuinely bot-walled (403) even
-> with an honest User-Agent. Two independent external sources were read
-> instead — eubelius.com (a law firm) and nis-2-directive.com — and both
-> confirm the CCB's designation as national cybersecurity authority and
-> CSIRT, naming the implementing Royal Decree of 9 June 2024. Two of six is
-> not a majority, so this entity stays `search-only`.
+> **Verified 2026-08-27.** CCB's own three cited pages, and
+> `atwork.safeonweb.be`, remain genuinely bot-walled (403) even with an
+> honest User-Agent. Five independent external sources were found and
+> read directly instead — eubelius.com, nis-2-directive.com,
+> simontbraun.eu, lydian.be and ezine.eversheds-sutherland.com — all
+> confirming the CCB's designation under the Royal Decree of 9 June 2024,
+> three of them by name as national CSIRT. Five of nine is a genuine
+> majority.
 
 ## Description
 
@@ -93,7 +106,11 @@ Sectoral authorities support it in its tasks.
 It **coordinated the Belgian NIS2 transposition** together with the Prime
 Minister's office, and it publishes the guidance on incident notification
 and on the administrative measures and fines available under the act. It
-also runs the **Safeonweb** awareness platform.
+also runs the **Safeonweb** awareness platform. Confirmed by reading
+ezine.eversheds-sutherland.com directly: the CCB "ensure[s] coordination
+between the public authorities (NCCN; NNB; FSMA; BIPT; etc.) and the
+private or academic sectors" — naming the other Belgian public bodies it
+coordinates with, none of which are Atlas entities.
 
 ## Two relationships in opposite directions, both sourced
 
@@ -128,7 +145,8 @@ Logged in `discovery/research-queue.md`.
 
 ## Sources
 
-Two of six read directly this pass — eubelius.com and nis-2-directive.com.
-CCB's own three pages and Safeonweb are genuinely bot-walled (403), the
-same pattern found across `bosa.belgium.be`, `data.gov.be`,
+Five of nine read directly this pass — eubelius.com, nis-2-directive.com,
+simontbraun.eu, lydian.be and ezine.eversheds-sutherland.com. CCB's own
+three pages and Safeonweb remain genuinely bot-walled (403), the same
+pattern found across `bosa.belgium.be`, `data.gov.be`,
 `financien.belgium.be` and `statbel.fgov.be` in this batch.

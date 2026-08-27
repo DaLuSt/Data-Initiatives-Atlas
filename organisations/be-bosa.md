@@ -26,7 +26,7 @@ verification: search-only
 
 start_date: 2017-03-01
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-08-27"
 previous_version: null
 successor: null
 
@@ -62,14 +62,15 @@ sources:
 
 # FOD BOSA — Federale Overheidsdienst Beleid en Ondersteuning
 
-> **Re-checked 2026-08-26, still `search-only`.** All three `bosa.belgium.be`
-> pages and the `news.belgium.be` page are genuinely bot-walled (CAPTCHA/403)
-> even with an honest User-Agent. Two sources were read directly instead:
-> Wikipedia, and — found this pass — the founding Royal Decree of 22
-> February 2017 on its official statute-book mirror, which confirms the
-> establishment date and the Directorate-General for Digital Transformation
-> directly from the primary legal text. Two of six is not a majority, so
-> this entity stays `search-only` despite the strength of what was read.
+> **Re-checked 2026-08-27, still `search-only`.** All three `bosa.belgium.be`
+> pages and the `news.belgium.be` page remain genuinely bot-walled
+> (CAPTCHA/403) even with an honest User-Agent. This pass tried three
+> further routes to BOSA's own voice — `dtservices.bosa.be` (301-redirects
+> to a blocked `bosa.belgium.be` search page), `fedweb.belgium.be`
+> (301-redirects to the same blocked domain), and `digitall.be` (403) —
+> all dead ends, confirming the block is comprehensive rather than
+> page-specific. Two of six is still not a majority, so this entity stays
+> `search-only` despite genuine additional effort this pass.
 
 ## Description
 
@@ -133,10 +134,12 @@ the Communities with several public administrations, which is precisely
 
 ## Sources
 
-Two of six read directly this pass — Wikipedia and, newly found, the
-founding Royal Decree of 22 February 2017 at etaamb.openjustice.be. All
-three `bosa.belgium.be` pages and the `news.belgium.be` page returned
-CAPTCHA challenges rather than content; the same wall was found on
-`ccb.belgium.be`, `data.gov.be`, `financien.belgium.be` and
-`statbel.fgov.be` across this batch. `dtservices.bosa.be` 301-redirects to
-a `bosa.belgium.be` search page, also unread.
+Two of six read directly this pass (both from the prior pass) — Wikipedia
+and the founding Royal Decree of 22 February 2017 at
+etaamb.openjustice.be. All three `bosa.belgium.be` pages and the
+`news.belgium.be` page returned CAPTCHA challenges rather than content;
+the same wall was found on `ccb.belgium.be`, `data.gov.be`,
+`financien.belgium.be` and `statbel.fgov.be` across this batch.
+`dtservices.bosa.be` and `fedweb.belgium.be` both 301-redirect into the
+same blocked `bosa.belgium.be` domain, and `digitall.be` returned 403 —
+three further routes tried this pass, none successful.

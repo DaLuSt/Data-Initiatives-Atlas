@@ -18,12 +18,12 @@ region: null
 
 status: active
 confidence: medium
-coverage: low
-verification: search-only
+coverage: medium
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-08-27"
 previous_version: null
 successor: null
 
@@ -36,7 +36,7 @@ relationships:
   - type: aligned-with
     target: BE-DCAT-AP-BE
     source: fact
-    evidence: "Statbel publishes a DCAT catalogue for its open data (statbel.fgov.be 'DCAT catalogue for Statbel's open data'). Not re-confirmed this pass — statbel.fgov.be returned a CAPTCHA challenge rather than content. Recorded as aligned-with rather than based-on: the sources establish that Statbel publishes a DCAT catalogue, not that it conforms to the Belgian federal DCAT profile specifically."
+    evidence: "Statbel publishes a DCAT catalogue for its open data (statbel.fgov.be 'DCAT catalogue for Statbel's open data'). Not re-confirmed this pass either — statbel.fgov.be returned a CAPTCHA challenge again on a fresh direct attempt (2026-08-27), including on the underlying PDF asset. Recorded as aligned-with rather than based-on: the sources establish that Statbel publishes a DCAT catalogue, not that it conforms to the Belgian federal DCAT profile specifically."
     confidence: low
     valid_from: null
     valid_until: null
@@ -44,8 +44,8 @@ relationships:
   - type: part-of
     target: EU-ESS
     source: fact
-    evidence: "The European Statistical System is the partnership between the Community statistical authority, which is the Commission (Eurostat), and the national statistical institutes and other national authorities responsible in each member state for the development, production and dissemination of European statistics; the ESS Committee is composed of NSI representatives and chaired by Eurostat (ec.europa.eu/eurostat/web/european-statistical-system; EUR-Lex CELEX 32009R0223; cso.ie European Statistical System page). Statbel is the Belgian NSI. Corroborated this pass by reading Wikipedia's Statistics Belgium page directly (2026-08-26), which independently states Statbel 'serves as Belgium's official representative to Eurostat and the OECD' — this relationship was added in the UN batch (2026-08-16) correcting this entity's own earlier body text, which wrongly claimed no such link existed; see below."
-    confidence: medium
+    evidence: "The European Statistical System is the partnership between the Community statistical authority, which is the Commission (Eurostat), and the national statistical institutes and other national authorities responsible in each member state for the development, production and dissemination of European statistics; the ESS Committee is composed of NSI representatives and chaired by Eurostat (ec.europa.eu/eurostat/web/european-statistical-system; EUR-Lex CELEX 32009R0223; cso.ie European Statistical System page). Statbel is the Belgian NSI. Corroborated by reading Wikipedia's Statistics Belgium page directly (2026-08-26), which independently states Statbel 'serves as Belgium's official representative to Eurostat and the OECD'. Further corroborated by reading ec.europa.eu's own Eurostat news page directly (2026-08-27): Belgium's statistical system underwent an ESS peer review in December 2021, one of '31 ESS members' whose reports were published on Eurostat's own website — Statbel's participation in that peer-review cycle is itself evidence of ESS membership. This relationship was added in the UN batch (2026-08-16) correcting this entity's own earlier body text, which wrongly claimed no such link existed; see below."
+    confidence: high
     valid_from: null
     valid_until: null
 sources:
@@ -62,16 +62,31 @@ sources:
     url: "https://en.wikipedia.org/wiki/Statistics_Belgium"
     publisher: "Wikipedia"
     accessed: "2026-08-26"
+  - title: "Wet van 4 juli 1962 betreffende de openbare statistiek"
+    url: "https://etaamb.openjustice.be/nl/wet-van-04-juli-1962_n2006001011.html"
+    publisher: "etaamb / OpenJustice"
+    accessed: "2026-08-27"
+  - title: "Algemene Directie Statistiek - Statistics Belgium"
+    url: "https://nl.wikipedia.org/wiki/Algemene_Directie_Statistiek_-_Statistics_Belgium"
+    publisher: "Wikipedia (NL)"
+    accessed: "2026-08-27"
+  - title: "Peer review report on Belgium now online"
+    url: "https://ec.europa.eu/eurostat/web/products-eurostat-news/-/cn-20220518-1"
+    publisher: "Eurostat — European Commission"
+    accessed: "2026-08-27"
 ---
 
 # Statbel (Algemene Directie Statistiek)
 
-> **Re-checked 2026-08-26, still `search-only`.** `statbel.fgov.be` (both
-> cited pages) and `news.belgium.be` all returned CAPTCHA/403 challenges
-> rather than content. Only Wikipedia was read directly, which corroborates
-> the already-recorded `part-of` [[EU-ESS]] edge with a new detail. One of
-> four is not a majority, so this entity stays `search-only` despite the
-> correction made to its own body text below.
+> **Verified 2026-08-27.** `statbel.fgov.be` (both cited pages, plus a
+> PDF asset tried this pass) and `news.belgium.be` all still return
+> CAPTCHA/403 challenges. But three previously-uncited pages were found
+> via search and read directly this pass — etaamb.openjustice.be's own
+> text of the 1962 public-statistics law, the Dutch Wikipedia article,
+> and Eurostat's own news page on Belgium's ESS peer review — closing
+> the "no statutory basis found" gap and adding a second independent
+> corroboration of the `part-of` [[EU-ESS]] edge. Four of seven cited
+> pages are now read directly, a genuine majority.
 
 ## Description
 
@@ -89,10 +104,26 @@ under a **Creative Commons Attribution 4.0** licence. It maintains a
 **DCAT catalogue** of that open data. Neither claim was re-confirmed this
 pass — both `statbel.fgov.be` pages returned CAPTCHA challenges.
 
-`coverage: low`: unlike [[DE-DESTATIS]] and [[NL-CBS]], no statutory basis
-for Statbel was established — no Belgian equivalent of [[DE-BSTATG]] or
-[[NL-WET-CBS]] was found by search, so none is recorded and no
-`governed-by` relationship is asserted.
+`coverage: medium`, up from `low`: a Belgian equivalent of [[DE-BSTATG]]
+and [[NL-WET-CBS]] is now identified. Confirmed by reading
+etaamb.openjustice.be's own text of the **Wet van 4 juli 1962 betreffende
+de openbare statistiek** (public statistics act) directly: it establishes
+the National Statistical Institute (predecessor name of today's Statbel),
+a Coordination Committee for statistical programmes, a Statistical
+Control Committee for data-protection oversight, and a High Council for
+Statistics as advisory body. No `governed-by` edge is asserted to it,
+because the 1962 act is not yet its own Atlas entity — creating one is a
+follow-up, logged in `discovery/unresolved.md`, rather than something to
+do inside this pass.
+
+Confirmed by reading the Dutch Wikipedia article on Statbel directly: the
+organisation's name changed twice after the 1962 act — from "Nationaal
+Instituut voor de Statistiek" to "Algemene Directie Statistiek en
+Economische Informatie" on 20 November 2003 (retroactive to 1 January
+2003), then to "Algemene Directie Statistiek - Statistics Belgium" on 27
+March 2014 — before adopting "Statbel" for external communication from 1
+January 2018. The old acronym "NIS" still surfaces in some contexts, such
+as the "NIS-code" geographic identifier.
 
 ## A stale claim in this entity's own prose, corrected
 
@@ -120,17 +151,21 @@ national statistical office in the Atlas, to the UN statistical system.
 
 ## Relationships
 
-- `part-of` [[EU-ESS]] — recorded since the UN batch; corroborated this
-  pass by Wikipedia's "official representative to Eurostat" statement.
+- `part-of` [[EU-ESS]] — recorded since the UN batch; corroborated by
+  Wikipedia's "official representative to Eurostat" statement and, this
+  pass, by Eurostat's own ESS peer-review news page; `confidence: high`.
 - `aligned-with` [[BE-DCAT-AP-BE]] — at `confidence: low`. What is sourced
   is that Statbel publishes *a* DCAT catalogue; that it conforms to the
   Belgian federal profile is the obvious reading and is not stated. The
   weaker relationship type and the low confidence carry that distinction.
-  Not re-confirmed this pass (statbel.fgov.be bot-walled).
+  Not confirmed this pass either (statbel.fgov.be still bot-walled).
 
 ## Sources
 
-One of four read directly this pass — Wikipedia. Both `statbel.fgov.be`
-pages and `news.belgium.be` returned CAPTCHA/403 challenges, the same
-pattern found across `bosa.belgium.be`, `ccb.belgium.be`, `data.gov.be` and
-`financien.belgium.be` in this batch.
+Four of seven read directly this pass: the English Wikipedia article
+(prior pass), plus three found this pass — the Dutch Wikipedia article,
+etaamb.openjustice.be's own text of the 1962 public-statistics act, and
+Eurostat's own news page. Both `statbel.fgov.be` pages, the PDF asset
+tried this pass, and `news.belgium.be` all returned CAPTCHA/403
+challenges, the same pattern found across `bosa.belgium.be`,
+`ccb.belgium.be`, `data.gov.be` and `financien.belgium.be` in this batch.

@@ -7,27 +7,36 @@ belong on the country's front page (`CONTRIBUTING.md`).
 
 Anchor entity: [[BE]]
 
-> **Re-verified 2026-08-26.** All 24 Belgian entities carrying
-> `verification: search-only` were checked against primary sources this
-> pass. **18 were promoted to `primary-source`**: [[BE-BELGIF]],
-> [[BE-BRU-ORDONNANCE-2016]], [[BE-BRU-ORDONNANCE-2021]], [[BE-GDPR-WET]],
-> [[BE-HERGEBRUIK-WET-2023]], [[BE-HERGEBRUIK-WET]], [[BE-KSZ-WET]],
-> [[BE-NIS1-WET]], [[BE-NIS2-WET]], [[BE-VL-BESTUURSDECREET-2021]],
-> [[BE-WAL-DECRET-2022]], [[BE-WIV-1998]], [[BE-ADIV]], [[BE-APD]],
-> [[BE-KSZ]], [[BE-NBN]], [[BE-VSSE]] and [[BE-DCAT-AP-BE]]. **6 stayed
-> `search-only`** because a majority of their cited sources could not be
-> read: [[BE-TOEZICHTSWET-1991]], [[BE-BOSA]], [[BE-CCB]],
-> [[BE-COMITE-I]], [[BE-STATBEL]] and [[BE-DATA-GOV-BE]] — mostly because
-> `bosa.belgium.be`, `ccb.belgium.be`, `data.gov.be`, `financien.belgium.be`
-> and `statbel.fgov.be` are genuinely bot-walled (CAPTCHA/403) even with an
+> **Re-verified 2026-08-26, completed 2026-08-27.** All 24 Belgian
+> entities carrying `verification: search-only` were checked against
+> primary sources across two passes. **22 are now `primary-source`.**
+> The first pass promoted 18: [[BE-BELGIF]], [[BE-BRU-ORDONNANCE-2016]],
+> [[BE-BRU-ORDONNANCE-2021]], [[BE-GDPR-WET]], [[BE-HERGEBRUIK-WET-2023]],
+> [[BE-HERGEBRUIK-WET]], [[BE-KSZ-WET]], [[BE-NIS1-WET]], [[BE-NIS2-WET]],
+> [[BE-VL-BESTUURSDECREET-2021]], [[BE-WAL-DECRET-2022]], [[BE-WIV-1998]],
+> [[BE-ADIV]], [[BE-APD]], [[BE-KSZ]], [[BE-NBN]], [[BE-VSSE]] and
+> [[BE-DCAT-AP-BE]]. A second pass, finding previously-uncited pages via
+> search rather than re-fetching the same blocked URLs, promoted four
+> more: [[BE-TOEZICHTSWET-1991]] and [[BE-COMITE-I]] (an
+> ejustice.just.fgov.be Justel page that timed out three times in the
+> first pass finally succeeded), [[BE-CCB]] (five independent law-firm
+> analyses of the NIS2 royal decree), and [[BE-STATBEL]] (the 1962 public
+> statistics act, found on etaamb.openjustice.be, closes a long-standing
+> "no statutory basis found" gap). **[[BE-BOSA]] and [[BE-DATA-GOV-BE]]
+> stay `search-only`** even after both passes tried further routes —
+> `dtservices.bosa.be`, `fedweb.belgium.be`, `digitall.be`, GitHub's own
+> `Fedict/dcattools` repository — because `bosa.belgium.be`,
+> `ccb.belgium.be`, `data.gov.be`, `financien.belgium.be` and
+> `statbel.fgov.be` are genuinely bot-walled (CAPTCHA/403) even with an
 > honest User-Agent, the Belgian counterpart to the `.gouv.fr` block found
-> in the France batch. Two corrections of note: [[BE-HERGEBRUIK-WET-2023]]
-> was actually published in the Moniteur belge on **23 January 2024**, not
-> 25 December 2023 as previously recorded (25 December is the act's own
-> date); and [[BE-STATBEL]]'s own body text was still claiming, ten days
-> after the fact, that no source connected it to the European Statistical
-> System — the frontmatter had carried that edge since the UN batch of
-> 2026-08-16. See each entity for its own sourcing detail.
+> in the France batch. Two corrections of note from the first pass:
+> [[BE-HERGEBRUIK-WET-2023]] was actually published in the Moniteur belge
+> on **23 January 2024**, not 25 December 2023 as previously recorded (25
+> December is the act's own date); and [[BE-STATBEL]]'s own body text was
+> still claiming, ten days after the fact, that no source connected it to
+> the European Statistical System — the frontmatter had carried that edge
+> since the UN batch of 2026-08-16. See each entity for its own sourcing
+> detail.
 
 > ⚠ **This index covers the federal layer only.** Belgium's Regions and
 > Communities run much of its public-sector digitalisation — Digitaal
