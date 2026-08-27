@@ -25,11 +25,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2010-01-08
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-08-27"
 previous_version: null
 successor: null
 
@@ -47,8 +47,8 @@ relationships:
   - type: applies-in
     target: ES
     source: fact
-    evidence: "Confirmed by reading Real Decreto 4/2010's own text at boe.es directly (2026-08-26): its first additional provision mandates a catalogue of mandatory Technical Interoperability Standards covering electronic documents, electronic files, electronic signature policies, data intermediation, document preservation, network connectivity, authentication registers and information re-use — approved by the competent ministry through sectoral committees and published by official resolution. One of three cited sources read this pass (noticias.juridicas.com returned HTTP 503; anabad.org not attempted) — not enough alone for `verification: primary-source` under this Atlas's majority-read rule, though the one read is the decree's own primary text. Anchor edge under metadata/relationship-types.md §2.3."
-    confidence: medium
+    evidence: "Confirmed by reading Real Decreto 4/2010's own text at boe.es directly (2026-08-27): its first additional provision mandates a catalogue of mandatory Technical Interoperability Standards covering electronic documents, electronic files, electronic signature policies, data intermediation, document preservation, network connectivity, authentication registers and information re-use — approved by the competent ministry through sectoral committees and published by official resolution. anabad.org, also read directly this pass, corroborates the same first-additional-provision language and adds that the ENI's existence is contemplated in Article 156 of Ley 40/2015 on the legal regime of the public sector — a citation this entity did not previously carry. Two of three cited sources now read directly (noticias.juridicas.com still returns HTTP 503, confirmed again this pass) — a genuine majority. Anchor edge under metadata/relationship-types.md §2.3."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -56,10 +56,11 @@ sources:
   - title: "BOE-A-2010-1331 Real Decreto 4/2010, de 8 de enero, por el que se regula el Esquema Nacional de Interoperabilidad en el ámbito de la Administración Electrónica"
     url: "https://www.boe.es/buscar/act.php?id=BOE-A-2010-1331"
     publisher: "Boletín Oficial del Estado (BOE)"
-    accessed: "2026-08-26"
+    accessed: "2026-08-27"
   - title: "Normas Técnicas de Interoperabilidad — Real Decreto 4/2010, de 8 de enero"
     url: "https://www.anabad.org/normas-tecnicas-de-interoperabilidadreal-decreto-42010-de-8-de-enero/"
     publisher: "ANABAD"
+    accessed: "2026-08-27"
   - title: "Real Decreto 4/2010, de 8 de enero, por el que se regula el Esquema Nacional de Interoperabilidad"
     url: "https://noticias.juridicas.com/base_datos/Admin/rd4-2010.html"
     publisher: "Noticias Jurídicas"
@@ -67,12 +68,12 @@ sources:
 
 # ENI — Esquema Nacional de Interoperabilidad
 
-> **Re-checked 2026-08-26, still `search-only`.** The decree's own text
-> was read directly at boe.es and confirms the first-additional-provision
-> claim. Only one of three cited sources was read this pass
-> (`noticias.juridicas.com` returned a transient HTTP 503; `anabad.org`
-> was not attempted), short of the majority this Atlas requires for
-> `primary-source`.
+> **Verified 2026-08-27.** Two of three cited pages were read directly:
+> the decree's own text at boe.es and anabad.org's summary, which
+> together confirm the first-additional-provision claim and add the
+> ENI's current statutory anchor (Article 156, Ley 40/2015).
+> `noticias.juridicas.com` was tried again and still returns a
+> persistent HTTP 503.
 
 ## Description
 
@@ -138,11 +139,16 @@ consistently presented together in Spanish practice — is not asserted. RD
 4/2010 regulates one and RD 311/2022 the other; no source read establishes a
 relationship between the instruments themselves.
 
-The ENI's legal base is also not modelled. Sources state it was established
-by article 42 of Ley 11/2007, an act since replaced by the 2015
-administrative-procedure legislation; the chain from the current legal base
-to this decree was not established well enough to record, and asserting the
-repealed act as its parent would be worse than leaving the gap.
+The ENI's legal base is now partly closed. Confirmed by reading anabad.org
+directly: the ENI's existence is **contemplated in Article 156 of Ley
+40/2015** on the legal regime of the public sector — the act that replaced
+the 2007 legislation this entity previously named as the ENI's now-repealed
+origin. That the ENI is still *regulated mainly* by Real Decreto 4/2010
+itself, rather than by Ley 40/2015, is confirmed by the same source. No
+`derived-from` or `governed-by` edge is added to Ley 40/2015, because
+neither this Atlas's ontology nor the source read distinguishes "is
+contemplated by" from "is derived from" cleanly enough to assert a typed
+relationship — the fact is recorded here in prose instead.
 
 ## Relationships
 
@@ -151,5 +157,6 @@ here, which is the direction that keeps the descent on the derived thing.
 
 ## Sources
 
-Listed in frontmatter — the BOE consolidated text and two secondary
-summaries of the decree and its technical standards.
+Listed in frontmatter, two of three read directly this pass: the BOE
+consolidated text and anabad.org's summary. `noticias.juridicas.com`
+remains persistently unavailable (HTTP 503).

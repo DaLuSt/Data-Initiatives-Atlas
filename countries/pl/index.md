@@ -7,15 +7,17 @@ the country's front page (`CONTRIBUTING.md`).
 
 Anchor entity: [[PL]]
 
-> **Re-verified 2026-08-26.** Seventeen of eighteen remaining
-> `search-only` entities were promoted to `verification: primary-source`
-> in one pass. Only [[PL-DANE-GOV-PL]] remains `search-only` — its own
-> portal is a JavaScript application with no static content to fetch,
-> and its other sources are CAPTCHA-blocked or dead. `isap.sejm.gov.pl`
-> and `sejm.gov.pl` are both genuinely CAPTCHA-blocked domain-wide,
-> confirmed on many separate attempts this pass — not a one-off failure.
-> [[PL-PESEL]] and [[PL-EWIDENCJA-LUDNOSCI]], added 2026-08-22, were
-> already `verification: primary-source` before this pass.
+> **Re-verified 2026-08-26, completed 2026-08-27.** All eighteen
+> `search-only` entities are now `verification: primary-source`.
+> [[PL-DANE-GOV-PL]] was the last: its own portal remains a JavaScript
+> application with no static content to fetch, but a second gov.pl page
+> — the Ministry of Digitisation's own page about the portal, not
+> previously cited — closed the "operator not identified" gap.
+> `isap.sejm.gov.pl` and `sejm.gov.pl` are both genuinely CAPTCHA-blocked
+> domain-wide, confirmed on many separate attempts across both passes —
+> not a one-off failure. [[PL-PESEL]] and [[PL-EWIDENCJA-LUDNOSCI]],
+> added 2026-08-22, were already `verification: primary-source` before
+> either pass.
 
 ## Organisations
 
@@ -55,8 +57,8 @@ Anchor entity: [[PL]]
 - [[PL-MOBYWATEL]] — citizen application and mDowód _(⚠ reported
   **incompatible with eIDAS 2.0**; `maintained-by` [[PL-MC]], confirmed
   this pass via the Act's own Article 19 — previously unestablished)_
-- [[PL-DANE-GOV-PL]] — national open data portal _(still `search-only`
-  — see caveat above)_
+- [[PL-DANE-GOV-PL]] — national open data portal _(`maintained-by`
+  [[PL-MC]], confirmed 2026-08-27)_
 - [[PL-PESEL]] — population register and identification number
   _(`maintained-by` [[PL-COI]] since 1 March 2015)_
 

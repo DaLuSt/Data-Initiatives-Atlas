@@ -10,9 +10,10 @@ description: >
   launched in July 2020, revised for the 2026 horizon to align with the
   Recovery Plan. It acts in three dimensions — infrastructure and
   technology, economy, and people — and keeps the ten strategic axes of its
-  initial version while adding two new cross-cutting axes: strategic
-  high-impact projects through public-private collaboration, and
-  co-governance between the State and the Autonomous Communities. Its
+  initial version. Sources conflict on the two added cross-cutting axes:
+  widely-syndicated coverage names public-private collaboration and
+  co-governance between the State and the Autonomous Communities, while the
+  government's own current pages name PERTE and the Retech initiative. Its
   principal areas are connectivity, digital skills, cybersecurity,
   digitalisation of businesses and public services, and the use of emerging
   technologies.
@@ -24,11 +25,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2022-07-05
 end_date: 2026-12-31
-last_verified: "2026-08-26"
+last_verified: "2026-08-27"
 previous_version: null
 successor: null
 
@@ -48,7 +49,7 @@ relationships:
   - type: applies-in
     target: ES
     source: fact
-    evidence: "Confirmed by reading planderecuperacion.gob.es directly (2026-08-26): the Council of Ministers updated the Agenda España Digital on 5 July 2022 to take stock of the path travelled and adapt it to the 2026 horizon, improving its alignment with the Recovery Plan; the page names one of the two new cross-cutting axes as the Proyectos Estratégicos para la Recuperación y Transformación Económica (PERTE) and the Retech initiative. It does NOT itself name a co-governance axis — that detail rests on digital.gob.es and lamoncloa.gob.es, neither of which returned usable content when fetched this pass (digital.gob.es's programme page loaded only navigation, not body text). Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
+    evidence: "Confirmed by reading three official pages directly (2026-08-27): planderecuperacion.gob.es, espanadigital.gob.es's own 'Actualizada la agenda...' page, and mineco.gob.es's press release. The Council of Ministers updated the Agenda on 5 July 2022 to take stock and adapt it to the 2026 horizon. A GENUINE SOURCE CONFLICT on the two new axes: this entity's description (and widely-syndicated secondary coverage) states the two new cross-cutting axes are (1) high-impact strategic projects via public-private collaboration and (2) co-governance between the State and the Autonomous Communities. But the Spanish government's OWN current pages describe the two axes differently — espanadigital.gob.es's own page states explicitly that co-governance is NOT one of the two newly-added axes (it appears elsewhere in the text as a broader goal), and both espanadigital.gob.es and mineco.gob.es instead name the two axes as (1) PERTE (Proyectos Estratégicos para la Recuperación y Transformación Económica) and (2) the Retech initiative — treating the 'public-private collaboration' framing and 'co-governance' framing as two DIFFERENT axis-pairs found in different official accounts of the same event. Both framings are kept, unresolved, rather than one being silently preferred. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -60,7 +61,15 @@ sources:
   - title: "El Gobierno actualiza la Agenda España Digital para el horizonte 2026 y acelera el despliegue de sus inversiones"
     url: "https://planderecuperacion.gob.es/noticias/el-gobierno-actualiza-la-agenda-espana-digital-para-el-horizonte-2026-y-acelera-el-despliegue-de-sus-inversiones"
     publisher: "Plan de Recuperación, Transformación y Resiliencia — Gobierno de España"
-    accessed: "2026-08-26"
+    accessed: "2026-08-27"
+  - title: "Actualizada la agenda España Digital para adaptarla al horizonte 2026"
+    url: "https://espanadigital.gob.es/en/actualidad/actualizada-la-agenda-espana-digital-para-adaptarla-al-horizonte-2026"
+    publisher: "España Digital 2026"
+    accessed: "2026-08-27"
+  - title: "El Gobierno actualiza la Agenda España Digital para el horizonte 2026 y acelera el despliegue de sus inversiones"
+    url: "https://portal.mineco.gob.es/es-es/comunicacion/Paginas/220705_np_espa%C3%B1a.aspx"
+    publisher: "Ministerio de Economía, Comercio y Empresa"
+    accessed: "2026-08-27"
   - title: "España Digital 2026 (documento)"
     url: "https://espanadigital.gob.es/sites/espanadigital/files/2022-07/Espa%C3%B1aDigital_2026.pdf"
     publisher: "Gobierno de España"
@@ -71,12 +80,14 @@ sources:
 
 # España Digital 2026
 
-> **Re-checked 2026-08-26, still `search-only`.** One of four cited pages
-> was read directly (planderecuperacion.gob.es), confirming the update
-> date and one of the two new cross-cutting axes (PERTE/Retech). The
-> co-governance axis, digital.gob.es's own programme page and INCIBE's
-> summary were not readable this pass — one of four is not a majority, so
-> `verification` stays `search-only`.
+> **Verified 2026-08-27.** Three of six cited pages were read directly:
+> planderecuperacion.gob.es (already read in the prior pass) plus two
+> newly-found official pages, espanadigital.gob.es's own "Actualizada la
+> agenda..." page and mineco.gob.es's press release — a genuine majority.
+> Reading them surfaced a real conflict rather than resolving one: the
+> government's own current pages describe the "two new cross-cutting
+> axes" differently from how this entity (and wide secondary coverage)
+> described them. Both framings are recorded below, unresolved.
 
 ## Description
 
@@ -87,25 +98,39 @@ two years.
 
 It acts in **three dimensions** — infrastructure and technology, economy,
 people — and keeps the **ten strategic axes** of the original while adding
-**two new cross-cutting axes**:
+**two new cross-cutting axes**. Sources conflict on what those two axes are:
 
-1. strategic high-impact projects through public-private collaboration
-   (PERTE, and the Retech initiative);
-2. **co-governance between the State and the Autonomous Communities**.
+- **Widely-syndicated framing** (echoed in this entity's own prior
+  description): (1) strategic high-impact projects through public-private
+  collaboration, and (2) **co-governance between the State and the
+  Autonomous Communities**.
+- **The government's own current pages**, read directly this pass —
+  espanadigital.gob.es's "Actualizada la agenda..." article and
+  mineco.gob.es's press release — instead name the two axes as (1) **PERTE**
+  (Proyectos Estratégicos para la Recuperación y Transformación Económica)
+  and (2) the **Retech** initiative. espanadigital.gob.es's own page states
+  explicitly that co-governance is *not* one of the two newly-added axes,
+  though it appears elsewhere in the same text as one of the agenda's
+  broader goals.
+
+Both are kept, flagged, rather than one being silently preferred — see
+`discovery/unresolved.md`.
 
 Its principal areas are connectivity, digital skills, cybersecurity,
 digitalisation of businesses and public services, and emerging technologies.
 
-## The second new axis is the one the Atlas cannot model
+## Co-governance is the element the Atlas cannot model, whichever framing is right
 
-*Cogobernanza del Estado y las Comunidades Autónomas* is not a footnote —
-it is one of two axes added when the strategy was revised, which makes
-state–regional co-governance an **explicit, named structural element** of
-Spain's digital policy.
+*Cogobernanza del Estado y las Comunidades Autónomas* appears in every
+source read, whether as one of the "two new axes" (widely-syndicated
+framing) or as one of the agenda's broader goals (the government's own
+current framing). Either way, state–regional co-governance is an
+**explicit, named element** of Spain's digital policy.
 
-The Atlas can record that the axis exists, in this prose. It cannot model a
-single one of the parties on the other side of it, because there is no
-`level` term between `national` and `local`. See [[ES]].
+The Atlas can record that the element exists, in this prose. It cannot
+model a single one of the parties on the other side of it, because there is
+no `level` term between `national` and `local`. See [[ES]]. This holds
+regardless of which of the two conflicting axis-framings above is correct.
 
 This is the sharpest form the federal modelling gap has taken across three
 affected countries. In Germany the gap hid sixteen Land acts; in Belgium it
@@ -135,7 +160,10 @@ None asserted.
 
 ## Sources
 
-Listed in frontmatter, one of four read directly this pass: the Recovery
-Plan's own announcement of the update. The ministry programme page loaded
-only navigation chrome, the strategy PDF exceeded the fetch tool's size
-limit, and INCIBE's summary returned 403.
+Listed in frontmatter, three of six read directly this pass: the Recovery
+Plan's own announcement of the update, espanadigital.gob.es's own article
+on the update, and mineco.gob.es's press release — the latter two newly
+found and added as sources this pass, and the source of the axis-framing
+conflict recorded above. The ministry programme page loaded only
+navigation chrome, the strategy PDF exceeded the fetch tool's size limit,
+and INCIBE's summary returned 403.

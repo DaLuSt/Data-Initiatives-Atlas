@@ -24,7 +24,7 @@ verification: search-only
 
 start_date: 2014-04-30
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-08-27"
 previous_version: null
 successor: null
 
@@ -84,21 +84,17 @@ sources:
 
 # Direction générale de la Sécurité intérieure (DGSI)
 
-> **Re-checked 2026-08-26, still `search-only`.** All three of DGSI's
-> own and `interieur.gouv.fr`'s cited pages are genuinely bot-walled
-> (403) even with an honest, identifying User-Agent — confirmed again
-> this pass via both `tools/reverify.py` and a direct fetch attempt —
-> the same block found on `legifrance.gouv.fr` and other
-> `interieur.gouv.fr` paths across this cluster. Two independent
-> secondary sources were read directly instead: cnctr.fr's own services
-> page (confirming the `governed-by` [[FR-LOI-RENSEIGNEMENT-2015]] edge
-> and that DGSI is "un service actif de la police nationale"), and
-> `fr.wikipedia.org`'s DGSI article (giving a founding decree date this
-> entity did not previously carry, 30 April 2014, and a more precise
-> account of the `governed-by` [[FR-LIL]] edge). That is 2 of 5 sources
-> read — DGSI's own official channel is entirely and permanently
-> blocked here, not merely one page among several — so this still falls
-> short of the majority needed to call the entity `primary-source`.
+> **Re-checked 2026-08-27, still `search-only`.** DGSI's own cited page
+> was tried again this pass and is still genuinely 403-blocked — the
+> same result as the prior pass, confirmed a third time. A web search
+> shows Google's own index has crawled and cached DGSI's "fondements"
+> page (content on prior control by the CNCTR and the July 2015
+> intelligence law), which means the block is specific to automated
+> fetch tools rather than to all outside access — but a search-engine
+> snippet is not a direct read, so it is not counted as one and nothing
+> here is sourced to it. That is still 2 of 5 sources read directly
+> (cnctr.fr, fr.wikipedia.org), short of the majority needed to call
+> the entity `primary-source`.
 
 ## Description
 
@@ -152,7 +148,9 @@ recorded on [[NL-MIVD]] and [[DE-BND]].
 
 ## Sources
 
-Listed in frontmatter. `cnctr.fr` and `fr.wikipedia.org` were read
-directly this pass; DGSI's own two pages and `interieur.gouv.fr`'s page
-are genuinely bot-walled (403) even with an honest User-Agent, confirmed
-again via both `tools/reverify.py` and a direct fetch attempt.
+Listed in frontmatter. `cnctr.fr` and `fr.wikipedia.org` remain the only
+two read directly (from the prior pass); DGSI's own pages and
+`interieur.gouv.fr`'s page are genuinely bot-walled (403) even with an
+honest User-Agent, re-confirmed this pass by a third direct fetch
+attempt, even though a search engine can evidently reach and index the
+same pages.
