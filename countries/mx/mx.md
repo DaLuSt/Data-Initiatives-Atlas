@@ -23,7 +23,7 @@ verification: search-only
 
 start_date: null
 end_date: null
-last_verified: "2026-08-19"
+last_verified: "2026-08-27"
 previous_version: null
 successor: null
 
@@ -35,7 +35,7 @@ relationships:
   - type: related-to
     target: INTL-CONVENTION-108
     source: fact
-    evidence: "Eight non-Council of Europe countries from Africa and Latin America have ratified Convention 108: Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia and Uruguay (en.wikipedia.org 'Convention for the Protection of Individuals with Regard to Automatic Processing of Personal Data', citing the Council of Europe chart of signatures and ratifications; wto.org 'Facilitating transborder data flows: Convention 108'). NOT READ — search-only. Anchor edge under metadata/relationship-types.md §2.3: this country is in the Atlas because the Convention reaches it, and the edge records nothing beyond being a party to that treaty."
+    evidence: "Confirmed by reading en.wikipedia.org's own article directly (2026-08-27): 'Being non–Council of Europe states, Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia, and Uruguay have acceded to the treaty.' ISO's OBP is confirmed genuinely bot-walled (403) — a JavaScript application, not a static page — and the WTO PDF is confirmed genuinely unreadable (an image-based scan with no extractable text), so only 1 of 3 cited sources is read: not a majority. Anchor edge under metadata/relationship-types.md §2.3: this country is in the Atlas because the Convention reaches it, and the edge records nothing beyond being a party to that treaty."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -47,16 +47,18 @@ sources:
   - title: "Convention for the Protection of Individuals with Regard to Automatic Processing of Personal Data"
     url: "https://en.wikipedia.org/wiki/Convention_for_the_Protection_of_Individuals_with_Regard_to_Automatic_Processing_of_Personal_Data"
     publisher: "Wikipedia"
-  - title: "Facilitating transborder data flows: Convention 108 and its modernised version"
+  - title: "Facilitating transborder data flows: Convention 108 and its modernised version (confirmed genuinely unreadable — image-based PDF)"
     url: "https://www.wto.org/english/res_e/reser_e/2_ssophie_trade_dialogues_wto.pdf"
     publisher: "World Trade Organization"
 ---
 
 # Mexico
 
-> **Sourcing caveat.** Compiled from search-engine results only; the
-> cited pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Re-checked 2026-08-27, still `search-only`.** Wikipedia's own article
+> was read directly and confirms Mexico's accession by name in its own
+> words. ISO's OBP is confirmed genuinely bot-walled (403) and the WTO
+> PDF is confirmed genuinely unreadable (an image-based scan). One of
+> three is not a majority.
 
 ## Description
 
@@ -83,4 +85,6 @@ layer.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, one of three read directly this pass — Wikipedia.
+ISO's OBP is genuinely bot-walled (403) and the WTO PDF is genuinely
+unreadable (image-based scan).
