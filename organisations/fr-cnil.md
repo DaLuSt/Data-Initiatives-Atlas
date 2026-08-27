@@ -24,7 +24,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-08-27"
 previous_version: null
 successor: null
 
@@ -38,7 +38,7 @@ relationships:
   - type: participates-in
     target: EU-EDPB
     source: fact
-    evidence: "Article 68(3) GDPR provides that the European Data Protection Board shall be composed of the head of one supervisory authority of each Member State and of the European Data Protection Supervisor, or their respective representatives; the CNIL is France's supervisory authority. Confirmed by reading gdpr-info.eu's and gdprhub.eu's texts of Article 68 GDPR directly (2026-08-26); neither page names the CNIL specifically, so — as this entity's body already flagged — the edge still rests on the composition rule rather than a source naming the membership itself, the same tier most national DPAs in the Atlas were on before this pass."
+    evidence: "Confirmed by reading gdpr-info.eu's own text of Article 68(3) GDPR directly (2026-08-26 and re-confirmed 2026-08-27): 'The Board shall be composed of the head of one supervisory authority of each Member State and of the European Data Protection Supervisor, or their respective representatives.' The CNIL is France's supervisory authority under the GDPR — a fact this entity's own description states without qualification. This is the same evidentiary basis on which ES-AEPD's and BE-APD's identical edges were confirmed as `source: fact` in the Spain and Belgium re-verification passes; this entity's prior text applied a stricter, inconsistent standard (requiring a source to name the CNIL specifically, rather than accepting the general composition rule as dispositive) and is corrected here for consistency."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -79,11 +79,15 @@ sources:
 
 # CNIL — Commission nationale de l'informatique et des libertés
 
-> **Verified 2026-08-26.** All six cited pages were read directly.
-> CNIL's own page confirms the 2018 reform verbatim, and a 2025-2028
-> strategy article confirms current CNIL/ANSSI collaboration. No page
-> read names the CNIL's own EDPB membership directly, so that edge
-> still rests on the composition rule.
+> **Re-verified 2026-08-27, one correction.** All six cited pages were
+> read directly in the prior pass. CNIL's own page confirms the 2018
+> reform verbatim, and a 2025-2028 strategy article confirms current
+> CNIL/ANSSI collaboration. The `participates-in` [[EU-EDPB]] edge was
+> previously kept at "refused" because no page names the CNIL
+> specifically — a stricter standard than this Atlas applied to the
+> identical Article 68(3) evidence for [[ES-AEPD]] and [[BE-APD]] in
+> later passes. Corrected here for consistency: the edge now stands
+> confirmed, `source: fact`.
 
 ## Description
 
@@ -104,33 +108,34 @@ cybersecurity regime is now confirmed to exist — cloix-mendesgil.com,
 read directly this pass, states "la CNIL renforce sa collaboration avec
 l'ANSSI" — but not established well enough to model as a relationship.
 
-## Four national DPAs, one European link — now read, still not sourced
+## Four national DPAs, all four now connected to the Board
 
 | Country | Authority | `participates-in` [[EU-EDPB]]? |
 |---|---|---|
 | Netherlands | [[NL-AP]] | **yes** — sourced |
-| Germany | [[DE-BFDI]] | no — refused |
-| Belgium | [[BE-APD]] | no — refused |
-| France | **CNIL** | no — refused, now checked directly |
+| Germany | [[DE-BFDI]] | **yes** — sourced (2026-08-22) |
+| Belgium | [[BE-APD]] | **yes** — sourced (2026-08-26) |
+| France | **CNIL** | **yes** — sourced (corrected 2026-08-27) |
 
-Four national data protection authorities now sit in the Atlas, and
-**only one connects to the European Data Protection Board.** This pass
-read cnil.fr's own pages, gdpr-info.eu's and gdprhub.eu's texts of
-Article 68 GDPR, and cloix-mendesgil.com directly — none of them names
-the CNIL's EDPB membership. The absence is now a checked fact, not an
-artefact of unread sources.
+All four now connect to the European Data Protection Board. This
+entity's own edge was the last of the four to close: gdpr-info.eu's
+text of Article 68(3) GDPR — read directly in the prior pass and again
+this pass — states plainly that the Board is composed of one
+supervisory authority per Member State, and the CNIL is undisputedly
+France's. That is a general rule stated directly, not an inference from
+something adjacent; the same reasoning closed [[DE-BFDI]]'s gap in an
+earlier pass and [[BE-APD]]'s and [[ES-AEPD]]'s in later ones.
 
-This remains the Atlas's clearest single example of a **sourcing
-artefact masquerading as structure**. Every one of these authorities
-sits on the Board; the graph shows one of them doing so, purely because
-one Dutch page happened to say it. A reader taking the graph at face
-value would conclude the EDPB has one member. Logged in
-`discovery/unresolved.md`.
+Logged in `discovery/unresolved.md`.
 
 ## Relationships
 
+- `participates-in` [[EU-EDPB]] — confirmed this pass via Article 68(3)
+  GDPR's own text, correcting a previously inconsistent refusal;
+  `confidence: medium`.
 - `applies-to` [[FR-LIL]].
 
 ## Sources
 
-Listed in frontmatter, all six read directly this pass.
+Listed in frontmatter, all six read directly (five in the prior pass,
+gdpr-info.eu re-confirmed this pass).

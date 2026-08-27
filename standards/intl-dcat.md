@@ -15,13 +15,13 @@ country: null
 region: null
 
 status: active
-confidence: medium
+confidence: high
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-27"
 previous_version: null
 successor: null
 
@@ -35,7 +35,7 @@ relationships:
   - type: maintained-by
     target: INTL-W3C
     source: fact
-    evidence: "DCAT Version 3 was published as a W3C Recommendation on 22 August 2024 by the Dataset Exchange Working Group (w3.org/TR/vocab-dcat-3/; w3.org news). NOT READ — search-only."
+    evidence: "Confirmed by reading w3.org's own DCAT 3 specification and its own news announcement directly (2026-08-27): 'The Dataset Exchange Working Group published Data Catalog Vocabulary (DCAT) - Version 3 as a W3C Recommendation' on 22 August 2024. The specification's own text states DCAT 3 'maintains the DCAT namespace as its terms preserve backward compatibility with DCAT 2', relaxing constraints and adding classes and properties 'but these changes do not break the definition of previous terms.'"
     confidence: high
     valid_from: 2024-08-22
     valid_until: null
@@ -44,9 +44,11 @@ sources:
   - title: "Data Catalog Vocabulary (DCAT) - Version 3"
     url: "https://www.w3.org/TR/vocab-dcat-3/"
     publisher: "World Wide Web Consortium (W3C)"
+    accessed: "2026-08-27"
   - title: "Data Catalog Vocabulary (DCAT) - Version 3 is a W3C Recommendation"
     url: "https://www.w3.org/news/2024/data-catalog-vocabulary-dcat-version-3-is-a-w3c-recommendation/"
     publisher: "World Wide Web Consortium (W3C)"
+    accessed: "2026-08-27"
   - title: "Data Catalog Vocabulary (DCAT) - Version 2"
     url: "https://www.w3.org/TR/vocab-dcat-2/"
     publisher: "World Wide Web Consortium (W3C)"
@@ -54,17 +56,22 @@ sources:
 
 # DCAT (Data Catalog Vocabulary)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-27.** Two of three cited w3.org pages were read
+> directly, closing a frontmatter/body drift: Batch 14 had already
+> rebuilt this entity on W3C citations, but `verification` still read
+> `search-only` and every evidence string still said "NOT READ." Both
+> now genuinely confirmed; `confidence` moves from `medium` to `high`.
 
-## Rebuilt in Batch 14
+## Rebuilt in Batch 14, verified 2026-08-27
 
 Batch 9 created this entity from **second-hand descriptions only** — one
 European Commission page, one Dutch government page — with no w3.org
 citation, and flagged the top of the Atlas's flagship standards chain as its
-weakest link. **It has been rebuilt here on W3C material**, and
-`confidence` moves from `low` to `medium`.
+weakest link. Batch 14 **rebuilt it on W3C material** but never actually
+read the pages it cited. Both are now read directly: w3.org's own DCAT 3
+specification and its own news announcement, both confirming the
+Recommendation date and backward-compatibility claim in the specification's
+own words.
 
 ## Description
 
@@ -112,4 +119,6 @@ end-to-end.
 
 ## Sources
 
-Listed in frontmatter — now all three from w3.org.
+Listed in frontmatter, two of three read directly this pass — the DCAT 3
+specification and the news announcement. The DCAT 2 specification was
+not re-fetched.

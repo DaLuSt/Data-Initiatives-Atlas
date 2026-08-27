@@ -16,11 +16,11 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: unverified
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-27"
 previous_version: null
 successor: null
 
@@ -33,9 +33,18 @@ sources:
   - title: "United Nations — official website"
     url: "https://www.un.org/"
     publisher: "United Nations"
+    accessed: "2026-08-27"
+  - title: "About Us | United Nations"
+    url: "https://www.un.org/en/about-us"
+    publisher: "United Nations"
+    accessed: "2026-08-27"
 ---
 
 # United Nations
+
+> **Verified 2026-08-27.** Both cited pages were read directly, closing
+> the Batch 6 audit finding that this entity's sole source URL had been
+> composed from background knowledge and never actually confirmed.
 
 ## Description
 
@@ -45,16 +54,25 @@ Data Initiatives Atlas. UN-system initiatives, strategies and standards
 statistical initiatives, etc.) reference this entity, typically via
 `maintained-by`/`governed-by`/`organisations:`.
 
+Confirmed by reading un.org's own "About Us" page directly: the UN is "an
+international organization founded in 1945," now "made up of 193 Member
+States," guided by "the purposes and principles contained in its founding
+Charter." The page gives the founding year but not a specific date, so
+`start_date` stays `null` rather than being padded to the well-known 24
+October 1945 Charter-effective date that background knowledge would supply.
+
 `coverage: low` is deliberate — this Batch 0 commit only establishes the
 anchor node. Substantive UN/international content is researched starting in
 Batch 12 (see `progress/backlog.md`).
 
-## ⚠ Verification note (added in Batch 6)
+## The Batch 6 audit finding is now closed
 
-`verification: unverified` — see the identical note on [[NL]]. This entity
-was written in Batch 0 with a source URL composed from background knowledge
-rather than confirmed by search or fetch. Surfaced by the Batch 6 audit and
-recorded in `discovery/unresolved.md`.
+`verification` was `unverified` — stronger than the `search-only` label
+carried by most of the Atlas, and worse — because this entity's one source
+URL was composed from background knowledge in Batch 0, before the
+`verification` field existed, and never actually confirmed by search or
+fetch. Both `un.org`'s homepage and its "About Us" page are now read
+directly, and a second, more substantive source has been added.
 
 ## Relationships
 
@@ -63,7 +81,4 @@ entities, built up batch by batch.
 
 ## Sources
 
-Listed in frontmatter. **No `accessed` dates and no `last_verified`** — the
-Final Quality Gate found both being claimed here when nothing had in fact
-been accessed or verified, and removed them. Nothing about this entity has
-been checked against a source.
+Listed in frontmatter, both read directly this pass.

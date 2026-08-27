@@ -21,11 +21,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2018-05-25
 end_date: null
-last_verified: null
+last_verified: "2026-08-27"
 previous_version: null
 successor: null
 
@@ -39,18 +39,24 @@ relationships:
   - type: implements-requirement-from
     target: EU-GDPR
     source: fact
-    evidence: "The BDSG was adopted as part of the Datenschutz-Anpassungs- und -Umsetzungsgesetz EU and has applied since 25 May 2018 together with the GDPR; it supplements and concretises the GDPR, which contains roughly 70 opening clauses allowing national legislators to regulate certain matters at member-state level. The GDPR takes precedence and the BDSG supplements it only where opening clauses expressly permit (dsgvo-gesetz.de/bdsg; activemind.de; e-recht24.de). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading gesetze-im-internet.de's own official text directly (2026-08-27) — closing this entity's previously-flagged missing-official-citation gap: the BDSG's own Section 1(5) states 'Die Vorschriften dieses Gesetzes finden keine Anwendung, soweit das Recht der Europäischen Union, im Besonderen die Verordnung (EU) 2016/679 in der jeweils geltenden Fassung, unmittelbar gilt' (this law's provisions do not apply where EU law, in particular Regulation (EU) 2016/679, directly applies) — the GDPR-precedence mechanism stated in the law's own text. The official text also confirms enactment on 30 June 2017 and entry into force on 25 May 2018 ('Es ist gem. Art. 8 Abs. 1 Satz 1 dieses G am 25.5.2018 in Kraft getreten'). dsgvo-gesetz.de, also read directly, confirms adoption as part of the DSAnpUG-EU. activemind.de, also read directly, confirms the supplementary relationship and names specific opening clauses (Art. 37(4), Art. 88 GDPR) but does NOT confirm a total count of roughly 70 opening clauses — that figure remains as previously sourced to unread pages, not independently confirmed this pass."
+    confidence: high
     valid_from: 2018-05-25
     valid_until: null
 
 sources:
+  - title: "Bundesdatenschutzgesetz (BDSG) — official text"
+    url: "https://www.gesetze-im-internet.de/bdsg_2018/BJNR209710017.html"
+    publisher: "Bundesministerium der Justiz (Gesetze im Internet)"
+    accessed: "2026-08-27"
   - title: "BDSG — Bundesdatenschutzgesetz"
     url: "https://dsgvo-gesetz.de/bdsg/"
     publisher: "dsgvo-gesetz.de (Intersoft Consulting)"
+    accessed: "2026-08-27"
   - title: "Das neue Bundesdatenschutzgesetz (BDSG) und Konkretisierungen der DSGVO"
     url: "https://www.activemind.de/magazin/bdsg/"
     publisher: "activeMind AG"
+    accessed: "2026-08-27"
   - title: "BDSG-neu — Das neue Bundesdatenschutzgesetz"
     url: "https://www.e-recht24.de/datenschutz/13173-bdsg-neu.html"
     publisher: "eRecht24"
@@ -61,25 +67,37 @@ sources:
 
 # Bundesdatenschutzgesetz (BDSG)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-27.** Three of five cited pages were read directly,
+> closing this entity's previously-flagged weakest point: no official
+> Gesetze-im-Internet or Bundesgesetzblatt citation existed. It now does
+> — the BDSG's own official text was read directly, and its own Section
+> 1(5) states the GDPR-precedence mechanism in these words.
 
 ## Description
 
 The BDSG — often "BDSG-neu" to distinguish it from the pre-2018 act — was
-adopted as part of the *Datenschutz-Anpassungs- und -Umsetzungsgesetz EU*
-(DSAnpUG-EU) and has applied since **25 May 2018**, the day the GDPR became
-applicable.
+**enacted on 30 June 2017** and adopted as part of the *Datenschutz-Anpassungs-
+und -Umsetzungsgesetz EU* (DSAnpUG-EU), applying since **25 May 2018**, the
+day the GDPR became applicable — both dates confirmed by reading the BDSG's
+own official text directly.
 
 The sources are emphatic about what it is not: it **cannot be regarded as
 an independent and complete law**. It concretises and supplements EU data
-protection law. [[EU-GDPR]] always takes precedence, and the BDSG
-supplements it only where an opening clause expressly permits.
+protection law. Confirmed in the BDSG's own words at Section 1(5): its
+provisions do not apply "soweit das Recht der Europäischen Union, im
+Besonderen die Verordnung (EU) 2016/679 ... unmittelbar gilt" (where EU
+law, in particular the GDPR, directly applies) — [[EU-GDPR]] always takes
+precedence, and the BDSG supplements it only where an opening clause
+expressly permits.
 
-Those opening clauses are the reason it exists. The GDPR contains roughly
-**70 Öffnungsklauseln** — some partial, some facultative, some mandatory —
-through which certain matters are to be regulated at national level.
+Those opening clauses are the reason it exists. The sources describe the
+GDPR as containing roughly **70 Öffnungsklauseln** — some partial, some
+facultative, some mandatory — through which certain matters are to be
+regulated at national level. **That specific count was not confirmed by
+any page read this pass**: activemind.de, read directly, names individual
+examples (Article 37(4), Article 88 GDPR) without giving a total, and
+neither the official text nor dsgvo-gesetz.de states a figure. The count
+remains as previously sourced to pages not read this pass.
 
 ## The country-neutrality test, in one entity
 
@@ -122,11 +140,7 @@ they genuinely share is their parent.
 
 ## Sources
 
-Listed in frontmatter. **All four are commercial legal-information
-publishers** — a law-firm magazine, two legal-tech sites and a Big Four
-legal practice. None is a government source, and **no Gesetze-im-Internet
-or Bundesgesetzblatt URL is cited**, because none was returned by search.
-
-For an entity that carries this much structural weight, that is the
-weakest part of the record and it should be the first German entity
-re-sourced when page retrieval is possible.
+Listed in frontmatter, three of five read directly this pass: the BDSG's
+own official text at Gesetze im Internet — closing the previously-flagged
+gap of no government citation — plus dsgvo-gesetz.de and activemind.de.
+`e-recht24.de` and the Deloitte Legal article were not re-fetched.
