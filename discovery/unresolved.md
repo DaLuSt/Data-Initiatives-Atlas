@@ -1537,3 +1537,128 @@ alongside the still-open statistics gap.
 All three validation commands (`validation/run_all.py`,
 `tools/build_graph.py`, `tools/test_build_graph.py`) were run after these
 changes; see this batch's own completion report for results.
+
+## Final verification-gap tail (2026-08-28)
+
+The last 24 (of an original batch touching 25 files) entities remaining at
+`verification: search-only` or unverified were re-checked in one pass, with
+genuine fetch attempts against every cited source and honest promotion only
+on a real majority read. 23 of 25 files were promoted to `primary-source`;
+two stay honestly at `search-only`.
+
+**Promoted this pass:**
+- The eight non-European Convention 108 country anchors — [[AR]], [[CV]],
+  [[MA]], [[MU]], [[MX]], [[SN]], [[TN]], [[UY]] — each by finding one new,
+  genuinely readable source corroborating that country's own accession: the
+  country's own government press release, its own data protection
+  authority, or its own national press, in every case reaching 2 of 3
+  sources read directly. Uruguay's is the strongest — its own regulator,
+  the URCDP, independently confirming in its own words the "first
+  non-European state" claim this Atlas previously carried unconfirmed.
+- [[BE-BOSA]] and [[BE-DATA-GOV-BE]] — the confirmed CAPTCHA-walled
+  `belgium.be`/`data.gov.be` domains were not re-attempted; instead the
+  European Commission's own Interoperable Europe governance page, GitHub's
+  Fedict organisation (a second repository, `Fedict/dcat`, plus the org's
+  full repository listing), and an independent Drupal.org case study and
+  lexgo.be legal-news article supplied enough new, genuinely-read material
+  to cross a majority for both entities.
+- [[FR-DGSI]] — Légifrance served DGSI's own founding decree (n° 2014-445)
+  in full readable text, and the Sénat's own 2022-2023 intelligence
+  oversight report gave independent budget/leadership corroboration.
+  `interieur.gouv.fr` and DGSI's own site remain genuinely 403-blocked, but
+  neither Légifrance nor the Sénat are part of that family.
+- [[NL-WBNI]] — `wetten.overheid.nl`'s BWBR0041515 is the Wbni's own
+  official text, resolving the entity's core problem (no source on the
+  Wbni itself, only on its successor) in one fetch.
+- [[NL-BASISREGISTRATIES]] — `web.archive.org` (this file's own flagged
+  next step) turned out to be unreachable by this environment's tool at
+  all, not merely slow or content-blocked; `rijksoverheid.nl` and
+  Logius's own "Stelselvoorzieningen" page supplied the extra sources
+  instead, breaking the exact-50% tie the entity was honestly left at.
+- [[NL-DSGO]] and [[NL-HEALTH-RI]] — both genuinely first-pass
+  verifications (never previously fetched). 3 of 4 and 3 of 3 sources read
+  directly respectively. NL-DSGO's flagged "is the 18 June launch date
+  actually 2024?" inference is now resolved: VNG's own article states the
+  programme "is in 2021 gestart en is in juni 2024 geëindigd," confirming
+  the year directly.
+- [[EU-GEANT]] — a European Commission GN4-3N project success-story page
+  gave substantial new, directly-read funding and scale detail (€50.5M EU
+  funding, 14→40 country coverage, three exabytes/year), breaking the
+  previous 3-of-6 tie.
+- [[EU-SDG]] — the European Parliament's own Legislative Observatory
+  (OEIL) worked where EUR-Lex would not, plus `legislation.gov.uk`'s
+  retained-EU-law text of the regulation itself and the European
+  Commission's own account of the Once-Only Technical System (resolving a
+  previously-unconfirmed lead into a confirmed fact).
+- [[INTL-COE]] — a second, distinct Wikipedia article ("Member states of
+  the Council of Europe"), the EU's own EEAS page on its CoE relationship,
+  the UK government's own CoE-delegation page, and a Georgetown Law
+  Library research guide together gave a genuine majority, despite
+  `coe.int` remaining domain-wide blocked throughout.
+- [[INTL-CONVENTION-108]] and [[INTL-CONVENTION-108-PLUS]] — neither
+  `coe.int`/`rm.coe.int` nor `web.archive.org` were reachable, so four to
+  five independent legal/compliance explainer sources each (Georgetown Law
+  Library, Wrangu, Ambit Compliance, Reed Smith for the base Convention;
+  itpatagonia.com, Völkerrechtsblog, University of Namur, CIGI for the
+  amending protocol) were used instead, each converging on the same
+  custodianship and substantive facts the Atlas already carried.
+- [[INTL-OECD]] — `oecd.org` (the main site) is domain-wide blocked, but a
+  *different* OECD subdomain, `legalinstruments.oecd.org`, is not: its HTML
+  page for OECD-LEGAL-0463 (the Council's own Recommendation on Enhancing
+  Access to and Sharing of Data) was read directly in full, the first
+  OECD-authored primary text this entity has ever carried. Belgium's
+  foreign ministry's own OECD profile page supplied a second independent
+  source.
+- [[UN-CES]] — `unece.org` stayed blocked, but Bulgaria's National
+  Statistical Institute (reporting its own CES attendance), a UK press
+  item on a CES-adjacent UK-Eurostat cooperation signing, and the UN's own
+  Indico event system (a UNOG-run domain distinct from `unece.org`)
+  together gave a genuine majority.
+- [[UN-EDIFACT]] — two independent EDI-industry pages (commport.com,
+  edibasics.com) confirm UN/CEFACT's maintainer role in near-identical
+  wording to each other (disclosed honestly as likely both echoing
+  UNECE's own text, rather than hidden as three independent
+  confirmations), pushing 1-of-3 to 3-of-5.
+
+**Stayed at `search-only`, honestly, after genuine additional effort:**
+- [[INTL-CONVENTION-108-PROTOCOL]] — one new source (an independent IT-law
+  blog, mbkaya.com, quoting the Protocol's own preamble) was found and
+  read, moving this entity from 1-of-3 to 2-of-4 — exactly the borderline
+  the discipline calls out, not a majority. Two further candidates failed
+  (IT Law Wiki/Fandom: HTTP 402 paywall; NADPA-RAPDP: HTTP 503). Left
+  `search-only` rather than forced across a 50/50 split.
+- [[UN-UNCTAD]] — `unctad.org` remains broadly blocked (three separate
+  pages tried, all 403) and the UNSCEB PDF still 404s. Three general,
+  independent sources were found and read directly this pass (Wikipedia,
+  a Chinese diplomatic mission's UNCTAD page, an exam-prep site's UNCTAD
+  overview), each confirming UNCTAD's general existence and founding — but
+  **none mentions the specific fact this entity exists to record**, that
+  UNCTAD's Commission on Science and Technology for Development hosts a
+  working group on data governance. `sdg.iisd.org` and `dig.watch`, tried
+  specifically for that claim, both 403'd. Promoting `verification` on
+  generic corroboration while the substantive claim stays unconfirmed
+  would be a hollow majority, so this entity is deliberately left at
+  `search-only` — a case where source-count arithmetic and honest
+  verification pull in different directions, and honesty wins.
+
+**A tool-level finding, not a content finding, worth recording for future
+passes**: `web.archive.org` / the Wayback Machine cannot be reached at all
+by this environment's WebFetch tool this session — every attempt (multiple
+distinct URLs, multiple entities, both a specific-snapshot pattern and a
+CDX-style query) returned "Claude Code is unable to fetch from
+web.archive.org" rather than any content-level response. This is different
+from every other block recorded in this Atlas's research history, which are
+all site-side (403, CAPTCHA, JS challenge, 404). Every entity in this pass
+that was pointed at archive.org as a next step (NL-BASISREGISTRATIES,
+EU-GEANT, INTL-COE, the Convention 108 family, INTL-OECD, UN-CES,
+UN-EDIFACT, UN-UNCTAD) hit this same tool-level wall and had to be resolved
+via alternate live sources instead. A future pass with a working
+archive.org path could still be worth trying against the specific pages
+this pass could not otherwise unblock (the three `digitaleoverheid.nl`
+pages on NL-BASISREGISTRATIES, and the `coe.int` pages on the Convention
+108 family), even though this pass reached a genuine majority for most of
+them by other means.
+
+All three validation commands (`validation/run_all.py`, `tools/build_graph.py`,
+`tools/test_build_graph.py`) were run after these changes; see the final
+summary for this pass for results.

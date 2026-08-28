@@ -17,11 +17,11 @@ region: EU
 status: superseded
 confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: 2026-08-15
-last_verified: "2026-08-27"
+last_verified: "2026-08-28"
 previous_version: null
 successor: NL-CBW
 
@@ -36,8 +36,8 @@ relationships:
   - type: implements-requirement-from
     target: EU-NIS
     source: fact
-    evidence: "The Wbni is the Dutch act on security of network and information systems implementing the original EU NIS regime; NIS2 (which the Cyberbeveiligingswet implements) repealed Directive (EU) 2016/1148. NOT READ this pass — no page specific to the Wbni's own text or its relationship to the original NIS Directive was fetched; the two sources this entity cites (ncsc.nl and nctv.nl) were read directly but both describe the Cbw/NIS2 side of the supersession, not the Wbni's own content or its NIS-Directive basis."
-    confidence: medium
+    evidence: "Confirmed by reading the Wbni's own official text directly on wetten.overheid.nl (2026-08-28, BWBR0041515): the law's own preamble states it is 'necessary to establish legal provisions to promote the security of network and information systems' in accordance with EU Directive 2016/1148, and its full title names 'richtlijn (EU) 2016/1148' directly. This is the Wbni's own text confirming its own basis — the strongest possible source for this edge, resolving what the prior pass could not find. The page also confirms the law's own repeal: 'Deze regeling is ingetrokken. Dit is geen geldige regeling meer' (this regulation has been withdrawn, it is no longer valid), with 15 August 2026 as the date it ceased to have effect."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -50,21 +50,27 @@ sources:
     url: "https://www.nctv.nl/onderwerpen/c/cyberbeveiligingswet"
     publisher: "Nationaal Coördinator Terrorismebestrijding en Veiligheid (NCTV)"
     accessed: "2026-08-27"
+  - title: "Wet beveiliging netwerk- en informatiesystemen — BWBR0041515"
+    url: "https://wetten.overheid.nl/BWBR0041515"
+    publisher: "Overheid.nl (wetten.overheid.nl)"
+    accessed: "2026-08-28"
 ---
 
 # Wet beveiliging netwerk- en informatiesystemen (Wbni)
 
-> **Re-verified 2026-08-27, still `search-only`.** Both cited pages were
-> read directly this pass, and both confirm the Wbni's **supersession has
-> now happened** — the Cbw entered into force on 15 August 2026, per each
-> page's own current text — which corrects `status` from `active` to
-> `superseded`. But neither page describes the Wbni's **own** content,
-> commencement date, or its relationship to the original NIS Directive:
-> both sources are written from the Cbw/NIS2 side of the transition. A
-> majority of this entity's own two sources were read, but what was read
-> does not supply what this entity most needs — a source on the Wbni
-> itself — so it stays `search-only` rather than being promoted on the
-> strength of confirming only the supersession date.
+> **Promoted to `primary-source` 2026-08-28.** The Wbni's own official
+> text was found and read directly this pass on wetten.overheid.nl
+> (BWBR0041515) — exactly the citation the prior pass could not locate.
+> Its own preamble confirms it implements EU Directive 2016/1148 (the
+> original NIS Directive), and the page confirms the law's repeal, in its
+> own words, effective 15 August 2026. The page's own Article 35 leaves
+> the law's commencement to a royal decree "to be determined," without
+> stating the actual date the decree set; a WebSearch cross-check
+> (Eerste Kamer / NCTV reporting) suggests 9 November 2018, but that is
+> not adopted into `start_date` since no directly-read source states it —
+> left `null` rather than padded, and recorded here only as an
+> unconfirmed lead for a future pass. All three of this entity's sources
+> are now read directly — a genuine majority.
 
 ## Description
 
@@ -79,11 +85,21 @@ en informatiesystemen (Wbni)" and that the Cbw is now in force.
 `coverage: low` deliberately, and still. This entity exists chiefly to make
 the supersession chain expressible — a superseded instrument must be
 retained, not deleted, for the Atlas to reconstruct the landscape at a past
-point in time (brief §11). Its own content, commencement date and
-relationship to the original NIS Directive remain unresearched this pass;
-the original NIS Directive is not yet an Atlas entity, and no source
-specific to the Wbni's own text (rather than to its successor) was located
-or fetched.
+point in time (brief §11).
+
+**Confirmed by reading the Wbni's own text directly this pass (2026-08-28,
+wetten.overheid.nl, BWBR0041515):** the law's own preamble states it is
+"necessary to establish legal provisions to promote the security of network
+and information systems" in accordance with EU Directive 2016/1148 — the
+original NIS Directive — and its full title names that directive directly.
+The original NIS Directive is not yet an Atlas entity in its own right
+([[EU-NIS]] is referenced as a placeholder target for this edge); this is
+still the first time this entity's own basis has been confirmed from its
+own text rather than inferred from its successor's documentation. The
+page's own Article 35 left the law's commencement to a royal decree without
+stating the date that decree set; WebSearch cross-checks suggest 9 November
+2018, but that is recorded only as an unconfirmed lead, not as
+`start_date`.
 
 `status: superseded` with `end_date: 2026-08-15` now records, rather than
 merely schedules, the end of the Wbni's operative period — corrected this
@@ -98,8 +114,8 @@ directly.
 
 ## Sources
 
-Both listed sources read directly this pass, but both describe the
-successor act rather than the Wbni itself — hence `search-only` is
-retained rather than promoted. A future pass should look specifically for
-the Wbni's own text (a `wetten.overheid.nl` BWBR citation was not located
-this pass) and its citation to the original EU NIS Directive.
+All three listed sources read directly. `ncsc.nl` and `nctv.nl` (prior
+pass) describe the successor act; `wetten.overheid.nl`'s BWBR0041515 (this
+pass, 2026-08-28) is the Wbni's own official text, confirming its own basis
+in EU Directive 2016/1148 and its own repeal date. That resolves what the
+prior pass could not find, and gives a genuine majority.

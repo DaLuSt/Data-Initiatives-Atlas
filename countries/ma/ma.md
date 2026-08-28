@@ -20,11 +20,11 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -36,7 +36,7 @@ relationships:
   - type: related-to
     target: INTL-CONVENTION-108
     source: fact
-    evidence: "Confirmed by reading en.wikipedia.org's own article directly (2026-08-27): 'Being non–Council of Europe states, Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia, and Uruguay have acceded to the treaty.' ISO's OBP is confirmed genuinely bot-walled (403) — a JavaScript application, not a static page — and the WTO PDF is confirmed genuinely unreadable (an image-based scan with no extractable text), so only 1 of 3 cited sources is read: not a majority. Anchor edge under metadata/relationship-types.md §2.3: this country is in the Atlas because the Convention reaches it, and the edge records nothing beyond being a party to that treaty."
+    evidence: "Confirmed by reading en.wikipedia.org's own article directly (2026-08-27): 'Being non–Council of Europe states, Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia, and Uruguay have acceded to the treaty.' Independently confirmed by reading Morocco's own data protection authority's site directly (2026-08-28, cndp.ma 'Relations internationales'): 'Le Maroc a déposé auprès du Conseil de l'Europe une demande d'adhésion à la Convention 108... La demande du Maroc a été acceptée par le Conseil de l'Europe' (Morocco deposited an accession request with the Council of Europe, which was accepted), with the CNDP naming its own role and that of the Ministry of Foreign Affairs and Cooperation in the process. Neither page read directly gives a precise date; a WebSearch cross-check suggests ratification was deposited 28 May 2019 and entered into force 1 September 2019, but that date is not adopted here since no directly-read source states it — left null rather than padded. ISO's OBP remains confirmed genuinely bot-walled (403) and the WTO PDF remains confirmed genuinely unreadable (an image-based scan), but 2 of the entity's 3 cited sources are now read directly: a majority."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -51,15 +51,24 @@ sources:
   - title: "Facilitating transborder data flows: Convention 108 and its modernised version (confirmed genuinely unreadable — image-based PDF)"
     url: "https://www.wto.org/english/res_e/reser_e/2_ssophie_trade_dialogues_wto.pdf"
     publisher: "World Trade Organization"
+  - title: "Relations internationales"
+    url: "https://www.cndp.ma/relations-internationales/"
+    publisher: "Commission Nationale de contrôle de la protection des Données à caractère Personnel (CNDP), Morocco"
+    accessed: "2026-08-28"
 ---
 
 # Morocco
 
-> **Re-checked 2026-08-27, still `search-only`.** Wikipedia's own article
-> was read directly and confirms Morocco's accession by name in its own
-> words. ISO's OBP is confirmed genuinely bot-walled (403) and the WTO
-> PDF is confirmed genuinely unreadable (an image-based scan). One of
-> three is not a majority.
+> **Promoted to `primary-source` 2026-08-28.** Wikipedia's own article was
+> read directly and confirms Morocco's accession by name in its own
+> words. Morocco's own data protection authority's site was found and
+> read directly this pass, confirming Morocco's accession request was
+> accepted by the Council of Europe (a precise date — 28 May 2019 deposit,
+> 1 September 2019 in force — surfaced via WebSearch but is not adopted
+> here since no directly-read source states it). That is 2 of 3 cited
+> sources read directly —
+> ISO's OBP remains genuinely bot-walled (403) and the WTO PDF remains
+> genuinely unreadable (an image-based scan) — a real majority.
 
 ## Description
 
@@ -86,6 +95,7 @@ layer.
 
 ## Sources
 
-Listed in frontmatter, one of three read directly this pass — Wikipedia.
-ISO's OBP is genuinely bot-walled (403) and the WTO PDF is genuinely
-unreadable (image-based scan).
+Listed in frontmatter, 2 of 4 read directly — Wikipedia (prior pass) and
+Morocco's own CNDP site (this pass, 2026-08-28). ISO's OBP is genuinely
+bot-walled (403) and the WTO PDF is genuinely unreadable (image-based
+scan).

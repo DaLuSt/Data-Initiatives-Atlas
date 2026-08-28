@@ -24,7 +24,7 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
@@ -43,8 +43,8 @@ relationships:
   - type: part-of
     target: UN-UNECE
     source: fact
-    evidence: "Confirmed by reading the Eurostat 'Statistical cooperation — introduction' page directly (2026-08-28): 'Eurostat represents the EU in the Conference of European Statisticians (CES), which is organised by the UNECE,' describing the CES as one of the 'key international forums' Eurostat uses. All three unece.org pages (the CES home page, its about page, and its bureau page) returned HTTP 403 on every attempt this pass — `unece.org` is blocked domain-wide this session, confirmed by testing the bare root domain. A WebSearch cross-check surfaced text that reads as a near-verbatim match to this entity's existing description (65 countries, the same four objectives, annual plenary sessions), suggesting it is drawing on the same unece.org page's cached/indexed text rather than an independent source — corroborating without counting as a page genuinely fetched and read this pass. One of four cited sources read directly is not a majority."
-    confidence: medium
+    evidence: "Confirmed by reading the Eurostat 'Statistical cooperation — introduction' page directly (2026-08-28): 'Eurostat represents the EU in the Conference of European Statisticians (CES), which is organised by the UNECE,' describing the CES as one of the 'key international forums' Eurostat uses. All three unece.org pages (the CES home page, its about page, and its bureau page) returned HTTP 403 on every attempt this pass — `unece.org` is blocked domain-wide this session, confirmed by testing the bare root domain; `web.archive.org` cannot be reached at all by this environment's tool. Three further independent sources were found and read directly this pass, all outside the unece.org/ec.europa.eu family already used: Bulgaria's National Statistical Institute (nsi.bg), reporting its own attendance at the CES's 72nd plenary session (20-21 June 2024, Geneva) and confirming in its own words that the CES is 'organized by the United Nations Economic Commission for Europe (UNECE)' and attended by 'delegations... of more than 60 states'; a UK press item (wired-gov.net) reporting the UK and Eurostat signing a statistical-cooperation arrangement at the CES in Warsaw on 9 October 2024; and the UN's own Indico event system (indico.un.org, 'Brought to you by UNOG'), confirming the 73rd session's dates (16-18 June 2025, Palais des Nations, Geneva). That is 4 of 7 cited sources read directly — a genuine majority."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -62,18 +62,35 @@ sources:
     url: "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Statistical_cooperation_-_introduction"
     publisher: "Eurostat — European Commission"
     accessed: "2026-08-28"
+  - title: "The use of geospatial data was the main topic of the 72nd plenary session of the Conference of European Statisticians"
+    url: "https://www.nsi.bg/en/news/the-use-of-geospatial-data-was-the-main-topic-of-the-72nd-plenary-session-of-the-conference-of-european-statisticians-1591"
+    publisher: "National Statistical Institute, Bulgaria (nsi.bg)"
+    accessed: "2026-08-28"
+  - title: "New partnership between statistical authorities of the UK and the EU"
+    url: "https://wired-gov.net/wg/news.nsf/articles/New+partnership+between+statistical+authorities+of+the+UK+and+the+EU+09102024130500?open="
+    publisher: "Wired-GOV"
+    accessed: "2026-08-28"
+  - title: "73rd Session (16-18 June 2025): Overview"
+    url: "https://indico.un.org/event/1011846/"
+    publisher: "Indico.UN (UN Office at Geneva)"
+    accessed: "2026-08-28"
 ---
 
 # CES — Conference of European Statisticians
 
-> **Still `search-only` after this pass.** All three `unece.org` sources
-> are blocked domain-wide this session (confirmed via the bare root
-> domain). Only the Eurostat cooperation page was read directly — it
-> confirms the specific claim that matters most to this entity's role in
-> the Atlas (Eurostat sits in the CES, which UNECE organises), but one of
-> four cited sources is not a majority, and no independent alternate for
-> the UNECE-side facts (65 countries, the CES's own objectives) was found
-> and genuinely read this pass, so `verification` is not promoted.
+> **Promoted to `primary-source` 2026-08-28.** All three `unece.org`
+> sources are blocked domain-wide this session (confirmed via the bare
+> root domain), and `web.archive.org` cannot be reached at all by this
+> environment's tool. The Eurostat cooperation page (prior pass) confirms
+> the specific claim that matters most to this entity's role in the Atlas
+> (Eurostat sits in the CES, which UNECE organises). Three further
+> independent sources were found and read directly this pass — Bulgaria's
+> National Statistical Institute reporting its own CES attendance, a UK
+> press item on a UK–Eurostat cooperation arrangement signed at the CES,
+> and the UN's own Indico event page for the 73rd session — none part of
+> the unece.org/ec.europa.eu family already relied on. That is 4 of 7
+> sources read directly — a genuine majority — so `verification` is
+> promoted to `primary-source`.
 
 ## Description
 
@@ -87,6 +104,22 @@ for statistical cooperation, and **develop and adopt statistical standards**
 in the UNECE region. It runs annual plenary sessions with high-level talks
 for chief statisticians, plus seminars and expert meetings, and publishes
 the *CES Statistical Standards and Studies* series.
+
+**Confirmed by reading Bulgaria's National Statistical Institute's own
+report of its attendance directly (2026-08-28):** the 72nd plenary session
+ran 20–21 June 2024 in Geneva, held jointly with the UN-GGIM Europe
+Regional Committee and focused on geospatial data — the integration of
+geospatial and statistical information, and the use of AI, large language
+models and machine learning in official statistics — with delegations from
+"more than 60 states" attending, consistent with (though not identical
+to) the "some 65 countries" figure this entity already carried. The UN's
+own Indico event system independently confirms the 73rd session ran
+16–18 June 2025 at the Palais des Nations, Geneva, with simultaneous
+interpretation in English, French and Russian. A UK press report
+independently confirms the CES's role as a real convening venue for
+bilateral statistical cooperation: the UK's National Statistician and
+Eurostat's Director-General signed a GDP-data-sharing arrangement at the
+CES in Warsaw on 9 October 2024.
 
 ## The forum where the European and UN statistical layers actually meet
 
@@ -120,6 +153,9 @@ presented as settled.
 
 ## Sources
 
-Listed in frontmatter, one of four read directly this pass: the Eurostat
-cooperation page, which names the CES as a forum Eurostat sits in. All
-three UNECE pages remain 403-blocked this session.
+Listed in frontmatter. Four of seven read directly: the Eurostat
+cooperation page (prior pass), plus nsi.bg, wired-gov.net and
+indico.un.org (all this pass, 2026-08-28). All three UNECE pages remain
+403-blocked this session, and `web.archive.org` cannot be reached at all
+by this environment's tool. A genuine majority, promoting `verification`
+to `primary-source`.

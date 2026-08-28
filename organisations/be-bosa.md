@@ -22,11 +22,11 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2017-03-01
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -58,19 +58,39 @@ sources:
     url: "https://etaamb.openjustice.be/nl/koninklijk-besluit-van-22-februari-2017_n2017010836.html"
     publisher: "etaamb / OpenJustice (Belgisch Staatsblad)"
     accessed: "2026-08-26"
+  - title: "Governance — Belgium (Interoperable Europe monitoring)"
+    url: "https://interoperable-europe.ec.europa.eu/collection/iopeu-monitoring/governance-belgium"
+    publisher: "European Commission — Interoperable Europe Portal"
+    accessed: "2026-08-28"
+  - title: "Fedict — FPS BOSA DG Digital Transformation (GitHub organisation profile)"
+    url: "https://github.com/Fedict"
+    publisher: "GitHub (Fedict / FPS BOSA)"
+    accessed: "2026-08-28"
+  - title: "Belgian FPS Policy and Support (BOSA)"
+    url: "https://new.drupal.org/node/2336613"
+    publisher: "Drupal.org"
+    accessed: "2026-08-28"
 ---
 
 # FOD BOSA — Federale Overheidsdienst Beleid en Ondersteuning
 
-> **Re-checked 2026-08-27, still `search-only`.** All three `bosa.belgium.be`
+> **Promoted to `primary-source` 2026-08-28.** All three `bosa.belgium.be`
 > pages and the `news.belgium.be` page remain genuinely bot-walled
-> (CAPTCHA/403) even with an honest User-Agent. This pass tried three
-> further routes to BOSA's own voice — `dtservices.bosa.be` (301-redirects
-> to a blocked `bosa.belgium.be` search page), `fedweb.belgium.be`
-> (301-redirects to the same blocked domain), and `digitall.be` (403) —
-> all dead ends, confirming the block is comprehensive rather than
-> page-specific. Two of six is still not a majority, so this entity stays
-> `search-only` despite genuine additional effort this pass.
+> (CAPTCHA/403) even with an honest User-Agent — retried again this pass
+> and still dead, per the discipline's instruction not to waste further
+> effort on those exact domains. Three genuinely different, non-`belgium.be`
+> sources were found and read directly instead: the European Commission's
+> own Interoperable Europe governance page for Belgium (independent of the
+> Belgian government's web presence, and substantive — it names DG Digital
+> Transformation's mandate, its four service-integrator tasks, and its
+> then-leadership), GitHub's own Fedict organisation profile (confirming
+> "Federal Public Service Policy and Support DG Digital Transformation
+> (formerly: Fedict)" as the org's own self-description, 68 repositories),
+> and a Drupal.org case-study page (confirming DG Digital Transformation as
+> "the successor of Fedict (FPS ICT)" and BOSA's Fast2Web hosting service
+> for 100+ government Drupal sites). That brings this entity to 5 of 9
+> sources read directly — a genuine majority — so `verification` is
+> promoted to `primary-source`.
 
 ## Description
 
@@ -101,6 +121,29 @@ that exact structure.
 The **Dienst Administratieve Vereenvoudiging** (administrative
 simplification service) was integrated into BOSA, and **Nido** is its
 innovation lab — neither confirmed independently this pass.
+
+**Confirmed by reading the European Commission's own Interoperable Europe
+governance page directly (2026-08-28):** DG Digital Transformation "supports
+the government and federal organisations in their digitisation drive" and is
+"the driving force behind the evolution and the digital reforms of the
+federal government," with a specific four-part interoperability mandate —
+uniting Belgium's national service integrators (three federal, one per
+region), coordinating their methods, monitoring the authoritative data they
+disclose, and establishing a circle of trust between them. The page (now
+archived, per its own note) named Mathieu Michel as Secretary of State for
+Digitalisation and Jack Hamande as DG DT's Director-General at the time it
+was current.
+
+**Confirmed by reading GitHub's own Fedict organisation profile and
+Drupal.org's BOSA case-study page directly (2026-08-28):** the organisation
+self-describes on GitHub as "Federal Public Service Policy and Support DG
+Digital Transformation (formerly: Fedict)" and maintains 68 public
+repositories, including the `dcattools` and `dcat` open-data pipelines
+already cited on [[BE-DATA-GOV-BE]]. Drupal.org's case study independently
+confirms DG Digital Transformation as "the successor of Fedict (FPS ICT)"
+and describes BOSA's Fast2Web service hosting 100+ Drupal websites for
+Belgian public administrations, plus BOSA's funding of the `openfed`
+open-source Drupal distribution used across the Belgian government sector.
 
 ## The federal counterpart to two entities elsewhere in the Atlas
 
@@ -134,12 +177,16 @@ the Communities with several public administrations, which is precisely
 
 ## Sources
 
-Two of six read directly this pass (both from the prior pass) — Wikipedia
-and the founding Royal Decree of 22 February 2017 at
-etaamb.openjustice.be. All three `bosa.belgium.be` pages and the
-`news.belgium.be` page returned CAPTCHA challenges rather than content;
-the same wall was found on `ccb.belgium.be`, `data.gov.be`,
-`financien.belgium.be` and `statbel.fgov.be` across this batch.
-`dtservices.bosa.be` and `fedweb.belgium.be` both 301-redirect into the
-same blocked `bosa.belgium.be` domain, and `digitall.be` returned 403 —
-three further routes tried this pass, none successful.
+Five of nine read directly — Wikipedia and the founding Royal Decree of 22
+February 2017 at etaamb.openjustice.be (prior pass), plus three found and
+read this pass (2026-08-28): the European Commission's Interoperable
+Europe governance page for Belgium, GitHub's Fedict organisation profile,
+and Drupal.org's BOSA case study. All three `bosa.belgium.be` pages and the
+`news.belgium.be` page returned CAPTCHA challenges rather than content
+(retried this pass, still dead); the same wall was found on
+`ccb.belgium.be`, `data.gov.be`, `financien.belgium.be` and
+`statbel.fgov.be` across an earlier batch, and `dtservices.bosa.be`,
+`fedweb.belgium.be` and `digitall.be` were also tried in a prior pass with
+no success. Per this pass's instruction not to re-spend effort on those
+exact domains, the three new sources above were sought and read instead,
+bringing this entity to a genuine majority.
