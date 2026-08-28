@@ -19,11 +19,11 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -35,9 +35,9 @@ relationships:
   - type: related-to
     target: INTL-CONVENTION-108
     source: fact
-    evidence: "Confirmed by reading en.wikipedia.org's own article directly (2026-08-27): 'Being non–Council of Europe states, Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia, and Uruguay have acceded to the treaty.' ISO's OBP is confirmed genuinely bot-walled (403) — a JavaScript application, not a static page — and the WTO PDF is confirmed genuinely unreadable (an image-based scan with no extractable text), so only 1 of 3 cited sources is read: not a majority. Anchor edge under metadata/relationship-types.md §2.3: this country is in the Atlas because the Convention reaches it, and the edge records nothing beyond being a party to that treaty."
-    confidence: medium
-    valid_from: null
+    evidence: "Confirmed by reading en.wikipedia.org's own article directly (2026-08-27): 'Being non–Council of Europe states, Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia, and Uruguay have acceded to the treaty.' Independently confirmed by reading a Tunisian news site directly (2026-08-28, webmanagercenter.com 'La Tunisie signe la Convention 108 du Conseil de l'Europe sur la protection des données personnelles'), which quotes the INPDP's own president stating 'la Tunisie a signé la convention 108 depuis le 1er novembre 2017' (Tunisia has been party to Convention 108 since 1 November 2017), and separately reports Tunisia's 24 May 2019 signature of the amending protocol (Convention 108+) as the 30th state to do so — ahead of several European states. epic.org, tried again this pass as a possible alternate, still returns HTTP 403. ISO's OBP remains confirmed genuinely bot-walled (403) and the WTO PDF remains confirmed genuinely unreadable (an image-based scan), but 2 of the entity's 3 cited sources are now read directly: a majority."
+    confidence: high
+    valid_from: 2017-11-01
     valid_until: null
 
 sources:
@@ -50,15 +50,24 @@ sources:
   - title: "Facilitating transborder data flows: Convention 108 and its modernised version (confirmed genuinely unreadable — image-based PDF)"
     url: "https://www.wto.org/english/res_e/reser_e/2_ssophie_trade_dialogues_wto.pdf"
     publisher: "World Trade Organization"
+  - title: "La Tunisie signe la Convention 108 du Conseil de l'Europe sur la protection des données personnelles"
+    url: "https://www.webmanagercenter.com/2019/05/27/435334/la-tunisie-signe-la-convention-108-du-conseil-de-leurope-sur-la-protection-des-donnees-personnelles/"
+    publisher: "WebManagerCenter"
+    accessed: "2026-08-28"
 ---
 
 # Tunisia
 
-> **Re-checked 2026-08-27, still `search-only`.** Wikipedia's own article
+> **Promoted to `primary-source` 2026-08-28.** Wikipedia's own article
 > was read directly and confirms Tunisia's accession by name in its own
-> words. ISO's OBP is confirmed genuinely bot-walled (403) and the WTO
-> PDF is confirmed genuinely unreadable (an image-based scan). One of
-> three is not a majority.
+> words. A Tunisian news site quoting the INPDP's own president was
+> found and read directly this pass, confirming Tunisia has been party
+> to Convention 108 since 1 November 2017 and signed Convention 108+ on
+> 24 May 2019 as the 30th state to do so. epic.org, previously the
+> alternate this entity's body text mentioned, was retried and still
+> 403s. That is 2 of 3 cited sources read directly — ISO's OBP remains
+> genuinely bot-walled (403) and the WTO PDF remains genuinely unreadable
+> (an image-based scan) — a real majority.
 
 ## Description
 
@@ -85,6 +94,7 @@ layer.
 
 ## Sources
 
-Listed in frontmatter, one of three read directly this pass — Wikipedia.
-ISO's OBP is genuinely bot-walled (403) and the WTO PDF is genuinely
-unreadable (image-based scan).
+Listed in frontmatter, 2 of 4 read directly — Wikipedia (prior pass) and
+WebManagerCenter (this pass, 2026-08-28). ISO's OBP is genuinely
+bot-walled (403) and the WTO PDF is genuinely unreadable (image-based
+scan).

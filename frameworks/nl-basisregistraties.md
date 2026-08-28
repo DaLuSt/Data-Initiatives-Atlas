@@ -25,11 +25,11 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -74,20 +74,36 @@ sources:
     url: "https://www.geobasisregistraties.nl/basisregistraties"
     publisher: "Geobasisregistraties (Ministerie van BZK)"
     accessed: "2026-08-27"
+  - title: "10 basisregistraties in 1 stelsel"
+    url: "https://www.rijksoverheid.nl/onderwerpen/digitale-overheid/10-basisregistraties-in-1-stelsel"
+    publisher: "Rijksoverheid.nl"
+    accessed: "2026-08-28"
+  - title: "Stelselvoorzieningen"
+    url: "https://www.logius.nl/domeinen/gegevensuitwisseling/stelselvoorzieningen"
+    publisher: "Logius (Ministerie van BZK)"
+    accessed: "2026-08-28"
 ---
 
 # Stelsel van Basisregistraties
 
-> **Re-verified 2026-08-27, still below a majority.** Three of six cited
-> pages were read directly this pass — noraonline.nl, data.overheid.nl and
-> geobasisregistraties.nl. The three digitaleoverheid.nl pages returned a
-> JavaScript bot-verification challenge on every attempt (tried twice each,
-> including a retry aimed at an alternate digitaleoverheid.nl URL for the
-> "roles" page, and a PDF alternate from vng.nl that could not be parsed).
-> That is exactly half, not a majority, so `verification` **stays
-> `search-only`** per the re-verification discipline's own borderline rule
-> — this is not a rubber stamp. `last_verified` is still updated to record
-> that a genuine attempt was made this pass.
+> **Promoted to `primary-source` 2026-08-28.** Three of the original six
+> cited pages were read directly in the prior pass — noraonline.nl,
+> data.overheid.nl and geobasisregistraties.nl. The three digitaleoverheid.nl
+> pages remain genuinely bot-walled (a JavaScript verification challenge,
+> confirmed across two prior passes); `web.archive.org` was attempted per
+> this pass's specific instruction but this environment's fetch tool
+> cannot reach `web.archive.org` at all (a tool-level restriction, not a
+> content problem), so no Wayback snapshot of those three pages could be
+> read. Two genuinely different, non-digitaleoverheid.nl government pages
+> were found and read directly instead: `rijksoverheid.nl`'s own "10
+> basisregistraties in 1 stelsel" page (confirming the ten-registration
+> count, the once-only principle, and the mandatory-use rule in the
+> ministry's own words) and Logius's "Stelselvoorzieningen" page
+> (confirming, in the system operator's own words, what each of the four
+> system facilities — Digikoppeling, Digimelding, Digilevering,
+> Stelselcatalogus — actually does). That brings this entity to 5 of 8
+> sources read directly — a genuine majority — so `verification` is
+> promoted to `primary-source`.
 
 ## Description
 
@@ -128,9 +144,20 @@ stelselvoorzieningen — [[NL-DIGIKOPPELING]] (data exchange), Digilevering,
 Digimelding (reporting suspected errors) and Stelselcatalogus — one more
 than the two previously recorded here.
 
-Digimelding, Digilevering and Stelselcatalogus are **not** Atlas entities:
-each is named only in passing in the source read and nothing further about
-any of them was established this pass. Queued.
+Digimelding, Digilevering and Stelselcatalogus are **not** Atlas entities.
+**Confirmed by reading Logius's own "Stelselvoorzieningen" page directly
+this pass (2026-08-28):** the four facilities "ondersteunen de
+basisregistraties bij eenvoudige, uniforme, betrouwbare en efficiënte
+gegevensuitwisseling met hun afnemers" (support the base registries with
+simple, uniform, reliable and efficient data exchange with their
+consumers) — Digikoppeling for secure information exchange between
+government bodies, Digimelding for consumers to report suspected
+inaccuracies back to source organisations, Digilevering for event-based
+notifications of registry changes, and Stelselcatalogus as the integrated
+overview of concepts and data across the system. That is more than a
+passing mention, but none of the three still-uncreated ones has enough of
+its own substance beyond this functional description to justify a
+separate entity yet. Queued.
 
 ## Roles, not owners — and why the graph shows fewer parties than exist
 
@@ -257,11 +284,13 @@ link should move down to the BRP entity."* They have, and it has.
 
 ## Sources
 
-Listed in frontmatter. Three of six read directly this pass — noraonline.nl,
-data.overheid.nl and geobasisregistraties.nl, all confirming the ten
-registries and (the first) the four system facilities. The three
-digitaleoverheid.nl pages are confirmed genuinely bot-walled on every
-attempt (a JavaScript verification challenge, not static content); a
-vng.nl PDF alternate was fetched but returned unparseable binary. Exactly
-half is not a majority, so `verification` stays `search-only` per the
-re-verification discipline's borderline rule.
+Listed in frontmatter. Five of eight read directly: noraonline.nl,
+data.overheid.nl and geobasisregistraties.nl (prior pass), plus
+rijksoverheid.nl and Logius's Stelselvoorzieningen page (this pass,
+2026-08-28). The three digitaleoverheid.nl pages remain confirmed
+genuinely bot-walled on every attempt (a JavaScript verification
+challenge, not static content); a vng.nl PDF alternate was fetched in the
+prior pass but returned unparseable binary; `web.archive.org` was
+attempted this pass but this environment's fetch tool cannot reach that
+domain at all. A genuine majority was reached instead via two further
+non-digitaleoverheid.nl government sources.

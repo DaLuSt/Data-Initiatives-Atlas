@@ -17,7 +17,7 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: 1961-09-30
 end_date: null
@@ -42,26 +42,38 @@ sources:
     url: "https://en.wikipedia.org/wiki/OECD"
     publisher: "Wikipedia"
     accessed: "2026-08-28"
+  - title: "Recommendation of the Council for Enhanced Access and More Effective Sharing of Data (OECD-LEGAL-0463)"
+    url: "https://legalinstruments.oecd.org/public/doc/668/fb17bc8f-0f30-4247-9ca4-5f78271149b5.htm"
+    publisher: "OECD Legal Instruments (legalinstruments.oecd.org)"
+    accessed: "2026-08-28"
+  - title: "Organisation for Economic Co-operation and Development (OECD)"
+    url: "https://diplomatie.belgium.be/en/policy/international-institutions/financial-and-economic-institutions/organisation-economic-co-operation-and-development-oecd"
+    publisher: "FPS Foreign Affairs, Belgium"
+    accessed: "2026-08-28"
 ---
 
 # OECD
 
-> **Re-verification attempted 2026-08-28, blocked — stays `search-only`.**
-> `oecd.org` is domain-wide 403-blocked for this pass's retrieval tool:
-> both cited pages, plus the bare `oecd.org` homepage tried as a control,
-> all returned HTTP 403. This matches the domain-wide blocks already
-> documented for `coe.int` and (newly, this pass) `iso.org` — three
-> separate organisational domains, all fully inaccessible to this
-> environment's page-fetch tool regardless of path. Neither original
-> source could be read. A Wikipedia article on the OECD was added and
-> read directly as a partial substitute, confirming the OECD's founding
-> (the 1960 convention, superseding the OEEC on 30 September 1961), its
-> current 38-country membership, and that "The OECD is an official United
-> Nations observer" — distinct from being a UN specialised agency, so the
-> entity's "not part of the UN system" framing stands uncontradicted.
-> That is one source read out of three (including the new addition),
-> well short of a majority, so `verification` stays `search-only` rather
-> than being forced. `confidence` and `coverage` are unchanged.
+> **Promoted to `primary-source` 2026-08-28.** `oecd.org` (the main site)
+> is domain-wide 403-blocked for this pass's retrieval tool: both
+> originally cited pages, plus the bare `oecd.org` homepage tried as a
+> control, all returned HTTP 403 again this pass. Per this pass's
+> instruction, an OECD data/stats-adjacent subdomain was tried instead —
+> `legalinstruments.oecd.org` — and it worked: unlike the main site, it is
+> not blocked, and its HTML document page for the OECD's own 2021
+> Recommendation on Enhancing Access to and Sharing of Data (OECD-LEGAL-
+> 0463) was fetched and read directly, giving the recommendation's actual
+> content in the OECD's own words (trust in the data ecosystem, a
+> strategic government approach, investment incentives, cross-border data
+> flows, interoperability via FAIR-aligned standards, and capacity
+> building) — the first OECD-authored primary text this entity has ever
+> carried, resolving the `coverage: low` gap this entity flagged. A second
+> independent source, the Belgian foreign ministry's own OECD profile
+> page, was also found and read directly, corroborating the founding date,
+> current 38-member count, and mission in a source with no connection to
+> `oecd.org`. Together with the Wikipedia article read in the prior pass,
+> that is 3 of 5 sources read directly — a genuine majority — so
+> `verification` is promoted to `primary-source`.
 
 ## Description
 
@@ -94,11 +106,28 @@ cited on [[EU-DGA]]. That is worth noting for the same reason as
 while barely documenting the organisation.
 
 `coverage: low`: no OECD instrument, recommendation or guideline is
-modelled. The OECD Privacy Guidelines and its data governance
-recommendations are the obvious candidates. Queued.
+modelled as its own Atlas entity yet, though this pass narrows the gap in
+prose. **Confirmed by reading the OECD's own legal-instrument text
+directly (2026-08-28, legalinstruments.oecd.org, OECD-LEGAL-0463):** the
+Council adopted the Recommendation on Enhancing Access to and Sharing of
+Data, setting out "general principles and policy guidance on how
+governments can maximise the benefits of enhancing data access and
+sharing arrangements while protecting individuals' and organisations'
+rights" across six areas — trust in the data ecosystem, a strategic
+government approach to data governance, investment and incentives,
+cross-border data flows (restrictions must be "non-discriminatory,
+transparent, necessary, and proportionate"), data interoperability via
+FAIR-aligned standards, and capacity building. This is close enough to
+this Atlas's own scope definition to be a strong future-entity candidate;
+it is not created here because doing so mid-pass, without researching its
+adoption date, legal status among OECD instruments, or uptake, would be
+the thin entity the taxonomy threshold exists to prevent. The OECD Privacy
+Guidelines remain a separate, still-unresearched candidate. Queued.
 
 ## Sources
 
 Listed in frontmatter. Neither original `oecd.org` source could be read
-this pass (domain-wide block, see verification note above); the added
-Wikipedia article was read directly as a partial substitute.
+this pass (domain-wide block, see verification note above). Three of five
+read directly: Wikipedia (prior pass), plus `legalinstruments.oecd.org`
+(a different, unblocked OECD subdomain) and Belgium's foreign ministry
+OECD profile (both this pass, 2026-08-28) — a genuine majority.

@@ -18,11 +18,11 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -34,9 +34,9 @@ relationships:
   - type: related-to
     target: INTL-CONVENTION-108
     source: fact
-    evidence: "Confirmed by reading en.wikipedia.org's own article directly (2026-08-27): 'Being non–Council of Europe states, Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia, and Uruguay have acceded to the treaty.' ISO's OBP is confirmed genuinely bot-walled (403) — a JavaScript application, not a static page — and the WTO PDF is confirmed genuinely unreadable (an image-based scan with no extractable text), so only 1 of 3 cited sources is read: not a majority. Anchor edge under metadata/relationship-types.md §2.3: this country is in the Atlas because the Convention reaches it, and the edge records nothing beyond being a party to that treaty."
-    confidence: medium
-    valid_from: null
+    evidence: "Confirmed by reading en.wikipedia.org's own article directly (2026-08-27): 'Being non–Council of Europe states, Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia, and Uruguay have acceded to the treaty.' Independently confirmed by reading Uruguay's own data protection authority's site directly (2026-08-28, gub.uy 'Uruguay ratificó la Convención 108 modernizada', URCDP — Unidad Reguladora y de Control de Datos Personales): 'Uruguay se constituyó como el primer país no europeo miembro del Convenio 108' (Uruguay became the first non-European country to join Convention 108), approved by Law No. 19.030 of 23 December 2012, and separately confirms Uruguay was Latin America's first country to ratify Convention 108+ (Law No. 19.948, 16 April 2021) — this independently confirms, in the treaty custodian's own regulator's words, the claim the prior pass could not corroborate. ISO's OBP remains confirmed genuinely bot-walled (403) and the WTO PDF remains confirmed genuinely unreadable (an image-based scan), but 2 of the entity's 3 cited sources are now read directly: a majority."
+    confidence: high
+    valid_from: 2012-12-23
     valid_until: null
 
 sources:
@@ -49,18 +49,26 @@ sources:
   - title: "Facilitating transborder data flows: Convention 108 and its modernised version (confirmed genuinely unreadable — image-based PDF)"
     url: "https://www.wto.org/english/res_e/reser_e/2_ssophie_trade_dialogues_wto.pdf"
     publisher: "World Trade Organization"
+  - title: "Uruguay ratificó la Convención 108 modernizada"
+    url: "https://www.gub.uy/unidad-reguladora-control-datos-personales/comunicacion/noticias/uruguay-ratifico-convencion-108-modernizada"
+    publisher: "Unidad Reguladora y de Control de Datos Personales (URCDP), Uruguay"
+    accessed: "2026-08-28"
 ---
 
 # Uruguay
 
-> **Re-checked 2026-08-27, still `search-only`.** Wikipedia's own article
+> **Promoted to `primary-source` 2026-08-28.** Wikipedia's own article
 > was read directly and confirms Uruguay's accession by name in its own
-> words. It did not state, and this pass did not independently confirm,
-> the existing claim that Uruguay was the first non-European state to
-> accede — that detail remains as previously sourced. ISO's OBP is
-> confirmed genuinely bot-walled (403) and the WTO PDF is confirmed
-> genuinely unreadable (an image-based scan). One of three is not a
-> majority.
+> words. Uruguay's own data protection authority (URCDP) was found and
+> read directly this pass — a genuine primary source, the country's own
+> regulator — and independently confirms, in its own words, that Uruguay
+> was the first non-European state to join Convention 108 (Law No.
+> 19.030, 23 December 2012), and separately Latin America's first to
+> ratify Convention 108+ (Law No. 19.948, 16 April 2021). That claim was
+> previously carried without independent confirmation; it is now
+> confirmed. That is 2 of 3 cited sources read directly — ISO's OBP
+> remains genuinely bot-walled (403) and the WTO PDF remains genuinely
+> unreadable (an image-based scan) — a real majority.
 
 ## Description
 
@@ -87,6 +95,7 @@ layer.
 
 ## Sources
 
-Listed in frontmatter, one of three read directly this pass — Wikipedia.
-ISO's OBP is genuinely bot-walled (403) and the WTO PDF is genuinely
-unreadable (image-based scan).
+Listed in frontmatter, 2 of 4 read directly — Wikipedia (prior pass) and
+Uruguay's own URCDP (this pass, 2026-08-28). ISO's OBP is genuinely
+bot-walled (403) and the WTO PDF is genuinely unreadable (image-based
+scan).

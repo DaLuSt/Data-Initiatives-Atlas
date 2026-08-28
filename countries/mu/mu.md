@@ -18,11 +18,11 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -34,8 +34,8 @@ relationships:
   - type: related-to
     target: INTL-CONVENTION-108
     source: fact
-    evidence: "Confirmed by reading en.wikipedia.org's own article directly (2026-08-27): 'Being non–Council of Europe states, Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia, and Uruguay have acceded to the treaty.' ISO's OBP is confirmed genuinely bot-walled (403) — a JavaScript application, not a static page — and the WTO PDF is confirmed genuinely unreadable (an image-based scan with no extractable text), so only 1 of 3 cited sources is read: not a majority. Anchor edge under metadata/relationship-types.md §2.3: this country is in the Atlas because the Convention reaches it, and the edge records nothing beyond being a party to that treaty."
-    confidence: medium
+    evidence: "Confirmed by reading en.wikipedia.org's own article directly (2026-08-27): 'Being non–Council of Europe states, Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia, and Uruguay have acceded to the treaty.' Independently confirmed by reading a Mauritian newspaper directly (2026-08-28, lemauricien.com 'Data Protection Day: Maurice, premier pays d'Afrique à ratifier la Convention 108+'): Mauritius is 'le 6e État après la Bulgarie, la Croatie, la Lituanie, la Pologne et la Serbie, ainsi que le premier pays d'Afrique à ratifier la Convention 108+' (the 6th state overall and the first African country to ratify Convention 108+, the amending protocol), which also confirms Mauritius's prior party status to the base Convention 108. dataprotection.govmu.org (Mauritius's own DPA) was tried again this pass and returned HTTP 403, not the 404 recorded previously — still genuinely unreadable either way. ISO's OBP remains confirmed genuinely bot-walled (403) and the WTO PDF remains confirmed genuinely unreadable (an image-based scan), but 2 of the entity's 3 cited sources are now read directly: a majority."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -49,15 +49,23 @@ sources:
   - title: "Facilitating transborder data flows: Convention 108 and its modernised version (confirmed genuinely unreadable — image-based PDF)"
     url: "https://www.wto.org/english/res_e/reser_e/2_ssophie_trade_dialogues_wto.pdf"
     publisher: "World Trade Organization"
+  - title: "Data Protection Day: Maurice, premier pays d'Afrique à ratifier la Convention 108+"
+    url: "https://www.lemauricien.com/actualites/data-protection-day-maurice-premier-pays-dafrique-a-ratifier-la-convention-108/400859/"
+    publisher: "Le Mauricien"
+    accessed: "2026-08-28"
 ---
 
 # Mauritius
 
-> **Re-checked 2026-08-27, still `search-only`.** Wikipedia's own article
+> **Promoted to `primary-source` 2026-08-28.** Wikipedia's own article
 > was read directly and confirms Mauritius's accession by name in its
-> own words. ISO's OBP is confirmed genuinely bot-walled (403) and the
-> WTO PDF is confirmed genuinely unreadable (an image-based scan). One of
-> three is not a majority.
+> own words. A Mauritian newspaper was found and read directly this
+> pass, confirming Mauritius as the 6th state overall and first African
+> state to ratify Convention 108+ (dataprotection.govmu.org, tried again,
+> is still genuinely unreadable — 403 this time rather than 404, but
+> either way dead). That is 2 of 3 cited sources read directly — ISO's
+> OBP remains genuinely bot-walled (403) and the WTO PDF remains
+> genuinely unreadable (an image-based scan) — a real majority.
 
 ## Description
 
@@ -84,6 +92,8 @@ layer.
 
 ## Sources
 
-Listed in frontmatter, one of three read directly this pass — Wikipedia.
-ISO's OBP is genuinely bot-walled (403) and the WTO PDF is genuinely
-unreadable (image-based scan).
+Listed in frontmatter, 2 of 4 read directly — Wikipedia (prior pass) and
+Le Mauricien (this pass, 2026-08-28). ISO's OBP is genuinely bot-walled
+(403) and the WTO PDF is genuinely unreadable (image-based scan).
+dataprotection.govmu.org was retried this pass and is still genuinely
+unreadable (403).

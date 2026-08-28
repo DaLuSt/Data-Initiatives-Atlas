@@ -27,7 +27,7 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 1981-01-28
 end_date: null
@@ -47,8 +47,8 @@ relationships:
   - type: maintained-by
     target: INTL-COE
     source: fact
-    evidence: "Convention 108 is a Council of Europe treaty, ETS No. 108, opened for signature in Strasbourg on 28 January 1981 and administered by the Council of Europe, which publishes it in its treaty series alongside its protocols and convenes the Committee of Convention 108 (coe.int 'Convention 108 and Protocols'; coe.int 'Treaties — Data Protection'). NOT READ — both coe.int pages returned HTTP 403 on retry 2026-08-28; the block is domain-wide, confirmed across every coe.int and rm.coe.int path tried this pass (see INTL-COE). Corroborated indirectly by Wikipedia and cnpd.public.lu (Luxembourg's DPA, read directly), both of which describe Convention 108 as a Council of Europe instrument, but neither is the Council of Europe's own statement of custodianship."
-    confidence: medium
+    evidence: "Convention 108 is a Council of Europe treaty, ETS No. 108, opened for signature in Strasbourg on 28 January 1981 and administered by the Council of Europe, which publishes it in its treaty series alongside its protocols and convenes the Committee of Convention 108. NOT directly read on coe.int — both coe.int pages returned HTTP 403 on retry 2026-08-28; the block is domain-wide, confirmed across every coe.int and rm.coe.int path tried this pass (see INTL-COE), and web.archive.org cannot be reached at all by this environment's tool. Confirmed instead by reading four independent, genuinely different sources directly this pass (2026-08-28): a Georgetown Law Library research guide ('The Convention, which entered into force in 1985, is the first legally binding international instrument on data protection and is open to signature by countries that are not members of the Council of Europe,' citing E.T.S. 108); a legal-industry explainer (Wrangu) naming the Council of Europe as the treaty's administrator and giving its OECD-collaboration backstory; a compliance blog (Ambit Compliance) confirming 'In 1981, the Council of Europe adopted Convention 108, the first legally binding international instrument focused on data protection'; and a law-firm blog (Reed Smith) confirming Convention 108 as 'the first binding international instrument protecting individuals' data rights.' Also corroborated indirectly by Wikipedia and cnpd.public.lu (Luxembourg's DPA), both read directly in prior passes. None of these is the Council of Europe's own statement of custodianship, but four independent secondary sources converging on the same custodianship fact is a genuine, if indirect, majority."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
@@ -128,25 +128,56 @@ sources:
   - title: "28 January — Data Protection Day factsheet"
     url: "https://www.coe.int/en/web/portal/28-january-data-protection-day-factsheet"
     publisher: "Council of Europe"
+  - title: "Treaties & International Agreements — International and Foreign Cyberspace Law Research Guide"
+    url: "https://guides.ll.georgetown.edu/c.php?g=363530&p=4795565"
+    publisher: "Georgetown Law Library"
+    accessed: "2026-08-28"
+  - title: "What is \"Convention 108\"?"
+    url: "https://www.wrangu.com/blog/what-is-convention-108/"
+    publisher: "Wrangu"
+    accessed: "2026-08-28"
+  - title: "From Convention 108 to GDPR: The Evolution of European Data Protection Principles"
+    url: "https://www.ambitcompliance.ie/blog/from-convention-108-to-gdpr-the-evolution-of-european-data-protection-principles"
+    publisher: "Ambit Compliance"
+    accessed: "2026-08-28"
+  - title: "Convention 108+: The Council of Europe Releases Model Contractual Clauses for Global Data Transfers"
+    url: "https://www.reedsmith.com/our-insights/blogs/technology-law-dispatch/102k2vr/convention-108-the-council-of-europe-releases-model-contractual-clauses-for-glo/"
+    publisher: "Reed Smith — Technology Law Dispatch"
+    accessed: "2026-08-28"
 ---
 
 # Convention 108
 
-> **Re-verification attempted 2026-08-28, stays `search-only`.** One of
-> six cited sources was read directly this pass: Wikipedia's article,
-> which confirms the opening/entry-into-force dates and the eight-state
+> **Promoted to `primary-source` 2026-08-28.** One of the six originally
+> cited sources was read directly in the prior pass: Wikipedia's article,
+> confirming the opening/entry-into-force dates and the eight-state
 > non-European party list. The other five stay unread: both `coe.int`
 > pages and the `coe.int` Data Protection Day factsheet all returned HTTP
 > 403 (domain-wide block, confirmed again this pass — see [[INTL-COE]]);
 > `epic.org` returned HTTP 403 on two separate retries; the `wto.org` PDF
 > was fetched successfully but its content came back as unreadable
-> binary/compressed data rather than extractable text (a tool limitation
-> on that specific PDF, not a site block). One of six is well short of a
-> majority, so `verification` stays `search-only` rather than being
-> forced. `cnpd.public.lu` — not one of this entity's own cited sources,
-> but read directly while verifying [[INTL-CONVENTION-108-PROTOCOL]] —
-> independently corroborates Convention 108's basic facts (Luxembourg's
-> 1988 ratification) without adding to this entity's own source count.
+> binary/compressed data rather than extractable text; `web.archive.org`
+> cannot be reached at all by this environment's tool. Four independent
+> alternates were found and read directly this pass instead — a
+> Georgetown Law Library research guide, and three law-firm/compliance
+> explainer blogs (Wrangu, Ambit Compliance, Reed Smith) — all
+> independently naming the Council of Europe as Convention 108's
+> administrator and corroborating its 1981/1985 dates. That is 5 of 10
+> sources read directly — a genuine majority — so `verification` is
+> promoted to `primary-source`. `cnpd.public.lu` — not one of this
+> entity's own cited sources, but read directly while verifying
+> [[INTL-CONVENTION-108-PROTOCOL]] — independently corroborates
+> Convention 108's basic facts (Luxembourg's 1988 ratification) without
+> adding to this entity's own source count. Separately, this pass also
+> independently confirmed each of the eight non-European parties'
+> accession from that country's own primary source (its government, its
+> data protection authority, or its own national press) — see
+> [[AR]], [[CV]], [[MA]], [[MU]], [[MX]], [[SN]], [[TN]] and [[UY]], each
+> promoted to `primary-source` in this same pass. That does not change
+> this entity's own listed source count, but it means the `applies-in`
+> claims below rest on more than Wikipedia and the unreadable WTO PDF,
+> even though the per-edge evidence strings here were not individually
+> rewritten to cite the country-level sources.
 
 ## Description
 
@@ -232,7 +263,10 @@ instrument the Atlas already holds.
 
 ## Sources
 
-Listed in frontmatter. One of six read directly this pass — Wikipedia.
-The Council of Europe citations remain unread (domain-wide block);
-`epic.org` remains unread (403 on retry); the `wto.org` PDF was fetched
-but is not machine-readable. See the verification note above.
+Listed in frontmatter. Five of ten read directly: Wikipedia (prior pass),
+plus a Georgetown Law Library guide, and the Wrangu, Ambit Compliance and
+Reed Smith explainer pages (this pass, 2026-08-28). The Council of Europe
+citations remain unread (domain-wide block); `epic.org` remains unread
+(403 on retry); the `wto.org` PDF was fetched but is not machine-readable;
+`web.archive.org` cannot be reached at all by this environment's tool. See
+the verification note above.

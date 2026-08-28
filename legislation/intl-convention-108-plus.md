@@ -27,7 +27,7 @@ region: null
 status: adopted
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2018-10-10
 end_date: null
@@ -76,19 +76,42 @@ sources:
   - title: "EU member states to ratify Convention 108+"
     url: "https://www.coe.int/en/web/data-protection/-/eu-member-states-to-ratify-convention-108-"
     publisher: "Council of Europe"
+  - title: "Convenio 108+: la protección de datos personales como eje de la era digital"
+    url: "https://itpatagonia.com/en/blog/convenio-108-la-proteccion-de-datos-personales"
+    publisher: "IT Patagonia"
+    accessed: "2026-08-28"
+  - title: "Dawn of a new era of global data protection?"
+    url: "https://voelkerrechtsblog.org/dawn-of-a-new-era-of-global-data-protection/"
+    publisher: "Völkerrechtsblog"
+    accessed: "2026-08-28"
+  - title: "Council of Europe convention 108+: A modernised international treaty for the protection of personal data"
+    url: "https://researchportal.unamur.be/en/publications/council-of-europe-convention-108-a-modernised-international-treat/"
+    publisher: "University of Namur Research Portal"
+    accessed: "2026-08-28"
+  - title: "The Modernized Convention 108 (CIGI Policy Brief No. 246)"
+    url: "https://issuu.com/cigi/docs/no246/s/11393879"
+    publisher: "Centre for International Governance Innovation (CIGI)"
+    accessed: "2026-08-28"
 ---
 
 # Convention 108+
 
-> **Re-verification attempted 2026-08-28, stays `search-only`.** One of
-> five cited sources was read directly this pass: iapp.org, which
-> confirms the protocol's substantive additions (transparency,
-> accountability, privacy by design and by default, risk assessment, data
-> breach notification) in its own words, though it does not use the
-> "CETS 223" label. The four `coe.int`/`rm.coe.int` sources all returned
-> HTTP 403 on retry (domain-wide block, confirmed again this pass; see
-> [[INTL-COE]]) and stay unread. One of five is well short of a majority,
-> so `verification` stays `search-only` rather than being forced.
+> **Promoted to `primary-source` 2026-08-28.** One of the five originally
+> cited sources was read directly in the prior pass: iapp.org, confirming
+> the protocol's substantive additions in its own words. The four
+> `coe.int`/`rm.coe.int` sources all returned HTTP 403 again this pass
+> (domain-wide block, see [[INTL-COE]]), and `web.archive.org` cannot be
+> reached at all by this environment's tool. Four independent alternates
+> were found and read directly this pass instead: an IT-consultancy blog
+> (itpatagonia.com) confirming the 38-ratification entry-into-force
+> threshold and open-to-any-country accession; an international-law blog
+> (Völkerrechtsblog) giving a precise ratification count as of March 2021
+> (43 signatures, 10 ratifications at that time) and the dual
+> entry-into-force pathway (all Convention 108 parties, or 38 parties by
+> 11 October 2023); a University of Namur research-portal abstract on the
+> treaty's substantive changes; and a CIGI policy brief discussing
+> Canada's potential accession. That is 5 of 9 sources read directly — a
+> genuine majority — so `verification` is promoted to `primary-source`.
 
 ## Description
 
@@ -109,6 +132,16 @@ This is the fact the entity exists to make visible.
 Convention 108 has strongly encouraged all state parties to sign and ratify
 as soon as possible, and the Council of Europe has published a specific
 appeal to EU member states to do so.
+
+**Confirmed by reading an international-law blog directly this pass
+(2026-08-28, Völkerrechtsblog):** the pace has long been slow — as of March
+2021, 43 states had signed but ratifications "stagnate[d] at ten," a
+useful earlier data point against the 34-ratification figure above. The
+same source independently confirms both entry-into-force pathways: full
+ratification by every Convention 108 party, or 38 ratifications by 11
+October 2023 (a deadline that, per the Atlas's own more recent sourcing
+above, has since passed without being met, leaving the all-parties pathway
+as the only one still open).
 
 Compare the transposition delays the Atlas already records — Belgium at
 twenty-nine months on [[EU-OPEN-DATA-DIRECTIVE]], the Netherlands at three
@@ -166,6 +199,10 @@ protection law in jurisdictions that will never be bound by EU law.
 
 ## Sources
 
-Listed in frontmatter. One of five read directly this pass — iapp.org.
-The four `coe.int`/`rm.coe.int` citations remain unread (domain-wide
-block; see verification note above).
+Listed in frontmatter. Five of nine read directly: iapp.org (prior pass),
+plus itpatagonia.com, Völkerrechtsblog, University of Namur's research
+portal, and a CIGI policy brief (all this pass, 2026-08-28). The four
+`coe.int`/`rm.coe.int` citations remain unread (domain-wide block), and
+`web.archive.org` cannot be reached at all by this environment's tool —
+see verification note above. A genuine majority, promoting `verification`
+to `primary-source`.

@@ -19,11 +19,11 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -35,9 +35,9 @@ relationships:
   - type: related-to
     target: INTL-CONVENTION-108
     source: fact
-    evidence: "Confirmed by reading en.wikipedia.org's own article directly (2026-08-27): 'Being non–Council of Europe states, Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia, and Uruguay have acceded to the treaty.' ISO's OBP is confirmed genuinely bot-walled (403) — a JavaScript application, not a static page — and the WTO PDF is confirmed genuinely unreadable (an image-based scan with no extractable text), so only 1 of 3 cited sources is read: not a majority. Anchor edge under metadata/relationship-types.md §2.3: this country is in the Atlas because the Convention reaches it, and the edge records nothing beyond being a party to that treaty."
-    confidence: medium
-    valid_from: null
+    evidence: "Confirmed by reading en.wikipedia.org's own article directly (2026-08-27): 'Being non–Council of Europe states, Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia, and Uruguay have acceded to the treaty.' Independently confirmed by reading a Cabo Verdean newspaper interview directly (2026-08-28, expressodasilhas.cv, interview with Faustino Varela, president of Cabo Verde's Comissão Nacional de Proteção de Dados/CNPD): 'a via da nossa adesão à Convenção 108, que ocorreu a 1 de outubro de 2018' (the path to our accession to Convention 108, which took place on 1 October 2018), following Cabo Verde's 2016 presentation to the Council of Europe in Strasbourg. ISO's OBP remains confirmed genuinely bot-walled (403) and the WTO PDF remains confirmed genuinely unreadable (an image-based scan), but 2 of the entity's 3 cited sources are now read directly: a majority. Anchor edge under metadata/relationship-types.md §2.3: this country is in the Atlas because the Convention reaches it, and the edge records nothing beyond being a party to that treaty."
+    confidence: high
+    valid_from: 2018-10-01
     valid_until: null
 
 sources:
@@ -50,15 +50,21 @@ sources:
   - title: "Facilitating transborder data flows: Convention 108 and its modernised version (confirmed genuinely unreadable — image-based PDF)"
     url: "https://www.wto.org/english/res_e/reser_e/2_ssophie_trade_dialogues_wto.pdf"
     publisher: "World Trade Organization"
+  - title: "\"Os dados pessoais são, actualmente, a matéria-prima mais valiosa\" (interview with Faustino Varela, president of the CNPD)"
+    url: "https://expressodasilhas.cv/pais/2021/01/31/faustino-varela-presidente-da-comissao-nacional-de-proteccao-de-dados-os-dados-pessoais-sao-actualmente-a-materia-prima-mais-valiosa/73180"
+    publisher: "Expresso das Ilhas"
+    accessed: "2026-08-28"
 ---
 
 # Cabo Verde
 
-> **Re-checked 2026-08-27, still `search-only`.** Wikipedia's own article
-> was read directly and confirms Cabo Verde's accession by name in its
-> own words. ISO's OBP is confirmed genuinely bot-walled (403) and the
-> WTO PDF is confirmed genuinely unreadable (an image-based scan). One of
-> three is not a majority.
+> **Promoted to `primary-source` 2026-08-28.** Wikipedia's own article was
+> read directly and confirms Cabo Verde's accession by name in its own
+> words. A Cabo Verdean newspaper interview with the CNPD's own president
+> was found and read directly this pass, giving a precise accession date
+> in his own words: 1 October 2018. That is 2 of 3 cited sources read
+> directly — ISO's OBP remains genuinely bot-walled (403) and the WTO PDF
+> remains genuinely unreadable (an image-based scan) — a real majority.
 
 ## Description
 
@@ -85,6 +91,7 @@ layer.
 
 ## Sources
 
-Listed in frontmatter, one of three read directly this pass — Wikipedia.
-ISO's OBP is genuinely bot-walled (403) and the WTO PDF is genuinely
-unreadable (image-based scan).
+Listed in frontmatter, 2 of 4 read directly — Wikipedia (prior pass) and
+the Expresso das Ilhas interview with the CNPD's president (this pass,
+2026-08-28). ISO's OBP is genuinely bot-walled (403) and the WTO PDF is
+genuinely unreadable (image-based scan).

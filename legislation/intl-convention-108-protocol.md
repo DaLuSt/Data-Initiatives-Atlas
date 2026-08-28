@@ -44,14 +44,14 @@ relationships:
   - type: part-of
     target: INTL-CONVENTION-108
     source: fact
-    evidence: "The Additional Protocol to Convention ETS No. 108 on supervisory authorities and transborder data flows, ETS No. 181, was opened for signature on 8 November 2001; parties regard its substantive articles as additional articles to the Convention (coe.int 'Convention 108 and Protocols'; coe.int 'Treaties — Data Protection'; rm.coe.int ETS 181 Explanatory Report). Confirmed independently by reading cnpd.public.lu directly (2026-08-28), Luxembourg's data protection authority, which states the Additional Protocol 'supplements Convention 108' and that Luxembourg ratified it on 24 February 2004, having ratified the Convention itself on 10 February 1988. Both coe.int pages and rm.coe.int returned HTTP 403 on retry 2026-08-28 (domain-wide block, see INTL-COE) and stay unread."
+    evidence: "The Additional Protocol to Convention ETS No. 108 on supervisory authorities and transborder data flows, ETS No. 181, was opened for signature on 8 November 2001; parties regard its substantive articles as additional articles to the Convention (coe.int 'Convention 108 and Protocols'; coe.int 'Treaties — Data Protection'; rm.coe.int ETS 181 Explanatory Report). Confirmed independently by reading cnpd.public.lu directly (2026-08-28), Luxembourg's data protection authority, which states the Additional Protocol 'supplements Convention 108' and that Luxembourg ratified it on 24 February 2004, having ratified the Convention itself on 10 February 1988. Further corroborated by reading an independent IT-law blog directly this pass (2026-08-28, mbkaya.com): the protocol 'opened for signature on November 8, 2001' to address 'the increase in exchanges of personal data across national borders,' consistent with the framing of it as an addition to the base Convention. Both coe.int pages and rm.coe.int returned HTTP 403 on retry 2026-08-28 (domain-wide block, see INTL-COE) and stay unread; web.archive.org cannot be reached at all by this environment's tool."
     confidence: medium
     valid_from: 2001-11-08
     valid_until: null
   - type: maintained-by
     target: INTL-COE
     source: fact
-    evidence: "The Additional Protocol is a Council of Europe treaty, ETS No. 181, published in the Council of Europe treaty series and listed by the Council of Europe alongside Convention 108 and the amending protocol (coe.int 'Convention 108 and Protocols'). NOT READ — coe.int returned HTTP 403 on retry 2026-08-28 (domain-wide block, see INTL-COE)."
+    evidence: "The Additional Protocol is a Council of Europe treaty, ETS No. 181, published in the Council of Europe treaty series and listed by the Council of Europe alongside Convention 108 and the amending protocol (coe.int 'Convention 108 and Protocols'). NOT READ on coe.int — returned HTTP 403 on retry 2026-08-28 (domain-wide block, see INTL-COE); web.archive.org cannot be reached at all by this environment's tool. mbkaya.com's independent account (read directly this pass) is consistent with Council of Europe custodianship but does not itself state it in so many words."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -67,19 +67,31 @@ sources:
     url: "https://cnpd.public.lu/en/legislation/droit-europ/conseil-europe.html"
     publisher: "Commission nationale pour la protection des données (CNPD), Luxembourg"
     accessed: "2026-08-28"
+  - title: "CoE Convention No. 108 Additional Protocol"
+    url: "https://mbkaya.com/it-law-coe-convention-108-additional-protocol-181-treaty/"
+    publisher: "Mehmet Bedii Kaya — IT Law"
+    accessed: "2026-08-28"
 ---
 
 # Additional Protocol to Convention 108 (ETS 181)
 
-> **Re-verification attempted 2026-08-28, stays `search-only`.** One of
-> three cited sources was read directly this pass: cnpd.public.lu
-> (Luxembourg's data protection authority), which confirms the Additional
-> Protocol supplements Convention 108 and gives Luxembourg's own
-> ratification dates for both instruments. The other two — `coe.int` and
-> `rm.coe.int` — both returned HTTP 403 on retry (domain-wide block,
-> confirmed again this pass; see [[INTL-COE]]). One of three is not a
-> majority, so `verification` stays `search-only` rather than being
-> forced.
+> **Re-verification attempted 2026-08-28, genuinely stuck at borderline —
+> stays `search-only`.** One of the three originally cited sources was
+> read directly in the prior pass: cnpd.public.lu (Luxembourg's data
+> protection authority), confirming the Additional Protocol supplements
+> Convention 108 and giving Luxembourg's own ratification dates. This pass
+> found and read one genuinely new, independent source — an IT-law blog
+> (mbkaya.com) that quotes the Protocol's own preamble and gives its
+> supervisory-authority and transborder-data-flow provisions in detail.
+> `coe.int` and `rm.coe.int` both returned HTTP 403 again (domain-wide
+> block, see [[INTL-COE]]), and `web.archive.org` cannot be reached at all
+> by this environment's tool. Two further candidates were tried and
+> failed: the IT Law Wiki (Fandom) returned HTTP 402 (a paywall, not a
+> block this session can work around) and NADPA-RAPDP's page returned HTTP
+> 503. That leaves 2 of 4 sources read directly — exactly the borderline
+> the discipline calls out, not a majority — so `verification` stays
+> `search-only` rather than being forced, per the instruction to try for
+> one more before promoting and never force a 50/50 split.
 
 ## Description
 
@@ -118,6 +130,9 @@ entity is `active` rather than `superseded`.
 
 ## Sources
 
-Listed in frontmatter. One of three read directly this pass —
-cnpd.public.lu. Both `coe.int`/`rm.coe.int` citations remain unread
-(domain-wide block; see verification note above).
+Listed in frontmatter. Two of four read directly: cnpd.public.lu (prior
+pass) and mbkaya.com (this pass, 2026-08-28). Both `coe.int`/`rm.coe.int`
+citations remain unread (domain-wide block), and `web.archive.org` cannot
+be reached at all by this environment's tool — see verification note
+above. 2 of 4 is a borderline non-majority, so `verification` stays
+`search-only`.

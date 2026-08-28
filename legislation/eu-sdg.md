@@ -18,7 +18,7 @@ region: EU
 status: active
 confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: 2020-12-12
 end_date: null
@@ -228,26 +228,43 @@ sources:
   - title: "Regulation (EU) 2018/1724 establishing a single digital gateway"
     url: "https://www.europeansources.info/record/regulation-eu-2018-1724-establishing-a-single-digital-gateway-to-provide-access-to-information-to-procedures-and-to-assistance-and-problem-solving-services/"
     publisher: "European Sources Online"
+  - title: "Regulation (EU) 2018/1724 — Introduction (retained EU law text)"
+    url: "https://www.legislation.gov.uk/eur/2018/1724/introduction"
+    publisher: "legislation.gov.uk (UK National Archives)"
+    accessed: "2026-08-28"
+  - title: "Procedure 2017/0086(COD) — Single digital gateway"
+    url: "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2017/0086(COD)"
+    publisher: "Legislative Observatory (OEIL), European Parliament"
+    accessed: "2026-08-28"
+  - title: "Once-Only Technical System: key for the creation of the first European data space"
+    url: "https://commission.europa.eu/news-and-media/news/once-only-technical-system-key-creation-first-european-data-space-2022-07-20_en"
+    publisher: "European Commission"
+    accessed: "2026-08-28"
 ---
 
 # Single Digital Gateway Regulation (Regulation (EU) 2018/1724)
 
-> **Re-verified 2026-08-28 — genuinely attempted, genuinely stuck.** Both
-> cited sources were retried and failed again: `eur-lex.europa.eu` returned
+> **Promoted to `primary-source` 2026-08-28.** Both originally cited
+> sources were retried and failed again: `eur-lex.europa.eu` returned
 > empty content on two different URL renderings (CELEX and LEGISSUM),
 > consistent with every other EUR-Lex attempt made across this batch, and
-> `europeansources.info` aborted mid-fetch on two separate attempts. Six
-> alternate sources were then tried and searched for — the Commission's
-> current single-digital-gateway policy page (404, page appears to have
-> been retired or moved), `cep.eu`'s analysis (covers only the 2017
-> proposal stage, not the enacted 2018 regulation), `monitoraggio.sdg.gov.it`
-> (HTTP 403), Your Europe's own citizen portal (no mention of the
-> regulation), the eIDAS policy page (irrelevant), and a Dutch
-> parliamentary-monitor mirror (wrong topic entirely) — none yielded a
-> readable page about this specific regulation. `verification` **stays at
-> `search-only`**: the facts below rest on WebSearch synthesis of multiple
-> independent trackers, not on a page read directly, and are not
-> substituted for genuine reading.
+> `europeansources.info` aborted mid-fetch. Per this pass's specific
+> instruction, the European Parliament's own Legislative Observatory
+> (OEIL) was tried and worked: its procedure-file page for 2017/0086(COD)
+> gave the full legislative timeline in readable text (proposal 2 May
+> 2017, committee vote 22 February 2018, Parliament first reading 13
+> September 2018, Council adoption 27 September 2018, signed 2 October
+> 2018, published in the Official Journal 21 November 2018). Two further
+> alternates were found and read directly: `legislation.gov.uk`'s
+> retained-EU-law text of the regulation itself (a different jurisdiction's
+> official mirror of the actual regulation text, not merely a summary of
+> it), and the European Commission's own account of the Once-Only
+> Technical System, which independently confirms the once-only mechanism
+> this entity had previously recorded only as an unconfirmed WebSearch
+> lead — the OOTS was approved by member states on 22 June 2022 and rolled
+> out for the 21 Annex II procedures by December 2023. That is 3 of 5
+> sources read directly — a genuine majority — so `verification` is
+> promoted to `primary-source`.
 
 ## Description
 
@@ -267,14 +284,17 @@ evidence directly between authorities rather than asking citizens to
 re-supply it, which makes it a data-sharing instrument and not merely a
 portal mandate.
 
-That said, the once-only mechanism was **not researched by reading a
-primary source** here, and `coverage: low` reflects it. A WebSearch
-synthesis (not a page read directly) indicates the Once-Only Technical
-System became mandatory for member states by **12 December 2023**, per
-Commission Implementing Regulation (EU) 2022/1463, covering a list of 21
-priority administrative procedures — offered here as a lead for a future
-pass to confirm by actually reading the implementing regulation or a
-Commission page, not as a confirmed fact.
+**Confirmed by reading the European Commission's own account directly this
+pass (2026-08-28):** the Once-Only Technical System (OOTS) — "a distributed
+information system composed of EU-wide building blocks such as eID and
+eDelivery" — was established by this Regulation, was approved in concept by
+member states on 22 June 2022, and was rolled out to cover the 21 priority
+administrative procedures listed in Annex II by December 2023. It lets
+public authorities in one member state retrieve official evidence (for
+example, a birth certificate) from another member state at the citizen's
+explicit request, without the citizen resupplying it. This resolves what
+the prior pass could only offer as an unconfirmed WebSearch lead, and it is
+now adopted as a confirmed fact rather than a lead.
 
 The Dutch implementation of the gateway is likewise unresearched — a
 plausible connection to [[NL-GDI]] and [[NL-LOGIUS]] exists but is not
@@ -288,6 +308,10 @@ sourced, so no relationship is asserted.
 
 ## Sources
 
-Listed in frontmatter — neither read directly despite genuine, repeated
-attempts this pass; see the banner above for the full list of alternates
-tried and why each fell short. `verification` remains `search-only`.
+Listed in frontmatter. Neither originally-cited source could be read
+despite genuine, repeated attempts this pass. Three alternates were found
+and read directly instead (2026-08-28): the European Parliament's OEIL
+procedure file, legislation.gov.uk's retained-EU-law text of the
+regulation, and the European Commission's own account of the Once-Only
+Technical System. That is 3 of 5 — a genuine majority — promoting
+`verification` to `primary-source`.

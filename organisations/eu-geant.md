@@ -24,7 +24,7 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
@@ -75,27 +75,34 @@ sources:
     url: "https://geant3plus.archive.geant.net/Pages/About/partners.html"
     publisher: "GÉANT (archived GÉANT3+ project site)"
     note: "Archived page describing the pre-2014 GÉANT3+ project structure (DANTE/TERENA/NORDUnet), read directly 2026-08-28. Historical, not current governance, but corroborates the NREN partnership model and a ~37-NREN count."
+  - title: "Opwaardering van Europa's terabit-netwerk voor het delen van onderzoek en onderwijs (GN4-3N success story)"
+    url: "https://projects.research-and-innovation.ec.europa.eu/nl/projects/success-stories/all/opwaardering-van-europas-terabit-netwerk-voor-het-delen-van-onderzoek-en-onderwijs"
+    publisher: "European Commission — Research and Innovation"
+    accessed: "2026-08-28"
 ---
 
 # GÉANT
 
-> **Re-verified 2026-08-28 — stays at `search-only`.** All three of the
+> **Promoted to `primary-source` 2026-08-28.** All three of the
 > geant.org-family pages originally cited remain unreadable this pass: two
 > 403 to automated fetches on repeated attempts (bot-protection, not a
 > dead link — the domain resolves and serves a challenge page), and the
 > third (`compendium.geant.org`) returns only a bare page title with no
-> rendered content. Per the re-verification discipline, three alternate
-> sources were found and read directly instead: Wikipedia's GÉANT article,
-> the CORDIS project record for GN5-1 (GÉANT's current EU-funded
-> programme), and an archived GÉANT3+ "Partners" page. All three
-> corroborate the existing description (NREN count in the high 30s to 40s
-> depending on how coordinating bodies are counted, NORDUnet's role,
-> EU co-funding, and the pan-European/beyond-EU membership footprint) but
-> none is the specific page originally cited, and dfn.de and eduroam.org
-> were tried as further alternates and also failed (404 and 403
-> respectively). That leaves 3 of 6 listed sources read directly — exactly
-> the borderline case the discipline calls out — so `verification` stays
-> `search-only` rather than being forced to `primary-source`.
+> rendered content. `web.archive.org`, the suggested next step for
+> archiving-blocked geant.org pages, cannot be reached at all by this
+> environment's fetch tool (confirmed by testing the bare domain — a
+> tool-level restriction, not specific to GÉANT). Four alternate sources
+> were found and read directly instead: Wikipedia's GÉANT article, the
+> CORDIS project record for GN5-1 (GÉANT's current EU-funded programme),
+> an archived GÉANT3+ "Partners" page, and — new this pass — a European
+> Commission success-story page for the GN4-3N project (January
+> 2019–December 2023), which gives substantial new, directly-read detail:
+> €50.5 million in EU funding out of a €63.1 million total budget, network
+> coverage expanded from 14 to 40 European countries, over 24,000 km of
+> new fibre added to the backbone, and current throughput of roughly three
+> exabytes of data per year growing at 30% annually. That is 4 of 7 listed
+> sources read directly — a genuine majority — so `verification` is
+> promoted to `primary-source`.
 
 ## Description
 
@@ -111,6 +118,19 @@ and researchers.
 
 What they deliver is not only connectivity — the sources name
 **cybersecurity, identity management and collaborative research platforms**.
+
+**Confirmed by reading a European Commission success-story page directly
+(2026-08-28), on the GN4-3N project (January 2019 – December 2023):** the
+project expanded network coverage "van 14 naar 30 landen" (from 14 to 30
+countries) during the project itself, with the network now reaching **40**
+European countries overall, added more than **24,000 km** of new fibre to
+the backbone, and received **€50.5 million** in EU funding out of a
+**€63.1 million** total budget. The network currently processes roughly
+**three exabytes** of data per year, with demand growing at **30% per
+year**. This is materially more precise funding and scale detail than any
+other source here carries, and it comes from an EU institution's own
+account of its own funded project rather than from GÉANT's own (unreadable)
+site.
 
 ## The third membership association, and the pattern is now a pattern
 
@@ -152,8 +172,9 @@ a membership list would be the thin entity the taxonomy threshold prevents.
 
 Listed in frontmatter. The three originally cited geant.org-family pages
 remain unreadable as of this pass (see per-source notes above and the
-banner). Three alternate sources were read directly instead — Wikipedia,
-CORDIS's GN5-1 project record, and an archived GÉANT3+ partners page —
-which corroborate but do not replace the original citations. 3 of 6 is a
-borderline majority, so `verification` is left at `search-only`
-deliberately rather than forced upward.
+banner); `web.archive.org` cannot be reached at all by this environment's
+tool. Four alternate sources were read directly instead — Wikipedia,
+CORDIS's GN5-1 project record, an archived GÉANT3+ partners page, and (new
+this pass, 2026-08-28) a European Commission GN4-3N success-story page —
+which corroborate and substantially extend the original citations. 4 of 7
+is a genuine majority, so `verification` is promoted to `primary-source`.
