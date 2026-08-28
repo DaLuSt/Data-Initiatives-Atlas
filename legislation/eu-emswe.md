@@ -25,11 +25,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2019-06-20
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -45,46 +45,71 @@ relationships:
   - type: applies-in
     target: EU
     source: fact
-    evidence: "Regulation (EU) 2019/1239 of the European Parliament and of the Council of 20 June 2019 establishing a European Maritime Single Window environment and repealing Directive 2010/65/EU (eur-lex.europa.eu CELEX 32019R1239; eur-lex.europa.eu legislative summary 'European maritime single window environment'). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading the European Parliament's own Legislative Observatory (OEIL) procedure file directly (2026-08-28): the legislative proposal was published 17 May 2018, Parliament approved at first reading 18 April 2019, the Council adopted 13 June 2019, the final act was signed 20 June 2019, and it was published in OJ L 198 of 25 July 2019. transport.ec.europa.eu's own EMSWe page, also read directly, confirms the regulation 'harmonise[s] and simplify[ies] reporting requirements for ships arriving at, staying in, and departing from EU ports' and states explicitly that 'EMSWe becomes applicable on 15 August 2025' — an application date this entity had not previously recorded."
+    confidence: high
     valid_from: 2019-06-20
     valid_until: null
   - type: references
     target: UN-LOCODE
     source: fact
-    evidence: "The Regulation provides for a common location database holding a reference list of location codes, including the United Nations Code for Trade and Transport Locations (UN/LOCODE), the SafeSeaNet-specific codes and the port facility codes as registered in the Global Integrated Shipping Information System (GISIS) of the International Maritime Organization, designed to facilitate the submission of information by declarants in the European Maritime Single Window environment (eur-lex.europa.eu CELEX 32019R1239; legislation.gov.uk eur/2019/1239 retained text). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading EMSA's (European Maritime Safety Agency) own EMSWe page directly (2026-08-28): the Regulation requires a harmonised Reporting Interface Module and a common location database; transport.ec.europa.eu's own page, also read directly, names the Common Location Database as one of three databases supporting the system. The specific UN/LOCODE, SafeSeaNet-code and GISIS composition of that database was confirmed via the legislation.gov.uk retained-text mirror, also read directly."
+    confidence: high
     valid_from: 2019-06-20
     valid_until: null
 
 sources:
+  - title: "European maritime single window environment — OEIL procedure file"
+    url: "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2018/0139(COD)"
+    publisher: "European Parliament — Legislative Observatory"
+    accessed: "2026-08-28"
+  - title: "European Maritime Single Window Environment (EMSWe)"
+    url: "https://transport.ec.europa.eu/transport-modes/maritime/eu-wide-digital-maritime-system-and-services/european-maritime-single-window-environment_en"
+    publisher: "European Commission — Mobility and Transport"
+    accessed: "2026-08-28"
+  - title: "EMSWe Message Implementation Guide"
+    url: "https://emsa.europa.eu/emswe-mig/"
+    publisher: "European Maritime Safety Agency (EMSA)"
+    accessed: "2026-08-28"
   - title: "Regulation (EU) 2019/1239 of the European Parliament and of the Council of 20 June 2019 establishing a European Maritime Single Window environment"
     url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32019R1239"
-    publisher: "EUR-Lex — Publications Office of the European Union"
-  - title: "European maritime single window environment — legislative summary"
-    url: "https://eur-lex.europa.eu/EN/legal-content/summary/european-maritime-single-window-environment.html"
     publisher: "EUR-Lex — Publications Office of the European Union"
   - title: "Regulation (EU) 2019/1239 — retained EU legislation text"
     url: "https://www.legislation.gov.uk/eur/2019/1239/data.xht?view=snippet&wrap=true"
     publisher: "The National Archives (legislation.gov.uk)"
+    accessed: "2026-08-28"
 ---
 
 # EMSWe — Regulation (EU) 2019/1239
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read — retrieval of
-> `eur-lex.europa.eu` is blocked by the network egress proxy.
-> `verification: search-only`.
+> **Re-verified 2026-08-28.** `eur-lex.europa.eu` remains unreadable to
+> this pass's fetch tooling. Three new sources were found and read
+> directly instead — the European Parliament's own procedure file, the
+> Commission's DG MOVE EMSWe page, and EMSA's own Message Implementation
+> Guide page — which together confirm the full legislative timeline and
+> surface a previously-unrecorded fact: EMSWe's actual **application
+> date is 15 August 2025**, six years after adoption. `verification`
+> moves from `search-only` to `primary-source`.
 
 ## Description
 
-The regulation of **20 June 2019** establishing the **European Maritime
-Single Window environment** and repealing Directive 2010/65/EU. It harmonises
-the reporting obligations a ship faces on arrival at and departure from a
-Union port: a **common EMSWe data set**, national maritime single windows
-through which declarants submit it once, and a **mapping between customs data
-requirements and the corresponding EMSWe data elements** so that what is
-submitted can be processed by customs IT systems.
+The regulation of **20 June 2019** (signed; the OEIL procedure file, read
+directly, gives Parliament approval 18 April 2019, Council adoption 13 June
+2019, and Official Journal publication 25 July 2019) establishes the
+**European Maritime Single Window environment** and repeals Directive
+2010/65/EU. It harmonises the reporting obligations a ship faces on
+arrival at and departure from a Union port: a **common EMSWe data set**,
+national maritime single windows through which declarants submit it once,
+and a **mapping between customs data requirements and the corresponding
+EMSWe data elements** so that what is submitted can be processed by
+customs IT systems.
+
+**EMSWe did not become applicable until 15 August 2025** — confirmed by
+reading the Commission's own DG MOVE page directly, six years after
+adoption. This entity previously carried only the 2019 adoption date; the
+application date is a genuine, previously-missing fact and is recorded
+here rather than in `start_date` (which stays at the regulation's own
+dating, following this Atlas's convention of dating an instrument by its
+own text rather than by whichever milestone a later pass discovers).
 
 ## Why a shipping regulation is in a data atlas
 
@@ -135,6 +160,9 @@ added with it.
 
 ## Sources
 
-Listed in frontmatter — the EUR-Lex full record and legislative summary, and
-the National Archives' retained-EU-law text, which was the source that
-surfaced the location-database provision.
+Listed in frontmatter, four of five read directly this pass — the European
+Parliament's own OEIL procedure file, the Commission's DG MOVE EMSWe page,
+EMSA's own Message Implementation Guide page, and the National Archives'
+retained-EU-law text (which surfaced the location-database provision).
+`eur-lex.europa.eu` returned empty content, consistent with every other
+EUR-Lex attempt made across this batch, and was not read.

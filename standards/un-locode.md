@@ -20,11 +20,11 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -40,8 +40,8 @@ relationships:
   - type: maintained-by
     target: UN-CEFACT
     source: fact
-    evidence: "UN/CEFACT is the subsidiary intergovernmental body of the UN Economic Commission for Europe serving as the focal point within ECOSOC for trade facilitation recommendations and electronic business standards, and works on standardising and harmonising the core information used in trade documents; UN/LOCODE is one of its code lists (unece.org/trade/uncefact; unece.org/trade/cefact/unlocode-code-list-country-and-territory). NOT READ — search-only."
-    confidence: medium
+    evidence: "Both originally-cited unece.org pages returned HTTP 403 this pass (domain-wide block, confirmed by testing the bare root). eur-lex.europa.eu's own page for Regulation (EU) 2019/1239 also failed to return readable content (empty response). Per this batch's source-substitution instruction, legislation.gov.uk's UK retained-EU-law text of the same regulation was fetched directly instead and confirms, in the regulation's own words: 'A Common Location Database should be established which holds a reference list of location codes, including the United Nations Code for Trade and Transport Locations (UN/LOCODE), the SafeSeaNet-specific codes, and the port facility codes as registered in [IMO GISIS]' (Article 15 / Article 2(1)). Wikipedia's UN/LOCODE article, also read directly, independently confirms UNECE develops and maintains it, though it does not itself mention the EMSWE regulation."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -49,20 +49,26 @@ sources:
   - title: "UN/LOCODE — Code List by Country and Territory"
     url: "https://unece.org/trade/cefact/unlocode-code-list-country-and-territory"
     publisher: "United Nations Economic Commission for Europe"
-  - title: "UN/CEFACT — United Nations Centre for Trade Facilitation and Electronic Business"
-    url: "https://unece.org/trade/uncefact"
-    publisher: "United Nations Economic Commission for Europe"
-  - title: "Regulation (EU) 2019/1239 establishing a European Maritime Single Window environment"
-    url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32019R1239"
-    publisher: "EUR-Lex — Publications Office of the European Union"
+  - title: "Regulation (EU) 2019/1239 establishing a European Maritime Single Window environment — retained EU law text"
+    url: "https://www.legislation.gov.uk/eur/2019/1239/data.xht?view=snippet&wrap=true"
+    publisher: "UK National Archives — legislation.gov.uk"
+    accessed: "2026-08-28"
+  - title: "UN/LOCODE"
+    url: "https://en.wikipedia.org/wiki/UN/LOCODE"
+    publisher: "Wikipedia"
+    accessed: "2026-08-28"
 ---
 
 # UN/LOCODE
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read — retrieval of
-> `unece.org` and `eur-lex.europa.eu` is blocked by the network egress proxy.
-> `verification: search-only`.
+> **Verified 2026-08-28, via source substitution.** Both `unece.org` and
+> `eur-lex.europa.eu` remained unreachable this pass (the former
+> domain-wide 403-blocked, the latter returning empty content on every
+> attempt). Per this batch's instruction, `legislation.gov.uk`'s retained-EU-
+> law mirror of the exact same regulation text was fetched directly and
+> confirms the UN/LOCODE reference verbatim, and Wikipedia's UN/LOCODE
+> article corroborates UNECE's maintainer role. Two of the three sources in
+> the resulting list are now genuinely read.
 
 ## Description
 
@@ -106,5 +112,9 @@ island:
 
 ## Sources
 
-Listed in frontmatter — the UNECE code list page, the UN/CEFACT overview, and
-the EUR-Lex record of Regulation (EU) 2019/1239.
+Listed in frontmatter, two of three read directly this pass. The UNECE code
+list page stays on record but is 403-blocked this session; EUR-Lex's own
+page for the regulation returned empty content on fetch and is replaced
+here with legislation.gov.uk's retained-EU-law mirror of the identical
+provisions, plus Wikipedia's UN/LOCODE article as a second corroborating
+source.

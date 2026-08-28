@@ -25,11 +25,11 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 1946-01-01
 end_date: null
-last_verified: null
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -44,7 +44,7 @@ relationships:
   - type: part-of
     target: UN
     source: fact
-    evidence: "The United Nations Statistical Commission, established in 1946, is a Functional Commission of the UN Economic and Social Council, and consists of 24 member states elected by ECOSOC for a term of four years based on equitable geographical distribution (unstats.un.org/UNSDWebsite/statcom/; ecosoc.un.org Statistical Commission event page; un.org/en/desa 'Shaping the future of global statistics'). NOT READ — search-only."
+    evidence: "un.org/en/desa's 'Shaping the future of global statistics' page was read directly (2026-08-28) and confirms the Commission as 'the apex body responsible for the development of global statistical standards', 24 member states elected by ECOSOC on geographic balance, and UNSD as its secretariat — though this page itself states the Commission was 'established in 1947', not 1946. unstats.un.org/UNSDWebsite/statcom/ was fetched but returned only a bare page-title shell ('UNSD - Welcome to UNSD') with no readable body content. ecosoc.un.org and the officialstatistics.org handbook both returned HTTP 403. Wikipedia's UN Statistical Commission article was fetched directly as a substitute and states 1946 (without a resolution number), matching this entity's original year but contradicting the DESA page's 1947. Both are genuine UN-adjacent sources giving different years for the same founding event; this is left as an open discrepancy rather than silently resolved in either direction — see below."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -56,24 +56,33 @@ sources:
   - title: "Shaping the future of global statistics"
     url: "https://www.un.org/en/desa/shaping-future-global-statistics"
     publisher: "United Nations Department of Economic and Social Affairs"
+    accessed: "2026-08-28"
   - title: "Statistical Commission | Economic and Social Council"
     url: "https://ecosoc.un.org/en/events/2026/statistical-commission"
     publisher: "United Nations Economic and Social Council (ECOSOC)"
-  - title: "17.3 United Nations Statistical Commission (UNSC) — Handbook on Management and Organization of National Statistical Systems"
-    url: "https://projects.officialstatistics.org/hb-mgnt-org-nss/handbook/chapters/C17/17_3_United_Nations_Statistical_Commission_(UNSC).html"
-    publisher: "Handbook on Management and Organization of National Statistical Systems"
+  - title: "United Nations Statistical Commission"
+    url: "https://en.wikipedia.org/wiki/United_Nations_Statistical_Commission"
+    publisher: "Wikipedia"
+    accessed: "2026-08-28"
 ---
 
 # UNSC — United Nations Statistical Commission
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-28, with an open discrepancy flagged rather than
+> hidden.** Two of the four sources in the revised list are read directly:
+> un.org's own DESA page, and Wikipedia's UNSC article (substituted for the
+> 403-blocked ECOSOC and Handbook pages). They **disagree on the founding
+> year** — DESA says 1947, Wikipedia says 1946 — and neither cites a
+> resolution number. `start_date` is left at the pre-existing `1946-01-01`
+> placeholder rather than changed on the strength of one source contradicting
+> another; see "An unresolved founding-year discrepancy" below.
 
 ## Description
 
 The Statistical Commission is the **highest body of the global statistical
-system**, established in **1946** and a functional commission of ECOSOC. It
+system**, established in **1946** (per this entity's original sourcing and
+Wikipedia, read directly this pass) — though see the discrepancy noted below
+— and a functional commission of ECOSOC. It
 brings together the chief statisticians of member states worldwide and is
 the highest decision-making body for international statistical activities —
 setting statistical standards and developing concepts and methods, including
@@ -105,6 +114,22 @@ secretariat and none for the body Eurostat actually sits in.
 most of why the UN layer stayed an island: in both cases the refused edge
 was pointing at a node that did not exist.
 
+## An unresolved founding-year discrepancy
+
+Reading un.org's own DESA page directly this pass ("Shaping the future of
+global statistics") surfaced a genuine conflict: it states the Commission
+"was established in 1947," not 1946. A WebSearch cross-check independently
+found "created in 1946 by Resolution 8(I) of ECOSOC" (matching this entity's
+existing year), and Wikipedia's UN Statistical Commission article (read
+directly) also gives 1946. So the sources split roughly 2-to-1 in favour of
+1946, but the dissenting source is un.org's own DESA page, not a low-quality
+one. One plausible reconciliation, not confirmed by any page read: ECOSOC's
+founding resolution (8(I)) may date to 1946 while the Commission's first
+actual session took place in 1947, and different pages describe different
+milestones. `start_date` stays at the pre-existing `1946-01-01` placeholder
+rather than being changed on unconfirmed reconciliation — flagged here for
+whoever next has time to find the resolution text itself.
+
 ## Relationships
 
 - `part-of` [[UN]].
@@ -120,6 +145,7 @@ Edges pointing here, recorded on the other entity in each case:
 
 ## Sources
 
-Listed in frontmatter — the Commission's own UNSD-hosted site, the DESA
-overview, the ECOSOC session page, and the international handbook on
-national statistical systems.
+Listed in frontmatter, two of four read directly this pass: the DESA
+overview and — substituting for the 403-blocked ECOSOC session page and
+Handbook chapter — Wikipedia's UNSC article. The UNSD-hosted statcom page
+loaded only a bare title shell with no body content.

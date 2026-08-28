@@ -19,9 +19,9 @@ confidence: medium
 coverage: low
 verification: search-only
 
-start_date: null
+start_date: 1961-09-30
 end_date: null
-last_verified: null
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -38,13 +38,30 @@ sources:
   - title: "European Data Governance Act (DGA), Regulation (EU) 2022/868"
     url: "https://www.oecd.org/en/publications/access-to-public-research-data-toolkit_a12e8998-en/european-data-governance-act-dga-regulation-eu-2022-868_920b8b28-en.html"
     publisher: "Organisation for Economic Co-operation and Development (OECD)"
+  - title: "OECD"
+    url: "https://en.wikipedia.org/wiki/OECD"
+    publisher: "Wikipedia"
+    accessed: "2026-08-28"
 ---
 
 # OECD
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Re-verification attempted 2026-08-28, blocked — stays `search-only`.**
+> `oecd.org` is domain-wide 403-blocked for this pass's retrieval tool:
+> both cited pages, plus the bare `oecd.org` homepage tried as a control,
+> all returned HTTP 403. This matches the domain-wide blocks already
+> documented for `coe.int` and (newly, this pass) `iso.org` — three
+> separate organisational domains, all fully inaccessible to this
+> environment's page-fetch tool regardless of path. Neither original
+> source could be read. A Wikipedia article on the OECD was added and
+> read directly as a partial substitute, confirming the OECD's founding
+> (the 1960 convention, superseding the OEEC on 30 September 1961), its
+> current 38-country membership, and that "The OECD is an official United
+> Nations observer" — distinct from being a UN specialised agency, so the
+> entity's "not part of the UN system" framing stands uncontradicted.
+> That is one source read out of three (including the new addition),
+> well short of a majority, so `verification` stays `search-only` rather
+> than being forced. `confidence` and `coverage` are unchanged.
 
 ## Description
 
@@ -64,7 +81,10 @@ international data governance work.
 organisation with its own membership, distinct from the UN system — a
 distinction Batch 13's brief asks to be maintained, and one that is easy to
 get wrong given how often the OECD appears in the same discussions as UN
-bodies.
+bodies. One nuance found via Wikipedia this pass, worth stating precisely:
+the OECD **is** "an official United Nations observer" — a formal
+recognition status — which is not the same thing as being a UN specialised
+agency (as [[UN-ITU]] is). The `INTL` framing survives that nuance intact.
 
 ## An OECD source already relied on elsewhere
 
@@ -79,4 +99,6 @@ recommendations are the obvious candidates. Queued.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter. Neither original `oecd.org` source could be read
+this pass (domain-wide block, see verification note above); the added
+Wikipedia article was read directly as a partial substitute.

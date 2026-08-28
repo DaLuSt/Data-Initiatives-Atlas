@@ -15,13 +15,13 @@ country: null
 region: EU
 
 status: active
-confidence: low
-coverage: low
-verification: search-only
+confidence: medium
+coverage: medium
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -35,15 +35,24 @@ relationships:
   - type: part-of
     target: EU-COMMON-DATA-SPACES
     source: fact
-    evidence: "Mobility is one of the 14 common European data spaces identified in the Commission's January 2024 staff working document (SWD(2024) 21; digital-strategy.ec.europa.eu data-spaces). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading transport.ec.europa.eu's own page 'Creating a common European mobility data space' directly (2026-08-28): the EMDS 'aims to facilitate access, pooling and sharing of data from existing and future transport and mobility data sources', covering both passenger and freight transport as 'a framework for interlinking and federating many different transport-data ecosystems.' A second Commission library page, 'Common European data spaces for agriculture and mobility', also read directly, confirms mobility's membership of the fourteen data spaces and gives funding figures (a mobility preparatory action of roughly EUR 1 million and a deployment action of roughly EUR 8 million, scheduled Q3 2022)."
+    confidence: high
     valid_from: null
     valid_until: null
 
 sources:
+  - title: "Creating a common European mobility data space"
+    url: "https://transport.ec.europa.eu/transport-themes/smart-mobility/creating-common-european-mobility-data-space_en"
+    publisher: "European Commission — Mobility and Transport"
+    accessed: "2026-08-28"
+  - title: "Common European data spaces for agriculture and mobility"
+    url: "https://digital-strategy.ec.europa.eu/en/library/common-european-data-spaces-agriculture-and-mobility"
+    publisher: "European Commission — Shaping Europe's digital future"
+    accessed: "2026-08-28"
   - title: "Common European data spaces"
     url: "https://digital-strategy.ec.europa.eu/en/policies/data-spaces"
     publisher: "European Commission — Shaping Europe's digital future"
+    accessed: "2026-08-28"
   - title: "Towards a common European mobility data space (EMDS)"
     url: "https://www.data-spaces-symposium.eu/wp-content/uploads/2024/03/1535DI1.pdf"
     publisher: "Data Spaces Symposium"
@@ -54,21 +63,40 @@ sources:
 
 # Common European Mobility Data Space (EMDS)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Re-verified 2026-08-28.** Two new Commission sources were found and
+> read directly this pass — the Directorate-General for Mobility and
+> Transport's own EMDS page, and a Commission library document dedicated
+> to the agriculture and mobility data spaces — which together confirm and
+> substantially extend the purpose statement this entity previously held
+> unread. `verification` moves from `search-only` to `primary-source`.
 
 ## Description
 
 The mobility data space is one of the fourteen common European data spaces.
-Sources describe it as an important resource for managing intermodal
-logistics in the freight sector as well as for personal mobility.
+Confirmed by reading the Commission's own DG MOVE page directly: it "aims
+to facilitate access, pooling and sharing of data from existing and future
+transport and mobility data sources", is explicitly **"not a single
+database"** but "a framework for interlinking and federating many
+different transport-data ecosystems", and covers **both passenger and
+freight transport** — including intermodal logistics, cross-border
+passenger and freight multimodality, and support for local authorities'
+sustainable urban mobility plans. Governance runs through defined
+"building blocks", an "interlinking layer", and new standards where
+necessary, building on [[EU-DGA]] and the Data Act.
 
-`confidence: low` and `coverage: low`. Beyond that purpose statement,
-**almost nothing was established**: not its governance, responsible
-organisations, standards, technical infrastructure, participating countries,
-or current stage of development. Batch 10's brief asks for all of those; for
-this data space they are unanswered.
+Deployment runs through **deployEMDS**, the first EMDS deployment project,
+supported by the Digital Europe Programme, running November 2023 to
+October 2026 — confirmed via search cross-checks of the Commission's
+mobility observatory and the deployEMDS project's own site, though neither
+was read directly this pass and deployEMDS itself is not modelled as an
+entity.
+
+`confidence: medium` and `coverage: medium`, up from `low`/`low`: the
+purpose, scope and governance approach are now confirmed from a Commission
+source read directly, and a Commission library page adds funding detail —
+a mobility preparatory action of roughly EUR 1 million and a deployment
+action of roughly EUR 8 million (Q3 2022). Responsible organisations,
+detailed standards and participating countries remain unresearched.
 
 ## Relationship to the national access points, not asserted
 
@@ -88,6 +116,9 @@ to repeat here.
 
 ## Sources
 
-Listed in frontmatter. The third is a Commission staff working document
-hosted by a third party rather than on a Commission domain — usable, but a
-direct Commission copy should replace it.
+Listed in frontmatter, three of five read directly this pass — the DG MOVE
+EMDS page, the agriculture-and-mobility library page, and the main
+data-spaces overview page. The Data Spaces Symposium PDF and the
+Tribunal de Contas-hosted SWD(2024) 21 mirror were both attempted and
+returned unreadable binary/stream content to this pass's fetch tooling;
+neither was read.

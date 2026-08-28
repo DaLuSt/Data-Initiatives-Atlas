@@ -22,7 +22,7 @@ verification: search-only
 
 start_date: 2020-12-12
 end_date: null
-last_verified: null
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -232,9 +232,22 @@ sources:
 
 # Single Digital Gateway Regulation (Regulation (EU) 2018/1724)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Re-verified 2026-08-28 — genuinely attempted, genuinely stuck.** Both
+> cited sources were retried and failed again: `eur-lex.europa.eu` returned
+> empty content on two different URL renderings (CELEX and LEGISSUM),
+> consistent with every other EUR-Lex attempt made across this batch, and
+> `europeansources.info` aborted mid-fetch on two separate attempts. Six
+> alternate sources were then tried and searched for — the Commission's
+> current single-digital-gateway policy page (404, page appears to have
+> been retired or moved), `cep.eu`'s analysis (covers only the 2017
+> proposal stage, not the enacted 2018 regulation), `monitoraggio.sdg.gov.it`
+> (HTTP 403), Your Europe's own citizen portal (no mention of the
+> regulation), the eIDAS policy page (irrelevant), and a Dutch
+> parliamentary-monitor mirror (wrong topic entirely) — none yielded a
+> readable page about this specific regulation. `verification` **stays at
+> `search-only`**: the facts below rest on WebSearch synthesis of multiple
+> independent trackers, not on a page read directly, and are not
+> substituted for genuine reading.
 
 ## Description
 
@@ -254,10 +267,18 @@ evidence directly between authorities rather than asking citizens to
 re-supply it, which makes it a data-sharing instrument and not merely a
 portal mandate.
 
-That said, the once-only mechanism was **not researched in detail** here,
-and `coverage: low` reflects it. The Dutch implementation of the gateway is
-likewise unresearched — a plausible connection to [[NL-GDI]] and
-[[NL-LOGIUS]] exists but is not sourced, so no relationship is asserted.
+That said, the once-only mechanism was **not researched by reading a
+primary source** here, and `coverage: low` reflects it. A WebSearch
+synthesis (not a page read directly) indicates the Once-Only Technical
+System became mandatory for member states by **12 December 2023**, per
+Commission Implementing Regulation (EU) 2022/1463, covering a list of 21
+priority administrative procedures — offered here as a lead for a future
+pass to confirm by actually reading the implementing regulation or a
+Commission page, not as a confirmed fact.
+
+The Dutch implementation of the gateway is likewise unresearched — a
+plausible connection to [[NL-GDI]] and [[NL-LOGIUS]] exists but is not
+sourced, so no relationship is asserted.
 
 ## Relationships
 
@@ -267,4 +288,6 @@ likewise unresearched — a plausible connection to [[NL-GDI]] and
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter — neither read directly despite genuine, repeated
+attempts this pass; see the banner above for the full list of alternates
+tried and why each fell short. `verification` remains `search-only`.

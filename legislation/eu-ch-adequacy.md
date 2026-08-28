@@ -24,11 +24,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2000-07-26
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -46,15 +46,15 @@ relationships:
   - type: applies-in
     target: CH
     source: fact
-    evidence: "Commission Decision 2000/518/EC of 26 July 2000 pursuant to Directive 95/46/EC on the adequate protection of personal data provided in Switzerland: for the purposes of Article 25(2) of Directive 95/46/EC, Switzerland is considered as providing an adequate level of protection for personal data transferred from the Community; published in OJ L 215 of 25 August 2000 (eur-lex.europa.eu CELEX 32000D0518 and ELI dec/2000/518; bj.admin.ch 'Adequacy of Switzerland by the EU'). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading legislation.gov.uk's mirror of the adopted decision directly (2026-08-28), which quotes Article 1 verbatim: 'For the purposes of Article 25(2) of Directive 95/46/EC, for all the activities falling within the scope of that Directive, Switzerland is considered as providing an adequate level of protection for personal data transferred from the Community.' edoeb.admin.ch, the Swiss data protection commissioner's own page, also read directly, confirms the decision's continuity and the 2024 re-confirmation. `bj.admin.ch`, the URL originally cited here, now returns HTTP 404 — the Swiss Federal Office of Justice appears to have reorganised its site; a working replacement page at the same domain was found but no longer covers this specific decision's content, so it was dropped rather than kept as a citation that no longer supports the claim."
+    confidence: high
     valid_from: 2000-07-26
     valid_until: null
   - type: references
     target: CH-REVDSG
     source: fact
-    evidence: "On 15 January 2024 the European Commission published a report confirming that Switzerland offers an adequate level of data protection, an assessment made after the revised Swiss Federal Act on Data Protection took effect (edoeb.admin.ch '15.01.2024 — EU adequacy decision regarding Switzerland'; bj.admin.ch 'Adequacy of Switzerland by the EU'). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading edoeb.admin.ch's own page directly (2026-08-28): 'Switzerland's new data protection legislation meets the applicable adequacy requirements of the GDPR' — the Commission's 15 January 2024 confirmation was assessed against the revised Federal Act on Data Protection, not the 1992 act in force when the original 2000 decision was taken."
+    confidence: high
     valid_from: 2024-01-15
     valid_until: null
 
@@ -62,22 +62,26 @@ sources:
   - title: "2000/518/EC: Commission Decision of 26 July 2000 pursuant to Directive 95/46/EC on the adequate protection of personal data provided in Switzerland"
     url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32000D0518"
     publisher: "EUR-Lex — Publications Office of the European Union"
-  - title: "Decision 2000/518 — consolidated record"
-    url: "https://eur-lex.europa.eu/eli/dec/2000/518"
-    publisher: "EUR-Lex — Publications Office of the European Union"
+  - title: "2000/518/EC — adopted text (mirror)"
+    url: "https://www.legislation.gov.uk/eudn/2000/518/adopted"
+    publisher: "The National Archives (legislation.gov.uk)"
+    accessed: "2026-08-28"
   - title: "EU adequacy decision regarding Switzerland (15.01.2024)"
     url: "https://www.edoeb.admin.ch/en/15012024-eu-adequacy-decision-regarding-switzerland"
     publisher: "Eidgenössischer Datenschutz- und Öffentlichkeitsbeauftragter (EDÖB)"
-  - title: "Adequacy of Switzerland by the EU"
-    url: "https://www.bj.admin.ch/bj/en/home/staat/datenschutz/internationales/angemessenheit-ch.html"
-    publisher: "Bundesamt für Justiz — Swiss Federal Office of Justice"
+    accessed: "2026-08-28"
 ---
 
 # EU adequacy decision for Switzerland (2000/518/EC)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read — retrieval is blocked by
-> the network egress proxy. `verification: search-only`.
+> **Re-verified 2026-08-28.** `eur-lex.europa.eu` remains unreadable to
+> this pass's fetch tooling, consistent with every other EUR-Lex attempt
+> made across this batch. In its place, a working UK National Archives
+> mirror of the adopted decision text was found and read directly,
+> quoting Article 1 verbatim, alongside the Swiss data protection
+> commissioner's own page (re-confirmed). `bj.admin.ch`, previously cited,
+> is now a dead link (HTTP 404) and has been dropped. `verification`
+> moves from `search-only` to `primary-source`.
 
 ## Description
 
@@ -132,6 +136,12 @@ not the same shape, which is the more useful thing to be able to see.
 
 ## Sources
 
-Listed in frontmatter — the EUR-Lex CELEX and ELI records of the decision,
-the Swiss data protection commissioner's page on the 2024 confirmation, and
-the Swiss Federal Office of Justice's own account of Swiss adequacy.
+Listed in frontmatter, two of three read directly this pass: the UK
+National Archives mirror of the decision's adopted text (quoting Article 1
+verbatim) and the Swiss data protection commissioner's own page on the
+2024 confirmation. The EUR-Lex CELEX record was attempted and returned
+empty content, consistent with every other EUR-Lex attempt made across
+this batch; it remains listed as the authoritative-but-unread citation.
+The Swiss Federal Office of Justice's page, previously cited, is now a
+dead link and has been removed rather than kept as a non-functioning
+citation.

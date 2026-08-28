@@ -31,7 +31,7 @@ verification: search-only
 
 start_date: 2018-10-10
 end_date: null
-last_verified: "2026-08-19"
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -47,14 +47,14 @@ relationships:
   - type: amends
     target: INTL-CONVENTION-108
     source: fact
-    evidence: "CETS No. 223 is the Protocol amending the Convention for the Protection of Individuals with regard to Automatic Processing of Personal Data, opened for signature on 10 October 2018; the modernised instrument is referred to as Convention 108+ and consolidates the proportionality requirement, strengthens data subject rights, and adds controller obligations on transparency, accountability, privacy by design and by default, risk assessment and data breach notification (coe.int 'Convention 108 and Protocols'; rm.coe.int CETS 223; iapp.org 'Modernized CoE Convention 108: A global standard on data protection'). NOT READ — search-only."
+    evidence: "CETS No. 223 is the Protocol amending the Convention for the Protection of Individuals with regard to Automatic Processing of Personal Data, opened for signature on 10 October 2018; the modernised instrument is referred to as Convention 108+ and consolidates the proportionality requirement, strengthens data subject rights, and adds controller obligations on transparency, accountability, privacy by design and by default, risk assessment and data breach notification (coe.int 'Convention 108 and Protocols'; rm.coe.int CETS 223; iapp.org 'Modernized CoE Convention 108: A global standard on data protection'). Confirmed by reading iapp.org directly (2026-08-28), which states the protocol adds 'new obligations for controllers relating to transparency, accountability, privacy by design and by default, risk assessment, and data breach notification' and 'revised data protection principles,' and that the modernisation was open for signature with Mexico as its 53rd signatory — the article does not use the label 'CETS 223' itself. Both coe.int and rm.coe.int returned HTTP 403 on retry 2026-08-28 (domain-wide block, see INTL-COE) and stay unread."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: maintained-by
     target: INTL-COE
     source: fact
-    evidence: "The amending protocol is a Council of Europe treaty, CETS No. 223, published in the Council of Europe treaty series; the Council of Europe records ratifications against it and the Committee of Convention 108 encourages state parties to ratify (coe.int 'Republic of Moldova Becomes the 34th State to Ratify the Convention 108+'; coe.int '50th plenary meeting of the Committee of Convention 108 (T-PD)'). NOT READ — search-only."
+    evidence: "The amending protocol is a Council of Europe treaty, CETS No. 223, published in the Council of Europe treaty series; the Council of Europe records ratifications against it and the Committee of Convention 108 encourages state parties to ratify (coe.int 'Republic of Moldova Becomes the 34th State to Ratify the Convention 108+'; coe.int '50th plenary meeting of the Committee of Convention 108 (T-PD)'). NOT READ — both coe.int pages returned HTTP 403 on retry 2026-08-28 (domain-wide block, see INTL-COE)."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -72,6 +72,7 @@ sources:
   - title: "Modernized CoE Convention 108: A global standard on data protection"
     url: "https://iapp.org/news/a/modernized-coe-convention-108-a-global-standard-on-data-protection"
     publisher: "International Association of Privacy Professionals (IAPP)"
+    accessed: "2026-08-28"
   - title: "EU member states to ratify Convention 108+"
     url: "https://www.coe.int/en/web/data-protection/-/eu-member-states-to-ratify-convention-108-"
     publisher: "Council of Europe"
@@ -79,9 +80,15 @@ sources:
 
 # Convention 108+
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Re-verification attempted 2026-08-28, stays `search-only`.** One of
+> five cited sources was read directly this pass: iapp.org, which
+> confirms the protocol's substantive additions (transparency,
+> accountability, privacy by design and by default, risk assessment, data
+> breach notification) in its own words, though it does not use the
+> "CETS 223" label. The four `coe.int`/`rm.coe.int` sources all returned
+> HTTP 403 on retry (domain-wide block, confirmed again this pass; see
+> [[INTL-COE]]) and stay unread. One of five is well short of a majority,
+> so `verification` stays `search-only` rather than being forced.
 
 ## Description
 
@@ -142,8 +149,11 @@ and the regional one compatible.
 [[EU-GDPR]] Recital 105 makes accession to Convention 108 a factor in
 adequacy assessments. Convention 108+ raises what accession means. A state
 seeking an EU adequacy decision and having no prospect of EU membership can
-reach for this instrument, and several outside Europe have —
-[[MU]] Mauritius has ratified the amending protocol.
+reach for this instrument, and [[MU]] Mauritius is cited elsewhere in this
+batch as having ratified the amending protocol — though the one source for
+that specific detail (dataprotection.govmu.org, cited on
+[[INTL-CONVENTION-108]]) returned HTTP 404 on retry this pass, so treat the
+Mauritius ratification as unconfirmed rather than settled.
 
 That is the mechanism by which a Council of Europe treaty shapes data
 protection law in jurisdictions that will never be bound by EU law.
@@ -156,4 +166,6 @@ protection law in jurisdictions that will never be bound by EU law.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter. One of five read directly this pass — iapp.org.
+The four `coe.int`/`rm.coe.int` citations remain unread (domain-wide
+block; see verification note above).

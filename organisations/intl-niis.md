@@ -18,11 +18,11 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2017-01-01
 end_date: null
-last_verified: "2026-08-20"
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -41,42 +41,54 @@ relationships:
   - type: part-of
     target: EE
     source: fact
-    evidence: "NIIS is a non-profit association established in 2017 by the governments of Estonia and Finland; the republics of Estonia, Finland and Iceland are members of NIIS (niis.org 'History'; e-estonia.com 'NIIS'; en.wikipedia.org 'Nordic Institute for Interoperability Solutions'). NOT READ — search-only. Direction: the member state is a constituent of the association."
-    confidence: medium
+    evidence: "Confirmed by reading niis.org's own History page and e-estonia.com directly (2026-08-28): niis.org states NIIS was formed as 'a separate jointly managed special purpose organisation to administer the X-Road development' following a 2013 Estonia-Finland memorandum of understanding, with the organisation itself established in 2017; e-estonia.com confirms 'NIIS has three member countries: Estonia, Finland, and Iceland,' with Ukraine, the Faroe Islands and the Government of Åland as partners. Direction: the member state is a constituent of the association."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: part-of
     target: FI
     source: fact
-    evidence: "The republics of Estonia, Finland and Iceland are members of NIIS, which Estonia and Finland established jointly in 2017 (niis.org 'History'; e-estonia.com 'NIIS'). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading niis.org's History page and e-estonia.com directly (2026-08-28): Estonia and Finland jointly formed NIIS in 2017 to administer X-Road; e-estonia.com lists Finland among NIIS's three member countries."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: part-of
     target: IS
     source: fact
-    evidence: "Iceland joined NIIS on 1 June 2021, becoming the third member government in the international consortium after founders Estonia and Finland (niis.org 'Iceland joins the Nordic Institute for Interoperability Solutions'). NOT READ — search-only."
-    confidence: medium
-    valid_from: null
+    evidence: "Confirmed by reading niis.org's own news announcement directly (2026-08-28): 'Iceland became a member of the Nordic Institute for Interoperability Solutions on June 1, 2021, making it the third member government alongside founding members Estonia and Finland.' The announcement also states Iceland had participated in NIIS working groups since 2018 before formal membership."
+    confidence: high
+    valid_from: 2021-06-01
     valid_until: null
 
 sources:
   - title: "Nordic Institute for Interoperability Solutions — History"
     url: "https://www.niis.org/history"
     publisher: "Nordic Institute for Interoperability Solutions (NIIS)"
+    accessed: "2026-08-28"
   - title: "Iceland joins the Nordic Institute for Interoperability Solutions"
     url: "https://www.niis.org/news-archive/2021/5/31/iceland-joins-the-nordic-institute-for-interoperability-solutions"
     publisher: "Nordic Institute for Interoperability Solutions (NIIS)"
+    accessed: "2026-08-28"
   - title: "e-Estonia — NIIS"
     url: "https://e-estonia.com/solutions/interoperability-services/niis/"
     publisher: "e-Estonia"
+    accessed: "2026-08-28"
 ---
 
 # Nordic Institute for Interoperability Solutions
 
-> **Sourcing caveat.** Compiled from search-engine results only; the
-> cited pages were confirmed to exist but were not read, because the
-> working environment blocks page retrieval. `verification: search-only`.
+> **Verified 2026-08-28.** All three cited pages were read directly.
+> `verification` moves from `search-only` to `primary-source`; the three
+> `part-of` relationships move to `confidence: high`. One nuance found on
+> reading niis.org's own History page: it dates the Estonia-Finland
+> political agreement to found a shared body to a **2013** memorandum of
+> understanding (signed digitally — described as "the world's first
+> digitally signed international agreement"), with NIIS itself
+> established as the operating organisation in 2017. That is consistent
+> with, not a correction of, the entity's `start_date: 2017-01-01` and
+> the description's "established in 2017" — 2013 is the political
+> precursor, 2017 the organisation's actual founding — but is recorded
+> here since it was not visible before the page was read.
 
 ## Description
 
@@ -107,7 +119,7 @@ or autonomous territories the `level` vocabulary cannot express.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, all three read directly this pass.
 
 ## Both deployments are now modelled
 

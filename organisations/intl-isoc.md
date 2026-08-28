@@ -18,11 +18,11 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -34,22 +34,31 @@ related_entities:
 relationships: []
 
 sources:
-  - title: "The Updated IETF-ISOC Relationship (draft-ietf-iasa2-rfc2031bis)"
+  - title: "The Updated IETF-ISOC Relationship (RFC 8712 / draft-ietf-iasa2-rfc2031bis)"
     url: "https://datatracker.ietf.org/doc/draft-ietf-iasa2-rfc2031bis/08/"
     publisher: "IETF Datatracker"
+    accessed: "2026-08-28"
   - title: "IETF Administration — overview"
     url: "https://www.ietf.org/administration/overview/"
     publisher: "Internet Engineering Task Force (IETF)"
+    accessed: "2026-08-28"
   - title: "Internet Society extends major financial support commitment to the IETF"
     url: "https://www.ietf.org/blog/isoc-financial-commitment/"
     publisher: "Internet Engineering Task Force (IETF)"
+    accessed: "2026-08-28"
 ---
 
 # Internet Society (ISOC)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`. ⚠ `coverage: low`.
+> **Verified 2026-08-28.** All three cited pages were read directly,
+> confirming the IETF LLC is "a single member LLC disregarded entity of
+> the Internet Society" (ietf.org/administration/overview), that ISOC
+> "agreed to provide significant funding support for the IETF" and
+> appoints one member of the IETF LLC's board (RFC 8712), and that ISOC's
+> funding commitment reached "up to $71,400,000" under the 2020 agreement
+> (ietf.org/blog/isoc-financial-commitment). `verification` moves from
+> `search-only` to `primary-source`. `coverage: low` still stands —
+> nothing about ISOC beyond its IETF relationship was researched.
 
 ## Description
 
@@ -103,4 +112,5 @@ is found, reconsidered.
 
 ## Sources
 
-Listed in frontmatter — all three from the IETF's own datatracker and site.
+Listed in frontmatter — all three from the IETF's own datatracker and
+site, all read directly this pass.

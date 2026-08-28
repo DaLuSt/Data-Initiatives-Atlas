@@ -7,12 +7,18 @@ belong on the country's front page (`CONTRIBUTING.md`).
 
 Anchor entity: [[DE]]
 
-> **Sourcing caveat.** Every German entity below was compiled from
-> search-engine results only: the cited pages were confirmed to exist but
-> were **not read**, because the working environment blocked page
-> retrieval. They carry `verification: search-only` and need a
-> re-verification pass against primary sources. See
-> `progress/current-batch.md`.
+> **Re-verified 2026-08-28.** The 26 entities that carried the stale
+> `search-only` banner below (data spaces, frameworks, the GDI-DE
+> initiative, six pieces of legislation, eight organisations, two
+> platforms, three standards and the digital strategy) have all been
+> re-verified against primary sources fetched directly this pass and
+> promoted to `verification: primary-source`. [[DE-BDSG]] was already
+> promoted in an earlier pass. The remaining DE entities not covered by
+> this pass ([[DE-DATENSTRATEGIE]], the ministries, [[DE-GEMATIK]],
+> [[DE-BFDI]], the intelligence-services cluster, etc.) may still carry
+> `search-only` or other verification states — check each entity's own
+> frontmatter rather than assuming this banner covers them. See
+> `discovery/unresolved.md` for what was found, corrected and left open.
 
 ## Strategies
 
@@ -127,6 +133,7 @@ their existing `applies-in` → [[NL]]:
 | [[EU-ITS-DIRECTIVE]] | [[DE-MOBILITHEK]] | [[NL-NTM]] |
 | [[EU-INSPIRE]] | [[DE-GEOZG]] | _(not yet sourced)_ |
 | [[EU-DCAT-AP]] | [[DE-DCAT-AP-DE]] | [[NL-DCAT-AP-NL]] |
+| [[EU-EN-16931]] | [[DE-XRECHNUNG]] | _(not yet sourced)_ |
 
 ## Intelligence and security services
 

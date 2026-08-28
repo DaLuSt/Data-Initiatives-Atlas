@@ -28,7 +28,7 @@ verification: search-only
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -43,7 +43,7 @@ relationships:
   - type: part-of
     target: UN-UNECE
     source: fact
-    evidence: "The Conference of European Statisticians is organised by UNECE; some 65 countries come together at the CES to drive statistical work in the UNECE region and beyond, and its objectives include developing and adopting statistical standards in the UNECE region (unece.org/statistics/ces; unece.org 'About the Conference of European Statisticians'; ec.europa.eu/eurostat Statistics Explained 'Statistical cooperation – introduction'). NOT READ — search-only."
+    evidence: "Confirmed by reading the Eurostat 'Statistical cooperation — introduction' page directly (2026-08-28): 'Eurostat represents the EU in the Conference of European Statisticians (CES), which is organised by the UNECE,' describing the CES as one of the 'key international forums' Eurostat uses. All three unece.org pages (the CES home page, its about page, and its bureau page) returned HTTP 403 on every attempt this pass — `unece.org` is blocked domain-wide this session, confirmed by testing the bare root domain. A WebSearch cross-check surfaced text that reads as a near-verbatim match to this entity's existing description (65 countries, the same four objectives, annual plenary sessions), suggesting it is drawing on the same unece.org page's cached/indexed text rather than an independent source — corroborating without counting as a page genuinely fetched and read this pass. One of four cited sources read directly is not a majority."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -61,13 +61,19 @@ sources:
   - title: "Statistical cooperation — introduction"
     url: "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Statistical_cooperation_-_introduction"
     publisher: "Eurostat — European Commission"
+    accessed: "2026-08-28"
 ---
 
 # CES — Conference of European Statisticians
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Still `search-only` after this pass.** All three `unece.org` sources
+> are blocked domain-wide this session (confirmed via the bare root
+> domain). Only the Eurostat cooperation page was read directly — it
+> confirms the specific claim that matters most to this entity's role in
+> the Atlas (Eurostat sits in the CES, which UNECE organises), but one of
+> four cited sources is not a majority, and no independent alternate for
+> the UNECE-side facts (65 countries, the CES's own objectives) was found
+> and genuinely read this pass, so `verification` is not promoted.
 
 ## Description
 
@@ -114,5 +120,6 @@ presented as settled.
 
 ## Sources
 
-Listed in frontmatter — three UNECE pages and the Eurostat cooperation page
-that names the CES as a forum Eurostat sits in.
+Listed in frontmatter, one of four read directly this pass: the Eurostat
+cooperation page, which names the CES as a forum Eurostat sits in. All
+three UNECE pages remain 403-blocked this session.

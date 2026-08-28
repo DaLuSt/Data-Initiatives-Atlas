@@ -18,11 +18,11 @@ region: EU
 status: active
 confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
-start_date: null
+start_date: 2019-06-27
 end_date: null
-last_verified: null
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -228,6 +228,14 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Cybersecurity Act"
+    url: "https://certification.enisa.europa.eu/about-eu-cyber-certification/eu-regulatory-context/cybersecurity-act_en"
+    publisher: "ENISA (European Union Agency for Cybersecurity)"
+    accessed: "2026-08-28"
+  - title: "Regulation (EU) 2019/881 — introduction"
+    url: "https://www.legislation.gov.uk/eur/2019/881/introduction/2020-01-31"
+    publisher: "The National Archives (legislation.gov.uk)"
+    accessed: "2026-08-28"
   - title: "The EU Cybersecurity Act — summary"
     url: "https://eur-lex.europa.eu/EN/legal-content/summary/the-eu-cybersecurity-act.html"
     publisher: "EUR-Lex (Publications Office of the European Union)"
@@ -238,18 +246,34 @@ sources:
 
 # Cybersecurity Act (Regulation (EU) 2019/881)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Re-verified 2026-08-28.** Neither of the two originally-cited sources
+> could be read this pass (EUR-Lex returned empty content; European
+> Sources Online's fetch aborted on both attempts). ENISA's own page and a
+> UK National Archives mirror of the adopted text were found and read
+> directly instead, confirming the adoption date precisely and adding it
+> to `start_date`. `verification` moves from `search-only` to
+> `primary-source` on the strength of the two new sources.
 
 ## Description
 
-Regulation (EU) 2019/881 concerns ENISA, the European Union Agency for
-Cybersecurity, and ICT cybersecurity certification. It established the
-European Cybersecurity Certification Framework, intended to improve the
-functioning of the internal market by raising the level of cybersecurity in
-the Union and enabling a harmonised approach to European cybersecurity
-certification schemes.
+Confirmed by reading ENISA's own certification page and the UK National
+Archives' mirror of the adopted text directly: **Regulation (EU)
+2019/881**, "on ENISA (the European Union Agency for Cybersecurity) and on
+information and communications technology cybersecurity certification and
+repealing Regulation (EU) No 526/2013", was adopted by the European
+Parliament and Council on **17 April 2019** and entered into force on
+**27 June 2019** (the latter date confirmed via a WebSearch cross-check of
+independent legal trackers rather than by direct reading, since neither
+source read states the entry-into-force date explicitly — recorded here as
+`start_date` with that caveat).
+
+It concerns ENISA and ICT cybersecurity certification. It established the
+European Cybersecurity Certification Framework — confirmed directly as "a
+framework for voluntary European cybersecurity certification schemes for
+Information and communications technology (ICT) products, services and
+processes" — intended to improve the functioning of the internal market by
+raising the level of cybersecurity in the Union and enabling a harmonised
+approach to European cybersecurity certification schemes.
 
 [[EU-ENISA]] was added in Batch 9, closing the gap this entity carried when
 created. The `governed-by` relationship is recorded on the agency.
@@ -276,4 +300,6 @@ find a hole without it.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, two of four read directly this pass (ENISA,
+legislation.gov.uk). The EUR-Lex summary returned empty content and
+European Sources Online aborted on both attempts; neither was read.

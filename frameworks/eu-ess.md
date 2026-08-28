@@ -26,11 +26,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2009-03-11
 end_date: null
-last_verified: null
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -49,7 +49,7 @@ relationships:
   - type: governed-by
     target: EU-REG-223-2009
     source: fact
-    evidence: "The ESS was formalised in March 2009 when the European Parliament and the Council adopted Regulation (EC) No 223/2009 on European statistics, which consolidated the activities of the ESS and clarified the roles of Eurostat, the national statistical institutes and other national authorities; the ESS Committee is established under the regulation (eur-lex.europa.eu CELEX 32009R0223; ec.europa.eu/eurostat 'European Statistical System'). NOT READ — search-only."
+    evidence: "Confirmed by reading ec.europa.eu/eurostat's own 'European Statistical System' page, cso.ie's and stat.gov.pl's own pages directly (2026-08-28): the ESS 'was built up gradually with the objective of providing comparable statistics at EU level,' comprising Eurostat, the national statistical institutes and other national authorities, plus the EFTA countries; it 'operates under EU Statistical Law (Regulation 223/2009, amended 2015)' per cso.ie, and stat.gov.pl confirms the same regulation and its May 2015 amendment. eur-lex.europa.eu's own text of Regulation 223/2009 was attempted directly (multiple URL forms) but returned no readable content this pass and remains unconfirmed as a direct read; the regulation's existence and amendment history are corroborated by three independent national/EU statistical-office sources instead."
     confidence: medium
     valid_from: 2009-03-11
     valid_until: null
@@ -58,43 +58,68 @@ sources:
   - title: "Regulation (EC) No 223/2009 of the European Parliament and of the Council on European statistics"
     url: "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=celex%3A32009R0223"
     publisher: "EUR-Lex — Publications Office of the European Union"
+    note: "Returned no readable content across multiple URL forms attempted 2026-08-28 (ALL, TXT/HTML, and ELI views all returned empty). Not counted toward this pass's verified majority; corroborated instead by cso.ie and stat.gov.pl, both of which cite this regulation and its 2015 amendment directly."
   - title: "Overview — European Statistical System (ESS)"
     url: "https://ec.europa.eu/eurostat/web/european-statistical-system"
     publisher: "Eurostat — European Commission"
+    accessed: "2026-08-28"
   - title: "Eurostat and the European Statistical System — Statistics Explained"
     url: "https://ec.europa.eu/eurostat/statistics-explained/SEPDF/cache/10129.pdf"
     publisher: "Eurostat — European Commission"
+    note: "Returned only raw PDF binary to the fetch tool as of 2026-08-28; not readable this pass and not counted toward the verified majority."
   - title: "European Statistical System — Central Statistics Office"
     url: "https://www.cso.ie/en/aboutus/pagesforfoi/europeanstatisticalsystem/"
     publisher: "Central Statistics Office (Ireland)"
+    accessed: "2026-08-28"
   - title: "ESS — European Statistical System and Eurostat"
     url: "https://stat.gov.pl/en/international-statistics/international-institutions-organisations/ess-european-statistical-system-and-eurostat/"
     publisher: "Statistics Poland"
+    accessed: "2026-08-28"
 ---
 
 # ESS — European Statistical System
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Re-verified 2026-08-28.** Three of five cited pages were read directly
+> — Eurostat's own ESS overview, and the Irish and Polish national
+> statistical offices' own pages. The EUR-Lex text of Regulation 223/2009
+> could not be read this pass despite several URL forms being tried, and
+> the Statistics Explained PDF returned only raw binary; both are
+> corroborated instead by the three readable sources, which independently
+> cite the same regulation and amendment history. Three of five is a
+> genuine majority; `verification` promoted `search-only` →
+> `primary-source`.
 
 ## Description
 
-The ESS is the **partnership** between the Community statistical authority —
-the Commission, acting through [[EU-EUROSTAT]] — and the **national
-statistical institutes** and other national authorities responsible in each
-member state for developing, producing and disseminating European
-statistics.
+Confirmed by reading ec.europa.eu/eurostat's own "European Statistical
+System" page directly (2026-08-28): the ESS is the **partnership** between
+the Community statistical authority — the Commission, acting through
+[[EU-EUROSTAT]] — and the **national statistical institutes (NSIs)** and
+**other national authorities (ONAs)** responsible in each member state for
+developing, producing and disseminating European statistics, "built up
+gradually with the objective of providing comparable statistics at EU
+level." The partnership also includes the EFTA countries and coordinates
+with EU candidate countries, the European Central Bank, and international
+bodies (OECD, UN, IMF, World Bank).
 
 It was formalised in **March 2009** by **Regulation (EC) No 223/2009**,
-informally the *EU Statistical Law*, which consolidated the ESS's activities
-and clarified the respective roles of Eurostat, the NSIs and other national
-authorities. It was amended in 2015 by Regulation (EU) 2015/759 and again in
-2024, the later amendment aimed at improving data access, enabling faster
-responses in crises and supporting new statistical outputs.
+informally the *EU Statistical Law*. Confirmed by reading cso.ie and
+stat.gov.pl directly: the ESS "operates under EU Statistical Law
+(Regulation 223/2009, amended 2015)," consolidating the ESS's activities
+and clarifying the roles of Eurostat, the NSIs and other national
+authorities. The 2024 amendment (aimed at improving data access, enabling
+faster crisis response and supporting new statistical outputs) is carried
+forward from the prior description and was not independently re-confirmed
+this pass — neither of the two readable national-office pages mentions it,
+and the EUR-Lex text that would confirm it directly could not be read.
 
-The **ESS Committee**, composed of NSI representatives and chaired by
-Eurostat, is established under the regulation.
+The **ESS Committee** (ESSC), composed of NSI representatives and chaired
+by Eurostat, is referenced on Eurostat's own ESS page — which notes the
+ESSC endorsed the ESS's common position on strategic priorities in May
+2025 — alongside other governance bodies including the Partnership Group,
+ESGAB and ESAC. The regulation's role in establishing the Committee is
+carried forward from the prior description; it was not independently
+confirmed from the regulation's own text this pass.
 
 ## This entity was created to fix five refused edges at once
 

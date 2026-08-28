@@ -20,13 +20,13 @@ country: null
 region: null
 
 status: active
-confidence: medium
+confidence: high
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: 1945-11-16
 end_date: null
-last_verified: null
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -40,15 +40,15 @@ relationships:
   - type: part-of
     target: UN
     source: fact
-    evidence: "UNESCO is a specialized agency of the United Nations dedicated to strengthening international cooperation in the fields of education, science, culture and information; its constitution was signed on 16 November 1945 and it works with 194 member states (unesco.org/en/about-us; ec.europa.eu/eurostat Statistics Explained glossary entry for UNESCO; dagdok.org UN specialized agencies). NOT READ — search-only."
-    confidence: medium
-    valid_from: null
+    evidence: "Confirmed by reading all four cited pages directly (2026-08-28). unesco.org/en/about-us states UNESCO is a specialised UN agency for education, science, culture, communication and information, with 194 Member States. The Eurostat glossary entry gives the constitution signature date precisely: 16 November 1945, and (as of February 2019) 193 Member States and 11 Associate Members — a slightly different member count than unesco.org's current 194, reflecting the passage of time rather than a contradiction. dagdok.org corroborates: UNESCO 'became an agency of the United Nations in 1946' following the 1945 London constitutional signing, and is 'the only UN agency with a system of National Commissions.'"
+    confidence: high
+    valid_from: 1945-11-16
     valid_until: null
   - type: cooperates-with
     target: EU-COMMISSION
     source: fact
-    evidence: "UNESCO and the European Commission signed an agreement to accelerate global implementation of the UNESCO Recommendation on the Ethics of Artificial Intelligence adopted in November 2021 by the 193 Member States; a budget of EUR 4 million is dedicated to supporting the least developed countries in the establishment of their national legislation, and under it UNESCO establishes the 'AI Ethics Experts without Borders' facility, delivers an annual Global Forum on the Ethics of AI and develops a toolkit for judicial operators (unesco.org 'Artificial intelligence: Partnership between UNESCO and the EU to speed implementation of ethical rules'). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading unesco.org's own partnership article directly (2026-08-28): UNESCO and the European Commission signed an accord to accelerate global implementation of the Recommendation on the Ethics of Artificial Intelligence (adopted November 2021 by 193 Member States), with a EUR 4 million European Commission budget for least-developed and low-income countries. Under it, UNESCO establishes the 'AI Ethics Experts without Borders' (AIEB) facility providing on-demand policy advice, delivers an annual Global Forum on the Ethics of AI, and develops a toolkit for judicial operators."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -56,22 +56,28 @@ sources:
   - title: "UNESCO in brief"
     url: "https://www.unesco.org/en/about-us"
     publisher: "UNESCO"
+    accessed: "2026-08-28"
   - title: "Glossary: United Nations Educational, Scientific and Cultural Organization (UNESCO)"
     url: "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary%3AUnited_Nations_Educational%2C_Scientific_and_Cultural_Organization_%28UNESCO%29"
     publisher: "Eurostat — European Commission"
+    accessed: "2026-08-28"
   - title: "Artificial intelligence: Partnership between UNESCO and the EU to speed implementation of ethical rules"
     url: "https://www.unesco.org/en/articles/artificial-intelligence-partnership-between-unesco-and-eu-speed-implementation-ethical-rules"
     publisher: "UNESCO"
+    accessed: "2026-08-28"
   - title: "UNESCO — UN specialized agencies"
     url: "https://www.dagdok.org/w/dd/en/un-system/un-specialized-agencies/unesco"
     publisher: "DagDok"
+    accessed: "2026-08-28"
 ---
 
 # UNESCO
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-28.** All four cited pages were read directly this
+> pass — every source, not just a majority. `confidence` moves from
+> `medium` to `high`, and `start_date` (1945-11-16, the constitution's
+> signature date) is now confirmed rather than asserted: both unesco.org's
+> and Eurostat's own pages give this exact date.
 
 ## Description
 
@@ -136,5 +142,6 @@ one day; it does not justify one on a single example.
 
 ## Sources
 
-Listed in frontmatter — UNESCO's own overview, the Eurostat glossary entry,
-the UNESCO/EU partnership announcement, and a UN-system reference page.
+Listed in frontmatter — all four read directly this pass: UNESCO's own
+overview, the Eurostat glossary entry, the UNESCO/EU partnership
+announcement, and the DagDok UN-system reference page.

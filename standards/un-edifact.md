@@ -23,7 +23,7 @@ verification: search-only
 
 start_date: null
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -38,7 +38,7 @@ relationships:
   - type: maintained-by
     target: UN-CEFACT
     source: fact
-    evidence: "UN/CEFACT serves as the focal point within the UN Economic and Social Council for trade facilitation recommendations and electronic business standards, and maintains the UN/EDIFACT standard directories; its work covers standardising and harmonising the core information used in trade documents and electronic business (unece.org/trade/uncefact; unece.org/trade/uncefact/introduction). NOT READ — search-only."
+    evidence: "Both cited unece.org pages returned HTTP 403 again this pass — `unece.org` is blocked domain-wide this session (confirmed by testing the bare root domain). Attempted a source-substitution search per this batch's instruction: Wikipedia's EDIFACT article was fetched directly and confirms 'the ongoing maintenance and development falls under UN/CEFACT..., which operates within the UN Economic Commission for Europe', plus the 1987 ISO 9735 approval date. A second attempted alternate (i-effect.com's EDIFACT glossary entry) also returned HTTP 403 and could not be read. That leaves one genuine alternate read against two original dead sources — not a majority even after substitution, so `verification` stays at `search-only` rather than being forced across the line."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -50,13 +50,24 @@ sources:
   - title: "Introducing UN/CEFACT"
     url: "https://unece.org/trade/uncefact/introduction"
     publisher: "United Nations Economic Commission for Europe"
+  - title: "EDIFACT"
+    url: "https://en.wikipedia.org/wiki/EDIFACT"
+    publisher: "Wikipedia"
+    accessed: "2026-08-28"
 ---
 
 # UN/EDIFACT
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read — retrieval of `unece.org`
-> is blocked by the network egress proxy. `verification: search-only`.
+> **Still `search-only` after this pass — attempted, not forced.**
+> `unece.org` is blocked domain-wide this session (confirmed via the bare
+> root domain). One alternate, Wikipedia's EDIFACT article, was found and
+> read directly, corroborating UN/CEFACT's maintainer role under UNECE and
+> adding a genuine new fact (ISO 9735 approval in 1987) not previously
+> recorded here. A second alternate attempt (i-effect.com) also 403'd. One
+> read source against two still-dead originals is not a majority, so this
+> entity is honestly left at `search-only` rather than promoted on a
+> single corroborating page — per this batch's own discipline that exactly
+> half (or less) is not enough.
 
 ## Description
 
@@ -78,9 +89,12 @@ naming of UN/EDIFACT in an instrument the Atlas holds or could source, and
 this entity is therefore attached only to the body that maintains it.
 
 That is a weaker entity than UN/LOCODE and it is recorded as such:
-`coverage: low`, one relationship, two sources. It exists because the cluster
-is more legible with the two best-known UN/CEFACT outputs in it than with one,
-not because a European connection was found for it.
+`coverage: low`, one relationship. It exists because the cluster is more
+legible with the two best-known UN/CEFACT outputs in it than with one, not
+because a European connection was found for it. This pass looked again
+(Wikipedia's EDIFACT article, read directly, and an EU-regulation search
+targeted at EDIFACT specifically) and still found nothing connecting it to
+an EU or national instrument — the asymmetry with [[UN-LOCODE]] holds.
 
 The **Core Component Library** is not created. Nothing beyond a name was
 found, and a node built on that would be the thin encyclopedic entity the
@@ -92,4 +106,7 @@ taxonomy threshold exists to prevent.
 
 ## Sources
 
-Listed in frontmatter — two UNECE pages on UN/CEFACT and its outputs.
+Listed in frontmatter. Both UNECE pages remain 403-blocked this session;
+Wikipedia's EDIFACT article was read directly as a partial substitute but
+is one source against two dead ones, short of the majority needed to
+promote `verification`.

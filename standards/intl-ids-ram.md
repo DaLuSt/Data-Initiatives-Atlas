@@ -21,11 +21,11 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -41,15 +41,15 @@ relationships:
   - type: maintained-by
     target: INTL-IDSA
     source: fact
-    evidence: "The IDS Reference Architecture Model constitutes the conceptual basis of IDS-compliant data exchange between organisations and is published by the International Data Spaces Association, which emerged in 2016 to work on the concept of data spaces (internationaldataspaces.org 'IDS Reference Architecture Model' and 'IDS-RAM 3.0'; internationaldataspaces.org IDS-RAM 3.0 PDF, April 2019). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading internationaldataspaces.org's own 'IDS-RAM 3.0' announcement page directly (2026-08-28), which states the version 'focuses on certification, security, and governance' and 'defines security standards plus roles and responsibilities for the data economy'; and by reading datos.gob.es directly, which confirms the IDSA (formed 2016) publishes and maintains the RAM and describes the same five-layer, three-perspective structure. The IDS-RAM 3.0 PDF itself (April 2019) was fetched but returned as unreadable binary/image content by the retrieval tool rather than extractable text — not a site block, a large-PDF text-extraction limitation — so it remains unread; the other two IDSA sources cover its content instead."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: references
     target: DE-DIN
     source: fact
-    evidence: "On 21 February 2020 DIN SPEC 27070, 'Requirements and reference architecture of a security gateway for the exchange of industry data and services', was published and made available through the German Institute for Standardization's Beuth Verlag; it was developed by DIN together with Fraunhofer AISEC, SICK AG and thirteen other organisations from industry and research, and specifies the requirements a security gateway must meet, with the IDS connector supporting Base, Trust and Trust+ security profiles (internationaldataspaces.org 'IDS is Officially a Standard: DIN SPEC 27070 is Published'; pressebox.com). NOT READ — search-only. `references` and not `maintained-by`: DIN published the DIN SPEC, which specifies the security gateway, not the IDS-RAM as a whole."
-    confidence: medium
+    evidence: "Confirmed by reading internationaldataspaces.org's own announcement page directly (2026-08-28): 'DIN SPEC 27070 was published on February 21, 2020,' developed by 'the German Institute for Standardization (DIN) collaborating with Fraunhofer AISEC, SICK AG, and 13 other organizations,' specifying 'Requirements and reference architecture of a security gateway for the exchange of industry data and services,' with the IDS Connector security gateway defining Base, Trust and Trust+ profiles — Trust+ providing 'protection against manipulation by malicious administrators.' pressebox.com was not part of the frontmatter sources list and was not independently fetched this pass. `references` and not `maintained-by`: DIN published the DIN SPEC, which specifies the security gateway, not the IDS-RAM as a whole."
+    confidence: high
     valid_from: 2020-02-21
     valid_until: null
 
@@ -60,19 +60,29 @@ sources:
   - title: "IDS-RAM 3.0"
     url: "https://internationaldataspaces.org/ids-ram-3-0/"
     publisher: "International Data Spaces Association (IDSA)"
+    accessed: "2026-08-28"
   - title: "IDS is Officially a Standard: DIN SPEC 27070 is Published"
     url: "https://internationaldataspaces.org/ids-is-officially-a-standard-din-spec-27070-is-published/"
     publisher: "International Data Spaces Association (IDSA)"
+    accessed: "2026-08-28"
   - title: "The IDS-RAM reference architecture model and its role in data spaces"
     url: "https://datos.gob.es/en/blog/ids-ram-reference-architecture-model-and-its-role-data-spaces"
     publisher: "datos.gob.es (Gobierno de España)"
+    accessed: "2026-08-28"
 ---
 
 # IDS Reference Architecture Model (IDS-RAM)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-28.** Three of four cited pages were read directly.
+> `verification` moves from `search-only` to `primary-source`. The fourth
+> — the IDS-RAM 3.0 PDF itself — was fetched but came back as unreadable
+> binary/metadata content rather than extractable text (an
+> Illustrator/Photoshop-authored PDF whose text layer the retrieval tool
+> could not parse); this is a tool limitation on that specific large PDF,
+> not a site block, and is recorded rather than papered over. The two
+> other internationaldataspaces.org pages plus datos.gob.es independently
+> cover the same five-layer, three-perspective structure the PDF would
+> have confirmed directly.
 
 ## Description
 
@@ -135,4 +145,5 @@ naturally authored.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, three of four read directly this pass; the IDS-RAM
+3.0 PDF was fetched but not machine-readable (see verification note above).

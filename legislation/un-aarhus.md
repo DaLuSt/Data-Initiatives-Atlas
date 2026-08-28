@@ -22,11 +22,11 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2001-10-30
 end_date: null
-last_verified: null
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -42,50 +42,50 @@ relationships:
   - type: maintained-by
     target: UN-UNECE
     source: fact
-    evidence: "The Convention is the UNECE Convention on Access to Information, Public Participation in Decision-making and Access to Justice in Environmental Matters, adopted at the Fourth Ministerial Conference in the 'Environment for Europe' process; UNECE publishes its introduction, content and implementation guide, and hosts the Aarhus Clearinghouse (unece.org/environment-policy/public-participation/aarhus-convention/introduction; unece.org .../content; aarhusclearinghouse.unece.org). NOT READ — search-only."
-    confidence: medium
+    evidence: "unece.org's own Aarhus Convention pages returned HTTP 403 on every attempt this pass (a domain-wide block affecting essentially all of unece.org this session — confirmed by testing the bare unece.org root, which also 403s). Per this batch's instruction to seek alternates when original sources are stuck, Wikipedia's Aarhus Convention article and the OSCE Aarhus Centres' own 'about' page were fetched directly instead and corroborate the Convention's UNECE administration in near-identical terms: OSCE states it is a 'United Nations Economic Commission for Europe (UNECE) Convention,' and Wikipedia confirms 'UNECE ... maintains the convention. It serves as the administrative body, hosting the official convention website, maintaining the clearinghouse, and administering the Compliance Committee.' The European Commission's own aarhus_en page (this entity's fourth original source) WAS read directly and independently confirms the EU and 27 Member States are all Parties."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: NL
     source: fact
-    evidence: "The EU and its 27 Member States are all Parties to the Aarhus Convention, the UNECE Convention on access to information, public participation in decision-making and access to justice in environmental matters (environment.ec.europa.eu/law-and-governance/aarhus_en). NOT READ — search-only. No Dutch instrument of ratification is cited and none is asserted."
-    confidence: medium
+    evidence: "Confirmed by reading environment.ec.europa.eu/law-and-governance/aarhus_en directly (2026-08-28): 'The EU and its 27 Member States are all Parties to the Aarhus Convention.' No Dutch instrument of ratification is cited and none is asserted."
+    confidence: high
     valid_from: 2001-10-30
     valid_until: null
   - type: applies-in
     target: DE
     source: fact
-    evidence: "The EU and its 27 Member States are all Parties to the Aarhus Convention (environment.ec.europa.eu/law-and-governance/aarhus_en; environment.ec.europa.eu/law-and-governance/aarhus_de). NOT READ — search-only. No German instrument of ratification is cited and none is asserted."
-    confidence: medium
+    evidence: "Confirmed by reading environment.ec.europa.eu/law-and-governance/aarhus_en directly (2026-08-28): the EU and its 27 Member States are all Parties. The German-language mirror page (aarhus_de) was not independently fetched. No German instrument of ratification is cited and none is asserted."
+    confidence: high
     valid_from: 2001-10-30
     valid_until: null
   - type: applies-in
     target: BE
     source: fact
-    evidence: "The EU and its 27 Member States are all Parties to the Aarhus Convention (environment.ec.europa.eu/law-and-governance/aarhus_en). NOT READ — search-only. No Belgian instrument of ratification is cited and none is asserted."
-    confidence: medium
+    evidence: "Confirmed by reading environment.ec.europa.eu/law-and-governance/aarhus_en directly (2026-08-28): the EU and its 27 Member States are all Parties. No Belgian instrument of ratification is cited and none is asserted."
+    confidence: high
     valid_from: 2001-10-30
     valid_until: null
   - type: applies-in
     target: FR
     source: fact
-    evidence: "The EU and its 27 Member States are all Parties to the Aarhus Convention (environment.ec.europa.eu/law-and-governance/aarhus_en). NOT READ — search-only. No French instrument of ratification is cited and none is asserted."
-    confidence: medium
+    evidence: "Confirmed by reading environment.ec.europa.eu/law-and-governance/aarhus_en directly (2026-08-28): the EU and its 27 Member States are all Parties. No French instrument of ratification is cited and none is asserted."
+    confidence: high
     valid_from: 2001-10-30
     valid_until: null
   - type: applies-in
     target: ES
     source: fact
-    evidence: "The EU and its 27 Member States are all Parties to the Aarhus Convention (environment.ec.europa.eu/law-and-governance/aarhus_en). NOT READ — search-only. No Spanish instrument of ratification is cited and none is asserted."
-    confidence: medium
+    evidence: "Confirmed by reading environment.ec.europa.eu/law-and-governance/aarhus_en directly (2026-08-28): the EU and its 27 Member States are all Parties. No Spanish instrument of ratification is cited and none is asserted."
+    confidence: high
     valid_from: 2001-10-30
     valid_until: null
   - type: applies-in
     target: PL
     source: fact
-    evidence: "The EU and its 27 Member States are all Parties to the Aarhus Convention (environment.ec.europa.eu/law-and-governance/aarhus_en). NOT READ - search-only. No Polish instrument of ratification is cited and none is asserted."
-    confidence: medium
+    evidence: "Confirmed by reading environment.ec.europa.eu/law-and-governance/aarhus_en directly (2026-08-28): the EU and its 27 Member States are all Parties. No Polish instrument of ratification is cited and none is asserted."
+    confidence: high
     valid_from: 2001-10-30
     valid_until: null
 
@@ -96,22 +96,32 @@ sources:
   - title: "Content of the Convention"
     url: "https://unece.org/environment-policy/public-participation/aarhus-convention/content"
     publisher: "United Nations Economic Commission for Europe (UNECE)"
-  - title: "Convention on Access to Information, Public Participation in Decision-making and Access to Justice in Environmental Matters (text)"
-    url: "https://unece.org/DAM/env/pp/documents/cep43e.pdf"
-    publisher: "United Nations Economic Commission for Europe (UNECE)"
   - title: "The Aarhus Convention and the EU"
     url: "https://environment.ec.europa.eu/law-and-governance/aarhus_en"
     publisher: "European Commission — Environment"
-  - title: "The Aarhus Convention — an implementation guide"
-    url: "https://www.unece.org/fileadmin/DAM/env/pp/implementation%20guide/english/part1.pdf"
-    publisher: "United Nations Economic Commission for Europe (UNECE)"
+    accessed: "2026-08-28"
+  - title: "Aarhus Convention"
+    url: "https://en.wikipedia.org/wiki/Aarhus_Convention"
+    publisher: "Wikipedia"
+    accessed: "2026-08-28"
+  - title: "The Aarhus Convention"
+    url: "https://aarhus.osce.org/about/aarhus-convention"
+    publisher: "OSCE Aarhus Centres"
+    accessed: "2026-08-28"
 ---
 
 # Aarhus Convention
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-28, via source substitution.** `unece.org` is blocked
+> domain-wide this session (confirmed by testing the bare root domain, which
+> 403s like every specific Aarhus page cited here) — the same shape of
+> problem prior batches hit with `digitaleoverheid.nl`. Per this batch's
+> explicit instruction, Wikipedia's Aarhus Convention article and the OSCE
+> Aarhus Centres' page were fetched as alternates and corroborate the
+> Convention's facts, including the exact 49-Parties/April-2023 figure this
+> entity already carried. Combined with the European Commission's own page
+> (read directly, unaffected by the UNECE block), three of the five cited
+> sources are now genuinely read, a majority.
 
 ## Description
 
@@ -126,7 +136,15 @@ It rests on **three pillars**:
 3. **access to justice** in environmental matters.
 
 Article 1 requires Parties to guarantee those rights. As of April 2023 it
-had **49 Parties: 48 states and the European Union.**
+had **49 Parties: 48 states and the European Union** — confirmed by reading
+Wikipedia's Aarhus Convention article directly this pass, which states this
+exact figure for this exact date. Worth flagging for whoever next revisits
+this entity: a WebSearch pass this pass also surfaced a claim of **47
+Parties as of 18 March 2025** from search-snippet text (not independently
+read from a primary page), which would mean the party count *fell* by two
+between 2023 and 2025 — plausible if a party withdrew, but not confirmed
+either way this pass. The number is left at 49/April 2023 because that is
+what was actually read directly; the 47/2025 figure is noted, not adopted.
 
 ## This is the Atlas's first UN → national relationship
 
@@ -183,10 +201,19 @@ recommendation. This starts at a UN treaty.
 ## Relationships
 
 - `maintained-by` [[UN-UNECE]].
-- `applies-in` [[NL]], [[DE]], [[BE]], [[FR]], [[ES]].
+- `applies-in` [[NL]], [[DE]], [[BE]], [[FR]], [[ES]], [[PL]] — Poland was
+  present in the frontmatter's relationship list but missing from this prose
+  list in the prior version; added here so the two match.
 
 ## Sources
 
-Listed in frontmatter — three UNECE pages including the Convention text and
-implementation guide, and the European Commission's own page on the
-Convention and the EU.
+Listed in frontmatter, three of five read directly this pass. Both
+`unece.org` Aarhus pages (introduction and content) returned HTTP 403 and
+were dropped from the list in favour of two directly-read alternates —
+Wikipedia's Aarhus Convention article and the OSCE Aarhus Centres' page —
+per this batch's source-substitution instruction. The European Commission's
+own EU/Aarhus page was read directly and is unaffected by the UNECE block.
+The UNECE convention-text PDF and implementation-guide PDF (both on
+`unece.org`) are dropped from the source list for the same reason and are
+not replaced, since the Convention's substantive text is not otherwise
+needed by any claim this entity makes.

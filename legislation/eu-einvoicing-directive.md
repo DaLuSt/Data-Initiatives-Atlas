@@ -20,11 +20,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2014-01-01
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -38,8 +38,8 @@ relationships:
   - type: applies-in
     target: EU
     source: fact
-    evidence: "In 2014 the EU adopted Directive 2014/55/EU on electronic invoicing in public procurement, which mandated the development of a common European e-invoice standard at the semantic level, to be used in business-to-government invoicing; CEN/TC 434 was established in 2014 to develop standards in the field of electronic invoicing and produced EN 16931-1 and the ancillary deliverables the directive required (en.wikipedia.org 'CEN/TC 434'; ec.europa.eu digital-building-blocks 'EN 16931 compliance'; vatupdate.com 'EN16931 — European E-Invoicing Standard'). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading en.wikipedia.org's own 'CEN/TC 434' article directly (2026-08-28): 'CEN/TC 434 was established in 2014' and 'has developed the European Standard on Electronic Invoicing (EN 16931-1) and other ancillary standardization deliverables required by the European Union's directive on electronic invoicing in public procurement' — EN 16931-1:2017 was published 28 June 2017. ec.europa.eu's own Digital Building Blocks page, also read directly, confirms the operative obligation: 'Public entities are required by Directive 2014/55 to be able to receive and process invoices that comply with the European eInvoicing standard.'"
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -50,16 +50,23 @@ sources:
   - title: "EN 16931 compliance"
     url: "https://ec.europa.eu/digital-building-blocks/sites/spaces/DIGITAL/pages/467108950/EN+16931+compliance"
     publisher: "European Commission — Digital Building Blocks"
+    accessed: "2026-08-28"
   - title: "CEN/TC 434"
     url: "https://en.wikipedia.org/wiki/CEN/TC_434"
     publisher: "Wikipedia"
+    accessed: "2026-08-28"
 ---
 
 # eInvoicing Directive (2014/55/EU)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Re-verified 2026-08-28.** Two of three cited sources were read
+> directly. Wikipedia's CEN/TC 434 article confirms the committee's 2014
+> establishment and its production of EN 16931-1, published 28 June 2017;
+> the Commission's Digital Building Blocks page confirms the operative
+> obligation on public entities. `eur-lex.europa.eu` returned empty
+> content, consistent with every other EUR-Lex attempt made across this
+> batch, and was not read. `verification` moves from `search-only` to
+> `primary-source`.
 
 ## Description
 
@@ -101,4 +108,6 @@ Atlas a standards-body EU→national chain, which nothing else did.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, two of three read directly this pass (Wikipedia's
+CEN/TC 434 article, the Commission's Digital Building Blocks page).
+`eur-lex.europa.eu` returned empty content and was not read.

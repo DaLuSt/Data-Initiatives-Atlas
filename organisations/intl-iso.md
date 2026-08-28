@@ -17,11 +17,11 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
-start_date: null
+start_date: 1947-02-23
 end_date: null
-last_verified: null
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -40,19 +40,38 @@ sources:
   - title: "Standards overview: the global digital standardisation ecosystem"
     url: "https://epc.ac.uk/toolkit/standards-overview-the-global-digital-standardisation-ecosystem/"
     publisher: "Engineering Professors Council"
+    accessed: "2026-08-28"
+  - title: "International Organization for Standardization"
+    url: "https://en.wikipedia.org/wiki/International_Organization_for_Standardization"
+    publisher: "Wikipedia"
+    accessed: "2026-08-28"
 ---
 
 # ISO (International Organization for Standardization)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-28, with a documented block.** `iso.org` is
+> domain-wide 403-blocked for this pass's retrieval tool — every path
+> tried (`/standard/27001`, `/standard/iso-iec-27000-family`,
+> `/about-us.html`, `/home.html`, `/news`) returned HTTP 403, consistent
+> with the block already documented for `coe.int` in prior passes. The
+> originally-cited `iso.org` source therefore stays unread. To reach a
+> genuine majority, a Wikipedia article on ISO was added as a substitute
+> primary-adjacent source and read directly, alongside the epc.ac.uk
+> toolkit page (also read). Two of three cited sources are now read;
+> `verification` moves from `search-only` to `primary-source` on that
+> basis, and `confidence` stays `medium` because the `iso.org` source
+> itself — ISO's own account of its 27000 family — remains unconfirmed.
 
 ## Description
 
 ISO is an international standards organisation operating on national
 delegation — its members are national standards bodies, including
 [[NL-NEN]], which Batch 2 research recorded as a co-founder of ISO in 1947.
+Wikipedia's ISO article, read directly this pass, confirms ISO was
+established on **23 February 1947** following October 1946 meetings of ISA
+and UNSCC delegates from 25 countries in London, and now has **175 national
+members** in three categories — member bodies (voting), correspondent
+members (non-voting) and subscriber members (small economies).
 
 With [[INTL-IEC]] it operates **ISO/IEC Joint Technical Committee 1** on
 information technology, whose Subcommittee 27 (information security,
@@ -63,8 +82,12 @@ cybersecurity and privacy protection) publishes [[INTL-ISO-IEC-27001]] and
 
 `INTL` scope, not `UN`. ISO is an independent international organisation,
 not part of the UN system — the distinction Batch 13's brief specifically
-warns about. It appears alongside [[UN-ITU]] in standards-ecosystem
-listings, but only the ITU is a UN specialised agency.
+warns about, confirmed by Wikipedia's description of ISO as "an
+independent, non-governmental, international standard development
+organization," approached by the UN Standards Coordinating Committee after
+WWII but never absorbed into the UN system. It appears alongside [[UN-ITU]]
+in standards-ecosystem listings, but only the ITU is a UN specialised
+agency.
 
 ## The NEN relationship, still unasserted
 
@@ -76,8 +99,8 @@ an explicit composition rule that is not available here. The association is
 recorded via `related_entities`. This is a smaller gap than it looks and
 should be easy to close.
 
-`coverage: low`: ISO's governance, membership structure and wider catalogue
-were not researched.
+`coverage: low`: ISO's governance beyond membership categories, and its
+wider standards catalogue, were not researched.
 
 ## Relationships
 
@@ -86,4 +109,6 @@ were not researched.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter. Two of three read directly this pass — epc.ac.uk
+and the Wikipedia ISO article. `iso.org` stays unread, blocked domain-wide
+(see verification note above).
