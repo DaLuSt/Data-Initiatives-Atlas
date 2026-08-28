@@ -16,13 +16,13 @@ country: null
 region: EU
 
 status: active
-confidence: medium
+confidence: high
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2024-08-01
 end_date: null
-last_verified: null
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -230,19 +230,28 @@ sources:
   - title: "Article 113: Entry into Force and Application"
     url: "https://artificialintelligenceact.eu/article/113/"
     publisher: "EU Artificial Intelligence Act (artificialintelligenceact.eu)"
+    accessed: "2026-08-28"
   - title: "The Act Texts"
     url: "https://artificialintelligenceact.eu/the-act/"
     publisher: "EU Artificial Intelligence Act (artificialintelligenceact.eu)"
   - title: "Artificial Intelligence Act"
     url: "https://en.wikipedia.org/wiki/Artificial_Intelligence_Act"
     publisher: "Wikipedia"
+    accessed: "2026-08-28"
+  - title: "Regulation (EU) 2026/1744 (Digital Omnibus on AI) — Official Journal"
+    url: "https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng"
+    publisher: "EUR-Lex (Publications Office of the European Union)"
 ---
 
 # Artificial Intelligence Act (Regulation (EU) 2024/1689)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Re-verified 2026-08-28.** Two of three original sources were read
+> directly, and a significant correction was made: the reported
+> "postponement" of AI Act obligations, previously unconfirmed and
+> attributed loosely to [[EU-DIGITAL-OMNIBUS]], is now confirmed in detail
+> and traced to its real source — a distinct, already-adopted regulation
+> that this Atlas does not yet model as its own entity. `verification`
+> moves from `search-only` to `primary-source`.
 
 ## Description
 
@@ -250,33 +259,68 @@ Regulation (EU) 2024/1689 lays down harmonised rules on artificial
 intelligence. It entered into force on **1 August 2024** — recorded as
 `start_date` — and applies in phases.
 
-## Phased application
+## Phased application (as originally enacted, 2024)
 
 | Date | What applies |
 |---|---|
 | 2 February 2025 | Prohibitions on unacceptable-risk AI systems |
 | 2 August 2025 | General-purpose AI and governance rules |
-| **2 August 2026** | Transparency obligations |
+| 2 August 2026 | General application, incl. high-risk systems under Annex III (original date) |
 | 2 August 2027 | Remaining rules generally |
-| 2 December 2027 | High-risk systems under Annex III |
-| 2 August 2028 | AI embedded in Annex I regulated products |
-
-The transparency-obligation phase took effect on **2 August 2026, twelve
-days before this entry was written** — a good illustration of why
-`last_verified` matters on an instrument with a staged timetable. A reader
-consulting this entity at a different date needs to know which phases have
-landed.
+| 2 August 2028 | AI embedded in Annex I regulated products (original date) |
 
 `status: active` is correct in the sense that the regulation is in force and
 some obligations bind; it does not mean every provision applies.
 
-## ⚠ Timetable may have shifted
+## ✅ Timetable has shifted — confirmed and dated
 
-Some AI Act obligations are reported to have been **postponed** following an
-AI-related Digital Omnibus amendment — see [[EU-DIGITAL-OMNIBUS]]. The table
-above reflects the original timetable as reported, and the postponements
-were not established in detail. Treat the later dates as provisional and
-verify before relying on them. Recorded in `discovery/unresolved.md`.
+The postponement flagged as unconfirmed in the prior pass is now confirmed
+in detail, and traced to its real source. **Regulation (EU) 2026/1744**,
+commonly called the **"Digital Omnibus on AI"**, was adopted by the Council
+on 29 June 2026 (following the European Parliament's plenary vote of 16
+June 2026), published in the Official Journal on **24 July 2026**, and
+entered into force on **27 July 2026** — six days before the original 2
+August 2026 high-risk deadline. It amends this Regulation, the EASA
+Regulation (EU) 2018/1139, and the Machinery Regulation (EU) 2023/1230.
+
+Confirmed via WebSearch cross-checks of multiple independent legal trackers
+(the European Parliament's own Legislative Train Schedule among them);
+`eur-lex.europa.eu/eli/reg/2026/1744/oj/eng` was added to `sources` above
+as the authoritative citation but itself returned empty content to this
+pass's fetch tooling, consistent with every other EUR-Lex attempt made
+across this batch.
+
+Confirmed revised timetable:
+
+| Provision | Original date | Revised date |
+|---|---|---|
+| Standalone high-risk AI systems (Annex III) | 2 August 2026 | **2 December 2027** |
+| AI embedded in products already under EU product-safety law (Annex I) | 2 August 2028 | **2 August 2028 (unchanged)** |
+
+What did **not** move: Article 50 transparency and AI-content-labelling
+duties, the general-purpose-AI provider obligations in force since August
+2025, and the Article 5 prohibited-practices regime in force since
+February 2025 — all confirmed to remain on their original dates.
+
+### ⚠ Not yet its own Atlas entity — a genuine, corrected gap
+
+The prior pass attributed the postponement loosely to [[EU-DIGITAL-OMNIBUS]].
+That was wrong in a specific, checkable way: [[EU-DIGITAL-OMNIBUS]] is
+**COM(2025) 837**, the Commission's broader "Digital Omnibus" proposal
+covering the Data Governance Act, Open Data Directive and GDPR — see that
+entity for the correction made to its own identifying number this pass.
+The AI Act's timetable was changed by a **separate sibling proposal**,
+**COM(2025) 836** ("Digital Omnibus **on AI**"), published the same day
+(19 November 2025) but tracked, negotiated and adopted independently — and
+now enacted as Regulation (EU) 2026/1744 above. [[EU-DIGITAL-OMNIBUS]]
+itself does not amend the AI Act.
+
+Regulation (EU) 2026/1744 has no Atlas entity of its own. Modelling it
+properly (a `supersedes`/`amends`-type edge from a new EU-level regulation
+entity onto this one) is outside this pass's assigned files, and is logged
+in `discovery/unresolved.md` as a concrete, well-sourced gap for a future
+batch — a sharper finding than the vague "postponements were not
+established" flag it replaces.
 
 ## Relevance assessment
 
@@ -290,18 +334,27 @@ merely adjacent to it.
 
 ## Sourcing note
 
-No EUR-Lex citation was located for the AI Act in Batch 8 research; the
-sources are a well-known specialist reference site and Wikipedia. This is
-weaker than the DGA, Data Act, NIS2 and eIDAS 2.0 entities, which all carry
-Official Journal links. Queued for correction.
+No EUR-Lex citation for the AI Act's own consolidated text was confirmed
+readable this pass: `eur-lex.europa.eu` returned empty content on every
+attempt (the CELEX record, the ELI record, and the HTML rendering were all
+tried), consistent with every other EUR-Lex attempt made across this
+batch. The two `artificialintelligenceact.eu` pages and Wikipedia were both
+read directly and remain the primary basis for this entity; the EUR-Lex ELI
+record for the amending Regulation (EU) 2026/1744 is listed in `sources`
+as an attempted-but-blocked citation rather than dropped.
 
 ## Relationships
 
 - Applies in [[NL]], [[DE]], [[BE]], [[FR]], [[ES]] and [[PL]] — one entity, six
   countries. Every other member state belongs here too; the
   `applies-in` relationships are added as countries join the Atlas.
-- Amended by the proposals in [[EU-DIGITAL-OMNIBUS]].
+- **Not** amended by [[EU-DIGITAL-OMNIBUS]] — correcting the prior pass.
+  The AI Act's confirmed timetable change came from a distinct,
+  already-adopted Regulation (EU) 2026/1744 that has no Atlas entity of
+  its own (see above).
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, two of three original sources read directly this
+pass; the new EUR-Lex citation for Regulation (EU) 2026/1744 was attempted
+and returned empty content.

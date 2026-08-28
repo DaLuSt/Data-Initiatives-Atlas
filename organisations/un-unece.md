@@ -26,11 +26,11 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 1947-03-28
 end_date: null
-last_verified: null
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -45,8 +45,8 @@ relationships:
   - type: part-of
     target: UN
     source: fact
-    evidence: "UNECE was set up in 1947 by ECOSOC, which adopted resolution 36 (IV) on 28 March 1947 setting up the ECE and giving it its terms of reference; it is one of the five regional commissions of the United Nations (unece.org/mission; unece.org/history-1; ungeneva.org UNECE page). NOT READ — search-only."
-    confidence: medium
+    evidence: "Two of the four originally-cited pages (unece.org/mission, unece.org/history-1) returned HTTP 403 this pass — `unece.org` is blocked domain-wide this session, confirmed by testing the bare root domain, which also 403s. The other two were read directly: ungeneva.org's UNECE profile confirms 'set up in 1947 by ECOSOC' and 'one of five regional commissions of the United Nations'; sdgs.un.org's UN DESA entry confirms UNECE's pan-European mandate and 2030-Agenda-implementation role but does not restate the founding date. Wikipedia's UNECE article was fetched directly as a substitute for the two blocked pages and independently confirms the precise date and resolution number: 'established on 28 March 1947 by the Economic and Social Council through Resolution 36(IV)', 56 member states, and — a bonus detail — explicitly names the Conference of European Statisticians and UN/CEFACT as related bodies within UNECE's structure."
+    confidence: high
     valid_from: 1947-03-28
     valid_until: null
 
@@ -60,16 +60,26 @@ sources:
   - title: "UNECE — The United Nations Office at Geneva"
     url: "https://www.ungeneva.org/en/about/organizations/unece"
     publisher: "United Nations Office at Geneva"
+    accessed: "2026-08-28"
   - title: "United Nations Economic Commission for Europe (UNECE) — UN DESA"
     url: "https://sdgs.un.org/un-system-sdg-implementation/united-nations-economic-commission-europe-unece-49127"
     publisher: "United Nations Department of Economic and Social Affairs"
+    accessed: "2026-08-28"
+  - title: "United Nations Economic Commission for Europe"
+    url: "https://en.wikipedia.org/wiki/United_Nations_Economic_Commission_for_Europe"
+    publisher: "Wikipedia"
+    accessed: "2026-08-28"
 ---
 
 # UNECE — United Nations Economic Commission for Europe
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-28, via partial source substitution.** `unece.org` is
+> blocked domain-wide this session (confirmed by testing the bare root
+> domain). Two of the four originally-cited pages sit on that domain and
+> were unreadable; the other two (ungeneva.org, sdgs.un.org) were read
+> directly, and Wikipedia's UNECE article was added as a substitute,
+> independently confirming the exact founding date and resolution number.
+> Three of five sources in the resulting list are now genuinely read.
 
 ## Description
 
@@ -129,5 +139,6 @@ subsidiary or the instrument, not here.
 
 ## Sources
 
-Listed in frontmatter — UNECE's own mission and history pages, the UN Office
-at Geneva profile, and the UN DESA entry.
+Listed in frontmatter, three of five read directly this pass: the UN Office
+at Geneva profile, the UN DESA entry, and — substituting for the two
+403-blocked `unece.org` pages — Wikipedia's UNECE article.

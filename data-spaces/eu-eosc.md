@@ -20,13 +20,13 @@ country: null
 region: EU
 
 status: active
-confidence: medium
+confidence: high
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -39,34 +39,43 @@ relationships:
   - type: part-of
     target: EU-COMMON-DATA-SPACES
     source: fact
-    evidence: "Research and innovation is one of the fourteen common European data spaces identified in the Commission's January 2024 staff working document (SWD(2024) 21 final of 24.1.2024; digital-strategy.ec.europa.eu 'Common European data spaces'). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading digital-strategy.ec.europa.eu's own 'Common European data spaces' overview directly (2026-08-28): research and innovation, anchored by EOSC, is named among the fourteen. The Commission's Research and Innovation page on EOSC, read directly, confirms the EOSC EU Node 'was procured and launched... in October 2024 as the first node of the EOSC Federation.' A November 2025 Research and Innovation news article, read directly, confirms the Federation milestone celebrated 5 November 2025 at the EOSC Symposium in Brussels, with '13 candidate EOSC Nodes' including CERN and EMBL. The 'staff working document on data spaces' URL originally cited pointed to the wrong Commission document (SWD(2022) 45 final, not SWD(2024) 21 final) — corrected below."
+    confidence: high
     valid_from: null
     valid_until: null
 
 sources:
-  - title: "SWD(2024) 21 final — Staff working document on common European data spaces"
-    url: "https://digital-strategy.ec.europa.eu/en/library/staff-working-document-data-spaces"
+  - title: "Second staff working document on data spaces — SWD(2024) 21 final"
+    url: "https://digital-strategy.ec.europa.eu/en/library/second-staff-working-document-data-spaces"
     publisher: "European Commission"
+    accessed: "2026-08-28"
   - title: "Common European data spaces"
     url: "https://digital-strategy.ec.europa.eu/en/policies/data-spaces"
     publisher: "European Commission — Shaping Europe's digital future"
+    accessed: "2026-08-28"
   - title: "The European Open Science Cloud"
     url: "https://eosc.eu/eosc-about"
     publisher: "EOSC Association"
+    accessed: "2026-08-28"
   - title: "European Open Science Cloud (EOSC)"
     url: "https://research-and-innovation.ec.europa.eu/strategy/strategy-research-and-innovation/our-digital-future/open-science/european-open-science-cloud-eosc_en"
     publisher: "European Commission — Research and Innovation"
+    accessed: "2026-08-28"
   - title: "Welcoming the EOSC Federation, a major milestone for open science"
     url: "https://research-and-innovation.ec.europa.eu/news/all-research-and-innovation-news/welcoming-eosc-federation-major-milestone-open-science-2025-11-05_en"
     publisher: "European Commission — Research and Innovation"
+    accessed: "2026-08-28"
 ---
 
 # European Open Science Cloud
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Re-verified 2026-08-28.** All five cited sources were read directly
+> (after correcting one stale SWD URL to the right Commission document),
+> and every substantive claim in this entity's description — the October
+> 2024 EOSC EU Node launch, the November 2025 Federation milestone, the
+> thirteen candidate nodes including CERN and EMBL — was confirmed word
+> for word against the Commission's own pages. `verification` moves to
+> `primary-source` and `confidence` rises to `high`.
 
 ## Description
 
@@ -109,4 +118,4 @@ researched**.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, all five read directly this pass.

@@ -20,11 +20,11 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -39,15 +39,15 @@ relationships:
   - type: governed-by
     target: UN-UNSC
     source: fact
-    evidence: "The global SDG indicator framework was revised in 2020 and 2025, resulting in a framework consisting of 234 unique indicators, and was designed by an Inter-Agency and Expert Group under the supervision of the UN Statistical Commission (ec.europa.eu/eurostat 'SDG – Introduction'; ec.europa.eu/eurostat/web/sdi/information-data). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading Eurostat's own 'SDG — Introduction' Statistics Explained page directly (2026-08-28): the framework 'was designed by an Inter-Agency and Expert Group under the supervision of the UN Statistical Commission,' and following the General Assembly's initial 232-indicator list in July 2017, comprehensive reviews in 2020 and 2025 produced 'a revised global SDG indicator framework consisting of 234 unique indicators.' The second cited page (ec.europa.eu/eurostat/web/sdi/information-data) was also read directly but describes the EU's own 102-indicator SDG set rather than the global framework, so it corroborates the entity's general subject area without independently confirming the UNSC-supervision claim."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: implements
     target: UN-2030-AGENDA
     source: fact
-    evidence: "The global indicator framework is the framework for monitoring the Sustainable Development Goals of the 2030 Agenda, adopted by the General Assembly on 25 September 2015 as resolution A/RES/70/1 with 17 goals and 169 targets; the SDGs are monitored against the framework at global, regional, national, local and thematic levels (sdgs.un.org/2030agenda; ec.europa.eu/eurostat 'SDG - Introduction'). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading Eurostat's 'SDG — Introduction' page directly (2026-08-28), which states the framework was created specifically to monitor progress toward the 2030 Agenda's 17 SDGs, plus [[UN-2030-AGENDA]]'s own cited un.org/sdgs.un.org and unfpa.org pages (also read directly this pass — see that entity), which confirm the Agenda's adoption as A/RES/70/1 on 25 September 2015 with 17 goals and 169 targets."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -55,9 +55,11 @@ sources:
   - title: "SDG — Introduction — Statistics Explained"
     url: "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=SDG_-_Introduction"
     publisher: "Eurostat — European Commission"
+    accessed: "2026-08-28"
   - title: "Sustainable development indicators — information on data"
     url: "https://ec.europa.eu/eurostat/web/sdi/information-data"
     publisher: "Eurostat — European Commission"
+    accessed: "2026-08-28"
   - title: "SDG Indicators and Monitoring: Systems and Processes at the Global, National and Regional Level"
     url: "https://www.esdn.eu/fileadmin/ESDN_Reports/QR_48_Final_Final.pdf"
     publisher: "European Sustainable Development Network (ESDN)"
@@ -65,9 +67,13 @@ sources:
 
 # Global SDG indicator framework
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-28.** Two of three cited pages were read directly.
+> Eurostat's own "SDG — Introduction" page states the Inter-Agency and
+> Expert Group / UN Statistical Commission supervision and the 234-indicator
+> count in its own words, including a detail not previously recorded here:
+> the General Assembly's *initial* list (July 2017) held 232 indicators,
+> before the 2020 and 2025 reviews brought it to 234. The ESDN PDF returned
+> only unparseable binary and was not read.
 
 ## Description
 
@@ -113,7 +119,12 @@ instrument it serves, which is not. Queued.
 
 ## Sources
 
-Listed in frontmatter. Note the asymmetry worth fixing: **two of the three
-sources are Eurostat pages**, and none is from UNSD or the Inter-Agency and
-Expert Group. A global UN framework is described here entirely through
-European and European-network documents.
+Listed in frontmatter, two of three read directly this pass (both Eurostat
+pages). The ESDN PDF was fetched but returned unparseable binary rather than
+readable text. The asymmetry flagged previously still stands and is
+reconfirmed rather than resolved: **every source actually read is a
+Eurostat page**, and none is from UNSD or the Inter-Agency and Expert Group
+itself. A global UN framework is described here entirely through European
+documents — accurate on the facts checked, but still a one-sided citation
+base worth closing with a direct UNSD/sdgs.un.org indicator-framework page
+in a future pass.

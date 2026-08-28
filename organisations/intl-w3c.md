@@ -16,11 +16,11 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -32,26 +32,28 @@ related_entities:
 relationships:
   - type: maintained-by
     target: INTL-DCAT
-    source: interpretation
-    evidence: "DCAT Version 3 was published as a W3C Recommendation by the Dataset Exchange Working Group (w3.org/TR/vocab-dcat-3/). Direction expressed W3C→DCAT for navigability; the authoritative framing belongs on the DCAT entity."
+    source: fact
+    evidence: "Confirmed by reading both cited pages directly (2026-08-28): w3.org/TR/vocab-dcat-3/ is itself the DCAT 3 Recommendation, dated 22 August 2024, published by the Dataset Exchange Working Group; the w3.org news announcement states 'The Dataset Exchange Working Group published Data Catalog Vocabulary (DCAT) - Version 3 as a W3C Recommendation.' Direction expressed W3C→DCAT for navigability; the authoritative framing belongs on [[INTL-DCAT]], which was independently verified to primary-source in an earlier pass this batch cycle using the same two pages."
     confidence: high
-    valid_from: null
+    valid_from: 2024-08-22
     valid_until: null
 
 sources:
   - title: "Data Catalog Vocabulary (DCAT) - Version 3"
     url: "https://www.w3.org/TR/vocab-dcat-3/"
     publisher: "World Wide Web Consortium (W3C)"
+    accessed: "2026-08-28"
   - title: "Data Catalog Vocabulary (DCAT) - Version 3 is a W3C Recommendation"
     url: "https://www.w3.org/news/2024/data-catalog-vocabulary-dcat-version-3-is-a-w3c-recommendation/"
     publisher: "World Wide Web Consortium (W3C)"
+    accessed: "2026-08-28"
 ---
 
 # W3C (World Wide Web Consortium)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-28.** Both cited pages were read directly, confirming
+> the DCAT 3 Recommendation and its publication date in W3C's own words.
+> `verification` moves from `search-only` to `primary-source`.
 
 ## Description
 
@@ -69,15 +71,12 @@ running down through [[EU-DCAT-AP]] to [[NL-DCAT-AP-NL]].
 
 ## Note on the confidence value
 
-The `maintained-by` relationship carries `confidence: high` — the only such
-value in this batch — because it rests on w3.org's own publication of DCAT 3
-as a Recommendation, which is as direct as sourcing gets short of reading
-the page. The entity's overall `confidence` stays `medium` because the
-organisation itself was not researched beyond this role.
-
-Note that `confidence: high` on a relationship is permitted; the validation
-rule prohibiting `confidence: high` applies to the **entity-level** field on
-`verification: search-only` entities.
+The `maintained-by` relationship carries `confidence: high` because it now
+rests on both w3.org pages read directly, as direct as sourcing gets short
+of the organisation supplying the fact in person. The entity's overall
+`confidence` stays `medium` because the organisation itself — its wider
+process, membership and governance — was not researched beyond this one
+role.
 
 `coverage: low`: the W3C's other standards, its process and its governance
 were not researched.
@@ -88,4 +87,4 @@ were not researched.
 
 ## Sources
 
-Listed in frontmatter — both from w3.org.
+Listed in frontmatter — both from w3.org, both read directly this pass.

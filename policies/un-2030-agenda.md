@@ -19,13 +19,13 @@ country: null
 region: null
 
 status: active
-confidence: medium
+confidence: high
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2015-09-25
 end_date: 2030-12-31
-last_verified: "2026-08-21"
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -40,8 +40,8 @@ relationships:
   - type: part-of
     target: UN
     source: fact
-    evidence: "On 25 September 2015 the United Nations General Assembly adopted resolution A/RES/70/1, 'Transforming our world: the 2030 Agenda for Sustainable Development', setting out 17 Sustainable Development Goals and 169 targets (un.org documents A/RES/70/1; sdgs.un.org/2030agenda; unfpa.org 'Transforming our World'). NOT READ — search-only. Anchor edge under metadata/relationship-types.md §2.3 for a UN-scoped entity; it is also literally a General Assembly resolution."
-    confidence: medium
+    evidence: "Confirmed by reading sdgs.un.org/2030agenda and unfpa.org's copy of the resolution directly (2026-08-28) — the network egress block that stopped this from being read in the prior pass is no longer in effect for these domains. Both confirm: General Assembly resolution A/RES/70/1, 'Transforming our world: the 2030 Agenda for Sustainable Development', adopted 25 September 2015, setting out 17 Sustainable Development Goals and 169 targets, framed around the principle that 'no one will be left behind.' docs.un.org/en/A/RES/70/1 was also fetched but returned only a bare document-viewer navigation shell with no readable resolution text, so it was not counted as read."
+    confidence: high
     valid_from: 2015-09-25
     valid_until: null
 
@@ -49,19 +49,23 @@ sources:
   - title: "Transforming our world: the 2030 Agenda for Sustainable Development (A/RES/70/1)"
     url: "https://sdgs.un.org/2030agenda"
     publisher: "United Nations Department of Economic and Social Affairs"
+    accessed: "2026-08-28"
   - title: "A/RES/70/1 — General Assembly resolution, seventieth session"
     url: "https://docs.un.org/en/A/RES/70/1"
     publisher: "United Nations"
   - title: "Transforming our World: The 2030 Agenda for Sustainable Development"
     url: "https://www.unfpa.org/resources/transforming-our-world-2030-agenda-sustainable-development"
     publisher: "United Nations Population Fund"
+    accessed: "2026-08-28"
 ---
 
 # The 2030 Agenda for Sustainable Development
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read — retrieval is blocked by
-> the network egress proxy. `verification: search-only`.
+> **Verified 2026-08-28.** Two of three cited pages were read directly this
+> pass. The network egress block noted in the prior pass no longer applies
+> to `sdgs.un.org` or `unfpa.org` — both loaded normally. `docs.un.org`
+> returned only a JavaScript document-viewer shell with no resolution text
+> and was not counted as read.
 
 ## Description
 
@@ -113,5 +117,6 @@ that receives voluntary national reviews, is not an entity. It is named in
 
 ## Sources
 
-Listed in frontmatter — the UN DESA page for the Agenda, the UN documents
-record of A/RES/70/1, and UNFPA's copy of the resolution text.
+Listed in frontmatter — two of three read directly this pass: the UN DESA
+page for the Agenda and UNFPA's copy of the resolution text. The UN
+documents record of A/RES/70/1 loaded only as a navigation shell.

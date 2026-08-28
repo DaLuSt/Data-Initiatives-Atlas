@@ -31,7 +31,7 @@ verification: search-only
 
 start_date: 1981-01-28
 end_date: null
-last_verified: "2026-08-19"
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -47,63 +47,63 @@ relationships:
   - type: maintained-by
     target: INTL-COE
     source: fact
-    evidence: "Convention 108 is a Council of Europe treaty, ETS No. 108, opened for signature in Strasbourg on 28 January 1981 and administered by the Council of Europe, which publishes it in its treaty series alongside its protocols and convenes the Committee of Convention 108 (coe.int 'Convention 108 and Protocols'; coe.int 'Treaties — Data Protection'). NOT READ — search-only."
+    evidence: "Convention 108 is a Council of Europe treaty, ETS No. 108, opened for signature in Strasbourg on 28 January 1981 and administered by the Council of Europe, which publishes it in its treaty series alongside its protocols and convenes the Committee of Convention 108 (coe.int 'Convention 108 and Protocols'; coe.int 'Treaties — Data Protection'). NOT READ — both coe.int pages returned HTTP 403 on retry 2026-08-28; the block is domain-wide, confirmed across every coe.int and rm.coe.int path tried this pass (see INTL-COE). Corroborated indirectly by Wikipedia and cnpd.public.lu (Luxembourg's DPA, read directly), both of which describe Convention 108 as a Council of Europe instrument, but neither is the Council of Europe's own statement of custodianship."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: applies-in
     target: AR
     source: fact
-    evidence: "Eight non-Council of Europe countries from Africa and Latin America have ratified Convention 108: Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia and Uruguay (en.wikipedia.org 'Convention for the Protection of Individuals with Regard to Automatic Processing of Personal Data', citing the Council of Europe chart of signatures and ratifications; wto.org 'Facilitating transborder data flows: Convention 108'). NOT READ — search-only."
+    evidence: "Eight non-Council of Europe countries from Africa and Latin America have ratified Convention 108: Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia and Uruguay (en.wikipedia.org 'Convention for the Protection of Individuals with Regard to Automatic Processing of Personal Data', citing the Council of Europe chart of signatures and ratifications; wto.org 'Facilitating transborder data flows: Convention 108'). Wikipedia read directly 2026-08-28, confirming the eight-state list; the wto.org PDF was fetched but returned unreadable binary/compressed content, not extractable text — a tool limitation on that specific PDF, not a site block."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: applies-in
     target: CV
     source: fact
-    evidence: "Eight non-Council of Europe countries from Africa and Latin America have ratified Convention 108: Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia and Uruguay (en.wikipedia.org 'Convention for the Protection of Individuals with Regard to Automatic Processing of Personal Data'; wto.org 'Facilitating transborder data flows: Convention 108'). NOT READ — search-only."
+    evidence: "Eight non-Council of Europe countries from Africa and Latin America have ratified Convention 108: Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia and Uruguay (en.wikipedia.org 'Convention for the Protection of Individuals with Regard to Automatic Processing of Personal Data'; wto.org 'Facilitating transborder data flows: Convention 108'). Wikipedia read directly 2026-08-28, confirming the eight-state list; the wto.org PDF was fetched but returned unreadable binary/compressed content, not extractable text — a tool limitation on that specific PDF, not a site block."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: applies-in
     target: MU
     source: fact
-    evidence: "Eight non-Council of Europe countries from Africa and Latin America have ratified Convention 108: Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia and Uruguay; Mauritius has additionally ratified the amending protocol CETS 223 (en.wikipedia.org 'Convention for the Protection of Individuals with Regard to Automatic Processing of Personal Data'; dataprotection.govmu.org 'Communiqué on Ratification of Mauritius on the Protocol amending Convention 108'). NOT READ — search-only."
+    evidence: "Eight non-Council of Europe countries from Africa and Latin America have ratified Convention 108: Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia and Uruguay; Mauritius has additionally ratified the amending protocol CETS 223 (en.wikipedia.org 'Convention for the Protection of Individuals with Regard to Automatic Processing of Personal Data'; dataprotection.govmu.org 'Communiqué on Ratification of Mauritius on the Protocol amending Convention 108'). Wikipedia read directly 2026-08-28, confirming the eight-state list, but not the Mauritius-specific CETS 223 ratification detail. dataprotection.govmu.org returned HTTP 404 on retry 2026-08-28 — the page is gone, not merely blocked — so the Mauritius/CETS-223 detail rests on an unread, now-dead citation and should be treated as unconfirmed."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: applies-in
     target: MX
     source: fact
-    evidence: "Eight non-Council of Europe countries from Africa and Latin America have ratified Convention 108: Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia and Uruguay (en.wikipedia.org 'Convention for the Protection of Individuals with Regard to Automatic Processing of Personal Data'; wto.org 'Facilitating transborder data flows: Convention 108'). NOT READ — search-only."
+    evidence: "Eight non-Council of Europe countries from Africa and Latin America have ratified Convention 108: Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia and Uruguay (en.wikipedia.org 'Convention for the Protection of Individuals with Regard to Automatic Processing of Personal Data'; wto.org 'Facilitating transborder data flows: Convention 108'). Wikipedia read directly 2026-08-28, confirming the eight-state list; the wto.org PDF was fetched but returned unreadable binary/compressed content, not extractable text — a tool limitation on that specific PDF, not a site block."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: applies-in
     target: MA
     source: fact
-    evidence: "Eight non-Council of Europe countries from Africa and Latin America have ratified Convention 108: Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia and Uruguay (en.wikipedia.org 'Convention for the Protection of Individuals with Regard to Automatic Processing of Personal Data'; wto.org 'Facilitating transborder data flows: Convention 108'). NOT READ — search-only."
+    evidence: "Eight non-Council of Europe countries from Africa and Latin America have ratified Convention 108: Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia and Uruguay (en.wikipedia.org 'Convention for the Protection of Individuals with Regard to Automatic Processing of Personal Data'; wto.org 'Facilitating transborder data flows: Convention 108'). Wikipedia read directly 2026-08-28, confirming the eight-state list; the wto.org PDF was fetched but returned unreadable binary/compressed content, not extractable text — a tool limitation on that specific PDF, not a site block."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: applies-in
     target: SN
     source: fact
-    evidence: "Eight non-Council of Europe countries from Africa and Latin America have ratified Convention 108: Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia and Uruguay (en.wikipedia.org 'Convention for the Protection of Individuals with Regard to Automatic Processing of Personal Data'; wto.org 'Facilitating transborder data flows: Convention 108'). NOT READ — search-only."
+    evidence: "Eight non-Council of Europe countries from Africa and Latin America have ratified Convention 108: Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia and Uruguay (en.wikipedia.org 'Convention for the Protection of Individuals with Regard to Automatic Processing of Personal Data'; wto.org 'Facilitating transborder data flows: Convention 108'). Wikipedia read directly 2026-08-28, confirming the eight-state list; the wto.org PDF was fetched but returned unreadable binary/compressed content, not extractable text — a tool limitation on that specific PDF, not a site block."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: applies-in
     target: TN
     source: fact
-    evidence: "Eight non-Council of Europe countries from Africa and Latin America have ratified Convention 108: Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia and Uruguay (en.wikipedia.org 'Convention for the Protection of Individuals with Regard to Automatic Processing of Personal Data'; epic.org 'Council of Europe Privacy Convention'). NOT READ — search-only."
+    evidence: "Eight non-Council of Europe countries from Africa and Latin America have ratified Convention 108: Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia and Uruguay (en.wikipedia.org 'Convention for the Protection of Individuals with Regard to Automatic Processing of Personal Data'; epic.org 'Council of Europe Privacy Convention'). Wikipedia read directly 2026-08-28, confirming the eight-state list; epic.org returned HTTP 403 on two retries 2026-08-28 and stays unread."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: applies-in
     target: UY
     source: fact
-    evidence: "Eight non-Council of Europe countries from Africa and Latin America have ratified Convention 108: Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia and Uruguay; Uruguay was the first non-European state to accede (en.wikipedia.org 'Convention for the Protection of Individuals with Regard to Automatic Processing of Personal Data'; wto.org 'Facilitating transborder data flows: Convention 108'). NOT READ — search-only."
+    evidence: "Eight non-Council of Europe countries from Africa and Latin America have ratified Convention 108: Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia and Uruguay; Uruguay was the first non-European state to accede (en.wikipedia.org 'Convention for the Protection of Individuals with Regard to Automatic Processing of Personal Data'; wto.org 'Facilitating transborder data flows: Convention 108'). Wikipedia read directly 2026-08-28, confirming the eight-state list; the wto.org PDF was fetched but returned unreadable binary/compressed content, not extractable text — a tool limitation on that specific PDF, not a site block."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -118,6 +118,7 @@ sources:
   - title: "Convention for the Protection of Individuals with Regard to Automatic Processing of Personal Data"
     url: "https://en.wikipedia.org/wiki/Convention_for_the_Protection_of_Individuals_with_Regard_to_Automatic_Processing_of_Personal_Data"
     publisher: "Wikipedia"
+    accessed: "2026-08-28"
   - title: "Facilitating transborder data flows: Convention 108 and its modernised version"
     url: "https://www.wto.org/english/res_e/reser_e/2_ssophie_trade_dialogues_wto.pdf"
     publisher: "World Trade Organization"
@@ -131,10 +132,21 @@ sources:
 
 # Convention 108
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read, because the working
-> environment blocks page retrieval — including `coe.int` itself.
-> `verification: search-only`.
+> **Re-verification attempted 2026-08-28, stays `search-only`.** One of
+> six cited sources was read directly this pass: Wikipedia's article,
+> which confirms the opening/entry-into-force dates and the eight-state
+> non-European party list. The other five stay unread: both `coe.int`
+> pages and the `coe.int` Data Protection Day factsheet all returned HTTP
+> 403 (domain-wide block, confirmed again this pass — see [[INTL-COE]]);
+> `epic.org` returned HTTP 403 on two separate retries; the `wto.org` PDF
+> was fetched successfully but its content came back as unreadable
+> binary/compressed data rather than extractable text (a tool limitation
+> on that specific PDF, not a site block). One of six is well short of a
+> majority, so `verification` stays `search-only` rather than being
+> forced. `cnpd.public.lu` — not one of this entity's own cited sources,
+> but read directly while verifying [[INTL-CONVENTION-108-PROTOCOL]] —
+> independently corroborates Convention 108's basic facts (Luxembourg's
+> 1988 ratification) without adding to this entity's own source count.
 
 ## Description
 
@@ -195,9 +207,10 @@ Second, generating 46 edges from a rule whose supporting source is visibly
 out of date would be mass rather than knowledge.
 
 The Council of Europe's chart of signatures and ratifications is the
-document that settles it, and the egress proxy blocks `coe.int`. This is
-recorded in `discovery/research-queue.md` as a re-verification-blocked item
-rather than guessed at.
+document that settles it, and the egress proxy still blocks `coe.int` as of
+this pass (2026-08-28) — every `coe.int` and `rm.coe.int` path tried
+returned HTTP 403. This is recorded in `discovery/research-queue.md` as a
+re-verification-blocked item rather than guessed at.
 
 ## The GDPR points back at it
 
@@ -219,5 +232,7 @@ instrument the Atlas already holds.
 
 ## Sources
 
-Listed in frontmatter. The Council of Europe citations are official; none
-was read.
+Listed in frontmatter. One of six read directly this pass — Wikipedia.
+The Council of Europe citations remain unread (domain-wide block);
+`epic.org` remains unread (403 on retry); the `wto.org` PDF was fetched
+but is not machine-readable. See the verification note above.

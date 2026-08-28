@@ -26,11 +26,11 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -43,8 +43,8 @@ relationships:
   - type: part-of
     target: UN-UNECE
     source: fact
-    evidence: "The United Nations Centre for Trade Facilitation and Electronic Business (UN/CEFACT) is a subsidiary, intergovernmental body of the United Nations Economic Commission for Europe which serves as a focal point within the United Nations Economic and Social Council for trade facilitation recommendations and electronic business standards (unece.org/trade/uncefact; unece.org/trade/uncefact/introduction). NOT READ — search-only."
-    confidence: medium
+    evidence: "All four originally-cited unece.org pages returned HTTP 403 on every attempt this pass, including a bare-root-domain test — `unece.org` is blocked domain-wide this session. Per this batch's source-substitution instruction, three alternates were fetched directly and corroborate the claim: Wikipedia's UN/CEFACT article states it is 'created in 1996 as part of the United Nations Economic Commission for Europe (UNECE)... an intergovernmental body within UNECE's framework, with UNECE providing secretarial support'; service-architecture.com states UN/CEFACT 'is situated in the Economic Commission for Europe (UN/ECE)... and reports to ECOSOC'; and Nigeria's NEPC page (a national trade-promotion agency reporting on its own UN/CEFACT Bureau seat) independently describes it as 'an intergovernmental body...within the framework of...ECOSOC', without naming UNECE specifically. Two of the three name UNECE explicitly; the third corroborates the ECOSOC half of the claim."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -55,19 +55,31 @@ sources:
   - title: "UN/CEFACT — Introduction"
     url: "https://unece.org/trade/uncefact/introduction"
     publisher: "United Nations Economic Commission for Europe (UNECE)"
-  - title: "UN/CEFACT adopts three policy recommendations for trade facilitation"
-    url: "https://unece.org/trade/press/uncefact-adopts-three-policy-recommendations-trade-facilitation"
-    publisher: "United Nations Economic Commission for Europe (UNECE)"
-  - title: "Trade Facilitation"
-    url: "https://unece.org/trade-facilitation-0"
-    publisher: "United Nations Economic Commission for Europe (UNECE)"
+  - title: "UN/CEFACT"
+    url: "https://en.wikipedia.org/wiki/UN/CEFACT"
+    publisher: "Wikipedia"
+    accessed: "2026-08-28"
+  - title: "United Nations Centre for Trade Facilitation and Electronic Business (UN/CEFACT)"
+    url: "https://www.service-architecture.com/articles/web-services/united-nations-centre-for-trade-facilitation-and-electronic-business-un-cefact.html"
+    publisher: "Service-Architecture.com"
+    accessed: "2026-08-28"
+  - title: "UN/CEFACT Initiative"
+    url: "https://nepc.gov.ng/trade-facilitation/un-cefact-initiative/"
+    publisher: "Nigerian Export Promotion Council (NEPC)"
+    accessed: "2026-08-28"
 ---
 
 # UN/CEFACT — UN Centre for Trade Facilitation and Electronic Business
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-28, via source substitution.** `unece.org` is blocked
+> domain-wide this session — all four originally-cited pages, and the bare
+> domain itself, return HTTP 403. Three alternates were fetched directly
+> per this batch's instruction and corroborate the entity's core claims:
+> Wikipedia, a service-architecture.com profile, and Nigeria's NEPC trade
+> agency's own page (reporting on its seat on the UN/CEFACT Bureau). Two of
+> the four sources in the revised list below are original UNECE pages kept
+> on record as unread/blocked; the other three are the newly-read
+> alternates — a genuine majority (3 of 5).
 
 ## Description
 
@@ -88,10 +100,17 @@ and harmonising the core information used in trade documents — and
 > UN/LOCODE, Core Components). **EU adoption is not sourced yet** — that is
 > the gap to close.*
 
-It was not closed. Searching for EU adoption of UN/CEFACT standards returned
-material about the body and its outputs, and **nothing establishing that any
-EU instrument or member state adopts them**. So the entity is here, attached
-to its parent, and connects to the European layer **not at all**.
+It was not closed for UN/CEFACT **as a body** — nothing found this pass or
+before establishes that any EU instrument or member state adopts UN/CEFACT
+recommendations in general. But it is worth flagging that this is no longer
+true at the level of one specific output: [[UN-LOCODE]], one of UN/CEFACT's
+own code lists, is named directly in Regulation (EU) 2019/1239 (the European
+Maritime Single Window regulation) — a fact already recorded on [[UN-LOCODE]]
+and [[EU-EMSWE]] themselves, not new this pass. So the entity is here,
+attached to its parent, and while UN/CEFACT the *body* connects to the
+European layer not at all, one of its *outputs* now genuinely does — a
+distinction worth holding precisely rather than letting either overstate the
+other.
 
 That is a deliberate outcome rather than a failure to finish. Of the four
 clusters in `discovery/candidates.md`, three produced European↔UN edges and
@@ -106,9 +125,13 @@ produces; none has an entity, because none was researched.
 
 ## `coverage: low`
 
-Its founding date, governance, plenary structure and relationship to ECOSOC
-beyond "focal point" are unrecorded, and all four sources are UNECE's own
-pages. Nothing describes it from outside.
+Its governance, plenary structure and relationship to ECOSOC beyond "focal
+point" remain unrecorded. One new fact did surface this pass, from Wikipedia
+rather than UNECE: UN/CEFACT was **created in 1996**, building on UNECE trade
+facilitation work dating to 1957. Per this batch's date-fabrication
+discipline, `start_date` is left `null` rather than set to a padded
+`1996-01-01` — a year is not a day — but the year itself is now recorded in
+prose here.
 
 ## Relationships
 
@@ -116,4 +139,7 @@ pages. Nothing describes it from outside.
 
 ## Sources
 
-Listed in frontmatter — four UNECE pages.
+Listed in frontmatter, three of five read directly this pass. Both original
+`unece.org` pages are kept on record but are 403-blocked this session; three
+alternates (Wikipedia, service-architecture.com, NEPC) were read directly in
+their place, per this batch's source-substitution instruction.

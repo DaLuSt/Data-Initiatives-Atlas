@@ -21,11 +21,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -38,21 +38,28 @@ relationships:
   - type: part-of
     target: EU-COMMON-DATA-SPACES
     source: fact
-    evidence: "Energy is one of the fourteen common European data spaces identified in the Commission's January 2024 staff working document (SWD(2024) 21 final of 24.1.2024; digital-strategy.ec.europa.eu 'Common European data spaces'). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading digital-strategy.ec.europa.eu's own 'Second staff working document on data spaces' library page directly (2026-08-28): title 'Second staff working document on data spaces', reference SWD(2024) 21 final, publication date 24 January 2024. The original citation in this entity pointed to the WRONG Commission URL — 'staff-working-document-data-spaces' (which is the FIRST SWD, SWD(2022) 45 final of 23 February 2022), not the second one labelled SWD(2024) 21. Corrected here. Energy's membership of the fourteen data spaces was independently confirmed by reading digital-strategy.ec.europa.eu's main 'Common European data spaces' overview page directly, which lists all fourteen by name."
+    confidence: high
     valid_from: null
     valid_until: null
 
 sources:
-  - title: "SWD(2024) 21 final — Staff working document on common European data spaces"
-    url: "https://digital-strategy.ec.europa.eu/en/library/staff-working-document-data-spaces"
+  - title: "Common European data spaces"
+    url: "https://digital-strategy.ec.europa.eu/en/policies/data-spaces"
+    publisher: "European Commission — Shaping Europe's digital future"
+    accessed: "2026-08-28"
+  - title: "Second staff working document on data spaces — SWD(2024) 21 final"
+    url: "https://digital-strategy.ec.europa.eu/en/library/second-staff-working-document-data-spaces"
     publisher: "European Commission"
+    accessed: "2026-08-28"
   - title: "EU Advances Common Energy Data Space (CEEDS)"
     url: "https://interoperable-europe.ec.europa.eu/collection/eprocurement/news/eu-advances-common-energy-data-space-ceeds"
     publisher: "Interoperable Europe Portal, European Commission"
+    accessed: "2026-08-28"
   - title: "CEEDS.energy — Common European Energy Data Space"
     url: "https://www.ceeds.energy/"
     publisher: "CEEDS"
+    accessed: "2026-08-28"
   - title: "Blueprint of the Common European Energy Data Space, version 2.0, July 2024"
     url: "https://intnet.eu/images/resources/Blueprint_CEEDS_v2.pdf"
     publisher: "int:net (Horizon Europe)"
@@ -60,9 +67,13 @@ sources:
 
 # Common European Energy Data Space (CEEDS)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Re-verified 2026-08-28.** Four of five cited sources were read
+> directly, and a genuine citation error was found and fixed: the SWD
+> "staff working document on data spaces" URL this entity cited was the
+> **first** staff working document (SWD(2022) 45 final, February 2022),
+> not the January 2024 document (SWD(2024) 21 final) the source title
+> claimed. The correct Commission URL is now cited and was read directly.
+> `verification` moves from `search-only` to `primary-source`.
 
 ## Description
 
@@ -112,4 +123,12 @@ Only [[EU-EHDS]] among the fourteen has a Regulation behind it.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, four of five read directly this pass. `ceeds.energy`,
+read directly, confirms CEEDS.energy as a joint effort of ENTARC.eu,
+Digital4Grids and EDA GmbH to operationalise the space, aiming at a
+"digital twin for Europe's energy system." The Interoperable Europe news
+article, also read directly, confirms Digital Europe Programme funding and
+a March 2024 Brussels stakeholder meeting where a preliminary blueprint was
+unveiled. The `intnet.eu` Blueprint PDF was attempted but returned
+unreadable binary/stream content to this pass's fetch tooling; it was not
+read.

@@ -17,11 +17,11 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -35,14 +35,14 @@ relationships:
   - type: part-of
     target: UN
     source: fact
-    evidence: "The UN Statistics Division facilitates coordination of international statistical activities and supports the functioning of the UN Statistical Commission as the apex entity of the global statistical system (unstats.un.org). NOT READ — search-only."
+    evidence: "Confirmed by reading both cited unstats.un.org pages directly (2026-08-28). The FPOS page is maintained by UNSD and states the Division's role in stewarding the Principles; the methods page describes UNSD's coordination role across international statistical activities. Neither page is a dedicated UNSD 'about' page, so the claim is corroborated rather than quoted verbatim — the same limitation this entity's `coverage: low` already flags."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: governed-by
     target: UN-UNSC
     source: fact
-    evidence: "The Statistical Commission oversees the work of the United Nations Statistics Division, and the Statistics Division of the Department of Economic and Social Affairs acts as the Commission's secretariat (unstats.un.org/UNSDWebsite/statcom/; un.org/en/desa 'Shaping the future of global statistics'; officialstatistics.org handbook §17.3). NOT READ — search-only."
+    evidence: "Confirmed via [[UN-UNSC]]'s own re-verification this pass (2026-08-28): un.org/en/desa's 'Shaping the future of global statistics' page, read directly, states the Statistics Division of DESA 'supports the Commission's work by serving as its secretariat.' unstats.un.org/UNSDWebsite/statcom/ was fetched but returned only a bare page-title shell with no readable body content; officialstatistics.org §17.3 returned HTTP 403 and was not read."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -51,16 +51,21 @@ sources:
   - title: "Fundamental Principles of Official Statistics"
     url: "https://unstats.un.org/fpos/"
     publisher: "United Nations Statistics Division"
+    accessed: "2026-08-28"
   - title: "Principles governing international statistical activities"
     url: "https://unstats.un.org/unsd/methods/statorg/principles_stat_activities/principles_stat_activities.asp"
     publisher: "United Nations Statistics Division"
+    accessed: "2026-08-28"
 ---
 
 # United Nations Statistics Division (UNSD)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Verified 2026-08-28.** Both cited pages were read directly. Neither is a
+> dedicated "about UNSD" page — they are the FPOS and methods pages this
+> entity shares with [[UN-FPOS]] — so the promotion rests on corroboration
+> across UNSD's own published material rather than a single definitive
+> "about us" statement. The `governed-by` [[UN-UNSC]] edge is additionally
+> confirmed via that entity's own re-verification this pass.
 
 ## Description
 
@@ -99,4 +104,4 @@ is one of the clearest remaining gaps in the Atlas's vertical structure.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, both read directly this pass.

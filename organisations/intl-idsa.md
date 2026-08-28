@@ -19,11 +19,11 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-18"
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -37,8 +37,8 @@ relationships:
   - type: produces
     target: INTL-IDS-RAM
     source: fact
-    evidence: "The IDSA emerged in 2016 to work on the concept of data spaces and the principles their design should follow, and publishes the IDS Reference Architecture Model, which constitutes the conceptual basis of IDS-compliant data exchange between organisations (internationaldataspaces.org 'IDS Reference Architecture Model' and 'IDS-RAM 3.0'; datos.gob.es 'The IDS-RAM reference architecture model and its role in data spaces'). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading all three cited pages directly (2026-08-28): internationaldataspaces.org's own 'Reference Architecture' page describes the IDS-RAM as 'a practical blueprint' for constructing data spaces addressing role model, data sovereignty, information model and usage-policy enforcement; its 'Understanding the IDSA Reference Architecture Model' page states the IDSA 'has developed a comprehensive Reference Architecture Model (RAM)' with the five-layer structure (business, functional, information, system, process) and names the IDSA as currently developing the model's fifth edition; datos.gob.es confirms the IDSA was 'formed in 2016' and comprises '133 international companies across 22 countries.'"
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -46,19 +46,26 @@ sources:
   - title: "IDS Reference Architecture Model"
     url: "https://internationaldataspaces.org/offers/reference-architecture/"
     publisher: "International Data Spaces Association (IDSA)"
+    accessed: "2026-08-28"
   - title: "Understanding the IDSA Reference Architecture Model"
     url: "https://internationaldataspaces.org/understanding-the-idsa-reference-architecture-model/"
     publisher: "International Data Spaces Association (IDSA)"
+    accessed: "2026-08-28"
   - title: "The IDS-RAM reference architecture model and its role in data spaces"
     url: "https://datos.gob.es/en/blog/ids-ram-reference-architecture-model-and-its-role-data-spaces"
     publisher: "datos.gob.es (Gobierno de España)"
+    accessed: "2026-08-28"
 ---
 
 # International Data Spaces Association (IDSA)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Verified 2026-08-28.** All three cited pages were read directly.
+> `verification` moves from `search-only` to `primary-source`. One
+> nuance found on re-reading: the IDSA's own reference-architecture page
+> now describes the model as on its fifth edition in development, with
+> version 4 current — the "3.0 (April 2019)" version this Atlas ties to
+> DIN SPEC 27070 (see [[INTL-IDS-RAM]]) is the version contemporaneous
+> with that standard, not the association's current output.
 
 ## Description
 
@@ -106,4 +113,4 @@ and other entities need to point at the specification, not the body.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, all three read directly this pass.

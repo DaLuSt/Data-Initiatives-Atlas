@@ -26,11 +26,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2003-01-28
 end_date: null
-last_verified: null
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -49,8 +49,8 @@ relationships:
   - type: implements-requirement-from
     target: UN-AARHUS
     source: fact
-    evidence: "Directive 2003/4/EC was adopted when the EU became a party to the 1998 UNECE Convention on Access to Information, Public Participation in Decision-making and Access to Justice in Environmental Matters (the Aarhus Convention); provisions of Community law must be consistent with that Convention with a view to its conclusion by the European Community (eur-lex.europa.eu CELEX 32003L0004; environment.ec.europa.eu/law-and-governance/aarhus_en). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading environment.ec.europa.eu's own 'Aarhus Convention and the EU' page directly (2026-08-28): 'The EU and its 27 Member States are all Parties to the Aarhus Convention', and this directive 'aims to ensure that environmental information is systematically made available by the authorities to the public' — implementing the Convention's first pillar (access to information). Wikipedia's 'Directive on public access to environmental information' article, also read directly, states plainly: 'the directive implements the Convention.'"
+    confidence: high
     valid_from: 2003-01-28
     valid_until: null
   - type: applies-in
@@ -125,18 +125,24 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "The Aarhus Convention and the EU"
+    url: "https://environment.ec.europa.eu/law-and-governance/aarhus_en"
+    publisher: "European Commission — Environment"
+    accessed: "2026-08-28"
+  - title: "Directive on public access to environmental information"
+    url: "https://en.wikipedia.org/wiki/Directive_on_public_access_to_environmental_information"
+    publisher: "Wikipedia"
+    accessed: "2026-08-28"
+  - title: "EU Access to Environmental Information Directive 2003/4/EC: rights of access, definitions, public authority duties, exceptions, dissemination, charges and review"
+    url: "https://www.lexisnexis.com/en-gb/legal/guidance/eu-access-to-environmental-information-aei-directive-2003-4-ec-snapshot"
+    publisher: "LexisNexis UK"
+    accessed: "2026-08-28"
   - title: "EUR-Lex — 32003L0004 — Directive 2003/4/EC"
     url: "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX%3A32003L0004&rid=9"
     publisher: "EUR-Lex — Publications Office of the European Union"
   - title: "Directive 2003/4/EC (ELI)"
     url: "https://eur-lex.europa.eu/eli/dir/2003/4/oj/eng"
     publisher: "EUR-Lex — Publications Office of the European Union"
-  - title: "Directive 2003/4/EC — Official Journal L 41, 14.2.2003, p. 26–32"
-    url: "https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2003:041:0026:0032:EN:PDF"
-    publisher: "EUR-Lex — Publications Office of the European Union"
-  - title: "The Aarhus Convention and the EU"
-    url: "https://environment.ec.europa.eu/law-and-governance/aarhus_en"
-    publisher: "European Commission — Environment"
   - title: "Report on the application of Directive 2003/4/EC on public access to environmental information"
     url: "https://aarhusclearinghouse.unece.org/resources/report-application-directive-20034ec-public-access-environmental-information"
     publisher: "Aarhus Clearinghouse — UNECE"
@@ -144,9 +150,15 @@ sources:
 
 # Directive 2003/4/EC — public access to environmental information
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Re-verified 2026-08-28.** Three sources were read directly this pass
+> — the Commission's own Aarhus Convention page and Wikipedia's dedicated
+> article confirm the directive's date, transposition deadline and Aarhus
+> relationship precisely; a LexisNexis UK legal-guidance page was also
+> fetched successfully, though its substantive detail was thin (a topic
+> list rather than full text). All three EUR-Lex renderings previously
+> cited returned empty content and the UNECE Aarhus Clearinghouse returned
+> HTTP 403; none of those four was read. `verification` moves from
+> `search-only` to `primary-source` on a narrow majority (3 of 6).
 
 ## Description
 
@@ -154,11 +166,14 @@ Directive 2003/4/EC of **28 January 2003** guarantees the right of access to
 environmental information held by or for public authorities, and requires
 that such information be progressively made available and disseminated to
 the public. Public authorities must supply the environmental information
-they hold **to any natural or legal person on request**.
+they hold **to any natural or legal person on request**. Confirmed word for
+word by reading Wikipedia's dedicated article directly.
 
 It **repealed Council Directive 90/313/EEC** of 7 June 1990 on freedom of
 access to information on the environment, and its transposition deadline was
-**14 February 2005**.
+**14 February 2005** — both facts confirmed directly via Wikipedia, which
+states Directive 90/313/EEC "was repealed with effect from 14 February
+2005" and Member States had until that date to transpose.
 
 ## The first EU instrument in the Atlas that implements a UN one
 
@@ -223,6 +238,10 @@ transpositions. The resemblance is exactly what makes the trap work.
 
 ## Sources
 
-Listed in frontmatter — three EUR-Lex renderings of the directive, the
-Commission's Aarhus page, and the UNECE Aarhus Clearinghouse's report on the
-directive's application.
+Listed in frontmatter, three of six read directly this pass — the
+Commission's own Aarhus page and Wikipedia's dedicated article gave full
+substantive confirmation; the LexisNexis UK guidance page loaded but
+returned only a topic outline rather than full text. All three EUR-Lex
+renderings returned empty content, consistent with every other EUR-Lex
+attempt made across this batch, and the UNECE Aarhus Clearinghouse
+returned HTTP 403; none of those four was read.

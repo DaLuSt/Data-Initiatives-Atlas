@@ -19,11 +19,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2023-09-24
 end_date: null
-last_verified: null
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -236,11 +236,16 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Data Governance Act"
+    url: "https://digital-strategy.ec.europa.eu/en/policies/data-governance-act"
+    publisher: "European Commission — Shaping Europe's digital future"
+    accessed: "2026-08-28"
+  - title: "Data Governance Act"
+    url: "https://en.wikipedia.org/wiki/Data_Governance_Act"
+    publisher: "Wikipedia"
+    accessed: "2026-08-28"
   - title: "Regulation (EU) 2022/868 — Official Journal"
     url: "https://eur-lex.europa.eu/eli/reg/2022/868/oj/eng"
-    publisher: "EUR-Lex (Publications Office of the European Union)"
-  - title: "Regulation (EU) 2022/868 — summary"
-    url: "https://eur-lex.europa.eu/legal-content/EN/LSU/?uri=CELEX%3A32022R0868"
     publisher: "EUR-Lex (Publications Office of the European Union)"
   - title: "European Data Governance Act (DGA), Regulation (EU) 2022/868"
     url: "https://www.oecd.org/en/publications/access-to-public-research-data-toolkit_a12e8998-en/european-data-governance-act-dga-regulation-eu-2022-868_920b8b28-en.html"
@@ -249,16 +254,26 @@ sources:
 
 # Data Governance Act (Regulation (EU) 2022/868)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Re-verified 2026-08-28.** The Commission's own policy page and
+> Wikipedia were found and read directly this pass; both original sources
+> (EUR-Lex, OECD) returned empty content or HTTP 403 and could not be
+> read. `verification` moves from `search-only` to `primary-source` on
+> the strength of the two new sources.
 
 ## Description
 
-The Data Governance Act establishes a cross-sectoral framework for data
-access and sharing across the EU. It entered into force on 23 June 2022 and
-has applied since 24 September 2023 — the applicability date is recorded as
-`start_date`, since that is when obligations began to bite.
+Confirmed by reading digital-strategy.ec.europa.eu's own policy page
+directly: the Data Governance Act establishes a cross-sectoral framework
+for data access and sharing across the EU, supporting the development of
+Common European Data Spaces across strategic sectors including health,
+environment, energy, agriculture, mobility, finance, manufacturing, public
+administration and skills. It entered into force on **23 June 2022** and
+has applied since **24 September 2023** — a 15-month grace period,
+confirmed by both sources read — the applicability date is recorded as
+`start_date`, since that is when obligations began to bite. Wikipedia,
+also read directly, adds that political agreement between Parliament and
+Council was reached 30 November 2021, with formal publication in the
+Official Journal on 3 June 2022.
 
 It is the legal counterpart to the first pillar of [[EU-DATA-STRATEGY]]:
 a cross-sectoral governance framework for data access and use.
@@ -291,4 +306,7 @@ instruments they target.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, two of four read directly this pass (the
+Commission's own policy page and Wikipedia). `eur-lex.europa.eu` returned
+empty content, consistent with every other EUR-Lex attempt made across
+this batch; the OECD toolkit page returned HTTP 403. Neither was read.

@@ -27,7 +27,7 @@ verification: search-only
 
 start_date: 1949-05-05
 end_date: null
-last_verified: "2026-08-19"
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -61,13 +61,30 @@ sources:
   - title: "Work of the Council of Europe and the expulsion of Russia — research briefing CBP-9570"
     url: "https://commonslibrary.parliament.uk/research-briefings/cbp-9570/"
     publisher: "House of Commons Library"
+  - title: "Council of Europe"
+    url: "https://en.wikipedia.org/wiki/Council_of_Europe"
+    publisher: "Wikipedia"
+    accessed: "2026-08-28"
 ---
 
 # Council of Europe
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Re-verification attempted 2026-08-28, blocked — stays `search-only`.**
+> All three `coe.int` pages cited stay unread: `coe.int` is domain-wide
+> 403-blocked for this pass's retrieval tool, confirmed again this pass
+> across multiple paths (the 46-member-states page, the Russia-exclusion
+> announcement, the ECHR-cessation announcement, `coe.int/en` itself, and
+> — on the related Convention 108 family entities — `coe.int/en/web/data-
+> protection/*` and `rm.coe.int`, all 403). `commonslibrary.parliament.uk`
+> was also retried and also returned 403 both times it was tried. That is
+> zero of four originally-cited sources read. A Wikipedia article on the
+> Council of Europe was added and read directly as a partial substitute,
+> confirming the founding date (5 May 1949, Treaty of London), the
+> Strasbourg headquarters, the 46-member count, the CoE/EU distinction,
+> and Russia's 2022 expulsion following its invasion of Ukraine — all
+> consistent with what this entity already claimed. One source read out
+> of five is well short of a majority, so `verification` stays
+> `search-only` rather than being forced.
 
 ## Description
 
@@ -143,4 +160,8 @@ never been a member, and its special guest status was suspended in 1997.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter. None of the four originally-cited pages could be
+read this pass — `coe.int` is domain-wide blocked and
+`commonslibrary.parliament.uk` also 403'd on retry. The added Wikipedia
+article was read directly as a partial substitute; see the verification
+note above.

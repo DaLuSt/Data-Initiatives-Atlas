@@ -28,7 +28,7 @@ verification: search-only
 
 start_date: null
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -54,19 +54,48 @@ sources:
   - title: "National Research and Education Networks — GÉANT"
     url: "https://geant.org/who-we-work-with/national-research-and-education-networks/"
     publisher: "GÉANT Association"
+    note: "Returns HTTP 403 as of 2026-08-28 (repeated attempts). The entire geant.org / about.geant.org / resources.geant.org family of domains 403s to automated fetches; this appears to be bot-protection rather than a dead page."
   - title: "NRENs — About GÉANT"
     url: "https://about.geant.org/nrens/"
     publisher: "GÉANT Association"
+    note: "Returns HTTP 403 as of 2026-08-28 (repeated attempts). Same bot-protection pattern as the other geant.org-family sources above."
   - title: "The GÉANT Compendium of National Research and Education Networks in Europe"
     url: "https://compendium.geant.org/"
     publisher: "GÉANT Association"
+    note: "Fetches successfully but returns only the bare page title with no body content as of 2026-08-28 — likely a JS-rendered SPA shell. Not counted toward this pass's verified majority."
+  - title: "GÉANT"
+    url: "https://en.wikipedia.org/wiki/G%C3%89ANT"
+    publisher: "Wikipedia"
+    accessed: "2026-08-28"
+  - title: "GN5-1 — project record"
+    url: "https://cordis.europa.eu/project/id/101100680"
+    publisher: "CORDIS — European Commission"
+    accessed: "2026-08-28"
+  - title: "GÉANT Partners"
+    url: "https://geant3plus.archive.geant.net/Pages/About/partners.html"
+    publisher: "GÉANT (archived GÉANT3+ project site)"
+    note: "Archived page describing the pre-2014 GÉANT3+ project structure (DANTE/TERENA/NORDUnet), read directly 2026-08-28. Historical, not current governance, but corroborates the NREN partnership model and a ~37-NREN count."
 ---
 
 # GÉANT
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read — retrieval is blocked by
-> the network egress proxy. `verification: search-only`.
+> **Re-verified 2026-08-28 — stays at `search-only`.** All three of the
+> geant.org-family pages originally cited remain unreadable this pass: two
+> 403 to automated fetches on repeated attempts (bot-protection, not a
+> dead link — the domain resolves and serves a challenge page), and the
+> third (`compendium.geant.org`) returns only a bare page title with no
+> rendered content. Per the re-verification discipline, three alternate
+> sources were found and read directly instead: Wikipedia's GÉANT article,
+> the CORDIS project record for GN5-1 (GÉANT's current EU-funded
+> programme), and an archived GÉANT3+ "Partners" page. All three
+> corroborate the existing description (NREN count in the high 30s to 40s
+> depending on how coordinating bodies are counted, NORDUnet's role,
+> EU co-funding, and the pan-European/beyond-EU membership footprint) but
+> none is the specific page originally cited, and dfn.de and eduroam.org
+> were tried as further alternates and also failed (404 and 403
+> respectively). That leaves 3 of 6 listed sources read directly — exactly
+> the borderline case the discipline calls out — so `verification` stays
+> `search-only` rather than being forced to `primary-source`.
 
 ## Description
 
@@ -121,5 +150,10 @@ a membership list would be the thin entity the taxonomy threshold prevents.
 
 ## Sources
 
-Listed in frontmatter — two GÉANT pages on the NREN relationship and the
-Compendium.
+Listed in frontmatter. The three originally cited geant.org-family pages
+remain unreadable as of this pass (see per-source notes above and the
+banner). Three alternate sources were read directly instead — Wikipedia,
+CORDIS's GN5-1 project record, and an archived GÉANT3+ partners page —
+which corroborate but do not replace the original citations. 3 of 6 is a
+borderline majority, so `verification` is left at `search-only`
+deliberately rather than forced upward.

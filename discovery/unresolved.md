@@ -1075,3 +1075,465 @@ should assume the same and re-source, not just re-fetch.**
 All three validation commands (`validation/run_all.py`,
 `tools/build_graph.py`, `tools/test_build_graph.py`) were run after these
 changes; see the batch's own completion report for results.
+
+## Germany cluster re-verification (2026-08-28)
+All 26 remaining `search-only` Germany entities — 3 data spaces
+([[DE-CATENA-X]], [[DE-MANUFACTURING-X]], [[DE-MDS]]), 2 frameworks
+([[DE-IT-ARCHITEKTURRICHTLINIEN]], [[DE-IT-GRUNDSCHUTZ]]), 1 initiative
+([[DE-GDI-DE]]), 6 pieces of legislation ([[DE-BSIG]], [[DE-GEOZG]],
+[[DE-IWG]], [[DE-NIS2UMSUCG]], [[DE-OZG]], [[DE-REGMOG]]), 8 organisations
+([[DE-BSI]], [[DE-DESTATIS]], [[DE-DFN]], [[DE-DIN]], [[DE-FITKO]],
+[[DE-IT-PLANUNGSRAT]], [[DE-KOSIT]], [[DE-NFDI]]), 2 platforms
+([[DE-GOVDATA]], [[DE-MOBILITHEK]]), 3 standards ([[DE-DCAT-AP-DE]],
+[[DE-XOEV]], [[DE-XRECHNUNG]]) and 1 strategy ([[DE-DIGITALSTRATEGIE]]) —
+were re-verified against primary sources and **all 26 were promoted to
+`verification: primary-source`**. This is the whole remaining Germany
+country cluster in one pass; [[DE-BDSG]] had already been promoted
+separately and was read but not edited.
+**A domain-wide finding**: `bmi.bund.de` and `digitale-verwaltung.de` (both
+Bundesministerium des Innern properties) returned **HTTP 400 Bad Request on
+every attempt this pass** — a consistent, if unexplained, block rather than
+a transient failure — affecting [[DE-OZG]], [[DE-REGMOG]] and [[DE-FITKO]]'s
+originally-cited sources. `geant.org` and `about.geant.org` (GÉANT
+Association) returned HTTP 403 on every attempt, affecting [[DE-DFN]].
+Where blocked, this pass followed the brief's instruction to search for
+alternate primary sources rather than stall: dedicated Wikipedia articles
+(often not previously cited at all) repeatedly supplied exactly the missing
+fact — a founding/enactment date, a legal-basis citation, an EU-directive
+link — that the blocked government page would have. This is the single
+most effective technique across the batch: **five entities'
+previously-`null` `start_date` fields were filled this pass**
+([[DE-OZG]]: 2017-08-18; [[DE-IWG]]: 2006-12-19; [[DE-KOSIT]]: 2010-09-24;
+[[DE-CATENA-X]] deliberately kept `null` — see below; [[DE-NFDI]]:
+2020-10-01), each from a dedicated source found by searching further, not
+guessed.
+**Genuine corrections and closures, not just confirmations:**
+- [[DE-XRECHNUNG]]'s previously flagged sharpest gap — no sourced link to
+  [[EU-EN-16931]] despite XRechnung being, "in the ordinary understanding
+  of the field," a German CIUS of it — is **closed**. Three independently
+  read sources (a dedicated Wikipedia article, ClearTax's own explainer,
+  and the European Commission's own digital-building-blocks CIUS-compliance
+  page) confirm the relationship in their own words. `countries/de/index.md`'s
+  "Where an EU instrument has a German implementing act" table gained a row
+  for it.
+- [[DE-IWG]] went from "nearly empty" (`confidence: low`, no enactment date,
+  a frontmatter/body contradiction — the frontmatter already carried an
+  `implements-requirement-from` → [[EU-PSI-DIRECTIVE]] relationship that the
+  body text flatly denied existed) to reasonably well-sourced: a dedicated
+  Wikipedia article on the IWG itself (not previously cited — the entity's
+  three original sources were all about its successor DNG) supplied the
+  enactment date, the entry-into-force date, and confirmation of the EU
+  directive it transposed, resolving the contradiction in the frontmatter's
+  favour.
+- [[DE-BSIG]] gained a genuine enactment date (20 August 2009, for the
+  current BSI-Gesetz superseding the 1991 BSI-Errichtungsgesetz) from the
+  BSI's own "Auftrag" page, not previously cited at all despite this being
+  a BSI-published law.
+- [[DE-DIN]]'s previously-flagged gap ("DIN's own site is not cited") is
+  closed — `din.de`'s own history page gives an exact founding date
+  (22 December 1917, not just "1917") and the specific 1975 agreement
+  recognising DIN as Germany's national standards body.
+- [[DE-IT-GRUNDSCHUTZ]]'s equivalent gap ("no bsi.bund.de IT-Grundschutz
+  page is cited") is closed the same way, via two `bsi.bund.de` pages found
+  by a targeted search after the entity's original sources returned only
+  Wikipedia and consultancy explainers.
+- [[DE-CATENA-X]]'s `start_date` (previously a fabricated-looking
+  `2021-01-01` for what sources only supported as "2021") was **corrected
+  to `null`** rather than kept: this pass found the association was founded
+  in May 2021 and its research consortium ran August 2021–July 2024, but no
+  source gives an exact day for either, so the padded date was removed and
+  the real precision described in prose instead.
+- [[DE-CATENA-X]] also now carries a **contested-status finding**: its own
+  operator (catena-x.net) calls the network "fully operational," while a
+  directly-read WirtschaftsWoche investigation calls it "the greatest IT
+  hot air of German industry" and reports finding no concrete operating
+  examples after two and a half years of trying. Both are recorded rather
+  than one being smoothed over.
+- [[DE-GEOZG]]'s official `gesetze-im-internet.de` text returned HTTP 503 on
+  three separate attempts (genuinely persistent, not the single transient
+  503 the brief warned about) and could not be read directly even this
+  pass; two independent legal-database mirrors (`dejure.org`, `buzer.de`)
+  substituted by quoting the statute's own preamble and citation, which is
+  what let this entity reach `primary-source` despite the official site
+  staying unreachable.
+**Still open after this pass:**
+- The German batch's principal ontology finding — the `level` vocabulary
+  has no term between `national` and `local`, so the 16 Länder, their 16
+  INSPIRE transposition acts, and Land-hosted bodies like [[DE-KOSIT]] are
+  not representable — is **unchanged** by this pass. It surfaced again on
+  [[DE-GEOZG]], [[DE-GDI-DE]] and [[DE-KOSIT]] and remains the batch's
+  clearest unresolved modelling question.
+- [[DE-NIS2UMSUCG]] `supersedes` [[DE-BSIG]] is still recorded at
+  `confidence: low` for want of an amendment-lineage relationship type.
+  This pass's direct reading (Deloitte's and OpenKRITIS's own pages) *
+  reinforces* rather than resolves the underlying tension — both sources
+  independently describe the mechanism as a comprehensive in-place revision
+  rather than a repeal-and-replace, which is exactly what `supersedes`
+  overstates.
+- [[DE-MANUFACTURING-X]] ↔ [[EU-MANUFACTURING-DATA-SPACE]] and
+  [[DE-MDS]]/[[DE-MOBILITHEK]] ↔ [[EU-EMDS]]: still no source, even after
+  this pass's added fetches, names the European-level parent for either
+  German data space. Both remain visible, logged gaps rather than asserted
+  relationships.
+- [[DE-DESTATIS]] ↔ [[EU-EUROSTAT]]: narrowed but not closed. This pass
+  confirmed `part-of` [[EU-ESS]] directly on Destatis's own site (which now
+  names the European Statistical System explicitly, closing that half of
+  the gap), but no page read names Eurostat by name on a Destatis page, so
+  the direct Destatis↔Eurostat edge — sitting alongside the still-open
+  [[UN-UNSD]] ↔ [[EU-EUROSTAT]] and [[UN-FPOS]] ↔ [[NL-WET-CBS]] gaps —
+  stays unasserted.
+- [[DE-DIGITALSTRATEGIE]] stays `status: unknown`: its 2025 horizon has
+  passed, a "2. Fortschrittsbericht" (October 2024) surfaced in search
+  suggests it was still being actively tracked at that point, but no source
+  read states whether [[DE-MODERNISIERUNGSAGENDA-BUND]] or [[DE-BMDS]]
+  formally supersedes it, so no `successor` is recorded.
+- `bmi.bund.de` and `digitale-verwaltung.de` are confirmed **consistently**
+  blocked to WebFetch this pass (HTTP 400 on every URL tried, across
+  multiple entities and multiple attempts) — worth flagging for whoever
+  next touches a German entity citing either domain, the same way the
+  Netherlands batch flagged `digitaleoverheid.nl`'s bot wall.
+All three validation commands (`validation/run_all.py`,
+`tools/build_graph.py`, `tools/test_build_graph.py`) were run after these
+changes; see this batch's own completion report for results.
+
+## EU legislation/data-spaces cluster re-verification (2026-08-28)
+Batch scope: the 8 EU data-space entities and 12 EU legislation entities
+listed in this batch's assignment (all `EU-*` files under `data-spaces/`
+and `legislation/`). 17 of 20 promoted from `verification: search-only` to
+`primary-source` on a genuine majority of directly-read sources each; two
+(`EU-EMSWE`, `EU-CH-ADEQUACY`) already partly promoted in an interrupted
+prior attempt were re-confirmed and completed; one (`EU-SDG`) stays at
+`search-only` — see below.
+**A significant, corrected factual error:** [[EU-DIGITAL-OMNIBUS]]'s
+identifying CELEX/COM number was wrong. It carried `COM(2025) 836` and a
+CELEX citation for that number, but COM(2025) 836 is a **distinct sibling
+proposal** — the "Digital Omnibus on AI" — not the DGA/Open-Data-Directive/
+GDPR proposal this entity actually describes (that one is **COM(2025)
+837**). Both proposals were published the same day, 19 November 2025, and
+diverged sharply in outcome: COM(2025) 836 has since been **adopted** as
+**Regulation (EU) 2026/1744**, published in the Official Journal 24 July
+2026 and in force from 27 July 2026, deferring the AI Act's Annex III
+high-risk deadline from 2 August 2026 to 2 December 2027. COM(2025) 837
+(the entity this Atlas actually models as `EU-DIGITAL-OMNIBUS`) remains
+under negotiation as of the most recent tracker update (24 July 2026) this
+pass could read. The corrected relationship: `EU-DIGITAL-OMNIBUS` does
+**not** amend [[EU-AI-ACT]] — that erroneous edge (asserted only in body
+prose, not as a frontmatter relationship) has been removed from
+`legislation/eu-ai-act.md` and `legislation/eu-digital-omnibus.md`, both
+corrected in this pass, and from `regions/eu/index.md`.
+**A genuine, sourced gap this leaves behind:** Regulation (EU) 2026/1744
+("Digital Omnibus on AI") has no Atlas entity of its own. It is a real,
+adopted, in-force EU regulation that amends [[EU-AI-ACT]], the EASA
+Regulation and the Machinery Regulation — modelling it (as its own
+`EU-*` legislation entity with a `supersedes`/`amends`-type edge onto
+[[EU-AI-ACT]]) is outside this pass's assigned files and is queued here
+for a future batch. The confirmed facts (adoption timeline, in-force date,
+revised AI Act timetable) are recorded in `legislation/eu-ai-act.md` in the
+meantime so the correction isn't lost.
+**Two SWD citation errors, corrected:** four data-space entities
+(`EU-CEEDS`, `EU-CULTURAL-HERITAGE-DATA-SPACE`, `EU-EOSC`,
+`EU-MANUFACTURING-DATA-SPACE`) cited a source titled "SWD(2024) 21
+final" pointing at
+`digital-strategy.ec.europa.eu/en/library/staff-working-document-data-spaces`
+— that URL is actually the Commission's **first** staff working document
+on data spaces (SWD(2022) 45 final, 23 February 2022), not the second
+(SWD(2024) 21 final, 24 January 2024, at
+`.../library/second-staff-working-document-data-spaces`). All four
+corrected to the right URL, confirmed by reading the corrected page
+directly.
+**A new, thin relationship added:** [[EU-GREEN-DEAL-DATA-SPACE]]
+`references` [[EU-INSPIRE]], sourced from the Commission's own Environment
+page ("integrates with existing frameworks like the INSPIRE Directive,
+under revision for Q4 2025 adoption"). No detail on the integration
+mechanism was found, and the claimed INSPIRE revision itself was not
+researched — flagged as thin rather than dropped.
+**A previously-unrecorded application date:** [[EU-EMSWE]] (European
+Maritime Single Window environment, Regulation (EU) 2019/1239, adopted 20
+June 2019) does not actually become applicable until **15 August 2025**,
+confirmed by reading the Commission's own DG MOVE page directly. The prior
+text carried only the 2019 adoption date with no application-date
+milestone at all — the kind of gap that matters most on a staged-timetable
+instrument.
+**EUR-Lex is comprehensively unreachable to this pass's fetch tooling.**
+Every attempt across all 20 files — different CELEX renderings, ELI
+records, LEGISSUM summaries, the homepage itself — returned either empty
+content or (rarely) an outright error, never actual legal text. This
+matches the block already documented in `EU-CH-ADEQUACY`'s and
+`EU-EMSWE`'s pre-existing text from an earlier pass ("retrieval is blocked
+by the network egress proxy"). Every promoted entity in this batch was
+promoted on alternate primary/secondary sources (Commission policy pages,
+the European Parliament's own Legislative Observatory, national
+government mirrors of adopted EU texts such as legislation.gov.uk, ENISA,
+EMSA, Wikipedia) rather than on EUR-Lex itself — EUR-Lex citations are
+kept in every `sources:` list as the nominally-authoritative-but-unread
+citation rather than dropped.
+**[[EU-SDG]] stays at `search-only`** — the one entity in this batch that
+could not be promoted despite genuine, repeated effort. Both original
+sources failed (EUR-Lex empty; `europeansources.info` aborted mid-fetch
+twice). Six alternates were then tried: the Commission's current
+single-digital-gateway policy page (404 — appears retired/moved), `cep.eu`
+(covers only the 2017 pre-regulation proposal stage), `monitoraggio.sdg.
+gov.it` (HTTP 403), Your Europe's citizen portal (no mention of the
+regulation), the eIDAS policy page (wrong topic), and a Dutch
+parliamentary-monitor mirror (wrong topic). None yielded a readable page
+about this specific regulation. A plausible Commission policy page for
+this regulation should exist and is worth a fresh search in a future pass
+— it may simply have moved to a URL not surfaced by this pass's searches.
+**A structural gap noticed but not acted on** (out of this pass's file
+scope): `regions/eu/index.md`'s legislation section does not mention
+[[EU-INSPIRE]], [[EU-EINVOICING-DIRECTIVE]], or
+[[EU-ENVIRONMENTAL-INFORMATION-DIRECTIVE]] at all, despite all three being
+established EU-level legislation entities with existing relationships
+(national implementations, standards-chain links). This pass added only
+small `✅` annotations to lines already mentioning its 20 entities per its
+instructions, and did not add new lines for entities absent from the
+index — flagged here rather than done, so the index's maintainers can
+decide where these three belong structurally.
+All three validation commands (`validation/run_all.py`,
+`tools/build_graph.py`, `tools/test_build_graph.py`) were run after these
+changes; see this batch's own completion report for results.
+
+## EU organisations/standards cluster re-verification (2026-08-28)
+Re-verified all 13 assigned entities (organisations/eu-cen.md,
+eu-cenelec.md, eu-edpb.md, eu-eurogeographics.md, eu-gaia-x.md, eu-geant.md,
+eu-semic.md; standards/eu-dcat-ap.md, eu-en-16931.md;
+frameworks/eu-dssc-blueprint.md, eu-ess.md; publications/eu-egov-benchmark.md,
+eu-voluntary-review-2023.md). 11 of 13 promoted `search-only` →
+`primary-source`; two open items below.
+**Still open after this pass:**
+- [[EU-GEANT]] stays at `search-only`. All three originally cited pages
+  (geant.org, about.geant.org, compendium.geant.org) 403 or return an empty
+  JS shell to automated fetches — this looks like bot-protection across the
+  whole geant.org family of domains, not a dead link, and the same block
+  hit dfn.de and eduroam.org when tried as further alternates. Three
+  alternates were read directly instead (Wikipedia, a CORDIS project
+  record, an archived GÉANT3+ partners page), landing exactly at a 50/50
+  split of the six sources now listed — the discipline's own borderline
+  case, so it was left unpromoted rather than forced. A future pass should
+  try geant.org via a different fetch path (e.g. an authenticated tool) or
+  look for a readable mirror of the current compendium.
+- [[EU-GAIA-X]]: no source read (this pass or before) states an
+  institutional relationship to [[EU-COMMON-DATA-SPACES]] or
+  [[EU-DSSC-BLUEPRINT]], despite obvious thematic overlap — the Commission's
+  own "Mobility Data" page (read this pass) treats a Gaia-X-affiliated
+  private initiative as an existing ecosystem to "build upon," which is
+  proximity, not a stated relationship. Still queued for a future pass with
+  a more targeted search (e.g. Commission communications specifically
+  naming Gaia-X as part of the data-spaces programme).
+- [[EU-EGOV-BENCHMARK]]: this pass found that the 2025 edition's own
+  headline EU publications (op.europa.eu, digital-strategy.ec.europa.eu's
+  2025-specific library page) describe the study's scope as "the 27
+  European Union Member States (EU27)" and do not themselves name the
+  eight non-EU countries the entity's `measures` edges also cover — a
+  narrower framing than the general DESI-comparison page's "35 countries."
+  A 2025-dated Norway factsheet (found via search, not fetched) confirms
+  Norway was still measured, so that edge stays at `confidence: medium`;
+  the other seven non-EU countries' edges were lowered to `confidence: low`
+  pending an edition-specific source naming each one. A future pass could
+  try fetching individual 2025 country factsheets for Switzerland, Albania,
+  Montenegro, North Macedonia, Serbia and Türkiye directly.
+- [[EU-VOLUNTARY-REVIEW-2023]]: two conflicting candidate dates surfaced
+  for COM(2023) 700 final's adoption — eeas.europa.eu states "published on
+  July 4, 2023," while a Commission Staff Working Document numbered
+  SWD(2023) 700 (found via search, not read directly) is headed "Brussels,
+  15.5.2023." Neither was reconciled against EUR-Lex's own text, which
+  returned no readable content across several URL forms this pass.
+  `start_date` stays `null`; a future pass should try EUR-Lex again (it may
+  be a transient fetch issue rather than a durable block) to settle this.
+- [[EU-EUROGEOGRAPHICS]]: its third cited source (an EEA page) is now dead
+  — 302s to a eurogeographics.org URL that 404s — and could not be
+  replaced with an equally authoritative third source this pass; two of
+  three (both eurogeographics.org's own pages) were enough for a majority,
+  but a replacement third source would strengthen this further. Also
+  corrected a stale membership figure: eurogeographics.org's own current
+  homepage states 60 organisations across 44 countries, not the 63/46
+  previously recorded, which could not be re-confirmed from any source
+  this pass.
+- Several EUR-Lex pages were unreadable this pass despite multiple URL
+  forms tried (plain TXT, ALL, TXT/HTML, and ELI views) — affecting
+  [[EU-ESS]]'s citation of Regulation (EC) No 223/2009 and
+  [[EU-VOLUNTARY-REVIEW-2023]]'s citation of COM(2023) 700 final. Both
+  entities were still promoted to `primary-source` on the strength of
+  other sources reaching a genuine majority, but a working EUR-Lex fetch
+  path would be a general win across this cluster.
+All three validation commands (`validation/run_all.py`,
+`tools/build_graph.py`, `tools/test_build_graph.py`) were run after these
+changes; see this session's own report for results.
+
+## INTL standards-body cluster re-verification (2026-08-28)
+Re-verified 16 entities: international (non-UN) standards bodies and
+treaties, plus [[DOMAIN-NATIONAL-SECURITY]]. Eleven entities promoted to
+`primary-source`: [[DOMAIN-NATIONAL-SECURITY]], [[INTL-IDSA]],
+[[INTL-IEC]], [[INTL-IETF]], [[INTL-ISO]], [[INTL-ISOC]], [[INTL-NIIS]],
+[[INTL-W3C]], [[INTL-X-ROAD]], [[INTL-IDS-RAM]] and
+[[INTL-ISO-IEC-27001]]. Five stayed `search-only`: [[INTL-COE]],
+[[INTL-OECD]], [[INTL-CONVENTION-108]], [[INTL-CONVENTION-108-PROTOCOL]]
+and [[INTL-CONVENTION-108-PLUS]].
+**Three domains confirmed fully, independently blocked, not just
+`coe.int`.** Every path tried against `coe.int` and `rm.coe.int` (treaty
+pages, member-state pages, news announcements, the bare homepage) returned
+HTTP 403, consistent with prior passes. This pass additionally confirmed
+the same domain-wide 403 block on **`iso.org`** (every path tried:
+`/standard/27001`, `/standard/iso-iec-27000-family`, `/about-us.html`,
+`/home.html`, `/news`) and on **`oecd.org`** (both cited pages plus the
+bare homepage). `commonslibrary.parliament.uk` also 403'd on two separate
+tries. Wikipedia articles were substituted and read directly wherever
+possible to partially compensate (ISO, IEC, ISO/IEC 27001, ISO/IEC 27000
+family, OECD, Council of Europe all corroborated this way), which is what
+pushed the three ISO-family entities over a genuine majority despite
+`iso.org` itself staying unread throughout — but for COE, OECD and the
+Convention 108 family, one substitute source wasn't enough to reach
+majority against 4-6 cited sources, so those five stay `search-only`.
+**New research-queue item**: if a future pass can reach `iso.org`,
+`oecd.org` or `coe.int` directly (different retrieval path/tool), these
+five entities are worth revisiting — the underlying facts were not found
+to be wrong anywhere, only unconfirmed by the organisations' own pages.
+**Two dead/unreadable citations found and documented, not silently
+dropped:**
+- `dataprotection.govmu.org`'s Mauritius CETS-223-ratification communiqué
+  (cited on [[INTL-CONVENTION-108]]'s Mauritius `applies-in` relationship,
+  and referenced in [[INTL-CONVENTION-108-PLUS]]'s body prose) now returns
+  HTTP 404 — gone, not blocked. The Mauritius ratification-of-the-amending-
+  protocol claim is flagged unconfirmed in both files rather than restated
+  as settled.
+- The WTO PDF cited on [[INTL-CONVENTION-108]]
+  (`wto.org/english/res_e/reser_e/2_ssophie_trade_dialogues_wto.pdf`) fetches
+  successfully but returns unreadable binary/compressed content to the
+  retrieval tool — a tool limitation on that specific PDF's encoding, not a
+  site block. Same issue hit the [[INTL-IDS-RAM]] 3.0 PDF
+  (an Illustrator/Photoshop-authored PDF whose text layer didn't extract);
+  two other IDSA pages covered the same content there, which is why
+  IDS-RAM still reached a majority and Convention 108 did not.
+**One factual correction on [[INTL-X-ROAD]]:** the previous pass's claim
+that Japan was "among the adopters" of X-Road does not survive a direct
+read. x-road.global's own history page (read directly) lists Finland, the
+Faroe Islands, El Salvador, Iceland, Åland and Ukraine as adopters/partners
+and does not mention Japan; Wikipedia's X-Road article likewise says
+nothing about Japan. The claim is dropped rather than repeated. The
+specific "2018" date for the X-tee/X-Road naming split was similarly
+downgraded to unconfirmed — the underlying distinction is well
+corroborated, but no page read this pass states the year.
+**Still open after this pass:**
+- [[INTL-COE]]'s member-count and Russia-post-expulsion-party-status
+  questions (already flagged by a prior pass) remain open; `coe.int`
+  staying blocked means the Council of Europe's own chart of ratifications
+  still cannot be checked directly.
+- The five entities that stayed `search-only` above would all benefit from
+  one more successfully-read source apiece — they are one source short of
+  a majority in three of the five cases (COE 1/5 with substitute, OECD 1/3
+  with substitute, Convention-108-Protocol 1/3), not zero.
+- ISO/IEC JTC 1 itself remains unmodelled (flagged by a prior pass on
+  [[INTL-IEC]]); this pass did not change that assessment.
+All three validation commands (`validation/run_all.py`,
+`tools/build_graph.py`, `tools/test_build_graph.py`) were run after these
+changes; see this batch's completion report for results.
+
+## UN bodies cluster re-verification (2026-08-28)
+Re-verified all 20 assigned UN-scope entities (organisations, programmes,
+frameworks, standards, legislation, a platform, a policy and a strategy —
+everything under UN organs, UNECE subsidiaries, UNESCO's AI ethics
+instrument, UN-GGIM and its European committee, and the 2030 Agenda/SDG
+indicator chain). **17 of 20 promoted to `verification: primary-source`.**
+Three stayed at `search-only`: [[UN-CES]], [[UN-EDIFACT]] and
+[[UN-UNCTAD]] — in each case fewer than half of the entity's cited sources
+could be genuinely read even after seeking alternates, so they were left
+honestly unpromoted rather than forced across the line.
+**A domain-wide finding, the same shape as the `digitaleoverheid.nl` block
+prior batches hit**: `unece.org` is **broadly 403-blocked this session** —
+confirmed by testing the bare root domain (`unece.org/`), which itself
+403s, not just the specific deep-linked pages originally cited. This
+affected [[UN-AARHUS]], [[UN-CEFACT]], [[UN-UNECE]], [[UN-CES]],
+[[UN-EDIFACT]] and [[UN-LOCODE]]'s originally-cited sources — six of this
+batch's twenty entities. `unctad.org` showed the same pattern for
+[[UN-UNCTAD]] (three different pages on the domain all 403'd, not just the
+one cited). Per this batch's instruction, alternates were sought and
+substituted where they could be found and genuinely read: Wikipedia (UNECE,
+UN/CEFACT, UN/LOCODE, EDIFACT, Aarhus Convention, UN Statistical
+Commission, ITU), the OSCE Aarhus Centres' page, `legislation.gov.uk`'s
+retained-EU-law mirror of Regulation (EU) 2019/1239 (used in place of a
+`eur-lex.europa.eu` fetch that returned empty content on every attempt),
+`service-architecture.com` and Nigeria's NEPC trade-agency page (both for
+UN/CEFACT), and CEPAL's own page (for UN-GGIM's exact founding date). This
+closed six of those seven entities to a genuine majority; only
+[[UN-EDIFACT]] and [[UN-CES]] (of the `unece.org`-affected group, alongside
+[[UN-UNCTAD]]) could not find enough alternates to cross 50%.
+**Two entities were substantively rebuilt on real primary sources this
+pass, not just re-confirmed:**
+- [[UN-DATA-COMMONS]]'s sole prior citation was a Grokipedia page (already
+  flagged as the weakest citation in the Atlas) that now also 403s. A
+  targeted search located `un.org/en/desa/un-data-commons-for-the-sdgs` — a
+  dedicated UN DESA page for this exact platform that had simply never
+  been found in the original research, not a page that became newly
+  available. It and Google's own blog announcement of the September 2024
+  expansion are both read directly. This also corrected the launch date:
+  the platform launched **4 October 2023** (at the SDG Summit, with
+  Google.org), and the September 2024 event the prior text described as
+  "the" launch was actually a later expansion to add WHO, ILO and UNICEF.
+  `confidence` moves from `low` to `medium`.
+- [[UN-DATA-STRATEGY]]'s sole prior citation was the UN 2.0 quintet PDF,
+  which never actually named the strategy — a documented placeholder, not
+  a broken link. Two dedicated `un.org/en/content/datastrategy` pages were
+  found and read directly, confirming the strategy's real title ("...for
+  Action by Everyone, Everywhere, with Insight, Impact and Integrity"), its
+  eight priority areas, and — genuinely correcting the prior framing — that
+  it was approved around **April 2020**, three years *before* [[UN-2-0]]'s
+  September 2023 policy brief. The strategy predates and is drawn upon by
+  UN 2.0's data capability; it was not produced by or for UN 2.0, as the
+  prior wording could be read to imply.
+**Other genuine corrections and new facts, not just confirmations:**
+- [[UN-GGIM]]'s `start_date` moves from the `2011-07-01` placeholder to the
+  confirmed **2011-07-27**: CEPAL's own page (a UN regional commission,
+  read directly) names ECOSOC resolution 2011/24 and the exact date. This
+  is a genuine sourced correction, not a fabrication — the source itself
+  gives the day, unlike the UN anchor entity's own founding date, which
+  stays `null` because its source gives only a year.
+- [[UN-UNSC]]'s founding year is **genuinely disputed across sources read
+  this pass**: un.org/DESA's own page says 1947; Wikipedia and a WebSearch
+  cross-check (Resolution 8(I)) say 1946, matching this entity's existing
+  `start_date`. Left open rather than silently resolved either way —
+  flagged in the entity's own body for whoever next has time to find the
+  resolution text itself.
+- [[UN-2-0]]'s previously-flagged "2021/09 file path vs. September 2023
+  policy brief" oddity is resolved: un.org's *current* URL for the same
+  policy brief sits under a `2023-09` path (found via WebSearch); the
+  originally-cited `2021/09` PDF was simply a stale/different path, not
+  evidence the quintet framing predates the brief.
+- [[UN-CEFACT]]: Wikipedia (read directly) adds a founding year — 1996 —
+  not previously recorded. Per the no-date-fabrication discipline, this is
+  recorded in prose only; `start_date` stays `null` rather than being
+  padded to `1996-01-01`.
+- [[UN-GGIM-EUROPE]]'s own "About Us" page (read directly) states in its
+  own words that it "is supported by EuroGeographics" and is headquartered
+  in Brussels — the clearest first-party confirmation yet of a connection
+  the entity's body had previously only inferred from a third-party
+  conference presentation. EuroGeographics itself is still not created as
+  an entity (outside this UN-cluster pass's scope), but the case for it is
+  now stronger.
+- [[UN-AI-ETHICS-RECOMMENDATION]]: two specific figures in the original
+  description — "nearly thirty countries" using the Recommendation for
+  national legislation, and the Global Forum being "hosted by Czechia and
+  later Slovenia" — were **not** found on any UNESCO page read this pass.
+  They are carried forward explicitly labelled as unconfirmed rather than
+  silently repeated as verified.
+- [[UN-AARHUS]]: a WebSearch surfaced a conflicting party count (47 Parties
+  as of March 2025, vs. the entity's existing 49 Parties/April 2023) from
+  search-snippet text only, not a directly-read primary page. The existing
+  49/April-2023 figure is kept because it was the one actually confirmed by
+  a direct fetch (Wikipedia); the possible more-recent 47 figure is noted
+  in the entity's body for whoever next revisits it.
+**Relationship-directionality check**: confirmed correct on all six
+UNECE-subsidiary entities — [[UN-CEFACT]], [[UN-EDIFACT]] and [[UN-LOCODE]]
+all carry `maintained-by`/`part-of` pointing at [[UN-UNECE]] (not the
+reverse), [[UN-CES]] carries `part-of` [[UN-UNECE]], [[UN-AARHUS]] carries
+`maintained-by` [[UN-UNECE]], and [[UN-GGIM-EUROPE]] carries `part-of`
+[[UN-GGIM]]. No corrections needed here — the prior batches had already
+modelled these correctly.
+`international/un/index.md` was rewritten to reflect these results (freer
+edit, per this batch's brief, since no sibling agent touches the UN
+cluster this pass) — verification status and key dates are now annotated
+per entity, and two new cross-level chains (UN-AARHUS → EU environmental
+directive → six countries; UN-CEFACT → UN-LOCODE → EU-EMSWE) are shown
+alongside the still-open statistics gap.
+All three validation commands (`validation/run_all.py`,
+`tools/build_graph.py`, `tools/test_build_graph.py`) were run after these
+changes; see this batch's own completion report for results.

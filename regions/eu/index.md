@@ -33,9 +33,9 @@ Anchor entity: [[EU]]
 ### Data
 
 - [[EU-GDPR]] — General Data Protection Regulation (Reg. 2016/679) → [[NL-UAVG]]
-- [[EU-DGA]] — Data Governance Act (Reg. 2022/868) ⚠ repeal proposed
+- [[EU-DGA]] — Data Governance Act (Reg. 2022/868) ⚠ repeal proposed ✅ 2026-08-28
 - [[EU-DATA-ACT]] — Data Act (Reg. 2023/2854)
-- [[EU-OPEN-DATA-DIRECTIVE]] — Open Data Directive (Dir. 2019/1024) ⚠ repeal proposed → [[NL-WHO]]
+- [[EU-OPEN-DATA-DIRECTIVE]] — Open Data Directive (Dir. 2019/1024) ⚠ repeal proposed → [[NL-WHO]] ✅ 2026-08-28
 
 ### Statutory bases of the European systems
 
@@ -47,13 +47,13 @@ Anchor entity: [[EU]]
 
 - [[EU-UK-ADEQUACY]] — two decisions, 2021, with a sunset clause
 - [[EU-CH-ADEQUACY]] — one decision, **2000**, with none _(Decision
-  2000/518/EC, still in force under Article 45(9) GDPR)_
+  2000/518/EC, still in force under Article 45(9) GDPR)_ ✅ 2026-08-28
 
 ### Transport and trade
 
 - [[EU-EMSWE]] — European Maritime Single Window environment (Reg.
   2019/1239) _(names [[UN-LOCODE]] in its common location database — the
-  Atlas's only EU→UN/CEFACT edge)_
+  Atlas's only EU→UN/CEFACT edge; applicable from 15 Aug 2025)_ ✅ 2026-08-28
 
 ### Digital identity
 
@@ -62,10 +62,10 @@ Anchor entity: [[EU]]
 
 ### Cybersecurity
 
-- [[EU-NIS]] — NIS Directive (Dir. 2016/1148) _(superseded 18 Oct 2024)_ → [[NL-WBNI]]
+- [[EU-NIS]] — NIS Directive (Dir. 2016/1148, adopted 6 Jul 2016) _(superseded 18 Oct 2024)_ → [[NL-WBNI]] ✅ 2026-08-28
 - [[EU-NIS2]] — NIS2 Directive (Dir. 2022/2555) → [[NL-CBW]]
 - [[EU-CER]] — Critical Entities Resilience Directive (Dir. 2022/2557)
-- [[EU-CYBERSECURITY-ACT]] — Cybersecurity Act (Reg. 2019/881)
+- [[EU-CYBERSECURITY-ACT]] — Cybersecurity Act (Reg. 2019/881, adopted 17 Apr 2019) ✅ 2026-08-28
 
 ### Public services, interoperability and mobility
 
@@ -75,13 +75,18 @@ Anchor entity: [[EU]]
 
 ### AI
 
-- [[EU-AI-ACT]] — Artificial Intelligence Act (Reg. 2024/1689)
+- [[EU-AI-ACT]] — Artificial Intelligence Act (Reg. 2024/1689) _(high-risk
+  timetable deferred to 2 Dec 2027 by Reg. (EU) 2026/1744, "Digital Omnibus
+  on AI" — adopted, in force 27 Jul 2026, no Atlas entity of its own)_ ✅ 2026-08-28
 
 ### Pending
 
-- [[EU-DIGITAL-OMNIBUS]] — Commission proposal, 19 Nov 2025. **Not adopted.**
-  Would repeal [[EU-DGA]] and [[EU-OPEN-DATA-DIRECTIVE]] into
-  [[EU-DATA-ACT]], and amend [[EU-GDPR]] and [[EU-AI-ACT]].
+- [[EU-DIGITAL-OMNIBUS]] — COM(2025) 837, Commission proposal, 19 Nov 2025.
+  **Not adopted** (still under negotiation as of 24 Jul 2026). Would repeal
+  [[EU-DGA]] and [[EU-OPEN-DATA-DIRECTIVE]] into [[EU-DATA-ACT]], and amend
+  [[EU-GDPR]]. Corrected 2026-08-28: does **not** amend [[EU-AI-ACT]] — that
+  is a distinct sibling proposal, COM(2025) 836 ("Digital Omnibus on AI"),
+  already adopted as Reg. (EU) 2026/1744 (see above). ✅ 2026-08-28
 
 ## Cross-level chains established
 
@@ -181,23 +186,23 @@ the separation was deliberate.
 - [[EU-COMMON-DATA-SPACES]] — the umbrella; **all fourteen areas are now
   entities**
   - [[EU-EHDS]] — Health _(Reg. (EU) 2025/327 — **the only one with its own
-    regulation**, and the only one carrying `applies-in` edges)_
+    regulation**, and the only one carrying `applies-in` edges)_ ✅ 2026-08-28
   - [[EU-EOSC]] — Research and innovation _(**the most operational**: the EU
     Node has run since October 2024 and a federation of thirteen candidate
-    nodes was demonstrated in 2025)_
+    nodes was demonstrated in 2025)_ ✅ 2026-08-28
   - [[EU-CEEDS]] — Energy _(Digital Europe Programme deployment; 15+ pilots
-    across member states)_
+    across member states)_ ✅ 2026-08-28
   - [[EU-CULTURAL-HERITAGE-DATA-SPACE]] — Cultural heritage _(built on
-    Europeana and its 60M+ digitised items — the one that started with the
-    data already there)_
-  - [[EU-MANUFACTURING-DATA-SPACE]] — Industry
+    Europeana and its 52-60M+ digitised items — the one that started with the
+    data already there)_ ✅ 2026-08-28
+  - [[EU-MANUFACTURING-DATA-SPACE]] — Industry ✅ 2026-08-28
   - [[EU-FINANCIAL-DATA-SPACE]] — Finance _(FIDA is one of three components;
     the other two are unidentified)_
   - [[EU-LANGUAGE-DATA-SPACE]] — Language _(the one whose stated purpose
     includes **monetising** data)_
-  - [[EU-EMDS]] — Mobility
-  - [[EU-GREEN-DEAL-DATA-SPACE]] — Green Deal
-  - [[EU-AGRI-DATA-SPACE]] — Agriculture
+  - [[EU-EMDS]] — Mobility ✅ 2026-08-28
+  - [[EU-GREEN-DEAL-DATA-SPACE]] — Green Deal _(references [[EU-INSPIRE]])_ ✅ 2026-08-28
+  - [[EU-AGRI-DATA-SPACE]] — Agriculture ✅ 2026-08-28
   - [[EU-PUBLIC-ADMIN-DATA-SPACE]] — Public administrations _(⚠ `coverage: low`)_
   - [[EU-SKILLS-DATA-SPACE]] — Skills _(⚠ `coverage: low`)_
   - [[EU-TOURISM-DATA-SPACE]] — Tourism _(⚠ `coverage: low`)_

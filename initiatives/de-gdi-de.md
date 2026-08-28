@@ -10,9 +10,11 @@ description: >
   municipalities to make spatial data from different administrative levels
   available across state and departmental boundaries through standardised
   services. It is Germany's contribution to the European spatial data
-  infrastructure under INSPIRE, is governed by the Lenkungsgremium GDI-DE,
-  and rests on an administrative agreement between the federation and all
-  Länder in force since 1 January 2018.
+  infrastructure under INSPIRE, is governed by the Lenkungsgremium GDI-DE
+  (supported by a coordination office at the Bundesamt für Kartographie und
+  Geodäsie in Frankfurt am Main), and rests on an administrative agreement
+  between the federation and all Länder dated 5 December 2017 and in force
+  since 1 January 2018.
 
 level: national
 country: DE
@@ -21,11 +23,11 @@ region: EU
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: null
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -39,15 +41,15 @@ relationships:
   - type: implements
     target: EU-INSPIRE
     source: fact
-    evidence: "The GDI-DE is Germany's contribution to creating a spatial data infrastructure in the European Community (INSPIRE); the Lenkungsgremium GDI-DE steers and coordinates the development and further development of the GDI-DE including implementation of the INSPIRE Directive (2007/2/EC) (lvermgeo.sachsen-anhalt.de; mik.brandenburg.de; gdi-de.org). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading gdi-de.org's own page, mik.brandenburg.de and lvermgeo.sachsen-anhalt.de directly (2026-08-28): gdi-de.org's own page states INSPIRE's rules on geodata interoperability 'have been in effect since 28.12.2010' and that GDI-DE provides the German structure for compliance; lvermgeo.sachsen-anhalt.de confirms the Lenkungsgremium GDI-DE 'steers and coordinates' GDI-DE development and INSPIRE compliance; mik.brandenburg.de confirms the current Verwaltungsvereinbarung governs both GDI-DE's expansion and its integration with the European INSPIRE framework."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: governed-by
     target: DE-GEOZG
     source: fact
-    evidence: "The Geodatenzugangsgesetz of 10 February 2009 forms the legal basis both for building a national spatial data infrastructure and for implementing the INSPIRE Directive at federal level (mik.brandenburg.de; gdi.bayern.de/gdiby/gesetze). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading lvermgeo.sachsen-anhalt.de directly (2026-08-28): 'The Geodata Access Act (GeoZG) from February 10, 2009, establishes the legal foundation for both the national geodata infrastructure and INSPIRE directive implementation at the federal level.' de.wikipedia.org, also read directly, confirms the federal government and the individual Länder each enacted Geodatenzugangsgesetze/Geodateninfrastrukturgesetze to fulfil the same requirement."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -55,22 +57,28 @@ sources:
   - title: "INSPIRE Umsetzung | Geodateninfrastruktur Deutschland"
     url: "https://www.gdi-de.org/en/praxis-projekte/inspire-umsetzung"
     publisher: "Geodateninfrastruktur Deutschland (GDI-DE)"
+    accessed: "2026-08-28"
   - title: "GDI-DE — Geodateninfrastruktur Deutschland"
     url: "https://www.lvermgeo.sachsen-anhalt.de/de/gdp-gdi-deutschland.html"
     publisher: "Landesamt für Vermessung und Geoinformation Sachsen-Anhalt"
+    accessed: "2026-08-28"
   - title: "Geodateninfrastruktur Deutschland"
     url: "https://mik.brandenburg.de/mik/de/themen/vermessung-geoinformation-grundstueckswerte/fachthemen/geodateninfrastruktur/geodateninfrastruktur-deutschland/"
     publisher: "Ministerium des Innern und für Kommunales des Landes Brandenburg"
+    accessed: "2026-08-28"
   - title: "Geodateninfrastruktur"
     url: "https://de.wikipedia.org/wiki/Geodateninfrastruktur"
     publisher: "Wikipedia"
+    accessed: "2026-08-28"
 ---
 
 # Geodateninfrastruktur Deutschland (GDI-DE)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Re-verified 2026-08-28.** All four cited pages read directly (one,
+> `mik.brandenburg.de`, returned a transient HTTP 503 on the first attempt
+> and loaded correctly on retry, matching the batch guidance that a single
+> 503 on a known German-government domain is often transient rather than a
+> genuine block). `verification: primary-source`.
 
 ## Description
 
@@ -79,17 +87,28 @@ Kommunen** whose aim is to make spatial data from different administrative
 levels available across state and departmental boundaries through
 standardised services. It is at the same time **Germany's contribution to
 creating a spatial data infrastructure in the European Community** under
-[[EU-INSPIRE]].
+[[EU-INSPIRE]] — confirmed directly this pass on gdi-de.org's own page,
+which states INSPIRE's interoperability rules "have been in effect since
+28.12.2010."
 
-Its governance and legal basis:
+Its governance and legal basis, now more precisely dated than before:
 
 - The **Lenkungsgremium GDI-DE** steers and coordinates the development and
-  further development of the GDI-DE, including implementation of the
-  INSPIRE Directive.
+  further development of the GDI-DE, including INSPIRE compliance —
+  confirmed directly this pass, with membership from the federal
+  government, all sixteen Länder and three municipal associations, plus
+  advisory participation from business and science. A **Koordinierungsstelle**
+  (coordination office) housed at the **Bundesamt für Kartographie und
+  Geodäsie (BKG) in Frankfurt am Main** — newly confirmed this pass and not
+  previously recorded — executes its decisions.
 - The current **Verwaltungsvereinbarung (VV GDI-DE)** between the Bund and
   the Länder governs its build-out and operation. It was signed by the Bund
-  and all Länder and entered into force on **1 January 2018**.
-- [[DE-GEOZG]] is the statutory basis.
+  and all Länder, **dated 5 December 2017** per mik.brandenburg.de (read
+  directly), and **entered into force on 1 January 2018** per
+  lvermgeo.sachsen-anhalt.de (also read directly) — both dates are kept, as
+  they plausibly describe signature and entry-into-force separately rather
+  than conflicting.
+- [[DE-GEOZG]] is the statutory basis, confirmed directly this pass.
 
 ## Typed `initiative`, not `organisation` or `platform`
 
@@ -107,7 +126,8 @@ contributor will face the same question.
 The Lenkungsgremium GDI-DE is **not modelled as a separate organisation**,
 though it arguably could be. It is a governing committee of an initiative
 rather than a standing institution, and creating it would add a node
-reachable only from this one.
+reachable only from this one. The same applies to the newly-confirmed
+Koordinierungsstelle at the BKG.
 
 ## The second Bund-Länder Verwaltungsvereinbarung in this batch
 
@@ -125,8 +145,10 @@ intergovernmental agreement. Logged in `discovery/unresolved.md`.
 
 ## Relationships
 
-- `implements` [[EU-INSPIRE]].
-- `governed-by` [[DE-GEOZG]].
+- `implements` [[EU-INSPIRE]] — confirmed directly this pass, `confidence:
+  high`.
+- `governed-by` [[DE-GEOZG]] — confirmed directly this pass, `confidence:
+  high`.
 
 Note the type contrast with [[DE-GEOZG]], which
 `implements-requirement-from` the same directive. That is intentional:
@@ -138,4 +160,5 @@ types.
 ## Sources
 
 Listed in frontmatter — including two Land authorities, which is again the
-Atlas citing the Länder while unable to model them (see [[DE-GEOZG]]).
+Atlas citing the Länder while unable to model them (see [[DE-GEOZG]]). All
+four read directly this pass.

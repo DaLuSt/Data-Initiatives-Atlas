@@ -17,13 +17,13 @@ country: null
 region: EU
 
 status: active
-confidence: low
-coverage: low
-verification: search-only
+confidence: medium
+coverage: medium
+verification: primary-source
 
-start_date: null
+start_date: 2019-07-16
 end_date: null
-last_verified: null
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -45,8 +45,8 @@ relationships:
   - type: supersedes
     target: EU-PSI-DIRECTIVE
     source: fact
-    evidence: "Directive 2003/98/EC on the re-use of public sector information, as amended by Directive 2013/37/EU, was recast as Directive (EU) 2019/1024 on open data and the re-use of public sector information, which repealed it (eur-lex.europa.eu ELI dir/2019/1024; eur-lex.europa.eu ELI dir/2003/98; eur-lex.europa.eu summary 'Open data and the reuse of public-sector information'). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading digital-strategy.ec.europa.eu's own 'Open data' policy page directly (2026-08-28): the Directive 'entered into force on 16 July 2019, replacing the earlier 2003 PSI Directive.' europadecentraal.nl, also read directly, corroborates the Dutch transposition context. eur-lex.europa.eu was attempted and returned empty content, consistent with every other EUR-Lex attempt made across this batch."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
@@ -121,34 +121,56 @@ relationships:
     valid_until: null
 
 sources:
-  - title: "Directive - 2019/1024 - EN - psi directive"
-    url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32019L1024"
-    publisher: "EUR-Lex (Publications Office of the European Union)"
+  - title: "European legislation on open data"
+    url: "https://digital-strategy.ec.europa.eu/en/policies/open-data"
+    publisher: "European Commission — Shaping Europe's digital future"
+    accessed: "2026-08-28"
   - title: "Open Data Richtlijn"
     url: "https://europadecentraal.nl/onderwerp/digitale-overheid/privacy/open-data-richtlijn/"
     publisher: "Europa decentraal"
+    accessed: "2026-08-28"
+  - title: "Directive - 2019/1024 - EN - psi directive"
+    url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32019L1024"
+    publisher: "EUR-Lex (Publications Office of the European Union)"
 ---
 
 # Open Data Directive (Directive (EU) 2019/1024)
 
-> **Sourcing caveat.** This entity was compiled from search-engine results
-> only; the cited pages were confirmed to exist but were not read. See
-> `discovery/unresolved.md` and `progress/current-batch.md`.
+> **Re-verified 2026-08-28.** The Commission's own open-data policy page
+> was found and read directly, closing this entity's long-standing
+> `confidence: low`/`coverage: low` status with confirmed dates and
+> substance; europadecentraal.nl was re-confirmed. `eur-lex.europa.eu`
+> returned empty content, consistent with every other EUR-Lex attempt made
+> across this batch, and was not read. `verification` moves from
+> `search-only` to `primary-source`.
 
 ## Description
 
 Directive (EU) 2019/1024 concerns open data and the re-use of public sector
-information. It governs the re-use of existing documents held by public
-sector bodies and public undertakings of the member states. Re-use, in the
-directive's sense, means public data — usually processed by government
-institutions — being used for a purpose other than that for which it was
-originally collected.
+information. Confirmed by reading the Commission's own policy page
+directly: it **entered into force on 16 July 2019**, adopted 20 June 2019,
+**replacing the earlier 2003 PSI Directive**. It governs the re-use of
+existing documents held by public sector bodies and public undertakings of
+the member states, ensuring "government transparency and fair competition"
+and helping "address societal challenges." Re-use, in the directive's
+sense, means public data — usually processed by government institutions —
+being used for a purpose other than that for which it was originally
+collected.
 
 Its stated aims include stimulating cross-border re-use of public
 information, supporting the development of EU-wide goods and services built
 on public information, and preventing distortions of competition in
-PSI-related activity. It also provides for categories of high-value
-datasets.
+PSI-related activity. It also provides for categories of **high-value
+datasets** — confirmed directly: these "must be available free of charge,
+in machine-readable formats, and through APIs and bulk download," with the
+Commission adopting the specific list with member-state committee
+assistance.
+
+The **transposition deadline was 16 July 2021** — confirmed directly from
+the Commission's own page, which states member states "were required to
+transpose the Directive by 16 July 2021." (A WebSearch cross-check found
+some secondary sources citing 17 July 2021 instead; the Commission's own
+page, read directly, is treated as authoritative here.)
 
 As a **directive** rather than a regulation, it requires transposition into
 national law — which is precisely the distinction `metadata/taxonomy.md` §2
@@ -187,7 +209,9 @@ dataset regime is still unresearched (`coverage: low`).
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, two of three read directly this pass — the
+Commission's own open-data policy page and europadecentraal.nl.
+`eur-lex.europa.eu` returned empty content and was not read.
 
 ## The recast, and why the predecessor is an entity
 
@@ -202,8 +226,9 @@ were written to transpose the **old** directive and are still in force:
 
 ## Two ways member states transposed it
 
-The transposition deadline was **17 July 2021**, and the sources describe two
-distinct approaches:
+The transposition deadline was **16 July 2021** (see above; some
+secondary sources cite 17 July), and the sources describe two distinct
+approaches:
 
 | Approach | Countries | In the Atlas |
 |---|---|---|

@@ -28,7 +28,7 @@ verification: search-only
 
 start_date: 2001-11-08
 end_date: null
-last_verified: "2026-08-19"
+last_verified: "2026-08-28"
 previous_version: null
 successor: null
 
@@ -44,14 +44,14 @@ relationships:
   - type: part-of
     target: INTL-CONVENTION-108
     source: fact
-    evidence: "The Additional Protocol to Convention ETS No. 108 on supervisory authorities and transborder data flows, ETS No. 181, was opened for signature on 8 November 2001; parties regard its substantive articles as additional articles to the Convention (coe.int 'Convention 108 and Protocols'; coe.int 'Treaties — Data Protection'; rm.coe.int ETS 181 Explanatory Report). NOT READ — search-only."
+    evidence: "The Additional Protocol to Convention ETS No. 108 on supervisory authorities and transborder data flows, ETS No. 181, was opened for signature on 8 November 2001; parties regard its substantive articles as additional articles to the Convention (coe.int 'Convention 108 and Protocols'; coe.int 'Treaties — Data Protection'; rm.coe.int ETS 181 Explanatory Report). Confirmed independently by reading cnpd.public.lu directly (2026-08-28), Luxembourg's data protection authority, which states the Additional Protocol 'supplements Convention 108' and that Luxembourg ratified it on 24 February 2004, having ratified the Convention itself on 10 February 1988. Both coe.int pages and rm.coe.int returned HTTP 403 on retry 2026-08-28 (domain-wide block, see INTL-COE) and stay unread."
     confidence: medium
     valid_from: 2001-11-08
     valid_until: null
   - type: maintained-by
     target: INTL-COE
     source: fact
-    evidence: "The Additional Protocol is a Council of Europe treaty, ETS No. 181, published in the Council of Europe treaty series and listed by the Council of Europe alongside Convention 108 and the amending protocol (coe.int 'Convention 108 and Protocols'). NOT READ — search-only."
+    evidence: "The Additional Protocol is a Council of Europe treaty, ETS No. 181, published in the Council of Europe treaty series and listed by the Council of Europe alongside Convention 108 and the amending protocol (coe.int 'Convention 108 and Protocols'). NOT READ — coe.int returned HTTP 403 on retry 2026-08-28 (domain-wide block, see INTL-COE)."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -66,13 +66,20 @@ sources:
   - title: "Council of Europe conventions and rights"
     url: "https://cnpd.public.lu/en/legislation/droit-europ/conseil-europe.html"
     publisher: "Commission nationale pour la protection des données (CNPD), Luxembourg"
+    accessed: "2026-08-28"
 ---
 
 # Additional Protocol to Convention 108 (ETS 181)
 
-> **Sourcing caveat.** Compiled from search-engine results only; the cited
-> pages were confirmed to exist but were not read. `verification:
-> search-only`.
+> **Re-verification attempted 2026-08-28, stays `search-only`.** One of
+> three cited sources was read directly this pass: cnpd.public.lu
+> (Luxembourg's data protection authority), which confirms the Additional
+> Protocol supplements Convention 108 and gives Luxembourg's own
+> ratification dates for both instruments. The other two — `coe.int` and
+> `rm.coe.int` — both returned HTTP 403 on retry (domain-wide block,
+> confirmed again this pass; see [[INTL-COE]]). One of three is not a
+> majority, so `verification` stays `search-only` rather than being
+> forced.
 
 ## Description
 
@@ -111,4 +118,6 @@ entity is `active` rather than `superseded`.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter. One of three read directly this pass —
+cnpd.public.lu. Both `coe.int`/`rm.coe.int` citations remain unread
+(domain-wide block; see verification note above).
