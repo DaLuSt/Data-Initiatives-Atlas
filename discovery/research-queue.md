@@ -5,12 +5,20 @@
 > the entities themselves. Nothing here is struck through, because struck-out
 > rows made the queue longer every time it got shorter.
 >
-> **Largest open items:** portal custodians for several national portals
-> (Italy's closed 2026-08-25 — see the France section below);
-> [[NL-BRI]]'s AWR Chapter IVA basis; the Spanish and Polish
-> primary-citation gaps; and the Comunidades Autónomas, now unblocked and
-> unstarted. [[PL-PESEL]], Poland's population register, is modelled as
-> of 2026-08-22 — the second research-queue pickup.
+> **Largest open items:** the Comunidades Autónomas, now unblocked and
+> unstarted; OSLO/Digitaal Vlaanderen; and Germany's several `Next`-flagged
+> gaps (FIM, DKE, the renamed BMWK/BMDV ministries). [[PL-PESEL]], Poland's
+> population register, is modelled as of 2026-08-22 — the second
+> research-queue pickup. **2026-08-30 pickup (sixth):** closed six items in
+> one pass — [[NL-BRI]]'s AWR Chapter IVA citation (with a correction: the
+> chapter runs articles 21–22i, not 21–21k), completing `governed-by` edges
+> on all ten basisregistraties; [[PL-ODO]]'s official Dz.U. 2018 poz. 1000
+> citation via `eli.gov.pl`; [[NL-DATA-OVERHEID]]'s custodian ([[NL-LOGIUS]],
+> via KOOP); a new [[NL-DIGID]] entity, the Netherlands' missing digital-
+> identity platform; and two new Estonian entities, [[EE-CERT-EE]] and
+> [[EE-KUBERTURVALISUSE-SEADUS]]. The queued "BOE citation for Real Decreto
+> 729/2023" item was found already closed (resolved 2026-08-26, never
+> removed from this file) and is removed here as a housekeeping fix.
 >
 > **The `level` vocabulary is no longer a blocker.** `level: subnational` was
 > added 2026-08-21 and the three Belgian sub-federal ODD instruments are
@@ -208,7 +216,6 @@ by accident.
 
 | Area / entity | Why it needs research | Suggested batch | Noted by / date |
 |---|---|---|---|
-| **The Dutch open-data portal custodian** *(still open)* | [[NL-DATA-OVERHEID]] is the only national portal in the Atlas with no custodian modelled. Three other countries now have one; Spain joined them on 2026-08-19 via [[ES-RED-ES]], and Italy joined them on 2026-08-25 via [[IT-DATI-GOV-IT]]'s own "Chi siamo" page, which names [[IT-AGID]] directly | Next | France batch |
 | RGS and RGAA | France's security and accessibility reference frameworks, siblings of [[FR-RGI]] | Later | France batch |
 | France Identité | Recorded in prose on [[FR-FRANCECONNECT]]; not its own entity | Later | France batch |
 | Ordonnance n° 2005-1516 | Legal basis of [[FR-RGI]]; not modelled | Later | France batch |
@@ -218,7 +225,6 @@ by accident.
 
 | Area / entity | Why it needs research | Suggested batch | Noted by / date |
 |---|---|---|---|
-| **BOE citation for Real Decreto 729/2023** | The decree creating [[ES-AESIA]]. No search result returned its BOE identifier, so the Atlas's first AI Act link rests on secondary sources and government press material | **Next** | Spain batch |
 | **Spanish organic law on artificial intelligence** | Sources refer to one landing the AI Act domestically with sanctions and sandboxes, at a stage they describe inconsistently. Not created — the Atlas already carries one instrument whose sources conflict ([[FR-NIS2-LOI]]) and does not need a second on weaker evidence | Next | Spain batch |
 | **Ley 39/2015 and Ley 40/2015** | Spain's common administrative procedure and public-sector legal regime acts — the current legal base for much of what [[ES-AEAD]] does, and the successors to Ley 11/2007 which established [[ES-ENI]] | Next | Spain batch |
 | **Spain's INSPIRE transposition** | [[EU-INSPIRE]] now carries `applies-in` → `ES` with no transposing instrument identified | Later | Spain batch |
@@ -231,7 +237,6 @@ by accident.
 
 | Area / entity | Why it needs research | Suggested batch | Noted by / date |
 |---|---|---|---|
-| **Chapter IVA of the AWR** | [[NL-BRI]]'s statutory basis, and the only one of the ten basisregistraties without a `governed-by` edge. No citable identifier was found for the chapter when the other nine were closed | **Next** | Register batch; narrowed 2026-08-18 |
 | **Digimelding** | The stelsel's facility for reporting suspected errors in the registrations, alongside [[NL-DIGIKOPPELING]]. Named in one sentence of one source | Next | Register batch |
 | **SVB-BGT** | Samenwerkingsverband Bronhouders voor de BGT — the cooperative organising seven categories of bronhouder into one national map. Named in one source | Later | Register batch |
 | **Rijkswaterstaat, ProRail, RVO** | BGT and BRO bronhouders; none is an Atlas entity | Later | Register batch |
@@ -243,7 +248,6 @@ by accident.
 
 | Area / entity | Why it needs research | Suggested batch | Noted by / date |
 |---|---|---|---|
-| **Dz.U./ISAP citation for [[PL-ODO]]** | The weakest-sourced of the six national GDPR instruments — no primary legal citation found, and its substantive GDPR-specification provisions are entirely unestablished | **Next** | Poland batch |
 | **A ministry or Commission source for the eIDAS 2.0 incompatibility** | [[PL-MOBYWATEL]]'s edge to [[EU-EIDAS2]] — the Atlas's **only** eIDAS2 link — rests on press reporting alone | **Next** | Poland batch |
 | **CSIRT MON** | Poland's military CSIRT, and the last of the three still unmodelled — [[PL-NASK]] carries CSIRT NASK and [[PL-ABW]] carries CSIRT GOV | Later | Poland batch; narrowed 2026-08-18 |
 | **The operator of [[PL-DANE-GOV-PL]]** | Not identified by any source found. Three of six national open data portals still have no custodian in the graph | Next | Poland batch |
@@ -341,9 +345,7 @@ by accident.
 | The five `github.com` sources | Cited on [[BE-BELGIF]], [[EU-SEMIC]], [[BE-DCAT-AP-BE]] and [[EU-DCAT-AP]]. Refused by the **GitHub proxy**, which scopes a session to its configured repositories — a different policy from the egress allowlist, and one an allowlist entry will not lift. These five may never be re-verifiable from inside a session | Blocked (GitHub proxy) | Full sweep / 2026-08-19 |
 | Six entities with no checkable claims | [[RO]], [[UA]], [[FR-ETALAB]], [[NL-LOGIUS]], [[NL-NICTIZ]], [[NO-ALTINN]] — short names and no legal identifier, so `tools/reverify.py` can only fetch their sources, not corroborate anything against them. Either richer `alternative_names` or acceptance that these are judgment-only entities | Later | Full sweep / 2026-08-19 |
 | Hub-aware Explorer traversal | The neighbourhood control's depth is a blunt lever on a hub-heavy graph: a path `A → EU → B` exists between almost any pair and means only "both are European". Not traversing *through* anchor and `DOMAIN-*` nodes — or making that a toggle — would make deep hops meaningful and would make wikilinks-on mode usable at depth, which it is not today. Measured: median seed reaches 66% of the graph at 2 hops with wikilinks on | Later (design) | Explorer depth batch / 2026-08-20 |
-| Estonia — CERT-EE and the Küberturvalisuse seadus | [[EE]] now has a modelled layer and **no cybersecurity entity at all**, where [[NL]], [[BE]], [[DE]], [[PL]], [[CZ]] and [[PT]] do. CERT-EE sits inside [[EE-RIA]] | **Next** | Estonia batch / 2026-08-20 |
 | Estonia's Open Data Directive transposition | Estonia was **not** among the nineteen member states given letters of formal notice in September 2021, so it appears to have notified on time — but the instrument is unidentified. Whether [[EE-ATS]] is the vehicle is unestablished | Next | Estonia batch / 2026-08-20 |
-| DigiD | The Netherlands has no digital identity platform entity, while [[FR-FRANCECONNECT]], [[ES-CLAVE]] and [[PL-MOBYWATEL]] all exist. Surfaced by writing [[EE-E-RESIDENCY]], which needed a Dutch counterpart to compare against and found none | **Next** | Estonia batch / 2026-08-20 |
 | Estonian eID card and Mobile-ID | The identity infrastructure [[EE-E-RESIDENCY]] is built on, and the link to [[EU-EIDAS2]] and the European Digital Identity Wallet | Later | Estonia batch / 2026-08-20 |
 | NIIS member vs partner status | Ukraine, the Faroe Islands and the Government of Åland are **partners** of [[INTL-NIIS]] rather than members. The relationship vocabulary has `part-of` and `participates-in` and no way to say "associate", so [[UA]]'s partnership is prose only | Later (design) | Estonia batch / 2026-08-20 |
 | `applies-in` for the EU **directives** | The member-state completion pass extended the nine EU **regulations** to all 27 states, because a regulation's applicability follows from TFEU Article 288 and needs no country-specific source. The five directives — [[EU-NIS2]], [[EU-CER]], [[EU-INSPIRE]], [[EU-ITS-DIRECTIVE]], [[EU-OPEN-DATA-DIRECTIVE]] — still name 10 states each. Extending them is defensible but would show 17 blank transposition cells per directive, so it was left as a deliberate decision rather than a sweep | Next (design) | Member-state completion / 2026-08-20 |
@@ -358,3 +360,4 @@ by accident.
 | Euro 7's implementing regulations (OBFCM/OBM data formats) | [[EU-EURO-7]] was added 2026-08-28 from the regulation's own text; secondary industry sources report two Commission implementing regulations (numbered 2025/1706 and 2025/1707 in commentary) specifying OBFCM and on-board-monitoring data formats and reporting procedures in detail. Neither was fetched or confirmed directly | Later | Euro 7 addition / 2026-08-28 |
 | Regulation (EU) 2018/858 | The general EU vehicle type-approval framework regulation that [[EU-EURO-7]] amends per a secondary summary. Not itself an Atlas entity; no `amends` relationship asserted without reading its own text | Later | Euro 7 addition / 2026-08-28 |
 | [[NL-RDW]]'s Euro 7 role | RDW is the Netherlands' general vehicle type-approval authority and would perform Euro 7 approvals once the regulation applies, but its own site describes its type-approval function in general terms only, without naming Euro 7. No relationship asserted | Later | Euro 7 addition / 2026-08-28 |
+| `domains/domain-cybersecurity.md` is stale | Its own narrative still says "The Netherlands and Poland — none in the Atlas at all. The Dutch NCSC is not modelled" and gives a 17-national-entity count — both wrong since [[NL-NCSC]] was verified into the Atlas in a later pass and [[EE-CERT-EE]] was added 2026-08-30. The whole page (tables, counts, the "three-layer chain" section) needs a fresh pass, not a spot fix | Next | Research-queue pickup / 2026-08-30 |

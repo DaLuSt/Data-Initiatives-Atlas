@@ -24,7 +24,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-08-30"
 previous_version: null
 successor: null
 
@@ -36,6 +36,8 @@ related_entities:
   - EE-X-TEE
   - EE-RIHA
   - EE-ANDMEPORTAAL
+  - EE-CERT-EE
+  - EE-KUBERTURVALISUSE-SEADUS
 relationships:
   - type: part-of
     target: EE
@@ -94,21 +96,28 @@ national CERT. Whether that concentration is the reason Estonia is cited as
 a model, or merely a feature of a small state, is not something any source
 read establishes — so it is noted and not asserted.
 
-## CERT-EE, confirmed but still not modelled
+## CERT-EE and the Küberturvalisuse seadus — both now modelled
 
 RIA's own site states directly: "RIA is the National Cyber Security
 Centre of Estonia (NCSC-EE)," and names **CERT-EE** as the body
-handling cyber incidents. That closes the uncertainty this entity
+handling cyber incidents. That closed the uncertainty this entity
 previously carried about whether RIA actually runs Estonia's CERT — it
-does, in RIA's own words — but CERT-EE still has no Atlas entity of its
-own, the same gap recorded against [[NL-NCSC]], [[BE-CCB]] and
-[[DE-BSI]]'s counterparts. Estonia's Küberturvalisuse seadus, the NIS
-transposition, remains unmodelled too.
+does, in RIA's own words. Both gaps flagged here are now closed
+(2026-08-30, a research-queue pickup): [[EE-CERT-EE]] is now its own
+Atlas entity, `part-of` this one, and Estonia's NIS2-transposing
+Cybersecurity Act is now [[EE-KUBERTURVALISUSE-SEADUS]]. Under that Act,
+confirmed via an independent NIS2-transposition tracker, RIA "performs
+the functions of national competent authority, cybersecurity regulator,
+and coordinator of incident response through the national CERT capability
+(CERT-EE)" — no single graph edge captures that three-part role, so it is
+recorded here in prose rather than forced into one relationship.
 
 ## Relationships
 
 - `part-of` [[EE]] — anchor edge.
 - Operates [[EE-X-TEE]], [[EE-RIHA]] and [[EE-ANDMEPORTAAL]].
+- Contains [[EE-CERT-EE]] as a department (relationship recorded on that
+  entity).
 
 ## Sources
 

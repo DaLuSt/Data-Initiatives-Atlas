@@ -29,7 +29,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-08-30"
 previous_version: null
 successor: null
 
@@ -224,14 +224,15 @@ the count to five sourced connections left unmodelled for want of a type —
 past the threshold `metadata/relationship-types.md` §2.3 sets for proposing
 one.
 
-## Statutes: modelled, as of 2026-08-18
+## Statutes: complete, as of 2026-08-30
 
 The register batch named the statutes and created none, on the grounds that
 *"creating six or seven Dutch statutes would be a legislation batch, not a
 registry batch, and doing half of it would leave the layer inconsistent."*
 That legislation batch has now been done.
 
-**Nine of the ten registers carry a `governed-by` edge:**
+**All ten registers carry a `governed-by` edge — the last, [[NL-BRI]],
+closed 2026-08-30 via a research-queue pickup:**
 
 | Register | Statute |
 |---|---|
@@ -244,7 +245,7 @@ That legislation batch has now been done.
 | [[NL-BRK]] | [[NL-KADASTERWET]] |
 | [[NL-BRT]] | [[NL-KADASTERWET]] — **the same act** |
 | [[NL-BRP]] | [[NL-WET-BRP]] — from Batch 3 |
-| [[NL-BRI]] | **still none** — Chapter IVA of the AWR, not identified |
+| [[NL-BRI]] | Chapter IVA (articles 21–22i) of the AWR, via `governed-by` → [[NL-BASISREGISTRATIES]] itself, the AWR not being a separate Atlas entity — confirmed directly against `wetten.overheid.nl`'s own text, correcting a previously-unchecked citation of "21 to 21k" to the true range, 21 to 22i |
 
 ### Seven statutes, nine registers
 
@@ -262,9 +263,11 @@ finding this layer produces:
 Neither fact is visible from the register entities. Both are visible from
 the statutes, which is the argument for having created them.
 
-**[[NL-BRI]] is the one still open.** Chapter IVA of the Algemene wet inzake
-rijksbelastingen is named in the sources as its basis, and no citable
-identifier for that chapter as a distinct instrument was found.
+**[[NL-BRI]] was the one still open, and is now closed.** Chapter IVA of the
+Algemene wet inzake rijksbelastingen is its basis — confirmed directly
+against `wetten.overheid.nl`'s own consolidated AWR text on 2026-08-30,
+which also corrected the article range from a previously-unchecked "21 to
+21k" to the true "21 to 22i".
 
 ## Relationship to [[NL-FDS]] is still open
 
