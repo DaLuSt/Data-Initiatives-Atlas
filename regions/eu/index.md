@@ -72,6 +72,9 @@ Anchor entity: [[EU]]
 - [[EU-INTEROPERABLE-EUROPE-ACT]] — Interoperable Europe Act (Reg. 2024/903)
 - [[EU-SDG]] — Single Digital Gateway Regulation (Reg. 2018/1724)
 - [[EU-ITS-DIRECTIVE]] — ITS Directive (Dir. 2010/40/EU) → [[NL-NTM]]
+- [[EU-EURO-7]] — Euro 7 vehicle emissions and battery durability
+  regulation (Reg. 2024/1257) _(adopted, in force 28 May 2024, but not yet
+  in effect — applies from 29 Nov 2026)_ ✅ 2026-08-28
 
 ### AI
 
