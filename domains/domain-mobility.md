@@ -46,5 +46,8 @@ researched entity: it carries no factual claims and therefore no sources.
 
 ## Relationships
 
-Used by [[NL-NDW]] and [[NL-NTM]]. Expected to gain the European mobility
-data space in Batch 10.
+Used by [[NL-NDW]], [[NL-NTM]] and, since 2026-08-28, [[EU-EURO-7]] —
+the Euro 7 vehicle emissions and battery durability regulation, added for
+its on-board monitoring and data-reporting provisions rather than for its
+emission limits alone. Expected to gain the European mobility data space
+in Batch 10.
