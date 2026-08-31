@@ -24,7 +24,7 @@ verification: primary-source
 
 start_date: 2018-05-25
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-08-30"
 previous_version: null
 successor: null
 
@@ -43,7 +43,7 @@ relationships:
   - type: implements-requirement-from
     target: EU-GDPR
     source: fact
-    evidence: "Confirmed by reading UODO's own 2018 annual report (Sprawozdanie z działalności Prezesa UODO w roku 2018) directly (2026-08-26): the report itself is submitted under 'art. 50 ustawy z dnia 10 maja 2018 r. o ochronie danych osobowych' (Article 50 of the Act of 10 May 2018), naming this Act as the President's own statutory reporting obligation. politykabezpieczenstwa.pl, also read directly, dates the replacement precisely: 'zastąpienie z dniem 25 maja 2018 roku Generalnego Inspektora Ochrony Danych Osobowych nowym organem' (replacing GIODO, on 25 May 2018, with a new body) under 'nowa krajowa ustawa z 10 maja 2018 roku o ochronie danych osobowych' (the new national act of 10 May 2018). odoserwis.pl's page was not read this pass."
+    evidence: "Confirmed by reading UODO's own 2018 annual report (Sprawozdanie z działalności Prezesa UODO w roku 2018) directly (2026-08-26): the report itself is submitted under 'art. 50 ustawy z dnia 10 maja 2018 r. o ochronie danych osobowych' (Article 50 of the Act of 10 May 2018), naming this Act as the President's own statutory reporting obligation. politykabezpieczenstwa.pl, also read directly, dates the replacement precisely: 'zastąpienie z dniem 25 maja 2018 roku Generalnego Inspektora Ochrony Danych Osobowych nowym organem' (replacing GIODO, on 25 May 2018, with a new body) under 'nowa krajowa ustawa z 10 maja 2018 roku o ochronie danych osobowych' (the new national act of 10 May 2018). odoserwis.pl's page was not read this pass. The official Dz.U. citation, previously missing, is now confirmed directly (see below)."
     confidence: medium
     valid_from: 2018-05-25
     valid_until: null
@@ -60,13 +60,23 @@ sources:
     url: "https://uodo.gov.pl/pl/file/3909"
     publisher: "Urząd Ochrony Danych Osobowych (UODO)"
     accessed: "2026-08-26"
+  - title: "Ustawa z dnia 10 maja 2018 r. o ochronie danych osobowych — official ELI record (Dz.U. 2018 poz. 1000)"
+    url: "https://eli.gov.pl/eli/DU/2018/1000/ogl"
+    publisher: "Rządowe Centrum Legislacji — official ELI registry (Poland)"
+    accessed: "2026-08-30"
 ---
 
 # Ustawa o ochronie danych osobowych (2018)
 
-> **Verified 2026-08-26.** Two of three cited pages were read directly,
-> including UODO's own 2018 annual report, which cites this Act as its
-> own statutory basis for reporting.
+> **Official citation closed 2026-08-30.** This entity had rested entirely
+> on secondary commentary and a UODO annual report — genuinely read, but
+> without the Dziennik Ustaw citation itself, a research-queue item flagged
+> as **Next** since the Poland batch. `eli.gov.pl`, Poland's official ELI
+> (European Legislation Identifier) legislative registry — a distinct
+> government domain from the CAPTCHA-blocked `isap.sejm.gov.pl` — was read
+> directly and confirms **Dz.U. 2018 poz. 1000**, published 24 May 2018.
+> `isap.sejm.gov.pl` itself remains genuinely CAPTCHA-blocked, confirmed
+> again this pass.
 
 ## Description
 
@@ -109,12 +119,17 @@ GDPR. That distinction matters, because it is the difference between "this
 is Poland's GDPR act" (asserted) and "this is what Poland did with the
 GDPR's opening clauses" (unknown).
 
-⚠ **No ISAP or Dziennik Ustaw citation.** Unlike [[PL-OTWARTE-DANE]], which
-has one, this act rests entirely on secondary commentary and a UODO annual
-report — both now read directly, but ISAP's own text remains genuinely
-CAPTCHA-blocked, confirmed again this pass. It is still the
-weakest-sourced of the six national GDPR instruments in that specific
-respect.
+✅ **Dziennik Ustaw citation now confirmed: Dz.U. 2018 poz. 1000.** Unlike
+[[PL-OTWARTE-DANE]], this act previously had no official legislative
+citation, resting entirely on secondary commentary and a UODO annual
+report. That gap is closed: `eli.gov.pl`, Poland's official ELI registry
+(a distinct government domain, not the CAPTCHA-blocked `isap.sejm.gov.pl`),
+confirms the act published as **Dz.U. 2018 poz. 1000** on **24 May 2018**,
+one day before its 25 May entry into force — consistent with every date
+already recorded here. `isap.sejm.gov.pl` itself remains genuinely
+CAPTCHA-blocked, confirmed again this pass, so the act's full consolidated
+text is still not read directly — only its official citation and
+publication date.
 
 ## A naming collision worth flagging
 
@@ -132,4 +147,7 @@ reused for the other.
 
 ## Sources
 
-Listed in frontmatter, two of three read directly this pass.
+Listed in frontmatter, three of four read directly across two passes: two
+secondary sources and UODO's own annual report (2026-08-26), plus
+`eli.gov.pl`'s official citation record (2026-08-30). `isap.sejm.gov.pl`
+remains genuinely CAPTCHA-blocked.

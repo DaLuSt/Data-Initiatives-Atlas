@@ -25,6 +25,8 @@ Anchor entity: [[EE]]
   _(Estonia's seat on [[EU-EDPB]])_
 - [[EE-STATISTIKAAMET]] — Statistics Estonia _(`part-of` [[EU-ESS]] on its
   own description, the same strength of evidence as [[PL-GUS]])_
+- [[EE-CERT-EE]] — Estonia's national CERT, a department within
+  [[EE-RIA]] _(operating since 1 January 2026; added 2026-08-30)_
 
 ## Legislation
 
@@ -32,6 +34,9 @@ Anchor entity: [[EE]]
   **15 January 2019**, nearly eight months after the Regulation applied)_
 - [[EE-ATS]] — Avaliku teabe seadus, the Public Information Act _(the legal
   basis given for [[EE-RIHA]])_
+- [[EE-KUBERTURVALISUSE-SEADUS]] — Küberturvalisuse seadus, the Cybersecurity
+  Act _(originally 2018; amended to transpose [[EU-NIS2]], in force
+  **1 January 2026**; added 2026-08-30)_
 
 ## Platforms and infrastructure
 
@@ -68,8 +73,8 @@ Anchor entity: [[EE]]
 
 ## Not modelled
 
-- **CERT-EE** and the Küberturvalisuse seadus — Estonia has no cybersecurity
-  entity at all, where [[NL]], [[BE]], [[DE]], [[PL]], [[CZ]] and [[PT]] do.
+- ~~**CERT-EE** and the Küberturvalisuse seadus~~ — now [[EE-CERT-EE]] and
+  [[EE-KUBERTURVALISUSE-SEADUS]] (research-queue pickup, 2026-08-30).
 - ~~**Statistikaamet**, Statistics Estonia~~ — now [[EE-STATISTIKAAMET]].
 - **Eesti Pank**, the central bank — Estonia's *other* named producer of
   official statistics, alongside [[EE-STATISTIKAAMET]].

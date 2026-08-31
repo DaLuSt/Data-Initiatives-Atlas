@@ -73,7 +73,11 @@ see `discovery/research-queue.md`._
 ## Platforms
 
 - [[NL-GDI]] — Generieke Digitale Infrastructuur
-- [[NL-DATA-OVERHEID]] — national open data portal
+- [[NL-DATA-OVERHEID]] — national open data portal _(custodian confirmed
+  2026-08-30: [[NL-LOGIUS]], via KOOP)_
+- [[NL-DIGID]] — digital identity and login for citizens _(added
+  2026-08-30, the Netherlands' answer to [[FR-FRANCECONNECT]],
+  [[ES-CLAVE]] and [[PL-MOBYWATEL]])_
 - [[NL-PDOK]] — geodata platform ✅ re-verified 2026-08-27
 - [[NL-NDW]] — national road traffic data portal ✅ re-verified 2026-08-27
   - [[NL-NTM]] — national access point for mobility data _(EU obligation)_

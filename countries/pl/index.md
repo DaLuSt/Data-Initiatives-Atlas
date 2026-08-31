@@ -41,7 +41,8 @@ Anchor entity: [[PL]]
 ## Legislation
 
 - [[PL-ODO]] — Ustawa o ochronie danych osobowych, 2018 _(implements
-  [[EU-GDPR]]; still no working Dz.U. citation — ISAP is CAPTCHA-blocked)_
+  [[EU-GDPR]]; official Dz.U. 2018 poz. 1000 citation confirmed
+  2026-08-30 via `eli.gov.pl` — ISAP itself remains CAPTCHA-blocked)_
 - [[PL-KSC]] — Ustawa o krajowym systemie cyberbezpieczeństwa _(NIS2
   amendment in force 3 Apr 2026; **corrected 2026-08-26**: Poland
   received a Commission letter of formal notice, not a CJEU referral as
