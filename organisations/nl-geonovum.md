@@ -20,7 +20,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-04"
 previous_version: null
 successor: null
 
@@ -100,10 +100,20 @@ names **Rijkswaterstaat** among the funders, not previously recorded here.
 Geonovum reports on this spending to its subsidy providers and through its
 annual report.
 
-The Programmaraad and BOMOS itself are not yet separate Atlas entities.
-BOMOS in particular is a Dutch standards-management model likely to warrant
-its own entity in a future batch; it remains queued in
-`discovery/research-queue.md`.
+**The Programmaraad, closed 2026-09-04 as a non-entity.** A research-queue
+pickup found, reading geonovum.nl's own page directly, that Geonovum
+itself calls it "onze programmaraad" (our programme council) — an
+internal governance body of Geonovum, alongside its board and
+Supervisory Board, that evaluates change proposals and decides new
+versions of the geo-standards Geonovum manages. It is not a separate
+organisation and does not warrant its own Atlas entity, the same
+treatment the Atlas gives other internal committees (e.g. VNG
+Realisatie's Kenniscentrum Architectuur).
+
+BOMOS itself remains queued in `discovery/research-queue.md` — a Dutch
+standards-management model likely to warrant its own entity in a future
+batch, and a genuinely separate question from the Programmaraad's
+governance role.
 
 ## Relationships
 

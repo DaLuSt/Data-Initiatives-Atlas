@@ -125,6 +125,18 @@
 > enumerated on [[NL-BASISREGISTRATIES]]'s own `related_entities`, and
 > `DOMAIN-HEALTH`/`DOMAIN-EDUCATION` already exist and are in active use
 > — both removed without new entities.
+> **2026-09-04 pickup (sixteenth):** closed three more Netherlands
+> items and narrowed a fourth. [[NL-DIGIGO]] closes the gap [[NL-DSGO]]'s
+> own file had already sourced but could not turn into an edge; the
+> `produces` edge lives on [[NL-DIGIGO]]'s side, per the Atlas's
+> no-stored-inverse convention. [[NL-ENSIA]] closes the accountability-
+> system gap paired with [[NL-BIO]]. The Programmaraad turned out to be
+> Geonovum's own internal governance body, not a separate organisation —
+> closed as a non-entity finding on [[NL-GEONOVUM]]'s own file rather
+> than modelled. Topsector Logistiek was narrowed, not closed: iSHARE's
+> own official history page does not corroborate the secondary sources'
+> attribution to it, and the programme itself is too broad a policy
+> initiative to model accurately in this pass.
 >
 > **The `level` vocabulary is no longer a blocker.** `level: subnational` was
 > added 2026-08-21 and the three Belgian sub-federal ODD instruments are
@@ -350,10 +362,8 @@ by accident.
 
 | Area / entity | Why it needs research | Suggested batch | Noted by / date |
 |---|---|---|---|
-| Programmaraad (geo-standaarden) | Commissioning body for Geonovum's standards management | Batch 5+ | Batch 2 / 2026-08-14 |
 | WILMA (Waterschaps Informatie & Logisch Model Architectuur) | Water authorities' reference architecture; completes the NORA family. Not created in Batch 4 — single mention, and not named in the batch scope (unlike PETRA) | Batch 5+ | Batch 4 / 2026-08-14 |
 | StUF (Standaard Uitwisselings Formaat) | VNG municipal exchange standard. Searched in Batch 4 but no usable source returned — deliberately not created | Batch 5+ | Batch 4 / 2026-08-14 |
-| ENSIA | Accountability system paired with the BIO | Batch 5+ | Batch 4 / 2026-08-14 |
 | NOiV programme bureau | Built BOMOS; appears historical. Needed to resolve BOMOS custody | Batch 5+ | Batch 4 / 2026-08-14 |
 | Remaining 'pas toe of leg uit' standards | Only Digikoppeling and ADR are modelled. The full mandatory + recommended lists (DNSSEC, DMARC, TLS, WCAG, SAML, OAuth profiles, …) are not enumerated | Batch 5+ | Batch 4 / 2026-08-14 |
 | Wet bescherming persoonsgegevens (Wbp) | Predecessor regime replaced by GDPR/UAVG on 25 May 2018; needed for temporal completeness | Batch 4 or later | Batch 3 / 2026-08-14 |
@@ -365,8 +375,7 @@ by accident.
 | ISO / IEC / CEN → [[NL-NEN]] links | NEN's most significant relationships; need the international standards bodies | Batch 9 / 13 | Batch 2 / 2026-08-14 |
 | ISO/IEC 27001 & 27002 → [[NL-BIO]] link | BIO2 is explicitly based on NEN-EN-ISO/IEC 27001:2023 and 27002:2022; the `based-on` relationship is unassertable until those entities exist | Batch 14 | Batch 4 / 2026-08-14 |
 | **W3C DCAT → EU DCAT-AP → [[NL-DCAT-AP-NL]] chain** | A clean international→EU→national standards descent, and one of the clearest demonstrations available of what the Atlas is for. Complete it when Batches 9 and 14 land | Batch 9, 14 | Batch 4 / 2026-08-14 |
-| Topsector Logistiek | Originator of [[NL-ISHARE]]; needed to assert its `maintained-by` | Batch 10 | Batch 5 / 2026-08-14 |
-| digiGO | Initiator of [[NL-DSGO]]; needed to assert its `maintained-by` | Batch 10 | Batch 5 / 2026-08-14 |
+| Topsector Logistiek | Originator of [[NL-ISHARE]]; needed to assert its `maintained-by`. **Attempted 2026-09-04**: secondary sources attribute iSHARE's origination to Topsector Logistiek via NLIP, but iSHARE's own official history page, read directly, does not name either — it credits unspecified "government and business organizations." Topsector Logistiek is also a broad national innovation-policy programme (one of ~9-10 Dutch "topsectoren"), not a narrow single-purpose body, so modelling it accurately would need more research than this pass gave it. No entity created; no `maintained-by` edge asserted | Batch 10 | Batch 5 / 2026-08-14; attempted research-queue pickup 2026-09-04 |
 | DMI ecosystem; IDSA / IDS architecture | Named in iSHARE sources as data-space users of its trust framework | Batch 10 | Batch 5 / 2026-08-14 |
 | Ministerie van Infrastructuur en Waterstaat; Rijkswaterstaat | Founding partners of [[NL-PDOK]] not yet modelled, making its founding collaboration look narrower than it was | Batch 5+ | Batch 5 / 2026-08-14 |
 | Ministeries van VWS, EZK, OCW | Named partners of [[NL-HEALTH-RI]] | Batch 5+ | Batch 5 / 2026-08-14 |

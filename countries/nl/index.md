@@ -54,6 +54,8 @@ Anchor entity: [[NL]]
   - [[NL-BRO]] — the subsurface _(TNO / Geologische Dienst)_ ✅ re-verified 2026-08-27
 - [[NL-BOMOS]] — Beheer- en OntwikkelModel voor Open Standaarden
 - [[NL-BIO]] — Baseline Informatiebeveiliging Overheid _(current version BIO2)_
+  - [[NL-ENSIA]] — accountability system for municipal information
+    security, `based-on` BIO _(since 1 July 2017; added 2026-09-04)_
 
 ## Standards
 
@@ -88,7 +90,8 @@ see `discovery/research-queue.md`._
 
 - [[NL-FDS]] — Federatief Datastelsel _(government-wide, listed under Frameworks)_
 - [[NL-HEALTH-RI]] — national health data infrastructure
-- [[NL-DSGO]] — Digitaal Stelsel Gebouwde Omgeving _(built environment)_
+- [[NL-DSGO]] — Digitaal Stelsel Gebouwde Omgeving _(built environment;
+  [[NL-DIGIGO]] carries the `produces` edge, added 2026-09-04)_
 - [[NL-ISHARE]] — trust framework used to establish data spaces
 
 ## Organisations
@@ -120,6 +123,8 @@ see `discovery/research-queue.md`._
 - [[NL-GEONOVUM]] — Geonovum (geo-standards)
 - [[NL-NEN]] — Stichting Koninklijk Nederlands Normalisatie Instituut
 - [[NL-NICTIZ]] — Nictiz (health information standards)
+- [[NL-DIGIGO]] — digital collaboration foundation, built environment
+  sector; initiator of [[NL-DSGO]] _(added 2026-09-04)_
 
 ### Registries and statistics
 
