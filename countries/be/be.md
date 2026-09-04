@@ -90,23 +90,31 @@ So a Belgian Region cannot even borrow the word. Recording Digitaal
 Vlaanderen at `level: regional` would place a sub-national agency in the
 same band as the European Union, which is worse than not modelling it.
 
-The consequence is concrete and is not a small omission:
+**Resolved 2026-08-21, closed 2026-09-04.** `level: subnational` was
+added to the schema, a genuine ontology change rather than a
+country-specific workaround — it applies wherever a state's own
+sub-national tier needs a term, not only in Belgium. The three Belgian
+sub-federal open-data instruments were modelled under it first
+([[BE-VL-BESTUURSDECREET-2021]], [[BE-BRU-ORDONNANCE-2021]],
+[[BE-WAL-DECRET-2022]]). A research-queue pickup then closed the
+organisational half of the gap this section originally documented:
 
-| Not modelled | Why it matters |
+| Previously not modelled | Now |
 |---|---|
-| **OSLO** (Open Standaarden voor Linkende Organisaties) | One of Europe's most developed public-sector **semantic interoperability** and linked-data standards programmes, and squarely in this Atlas's subject matter. A product of Digitaal Vlaanderen — a Flemish, not federal, body. |
-| Digitaal Vlaanderen, Agence du Numérique, Paradigm | The Region-level digital agencies that do much of Belgium's actual public-sector digitalisation. |
-| The Communities | Education and culture data policy sits here, not federally. |
+| **OSLO** | [[BE-OSLO]], `maintained-by` [[BE-DIGITAAL-VLAANDEREN]] |
+| Digitaal Vlaanderen | [[BE-DIGITAAL-VLAANDEREN]] |
+| Agence du Numérique | [[BE-AGENCE-NUMERIQUE]] |
+| Paradigm | [[BE-PARADIGM]] |
 
-Belgium is therefore the country whose Atlas coverage most **understates**
-the reality: the federal layer recorded here is genuinely only part of
-Belgian public-sector data governance. That is stated plainly rather than
-left for a reader to discover.
+**The Communities remain unmodelled** — education and culture data
+policy sits here, not federally, and no Community-level digital agency
+has been researched.
 
-No sub-national level was invented — for one country, or now for three.
-Doing so is the country-specific ontology change the model exists to
-prevent. This is logged in `discovery/unresolved.md`, and after three
-countries it is the Atlas's best-evidenced ontology defect.
+Belgium's Atlas coverage understated the reality for several weeks: the
+federal layer recorded at first was genuinely only part of Belgian
+public-sector data governance. That gap is now most of the way closed,
+and the finding that prompted `level: subnational`'s creation is worth
+keeping on record even though the entities it once blocked now exist.
 
 ## What Belgium confirmed rather than broke
 

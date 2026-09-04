@@ -38,11 +38,14 @@ Anchor entity: [[BE]]
 > since the UN batch of 2026-08-16. See each entity for its own sourcing
 > detail.
 
-> ⚠ **This index covers the federal layer only.** Belgium's Regions and
-> Communities run much of its public-sector digitalisation — Digitaal
-> Vlaanderen, the Agence du Numérique, Paradigm, and the **OSLO** semantic
-> interoperability standards — and none of them is modelled, because the
-> Atlas has no `level` term for a Belgian Region. See [[BE]].
+> ⚠ **This index covered the federal layer only, until 2026-09-04.**
+> Belgium's Regions and Communities run much of its public-sector
+> digitalisation, and a research-queue pickup closed the gap
+> `level: subnational` (added 2026-08-21) had already unblocked:
+> [[BE-DIGITAAL-VLAANDEREN]] (Flanders), [[BE-AGENCE-NUMERIQUE]]
+> (Wallonia), [[BE-PARADIGM]] (Brussels-Capital, formerly CIRB/CIBG) and
+> [[BE-OSLO]], the Flemish semantic-interoperability standard, are now
+> all Atlas entities. See [[BE]].
 
 ## Organisations
 
@@ -52,6 +55,14 @@ Anchor entity: [[BE]]
 - [[BE-STATBEL]] — national statistical office
 - [[BE-KSZ]] — Kruispuntbank van de Sociale Zekerheid _(service integrator)_
 - [[BE-NBN]] — Bureau de Normalisation / Bureau voor Normalisatie _(national standards body — CEN member, CENELEC national committee)_
+
+### Regional and Community digital agencies (`level: subnational`, added 2026-09-04)
+
+- [[BE-DIGITAAL-VLAANDEREN]] — Flanders _(formerly Informatie
+  Vlaanderen; renamed 2021)_
+- [[BE-AGENCE-NUMERIQUE]] — Wallonia _(AdN; succeeded the Agence
+  wallonne des Télécommunications, 2015)_
+- [[BE-PARADIGM]] — Brussels-Capital _(formerly CIRB/CIBG, founded 1987)_
 
 ## Legislation
 
@@ -85,6 +96,8 @@ Anchor entity: [[BE]]
 
 - [[BE-BELGIF]] — Belgian Interoperability Framework _(`based-on` [[EU-EIF]])_
 - [[BE-DCAT-AP-BE]] — Belgian federal DCAT profile _(`based-on` [[EU-DCAT-AP]])_
+- [[BE-OSLO]] — Flemish semantic interoperability vocabularies
+  _(`maintained-by` [[BE-DIGITAAL-VLAANDEREN]]; added 2026-09-04)_
 
 ## Platforms
 
@@ -146,10 +159,6 @@ and routes verification through [[BE-COMITE-I]] rather than [[BE-APD]].
 
 ## Not modelled
 
-- **Any Region or Community**, and therefore **OSLO**, Digitaal Vlaanderen,
-  the Agence du Numérique and Paradigm. The Atlas's `level` vocabulary has
-  no term between `national` and `local`, and `regional` already means
-  supra-national. This is the batch's principal finding — see [[BE]].
 - The **six public service integrators** as a set; only [[BE-KSZ]] is
   modelled.
 - Belgium's eID / itsme digital identity scheme, the eHealth platform, and

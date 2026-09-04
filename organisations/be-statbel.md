@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-04"
 previous_version: null
 successor: null
 
@@ -32,7 +32,15 @@ domains:
 organisations: []
 related_entities:
   - BE-DCAT-AP-BE
+  - BE-STATISTIEKWET-1962
 relationships:
+  - type: governed-by
+    target: BE-STATISTIEKWET-1962
+    source: fact
+    evidence: "A research-queue pickup (2026-09-04) created the entity this file's own 2026-08-27 pass had deliberately deferred. The Wet van 4 juli 1962 betreffende de openbare statistiek, read directly on etaamb.openjustice.be, establishes the Nationaal Instituut voor de Statistiek — Statbel's founding name — the Coordination Committee, the Statistical Control Committee and the High Council for Statistics. Same pattern as NL-CBS's edge to NL-WET-CBS and DE-BSI's edge to DE-BSIG."
+    confidence: medium
+    valid_from: 1962-07-04
+    valid_until: null
   - type: aligned-with
     target: BE-DCAT-AP-BE
     source: fact
@@ -105,16 +113,14 @@ under a **Creative Commons Attribution 4.0** licence. It maintains a
 pass — both `statbel.fgov.be` pages returned CAPTCHA challenges.
 
 `coverage: medium`, up from `low`: a Belgian equivalent of [[DE-BSTATG]]
-and [[NL-WET-CBS]] is now identified. Confirmed by reading
-etaamb.openjustice.be's own text of the **Wet van 4 juli 1962 betreffende
-de openbare statistiek** (public statistics act) directly: it establishes
-the National Statistical Institute (predecessor name of today's Statbel),
-a Coordination Committee for statistical programmes, a Statistical
-Control Committee for data-protection oversight, and a High Council for
-Statistics as advisory body. No `governed-by` edge is asserted to it,
-because the 1962 act is not yet its own Atlas entity — creating one is a
-follow-up, logged in `discovery/unresolved.md`, rather than something to
-do inside this pass.
+and [[NL-WET-CBS]] is now identified and modelled, as
+[[BE-STATISTIEKWET-1962]] (research-queue pickup, 2026-09-04). Confirmed
+by reading etaamb.openjustice.be's own text of the **Wet van 4 juli 1962
+betreffende de openbare statistiek** (public statistics act) directly:
+it establishes the National Statistical Institute (predecessor name of
+today's Statbel), a Coordination Committee for statistical programmes, a
+Statistical Control Committee for data-protection oversight, and a High
+Council for Statistics as advisory body.
 
 Confirmed by reading the Dutch Wikipedia article on Statbel directly: the
 organisation's name changed twice after the 1962 act — from "Nationaal
@@ -159,6 +165,7 @@ national statistical office in the Atlas, to the UN statistical system.
   Belgian federal profile is the obvious reading and is not stated. The
   weaker relationship type and the low confidence carry that distinction.
   Not confirmed this pass either (statbel.fgov.be still bot-walled).
+- `governed-by` [[BE-STATISTIEKWET-1962]] — closed 2026-09-04.
 
 ## Sources
 
