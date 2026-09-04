@@ -29,7 +29,7 @@ verification: primary-source
 
 start_date: 2010-01-08
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-04"
 previous_version: null
 successor: null
 
@@ -43,6 +43,7 @@ related_entities:
   - NL-PAS-TOE-OF-LEG-UIT
   - FR-RGI
   - BE-BELGIF
+  - ES-LEY-40-2015
 relationships:
   - type: applies-in
     target: ES
@@ -140,15 +141,18 @@ consistently presented together in Spanish practice — is not asserted. RD
 relationship between the instruments themselves.
 
 The ENI's legal base is now partly closed. Confirmed by reading anabad.org
-directly: the ENI's existence is **contemplated in Article 156 of Ley
-40/2015** on the legal regime of the public sector — the act that replaced
-the 2007 legislation this entity previously named as the ENI's now-repealed
-origin. That the ENI is still *regulated mainly* by Real Decreto 4/2010
-itself, rather than by Ley 40/2015, is confirmed by the same source. No
-`derived-from` or `governed-by` edge is added to Ley 40/2015, because
-neither this Atlas's ontology nor the source read distinguishes "is
-contemplated by" from "is derived from" cleanly enough to assert a typed
-relationship — the fact is recorded here in prose instead.
+directly: the ENI's existence is **contemplated in Article 156 of
+[[ES-LEY-40-2015]]** on the legal regime of the public sector — the act
+that replaced the 2007 legislation this entity previously named as the
+ENI's now-repealed origin, and which a research-queue pickup (2026-09-04)
+gave its own Atlas entity. That the ENI is still *regulated mainly* by
+Real Decreto 4/2010 itself, rather than by Ley 40/2015, is confirmed by
+the same source. No `derived-from` or `governed-by` edge is added to
+[[ES-LEY-40-2015]], because neither this Atlas's ontology nor the source
+read distinguishes "is contemplated by" from "is derived from" cleanly
+enough to assert a typed relationship — the fact is recorded here in
+prose instead, now with a real entity to link to rather than a bare
+citation.
 
 ## Relationships
 

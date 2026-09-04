@@ -27,7 +27,7 @@ verification: primary-source
 
 start_date: 2025-02-21
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-09-04"
 previous_version: ES-SGAD
 successor: null
 
@@ -38,12 +38,20 @@ related_entities:
   - ES-SGAD
   - ES-DATOS-GOB-ES
   - ES-CLAVE
+  - ES-LEY-40-2015
 relationships:
   - type: supersedes
     target: ES-SGAD
     source: fact
     evidence: "Confirmed by reading boe.es's own text of Real Decreto 1118/2024 directly (2026-08-26, BOE-A-2024-22929): the Agency was created by Ley 22/2021 (the 2022 General Budget Law), and upon its effective constitution the Secretaría General de Administración Digital and its dependent organs are suppressed, with the Agency 'quedará subrogada en la totalidad de los derechos y obligaciones' (subrogated into the totality of the rights and obligations) of the SGAD, assuming all its contracts and legal relationships — a more precise legal mechanism than the previous search-only evidence captured."
     confidence: high
+    valid_from: 2025-02-21
+    valid_until: null
+  - type: governed-by
+    target: ES-LEY-40-2015
+    source: fact
+    evidence: "A research-queue pickup (2026-09-04) closed the 'no legal-basis entity' gap this file's own Ley 22/2021 citation had left open. Reading Real Decreto 1118/2024's own Article 1.1 directly: 'La Agencia Estatal de Administración Digital... es una entidad de Derecho público regulada en la sección 4.ª del capítulo III del título II de la Ley 40/2015, de 1 de octubre, de Régimen Jurídico del Sector Público' (the Agency is a public-law entity regulated under section 4 of chapter III of title II of Ley 40/2015). This is distinct from Ley 22/2021, which created the Agency; Ley 40/2015 supplies the legal form ('agencia estatal') and its operating rules, which is what `governed-by` records here."
+    confidence: medium
     valid_from: 2025-02-21
     valid_until: null
 
@@ -63,10 +71,13 @@ sources:
 
 # AEAD — Agencia Estatal de Administración Digital
 
-> **Verified 2026-08-26.** boe.es's own text of Real Decreto 1118/2024
-> (BOE-A-2024-22929) was read directly, confirming the Agency's legal
-> mechanism for absorbing the SGAD in more precise terms than the
-> search-only evidence carried.
+> **Verified 2026-08-26; legal basis closed 2026-09-04.** boe.es's own
+> text of Real Decreto 1118/2024 (BOE-A-2024-22929) was read directly,
+> confirming the Agency's legal mechanism for absorbing the SGAD in more
+> precise terms than the search-only evidence carried. A research-queue
+> pickup then read the same decree's Article 1.1 for a second purpose —
+> closing the "no legal-basis entity" gap by creating [[ES-LEY-40-2015]],
+> the law that supplies the Agency's legal form.
 
 ## Description
 
@@ -130,11 +141,15 @@ relationship type on one sourced example.
 
 ## Relationships
 
-- `supersedes` [[ES-SGAD]] — confirmed this pass via BOE's own text of RD
+- `supersedes` [[ES-SGAD]] — confirmed 2026-08-26 via BOE's own text of RD
   1118/2024, naming the subrogation mechanism directly; `confidence: high`.
+- `governed-by` [[ES-LEY-40-2015]] — closed 2026-09-04, via the same
+  decree's Article 1.1.
 
 ## Sources
 
-Listed in frontmatter, two of three read directly this pass: BOE's own
-text of Real Decreto 1118/2024 and of Real Decreto 1125/2024. The España
-Digital 2026 announcement was not re-fetched.
+Listed in frontmatter. BOE's own text of Real Decreto 1118/2024 and of
+Real Decreto 1125/2024 were read directly in the 2026-08-26 pass; the
+España Digital 2026 announcement was not re-fetched. RD 1118/2024's
+Article 1.1 was read again in the 2026-09-04 pass that closed the
+legal-basis gap.

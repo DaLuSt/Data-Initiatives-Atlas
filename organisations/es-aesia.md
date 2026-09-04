@@ -28,7 +28,7 @@ verification: primary-source
 
 start_date: 2023-08-22
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-09-04"
 previous_version: null
 successor: null
 
@@ -38,6 +38,7 @@ organisations: []
 related_entities:
   - EU-AI-ACT
   - ES-ESPANA-DIGITAL-2026
+  - ES-LEY-40-2015
 relationships:
   - type: governed-by
     target: EU-AI-ACT
@@ -45,6 +46,13 @@ relationships:
     evidence: "Confirmed by reading boe.es's own text of Real Decreto 729/2023 directly (2026-08-26, BOE-A-2023-18911): AESIA's statute grounds it in Law 40/2015 and Law 28/2022 and positions it to assume obligations under the then-forthcoming EU AI Regulation, exercising 'functions of authority responsible for supervision, and where applicable sanction, of AI systems'. protecciondata.es, also read directly, confirms AESIA now operates 'como autoridad de vigilancia del mercado' under Regulation (EU) 2019/1020 and is governed by Regulation (EU) 2024/1689. lamoncloa.gob.es's press release, also read directly, gives no legal citation but confirms AESIA develops functions assigned by the EU AI Regulation and coordinates with European authorities."
     confidence: high
     valid_from: null
+    valid_until: null
+  - type: governed-by
+    target: ES-LEY-40-2015
+    source: fact
+    evidence: "A research-queue pickup (2026-09-04) followed up the 'Law 40/2015' mention this file's own EU-AI-ACT evidence string already carried but had not turned into an edge. Reading Real Decreto 729/2023 directly: Article 1.1 states 'La Agencia Española de Supervisión de Inteligencia Artificial es una entidad de derecho público regulada en los artículos 108 bis a 108 sexies de la Ley 40/2015' (AESIA is a public-law entity regulated under articles 108 bis to 108 sexies of Ley 40/2015), and Article 3.1 adds 'La Agencia se rige por la Ley 40/2015, de 1 de octubre' (the Agency is governed by Ley 40/2015). This is the same 'agencia estatal' legal form [[ES-AEAD]] carries, though cited by article range here rather than by the section number RD 1118/2024 used for AEAD — both point to the same Título II, Capítulo III, Sección 4.ª of the law."
+    confidence: high
+    valid_from: 2023-09-03
     valid_until: null
 
 sources:
@@ -73,10 +81,13 @@ sources:
 
 # AESIA — Agencia Española de Supervisión de la Inteligencia Artificial
 
-> **Verified 2026-08-26.** boe.es's own text of Real Decreto 729/2023
-> (BOE-A-2023-18911) was read directly, along with protecciondata.es and
-> the lamoncloa.gob.es press release — closing the previous gap where the
-> statute's own BOE identifier had not been found.
+> **Verified 2026-08-26; second legal basis added 2026-09-04.** boe.es's
+> own text of Real Decreto 729/2023 (BOE-A-2023-18911) was read directly,
+> along with protecciondata.es and the lamoncloa.gob.es press release —
+> closing the previous gap where the statute's own BOE identifier had not
+> been found. A research-queue pickup then turned this file's own passing
+> "grounds it in Law 40/2015" line into a sourced `governed-by` edge, once
+> [[ES-LEY-40-2015]] became an Atlas entity.
 
 ## Description
 
@@ -151,19 +162,46 @@ search results during their batches and were not invented.
 
 ## Not modelled
 
-Sources refer to a Spanish **organic law on artificial intelligence**
-landing the AI Act domestically with sanctions and sandboxes, at a stage
-that the results describe inconsistently. No entity was created for it: the
-Atlas already carries one instrument whose status its sources contradict
-([[FR-NIS2-LOI]]) and does not need a second one added on weaker evidence.
-Queued in `discovery/research-queue.md`.
+The Spanish **organic law on artificial intelligence** has advanced since
+this file first queued it: reading `lamoncloa.gob.es`'s own Council of
+Ministers press release directly (2026-09-04) confirms the Proyecto de
+Ley Orgánica para el buen uso y la gobernanza de la Inteligencia
+Artificial was approved for submission to Congress on **26 May 2026**,
+and secondary legal reporting places it at Congress under **BOCG Serie
+A, No. 97-1** (published 12 June 2026), still in parliamentary process
+as an organic law requiring an absolute majority.
+
+**Still no entity was created**, and the reason has sharpened rather
+than resolved: `lamoncloa.gob.es`'s own release names AESIA as "the
+central body," while separate legal-sector reporting on the bill's
+Congress text describes a **General Directorate of Artificial
+Intelligence** as the notifying authority under the EU AI Regulation
+and **eight** state-level market surveillance authorities — a
+materially different picture of who holds authority, from sources this
+pass did not reconcile by reading the bill's own BOCG text. This is the
+same shape of contradiction the Atlas already declined to resolve on
+[[FR-NIS2-LOI]] rather than force. Queued in
+`discovery/research-queue.md` with the sharper detail carried forward.
+
+## The same legal form as AEAD
+
+Reading Real Decreto 729/2023 directly finds AESIA is, like [[ES-AEAD]],
+an **agencia estatal** under [[ES-LEY-40-2015]] — Article 1.1 places it
+under "los artículos 108 bis a 108 sexies" of that law, and Article 3.1
+states plainly "La Agencia se rige por la Ley 40/2015." Two of the
+Atlas's national AI links now share the same domestic legal chassis:
+AESIA is governed both by the EU instrument it supervises compliance
+with, and by the Spanish statute defining what kind of body it is.
 
 ## Relationships
 
 - `governed-by` [[EU-AI-ACT]].
+- `governed-by` [[ES-LEY-40-2015]] — closed 2026-09-04.
 
 ## Sources
 
-Listed in frontmatter, three of six read directly this pass: BOE's own text
-of Real Decreto 729/2023 (BOE-A-2023-18911, closing the previously-flagged
-missing-citation gap), protecciondata.es, and the La Moncloa press release.
+Listed in frontmatter. Three of six read directly in the 2026-08-26 pass:
+BOE's own text of Real Decreto 729/2023 (BOE-A-2023-18911, closing the
+previously-flagged missing-citation gap), protecciondata.es, and the La
+Moncloa press release. Real Decreto 729/2023's Articles 1.1 and 3.1 were
+read again in the 2026-09-04 pass that closed the Ley 40/2015 gap.
