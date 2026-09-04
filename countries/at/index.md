@@ -26,3 +26,8 @@ Anchor entity: [[AT]]
 
 - [[AT-DATA-GV-AT]] — data.gv.at
 - [[AT-ID-AUSTRIA]] — ID Austria
+
+## Legislation
+
+- [[AT-EGOVG]] — E-Government-Gesetz _(the E-ID legal basis for
+  [[AT-ID-AUSTRIA]]; added 2026-09-04)_

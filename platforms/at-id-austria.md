@@ -22,7 +22,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-09-04"
 previous_version: null
 successor: null
 
@@ -32,6 +32,7 @@ organisations: []
 related_entities:
   - AT
   - AT-BRZ
+  - AT-EGOVG
 relationships:
   - type: part-of
     target: AT
@@ -47,6 +48,13 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: governed-by
+    target: AT-EGOVG
+    source: fact
+    evidence: "A research-queue pickup (2026-09-04) closed the 'four statutes, no legal-basis entity' gap this file previously carried unconfirmed. Reading ris.bka.gv.at's own consolidated E-Government-Gesetz text directly finds its §§4-7 define the E-ID (Elektronischer Identitätsnachweis) function ID Austria implements: a personal binding combining a qualified electronic signature with an encrypted Stammzahl and sector-specific identifier (bPK), with registration from age 14 via passport authorities or police. The Meldegesetz 1991, Passgesetz 1992 and Personenstandsgesetz 2013 — the other three statutes this file previously named — were also read directly and each cites the E-GovG's own E-ID function rather than granting one independently, so only the E-GovG carries this edge."
+    confidence: medium
+    valid_from: 2005-01-01
+    valid_until: null
 
 sources:
   - title: "ID Austria - BRZ"
@@ -61,22 +69,27 @@ sources:
     url: "https://www.oesterreich.gv.at/de/ueber-oesterreichgvat/impressum"
     publisher: "Bundeskanzleramt Österreich"
     accessed: "2026-08-26"
+  - title: "E-Government-Gesetz - Bundesrecht konsolidiert"
+    url: "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20003230"
+    publisher: "Rechtsinformationssystem des Bundes (RIS)"
+    accessed: "2026-09-04"
 ---
 
 # ID Austria
 
-> **Verified 2026-08-26.** All three cited pages were read directly;
-> BRZ's own page and oesterreich.gv.at's own imprint independently
-> confirm the description and `maintained-by` edge in the government's
-> own words. `bmdw.gv.at` — the ministry page this entity's "four
-> statutes" claim rested on — no longer resolves at all (checked by
-> direct DNS lookup): the Bundesministerium für Digitalisierung und
-> Wirtschaftsstandort itself appears to no longer exist as a separate
-> ministry. Its digital-government platform, oesterreich.gv.at, states
-> in its own imprint that it is now published by the **Bundeskanzleramt**
-> (Federal Chancellery) — a real reorganisation, not a like-for-like URL
-> move. No replacement source for the specific four-statute claim was
-> found, so it is not repeated as newly confirmed; see below.
+> **Verified 2026-08-26; legal basis closed 2026-09-04.** All three
+> originally cited pages were read directly; BRZ's own page and
+> oesterreich.gv.at's own imprint independently confirm the description
+> and `maintained-by` edge in the government's own words. `bmdw.gv.at` —
+> the ministry page this entity's original "four statutes" claim rested
+> on — no longer resolves at all (checked by direct DNS lookup): the
+> Bundesministerium für Digitalisierung und Wirtschaftsstandort itself
+> appears to no longer exist as a separate ministry. Its digital-
+> government platform, oesterreich.gv.at, states in its own imprint that
+> it is now published by the **Bundeskanzleramt** (Federal Chancellery)
+> — a real reorganisation, not a like-for-like URL move. A research-queue
+> pickup then read all four statutes directly on `ris.bka.gv.at` and
+> closed the legal-basis gap — see below.
 
 ## Description
 
@@ -105,23 +118,39 @@ like the digital portfolio moving to the Chancellery rather than a mere
 broken link, but no source read states that transition explicitly, so
 it is reported as an observation, not a fact.
 
-## Four statutes had to move — not reconfirmed this pass
+## The legal basis, closed — and corrected
 
 This entity previously claimed introducing the oesterreich.gv.at
 platform and ID Austria required amendments to the **E-Government Act,
 the Registration Act, the Civil Status Act and the Passport Act**,
-sourced only to the now-dead `bmdw.gv.at` page. Neither replacement
-page read this pass (BRZ's or Digital Austria's) repeats this claim in
-any form. It is carried forward as unconfirmed rather than dropped or
-re-asserted as newly verified — the same honest treatment given
-[[FR-HEALTH-DATA-HUB]]'s unreconfirmed member count when its source
-went dark. None of the four acts is an Atlas entity, so the Austrian
-identity layer still has a platform with no legal-basis entity attached
-- the same shape as [[ES-CLAVE]], whose statutory basis is also queued.
+sourced only to the now-dead `bmdw.gv.at` page, and had carried that
+claim as unconfirmed since the source went dark — the same honest
+treatment given [[FR-HEALTH-DATA-HUB]]'s unreconfirmed member count.
+
+A research-queue pickup (2026-09-04) read all four statutes directly on
+`ris.bka.gv.at`, Austria's official consolidated-law database, and
+found a **narrower** picture than the original claim implied: only the
+**E-Government-Gesetz** ([[AT-EGOVG]]) defines and grants the E-ID
+function ID Austria implements, in its own §§4-7. The Meldegesetz 1991,
+Passgesetz 1992 and Personenstandsgesetz 2013 each *cite* that same
+E-GovG function to permit electronic registration, passport-expiry
+notices and child-naming respectively — they consume the E-ID function
+rather than each granting a separate one, so no fifth-way entity or
+edge is created for any of them. The Austrian identity layer's
+legal-basis gap — the same shape as [[ES-CLAVE]]'s still-queued
+statutory basis — is now closed with a single `governed-by` edge to
+[[AT-EGOVG]].
+
+## Relationships
+
+- `part-of` [[AT]].
+- `maintained-by` [[AT-BRZ]].
+- `governed-by` [[AT-EGOVG]] — closed 2026-09-04.
 
 ## Sources
 
-Listed in frontmatter, all three read directly this pass — BRZ's own
-product page and oesterreich.gv.at's own homepage and imprint. The dead
-`bmdw.gv.at` page this entity previously cited is gone; see caveat
-above.
+Listed in frontmatter. BRZ's own product page and oesterreich.gv.at's
+own homepage and imprint were read directly in the 2026-08-26 pass; the
+dead `bmdw.gv.at` page this entity previously cited is gone. The
+E-Government-Gesetz's own RIS text was read directly in the 2026-09-04
+pass that closed the legal-basis gap.

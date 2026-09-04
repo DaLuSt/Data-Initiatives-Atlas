@@ -28,7 +28,7 @@ verification: primary-source
 
 start_date: 2005-03-07
 end_date: null
-last_verified: "2026-08-25"
+last_verified: "2026-09-04"
 previous_version: null
 successor: null
 
@@ -39,6 +39,7 @@ related_entities:
   - IT
   - IT-AGID
   - IT-SPID
+  - IT-CIE
 relationships:
   - type: applies-in
     target: IT
@@ -97,7 +98,9 @@ the difference.
 
 - `applies-in` [[IT]] (anchor edge).
 - [[IT-AGID]] is `governed-by` this Code; [[IT-SPID]] is created by its
-  Article 64.
+  Article 64; [[IT-CIE]] is created (alongside the Carta Nazionale dei
+  Servizi, not separately modelled) by its Article 66 — closed
+  2026-09-04.
 
 ## ⚠ A blocked host that blocks the honest User-Agent, not the deceptive one
 
