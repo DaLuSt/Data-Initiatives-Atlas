@@ -36,6 +36,17 @@
 > queue recorded — one statute grants the E-ID function, not four. A new
 > [[IT-CIE]] entity closed Italy's CIE/CNS gap the same way: one CAD
 > article creates both credentials, so one entity, not two.
+> **2026-09-04 pickup (ninth):** closed Spain's Ley 39/2015 and 40/2015
+> legal-basis gap with two new entities. [[ES-LEY-40-2015]] turned out to
+> govern two Spanish agencies, not one: reading [[ES-AEAD]]'s and
+> [[ES-AESIA]]'s own founding decrees directly found both are the same
+> "agencia estatal" legal form under this one law, cited by different
+> article ranges. The Spanish AI organic law was sharpened rather than
+> closed: it is now a Proyecto de Ley before Congress with a BOCG
+> citation, but government and legal-sector sources still disagree on
+> which body holds authority — [[ES-AESIA]] alone, or a separate
+> General Directorate of AI plus eight market-surveillance authorities —
+> so no entity was created, the same discipline [[FR-NIS2-LOI]] set.
 >
 > **The `level` vocabulary is no longer a blocker.** `level: subnational` was
 > added 2026-08-21 and the three Belgian sub-federal ODD instruments are
@@ -240,8 +251,7 @@ by accident.
 
 | Area / entity | Why it needs research | Suggested batch | Noted by / date |
 |---|---|---|---|
-| **Spanish organic law on artificial intelligence** | Sources refer to one landing the AI Act domestically with sanctions and sandboxes, at a stage they describe inconsistently. Not created — the Atlas already carries one instrument whose sources conflict ([[FR-NIS2-LOI]]) and does not need a second on weaker evidence | Next | Spain batch |
-| **Ley 39/2015 and Ley 40/2015** | Spain's common administrative procedure and public-sector legal regime acts — the current legal base for much of what [[ES-AEAD]] does, and the successors to Ley 11/2007 which established [[ES-ENI]] | Next | Spain batch |
+| **Spanish organic law on artificial intelligence** — sharpened, not closed | Now a Proyecto de Ley Orgánica before Congress (BOCG Serie A No. 97-1, published 12 June 2026), approved for submission by the Council of Ministers 26 May 2026, confirmed by reading lamoncloa.gob.es directly. Still not created: that same government source names [[ES-AESIA]] as "the central body," while secondary reporting on the bill's own Congress text describes a separate General Directorate of Artificial Intelligence as notifying authority and eight state-level market surveillance authorities — a genuine contradiction, not yet resolved by reading the bill's own BOCG text | Next | Spain batch; sharpened research-queue pickup / 2026-09-04 |
 | **Spain's INSPIRE transposition** | [[EU-INSPIRE]] now carries `applies-in` → `ES` with no transposing instrument identified | Later | Spain batch |
 | **INCIBE's founding instrument** | Its legal form, its relationship to the earlier INTECO, and how INCIBE-CERT relates to CCN-CERT are all unrecorded. [[ES-INCIBE]] is `coverage: low` because of it | Later | Spain batch |
 | **Cl@ve's legal basis and operator** | Plus the relationship between Cl@ve PIN and Cl@ve Permanente, and the status of any Spanish digital identity wallet under [[EU-EIDAS2]] | Later | Spain batch |

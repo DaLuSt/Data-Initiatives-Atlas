@@ -45,6 +45,10 @@ Anchor entity: [[ES]]
   - [[ES-RDL-24-2021]] — the omnibus decree-law whose Book Three did the
     amending _(the actual Open Data Directive transposition)_
 - [[ES-LCGC]] — NIS2 transposition _(⚠ `status: proposed` — still a draft)_
+- [[ES-LEY-39-2015]] — common administrative procedure _(repealed the 2007
+  e-government law; added 2026-09-04)_
+- [[ES-LEY-40-2015]] — public sector legal regime _(legal form behind
+  [[ES-AEAD]]; added 2026-09-04)_
 
 ## Frameworks and standards
 
@@ -160,5 +164,6 @@ structure entirely.
 - **The European Statistical System**, the entity that would let [[ES-INE]]
   and [[EU-EUROSTAT]] connect properly. Deliberately not created inside a
   country batch.
-- **The Spanish organic law on AI**, and Ley 39/2015 and 40/2015 on
-  electronic administration. Queued in `discovery/research-queue.md`.
+- **The Spanish organic law on AI**. Queued in
+  `discovery/research-queue.md`. Ley 39/2015 and 40/2015 are now
+  [[ES-LEY-39-2015]] and [[ES-LEY-40-2015]] (added 2026-09-04).
