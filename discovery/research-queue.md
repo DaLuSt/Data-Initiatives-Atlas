@@ -24,6 +24,18 @@
 > dated candidate instrument but not closed — every direct-fetch attempt
 > failed. Two further queue rows were found already closed and removed as
 > housekeeping: the operator of [[PL-DANE-GOV-PL]] (resolved 2026-08-27).
+> **2026-09-04 pickup (eighth):** closed three more items. A full refresh
+> of `domains/domain-cybersecurity.md` — stale since the Netherlands/Poland
+> gap it recorded had already closed — found the domain had nearly tripled
+> in scope unnoticed, from six countries to fourteen, and corrected a
+> genuine error along the way: the page had Poland "before the CJEU" for
+> its NIS2 delay, but the primary source names **Ireland**, not Poland, as
+> the state actually referred. A new [[AT-EGOVG]] entity closed the
+> Austrian identity-legislation gap, and reading all four candidate
+> statutes directly on `ris.bka.gv.at` found a narrower story than the
+> queue recorded — one statute grants the E-ID function, not four. A new
+> [[IT-CIE]] entity closed Italy's CIE/CNS gap the same way: one CAD
+> article creates both credentials, so one entity, not two.
 >
 > **The `level` vocabulary is no longer a blocker.** `level: subnational` was
 > added 2026-08-21 and the three Belgian sub-federal ODD instruments are
@@ -350,8 +362,6 @@ by accident.
 | NIIS member vs partner status | Ukraine, the Faroe Islands and the Government of Åland are **partners** of [[INTL-NIIS]] rather than members. The relationship vocabulary has `part-of` and `participates-in` and no way to say "associate", so [[UA]]'s partnership is prose only | Later (design) | Estonia batch / 2026-08-20 |
 | `applies-in` for the EU **directives** | The member-state completion pass extended the nine EU **regulations** to all 27 states, because a regulation's applicability follows from TFEU Article 288 and needs no country-specific source. The five directives — [[EU-NIS2]], [[EU-CER]], [[EU-INSPIRE]], [[EU-ITS-DIRECTIVE]], [[EU-OPEN-DATA-DIRECTIVE]] — still name 10 states each. Extending them is defensible but would show 17 blank transposition cells per directive, so it was left as a deliberate decision rather than a sweep | Next (design) | Member-state completion / 2026-08-20 |
 | A content check to follow the link check | **Started 2026-08-21.** The repository owner confirmed `europa.eu`, `iso.org`, `coe.int`, `bund.de` and `legifrance.gouv.fr` at the content tier by hand (41 entities to `primary-source`); the same day, with egress open, `tools/reverify.py` did its own machine-corroborated reading (21 more entities, batch 1). 414 of 516 remain. See `docs/re-verification.md` §"The confirmed domains" and §"A machine-corroborated pass" | Ongoing | Manual link check / 2026-08-20; content check / 2026-08-21; reverify batch 1 / 2026-08-21 |
-| Austria's E-Government-Gesetz, Meldegesetz, Personenstandsgesetz and Passgesetz | All four were amended to introduce [[AT-ID-AUSTRIA]] and the oesterreich.gv.at platform. None is modelled, so the Austrian identity layer has a platform with no legal basis attached | Next | Country expansion / 2026-08-20 |
-| Italy's CIE and CNS | [[IT-CAD]] admits three credentials for the citizen's right of digital access — [[IT-SPID]], the electronic identity card CIE, and the services card CNS. Only SPID is modelled | Next | Country expansion / 2026-08-20 |
 | PagoPA and the Piano triennale | Italy's payments platform and the three-year plan for public-administration IT, both named around [[IT-AGID]] and neither modelled | Later | Country expansion / 2026-08-20 |
 | An Icelandic X-Road deployment | [[IS]] is the third member of [[INTL-NIIS]] and the only one with no national deployment modelled, now that [[EE-X-TEE]] and [[FI-PALVELUVAYLA]] both exist | Later | Country expansion / 2026-08-20 |
 | Austria's federal digital policy ministry | [[AT-BRZ]] is a service provider rather than a policy agency, so it appears as the hub of the Austrian layer in a way that reflects what is modelled rather than how Austria is governed | Later | Country expansion / 2026-08-20 |
@@ -360,4 +370,3 @@ by accident.
 | Euro 7's implementing regulations (OBFCM/OBM data formats) | [[EU-EURO-7]] was added 2026-08-28 from the regulation's own text; secondary industry sources report two Commission implementing regulations (numbered 2025/1706 and 2025/1707 in commentary) specifying OBFCM and on-board-monitoring data formats and reporting procedures in detail. Neither was fetched or confirmed directly | Later | Euro 7 addition / 2026-08-28 |
 | Regulation (EU) 2018/858 | The general EU vehicle type-approval framework regulation that [[EU-EURO-7]] amends per a secondary summary. Not itself an Atlas entity; no `amends` relationship asserted without reading its own text | Later | Euro 7 addition / 2026-08-28 |
 | [[NL-RDW]]'s Euro 7 role | RDW is the Netherlands' general vehicle type-approval authority and would perform Euro 7 approvals once the regulation applies, but its own site describes its type-approval function in general terms only, without naming Euro 7. No relationship asserted | Later | Euro 7 addition / 2026-08-28 |
-| `domains/domain-cybersecurity.md` is stale | Its own narrative still says "The Netherlands and Poland — none in the Atlas at all. The Dutch NCSC is not modelled" and gives a 17-national-entity count — both wrong since [[NL-NCSC]] was verified into the Atlas in a later pass and [[EE-CERT-EE]] was added 2026-08-30. The whole page (tables, counts, the "three-layer chain" section) needs a fresh pass, not a spot fix | Next | Research-queue pickup / 2026-08-30 |

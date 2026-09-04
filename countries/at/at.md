@@ -23,7 +23,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-09-04"
 previous_version: null
 successor: null
 
@@ -104,10 +104,11 @@ tier the `level` vocabulary cannot represent.
 
 ## What this anchor does not yet carry
 
-No interoperability framework and no legislation attached to this
-entity — not even the statutes behind [[AT-ID-AUSTRIA]], which are
-named in that entity's own body text but have no Atlas entity of their
-own. Each of those exists in reality; none has been researched.
+No interoperability framework attached to this entity. Its legislation
+gap narrowed 2026-09-04: [[AT-EGOVG]], the E-Government-Gesetz behind
+[[AT-ID-AUSTRIA]]'s E-ID function, is now modelled — see that entity for
+how a claimed four-statute legal basis turned out, on direct reading, to
+be one statute the other three merely cite.
 
 No EU instrument in the Atlas carries `applies-in` → [[AT]] yet.
 That is a gap rather than a finding: as a member state, every
