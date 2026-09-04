@@ -21,14 +21,16 @@ verification: primary-source
 
 start_date: 2024-06-18
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-04"
 previous_version: null
 successor: null
 
 domains: []
 organisations:
   - NL-GEONOVUM
-related_entities: []
+  - NL-DIGIGO
+related_entities:
+  - NL-DIGIGO
 relationships: []
 
 sources:
@@ -123,8 +125,11 @@ currently connect this entity alone, below the two-entity threshold in
 - Its guiding principles are published by [[NL-GEONOVUM]], which is the only
   sourced institutional connection to an existing Atlas entity — confirmed
   directly this pass (Geonovum was formally tasked by the Ministry of
-  Interior Affairs with this work, per its own page). digiGO, the
-  initiator, is queued in `discovery/research-queue.md`.
+  Interior Affairs with this work, per its own page).
+- [[NL-DIGIGO]], the initiator, is now an Atlas entity (added
+  2026-09-04) and carries the `produces` edge pointing here — the
+  inbound direction is visible in the graph without a stored inverse,
+  the same pattern used across the Atlas (e.g. DE-BMV → DE-MOBILITHEK).
 
 ## Sources
 

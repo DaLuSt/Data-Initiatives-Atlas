@@ -24,7 +24,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-04"
 previous_version: null
 successor: null
 
@@ -36,6 +36,7 @@ related_entities:
   - NL-NEN
   - INTL-ISO-IEC-27001
   - INTL-ISO-IEC-27002
+  - NL-ENSIA
 relationships:
   - type: based-on
     target: INTL-ISO-IEC-27001
@@ -148,8 +149,9 @@ judgement call and is recorded in `discovery/unresolved.md`.
   adoptions, and the equivalence to the ISO editions catalogued elsewhere
   in the Atlas remains inferred rather than directly sourced.
 - Published in the Netherlands by [[NL-NEN]].
-- ENSIA, the accountability system paired with the BIO in its
-  digitaleoverheid.nl placement, is not yet an entity; queued.
+- [[NL-ENSIA]], the accountability system paired with the BIO in its
+  digitaleoverheid.nl placement, is now an entity (added 2026-09-04),
+  carrying the `based-on` edge pointing here.
 
 ## Sources
 
