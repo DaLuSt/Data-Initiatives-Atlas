@@ -71,6 +71,22 @@
 > [[BE-STATBEL]]). **CSIRT MON and GIODO remain queued** — both are
 > genuinely blocked, not under-researched: CSIRT MON's parent ministry
 > is not an Atlas entity, and GIODO's own site returns a DNS failure.
+> **2026-09-04 pickup (twelfth):** closed France's four remaining
+> "référentiels" items in one pass. [[FR-ORDONNANCE-2005-1516]] closes
+> [[FR-RGI]]'s own legal-basis gap and turned out, on a direct read of
+> its implementing decree, to also found [[FR-RGS]] — one ordinance,
+> two référentiels, at different articles. [[FR-RGS]] itself is
+> co-maintained by [[FR-DINUM]] and [[FR-ANSSI]] "en co-construction,"
+> in ANSSI's own words. [[FR-RGAA]] rests on a different legal parent
+> (the 2005 disability-rights law) but the same DINUM stewardship.
+> [[FR-ORDONNANCE-2010-1232]] closes [[EU-INSPIRE]]'s "ordonnance number
+> unestablished" gap for France. Also found: `legifrance.gouv.fr`,
+> recorded as genuinely bot-walled in the 2026-08-26 France
+> re-verification pass, answered two direct fetches normally this pass
+> — noted as a correction on `countries/fr/index.md` rather than quietly
+> overwritten. "France Identité" was removed as a closed decision
+> (recorded in prose on [[FR-FRANCECONNECT]] already; nothing further to
+> research).
 >
 > **The `level` vocabulary is no longer a blocker.** `level: subnational` was
 > added 2026-08-21 and the three Belgian sub-federal ODD instruments are
@@ -263,10 +279,6 @@ by accident.
 
 | Area / entity | Why it needs research | Suggested batch | Noted by / date |
 |---|---|---|---|
-| RGS and RGAA | France's security and accessibility reference frameworks, siblings of [[FR-RGI]] | Later | France batch |
-| France Identité | Recorded in prose on [[FR-FRANCECONNECT]]; not its own entity | Later | France batch |
-| Ordonnance n° 2005-1516 | Legal basis of [[FR-RGI]]; not modelled | Later | France batch |
-| Ordonnance of 21 October 2010 | France's INSPIRE transposition, cited on [[EU-INSPIRE]]'s `applies-in`; its number was not established so no entity was created | Later | France batch |
 
 ## Spain — queued from the fifth-country batch (2026-08-16)
 

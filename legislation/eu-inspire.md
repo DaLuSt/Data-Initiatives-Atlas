@@ -27,7 +27,7 @@ verification: primary-source
 
 start_date: 2007-05-15
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-04"
 previous_version: null
 successor: null
 
@@ -44,6 +44,7 @@ related_entities:
   - DE-GDI-DE
   - DK
   - EU-GREEN-DEAL-DATA-SPACE
+  - FR-ORDONNANCE-2010-1232
 relationships:
   - type: applies-in
     target: DK
@@ -104,8 +105,8 @@ relationships:
   - type: applies-in
     target: FR
     source: fact
-    evidence: "The INSPIRE Directive was transposed into French law by an ordonnance of 21 October 2010, according to the Etalab and data.gouv.fr open data legal chronologies (guides.etalab.gouv.fr/juridique/chronologie; guides.data.gouv.fr; datactivist.coop). NOT READ — search-only. The ordonnance's number was not established, so no entity was created for it."
-    confidence: medium
+    evidence: "A research-queue pickup (2026-09-04) closed the previous gap here: the ordonnance's number was unestablished, sourced only to Etalab and data.gouv.fr legal chronologies not independently read. Reading legifrance.gouv.fr's own text of Ordonnance n° 2010-1232 du 21 octobre 2010 directly confirms its Article 1 adds a new Chapter VII, 'De l'infrastructure d'information géographique', to the Code de l'environnement, covering geographic data series for the themes in 'annexes I, II et III de la directive 2007/2/CE' — INSPIRE by its own Official Journal number. Now modelled as FR-ORDONNANCE-2010-1232, carrying the corresponding implements-requirement-from edge back to this entity."
+    confidence: high
     valid_from: 2010-10-21
     valid_until: null
   - type: applies-in

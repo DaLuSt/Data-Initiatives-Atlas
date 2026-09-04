@@ -19,6 +19,10 @@ Anchor entity: [[FR]]
 > are dead: `guides.etalab.gouv.fr` (superseded by `guides.data.gouv.fr`)
 > and `www.drsd.defense.gouv.fr` (superseded by pages under
 > `www.defense.gouv.fr/drsd/`). See `discovery/reverification-allowlist.md`.
+> **Correction, 2026-09-04:** `legifrance.gouv.fr` was fetched directly
+> and successfully this pass, twice, at both an `affichTexte.do` and a
+> `/jorf/id/` URL — the earlier "genuinely bot-walled" finding does not
+> hold today, at least for those two URL shapes.
 
 ## Organisations
 
@@ -42,11 +46,19 @@ Anchor entity: [[FR]]
 - [[FR-NIS2-LOI]] — Loi Résilience _(`status: planned` — still a bill,
   unpromulgated as of 6 August 2026; the earlier sourcing conflict is
   resolved, see the entity)_
+- [[FR-ORDONNANCE-2005-1516]] — legal basis for both [[FR-RGI]] and
+  [[FR-RGS]] _(added 2026-09-04)_
+- [[FR-ORDONNANCE-2010-1232]] — France's [[EU-INSPIRE]] transposition
+  _(one article of an environmental-law omnibus; added 2026-09-04)_
 
 ## Frameworks and standards
 
 - [[FR-RGI]] — Référentiel général d'interopérabilité _(a legal obligation,
-  not comply-or-explain)_
+  not comply-or-explain; `governed-by` [[FR-ORDONNANCE-2005-1516]])_
+- [[FR-RGS]] — Référentiel Général de Sécurité _(co-maintained by
+  [[FR-DINUM]] and [[FR-ANSSI]]; added 2026-09-04)_
+- [[FR-RGAA]] — Référentiel Général d'Amélioration de l'Accessibilité
+  _(maintained by [[FR-DINUM]] since 2019; added 2026-09-04)_
 
 ## Platforms
 
