@@ -6,8 +6,9 @@
 > rows made the queue longer every time it got shorter.
 >
 > **Largest open items:** the Comunidades Autónomas, now unblocked and
-> unstarted; OSLO/Digitaal Vlaanderen; and DKE, Germany's last unmodelled
-> `Next`-flagged gap. [[PL-PESEL]], Poland's population register, is
+> unstarted; and DKE, Germany's last unmodelled `Next`-flagged gap.
+> OSLO/Digitaal Vlaanderen closed 2026-09-04 — see the tenth pickup below.
+> [[PL-PESEL]], Poland's population register, is
 > modelled as of 2026-08-22 — the second research-queue pickup.
 > **2026-08-30 pickup (sixth):** closed six items in one pass — see
 > `progress/completed.md`-style detail preserved in git history.
@@ -47,6 +48,20 @@
 > which body holds authority — [[ES-AESIA]] alone, or a separate
 > General Directorate of AI plus eight market-surveillance authorities —
 > so no entity was created, the same discipline [[FR-NIS2-LOI]] set.
+> **2026-09-04 pickup (tenth):** closed Belgium's entire Regions cluster
+> in one pass, the largest single ontology-driven gap the Atlas had
+> recorded. Four new entities — [[BE-DIGITAAL-VLAANDEREN]] (Flanders),
+> [[BE-AGENCE-NUMERIQUE]] (Wallonia), [[BE-PARADIGM]] (Brussels-Capital,
+> formerly CIRB/CIBG since 1987) and [[BE-OSLO]], the Flemish semantic-
+> interoperability standard Digitaal Vlaanderen maintains — close what
+> `discovery/unresolved.md` had called "the Atlas's best-evidenced
+> ontology defect" before `level: subnational` resolved it on
+> 2026-08-21. Also created [[BE-STATISTIEKWET-1962]], closing the
+> "Belgian statistics act" gap [[BE-STATBEL]]'s own file had deliberately
+> deferred, with a `governed-by` edge added. `countries/be/be.md` and
+> `countries/be/index.md` had two separate stale claims corrected: one
+> banner still said no Belgian Region was modelled, and the anchor's own
+> "no sub-national level was invented" line was three weeks out of date.
 >
 > **The `level` vocabulary is no longer a blocker.** `level: subnational` was
 > added 2026-08-21 and the three Belgian sub-federal ODD instruments are
@@ -232,11 +247,8 @@ by accident.
 
 | Area / entity | Why it needs research | Suggested batch | Noted by / date |
 |---|---|---|---|
-| **OSLO and Digitaal Vlaanderen** | A major European semantic-interoperability programme, entirely unmodelled. **No longer blocked**: `level: subnational` was added 2026-08-21 and the three Belgian sub-federal ODD instruments are modelled under it. This is now ordinary research | Next | Belgium batch; unblocked 2026-08-21 |
-| Agence du Numérique; Paradigm; the Regions and Communities | Same blocker | Blocked | Belgium batch |
 | The other five public service integrators | BELGIF names six; only [[BE-KSZ]] is modelled | Later | Belgium batch |
 | Belgian eID / itsme; eHealth platform; Kruispuntbank van Ondernemingen | Belgium's digital identity and registry infrastructure, none modelled. itsme is one of Europe's more distinctive national identity schemes | Later | Belgium batch |
-| Belgian statistics act | No statutory basis for [[BE-STATBEL]] was found | Later | Belgium batch |
 
 ## France — queued from the fourth-country batch (2026-08-16)
 

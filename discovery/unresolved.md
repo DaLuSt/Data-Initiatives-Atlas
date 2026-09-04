@@ -215,7 +215,7 @@ is what to request.
 
 | Topic | Question | Why it matters | Status |
 |---|---|---|---|
-| **No sub-national level — confirmed general** | Germany found no term fits a Land. Belgium finds the term that *would* fit is **already taken**: `level: regional` means supra-national in this Atlas ([[EU]] carries it). | The cost is now concrete and large: **OSLO** — a Flemish semantic-interoperability and linked-data standards programme squarely in this Atlas's subject matter — is not modelled at all, nor are Digitaal Vlaanderen, the Agence du Numérique, Paradigm, or any Region or Community. Belgium's coverage **understates** its reality more than any other country's. Two federal states, two different failure modes, same root cause. | **Open — ontology, the Atlas's best-evidenced defect** |
+| **No sub-national level — confirmed general** | Germany found no term fits a Land. Belgium finds the term that *would* fit is **already taken**: `level: regional` means supra-national in this Atlas ([[EU]] carries it). | The cost was concrete and large: **OSLO**, Digitaal Vlaanderen, the Agence du Numérique and Paradigm were unmodelled. Two federal states, two different failure modes, same root cause. | **Resolved 2026-08-21** — `level: subnational` was added to the schema, a genuine ontology change rather than a Belgium-specific workaround. [[BE-OSLO]], [[BE-DIGITAAL-VLAANDEREN]], [[BE-AGENCE-NUMERIQUE]] and [[BE-PARADIGM]] were modelled under it (research-queue pickup, 2026-09-04). Still open: no Community-level (as opposed to Region-level) digital-policy body has been researched |
 | Multilingual names | Belgium has three official languages; `name` uses the Dutch form where the sources found were Dutch, French in `alternative_names`. | A sourcing artefact presented as a naming decision. `FOD BOSA`/`SPF BOSA` and `KSZ`/`BCSS` are equally official. The Atlas has no multilingual name field and did not gain one. | Open (ontology) |
 | `level: sectoral` for nationally-constituted bodies | [[BE-KSZ]] joins [[NL-NICTIZ]] and [[NL-ROSA]] in being recorded `sectoral` — a national body whose authority is bounded to one sector. | The convention is now used four times across three countries on precedent alone. It should be written into `metadata/taxonomy.md` or abandoned. | Open (ontology) |
 
@@ -243,7 +243,7 @@ is what to request.
 |---|---|---|
 | [[BE-NIS2-WET]] | No Belgisch Staatsblad ELI URI cited; publication and entry-into-force dates rest on CCB reporting. | Partly resolved — re-verification pass, 2026-08-26. Two more independent external sources (kpmglaw.be, prebes.be) now corroborate the 17 May 2024 publication date and the replacement of [[BE-NIS1-WET]]; CCB's own three pages remain bot-walled and no ELI URI has yet been found. |
 | [[BE-KSZ-WET]] | Only two sources, one of them the KSZ's page about its own founding act. Act content unknown. | Partly resolved — re-verification pass, 2026-08-26. The KSZ's own page, read directly, quotes Article 1 verbatim. Remaining act content (governance, funding) still unknown; still only two sources. |
-| [[BE-STATBEL]] | **No statutory basis found** — no Belgian equivalent of [[DE-BSTATG]] or [[NL-WET-CBS]], so no `governed-by` is recorded. | **Found 2026-08-27** — the Wet van 4 juli 1962 betreffende de openbare statistiek, read directly at etaamb.openjustice.be. Still no `governed-by` edge: the 1962 act is not yet its own Atlas entity. **Open — create the entity, then add the edge.** |
+| [[BE-STATBEL]] | **No statutory basis found** — no Belgian equivalent of [[DE-BSTATG]] or [[NL-WET-CBS]], so no `governed-by` is recorded. | **Closed 2026-09-04** — [[BE-STATISTIEKWET-1962]] created from the Wet van 4 juli 1962, read directly at etaamb.openjustice.be in the 2026-08-27 pass; [[BE-STATBEL]] now carries the `governed-by` edge. |
 | [[BE-HERGEBRUIK-WET]] | Scope, obligations and relationship to the current EU regime all unknown. | Partly resolved — re-verification pass, 2026-08-26. The act's own text (both original and current consolidated versions) was read directly, confirming its 2016 PSI Directive transposition and the 2023 amendment's insertion of a Directive (EU) 2019/1024 reference. Full substantive obligations (licensing, pricing, appeals commission) remain sourced only from BIPT's secondary account. |
 
 ### Belgium re-verification pass (2026-08-26)
@@ -520,8 +520,9 @@ hundreds of municipalities, and one node for "the municipalities" would be
 an invention. [[NL-VNG]] is their association, which is a different thing.
 
 Also unmodelled: **SVB-BGT** (the BGT bronhouders' cooperative, named in one
-source), **Rijkswaterstaat, ProRail, Defence and RVO** as BGT bronhouders,
-and **Digimelding**, the stelsel's error-reporting facility.
+source), and **Rijkswaterstaat, ProRail, Defence and RVO** as BGT
+bronhouders. **Digimelding**, the stelsel's error-reporting facility, is
+now [[NL-DIGIMELDING]] (research-queue pickup, 2026-09-04).
 
 ### Every register carries one `maintained-by`, and three of them shouldn't
 
