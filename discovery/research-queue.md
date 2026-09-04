@@ -62,6 +62,15 @@
 > `countries/be/index.md` had two separate stale claims corrected: one
 > banner still said no Belgian Region was modelled, and the anchor's own
 > "no sub-national level was invented" line was three weeks out of date.
+> **2026-09-04 pickup (eleventh):** closed three more Poland items —
+> [[PL-KRI]] (Krajowe Ramy Interoperacyjności, the sixth national
+> interoperability framework with no sourced [[EU-EIF]] descent),
+> [[PL-DCAT-AP-PL]] (a fifth national DCAT-AP child) and
+> [[PL-USTAWA-STATYSTYCE-1995]] (closing [[PL-GUS]]'s legal-basis gap
+> with a `governed-by` edge, the same pattern just used on
+> [[BE-STATBEL]]). **CSIRT MON and GIODO remain queued** — both are
+> genuinely blocked, not under-researched: CSIRT MON's parent ministry
+> is not an Atlas entity, and GIODO's own site returns a DNS failure.
 >
 > **The `level` vocabulary is no longer a blocker.** `level: subnational` was
 > added 2026-08-21 and the three Belgian sub-federal ODD instruments are
@@ -285,9 +294,6 @@ by accident.
 | Area / entity | Why it needs research | Suggested batch | Noted by / date |
 |---|---|---|---|
 | **CSIRT MON** | Poland's military CSIRT, and the last of the three still unmodelled — [[PL-NASK]] carries CSIRT NASK and [[PL-ABW]] carries CSIRT GOV | Later | Poland batch; narrowed 2026-08-18 |
-| **Krajowe Ramy Interoperacyjności** | Poland's national interoperability framework — the sixth national NIF, and the sixth potential [[EU-EIF]] descent | Later | Poland batch |
-| **A Polish DCAT application profile** | [[EU-DCAT-AP]] has four national children; whether Poland has a fifth was not researched | Later | Poland batch |
-| **Ustawa o statystyce publicznej (1995)** | [[PL-GUS]]'s legal basis, named and dated, not modelled — same treatment as the Dutch and Spanish statutes | Later | Poland batch |
 | **GIODO** | The predecessor data protection authority. Whether the succession to [[PL-UODO]] can be modelled depends on establishing what happened to the competencies the President did **not** take over | Later | Poland batch |
 | **Agencja Informatyzacji** | Would replace [[PL-COI]]. **Blocked** — the draft law is in consultation and the body does not exist | Blocked | Poland batch |
 
