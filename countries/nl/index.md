@@ -58,6 +58,8 @@ Anchor entity: [[NL]]
 ## Standards
 
 - [[NL-DIGIKOPPELING]] — message exchange _(Logius, mandatory)_
+- [[NL-DIGIMELDING]] — reporting inaccuracies back to base registers
+  _(Logius, added 2026-09-04)_
 - [[NL-ADR]] — NLGov REST API Design Rules _(Logius, mandatory)_
 - [[NL-DCAT-AP-NL]] — metadata profile _(Geonovum)_
 - [[NL-NEN-3610]] — base model for geo-information _(NEN / Geonovum)_ ✅ re-verified 2026-08-27

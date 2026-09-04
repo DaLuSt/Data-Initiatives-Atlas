@@ -41,6 +41,7 @@ Anchor entity: [[DE]]
 ### Ministries
 
 - [[DE-BMDS]] — Digital and State Modernisation _(created May 2025)_
+- [[DE-BMV]] — Transport _(renamed from BMDV, May 2025, added 2026-09-04)_
 - [[DE-BMI]] — Interior
 
 ### Federal-state coordination
@@ -96,6 +97,8 @@ Anchor entity: [[DE]]
 - [[DE-DCAT-AP-DE]] — German adaptation of [[EU-DCAT-AP]]
 - [[DE-IT-GRUNDSCHUTZ]] — BSI information security methodology
 - [[DE-IT-ARCHITEKTURRICHTLINIEN]] — Föderale IT-Architekturrichtlinien
+- [[DE-FIM]] — Föderales Informationsmanagement _(IT-Planungsrat
+  application since 2017; added 2026-09-04)_
 
 ## Platforms
 
@@ -174,6 +177,7 @@ same ministry as [[DE-BSI]] and [[DE-DESTATIS]].
   `discovery/unresolved.md`.
 - **Verwaltungsvereinbarungen** — the Bund-Länder administrative agreements
   underpinning [[DE-GOVDATA]] and [[DE-GDI-DE]]. No entity type fits.
-- Individual XÖV standards, DKE, FIM, gematik, national Gaia-X hubs,
+- Individual XÖV standards, DKE, gematik, national Gaia-X hubs,
   Manufacturing-X, the IDSA/IDS-RAM. All queued in
-  `discovery/research-queue.md`.
+  `discovery/research-queue.md`. ~~FIM~~ is now [[DE-FIM]] (added
+  2026-09-04).

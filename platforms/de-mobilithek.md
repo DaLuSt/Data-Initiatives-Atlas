@@ -26,7 +26,7 @@ verification: primary-source
 
 start_date: 2022-07-01
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-04"
 previous_version: null
 successor: null
 
@@ -37,6 +37,7 @@ related_entities:
   - EU-ITS-DIRECTIVE
   - DE-MDS
   - NL-NTM
+  - DE-BMV
 relationships:
   - type: implements-requirement-from
     target: EU-ITS-DIRECTIVE
@@ -154,17 +155,28 @@ dates, not scope beyond what is stated above. [[DE-IWG]] cleared the bar
 because the DNG carries a sourced `previous_version` relationship to it;
 neither predecessor here does. Queued in `discovery/research-queue.md`.
 
+## ✅ The BMV/BMDV naming inconsistency, resolved
+
+A research-queue pickup on 2026-09-04 closed the gap this entity's own
+Sources section used to flag. [[DE-BMV]] is now an Atlas entity: the
+Bundesministerium für Digitales und Verkehr (BMDV) was renamed the
+Bundesministerium für Verkehr (BMV) on 6 May 2025, the same date its
+digital competences transferred to [[DE-BMDS]]. Mobilithek — a
+transport-sector platform — stayed with the renamed transport ministry
+rather than moving to the new digital ministry, which is why `bmv.de`
+(current) and `bmdv.bund.de`-attributed sources (pre-2025) both describe
+the same platform without contradiction.
+
 ## Relationships
 
 - Implements requirements from [[EU-ITS-DIRECTIVE]] — confirmed directly
   this pass with a precise directive citation, `confidence: high`.
 
+[[DE-BMV]] carries the `produces` edge pointing here, added 2026-09-04.
+
 ## Sources
 
 Listed in frontmatter. Three of four loaded with substantive content this
-pass; `mobilithek.info` returned only a bare page title. Note the ministry
-is cited as **BMV** (Bundesministerium für Verkehr); the same ministry
-appears elsewhere in this batch as BMDV. The German transport ministry has
-been renamed and its digital competences moved to [[DE-BMDS]]. The
-publisher field records the name on the cited URL rather than reconciling
-the two.
+pass; `mobilithek.info` returned only a bare page title. The ministry is
+cited as **BMV** on current sources and **BMDV** on pre-2025 ones — no
+longer an unreconciled inconsistency; see [[DE-BMV]].

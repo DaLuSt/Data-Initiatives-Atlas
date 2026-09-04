@@ -29,7 +29,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-30"
+last_verified: "2026-09-04"
 previous_version: null
 successor: null
 
@@ -49,6 +49,7 @@ related_entities:
   - NL-BRI
   - NL-BRO
   - NL-DIGIKOPPELING
+  - NL-DIGIMELDING
   - NL-FDS
 relationships: []
 
@@ -144,20 +145,20 @@ stelselvoorzieningen — [[NL-DIGIKOPPELING]] (data exchange), Digilevering,
 Digimelding (reporting suspected errors) and Stelselcatalogus — one more
 than the two previously recorded here.
 
-Digimelding, Digilevering and Stelselcatalogus are **not** Atlas entities.
+Digilevering and Stelselcatalogus are still **not** Atlas entities.
 **Confirmed by reading Logius's own "Stelselvoorzieningen" page directly
-this pass (2026-08-28):** the four facilities "ondersteunen de
-basisregistraties bij eenvoudige, uniforme, betrouwbare en efficiënte
-gegevensuitwisseling met hun afnemers" (support the base registries with
-simple, uniform, reliable and efficient data exchange with their
-consumers) — Digikoppeling for secure information exchange between
-government bodies, Digimelding for consumers to report suspected
-inaccuracies back to source organisations, Digilevering for event-based
-notifications of registry changes, and Stelselcatalogus as the integrated
-overview of concepts and data across the system. That is more than a
-passing mention, but none of the three still-uncreated ones has enough of
-its own substance beyond this functional description to justify a
-separate entity yet. Queued.
+(2026-08-28):** the four facilities "ondersteunen de basisregistraties bij
+eenvoudige, uniforme, betrouwbare en efficiënte gegevensuitwisseling met
+hun afnemers" (support the base registries with simple, uniform, reliable
+and efficient data exchange with their consumers) — Digikoppeling for
+secure information exchange between government bodies, Digimelding for
+consumers to report suspected inaccuracies back to source organisations,
+Digilevering for event-based notifications of registry changes, and
+Stelselcatalogus as the integrated overview of concepts and data across
+the system. **Digimelding is now [[NL-DIGIMELDING]]** (added 2026-09-04, a
+research-queue pickup), leaving Digilevering and Stelselcatalogus as the
+two still without enough substance beyond this functional description to
+justify a separate entity. Queued.
 
 ## Roles, not owners — and why the graph shows fewer parties than exist
 
