@@ -26,7 +26,7 @@ verification: primary-source
 
 start_date: 2020-01-01
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-04"
 previous_version: null
 successor: null
 
@@ -35,6 +35,9 @@ domains:
 organisations: []
 related_entities:
   - DE-IT-PLANUNGSRAT
+  - DE-FIM
+  - DE-KOSIT
+  - DE-GOVDATA
 relationships:
   - type: governed-by
     target: DE-IT-PLANUNGSRAT
@@ -151,23 +154,26 @@ Both are worth recording because direction errors are invisible to a reader
 and survive validation: the graph stays connected and every check passes
 while the meaning is reversed.
 
-## FIM is not an entity
+## FIM is now an entity
 
-The Föderales Informationsmanagement is named in the sources as a third
+The Föderales Informationsmanagement was named in the sources as a third
 body/product under the FITKO's roof, alongside the KoSIT and GovData, but
-nothing further about it was established even after this pass's direct
-reads. Creating an entity on the strength of a mention in a product list is
-exactly what §21 of the brief rules out. Queued in
-`discovery/research-queue.md`.
+this pass's direct reads could not establish anything further about it —
+creating an entity on the strength of a mention in a product list is
+exactly what §21 of the brief rules out. A research-queue pickup on
+2026-09-04 closed the gap: `docs.fitko.de`'s own dedicated documentation
+site — not found in this pass — carries a full page on FIM, and it is now
+[[DE-FIM]], `governed-by` [[DE-IT-PLANUNGSRAT]] and `maintained-by` this
+entity.
 
 ## Relationships
 
 - `governed-by` [[DE-IT-PLANUNGSRAT]] — confirmed directly this pass,
   `confidence: high`.
 
-Inbound: [[DE-GOVDATA]] and [[DE-KOSIT]] both point here, and
-[[DE-IT-ARCHITEKTURRICHTLINIEN]] records the FITKO's chairing of the
-architecture board.
+Inbound: [[DE-GOVDATA]], [[DE-KOSIT]] and, since 2026-09-04, [[DE-FIM]] all
+point here, and [[DE-IT-ARCHITEKTURRICHTLINIEN]] records the FITKO's
+chairing of the architecture board.
 
 ## Sources
 

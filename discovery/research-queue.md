@@ -6,19 +6,24 @@
 > rows made the queue longer every time it got shorter.
 >
 > **Largest open items:** the Comunidades Autónomas, now unblocked and
-> unstarted; OSLO/Digitaal Vlaanderen; and Germany's several `Next`-flagged
-> gaps (FIM, DKE, the renamed BMWK/BMDV ministries). [[PL-PESEL]], Poland's
-> population register, is modelled as of 2026-08-22 — the second
-> research-queue pickup. **2026-08-30 pickup (sixth):** closed six items in
-> one pass — [[NL-BRI]]'s AWR Chapter IVA citation (with a correction: the
-> chapter runs articles 21–22i, not 21–21k), completing `governed-by` edges
-> on all ten basisregistraties; [[PL-ODO]]'s official Dz.U. 2018 poz. 1000
-> citation via `eli.gov.pl`; [[NL-DATA-OVERHEID]]'s custodian ([[NL-LOGIUS]],
-> via KOOP); a new [[NL-DIGID]] entity, the Netherlands' missing digital-
-> identity platform; and two new Estonian entities, [[EE-CERT-EE]] and
-> [[EE-KUBERTURVALISUSE-SEADUS]]. The queued "BOE citation for Real Decreto
-> 729/2023" item was found already closed (resolved 2026-08-26, never
-> removed from this file) and is removed here as a housekeeping fix.
+> unstarted; OSLO/Digitaal Vlaanderen; and DKE, Germany's last unmodelled
+> `Next`-flagged gap. [[PL-PESEL]], Poland's population register, is
+> modelled as of 2026-08-22 — the second research-queue pickup.
+> **2026-08-30 pickup (sixth):** closed six items in one pass — see
+> `progress/completed.md`-style detail preserved in git history.
+> **2026-09-04 pickup (seventh):** closed five items and narrowed a sixth —
+> two new German entities, [[DE-FIM]] (closing a gap [[DE-FITKO]]'s own
+> file explicitly declined to close) and [[DE-BMV]] (resolving the
+> BMDV/BMV/BMDS naming split flagged on [[DE-MOBILITHEK]]), plus a prose
+> note on BMWK's rename to BMWE; a new [[NL-DIGIMELDING]] entity, one of
+> the Stelsel van Basisregistraties' four system facilities; and
+> [[PL-MOBYWATEL]]'s eIDAS2 relationship, upgraded from press-reporting-only
+> to a directly-read Ministry of Digital Affairs statement that corrects
+> the framing from "incompatible failure" to "parallel purpose-built app."
+> Estonia's Open Data Directive transposition was narrowed to a specific,
+> dated candidate instrument but not closed — every direct-fetch attempt
+> failed. Two further queue rows were found already closed and removed as
+> housekeeping: the operator of [[PL-DANE-GOV-PL]] (resolved 2026-08-27).
 >
 > **The `level` vocabulary is no longer a blocker.** `level: subnational` was
 > added 2026-08-21 and the three Belgian sub-federal ODD instruments are
@@ -193,11 +198,9 @@ by accident.
 | The sixteen Land INSPIRE transposition acts | Jointly with [[DE-GEOZG]] they constitute Germany's transposition. **Blocked on the `level` ontology question**, not on sourcing | Blocked | Germany batch |
 | Land data protection authorities | [[DE-BFDI]] covers federal bodies only; sixteen Land authorities cover the rest. Same blocker | Blocked | Germany batch |
 | Individual XÖV standards | XPersonenstand, XMeld, XBau, XPlanung and others. Only [[DE-XRECHNUNG]] is modelled. Creating one entity per standard would inflate the layer without adding structure (brief §1) | Later | Germany batch |
-| FIM (Föderales Informationsmanagement) | Named as a third body under the [[DE-FITKO]]'s roof alongside [[DE-KOSIT]] and [[DE-GOVDATA]]; nothing else established. A single mention in a list is not enough | Next | Germany batch |
 | DKE | German electrotechnical standards commission, [[DE-DIN]]'s counterpart towards [[EU-CENELEC]] | Later | Germany batch |
 | National Gaia-X hubs | Germany's and Austria's hubs are cited as sources on [[EU-GAIA-X]]. A `DE-GAIA-X-HUB` would be a legitimate national entity, not a duplicate — but nothing beyond website existence was established | Later | Germany batch |
 | Mobility Data Marketplace (MDM) | Replaced by [[DE-MOBILITHEK]] as National Access Point. **No superseded entity created** — unlike [[DE-IWG]], nothing beyond the replacement is established | Later | Germany batch |
-| BMWK / BMWE, BMDV / BMV | Co-authors of [[DE-DATENSTRATEGIE]] and publisher of [[DE-MOBILITHEK]] sources. Both ministries have been renamed or reorganised around [[DE-BMDS]] | Next | Germany batch |
 | Bundesdruckerei; ITZBund | Federal printing/eID body and the federal IT service centre. ITZBund is already cited as a source on [[DE-XOEV]] | Later | Germany batch |
 | OZG-Änderungsgesetz | A substantial amending act, deliberately **not** given its own entity — doing so would force the same `supersedes` compromise as [[DE-NIS2UMSUCG]] → [[DE-BSIG]]. Revisit if an amendment relationship type is added | Blocked | Germany batch |
 | Lenkungsgremium GDI-DE | Governing committee of [[DE-GDI-DE]]; would be reachable only from that one entity | Later | Germany batch |
@@ -237,7 +240,6 @@ by accident.
 
 | Area / entity | Why it needs research | Suggested batch | Noted by / date |
 |---|---|---|---|
-| **Digimelding** | The stelsel's facility for reporting suspected errors in the registrations, alongside [[NL-DIGIKOPPELING]]. Named in one sentence of one source | Next | Register batch |
 | **SVB-BGT** | Samenwerkingsverband Bronhouders voor de BGT — the cooperative organising seven categories of bronhouder into one national map. Named in one source | Later | Register batch |
 | **Rijkswaterstaat, ProRail, RVO** | BGT and BRO bronhouders; none is an Atlas entity | Later | Register batch |
 | **Dutch municipalities as entities** | They hold the [[NL-BAG]] and determine [[NL-WOZ]] values. `level: local` is the right value and remains unused; the open question is **what entity to create** — 342 municipalities individually is not obviously right, and one collective entity would misdescribe 342 separate controllers | Blocked (design) | Register batch |
@@ -248,9 +250,7 @@ by accident.
 
 | Area / entity | Why it needs research | Suggested batch | Noted by / date |
 |---|---|---|---|
-| **A ministry or Commission source for the eIDAS 2.0 incompatibility** | [[PL-MOBYWATEL]]'s edge to [[EU-EIDAS2]] — the Atlas's **only** eIDAS2 link — rests on press reporting alone | **Next** | Poland batch |
 | **CSIRT MON** | Poland's military CSIRT, and the last of the three still unmodelled — [[PL-NASK]] carries CSIRT NASK and [[PL-ABW]] carries CSIRT GOV | Later | Poland batch; narrowed 2026-08-18 |
-| **The operator of [[PL-DANE-GOV-PL]]** | Not identified by any source found. Three of six national open data portals still have no custodian in the graph | Next | Poland batch |
 | **Krajowe Ramy Interoperacyjności** | Poland's national interoperability framework — the sixth national NIF, and the sixth potential [[EU-EIF]] descent | Later | Poland batch |
 | **A Polish DCAT application profile** | [[EU-DCAT-AP]] has four national children; whether Poland has a fifth was not researched | Later | Poland batch |
 | **Ustawa o statystyce publicznej (1995)** | [[PL-GUS]]'s legal basis, named and dated, not modelled — same treatment as the Dutch and Spanish statutes | Later | Poland batch |
@@ -345,7 +345,7 @@ by accident.
 | The five `github.com` sources | Cited on [[BE-BELGIF]], [[EU-SEMIC]], [[BE-DCAT-AP-BE]] and [[EU-DCAT-AP]]. Refused by the **GitHub proxy**, which scopes a session to its configured repositories — a different policy from the egress allowlist, and one an allowlist entry will not lift. These five may never be re-verifiable from inside a session | Blocked (GitHub proxy) | Full sweep / 2026-08-19 |
 | Six entities with no checkable claims | [[RO]], [[UA]], [[FR-ETALAB]], [[NL-LOGIUS]], [[NL-NICTIZ]], [[NO-ALTINN]] — short names and no legal identifier, so `tools/reverify.py` can only fetch their sources, not corroborate anything against them. Either richer `alternative_names` or acceptance that these are judgment-only entities | Later | Full sweep / 2026-08-19 |
 | Hub-aware Explorer traversal | The neighbourhood control's depth is a blunt lever on a hub-heavy graph: a path `A → EU → B` exists between almost any pair and means only "both are European". Not traversing *through* anchor and `DOMAIN-*` nodes — or making that a toggle — would make deep hops meaningful and would make wikilinks-on mode usable at depth, which it is not today. Measured: median seed reaches 66% of the graph at 2 hops with wikilinks on | Later (design) | Explorer depth batch / 2026-08-20 |
-| Estonia's Open Data Directive transposition | Estonia was **not** among the nineteen member states given letters of formal notice in September 2021, so it appears to have notified on time — but the instrument is unidentified. Whether [[EE-ATS]] is the vehicle is unestablished | Next | Estonia batch / 2026-08-20 |
+| Estonia's Open Data Directive transposition — narrowed, not closed | WebSearch (2026-09-04) surfaced a specific, dated candidate: "Avaliku teabe seaduse muutmise seadus" (RT I, 30.11.2021, 3), reportedly adopted 17.11.2021 and in force 10.12.2021 to transpose Directive 2019/1024, corroborated independently by an EU Open Data Maturity factsheet characterising the PIA as Estonia's open-data legal framework. **Every direct-fetch attempt failed this pass** — `riigiteataja.ee` and `eelnoud.valitsus.ee` are JS-rendered with no static content, `rup.ee` returned 403, and both the koda.ee explanatory memorandum and the data.europa.eu factsheet PDFs returned only unreadable binary. No relationship asserted; the specific citation is a lead for the next attempt, not a sourced fact | Next | Estonia batch / 2026-08-20; narrowed research-queue pickup / 2026-09-04 |
 | Estonian eID card and Mobile-ID | The identity infrastructure [[EE-E-RESIDENCY]] is built on, and the link to [[EU-EIDAS2]] and the European Digital Identity Wallet | Later | Estonia batch / 2026-08-20 |
 | NIIS member vs partner status | Ukraine, the Faroe Islands and the Government of Åland are **partners** of [[INTL-NIIS]] rather than members. The relationship vocabulary has `part-of` and `participates-in` and no way to say "associate", so [[UA]]'s partnership is prose only | Later (design) | Estonia batch / 2026-08-20 |
 | `applies-in` for the EU **directives** | The member-state completion pass extended the nine EU **regulations** to all 27 states, because a regulation's applicability follows from TFEU Article 288 and needs no country-specific source. The five directives — [[EU-NIS2]], [[EU-CER]], [[EU-INSPIRE]], [[EU-ITS-DIRECTIVE]], [[EU-OPEN-DATA-DIRECTIVE]] — still name 10 states each. Extending them is defensible but would show 17 blank transposition cells per directive, so it was left as a deliberate decision rather than a sweep | Next (design) | Member-state completion / 2026-08-20 |

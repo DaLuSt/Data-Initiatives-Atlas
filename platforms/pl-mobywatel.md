@@ -12,12 +12,13 @@ description: >
   through services provided within the application, in accordance with EU
   rules on electronic identification and trust services, and introduced the
   mDowód mobile document certifying the identity and Polish citizenship of
-  users within Poland in situations of mutual physical presence. Reporting
-  states the application is architecturally incompatible with the eIDAS 2.0
-  regulation and cannot function as a European Digital Identity Wallet, that
-  adapting it has been deemed technically impossible, and that the Ministry
-  of Digital Affairs indicated new solutions would be made available by the
-  end of 2026.
+  users within Poland in situations of mutual physical presence. Press
+  reporting described the application as architecturally incompatible with
+  the eIDAS 2.0 regulation and unable to function as a European Digital
+  Identity Wallet; the Ministry of Digital Affairs' own statement confirms
+  mObywatel continues to be developed and that a separate, purpose-built
+  wallet application will run alongside it, planned for release by the end
+  of 2026.
 
 level: national
 country: PL
@@ -30,7 +31,7 @@ verification: primary-source
 
 start_date: 2023-07-14
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-09-04"
 previous_version: null
 successor: null
 
@@ -59,8 +60,8 @@ relationships:
   - type: related-to
     target: EU-EIDAS2
     source: fact
-    evidence: "Confirmed by reading biznesinfo.pl directly (2026-08-26): 'Architektura mObywatela opiera się na rozwiązaniach, które są zasadniczo różne od technicznych wymagań UE' (mObywatel's architecture relies on solutions fundamentally different from the EU's technical requirements) — the EU mandates decentralised protocols and specific cryptographic standards for selective data disclosure, while mObywatel uses proprietary protocols; some modules may need complete reconstruction. Without full compatibility, the article warns mObywatel risks becoming a 'digital island', functional only within Poland. Poland must implement the EUDI Wallet by 2026. `orka.sejm.gov.pl` was not read this pass, and no ministry or Commission document confirming the incompatibility finding was found, so it still rests on press reporting alone. ATLAS NOTE: the relationship recorded is that the Regulation applies to Poland and this application cannot satisfy it. The vocabulary has no type for a requirement an entity fails to meet, so the weakest available type is used and the substance is carried in this evidence string."
-    confidence: low
+    evidence: "Originally sourced to biznesinfo.pl alone (2026-08-26): 'Architektura mObywatela opiera się na rozwiązaniach, które są zasadniczo różne od technicznych wymagań UE' (mObywatel's architecture relies on solutions fundamentally different from the EU's technical requirements). A research-queue pickup (2026-09-04) closed the 'ministry or Commission source' gap this evidence string previously flagged: reading gov.pl's own Ministry of Digital Affairs press release directly, titled 'Rozwijamy mObywatela, a nie wygaszamy' (We are developing mObywatel, not shutting it down), the ministry states in its own words 'pracujemy nad europejskim portfelem tożsamości cyfrowej, zgodnym z rozporządzeniem eIDAS 2.0' (we are working on a European digital identity wallet, compliant with the eIDAS 2.0 regulation) as a SEPARATE application from mObywatel — 'obie aplikacje będą działały równolegle' (both applications will operate in parallel) — rather than an upgrade of mObywatel itself, with 'udostępnienie nowych rozwiązań przewidziano na koniec 2026 roku' (the new solutions are planned for release by the end of 2026). This corrects the previous framing: mObywatel is not being replaced or forced to comply: a distinct, purpose-built wallet application is being built alongside it. Independently, the issue was also raised at EU institutional level — European Parliament question E-000763/2026, tabled by MEP Kosma Złotowski on 24 February 2026, exists on this exact topic, though its full text could not be fetched this pass (europarl.europa.eu returned empty content)."
+    confidence: medium
     valid_from: null
     valid_until: null
 
@@ -84,15 +85,26 @@ sources:
     url: "https://www.biznesinfo.pl/unia-wprowadza-cyfrowa-tozsamosc-co-to-oznacza-dla-mobywatela-i-twoich-dokumentow-kp-wds-230226"
     publisher: "Biznes Info"
     accessed: "2026-08-26"
+  - title: "Rozwijamy mObywatela, a nie wygaszamy"
+    url: "https://www.gov.pl/web/cyfryzacja/rozwijamy-mobywatela-a-nie-wygaszamy"
+    publisher: "Ministerstwo Cyfryzacji"
+    accessed: "2026-09-04"
+  - title: "Parliamentary question | The eIDAS 2.0 Regulation and mObywatel | E-000763/2026 (attempted, returned empty content)"
+    url: "https://www.europarl.europa.eu/doceo/document/E-10-2026-000763_EN.html"
+    publisher: "European Parliament"
 ---
 
 # mObywatel
 
-> **Verified 2026-08-26.** Four of five cited pages were read directly.
-> The Act's own text names its legal operator — a gap this entity
-> previously flagged as unresolved — and independent press reporting
-> corroborates the eIDAS2 incompatibility finding in more technical
-> detail than before. `orka.sejm.gov.pl` was not read this pass.
+> **Verified 2026-08-26; eIDAS2 sourcing upgraded 2026-09-04.** Four of
+> five cited pages were read directly in the first pass. A research-queue
+> pickup then closed the "no ministry or Commission document" gap the
+> eIDAS2 relationship flagged: the Ministry of Digital Affairs' own gov.pl
+> press release, read directly, both confirms the compatibility work and
+> corrects the framing — a separate wallet application is being built
+> alongside mObywatel, not as its replacement. `orka.sejm.gov.pl` and the
+> European Parliament's own parliamentary-question page remain unread
+> (the latter returned empty content to this pass's fetch tool).
 
 ## Description
 
@@ -103,23 +115,31 @@ application, and introduced **mDowód** — a mobile document certifying
 identity and Polish citizenship **within Poland**, in situations of mutual
 physical presence.
 
-## The first sourced eIDAS2 link in the Atlas, and it is a failure
+## The first sourced eIDAS2 link in the Atlas, and it is a workaround, not a failure
 
 Four batches have recorded the same gap. [[FR-FRANCECONNECT]] predicted it
 would *"become a factual question rather than a modelling one"*;
 [[ES-CLAVE]] recorded that the deadline was roughly four months out with
 **no country in the Atlas linked to [[EU-EIDAS2]]**.
 
-Poland closes it, and the content is negative:
+Poland closes it. The original press reporting (biznesinfo.pl, 2026-08-26)
+described mObywatel as architecturally incompatible with eIDAS 2.0 and
+unable to function as a European Digital Identity Wallet. **The Ministry
+of Digital Affairs' own words, read directly this pass, refine that
+rather than confirm it as a "failure":**
 
-- mObywatel is **architecturally incompatible** with eIDAS 2.0;
-- it **cannot function as a European Digital Identity Wallet**;
-- adapting it has been **deemed technically impossible**;
-- Poland must implement the wallet **by 2026**;
-- the ministry says **new solutions by the end of 2026**.
+- mObywatel **continues to be developed** — "mObywatel dalej będzie
+  rozwijany" — and is **not** being discontinued;
+- a **separate** application is being built specifically for the EU's
+  technical requirements, rather than mObywatel being adapted or replaced;
+- **"obie aplikacje będą działały równolegle"** — both applications will
+  run in parallel;
+- the new solution's release is planned for **the end of 2026**, the same
+  deadline Poland faces under the Regulation.
 
-So the first national system in the Atlas connected to the wallet regulation
-is one that **must be replaced to comply with it**.
+So the first national system in the Atlas connected to the wallet
+regulation is not being retired to comply with it — a second, purpose-built
+application is being added alongside it instead.
 
 ## The Atlas cannot say that, and this is the sixth time
 
@@ -151,7 +171,7 @@ movement"* as the top vocabulary item. This adds a distinct need:
 | Entity | **mObywatel** | [[FR-FRANCECONNECT]] | [[DE-BUNDID]] | [[ES-CLAVE]] |
 | Model | **state app with an in-app mobile document** | identity **federation** | central **citizen account** | **credential scheme** + certificates |
 | Physical-presence use | **yes — mDowód, in-person within Poland** | no | no | no |
-| eIDAS2 edge | **yes — negative** | none | none | none |
+| eIDAS2 edge | **yes — a parallel app, not a fix** | none | none | none |
 
 mObywatel is the only one of the four whose primary artefact is a **document
 shown in person**, rather than a login. That is a different conception of
@@ -184,7 +204,10 @@ tension, just two different questions the sources answer differently.
 
 ## Sources
 
-Listed in frontmatter, four of five read directly this pass. `orka.sejm.gov.pl`
-was not attempted. ⚠ The incompatibility finding still rests on **press
-reporting only**; no ministry or Commission document states it among the
-sources found, which is why the edge is `confidence: low`.
+Listed in frontmatter, six of eight read directly across two passes.
+`orka.sejm.gov.pl` and the European Parliament's parliamentary-question
+page (E-000763/2026, on this exact topic, tabled 24 February 2026) remain
+unread — the latter returned empty content to this pass's fetch tool. The
+gov.pl Ministry press release closes the "press reporting only" gap the
+eIDAS2 edge previously carried; `confidence` moves from `low` to `medium`
+accordingly.

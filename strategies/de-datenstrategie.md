@@ -23,7 +23,7 @@ coverage: medium
 verification: primary-source
 start_date: "2023-09-01"
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-09-04"
 previous_version: null
 successor: null
 
@@ -33,6 +33,8 @@ organisations:
   - DE-BMI
 related_entities:
   - DE-DIGITALSTRATEGIE
+  - DE-BMV
+  - DE-BMDS
 relationships: []
 
 sources:
@@ -128,9 +130,20 @@ source read connects them, and the chronology runs the wrong way: the DNG
 (2021) predates the strategy (2023). A thematic resemblance is not a
 relationship.
 
-The strategy's three authoring ministries are only partly modelled: BMWK is
-not an Atlas entity, and BMDV has since been reorganised (see
-[[DE-BMDS]]). Queued in `discovery/research-queue.md`.
+The strategy's three authoring ministries are only partly modelled. BMDV's
+reorganisation is now fully traced: it split on 6 May 2025 into [[DE-BMDS]]
+(digital competences) and [[DE-BMV]] (transport competences), both now
+Atlas entities — see [[DE-BMV]] for the citations. BMWK itself is not an
+Atlas entity, but its own fate is now recorded in prose rather than left
+open: confirmed via Wikipedia and service.bund.de (found via WebSearch,
+neither fetched directly this pass), the Bundesministerium für Wirtschaft
+und Klimaschutz was renamed the **Bundesministerium für Wirtschaft und
+Energie (BMWE)** under the Merz cabinet, led by Katherina Reiche, with its
+climate-protection portfolio moving to a renamed environment ministry
+(BMUKN) and energy-research topics moving to a research ministry (BMFTR).
+No BMWE entity is created on the strength of a WebSearch-only finding;
+queued in `discovery/research-queue.md` if a direct primary source is
+found.
 
 ## Sources
 

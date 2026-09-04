@@ -55,9 +55,10 @@ Anchor entity: [[PL]]
 
 ## Platforms
 
-- [[PL-MOBYWATEL]] — citizen application and mDowód _(⚠ reported
-  **incompatible with eIDAS 2.0**; `maintained-by` [[PL-MC]], confirmed
-  this pass via the Act's own Article 19 — previously unestablished)_
+- [[PL-MOBYWATEL]] — citizen application and mDowód _(⚠ cannot itself
+  serve as an EUDI Wallet; a separate parallel app is planned for end
+  2026, per the Ministry's own statement (2026-09-04); `maintained-by`
+  [[PL-MC]], confirmed via the Act's own Article 19)_
 - [[PL-DANE-GOV-PL]] — national open data portal _(`maintained-by`
   [[PL-MC]], confirmed 2026-08-27)_
 - [[PL-PESEL]] — population register and identification number
@@ -87,7 +88,7 @@ countries:
 | [[EU-GDPR]] | [[PL-ODO]] | [[ES-LOPDGDD]] | [[FR-LIL]] | [[BE-GDPR-WET]] | [[DE-BDSG]] | [[NL-UAVG]] |
 | [[EU-NIS2]] | [[PL-KSC]] ⚠ late, formal notice | [[ES-LCGC]] ⚠ draft | [[FR-NIS2-LOI]] ⚠ unknown | [[BE-NIS2-WET]] | [[DE-NIS2UMSUCG]] | [[NL-CBW]] |
 | [[EU-OPEN-DATA-DIRECTIVE]] | **[[PL-OTWARTE-DANE]]** | [[ES-LEY-37-2007]] | _(not identified)_ | _(not identified)_ | [[DE-DNG]] | [[NL-WHO]] |
-| [[EU-EIDAS2]] | **[[PL-MOBYWATEL]]** ⚠ incompatible | _(none)_ | _(none)_ | _(none)_ | _(none)_ | _(none)_ |
+| [[EU-EIDAS2]] | **[[PL-MOBYWATEL]]** — parallel wallet app planned end 2026 | _(none)_ | _(none)_ | _(none)_ | _(none)_ | _(none)_ |
 | [[EU-DCAT-AP]] | _(not researched)_ | [[ES-NTI-RISP]] | _(none found)_ | [[BE-DCAT-AP-BE]] | [[DE-DCAT-AP-DE]] | [[NL-DCAT-AP-NL]] |
 | [[EU-ESS]] | **[[PL-GUS]]** | [[ES-INE]] | _(INSEE not modelled)_ | [[BE-STATBEL]] | [[DE-DESTATIS]] | [[NL-CBS]] |
 
@@ -96,9 +97,11 @@ countries:
 - **The model is not western-European-shaped either.** A 2004 accession
   state attached with no ontology change, which tests the two assumptions
   five western EU members could not. See [[PL]].
-- **The first sourced eIDAS2 link — and it is negative.** [[PL-MOBYWATEL]]
-  cannot serve as an EUDI Wallet and must be replaced. Four batches had
-  recorded that no country was linked to [[EU-EIDAS2]] at all.
+- **The first sourced eIDAS2 link in the Atlas.** [[PL-MOBYWATEL]] cannot
+  itself serve as an EUDI Wallet, but the Ministry of Digital Affairs'
+  own statement (2026-09-04) confirms a separate, purpose-built wallet
+  app is being built to run alongside it, not as its replacement — four
+  batches had recorded that no country was linked to [[EU-EIDAS2]] at all.
 - **A sixth NIS2 state, off the done/not-done axis.** In force, after
   missing the deadline and drawing a Commission letter of formal notice —
   **not** a CJEU referral, corrected 2026-08-26. See [[PL-KSC]].
