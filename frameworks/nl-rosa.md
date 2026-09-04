@@ -23,13 +23,14 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-04"
 previous_version: null
 successor: null
 
 domains:
   - DOMAIN-EDUCATION
-organisations: []
+organisations:
+  - NL-EDUSTANDAARD
 related_entities:
   - NL-NORA
 relationships:
@@ -37,6 +38,13 @@ relationships:
     target: NL-NORA
     source: fact
     evidence: "Confirmed by reading noraonline.nl's own 'NORA_dochters' page directly (2026-08-27): NORA's daughter architectures include ROSA for education, alongside EAR for central government, GEMMA for municipalities, PETRA for the provinces and WILMA for the water boards. This closes the previous 'NOT READ — search-only' gap, and re-confirms the sourcing already established in the previous pass."
+    confidence: high
+    valid_from: null
+    valid_until: null
+  - type: maintained-by
+    target: NL-EDUSTANDAARD
+    source: fact
+    evidence: "Confirmed by reading edustandaard.nl's own 'Relevante architecturen' page directly (2026-08-27): 'ROSA is maintained by the Architecture Council of Edustandaard' (Architectuurraad). A research-queue pickup (2026-09-04) created NL-EDUSTANDAARD as its own Atlas entity, closing the gap this file previously left unasserted for want of it."
     confidence: high
     valid_from: null
     valid_until: null
@@ -70,14 +78,12 @@ and design frameworks), while supporting modular architectural approaches
 used in frameworks like AMIGO and giving the sector shared terminology
 through the ROSA Concept Framework.
 
-**Maintainer, now sourced.** edustandaard.nl's own "Relevante
+**Maintainer, now sourced and modelled.** edustandaard.nl's own "Relevante
 architecturen" page, read directly, states plainly: "ROSA is maintained by
-the Architecture Council of Edustandaard" (Architectuurraad). Edustandaard
-itself is **still not an Atlas entity** and is queued in
-`discovery/research-queue.md`; the `maintained-by` relationship this
-framework should carry is therefore left unasserted rather than pointed at
-an approximation, even though the maintaining body within Edustandaard is
-now named precisely.
+the Architecture Council of Edustandaard" (Architectuurraad). A
+research-queue pickup (2026-09-04) created [[NL-EDUSTANDAARD]] as its
+own Atlas entity, and the `maintained-by` edge this framework previously
+left unasserted is now recorded.
 
 The same page distinguishes ROSA from three **sector-specific**
 architectures — **HORA** (higher education), **MORA** (vocational
@@ -96,12 +102,10 @@ Tagged [[DOMAIN-EDUCATION]], alongside [[NL-SURF]].
 
 ## Relationships
 
-- `based-on` [[NL-NORA]] — confirmed directly this pass via NORA's own
-  "dochters" wiki page, which lists ROSA by name among the NORA family's
+- `based-on` [[NL-NORA]] — confirmed via NORA's own "dochters" wiki
+  page, which lists ROSA by name among the NORA family's
   education-domain member.
-
-The `maintained-by` edge to Edustandaard's Architecture Council is still
-unasserted — that body is still not an Atlas entity.
+- `maintained-by` [[NL-EDUSTANDAARD]] — closed 2026-09-04.
 
 ## Sources
 

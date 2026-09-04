@@ -149,6 +149,21 @@ see `discovery/research-queue.md`._
 
 - [[NL-SURF]] — SURF
 - [[NL-TNO]] — TNO
+- [[NL-NWO]] — Nederlandse Organisatie voor Wetenschappelijk Onderzoek,
+  the national research-funding council _(founded 1950 as ZWO; added
+  2026-09-04)_
+  - [[NL-DANS]] — Data Archiving and Networked Services, joint
+    NWO/KNAW research-data repository, founded 2005 _(added
+    2026-09-04)_
+- [[NL-RIVM]] — Rijksinstituut voor Volksgezondheid en Milieu, national
+  public health and environment institute _(agency of VWS since 2004;
+  added 2026-09-04)_
+
+### Education
+
+- [[NL-EDUSTANDAARD]] — network organisation for education
+  data-exchange standards; maintains [[NL-ROSA]] _(founded 2004;
+  added 2026-09-04)_
 
 ## Domains
 
