@@ -114,6 +114,17 @@
 > oversees CBS" naming question is closed in prose on [[NL-CBS]]
 > (Ministerie van Economische Zaken en Klimaat, confirmed via
 > `organisaties.overheid.nl`) without creating a ministry entity.
+> **2026-09-04 pickup (fifteenth):** closed a further six Netherlands
+> items, four of them Batch 2 vintage. [[NL-DANS]], [[NL-RIVM]] and
+> [[NL-NWO]] are now entities — NWO's own site names it the joint parent
+> of DANS, closing that pairing in one pass. [[NL-EDUSTANDAARD]] closes
+> the gap [[NL-ROSA]]'s own file had already sourced but left
+> unasserted for want of the entity. Two rows turned out to be stale
+> housekeeping rather than open research: the "10 individual
+> basisregistraties" (both duplicate rows) were already fully
+> enumerated on [[NL-BASISREGISTRATIES]]'s own `related_entities`, and
+> `DOMAIN-HEALTH`/`DOMAIN-EDUCATION` already exist and are in active use
+> — both removed without new entities.
 >
 > **The `level` vocabulary is no longer a blocker.** `level: subnational` was
 > added 2026-08-21 and the three Belgian sub-federal ODD instruments are
@@ -339,18 +350,12 @@ by accident.
 
 | Area / entity | Why it needs research | Suggested batch | Noted by / date |
 |---|---|---|---|
-| DANS, RIVM, NWO | Research/health data infrastructure organisations. [[NL-HEALTH-RI]] was created in the health/education/research domain batch (2026-08-21); these three were not | Batch 5 | Batch 2 / 2026-08-14 |
 | Programmaraad (geo-standaarden) | Commissioning body for Geonovum's standards management | Batch 5+ | Batch 2 / 2026-08-14 |
 | WILMA (Waterschaps Informatie & Logisch Model Architectuur) | Water authorities' reference architecture; completes the NORA family. Not created in Batch 4 — single mention, and not named in the batch scope (unlike PETRA) | Batch 5+ | Batch 4 / 2026-08-14 |
-| Edustandaard | Publishes/maintains [[NL-ROSA]]; its `maintained-by` link is unasserted without it | Batch 5+ | Batch 4 / 2026-08-14 |
 | StUF (Standaard Uitwisselings Formaat) | VNG municipal exchange standard. Searched in Batch 4 but no usable source returned — deliberately not created | Batch 5+ | Batch 4 / 2026-08-14 |
 | ENSIA | Accountability system paired with the BIO | Batch 5+ | Batch 4 / 2026-08-14 |
 | NOiV programme bureau | Built BOMOS; appears historical. Needed to resolve BOMOS custody | Batch 5+ | Batch 4 / 2026-08-14 |
 | Remaining 'pas toe of leg uit' standards | Only Digikoppeling and ADR are modelled. The full mandatory + recommended lists (DNSSEC, DMARC, TLS, WCAG, SAML, OAuth profiles, …) are not enumerated | Batch 5+ | Batch 4 / 2026-08-14 |
-| The 10 individual basisregistraties | Still not enumerated (carried from Batch 2) | Batch 5 | Batch 2 / 2026-08-14 |
-| The ten individual basisregistraties (BRK, BAG, BRP, Handelsregister, BRV, …) | Referenced by [[NL-BASISREGISTRATIES]]; the full list of ten has not been enumerated from a source | Batch 4 or 5 | Batch 2 / 2026-08-14 |
-| `DOMAIN-HEALTH` | Needed by [[NL-NICTIZ]]; withheld because taxonomy §1 requires a domain to connect 2+ entities | Batch 5 | Batch 2 / 2026-08-14 |
-| `DOMAIN-EDUCATION` | Needed by [[NL-SURF]]; withheld for the same reason | Batch 5 | Batch 2 / 2026-08-14 |
 | Wet bescherming persoonsgegevens (Wbp) | Predecessor regime replaced by GDPR/UAVG on 25 May 2018; needed for temporal completeness | Batch 4 or later | Batch 3 / 2026-08-14 |
 | Aanpassingswet AVG (dossier 34.939) | Adjusted other Dutch legislation to the GDPR | Batch 4 or later | Batch 3 / 2026-08-14 |
 | Wet weerbaarheid kritieke entiteiten (CER implementation) | Passed alongside the Cyberbeveiligingswet; adjacent to but distinct from NIS2 | Batch 4 or later | Batch 3 / 2026-08-14 |
@@ -367,7 +372,7 @@ by accident.
 | Ministeries van VWS, EZK, OCW | Named partners of [[NL-HEALTH-RI]] | Batch 5+ | Batch 5 / 2026-08-14 |
 | Nationaal Groeifonds | Funds [[NL-HEALTH-RI]] | Batch 5+ | Batch 5 / 2026-08-14 |
 | Nationaal Wegenbestand (NWB) | Part of the [[NL-NDW]] expansion | Batch 5+ | Batch 5 / 2026-08-14 |
-| DANS, ODISSEI, RIVM, NWO, SIDN | Research/health/internet-infrastructure organisations still unqueued from Batch 2 | Batch 5+ | Batch 2; carried |
+| ODISSEI | Research infrastructure organisation named alongside DANS/RIVM/NWO/SIDN, all now modelled; ODISSEI alone remains unresearched | Batch 5+ | Batch 2; carried |
 | Interoperable Europe Board | Adopts new EIF versions; needed to resolve the EIF/Act relationship | Batch 9 | Batch 7; carried |
 | Free Flow of Non-Personal Data Regulation | Third repeal target of [[EU-DIGITAL-OMNIBUS]] | Batch 9 | Batch 8 / 2026-08-14 |
 | Wet weerbaarheid kritieke entiteiten | Dutch CER transposition, approved 15 Apr 2026; should mirror [[NL-CBW]] → [[EU-NIS2]] | Batch 9+ | Batch 3; raised again Batch 8 |
