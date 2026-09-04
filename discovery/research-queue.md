@@ -101,6 +101,19 @@
 > rows until now. Neither was picked up this pass; both are large enough
 > to warrant their own dedicated batch, the same treatment given the
 > Comunidades Autónomas.
+> **2026-09-04 pickup (fourteenth):** closed seven Netherlands
+> "Other queued research" items in one pass, mostly Batch 1/2 vintage.
+> [[NL-CIO-RIJK]] and [[NL-ACICT]] are both now entities;
+> [[NL-VNG-REALISATIE]] closes a double-need — its own row and
+> [[NL-GEMMA]]'s `maintained-by` simplification, now re-pointed.
+> [[NL-WATERSCHAPSHUIS]] and [[NL-SIDN]] close two more. [[NL-CCS]]
+> turned out to be a genuine correction rather than a simple gap: reading
+> the actual 2015 abolition bill directly found the CCS was not merely
+> unmodelled but **abolished** on 1 January 2017, so it is recorded
+> `status: superseded` rather than active. The long-open "which ministry
+> oversees CBS" naming question is closed in prose on [[NL-CBS]]
+> (Ministerie van Economische Zaken en Klimaat, confirmed via
+> `organisaties.overheid.nl`) without creating a ministry entity.
 >
 > **The `level` vocabulary is no longer a blocker.** `level: subnational` was
 > added 2026-08-21 and the three Belgian sub-federal ODD instruments are
@@ -326,16 +339,8 @@ by accident.
 
 | Area / entity | Why it needs research | Suggested batch | Noted by / date |
 |---|---|---|---|
-| CIO Rijk | Named as an OBDO member; not yet researched | Batch 3 or later | Batch 1 / 2026-08-14 |
-| Het Waterschapshuis | Develops and manages shared ICT facilities for the 21 water authorities; sourcing in Batch 2 was a single passing mention | Batch 3 or later | Batch 2 / 2026-08-14 |
-| VNG Realisatie | VNG's implementation arm; not yet researched | Batch 3 or later | Batch 2 / 2026-08-14 |
-| Centrale Commissie voor de Statistiek (CCS) | Statutory supervisor of the CBS under the Wet op het CBS | Batch 3 or later | Batch 2 / 2026-08-14 |
-| Ministerie responsible for CBS (Economic Affairs) | Needed to complete CBS governance; Dutch ministry naming is volatile and must be read from a current source | Batch 3 or later | Batch 2 / 2026-08-14 |
-| Adviescollege ICT-toetsing (AcICT) | ICT oversight body; surfaced in Batch 1 search results | Batch 3 or later | Batch 2 / 2026-08-14 |
 | DANS, RIVM, NWO | Research/health data infrastructure organisations. [[NL-HEALTH-RI]] was created in the health/education/research domain batch (2026-08-21); these three were not | Batch 5 | Batch 2 / 2026-08-14 |
-| SIDN | .nl registry / internet infrastructure | Batch 5 | Batch 2 / 2026-08-14 |
 | Programmaraad (geo-standaarden) | Commissioning body for Geonovum's standards management | Batch 5+ | Batch 2 / 2026-08-14 |
-| VNG Realisatie | Now doubly needed: maintains [[NL-GEMMA]], and [[NL-GEMMA]]'s `maintained-by` currently points at [[NL-VNG]] as a simplification | Batch 5+ | Batch 2; raised Batch 4 |
 | WILMA (Waterschaps Informatie & Logisch Model Architectuur) | Water authorities' reference architecture; completes the NORA family. Not created in Batch 4 — single mention, and not named in the batch scope (unlike PETRA) | Batch 5+ | Batch 4 / 2026-08-14 |
 | Edustandaard | Publishes/maintains [[NL-ROSA]]; its `maintained-by` link is unasserted without it | Batch 5+ | Batch 4 / 2026-08-14 |
 | StUF (Standaard Uitwisselings Formaat) | VNG municipal exchange standard. Searched in Batch 4 but no usable source returned — deliberately not created | Batch 5+ | Batch 4 / 2026-08-14 |
