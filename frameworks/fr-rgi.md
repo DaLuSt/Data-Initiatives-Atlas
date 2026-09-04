@@ -26,7 +26,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-09-04"
 previous_version: null
 successor: null
 
@@ -37,11 +37,19 @@ organisations:
 related_entities:
   - EU-EIF
   - NL-PAS-TOE-OF-LEG-UIT
+  - FR-ORDONNANCE-2005-1516
 relationships:
   - type: maintained-by
     target: FR-DINUM
     source: fact
     evidence: "Confirmed verbatim by reading numerique.gouv.fr's own RGI page directly (2026-08-26): 'Le RGI est défini dans l'ordonnance n° 2005-1516 du 8 décembre 2005 relative aux échanges électroniques entre les usagers et les autorités administratives et entre les autorités administratives. Dans l'article 11 de cette ordonnance, le RGI fixe les règles techniques permettant d'assurer l'interopérabilité des systèmes d'information' (the RGI is defined in ordonnance n° 2005-1516 of 8 December 2005 ... under Article 11 of that ordinance, the RGI sets the technical rules ensuring interoperability of information systems) — DINUM's own page, not a hosted PDF or Wikipedia, now carries the legal-foundation claim."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: governed-by
+    target: FR-ORDONNANCE-2005-1516
+    source: fact
+    evidence: "A research-queue pickup (2026-09-04) created the entity for the ordinance this file already quoted verbatim at Article 11, closing the 'legal basis of FR-RGI; not modelled' gap discovery/research-queue.md had recorded."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -142,12 +150,13 @@ One of four, and the three refusals are all the same refusal. Logged in
 ## Relationships
 
 - Maintained by [[FR-DINUM]].
+- `governed-by` [[FR-ORDONNANCE-2005-1516]] — closed 2026-09-04.
 
 ## Sources
 
-Listed in frontmatter, four read directly this pass. The RGI document
-itself is still cited from **april.org**, an advocacy association
-hosting a copy — DINUM's own site links to a PDF at the same
-`numerique.gouv.fr` domain now confirmed live, but the specification
-text itself was not re-fetched this pass, so the second-hand citation
-stands.
+Listed in frontmatter, four read directly in the 2026-08-26 pass. The
+RGI document itself is still cited from **april.org**, an advocacy
+association hosting a copy — DINUM's own site links to a PDF at the
+same `numerique.gouv.fr` domain now confirmed live, but the
+specification text itself was not re-fetched this pass, so the
+second-hand citation stands.
