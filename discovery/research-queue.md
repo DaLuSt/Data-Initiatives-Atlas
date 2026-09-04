@@ -5,10 +5,12 @@
 > the entities themselves. Nothing here is struck through, because struck-out
 > rows made the queue longer every time it got shorter.
 >
-> **Largest open items:** the Comunidades Autónomas, now unblocked and
-> unstarted; and DKE, Germany's last unmodelled `Next`-flagged gap.
-> OSLO/Digitaal Vlaanderen closed 2026-09-04 — see the tenth pickup below.
-> [[PL-PESEL]], Poland's population register, is
+> **Largest open items:** the Comunidades Autónomas, the sixteen Land
+> INSPIRE transposition acts and the sixteen Land data protection
+> authorities — all unblocked (`level: subnational`) and unstarted,
+> each large enough to warrant its own dedicated pass. DKE closed
+> 2026-09-04, along with OSLO/Digitaal Vlaanderen — see the pickups
+> below. [[PL-PESEL]], Poland's population register, is
 > modelled as of 2026-08-22 — the second research-queue pickup.
 > **2026-08-30 pickup (sixth):** closed six items in one pass — see
 > `progress/completed.md`-style detail preserved in git history.
@@ -87,6 +89,18 @@
 > overwritten. "France Identité" was removed as a closed decision
 > (recorded in prose on [[FR-FRANCECONNECT]] already; nothing further to
 > research).
+> **2026-09-04 pickup (thirteenth):** closed [[DE-DKE]], one of
+> Germany's largest remaining gaps — the electrotechnical-standards
+> counterpart to [[DE-DIN]], founded 1970 as a joint DIN/VDE body,
+> Germany's national member in [[EU-CENELEC]], IEC and (for
+> telecommunications) ETSI. Also reclassified two large Germany items —
+> the sixteen Land INSPIRE transposition acts and the sixteen Land data
+> protection authorities — from `Blocked` to `Next`: both were blocked
+> on the `level` ontology question, resolved 2026-08-21 by
+> `level: subnational`, but the finding was never carried back to these
+> rows until now. Neither was picked up this pass; both are large enough
+> to warrant their own dedicated batch, the same treatment given the
+> Comunidades Autónomas.
 >
 > **The `level` vocabulary is no longer a blocker.** `level: subnational` was
 > added 2026-08-21 and the three Belgian sub-federal ODD instruments are
@@ -258,10 +272,9 @@ by accident.
 
 | Area / entity | Why it needs research | Suggested batch | Noted by / date |
 |---|---|---|---|
-| The sixteen Land INSPIRE transposition acts | Jointly with [[DE-GEOZG]] they constitute Germany's transposition. **Blocked on the `level` ontology question**, not on sourcing | Blocked | Germany batch |
-| Land data protection authorities | [[DE-BFDI]] covers federal bodies only; sixteen Land authorities cover the rest. Same blocker | Blocked | Germany batch |
+| The sixteen Land INSPIRE transposition acts | Jointly with [[DE-GEOZG]] they constitute Germany's transposition. **No longer blocked**: `level: subnational` was added 2026-08-21. Sixteen is a large batch — like the Comunidades Autónomas, a candidate for its own dedicated pass rather than a quick pickup | Next | Germany batch; unblocked 2026-08-21, noted 2026-09-04 |
+| Land data protection authorities | [[DE-BFDI]] covers federal bodies only; sixteen Land authorities cover the rest. **No longer blocked**: same `level: subnational` resolution. Also a large batch | Next | Germany batch; unblocked 2026-08-21, noted 2026-09-04 |
 | Individual XÖV standards | XPersonenstand, XMeld, XBau, XPlanung and others. Only [[DE-XRECHNUNG]] is modelled. Creating one entity per standard would inflate the layer without adding structure (brief §1) | Later | Germany batch |
-| DKE | German electrotechnical standards commission, [[DE-DIN]]'s counterpart towards [[EU-CENELEC]] | Later | Germany batch |
 | National Gaia-X hubs | Germany's and Austria's hubs are cited as sources on [[EU-GAIA-X]]. A `DE-GAIA-X-HUB` would be a legitimate national entity, not a duplicate — but nothing beyond website existence was established | Later | Germany batch |
 | Mobility Data Marketplace (MDM) | Replaced by [[DE-MOBILITHEK]] as National Access Point. **No superseded entity created** — unlike [[DE-IWG]], nothing beyond the replacement is established | Later | Germany batch |
 | Bundesdruckerei; ITZBund | Federal printing/eID body and the federal IT service centre. ITZBund is already cited as a source on [[DE-XOEV]] | Later | Germany batch |

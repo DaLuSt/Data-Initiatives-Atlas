@@ -59,6 +59,9 @@ Anchor entity: [[DE]]
 ### Standardisation
 
 - [[DE-DIN]] — national standards body; member of [[EU-CEN]] and [[INTL-ISO]]
+- [[DE-DKE]] — electrotechnical standards commission; `part-of`
+  [[DE-DIN]], national member of [[EU-CENELEC]] _(joint DIN/VDE body,
+  founded 1970; added 2026-09-04)_
 
 ## Legislation
 
@@ -177,7 +180,7 @@ same ministry as [[DE-BSI]] and [[DE-DESTATIS]].
   `discovery/unresolved.md`.
 - **Verwaltungsvereinbarungen** — the Bund-Länder administrative agreements
   underpinning [[DE-GOVDATA]] and [[DE-GDI-DE]]. No entity type fits.
-- Individual XÖV standards, DKE, gematik, national Gaia-X hubs,
+- Individual XÖV standards, gematik, national Gaia-X hubs,
   Manufacturing-X, the IDSA/IDS-RAM. All queued in
   `discovery/research-queue.md`. ~~FIM~~ is now [[DE-FIM]] (added
-  2026-09-04).
+  2026-09-04). ~~DKE~~ is now [[DE-DKE]] (added 2026-09-04).
