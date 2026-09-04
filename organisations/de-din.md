@@ -26,7 +26,7 @@ verification: primary-source
 
 start_date: 1917-12-22
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-04"
 previous_version: null
 successor: null
 
@@ -36,6 +36,7 @@ organisations: []
 related_entities:
   - INTL-ISO
   - EU-CEN
+  - DE-DKE
 relationships:
   - type: participates-in
     target: INTL-ISO
@@ -160,16 +161,15 @@ from DIN, which reflects that public-administration IT standards in
 Germany are set by government bodies rather than by the national standards
 institute.
 
-DKE, the German commission for electrical standards and DIN's counterpart
-towards [[EU-CENELEC]], is not modelled. Queued in
-`discovery/research-queue.md`.
-
 ## Relationships
 
 - `participates-in` [[INTL-ISO]] — `confidence: medium` (the specific 1951
   accession year rests on a page unreachable this pass).
 - `participates-in` [[EU-CEN]] — confirmed directly this pass, `confidence:
   high`.
+- [[DE-DKE]], DIN's electrotechnical-standards counterpart towards
+  [[EU-CENELEC]], carries the inbound `part-of` edge pointing here —
+  closed 2026-09-04.
 
 ## Sources
 
