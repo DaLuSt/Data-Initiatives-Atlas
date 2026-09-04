@@ -99,12 +99,20 @@ see `discovery/research-queue.md`._
 - [[NL-OBDO]] — Overheidsbreed Beleidsoverleg Digitale Overheid
 - [[NL-LOGIUS]] — Logius
 - [[NL-ICTU]] — Stichting ICTU
+- [[NL-CIO-RIJK]] — CIO Rijk, chairs the CIO-beraad _(`part-of`
+  [[NL-BZK]]; added 2026-09-04)_
+- [[NL-ACICT]] — Adviescollege ICT-toetsing _(formerly Bureau
+  ICT-toetsing; statutory since 2024; added 2026-09-04)_
 
 ### Koepelorganisaties (decentralised tiers)
 
 - [[NL-VNG]] — Vereniging van Nederlandse Gemeenten (municipalities)
+  - [[NL-VNG-REALISATIE]] — implementation arm, formerly KING;
+    maintains [[NL-GEMMA]] _(added 2026-09-04)_
 - [[NL-IPO]] — Interprovinciaal Overleg (provinces)
 - [[NL-UVW]] — Unie van Waterschappen (water authorities)
+  - [[NL-WATERSCHAPSHUIS]] — joint ICT coordination body for all 21
+    water authorities, founded 2005 _(added 2026-09-04)_
 
 ### Standardisation
 
@@ -123,6 +131,14 @@ see `discovery/research-queue.md`._
 - [[NL-BELASTINGDIENST]] — Belastingdienst _(BRI)_ ✅ re-verified 2026-08-27
 - [[NL-TNO]] — TNO / Geologische Dienst Nederland _(BRO facility)_
 - [[NL-CBS]] — Centraal Bureau voor de Statistiek _(part-of [[EU-ESS]])_
+  - ~~[[NL-CCS]]~~ — Centrale Commissie voor de Statistiek, CBS's
+    former independent supervisor _(`status: superseded`, abolished
+    1 Jan 2017; added 2026-09-04)_
+
+### Internet infrastructure
+
+- [[NL-SIDN]] — Stichting Internet Domeinregistratie Nederland,
+  `.nl` registry since 1996 _(added 2026-09-04)_
 
 ### Oversight and information management
 

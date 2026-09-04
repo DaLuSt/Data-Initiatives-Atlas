@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: 2004-01-01
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-04"
 previous_version: null
 successor: null
 
@@ -31,7 +31,8 @@ domains:
   - DOMAIN-GOVERNMENT
 organisations:
   - NL-CBS
-related_entities: []
+related_entities:
+  - NL-CCS
 relationships:
   - type: applies-to
     target: NL-CBS
@@ -97,8 +98,9 @@ two dates are not necessarily the same.
 - Applies to [[NL-CBS]], establishing its legal form and independence —
   confirmed this pass by reading both the bill's dossier page and its
   explanatory memorandum directly.
-- The CCS, whose supervisory powers this act expands, is not yet an Atlas
-  entity; queued in `discovery/research-queue.md`.
+- The CCS, whose supervisory powers this act expands, is now
+  [[NL-CCS]] (added 2026-09-04, `status: superseded` — abolished 1
+  January 2017), carrying the `governed-by` edge back to this act.
 
 ## Sources
 

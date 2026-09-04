@@ -23,17 +23,18 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-04"
 previous_version: null
 successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
 organisations:
-  - NL-VNG
+  - NL-VNG-REALISATIE
 related_entities:
   - NL-NORA
   - NL-COMMON-GROUND
+  - NL-VNG
 relationships:
   - type: based-on
     target: NL-NORA
@@ -43,9 +44,9 @@ relationships:
     valid_from: null
     valid_until: null
   - type: maintained-by
-    target: NL-VNG
+    target: NL-VNG-REALISATIE
     source: fact
-    evidence: "Confirmed by reading both vng.nl's own GEMMA page and noraonline.nl's GEMMA wiki page directly (2026-08-27): the Kenniscentrum Architectuur, part of VNG Realisatie, 'develops and manages the GEMMA together with municipalities, suppliers and chain partners.' The NORA wiki page names a specific contact (Theo Peters) for GEMMA, corroborating VNG Realisatie as the operating body rather than VNG generally."
+    evidence: "Confirmed by reading both vng.nl's own GEMMA page and noraonline.nl's GEMMA wiki page directly (2026-08-27): the Kenniscentrum Architectuur, part of VNG Realisatie, 'develops and manages the GEMMA together with municipalities, suppliers and chain partners.' The NORA wiki page names a specific contact (Theo Peters) for GEMMA, corroborating VNG Realisatie as the operating body rather than VNG generally. A research-queue pickup (2026-09-04) created NL-VNG-REALISATIE as its own Atlas entity and re-points this edge to it from the NL-VNG simplification this file previously carried."
     confidence: high
     valid_from: null
     valid_until: null
@@ -92,18 +93,18 @@ supporting products including the GEMMA Concept Framework and the GEMMA
 Standards List. It is published at gemmaonline.nl and the ArchiMate model is
 maintained openly on GitHub.
 
-**VNG Realisatie**, whose Kenniscentrum Architectuur develops and manages
-GEMMA, is confirmed directly (both vng.nl and the NORA wiki, which names a
-specific contact, Theo Peters) but is not yet a separate Atlas entity — the
-`maintained-by` relationship therefore points at [[NL-VNG]], which is a
-simplification. VNG Realisatie is queued in `discovery/research-queue.md`,
-and this relationship should be re-pointed once it exists.
+**[[NL-VNG-REALISATIE]]**, whose Kenniscentrum Architectuur develops and
+manages GEMMA, is confirmed directly (both vng.nl and the NORA wiki,
+which names a specific contact, Theo Peters). A research-queue pickup
+(2026-09-04) created it as its own Atlas entity and re-pointed the
+`maintained-by` edge to it from the [[NL-VNG]] simplification this file
+previously carried.
 
 ## Relationships
 
 - Based on [[NL-NORA]] — now `source: fact`.
-- Maintained by [[NL-VNG]] (via VNG Realisatie — see above) — now
-  `source: fact`.
+- Maintained by [[NL-VNG-REALISATIE]] — re-pointed 2026-09-04 from the
+  [[NL-VNG]] simplification this entity previously carried.
 - Includes a theme architecture for [[NL-COMMON-GROUND]], connecting the
   municipal architecture to the municipal information-management programme.
 

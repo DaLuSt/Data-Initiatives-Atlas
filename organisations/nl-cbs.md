@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-04"
 previous_version: null
 successor: null
 
@@ -96,6 +96,16 @@ institutions.
 
 Batch 3 added the act itself as [[NL-WET-CBS]], closing the relationship
 this entity carried as a gap in Batch 2.
+
+**Which ministry today, closed 2026-09-04.** `discovery/research-queue.md`
+had flagged Dutch ministry naming as volatile and asked which ministry
+currently holds this oversight relationship. Confirmed by reading
+`organisaties.overheid.nl`'s own organisation profile for CBS directly:
+its "Relatie met ministerie" field names **Economische Zaken en
+Klimaat** — the current name of the ministry the 2003 act ended CBS's
+status as part of. No separate Atlas entity is created for the
+ministry itself, consistent with how the Atlas treats ministries
+without a direct digital-government role.
 
 The responsible ministry — confirmed by kst-28277-3.html as Economic Affairs
 at the time of the 2003 act — is still not linked, because Dutch ministry
