@@ -52,6 +52,8 @@ Anchor entity: [[PL]]
 - [[PL-EWIDENCJA-LUDNOSCI]] — Ustawa o ewidencji ludności, 2010 _(legal
   basis for [[PL-PESEL]] since 1 March 2015; ⚠ ISAP unreadable, so only
   the consolidated-text Dz.U. citation is asserted)_
+- [[PL-USTAWA-STATYSTYCE-1995]] — Ustawa o statystyce publicznej, 1995
+  _(legal basis for [[PL-GUS]]; added 2026-09-04)_
 
 ## Platforms
 
@@ -63,6 +65,15 @@ Anchor entity: [[PL]]
   [[PL-MC]], confirmed 2026-08-27)_
 - [[PL-PESEL]] — population register and identification number
   _(`maintained-by` [[PL-COI]] since 1 March 2015)_
+
+## Frameworks and standards
+
+- [[PL-KRI]] — Krajowe Ramy Interoperacyjności, the national
+  interoperability framework _(`maintained-by` [[PL-MC]]; no sourced
+  EU-EIF descent, the sixth national NIF to reach that result; added
+  2026-09-04)_
+- [[PL-DCAT-AP-PL]] — Polish DCAT application profile _(`based-on`
+  [[EU-DCAT-AP]]; added 2026-09-04)_
 
 ---
 
@@ -89,7 +100,7 @@ countries:
 | [[EU-NIS2]] | [[PL-KSC]] ⚠ late, formal notice | [[ES-LCGC]] ⚠ draft | [[FR-NIS2-LOI]] ⚠ unknown | [[BE-NIS2-WET]] | [[DE-NIS2UMSUCG]] | [[NL-CBW]] |
 | [[EU-OPEN-DATA-DIRECTIVE]] | **[[PL-OTWARTE-DANE]]** | [[ES-LEY-37-2007]] | _(not identified)_ | _(not identified)_ | [[DE-DNG]] | [[NL-WHO]] |
 | [[EU-EIDAS2]] | **[[PL-MOBYWATEL]]** — parallel wallet app planned end 2026 | _(none)_ | _(none)_ | _(none)_ | _(none)_ | _(none)_ |
-| [[EU-DCAT-AP]] | _(not researched)_ | [[ES-NTI-RISP]] | _(none found)_ | [[BE-DCAT-AP-BE]] | [[DE-DCAT-AP-DE]] | [[NL-DCAT-AP-NL]] |
+| [[EU-DCAT-AP]] | [[PL-DCAT-AP-PL]] | [[ES-NTI-RISP]] | _(none found)_ | [[BE-DCAT-AP-BE]] | [[DE-DCAT-AP-DE]] | [[NL-DCAT-AP-NL]] |
 | [[EU-ESS]] | **[[PL-GUS]]** | [[ES-INE]] | _(INSEE not modelled)_ | [[BE-STATBEL]] | [[DE-DESTATIS]] | [[NL-CBS]] |
 
 ## What Poland added to the Atlas's understanding
@@ -170,5 +181,7 @@ orders, which the chamber can change.
   this index previously carried. Still no GIODO entity exists: GIODO's
   own site no longer resolves (DNS failure), so nothing in its own words
   could be checked.
-- **Krajowe Ramy Interoperacyjności**, a Polish DCAT profile, and the Act on
-  Public Statistics. All queued in `discovery/research-queue.md`.
+- ~~**Krajowe Ramy Interoperacyjności**, a Polish DCAT profile, and the
+  Act on Public Statistics~~ — now [[PL-KRI]], [[PL-DCAT-AP-PL]] and
+  [[PL-USTAWA-STATYSTYCE-1995]] (added 2026-09-04).
+- **CSIRT MON** and **GIODO** remain unmodelled — see above.

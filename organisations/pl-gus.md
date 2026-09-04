@@ -29,7 +29,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-09-04"
 previous_version: null
 successor: null
 
@@ -40,7 +40,15 @@ related_entities:
   - PL
   - EU-ESS
   - EU-EUROSTAT
+  - PL-USTAWA-STATYSTYCE-1995
 relationships:
+  - type: governed-by
+    target: PL-USTAWA-STATYSTYCE-1995
+    source: fact
+    evidence: "A research-queue pickup (2026-09-04) created the entity this file's own description had named and dated but not linked. Reading bip.stat.gov.pl's own legal-acts page directly confirms the Ustawa z dnia 29 czerwca 1995 r. o statystyce publicznej (Dz.U. 1995 Nr 88 poz. 439) determines the principles and foundations for statistical research and defines GUS's competencies, tasks and organisation. Same pattern as NL-CBS's edge to NL-WET-CBS, DE-BSI's edge to DE-BSIG, and BE-STATBEL's edge to BE-STATISTIEKWET-1962."
+    confidence: medium
+    valid_from: 1995-06-29
+    valid_until: null
   - type: part-of
     target: PL
     source: fact
@@ -130,15 +138,14 @@ documented.
 GUS to the UN statistical layer, which the UN batch reached through
 [[EU-EUROSTAT]] rather than through national offices.
 
-**The Act on Public Statistics is not modelled.** It is named and dated, and
-no law entity was created — consistent with how the register batch handled
-the Dutch statutes.
-
 ## Relationships
 
-- `part-of` [[PL]] — anchor edge, confirmed this pass.
+- `governed-by` [[PL-USTAWA-STATYSTYCE-1995]] — closed 2026-09-04.
+- `part-of` [[PL]] — anchor edge, confirmed 2026-08-26.
 - `part-of` [[EU-ESS]].
 
 ## Sources
 
-Listed in frontmatter — four GUS pages, three read directly this pass.
+Listed in frontmatter — four GUS pages, three read directly in the
+2026-08-26 pass. `bip.stat.gov.pl`'s legal-acts page was read again in
+the 2026-09-04 pass that closed the Act on Public Statistics gap.
