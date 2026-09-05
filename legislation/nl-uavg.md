@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: 2018-05-25
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -54,6 +54,10 @@ sources:
   - title: "Uitvoeringswet Algemene verordening gegevensbescherming (UAVG)"
     url: "https://www.autoriteitpersoonsgegevens.nl/documenten/uitvoeringswet-algemene-verordening-gegevensbescherming-uavg"
     publisher: "Autoriteit Persoonsgegevens"
+  - title: "Aanpassingswet Algemene verordening gegevensbescherming — BWBR0041233"
+    url: "https://wetten.overheid.nl/BWBR0041233/"
+    publisher: "Overheid.nl (wetten.overheid.nl)"
+    accessed: "2026-09-05"
 ---
 
 # Uitvoeringswet AVG (UAVG)
@@ -90,10 +94,17 @@ Article 48a was excepted from the general entry into force and took effect
 separately by a later decision (previously recorded as 19 December 2018,
 not re-confirmed this pass — neither page read gave that specific detail).
 
-A related *Aanpassingswet* AVG (Eerste Kamer dossier 34.939) adjusted other
-Dutch legislation to the GDPR; it is not modelled separately here, and
-whether it warrants its own entity is queued in
-`discovery/research-queue.md`.
+**Closed as a decision, 2026-09-05.** A related *Aanpassingswet Algemene
+verordening gegevensbescherming* (Eerste Kamer dossier 34.939, BWBR0041233,
+enacted 11 July 2018) adjusts other Dutch legislation to the GDPR/UAVG.
+Reading wetten.overheid.nl's own text directly confirms it is a purely
+**technical/consequential amendment act**: every one of its articles
+reads only "[Red: Wijzigt ...]" (amends ...), modifying references across
+more than 80 existing statutes spanning nine ministries rather than
+stating any substantive rule of its own. It is **not** modelled as a
+separate entity, for the same reason [[NL-WHO]]'s implementing amendment
+is folded into that entity rather than split out: an amending act with no
+independent substantive content does not meet the bar for its own node.
 
 ## Classification
 

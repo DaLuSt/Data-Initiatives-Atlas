@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -48,6 +48,10 @@ sources:
   - title: "The European Digital Identity Regulation — EU Digital Identity Wallet"
     url: "https://ec.europa.eu/digital-building-blocks/sites/spaces/EUDIGITALIDENTITYWALLET/pages/915931811/The+European+Digital+Identity+Regulation"
     publisher: "European Commission — Digital Building Blocks"
+  - title: "De EDI-wallet Identiteit"
+    url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/identiteit/edi-wallet/"
+    publisher: "Digitale Overheid (Ministerie van BZK)"
+    accessed: "2026-09-05"
 ---
 
 # European Digital Identity Wallet (EUDI Wallet)
@@ -74,26 +78,34 @@ education diplomas and health credentials.
 
 Member states are mandated to provide wallets **by the end of 2026**.
 
-## Status reasoning, revisited
+## Status reasoning — confirmed still correct, 2026-09-05
 
-`status: planned` is retained. The regulation's deadline is the end of 2026;
-this entry is written in August 2026, so the deadline has not passed, and no
-source located establishes that any particular member state — the
-Netherlands included — has a wallet in production.
+`status: planned` is retained, and this pass confirms it directly rather
+than by absence of evidence. Reading digitaleoverheid.nl's own EDI-wallet
+page directly: the Dutch **"publieke NL-wallet"** — "moet een toegankelijke
+en betrouwbare digitale oplossing zijn voor alle gebruikers" — is
+explicitly "nog in ontwikkeling en komt later beschikbaar" (still in
+development and becomes available later). Its national implementing
+legislation is still being prepared and was expected to go to public
+consultation only by the end of 2026 — meaning the Dutch wallet is likely
+to arrive **after** the EU-wide end-2026 deadline this entity's own
+`description` records, not by it. No source read states any member state
+has a wallet in production.
 
-The conservative reading is deliberate: `active` would assert deployment
-that has not been evidenced. If wallets have since been issued, this entity
-is wrong in the safe direction, and `discovery/unresolved.md` records
-exactly what to check.
+The conservative reading was the right call: `active` would have asserted
+deployment that had not happened, and still has not.
 
-## Dutch relevance, still unasserted
+## Dutch relevance — now sourced
 
-The Netherlands must provide a wallet like every member state. The obvious
-Dutch counterparts are the identity services within [[NL-GDI]] operated by
-[[NL-LOGIUS]], and the assurance-level regime in [[NL-WDO]]. **No
-relationship is asserted** — no source located connects the Dutch
-implementation to this initiative, and the Dutch wallet arrangements were
-not researched. This is a concrete gap for a future Netherlands batch.
+The Netherlands must provide a wallet like every member state, and the
+Dutch effort now has a name and a direct source: the **publieke NL-wallet**,
+confirmed on digitaleoverheid.nl's own page (2026-09-05). No relationship
+is asserted from this entity to a Dutch counterpart yet — the NL-wallet
+itself is not a separate Atlas entity, and creating one for an
+"in ontwikkeling, komt later beschikbaar" initiative with no production
+timeline would be premature. The obvious Dutch counterparts remain the
+identity services within [[NL-GDI]] operated by [[NL-LOGIUS]], and the
+assurance-level regime in [[NL-WDO]].
 
 ## Relationships
 
