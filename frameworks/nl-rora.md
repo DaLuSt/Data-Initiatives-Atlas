@@ -21,7 +21,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-05"
 previous_version: NL-EAR
 successor: null
 
@@ -53,6 +53,10 @@ sources:
     url: "https://www.noraonline.nl/wiki/EAR_(EnterpriseArchitectuur_Rijksdienst)"
     publisher: "NORA Online (ICTU)"
     accessed: "2026-08-27"
+  - title: "RORA Informatie — RORA Online"
+    url: "https://www.roraonline.nl/index.php/RORA_Informatie"
+    publisher: "RORA Online"
+    accessed: "2026-09-05"
 ---
 
 # RORA (RijksOverheid Referentie Architectuur)
@@ -97,11 +101,36 @@ month or day within 2024; `start_date` is corrected from the previous
 "1 January 2024" **placeholder** to `null`, per the Atlas rule against
 padding a year-only claim into a specific date.
 
+## Governance and timeline, closed 2026-09-05
+
+Reading `roraonline.nl`'s own "RORA Informatie" page directly names the
+maintaining structure this entity previously lacked: the **CIO-beraad**
+(CIO Council) is owner and final authority — "eigenaar en eindverantwoordelijk
+voor het juist laten toepassen van de kaders en richtlijnen van de RORA" —
+supported by the **Architectuurraad RORA** (Architecture Council RORA),
+with day-to-day management and further development carried by a community
+"ondersteund door het Beheerteam" (supported by the Management Team).
+
+The same page also narrows the succession timeline, without giving a
+single decisive date: the CIO council approved the RORA name change on
+**15 February 2023**, goal and scope were approved **21 June 2023**, the
+vision was approved and the Architectuurraad RORA established **13
+December 2023**, and that Council's inaugural meeting was planned for
+**25 January 2024**. No page read states a specific day on which RORA
+formally superseded EAR — the transition reads as a process spanning
+these milestones rather than a single cutover date — so `start_date`
+stays `null`, now for a fully documented reason rather than an
+unconfirmed gap.
+
 ## Relationships
 
 - Supersedes [[NL-EAR]] — confirmed by three independent sources this
-  pass, in 2024 (precise date unconfirmed).
+  pass, in 2024 (a documented multi-stage process; no single cutover date).
+- Owned by the CIO-beraad; supported by the Architectuurraad RORA and a
+  Beheerteam. Not modelled as typed relationships: none of these bodies
+  is itself an Atlas entity.
 
 ## Sources
 
-All three read directly this pass.
+Four sources read directly: the original three, plus roraonline.nl's own
+"RORA Informatie" page (2026-09-05).
