@@ -20,13 +20,13 @@ country: null
 region: EU
 
 status: completed
-confidence: medium
+confidence: high
 coverage: medium
 verification: primary-source
 
-start_date: null
+start_date: 2023-05-15
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -72,9 +72,10 @@ relationships:
 
 sources:
   - title: "EU Voluntary Review on the implementation of the 2030 Agenda for Sustainable Development — COM(2023) 700 final"
-    url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:52023DC0700"
+    url: "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52023DC0700"
     publisher: "EUR-Lex — Publications Office of the European Union"
-    note: "Returned no readable content across several URL forms (TXT, ALL, TXT/HTML) attempted 2026-08-28. Not counted toward this pass's verified majority."
+    accessed: "2026-09-05"
+    note: "Unreadable across several URL forms on 2026-08-28; the TXT/HTML form succeeded 2026-09-05, resolving the date question below."
   - title: "The EU's Voluntary Review reaffirms commitment to delivering the Sustainable Development Goals at home and around the world (IP/23/3801)"
     url: "https://ec.europa.eu/commission/presscorner/detail/en/ip_23_3801"
     publisher: "European Commission"
@@ -108,6 +109,10 @@ sources:
 > COM(2023) 700 final and hlpf.un.org both remain unreadable (empty
 > content and a 403 bot-wall respectively) despite several attempts.
 > `verification` promoted `search-only` → `primary-source`.
+>
+> **Updated 2026-09-05**: EUR-Lex's own text finally rendered via its
+> TXT/HTML URL form, resolving the two-candidate-date question below.
+> `start_date` is now set, and `confidence` raised to `high`.
 
 ## Description
 
@@ -124,13 +129,16 @@ one behind." It takes stock of the Union's internal *and* external
 implementation of the SDGs and gives a strategic overview of EU commitments
 and targets, including quantified 2030 targets where applicable.
 
-The EEAS page also states the review "was published on July 4, 2023" —
-a specific date not found on any other source read this pass (a search
-turned up a Commission Staff Working Document, SWD(2023) 700, dated
-15 May 2023, which may be an earlier-stage accompanying document rather
-than the Communication itself). Given the two dates conflict and neither
-was confirmed from EUR-Lex's own text of COM(2023) 700 final, `start_date`
-remains `null` rather than picking one.
+The EEAS page also states the review "was published on July 4, 2023." That
+is no longer read as conflicting with the document's own date: EUR-Lex's
+own text of COM(2023) 700 final, read directly 2026-09-05 via its
+TXT/HTML URL form (the form that returned content, after several other
+forms returned none), gives the document's own header as **"Brussels,
+15.5.2023"** — the same date carried by its companion Staff Working
+Document, SWD(2023) 700. `start_date` is set to **2023-05-15** on that
+basis; the EEAS's "4 July 2023" most plausibly describes when the review
+was posted to the EEAS's own website, a distinct milestone from the
+Commission document's own dated header, not a competing adoption date.
 
 ## This entity closes a recorded vocabulary gap — by not being a relationship
 
@@ -160,18 +168,17 @@ The other case — the UNESCO–Commission agreement — **is** a real gap, and 
 is resolved separately, in `metadata/relationship-types.md`, by adding
 `cooperates-with`.
 
-## Dates: what is sourced and what is not
+## Dates: resolved 2026-09-05
 
-The review was **presented at the HLPF, which ran 10–20 July 2023**; that is
-what the sources state and it is the only date used in this entity's
-relationships. The document also carries the reference **COM(2023) 700
-final**. This pass found two candidate adoption/publication dates —
-eeas.europa.eu's own claim of **4 July 2023**, and a Commission Staff
-Working Document numbered SWD(2023) 700 dated **15 May 2023** found via
-search but not itself read directly — that disagree with each other and
-were not resolved against EUR-Lex's own text, which remained unreadable
-this pass despite several attempts. `start_date` stays `null` rather than
-picking one of two conflicting, incompletely-confirmed dates.
+The review was **presented at the HLPF, which ran 10–20 July 2023**; that
+is what the sources state and it is the date used in this entity's
+`references`/`part-of` relationships, which describe the presentation
+event. The document itself carries the reference **COM(2023) 700 final**
+and, per EUR-Lex's own text now read directly, is dated **Brussels,
+15.5.2023** — matching its companion Staff Working Document, SWD(2023)
+700. `start_date` is set to **2023-05-15**, the document's own date; the
+relationships above keep their 2023-07-10 `valid_from`, tied to the
+distinct HLPF presentation event rather than the document's own date.
 
 ## What is not modelled
 
@@ -186,11 +193,11 @@ missing.
 
 ## Sources
 
-Listed in frontmatter. Four of six read directly this pass (2026-08-28):
-the Commission press release (via its PDF endpoint), the EEAS page, the
-UN's SDG hub (sdgs.un.org, successor to a now-dead cited URL), and a new
-Commission SDG-monitoring page. The EUR-Lex record of COM(2023) 700 final
-and hlpf.un.org's own listing of the EU's review remain unreadable this
-pass (empty content and a 403 bot-wall respectively) despite repeated
-attempts across several URL forms; see the per-source notes in
+Listed in frontmatter. Five of six now read directly: the Commission
+press release (via its PDF endpoint), the EEAS page, the UN's SDG hub
+(sdgs.un.org, successor to a now-dead cited URL), a Commission
+SDG-monitoring page (all 2026-08-28), and now EUR-Lex's own text of
+COM(2023) 700 final (2026-09-05, via its TXT/HTML URL form). Only
+hlpf.un.org's own listing of the EU's review remains unreadable (a 403
+bot-wall) despite repeated attempts; see the per-source notes in
 frontmatter.
