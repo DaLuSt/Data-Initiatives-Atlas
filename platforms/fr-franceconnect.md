@@ -36,6 +36,7 @@ related_entities:
   - EU-EIDAS
   - EU-EIDAS2
   - DE-BUNDID
+  - FR-FRANCE-IDENTITE
 relationships:
   - type: maintained-by
     target: FR-DINUM
@@ -75,6 +76,11 @@ sources:
 > by **INSEE** — a detail this entity did not previously carry.
 > `interieur.gouv.fr` remains genuinely bot-walled (403) even with an
 > honest User-Agent.
+>
+> **Updated 2026-09-05**: France Identité is now its own entity,
+> [[FR-FRANCE-IDENTITE]] — see "The eIDAS links" below for why the
+> eIDAS/eIDAS2 gap this entity previously flagged is resolved there,
+> not here.
 
 ## Description
 
@@ -97,10 +103,10 @@ Three parties are involved:
    **INSEE** — "le répertoire national d'identification des personnes
    physiques (RNIPP) de l'INSEE."
 
-**FranceConnect+** is the higher-assurance variant, and **France
-Identité** — a dematerialised national identity card on a smartphone —
-acts as an identity provider through it, confirmed to take the
-reachable services to **"plus de 1800 services"**.
+**FranceConnect+** is the higher-assurance variant, and
+[[FR-FRANCE-IDENTITE]] — a dematerialised national identity card on a
+smartphone — acts as an identity provider through it, confirmed to
+take the reachable services to **"plus de 1800 services"**.
 
 ## Federation, not an account
 
@@ -121,24 +127,22 @@ by opposite means.
 **No relationship between them is asserted.** They are national solutions
 to a shared problem, which is not a relationship.
 
-## The eIDAS links, and why only one country has one
+## The eIDAS links — resolved, but not on this entity
 
 [[DE-BUNDID]] carries `implements-requirement-from` → [[EU-EIDAS]], at low
 confidence, because a German source states its registration and login
 follow the eIDAS Regulation.
 
-**No equivalent is asserted here.** Nothing read about FranceConnect
-mentions eIDAS, cross-border recognition, or the acceptance of other member
-states' eIDs — even though a national identity federation is precisely the
-component eIDAS governs.
-
-Nor is anything asserted to [[EU-EIDAS2]], which requires every member state
-to offer a European Digital Identity Wallet by the end of 2026 — a deadline
-now four months away, with France Identité the obvious French candidate and
-no source read connecting them.
-
-Both are queued. The eIDAS2 gap now spans every country in the Atlas and is
-about to become a factual question rather than a modelling one.
+**No equivalent is asserted here, and none should be.** Nothing read about
+FranceConnect itself mentions eIDAS, cross-border recognition, or the
+acceptance of other member states' eIDs. The reason is not that the gap is
+unresolved: it is that the eIDAS obligation attaches to the identity scheme
+being federated, not the federation broker. That scheme now has its own
+entity — **[[FR-FRANCE-IDENTITE]]**, added 2026-09-05, which carries a
+high-confidence `implements-requirement-from` → [[EU-EIDAS]] (a direct
+Commission notification of 9 September 2024) and a low-confidence one to
+[[EU-EUDI-WALLET]] (a Commission designation as France's future wallet,
+not yet operational). See that entity for the sourcing.
 
 ## Relationships
 

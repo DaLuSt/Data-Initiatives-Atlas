@@ -90,7 +90,7 @@ relationships:
   - type: applies-in
     target: FR
     source: fact
-    evidence: "The Regulation mandates all Member States, France included, to provide European Digital Identity Wallets by the end of 2026 (Reg. (EU) 2024/1183). NOT READ — search-only. FranceConnect and France Identite are recorded in this Atlas but neither is asserted to implement this regulation — no source read connects them."
+    evidence: "The Regulation mandates all Member States, France included, to provide European Digital Identity Wallets by the end of 2026 (Reg. (EU) 2024/1183). NOT READ — search-only for this specific applies-in edge. Updated 2026-09-05: France Identité, now its own entity (FR-FRANCE-IDENTITE, split out of FR-FRANCECONNECT), carries a sourced implements-requirement-from edge to EU-EUDI-WALLET — the Regulation's central reform — following its designation by the European Commission as France's future wallet. See FR-FRANCE-IDENTITE for the direct sourcing; that edge targets EU-EUDI-WALLET rather than this Regulation, matching the convention DE-BUNDID already established."
     confidence: medium
     valid_from: 2024-05-20
     valid_until: null

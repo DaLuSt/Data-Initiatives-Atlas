@@ -64,6 +64,8 @@ Anchor entity: [[FR]]
 
 - [[FR-DATA-GOUV]] — national open data portal
 - [[FR-FRANCECONNECT]] — identity federation _(federation, not an account)_
+- [[FR-FRANCE-IDENTITE]] — digital identity scheme _(notified under
+  [[EU-EIDAS]]; designated as France's future [[EU-EUDI-WALLET]])_ ✅ 2026-09-05
 - [[FR-SNDS]] — national health data system _(thin: sourced only through [[FR-HEALTH-DATA-HUB]])_
 
 ---
@@ -89,7 +91,7 @@ and [[BE]]:
 | [[EU-NIS2]] | [[FR-NIS2-LOI]] _(still a bill)_ | [[BE-NIS2-WET]] | [[DE-NIS2UMSUCG]] | [[NL-CBW]] |
 | [[EU-DCAT-AP]] | _(none found)_ | [[BE-DCAT-AP-BE]] | [[DE-DCAT-AP-DE]] | [[NL-DCAT-AP-NL]] |
 | [[EU-EIF]] | _(refused)_ | **[[BE-BELGIF]]** | _(refused)_ | _(refused)_ |
-| [[EU-OPEN-DATA-DIRECTIVE]] | _(not identified)_ | _(not identified)_ | [[DE-DNG]] | [[NL-WHO]] |
+| [[EU-OPEN-DATA-DIRECTIVE]] | _(deliberate negative — see [[FR-LOI-VALTER]])_ | [[BE-HERGEBRUIK-WET-2023]] | [[DE-DNG]] | [[NL-WHO]] |
 | [[EU-INSPIRE]] | ✅ ordonnance 2010 | mapping only | [[DE-GEOZG]] | _(gap)_ |
 
 The blanks are as informative as the entries. Every one is explained in the
@@ -144,8 +146,6 @@ picture.
 - **A French DCAT profile.** data.gouv.fr certainly exposes DCAT, but no
   source read establishes a named French application profile, so the DCAT
   fork stops at three countries.
-- **France Identité** as its own entity; recorded in prose on
-  [[FR-FRANCECONNECT]].
 - **The RGS and RGAA reference frameworks**, the **loi OTSS** underlying
   [[FR-HEALTH-DATA-HUB]] (no JORF/Legifrance identifier found), the
   **Autorité de la statistique publique** and **CNIS** (INSEE oversight),
