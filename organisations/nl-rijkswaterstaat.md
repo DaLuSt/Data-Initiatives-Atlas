@@ -36,11 +36,12 @@ related_entities:
   - NL-NDW
   - NL-GEONOVUM
   - NL-KADASTER
+  - NL-IENW
 relationships:
   - type: part-of
-    target: NL
+    target: NL-IENW
     source: fact
-    evidence: "Anchor edge (metadata/relationship-types.md §2.3): Rijkswaterstaat is the executive agency of the Ministry of Infrastructure and Water Management. Confirmed by reading rijkswaterstaat.nl's own 'Onze organisatie' page directly (2026-09-05): it is the 'uitvoeringsorganisatie' of the Ministerie van Infrastructuur en Waterstaat, and rijksfinancien.nl's own budget documentation, also consulted, names it 'Agentschap Rijkswaterstaat.' No Ministerie van Infrastructuur en Waterstaat entity exists yet in the Atlas to carry a more specific `part-of` edge."
+    evidence: "Confirmed by reading rijkswaterstaat.nl's own 'Onze organisatie' page directly (2026-09-05): it is the 'uitvoeringsorganisatie' of the Ministerie van Infrastructuur en Waterstaat, and rijksfinancien.nl's own budget documentation, also consulted, names it 'Agentschap Rijkswaterstaat.' en.wikipedia.org's own account of the ministry, also read directly, names Rijkswaterstaat as one of its executive agencies. Upgraded same-day from an anchor `part-of` [[NL]] edge, recorded before [[NL-IENW]] existed as an Atlas entity."
     confidence: high
     valid_from: null
     valid_until: null
@@ -87,9 +88,8 @@ inland shipping routes), **road networks** (highway maintenance and
 traffic management), and **environmental/spatial development**
 (sustainable land planning). It also manages **public data
 infrastructure** covering waterway and traffic information, accessible
-to the public and businesses. No Ministerie van Infrastructuur en
-Waterstaat entity exists yet in the Atlas, so `part-of` [[NL]] is
-recorded as an anchor edge.
+to the public and businesses. `part-of` [[NL-IENW]] — created the same
+pass, closing what was recorded first as an anchor `part-of` [[NL]] edge.
 
 ## Founding partner of PDOK and NDW
 
@@ -105,11 +105,11 @@ actually was.
 
 ## Relationships
 
-- `part-of` [[NL]] — anchor edge; no Ministerie van Infrastructuur en
-  Waterstaat entity exists yet to carry a more specific one.
+- `part-of` [[NL-IENW]] — its parent ministry.
 - `participates-in` [[NL-PDOK]] — founding partner since 2013.
 - `participates-in` [[NL-NDW]] — named government partner.
 
 ## Sources
 
-Listed in frontmatter, read directly this pass.
+Listed in frontmatter. `en.wikipedia.org`'s account of [[NL-IENW]], read
+directly the same pass, is also cited above.
