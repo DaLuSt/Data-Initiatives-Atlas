@@ -22,7 +22,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -35,6 +35,7 @@ related_entities:
   - PT
   - IE
   - EU-EIF
+  - EU-INTEROPERABLE-EUROPE-BOARD
 relationships:
   - type: applies-in
     target: PT
@@ -258,15 +259,26 @@ purpose are recorded.
 ## Relationship to the EIF, deliberately unasserted
 
 This regulation and [[EU-EIF]] plainly occupy the same territory —
-cross-border interoperability of public services — and the Interoperable
-Europe Board is reported to be the body that adopts new EIF versions.
-**No relationship between them is asserted**, because no source read states
-how the Act relates to the Framework: whether it gives the EIF legal
-standing, supersedes it, or sits alongside it as governance for it.
+cross-border interoperability of public services. **No direct relationship
+between the Act and the Framework is asserted here**, because no source
+read states how the Act relates to the Framework itself: whether it gives
+the EIF legal standing, supersedes it, or sits alongside it as governance
+for it.
 
-That is a real and answerable question rather than an inherent ambiguity,
-and it is queued in `discovery/research-queue.md`. Getting it right matters:
-it determines whether the EU interoperability layer has one root or two.
+**Partially resolved via the Board, added 2026-09-05.**
+[[EU-INTEROPERABLE-EUROPE-BOARD]] — the governance body this Act
+establishes — is now a separate Atlas entity, `governed-by` this
+regulation. Its own page, read directly, confirms one piece of the
+puzzle: shaping the next revision of the EIF is one of the Board's tasks,
+recorded as the Board `influences` [[EU-EIF]]. That is real information,
+but it answers "does the Board work on the EIF" rather than "does this Act
+give the EIF legal force" — the narrower legal question this section
+raised remains open.
+
+That narrower question is a real and answerable one rather than an
+inherent ambiguity, and it remains queued in `discovery/research-queue.md`.
+Getting it right matters: it determines whether the EU interoperability
+layer has one root or two.
 
 ## Relationships
 
@@ -274,7 +286,10 @@ it determines whether the EU interoperability layer has one root or two.
   countries. Every other member state belongs here too; the
   `applies-in` relationships are added as countries join the Atlas.
 - Associated with [[EU-EIF]] — see above.
+- `governed-by` edge (this Act as target) recorded on
+  [[EU-INTEROPERABLE-EUROPE-BOARD]]'s own file — the Board it establishes.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter. [[EU-INTEROPERABLE-EUROPE-BOARD]]'s own governance
+page was read directly 2026-09-05.
