@@ -608,9 +608,8 @@ batches recorded that none existed.
 | [[LU-DATA-PUBLIC]] | **No custodian modelled.** | [[LU-CTIE]] is the obvious operator and it is not sourced. Portugal's and Czechia's equivalent gaps (PT-DADOS-GOV, CZ-DATA-GOV) were both closed by 2026-08-26 | 2026-08-18; PT and CZ closed | Open — Luxembourg only |
 | [[CZ-ZAKON-60-2026]] | What does the act contain beyond [[CZ-DIA]]'s role? | `coverage: low`. What "controlled access" covers, which data, what rights it creates — all unestablished. `start_date` is deliberately null: the sources give the Sb. citation, not a date of effect | 2026-08-18 | Open |
 | [[CZ-DIA]] | **Act No 12/2020** on the right to digital services, DIA's constituting statute, is not modelled. | DIA carries `implements` [[CZ-ZAKON-60-2026]] but no `governed-by` edge to the act that created it | 2026-08-18 | Open |
-| [[LU-ILNAS]] | Its **accreditation** (OLAS) and market-surveillance functions are unmodelled. | Two-thirds of what the institute does | 2026-08-18 | Open |
 | [[PT-AMA]] | **ePortugal**, the **Chave Móvel Digital**, the **Cartão de Cidadão** and the **iAP** are unmodelled. | Portugal's identity means would be the [[EU-EIDAS]] counterparts; the iAP is its interoperability platform | 2026-08-18 | Open |
-| Standards bodies generally | The membership counts in the Atlas are what is **sourced**, not what is true. | [[LU-ILNAS]] and [[GB-BSI]] show five, [[PT-IPQ]] three, most others two — because the CEN membership rule was the only source available for the four created in the structural-fixes batch. The column invites a comparison it cannot fully support | 2026-08-18 | Open |
+| Standards bodies generally | The membership counts in the Atlas are what is **sourced**, not what is true. | [[LU-ILNAS]] shows six (updated 2026-08-25, was five when this row was written), [[GB-BSI]] five, [[PT-IPQ]] three, most others two — because the CEN membership rule was the only source available for the four created in the structural-fixes batch. The column invites a comparison it cannot fully support | 2026-08-18 | Open |
 
 ## Research-queue batch (2026-08-18)
 

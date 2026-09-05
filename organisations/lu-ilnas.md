@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-25"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -93,6 +93,10 @@ sources:
   - title: "ISO — ILNAS"
     url: "https://www.iso.org/member/1776.html"
     publisher: "International Organization for Standardization (ISO)"
+  - title: "L'accréditation, de quoi s'agit-il? (FAQ) — OLAS"
+    url: "https://portail-qualite.public.lu/fr/accreditation-notification/faq.html"
+    publisher: "Le gouvernement du Grand-Duché de Luxembourg (Portail Qualité / OLAS)"
+    accessed: "2026-09-05"
 ---
 
 # Institut luxembourgeois de la normalisation, de l'accréditation, de la sécurité et qualité des produits et services
@@ -104,6 +108,10 @@ sources:
 > international one is the **ITU**, a membership this entity did not
 > previously carry. ILNAS is no longer tied with [[GB-BSI]] at five; it
 > now has six, the most of any national standards body in the Atlas.
+>
+> **Updated 2026-09-05**: OLAS, ILNAS's accreditation function, is now
+> described from the Portail Qualité's own FAQ, closing the
+> previously-flagged "two-thirds of what the institute does" gap.
 
 ## Description
 
@@ -149,14 +157,38 @@ Note the caveat that still applies to the whole column: several of these
 bodies almost certainly hold more memberships than the Atlas records.
 The numbers are what is **sourced**, not what is true.
 
+## The accreditation function, described 2026-09-05
+
+Confirmed by reading portail-qualite.public.lu's own accreditation FAQ
+directly: **OLAS** (Office Luxembourgeois d'Accréditation et de
+Surveillance), Luxembourg's national accreditation authority, is "une
+initiative de l'ILNAS" (an ILNAS initiative) — not a separate legal
+body, physically located at ILNAS's own offices in Belvaux. OLAS
+accredits conformity-assessment bodies (laboratories, inspection
+bodies, certification organisations) and represents Luxembourg to the
+European (EA) and international (IAF, ILAC) accreditation networks.
+
+The legal framework, also read directly: **Regulation (EC) No 765/2008**
+sets EU-wide accreditation and market-surveillance requirements; at
+national level, the **Law of 4 July 2014** reorganising ILNAS and a
+**Grand Ducal Regulation of 12 April 2016** implementing its Articles 3,
+5 and 7 give OLAS's activity its domestic legal basis. Neither
+Regulation 765/2008 nor the 2014 law is created as a separate Atlas
+entity — OLAS itself is not modelled as a distinct organisation, since
+the source is explicit that it is an ILNAS initiative rather than a
+body with its own legal personality, matching this Atlas's threshold
+for not creating thin entities.
+
 ## Not modelled
 
-- ILNAS's **accreditation** function (OLAS) and its **market surveillance**
-  and metrology roles — two-thirds of what the institute does.
 - Any **Luxembourg standard**. That is still true of all ten national
   standards bodies in the Atlas.
 - Any **ITU standard or activity** ILNAS is involved in specifically —
   the source confirms membership, not participation in any named work.
+- ILNAS's precise **founding date**: one secondary source gives 1 June
+  2008 for when it "started its activities," but the 2014 law is
+  described as *reorganising* rather than founding ILNAS, so which date
+  (if either) belongs in `start_date` was not resolved this pass.
 
 ## Relationships
 
@@ -166,5 +198,7 @@ The numbers are what is **sourced**, not what is true.
 ## Sources
 
 Listed in frontmatter. `portail-qualite.public.lu` and
-`ilnas.gouvernement.lu` were read directly this pass; `iso.org` remains
-bot-walled (403) even with an honest User-Agent.
+`ilnas.gouvernement.lu` were read directly in the 2026-08-25 pass;
+`iso.org` remains bot-walled (403) even with an honest User-Agent. The
+accreditation FAQ, also on `portail-qualite.public.lu`, added and read
+directly 2026-09-05.
