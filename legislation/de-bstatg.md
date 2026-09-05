@@ -22,7 +22,7 @@ coverage: low
 verification: primary-source
 start_date: "1987-01-22"
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -51,6 +51,10 @@ sources:
     url: "https://www.anwalt.org/bundesstatistikgesetz-bstatg/"
     publisher: "anwalt.org"
     accessed: "2026-08-22"
+  - title: "BStatG — Gesetz über die Statistik für Bundeszwecke (re-read for UN-FPOS)"
+    url: "https://www.gesetze-im-internet.de/bstatg_1987/BJNR004620987.html"
+    publisher: "Bundesministerium der Justiz / juris (Gesetze im Internet)"
+    accessed: "2026-09-05"
 ---
 
 # Bundesstatistikgesetz (BStatG)
@@ -78,26 +82,24 @@ Confirmed directly on the statute text (2026-08-22): "Ausfertigungsdatum:
 has since been amended, most recently "durch Artikel 14 des Gesetzes vom
 8. Mai 2024".
 
-## The second unclosed statistical link
+## A refused link, checked and closed — 2026-09-05
 
 [[NL-WET-CBS]] is the Dutch counterpart: the act constituting the national
-statistical office. Both acts exist in the Atlas; **neither connects to the
-international statistical layer.**
+statistical office. Both acts previously read as unsourced restatements of
+the UN's **Fundamental Principles of Official Statistics** ([[UN-FPOS]]) —
+neutrality, objectivity, professional independence, statistical
+confidentiality — with no source confirming the resemblance either way.
 
-Batch 15 identified [[UN-FPOS]] — the UN Fundamental Principles of Official
-Statistics — → [[NL-WET-CBS]] as one of two links that would connect the
-otherwise isolated UN component, and refused it for want of a source. This
-act is the identical case in a second country: national statistical
-legislation whose principles (neutrality, objectivity, professional
-independence, statistical confidentiality) **read as a direct restatement
-of the Fundamental Principles** without any source read saying so.
-
-Two independent instances of the same unsourced resemblance are not
-evidence. They are two instances of the same unsourced resemblance. Both
-are logged in `discovery/unresolved.md`, where they now form a cluster with
-[[DE-DESTATIS]] → [[EU-EUROSTAT]] and [[UN-UNSD]] → [[EU-EUROSTAT]]: four
-refused links that a single afternoon with readable sources would probably
-resolve, and which together are the largest structural hole in the Atlas.
+Re-reading this act's own consolidated text at `gesetze-im-internet.de`
+directly, specifically for this question, finds **no mention of the United
+Nations, "Vereinte Nationen", the Fundamental Principles, or any
+international statistical principles by name** — only EU-level references
+(Regulation (EC) No 223/2009, EU directives). [[NL-WET-CBS]]'s own text was
+checked the same way on the same date with the identical result. No
+`related-to`/`aligned-with` edge to [[UN-FPOS]] is asserted for either act:
+this is a checked-and-negative finding, not an unresearched gap, closing
+both halves of the cluster [[DE-DESTATIS]] → [[EU-EUROSTAT]] and
+[[UN-UNSD]] → [[EU-EUROSTAT]] were named alongside.
 
 ## Relationships
 
@@ -105,4 +107,6 @@ resolve, and which together are the largest structural hole in the Atlas.
 
 ## Sources
 
-Listed in frontmatter, including the consolidated statutory text.
+Listed in frontmatter, including the consolidated statutory text, re-read
+in a later pass (2026-09-05) specifically to check the UN-FPOS question
+above.

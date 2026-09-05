@@ -27,7 +27,7 @@ verification: primary-source
 
 start_date: 2007-05-15
 end_date: null
-last_verified: "2026-09-04"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -84,8 +84,8 @@ relationships:
   - type: applies-in
     target: NL
     source: fact
-    evidence: "The Netherlands transposed the INSPIRE directive through the Implementatiewet EG-richtlijn infrastructuur ruimtelijke informatie and the INSPIRE Besluit, which came into force on 1 September 2009; Geonovum supported Dutch data providers with INSPIRE implementation at the request of the Ministry of the Interior and Kingdom Relations (geonovum.nl 'Nederlandse INSPIRE-wet treedt in werking'; geonovum.nl 'Wetsvoorstel implementatie INSPIRE behandeld in Tweede Kamer'; europadecentraal.nl 'INSPIRE-richtlijn'). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading geonovum.nl's own INSPIRE standards page directly (2026-09-05), closing a gap `discovery/unresolved.md` had flagged as first-priority: 'The European INSPIRE directive was anchored in Dutch law and regulations in 2009 via the Nederlandse Implementatiewet EG-richtlijn infrastructuur ruimtelijke informatie and the INSPIRE Besluit,' both cited there with their statutory URLs. Geonovum supported Dutch data providers with INSPIRE implementation at the request of the Ministry of the Interior and Kingdom Relations."
+    confidence: high
     valid_from: 2009-09-01
     valid_until: null
   - type: applies-in
@@ -144,6 +144,10 @@ sources:
     url: "https://klimadatastyrelsen.dk/om-klimadatastyrelsen/lovstof"
     publisher: "Klimadatastyrelsen"
     accessed: "2026-08-28"
+  - title: "Standaarden — INSPIRE"
+    url: "https://www.geonovum.nl/geo-standaarden/inspire"
+    publisher: "Geonovum"
+    accessed: "2026-09-05"
 ---
 
 # INSPIRE Directive
@@ -213,33 +217,18 @@ country-neutral model doing exactly what it exists for: a second country
 adding an EU instrument that the first country's batches happened to miss,
 and the instrument arriving country-neutral rather than German-shaped.
 
-## ⚠ The Netherlands relationship is missing, not absent
+## The Netherlands relationship, closed 2026-09-05
 
-**No `applies-in` → [[NL]] is recorded**, and that is a gap rather than a
-statement. INSPIRE binds all member states, so it certainly applies in the
-Netherlands, and [[NL-GEONOVUM]], [[NL-PDOK]] and [[NL-NEN-3610]] are all
-plainly part of the Dutch response to it.
-
-None of that is sourced. The German transposition is sourced — the
-GDI-DE's own INSPIRE implementation page and two Land geoportals state it —
-and the Dutch one is not, because the Dutch geospatial batch was researched
-before this directive was an Atlas entity and none of its sources named
-INSPIRE.
-
-Recording the German link and not the Dutch one produced a directive that
-looked German-specific, which is misleading in the opposite direction from
-the usual failure mode.
-
-Belgium has since been added — [[BE-DCAT-AP-BE]]'s federal profile was
-built by the administrations implementing INSPIRE and maps between INSPIRE
-and DCAT-AP elements — so the directive now reaches two of the Atlas's
-three countries and still not the Netherlands. **A third country touched
-this directive without closing the Dutch gap**, which makes it harder to
-keep describing as an oversight.
-
-It remains a **first-priority gap** in `discovery/unresolved.md`: unlike
-most refused links in this Atlas, this one is near-certain to be closable
-by a single page read.
+An `applies-in` → [[NL]] edge was added in an earlier pass (search-only,
+citing Geonovum and europadecentraal.nl secondary pages) but this section
+still argued the gap was open — a frontmatter/body drift bug. Reading
+geonovum.nl's own INSPIRE standards page directly resolves it properly:
+"The European INSPIRE directive was anchored in Dutch law and regulations
+in 2009 via the Nederlandse Implementatiewet EG-richtlijn infrastructuur
+ruimtelijke informatie and the INSPIRE Besluit." `confidence` on the NL
+edge rises to `high`. [[NL-GEONOVUM]], [[NL-PDOK]] and [[NL-NEN-3610]]
+remain the plainly-connected Dutch response, still not individually
+sourced to this directive by name.
 
 ## A Danish transposition, found while researching a different gap
 
@@ -254,7 +243,9 @@ is a JavaScript single-page application and was not read.
 
 ## Relationships
 
-- `applies-in` [[DE]], [[BE]] and [[DK]] — **not** [[NL]], see above.
+- `applies-in` [[DE]], [[BE]], [[DK]], [[NL]], [[FR]] and, at lower
+  confidence (search-only), [[PT]], [[LU]], [[CZ]], [[IE]], [[ES]] and
+  [[PL]].
 
 Inbound: [[DE-GEOZG]] implements requirements from this directive, and
 [[BE-DCAT-AP-BE]] `references` it through the INSPIRE↔DCAT-AP mapping.
