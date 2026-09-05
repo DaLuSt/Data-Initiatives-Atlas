@@ -208,6 +208,15 @@
 > anchor edge, matching the [[NL-SURF]]/[[NL-NICTIZ]] convention for
 > member-owned consortia.
 >
+> **2026-09-05 pickup (twenty-third):** created [[NL-RIJKSWATERSTAAT]],
+> the executive agency of the Ministry of Infrastructure and Water
+> Management, closing the gap [[NL-PDOK]]'s own file had flagged —
+> "the founding collaboration look[ed] narrower than it was" with
+> Rijkswaterstaat unmodelled. `participates-in` edges to both
+> [[NL-PDOK]] (founding partner, 2013) and [[NL-NDW]] recorded on
+> Rijkswaterstaat's own side. Only the Ministry itself remains
+> unmodelled among PDOK's named founders.
+>
 > **The `level` vocabulary is no longer a blocker.** `level: subnational` was
 > added 2026-08-21 and the three Belgian sub-federal ODD instruments are
 > modelled under it. OSLO/Digitaal Vlaanderen and the Comunidades Autónomas
@@ -442,7 +451,7 @@ by accident.
 | **W3C DCAT → EU DCAT-AP → [[NL-DCAT-AP-NL]] chain** | A clean international→EU→national standards descent, and one of the clearest demonstrations available of what the Atlas is for. Complete it when Batches 9 and 14 land | Batch 9, 14 | Batch 4 / 2026-08-14 |
 | Topsector Logistiek | Originator of [[NL-ISHARE]]; needed to assert its `maintained-by`. **Attempted 2026-09-04**: secondary sources attribute iSHARE's origination to Topsector Logistiek via NLIP, but iSHARE's own official history page, read directly, does not name either — it credits unspecified "government and business organizations." Topsector Logistiek is also a broad national innovation-policy programme (one of ~9-10 Dutch "topsectoren"), not a narrow single-purpose body, so modelling it accurately would need more research than this pass gave it. No entity created; no `maintained-by` edge asserted | Batch 10 | Batch 5 / 2026-08-14; attempted research-queue pickup 2026-09-04 |
 | DMI ecosystem; IDSA / IDS architecture | Named in iSHARE sources as data-space users of its trust framework | Batch 10 | Batch 5 / 2026-08-14 |
-| Ministerie van Infrastructuur en Waterstaat; Rijkswaterstaat | Founding partners of [[NL-PDOK]] not yet modelled, making its founding collaboration look narrower than it was | Batch 5+ | Batch 5 / 2026-08-14 |
+| Ministerie van Infrastructuur en Waterstaat | Founding partner of [[NL-PDOK]] not yet modelled. **Rijkswaterstaat closed 2026-09-05** — see below | Batch 5+ | Batch 5 / 2026-08-14 |
 | Ministeries van VWS, EZK, OCW | Named partners of [[NL-HEALTH-RI]] | Batch 5+ | Batch 5 / 2026-08-14 |
 | Nationaal Groeifonds | Funds [[NL-HEALTH-RI]] | Batch 5+ | Batch 5 / 2026-08-14 |
 | Nationaal Wegenbestand (NWB) | Part of the [[NL-NDW]] expansion | Batch 5+ | Batch 5 / 2026-08-14 |

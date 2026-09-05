@@ -140,6 +140,9 @@ see `discovery/research-queue.md`._
 ### Registries and statistics
 
 - [[NL-KADASTER]] — Kadaster _(BRK, BRT; national facility for BAG, BGT, WOZ)_ ✅ re-verified 2026-08-27
+- [[NL-RIJKSWATERSTAAT]] — executive agency of the Ministry of
+  Infrastructure and Water Management; founding partner of
+  [[NL-PDOK]] and [[NL-NDW]] _(added 2026-09-05)_
 - [[NL-KVK]] — Kamer van Koophandel _(Handelsregister)_
 - [[NL-RDW]] — RDW _(BRV, vehicles)_ ✅ re-verified 2026-08-27
 - [[NL-RVIG]] — Rijksdienst voor Identiteitsgegevens _(BRP)_ ✅ re-verified 2026-08-27
