@@ -21,7 +21,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-09-04"
 previous_version: null
 successor: null
 
@@ -36,6 +36,7 @@ related_entities:
   - NL-RORA
   - NL-PETRA
   - NL-ROSA
+  - NL-WILMA
   - EU-EIF
 relationships:
   - type: maintained-by
@@ -127,11 +128,13 @@ Batch 4:
 | Central government | [[NL-EAR]] → [[NL-RORA]] (successor since 2024) |
 | Provinces | [[NL-PETRA]] |
 | Education sector | [[NL-ROSA]] |
-| Water authorities | WILMA — not yet an entity, queued |
+| Water authorities | [[NL-WILMA]] (added 2026-09-04, closing the last queued gap in this family) |
 
-Only [[NL-GEMMA]] carries a sourced `based-on` relationship to NORA. For the
-others the derivation is likely but was not sourced, so it is **not**
-asserted — the family membership is recorded through `related_entities`
+[[NL-GEMMA]], [[NL-ROSA]] and [[NL-WILMA]] each carry a sourced `based-on`
+relationship to NORA, confirmed directly on NORA's own wiki or the child
+architecture's own page. [[NL-EAR]]/[[NL-RORA]] and [[NL-PETRA]] do not: the
+derivation is likely but was not sourced, so it is **not** asserted for
+those two — the family membership is recorded through `related_entities`
 instead, which claims association without claiming derivation.
 
 ## Relationships

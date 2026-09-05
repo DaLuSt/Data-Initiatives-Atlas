@@ -138,6 +138,18 @@
 > attribution to it, and the programme itself is too broad a policy
 > initiative to model accurately in this pass.
 >
+> **2026-09-05 pickup (seventeenth):** closed two more Netherlands items.
+> [[NL-WILMA]] completes the NORA reference-architecture family for the
+> water authorities, `based-on` [[NL-NORA]], confirmed on NORA's own wiki
+> page; [[NL-NORA]]'s own family table and prose were updated to reflect
+> all three sourced descendants (GEMMA, ROSA, WILMA). [[NL-NOIV]] — the
+> historical Nederland Open in Verbinding action plan and programme office
+> (2007–2011) — closes the "BOMOS custody" question's historical half:
+> reading BOMOS's own founding PDF directly shows NOiV's programmabureau,
+> not just the 2006 Forum Standaardisatie working group, convened the
+> community that produced BOMOS version 1; [[NL-BOMOS]]'s own file was
+> updated with that finding.
+>
 > **The `level` vocabulary is no longer a blocker.** `level: subnational` was
 > added 2026-08-21 and the three Belgian sub-federal ODD instruments are
 > modelled under it. OSLO/Digitaal Vlaanderen and the Comunidades Autónomas
@@ -362,9 +374,7 @@ by accident.
 
 | Area / entity | Why it needs research | Suggested batch | Noted by / date |
 |---|---|---|---|
-| WILMA (Waterschaps Informatie & Logisch Model Architectuur) | Water authorities' reference architecture; completes the NORA family. Not created in Batch 4 — single mention, and not named in the batch scope (unlike PETRA) | Batch 5+ | Batch 4 / 2026-08-14 |
 | StUF (Standaard Uitwisselings Formaat) | VNG municipal exchange standard. Searched in Batch 4 but no usable source returned — deliberately not created | Batch 5+ | Batch 4 / 2026-08-14 |
-| NOiV programme bureau | Built BOMOS; appears historical. Needed to resolve BOMOS custody | Batch 5+ | Batch 4 / 2026-08-14 |
 | Remaining 'pas toe of leg uit' standards | Only Digikoppeling and ADR are modelled. The full mandatory + recommended lists (DNSSEC, DMARC, TLS, WCAG, SAML, OAuth profiles, …) are not enumerated | Batch 5+ | Batch 4 / 2026-08-14 |
 | Wet bescherming persoonsgegevens (Wbp) | Predecessor regime replaced by GDPR/UAVG on 25 May 2018; needed for temporal completeness | Batch 4 or later | Batch 3 / 2026-08-14 |
 | Aanpassingswet AVG (dossier 34.939) | Adjusted other Dutch legislation to the GDPR | Batch 4 or later | Batch 3 / 2026-08-14 |

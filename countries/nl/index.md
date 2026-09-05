@@ -125,6 +125,9 @@ see `discovery/research-queue.md`._
 - [[NL-NICTIZ]] — Nictiz (health information standards)
 - [[NL-DIGIGO]] — digital collaboration foundation, built environment
   sector; initiator of [[NL-DSGO]] _(added 2026-09-04)_
+- ~~[[NL-NOIV]]~~ — Nederland Open in Verbinding, historical action plan
+  and programme office (2007–2011); `produces` [[NL-BOMOS]]
+  _(`status: superseded`; added 2026-09-05)_
 
 ### Registries and statistics
 

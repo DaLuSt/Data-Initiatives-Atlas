@@ -21,7 +21,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -32,6 +32,7 @@ organisations:
   - NL-FORUM-STANDAARDISATIE
 related_entities:
   - NL-GEONOVUM
+  - NL-NOIV
 relationships:
   - type: derived-from
     target: NL-FORUM-STANDAARDISATIE
@@ -64,15 +65,19 @@ sources:
   - title: "Beheer- en Ontwikkelmodel voor Open Standaarden Versie 2 — deel 1: de basis"
     url: "https://www.forumstandaardisatie.nl/sites/default/files/BFS/4-basisinformatie/publicaties/BOMOS2-deel-1-(de-basis).pdf"
     publisher: "Forum Standaardisatie"
+    accessed: "2026-09-05"
 ---
 
 # BOMOS
 
-> **Verified 2026-08-27.** Three of four cited pages were read directly,
-> and they resolve the prior text's central open question: BOMOS's current
-> maintainer. `verification` moves from `search-only` to `primary-source`;
-> a `maintained-by` [[NL-LOGIUS]] relationship is now asserted with a dated
-> handover, where previously none was asserted to either named organisation.
+> **Verified 2026-08-27, deepened 2026-09-05.** Three of four cited pages
+> were read directly on 2026-08-27, resolving the prior text's central open
+> question: BOMOS's current maintainer. `verification` moves from
+> `search-only` to `primary-source`; a `maintained-by` [[NL-LOGIUS]]
+> relationship is now asserted with a dated handover, where previously none
+> was asserted to either named organisation. On 2026-09-05, the fourth
+> source (the BOMOS2-deel-1 PDF) was read directly for the first time,
+> surfacing NOiV's role in convening BOMOS version 1.
 
 ## Description
 
@@ -94,6 +99,18 @@ Folmer (HAN University of Applied Sciences), Gül Işik and Edwin Wisse (both
 Logius), and Wouter van den Berg (TNO) as editors. The methodology was
 refined through knowledge from Geonovum, Kadaster, TNO and Logius
 departments, per the forumstandaardisatie.nl presentation.
+
+**Who actually convened version 1.** A research-queue pickup on the NOiV
+programme bureau read the same BOMOS2-deel-1 PDF's introduction directly
+(2026-09-05): the 2006 working-group memo was BOMOS's technical starting
+point, but it was the **[[NL-NOIV]] programmabureau** ("Nederland Open in
+Verbinding") whose own concrete standards-management questions were, in the
+document's words, the "aanleiding" (reason) to convene the standardisation
+community that actually produced BOMOS version 1 in 2009. [[NL-NOIV]]
+itself is now a separate Atlas entity, closing the "BOMOS custody" question
+`discovery/research-queue.md` had left open on its historical side; the
+`produces` edge lives on NOiV's own file, per the Atlas's no-stored-inverse
+convention.
 
 Its practical force shows in [[NL-GEONOVUM]]'s use: Geonovum applies BOMOS
 to every standard it manages, and has held the Forum Standaardisatie
@@ -119,8 +136,10 @@ rather than an unresolved question.
   gap: Logius is BOMOS's current publisher and maintainer since taking over
   development around 2017.
 - Applied by [[NL-GEONOVUM]] to all standards it manages.
+- `produces` edge (BOMOS as target) recorded on [[NL-NOIV]]'s own file —
+  NOiV's programmabureau convened the community that produced version 1.
 
 ## Sources
 
-Listed in frontmatter, three of four read directly this pass. The BOMOS2
-Version 2 PDF was not re-fetched.
+Listed in frontmatter. All four now read directly: the first three on
+2026-08-27, the BOMOS2-deel-1 PDF directly on 2026-09-05.
