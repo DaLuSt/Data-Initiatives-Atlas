@@ -605,7 +605,6 @@ batches recorded that none existed.
 
 | Entity | Question | Why it matters | Noted by / date | Status |
 |---|---|---|---|---|
-| [[LU-CNPD]] | **Luxembourg's GDPR implementation act** — the date (1 August 2018) is now sourced, via an ELI URL linked from CNPD's own "Législation" page (2026-08-25), but the act's official title and text are still unread: `legilux.public.lu` is a JavaScript single-page application with no static content. | Luxembourg is the **only member state in the Atlas** with no national GDPR instrument. Ten others have one | 2026-08-18; date sourced 2026-08-25 | **Open — narrower** |
 | [[CZ-NUKIB]] | **NIS2 transposition not identified** for Czechia. | Czechia's cyber security act No 181/2014 is also unmodelled. Portugal's own gap (PT-CNCS) was closed 2026-08-26: [[PT-DECRETO-LEI-125-2025]], in force since 3 April 2026 | 2026-08-18; PT closed 2026-08-26 | Open — Czechia only |
 | [[LU-CTIE]] | **Luxembourg's NIS2 competent authority and CSIRT** are unmodelled. | CTIE secures the State's own infrastructure, which is a different job from supervising a country's essential entities. GOVCERT.LU was not researched | 2026-08-18 | Open |
 | [[CZ-UNMZ]] | **ČAS is not modelled.** | Czechia splits standardisation: ÚNMZ holds the membership, ČAS does the technical committees, drafting and publication. The body that actually produces ČSN standards is absent from the graph | 2026-08-18 | Open |
