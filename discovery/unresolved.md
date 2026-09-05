@@ -388,7 +388,7 @@ re-reading every instrument.
 | Entity | Question |
 |---|---|
 | [[UN-CES]] | Typed `programme`. It is a standing intergovernmental conference with a Bureau, so `organisation` is arguable; typed `programme` because it is convened *by* [[UN-UNECE]] rather than existing beside it, the same reading applied to [[UN-GGIM]] |
-| [[INTL-OECD-CSSP]] | The sources give **two names and two acronyms** — *committee on statistics and statistical policy* (CSSP) and *statistics committee* (CSTAT) — and differ on whether Eurostat represents "the EU" or "the European Commission". Recorded at `confidence: low` with both names. **No OECD source is cited at all**; the committee is described only by a participant |
+| [[INTL-OECD-CSSP]] | The sources give **two names and two acronyms** — *committee on statistics and statistical policy* (CSSP) and *statistics committee* (CSTAT) — and differ on whether Eurostat represents "the EU" or "the European Commission". | **Narrowed 2026-09-05**: the OECD's own committee page (oecdgroups.oecd.org, BodyID 7229), read directly, closes the "no OECD source cited" half and confirms "CSSP" as the official name — it does not mention "CSTAT" at all, which corroborates one name but does not disprove the other. `confidence` raised to `medium`. The EU-vs-Commission representation question is unchanged |
 
 ## Basisregistraties batch (2026-08-16)
 
