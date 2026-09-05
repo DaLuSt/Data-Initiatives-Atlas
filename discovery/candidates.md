@@ -42,61 +42,76 @@ new/re-verified entities — [[UN-CCL]], [[UN-GLOBAL-PLATFORM]],
 [[UN-ITU-X509]], [[UN-WHO]] (+ [[UN-WHO-GHO]]), [[UN-UNDP]], [[UN-IMO]]
 (+ [[UN-IMO-GISIS]]) newly created; [[UN-UNCTAD]] and [[UN-GDC]] promoted
 to `primary-source` on the strength of `un.org`'s own official text. The
-INSPIRE↔UN-GGIM edge (§1) was attempted again and remains genuinely
-open — the one item on this page that keeps resisting closure across
-three separate passes. The second part worked the ontology-gaps table
+INSPIRE↔UN-GGIM edge (§1) was attempted again and remained genuinely
+open at that point. The second part worked the ontology-gaps table
 (§6): added the `supplements` relationship type, closed the "modelled
 on" row as a deliberate decision rather than a new type, and created
 [[EU-CJEU]] — narrowing, not closing, the enforcement-modelling gap. A
 third, small part narrowed §4's `region` entities row: [[INTL-EFTA]] and
 [[INTL-COE]] turn out to already exist, just as `type: organisation`
 rather than `type: region` — the same shape the EEA already taught was
-more useful. Only the Nordic Council and Benelux remain unmodelled, and
-neither has an identified role in this Atlas's scope.
+more useful.
 
-What remains below is what is genuinely still open: the INSPIRE↔UN-GGIM
-edge (§1), one carried lead (§3), a narrow §4 measurement row, and two
-ontology-gap rows (§6) — one of them, the `type: law` taxonomy
-flattening, a modelling decision rather than research, and large enough
-to warrant its own dedicated pass rather
-than a quick pickup.
+**A fourth pass, later the same day, closed everything this page had
+left.** The INSPIRE↔UN-GGIM edge (§1) got a fourth independent attempt —
+still no source found it directly, and it is now retired from this page
+as a candidate and left as a permanent record in
+`discovery/unresolved.md` instead, where "a relationship that seems
+plausible but isn't directly sourced" is the correct home for it. **UN
+DESA** (§3's last carried lead) was checked once more and declined for
+the same reason already on record: a broad Secretariat department, "the
+think tank of the UN," already represented through [[UN-UNSD]] and
+[[UN-UNCTAD]]'s CSTD work, with no source giving it a distinct enough
+identity of its own. The **Nordic Council and Benelux** (§4) are
+likewise finally declined — no identified data-governance role, the
+same call already made for World Bank in `discovery/unresolved.md`. The
+**`level: local`** question (§4) closes the same way: the Dutch
+municipalities are the only thing it gates, and `discovery/unresolved.md`'s
+Basisregistraties section already explains why no single entity for
+"the municipalities" is the right answer — [[NL-VNG]] is their
+association, which is a different thing, and there is no candidate left
+to research. §6's two remaining ontology-gap rows — the
+infringement-procedure type/relationship and the `type: law` taxonomy
+flattening — are genuine, still-open design questions, but they were
+never really *candidates* (unresearched entities) in this page's sense;
+both are now consolidated into rows `discovery/unresolved.md` already
+carried for the same underlying issue, rather than tracked twice.
+
+**Nothing is left on this page to pick up.** Every row that started here
+either became a real entity, was found already covered, or was declined
+with its reasoning kept — on the entity itself, in this page's own
+history above, or in `discovery/unresolved.md` where the finding was a
+genuine open question rather than a closed one. §2's `measures` type
+addition and §5's domain-coverage count stay below as historical
+reference, not as work to do.
 
 ---
 
-## 1. Still open — the INSPIRE ↔ UN-GGIM edge
+## 1. Retired 2026-09-05 — the INSPIRE ↔ UN-GGIM edge
 
-[[EU-EUROGEOGRAPHICS]] now exists and the geospatial cluster has its middle
+[[EU-EUROGEOGRAPHICS]] exists and the geospatial cluster has its middle
 layer: five national mapping and cadastral authorities attach to it by
 `participates-in`, mirroring [[EU-ESS]] for statistics. **The edge from the
-European instrument to the UN structure still does not exist**, and creating
-EuroGeographics did not create it.
-
-| Name | Suspected type | Suspected scope | Why it might matter | Where seen | Noted by / date | Status |
-|---|---|---|---|---|---|---|
-| **[[EU-INSPIRE]] → the UN-GGIM structure** | relationship | — | The one edge that would finish the geospatial vertical. What exists is a 2016 EuroGeographics presentation *about* UN-GGIM delivered to an INSPIRE audience, and general discussion of INSPIRE harmonisation in UN-GGIM: Europe working groups. **That is evidence the communities talk, not that the instruments relate**, and no edge was asserted | un-ggim-europe.org working groups; eurogeographics.org INSPIRE KEN deck | UN batch / 2026-08-16; re-checked 2026-08-21, 2026-09-05 | **Open — needs a real source** |
+European instrument to the UN structure was never found**, across four
+separate attempts (UN batch / 2026-08-16; re-checked 2026-08-21 and twice
+on 2026-09-05).
 
 **Creating the missing node did not close this one, and that is the useful
 finding.** [[EU-ESS]] closed five refused edges because the missing node was
 what every one of them had been pointing at. Here the missing node was also
-genuinely missing — but it was never what this refusal turned on. The two
-cases look identical on this page and are not.
+genuinely missing — but it was never what this refusal turned on.
 
-The nearest thing to a bridge that now exists is incidental: [[GB-OS]]
+The nearest thing to a bridge that ever surfaced is incidental: [[GB-OS]]
 carries `participates-in` to **both** [[UN-GGIM]] and
 [[EU-EUROGEOGRAPHICS]]. A path through a shared member is not a relationship
-between the instruments.
-
-**2026-09-05 attempt, also inconclusive.** An academic source (an MDPI
-article on cadastral mapping in Europe) surfaced a specific-sounding claim
-— that a UN-GGIM: Europe core-data working group selected geospatial
-themes "from the list of the INSPIRE annexes" — but the article itself
-returned HTTP 403 on every attempt, so it was never actually read. Chasing
-it to `un-ggim-europe.org`'s own current working-groups page found no
-"core data" group by that name (the current three are Frameworks, Geodesy
-Supply Chain, and Data for Global Agendas — the group structure may have
-been renamed since whatever the article described), and the specific PDF
-search turned up (`UN-GGIM-Europe_WGA_Recommandation_Content_SU_v1.0.pdf`)
-404s. Still open.
+between the instruments. The fourth attempt tried an academic-source lead
+(an MDPI article's claim that a UN-GGIM: Europe working group selected
+geospatial themes "from the list of the INSPIRE annexes"), the current
+un-ggim-europe.org homepage and working-group pages, and its 2026-2030
+work plan PDF — the article 403'd, none of the live pages mentions
+INSPIRE, and the PDF's text was not extractable. Retired as a candidate
+here; kept as a standing open question in `discovery/unresolved.md`'s UN
+batch section, where a plausible-but-unsourced relationship belongs.
 
 ## 2. Closed — `measures` was added the same day
 
@@ -145,17 +160,16 @@ unopened pages that had left them as "weak" or "carried" leads:
   `gisis.imo.org`'s own page confirmed GISIS itself.
 
 **UN DESA, UNDP, WHO** was a three-name row; two of the three are now
-modelled. [[UN-WHO]] (plus its [[UN-WHO-GHO]] platform) and [[UN-UNDP]]
-were both confirmed via `who.int` and `sdgs.un.org` (an official UN
-subdomain — `undp.org` itself 403'd) read directly. **DESA remains
-unmodelled**: it is a broad UN Secretariat department already represented
-in the Atlas through several of its divisions ([[UN-UNSD]], and
-[[UN-UNCTAD]]'s CSTD work), and no source read this pass gave DESA itself
-a distinct enough identity to warrant its own entity separate from those.
-
-| Name | Suspected type | Suspected scope | Why it might matter | Where seen | Noted by / date | Status |
-|---|---|---|---|---|---|---|
-| **UN DESA** — no ID proposed | organisation | UN, `level: international` | Named in Batch 13's scope; WHO and UNDP (named alongside it) are now modelled, DESA itself is not | Batch 13 scope | Batch 13; carried; narrowed 2026-09-05 | Carried lead |
+modelled, and the third is declined. [[UN-WHO]] (plus its [[UN-WHO-GHO]]
+platform) and [[UN-UNDP]] were both confirmed via `who.int` and
+`sdgs.un.org` (an official UN subdomain — `undp.org` itself 403'd) read
+directly. **DESA declined, 2026-09-05**: a fresh check (un.org and
+sdgs.un.org, read directly) confirms it is a broad Secretariat
+department — "the think tank of the UN" — already represented in the
+Atlas through several of its divisions ([[UN-UNSD]], and [[UN-UNCTAD]]'s
+CSTD work), with no source giving DESA itself a distinct enough identity
+to warrant its own entity separate from those. The same call Batch 13
+already made for the World Bank.
 
 ## 4. Entity types and levels (re-measured 2026-08-21)
 
@@ -173,9 +187,9 @@ the wrong answer.
 
 | Item | Measurement | Why it matters | Status |
 |---|---|---|---|
-| **`level: local`** | **0 uses**, against 385 `national`, 69 `regional`, 52 `international`, 6 `sectoral` and 4 `subnational` | **No longer the blocker it was.** What blocked Flanders, the Comunidades Autónomas and the German Länder was that `regional` means *supra*-national here and nothing meant *sub*-national; `level: subnational` was added 2026-08-21 and those three became ordinary research. `local` remains unused and now gates one thing only — the Dutch municipalities — where the open question is **what entity to create**, not what to call it | Open (design), much narrower |
+| **`level: local`** | **0 uses**, against 385 `national`, 69 `regional`, 52 `international`, 6 `sectoral` and 4 `subnational` | **No longer the blocker it was.** What blocked Flanders, the Comunidades Autónomas and the German Länder was that `regional` means *supra*-national here and nothing meant *sub*-national; `level: subnational` was added 2026-08-21 and those three became ordinary research. `local` remains unused; it gated one thing — the Dutch municipalities — and that closes as **declined, 2026-09-05**: `discovery/unresolved.md`'s Basisregistraties section already explains why no single "the municipalities" entity is the right answer (hundreds of them; [[NL-VNG]] is their association, a different thing), so there is no candidate left to research here |
 | **`level: sectoral`** | 6 uses | Barely exercised. Whether that reflects the subject matter or under-use is unexamined | Later |
-| **`region` entities** | **1** — only [[EU]] | **Narrowed 2026-09-05**: two of the four named absentees turn out to already exist, just not as `type: region` — [[INTL-EFTA]] and [[INTL-COE]] (Council of Europe) are both modelled as `type: organisation`, the same lesson the EEA already taught: [[INTL-EEA-AGREEMENT]] (`type: law`) turned out to be the more useful shape than a region, since [[INTL-EEA-JCD-154-2018]] `amends` it and an amendment to a region would be meaningless. Only the **Nordic Council** and **Benelux** remain genuinely unmodelled, and neither has an identified data-governance role in this Atlas's scope — creating either now would be the thin, scope-free entity the taxonomy threshold exists to prevent | Later |
+| **`region` entities** | **1** — only [[EU]] | **Closed 2026-09-05.** Two of the four named absentees turned out to already exist, just not as `type: region` — [[INTL-EFTA]] and [[INTL-COE]] (Council of Europe) are both modelled as `type: organisation`, the same lesson the EEA already taught: [[INTL-EEA-AGREEMENT]] (`type: law`) turned out to be the more useful shape than a region, since [[INTL-EEA-JCD-154-2018]] `amends` it and an amendment to a region would be meaningless. The **Nordic Council** and **Benelux** are declined, not carried: neither has an identified data-governance role in this Atlas's scope, and creating either would be the thin, scope-free entity the taxonomy threshold exists to prevent |
 
 ## 5. Domain coverage (re-measured 2026-08-21, after the health batch)
 
@@ -223,12 +237,24 @@ Two of the four rows this table used to carry are closed, 2026-09-05:
   entities (e.g. StUF, searched for but never given an entity for want
   of a usable source).
 
-Two rows remain, one of them narrowed:
+Both remaining rows are consolidated into `discovery/unresolved.md`
+rather than tracked here too, 2026-09-05 — they are genuine ongoing
+ontology questions rather than unresearched candidates:
 
-| Gap | Why it matters | Noted | Status |
-|---|---|---|---|
-| **No way to model enforcement against a member state — narrowed 2026-09-05.** | Nineteen member states faced infringement proceedings over [[EU-OPEN-DATA-DIRECTIVE]], and four were referred to the Court of Justice in February 2023. **The missing node now exists** — [[EU-CJEU]], confirmed via `curia.europa.eu`'s own page. The Atlas still has no entity type for an individual infringement procedure and no relationship type for "was referred to the Court over", so the specific February 2023 referral is not itself an edge in the graph. Creating the Court did not create that edge — the same lesson §1's INSPIRE↔UN-GGIM refusal records | 2026-08-18; narrowed 2026-09-05 | **Open — the node exists; the procedure-level type and relationship do not** |
-| **`type: law` flattens primary and secondary legislation.** | [[IE-PSI-REGULATIONS-2021]] is a statutory instrument; [[IE-DPA-2018]] is an Act. Both are `law`. The same flattening applies to Portuguese decreto-lei versus lei, to German Gesetz versus Verordnung, and now to [[INTL-EEA-JCD-154-2018]], which is a Joint Committee *decision* filed as a `law`. Unlike the other three rows this table carried, this is a taxonomy change (`metadata/taxonomy.md`, `metadata/schema.json`) touching every legislation entity in the Atlas, not a single new type or one new entity — genuinely out of scope for a candidates-page pickup | 2026-08-18; extended 2026-08-21 | Open (design, large) |
+- **No way to model enforcement against a member state.** The missing
+  node ([[EU-CJEU]]) was created 2026-08-21 — confirmed via
+  `curia.europa.eu`'s own page — but creating the Court did not create
+  the edge: the Atlas still has no entity type for an individual
+  infringement procedure and no relationship type for "was referred to
+  the Court over". Tracked in `discovery/unresolved.md`'s "Research-queue
+  batch" section, updated 2026-09-05 to reflect the Court's creation.
+- **`type: law` flattens primary and secondary legislation** — Irish
+  statutory instrument vs. Act, Spanish *Ley Orgánica* vs. ordinary law,
+  German *Gesetz* vs. *Verordnung*, and [[INTL-EEA-JCD-154-2018]] (a
+  Joint Committee *decision* filed as a `law`). A taxonomy change
+  touching every legislation entity, genuinely out of scope for a
+  candidates-page pickup. Tracked in `discovery/unresolved.md`'s Spain
+  and Ireland batch sections, folded together 2026-09-05.
 
 ---
 
