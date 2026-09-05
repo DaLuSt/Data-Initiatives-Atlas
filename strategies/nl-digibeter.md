@@ -22,9 +22,9 @@ verification: primary-source
 
 start_date: 2018-07-01
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-05"
 previous_version: null
-successor: null
+successor: NL-WERKAGENDA-WAARDENGEDREVEN-DIGITALISEREN
 
 domains:
   - DOMAIN-GOVERNMENT
@@ -85,28 +85,30 @@ digital government and for safeguarding fundamental rights — carried over
 from the prior text and consistent with kst-26643-700.html's own framing
 (the State Secretary's letter).
 
-**`status` is resolved this pass, from `unknown` to `superseded`.**
+**`status` is resolved, from `unknown` to `superseded`.**
 Confirmed by reading digitaleoverheid.nl's own current policy-overview page
 directly: it explicitly frames "NL Digibeter (2018-2020)" as a closed,
-past-tense phase of government digitalisation policy, followed by a
-"Werkagenda Waardengedreven Digitaliseren (2022-2024)" (a strategy not
-previously known to the Atlas and not yet an entity — queued in
-`discovery/research-queue.md`), and then the 2025 [[NL-NDS]], which the
-same page states explicitly "does not replace but connects existing plans."
-Because the page itself names an intervening strategy that is not yet an
-Atlas entity, `successor` is left `null` here rather than pointed at
-[[NL-NDS]] — recording a genuine successor requires first creating the
-Werkagenda entity, which is outside this pass's 21-file scope.
+past-tense phase of government digitalisation policy, followed by
+[[NL-WERKAGENDA-WAARDENGEDREVEN-DIGITALISEREN]] (2022-2024), and then the
+2025 [[NL-NDS]], which the same page states explicitly "does not replace
+but connects existing plans."
+
+**`successor` closed 2026-09-05.** The intervening strategy the prior pass
+found named but unmodelled — picked up from this gap's own
+`discovery/unresolved.md` entry — is now an Atlas entity. `successor` now
+points to it rather than skipping ahead to [[NL-NDS]], which would have
+overstated a two-steps-removed succession the sources never state directly.
 
 ## Relationships
 
 - [[NL-DATA-AGENDA-OVERHEID]] is the data-specific agenda published under
   NL DIGIbeter.
 - Coordinated by [[NL-BZK]].
-- No `supersedes`/`superseded-by` relationship is asserted to [[NL-NDS]]:
-  the actual named intervening strategy is not an Atlas entity, and
-  asserting a two-steps-removed succession would overstate what the source
-  says.
+- Superseded by [[NL-WERKAGENDA-WAARDENGEDREVEN-DIGITALISEREN]] (via
+  `successor`), which is itself superseded by [[NL-NDS]]. No direct
+  `supersedes`/`superseded-by` relationship is asserted between this entity
+  and [[NL-NDS]]: the actual named intervening strategy is the correct
+  target, and skipping it would overstate what the sources say.
 
 ## Sources
 
