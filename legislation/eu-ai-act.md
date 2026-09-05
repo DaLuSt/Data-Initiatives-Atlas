@@ -22,7 +22,7 @@ verification: primary-source
 
 start_date: 2024-08-01
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -241,6 +241,10 @@ sources:
   - title: "Regulation (EU) 2026/1744 (Digital Omnibus on AI) — Official Journal"
     url: "https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng"
     publisher: "EUR-Lex (Publications Office of the European Union)"
+  - title: "Regulation (EU) 2024/1689 — Official Journal"
+    url: "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+    publisher: "EUR-Lex (Publications Office of the European Union)"
+    accessed: "2026-09-05"
 ---
 
 # Artificial Intelligence Act (Regulation (EU) 2024/1689)
@@ -334,14 +338,17 @@ merely adjacent to it.
 
 ## Sourcing note
 
-No EUR-Lex citation for the AI Act's own consolidated text was confirmed
-readable this pass: `eur-lex.europa.eu` returned empty content on every
-attempt (the CELEX record, the ELI record, and the HTML rendering were all
-tried), consistent with every other EUR-Lex attempt made across this
-batch. The two `artificialintelligenceact.eu` pages and Wikipedia were both
-read directly and remain the primary basis for this entity; the EUR-Lex ELI
-record for the amending Regulation (EU) 2026/1744 is listed in `sources`
-as an attempted-but-blocked citation rather than dropped.
+**Resolved 2026-09-05.** A prior pass found `eur-lex.europa.eu` returning
+empty content on every attempt at the AI Act's own EUR-Lex citation. This
+pass's attempt at `eur-lex.europa.eu/eli/reg/2024/1689/oj` succeeded: it
+confirms the regulation's full official title ("Regulation (EU) 2024/1689
+of the European Parliament and of the Council of 13 June 2024 laying down
+harmonised rules on artificial intelligence"), its Official Journal series
+(L) and publication date (12 July 2024). The Official Journal link the
+research queue had flagged as missing is now recorded in `sources`. The
+two `artificialintelligenceact.eu` pages and Wikipedia remain read
+directly and cited alongside it; the EUR-Lex ELI record for the amending
+Regulation (EU) 2026/1744 is also listed, unchanged from the prior pass.
 
 ## Relationships
 
@@ -355,6 +362,5 @@ as an attempted-but-blocked citation rather than dropped.
 
 ## Sources
 
-Listed in frontmatter, two of three original sources read directly this
-pass; the new EUR-Lex citation for Regulation (EU) 2026/1744 was attempted
-and returned empty content.
+Listed in frontmatter. Both EUR-Lex citations (2024/1689 and the amending
+2026/1744) are now confirmed readable, the former as of 2026-09-05.

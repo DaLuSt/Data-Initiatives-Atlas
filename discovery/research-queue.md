@@ -174,6 +174,16 @@
 > works on the EIF's revision, not whether the Act gives the EIF itself
 > legal force, which stays open and queued.
 >
+> **2026-09-05 pickup (twentieth):** added the two missing EUR-Lex
+> Official Journal citations the queue had flagged. Both
+> [[EU-AI-ACT]]'s (`eur-lex.europa.eu/eli/reg/2024/1689/oj`) and
+> [[EU-EHDS]]'s (`eur-lex.europa.eu/eli/reg/2025/327/oj`) records, which
+> earlier passes found returning empty content, resolved cleanly this
+> time and are now read directly and cited. EHDS's own OJ record
+> surfaced a previously-unrecorded detail — the regulation also amends
+> Directive 2011/24/EU and Regulation (EU) 2024/2847 — noted on the
+> entity but not modelled as a relationship this pass.
+>
 > **The `level` vocabulary is no longer a blocker.** `level: subnational` was
 > added 2026-08-21 and the three Belgian sub-federal ODD instruments are
 > modelled under it. OSLO/Digitaal Vlaanderen and the Comunidades Autónomas
@@ -415,7 +425,6 @@ by accident.
 | Nationaal Wegenbestand (NWB) | Part of the [[NL-NDW]] expansion | Batch 5+ | Batch 5 / 2026-08-14 |
 | ODISSEI | Research infrastructure organisation named alongside DANS/RIVM/NWO/SIDN, all now modelled; ODISSEI alone remains unresearched | Batch 5+ | Batch 2; carried |
 | Free Flow of Non-Personal Data Regulation | Third repeal target of [[EU-DIGITAL-OMNIBUS]] | Batch 9 | Batch 8 / 2026-08-14 |
-| EUR-Lex citation for the AI Act | [[EU-AI-ACT]] lacks an Official Journal link | Batch 9 | Batch 8 / 2026-08-14 |
 | Dutch EUDI Wallet implementation | Every member state must provide one; no Dutch arrangement researched | Batch 9+ | Batch 8 / 2026-08-14 |
 | **The 10 remaining common European data spaces** | Batch 10 created Health, Mobility, Green Deal and Agriculture. **Not created:** cultural heritage, energy, finance, industry, language, media, public administrations, research and innovation, skills, tourism — research returned only their names in the list of fourteen | Later | Batch 7; narrowed Batch 10 |
 | UN DESA, UNDP, UNESCO, WHO, UNECE | Named in Batch 13's scope; **no usable source located for any**, so none created | Later | Batch 13 / 2026-08-14 |
@@ -432,7 +441,6 @@ by accident.
 | W3C (the organisation) | Needed for [[INTL-DCAT]]'s `maintained-by` | Batch 13 | Batch 9 / 2026-08-14 |
 | GeoDCAT-AP and StatDCAT-AP | Extensions of [[EU-DCAT-AP]]; GeoDCAT-AP would likely connect [[NL-GEONOVUM]]'s geo and metadata work | Later | Batch 9 / 2026-08-14 |
 | ETSI standards | [[EU-ETSI]] exists but **no ETSI standard is modelled**, despite ICT standardisation being central to this Atlas | Later | Batch 9 / 2026-08-14 |
-| EUR-Lex citation for EHDS Reg. (EU) 2025/327 | [[EU-EHDS]]'s strongest source is the Parliament's Legislative Observatory | Later | Batch 10 / 2026-08-14 |
 | IDSA / IDS architecture | [[NL-ISHARE]]'s documented route into the EU data-space world | Later | Batch 5; carried |
 | Environment / Energy / Agriculture domains | Still below the 2-entity threshold even after Batch 10 | Later | Batch 5; rechecked Batch 10 |
 | EU AI strategy (if distinct from the AI Act) | Named in Batch 7 scope; no clearly identifiable standalone strategy document found | Batch 8 | Batch 7 / 2026-08-14 |
