@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: 2004-01-01
 end_date: null
-last_verified: "2026-09-04"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -54,6 +54,10 @@ sources:
     url: "https://zoek.officielebekendmakingen.nl/kst-28277-3.html"
     publisher: "Overheid.nl — Officiële bekendmakingen"
     accessed: "2026-08-27"
+  - title: "Wet op het Centraal bureau voor de statistiek — BWBR0015926"
+    url: "https://wetten.overheid.nl/BWBR0015926/"
+    publisher: "Overheid.nl (wetten.overheid.nl)"
+    accessed: "2026-09-05"
 ---
 
 # Wet op het Centraal bureau voor de statistiek
@@ -102,8 +106,24 @@ two dates are not necessarily the same.
   [[NL-CCS]] (added 2026-09-04, `status: superseded` — abolished 1
   January 2017), carrying the `governed-by` edge back to this act.
 
+## A refused link, checked and closed — 2026-09-05
+
+`discovery/unresolved.md` asked whether this act aligns with the UN's
+**Fundamental Principles of Official Statistics** ([[UN-FPOS]]). Reading
+the act's own consolidated text on `wetten.overheid.nl` directly (identifier
+BWBR0015926) — both the considerans and the articles — finds **no mention
+of the United Nations, the Fundamental Principles, or any international
+statistical principles by name**. The act references European statistical
+frameworks (EU regulations, Eurostat) extensively but nothing UN-level. No
+`related-to`/`aligned-with` edge to [[UN-FPOS]] is asserted: this is a
+checked-and-negative finding, not an unresearched gap — the same
+distinction the Atlas draws elsewhere between "refused for want of a
+source" and "genuinely not there."
+
 ## Sources
 
 Listed in frontmatter, two of three read directly this pass. The archived
 Staatsblad page (rijksbegroting.nl) is confirmed genuinely unreachable
-(HTTP 503 on both attempts).
+(HTTP 503 on both attempts). A fourth source, the act's own consolidated
+text on `wetten.overheid.nl`, was read directly in a later pass
+(2026-09-05) specifically to check the UN-FPOS question above.

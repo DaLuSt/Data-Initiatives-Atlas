@@ -21,7 +21,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -30,6 +30,7 @@ domains:
 organisations: []
 related_entities:
   - EU-COMMON-DATA-SPACES
+  - EU-ITS-DIRECTIVE
   - NL-NTM
 relationships:
   - type: part-of
@@ -37,6 +38,13 @@ relationships:
     source: fact
     evidence: "Confirmed by reading transport.ec.europa.eu's own page 'Creating a common European mobility data space' directly (2026-08-28): the EMDS 'aims to facilitate access, pooling and sharing of data from existing and future transport and mobility data sources', covering both passenger and freight transport as 'a framework for interlinking and federating many different transport-data ecosystems.' A second Commission library page, 'Common European data spaces for agriculture and mobility', also read directly, confirms mobility's membership of the fourteen data spaces and gives funding figures (a mobility preparatory action of roughly EUR 1 million and a deployment action of roughly EUR 8 million, scheduled Q3 2022)."
     confidence: high
+    valid_from: null
+    valid_until: null
+  - type: references
+    target: EU-ITS-DIRECTIVE
+    source: fact
+    evidence: "Confirmed by reading transport.ec.europa.eu's own 'Creating a common European mobility data space' page directly (2026-09-05), a sentence not extracted in the 2026-08-28 pass: the EMDS 'will take account of data-sharing mechanisms set up or proposed in existing passenger and freight transport ecosystems and legislation (e.g. the ITS Directive establishing the National Access Points).' Recorded as `references` rather than a stronger type — the source says EMDS will take the NAP mechanism into account, not that it builds on or depends on it structurally."
+    confidence: medium
     valid_from: null
     valid_until: null
 
@@ -98,21 +106,23 @@ a mobility preparatory action of roughly EUR 1 million and a deployment
 action of roughly EUR 8 million (Q3 2022). Responsible organisations,
 detailed standards and participating countries remain unresearched.
 
-## Relationship to the national access points, not asserted
+## Relationship to the national access points — narrowed, 2026-09-05
 
 [[NL-NTM]] is the Dutch national access point for mobility data, existing
 under [[EU-ITS-DIRECTIVE]]. National access points are the obvious
 building blocks of an EU mobility data space, and the connection is close to
 self-evident.
 
-**It is not asserted.** No source read states that the EMDS builds on the
-NAP network, and "obvious" has repeatedly turned out to be the wrong
-standard in this project. The association is recorded via
-`related_entities`; the relationship awaits a source.
-
-Note the contrast with [[NL-NTM]] itself, where Batch 5 left the same kind
-of gap open and Batch 8 closed it with a real citation. That is the pattern
-to repeat here.
+**The EU-level half is now sourced, the national half is not.**
+Re-reading transport.ec.europa.eu's own page directly surfaces a sentence
+the 2026-08-28 pass had not extracted: the EMDS "will take account of
+data-sharing mechanisms set up or proposed in existing ... legislation
+(e.g. the ITS Directive establishing the National Access Points)." A
+`references` edge to [[EU-ITS-DIRECTIVE]] is asserted on that basis — a
+"will take account of" framing, deliberately not the stronger "builds on"
+the earlier text over-assumed. No source read names [[NL-NTM]] or any
+other specific national NAP; the country-level connection stays an Atlas
+association via `related_entities` rather than a typed edge.
 
 ## Sources
 

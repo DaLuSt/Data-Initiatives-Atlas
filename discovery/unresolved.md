@@ -58,9 +58,8 @@ is what to request.
 |---|---|---|---|---|
 | [[NL-HEALTH-RI]] | Should Health-RI be split into an organisation and an infrastructure? | The name denotes both, and sources use it for both. Modelled as one `data-space` because the infrastructure has no proper name of its own. | Batch 5 / 2026-08-14 | Open (modelling) |
 | [[NL-NDW]] | Is NDW a platform or an organisation? | Typed `platform` for its primary function, but it is a partnership of 19 governments with its own entry in the government organisation register. | Batch 5 / 2026-08-14 | Open (modelling) |
-| [[NL-DSGO]] | Was DSGO v1.0 launched on 18 June **2024**? | Sources give "launched on 18 June" and separately "programme ran 2021–June 2024". `start_date: 2024-06-18` assumes these are the same moment — **an Atlas inference, not a sourced date**. | Batch 5 / 2026-08-14 | Open |
-| [[NL-PDOK]] | Precise establishment date in 2013 | `start_date: 2013-01-01` is a placeholder for "in 2013". Same pattern as [[NL-RORA]] and [[NL-ISHARE]]. | Batch 5 / 2026-08-14 | Open |
-| Placeholder `start_date` convention | Should "year known, date unknown" be recorded as `YYYY-01-01` or left null? | Now used on four entities ([[NL-RORA]], [[NL-PDOK]], [[NL-ISHARE]], and partially [[NL-DSGO]]). A January-1st placeholder is indistinguishable from a real 1 January date, which is a genuine data-quality problem. Consider a convention or a `date_precision` field. | Batch 5 / 2026-08-14 | **Open (schema question)** |
+| [[NL-PDOK]] | Precise establishment date in 2013 | `start_date: 2013-01-01` is a placeholder for "in 2013". Same pattern as [[NL-ISHARE]]; [[NL-RORA]] resolved its own instance of this problem on 2026-08-27 by moving to `start_date: null` per the convention question below. | Batch 5 / 2026-08-14 | Open |
+| Placeholder `start_date` convention | Should "year known, date unknown" be recorded as `YYYY-01-01` or left null? | Used on three entities ([[NL-PDOK]], [[NL-ISHARE]], and partially [[NL-DSGO]]). A January-1st placeholder is indistinguishable from a real 1 January date, which is a genuine data-quality problem. **[[NL-RORA]] answered this in practice (2026-08-27): `null` rather than a padded date, with the reasoning documented on the entity** — but no schema-wide convention or `date_precision` field has been added, so the other entities still carry the ambiguous placeholder. | Batch 5 / 2026-08-14 | **Open (schema question)** |
 
 ## Batch 7 — EU core initiatives
 
@@ -85,7 +84,7 @@ is what to request.
 | Entity | Question | Why it matters | Noted by / date | Status |
 |---|---|---|---|---|
 | [[EU-EHDS]] → [[NL-HEALTH-RI]] | Will Health-RI be the Dutch health data access body? | The EHDS requires member states to designate HDABs during 2027–2029. Health-RI is the obvious candidate but nothing sources it, and the designation phase had not begun. Confirming it completes an EU-regulation → national-infrastructure chain. | Batch 10 / 2026-08-14 | **Open — high value** |
-| [[EU-EMDS]] → [[NL-NTM]] | Does the mobility data space build on the national access point network? | Close to self-evident, and therefore exactly the kind of link this project has repeatedly been wrong to assume. Association only. | Batch 10 / 2026-08-14 | Open |
+| [[EU-EMDS]] → [[NL-NTM]] | Does the mobility data space build on the national access point network? | **Narrowed 2026-09-05**: the EU-level half is now sourced — transport.ec.europa.eu's own page states the EMDS "will take account of" the ITS Directive's National Access Points mechanism, recorded as `references` → [[EU-ITS-DIRECTIVE]]. No source names [[NL-NTM]] or any specific national NAP, so the country-level link stays an association only. | Batch 10 / 2026-08-14 | Open |
 | [[EU-DSSC-BLUEPRINT]] ↔ Dutch afsprakenstelsels | Do [[NL-FDS]], [[NL-DSGO]], [[NL-ISHARE]] and [[NL-HEALTH-RI]] map onto the Blueprint's rulebook model? | The resemblance is striking and entirely unsourced. Confirming it would connect the Dutch and EU data-space layers structurally rather than thematically. | Batch 10 / 2026-08-14 | **Open — structural** |
 | [[EU-EHDS]] | Should the regulation be split from the data space? | Modelled as one entity, matching [[NL-BIO]] and [[NL-HEALTH-RI]]. Reg. (EU) 2025/327 is substantial legislation and may warrant its own entity. No EUR-Lex citation was located either. | Batch 10 / 2026-08-14 | Open (modelling) |
 | [[EU-SEMIC]], [[EU-DSSC]] | Are these organisations, programmes, or something else? | SEMIC is described as an "action"; DSSC's legal form is unclear. `organisation` is the best available fit for both, with reservations. | Batches 9–10 | Open (modelling) |
@@ -96,7 +95,6 @@ is what to request.
 
 | Entity / topic | Question | Why it matters | Noted by / date | Status |
 |---|---|---|---|---|
-| [[UN-FPOS]] → [[NL-WET-CBS]] | Does Dutch statistical legislation align with the Fundamental Principles? | Countries are tracked on exactly this. Would give a UN → national chain. | Batch 12; confirmed Batch 15 | Open |
 | 40 entities with no provenanced relationship | Are these legitimately terminal or under-linked? | Many are terminal by nature (legislation nothing implements). Worth reviewing when sources are available. Was 35 before the Germany batch; 10 of the 37 German entities are in this category. | Batch 15; recounted 2026-08-15 | Open |
 
 ## Batches 12–14 — UN and international
@@ -106,7 +104,6 @@ is what to request.
 | [[INTL-IETF]] | Everything beyond its category | Single indirect source (an academic toolkit listing eight SDOs); no ietf.org citation, no IETF standard modelled. Yet IETF RFCs underpin the HTTPS/DNSSEC/mail standards on [[NL-PAS-TOE-OF-LEG-UIT]]. | Batch 13 / 2026-08-14 | **Narrowed 2026-08-28** — the sourcing half is closed: three ietf.org/datatracker.ietf.org pages, read directly, confirm the IETF-ISOC relationship in the primary documents' own words. Still open: no IETF RFC is modelled as a standard, so the real connection to [[NL-PAS-TOE-OF-LEG-UIT]]'s HTTPS/DNSSEC/mail requirements stays queued rather than asserted. |
 | [[INTL-ISO-IEC-27002]] | Cited URL points at **edition 2 (2013)**, a superseded edition | The current edition is 27002:2022, which is what BIO2 references. The ISO OBP link located resolves to the older edition and older title. | Batch 14 / 2026-08-14 | **Narrowed 2026-09-05** — the correct edition-3 standard number (`iso.org/standard/75652.html`, March 2022) is now known and added to `sources`, corroborated by reading en.wikipedia.org's own article directly. iso.org itself is confirmed domain-wide blocked to this environment's fetch tooling, so nobody has read the edition-3 page's own content; the original edition-2 citation stays rather than being replaced. |
 | [[NL-BIO]] → ISO editions | Is NEN-EN-ISO/IEC 27001:**2023** the same standard as ISO/IEC 27001:**2022**? | BIO2 cites the NEN-EN adoption years; the ISO editions differ by one year. Almost certainly the Dutch/European adoption of the same standard, but the equivalence is **inferred, not sourced**. | Batch 14 / 2026-08-14 | Open |
-| [[UN-FPOS]] → [[NL-WET-CBS]] | Does Dutch statistical legislation align with the FPOS? | Countries are tracked on exactly this. Establishing it would give an international → national chain in statistics, parallel to DCAT in metadata. | Batch 12 / 2026-08-14 | Open |
 | ISO/IEC JTC 1 | Should the joint technical committee be an entity? | It is arguably what actually produces the 27000-family standards, sitting between the two organisations and the standards. Not modelled. | Batch 14 / 2026-08-14 | Open (modelling) |
 | [[UN-2-0]] | The quintet PDF sits under a `2021/09` path while the policy brief is dated Sept 2023 | Suggests the quintet framing predates the brief, or the file was re-filed. `start_date: 2023-09-01` is a placeholder. | Batch 12 / 2026-08-14 | Open |
 | World Bank | Not modelled | Named in Batch 13's scope. Its institutions are technically UN specialised agencies, making the UN/non-UN call genuinely tricky — **omitted rather than risk misclassifying it**, which is the specific error the brief warns about. | Batch 13 / 2026-08-14 | Open (deliberate) |
@@ -394,7 +391,7 @@ re-reading every instrument.
 | [[EU-INSPIRE]] → the UN-GGIM structure | A EuroGeographics presentation *about* UN-GGIM given to an INSPIRE audience is evidence the communities talk, not that the instruments relate. The geospatial cluster has its UN parent and no European edge. **Retired from `discovery/candidates.md` §1 as a candidate, 2026-09-05, after a fourth independent attempt across four separate passes still found no source stating the relationship directly** — an MDPI article's specific-sounding claim (a UN-GGIM: Europe working group selecting themes "from the list of the INSPIRE annexes") 403'd on every attempt; the current un-ggim-europe.org homepage, its "Implementing UN-GGIM's frameworks in Europe" working-group page, and its 2026-2030 work plan PDF (unreadable binary) were all checked directly and none mentions INSPIRE; three specific Working Group A recommendation PDFs found by search all 404. Left here as the permanent record of a plausible-looking edge that four attempts could not source, rather than kept as an active candidates.md lead. |
 | Any EU/national reference to a **UN/CEFACT** standard | Searched; nothing found. [[UN-CEFACT]] is attached to [[UN-UNECE]] and connects to the European layer not at all |
 | **EuroGeographics** | Probably the missing European node, playing [[EU-ESS]]'s role for geospatial. Every source found is its own site or trade press — creating it on that basis would repeat the error this batch existed to correct |
-| [[UN-FPOS]] → national statistical legislation | Untouched. The batch connected the *organisational* statistics layer; the **legislative** one ([[NL-WET-CBS]], [[DE-BSTATG]]) still has no UN link |
+| [[UN-FPOS]] → national statistical legislation | **Narrowed 2026-09-05**: [[NL-WET-CBS]]'s own consolidated text was read directly and names no UN or Fundamental Principles link — a checked-and-negative finding, closed on the entity. [[DE-BSTATG]] remains genuinely untouched. |
 | [[EU-AI-ACT]] → [[UN-AI-ETHICS-RECOMMENDATION]] | The dates line up — UNESCO 2021, [[ES-AESIA]] 2023, AI Act 2024 — and **nothing read says they relate**. Chronology is not causation, and this was the batch's most attractive available error |
 | [[EU-SDG-INDICATORS]] `applies-in` | Not asserted. An indicator set is not an instrument that applies in a member state, and no national SDG indicator set is modelled for any of the five countries |
 
@@ -535,8 +532,8 @@ batches recorded that none existed.
 | Entity | Question | Noted by / date | Status |
 |---|---|---|---|
 | [[NL-PAS-TOE-OF-LEG-UIT]] | Is the procurement threshold €50,000, and is that figure current? | Batch 1 / 2026-08-14 | Open |
-| [[NL-FORUM-STANDAARDISATIE]] | Exact 2006 establishment date and instrument reference; current status of the College Standaardisatie (established alongside the Forum) | Batch 1 / 2026-08-14 | Open |
-| [[NL-OBDO]] | Precise boundary between the OBDO's advisory role and its decision-making role. Two Staatscourant items (stcrt-2018-9728, stcrt-2022-18861) are likely instellingsbesluiten. | Batch 1 / 2026-08-14 | Open |
+| [[NL-FORUM-STANDAARDISATIE]] | Exact 2006 establishment date and instrument reference | **Narrowed 2026-09-05**: the College Standaardisatie half is now answered — [[NL-OBDO]]'s own sourcing (roraonline.nl, read directly) traces its tasks transferred to the Nationaal Beraad Digitale Overheid (end of 2014) and on to the OBDO (8 March 2018), so the College no longer performs the function. The Forum's own exact 2006 establishment date and instrument reference is still unsourced. | Batch 1 / 2026-08-14 | Open |
+| [[NL-OBDO]] | Precise boundary between the OBDO's advisory role and its decision-making role | **Narrowed 2026-09-05**: both Staatscourant items are now confirmed rather than "likely" — Stcrt. 2018, 9728 read directly is the *Instellingsbesluit Sturing Digitale Overheid* (19 January 2018), and Stcrt. 2022, 18861 is confirmed as a 12 July 2022 *amending* decree, not a separate instellingsbesluit. The advisory/decision-making boundary itself is still not stated in the decree text as read. | Batch 1 / 2026-08-14 | Open |
 | [[NL-GDI]] | Does "GDI" expand to *Generieke* or *Gezamenlijke* Digitale Infrastructuur? Search results used both. May be a real terminology change or inconsistent secondary sources. | Batch 1 / 2026-08-14 | Open |
 
 ## Entity typing questions
@@ -1089,8 +1086,9 @@ guessed.
   names the European Statistical System explicitly, closing that half of
   the gap), but no page read names Eurostat by name on a Destatis page, so
   the direct Destatis↔Eurostat edge — sitting alongside the still-open
-  [[UN-UNSD]] ↔ [[EU-EUROSTAT]] and [[UN-FPOS]] ↔ [[NL-WET-CBS]] gaps —
-  stays unasserted.
+  [[UN-UNSD]] ↔ [[EU-EUROSTAT]] gap — stays unasserted. (The
+  [[UN-FPOS]] ↔ [[NL-WET-CBS]] gap referenced here in earlier passes is
+  now closed, negative — 2026-09-05.)
 - [[DE-DIGITALSTRATEGIE]] stays `status: unknown`: its 2025 horizon has
   passed, a "2. Fortschrittsbericht" (October 2024) surfaced in search
   suggests it was still being actively tracked at that point, but no source
