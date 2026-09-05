@@ -150,6 +150,19 @@
 > community that produced BOMOS version 1; [[NL-BOMOS]]'s own file was
 > updated with that finding.
 >
+> **2026-09-05 pickup (eighteenth):** closed the Netherlands' CER
+> transposition and its coordinating authority in one pass.
+> [[NL-WWKE]] (Wet weerbaarheid kritieke entiteiten) mirrors [[NL-CBW]]'s
+> own pattern exactly — same 15 April 2026 Tweede Kamer approval, same
+> 15 August 2026 entry into force, `implements-requirement-from`
+> [[EU-CER]] — confirmed by reading `nctv.nl`'s and `rijksoverheid.nl`'s
+> own pages directly. [[NL-NCTV]] closes the other half of the "NCSC /
+> NCTV" row: [[NL-NCSC]] was already modelled, and NCTV — the Ministry of
+> Justice and Security's counter-terrorism/cybersecurity/national-security
+> coordinator — is now an entity in its own right, with a `part-of`
+> [[NL]] anchor edge since no Ministry-of-Justice-and-Security entity
+> exists yet to carry a more specific one.
+>
 > **The `level` vocabulary is no longer a blocker.** `level: subnational` was
 > added 2026-08-21 and the three Belgian sub-federal ODD instruments are
 > modelled under it. OSLO/Digitaal Vlaanderen and the Comunidades Autónomas
@@ -378,8 +391,6 @@ by accident.
 | Remaining 'pas toe of leg uit' standards | Only Digikoppeling and ADR are modelled. The full mandatory + recommended lists (DNSSEC, DMARC, TLS, WCAG, SAML, OAuth profiles, …) are not enumerated | Batch 5+ | Batch 4 / 2026-08-14 |
 | Wet bescherming persoonsgegevens (Wbp) | Predecessor regime replaced by GDPR/UAVG on 25 May 2018; needed for temporal completeness | Batch 4 or later | Batch 3 / 2026-08-14 |
 | Aanpassingswet AVG (dossier 34.939) | Adjusted other Dutch legislation to the GDPR | Batch 4 or later | Batch 3 / 2026-08-14 |
-| Wet weerbaarheid kritieke entiteiten (CER implementation) | Passed alongside the Cyberbeveiligingswet; adjacent to but distinct from NIS2 | Batch 4 or later | Batch 3 / 2026-08-14 |
-| NCSC / NCTV | Cybersecurity authorities named in Cyberbeveiligingswet sources | Batch 4 or later | Batch 3 / 2026-08-14 |
 | eIDAS → [[NL-WDO]] link | Both eIDAS entities now exist; eIDAS 2.0 ruled out on dates, but the transposition from 910/2014 remains **unsourced** and unasserted | Batch 9+ | Batch 3; updated Batch 8 |
 | Wet elektronische publicaties; Wet politiegegevens; Telecommunicatiewet | Further Dutch legislation with data relevance, not assessed in Batch 3 | Batch 4 or later | Batch 3 / 2026-08-14 |
 | ISO / IEC / CEN → [[NL-NEN]] links | NEN's most significant relationships; need the international standards bodies | Batch 9 / 13 | Batch 2 / 2026-08-14 |
@@ -394,7 +405,6 @@ by accident.
 | ODISSEI | Research infrastructure organisation named alongside DANS/RIVM/NWO/SIDN, all now modelled; ODISSEI alone remains unresearched | Batch 5+ | Batch 2; carried |
 | Interoperable Europe Board | Adopts new EIF versions; needed to resolve the EIF/Act relationship | Batch 9 | Batch 7; carried |
 | Free Flow of Non-Personal Data Regulation | Third repeal target of [[EU-DIGITAL-OMNIBUS]] | Batch 9 | Batch 8 / 2026-08-14 |
-| Wet weerbaarheid kritieke entiteiten | Dutch CER transposition, approved 15 Apr 2026; should mirror [[NL-CBW]] → [[EU-NIS2]] | Batch 9+ | Batch 3; raised again Batch 8 |
 | EUR-Lex citation for the AI Act | [[EU-AI-ACT]] lacks an Official Journal link | Batch 9 | Batch 8 / 2026-08-14 |
 | Dutch EUDI Wallet implementation | Every member state must provide one; no Dutch arrangement researched | Batch 9+ | Batch 8 / 2026-08-14 |
 | **The 10 remaining common European data spaces** | Batch 10 created Health, Mobility, Green Deal and Agriculture. **Not created:** cultural heritage, energy, finance, industry, language, media, public administrations, research and innovation, skills, tourism — research returned only their names in the list of fourteen | Later | Batch 7; narrowed Batch 10 |
