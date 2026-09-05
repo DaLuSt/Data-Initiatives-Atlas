@@ -25,7 +25,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -33,6 +33,7 @@ domains: []
 organisations: []
 related_entities:
   - EU-COMMON-DATA-SPACES
+  - EU-EUROPEANA-FOUNDATION
 relationships:
   - type: part-of
     target: EU-COMMON-DATA-SPACES
@@ -65,6 +66,10 @@ sources:
   - title: "Common European data space for cultural heritage — FAQs"
     url: "https://pro.europeana.eu/page/the-common-european-data-space-for-cultural-heritage-faqs"
     publisher: "Europeana PRO"
+  - title: "Europeana"
+    url: "https://en.wikipedia.org/wiki/Europeana"
+    publisher: "Wikipedia"
+    accessed: "2026-09-05"
 ---
 
 # Common European data space for cultural heritage
@@ -77,6 +82,9 @@ sources:
 > count, contract date), which is why `verification` moves to
 > `primary-source` despite the blocked pair. A stale SWD citation (pointing
 > to the wrong staff working document) was also found and corrected.
+>
+> **Updated 2026-09-05**: the Europeana Foundation, this entity's own
+> flagged gap, is now modelled as [[EU-EUROPEANA-FOUNDATION]].
 
 ## Description
 
@@ -128,18 +136,28 @@ with media and tourism**. Both are Atlas entities as of this batch
 cooperation" is a statement of intent, not of an existing connection, and the
 Atlas does not turn intentions into edges.
 
+## The operator, modelled 2026-09-05
+
+The batch's most conspicuous gap — the Europeana Foundation, previously
+named in this entity's own sourcing but not modelled — is closed:
+[[EU-EUROPEANA-FOUNDATION]] now carries the `produces` edge back to this
+data space.
+
 ## Not modelled
 
-- **Europeana**, the Europeana Foundation, the Network Association and the
-  Aggregators' Forum — the operator, and the batch's most conspicuous gap.
+- The **Europeana Network Association** and the **Europeana Aggregators'
+  Forum**, named alongside the Foundation in the deployment sourcing but
+  not independently researched.
 - The **Europeana Data Model (EDM)**, which would connect to the Atlas's
   metadata-standards layer around [[INTL-DCAT]].
 
 ## Sources
 
-Listed in frontmatter. Four of six read directly this pass: both Commission
-news pages and the NEMO article confirm the substance above; the corrected
-SWD library page was confirmed to exist under its correct title and date.
-`dataspace-culturalheritage.eu` and `pro.europeana.eu` both returned HTTP
-403 to this pass's fetch tooling and were not read — noted explicitly
-rather than dropped.
+Listed in frontmatter. Four of six read directly in the 2026-08-28 pass:
+both Commission news pages and the NEMO article confirm the substance
+above; the corrected SWD library page was confirmed to exist under its
+correct title and date. `dataspace-culturalheritage.eu` and
+`pro.europeana.eu` both returned HTTP 403 to that pass's fetch tooling
+and were not read — noted explicitly rather than dropped. Wikipedia's
+"Europeana" article added and read directly 2026-09-05 to model the
+Europeana Foundation.
