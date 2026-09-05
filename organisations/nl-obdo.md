@@ -21,7 +21,7 @@ coverage: medium
 verification: primary-source
 start_date: 2018-01-19
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -58,6 +58,10 @@ sources:
     url: "https://zoek.officielebekendmakingen.nl/stcrt-2018-9728.html"
     publisher: "Ministerie van Binnenlandse Zaken en Koninkrijksrelaties"
     accessed: "2026-08-22"
+  - title: "Rijksregister standaarden"
+    url: "https://www.roraonline.nl/index.php/Rijksregister_standaarden"
+    publisher: "RORA Online"
+    accessed: "2026-09-05"
 ---
 
 # Overheidsbreed Beleidsoverleg Digitale Overheid (OBDO)
@@ -90,6 +94,22 @@ confirmed as the *Instellingsbesluit Sturing Digitale Overheid*, signed by
 the State Secretary for BZK on **19 January 2018** (kenmerk 2018-43396),
 which established both the OBDO and the *Programmeringsraad Logius* in a
 single decree. `start_date` is now set to this date.
+
+**The College Standaardisatie succession, closed 2026-09-05.** Reading
+roraonline.nl's own "Rijksregister standaarden" page directly confirms a
+specific chain for the standards-oversight function this entity now
+performs: the **College Standaardisatie**, established by a 2006 cabinet
+instellingsbesluit alongside [[NL-FORUM-STANDAARDISATIE]] itself, had its
+interoperability/open-standards tasks transferred to the **Nationaal
+Beraad Digitale Overheid** at the end of 2014, which in turn transferred
+them to the OBDO on **8 March 2018** ("Het Overheidsbrede Overleg Digitale
+Overheid (OBDO) ging op 8 maart 2018 ... van start en nam daarbij de taken
+over van het Nationaal Beraad"). This is a separate, standards-specific
+succession thread from the Digicommissaris one described above — the OBDO
+absorbed both. Neither the College Standaardisatie nor the Nationaal
+Beraad Digitale Overheid is itself an Atlas entity; both predate this
+entity's own scope and are recorded here in prose rather than as separate
+nodes for two bodies with no other role in this Atlas.
 
 The decree's own recitals give useful context that was previously missing:
 it explicitly succeeds the governance of the *Nationaal Commissaris Digitale
