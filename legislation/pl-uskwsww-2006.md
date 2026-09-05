@@ -17,12 +17,12 @@ region: EU
 
 status: active
 confidence: medium
-coverage: low
+coverage: medium
 verification: primary-source
 
 start_date: 2006-06-09
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -55,6 +55,14 @@ sources:
   - title: "Cywilna kontrola nad służbami specjalnymi w Polsce"
     url: "https://journals.akademicka.pl/politeja/article/download/4030/3742/4997"
     publisher: "Politeja (Wydawnictwo Księgarnia Akademicka)"
+  - title: "Ustawa z dnia 9 czerwca 2006 r. o Służbie Kontrwywiadu Wojskowego oraz Służbie Wywiadu Wojskowego — ELI text (DU/2006/709)"
+    url: "https://eli.gov.pl/api/acts/DU/2006/709/text.html"
+    publisher: "Kancelaria Sejmu (ELI — European Legislation Identifier API)"
+    accessed: "2026-09-05"
+  - title: "Ustawa z dnia 9 czerwca 2006 r. — ISAP DocDetails (WDU20061040709, Dz.U. 2006 Nr 104 poz. 709)"
+    url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20061040709"
+    publisher: "Kancelaria Sejmu (ISAP)"
+    note: "Confirmed genuinely CAPTCHA-blocked this pass, as on prior passes; the Dz.U. 2006 Nr 104 poz. 709 citation and WDU document ID come from this page's own URL/ID structure and a WebSearch summary of it, not a direct read of its content."
 ---
 
 # Ustawa z dnia 9 czerwca 2006 r. o SKW oraz SWW
@@ -63,6 +71,10 @@ sources:
 > directly. Both name SKW and SWW as College for Special Services members
 > constituted by this Act, but neither carries the Act's own text — the
 > weak sourcing this entity already flagged stands.
+>
+> **Updated 2026-09-05**: `eli.gov.pl`'s own legislative-identifier API
+> was found and read directly, closing the "no official government URL"
+> gap; `isap.sejm.gov.pl` remains confirmed CAPTCHA-blocked.
 
 ## Description
 
@@ -70,26 +82,29 @@ The act constituting [[PL-SKW]] and [[PL-SWW]], Poland's two **military**
 special services — the military mirror of [[PL-UABWAW-2002]], four years
 later and on the same internal/external axis.
 
-## ⚠ `coverage: low`, and the contrast is instructive
+## The official citation, found 2026-09-05
 
 [[PL-UABWAW-2002]] is the best-sourced statute in this batch: ISAP, the
-ABW's own BIP, the AW's own legal-framework page.
+ABW's own BIP, the AW's own legal-framework page. This act, from the same
+legislature four years later, previously had **none of that** — no
+official Polish government URL had been found by search.
 
-This act, from the same legislature four years later, has **none of that**.
-No ISAP URL was returned by search; neither [[PL-SKW]] nor [[PL-SWW]]
-publishes a page found here. The act is named and dated by third parties —
-the ABW's page on the College for Special Services, an encyclopaedia entry,
-and an academic paper on civil control of the Polish special services.
-
-That asymmetry between Poland's civilian and military services is itself
-worth recording, and it is the reason both military service entities carry
-`coverage: low` while the civilian ones carry `medium`.
+A fresh search located one. `eli.gov.pl`'s own European Legislation
+Identifier API, read directly, opens with the exact title this entity
+already carried: "Ustawa z dnia 9 czerwca 2006 r. o Służbie Kontrwywiadu
+Wojskowego oraz Służbie Wywiadu Wojskowego" — the same act, confirmed
+from a government-run legislative-identifier service rather than a third
+party. `isap.sejm.gov.pl`'s own page for the same act (document ID
+WDU20061040709, Dz.U. 2006 Nr 104 poz. 709) is confirmed genuinely
+CAPTCHA-blocked, as it was for [[PL-UABWAW-2002]] on earlier attempts —
+the Dz.U. citation is taken from that page's own URL/ID structure rather
+than a direct read of its content, which the eli.gov.pl direct read does
+not itself state.
 
 ## Not modelled
 
-- The act's **Dz.U. reference**, consolidation and amendment history — none
-  was established.
-- Any **article-level** content.
+- The act's **article-level** content and amendment history — the ELI
+  page returned only its opening title and table of contents this pass.
 
 ## Relationships
 
@@ -97,8 +112,5 @@ worth recording, and it is the reason both military service entities carry
 
 ## Sources
 
-Listed in frontmatter, two of three read directly this pass. **No
-official Polish government URL is cited**, which makes this the weakest
-law entity in the batch after [[DE-BVERFSCHG]] and [[DE-MADG]]. ISAP
-remains genuinely CAPTCHA-blocked; it should be retried when that
-changes.
+Listed in frontmatter, three of five read directly across two passes.
+`isap.sejm.gov.pl`'s own page remains genuinely CAPTCHA-blocked.
