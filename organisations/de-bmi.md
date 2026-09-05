@@ -24,7 +24,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -72,6 +72,10 @@ sources:
   - title: "Bund hat seine 115 wichtigsten Verwaltungsleistungen bis Ende 2024 erfolgreich digitalisiert"
     url: "https://www.bmi.bund.de/SharedDocs/pressemitteilungen/DE/2024/12/ozg.html"
     publisher: "Bundesministerium des Innern und für Heimat (BMI)"
+  - title: "Bundesministerium des Innern"
+    url: "https://de.wikipedia.org/wiki/Bundesministerium_des_Innern"
+    publisher: "Wikipedia"
+    accessed: "2026-09-05"
 ---
 
 # Bundesministerium des Innern (BMI)
@@ -79,6 +83,9 @@ sources:
 > **Verified 2026-08-21.** Every source this entity cites is on a domain the
 > repository owner confirmed read and correct — `bund.de`. `verification:
 > primary-source`. See `docs/re-verification.md` §"The confirmed domains".
+>
+> **Updated 2026-09-05**: the ministry's current formal name, previously
+> flagged as unclear, is now confirmed directly — see below.
 
 ## Description
 
@@ -101,20 +108,29 @@ Within that scope the sources establish that the BMI:
 [[DE-DESTATIS]] sits in its Geschäftsbereich. Those `part-of` links are
 recorded on the agencies themselves.
 
-## ⚠ The name and the reorganisation
+## The name and the reorganisation — name resolved 2026-09-05
 
 The ministry has been styled both *Bundesministerium des Innern* and
 *Bundesministerium des Innern und für Heimat*; the cited press releases use
-the latter, which reflected the 2018–2025 designation. **No source read
-states the ministry's current formal name**, and since [[DE-BMDS]] took
-over digital competences from six departments including this one in May
-2025, the BMI's role in several of the relationships above is historical
-rather than current.
+the latter, which reflected the 2021–2025 designation.
 
-The relationships are recorded as facts about who did what at the time,
-with `valid_from` left null because no source dates the transfer. They
-should not be read as a claim about which ministry owns these files today.
-Logged in `discovery/unresolved.md`.
+**The current formal name is now confirmed directly.** Reading German
+Wikipedia's own article on the ministry (de.wikipedia.org, 2026-09-05):
+*"Bundeskanzler Friedrich Merz ordnete am 6. Mai 2025 in einem
+Organisationserlass die Umbenennung in Bundesministerium des Innern an"* —
+Chancellor Merz ordered the renaming back to **Bundesministerium des
+Innern** by organisational decree on **6 May 2025**, reversing the
+*"...und für Heimat"* designation that had been in effect since 8 December
+2021. This is the same 6 May 2025 reorganisation date on which
+[[DE-BMDS]] and [[DE-BMV]] were split out — the name change and the
+competence transfer are the same event, not two separate ones.
+
+Since [[DE-BMDS]] took over digital competences from six departments
+including this one in that reorganisation, the BMI's role in several of
+the relationships above is historical rather than current. The
+relationships are recorded as facts about who did what at the time, with
+`valid_from` left null because no source dates the transfer more
+precisely than the 6 May 2025 reorganisation itself.
 
 ## Relationships
 
