@@ -26,7 +26,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -35,6 +35,7 @@ domains:
 organisations: []
 related_entities:
   - EU-COMMON-DATA-SPACES
+  - EU-EOSC-ASSOCIATION
 relationships:
   - type: part-of
     target: EU-COMMON-DATA-SPACES
@@ -76,6 +77,9 @@ sources:
 > thirteen candidate nodes including CERN and EMBL — was confirmed word
 > for word against the Commission's own pages. `verification` moves to
 > `primary-source` and `confidence` rises to `high`.
+>
+> **Updated 2026-09-05**: the EOSC Association, this entity's own flagged
+> gap, is now modelled as [[EU-EOSC-ASSOCIATION]].
 
 ## Description
 
@@ -107,10 +111,15 @@ The federated model is also the closest thing in the Atlas to what
 who are not member states. Whether EOSC does admit them was **not
 researched**.
 
+## The EOSC Association, modelled 2026-09-05
+
+Previously flagged as unmodelled here: the distinct legal body governing
+the EOSC initiative, separate from the Federation and from the
+Commission's EU Node, is now [[EU-EOSC-ASSOCIATION]] — formed 29 July
+2020 as a Belgian AISBL, `produces` this data space.
+
 ## Not modelled
 
-- The **EOSC Association**, which is a distinct legal body from the
-  Federation and from the Commission's EU Node.
 - The **thirteen candidate nodes**, **CERN**, **EMBL**, the **ESFRI**
   landmarks and the **ERICs**.
 - The **FAIR principles** themselves, which would sit in the standards layer
@@ -118,4 +127,7 @@ researched**.
 
 ## Sources
 
-Listed in frontmatter, all five read directly this pass.
+Listed in frontmatter, all five read directly in the 2026-08-28 pass.
+`eosc.eu/eosc-about` was re-read 2026-09-05 to research the Association
+question, which led to modelling [[EU-EOSC-ASSOCIATION]] from a
+dedicated page on the same site.
