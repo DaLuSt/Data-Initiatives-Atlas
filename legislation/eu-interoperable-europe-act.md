@@ -256,36 +256,42 @@ Board, interoperability assessments, the Interoperable Europe Portal and
 solution-sharing arrangements) were not researched. Only its identity and
 purpose are recorded.
 
-## Relationship to the EIF, deliberately unasserted
+## Relationship to the EIF — resolved 2026-09-05
 
 This regulation and [[EU-EIF]] plainly occupy the same territory —
-cross-border interoperability of public services. **No direct relationship
-between the Act and the Framework is asserted here**, because no source
-read states how the Act relates to the Framework itself: whether it gives
-the EIF legal standing, supersedes it, or sits alongside it as governance
-for it.
+cross-border interoperability of public services, and for a long time no
+direct relationship was asserted here because no source read stated how
+the Act relates to the Framework itself.
 
-**Partially resolved via the Board, added 2026-09-05.**
-[[EU-INTEROPERABLE-EUROPE-BOARD]] — the governance body this Act
-establishes — is now a separate Atlas entity, `governed-by` this
-regulation. Its own page, read directly, confirms one piece of the
-puzzle: shaping the next revision of the EIF is one of the Board's tasks,
-recorded as the Board `influences` [[EU-EIF]]. That is real information,
-but it answers "does the Board work on the EIF" rather than "does this Act
-give the EIF legal force" — the narrower legal question this section
-raised remains open.
+**Now answered directly.** Reading Regulation (EU) 2024/903's own Official
+Journal text (eur-lex.europa.eu/eli/reg/2024/903/oj): **Article 6(1)**
+states *"The Board shall develop a European Interoperability Framework
+(EIF). It shall submit the EIF to the Commission for adoption."*
+**Article 6(2)** gives the EIF's content (a model and recommendations for
+legal, organisational, semantic and technical interoperability) and says
+it *"shall be taken into account in the interoperability assessment."*
+**Article 6(4)** requires that a member state developing a national
+interoperability framework *"shall take the EIF into utmost account."*
 
-That narrower question is a real and answerable one rather than an
-inherent ambiguity, and it remains queued in `discovery/research-queue.md`.
-Getting it right matters: it determines whether the EU interoperability
-layer has one root or two.
+The Act does not supersede the EIF or leave it standing beside it
+unconnected — it establishes the legal mechanism through which the EIF is
+now developed (by the Board it creates) and adopted (by the Commission).
+[[EU-EIF]] now carries `governed-by` this Act, the same relationship type
+[[EU-INTEROPERABLE-EUROPE-BOARD]] itself carries. The EU interoperability
+layer has one legal root, not two.
+
+**The Board, added 2026-09-05,** was the piece that made this answer
+findable: its own governance page, read directly, first confirmed shaping
+the EIF's next revision is one of its tasks — enough to look further at
+the Article establishing that task, which turned out to state the fuller
+legal relationship above.
 
 ## Relationships
 
 - Applies in [[NL]], [[DE]], [[BE]], [[FR]], [[ES]] and [[PL]] — one entity, six
   countries. Every other member state belongs here too; the
   `applies-in` relationships are added as countries join the Atlas.
-- Associated with [[EU-EIF]] — see above.
+- [[EU-EIF]] is `governed-by` this Act (Article 6) — see above.
 - `governed-by` edge (this Act as target) recorded on
   [[EU-INTEROPERABLE-EUROPE-BOARD]]'s own file — the Board it establishes.
 

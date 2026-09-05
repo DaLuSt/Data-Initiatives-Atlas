@@ -38,6 +38,13 @@ related_entities:
   - EU-INTEROPERABLE-EUROPE-ACT
   - EU-INTEROPERABLE-EUROPE-BOARD
 relationships:
+  - type: governed-by
+    target: EU-INTEROPERABLE-EUROPE-ACT
+    source: fact
+    evidence: "CLOSES A PREVIOUSLY-FLAGGED STRUCTURAL QUESTION. Confirmed by reading Regulation (EU) 2024/903's own Official Journal text directly (eur-lex.europa.eu/eli/reg/2024/903/oj, 2026-09-05), Article 6(1): 'The Board shall develop a European Interoperability Framework (EIF). It shall submit the EIF to the Commission for adoption.' Article 6(2): the EIF 'shall provide a model and a set of recommendations for legal, organisational, semantic and technical interoperability' and 'shall be taken into account in the interoperability assessment.' Article 6(4): a member state developing a national interoperability framework 'shall take the EIF into utmost account.' This gives a direct answer to the question this entity and [[EU-INTEROPERABLE-EUROPE-ACT]] both flagged as open: the Act does not merely sit alongside the EIF — it establishes the legal mechanism (the Interoperable Europe Board develops it, the Commission adopts it) by which the EIF is created and revised going forward. Recorded as `governed-by`, the same type used for [[EU-INTEROPERABLE-EUROPE-BOARD]] itself."
+    confidence: high
+    valid_from: 2024-04-11
+    valid_until: null
   - type: applies-in
     target: PT
     source: fact
@@ -126,6 +133,10 @@ sources:
     url: "https://interoperable-europe.ec.europa.eu/interoperable-europe/news/highlights-fourth-interoperable-europe-board-meeting"
     publisher: "European Commission — Interoperable Europe Portal"
     accessed: "2026-09-05"
+  - title: "Regulation (EU) 2024/903 — Official Journal (Article 6)"
+    url: "https://eur-lex.europa.eu/eli/reg/2024/903/oj"
+    publisher: "EUR-Lex (Publications Office of the European Union)"
+    accessed: "2026-09-05"
 ---
 
 # European Interoperability Framework (EIF)
@@ -184,22 +195,33 @@ end-2025/early-2026 target has slipped. The page gives no new expected
 completion date. The "revised in 2017" description (EIF 3.0) therefore
 stays correct, not stale — the update remains a proposal in consultation.
 
-Batch 8 added [[EU-INTEROPERABLE-EUROPE-ACT]]. **No relationship between the
-Act and this Framework is asserted**, because no source read states how they
-relate — whether the Act gives the EIF legal standing, supersedes it, or
-provides governance around it. That question determines whether the EU
-interoperability layer has one root or two, and remains queued.
+## Relationship to the Interoperable Europe Act — resolved 2026-09-05
 
-**[[EU-INTEROPERABLE-EUROPE-BOARD]], added 2026-09-05,** partially answers
-the adjacent operational question: reading the Board's own governance page
-directly confirms shaping this framework's next revision is one of its
-tasks, recorded on the Board's own file as `influences` this entity. That
-tells us the Board works on the EIF's revision; it does not tell us
-whether the Act that establishes the Board gives the EIF itself legal
-force, which is the deeper question above and stays open.
+Batch 8 added [[EU-INTEROPERABLE-EUROPE-ACT]] without asserting a
+relationship to this Framework, because no source read stated how they
+relate. **That question is now answered directly.**
+
+Reading Regulation (EU) 2024/903's own Official Journal text: **Article
+6(1)** — *"The Board shall develop a European Interoperability Framework
+(EIF). It shall submit the EIF to the Commission for adoption."*
+**Article 6(2)** — the EIF *"shall be taken into account in the
+interoperability assessment."* **Article 6(4)** — a member state
+developing a national interoperability framework *"shall take the EIF
+into utmost account."* The Act establishes the legal mechanism (Board
+develops, Commission adopts) by which this Framework is now created and
+revised. This entity carries `governed-by` [[EU-INTEROPERABLE-EUROPE-ACT]]
+accordingly — the EU interoperability layer has one legal root, not two.
+
+**[[EU-INTEROPERABLE-EUROPE-BOARD]], added 2026-09-05,** was the piece
+that led here: its own governance page, read directly, first confirmed
+shaping this Framework's next revision is one of its tasks (recorded on
+the Board's own file as `influences` this entity) — enough to look at the
+Article establishing that task, which turned out to state the fuller
+legal relationship above.
 
 ## Relationships
 
+- `governed-by` [[EU-INTEROPERABLE-EUROPE-ACT]] (Article 6) — see above.
 - Applies in [[NL]], [[DE]], [[BE]], [[FR]], [[ES]] and [[PL]] through the NIF alignment
   mechanism.
 - **[[BE-BELGIF]] is `based-on` this framework** — the Atlas's first

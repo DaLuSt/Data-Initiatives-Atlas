@@ -74,7 +74,7 @@ is what to request.
 
 | Entity | Question | Why it matters | Noted by / date | Status |
 |---|---|---|---|---|
-| [[EU-EIF]] / [[EU-INTEROPERABLE-EUROPE-ACT]] | How do the Act and the Framework relate? | Does the Act give the EIF legal standing, supersede it, or govern it? Determines whether the EU interoperability layer has one root or two. **No relationship asserted.** | Batch 8 / 2026-08-14 | **Open — structural** |
+| [[EU-EIF]] / [[EU-INTEROPERABLE-EUROPE-ACT]] | How do the Act and the Framework relate? | **Closed 2026-09-05**: Regulation (EU) 2024/903's own Official Journal text, read directly, Article 6(1): "The Board shall develop a European Interoperability Framework (EIF). It shall submit the EIF to the Commission for adoption." The Act establishes the legal mechanism by which the EIF is created and revised. [[EU-EIF]] now carries `governed-by` the Act. One root, not two | Batch 8 / 2026-08-14 | Closed |
 | [[EU-EIDAS]] | The regulation's own content and dates | Created in Batch 8 purely so the [[NL-WDO]] question is expressible. Its only source is the amending regulation. | Batch 8 / 2026-08-14 | Open |
 | [[NL-WDO]] | *(updated)* Does the Wdo transpose eIDAS 910/2014? | **Batch 8 update:** eIDAS 2.0 ruled out on dates (Wdo July 2023 precedes it). Original eIDAS is the plausible candidate but nothing sources the transposition. `region` stays `null`. | Batch 3; updated Batch 7, 8 | Open (narrowed) |
 | [[EU-SDG]] | The once-only principle mechanism, and the Dutch implementation | Relevance was assessed on the once-only principle, but that mechanism was not researched, and no Dutch counterpart is modelled. | Batch 8 / 2026-08-14 | Open |
