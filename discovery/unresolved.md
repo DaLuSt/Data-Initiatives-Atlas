@@ -1221,14 +1221,12 @@ eu-voluntary-review-2023.md). 11 of 13 promoted `search-only` →
   pending an edition-specific source naming each one. A future pass could
   try fetching individual 2025 country factsheets for Switzerland, Albania,
   Montenegro, North Macedonia, Serbia and Türkiye directly.
-- [[EU-VOLUNTARY-REVIEW-2023]]: two conflicting candidate dates surfaced
-  for COM(2023) 700 final's adoption — eeas.europa.eu states "published on
-  July 4, 2023," while a Commission Staff Working Document numbered
-  SWD(2023) 700 (found via search, not read directly) is headed "Brussels,
-  15.5.2023." Neither was reconciled against EUR-Lex's own text, which
-  returned no readable content across several URL forms this pass.
-  `start_date` stays `null`; a future pass should try EUR-Lex again (it may
-  be a transient fetch issue rather than a durable block) to settle this.
+- [[EU-VOLUNTARY-REVIEW-2023]]: **closed 2026-09-05** — EUR-Lex's own text
+  of COM(2023) 700 final, unreadable across several URL forms in this
+  pass, was successfully read via its TXT/HTML URL form in a later pass:
+  the document's own header reads "Brussels, 15.5.2023," matching its
+  companion SWD(2023) 700 and resolving the two-candidate-date question.
+  `start_date` set to 2023-05-15.
 - [[EU-EUROGEOGRAPHICS]]: its third cited source (an EEA page) is now dead
   — 302s to a eurogeographics.org URL that 404s — and could not be
   replaced with an equally authoritative third source this pass; two of
@@ -1240,8 +1238,9 @@ eu-voluntary-review-2023.md). 11 of 13 promoted `search-only` →
   this pass.
 - Several EUR-Lex pages were unreadable this pass despite multiple URL
   forms tried (plain TXT, ALL, TXT/HTML, and ELI views) — affecting
-  [[EU-ESS]]'s citation of Regulation (EC) No 223/2009 and
-  [[EU-VOLUNTARY-REVIEW-2023]]'s citation of COM(2023) 700 final. Both
+  [[EU-ESS]]'s citation of Regulation (EC) No 223/2009 and (at the time)
+  [[EU-VOLUNTARY-REVIEW-2023]]'s citation of COM(2023) 700 final, the
+  latter since read successfully via its TXT/HTML form (see above). Both
   entities were still promoted to `primary-source` on the strength of
   other sources reaching a genuine majority, but a working EUR-Lex fetch
   path would be a general win across this cluster.
