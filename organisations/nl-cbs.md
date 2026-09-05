@@ -23,13 +23,14 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-04"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
-organisations: []
+organisations:
+  - NL-EZK
 related_entities:
   - NL-WET-CBS
   - EU-EUROSTAT
@@ -107,11 +108,11 @@ status as part of. No separate Atlas entity is created for the
 ministry itself, consistent with how the Atlas treats ministries
 without a direct digital-government role.
 
-The responsible ministry — confirmed by kst-28277-3.html as Economic Affairs
-at the time of the 2003 act — is still not linked, because Dutch ministry
-names and portfolio boundaries have changed repeatedly and no ministry
-entity for it exists yet; see `discovery/unresolved.md`. The CCS is likewise
-not yet an entity.
+**Closed 2026-09-05.** [[NL-EZK]] is now an Atlas entity, and `organisations`
+above points to it. The responsible ministry was Economic Affairs at the
+time of the 2003 act (per kst-28277-3.html); today's Economische Zaken en
+Klimaat is that same ministry's current, renamed form (confirmed on
+[[NL-EZK]]'s own page). The CCS is still not yet an entity.
 
 ## Relationships
 

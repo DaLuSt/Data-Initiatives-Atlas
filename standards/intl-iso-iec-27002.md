@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -40,18 +40,25 @@ relationships:
   - type: maintained-by
     target: INTL-ISO
     source: fact
-    evidence: "ISO/IEC 27002 is published by ISO and the IEC, titled 'Information security, cybersecurity and privacy protection — Information security controls', under JTC 1/SC 27 (iso.org; jtc1info.org). NOT READ — search-only."
+    evidence: "ISO/IEC 27002 is published by ISO and the IEC, titled 'Information security, cybersecurity and privacy protection — Information security controls', under JTC 1/SC 27. Confirmed independently by reading en.wikipedia.org's own ISO/IEC 27002 article directly (2026-09-05), which names the same two publishers and committee. The iso.org citation itself is licensed `primary-source` via the repository owner's 2026-08-21 confirmed-domain review (docs/re-verification.md), not by this pass's own fetch — iso.org is separately confirmed domain-wide blocked to this environment's own tooling (INTL standards-body cluster pass, 2026-08-28)."
     confidence: medium
     valid_from: null
     valid_until: null
 
 sources:
-  - title: "ISO/IEC 27002 — Information technology — Security techniques — Code of practice for information security controls"
+  - title: "ISO/IEC 27002 — Information technology — Security techniques — Code of practice for information security controls (edition 2, 2013 — see the edition-mismatch note below)"
     url: "https://www.iso.org/obp/ui/#iso:std:iso-iec:27002:ed-2:en"
     publisher: "International Organization for Standardization (ISO)"
   - title: "ISO/IEC 27000 family — Information security management"
     url: "https://www.iso.org/standard/iso-iec-27000-family"
     publisher: "International Organization for Standardization (ISO)"
+  - title: "ISO/IEC 27002:2022 — Information security, cybersecurity and privacy protection — Information security controls (current edition 3; identified via WebSearch 2026-09-05, not itself part of the owner's 2026-08-21 confirmed-domain review, and iso.org is now confirmed blocked to this environment's own fetch tooling)"
+    url: "https://www.iso.org/standard/75652.html"
+    publisher: "International Organization for Standardization (ISO)"
+  - title: "ISO/IEC 27002"
+    url: "https://en.wikipedia.org/wiki/ISO/IEC_27002"
+    publisher: "Wikipedia"
+    accessed: "2026-09-05"
 ---
 
 # ISO/IEC 27002
@@ -59,6 +66,19 @@ sources:
 > **Verified 2026-08-21.** Every source this entity cites is on a domain the
 > repository owner confirmed read and correct — `iso.org`. `verification:
 > primary-source`. See `docs/re-verification.md` §"The confirmed domains".
+>
+> **Edition citation narrowed, 2026-09-05.** The correct edition-3 (2022)
+> standard number — `iso.org/standard/75652.html` — was found via
+> WebSearch and Wikipedia's own ISO/IEC 27002 article (read directly),
+> which independently corroborates the March 2022 publication date and the
+> ISO/IEC/JTC 1 SC 27 maintainer. The original edition-2 citation stays in
+> `sources` rather than being replaced, since it is the specific URL the
+> owner's confirmed-domain review actually covered; the new edition-3 URL
+> is added alongside it but is not itself owner-confirmed, and iso.org is
+> now separately known to be domain-wide blocked to this environment's own
+> fetch tooling. The edition mismatch this entity exists to flag is
+> narrowed — the correct URL is now known — but not fully closed, since
+> nobody has read the edition-3 page's own content directly.
 
 ## Description
 
@@ -70,18 +90,22 @@ assessed risk.
 
 Published jointly by [[INTL-ISO]] and [[INTL-IEC]] under JTC 1/SC 27.
 
-## An edition mismatch worth flagging
+## An edition mismatch — narrowed, 2026-09-05
 
-The ISO Online Browsing Platform link located here resolves to **edition 2
-(2013)**, whose title is the older *Information technology — Security
-techniques — Code of practice for information security controls*. The
-current edition is **27002:2022**, with the newer title used in the
-`name` field above, and it is that edition [[NL-BIO]]'s BIO2 references
-(as NEN-EN-ISO/IEC 27002:2022).
+The originally-cited ISO Online Browsing Platform link resolves to
+**edition 2 (2013)**, whose title is the older *Information technology —
+Security techniques — Code of practice for information security controls*.
+The current edition is **27002:2022** (the 3rd edition, published **March
+2022** per en.wikipedia.org's own article, read directly), with the newer
+title used in the `name` field above, and it is that edition [[NL-BIO]]'s
+BIO2 references (as NEN-EN-ISO/IEC 27002:2022).
 
-So the cited URL is authoritative but **points at a superseded edition**.
-This is exactly the kind of defect a primary-source pass would catch and is
-recorded rather than papered over.
+The correct edition-3 standard number, `iso.org/standard/75652.html`, is
+now known and added to `sources` — but iso.org is confirmed domain-wide
+blocked to this environment's own fetch tooling, so nobody has read that
+page's own content directly, and the original edition-2 citation is kept
+rather than replaced (see the banner above on why). The defect this entity
+exists to flag is narrowed, not fully closed.
 
 `coverage: low`.
 
@@ -93,4 +117,7 @@ recorded rather than papered over.
 
 ## Sources
 
-Listed in frontmatter — see the edition caveat above.
+Listed in frontmatter — see the edition caveat above. The Wikipedia
+article was read directly this pass; the iso.org citations were not
+(owner-confirmed-domain licensing for the original two, unread for the
+new edition-3 addition).

@@ -27,7 +27,7 @@ verification: primary-source
 
 start_date: 2025-11-19
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -37,6 +37,7 @@ organisations: []
 related_entities:
   - EU-DGA
   - EU-OPEN-DATA-DIRECTIVE
+  - EU-FREE-FLOW-NON-PERSONAL-DATA
   - EU-DATA-ACT
   - EU-GDPR
 relationships:
@@ -51,6 +52,13 @@ relationships:
     target: EU-OPEN-DATA-DIRECTIVE
     source: fact
     evidence: "As above — the Open Data Directive is named among the instruments the proposal would repeal and fold into the Data Act, confirmed by reading whitecase.com and medialaws.eu directly. NOT ADOPTED."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: proposes-to-supersede
+    target: EU-FREE-FLOW-NON-PERSONAL-DATA
+    source: fact
+    evidence: "As above — the Free Flow of Non-Personal Data Regulation (2018/1807) is the third named instrument the proposal would repeal and fold into the Data Act, confirmed by reading whitecase.com and medialaws.eu directly. That Regulation is now an Atlas entity (created 2026-09-05, picked up from `discovery/unresolved.md`, which had flagged the repeal picture as incomplete without it). NOT ADOPTED."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -125,7 +133,7 @@ November 2025, and this entity had conflated them:
 |---|---|---|
 | COM number | **COM(2025) 837** | COM(2025) 836 |
 | Name | "Digital Omnibus" | "Digital Omnibus **on AI**" |
-| Scope | Repeals [[EU-DGA]], [[EU-OPEN-DATA-DIRECTIVE]] and the Free Flow of Non-Personal Data Regulation into [[EU-DATA-ACT]]; amends [[EU-GDPR]], ePrivacy, Data Act | Amends [[EU-AI-ACT]], the EASA Regulation, the Machinery Regulation |
+| Scope | Repeals [[EU-DGA]], [[EU-OPEN-DATA-DIRECTIVE]] and [[EU-FREE-FLOW-NON-PERSONAL-DATA]] into [[EU-DATA-ACT]]; amends [[EU-GDPR]], ePrivacy, Data Act | Amends [[EU-AI-ACT]], the EASA Regulation, the Machinery Regulation |
 | Status (28 Aug 2026) | Proposed — under negotiation | **Adopted** as Regulation (EU) 2026/1744, in force 27 July 2026 |
 
 The previously-cited CELEX number (`52025PC0836`) and alternative name
@@ -143,8 +151,8 @@ reading whitecase.com and medialaws.eu directly, its most consequential
 elements for the Atlas:
 
 - **Repeal and consolidation.** It would completely repeal [[EU-DGA]], the
-  [[EU-OPEN-DATA-DIRECTIVE]] and the Free Flow of Non-Personal Data
-  Regulation, transferring those instruments into [[EU-DATA-ACT]] via new
+  [[EU-OPEN-DATA-DIRECTIVE]] and [[EU-FREE-FLOW-NON-PERSONAL-DATA]],
+  transferring those instruments into [[EU-DATA-ACT]] via new
   chapters — including a shift in the public-sector access-regime
   criterion from "exceptional need" to "public emergencies."
 - **GDPR amendment.** It would amend [[EU-GDPR]] and the ePrivacy
@@ -165,12 +173,12 @@ particularly over the GDPR changes.
 ## Why this entity exists
 
 A knowledge graph of data legislation that shows only enacted law gives a
-false picture of stability. Two of the EU entities in this Atlas
-([[EU-DGA]] and [[EU-OPEN-DATA-DIRECTIVE]]) are currently proposed for
-repeal by this instrument, and a reader looking at either in isolation
-would have no way to know that. Recording the proposal — clearly marked as
-such, with a purpose-built relationship type — makes the pending change
-visible without asserting it has happened.
+false picture of stability. Three of the EU entities in this Atlas
+([[EU-DGA]], [[EU-OPEN-DATA-DIRECTIVE]] and [[EU-FREE-FLOW-NON-PERSONAL-DATA]])
+are currently proposed for repeal by this instrument, and a reader looking
+at any one in isolation would have no way to know that. Recording the
+proposal — clearly marked as such, with a purpose-built relationship type —
+makes the pending change visible without asserting it has happened.
 
 ## Sourcing note
 
@@ -185,9 +193,11 @@ proposal text itself before being relied upon in detail.
 
 ## Relationships
 
-- Proposes to supersede [[EU-DGA]] and [[EU-OPEN-DATA-DIRECTIVE]].
+- Proposes to supersede [[EU-DGA]], [[EU-OPEN-DATA-DIRECTIVE]] and
+  [[EU-FREE-FLOW-NON-PERSONAL-DATA]] (entity created 2026-09-05,
+  completing this row).
 - References (amends) [[EU-DATA-ACT]] and [[EU-GDPR]].
-- **No relationship to [[EU-AI-ACT]]** — corrected this pass; see above.
+- **No relationship to [[EU-AI-ACT]]** — corrected in the 2026-08-28 pass; see above.
 
 ## Sources
 

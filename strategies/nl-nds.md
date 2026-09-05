@@ -30,6 +30,7 @@ domains:
   - DOMAIN-GOVERNMENT
 organisations:
   - NL-BZK
+  - NL-EZK
 related_entities:
   - NL-FDS
   - NL-DIGIBETER
@@ -146,9 +147,8 @@ the NDS's own relationship to what came before it.
   [[NL-WERKAGENDA-WAARDENGEDREVEN-DIGITALISEREN]] — see above; the
   relationship is actively ruled against by this entity's own source,
   rather than merely unconfirmed.
-- Continuation under the post-2025 cabinet is confirmed, with EZK now
-  co-leading alongside BZK. EZK does not yet exist in the Atlas as an
-  organisation entity.
+- Continuation under the post-2025 cabinet is confirmed, with [[NL-EZK]]
+  now co-leading alongside [[NL-BZK]] (entity created 2026-09-05).
 
 ## Scope note
 
