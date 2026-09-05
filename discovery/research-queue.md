@@ -163,6 +163,51 @@
 > [[NL]] anchor edge since no Ministry-of-Justice-and-Security entity
 > exists yet to carry a more specific one.
 >
+> **2026-09-05 pickup (nineteenth):** created
+> [[EU-INTEROPERABLE-EUROPE-BOARD]], closing two duplicate queue rows.
+> Reading the Board's own governance page on
+> `interoperable-europe.ec.europa.eu` directly confirms it is
+> `governed-by` [[EU-INTEROPERABLE-EUROPE-ACT]] and `influences`
+> [[EU-EIF]] — shaping the framework's next revision is one of its stated
+> tasks. This **partially** answers the EIF/Act relationship both of
+> those entities' own files had flagged as open: it tells us the Board
+> works on the EIF's revision, not whether the Act gives the EIF itself
+> legal force, which stays open and queued.
+>
+> **2026-09-05 pickup (twentieth):** added the two missing EUR-Lex
+> Official Journal citations the queue had flagged. Both
+> [[EU-AI-ACT]]'s (`eur-lex.europa.eu/eli/reg/2024/1689/oj`) and
+> [[EU-EHDS]]'s (`eur-lex.europa.eu/eli/reg/2025/327/oj`) records, which
+> earlier passes found returning empty content, resolved cleanly this
+> time and are now read directly and cited. EHDS's own OJ record
+> surfaced a previously-unrecorded detail — the regulation also amends
+> Directive 2011/24/EU and Regulation (EU) 2024/2847 — noted on the
+> entity but not modelled as a relationship this pass.
+>
+> **2026-09-05 pickup (twenty-first):** created [[DE-ITZBUND]], Germany's
+> central federal IT service provider, already cited as a source on
+> [[DE-XOEV]] but not itself an entity. Established 2016, made an
+> Anstalt des öffentlichen Rechts in 2021, in the business area of the
+> Federal Ministry of Finance — confirmed by reading `itzbund.de`'s own
+> page directly. Carries the `applies-to` [[DE-XOEV]] certification edge
+> that had previously lived only in [[DE-XOEV]]'s own evidence text.
+> [[DE-BUNDESDRUCKEREI]] closes the sibling item the same pass: reading
+> the Federal Ministry of Finance's own January 2019 Monatsbericht
+> analysis directly confirms it is 100% federally owned since a 2009
+> reacquisition (privatised in 2000, sold to Apax Partners), with BMF
+> exercising shareholder duties — a `part-of` [[DE]] anchor edge for
+> want of a Bundesministerium der Finanzen entity.
+>
+> **2026-09-05 pickup (twenty-second):** created [[NL-ODISSEI]], the
+> Netherlands' National Research Infrastructure for Social Sciences,
+> named alongside DANS/RIVM/NWO/SIDN — all already modelled — as the
+> one item in that group left unresearched. Launched 2016, hosted by
+> Erasmus University, a 45-member consortium funded principally through
+> [[NL-NWO]]'s Large Scale Research Infrastructure programme, confirmed
+> by reading `odissei-data.nl`'s own page directly. `related-to` [[NL]]
+> anchor edge, matching the [[NL-SURF]]/[[NL-NICTIZ]] convention for
+> member-owned consortia.
+>
 > **The `level` vocabulary is no longer a blocker.** `level: subnational` was
 > added 2026-08-21 and the three Belgian sub-federal ODD instruments are
 > modelled under it. OSLO/Digitaal Vlaanderen and the Comunidades Autónomas
@@ -338,7 +383,6 @@ by accident.
 | Individual XÖV standards | XPersonenstand, XMeld, XBau, XPlanung and others. Only [[DE-XRECHNUNG]] is modelled. Creating one entity per standard would inflate the layer without adding structure (brief §1) | Later | Germany batch |
 | National Gaia-X hubs | Germany's and Austria's hubs are cited as sources on [[EU-GAIA-X]]. A `DE-GAIA-X-HUB` would be a legitimate national entity, not a duplicate — but nothing beyond website existence was established | Later | Germany batch |
 | Mobility Data Marketplace (MDM) | Replaced by [[DE-MOBILITHEK]] as National Access Point. **No superseded entity created** — unlike [[DE-IWG]], nothing beyond the replacement is established | Later | Germany batch |
-| Bundesdruckerei; ITZBund | Federal printing/eID body and the federal IT service centre. ITZBund is already cited as a source on [[DE-XOEV]] | Later | Germany batch |
 | OZG-Änderungsgesetz | A substantial amending act, deliberately **not** given its own entity — doing so would force the same `supersedes` compromise as [[DE-NIS2UMSUCG]] → [[DE-BSIG]]. Revisit if an amendment relationship type is added | Blocked | Germany batch |
 | Lenkungsgremium GDI-DE | Governing committee of [[DE-GDI-DE]]; would be reachable only from that one entity | Later | Germany batch |
 
@@ -402,10 +446,7 @@ by accident.
 | Ministeries van VWS, EZK, OCW | Named partners of [[NL-HEALTH-RI]] | Batch 5+ | Batch 5 / 2026-08-14 |
 | Nationaal Groeifonds | Funds [[NL-HEALTH-RI]] | Batch 5+ | Batch 5 / 2026-08-14 |
 | Nationaal Wegenbestand (NWB) | Part of the [[NL-NDW]] expansion | Batch 5+ | Batch 5 / 2026-08-14 |
-| ODISSEI | Research infrastructure organisation named alongside DANS/RIVM/NWO/SIDN, all now modelled; ODISSEI alone remains unresearched | Batch 5+ | Batch 2; carried |
-| Interoperable Europe Board | Adopts new EIF versions; needed to resolve the EIF/Act relationship | Batch 9 | Batch 7; carried |
 | Free Flow of Non-Personal Data Regulation | Third repeal target of [[EU-DIGITAL-OMNIBUS]] | Batch 9 | Batch 8 / 2026-08-14 |
-| EUR-Lex citation for the AI Act | [[EU-AI-ACT]] lacks an Official Journal link | Batch 9 | Batch 8 / 2026-08-14 |
 | Dutch EUDI Wallet implementation | Every member state must provide one; no Dutch arrangement researched | Batch 9+ | Batch 8 / 2026-08-14 |
 | **The 10 remaining common European data spaces** | Batch 10 created Health, Mobility, Green Deal and Agriculture. **Not created:** cultural heritage, energy, finance, industry, language, media, public administrations, research and innovation, skills, tourism — research returned only their names in the list of fourteen | Later | Batch 7; narrowed Batch 10 |
 | UN DESA, UNDP, UNESCO, WHO, UNECE | Named in Batch 13's scope; **no usable source located for any**, so none created | Later | Batch 13 / 2026-08-14 |
@@ -418,12 +459,10 @@ by accident.
 | ITU standards | [[UN-ITU]] exists but no ITU standard is modelled | Later | Batch 13 / 2026-08-14 |
 | UNCTAD CSTD working group on data governance | May warrant an `initiative` entity if its outputs are substantive | Later | Batch 13 / 2026-08-14 |
 | Data quality, information management, digital identity, AI, data sharing, API and knowledge-graph standards | Batch 14's scope lists all of these; **only information security (27001/27002) and metadata (DCAT) were covered** | Later | Batch 14 / 2026-08-14 |
-| **Interoperable Europe Board** | Still not created — two passing mentions only | Later | Batch 7; carried |
 | W3C source for DCAT | [[INTL-DCAT]] rests on second-hand descriptions; the top of the flagship standards chain | Batch 14 | Batch 9 / 2026-08-14 |
 | W3C (the organisation) | Needed for [[INTL-DCAT]]'s `maintained-by` | Batch 13 | Batch 9 / 2026-08-14 |
 | GeoDCAT-AP and StatDCAT-AP | Extensions of [[EU-DCAT-AP]]; GeoDCAT-AP would likely connect [[NL-GEONOVUM]]'s geo and metadata work | Later | Batch 9 / 2026-08-14 |
 | ETSI standards | [[EU-ETSI]] exists but **no ETSI standard is modelled**, despite ICT standardisation being central to this Atlas | Later | Batch 9 / 2026-08-14 |
-| EUR-Lex citation for EHDS Reg. (EU) 2025/327 | [[EU-EHDS]]'s strongest source is the Parliament's Legislative Observatory | Later | Batch 10 / 2026-08-14 |
 | IDSA / IDS architecture | [[NL-ISHARE]]'s documented route into the EU data-space world | Later | Batch 5; carried |
 | Environment / Energy / Agriculture domains | Still below the 2-entity threshold even after Batch 10 | Later | Batch 5; rechecked Batch 10 |
 | EU AI strategy (if distinct from the AI Act) | Named in Batch 7 scope; no clearly identifiable standalone strategy document found | Batch 8 | Batch 7 / 2026-08-14 |

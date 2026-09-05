@@ -171,6 +171,9 @@ see `discovery/research-queue.md`._
   - [[NL-DANS]] — Data Archiving and Networked Services, joint
     NWO/KNAW research-data repository, founded 2005 _(added
     2026-09-04)_
+  - [[NL-ODISSEI]] — National Research Infrastructure for Social
+    Sciences, 45-member consortium hosted by Erasmus University
+    _(launched 2016; added 2026-09-05)_
 - [[NL-RIVM]] — Rijksinstituut voor Volksgezondheid en Milieu, national
   public health and environment institute _(agency of VWS since 2004;
   added 2026-09-04)_

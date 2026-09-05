@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: 2025-03-26
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -129,14 +129,19 @@ sources:
     url: "https://www.ey.com/en_gr/technical/tax/tax-alerts/regulation-2025-327-establishing-ehds"
     publisher: "EY"
     accessed: "2026-08-28"
+  - title: "Regulation (EU) 2025/327 — Official Journal"
+    url: "https://eur-lex.europa.eu/eli/reg/2025/327/oj"
+    publisher: "EUR-Lex (Publications Office of the European Union)"
+    accessed: "2026-09-05"
 ---
 
 # European Health Data Space (EHDS)
 
-> **Re-verified 2026-08-28.** All three cited sources were read directly.
-> Wikipedia and the European Parliament's own Legislative Observatory
-> confirm the regulation's identity and dates precisely; EY's account of
-> the phased application timetable matches on every milestone except its
+> **Re-verified 2026-08-28, EUR-Lex citation added 2026-09-05.** All three
+> originally cited sources were read directly. Wikipedia and the European
+> Parliament's own Legislative Observatory confirm the regulation's
+> identity and dates precisely; EY's account of the phased application
+> timetable matches on every milestone except its
 > stated entry-into-force date, which conflicts with the other two and is
 > flagged below rather than relied upon. `verification` moves from
 > `search-only` to `primary-source`.
@@ -207,12 +212,15 @@ name and one identity in the sources. If a future batch needs to cite the
 regulation as legislation in its own right, it should be split. Flagged in
 `discovery/unresolved.md`.
 
-**No EUR-Lex citation could be added this pass** — `eur-lex.europa.eu` was
-attempted (the ELI record at `eur-lex.europa.eu/eli/reg/2025/327/oj/eng`)
-and returned empty content to this pass's fetch tooling, consistent with
-every other EUR-Lex attempt made across this batch. The strongest source
-read directly remains the European Parliament's own Legislative
-Observatory file. Still queued.
+**EUR-Lex citation added 2026-09-05.** A prior pass found
+`eur-lex.europa.eu` returning empty content on the ELI record. This pass's
+attempt at `eur-lex.europa.eu/eli/reg/2025/327/oj` succeeded, confirming
+the regulation's exact title — "Regulation (EU) 2025/327 ... on the
+European Health Data Space and amending Directive 2011/24/EU and
+Regulation (EU) 2024/2847" — and its 5 March 2025 Official Journal
+publication date. The amended-instruments detail (Directive 2011/24/EU;
+Regulation (EU) 2024/2847) is new information not previously recorded
+here and is noted but not modelled as a relationship this pass.
 
 ## Relationships
 
@@ -223,4 +231,6 @@ Observatory file. Still queued.
 
 ## Sources
 
-Listed in frontmatter, all three read directly this pass.
+Listed in frontmatter. The EUR-Lex Official Journal citation was added and
+read directly 2026-09-05; the other three were read directly in the prior
+pass.

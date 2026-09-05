@@ -22,7 +22,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -36,6 +36,7 @@ related_entities:
   - IE
   - NL-NORA
   - EU-INTEROPERABLE-EUROPE-ACT
+  - EU-INTEROPERABLE-EUROPE-BOARD
 relationships:
   - type: applies-in
     target: PT
@@ -176,8 +177,15 @@ Batch 8 added [[EU-INTEROPERABLE-EUROPE-ACT]]. **No relationship between the
 Act and this Framework is asserted**, because no source read states how they
 relate — whether the Act gives the EIF legal standing, supersedes it, or
 provides governance around it. That question determines whether the EU
-interoperability layer has one root or two, and is queued. The Interoperable
-Europe Board remains uncreated (Batch 9).
+interoperability layer has one root or two, and remains queued.
+
+**[[EU-INTEROPERABLE-EUROPE-BOARD]], added 2026-09-05,** partially answers
+the adjacent operational question: reading the Board's own governance page
+directly confirms shaping this framework's next revision is one of its
+tasks, recorded on the Board's own file as `influences` this entity. That
+tells us the Board works on the EIF's revision; it does not tell us
+whether the Act that establishes the Board gives the EIF itself legal
+force, which is the deeper question above and stays open.
 
 ## Relationships
 
@@ -189,6 +197,9 @@ Europe Board remains uncreated (Batch 9).
 - **[[NL-NORA]] is also `based-on` this framework**, added 2026-08-21 — see
   the NORA question above for the narrower, sourced scope of that link. No
   equivalent statement was found for Germany, so it does not carry the link.
+- `influences` edge (this Framework as target) recorded on
+  [[EU-INTEROPERABLE-EUROPE-BOARD]]'s own file — tasked with shaping its
+  next revision.
 
 ## Sources
 
