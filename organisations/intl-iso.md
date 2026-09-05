@@ -21,7 +21,7 @@ verification: primary-source
 
 start_date: 1947-02-23
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -67,8 +67,11 @@ sources:
 
 ISO is an international standards organisation operating on national
 delegation — its members are national standards bodies, including
-[[NL-NEN]], which Batch 2 research recorded as a co-founder of ISO in 1947.
-Wikipedia's ISO article, read directly this pass, confirms ISO was
+[[NL-NEN]]. Batch 2's "co-founder in 1947" claim about NEN specifically
+was later found unconfirmed by any page read ([[NL-NEN]]'s own
+2026-08-27 pass); NEN's current ISO membership itself is a separate,
+narrower question, closed 2026-09-05 (see below). Wikipedia's ISO
+article, read directly this pass, confirms ISO was
 established on **23 February 1947** following October 1946 meetings of ISA
 and UNSCC delegates from 25 countries in London, and now has **175 national
 members** in three categories — member bodies (voting), correspondent
@@ -90,15 +93,16 @@ WWII but never absorbed into the UN system. It appears alongside [[UN-ITU]]
 in standards-ecosystem listings, but only the ITU is a UN specialised
 agency.
 
-## The NEN relationship, still unasserted
+## The NEN relationship, closed 2026-09-05
 
-Batch 2 recorded that NEN was a co-founder of ISO in 1947 and works closely
-with it. **No relationship is asserted here**, because the sourced statement
-concerns NEN's own page rather than an ISO membership list, and because the
-`participates-in` links added in Batch 9 ([[NL-NEN]] → [[EU-CEN]]) rested on
-an explicit composition rule that is not available here. The association is
-recorded via `related_entities`. This is a smaller gap than it looks and
-should be easy to close.
+Batch 9 left this gap smaller than it looked, and it is now closed:
+[[NL-NEN]]'s own 2026-08-27 re-verification pass found nen.nl's own "Over
+NEN" page stating directly, in one sentence, "NEN is lid van de Europese
+en internationale normalisatienetwerken CEN en ISO" — already used to
+source NEN's `participates-in` [[EU-CEN]] edge, but not extended to ISO
+at the time. Picked up from `discovery/unresolved.md` this pass: the
+`participates-in` edge is now asserted from [[NL-NEN]]'s side, pointing
+here, on that same already-available source.
 
 `coverage: low`: ISO's governance beyond membership categories, and its
 wider standards catalogue, were not researched.
@@ -106,7 +110,8 @@ wider standards catalogue, were not researched.
 ## Relationships
 
 - Operates JTC 1 jointly with [[INTL-IEC]].
-- Associated with [[NL-NEN]].
+- [[NL-NEN]] `participates-in` this entity — the typed edge is recorded
+  on NEN's own side (closed 2026-09-05).
 
 ## Sources
 

@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -33,11 +33,19 @@ organisations: []
 related_entities:
   - NL-FORUM-STANDAARDISATIE
   - EU-CEN
+  - INTL-ISO
 relationships:
   - type: participates-in
     target: EU-CEN
     source: fact
     evidence: "Corrected and upgraded this pass (2026-08-27): previously recorded from the composition rule alone ('membership follows... rather than from a source naming NEN'). Reading nen.nl's own 'Over NEN' page directly finds NEN named explicitly: 'NEN is lid van de Europese en internationale normalisatienetwerken CEN en ISO' (NEN is a member of the European and international standardisation networks CEN and ISO). The page also names IEC, CENELEC and ETSI as networks NEN belongs to, and states NEN manages international secretariats in areas where the Netherlands has particular expertise."
+    confidence: high
+    valid_from: null
+    valid_until: null
+  - type: participates-in
+    target: INTL-ISO
+    source: fact
+    evidence: "Same sentence as the EU-CEN edge above, read directly on nen.nl's own 'Over NEN' page (2026-08-27): 'NEN is lid van de Europese en internationale normalisatienetwerken CEN en ISO' names ISO alongside CEN in one breath. Picked up from `discovery/unresolved.md`, which had flagged NEN's ISO membership as recorded only from an unsourced 1947 co-founder claim (Batch 2) and asked for the same direct-naming treatment already given to the CEN edge — closed here on the source this pass already had, rather than requiring a fresh fetch."
     confidence: high
     valid_from: null
     valid_until: null
@@ -105,14 +113,22 @@ uncontroversial facts that NEN was founded in 1916 and ISO in 1947. The
 claim is downgraded from stated fact to unconfirmed and should not be
 repeated as established without a source.
 
+**ISO membership itself closed, 2026-09-05.** A separate, narrower
+question — not the 1947 co-founding claim above, but simply whether NEN
+is a current ISO member at all — is answered by the same nen.nl sentence
+already cited for the CEN edge: "NEN is lid van de Europese en
+internationale normalisatienetwerken CEN en ISO." `participates-in`
+[[INTL-ISO]] is now asserted alongside the existing [[EU-CEN]] edge.
+
 ## Relationships
 
 - Complementary to [[NL-FORUM-STANDAARDISATIE]]: NEN operates the formal
   national standards infrastructure, while Forum Standaardisatie governs
   which open standards public bodies must apply. No relationship is
   asserted between them, as none was sourced this pass either.
-- `participates-in` [[EU-CEN]] — now confirmed by a source naming NEN
-  directly, not only by the composition rule (see relationship evidence).
+- `participates-in` [[EU-CEN]] and [[INTL-ISO]] — both confirmed by a
+  source naming NEN directly, not only by the composition rule (see
+  relationship evidence). The ISO edge is new this pass.
 - ISO and IEC remain unmodelled, so those relationships are still
   unassertable, though nen.nl confirms NEN's membership in both.
   [[EU-CENELEC]] is the European counterpart of the Dutch NEC, with which
