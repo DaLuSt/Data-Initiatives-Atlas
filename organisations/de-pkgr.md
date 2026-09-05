@@ -20,7 +20,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -33,6 +33,7 @@ related_entities:
   - DE-BFV
   - DE-BAMAD
   - DE-UKR
+  - DE-G10-KOMMISSION
 relationships:
   - type: governed-by
     target: DE-PKGRG
@@ -117,10 +118,14 @@ Bundesregierung auf Antrag der Bundesregierung oder von mindestens zwei
 Dritteln der Mitglieder des Parlamentarischen Kontrollgremiums." Parliamentary
 oversight here is not merely advisory; the committee has standing to sue.
 
+## The G10-Kommission, modelled 2026-09-05
+
+Previously flagged as unmodelled here: the body that authorises measures
+under [[DE-G10]] is distinct from the PKGr, appointed by it, and is now
+[[DE-G10-KOMMISSION]]. See that entity for its composition and mandate.
+
 ## Not modelled
 
-- The **G10-Kommission**, the body that authorises measures under
-  [[DE-G10]]. It is distinct from the PKGr and was not researched.
 - The **Vertrauensgremium** and other Bundestag bodies with intelligence
   budget functions.
 - The PKGr's **composition and majority rules**, beyond the two-thirds
