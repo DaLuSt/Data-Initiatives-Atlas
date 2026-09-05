@@ -24,7 +24,7 @@ verification: primary-source
 
 start_date: 2009-07-06
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -33,6 +33,7 @@ domains:
 organisations: []
 related_entities:
   - NL-NTM
+  - NL-RIJKSWATERSTAAT
 relationships:
   - type: related-to
     target: NL-NTM
@@ -78,7 +79,8 @@ distribute mobility data. That data is used to manage traffic, feeds
 numerous traffic information services, and provides a basis for mobility
 policy. Reading organisaties.overheid.nl's own listing directly this pass
 gives **18** government partners by name (the four largest municipalities,
-all twelve provinces, Rijkswaterstaat and regional bodies); ndw.nu's own
+all twelve provinces, [[NL-RIJKSWATERSTAAT]] — now a separate Atlas
+entity, added 2026-09-05 — and regional bodies); ndw.nu's own
 current page describes **19** governments working together. Both figures
 are recorded here rather than silently reconciled, since the two primary
 sources genuinely disagree by one and neither page names the discrepancy.

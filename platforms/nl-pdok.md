@@ -21,7 +21,7 @@ verification: primary-source
 
 start_date: 2013-01-01
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -31,6 +31,7 @@ organisations:
   - NL-KADASTER
   - NL-GEONOVUM
   - NL-BZK
+  - NL-RIJKSWATERSTAAT
 related_entities: []
 relationships:
   - type: aligned-with
@@ -88,19 +89,19 @@ that since 2018 "het Kadaster zelfstandig het dataportaal PDOK" operates —
 the Kadaster took over independent operation of the platform, a detail not
 previously recorded here.
 
-Two of the named founding partners — the Ministry of Infrastructure and
-Water Management and Rijkswaterstaat — are not yet Atlas entities and are
-queued in `discovery/research-queue.md`. `organisations:` therefore lists
-only the partners that exist, which makes the founding collaboration look
-narrower than it was; the full list is recorded in this prose.
+**Rijkswaterstaat closed 2026-09-05.** [[NL-RIJKSWATERSTAAT]] is now a
+separate Atlas entity, carrying its own `participates-in` edge back to
+this platform. Only the Ministry of Infrastructure and Water Management
+remains unmodelled among the named founding partners and stays queued in
+`discovery/research-queue.md`.
 
 `start_date: 2013-01-01` is a **placeholder for "in 2013"** — no precise
 establishment date was located, and nothing read this pass supplied one.
 
 ## Relationships
 
-- Founded and supported by [[NL-KADASTER]], [[NL-GEONOVUM]] and [[NL-BZK]]
-  among others.
+- Founded and supported by [[NL-KADASTER]], [[NL-GEONOVUM]], [[NL-BZK]]
+  and [[NL-RIJKSWATERSTAAT]] among others.
 - Publishes geo-data related to [[NL-BASISREGISTRATIES]] (Atlas
   interpretation, `confidence: low`).
 
