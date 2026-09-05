@@ -38,6 +38,7 @@ organisations:
   - DE-KOSIT
 related_entities:
   - DE-XRECHNUNG
+  - DE-ITZBUND
 relationships:
   - type: maintained-by
     target: DE-KOSIT
@@ -91,7 +92,9 @@ for new standards on behalf of the IT-Planungsrat and FITKO" and
 **XRepository** platform and maintaining the **XÖV-Handbuch**. A
 previously-unrecorded fact, also confirmed directly this pass on
 blog.d-velop.de: **ITZBund certifies XÖV conformity**, a distinct role from
-KoSIT's development and maintenance function.
+KoSIT's development and maintenance function. [[DE-ITZBUND]] itself is now
+a separate Atlas entity (added 2026-09-05), carrying the `applies-to` edge
+to this standard on its own file.
 
 The family comprises both **semantic standards** — itzbund.de names XMeld
 (address data), XhD (official documents), XAusländer, XJustiz and
