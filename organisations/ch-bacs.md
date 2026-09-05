@@ -24,7 +24,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -55,6 +55,10 @@ sources:
     url: "https://www.ncsc.admin.ch/"
     publisher: "Bundesamt für Cybersicherheit (BACS)"
     accessed: "2026-08-22"
+  - title: "Neue Pflicht zur Meldung von Cyberangriffen für Betreiber kritischer Infrastrukturen"
+    url: "https://www.bratschi.ch/en/publikationen/neue-pflicht-zur-meldung-von-cyberangriffen-fuer-betreiber-kritischer-infrastrukturen"
+    publisher: "Bratschi AG"
+    accessed: "2026-09-05"
 ---
 
 # Bundesamt für Cybersicherheit (BACS)
@@ -106,11 +110,23 @@ evidence that one produced the other. This is the same restraint
 state the EU-facing motive, so `aligned-with` was assertable; here they do
 not, so nothing is.
 
+## The statutory basis, named 2026-09-05
+
+Confirmed via an independent legal publication (Bratschi AG, read
+directly): the reporting duty rests on **Article 74a of the
+Informationssicherheitsgesetz (ISG)**, defining which entities must
+report, with the operational detail (the 24-hour and 14-day deadlines,
+enforcement fines up to CHF 100,000) set out in the accompanying
+**Cybersecurity Ordinance (CSV)**. Both entered into force on the same
+1 April 2025 date already recorded here.
+
+The ISG itself is still **not an Atlas entity** — it was not researched
+beyond this single question — so BACS still carries no `governed-by`
+edge, like [[NO-NSM]] and for the same reason: the citation is now
+precise, but nothing exists in the graph to point the edge at.
+
 ## Not modelled
 
-- The **statutory basis** of the reporting duty — understood to be in the
-  Information Security Act (ISG), which was not researched. BACS therefore
-  carries no `governed-by` edge, like [[NO-NSM]] and for the same reason.
 - **NCSC/BACS's relationship to [[CH-DVS]]** and to the federal
   administration's ICT governance.
 - The **cantonal** cyber-security bodies.
@@ -118,5 +134,6 @@ not, so nothing is.
 ## Sources
 
 Listed in frontmatter. ncsc.admin.ch and de.wikipedia.org were read
-directly this pass; staatskalender.admin.ch was retrieved but not
-readable (JS-rendered).
+directly in the 2026-08-22 pass; staatskalender.admin.ch was retrieved
+but not readable (JS-rendered). Bratschi AG's legal publication, added
+and read directly 2026-09-05, names the ISG Article 74a statutory basis.
