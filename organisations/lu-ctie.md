@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-25"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -60,6 +60,14 @@ sources:
     url: "https://data.public.lu/en/organizations/centre-des-technologies-de-linformation-de-letat/"
     publisher: "data.public.lu"
     accessed: "2026-08-25"
+  - title: "Frequently asked questions about NIS2 (FAQ)"
+    url: "https://www.ilr.lu/en/sectors/niss/nis-2/frequently-asked-questions-about-nis2-faq/"
+    publisher: "Institut Luxembourgeois de Régulation (ILR)"
+    accessed: "2026-09-05"
+  - title: "NIS 2 Directive | Transposition in Luxembourg"
+    url: "https://www.nis-2-directive.com/Transposition/Luxembourg.html"
+    publisher: "nis-2-directive.com"
+    accessed: "2026-09-05"
 ---
 
 # Centre des technologies de l'information de l'État
@@ -70,6 +78,10 @@ sources:
 > 2009" — that no earlier version of this entity carried. "Guichet.lu"
 > was not named on any page read this pass and is retained from the
 > original sourcing rather than removed.
+>
+> **Updated 2026-09-05**: Luxembourg's NIS2 competent authority (ILR) and
+> CSIRTs (GOVCERT.LU, CIRCL) are now named, with sources — still not
+> modelled as entities.
 
 ## Description
 
@@ -96,16 +108,33 @@ concentrating what larger administrations divide.
 
 **This does not make CTIE Luxembourg's national cyber authority.** Securing
 the State's own infrastructure and supervising a country's essential entities
-under [[EU-NIS2]] are different jobs, and Luxembourg's NIS2 authority is
-**not modelled** — see `discovery/unresolved.md`.
+under [[EU-NIS2]] are different jobs. Luxembourg's NIS2 authority (ILR) and
+CSIRTs (GOVCERT.LU, CIRCL) are now named below but **not modelled** as
+Atlas entities.
+
+## Luxembourg's NIS2 landscape, named but not modelled — 2026-09-05
+
+Confirmed by reading ILR's own FAQ page directly: Luxembourg's NIS2
+competent authority is the **Institut Luxembourgeois de Régulation
+(ILR)**, named there as competent authority "for the vast majority of
+sectors," with the **CSSF** handling banking and financial-market
+infrastructure. Independent secondary sources (pwc.lu, lawgitech.eu,
+nis-2-directive.com) converge on the transposing instrument — a **Law of
+5 May 2026**, entering into force in the 10–15 May 2026 window (sources
+give slightly different days, not independently resolved) — and name
+**GOVCERT.LU** (public-sector CSIRT) and **CIRCL** (private-sector,
+municipal and NGO CSIRT) as Luxembourg's two designated CSIRTs.
+
+None of ILR, CSSF, GOVCERT.LU, CIRCL or the transposing law is created as
+an Atlas entity here — that would be at least four new nodes, beyond
+what a single-question check should add — but the previous "not
+researched" is now "named, with sources, not yet modelled."
 
 ## Not modelled
 
 - **Guichet.lu**, the citizen and business services portal CTIE operates —
   named in the original sourcing but not found on either page read this
   pass.
-- Luxembourg's **NIS2 competent authority and CSIRT** — GOVCERT.LU and the
-  national cybersecurity bodies were not researched.
 - The **"law of 24 November 2015 amending the amended law of 20 April
   2009"** as a separate law entity — named and dated by CTIE's own page,
   but not created here, matching the threshold this Atlas applies
@@ -126,4 +155,6 @@ unconfirmed is now read directly, word for word.
 
 ## Sources
 
-Listed in frontmatter, all four read directly this pass.
+Listed in frontmatter. The original four read directly in the 2026-08-25
+pass; ILR's own FAQ added and read directly 2026-09-05, corroborated by
+nis-2-directive.com's transposition-tracking page.
