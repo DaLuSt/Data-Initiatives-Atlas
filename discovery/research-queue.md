@@ -163,6 +163,17 @@
 > [[NL]] anchor edge since no Ministry-of-Justice-and-Security entity
 > exists yet to carry a more specific one.
 >
+> **2026-09-05 pickup (nineteenth):** created
+> [[EU-INTEROPERABLE-EUROPE-BOARD]], closing two duplicate queue rows.
+> Reading the Board's own governance page on
+> `interoperable-europe.ec.europa.eu` directly confirms it is
+> `governed-by` [[EU-INTEROPERABLE-EUROPE-ACT]] and `influences`
+> [[EU-EIF]] — shaping the framework's next revision is one of its stated
+> tasks. This **partially** answers the EIF/Act relationship both of
+> those entities' own files had flagged as open: it tells us the Board
+> works on the EIF's revision, not whether the Act gives the EIF itself
+> legal force, which stays open and queued.
+>
 > **The `level` vocabulary is no longer a blocker.** `level: subnational` was
 > added 2026-08-21 and the three Belgian sub-federal ODD instruments are
 > modelled under it. OSLO/Digitaal Vlaanderen and the Comunidades Autónomas
@@ -403,7 +414,6 @@ by accident.
 | Nationaal Groeifonds | Funds [[NL-HEALTH-RI]] | Batch 5+ | Batch 5 / 2026-08-14 |
 | Nationaal Wegenbestand (NWB) | Part of the [[NL-NDW]] expansion | Batch 5+ | Batch 5 / 2026-08-14 |
 | ODISSEI | Research infrastructure organisation named alongside DANS/RIVM/NWO/SIDN, all now modelled; ODISSEI alone remains unresearched | Batch 5+ | Batch 2; carried |
-| Interoperable Europe Board | Adopts new EIF versions; needed to resolve the EIF/Act relationship | Batch 9 | Batch 7; carried |
 | Free Flow of Non-Personal Data Regulation | Third repeal target of [[EU-DIGITAL-OMNIBUS]] | Batch 9 | Batch 8 / 2026-08-14 |
 | EUR-Lex citation for the AI Act | [[EU-AI-ACT]] lacks an Official Journal link | Batch 9 | Batch 8 / 2026-08-14 |
 | Dutch EUDI Wallet implementation | Every member state must provide one; no Dutch arrangement researched | Batch 9+ | Batch 8 / 2026-08-14 |
@@ -418,7 +428,6 @@ by accident.
 | ITU standards | [[UN-ITU]] exists but no ITU standard is modelled | Later | Batch 13 / 2026-08-14 |
 | UNCTAD CSTD working group on data governance | May warrant an `initiative` entity if its outputs are substantive | Later | Batch 13 / 2026-08-14 |
 | Data quality, information management, digital identity, AI, data sharing, API and knowledge-graph standards | Batch 14's scope lists all of these; **only information security (27001/27002) and metadata (DCAT) were covered** | Later | Batch 14 / 2026-08-14 |
-| **Interoperable Europe Board** | Still not created — two passing mentions only | Later | Batch 7; carried |
 | W3C source for DCAT | [[INTL-DCAT]] rests on second-hand descriptions; the top of the flagship standards chain | Batch 14 | Batch 9 / 2026-08-14 |
 | W3C (the organisation) | Needed for [[INTL-DCAT]]'s `maintained-by` | Batch 13 | Batch 9 / 2026-08-14 |
 | GeoDCAT-AP and StatDCAT-AP | Extensions of [[EU-DCAT-AP]]; GeoDCAT-AP would likely connect [[NL-GEONOVUM]]'s geo and metadata work | Later | Batch 9 / 2026-08-14 |
