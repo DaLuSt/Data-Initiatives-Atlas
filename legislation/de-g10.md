@@ -19,11 +19,11 @@ region: EU
 
 status: active
 confidence: medium
-coverage: low
+coverage: medium
 verification: primary-source
-start_date: null
+start_date: 2001-06-26
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -37,6 +37,7 @@ related_entities:
   - DE-BNDG
   - DE-BVERFSCHG
   - DE-MADG
+  - DE-G10-KOMMISSION
 relationships: []
 
 sources:
@@ -51,6 +52,15 @@ sources:
     url: "https://geheimdienste.org/recht-und-gesetz"
     publisher: "geheimdienste.org"
     accessed: "2026-08-22"
+  - title: "G 10 — Gesetz zur Beschränkung des Brief-, Post- und Fernmeldegeheimnisses"
+    url: "https://bundestag.github.io/gesetze/g/g10_2001/"
+    publisher: "Deutscher Bundestag (community-maintained statute mirror)"
+    accessed: "2026-09-05"
+    note: "gesetze-im-internet.de's own text (g10_2001/BJNR125410001.html) returned HTTP 503 on repeated attempts this pass; this mirror substitutes."
+  - title: "Artikel 10-Gesetz"
+    url: "https://de.wikipedia.org/wiki/Artikel_10-Gesetz"
+    publisher: "Wikipedia"
+    accessed: "2026-09-05"
 ---
 
 # Artikel 10-Gesetz (G10)
@@ -60,6 +70,10 @@ sources:
 > Nachrichtendienste des Bundes" page were read directly and confirmed the
 > claims below. `geheimdienste.org` was fetched but not needed to support
 > any claim once the two official pages had.
+>
+> **Updated 2026-09-05**: the act's enactment date is now sourced and the
+> G10-Kommission it establishes is now modelled as
+> [[DE-G10-KOMMISSION]].
 
 ## Description
 
@@ -95,13 +109,19 @@ The act is universally called the *Artikel 10-Gesetz*, after the article of
 the Basic Law it limits. A statute named for the right it restricts is
 unusual and worth noticing: the constitutional cost is in the title.
 
-## Not modelled
+## The enactment date and G10-Kommission, closed 2026-09-05
 
-- The **G10-Kommission**, the body authorising measures under this act. It
-  is distinct from [[DE-PKGR]] and from [[DE-UKR]] and was not researched,
-  so Germany appears here with two oversight bodies where it has at least
-  three.
+This entity previously carried `coverage: low` and `start_date: null`.
+`gesetze-im-internet.de`'s own text returned HTTP 503 on repeated
+attempts this pass; `bundestag.github.io`'s community-maintained mirror,
+read directly, substitutes: "Ausfertigungsdatum: 26.06.2001" —
+`start_date` is now recorded as **26 June 2001**. The same mirror's §
+15 constitutes the **G10-Kommission**, the body authorising measures
+under this act, previously flagged as unmodelled here and on
+[[DE-PKGR]]. It is now [[DE-G10-KOMMISSION]], distinct from [[DE-PKGR]]
+and from [[DE-UKR]].
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter. The bundestag.github.io mirror and
+de.wikipedia.org's dedicated article added and read directly 2026-09-05.
