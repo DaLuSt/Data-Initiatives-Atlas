@@ -191,7 +191,12 @@
 > Federal Ministry of Finance — confirmed by reading `itzbund.de`'s own
 > page directly. Carries the `applies-to` [[DE-XOEV]] certification edge
 > that had previously lived only in [[DE-XOEV]]'s own evidence text.
-> Bundesdruckerei remains unmodelled.
+> [[DE-BUNDESDRUCKEREI]] closes the sibling item the same pass: reading
+> the Federal Ministry of Finance's own January 2019 Monatsbericht
+> analysis directly confirms it is 100% federally owned since a 2009
+> reacquisition (privatised in 2000, sold to Apax Partners), with BMF
+> exercising shareholder duties — a `part-of` [[DE]] anchor edge for
+> want of a Bundesministerium der Finanzen entity.
 >
 > **The `level` vocabulary is no longer a blocker.** `level: subnational` was
 > added 2026-08-21 and the three Belgian sub-federal ODD instruments are
@@ -368,7 +373,6 @@ by accident.
 | Individual XÖV standards | XPersonenstand, XMeld, XBau, XPlanung and others. Only [[DE-XRECHNUNG]] is modelled. Creating one entity per standard would inflate the layer without adding structure (brief §1) | Later | Germany batch |
 | National Gaia-X hubs | Germany's and Austria's hubs are cited as sources on [[EU-GAIA-X]]. A `DE-GAIA-X-HUB` would be a legitimate national entity, not a duplicate — but nothing beyond website existence was established | Later | Germany batch |
 | Mobility Data Marketplace (MDM) | Replaced by [[DE-MOBILITHEK]] as National Access Point. **No superseded entity created** — unlike [[DE-IWG]], nothing beyond the replacement is established | Later | Germany batch |
-| Bundesdruckerei | Federal printing/eID body, not yet modelled. **ITZBund closed 2026-09-05** — see below | Later | Germany batch |
 | OZG-Änderungsgesetz | A substantial amending act, deliberately **not** given its own entity — doing so would force the same `supersedes` compromise as [[DE-NIS2UMSUCG]] → [[DE-BSIG]]. Revisit if an amendment relationship type is added | Blocked | Germany batch |
 | Lenkungsgremium GDI-DE | Governing committee of [[DE-GDI-DE]]; would be reachable only from that one entity | Later | Germany batch |
 

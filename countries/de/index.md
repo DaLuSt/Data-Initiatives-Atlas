@@ -64,6 +64,9 @@ Anchor entity: [[DE]]
   founded 1970; added 2026-09-04)_
 - [[DE-ITZBUND]] — central federal IT service provider; certifies XÖV
   conformity _(founded 2016; added 2026-09-05)_
+- [[DE-BUNDESDRUCKEREI]] — federal printing/secure-identity company;
+  produces German ID cards and passports, supports eID integration
+  _(100% federally owned since 2009; added 2026-09-05)_
 
 ## Legislation
 
@@ -186,4 +189,5 @@ same ministry as [[DE-BSI]] and [[DE-DESTATIS]].
   Manufacturing-X, the IDSA/IDS-RAM. All queued in
   `discovery/research-queue.md`. ~~FIM~~ is now [[DE-FIM]] (added
   2026-09-04). ~~DKE~~ is now [[DE-DKE]] (added 2026-09-04). ~~ITZBund~~
-  is now [[DE-ITZBUND]] (added 2026-09-05).
+  is now [[DE-ITZBUND]], and ~~Bundesdruckerei~~ is now
+  [[DE-BUNDESDRUCKEREI]] (both added 2026-09-05).
