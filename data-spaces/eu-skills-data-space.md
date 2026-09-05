@@ -22,7 +22,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -31,6 +31,7 @@ domains:
 organisations: []
 related_entities:
   - EU-COMMON-DATA-SPACES
+  - EU-DS4SKILLS
 relationships:
   - type: part-of
     target: EU-COMMON-DATA-SPACES
@@ -47,6 +48,11 @@ sources:
   - title: "Common European data spaces"
     url: "https://digital-strategy.ec.europa.eu/en/policies/data-spaces"
     publisher: "European Commission — Shaping Europe's digital future"
+    accessed: "2026-09-05"
+  - title: "Introducing DS4Skills: Europe's first Data Space for Skills"
+    url: "https://hadea.ec.europa.eu/news/introducing-ds4skills-europes-first-data-space-skills-2025-07-01_en"
+    publisher: "European Health and Digital Executive Agency (HaDEA)"
+    accessed: "2026-09-05"
 ---
 
 # Common European skills data space
@@ -54,6 +60,11 @@ sources:
 > **Verified 2026-08-21.** Every source this entity cites is on a domain the
 > repository owner confirmed read and correct — `europa.eu`. `verification:
 > primary-source`. See `docs/re-verification.md` §"The confirmed domains".
+>
+> **Updated 2026-09-05**: the deployment-projects gap this entity itself
+> flagged is now partly closed. [[EU-DS4SKILLS]] models one of the two named
+> rollout projects. The ESCO/Europass/European Skills Agenda question was
+> checked directly rather than left as a presumption — see below.
 
 ## Description
 
@@ -71,17 +82,28 @@ That does not make the domain well covered. Six of ten countries still have
 no education entity at all, and the gap is logged in
 `discovery/candidates.md` as part of the lopsided-domain finding.
 
-## ⚠ `coverage: low`
+## ⚠ `coverage: low`, narrowed
 
-What this data space contains, who deploys it, and how it relates to
-Europass, ESCO or the European Skills Agenda were **not established**. The
-entity records that skills is one of the fourteen and little else.
+What this data space contains and who deploys it is now partly established.
+Reading digital-strategy.ec.europa.eu's own page directly (2026-09-05): under
+its rollout listing for skills, exactly two projects are named —
+**[[EU-DS4SKILLS]]** and **EDGE-Skills**. The first is now modelled; the
+second is not.
+
+How it relates to Europass, ESCO or the European Skills Agenda was checked
+directly this pass, not merely presumed: neither DS4Skills' own site nor
+HaDEA's announcement of it mentions any of the three. That is a
+checked-and-negative finding, not an unresearched gap.
 
 ## Not modelled
 
-- **ESCO**, **Europass** and the **European Skills Agenda** — the existing EU
-  skills-data machinery this data space presumably builds on. None is an
-  Atlas entity, and presuming is not sourcing.
+- **EDGE-Skills**, the other named rollout project, alongside
+  [[EU-DS4SKILLS]].
+- **ESCO**, **Europass** and the **European Skills Agenda** — previously
+  presumed to be the existing EU skills-data machinery this data space
+  builds on. Checked directly against [[EU-DS4SKILLS]]'s own sources
+  (2026-09-05): neither is mentioned. Still not Atlas entities, and still
+  not confirmed connected to this data space by any source read.
 
 ## Sources
 
