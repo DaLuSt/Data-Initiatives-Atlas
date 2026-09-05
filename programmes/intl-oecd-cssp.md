@@ -22,13 +22,13 @@ country: null
 region: null
 
 status: active
-confidence: low
+confidence: medium
 coverage: low
 verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -54,6 +54,10 @@ sources:
   - title: "Statistical cooperation — introduction (alternate path)"
     url: "https://ec.europa.eu/eurostat/statistics-explained/index.php/Statistical_cooperation_-_introduction"
     publisher: "Eurostat — European Commission"
+  - title: "Committee on Statistics and Statistical Policy — On-Line Guide to OECD Intergovernmental Activity"
+    url: "https://oecdgroups.oecd.org/Bodies/ShowBodyView.aspx?BodyID=7229&Lang=en"
+    publisher: "OECD"
+    accessed: "2026-09-05"
 ---
 
 # OECD Committee on Statistics and Statistical Policy
@@ -61,6 +65,9 @@ sources:
 > **Verified 2026-08-21.** Every source this entity cites is on a domain the
 > repository owner confirmed read and correct — `europa.eu`. `verification:
 > primary-source`. See `docs/re-verification.md` §"The confirmed domains".
+>
+> **Updated 2026-09-05**: the previously-flagged gap — no OECD source cited
+> — is closed. See below.
 
 ## Description
 
@@ -98,11 +105,32 @@ because of it. The two passages also differ on **who is represented** — "the
 EU" in one and "the European Commission" in the other — which is not a
 distinction the Atlas can resolve without reading the page.
 
-`coverage: low` is likewise deliberate: the committee's mandate,
-composition, meeting cadence and outputs are all unrecorded. Everything here
-comes from one Eurostat page, and **no OECD source is cited at all** — the
-committee is described only from the outside, by a participant. That is the
-first thing a re-verification pass should fix.
+`coverage: low` remains: the committee's composition, meeting cadence and
+outputs beyond its mandate statement are still unrecorded.
+
+## An OECD source, found 2026-09-05
+
+The gap flagged above — no OECD source cited at all, the committee
+described only from the outside by a participant — is now closed. The
+OECD's own "On-Line Guide to OECD Intergovernmental Activity" (
+`oecdgroups.oecd.org`, BodyID 7229), read directly, confirms the official
+name is exactly **"Committee on Statistics and Statistical Policy
+(CSSP)"** and states its mandate: the Committee is *"responsible to
+Council for the OECD's statistical policy, both within the Organisation
+and vis-à-vis the rest of the world,"* supporting *"policy-making on the
+basis of high quality, internationally comparable data and evidence-based
+analysis."* It reports to the **OECD Council**, not directly to a body
+called [[INTL-OECD]] as a whole, though `part-of` [[INTL-OECD]] remains
+the closest available Atlas relationship for a body reporting to that
+organisation's own governing Council.
+
+**The CSSP/CSTAT naming question is now partly resolved.** The OECD's own
+page does **not** mention "CSTAT" anywhere — only "CSSP" appears. This
+does not prove CSTAT is wrong (Eurostat's page may describe a distinct or
+now-renamed body, or use an informal label), but it does mean the OECD's
+own primary source corroborates only one of the two names this entity
+carries. `confidence` moves from `low` to `medium` on the strength of that
+independent confirmation.
 
 ## Relationships
 
@@ -112,6 +140,7 @@ first thing a re-verification pass should fix.
 
 ## Sources
 
-Listed in frontmatter. Both entries are the same Eurostat page under its two
-URL forms, which is unusual and is recorded honestly rather than padded out:
-this entity rests on **one document**.
+Three sources: two are the same Eurostat page under its two URL forms
+(recorded honestly rather than padded out), and the OECD's own committee
+page, read directly 2026-09-05, is the first source on this entity that is
+not Eurostat describing OECD from the outside.
