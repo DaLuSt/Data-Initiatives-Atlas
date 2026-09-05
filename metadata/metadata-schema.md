@@ -69,7 +69,8 @@ sources:               # required for any entity making factual claims
 - **coverage**: distinguishes "this area has no relevant initiatives" (would
   be represented by simply not creating entities, with coverage on the
   parent domain/country marked `high`) from "this area has not yet been
-  researched" (`coverage: low` on whatever entity represents that area).
+  researched" (`coverage: low` on whatever entity represents that area, plus
+  a `discovery/research-queue.md` entry).
 - **verification**: how the entity's sources were actually consulted.
   - `primary-source` — the cited sources were retrieved and read.
   - `search-only` — the entity was compiled from search-engine results.
@@ -116,5 +117,4 @@ sources: []
 ---
 ```
 
-Such stubs should carry `status: unknown` and `confidence: low` so they
-surface with a single grep for future research.
+Such stubs should also get a `discovery/research-queue.md` entry.
