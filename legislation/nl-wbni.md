@@ -15,13 +15,13 @@ country: NL
 region: EU
 
 status: superseded
-confidence: medium
+confidence: high
 coverage: low
 verification: primary-source
 
-start_date: null
+start_date: 2018-11-09
 end_date: 2026-08-15
-last_verified: "2026-08-28"
+last_verified: "2026-09-05"
 previous_version: null
 successor: NL-CBW
 
@@ -54,6 +54,10 @@ sources:
     url: "https://wetten.overheid.nl/BWBR0041515"
     publisher: "Overheid.nl (wetten.overheid.nl)"
     accessed: "2026-08-28"
+  - title: "Staatsblad 2018, 389 — commencement decree"
+    url: "https://zoek.officielebekendmakingen.nl/stb-2018-389.html"
+    publisher: "Overheid.nl (officiële bekendmakingen)"
+    accessed: "2026-09-05"
 ---
 
 # Wet beveiliging netwerk- en informatiesystemen (Wbni)
@@ -65,12 +69,19 @@ sources:
 > original NIS Directive), and the page confirms the law's repeal, in its
 > own words, effective 15 August 2026. The page's own Article 35 leaves
 > the law's commencement to a royal decree "to be determined," without
-> stating the actual date the decree set; a WebSearch cross-check
-> (Eerste Kamer / NCTV reporting) suggests 9 November 2018, but that is
-> not adopted into `start_date` since no directly-read source states it —
-> left `null` rather than padded, and recorded here only as an
-> unconfirmed lead for a future pass. All three of this entity's sources
-> are now read directly — a genuine majority.
+> stating the actual date the decree set — recorded as an unconfirmed
+> lead for a future pass.
+>
+> **That lead is now closed, 2026-09-05.** The commencement decree itself
+> — Staatsblad 2018, 389, read directly — states verbatim: *"Met ingang
+> van 9 november 2018 treden in werking: a. de Wet beveiliging netwerk- en
+> informatiesystemen..."* (with effect from 9 November 2018, the following
+> enter into force: a. the Wet beveiliging netwerk- en informatiesystemen).
+> `start_date` is set to **2018-11-09** accordingly; a small number of
+> CSIRT/digital-service-provider-specific provisions commenced later, on 1
+> January 2019, per the same decree — not adopted as the entity's own
+> `start_date` since it describes specific provisions, not the Act as a
+> whole. `confidence` raised to `high`.
 
 ## Description
 
@@ -97,9 +108,12 @@ The original NIS Directive is not yet an Atlas entity in its own right
 still the first time this entity's own basis has been confirmed from its
 own text rather than inferred from its successor's documentation. The
 page's own Article 35 left the law's commencement to a royal decree without
-stating the date that decree set; WebSearch cross-checks suggest 9 November
-2018, but that is recorded only as an unconfirmed lead, not as
-`start_date`.
+stating the date that decree set. **That decree is now read directly
+(2026-09-05)**: Staatsblad 2018, 389 states verbatim "Met ingang van 9
+november 2018 treden in werking: a. de Wet beveiliging netwerk- en
+informatiesystemen..." `start_date` is set to **2018-11-09** on that
+basis; a small number of CSIRT/digital-service-provider-specific
+provisions in the same decree commenced later, on 1 January 2019.
 
 `status: superseded` with `end_date: 2026-08-15` now records, rather than
 merely schedules, the end of the Wbni's operative period — corrected this
@@ -114,8 +128,9 @@ directly.
 
 ## Sources
 
-All three listed sources read directly. `ncsc.nl` and `nctv.nl` (prior
-pass) describe the successor act; `wetten.overheid.nl`'s BWBR0041515 (this
-pass, 2026-08-28) is the Wbni's own official text, confirming its own basis
-in EU Directive 2016/1148 and its own repeal date. That resolves what the
-prior pass could not find, and gives a genuine majority.
+All four listed sources read directly. `ncsc.nl` and `nctv.nl` (2026-08-27)
+describe the successor act; `wetten.overheid.nl`'s BWBR0041515 (2026-08-28)
+is the Wbni's own official text, confirming its own basis in EU Directive
+2016/1148 and its own repeal date; Staatsblad 2018, 389 (2026-09-05) is the
+commencement decree, confirming the Act's own entry-into-force date in its
+own words.
