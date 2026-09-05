@@ -34,6 +34,7 @@ related_entities:
   - UN-CEFACT
   - UN-UNECE
   - UN-LOCODE
+  - UN-CCL
 relationships:
   - type: maintained-by
     target: UN-CEFACT
@@ -110,9 +111,10 @@ because a European connection was found for it. This pass looked again
 targeted at EDIFACT specifically) and still found nothing connecting it to
 an EU or national instrument — the asymmetry with [[UN-LOCODE]] holds.
 
-The **Core Component Library** is not created. Nothing beyond a name was
-found, and a node built on that would be the thin encyclopedic entity the
-taxonomy threshold exists to prevent.
+**The Core Component Library is now created, 2026-09-05** — [[UN-CCL]].
+A different source (`interoperable-europe.ec.europa.eu`, reached via a
+redirect from `joinup.ec.europa.eu`) supplied real substance where earlier
+searches had found only a name, closing the gap this note used to flag.
 
 ## Relationships
 

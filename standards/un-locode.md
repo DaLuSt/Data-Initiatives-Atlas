@@ -36,6 +36,8 @@ related_entities:
   - UN-CEFACT
   - UN-UNECE
   - EU-EMSWE
+  - UN-CCL
+  - UN-IMO-GISIS
 relationships:
   - type: maintained-by
     target: UN-CEFACT

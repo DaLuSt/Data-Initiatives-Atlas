@@ -21,7 +21,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -31,6 +31,7 @@ organisations: []
 related_entities:
   - UN
   - UN-FPOS
+  - UN-GLOBAL-PLATFORM
 relationships:
   - type: part-of
     target: UN
@@ -101,6 +102,8 @@ is one of the clearest remaining gaps in the Atlas's vertical structure.
 
 - Part of [[UN]].
 - Maintains [[UN-FPOS]].
+- `maintained-by` edge (UNSD as target) recorded on [[UN-GLOBAL-PLATFORM]]'s
+  own file, added 2026-09-05 — UNSD manages its regional-hub operations.
 
 ## Sources
 
