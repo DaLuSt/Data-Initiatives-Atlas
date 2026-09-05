@@ -22,7 +22,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -91,6 +91,11 @@ sources:
 > the claims below. `gdprhub.eu` returned a bot-defense challenge page
 > rather than content and was not read; it remains listed as a source but
 > nothing here is attributed to it alone.
+>
+> **Drift fixed 2026-09-05.** The `applies-to` → [[DE-BDSG]] edge had
+> already been added to frontmatter, sourced to de.wikipedia.org's §§
+> 11/12 BDSG citation, but the body still described the link as
+> unasserted. Corrected below.
 
 ## Description
 
@@ -131,17 +136,17 @@ the BfDI is *one of seventeen* German ones. Anyone reading `country: DE`
 plus `type: organisation` plus "data protection authority" and inferring
 national coverage would be wrong.
 
-## Two relationships that are not asserted
+## Two refusals, both now closed
 
-- **`implements` or `governed-by` → [[DE-BDSG]].** The BfDI is plainly the
-  authority the BDSG constitutes and empowers, and the BDSG's own sources
-  discuss the supervisory regime. But no source read states the connection
-  in terms the Atlas can cite, and the BfDI's own task page describes
-  powers without being quoted on their statutory basis.
+- **→ [[DE-BDSG]].** Previously refused (no source read stated the
+  connection in citable terms). de.wikipedia.org, read directly, closes
+  it: the office is bound by **§§ 11 and 12 BDSG** (term of office and
+  remuneration), which is the BfDI's own statutory basis under the act.
+  Recorded as `applies-to` rather than `governed-by` — the source names
+  the office's terms of service under the act, not a founding clause, so
+  the weaker type stays deliberately conservative.
 The `participates-in` → [[EU-EDPB]] refusal that used to stand here is
-**now closed** — see below.
-
-The remaining one is logged in `discovery/unresolved.md`.
+**also closed** — see below.
 
 ## The EDPB refusal, and how it was closed
 

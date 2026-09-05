@@ -134,7 +134,6 @@ is what to request.
 | [[DE-MDS]] → [[EU-EMDS]] | Same refusal Batch 10 made for [[EU-EMDS]] → [[NL-NTM]]. **Two national mobility data spaces now sit unconnected to their apparent European parent** | Closes both at once | Open |
 | [[DE-REGMOG]] → [[EU-SDG]] | Once-only is the SDG Regulation's organising idea and RegMoG is Germany's once-only vehicle, but RegMoG is domestic register law and no source connects them | — | Open |
 | [[EU-GAIA-X]] → [[EU-COMMON-DATA-SPACES]] / [[EU-DSSC-BLUEPRINT]] | Plainly part of the same European effort; the Commission source cited is *about* Gaia-X, not a statement of relationship | — | Open |
-| [[DE-BFDI]] → [[DE-BDSG]] | The BfDI is the authority the BDSG constitutes, but no source read states it in citable terms | — | Open |
 
 ### Factual gaps
 
@@ -168,7 +167,6 @@ is what to request.
 |---|---|---|
 | [[BE-STATBEL]] → [[EU-EUROSTAT]] / [[UN-FPOS]] | Nothing found. ⚠ **The claim that "none connects upward" was wrong when written and was repeated for three batches** — [[NL-CBS]] already carried a `participates-in` edge to Eurostat, with ESS-membership reasoning in its evidence. Corrected in the UN batch. | ✅ **Partly resolved — UN batch, 2026-08-16.** Statbel is now `part-of` [[EU-ESS]]. ⚠ **The re-verification pass of 2026-08-26 found the same wrong claim still standing in [[BE-STATBEL]]'s own body prose**, ten days after the frontmatter was corrected — a second instance of the frontmatter/body drift bug also found on [[BE-APD]]. Corrected this pass; Wikipedia additionally corroborates with "Statbel serves as Belgium's official representative to Eurostat." The [[UN-FPOS]] half is still open. |
 | [[BE-KSZ]] → [[EU-SDG]] | The KSZ predates the regulation by 28 years and no source connects them — the same refusal made for [[DE-REGMOG]]. | Open |
-| [[BE-DATA-GOV-BE]] → [[BE-HERGEBRUIK-WET]] | Portal and open-data act, obviously related, no source states it. Same call as [[DE-GOVDATA]] / [[DE-DNG]]. | Open |
 | [[BE-BOSA]] → [[BE-BELGIF]] | BELGIF is sourced as co-owned by the federal state, Regions and Communities — precisely not something BOSA owns. | Open (deliberate) |
 
 ### Factual gaps — Belgium
