@@ -313,12 +313,6 @@ model only the state half.
 | [[ES-INCIBE]] / [[ES-CCN]] → [[ES-LCGC]] | Reporting describes an institutional dispute over a draft allocation of competences. **A dispute is not a relationship**, and the law is not in force. | Open (deliberate) |
 | [[ES-ENI]] ↔ [[ES-ENS]] | Consistently presented together in Spanish practice; no source read establishes a relationship between the instruments. | Open |
 
-### The one asserted link that needs scrutiny
-
-| Link | Concern | Status |
-|---|---|---|
-| [[ES-INE]] → [[EU-EUROSTAT]] | The sources describe a **three-party structure** — the European Statistical System comprises Eurostat *and* the member states' statistical offices — not a bilateral relationship. The Atlas records `related-to` at `source: interpretation`, `confidence: low`, and states the gap in the `evidence` string. **The correct fix is an `EU-ESS` entity** with `part-of` edges from Eurostat and from all national offices; it was deliberately not created inside a country batch. That single entity would connect four national statistical offices at once. | **Open — modelling, high value** |
-
 ### Factual gaps — Spain
 
 | Entity | Question | Status |
