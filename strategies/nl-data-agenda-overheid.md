@@ -21,9 +21,9 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-05"
 previous_version: null
-successor: null
+successor: NL-WERKAGENDA-WAARDENGEDREVEN-DIGITALISEREN
 
 domains:
   - DOMAIN-GOVERNMENT
@@ -31,6 +31,8 @@ organisations:
   - NL-BZK
 related_entities:
   - NL-DIGIBETER
+  - NL-WERKAGENDA-WAARDENGEDREVEN-DIGITALISEREN
+  - NL-IBDS
 relationships:
   - type: part-of
     target: NL-DIGIBETER
@@ -94,13 +96,13 @@ directly: it frames Dutch digitalisation policy as three successive phases
 (2022-2024)," and the "Nederlandse Digitaliseringsstrategie (2025)" — in
 explicitly past tense for the first two. Since this agenda is part of
 NL DIGIbeter, and NL DIGIbeter's own 2018–2020 period has ended per that
-page, `status: superseded` is a reasonable reading, though **no successor
-entity is named**: the intervening "Werkagenda Waardengedreven
-Digitaliseren" is not yet an Atlas entity and is queued in
-`discovery/research-queue.md`. `successor` is left `null` rather than
-pointing at [[NL-NDS]] directly, since the 2025 strategy is two phases
-removed and the digitaleoverheid.nl page itself frames it as connecting
-existing plans rather than replacing them.
+page, `status: superseded` is a reasonable reading. **`successor` closed
+2026-09-05**: the intervening [[NL-WERKAGENDA-WAARDENGEDREVEN-DIGITALISEREN]]
+is now an Atlas entity, matching the same chain [[NL-DIGIBETER]] itself
+carries. `successor` points there rather than at [[NL-NDS]] directly,
+since the 2025 strategy is two phases removed and the digitaleoverheid.nl
+page itself frames it as connecting existing plans rather than replacing
+them.
 
 ## Relationships
 
