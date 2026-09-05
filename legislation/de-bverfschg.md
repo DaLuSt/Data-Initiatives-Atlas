@@ -18,11 +18,11 @@ region: EU
 
 status: active
 confidence: medium
-coverage: low
+coverage: medium
 verification: primary-source
-start_date: null
+start_date: "1990-12-20"
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -49,6 +49,10 @@ sources:
     url: "https://geheimdienste.org/recht-und-gesetz"
     publisher: "geheimdienste.org"
     accessed: "2026-08-22"
+  - title: "Bundesverfassungsschutzgesetz (BVerfSchG) — BJNR029700990"
+    url: "https://www.gesetze-im-internet.de/bverfschg/BJNR029700990.html"
+    publisher: "Bundesministerium der Justiz / juris (Gesetze im Internet)"
+    accessed: "2026-09-05"
 ---
 
 # Bundesverfassungsschutzgesetz (BVerfSchG)
@@ -58,6 +62,10 @@ sources:
 > Nachrichtendienste des Bundes" page were read directly and confirmed the
 > claims below. `geheimdienste.org` was fetched but not needed to support
 > any claim once the two official pages had.
+>
+> **Updated 2026-09-05**: the act's own consolidated text was found on
+> `gesetze-im-internet.de` and read directly, closing the previously
+> flagged citation gap and sourcing `start_date`.
 
 ## Description
 
@@ -71,12 +79,23 @@ des Bundes" page (2026-08-22): "Die wesentlichen Rechtsgrundlagen für
 Datenverarbeitungen der Nachrichtendienste des Bundes ... sind das
 BVerfSchG, das MADG, das BNDG, das G10G und das TKG."
 
-## ⚠ `coverage: low`
+## The Gesetze-im-Internet gap, closed 2026-09-05
 
-No Gesetze-im-Internet URL for this act was returned by search, unlike
-[[DE-BNDG]] and [[DE-PKGRG]]. Its date, structure and amendment history are
-all unestablished; what is sourced is that it exists, what it governs, and
-that it belongs to the set of five instruments the BfDI names.
+This entity previously carried `coverage: low` because no
+Gesetze-im-Internet URL had been found by search, unlike [[DE-BNDG]] and
+[[DE-PKGRG]]. A fresh search located it: `gesetze-im-internet.de` hosts
+the act's own consolidated text at `BJNR029700990.html`, whose header,
+read directly, gives its full official title — "Gesetz über die
+Zusammenarbeit des Bundes und der Länder in Angelegenheiten des
+Verfassungsschutzes und über das Bundesamt für Verfassungsschutz" — and
+states "Ausfertigungsdatum: 20.12.1990", also cited there in full as
+"Bundesverfassungsschutzgesetz vom 20. Dezember 1990 (BGBl. I S. 2954,
+2970)". `start_date` is now recorded as **20 December 1990** rather than
+left `null`.
+
+Its structure and amendment history beyond the enactment date remain
+unread — this pass confirmed the citation, not the act's substantive
+provisions.
 
 ## The federal/Länder question this act raises and the Atlas cannot answer
 
@@ -91,4 +110,5 @@ as describing German domestic intelligence — the same warning
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter. The act's own consolidated text at
+gesetze-im-internet.de added and read directly 2026-09-05.

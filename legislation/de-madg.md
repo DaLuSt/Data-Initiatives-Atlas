@@ -18,11 +18,11 @@ region: EU
 
 status: active
 confidence: medium
-coverage: low
+coverage: medium
 verification: primary-source
-start_date: null
+start_date: "1990-12-20"
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -49,6 +49,11 @@ sources:
     url: "https://geheimdienste.org/recht-und-gesetz"
     publisher: "geheimdienste.org"
     accessed: "2026-08-22"
+  - title: "Gesetz über den militärischen Abschirmdienst (MADG)"
+    url: "https://bundestag.github.io/gesetze/m/madg/"
+    publisher: "Deutscher Bundestag (community-maintained statute mirror)"
+    accessed: "2026-09-05"
+    note: "gesetze-im-internet.de's own madg_2026 URL for this act returned HTTP 503 on repeated attempts this pass; this mirror substitutes for it and independently confirms the same 20.12.1990 enactment date a WebSearch summary of the official site had also returned."
 ---
 
 # MAD-Gesetz (MADG)
@@ -58,6 +63,10 @@ sources:
 > Nachrichtendienste des Bundes" page were read directly and confirmed the
 > claims below. `geheimdienste.org` was fetched but not needed to support
 > any claim once the two official pages had.
+>
+> **Updated 2026-09-05**: the act's own enactment date is now sourced via
+> a community-maintained mirror, `gesetze-im-internet.de` itself being
+> unreachable (HTTP 503) this pass.
 
 ## Description
 
@@ -84,12 +93,24 @@ the civilian one:
 | France | [[FR-DRM]], [[FR-DRSD]] | [[FR-LOI-RENSEIGNEMENT-2015]] — shared with all |
 | United Kingdom | *not modelled* | — |
 
-## ⚠ `coverage: low`
+## The statute citation, closed 2026-09-05
 
-As for [[DE-BVERFSCHG]]: no official statute URL was returned by search.
-The act is named consistently across three sources; nothing more about it is
-established.
+As for [[DE-BVERFSCHG]] (closed the same day): no official statute URL had
+previously been returned by search. This pass found one — the act now
+appears on `gesetze-im-internet.de` under a re-numbered URL
+(`madg_2026`) — but the official site returned HTTP 503 on every attempt
+this pass, consistent with intermittent unavailability noted elsewhere in
+this Atlas. `bundestag.github.io`'s community-maintained statute mirror,
+read directly, substitutes: "Ausfertigungsdatum: 1990-12-20", most
+recently amended by "Art. 2 G v. 7.12.2011 I 2576". This is the
+**original 1990 act**, not a distinct 2026 statute — the `madg_2026`
+folder name on the official site reflects a URL renumbering, not a new
+enactment date, and this pass's WebSearch summary of that same official
+page independently returned the identical 1990-12-20 date.
+`start_date` is now recorded as **20 December 1990**.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter. The bundestag.github.io mirror added and read
+directly 2026-09-05, substituting for the official gesetze-im-internet.de
+page (HTTP 503 on repeated attempts this pass).
