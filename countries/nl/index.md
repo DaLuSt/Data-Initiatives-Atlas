@@ -107,6 +107,14 @@ see `discovery/research-queue.md`._
 - [[NL-ACICT]] — Adviescollege ICT-toetsing _(formerly Bureau
   ICT-toetsing; statutory since 2024; added 2026-09-04)_
 
+### Cybersecurity and national security
+
+- [[NL-NCSC]] — Nationaal Cyber Security Centrum, sectoral CSIRT under
+  [[NL-CBW]] _(part of the Ministry of Justice and Security; added to
+  this index 2026-09-05)_
+- [[NL-NCTV]] — Nationaal Coördinator Terrorismebestrijding en Veiligheid
+  _(same ministry; added 2026-09-05)_
+
 ### Koepelorganisaties (decentralised tiers)
 
 - [[NL-VNG]] — Vereniging van Nederlandse Gemeenten (municipalities)
@@ -125,6 +133,9 @@ see `discovery/research-queue.md`._
 - [[NL-NICTIZ]] — Nictiz (health information standards)
 - [[NL-DIGIGO]] — digital collaboration foundation, built environment
   sector; initiator of [[NL-DSGO]] _(added 2026-09-04)_
+- ~~[[NL-NOIV]]~~ — Nederland Open in Verbinding, historical action plan
+  and programme office (2007–2011); `produces` [[NL-BOMOS]]
+  _(`status: superseded`; added 2026-09-05)_
 
 ### Registries and statistics
 
@@ -192,6 +203,8 @@ threshold and are queued._
 - [[NL-UAVG]] — Uitvoeringswet AVG → implements [[EU-GDPR]]
 - [[NL-WHO]] — Wet hergebruik van overheidsinformatie → implements [[EU-OPEN-DATA-DIRECTIVE]]
 - [[NL-CBW]] — Cyberbeveiligingswet → implements [[EU-NIS2]] _(in force 15 Aug 2026)_
+- [[NL-WWKE]] — Wet weerbaarheid kritieke entiteiten → implements
+  [[EU-CER]] _(in force 15 Aug 2026, alongside NL-CBW; added 2026-09-05)_
 
 ### Dutch national legislation
 

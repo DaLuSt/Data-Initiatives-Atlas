@@ -38,6 +38,7 @@ organisations: []
 related_entities:
   - NL-CBW
   - EU-NIS2
+  - NL-NCTV
 relationships:
   - type: applies-to
     target: NL-CBW
@@ -135,8 +136,10 @@ being upgraded to a stronger exclusive-authority claim.
 - The full **doorverwijsboom** — which sectoral CSIRTs and competent
   authorities cover which of the roughly 8,000 organisations under the Cbw
   (confirmed via ncsc.nl and nctv.nl, both read directly).
-- The **NCTV** and the Ministry of Justice and Security more broadly, the
-  NCSC's parent.
+- The Ministry of Justice and Security itself, the NCSC's parent
+  ministry — [[NL-NCTV]], a sibling directorate-general-level body within
+  the same ministry, is now modelled (added 2026-09-05), but the ministry
+  itself is not yet an Atlas entity.
 
 ## Relationships
 
