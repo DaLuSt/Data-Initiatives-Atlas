@@ -19,7 +19,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -53,6 +53,13 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: participates-in
+    target: INTL-ISO
+    source: fact
+    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP. iso.org itself is confirmed domain-wide blocked to this environment's fetch tooling (the same limit logged on other ISO-membership questions in this Atlas), so en.wikipedia.org's dedicated NSAI article was read directly instead (2026-09-05): 'The National Standards Authority of Ireland (NSAI) is the International Organization for Standardization (ISO) member body for Ireland.' An independent, dedicated article stating membership in its own words, the same evidence tier used for GB-BSI and DE-DIN's ISO edges."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "National Standards Authority of Ireland"
@@ -63,6 +70,10 @@ sources:
     url: "https://standards.cencenelec.eu/ords/f?p=CEN:5"
     publisher: "CEN-CENELEC"
     accessed: "2026-08-22"
+  - title: "National Standards Authority of Ireland"
+    url: "https://en.wikipedia.org/wiki/National_Standards_Authority_of_Ireland"
+    publisher: "Wikipedia"
+    accessed: "2026-09-05"
 ---
 
 # National Standards Authority of Ireland (NSAI)
@@ -99,9 +110,14 @@ rather than from a list the Atlas cannot read.
 basis, together with the four bodies created in the same batch —
 [[BE-NBN]], [[FR-AFNOR]], [[ES-UNE]] and [[PL-PKN]].
 
-**[[INTL-ISO]] is still not asserted.** The rule covers the European
-organisations and says nothing about ISO. [[GB-BSI]] and [[DE-DIN]] carry
-ISO edges because their own sources state it; NSAI's do not.
+**[[INTL-ISO]] — closed 2026-09-05.** The CEN-CENELEC composition rule
+covers the European organisations and says nothing about ISO. iso.org
+itself is confirmed domain-wide blocked to this environment's fetch
+tooling, so en.wikipedia.org's dedicated NSAI article was read directly
+instead: "The National Standards Authority of Ireland (NSAI) is the
+International Organization for Standardization (ISO) member body for
+Ireland." `participates-in` [[INTL-ISO]] is now asserted, the same
+evidence tier [[GB-BSI]] and [[DE-DIN]]'s ISO edges carry.
 
 ## Not modelled
 
@@ -112,9 +128,10 @@ ISO edges because their own sources state it; NSAI's do not.
 
 ## Sources
 
-Listed in frontmatter, both read directly this pass.
+Listed in frontmatter. The first two read directly in the 2026-08-22 pass;
+the Wikipedia article added and read directly 2026-09-05 to close the ISO
+membership question.
 
 ## Relationships
 
-- `participates-in` [[EU-CEN]] and [[EU-CENELEC]] — now present in the
-  structured data as well as this prose.
+- `participates-in` [[EU-CEN]], [[EU-CENELEC]] and [[INTL-ISO]].
