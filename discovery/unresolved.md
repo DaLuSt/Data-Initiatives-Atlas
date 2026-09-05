@@ -818,10 +818,15 @@ directly, a formal 2-of-2 majority, but both describe the Cbw/NIS2 side of
 the supersession, not the Wbni's own text, commencement date, or its
 relationship to the original NIS Directive. Reading them confirmed the
 *supersession date* (useful for correcting `status` above) but not the
-entity's *own* claims, so promotion was not taken on a technicality. A
-`wetten.overheid.nl` BWBR citation for the Wbni itself was not located this
-pass — worth a targeted search next time, following the same approach that
-found BWBR0039896 (Wiv 2017) and BWBR0003906 (TNO-wet).
+entity's *own* claims, so promotion was not taken on a technicality.
+**Both gaps since closed**: a targeted search (2026-08-28) found
+`wetten.overheid.nl`'s BWBR0041515, the Wbni's own text, promoting the
+entity to `primary-source`; a further targeted search (2026-09-05) found
+the commencement decree itself (Staatsblad 2018, 389), which states
+verbatim "Met ingang van 9 november 2018 treden in werking: a. de Wet
+beveiliging netwerk- en informatiesystemen..." — closing the
+previously-unconfirmed `start_date` lead. `start_date` set to 2018-11-09;
+`confidence` raised to `high`.
 **One unconfirmed claim downgraded**: [[NL-NEN]]'s body text previously
 stated NEN "was a co-founder of ISO in 1947" as fact. None of the three
 sources read this pass (nen.nl, the NORA wiki, Dutch Wikipedia) states this,
