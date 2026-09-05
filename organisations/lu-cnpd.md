@@ -20,7 +20,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-25"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -30,6 +30,7 @@ organisations: []
 related_entities:
   - EU-EDPB
   - EU-GDPR
+  - LU-LOI-PROTECTION-DONNEES
 relationships:
   - type: participates-in
     target: EU-EDPB
@@ -56,6 +57,10 @@ sources:
     url: "https://gdprhub.eu/Article_68_GDPR"
     publisher: "GDPRhub (noyb)"
     accessed: "2026-08-25"
+  - title: "Droit luxembourgeois — CNPD"
+    url: "https://cnpd.public.lu/fr/legislation/droit-lux.html"
+    publisher: "Commission nationale pour la protection des données (CNPD)"
+    accessed: "2026-09-05"
 ---
 
 # Commission nationale pour la protection des données
@@ -65,6 +70,9 @@ sources:
 > composition-rule-only reasoning this edge previously carried, and the
 > exact date of Luxembourg's GDPR implementation act is now sourced —
 > see below.
+>
+> **Updated 2026-09-05**: the act's official title was found and it is
+> now modelled as [[LU-LOI-PROTECTION-DONNEES]].
 
 ## Description
 
@@ -81,35 +89,38 @@ three letters, and both added in the same batch.
 The scoped IDs keep them apart. As with the two INEs ([[PT-INE]] and
 [[ES-INE]]), the collision is real and in the world, not an Atlas artefact.
 
-## ⚠ Luxembourg's GDPR implementation act: the date is now sourced, the act is still not modelled
+## Luxembourg's GDPR implementation act, modelled 2026-09-05
 
 Every other member state in the Atlas has a modelled implementing act —
 [[NL-UAVG]], [[DE-BDSG]], [[ES-LOPDGDD]], [[PL-ODO]], [[IE-DPA-2018]],
-[[PT-LEI-58-2019]] and [[CZ-ZAKON-110-2019]]. This pass found CNPD's own
-"Législation" page, read directly (2026-08-25), linking to the law under
-the label "Loi 'Protection des données'" at
-`legilux.public.lu/eli/etat/leg/loi/2018/08/01/a686/jo` — an ELI
-(European Legislation Identifier) URL whose date segment, `2018/08/01`,
-confirms the **1 August 2018** date this entity's original sourcing
-already carried.
+[[PT-LEI-58-2019]] and [[CZ-ZAKON-110-2019]]. The 2026-08-25 pass found
+CNPD's own "Législation" page linking to the law under the colloquial
+label "Loi 'Protection des données'" at
+`legilux.public.lu/eli/etat/leg/loi/2018/08/01/a686/jo`, confirming the
+**1 August 2018** date but not an official title — asserting one the
+Atlas had not read would have been exactly the kind of guess this
+project's discipline exists to prevent.
 
-**No entity was created from this.** `legilux.public.lu` itself, which
-would carry the law's official title and full text, is a JavaScript
-single-page application returning no static content ("Merci d'avoir
-rejoint le site du Journal Officiel; celui-ci n'est disponible qu'avec
-un navigateur supportant javascript"). CNPD's own link label is a
-colloquial short name, not necessarily the law's official title, and
-asserting an official title the Atlas has not read would be exactly the
-kind of guess this project's discipline exists to prevent. The date is
-now sourced; the act itself remains unmodelled. Logged in
-`discovery/unresolved.md`.
+This pass found the title: CNPD's own "Droit luxembourgeois" legislation
+page, read directly, names it in full — "Loi du 1er août 2018 portant
+organisation de la Commission nationale pour la protection des données
+et du régime général sur la protection des données" — and, usefully,
+distinguishes it from a **second, separate law of the same date**
+(Mémorial A No. 689) implementing the Law Enforcement Directive in
+criminal and national-security matters, which is not this act and is not
+modelled. `legilux.public.lu` itself remains unreadable (JavaScript
+single-page application, no static content). The act is now modelled as
+[[LU-LOI-PROTECTION-DONNEES]].
 
 ## Relationships
 
 - `participates-in` [[EU-EDPB]].
+- Inbound: `applies-to` from [[LU-LOI-PROTECTION-DONNEES]], the act that
+  organises this authority.
 
 ## Sources
 
-Listed in frontmatter, all four read directly this pass. `legilux.public.lu`
-was tried and found to be a JavaScript single-page application with no
-static content.
+Listed in frontmatter. The original four read directly in the 2026-08-25
+pass; CNPD's "Droit luxembourgeois" page added and read directly
+2026-09-05. `legilux.public.lu` was tried on both passes and found to be
+a JavaScript single-page application with no static content.
