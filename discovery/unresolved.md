@@ -1113,15 +1113,12 @@ pass could read. The corrected relationship: `EU-DIGITAL-OMNIBUS` does
 prose, not as a frontmatter relationship) has been removed from
 `legislation/eu-ai-act.md` and `legislation/eu-digital-omnibus.md`, both
 corrected in this pass, and from `regions/eu/index.md`.
-**A genuine, sourced gap this leaves behind:** Regulation (EU) 2026/1744
-("Digital Omnibus on AI") has no Atlas entity of its own. It is a real,
-adopted, in-force EU regulation that amends [[EU-AI-ACT]], the EASA
-Regulation and the Machinery Regulation — modelling it (as its own
-`EU-*` legislation entity with a `supersedes`/`amends`-type edge onto
-[[EU-AI-ACT]]) is outside this pass's assigned files and is queued here
-for a future batch. The confirmed facts (adoption timeline, in-force date,
-revised AI Act timetable) are recorded in `legislation/eu-ai-act.md` in the
-meantime so the correction isn't lost.
+**Closed 2026-09-05.** Regulation (EU) 2026/1744 ("Digital Omnibus on AI")
+is now [[EU-DIGITAL-OMNIBUS-AI]], `amends` [[EU-AI-ACT]]. EUR-Lex's own
+text — unreadable to this Atlas's fetch tooling when this gap was first
+found — was read directly via its TXT/HTML URL form, which also corrected
+the regulation's own adoption date: **8 July 2026**, not the 29 June 2026
+date a WebSearch cross-check had previously supplied.
 **Two SWD citation errors, corrected:** four data-space entities
 (`EU-CEEDS`, `EU-CULTURAL-HERITAGE-DATA-SPACE`, `EU-EOSC`,
 `EU-MANUFACTURING-DATA-SPACE`) cited a source titled "SWD(2024) 21
