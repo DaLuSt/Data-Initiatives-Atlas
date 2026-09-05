@@ -24,11 +24,11 @@ region: null
 status: active
 confidence: medium
 coverage: medium
-verification: search-only
+verification: primary-source
 
 start_date: 2001-11-08
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -51,8 +51,8 @@ relationships:
   - type: maintained-by
     target: INTL-COE
     source: fact
-    evidence: "The Additional Protocol is a Council of Europe treaty, ETS No. 181, published in the Council of Europe treaty series and listed by the Council of Europe alongside Convention 108 and the amending protocol (coe.int 'Convention 108 and Protocols'). NOT READ on coe.int — returned HTTP 403 on retry 2026-08-28 (domain-wide block, see INTL-COE); web.archive.org cannot be reached at all by this environment's tool. mbkaya.com's independent account (read directly this pass) is consistent with Council of Europe custodianship but does not itself state it in so many words."
-    confidence: medium
+    evidence: "CLOSES THE GAP. The Additional Protocol is a Council of Europe treaty, ETS No. 181, published in the Council of Europe treaty series and listed by the Council of Europe alongside Convention 108 and the amending protocol (coe.int 'Convention 108 and Protocols'). Confirmed directly 2026-09-05 by reading assembly.coe.int's own document directly (a Parliamentary Assembly of the Council of Europe report, FileID=8870, dated 10 March 2000) — a different, unblocked coe.int subdomain from the www.coe.int/rm.coe.int pages that remain 403-blocked. The document, hosted on the Council of Europe's own institutional domain, discusses the draft protocol's supervisory-authority and transborder-data-flow provisions in the Assembly's own words, corroborating Council of Europe custodianship directly rather than by inference. www.coe.int and rm.coe.int themselves remain unread (domain-wide block, see INTL-COE); web.archive.org cannot be reached at all by this environment's tool."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -71,27 +71,36 @@ sources:
     url: "https://mbkaya.com/it-law-coe-convention-108-additional-protocol-181-treaty/"
     publisher: "Mehmet Bedii Kaya — IT Law"
     accessed: "2026-08-28"
+  - title: "Draft additional Protocol to Convention ETS 108 on Supervisory Authorities and Transborder Data Flows"
+    url: "https://www.assembly.coe.int/nw/xml/XRef/X2H-Xref-ViewHTML.asp?FileID=8870&lang=en"
+    publisher: "Parliamentary Assembly of the Council of Europe"
+    accessed: "2026-09-05"
 ---
 
 # Additional Protocol to Convention 108 (ETS 181)
 
 > **Re-verification attempted 2026-08-28, genuinely stuck at borderline —
-> stays `search-only`.** One of the three originally cited sources was
-> read directly in the prior pass: cnpd.public.lu (Luxembourg's data
+> stayed `search-only`.** One of the three originally cited sources was
+> read directly in that pass: cnpd.public.lu (Luxembourg's data
 > protection authority), confirming the Additional Protocol supplements
-> Convention 108 and giving Luxembourg's own ratification dates. This pass
-> found and read one genuinely new, independent source — an IT-law blog
-> (mbkaya.com) that quotes the Protocol's own preamble and gives its
-> supervisory-authority and transborder-data-flow provisions in detail.
-> `coe.int` and `rm.coe.int` both returned HTTP 403 again (domain-wide
-> block, see [[INTL-COE]]), and `web.archive.org` cannot be reached at all
-> by this environment's tool. Two further candidates were tried and
-> failed: the IT Law Wiki (Fandom) returned HTTP 402 (a paywall, not a
-> block this session can work around) and NADPA-RAPDP's page returned HTTP
-> 503. That leaves 2 of 4 sources read directly — exactly the borderline
-> the discipline calls out, not a majority — so `verification` stays
-> `search-only` rather than being forced, per the instruction to try for
-> one more before promoting and never force a 50/50 split.
+> Convention 108 and giving Luxembourg's own ratification dates, plus a
+> genuinely new source, an IT-law blog (mbkaya.com). `coe.int` and
+> `rm.coe.int` both returned HTTP 403 (domain-wide block, see
+> [[INTL-COE]]); the IT Law Wiki (Fandom) returned HTTP 402 (paywall) and
+> NADPA-RAPDP's page returned HTTP 503. That left 2 of 4 — borderline, not
+> a majority.
+>
+> **Promoted to `primary-source` 2026-09-05.** A fresh search found
+> `assembly.coe.int` — a different, unblocked `coe.int` subdomain from the
+> `www.coe.int`/`rm.coe.int` pages that stay 403-blocked — hosting a
+> Parliamentary Assembly of the Council of Europe report on the draft
+> protocol, read directly. It corroborates the supervisory-authority and
+> transborder-data-flow provisions in the Assembly's own words and, being
+> hosted on the Council of Europe's own institutional domain, confirms
+> Council of Europe custodianship directly rather than by inference. That
+> is 3 of 5 sources read directly — a genuine majority. The IT Law Wiki
+> and NADPA-RAPDP were retried and failed again (402 and 503
+> respectively, both consistent with the prior pass, not transient).
 
 ## Description
 
@@ -130,9 +139,8 @@ entity is `active` rather than `superseded`.
 
 ## Sources
 
-Listed in frontmatter. Two of four read directly: cnpd.public.lu (prior
-pass) and mbkaya.com (this pass, 2026-08-28). Both `coe.int`/`rm.coe.int`
-citations remain unread (domain-wide block), and `web.archive.org` cannot
-be reached at all by this environment's tool — see verification note
-above. 2 of 4 is a borderline non-majority, so `verification` stays
-`search-only`.
+Listed in frontmatter. Three of five read directly: cnpd.public.lu and
+mbkaya.com (2026-08-28), and assembly.coe.int (2026-09-05) — a genuine
+majority. `www.coe.int` and `rm.coe.int` remain unread (domain-wide
+block), and `web.archive.org` cannot be reached at all by this
+environment's tool — see verification note above.
