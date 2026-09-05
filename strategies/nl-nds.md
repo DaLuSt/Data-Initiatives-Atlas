@@ -22,7 +22,7 @@ verification: primary-source
 
 start_date: 2025-07-04
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -33,6 +33,7 @@ organisations:
 related_entities:
   - NL-FDS
   - NL-DIGIBETER
+  - NL-WERKAGENDA-WAARDENGEDREVEN-DIGITALISEREN
   - NL-VNG
   - NL-IPO
   - NL-UVW
@@ -120,11 +121,16 @@ fully settled from what was read.
 digitaleoverheid.nl's own current policy-overview page, read directly this
 pass (from the [[NL-DIGIBETER]] side of this pass's research), states the
 NDS explicitly "does not replace but connects existing plans" and identifies
-an intervening strategy — "Werkagenda Waardengedreven Digitaliseren
-(2022-2024)" — between [[NL-DIGIBETER]] (2018-2020) and the NDS (2025). **No
-`supersedes` relationship is asserted** from the NDS to [[NL-DIGIBETER]]:
-the source itself frames the NDS as a connector rather than a successor, and
-the actual intervening strategy is not yet an Atlas entity.
+an intervening strategy — [[NL-WERKAGENDA-WAARDENGEDREVEN-DIGITALISEREN]]
+(2022-2024) — between [[NL-DIGIBETER]] (2018-2020) and the NDS (2025). That
+intervening strategy is now an Atlas entity (created 2026-09-05), and it
+does carry a sourced `supersedes` edge back to [[NL-DIGIBETER]] — the
+kabinetsbeleid page treats that first transition as a real succession
+("NL Digibeter" ended). **No `previous_version`/`successor` is asserted
+here**, though: this entity's own source explicitly declines the successor
+framing for itself specifically, so extending the chain one more step to
+this entity would overstate what digitaleoverheid.nl actually says about
+the NDS's own relationship to what came before it.
 
 ## Relationships
 
@@ -136,13 +142,13 @@ the actual intervening strategy is not yet an Atlas entity.
   though none of the five sources read this pass names VNG, IPO or UvW
   individually; they are carried over from the prior text's characterisation
   of "municipalities, provinces, water authorities."
-- Not a confirmed successor to [[NL-DIGIBETER]] — see above; the
-  relationship is now actively ruled against rather than merely
-  unconfirmed.
-- **New this pass**: continuation under the post-2025 cabinet is confirmed,
-  with EZK now co-leading alongside BZK. Neither EZK nor a distinct
-  "Werkagenda Waardengedreven Digitaliseren" entity exists in the Atlas yet;
-  both are queued in `discovery/research-queue.md`.
+- Not a confirmed successor to [[NL-DIGIBETER]] or to
+  [[NL-WERKAGENDA-WAARDENGEDREVEN-DIGITALISEREN]] — see above; the
+  relationship is actively ruled against by this entity's own source,
+  rather than merely unconfirmed.
+- Continuation under the post-2025 cabinet is confirmed, with EZK now
+  co-leading alongside BZK. EZK does not yet exist in the Atlas as an
+  organisation entity.
 
 ## Scope note
 
