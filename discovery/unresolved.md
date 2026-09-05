@@ -172,7 +172,7 @@ is what to request.
 
 | Entity | Question | Status |
 |---|---|---|
-| [[BE-NIS2-WET]] | No Belgisch Staatsblad ELI URI cited; publication and entry-into-force dates rest on CCB reporting. | Partly resolved — re-verification pass, 2026-08-26. Two more independent external sources (kpmglaw.be, prebes.be) now corroborate the 17 May 2024 publication date and the replacement of [[BE-NIS1-WET]]; CCB's own three pages remain bot-walled and no ELI URI has yet been found. |
+| [[BE-NIS2-WET]] | No Belgisch Staatsblad ELI URI cited; publication and entry-into-force dates rest on CCB reporting. | **Closed 2026-09-05**: `ejustice.just.fgov.be/eli/wet/2024/04/26/2024202344/justel`, read directly, confirms the act's own title, 17 May 2024 publication and official number 2024202344, matching the four secondary sources already cited. CCB's own three pages remain bot-walled, but the ELI URI gap is closed. |
 | [[BE-KSZ-WET]] | Only two sources, one of them the KSZ's page about its own founding act. Act content unknown. | Partly resolved — re-verification pass, 2026-08-26. The KSZ's own page, read directly, quotes Article 1 verbatim. Remaining act content (governance, funding) still unknown; still only two sources. |
 | [[BE-HERGEBRUIK-WET]] | Scope, obligations and relationship to the current EU regime all unknown. | Partly resolved — re-verification pass, 2026-08-26. The act's own text (both original and current consolidated versions) was read directly, confirming its 2016 PSI Directive transposition and the 2023 amendment's insertion of a Directive (EU) 2019/1024 reference. Full substantive obligations (licensing, pricing, appeals commission) remain sourced only from BIPT's secondary account. |
 
