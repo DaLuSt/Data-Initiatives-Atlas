@@ -11,7 +11,8 @@ description: >
   of 17 October 2024; the Commission sent a reasoned opinion for failure to
   notify full transposition on 7 May 2025, and in July 2026 referred
   Ireland and three other member states to the Court of Justice of the EU
-  over the failure. The Bill had not been enacted as at the date of this
+  over the failure, exposing Ireland to an initial penalty of €2.8 million
+  plus daily fines. The Bill had not been enacted as at the date of this
   record.
 
 level: national
@@ -24,7 +25,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -67,6 +68,10 @@ sources:
     url: "https://www.globalpolicywatch.com/2026/07/irish-ncsc-issues-cyber-governance-guidance-for-management-boards-ahead-of-nis2-implementation/"
     publisher: "Covington — Global Policy Watch"
     accessed: "2026-08-22"
+  - title: "Ireland facing €2.8m penalty plus daily fines for failing to adopt EU cybersecurity rules"
+    url: "https://www.irishtimes.com/business/2026/08/24/ireland-facing-28m-penalty-plus-daily-fines-for-failing-to-adopt-eu-cybersecurity-rules/"
+    publisher: "The Irish Times"
+    accessed: "2026-09-05"
 ---
 
 # National Cyber Security Bill (Ireland)
@@ -121,14 +126,26 @@ them identically:
 - This Bill **is** a transposition, by a member state, of a Directive whose
   deadline has passed.
 
+## Re-checked 2026-09-05: still not enacted, and a penalty figure is now known
+
+The Irish Times, read directly (24 August 2026): the Bill "has not yet
+been enacted" and remains "in legislative process, awaiting progression
+through the Oireachtas." Ireland faces an **initial penalty of €2.8
+million plus daily fines** for continued non-compliance, and Aon called
+on the government to prioritise the Bill "when the Oireachtas returns in
+September and to progress it through its remaining stages as quickly as
+possible." A further WebSearch the same day found no report of enactment
+since. `status: proposed` is confirmed current, not stale, as of this
+re-check.
+
 ## ⚠ Why `confidence: low`
 
 Three things are unsettled and all are load-bearing:
 
-1. **Whether it has been enacted.** The date of this record is 18 August
-   2026; the most recent source reports a Q3 2026 planning assumption and an
-   intention to transpose before the end of Q4 2026. `status: proposed` is
-   the honest reading as at the date recorded, and it may already be stale.
+1. **Whether it has been enacted.** Confirmed still not enacted as of 24
+   August 2026 (see re-check above), with the Oireachtas expected to
+   resume work on it in September 2026. `status: proposed` remains the
+   honest reading.
 2. **Its final content.** One source states plainly that the content will be
    finalised only once NIS2 is transposed.
 3. **Its title.** "National Cyber Security Bill" is what the sources call
