@@ -47,12 +47,18 @@ open — the one item on this page that keeps resisting closure across
 three separate passes. The second part worked the ontology-gaps table
 (§6): added the `supplements` relationship type, closed the "modelled
 on" row as a deliberate decision rather than a new type, and created
-[[EU-CJEU]] — narrowing, not closing, the enforcement-modelling gap.
+[[EU-CJEU]] — narrowing, not closing, the enforcement-modelling gap. A
+third, small part narrowed §4's `region` entities row: [[INTL-EFTA]] and
+[[INTL-COE]] turn out to already exist, just as `type: organisation`
+rather than `type: region` — the same shape the EEA already taught was
+more useful. Only the Nordic Council and Benelux remain unmodelled, and
+neither has an identified role in this Atlas's scope.
 
 What remains below is what is genuinely still open: the INSPIRE↔UN-GGIM
-edge (§1), one carried lead (§3), and two ontology-gap rows (§6) — one of
-them, the `type: law` taxonomy flattening, a modelling decision rather
-than research, and large enough to warrant its own dedicated pass rather
+edge (§1), one carried lead (§3), a narrow §4 measurement row, and two
+ontology-gap rows (§6) — one of them, the `type: law` taxonomy
+flattening, a modelling decision rather than research, and large enough
+to warrant its own dedicated pass rather
 than a quick pickup.
 
 ---
@@ -169,7 +175,7 @@ the wrong answer.
 |---|---|---|---|
 | **`level: local`** | **0 uses**, against 385 `national`, 69 `regional`, 52 `international`, 6 `sectoral` and 4 `subnational` | **No longer the blocker it was.** What blocked Flanders, the Comunidades Autónomas and the German Länder was that `regional` means *supra*-national here and nothing meant *sub*-national; `level: subnational` was added 2026-08-21 and those three became ordinary research. `local` remains unused and now gates one thing only — the Dutch municipalities — where the open question is **what entity to create**, not what to call it | Open (design), much narrower |
 | **`level: sectoral`** | 6 uses | Barely exercised. Whether that reflects the subject matter or under-use is unexamined | Later |
-| **`region` entities** | **1** — only [[EU]] | EFTA, the Nordic Council, the Council of Europe and Benelux are absent. The **EEA** is now modelled as [[INTL-EEA-AGREEMENT]] (`type: law`) rather than as a region, which turned out to be the more useful shape: [[INTL-EEA-JCD-154-2018]] `amends` it, and an amendment to a region would be meaningless | Later |
+| **`region` entities** | **1** — only [[EU]] | **Narrowed 2026-09-05**: two of the four named absentees turn out to already exist, just not as `type: region` — [[INTL-EFTA]] and [[INTL-COE]] (Council of Europe) are both modelled as `type: organisation`, the same lesson the EEA already taught: [[INTL-EEA-AGREEMENT]] (`type: law`) turned out to be the more useful shape than a region, since [[INTL-EEA-JCD-154-2018]] `amends` it and an amendment to a region would be meaningless. Only the **Nordic Council** and **Benelux** remain genuinely unmodelled, and neither has an identified data-governance role in this Atlas's scope — creating either now would be the thin, scope-free entity the taxonomy threshold exists to prevent | Later |
 
 ## 5. Domain coverage (re-measured 2026-08-21, after the health batch)
 
