@@ -9,20 +9,20 @@ alternative_names:
 description: >
   Dutch policy obliging (semi-)government organisations to apply the open
   standards on the 'pas toe of leg uit' list when procuring or
-  (re)organising ICT above a stated threshold value, or else to explain the
-  deviation. The list is maintained by Forum Standaardisatie.
+  (re)organising ICT above a stated threshold value of €50,000, or else to
+  explain the deviation. The list is maintained by Forum Standaardisatie.
 
 level: national
 country: NL
 region: null
 
 status: active
-confidence: medium
+confidence: high
 coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-20"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -43,8 +43,8 @@ relationships:
   - type: applies-in
     target: NL
     source: fact
-    evidence: "The obligation applies to (semi-)government organisations in the Netherlands (forumstandaardisatie.nl/pas-toe-leg-uit-beleid)."
-    confidence: medium
+    evidence: "The obligation applies to (semi-)government organisations in the Netherlands (forumstandaardisatie.nl/pas-toe-leg-uit-beleid). Confirmed by re-reading the same page directly (2026-09-05): its Definitions section states the obligation attaches to an 'ICT-dienst of ICT-product... welke bij aanschaf een waarde vertegenwoordigt van ten minste € 50.000' — an ICT service or product representing a procurement value of at least €50,000 — closing the previously-flagged unverified-threshold question."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -52,7 +52,7 @@ sources:
   - title: "'Pas toe of leg uit'-beleid"
     url: "https://www.forumstandaardisatie.nl/pas-toe-leg-uit-beleid"
     publisher: "Forum Standaardisatie"
-    accessed: "2026-08-20"
+    accessed: "2026-09-05"
   - title: "Lijst open standaarden"
     url: "https://www.forumstandaardisatie.nl/open-standaarden"
     publisher: "Forum Standaardisatie"
@@ -71,14 +71,22 @@ sources:
 
 > **Verified 2026-08-20.** Every cited source was read and confirmed to
 > support what this entity says. `verification: primary-source`.
+>
+> **Updated 2026-09-05**: the €50,000 procurement threshold, previously
+> flagged as unverified, is now confirmed directly against
+> forumstandaardisatie.nl's own Definitions section. `confidence` raised
+> to `high`.
 
 ## Description
 
 'Pas toe of leg uit' (apply or explain) is the Dutch open-standards policy.
 All (semi-)government organisations are obliged to apply the open standards
 appearing on the 'pas toe of leg uit' list when procuring or (re)organising
-ICT above a stated purchase threshold — reported as €50,000, a figure that
-has not been verified and should be confirmed before being relied on.
+ICT above a stated purchase threshold of **€50,000**, confirmed by
+re-reading forumstandaardisatie.nl's own page directly (2026-09-05): its
+Definitions section defines the obligation as attaching to an *"ICT-dienst
+of ICT-product... welke bij aanschaf een waarde vertegenwoordigt van ten
+minste € 50.000."*
 
 Where a procurement or development falls within an application area listed
 on the list, the corresponding standard(s) must be applied or requested. If
