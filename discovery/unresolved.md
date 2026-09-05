@@ -139,12 +139,11 @@ is what to request.
 
 | Entity | Question | Status |
 |---|---|---|
-| [[DE-DATENSTRATEGIE]] | **Adoption date contested across sources** — BMI URL path says August 2023, two other sources say 12 and 14 September 2023. `start_date` left null rather than guessed. Also: is it still in force after the creation of [[DE-BMDS]] and the [[DE-MODERNISIERUNGSAGENDA-BUND]]? | Open |
+| [[DE-DATENSTRATEGIE]] | Is it still in force after the creation of [[DE-BMDS]] and the [[DE-MODERNISIERUNGSAGENDA-BUND]]? | **Narrowed 2026-09-04**: the adoption-date half is closed — Bundestag Drucksache 20/8260, read directly, gives a documented chain (BMDV letter 29 August 2023; Drucksache itself 1 September 2023; first Bundestag debate 28 September 2023), explaining why secondary sources disagreed. `start_date` is now set to 2023-09-01. The still-in-force question remains genuinely open: no source read states whether the 2023 strategy remains in force, has been absorbed into the newer agenda, or has been superseded | Open |
 | [[DE-DIGITALSTRATEGIE]] | `status: unknown`. Its 2025 horizon has passed; sources suggest targets were missed; **no source states it was completed, superseded or extended** | Open |
 | [[DE-OZG]] | The act's **own enactment date was never established** — every source concerns the 2024 amendment or the programme. Widely known to be 2017, which is exactly why it is not recorded | Open |
 | [[DE-IWG]] | Nothing established beyond its replacement by [[DE-DNG]]. All three sources are about the DNG. Which PSI directive it transposed is unknown | Open |
-| [[DE-BMI]] | Current formal name unclear (*des Innern* vs *des Innern und für Heimat*), and its `produces` relationships are historical: [[DE-BMDS]] took digital competences from six departments in May 2025 | Open |
-| [[DE-IT-GRUNDSCHUTZ]] | **No bsi.bund.de IT-Grundschutz page cited** — searches returned Wikipedia and consultancy explainers for a framework published by a federal authority | Open |
+| [[DE-BMI]] | Its `produces` relationships are historical: [[DE-BMDS]] took digital competences from six departments in May 2025 | **Narrowed 2026-09-05**: the name question is closed — de.wikipedia.org, read directly, confirms Chancellor Merz ordered the renaming back to *Bundesministerium des Innern* by decree on 6 May 2025, the same date as the DE-BMDS/DE-BMV split. The historical-relationships question stands | Open |
 | [[DE-MODERNISIERUNGSAGENDA-FOEDERAL]] | The **five fields of action are not recorded** — no source read names them | Open |
 | [[DE-IT-ARCHITEKTURRICHTLINIEN]] | The **content** of the guidelines is unknown; only existence, custody, governance and version 1.9.0 are recorded | Open |
 | [[DE-DCAT-AP-DE]] | The 28 June 2018 IT-Planungsrat resolution rests on a single secondary statement; no decision document cited | Open |
