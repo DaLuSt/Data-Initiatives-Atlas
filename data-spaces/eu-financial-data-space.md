@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -31,6 +31,7 @@ domains: []
 organisations: []
 related_entities:
   - EU-COMMON-DATA-SPACES
+  - EU-FIDA
 relationships:
   - type: part-of
     target: EU-COMMON-DATA-SPACES
@@ -54,6 +55,10 @@ sources:
 > **Verified 2026-08-21.** Every source this entity cites is on a domain the
 > repository owner confirmed read and correct — `europa.eu`. `verification:
 > primary-source`. See `docs/re-verification.md` §"The confirmed domains".
+>
+> **Updated 2026-09-05**: FIDA, previously named but unmodelled, is now
+> [[EU-FIDA]], sourced from direct reads of the Commission's own FIDA
+> page and EUR-Lex's own text of the proposal.
 
 ## Description
 
@@ -72,15 +77,16 @@ data space has legislation attached rather than only funding and governance.
 [[EU-EHDS]] is backed by a Regulation and carries `applies-in` edges to eight
 countries; this one is not yet, and does not.
 
-## ⚠ FIDA is not modelled, and the other two components are unknown
+## FIDA modelled, two-thirds still unknown — 2026-09-05
 
-The sources name FIDA as one of three components and **do not name the other
-two**. Creating a data space entity whose own description admits it is
-one-third specified is unusual, and it is done deliberately: leaving finance
-out would break the set of fourteen, and the gap is more useful stated than
-hidden.
+FIDA is now [[EU-FIDA]], confirmed by reading the Commission's own
+finance.ec.europa.eu page and eur-lex.europa.eu's own text of the
+proposal (COM(2023) 360, proposed 28 June 2023) directly. The **other
+two named components remain unidentified** — no source read this pass
+or earlier names them — so this data space is still only partially
+specified, just less so than before.
 
-- [ ] **FIDA** as a legislation entity, and the other two components.
+- [ ] The other two components of the three the Commission names.
 - [ ] **PSD2**, the backdrop the sources implicitly contrast FIDA against.
 
 Both are logged in `discovery/unresolved.md`.
