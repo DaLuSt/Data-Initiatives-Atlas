@@ -198,6 +198,16 @@
 > exercising shareholder duties — a `part-of` [[DE]] anchor edge for
 > want of a Bundesministerium der Finanzen entity.
 >
+> **2026-09-05 pickup (twenty-second):** created [[NL-ODISSEI]], the
+> Netherlands' National Research Infrastructure for Social Sciences,
+> named alongside DANS/RIVM/NWO/SIDN — all already modelled — as the
+> one item in that group left unresearched. Launched 2016, hosted by
+> Erasmus University, a 45-member consortium funded principally through
+> [[NL-NWO]]'s Large Scale Research Infrastructure programme, confirmed
+> by reading `odissei-data.nl`'s own page directly. `related-to` [[NL]]
+> anchor edge, matching the [[NL-SURF]]/[[NL-NICTIZ]] convention for
+> member-owned consortia.
+>
 > **The `level` vocabulary is no longer a blocker.** `level: subnational` was
 > added 2026-08-21 and the three Belgian sub-federal ODD instruments are
 > modelled under it. OSLO/Digitaal Vlaanderen and the Comunidades Autónomas
@@ -436,7 +446,6 @@ by accident.
 | Ministeries van VWS, EZK, OCW | Named partners of [[NL-HEALTH-RI]] | Batch 5+ | Batch 5 / 2026-08-14 |
 | Nationaal Groeifonds | Funds [[NL-HEALTH-RI]] | Batch 5+ | Batch 5 / 2026-08-14 |
 | Nationaal Wegenbestand (NWB) | Part of the [[NL-NDW]] expansion | Batch 5+ | Batch 5 / 2026-08-14 |
-| ODISSEI | Research infrastructure organisation named alongside DANS/RIVM/NWO/SIDN, all now modelled; ODISSEI alone remains unresearched | Batch 5+ | Batch 2; carried |
 | Free Flow of Non-Personal Data Regulation | Third repeal target of [[EU-DIGITAL-OMNIBUS]] | Batch 9 | Batch 8 / 2026-08-14 |
 | Dutch EUDI Wallet implementation | Every member state must provide one; no Dutch arrangement researched | Batch 9+ | Batch 8 / 2026-08-14 |
 | **The 10 remaining common European data spaces** | Batch 10 created Health, Mobility, Green Deal and Agriculture. **Not created:** cultural heritage, energy, finance, industry, language, media, public administrations, research and innovation, skills, tourism — research returned only their names in the list of fourteen | Later | Batch 7; narrowed Batch 10 |
