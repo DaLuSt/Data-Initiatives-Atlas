@@ -7,7 +7,7 @@ as an open, connected knowledge graph.**
 
 ### [**→ Open the Interactive Atlas**](https://dalust.github.io/Data-Initiatives-Atlas/)
 
-*Search, filter and explore 516 entities and 6,172 connections across fifty-eight
+*Search, filter and explore 585 entities and 7,207 connections across fifty-eight
 countries — no install, no account.*
 
 [![Validation](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/validate.yml/badge.svg)](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/validate.yml)
@@ -32,17 +32,17 @@ hand-maintained.
 
 | | |
 |---|---|
-| **Entities** | 516 |
-| **Connections** | 6,172 — of which **1,095** are sourced, typed relationships |
-| **Country scopes** | **58** — 16 with a researched national layer, the rest base anchors |
+| **Entities** | 585 |
+| **Connections** | 7,207 — of which **1,267** are sourced, typed relationships |
+| **Country scopes** | **58** — 21 with a researched national layer, the rest base anchors |
 | **Layers** | UN · Council of Europe · EU · national · sectoral |
 | **Source of truth** | Git + Markdown/YAML — no database |
 | **Licence** | CC0 1.0 |
-| **⚠ Sourcing** | **414 of 516 entities have never had a cited source read** — 102 now `verification: primary-source`, see below |
+| **✅ Sourcing** | **584 of 585 entities are `verification: primary-source`** — every cited source has been opened, read and confirmed; 1 remains `search-only`, see below |
 
-*Figures as of 2026-08-21. The live counts are always on the site itself.*
+*Figures as of 2026-09-05. The live counts are always on the site itself.*
 
-### ⚠ Read this before you cite anything
+### Read this before you cite anything
 
 Every entity carries a `verification` field in its frontmatter, and it means
 exactly what it says:
@@ -50,7 +50,10 @@ exactly what it says:
 - **`verification: search-only`** — the URLs in `sources:` were confirmed by
   a search index to exist, but nobody has actually opened and read them yet.
   The claims may well be accurate; they simply haven't been checked against
-  the primary source.
+  the primary source. **584 of 585 entities have moved past this stage**,
+  after a sustained multi-batch re-verification effort; one remains
+  `search-only` — an entity whose sources reached only a 2-of-4 majority of
+  directly-read pages, left honest rather than forced across the line.
 - **`verification: primary-source`** — someone opened every cited page
   directly, confirmed it supports what the entity says, and recorded the
   date in `accessed:`. Entities at this level also drop the sourcing caveat
