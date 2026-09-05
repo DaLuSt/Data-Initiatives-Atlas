@@ -923,20 +923,21 @@ should assume the same and re-source, not just re-fetch.**
 - [[NL-DIGIBETER]]'s `status: unknown` is resolved to `superseded`:
   `digitaleoverheid.nl`'s own current policy-overview page (read directly)
   frames "NL Digibeter (2018-2020)" in the past tense, followed by a
-  previously-unknown **"Werkagenda Waardengedreven Digitaliseren
-  (2022-2024)"** — not yet an Atlas entity — and then [[NL-NDS]] (2025),
-  which the same page states explicitly "does not replace but connects
-  existing plans." `successor` is left `null` on [[NL-DIGIBETER]] rather
-  than pointed at [[NL-NDS]], since the actual intervening strategy isn't
-  modelled yet. **Open item**: create a
-  `NL-WERKAGENDA-WAARDEGEDREVEN-DIGITALISEREN` (or similar) entity to fill
-  this gap and let a real `supersedes` chain be built.
+  previously-unknown "Werkagenda Waardengedreven Digitaliseren
+  (2022-2024)" and then [[NL-NDS]] (2025), which the same page states
+  explicitly "does not replace but connects existing plans." **Closed
+  2026-09-05**: the intervening strategy is now
+  [[NL-WERKAGENDA-WAARDENGEDREVEN-DIGITALISEREN]], published 4 November
+  2022 by State Secretary Van Huffelen. [[NL-DIGIBETER]]'s `successor` now
+  points to it (rather than skipping ahead to [[NL-NDS]]), and it carries
+  its own `supersedes` edge back to [[NL-DIGIBETER]] — the real chain the
+  prior pass called for.
 - [[NL-NDS]]'s continuation under the post-2025 cabinet — genuinely
   uncertain in the prior text — is now confirmed: a March 2026 article
   (`digitaleoverheid.nl/nieuws-nds/...`, found via search, read directly)
   states "The programme continues and retains the same name," now
-  co-led by **EZK** (not previously in this Atlas as an organisation
-  entity — queued) alongside [[NL-BZK]].
+  co-led by [[NL-EZK]] (modelled since; not an Atlas entity at the time
+  of this pass) alongside [[NL-BZK]].
 - [[NL-CBS]] / [[NL-WET-CBS]]'s enactment date is confirmed as **20 November
   2003** (title of the act itself, corroborated by search against
   Staatsblad 2003, 516) — one of eerstekamer.nl's own summarised dates
@@ -959,7 +960,6 @@ should assume the same and re-source, not just re-fetch.**
   BZK) but not conclusively named by any page read directly.
 - [[NL-DATA-AGENDA-OVERHEID]] ↔ [[NL-IBDS]] relationship: still no source
   states whether the IBDS extends or replaces this agenda.
-- The "Werkagenda Waardengedreven Digitaliseren (2022-2024)" gap above.
 - [[NL-DIGIKOPPELING]]'s comply-or-explain-list membership lost its sole
   supporting citation (`vngrealisatie.nl`, now HTTP 404) and needs a
   replacement source, not just re-confirmation.
