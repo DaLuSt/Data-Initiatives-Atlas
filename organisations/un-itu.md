@@ -22,7 +22,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -31,6 +31,7 @@ domains:
 organisations: []
 related_entities:
   - UN
+  - UN-ITU-X509
 relationships:
   - type: part-of
     target: UN
@@ -90,11 +91,18 @@ every retry this pass. It is plausible and consistent with how those bodies
 are elsewhere described in this Atlas, but it is carried forward as an
 **unconfirmed** characterisation rather than a verified one.
 
-`coverage: low`: no ITU standard is modelled.
+**Closed 2026-09-05:** [[UN-ITU-X509]], the Recommendation defining
+public-key infrastructure (PKI) that underlies most digital certificate
+systems in use today, is now modelled — jointly published as an
+identical text with [[INTL-ISO]]/IEC as ISO/IEC 9594-8. `coverage`
+remains `low` since only this one standard is modelled among ITU's much
+larger output.
 
 ## Relationships
 
 - Part of [[UN]] as a specialised agency.
+- `maintained-by` edge (ITU as target) recorded on [[UN-ITU-X509]]'s own
+  file, added 2026-09-05.
 
 ## Sources
 

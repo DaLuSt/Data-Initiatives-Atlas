@@ -36,6 +36,7 @@ related_entities:
   - UN-SDG-INDICATORS
   - EU-SDG-INDICATORS
   - EU-VOLUNTARY-REVIEW-2023
+  - UN-UNDP
 relationships:
   - type: part-of
     target: UN
@@ -108,6 +109,8 @@ not the same as a fact being unknowable.**
   indicator framework, which is the instrument that operationalises the
   policy.
 - [[EU-VOLUNTARY-REVIEW-2023]] `references` it.
+- [[UN-UNDP]] `implements` this Agenda — added 2026-09-05, recorded on
+  UNDP's own file.
 
 ## What is not modelled
 

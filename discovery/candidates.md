@@ -24,7 +24,7 @@ Do not add anything here without noting where it was seen.
 
 ---
 
-## Status: worked through 2026-08-21 (twice)
+## Status: worked through 2026-08-21 (twice), then 2026-09-05
 
 Two batches ran on 2026-08-21.
 
@@ -33,10 +33,19 @@ rows, emptying three whole sections — the EEA and Switzerland section, the
 EU↔UN vocabulary section, and the unused entity types. Sixteen entities.
 
 The **follow-on batch** then closed the two largest things this page had left
-open: the `measures` relationship type (§3) and the `level` vocabulary (§5),
-and acted on the domain coverage §6 measured. Fourteen more entities.
+open: the `measures` relationship type and the `level` vocabulary,
+and acted on the domain coverage measured. Fourteen more entities.
 
-What remains below is what is genuinely still open. **Section 5's
+**A third batch ran 2026-09-05**, emptying the entire carried-leads section
+except for one name (DESA). Nine new/re-verified entities: [[UN-CCL]],
+[[UN-GLOBAL-PLATFORM]], [[UN-ITU-X509]], [[UN-WHO]] (+ [[UN-WHO-GHO]]),
+[[UN-UNDP]], [[UN-IMO]] (+ [[UN-IMO-GISIS]]) newly created; [[UN-UNCTAD]]
+and [[UN-GDC]] promoted to `primary-source` on the strength of `un.org`'s
+own official text. The INSPIRE↔UN-GGIM edge (§1) was attempted again and
+remains genuinely open — the one item on this page that keeps resisting
+closure across three separate passes.
+
+What remains below is what is genuinely still open. **Section 6's
 ontology-gap table is now the largest thing on this page**, and every row in
 it is a modelling decision rather than research.
 
@@ -52,7 +61,7 @@ EuroGeographics did not create it.
 
 | Name | Suspected type | Suspected scope | Why it might matter | Where seen | Noted by / date | Status |
 |---|---|---|---|---|---|---|
-| **[[EU-INSPIRE]] → the UN-GGIM structure** | relationship | — | The one edge that would finish the geospatial vertical. What exists is a 2016 EuroGeographics presentation *about* UN-GGIM delivered to an INSPIRE audience, and general discussion of INSPIRE harmonisation in UN-GGIM: Europe working groups. **That is evidence the communities talk, not that the instruments relate**, and no edge was asserted | un-ggim-europe.org working groups; eurogeographics.org INSPIRE KEN deck | UN batch / 2026-08-16; re-checked 2026-08-21 | **Open — needs a real source** |
+| **[[EU-INSPIRE]] → the UN-GGIM structure** | relationship | — | The one edge that would finish the geospatial vertical. What exists is a 2016 EuroGeographics presentation *about* UN-GGIM delivered to an INSPIRE audience, and general discussion of INSPIRE harmonisation in UN-GGIM: Europe working groups. **That is evidence the communities talk, not that the instruments relate**, and no edge was asserted | un-ggim-europe.org working groups; eurogeographics.org INSPIRE KEN deck | UN batch / 2026-08-16; re-checked 2026-08-21, 2026-09-05 | **Open — needs a real source** |
 
 **Creating the missing node did not close this one, and that is the useful
 finding.** [[EU-ESS]] closed five refused edges because the missing node was
@@ -65,17 +74,19 @@ carries `participates-in` to **both** [[UN-GGIM]] and
 [[EU-EUROGEOGRAPHICS]]. A path through a shared member is not a relationship
 between the instruments.
 
-## 2. Still open — one UN/CEFACT output remains
+**2026-09-05 attempt, also inconclusive.** An academic source (an MDPI
+article on cadastral mapping in Europe) surfaced a specific-sounding claim
+— that a UN-GGIM: Europe core-data working group selected geospatial
+themes "from the list of the INSPIRE annexes" — but the article itself
+returned HTTP 403 on every attempt, so it was never actually read. Chasing
+it to `un-ggim-europe.org`'s own current working-groups page found no
+"core data" group by that name (the current three are Frameworks, Geodesy
+Supply Chain, and Data for Global Agendas — the group structure may have
+been renamed since whatever the article described), and the specific PDF
+search turned up (`UN-GGIM-Europe_WGA_Recommandation_Content_SU_v1.0.pdf`)
+404s. Still open.
 
-[[UN-LOCODE]] and [[UN-EDIFACT]] now exist, and [[EU-EMSWE]] — Regulation
-(EU) 2019/1239 — is the EU instrument that names UN/LOCODE, which closes the
-"does anything European reference a UN/CEFACT standard" question.
-
-| Name | Suspected type | Suspected scope | Why it might matter | Where seen | Noted by / date | Status |
-|---|---|---|---|---|---|---|
-| **UN/CEFACT Core Component Library** | standard | UN (UNECE), `level: international` | The third of the three UN/CEFACT outputs named in the UN batch. Nothing beyond the name was found; a node built on that is the thin encyclopedic entity the taxonomy threshold prevents | unece.org/trade/uncefact | UN batch / 2026-08-16; narrowed 2026-08-21 | Candidate |
-
-## 3. Closed — `measures` was added the same day
+## 2. Closed — `measures` was added the same day
 
 [[EU-DESI]] and [[EU-EGOV-BENCHMARK]] carried no edge to any country they
 measure, because no relationship type meant "measures". This section argued
@@ -93,17 +104,48 @@ The one-batch separation cost nothing and is worth keeping as the pattern:
 and no scaling consequence; `measures` immediately wanted 62 edges and got a
 batch of separation from the entities that would use it.
 
-## 4. Carried leads, unchanged
+## 3. Closed 2026-09-05 — five of six carried leads
+
+Five of the six rows this section used to carry are now closed, each with
+a directly-read primary source rather than the WebSearch snippets or
+unopened pages that had left them as "weak" or "carried" leads:
+
+- **UN/CEFACT Core Component Library** → [[UN-CCL]]. `interoperable-europe.
+  ec.europa.eu` (reached via a redirect from `joinup.ec.europa.eu`, since
+  `unece.org` itself remains 403-blocked) supplied real substance where
+  earlier searches had found only a name.
+- **UN Global Platform / Committee of Experts on Big Data** →
+  [[UN-GLOBAL-PLATFORM]]. `unstats.un.org`'s own Big Data page, read
+  directly, named [[UN-UNSD]] as the manager and UN-CEBD as the governing
+  committee (not separately modelled).
+- **ITU standards** → [[UN-ITU-X509]], the PKI recommendation jointly
+  published with [[INTL-ISO]] as ISO/IEC 9594-8, confirmed on `itu.int`'s
+  own recommendation page.
+- **UNCTAD data governance work** → resolved on [[UN-UNCTAD]]'s own file,
+  promoted to `primary-source`: `un.org`'s own "Annex I: Global Digital
+  Compact" page (UN General Assembly resolution A/RES/79/1) quotes
+  paragraph 48 verbatim, requesting the CSTD establish the working group.
+  [[UN-GDC]] was itself re-verified and enriched the same pass.
+- **IMO, GISIS and the SafeSeaNet codes** → [[UN-IMO]] and
+  [[UN-IMO-GISIS]]. `imo.org`'s own page confirmed IMO's substantive
+  mandate as a full UN specialised agency — clearing the bar this section
+  had explicitly said "one code list" would not clear — and
+  `gisis.imo.org`'s own page confirmed GISIS itself.
+
+**UN DESA, UNDP, WHO** was a three-name row; two of the three are now
+modelled. [[UN-WHO]] (plus its [[UN-WHO-GHO]] platform) and [[UN-UNDP]]
+were both confirmed via `who.int` and `sdgs.un.org` (an official UN
+subdomain — `undp.org` itself 403'd) read directly. **DESA remains
+unmodelled**: it is a broad UN Secretariat department already represented
+in the Atlas through several of its divisions ([[UN-UNSD]], and
+[[UN-UNCTAD]]'s CSTD work), and no source read this pass gave DESA itself
+a distinct enough identity to warrant its own entity separate from those.
 
 | Name | Suspected type | Suspected scope | Why it might matter | Where seen | Noted by / date | Status |
 |---|---|---|---|---|---|---|
-| **UN Global Platform / Committee of Experts on Big Data** — `UN-GLOBAL-PLATFORM` | platform | UN, `level: international` | A second, independent attachment point for national statistical offices, alongside [[EU-ESS]] | ggim.un.org; unstats.un.org (not opened) | Spain follow-up / 2026-08-16 | Weak lead |
-| **ITU standards** — no ID proposed | standard | UN (ITU), `level: international` | [[UN-ITU]] exists and **no ITU standard is modelled** | `discovery/research-queue.md`, Batch 13 | Batch 13; carried | Carried lead |
-| **UNCTAD data governance work** — no ID proposed | initiative | UN, `level: international` | [[UN-UNCTAD]] exists with no instrument beneath it; its CSTD working group on data governance is queued | `discovery/research-queue.md`, Batch 13 | Batch 13; carried | Carried lead |
-| **UN DESA, UNDP, WHO** | organisation | UN, `level: international` | Named in Batch 13's scope and refused for want of sources. The UN batch reversed that refusal for **UNESCO and UNECE** but did not go looking for these three | Batch 13 scope | Batch 13; carried | Carried lead |
-| **IMO, GISIS and the SafeSeaNet codes** | organisation / standard | international | [[EU-EMSWE]]'s common location database holds UN/LOCODE **alongside** the SafeSeaNet codes and the IMO port facility codes registered in GISIS. The IMO is not in the Atlas at all, and creating it to carry one code list would be a thin entity | eur-lex.europa.eu CELEX 32019R1239 | Candidate batch / 2026-08-21 | Weak lead |
+| **UN DESA** — no ID proposed | organisation | UN, `level: international` | Named in Batch 13's scope; WHO and UNDP (named alongside it) are now modelled, DESA itself is not | Batch 13 scope | Batch 13; carried; narrowed 2026-09-05 | Carried lead |
 
-## 5. Entity types and levels (re-measured 2026-08-21)
+## 4. Entity types and levels (re-measured 2026-08-21)
 
 `technology` and `publication` were both on this list and are both now in
 use — [[INTL-X-ROAD]] for the first, [[EU-DESI]], [[EU-EGOV-BENCHMARK]] and
@@ -123,7 +165,7 @@ the wrong answer.
 | **`level: sectoral`** | 6 uses | Barely exercised. Whether that reflects the subject matter or under-use is unexamined | Later |
 | **`region` entities** | **1** — only [[EU]] | EFTA, the Nordic Council, the Council of Europe and Benelux are absent. The **EEA** is now modelled as [[INTL-EEA-AGREEMENT]] (`type: law`) rather than as a region, which turned out to be the more useful shape: [[INTL-EEA-JCD-154-2018]] `amends` it, and an amendment to a region would be meaningless | Later |
 
-## 6. Domain coverage (re-measured 2026-08-21, after the health batch)
+## 5. Domain coverage (re-measured 2026-08-21, after the health batch)
 
 Counted as **distinct countries having at least one entity that lists the
 domain**, across all 58 country anchors:
@@ -150,7 +192,7 @@ obvious set of national counterparts to add: [[EU-EMSWE]] and [[UN-LOCODE]]
 are both supra-national, and the national mobility layer would be transport
 ministries and traffic-data agencies that no batch has surveyed.
 
-## 7. Ontology gaps
+## 6. Ontology gaps
 
 | Gap | Why it matters | Noted | Status |
 |---|---|---|---|

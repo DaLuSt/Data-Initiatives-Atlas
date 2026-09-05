@@ -17,11 +17,11 @@ region: null
 status: active
 confidence: medium
 coverage: low
-verification: search-only
+verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -30,12 +30,13 @@ domains:
 organisations: []
 related_entities:
   - UN
+  - UN-GDC
 relationships:
   - type: part-of
     target: UN
     source: fact
-    evidence: "Both cited pages failed on every attempt this pass: unctad.org returned HTTP 403 (tried the specific working-group page, the CSTD mandate page, and unctad.org/about/history — all 403, suggesting unctad.org is broadly blocked this session, not just one page), and the unsceb.org PDF returned HTTP 404 (URL may have moved); web.archive.org, this pass's suggested next step, cannot be reached at all by this environment's tool. Alternates were sought per this batch's instruction: a WebSearch specifically for the working group turned up unctad.org's own event pages by title and confirmed a genuinely new, more precise fact — the working group was established following 2024 UN General Assembly resolution A/RES/79/1, tasking the CSTD with a 'comprehensive and inclusive multi-stakeholder dialogue on data governance at all levels', with 27 state members and 27 non-state members — but this is WebSearch-snippet corroboration, not a page actually read, so it does not count toward the majority. Wikipedia's 'UN Trade and Development' article, dig.watch's UNCTAD actor page, and sdg.iisd.org's article on the working group were all tried; Wikipedia (read directly) confirms UNCTAD generally (1964 founding, 195 member states, Geneva secretariat) but does not mention the CSTD or the data-governance working group at all, and both dig.watch and sdg.iisd.org returned HTTP 403. This pass additionally read two more general, independent sources directly — a Chinese diplomatic mission's page (geneva.china-mission.gov.cn) and an exam-prep site's UNCTAD overview (inclusiveias.com) — both confirming UNCTAD's 1964 founding, 195-member-state structure and Geneva secretariat in their own words, but like Wikipedia, neither mentions the CSTD or the data-governance working group. That is now 3 of 5 sources read directly on the general 'part-of UN' fact this edge actually asserts, but the specific claim this entity exists to record — that UNCTAD hosts a CSTD working group on data governance — remains confirmed only by WebSearch synthesis, never by a directly-read page. Promoting `verification` on the strength of sources that corroborate UNCTAD's general existence while leaving its stated reason for inclusion in this Atlas unconfirmed would be a hollow majority, so `verification` stays `search-only`."
-    confidence: medium
+    evidence: "unctad.org, dig.watch and sdg.iisd.org remain blocked this pass (all HTTP 403), consistent with every prior attempt. But the substantive claim this entity exists to record is now confirmed by a genuinely stronger source than any of those: reading un.org's own official 'Annex I: Global Digital Compact' page directly (2026-09-05) — the UN General Assembly's own text, adopted as part of Resolution A/RES/79/1, the Pact for the Future — quotes paragraph 48 verbatim: 'we request the Commission on Science and Technology for Development to establish a dedicated working group to engage in a comprehensive and inclusive multi-stakeholder dialogue on data governance at all levels as relevant for development.' This is the primary legal instrument establishing the working group, read directly rather than corroborated by WebSearch synthesis, closing the gap the prior pass left open. UNCTAD's general 1964-founding/195-member-state/Geneva-secretariat facts were separately confirmed in the prior pass via Wikipedia, geneva.china-mission.gov.cn and inclusiveias.com."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -58,31 +59,23 @@ sources:
     url: "https://inclusiveias.com/un-trade-and-development-unctad-upsc/"
     publisher: "InclusiveIAS"
     accessed: "2026-08-28"
+  - title: "Annex I: Global Digital Compact"
+    url: "https://www.un.org/pact-for-the-future/en/annex-i-global-digital-compact"
+    publisher: "United Nations (Pact for the Future / Summit of the Future)"
+    accessed: "2026-09-05"
 ---
 
 # UNCTAD (UN Trade and Development)
 
-> **Still `search-only` after a second genuine attempt, 2026-08-28.**
-> `unctad.org` remains broadly blocked this session — three different
-> pages on the domain all returned HTTP 403 again — and the UNSCEB PDF
-> still 404s; `web.archive.org` cannot be reached at all by this
-> environment's tool. Two more independent, genuinely readable sources
-> were found and read this pass on top of the ones already tried — a
-> Chinese diplomatic mission's UNCTAD page and an exam-prep site's UNCTAD
-> overview — bringing the general "UNCTAD is part of the UN" fact to 3 of
-> 5 sources read directly. But that is not the fact this entity exists to
-> record: **its stated reason for inclusion — that UNCTAD's Commission on
-> Science and Technology for Development hosts a working group on data
-> governance — is still confirmed only by WebSearch synthesis, never by a
-> page actually read.** `sdg.iisd.org` and `dig.watch`, both tried
-> specifically for that claim, returned HTTP 403. Promoting
-> `verification` on generic corroboration while the substantive claim
-> stays unconfirmed would be exactly the hollow majority the
-> re-verification discipline warns against, so this entity is left
-> honestly at `search-only`. The 2024 GA resolution A/RES/79/1 detail
-> (27 state + 27 non-state working-group members) remains recorded below
-> only as an unconfirmed lead for a future pass, should `unctad.org`
-> become reachable.
+> **Promoted to `primary-source` 2026-09-05.** `unctad.org`, `dig.watch`
+> and `sdg.iisd.org` remain blocked (all HTTP 403), the same as every
+> prior attempt. But the substantive claim this entity exists to record —
+> that a CSTD working group on data governance was established, and why —
+> is now confirmed by reading **`un.org`'s own official text directly**:
+> the Global Digital Compact's Annex I page, part of UN General Assembly
+> resolution A/RES/79/1 (the Pact for the Future). That is a stronger
+> source than any `unctad.org` page would have been — it is the actual
+> founding instrument, not a secondary description of it.
 
 ## Description
 
@@ -97,16 +90,17 @@ Governance: Pathways to Progress*, is cited as a second source and indicates
 this work sits within a wider UN-system effort on international data
 governance. Its URL now 404s and was not re-read this pass.
 
-**A new lead, not yet confirmed by a directly-read page**: WebSearch this
-pass surfaced that the working group was established following the UN
-General Assembly's 2024 resolution A/RES/79/1, which tasked the CSTD with a
-"comprehensive and inclusive multi-stakeholder dialogue on data governance
-at all levels," and that it comprises 27 state members and 27 non-state
-members. This is a genuinely more specific mandate and membership figure
-than anything previously recorded here, and is worth a future pass's direct
-fetch of unctad.org's own working-group page once (if) the block lifts —
-recorded here as an unconfirmed lead, not adopted into the frontmatter
-description or relationship evidence.
+**Confirmed 2026-09-05, by a directly-read page.** Reading `un.org`'s own
+"Annex I: Global Digital Compact" page directly — the actual text of UN
+General Assembly resolution A/RES/79/1, the Pact for the Future — quotes
+paragraph 48 verbatim: *"we request the Commission on Science and
+Technology for Development to establish a dedicated working group to
+engage in a comprehensive and inclusive multi-stakeholder dialogue on data
+governance at all levels as relevant for development."* [[UN-GDC]]'s own
+file is updated with the same finding and now carries an `influences` edge
+here. The 27-state/27-non-state membership figure from the prior pass's
+WebSearch snippet was not re-confirmed by a directly-read page this pass
+and is not restated as a sourced fact.
 
 **The working group itself is not modelled as a separate entity**, nor is
 the CSTD. Both are queued; the working group in particular may warrant an
@@ -121,16 +115,14 @@ while the UNCTAD acronym remains in use. Both are recorded.
 ## Relationships
 
 - Part of [[UN]].
+- `influences` edge (UNCTAD as target) recorded on [[UN-GDC]]'s own file,
+  added 2026-09-05 — paragraph 48 requests the CSTD working group.
 
 ## Sources
 
-Neither of the two originally-cited sources was read directly this pass.
-`unctad.org` returned HTTP 403 on every page tried (not just the one cited
-here) and the UNSCEB PDF now 404s. Three general alternates were read
-directly (Wikipedia, geneva.china-mission.gov.cn, inclusiveias.com), all
-confirming UNCTAD's general existence but none mentioning the specific
-working group this entity is about; `dig.watch` and `sdg.iisd.org`, tried
-specifically for that claim, both 403'd, and `web.archive.org` cannot be
-reached at all by this environment's tool. `verification` stays
-`search-only` — a majority of sources confirming the wrong claim is not
-the majority this entity needs.
+`unctad.org`, `dig.watch` and `sdg.iisd.org` remain blocked (HTTP 403) on
+every attempt across two passes. The claim this entity exists to record
+is now confirmed via a stronger, directly-read source instead: `un.org`'s
+own Annex I: Global Digital Compact page. Wikipedia, geneva.china-mission.
+gov.cn and inclusiveias.com (read in the prior pass) confirm UNCTAD's
+general existence but not the working group specifically.
