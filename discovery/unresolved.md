@@ -1038,7 +1038,7 @@ should assume the same and re-source, not just re-fetch.**
   which the same page states explicitly "does not replace but connects
   existing plans." `successor` is left `null` on [[NL-DIGIBETER]] rather
   than pointed at [[NL-NDS]], since the actual intervening strategy isn't
-  modelled yet. **New research-queue item**: create a
+  modelled yet. **Open item**: create a
   `NL-WERKAGENDA-WAARDEGEDREVEN-DIGITALISEREN` (or similar) entity to fill
   this gap and let a real `supersedes` chain be built.
 - [[NL-NDS]]'s continuation under the post-2025 cabinet — genuinely
@@ -1385,7 +1385,7 @@ pushed the three ISO-family entities over a genuine majority despite
 `iso.org` itself staying unread throughout — but for COE, OECD and the
 Convention 108 family, one substitute source wasn't enough to reach
 majority against 4-6 cited sources, so those five stay `search-only`.
-**New research-queue item**: if a future pass can reach `iso.org`,
+**Open item**: if a future pass can reach `iso.org`,
 `oecd.org` or `coe.int` directly (different retrieval path/tool), these
 five entities are worth revisiting — the underlying facts were not found
 to be wrong anywhere, only unconfirmed by the organisations' own pages.

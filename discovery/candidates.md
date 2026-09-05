@@ -219,7 +219,9 @@ Two of the four rows this table used to carry are closed, 2026-09-05:
   statement that the legislature adapted a specific text — exactly the
   kind of single, weakly-sourced instance this page's own §2 (now closed)
   warned against building a type around. Closed as a decision to keep it
-  in prose, the same treatment `research-queue.md` gives StUF.
+  in prose, the same treatment given to other deliberately-not-created
+  entities (e.g. StUF, searched for but never given an entity for want
+  of a usable source).
 
 Two rows remain, one of them narrowed:
 
