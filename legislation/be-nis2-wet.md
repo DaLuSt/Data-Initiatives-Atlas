@@ -26,7 +26,7 @@ verification: primary-source
 
 start_date: 2024-10-18
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-09-05"
 previous_version: BE-NIS1-WET
 successor: null
 
@@ -81,6 +81,10 @@ sources:
     url: "https://www.prebes.be/nl/nieuws/2024/05/publicatie-nis2-wet-in-belgisch-staatsblad"
     publisher: "Prebes vzw"
     accessed: "2026-08-26"
+  - title: "26 APRIL 2024. - Wet tot vaststelling van een kader voor de cyberbeveiliging van netwerk- en informatiesystemen van algemeen belang voor de openbare veiligheid (Justel)"
+    url: "https://www.ejustice.just.fgov.be/eli/wet/2024/04/26/2024202344/justel"
+    publisher: "Belgisch Staatsblad / Moniteur belge (ejustice.just.fgov.be)"
+    accessed: "2026-09-05"
 ---
 
 # NIS2-wet (Belgium)
@@ -94,6 +98,9 @@ sources:
 > claim this entity makes: the act's date, publication date, entry into
 > force, and its replacement of [[BE-NIS1-WET]]. `verification:
 > primary-source`.
+>
+> **Updated 2026-09-05**: the previously-flagged gap — no Belgisch
+> Staatsblad ELI URI cited — is now closed. See below.
 
 ## Description
 
@@ -137,13 +144,24 @@ that at a glance, which it could not with one country.
 
 **No relationship between the three national acts is asserted.**
 
+## The ELI URI, found 2026-09-05
+
+The previously-flagged gap — no Belgisch Staatsblad ELI URI cited, unlike
+[[BE-GDPR-WET]] — is now closed. Reading
+`ejustice.just.fgov.be/eli/wet/2024/04/26/2024202344/justel` directly: the
+act's own title page reads *"26 APRIL 2024. — Wet tot vaststelling van een
+kader voor de cyberbeveiliging van netwerk- en informatiesystemen van
+algemeen belang voor de openbare veiligheid"* — matching this entity's own
+recorded title verbatim — with **publication in the Belgisch Staatsblad on
+17 May 2024** and official number **2024202344**, both matching the four
+independent secondary sources already cited. The publication date now
+rests on the statute's own text via Justel, not only on secondary
+reporting.
+
 ## Sources
 
-Four of seven read directly this pass — eubelius.com, vbo-feb.be,
-kpmglaw.be and prebes.be all confirm the act's date, its 17 May 2024
-publication, its 18 October 2024 entry into force, and its replacement of
-[[BE-NIS1-WET]]. CCB's own three pages remain bot-walled. **No Belgisch
-Staatsblad ELI URI is cited** — unlike [[BE-GDPR-WET]], no ejustice URL for
-this act was returned by search, so the publication date rests on
-independent secondary reporting rather than directly on the statute text,
-though four sources now agree on it.
+Five of eight read directly — eubelius.com, vbo-feb.be, kpmglaw.be,
+prebes.be and now ejustice.just.fgov.be's own Justel page all confirm the
+act's date, its 17 May 2024 publication, its 18 October 2024 entry into
+force, and its replacement of [[BE-NIS1-WET]]. CCB's own three pages
+remain bot-walled.
