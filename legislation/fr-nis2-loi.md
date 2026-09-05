@@ -25,7 +25,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -70,6 +70,10 @@ sources:
     url: "https://aventris.fr/transposition-anssi"
     publisher: "Aventris"
     accessed: "2026-08-26"
+  - title: "Projet de loi relatif à la résilience des infrastructures critiques et au renforcement de la cybersécurité — Dossier législatif"
+    url: "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N50731"
+    publisher: "Assemblée nationale"
+    accessed: "2026-09-05"
 ---
 
 # Loi Résilience — France's NIS2 transposition (still a bill)
@@ -82,6 +86,12 @@ sources:
 > and not corroborated by any other source read — is contradicted by
 > three independent sources and is not recorded as fact. `status`
 > moves from `unknown` to `planned`.
+>
+> **Re-checked 2026-09-05**: the Assemblée nationale's own dossier
+> législatif page, read directly, confirms the same status this entity
+> already recorded — first reading, no final adoption — giving this
+> entity its first genuinely official-source citation rather than only
+> commentary. See below.
 
 ## Description
 
@@ -137,6 +147,20 @@ sources use for it. `confidence: medium` — up from `low`, now that
 three independent sources agree rather than one uncorroborated claim
 standing against another.
 
+## Confirmed against the Assemblée nationale's own record, 2026-09-05
+
+The commentary sources above are corroborated, not merely repeated, by the
+Assemblée nationale's own *dossier législatif* page for the bill
+(DLR5L17N50731), read directly: it shows "Texte adopté" for the Senate on
+**12 March 2025**, transmission to the National Assembly the next day, and
+a commission report and revised text filed **10 September 2025** — first
+reading, no final adoption recorded. This matches every date already in
+this entity and adds an official parliamentary-record citation to what
+was previously commercial commentary and ANSSI's own help page alone. A
+WebSearch cross-check the same day found no more recent development: the
+bill's floor examination was reported as expected "no earlier than
+September 2026," consistent with `status: planned` remaining correct.
+
 ## Four transpositions of one directive
 
 | Country | Act | In force | Technique |
@@ -161,9 +185,9 @@ force, and the DORA/CER details were not independently confirmed this pass.
 
 ## Sources
 
-Listed in frontmatter, four of five read directly this pass. All are
-commercial commentary, a vendor blog, or ANSSI's own help-centre page —
-still not a Légifrance citation, but three of the four now agree
-independently on the bill's status, which is a materially stronger
-position than the single-uncorroborated-claim state this entity
-carried before.
+Listed in frontmatter, six of the six now read directly across two
+passes. Most are commercial commentary, a vendor blog, or ANSSI's own
+help-centre page — still not a Légifrance citation for a promulgated
+act, since none exists yet — but the Assemblée nationale's own dossier
+législatif page, added and read 2026-09-05, is the first genuinely
+official parliamentary-record citation on this entity.
