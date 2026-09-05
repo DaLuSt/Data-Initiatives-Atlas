@@ -122,6 +122,10 @@ sources:
   - title: "New European Interoperability Framework (brochure)"
     url: "https://ec.europa.eu/isa2/sites/default/files/eif_brochure_final.pdf"
     publisher: "European Commission — ISA²"
+  - title: "Highlights from the fourth Interoperable Europe Board meeting"
+    url: "https://interoperable-europe.ec.europa.eu/interoperable-europe/news/highlights-fourth-interoperable-europe-board-meeting"
+    publisher: "European Commission — Interoperable Europe Portal"
+    accessed: "2026-09-05"
 ---
 
 # European Interoperability Framework (EIF)
@@ -165,13 +169,20 @@ that — so [[NL-NORA]] carries `based-on` → this framework on that narrower,
 sourced basis rather than on the broader claim the research-queue question
 originally asked about.
 
-## A revision in flight
+## A revision in flight — still in flight, confirmed 2026-09-05
 
-The Commission aimed to submit a new version of the EIF to the Interoperable
-Europe Board for adoption at the end of 2025 / beginning of 2026. Relative
-to this entry's date (August 2026) that revision may already have been
-adopted, which would make the "revised in 2017" description stale.
-`last_verified` is null and this is flagged in `discovery/unresolved.md`.
+The Commission aimed to submit a new version of the EIF ("Next Generation
+EIF") to the Interoperable Europe Board for adoption at the end of 2025 /
+beginning of 2026. Confirmed by reading the Board's own
+interoperable-europe.ec.europa.eu news page directly: at its **fourth
+meeting, 19 May 2026**, "the Board was also updated on the revision of the
+European Interoperability Framework (EIF). Member States were invited to
+engage actively in the upcoming consultations, including the forthcoming
+call for evidence." **Not yet adopted** as of that meeting — a wide-ranging
+public consultation was still being run in 2026, so the original
+end-2025/early-2026 target has slipped. The page gives no new expected
+completion date. The "revised in 2017" description (EIF 3.0) therefore
+stays correct, not stale — the update remains a proposal in consultation.
 
 Batch 8 added [[EU-INTEROPERABLE-EUROPE-ACT]]. **No relationship between the
 Act and this Framework is asserted**, because no source read states how they

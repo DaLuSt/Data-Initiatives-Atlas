@@ -14,7 +14,7 @@ description: >
 
 level: national
 country: NL
-region: null
+region: EU
 
 status: active
 confidence: medium
@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: 2018-01-01
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -67,6 +67,10 @@ sources:
     url: "https://internationaldataspaces.org/idsa-and-ishare-foundation-intensify-collaboration-to-speed-up-industrial-adoption-of-data-spaces/"
     publisher: "International Data Spaces Association (IDSA)"
     accessed: "2026-08-27"
+  - title: "Foundation Structure"
+    url: "https://ishare.eu/about/the-foundation/foundation-structure/"
+    publisher: "iSHARE"
+    accessed: "2026-09-05"
 ---
 
 # iSHARE
@@ -106,19 +110,25 @@ determining data access rights." **The claim that "the IDSA has
 incorporated the iSHARE agreement system into the IDS architecture" is
 corrected this pass** — see below.
 
-## A Dutch entity that outgrew the Netherlands
+## A Dutch entity operating across borders — settled, 2026-09-05
 
-iSHARE is recorded as `country: NL` on the basis of its Dutch origin
-(Topsector Logistiek), but it now presents itself at **ishare.eu** and
-operates in a European data-space context. This sits awkwardly with the
-country-neutral model: an initiative that began national and became
-cross-border is exactly the case the `country` field handles least well.
+iSHARE is recorded as `country: NL`, and this pass confirms that is still
+the right answer rather than a stale placeholder. Reading ishare.eu's own
+"Foundation Structure" page directly: the **iSHARE Foundation**, the
+scheme owner responsible for the Trust Framework, is domiciled at
+Villapark 7, 3051 BP Rotterdam, the Netherlands. A WebSearch cross-check
+independently confirms its Dutch Chamber of Commerce (Kamer van Koophandel)
+registration, number 73058289. The Foundation — the legal body that
+actually governs iSHARE — is Dutch, not European.
 
-The current recording is provisional and flagged in
-`discovery/unresolved.md`. If iSHARE is now genuinely governed at European
-level it may warrant `country: null` with `region: EU`, or a successor
-entity. That should be settled in Batch 10, when European data spaces are
-researched, rather than guessed now.
+What genuinely changed is scope of *operation*, not legal domicile: iSHARE
+presents at ishare.eu and its Trust Framework is used to establish data
+spaces across borders (see the DMI example above), which is why `region`
+now carries `EU` alongside the unchanged `country: NL` — the same pattern
+used elsewhere in the Atlas for a nationally-domiciled instrument with
+cross-border reach. No successor entity or `country: null` is warranted:
+the sourced fact is a Dutch foundation operating internationally, not a
+European body that absorbed a Dutch one.
 
 `start_date: 2018-01-01` is a **placeholder for "in 2018"**.
 
