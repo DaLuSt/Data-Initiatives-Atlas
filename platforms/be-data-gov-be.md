@@ -25,7 +25,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -37,12 +37,20 @@ related_entities:
   - BE-DCAT-AP-BE
   - NL-DATA-OVERHEID
   - DE-GOVDATA
+  - BE-HERGEBRUIK-WET
 relationships:
   - type: maintained-by
     target: BE-BOSA
     source: fact
     evidence: "The DCAT-AP feed is uploaded via the federal open data portal, which is managed by FOD BOSA; BOSA publishes the portal as one of its applications and documents its metadata integration services (financien.belgium.be 'Open data: DCAT-AP feed'; bosa.belgium.be 'Federale open data portaal'). Confirmed by reading GitHub's own Fedict/dcat README directly (2026-08-28): the repository holds 'Metadata being used to update the Belgian data.gov.be portal' and is maintained by Fedict/FPS BOSA DG Digital Transformation, corroborating BOSA's maintainer role in the entity's own technical infrastructure rather than only in prose describing it. The five originally cited belgium.be/data.gov.be/data.europa.eu pages remain unreadable (CAPTCHA or unparseable binary) even on retry this pass."
     confidence: high
+    valid_from: null
+    valid_until: null
+  - type: governed-by
+    target: BE-HERGEBRUIK-WET
+    source: fact
+    evidence: "CLOSES A PREVIOUSLY-FLAGGED REFUSAL, using a source this entity already had. Re-reading lexgo.be's own legal-news article directly (read 2026-08-28, re-examined 2026-09-05 for this exact question): it names data.gov.be as 'the federal data portal' and states it sits inside 'the Act of 4 May 2016 on the re-use of public sector information (amended by the Act of 7 April 2019)' and the Royal Decree of 2 June 2019, which set the portal's model licences and reuse-request procedures. The Act of 4 May 2016 is [[BE-HERGEBRUIK-WET]] by its own alternative name."
+    confidence: medium
     valid_from: null
     valid_until: null
 
@@ -181,12 +189,13 @@ recorded with only one of those levels present.
 ## Relationships
 
 - Maintained by [[BE-BOSA]].
+- `governed-by` [[BE-HERGEBRUIK-WET]] — closed 2026-09-05, the same
+  refusal this entity previously made for [[DE-GOVDATA]] and [[DE-DNG]].
+  lexgo.be's own article, already cited here, names data.gov.be as
+  operating inside the 4 May 2016 act's legal framework — a source this
+  entity had all along but had not yet read for this specific question.
 
 Inbound: [[BE-DCAT-AP-BE]] `applies-to` this portal.
-
-**No relationship to [[BE-HERGEBRUIK-WET]] is asserted**, the same call
-made for [[DE-GOVDATA]] and [[DE-DNG]]: the open data act and the open data
-portal are obviously related, and no source read states the relationship.
 
 ## Sources
 
