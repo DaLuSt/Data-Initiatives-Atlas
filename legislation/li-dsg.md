@@ -28,7 +28,7 @@ verification: primary-source
 
 start_date: 2019-01-01
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -42,10 +42,10 @@ related_entities:
   - LI-DATENSCHUTZSTELLE
   - DE-BDSG
 relationships:
-  - type: implements-requirement-from
+  - type: supplements
     target: EU-GDPR
     source: fact
-    evidence: "Confirmed verbatim by reading datenschutzstelle.li's own 'Nationale Gesetze' page directly (2026-08-22): 'Liechtenstein nutzte diesen Gestaltungsspielraum mit der Totalrevision des Datenschutzgesetzes, welches seit dem 1. Januar 2019 in Kraft ist. Datenschutzgesetz (DSG) vom 4. Oktober 2018' (Liechtenstein used this latitude with the total revision of the Data Protection Act, in force since 1 January 2019; Data Protection Act (DSG) of 4 October 2018) — the authority's own page confirms the exact dates directly, not only a law firm's commentary. Corroborated by reading naegele.law's German-language text directly, which resolves a typo in the same page's English translation: the English says 'passed on October 2th of 2018 and came into force on January 1st of 2018', but the German original states 'diese am 4. Oktober 2018 verabschiedet. Das revidierte DSG trat am 1. Januar 2019 in Kraft' — 4 October 2018 and 1 January 2019, matching the DSS's own page and this entity's dates exactly. The GDPR's direct applicability in Liechtenstein from 20 July 2018 through the EEA Agreement is confirmed by the same naegele.law page: 'Seit dem 20. Juli 2018 ist die Europäische Datenschutz-Grundverordnung (DSGVO) ... in Liechtenstein anwendbar.' gdprhub.eu's 'Data Protection in Liechtenstein' page was also read directly and confirms the DSG by name as the national implementation law, though most of its own sections are unfilled stubs."
+    evidence: "Confirmed verbatim by reading datenschutzstelle.li's own 'Nationale Gesetze' page directly (2026-08-22): 'Liechtenstein nutzte diesen Gestaltungsspielraum mit der Totalrevision des Datenschutzgesetzes, welches seit dem 1. Januar 2019 in Kraft ist. Datenschutzgesetz (DSG) vom 4. Oktober 2018' (Liechtenstein used this latitude with the total revision of the Data Protection Act, in force since 1 January 2019; Data Protection Act (DSG) of 4 October 2018) — the authority's own page confirms the exact dates directly, not only a law firm's commentary. Corroborated by reading naegele.law's German-language text directly, which resolves a typo in the same page's English translation: the English says 'passed on October 2th of 2018 and came into force on January 1st of 2018', but the German original states 'diese am 4. Oktober 2018 verabschiedet. Das revidierte DSG trat am 1. Januar 2019 in Kraft' — 4 October 2018 and 1 January 2019, matching the DSS's own page and this entity's dates exactly. The GDPR's direct applicability in Liechtenstein from 20 July 2018 through the EEA Agreement is confirmed by the same naegele.law page: 'Seit dem 20. Juli 2018 ist die Europäische Datenschutz-Grundverordnung (DSGVO) ... in Liechtenstein anwendbar.' gdprhub.eu's 'Data Protection in Liechtenstein' page was also read directly and confirms the DSG by name as the national implementation law, though most of its own sections are unfilled stubs. `supplements` replaces `implements-requirement-from` as of 2026-09-05, when the type was added specifically for this entity: the DSG exercises the GDPR's national opening clauses after the GDPR became directly applicable in Liechtenstein — it does not transpose an obligation, which is what `implements-requirement-from` claims."
     confidence: medium
     valid_from: 2019-01-01
     valid_until: null
@@ -86,6 +86,13 @@ sources:
 > independently. This entity follows the corrected dates, sourced from
 > two independent readings rather than the flawed English machine/human
 > translation.
+>
+> **Updated 2026-09-05.** `discovery/candidates.md` had flagged this
+> entity's own note — "no better type exists — a `supplements` type would
+> have exactly one instance" — as an open ontology gap. The `supplements`
+> type is now added to `metadata/relationship-types.md`, with this entity
+> as its motivating example, and the edge below is updated from
+> `implements-requirement-from` accordingly.
 
 ## Description
 
@@ -154,10 +161,12 @@ that the Liechtenstein legislature adapted a specific text — which is what
 
 ## Relationships
 
-- `implements-requirement-from` [[EU-GDPR]]. This is the closest available
-  type and it slightly overstates: the DSG supplements rather than transposes.
-  The distinction is stated above and in the evidence string, and no better
-  type exists — a `supplements` type would have exactly one instance.
+- `supplements` [[EU-GDPR]] — added 2026-09-05, replacing
+  `implements-requirement-from`. `metadata/relationship-types.md` now
+  defines `supplements` specifically for this case: a national instrument
+  filling in opening clauses a higher-level instrument leaves open, where
+  that instrument is already directly applicable rather than being
+  transposed. This entity was the type's motivating example.
 - `references` [[INTL-EEA-JCD-154-2018]].
 
 ## Sources

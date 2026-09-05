@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: 2019-07-16
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -41,6 +41,7 @@ related_entities:
   - BE-HERGEBRUIK-WET-2023
   - ES-RDL-24-2021
   - FR-LOI-VALTER
+  - EU-CJEU
 relationships:
   - type: supersedes
     target: EU-PSI-DIRECTIVE
@@ -273,22 +274,27 @@ legislator only on **25 December 2023** — twenty-nine months late, and ten
 months after the referral recorded below. Only the federal act is an Atlas
 entity; [[BE-HERGEBRUIK-WET-2023]] explains why the other three are not.
 
-## ⚠ Enforcement the Atlas cannot model
+## ⚠ Enforcement the Atlas can only partly model
 
 The Commission opened infringement proceedings against **nineteen member
 states** over this directive, and in **February 2023 referred Belgium,
 Bulgaria, Latvia and the Netherlands to the Court of Justice** for failing to
 transpose it.
 
-The Atlas has **no way to represent this**. It holds instruments, bodies and
-the relationships between them; it has no entity type for an infringement
-procedure, no relationship type for "was referred to the Court over", and no
-Court of Justice entity to point at.
+**The missing node now exists: [[EU-CJEU]], added 2026-09-05.** The Atlas
+still has no entity type for an individual infringement procedure and no
+relationship type for "was referred to the Court over" — so the specific
+February 2023 referral is not itself modelled as an edge from this
+directive, or from the four member states, to [[EU-CJEU]]. Creating the
+Court did not create that edge, the same lesson the INSPIRE↔UN-GGIM
+refusal on `discovery/candidates.md` recorded: a missing node and a
+missing edge are not the same gap.
 
-That is a real limitation and worth stating on the instrument where it bites
-hardest. It means a reader can see *that* the Netherlands transposed in 2024
-— three years after the deadline — and cannot see from the graph that it was
-taken to court in between. `discovery/candidates.md` records the gap.
+That remaining limitation is worth stating on the instrument where it
+bites hardest. It means a reader can see *that* the Netherlands transposed
+in 2024 — three years after the deadline — and cannot see from the graph
+that it was taken to court in between. `discovery/candidates.md` records
+the gap.
 
 The Dutch case is the one the Atlas can partly show: [[NL-WHO]] carries the
 2024 amending act, which is the end of the story whose middle is missing.

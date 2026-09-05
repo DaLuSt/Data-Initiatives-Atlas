@@ -36,18 +36,24 @@ The **follow-on batch** then closed the two largest things this page had left
 open: the `measures` relationship type and the `level` vocabulary,
 and acted on the domain coverage measured. Fourteen more entities.
 
-**A third batch ran 2026-09-05**, emptying the entire carried-leads section
-except for one name (DESA). Nine new/re-verified entities: [[UN-CCL]],
-[[UN-GLOBAL-PLATFORM]], [[UN-ITU-X509]], [[UN-WHO]] (+ [[UN-WHO-GHO]]),
-[[UN-UNDP]], [[UN-IMO]] (+ [[UN-IMO-GISIS]]) newly created; [[UN-UNCTAD]]
-and [[UN-GDC]] promoted to `primary-source` on the strength of `un.org`'s
-own official text. The INSPIRE↔UN-GGIM edge (§1) was attempted again and
-remains genuinely open — the one item on this page that keeps resisting
-closure across three separate passes.
+**A third batch ran 2026-09-05**, in two parts. The first emptied the
+entire carried-leads section except for one name (DESA): nine
+new/re-verified entities — [[UN-CCL]], [[UN-GLOBAL-PLATFORM]],
+[[UN-ITU-X509]], [[UN-WHO]] (+ [[UN-WHO-GHO]]), [[UN-UNDP]], [[UN-IMO]]
+(+ [[UN-IMO-GISIS]]) newly created; [[UN-UNCTAD]] and [[UN-GDC]] promoted
+to `primary-source` on the strength of `un.org`'s own official text. The
+INSPIRE↔UN-GGIM edge (§1) was attempted again and remains genuinely
+open — the one item on this page that keeps resisting closure across
+three separate passes. The second part worked the ontology-gaps table
+(§6): added the `supplements` relationship type, closed the "modelled
+on" row as a deliberate decision rather than a new type, and created
+[[EU-CJEU]] — narrowing, not closing, the enforcement-modelling gap.
 
-What remains below is what is genuinely still open. **Section 6's
-ontology-gap table is now the largest thing on this page**, and every row in
-it is a modelling decision rather than research.
+What remains below is what is genuinely still open: the INSPIRE↔UN-GGIM
+edge (§1), one carried lead (§3), and two ontology-gap rows (§6) — one of
+them, the `type: law` taxonomy flattening, a modelling decision rather
+than research, and large enough to warrant its own dedicated pass rather
+than a quick pickup.
 
 ---
 
@@ -194,12 +200,27 @@ ministries and traffic-data agencies that no batch has surveyed.
 
 ## 6. Ontology gaps
 
+Two of the four rows this table used to carry are closed, 2026-09-05:
+
+- **`implements-requirement-from` cannot say "supplements"** → the
+  `supplements` type was added to `metadata/relationship-types.md`, with
+  [[LI-DSG]] as its motivating (and, for now, only) example, replacing
+  the overstated `implements-requirement-from` edge that entity's own
+  file had flagged as the closest available but wrong type.
+- **No way to record "modelled on"** → deliberately **not** given a new
+  type. `LI-DSG`'s "modelled on the German BDSG" characterisation comes
+  from a law-firm commentary describing legislative style, not a sourced
+  statement that the legislature adapted a specific text — exactly the
+  kind of single, weakly-sourced instance this page's own §2 (now closed)
+  warned against building a type around. Closed as a decision to keep it
+  in prose, the same treatment `research-queue.md` gives StUF.
+
+Two rows remain, one of them narrowed:
+
 | Gap | Why it matters | Noted | Status |
 |---|---|---|---|
-| **No way to model enforcement against a member state.** | Nineteen member states faced infringement proceedings over [[EU-OPEN-DATA-DIRECTIVE]], and four were referred to the Court of Justice in February 2023. The Atlas has no entity type for an infringement procedure, no relationship type for it, and no **Court of Justice of the European Union** entity. Non-compliance is a large part of how EU data law actually operates and none of it is visible | 2026-08-18 | **Open — would need a type, a relationship and at least one new entity** |
-| **`type: law` flattens primary and secondary legislation.** | [[IE-PSI-REGULATIONS-2021]] is a statutory instrument; [[IE-DPA-2018]] is an Act. Both are `law`. The same flattening applies to Portuguese decreto-lei versus lei, to German Gesetz versus Verordnung, and now to [[INTL-EEA-JCD-154-2018]], which is a Joint Committee *decision* filed as a `law` | 2026-08-18; extended 2026-08-21 | Open |
-| **`implements-requirement-from` cannot say "supplements".** | [[LI-DSG]] does not transpose the GDPR — the GDPR is directly applicable in Liechtenstein — it exercises the regulation's national opening clauses. The edge asserted is the closest available type and slightly overstates, which is recorded on the entity. A `supplements` type would today have exactly one instance | 2026-08-21 | Open (vocabulary) |
-| **No way to record "modelled on".** | [[LI-DSG]] is described by its sources as modelled on the German BDSG. `based-on` claims the legislature adapted a specific text, which is more than a law-firm commentary supports. Left in prose | 2026-08-21 | Open |
+| **No way to model enforcement against a member state — narrowed 2026-09-05.** | Nineteen member states faced infringement proceedings over [[EU-OPEN-DATA-DIRECTIVE]], and four were referred to the Court of Justice in February 2023. **The missing node now exists** — [[EU-CJEU]], confirmed via `curia.europa.eu`'s own page. The Atlas still has no entity type for an individual infringement procedure and no relationship type for "was referred to the Court over", so the specific February 2023 referral is not itself an edge in the graph. Creating the Court did not create that edge — the same lesson §1's INSPIRE↔UN-GGIM refusal records | 2026-08-18; narrowed 2026-09-05 | **Open — the node exists; the procedure-level type and relationship do not** |
+| **`type: law` flattens primary and secondary legislation.** | [[IE-PSI-REGULATIONS-2021]] is a statutory instrument; [[IE-DPA-2018]] is an Act. Both are `law`. The same flattening applies to Portuguese decreto-lei versus lei, to German Gesetz versus Verordnung, and now to [[INTL-EEA-JCD-154-2018]], which is a Joint Committee *decision* filed as a `law`. Unlike the other three rows this table carried, this is a taxonomy change (`metadata/taxonomy.md`, `metadata/schema.json`) touching every legislation entity in the Atlas, not a single new type or one new entity — genuinely out of scope for a candidates-page pickup | 2026-08-18; extended 2026-08-21 | Open (design, large) |
 
 ---
 
