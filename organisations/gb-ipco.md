@@ -22,7 +22,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -78,6 +78,10 @@ sources:
     url: "https://en.wikipedia.org/wiki/Investigatory_Powers_Commissioner"
     publisher: "Wikipedia"
     accessed: "2026-08-22"
+  - title: "The Double Lock"
+    url: "https://www.ipco.org.uk/what-we-do/the-double-lock/"
+    publisher: "Investigatory Powers Commissioner's Office (IPCO)"
+    accessed: "2026-09-05"
 ---
 
 # Investigatory Powers Commissioner's Office (IPCO)
@@ -85,6 +89,10 @@ sources:
 > **Verified 2026-08-22.** ipco.org.uk's own pages and en.wikipedia.org's
 > "Investigatory Powers Commissioner" article were read directly and
 > confirmed the claims below, verbatim in places.
+>
+> **Updated 2026-09-05**: IPCO's own dedicated "double lock" page,
+> previously unread, describes the warrant-review mechanism this entity
+> had flagged as unsourced.
 
 ## Description
 
@@ -127,15 +135,36 @@ consolidated it into one office — the opposite of Germany's direction of
 travel, where [[DE-UKR]] was added alongside [[DE-PKGR]] rather than
 absorbing it.
 
+## The double lock, described 2026-09-05
+
+Confirmed by reading IPCO's own dedicated "The Double Lock" page directly:
+"The 'double-lock' refers to the review of applications by our Judicial
+Commissioners for warrants allowing public authorities to use the most
+intrusive investigatory powers." The mechanism runs in two stages —
+public authorities first submit applications to a minister (or, for
+certain warrants, a senior officer); a Judicial Commissioner then
+independently reviews the application, checking that the warrant "is
+necessary" for one of the statutory purposes and "is proportionate to
+what it intends" to achieve. **Only with the Commissioner's approval can
+a warrant be issued.** A narrow urgency exception allows a warrant to be
+issued first, with the Commissioner then notified and empowered to
+"approve or quash the warrant or authorisation after it has been
+issued."
+
+This is the UK analogue of [[NL-TIB]]'s binding prior review — a body
+independent of the executive with a genuine veto, not merely an
+after-the-fact overseer. No relationship type or new entity is added for
+the Judicial Commissioners: they are a function IPCO's own governance
+carries, not a separate Atlas body, and the mechanism is recorded here in
+prose rather than as a graph edge, since no relationship type in
+`metadata/relationship-types.md` expresses a binding co-approval
+requirement between an office and a class of decisions.
+
 ## Not modelled
 
 - The **Investigatory Powers Tribunal**, the judicial body that hears
   complaints. IPCO oversees; the Tribunal adjudicates. They are separate,
   and only IPCO is modelled here.
-- The **double lock**, the IPA's warrant mechanism under which a Secretary
-  of State's decision is reviewed by a Judicial Commissioner. This is the UK
-  analogue of [[NL-TIB]]'s binding prior review, and it is **not asserted**
-  because no source read in this batch describes the mechanism.
 
 ## Relationships
 
@@ -144,4 +173,5 @@ absorbing it.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter. The double-lock page added and read directly
+2026-09-05.
