@@ -35,6 +35,7 @@ related_entities:
   - PT
   - IE
   - EU-DIGITAL-OMNIBUS
+  - EU-DIGITAL-OMNIBUS-AI
 relationships:
   - type: applies-in
     target: PT
@@ -280,19 +281,15 @@ some obligations bind; it does not mean every provision applies.
 
 The postponement flagged as unconfirmed in the prior pass is now confirmed
 in detail, and traced to its real source. **Regulation (EU) 2026/1744**,
-commonly called the **"Digital Omnibus on AI"**, was adopted by the Council
-on 29 June 2026 (following the European Parliament's plenary vote of 16
-June 2026), published in the Official Journal on **24 July 2026**, and
-entered into force on **27 July 2026** — six days before the original 2
-August 2026 high-risk deadline. It amends this Regulation, the EASA
-Regulation (EU) 2018/1139, and the Machinery Regulation (EU) 2023/1230.
-
-Confirmed via WebSearch cross-checks of multiple independent legal trackers
-(the European Parliament's own Legislative Train Schedule among them);
-`eur-lex.europa.eu/eli/reg/2026/1744/oj/eng` was added to `sources` above
-as the authoritative citation but itself returned empty content to this
-pass's fetch tooling, consistent with every other EUR-Lex attempt made
-across this batch.
+commonly called the **"Digital Omnibus on AI"** and now modelled as
+[[EU-DIGITAL-OMNIBUS-AI]], was adopted **8 July 2026** — confirmed
+2026-09-05 by reading EUR-Lex's own text of the regulation directly,
+correcting the 29 June 2026 date this entity previously carried from a
+WebSearch cross-check of legal trackers — published in the Official
+Journal on **24 July 2026**, and entered into force on **27 July 2026** —
+six days before the original 2 August 2026 high-risk deadline. It amends
+this Regulation, the EASA Regulation (EU) 2018/1139, and the Machinery
+Regulation (EU) 2023/1230.
 
 Confirmed revised timetable:
 
@@ -306,25 +303,23 @@ duties, the general-purpose-AI provider obligations in force since August
 2025, and the Article 5 prohibited-practices regime in force since
 February 2025 — all confirmed to remain on their original dates.
 
-### ⚠ Not yet its own Atlas entity — a genuine, corrected gap
+### Not [[EU-DIGITAL-OMNIBUS]] — a genuine, corrected distinction
 
-The prior pass attributed the postponement loosely to [[EU-DIGITAL-OMNIBUS]].
-That was wrong in a specific, checkable way: [[EU-DIGITAL-OMNIBUS]] is
-**COM(2025) 837**, the Commission's broader "Digital Omnibus" proposal
-covering the Data Governance Act, Open Data Directive and GDPR — see that
-entity for the correction made to its own identifying number this pass.
-The AI Act's timetable was changed by a **separate sibling proposal**,
-**COM(2025) 836** ("Digital Omnibus **on AI**"), published the same day
-(19 November 2025) but tracked, negotiated and adopted independently — and
-now enacted as Regulation (EU) 2026/1744 above. [[EU-DIGITAL-OMNIBUS]]
-itself does not amend the AI Act.
+An earlier pass attributed the postponement loosely to
+[[EU-DIGITAL-OMNIBUS]]. That was wrong in a specific, checkable way:
+[[EU-DIGITAL-OMNIBUS]] is **COM(2025) 837**, the Commission's broader
+"Digital Omnibus" proposal covering the Data Governance Act, Open Data
+Directive and GDPR — see that entity for the correction made to its own
+identifying number. The AI Act's timetable was changed by a **separate
+sibling proposal**, **COM(2025) 836** ("Digital Omnibus **on AI**"),
+published the same day (19 November 2025) but tracked, negotiated and
+adopted independently. [[EU-DIGITAL-OMNIBUS]] itself does not amend the
+AI Act.
 
-Regulation (EU) 2026/1744 has no Atlas entity of its own. Modelling it
-properly (a `supersedes`/`amends`-type edge from a new EU-level regulation
-entity onto this one) is outside this pass's assigned files, and is logged
-in `discovery/unresolved.md` as a concrete, well-sourced gap for a future
-batch — a sharper finding than the vague "postponements were not
-established" flag it replaces.
+**Modelled 2026-09-05** as [[EU-DIGITAL-OMNIBUS-AI]], closing the gap this
+entity previously flagged — EUR-Lex's own text of Regulation (EU)
+2026/1744, unreadable to this Atlas's fetch tooling when the gap was
+first found, was read directly this pass via its TXT/HTML URL form.
 
 ## Relevance assessment
 
@@ -356,11 +351,14 @@ Regulation (EU) 2026/1744 is also listed, unchanged from the prior pass.
   countries. Every other member state belongs here too; the
   `applies-in` relationships are added as countries join the Atlas.
 - **Not** amended by [[EU-DIGITAL-OMNIBUS]] — correcting the prior pass.
-  The AI Act's confirmed timetable change came from a distinct,
-  already-adopted Regulation (EU) 2026/1744 that has no Atlas entity of
-  its own (see above).
+- `amends` edge (this Regulation as target) recorded on
+  [[EU-DIGITAL-OMNIBUS-AI]]'s own file — Regulation (EU) 2026/1744, the
+  instrument that actually changed the AI Act's timetable.
 
 ## Sources
 
-Listed in frontmatter. Both EUR-Lex citations (2024/1689 and the amending
-2026/1744) are now confirmed readable, the former as of 2026-09-05.
+Listed in frontmatter. The EUR-Lex citation for this Regulation
+(2024/1689) is now confirmed readable, as of 2026-09-05. The amending
+Regulation (2026/1744) is documented on its own entity,
+[[EU-DIGITAL-OMNIBUS-AI]], where its EUR-Lex text was also read directly
+this pass.

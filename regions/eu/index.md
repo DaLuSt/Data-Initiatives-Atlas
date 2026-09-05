@@ -79,8 +79,11 @@ Anchor entity: [[EU]]
 ### AI
 
 - [[EU-AI-ACT]] — Artificial Intelligence Act (Reg. 2024/1689) _(high-risk
-  timetable deferred to 2 Dec 2027 by Reg. (EU) 2026/1744, "Digital Omnibus
-  on AI" — adopted, in force 27 Jul 2026, no Atlas entity of its own)_ ✅ 2026-08-28
+  timetable deferred to 2 Dec 2027 by [[EU-DIGITAL-OMNIBUS-AI]], Reg. (EU)
+  2026/1744)_ ✅ 2026-08-28
+- [[EU-DIGITAL-OMNIBUS-AI]] — "Digital Omnibus on AI" (Reg. (EU)
+  2026/1744, COM(2025) 836), `amends` [[EU-AI-ACT]]. Adopted 8 Jul 2026,
+  in force 27 Jul 2026. ✅ 2026-09-05
 
 ### Pending
 
@@ -88,8 +91,7 @@ Anchor entity: [[EU]]
   **Not adopted** (still under negotiation as of 24 Jul 2026). Would repeal
   [[EU-DGA]] and [[EU-OPEN-DATA-DIRECTIVE]] into [[EU-DATA-ACT]], and amend
   [[EU-GDPR]]. Corrected 2026-08-28: does **not** amend [[EU-AI-ACT]] — that
-  is a distinct sibling proposal, COM(2025) 836 ("Digital Omnibus on AI"),
-  already adopted as Reg. (EU) 2026/1744 (see above). ✅ 2026-08-28
+  is a distinct sibling proposal, [[EU-DIGITAL-OMNIBUS-AI]] (see above). ✅ 2026-08-28
 
 ## Cross-level chains established
 
