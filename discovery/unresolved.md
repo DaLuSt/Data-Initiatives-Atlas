@@ -1522,13 +1522,18 @@ two stay honestly at `search-only`.
   UNECE's own text, rather than hidden as three independent
   confirmations), pushing 1-of-3 to 3-of-5.
 
-**Stayed at `search-only`, honestly, after genuine additional effort:**
+**Stayed at `search-only` after this pass, later promoted:**
 - [[INTL-CONVENTION-108-PROTOCOL]] — one new source (an independent IT-law
   blog, mbkaya.com, quoting the Protocol's own preamble) was found and
   read, moving this entity from 1-of-3 to 2-of-4 — exactly the borderline
   the discipline calls out, not a majority. Two further candidates failed
   (IT Law Wiki/Fandom: HTTP 402 paywall; NADPA-RAPDP: HTTP 503). Left
-  `search-only` rather than forced across a 50/50 split.
+  `search-only` at the time rather than forced across a 50/50 split.
+  **Promoted 2026-09-05**: a fifth source, `assembly.coe.int` (a different,
+  unblocked `coe.int` subdomain), was found and read directly, giving a
+  genuine 3-of-5 majority.
+
+**Stayed at `search-only`, honestly, after genuine additional effort:**
 - [[UN-UNCTAD]] — `unctad.org` remains broadly blocked (three separate
   pages tried, all 403) and the UNSCEB PDF still 404s. Three general,
   independent sources were found and read directly this pass (Wikipedia,
