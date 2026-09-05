@@ -1254,9 +1254,24 @@ treaties, plus [[DOMAIN-NATIONAL-SECURITY]]. Eleven entities promoted to
 `primary-source`: [[DOMAIN-NATIONAL-SECURITY]], [[INTL-IDSA]],
 [[INTL-IEC]], [[INTL-IETF]], [[INTL-ISO]], [[INTL-ISOC]], [[INTL-NIIS]],
 [[INTL-W3C]], [[INTL-X-ROAD]], [[INTL-IDS-RAM]] and
-[[INTL-ISO-IEC-27001]]. Five stayed `search-only`: [[INTL-COE]],
-[[INTL-OECD]], [[INTL-CONVENTION-108]], [[INTL-CONVENTION-108-PROTOCOL]]
-and [[INTL-CONVENTION-108-PLUS]].
+[[INTL-ISO-IEC-27001]]. Five initially stayed `search-only`:
+[[INTL-COE]], [[INTL-OECD]], [[INTL-CONVENTION-108]],
+[[INTL-CONVENTION-108-PROTOCOL]] and [[INTL-CONVENTION-108-PLUS]]. **Four
+of the five have since been promoted to `primary-source`** (same day,
+2026-08-28, via alternate sources found for each rather than the blocked
+`coe.int`/`oecd.org` domains — see each entity's own verification banner):
+[[INTL-COE]] via a second Wikipedia article, EEAS's own page and a UK
+government page; [[INTL-OECD]] via `legalinstruments.oecd.org` (an
+unblocked OECD subdomain) and Belgium's foreign ministry; [[INTL-
+CONVENTION-108]] via a Georgetown Law Library guide and three
+law-firm/compliance explainers; [[INTL-CONVENTION-108-PLUS]] via four
+independent alternates including an international-law blog and a
+University of Namur research-portal abstract. **The fifth,
+[[INTL-CONVENTION-108-PROTOCOL]], closed 2026-09-05**: a fresh search
+found `assembly.coe.int` — a different, unblocked `coe.int` subdomain —
+hosting a Parliamentary Assembly of the Council of Europe report read
+directly, giving a genuine 3-of-5 majority and confirming Council of
+Europe custodianship directly rather than by inference.
 **Three domains confirmed fully, independently blocked, not just
 `coe.int`.** Every path tried against `coe.int` and `rm.coe.int` (treaty
 pages, member-state pages, news announcements, the bare homepage) returned
@@ -1272,10 +1287,13 @@ pushed the three ISO-family entities over a genuine majority despite
 `iso.org` itself staying unread throughout — but for COE, OECD and the
 Convention 108 family, one substitute source wasn't enough to reach
 majority against 4-6 cited sources, so those five stay `search-only`.
-**Open item**: if a future pass can reach `iso.org`,
-`oecd.org` or `coe.int` directly (different retrieval path/tool), these
-five entities are worth revisiting — the underlying facts were not found
-to be wrong anywhere, only unconfirmed by the organisations' own pages.
+**Open item, narrowed and now closed**: all five entities below were
+eventually promoted via alternate sources rather than direct access to
+`www.coe.int`/`rm.coe.int` (see above); only the ISO-family entities
+still rest on `iso.org` staying unread. If a future pass can reach that
+domain directly (different retrieval path/tool), they are worth
+strengthening — the underlying facts were not found to be wrong
+anywhere, only unconfirmed by the organisation's own pages.
 **Two dead/unreadable citations found and documented, not silently
 dropped:**
 - `dataprotection.govmu.org`'s Mauritius CETS-223-ratification communiqué
@@ -1306,10 +1324,6 @@ corroborated, but no page read this pass states the year.
   questions (already flagged by a prior pass) remain open; `coe.int`
   staying blocked means the Council of Europe's own chart of ratifications
   still cannot be checked directly.
-- The five entities that stayed `search-only` above would all benefit from
-  one more successfully-read source apiece — they are one source short of
-  a majority in three of the five cases (COE 1/5 with substitute, OECD 1/3
-  with substitute, Convention-108-Protocol 1/3), not zero.
 - ISO/IEC JTC 1 itself remains unmodelled (flagged by a prior pass on
   [[INTL-IEC]]); this pass did not change that assessment.
 All three validation commands (`validation/run_all.py`,
