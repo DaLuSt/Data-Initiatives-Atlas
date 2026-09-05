@@ -27,7 +27,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-09-05"
 previous_version: null
 successor: null
 
@@ -65,6 +65,10 @@ sources:
     url: "https://nsm.no/en/"
     publisher: "Nasjonal sikkerhetsmyndighet (NSM)"
     accessed: "2026-08-22"
+  - title: "Lov om nasjonal sikkerhet (sikkerhetsloven) — LOV-2018-06-01-24"
+    url: "https://lovdata.no/dokument/NL/lov/2018-06-01-24"
+    publisher: "Lovdata"
+    accessed: "2026-09-05"
 ---
 
 # Nasjonal sikkerhetsmyndighet (NSM)
@@ -144,16 +148,20 @@ now known that NSM's peers exist and are named, not merely suspected.
 
 ## No relationships beyond the anchor
 
-NSM's statutory basis is named this pass — snl.no states plainly that
-"forebyggende sikkerhetstjeneste er regulert i sikkerhetsloven av 1998"
-(the preventive security service is regulated by the Security Act of
-1998) — but the *sikkerhetsloven* is **not an Atlas entity**, so there is
-still nothing to point a `governed-by` edge at. Whether the 1998 Act is
-still the current one is itself unsettled: NSM's own site separately
-lists "Sikkerhetsloven og forskrifter" and "Digitalsikkerhetsloven og
--forskriften" as distinct regulatory sections, suggesting a more recent
-digital-security statute exists alongside or instead of it, and this
-pass did not resolve which.
+**Which act is current, closed 2026-09-05.** snl.no's "1998" reference is
+outdated: reading lovdata.no's own text of LOV-2018-06-01-24 directly
+confirms its § 12-2 repeals "lov 20. mars 1998 nr. 10 om forebyggende
+sikkerhetstjeneste" (the 1998 Act on Preventive Security Services) as of
+its own entry into force on 1 January 2019. The current statute is this
+2018 act, commonly cited by the same short title *sikkerhetsloven*, which
+made the 1998 Act's name ambiguous rather than currently correct. NSM's
+own site separately listing "Digitalsikkerhetsloven og -forskriften" as a
+distinct regulatory section (a newer digital-security statute alongside,
+not instead of, the 2018 act) was not investigated further this pass.
+
+The *sikkerhetsloven* is still **not an Atlas entity**, so there is
+nothing to point a `governed-by` edge at; the finding here corrects the
+prose, not the graph.
 
 **Norway's National Cyber Security Centre, confirmed as part of NSM
 above, is also not modelled separately.** Unlike [[GB-NCSC]] (part of
@@ -166,6 +174,7 @@ nothing else.
 
 ## Sources
 
-Listed in frontmatter, three of five read directly this pass.
+Listed in frontmatter, four of six read directly across two passes.
 `regjeringen.no` returned a bot-defense challenge and stays cited but
-unread.
+unread. lovdata.no's own text of LOV-2018-06-01-24, added 2026-09-05,
+resolves which security act is current.
