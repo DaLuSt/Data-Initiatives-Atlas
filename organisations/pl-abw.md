@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: 2002-05-24
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-09-06"
 previous_version: null
 successor: null
 
@@ -72,6 +72,10 @@ sources:
 > **Verified 2026-08-26.** Two of three cited pages were read directly.
 > `isap.sejm.gov.pl` remains genuinely CAPTCHA-blocked, confirmed on
 > multiple attempts across this batch.
+>
+> **Updated 2026-09-06**: cross-references a documented negative added on
+> [[PL-KSS]] — the ECHR found Poland's Anti-Terrorism Act gives ABW's
+> secret-surveillance powers no independent-body review.
 
 ## Description
 
@@ -113,6 +117,19 @@ the system that act establishes.
 It is one of four edges in this batch connecting the national-security
 cluster to the Atlas that already existed, and the only one running to a
 cyber-security statute rather than to a data-protection act or a parent body.
+
+## No independent review of its secret-surveillance powers, per the ECHR
+
+**Added 2026-09-06.** [[PL-KSS]] records a documented negative closing a
+long-open question: does Poland have an independent legality-review body
+comparable to [[FR-CNCTR]] or [[NL-TIB]]? The European Court of Human
+Rights's own Registrar press release (ECHR 135 (2024), *Pietrzak and
+Bychawska-Siniarska and Others v. Poland*, 28 May 2024), read directly,
+names the ABW specifically: under the Anti-Terrorism Act, "neither the
+imposition of a secret-surveillance measure nor its application in the
+initial three-month period was subject to any authorisation or review by
+an independent body that did not include employees of the ABW conducting
+the surveillance." See [[PL-KSS]] for the full finding.
 
 ## Not modelled
 
