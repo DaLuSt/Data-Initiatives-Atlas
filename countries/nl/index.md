@@ -35,7 +35,8 @@ Anchor entity: [[NL]]
 - [[NL-NORA]] — Nederlandse Overheid Referentie Architectuur _(the root)_
   - [[NL-GEMMA]] — municipalities _(based-on NORA)_
   - [[NL-EAR]] — central government _(superseded)_ → [[NL-RORA]] _(since 2024)_
-  - [[NL-PETRA]] — provinces
+  - [[NL-PETRA]] — provinces _(`maintained-by` [[NL-PPA]], the Platform
+    Provincie-Architecten, sourced 2026-09-06)_
   - [[NL-ROSA]] — education sector
 
 ### Data and governance frameworks
@@ -132,6 +133,9 @@ see `discovery/research-queue.md`._
   - [[NL-VNG-REALISATIE]] — implementation arm, formerly KING;
     maintains [[NL-GEMMA]] _(added 2026-09-04)_
 - [[NL-IPO]] — Interprovinciaal Overleg (provinces)
+  - [[NL-PPA]] — Platform Provincie-Architecten, maintains [[NL-PETRA]]
+    _(not part of IPO — a separate cross-provincial working group;
+    added 2026-09-06)_
 - [[NL-UVW]] — Unie van Waterschappen (water authorities)
   - [[NL-WATERSCHAPSHUIS]] — joint ICT coordination body for all 21
     water authorities, founded 2005 _(added 2026-09-04)_
