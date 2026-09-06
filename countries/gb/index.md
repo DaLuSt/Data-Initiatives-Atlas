@@ -170,10 +170,17 @@ component of a **signals intelligence agency**. Only Spain is arranged the
 same way ([[ES-CCN]] inside [[ES-CNI]]); [[DE-BSI]], [[FR-ANSSI]] and
 [[BE-CCB]] all sit outside their countries' intelligence structures.
 
-### Not an intelligence service, and not modelled
+### [[GB-DI]], not an intelligence agency, closed 2026-09-06
 
-**Defence Intelligence** has no avowal act and was not researched, so the UK
-appears here with three services where France has four and Poland four.
+**Defence Intelligence** genuinely has no avowal act — confirmed by
+reading gov.uk's own page and Wikipedia directly, both describe it as "an
+integral part of" the Ministry of Defence rather than an independent
+body, unlike MI5, SIS and GCHQ. It is governed by [[GB-IPA-2016]] and
+overseen by [[GB-IPCO]]; its Justice and Security Act 2013 oversight by
+[[GB-ISC]] runs through a different, weaker mechanism (§2(2)'s
+memorandum-of-understanding route) than the other three services'
+§2(1) statutory list, so no `applies-to` edge from GB-ISC is asserted —
+see [[GB-DI]] for the distinction.
 
 ## Not modelled
 

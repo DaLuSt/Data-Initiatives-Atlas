@@ -22,7 +22,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-09-06"
 previous_version: null
 successor: null
 
@@ -37,6 +37,7 @@ related_entities:
   - GB-GCHQ
   - GB-IPCO
   - GB-ISC
+  - GB-DI
 relationships:
   - type: governed-by
     target: GB-DPA-2018
@@ -84,6 +85,10 @@ sources:
 > **Verified 2026-08-22.** The SSA 1989, IPA 2016 and DPA 2018 statute
 > texts at legislation.gov.uk, now reachable in this environment, were
 > read directly and confirmed the claims below.
+>
+> **Closed 2026-09-06**: Defence Intelligence, previously flagged as
+> unresearched, is now [[GB-DI]] — and genuinely has no avowal act,
+> since it is a MOD directorate rather than an independent body.
 
 ## Description
 
@@ -166,9 +171,11 @@ so no `part-of` is asserted — as for [[FR-DGSI]], [[NL-MIVD]] and
 - The **Investigatory Powers Tribunal**, the judicial body hearing
   complaints, distinct from [[GB-IPCO]].
 - The **Investigatory Powers (Amendment) Act 2024**.
-- **Defence Intelligence**, the UK's military intelligence organisation,
-  which has no equivalent avowal act and was not researched. The UK therefore
-  appears here with three services where France has four and Poland four.
+- **Closed 2026-09-06**: Defence Intelligence is now [[GB-DI]]. It
+  genuinely has no avowal act — confirmed by reading gov.uk's own page
+  and Wikipedia directly, both agree it is "an integral part of" the MOD
+  rather than an independent statutory body, so the earlier three-service
+  count was not an omission after all.
 
 ## Relationships
 
