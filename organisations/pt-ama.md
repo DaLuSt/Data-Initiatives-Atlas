@@ -103,9 +103,13 @@ pointing to [[PT-ARTE]], not to this (superseded) entity.
 ## Not modelled
 
 - **ePortugal**, the citizen services portal AMA operated.
-- The **Chave Móvel Digital** and **Cartão de Cidadão**, Portugal's digital
-  identity means, which would be the [[EU-EIDAS]] counterparts.
 - The **iAP**, Portugal's public administration interoperability platform.
+
+**Closed 2026-09-06**: Portugal's digital identity means are now modelled
+as [[PT-CMD]] (Chave Móvel Digital) and [[PT-CARTAO-CIDADAO]] (Cartão de
+Cidadão), both `implements-requirement-from` [[EU-EIDAS]] at High
+assurance and `maintained-by` [[PT-ARTE]], sourced directly from the
+European Commission's own eID notification table.
 
 ## Relationships
 

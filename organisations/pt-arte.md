@@ -34,6 +34,8 @@ related_entities:
   - PT
   - PT-AMA
   - PT-DADOS-GOV
+  - PT-CMD
+  - PT-CARTAO-CIDADAO
 relationships:
   - type: part-of
     target: PT
@@ -96,11 +98,18 @@ so. dados.gov.pt's own homepage footer, read directly this pass, credits
 ARTE by name — AMA's successor is the custodian AMA itself was never
 sourced as having.
 
+## Digital identity, added 2026-09-06
+
+ARTE also operates Portugal's two eIDAS-notified digital identity means,
+via the autenticacao.gov.pt portal: [[PT-CMD]] (Chave Móvel Digital) and
+[[PT-CARTAO-CIDADAO]] (Cartão de Cidadão). Both closed a gap [[PT-AMA]]'s
+own entity had flagged as unmodelled.
+
 ## Relationships
 
 - `part-of` [[PT]] — anchor edge.
-- Operates [[PT-DADOS-GOV]] — the `maintained-by` edge lives on that
-  entity, pointing here.
+- Operates [[PT-DADOS-GOV]], [[PT-CMD]] and [[PT-CARTAO-CIDADAO]] — the
+  `maintained-by` edges live on those entities, pointing here.
 
 ## Sources
 
