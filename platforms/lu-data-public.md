@@ -20,7 +20,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-25"
+last_verified: "2026-09-06"
 previous_version: null
 successor: null
 
@@ -48,14 +48,18 @@ sources:
     url: "https://data.public.lu/en/organizations/centre-des-technologies-de-linformation-de-letat/"
     publisher: "data.public.lu"
     accessed: "2026-08-25"
+  - title: "Governance of the Open data project"
+    url: "https://data.public.lu/en/pages/governance/"
+    publisher: "data.public.lu"
+    accessed: "2026-09-06"
 ---
 
 # data.public.lu
 
-> **Verified 2026-08-25.** Both pages were read directly. The portal's
-> own statistics (datasets, organisations, users) are quoted as of this
-> pass and will drift as the portal grows; they demonstrate the page was
-> read, not a claim expected to stay current.
+> **Verified 2026-08-25, custodian question answered 2026-09-06.** The
+> portal's own "Governance" page, read directly, names the actual
+> operator and steward — and it is neither CTIE nor a single body, and
+> neither is currently an Atlas entity. See below.
 
 ## Description
 
@@ -66,11 +70,26 @@ data.public.lu is Luxembourg's national open data portal.
 The sources show [[LU-CTIE]] with an **organisation page** on data.public.lu
 — that is, CTIE publishes datasets there.
 
-**No `maintained-by` edge is asserted.** Having a publisher page proves
-publication, not custodianship, and the distinction matters: dozens of bodies
-have publisher pages on any national portal and only one runs it.
+**No `maintained-by` edge is asserted to [[LU-CTIE]].** Having a publisher
+page proves publication, not custodianship, and the distinction matters:
+dozens of bodies have publisher pages on any national portal and only one
+runs it.
 
-The sixth national portal in the Atlas without a sourced custodian.
+## The custodian question, answered but not modellable yet
+
+**Closed as a sourcing question, 2026-09-06.** data.public.lu's own
+"Governance of the Open data project" page, read directly, names the real
+split: "The geoportal service operates the national Open data portal and
+ensures its daily operation and technical availability," while "the Open
+data and Access to information Division of the Information and Press
+Service (SIP)" handles content and community management — strategic
+coordination runs through a working group of SIP, the Ministry of
+Digitalisation, CTIE and the Media and Communications Service. Neither the
+Geoportal Service (part of the Administration du cadastre et de la
+topographie) nor SIP's Open Data Division is currently an Atlas entity, so
+no `maintained-by` edge is asserted to either — but the sixth-portal
+"custodian unknown" framing no longer applies here: the custodian is
+known, just not yet modellable.
 
 ## Relationships
 
@@ -78,4 +97,6 @@ The sixth national portal in the Atlas without a sourced custodian.
 
 ## Sources
 
-Listed in frontmatter, both read directly this pass.
+Listed in frontmatter. The first two pages were read directly in the
+original pass (2026-08-25); the governance page was read directly this
+pass (2026-09-06).

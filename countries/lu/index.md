@@ -47,7 +47,9 @@ Anchor entity: [[LU]]
 
 ## Platforms
 
-- [[LU-DATA-PUBLIC]] — data.public.lu _(⚠ no custodian modelled)_
+- [[LU-DATA-PUBLIC]] — data.public.lu _(custodian identified 2026-09-06:
+  the Geoportal Service and SIP's Open Data Division, neither yet an
+  Atlas entity — not [[LU-CTIE]], which only publishes on it)_
 
 ---
 
