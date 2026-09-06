@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: 2025-03-26
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-09-06"
 previous_version: null
 successor: null
 
@@ -37,6 +37,7 @@ related_entities:
   - IE
   - EU-COMMON-DATA-SPACES
   - NL-HEALTH-RI
+  - NL-HDAB-NL
 relationships:
   - type: part-of
     target: EU-COMMON-DATA-SPACES
@@ -189,18 +190,24 @@ source rather than adopted.
 secondary-use obligations land in 2029. As with [[EU-AI-ACT]], a staged
 timetable makes `last_verified` load-bearing.
 
-## The Dutch connection, not yet asserted
+## The Dutch connection, narrowed 2026-09-06
 
 [[NL-HEALTH-RI]] is the Netherlands' national health data infrastructure for
 research and innovation — federated, with regional nodes around a central
-hub, governed by an afsprakenstelsel. It is the obvious candidate to become
-or host the Dutch HDAB.
+hub, governed by an afsprakenstelsel. It was the obvious candidate to become
+or host the Dutch HDAB, and this was recorded as one of the highest-value
+open questions in the Atlas.
 
-**No relationship is asserted.** No source read connects Health-RI to the
-EHDS or names it as the designated Dutch body, and the HDAB designation
-phase (2027–2029) had not begun at the time of writing. This is one of the
-highest-value open questions in the Atlas: it would complete an
-EU-regulation → national-infrastructure chain in the health domain.
+**Answered, not with a yes.** The Minister of Health, Welfare and Sport's
+own letter to the Tweede Kamer (Kamerstuk 27 529, nr. 356, 20 January
+2026), read directly, states the government intends to establish a **new**
+independent administrative body (zbo) as the Dutch HDAB — Health-RI is not
+designated as that body. It is, however, a named partner (alongside RIVM,
+CBS and ICTU, led by the Ministry of VWS since November 2023) in
+**[[NL-HDAB-NL]]**, the programme preparing the future HDAB's technical
+infrastructure, which will be handed over once the zbo is established.
+`implements-requirement-from` → this entity is recorded on [[NL-HDAB-NL]]
+rather than on Health-RI itself.
 
 ## Modelling note
 
