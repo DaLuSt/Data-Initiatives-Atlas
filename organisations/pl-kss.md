@@ -25,7 +25,7 @@ verification: primary-source
 
 start_date: 1995-09-29
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-09-06"
 previous_version: null
 successor: null
 
@@ -79,6 +79,10 @@ sources:
     url: "https://arslege.pl/regulamin-sejmu-rzeczypospolitej-polskiej/k374/s3572/"
     publisher: "arslege.pl (Regulamin Sejmu RP)"
     accessed: "2026-08-26"
+  - title: "Right to respect for private life of applicants who complained about Polish legislation on secret surveillance: three violations (ECHR 135 (2024))"
+    url: "https://hudoc.echr.coe.int/app/conversion/pdf/?library=ECHR&id=003-7957259-11092429&filename=Judgment+Pietrzak+and+Bychawska-Siniarska+and+Others+v.+Poland+-+complaints+about+Polish+legislation+on+secret+surveillance.pdf"
+    publisher: "European Court of Human Rights (Registrar's press release)"
+    accessed: "2026-09-06"
 ---
 
 # Komisja do Spraw Służb Specjalnych (KSS)
@@ -88,6 +92,11 @@ sources:
 > `sejm.gov.pl` itself remains genuinely CAPTCHA-blocked. Wikipedia and
 > arslege.pl's own mirror of the Sejm's current Regulamin **disagree on
 > the Commission's size** — see below.
+>
+> **Closed as a documented negative, 2026-09-06**: whether Poland has an
+> independent legality-review body of the [[FR-CNCTR]]/[[NL-TIB]] kind is
+> answered — no, and this is not an Atlas coverage limit but a finding of
+> the European Court of Human Rights itself. See below.
 
 ## Description
 
@@ -143,15 +152,46 @@ absence of the edge **is** the finding, and it is why this entity's body says
 so at length rather than leaving a reader to notice the asymmetry in the
 graph.
 
-## Poland has parliamentary oversight and no independent counterpart here
+## Poland has parliamentary oversight and no independent counterpart — a documented negative, 2026-09-06
 
 Germany and the UK run parliamentary and judicial-style oversight in
 parallel — [[DE-PKGR]] with [[DE-UKR]], [[GB-ISC]] with [[GB-IPCO]]. The
 Atlas holds only the parliamentary half for Poland.
 
 Whether Poland has an independent legality-review body of the [[FR-CNCTR]] or
-[[NL-TIB]] kind **was not researched**. Its absence here is a coverage limit,
-not a claim that none exists.
+[[NL-TIB]] kind was previously **not researched**, recorded as a coverage
+limit rather than a claim that none exists.
+
+**It is now answered, and not by absence of research — by the European
+Court of Human Rights itself.** Confirmed by reading the Court's own
+Registrar press release directly (ECHR 135 (2024), 28 May 2024, on
+*Pietrzak and Bychawska-Siniarska and Others v. Poland*, applications
+nos. 72038/17 and 25237/18): the Court found **three violations of
+Article 8** of the Convention specifically because Polish law lacks the
+kind of independent body [[FR-CNCTR]] and [[NL-TIB]] are. On the
+operational-control regime generally, the Court held that authorisation
+"should be supplemented by other post factum procedural review
+mechanisms ... with the possibility of seeking judicial review **and a
+separate review by an independent body**," and that "the law did not
+appear to contain appropriate provisions in that regard." On the
+Anti-Terrorism Act specifically — which empowers [[PL-ABW]] — the Court
+was more direct still, finding, quoted verbatim: "neither the imposition
+of a secret-surveillance measure nor its application in the initial
+three-month period was subject to any authorisation or review by an
+independent body that did not include employees of the ABW conducting
+the surveillance." Oversight instead ran through "a member of the
+executive with political responsibilities and ... a member of the public
+prosecutor's office who did not offer adequate guarantees of independence
+from the executive" — explicitly *not* independent, in the Court's own
+reasoning.
+
+This is a genuine documented negative, in the sense [[FR-LOI-VALTER]]
+established for this Atlas: not "unresearched" and not "no source
+mentions it," but a considered finding, by an authoritative body applying
+the relevant legal standard, that the thing does not exist. **No entity is
+created for the judgment itself** — the Atlas does not model court
+judgments as entities — but the finding is recorded here in prose, on the
+entity the original question named.
 
 ## Not modelled
 
