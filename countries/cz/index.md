@@ -38,6 +38,8 @@ Anchor entity: [[CZ]]
   on data management and controlled access
 - [[CZ-ZAKON-110-2019]] — the GDPR adaptation act _(notable for the office it
   **abolished**: the inspectors of the previous act)_
+- [[CZ-ZAKON-264-2025]] — Czechia's NIS2 transposition, in effect from
+  1 November 2025, repealing the 2014 Cybersecurity Act
 
 ## Platforms
 

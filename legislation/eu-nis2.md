@@ -39,6 +39,7 @@ related_entities:
   - NL-CBW
   - EU-NIS
   - EU-CYBERSECURITY-STRATEGY
+  - CZ-ZAKON-264-2025
 relationships:
   - type: supersedes
     target: EU-NIS
@@ -64,7 +65,7 @@ relationships:
   - type: applies-in
     target: CZ
     source: fact
-    evidence: "As an EU directive, NIS2 Directive is binding on every member state as to the result to be achieved and requires national transposition, and Czechia is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
+    evidence: "NARROWED 2026-09-06 — the transposing instrument is identified: Czechia transposed NIS2 through [[CZ-ZAKON-264-2025]] (264/2025 Sb.), in effect from 1 November 2025, repealing the 2014 Cybersecurity Act. Confirmed by reading the Act's own text directly (NÚKIB's hosted translation) and the Chamber of Deputies' own legislative record (psp.cz). See CZ-ZAKON-264-2025 for the full sourcing; the `implements-requirement-from` edge is recorded there rather than here."
     confidence: medium
     valid_from: null
     valid_until: null
