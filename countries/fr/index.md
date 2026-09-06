@@ -120,12 +120,15 @@ point at one instrument.
 - [[FR-DRM]] — military intelligence collection _(⚠ `coverage: low`)_
 - [[FR-DRSD]] — defence security and counter-intelligence
 - [[FR-CNCTR]] — the independent authority controlling the techniques
+- [[FR-DPR]] — the parliamentary delegation overseeing the services'
+  general activity and resources, added 2026-09-06
 
 Legislation:
 
 - [[FR-LOI-RENSEIGNEMENT-2015]] — the law of 24 July 2015, codified as
   **Book VIII of the Code de la sécurité intérieure**. Held as one entity
   for the act and its codified form, the same treatment [[FR-LIL]] gets.
+- [[FR-LOI-DPR-2007]] — the law of 9 October 2007 establishing the DPR
 
 **The CNCTR gives an opinion; the Prime Minister decides.** That is the
 sharpest contrast in the batch with [[NL-TIB]], whose decision is binding.
@@ -136,10 +139,10 @@ The *premier cercle* has **six** services. The Atlas holds four — DNRED and
 TRACFIN are not modelled — so [[FR-CNCTR]]'s four `applies-to` edges
 understate its remit by two.
 
-⚠ **France's parliamentary oversight body, the délégation parlementaire au
-renseignement, is not modelled.** France therefore appears here with
-independent control and no parliamentary control, which is not an accurate
-picture.
+**Closed 2026-09-06**: France's parliamentary oversight body, the
+délégation parlementaire au renseignement, is now [[FR-DPR]]. France's
+picture is complete — judicial-style legality control ([[FR-CNCTR]]) and
+parliamentary control (FR-DPR), the same pairing Germany and the UK show.
 
 ## Not modelled
 

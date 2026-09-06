@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-09-06"
 previous_version: null
 successor: null
 
@@ -36,6 +36,7 @@ related_entities:
   - FR-DGSI
   - FR-DRM
   - FR-DRSD
+  - FR-DPR
 relationships:
   - type: governed-by
     target: FR-LOI-RENSEIGNEMENT-2015
@@ -95,6 +96,11 @@ sources:
 > gives [[FR-DRM]] its first sourced founding date and legal basis
 > (decree of 16 June 1992). `legifrance.gouv.fr` remains genuinely
 > bot-walled.
+>
+> **Closed 2026-09-06**: the délégation parlementaire au renseignement is
+> now [[FR-DPR]]. `legifrance.gouv.fr` was reachable this pass for its
+> founding law — the block is not universal, matching what [[FR-LIL]]'s
+> 2026-09-05 pass also found.
 
 ## Description
 
@@ -148,11 +154,12 @@ for DRSD specifically.
 ## Not modelled
 
 - The **Conseil d'État**, which the appeal route runs to.
-- The **délégation parlementaire au renseignement (DPR)**, France's
-  parliamentary oversight body — the counterpart to [[DE-PKGR]],
-  [[GB-ISC]] and [[PL-KSS]]. It was not researched, so France appears here
-  with judicial-style control and no parliamentary control, which is **not**
-  an accurate picture of French oversight.
+
+**Closed 2026-09-06**: the délégation parlementaire au renseignement
+(DPR), France's parliamentary oversight body and the counterpart to
+[[DE-PKGR]], [[GB-ISC]] and [[PL-KSS]], is now [[FR-DPR]]. France's
+oversight picture is complete: judicial-style legality control here, and
+parliamentary control on that entity.
 
 ## Relationships
 
