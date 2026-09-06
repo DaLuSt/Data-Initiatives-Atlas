@@ -158,7 +158,9 @@ Legislation:
 
 **[[PL-ABW]] `implements` [[PL-KSC]]**: CSIRT GOV, one of the three
 national-level CSIRTs under the national cybersecurity system act, is led by
-the Head of the ABW.
+the Head of the ABW. The other two are [[PL-NASK]]'s CSIRT NASK and, added
+2026-09-06, [[PL-CSIRT-MON]] — operated by the Ministry of National
+Defence, which is itself not an Atlas entity.
 
 ⚠ [[PL-KSS]] carries **no `governed-by` edge**, and that is the finding.
 Every other oversight body in the batch is created by statute; the KSS comes
@@ -167,13 +169,12 @@ orders, which the chamber can change.
 
 ## Not modelled
 
-- ~~**CSIRT NASK, CSIRT GOV, CSIRT MON** — none modelled~~ — **stale as of
-  2026-08-26.** [[PL-ABW]] `implements` [[PL-KSC]] for CSIRT GOV and
-  [[PL-NASK]] `implements` it for CSIRT NASK, both added in the
-  intelligence-services batch but never cross-referenced back to
-  [[PL-KSC]]'s own "not modelled" section until this pass. Only **CSIRT
-  MON** remains unmodelled, because Poland's Ministry of National Defence
-  is not an Atlas entity.
+- ~~**CSIRT NASK, CSIRT GOV, CSIRT MON** — none modelled~~ — closed
+  2026-09-06. [[PL-ABW]] `implements` [[PL-KSC]] for CSIRT GOV,
+  [[PL-NASK]] `implements` it for CSIRT NASK, and [[PL-CSIRT-MON]]
+  (added 2026-09-06, sourced from gov.pl rather than the CAPTCHA-walled
+  mil.pl domain) `implements` it for CSIRT MON. Its parent, the Ministry
+  of National Defence, remains unmodelled.
 - ~~**PESEL**, the population register~~ — now [[PL-PESEL]] and
   [[PL-EWIDENCJA-LUDNOSCI]].
 - **The Agencja Informatyzacji** that would replace [[PL-COI]]. It does not
@@ -188,4 +189,4 @@ orders, which the chamber can change.
 - ~~**Krajowe Ramy Interoperacyjności**, a Polish DCAT profile, and the
   Act on Public Statistics~~ — now [[PL-KRI]], [[PL-DCAT-AP-PL]] and
   [[PL-USTAWA-STATYSTYCE-1995]] (added 2026-09-04).
-- **CSIRT MON** and **GIODO** remain unmodelled — see above.
+- **GIODO** remains unmodelled — see above.
