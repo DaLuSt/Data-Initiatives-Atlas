@@ -156,7 +156,11 @@ see `discovery/research-queue.md`._
 
 - [[NL-KADASTER]] — Kadaster _(BRK, BRT; national facility for BAG, BGT, WOZ)_ ✅ re-verified 2026-08-27
 - [[NL-RIJKSWATERSTAAT]] — executive agency of [[NL-IENW]]; founding
-  partner of [[NL-PDOK]] and [[NL-NDW]] _(added 2026-09-05)_
+  partner of [[NL-PDOK]] and [[NL-NDW]], and a named [[NL-BGT]] bronhouder
+  _(added 2026-09-05; BGT edge added 2026-09-06)_
+- [[NL-SVB-BGT]] — Stichting Samenwerkingsverband Bronhouders BGT,
+  coordinates the seven [[NL-BGT]] bronhouder categories _(founded 2014;
+  added 2026-09-06)_
 - [[NL-KVK]] — Kamer van Koophandel _(Handelsregister)_
 - [[NL-RDW]] — RDW _(BRV, vehicles)_ ✅ re-verified 2026-08-27
 - [[NL-RVIG]] — Rijksdienst voor Identiteitsgegevens _(BRP)_ ✅ re-verified 2026-08-27
