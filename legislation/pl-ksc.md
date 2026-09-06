@@ -33,7 +33,7 @@ verification: primary-source
 
 start_date: 2026-04-03
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-09-06"
 previous_version: null
 successor: null
 
@@ -173,14 +173,15 @@ amendment relationship type"*; this is the third data point for it.
 
 ## Not modelled
 
-**Correction: two of three national CSIRTs are now modelled.** This
+**Correction: all three national CSIRTs are now modelled.** This
 section previously said none of CSIRT NASK, CSIRT GOV and CSIRT MON had
-been researched — stale as of this pass. [[PL-ABW]] `implements` this
-entity for CSIRT GOV and [[PL-NASK]] `implements` it for CSIRT NASK, both
-added in a later batch than this entity's own creation and never
-cross-referenced back here until now. Only **CSIRT MON** remains
-unmodelled, because Poland's Ministry of National Defence is not an
-Atlas entity.
+been researched — stale as of an earlier pass. [[PL-ABW]] `implements` this
+entity for CSIRT GOV and [[PL-NASK]] `implements` it for CSIRT NASK.
+**Closed 2026-09-06**: CSIRT MON is now [[PL-CSIRT-MON]], `implements`
+this entity too, sourced from gov.pl's own page rather than the
+CAPTCHA-walled `csirt-mon.wp.mil.pl` — its parent, the Ministry of
+National Defence, remains unmodelled, so the new entity carries a `part-of`
+[[PL]] anchor instead.
 
 **No 2018 original as a separate entity.** This entity is the act as
 amended, dated from the amendment's entry into force. Whether the 2018
