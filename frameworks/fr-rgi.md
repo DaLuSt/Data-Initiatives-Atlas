@@ -26,7 +26,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-04"
+last_verified: "2026-09-06"
 previous_version: null
 successor: null
 
@@ -74,6 +74,10 @@ sources:
   - title: "Référentiel Général d'Interopérabilité — version 1.9.9"
     url: "https://www.april.org/sites/default/files/Referentiel_General_Interoperabilite_V1.9.9.pdf"
     publisher: "April (hosting the DINUM document)"
+  - title: "Référentiel Général d'Interopérabilité — version 2.0"
+    url: "https://www.numerique.gouv.fr/documents/7/Referentiel_General_Interoperabilite_V2.pdf"
+    publisher: "DINUM (as DINSIC) — numerique.gouv.fr"
+    accessed: "2026-09-06"
 ---
 
 # RGI — Référentiel général d'interopérabilité
@@ -86,6 +90,14 @@ sources:
 > link since creation ("It is refused"). The relationship has been
 > removed; `related_entities` still records the association for
 > navigation.
+>
+> **Closed 2026-09-06**: the specification itself, previously cited only
+> from an april.org-hosted copy, is now also read directly from its
+> official home — `numerique.gouv.fr`'s own PDF, linked from DINUM's own
+> RGI page. The document's own cover and footer read "Référentiel
+> Général d'Interopérabilité — Version 2.0 – décembre 2015" and
+> "RGI v2.0 du 02/12/2015," published under DINSIC (DINUM's predecessor
+> name).
 
 ## Description
 
@@ -155,8 +167,9 @@ One of four, and the three refusals are all the same refusal. Logged in
 ## Sources
 
 Listed in frontmatter, four read directly in the 2026-08-26 pass. The
-RGI document itself is still cited from **april.org**, an advocacy
-association hosting a copy — DINUM's own site links to a PDF at the
-same `numerique.gouv.fr` domain now confirmed live, but the
-specification text itself was not re-fetched this pass, so the
-second-hand citation stands.
+RGI specification itself, previously cited only from **april.org** (an
+advocacy association's hosted copy), was read directly this pass from
+its official home on `numerique.gouv.fr`, closing the second-hand-citation
+gap the entity had flagged since creation. The april.org copy (v1.9.9)
+is kept in `sources` as a record of the version this entity's earlier
+text described; the current `numerique.gouv.fr` copy is v2.0.
