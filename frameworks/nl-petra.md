@@ -16,23 +16,24 @@ country: NL
 region: null
 
 status: active
-confidence: low
+confidence: medium
 coverage: low
 verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-06"
 previous_version: null
 successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
 organisations:
-  - NL-IPO
+  - NL-PPA
 related_entities:
   - NL-NORA
   - NL-GEMMA
+  - NL-PPA
 relationships:
   - type: based-on
     target: NL-NORA
@@ -41,22 +42,36 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: maintained-by
+    target: NL-PPA
+    source: fact
+    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP. Confirmed by reading petra.wikixl.nl's own 'Over de PETRA' page directly (2026-09-06): 'Het beheer van de PETRA-wiki ligt nu in handen van vakgroep PPA (Platform Provincie Architecten)' (management of the PETRA wiki now lies with the PPA working group). This replaces the entity's prior unsourced organisations:[NL-IPO] assumption, which nothing read connects to PETRA."
+    confidence: high
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Nederlandse Overheid Referentie Architectuur"
     url: "https://nl.wikipedia.org/wiki/Nederlandse_Overheid_Referentie_Architectuur"
     publisher: "Wikipedia"
     accessed: "2026-08-27"
+  - title: "PETRA (Provinciale EnTerprise ReferentieArchitectuur)"
+    url: "https://www.noraonline.nl/wiki/PETRA_(Provinciale_EnTerprise_ReferentieArchitectuur)"
+    publisher: "NORA Online"
+    accessed: "2026-09-06"
+  - title: "Over de PETRA"
+    url: "https://petra.wikixl.nl/index.php/Over_de_PETRA"
+    publisher: "PETRA online / Platform provincie-architecten"
+    accessed: "2026-09-06"
 ---
 
 # PETRA (Provinciale Enterprise Referentie Architectuur)
 
-> **Verified 2026-08-27.** The single cited page was read directly this
-> pass, confirming the one relationship it supports and surfacing a naming
-> discrepancy. `verification` moves from `search-only` to `primary-source`
-> — on the strength of reading the one source this entity has, not because
-> a majority of many sources was reached; this remains, honestly, a
-> thinly-sourced entity.
+> **Verified 2026-08-27, naming and maintainer questions closed
+> 2026-09-06.** This entity was flagged twice as "the weakest entity in
+> the Atlas": its acronym expansion looked wrong, and its maintainer was
+> an unsourced Atlas assumption. Reading PETRA's own dedicated wiki
+> directly resolves both — see below.
 
 ## Description
 
@@ -69,47 +84,43 @@ this pass and relevant to whichever of [[NL-EAR]]/[[NL-RORA]] is current at
 any given date, though those entities belong to a different batch and are
 not edited here.
 
-**This remains the weakest entity in its research generation and should be
-treated with caution**, even though its one source is now read directly
-rather than merely indexed. It rests on a single sentence in one secondary
-source (a Wikipedia article on NORA) which named PETRA alongside the other
-architectures — reading the page directly did not surface additional
-substance, only confirm what was already recorded. No provincial or IPO
-source for PETRA was located this pass either, its maintainer is still not
-established, and **the acronym expansion is now more clearly wrong than
-uncertain**: the Wikipedia article, read directly, expands PETRA only as
-"Provinciale Referentie Architectuur" — it does not use "Enterprise"
-anywhere. The entity's own `id`/title uses "Provinciale Enterprise
-Referentie Architectuur," which no source read (this pass or previously)
-supports; this is flagged rather than silently changed, since renaming the
-entity's title is outside this pass's scope and the source for "Enterprise"
-might exist elsewhere and simply not have surfaced. See
-`discovery/unresolved.md`.
+## The acronym, resolved 2026-09-06
 
-It is included because Batch 4's scope names PETRA explicitly, and
-recording a poorly-sourced entity with its weakness stated is more useful
-than silently omitting a named scope item. The `organisations: [NL-IPO]`
-association is an **Atlas assumption** from the provincial tier, not a
-sourced statement of ownership — nothing read this pass names IPO as
-PETRA's maintainer or owner.
+The Dutch Wikipedia article on NORA, this entity's only source until now,
+expands PETRA as "Provinciale Referentie Architectuur" without
+"Enterprise" — which previously read as evidence the entity's own
+"Enterprise" title was wrong. Reading PETRA's own dedicated sources
+directly resolves it the other way: NORA Online's own wiki page is titled
+"PETRA (Provinciale EnTerprise ReferentieArchitectuur)," and PETRA's own
+wiki, read directly, confirms the same stylised acronym — "Enterprise" was
+always part of the name; the NORA Wikipedia article's mention was simply
+incomplete. The entity's existing title needed no correction.
 
-WILMA (the water authorities' reference architecture) was named in the same
-source sentence but is **not** created here: it is not named in the batch
-scope and rests on the same single mention. It is queued in
+## The maintainer, resolved 2026-09-06
+
+**Closed a previously-flagged gap.** PETRA's own wiki, read directly:
+"Het beheer van de PETRA-wiki ligt nu in handen van vakgroep PPA (Platform
+Provincie Architecten)" — management of the PETRA wiki now lies with the
+PPA working group, now modelled as [[NL-PPA]]. This entity previously
+carried `organisations: [NL-IPO]` as an explicitly-labelled Atlas
+assumption; nothing read connects IPO to PETRA at all, and the assumption
+is removed in favour of the sourced [[NL-PPA]] edge.
+
+WILMA (the water authorities' reference architecture) was named in the
+original source sentence but is **not** created here: it is not named in
+the batch scope and rests on the same single mention. It is queued in
 `discovery/research-queue.md`. The asymmetry is deliberate and recorded.
 
 ## Relationships
 
-`based-on` [[NL-NORA]] — confirmed by directly reading NORA's own Wikipedia
-coverage, which lists PETRA among its *dochters*, as the architecture for
-the provinces, alongside EAR/RORA, GEMMA and WILMA.
-
-`maintained-by` a provincial body is still unasserted — no source read
-names one — and the naming and maintainer weaknesses above stand. The
-remaining unsourced items are what could not be sourced, and asserting them
-would be guessing.
+- `based-on` [[NL-NORA]] — confirmed by directly reading NORA's own
+  Wikipedia coverage, which lists PETRA among its *dochters*, as the
+  architecture for the provinces, alongside EAR/RORA, GEMMA and WILMA.
+- `maintained-by` [[NL-PPA]] — confirmed this pass; see above.
 
 ## Sources
 
-Listed in frontmatter — a single source, now read directly, still low in
-the README's preference order (secondary, Wikipedia).
+Listed in frontmatter. The original Wikipedia source remains low in the
+README's preference order (secondary); NORA Online's and PETRA's own
+dedicated pages, both read directly 2026-09-06, are primary and close the
+naming and maintainer gaps.
