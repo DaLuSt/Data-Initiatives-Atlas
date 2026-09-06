@@ -44,6 +44,10 @@ Anchor entity: [[PT]]
 
 - [[PT-DADOS-GOV]] — dados.gov.pt, **now with a sourced custodian**:
   `maintained-by` [[PT-ARTE]]
+- [[PT-CMD]] — Chave Móvel Digital, mobile digital identity _(eIDAS-notified
+  at High assurance, 8 Apr 2020; added 2026-09-06)_
+- [[PT-CARTAO-CIDADAO]] — Cartão de Cidadão, national smart ID card
+  _(eIDAS-notified at High assurance, 28 Feb 2019; added 2026-09-06)_
 
 ---
 
@@ -76,5 +80,8 @@ rather than silently editing AMA's file in place.
   administrations. The Atlas has no sub-national level.
 - The **Conselho Superior de Segurança do Ciberespaço (CSSC)**, an
   advisory body [[PT-DECRETO-LEI-125-2025]] reportedly also establishes.
-- **ePortugal**, the **Chave Móvel Digital** and the **Cartão de Cidadão**.
+- **ePortugal**, the citizen services portal.
 - The **iAP** interoperability platform.
+
+~~The **Chave Móvel Digital** and the **Cartão de Cidadão**~~ — closed
+2026-09-06, now [[PT-CMD]] and [[PT-CARTAO-CIDADAO]].
