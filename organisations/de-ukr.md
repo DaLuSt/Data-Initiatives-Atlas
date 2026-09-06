@@ -22,7 +22,7 @@ coverage: medium
 verification: primary-source
 start_date: "2021-04-22"
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-09-06"
 previous_version: null
 successor: null
 
@@ -70,6 +70,10 @@ sources:
     url: "https://www.ukrat.de/DE/UKRatG/ukratg.html"
     publisher: "Unabhängiger Kontrollrat (UKR)"
     accessed: "2026-09-05"
+  - title: "Bundeskabinett beschließt Reform des Rechts der Nachrichtendienste"
+    url: "https://www.bundesregierung.de/breg-de/aktuelles/bundeskabinett-beschliesst-reform-des-rechts-der-nachrichtendienste-2449432"
+    publisher: "Presse- und Informationsamt der Bundesregierung"
+    accessed: "2026-09-06"
 ---
 
 # Unabhängiger Kontrollrat (UKR)
@@ -81,6 +85,10 @@ sources:
 >
 > **Updated 2026-09-05**: the UKR's own official website confirms the
 > UKRatG has not yet been enacted, closing the `governed-by` gap.
+>
+> **Updated 2026-09-06**: the pending BfV-extension bill now has a precise
+> status — Cabinet-adopted 12 August 2026, per the government's own press
+> release, not yet passed by the Bundestag.
 
 ## Description
 
@@ -133,19 +141,34 @@ previous "the Atlas does not know which instrument" gap with a source
 that says "still the old one, not yet the new one" rather than leaving
 the question open indefinitely.
 
-## ⚠ Its remit is the subject of a pending bill
+## Its remit is the subject of a pending bill — precise status confirmed 2026-09-06
 
-The sources describe a government bill upgrading the UKR to cover
-[[DE-BFV]] as well as the BND. That is a proposal, not yet read directly
-this pass. Only the BND edge is asserted.
+Confirmed by reading bundesregierung.de's own press release directly
+(2026-09-06): the Federal Cabinet adopted the "Gesetzentwurf" (draft law)
+consolidating intelligence oversight on **12 August 2026** — quoted
+verbatim: "die Rechtskontrolle über die Dienste, die momentan auf
+verschiedene Kontrollorgane verteilt ist, [wird] gebündelt und auf eine
+zentrale Behörde übertragen – den Unabhängigen Kontrollrat (UKRat)." The
+bill would extend the UKR's pre-authorisation control to [[DE-BFV]]
+alongside [[DE-BND]], absorbing the G10-Kommission's current functions
+and BfDI's data-processing oversight of the services.
+
+**Not yet enacted, as of this pass**: the government's own press release
+confirms only a Cabinet decision, the first step of the ordinary
+legislative process — Bundesrat comment, then Bundestag readings, still
+to come. A same-day WebSearch cross-check found no report of Bundestag
+passage as of early September 2026. `applies-to` [[DE-BFV]] remains
+unasserted; only the BND edge is asserted.
 
 ## What is asserted, and how far
 
 Two relationships: `applies-to` [[DE-BND]], confirmed by the Wikipedia
 article's account of the UKR's remit and history, and `governed-by`
 [[DE-BNDG]], confirmed 2026-09-05 by the UKR's own site. Both at
-`confidence: medium` — the taz.de/vorwaerts.de reporting on the pending
-BfV-extension bill was not independently re-read this pass.
+`confidence: medium`. The pending BfV-extension bill's status is now
+confirmed directly (Cabinet-adopted 12 August 2026, not yet enacted) —
+see above — but the relationship itself stays unasserted until the bill
+passes.
 
 ## Relationships
 
