@@ -24,7 +24,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-06"
 previous_version: null
 successor: null
 
@@ -35,6 +35,8 @@ related_entities:
   - BE-TOEZICHTSWET-1991
   - BE-VSSE
   - BE-ADIV
+  - BE-OCAD
+  - BE-WET-DREIGINGSANALYSE-2006
 relationships:
   - type: governed-by
     target: BE-TOEZICHTSWET-1991
@@ -56,6 +58,13 @@ relationships:
     evidence: "Confirmed by reading comiteri.be's FAQ page directly (2026-08-26): the same parliamentary oversight covers ADIV alongside VSSE and OCAD."
     confidence: high
     valid_from: null
+    valid_until: null
+  - type: applies-to
+    target: BE-OCAD
+    source: fact
+    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP. Confirmed by reading comiteri.be's FAQ page directly (2026-08-26 pass): Comité R/I's parliamentary oversight covers OCAD alongside VSSE and ADIV. OCAD itself was not yet an Atlas entity when that finding was first recorded; it is now [[BE-OCAD]], created 2026-09-06, per the joint Comité P/Comité I supervision established by the 2006 amendment of BE-TOEZICHTSWET-1991."
+    confidence: high
+    valid_from: 2006-07-10
     valid_until: null
 
 sources:
@@ -110,8 +119,9 @@ Comité P oversees bodies the Atlas does not hold.
 
 The 1991 act was amended on **10 July 2006**, when OCAD (the Coordination
 Unit for Threat Analysis) was established, to place that body under the
-**joint** supervision of both committees. That joint arrangement is recorded
-here but not modelled, because OCAD is not an Atlas entity.
+**joint** supervision of both committees. **Closed 2026-09-06**: OCAD is
+now [[BE-OCAD]], governed by its own founding act,
+[[BE-WET-DREIGINGSANALYSE-2006]].
 
 ## Belgium's clean separation of instruments
 
@@ -135,7 +145,8 @@ both later than the agency acts.
 
 - `governed-by` [[BE-TOEZICHTSWET-1991]] — confirmed this pass via the
   act's own official text; `confidence: high`.
-- `applies-to` [[BE-VSSE]] and [[BE-ADIV]].
+- `applies-to` [[BE-VSSE]], [[BE-ADIV]] and [[BE-OCAD]] — the last
+  closed 2026-09-06.
 
 ## Sources
 
