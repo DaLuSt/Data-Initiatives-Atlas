@@ -115,6 +115,8 @@ see `discovery/research-queue.md`._
   [[NL-BZK]]; added 2026-09-04)_
 - [[NL-ACICT]] — Adviescollege ICT-toetsing _(formerly Bureau
   ICT-toetsing; statutory since 2024; added 2026-09-04)_
+- [[NL-BNC-SDG]] — Bureau Nationaal Coördinator Single Digital Gateway,
+  coordinates Dutch implementation of [[EU-SDG]] _(added 2026-09-06)_
 
 ### Cybersecurity and national security
 

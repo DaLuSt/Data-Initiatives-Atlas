@@ -296,9 +296,12 @@ explicit request, without the citizen resupplying it. This resolves what
 the prior pass could only offer as an unconfirmed WebSearch lead, and it is
 now adopted as a confirmed fact rather than a lead.
 
-The Dutch implementation of the gateway is likewise unresearched — a
-plausible connection to [[NL-GDI]] and [[NL-LOGIUS]] exists but is not
-sourced, so no relationship is asserted.
+**Closed 2026-09-06**: the Dutch implementation of the gateway is now
+[[NL-BNC-SDG]], the Bureau Nationaal Coördinator Single Digital Gateway,
+confirmed by reading digitaleoverheid.nl's own dedicated SDG page directly.
+That page does **not** name [[NL-GDI]] or [[NL-LOGIUS]] — the connection
+this entity previously speculated about remains unsourced, and no
+relationship to either is asserted.
 
 ## Relationships
 
