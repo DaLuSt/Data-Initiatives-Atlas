@@ -35,9 +35,17 @@ organisations: []
 related_entities:
   - PL-ABW
   - PL-AW
+  - PL-CBA
   - PL-SKW
   - PL-SWW
 relationships:
+  - type: applies-to
+    target: PL-CBA
+    source: fact
+    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP. Confirmed by reading pl.wikipedia.org's own article and arslege.pl's own mirror of the Sejm's Regulamin directly (2026-08-26 pass): the Komisja do Spraw Służb Specjalnych is a standing parliamentary commission for controlling ABW, AW, CBA, SKW and SWW. CBA itself was not yet an Atlas entity when that finding was first recorded; it is now [[PL-CBA]], created 2026-09-06."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: applies-to
     target: PL-ABW
     source: fact
@@ -195,14 +203,14 @@ entity the original question named.
 
 ## Not modelled
 
-- **CBA**, which the KSS also oversees. See [[PL-ABW]].
 - The **Kolegium do Spraw Służb Specjalnych** — a government-side
   coordinating college that includes the KSS chair, and is not the same body
   as this committee.
 
 ## Relationships
 
-- `applies-to` [[PL-ABW]], [[PL-AW]], [[PL-SKW]] and [[PL-SWW]].
+- `applies-to` [[PL-ABW]], [[PL-AW]], [[PL-CBA]], [[PL-SKW]] and
+  [[PL-SWW]] — the full five-service remit, closed 2026-09-06.
 
 ## Sources
 
