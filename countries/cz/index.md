@@ -27,8 +27,10 @@ Anchor entity: [[CZ]]
   portal)_
 - [[CZ-UOOU]] — Úřad pro ochranu osobních údajů
 - [[CZ-CSU]] — Český statistický úřad _(the **eleventh** [[EU-ESS]] member)_
-- [[CZ-UNMZ]] — Úřad pro technickou normalizaci _(⚠ holds the **membership**;
-  **ČAS** does the work — see below)_
+- [[CZ-UNMZ]] — Úřad pro technickou normalizaci _(holds the **membership**;
+  see below)_
+  - [[CZ-CAS]] — Česká agentura pro standardizaci, does the operational
+    work; `part-of` ÚNMZ since 1 Jan 2018 _(added 2026-09-06)_
 - [[CZ-NUKIB]] — national cyber and information security agency _(the NCKB
   and GovCERT.CZ sit inside it)_
 
@@ -77,15 +79,15 @@ Czechia legislated it.**
 ## A standards split no other country here has
 
 [[CZ-UNMZ]] holds the **formal membership** at ISO, IEC, CEN and CENELEC and
-the legal responsibility on behalf of the state. **ČAS** — Česká agentura pro
-standardizaci — performs the **operational work**: technical committees,
-drafting, publication.
+the legal responsibility on behalf of the state. [[CZ-CAS]] — Česká agentura
+pro standardizaci — performs the **operational work**: technical
+committees, drafting, publication.
 
 Everywhere else the member and the drafter are one body. The
 `participates-in` edges are asserted on ÚNMZ, because that is what
-membership means — and **ČAS is not modelled**, which understates Czech
-standardisation, since the body that actually produces ČSN standards is
-absent from the graph.
+membership means. **Closed 2026-09-06**: ČAS is now [[CZ-CAS]], `part-of`
+ÚNMZ, founded under Law No. 265/2017 Coll. and operational since 1 January
+2018, sourced from agenturacas.gov.cz's own page.
 
 ČAS's own page, read 2026-08-26, complicates this further: it lists **ETSI**
 alongside ISO/IEC/CEN/CENELEC among its own membership and cooperation

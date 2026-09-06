@@ -36,6 +36,7 @@ related_entities:
   - EU-CENELEC
   - INTL-ISO
   - INTL-IEC
+  - CZ-CAS
 relationships:
   - type: participates-in
     target: EU-CEN
@@ -112,10 +113,10 @@ No other country in the Atlas splits it this way. Every other national
 standards body is both the member and the drafter.
 
 The `participates-in` edges are therefore asserted on **ÚNMZ and not ČAS**,
-because membership is what those edges mean. **ČAS is not modelled**, which
-understates Czech standardisation: the body that actually produces ČSN
-standards is absent from the graph. That is logged in
-`discovery/unresolved.md`.
+because membership is what those edges mean. **Closed 2026-09-06**: ČAS is
+now [[CZ-CAS]], `part-of` this entity, sourced from agenturacas.gov.cz's
+own page — founded under Law No. 265/2017 Coll., operational from 1
+January 2018.
 
 Getting this wrong would have been easy — ČAS is the more visible body and
 publishes the English-language standards pages — and the resulting entity
