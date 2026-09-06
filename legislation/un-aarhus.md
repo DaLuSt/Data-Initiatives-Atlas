@@ -12,8 +12,10 @@ description: >
   information, public participation in decision-making, and access to
   justice in environmental matters — and Article 1 requires Parties to
   guarantee those rights. As of April 2023 it had 49 Parties: 48 states and
-  the European Union. The European Union and all 27 of its member states are
-  Parties.
+  the European Union. The treaty's own depositary (UN Treaty Collection)
+  recorded 48 Parties as of 6 September 2026, its most recent accession
+  being Uzbekistan (25 March 2025). The European Union and all 27 of its
+  member states are Parties.
 
 level: international
 country: null
@@ -26,7 +28,7 @@ verification: primary-source
 
 start_date: 2001-10-30
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-06"
 previous_version: null
 successor: null
 
@@ -104,6 +106,10 @@ sources:
     url: "https://en.wikipedia.org/wiki/Aarhus_Convention"
     publisher: "Wikipedia"
     accessed: "2026-08-28"
+  - title: "Chapter XXVII, 13 — Convention on Access to Information, Public Participation in Decision-Making and Access to Justice in Environmental Matters"
+    url: "https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-13&chapter=27&clang=_en"
+    publisher: "United Nations Treaty Collection"
+    accessed: "2026-09-06"
   - title: "The Aarhus Convention"
     url: "https://aarhus.osce.org/about/aarhus-convention"
     publisher: "OSCE Aarhus Centres"
@@ -138,13 +144,27 @@ It rests on **three pillars**:
 Article 1 requires Parties to guarantee those rights. As of April 2023 it
 had **49 Parties: 48 states and the European Union** — confirmed by reading
 Wikipedia's Aarhus Convention article directly this pass, which states this
-exact figure for this exact date. Worth flagging for whoever next revisits
-this entity: a WebSearch pass this pass also surfaced a claim of **47
-Parties as of 18 March 2025** from search-snippet text (not independently
-read from a primary page), which would mean the party count *fell* by two
-between 2023 and 2025 — plausible if a party withdrew, but not confirmed
-either way this pass. The number is left at 49/April 2023 because that is
-what was actually read directly; the 47/2025 figure is noted, not adopted.
+exact figure for this exact date.
+
+## The party-count discrepancy, closed 2026-09-06
+
+Two conflicting figures sat unresolved in this entity: 49 Parties as of
+April 2023 (Wikipedia, read directly) against a WebSearch-snippet-only
+claim of 47 Parties as of March 2025, which was never independently
+confirmed and would have meant the party count fell.
+
+Reading the treaty's own depositary record — the United Nations Treaty
+Collection's status page for this convention — directly resolves it. Its
+own text states "Signatories : 38. Parties : 48." as of the access date
+(6 September 2026), and its full table of parties lists the European Union
+among them (approved 17 February 2005) alongside 48 named states, with
+**Uzbekistan's accession on 25 March 2025** as the most recent entry — the
+same period the unconfirmed 47-Parties claim would have had the count
+*falling*. The depositary's own record shows the opposite: continued
+accession, not withdrawal. The 47/March-2025 WebSearch-snippet figure is
+therefore treated as unreliable and dropped; the depositary's own current
+count supersedes both prior figures as the authoritative source going
+forward.
 
 ## This is the Atlas's first UN → national relationship
 
@@ -207,7 +227,7 @@ recommendation. This starts at a UN treaty.
 
 ## Sources
 
-Listed in frontmatter, three of five read directly this pass. Both
+Listed in frontmatter, four of six read directly across two passes. Both
 `unece.org` Aarhus pages (introduction and content) returned HTTP 403 and
 were dropped from the list in favour of two directly-read alternates —
 Wikipedia's Aarhus Convention article and the OSCE Aarhus Centres' page —
@@ -216,4 +236,6 @@ own EU/Aarhus page was read directly and is unaffected by the UNECE block.
 The UNECE convention-text PDF and implementation-guide PDF (both on
 `unece.org`) are dropped from the source list for the same reason and are
 not replaced, since the Convention's substantive text is not otherwise
-needed by any claim this entity makes.
+needed by any claim this entity makes. The UN Treaty Collection's own
+status page, added and read directly 2026-09-06, closed the party-count
+discrepancy — see above.
