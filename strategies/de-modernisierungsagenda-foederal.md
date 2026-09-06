@@ -15,11 +15,11 @@ region: null
 
 status: active
 confidence: medium
-coverage: low
+coverage: medium
 verification: primary-source
 start_date: 2025-12-04
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-09-06"
 previous_version: null
 successor: null
 
@@ -42,7 +42,7 @@ sources:
   - title: "Modernisierungsagenda Föderal"
     url: "https://bmds.bund.de/themen/staatsmodernisierung/modernisierungsagenda-foederal"
     publisher: "Bundesministerium für Digitales und Staatsmodernisierung (BMDS)"
-    accessed: "2026-08-22"
+    accessed: "2026-09-06"
   - title: "Föderale Modernisierungsagenda"
     url: "https://www.bundesregierung.de/breg-de/aktuelles/foederale-modernisierungsagenda-2397632"
     publisher: "Presse- und Informationsamt der Bundesregierung"
@@ -62,6 +62,9 @@ sources:
 > page was read directly and confirmed the date, measure count and field
 > count below verbatim. `digitale-verwaltung.de` no longer resolves (400)
 > and was not re-read.
+>
+> **Closed 2026-09-06**: the same bmds.bund.de page names the five fields
+> of action, confirmed by two independent fetches agreeing verbatim.
 
 ## Description
 
@@ -94,9 +97,18 @@ between `national` and `local` for a Land. This entity is recorded at
 levels, which is the closest available fit and not an exact one. See
 `countries/de/de.md` and `discovery/unresolved.md`.
 
-`coverage: low`: only the date, the measure count and the number of fields
-of action were established. **The five fields of action themselves are not
-recorded, because no source read names them.**
+**The five fields of action, closed 2026-09-06** — confirmed verbatim on
+bmds.bund.de, read directly (two independent fetches agreeing):
+
+1. **Weniger Bürokratie – weniger Behördengänge** (less bureaucracy — fewer trips to the authorities)
+2. **Schnellere Verfahren – schnellere Genehmigungen** (faster procedures — faster approvals)
+3. **Resiliente Strukturen – effizienter Staat** (resilient structures — a more efficient state)
+4. **Datensparsame Verfahren – digitaler Staat** (data-sparing procedures — a digital state)
+5. **Bessere Rechtsetzung – klarere Regeln** (better lawmaking — clearer rules)
+
+`coverage` moves from `low`: the date, measure count, field count and now
+the fields themselves are established. The content of the 200+ individual
+measures within each field remains unresearched.
 
 ## Relationships
 
@@ -112,4 +124,5 @@ despite the obvious sequence — see that entity for the reasoning.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter. bmds.bund.de's own page was read directly in
+both the 2026-08-22 and 2026-09-06 passes.
