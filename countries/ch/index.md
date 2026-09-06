@@ -15,6 +15,10 @@ Anchor entity: [[CH]]
 > genuinely new connection was found and sourced this pass:
 > [[CH-OPENDATA-SWISS]] `governed-by` [[CH-EMBAG]], via the OGD office's
 > own statement that it operates the portal pursuant to the Act.
+>
+> **Updated 2026-09-06**: this page's own "Not modelled" list was stale —
+> [[EU-CH-ADEQUACY]] was added 2026-08-28 but never linked here. Fixed
+> below; see "The EU adequacy decision."
 
 ## Organisations
 
@@ -45,7 +49,12 @@ Anchor entity: [[CH]]
 
 ## EU instruments that apply in Switzerland
 
-**None, and unlike [[NO]] there is no mechanism by which any could.**
+**One** — [[EU-CH-ADEQUACY]], added 2026-08-28, carries `applies-in` →
+[[CH]]. Unlike [[NO]] there is no mechanism by which ordinary EU
+legislation could reach Switzerland; this is the one exception, and it is
+an exception of judgement rather than incorporation — the Commission
+assessing Swiss law, not Swiss law receiving EU law. See "The EU adequacy
+decision" below.
 
 Switzerland is neither an EU member state nor a party to the EEA Agreement.
 Its relationship with the Union runs through **bilateral agreements**. There
@@ -78,10 +87,21 @@ extraterritorial scope**, but that is the Regulation applying to a
 *controller*, not applying *in a country*, and the Atlas has no type that
 says so.
 
+## The EU adequacy decision
+
+[[EU-CH-ADEQUACY]] — Commission Decision 2000/518/EC, in force
+continuously since **26 July 2000**, longer than any other Atlas country's
+adequacy finding. Unlike [[EU-UK-ADEQUACY]] it carries no sunset clause and
+was never replaced: it survives under **Article 45(9) GDPR**, which keeps
+pre-GDPR adequacy decisions in force until amended, replaced or repealed.
+The only change since 2000 is a **review**, not a new decision — the
+Commission's 15 January 2024 report reconfirming adequacy, assessed against
+[[CH-REVDSG]] rather than the 1992 act in force when the original decision
+was made. Filed as an **EU** entity, for the same reason as
+[[EU-UK-ADEQUACY]]: it is a Commission act, not Swiss law.
+
 ## Not modelled
 
-- The **EU–Switzerland adequacy decision**. The Atlas holds
-  [[EU-UK-ADEQUACY]] and nothing equivalent here.
 - The **bilateral agreements** and the framework agreement negotiations.
 - The **twenty-six cantons** — each with its own data protection authority
   and its own administration. [[CH-EDOEB]] covers federal bodies and private
