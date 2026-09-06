@@ -40,6 +40,8 @@ related_entities:
   - BE-NIS2-WET
   - DE-NIS2UMSUCG
   - NL-CBW
+  - LU-LOI-NIS2
+  - CZ-ZAKON-264-2025
 relationships:
   - type: implements-requirement-from
     target: EU-NIS2
@@ -161,22 +163,24 @@ WebSearch cross-check the same day found no more recent development: the
 bill's floor examination was reported as expected "no earlier than
 September 2026," consistent with `status: planned` remaining correct.
 
-## Four transpositions of one directive
+## Six transpositions of one directive
 
 | Country | Act | In force | Technique |
 |---|---|---|---|
 | Belgium | [[BE-NIS2-WET]] | **18 Oct 2024** | new act replacing the NIS1 act |
 | Germany | [[DE-NIS2UMSUCG]] | 6 Dec 2025 | revises the existing [[DE-BSIG]] |
+| Luxembourg | [[LU-LOI-NIS2]] | 10 May 2026 | new act replacing the NIS1-era act |
+| Czechia | [[CZ-ZAKON-264-2025]] | 1 Nov 2025 | new act replacing Act No. 181/2014 Sb. |
 | Netherlands | [[NL-CBW]] | 15 Aug 2026 | new act superseding [[NL-WBNI]] |
 | **France** | **this entity** | **not yet — still a bill on 6 Aug 2026** | one vehicle for NIS2 + CER + DORA |
 
 Belgium met the deadline within a year; France missed it and, on the
 evidence read this pass, still has not completed it nearly two years
-later. The Atlas can now show that spread across four member states — which
+later. The Atlas can now show that spread across six member states — which
 is the sort of comparative fact a country-neutral model exists to make
 visible, and which no single-country layer could produce.
 
-France is also the only one of the four to bundle three directives into one
+France is also the only one of the six to bundle three directives into one
 act. **No `implements-requirement-from` → [[EU-CER]] is asserted**, even
 though the sources say the vehicle transposes it: the bill is still not in
 force, and the DORA/CER details were not independently confirmed this pass.

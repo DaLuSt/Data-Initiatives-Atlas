@@ -40,6 +40,7 @@ related_entities:
   - EU-NIS
   - EU-CYBERSECURITY-STRATEGY
   - CZ-ZAKON-264-2025
+  - LU-LOI-NIS2
 relationships:
   - type: supersedes
     target: EU-NIS
@@ -58,7 +59,7 @@ relationships:
   - type: applies-in
     target: LU
     source: fact
-    evidence: "As an EU directive, NIS2 Directive is binding on every member state as to the result to be achieved and requires national transposition, and Luxembourg is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
+    evidence: "NARROWED 2026-09-06 — the transposing instrument is identified: Luxembourg transposed NIS2 through [[LU-LOI-NIS2]] (loi du 5 mai 2026), in effect from 10 May 2026, repealing the country's prior NIS1-era act. Confirmed by reading the Luxembourg government's own press release and ILR's own NIS2 page directly. See LU-LOI-NIS2 for the full sourcing; the `implements-requirement-from` edge is recorded there rather than here."
     confidence: medium
     valid_from: null
     valid_until: null
