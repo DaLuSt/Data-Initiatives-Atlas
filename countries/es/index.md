@@ -52,6 +52,8 @@ Anchor entity: [[ES]]
   e-government law; added 2026-09-04)_
 - [[ES-LEY-40-2015]] — public sector legal regime _(legal form behind
   [[ES-AEAD]]; added 2026-09-04)_
+- [[ES-ORDEN-PRE-1838-2014]] — Cl@ve's founding order, publishing the 19
+  Sept 2014 Council of Ministers agreement _(added 2026-09-06)_
 
 ## Frameworks and standards
 
@@ -65,7 +67,8 @@ Anchor entity: [[ES]]
 
 - [[ES-DATOS-GOB-ES]] — national open data portal
 - [[ES-CLAVE]] — electronic identification _(identification and signature
-  kept separate)_
+  kept separate; `governed-by` [[ES-ORDEN-PRE-1838-2014]], sourced
+  2026-09-06)_
 - [[ES-DNIE]] — electronic national ID card _(Spain's actual [[EU-EIDAS]]-
   notified scheme, High level, since 2018; added 2026-09-06)_
 
