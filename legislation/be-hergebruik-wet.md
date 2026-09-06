@@ -18,12 +18,12 @@ region: EU
 
 status: active
 confidence: medium
-coverage: low
+coverage: medium
 verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-09-06"
 previous_version: null
 successor: null
 
@@ -56,7 +56,7 @@ sources:
   - title: "Wet van 04/05/2016 inzake het hergebruik van overheidsinformatie"
     url: "https://etaamb.openjustice.be/nl/wet-van-04-mei-2016_n2016009236.html"
     publisher: "etaamb / OpenJustice"
-    accessed: "2026-08-26"
+    accessed: "2026-09-06"
   - title: "Wet van 4 mei 2016 inzake het hergebruik van overheidsinformatie (Belgisch Staatsblad) — geconsolideerde tekst (Justel)"
     url: "https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=nl&la=N&table_name=wet&cn=2016050417"
     publisher: "Belgisch Staatsblad / Moniteur belge (FOD Justitie)"
@@ -72,10 +72,11 @@ sources:
 
 # Wet van 4 mei 2016 (re-use of public sector information)
 
-> **Verified 2026-08-26.** Three of four sources were read directly: the
-> act's own original text and its current consolidated (Justel) text, both
-> on Belgium's statute-book mirrors, and a BIPT sectoral page. `news.belgium.be`
-> was not read this pass. `verification: primary-source`.
+> **Verified 2026-08-26; licensing/pricing/appeals content closed
+> 2026-09-06.** The act's own original text and its current consolidated
+> (Justel) text, both on Belgium's statute-book mirrors, and a BIPT
+> sectoral page have all been read directly. `news.belgium.be` was not
+> read. `verification: primary-source`.
 
 ## Description
 
@@ -138,9 +139,36 @@ in `discovery/unresolved.md` as closed by [[BE-HERGEBRUIK-WET-2023]].
 
 `confidence: medium` (raised from `low`) reflects that the act's
 transposition basis and its later amendment are now both confirmed from
-primary text; `coverage: low` is unchanged — the act's substantive
-obligations (licensing, pricing, the appeals commission) are described only
-in prose from a secondary source (BIPT), not read from the act itself.
+primary text.
+
+## Licensing, pricing and the appeals commission, closed 2026-09-06
+
+**Closes a previously-flagged gap.** `coverage` raised to `medium`:
+these obligations were previously described only in prose from BIPT, a
+secondary source; the act's own text at etaamb.openjustice.be, read
+directly, now supports them.
+
+- **Licensing (Articles 5, 7)**: authorities may make documents available
+  for re-use unconditionally or subject to conditions; where conditions
+  are set, the King establishes standard licences, made available
+  electronically in machine-readable form where possible. Conditions
+  "mogen niet discriminerend zijn voor vergelijkbare categorieën van
+  hergebruik" (Article 5§1) — may not discriminate between comparable
+  categories of re-use.
+- **Pricing (Articles 6, 8)**: where a fee is charged, "blijft deze
+  vergoeding beperkt tot de marginale kosten voor hun vermenigvuldiging,
+  verstrekking en verspreiding" (Article 8§1) — limited to the marginal
+  cost of reproduction, provision and dissemination, with an exception for
+  bodies required by regulation to generate substantial revenue, whose
+  fees must instead follow "vooraf vastgestelde objectieve, transparante en
+  controleerbare criteria." Public bodies must publish fee amounts and
+  calculation bases, and explain the calculation on request (Article 6§2–3).
+- **Appeals commission (Articles 11–17)**: "Er wordt een federale
+  beroepscommissie van het hergebruik van de bestuursdocumenten opgericht"
+  (Article 11§1) — a federal appeals commission for the re-use of
+  administrative documents is established. Appeals must be filed within
+  sixty days (Article 14); the commission decides "zo spoedig mogelijk"
+  and within thirty days of registration at the latest (Article 17§1).
 
 ## Relationships
 
@@ -153,6 +181,8 @@ above. `related_entities` records the association for navigation only.
 
 ## Sources
 
-Three of four read directly this pass — the act's original 2016 text, its
-current consolidated (Justel) text showing the 2023 amendment, and a BIPT
+Listed in frontmatter, three of four read directly across two passes —
+the act's original 2016 text (Articles 1, 5–8 and 11–17, read directly
+this pass for the licensing/pricing/appeals gap), its current
+consolidated (Justel) text showing the 2023 amendment, and a BIPT
 sectoral page. `news.belgium.be` was not read.
