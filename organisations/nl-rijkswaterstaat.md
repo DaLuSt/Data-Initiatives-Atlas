@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-09-06"
 previous_version: null
 successor: null
 
@@ -37,6 +37,8 @@ related_entities:
   - NL-GEONOVUM
   - NL-KADASTER
   - NL-IENW
+  - NL-BGT
+  - NL-SVB-BGT
 relationships:
   - type: part-of
     target: NL-IENW
@@ -56,6 +58,13 @@ relationships:
     target: NL-NDW
     source: fact
     evidence: "Confirmed already on NL-NDW's own file, reading organisaties.overheid.nl's own listing directly: Rijkswaterstaat is named among the government partners in the National Data Warehouse for Traffic Information."
+    confidence: high
+    valid_from: null
+    valid_until: null
+  - type: participates-in
+    target: NL-BGT
+    source: fact
+    evidence: "CLOSES PART OF A PREVIOUSLY-FLAGGED GAP ([[NL-BGT]]'s own 'Not modelled' section). Confirmed by reading svb-bgt.nl's own homepage directly (2026-09-06): 'Alle gemeenten, waterschappen, provincies, het Ministerie van Defensie, het Ministerie van Landbouw, Visserij, Voedselzekerheid en Natuur, ProRail en Rijkswaterstaat werken samen aan de BGT' — naming Rijkswaterstaat directly as one of the bronhouders (data-source holders) of the register."
     confidence: high
     valid_from: null
     valid_until: null
@@ -108,6 +117,7 @@ actually was.
 - `part-of` [[NL-IENW]] — its parent ministry.
 - `participates-in` [[NL-PDOK]] — founding partner since 2013.
 - `participates-in` [[NL-NDW]] — named government partner.
+- `participates-in` [[NL-BGT]] — named bronhouder, added 2026-09-06.
 
 ## Sources
 

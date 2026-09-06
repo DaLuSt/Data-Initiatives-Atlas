@@ -30,7 +30,7 @@ verification: primary-source
 
 start_date: 2016-01-01
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-06"
 previous_version: null
 successor: null
 
@@ -45,6 +45,8 @@ related_entities:
   - NL-KADASTER
   - NL-BRT
   - NL-VNG
+  - NL-SVB-BGT
+  - NL-RIJKSWATERSTAAT
 relationships:
   - type: governed-by
     target: NL-WET-BGT
@@ -88,14 +90,22 @@ sources:
   - title: "Regels omtrent de basisregistratie grootschalige topografie (Wet basisregistratie grootschalige topografie) (not re-read this pass)"
     url: "https://www.tweedekamer.nl/kamerstukken/brieven_regering/detail?id=2025D12647&did=2025D12647"
     publisher: "Tweede Kamer der Staten-Generaal"
+  - title: "Homepage — SVB-BGT"
+    url: "https://www.svb-bgt.nl/homepage/"
+    publisher: "SVB-BGT"
+    accessed: "2026-09-06"
 ---
 
 # BGT — Basisregistratie Grootschalige Topografie
 
-> **Verified 2026-08-27.** Four of five cited pages were read directly, plus
-> the official BWBR0034026 text added as a new source and read: Kadaster's
-> and VNG's own pages confirm the 1 January 2016 commencement and the seven
-> bronhouder categories by name. The Tweede Kamer document was not re-fetched.
+> **Verified 2026-08-27; SVB-BGT and Rijkswaterstaat closed 2026-09-06.**
+> Four of five originally-cited pages were read directly, plus the
+> official BWBR0034026 text: Kadaster's and VNG's own pages confirm the
+> 1 January 2016 commencement and the seven bronhouder categories by
+> name. SVB-BGT's own site, read directly this pass, supplies its legal
+> form, founding date and governance, now modelled as [[NL-SVB-BGT]], and
+> names [[NL-RIJKSWATERSTAAT]] directly as a bronhouder. The Tweede Kamer
+> document was not re-fetched.
 
 ## Description
 
@@ -128,9 +138,14 @@ the Atlas can name. Of the seven bronhouder categories:
 
 - **municipalities, provinces and water boards** — no entities; the `level`
   vocabulary has `local` but there is no obvious collective entity to create;
-- **Rijkswaterstaat, ProRail, Defence, RVO** — no entities; none was
-  researched;
-- **SVB-BGT** — no entity; named in one source only.
+- [[NL-RIJKSWATERSTAAT]] is an Atlas entity (added 2026-09-05), confirmed
+  as a bronhouder by name via SVB-BGT's own site, read directly
+  2026-09-06 — **ProRail, Defence and RVO remain unmodelled**;
+- ~~**SVB-BGT** — no entity; named in one source only~~ — closed
+  2026-09-06, now [[NL-SVB-BGT]], sourced from its own site directly:
+  a foundation (statutes ratified 15 April 2014) coordinating all seven
+  bronhouder categories, with an independent chair and representatives
+  of each on its board.
 
 So the graph shows a register maintained by one organisation. **Seven kinds
 of body actually maintain it.** This is the same shape as the WOZ and the
@@ -141,14 +156,15 @@ rather than three.
 
 - `part-of` [[NL-BASISREGISTRATIES]].
 - `maintained-by` [[NL-KADASTER]] — national facility only; see above.
+- [[NL-RIJKSWATERSTAAT]] and [[NL-SVB-BGT]] both carry `participates-in`
+  edges pointing here, added 2026-09-06.
 
 **No relationship to [[NL-BRT]] is asserted**, though both are topographic
 base registries. See [[NL-BRT]] for the difference between them.
 
 ## Sources
 
-Listed in frontmatter, four of five read directly this pass plus the
-official BWBR0034026 text added and read — the Kadaster and
-digitaleoverheid.nl register pages, the VNG article written for
-municipalities as bronhouders, and the Act's own text. The Tweede Kamer
-document was not re-fetched.
+Listed in frontmatter. The Kadaster and digitaleoverheid.nl register
+pages, the VNG article, the Act's own text, and SVB-BGT's own homepage
+(added 2026-09-06) have all been read directly. The Tweede Kamer document
+was not re-fetched.
