@@ -26,7 +26,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-06"
 previous_version: null
 successor: null
 
@@ -39,6 +39,7 @@ related_entities:
   - NL-BASISREGISTRATIES
   - NL-KVK
   - NL-BRK
+  - EU-BRIS
 relationships:
   - type: governed-by
     target: NL-HANDELSREGISTERWET
@@ -88,6 +89,10 @@ sources:
 > register in the batch with no statutory basis modelled at all.
 > digitaleoverheid.nl's HR page is confirmed genuinely bot-walled in this
 > environment, not merely unread.
+>
+> **Closed 2026-09-06**: the European network this register belongs to,
+> previously flagged as unmodelled, is now [[EU-BRIS]], which carries an
+> `applies-to` edge to this entity.
 
 ## Description
 
@@ -114,6 +119,9 @@ legal entities, assigned to the Kamer van Koophandel.
 - `part-of` [[NL-BASISREGISTRATIES]].
 - `maintained-by` [[NL-KVK]].
 - `governed-by` [[NL-HANDELSREGISTERWET]] — confirmed this pass; see above.
+- The `applies-to` edge from [[EU-BRIS]] is recorded on that entity: this
+  register is one of the national registers the EU-wide interconnection
+  system connects.
 
 **No relationship to [[NL-BRK]] is asserted**, despite the shared KvK
 number, for the reason set out on [[NL-BRP]]: the Atlas has no relationship
