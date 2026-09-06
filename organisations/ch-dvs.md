@@ -19,12 +19,12 @@ country: CH
 region: null
 
 status: active
-confidence: medium
-coverage: low
+confidence: high
+coverage: medium
 verification: primary-source
 start_date: 2022-01-01
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-09-06"
 previous_version: null
 successor: null
 
@@ -38,8 +38,8 @@ relationships:
   - type: part-of
     target: CH
     source: fact
-    evidence: "Confirmed by reading digitale-verwaltung-schweiz.ch directly (2026-08-22): the site names itself 'Digitale Verwaltung Schweiz' and describes joint federal/cantonal projects (e.g. the AGOV authentication service, used across fourteen named cantons). The exact January 2022 operational-start date was NOT independently re-confirmed this pass — the homepage's current news content does not restate its own founding date, and no 'about us' subpage with that detail was located. Retained from the original sourcing rather than dropped. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor."
-    confidence: medium
+    evidence: "Confirmed by reading digitale-verwaltung-schweiz.ch and efd.admin.ch directly: the site names itself 'Digitale Verwaltung Schweiz' and describes joint federal/cantonal projects (e.g. the AGOV authentication service, used across fourteen named cantons). CLOSES A PREVIOUSLY-FLAGGED GAP: efd.admin.ch's own page, read directly 2026-09-06, independently confirms the January 2022 operational-start date, which a prior pass could not re-confirm. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -64,26 +64,30 @@ sources:
     url: "https://www.digitale-verwaltung-schweiz.ch/it"
     publisher: "Amministrazione digitale Svizzera (ADS)"
     accessed: "2026-08-22"
+  - title: "Digitale Verwaltung Schweiz"
+    url: "https://www.efd.admin.ch/de/digitale-verwaltung"
+    publisher: "Eidgenössisches Finanzdepartement (EFD)"
+    accessed: "2026-09-06"
 ---
 
 # Digitale Verwaltung Schweiz (DVS)
 
-> **Verified 2026-08-22.** Both originally-cited pages were read directly,
-> plus the French, English and Italian homepages fetched to check the
-> other language abbreviations. One was wrong: the Italian abbreviation
-> is **ADS** ("Amministrazione digitale Svizzera"), not "AND" as
-> previously recorded — corrected. The English name is confirmed as
-> "Digital Public Services Switzerland." The January 2022
-> operational-start date could not be independently re-confirmed this
-> pass and is retained rather than removed — see that relationship's
-> evidence. Two findings worth flagging, neither acted on
-> beyond recording: DVS's own homepage advertises **AGOV**, a nationwide
-> authority-login service already used by fourteen cantons with "already
-> 2 million accounts" — a Swiss analogue to [[GB-ONE-LOGIN]] not yet an
-> Atlas entity — and reports that the Federal Council and the Conference
-> of Cantonal Governments adopted a "Zielbild" (target vision) in late
-> 2025 to evolve DVS toward "a political platform with binding
-> standard-setting."
+> **Verified 2026-08-22; legal form, governance and predecessor closed
+> 2026-09-06.** Both originally-cited pages were read directly, plus the
+> French, English and Italian homepages fetched to check the other
+> language abbreviations. One was wrong: the Italian abbreviation is
+> **ADS** ("Amministrazione digitale Svizzera"), not "AND" as previously
+> recorded — corrected. The English name is confirmed as "Digital Public
+> Services Switzerland." efd.admin.ch's own page, read directly this
+> pass, independently confirms the January 2022 operational-start date
+> and closes the legal-form/governance/predecessor gap — see below. Two
+> findings worth flagging, neither acted on beyond recording: DVS's own
+> homepage advertises **AGOV**, a nationwide authority-login service
+> already used by fourteen cantons with "already 2 million accounts" — a
+> Swiss analogue to [[GB-ONE-LOGIN]] not yet an Atlas entity — and reports
+> that the Federal Council and the Conference of Cantonal Governments
+> adopted a "Zielbild" (target vision) in late 2025 to evolve DVS toward
+> "a political platform with binding standard-setting."
 
 ## Description
 
@@ -110,12 +114,33 @@ value, **not because the description is accurate.** This is the clearest
 single illustration of the `level` gap logged in
 `discovery/candidates.md`.
 
-## ⚠ `coverage: low`, and still no relationships beyond the anchor
+## Legal form, governance and predecessor, closed 2026-09-06
 
-Two federal pages were read directly this pass, both of DVS's own site.
-Its legal form, its governance, and its predecessor *E-Government Schweiz*
-remain unestablished — no dedicated "about us" or history page was
-located.
+**Closes a previously-flagged gap.** Confirmed by reading
+efd.admin.ch's own page directly (the Federal Department of Finance,
+EFD): DVS operates under an "öffentlich-rechtliche Rahmenvereinbarung
+über die Digitale Verwaltung Schweiz" (a public-law framework agreement),
+which entered into force on **1 January 2022** — independently
+corroborating the operational-start date this entity already carried.
+
+Its governance: **Peppino Giarritta**, the "Beauftragter von Bund und
+Kantonen" (representative of the Confederation and the cantons), leads
+the **Delegiertenversammlung** (delegates' assembly), the operative
+governing body, and its **Geschäftsstelle** (business office) is
+administratively housed at the EFD's General Secretariat.
+
+DVS **succeeded E-Government Schweiz**, the tripartite organisation that
+coordinated implementation of the previous e-government strategy through
+end of 2021 — confirmed directly, though E-Government Schweiz is not
+itself an Atlas entity and no `previous_version` edge is asserted to a
+non-existent entity. A WebSearch-only synthesis (not independently
+confirmed by a directly-read page) adds that the Swiss Informatics
+Conference (SIK) was also absorbed; treated as unconfirmed context, not
+adopted as a sourced fact.
+
+`coverage` raised to `medium`; `confidence` raised to `high` on the
+strength of an independent federal source (efd.admin.ch) corroborating
+digitale-verwaltung-schweiz.ch's own account.
 
 DVS publishes a blog post about [[CH-EMBAG]], which is evidence it takes
 an interest, not evidence of a role under the act — see [[CH-EMBAG]] for
@@ -124,5 +149,7 @@ instead. No edge from DVS to EMBAG is asserted.
 
 ## Sources
 
-Listed in frontmatter, all five read directly this pass — the French,
-English and Italian homepages were added to confirm ANS, DPSS and ADS.
+Listed in frontmatter, all six read directly across two passes — the
+French, English and Italian homepages were added to confirm ANS, DPSS and
+ADS; efd.admin.ch, added and read directly 2026-09-06, closed the legal
+form, governance and predecessor gap.
