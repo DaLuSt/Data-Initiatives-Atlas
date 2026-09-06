@@ -24,7 +24,7 @@ verification: primary-source
 
 start_date: 2002-05-06
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-09-06"
 previous_version: null
 successor: null
 
@@ -35,6 +35,7 @@ related_entities:
   - ES-LEY-11-2002
   - ES-LO-2-2002
   - ES-CCN
+  - ES-CIFAS
 relationships:
   - type: governed-by
     target: ES-LEY-11-2002
@@ -90,12 +91,17 @@ of the Government**.
 
 Its head is the *Secretario de Estado Director*, appointed by royal decree.
 
-## Spain is the one-service country
+## Spain was thought to be the one-service country — corrected 2026-09-06
 
-Every other country in this batch splits the function at least two ways —
-civilian and military, or domestic and foreign. Spain does not: the CNI is a
-**single** service covering both, which is why this is the only country in
-the batch with one service entity rather than two, three or four.
+This entity previously said Spain was the batch's only one-service
+country, with the CNI covering both civilian and military intelligence
+alone. That was an artefact of scope, not fact: [[ES-CIFAS]], the armed
+forces' own intelligence centre, was simply unresearched. Now modelled,
+it restores Spain to the same civilian/military split every other
+country in the batch carries — [[ES-CNI]] for general national
+intelligence, reporting to the President of the Government, and
+[[ES-CIFAS]] for military intelligence, reporting through the JEMAD to
+the Minister of Defence.
 
 ## Prior judicial control, and why it needed a second act
 
@@ -138,9 +144,12 @@ through a body that was already present.
 
 ## Not modelled
 
-- **CIFAS**, the armed forces' intelligence centre, and the information
-  services of the National Police and Guardia Civil. The sources mention a
-  common inspection regime covering them; none was researched.
+- ~~**CIFAS**, the armed forces' intelligence centre~~ — closed 2026-09-06,
+  now [[ES-CIFAS]], `governed-by` [[ES-ORDEN-DEF-1076-2005]]. Spain is no
+  longer the one-service country in the batch — see below.
+- The information services of the **National Police** and **Guardia
+  Civil**. The sources mention a common inspection regime covering them;
+  none was researched.
 - The **Comisión Delegada del Gobierno para Asuntos de Inteligencia**, the
   government committee that sets the CNI's annual objectives.
 - The CNI's predecessor, **CESID** (Centro Superior de Información de la

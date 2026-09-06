@@ -128,14 +128,18 @@ entity concerned rather than left to read as absence of fact.
 
 ## Intelligence and security services
 
-Added with the intelligence-services batch. **Spain is the one-service
-country**: [[ES-CNI]] covers both the civilian/military and the
-domestic/foreign split that every other country here divides between two or
-more bodies.
+Added with the intelligence-services batch. **Corrected 2026-09-06**: Spain
+was described as the batch's one-service country; that was an artefact of
+scope. [[ES-CIFAS]], the armed forces' own intelligence centre, was simply
+unresearched — Spain in fact carries the same civilian/military split as
+every other country here.
 
 - [[ES-CNI]] — integrated in the **Ministry of Defence** with functional
   autonomy and its own legal personality, reporting to the President of the
   Government.
+- [[ES-CIFAS]] — military intelligence, reporting through the JEMAD to the
+  Minister of Defence; `governed-by` [[ES-ORDEN-DEF-1076-2005]] _(added
+  2026-09-06)_.
 
 Legislation — two acts, **same day**, 6 May 2002:
 
