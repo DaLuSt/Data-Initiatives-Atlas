@@ -11,11 +11,7 @@ Anchor entity: [[ES]]
 > entities are now `verification: primary-source`. [[ES-ENI]] and
 > [[ES-ESPANA-DIGITAL-2026]] were the last two closed, both by finding
 > and reading previously-uncited pages via search rather than by
-> re-fetching the sources already on file. [[ES-CLAVE]] followed the
-> same route but its eIDAS-specific edge stays `confidence: low` — the
-> newly-read pages confirm Spain's eIDAS node in general and that DNIe,
-> not Cl@ve, is the notified scheme, but neither states the "Cl@ve is
-> the integration path" claim this entity previously carried. One
+> re-fetching the sources already on file. One
 > genuine correction surfaced in the first pass: [[ES-LOPDGDD]]'s
 > transitory-provisions count was wrong (seven, corrected to six) until
 > BOE's own preamble was read directly. A genuine, still-open source
@@ -23,6 +19,13 @@ Anchor entity: [[ES]]
 > widely-syndicated coverage (and this entity's own prior text) on what
 > [[ES-ESPANA-DIGITAL-2026]]'s two new strategic axes actually are — see
 > the entity itself and `discovery/unresolved.md`.
+>
+> **Updated 2026-09-06:** [[ES-CLAVE]]'s eIDAS question is settled, not
+> just narrowed. The European Commission's own eID notification table,
+> read directly, confirms **DNIe**, not Cl@ve, is Spain's notified eIDAS
+> scheme — now its own entity, [[ES-DNIE]] — and Cl@ve's
+> `implements-requirement-from` edge to [[EU-EIDAS]] is removed rather
+> than kept at diminishing confidence.
 
 ## Organisations
 
@@ -63,6 +66,8 @@ Anchor entity: [[ES]]
 - [[ES-DATOS-GOB-ES]] — national open data portal
 - [[ES-CLAVE]] — electronic identification _(identification and signature
   kept separate)_
+- [[ES-DNIE]] — electronic national ID card _(Spain's actual [[EU-EIDAS]]-
+  notified scheme, High level, since 2018; added 2026-09-06)_
 
 ## Strategy
 
