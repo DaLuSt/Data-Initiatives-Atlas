@@ -140,6 +140,8 @@ Added with the intelligence-services batch.
 - [[BE-VSSE]] — the **only civilian** service, a department of FPS Justice
 - [[BE-ADIV]] / SGRS — military service, under Defence
 - [[BE-COMITE-I]] — democratic oversight, reporting to Parliament
+- [[BE-OCAD]] — threat-analysis coordination body, jointly overseen by
+  Comité P and Comité I since 2006, added 2026-09-06
 
 Legislation:
 
@@ -147,6 +149,8 @@ Legislation:
   services. Its title uses the **singular** while governing two of them.
 - [[BE-TOEZICHTSWET-1991]] — the oversight act, creating Comité I *and*
   Comité P.
+- [[BE-WET-DREIGINGSANALYSE-2006]] — establishes OCAD under the joint
+  authority of the Ministers of Justice and the Interior.
 
 **Belgium regulated the watchers seven years before the watched.** The
 oversight act is 1991; the organic act is 1998. That ordering is unique in
