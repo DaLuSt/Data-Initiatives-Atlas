@@ -75,7 +75,8 @@ sources:
 >
 > **Updated 2026-09-06**: cross-references a documented negative added on
 > [[PL-KSS]] — the ECHR found Poland's Anti-Terrorism Act gives ABW's
-> secret-surveillance powers no independent-body review.
+> secret-surveillance powers no independent-body review. CBA, previously
+> named here as unmodelled, is now [[PL-CBA]].
 
 ## Description
 
@@ -133,10 +134,6 @@ the surveillance." See [[PL-KSS]] for the full finding.
 
 ## Not modelled
 
-- **CBA** (Centralne Biuro Antykorupcyjne), named by the sources among the
-  services under the College for Special Services. It is an anti-corruption
-  bureau rather than an intelligence service, and its current status was not
-  established.
 - **SOP** (Służba Ochrony Państwa), the state protection service.
 - The **Kolegium do Spraw Służb Specjalnych**, the government-side
   coordinating college, as distinct from the parliamentary [[PL-KSS]].

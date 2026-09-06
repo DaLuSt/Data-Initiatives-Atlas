@@ -140,6 +140,8 @@ external    PL-AW       2002      PL-SWW      2006
 - [[PL-AW]] — foreign intelligence
 - [[PL-SKW]] — military counter-intelligence _(⚠ `coverage: low`)_
 - [[PL-SWW]] — military intelligence _(⚠ `coverage: low`)_
+- [[PL-CBA]] — anti-corruption, added 2026-09-06 to complete the
+  five-service picture [[PL-KSS]] always described
 - [[PL-KSS]] — the Sejm's oversight committee
 
 Legislation:
@@ -151,6 +153,8 @@ Legislation:
 - [[PL-USKWSWW-2006]] — the military pair. ⚠ **No official Polish
   government URL could be found for it**, in contrast to its civilian
   counterpart.
+- [[PL-USTAWA-CBA-2006]] — CBA's founding act, read directly via CBA's own
+  hosted PDF (ISAP's copy is CAPTCHA-blocked, as usual).
 
 **[[PL-ABW]] `implements` [[PL-KSC]]**: CSIRT GOV, one of the three
 national-level CSIRTs under the national cybersecurity system act, is led by
