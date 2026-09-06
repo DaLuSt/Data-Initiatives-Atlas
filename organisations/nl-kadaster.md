@@ -22,7 +22,7 @@ verification: primary-source
 
 start_date: 1832-10-01
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-06"
 previous_version: null
 successor: null
 
@@ -33,7 +33,16 @@ organisations: []
 related_entities:
   - NL-GEONOVUM
   - EU-EUROGEOGRAPHICS
+  - NL-ORGANISATIEWET-KADASTER
+  - NL-KADASTERWET
 relationships:
+  - type: governed-by
+    target: NL-ORGANISATIEWET-KADASTER
+    source: fact
+    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP. Confirmed by reading wetten.overheid.nl's own text of the Organisatiewet Kadaster directly (2026-09-06), Article 2(1): 'Er is een Dienst voor het kadaster en de openbare registers... Hij bezit rechtspersoonlijkheid en is gevestigd te Apeldoorn' — this Act constitutes the Kadaster as a body with legal personality, distinct from NL-KADASTERWET which governs the registers it maintains."
+    confidence: high
+    valid_from: 1994-02-14
+    valid_until: null
   - type: participates-in
     target: NL-BASISREGISTRATIES
     source: fact
@@ -79,6 +88,10 @@ sources:
 > (1 October 1832, as Dienst voor het kadaster en de openbare registers) and
 > confirms zelfstandig-bestuursorgaan status since 1994, neither of which
 > the entity carried before.
+>
+> **Closed 2026-09-06**: the 1994 autonomisation now has a primary
+> statutory citation — [[NL-ORGANISATIEWET-KADASTER]], read directly on
+> wetten.overheid.nl, giving this entity its first `governed-by` edge.
 
 ## Description
 
@@ -103,6 +116,7 @@ connecting it to Dutch geo-standardisation.
 
 ## Relationships
 
+- `governed-by` [[NL-ORGANISATIEWET-KADASTER]] — closed 2026-09-06.
 - Participates in [[NL-BASISREGISTRATIES]] as holder of the BRK.
 - Co-funder of [[NL-GEONOVUM]].
 
