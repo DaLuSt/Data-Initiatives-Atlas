@@ -28,7 +28,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-06"
 previous_version: null
 successor: null
 
@@ -36,16 +36,18 @@ domains:
   - DOMAIN-GOVERNMENT
 organisations: []
 related_entities:
+  - ES
   - EU-EIDAS
   - EU-EIDAS2
   - FR-FRANCECONNECT
   - DE-BUNDID
+  - ES-DNIE
 relationships:
-  - type: implements-requirement-from
-    target: EU-EIDAS
+  - type: applies-in
+    target: ES
     source: fact
-    evidence: "Confirmed by reading eidas.redsara.es's own 'qué es' page and viafirma.com's eIDAS-in-Spain article directly (2026-08-27): eidas.redsara.es describes the Spanish eIDAS node as 'una plataforma que facilita la identificación electrónica transfronteriza en el ámbito de la Unión Europea' (a platform enabling cross-border electronic identification in the EU); viafirma.com confirms Spain notified the DNIe (electronic ID document), not Cl@ve, as its eIDAS-Node scheme. NEITHER page actually read confirms the specific claim this entity previously carried — that administrations integrate with the eIDAS node 'through the Cl@ve system' — eidas.redsara.es's page displays both Cl@ve and eIDAS logos together but states no textual claim about their technical relationship, and viafirma.com does not mention Cl@ve at all. cef.uv.es returned HTTP 503 both in the prior pass and this one. CAVEAT UNCHANGED: this edge covers Cl@ve's general association with Spain's eIDAS infrastructure, not a notification of Cl@ve as a scheme, and the specific integration claim remains unconfirmed by direct reading despite two of the three specific citations now being read."
-    confidence: low
+    evidence: "Confirmed by reading administracion.gob.es directly (2026-08-27): 'El sistema más extendido en las Administraciones Públicas es Cl@ve' (the most widespread system in Spanish public administrations is Cl@ve). Anchor edge under metadata/relationship-types.md §2.3, added 2026-09-06 to replace the removed implements-requirement-from edge to EU-EIDAS — see 'The eIDAS edge is removed, not weakened' below."
+    confidence: medium
     valid_from: null
     valid_until: null
 
@@ -76,6 +78,10 @@ sources:
   - title: "eID4Spain2020 — Scope and objectives (currently HTTP 503)"
     url: "https://cef.uv.es/eid4spain2020/"
     publisher: "Universitat de València"
+  - title: "Overview of pre-notified and notified eID schemes under eIDAS"
+    url: "https://ec.europa.eu/digital-building-blocks/sites/display/EIDCOMMUNITY/Overview+of+pre-notified+and+notified+eID+schemes+under+eIDAS"
+    publisher: "European Commission — eID User Community, Digital Building Blocks"
+    accessed: "2026-09-06"
 ---
 
 # Cl@ve
@@ -87,8 +93,15 @@ sources:
 > That is a majority of the entity's now six total sources. Reading them
 > did not confirm the specific claim previously carried — that
 > administrations integrate with the eIDAS node "through Cl@ve" — so
-> `confidence: low` on that edge stands, now for a different, more
-> precise reason: not "unread" but "read, and not stated."
+> `confidence: low` on that edge stood, at the time, for a different,
+> more precise reason: not "unread" but "read, and not stated."
+>
+> **Updated 2026-09-06: the eIDAS edge is removed, not weakened.** The
+> European Commission's own eID notification table, read directly,
+> settles the question this entity had left open — Spain's eIDAS-notified
+> scheme is the DNIe, now its own entity, [[ES-DNIE]], and Cl@ve does not
+> appear in the Commission's table at all. See "The eIDAS edge is
+> removed, not weakened" below.
 
 ## Description
 
@@ -134,26 +147,29 @@ entity records signature capability as a distinct question at all.
 **No relationship between the three is asserted.** Three national solutions
 to a shared problem is still not a relationship.
 
-## The eIDAS gap now spans five countries
+## The eIDAS edge is removed, not weakened
 
-[[DE-BUNDID]] carries `implements-requirement-from` → [[EU-EIDAS]] at low
-confidence, because a German source mentions the regulation. This entity's
-own edge is now similarly thin, but for a sharper reason: two sources about
-Spain's eIDAS node **were** read directly this pass, and neither states
-that Cl@ve is how it works — one displays the Cl@ve and eIDAS logos
-together with no textual claim connecting them, the other confirms the
-DNIe, not Cl@ve, as Spain's notified scheme and does not mention Cl@ve at
-all.
+The prior pass left `implements-requirement-from` → [[EU-EIDAS]] on this
+entity at `confidence: low`, with two sources read directly that neither
+confirmed nor denied the specific claim. The European Commission's own
+eID User Community page, read directly this pass (2026-09-06),
+'Overview of pre-notified and notified eID schemes under eIDAS'
+(ec.europa.eu/digital-building-blocks), settles it: its **only Spanish
+entry** is "Documento Nacional de Identidad electrónico (DNIe)," at
+assurance level **High**, notified **7 November 2018** (OJEU 2018/C
+401/08). **Cl@ve does not appear in the table at all.**
 
-Nor is anything asserted to [[EU-EIDAS2]], which requires every member state
-to offer a European Digital Identity Wallet by the end of 2026 — now about
-four months away.
+That is no longer "read, and not stated" — it is read, and stated
+otherwise. The edge is removed from this entity rather than kept at a
+still-lower confidence, and recorded instead on a new entity,
+[[ES-DNIE]], which carries it at `confidence: high`. This is the same
+call [[FR-LOI-VALTER]] makes for France's Open Data Directive question:
+a documented negative is the finding, not a gap to keep flagging at
+diminishing confidence.
 
-[[FR-FRANCECONNECT]] predicted this would *"become a factual question rather
-than a modelling one"*. With a fifth country added and the deadline four
-months out, one of five national identity systems in the Atlas carries an
-eIDAS edge, and none carries an eIDAS2 edge. The prediction stands, and the
-question is now overdue rather than approaching.
+Nor is anything asserted to [[EU-EIDAS2]] or [[EU-EUDI-WALLET]], which
+require every member state to offer a European Digital Identity Wallet
+by the end of 2026 — a separate, still-unsourced obligation.
 
 ## Why `coverage: medium`, up from `low`
 
@@ -167,12 +183,15 @@ in this entity's description.
 
 ## Relationships
 
-- `implements-requirement-from` [[EU-EIDAS]] — `confidence: low`; see the
-  caveat at the top of this entity. Two of its three specific citations
-  are now read directly, and neither states the claim.
+- `applies-in` [[ES]] — anchor edge, added 2026-09-06 to replace the
+  removed `implements-requirement-from` edge.
+
+No relationship to [[EU-EIDAS]] is asserted — see "The eIDAS edge is
+removed, not weakened" above.
 
 ## Sources
 
-Listed in frontmatter, five of six read directly this pass, including
-two of the three specific citations behind the one relationship above.
-`cef.uv.es` remains persistently unavailable (HTTP 503).
+Listed in frontmatter. Five of the original six were read directly in
+the 2026-08-27 pass; `cef.uv.es` remains persistently unavailable (HTTP
+503). The European Commission's own eID notification table was read
+directly in the 2026-09-06 pass.
