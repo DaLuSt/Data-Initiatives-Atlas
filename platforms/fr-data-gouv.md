@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-09-06"
 previous_version: null
 successor: null
 
@@ -62,11 +62,16 @@ sources:
     url: "https://guides.data.gouv.fr/guides/guide-juridique/chronologie-de-lopen-data"
     publisher: "data.gouv.fr"
     accessed: "2026-08-26"
+  - title: "Les différents types de moissonneurs (harvesting/DCAT documentation)"
+    url: "https://guides.data.gouv.fr/moissonnage/comprendre-le-moissonnage/les-differents-type-de-moissonneurs"
+    publisher: "data.gouv.fr"
+    accessed: "2026-09-06"
 ---
 
 # data.gouv.fr
 
-> **Verified 2026-08-26.** All four cited pages were read directly.
+> **Verified 2026-08-26; DCAT-profile negative independently corroborated
+> 2026-09-06.** All four originally-cited pages were read directly.
 > data.gouv.fr's own homepage confirms its identity verbatim, and its
 > Etalab organisation page confirms the `maintained-by` edge directly.
 
@@ -120,7 +125,14 @@ The Dutch cell is a gap rather than a finding — see [[FR-ETALAB]].
   DCAT harvesting, not a French application profile sitting between the two.
   The DCAT fork stays at three national children plus Spain's, which is
   folded into [[ES-NTI-RISP]] rather than standing alone. The queue item is
-  closed as "no such profile found", not carried.
+  closed as "no such profile found", not carried. **Independently
+  corroborated 2026-09-06**: guides.data.gouv.fr's own harvesting
+  documentation, read directly, names only "DCAT et... l'extension DCAT-AP
+  publiée par la Commission européenne" plus GeoDCAT-AP for geographic
+  data — no French-specific profile. This directly contradicts an
+  uncorroborated askem.eu blog claim (found by search, not read from a
+  primary page) that "France has its own derived profile" adding
+  SIREN/administrative-nomenclature fields; that claim is not adopted.
 - **No relationship to [[FR-LRN]]**, though the 2016 act's open-data
   obligations are what much of this portal carries. Same call as
   [[DE-GOVDATA]]/[[DE-DNG]] and [[BE-DATA-GOV-BE]]/[[BE-HERGEBRUIK-WET]]:
