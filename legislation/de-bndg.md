@@ -23,7 +23,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-09-06"
 previous_version: null
 successor: null
 
@@ -49,7 +49,7 @@ sources:
   - title: "Bundestag novelliert die Rechtsgrundlagen der Nachrichtendienste"
     url: "https://www.bundestag.de/dokumente/textarchiv/2023/kw46-de-bnd-976564"
     publisher: "Deutscher Bundestag"
-    accessed: "2026-08-22"
+    accessed: "2026-09-06"
   - title: "Aufsicht über die Nachrichtendienste des Bundes"
     url: "https://www.bfdi.bund.de/DE/Fachthemen/Inhalte/Nachrichtendienste/Kontrollandschaft-Nachrichtendienste-des-Bundes.html"
     publisher: "Bundesbeauftragte für den Datenschutz und die Informationsfreiheit (BfDI)"
@@ -62,6 +62,10 @@ sources:
 > the Bundestag's 2021 and 2023 textarchiv articles were read directly.
 > Egress to gesetze-im-internet.de is not blocked in this environment —
 > the earlier caveat about that was wrong.
+>
+> **Closed 2026-09-06**: the 2023 amendment's substantive content, not
+> mined from the already-cited Bundestag article in the prior pass, is
+> now established — see below.
 
 ## Description
 
@@ -98,13 +102,40 @@ act**. [[DE-UKR]]'s own re-verification (2026-08-22) found where they are
 headed — a dedicated "Gesetz über den Unabhängigen Kontrollrat" — though
 not whether that transfer has yet completed.
 
-Nothing about the *content* of the 2023 amendment was established here.
-This entity records that the act has moved recently and only partially
-describes how.
+## The 2023 amendment's content, closed 2026-09-06
+
+Re-reading the already-cited Bundestag textarchiv article directly
+confirms the 2023 reform's substance, previously unmined from that same
+source. It responds to the **28 September 2022** Federal Constitutional
+Court decision that found certain data-sharing provisions
+unconstitutional, with a deadline of **31 December 2023**. Three
+substantive changes:
+
+1. **Decoupling from the Verfassungsschutzgesetz**: the reform "decouples
+   all transmission provisions in the BND law from" [[DE-BVERFSCHG]],
+   presenting them "fundamentally clear and transparent" in line with
+   current court precedent — previously the two acts' transmission rules
+   were cross-referenced rather than self-contained.
+2. **Classified-material protection**: following a suspected 2022
+   espionage case inside the BND, the law adds provisions "to strengthen
+   protection of classified materials through controls" and prevent
+   information leaks.
+3. **Scope expansion**: BND officials may now transmit intelligence to
+   domestic public agencies for danger prevention and to prosecution
+   authorities for criminal prosecution, under specified conditions —
+   new recipient categories the Act did not previously name.
+
+The Bundestag passed the reform on **16 November 2023** with 379 votes,
+opposed by CDU/CSU and Die Linke. The article describes this as "Part
+One" of a broader reform, with a further "systematic reorganisation of
+information-gathering rules" planned for 2024 to make intelligence law
+"future-proof" — not independently confirmed as completed.
 
 ## Not modelled
 
-- The **content of any amendment**, or the consolidated text.
+- The **consolidated text** reflecting either amendment.
+- The **2024 "systematic reorganisation"** the 2023 reform describes as
+  forthcoming — not confirmed as enacted.
 - The **G10-Kommission**'s role under [[DE-G10]] in relation to BND measures.
 - The **Telekommunikationsgesetz (TKG)**, listed by the BfDI alongside these
   acts as a legal basis for intelligence data processing.
