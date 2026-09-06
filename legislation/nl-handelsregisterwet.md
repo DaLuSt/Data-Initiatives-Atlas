@@ -19,7 +19,7 @@ coverage: low
 verification: primary-source
 start_date: 2007-03-22
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-09-06"
 previous_version: null
 successor: null
 
@@ -52,6 +52,10 @@ sources:
 
 > **Verified 2026-08-21.** Every cited source was read and confirmed to
 > support what this entity says. `verification: primary-source`.
+>
+> **Closed 2026-09-06**: BRIS and the Company Law Directive, previously
+> flagged as unmodelled, are now [[EU-BRIS]] and
+> [[EU-COMPANY-LAW-DIRECTIVE]].
 
 ## Description
 
@@ -61,16 +65,14 @@ basisregister van ondernemingen"* — enacted 22 March 2007, which is now
 recorded as `start_date`. BWBR0021777 and the official abbreviation `Hrw
 2007` are both confirmed on the `wetten.overheid.nl` metadata page.
 
-## The register with a European counterpart the Atlas does not hold
+## The register's European counterpart, closed 2026-09-06
 
 Of the ten Dutch base registrations, the commercial register is the one with
 the clearest EU-level analogue: business registers are interconnected across
-the Union through the Business Registers Interconnection System (BRIS) under
-the Company Law Directive.
-
-**Neither is an Atlas entity**, so [[NL-NHR]] appears as a purely national
-register when it is in fact part of a European network. Logged in
-`discovery/unresolved.md`.
+the Union through the Business Registers Interconnection System, now
+[[EU-BRIS]], under the Company Law Directive, now
+[[EU-COMPANY-LAW-DIRECTIVE]]. [[NL-NHR]] carries the `applies-to` edge from
+[[EU-BRIS]] — see that entity for the sourcing.
 
 ## Relationships
 
