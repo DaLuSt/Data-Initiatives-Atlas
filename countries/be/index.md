@@ -177,3 +177,11 @@ and routes verification through [[BE-COMITE-I]] rather than [[BE-APD]].
   national standards body, was already modelled as [[BE-NBN]]** — this line
   was stale and NBN was missing from the "Organisations" list above, now
   added.
+- **A Community-level (as opposed to Region-level) digital-policy body.**
+  **Checked 2026-09-06, documented negative for the French Community**:
+  federation-wallonie-bruxelles.be's own page on its digital transition,
+  read directly, names no dedicated agency — the policy runs across
+  sectoral programmes instead. The German-speaking Community's own
+  digital strategy ("Digitale Wege für unsere Gemeinschaft") was found by
+  search but could not be confirmed directly (`ostbelgienlive.be` 403s in
+  this environment) — an unconfirmed lead, not a modelled entity.
