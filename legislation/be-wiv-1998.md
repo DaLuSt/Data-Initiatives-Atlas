@@ -24,7 +24,7 @@ verification: primary-source
 
 start_date: 1998-11-30
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-09-06"
 previous_version: null
 successor: null
 
@@ -36,6 +36,8 @@ related_entities:
   - BE-ADIV
   - BE-COMITE-I
   - BE-TOEZICHTSWET-1991
+  - BE-WET-BIM-2010
+  - BE-BIM-COMMISSIE
 relationships: []
 
 sources:
@@ -58,6 +60,10 @@ sources:
 > **Verified 2026-08-26.** All three cited sources were read directly, and
 > the act's own text (via two independent statute-book mirrors) confirms
 > Article 2's naming of both services. `verification: primary-source`.
+>
+> **Closed 2026-09-06**: the BIM-wet and BIM-commissie, previously
+> flagged as the missing authorisation regime, are now [[BE-WET-BIM-2010]]
+> and [[BE-BIM-COMMISSIE]].
 
 ## Description
 
@@ -82,13 +88,19 @@ civilian and a military body, where Poland legislated two named agencies.
 
 ## Not modelled
 
-- The **act of 4 February 2010** on specific and exceptional methods of
-  data collection (the *BIM-wet*), which substantially extended the powers
-  under this act, and the **BIM-commissie** that authorises their use. Their
-  absence means Belgium appears here with an organic act and an oversight
-  act and no authorisation regime, which is not a complete picture.
 - The act's **relationship to OCAD** and the 2006 amendments.
 - Any **article-level** content.
+
+## Closed 2026-09-06: the authorisation regime
+
+The act of 4 February 2010 on specific and exceptional methods of data
+collection — the *BIM-wet* — is now [[BE-WET-BIM-2010]], which `amends`
+this entity by inserting Article 18/2 and Article 43/1. The **BIM-commissie**
+that authorises exceptional methods under a binding conforming-opinion
+requirement is now [[BE-BIM-COMMISSIE]]. Belgium's picture is complete:
+organic act (this entity), parliamentary oversight ([[BE-TOEZICHTSWET-1991]]
+→ [[BE-COMITE-I]]), and authorisation ([[BE-WET-BIM-2010]] →
+[[BE-BIM-COMMISSIE]]).
 
 ## Sources
 
