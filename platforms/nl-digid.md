@@ -24,7 +24,7 @@ verification: primary-source
 
 start_date: 2005-01-01
 end_date: null
-last_verified: "2026-08-30"
+last_verified: "2026-09-06"
 previous_version: null
 successor: null
 
@@ -34,6 +34,7 @@ organisations:
   - NL-LOGIUS
 related_entities:
   - NL-LOGIUS
+  - EU-EIDAS
 relationships:
   - type: maintained-by
     target: NL-LOGIUS
@@ -41,6 +42,13 @@ relationships:
     evidence: "Confirmed by reading logius.nl's own DigiD page directly (2026-08-30): Logius operates DigiD as one of its access ('toegang') services and describes upcoming procurement of platform management ('aanbesteding van het platformbeheer'). Logius's own retrospective article, also read directly, confirms current scale — 'Inmiddels gebruiken meer dan 17 miljoen mensen DigiD' (over 17 million people now use DigiD) across 'ruim 600 overheidsorganisaties' (more than 600 government organisations) — and gives a milestone timeline: two-factor SMS login added in 2006, a mobile app in 2017, and ID-document verification in 2020."
     confidence: high
     valid_from: null
+    valid_until: null
+  - type: implements-requirement-from
+    target: EU-EIDAS
+    source: fact
+    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP (this entity's own 'The eIDAS gap, again' section). Confirmed by reading the European Commission's own eID User Community page directly (2026-09-06), 'Overview of pre-notified and notified eID schemes under eIDAS' (ec.europa.eu/digital-building-blocks, maintained by the eID User Community, last updated 2 February 2026): its table lists 'The Kingdom of the Netherlands' / 'DigiD' with assurance levels 'Substantial, High', eID means 'DigiD Substantieel, DigiD Hoog', status 'NOTIFIED', notification date '21 Aug 2020', Official Journal reference 2020/C 276/02. This is a formal notification under eIDAS's Article 9 mutual-recognition mechanism for national electronic identification schemes — the same mechanism [[FR-FRANCE-IDENTITE]]'s own eIDAS edge rests on — not an inference from subject matter. Corroborated by logius.nl's own 'Toegang verlenen aan Europese burgers en bedrijven' page, read directly, which states DigiD and eHerkenning both offer login methods at 'betrouwbaarheidsniveau Substantieel en/of Hoog' and that granting access to European citizens and businesses is mandatory for Dutch service providers accepting those login methods."
+    confidence: high
+    valid_from: 2020-08-21
     valid_until: null
 
 sources:
@@ -60,6 +68,14 @@ sources:
     url: "https://nl.wikipedia.org/wiki/DigiD"
     publisher: "Wikipedia"
     accessed: "2026-08-30"
+  - title: "Overview of pre-notified and notified eID schemes under eIDAS"
+    url: "https://ec.europa.eu/digital-building-blocks/sites/display/EIDCOMMUNITY/Overview+of+pre-notified+and+notified+eID+schemes+under+eIDAS"
+    publisher: "European Commission — eID User Community, Digital Building Blocks"
+    accessed: "2026-09-06"
+  - title: "Toegang verlenen aan Europese burgers en bedrijven"
+    url: "https://www.logius.nl/domeinen/toegang/eidas/documentatie/toegang-verlenen-aan-europese-burgers-en-bedrijven"
+    publisher: "Logius (Ministerie van Binnenlandse Zaken en Koninkrijksrelaties)"
+    accessed: "2026-09-06"
 ---
 
 # DigiD
@@ -72,6 +88,11 @@ sources:
 > two `logius.nl` pages, `digid.nl`'s own "About DigiD" page, and Dutch
 > Wikipedia's dedicated article, which supplied the launch history none of
 > the three government pages stated in full.
+>
+> **Updated 2026-09-06**: the "eIDAS gap, again" section below is closed.
+> The European Commission's own eID User Community page, read directly,
+> lists DigiD as formally notified under eIDAS at Substantial and High
+> assurance levels since 21 August 2020.
 
 ## Description
 
@@ -122,20 +143,37 @@ compares DigiD's architecture to the other three directly, so this row is
 an Atlas observation from what each entity's own sources state, not a
 sourced claim of its own.
 
-## The eIDAS gap, again
+## The eIDAS gap, closed — and why it stops at eIDAS 1.0
 
-Nothing read about DigiD mentions the eIDAS Regulation, cross-border
-recognition, or the European Digital Identity Wallet [[EU-EUDI-WALLET]]
-requires every member state to offer by the end of 2026. **No relationship
-to [[EU-EIDAS2]] is asserted.** This is the same gap already recorded on
-[[FR-FRANCECONNECT]], now extended to a fourth country — the Atlas holds
-no confirmed Dutch EUDI Wallet arrangement. Logged in
-`discovery/research-queue.md`.
+The European Commission's own eID User Community page, read directly
+(2026-09-06), lists **DigiD** as a formally **notified** eID scheme under
+[[EU-EIDAS]]: assurance levels **Substantial and High**, notified
+**21 August 2020**, published in the Official Journal at 2020/C 276/02.
+This is the same Article 9 mutual-recognition mechanism
+[[FR-FRANCE-IDENTITE]]'s own eIDAS edge rests on — a formal Commission
+notification, not an inference from subject matter — so
+`implements-requirement-from` is recorded at `confidence: high`.
+Logius's own eIDAS documentation, also read directly, corroborates the
+trust levels and states that Dutch service providers accepting DigiD or
+eHerkenning at Substantial/High must grant access to other EU citizens
+and businesses.
+
+**No relationship to [[EU-EIDAS2]] or [[EU-EUDI-WALLET]] is asserted.**
+Nothing read connects DigiD to the European Digital Identity Wallet every
+member state must offer by the end of 2026, and [[EU-EUDI-WALLET]]'s own
+entity records the Dutch candidate — the **publieke NL-wallet** — as a
+separate, still-in-development effort with no Atlas entity of its own.
+The eIDAS-1.0 notification and the EUDI Wallet mandate are distinct
+obligations; only the first is sourced here.
 
 ## Relationships
 
 - `maintained-by` [[NL-LOGIUS]].
+- `implements-requirement-from` [[EU-EIDAS]], `confidence: high` — a
+  formal Commission notification, 21 August 2020.
 
 ## Sources
 
-Listed in frontmatter, all four read directly.
+Listed in frontmatter, all four original sources read directly, plus two
+more read directly this pass: the European Commission's own eID
+notification table and Logius's eIDAS access-obligation page.
