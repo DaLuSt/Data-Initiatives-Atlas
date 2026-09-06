@@ -15,6 +15,14 @@ Anchor entity: [[LU]]
 > date of Luxembourg's GDPR implementation act via an ELI URL (see
 > [[LU-CNPD]]). `iso.org` remains genuinely bot-walled even with an
 > honest, identifying User-Agent and stays cited but unread.
+>
+> **Updated 2026-09-06**: this page was stale in two ways. First,
+> [[LU-LOI-PROTECTION-DONNEES]] (Luxembourg's GDPR implementation act)
+> was created 2026-09-05 but never added below, and the "Not modelled"
+> section still claimed it was missing. Second, Luxembourg's NIS2
+> competent authority and transposing act, named on [[LU-CTIE]] on
+> 2026-09-05, are now entities — [[LU-ILR]] and [[LU-LOI-NIS2]]. Both
+> fixed below.
 
 ## Organisations
 
@@ -27,6 +35,15 @@ Anchor entity: [[LU]]
 - [[LU-ILNAS]] — standards, accreditation and product safety in one
   institute _(**six** standardisation memberships — the most of any
   national standards body in the Atlas, one more than [[GB-BSI]])_
+- [[LU-ILR]] — multi-sector regulator; NIS2 competent authority for most
+  sectors since the 2026 transposition act
+
+## Legislation
+
+- [[LU-LOI-PROTECTION-DONNEES]] — Luxembourg's GDPR implementation act,
+  1 August 2018
+- [[LU-LOI-NIS2]] — Luxembourg's NIS2 transposition, in force from
+  10 May 2026, repealing the country's prior NIS1-era act
 
 ## Platforms
 
@@ -69,19 +86,16 @@ Luxembourg is where the Atlas can see it.
 
 ## Not modelled
 
-- **Luxembourg's GDPR implementation act.** [[LU-CNPD]]'s own "Législation"
-  page sources the exact date (1 August 2018) via an ELI URL, but
-  `legilux.public.lu`, which would carry the law's official title and
-  text, is an unreadable JavaScript single-page application — the
-  **only member state in the Atlas** whose national GDPR instrument is
-  still missing an entity.
-- Luxembourg's **NIS2 competent authority and CSIRT**. [[LU-CTIE]] secures
-  the State's own infrastructure, which is a different job.
+- **CSSF, GOVCERT.LU and CIRCL.** [[LU-LOI-NIS2]] designates CSSF as the
+  NIS2 competent authority for banking and financial-market
+  infrastructure (alongside [[LU-ILR]] for the rest) — the one point where
+  the financial sector touches this Atlas's public-sector scope, and still
+  not enough on its own to justify creating CSSF as a full entity.
+  GOVCERT.LU and CIRCL are named as Luxembourg's two CSIRTs in secondary
+  sourcing. None of the three is created as an entity yet.
 - **Luxembourg as an EU institutional seat.** The Court of Justice, the Court
   of Auditors, the EIB and the **Publications Office**
   ([[EU-PUBLICATIONS-OFFICE]]) are based there, and **no relationship is
   asserted** — hosting an institution is not participating in it, and
   modelling it as one would make every host state look like a participant.
 - **LuxProvide** and **MeluXina**, Luxembourg's EuroHPC presence.
-- The **financial sector** and the CSSF, outside the Atlas's public-sector
-  scope.

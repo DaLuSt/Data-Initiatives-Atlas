@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-09-06"
 previous_version: null
 successor: null
 
@@ -34,6 +34,8 @@ organisations: []
 related_entities:
   - LU
   - LU-DATA-PUBLIC
+  - LU-ILR
+  - LU-LOI-NIS2
 relationships:
   - type: part-of
     target: LU
@@ -82,6 +84,10 @@ sources:
 > **Updated 2026-09-05**: Luxembourg's NIS2 competent authority (ILR) and
 > CSIRTs (GOVCERT.LU, CIRCL) are now named, with sources — still not
 > modelled as entities.
+>
+> **Closed 2026-09-06**: two of the four named-but-unmodelled nodes are
+> now entities — [[LU-ILR]] and [[LU-LOI-NIS2]]. CSSF, GOVCERT.LU and
+> CIRCL remain unmodelled.
 
 ## Description
 
@@ -129,6 +135,11 @@ None of ILR, CSSF, GOVCERT.LU, CIRCL or the transposing law is created as
 an Atlas entity here — that would be at least four new nodes, beyond
 what a single-question check should add — but the previous "not
 researched" is now "named, with sources, not yet modelled."
+
+**Closed 2026-09-06**: [[LU-ILR]] and [[LU-LOI-NIS2]] are now Atlas
+entities, sourced from ILR's own site and the Luxembourg government's own
+press release. CSSF, GOVCERT.LU and CIRCL remain unmodelled — see
+[[LU-LOI-NIS2]] for the reasoning.
 
 ## Not modelled
 
