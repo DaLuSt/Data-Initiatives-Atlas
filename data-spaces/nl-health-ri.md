@@ -22,7 +22,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-06"
 previous_version: null
 successor: null
 
@@ -34,6 +34,7 @@ related_entities:
   - NL
   - NL-NICTIZ
   - EU-EHDS
+  - NL-HDAB-NL
 relationships:
   - type: applies-in
     target: NL
@@ -41,6 +42,13 @@ relationships:
     evidence: "Health-RI is the Dutch national health data infrastructure for research, policy and innovation, making data nationally usable through a network of regional nodes around a central hub. Confirmed by reading health-ri.nl and nationaalgroeifonds.nl directly (2026-08-28): the infrastructure comprises eight regional nodes (Amsterdam, Eindhoven, Groningen, Leiden, Limburg, Nijmegen, Rotterdam, Utrecht), funded via a €69 million Nationaal Groeifonds allocation under a project running 2021–2028, with the Ministry of Economic Affairs and Climate leading and the Health-RI Foundation implementing through regional hubs. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
     confidence: high
     valid_from: null
+    valid_until: null
+  - type: participates-in
+    target: NL-HDAB-NL
+    source: fact
+    evidence: "CLOSES A PREVIOUSLY-FLAGGED HIGH-VALUE GAP. Confirmed by reading the Minister of Health, Welfare and Sport's own letter to the Tweede Kamer directly (Kamerstuk 27 529, nr. 356, 20 January 2026): the HDAB-NL programme, preparing the Netherlands' future Health Data Access Body under the EHDS, names Health-RI alongside RIVM, CBS and ICTU as partners working with the Ministry of VWS since November 2023. The same letter states the government intends to create a separate, new independent administrative body (zbo) as the actual HDAB — Health-RI is not designated as the HDAB itself, only as a technical-preparation partner. See NL-HDAB-NL for the full sourcing."
+    confidence: high
+    valid_from: 2023-11-01
     valid_until: null
 
 sources:
@@ -56,6 +64,10 @@ sources:
     url: "https://www.nationaalgroeifonds.nl/overzicht-lopende-projecten/thema-gezondheid-en-zorg/health-ri"
     publisher: "Nationaal Groeifonds"
     accessed: "2026-08-28"
+  - title: "Kamerbrief over de implementatie van de EHDS (Kamerstuk 27 529, nr. 356)"
+    url: "https://www.tweedekamer.nl/downloads/document?id=2026D02216"
+    publisher: "Ministerie van Volksgezondheid, Welzijn en Sport (VWS) / Tweede Kamer der Staten-Generaal"
+    accessed: "2026-09-06"
 ---
 
 # Health-RI
@@ -67,6 +79,14 @@ sources:
 > own "Knooppunten" (nodes) page, and the Nationaal Groeifonds's own
 > project page. All three are genuinely readable and substantive, giving a
 > full 3 of 3 — a clear majority.
+>
+> **Narrowed 2026-09-06**: "will Health-RI be the Dutch HDAB?" is
+> answered, not with a yes. The Minister of Health, Welfare and Sport's
+> own letter to the Tweede Kamer (20 January 2026), read directly, states
+> the government intends to create a **new** independent administrative
+> body (zbo) as the actual HDAB — Health-RI is a named partner in the
+> preparatory **HDAB-NL** programme, now [[NL-HDAB-NL]], not the
+> designated body itself. See that entity for the full sourcing.
 
 ## Description
 
@@ -138,14 +158,18 @@ them: the resemblance is real but no source connects them.
 - Adjacent to [[NL-NICTIZ]], which maintains the health information
   standards that such an infrastructure relies on. No relationship
   asserted, as none was sourced.
-- [[EU-EHDS]] was added in Batch 10. **No relationship is asserted.**
-  Health-RI is the obvious candidate to become or host the Dutch health data
-  access body the EHDS requires, but no source says so, and the member-state
-  HDAB designation phase runs 2027–2029 — after this entry was written.
-  Recorded as a high-value open question rather than a guess.
+- [[EU-EHDS]] was added in Batch 10. No direct relationship is asserted
+  between Health-RI and the EHDS itself. **Narrowed 2026-09-06**: Health-RI
+  is not the Dutch health data access body the EHDS requires — the
+  government intends to create a new independent body (zbo) for that role
+  — but it is a named partner in [[NL-HDAB-NL]], the programme preparing
+  that body's technical infrastructure, and carries `participates-in` to
+  that entity.
 
 ## Sources
 
-Listed in frontmatter. All three read directly this pass (2026-08-28):
-Health-RI's own Atlassian wiki overview, Health-RI's own "Knooppunten"
-page, and the Nationaal Groeifonds's own project page — a full 3 of 3.
+Listed in frontmatter. All three original sources were read directly in
+the 2026-08-28 pass: Health-RI's own Atlassian wiki overview, Health-RI's
+own "Knooppunten" page, and the Nationaal Groeifonds's own project page —
+a full 3 of 3. The Minister's own letter to the Tweede Kamer was read
+directly in the 2026-09-06 pass.

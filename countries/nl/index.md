@@ -73,6 +73,9 @@ see `discovery/research-queue.md`._
 
 - [[NL-MIDO]] — Meerjarenprogramma Infrastructuur Digitale Overheid
 - [[NL-COMMON-GROUND]] — Common Ground
+- [[NL-HDAB-NL]] — programme preparing the Dutch EHDS Health Data Access
+  Body's technical infrastructure _(VWS with RIVM, CBS, ICTU and
+  Health-RI; started Nov 2023; added 2026-09-06)_
 
 ## Platforms
 
@@ -90,7 +93,10 @@ see `discovery/research-queue.md`._
 ## Data Spaces and Ecosystems
 
 - [[NL-FDS]] — Federatief Datastelsel _(government-wide, listed under Frameworks)_
-- [[NL-HEALTH-RI]] — national health data infrastructure
+- [[NL-HEALTH-RI]] — national health data infrastructure _(participates
+  in [[NL-HDAB-NL]], the EHDS Health Data Access Body preparation
+  programme; the actual HDAB will be a new independent body, not
+  Health-RI itself; added 2026-09-06)_
 - [[NL-DSGO]] — Digitaal Stelsel Gebouwde Omgeving _(built environment;
   [[NL-DIGIGO]] carries the `produces` edge, added 2026-09-04)_
 - [[NL-ISHARE]] — trust framework used to establish data spaces
