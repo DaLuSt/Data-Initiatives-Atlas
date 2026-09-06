@@ -142,6 +142,8 @@ Added with the intelligence-services batch.
 - [[BE-COMITE-I]] — democratic oversight, reporting to Parliament
 - [[BE-OCAD]] — threat-analysis coordination body, jointly overseen by
   Comité P and Comité I since 2006, added 2026-09-06
+- [[BE-BIM-COMMISSIE]] — the authorisation gate for exceptional
+  intelligence methods, added 2026-09-06
 
 Legislation:
 
@@ -151,6 +153,10 @@ Legislation:
   Comité P.
 - [[BE-WET-DREIGINGSANALYSE-2006]] — establishes OCAD under the joint
   authority of the Ministers of Justice and the Interior.
+- [[BE-WET-BIM-2010]] — the BIM-wet, `amends` [[BE-WIV-1998]] to add the
+  special-methods regime and the BIM-commissie's binding conforming-opinion
+  gate — closer to [[NL-TIB]]'s binding decision than [[FR-CNCTR]]'s
+  advisory opinion.
 
 **Belgium regulated the watchers seven years before the watched.** The
 oversight act is 1991; the organic act is 1998. That ordering is unique in
