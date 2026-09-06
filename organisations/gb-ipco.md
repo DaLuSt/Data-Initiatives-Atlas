@@ -22,7 +22,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-09-06"
 previous_version: null
 successor: null
 
@@ -35,6 +35,7 @@ related_entities:
   - GB-SIS
   - GB-GCHQ
   - GB-ISC
+  - GB-DI
 relationships:
   - type: governed-by
     target: GB-IPA-2016
@@ -61,6 +62,13 @@ relationships:
     target: GB-GCHQ
     source: fact
     evidence: "Confirmed by reading ipco.org.uk's 'What we do' page and gchq.gov.uk's 'Legal Framework' page (2026-08-22): IPCO oversees 'more than 600 public authorities, including the UK's intelligence agencies', and GCHQ's own page names the Investigatory Powers Act 2016 as the regime governing its use of investigatory powers."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-to
+    target: GB-DI
+    source: fact
+    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP (GB-MI5's own 'Not modelled' section). Confirmed by reading gov.uk's own 'Defence Intelligence' group page directly (2026-09-06): DI's activity 'must comply with' the Investigatory Powers Act 2016, and external oversight is provided by 'the Investigatory Powers Commissioner.'"
     confidence: medium
     valid_from: null
     valid_until: null
@@ -169,7 +177,8 @@ requirement between an office and a class of decisions.
 ## Relationships
 
 - `governed-by` [[GB-IPA-2016]].
-- `applies-to` [[GB-MI5]], [[GB-SIS]] and [[GB-GCHQ]].
+- `applies-to` [[GB-MI5]], [[GB-SIS]], [[GB-GCHQ]] and [[GB-DI]] — the
+  last added 2026-09-06.
 
 ## Sources
 
