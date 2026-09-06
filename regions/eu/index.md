@@ -36,6 +36,8 @@ Anchor entity: [[EU]]
 - [[EU-DGA]] — Data Governance Act (Reg. 2022/868) ⚠ repeal proposed ✅ 2026-08-28
 - [[EU-DATA-ACT]] — Data Act (Reg. 2023/2854)
 - [[EU-OPEN-DATA-DIRECTIVE]] — Open Data Directive (Dir. 2019/1024) ⚠ repeal proposed → [[NL-WHO]] ✅ 2026-08-28
+  - [[EU-HVD-REGULATION]] — Commission Implementing Regulation (EU)
+    2023/138, the high-value-datasets list (Article 14(1)) ✅ 2026-09-06
 
 ### Statutory bases of the European systems
 

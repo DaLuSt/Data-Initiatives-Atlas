@@ -25,7 +25,7 @@ verification: primary-source
 
 start_date: 1978-01-06
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-09-06"
 previous_version: null
 successor: null
 
@@ -48,6 +48,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Loi n° 78-17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux libertés"
+    url: "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000886460/"
+    publisher: "Légifrance (Direction de l'information légale et administrative)"
+    accessed: "2026-09-06"
   - title: "Entrée en vigueur de la nouvelle loi Informatique et Libertés"
     url: "https://www.cnil.fr/fr/entree-en-vigueur-de-la-nouvelle-loi-informatique-et-libertes"
     publisher: "Commission nationale de l'informatique et des libertés (CNIL)"
@@ -77,6 +81,14 @@ sources:
 > `legifrance.gouv.fr`, which would carry the acts' own text, is
 > genuinely bot-walled (403) even with an honest, identifying
 > User-Agent — confirmed on several JORF pages across this cluster.
+>
+> **Closed 2026-09-06**: `legifrance.gouv.fr` is reachable directly after
+> all — the act's own official page (JORFTEXT000000886460), read
+> directly, confirms the title, the 6 January 1978 promulgation date
+> verbatim ("Le Président de la République promulgue la loi dont la
+> teneur suit"), and that it remains `en vigueur` (in force) as of the
+> access date. The 1978 date no longer rests only on CNIL and secondary
+> commentary.
 
 ## Description
 
@@ -150,9 +162,8 @@ two countries, two workarounds, both documented.
 
 ## Sources
 
-Listed in frontmatter, all five read directly this pass. **Still no
-Légifrance citation for loi 78-17 itself** — `legifrance.gouv.fr` is
-genuinely bot-walled (403) even with an honest User-Agent, so the
-1978 date continues to rest on CNIL and secondary commentary rather
-than the act's own text. Three of the five sources are
-chamber-of-commerce or law-firm commentary.
+Listed in frontmatter. Five of the original six were read directly in
+the 2026-08-26 pass; three of those five are chamber-of-commerce or
+law-firm commentary. `legifrance.gouv.fr`'s own text of loi 78-17 was
+read directly in the 2026-09-06 pass, closing the previously-flagged
+citation gap.
