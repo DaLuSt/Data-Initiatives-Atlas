@@ -40,6 +40,7 @@ related_entities:
   - EU-DIGITAL-OMNIBUS
   - BE-HERGEBRUIK-WET-2023
   - ES-RDL-24-2021
+  - EU-HVD-REGULATION
   - FR-LOI-VALTER
   - EU-CJEU
 relationships:
@@ -165,7 +166,12 @@ PSI-related activity. It also provides for categories of **high-value
 datasets** — confirmed directly: these "must be available free of charge,
 in machine-readable formats, and through APIs and bulk download," with the
 Commission adopting the specific list with member-state committee
-assistance.
+assistance. **Closed 2026-09-06**: the Commission's own implementing act
+is now modelled as [[EU-HVD-REGULATION]] — Commission Implementing
+Regulation (EU) 2023/138, adopted 21 December 2022 under Article 14(1),
+listing six thematic categories (geospatial, Earth observation and
+environment, meteorological, statistics, companies and company ownership,
+mobility) and applying from 9 June 2024.
 
 The **transposition deadline was 16 July 2021** — confirmed directly from
 the Commission's own page, which states member states "were required to
@@ -207,6 +213,9 @@ dataset regime is still unresearched (`coverage: low`).
   `applies-in` relationships are added as countries join the Atlas.
 - Transposed into Dutch law through [[NL-WHO]], as amended by the Wet
   implementatie Open data richtlijn (2024).
+- Implemented at Union level by [[EU-HVD-REGULATION]] (Article 14(1)'s
+  high-value-datasets list) — the edge is asserted from that entity's
+  side.
 
 ## Sources
 
