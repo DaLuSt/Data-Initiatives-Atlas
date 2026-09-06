@@ -22,7 +22,7 @@ country: ES
 region: EU
 
 status: active
-confidence: medium
+confidence: high
 coverage: medium
 verification: primary-source
 
@@ -42,6 +42,7 @@ related_entities:
   - FR-FRANCECONNECT
   - DE-BUNDID
   - ES-DNIE
+  - ES-ORDEN-PRE-1838-2014
 relationships:
   - type: applies-in
     target: ES
@@ -49,6 +50,13 @@ relationships:
     evidence: "Confirmed by reading administracion.gob.es directly (2026-08-27): 'El sistema más extendido en las Administraciones Públicas es Cl@ve' (the most widespread system in Spanish public administrations is Cl@ve). Anchor edge under metadata/relationship-types.md §2.3, added 2026-09-06 to replace the removed implements-requirement-from edge to EU-EIDAS — see 'The eIDAS edge is removed, not weakened' below."
     confidence: medium
     valid_from: null
+    valid_until: null
+  - type: governed-by
+    target: ES-ORDEN-PRE-1838-2014
+    source: fact
+    evidence: "CLOSES PART OF A PREVIOUSLY-FLAGGED GAP. Confirmed by reading the BOE's own text of Orden PRE/1838/2014 directly (2026-09-06): the order publishes the Council of Ministers agreement of 19 September 2014 approving Cl@ve as the common platform of the State Public Administrative Sector for identification, authentication and electronic signature by agreed keys, under Article 13.2.c) of Ley 11/2007."
+    confidence: high
+    valid_from: 2014-10-09
     valid_until: null
 
 sources:
@@ -82,6 +90,10 @@ sources:
     url: "https://ec.europa.eu/digital-building-blocks/sites/display/EIDCOMMUNITY/Overview+of+pre-notified+and+notified+eID+schemes+under+eIDAS"
     publisher: "European Commission — eID User Community, Digital Building Blocks"
     accessed: "2026-09-06"
+  - title: "Orden PRE/1838/2014, de 8 de octubre"
+    url: "https://www.boe.es/buscar/doc.php?id=BOE-A-2014-10264"
+    publisher: "Boletín Oficial del Estado (BOE)"
+    accessed: "2026-09-06"
 ---
 
 # Cl@ve
@@ -102,6 +114,10 @@ sources:
 > scheme is the DNIe, now its own entity, [[ES-DNIE]], and Cl@ve does not
 > appear in the Commission's table at all. See "The eIDAS edge is
 > removed, not weakened" below.
+>
+> **Also closed 2026-09-06: operator and legal basis.** The BOE's own
+> text of Orden PRE/1838/2014, read directly, names both — see "Operator
+> and legal basis, closed 2026-09-06" below.
 
 ## Description
 
@@ -171,20 +187,40 @@ Nor is anything asserted to [[EU-EIDAS2]] or [[EU-EUDI-WALLET]], which
 require every member state to offer a European Digital Identity Wallet
 by the end of 2026 — a separate, still-unsourced obligation.
 
-## Why `coverage: medium`, up from `low`
+## Operator and legal basis, closed 2026-09-06
 
-Cl@ve's operator, its legal basis, its user numbers, and the status of
-any Spanish digital identity wallet remain unrecorded. What is now
-established: registration channels (video call, invitation letter,
-in-person, existing certificate) and a fourth named variant,
-**Cl@ve Móvil**, alongside PIN, Permanente and Firma — confirmed by
-reading administracion.gob.es directly, which did not previously appear
-in this entity's description.
+**Closes part of a gap flagged across several re-verification passes.**
+The BOE's own text of Orden PRE/1838/2014, read directly, now supplies
+both: Cl@ve was approved by a **Council of Ministers agreement of 19
+September 2014**, under Article 13.2.c) of Ley 11/2007, and its
+responsible operator is the **Dirección de Tecnologías de la Información
+y las Comunicaciones**, with the Agencia Estatal de Administración
+Tributaria, the Gerencia de Informática de la Seguridad Social, the
+Dirección General de la Policía and the FNMT-RCM sharing responsibility
+for registration, identification, authentication and signature
+respectively. See [[ES-ORDEN-PRE-1838-2014]], the new entity for the
+order itself.
+
+What is now established beyond that: registration channels (video call,
+invitation letter, in-person, existing certificate) and a fourth named
+variant, **Cl@ve Móvil**, alongside PIN, Permanente and Firma — confirmed
+by reading administracion.gob.es directly, which did not previously
+appear in this entity's description.
+
+**Still open**: Cl@ve's user numbers, the precise operational distinction
+between Cl@ve PIN and Cl@ve Permanente (a WebSearch-only synthesis
+describes PIN as short-validity/occasional-use and Permanente as
+longer-lived/frequent-use, but this was not independently confirmed by a
+directly-read primary page this pass), and the status of any Spanish
+digital identity wallet (WebSearch results describe a "Cartera Digital
+Beta" app already in testing ahead of the EU's 24 November 2026 EUDI
+Wallet deadline, again not independently confirmed by direct fetch).
 
 ## Relationships
 
 - `applies-in` [[ES]] — anchor edge, added 2026-09-06 to replace the
   removed `implements-requirement-from` edge.
+- `governed-by` [[ES-ORDEN-PRE-1838-2014]] — added 2026-09-06.
 
 No relationship to [[EU-EIDAS]] is asserted — see "The eIDAS edge is
 removed, not weakened" above.
@@ -193,5 +229,6 @@ removed, not weakened" above.
 
 Listed in frontmatter. Five of the original six were read directly in
 the 2026-08-27 pass; `cef.uv.es` remains persistently unavailable (HTTP
-503). The European Commission's own eID notification table was read
-directly in the 2026-09-06 pass.
+503). The European Commission's own eID notification table and the BOE's
+own text of Orden PRE/1838/2014 were both read directly in the 2026-09-06
+pass.
