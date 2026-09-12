@@ -75,10 +75,12 @@ Eighteen, recorded as `applies-in` edges on the instruments themselves:
 [[EU-ENVIRONMENTAL-INFORMATION-DIRECTIVE]], [[EU-EHDS]], [[EU-EIF]] and
 [[EU-DIGITAL-DECADE]].
 
-[[UN-AARHUS]] is **deliberately excluded**. It is a mixed agreement, and
-Ireland's ratification date and terms were not researched — the other six
-member states carry the edge on evidence this batch did not gather for
-Ireland.
+[[UN-AARHUS]] now applies here too, added 2026-09-12 (`discovery/unresolved.md`
+row #118): the European Commission's own page confirming all 27 EU member
+states are Parties covers Ireland the same way it covers the other six.
+Ireland's own specific ratification date and terms are still not identified
+— no source names them, matching the same gap already recorded for the
+other six countries.
 
 ## A transposition that is overdue, not merely pending
 
