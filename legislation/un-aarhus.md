@@ -28,7 +28,7 @@ verification: primary-source
 
 start_date: 2001-10-30
 end_date: null
-last_verified: "2026-09-06"
+last_verified: "2026-09-12"
 previous_version: null
 successor: null
 
@@ -40,6 +40,7 @@ related_entities:
   - UN-UNECE
   - EU-ENVIRONMENTAL-INFORMATION-DIRECTIVE
   - EU
+  - IE
 relationships:
   - type: maintained-by
     target: UN-UNECE
@@ -90,6 +91,13 @@ relationships:
     confidence: high
     valid_from: 2001-10-30
     valid_until: null
+  - type: applies-in
+    target: IE
+    source: fact
+    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP (discovery/unresolved.md row #118). Confirmed by the same page already cited above (environment.ec.europa.eu/law-and-governance/aarhus_en, read directly 2026-08-28): 'the EU and its 27 Member States are all Parties to the Aarhus Convention' — Ireland is one of those 27, so the same fact that grounds the other six countries' edges grounds this one. No Irish instrument of ratification is cited and none is asserted, matching the other six."
+    confidence: high
+    valid_from: 2001-10-30
+    valid_until: null
 
 sources:
   - title: "Introduction: Aarhus Convention"
@@ -118,6 +126,11 @@ sources:
 
 # Aarhus Convention
 
+> **Updated 2026-09-12**: Ireland now carries `applies-in`, closing
+> `discovery/unresolved.md` row #118 — the same European Commission page
+> already cited for the other six countries confirms all 27 EU member
+> states, Ireland included, are Parties.
+>
 > **Verified 2026-08-28, via source substitution.** `unece.org` is blocked
 > domain-wide this session (confirmed by testing the bare root domain, which
 > 403s like every specific Aarhus page cited here) — the same shape of
@@ -191,7 +204,7 @@ own access-to-information law was written to satisfy.
    EU-ENVIRONMENTAL-INFORMATION-DIRECTIVE  (2003/4/EC)
         │  applies-in
         ▼
-   NL · DE · BE · FR · ES · PL
+   NL · DE · BE · FR · ES · PL · IE
 ```
 
 Batch 15 called the DCAT descent *"the template for what the UN layer
@@ -205,8 +218,8 @@ recommendation. This starts at a UN treaty.
 - **No national ratification instruments.** The claim sourced here is
   "the EU and all 27 member states are Parties", which supports
   `applies-in`. It does **not** identify the Dutch, German, Belgian, French,
-  Spanish or Polish instrument of ratification, and none is named. Each
-  evidence string says so explicitly.
+  Spanish, Polish or Irish instrument of ratification, and none is named.
+  Each evidence string says so explicitly.
 - **No relationship to [[EU-OPEN-DATA-DIRECTIVE]] or [[EU-INSPIRE]].**
   Environmental information access is adjacent to both — INSPIRE is a
   geospatial environmental data directive, and the open data directive
@@ -221,9 +234,10 @@ recommendation. This starts at a UN treaty.
 ## Relationships
 
 - `maintained-by` [[UN-UNECE]].
-- `applies-in` [[NL]], [[DE]], [[BE]], [[FR]], [[ES]], [[PL]] — Poland was
-  present in the frontmatter's relationship list but missing from this prose
-  list in the prior version; added here so the two match.
+- `applies-in` [[NL]], [[DE]], [[BE]], [[FR]], [[ES]], [[PL]], [[IE]] —
+  Ireland added 2026-09-12, closing `discovery/unresolved.md` row #118:
+  the other six member states already carried this edge, and the same
+  European Commission page grounds Ireland identically.
 
 ## Sources
 
