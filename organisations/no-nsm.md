@@ -27,7 +27,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-09-12"
 previous_version: null
 successor: null
 
@@ -37,6 +37,7 @@ domains:
 organisations: []
 related_entities:
   - "NO"
+  - NO-SIKKERHETSLOVEN
 relationships:
   - type: part-of
     target: "NO"
@@ -44,6 +45,13 @@ relationships:
     evidence: "Confirmed verbatim by reading nsm.no directly (2026-08-22): 'NSM er administrativt underlagt Justis- og beredskapsdepartementet, samtidig som Forsvarsdepartementet har instruksjonsmyndighet overfor NSM i saker på deres ansvarsområde' (NSM is administratively subordinate to the Ministry of Justice and Public Security, while the Ministry of Defence has instruction authority over NSM in matters within its area of responsibility). Independently confirmed on snl.no (Store norske leksikon): 'Direktoratet er administrativt underlagt Justis- og beredskapsdepartementet.' regjeringen.no returned a bot-defense challenge (403) and was not read. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor."
     confidence: medium
     valid_from: null
+    valid_until: null
+  - type: governed-by
+    target: NO-SIKKERHETSLOVEN
+    source: fact
+    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP (discovery/unresolved.md row #111). Already established in this entity's own 2026-09-05 finding by reading lovdata.no's own text of LOV-2018-06-01-24 directly: the sikkerhetsloven, in force since 1 January 2019, is the current statute (superseding the 1998 Act on Preventive Security Services). Now modelled as [[NO-SIKKERHETSLOVEN]] (2026-09-12)."
+    confidence: high
+    valid_from: 2019-01-01
     valid_until: null
 
 sources:
@@ -79,6 +87,9 @@ sources:
 > read. **A significant finding overturns this entity's previous
 > restraint**: see "NSM is one of Norway's three security services — now
 > confirmed" below.
+>
+> **Updated 2026-09-12**: the *sikkerhetsloven* is now [[NO-SIKKERHETSLOVEN]],
+> closing `discovery/unresolved.md` row #111.
 
 ## Description
 
@@ -146,7 +157,7 @@ appears in the Atlas with one of its three security services and not the
 other two — a real gap, just a differently-shaped one than before: it is
 now known that NSM's peers exist and are named, not merely suspected.
 
-## No relationships beyond the anchor
+## The current statutory basis
 
 **Which act is current, closed 2026-09-05.** snl.no's "1998" reference is
 outdated: reading lovdata.no's own text of LOV-2018-06-01-24 directly
@@ -159,9 +170,8 @@ own site separately listing "Digitalsikkerhetsloven og -forskriften" as a
 distinct regulatory section (a newer digital-security statute alongside,
 not instead of, the 2018 act) was not investigated further this pass.
 
-The *sikkerhetsloven* is still **not an Atlas entity**, so there is
-nothing to point a `governed-by` edge at; the finding here corrects the
-prose, not the graph.
+**Updated 2026-09-12**: the *sikkerhetsloven* is now [[NO-SIKKERHETSLOVEN]],
+closing row #111 — NSM carries `governed-by` to it directly.
 
 **Norway's National Cyber Security Centre, confirmed as part of NSM
 above, is also not modelled separately.** Unlike [[GB-NCSC]] (part of
@@ -169,12 +179,18 @@ above, is also not modelled separately.** Unlike [[GB-NCSC]] (part of
 Atlas entity of its own; its activities are recorded here, under NSM.
 
 The entity is reachable through the [[NO]] anchor,
-[[DOMAIN-CYBERSECURITY]] and [[DOMAIN-NATIONAL-SECURITY]], and through
-nothing else.
+[[DOMAIN-CYBERSECURITY]], [[DOMAIN-NATIONAL-SECURITY]], and now
+[[NO-SIKKERHETSLOVEN]].
+
+## Relationships
+
+- `part-of` [[NO]] — anchor edge.
+- `governed-by` [[NO-SIKKERHETSLOVEN]] — added 2026-09-12, closing row #111.
 
 ## Sources
 
 Listed in frontmatter, four of six read directly across two passes.
 `regjeringen.no` returned a bot-defense challenge and stays cited but
 unread. lovdata.no's own text of LOV-2018-06-01-24, added 2026-09-05,
-resolves which security act is current.
+resolves which security act is current and now also grounds
+[[NO-SIKKERHETSLOVEN]] as a separate entity.

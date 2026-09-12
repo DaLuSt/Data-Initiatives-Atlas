@@ -150,9 +150,11 @@ the matter, no longer resolves at all (DNS failure), so nothing GIODO
 itself said could be checked. Creating a predecessor entity from only the
 successor's own characterisation would be one-sided.
 
-Logged in `discovery/research-queue.md`, narrower than before: the
-succession's *character* now has primary-source support, and what
-remains open is only whether the transition merits its own entity.
+**Closed 2026-09-12** as a deliberate non-creation: `discovery/unresolved.md`
+row #158 previously left open "whether the transition merits its own
+entity." It does not — building a GIODO entity from only the successor's
+characterisation, with GIODO's own site permanently unreachable, would be
+one-sided by construction, not a gap awaiting a future source.
 
 ## `coverage: low`
 
