@@ -24,7 +24,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-09-12"
 previous_version: null
 successor: null
 
@@ -34,8 +34,16 @@ organisations: []
 related_entities:
   - CZ
   - CZ-ZAKON-60-2026
+  - CZ-ZAKON-12-2020
   - CZ-DATA-GOV
 relationships:
+  - type: governed-by
+    target: CZ-ZAKON-12-2020
+    source: fact
+    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP (discovery/unresolved.md row #185). Confirmed already on this entity's own description and by cs.wikipedia.org, read directly: DIA was established by amendment 471/2022 to Act No 12/2020 Sb., on the right to digital services, effective 1 January 2023. The original 2020 Act is now [[CZ-ZAKON-12-2020]], read directly via psp.cz's own legislative record (2026-09-12); amendment 471/2022 itself is not separately modelled."
+    confidence: medium
+    valid_from: 2023-01-01
+    valid_until: null
   - type: implements
     target: CZ-ZAKON-60-2026
     source: fact
@@ -77,6 +85,9 @@ sources:
 > merely the body it assigns a role to, and named DIA's director. A new
 > `maintained-by` edge onto [[CZ-DATA-GOV]] closes a custodian gap
 > found on the platform side this pass.
+>
+> **Updated 2026-09-12**: Act No 12/2020, DIA's own constituting statute,
+> is now [[CZ-ZAKON-12-2020]], closing `discovery/unresolved.md` row #185.
 
 ## Description
 
@@ -116,13 +127,14 @@ closing a custodian gap that entity had flagged since creation.
 
 ## Not modelled
 
-- **Act No 12/2020** on the right to digital services, DIA's constituting
-  statute.
 - **Portál občana** and Czech electronic identification, though both are
   now named in this entity's own description.
 
 ## Relationships
 
+- `governed-by` [[CZ-ZAKON-12-2020]] — its constituting statute, added
+  2026-09-12, closing row #185. Amendment 471/2022 to that Act, which
+  actually inserted DIA's founding provisions, is not separately modelled.
 - `implements` [[CZ-ZAKON-60-2026]].
 - `part-of` [[CZ]] — an anchor edge.
 - Operates [[CZ-DATA-GOV]] — the `maintained-by` edge lives on that
