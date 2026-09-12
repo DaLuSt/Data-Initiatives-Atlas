@@ -23,7 +23,7 @@ coverage: medium
 verification: primary-source
 start_date: 2018-05-24
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-09-12"
 previous_version: null
 successor: null
 
@@ -33,11 +33,19 @@ organisations: []
 related_entities:
   - EU-GDPR
   - IE-DPC
+  - EU-LED
 relationships:
   - type: implements-requirement-from
     target: EU-GDPR
     source: fact
     evidence: "Confirmed verbatim by reading dataprotection.ie directly (2026-08-22): the TikTok inquiry 'was carried out in accordance with the Data Protection Act 2018 and Article 60 of the EU General Data Protection Regulation (GDPR).' irishstatutebook.ie's own text of the Act, read directly, confirms it establishes the Data Protection Commission ('PART 2 Data Protection Commission ... Establishment of Data Protection Commission ... Supervisory authority'). gdprregulation.eu confirms the DPC operates under 'a national law (Data Protection Act 2018).'"
+    confidence: medium
+    valid_from: 2018-05-25
+    valid_until: null
+  - type: implements-requirement-from
+    target: EU-LED
+    source: fact
+    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP (discovery/unresolved.md row #119). Already established on this entity's own 'Not modelled' section: Part 5 of the Act transposes Directive (EU) 2016/680, the Law Enforcement Directive, now modelled as [[EU-LED]] and read directly via EUR-Lex's TXT/HTML form (2026-09-12)."
     confidence: medium
     valid_from: 2018-05-25
     valid_until: null
@@ -93,13 +101,17 @@ work in twenty-seven member states.
 
 ## Not modelled
 
-- **Part 5** and the transposition of the **Law Enforcement Directive**
-  (Directive 2016/680), which this Act also carries. That Directive is not
-  an Atlas entity — a gap already logged from the UK batch, where it is one
-  of the two legal bases of [[EU-UK-ADEQUACY]].
 - The **Data Protection Act 1988 and 2003** predecessors.
 - The Act's **section-level** content. No section is cited: the Irish
   Statute Book URL was confirmed to exist and not read.
+
+## Law Enforcement Directive, closing a previously-flagged gap
+
+**Part 5** of the Act transposes the **Law Enforcement Directive**
+(Directive (EU) 2016/680), which this Act also carries. That Directive is
+now [[EU-LED]] (created 2026-09-12, closing `discovery/unresolved.md` row
+#119), read directly via EUR-Lex — it is also one of the two legal bases
+of [[EU-UK-ADEQUACY]].
 
 ## Sources
 

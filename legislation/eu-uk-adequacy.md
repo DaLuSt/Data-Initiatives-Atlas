@@ -24,7 +24,7 @@ coverage: medium
 verification: primary-source
 start_date: 2025-12-19
 end_date: 2031-12-27
-last_verified: "2026-08-22"
+last_verified: "2026-09-12"
 previous_version: null
 successor: null
 
@@ -35,6 +35,7 @@ organisations:
   - GB-ICO
 related_entities:
   - EU-GDPR
+  - EU-LED
   - GB-UK-GDPR
   - GB-DUAA
   - GB
@@ -43,6 +44,13 @@ relationships:
     target: EU-GDPR
     source: fact
     evidence: "Confirmed by reading eucrim.eu directly (2026-08-22): 'On 19 December 2025, the European Commission reaffirmed that the United Kingdom (UK) ensures an adequate level of data protection ... The Commission adopted two adequacy decisions: one based on the General Data Protection Regulation (GDPR) and one based on Directive 2016/680 (the \"Law Enforcement Directive\", LED).' Confirmed independently on edpb.europa.eu: 'draft decisions on the extension of the validity of the UK adequacy decisions under the General Data Protection Regulation (GDPR) and the Law Enforcement Directive (LED)... adopted on 16 October 2025.'"
+    confidence: medium
+    valid_from: 2025-12-19
+    valid_until: null
+  - type: governed-by
+    target: EU-LED
+    source: fact
+    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP (discovery/unresolved.md row #119). The Law Enforcement Directive (Directive (EU) 2016/680), this instrument's second legal basis alongside the GDPR per eucrim.eu and edpb.europa.eu (both already cited on the EU-GDPR governed-by edge above), is now [[EU-LED]], created 2026-09-12 and read directly via EUR-Lex."
     confidence: medium
     valid_from: 2025-12-19
     valid_until: null
@@ -162,10 +170,6 @@ with a *known* date on which it stops being in force absent action. Neither
 
 ## Not modelled
 
-- **The Law Enforcement Directive** (Directive 2016/680) itself, which is one
-  of the two legal bases and is not an Atlas entity. The `governed-by` edge
-  therefore points only at [[EU-GDPR]], and this body text is the only place
-  the second basis is recorded.
 - **The EDPB opinions** on the draft decisions, cited as a source and not
   modelled. [[EU-EDPB]] appears in `organisations:` as an association only.
 - **The 2021 decisions** these replaced. No `previous_version` is set,
@@ -174,9 +178,14 @@ with a *known* date on which it stops being in force absent action. Neither
   *renewal* and as an *extension of validity* — and the distinction matters
   too much to guess.
 
+> **Updated 2026-09-12**: the Law Enforcement Directive is now [[EU-LED]],
+> closing `discovery/unresolved.md` row #119 — this entity's second
+> `governed-by` edge now points at a real node instead of resting only in
+> body text.
+
 ## Relationships
 
-- `governed-by` [[EU-GDPR]] — adopted under it.
+- `governed-by` [[EU-GDPR]] and [[EU-LED]] — its two legal bases.
 - `references` [[GB-UK-GDPR]] and [[GB-DUAA]] — the regime assessed, and the
   Act whose changes the renewal followed.
 
