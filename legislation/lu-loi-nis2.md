@@ -27,7 +27,7 @@ verification: primary-source
 
 start_date: 2026-05-10
 end_date: null
-last_verified: "2026-09-06"
+last_verified: "2026-09-12"
 previous_version: null
 successor: null
 
@@ -36,8 +36,11 @@ domains:
   - DOMAIN-CYBERSECURITY
 organisations:
   - LU-ILR
+  - LU-CSSF
 related_entities:
   - EU-NIS2
+  - LU-GOVCERT
+  - LU-CIRCL
 relationships:
   - type: implements-requirement-from
     target: EU-NIS2
@@ -109,15 +112,16 @@ transposition-law batch should make in one pass.
 
 ## Not modelled
 
-- **CSSF**, Luxembourg's financial regulator and the Act's second
-  competent authority, per above.
-- **GOVCERT.LU** and **CIRCL**, named as Luxembourg's two CSIRTs in
-  secondary sources (pwc.lu, lawgitech.eu, nis-2-directive.com per
-  [[LU-CTIE]]'s 2026-09-05 finding) but not confirmed on either primary
-  source read this pass, and not created as entities.
 - The **predecessor NIS1-era act**, repealed by this one — see the
   `applies-in` relationship's evidence field for why no `supersedes` edge
   is asserted.
+
+> **Closed 2026-09-12**: CSSF, GOVCERT.LU and CIRCL — all named above but
+> left unmodelled in the 2026-09-06 pass — are now [[LU-CSSF]],
+> [[LU-GOVCERT]] and [[LU-CIRCL]], closing `discovery/unresolved.md`
+> row #181 in full. [[LU-CSSF]] carries its own `governed-by` edge to this
+> Act; GOVCERT.LU and CIRCL sit under [[LU-HCPN]] and [[LU-LHC]]
+> respectively, one level removed from this Act itself.
 
 ## Relationships
 

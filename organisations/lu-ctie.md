@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-06"
+last_verified: "2026-09-12"
 previous_version: null
 successor: null
 
@@ -36,6 +36,9 @@ related_entities:
   - LU-DATA-PUBLIC
   - LU-ILR
   - LU-LOI-NIS2
+  - LU-CSSF
+  - LU-GOVCERT
+  - LU-CIRCL
 relationships:
   - type: part-of
     target: LU
@@ -88,6 +91,10 @@ sources:
 > **Closed 2026-09-06**: two of the four named-but-unmodelled nodes are
 > now entities — [[LU-ILR]] and [[LU-LOI-NIS2]]. CSSF, GOVCERT.LU and
 > CIRCL remain unmodelled.
+>
+> **Fully closed 2026-09-12**: the remaining three are now entities —
+> [[LU-CSSF]], [[LU-GOVCERT]] (via its parent [[LU-HCPN]]) and
+> [[LU-CIRCL]] (via its operator [[LU-LHC]]).
 
 ## Description
 
@@ -114,9 +121,9 @@ concentrating what larger administrations divide.
 
 **This does not make CTIE Luxembourg's national cyber authority.** Securing
 the State's own infrastructure and supervising a country's essential entities
-under [[EU-NIS2]] are different jobs. Luxembourg's NIS2 authority (ILR) and
-CSIRTs (GOVCERT.LU, CIRCL) are now named below but **not modelled** as
-Atlas entities.
+under [[EU-NIS2]] are different jobs. Luxembourg's NIS2 authority ([[LU-ILR]]
+and [[LU-CSSF]]) and CSIRTs ([[LU-GOVCERT]], [[LU-CIRCL]]) are all now
+separate Atlas entities — see the history below.
 
 ## Luxembourg's NIS2 landscape, named but not modelled — 2026-09-05
 
@@ -138,8 +145,17 @@ researched" is now "named, with sources, not yet modelled."
 
 **Closed 2026-09-06**: [[LU-ILR]] and [[LU-LOI-NIS2]] are now Atlas
 entities, sourced from ILR's own site and the Luxembourg government's own
-press release. CSSF, GOVCERT.LU and CIRCL remain unmodelled — see
-[[LU-LOI-NIS2]] for the reasoning.
+press release.
+
+**Fully closed 2026-09-12**: [[LU-CSSF]] is now an Atlas entity, sourced
+from its own site and its own founding-law page. GOVCERT.LU is now
+[[LU-GOVCERT]], sourced from its own site and the government's own
+crisis-information portal, which also revealed its parent body,
+[[LU-HCPN]] (Haut-Commissariat à la Protection nationale) — itself newly
+modelled. CIRCL is now [[LU-CIRCL]], sourced from its own site, with its
+operator [[LU-LHC]] (Luxembourg House of Cybersecurity) also newly
+modelled. All four named nodes from the 2026-09-05 finding are now
+entities.
 
 ## Not modelled
 
