@@ -23,6 +23,11 @@ Anchor entity: [[LU]]
 > competent authority and transposing act, named on [[LU-CTIE]] on
 > 2026-09-05, are now entities — [[LU-ILR]] and [[LU-LOI-NIS2]]. Both
 > fixed below.
+>
+> **Updated 2026-09-12**: closing `discovery/unresolved.md` row #181 in
+> full — CSSF, GOVCERT.LU and CIRCL are now entities, along with two
+> parent bodies the research surfaced: [[LU-HCPN]] (GOVCERT.LU's
+> authority) and [[LU-LHC]] (CIRCL's operator).
 
 ## Organisations
 
@@ -37,6 +42,15 @@ Anchor entity: [[LU]]
   national standards body in the Atlas, one more than [[GB-BSI]])_
 - [[LU-ILR]] — multi-sector regulator; NIS2 competent authority for most
   sectors since the 2026 transposition act
+- [[LU-CSSF]] — financial regulator; NIS2 competent authority for
+  banking and financial market infrastructure, added 2026-09-12
+- [[LU-HCPN]] — national protection body hosting the ANSSI function and
+  [[LU-GOVCERT]]'s authority, added 2026-09-12
+- [[LU-GOVCERT]] — GOVCERT.LU, public-sector CSIRT, added 2026-09-12
+- [[LU-LHC]] — Luxembourg House of Cybersecurity, [[LU-CIRCL]]'s
+  operator, added 2026-09-12
+- [[LU-CIRCL]] — CIRCL, private-sector/municipal/NGO CSIRT, added
+  2026-09-12
 
 ## Legislation
 
@@ -88,13 +102,6 @@ Luxembourg is where the Atlas can see it.
 
 ## Not modelled
 
-- **CSSF, GOVCERT.LU and CIRCL.** [[LU-LOI-NIS2]] designates CSSF as the
-  NIS2 competent authority for banking and financial-market
-  infrastructure (alongside [[LU-ILR]] for the rest) — the one point where
-  the financial sector touches this Atlas's public-sector scope, and still
-  not enough on its own to justify creating CSSF as a full entity.
-  GOVCERT.LU and CIRCL are named as Luxembourg's two CSIRTs in secondary
-  sourcing. None of the three is created as an entity yet.
 - **Luxembourg as an EU institutional seat.** The Court of Justice, the Court
   of Auditors, the EIB and the **Publications Office**
   ([[EU-PUBLICATIONS-OFFICE]]) are based there, and **no relationship is
