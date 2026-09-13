@@ -27,7 +27,7 @@ verification: primary-source
 
 start_date: 2026-05-10
 end_date: null
-last_verified: "2026-09-12"
+last_verified: "2026-09-13"
 previous_version: null
 successor: null
 
@@ -45,7 +45,7 @@ relationships:
   - type: implements-requirement-from
     target: EU-NIS2
     source: fact
-    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP (LU-CTIE's own 'named but not modelled' finding, 2026-09-05). Confirmed by reading two independent primary/quasi-primary sources directly (2026-09-06): the Luxembourg government's own press release (gouvernement.lu, 6 July 2026, 'Cybersécurité: l'ILR présente la nouvelle loi NIS 2') names the act verbatim as 'loi du 5 mai 2026 concernant des mesures destinées à assurer un niveau élevé de cybersécurité'; ILR's own NIS2 page (ilr.lu), read independently, gives the English title 'Act of 5 May 2026 on measures to ensure a high level of cybersecurity,' states it 'came into force on 10 May 2026' and 'repealed the previous NIS1 Act.' Both are consistent with the WebSearch-corroborated Mémorial A n° 225 (6 May 2026) publication citation from DataGuidance's own reporting."
+    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP (LU-CTIE's own 'named but not modelled' finding, 2026-09-05). Confirmed by reading two independent primary/quasi-primary sources directly (2026-09-06): the Luxembourg government's own press release (gouvernement.lu, 6 July 2026, 'Cybersécurité: l'ILR présente la nouvelle loi NIS 2') names the act verbatim as 'loi du 5 mai 2026 concernant des mesures destinées à assurer un niveau élevé de cybersécurité'; ILR's own NIS2 page (ilr.lu), read independently, gives the English title 'Act of 5 May 2026 on measures to ensure a high level of cybersecurity,' states it 'came into force on 10 May 2026' and 'repealed the previous NIS1 Act.' Both are consistent with the WebSearch-corroborated Mémorial A n° 225 (6 May 2026) publication citation from DataGuidance's own reporting. **CONFIRMED DIRECTLY 2026-09-13**: the Official Journal citation is no longer WebSearch-only — read the Act's own text directly via data.legilux.public.lu's filestore subdomain (a working alternate to legilux.public.lu's unreadable JavaScript SPA, first found on [[LU-LOI-DONNEES-PENAL-2018]]). The Act's own recital cites 'la directive (UE) 2022/2555 du Parlement européen et du Conseil du 14 décembre 2022' by its full name, confirming the EU-NIS2 target directly rather than via secondary description."
     confidence: high
     valid_from: 2026-05-10
     valid_until: null
@@ -73,6 +73,10 @@ sources:
   - title: "Luxembourg: Official Journal publishes NIS2 Transposition Law"
     url: "https://www.dataguidance.com/news/luxembourg-official-journal-publishes-nis2"
     publisher: "DataGuidance"
+  - title: "JOURNAL OFFICIEL DU GRAND-DUCHÉ DE LUXEMBOURG — MÉMORIAL A N° 225 du 6 mai 2026"
+    url: "https://data.legilux.public.lu/filestore/eli/etat/leg/loi/2026/05/05/a225/jo/fr/pdfa/eli-etat-leg-loi-2026-05-05-a225-jo-fr-pdfa.pdf"
+    publisher: "Journal Officiel du Grand-Duché de Luxembourg (Legilux)"
+    accessed: "2026-09-13"
 ---
 
 # Loi du 5 mai 2026 concernant des mesures destinées à assurer un niveau élevé de cybersécurité
@@ -83,6 +87,12 @@ sources:
 > release and ILR's own NIS2 page — were read directly and agree on the
 > Act's title, entry-into-force date and the repeal of the predecessor
 > NIS1 act.
+>
+> **Confirmed directly 2026-09-13.** The Official Journal citation, until
+> now WebSearch-only, is closed: `data.legilux.public.lu`'s filestore
+> subdomain (a working alternate to `legilux.public.lu`'s unreadable
+> JavaScript SPA, first found on [[LU-LOI-DONNEES-PENAL-2018]]) serves the
+> Act's own text in full. See "Confirmed against the Act's own text" below.
 
 ## Description
 
@@ -93,10 +103,33 @@ cybersécurité." ILR's own NIS2 page, read independently, gives the same
 act in English and confirms it "came into force on 10 May 2026" and
 "repealed the previous NIS1 Act." A WebSearch cross-check of DataGuidance's
 reporting adds the Official Journal citation — **Mémorial A n° 225**,
-published **6 May 2026** — not independently verified by reading
-Mémorial/Legilux directly, since `legilux.public.lu` is a JavaScript
-single-page application returning no static content (the same block
-[[LU-LOI-PROTECTION-DONNEES]] recorded).
+published **6 May 2026** — independently confirmed 2026-09-13 by reading
+the Act's own text directly (see below).
+
+## Confirmed against the Act's own text, 2026-09-13
+
+Reading Mémorial A N° 225 directly, via Legilux's filestore subdomain,
+confirms the full official title verbatim: "Loi du 5 mai 2026 concernant
+des mesures destinées à assurer un niveau élevé de cybersécurité et
+portant modification de: 1° la loi modifiée du 14 août 2000 relative au
+commerce électronique; 2° la loi modifiée du 23 juillet 2016 portant
+création d'un Haut-Commissariat à la Protection nationale; 3° la loi du
+17 décembre 2021 sur les réseaux et les services de communications
+électroniques." The Act was signed by **Grand-Duc Guillaume**, following
+adoption by the Chambre des Députés on 28 April 2026 and the Conseil
+d'État's opinion of 5 May 2026 (dispensing with a second vote). Its own
+recital cites "la directive (UE) 2022/2555 du Parlement européen et du
+Conseil du 14 décembre 2022" — [[EU-NIS2]] — by name.
+
+**Article 6(6)**, read directly, carves three bodies out of the Act's
+supervision-and-enforcement chapter (Articles 12–15): the **Service de
+renseignement de l'État** (State Intelligence Service, under its own 5
+July 2016 reorganisation act), **services of the Minister responsible for
+Defence**, and the **Armée luxembourgeoise** (under its 7 August 2023
+organisation act) — the same shape of carve-out [[NL-WIV-2017]]-style
+regimes and [[FR-NIS2-LOI]]'s CER/DORA bundling both show elsewhere in
+the Atlas's NIS2 layer, though Luxembourg expresses it as an explicit
+statutory exclusion rather than a separate instrument.
 
 ## Two competent authorities, split by sector
 
@@ -115,6 +148,11 @@ transposition-law batch should make in one pass.
 - The **predecessor NIS1-era act**, repealed by this one — see the
   `applies-in` relationship's evidence field for why no `supersedes` edge
   is asserted.
+- The **three acts this Act amends**, per its own preamble: the modified
+  law of 14 August 2000 on electronic commerce, the modified law of 23
+  July 2016 creating the Haut-Commissariat à la Protection nationale, and
+  the law of 17 December 2021 on electronic communications networks and
+  services — none independently researched or modelled this pass.
 
 > **Closed 2026-09-12**: CSSF, GOVCERT.LU and CIRCL — all named above but
 > left unmodelled in the 2026-09-06 pass — are now [[LU-CSSF]],
@@ -135,5 +173,7 @@ transposition-law batch should make in one pass.
 Listed in frontmatter. The government's own press release and ILR's own
 NIS2 page were both read directly 2026-09-06; ILR's FAQ page was read
 directly in the prior (2026-09-05) pass and is carried over; the
-DataGuidance citation is WebSearch-corroborated only, for the Mémorial
-publication date.
+DataGuidance citation supplied the Mémorial publication date, now
+independently confirmed by the Act's own text (Mémorial A N° 225), read
+directly 2026-09-13 via Legilux's filestore subdomain — the strongest
+citation this entity carries.
