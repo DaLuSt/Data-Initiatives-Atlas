@@ -27,7 +27,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-09-12"
+last_verified: "2026-09-13"
 previous_version: null
 successor: null
 
@@ -38,6 +38,8 @@ organisations: []
 related_entities:
   - "NO"
   - NO-SIKKERHETSLOVEN
+  - NO-ETTERRETNINGSTJENESTEN
+  - NO-PST
 relationships:
   - type: part-of
     target: "NO"
@@ -90,6 +92,10 @@ sources:
 >
 > **Updated 2026-09-12**: the *sikkerhetsloven* is now [[NO-SIKKERHETSLOVEN]],
 > closing `discovery/unresolved.md` row #111.
+>
+> **Updated 2026-09-13**: Etterretningstjenesten and PST, NSM's two
+> named peer services, are now [[NO-ETTERRETNINGSTJENESTEN]] and
+> [[NO-PST]], closing row #112.
 
 ## Description
 
@@ -152,10 +158,10 @@ the Police Security Service (PST). The `domains:` field already carried
 [[DOMAIN-NATIONAL-SECURITY]] on this basis; the prose above now matches
 what the domain assignment already implied.
 
-**Etterretningstjenesten and PST remain unmodelled.** Norway still
-appears in the Atlas with one of its three security services and not the
-other two — a real gap, just a differently-shaped one than before: it is
-now known that NSM's peers exist and are named, not merely suspected.
+**Closed 2026-09-13**: Etterretningstjenesten and PST are now
+[[NO-ETTERRETNINGSTJENESTEN]] and [[NO-PST]], closing
+`discovery/unresolved.md` row #112. All three of Norway's named security
+services are now Atlas entities.
 
 ## The current statutory basis
 
