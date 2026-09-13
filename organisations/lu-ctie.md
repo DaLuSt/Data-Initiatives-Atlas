@@ -138,14 +138,13 @@ give slightly different days, not independently resolved) — and name
 **GOVCERT.LU** (public-sector CSIRT) and **CIRCL** (private-sector,
 municipal and NGO CSIRT) as Luxembourg's two designated CSIRTs.
 
-None of ILR, CSSF, GOVCERT.LU, CIRCL or the transposing law is created as
-an Atlas entity here — that would be at least four new nodes, beyond
-what a single-question check should add — but the previous "not
-researched" is now "named, with sources, not yet modelled."
-
-**Closed 2026-09-06**: [[LU-ILR]] and [[LU-LOI-NIS2]] are now Atlas
-entities, sourced from ILR's own site and the Luxembourg government's own
-press release.
+**Fully closed 2026-09-12** — stale as of 2026-09-13, now fixed. All
+five named nodes are now Atlas entities: [[LU-ILR]] and [[LU-LOI-NIS2]]
+closed 2026-09-06; [[LU-CSSF]] (banking/financial-market NIS2 competent
+authority), [[LU-GOVCERT]] (public-sector CSIRT, GOVCERT.LU) and
+[[LU-CIRCL]] (private-sector/municipal/NGO CSIRT) closed 2026-09-12,
+sourced from cssf.lu, infocrise.public.lu and circl.lu/securitymadein.lu
+directly. See `discovery/unresolved.md` row #181.
 
 **Fully closed 2026-09-12**: [[LU-CSSF]] is now an Atlas entity, sourced
 from its own site and its own founding-law page. GOVCERT.LU is now
