@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-09-13"
 previous_version: null
 successor: null
 
@@ -34,6 +34,7 @@ organisations:
 related_entities:
   - NL-WET-CBS
   - EU-EUROSTAT
+  - EU-REG-223-2009
 relationships:
   - type: part-of
     target: EU-ESS
@@ -123,8 +124,11 @@ Klimaat is that same ministry's current, renamed form (confirmed on
   The explanatory memorandum, read directly this pass, confirms the CBS
   "executes EU statistical obligations and participates in European
   statistical governance frameworks" in its own words — a stronger basis
-  than the composition-rule inference this edge previously rested on, though
-  Regulation (EC) No 223/2009, the ESS's legal basis, remains unmodelled.
+  than the composition-rule inference this edge previously rested on.
+  **Stale as of 2026-09-13, now fixed**: Regulation (EC) No 223/2009, the
+  ESS's legal basis, is an Atlas entity, [[EU-REG-223-2009]], which
+  already carries the `governed-by` edge to [[EU-ESS]] itself, closing
+  the chain from CBS through the ESS to its statutory basis.
 - The relationship to [[NL-BASISREGISTRATIES]] is still not established.
 
 ## Sources
