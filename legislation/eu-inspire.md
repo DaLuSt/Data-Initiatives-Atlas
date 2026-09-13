@@ -27,7 +27,7 @@ verification: primary-source
 
 start_date: 2007-05-15
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-09-13"
 previous_version: null
 successor: null
 
@@ -45,6 +45,8 @@ related_entities:
   - DK
   - EU-GREEN-DEAL-DATA-SPACE
   - FR-ORDONNANCE-2010-1232
+  - NO-GEODATALOVEN
+  - INTL-EEA-JCD-55-2010
 relationships:
   - type: applies-in
     target: DK
@@ -241,14 +243,29 @@ No. 746 of 15 June 2017, which [[DK-KLIMADATASTYRELSEN]] administers.
 `retsinformation.dk` itself, which would carry the primary legal text,
 is a JavaScript single-page application and was not read.
 
+## Norway, via the EEA Agreement rather than membership
+
+Confirmed 2026-09-13, closing a gap flagged on [[NO-KARTVERKET]]: Norway
+is not a member state, so this directive does not `applies-in` Norway in
+the same sense as the countries below. Its route runs through
+[[INTL-EEA-JCD-55-2010]] (30 April 2010), which incorporated this
+directive into [[INTL-EEA-AGREEMENT]]'s Annex XX, taking effect via
+Norway's own **geodataloven** ([[NO-GEODATALOVEN]], LOV-2010-09-03-56,
+enacted 3 September 2010) — the same EEA-chain pattern already modelled
+for [[EU-GDPR]] and Norway via [[INTL-EEA-JCD-154-2018]]. No `applies-in`
+edge to [[NO]] is asserted on this directive itself; [[NO-GEODATALOVEN]]
+carries `implements-requirement-from` back to it instead.
+
 ## Relationships
 
 - `applies-in` [[DE]], [[BE]], [[DK]], [[NL]], [[FR]] and, at lower
   confidence (search-only), [[PT]], [[LU]], [[CZ]], [[IE]], [[ES]] and
   [[PL]].
 
-Inbound: [[DE-GEOZG]] implements requirements from this directive, and
-[[BE-DCAT-AP-BE]] `references` it through the INSPIRE↔DCAT-AP mapping.
+Inbound: [[DE-GEOZG]] implements requirements from this directive,
+[[BE-DCAT-AP-BE]] `references` it through the INSPIRE↔DCAT-AP mapping,
+and [[NO-GEODATALOVEN]] carries `implements-requirement-from` via the
+EEA chain (see above).
 
 Note the two are different in kind. Germany's is a transposing act;
 Belgium's is a metadata mapping produced by the administrations doing the
