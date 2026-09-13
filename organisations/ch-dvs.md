@@ -24,7 +24,7 @@ coverage: medium
 verification: primary-source
 start_date: 2022-01-01
 end_date: null
-last_verified: "2026-09-06"
+last_verified: "2026-09-13"
 previous_version: null
 successor: null
 
@@ -34,6 +34,7 @@ organisations: []
 related_entities:
   - CH
   - CH-EMBAG
+  - CH-AGOV
 relationships:
   - type: part-of
     target: CH
@@ -81,12 +82,13 @@ sources:
 > Services Switzerland." efd.admin.ch's own page, read directly this
 > pass, independently confirms the January 2022 operational-start date
 > and closes the legal-form/governance/predecessor gap — see below. Two
-> findings worth flagging, neither acted on beyond recording: DVS's own
-> homepage advertises **AGOV**, a nationwide authority-login service
-> already used by fourteen cantons with "already 2 million accounts" — a
-> Swiss analogue to [[GB-ONE-LOGIN]] not yet an Atlas entity — and reports
-> that the Federal Council and the Conference of Cantonal Governments
-> adopted a "Zielbild" (target vision) in late 2025 to evolve DVS toward
+> findings worth flagging: DVS's own homepage advertises **AGOV**, a
+> nationwide authority-login service already used by fourteen cantons
+> with "already 2 million accounts" — **now [[CH-AGOV]]** (created
+> 2026-09-13, closing the gap this note had flagged as "not yet an Atlas
+> entity") — and reports that the Federal Council and the Conference of
+> Cantonal Governments adopted a "Zielbild" (target vision) in late 2025
+> to evolve DVS toward
 > "a political platform with binding standard-setting."
 
 ## Description

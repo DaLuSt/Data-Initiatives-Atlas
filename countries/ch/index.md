@@ -44,6 +44,9 @@ Anchor entity: [[CH]]
 ## Platforms
 
 - [[CH-OPENDATA-SWISS]] — the federal open data portal
+- [[CH-AGOV]] — passwordless government login spanning federal,
+  cantonal and municipal authorities, added 2026-09-13, `maintained-by`
+  [[CH-DVS]]
 
 ---
 
