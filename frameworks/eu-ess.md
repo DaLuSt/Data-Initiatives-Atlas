@@ -30,7 +30,7 @@ verification: primary-source
 
 start_date: 2009-03-11
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-13"
 previous_version: null
 successor: null
 
@@ -45,6 +45,7 @@ related_entities:
   - ES-INE
   - UN-CES
   - EU-REG-223-2009
+  - NO-SSB
 relationships:
   - type: governed-by
     target: EU-REG-223-2009
@@ -158,6 +159,14 @@ actually describe:
 only because there was nowhere correct to point; leaving it beside the
 correct one would double-count the relationship and keep an inference in the
 graph that the data no longer needs.
+
+**Updated 2026-09-13**: this entity's own re-verification (2026-08-28)
+already found, on Eurostat's own ESS overview page, that "the partnership
+also includes the EFTA countries" — but the finding sat unused until
+[[NO-SSB]] cross-applied it, closing `discovery/unresolved.md` row #106.
+[[NO-SSB]] carries `participates-in` rather than `part-of`, since Norway
+takes part under the EEA Agreement's own statistical provisions rather
+than as a member state.
 
 ## Regulation (EC) No 223/2009 — now modelled
 
