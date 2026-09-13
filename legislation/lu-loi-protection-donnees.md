@@ -22,7 +22,7 @@ verification: primary-source
 
 start_date: 2018-08-01
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-09-13"
 previous_version: null
 successor: null
 
@@ -32,6 +32,7 @@ organisations:
   - LU-CNPD
 related_entities:
   - EU-GDPR
+  - LU-LOI-DONNEES-PENAL-2018
 relationships:
   - type: implements-requirement-from
     target: EU-GDPR
@@ -66,6 +67,10 @@ sources:
 > already carried a modelled national GDPR implementing act, and
 > Luxembourg's was the one exception, sourced only to a date with no
 > entity behind it.
+>
+> **Narrowed 2026-09-13**: the companion Mémorial A No. 689 law this
+> entity named but left unmodelled is now [[LU-LOI-DONNEES-PENAL-2018]] —
+> see "Not modelled" below.
 
 ## Description
 
@@ -103,15 +108,18 @@ cross-check independently returned the same title.
 
 ## Not modelled
 
-- The **Mémorial A No. 689** law of the same date, implementing the Law
-  Enforcement Directive — a separate instrument CNPD's own page names but
-  this pass did not otherwise research.
 - The act's **section-level content**: what it says about the CNPD's
   powers, procedures, or Luxembourg-specific derogations. Neither
-  Legilux page was readable.
+  Legilux page was readable this pass.
 - The **2002 predecessor act** the 2018 law repeals, per the WebSearch
   cross-check — not independently confirmed by a primary source read
   this pass, and not modelled.
+
+**Closed 2026-09-13**: the Mémorial A No. 689 law of the same date is now
+[[LU-LOI-DONNEES-PENAL-2018]], sourced by reading the Journal Officiel's
+own text directly via Legilux's filestore subdomain — a workaround for
+`legilux.public.lu`'s own JavaScript single-page shell, confirmed
+unreadable across two prior passes.
 
 ## Relationships
 

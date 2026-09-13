@@ -306,6 +306,7 @@ here as a compact reference; the individual affected rows above carry the
 | `efta.int`, EEA-Lex / EEA Joint Committee Decision pages | Unreadable / homepage-only | None found (2026-09-06) |
 | `web.archive.org` | Tool cannot reach it at all (not site-side) | None — route around via live alternates |
 | `belgium.be` family (`bosa`, `ccb`, `news`, `data.gov`, `financien`, `statbel`, `atwork.safeonweb`) | CAPTCHA/403 | Commission pages, GitHub, third-party sources closed most affected entities |
+| `legilux.public.lu` (main site) | JavaScript single-page application, no static content | **Found 2026-09-13**: `data.legilux.public.lu`'s filestore subdomain, serving direct PDF paths (`.../eli/etat/leg/loi/YYYY/MM/DD/aNNN/jo/fr/pdfa/...`), works and returns the Journal Officiel's own text in full — used to source [[LU-LOI-DONNEES-PENAL-2018]] directly, the first Luxembourg legislation entity sourced this way |
 
 ## Verification-pass log (condensed)
 
