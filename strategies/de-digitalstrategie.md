@@ -20,14 +20,14 @@ level: national
 country: DE
 region: null
 
-status: unknown
+status: archived
 confidence: high
 coverage: high
 verification: primary-source
 
 start_date: 2022-08-31
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-13"
 previous_version: null
 successor: null
 
@@ -37,6 +37,8 @@ organisations: []
 related_entities:
   - DE-DATENSTRATEGIE
   - EU-DIGITAL-DECADE
+  - DE-MODERNISIERUNGSAGENDA-BUND
+  - DE-BMDS
 relationships:
   - type: references
     target: EU-DIGITAL-DECADE
@@ -65,10 +67,20 @@ sources:
     url: "https://de.wikipedia.org/wiki/Digitalstrategie_Deutschland"
     publisher: "Wikipedia"
     accessed: "2026-08-28"
+  - title: "Digitalstrategie der 20. Legislaturperiode wird nicht fortgeführt"
+    url: "https://www.bundestag.de/presse/hib/kurzmeldungen-1156196"
+    publisher: "Deutscher Bundestag"
+    accessed: "2026-09-13"
 ---
 
 # Digitalstrategie Deutschland
 
+> **`status` resolved 2026-09-13.** The Bundestag's own press page,
+> published 17 March 2026, confirms the strategy is no longer being
+> pursued and no formal evaluation or continuation is planned since the
+> May 2025 change of government — `status` moves from `unknown` to
+> `archived`. See below.
+>
 > **Re-verified 2026-08-28, promoted.** The entity's two PDF sources
 > (Bundesrechnungshof, bundesregierung.de) again returned only
 > encoded-binary content to WebFetch and could not be read as text this
@@ -112,34 +124,36 @@ then-minister Wissing directly on Germany's 13th-place standing being
 unacceptable, and on the Wikipedia article, which gives the same ranking
 and denominator.
 
-## Why `status: unknown`
+## `status: archived`, closed 2026-09-13
 
-The strategy set a framework explicitly bounded by the year 2025, and this
-entry is written in August 2026. That its period has elapsed is sourced;
-what happened to it is not fully resolved even after this pass's improved
-sourcing.
+**Closes `discovery/unresolved.md` row #57.** Confirmed by reading the
+Bundestag's own press page directly (`kurzmeldungen-1156196`, published
+17 March 2026): since the change of government in May 2025, "werden
+weder die Digitalstrategie der 20. Legislaturperiode noch das zugehörige
+Projektmonitoring durch die Bundesregierung aktiv weiterverfolgt" (neither
+the Digitalstrategie of the 20th legislative period nor its project
+monitoring are actively being pursued by the federal government any
+longer). The government states directly that "eine formale Evaluation der
+Digitalstrategie oder eine Fortschreibung dieser sei nicht geplant" — no
+formal evaluation or continuation is planned.
 
-The options were each rejected in turn:
+That resolves the ambiguity the previous pass could not: the strategy did
+not achieve its aims (ruling out `completed`), is not merely dormant but
+explicitly not being continued (ruling out `active`), and yet no source
+names a formal legal or administrative successor instrument superseding
+it (ruling out `superseded`, which needs a named `successor`). The
+government's own language — discontinued, with no successor named — is
+closest to `archived`.
 
-- **`completed`** would assert the strategy achieved its aims. The
-  Bundestag's own "Kritik an schwammigen Zielen" article, read directly,
-  reports opposition criticism (CDU/CSU's Nadine Schön calling the targets
-  "so unambitious they could be reached immediately") rather than
-  confirming achievement. Asserting completion would be asserting close to
-  the opposite of what the directly-read sources suggest.
-- **`superseded`** would need a successor. Germany has since adopted the
-  [[DE-MODERNISIERUNGSAGENDA-BUND]] and created [[DE-BMDS]], and a search
-  this pass surfaced a "2. Fortschrittsbericht zur Digitalstrategie" (2nd
-  progress report, October 2024) suggesting the strategy was still being
-  tracked as a live document at that point rather than replaced — but **no
-  source read this pass states either later initiative formally replaces
-  it**, so no `successor` is recorded and no `supersedes` relationship is
-  asserted from the other side.
-- **`active`** would claim a 2022–2025 framework is still running a year
-  past its horizon, with no source read confirming continuation past 2025.
-
-`unknown` is the honest remainder. `end_date` is left null rather than set
-to a fabricated `2025-12-31`.
+Germany has separately adopted the [[DE-MODERNISIERUNGSAGENDA-BUND]] and
+created [[DE-BMDS]], and the same Bundestag source notes a continuing
+government commitment "zu einer konsequenten Weiterentwicklung der
+digitalen Steuerungsstrukturen im Bund" (to consistent further
+development of the federal government's digital governance structures) —
+but nothing read states that either later initiative is this strategy's
+formal successor, so no `successor` field or `supersedes` edge is
+asserted. `end_date` stays `null`: the source gives "since the change of
+government in May 2025," not a specific day.
 
 ## Relationships
 
