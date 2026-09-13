@@ -147,22 +147,24 @@ picture, and it only becomes visible at five countries:
 | Netherlands | [[NL-CBW]] | `active` — in force |
 | Germany | [[DE-NIS2UMSUCG]] | `active` — amending act, in force |
 | Belgium | [[BE-NIS2-WET]] | `active` — in force |
-| France | [[FR-NIS2-LOI]] | **`unknown`** — sources contradict each other |
+| France | [[FR-NIS2-LOI]] | `planned` — bill in active process, not in force |
 | **Spain** | **LCGC** | **`proposed`** — sources agree it is not in force |
 
 Five member states, one directive, one deadline — and five different
-answers, two of which are not "yes" or "no".
+paths to it. **Stale as of 2026-09-13, now fixed**: this table previously
+called France's status `unknown`, on the grounds that its sources
+conflicted about whether the instrument existed in force — but that
+contradiction was itself resolved on [[FR-NIS2-LOI]]'s own file back on
+2026-08-26, moving its status to `planned`. This table simply was never
+updated to match.
 
-The France/Spain pair is the informative one. Both are unimplemented; only
-one is *uncertain*. [[FR-NIS2-LOI]] carries `status: unknown` because its
-sources conflict about whether the instrument exists in force. This entity
-carries `status: proposed` because its sources **agree**: approved as a
-draft, still in process, not in the BOE.
-
-That distinction — *we do not know* versus *we know it has not happened* —
-is expressible in the Atlas's status vocabulary, and this batch is the first
-time both values appear side by side on instruments transposing the same
-directive. The vocabulary earns its keep here.
+The France/Spain pair is still informative, on different grounds now: both
+are unimplemented drafts, and both have escalated the same way. On **8 July
+2026** the European Commission referred both — alongside Ireland and the
+Netherlands — to the **Court of Justice of the EU** over failure to notify
+complete NIS2 transposition, seeking lump-sum and daily financial penalties.
+See "Referred to the CJEU" above and [[FR-NIS2-LOI]]'s own file for the
+same escalation.
 
 ## What is deliberately not recorded
 
