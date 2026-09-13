@@ -22,7 +22,7 @@ verification: primary-source
 
 start_date: 2014-12-01
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-09-13"
 previous_version: null
 successor: null
 
@@ -33,6 +33,7 @@ related_entities:
   - EE
   - EE-RIA
   - EU-EIDAS2
+  - NL-DIGID
 relationships:
   - type: part-of
     target: EE
@@ -55,6 +56,10 @@ sources:
 
 # e-Residency of Estonia
 
+> **Updated 2026-09-13**: the Netherlands' [[NL-DIGID]] is now an Atlas
+> entity, closing the gap this entity's own comparison had flagged as
+> queued.
+>
 > **Verified 2026-08-26.** Both cited pages were read directly.
 > Wikipedia's article confirms the launch date verbatim and adds real
 > operational detail this entity did not previously carry. No page
@@ -79,10 +84,9 @@ taxation in the resident's home country."
 ## The one thing in the Atlas that decouples service from territory
 
 Every other national entity here is scoped to the people and bodies inside a
-country. [[FR-FRANCECONNECT]], [[ES-CLAVE]] and [[PL-MOBYWATEL]] all identify
-residents to their own state. (The Netherlands would belong in that list too,
-but **DigiD is not an Atlas entity** — a gap this comparison exposed, now
-queued.)
+country. [[FR-FRANCECONNECT]], [[ES-CLAVE]], [[PL-MOBYWATEL]] and (added
+2026-09-13, closing the gap this comparison exposed) the Netherlands'
+[[NL-DIGID]] all identify residents to their own state.
 
 e-Residency does not. It issues a state-backed digital identity to people
 with **no residence, presence or citizenship** in the issuing country, for

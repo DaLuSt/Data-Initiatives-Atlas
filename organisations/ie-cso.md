@@ -20,7 +20,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-09-13"
 previous_version: null
 successor: null
 
@@ -57,28 +57,40 @@ sources:
 
 > **Verified 2026-08-21.** Every cited source was read and confirmed to
 > support what this entity says. `verification: primary-source`.
+>
+> **Updated 2026-09-13**: two stale claims corrected below — [[FR-INSEE]]
+> is an Atlas entity (France was never the exception this section
+> claimed) and [[NO-SSB]] now carries `participates-in` [[EU-ESS]].
 
 ## Description
 
 The CSO is Ireland's national statistical institute.
 
-## The sixth member of [[EU-ESS]] in the Atlas
+## A member of [[EU-ESS]] in the Atlas
 
 [[EU-ESS]] was created in the UN-connection batch and was described there as
 "the single highest-value item this batch produced" — one entity that
 connected four national statistical offices at once.
 
-It now connects six: [[NL-CBS]], [[DE-DESTATIS]], [[BE-STATBEL]],
-[[ES-INE]], [[PL-GUS]] and the CSO, plus [[EU-EUROSTAT]] itself.
+It now connects seven `part-of` members: [[NL-CBS]], [[DE-DESTATIS]],
+[[BE-STATBEL]], [[ES-INE]], [[PL-GUS]], [[FR-INSEE]] and the CSO, plus
+[[EU-EUROSTAT]] itself.
 
-The two countries in this batch that do **not** join it are the interesting
-ones. [[NO-SSB]] and [[CH-BFS]] both carry no ESS edge, because the ESS is
-defined as a partnership with the national statistical institutes **of the
-member states** and neither Norway nor Switzerland is one. Ireland joins
-without argument for exactly the reason they cannot.
+**Updated 2026-09-13**: two stale claims in this section are corrected.
+First, [[FR-INSEE]] is an Atlas entity (`part-of` [[EU-ESS]]) — France is
+not, and was never, the exception this section once described. Second,
+[[NO-SSB]] no longer carries no ESS edge: it now carries `participates-in`
+[[EU-ESS]] (added 2026-09-13), on the EEA Agreement's own statistical
+provisions rather than as a member state — the composition-rule
+distinction the original text was reaching for is preserved, just with
+the weaker relationship type rather than no edge at all.
 
-France remains the only Atlas member state with **no statistical office at
-all** — INSEE is still unmodelled and still queued.
+[[CH-BFS]] remains the one national statistical office in the Atlas with
+no ESS edge of either kind, because the ESS is defined as a partnership
+with the national statistical institutes **of the member states**, and
+Switzerland has no equivalent EEA-style statistical-cooperation
+instrument sourced here. Ireland joins as a full member-state `part-of`
+edge for exactly the reason Switzerland cannot.
 
 ## Not modelled
 
