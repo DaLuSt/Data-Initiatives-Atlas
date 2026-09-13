@@ -61,6 +61,11 @@ Anchor entity: [[PL]]
   serve as an EUDI Wallet; a separate parallel app is planned for end
   2026, per the Ministry's own statement (2026-09-04); `maintained-by`
   [[PL-MC]], confirmed via the Act's own Article 19)_
+- [[PL-PSIE]] — Publiczny System Identyfikacji Elektronicznej, added
+  2026-09-13 _(the actual eIDAS-notified scheme — profil zaufany plus
+  profil osobisty — `implements-requirement-from` [[EU-EIDAS]] since
+  19 April 2023; **distinct from** [[PL-MOBYWATEL]], which is not itself
+  notified)_
 - [[PL-DANE-GOV-PL]] — national open data portal _(`maintained-by`
   [[PL-MC]], confirmed 2026-08-27)_
 - [[PL-PESEL]] — population register and identification number

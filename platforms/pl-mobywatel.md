@@ -31,7 +31,7 @@ verification: primary-source
 
 start_date: 2023-07-14
 end_date: null
-last_verified: "2026-09-04"
+last_verified: "2026-09-13"
 previous_version: null
 successor: null
 
@@ -46,6 +46,7 @@ related_entities:
   - EU-EUDI-WALLET
   - PL-COI
   - PL-MC
+  - PL-PSIE
   - FR-FRANCECONNECT
   - DE-BUNDID
   - ES-CLAVE
@@ -195,6 +196,18 @@ the personal-data administrator for its users. The `maintained-by` edge
 this entity previously withheld is now asserted, to [[PL-MC]] — COI's
 systems-level role and the Ministry's legal-operator role are not in
 tension, just two different questions the sources answer differently.
+
+## Which system is actually eIDAS-notified, closed 2026-09-13
+
+**Closes a previously-flagged gap** (`discovery/unresolved.md` row #155).
+mObywatel itself is not listed in the European Commission's own eID
+notification table. The Polish system that is notified is a separate
+scheme — [[PL-PSIE]] (Publiczny System Identyfikacji Elektronicznej),
+comprising profil zaufany and profil osobisty, notified 19 April 2023 —
+now modelled as its own entity. No relationship edge is asserted between
+the two: no source states one, and press reporting's claim that profil
+zaufany is becoming "a function within mObywatel" is recorded only in
+[[PL-PSIE]]'s own file, not adopted here.
 
 ## Relationships
 
