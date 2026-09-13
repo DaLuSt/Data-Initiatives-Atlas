@@ -19,7 +19,7 @@ coverage: medium
 verification: primary-source
 start_date: 2018-01-01
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-09-13"
 previous_version: null
 successor: null
 
@@ -53,13 +53,19 @@ sources:
   - title: "Wet basisregistratie ondergrond — informatie"
     url: "https://wetten.overheid.nl/BWBR0037095/informatie"
     publisher: "Overheid.nl (wetten.nl)"
-    accessed: "2026-08-21"
+    accessed: "2026-09-13"
+  - title: "Wijziging van de Wet basisregistratie ondergrond (bronhouderschap modellen, kwaliteitscontrole en enkele verbeteringen)"
+    url: "https://www.tweedekamer.nl/content/wijziging-van-de-wet-basisregistratie-ondergrond"
+    publisher: "Tweede Kamer der Staten-Generaal"
+    accessed: "2026-09-13"
 ---
 
 # Wet basisregistratie ondergrond
 
-> **Verified 2026-08-21.** Every cited source was read and confirmed to
-> support what this entity says. `verification: primary-source`.
+> **Verified 2026-08-21; 2024-amendment status corrected 2026-09-13.**
+> Every cited source was read and confirmed to support what this entity
+> says. `verification: primary-source`. The "2024 amendment... pending"
+> claim was wrong: it is Wetsvoorstel 35088, enacted in 2019 — see below.
 
 ## Description
 
@@ -71,6 +77,27 @@ history (`Wijzigingenoverzicht`) for BWBR0037095, which records article 27
 and article 29 both entering into force 01-07-2018 — unlike [[NL-WET-BGT]]'s
 equivalent claim, this one needed no correction.
 
+## The "2024 amendment" was already enacted in 2019, closed 2026-09-13
+
+**Corrected, closing `discovery/unresolved.md` row #145.** The amendment
+this entity previously described as pending ("the 2024 amendment on
+*bronhouderschap* of models, quality control and improvements") is
+Wetsvoorstel 35088, "Wijziging van de Wet basisregistratie ondergrond
+(bronhouderschap modellen, kwaliteitscontrole en enkele verbeteringen)."
+Confirmed by reading the Tweede Kamer's own page for the bill directly:
+it was accepted by the Tweede Kamer without a vote on 7 March 2019 and
+by the Eerste Kamer on 26 March 2019 — **enacted**, not pending. Its
+commencement is confirmed on `wetten.overheid.nl`'s own commencement
+history for this Act (already cited in this entity's sources): published
+as **Stb. 2019, 153**, in force from **24 April 2019**.
+
+Confirmed by reading the Tweede Kamer's own page directly: the amendment
+specifies data-holder (*bronhouder*) responsibility for the models
+themselves, enabling future technical specifications to be set by
+delegated regulation rather than requiring fresh primary legislation, and
+establishes a quality-control framework including annual review under the
+ENSIA methodology.
+
 ## Not modelled
 
 - The **Besluit basisregistratie ondergrond** (BWBR0040205) and the
@@ -78,9 +105,12 @@ equivalent claim, this one needed no correction.
   decree and ministerial regulation. Every one of these seven statutes has
   such instruments beneath it and none is modelled — a consistent scoping
   decision, recorded here because the BRO's are the best evidenced.
-- The **2024 amendment** on *bronhouderschap* of models, quality control and
-  improvements, which the Tweede Kamer's own page records as a pending
-  change.
+- **Wetsvoorstel 36544**, a separate, genuinely still-pending bill
+  ("Wijziging van de Wet basisregistratie ondergrond in verband met het
+  aanwijzen van drinkwaterbedrijven als bronhouders en enkele andere
+  wijzigingen") that designates drinking-water companies as data holders
+  — named by the Tweede Kamer's own bill index but not itself read this
+  pass, and not to be confused with the now-closed 35088 above.
 
 ## Relationships
 
