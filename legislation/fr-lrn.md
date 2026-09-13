@@ -22,7 +22,7 @@ verification: primary-source
 
 start_date: 2016-10-07
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-09-13"
 previous_version: null
 successor: null
 
@@ -34,12 +34,20 @@ related_entities:
   - FR-DATA-GOUV
   - EU-OPEN-DATA-DIRECTIVE
   - FR-LOI-VALTER
+  - EU-PSI-DIRECTIVE
 relationships:
   - type: applies-in
     target: FR
     source: fact
     evidence: "Confirmed by reading guides.data.gouv.fr's own open-data chronology directly (2026-08-26): '2016 - Loi pour une République numérique : consécration du principe de l'open data par défaut' (the loi pour une République numérique enshrines the principle of open data by default). decideo.fr's commentary, also read directly, confirms the 3,500-inhabitant threshold and gives a precise codification: the diffusion obligations sit at 'articles L312-1-1 et suivants du CRPA' (Code des relations entre le public et l'administration) — a citation this entity did not previously carry. `legifrance.gouv.fr` and the dead `guides.etalab.gouv.fr` were not read. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
     confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: references
+    target: EU-PSI-DIRECTIVE
+    source: fact
+    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP (this entity's own prose: 'the 2003 PSI Directive (2003/98/EC) — which is not an Atlas entity'). It now is, [[EU-PSI-DIRECTIVE]]. The Etalab/data.gouv.fr open-data chronology already cited on this entity places France's open-data legal history in a lineage running from the 2003 PSI Directive; `references` rather than `implements-requirement-from` because the chronology describes lineage, not a stated transposition by this specific 2016 act."
+    confidence: low
     valid_from: null
     valid_until: null
 
@@ -96,8 +104,11 @@ The same trap Belgium sprang, and it is worth stating in the same terms.
 A 2016 act cannot transpose a 2019 directive, so **no
 `implements-requirement-from` is asserted**. The Etalab and data.gouv.fr
 open-data chronologies place this act in a lineage that runs from the 2003
-PSI Directive (2003/98/EC) — which is not an Atlas entity — rather than
-from the Open Data Directive.
+PSI Directive (2003/98/EC) — **stale as of 2026-09-13, now fixed**: it is
+now an Atlas entity, [[EU-PSI-DIRECTIVE]] (added since this page was
+last touched) — rather than from the Open Data Directive. The chronology
+sources describe a lineage, not a stated transposition, so the edge below
+is recorded as `references` rather than `implements-requirement-from`.
 
 France's actual transposition of Directive (EU) 2019/1024 is understood to
 be a 2021 ordinance, but **no source read identifies it**, so it is not
@@ -121,10 +132,15 @@ somewhere to point, are in `discovery/research-queue.md`.
 
 ## Relationships
 
-**None asserted.** `related_entities` records the association with
-[[EU-OPEN-DATA-DIRECTIVE]] for navigation only — deliberately not as a
-relationship — and with [[FR-DATA-GOUV]], which this act's obligations feed
-but which no source connects to it directly.
+- `applies-in` [[FR]] — anchor edge.
+- `references` [[EU-PSI-DIRECTIVE]] — lineage, not transposition; see
+  above.
+
+**No `implements-requirement-from` is asserted** to
+[[EU-OPEN-DATA-DIRECTIVE]] — `related_entities` records that association
+for navigation only, since this 2016 act predates the 2019 directive.
+Nor is any edge asserted to [[FR-DATA-GOUV]], which this act's obligations
+feed but which no source connects to it directly.
 
 ## Sources
 
