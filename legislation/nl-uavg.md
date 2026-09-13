@@ -23,8 +23,8 @@ verification: primary-source
 
 start_date: 2018-05-25
 end_date: null
-last_verified: "2026-09-05"
-previous_version: null
+last_verified: "2026-09-13"
+previous_version: NL-WBP
 successor: null
 
 domains:
@@ -33,11 +33,19 @@ organisations:
   - NL-AP
 related_entities:
   - EU-GDPR
+  - NL-WBP
 relationships:
   - type: implements-requirement-from
     target: EU-GDPR
     source: fact
     evidence: "Confirmed by reading the official Staatsblad 2018, 144 text directly at zoek.officielebekendmakingen.nl (2026-08-27): the UAVG's five chapters cover general provisions and scope, the Autoriteit Persoonsgegevens's composition and enforcement powers (including administrative fines), detailed GDPR-implementation exceptions (special data categories, scientific research, journalism), national-security and archival carve-outs, and transitional provisions repealing the prior Wet bescherming persoonsgegevens. Published 22 May 2018, signed 16 May 2018, issued by the Ministry of Justice and Security. eerstekamer.nl dossier 34.851, also read directly, confirms Tweede Kamer adoption 13 March 2018, Eerste Kamer adoption 15 May 2018 (as a hamerstuk), and states plainly: 'De verordening en de Uitvoeringswet zijn op 25 mei 2018 in werking getreden.' autoriteitpersoonsgegevens.nl returned HTTP 403 and was not readable this pass."
+    confidence: high
+    valid_from: 2018-05-25
+    valid_until: null
+  - type: supersedes
+    target: NL-WBP
+    source: fact
+    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP (this file's own 'not yet an Atlas entity' note). Confirmed by reading wetten.overheid.nl's own record for BWBR0011468 directly (2026-09-13): the Wet bescherming persoonsgegevens was repealed 25 May 2018 (Stb. 2018, 298), the same day this entity and the GDPR took effect — matching the Staatsblad 2018, 144 text's own transitional provisions already cited above, which name the Wbp as the act repealed."
     confidence: high
     valid_from: 2018-05-25
     valid_until: null
@@ -58,6 +66,10 @@ sources:
     url: "https://wetten.overheid.nl/BWBR0041233/"
     publisher: "Overheid.nl (wetten.overheid.nl)"
     accessed: "2026-09-05"
+  - title: "Wet bescherming persoonsgegevens — BWBR0011468 (informatie)"
+    url: "https://wetten.overheid.nl/BWBR0011468/2016-01-01/0/informatie"
+    publisher: "Overheid.nl (wetten.overheid.nl)"
+    accessed: "2026-09-13"
 ---
 
 # Uitvoeringswet AVG (UAVG)
@@ -67,6 +79,11 @@ sources:
 > `last_verified`). `autoriteitpersoonsgegevens.nl` returned HTTP 403 both
 > attempts and was not readable — a genuine block, not a silently dropped
 > source.
+>
+> **Closed 2026-09-13.** The Wbp is now [[NL-WBP]], closing this file's own
+> "not yet an Atlas entity" gap — found via a routine grep for lingering
+> hedge language, not a tracked `discovery/unresolved.md` row. This entity
+> now carries `supersedes` → [[NL-WBP]], and `previous_version` is set.
 
 ## Description
 
@@ -118,12 +135,15 @@ field recording that its obligations originate in an EU instrument, with the
 - Implements requirements from [[EU-GDPR]].
 - [[NL-AP]] is the supervisory authority operating under it, confirmed
   directly in the official Staatsblad text's own chapter structure.
-- The Wbp, which the GDPR/UAVG regime replaced, is not yet an Atlas entity;
-  queued for temporal completeness.
+- **Supersedes** [[NL-WBP]], now modelled (2026-09-13): wetten.overheid.nl's
+  own record confirms the Wbp was repealed 25 May 2018, the same day this
+  entity and the GDPR took effect — matching the transitional provisions
+  already read in the Staatsblad 2018, 144 text above.
 
 ## Sources
 
 Two of three read directly this pass, including the strongest possible
 citation — the official Staatsblad text itself. `autoriteitpersoonsgegevens.nl`
 was attempted and returned HTTP 403 both times; it is a genuine block, not
-a silently dropped source.
+a silently dropped source. A fourth source, wetten.overheid.nl's own record
+for the Wbp, was added and read directly 2026-09-13.
