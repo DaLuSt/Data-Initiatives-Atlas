@@ -17,8 +17,11 @@ description: >
   in staged deadlines — early warning within 24 hours, notification within
   72 hours and a final report within one month — and answer at management
   level, with penalties of up to ten million euros. Spain missed the
-  transposition deadline of 17 October 2024 and received a reasoned opinion
-  from the European Commission in May 2025.
+  transposition deadline of 17 October 2024, received a reasoned opinion
+  from the European Commission on 7 May 2025, and on 8 July 2026 was
+  referred, alongside Ireland, France and the Netherlands, to the Court of
+  Justice of the EU, with the Commission seeking lump-sum and daily
+  financial penalties until full transposition is notified.
 
 level: national
 country: ES
@@ -31,7 +34,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-09-13"
 previous_version: null
 successor: null
 
@@ -47,11 +50,12 @@ related_entities:
   - DE-NIS2UMSUCG
   - BE-NIS2-WET
   - FR-NIS2-LOI
+  - IE-NCS-BILL
 relationships:
   - type: implements-requirement-from
     target: EU-NIS2
     source: fact
-    evidence: "Confirmed by reading dsn.gob.es's own page directly (2026-08-26): the Anteproyecto incorporates 'la Directiva (UE) 2022/2555 ... conocida como NIS2', and creates the Centro Nacional de Ciberseguridad, attached to the Presidencia del Gobierno, to overcome 'la actual dispersión competencial en materia de ciberseguridad' (the current dispersal of competences in cybersecurity matters). cuatrecasas.com, also read directly, confirms the competence split across the Interior Ministry (Cybersecurity Coordination Office), the Defence Ministry (Centro Criptológico Nacional) and the Digital Transformation Ministry, and the January-2025 approval — though it dates approval one day later than dsn.gob.es (15 January versus 14 January), a minor discrepancy left unresolved. Neither source read gave the specific 24h/72h/one-month notification deadlines or the ten-million-euro penalty figure this entity carries, which rest on nisd2.eu and legiscope.com, not read this pass."
+    evidence: "Confirmed by reading dsn.gob.es's own page directly (2026-08-26): the Anteproyecto incorporates 'la Directiva (UE) 2022/2555 ... conocida como NIS2', and creates the Centro Nacional de Ciberseguridad, attached to the Presidencia del Gobierno, to overcome 'la actual dispersión competencial en materia de ciberseguridad' (the current dispersal of competences in cybersecurity matters). cuatrecasas.com, also read directly, confirms the competence split across the Interior Ministry (Cybersecurity Coordination Office), the Defence Ministry (Centro Criptológico Nacional) and the Digital Transformation Ministry, and the January-2025 approval — though it dates approval one day later than dsn.gob.es (15 January versus 14 January), a minor discrepancy left unresolved. Neither source read gave the specific 24h/72h/one-month notification deadlines or the ten-million-euro penalty figure this entity carries, which rest on nisd2.eu and legiscope.com, not read this pass. CLOSES PART OF A PREVIOUSLY-FLAGGED GAP (discovery/unresolved.md row #91): confirmed by reading a Hunton Andrews Kurth law-firm alert directly (2026-09-13), the European Commission referred Spain, alongside Ireland, France and the Netherlands, to the Court of Justice of the EU on 8 July 2026 for failure to notify complete NIS2 transposition, following formal notice on 28 November 2024 and a reasoned opinion on 7 May 2025, with the Commission seeking lump-sum and daily financial penalties until full transposition is notified — the same escalation already recorded on [[IE-NCS-BILL]]."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -61,6 +65,10 @@ sources:
     url: "https://www.dsn.gob.es/en/node/24160"
     publisher: "Departamento de Seguridad Nacional — Gobierno de España"
     accessed: "2026-08-26"
+  - title: "European Commission Refers Four Member States to CJEU Over NIS2 Transposition Delays"
+    url: "https://www.hunton.com/privacy-and-cybersecurity-law-blog/european-commission-refers-four-member-states-to-cjeu-over-nis2-transposition-delays"
+    publisher: "Hunton Andrews Kurth"
+    accessed: "2026-09-13"
   - title: "Aprobado el anteproyecto de Ley que transpone la Directiva NIS2"
     url: "https://www.cuatrecasas.com/es/spain/propiedad-intelectual/art/aprobado-anteproyecto-ley-transpone-la-directiva-nis2"
     publisher: "Cuatrecasas"
@@ -75,6 +83,10 @@ sources:
 
 # LCGC — Anteproyecto de Ley de Coordinación y Gobernanza de la Ciberseguridad
 
+> **Escalation added 2026-09-13**, closing part of `discovery/unresolved.md`
+> row #91. A law-firm alert, read directly, confirms the Commission
+> referred Spain to the CJEU on 8 July 2026 — see below.
+>
 > **Verified 2026-08-26.** Two of four cited pages were read directly:
 > dsn.gob.es's own page on the bill and Cuatrecasas's law-firm analysis.
 > Both confirm the Centro Nacional de Ciberseguridad and the three-ministry
@@ -100,8 +112,20 @@ What it would do:
 - provide penalties of **up to ten million euros**.
 
 Spain missed the transposition deadline of **17 October 2024**, and the
-European Commission sent a **reasoned opinion in May 2025** — the stage
-after a letter of formal notice.
+European Commission sent a **reasoned opinion on 7 May 2025** — the stage
+after a letter of formal notice, itself sent 28 November 2024.
+
+## Referred to the CJEU, closed 2026-09-13
+
+Confirmed by reading a Hunton Andrews Kurth law-firm alert directly: on
+**8 July 2026** the Commission referred Spain — alongside **Ireland,
+France and the Netherlands** — to the **Court of Justice of the EU**
+over failure to notify complete NIS2 transposition, seeking lump-sum and
+daily financial penalties until full transposition is notified. This is
+the same escalation, from the same referral batch, already recorded on
+[[IE-NCS-BILL]] (which independently sourced an initial €2.8 million
+penalty exposure for Ireland specifically; no Spain-specific figure was
+found this pass).
 
 Confirmed by reading dsn.gob.es and cuatrecasas.com directly (2026-08-26):
 the Centro Nacional de Ciberseguridad would be attached to the
