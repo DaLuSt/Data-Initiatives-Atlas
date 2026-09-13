@@ -25,7 +25,7 @@ verification: primary-source
 
 start_date: 2003-11-17
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-09-13"
 previous_version: null
 successor: EU-OPEN-DATA-DIRECTIVE
 
@@ -37,6 +37,7 @@ related_entities:
   - BE-HERGEBRUIK-WET
   - DE-IWG
   - FR-LOI-VALTER
+  - FR-LRN
 relationships:
   - type: applies-in
     target: EU
@@ -98,6 +99,15 @@ This is the Atlas's clearest case of the pattern. [[GB-DSIT]] was abolished
 and its functions dispersed; this directive was **recast** — the successor
 is the same instrument rewritten, and the national acts transposing the old
 one keep operating until each member state replaces them.
+
+## A third national instrument, cross-applied 2026-09-13
+
+[[FR-LRN]] (France's 2016 loi pour une République numérique) had flagged
+this directive by name as the source of the open-data lineage its own
+chronology sources describe, but recorded it as "not an Atlas entity" —
+stale, since fixed there with a `references` edge (lineage, not
+transposition — no source states FR-LRN as this directive's actual French
+transposing act).
 
 ## Not modelled
 

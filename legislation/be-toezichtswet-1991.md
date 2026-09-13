@@ -115,8 +115,11 @@ instrument is the later one, sometimes by decades:
 
 The act was amended on **10 July 2006** so that OCAD — the Coordination Unit
 for Threat Analysis, established that year — falls under the **joint**
-supervision of Comité P and Comité I. OCAD is not an Atlas entity, so the
-arrangement is recorded and not modelled.
+supervision of Comité P and Comité I. **Stale as of 2026-09-13, now
+fixed**: OCAD is an Atlas entity, [[BE-OCAD]] (created 2026-09-06); this
+page's own "OCAD is not an Atlas entity" line was simply never updated.
+See [[BE-OCAD]] for its `governed-by` edge to [[BE-WET-DREIGINGSANALYSE-2006]],
+the 2006 amending act itself.
 
 ## Not modelled
 
