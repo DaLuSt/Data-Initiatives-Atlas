@@ -248,6 +248,7 @@ threshold and are queued._
 - [[NL-WOB]] — Wet openbaarheid van bestuur _(superseded 1 May 2022)_
 - [[NL-WBNI]] — Wet beveiliging netwerk- en informatiesystemen _(ends 15 Aug 2026)_
 - [[NL-ARCHIEFWET-2026]] — Archiefwet 2026 _(enacted, Stb. 2026, 149; in force 1 Jan 2027 by KB)_ ✅ re-verified 2026-08-27
+- [[NL-WBP]] — Wet bescherming persoonsgegevens _(superseded by [[NL-UAVG]], 25 May 2018; added 2026-09-13)_
 
 ## Applicable EU legislation
 
