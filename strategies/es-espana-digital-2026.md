@@ -10,26 +10,25 @@ description: >
   launched in July 2020, revised for the 2026 horizon to align with the
   Recovery Plan. It acts in three dimensions — infrastructure and
   technology, economy, and people — and keeps the ten strategic axes of its
-  initial version. Sources conflict on the two added cross-cutting axes:
-  widely-syndicated coverage names public-private collaboration and
-  co-governance between the State and the Autonomous Communities, while the
-  government's own current pages name PERTE and the Retech initiative. Its
-  principal areas are connectivity, digital skills, cybersecurity,
-  digitalisation of businesses and public services, and the use of emerging
-  technologies.
+  initial version, adding two new cross-cutting axes: PERTE (Proyectos
+  Estratégicos para la Recuperación y Transformación Económica) and the
+  Retech initiative, confirmed by the government's own original 5 July 2022
+  announcement itself, not only its later pages. Its principal areas are
+  connectivity, digital skills, cybersecurity, digitalisation of businesses
+  and public services, and the use of emerging technologies.
 
 level: national
 country: ES
 region: EU
 
 status: active
-confidence: medium
+confidence: high
 coverage: medium
 verification: primary-source
 
 start_date: 2022-07-05
 end_date: 2026-12-31
-last_verified: "2026-08-27"
+last_verified: "2026-09-13"
 previous_version: null
 successor: null
 
@@ -49,8 +48,8 @@ relationships:
   - type: applies-in
     target: ES
     source: fact
-    evidence: "Confirmed by reading three official pages directly (2026-08-27): planderecuperacion.gob.es, espanadigital.gob.es's own 'Actualizada la agenda...' page, and mineco.gob.es's press release. The Council of Ministers updated the Agenda on 5 July 2022 to take stock and adapt it to the 2026 horizon. A GENUINE SOURCE CONFLICT on the two new axes: this entity's description (and widely-syndicated secondary coverage) states the two new cross-cutting axes are (1) high-impact strategic projects via public-private collaboration and (2) co-governance between the State and the Autonomous Communities. But the Spanish government's OWN current pages describe the two axes differently — espanadigital.gob.es's own page states explicitly that co-governance is NOT one of the two newly-added axes (it appears elsewhere in the text as a broader goal), and both espanadigital.gob.es and mineco.gob.es instead name the two axes as (1) PERTE (Proyectos Estratégicos para la Recuperación y Transformación Económica) and (2) the Retech initiative — treating the 'public-private collaboration' framing and 'co-governance' framing as two DIFFERENT axis-pairs found in different official accounts of the same event. Both framings are kept, unresolved, rather than one being silently preferred. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
-    confidence: medium
+    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP (discovery/unresolved.md row #87). Confirmed by reading three official pages directly: planderecuperacion.gob.es (2026-08-27, then re-read 2026-09-13 for its exact wording), espanadigital.gob.es's own 'Actualizada la agenda...' page (2026-08-27), and mineco.gob.es's press release (2026-08-27). The Council of Ministers updated the Agenda on 5 July 2022 to take stock and adapt it to the 2026 horizon. The prior pass flagged a genuine-looking conflict between widely-syndicated coverage (public-private collaboration and co-governance as the two new axes) and the government's later pages (PERTE and Retech). Re-read 2026-09-13: planderecuperacion.gob.es's own text — the original 5 July 2022 announcement itself, the exact primary source the conflict called for — states plainly, in its own words: 'dos nuevos ejes transversales referidos a los Proyectos Estratégicos para la Recuperación y Transformación Económica (PERTE) y la iniciativa Retech.' All three official sources read agree: PERTE and Retech are the two new axes. Co-governance and public-private collaboration appear in the same text describing what those axes are *for*, not as the axes' names — the widely-syndicated coverage conflated purpose with identity. No official source corroborates the co-governance framing as a named axis."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -88,6 +87,15 @@ sources:
 > government's own current pages describe the "two new cross-cutting
 > axes" differently from how this entity (and wide secondary coverage)
 > described them. Both framings are recorded below, unresolved.
+>
+> **Closed 2026-09-13**, closing `discovery/unresolved.md` row #87.
+> Re-reading planderecuperacion.gob.es's own text — the original 5 July
+> 2022 press materials the row itself said were needed to adjudicate —
+> surfaced the exact wording missed on the first pass: it names PERTE and
+> Retech as the two new axes in its own words, agreeing with
+> espanadigital.gob.es and mineco.gob.es. All three official sources
+> agree; only the secondary, widely-syndicated coverage described it
+> differently. See "Resolved" below.
 
 ## Description
 
@@ -98,45 +106,54 @@ two years.
 
 It acts in **three dimensions** — infrastructure and technology, economy,
 people — and keeps the **ten strategic axes** of the original while adding
-**two new cross-cutting axes**. Sources conflict on what those two axes are:
+**two new cross-cutting axes**: **PERTE** (Proyectos Estratégicos para la
+Recuperación y Transformación Económica) and the **Retech** initiative.
 
-- **Widely-syndicated framing** (echoed in this entity's own prior
-  description): (1) strategic high-impact projects through public-private
-  collaboration, and (2) **co-governance between the State and the
-  Autonomous Communities**.
-- **The government's own current pages**, read directly this pass —
-  espanadigital.gob.es's "Actualizada la agenda..." article and
-  mineco.gob.es's press release — instead name the two axes as (1) **PERTE**
-  (Proyectos Estratégicos para la Recuperación y Transformación Económica)
-  and (2) the **Retech** initiative. espanadigital.gob.es's own page states
-  explicitly that co-governance is *not* one of the two newly-added axes,
-  though it appears elsewhere in the same text as one of the agenda's
-  broader goals.
+## Resolved 2026-09-13: the axis-naming conflict
 
-Both are kept, flagged, rather than one being silently preferred — see
-`discovery/unresolved.md`.
+The prior pass (2026-08-27) flagged what looked like a genuine conflict:
+widely-syndicated secondary coverage (echoed in this entity's own earlier
+description) named the two new axes as (1) strategic high-impact projects
+through public-private collaboration and (2) co-governance between the
+State and the Autonomous Communities, while the government's own current
+pages instead named PERTE and Retech — and the row asked for the original
+5 July 2022 press materials to adjudicate.
+
+Re-reading planderecuperacion.gob.es's own text — the original 5 July 2022
+announcement itself, not a later restatement — supplies exactly that: it
+states, in its own words, "dos nuevos ejes transversales referidos a los
+Proyectos Estratégicos para la Recuperación y Transformación Económica
+(PERTE) y la iniciativa Retech." All three official sources read (this
+one, espanadigital.gob.es's "Actualizada la agenda..." article, and
+mineco.gob.es's press release) agree: **PERTE and Retech are the two new
+axes**, from the very first announcement onward — not a later
+government reframing. "Public-private collaboration" and "co-governance"
+appear in the same official texts, but describing what those two axes are
+*for*, not naming them; the widely-syndicated coverage conflated an axis's
+purpose with its identity. No official source corroborates the
+co-governance framing as itself one of the two named axes.
 
 Its principal areas are connectivity, digital skills, cybersecurity,
 digitalisation of businesses and public services, and emerging technologies.
 
-## Co-governance is the element the Atlas cannot model, whichever framing is right
+## Co-governance is still an element the Atlas cannot model
 
 *Cogobernanza del Estado y las Comunidades Autónomas* appears in every
-source read, whether as one of the "two new axes" (widely-syndicated
-framing) or as one of the agenda's broader goals (the government's own
-current framing). Either way, state–regional co-governance is an
-**explicit, named element** of Spain's digital policy.
+official source read — not as one of the two named axes (see above, now
+resolved), but as one of the agenda's stated broader goals for those axes.
+State–regional co-governance is still an **explicit, named element** of
+Spain's digital policy, even though it is not itself an axis name.
 
 The Atlas can record that the element exists, in this prose. It cannot
 model a single one of the parties on the other side of it, because there is
-no `level` term between `national` and `local`. See [[ES]]. This holds
-regardless of which of the two conflicting axis-framings above is correct.
+no `level` term between `national` and `local`. See [[ES]].
 
 This is the sharpest form the federal modelling gap has taken across three
 affected countries. In Germany the gap hid sixteen Land acts; in Belgium it
-hid a Flemish programme. Here it hides **half of a named axis of the
-national strategy** — the graph shows the strategy, and shows nothing of the
-co-governance the strategy is half about.
+hid a Flemish programme. Here it hides **a stated goal of the national
+strategy's two headline axes** — the graph shows the strategy, and shows
+nothing of the state–regional co-governance the strategy explicitly says
+those axes serve.
 
 ## No relationship to the Digital Decade is asserted
 
@@ -160,10 +177,10 @@ None asserted.
 
 ## Sources
 
-Listed in frontmatter, three of six read directly this pass: the Recovery
-Plan's own announcement of the update, espanadigital.gob.es's own article
-on the update, and mineco.gob.es's press release — the latter two newly
-found and added as sources this pass, and the source of the axis-framing
-conflict recorded above. The ministry programme page loaded only
+Listed in frontmatter, three of six read directly across two passes: the
+Recovery Plan's own announcement of the update (read 2026-08-27 and
+re-read 2026-09-13 for its exact wording, which resolved the axis-naming
+conflict), espanadigital.gob.es's own article on the update, and
+mineco.gob.es's press release. The ministry programme page loaded only
 navigation chrome, the strategy PDF exceeded the fetch tool's size limit,
 and INCIBE's summary returned 403.
