@@ -22,7 +22,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-09-13"
 previous_version: null
 successor: null
 
@@ -40,6 +40,13 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: participates-in
+    target: EU-ESS
+    source: fact
+    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP (discovery/unresolved.md row #106). Confirmed by reading ec.europa.eu/eurostat's own 'Statistical cooperation in and around Europe' news page directly (2026-09-13): 'Iceland, Liechtenstein, and Norway participate in the European Statistical System (ESS) through the European Economic Area (EEA) agreement.' Independently corroborated on [[EU-ESS]]'s own file (re-verified 2026-08-28, reading the same Eurostat ESS overview page directly): 'The partnership also includes the EFTA countries.' Recorded as `participates-in` rather than `part-of` — the type the five member-state NSIs carry — preserving the distinction this entity's own text already draws: Norway participates under the EEA Agreement's own statistical provisions (Annex XXI / Protocol 30, per efta.int, itself bot-walled and unread), not as a member state."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Statistisk sentralbyrå"
@@ -54,6 +61,10 @@ sources:
     url: "https://www.ssb.no/en"
     publisher: "Statistisk sentralbyrå (SSB)"
     accessed: "2026-08-21"
+  - title: "Statistical cooperation in and around Europe"
+    url: "https://ec.europa.eu/eurostat/web/products-eurostat-news/-/wdn-20220913-1"
+    publisher: "Eurostat — European Commission"
+    accessed: "2026-09-13"
 ---
 
 # Statistisk sentralbyrå (SSB)
@@ -61,42 +72,50 @@ sources:
 > **Verified 2026-08-21.** Every cited source was read and confirmed to
 > support what this entity says. `verification: primary-source`. ⚠
 > `coverage: low` — see below.
+>
+> **Updated 2026-09-13**: added `participates-in` [[EU-ESS]], closing
+> `discovery/unresolved.md` row #106 — see below.
 
 ## Description
 
 SSB is Norway's national statistical institute.
 
-## ⚠ No `part-of` [[EU-ESS]] edge, unlike every other statistical office here
+## A third pattern, now stated: `participates-in` rather than `part-of`
 
 Five national statistical offices in the Atlas carry `part-of` [[EU-ESS]]:
 [[NL-CBS]], [[DE-DESTATIS]], [[BE-STATBEL]], [[ES-INE]] and [[PL-GUS]]. The
 sixth, [[GB-ONS]], does not — it reaches the international layer through
 [[UN-CES]] instead, having left the Union.
 
-SSB is the **third pattern**, and the Atlas cannot yet state it.
+SSB is a genuine third pattern, and it is now expressible. Confirmed by
+reading `ec.europa.eu/eurostat`'s own "Statistical cooperation in and
+around Europe" page directly: "Iceland, Liechtenstein, and Norway
+participate in the European Statistical System (ESS) through the
+European Economic Area (EEA) agreement." [[EU-ESS]]'s own file
+independently found the same fact on Eurostat's ESS overview page: "the
+partnership also includes the EFTA countries."
 
-The ESS is defined in its own sources as the partnership between the
-Commission (Eurostat) and the national statistical institutes **of the
-member states**. Norway is not a member state. EEA EFTA states participate
-in European statistical cooperation under the EEA Agreement's own
-provisions, on terms this batch did not establish.
-
-Asserting `part-of` [[EU-ESS]] would put Norway in the member-state
-category, which is the specific error the [[NO]] anchor exists to prevent.
-Asserting nothing leaves the entity thin — and that is the honest state.
-`EU-ESS` is listed in `related_entities` so the connection is discoverable
-without being claimed.
-
-This is the same shape as the missing `applies-in` edges: **the gap is the
-finding.**
+Norway is not a member state, so `part-of` — the edge the five member-state
+NSIs carry — would overstate the relationship and put Norway in the
+member-state category, which is the specific error the [[NO]] anchor
+exists to prevent. `participates-in` is the correct, weaker type: Norway
+takes part in the ESS under the EEA Agreement's own statistical
+provisions (Annex XXI and Protocol 30, per `efta.int`'s own page on the
+subject, itself bot-walled in this environment and not independently
+read) rather than as a member.
 
 ## ⚠ `coverage: low`
 
-Only the institute's own front page and the Eurostat ESS page were returned
-by search. Its statutory basis (*statistikkloven*), its governance and its
-relationship to Eurostat are all unestablished. Compare [[PL-GUS]] and
-[[DE-DESTATIS]], which have both a statute and an ESS edge.
+Its statutory basis (*statistikkloven*) and its internal governance
+remain unestablished. Compare [[PL-GUS]] and [[DE-DESTATIS]], which have
+both a statute and an ESS edge.
+
+## Relationships
+
+- `part-of` [[NO]] — anchor edge.
+- `participates-in` [[EU-ESS]] — added 2026-09-13, on the EEA Agreement's
+  statistical provisions rather than as a member state.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, all four read directly.
