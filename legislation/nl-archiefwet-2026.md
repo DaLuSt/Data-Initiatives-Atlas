@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: 2027-01-01
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-13"
 previous_version: NL-ARCHIEFWET-1995
 successor: null
 
@@ -37,7 +37,7 @@ relationships:
   - type: supersedes
     target: NL-ARCHIEFWET-1995
     source: fact
-    evidence: "Confirmed by reading the Act's own official Staatsblad publication directly (2026-08-27, zoek.officielebekendmakingen.nl/stb-2026-149.html): 'Wet van 13 mei 2026 tot intrekking van de Archiefwet 1995 en vervanging door een nieuwe Archiefwet' — a law explicitly titled as repealing the Archiefwet 1995 and replacing it with a new Archives Act. It was signed 13 May 2026 and published in the Staatsblad on 19 June 2026 (Stb. 2026, 149). Its own Article 12.14 defers the exact entry-into-force date to a royal decree not yet issued ('op een bij koninklijk besluit te bepalen tijdstip'), so 1 January 2027 is not yet fixed by the Act's own text — it is the intended date stated by nationaalarchief.nl's own knowledge-base page, read directly this pass, and by rijksoverheid.nl. The Eerste Kamer's own dossier, also read directly, confirms it passed the Eerste Kamer as a hamerstuk on 12 May 2026, one day before signature."
+    evidence: "Confirmed by reading the Act's own official Staatsblad publication directly (2026-08-27, zoek.officielebekendmakingen.nl/stb-2026-149.html): 'Wet van 13 mei 2026 tot intrekking van de Archiefwet 1995 en vervanging door een nieuwe Archiefwet' — a law explicitly titled as repealing the Archiefwet 1995 and replacing it with a new Archives Act. It was signed 13 May 2026 and published in the Staatsblad on 19 June 2026 (Stb. 2026, 149). Its own Article 12.14 defers the exact entry-into-force date to a royal decree not yet issued ('op een bij koninklijk besluit te bepalen tijdstip'), so 1 January 2027 is not yet fixed by the Act's own text — it is the intended date stated by nationaalarchief.nl's own knowledge-base page, read directly this pass, and by rijksoverheid.nl. The Eerste Kamer's own dossier, also read directly, confirms it passed the Eerste Kamer as a hamerstuk on 12 May 2026, one day before signature. NARROWED 2026-09-13: confirmed by reading nationaalarchief.nl's own 'Uitstel beoogde datum inwerkingtreding nieuwe Archiefwet' news item directly, the intended date was originally 1 July 2026 (per a 19 September 2024 government letter) before Minister Moes (OCW) informed the Tweede Kamer of the postponement to 1 January 2027 — no royal decree had been issued at the time that page was published, and the page states explicitly that both Eerste Kamer passage and lower-level regulations still had to be completed first. This is a Minister's own stated intention communicated to Parliament, stronger sourcing than the prior pass's knowledge-base note, but still not the Act's own confirmed commencement."
     confidence: high
     valid_from: 2027-01-01
     valid_until: null
@@ -61,10 +61,20 @@ sources:
     url: "https://zoek.officielebekendmakingen.nl/stb-2026-149.html"
     publisher: "Overheid.nl (Officiële bekendmakingen)"
     accessed: "2026-08-27"
+  - title: "Uitstel beoogde datum inwerkingtreding nieuwe Archiefwet"
+    url: "https://www.nationaalarchief.nl/archiveren/nieuws/uitstel-beoogde-datum-inwerkingtreding-nieuwe-archiefwet"
+    publisher: "Nationaal Archief"
+    accessed: "2026-09-13"
 ---
 
 # Archiefwet 2026
 
+> **Narrowed 2026-09-13**, closing part of `discovery/unresolved.md` row
+> #198. Nationaal Archief's own news item confirms the intended
+> commencement date was originally 1 July 2026, postponed by Minister
+> Moes (OCW) to 1 January 2027 in a statement to the Tweede Kamer — see
+> below.
+>
 > **Verified 2026-08-27, major update.** This bill is no longer a bill: the
 > Staatsblad's own text, read directly this pass and added as a new source,
 > confirms it was **signed 13 May 2026 and published as Stb. 2026, 149 on
@@ -86,6 +96,24 @@ is the intended commencement stated consistently by nationaalarchief.nl's
 own knowledge base and by rijksoverheid.nl, both read directly this pass,
 and is recorded here as the best-available estimate rather than a date the
 Act itself confirms.
+
+## The 1 July 2026 date was postponed, closed 2026-09-13
+
+Confirmed by reading nationaalarchief.nl's own "Uitstel beoogde datum
+inwerkingtreding nieuwe Archiefwet" news item directly: the government's
+originally intended commencement date, stated in a letter of 19
+September 2024, was **1 July 2026** — not previously recorded on this
+entity. Minister Moes (OCW) subsequently informed the Tweede Kamer of a
+postponement, stating the aim "de nieuwe Archiefwet met ingang van 1
+januari 2027 in werking te laten treden" (to bring the new Archiefwet
+into force as of 1 January 2027). At the time that page was published,
+no royal decree had been issued: the page names both the Eerste Kamer's
+passage of the bill and completion of the lower-level regulations
+(*lagere regelgeving*) as still outstanding conditions. This is a
+Minister's own stated intention communicated to Parliament — stronger
+sourcing for the 1 January 2027 date than the knowledge-base note the
+prior pass relied on — but it is still not the Act's own confirmed
+commencement via Article 12.14's royal decree.
 
 It modernises archival law to match digital information management
 practice: concepts are adapted to the digital environment,
