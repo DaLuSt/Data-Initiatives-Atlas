@@ -22,7 +22,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-09-13"
 previous_version: null
 successor: null
 
@@ -33,6 +33,7 @@ related_entities:
   - "NO"
   - EU-EUROGEOGRAPHICS
   - UN-GGIM
+  - NO-GEODATALOVEN
 relationships:
   - type: part-of
     target: "NO"
@@ -87,6 +88,9 @@ sources:
 > kartverket.no's own English page; the historical Norwegian name
 > "Statens kartverk" was confirmed on Norwegian Wikipedia, added as a
 > source this pass.
+>
+> **Updated 2026-09-13**: Norway's INSPIRE transposition is now
+> [[NO-GEODATALOVEN]], closing `discovery/unresolved.md` row #108.
 
 ## Description
 
@@ -104,18 +108,21 @@ hold. The entity is deliberately minimal rather than absent.
 
 ## What is not established, and therefore not asserted
 
-- Its **statutory basis** — no act was identified.
+- Its **statutory basis** — no act was identified for Kartverket itself
+  (as distinct from Norway's INSPIRE transposition, closed below).
 - Its relationship to **Geonorge** and *Norge digitalt*, Norway's spatial
   data infrastructure and portal, which the second source names.
-- Whether Norway has transposed the **INSPIRE Directive**. [[EU-INSPIRE]]
-  applies in six member states in this Atlas; whether it was incorporated
-  into the EEA Agreement, and by which act it takes effect in Norway, was
-  **not researched**. Given the [[NO]] anchor's whole argument, that
-  question cannot be answered by assuming the member-state answer.
 
-Its participation in [[UN-GGIM]], the fourth gap logged here, is now
-asserted — see above. The remaining three are logged in
-`discovery/unresolved.md`.
+**Closed 2026-09-13**: Norway's INSPIRE transposition is now
+[[NO-GEODATALOVEN]] (LOV-2010-09-03-56), `implements-requirement-from`
+[[EU-INSPIRE]] via [[INTL-EEA-JCD-55-2010]] (the EEA Joint Committee
+Decision that incorporated the directive, 30 April 2010) — closing
+`discovery/unresolved.md` row #108. Whether Kartverket itself
+administers the Act is plausible but not sourced, so no edge is asserted
+between them.
+
+Its participation in [[UN-GGIM]] is asserted above. The remaining gaps
+are logged in `discovery/unresolved.md`.
 
 ## Sources
 

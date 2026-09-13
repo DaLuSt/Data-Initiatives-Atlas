@@ -57,6 +57,9 @@ Anchor entity: [[NO]]
   1 January 2019, added 2026-09-12
 - [[NO-ETTERRETNINGSTJENESTELOVEN]] — Intelligence Service Act,
   LOV-2020-06-19-77, in force 1 January 2021, added 2026-09-13
+- [[NO-GEODATALOVEN]] — Act on Infrastructure for Geographic
+  Information, LOV-2010-09-03-56, added 2026-09-13, transposing
+  [[EU-INSPIRE]] via [[INTL-EEA-JCD-55-2010]]
 
 ## Platforms
 
