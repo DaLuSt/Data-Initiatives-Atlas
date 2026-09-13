@@ -26,7 +26,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-13"
 previous_version: null
 successor: null
 
@@ -73,6 +73,14 @@ sources:
     url: "https://www.springerprofessional.de/automobilwirtschaft/unternehmen---institutionen/was-ist-catena-x-/50174986"
     publisher: "Springer Professional"
     accessed: "2026-08-28"
+  - title: "Catena-X Launches World's First Cross-Border Automotive Industry Data Ecosystem Between China and Europe"
+    url: "https://catena-x.net/news/catena-x-launches-worlds-first-cross-border-automotive-industry-data-ecosystem-between-china-and-europe/"
+    publisher: "Catena-X Automotive Network e.V."
+    accessed: "2026-09-13"
+  - title: "Catena-X launches China-Europe auto data ecosystem"
+    url: "https://www.bestmag.co.uk/catena-x-launch-china-europe-auto-data-ecosystem/"
+    publisher: "Best Magazine"
+    accessed: "2026-09-13"
 ---
 
 # Catena-X Automotive Network
@@ -85,6 +93,15 @@ sources:
 > `verification: primary-source`. Both relationships this entity carries
 > are now confirmed by two or three independently-read primary pages each,
 > not the search-engine snippets they previously rested on.
+>
+> **Narrowed 2026-09-13**, closing part of `discovery/unresolved.md` row
+> #64 (the row asked for a directly-cited `catena-x.net` source; the
+> previous pass consulted the site via search but did not add it to the
+> formal source list). A catena-x.net press release, read directly and
+> now added as a frontmatter source, and an independent trade-press
+> corroboration give the "contested practical record" section below a
+> concrete, dated, named operational milestone rather than only the
+> operator's general "fully operational" claim.
 
 ## Description
 
@@ -131,6 +148,23 @@ whether the network delivers in practice, rather than adopting either
 side's framing. `status: active` reflects that the network continues to
 exist and expand institutionally; it says nothing about adoption, which
 remains contested per the sources above.
+
+**A concrete milestone, added 2026-09-13.** Confirmed by reading
+catena-x.net's own press release directly (22 July 2026), corroborated
+independently by Best Magazine's trade-press coverage: Catena-X named
+**Zhonglian** as its **second operating partner and first presence
+outside Europe**, to run core market services and act as the regulatory
+interface for a new cross-border data ecosystem linking Europe and China,
+launched jointly with the China Association of Automobile Manufacturers
+(CAAM) and VDA China. Operations are scheduled to begin **mid-November
+2026**. The stated purpose is battery-passport data recognised under both
+Chinese and EU rules ahead of the EU Battery Regulation's mandatory
+battery-passport requirement from **February 2027** — the Battery
+Regulation itself is not an Atlas entity, and no edge is asserted to it.
+This is a specific, named, dated commitment rather than the general
+"fully operational" language the operator's page already carried, though
+it does not on its own resolve WirtschaftsWoche's separate scepticism
+about adoption depth within Europe.
 
 ## ⚠ `country: DE` is the weakest field in this entity
 
@@ -191,10 +225,9 @@ therefore correct rather than an omission.
 
 ## Sources
 
-Listed in frontmatter, all five fetched this pass — four loaded with
-substantive content, one (Springer Professional) paywalled to a stub.
-**No catena-x.net source was previously cited**; its current homepage and
-news pages were read this pass in support of the "contested practical
-record" section above but are not added to the formal source list since
-they were consulted via search rather than as a frontmatter-listed
-citation for this re-verification round.
+Listed in frontmatter, seven of seven read directly across two passes.
+The original five: four loaded with substantive content, one (Springer
+Professional) paywalled to a stub. Two added 2026-09-13 — catena-x.net's
+own press release and an independent trade-press corroboration — closing
+the previous gap where the operator's site was consulted via search but
+never added as a formal citation.
