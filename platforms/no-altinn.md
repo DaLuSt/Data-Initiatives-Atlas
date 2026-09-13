@@ -18,7 +18,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-09-13"
 previous_version: null
 successor: null
 
@@ -40,10 +40,10 @@ relationships:
     valid_until: null
   - type: maintained-by
     target: NO-DIGDIR
-    source: interpretation
-    evidence: "altinn.no's own site footer, read directly (2026-08-22), identifies the publisher as 'Digdir Digitaliseringsdirektoratet, Postboks 1382 Vika, 0114 Oslo. Org.nr. 991 825 827' — Digdir's own organisation number and address, appearing on Altinn's own site rather than in a third-party description. This is new evidence this pass: the entity previously found no source naming Altinn's current operator, only its historical association with Brønnøysundregistrene. A site's own publisher footer is not the same claim as an explicit 'Digdir operates Altinn' sentence, hence `source: interpretation` rather than `fact`."
-    confidence: low
-    valid_from: null
+    source: fact
+    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP (discovery/unresolved.md row #110). Upgraded from `source: interpretation` (a publisher footer alone) by reading no.wikipedia.org's own Brønnøysundregistrene article directly (2026-09-13), which states explicitly: 'Brønnøysundregistrene hadde frem til 1. januar 2020 forvaltningsansvar for Altinn. Da ble Altinn en del av Digitaliseringsdirektoratet sammen med tidligere Direktoratet for forvaltning og IKT' (Brønnøysundregistrene held administrative responsibility for Altinn until 1 January 2020, when Altinn became part of Digitaliseringsdirektoratet together with the former Directorate for Administration and ICT). This is an explicit operating-transfer statement, not an inference from a footer, though it rests on a secondary (Wikipedia) rather than primary source — `confidence: medium` rather than `high`. Independently, altinn.no's own footer (read 2026-08-22) already named Digdir as publisher, and brreg.no's own history page, read directly this pass, does not contradict the transfer (it only dates Altinn's 2003 founding and does not itself discuss the 2020 change)."
+    confidence: medium
+    valid_from: 2020-01-01
     valid_until: null
 
 sources:
@@ -55,6 +55,15 @@ sources:
     url: "https://www.digdir.no/digdir/kraftig-vekst-i-bruk-av-felleslosninger/1206"
     publisher: "Digitaliseringsdirektoratet (Digdir)"
     accessed: "2026-08-22"
+  - title: "Brønnøysundregistrene"
+    url: "https://no.wikipedia.org/wiki/Br%C3%B8nn%C3%B8ysundregistrene"
+    publisher: "Wikipedia (Norwegian)"
+    accessed: "2026-09-13"
+  - title: "Our history"
+    url: "https://www.brreg.no/en/about-us-2/this-is-us/our-history/"
+    publisher: "Brønnøysundregistrene"
+    accessed: "2026-09-13"
+    note: "Confirms Altinn's 2003 founding; does not itself discuss the 2020 operational transfer, so does not independently corroborate it."
 ---
 
 # Altinn
@@ -62,6 +71,9 @@ sources:
 > **Verified 2026-08-22.** Both cited pages were read directly. A finding
 > changes this entity's previous conclusion: see "A custodian found after
 > all" below.
+>
+> **Updated 2026-09-13**: the `maintained-by` edge is upgraded to
+> `source: fact`, closing `discovery/unresolved.md` row #110 — see below.
 
 ## Description
 
@@ -79,34 +91,43 @@ reservation register, the digital mailbox, eSignering, ELMA, eInnsyn,
 eFormidling — and Altinn is not on that list, appearing instead in a
 sentence about solutions Digdir *modernises*.
 
-That distinction still holds; no source states in a sentence that Digdir
-operates Altinn. But reading altinn.no's own site directly this pass
-found something the earlier search-only compile could not: the site's
-own footer publisher block reads "Digdir Digitaliseringsdirektoratet,
-Postboks 1382 Vika, 0114 Oslo. Org.nr. 991 825 827" — Digdir's own
-address and organisation number, on Altinn's own page. `maintained-by`
-[[NO-DIGDIR]] is now asserted on that basis, at `confidence: low` and
-`source: interpretation` — a publisher footer is real evidence of who
-currently runs a site, but it is not the same claim as an explicit
-operating statement.
+That distinction still held as of the 2026-08-22 pass; no source read
+then stated in a sentence that Digdir operates Altinn, only that
+altinn.no's own footer publisher block reads "Digdir
+Digitaliseringsdirektoratet, Postboks 1382 Vika, 0114 Oslo. Org.nr. 991
+825 827" — real evidence, but not an explicit operating statement.
 
-Altinn was historically operated by the Brønnøysund Register Centre
-(Brønnøysundregistrene). Whether that arrangement has formally ended, or
-Digdir now operates the technical platform under a continuing
-Brønnøysundregistrene role, was not established.
+**Closed 2026-09-13**: reading `no.wikipedia.org`'s own Brønnøysundregistrene
+article directly supplies the explicit statement. It says plainly:
+"Brønnøysundregistrene hadde frem til 1. januar 2020 forvaltningsansvar
+for Altinn. Da ble Altinn en del av Digitaliseringsdirektoratet sammen
+med tidligere Direktoratet for forvaltning og IKT" (Brønnøysundregistrene
+held administrative responsibility for Altinn until 1 January 2020, when
+Altinn became part of Digitaliseringsdirektoratet together with the
+former Directorate for Administration and ICT). Brønnøysundregistrene's
+own "Our history" page, also read directly, confirms Altinn's 2003
+founding without contradicting the transfer — it simply does not discuss
+it. `maintained-by` [[NO-DIGDIR]] is upgraded to `source: fact`,
+`confidence: medium` (a secondary rather than primary source, but an
+explicit statement rather than an inferred one), with `valid_from`
+2020-01-01.
 
 ## Not modelled
 
 - **Brønnøysundregistrene**, the register centre — which would also be
   Norway's entry point into the business-register layer where [[NL-NHR]]
-  sits.
+  sits. It retains no sourced ongoing role in Altinn since the 2020
+  transfer.
 - Altinn's **service catalogue** and its authorisation model.
 
 ## Relationships
 
 - `part-of` [[NO]].
-- `maintained-by` [[NO-DIGDIR]], at `confidence: low` — see above.
+- `maintained-by` [[NO-DIGDIR]] — since 1 January 2020, upgraded to
+  `source: fact` 2026-09-13.
 
 ## Sources
 
-Listed in frontmatter, both read directly this pass.
+Listed in frontmatter. The original two were read directly in the
+2026-08-22 pass; the Wikipedia article and Brønnøysundregistrene's own
+history page were added and read directly 2026-09-13.
