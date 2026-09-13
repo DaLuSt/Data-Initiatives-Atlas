@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: 2014-01-01
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-13"
 previous_version: null
 successor: null
 
@@ -31,7 +31,8 @@ domains:
   - DOMAIN-GOVERNMENT
 organisations:
   - UN-UNSD
-related_entities: []
+related_entities:
+  - NL-WET-CBS
 relationships:
   - type: maintained-by
     target: UN-UNSD
@@ -62,6 +63,11 @@ sources:
 > the full 1991 → 1994 → 2014 lineage in its own words, including the exact
 > General Assembly resolution number. The publications sub-page returned a
 > 404 this pass and was not read.
+>
+> **Updated 2026-09-13**: this file's own "Queued" note on whether
+> [[NL-WET-CBS]] aligns with the FPOS was already answered — negatively —
+> by that entity's own 2026-09-05 pass, but never cross-applied here or on
+> `discovery/unresolved.md` row #195 until now. See below.
 
 ## Description
 
@@ -87,17 +93,22 @@ The principles also govern SDG indicator practice: SDG indicators are to be
 disaggregated "in accordance with the Fundamental Principles of Official
 Statistics".
 
-## A national chain that could be completed
+## A national chain, checked and found absent
 
 Countries are tracked on whether their statistical legislation aligns with
-the FPOS. That makes [[NL-WET-CBS]] — the Dutch statistics act, which the
-Atlas records as guaranteeing [[NL-CBS]]'s independence — a candidate
+the FPOS. [[NL-WET-CBS]] — the Dutch statistics act, which the Atlas
+records as guaranteeing [[NL-CBS]]'s independence — was the candidate
 downstream node.
 
-**No relationship is asserted.** No source read states that the Dutch act
-implements or aligns with the FPOS. Establishing it would give the Atlas an
-international → national chain in the statistics domain, parallel to the
-DCAT chain in metadata. Queued.
+**Closed as a documented negative, 2026-09-05**: [[NL-WET-CBS]]'s own file
+records reading the act's own consolidated text on `wetten.overheid.nl`
+directly (identifier BWBR0015926), covering both the considerans and the
+articles, and finding "no mention of the United Nations, the Fundamental
+Principles, or any international statistical principles by name." The act
+references European statistical frameworks extensively but nothing at UN
+level. **No relationship is asserted** — this is a checked-and-negative
+finding, not an unresearched gap, closing `discovery/unresolved.md`
+row #195's remaining "UN-FPOS half."
 
 ## Relationships
 
