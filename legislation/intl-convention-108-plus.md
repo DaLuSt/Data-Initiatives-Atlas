@@ -31,7 +31,7 @@ verification: primary-source
 
 start_date: 2018-10-10
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-13"
 previous_version: null
 successor: null
 
@@ -182,11 +182,14 @@ and the regional one compatible.
 [[EU-GDPR]] Recital 105 makes accession to Convention 108 a factor in
 adequacy assessments. Convention 108+ raises what accession means. A state
 seeking an EU adequacy decision and having no prospect of EU membership can
-reach for this instrument, and [[MU]] Mauritius is cited elsewhere in this
-batch as having ratified the amending protocol — though the one source for
-that specific detail (dataprotection.govmu.org, cited on
-[[INTL-CONVENTION-108]]) returned HTTP 404 on retry this pass, so treat the
-Mauritius ratification as unconfirmed rather than settled.
+reach for this instrument, and [[MU]] Mauritius has ratified the amending
+protocol. **Closed, stale note fixed 2026-09-13**: the original citation
+for that detail (dataprotection.govmu.org, cited on
+[[INTL-CONVENTION-108]]) returned HTTP 404, but [[MU]]'s own file
+independently confirms the ratification via a different, working source
+read the same pass: lemauricien.com, a Mauritian newspaper, states
+directly that Mauritius is the first African country to ratify Convention
+108+ — the dead citation is superseded, not the fact itself.
 
 That is the mechanism by which a Council of Europe treaty shapes data
 protection law in jurisdictions that will never be bound by EU law.

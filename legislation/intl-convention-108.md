@@ -31,7 +31,7 @@ verification: primary-source
 
 start_date: 1981-01-28
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-13"
 previous_version: null
 successor: null
 
@@ -68,7 +68,7 @@ relationships:
   - type: applies-in
     target: MU
     source: fact
-    evidence: "Eight non-Council of Europe countries from Africa and Latin America have ratified Convention 108: Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia and Uruguay; Mauritius has additionally ratified the amending protocol CETS 223 (en.wikipedia.org 'Convention for the Protection of Individuals with Regard to Automatic Processing of Personal Data'; dataprotection.govmu.org 'Communiqué on Ratification of Mauritius on the Protocol amending Convention 108'). Wikipedia read directly 2026-08-28, confirming the eight-state list, but not the Mauritius-specific CETS 223 ratification detail. dataprotection.govmu.org returned HTTP 404 on retry 2026-08-28 — the page is gone, not merely blocked — so the Mauritius/CETS-223 detail rests on an unread, now-dead citation and should be treated as unconfirmed."
+    evidence: "Eight non-Council of Europe countries from Africa and Latin America have ratified Convention 108: Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia and Uruguay; Mauritius has additionally ratified the amending protocol CETS 223 (en.wikipedia.org 'Convention for the Protection of Individuals with Regard to Automatic Processing of Personal Data'). CLOSES A PREVIOUSLY-FLAGGED GAP (discovery/unresolved.md row #213, and this entity's own prior note that dataprotection.govmu.org 404'd, leaving the CETS 223 detail unconfirmed). [[MU]]'s own file, read this same pass (2026-08-28), independently confirms the ratification via a different, working source: lemauricien.com, a Mauritian newspaper, states directly that Mauritius is 'le 6e État... ainsi que le premier pays d'Afrique à ratifier la Convention 108+' (the 6th state overall and the first African country to ratify Convention 108+). The dead govmu.org citation is superseded, not merely worked around."
     confidence: medium
     valid_from: null
     valid_until: null
