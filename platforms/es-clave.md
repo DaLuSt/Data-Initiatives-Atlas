@@ -28,7 +28,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-06"
+last_verified: "2026-09-13"
 previous_version: null
 successor: null
 
@@ -94,6 +94,18 @@ sources:
     url: "https://www.boe.es/buscar/doc.php?id=BOE-A-2014-10264"
     publisher: "Boletín Oficial del Estado (BOE)"
     accessed: "2026-09-06"
+  - title: "Cl@ve PIN — ¿Qué es Cl@ve PIN?"
+    url: "https://clave.gob.es/clave-pin/que-es"
+    publisher: "Cl@ve — Gobierno de España"
+    accessed: "2026-09-13"
+  - title: "Cl@ve Permanente — ¿Qué es Cl@ve Permanente?"
+    url: "https://clave.gob.es/clave-permanente/que-es"
+    publisher: "Cl@ve — Gobierno de España"
+    accessed: "2026-09-13"
+  - title: "Cartera Digital Beta, la aplicación que incluye el sistema de verificación de la mayoría de edad en el acceso a contenidos para adultos, estará disponible al final del verano"
+    url: "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/transformacion-digital-y-funcion-publica/Paginas/2024/010724-cartera-digital-beta.aspx"
+    publisher: "La Moncloa — Gobierno de España"
+    accessed: "2026-09-13"
 ---
 
 # Cl@ve
@@ -118,6 +130,11 @@ sources:
 > **Also closed 2026-09-06: operator and legal basis.** The BOE's own
 > text of Orden PRE/1838/2014, read directly, names both — see "Operator
 > and legal basis, closed 2026-09-06" below.
+>
+> **Closed 2026-09-13: PIN/Permanente distinction and wallet status.**
+> clave.gob.es's own pages and a La Moncloa press release, all read
+> directly, close the remainder of `discovery/unresolved.md` row #94 —
+> see below.
 
 ## Description
 
@@ -207,14 +224,37 @@ variant, **Cl@ve Móvil**, alongside PIN, Permanente and Firma — confirmed
 by reading administracion.gob.es directly, which did not previously
 appear in this entity's description.
 
-**Still open**: Cl@ve's user numbers, the precise operational distinction
-between Cl@ve PIN and Cl@ve Permanente (a WebSearch-only synthesis
-describes PIN as short-validity/occasional-use and Permanente as
-longer-lived/frequent-use, but this was not independently confirmed by a
-directly-read primary page this pass), and the status of any Spanish
-digital identity wallet (WebSearch results describe a "Cartera Digital
-Beta" app already in testing ahead of the EU's 24 November 2026 EUDI
-Wallet deadline, again not independently confirmed by direct fetch).
+**Still open**: Cl@ve's user numbers.
+
+## PIN vs. Permanente, and the wallet status, closed 2026-09-13
+
+**Closes the remainder of `discovery/unresolved.md` row #94.** Both
+questions the prior pass could confirm only via WebSearch synthesis are
+now independently confirmed by directly-read government pages.
+
+Confirmed by reading clave.gob.es's own "¿Qué es Cl@ve PIN?" and "¿Qué
+es Cl@ve Permanente?" pages directly: **Cl@ve PIN** is "una forma de
+realizar trámites por Internet con una validez limitada en el tiempo y
+que se puede renovar" (a way to carry out procedures online with
+time-limited, renewable validity), combining a user-chosen code with a
+PIN sent via the Cl@ve PIN app or SMS — suited to occasional use.
+**Cl@ve Permanente** is designed "para las personas que necesitan
+acceder de forma habitual a los servicios electrónicos de la
+Administración" (for people who need to access the Administration's
+electronic services regularly), using the DNI/NIE plus a password set
+at activation, reinforced for higher-security procedures by an SMS
+one-time code.
+
+Confirmed by reading La Moncloa's own press release directly
+(lamoncloa.gob.es, 1 July 2024): Spain has launched **Cartera Digital
+Beta**, a government-issued mobile wallet storing an age-verification
+credential, explicitly "framed within the eIDAS2 standard, which
+establishes the mandatory requirement for content platforms to accept
+European digital identity wallets no later than October 2027." This is
+a real, launched application — not a plan — but it is a narrow
+first-generation credential wallet, not the full European Digital
+Identity Wallet the Regulation eventually requires; no source read
+states Cl@ve itself will become or feed into that wallet.
 
 ## Relationships
 
