@@ -20,7 +20,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-09-13"
 previous_version: null
 successor: null
 
@@ -31,6 +31,7 @@ related_entities:
   - EU-EDPB
   - EU-GDPR
   - LU-LOI-PROTECTION-DONNEES
+  - LU-LOI-DONNEES-PENAL-2018
 relationships:
   - type: participates-in
     target: EU-EDPB
@@ -112,11 +113,18 @@ modelled. `legilux.public.lu` itself remains unreadable (JavaScript
 single-page application, no static content). The act is now modelled as
 [[LU-LOI-PROTECTION-DONNEES]].
 
+**Narrowed 2026-09-13**: the second law is now [[LU-LOI-DONNEES-PENAL-2018]],
+sourced directly this time — its own Article 2(1)(15°), read via Legilux's
+static filestore subdomain (a working alternate to the unreadable main
+site), names the CNPD as one of its two supervisory authorities, giving
+this entity a second statutory basis alongside the GDPR one.
+
 ## Relationships
 
 - `participates-in` [[EU-EDPB]].
 - Inbound: `applies-to` from [[LU-LOI-PROTECTION-DONNEES]], the act that
-  organises this authority.
+  organises this authority, and from [[LU-LOI-DONNEES-PENAL-2018]], its
+  companion act for criminal and national-security data processing.
 
 ## Sources
 
