@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: 2025-08-22
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-09-13"
 previous_version: PT-AMA
 successor: null
 
@@ -36,6 +36,8 @@ related_entities:
   - PT-DADOS-GOV
   - PT-CMD
   - PT-CARTAO-CIDADAO
+  - PT-GOV-PT
+  - PT-IAP
 relationships:
   - type: part-of
     target: PT
@@ -105,11 +107,19 @@ via the autenticacao.gov.pt portal: [[PT-CMD]] (Chave Móvel Digital) and
 [[PT-CARTAO-CIDADAO]] (Cartão de Cidadão). Both closed a gap [[PT-AMA]]'s
 own entity had flagged as unmodelled.
 
+## The citizen-services and interoperability portals, added 2026-09-13
+
+ARTE also operates [[PT-GOV-PT]] (the gov.pt portal, successor to
+ePortugal since October 2024) and [[PT-IAP]] (the public administration's
+interoperability platform, operating since 2007) — the last two entries
+on [[PT-AMA]]'s own "Not modelled" list.
+
 ## Relationships
 
 - `part-of` [[PT]] — anchor edge.
-- Operates [[PT-DADOS-GOV]], [[PT-CMD]] and [[PT-CARTAO-CIDADAO]] — the
-  `maintained-by` edges live on those entities, pointing here.
+- Operates [[PT-DADOS-GOV]], [[PT-CMD]], [[PT-CARTAO-CIDADAO]],
+  [[PT-GOV-PT]] and [[PT-IAP]] — the `maintained-by` edges live on those
+  entities, pointing here.
 
 ## Sources
 

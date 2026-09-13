@@ -25,7 +25,7 @@ verification: primary-source
 
 start_date: null
 end_date: 2025-08-22
-last_verified: "2026-08-26"
+last_verified: "2026-09-13"
 previous_version: null
 successor: PT-ARTE
 
@@ -36,6 +36,8 @@ related_entities:
   - PT
   - PT-DADOS-GOV
   - PT-ARTE
+  - PT-GOV-PT
+  - PT-IAP
 relationships:
   - type: part-of
     target: PT
@@ -100,10 +102,16 @@ homepage footer, read directly this pass, credits ARTE by name — so the
 `maintained-by` edge is now sourced and lives on [[PT-DADOS-GOV]],
 pointing to [[PT-ARTE]], not to this (superseded) entity.
 
-## Not modelled
+## ePortugal and iAP, closed 2026-09-13
 
-- **ePortugal**, the citizen services portal AMA operated.
-- The **iAP**, Portugal's public administration interoperability platform.
+Both close now. **ePortugal**, the citizen services portal AMA operated,
+no longer exists under that name — `eportugal.gov.pt` redirects to
+`gov.pt`, now modelled as [[PT-GOV-PT]], sourced directly from gov.pt's
+own "Sobre" page, which states in its own words that gov.pt replaced
+ePortugal in October 2024. **The iAP**, Portugal's public administration
+interoperability platform, is now [[PT-IAP]], sourced directly from
+`iap.gov.pt`'s own page and a `digital.gov.pt` ministry article. Both are
+`maintained-by` [[PT-ARTE]], the same body that succeeded this entity.
 
 **Closed 2026-09-06**: Portugal's digital identity means are now modelled
 as [[PT-CMD]] (Chave Móvel Digital) and [[PT-CARTAO-CIDADAO]] (Cartão de

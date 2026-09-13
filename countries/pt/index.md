@@ -48,6 +48,12 @@ Anchor entity: [[PT]]
   at High assurance, 8 Apr 2020; added 2026-09-06)_
 - [[PT-CARTAO-CIDADAO]] — Cartão de Cidadão, national smart ID card
   _(eIDAS-notified at High assurance, 28 Feb 2019; added 2026-09-06)_
+- [[PT-GOV-PT]] — gov.pt, the aggregating public-services portal
+  _(replaced ePortugal in October 2024; `maintained-by` [[PT-ARTE]];
+  added 2026-09-13)_
+- [[PT-IAP]] — Plataforma de Interoperabilidade da Administração Pública
+  _(operating since 2007; mandatory since 2015; `maintained-by`
+  [[PT-ARTE]]; added 2026-09-13)_
 
 ---
 
@@ -80,8 +86,13 @@ rather than silently editing AMA's file in place.
   administrations. The Atlas has no sub-national level.
 - The **Conselho Superior de Segurança do Ciberespaço (CSSC)**, an
   advisory body [[PT-DECRETO-LEI-125-2025]] reportedly also establishes.
-- **ePortugal**, the citizen services portal.
-- The **iAP** interoperability platform.
+- **Resolução do Conselho de Ministros n.º 42/2015** and **Decreto-Lei
+  n.º 49/2024**, the legal instruments behind [[PT-GOV-PT]] and
+  [[PT-IAP]] — named in prose only, not modelled as legislation entities.
 
 ~~The **Chave Móvel Digital** and the **Cartão de Cidadão**~~ — closed
 2026-09-06, now [[PT-CMD]] and [[PT-CARTAO-CIDADAO]].
+
+~~**ePortugal**, the citizen services portal, and the **iAP**
+interoperability platform~~ — closed 2026-09-13, now [[PT-GOV-PT]] and
+[[PT-IAP]].
