@@ -22,7 +22,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-09-13"
 previous_version: null
 successor: null
 
@@ -98,6 +98,13 @@ the Board's adoption is what gives a new EIF version legal or normative
 force, nor does it resolve whether the Interoperable Europe Act itself
 supersedes, governs, or merely sits alongside the EIF as a framework. That
 narrower legal question remains open and is not force-closed here.
+
+## Observer status, cross-applied 2026-09-13
+
+[[EU-ENISA]]'s own file had flagged the Board as "not yet an Atlas
+entity" — stale, since fixed there. The `participates-in` edge for
+ENISA's observer status lives on [[EU-ENISA]]'s own file, pointing here,
+rather than duplicated on this entity.
 
 ## Relationships
 
