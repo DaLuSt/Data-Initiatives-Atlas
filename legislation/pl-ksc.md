@@ -10,9 +10,11 @@ description: >
   Polish act establishing the national cybersecurity system, originally of
   2018, as amended to implement the NIS2 Directive. The NIS2 amendment came
   into force on 3 April 2026. Poland missed the 17 October 2024
-  transposition deadline and received a European Commission letter of
-  formal notice alongside 22 other member states — the initial stage of
-  the EU infringement procedure, not a referral to the Court of Justice.
+  transposition deadline, received a European Commission letter of
+  formal notice alongside 22 other member states, and was later named
+  among 19 member states sent a reasoned opinion on 7 May 2025 — one
+  stage short of a referral to the Court of Justice, which Poland
+  avoided by completing transposition first.
   The amendment expands the scope from roughly 400 to roughly 42,000
   entities, replaces administrative designation with self-identification,
   introduces a distinction between critical and important entities, makes
@@ -27,13 +29,13 @@ country: PL
 region: EU
 
 status: active
-confidence: medium
+confidence: high
 coverage: medium
 verification: primary-source
 
 start_date: 2026-04-03
 end_date: null
-last_verified: "2026-09-06"
+last_verified: "2026-09-13"
 previous_version: null
 successor: null
 
@@ -60,8 +62,8 @@ relationships:
   - type: implements-requirement-from
     target: EU-NIS2
     source: fact
-    evidence: "Confirmed by reading gov.pl's own knowledge-base page, itwiz.pl and trecom.pl directly (2026-08-26): the amendment to the Act on the National Cybersecurity System (KSC), implementing NIS2, entered into force 3 April 2026 (gov.pl's own date; trecom.pl separately reports 2 April, a one-day discrepancy not resolved this pass in the government source's favour), expanding scope to new sectors (ICT services management, electronic communications, space, postal services, manufacturing, chemicals, food, waste management and nuclear facilities per gov.pl) with self-assessment and registration via the S46 system due by 3 October 2026. **Correction of a prior claim**: this entity previously stated Poland 'is in proceedings before the Court of Justice of the European Union.' None of the three sources read this pass, nor the European Commission's own digital-strategy.ec.europa.eu page (also read directly), support that. The Commission's page instead confirms Poland was among 23 member states sent a **letter of formal notice** — explicitly the first stage of the infringement procedure ('these countries now have two months to respond... in the absence of a satisfactory response, the Commission may decide to issue a reasoned opinion') — not a referral to the Court of Justice. No source read this pass confirms Poland reached the reasoned-opinion or referral stage before completing transposition."
-    confidence: medium
+    evidence: "Confirmed by reading gov.pl's own knowledge-base page, itwiz.pl and trecom.pl directly (2026-08-26): the amendment to the Act on the National Cybersecurity System (KSC), implementing NIS2, entered into force 3 April 2026 (gov.pl's own date; trecom.pl separately reports 2 April, a one-day discrepancy not resolved this pass in the government source's favour), expanding scope to new sectors (ICT services management, electronic communications, space, postal services, manufacturing, chemicals, food, waste management and nuclear facilities per gov.pl) with self-assessment and registration via the S46 system due by 3 October 2026. **Correction of a prior claim**: this entity previously stated Poland 'is in proceedings before the Court of Justice of the European Union.' None of the three sources read this pass, nor the European Commission's own digital-strategy.ec.europa.eu page (also read directly), support that. The Commission's page instead confirms Poland was among 23 member states sent a **letter of formal notice** — explicitly the first stage of the infringement procedure ('these countries now have two months to respond... in the absence of a satisfactory response, the Commission may decide to issue a reasoned opinion') — not a referral to the Court of Justice. **NARROWED 2026-09-13**: a second European Commission digital-strategy.ec.europa.eu page, read directly, confirms Poland *did* subsequently reach the reasoned-opinion stage — the Commission sent a reasoned opinion on 7 May 2025 to 19 member states named explicitly in the page's own text, including Poland, giving them two months to respond 'otherwise the Commission may decide to refer the cases to the Court of Justice.' Poland was not among the four states (Ireland, Spain, France, Netherlands) referred to the CJEU on 8 July 2026 per the Hunton Andrews Kurth alert already cited on those entities — consistent with Poland completing transposition on 3 April 2026, before any referral decision, and avoiding the next stage."
+    confidence: high
     valid_from: 2026-04-03
     valid_until: null
 
@@ -85,6 +87,10 @@ sources:
   - title: "Ustawa KSC 2026 — co zmienia nowelizacja NIS2"
     url: "https://legalgeek.pl/en/blog/nis2-ksc-2026-wprowadzenie/"
     publisher: "LegalGeek"
+  - title: "Commission calls on 19 Member States to fully transpose the NIS2 Directive"
+    url: "https://digital-strategy.ec.europa.eu/en/news/commission-calls-19-member-states-fully-transpose-nis2-directive"
+    publisher: "European Commission — Shaping Europe's digital future"
+    accessed: "2026-09-13"
 ---
 
 # KSC — Ustawa o krajowym systemie cyberbezpieczeństwa
@@ -97,6 +103,13 @@ sources:
 > The Commission's own page says Poland received a **letter of formal
 > notice** — the first infringement stage — not a court referral. See
 > below.
+>
+> **Narrowed 2026-09-13**, closing part of `discovery/unresolved.md` row
+> #153. A second European Commission page, read directly, confirms Poland
+> *did* go on to reach the reasoned-opinion stage — one step further than
+> the previous pass could confirm — on 7 May 2025, alongside 18 other
+> member states, before completing transposition on 3 April 2026 and
+> avoiding a CJEU referral. `confidence` raised to `high`.
 
 ## Description
 
@@ -135,21 +148,30 @@ the member state missed the 17 October 2024 deadline and was named among 23
 states sent a letter of formal notice by the European Commission.
 
 **This entity previously overstated that**, saying Poland "is in proceedings
-before the Court of Justice of the European Union." Re-reading this pass —
-the European Commission's own digital-strategy page, read directly — found
-no such thing: a letter of formal notice is the *first* stage of the EU
-infringement procedure, three steps short of a Court referral (formal
-notice → reasoned opinion → referral to the CJEU → judgment). Nothing read
-this pass places Poland even at the reasoned-opinion stage, let alone
-referred. The comparison this entity previously drew — "Spain drew a
-reasoned opinion, the stage before referral; Poland has been referred" — had
-the two the wrong way round: on what could be confirmed this pass, Spain's
-own file records a reasoned opinion, a *later* stage than the formal notice
-found here for Poland.
+before the Court of Justice of the European Union." Re-reading in the
+2026-08-26 pass — the European Commission's own digital-strategy page, read
+directly — found no such thing at the time: a letter of formal notice is
+the *first* stage of the EU infringement procedure, three steps short of a
+Court referral (formal notice → reasoned opinion → referral to the CJEU →
+judgment), and nothing read that pass placed Poland beyond the first stage.
+
+**Narrowed 2026-09-13**: a second Commission page, read directly, closes
+that gap the other way — Poland *did* progress to the reasoned-opinion
+stage, the second of the four, on **7 May 2025**, named explicitly
+alongside 18 other member states (including Bulgaria, Germany, Ireland,
+Spain, France and the Netherlands). Poland was not, however, among the
+four states the Commission referred to the Court of Justice on 8 July
+2026 (Ireland, Spain, France, the Netherlands, per the same Hunton
+Andrews Kurth alert cited on those entities) — consistent with Poland
+completing transposition on 3 April 2026, ahead of any referral decision.
+Poland's own escalation path is now fully sourced: formal notice →
+reasoned opinion (7 May 2025) → transposition completed (3 April 2026),
+stopping one stage short of where Ireland, Spain, France and the
+Netherlands were referred.
 
 `status: active` is correct either way, and the Atlas still has no field for
 "transposed after a delay that drew Commission attention" — but the prose
-should describe the delay accurately, which it previously did not.
+now describes the delay's full extent rather than a partial reading of it.
 
 ## The amendment question, for the third time
 
@@ -196,7 +218,8 @@ original warrants its own entity is the same question [[NL-WBNI]] /
 
 ## Sources
 
-Listed in frontmatter. Four of five read directly this pass, including
-the European Commission's own page — the primary citation the CJEU claim
-needed, which is what caught the error. `legalgeek.pl` was not read this
-pass.
+Listed in frontmatter. Five of six read directly across two passes,
+including two separate European Commission digital-strategy pages — the
+first (2026-08-26) caught the overstated CJEU claim, the second
+(2026-09-13) supplied the reasoned-opinion date the first pass could not
+confirm. `legalgeek.pl` was not read either pass.
