@@ -30,7 +30,7 @@ verification: primary-source
 
 start_date: 2016-01-01
 end_date: null
-last_verified: "2026-09-06"
+last_verified: "2026-09-13"
 previous_version: null
 successor: null
 
@@ -47,6 +47,8 @@ related_entities:
   - NL-VNG
   - NL-SVB-BGT
   - NL-RIJKSWATERSTAAT
+  - NL-PRORAIL
+  - NL-RVO
 relationships:
   - type: governed-by
     target: NL-WET-BGT
@@ -140,7 +142,13 @@ the Atlas can name. Of the seven bronhouder categories:
   vocabulary has `local` but there is no obvious collective entity to create;
 - [[NL-RIJKSWATERSTAAT]] is an Atlas entity (added 2026-09-05), confirmed
   as a bronhouder by name via SVB-BGT's own site, read directly
-  2026-09-06 — **ProRail, Defence and RVO remain unmodelled**;
+  2026-09-06;
+- ~~[[NL-PRORAIL]] and [[NL-RVO]] — unmodelled~~ — closed 2026-09-13.
+  ProRail (the state-owned rail infrastructure manager) is confirmed as a
+  named bronhouder by SVB-BGT's own site; RVO is confirmed as a named
+  board representative by SVB-BGT's own "Bestuursleden" page. **Only the
+  Ministry of Defence remains unmodelled**, matching the Atlas's
+  convention of not modelling ministries in their own right;
 - ~~**SVB-BGT** — no entity; named in one source only~~ — closed
   2026-09-06, now [[NL-SVB-BGT]], sourced from its own site directly:
   a foundation (statutes ratified 15 April 2014) coordinating all seven
@@ -148,9 +156,9 @@ the Atlas can name. Of the seven bronhouder categories:
   of each on its board.
 
 So the graph shows a register maintained by one organisation. **Seven kinds
-of body actually maintain it.** This is the same shape as the WOZ and the
-BAG, and it is logged in `discovery/unresolved.md` as a single finding
-rather than three.
+of body actually maintain it**, five of them now named Atlas entities. This
+is the same shape as the WOZ and the BAG, and it is logged in
+`discovery/unresolved.md` as a single finding rather than three.
 
 ## Relationships
 

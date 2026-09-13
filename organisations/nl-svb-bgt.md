@@ -27,7 +27,7 @@ verification: primary-source
 
 start_date: 2014-04-15
 end_date: null
-last_verified: "2026-09-06"
+last_verified: "2026-09-13"
 previous_version: null
 successor: null
 
@@ -38,6 +38,8 @@ organisations: []
 related_entities:
   - NL-BGT
   - NL-RIJKSWATERSTAAT
+  - NL-PRORAIL
+  - NL-RVO
   - NL
 relationships:
   - type: part-of
@@ -113,10 +115,12 @@ and the annual budget.
 
 ## Not modelled
 
-- The individual bronhouder categories beyond [[NL-RIJKSWATERSTAAT]]
-  (already an Atlas entity): municipalities, water boards, provinces, the
-  Ministry of Defence, the Ministry of Agriculture (LVVN), ProRail and
-  RVO. See [[NL-BGT]]'s own "Not modelled" section.
+- The individual bronhouder categories beyond [[NL-RIJKSWATERSTAAT]],
+  [[NL-PRORAIL]] and [[NL-RVO]] (added 2026-09-13): municipalities,
+  water boards, provinces, the Ministry of Defence and the Ministry of
+  Agriculture (LVVN) themselves — categories rather than single named
+  organisations, or ministries the Atlas does not model in their own
+  right. See [[NL-BGT]]'s own "Not modelled" section.
 
 ## Sources
 
