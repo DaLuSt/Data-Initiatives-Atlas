@@ -31,6 +31,7 @@ related_entities:
   - NL-KADASTER
   - NL-TNO
   - NL-BZK
+  - NL-RIJKSWATERSTAAT
 relationships:
   - type: aligned-with
     target: NL-BOMOS
@@ -117,9 +118,9 @@ governance role.
 
 ## Relationships
 
-- Funded by [[NL-BZK]], [[NL-KADASTER]] and [[NL-TNO]], and also
-  Rijkswaterstaat (not yet an Atlas entity), per this pass's direct
-  reading.
+- Funded by [[NL-BZK]], [[NL-KADASTER]], [[NL-TNO]] and [[NL-RIJKSWATERSTAAT]]
+  (an Atlas entity since 2026-09-05, cross-applied here 2026-09-13), per
+  this pass's direct reading.
 - `aligned-with` [[NL-BOMOS]] — now `source: fact`, confirmed directly in
   Geonovum's own words.
 - Domain-specific counterpart to [[NL-FORUM-STANDAARDISATIE]] (Atlas
