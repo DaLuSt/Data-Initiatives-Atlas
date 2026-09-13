@@ -17,6 +17,13 @@ Anchor entity: [[NO]]
 > entity's previous restraint on that question (see the entity for the
 > full account).
 
+> **Updated 2026-09-13**: Norway's two remaining named security services
+> ([[NO-ETTERRETNINGSTJENESTEN]], [[NO-PST]]) are now Atlas entities,
+> closing `discovery/unresolved.md` row #112 — all three of Norway's
+> security services are modelled. [[NO-DATATILSYNET]] and [[NO-SSB]] were
+> also updated the same day to reflect their EEA-based participation in
+> [[EU-EDPB]] and [[EU-ESS]] respectively.
+
 > ⚠ **`NO` must be quoted in YAML.** `country: NO` unquoted parses as the
 > boolean `false` under YAML 1.1, which is what PyYAML implements. Every
 > Norwegian entity writes `id: "NO"` and `country: "NO"`. The frontmatter
@@ -28,18 +35,28 @@ Anchor entity: [[NO]]
 - [[NO-DIGDIR]] — Digitaliseringsdirektoratet _(sets direction **and** runs
   the national common solutions, like [[GB-GDS]] and [[FR-DINUM]])_
 - [[NO-DATATILSYNET]] — data protection authority _(notified to the **EEA
-  Joint Committee**, not to the European Commission)_
+  Joint Committee**, not to the European Commission; `participates-in`
+  [[EU-EDPB]] added 2026-09-13 on the same composition rule as Iceland
+  and Liechtenstein)_
 - [[NO-NSM]] — Nasjonal sikkerhetsmyndighet _(two ministries, one
   directorate: administratively Justice, technically Defence for the
   military sector)_
-- [[NO-SSB]] — Statistisk sentralbyrå _(⚠ the only statistical office in the
-  Atlas with **no** [[EU-ESS]] edge and no [[UN-CES]] edge)_
+- [[NO-ETTERRETNINGSTJENESTEN]] — foreign/military intelligence service,
+  part of the Armed Forces, added 2026-09-13
+- [[NO-PST]] — domestic security service, added 2026-09-13 _(its mandate
+  rests on a chapter of the general Police Act, not its own statute)_
+- [[NO-SSB]] — Statistisk sentralbyrå _(`participates-in` [[EU-ESS]] added
+  2026-09-13, under the EEA Agreement rather than as a member state)_
 - [[NO-KARTVERKET]] — national mapping and cadastral authority
   _(`participates-in` [[UN-GGIM]], confirmed 2026-08-22)_
 
 ## Legislation
 
 - [[NO-PERSONOPPLYSNINGSLOVEN]] — Personal Data Act, LOV-2018-06-15-38
+- [[NO-SIKKERHETSLOVEN]] — Security Act, LOV-2018-06-01-24, in force
+  1 January 2019, added 2026-09-12
+- [[NO-ETTERRETNINGSTJENESTELOVEN]] — Intelligence Service Act,
+  LOV-2020-06-19-77, in force 1 January 2021, added 2026-09-13
 
 ## Platforms
 
@@ -90,16 +107,7 @@ recorded only in prose.
   **EFTA**, the **EFTA Surveillance Authority** and the **EFTA
   Court**~~ — now [[INTL-EEA-JOINT-COMMITTEE]], [[INTL-EFTA]],
   [[INTL-EFTA-SURVEILLANCE-AUTHORITY]] and [[INTL-EFTA-COURT]].
-- **Norway's intelligence services** — Etterretningstjenesten and PST.
-  [[NO-NSM]]'s own site now confirms it is one of Norway's three
-  intelligence, surveillance and security services alongside these two —
-  see the entity — but they remain unmodelled themselves, so the country
-  still appears with one of three services; contrast the seven countries
-  covered by the intelligence batch.
-- The **sikkerhetsloven** (Security Act) — named this pass as the 1998
-  Act, though whether that is still current or superseded by a newer
-  digital-security statute was not resolved — and the **statistikkloven**,
-  [[NO-SSB]]'s statutory basis.
+- The **statistikkloven**, [[NO-SSB]]'s own statutory basis.
 - Whether [[NO-DIGDIR]] currently operates [[NO-ALTINN]] outright or
   alongside a continuing **Brønnøysundregistrene** role — the entity now
   carries `maintained-by` at low confidence on the strength of a site
