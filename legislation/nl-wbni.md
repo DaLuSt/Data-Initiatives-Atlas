@@ -103,10 +103,14 @@ wetten.overheid.nl, BWBR0041515):** the law's own preamble states it is
 "necessary to establish legal provisions to promote the security of network
 and information systems" in accordance with EU Directive 2016/1148 — the
 original NIS Directive — and its full title names that directive directly.
-The original NIS Directive is not yet an Atlas entity in its own right
-([[EU-NIS]] is referenced as a placeholder target for this edge); this is
-still the first time this entity's own basis has been confirmed from its
-own text rather than inferred from its successor's documentation. The
+**Stale as of 2026-09-13, now fixed**: the original NIS Directive is a
+proper Atlas entity, [[EU-NIS]] (created the same day as this pass,
+2026-08-28) — the line above calling it "not yet an Atlas entity" and
+[[EU-NIS]] a "placeholder target" was simply never updated once the
+entity landed; the `implements-requirement-from` edge above was already
+correctly pointing at it. This is still the first time this entity's own
+basis has been confirmed from its own text rather than inferred from its
+successor's documentation. The
 page's own Article 35 left the law's commencement to a royal decree without
 stating the date that decree set. **That decree is now read directly
 (2026-09-05)**: Staatsblad 2018, 389 states verbatim "Met ingang van 9
