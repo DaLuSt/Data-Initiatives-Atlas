@@ -18,12 +18,12 @@ country: DE
 region: null
 
 status: active
-confidence: medium
+confidence: high
 coverage: medium
 verification: primary-source
 start_date: "2023-09-01"
 end_date: null
-last_verified: "2026-09-04"
+last_verified: "2026-09-13"
 previous_version: null
 successor: null
 
@@ -52,6 +52,10 @@ sources:
     url: "https://www.bundestag.de/dokumente/textarchiv/2023/kw39-de-datenstrategie-967338"
     publisher: "Deutscher Bundestag"
     accessed: "2026-08-22"
+  - title: "Open Data"
+    url: "https://bmds.bund.de/themen/digitale-wirtschaft/daten/open-data"
+    publisher: "Bundesministerium für Digitales und Staatsmodernisierung (BMDS)"
+    accessed: "2026-09-13"
 ---
 
 # Nationale Datenstrategie
@@ -63,6 +67,17 @@ sources:
 > than left as an unresolved disagreement between secondary sources. Two of
 > the original four sources (the BMI and BMDV press releases) no longer
 > resolve — see the Sources section.
+>
+> **Closed 2026-09-13**, closing `discovery/unresolved.md` row #56. BMDS's
+> own current Open Data page, read directly, states its Open Data work
+> "stützt sich auf den übergeordneten datenpolitischen Rahmen der
+> Datenstrategie der Bundesregierung" (relies on the overarching
+> data-policy framework of the federal government's Datenstrategie) —
+> naming this entity, in the present tense, as the current government's
+> operative data-policy framework. Unlike [[DE-DIGITALSTRATEGIE]], which
+> the Bundestag itself confirmed was **not** continued after the May 2025
+> change of government, the Datenstrategie was not abandoned. See
+> "Resolved: still in force" below.
 
 ## Description
 
@@ -108,15 +123,28 @@ own date, **1 September 2023**, as the most citable single date for the
 document's existence; no source read states a separate federal-cabinet
 decision date distinct from this submission.
 
-## Status caveat
+## Resolved: still in force, closed 2026-09-13
 
-`status: active` reflects that this is the most recent national data
-strategy found. It was adopted under the previous federal government;
-Germany has since created [[DE-BMDS]] as a dedicated digital ministry and
-adopted the [[DE-MODERNISIERUNGSAGENDA-BUND]]. **No source read states
-whether the 2023 data strategy remains in force, has been absorbed into the
-newer agenda, or has been superseded.** Treat the status as the weakest
-claim in this entity.
+Closing `discovery/unresolved.md` row #56. This entity was adopted under
+the previous federal government; Germany has since created [[DE-BMDS]] as
+a dedicated digital ministry and adopted the
+[[DE-MODERNISIERUNGSAGENDA-BUND]], and its sibling strategy
+[[DE-DIGITALSTRATEGIE]] was confirmed **not** continued after the May 2025
+change of government (Bundestag press item, 17 March 2026).
+
+BMDS's own current "Open Data" page, read directly (2026-09-13), settles
+the Datenstrategie's fate differently: its Open Data work "stützt sich auf
+den übergeordneten datenpolitischen Rahmen der Datenstrategie der
+Bundesregierung, deren Ziele Open Data miteinschließt" (relies on the
+overarching data-policy framework of the federal government's Datenstrategie,
+whose objectives include Open Data) — present tense, from the current
+ministry, naming this entity as the government's operative data-policy
+framework rather than a superseded artefact of the last legislative period.
+The same page runs an open online consultation through **15 September
+2026** to further develop the Open Data strand of that framework — active
+stewardship, not silence. `status: active` is now confirmed rather than
+the weakest claim in this entity; no `successor` or `supersedes` edge is
+warranted, since no source describes replacement, only continuity.
 
 ## Relationships
 
@@ -151,4 +179,6 @@ Listed in frontmatter. Two — the BMI and BMDV press releases — no longer
 resolve as of 2026-08-22 (the BMI one returns an error page, the BMDV one a
 404; BMDV itself was folded into [[DE-BMDS]] in 2025, which may explain the
 second). The Bundestag Drucksache and its own textarchiv article, both read
-directly, carry the weight of what's asserted here.
+directly, carry the weight of what's asserted here, joined by BMDS's own
+current Open Data page (read directly, 2026-09-13) for the still-in-force
+finding above.
