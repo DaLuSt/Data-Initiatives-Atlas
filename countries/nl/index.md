@@ -161,6 +161,10 @@ see `discovery/research-queue.md`._
 - [[NL-SVB-BGT]] — Stichting Samenwerkingsverband Bronhouders BGT,
   coordinates the seven [[NL-BGT]] bronhouder categories _(founded 2014;
   added 2026-09-06)_
+- [[NL-PRORAIL]] — state-owned rail infrastructure manager; a named
+  [[NL-BGT]] bronhouder _(founded 2005; added 2026-09-13)_
+- [[NL-RVO]] — Rijksdienst voor Ondernemend Nederland; SVB-BGT board
+  representative _(founded 2014; added 2026-09-13)_
 - [[NL-KVK]] — Kamer van Koophandel _(Handelsregister)_
 - [[NL-RDW]] — RDW _(BRV, vehicles)_ ✅ re-verified 2026-08-27
 - [[NL-RVIG]] — Rijksdienst voor Identiteitsgegevens _(BRP)_ ✅ re-verified 2026-08-27
