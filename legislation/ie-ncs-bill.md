@@ -25,7 +25,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-09-13"
 previous_version: null
 successor: null
 
@@ -35,6 +35,7 @@ organisations: []
 related_entities:
   - EU-NIS2
   - IE-NCSC
+  - ES-LCGC
 relationships:
   - type: applies-to
     target: IE-NCSC
@@ -114,6 +115,11 @@ Ireland and three other Member States to the CJEU for their failure to
 transpose NIS2." This is a harder deadline consequence than the reasoned
 opinion the entity previously recorded, and it was not in the sources
 originally cited.
+
+**The other three, named 2026-09-13**: a Hunton Andrews Kurth law-firm
+alert, read directly on [[ES-LCGC]], names the referral date (8 July
+2026) and the other three member states precisely: Spain, France and the
+Netherlands.
 
 The Atlas already holds one pending cyber instrument — [[GB-CSRB]], the UK's
 Cyber Security and Resilience Bill. **These two are not the same kind of
