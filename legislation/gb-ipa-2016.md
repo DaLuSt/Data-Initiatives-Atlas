@@ -21,7 +21,7 @@ coverage: medium
 verification: primary-source
 start_date: 2016-11-29
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-09-17"
 previous_version: null
 successor: null
 
@@ -35,6 +35,7 @@ related_entities:
   - GB-IPCO
   - GB-ISA-1994
   - GB-SSA-1989
+  - GB-RIPA-2000
 relationships:
   - type: references
     target: GB-ISA-1994
@@ -113,14 +114,24 @@ the IPA modifies the earlier act without replacing it, and both remain in
 force and both appear as `governed-by` targets on [[GB-SIS]] and
 [[GB-GCHQ]].
 
+## RIPA 2000, now modelled
+
+**Closed 2026-09-17**: RIPA 2000 is now [[GB-RIPA-2000]]. Reading its
+own Parts directly finds "largely superseded" understates the picture —
+Part I (interception) is entirely superseded by this Act, but Part II
+(surveillance), Part III (encryption-key disclosure) and the
+Investigatory Powers Tribunal (Part IV) remain in force. No
+`supersedes` edge is asserted between the two entities for that reason;
+see [[GB-RIPA-2000]]'s own file for the part-by-part detail.
+
 ## Not modelled
 
 - The **Investigatory Powers (Amendment) Act 2024**.
-- **RIPA 2000**, largely superseded by this act but not wholly repealed.
 - The **double lock** warrant mechanism and the **Judicial Commissioners** —
   the UK's nearest analogue to [[NL-TIB]]. No source read describes it, so
   it is absent from [[GB-IPCO]] too.
-- The **Investigatory Powers Tribunal**.
+- The **Investigatory Powers Tribunal** as its own entity — established
+  by [[GB-RIPA-2000]]'s own Part IV, not by this Act.
 
 ## Sources
 
