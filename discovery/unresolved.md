@@ -307,6 +307,7 @@ here as a compact reference; the individual affected rows above carry the
 | `web.archive.org` | Tool cannot reach it at all (not site-side) | None — route around via live alternates |
 | `belgium.be` family (`bosa`, `ccb`, `news`, `data.gov`, `financien`, `statbel`, `atwork.safeonweb`) | CAPTCHA/403 | Commission pages, GitHub, third-party sources closed most affected entities |
 | `legilux.public.lu` (main site) | JavaScript single-page application, no static content | **Found 2026-09-13**: `data.legilux.public.lu`'s filestore subdomain, serving direct PDF paths (`.../eli/etat/leg/loi/YYYY/MM/DD/aNNN/jo/fr/pdfa/...`), works and returns the Journal Officiel's own text in full — used to source [[LU-LOI-DONNEES-PENAL-2018]] directly, the first Luxembourg legislation entity sourced this way |
+| `dre.pt`, `diariodarepublica.pt` (consolidated-legislation tools) | JavaScript single-page application, empty content — same shape of block as Legilux | **Found 2026-09-17**: `files.dre.pt`'s filestore subdomain, serving direct gazette-issue PDF paths (`.../1s/YYYY/MM/NNNaMM/PPPPPPPP.pdf` for a page range, or `.../gratuitos/1s/YYYY/MM/NNNaMM.pdf` for a full issue), works and returns the Diário da República's own scanned text in full — used to source [[PT-LEI-43-2004]] directly. Caveat: a page-range guess can point at the wrong law when several laws share one gazette issue; the full-issue URL, paged through, is more reliable |
 
 ## Verification-pass log (condensed)
 
