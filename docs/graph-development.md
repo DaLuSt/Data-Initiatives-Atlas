@@ -201,6 +201,24 @@ the critical path (`graph.json`) or in `NODE_DETAIL_FIELDS`
 (`details.json`): if search or filtering needs it, it must be in the light
 payload.
 
+### Country/region centroids
+
+`tools/country_centroids.py` holds a static ISO 3166-1 alpha-2 → (lat, lon)
+table (sourced from a public-domain dataset, see the module docstring for
+provenance) plus a small, hand-maintained `REGION_CENTROIDS` table for
+political groupings like `EU`. `build_graph.py` emits these onto
+`facets.countries[].{lat,lon}` and `facets.regions[].{lat,lon}` for a
+geographic "World map" layout to read, so the site itself never computes
+or fetches any geographic data.
+
+The country table is deliberately comprehensive (nearly all ISO codes, not
+just the ~60 currently in use): the Atlas discovers countries from the data
+as they are added, and a new country should not need a companion PR here.
+If one ever does — a code with no entry in either table — `build_graph.py`
+refuses the build, the same way a dangling relationship target does, rather
+than silently shipping a graph the map view then has nowhere to place a
+piece of.
+
 ### A new view
 
 `setView()` toggles `#stage`, `#listview` and `#compareview`, then calls

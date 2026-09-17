@@ -343,6 +343,68 @@ class TestGraphGeneration(unittest.TestCase):
             self.assertIn(key, keys)
 
 
+class TestGeographicData(unittest.TestCase):
+    """Country/region centroids for the site's geographic map layout."""
+
+    @classmethod
+    def setUpClass(cls):
+        payload, errors, warnings = build_graph.build()
+        assert not errors, f"build reported errors: {errors}"
+        cls.graph = payload["graph"]
+
+    def test_every_country_facet_carries_a_centroid(self):
+        for row in self.graph["facets"]["countries"]:
+            self.assertIn(row["code"], build_graph.COUNTRY_CENTROIDS)
+            lat, lon = build_graph.COUNTRY_CENTROIDS[row["code"]]
+            self.assertEqual(row["lat"], lat, row["code"])
+            self.assertEqual(row["lon"], lon, row["code"])
+            self.assertTrue(-90 <= row["lat"] <= 90, row["code"])
+            self.assertTrue(-180 <= row["lon"] <= 180, row["code"])
+
+    def test_every_region_facet_carries_a_centroid(self):
+        for row in self.graph["facets"]["regions"]:
+            self.assertIn(row["code"], build_graph.REGION_CENTROIDS)
+            lat, lon = build_graph.REGION_CENTROIDS[row["code"]]
+            self.assertEqual(row["lat"], lat, row["code"])
+            self.assertEqual(row["lon"], lon, row["code"])
+            self.assertTrue(-90 <= row["lat"] <= 90, row["code"])
+            self.assertTrue(-180 <= row["lon"] <= 180, row["code"])
+
+    def test_country_without_a_centroid_refuses_the_build(self):
+        """A country code the map has nowhere to put must not build silently
+        into a graph the map view then quietly drops it from."""
+        ents = load_all_entities(entities_only=True)
+        victim = next(e for e in ents if e.frontmatter.get("country"))
+        keep = victim.frontmatter["country"]
+        victim.frontmatter["country"] = "ZZ"  # not a real ISO 3166-1 code
+        real = build_graph.load_all_entities
+        build_graph.load_all_entities = lambda entities_only=True: ents
+        try:
+            payload, errors, _ = build_graph.build()
+            self.assertTrue(errors, "an uncharted country code should be refused")
+            self.assertTrue(any("ZZ" in e and "centroid" in e for e in errors))
+            self.assertEqual(payload, {}, "no graph should be produced")
+        finally:
+            victim.frontmatter["country"] = keep
+            build_graph.load_all_entities = real
+
+    def test_region_without_a_centroid_refuses_the_build(self):
+        ents = load_all_entities(entities_only=True)
+        victim = next(e for e in ents if e.frontmatter.get("region"))
+        keep = victim.frontmatter["region"]
+        victim.frontmatter["region"] = "ZZ"  # not a region this table knows
+        real = build_graph.load_all_entities
+        build_graph.load_all_entities = lambda entities_only=True: ents
+        try:
+            payload, errors, _ = build_graph.build()
+            self.assertTrue(errors, "an uncharted region code should be refused")
+            self.assertTrue(any("ZZ" in e and "centroid" in e for e in errors))
+            self.assertEqual(payload, {}, "no graph should be produced")
+        finally:
+            victim.frontmatter["region"] = keep
+            build_graph.load_all_entities = real
+
+
 class TestRefusalBehaviour(unittest.TestCase):
     """§27 — malformed metadata is reported, never silently ignored."""
 
