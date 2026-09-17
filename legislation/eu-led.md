@@ -29,7 +29,7 @@ verification: primary-source
 
 start_date: 2016-04-27
 end_date: null
-last_verified: "2026-09-12"
+last_verified: "2026-09-17"
 previous_version: null
 successor: null
 
@@ -40,6 +40,7 @@ related_entities:
   - EU-GDPR
   - IE-DPA-2018
   - EU-UK-ADEQUACY
+  - LU-LOI-DONNEES-PENAL-2018
 relationships:
   - type: related-to
     target: EU-GDPR
@@ -94,6 +95,9 @@ governed by the other, so the relationship recorded here is `related-to`.
 - [[EU-UK-ADEQUACY]] — one of the two legal bases (alongside the GDPR)
   for the European Commission's UK adequacy decisions, renewed
   19 December 2025.
+- [[LU-LOI-DONNEES-PENAL-2018]] — Luxembourg's companion act to
+  [[LU-LOI-PROTECTION-DONNEES]], transposing this Directive for criminal
+  and national-security data processing, created 2026-09-13.
 
 ## Relationships
 
