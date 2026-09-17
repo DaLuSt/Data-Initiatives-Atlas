@@ -26,8 +26,8 @@ verification: primary-source
 
 start_date: 2019-01-01
 end_date: null
-last_verified: "2026-09-12"
-previous_version: null
+last_verified: "2026-09-17"
+previous_version: NO-FOREBYGGENDE-SIKKERHETSTJENESTE-1998
 successor: null
 
 domains:
@@ -36,6 +36,7 @@ organisations: []
 related_entities:
   - "NO"
   - NO-NSM
+  - NO-FOREBYGGENDE-SIKKERHETSTJENESTE-1998
 relationships:
   - type: applies-in
     target: "NO"
@@ -44,12 +45,23 @@ relationships:
     confidence: high
     valid_from: 2019-01-01
     valid_until: null
+  - type: supersedes
+    target: NO-FOREBYGGENDE-SIKKERHETSTJENESTE-1998
+    source: fact
+    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP (this entity's own 'not itself an Atlas entity' note). Confirmed by reading lovdata.no's own record for LOV-1998-03-20-10 directly (2026-09-17): the 1998 Act was repealed 1 January 2019 by this Act, matching the §12-2 citation already read on this file."
+    confidence: high
+    valid_from: "2019-01-01"
+    valid_until: null
 
 sources:
   - title: "Lov om nasjonal sikkerhet (sikkerhetsloven) — LOV-2018-06-01-24"
     url: "https://lovdata.no/dokument/NL/lov/2018-06-01-24"
     publisher: "Lovdata"
     accessed: "2026-09-12"
+  - title: "Lov om forebyggende sikkerhetstjeneste (sikkerhetsloven) — LOV-1998-03-20-10"
+    url: "https://lovdata.no/lov/1998-03-20-10"
+    publisher: "Lovdata"
+    accessed: "2026-09-17"
 ---
 
 # Lov om nasjonal sikkerhet (sikkerhetsloven)
@@ -59,6 +71,10 @@ sources:
 > text (2026-09-05 finding) but never modelled as an entity, so no
 > `governed-by` edge could be asserted. `lovdata.no`'s own text of
 > LOV-2018-06-01-24 was read directly.
+>
+> **Narrowed 2026-09-17.** The 1998 predecessor act, previously named
+> only in prose, is now [[NO-FOREBYGGENDE-SIKKERHETSTJENESTE-1998]] —
+> `supersedes` added below.
 
 ## Description
 
@@ -81,11 +97,11 @@ change.
 
 - `applies-in` [[NO]] — scope anchor. [[NO-NSM]] carries the inverse
   `governed-by` edge pointing here, recorded on its own file.
+- `supersedes` [[NO-FOREBYGGENDE-SIKKERHETSTJENESTE-1998]] — added
+  2026-09-17, closing this file's own previous non-assertion.
 
 ## Not modelled
 
-- The 1998 predecessor act, named above only in prose — no `supersedes`
-  edge is asserted since it is not itself an Atlas entity.
 - The Act's substantive chapters beyond the repeal and purpose recorded
   above — no section-level detail was read this pass.
 - **Digitalsikkerhetsloven og -forskriften**, a separate, newer

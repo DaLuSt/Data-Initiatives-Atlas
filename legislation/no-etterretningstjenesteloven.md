@@ -26,8 +26,8 @@ verification: primary-source
 
 start_date: 2021-01-01
 end_date: null
-last_verified: "2026-09-13"
-previous_version: null
+last_verified: "2026-09-17"
+previous_version: NO-ETTERRETNINGSTJENESTE-1998
 successor: null
 
 domains:
@@ -36,6 +36,7 @@ organisations: []
 related_entities:
   - "NO"
   - NO-ETTERRETNINGSTJENESTEN
+  - NO-ETTERRETNINGSTJENESTE-1998
 relationships:
   - type: applies-in
     target: "NO"
@@ -43,6 +44,13 @@ relationships:
     evidence: "Scope anchor under metadata/relationship-types.md §2.3. Confirmed by reading lovdata.no's own text of LOV-2020-06-19-77 directly (2026-09-13): 'Lov om Etterretningstjenesten (etterretningstjenesteloven),' enacted 19 June 2020, in force from 1 January 2021 with specific provisions phased in through 2 September 2022, replacing 'lov 20. mars 1998 nr. 11 om Etterretningstjenesten.' Independently corroborated by eos-utvalget.no — the Norwegian Parliament's own EOS oversight committee — read directly the same pass, which names this Act as the Norwegian Intelligence Service's primary legislation."
     confidence: high
     valid_from: 2021-01-01
+    valid_until: null
+  - type: supersedes
+    target: NO-ETTERRETNINGSTJENESTE-1998
+    source: fact
+    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP (this entity's own 'not itself an Atlas entity' note). Confirmed by reading lovdata.no's own record for LOV-1998-03-20-11 directly (2026-09-17): the 1998 Act was repealed 1 January 2021 by this Act, matching the repeal citation already read on this file."
+    confidence: high
+    valid_from: "2021-01-01"
     valid_until: null
 
 sources:
@@ -54,6 +62,10 @@ sources:
     url: "https://eos-utvalget.no/en/home/about-the-eos-committee/legal-framework/"
     publisher: "EOS-utvalget (Norwegian Parliamentary Intelligence Oversight Committee)"
     accessed: "2026-09-13"
+  - title: "Lov om Etterretningstjenesten — LOV-1998-03-20-11"
+    url: "https://lovdata.no/dokument/NLO/lov/1998-03-20-11"
+    publisher: "Lovdata"
+    accessed: "2026-09-17"
 ---
 
 # Lov om Etterretningstjenesten (Etterretningstjenesteloven)
@@ -64,6 +76,10 @@ sources:
 > both an intelligence service and a security/counter-intelligence
 > service. `lovdata.no`'s own text and the EOS Committee's own legal
 > framework page were read directly.
+>
+> **Narrowed 2026-09-17.** The 1998 predecessor act, previously named
+> only in prose, is now [[NO-ETTERRETNINGSTJENESTE-1998]] — `supersedes`
+> added below.
 
 ## Description
 
@@ -84,14 +100,16 @@ alongside "establishing stricter regulatory controls."
 - `applies-in` [[NO]] — scope anchor. [[NO-ETTERRETNINGSTJENESTEN]]
   carries the inverse `governed-by` edge pointing here, recorded on its
   own file.
+- `supersedes` [[NO-ETTERRETNINGSTJENESTE-1998]] — added 2026-09-17,
+  closing this file's own previous non-assertion.
 
 ## Not modelled
 
-- The 1998 predecessor act, named above only in prose — no `supersedes`
-  edge is asserted since it is not itself an Atlas entity.
 - The Act's substantive chapters (organisation, tasks, personal-data
   processing) beyond the enactment/repeal facts recorded above.
 
 ## Sources
 
-Listed in frontmatter, both read directly 2026-09-13.
+Listed in frontmatter, both read directly 2026-09-13; a third source
+(the 1998 predecessor's own lovdata.no record) added and read directly
+2026-09-17.
