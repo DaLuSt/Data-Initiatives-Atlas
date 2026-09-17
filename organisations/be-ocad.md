@@ -26,8 +26,8 @@ verification: primary-source
 
 start_date: 2006-12-01
 end_date: null
-last_verified: "2026-09-06"
-previous_version: null
+last_verified: "2026-09-17"
+previous_version: BE-AGG
 successor: null
 
 domains:
@@ -38,6 +38,7 @@ related_entities:
   - BE-COMITE-I
   - BE-VSSE
   - BE-ADIV
+  - BE-AGG
 relationships:
   - type: governed-by
     target: BE-WET-DREIGINGSANALYSE-2006
@@ -53,6 +54,13 @@ relationships:
     confidence: high
     valid_from: 2006-07-10
     valid_until: null
+  - type: supersedes
+    target: BE-AGG
+    source: fact
+    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP (this entity's own 'not itself an Atlas entity' note). Confirmed by reading etaamb.openjustice.be's own text of the Royal Decree of 28 November 2006 directly (2026-09-17), which implements Article 17 of the underlying Act: 'het OCAD in de rechten en de verplichtingen treedt van de Antiterroristische Gemengde Groep' (OCAD succeeds to the rights and obligations of the AGG). The same Decree independently confirms OCAD's operational start date of 1 December 2006, previously WebSearch-only."
+    confidence: high
+    valid_from: "2006-12-01"
+    valid_until: null
 
 sources:
   - title: "Coördinatieorgaan voor de Dreigingsanalyse (OCAD)"
@@ -67,6 +75,10 @@ sources:
     url: "https://www.comiteri.be/index.php/nl/19-pages-nl-nl-1/54-wat-is-het-cooerdinatieorgaan-voor-de-dreigingsanalyse"
     publisher: "Vast Comité I"
     accessed: "2026-09-06"
+  - title: "28 NOVEMBER 2006. — Koninklijk besluit tot uitvoering van de wet van 10 juli 2006 betreffende de analyse van de dreiging"
+    url: "https://etaamb.openjustice.be/nl/koninklijk-besluit-van-28-november-2006_n2006009957.html"
+    publisher: "etaamb / OpenJustice (Belgisch Staatsblad)"
+    accessed: "2026-09-17"
 ---
 
 # Coördinatieorgaan voor de Dreigingsanalyse (OCAD)
@@ -77,6 +89,12 @@ sources:
 > OCAD is not an Atlas entity." VSSE's own page and the Act's own
 > official text (etaamb.openjustice.be) were read directly this pass and
 > agree.
+>
+> **Closed 2026-09-17.** The Royal Decree of 28 November 2006, previously
+> flagged as unread, is now read directly — closing two gaps at once: the
+> predecessor AGG is now [[BE-AGG]], and this entity's own operational
+> start date (1 December 2006) is now confirmed by a primary source
+> rather than WebSearch alone.
 
 ## Description
 
@@ -97,8 +115,9 @@ joint authority of the Ministers of Justice and the Interior. This is why
 `part-of` targets [[BE]] rather than a single ministry: no Atlas entity
 exists for either ministry, and the Act's own text names two, not one.
 
-**Operational since 1 December 2006**, per WebSearch corroboration (not
-independently confirmed by a directly-read page this pass).
+**Operational since 1 December 2006** — confirmed 2026-09-17 by reading
+the Royal Decree of 28 November 2006 directly, whose own provisions take
+effect on that date, superseding the earlier WebSearch-only corroboration.
 
 ## The joint oversight arrangement, now statable
 
@@ -115,16 +134,16 @@ entity to point that edge at. See [[BE-COMITE-I]] for the completed
   relationship type cleanly expresses "supplies intelligence to a
   threat-assessment coordinator" without overstating a chain-of-command
   that does not exist (VSSE and ADIV are not subordinate to OCAD).
-- The **Antiterroristische Gemengde Groep (AGG)**, OCAD's predecessor —
-  not itself an Atlas entity, so no `supersedes` edge is asserted.
-- The **Royal Decree of 28 November 2006** implementing the Act.
-
 ## Relationships
 
 - `governed-by` [[BE-WET-DREIGINGSANALYSE-2006]].
 - `part-of` [[BE]] — a scope anchor, reflecting joint ministerial
   authority rather than a single parent ministry.
+- `supersedes` [[BE-AGG]] — added 2026-09-17, closing this entity's own
+  previous non-assertion. The Royal Decree of 28 November 2006, read
+  directly, implements the underlying Act's own Article 17 statement
+  that OCAD succeeds to the AGG's rights and obligations.
 
 ## Sources
 
-Listed in frontmatter, all three read directly 2026-09-06.
+Listed in frontmatter, four of four read directly across two passes.
