@@ -41,6 +41,7 @@ related_entities:
   - GB-MI5
   - GB-SIS
   - GB-GCHQ
+  - GB-IPT
 relationships:
   - type: applies-in
     target: GB
@@ -117,11 +118,14 @@ confirmed directly: the Tribunal is established by **RIPA's own
 Part IV, sections 65–67** — it was never one of the offices IPCO
 absorbed. It hears complaints about intelligence-service conduct and
 investigatory-powers use, and can award compensation or cancel
-warrants and authorisations.
+warrants and authorisations. **Closed 2026-09-17**: the Tribunal is now
+its own entity, [[GB-IPT]].
 
 ## Relationships
 
 - `applies-in` [[GB]] — anchor edge.
+
+[[GB-IPT]] carries `governed-by` → this entity.
 
 No `supersedes` edge is asserted from [[GB-IPA-2016]] to this entity:
 the relationship is real for Part I alone, and the Atlas's vocabulary
@@ -134,10 +138,6 @@ misstate Parts II–IV, which is exactly the case for not forcing it.
 ## Not modelled
 
 - Part V (Miscellaneous) and the Act's amendments to other legislation.
-- The Investigatory Powers Tribunal as its own entity — flagged here
-  and on [[GB-IPA-2016]]/[[GB-MI5]], not yet created; it would need its
-  own membership, procedure and caseload research beyond what this
-  batch covered.
 - The Investigatory Powers (Amendment) Act 2024's effect on RIPA
   specifically (as opposed to the IPA 2016).
 
