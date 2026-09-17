@@ -13,6 +13,10 @@
   --accent-weak:   #dbe6fb;
   --focus:         #b8541f;
   --danger:        #a32020;
+  /* Deliberately distinct from --accent (selection) and --focus (single-node
+     highlight, keyboard focus) — a path spans several nodes and edges at
+     once and would be lost against either. */
+  --path:          #9c27b0;
 
   /* Entity-level colours. Chosen for contrast in both themes and for
      distinguishability without relying on hue alone (shapes vary too). */
@@ -41,6 +45,7 @@
     --accent-weak:   #1e3556;
     --focus:         #f0a267;
     --danger:        #f08a8a;
+    --path:          #ce93d8;
     --lvl-international: #b48ce8;
     --lvl-regional:      #63a9ec;
     --lvl-national:      #59c7a0;
@@ -62,6 +67,7 @@
   --accent-weak:   #1e3556;
   --focus:         #f0a267;
   --danger:        #f08a8a;
+  --path:          #ce93d8;
   --lvl-international: #b48ce8;
   --lvl-regional:      #63a9ec;
   --lvl-national:      #59c7a0;
@@ -119,28 +125,37 @@ a:hover { text-decoration: none; }
 .topbar h1 { font-size: 1rem; margin: 0; white-space: nowrap; }
 .brand-sub { margin: 0; font-size: .74rem; color: var(--text-dim); white-space: nowrap; }
 
-.search-wrap { position: relative; flex: 1 1 14rem; min-width: 10rem; }
+/* .search-wrap/.combo-input/.combo-list: shared by the topbar search box
+   and the Explorer's "Find path to" field — the same combobox styling
+   either way, distinguished only by which context they sit in. */
+.combo-wrap { position: relative; }
+.search-wrap { flex: 1 1 14rem; min-width: 10rem; }
+.path-input-row { flex: none; min-width: 0; margin-bottom: .4rem; }
 
-#search {
+.combo-input {
   width: 100%; padding: .5rem .7rem;
   background: var(--bg); color: var(--text);
   border: 1px solid var(--border-strong); border-radius: 6px;
-  font-size: .9rem;
+  font-size: .9rem; font-family: inherit;
 }
 
-#suggestions {
+.combo-list {
   position: absolute; z-index: 40; top: calc(100% + 4px); left: 0; right: 0;
   margin: 0; padding: .25rem; list-style: none;
   background: var(--surface); border: 1px solid var(--border-strong);
   border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,.22);
   max-height: min(60vh, 24rem); overflow-y: auto;
 }
-#suggestions li { padding: .45rem .55rem; border-radius: 5px; cursor: pointer; }
-#suggestions li[aria-selected="true"], #suggestions li:hover { background: var(--accent-weak); }
-#suggestions .s-name { display: block; font-weight: 600; font-size: .88rem; }
-#suggestions .s-meta { display: block; font-size: .74rem; color: var(--text-dim); }
-#suggestions .s-empty { color: var(--text-dim); cursor: default; }
-#suggestions .s-empty:hover { background: none; }
+.combo-list li { padding: .45rem .55rem; border-radius: 5px; cursor: pointer; }
+.combo-list li[aria-selected="true"], .combo-list li:hover { background: var(--accent-weak); }
+.combo-list .s-name { display: block; font-weight: 600; font-size: .88rem; }
+.combo-list .s-meta { display: block; font-size: .74rem; color: var(--text-dim); }
+.combo-list .s-empty { color: var(--text-dim); cursor: default; }
+.combo-list .s-empty:hover { background: none; }
+
+#path-field { margin-top: .5rem; }
+#path-field label { display: block; font-size: .82rem; color: var(--text-dim); margin-bottom: .25rem; }
+#path-field .mini { margin-top: .35rem; }
 
 .views { display: flex; gap: .25rem; }
 

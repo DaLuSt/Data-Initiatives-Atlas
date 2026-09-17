@@ -37,6 +37,13 @@
   // visits (see SECURITY.md), so this is deliberately not persisted.
   var layoutMode = "grouped";
   var sugIndex = -1, sugItems = [];
+  var pathTargetId = null;
+  var pathSugIndex = -1, pathSugItems = [];
+  // { nodes: [id...], edges: [edgeObj...] } for the current focus/target
+  // pair, or null. Recomputed on every refresh() in Explorer view, same as
+  // depthCounts() — it describes the current focus, filters and target, not
+  // a one-off calculation.
+  var lastPath = null;
 
   // Above this many visible nodes, drop labels.
   var LOD_LABELS = 260;
@@ -287,6 +294,7 @@
     });
 
     wireSearch();
+    wirePathFinder();
 
     document.querySelectorAll(".sortbtn").forEach(function (b) {
       b.addEventListener("click", function () {
@@ -403,6 +411,26 @@
             "color": function () { return css("--text-dim"); },
             "text-outline-color": function () { return css("--bg"); },
             "text-outline-width": 2, "text-rotation": "autorotate"
+          }
+        },
+        // Path highlighting — a distinct colour from --accent (selection)
+        // and --focus (single-node highlight, keyboard focus), since a path
+        // spans several nodes and edges and would be lost against either.
+        // Placed after .hl/.dim/.focus so a node or edge that is part of
+        // both a path and the ordinary click-highlight still reads as path.
+        {
+          selector: "node.path-node",
+          style: {
+            "border-width": 4, "border-style": "dashed", "opacity": 1,
+            "border-color": function () { return css("--path"); }, "z-index": 97
+          }
+        },
+        {
+          selector: "edge.path-edge",
+          style: {
+            "width": 3.4, "opacity": 1, "z-index": 96, "curve-style": "straight",
+            "line-color": function () { return css("--path"); },
+            "target-arrow-color": function () { return css("--path"); }
           }
         }
       ]
@@ -529,6 +557,45 @@
     return seen;
   }
 
+  /** Shortest path between two nodes over the same filtered edge set the
+   *  neighbourhood uses — deliberately not bounded by the Explorer's depth
+   *  slider, since the whole point is to answer "how does A connect to B"
+   *  even when that chain is longer than the depth shown by default.
+   *  Returns { nodes: [id...], edges: [edgeObj...] } (edges in their
+   *  original recorded direction, not necessarily the direction walked),
+   *  or null if the two are not connected under the current filters. */
+  function shortestPath(edges, startId, endId) {
+    if (startId === endId) return { nodes: [startId], edges: [] };
+    var adj = Object.create(null);
+    edges.forEach(function (e) {
+      (adj[e.source] || (adj[e.source] = [])).push({ to: e.target, edge: e });
+      (adj[e.target] || (adj[e.target] = [])).push({ to: e.source, edge: e });
+    });
+    var cameFrom = Object.create(null);
+    var seen = Object.create(null); seen[startId] = true;
+    var queue = [startId];
+    for (var i = 0; i < queue.length; i++) {
+      var cur = queue[i];
+      if (cur === endId) break;
+      (adj[cur] || []).forEach(function (nb) {
+        if (!seen[nb.to]) {
+          seen[nb.to] = true;
+          cameFrom[nb.to] = { from: cur, edge: nb.edge };
+          queue.push(nb.to);
+        }
+      });
+    }
+    if (!seen[endId]) return null;
+    var nodes = [endId], pathEdges = [], cur = endId;
+    while (cur !== startId) {
+      var step = cameFrom[cur];
+      pathEdges.unshift(step.edge);
+      nodes.unshift(step.from);
+      cur = step.from;
+    }
+    return { nodes: nodes, edges: pathEdges };
+  }
+
   /** How many entities each depth would show, for the current focus and
    *  filters — cumulative, so index 2 is "everything within 2 hops".
    *
@@ -593,6 +660,7 @@
   /** Nodes+edges for the current view, filters and focus. */
   function currentElements() {
     var hops = null;
+    lastPath = null;
     var okNodes = Object.create(null);
     G.nodes.forEach(function (n) { if (passesNodeFilters(n)) okNodes[n.id] = n; });
 
@@ -603,6 +671,18 @@
     var keep = okNodes;
     if (view === "explorer" && focusId && okNodes[focusId]) {
       var seen = neighbourhood(edges, focusId, depth);
+      // A path to a second entity is not bounded by the depth slider — it
+      // is added to whatever the neighbourhood already shows, extending the
+      // hop numbering (and so the Explorer's concentric rings) outward
+      // along the path rather than cutting it off at the current depth.
+      if (pathTargetId && okNodes[pathTargetId]) {
+        lastPath = shortestPath(edges, focusId, pathTargetId);
+        if (lastPath) {
+          lastPath.nodes.forEach(function (id, i) {
+            if (!(id in seen) || seen[id] > i) seen[id] = i;
+          });
+        }
+      }
       keep = Object.create(null);
       Object.keys(seen).forEach(function (id) { keep[id] = okNodes[id]; });
       edges = edges.filter(function (e) { return keep[e.source] && keep[e.target]; });
@@ -875,9 +955,58 @@
     applyLOD();
     runLayout(false);
     updateKbOrder();
+    applyPathClasses();
+    renderPathResult();
 
     updateStatus();
     if (focusId && cy.getElementById(focusId).length) highlight(focusId);
+  }
+
+  /** Marks the current lastPath's nodes/edges so the Cytoscape stylesheet's
+   *  .path-node/.path-edge selectors can draw them distinctly. Rendered
+   *  edge ids ("e"+index) are ephemeral, assigned fresh by currentElements()
+   *  every refresh, so edges are matched back to lastPath by their own
+   *  source/target/type instead. */
+  function applyPathClasses() {
+    if (!lastPath || !lastPath.edges.length) return;
+    var wanted = Object.create(null);
+    lastPath.edges.forEach(function (e) {
+      wanted[e.source + "|" + e.target + "|" + (e.type || "")] = true;
+    });
+    cy.batch(function () {
+      lastPath.nodes.forEach(function (id) { cy.getElementById(id).addClass("path-node"); });
+      cy.edges().forEach(function (e) {
+        var k = e.data("source") + "|" + e.data("target") + "|" + (e.data("type") || "");
+        if (wanted[k]) e.addClass("path-edge");
+      });
+    });
+  }
+
+  /** The sidebar's plain-language readout of the current path, with each
+   *  hop a clickable link — the graph-native rendering already shows it,
+   *  but a compact "A → applies-in → B → part-of → C" line answers the
+   *  question the feature exists for without hunting across the canvas. */
+  function renderPathResult() {
+    var el = $("path-result");
+    if (!el) return;
+    if (!pathTargetId) { el.innerHTML = ""; return; }
+    if (!nodeById[pathTargetId]) { el.textContent = "That entity is no longer in the Atlas."; return; }
+    if (pathTargetId === focusId) { el.textContent = "That is the focused entity."; return; }
+    if (!lastPath) {
+      el.textContent = "No path between these two entities under the current filters. " +
+        "Try enabling Associations or Wikilinks under “Connections shown”, or widening the other filters.";
+      return;
+    }
+    var hops = lastPath.edges.length;
+    var parts = [link(lastPath.nodes[0])];
+    lastPath.edges.forEach(function (e, i) {
+      parts.push('<span class="rel-type">' + esc(e.type || titly(e.class)) + "</span>");
+      parts.push(link(lastPath.nodes[i + 1]));
+    });
+    el.innerHTML = "<strong>" + hops + (hops === 1 ? " hop" : " hops") + "</strong>: " + parts.join(" → ");
+    el.querySelectorAll("[data-goto]").forEach(function (b) {
+      b.addEventListener("click", function () { selectEntity(b.dataset.goto, false); });
+    });
   }
 
   /** Fill the standing sourcing banner from the graph itself.
@@ -1169,6 +1298,92 @@
     document.addEventListener("click", function (ev) {
       if (!ev.target.closest(".search-wrap")) hideSuggestions();
     });
+  }
+
+  // ── path finder ──────────────────────────────────────────────────────
+  // A second, independent combobox for the Explorer's "Find path to" field.
+  // Deliberately not sharing wireSearch()'s sugIndex/sugItems/ul: the two
+  // boxes are both visible at once in Explorer view, and a shared dropdown
+  // state would let picking in one silently corrupt the other.
+  function wirePathFinder() {
+    var box = $("path-target");
+    var t = null;
+    box.addEventListener("input", function () {
+      clearTimeout(t);
+      t = setTimeout(function () { runPathSearch(box.value); }, 110);
+    });
+    box.addEventListener("keydown", function (ev) {
+      if ($("path-suggestions").hidden) return;
+      if (ev.key === "ArrowDown") { ev.preventDefault(); movePathSug(1); }
+      else if (ev.key === "ArrowUp") { ev.preventDefault(); movePathSug(-1); }
+      else if (ev.key === "Enter") {
+        if (pathSugIndex >= 0 && pathSugItems[pathSugIndex]) {
+          ev.preventDefault();
+          pickPathTarget(pathSugItems[pathSugIndex].id);
+        }
+      }
+    });
+    document.addEventListener("click", function (ev) {
+      if (!ev.target.closest("#path-field")) hidePathSuggestions();
+    });
+    $("path-clear").addEventListener("click", clearPath);
+  }
+
+  function runPathSearch(q) {
+    var res = matches(q);
+    pathSugItems = res.slice(0, 12);
+    pathSugIndex = -1;
+    var ul = $("path-suggestions");
+    if (!String(q || "").trim()) { hidePathSuggestions(); return; }
+    if (!pathSugItems.length) {
+      ul.innerHTML = '<li class="s-empty" role="option" aria-disabled="true">No entity matches “' + esc(q) + "”</li>";
+    } else {
+      ul.innerHTML = pathSugItems.map(function (n, i) {
+        return '<li role="option" id="path-sug-' + i + '" data-id="' + esc(n.id) + '" aria-selected="false">' +
+          '<span class="s-name">' + esc(n.label) + "</span>" +
+          '<span class="s-meta">' + esc(n.id) + " · " + esc(titly(n.type)) +
+          (n.country ? " · " + esc(countryLabel(n.country)) : n.region ? " · " + esc(n.region) : "") +
+          "</span></li>";
+      }).join("");
+      ul.querySelectorAll("li[data-id]").forEach(function (li) {
+        li.addEventListener("click", function () { pickPathTarget(li.dataset.id); });
+      });
+    }
+    ul.hidden = false;
+    $("path-target").setAttribute("aria-expanded", "true");
+  }
+
+  function movePathSug(delta) {
+    var ul = $("path-suggestions");
+    var items = ul.querySelectorAll("li[data-id]");
+    if (!items.length) return;
+    pathSugIndex = (pathSugIndex + delta + items.length) % items.length;
+    items.forEach(function (li, i) { li.setAttribute("aria-selected", String(i === pathSugIndex)); });
+    $("path-target").setAttribute("aria-activedescendant", "path-sug-" + pathSugIndex);
+    items[pathSugIndex].scrollIntoView({ block: "nearest" });
+  }
+
+  function hidePathSuggestions() {
+    $("path-suggestions").hidden = true;
+    $("path-target").setAttribute("aria-expanded", "false");
+    $("path-target").removeAttribute("aria-activedescendant");
+    pathSugIndex = -1;
+  }
+
+  function pickPathTarget(id) {
+    hidePathSuggestions();
+    $("path-target").value = (nodeById[id] || {}).label || id;
+    pathTargetId = id;
+    syncUrl();
+    refresh();
+  }
+
+  function clearPath() {
+    pathTargetId = null;
+    $("path-target").value = "";
+    hidePathSuggestions();
+    syncUrl();
+    refresh();
   }
 
   function scoreNode(n, q) {
@@ -1533,6 +1748,13 @@
     // as though the visitor just typed it.
     if (q) $("search").value = q;
 
+    // Set before selectEntity() below, so the path is already computed on
+    // the very first refresh() that call triggers rather than needing a
+    // second render pass to appear.
+    var to = params.get("to");
+    pathTargetId = (to && nodeById[to]) ? to : null;
+    $("path-target").value = pathTargetId ? nodeById[pathTargetId].label : "";
+
     var explicitView = params.get("view");
     var focus = params.get("focus");
     // No explicit view, but a focus is present: default to Explorer, the
@@ -1561,6 +1783,7 @@
       set.forEach(function (v) { vals.push(v); });
       p.set(k, vals.join(","));
     });
+    if (pathTargetId) p.set("to", pathTargetId);
     return p;
   }
 
