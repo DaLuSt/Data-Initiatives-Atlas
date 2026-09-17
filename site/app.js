@@ -55,6 +55,14 @@
     national: "--lvl-national", subnational: "--lvl-subnational",
     sectoral: "--lvl-sectoral", local: "--lvl-local"
   };
+  // What "connections" means, spelled out — shared between the sidebar's
+  // edge-class checkboxes and the edge detail panel (tapping an edge
+  // directly on the canvas).
+  var CLASS_LABEL = {
+    relationship: "Typed relationships (frontmatter, provenanced)",
+    association: "Associations (domains, organisations, related entities, versions)",
+    wikilink: "Wikilinks in the entity text (Obsidian navigation)"
+  };
   // Shape carries type, colour carries level — so neither is the only cue.
   var TYPE_SHAPE = {
     organisation: "round-rectangle", country: "star", region: "star",
@@ -150,12 +158,9 @@
       a.rel = "noopener";
     }
 
-    // Edge classes — what "connections" means, spelled out.
-    var CLASS_LABEL = {
-      relationship: "Typed relationships (frontmatter, provenanced)",
-      association: "Associations (domains, organisations, related entities, versions)",
-      wikilink: "Wikilinks in the entity text (Obsidian navigation)"
-    };
+    // Edge classes — what "connections" means, spelled out. Shared with
+    // showEdgeDetail(), which uses the same wording when a wikilink or
+    // association is clicked directly on the canvas.
     $("edge-classes").innerHTML = (G.vocabularies.edge_classes || []).map(function (c) {
       var n = c === "relationship" ? G.stats.relationships
         : c === "association" ? G.stats.associations : G.stats.wikilinks;
@@ -406,12 +411,61 @@
     });
 
     cy.on("tap", "node", function (ev) { selectEntity(ev.target.id(), true); });
+    cy.on("tap", "edge", function (ev) { showEdgeDetail(ev.target); });
     cy.on("tap", function (ev) { if (ev.target === cy) closeDetail(); });
-    // Keyboard: the canvas itself is not traversable, so the List view and
-    // search are the accessible routes. Enter opens the selected node.
+    // Edges carry real data (type, provenance, confidence, evidence) but
+    // look like plain lines — a pointer cursor is the only hint that they
+    // are tappable at all.
+    cy.on("mouseover", "edge", function () { $("cy").style.cursor = "pointer"; });
+    cy.on("mouseout", "edge", function () { $("cy").style.cursor = ""; });
+
+    // Keyboard: arrow keys cycle the currently visible nodes in the same
+    // alphabetical order the List view sorts by default, so the order is
+    // predictable rather than an accident of layout position. Enter opens
+    // the node under keyboard focus; the List view and search remain the
+    // faster route for bulk scanning, but the canvas itself is no longer a
+    // keyboard dead end.
     $("cy").addEventListener("keydown", function (ev) {
-      if (ev.key === "Enter" && focusId) showDetail(focusId);
+      if (ev.key === "Enter" && focusId) { showDetail(focusId); return; }
+      var dir = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[ev.key];
+      if (dir) { ev.preventDefault(); moveKbFocus(dir); }
     });
+  }
+
+  // ── keyboard traversal of the canvas ─────────────────────────────────
+  var kbOrder = [];
+  // True only while the current focus was reached by arrow keys, so
+  // updateStatus() can append the note — including on the debounced
+  // recompute after cy's own 'zoom' event, which would otherwise land after
+  // moveKbFocus's one-off status update and silently erase it. Cleared by
+  // selectEntity() the moment a click, search pick or deep link moves focus
+  // some other way.
+  var kbActive = false;
+
+  /** Rebuilt whenever the visible node set changes (refresh()) so arrow
+   *  keys always cycle exactly what filters currently show. */
+  function updateKbOrder() {
+    kbOrder = cy ? cy.nodes().map(function (n) { return n.id(); }).sort(function (a, b) {
+      var la = (nodeById[a] || {}).label || a, lb = (nodeById[b] || {}).label || b;
+      return la.localeCompare(lb);
+    }) : [];
+  }
+
+  function moveKbFocus(delta) {
+    if (!kbOrder.length) return;
+    var i = focusId ? kbOrder.indexOf(focusId) : -1;
+    i = i < 0 ? (delta > 0 ? 0 : kbOrder.length - 1) : (i + delta + kbOrder.length) % kbOrder.length;
+    var id = kbOrder[i];
+    focusId = id;
+    kbActive = true;
+    highlight(id);
+    var node = cy.getElementById(id);
+    if (node.length) {
+      cy.animate({ center: { eles: node }, zoom: Math.max(cy.zoom(), 0.9) }, { duration: 150 });
+    }
+    // Reuses the status line rather than adding a second live region — it is
+    // already aria-live="polite" and already describes the current view.
+    updateStatus();
   }
 
   // `ignoreCountry` exists for the comparison matrix, where country selects
@@ -813,6 +867,7 @@
     cy.add(els);
     applyLOD();
     runLayout(false);
+    updateKbOrder();
 
     updateStatus();
     if (focusId && cy.getElementById(focusId).length) highlight(focusId);
@@ -861,6 +916,11 @@
     } else if (nn && cy.zoom() * 9 < 8) {
       msg += " · zoom in for labels";
     }
+    // Only while the focused node is still actually on screen — filtering
+    // it away should not leave a stale note pointing at nothing.
+    if (kbActive && focusId && cy.getElementById(focusId).length) {
+      msg += " · Keyboard focus: " + (nodeById[focusId] || {}).label;
+    }
     $("stage-status").textContent = msg;
   }
 
@@ -884,6 +944,9 @@
   function selectEntity(id, fromGraph) {
     if (!nodeById[id]) return;
     focusId = id;
+    // A click, search pick or deep link is not a keyboard move — drop any
+    // stale "Keyboard focus" note the status line was carrying.
+    kbActive = false;
     if (location.hash.slice(1) !== id) {
       history.replaceState(null, "", "#" + id);
     }
@@ -989,6 +1052,53 @@
 
     $("detail-body").querySelectorAll("[data-goto]").forEach(function (b) {
       b.addEventListener("click", function () { selectEntity(b.dataset.goto, false); });
+    });
+  }
+
+  /** Detail panel for a tapped edge — the graph-native way to ask "what is
+   *  this connection?" without first opening one of its endpoints and
+   *  hunting through that entity's relationship list for the right line. */
+  function showEdgeDetail(edge) {
+    var d = edge.data();
+    var h = [];
+    h.push('<h2 class="d-title" id="detail-title">' +
+      esc(d.type ? titly(d.type) : titly(d.cls)) + "</h2>");
+    h.push('<div class="d-id">' + esc(d.source) + " → " + esc(d.target) + "</div>");
+
+    var chips = [];
+    chips.push('<span class="chip strong">' + esc(titly(d.cls)) + "</span>");
+    if (d.provenance) chips.push('<span class="chip">' + esc(titly(d.provenance)) + "</span>");
+    if (d.confidence) chips.push('<span class="chip">' + esc(titly(d.confidence)) + "</span>");
+    h.push('<div class="chips">' + chips.join("") + "</div>");
+
+    h.push(sec("Connects", '<div class="rel-line">' + link(d.source) +
+      ' <span class="rel-dir">→</span> ' + link(d.target) + "</div>"));
+
+    // Only typed relationships carry evidence — associations and wikilinks
+    // are structural, not sourced claims (see the Provenance filter's own
+    // description in the sidebar).
+    if (d.cls === "relationship") {
+      var key = d.source + "|" + d.target + "|" + (d.type || "");
+      var ed = D && D.edges && D.edges[key];
+      if (ed && ed.evidence) h.push(sec("Evidence", '<p class="evidence">' + esc(ed.evidence) + "</p>"));
+      else if (!D) h.push(sec("Evidence", '<p class="hint">Loading…</p>'));
+    } else {
+      h.push(sec("What this is", '<p class="hint">' + esc(CLASS_LABEL[d.cls] || "") + "</p>"));
+    }
+
+    $("detail-body").innerHTML = h.join("");
+    $("detail").hidden = false;
+    $("detail-body").querySelectorAll("[data-goto]").forEach(function (b) {
+      b.addEventListener("click", function () { selectEntity(b.dataset.goto, false); });
+    });
+
+    cy.batch(function () {
+      cy.elements().removeClass("dim hl focus");
+      edge.addClass("hl");
+      edge.connectedNodes().addClass("focus");
+      if (view !== "explorer") {
+        cy.elements().difference(edge.connectedNodes().closedNeighborhood()).addClass("dim");
+      }
     });
   }
 
