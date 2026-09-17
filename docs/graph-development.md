@@ -92,15 +92,16 @@ npm install playwright && npx playwright install chromium
 node tools/test_ui.mjs
 ```
 
-115 checks across desktop, mobile (390×844) and accessibility: search by
+122 checks across desktop, mobile (390×844) and accessibility: search by
 name/ID/country, keyboard navigation (including arrow-key traversal of the
 canvas itself), tapping a node or an edge, detail panel content, GitHub
-links, deep links, shareable filter/view/depth/search/path state in the URL
-hash, every filter, edge-class toggles, path-finding between two entities
-(including a path beyond the current depth, a clear action, and the
-no-path-found case), **the layered layout's block grouping and band
-order**, the comparison matrix, the list view and its sorting, and
-console-error freedom throughout.
+links, deep links, shareable filter/view/depth/search/path/layout state in
+the URL hash, every filter, edge-class toggles, path-finding between two
+entities (including a path beyond the current depth, a clear action, and
+the no-path-found case), **the layered layout's block grouping and band
+order**, **the world map layout's geographic ordering and its clusters
+never overlapping**, the comparison matrix, the list view and its sorting,
+and console-error freedom throughout.
 
 These are **not** in CI: they would require installing a browser on every
 pull request for a static page whose data is already covered by the Python
@@ -207,9 +208,9 @@ payload.
 table (sourced from a public-domain dataset, see the module docstring for
 provenance) plus a small, hand-maintained `REGION_CENTROIDS` table for
 political groupings like `EU`. `build_graph.py` emits these onto
-`facets.countries[].{lat,lon}` and `facets.regions[].{lat,lon}` for a
-geographic "World map" layout to read, so the site itself never computes
-or fetches any geographic data.
+`facets.countries[].{lat,lon}` and `facets.regions[].{lat,lon}` for the
+World map layout (see "Restyling" below) to read, so the site itself never
+computes or fetches any geographic data.
 
 The country table is deliberately comprehensive (nearly all ISO codes, not
 just the ~60 currently in use): the Atlas discovers countries from the data
@@ -236,8 +237,10 @@ first.
 
 ### Restyling
 
-Node **position** has two modes, switched from the sidebar and dispatched in
-`runLayout()`:
+Node **position** has three modes, switched from the sidebar and dispatched
+in `runLayout()`. `sizeBlock()` (sort by connectivity, pick a grid size) and
+`placeBlock()` (drop a sized grid at a centre point) are shared by the two
+that pack nodes into per-scope/per-country blocks:
 
 - **Grouped** (default) — `layeredPositions()`: bands by level, blocks by
   scope within a band, connectivity order within a block. Pure arithmetic,
@@ -253,6 +256,35 @@ Node **position** has two modes, switched from the sidebar and dispatched in
   positions (`randomize: false`) so it is reproducible. Gated by `FORCE_MAX`;
   above it the grouped layout is kept and the sidebar explains why. Tune
   distance in `idealEdgeLength()`.
+- **World map** — `mapPositions()`: each country's (or region's) block is
+  centred on its real centroid (`tools/country_centroids.py`, via facets),
+  projected with a plain equirectangular transform (`x = lon`, `y = -lat`,
+  scaled by `MAP_SCALE`). Entities with neither a country nor a region — the
+  `EU`/`UN`/`INTL`/`DOMAIN` scopes (metadata/ontology.md §2.1) that have no
+  single true location — sit in a fixed panel beside the map instead of a
+  fabricated point, the same refusal-to-invent principle as a dangling
+  relationship target.
+  - A country's true centroid is routinely closer to its neighbours than its
+    own entity cluster is wide (the Netherlands and Belgium are under 1.5°
+    apart; either cluster alone can be a thousand pixels across), so overlap
+    at the raw projected position is the normal case, not a bug.
+    `declutterCircles()` resolves it: circles are pushed apart only enough
+    to stop overlapping, with a small spring pulling each one back toward
+    its true position every iteration so a crowded region spreads out
+    locally instead of the correction cascading across the whole map. The
+    earlier version had no spring and pushed straight to zero overlap every
+    pair, full strength — with a dozen large mutually-overlapping circles
+    (western Europe) that cascaded until the Netherlands drifted past
+    Portugal's true position. `test_ui.mjs` asserts immediate-neighbour
+    ordering survives (Norway stays north of Spain, Germany stays east of
+    the Netherlands) as well as zero overlap.
+  - `MAP_SCALE` trades off against that cascade: too small, and block size
+    dominates the declutter pass and can invert real ordering between close
+    neighbours; too large, and distant countries end up needing an
+    impractically zoomed-out canvas. 360 was tuned against the current ~60
+    countries and their entity counts — if it drifts again as the Atlas
+    grows, re-tune this constant before touching the declutter algorithm
+    itself.
 
 `LOD_LABELS` still thins labels above 260 visible nodes.
 

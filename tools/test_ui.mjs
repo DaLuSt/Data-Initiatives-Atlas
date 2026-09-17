@@ -689,6 +689,73 @@ async function search(page, q) {
     regrouped.distinctY < regrouped.nodes * 0.3,
     `${regrouped.distinctY} distinct y for ${regrouped.nodes} nodes`);
 
+  // ── world map layout ──
+  await page.selectOption('#layout-mode', 'map');
+  await page.waitForTimeout(1200);
+  const mapState = await page.evaluate(() => {
+    const cy = document.getElementById('cy')._cyreg.cy;
+    const groups = {};
+    cy.nodes().forEach(n => {
+      const key = n.data('country') || n.data('region') || ('scope:' + n.data('scope'));
+      if (!groups[key]) groups[key] = { minX: Infinity, maxX: -Infinity, minY: Infinity, maxY: -Infinity };
+      const g = groups[key], x = n.position('x'), y = n.position('y');
+      g.minX = Math.min(g.minX, x); g.maxX = Math.max(g.maxX, x);
+      g.minY = Math.min(g.minY, y); g.maxY = Math.max(g.maxY, y);
+    });
+    const keys = Object.keys(groups);
+    let overlaps = 0;
+    for (let i = 0; i < keys.length; i++) {
+      for (let j = i + 1; j < keys.length; j++) {
+        const a = groups[keys[i]], b = groups[keys[j]];
+        if (a.minX <= b.maxX && b.minX <= a.maxX && a.minY <= b.maxY && b.minY <= a.maxY) overlaps++;
+      }
+    }
+    return {
+      nodes: cy.nodes().length, groupCount: keys.length, overlaps,
+      NO: groups['NO'], ES: groups['ES'], NL: groups['NL'], DE: groups['DE']
+    };
+  });
+  check('map layout keeps every node — none dropped for lacking a location',
+    mapState.nodes === 652, mapState.nodes);
+  check('map layout clusters do not overlap once decluttered',
+    mapState.overlaps === 0, `${mapState.overlaps} overlapping pairs of ${mapState.groupCount} groups`);
+  // Norway sits further north than Spain — real latitude order should
+  // survive the decluttering, not just "somewhere on the canvas".
+  const noY = (mapState.NO.minY + mapState.NO.maxY) / 2;
+  const esY = (mapState.ES.minY + mapState.ES.maxY) / 2;
+  check('map layout preserves north/south order (Norway above Spain)',
+    noY < esY, `Norway y=${noY.toFixed(0)}, Spain y=${esY.toFixed(0)}`);
+  // Germany sits east of the Netherlands, both west of Spain — the ordering
+  // that matters most is the *immediate* neighbour, not the whole continent.
+  const nlX = (mapState.NL.minX + mapState.NL.maxX) / 2;
+  const deX = (mapState.DE.minX + mapState.DE.maxX) / 2;
+  check('map layout preserves east/west order (Germany right of the Netherlands)',
+    deX > nlX, `Netherlands x=${nlX.toFixed(0)}, Germany x=${deX.toFixed(0)}`);
+
+  const mapHint = await page.textContent('#layout-hint');
+  check('map layout hint explains the supra-national panel',
+    /EU\/UN\/international/i.test(mapHint), mapHint.trim().slice(0, 60) + '…');
+
+  const mapUrl = new URL(page.url()).hash;
+  check('map layout is reflected in the URL hash', /layout=map/.test(mapUrl), mapUrl);
+
+  // A clean URL rather than a bare reload: earlier sections in this suite
+  // leave a focus set, and reloading with a focus but no explicit view
+  // intentionally lands in Explorer (the legacy bare-#ID behaviour) —
+  // not what this check is testing.
+  await page.goto(BASE + '/index.html#view=atlas&layout=map', { waitUntil: 'networkidle' });
+  await page.waitForFunction(() => document.getElementById('loading').hidden, null, { timeout: 15000 });
+  await page.waitForTimeout(500);
+  const restoredLayout = await page.$eval('#layout-mode', el => el.value);
+  const restoredNodeCount = await page.evaluate(() =>
+    document.getElementById('cy')._cyreg.cy.nodes().length);
+  check('reloading a map layout URL restores the selector and the layout',
+    restoredLayout === 'map' && restoredNodeCount === 652,
+    `selector=${restoredLayout}, nodes=${restoredNodeCount}`);
+
+  await page.selectOption('#layout-mode', 'grouped');
+  await page.waitForTimeout(700);
+
   // The layout switcher governs the Global Atlas only.
   await page.click('#view-explorer');
   await page.waitForTimeout(400);

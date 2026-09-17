@@ -13,6 +13,7 @@
   var cy = null;
   var nodeById = Object.create(null);
   var VIEWS = ["atlas", "explorer", "compare", "list"];
+  var LAYOUT_MODES = ["grouped", "force", "map"];
   var view = "atlas";      // atlas | explorer | compare | list
   var focusId = null;
   var depth = 2;
@@ -276,7 +277,7 @@
     });
 
     $("layout-mode").addEventListener("change", function (e) {
-      layoutMode = e.target.value === "force" ? "force" : "grouped";
+      layoutMode = LAYOUT_MODES.indexOf(e.target.value) >= 0 ? e.target.value : "grouped";
       syncUrl();
       if (view === "atlas") refresh();
       else updateLayoutHint(cy ? cy.nodes().length : 0);
@@ -715,6 +716,47 @@
     return els;
   }
 
+  /** Sort a group of nodes most-connected-first and size the grid it packs
+   *  into — shared by the grouped layout's per-scope blocks and the map
+   *  layout's per-country clusters, which pack a group of nodes the same
+   *  way and differ only in *where* the result gets placed. */
+  function sizeBlock(list, deg) {
+    list = list.slice().sort(function (a, b) {
+      return (deg[b.id()] || 0) - (deg[a.id()] || 0) ||
+        (b.data("rel_degree") || 0) - (a.data("rel_degree") || 0) ||
+        (a.data("label") || "").localeCompare(b.data("label") || "");
+    });
+    var cols = Math.max(2, Math.min(8, Math.ceil(Math.sqrt(list.length * 1.4))));
+    return { list: list, cols: cols, rows: Math.ceil(list.length / cols) };
+  }
+
+  /** Place a sized block's nodes into a grid centred on (cx, cy). */
+  function placeBlock(block, cx, cy, gapX, gapY, pos) {
+    var x0 = cx - (block.cols * gapX) / 2, y0 = cy - (block.rows * gapY) / 2;
+    block.list.forEach(function (n, i) {
+      pos[n.id()] = {
+        x: x0 + (i % block.cols) * gapX,
+        y: y0 + Math.floor(i / block.cols) * gapY
+      };
+    });
+  }
+
+  /** Degree over the *visible* edges, not the whole Atlas — the ordering
+   *  should describe the graph actually on screen, so turning wikilinks on
+   *  re-orders blocks rather than leaving a stale ranking. Shared by every
+   *  layout that ranks nodes within a block by connectivity. */
+  function visibleDegree() {
+    var deg = Object.create(null);
+    if (cy) {
+      cy.edges().forEach(function (e) {
+        var s = e.data("source"), t = e.data("target");
+        deg[s] = (deg[s] || 0) + 1;
+        deg[t] = (deg[t] || 0) + 1;
+      });
+    }
+    return deg;
+  }
+
   /** Deterministic layered layout: rows by geographic level (brief §6/§11). */
   function layeredPositions(nodes) {
     var gapX = 165, gapY = 105;       // spacing between nodes inside a block
@@ -729,18 +771,7 @@
     // 447 against a radius of 464.
     var blockGapX = 110, blockGapY = 190, bandGap = 150;
     var width = Math.max($("cy").clientWidth, 900);
-
-    // Connectivity is measured over the *visible* edges, not the whole Atlas.
-    // The ordering should describe the graph actually on screen, so turning
-    // wikilinks on re-orders the blocks rather than leaving a stale ranking.
-    var deg = Object.create(null);
-    if (cy) {
-      cy.edges().forEach(function (e) {
-        var s = e.data("source"), t = e.data("target");
-        deg[s] = (deg[s] || 0) + 1;
-        deg[t] = (deg[t] || 0) + 1;
-      });
-    }
+    var deg = visibleDegree();
 
     var rows = Object.create(null);
     nodes.forEach(function (n) {
@@ -767,18 +798,7 @@
       // in a band from being split across a wrap.
       var blocks = Object.keys(groups).sort(function (a, b) {
         return groups[b].length - groups[a].length || a.localeCompare(b);
-      }).map(function (k) {
-        var list = groups[k];
-        // Most-connected first, so each block leads with its own hub and
-        // its periphery trails behind it.
-        list.sort(function (a, b) {
-          return (deg[b.id()] || 0) - (deg[a.id()] || 0) ||
-            (b.data("rel_degree") || 0) - (a.data("rel_degree") || 0) ||
-            (a.data("label") || "").localeCompare(b.data("label") || "");
-        });
-        var cols = Math.max(2, Math.min(8, Math.ceil(Math.sqrt(list.length * 1.4))));
-        return { list: list, cols: cols, rows: Math.ceil(list.length / cols) };
-      });
+      }).map(function (k) { return sizeBlock(groups[k], deg); });
 
       // ── pack blocks across the band, wrapping when it runs out of room ─
       // The budget scales with the band's own size rather than the viewport:
@@ -817,6 +837,130 @@
     return pos;
   }
 
+  // Pixels per degree of latitude/longitude in the map layout's simple
+  // equirectangular projection (x = lon, y = -lat). Not to scale against
+  // gapX/gapY on purpose: two neighbouring countries' true centroids are
+  // routinely closer together than their entity clusters are wide (the
+  // Netherlands and Belgium are ~150km apart — under 1.5° — while either
+  // cluster alone can be over a thousand pixels across), so overlap between
+  // clusters is the normal case here, not a bug. declutterCircles() is what
+  // actually keeps them apart; this constant only sets their *starting*
+  // point and so which side of a crowded region a cluster starts nudging
+  // apart from.
+  var MAP_SCALE = 360;
+
+  /** Push apart any circles that overlap, while pulling every circle gently
+   *  back toward its true projected ("home") position — a Dorling-cartogram
+   *  declutter: overlap is resolved, but only as much as it has to be, so a
+   *  crowded region (the Benelux countries, the Balkans) spreads out
+   *  relative to the rest of the map instead of the whole layout cascading.
+   *
+   *  Earlier version pushed straight to zero overlap on every pair, full
+   *  strength, every iteration. That is exact for one pair in isolation, but
+   *  with a dozen large mutually-overlapping circles (western Europe) each
+   *  pairwise fix ignored every other constraint on the same circle, and the
+   *  fixes compounded: the Netherlands drifted thousands of pixels west,
+   *  past Portugal's true position, well past where its overlaps required.
+   *  Damping the push and adding the home spring bounds that: a circle only
+   *  moves as far as the crowd around it actually forces it to.
+   *
+   *  Mutates `circles` in place. O(circles² × iterations), which is cheap
+   *  regardless of how many entities are on screen: circles are countries
+   *  and regions, at most a few dozen, never individual nodes. */
+  function declutterCircles(circles, padding) {
+    var n = circles.length;
+    circles.forEach(function (c) { c.hx = c.cx; c.hy = c.cy; });
+    var damping = 0.5, spring = 0.04;
+    for (var iter = 0; iter < 300; iter++) {
+      for (var i = 0; i < n; i++) {
+        for (var j = i + 1; j < n; j++) {
+          var a = circles[i], b = circles[j];
+          var dx = b.cx - a.cx, dy = b.cy - a.cy;
+          var dist = Math.sqrt(dx * dx + dy * dy);
+          var minDist = a.r + b.r + padding;
+          if (dist < minDist) {
+            // Two circles landing on the same exact point (should not
+            // happen with real, distinct centroids) would otherwise divide
+            // by zero — push them apart along an arbitrary axis instead.
+            var ux = dist > 0.01 ? dx / dist : 1;
+            var uy = dist > 0.01 ? dy / dist : 0;
+            var push = (minDist - dist) / 2 * damping;
+            a.cx -= ux * push; a.cy -= uy * push;
+            b.cx += ux * push; b.cy += uy * push;
+          }
+        }
+      }
+      circles.forEach(function (c) {
+        c.cx += (c.hx - c.cx) * spring;
+        c.cy += (c.hy - c.cy) * spring;
+      });
+    }
+  }
+
+  /** Geographic layout: each country's (or region's) cluster sits at its
+   *  real-world centroid (tools/country_centroids.py, via facets), rather
+   *  than an arbitrary grid slot — "what does the Atlas look like laid over
+   *  an actual map" (brief). Entities with neither a country nor a region —
+   *  EU/UN/INTL/DOMAIN-scoped bodies without a single true location — sit in
+   *  a fixed panel beside the map instead of a fabricated point: pinning
+   *  "UN" to Geneva or New York would be inventing a fact the generator
+   *  itself refuses to (build_graph.py's dangling-target refusal, brief §27).
+   */
+  function mapPositions(nodes) {
+    var gapX = 165, gapY = 105, padding = 90;
+    var deg = visibleDegree();
+
+    var countryGeo = Object.create(null), regionGeo = Object.create(null);
+    (G.facets.countries || []).forEach(function (c) { countryGeo[c.code] = c; });
+    (G.facets.regions || []).forEach(function (r) { regionGeo[r.code] = r; });
+
+    var geoGroups = Object.create(null), trayGroups = Object.create(null);
+    nodes.forEach(function (n) {
+      var country = n.data("country"), region = n.data("region");
+      var geo = country ? countryGeo[country] : (region ? regionGeo[region] : null);
+      if (geo) {
+        var key = country || region;
+        (geoGroups[key] || (geoGroups[key] = { geo: geo, list: [] })).list.push(n);
+      } else {
+        var k = n.data("scope") || "—";
+        (trayGroups[k] || (trayGroups[k] = [])).push(n);
+      }
+    });
+
+    var pos = Object.create(null);
+    var circles = Object.keys(geoGroups).map(function (key) {
+      var g = geoGroups[key], block = sizeBlock(g.list, deg);
+      var w = block.cols * gapX, h = block.rows * gapY;
+      return {
+        cx: g.geo.lon * MAP_SCALE, cy: -g.geo.lat * MAP_SCALE,
+        r: Math.sqrt(w * w + h * h) / 2, block: block
+      };
+    });
+    declutterCircles(circles, padding);
+    circles.forEach(function (c) { placeBlock(c.block, c.cx, c.cy, gapX, gapY, pos); });
+
+    // The tray sits left of the decluttered map, ordered the same way the
+    // grouped layout's international band is (metadata/ontology.md §2.1),
+    // so switching between Map and Grouped doesn't reshuffle it.
+    var minX = 0;
+    circles.forEach(function (c) { minX = Math.min(minX, c.cx - c.r); });
+    var trayOrder = ["INTL", "UN", "DOMAIN"];
+    var trayKeys = Object.keys(trayGroups).sort(function (a, b) {
+      var ia = trayOrder.indexOf(a), ib = trayOrder.indexOf(b);
+      if (ia < 0) ia = trayOrder.length;
+      if (ib < 0) ib = trayOrder.length;
+      return ia - ib || a.localeCompare(b);
+    });
+    var trayX = minX - 480, ty = 0;
+    trayKeys.forEach(function (k) {
+      var block = sizeBlock(trayGroups[k], deg);
+      placeBlock(block, trayX, ty + (block.rows * gapY) / 2, gapX, gapY, pos);
+      ty += block.rows * gapY + 190;
+    });
+
+    return pos;
+  }
+
   function runLayout(force) {
     var n = cy.nodes().length;
     if (!n) return;
@@ -832,6 +976,15 @@
         minNodeSpacing: 46, padding: 50, fit: true,
         animate: n < 400, animationDuration: 300
       }).run();
+      return;
+    }
+
+    if (view === "atlas" && layoutMode === "map") {
+      cy.layout({
+        name: "preset", positions: mapPositions(cy.nodes()),
+        fit: true, padding: 50, animate: false
+      }).run();
+      updateLayoutHint(n);
       return;
     }
 
@@ -914,7 +1067,12 @@
   function updateLayoutHint(n) {
     var el = $("layout-hint");
     if (!el) return;
-    if (layoutMode !== "force") {
+    if (layoutMode === "map") {
+      el.textContent = "Each country's (or region's) entities are clustered at its " +
+        "real-world location; crowded areas spread apart just enough not to " +
+        "overlap. Entities with no single location — EU/UN/international " +
+        "bodies — sit in a panel to the left of the map instead.";
+    } else if (layoutMode !== "force") {
       el.textContent = "Bands are geographic levels; blocks inside a band are " +
         "scopes, and each block is ordered by how connected its members are " +
         "in the current view.";
@@ -1738,7 +1896,7 @@
     depth = (d >= 1 && d <= MAX_DEPTH) ? d : 2;
     if ($("depth")) $("depth").value = String(depth);
 
-    layoutMode = params.get("layout") === "force" ? "force" : "grouped";
+    layoutMode = LAYOUT_MODES.indexOf(params.get("layout")) >= 0 ? params.get("layout") : "grouped";
     if ($("layout-mode")) $("layout-mode").value = layoutMode;
 
     var q = params.get("q");
