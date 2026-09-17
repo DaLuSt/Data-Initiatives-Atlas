@@ -231,9 +231,87 @@ async function search(page, q) {
   const viewPressed = await page.getAttribute('#view-explorer', 'aria-pressed');
   check('deep link switches to Entity Explorer', viewPressed === 'true');
 
+  // The original single-entity hash predates the whole state-encoding
+  // feature. Switching to Explorer is a side effect of focusing an entity,
+  // never part of the shareable state, so the address bar must not rewrite
+  // #NL-NORA into a longer #focus=NL-NORA&view=explorer form just because
+  // it happened to switch views.
+  const urlAfterDeepLink = new URL(page.url()).hash;
+  check('a bare deep link stays in its original short form after loading',
+    urlAfterDeepLink === '#NL-NORA', urlAfterDeepLink);
+
   // explorer neighbourhood is smaller than the whole graph
   const st1 = await page.textContent('#stage-status');
   check('explorer shows a neighbourhood, not everything', /neighbourhood/.test(st1), st1.trim());
+
+  // ── shareable filter state in the URL ──
+  await page.click('#view-atlas');
+  await page.waitForTimeout(300);
+  await page.click('#reset-filters');
+  await page.waitForTimeout(300);
+
+  await page.click('#f-country label:has-text("Germany")');
+  await page.waitForTimeout(400);
+  const urlWithFilter = new URL(page.url()).hash;
+  check('toggling a filter is reflected in the URL hash', /country=DE/.test(urlWithFilter), urlWithFilter);
+
+  await page.reload({ waitUntil: 'networkidle' });
+  await page.waitForFunction(() => document.getElementById('loading').hidden, null, { timeout: 15000 });
+  await page.waitForTimeout(500);
+  const restoredChecked = await page.isChecked('#f-country input[value="DE"]');
+  check('reloading a filter URL re-checks the matching checkbox', restoredChecked);
+  // Still in the Explorer view left over from the earlier deep link, so the
+  // status line reads "<entity> · N-hop neighbourhood · X of Y entities …"
+  // rather than starting with the count — match it anywhere in the string.
+  const restoredStatus = await page.textContent('#stage-status');
+  const restoredCount = +(restoredStatus.match(/([\d,]+) of ([\d,]+) entities/) || [0, '0'])[1].replace(/,/g, '');
+  check('reloading a filter URL re-applies the filter to the graph',
+    restoredCount > 0 && restoredCount < 652, restoredStatus.trim());
+
+  // The focused entity (NL-NORA, from the earlier deep link) is still set,
+  // so clearing the filter leaves exactly the legacy bare form behind —
+  // not an empty hash — the same collapse rule the earlier "bare deep link
+  // stays … short" check exercised, now reached by removing state rather
+  // than never having added it.
+  await page.click('#reset-filters');
+  await page.waitForTimeout(400);
+  const urlAfterReset = new URL(page.url()).hash;
+  check('resetting filters with a focus still set collapses back to the bare form',
+    urlAfterReset === '#NL-NORA', urlAfterReset || '(empty)');
+
+  // A single hash can carry the view and several filters at once, not just
+  // one of each.
+  await page.goto(BASE + '/index.html#view=list&level=national&country=DE', { waitUntil: 'networkidle' });
+  await page.waitForFunction(() => document.getElementById('loading').hidden, null, { timeout: 15000 });
+  await page.waitForSelector('#listview:not([hidden])', { timeout: 8000 });
+  const listViewPressed = await page.getAttribute('#view-list', 'aria-pressed');
+  check('a query-string hash restores the List view', listViewPressed === 'true');
+  const deChecked = await page.isChecked('#f-country input[value="DE"]');
+  const natChecked = await page.isChecked('#f-level input[value="national"]');
+  check('a query-string hash restores several filters at once', deChecked && natChecked);
+  const listRowsFiltered = await page.$$eval('#list-body tr', r => r.length);
+  check('the restored filters actually narrow the List view',
+    listRowsFiltered > 0 && listRowsFiltered < 652, `${listRowsFiltered} rows`);
+
+  // A hash can also carry a focused entity alongside other state, and the
+  // search box restores its text without popping the suggestion dropdown —
+  // setting .value programmatically must not look like the visitor typing.
+  await page.goto(BASE + '/index.html#focus=NL-NORA&q=nora', { waitUntil: 'networkidle' });
+  await page.waitForFunction(() => document.getElementById('loading').hidden, null, { timeout: 15000 });
+  await page.waitForSelector('#detail:not([hidden])', { timeout: 8000 });
+  const focusRestoredTitle = await page.textContent('.d-title');
+  check('a query-string hash can carry a focus alongside other state',
+    /NORA|Nederlandse Overheid/i.test(focusRestoredTitle), focusRestoredTitle);
+  const searchBoxVal = await page.inputValue('#search');
+  check('a query-string hash restores the search box text', searchBoxVal === 'nora', searchBoxVal);
+  const suggestionsHidden = await page.isHidden('#suggestions');
+  check('restoring search text does not pop open the suggestion dropdown', suggestionsHidden);
+
+  await page.click('#reset-filters');
+  await page.waitForTimeout(300);
+  await page.fill('#search', '');
+  await page.click('#detail-close');
+  await page.waitForTimeout(300);
 
   // ── neighbourhood depth ──
   // The control tops out at 4 on purpose: every chain the Atlas is built to

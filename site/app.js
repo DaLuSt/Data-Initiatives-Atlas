@@ -12,6 +12,7 @@
   var D = null;            // details.json (may still be loading)
   var cy = null;
   var nodeById = Object.create(null);
+  var VIEWS = ["atlas", "explorer", "compare", "list"];
   var view = "atlas";      // atlas | explorer | compare | list
   var focusId = null;
   var depth = 2;
@@ -233,6 +234,7 @@
       if (el.tagName !== "INPUT" || !el.dataset.group) return;
       var set = filters[el.dataset.group];
       if (el.checked) set.add(el.value); else set.delete(el.value);
+      syncUrl();
       refresh();
     });
 
@@ -246,6 +248,7 @@
           var set = filters[i.dataset.group];
           if (on) set.add(i.value); else set.delete(i.value);
         });
+        syncUrl();
         refresh();
       }
     });
@@ -253,19 +256,21 @@
     $("reset-filters").addEventListener("click", resetFilters);
     $("empty-reset").addEventListener("click", resetFilters);
 
-    $("view-atlas").addEventListener("click", function () { setView("atlas"); });
-    $("view-explorer").addEventListener("click", function () { setView("explorer"); });
-    $("view-compare").addEventListener("click", function () { setView("compare"); });
-    $("view-list").addEventListener("click", function () { setView("list"); });
+    $("view-atlas").addEventListener("click", function () { setView("atlas"); syncUrl(); });
+    $("view-explorer").addEventListener("click", function () { setView("explorer"); syncUrl(); });
+    $("view-compare").addEventListener("click", function () { setView("compare"); syncUrl(); });
+    $("view-list").addEventListener("click", function () { setView("list"); syncUrl(); });
 
     $("depth").addEventListener("change", function (e) {
       depth = Math.min(MAX_DEPTH, Math.max(1, parseInt(e.target.value, 10) || 2));
       updateDepthLabels();
+      syncUrl();
       if (view === "explorer") refresh();
     });
 
     $("layout-mode").addEventListener("change", function (e) {
       layoutMode = e.target.value === "force" ? "force" : "grouped";
+      syncUrl();
       if (view === "atlas") refresh();
       else updateLayoutHint(cy ? cy.nodes().length : 0);
     });
@@ -317,6 +322,7 @@
     document.querySelectorAll('input[data-group]').forEach(function (i) {
       i.checked = i.dataset.group === "edgeClass" ? filters.edgeClass.has(i.value) : false;
     });
+    syncUrl();
     refresh();
   }
 
@@ -458,6 +464,7 @@
     var id = kbOrder[i];
     focusId = id;
     kbActive = true;
+    syncUrl();
     highlight(id);
     var node = cy.getElementById(id);
     if (node.length) {
@@ -947,9 +954,7 @@
     // A click, search pick or deep link is not a keyboard move — drop any
     // stale "Keyboard focus" note the status line was carrying.
     kbActive = false;
-    if (location.hash.slice(1) !== id) {
-      history.replaceState(null, "", "#" + id);
-    }
+    syncUrl();
     if (view === "explorer") refresh();
     else if (cy && cy.getElementById(id).length) {
       highlight(id);
@@ -1147,7 +1152,7 @@
     var t = null;
     box.addEventListener("input", function () {
       clearTimeout(t);
-      t = setTimeout(function () { runSearch(box.value); }, 110);
+      t = setTimeout(function () { runSearch(box.value); syncUrl(); }, 110);
       if (view === "list") renderList();
     });
     box.addEventListener("keydown", function (ev) {
@@ -1482,15 +1487,123 @@
     });
   }
 
-  // ── deep links ───────────────────────────────────────────────────────
-  function applyRoute() {
-    var id = decodeURIComponent(location.hash.slice(1));
-    if (id && nodeById[id]) {
-      if (view === "atlas") setView("explorer");
-      selectEntity(id, false);
+  // ── deep links + shareable state ─────────────────────────────────────
+  //
+  // Two hash formats are understood, and both are written back exactly as
+  // they were before this URL-encodes-state feature existed wherever
+  // possible, so a link someone already saved keeps resolving the same way:
+  //
+  //   #ENTITY-ID              — the original format: focus one entity,
+  //                             everything else at its default.
+  //   #key=value&key=value…   — a URLSearchParams-style query string,
+  //                             used the moment anything else (a filter,
+  //                             the view, depth, layout, a search query)
+  //                             is not at its default.
+  //
+  // No entity ID the generator emits contains "=", so the two forms never
+  // collide: a bare "=" is what distinguishes one from the other.
+  function syncFilterCheckboxes() {
+    document.querySelectorAll("input[data-group]").forEach(function (i) {
+      i.checked = filters[i.dataset.group].has(i.value);
+    });
+  }
+
+  function applyStateFromParams(params) {
+    Object.keys(filters).forEach(function (k) {
+      var raw = params.get(k);
+      filters[k].clear();
+      if (raw) raw.split(",").forEach(function (v) { if (v) filters[k].add(v); });
+      // Unlike every other filter, an empty edgeClass set means "show
+      // nothing" rather than "show all" — it must never end up empty.
+      if (k === "edgeClass" && !filters[k].size) filters[k].add("relationship");
+    });
+    syncFilterCheckboxes();
+
+    var d = parseInt(params.get("depth"), 10);
+    depth = (d >= 1 && d <= MAX_DEPTH) ? d : 2;
+    if ($("depth")) $("depth").value = String(depth);
+
+    layoutMode = params.get("layout") === "force" ? "force" : "grouped";
+    if ($("layout-mode")) $("layout-mode").value = layoutMode;
+
+    var q = params.get("q");
+    // Setting .value directly does not fire the "input" event that would
+    // otherwise pop up the suggestion dropdown — exactly what is wanted
+    // here: pre-fill the box (the List view reads it live) without acting
+    // as though the visitor just typed it.
+    if (q) $("search").value = q;
+
+    var explicitView = params.get("view");
+    var focus = params.get("focus");
+    // No explicit view, but a focus is present: default to Explorer, the
+    // same implicit switch the legacy #ENTITY-ID form has always made.
+    // Without this, restoring "focus" alone would leave the neighbourhood
+    // computed but the canvas showing the whole (filtered) Atlas instead.
+    setView(VIEWS.indexOf(explicitView) >= 0 ? explicitView : (focus ? "explorer" : "atlas"));
+
+    if (focus && nodeById[focus]) selectEntity(focus, false);
+  }
+
+  /** Everything that is not at its default, as a URLSearchParams — the
+   *  single source of truth both applyRoute() and syncUrl() build on. */
+  function currentStateParams() {
+    var p = new URLSearchParams();
+    if (view !== "atlas") p.set("view", view);
+    if (depth !== 2) p.set("depth", String(depth));
+    if (layoutMode !== "grouped") p.set("layout", layoutMode);
+    var q = $("search") ? $("search").value.trim() : "";
+    if (q) p.set("q", q);
+    Object.keys(filters).forEach(function (k) {
+      var set = filters[k];
+      if (k === "edgeClass" && set.size === 1 && set.has("relationship")) return;
+      if (!set.size) return;
+      var vals = [];
+      set.forEach(function (v) { vals.push(v); });
+      p.set(k, vals.join(","));
+    });
+    return p;
+  }
+
+  /** Called on every state change (filters, view, depth, layout, search,
+   *  focus). Uses replaceState, never pushState — every intermediate state
+   *  while browsing is address-bar-shareable, but none of them should be a
+   *  "back" stop, the same choice the original single-entity hash made. */
+  function syncUrl() {
+    var p = currentStateParams();
+    var qsSoFar = p.toString();
+    // "view=explorer" alone does not disqualify the legacy bare form.
+    // Focusing an entity has always switched to Explorer as a side effect,
+    // never as part of the shareable state — #ENTITY-ID predates the view
+    // switcher itself, and this is what lets a plain deep link stay plain
+    // after being visited rather than rewriting itself to a longer form.
+    var bareOk = focusId && (!qsSoFar || qsSoFar === "view=explorer");
+    var hash;
+    if (bareOk) {
+      hash = "#" + focusId;
     } else {
-      refresh();
+      if (focusId) p.set("focus", focusId);
+      var qs = p.toString();
+      hash = qs ? "#" + qs : "";
     }
+    if (location.hash !== hash) {
+      history.replaceState(null, "", hash || location.pathname + location.search);
+    }
+  }
+
+  function applyRoute() {
+    var raw = decodeURIComponent(location.hash.slice(1));
+    if (!raw) { refresh(); return; }
+    if (raw.indexOf("=") < 0) {
+      // The original plain form.
+      if (nodeById[raw]) {
+        if (view === "atlas") setView("explorer");
+        selectEntity(raw, false);
+      } else {
+        refresh();
+      }
+      return;
+    }
+    applyStateFromParams(new URLSearchParams(raw));
   }
 
   if (document.readyState === "loading") {
