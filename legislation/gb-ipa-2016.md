@@ -37,6 +37,7 @@ related_entities:
   - GB-SSA-1989
   - GB-RIPA-2000
   - GB-IPA-AMENDMENT-2024
+  - GB-IPT
 relationships:
   - type: references
     target: GB-ISA-1994
@@ -131,11 +132,15 @@ see [[GB-RIPA-2000]]'s own file for the part-by-part detail.
   is now [[GB-IPA-AMENDMENT-2024]], `amends` this entity across six
   Parts (bulk personal datasets, oversight, communications data,
   notices, MPs/equipment interference, general provisions).
-- The **double lock** warrant mechanism and the **Judicial Commissioners** —
-  the UK's nearest analogue to [[NL-TIB]]. No source read describes it, so
-  it is absent from [[GB-IPCO]] too.
-- The **Investigatory Powers Tribunal** as its own entity — established
-  by [[GB-RIPA-2000]]'s own Part IV, not by this Act.
+- The **double lock** warrant mechanism and the **Judicial
+  Commissioners** at the article level on this entity — the UK's
+  nearest analogue to [[NL-TIB]]. **Stale note fixed 2026-09-17**: this
+  previously said the mechanism was "absent from [[GB-IPCO]] too," but
+  [[GB-IPCO]]'s own file has described it in detail, sourced directly
+  from IPCO's dedicated page, since 2026-09-05.
+- **Closed 2026-09-17**: the Investigatory Powers Tribunal is now
+  [[GB-IPT]], `governed-by` [[GB-RIPA-2000]]'s own Part IV, not by this
+  Act.
 
 ## Sources
 

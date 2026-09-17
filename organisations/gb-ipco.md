@@ -22,7 +22,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-09-06"
+last_verified: "2026-09-17"
 previous_version: null
 successor: null
 
@@ -36,6 +36,7 @@ related_entities:
   - GB-GCHQ
   - GB-ISC
   - GB-DI
+  - GB-IPT
 relationships:
   - type: governed-by
     target: GB-IPA-2016
@@ -170,9 +171,9 @@ requirement between an office and a class of decisions.
 
 ## Not modelled
 
-- The **Investigatory Powers Tribunal**, the judicial body that hears
-  complaints. IPCO oversees; the Tribunal adjudicates. They are separate,
-  and only IPCO is modelled here.
+- **Closed 2026-09-17**: the Investigatory Powers Tribunal is now
+  [[GB-IPT]]. IPCO oversees; the Tribunal adjudicates. They are
+  separate bodies with separate entities now.
 
 ## Relationships
 

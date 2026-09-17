@@ -38,6 +38,8 @@ related_entities:
   - GB-IPCO
   - GB-ISC
   - GB-RIPA-2000
+  - GB-IPT
+  - GB-IPA-AMENDMENT-2024
   - GB-DI
 relationships:
   - type: governed-by
@@ -171,10 +173,11 @@ so no `part-of` is asserted — as for [[FR-DGSI]], [[NL-MIVD]] and
   own Parts directly finds only Part I (interception) is superseded by
   [[GB-IPA-2016]]; Part II (surveillance), Part III (encryption-key
   disclosure) and the Tribunal (Part IV) remain in force.
-- The **Investigatory Powers Tribunal**, the judicial body hearing
-  complaints, distinct from [[GB-IPCO]] — established by
-  [[GB-RIPA-2000]]'s own Part IV, still not its own Atlas entity.
-- The **Investigatory Powers (Amendment) Act 2024**.
+- **Closed 2026-09-17**: the Investigatory Powers Tribunal is now
+  [[GB-IPT]], `governed-by` [[GB-RIPA-2000]]'s own Part IV, distinct
+  from [[GB-IPCO]].
+- **Closed 2026-09-17**: the Investigatory Powers (Amendment) Act 2024
+  is now [[GB-IPA-AMENDMENT-2024]], which `amends` [[GB-IPA-2016]].
 - **Closed 2026-09-06**: Defence Intelligence is now [[GB-DI]]. It
   genuinely has no avowal act — confirmed by reading gov.uk's own page
   and Wikipedia directly, both agree it is "an integral part of" the MOD
