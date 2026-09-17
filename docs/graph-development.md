@@ -92,10 +92,11 @@ npm install playwright && npx playwright install chromium
 node tools/test_ui.mjs
 ```
 
-96 checks across desktop, mobile (390×844) and accessibility: search by
+107 checks across desktop, mobile (390×844) and accessibility: search by
 name/ID/country, keyboard navigation (including arrow-key traversal of the
 canvas itself), tapping a node or an edge, detail panel content, GitHub
-links, deep links, every filter, edge-class toggles, **the layered layout's
+links, deep links, shareable filter/view/depth/search state in the URL
+hash, every filter, edge-class toggles, **the layered layout's
 block grouping and band order**, the comparison matrix, the list view and its
 sorting, and console-error freedom throughout.
 
