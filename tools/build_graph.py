@@ -33,6 +33,7 @@ from common import (  # noqa: E402  (path set above)
     load_all_entities,
     load_schema,
 )
+from country_centroids import COUNTRY_CENTROIDS, REGION_CENTROIDS  # noqa: E402
 
 DEFAULT_OUT = REPO_ROOT / "site" / "graph.json"
 
@@ -325,6 +326,27 @@ def build(strict_wikilinks: bool = True) -> tuple[dict, list[str], list[str]]:
     region_counts = Counter(n["region"] for n in nodes if n.get("region"))
     scope_counts = Counter(n["scope"] for n in nodes)
 
+    # The site's geographic map layout places a country/region's cluster at
+    # a fixed point (tools/country_centroids.py) rather than computing one,
+    # so — like a dangling relationship target — a code with nowhere to go
+    # refuses the build instead of silently leaving that cluster off the map.
+    missing_geo = sorted(c for c in country_counts if c not in COUNTRY_CENTROIDS)
+    if missing_geo:
+        errors.append(
+            "no centroid for country code(s) " + ", ".join(missing_geo) +
+            " — add them to tools/country_centroids.py before this country "
+            "can appear in the Atlas"
+        )
+    missing_region_geo = sorted(r for r in region_counts if r not in REGION_CENTROIDS)
+    if missing_region_geo:
+        errors.append(
+            "no centroid for region code(s) " + ", ".join(missing_region_geo) +
+            " — add them to tools/country_centroids.py before this region "
+            "can appear in the Atlas"
+        )
+    if errors:
+        return ({}, errors, warnings)
+
     # Domain labels come from the domain entities themselves, exactly as
     # country labels come from country entities. A domain tagged on an entity
     # but never created as an entity still gets a facet row, labelled by its
@@ -339,12 +361,21 @@ def build(strict_wikilinks: bool = True) -> tuple[dict, list[str], list[str]]:
         domain_names.setdefault(code, code)
 
     facets = {
+        # lat/lon are the country's/region's centroid (tools/country_centroids.py),
+        # used to place its cluster on the site's geographic map layout —
+        # every code here is guaranteed one by the refusal above.
         "countries": [
-            {"code": c, "label": country_names.get(c, c), "count": n}
+            {
+                "code": c, "label": country_names.get(c, c), "count": n,
+                "lat": COUNTRY_CENTROIDS[c][0], "lon": COUNTRY_CENTROIDS[c][1],
+            }
             for c, n in sorted(country_counts.items(), key=lambda kv: (-kv[1], kv[0]))
         ],
         "regions": [
-            {"code": r, "count": n}
+            {
+                "code": r, "count": n,
+                "lat": REGION_CENTROIDS[r][0], "lon": REGION_CENTROIDS[r][1],
+            }
             for r, n in sorted(region_counts.items(), key=lambda kv: (-kv[1], kv[0]))
         ],
         "scopes": [
