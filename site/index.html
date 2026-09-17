@@ -20,13 +20,13 @@
     </div>
   </div>
 
-  <div class="search-wrap">
+  <div class="search-wrap combo-wrap">
     <label class="sr-only" for="search">Search entities by name, ID, alias, type, country or domain</label>
-    <input id="search" type="search" autocomplete="off" spellcheck="false"
+    <input id="search" class="combo-input" type="search" autocomplete="off" spellcheck="false"
            placeholder="Search entities, IDs, countries, domains…"
            role="combobox" aria-expanded="false" aria-controls="suggestions"
            aria-autocomplete="list">
-    <ul id="suggestions" role="listbox" aria-label="Search results" hidden></ul>
+    <ul id="suggestions" class="combo-list" role="listbox" aria-label="Search results" hidden></ul>
   </div>
 
   <nav class="views" aria-label="View">
@@ -87,6 +87,19 @@
           </select>
         </label>
         <p class="hint" id="depth-note" aria-live="polite"></p>
+
+        <div class="field" id="path-field">
+          <label for="path-target">Find path to</label>
+          <div class="combo-wrap path-input-row">
+            <input id="path-target" class="combo-input" type="text" autocomplete="off" spellcheck="false"
+                   placeholder="Search entities…"
+                   role="combobox" aria-expanded="false" aria-controls="path-suggestions"
+                   aria-autocomplete="list">
+            <ul id="path-suggestions" class="combo-list" role="listbox" aria-label="Path target results" hidden></ul>
+          </div>
+          <button id="path-clear" class="mini" type="button">Clear path</button>
+        </div>
+        <p class="hint" id="path-result" aria-live="polite"></p>
       </section>
 
       <section class="panel" aria-labelledby="layout-h" id="layout-panel">

@@ -92,13 +92,15 @@ npm install playwright && npx playwright install chromium
 node tools/test_ui.mjs
 ```
 
-107 checks across desktop, mobile (390×844) and accessibility: search by
+115 checks across desktop, mobile (390×844) and accessibility: search by
 name/ID/country, keyboard navigation (including arrow-key traversal of the
 canvas itself), tapping a node or an edge, detail panel content, GitHub
-links, deep links, shareable filter/view/depth/search state in the URL
-hash, every filter, edge-class toggles, **the layered layout's
-block grouping and band order**, the comparison matrix, the list view and its
-sorting, and console-error freedom throughout.
+links, deep links, shareable filter/view/depth/search/path state in the URL
+hash, every filter, edge-class toggles, path-finding between two entities
+(including a path beyond the current depth, a clear action, and the
+no-path-found case), **the layered layout's block grouping and band
+order**, the comparison matrix, the list view and its sorting, and
+console-error freedom throughout.
 
 These are **not** in CI: they would require installing a browser on every
 pull request for a static page whose data is already covered by the Python

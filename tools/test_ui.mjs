@@ -356,6 +356,93 @@ async function search(page, q) {
   await page.selectOption('#depth', '2');
   await page.waitForTimeout(600);
 
+  // ── path finder ──
+  // Still Explorer/NL-NORA/depth 2 from the deep link above. NL-EAR is a
+  // direct (1-hop) relationship neighbour, well inside the current
+  // neighbourhood, so this is the plain case: pick a target, expect an
+  // immediate route.
+  await page.fill('#path-target', 'NL-EAR');
+  await page.waitForSelector('#path-suggestions li[data-id]');
+  await page.locator('#path-suggestions li[data-id]').first().click();
+  await page.waitForTimeout(600);
+  const pathResultNear = await page.textContent('#path-result');
+  check('picking a path target renders a hop count and route',
+    /1 hop/.test(pathResultNear) && /Enterprise Architectuur/i.test(pathResultNear),
+    pathResultNear.trim());
+
+  const pathClasses1 = await page.evaluate(() => {
+    const cy = document.getElementById('cy')._cyreg.cy;
+    return { nodes: cy.nodes('.path-node').length, edges: cy.edges('.path-edge').length };
+  });
+  check('a found path marks its nodes and edges on the canvas',
+    pathClasses1.nodes >= 2 && pathClasses1.edges >= 1, JSON.stringify(pathClasses1));
+
+  const urlWithPath = new URL(page.url()).hash;
+  check('a path target is reflected in the URL hash', /to=NL-EAR/.test(urlWithPath), urlWithPath);
+
+  await page.reload({ waitUntil: 'networkidle' });
+  await page.waitForFunction(() => document.getElementById('loading').hidden, null, { timeout: 15000 });
+  await page.waitForTimeout(500);
+  const restoredPathTarget = await page.inputValue('#path-target');
+  check('reloading a path URL restores the target field',
+    /Enterprise Architectuur/i.test(restoredPathTarget), restoredPathTarget);
+  const restoredPathResult = await page.textContent('#path-result');
+  check('reloading a path URL recomputes the route',
+    /1 hop/.test(restoredPathResult), restoredPathResult.trim());
+
+  // Clearing removes the field, the hint, the canvas classes and the URL
+  // param together — none of the four should be left behind.
+  await page.click('#path-clear');
+  await page.waitForTimeout(400);
+  const clearedValue = await page.inputValue('#path-target');
+  const clearedResult = await page.textContent('#path-result');
+  const clearedClasses = await page.evaluate(() => {
+    const cy = document.getElementById('cy')._cyreg.cy;
+    return cy.nodes('.path-node').length + cy.edges('.path-edge').length;
+  });
+  const clearedUrl = new URL(page.url()).hash;
+  check('clearing the path resets the field, hint, canvas classes and URL',
+    clearedValue === '' && clearedResult.trim() === '' && clearedClasses === 0 && !/to=/.test(clearedUrl),
+    JSON.stringify({ clearedValue, clearedResult, clearedClasses, clearedUrl }));
+
+  // NL-VNG is a 3-hop relationship neighbour — outside the 2-hop
+  // neighbourhood the depth slider currently shows. Path-finding is
+  // deliberately not bounded by that slider, so picking it must widen the
+  // rendered canvas rather than reporting no path.
+  const depthNodeCountBefore = await page.evaluate(() =>
+    document.getElementById('cy')._cyreg.cy.nodes().length);
+  await page.fill('#path-target', 'NL-VNG');
+  await page.waitForSelector('#path-suggestions li[data-id]');
+  await page.locator('#path-suggestions li[data-id]').first().click();
+  await page.waitForTimeout(600);
+  const pathResultFar = await page.textContent('#path-result');
+  const depthNodeCountAfter = await page.evaluate(() =>
+    document.getElementById('cy')._cyreg.cy.nodes().length);
+  check('a path beyond the current depth still renders, extending the neighbourhood',
+    /hops/.test(pathResultFar) && depthNodeCountAfter > depthNodeCountBefore,
+    `${pathResultFar.trim()} — ${depthNodeCountBefore} → ${depthNodeCountAfter} nodes`);
+
+  await page.click('#path-clear');
+  await page.waitForTimeout(400);
+
+  // NL-WOB has no relationship-class path to NL-NORA at all (verified
+  // against graph.json) — under the default relationship-only edge filter
+  // it must say so, and must not silently extend the neighbourhood the way
+  // a found path does.
+  await page.fill('#path-target', 'NL-WOB');
+  await page.waitForSelector('#path-suggestions li[data-id]');
+  await page.locator('#path-suggestions li[data-id]').first().click();
+  await page.waitForTimeout(600);
+  const noPathResult = await page.textContent('#path-result');
+  const noPathNodeCount = await page.evaluate(() =>
+    document.getElementById('cy')._cyreg.cy.nodes().length);
+  check('an unreachable target reports no path instead of doing nothing',
+    /no path/i.test(noPathResult) && noPathNodeCount === depthNodeCountBefore,
+    `${noPathResult.trim()} — ${noPathNodeCount} nodes`);
+
+  await page.click('#path-clear');
+  await page.waitForTimeout(300);
+
   // ── filters ──
   await page.click('#view-atlas');
   await page.waitForTimeout(500);
