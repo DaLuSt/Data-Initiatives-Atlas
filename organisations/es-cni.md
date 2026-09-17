@@ -24,8 +24,8 @@ verification: primary-source
 
 start_date: 2002-05-06
 end_date: null
-last_verified: "2026-09-06"
-previous_version: null
+last_verified: "2026-09-17"
+previous_version: ES-CESID
 successor: null
 
 domains:
@@ -36,6 +36,7 @@ related_entities:
   - ES-LO-2-2002
   - ES-CCN
   - ES-CIFAS
+  - ES-CESID
 relationships:
   - type: governed-by
     target: ES-LEY-11-2002
@@ -49,6 +50,13 @@ relationships:
     source: fact
     evidence: "Confirmed by reading Ley Orgánica 2/2002's own text at boe.es directly (2026-08-26, BOE-A-2002-8627): it modifies Articles 125, 127 and 135 of the Ley Orgánica del Poder Judicial and adds Article 342 bis to establish judicial control of CNI activities affecting Articles 18.2 and 18.3 of the Constitution, naming a specific Supreme Court magistrate for the role."
     confidence: medium
+    valid_from: 2002-05-06
+    valid_until: null
+  - type: supersedes
+    target: ES-CESID
+    source: fact
+    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP (this entity's own 'not modelled' note). Confirmed by reading Ley 11/2002's own text directly at boe.es (2026-09-17, BOE-A-2002-8628), Disposición adicional segunda: 'Queda suprimido el Centro Superior de Información de la Defensa' (the CESID is hereby suppressed), immediately followed by 'El Centro Nacional de Inteligencia sucederá al Centro Superior de Información de la Defensa en el ejercicio de sus funciones' (the CNI shall succeed the CESID in the exercise of its functions) — explicit statutory succession language."
+    confidence: high
     valid_from: 2002-05-06
     valid_until: null
 
@@ -80,6 +88,11 @@ sources:
 > boe.es, plus es.wikipedia.org. A ministry-attachment history this
 > entity did not previously carry surfaced: the CNI moved to the
 > Presidency Ministry in 2011 and back to Defence only in 2018.
+>
+> **Closed 2026-09-17.** [[ES-LEY-11-2002]]'s own Disposición adicional
+> segunda, re-read directly, both suppresses CESID by name and states the
+> CNI succeeds it — now modelled as [[ES-CESID]]. See "Relationships"
+> below.
 
 ## Description
 
@@ -152,16 +165,19 @@ through a body that was already present.
   none was researched.
 - The **Comisión Delegada del Gobierno para Asuntos de Inteligencia**, the
   government committee that sets the CNI's annual objectives.
-- The CNI's predecessor, **CESID** (Centro Superior de Información de la
-  Defensa) — named by es.wikipedia.org, read directly this pass, but the
-  2002 reform's substance was not researched.
 - The CNI's own **ministry-attachment history** beyond the 2011/2018
   transition named above — why it moved, and under which instrument.
 
 ## Relationships
 
 - `governed-by` [[ES-LEY-11-2002]] and [[ES-LO-2-2002]].
+- `supersedes` [[ES-CESID]] — added 2026-09-17, closing this entity's own
+  previous "not modelled" note. Ley 11/2002's own Disposición adicional
+  segunda, read directly, both suppresses CESID by name and states the
+  CNI succeeds it "en el ejercicio de sus funciones."
 
 ## Sources
 
-Listed in frontmatter, all four read directly this pass.
+Listed in frontmatter, all four read directly across two passes; Ley
+11/2002's own text (already cited) re-read 2026-09-17 for its
+Disposición adicional segunda, closing the CESID succession gap.
