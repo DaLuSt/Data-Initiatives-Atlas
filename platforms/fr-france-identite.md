@@ -10,10 +10,10 @@ description: >
   it at the "high" level of assurance in February 2024, and the European
   Commission notified it in September 2024 as meeting eIDAS's high-level-of-
   assurance requirements. It has since been designated by the Commission as
-  France's future European Digital Identity Wallet, and France Titres (the
-  operator, not itself an Atlas entity) coordinates the multi-country
-  POTENTIAL and APTITUDE pilot consortia testing EUDI Wallet use cases.
-  Acts as an identity provider within FranceConnect+.
+  France's future European Digital Identity Wallet, and France Titres
+  operates it and coordinates the multi-country POTENTIAL and APTITUDE
+  pilot consortia testing EUDI Wallet use cases. Acts as an identity
+  provider within FranceConnect+.
 
 level: national
 country: FR
@@ -26,7 +26,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-09-17"
 previous_version: null
 successor: null
 
@@ -36,6 +36,7 @@ organisations: []
 related_entities:
   - FR
   - FR-FRANCECONNECT
+  - FR-FRANCE-TITRES
   - EU-EIDAS
   - EU-EUDI-WALLET
 relationships:
@@ -45,6 +46,13 @@ relationships:
     evidence: "Confirmed by reading france-identite.gouv.fr directly (2026-09-05): the site describes France Identité as the French state's official digital-identity service, built on the electronic national identity card. FR-FRANCECONNECT's own entity, sourced from the same domain, already records France Identité as 'a dematerialised national identity card on a smartphone.' Anchor edge under metadata/relationship-types.md §2.3."
     confidence: medium
     valid_from: null
+    valid_until: null
+  - type: governed-by
+    target: FR-FRANCE-TITRES
+    source: fact
+    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP (this entity's own 'not itself an Atlas entity' note on France Titres). Confirmed by reading Décret n° 2024-146 du 26 février 2024's own text directly at legifrance.gouv.fr (2026-09-17): Article 2 gives France Titres the mission of managing the digital systems and mobile applications behind electronic identification services — the statutory basis for its operation of France Identité."
+    confidence: high
+    valid_from: "2024-02-26"
     valid_until: null
   - type: implements-requirement-from
     target: EU-EIDAS
@@ -56,7 +64,7 @@ relationships:
   - type: implements-requirement-from
     target: EU-EUDI-WALLET
     source: fact
-    evidence: "Confirmed by reading france-identite.gouv.fr's own 'Potential & Aptitude' page directly (2026-09-05): 'The France Identité application was designated by the European Commission as France's future digital wallet' to meet eIDAS 2.0's requirement that every member state make a wallet available by the end of 2026. The same page states France Titres (the operator; not itself an Atlas entity) coordinates POTENTIAL — 160 partners from 18 member states plus Ukraine, concluded September 2025 — and its successor APTITUDE — 117 partners from 11 European countries plus Ukraine — the pilot consortia testing wallet use cases (digital travel credentials, bank account opening, driving licences, qualified electronic signatures, cross-border e-prescriptions). Recorded at low confidence because this is a designation of intent, not yet a completed, operational wallet — the same 'prepared, not live' distinction [[DE-BUNDID]] draws for its own EU-EUDI-WALLET edge."
+    evidence: "Confirmed by reading france-identite.gouv.fr's own 'Potential & Aptitude' page directly (2026-09-05): 'The France Identité application was designated by the European Commission as France's future digital wallet' to meet eIDAS 2.0's requirement that every member state make a wallet available by the end of 2026. The same page states France Titres (the operator, now [[FR-FRANCE-TITRES]]) coordinates POTENTIAL — 160 partners from 18 member states plus Ukraine, concluded September 2025 — and its successor APTITUDE — 117 partners from 11 European countries plus Ukraine — the pilot consortia testing wallet use cases (digital travel credentials, bank account opening, driving licences, qualified electronic signatures, cross-border e-prescriptions). Recorded at low confidence because this is a designation of intent, not yet a completed, operational wallet — the same 'prepared, not live' distinction [[DE-BUNDID]] draws for its own EU-EUDI-WALLET edge."
     confidence: low
     valid_from: null
     valid_until: null
@@ -87,6 +95,10 @@ sources:
 > read directly this pass and together justify splitting it out: it
 > carries its own formal eIDAS notification and its own EUDI Wallet
 > designation, neither of which belongs on FranceConnect itself.
+>
+> **Closed 2026-09-17.** France Titres, the operator, is now
+> [[FR-FRANCE-TITRES]], sourced from its own founding and renaming
+> decrees read directly at legifrance.gouv.fr.
 
 ## Description
 
@@ -116,7 +128,7 @@ France Identité is not yet an operational EUDI Wallet — no source read
 states one is in production anywhere in the Union (see
 [[EU-EUDI-WALLET]]'s own `status: planned`). What is sourced is a
 **designation**: the Commission named France Identité as France's
-future wallet, and France Titres coordinates two EU-funded pilot
+future wallet, and [[FR-FRANCE-TITRES]] coordinates two EU-funded pilot
 consortia testing wallet use cases under eIDAS 2.0 — **POTENTIAL**
 (160 partners, 18 member states plus Ukraine, concluded September
 2025) and its successor **APTITUDE** (117 partners, 11 countries plus
@@ -126,6 +138,8 @@ recorded at `confidence: low` for that reason: real, but prospective.
 ## Relationships
 
 - `applies-in` [[FR]] — anchor edge.
+- `governed-by` [[FR-FRANCE-TITRES]] — added 2026-09-17, closing this
+  entity's own previous "not itself an Atlas entity" note.
 - `implements-requirement-from` [[EU-EIDAS]], `confidence: high` — a
   direct formal Commission notification.
 - `implements-requirement-from` [[EU-EUDI-WALLET]], `confidence: low`
@@ -136,4 +150,6 @@ this scheme is an identity provider within.
 
 ## Sources
 
-Listed in frontmatter, all three read directly this pass.
+Listed in frontmatter, all three read directly on 2026-09-05.
+[[FR-FRANCE-TITRES]]'s own founding and renaming decrees read directly
+on 2026-09-17.
