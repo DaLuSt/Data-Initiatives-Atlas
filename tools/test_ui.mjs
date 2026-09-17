@@ -137,6 +137,89 @@ async function search(page, q) {
     const newTitle = await page.textContent('.d-title');
     check('clicking a related entity navigates the panel', newTitle.length > 0, `${targetId} → ${newTitle}`);
   }
+  await page.click('#detail-close');
+  await page.waitForTimeout(200);
+
+  // ── canvas keyboard navigation ──
+  // The canvas used to be a keyboard dead end (List view and search were
+  // the only accessible routes in). Arrow keys now cycle the currently
+  // visible nodes; Enter opens whichever one has focus.
+  await page.focus('#cy');
+  await page.keyboard.press('ArrowRight');
+  await page.waitForTimeout(200);
+  const kb1 = await page.evaluate(() => {
+    const f = document.getElementById('cy')._cyreg.cy.nodes('.focus');
+    return { count: f.length, id: f.length ? f.id() : null };
+  });
+  check('arrow key on the canvas focuses exactly one node', kb1.count === 1, JSON.stringify(kb1));
+
+  const status1 = await page.textContent('#stage-status');
+  check('keyboard focus is announced in the status line', /Keyboard focus:/.test(status1), status1.trim());
+
+  await page.keyboard.press('ArrowRight');
+  await page.waitForTimeout(200);
+  const kb2 = await page.evaluate(() => document.getElementById('cy')._cyreg.cy.nodes('.focus').id());
+  check('a second arrow key press moves focus to a different node', kb2 !== kb1.id, `${kb1.id} → ${kb2}`);
+
+  await page.keyboard.press('ArrowLeft');
+  await page.waitForTimeout(200);
+  const kb3 = await page.evaluate(() => document.getElementById('cy')._cyreg.cy.nodes('.focus').id());
+  check('arrow-left moves focus back to the previous node', kb3 === kb1.id, `expected ${kb1.id}, got ${kb3}`);
+
+  await page.keyboard.press('Enter');
+  await page.waitForSelector('#detail:not([hidden])', { timeout: 5000 });
+  const kbDetailId = await page.textContent('.d-id');
+  check('Enter opens the detail panel for the keyboard-focused node',
+    kbDetailId === kb1.id, `${kbDetailId} vs ${kb1.id}`);
+  await page.click('#detail-close');
+  await page.waitForTimeout(200);
+
+  // ── clicking an edge ──
+  // Edges carry type, provenance, confidence and evidence, but were not
+  // interactive at all before. Cytoscape has no pixel target to click in a
+  // headless canvas test, so the tap is emitted on the element directly —
+  // the same delegated handler cy.on('tap', 'edge', …) fires either way.
+  const edgeInfo = await page.evaluate(() => {
+    const e = document.getElementById('cy')._cyreg.cy.edges('[cls = "relationship"]').first();
+    if (!e.length) return null;
+    e.emit('tap');
+    return { source: e.data('source'), target: e.data('target'), type: e.data('type') };
+  });
+  await page.waitForSelector('#detail:not([hidden])', { timeout: 5000 });
+  const edgeTitle = await page.textContent('.d-title');
+  const expectedTitle = edgeInfo
+    ? edgeInfo.type.replace(/[-_]/g, ' ').replace(/\b\w/g, c => c.toUpperCase()) : null;
+  check('tapping a relationship edge opens a detail panel titled with its type',
+    !!edgeInfo && edgeTitle === expectedTitle, `${edgeTitle} vs ${expectedTitle}`);
+
+  const edgeIdLine = await page.textContent('.d-id');
+  check('edge detail states source → target',
+    !!edgeInfo && edgeIdLine === `${edgeInfo.source} → ${edgeInfo.target}`, edgeIdLine);
+
+  const edgeSecs = await page.$$eval('.d-sec h4', els => els.map(e => e.textContent));
+  check('relationship edge detail has a Connects section', edgeSecs.includes('Connects'), edgeSecs.join(','));
+
+  // A wikilink is structural, not a sourced claim — the panel should say so
+  // rather than showing a blank Evidence section.
+  await page.click('#edge-classes label:has-text("Wikilinks")');
+  await page.waitForTimeout(600);
+  const hasWikiEdge = await page.evaluate(() => {
+    const e = document.getElementById('cy')._cyreg.cy.edges('[cls = "wikilink"]').first();
+    if (!e.length) return false;
+    e.emit('tap');
+    return true;
+  });
+  await page.waitForTimeout(300);
+  const wikiTitle = await page.textContent('.d-title');
+  const wikiSecs = await page.$$eval('.d-sec h4', els => els.map(e => e.textContent));
+  check('tapping a wikilink edge opens a detail panel titled "Wikilink"',
+    hasWikiEdge && wikiTitle === 'Wikilink', wikiTitle);
+  check('wikilink edge detail explains what it is instead of showing evidence',
+    hasWikiEdge && wikiSecs.includes('What this is') && !wikiSecs.includes('Evidence'), wikiSecs.join(','));
+  await page.click('#edge-classes label:has-text("Wikilinks")');
+  await page.waitForTimeout(400);
+  await page.click('#detail-close');
+  await page.waitForTimeout(200);
 
   // deep link
   await page.goto(BASE + '/index.html#NL-NORA', { waitUntil: 'networkidle' });
