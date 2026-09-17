@@ -90,6 +90,8 @@ see `discovery/research-queue.md`._
 - [[NL-PDOK]] — geodata platform ✅ re-verified 2026-08-27
 - [[NL-NDW]] — national road traffic data portal ✅ re-verified 2026-08-27
   - [[NL-NTM]] — national access point for mobility data _(EU obligation)_
+- [[NL-DINOLOKET]] — subsurface data portal, delivering both the DINO
+  databank and [[NL-BRO]]'s data _(added 2026-09-17)_
 
 ## Data Spaces and Ecosystems
 
