@@ -31,7 +31,7 @@ verification: primary-source
 
 start_date: 2018-01-01
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-17"
 previous_version: null
 successor: null
 
@@ -45,6 +45,7 @@ related_entities:
   - NL-BASISREGISTRATIES
   - NL-TNO
   - NL-GEONOVUM
+  - NL-DINOLOKET
 relationships:
   - type: governed-by
     target: NL-WET-BRO
@@ -132,11 +133,15 @@ That makes it the only one of the ten whose creation is described as a
 consolidation of things that already existed, rather than a new registration
 of data government already held.
 
-**Neither predecessor is modelled**, and no `previous_version` or
-`supersedes` relationship is asserted. The sources say the BRO *builds on*
-them, which is weaker than supersession — DINO in particular appears to
-continue to exist. Asserting `supersedes` would claim the predecessors
-stopped, which nothing read says.
+**Narrowed 2026-09-17**: DINO's continuing existence is now modelled.
+[[NL-DINOLOKET]], the public portal TNO's Geologische Dienst Nederland
+operates, delivers both DINO's own data and the BRO's — confirmed by
+reading the portal's own pages directly. No `previous_version` or
+`supersedes` relationship is asserted between the two: the sources say the
+BRO *builds on* DINO, which is weaker than supersession, and DINO
+continues to exist as a distinct data source served through the same
+portal. **BIS remains unmodelled** — no source was found describing its
+current operator, status, or whether it still exists independently.
 
 ## It is phased, and the Atlas cannot say so
 
