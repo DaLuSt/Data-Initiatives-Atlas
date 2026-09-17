@@ -36,6 +36,7 @@ related_entities:
   - GB-ISA-1994
   - GB-SSA-1989
   - GB-RIPA-2000
+  - GB-IPA-AMENDMENT-2024
 relationships:
   - type: references
     target: GB-ISA-1994
@@ -126,7 +127,10 @@ see [[GB-RIPA-2000]]'s own file for the part-by-part detail.
 
 ## Not modelled
 
-- The **Investigatory Powers (Amendment) Act 2024**.
+- **Closed 2026-09-17**: the Investigatory Powers (Amendment) Act 2024
+  is now [[GB-IPA-AMENDMENT-2024]], `amends` this entity across six
+  Parts (bulk personal datasets, oversight, communications data,
+  notices, MPs/equipment interference, general provisions).
 - The **double lock** warrant mechanism and the **Judicial Commissioners** —
   the UK's nearest analogue to [[NL-TIB]]. No source read describes it, so
   it is absent from [[GB-IPCO]] too.
