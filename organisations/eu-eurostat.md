@@ -30,6 +30,7 @@ domains:
 organisations: []
 related_entities:
   - NL-CBS
+  - DE-DESTATIS
 relationships:
   - type: part-of
     target: EU-COMMISSION
@@ -107,6 +108,17 @@ response burden, cost effectiveness and statistical confidentiality.
 it an ESS participant and an ESSC member by the composition rule above. The
 `participates-in` relationship is recorded on `NL-CBS`, with evidence noting
 that the rule is sourced generically rather than by a source naming CBS.
+
+## The Destatis connection, closed by name
+
+**Closed 2026-09-17**: unlike the CBS case, Germany's [[DE-DESTATIS]] is
+named specifically on a document published directly on Eurostat's own
+domain — "Description of the German Statistical System"
+(`ec.europa.eu/eurostat/documents/64157/4372828/DE-description.pdf`),
+opening "Mission of the NSI: The mission of the Federal Statistical
+Office (Destatis) is to provide and disseminate statistical
+information..." The `participates-in` edge is recorded on
+[[DE-DESTATIS]].
 
 **Regulation 223/2009 is not modelled as an entity.** It is arguably in
 scope as EU legislation with a Dutch counterpart ([[NL-WET-CBS]]), and the

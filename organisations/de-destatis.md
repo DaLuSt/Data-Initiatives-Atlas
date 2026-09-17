@@ -27,7 +27,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-17"
 previous_version: null
 successor: null
 
@@ -37,6 +37,7 @@ organisations: []
 related_entities:
   - DE-BMI
   - DE-BSTATG
+  - EU-EUROSTAT
 relationships:
   - type: part-of
     target: DE-BMI
@@ -59,6 +60,13 @@ relationships:
     confidence: high
     valid_from: null
     valid_until: null
+  - type: participates-in
+    target: EU-EUROSTAT
+    source: fact
+    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP (discovery/unresolved.md row #69: 'no page names Eurostat specifically on a Destatis page'). Confirmed 2026-09-17 by reading a document hosted directly on Eurostat's own domain: ec.europa.eu/eurostat/documents/64157/4372828/DE-description.pdf, titled 'Description of the German Statistical System', whose own opening line reads 'Mission of the NSI: The mission of the Federal Statistical Office (Destatis) is to provide and disseminate statistical information...' — a Eurostat-published document naming Destatis specifically, the reverse of the direction previously checked and the one that closes the gap."
+    confidence: high
+    valid_from: null
+    valid_until: null
 sources:
   - title: "Aufgaben — Statistisches Bundesamt"
     url: "https://www.destatis.de/DE/Ueber-uns/Aufgaben/_inhalt.html"
@@ -78,6 +86,10 @@ sources:
   - title: "Statistisches Bundesamt"
     url: "https://www.service.bund.de/Content/DE/DEBehoerden/S/StBA/Statistisches-Bundesamt.html?nn=4641496"
     publisher: "service.bund.de (Bundesverwaltungsamt)"
+  - title: "Description of the German Statistical System"
+    url: "https://ec.europa.eu/eurostat/documents/64157/4372828/DE-description.pdf/443916f8-e119-45d0-a04c-bafe2666c834"
+    publisher: "Eurostat (European Commission)"
+    accessed: "2026-09-17"
 ---
 
 # Statistisches Bundesamt (Destatis)
@@ -88,6 +100,11 @@ sources:
 > resting only on the general ESS composition rule via secondary sources —
 > is now confirmed on Destatis's own site, which names the European
 > Statistical System explicitly.
+>
+> **Closed 2026-09-17.** Row #69's "no page names Eurostat specifically
+> on a Destatis page" is answered from the other direction: a document
+> published directly on Eurostat's own domain names Destatis
+> specifically. See "The direct link, found the other way round" below.
 
 ## Description
 
@@ -126,23 +143,27 @@ joint product" created collaboratively with the **14 statistical offices
 of the Länder** under their own state statistical laws — a Bund-Länder
 structure not previously recorded on this entity.
 
-## The link to Eurostat that is now closer, though still not asserted by name
+## The link to Eurostat, closed the other way round
 
-Before this pass, this entity flagged a structural gap the Atlas has
-recorded twice: [[UN-UNSD]] → [[EU-EUROSTAT]] and [[UN-FPOS]] →
-[[NL-WET-CBS]] were both refused for want of a source, and Destatis's own
-sourced remit — "cooperating in the preparation of statistical programmes
-... for the purposes of the European Union" — offered a third candidate of
-the same shape, also refused, because no source read named
-[[EU-EUROSTAT]] or the European Statistical System specifically.
+Before the 2026-08-28 pass, this entity flagged a structural gap the
+Atlas has recorded twice: [[UN-UNSD]] → [[EU-EUROSTAT]] and
+[[UN-FPOS]] → [[NL-WET-CBS]] were both refused for want of a source,
+and Destatis's own sourced remit — "cooperating in the preparation of
+statistical programmes ... for the purposes of the European Union" —
+offered a third candidate of the same shape, also refused, because no
+source read named [[EU-EUROSTAT]] or the European Statistical System
+specifically. That pass partly closed it: destatis.de's own site, read
+directly, named the European Statistical System by name, supporting
+the `part-of` [[EU-ESS]] edge below.
 
-This pass **partly closes that gap**: destatis.de's own site, read
-directly, now names the European Statistical System by name — enough to
-support the `part-of` [[EU-ESS]] edge above at `confidence: high`. What
-still is not confirmed is a direct Destatis↔[[EU-EUROSTAT]] edge; no source
-read this pass names Eurostat by name on a Destatis page. The remaining gap
-is logged in `discovery/unresolved.md` alongside the other two, narrower
-than before.
+**Closed 2026-09-17**, by checking the other direction: does a
+*Eurostat* page name *Destatis*? A document hosted directly on
+Eurostat's own domain (`ec.europa.eu/eurostat/documents/...`), titled
+"Description of the German Statistical System," opens: "Mission of
+the NSI: The mission of the Federal Statistical Office (Destatis) is
+to provide and disseminate statistical information..." — Eurostat's
+own document repository naming Destatis specifically, closing the gap
+from the side that had not yet been checked.
 
 ## Relationships
 
@@ -151,9 +172,12 @@ than before.
   high`.
 - `part-of` [[EU-ESS]] — confirmed directly this pass on Destatis's own
   site, `confidence: high` (raised from `medium`).
+- `participates-in` [[EU-EUROSTAT]] — added 2026-09-17, closing this
+  entity's own previous non-assertion.
 
 ## Sources
 
-Listed in frontmatter. Three of five read directly this pass, including
-both Destatis pages; `bpb.de` and `service.bund.de` were not re-fetched,
-not being needed for the majority.
+Listed in frontmatter. Three of five read directly on 2026-08-28,
+including both Destatis pages; `bpb.de` and `service.bund.de` were not
+re-fetched, not being needed for the majority. The Eurostat-hosted
+document read directly on 2026-09-17.
