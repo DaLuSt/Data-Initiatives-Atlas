@@ -21,7 +21,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-09-17"
 previous_version: null
 successor: null
 
@@ -32,6 +32,8 @@ related_entities:
   - UN
   - UN-FPOS
   - UN-GLOBAL-PLATFORM
+  - UN-UNSC
+  - EU-EUROSTAT
 relationships:
   - type: part-of
     target: UN
@@ -57,6 +59,10 @@ sources:
     url: "https://unstats.un.org/unsd/methods/statorg/principles_stat_activities/principles_stat_activities.asp"
     publisher: "United Nations Statistics Division"
     accessed: "2026-08-28"
+  - title: "Statistical cooperation – introduction"
+    url: "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Statistical_cooperation_-_introduction"
+    publisher: "Eurostat (European Commission)"
+    accessed: "2026-09-17"
 ---
 
 # United Nations Statistics Division (UNSD)
@@ -67,6 +73,11 @@ sources:
 > across UNSD's own published material rather than a single definitive
 > "about us" statement. The `governed-by` [[UN-UNSC]] edge is additionally
 > confirmed via that entity's own re-verification this pass.
+>
+> **Closed 2026-09-17.** The "Position in the statistical chain" gap
+> below, one of the Atlas's clearest vertical-structure gaps, is now
+> closed on [[EU-EUROSTAT]]'s own file: Eurostat represents the EU in
+> [[UN-UNSC]], the body this entity serves as secretariat for.
 
 ## Description
 
@@ -87,16 +98,21 @@ modelling question — the same treatment given to [[NL-HEALTH-RI]]
 ## Position in the statistical chain
 
 ```
-UN-UNSD / Statistical Commission   (global apex)
-     ↓  (relationship unsourced)
+UN-UNSC   (global apex, served by UN-UNSD as secretariat)
+     ↑  participates-in
 EU-EUROSTAT / European Statistical System
      ↓  participates-in
 NL-CBS
 ```
 
-The lower link is recorded; **the upper one is not**, because no source read
-connects the European Statistical System to the UN statistical system. This
-is one of the clearest remaining gaps in the Atlas's vertical structure.
+**Closed 2026-09-17.** The upper link, previously unsourced, is now
+confirmed on [[EU-EUROSTAT]]'s own file: Eurostat's own "Statistical
+cooperation – introduction" page, read directly, states Eurostat
+"represents the EU in key international forums such as the United
+Nations Statistical Commission (UNSC)." The link runs through
+[[UN-UNSC]] — the intergovernmental body this entity's own
+`governed-by` edge already points to — not through UNSD directly,
+since Eurostat's own text names the Commission, not the Division.
 
 ## Relationships
 

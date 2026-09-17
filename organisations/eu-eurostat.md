@@ -21,7 +21,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-09-17"
 previous_version: null
 successor: null
 
@@ -49,22 +49,22 @@ relationships:
   - type: participates-in
     target: UN-UNSC
     source: fact
-    evidence: "Eurostat represents the EU in key international forums such as the United Nations Statistical Commission (UNSC), in the Conference of European Statisticians (CES) organised by the UNECE and in the OECD's committee on statistics and statistical policy (CSSP) (ec.europa.eu/eurostat Statistics Explained 'Statistical cooperation – introduction'). NOT READ — search-only."
-    confidence: medium
+    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP (UN-UNSD's own 'Position in the statistical chain' diagram, which marked this link 'unsourced'). Confirmed by reading ec.europa.eu/eurostat's own 'Statistical cooperation – introduction' page directly (2026-09-17): 'Eurostat works closely with international organisations to promote global statistical standards and coordination. It represents the EU in key international forums such as the United Nations Statistical Commission (UNSC), in the Conference of European Statisticians (CES) organised by the UNECE and in the OECD's committee on statistics and statistical policy (CSSP).'"
+    confidence: high
     valid_from: null
     valid_until: null
   - type: participates-in
     target: UN-CES
     source: fact
-    evidence: "Eurostat represents the EU in key international forums such as the United Nations Statistical Commission (UNSC), in the Conference of European Statisticians (CES) organised by the UNECE and in the OECD's committee on statistics and statistical policy (CSSP) (ec.europa.eu/eurostat Statistics Explained 'Statistical cooperation – introduction'). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading ec.europa.eu/eurostat's own 'Statistical cooperation – introduction' page directly (2026-09-17): 'Eurostat... represents the EU in key international forums such as the United Nations Statistical Commission (UNSC), in the Conference of European Statisticians (CES) organised by the UNECE and in the OECD's committee on statistics and statistical policy (CSSP).'"
+    confidence: high
     valid_from: null
     valid_until: null
   - type: participates-in
     target: INTL-OECD-CSSP
     source: fact
-    evidence: "Eurostat represents the EU in key international forums such as the United Nations Statistical Commission (UNSC), in the Conference of European Statisticians (CES) organised by the UNECE and in the OECD's committee on statistics and statistical policy (CSSP); a parallel passage on the same page says Eurostat represents the European Commission in the OECD's statistics committee (CSTAT) (ec.europa.eu/eurostat Statistics Explained 'Statistical cooperation – introduction'). NOT READ — search-only."
-    confidence: medium
+    evidence: "Confirmed by reading ec.europa.eu/eurostat's own 'Statistical cooperation – introduction' page directly (2026-09-17): 'Eurostat... represents the EU in key international forums such as the United Nations Statistical Commission (UNSC), in the Conference of European Statisticians (CES) organised by the UNECE and in the OECD's committee on statistics and statistical policy (CSSP).' A parallel passage previously cited (Eurostat representing the Commission specifically in OECD's CSTAT) was not re-found on this page this pass and is not repeated here."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -78,6 +78,14 @@ sources:
   - title: "Regulation (EC) No 223/2009 — summary"
     url: "https://eur-lex.europa.eu/legal-content/EN/LSU/?uri=celex:32009R0223"
     publisher: "EUR-Lex (Publications Office of the European Union)"
+  - title: "Statistical cooperation – introduction"
+    url: "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Statistical_cooperation_-_introduction"
+    publisher: "Eurostat (European Commission)"
+    accessed: "2026-09-17"
+  - title: "Description of the German Statistical System"
+    url: "https://ec.europa.eu/eurostat/documents/64157/4372828/DE-description.pdf/443916f8-e119-45d0-a04c-bafe2666c834"
+    publisher: "Eurostat (European Commission)"
+    accessed: "2026-09-17"
 ---
 
 # Eurostat
@@ -85,6 +93,15 @@ sources:
 > **Verified 2026-08-21.** Every source this entity cites is on a domain the
 > repository owner confirmed read and correct — `europa.eu`. `verification:
 > primary-source`. See `docs/re-verification.md` §"The confirmed domains".
+>
+> **Closed 2026-09-17.** The three `participates-in` edges to UN-UNSC,
+> UN-CES and INTL-OECD-CSSP, previously "NOT READ — search-only," are
+> now confirmed by reading Eurostat's own "Statistical cooperation –
+> introduction" page directly — closing [[UN-UNSD]]'s own flagged
+> "unsourced" link in its vertical statistical-chain diagram (the link
+> runs through [[UN-UNSC]], which UN-UNSD serves as secretariat for,
+> not through UN-UNSD directly). A second Eurostat-hosted document also
+> closed [[DE-DESTATIS]]'s own name-level link.
 
 ## Description
 
