@@ -33,6 +33,7 @@ related_entities:
   - EU-COMMON-DATA-SPACES
   - EU-FIDA
   - EU-PSD2
+  - EU-ESAP
 relationships:
   - type: part-of
     target: EU-COMMON-DATA-SPACES
@@ -43,6 +44,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Strategy on supervisory data in EU financial services (2020 Digital Finance Strategy, COM(2020) 591)"
+    url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A52020DC0591"
+    publisher: "EUR-Lex (Publications Office of the European Union)"
+    accessed: "2026-09-18"
   - title: "SWD(2024) 21 final — Staff working document on common European data spaces"
     url: "https://digital-strategy.ec.europa.eu/en/library/staff-working-document-data-spaces"
     publisher: "European Commission"
@@ -63,8 +68,14 @@ sources:
 >
 > **Updated 2026-09-18**: PSD2, the backdrop FIDA extends beyond, is now
 > also modelled — see [[EU-PSD2]] — closing the second half of
-> `discovery/unresolved.md` row #123. The other two of the three named
-> components of this data space remain unidentified.
+> `discovery/unresolved.md` row #123.
+>
+> **Closed 2026-09-18** (two of three components, row #122): the
+> Commission's own 2020 Digital Finance Strategy communication, read
+> directly, names all three components of this data space. The second is
+> now modelled as [[EU-ESAP]]; the third is identified and sourced but
+> deliberately not given its own entity. See "The three components,
+> named" below.
 
 ## Description
 
@@ -83,21 +94,41 @@ data space has legislation attached rather than only funding and governance.
 [[EU-EHDS]] is backed by a Regulation and carries `applies-in` edges to eight
 countries; this one is not yet, and does not.
 
-## FIDA modelled, two-thirds still unknown — 2026-09-05
+## FIDA modelled — 2026-09-05
 
 FIDA is now [[EU-FIDA]], confirmed by reading the Commission's own
 finance.ec.europa.eu page and eur-lex.europa.eu's own text of the
-proposal (COM(2023) 360, proposed 28 June 2023) directly. The **other
-two named components remain unidentified** — no source read this pass
-or earlier names them — so this data space is still only partially
-specified, just less so than before.
+proposal (COM(2023) 360, proposed 28 June 2023) directly.
 
-- [ ] The other two components of the three the Commission names.
+## The three components, named — 2026-09-18
+
+`discovery/unresolved.md` row #122 asked what the other two of the three
+named components are — this entity's own description had admitted being
+"one-third specified" ever since FIDA was modelled. The Commission's own
+2020 Digital Finance Strategy communication (COM(2020) 591), read
+directly at EUR-Lex, names all three in section 4.3:
+
+| # | Action (Commission's own words) | Atlas entity |
+|---|---|---|
+| 1 | "Facilitating real-time digital access to all regulated financial information" | [[EU-ESAP]] — created this pass |
+| 2 | "Promoting innovative IT tools to facilitate reporting and supervision" | Not modelled — see [[EU-ESAP]]'s own file |
+| 3 | "Promoting business-to-business data sharing in the EU financial sector and beyond (open finance)" | [[EU-FIDA]] |
+
+Two of the three are now Atlas entities. The third — supervisory-reporting
+modernisation, pursued through the Commission's own "Strategy on
+supervisory data in EU financial services" (COM(2021) 798) and a series of
+staff working documents and progress reports rather than one citable
+Regulation — is named and sourced (see [[EU-ESAP]]) but deliberately not
+given its own entity, for the same reason no entity exists for an
+open-ended strategy elsewhere in the Atlas: there is no single instrument
+to model, only an ongoing policy process.
+
 - [x] **PSD2**, the backdrop the sources implicitly contrast FIDA against
-      — modelled 2026-09-18 as [[EU-PSD2]].
-
-The remaining item is logged in `discovery/unresolved.md`.
+      — modelled 2026-09-18 as [[EU-PSD2]] (not one of the three named
+      components, but the pre-existing regime FIDA extends beyond).
+- [x] The other two of the three named components — identified 2026-09-18.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter. The 2020 Digital Finance Strategy communication was
+added and read directly 2026-09-18.
