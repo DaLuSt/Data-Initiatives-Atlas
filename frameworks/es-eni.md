@@ -60,6 +60,13 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: references
+    target: ES-ENS
+    source: fact
+    evidence: "CLOSES discovery/unresolved.md row #89. Re-reading Real Decreto 4/2010's own Preámbulo directly (2026-09-18) finds the ENI's own text stating the relationship in so many words: 'El Esquema Nacional de Interoperabilidad se remite al Esquema Nacional de Seguridad para las cuestiones relativas en materia de seguridad que vayan más allá de los aspectos necesarios para garantizar la interoperabilidad' (the ENI defers/refers to the ENS for security matters going beyond what is necessary to guarantee interoperability). The same text (Article 8.1, Article 22.1) separately requires ENI-governed data conditions and document-preservation practices to conform to the ENS. `type: references` rather than a stronger type: the decree defines a scope boundary between the two schemes, not a dependency of one on the other or a structural containment."
+    confidence: high
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "BOE-A-2010-1331 Real Decreto 4/2010, de 8 de enero, por el que se regula el Esquema Nacional de Interoperabilidad en el ámbito de la Administración Electrónica"
@@ -93,6 +100,10 @@ sources:
 > sourced — not from the ENI's own text, but from the Commission's own
 > NIFO assessment. See "The EIF link, sourced from the European side"
 > below.
+>
+> **Also closed 2026-09-18** (`discovery/unresolved.md` row #89): the ENI's
+> own Preámbulo explicitly states its scope boundary with [[ES-ENS]] — see
+> "Not recorded," below, now retitled.
 
 ## Description
 
@@ -172,12 +183,25 @@ Three of four fully now, and Germany's own guidelines carry at least a
 narrower sourced link (closed 2026-09-18, via the guidelines' own text
 rather than a Commission-side NIFO source).
 
-## Not recorded
+## The ENI/ENS scope boundary, sourced — 2026-09-18
 
-The relationship between the ENI and [[ES-ENS]] — the two schemes are
-consistently presented together in Spanish practice — is not asserted. RD
-4/2010 regulates one and RD 311/2022 the other; no source read establishes a
-relationship between the instruments themselves.
+For several passes, the relationship between the ENI and [[ES-ENS]] — the
+two schemes consistently presented together in Spanish practice — was left
+unasserted: RD 4/2010 regulates one and RD 311/2022 the other, and no
+source read established a relationship between the instruments
+themselves.
+
+Re-reading RD 4/2010's own Preámbulo directly closes this. Its own words:
+*"El Esquema Nacional de Interoperabilidad se remite al Esquema Nacional
+de Seguridad para las cuestiones relativas en materia de seguridad que
+vayan más allá de los aspectos necesarios para garantizar la
+interoperabilidad"* — the ENI defers to the ENS for security questions
+beyond what interoperability itself requires. Article 8.1 (data
+conditions) and Article 22.1 (document preservation) each independently
+require ENI-governed practice to conform to the ENS, giving the
+Preámbulo's general statement two concrete instances in the operative
+text. `references` is recorded on this entity — a scope division stated
+by the ENI's own text, not a dependency or containment relationship.
 
 The ENI's legal base is now partly closed. Confirmed by reading anabad.org
 directly: the ENI's existence is **contemplated in Article 156 of
@@ -198,6 +222,8 @@ citation.
 - `applies-in` [[ES]] — anchor edge.
 - `based-on` [[EU-EIF]] — closed 2026-09-18, `confidence: medium`. See
   above.
+- `references` [[ES-ENS]] — closed 2026-09-18, `confidence: high`. See
+  above.
 
 [[ES-NTI-RISP]] carries the `derived-from` edge pointing here, which is
 the direction that keeps the descent on the derived thing.
@@ -208,4 +234,7 @@ Listed in frontmatter. Two of the original three read directly in the
 2026-08-27 pass: the BOE consolidated text and anabad.org's summary
 (`noticias.juridicas.com` remains persistently unavailable, HTTP 503).
 The Commission's own NIFO page for Spain, added and read directly
-2026-09-18, closes the EIF-alignment question.
+2026-09-18, closes the EIF-alignment question. The BOE text (already
+listed) was re-read directly the same pass for its Preámbulo, Article 8.1
+and Article 22.1, closing the ENI/ENS scope-boundary question without a
+new source citation.

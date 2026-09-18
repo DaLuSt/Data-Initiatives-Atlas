@@ -27,7 +27,7 @@ verification: primary-source
 
 start_date: 2021-03-28
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-18"
 previous_version: null
 successor: null
 
@@ -36,7 +36,14 @@ domains:
 organisations: []
 related_entities:
   - EU-SDG
-relationships: []
+relationships:
+  - type: related-to
+    target: EU-SDG
+    source: fact
+    evidence: "CLOSES discovery/unresolved.md row #67. mgm-tp.com's own analysis piece (read directly, 2026-09-18) states: 'According to the RegMoG, 51 of the register types are to be provided with an identification number based on the tax number and thus primarily serve the exchange of evidence in the National Once-Only-Technical-System (NOOTS)' and separately, of NOOTS: 'The basis for this is the SDG Regulation adopted by the European Parliament in 2018 ... and lays the European foundation for the implementation of the Once-Only-Technical-System (OOTS). The German version is the National Once-Only Technical System (NOOTS), which is based on the OOTS.' The European Commission's own OOTS Hub page ('The Once-Only view from Germany', digital-building-blocks, read directly) independently corroborates NOOTS as Germany's OOTS implementation, run 'as part of the wider Register Modernisation programme.' `type: related-to` rather than `implements-requirement-from`, because the chain is two-step (RegMoG feeds NOOTS; NOOTS is Germany's instance of the SDG Regulation's OOTS) and no source states RegMoG itself transposes the Regulation — it remains, as this entity's own text says, domestic register law rather than a transposition instrument."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Registermodernisierungsgesetz — Mit dem 'once-only'-Prinzip zur digitalen und bürgerfreundlichen Verwaltung"
@@ -61,6 +68,14 @@ sources:
   - title: "FAQs zum Registermodernisierungsgesetz"
     url: "https://www.bmi.bund.de/SharedDocs/faqs/DE/themen/moderne-verwaltung/registermodernisierung/registermodernisierung-faq-liste.html"
     publisher: "Bundesministerium des Innern und für Heimat (BMI)"
+  - title: "The importance of European standards for German register modernization"
+    url: "https://insights.mgm-tp.com/en/2024/publicsector/the-importance-of-european-standards-for-german-register-modernization/"
+    publisher: "mgm technology partners"
+    accessed: "2026-09-18"
+  - title: "The Once-Only view from Germany"
+    url: "https://ec.europa.eu/digital-building-blocks/sites/display/OOTS/The+Once-Only+view+from+Germany"
+    publisher: "European Commission — Digital Building Blocks (OOTS Hub)"
+    accessed: "2026-09-18"
 ---
 
 # Registermodernisierungsgesetz (RegMoG)
@@ -73,6 +88,11 @@ sources:
 > and read directly to confirm the statute's own date and Bundesgesetzblatt
 > citation. Three (now four) of six is a genuine majority.
 > `verification: primary-source`.
+>
+> **Closed 2026-09-18** (`discovery/unresolved.md` row #67): the refusal
+> below is closed, not by finding RegMoG itself transposing [[EU-SDG]],
+> but by tracing the two-step chain through NOOTS. See "The once-only
+> chain, found" below.
 
 ## Description
 
@@ -132,17 +152,39 @@ is instructive enough to be worth stating: functionally equivalent
 national programmes need not be structurally comparable, and the Atlas
 should not imply they are.
 
-## Two relationships considered and refused
+## The once-only chain, found — 2026-09-18
 
-- **`implements-requirement-from` → [[EU-SDG]].** The once-only principle
-  is the organising idea of the Single Digital Gateway Regulation, and the
-  RegMoG is Germany's once-only vehicle. But **no source read this pass
-  connects them either**, and the RegMoG is domestic register law rather
-  than a transposition instrument. `related_entities` records the
-  association for navigation without asserting a relationship.
-- **A link to the Steuer-ID or the Abgabenordnung.** Neither is an Atlas
-  entity, and creating a tax statute to hang this on would be building the
-  graph around a single reference.
+For several passes, `implements-requirement-from` → [[EU-SDG]] was refused:
+the once-only principle is the organising idea of both the RegMoG and the
+Single Digital Gateway Regulation, but no source read connected them
+directly, and the RegMoG reads as domestic register law rather than a
+transposition instrument.
+
+The gap is closed, not by overturning that reading, but by tracing the
+chain a step further. mgm technology partners' own analysis, read
+directly, states plainly: *"According to the RegMoG, 51 of the register
+types are to be provided with an identification number based on the tax
+number and thus primarily serve the exchange of evidence in the National
+Once-Only-Technical-System (NOOTS)."* The same source states NOOTS's own
+origin: *"The basis for this is the SDG Regulation adopted by the European
+Parliament in 2018 ... and lays the European foundation for the
+implementation of the Once-Only-Technical-System (OOTS). The German
+version is the National Once-Only Technical System (NOOTS), which is
+based on the OOTS."* The European Commission's own OOTS Hub page, read
+directly, independently corroborates NOOTS as Germany's OOTS
+implementation, run "as part of the wider Register Modernisation
+programme."
+
+So the connection is real and now sourced, but two steps rather than one:
+RegMoG's 51 identified registers feed NOOTS, and NOOTS is Germany's
+instance of the SDG Regulation's OOTS. `type: related-to` is used rather
+than `implements-requirement-from`, since no source states RegMoG itself
+transposes the Regulation — the earlier judgment that it is domestic
+register law, not a transposition instrument, stands.
+
+**A link to the Steuer-ID or the Abgabenordnung** remains refused. Neither
+is an Atlas entity, and creating a tax statute to hang this on would be
+building the graph around a single reference.
 
 ## Contested, and recorded as such
 
@@ -170,11 +212,17 @@ initiative.
 
 ## Relationships
 
-**None asserted.** Reached from [[DE-BMI]], which `produces` it.
+- `related-to` [[EU-SDG]] — closed 2026-09-18, `confidence: medium`. See
+  above.
+
+Also reached from [[DE-BMI]], which `produces` it (`valid_until:
+"2025-05-06"` as of the same pass, see [[DE-BMI]]).
 
 ## Sources
 
 Listed in frontmatter — three of the original five plus one added mirror
-were read directly this pass; `bmi.bund.de`'s two pages return HTTP 400 on
-every attempt and are kept listed with that status noted here rather than
-silently dropped.
+were read directly in the 2026-08-28 pass; `bmi.bund.de`'s two pages
+return HTTP 400 on every attempt and are kept listed with that status
+noted here rather than silently dropped. Two sources tracing the NOOTS/OOTS
+chain — mgm technology partners' analysis and the European Commission's
+own OOTS Hub page — were added and read directly 2026-09-18.

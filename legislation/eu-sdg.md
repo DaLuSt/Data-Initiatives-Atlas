@@ -69,7 +69,7 @@ relationships:
   - type: applies-in
     target: DE
     source: fact
-    evidence: "The regulation establishes a single digital gateway for citizens and businesses across the internal market and has applied since 12 December 2020, binding all member states including Germany (EUR-Lex summary of the single digital gateway). NOT READ — search-only. Germany's once-only vehicle, the Registermodernisierungsgesetz, is recorded in this Atlas but is NOT asserted to implement this regulation — no source read connects them."
+    evidence: "The regulation establishes a single digital gateway for citizens and businesses across the internal market and has applied since 12 December 2020, binding all member states including Germany (EUR-Lex summary of the single digital gateway). NOT READ — search-only. UPDATED 2026-09-18 (closes discovery/unresolved.md row #67): Germany's once-only vehicle, the Registermodernisierungsgesetz, is now connected via a two-step chain rather than left fully unconnected — see [[DE-REGMOG]]'s own `related-to` edge, sourced to mgm technology partners' analysis and the Commission's own OOTS Hub page. RegMoG does not itself transpose this Regulation; it feeds registers into NOOTS, Germany's own instance of the Regulation's Once-Only Technical System."
     confidence: medium
     valid_from: 2020-12-12
     valid_until: null

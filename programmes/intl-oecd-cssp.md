@@ -28,7 +28,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-09-18"
 previous_version: null
 successor: null
 
@@ -42,7 +42,7 @@ relationships:
   - type: part-of
     target: INTL-OECD
     source: fact
-    evidence: "Eurostat states that it represents the EU in key international forums such as the United Nations Statistical Commission, the Conference of European Statisticians organised by the UNECE, and the OECD's committee on statistics and statistical policy (CSSP); a parallel passage on the same Eurostat page describes Eurostat as representing the European Commission in the OECD's statistics committee (CSTAT) (ec.europa.eu/eurostat Statistics Explained 'Statistical cooperation – introduction'). NOT READ — search-only."
+    evidence: "Eurostat states that it represents the EU in key international forums such as the United Nations Statistical Commission, the Conference of European Statisticians organised by the UNECE, and the OECD's committee on statistics and statistical policy (CSSP); a parallel passage on the same Eurostat page describes Eurostat as representing the European Commission in the OECD's statistics committee (CSTAT) (ec.europa.eu/eurostat Statistics Explained 'Statistical cooperation – introduction'). NOT READ — search-only. PARTIALLY CLOSES discovery/unresolved.md row #169 (2026-09-18): re-reading the OECD's own already-cited BodyID 7229 page in full (previously only its mandate statement was extracted) finds it labels participation as 'EU', not 'Commission': 'The European Union (EU) takes part in the work of the OECD, in accordance with the Supplementary Protocol to the Convention on the Organisation for Economic Co-operation and Development,' and lists a Bureau Member's affiliation as '(EU)' rather than '(European Commission)'. This corroborates the 'EU' framing from the OECD's own side, independent of Eurostat's page, though it does not disprove the parallel Eurostat passage describing Commission representation — both may be true of different aspects of the same participation. The CSSP/CSTAT naming half of this row was separately narrowed 2026-09-05."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -68,6 +68,11 @@ sources:
 >
 > **Updated 2026-09-05**: the previously-flagged gap — no OECD source cited
 > — is closed. See below.
+>
+> **Partly closed 2026-09-18** (`discovery/unresolved.md` row #169): the
+> "EU or Commission" half of the naming question is narrowed — the OECD's
+> own page labels the participation "EU". See "The EU, not the
+> Commission — on the OECD's own page" below.
 
 ## Description
 
@@ -132,6 +137,27 @@ own primary source corroborates only one of the two names this entity
 carries. `confidence` moves from `low` to `medium` on the strength of that
 independent confirmation.
 
+## The EU, not the Commission — on the OECD's own page — 2026-09-18
+
+The second half of row #169 asked which of Eurostat's two descriptions is
+right: does the CSSP represent "the EU" or "the Commission"? Re-reading
+the same OECD page already cited (BodyID 7229) in full, rather than only
+its mandate statement, finds the answer on the OECD's own side rather than
+Eurostat's: *"The European Union (EU) takes part in the work of the OECD,
+in accordance with the Supplementary Protocol to the Convention on the
+Organisation for Economic Co-operation and Development."* The page's own
+Bureau listing names a member's affiliation as **"(EU)"**, not "(European
+Commission)".
+
+This corroborates the "EU" framing independently of Eurostat's page, but
+does not disprove the parallel Eurostat passage describing Commission
+representation — an EU-level participation right and a Commission
+official exercising it are not mutually exclusive, and no source read
+states that the two descriptions are describing different things. The row
+is narrowed, not fully closed: the OECD's own document now supports one of
+the two readings with a primary source of its own, where previously only
+Eurostat's page carried either claim.
+
 ## Relationships
 
 - `part-of` [[INTL-OECD]].
@@ -142,5 +168,6 @@ independent confirmation.
 
 Three sources: two are the same Eurostat page under its two URL forms
 (recorded honestly rather than padded out), and the OECD's own committee
-page, read directly 2026-09-05, is the first source on this entity that is
-not Eurostat describing OECD from the outside.
+page, read directly 2026-09-05 and again in full 2026-09-18, is the first
+source on this entity that is not Eurostat describing OECD from the
+outside.
