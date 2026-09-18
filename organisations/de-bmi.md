@@ -24,7 +24,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-09-18"
 previous_version: null
 successor: null
 
@@ -37,24 +37,24 @@ relationships:
   - type: produces
     target: DE-DATENSTRATEGIE
     source: fact
-    evidence: "The Nationale Datenstrategie was jointly developed and presented by the BMDV, the BMWK and the BMI (bmi.bund.de press release 'Bundeskabinett beschließt Nationale Datenstrategie'; bmdv.bund.de). NOT READ — search-only. Two of the three co-authoring ministries are not Atlas entities."
+    evidence: "The Nationale Datenstrategie was jointly developed and presented by the BMDV, the BMWK and the BMI (bmi.bund.de press release 'Bundeskabinett beschließt Nationale Datenstrategie'; bmdv.bund.de). NOT READ — search-only. Two of the three co-authoring ministries are not Atlas entities. CLOSES discovery/unresolved.md row #60: `valid_until` set to 2025-05-06, the date egovernment.de's own reporting on the organisational decree (read directly 2026-09-18) and DE-BMI's own body text confirm as when BMDS absorbed BMI's digital-competence departments — the precise date the row asked for, rather than the vaguer 'after the reorganisation' this entity previously carried."
     confidence: medium
     valid_from: null
-    valid_until: null
+    valid_until: "2025-05-06"
   - type: produces
     target: DE-REGMOG
     source: fact
-    evidence: "The BMI announced the promulgation of the Registermodernisierungsgesetz and maintains the ministry's FAQ on Registermodernisierung (bmi.bund.de 'Registermodernisierungsgesetz verkündet'; bmi.bund.de FAQ). NOT READ — search-only."
+    evidence: "The BMI announced the promulgation of the Registermodernisierungsgesetz and maintains the ministry's FAQ on Registermodernisierung (bmi.bund.de 'Registermodernisierungsgesetz verkündet'; bmi.bund.de FAQ). NOT READ — search-only. CLOSES discovery/unresolved.md row #60: `valid_until` set to 2025-05-06 on the same basis as the DE-DATENSTRATEGIE edge above."
     confidence: medium
     valid_from: null
-    valid_until: null
+    valid_until: "2025-05-06"
   - type: produces
     target: DE-DNG
     source: fact
-    evidence: "The BMI ran the legislative procedure for the act amending the E-Government-Gesetz and introducing the act on the use of public sector data (bmi.bund.de Gesetzgebungsverfahren 'zweites-open-data-gesetz'). NOT READ — search-only. The BMWK also presents the package."
+    evidence: "The BMI ran the legislative procedure for the act amending the E-Government-Gesetz and introducing the act on the use of public sector data (bmi.bund.de Gesetzgebungsverfahren 'zweites-open-data-gesetz'). NOT READ — search-only. The BMWK also presents the package. CLOSES discovery/unresolved.md row #60: `valid_until` set to 2025-05-06 on the same basis as the two edges above."
     confidence: medium
     valid_from: null
-    valid_until: null
+    valid_until: "2025-05-06"
 
 sources:
   - title: "Bundeskabinett beschließt Nationale Datenstrategie"
@@ -76,6 +76,10 @@ sources:
     url: "https://de.wikipedia.org/wiki/Bundesministerium_des_Innern"
     publisher: "Wikipedia"
     accessed: "2026-09-05"
+  - title: "BMDS bündelt Zuständigkeiten aus sechs Häusern"
+    url: "https://www.egovernment.de/bmds-buendelt-zustaendigkeiten-aus-sechs-haeusern-a-7477b927211437b688e91eee2351357d/"
+    publisher: "eGovernment Computing (egovernment.de)"
+    accessed: "2026-09-18"
 ---
 
 # Bundesministerium des Innern (BMI)
@@ -86,6 +90,12 @@ sources:
 >
 > **Updated 2026-09-05**: the ministry's current formal name, previously
 > flagged as unclear, is now confirmed directly — see below.
+>
+> **Closed 2026-09-18** (`discovery/unresolved.md` row #60): the three
+> `produces` relationships below now carry `valid_until: "2025-05-06"`,
+> the organisational-decree date on which DE-BMDS absorbed the digital
+> competences this entity's own text already named as historical. See
+> "The name and the reorganisation" below.
 
 ## Description
 
@@ -129,8 +139,21 @@ Since [[DE-BMDS]] took over digital competences from six departments
 including this one in that reorganisation, the BMI's role in several of
 the relationships above is historical rather than current. The
 relationships are recorded as facts about who did what at the time, with
-`valid_from` left null because no source dates the transfer more
-precisely than the 6 May 2025 reorganisation itself.
+`valid_from` left null because no source dates the *production* of each
+instrument itself more precisely than what each entity's own text
+already records.
+
+**Closed 2026-09-18**: reading egovernment.de's own reporting on the
+organisational decree directly confirms precisely which departments moved
+and when — "digitale Verwaltung inkl. OZG-Steuerung ... IT-Beschaffung
+des Bundes, ... Steuerung der IT des Bundes, die Netze des Bundes, die
+Cyber-Sicherheit in der Bundesverwaltung und das Recht der digitalen
+Verwaltung" moved from the BMI to the BMDS, with effect from the same **6
+May 2025** decree already cited above for the name change. All three
+`produces` relationships below now carry `valid_until: "2025-05-06"` on
+that basis: the BMI is recorded as having produced each instrument (an
+unchanging historical fact), and as having ceased to be the responsible
+department for that policy area on that date.
 
 ## Relationships
 

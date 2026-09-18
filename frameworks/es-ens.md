@@ -136,6 +136,10 @@ claim to know how they relate.
 - `maintained-by` [[ES-CCN]] — the target organisation maintains this
   entity, per `metadata/relationship-types.md` §2.1.
 
+[[ES-ENI]] carries a `references` edge pointing here, closed 2026-09-18:
+its own Preámbulo states it defers to the ENS for security questions
+beyond what interoperability requires.
+
 ## Sources
 
 Listed in frontmatter, the BOE text read directly this pass. The CCN's
