@@ -26,7 +26,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-09-18"
 previous_version: null
 successor: null
 
@@ -46,6 +46,14 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Norway — Tripartite collaboration"
+    url: "https://eosc.eu/tripartite-collaboration/norway"
+    publisher: "EOSC Association"
+    accessed: "2026-09-18"
+  - title: "Switzerland — Tripartite collaboration"
+    url: "https://eosc.eu/tripartite-collaboration/switzerland"
+    publisher: "EOSC Association"
+    accessed: "2026-09-18"
   - title: "Second staff working document on data spaces — SWD(2024) 21 final"
     url: "https://digital-strategy.ec.europa.eu/en/library/second-staff-working-document-data-spaces"
     publisher: "European Commission"
@@ -80,6 +88,10 @@ sources:
 >
 > **Updated 2026-09-05**: the EOSC Association, this entity's own flagged
 > gap, is now modelled as [[EU-EOSC-ASSOCIATION]].
+>
+> **Updated 2026-09-18**: the Federation's own non-EU participation
+> question, flagged below since the batch that created this entity, is
+> answered — see "The most operational of the fourteen."
 
 ## Description
 
@@ -108,8 +120,22 @@ research domain its EU-level anchor, which it did not have.
 
 The federated model is also the closest thing in the Atlas to what
 [[NO]] and the EEA states would need: a structure that admits participants
-who are not member states. Whether EOSC does admit them was **not
-researched**.
+who are not member states. **Researched 2026-09-18 — yes, on a
+Horizon-Europe-association basis, not EU membership.** EOSC's own
+"tripartite collaboration" pages, read directly, confirm it in both
+directions: Norway's page names a Norwegian EOSC Steering Board
+representative (Ola Berge, Ministry of Education and Research) and states
+outright, "Although Norway is not an EU member state, it draws on the ERA
+policy agenda for the development of its national policies." Switzerland's
+own page gives the eligibility rule explicitly: *"The relationship between
+the EOSC and Switzerland is different from most countries... due to the
+fact that Switzerland is currently not associated to Horizon Europe or of
+the EOSC Steering Board"* — tying Steering Board participation to Horizon
+Europe association, not EU membership, and confirming why Norway (fully
+associated) sits on it while Switzerland (not, at the time of that page)
+does not. No relationship edge is added — this is a governance-eligibility
+fact about EOSC itself, not a sourced participation claim for [[NO]] or
+any specific EEA state's own entity, which would need its own citation.
 
 ## The EOSC Association, modelled 2026-09-05
 
