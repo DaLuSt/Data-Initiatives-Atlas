@@ -26,7 +26,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-09-18"
 previous_version: null
 successor: null
 
@@ -34,12 +34,20 @@ domains: []
 organisations: []
 related_entities:
   - EU-FINANCIAL-DATA-SPACE
+  - EU-PSD2
 relationships:
   - type: part-of
     target: EU-FINANCIAL-DATA-SPACE
     source: fact
     evidence: "CLOSES PART OF A PREVIOUSLY-FLAGGED GAP — EU-FINANCIAL-DATA-SPACE's own entity named FIDA as 'one of three components' without modelling it, calling the data space 'one-third specified.' Confirmed by reading the European Commission's own finance.ec.europa.eu page directly (2026-09-05): 'The framework would establish clear rights and obligations to manage customer data sharing in the financial sector beyond payment accounts,' proposed 28 June 2023 as COM(2023) 360. eur-lex.europa.eu's own text of the proposal, also read directly, gives the full official title: 'Proposal for a REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL on a framework for Financial Data Access and amending Regulations (EU) No 1093/2010, (EU) No 1094/2010, (EU) No 1095/2010 and (EU) 2022/2554,' dated 'Brussels, 28.6.2023.' The other two named components of the financial data space remain unidentified and unmodelled."
     confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: based-on
+    target: EU-PSD2
+    source: fact
+    evidence: "The Commission's own finance.ec.europa.eu FIDA page, read directly (2026-09-05, re-confirmed 2026-09-18), states FIDA is 'building on the existing open-banking framework under PSD2' and extends customer data-sharing rights 'beyond payment accounts' — i.e. beyond what PSD2's own open-banking mechanism already covers. PSD2 itself, previously unmodelled (discovery/unresolved.md row #123), is now [[EU-PSD2]]."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -60,6 +68,11 @@ sources:
 > [[EU-FINANCIAL-DATA-SPACE]] itself flagged: "FIDA is not modelled, and
 > the other two components are unknown." This entity models FIDA; the
 > other two components remain unidentified.
+>
+> **Updated 2026-09-18**: PSD2, the open-banking framework this entity's
+> own description already said FIDA builds on, is now [[EU-PSD2]] — see
+> "Building on PSD2, now modelled" below, and `discovery/unresolved.md`
+> row #123.
 
 ## Description
 
@@ -75,6 +88,14 @@ PARLIAMENT AND OF THE COUNCIL on a framework for Financial Data Access
 and amending Regulations (EU) No 1093/2010, (EU) No 1094/2010, (EU)
 No 1095/2010 and (EU) 2022/2554" — **COM(2023) 360 final**, dated
 "Brussels, 28.6.2023."
+
+## Building on PSD2, now modelled
+
+This entity's own description, from the first pass, already stated FIDA
+is "building on the existing open-banking framework under PSD2." That
+made PSD2 the one named point of comparison for FIDA's own scope that
+had never been modelled itself — closed 2026-09-18 as [[EU-PSD2]], with
+a `based-on` edge recorded here.
 
 ## Still a proposal, not yet adopted
 
