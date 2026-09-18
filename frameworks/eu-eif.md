@@ -37,6 +37,7 @@ related_entities:
   - NL-NORA
   - FR-RGI
   - ES-ENI
+  - DE-IT-ARCHITEKTURRICHTLINIEN
   - EU-INTEROPERABLE-EUROPE-ACT
   - EU-INTEROPERABLE-EUROPE-BOARD
 relationships:
@@ -85,7 +86,7 @@ relationships:
   - type: applies-in
     target: DE
     source: fact
-    evidence: "The EIF provides support to Member States to design and update their national interoperability frameworks (NIFs), Germany included, and the EIF Toolbox exists to help national administrations align their NIFs with the EIF (interoperable-europe.ec.europa.eu). NOT READ — search-only. No German NIF is identified: whether the Foederale IT-Architekturrichtlinien serve that role is unsourced and is NOT asserted."
+    evidence: "The EIF provides support to Member States to design and update their national interoperability frameworks (NIFs), Germany included, and the EIF Toolbox exists to help national administrations align their NIFs with the EIF (interoperable-europe.ec.europa.eu). NOT READ — search-only. No German NIF is identified as such: whether [[DE-IT-ARCHITEKTURRICHTLINIEN]] serve that full role is still unsourced and is NOT asserted. Updated 2026-09-18: a narrower, genuine link is sourced instead — the guidelines' own SR1 principle states standards are used 'gemäß European Interoperability Framework (EIF)', now recorded as `based-on` on that entity's own file, at `confidence: medium` given a version caveat (only the superseded v1.0 text was readable)."
     confidence: medium
     valid_from: null
     valid_until: null

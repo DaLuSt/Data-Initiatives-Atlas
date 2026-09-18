@@ -166,10 +166,11 @@ The scoreboard on [[EU-EIF]] is now:
 | Belgium | **yes** — [[BE-BELGIF]], sourced from the framework's own text |
 | France | **yes** — [[FR-RGI]], sourced from the Commission's NIFO factsheet |
 | **Spain** | **yes** — this entity, sourced from the Commission's own NIFO page |
-| Germany | no — [[DE-IT-ARCHITEKTURRICHTLINIEN]] not asserted to be the NIF |
+| Germany | partial — [[DE-IT-ARCHITEKTURRICHTLINIEN]] not asserted to be the NIF, but its own SR1 principle now carries a narrower `based-on` [[EU-EIF]] link |
 
-Three of four now. Germany's remains the one refusal not yet re-tried
-against a Commission-side NIFO source.
+Three of four fully now, and Germany's own guidelines carry at least a
+narrower sourced link (closed 2026-09-18, via the guidelines' own text
+rather than a Commission-side NIFO source).
 
 ## Not recorded
 
