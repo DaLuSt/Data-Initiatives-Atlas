@@ -9,13 +9,13 @@ description: >
   UNESCO instrument adopted on 23 November 2021 by the organisation's 193
   member states, setting out ethical rules for artificial intelligence
   intended to ensure that AI respects fundamental freedoms and human rights.
-  Nearly thirty countries are reported to have begun using it to establish
-  national legislation. UNESCO and the European Commission have agreed to
+  Nearly 30 countries have begun using it to establish national
+  legislation. UNESCO and the European Commission have agreed to
   accelerate its global implementation, including a global facility of
-  experts, an annual Global Forum on the Ethics of AI — hosted by Czechia
-  and later Slovenia during their Presidencies of the Council of the
-  European Union — and a budget dedicated to supporting least developed
-  countries in establishing national legislation.
+  experts and an annual Global Forum on the Ethics of AI — hosted by
+  Czechia (Prague, December 2022), Slovenia (Kranj, February 2024) and
+  Thailand (Bangkok, June 2025) — and a budget dedicated to supporting
+  least developed countries in establishing national legislation.
 
 level: international
 country: null
@@ -28,7 +28,7 @@ verification: primary-source
 
 start_date: 2021-11-23
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-18"
 previous_version: null
 successor: null
 
@@ -43,7 +43,7 @@ relationships:
   - type: maintained-by
     target: UN-UNESCO
     source: fact
-    evidence: "Confirmed by reading three of the five cited pages directly (2026-08-28). unesco.org's own recommendation-ethics page and its article both confirm November 2021 adoption by 193 Member States, ten core principles, four core values and eleven policy areas. The EU-partnership article, also read directly, confirms the accord with the European Commission, a EUR 4 million budget for least-developed countries, the 'AI Ethics Experts without Borders' facility, the annual Global Forum on the Ethics of AI, and a judicial-operators toolkit — all in UNESCO's own words. Neither fetched page states the 'nearly thirty countries' adoption figure or names Czechia/Slovenia as Global Forum hosts; those two specific claims are downgraded to unconfirmed-this-pass rather than repeated as read. unesdoc.unesco.org (403) and unesco.org.uk's PDF (403) were not read."
+    evidence: "Confirmed by reading three of the five cited pages directly (2026-08-28). unesco.org's own recommendation-ethics page and its article both confirm November 2021 adoption by 193 Member States, ten core principles, four core values and eleven policy areas. The EU-partnership article, also read directly, confirms the accord with the European Commission, a EUR 4 million budget for least-developed countries, the 'AI Ethics Experts without Borders' facility, the annual Global Forum on the Ethics of AI, and a judicial-operators toolkit — all in UNESCO's own words. CLOSES discovery/unresolved.md row #210 (2026-09-18): a more targeted re-read of the same already-cited EU-partnership article finds the 'nearly thirty countries' figure after all — 'Nearly 30 countries have already started using this Recommendation to establish national legislation ensuring that artificial intelligence respects fundamental freedoms and human rights, and benefits all humanity' — missed by the prior pass's extraction rather than absent from the page. UNESCO's own 'Previous editions' page for the Global Forum (added and read directly this pass) independently confirms the host-city claim: the First Global Forum was hosted by Czechia in Prague on 13 December 2022, and the Second by Slovenia at the Brdo Congress Centre, Kranj, on 5-6 February 2024 (a Third followed in Bangkok, Thailand, in June 2025 — not previously recorded)."
     confidence: high
     valid_from: 2021-11-23
     valid_until: null
@@ -67,6 +67,10 @@ sources:
   - title: "UNESCO Recommendation on the Ethics of Artificial Intelligence — key facts"
     url: "https://unesco.org.uk/site/assets/files/14137/unesco_recommendation_on_the_ethics_of_artificial_intelligence_-_key_facts.pdf"
     publisher: "UK National Commission for UNESCO"
+  - title: "Global Forum on the Ethics of AI — Previous editions"
+    url: "https://www.unesco.org/en/forum-ethics-ai/previous-editions"
+    publisher: "UNESCO"
+    accessed: "2026-09-18"
 ---
 
 # UNESCO Recommendation on the Ethics of Artificial Intelligence
@@ -78,6 +82,10 @@ sources:
 > thirty countries" adoption claim and Czechia/Slovenia as Global Forum
 > hosts) were **not** confirmed by any page read this pass and are
 > downgraded below rather than silently repeated.
+>
+> **Closed 2026-09-18** (`discovery/unresolved.md` row #210): both figures
+> are now confirmed directly. See "Two flagged figures, now confirmed"
+> below.
 
 ## Description
 
@@ -86,19 +94,48 @@ reading unesco.org's own pages directly — the Recommendation sets ethical
 rules for artificial intelligence grounded in **ten core principles** and
 **four core values** (human dignity and rights, just societies, diversity
 and inclusiveness, environmental flourishing), operationalised across
-**eleven policy areas**. **Nearly thirty countries** are *reported* to have
-begun using it to establish national legislation — this specific figure was
-not repeated on any page read this pass, so it is carried forward as an
-unconfirmed claim from the original research rather than a re-verified fact.
+**eleven policy areas**. **Nearly thirty countries** have begun using it to
+establish national legislation.
 
 UNESCO and the European Commission have agreed to accelerate its global
 implementation — confirmed directly this pass via UNESCO's own partnership
 article: the **"AI Ethics Experts without Borders" (AIEB)** global expert
 facility, an annual **Global Forum on the Ethics of AI**, a **EUR 4 million**
 budget for least-developed countries, and a **judicial-operators toolkit**.
-The claim that the Forum is "hosted by Czechia and later Slovenia during
-their Council Presidencies" was **not** found on any page read this pass and
-is likewise carried forward unconfirmed rather than verified.
+
+## Two flagged figures, now confirmed — 2026-09-18
+
+The prior pass could not confirm two specific figures on any page it read,
+and downgraded both to unconfirmed rather than repeat them unverified. Both
+are now closed:
+
+**"Nearly thirty countries."** A more targeted re-read of the same
+EU-partnership article already cited — not a new source, a closer look at
+one already fetched — finds the sentence after all: *"Nearly 30 countries
+have already started using this Recommendation to establish national
+legislation ensuring that artificial intelligence respects fundamental
+freedoms and human rights, and benefits all humanity."* The figure was
+missed by the prior pass's extraction, not absent from the page.
+
+**Global Forum host cities.** UNESCO's own "Previous editions" page,
+added and read directly this pass, confirms: the **First Global Forum**
+was hosted by **Czechia**, in **Prague**, on **13 December 2022**; the
+**Second** by **Slovenia**, at the Brdo Congress Centre in **Kranj**, on
+**5-6 February 2024**. A **Third** edition followed in **Bangkok,
+Thailand**, in June 2025 — not previously recorded on this entity, and
+added here since the same source that closes the row also extends it.
+
+One correction alongside the confirmation: this entity's description
+previously framed both host countries as hosting "during their
+Presidencies of the Council of the European Union." That holds for
+Czechia (its presidency ran July-December 2022, covering the December
+2022 Forum), but no source read connects Slovenia's February 2024 hosting
+to an EU Council presidency — Slovenia's search results describe it as a
+national event under UNESCO's patronage, organised by its Ministry of
+Digital Transformation, with no EU-presidency framing, and Slovenia's
+Council presidency is not scheduled until 2029. The description is
+corrected to state the host country and date for each edition rather than
+repeat the presidency framing for one host it does not fit.
 
 ## The AI timeline the Atlas can now show
 
@@ -149,7 +186,9 @@ re-reading every instrument in the Atlas to populate it honestly.
 
 ## Sources
 
-Listed in frontmatter, three of five read directly this pass: both
-unesco.org recommendation pages and the EU-partnership article. The
-UNESDOC implementation document and the UK National Commission's PDF both
-returned HTTP 403 and were not read.
+Listed in frontmatter, three of five read directly in the 2026-08-28
+pass: both unesco.org recommendation pages and the EU-partnership
+article. The UNESDOC implementation document and the UK National
+Commission's PDF both returned HTTP 403 and were not read. A sixth
+source, UNESCO's own "Previous editions" page for the Global Forum, was
+added and read directly 2026-09-18, closing the host-city question.
