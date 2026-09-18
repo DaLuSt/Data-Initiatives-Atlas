@@ -29,7 +29,7 @@ verification: primary-source
 
 start_date: 2010-01-08
 end_date: null
-last_verified: "2026-09-04"
+last_verified: "2026-09-18"
 previous_version: null
 successor: null
 
@@ -44,12 +44,20 @@ related_entities:
   - FR-RGI
   - BE-BELGIF
   - ES-LEY-40-2015
+  - EU-EIF
 relationships:
   - type: applies-in
     target: ES
     source: fact
     evidence: "Confirmed by reading Real Decreto 4/2010's own text at boe.es directly (2026-08-27): its first additional provision mandates a catalogue of mandatory Technical Interoperability Standards covering electronic documents, electronic files, electronic signature policies, data intermediation, document preservation, network connectivity, authentication registers and information re-use — approved by the competent ministry through sectoral committees and published by official resolution. anabad.org, also read directly this pass, corroborates the same first-additional-provision language and adds that the ENI's existence is contemplated in Article 156 of Ley 40/2015 on the legal regime of the public sector — a citation this entity did not previously carry. Two of three cited sources now read directly (noticias.juridicas.com still returns HTTP 503, confirmed again this pass) — a genuine majority. Anchor edge under metadata/relationship-types.md §2.3."
     confidence: high
+    valid_from: null
+    valid_until: null
+  - type: based-on
+    target: EU-EIF
+    source: fact
+    evidence: "CLOSES A REFUSAL MADE THREE TIMES (discovery/unresolved.md row #84), by the same technique that closed [[FR-RGI]]'s equivalent refusal: looking at the Commission's own National Interoperability Framework Observatory (NIFO) rather than only the national instrument's own text. Its 'National Interoperability Framework of Spain (ENI)' page, read directly, confirms the legal basis directly ('Royal Decree 4/2010, of January 8th ... implements provisions from the eGovernment Law 11/2007') and states: 'The National Interoperability Scheme takes into account the recommendations of the European Union' and that it 'systematically refers to the linking of the interoperability instruments of Spain with the equivalent ones in the EU,' naming 'the European Interoperability Framework, developed by Programme IDABC' specifically. `confidence: medium`, matching [[FR-RGI]]'s equivalent edge: the page describes ENI as taking EIF recommendations 'into account' and cross-referencing it, which is a real, sourced alignment claim, but weaker than [[BE-BELGIF]]'s sourced statement of adopting the EIF's 12 principles as its basis."
+    confidence: medium
     valid_from: null
     valid_until: null
 
@@ -65,6 +73,10 @@ sources:
   - title: "Real Decreto 4/2010, de 8 de enero, por el que se regula el Esquema Nacional de Interoperabilidad"
     url: "https://noticias.juridicas.com/base_datos/Admin/rd4-2010.html"
     publisher: "Noticias Jurídicas"
+  - title: "National Interoperability Framework of Spain (ENI)"
+    url: "https://interoperable-europe.ec.europa.eu/collection/egovernment/document/national-interoperability-framework-spain-eni"
+    publisher: "European Commission — National Interoperability Framework Observatory (NIFO), Interoperable Europe Portal"
+    accessed: "2026-09-18"
 ---
 
 # ENI — Esquema Nacional de Interoperabilidad
@@ -75,6 +87,12 @@ sources:
 > ENI's current statutory anchor (Article 156, Ley 40/2015).
 > `noticias.juridicas.com` was tried again and still returns a
 > persistent HTTP 503.
+>
+> **Closed 2026-09-18**: the EIF link this entity refused three times
+> (alongside [[DE-IT-ARCHITEKTURRICHTLINIEN]] and [[FR-RGI]]) is now
+> sourced — not from the ENI's own text, but from the Commission's own
+> NIFO assessment. See "The EIF link, sourced from the European side"
+> below.
 
 ## Description
 
@@ -117,21 +135,41 @@ The Atlas models both levels with existing types (`framework` and
 `standard`) and an existing relationship (`derived-from`). Nothing was
 added.
 
-## No link to the European Interoperability Framework
+## The EIF link, sourced from the European side — 2026-09-18
 
-**[[EU-EIF]] → ENI is not asserted**, and the refusal is deliberate.
-
-A national interoperability framework descending from the EIF is exactly
-what a reader would expect, and [[BE-BELGIF]] does carry that edge. But the
-Atlas has now refused it three times — for Germany, for France
-([[FR-RGI]]), and here — because **no source read says it**. [[FR-RGI]]
+For three passes, `[[EU-EIF]] → ENI` was refused, deliberately, because
+no source read about the ENI *itself* mentioned the EIF. [[FR-RGI]]
 recorded that the refusal was made *precisely because* the surrounding
-pattern made the link look expected.
+pattern (Belgium's sourced descent) made the link look expected.
 
-The same reasoning applies unchanged. One country in five has a sourced EIF
-descent. That is a statement about what has been read, not about European
-interoperability policy, and the `verification: search-only` marking on all
-of them is what keeps it readable as such.
+The refusal is now closed the same way [[FR-RGI]]'s was: not by reading
+the ENI's own text again, but by reading the European Commission's own
+**National Interoperability Framework Observatory (NIFO)**, which
+assesses member states' frameworks from the European side. Its "National
+Interoperability Framework of Spain (ENI)" page, read directly, confirms
+the legal basis (Royal Decree 4/2010, implementing the eGovernment Law
+11/2007) and states plainly that the ENI "takes into account the
+recommendations of the European Union" and "systematically refers to the
+linking of the interoperability instruments of Spain with the equivalent
+ones in the EU," naming the European Interoperability Framework
+specifically.
+
+`confidence: medium`, not `high`: this is a real, sourced alignment
+claim, but "takes into account" and "refers to" is weaker language than
+[[BE-BELGIF]]'s own sourced statement of adopting the EIF's 12
+principles as its basis.
+
+The scoreboard on [[EU-EIF]] is now:
+
+| Country | National framework linked? |
+|---|---|
+| Belgium | **yes** — [[BE-BELGIF]], sourced from the framework's own text |
+| France | **yes** — [[FR-RGI]], sourced from the Commission's NIFO factsheet |
+| **Spain** | **yes** — this entity, sourced from the Commission's own NIFO page |
+| Germany | no — [[DE-IT-ARCHITEKTURRICHTLINIEN]] not asserted to be the NIF |
+
+Three of four now. Germany's remains the one refusal not yet re-tried
+against a Commission-side NIFO source.
 
 ## Not recorded
 
@@ -156,11 +194,17 @@ citation.
 
 ## Relationships
 
-None asserted. [[ES-NTI-RISP]] carries the `derived-from` edge pointing
-here, which is the direction that keeps the descent on the derived thing.
+- `applies-in` [[ES]] — anchor edge.
+- `based-on` [[EU-EIF]] — closed 2026-09-18, `confidence: medium`. See
+  above.
+
+[[ES-NTI-RISP]] carries the `derived-from` edge pointing here, which is
+the direction that keeps the descent on the derived thing.
 
 ## Sources
 
-Listed in frontmatter, two of three read directly this pass: the BOE
-consolidated text and anabad.org's summary. `noticias.juridicas.com`
-remains persistently unavailable (HTTP 503).
+Listed in frontmatter. Two of the original three read directly in the
+2026-08-27 pass: the BOE consolidated text and anabad.org's summary
+(`noticias.juridicas.com` remains persistently unavailable, HTTP 503).
+The Commission's own NIFO page for Spain, added and read directly
+2026-09-18, closes the EIF-alignment question.
