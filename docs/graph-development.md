@@ -259,6 +259,17 @@ that pack nodes into per-scope/per-country blocks:
   positions (`randomize: false`) so it is reproducible. Gated by `FORCE_MAX`;
   above it the grouped layout is kept and the sidebar explains why. Tune
   distance in `idealEdgeLength()`.
+  - The default filters leave the graph in 44 disconnected components (see
+    `componentSpacing`'s own comment), and cose lays each one out on its own
+    before packing the components into a grid — which routinely lines up
+    several components' worth of nodes on the same row. `test_ui.mjs`'s
+    "rearranges the graph off the grid" check learned this the flaky way: an
+    absolute "80% of nodes get a unique y" bar looked like it needed a
+    longer wait, but waiting for cose's own `layoutstop` (rather than a
+    fixed timeout) still landed at 511–519 of 652 every time — a stable
+    property of this graph and this layout, not a race. The check now
+    compares against the grouped layout's own distinct-y count instead of
+    an absolute number, which is what actually mattered.
 - **World map** — `mapPositions()`: each country's (or region's) block is
   centred on its real centroid (`tools/country_centroids.py`, via facets),
   projected with a plain equirectangular transform (`x = lon`, `y = -lat`,
