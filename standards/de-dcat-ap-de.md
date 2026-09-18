@@ -25,7 +25,7 @@ verification: primary-source
 
 start_date: 2019-01-01
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-18"
 previous_version: null
 successor: null
 
@@ -54,6 +54,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Beschluss 2018/30 — Standardisierungsbedarf \"Metadatenstruktur für offene Verwaltungsdaten\""
+    url: "https://www.it-planungsrat.de/beschluss/beschluss-2018-30"
+    publisher: "IT-Planungsrat"
+    accessed: "2026-09-18"
   - title: "DCAT-AP.de — Start"
     url: "https://www.dcat-ap.de/"
     publisher: "DCAT-AP.de"
@@ -81,6 +85,17 @@ sources:
 > to the day this pass — both directly-read sources this time give only
 > "June 2018" / "2018" — so it is kept as previously sourced rather than
 > re-stated as newly verified to that precision.
+>
+> **Closed 2026-09-18** — the decision document itself, the one fact this
+> entity had rested on secondary restatement for, is now cited directly.
+> The IT-Planungsrat's own decision page, "Beschluss 2018/30," read
+> directly, confirms the 26th session's resolution of **28 June 2018**
+> establishing "the binding use of the interoperability standard
+> 'DCAT-AP in the form DCAT-AP.de,'" assigning the GovData coordination
+> office to operate it (annual budget up to €70,000), archiving the
+> standard text at the Federal Archives in Koblenz, and setting
+> 31 December 2018 as the GovData-portal implementation deadline. See
+> "The founding decision, now cited directly" below.
 
 ## Description
 
@@ -164,10 +179,26 @@ recorded rather than smoothed into a common pattern.
 - `applies-to` [[DE-GOVDATA]] — confirmed directly this pass, `confidence:
   high`.
 
+## The founding decision, now cited directly
+
+`discovery/unresolved.md` row #63 flagged that "the 28 June 2018
+IT-Planungsrat resolution rests on one secondary statement" — no decision
+document was cited. Closed 2026-09-18: the IT-Planungsrat's own website
+publishes its decisions individually, and "Beschluss 2018/30" is the one.
+Read directly, it confirms the date (28 June 2018, the body's 26th
+session), the operative text (binding use of "DCAT-AP in the form
+DCAT-AP.de"), the operating budget assigned to the GovData coordination
+office (up to €70,000 annually), the decision's own archival copy at the
+Bundesarchiv in Koblenz, and the 31 December 2018 implementation deadline
+for GovData-portal data providers, with later deadlines for other
+systems tied to their own metadata-model change cycles — all details
+finer than anything in the secondary sources this entity previously
+rested on.
+
 ## Sources
 
-Listed in frontmatter. All four are the standard's own publication site or
-GovData's own metadata page, all read directly this pass. **No
-IT-Planungsrat decision document is cited** for the founding 2018
-resolution, which remains the one fact here resting on secondary
-restatement rather than the decision text itself.
+Listed in frontmatter. Four are the standard's own publication site or
+GovData's own metadata page, read directly in the 2026-08-28 pass. The
+fifth, added 2026-09-18, is the IT-Planungsrat's own decision page for
+Beschluss 2018/30 — the founding resolution's primary text, closing the
+one gap this entity had previously flagged.

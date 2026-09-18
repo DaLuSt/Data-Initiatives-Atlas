@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-09-18"
 previous_version: null
 successor: null
 
@@ -32,6 +32,7 @@ organisations: []
 related_entities:
   - EU-COMMON-DATA-SPACES
   - EU-FIDA
+  - EU-PSD2
 relationships:
   - type: part-of
     target: EU-COMMON-DATA-SPACES
@@ -59,6 +60,11 @@ sources:
 > **Updated 2026-09-05**: FIDA, previously named but unmodelled, is now
 > [[EU-FIDA]], sourced from direct reads of the Commission's own FIDA
 > page and EUR-Lex's own text of the proposal.
+>
+> **Updated 2026-09-18**: PSD2, the backdrop FIDA extends beyond, is now
+> also modelled — see [[EU-PSD2]] — closing the second half of
+> `discovery/unresolved.md` row #123. The other two of the three named
+> components of this data space remain unidentified.
 
 ## Description
 
@@ -87,9 +93,10 @@ or earlier names them — so this data space is still only partially
 specified, just less so than before.
 
 - [ ] The other two components of the three the Commission names.
-- [ ] **PSD2**, the backdrop the sources implicitly contrast FIDA against.
+- [x] **PSD2**, the backdrop the sources implicitly contrast FIDA against
+      — modelled 2026-09-18 as [[EU-PSD2]].
 
-Both are logged in `discovery/unresolved.md`.
+The remaining item is logged in `discovery/unresolved.md`.
 
 ## Sources
 
