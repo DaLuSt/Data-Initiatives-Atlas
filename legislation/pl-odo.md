@@ -24,7 +24,7 @@ verification: primary-source
 
 start_date: 2018-05-25
 end_date: null
-last_verified: "2026-08-30"
+last_verified: "2026-09-18"
 previous_version: null
 successor: null
 
@@ -64,6 +64,10 @@ sources:
     url: "https://eli.gov.pl/eli/DU/2018/1000/ogl"
     publisher: "Rządowe Centrum Legislacji — official ELI registry (Poland)"
     accessed: "2026-08-30"
+  - title: "Dziennik Ustaw 2018 poz. 1000 — Ustawa z dnia 10 maja 2018 r. o ochronie danych osobowych"
+    url: "https://dziennikustaw.gov.pl/DU/2018/1000"
+    publisher: "Rządowe Centrum Legislacji (Dziennik Ustaw — official Journal of Laws portal)"
+    accessed: "2026-09-18"
 ---
 
 # Ustawa o ochronie danych osobowych (2018)
@@ -77,6 +81,11 @@ sources:
 > directly and confirms **Dz.U. 2018 poz. 1000**, published 24 May 2018.
 > `isap.sejm.gov.pl` itself remains genuinely CAPTCHA-blocked, confirmed
 > again this pass.
+>
+> **Row fixed 2026-09-18**: `discovery/unresolved.md` row #160 still
+> described this citation as missing two weeks after it was closed here —
+> corrected, and independently corroborated via `dziennikustaw.gov.pl`,
+> a second official Journal of Laws portal.
 
 ## Description
 
@@ -147,7 +156,8 @@ reused for the other.
 
 ## Sources
 
-Listed in frontmatter, three of four read directly across two passes: two
-secondary sources and UODO's own annual report (2026-08-26), plus
-`eli.gov.pl`'s official citation record (2026-08-30). `isap.sejm.gov.pl`
-remains genuinely CAPTCHA-blocked.
+Listed in frontmatter, four of five read directly across three passes:
+two secondary sources and UODO's own annual report (2026-08-26),
+`eli.gov.pl`'s official citation record (2026-08-30), and
+`dziennikustaw.gov.pl`'s independent confirmation of the same citation
+(2026-09-18). `isap.sejm.gov.pl` remains genuinely CAPTCHA-blocked.

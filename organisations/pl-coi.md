@@ -27,7 +27,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-09-18"
 previous_version: null
 successor: null
 
@@ -64,6 +64,10 @@ sources:
   - title: "Centralny Ośrodek Informatyki przekształci się w Agencję Informatyzacji (komunikat)"
     url: "https://pap-mediaroom.pl/polityka-i-spoleczenstwo/cyfryzacja-kprm-centralny-osrodek-informatyki-przeksztalci-sie-w-agencje"
     publisher: "PAP MediaRoom"
+  - title: "Projekt ustawy o przekształceniu Centralnego Ośrodka Informatyki w Agencję Informatyzacji"
+    url: "https://www.gov.pl/web/premier/projekt-ustawy-o-przeksztalceniu-centralnego-osrodka-informatyki-w-agencje-informatyzacji"
+    publisher: "Kancelaria Prezesa Rady Ministrów (KPRM)"
+    accessed: "2026-09-18"
 ---
 
 # COI — Centralny Ośrodek Informatyki
@@ -72,6 +76,12 @@ sources:
 > were read directly. `start_date` was previously padded to `2010-01-01`;
 > COI's own page gives only the bare year, "powołano w 2010 roku", so it
 > is now `null` with the year kept in prose.
+>
+> **Re-checked 2026-09-18** (`discovery/unresolved.md` row #157): COI's
+> own "O nas" page, read directly, still describes itself as *Centralny
+> Ośrodek Informatyki*, with no mention of any transformation. The
+> Agencja Informatyzacji still does not exist — see "Still a draft, not
+> enacted" below.
 
 ## Description
 
@@ -114,6 +124,18 @@ law proposes would be indistinguishable in the graph from one that exists.
 That the Atlas now holds the *same* institutional change at two different
 stages, in two countries, is a genuine benefit of covering six of them.
 
+## Still a draft, not enacted — re-checked 2026-09-18
+
+The Prime Minister's Office's own legislative-project page for this bill
+gives a planned Council of Ministers adoption date of **Q3 2023** — which
+has passed without the transformation completing, and the page's own
+"status of realisation" field carries no completion note. Independently,
+COI's own current "O nas" page still identifies the organisation as
+*Centralny Ośrodek Informatyki*, with no renaming or transformation
+mentioned. The Agencja Informatyzacji remains a proposal, not an entity
+this Atlas can model — the same conclusion as the original pass, now
+confirmed against the source directly rather than left unchecked.
+
 ## PESEL is now modelled
 
 COI maintains the **PESEL** register — Poland's population register, the
@@ -134,4 +156,6 @@ See [[PL-MOBYWATEL]].
 
 ## Sources
 
-Listed in frontmatter, three of four read directly this pass.
+Listed in frontmatter. Three of the original four read directly in the
+2026-08-26 pass; the KPRM legislative-project page added and read
+directly 2026-09-18.

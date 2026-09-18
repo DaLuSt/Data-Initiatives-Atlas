@@ -12,7 +12,8 @@ description: >
   business, functional, process, information and system — addressed from the
   perspectives of security, certification and governance. Its security
   gateway requirements were published as a German standard, DIN SPEC 27070,
-  on 21 February 2020.
+  on 21 February 2020. Version 4 is the current stable release; a fifth
+  edition is in development.
 
 level: international
 country: null
@@ -25,7 +26,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-18"
 previous_version: null
 successor: null
 
@@ -54,6 +55,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Reference Architecture"
+    url: "https://internationaldataspaces.org/offers/reference-architecture/"
+    publisher: "International Data Spaces Association (IDSA)"
+    accessed: "2026-09-18"
   - title: "IDS Reference Architecture Model 3.0 (April 2019)"
     url: "https://internationaldataspaces.org/wp-content/uploads/IDS-Reference-Architecture-Model-3.0-2019.pdf"
     publisher: "International Data Spaces Association (IDSA)"
@@ -83,6 +88,15 @@ sources:
 > other internationaldataspaces.org pages plus datos.gob.es independently
 > cover the same five-layer, three-perspective structure the PDF would
 > have confirmed directly.
+>
+> **Closed 2026-09-18** (`discovery/unresolved.md` row #129): the IDSA's
+> own "Reference Architecture" page, read directly, confirms the entity
+> described only version 3.0 (April 2019) is superseded — "The current
+> version, RAM 4, is the stable and official reference model. It is
+> widely used in projects and implementations," while "IDS-RAM 4 is
+> archived and will not be further updated. It remains the baseline for
+> existing implementations." A fifth edition is in development, with no
+> release date given.
 
 ## Description
 
@@ -133,15 +147,24 @@ sovereignty" is meant to mean in this architecture.
 Both edges are asserted on those entities, which is where they are most
 naturally authored.
 
+## Version 4 is current, closed 2026-09-18
+
+`discovery/unresolved.md` row #129 flagged that the entity described only
+IDS-RAM 3.0 (April 2019) while a version 4 was known to exist. The IDSA's
+own "Reference Architecture" page, read directly, resolves it: **RAM 4 is
+the current stable and official reference model**, "widely used in
+projects and implementations." The page does not give an exact release
+date for version 4, nor detail what changed from 3.0 — the underlying
+model's five-layer, three-perspective structure this entity already
+describes is stated as unchanged across versions read this pass. A fifth
+edition is in development, per the same page, with no release date given.
+
 ## Not modelled
 
 - **DIN SPEC 27070** as an entity of its own. It is a DIN SPEC — a
   specification published through a fast-track procedure — rather than a full
   DIN standard, and the Atlas holds no other DIN document to sit it beside.
 - The **IDS Connector** and the **Dataspace Connector** implementation.
-- **Version history.** The entity describes IDS-RAM **3.0** of April 2019,
-  which is the version the sources returned; version 4 exists and was not
-  established.
 
 ## Sources
 
