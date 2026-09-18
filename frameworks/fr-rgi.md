@@ -186,12 +186,13 @@ The scoreboard on [[EU-EIF]] is now:
 |---|---|
 | Belgium | **yes** — [[BE-BELGIF]], sourced from the framework's own text |
 | France | **yes** — this entity, sourced from the Commission's own NIFO factsheet |
-| Germany | no — [[DE-IT-ARCHITEKTURRICHTLINIEN]] not asserted to be the NIF |
+| Germany | partial — [[DE-IT-ARCHITEKTURRICHTLINIEN]] not asserted to be the NIF, but its own SR1 principle carries a narrower `based-on` [[EU-EIF]] link (closed 2026-09-18) |
 | Netherlands | no — [[NL-NORA]] question open since Batch 7 |
 
-Two of four now, and the closing move — going to the Commission's own
-NIFO assessment rather than the national document alone — is available
-for the remaining two refusals as well, not attempted this pass.
+Two of four fully now, plus Germany's narrower link. The closing move —
+going to the Commission's own NIFO assessment rather than the national
+document alone — remains available for the Netherlands, not attempted
+this pass.
 
 ## Relationships
 

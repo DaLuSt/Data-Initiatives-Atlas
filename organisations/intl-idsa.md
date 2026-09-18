@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-18"
 previous_version: null
 successor: null
 
@@ -43,6 +43,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "About IDSA"
+    url: "https://internationaldataspaces.org/about/"
+    publisher: "International Data Spaces Association (IDSA)"
+    accessed: "2026-09-18"
   - title: "IDS Reference Architecture Model"
     url: "https://internationaldataspaces.org/offers/reference-architecture/"
     publisher: "International Data Spaces Association (IDSA)"
@@ -66,6 +70,11 @@ sources:
 > version 4 current — the "3.0 (April 2019)" version this Atlas ties to
 > DIN SPEC 27070 (see [[INTL-IDS-RAM]]) is the version contemporaneous
 > with that standard, not the association's current output.
+>
+> **Closed 2026-09-18** (`discovery/unresolved.md` row #130): the
+> membership count, previously resting on one secondary source, is now
+> confirmed directly by IDSA's own "About" page. See "Membership,
+> verified" below.
 
 ## Description
 
@@ -95,6 +104,21 @@ following the pattern the Atlas already uses for [[INTL-ISO]] and
 maintains a specification and the specification itself are different things,
 and other entities need to point at the specification, not the body.
 
+## Membership, verified — 2026-09-18
+
+`discovery/unresolved.md` row #130 flagged the previous "133 companies
+across 22 countries" figure as resting on one secondary source
+(datos.gob.es). IDSA's own "About" page, read directly, gives a newer,
+directly-sourced figure instead: *"Its 140+ member companies and
+institutions have created the International Data Spaces (IDS)
+standard."* The page does not repeat a country count, so that detail is
+dropped rather than carried forward unconfirmed. The same page also
+names **Eclipse Dataspace Components (EDC)** — the current name for
+what earlier sources called the Eclipse Dataspace Connector — as an
+IDSA-affiliated implementation, used as the technical foundation of the
+Gaia-X4KI project (its Connector, Federated Catalog, Identity Hub and
+Registration Service components named specifically).
+
 ## Not modelled
 
 - The **IDS Connector**, the central technical component — a security gateway
@@ -104,8 +128,8 @@ and other entities need to point at the specification, not the body.
 - **Data sovereignty** as a concept, defined by the IDSA sources as a natural
   or legal person's capability of being entirely self-determined regarding
   its data.
-- The **IDSA's membership**, given by one source as 133 companies.
-- The **Dataspace Connector** and the Eclipse implementations.
+- **Eclipse Dataspace Components (EDC)** and the Gaia-X4KI project itself —
+  named above as IDSA-affiliated, but neither is an Atlas entity.
 
 ## Relationships
 
@@ -113,4 +137,6 @@ and other entities need to point at the specification, not the body.
 
 ## Sources
 
-Listed in frontmatter, all three read directly this pass.
+Listed in frontmatter. The original three read directly in the
+2026-08-28 pass; IDSA's own "About" page, added and read directly
+2026-09-18, closes the membership-count question.

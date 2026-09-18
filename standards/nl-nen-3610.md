@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-18"
 previous_version: null
 successor: null
 
@@ -37,7 +37,7 @@ relationships:
   - type: maintained-by
     target: NL-GEONOVUM
     source: fact
-    evidence: "Confirmed by reading geonovum.nl's own NEN 3610 page directly (2026-08-27): Geonovum is the point of contact (aanspreekpunt) for applying NEN 3610 in geo-information models, advising model maintainers on conformance, semantic coordination and UML modelling — while NEN itself remains the formal standards body publishing the numbered standard. geonovum.nl's own page on mandatory and recommended standards, also read directly, confirms NEN 3610 sits in the basic geo-standards set Geonovum manages, on the government's 'pas toe of leg uit' (comply or explain) list, meaning government bodies are required to apply it or justify deviation."
+    evidence: "Confirmed by reading geonovum.nl's own NEN 3610 page directly (2026-08-27): Geonovum is the point of contact (aanspreekpunt) for applying NEN 3610 in geo-information models, advising model maintainers on conformance, semantic coordination and UML modelling — while NEN itself remains the formal standards body publishing the numbered standard. geonovum.nl's own page on mandatory and recommended standards, also read directly, confirms NEN 3610 sits in the basic geo-standards set Geonovum manages, on the government's 'pas toe of leg uit' (comply or explain) list, meaning government bodies are required to apply it or justify deviation. NARROWED 2026-09-18 (discovery/unresolved.md row #136): NEN's own news page announcing the 2022 revision, read directly, confirms NEN publishes the standard ('NEN publiceert nieuwe versie basismodel geo-informatie') and that it is revised by a working group of NEN's own 'Geo-informatie' normcommissie together with experts from Geonovum, Kadaster and Rijkswaterstaat — Geonovum contributes as one of three named expert bodies to a NEN-run committee, not as sole maintainer or exclusive point of contact. `maintained-by` NL-NEN would be the formally precise edge; kept on NL-GEONOVUM because that is the narrower, still-true claim this entity's sources directly support (advising on application), and NEN's own publishing role is now recorded in prose instead."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -54,6 +54,10 @@ sources:
     url: "https://www.geonovum.nl/themas/standaardisatie/verplicht-aanbevolen"
     publisher: "Geonovum"
     accessed: "2026-08-27"
+  - title: "NEN publiceert nieuwe versie basismodel geo-informatie"
+    url: "https://www.nen.nl/nieuws/geotechniek/nen-publiceert-nieuwe-versie-basismodel-geo-informatie/"
+    publisher: "NEN"
+    accessed: "2026-09-18"
 ---
 
 # NEN 3610
@@ -64,6 +68,10 @@ sources:
 > the "point of contact" caveat this entity already carried and a detail it
 > did not: NEN 3610 sits on the government's mandatory "pas toe of leg uit"
 > standards list.
+>
+> **Narrowed 2026-09-18** (`discovery/unresolved.md` row #136): NEN's own
+> publishing role, previously unconfirmed by any page read, is now sourced
+> directly — see "The publisher question, closed" below.
 
 ## Description
 
@@ -82,18 +90,36 @@ pass, so its content was not confirmed.
 ## A divided-custody caveat, now slightly better evidenced
 
 The `maintained-by` relationship to [[NL-GEONOVUM]] is recorded at
-`confidence: medium` (raised from `low` this pass, still short of `high`).
-The sourced statement remains narrower than the relationship type implies:
-Geonovum is described, in its own words read directly this pass, as the
-*aanspreekpunt* (point of contact) for applying NEN 3610 in geo-information
-models — advising on conformance, semantic coordination between models and
-UML modelling — which is not the same as owning or publishing the standard.
-As a NEN-numbered standard it is published by [[NL-NEN]], a fact not itself
-confirmed by any page read this pass.
+`confidence: medium`. The sourced statement remains narrower than the
+relationship type implies: Geonovum is described, in its own words read
+directly, as the *aanspreekpunt* (point of contact) for applying NEN 3610
+in geo-information models — advising on conformance, semantic coordination
+between models and UML modelling — which is not the same as owning or
+publishing the standard.
 
-Custody is therefore genuinely split between the two, and the Atlas records
-both in `organisations:` while asserting the weaker of the two claims as a
-relationship. This is recorded in `discovery/unresolved.md`.
+## The publisher question, closed — 2026-09-18
+
+As a NEN-numbered standard it is published by [[NL-NEN]] — previously a
+fact not confirmed by any page read. NEN's own news page announcing the
+2022 revision, read directly, confirms it: *"NEN publiceert nieuwe versie
+basismodel geo-informatie"* (NEN publishes new version of the basic model
+for geo-information). The same page names the actual working group
+behind the revision: *"Een werkgroep van leden van de normcommissie
+'Geo-informatie' en experts van Geonovum, het Kadaster en
+Rijkswaterstaat, heeft de norm herzien"* (a working group of members of
+the "Geo-information" standards committee, and experts from Geonovum,
+the Cadastre and Rijkswaterstaat, revised the standard).
+
+This sharpens rather than resolves the custody split: NEN runs the
+standing committee and publishes the standard; Geonovum is one of three
+named expert contributors to a specific revision, alongside Kadaster and
+Rijkswaterstaat — a real role, but narrower than "maintainer," and
+consistent with Geonovum's own "point of contact for application" framing
+rather than contradicting it. The `maintained-by` edge stays on
+[[NL-GEONOVUM]] because that is the claim this entity's own sources
+directly support; NEN's publishing role is recorded here in prose rather
+than as a second `maintained-by` edge, since the Atlas gives each register
+one such edge by convention.
 
 ## Relationships
 
@@ -104,7 +130,9 @@ relationship. This is recorded in `discovery/unresolved.md`.
 
 ## Sources
 
-Listed in frontmatter, two of three read directly this pass — Geonovum's
-own NEN 3610 page and its mandatory/recommended standards page. The Linked
-Data profile page is confirmed genuinely dead (HTTP 404), not merely
-unread.
+Listed in frontmatter. Two of the original three read directly in the
+2026-08-27 pass — Geonovum's own NEN 3610 page and its
+mandatory/recommended standards page (the Linked Data profile page is
+confirmed genuinely dead, HTTP 404, not merely unread). NEN's own news
+page on the 2022 revision, added and read directly 2026-09-18, closes
+the publisher question.
