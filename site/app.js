@@ -958,6 +958,77 @@
       ty += block.rows * gapY + 190;
     });
 
+    return relaxTowardEdges(nodes, pos, deg);
+  }
+
+  // How far an individual entity may drift from the position mapPositions()
+  // assigned it, toward the entities it actually shares an edge with.
+  // Without this, two heavily-connected entities in neighbouring countries
+  // render wherever their own country's grid happens to put them — which
+  // can be opposite corners of their respective blocks, visually distant
+  // despite being directly related, undermining the reason to look at a map
+  // of relationships at all. The cap keeps a country's entities moving
+  // toward a connected neighbour's border rather than into the neighbour's
+  // own territory, so the map is still recognisably geographic.
+  var RELATION_PULL = 0.07;
+  var RELATION_HOME_SPRING = 0.12;
+  var RELATION_MAX_DRIFT = 350;
+  var RELATION_ITERATIONS = 150;
+
+  /** Mass-spring relaxation, not a real physics simulation: every node has
+   *  one spring back to its `homePos` (from the block it was placed in) and
+   *  one spring per edge pulling it toward whatever it is connected to.
+   *  `deg` normalises the edge springs — without it, a hub with dozens of
+   *  edges would pull, and be pulled, far harder than a node with one, and
+   *  run straight through its drift cap regardless of the cap's intent.
+   *  O((nodes + edges) × iterations), with no pairwise term, so it stays
+   *  cheap at the Atlas's current size (a few thousand edges at most, with
+   *  every optional edge class on). */
+  function relaxTowardEdges(nodes, homePos, deg) {
+    var edges = [];
+    cy.edges().forEach(function (e) {
+      edges.push({ source: e.data("source"), target: e.data("target") });
+    });
+
+    var pos = Object.create(null);
+    nodes.forEach(function (n) {
+      var h = homePos[n.id()];
+      pos[n.id()] = { x: h.x, y: h.y };
+    });
+
+    for (var iter = 0; iter < RELATION_ITERATIONS; iter++) {
+      var force = Object.create(null);
+      nodes.forEach(function (n) { force[n.id()] = { x: 0, y: 0 }; });
+
+      edges.forEach(function (e) {
+        var a = pos[e.source], b = pos[e.target];
+        if (!a || !b) return;
+        var dx = b.x - a.x, dy = b.y - a.y;
+        var pa = RELATION_PULL / (deg[e.source] || 1);
+        var pb = RELATION_PULL / (deg[e.target] || 1);
+        force[e.source].x += dx * pa; force[e.source].y += dy * pa;
+        force[e.target].x -= dx * pb; force[e.target].y -= dy * pb;
+      });
+
+      nodes.forEach(function (n) {
+        var id = n.id(), h = homePos[id], p = pos[id];
+        force[id].x += (h.x - p.x) * RELATION_HOME_SPRING;
+        force[id].y += (h.y - p.y) * RELATION_HOME_SPRING;
+      });
+
+      nodes.forEach(function (n) {
+        var id = n.id(), h = homePos[id], p = pos[id], f = force[id];
+        var nx = p.x + f.x, ny = p.y + f.y;
+        var dx = nx - h.x, dy = ny - h.y;
+        var dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist > RELATION_MAX_DRIFT) {
+          var k = RELATION_MAX_DRIFT / dist;
+          nx = h.x + dx * k; ny = h.y + dy * k;
+        }
+        p.x = nx; p.y = ny;
+      });
+    }
+
     return pos;
   }
 

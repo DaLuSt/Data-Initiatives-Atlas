@@ -710,9 +710,19 @@ async function search(page, q) {
         if (a.minX <= b.maxX && b.minX <= a.maxX && a.minY <= b.maxY && b.minY <= a.maxY) overlaps++;
       }
     }
+    // DK-GRUNDDATA carries a documented related-to edge straight to
+    // NL-BASISREGISTRATIES (programmes/dk-grunddata.md) — a real
+    // cross-border relationship this layout is now supposed to visibly
+    // shorten, not just avoid distorting the country order for.
+    const dk = cy.getElementById('DK-GRUNDDATA'), nl = cy.getElementById('NL-BASISREGISTRATIES');
+    const relatedPairDist = dk.length && nl.length
+      ? Math.hypot(dk.position('x') - nl.position('x'), dk.position('y') - nl.position('y'))
+      : null;
+
     return {
       nodes: cy.nodes().length, groupCount: keys.length, overlaps,
-      NO: groups['NO'], ES: groups['ES'], NL: groups['NL'], DE: groups['DE']
+      NO: groups['NO'], ES: groups['ES'], NL: groups['NL'], DE: groups['DE'], DK: groups['DK'],
+      relatedPairDist
     };
   });
   check('map layout keeps every node — none dropped for lacking a location',
@@ -731,6 +741,24 @@ async function search(page, q) {
   const deX = (mapState.DE.minX + mapState.DE.maxX) / 2;
   check('map layout preserves east/west order (Germany right of the Netherlands)',
     deX > nlX, `Netherlands x=${nlX.toFixed(0)}, Germany x=${deX.toFixed(0)}`);
+
+  // Geography places the cluster; relationships should still nudge an
+  // individual entity toward whatever it is actually connected to — a
+  // country-only placement would leave two related entities exactly as far
+  // apart as their countries happen to be, however closely they relate.
+  if (mapState.relatedPairDist != null && mapState.DK && mapState.NL) {
+    const dkCx = (mapState.DK.minX + mapState.DK.maxX) / 2;
+    const dkCy = (mapState.DK.minY + mapState.DK.maxY) / 2;
+    const nlCx = (mapState.NL.minX + mapState.NL.maxX) / 2;
+    const nlCy = (mapState.NL.minY + mapState.NL.maxY) / 2;
+    const blockDist = Math.hypot(dkCx - nlCx, dkCy - nlCy);
+    check('a cross-border relationship pulls its two entities closer than their countries\' bare separation',
+      mapState.relatedPairDist < blockDist,
+      `edge endpoints ${mapState.relatedPairDist.toFixed(0)}px apart vs ${blockDist.toFixed(0)}px between DK/NL cluster centres`);
+  } else {
+    check('a cross-border relationship pulls its two entities closer than their countries\' bare separation',
+      true, 'DK-GRUNDDATA/NL-BASISREGISTRATIES relationship not present — skipped');
+  }
 
   const mapHint = await page.textContent('#layout-hint');
   check('map layout hint explains the supra-national panel',

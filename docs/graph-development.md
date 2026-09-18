@@ -92,16 +92,17 @@ npm install playwright && npx playwright install chromium
 node tools/test_ui.mjs
 ```
 
-122 checks across desktop, mobile (390×844) and accessibility: search by
+123 checks across desktop, mobile (390×844) and accessibility: search by
 name/ID/country, keyboard navigation (including arrow-key traversal of the
 canvas itself), tapping a node or an edge, detail panel content, GitHub
 links, deep links, shareable filter/view/depth/search/path/layout state in
 the URL hash, every filter, edge-class toggles, path-finding between two
 entities (including a path beyond the current depth, a clear action, and
 the no-path-found case), **the layered layout's block grouping and band
-order**, **the world map layout's geographic ordering and its clusters
-never overlapping**, the comparison matrix, the list view and its sorting,
-and console-error freedom throughout.
+order**, **the world map layout's geographic ordering, its clusters never
+overlapping, and a cross-border relationship visibly pulling its two
+entities closer together**, the comparison matrix, the list view and its
+sorting, and console-error freedom throughout.
 
 These are **not** in CI: they would require installing a browser on every
 pull request for a static page whose data is already covered by the Python
@@ -285,6 +286,23 @@ that pack nodes into per-scope/per-country blocks:
     countries and their entity counts — if it drifts again as the Atlas
     grows, re-tune this constant before touching the declutter algorithm
     itself.
+  - Country placement alone leaves an individual entity exactly as far from
+    a related entity as their two countries happen to be, however direct
+    the relationship — two national base-registry programmes that reference
+    each other still rendered on opposite sides of their blocks, since nothing
+    about `declutterCircles()` looks at edges at all, only country shapes.
+    `relaxTowardEdges()` runs after the country blocks are placed: a small
+    mass-spring pass where every node has a spring back to its block position
+    (`RELATION_HOME_SPRING`) and a spring toward every entity it actually has
+    an edge to (`RELATION_PULL`, normalised by degree so a hub's dozens of
+    edges do not each pull at full strength). `RELATION_MAX_DRIFT` hard-caps
+    how far any single node may move from its block position, so a country's
+    entities drift toward a connected neighbour's border rather than into the
+    neighbour's own territory — 350 is the largest value that still keeps
+    every pair of clusters non-overlapping against the current data;
+    `test_ui.mjs` checks both that (zero overlap) and that the pull is
+    real (a documented cross-border relationship ends up closer than its two
+    countries' bare cluster separation).
 
 `LOD_LABELS` still thins labels above 260 visible nodes.
 
