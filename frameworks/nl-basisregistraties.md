@@ -29,7 +29,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-04"
+last_verified: "2026-09-18"
 previous_version: null
 successor: null
 
@@ -105,6 +105,10 @@ sources:
 > Stelselcatalogus — actually does). That brings this entity to 5 of 8
 > sources read directly — a genuine majority — so `verification` is
 > promoted to `primary-source`.
+>
+> **Closed 2026-09-18** (`discovery/unresolved.md` rows #133 and #138):
+> the FDS relationship, open since Batch 2, is now sourced — see
+> "Relationship to [[NL-FDS]], closed 2026-09-18" below.
 
 ## Description
 
@@ -270,11 +274,20 @@ against `wetten.overheid.nl`'s own consolidated AWR text on 2026-08-30,
 which also corrected the article range from a previously-unchecked "21 to
 21k" to the true "21 to 22i".
 
-## Relationship to [[NL-FDS]] is still open
+## Relationship to [[NL-FDS]], closed 2026-09-18
 
-Whether the Federatief Datastelsel extends, replaces or sits beside the
-stelsel remains unestablished, as it has since Batch 2. Nothing in this
-batch touched it, and nothing is asserted.
+Open since Batch 2 and re-asked by this batch without being answered:
+does the Federatief Datastelsel extend, replace or sit beside the
+stelsel? FDS's own knowledge base, read directly, answers it — not
+cleanly any of the three. FDS states it is *"de realisatie van het
+Toekomstbeeld Stelsel van Basisregistraties"* (the realisation of the
+base-registries system's own Future Vision), and separately describes
+the stelsel as one of several Domain Data Systems FDS connects, with FDS
+itself *"het verbindende stelsel van stelsels"* (the connecting system
+of systems). The stelsel continues to exist — no supersession is
+asserted — but FDS is its own stated forward-evolution path. The
+relationship edge (`implements`) is recorded on [[NL-FDS]], the
+downstream entity; see that file for the full sourcing.
 
 ## Relationships
 
@@ -290,11 +303,13 @@ link should move down to the BRP entity."* They have, and it has.
 
 Listed in frontmatter. Five of eight read directly: noraonline.nl,
 data.overheid.nl and geobasisregistraties.nl (prior pass), plus
-rijksoverheid.nl and Logius's Stelselvoorzieningen page (this pass,
-2026-08-28). The three digitaleoverheid.nl pages remain confirmed
-genuinely bot-walled on every attempt (a JavaScript verification
-challenge, not static content); a vng.nl PDF alternate was fetched in the
-prior pass but returned unparseable binary; `web.archive.org` was
-attempted this pass but this environment's fetch tool cannot reach that
-domain at all. A genuine majority was reached instead via two further
-non-digitaleoverheid.nl government sources.
+rijksoverheid.nl and Logius's Stelselvoorzieningen page (2026-08-28
+pass). The three digitaleoverheid.nl pages remain confirmed genuinely
+bot-walled on every attempt (a JavaScript verification challenge, not
+static content); a vng.nl PDF alternate was fetched in the prior pass
+but returned unparseable binary; `web.archive.org` was attempted this
+pass but this environment's fetch tool cannot reach that domain at all.
+A genuine majority was reached instead via two further
+non-digitaleoverheid.nl government sources. The FDS relationship
+question is closed on [[NL-FDS]]'s own file, sourced from FDS's own
+knowledge base (2026-09-18).
