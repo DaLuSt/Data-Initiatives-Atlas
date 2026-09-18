@@ -31,7 +31,7 @@ verification: primary-source
 
 start_date: 1981-01-28
 end_date: null
-last_verified: "2026-09-13"
+last_verified: "2026-09-18"
 previous_version: null
 successor: null
 
@@ -43,6 +43,7 @@ related_entities:
   - EU-GDPR
   - INTL-CONVENTION-108-PROTOCOL
   - INTL-CONVENTION-108-PLUS
+  - RU
 relationships:
   - type: maintained-by
     target: INTL-COE
@@ -99,6 +100,13 @@ relationships:
     evidence: "Eight non-Council of Europe countries from Africa and Latin America have ratified Convention 108: Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia and Uruguay (en.wikipedia.org 'Convention for the Protection of Individuals with Regard to Automatic Processing of Personal Data'; epic.org 'Council of Europe Privacy Convention'). Wikipedia read directly 2026-08-28, confirming the eight-state list; epic.org returned HTTP 403 on two retries 2026-08-28 and stays unread."
     confidence: medium
     valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: RU
+    source: fact
+    evidence: "PARTIALLY CLOSES discovery/unresolved.md row #179 (Russia's own party-status after CoE expulsion, previously flagged on this entity's own file as 'not something any source found addresses'). Multiple independent web searches converge on the same primary instrument, Resolution CM/Res(2022)3 on the legal and financial consequences of the cessation of the Russian Federation's membership of the Council of Europe (adopted 23 March 2022): 'the Russian Federation will continue to be a Contracting Party to those conventions and protocols concluded in the framework of the Council of Europe, to which it has expressed its consent to be bound, and which are open to accession by non-member States' — naming Convention 108 as exactly this kind of instrument. NOT READ — `rm.coe.int` (which hosts the resolution's own text) remains domain-wide blocked, confirmed again this pass; the resolution's text is known only via converging secondary reporting (a House of Commons Library briefing, EEAS pages, and academic commentary), not read directly. `confidence: medium` reflects genuine multi-source convergence on the same resolution number and near-identical wording, short of a direct primary read."
+    confidence: medium
+    valid_from: "2022-03-16"
     valid_until: null
   - type: applies-in
     target: UY
@@ -178,6 +186,13 @@ sources:
 > claims below rest on more than Wikipedia and the unreadable WTO PDF,
 > even though the per-edge evidence strings here were not individually
 > rewritten to cite the country-level sources.
+>
+> **Partially closed 2026-09-18** (`discovery/unresolved.md` row #179):
+> Russia's own status as a Convention 108 party after its Council of
+> Europe expulsion, previously flagged as unaddressed by any source
+> found, is now answered via Resolution CM/Res(2022)3 (search-only —
+> `rm.coe.int` stays blocked). See "The European parties are deliberately
+> not enumerated" below.
 
 ## Description
 
@@ -227,21 +242,40 @@ the graph at all.
 ## ⚠ The European parties are deliberately not enumerated
 
 Sources state that **all Council of Europe member states are parties** to
-Convention 108. If that rule holds, roughly 46 more `applies-in` edges are
-owed.
+Convention 108. If that rule holds, roughly 45 more `applies-in` edges are
+owed (46 current member states, minus the one — Russia — handled
+separately below).
 
-They are **not asserted**, for two reasons. The one source found for the
-rule gives a stale member count — it says 47, which has been wrong since
-[[RU]]'s expulsion in 2022 — and [[RU]]'s own position as a party after
-expulsion from the organisation is not something any source found addresses.
-Second, generating 46 edges from a rule whose supporting source is visibly
-out of date would be mass rather than knowledge.
+They are **not asserted**, because generating 45 edges from a rule whose
+one supporting source gives a stale, pre-2022 member count would be mass
+rather than knowledge. The Council of Europe's own chart of signatures and
+ratifications is the document that would settle it, and the egress proxy
+still blocks `coe.int` and `rm.coe.int` — every path tried returns HTTP
+403, confirmed again 2026-09-18. This is recorded in
+`discovery/research-queue.md` as a re-verification-blocked item rather
+than guessed at.
 
-The Council of Europe's chart of signatures and ratifications is the
-document that settles it, and the egress proxy still blocks `coe.int` as of
-this pass (2026-08-28) — every `coe.int` and `rm.coe.int` path tried
-returned HTTP 403. This is recorded in `discovery/research-queue.md` as a
-re-verification-blocked item rather than guessed at.
+**Russia's own position, previously the sharper unanswered half of this
+gap, is now closed — 2026-09-18.** `discovery/unresolved.md` row #179
+flagged this entity's own prior text: "[[RU]]'s own position as a party
+after expulsion from the organisation is not something any source found
+addresses." Multiple independent searches converge on the same primary
+instrument, **Resolution CM/Res(2022)3** (Committee of Ministers, adopted
+23 March 2022, on the legal and financial consequences of the cessation
+of Russia's Council of Europe membership): *"the Russian Federation will
+continue to be a Contracting Party to those conventions and protocols
+concluded in the framework of the Council of Europe, to which it has
+expressed its consent to be bound, and which are open to accession by
+non-member States"* — a category Convention 108 falls squarely within,
+being open to accession by states outside Europe entirely (see the eight
+non-European parties above). `applies-in` [[RU]] is recorded on that
+basis at `confidence: medium`: the resolution's own text, hosted at
+`rm.coe.int`, could not be read directly — the block held again this
+pass — so this rests on converging secondary reporting (a House of
+Commons Library briefing, EEAS pages, academic commentary) rather than a
+primary read, and `valid_from` uses 16 March 2022, the date Russia's CoE
+membership itself ceased, as the point from which this continuing-party
+status applies.
 
 ## The GDPR points back at it
 
@@ -265,8 +299,11 @@ instrument the Atlas already holds.
 
 Listed in frontmatter. Five of ten read directly: Wikipedia (prior pass),
 plus a Georgetown Law Library guide, and the Wrangu, Ambit Compliance and
-Reed Smith explainer pages (this pass, 2026-08-28). The Council of Europe
+Reed Smith explainer pages (2026-08-28 pass). The Council of Europe
 citations remain unread (domain-wide block); `epic.org` remains unread
 (403 on retry); the `wto.org` PDF was fetched but is not machine-readable;
 `web.archive.org` cannot be reached at all by this environment's tool. See
-the verification note above.
+the verification note above. The Russia/CM-Res(2022)3 finding added
+2026-09-18 is search-only, not a new read source — `rm.coe.int` stays
+blocked — and is recorded as such in its own evidence field rather than
+here in the source list.
