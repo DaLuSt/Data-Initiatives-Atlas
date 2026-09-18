@@ -942,8 +942,23 @@
     // The tray sits left of the decluttered map, ordered the same way the
     // grouped layout's international band is (metadata/ontology.md §2.1),
     // so switching between Map and Grouped doesn't reshuffle it.
+    //
+    // Its X position is anchored to countries with at least a handful of
+    // entities, not the single leftmost circle overall — a country whose
+    // only content so far is its own anchor node (Mexico, Argentina, Cape
+    // Verde…) can sit at an extreme longitude with nothing to keep it
+    // company, and anchoring to it would strand the tray tens of thousands
+    // of pixels from the part of the Atlas anyone is actually looking at.
+    // The tray belongs beside the substantial part of the map, not beside
+    // whichever country has the least content.
+    var TRAY_ANCHOR_MIN_ENTITIES = 5;
+    var anchorCircles = circles.filter(function (c) {
+      return c.block.list.length >= TRAY_ANCHOR_MIN_ENTITIES;
+    });
+    if (!anchorCircles.length) anchorCircles = circles;
     var minX = 0;
-    circles.forEach(function (c) { minX = Math.min(minX, c.cx - c.r); });
+    anchorCircles.forEach(function (c) { minX = Math.min(minX, c.cx - c.r); });
+
     var trayOrder = ["INTL", "UN", "DOMAIN"];
     var trayKeys = Object.keys(trayGroups).sort(function (a, b) {
       var ia = trayOrder.indexOf(a), ib = trayOrder.indexOf(b);
@@ -958,7 +973,17 @@
       ty += block.rows * gapY + 190;
     });
 
-    return relaxTowardEdges(nodes, pos, deg);
+    // Only geographic (country/region) entities have a true position for
+    // relaxTowardEdges() to protect — the tray is a parking spot for
+    // whatever the relationship pull doesn't reach, not a fact worth
+    // preserving the way a country's centroid is, so tray-origin nodes get
+    // a much longer leash there.
+    var anchored = Object.create(null);
+    Object.keys(geoGroups).forEach(function (key) {
+      geoGroups[key].list.forEach(function (n) { anchored[n.id()] = true; });
+    });
+
+    return relaxTowardEdges(nodes, pos, deg, anchored);
   }
 
   // How far an individual entity may drift from the position mapPositions()
@@ -975,16 +1000,28 @@
   var RELATION_MAX_DRIFT = 350;
   var RELATION_ITERATIONS = 150;
 
+  // Tray-origin entities — EU/UN/INTL/DOMAIN-scoped bodies with no country
+  // or region (mapPositions()'s `anchored` map) — have no true position for
+  // the cap above to protect, so a body like the Council of Europe, with
+  // real edges to two dozen countries, would otherwise still render stuck
+  // in the tray, tens of thousands of pixels from any of them: a much
+  // weaker home spring and a far longer leash let it actually travel to
+  // where its relationships point. A tray entity with no visible edges has
+  // nothing to pull it and simply stays put.
+  var TRAY_HOME_SPRING = 0.006;
+  var TRAY_MAX_DRIFT = 12000;
+
   /** Mass-spring relaxation, not a real physics simulation: every node has
    *  one spring back to its `homePos` (from the block it was placed in) and
    *  one spring per edge pulling it toward whatever it is connected to.
    *  `deg` normalises the edge springs — without it, a hub with dozens of
    *  edges would pull, and be pulled, far harder than a node with one, and
    *  run straight through its drift cap regardless of the cap's intent.
-   *  O((nodes + edges) × iterations), with no pairwise term, so it stays
-   *  cheap at the Atlas's current size (a few thousand edges at most, with
-   *  every optional edge class on). */
-  function relaxTowardEdges(nodes, homePos, deg) {
+   *  `anchored[id]` picks which spring/cap pair a node uses — see the two
+   *  constant pairs above. O((nodes + edges) × iterations), with no
+   *  pairwise term, so it stays cheap at the Atlas's current size (a few
+   *  thousand edges at most, with every optional edge class on). */
+  function relaxTowardEdges(nodes, homePos, deg, anchored) {
     var edges = [];
     cy.edges().forEach(function (e) {
       edges.push({ source: e.data("source"), target: e.data("target") });
@@ -1012,8 +1049,9 @@
 
       nodes.forEach(function (n) {
         var id = n.id(), h = homePos[id], p = pos[id];
-        force[id].x += (h.x - p.x) * RELATION_HOME_SPRING;
-        force[id].y += (h.y - p.y) * RELATION_HOME_SPRING;
+        var spring = anchored[id] ? RELATION_HOME_SPRING : TRAY_HOME_SPRING;
+        force[id].x += (h.x - p.x) * spring;
+        force[id].y += (h.y - p.y) * spring;
       });
 
       nodes.forEach(function (n) {
@@ -1021,8 +1059,9 @@
         var nx = p.x + f.x, ny = p.y + f.y;
         var dx = nx - h.x, dy = ny - h.y;
         var dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist > RELATION_MAX_DRIFT) {
-          var k = RELATION_MAX_DRIFT / dist;
+        var cap = anchored[id] ? RELATION_MAX_DRIFT : TRAY_MAX_DRIFT;
+        if (dist > cap) {
+          var k = cap / dist;
           nx = h.x + dx * k; ny = h.y + dy * k;
         }
         p.x = nx; p.y = ny;
