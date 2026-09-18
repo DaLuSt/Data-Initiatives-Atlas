@@ -22,7 +22,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-09-18"
 previous_version: null
 successor: null
 
@@ -35,6 +35,7 @@ related_entities:
   - PT
   - IE
   - NL-NORA
+  - FR-RGI
   - EU-INTEROPERABLE-EUROPE-ACT
   - EU-INTEROPERABLE-EUROPE-BOARD
 relationships:
@@ -97,7 +98,7 @@ relationships:
   - type: applies-in
     target: FR
     source: fact
-    evidence: "The EIF provides support to Member States to design and update their national interoperability frameworks (NIFs), France included (interoperable-europe.ec.europa.eu). NOT READ — search-only. As with the Netherlands and Germany, the French national framework is NOT identified: whether the Referentiel general d'interoperabilite serves that role is unsourced and is not asserted. See FR-RGI."
+    evidence: "The EIF provides support to Member States to design and update their national interoperability frameworks (NIFs), France included (interoperable-europe.ec.europa.eu). Updated 2026-09-18: the French NIF is now identified — the European Commission's own NIFO 'Factsheet — France,' read directly, names [[FR-RGI]] specifically as 'the French NIF,' which now carries `based-on` this framework."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -230,6 +231,10 @@ legal relationship above.
 - **[[NL-NORA]] is also `based-on` this framework**, added 2026-08-21 — see
   the NORA question above for the narrower, sourced scope of that link. No
   equivalent statement was found for Germany, so it does not carry the link.
+- **[[FR-RGI]] is also `based-on` this framework**, added 2026-09-18 — the
+  Commission's own NIFO factsheet for France names the RGI as France's NIF
+  and states EIF-alignment directly, closing a refusal that had stood
+  since the France batch (`discovery/unresolved.md` row #71).
 - `influences` edge (this Framework as target) recorded on
   [[EU-INTEROPERABLE-EUROPE-BOARD]]'s own file — tasked with shaping its
   next revision.
