@@ -36,6 +36,7 @@ related_entities:
   - IE
   - NL-NORA
   - FR-RGI
+  - ES-ENI
   - EU-INTEROPERABLE-EUROPE-ACT
   - EU-INTEROPERABLE-EUROPE-BOARD
 relationships:
@@ -105,7 +106,7 @@ relationships:
   - type: applies-in
     target: ES
     source: fact
-    evidence: "The EIF provides support to Member States to design and update their national interoperability frameworks (NIFs), Spain included (interoperable-europe.ec.europa.eu). NOT READ - search-only. As with the Netherlands, Germany and France, the Spanish national framework is NOT identified: whether the Esquema Nacional de Interoperabilidad serves that role is unsourced and is not asserted. See ES-ENI."
+    evidence: "The EIF provides support to Member States to design and update their national interoperability frameworks (NIFs), Spain included (interoperable-europe.ec.europa.eu). Updated 2026-09-18: the Spanish NIF is now identified and linked — the European Commission's own NIFO page for Spain, read directly, describes [[ES-ENI]] taking EIF recommendations 'into account' and cross-referencing it directly; [[ES-ENI]] now carries `based-on` this framework."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -235,6 +236,9 @@ legal relationship above.
   Commission's own NIFO factsheet for France names the RGI as France's NIF
   and states EIF-alignment directly, closing a refusal that had stood
   since the France batch (`discovery/unresolved.md` row #71).
+- **[[ES-ENI]] is also `based-on` this framework**, added 2026-09-18, by
+  the same technique — the Commission's own NIFO page for Spain, closing
+  row #84.
 - `influences` edge (this Framework as target) recorded on
   [[EU-INTEROPERABLE-EUROPE-BOARD]]'s own file — tasked with shaping its
   next revision.

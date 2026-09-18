@@ -24,7 +24,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-04"
+last_verified: "2026-09-18"
 previous_version: null
 successor: null
 
@@ -41,8 +41,8 @@ relationships:
   - type: based-on
     target: INTL-ISO-IEC-27001
     source: fact
-    evidence: "Confirmed by reading digitaleoverheid.nl's own BIO page and communicatierijk.nl's own BIO page directly (2026-08-27): BIO2 is structured according to NEN-EN-ISO/IEC 27001:2023, applied to formulate requirements for an information security management system. A third alternate source, certificeringsadvies.nl (fetched after bio-overheid.nl itself returned HTTP 403), independently confirms BIO2 'sluit inhoudelijk aan op ISO 27001 en ISO 27002'. NOTE: BIO2 cites the 2023 NEN-EN adoption; the ISO edition located in the Atlas is 27001:2022 — very likely the same standard under its Dutch designation, but the equivalence remains inferred, not confirmed by any page read."
-    confidence: medium
+    evidence: "Confirmed by reading digitaleoverheid.nl's own BIO page and communicatierijk.nl's own BIO page directly (2026-08-27): BIO2 is structured according to NEN-EN-ISO/IEC 27001:2023, applied to formulate requirements for an information security management system. A third alternate source, certificeringsadvies.nl (fetched after bio-overheid.nl itself returned HTTP 403), independently confirms BIO2 'sluit inhoudelijk aan op ISO 27001 en ISO 27002'. UPGRADED 2026-09-18 (discovery/unresolved.md row #33): NEN's own dedicated news page, 'ISO/IEC 27001 Europees aanvaard,' read directly, states plainly 'De Europese versie is gelijk aan de mondiale versie, met toevoeging van een Europees voorwoord' (the European version is equal to the global version, with the addition of a European foreword) — explaining directly why the European/Dutch adoption carries a 2023 date against the global standard's 2022 date. The equivalence is no longer inferred."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: based-on
@@ -79,6 +79,10 @@ sources:
   - title: "Baseline Informatiebeveiliging Overheid 2 (BIO2) v1.3 def"
     url: "https://www.bio-overheid.nl/media/dr4inbhc/20260109-baseline-informatiebeveiliging-overheid-2-bio2-v13-def.pdf"
     publisher: "BIO-overheid"
+  - title: "ISO/IEC 27001 Europees aanvaard"
+    url: "https://www.nen.nl/nieuws/ict/iso-iec-27001-europees-aanvaard/"
+    publisher: "NEN"
+    accessed: "2026-09-18"
 ---
 
 # BIO (Baseline Informatiebeveiliging Overheid)
@@ -92,6 +96,11 @@ sources:
 > `communicatierijk.nl`). Three of five listed sources read directly is a
 > genuine majority; promoted to `primary-source` on that basis, closing the
 > previous `search-only` status (never previously `last_verified`).
+>
+> **Closed 2026-09-18** (`discovery/unresolved.md` row #33): the
+> NEN-EN-ISO/IEC 27001:2023 vs. ISO/IEC 27001:2022 equivalence, previously
+> inferred, is now confirmed directly by NEN's own words. See "The 2023
+> vs. 2022 equivalence, confirmed" below.
 
 ## Description
 
@@ -129,6 +138,20 @@ renaming.
 words: "geldt voor alle overheidsorganisaties, waaronder: Gemeenten,
 Provincies, Waterschappen, Uitvoeringsorganisaties en ZBO's."
 
+## The 2023 vs. 2022 equivalence, confirmed — 2026-09-18
+
+Earlier passes flagged that BIO2 cites the NEN-EN 2023 adoption while the
+ISO edition catalogued elsewhere in the Atlas is dated 2022, and left the
+equivalence inferred rather than sourced. `iso.org` itself remains
+domain-wide blocked, but NEN's own dedicated news page, "ISO/IEC 27001
+Europees aanvaard," read directly, closes it from the other side: *"De
+Europese versie is gelijk aan de mondiale versie, met toevoeging van een
+Europees voorwoord"* (the European version is equal to the global
+version, with the addition of a European foreword). Publication of the
+European version followed the global one by roughly a year, which is why
+the two carry different year designations — NEN-EN-ISO/IEC 27001:2023
+and ISO/IEC 27001:2022 are the same standard.
+
 ## Modelling note
 
 BIO and BIO2 are modelled as **one entity with versions**, unlike
@@ -144,10 +167,9 @@ judgement call and is recorded in `discovery/unresolved.md`.
 
 - Applies in [[NL]] across all government tiers, mandatory since 1 January
   2019 (date newly sourced this pass).
-- Based on [[INTL-ISO-IEC-27001]] and [[INTL-ISO-IEC-27002]]. The edition
-  caveat from the previous pass stands: BIO2 cites the NEN-EN 2023/2022
-  adoptions, and the equivalence to the ISO editions catalogued elsewhere
-  in the Atlas remains inferred rather than directly sourced.
+- Based on [[INTL-ISO-IEC-27001]] (`confidence: high`, upgraded
+  2026-09-18) and [[INTL-ISO-IEC-27002]]. The 2023-vs-2022 edition
+  question is now closed — see above.
 - Published in the Netherlands by [[NL-NEN]].
 - [[NL-ENSIA]], the accountability system paired with the BIO in its
   digitaleoverheid.nl placement, is now an entity (added 2026-09-04),
@@ -155,7 +177,9 @@ judgement call and is recorded in `discovery/unresolved.md`.
 
 ## Sources
 
-Three of five read directly this pass: `digitaleoverheid.nl`,
-`communicatierijk.nl`, and the alternate `certificeringsadvies.nl` found
-via WebSearch to cover BIO2's own content after `bio-overheid.nl` was
-confirmed genuinely blocked (403) on both its homepage and the BIO2 PDF.
+Three of the original five read directly in the 2026-08-27 pass:
+`digitaleoverheid.nl`, `communicatierijk.nl`, and the alternate
+`certificeringsadvies.nl` found via WebSearch to cover BIO2's own content
+after `bio-overheid.nl` was confirmed genuinely blocked (403) on both its
+homepage and the BIO2 PDF. NEN's own equivalence page, added and read
+directly 2026-09-18, closes the 2023-vs-2022 edition question.

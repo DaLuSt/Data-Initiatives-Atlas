@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-18"
 previous_version: null
 successor: null
 
@@ -64,6 +64,10 @@ sources:
     url: "https://en.wikipedia.org/wiki/ISO/IEC_27000_family"
     publisher: "Wikipedia"
     accessed: "2026-08-28"
+  - title: "ISO/IEC 27001 Europees aanvaard"
+    url: "https://www.nen.nl/nieuws/ict/iso-iec-27001-europees-aanvaard/"
+    publisher: "NEN"
+    accessed: "2026-09-18"
 ---
 
 # ISO/IEC 27001
@@ -79,6 +83,10 @@ sources:
 > edition is confirmed current, now itself amended by "ISO/IEC
 > 27001:2022/Amd 1:2024" addressing climate-action considerations — a
 > detail not in any previously-cited source.
+>
+> **Closed 2026-09-18** (`discovery/unresolved.md` row #33): the
+> NEN-EN-ISO/IEC 27001:2023 vs. ISO/IEC 27001:2022 equivalence flagged
+> below is now confirmed, not inferred, via NEN's own page.
 
 ## Description
 
@@ -106,13 +114,14 @@ INTL-ISO-IEC-27001 / -27002  (ISO/IEC)
 NL-BIO / BIO2                (Dutch government baseline)
 ```
 
-**One caveat is recorded on that relationship.** BIO2 cites
-*NEN-EN-ISO/IEC 27001:**2023***, while the ISO page located here is the
-**2022** edition. The `NEN-EN-` prefix indicates the European/Dutch adoption
-of the ISO standard, and adoption years commonly lag the ISO edition — so
-these are very likely the same standard under its Dutch designation. That is
-an inference, not a sourced equivalence, and it is flagged rather than
-smoothed over.
+**The 2023-vs-2022 caveat is now closed (2026-09-18).** BIO2 cites
+*NEN-EN-ISO/IEC 27001:**2023***, while the ISO edition catalogued here is
+**2022**. With `iso.org` itself still domain-wide blocked, the
+equivalence is confirmed from the European/Dutch side instead: NEN's own
+dedicated news page, "ISO/IEC 27001 Europees aanvaard," read directly,
+states plainly that the European version is equal to the global version
+plus a European foreword, published roughly a year later — which is why
+the two carry different year designations. No longer an inference.
 
 `coverage: low`: the standard's own structure and Annex A controls were not
 researched.
@@ -125,7 +134,9 @@ researched.
 
 ## Sources
 
-Listed in frontmatter. Three of five read directly this pass —
-jtc1info.org and two Wikipedia articles added as substitutes for the
-two `iso.org` sources, which stay unread (domain-wide block; see
-verification note above).
+Listed in frontmatter. Three of the original five read directly in the
+2026-08-28 pass — jtc1info.org and two Wikipedia articles added as
+substitutes for the two `iso.org` sources, which stay unread
+(domain-wide block; see verification note above). NEN's own equivalence
+page, added and read directly 2026-09-18, closes the 2023-vs-2022
+edition question.

@@ -22,7 +22,7 @@ verification: primary-source
 
 start_date: 2016-10-07
 end_date: null
-last_verified: "2026-09-13"
+last_verified: "2026-09-18"
 previous_version: null
 successor: null
 
@@ -139,8 +139,13 @@ somewhere to point, are in `discovery/research-queue.md`.
 **No `implements-requirement-from` is asserted** to
 [[EU-OPEN-DATA-DIRECTIVE]] — `related_entities` records that association
 for navigation only, since this 2016 act predates the 2019 directive.
-Nor is any edge asserted to [[FR-DATA-GOUV]], which this act's obligations
-feed but which no source connects to it directly.
+Nor is any edge asserted to [[FR-DATA-GOUV]] — refined 2026-09-18,
+closing `discovery/unresolved.md` row #76: data.gouv.fr's own legal
+guide, read directly, traces the *platform's* designation to a
+different article of the same code (CRPA Article R. 321-8, plus 2011
+and 2021 circulars), not to this Act. The two sit in the same code at
+different articles, neither naming the other — see [[FR-DATA-GOUV]] for
+the full finding.
 
 ## Sources
 

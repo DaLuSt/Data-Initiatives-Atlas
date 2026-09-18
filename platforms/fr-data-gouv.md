@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-06"
+last_verified: "2026-09-18"
 previous_version: null
 successor: null
 
@@ -66,6 +66,10 @@ sources:
     url: "https://guides.data.gouv.fr/moissonnage/comprendre-le-moissonnage/les-differents-type-de-moissonneurs"
     publisher: "data.gouv.fr"
     accessed: "2026-09-06"
+  - title: "Quelles sont les obligations ? (legal guide for data producers)"
+    url: "https://guides.data.gouv.fr/guides/guide-juridique/producteurs-de-donnees/quelles-sont-les-obligations"
+    publisher: "data.gouv.fr"
+    accessed: "2026-09-18"
 ---
 
 # data.gouv.fr
@@ -74,6 +78,11 @@ sources:
 > 2026-09-06.** All four originally-cited pages were read directly.
 > data.gouv.fr's own homepage confirms its identity verbatim, and its
 > Etalab organisation page confirms the `maintained-by` edge directly.
+>
+> **Closed 2026-09-18** (`discovery/unresolved.md` row #76): the
+> "obviously related, nowhere stated" question about [[FR-LRN]] is
+> answered, but not as expected — see "The LRN link, refined rather than
+> confirmed" below.
 
 ## Description
 
@@ -133,10 +142,36 @@ The Dutch cell is a gap rather than a finding — see [[FR-ETALAB]].
   uncorroborated askem.eu blog claim (found by search, not read from a
   primary page) that "France has its own derived profile" adding
   SIREN/administrative-nomenclature fields; that claim is not adopted.
-- **No relationship to [[FR-LRN]]**, though the 2016 act's open-data
-  obligations are what much of this portal carries. Same call as
-  [[DE-GOVDATA]]/[[DE-DNG]] and [[BE-DATA-GOV-BE]]/[[BE-HERGEBRUIK-WET]]:
-  obviously related, nowhere stated.
+- ~~No relationship to [[FR-LRN]]~~ — refined 2026-09-18, see below.
+
+## The LRN link, refined rather than confirmed — 2026-09-18
+
+`discovery/unresolved.md` row #76 asked the same question already asked
+of [[DE-GOVDATA]]/[[DE-DNG]] and [[BE-DATA-GOV-BE]]/[[BE-HERGEBRUIK-WET]]:
+the portal and the national open-data act look obviously related, but
+nowhere was it stated.
+
+data.gouv.fr's own legal guide for data producers, "Quelles sont les
+obligations ?", read directly, answers it — and corrects the assumption
+behind the question rather than confirming it. The platform's own
+designation as *"portail unique interministériel destiné à rassembler et
+à mettre à disposition les informations publiques"* rests on **Article
+R. 321-8 of the Code des relations entre le public et l'administration
+(CRPA)**, plus circulars of 26 May 2011 and 27 April 2021 — not on
+[[FR-LRN]] itself. [[FR-LRN]]'s own file already independently sourced
+its open-data obligations to a *different* article of the same code,
+**L312-1-1 et seq. of the CRPA** (via decideo.fr).
+
+So the two are related, but not directly: both sit inside the CRPA, at
+different articles serving different functions — L312-1-1 imposes the
+open-data-by-default obligation on public bodies, R. 321-8 designates
+this platform as where reference data is made available. No source
+states that the LRN itself designates data.gouv.fr, so no
+`implements-requirement-from` or similar edge is added — the same
+caution [[FR-LRN]]'s own file already applies (Nor is any edge asserted
+to [[FR-DATA-GOUV]]). What has changed is that "obviously related,
+nowhere stated" is now "related through a shared code at two distinct
+articles, neither stating the other."
 
 ## Relationships
 
@@ -144,4 +179,5 @@ The Dutch cell is a gap rather than a finding — see [[FR-ETALAB]].
 
 ## Sources
 
-Listed in frontmatter, all four read directly this pass.
+Listed in frontmatter. The first four read directly in the 2026-08-26
+pass; the legal-obligations guide, added 2026-09-18, read directly.
