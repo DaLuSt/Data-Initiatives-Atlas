@@ -24,7 +24,7 @@ verification: primary-source
 
 start_date: 2014-04-30
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-18"
 previous_version: null
 successor: null
 
@@ -42,9 +42,9 @@ related_entities:
 relationships:
   - type: governed-by
     target: FR-LIL
-    source: interpretation
-    evidence: "Confirmed by reading fr.wikipedia.org's DGSI article directly (2026-08-26): CRISTINA, the file inherited from DGSI's predecessor, is explicitly carved out rather than routinely authorised — 'Au nom de dispositions de la loi informatique et libertés concernant les fichiers de Sécurité nationale, il n'est pas soumis au contrôle de la Commission nationale de l'informatique et des libertés (CNIL)' (under national-security-file provisions of the loi Informatique et Libertés, it is not subject to CNIL oversight), though the same article notes CNIL retains a general supervisory role over personal data DGSI may otherwise collect. This is a narrower and more precise claim than this entity previously carried (that Title IV processing 'must be authorised by decree after a reasoned CNIL opinion') — the specific file most often cited, CRISTINA, is instead exempted from CNIL control outright. DGSI's own three cited pages remain bot-walled (see below), so this edge still rests on secondary corroboration rather than DGSI naming itself as subject to the Act."
-    confidence: low
+    source: fact
+    evidence: "CLOSES discovery/unresolved.md row #81's remaining low-confidence question (does FR-LIL Title IV name the DGSI as a controller?). fr.wikipedia.org's CRISTINA-file article ('Cristina (fichier)'), read directly (2026-09-18), confirms CRISTINA's legal basis is Article 26(III) of the loi n° 78-17 du 6 janvier 1978 — the loi Informatique et Libertés's own national-security-file provision (Title IV) — authorised by a décret en Conseil d'État of 27 June 2008, on which the CNIL gave a favourable opinion with reservations (avis n° 2008-175 du 16 juin 2008) after being seized 27 March 2008. Independently, Légifrance's own official index page for the amending decree gives its full title verbatim: 'Décret du 2 août 2017 modifiant le décret du 27 juin 2008 portant création au profit de la direction générale de la sécurité intérieure d'un traitement automatisé de données à caractère personnel dénommé « CRISTINA »' — Légifrance's own metadata, not secondary commentary, names DGSI directly ('au profit de la direction générale de la sécurité intérieure') as the beneficiary/controller of the Title-IV-authorised processing. The decree's substantive text itself remains unpublished ('n'est pas publié'), confirmed by attempting to read it directly at Légifrance this pass — consistent with Wikipedia's note that CRISTINA's creation decree is withheld from the Journal officiel under defence-secrecy rules. `confidence: medium` rather than `high`: DGSI is named in a government source's own title, not in the readable substantive text of the instrument itself."
+    confidence: medium
     valid_from: null
     valid_until: null
   - type: part-of
@@ -88,6 +88,14 @@ sources:
     url: "https://www.senat.fr/rap/r22-810/r22-810_mono.html"
     publisher: "Sénat (République française)"
     accessed: "2026-08-28"
+  - title: "Cristina (fichier)"
+    url: "https://fr.wikipedia.org/wiki/Cristina_(fichier)"
+    publisher: "Wikipédia"
+    accessed: "2026-09-18"
+  - title: "Décret du 2 août 2017 modifiant le décret du 27 juin 2008 portant création au profit de la direction générale de la sécurité intérieure d'un traitement automatisé de données à caractère personnel dénommé « CRISTINA »"
+    url: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000035355228"
+    publisher: "Légifrance (République française)"
+    accessed: "2026-09-18"
 ---
 
 # Direction générale de la Sécurité intérieure (DGSI)
@@ -108,6 +116,11 @@ sources:
 > sources read directly (cnctr.fr and fr.wikipedia.org from the prior
 > pass, plus Légifrance and the Sénat this pass) — a genuine majority —
 > so `verification` is promoted to `primary-source`.
+>
+> **Closed 2026-09-18** (`discovery/unresolved.md` row #81, remaining
+> question): DGSI is now named directly in a government source's own
+> title for the CRISTINA file's authorising decree. See "CRISTINA, named
+> at last" below.
 
 ## Description
 
@@ -148,6 +161,40 @@ delegation auditioned on 13 June 2023. The report also places DGSI alongside
 [[FR-DGSE]] and DRM as one of three services working against foreign
 interference operations targeting France.
 
+## CRISTINA, named at last — 2026-09-18
+
+For several passes, the `governed-by` [[FR-LIL]] edge was carried at low
+confidence because DGSI was "nowhere named as a controller in its own
+words" — only fr.wikipedia.org's DGSI article, at one remove, described
+CRISTINA as exempted from CNIL oversight under the loi Informatique et
+Libertés's national-security-file provisions.
+
+Reading the Wikipedia article dedicated to the file itself, *Cristina
+(fichier)*, directly this pass adds the legal chain: CRISTINA's basis is
+**Article 26(III)** of loi n° 78-17 — the Act's own Title IV provision for
+files touching state security, defence or public safety — authorised by a
+**décret en Conseil d'État of 27 June 2008**, on which the CNIL gave a
+favourable opinion with reservations (**avis n° 2008-175 du 16 juin
+2008**) after being seized on 27 March 2008.
+
+The stronger piece is independent of Wikipedia: **Légifrance's own index
+page** for the decree that later amended CRISTINA's authorisation gives
+the decree's full official title verbatim: *"Décret du 2 août 2017
+modifiant le décret du 27 juin 2008 portant création **au profit de la
+direction générale de la sécurité intérieure** d'un traitement automatisé
+de données à caractère personnel dénommé « CRISTINA »."* That is a
+government source's own naming of DGSI as the beneficiary of a Title-IV
+processing authorisation — not secondary commentary describing DGSI, but
+the state's own record of which service the decree was written for.
+
+`confidence: medium`, not `high`: attempting to read the decree's
+substantive text directly at Légifrance this pass confirms it remains
+genuinely unpublished ("n'est pas publié"), consistent with Wikipedia's
+note that CRISTINA's creation decree is withheld from the Journal officiel
+under defence-secrecy rules. DGSI is named in the government's own title
+for the instrument, not in readable operative text naming it a
+"responsable du traitement" in so many words.
+
 ## The comparison this entity supports
 
 Across the Atlas, the domestic intelligence function sits in the interior
@@ -179,28 +226,23 @@ recorded on [[NL-MIVD]] and [[DE-BND]].
   this pass, corroborated by the founding decree's own
   techniques-de-renseignement clause (Article 2), read directly on
   Légifrance.
-- `governed-by` [[FR-LIL]] — `confidence: low`, `source: interpretation`.
-  `fr.wikipedia.org`'s DGSI article, read this pass, narrows the claim
-  this entity previously carried: CRISTINA, the file most often cited in
-  this context, is specifically **exempted** from CNIL oversight under
-  the loi Informatique et Libertés's national-security-file provisions,
-  rather than routinely authorised by decree after a CNIL opinion as
-  this entity previously implied. CNIL retains a general supervisory
-  role over DGSI's other personal-data processing. This edge is weaker
-  than the UK's Part 4 edge or Belgium's, and remains the only one of
-  the four cross-cluster bridges in this batch carried at low
-  confidence, because DGSI is still nowhere named as a controller in its
-  own words — DGSI's own three pages remain bot-walled.
+- `governed-by` [[FR-LIL]] — closed 2026-09-18, `confidence: medium`,
+  `source: fact`. Légifrance's own decree title names DGSI as the
+  beneficiary of CRISTINA's Title-IV (Article 26(III)) authorisation. See
+  "CRISTINA, named at last" above.
 
 ## Sources
 
-Listed in frontmatter. Four of seven read directly: `cnctr.fr` and
-`fr.wikipedia.org` (prior pass), plus Légifrance's text of DGSI's founding
-decree and the Sénat's 2022–2023 intelligence-oversight report (this pass,
-2026-08-28). DGSI's own pages and `interieur.gouv.fr`'s page remain
-genuinely bot-walled (403) even with an honest User-Agent, re-confirmed
-this pass by a fourth direct fetch attempt, even though a search engine can
-evidently reach and index the same pages. Per this pass's instruction, no
-further effort was spent on those exact domains; Légifrance and the Sénat
-— both outside the `interieur.gouv.fr` family — supplied the majority
-instead.
+Listed in frontmatter. Six of nine read directly: `cnctr.fr` and
+`fr.wikipedia.org`'s DGSI article (prior pass), Légifrance's text of
+DGSI's founding decree and the Sénat's 2022–2023 intelligence-oversight
+report (2026-08-28 pass), and `fr.wikipedia.org`'s CRISTINA-file article
+plus Légifrance's index page for the 2017 amending decree (this pass,
+2026-09-18 — the decree's own substantive text remains genuinely
+unpublished, confirmed by a direct attempt). DGSI's own pages and
+`interieur.gouv.fr`'s page remain genuinely bot-walled (403) even with an
+honest User-Agent, re-confirmed by a fourth direct fetch attempt, even
+though a search engine can evidently reach and index the same pages. Per
+this pass's instruction, no further effort was spent on those exact
+domains; Légifrance and the Sénat — both outside the `interieur.gouv.fr`
+family — supplied the majority instead.
