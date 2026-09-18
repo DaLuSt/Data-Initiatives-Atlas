@@ -702,11 +702,18 @@ async function search(page, q) {
       g.minX = Math.min(g.minX, x); g.maxX = Math.max(g.maxX, x);
       g.minY = Math.min(g.minY, y); g.maxY = Math.max(g.maxY, y);
     });
+    // Only country/region clusters carry a real position worth protecting
+    // from overlap — a "scope:" key is the supra-national tray, which is
+    // now deliberately allowed to blend into the map (or into another
+    // tray section) as its members get pulled toward their real
+    // relationships. Two actual countries overlapping would still mean the
+    // map is broken.
     const keys = Object.keys(groups);
+    const geoKeys = keys.filter(k => !k.startsWith('scope:'));
     let overlaps = 0;
-    for (let i = 0; i < keys.length; i++) {
-      for (let j = i + 1; j < keys.length; j++) {
-        const a = groups[keys[i]], b = groups[keys[j]];
+    for (let i = 0; i < geoKeys.length; i++) {
+      for (let j = i + 1; j < geoKeys.length; j++) {
+        const a = groups[geoKeys[i]], b = groups[geoKeys[j]];
         if (a.minX <= b.maxX && b.minX <= a.maxX && a.minY <= b.maxY && b.minY <= a.maxY) overlaps++;
       }
     }
@@ -719,16 +726,32 @@ async function search(page, q) {
       ? Math.hypot(dk.position('x') - nl.position('x'), dk.position('y') - nl.position('y'))
       : null;
 
+    // The Council of Europe has real relationship edges to two dozen
+    // member states (metadata/ontology.md's INTL scope) — it should have
+    // visibly left the tray for somewhere near them. Compare it against a
+    // DOMAIN-scoped entity, which (under the default relationship-only
+    // filter) has none: domains are tagged via an association edge, not a
+    // relationship, so a domain has nothing to pull it and stays exactly
+    // where the tray puts it — the fair "unpulled" baseline for how far
+    // from Germany a tray entity would sit with no relationships at all.
+    const coe = cy.getElementById('INTL-COE');
+    const coePos = coe.length ? coe.position() : null;
+    const domainSample = cy.nodes('[scope = "DOMAIN"]')[0];
+    const domainPos = domainSample ? domainSample.position() : null;
+    const deCentre = groups['DE']
+      ? { x: (groups['DE'].minX + groups['DE'].maxX) / 2, y: (groups['DE'].minY + groups['DE'].maxY) / 2 }
+      : null;
+
     return {
-      nodes: cy.nodes().length, groupCount: keys.length, overlaps,
+      nodes: cy.nodes().length, groupCount: keys.length, geoGroupCount: geoKeys.length, overlaps,
       NO: groups['NO'], ES: groups['ES'], NL: groups['NL'], DE: groups['DE'], DK: groups['DK'],
-      relatedPairDist
+      relatedPairDist, coePos, domainPos, deCentre
     };
   });
   check('map layout keeps every node — none dropped for lacking a location',
     mapState.nodes === 652, mapState.nodes);
-  check('map layout clusters do not overlap once decluttered',
-    mapState.overlaps === 0, `${mapState.overlaps} overlapping pairs of ${mapState.groupCount} groups`);
+  check('map layout country/region clusters do not overlap once decluttered',
+    mapState.overlaps === 0, `${mapState.overlaps} overlapping pairs of ${mapState.geoGroupCount} geographic groups`);
   // Norway sits further north than Spain — real latitude order should
   // survive the decluttering, not just "somewhere on the canvas".
   const noY = (mapState.NO.minY + mapState.NO.maxY) / 2;
@@ -758,6 +781,21 @@ async function search(page, q) {
   } else {
     check('a cross-border relationship pulls its two entities closer than their countries\' bare separation',
       true, 'DK-GRUNDDATA/NL-BASISREGISTRATIES relationship not present — skipped');
+  }
+
+  // A supra-national body with real edges to member states should have
+  // travelled noticeably closer to them than a tray entity with no edges
+  // at all — the fix this session is specifically about, not just "the
+  // tray doesn't overlap the map".
+  if (mapState.coePos && mapState.domainPos && mapState.deCentre) {
+    const coeDist = Math.hypot(mapState.coePos.x - mapState.deCentre.x, mapState.coePos.y - mapState.deCentre.y);
+    const domainDist = Math.hypot(mapState.domainPos.x - mapState.deCentre.x, mapState.domainPos.y - mapState.deCentre.y);
+    check('a well-connected supra-national body ends up far closer to its member states than an unconnected tray entity',
+      coeDist < domainDist * 0.5,
+      `Council of Europe ${coeDist.toFixed(0)}px from Germany vs an unpulled domain entity's ${domainDist.toFixed(0)}px`);
+  } else {
+    check('a well-connected supra-national body ends up far closer to its member states than an unconnected tray entity',
+      true, 'INTL-COE or a DOMAIN entity not present — skipped');
   }
 
   const mapHint = await page.textContent('#layout-hint');
