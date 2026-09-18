@@ -21,7 +21,7 @@ coverage: medium
 verification: primary-source
 start_date: 2018-01-19
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-09-18"
 previous_version: null
 successor: null
 
@@ -38,6 +38,13 @@ relationships:
     source: fact
     evidence: "The OBDO chair is the BZK Deputy Director-General for Digitalisation and Government Organisations (DGDOO), per digitaleoverheid.nl MIDO governance page."
     confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: related-to
+    target: NL-FORUM-STANDAARDISATIE
+    source: fact
+    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP (discovery/unresolved.md row #148). Forum Standaardisatie's own 'Toetsingsprocedure en criteria voor de lijst open standaarden' page, read directly (2026-09-18), states the exact boundary: 'Het Forum Standaardisatie adviseert over het al dan niet opnemen, verwijderen of wijzigen van een standaard' (Forum Standaardisatie advises on whether to add, remove or change a standard) after examining an expert report and public consultation, while 'Het OBDO stelt op basis van het advies van het Forum Standaardisatie vast of de standaard wordt geplaatst op of verwijderd van de lijst' (the OBDO formally decides, based on Forum Standaardisatie's advice, whether the standard is placed on or removed from the list) — the OBDO 'heeft de uiteindelijke beslisbevoegdheid' (has final decision-making authority). One nuance: for minor changes, Forum Standaardisatie 'kan zelfstandig het besluit nemen' (can decide independently) without escalating to the OBDO."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -62,6 +69,10 @@ sources:
     url: "https://www.roraonline.nl/index.php/Rijksregister_standaarden"
     publisher: "RORA Online"
     accessed: "2026-09-05"
+  - title: "Toetsingsprocedure en criteria voor de lijst open standaarden"
+    url: "https://www.forumstandaardisatie.nl/toetsingsprocedure-en-criteria-voor-de-lijst-open-standaarden"
+    publisher: "Forum Standaardisatie"
+    accessed: "2026-09-18"
 ---
 
 # Overheidsbreed Beleidsoverleg Digitale Overheid (OBDO)
@@ -69,6 +80,11 @@ sources:
 > **Verified 2026-08-20, deepened 2026-08-21.** Every cited source was read
 > and confirmed to support what this entity says. `verification:
 > primary-source`.
+>
+> **Closed 2026-09-18** (`discovery/unresolved.md` row #148): the precise
+> advisory/decision boundary between Forum Standaardisatie and the OBDO
+> is sourced from Forum Standaardisatie's own procedure page — see "The
+> advisory/decision boundary, sourced" below.
 
 ## Description
 
@@ -87,9 +103,9 @@ Digitalisation and Government Organisations (DGDOO).
 
 Although its formal role is advisory, the OBDO also takes decisions in
 practice — it is described as the body that decides on standards proposed by
-[[NL-FORUM-STANDAARDISATIE]]. The precise boundary between its advisory and
-decision-making functions in the decree text itself is still unresolved, but
-the founding instrument is no longer just "likely": Stcrt. 2018, 9728 is
+[[NL-FORUM-STANDAARDISATIE]]. **The precise boundary is now sourced (see
+below)**, though not from the decree text itself: the founding instrument is
+no longer just "likely": Stcrt. 2018, 9728 is
 confirmed as the *Instellingsbesluit Sturing Digitale Overheid*, signed by
 the State Secretary for BZK on **19 January 2018** (kenmerk 2018-43396),
 which established both the OBDO and the *Programmeringsraad Logius* in a
@@ -126,13 +142,37 @@ dossier page originally cited for the OBDO's general description now
 returns `404 Not Found`; no replacement URL for the same content was
 located. The other three sources still corroborate the entity fully.
 
+## The advisory/decision boundary, sourced — 2026-09-18
+
+Forum Standaardisatie's own procedure page, "Toetsingsprocedure en
+criteria voor de lijst open standaarden," read directly, states the
+boundary this entity previously flagged as unresolved: *"Het Forum
+Standaardisatie adviseert over het al dan niet opnemen, verwijderen of
+wijzigen van een standaard"* (Forum Standaardisatie advises on whether
+to add, remove or change a standard), after examining an expert report
+and public consultation feedback. *"Het OBDO stelt op basis van het
+advies van het Forum Standaardisatie vast of de standaard wordt geplaatst
+op of verwijderd van de lijst"* (the OBDO formally decides, on the basis
+of Forum Standaardisatie's advice, whether the standard is placed on or
+removed from the list) — the OBDO *"heeft de uiteindelijke
+beslisbevoegdheid"* (has final decision-making authority).
+
+One nuance the same page adds: for minor changes, Forum Standaardisatie
+*"kan zelfstandig het besluit nemen"* (can decide independently) without
+escalating to the OBDO — so the clean advisory/decision split holds for
+additions and removals from the list, but not for every change.
+
 ## Relationships
 
 - Chaired from within [[NL-BZK]]; advises the responsible state secretary.
-- Receives advice from [[NL-FORUM-STANDAARDISATIE]] on open standards.
+- `related-to` [[NL-FORUM-STANDAARDISATIE]] — closed 2026-09-18: Forum
+  Standaardisatie advises, the OBDO decides. See above.
 - Membership includes [[NL-VNG]].
 - Governance body in the [[NL-MIDO]] structure.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter. The first five read directly across the 2026-08-20
+and 2026-08-21 passes; Forum Standaardisatie's own procedure page, added
+and read directly 2026-09-18, closes the advisory/decision boundary
+question.

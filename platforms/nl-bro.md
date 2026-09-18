@@ -31,7 +31,7 @@ verification: primary-source
 
 start_date: 2018-01-01
 end_date: null
-last_verified: "2026-09-17"
+last_verified: "2026-09-18"
 previous_version: null
 successor: null
 
@@ -94,6 +94,10 @@ sources:
     url: "https://wetten.overheid.nl/BWBR0037095"
     publisher: "Overheid.nl (Basiswettenbestand)"
     accessed: "2026-08-27"
+  - title: "Actuele bodeminformatie voor een leefbaar landschap"
+    url: "https://www.wur.nl/nl/nieuws/actuele-bodeminformatie-voor-een-leefbaar-landschap"
+    publisher: "Wageningen University & Research (WUR)"
+    accessed: "2026-09-18"
 ---
 
 # BRO — Basisregistratie Ondergrond
@@ -104,6 +108,11 @@ sources:
 > single continuous role. Geonovum's own page, read directly, also confirms
 > it is standards lead (trekker), not merely a publisher, closing a caveat
 > the entity previously left open.
+>
+> **Closed 2026-09-18** (`discovery/unresolved.md` row #140): BIS's own
+> current operator and status, the one gap left after DINO's own closure,
+> are now sourced too — see "The only register in the stelsel built by
+> merging predecessors" below.
 
 ## Description
 
@@ -140,8 +149,26 @@ reading the portal's own pages directly. No `previous_version` or
 `supersedes` relationship is asserted between the two: the sources say the
 BRO *builds on* DINO, which is weaker than supersession, and DINO
 continues to exist as a distinct data source served through the same
-portal. **BIS remains unmodelled** — no source was found describing its
-current operator, status, or whether it still exists independently.
+portal.
+
+**BIS closed 2026-09-18.** Wageningen University & Research's own news
+page, "Actuele bodeminformatie voor een leefbaar landschap" (published
+13 March 2024, updated 12 December 2024), read directly, confirms BIS
+Nederland — the *Bodemkundig Informatie Systeem*, comprising the Soil
+Map, the Geomorphological Map, the Groundwater Table Depth Model and
+associated boreholes and soil analyses — is still actively maintained:
+*"De informatie wordt door WENR actueel gehouden voor het ministerie van
+LNV"* (the information is kept current by WENR for the Ministry of
+Agriculture, Nature and Food Quality). WENR — Wageningen Environmental
+Research, Alterra's renamed successor since 2016 — is neither TNO nor
+otherwise an existing Atlas entity, and is not created here on one news
+page alone. The same source states BIS's data is *"beschikbaar gesteld
+in de Basisregistratie Ondergrond"* (made available within the BRO),
+served alongside additional detail and thematic maps through two
+portals, `bodemdata.nl` and `broloket.nl` — the same continuing-source,
+not-superseded relationship already established for DINO. No entity or
+edge is added for WENR or the bodemdata.nl portal; the operator and
+status question the row asked is answered in prose.
 
 ## It is phased, and the Atlas cannot say so
 
@@ -172,8 +199,10 @@ standards-lead role distinct from `maintained-by`.
 
 ## Sources
 
-Listed in frontmatter, all five read directly this pass, plus the Act's own
-official text (BWBR0037095) added and read — the digitaleoverheid.nl
-register page, two Geological Survey pages including the announcement of
-TNO/GDN's 2022 appointment as official manager, the programme office's page
-on the Act, and the Geonovum standards page confirming its lead role.
+Listed in frontmatter. All five original sources read directly in the
+2026-08-27 pass, plus the Act's own official text (BWBR0037095) — the
+digitaleoverheid.nl register page, two Geological Survey pages including
+the announcement of TNO/GDN's 2022 appointment as official manager, the
+programme office's page on the Act, and the Geonovum standards page
+confirming its lead role. WUR's own news page on BIS Nederland, added
+and read directly 2026-09-18, closes the BIS operator/status question.
