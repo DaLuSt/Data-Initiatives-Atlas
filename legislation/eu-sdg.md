@@ -22,14 +22,15 @@ verification: primary-source
 
 start_date: 2020-12-12
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-19"
 previous_version: null
 successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
 organisations: []
-related_entities: []
+related_entities:
+  - EU-PUBLIC-ADMIN-DATA-SPACE
 relationships:
   - type: applies-in
     target: PT
@@ -302,6 +303,14 @@ confirmed by reading digitaleoverheid.nl's own dedicated SDG page directly.
 That page does **not** name [[NL-GDI]] or [[NL-LOGIUS]] — the connection
 this entity previously speculated about remains unsourced, and no
 relationship to either is asserted.
+
+**Narrows discovery/unresolved.md row #121, 2026-09-19**: the Commission's
+own "Common European data spaces" overview page lists OOTS under the
+"Public administration" data space heading, and this entity's already-cited
+OOTS article states the SDGR "provides the legal framework for the
+creation of a European data space for public administrations." The
+`governed-by` edge is recorded on [[EU-PUBLIC-ADMIN-DATA-SPACE]], where the
+finding is discussed in full.
 
 ## Relationships
 
