@@ -25,7 +25,7 @@ verification: primary-source
 
 start_date: 2021-02-19
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-19"
 previous_version: null
 successor: null
 
@@ -35,7 +35,15 @@ organisations: []
 related_entities:
   - DE-CATENA-X
   - EU-COMMON-DATA-SPACES
-relationships: []
+  - EU-DSSC
+relationships:
+  - type: participates-in
+    target: EU-DSSC
+    source: fact
+    evidence: "CLOSES discovery/unresolved.md row #55. Fraunhofer ISST's own page on its DSSC involvement (isst.fraunhofer.de/en/expertise/DSSC.html), read directly 2026-09-19, lists 'Gaia-X European Association for Data and Cloud' under 'The partners' section alongside eleven other named consortium organisations (Fraunhofer-Gesellschaft, Capgemini Belgium, FIWARE Foundation, International Data Spaces Association, KU Leuven, MyData Global, National University of Ireland Galway, TNO, Big Data Value Association, VTT, Sitra). This is organisational membership in the DSSC consortium, not proximity — unlike the earlier refusal (the Commission's 'Mobility Data' page treating a Gaia-X-affiliated initiative as an ecosystem to build upon). The DSSC Blueprint's own document, read directly, independently corroborates Gaia-X's role: it credits a Gaia-X representative (Giuditta del Buono) as an author/contributor and another (Christoph Strnadl) as an Architecture Board member."
+    confidence: high
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Association — Gaia-X: A Federated Secure Data Infrastructure"
@@ -66,6 +74,14 @@ sources:
     url: "https://digital-strategy.ec.europa.eu/en/policies/mobility-data"
     publisher: "European Commission — Shaping Europe's digital future"
     accessed: "2026-08-28"
+  - title: "Data Spaces Support Centre (DSSC)"
+    url: "https://www.isst.fraunhofer.de/en/expertise/DSSC.html"
+    publisher: "Fraunhofer ISST"
+    accessed: "2026-09-19"
+  - title: "DSSC Blueprint"
+    url: "https://blueprint.dssc.eu/"
+    publisher: "Data Spaces Support Centre"
+    accessed: "2026-09-19"
 ---
 
 # Gaia-X European Association for Data and Cloud (AISBL)
@@ -82,6 +98,9 @@ sources:
 > and the Commission's own "Mobility Data" policy page. Combined, four of
 > the seven sources now listed were read directly this pass —
 > `verification` promoted `search-only` → `primary-source`.
+>
+> **Closed 2026-09-19** (`discovery/unresolved.md` row #55): Gaia-X's
+> membership in [[EU-DSSC]] is now sourced. See "Relationships" below.
 
 ## Description
 
@@ -117,7 +136,7 @@ Digital Strategy" in her 2020 State of the Union address, and the
 Commission's own "Mobility Data" page (read directly 2026-08-28) treats
 Gaia-X as an existing initiative that Commission-led data spaces "build
 upon and promote interoperability with" — description, not a stated
-institutional relationship (see "What is not asserted" below).
+institutional relationship (see "Relationships" below).
 
 ## Why this is not a German entity
 
@@ -158,25 +177,32 @@ entity on the strength of a URL. Queued in
 
 ## Relationships
 
-**None asserted.** Reached from [[DE-CATENA-X]], which is `based-on` the
-Gaia-X technologies.
+Reached from [[DE-CATENA-X]], which is `based-on` the Gaia-X technologies.
 
-A relationship to [[EU-COMMON-DATA-SPACES]] or [[EU-DSSC-BLUEPRINT]] would
-be the obvious one to look for — Gaia-X and the Commission's data-spaces
-programme are plainly part of the same European effort. **No source read
-connects them.** The Commission's own "Mobility Data" page, read directly
-this pass, treats a Gaia-X-affiliated private initiative (Eona-X) as an
-existing ecosystem that the European Mobility Data Space "will build upon
-and promote interoperability with" — proximity and shared subject matter,
-not a stated institutional relationship. The originally cited
-wikis.ec.europa.eu PDF, which this section previously flagged as a
-Commission document *about* Gaia-X rather than a relationship statement,
-is now dead (see Sources). Logged in `discovery/unresolved.md`.
+**Closed 2026-09-19** (`discovery/unresolved.md` row #55): [[EU-DSSC]]'s
+own consortium page (Fraunhofer ISST, a fellow DSSC partner, read directly)
+names "Gaia-X European Association for Data and Cloud" as one of twelve
+partner organisations. This is organisational membership, not proximity —
+`participates-in` [[EU-DSSC]] is recorded at `confidence: high`. The DSSC
+produces [[EU-DSSC-BLUEPRINT]], whose own document independently credits
+two named Gaia-X representatives as author/contributor and Architecture
+Board member respectively, corroborating the same connection from the
+document's own side.
+
+The earlier refusal for [[EU-COMMON-DATA-SPACES]] stands unchanged: the
+Commission's own "Mobility Data" page, read directly, treats a
+Gaia-X-affiliated private initiative (Eona-X) as an existing ecosystem that
+the European Mobility Data Space "will build upon and promote
+interoperability with" — proximity and shared subject matter, not a stated
+institutional relationship, and still no source connects Gaia-X directly
+to the common-data-spaces programme as a whole.
 
 ## Sources
 
-Listed in frontmatter. Four of seven read directly this pass (2026-08-28):
-gaia-x.eu, Gaia-X Hub Germany, Wikipedia, and the Commission's Mobility
-Data page. gaia-x.at, the OECD page and the wikis.ec.europa.eu PDF are
-dead or unreadable as of this pass; see the per-source notes in
-frontmatter.
+Listed in frontmatter. Four of seven originally-cited sources read
+directly in the 2026-08-28 pass: gaia-x.eu, Gaia-X Hub Germany, Wikipedia,
+and the Commission's Mobility Data page. gaia-x.at, the OECD page and the
+wikis.ec.europa.eu PDF are dead or unreadable as of that pass; see the
+per-source notes in frontmatter. Fraunhofer ISST's DSSC page and the DSSC
+Blueprint's own site were added and read directly 2026-09-19, closing the
+DSSC half of row #55.
