@@ -181,7 +181,16 @@ and routes verification through [[BE-COMITE-I]] rather than [[BE-APD]].
   **Checked 2026-09-06, documented negative for the French Community**:
   federation-wallonie-bruxelles.be's own page on its digital transition,
   read directly, names no dedicated agency — the policy runs across
-  sectoral programmes instead. The German-speaking Community's own
-  digital strategy ("Digitale Wege für unsere Gemeinschaft") was found by
-  search but could not be confirmed directly (`ostbelgienlive.be` 403s in
-  this environment) — an unconfirmed lead, not a modelled entity.
+  sectoral programmes instead. **Closed 2026-09-19 for the German-speaking
+  Community too**: `ostbelgienlive.be` itself remains 403-blocked, but
+  `wfg.be` — the Wirtschaftsförderungsgesellschaft Ostbelgien's own
+  site — states directly that it "is part of various Belgian and
+  euregional programmes in the area of digitalisation, AI and future
+  industry" ("Die WFG ist Teil verschiedener belgischer und
+  euregionaler Programme im Bereich Digitalisierung, KI sowie Industrie
+  der Zukunft"), acting as a project partner across programmes run by
+  other bodies (Digital Wallonia, EDIH Rheinland, SIRRIS, Interreg EMR)
+  rather than as a dedicated agency itself — the same documented-negative
+  shape as the French Community's answer. Neither Belgian Community has a
+  dedicated Community-level digital-policy body; both route through
+  sectoral programmes instead.
