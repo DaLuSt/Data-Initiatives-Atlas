@@ -27,7 +27,7 @@ verification: primary-source
 
 start_date: 2008-07-01
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-19"
 previous_version: null
 successor: null
 
@@ -41,6 +41,8 @@ related_entities:
   - NL-BASISREGISTRATIES
   - NL-RDW
   - NL-BRP
+  - EU-GDPR
+  - NL-UAVG
 relationships:
   - type: governed-by
     target: NL-WEGENVERKEERSWET-1994
@@ -63,6 +65,13 @@ relationships:
     confidence: high
     valid_from: 2008-07-01
     valid_until: null
+  - type: related-to
+    target: EU-GDPR
+    source: interpretation
+    evidence: "NARROWS discovery/unresolved.md row #141, does not close it. rdw.nl's own privacy-statement page, read directly (2026-09-19), names the AVG ('Algemene Verordening Gegevensbescherming (AVG), de wet die in Nederland en de Europese Unie de bescherming van persoonsgegevens regelt') as the law governing how the RDW handles the personal data it processes, and a separate rdw.nl page, also read directly, states 'Voor het kentekenregister en het Nationaal Parkeer Register heeft een onafhankelijk instituut vastgesteld dat de RDW aan alle privacy-aspecten voldoet' (an independent institute has determined the RDW complies with all privacy aspects for the kentekenregister and the National Parking Register) and that owner name/address data ('de tenaamgestelde') is not public. No single sentence read on any rdw.nl page names the AVG and the kentekenregister/BRV together in the same statement, so this stops short of the sourced fact the row asks for; it is recorded as `source: interpretation` at `confidence: low` rather than left as a bare legal inference from 'contains personal data' alone."
+    confidence: low
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Basisregistratie Voertuigen (BRV) — Stelsel van basisregistraties (confirmed bot-walled, not read)"
@@ -83,6 +92,14 @@ sources:
     url: "https://wetten.overheid.nl/BWBR0006622"
     publisher: "Overheid.nl (Basiswettenbestand)"
     accessed: "2026-08-27"
+  - title: "Hoe beschermt de RDW mijn persoonsgegevens?"
+    url: "https://www.rdw.nl/over-rdw/privacy-en-security/privacyverklaring/hoe-beschermt-de-rdw-mijn-persoonsgegevens"
+    publisher: "RDW"
+    accessed: "2026-09-19"
+  - title: "Gegevens die de RDW registreert"
+    url: "https://www.rdw.nl/over-rdw/privacy-en-security/privacyverklaring/gegevens-die-de-rdw-registreert"
+    publisher: "RDW"
+    accessed: "2026-09-19"
 ---
 
 # BRV — Basisregistratie Voertuigen
@@ -92,6 +109,11 @@ sources:
 > 1994's official text — pushed this entity to a genuine majority.
 > digitaleoverheid.nl's BRV and rollen pages are confirmed genuinely
 > bot-walled in this environment, not merely unread.
+>
+> **Narrowed 2026-09-19** (`discovery/unresolved.md` row #141): a
+> low-confidence `related-to` [[EU-GDPR]] edge is added, sourced from
+> two rdw.nl privacy pages read directly. See "A register that is also
+> personal data" below.
 
 ## Description
 
@@ -122,23 +144,30 @@ That the stelsel's own documentation chooses this exact example to explain
 itself, and that the Atlas can express only part of it, is the sharpest
 illustration in this batch of what the missing vocabulary costs.
 
-## A register that is also personal data
+## A register that is also personal data — narrowed 2026-09-19
 
 The BRV holds information about the **persons** to whom registration
 certificates are issued, which makes it a personal-data register as well as
-a vehicle register — and therefore in scope for [[EU-GDPR]] and
-[[NL-UAVG]].
+a vehicle register — and therefore, presumably, in scope for [[EU-GDPR]]
+and [[NL-UAVG]].
 
-**No relationship to either is asserted.** Nothing read connects them, and
-"a register containing personal data is subject to data protection law" is a
-legal inference, not a sourced fact about this register. It is the kind of
-obviously-true statement the Atlas's provenance model exists to keep out
-until someone reads a page that says it.
+`discovery/unresolved.md` row #141 flagged that nothing read connected the
+two. That is now narrowed rather than closed: rdw.nl's own privacy pages,
+read directly, name the **AVG** as the law governing how RDW handles
+personal data generally, and separately state that "an independent
+institute has determined that the RDW complies with all privacy aspects"
+specifically **for the kentekenregister** (this entity), and that owner
+name/address data is not public. No single sentence names the AVG and the
+kentekenregister together, so the connection is recorded as a low-confidence
+`related-to` [[EU-GDPR]] edge rather than the direct sourced fact the row
+originally asked for. **No relationship to [[NL-UAVG]] specifically is
+asserted** — nothing read names it at all, only the AVG.
 
 ## Relationships
 
 - `part-of` [[NL-BASISREGISTRATIES]].
 - `maintained-by` [[NL-RDW]].
+- `related-to` [[EU-GDPR]] — `confidence: low`, narrowed not closed.
 
 ## Sources
 
