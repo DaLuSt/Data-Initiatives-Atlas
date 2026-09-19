@@ -17,7 +17,7 @@ region: EU
 
 status: active
 confidence: medium
-coverage: low
+coverage: medium
 verification: primary-source
 
 start_date: null
@@ -33,6 +33,8 @@ related_entities:
   - EU-COMMON-DATA-SPACES
   - EU-INTEROPERABLE-EUROPE-ACT
   - EU-SDG
+  - EU-TOURISM-DATA-SPACE
+  - EU-MEDIA-DATA-SPACE
 relationships:
   - type: part-of
     target: EU-COMMON-DATA-SPACES
@@ -71,6 +73,10 @@ sources:
     url: "https://commission.europa.eu/news-and-media/news/once-only-technical-system-key-creation-first-european-data-space-2022-07-20_en"
     publisher: "European Commission"
     accessed: "2026-09-19"
+  - title: "Public Procurement Data Space (PPDS)"
+    url: "https://www.public-procurement-data-space.europa.eu/en"
+    publisher: "European Commission — DG GROW"
+    accessed: "2026-09-19"
 ---
 
 # Common European data space for public administration
@@ -86,6 +92,10 @@ sources:
 > **Narrowed further 2026-09-19**: the [[EU-SDG]] question is now answered
 > — see "The Single Digital Gateway, found" below. Only the [[EU-EIF]]
 > question remains fully open.
+>
+> **Deployment project found 2026-09-19** (`discovery/unresolved.md` row
+> #125): the Public Procurement Data Space (PPDS), live since 24 September
+> 2024. See "PPDS, found" below. `coverage` promoted to `medium`.
 
 ## Description
 
@@ -153,19 +163,45 @@ generally; a further search (2026-09-19) of the Interoperable Europe
 Portal's own "Data Spaces" page found no mention of EIF in its data-spaces
 content.
 
-## ⚠ `coverage: low`
+## PPDS, found — 2026-09-19
 
-Deployment, governance and scope beyond the SDG/OOTS finding above were not
-established.
+`discovery/unresolved.md` row #125 asked for a deployment project for
+this data space. One is now sourced: the Commission's own "Common
+European data spaces" overview page, re-read directly, lists three items
+under the "Public administration" heading — OOTS (above), the **European
+Legal Data Space**, and the **Public Procurement Data Space (PPDS)**. PPDS's
+own official site, read directly, describes it as a service letting
+"policy makers, public buyers, companies, and other stakeholders access
+public procurement information ... unprecedented at the European level,"
+covering roughly **250,000 public authorities** whose procurement spend
+totals **€2.5 trillion** (about 15% of EU GDP) annually. It went live on
+**24 September 2024**, launched at a "PPDS Day 2024" event organised by
+DG GROW (Internal Market, Industry, Entrepreneurship and SMEs), which
+operates it.
+
+The **European Legal Data Space**, the third item named on the same
+Commission page, was not independently researched this pass.
+
+## ⚠ `coverage`, promoted to medium
+
+Governance and operator detail beyond OOTS's SDGR basis and PPDS's own
+DG GROW role remain unestablished, so `coverage` moves from `low` to
+`medium` rather than `high`.
 
 ## Not modelled
 
 - **OOTS (Once Only Technical System)** as its own entity — it is the
   component the Commission's own page lists under this data space,
   described in prose here rather than as a separate node.
+- **PPDS (Public Procurement Data Space)** as its own entity, for the same
+  reason, matching the DEPLOYTOUR/TEMS precedent set on
+  [[EU-TOURISM-DATA-SPACE]] and [[EU-MEDIA-DATA-SPACE]].
+- The **European Legal Data Space**, the third item named on the
+  Commission's overview page — not independently researched this pass.
 
 ## Sources
 
 Listed in frontmatter. The data.europa.eu article was added and read
 directly 2026-09-18; the Commission's OOTS article was added 2026-09-19
-(already read directly on [[EU-SDG]] since 2026-08-28).
+(already read directly on [[EU-SDG]] since 2026-08-28); PPDS's own site
+added and read directly 2026-09-19.
