@@ -22,7 +22,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-18"
+last_verified: "2026-09-19"
 previous_version: null
 successor: null
 
@@ -32,6 +32,7 @@ organisations: []
 related_entities:
   - EU-COMMON-DATA-SPACES
   - EU-INTEROPERABLE-EUROPE-ACT
+  - EU-SDG
 relationships:
   - type: part-of
     target: EU-COMMON-DATA-SPACES
@@ -47,6 +48,13 @@ relationships:
     confidence: low
     valid_from: null
     valid_until: null
+  - type: governed-by
+    target: EU-SDG
+    source: fact
+    evidence: "CLOSES THE EU-SDG HALF of discovery/unresolved.md row #121. The Commission's own 'Common European data spaces' overview page (already cited above), read directly, lists 'OOTS - Once Only Technical System' under the 'Public administration' data space heading — naming OOTS as one of the entries constituting this data space. The Commission's own news article 'Once-Only Technical System: key for the creation of the first European data space' (read directly, already cited on [[EU-SDG]]) states OOTS was 'Established by the Single Digital Gateway Regulation (SDGR)' and that 'The SDGR provides the legal framework for the creation of a European data space for public administrations.' Together these name the SDGR as the legal basis for the component the Commission itself lists under this data space — a fact-level connection, not an inference."
+    confidence: high
+    valid_from: "2020-12-12"
+    valid_until: null
 
 sources:
   - title: "SWD(2024) 21 final — Staff working document on common European data spaces"
@@ -59,6 +67,10 @@ sources:
     url: "https://data.europa.eu/en/news-events/news/interoperability-data-spaces-building-europes-digital-future"
     publisher: "data.europa.eu — Publications Office of the European Union"
     accessed: "2026-09-18"
+  - title: "Once-Only Technical System: key for the creation of the first European data space"
+    url: "https://commission.europa.eu/news-and-media/news/once-only-technical-system-key-creation-first-european-data-space-2022-07-20_en"
+    publisher: "European Commission"
+    accessed: "2026-09-19"
 ---
 
 # Common European data space for public administration
@@ -70,6 +82,10 @@ sources:
 > **Narrowed 2026-09-18** (`discovery/unresolved.md` row #121): one of the
 > temptations recorded below now has a thin, general source. See "One
 > connection, thinly sourced" below — the row is narrowed, not closed.
+>
+> **Narrowed further 2026-09-19**: the [[EU-SDG]] question is now answered
+> — see "The Single Digital Gateway, found" below. Only the [[EU-EIF]]
+> question remains fully open.
 
 ## Description
 
@@ -87,12 +103,13 @@ and everything else the Atlas holds — [[EU-INTEROPERABLE-EUROPE-ACT]],
 [[EU-EIF]], the national interoperability frameworks, the open data portals.
 
 **Most of those connections remain unasserted**, and this is exactly the
-entity where a repository would be most tempted to draw them. Two of the
-three temptations are recorded here still open:
+entity where a repository would be most tempted to draw them. One of the
+three temptations is recorded here still open:
 
 - [ ] How does the public administration data space relate to [[EU-EIF]]
   specifically?
-- [ ] Does it build on [[EU-SDG]], the Single Digital Gateway?
+- [x] Does it build on [[EU-SDG]], the Single Digital Gateway? **Answered
+  2026-09-19** — see below.
 
 ## One connection, thinly sourced — 2026-09-18
 
@@ -112,14 +129,43 @@ the statement itself does not single it out. The EIF and SDG questions
 above remain fully open — no source read connects either to data spaces
 in general or to this one specifically.
 
-Both remaining questions are in `discovery/unresolved.md`.
+The remaining question is in `discovery/unresolved.md`.
+
+## The Single Digital Gateway, found — 2026-09-19
+
+The Commission's own "Common European data spaces" overview page (already
+cited above, read directly) lists three things under the "Public
+administration" heading, one of which is **OOTS — Once Only Technical
+System**. The Commission's own account of OOTS, read directly (already
+cited on [[EU-SDG]]), states OOTS was "Established by the Single Digital
+Gateway Regulation (SDGR)" and that "The SDGR provides the legal framework
+for the creation of a European data space for public administrations."
+
+That names [[EU-SDG]] as the legal basis for a component the Commission's
+own page lists under this data space — recorded as `governed-by`,
+`confidence: high`, since both statements are read directly rather than
+inferred from proximity. OOTS itself is not modelled as a separate Atlas
+entity (see "Not modelled" below).
+
+The [[EU-EIF]] question above remains fully open — no source read connects
+the European Interoperability Framework to this data space, specifically or
+generally; a further search (2026-09-19) of the Interoperable Europe
+Portal's own "Data Spaces" page found no mention of EIF in its data-spaces
+content.
 
 ## ⚠ `coverage: low`
 
-Its deployment, governance and scope were not established beyond its presence
-in the list of fourteen.
+Deployment, governance and scope beyond the SDG/OOTS finding above were not
+established.
+
+## Not modelled
+
+- **OOTS (Once Only Technical System)** as its own entity — it is the
+  component the Commission's own page lists under this data space,
+  described in prose here rather than as a separate node.
 
 ## Sources
 
 Listed in frontmatter. The data.europa.eu article was added and read
-directly 2026-09-18.
+directly 2026-09-18; the Commission's OOTS article was added 2026-09-19
+(already read directly on [[EU-SDG]] since 2026-08-28).
