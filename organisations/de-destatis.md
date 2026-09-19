@@ -38,6 +38,7 @@ related_entities:
   - DE-BMI
   - DE-BSTATG
   - EU-EUROSTAT
+  - DE-NACHHALTIGKEITSINDIKATOREN
 relationships:
   - type: part-of
     target: DE-BMI
