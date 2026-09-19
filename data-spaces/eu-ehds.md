@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: 2025-03-26
 end_date: null
-last_verified: "2026-09-06"
+last_verified: "2026-09-19"
 previous_version: null
 successor: null
 
@@ -134,6 +134,10 @@ sources:
     url: "https://eur-lex.europa.eu/eli/reg/2025/327/oj"
     publisher: "EUR-Lex (Publications Office of the European Union)"
     accessed: "2026-09-05"
+  - title: "Regulation (EU) 2025/327 — full text (TXT/HTML form)"
+    url: "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32025R0327"
+    publisher: "EUR-Lex (Publications Office of the European Union)"
+    accessed: "2026-09-19"
 ---
 
 # European Health Data Space (EHDS)
@@ -219,15 +223,27 @@ name and one identity in the sources. If a future batch needs to cite the
 regulation as legislation in its own right, it should be split. Flagged in
 `discovery/unresolved.md`.
 
-**EUR-Lex citation added 2026-09-05.** A prior pass found
-`eur-lex.europa.eu` returning empty content on the ELI record. This pass's
-attempt at `eur-lex.europa.eu/eli/reg/2025/327/oj` succeeded, confirming
-the regulation's exact title — "Regulation (EU) 2025/327 ... on the
-European Health Data Space and amending Directive 2011/24/EU and
-Regulation (EU) 2024/2847" — and its 5 March 2025 Official Journal
-publication date. The amended-instruments detail (Directive 2011/24/EU;
-Regulation (EU) 2024/2847) is new information not previously recorded
-here and is noted but not modelled as a relationship this pass.
+**EUR-Lex citation added 2026-09-05, full text read 2026-09-19.** A prior
+pass found `eur-lex.europa.eu` returning empty content on the ELI record.
+The 2026-09-05 pass's attempt at `eur-lex.europa.eu/eli/reg/2025/327/oj`
+succeeded, confirming the regulation's exact title — "Regulation (EU)
+2025/327 ... on the European Health Data Space and amending Directive
+2011/24/EU and Regulation (EU) 2024/2847" — and its 5 March 2025 Official
+Journal publication date. The amended-instruments detail (Directive
+2011/24/EU; Regulation (EU) 2024/2847) is new information not previously
+recorded here and is noted but not modelled as a relationship this pass.
+This pass's TXT/HTML-form read (`legal-content/EN/TXT/HTML/?uri=CELEX:32025R0327`,
+the same URL form that has unblocked other stuck EU legislation citations
+this Atlas records) reaches the regulation's own text rather than only the
+OJ landing page, confirming the same title and an 11 February 2025
+signing/adoption date, and its opening recital's own stated purpose: "to
+improve natural persons' access to and control over their personal
+electronic health data in the context of healthcare." `discovery/unresolved.md`
+row #19's premise — "no EUR-Lex citation was located" — is corrected by
+this and the 2026-09-05 pass; the citation exists and now reaches the
+regulation's own text. Row #19's actual question — whether to split the
+regulation from the data-space entity, discussed earlier in this section —
+is unaffected by the citation gap closing.
 
 ## Relationships
 
@@ -240,4 +256,6 @@ here and is noted but not modelled as a relationship this pass.
 
 Listed in frontmatter. The EUR-Lex Official Journal citation was added and
 read directly 2026-09-05; the other three were read directly in the prior
-pass.
+pass. The EUR-Lex TXT/HTML full-text form was added and read directly
+2026-09-19, correcting discovery/unresolved.md row #19's stale premise
+that no EUR-Lex citation existed.
