@@ -20,7 +20,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-09-19"
 previous_version: null
 successor: null
 
@@ -30,6 +30,7 @@ organisations: []
 related_entities:
   - EU-COMMON-DATA-SPACES
   - EU-DSSC-BLUEPRINT
+  - EU-GAIA-X
 relationships:
   - type: produces
     target: EU-DSSC-BLUEPRINT
@@ -76,7 +77,12 @@ reservations noted on [[EU-SEMIC]].
 
 - Produces [[EU-DSSC-BLUEPRINT]].
 - Supports [[EU-COMMON-DATA-SPACES]].
+- [[EU-GAIA-X]] `participates-in` this consortium — closes
+  `discovery/unresolved.md` row #55 (2026-09-19); the edge and its sourcing
+  are recorded on [[EU-GAIA-X]], where it was discovered.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter. Fraunhofer ISST's own DSSC page, naming Gaia-X
+among the consortium partners, was read directly on [[EU-GAIA-X]]
+2026-09-19, not re-fetched here.
