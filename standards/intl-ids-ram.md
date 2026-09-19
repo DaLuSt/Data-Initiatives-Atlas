@@ -38,6 +38,7 @@ related_entities:
   - DE-DIN
   - DE-CATENA-X
   - NL-ISHARE
+  - INTL-IDS-CONNECTOR
 relationships:
   - type: maintained-by
     target: INTL-IDSA
@@ -164,7 +165,10 @@ edition is in development, per the same page, with no release date given.
 - **DIN SPEC 27070** as an entity of its own. It is a DIN SPEC — a
   specification published through a fast-track procedure — rather than a full
   DIN standard, and the Atlas holds no other DIN document to sit it beside.
-- The **IDS Connector** and the **Dataspace Connector** implementation.
+
+**Closed 2026-09-19**: the IDS Connector and its Dataspace Connector
+implementation are now modelled as [[INTL-IDS-CONNECTOR]],
+`implements-requirement-from` this entity.
 
 ## Sources
 
