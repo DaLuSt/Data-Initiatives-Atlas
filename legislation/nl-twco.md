@@ -24,7 +24,7 @@ verification: primary-source
 
 start_date: 2024-07-01
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-19"
 previous_version: null
 successor: null
 
@@ -62,6 +62,10 @@ sources:
     url: "https://wetgevingskalender.overheid.nl/Regeling/WGK013565"
     publisher: "Overheid.nl Wetgevingskalender"
     accessed: "2026-08-27"
+  - title: "Tijdelijke wet onderzoeken AIVD en MIVD naar landen met een offensief cyberprogramma, bulkdatasets en overige specifieke voorzieningen — BWBR0049562"
+    url: "https://wetten.overheid.nl/BWBR0049562"
+    publisher: "Overheid.nl (Basiswettenbestand)"
+    accessed: "2026-09-19"
 ---
 
 # Tijdelijke wet onderzoeken AIVD en MIVD naar landen met een offensief cyberprogramma
@@ -70,6 +74,12 @@ sources:
 > pass, closing the previous `search-only` status. This entity now carries
 > a full, cross-confirmed timeline with an official Staatsblad citation
 > (Stb. 2024, 88), previously missing.
+>
+> **Closed 2026-09-19** (`discovery/unresolved.md` row #191): the Act's
+> own text, read directly at wetten.overheid.nl, confirms Article 17
+> itself gives no extension mechanism — a documented negative rather than
+> a silent gap. See "The only entity in the Atlas with a designed expiry"
+> below.
 
 ## Description
 
@@ -103,10 +113,23 @@ Timeline, now fully cross-confirmed across all four sources read directly:
 
 `end_date` is nonetheless **null**, and deliberately so. The Atlas records
 dates its sources state; "four years after entry into force" is a rule for
-computing an expiry, and no source read gives the resulting date or says
-whether it can be extended. Writing `2028-07-01` into the frontmatter would
-be the Atlas doing arithmetic and presenting the result as a sourced fact.
-The rule is recorded here in prose instead.
+computing an expiry, and no source read gives the resulting date. Writing
+`2028-07-01` into the frontmatter would be the Atlas doing arithmetic and
+presenting the result as a sourced fact. The rule is recorded here in
+prose instead.
+
+**Extension, closed 2026-09-19**: the Act's own text, read directly at
+wetten.overheid.nl (BWBR0049562), gives the expiry provision in full at
+**Article 17**: *"Deze wet treedt in werking op een bij koninklijk besluit
+te bepalen tijdstip, dat voor verschillende artikelen of onderdelen
+daarvan verschillend kan worden vastgesteld, en vervalt vier jaren na het
+tijdstip van inwerkingtreding"* (this Act enters into force on a date set
+by royal decree ... and **lapses** four years after that date). The
+article contains no extension, renewal or prolongation mechanism —
+closing `discovery/unresolved.md` row #191 as a documented negative
+rather than a gap: the sources are not silent on extension because no one
+looked, they are silent because the Act's own sunset clause is
+unconditional on its own text.
 
 This is the first Atlas entity whose `status: active` is known in advance to
 be temporary. [[GB-DSIT]] stopped existing; this one is scheduled to.
@@ -142,5 +165,8 @@ exactly that reason.
 
 ## Sources
 
-All four read directly this pass: aivd.nl's own page, the Eerste Kamer
-dossier, the NJB Staatsblad note, and the Wetgevingskalender entry.
+All four read directly in the 2026-08-27 pass: aivd.nl's own page, the
+Eerste Kamer dossier, the NJB Staatsblad note, and the Wetgevingskalender
+entry. The Act's own consolidated text at wetten.overheid.nl was added
+and read directly 2026-09-19, closing the extension question via Article
+17.

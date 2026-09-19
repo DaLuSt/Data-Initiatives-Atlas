@@ -24,7 +24,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-19"
 previous_version: null
 successor: null
 
@@ -36,6 +36,7 @@ related_entities:
   - NL-AIVD
   - NL-MIVD
   - NL-CTIVD
+  - NL-TWCO
 relationships:
   - type: applies-to
     target: NL-AIVD
@@ -58,6 +59,13 @@ relationships:
     confidence: high
     valid_from: 2018-05-01
     valid_until: null
+  - type: references
+    target: NL-TWCO
+    source: fact
+    evidence: "PARTIALLY CLOSES discovery/unresolved.md row #190. aivd.nl's own TWCO page (read directly on that entity, 2026-08-27) states the temporary act shifts oversight of certain powers from TIB pre-approval towards real-time CTIVD monitoring with binding authority to halt an operation — the same fact NL-AIVD and NL-CTIVD already carry a NL-TWCO edge for. `type: references` rather than `governed-by`: TWCO narrows this entity's remit for the powers it covers rather than governing the TIB as a body. `confidence: medium`, not `high`, because no source read names which specific powers move or quantifies what remains under ordinary TIB review — see 'Not modelled' below, which this does not fully close."
+    confidence: medium
+    valid_from: "2024-07-01"
+    valid_until: null
 
 sources:
   - title: "Taken en bevoegdheden"
@@ -79,6 +87,11 @@ sources:
 > pass — tib-ivd.nl's own page and the dedicated Dutch Wikipedia article —
 > closing the previous `search-only` status. The Eerste Kamer keyword page
 > was not re-fetched; nothing it previously supported is contradicted.
+>
+> **Updated 2026-09-19** (`discovery/unresolved.md` row #190, partial):
+> a `references` edge to [[NL-TWCO]] closes the gap where NL-AIVD and
+> NL-CTIVD already documented the TIB-to-CTIVD oversight shift but this
+> entity did not.
 
 ## Description
 
@@ -129,18 +142,25 @@ characterised at the time as start-up issues.
 - The **specific statutory list** of powers requiring TIB approval — the
   sources name examples (hacking, wiretapping, directional microphones),
   not the underlying articles.
-- The TIB's role under [[NL-TWCO]] in full: the AIVD's own page (read on
-  that entity) states the temporary act shifts review of certain powers
-  from TIB pre-approval towards real-time CTIVD monitoring, but does not
-  say which powers move or how the TIB's remit is affected for the rest.
+- **Which specific powers move** from TIB pre-approval to CTIVD real-time
+  monitoring under [[NL-TWCO]] (closed 2026-09-19 at the level of "some
+  powers shift," see Relationships below) — no source read names the
+  individual powers or quantifies what remains under ordinary TIB review.
 
 ## Relationships
 
 - `applies-to` [[NL-AIVD]] and [[NL-MIVD]].
 - `governed-by` [[NL-WIV-2017]].
+- `references` [[NL-TWCO]] — closed 2026-09-19, `confidence: medium`.
+  Partially closes `discovery/unresolved.md` row #190: the shift away
+  from TIB pre-approval for some powers is now sourced on this entity
+  too, matching [[NL-AIVD]] and [[NL-CTIVD]]; which specific powers move
+  remains unknown.
 
 ## Sources
 
-Two of three read directly this pass: tib-ivd.nl's own tasks-and-powers
-page and the dedicated Dutch Wikipedia article. The Eerste Kamer keyword
-page was not re-fetched.
+Two of three read directly in the 2026-08-27 pass: tib-ivd.nl's own
+tasks-and-powers page and the dedicated Dutch Wikipedia article. The
+Eerste Kamer keyword page was not re-fetched. The `references` NL-TWCO
+edge added 2026-09-19 cites aivd.nl's own TWCO page, already read
+directly on [[NL-TWCO]] and [[NL-AIVD]], not a new fetch on this entity.
