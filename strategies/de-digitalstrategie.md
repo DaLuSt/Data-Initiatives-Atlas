@@ -27,7 +27,7 @@ verification: primary-source
 
 start_date: 2022-08-31
 end_date: null
-last_verified: "2026-09-13"
+last_verified: "2026-09-19"
 previous_version: null
 successor: null
 
@@ -71,6 +71,10 @@ sources:
     url: "https://www.bundestag.de/presse/hib/kurzmeldungen-1156196"
     publisher: "Deutscher Bundestag"
     accessed: "2026-09-13"
+  - title: "Germany — National Digital Decade Strategic Roadmap"
+    url: "https://digital-skills-jobs.europa.eu/en/initiatives/national-strategies/germany-national-digital-decade-strategic-roadmap"
+    publisher: "European Commission — Digital Skills and Jobs Platform"
+    accessed: "2026-09-19"
 ---
 
 # Digitalstrategie Deutschland
@@ -154,6 +158,20 @@ but nothing read states that either later initiative is this strategy's
 formal successor, so no `successor` field or `supersedes` edge is
 asserted. `end_date` stays `null`: the source gives "since the change of
 government in May 2025," not a specific day.
+
+## Not the national Digital Decade roadmap either — 2026-09-19
+
+`discovery/unresolved.md` row #86 asked whether this entity connects to
+[[EU-DIGITAL-DECADE]]'s own per-country instrument, the national strategic
+roadmap each member state submits under Article 16 of the Digital Decade
+Policy Programme. Confirmed by reading the Commission's own Digital Skills
+and Jobs Platform page for Germany's roadmap directly: it is a separate
+document, "developed by the Federal Ministry for Digital and Transport,"
+setting out Germany's own 2030 targets across four chapters. The page does
+not mention "Digitalstrategie" at all, and does not equate the two — a
+documented negative slightly stronger than Spain's cross-referenced-but-
+not-equated finding on [[ES-ESPANA-DIGITAL-2026]], since here there is no
+cross-reference either.
 
 ## Relationships
 
