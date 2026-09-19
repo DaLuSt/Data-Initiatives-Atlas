@@ -80,6 +80,12 @@ sources:
 > itself gives no extension mechanism — a documented negative rather than
 > a silent gap. See "The only entity in the Atlas with a designed expiry"
 > below.
+>
+> **Closed 2026-09-19** (`discovery/unresolved.md` row #190, the remaining
+> half): the Act's own text, re-read article by article, names exactly
+> which powers move from TIB pre-approval to CTIVD real-time monitoring
+> and which keep TIB pre-approval. See "Which specific powers move"
+> below.
 
 ## Description
 
@@ -147,6 +153,36 @@ introduces binding advance review specifically for real-time interception
 of traffic and location data. See [[NL-AIVD]], [[NL-TIB]] and [[NL-CTIVD]]
 for how this reshapes their relationship.
 
+## Which specific powers move — closed 2026-09-19
+
+`discovery/unresolved.md` row #190 asked which specific powers move from
+TIB pre-approval to CTIVD real-time monitoring, and what remains under
+ordinary TIB review. The Act's own consolidated text, read directly at
+wetten.overheid.nl (BWBR0049562, version 2024-07-01), answers this
+article by article:
+
+| Article of this Act | Power it covers (cross-referencing [[NL-WIV-2017]]) | Regime |
+|---|---|---|
+| Art. 4 (exploration) | — | [[NL-CTIVD]]'s oversight division ("afdeling toezicht") holds binding real-time stop authority |
+| Art. 5 (intrusion permits) | — | Same binding real-time CTIVD authority |
+| Art. 8 | Wiv 2017 Art. 50(4) — general data analysis applied to already-collected traffic/location data | **Exempted from TIB review entirely**: Art. 8 states explicitly, "in afwijking van ... artikel 36, eerste lid, van de Wiv 2017 wordt een ... toestemming als bedoeld in artikel 50, vierde lid, van die wet niet voor toetsing voorgelegd aan de toetsingscommissie" (this permission is *not* submitted to the TIB); subject instead to CTIVD's binding real-time stop authority under Art. 12 |
+| Arts. 9–10 (number add-ons) | — | Same binding real-time CTIVD authority |
+| Art. 14e | Wiv 2017 Art. 55(1) — real-time interception of communications traffic data going forward | **TIB pre-approval retained and made explicitly binding**: "het oordeel van de toetsingscommissie is bindend" |
+
+So the shift is not a blanket one: it applies specifically to the Article 8
+power (analysis of already-collected traffic/location data, formerly
+TIB-reviewed under Wiv 2017 Art. 36(1), now CTIVD-only) and to the powers
+named in Articles 4, 5, 9 and 10. The Article 14e power (real-time,
+forward-looking interception of communications traffic data under Wiv
+2017 Art. 55(1)) goes the other way — it keeps TIB pre-approval and the
+Act makes that approval's binding force explicit, which is what this
+entity's description already recorded as "binding advance review
+specifically for real-time interception of traffic and location data,"
+now correctly attributed to Art. 14e rather than Art. 8. CTIVD's binding
+stop authority itself runs through Article 12, which also sets a 72-hour
+deadline for the responsible minister to comply with a binding CTIVD
+order.
+
 ## `references`, not `supersedes`
 
 The relationship to [[NL-WIV-2017]] is `references`. It is not `supersedes`
@@ -169,4 +205,5 @@ All four read directly in the 2026-08-27 pass: aivd.nl's own page, the
 Eerste Kamer dossier, the NJB Staatsblad note, and the Wetgevingskalender
 entry. The Act's own consolidated text at wetten.overheid.nl was added
 and read directly 2026-09-19, closing the extension question via Article
-17.
+17, then re-read article by article the same day to close the
+TIB/CTIVD power-split question (Articles 3, 4, 5, 8, 9–10, 12 and 14e).
