@@ -38,6 +38,7 @@ related_entities:
   - EU
   - NO-PERSONOPPLYSNINGSLOVEN
   - INTL-EEA-JCD-154-2018
+  - INTL-EEA-JCD-22-2018
 relationships:
   - type: applies-in
     target: "NO"
@@ -140,11 +141,16 @@ EU-GDPR ◀─ references ─ INTL-EEA-JCD-154-2018 ─ amends ─▶ INTL-EEA-A
                     NO          IS          LI
 ```
 
-**Only this one decision is modelled**, and the original caution still holds
-for the rest: cataloguing every Joint Committee decision that incorporates an
-EU act into this Agreement is a large piece of work, and none of the others
-is an entity. This one was created because three national data protection
-acts and this Agreement were all describing it in prose.
+**A second is now modelled too**: [[INTL-EEA-JCD-22-2018]], read directly
+2026-09-19 via a working `efta.int` document-store path (the homepage and
+`eea-lex` viewer stay bot-walled), incorporates [[EU-EIDAS]] the same way
+154/2018 incorporates the GDPR — closing `discovery/unresolved.md` row
+#109's EEA-incorporation question, previously answered only indirectly on
+[[NO-ID-PORTEN]]. The original caution still holds for the rest:
+cataloguing every Joint Committee decision that incorporates an EU act into
+this Agreement is a large piece of work, and only these two are entities —
+each created because national implementing acts and this Agreement were
+all describing it in prose.
 
 ## Switzerland signed it and never joined
 
