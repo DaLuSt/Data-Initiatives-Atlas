@@ -24,7 +24,7 @@ coverage: medium
 verification: primary-source
 start_date: 2024-01-01
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-09-19"
 previous_version: null
 successor: null
 
@@ -39,8 +39,8 @@ relationships:
   - type: applies-in
     target: CH
     source: fact
-    evidence: "Confirmed by reading netzwoche.ch directly (2026-08-22): 'Das \"Bundesgesetz über den Einsatz elektronischer Mittel zur Erfüllung von Behördenaufgaben\" (Embag) soll Anfang 2024 in Kraft treten. Dies entschied der Bundesrat an seiner Sitzung vom 22. November [2023]... die im Gesetz verankerten Bestimmungen treten gestaffelt in Kraft: Zunächst sollen sie für die zentrale Bundesverwaltung gelten. Für die Einheiten der dezentralen Bundesverwaltung werde das Gesetz zu einem späteren Zeitpunkt... in Kraft gesetzt.' The specific 'May 2025' date for decentralised units was NOT independently re-confirmed this pass — none of the four sources fetched restate it — and is retained from the original sourcing rather than dropped. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor."
-    confidence: medium
+    evidence: "Confirmed by reading netzwoche.ch directly (2026-08-22): 'Das \"Bundesgesetz über den Einsatz elektronischer Mittel zur Erfüllung von Behördenaufgaben\" (Embag) soll Anfang 2024 in Kraft treten. Dies entschied der Bundesrat an seiner Sitzung vom 22. November [2023]... die im Gesetz verankerten Bestimmungen treten gestaffelt in Kraft: Zunächst sollen sie für die zentrale Bundesverwaltung gelten. Für die Einheiten der dezentralen Bundesverwaltung werde das Gesetz zu einem späteren Zeitpunkt... in Kraft gesetzt.' CLOSES discovery/unresolved.md row #113. The scope is now directly sourced: the statute's own Fedlex pdf-a text (SR 172.019, read directly 2026-09-19), Article 2, states 'Dieses Gesetz gilt für die zentrale Bundesverwaltung' (this Act applies to the central federal administration), with a footnoted paragraph 2 marked 'Noch nicht in Kraft' (not yet in force) corroborating the staged commencement for other bodies. The specific 'May 2025' date for decentralised units was NOT independently re-confirmed this pass and is retained from the original sourcing rather than dropped."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -65,6 +65,10 @@ sources:
     url: "https://www.bfs.admin.ch/bfs/de/home/dienstleistungen/ogd.html"
     publisher: "Bundesamt für Statistik (BFS)"
     accessed: "2026-08-22"
+  - title: "Bundesgesetz über den Einsatz elektronischer Mittel zur Erfüllung von Behördenaufgaben (EMBAG), SR 172.019 (pdf-a, Stand am 1. Januar 2024)"
+    url: "https://www.fedlex.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2023/682/20240101/de/pdf-a/fedlex-data-admin-ch-eli-cc-2023-682-20240101-de-pdf-a.pdf"
+    publisher: "Fedlex — Die Publikationsplattform des Bundesrechts"
+    accessed: "2026-09-19"
 ---
 
 # EMBAG — das «Digitalisierungsgesetz»
@@ -81,6 +85,14 @@ sources:
 > JavaScript, so this pass could retrieve it (200) without reading it. A
 > genuine new connection was also found this pass: see "No relationships
 > asserted" below.
+>
+> **Closed 2026-09-19** (`discovery/unresolved.md` row #113, alongside
+> [[CH-REVDSG]]). Fedlex's pdf-a filestore path for this act's own
+> in-force date — `eli/cc/2023/682/20240101/de/pdf-a/...` — was tried
+> directly (constructed from the already-known 1 January 2024 commencement
+> date rather than guessed blind) and returned the actual statute text,
+> read locally as page images since WebFetch again returned only binary
+> stream content for it.
 
 ## Description
 
@@ -90,6 +102,22 @@ Behördenaufgaben' (Embag) soll Anfang 2024 in Kraft treten." The EMBAG creates 
 Swiss federal administration and for collaboration between authorities at
 different levels of government and with third parties. Its stated principle
 is **"digital first"** for federal business processes.
+
+## Read directly at last — 2026-09-19
+
+Fedlex's own pdf-a text, read directly for the first time, gives the
+statute's title page: **"Bundesgesetz über den Einsatz elektronischer
+Mittel zur Erfüllung von Behördenaufgaben (EMBAG), SR 172.019, vom
+17. März 2023 (Stand am 1. Januar 2024)"** — adopted **17 March 2023**,
+consolidated to the **1 January 2024** commencement date already carried
+in `start_date`. Article 1 confirms its purpose (enabling cross-government
+collaboration and the expansion of electronic-means use); Article 2
+confirms the scope this entity's `applies-in` evidence already carried
+from netzwoche.ch — "Dieses Gesetz gilt für die zentrale
+Bundesverwaltung" (this act applies to the central federal
+administration) — and a footnoted paragraph 2, marked "Noch nicht in
+Kraft" (not yet in force), corroborates the staged commencement for other
+bodies this entity already records via netzwoche.ch's reporting.
 
 ## The Atlas's first statutory open-source mandate
 
@@ -145,6 +173,6 @@ is logged in `discovery/unresolved.md`.
 
 ## Sources
 
-Listed in frontmatter, all five read directly this pass (Fedlex retrieved
-but not readable — see the caveat above). **The Fedlex citation is now
-present.**
+Listed in frontmatter, all five read directly in the 2026-08-22 pass
+(Fedlex retrieved but not readable at that time). **The Fedlex pdf-a text
+is now read directly** (2026-09-19) — see "Read directly at last" above.
