@@ -22,7 +22,7 @@ verification: primary-source
 
 start_date: 2018-07-01
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-09-19"
 previous_version: null
 successor: NL-WERKAGENDA-WAARDENGEDREVEN-DIGITALISEREN
 
@@ -32,6 +32,7 @@ organisations:
   - NL-BZK
 related_entities:
   - NL-DATA-AGENDA-OVERHEID
+  - EU-DIGITAL-DECADE
 relationships: []
 
 sources:
@@ -52,6 +53,10 @@ sources:
     url: "https://zoek.officielebekendmakingen.nl/kst-26643-700.html"
     publisher: "Overheid.nl — Officiële bekendmakingen"
     accessed: "2026-08-27"
+  - title: "The Netherlands' 2026 Digital Decade Country Report"
+    url: "https://digital-strategy.ec.europa.eu/en/factpages/netherlands-2026-digital-decade-country-report"
+    publisher: "European Commission — Shaping Europe's digital future"
+    accessed: "2026-09-19"
 ---
 
 # NL DIGIbeter: Agenda Digitale Overheid
@@ -99,6 +104,23 @@ found named but unmodelled — picked up from this gap's own
 points to it rather than skipping ahead to [[NL-NDS]], which would have
 overstated a two-steps-removed succession the sources never state directly.
 
+## No connection to the EU Digital Decade — closed 2026-09-19
+
+`discovery/unresolved.md` row #86 asked whether this entity connects to
+[[EU-DIGITAL-DECADE]]'s own national strategic roadmap instrument, the
+same question already checked and found negative for Spain's
+[[ES-ESPANA-DIGITAL-2026]] and Germany's [[DE-DIGITALSTRATEGIE]].
+
+For this entity the answer is closed rather than merely narrowed: NL
+DIGIbeter ran **2018–2020**, ending before the Digital Decade Policy
+Programme existed (Decision (EU) 2022/2481, adopted 2022) or before the
+Netherlands could have submitted a roadmap under it. The Commission's own
+"Netherlands 2026 Digital Decade Country Report," read directly, does not
+mention "Digibeter" anywhere and gives the national roadmap no name at all
+— only its measure count (59) and budget (€5.25 billion). Chronology alone
+rules the connection out, the same kind of dates-based refusal the Atlas
+already applies on [[NL-WDO]].
+
 ## Relationships
 
 - [[NL-DATA-AGENDA-OVERHEID]] is the data-specific agenda published under
@@ -109,10 +131,14 @@ overstated a two-steps-removed succession the sources never state directly.
   `supersedes`/`superseded-by` relationship is asserted between this entity
   and [[NL-NDS]]: the actual named intervening strategy is the correct
   target, and skipping it would overstate what the sources say.
+- No relationship to [[EU-DIGITAL-DECADE]] — ruled out by chronology and by
+  a direct read of the Commission's own country report, which never names
+  Digibeter.
 
 ## Sources
 
 Listed in frontmatter. digitaleoverheid.nl's kabinetsbeleid page and a
 Kamerstuk alternate read directly this pass; both parlementairemonitor.nl
 citations confirmed dead (site discontinued 2024) and one digitaleoverheid.nl
-citation confirmed dead (HTTP 404).
+citation confirmed dead (HTTP 404). The Commission's "Netherlands 2026
+Digital Decade Country Report," read directly 2026-09-19, is added below.
