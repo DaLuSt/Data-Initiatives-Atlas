@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-19"
 previous_version: null
 successor: null
 
@@ -35,6 +35,7 @@ related_entities:
   - NL-AIVD
   - NL-MIVD
   - NL-TIB
+  - NL-TWCO
 relationships:
   - type: applies-to
     target: NL-AIVD
@@ -115,7 +116,14 @@ websites.
 
 Under [[NL-TWCO]], part of this balance shifts for certain powers towards
 real-time CTIVD monitoring with binding authority to halt an operation
-immediately — see [[NL-AIVD]] and [[NL-TWCO]].
+immediately — see [[NL-AIVD]] and [[NL-TWCO]]. **Closed 2026-09-19**
+(`discovery/unresolved.md` row #190): [[NL-TWCO]]'s own text names the
+powers exactly — this entity's "afdeling toezicht" (oversight division)
+holds binding real-time stop authority over four named powers (Arts. 4,
+5, 8, 9–10 of that Act), a 72-hour minister compliance deadline included,
+while a fifth power (Art. 14e, real-time interception of communications
+traffic data going forward) keeps [[NL-TIB]] pre-approval instead. See
+[[NL-TWCO]] for the full article-by-article breakdown.
 
 ## Why this is an `applies-to`, not a `governed-by`
 
@@ -140,6 +148,9 @@ the service side is to the **act**, not to the reviewer.
 
 ## Sources
 
-All three read directly this pass: ctivd.nl's own rechtseenheidoverleg
-page, aivd.nl's oversight page, and the Dutch Wikipedia article on the
-Wiv 2017.
+All three read directly in the 2026-08-27 pass: ctivd.nl's own
+rechtseenheidoverleg page, aivd.nl's oversight page, and the Dutch
+Wikipedia article on the Wiv 2017. The 2026-09-19 addition on the
+TIB/CTIVD power split under NL-TWCO cites that entity's own consolidated
+text at wetten.overheid.nl, already read directly there, not a new fetch
+on this entity.
