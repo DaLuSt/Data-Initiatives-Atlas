@@ -18,12 +18,12 @@ region: EU
 
 status: active
 confidence: medium
-coverage: low
+coverage: medium
 verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-09-19"
 previous_version: null
 successor: null
 
@@ -50,6 +50,14 @@ sources:
   - title: "Data spaces experience: the European Tourism Data Space"
     url: "https://data.europa.eu/en/news-events/news/register-now-our-webinar-data-spaces-experience-european-tourism-data-space"
     publisher: "data.europa.eu / Publications Office of the European Union"
+  - title: "DEPLOYTOUR — official project site"
+    url: "https://deploytour.eu/"
+    publisher: "DEPLOYTOUR consortium"
+    accessed: "2026-09-19"
+  - title: "Deploytour: new project for the future of European tourism data"
+    url: "https://data.europa.eu/en/news-events/news/deploytour-new-project-future-european-tourism-data"
+    publisher: "data.europa.eu / Publications Office of the European Union"
+    accessed: "2026-09-19"
 ---
 
 # Common European tourism data space
@@ -57,6 +65,10 @@ sources:
 > **Verified 2026-08-21.** Every source this entity cites is on a domain the
 > repository owner confirmed read and correct — `europa.eu`. `verification:
 > primary-source`. See `docs/re-verification.md` §"The confirmed domains".
+>
+> **Narrowed 2026-09-19** (`discovery/unresolved.md` row #125): a
+> deployment project is now identified and sourced. See "DEPLOYTOUR,
+> found" below.
 
 ## Description
 
@@ -72,19 +84,41 @@ the total to fourteen.
 All four are added in this batch, which is why the Atlas can now show the
 complete set rather than the original core.
 
-## ⚠ `coverage: low`
+## ⚠ `coverage: medium`, promoted 2026-09-19
 
-Less was found on this data space than on any other in the batch. Its
-governance, its deployment projects and its relationship to the tourism
-transition pathway were not established. It is included because leaving one
-of the fourteen out would misrepresent the set, and its thinness is recorded
-rather than padded.
+Governance and the relationship to the tourism transition pathway remain
+unestablished — see below — but a real deployment project is now sourced,
+promoting this from the thinnest entity in the batch.
+
+## DEPLOYTOUR, found — 2026-09-19
+
+`discovery/unresolved.md` row #125 asked for a deployment project,
+governance, operators or scope. A deployment project is now sourced:
+**DEPLOYTOUR**, read directly on its own official site, is a three-year
+project launched **October 2024** under the Digital Europe Programme to
+develop "a trusted Common European Tourism Data Space (ETDS)." Its
+consortium — coordinated by **AnySolution** — brings together **43
+partners from 13 countries**, including SMEs, tourism companies, national
+ministries, universities and research centres. It works through four
+pillars: technical infrastructure, governance frameworks, five real-world
+use-case pilots (overcrowding in Austrian/Slovenian natural areas;
+destination resilience in the Balearics, Andalusia and the Canaries;
+France's MICE sector; heritage and climate data on Syros, Greece; SME
+support in Finnish Lapland), and synergies with other data and tourism
+initiatives. It builds on two earlier preparatory actions, DATES and DSFT,
+funded under the 2021-2022 Digital Europe work programme.
+
+Governance and operator questions beyond DEPLOYTOUR's own role remain
+unestablished, so `coverage` moves only to `medium`, not `high`.
 
 ## Not modelled
 
 - The **EU tourism transition pathway**, which the sources associate with it.
-- Any **deployment project**, operator or governance body.
+- DEPLOYTOUR's own five pilots as separate entities — they are use cases
+  within one project, not distinct initiatives.
+- Any governance body or operator beyond DEPLOYTOUR's own role.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter. DEPLOYTOUR's own site and a data.europa.eu news
+item on the project were added and read directly 2026-09-19.

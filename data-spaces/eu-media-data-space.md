@@ -16,12 +16,12 @@ region: EU
 
 status: active
 confidence: medium
-coverage: low
+coverage: medium
 verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-09-19"
 previous_version: null
 successor: null
 
@@ -45,6 +45,10 @@ sources:
   - title: "Common European data spaces"
     url: "https://digital-strategy.ec.europa.eu/en/policies/data-spaces"
     publisher: "European Commission — Shaping Europe's digital future"
+  - title: "Alliance of 43 European media and tech organisations to build a trusted European media data space"
+    url: "https://tems-dataspace.eu/alliance-of-43-european-media-and-tech-organisations-to-build-a-trusted-european-media-data-space/"
+    publisher: "TEMS (Trusted European Media Data Space)"
+    accessed: "2026-09-19"
 ---
 
 # Common European media data space
@@ -52,20 +56,42 @@ sources:
 > **Verified 2026-08-21.** Every source this entity cites is on a domain the
 > repository owner confirmed read and correct — `europa.eu`. `verification:
 > primary-source`. See `docs/re-verification.md` §"The confirmed domains".
+>
+> **Narrowed 2026-09-19** (`discovery/unresolved.md` row #125): a
+> deployment project is now identified and sourced. See "TEMS, found"
+> below.
 
 ## Description
 
 One of the fourteen common European data spaces, covering media.
 It is one of the domains that emerged beyond the initial focus areas of the European Data Strategy, alongside tourism, cultural heritage and language technologies.
 
-## ⚠ `coverage: low`
+## ⚠ `coverage: medium`, promoted 2026-09-19
 
-Along with [[EU-TOURISM-DATA-SPACE]], this is one of the two thinnest
-entities in the batch. Its deployment projects, governance and participants
-were not established.
+Governance beyond TEMS's own role and other participants remain
+unestablished, but a real deployment project is now sourced — see below —
+promoting this from the thinnest entity in the batch.
 
-It is included so the Atlas holds the complete set of fourteen; that
-completeness is the claim, and nothing beyond it is asserted.
+## TEMS, found — 2026-09-19
+
+`discovery/unresolved.md` row #125 asked for a deployment project,
+governance, operators or scope. **TEMS** (Trusted European Media Data
+Space), read directly on its own official site, is a consortium of **43
+European media and tech organisations from 14 countries**, coordinated by
+**Innovalia Association**, launched **11 October 2023** with an opening
+event in Bilbao on 24 October 2023. It is funded with **€16.5 million**
+through the European Commission's Digital Europe Programme, described as
+"a core element in the implementation of the European Data Strategy." Its
+stated priorities: combating misinformation, audience analysis,
+optimising production data flows, and adopting AI and virtual-reality
+technologies — aiming to "evolve existing media platforms" and "provide
+open access to a common data space for any interested media stakeholder,"
+strengthening local and regional media ecosystems against dominant
+international platforms.
+
+Governance beyond TEMS's own consortium structure, and other operators or
+participants, remain unestablished — `coverage` moves only to `medium`,
+not `high`.
 
 ## The cooperation that is stated on the other side
 
@@ -76,10 +102,13 @@ side.
 
 ## Not modelled
 
-- Any **deployment project** or operator.
+- TEMS as its own entity — it is the data space's deployment project,
+  described in prose here rather than as a separate node.
+- Governance or operators beyond TEMS's own role.
 - The relationship to the **European Media Freedom Act** and to
   [[EU-AI-ACT]]'s transparency provisions for media.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter. TEMS's own site was added and read directly
+2026-09-19.
