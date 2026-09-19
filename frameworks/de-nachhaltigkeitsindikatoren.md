@@ -84,13 +84,16 @@ directly. It publishes a biennial **Indikatorenbericht** for the strategy,
 and the underlying data has been available on a dedicated online platform
 since **February 2020**.
 
-## One of five, still four to go
+## The first of five — all now modelled
 
 `discovery/unresolved.md` row #175 flagged that no national SDG indicator
 set was modelled for any of the Atlas's five original countries (Belgium,
-Germany, France, the Netherlands, Spain). This closes Germany's. The
-other four remain unresearched — this is a first instance, not a
-systematic sweep.
+Germany, France, the Netherlands, Spain). This was the first closed; the
+other four followed the same day: [[FR-INDICATEURS-ODD]],
+[[BE-INDICATEURS-DEVELOPPEMENT-DURABLE]],
+[[NL-MONITOR-BREDE-WELVAART-SDG]] and [[ES-INDICADORES-ODS]]. Each
+descends independently from [[UN-SDG-INDICATORS]]; no relationship is
+asserted between any of the five.
 
 ## Not modelled
 

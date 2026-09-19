@@ -35,6 +35,7 @@ related_entities:
   - NL-WET-CBS
   - EU-EUROSTAT
   - EU-REG-223-2009
+  - NL-MONITOR-BREDE-WELVAART-SDG
 relationships:
   - type: part-of
     target: EU-ESS

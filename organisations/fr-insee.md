@@ -34,6 +34,7 @@ organisations: []
 related_entities:
   - EU-ESS
   - EU-EUROSTAT
+  - FR-INDICATEURS-ODD
 relationships:
   - type: part-of
     target: EU-ESS
