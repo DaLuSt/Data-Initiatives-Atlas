@@ -27,7 +27,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-19"
 previous_version: null
 successor: null
 
@@ -63,6 +63,10 @@ sources:
     url: "https://aftermarket-trends.de/mobility-data-space-marktplatz-fuer-mobilitaetsdaten/"
     publisher: "aftermarket-trends.de"
     accessed: "2026-08-28"
+  - title: "Mobility Data Space (MDS) — Nature of the Initiative (factsheet)"
+    url: "https://manufacturingdataspace-csa.eu/wp-content/uploads/2024/05/MDS-Mobility-Data-Space.pdf"
+    publisher: "Manufacturing DataSpace CSA (Data Space 4.0)"
+    accessed: "2026-09-19"
 ---
 
 # Mobility Data Space (MDS)
@@ -75,6 +79,11 @@ sources:
 > on related MDS/mobility-data topics do resolve, so the ministry's domain
 > is not wholesale blocked, just this one path). Three of four is a
 > genuine majority. `verification: primary-source`.
+>
+> **Narrowed 2026-09-19** (`discovery/unresolved.md` row #66): a
+> Data Space 4.0 coordination-action factsheet on this entity, read
+> directly, strengthens the refusal below into a documented negative. See
+> "The EU mobility data space link is not asserted" below.
 
 ## Description
 
@@ -132,6 +141,22 @@ both read this pass, describe the MDS in national and sectoral terms;
 **neither names the European mobility data space**. `related_entities`
 records the association for navigation without asserting a relationship.
 
+**Narrowed to a documented negative, 2026-09-19**: `manufacturingdataspace-csa.eu`'s
+own factsheet on the Mobility Data Space, read directly, lists this
+entity's "Connected Data Space 4.0 Initiatives" as **"Eona-X / Catena-X /
+GAIA-X"** — [[EU-EMDS]] is not among them. The same factsheet, read
+directly, also states "The German National Academy of Science and
+Engineering (acatech) is the founder and majority shareholder of the DRM
+Datenraum Mobilität GmbH — the operating company of the Mobility Data
+Space." acatech is independently confirmed (via deployemds.eu, read
+directly) to coordinate **deployEMDS**, the EMDS's own first deployment
+project — the same organisation sits behind both this entity's parent
+company and the official EU-level deployment project, yet no source read
+states that DE-MDS itself is part of, feeds into, or is connected to
+EU-EMDS. This is an unusually close near-miss — closer than the silence
+the earlier refusal rested on — but it remains an organisational
+coincidence, not a stated relationship, and no edge is asserted on it.
+
 Two national mobility data spaces now sit unconnected to their apparent
 European parent. That is a visible hole rather than a hidden one, and it is
 logged in `discovery/unresolved.md`.
@@ -152,7 +177,9 @@ worse than leaving the node thin.
 
 ## Sources
 
-Listed in frontmatter. Three of four read directly this pass; `bmv.de`'s
-specific MDS article is confirmed dead (404 on two attempts) and is kept in
-the list with that status noted here rather than silently removed, since no
-equivalent replacement URL on the ministry's own domain was found.
+Listed in frontmatter. Three of four read directly in the 2026-08-28 pass;
+`bmv.de`'s specific MDS article is confirmed dead (404 on two attempts) and
+is kept in the list with that status noted here rather than silently
+removed, since no equivalent replacement URL on the ministry's own domain
+was found. The Data Space 4.0 CSA factsheet was added and read directly
+2026-09-19, strengthening row #66's refusal into a documented negative.
