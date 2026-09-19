@@ -38,6 +38,8 @@ related_entities:
   - EU-EINVOICING-DIRECTIVE
   - EU-EN-16931
   - DE-XOEV
+  - IT-FATTURAPA
+  - FR-CIUS-FR
 relationships:
   - type: based-on
     target: EU-EN-16931
@@ -136,6 +138,17 @@ body rather than a legislature: `EU-CEN → EU-EN-16931 → DE-XRECHNUNG`,
 structurally the same shape as the DCAT chain (`INTL-DCAT → EU-DCAT-AP →
 NL-DCAT-AP-NL` / `DE-DCAT-AP-DE`) that Batch 15 called the template the
 Atlas needs more of.
+
+## No longer the Atlas's only national CIUS — 2026-09-19
+
+[[IT-FATTURAPA]] and [[FR-CIUS-FR]] are now modelled as siblings of this
+entity, closing part of `discovery/unresolved.md` row #49. Both take a
+different shape from XRechnung: Italy's CIUS translates to and from a
+pre-existing national schema rather than being written natively in EN
+16931's syntaxes, and France's CIUS-FR runs through Chorus Pro with
+Factur-X (a binational Franco-German format) carrying the CII syntax.
+XRechnung remains the only one of the three written directly as a CIUS in
+EN 16931's own UBL/CII syntaxes without an intermediate national schema.
 
 ## Relationships
 
