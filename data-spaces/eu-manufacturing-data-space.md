@@ -25,7 +25,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-19"
 previous_version: null
 successor: null
 
@@ -33,6 +33,7 @@ domains: []
 organisations: []
 related_entities:
   - EU-COMMON-DATA-SPACES
+  - DE-MANUFACTURING-X
 relationships:
   - type: part-of
     target: EU-COMMON-DATA-SPACES
@@ -72,6 +73,10 @@ sources:
 > found and read directly instead, confirming and substantially extending
 > the two projects' description. `verification` moves from `search-only`
 > to `primary-source`.
+>
+> **Partially closed 2026-09-19** (`discovery/unresolved.md` row #120):
+> the Data Space 4.0 coordination action's own tracking of
+> [[DE-MANUFACTURING-X]] as a connected initiative. See below.
 
 ## Description
 
@@ -85,11 +90,21 @@ below the EU level. [[DE-CATENA-X]] is an operating automotive data space
 `based-on` [[EU-GAIA-X]] and following the IDS reference architecture, and
 [[DE-MANUFACTURING-X]] extends that pattern across German industry.
 
-**No relationship is asserted between this entity and either of them.** That
-they occupy the same sector is not evidence that one is part of, implements
-or derives from the other, and no source read states a connection. The
-sectoral adjacency is discoverable through [[EU-COMMON-DATA-SPACES]] and the
-country index, and the question is logged in `discovery/unresolved.md`.
+**No relationship is asserted between this entity and [[DE-CATENA-X]].**
+That they occupy the same sector is not evidence that one is part of,
+implements or derives from the other, and no source read states a
+connection.
+
+**Partially closed 2026-09-19** for [[DE-MANUFACTURING-X]]:
+`manufacturingdataspace-csa.eu`, the EU-funded Coordination and Support
+Action running **Data Space 4.0** — named by this entity's own cited
+Commission overview page as one of the three things constituting this
+data space, alongside UNDERPIN and SM4RTENANCE — publishes its own
+factsheet on Manufacturing-X, cataloguing it as a connected initiative.
+The edge (`related-to`, `confidence: medium`) is recorded on
+[[DE-MANUFACTURING-X]], where the primary sources were read. It records
+cataloguing by the coordination action, not organisational membership —
+no source states Manufacturing-X is part of this data space.
 
 ## Deployment, not regulation
 
@@ -122,7 +137,9 @@ in this batch (e.g. INSIEME under [[EU-CEEDS]]).
 
 ## Sources
 
-Listed in frontmatter, three of five read directly this pass. The HaDEA
-call PDF was attempted and returned unreadable binary/stream content; the
-ScienceDirect article itself returned HTTP 403, but its PMC mirror was
-found and read directly instead.
+Listed in frontmatter, three of five read directly in the 2026-08-28
+pass. The HaDEA call PDF was attempted and returned unreadable
+binary/stream content; the ScienceDirect article itself returned HTTP
+403, but its PMC mirror was found and read directly instead. The
+Manufacturing-X/Data Space 4.0 sources cited 2026-09-19 were read
+directly on [[DE-MANUFACTURING-X]], not re-fetched here.
