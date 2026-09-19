@@ -34,6 +34,7 @@ organisations: []
 related_entities:
   - EU-COMMON-DATA-SPACES
   - EU-DSSC
+  - EU-INSIEME
 relationships:
   - type: part-of
     target: EU-COMMON-DATA-SPACES
@@ -110,9 +111,18 @@ carries here.
 The same reasoning applies to the nine other data spaces added in this batch.
 Only [[EU-EHDS]] among the fourteen has a Regulation behind it.
 
+## INSIEME, now its own entity — 2026-09-19
+
+`discovery/unresolved.md` row #132 flagged that INSIEME had no entity of
+its own despite being named here in prose. It is now [[EU-INSIEME]],
+`part-of` this entity, sourced from insieme.energy's own site, read
+directly. The six Horizon Europe predecessor projects and Germany's ENDA
+remain unmodelled — see below.
+
 ## Not modelled
 
-- **INSIEME**, and the six Horizon Europe energy data space projects.
+- The **six Horizon Europe energy data space projects** [[EU-INSIEME]] and
+  CEEDS build on — not individually named by any source read.
 - The **EU action plan on digitalising the energy system** and the 2026
   Strategic Roadmap.
 - Germany's **ENDA** reference architecture project, tested on the
