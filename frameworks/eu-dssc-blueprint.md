@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-19"
 previous_version: null
 successor: null
 
@@ -33,6 +33,10 @@ organisations:
   - EU-DSSC
 related_entities:
   - EU-COMMON-DATA-SPACES
+  - NL-FDS
+  - NL-DSGO
+  - NL-ISHARE
+  - NL-HEALTH-RI
 relationships:
   - type: applies-to
     target: EU-COMMON-DATA-SPACES
@@ -118,16 +122,21 @@ The Blueprint is the closest EU-level analogue to the Dutch
 agreement systems with rulebook-like governance. The Blueprint's rulebook
 model is what those would map onto in EU terms.
 
-**No relationship to any of them is asserted.** No source connects the Dutch
-afsprakenstelsels to the DSSC Blueprint, and the resemblance — however
-striking — is an Atlas observation. It is recorded here as such and queued
-as a research question, because confirming it would connect the Dutch and EU
-data-space layers structurally rather than merely thematically.
+**No relationship to any of them is asserted, checked both directions,
+2026-09-19.** `discovery/unresolved.md` row #42 asked whether this
+resemblance was sourced. It is not: the Blueprint's own "Introduction and
+key concepts" page, re-read directly, names none of iSHARE, FDS, DSGO or
+Health-RI; and none of those four entities' own files mention the DSSC
+Blueprint. The structural resemblance stands as a checked-and-negative
+Atlas observation rather than an unresearched presumption.
 
-Note that [[NL-ISHARE]] already has a documented route into this world: its
-trust framework is used by data spaces, and the IDSA has incorporated it
-into the IDS architecture. Neither the IDSA nor IDS is an Atlas entity yet,
-so that route is also unmodelled.
+[[NL-ISHARE]] has a separate, genuinely sourced route into this world: its
+trust framework collaborates with [[INTL-IDSA]]'s reference architecture,
+[[INTL-IDS-RAM]] — both now Atlas entities — under a 2022 collaboration
+agreement (`aligned-with`, recorded on iSHARE's own entity). That
+collaboration is a distinct fact from the DSSC Blueprint resemblance
+addressed here, and remains the only sourced EU-layer connection any of
+the four Dutch afsprakenstelsels carries.
 
 ## Relationships
 
