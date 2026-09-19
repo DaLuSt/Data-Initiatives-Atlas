@@ -36,6 +36,8 @@ related_entities:
   - INTL-IDS-RAM
   - INTL-IDSA
   - EU-GAIA-X
+  - DE-MANUFACTURING-X
+  - DE-FACTORY-X
 relationships:
   - type: based-on
     target: INTL-IDS-RAM
@@ -213,8 +215,11 @@ snippets — and it is queued in `discovery/research-queue.md` accordingly.
 
 Catena-X sits within a broader German industrial data-space family
 including [[DE-MANUFACTURING-X]], confirmed this pass as the initiative
-Catena-X's approach was generalised into. **No other member is modelled**,
-and no industry or manufacturing domain entity was created:
+Catena-X's approach was generalised into. **Closed 2026-09-19**:
+[[DE-FACTORY-X]], Manufacturing-X's mechanical-engineering lighthouse
+project, is now an Atlas entity, `based-on` this one and `part-of`
+[[DE-MANUFACTURING-X]]. No other family member is modelled, and no
+industry or manufacturing domain entity was created:
 `metadata/taxonomy.md` §1 requires a domain to connect at least two
 entities, and Catena-X alone does not meet the threshold. `domains: []` is
 therefore correct rather than an omission.

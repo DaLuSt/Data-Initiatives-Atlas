@@ -34,6 +34,7 @@ organisations: []
 related_entities:
   - DE-CATENA-X
   - EU-MANUFACTURING-DATA-SPACE
+  - DE-FACTORY-X
 relationships:
   - type: applies-in
     target: DE
@@ -168,9 +169,17 @@ organisational membership. No source states Manufacturing-X is *part of*
 the EU data space, so `related-to` is recorded rather than `part-of` or
 `participates-in`, at `confidence: medium`.
 
+## Factory-X, now its own entity — 2026-09-19
+
+`discovery/unresolved.md` row #131 flagged Factory-X as unmodelled despite
+being named here as a lighthouse project. It is now [[DE-FACTORY-X]],
+`part-of` this entity and `based-on` [[DE-CATENA-X]], sourced from
+Fraunhofer IOSB's own page and factory-x.org's own page, both read
+directly. Its consortium project ran January 2024 – 30 June 2026.
+
 ## Not modelled
 
-- **Factory-X**, **Construct-X**, **Aerospace-X** and **HealthTrack-X** —
+- **Construct-X**, **Aerospace-X** and **HealthTrack-X** —
   lighthouse projects and sibling initiatives named directly in Fraunhofer
   ISST's own page.
 - **Plattform Industrie 4.0**, whose concepts Manufacturing-X builds on and
