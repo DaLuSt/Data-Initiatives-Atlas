@@ -26,7 +26,7 @@ coverage: medium
 verification: primary-source
 start_date: 2018-07-06
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-09-19"
 previous_version: null
 successor: null
 
@@ -44,7 +44,7 @@ relationships:
   - type: amends
     target: INTL-EEA-AGREEMENT
     source: fact
-    evidence: "Confirmed verbatim by reading eur-lex.europa.eu's own text of the Decision directly (2026-08-22): 'Decision of the EEA Joint Committee No 154/2018 of 6 July 2018 amending Annex XI (Electronic communication, audiovisual services and information society) and Protocol 37 (containing the list provided for in Article 101) to the EEA Agreement [2018/1022] ... OJ L 183, 19.7.2018, pp. 23–26.' efta.int returned a bot-defense challenge (403) and was not read."
+    evidence: "Confirmed verbatim by reading eur-lex.europa.eu's own text of the Decision directly (2026-08-22): 'Decision of the EEA Joint Committee No 154/2018 of 6 July 2018 amending Annex XI (Electronic communication, audiovisual services and information society) and Protocol 37 (containing the list provided for in Article 101) to the EEA Agreement [2018/1022] ... OJ L 183, 19.7.2018, pp. 23–26.' CLOSES discovery/unresolved.md row #178: efta.int's own PDF of the adopted decision, previously bot-walled via the eea-lex viewer, was read directly 2026-09-19 via the Secretariat's document-store path (efta.int/sites/default/files/documents/legal-texts/eea/other-legal-documents/adopted-joint-committee-decisions/2018 - English/154-2018.pdf) and confirms the same text verbatim, including the full operative adaptations (EFTA-state participation in the EDPB one-stop-shop and consistency mechanism, minus voting/chair rights)."
     confidence: medium
     valid_from: 2018-07-06
     valid_until: null
@@ -92,7 +92,7 @@ sources:
   - title: "Decision of the EEA Joint Committee No 154/2018 — adopted Joint Committee decisions, 2018"
     url: "https://www.efta.int/sites/default/files/documents/legal-texts/eea/other-legal-documents/adopted-joint-committee-decisions/2018%20-%20English/154-2018.pdf"
     publisher: "European Free Trade Association"
-    accessed: "2026-08-22"
+    accessed: "2026-09-19"
   - title: "CELEX 22018D1022 — Decision of the EEA Joint Committee No 154/2018"
     url: "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:22018D1022"
     publisher: "EUR-Lex — Publications Office of the European Union"
@@ -114,6 +114,12 @@ sources:
 > re-confirmed: the Decision's authentic-language clause names Iceland
 > and Norway specifically but not Liechtenstein by name, and is retained
 > rather than removed — see that relationship's evidence.
+>
+> **Closed 2026-09-19** (`discovery/unresolved.md` row #178): `efta.int`'s
+> own copy of this decision, previously bot-walled, was found and read
+> directly via a working document-store path — see the `amends` edge's
+> evidence and [[INTL-EEA-JCD-22-2018]] for the same workaround applied to
+> eIDAS's incorporation.
 
 ## Description
 
@@ -194,5 +200,7 @@ sits in it.
 ## Sources
 
 Listed in frontmatter. The EUR-Lex ELI record and CELEX record were both
-read directly this pass; the EFTA Secretariat's own PDF of the adopted
-decision remains cited but unread, bot-walled (403).
+read directly in the 2026-08-22 pass. The EFTA Secretariat's own PDF of
+the adopted decision, previously cited but unread (bot-walled at 403 via
+the `eea-lex` viewer), was found and read directly 2026-09-19 via the
+Secretariat's document-store path instead.
