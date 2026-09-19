@@ -21,7 +21,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-09-19"
 previous_version: null
 successor: null
 
@@ -67,6 +67,10 @@ sources:
   - title: "Common European Data Spaces — SWD(2024) 21 final"
     url: "https://www.tcontas.pt/en-gb/seminars/sais-data/Documents/Documents/Common%20European%20Data%20Spaces%20-%20latest%20report%20Jan%202024.pdf"
     publisher: "European Commission (copy hosted by Tribunal de Contas)"
+  - title: "deployEMDS — official project site"
+    url: "https://deployemds.eu/"
+    publisher: "deployEMDS consortium"
+    accessed: "2026-09-19"
 ---
 
 # Common European Mobility Data Space (EMDS)
@@ -94,10 +98,11 @@ necessary, building on [[EU-DGA]] and the Data Act.
 
 Deployment runs through **deployEMDS**, the first EMDS deployment project,
 supported by the Digital Europe Programme, running November 2023 to
-October 2026 — confirmed via search cross-checks of the Commission's
-mobility observatory and the deployEMDS project's own site, though neither
-was read directly this pass and deployEMDS itself is not modelled as an
-entity.
+October 2026. Its own site, read directly 2026-09-19, confirms it is
+coordinated by **acatech** (the German National Academy of Science and
+Engineering), with 38 beneficiaries and 7 associated partners across nine
+EU countries and 16 use cases. deployEMDS itself is not modelled as an
+Atlas entity.
 
 `confidence: medium` and `coverage: medium`, up from `low`/`low`: the
 purpose, scope and governance approach are now confirmed from a Commission
@@ -124,11 +129,24 @@ the earlier text over-assumed. No source read names [[NL-NTM]] or any
 other specific national NAP; the country-level connection stays an Atlas
 association via `related_entities` rather than a typed edge.
 
+## The coordinator overlap, found on the German side — 2026-09-19
+
+[[DE-MDS]]'s own re-verification this pass found that **acatech**, this
+project's coordinator, is independently confirmed (via a Data Space 4.0
+CSA factsheet, read directly) to be the founder and majority shareholder
+of DRM Datenraum Mobilität GmbH, the operating company of Germany's
+Mobility Data Space. That is a close organisational overlap — the same
+institution sits behind both this project and a national mobility data
+space — but no source read states that DE-MDS is part of, feeds into, or
+is connected to EU-EMDS itself. The full discussion and the refusal it
+narrows are recorded on [[DE-MDS]] (`discovery/unresolved.md` row #66).
+
 ## Sources
 
-Listed in frontmatter, three of five read directly this pass — the DG MOVE
-EMDS page, the agriculture-and-mobility library page, and the main
-data-spaces overview page. The Data Spaces Symposium PDF and the
-Tribunal de Contas-hosted SWD(2024) 21 mirror were both attempted and
-returned unreadable binary/stream content to this pass's fetch tooling;
-neither was read.
+Listed in frontmatter, three of six read directly in the 2026-08-28/09-05
+passes — the DG MOVE EMDS page, the agriculture-and-mobility library page,
+and the main data-spaces overview page. The Data Spaces Symposium PDF and
+the Tribunal de Contas-hosted SWD(2024) 21 mirror were both attempted and
+returned unreadable binary/stream content to that pass's fetch tooling;
+neither was read. deployEMDS's own site was added and read directly
+2026-09-19.
