@@ -40,6 +40,10 @@ related_entities:
   - EU-EUROSTAT
   - EU-ESS
   - DE-NACHHALTIGKEITSINDIKATOREN
+  - FR-INDICATEURS-ODD
+  - BE-INDICATEURS-DEVELOPPEMENT-DURABLE
+  - NL-MONITOR-BREDE-WELVAART-SDG
+  - ES-INDICADORES-ODS
 relationships:
   - type: based-on
     target: UN-SDG-INDICATORS
@@ -77,9 +81,9 @@ sources:
 > repository owner confirmed read and correct — `europa.eu`. `verification:
 > primary-source`. See `docs/re-verification.md` §"The confirmed domains".
 >
-> **Narrowed 2026-09-19** (`discovery/unresolved.md` row #175): Germany's
-> own national SDG indicator set is now modelled. See "The `applies-in`
-> question" below.
+> **Narrowed 2026-09-19** (`discovery/unresolved.md` row #175): all five
+> of the Atlas's original countries now have a national SDG indicator set
+> modelled. See "The `applies-in` question" below.
 
 ## Description
 
@@ -118,16 +122,21 @@ thematic"* levels — implying national sets exist alongside this one rather
 than deriving from it.
 
 Adding `applies-in` here to match the pattern of the other EU entities would
-be pattern-matching, not modelling. **One national SDG indicator set is
-now modelled, 2026-09-19**: [[DE-NACHHALTIGKEITSINDIKATOREN]], Germany's
-own indicator set for the German Sustainability Strategy, maintained by
-[[DE-DESTATIS]] since 2006 and `based-on` [[UN-SDG-INDICATORS]] with at
-least one indicator per goal — sourced from destatis.de, read directly.
-No relationship is asserted between it and this entity: nothing read
-connects the German national set to the EU set specifically, only to the
-shared UN ancestor both descend from independently. The other four of the
-five original countries still have no national SDG indicator set
-modelled.
+be pattern-matching, not modelling. **All five of the Atlas's original
+countries now have a national SDG indicator set modelled, 2026-09-19**:
+[[DE-NACHHALTIGKEITSINDIKATOREN]] (Germany, maintained by
+[[DE-DESTATIS]] since 2006), [[FR-INDICATEURS-ODD]] (France, 98
+indicators, maintained by [[FR-INSEE]]), [[BE-INDICATEURS-DEVELOPPEMENT-DURABLE]]
+(Belgium, 84 indicators, maintained by [[BE-BUREAU-FEDERAL-DU-PLAN]]),
+[[NL-MONITOR-BREDE-WELVAART-SDG]] (the Netherlands, 293 indicators merged
+into the domestic Monitor Brede Welvaart, maintained by [[NL-CBS]]), and
+[[ES-INDICADORES-ODS]] (Spain, 234 indicators, maintained by [[ES-INE]]).
+Each is `based-on` [[UN-SDG-INDICATORS]] independently, with its own
+indicator count and national selection basis. **No relationship is
+asserted between any of the five and this entity, or between any of them
+and each other**: nothing read connects any national set to the EU set
+specifically, or to any other national set — all descend independently
+from the shared UN ancestor.
 
 ## The 2023 EU voluntary review is not modelled
 
@@ -156,6 +165,9 @@ read the sources.
 
 Listed in frontmatter — four Eurostat pages, including the 2017 news item
 announcing the establishment of the indicator list, which is the basis for
-the `start_date`. Destatis's own page on Germany's national indicator set
-was read directly on [[DE-NACHHALTIGKEITSINDIKATOREN]], not re-fetched
-here.
+the `start_date`. Each national statistical office's own page on its
+country's indicator set was read directly on the corresponding entity —
+[[DE-NACHHALTIGKEITSINDIKATOREN]], [[FR-INDICATEURS-ODD]],
+[[BE-INDICATEURS-DEVELOPPEMENT-DURABLE]],
+[[NL-MONITOR-BREDE-WELVAART-SDG]] and [[ES-INDICADORES-ODS]] — not
+re-fetched here.

@@ -37,6 +37,7 @@ related_entities:
   - ES
   - EU-EUROSTAT
   - EU-ESS
+  - ES-INDICADORES-ODS
 relationships:
   - type: part-of
     target: ES
