@@ -28,7 +28,7 @@ verification: primary-source
 
 start_date: 2022-07-05
 end_date: 2026-12-31
-last_verified: "2026-09-13"
+last_verified: "2026-09-19"
 previous_version: null
 successor: null
 
@@ -75,6 +75,10 @@ sources:
   - title: "¿En qué consiste la nueva agenda España Digital 2026?"
     url: "https://www.incibe.es/emprendimiento/publicaciones/blog/en-que-consiste-la-nueva-agenda-espana-digital-2026-y-en-que-afecta-los-nuevos"
     publisher: "Instituto Nacional de Ciberseguridad (INCIBE)"
+  - title: "Spain — National Digital Decade Strategic Roadmap"
+    url: "https://digital-skills-jobs.europa.eu/en/initiatives/national-strategies/spain-national-digital-decade-strategic-roadmap"
+    publisher: "European Commission — Digital Skills and Jobs Platform"
+    accessed: "2026-09-19"
 ---
 
 # España Digital 2026
@@ -96,6 +100,12 @@ sources:
 > espanadigital.gob.es and mineco.gob.es. All three official sources
 > agree; only the secondary, widely-syndicated coverage described it
 > differently. See "Resolved" below.
+>
+> **Narrowed 2026-09-19** (`discovery/unresolved.md` row #86): the
+> EU-Digital-Decade refusal is now backed by a Commission source that
+> treats this strategy and Spain's Digital Decade roadmap as
+> related-but-distinct, rather than resting on silence alone. See "No
+> relationship to the Digital Decade is asserted" below.
 
 ## Description
 
@@ -166,6 +176,17 @@ Plan, which is an EU instrument. It would be easy to draw an edge.
 [[NL-DIGIBETER]] and [[DE-DIGITALSTRATEGIE]]. Three national digital
 strategies, three refusals, one consistent standard.
 
+**Strengthened 2026-09-19**: the refusal is no longer only an absence of
+evidence. The Commission's own Digital Skills and Jobs Platform, read
+directly, lists Spain's Digital Decade "National strategic roadmap" — the
+document Member States must submit under Decision (EU) 2022/2481 — as a
+**separate** initiative from "Digital Spain Agenda 2026," cross-referenced
+under "You May Also Be Interested In" rather than presented as the same
+thing under two names. The Commission's own classification treats the
+Digital Decade roadmap and España Digital 2026 as related-but-distinct
+Spanish initiatives, which is itself evidence *against* the tempting
+equation, not merely silence on it.
+
 The Recovery Plan alignment is likewise not modelled: the Plan is not an
 entity in the Atlas, and creating it inside a country batch would put a
 major EU instrument into the shared layer on evidence gathered while
@@ -177,10 +198,11 @@ None asserted.
 
 ## Sources
 
-Listed in frontmatter, three of six read directly across two passes: the
-Recovery Plan's own announcement of the update (read 2026-08-27 and
+Listed in frontmatter, four of seven read directly across three passes:
+the Recovery Plan's own announcement of the update (read 2026-08-27 and
 re-read 2026-09-13 for its exact wording, which resolved the axis-naming
-conflict), espanadigital.gob.es's own article on the update, and
-mineco.gob.es's press release. The ministry programme page loaded only
-navigation chrome, the strategy PDF exceeded the fetch tool's size limit,
-and INCIBE's summary returned 403.
+conflict), espanadigital.gob.es's own article on the update, mineco.gob.es's
+press release, and the Commission's own Digital Skills and Jobs Platform
+page on Spain's Digital Decade roadmap (read directly 2026-09-19). The
+ministry programme page loaded only navigation chrome, the strategy PDF
+exceeded the fetch tool's size limit, and INCIBE's summary returned 403.
