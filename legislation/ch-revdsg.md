@@ -24,7 +24,7 @@ coverage: medium
 verification: primary-source
 start_date: 2023-09-01
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-09-19"
 previous_version: null
 successor: null
 
@@ -39,8 +39,8 @@ relationships:
   - type: applies-in
     target: CH
     source: fact
-    evidence: "Confirmed by reading kmu.admin.ch directly (2026-08-22): 'Die hiesigen Unternehmen müssen sich ab dem 1. September 2023 an die revidierten Regelungen anpassen. In seiner Herbstsession 2020 hat das Parlament das neue Bundesgesetz über den Datenschutz (revDSG) ... verabschiedet.' It governs the processing of personal data by federal bodies and by private persons; cantonal and communal bodies are governed by cantonal data protection acts, not by this one — this pass did not find a source stating that division explicitly, so it is retained from the original sourcing without a fresh citation."
-    confidence: medium
+    evidence: "Confirmed by reading kmu.admin.ch directly (2026-08-22): 'Die hiesigen Unternehmen müssen sich ab dem 1. September 2023 an die revidierten Regelungen anpassen. In seiner Herbstsession 2020 hat das Parlament das neue Bundesgesetz über den Datenschutz (revDSG) ... verabschiedet.' CLOSES discovery/unresolved.md row #113. The federal/cantonal division is now directly sourced: the statute's own Fedlex pdf-a text (SR 235.1, read directly 2026-09-19), Article 2 (Persönlicher und sachlicher Geltungsbereich), states the act applies to processing of personal data of natural persons by private persons and by 'Bundesorgane' (federal bodies) — matching the division this entity already recorded."
+    confidence: high
     valid_from: 2023-09-01
     valid_until: null
   - type: aligned-with
@@ -68,6 +68,10 @@ sources:
     url: "https://www.fedlex.admin.ch/eli/cc/2022/491/de"
     publisher: "Fedlex — Die Publikationsplattform des Bundesrechts"
     accessed: "2026-08-22"
+  - title: "Bundesgesetz über den Datenschutz (Datenschutzgesetz, DSG), SR 235.1 (pdf-a, Stand am 1. September 2023)"
+    url: "https://www.fedlex.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2022/491/20230901/de/pdf-a/fedlex-data-admin-ch-eli-cc-2022-491-20230901-de-pdf-a.pdf"
+    publisher: "Fedlex — Die Publikationsplattform des Bundesrechts"
+    accessed: "2026-09-19"
 ---
 
 # Revidiertes Datenschutzgesetz (revDSG)
@@ -87,6 +91,15 @@ sources:
 > title, and it broke the exact-match check against every source. The
 > unattested alternative names "nDSG" and "Swiss Federal Act on Data
 > Protection" have been removed.
+>
+> **Closed 2026-09-19** (`discovery/unresolved.md` row #113). A search
+> for the exact in-force-date path segment Fedlex's pdf-a filestore
+> requires — the blocker that left this row "attempted, inconclusive" on
+> 2026-09-17 — surfaced the correct URL directly rather than by guessing:
+> `eli/cc/2022/491/20230901/de/pdf-a/...`. Fetched and read directly (as
+> a local PDF, page images, since WebFetch again returned only binary
+> stream content for it) — the same workaround already used elsewhere in
+> the Atlas for PDFs the fetch tool cannot parse as text.
 
 ## Description
 
@@ -99,6 +112,23 @@ replaced an act dating from **1992** — confirmed verbatim on
 kalaidos-fh.ch: "Das aktuelle DSG der Schweiz stammt aus dem Jahr 1992
 und wird aktuellen Technologien wie Social-Media-Plattformen oder
 Cloud-Diensten nicht mehr gerecht."
+
+## Read directly at last — 2026-09-19
+
+The Fedlex pdf-a text, read directly for the first time, gives the
+statute's own title page: **"Bundesgesetz über den Datenschutz
+(Datenschutzgesetz, DSG), SR 235.1, vom 25. September 2020 (Stand am
+1. September 2023)"** — adopted **25 September 2020**, consolidated to
+reflect its state as of the **1 September 2023** entry-into-force date
+already carried in this entity's `start_date`. Article 1 states its
+purpose as protecting the personality and fundamental rights of natural
+persons whose personal data is processed; Article 2 confirms its personal
+and material scope covers processing by private persons and federal
+bodies, explicitly excluding purely personal use, parliamentary
+deliberations, and data processed by institutional beneficiaries under
+the Host State Act — corroborating, from the statute's own text, the
+federal/cantonal division this entity's `applies-in` evidence already
+recorded without a direct citation.
 
 ## `aligned-with`, not `implements-requirement-from`
 
@@ -145,8 +175,9 @@ protection act relate to the GDPR":
 ## Sources
 
 Listed in frontmatter. kmu.admin.ch, kalaidos-fh.ch and piwikpro.de were
-read directly this pass. **The Fedlex citation is now present** — see the
-caveat above for why it does not yet carry a quote.
+read directly in the 2026-08-22 pass. **The Fedlex pdf-a text is now read
+directly** (2026-09-19), closing the long-standing "retrieved but
+unreadable" gap — see "Read directly at last" above.
 
 ## `applies-in` [[CH]] — the [[GB-UK-GDPR]] precedent, not a new one
 
