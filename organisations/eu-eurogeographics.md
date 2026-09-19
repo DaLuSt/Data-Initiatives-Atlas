@@ -30,7 +30,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-19"
 previous_version: null
 successor: null
 
@@ -44,6 +44,7 @@ related_entities:
   - CH-SWISSTOPO
   - GB-OS
   - IE-TAILTE
+  - DK-KLIMADATASTYRELSEN
   - UN-GGIM-EUROPE
   - EU-INSPIRE
 relationships:
@@ -72,6 +73,11 @@ sources:
 
 # EuroGeographics
 
+> **Narrowed 2026-09-19** (`discovery/unresolved.md` row #50): a sixth
+> member, [[DK-KLIMADATASTYRELSEN]], is now confirmed directly on
+> EuroGeographics' own member-profile page. See "Why the members attach
+> with `participates-in` and not `part-of`" below.
+>
 > **Re-verified 2026-08-28.** `eurogeographics.org` was previously reported
 > as blocked by the network egress proxy; it is reachable this pass, and
 > both its own pages cited in frontmatter (home page and members page) were
@@ -158,6 +164,15 @@ Five Atlas organisations are NMCAs of European countries and are attached on
 that rule: [[NL-KADASTER]], [[NO-KARTVERKET]], [[CH-SWISSTOPO]], [[GB-OS]]
 and [[IE-TAILTE]]. The edges live on the members.
 
+**Narrowed 2026-09-19** (`discovery/unresolved.md` row #50): a sixth member
+is now confirmed, and by a stronger route than the composition rule.
+[[DK-KLIMADATASTYRELSEN]]'s own EuroGeographics member profile page,
+read directly, states "Member status: Full" under the English spelling
+"Agency for Climate Data" — a direct membership record rather than an
+inference from the "NMCA of a European country" rule. The full member
+list itself remains unretrieved (see "Sources" below), so this closes one
+member, not the roster.
+
 ## The edge that is still refused
 
 `discovery/candidates.md` also carried *"[[EU-INSPIRE]] → the UN-GGIM
@@ -189,3 +204,8 @@ Listed in frontmatter — the association's own membership page and home page
 were read directly this pass (2026-08-28); the European Environment
 Agency's page is dead (302 → 404, see caveat above) and is retained in the
 list only as a record of what was originally cited, not as a live source.
+[[DK-KLIMADATASTYRELSEN]]'s EuroGeographics member profile page was read
+directly on that entity 2026-09-19, not re-fetched here — its own members
+listing page returned truncated content to this pass's fetch tooling and
+could not be enumerated in full, so the wider roster question in
+`discovery/unresolved.md` row #50 stays open beyond this one member.
