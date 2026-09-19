@@ -28,7 +28,7 @@ verification: primary-source
 
 start_date: 2017-01-01
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-09-19"
 previous_version: null
 successor: null
 
@@ -39,6 +39,7 @@ related_entities:
   - UN-SDG-INDICATORS
   - EU-EUROSTAT
   - EU-ESS
+  - DE-NACHHALTIGKEITSINDIKATOREN
 relationships:
   - type: based-on
     target: UN-SDG-INDICATORS
@@ -75,6 +76,10 @@ sources:
 > **Verified 2026-08-21.** Every source this entity cites is on a domain the
 > repository owner confirmed read and correct — `europa.eu`. `verification:
 > primary-source`. See `docs/re-verification.md` §"The confirmed domains".
+>
+> **Narrowed 2026-09-19** (`discovery/unresolved.md` row #175): Germany's
+> own national SDG indicator set is now modelled. See "The `applies-in`
+> question" below.
 
 ## Description
 
@@ -113,8 +118,16 @@ thematic"* levels — implying national sets exist alongside this one rather
 than deriving from it.
 
 Adding `applies-in` here to match the pattern of the other EU entities would
-be pattern-matching, not modelling. **No national SDG indicator set is
-modelled either**, for any of the five countries; none was researched.
+be pattern-matching, not modelling. **One national SDG indicator set is
+now modelled, 2026-09-19**: [[DE-NACHHALTIGKEITSINDIKATOREN]], Germany's
+own indicator set for the German Sustainability Strategy, maintained by
+[[DE-DESTATIS]] since 2006 and `based-on` [[UN-SDG-INDICATORS]] with at
+least one indicator per goal — sourced from destatis.de, read directly.
+No relationship is asserted between it and this entity: nothing read
+connects the German national set to the EU set specifically, only to the
+shared UN ancestor both descend from independently. The other four of the
+five original countries still have no national SDG indicator set
+modelled.
 
 ## The 2023 EU voluntary review is not modelled
 
@@ -143,4 +156,6 @@ read the sources.
 
 Listed in frontmatter — four Eurostat pages, including the 2017 news item
 announcing the establishment of the indicator list, which is the basis for
-the `start_date`.
+the `start_date`. Destatis's own page on Germany's national indicator set
+was read directly on [[DE-NACHHALTIGKEITSINDIKATOREN]], not re-fetched
+here.
