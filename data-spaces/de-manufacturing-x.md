@@ -25,7 +25,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-19"
 previous_version: null
 successor: null
 
@@ -40,6 +40,13 @@ relationships:
     source: fact
     evidence: "Confirmed by reading oiger.de and the Plattform Industrie 4.0 Manufacturing-X Council Germany page directly (2026-08-28): the Federal Ministry for Economic Affairs and Climate Action funds Manufacturing-X with up to 150 million euros, and the Manufacturing-X Council Germany — 'the overarching body for coordinating the national cooperation of the Manufacturing-X initiative' — is 'moderated by the Federal Ministry of Economics and Energy (BMWE) and supported by the Federal Ministry of Research, Technology and Space (BMFTR)' (the ministries' post-2025 renamed successors of the BMWK and BMBF respectively). The ministry's own bundeswirtschaftsministerium.de pages returned a Radware bot-verification challenge on every attempt this pass and could not be read directly; oiger.de's direct reporting of the same 150-million-euro figure and Fraunhofer ISST's own page (also read directly) that Manufacturing-X 'is a global initiative funded by the Federal Ministry for Economic Affairs and Energy (BMWE)' substitute for it."
     confidence: high
+    valid_from: null
+    valid_until: null
+  - type: related-to
+    target: EU-MANUFACTURING-DATA-SPACE
+    source: fact
+    evidence: "PARTIALLY CLOSES discovery/unresolved.md row #120. manufacturingdataspace-csa.eu — the EU-funded ('Funded by the European Union', confirmed reading the site's own EU DataSpace 4.0 Week page directly) Coordination and Support Action that runs 'Data Space 4.0,' named by the Commission's own 'Common European data spaces' overview page (already cited on EU-MANUFACTURING-DATA-SPACE) as one of the three things constituting the manufacturing data space alongside UNDERPIN and SM4RTENANCE — publishes its own factsheet on Manufacturing-X, read directly, describing it as 'International Project | Data Space,' led by Plattform Industrie 4.0, founded 2023, with 'Connected Initiatives: Catena-X / Gaia-X / DSSC / Mobility Data Space / …'. This is the EU manufacturing-data-space coordination action's own tracking of Manufacturing-X as a recognised initiative in the landscape it coordinates — not a statement that Manufacturing-X is organisationally part of the EU data space, which no source states. `type: related-to` at `confidence: medium` reflects that distinction: catalogued by the coordinating body, not asserted as contained within it."
+    confidence: medium
     valid_from: null
     valid_until: null
   - type: based-on
@@ -71,6 +78,14 @@ sources:
     url: "https://oiger.de/2023/08/21/bund-gibt-150-millionen-euro-manufacturing-x/187925"
     publisher: "oiger.de"
     accessed: "2026-08-28"
+  - title: "MANUFACTURING-X — Data Space 4.0 (factsheet)"
+    url: "https://manufacturingdataspace-csa.eu/wp-content/uploads/2024/05/Manufacturing-X.pdf"
+    publisher: "Manufacturing DataSpace CSA (Data Space 4.0)"
+    accessed: "2026-09-19"
+  - title: "EU DataSpace 4.0 Week"
+    url: "https://manufacturingdataspace-csa.eu/eu-dataspace-4-0-week/"
+    publisher: "Manufacturing DataSpace CSA (Data Space 4.0)"
+    accessed: "2026-09-19"
 ---
 
 # Manufacturing-X
@@ -83,6 +98,11 @@ sources:
 > by Fraunhofer ISST's own page) covering the same €150 million funding
 > fact. `verification: primary-source` — a genuine majority (four of five
 > sources now listed) was read directly.
+>
+> **Partially closed 2026-09-19** (`discovery/unresolved.md` row #120):
+> the EU manufacturing data space's own coordination action tracks
+> Manufacturing-X as a recognised initiative. See "The coordination
+> action's own tracking" below.
 
 ## Description
 
@@ -122,17 +142,31 @@ directly — **Construct-X**, **Factory-X** (2024) and **Aerospace-X** as
 lighthouse projects within Manufacturing-X. ISST's page also names
 **HealthTrack-X**, not previously recorded here.
 
-## No edge to [[EU-MANUFACTURING-DATA-SPACE]]
+## The coordination action's own tracking — 2026-09-19
 
-The German initiative and the common European manufacturing data space
-occupy the same sector, and it would be easy to draw a line between them.
+For several passes, no source connected Manufacturing-X to
+[[EU-MANUFACTURING-DATA-SPACE]] — the EU data space's own deployment
+projects were named as UNDERPIN and SM4RTENANCE, neither of which any
+source read connected to Manufacturing-X, and "occupying the same sector"
+is not evidence of a relationship.
 
-**No source read this pass states one**, including the two new sources
-fetched (oiger.de, Fraunhofer IOSB's Factory-X page). The EU data space's
-own deployment projects are named elsewhere as UNDERPIN and SM4RTENANCE,
-neither of which any source read connects to Manufacturing-X, and a
-national initiative predating the EU deployment is not thereby part of it.
-The question remains logged in `discovery/unresolved.md`.
+That refusal is now narrowed rather than reversed. `manufacturingdataspace-csa.eu`
+— the EU-funded ("Funded by the European Union," read directly on the
+site's own EU DataSpace 4.0 Week page) Coordination and Support Action
+running **Data Space 4.0**, which the Commission's own "Common European
+data spaces" overview page names as one of the three things constituting
+the manufacturing data space alongside UNDERPIN and SM4RTENANCE — publishes
+its own factsheet on Manufacturing-X, read directly. It describes
+Manufacturing-X as "International Project | Data Space," led by Plattform
+Industrie 4.0, founded 2023, with "Connected Initiatives: Catena-X /
+Gaia-X / DSSC / Mobility Data Space / …".
+
+That is the EU manufacturing-data-space coordination action's own
+tracking of Manufacturing-X as a recognised initiative in the landscape it
+coordinates — genuine and sourced, but it is cataloguing, not
+organisational membership. No source states Manufacturing-X is *part of*
+the EU data space, so `related-to` is recorded rather than `part-of` or
+`participates-in`, at `confidence: medium`.
 
 ## Not modelled
 
@@ -153,4 +187,6 @@ every attempt — a genuinely blocked domain, not silently dropped — and
 oiger.de's 2023 reporting was added as a directly-read substitute covering
 the same funding fact. Plattform Industrie 4.0, Fraunhofer ISST and
 Fraunhofer IOSB's own pages were all read directly and corroborate each
-other independently.
+other independently. Two `manufacturingdataspace-csa.eu` pages — the
+Manufacturing-X factsheet and the EU DataSpace 4.0 Week page — were added
+and read directly 2026-09-19, closing part of the EU-data-space question.
