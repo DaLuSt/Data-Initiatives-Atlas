@@ -122,7 +122,8 @@ Gaia-X basis in their own words, and ARENA2036 goes further, calling it
 also confirmed directly: ISST's own page states plainly that "Catena-X is
 based on GAIA-X and the International Data Spaces, using the Dataspace
 Connector," and names Fraunhofer ISST's own contribution of IDS components
-to the consortium.
+to the consortium. That Dataspace Connector is now its own Atlas entity,
+[[INTL-IDS-CONNECTOR]], created 2026-09-19.
 
 It is the data-centric platform on which vehicle manufacturers, suppliers
 and service providers exchange information securely along the automotive
