@@ -24,7 +24,7 @@ verification: primary-source
 
 start_date: 2002-05-06
 end_date: null
-last_verified: "2026-09-17"
+last_verified: "2026-09-19"
 previous_version: ES-CESID
 successor: null
 
@@ -37,6 +37,8 @@ related_entities:
   - ES-CCN
   - ES-CIFAS
   - ES-CESID
+  - ES-JEFATURA-DE-INFORMACION
+  - ES-COMISARIA-GENERAL-DE-INFORMACION
 relationships:
   - type: governed-by
     target: ES-LEY-11-2002
@@ -93,6 +95,10 @@ sources:
 > segunda, re-read directly, both suppresses CESID by name and states the
 > CNI succeeds it — now modelled as [[ES-CESID]]. See "Relationships"
 > below.
+>
+> **Narrowed further 2026-09-19** (`discovery/unresolved.md` row #193):
+> the National Police's and Guardia Civil's own information services are
+> now modelled — see "Not modelled" below.
 
 ## Description
 
@@ -160,9 +166,11 @@ through a body that was already present.
 - ~~**CIFAS**, the armed forces' intelligence centre~~ — closed 2026-09-06,
   now [[ES-CIFAS]], `governed-by` [[ES-ORDEN-DEF-1076-2005]]. Spain is no
   longer the one-service country in the batch — see below.
-- The information services of the **National Police** and **Guardia
-  Civil**. The sources mention a common inspection regime covering them;
-  none was researched.
+- ~~The information services of the **National Police** and **Guardia
+  Civil**~~ — closed 2026-09-19, now [[ES-COMISARIA-GENERAL-DE-INFORMACION]]
+  and [[ES-JEFATURA-DE-INFORMACION]] respectively, both `part-of` [[ES]].
+  The **common inspection regime** the sources mention as covering all of
+  Spain's intelligence bodies remains unresearched.
 - The **Comisión Delegada del Gobierno para Asuntos de Inteligencia**, the
   government committee that sets the CNI's annual objectives.
 - The CNI's own **ministry-attachment history** beyond the 2011/2018
@@ -180,4 +188,8 @@ through a body that was already present.
 
 Listed in frontmatter, all four read directly across two passes; Ley
 11/2002's own text (already cited) re-read 2026-09-17 for its
-Disposición adicional segunda, closing the CESID succession gap.
+Disposición adicional segunda, closing the CESID succession gap. The
+National Police's and Guardia Civil's own information services were
+researched and modelled separately on 2026-09-19 — see
+[[ES-COMISARIA-GENERAL-DE-INFORMACION]] and
+[[ES-JEFATURA-DE-INFORMACION]] for their own sources.
