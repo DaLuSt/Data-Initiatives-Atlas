@@ -26,7 +26,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-25"
+last_verified: "2026-09-19"
 previous_version: null
 successor: null
 
@@ -38,12 +38,20 @@ related_entities:
   - DK
   - DK-DATAFORDELER
   - EU-INSPIRE
+  - EU-EUROGEOGRAPHICS
 relationships:
   - type: part-of
     target: DK
     source: fact
     evidence: "Confirmed by reading klimadatastyrelsen.dk's own 'Lovstof' page directly (2026-08-25): 'Bekendtgørelsen fastsætter hvilke beføjelser i ovennævnte love, Klimadatastyrelsen udøver på vegne af klima-, energi- og forsyningsministeren' (the executive order sets out which powers under the above acts Klimadatastyrelsen exercises on behalf of the Minister for Climate, Energy and Utilities) — a Danish state agency acting on ministerial authority. Anchor edge under metadata/relationship-types.md §2.3."
     confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: participates-in
+    target: EU-EUROGEOGRAPHICS
+    source: fact
+    evidence: "PARTIALLY CLOSES discovery/unresolved.md row #50. EuroGeographics' own member profile page (eurogeographics.org/member/agency-for-data-supply-and-infrastructure/), read directly 2026-09-19, states 'Member status: Full', 'National name: Klimadatastyrelsen', 'English spelling: Agency for Climate Data', with the agency's own Copenhagen postal address. This is a direct membership statement on EuroGeographics' own site, not the composition-rule inference the other five member edges rest on."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -60,6 +68,10 @@ sources:
     url: "https://klimadatastyrelsen.dk/om-klimadatastyrelsen/lovstof"
     publisher: "Klimadatastyrelsen"
     accessed: "2026-08-25"
+  - title: "Agency for Climate Data — member profile"
+    url: "https://eurogeographics.org/member/agency-for-data-supply-and-infrastructure/"
+    publisher: "EuroGeographics"
+    accessed: "2026-09-19"
 ---
 
 # Klimadatastyrelsen
@@ -67,6 +79,10 @@ sources:
 > **Closes a gap named on [[DK-DATAFORDELER]] since it was created.**
 > "Klimadatastyrelsen, which operates it, is not modelled." All three
 > cited pages were read directly this pass.
+>
+> **Partially closes discovery/unresolved.md row #50, 2026-09-19**:
+> EuroGeographics' own member profile confirms this agency's full
+> membership. See "A EuroGeographics member, found" below.
 
 ## Description
 
@@ -129,9 +145,22 @@ citation.
   organisational history was established this pass, hence `start_date:
   null`.
 
+## A EuroGeographics member, found — 2026-09-19
+
+`discovery/unresolved.md` row #50 asks which of EuroGeographics' roughly
+60 member organisations are Atlas entities. EuroGeographics' own member
+profile page, read directly, confirms Klimadatastyrelsen as a **full
+member**, under the English spelling "Agency for Climate Data" — the
+agency's former name, retained on the profile despite the 2023 rename
+recorded elsewhere on this entity. `participates-in` [[EU-EUROGEOGRAPHICS]]
+is recorded at `confidence: high`, since the source is EuroGeographics'
+own membership directory rather than the composition-rule inference the
+other five member edges rest on.
+
 ## Relationships
 
 - `part-of` [[DK]] — anchor edge.
+- `participates-in` [[EU-EUROGEOGRAPHICS]] — see above.
 
 [[DK-DATAFORDELER]] carries the `maintained-by` edge pointing here.
 [[EU-INSPIRE]] carries the `applies-in` [[DK]] edge this pass's Lovstof
@@ -139,6 +168,7 @@ reading supports.
 
 ## Sources
 
-Listed in frontmatter. All three pages were read directly this pass;
-`retsinformation.dk` was tried and found genuinely unreadable (a
-JavaScript single-page application).
+Listed in frontmatter. The first three pages were read directly in the
+2026-08-25 pass; `retsinformation.dk` was tried and found genuinely
+unreadable (a JavaScript single-page application). The EuroGeographics
+member profile was added and read directly 2026-09-19.
