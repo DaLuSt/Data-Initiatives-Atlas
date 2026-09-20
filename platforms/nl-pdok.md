@@ -19,9 +19,9 @@ confidence: medium
 coverage: medium
 verification: primary-source
 
-start_date: 2013-01-01
+start_date: null
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-09-20"
 previous_version: null
 successor: null
 
@@ -71,6 +71,10 @@ sources:
 > partners and the 2013 establishment are confirmed; PDOK's own pages also
 > reveal it became independently operated by the Kadaster from 2018, a
 > detail the prior text did not carry.
+>
+> **Closed 2026-09-20** (`discovery/unresolved.md` row #137 and ontology
+> item #14): the `2013-01-01` placeholder `start_date` is now `null`, per
+> the schema-wide convention this pass formalised.
 
 ## Description
 
@@ -97,8 +101,12 @@ gap this section used to flag. [[NL-RIJKSWATERSTAAT]] carries its own
 `participates-in` edge back to this platform, and is itself `part-of`
 [[NL-IENW]].
 
-`start_date: 2013-01-01` is a **placeholder for "in 2013"** — no precise
-establishment date was located, and nothing read this pass supplied one.
+**`start_date` set to `null`, 2026-09-20** (`discovery/unresolved.md` row
+#137, applying the convention formalised the same day in
+`metadata/metadata-schema.md`): established "in 2013," but no precise date
+was ever located, and the entity previously carried a `2013-01-01`
+placeholder implying a precision the sources don't support. The year is
+kept here in prose instead.
 
 ## Relationships
 

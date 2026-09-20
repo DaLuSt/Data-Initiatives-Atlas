@@ -84,6 +84,17 @@ sources:               # required for any entity making factual claims
   Omitting the field is treated as "not stated"; prefer stating it
   explicitly on any entity added under constrained sourcing conditions, so
   a later pass can find them with a single grep.
+- **start_date / end_date**: full ISO dates only. **When only the year (or
+  year and month) is known, use `null` and explain the imprecision in
+  prose** — never a `YYYY-01-01`-style placeholder implying a precision the
+  sources don't support. Decided in practice on [[NL-RORA]] (2026-08-27)
+  and formalised here 2026-09-20, closing `discovery/unresolved.md` item
+  #14. This repository does not have a separate `date_precision` field;
+  `null` plus a prose note (e.g. "founded in 1996, exact date not stated by
+  any source read") carries the same information without a schema change.
+  Existing entities still carrying a `YYYY-01-01` placeholder from before
+  this convention was written down (e.g. [[NL-PDOK]]) are not touched
+  retroactively by this decision alone — fix them at reverification.
 - **last_verified**: the date a human/agent last checked the sources still
   support the current field values. Required once an entity is anything
   other than a stub.
