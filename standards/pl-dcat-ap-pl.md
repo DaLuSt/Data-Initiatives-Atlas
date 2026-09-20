@@ -26,7 +26,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-04"
+last_verified: "2026-09-20"
 previous_version: null
 successor: null
 
@@ -43,12 +43,23 @@ relationships:
     confidence: high
     valid_from: null
     valid_until: null
+  - type: applies-to
+    target: PL-DANE-GOV-PL
+    source: fact
+    evidence: "CLOSES the 'no relationship to a Polish DCAT profile' gap [[PL-DANE-GOV-PL]] itself flagged. Confirmed by reading dane.gov.pl's own DCAT-AP-PL 'Abstract' page directly (2026-09-20): the profile 'is used to describe the data recorded in Polish data portals (e.g. dane.gov.pl)' — naming the portal by name as an implementer, not merely hosting the spec at the same domain. Version 2.1.0 per the same page's navigation, copyrighted to KPRM."
+    confidence: high
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Introduction — DCAT-AP-PL"
     url: "https://dane.gov.pl/dcat-ap-pl/introduction/"
     publisher: "dane.gov.pl (Kancelaria Prezesa Rady Ministrów)"
     accessed: "2026-09-04"
+  - title: "Abstract — DCAT-AP-PL"
+    url: "https://dane.gov.pl/dcat-ap-pl/abstract/"
+    publisher: "dane.gov.pl (Kancelaria Prezesa Rady Ministrów)"
+    accessed: "2026-09-20"
 ---
 
 # DCAT-AP-PL
@@ -58,6 +69,10 @@ sources:
 > application profile alongside the Dutch, German, Belgian and Spanish
 > ones already modelled. `dane.gov.pl`'s own documentation page was
 > read directly this pass.
+>
+> **Closed 2026-09-20**: an `applies-to` edge to [[PL-DANE-GOV-PL]] is
+> added, sourced from the profile's own "Abstract" page naming the
+> portal directly.
 
 ## Description
 
@@ -77,6 +92,18 @@ entity records as `maintained-by` [[PL-MC]]; no `maintained-by` edge is
 asserted from this entity, because no source read connects the
 standard's own stewardship to either body specifically.
 
+## The portal link, made explicit — 2026-09-20
+
+Hosting the spec on `dane.gov.pl` was already a strong hint that the
+profile describes that portal's own catalogue, but the entity previously
+stopped short of asserting it as a sourced fact. The profile's own
+"Abstract" page, read directly, closes that gap: it states DCAT-AP-PL
+"is used to describe the data recorded in Polish data portals (e.g.
+dane.gov.pl)" — naming the portal directly, not merely sharing its
+domain. `applies-to` [[PL-DANE-GOV-PL]] is added on that basis, closing
+the "no relationship to a Polish DCAT profile" gap flagged on that
+entity's own page.
+
 ## A fifth national DCAT-AP child
 
 [[EU-DCAT-AP]] now has five national profiles in the Atlas: Dutch
@@ -87,7 +114,10 @@ Polish.
 ## Relationships
 
 - `based-on` [[EU-DCAT-AP]].
+- `applies-to` [[PL-DANE-GOV-PL]] — closed 2026-09-20.
 
 ## Sources
 
-Listed in frontmatter, read directly this pass.
+Listed in frontmatter. The "Introduction" page was read directly on
+creation (2026-09-04); the "Abstract" page was added and read directly
+2026-09-20.
