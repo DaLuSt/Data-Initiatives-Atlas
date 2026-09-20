@@ -53,10 +53,10 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
-  - type: referred-to-cjeu-over
+  - type: referred-to-court-over
     target: EU-NIS2
     source: fact
-    evidence: "Uses the new `referred-to-cjeu-over` type (metadata/relationship-types.md §2.1, added 2026-09-20). ESCALATION ADDED 2026-09-13, confirmed by reading a Hunton Andrews Kurth law-firm alert directly (already cited on [[ES-LCGC]]): on 8 July 2026 the European Commission referred France, alongside Ireland, Spain and the Netherlands, to the Court of Justice of the EU for failure to notify complete NIS2 transposition, following formal notice on 28 November 2024 and a reasoned opinion on 7 May 2025, with the Commission seeking lump-sum and daily financial penalties until full transposition is notified."
+    evidence: "Uses the new `referred-to-court-over` type (metadata/relationship-types.md §2.1, added 2026-09-20). ESCALATION ADDED 2026-09-13, confirmed by reading a Hunton Andrews Kurth law-firm alert directly (already cited on [[ES-LCGC]]): on 8 July 2026 the European Commission referred France, alongside Ireland, Spain and the Netherlands, to the Court of Justice of the EU for failure to notify complete NIS2 transposition, following formal notice on 28 November 2024 and a reasoned opinion on 7 May 2025, with the Commission seeking lump-sum and daily financial penalties until full transposition is notified."
     confidence: medium
     valid_from: 2026-07-08
     valid_until: null
@@ -100,7 +100,7 @@ sources:
 > five-country comparison table still called this entity's status
 > `unknown`, though it moved to `planned` back on 2026-08-26.
 >
-> **Closed 2026-09-20**: the referral is now a typed `referred-to-cjeu-over`
+> **Closed 2026-09-20**: the referral is now a typed `referred-to-court-over`
 > edge, a new relationship type.
 >
 > **Verified 2026-08-26, and the contradiction resolved.** ANSSI's own
@@ -234,6 +234,6 @@ official parliamentary-record citation on this entity.
 ## Relationships, updated 2026-09-20
 
 - `implements-requirement-from` [[EU-NIS2]].
-- `referred-to-cjeu-over` [[EU-NIS2]] — `confidence: medium`, new
+- `referred-to-court-over` [[EU-NIS2]] — `confidence: medium`, new
   2026-09-20, pulled out of the `implements-requirement-from` edge's
   evidence string into its own typed edge.

@@ -52,10 +52,10 @@ relationships:
     confidence: low
     valid_from: null
     valid_until: null
-  - type: referred-to-cjeu-over
+  - type: referred-to-court-over
     target: EU-NIS2
     source: fact
-    evidence: "Uses the new `referred-to-cjeu-over` type (metadata/relationship-types.md §2.1, added 2026-09-20), pulling this fact out of the `implements-requirement-from` evidence above into its own typed edge. Confirmed by reading globalpolicywatch.com directly (2026-08-22): 'the European Commission referred Ireland and three other Member States to the CJEU for their failure to transpose NIS2' (July 2026), with the exact date (8 July 2026) and the other three states (Spain, France, Netherlands) confirmed by a Hunton Andrews Kurth law-firm alert read directly 2026-09-13."
+    evidence: "Uses the new `referred-to-court-over` type (metadata/relationship-types.md §2.1, added 2026-09-20), pulling this fact out of the `implements-requirement-from` evidence above into its own typed edge. Confirmed by reading globalpolicywatch.com directly (2026-08-22): 'the European Commission referred Ireland and three other Member States to the CJEU for their failure to transpose NIS2' (July 2026), with the exact date (8 July 2026) and the other three states (Spain, France, Netherlands) confirmed by a Hunton Andrews Kurth law-firm alert read directly 2026-09-13."
     confidence: low
     valid_from: 2026-07-08
     valid_until: null
@@ -129,7 +129,7 @@ alert, read directly on [[ES-LCGC]], names the referral date (8 July
 2026) and the other three member states precisely: Spain, France and the
 Netherlands.
 
-**Closed 2026-09-20**: this referral is now a typed `referred-to-cjeu-over`
+**Closed 2026-09-20**: this referral is now a typed `referred-to-court-over`
 edge to [[EU-NIS2]], a new relationship type (metadata/relationship-types.md
 §2.1) — previously the fact lived only in this entity's prose and the
 `implements-requirement-from` edge's evidence string.

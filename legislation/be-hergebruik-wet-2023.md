@@ -66,10 +66,10 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
-  - type: referred-to-cjeu-over
+  - type: referred-to-court-over
     target: EU-OPEN-DATA-DIRECTIVE
     source: fact
-    evidence: "Uses the new `referred-to-cjeu-over` type (metadata/relationship-types.md §2.1, added 2026-09-20), pulling this fact out of the dated table in prose into its own typed edge. Confirmed by reading the European Commission's own account of the referral directly (2026-08-26): 'The European Commission decides to refer Belgium, Bulgaria, Latvia and the Netherlands to the Court of Justice of the European Union for failing to enact EU rules on open data and public sector data re-use', dated 15 February 2023."
+    evidence: "Uses the new `referred-to-court-over` type (metadata/relationship-types.md §2.1, added 2026-09-20), pulling this fact out of the dated table in prose into its own typed edge. Confirmed by reading the European Commission's own account of the referral directly (2026-08-26): 'The European Commission decides to refer Belgium, Bulgaria, Latvia and the Netherlands to the Court of Justice of the European Union for failing to enact EU rules on open data and public sector data re-use', dated 15 February 2023."
     confidence: high
     valid_from: 2023-02-15
     valid_until: null
@@ -110,7 +110,7 @@ sources:
 >
 > **Closed 2026-09-20**: the 15 February 2023 CJEU referral, previously
 > recorded only in the prose table below, is now a typed
-> `referred-to-cjeu-over` edge — a new relationship type.
+> `referred-to-court-over` edge — a new relationship type.
 
 ## Description
 
@@ -200,7 +200,7 @@ into force on 17 July 2021** — the deadline itself, to the day.
   the consolidated Justel text of the 2016 act showing the inserted
   Article 1 reference to Directive (EU) 2019/1024.
 - `applies-in` [[BE]] (anchor edge).
-- `referred-to-cjeu-over` [[EU-OPEN-DATA-DIRECTIVE]] — `confidence: high`,
+- `referred-to-court-over` [[EU-OPEN-DATA-DIRECTIVE]] — `confidence: high`,
   new 2026-09-20, pulled out of the dated table above into its own typed
   edge.
 

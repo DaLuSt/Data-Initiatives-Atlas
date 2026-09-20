@@ -41,7 +41,7 @@
     "governed-by", "applies-to", "applies-in", "produces", "maintained-by",
     "owned-by", "participates-in", "aligned-with",
     "implements-requirement-from", "cooperates-with", "measures", "supplements",
-    "uses-data-from", "carries-identifier-of", "referred-to-cjeu-over"
+    "uses-data-from", "carries-identifier-of", "referred-to-court-over"
   ],
   "required_fields": [
     "id", "type", "name", "description", "level", "country",

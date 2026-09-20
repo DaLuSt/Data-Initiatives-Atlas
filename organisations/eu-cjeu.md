@@ -72,7 +72,7 @@ sources:
 >
 > **Closed 2026-09-20** (`discovery/unresolved.md` row #44): the second
 > of the three components, the relationship type, now exists —
-> `referred-to-cjeu-over`. Six national instruments carry it. The
+> `referred-to-court-over`. Six national instruments carry it. The
 > infringement-procedure entity type remains unaddressed. See "What this
 > closes, and what it does not" below.
 
@@ -103,7 +103,7 @@ This created the **missing node** [[EU-OPEN-DATA-DIRECTIVE]]'s own file
 named — the graph can show the Court of Justice as an entity.
 
 **Closed 2026-09-20**: the missing relationship type is filled too. A new
-`referred-to-cjeu-over` type (metadata/relationship-types.md §2.1) lets a
+`referred-to-court-over` type (metadata/relationship-types.md §2.1) lets a
 national transposing instrument carry a typed edge to the EU directive it
 was referred over. Six instruments now carry it: [[BE-HERGEBRUIK-WET-2023]]
 and [[NL-WHO]] (Open Data Directive, 15 February 2023) and

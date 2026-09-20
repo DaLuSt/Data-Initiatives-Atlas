@@ -143,7 +143,7 @@ sources:
 > states referred on 8 July 2026 — but the correction was never
 > cross-applied here. Fixed now. Separately, four national instruments
 > ([[IE-NCS-BILL]], [[ES-LCGC]], [[FR-NIS2-LOI]], [[NL-CBW]]) now carry a
-> typed `referred-to-cjeu-over` edge for that actual referral, a new
+> typed `referred-to-court-over` edge for that actual referral, a new
 > relationship type (metadata/relationship-types.md §2.1).
 
 ## Description
