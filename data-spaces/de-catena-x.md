@@ -39,6 +39,7 @@ related_entities:
   - DE-MANUFACTURING-X
   - DE-FACTORY-X
   - DE-AEROSPACE-X
+  - DE-CONSTRUCT-X
 relationships:
   - type: based-on
     target: INTL-IDS-RAM
@@ -216,12 +217,13 @@ snippets — and it is queued in `discovery/research-queue.md` accordingly.
 
 Catena-X sits within a broader German industrial data-space family
 including [[DE-MANUFACTURING-X]], confirmed this pass as the initiative
-Catena-X's approach was generalised into. **Closed 2026-09-19–20**: two
-lighthouse projects are now Atlas entities, both `based-on` this one and
+Catena-X's approach was generalised into. **Closed 2026-09-19–20**: three
+lighthouse projects are now Atlas entities, each `based-on` this one and
 `part-of` [[DE-MANUFACTURING-X]] — [[DE-FACTORY-X]] (mechanical
-engineering) and [[DE-AEROSPACE-X]] (aerospace supply chains, led
-industrially by Airbus). Construct-X and HealthTrack-X remain unmodelled,
-and no industry or manufacturing domain entity was created:
+engineering), [[DE-AEROSPACE-X]] (aerospace supply chains, led
+industrially by Airbus) and [[DE-CONSTRUCT-X]] (construction industry,
+led by Fraunhofer ISST). HealthTrack-X remains unmodelled, and no
+industry or manufacturing domain entity was created:
 `metadata/taxonomy.md` §1 requires a domain to connect at least two
 entities, and Catena-X alone does not meet the threshold. `domains: []` is
 therefore correct rather than an omission.

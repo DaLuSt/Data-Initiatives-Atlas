@@ -36,6 +36,7 @@ related_entities:
   - EU-MANUFACTURING-DATA-SPACE
   - DE-FACTORY-X
   - DE-AEROSPACE-X
+  - DE-CONSTRUCT-X
 relationships:
   - type: applies-in
     target: DE
@@ -170,22 +171,22 @@ organisational membership. No source states Manufacturing-X is *part of*
 the EU data space, so `related-to` is recorded rather than `part-of` or
 `participates-in`, at `confidence: medium`.
 
-## Factory-X and Aerospace-X, now their own entities
+## Three lighthouse projects, now their own entities
 
-`discovery/unresolved.md` row #131 flagged Factory-X and Aerospace-X as
-unmodelled despite being named here as lighthouse projects. **Factory-X**
-is now [[DE-FACTORY-X]] (2026-09-19), `part-of` this entity and
-`based-on` [[DE-CATENA-X]], sourced from Fraunhofer IOSB's own page and
-factory-x.org's own page. **Aerospace-X** is now [[DE-AEROSPACE-X]]
-(2026-09-20), same relationships, sourced from Fraunhofer ISST's and
-Fraunhofer IPT's own pages — an aerospace-supply-chain lighthouse led
-industrially by Airbus, running April 2024 – June 2026.
+`discovery/unresolved.md` row #131 flagged Factory-X, Aerospace-X and
+Construct-X as unmodelled despite being named here as lighthouse
+projects. All three are now Atlas entities, each `part-of` this entity
+and `based-on` [[DE-CATENA-X]]: **Factory-X** ([[DE-FACTORY-X]],
+2026-09-19, mechanical engineering), **Aerospace-X** ([[DE-AEROSPACE-X]],
+2026-09-20, aerospace supply chains, led industrially by Airbus, April
+2024 – June 2026), and **Construct-X** ([[DE-CONSTRUCT-X]], 2026-09-20,
+construction industry, led by Fraunhofer ISST with EU IPCEI-CIS
+co-funding, March 2025 – February 2028).
 
 ## Not modelled
 
-- **Construct-X** and **HealthTrack-X** —
-  the remaining lighthouse projects and sibling initiatives named
-  directly in Fraunhofer ISST's own page.
+- **HealthTrack-X** — the remaining sibling initiative named directly
+  in Fraunhofer ISST's own page, not independently researched this pass.
 - **Plattform Industrie 4.0**, whose concepts Manufacturing-X builds on and
   which publishes the Council's material.
 - The **BMWK/BMWE** itself. No German ministry other than [[DE-BMI]] is an
