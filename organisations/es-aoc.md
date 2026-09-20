@@ -41,6 +41,7 @@ domains:
 organisations: []
 related_entities:
   - ES
+  - ES-MADRID-DIGITAL
 relationships:
   - type: part-of
     target: ES
@@ -109,6 +110,9 @@ parties are public administrations, and its statutory mandate under Law
   platforms (eNOTUM, eTRAM, e-FACT) individually.
 - The 2025 statutory reform (Agreement GOV/160/2025) mentioned on AOC's
   own page — not independently researched this pass.
+- Any relationship to [[ES-MADRID-DIGITAL]] (Madrid's own regional IT
+  agency, added 2026-09-20) — no source connects them; recorded for
+  navigation only, as siblings under `discovery/unresolved.md` item #5.
 
 ## Relationships
 
