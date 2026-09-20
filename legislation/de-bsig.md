@@ -28,7 +28,7 @@ verification: primary-source
 
 start_date: 2009-08-20
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-20"
 previous_version: null
 successor: null
 
@@ -66,6 +66,13 @@ sources:
 > both `bsi.bund.de` pages, which between them supply the previously-missing
 > enactment date. `verification: primary-source`; `confidence` raised to
 > `high` and `coverage` to `medium`.
+>
+> **Ontology decision, 2026-09-20**: [[DE-NIS2UMSUCG]]'s edge to this entity
+> moves from `supersedes` to `amends` (metadata/relationship-types.md §2.1),
+> closing `discovery/unresolved.md` items #7 and #68. This entity's own
+> `status: active` is no longer a deliberate inconsistency requiring
+> explanation — see "Why this entity is active" below, rewritten
+> accordingly.
 
 ## Description
 
@@ -113,12 +120,13 @@ Three expansions are now sourced, one more than before:
 predecessor, and its amendment history are now recorded, though its
 detailed internal structure (chapters, sections beyond § 4) still is not.
 
-## Why this entity is `status: active` while something `supersedes` it
+## Why this entity is `status: active` — resolved 2026-09-20
 
-[[DE-NIS2UMSUCG]] carries a `supersedes` relationship pointing here, and
-this entity is nevertheless `active` rather than `superseded`. That is a
-deliberate inconsistency, not an oversight, and this pass's reading
-reinforces rather than undermines it.
+[[DE-NIS2UMSUCG]] carries an edge pointing here, and this entity is
+`active` rather than `superseded`. Until 2026-09-20 that edge was
+`supersedes` at `confidence: low`, which made the pairing a **deliberate
+inconsistency** requiring explanation on both entities' files: `supersedes`
+normally means the target retires, and the BSIG plainly had not.
 
 The BSIG was **amended, not repealed**. OpenKRITIS's page, read directly,
 does state that "[d]as bisherige BSI-Gesetz tritt in der alten Fassung
@@ -129,25 +137,27 @@ instead comprehensively revised, the more accurate description is the
 ordinary German legislative pattern for an Änderungsgesetz that restates a
 law's text in full (Neufassung): the old wording lapses at the moment the
 new wording takes effect, but the statute continues in force under its own
-name and citation. It continues in force under its own name with
-substantially new content. The `supersedes` relationship recorded on
-[[DE-NIS2UMSUCG]] is a poor fit at `confidence: low` for want of an
-amendment-lineage relationship type; setting this entity to `superseded` to
-match it would compound a modelling compromise into a false statement about
-German law.
+name and citation.
 
-Where the Atlas has a genuine supersession it says so on both sides —
+**Closed as an ontology decision, 2026-09-20**: [[DE-NIS2UMSUCG]]'s edge
+now uses `amends` (metadata/relationship-types.md §2.1) instead of
+`supersedes` — a type added later, for a different case, that turns out to
+fit this one exactly, and was simply never checked against it until now.
+`amends` carries no implication that the target retires, so `active` is now
+the entity's plainly correct status rather than a flagged inconsistency.
+See [[DE-NIS2UMSUCG]] for the full reasoning.
+
+Where the Atlas has a genuine supersession it still says so on both sides —
 [[NL-WBNI]] is `superseded` and [[NL-CBW]] `supersedes` it; [[DE-IWG]] is
-`superseded` and [[DE-DNG]] `supersedes` it. The absence of that pairing
-here is the signal that this case is different.
-
-The full reasoning, and the relationship-type question it raises, is set
-out in [[DE-NIS2UMSUCG]] and logged in `discovery/unresolved.md`.
+`superseded` and [[DE-DNG]] `supersedes` it. This entity is the other
+pattern: amended, continuing under its own name, and that is now what its
+relationships say.
 
 ## Relationships
 
 **None asserted from this entity.** It is reached from [[DE-BSI]]
-(`governed-by`) and from [[DE-NIS2UMSUCG]] (`supersedes`).
+(`governed-by`) and from [[DE-NIS2UMSUCG]] (`amends`, since 2026-09-20;
+previously `supersedes`).
 
 ## Sources
 
