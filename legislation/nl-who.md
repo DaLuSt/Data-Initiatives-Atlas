@@ -43,10 +43,10 @@ relationships:
     confidence: high
     valid_from: 2024-06-19
     valid_until: null
-  - type: referred-to-cjeu-over
+  - type: referred-to-court-over
     target: EU-OPEN-DATA-DIRECTIVE
     source: fact
-    evidence: "NEW FACT for this entity, added 2026-09-20 using the new `referred-to-cjeu-over` type (metadata/relationship-types.md §2.1). Confirmed by reading the European Commission's own account of the referral directly (already cited on [[BE-HERGEBRUIK-WET-2023]], 2026-08-26): 'The European Commission decides to refer Belgium, Bulgaria, Latvia and the Netherlands to the Court of Justice of the European Union for failing to enact EU rules on open data and public sector data re-use', dated 15 February 2023 — more than sixteen months before the Wet implementatie Open data richtlijn brought this entity into compliance on 19 June 2024. This entity's own sources (rijksoverheid.nl, eerstekamer.nl, minbzk.github.io) were read for the transposition date and do not mention the referral; the fact is cross-applied from [[BE-HERGEBRUIK-WET-2023]]'s sourcing per the Atlas's established practice."
+    evidence: "NEW FACT for this entity, added 2026-09-20 using the new `referred-to-court-over` type (metadata/relationship-types.md §2.1). Confirmed by reading the European Commission's own account of the referral directly (already cited on [[BE-HERGEBRUIK-WET-2023]], 2026-08-26): 'The European Commission decides to refer Belgium, Bulgaria, Latvia and the Netherlands to the Court of Justice of the European Union for failing to enact EU rules on open data and public sector data re-use', dated 15 February 2023 — more than sixteen months before the Wet implementatie Open data richtlijn brought this entity into compliance on 19 June 2024. This entity's own sources (rijksoverheid.nl, eerstekamer.nl, minbzk.github.io) were read for the transposition date and do not mention the referral; the fact is cross-applied from [[BE-HERGEBRUIK-WET-2023]]'s sourcing per the Atlas's established practice."
     confidence: high
     valid_from: 2023-02-15
     valid_until: null
@@ -152,7 +152,7 @@ before** this entity's own transposing amendment took effect — the same
 - Closely related to [[NL-WOO]] (active disclosure of government
   information) — the two concern overlapping but distinct regimes
   (openness vs. re-use). No relationship asserted, as none was sourced.
-- `referred-to-cjeu-over` [[EU-OPEN-DATA-DIRECTIVE]] — `confidence: high`,
+- `referred-to-court-over` [[EU-OPEN-DATA-DIRECTIVE]] — `confidence: high`,
   new 2026-09-20.
 
 ## Sources

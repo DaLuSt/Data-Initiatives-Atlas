@@ -60,10 +60,10 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
-  - type: referred-to-cjeu-over
+  - type: referred-to-court-over
     target: EU-NIS2
     source: fact
-    evidence: "CLOSES PART OF A PREVIOUSLY-FLAGGED GAP (discovery/unresolved.md row #91), using the new `referred-to-cjeu-over` type (metadata/relationship-types.md §2.1, added 2026-09-20). Confirmed by reading a Hunton Andrews Kurth law-firm alert directly (2026-09-13): the European Commission referred Spain, alongside Ireland, France and the Netherlands, to the Court of Justice of the EU on 8 July 2026 for failure to notify complete NIS2 transposition, following formal notice on 28 November 2024 and a reasoned opinion on 7 May 2025, with the Commission seeking lump-sum and daily financial penalties until full transposition is notified — the same escalation already recorded on [[IE-NCS-BILL]]."
+    evidence: "CLOSES PART OF A PREVIOUSLY-FLAGGED GAP (discovery/unresolved.md row #91), using the new `referred-to-court-over` type (metadata/relationship-types.md §2.1, added 2026-09-20). Confirmed by reading a Hunton Andrews Kurth law-firm alert directly (2026-09-13): the European Commission referred Spain, alongside Ireland, France and the Netherlands, to the Court of Justice of the EU on 8 July 2026 for failure to notify complete NIS2 transposition, following formal notice on 28 November 2024 and a reasoned opinion on 7 May 2025, with the Commission seeking lump-sum and daily financial penalties until full transposition is notified — the same escalation already recorded on [[IE-NCS-BILL]]."
     confidence: medium
     valid_from: 2026-07-08
     valid_until: null
@@ -95,7 +95,7 @@ sources:
 > row #91. A law-firm alert, read directly, confirms the Commission
 > referred Spain to the CJEU on 8 July 2026 — see below.
 >
-> **Closed 2026-09-20**: the referral is now a typed `referred-to-cjeu-over`
+> **Closed 2026-09-20**: the referral is now a typed `referred-to-court-over`
 > edge, a new relationship type.
 >
 > **Verified 2026-08-26.** Two of four cited pages were read directly:
@@ -195,7 +195,7 @@ same escalation.
 
 - `implements-requirement-from` [[EU-NIS2]] — the obligation the draft
   addresses, recorded with no `valid_from` because it has not taken effect.
-- `referred-to-cjeu-over` [[EU-NIS2]] — `confidence: medium`, new
+- `referred-to-court-over` [[EU-NIS2]] — `confidence: medium`, new
   2026-09-20, pulled out of the `implements-requirement-from` edge's
   evidence string into its own typed edge.
 

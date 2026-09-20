@@ -44,10 +44,10 @@ relationships:
     confidence: high
     valid_from: 2026-08-15
     valid_until: null
-  - type: referred-to-cjeu-over
+  - type: referred-to-court-over
     target: EU-NIS2
     source: fact
-    evidence: "NEW FACT for this entity, added 2026-09-20 using the new `referred-to-cjeu-over` type (metadata/relationship-types.md §2.1). A Hunton Andrews Kurth law-firm alert, read directly on [[ES-LCGC]] and [[FR-NIS2-LOI]] (2026-09-13), states the European Commission referred the Netherlands, alongside Ireland, Spain and France, to the Court of Justice of the EU on 8 July 2026 for failure to notify complete NIS2 transposition, seeking lump-sum and daily financial penalties until full transposition is notified. This entity's own sources (ncsc.nl, nctv.nl) were read before that referral and do not mention it; the fact is cross-applied from the sibling entities' sourcing per the Atlas's established practice, not independently re-confirmed against a Dutch-specific source this pass. The referral predates this Act's own 15 August 2026 entry into force by five weeks — the Netherlands transposed after being referred, not before."
+    evidence: "NEW FACT for this entity, added 2026-09-20 using the new `referred-to-court-over` type (metadata/relationship-types.md §2.1). A Hunton Andrews Kurth law-firm alert, read directly on [[ES-LCGC]] and [[FR-NIS2-LOI]] (2026-09-13), states the European Commission referred the Netherlands, alongside Ireland, Spain and France, to the Court of Justice of the EU on 8 July 2026 for failure to notify complete NIS2 transposition, seeking lump-sum and daily financial penalties until full transposition is notified. This entity's own sources (ncsc.nl, nctv.nl) were read before that referral and do not mention it; the fact is cross-applied from the sibling entities' sourcing per the Atlas's established practice, not independently re-confirmed against a Dutch-specific source this pass. The referral predates this Act's own 15 August 2026 entry into force by five weeks — the Netherlands transposed after being referred, not before."
     confidence: medium
     valid_from: 2026-07-08
     valid_until: null
@@ -180,7 +180,7 @@ Dutch implementation legislation per `metadata/taxonomy.md` §2:
 - Implements requirements from [[EU-NIS2]].
 - Supersedes [[NL-WBNI]] (confirmed in force from 15 August 2026).
 - [[NL-NCSC]] applies to it as sectoral CSIRT.
-- `referred-to-cjeu-over` [[EU-NIS2]] — `confidence: medium`, new
+- `referred-to-court-over` [[EU-NIS2]] — `confidence: medium`, new
   2026-09-20.
 
 ## Sources

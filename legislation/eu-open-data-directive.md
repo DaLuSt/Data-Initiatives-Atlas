@@ -148,7 +148,7 @@ sources:
 >
 > **Closed 2026-09-20** (`discovery/unresolved.md` row #44): the missing
 > relationship type for "was referred to the Court over" is now filled by
-> `referred-to-cjeu-over`, applied on [[BE-HERGEBRUIK-WET-2023]] and
+> `referred-to-court-over`, applied on [[BE-HERGEBRUIK-WET-2023]] and
 > [[NL-WHO]]. See "Enforcement the Atlas can partly model" below.
 
 ## Description
@@ -296,7 +296,7 @@ Bulgaria, Latvia and the Netherlands to the Court of Justice** for failing to
 transpose it.
 
 **The missing node closed first: [[EU-CJEU]], added 2026-09-05.** **The
-missing edge closes now**: a new `referred-to-cjeu-over` relationship type
+missing edge closes now**: a new `referred-to-court-over` relationship type
 (metadata/relationship-types.md §2.1) lets [[BE-HERGEBRUIK-WET-2023]] and
 [[NL-WHO]] each carry a typed edge to this directive recording their own
 referral, rather than leaving the fact in prose alone. It means a reader
