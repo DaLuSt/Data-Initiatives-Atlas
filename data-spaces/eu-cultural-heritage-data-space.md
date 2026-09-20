@@ -25,7 +25,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-09-20"
 previous_version: null
 successor: null
 
@@ -56,6 +56,10 @@ sources:
     url: "https://www.ne-mo.org/news-events/article/european-commission-proposes-a-common-european-data-space-for-cultural-heritage/"
     publisher: "Network of European Museum Organisations (NEMO)"
     accessed: "2026-08-28"
+  - title: "Common European data space for cultural heritage — Strategy 2025-2030"
+    url: "https://digital-strategy.ec.europa.eu/en/library/common-european-data-space-cultural-heritage-strategy-2025-2030"
+    publisher: "European Commission — Shaping Europe's digital future"
+    accessed: "2026-09-20"
   - title: "Second staff working document on data spaces — SWD(2024) 21 final"
     url: "https://digital-strategy.ec.europa.eu/en/library/second-staff-working-document-data-spaces"
     publisher: "European Commission"
@@ -135,6 +139,15 @@ with media and tourism**. Both are Atlas entities as of this batch
 **No relationship is asserted between them.** "Will explore opportunities for
 cooperation" is a statement of intent, not of an existing connection, and the
 Atlas does not turn intentions into edges.
+
+**Re-checked 2026-09-20**, against a newer source: the Commission's own
+"Common European data space for cultural heritage — Strategy 2025-2030"
+page, read directly, still gives only general language — "potential to
+develop new cross-sector use cases" and "new partnerships beyond the
+cultural heritage sector" — with no specific commitment or project naming
+either [[EU-MEDIA-DATA-SPACE]] or [[EU-TOURISM-DATA-SPACE]]. The refusal
+stands, now checked against the strategy that superseded the original
+"will explore" language.
 
 ## The operator, modelled 2026-09-05
 
