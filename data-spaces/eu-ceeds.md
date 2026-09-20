@@ -37,6 +37,10 @@ related_entities:
   - EU-INSIEME
   - EU-OMEGA-X
   - EU-ENERSHARE
+  - EU-DATA-CELLAR
+  - EU-EDDIE
+  - EU-SYNERGIES
+  - EU-INTNET
   - DE-ENDA
 relationships:
   - type: part-of
@@ -83,9 +87,10 @@ sources:
 > claimed. The correct Commission URL is now cited and was read directly.
 > `verification` moves from `search-only` to `primary-source`.
 >
-> **Narrowed 2026-09-20**: the six Horizon Europe predecessor projects are
-> now named — see "The six Horizon Europe projects, named" below — and two
-> of them are modelled as [[EU-OMEGA-X]] and [[EU-ENERSHARE]].
+> **Closed 2026-09-20**: the six Horizon Europe predecessor projects are
+> now named AND all six are modelled — see "The six Horizon Europe
+> projects, named and modelled" below. `discovery/unresolved.md` row #132
+> is fully closed and removed from the table.
 
 ## Description
 
@@ -133,21 +138,28 @@ but that direct read does **not** itself connect ENDA to CEEDS; the
 "national contribution" framing traces to an unread PDF, and no
 relationship between the two entities is asserted here.
 
-## The six Horizon Europe projects, named — 2026-09-20
+## The six Horizon Europe projects, named and modelled — 2026-09-20
 
 Int:net's own coordination-site page, read directly, names all six
 Horizon Europe projects the Commission funds to support CEEDS deployment:
-five Innovation Actions — **DATA CELLAR, EDDIE, [[EU-ENERSHARE]],
-[[EU-OMEGA-X]], SYNERGIES** — and one Coordination and Support Action,
-**Int:net** itself. Two are now modelled, each `part-of` this entity:
-[[EU-OMEGA-X]] (Atos-coordinated, Spain, 2022–2025) and [[EU-ENERSHARE]]
-(Engineering-coordinated, Italy, 2022–2025). **DATA CELLAR, EDDIE,
-SYNERGIES and Int:net remain unmodelled.**
+five Innovation Actions — [[EU-DATA-CELLAR]], [[EU-EDDIE]],
+[[EU-ENERSHARE]], [[EU-OMEGA-X]] and [[EU-SYNERGIES]] — and one
+Coordination and Support Action, [[EU-INTNET]] itself. **All six are now
+modelled, each sourced from its own official CORDIS record read directly,
+and each `part-of` this entity.** This fully closes
+`discovery/unresolved.md` row #132.
+
+| Project | Coordinator | Country | Duration |
+|---|---|---|---|
+| [[EU-OMEGA-X]] | Atos IT Solutions | Spain | 2022–2025 |
+| [[EU-ENERSHARE]] | Engineering | Italy | 2022–2025 |
+| [[EU-DATA-CELLAR]] | RINA Consulting | Italy | 2022–2025 |
+| [[EU-EDDIE]] | FH OÖ (SAIL) | Austria | 2023–2026 |
+| [[EU-SYNERGIES]] | TXT e-tech | Italy | 2022–2026 |
+| [[EU-INTNET]] | Fraunhofer-Gesellschaft | Germany | 2022–2025 |
 
 ## Not modelled
 
-- **DATA CELLAR, EDDIE, SYNERGIES** and **Int:net** — the four remaining
-  named Horizon Europe CEEDS-supporting projects.
 - The **EU action plan on digitalising the energy system** and the 2026
   Strategic Roadmap.
 - Any **energy domain** entity. `DOMAIN-ENERGY` does not exist and is not
