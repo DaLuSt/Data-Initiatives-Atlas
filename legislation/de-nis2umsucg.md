@@ -26,7 +26,7 @@ verification: primary-source
 
 start_date: 2025-12-06
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-20"
 previous_version: null
 successor: null
 
@@ -47,11 +47,11 @@ relationships:
     confidence: high
     valid_from: 2025-12-06
     valid_until: null
-  - type: supersedes
+  - type: amends
     target: DE-BSIG
     source: fact
-    evidence: "Confirmed by reading Deloitte's own page directly (2026-08-28): 'Dabei wurde kein eigenständiges NIS-2-Gesetz geschaffen, stattdessen erfolgte eine umfassende Revision des bestehenden BSI-Gesetzes' (no standalone NIS2 law was created; instead a comprehensive revision of the existing BSI-Gesetz was carried out), with adjustments to other sector-specific regulations. OpenKRITIS's page, also read directly, uses similar language ('Das bisherige BSI-Gesetz tritt in der alten Fassung dann außer Kraft') describing the same amendment mechanism. See the entity body: this is an amendment lineage, not a repeal, and `supersedes` is recorded at low confidence for exactly that reason."
-    confidence: low
+    evidence: "ONTOLOGY DECISION 2026-09-20, closing discovery/unresolved.md items #7 and #68. Confirmed by reading Deloitte's own page directly (2026-08-28): 'Dabei wurde kein eigenständiges NIS-2-Gesetz geschaffen, stattdessen erfolgte eine umfassende Revision des bestehenden BSI-Gesetzes' (no standalone NIS2 law was created; instead a comprehensive revision of the existing BSI-Gesetz was carried out), with adjustments to other sector-specific regulations. OpenKRITIS's page, also read directly, uses similar language ('Das bisherige BSI-Gesetz tritt in der alten Fassung dann außer Kraft') describing the same amendment mechanism — the ordinary German Änderungsgesetz/Neufassung pattern, where old wording lapses the instant new wording takes effect while the statute continues under its own name and citation. This was originally recorded `supersedes` at `confidence: low` because no better type existed at the time; `amends` (metadata/relationship-types.md §2.1, added in the third research-queue batch, defined as 'modifies the text of another instrument, which continues to exist under its own name and date') was added later for an analogous shape (three of five Open Data Directive transpositions turning out to be amendments to pre-existing acts) but was never checked against this older, already-flagged case. It fits cleanly: this instrument comprehensively revised the BSIG's text; the BSIG continues to exist under its own name and 2009 enactment date; and this instrument separately carries `implements-requirement-from` → [[EU-NIS2]], matching the type's own description of an amending act 'typically carr[ying] both.'"
+    confidence: high
     valid_from: 2025-12-06
     valid_until: null
 
@@ -84,6 +84,13 @@ sources:
 > genuinely blocked rather than silently dropped. Three of five is a
 > genuine majority. `verification: primary-source`; `confidence` raised to
 > `high` on the `implements-requirement-from` edge.
+>
+> **Ontology decision, 2026-09-20**, closing `discovery/unresolved.md`
+> items #7 and #68: the relationship to [[DE-BSIG]] moves from `supersedes`
+> (`confidence: low`) to `amends` (`confidence: high`). See "The relationship
+> to DE-BSIG, resolved" below — the type this entity's own text called "the
+> honest answer" in the German batch was added later for a different case
+> and never checked against this one.
 
 ## Description
 
@@ -128,11 +135,11 @@ other.
 **No relationship between the two acts is asserted.** They are siblings
 under [[EU-NIS2]], the same call made for [[DE-BDSG]] and [[NL-UAVG]].
 
-## ⚠ `supersedes` → [[DE-BSIG]] is recorded at low confidence
+## The relationship to DE-BSIG, resolved — 2026-09-20
 
-This is the weakest modelling decision in the German batch and it is
-flagged rather than smoothed over — and this pass's direct reading
-reinforces rather than resolves the tension.
+This was the weakest modelling decision in the German batch, flagged
+rather than smoothed over, and re-checked without resolution in the
+2026-08-28 re-verification pass.
 
 What the sources say is that the NIS2UmsuCG *comprehensively revised* the
 BSIG — a Novelle, an amending act. Deloitte's own page, read directly, is
@@ -146,37 +153,46 @@ continues under the same name and citation. In German legislative terms the
 BSIG continues to exist under its own name with new content; it was not
 repealed and replaced with a differently-named instrument.
 
-`supersedes` therefore overstates the case. The alternatives were:
+At the time this entity was written, the candidates were:
 
 - **`supersedes`** — overstates; the BSIG was not withdrawn.
 - **`influences`** — badly understates a comprehensive rewrite.
 - **omit** — loses the single most important fact about how Germany
   transposed the directive.
-- **a new relationship type** for amending acts — the honest answer, and
-  the one `metadata/relationship-types.md` §2.3 permits when a batch
-  genuinely needs one. It was not created here because doing so on the
-  strength of what remains an imperfectly-typed relationship, in a batch
-  already re-verifying a whole country, risks adding vocabulary the Atlas
-  then has to live with.
+- **a new relationship type** for amending acts — the honest answer, not
+  created in the German batch itself to avoid adding vocabulary on the
+  strength of one case while re-verifying a whole country.
 
-`supersedes` at `confidence: low` with the reasoning in the evidence field
-was chosen as the least-bad option. **[[DE-BSIG]] is deliberately left at
-`status: active`, not `superseded`** — which is inconsistent with the
-relationship and is meant to be, because the law is in force. Logged in
-`discovery/unresolved.md` as the German batch's principal open modelling
-question.
+That type now exists, just not built for this case: `amends`
+(metadata/relationship-types.md §2.1) was added in the third
+research-queue batch for three Open Data Directive transpositions that
+turned out to be amendments to pre-existing national re-use acts. Nobody
+went back to check it against this older, already-flagged German
+question — until this pass. It fits without qualification: "modifies the
+text of another instrument, which continues to exist under its own name
+and date" is exactly the BSIG's situation, and the type's own description
+of an amending act "typically carr[ying] both" `amends` and
+`implements-requirement-from` matches this entity precisely.
+
+**Closed as an ontology decision, 2026-09-20**: the edge moves from
+`supersedes` (`confidence: low`) to `amends` (`confidence: high`). The
+tension the old edge created — [[DE-BSIG]] left `status: active` despite
+something "superseding" it — dissolves along with it: `amends` carries no
+implication that the target retires, so `DE-BSIG`'s `active` status is now
+simply correct, not a deliberate inconsistency requiring a footnote.
 
 Compare [[EU-EIDAS]] → [[EU-EIDAS2]], which the Atlas records as an
 amendment lineage through `previous_version` / `successor` rather than
-through `supersedes`. That mechanism was not used here because the BSIG
-does not become a new entity — it is the same law, amended.
+through a relationship edge. That mechanism still does not fit here: the
+BSIG does not become a new entity under this pass's resolution either — it
+is the same law, amended, which is exactly what `amends` is for.
 
 ## Relationships
 
 - Implements requirements from [[EU-NIS2]] — confirmed directly this pass,
   `confidence: high`.
-- `supersedes` [[DE-BSIG]] — at low confidence, see above; reasoning
-  reinforced by two directly-read sources this pass.
+- `amends` [[DE-BSIG]] — `confidence: high`, closed 2026-09-20 (previously
+  `supersedes` at `confidence: low`); see above.
 
 ## Sources
 
