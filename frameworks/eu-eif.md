@@ -22,7 +22,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-18"
+last_verified: "2026-09-20"
 previous_version: null
 successor: null
 
@@ -40,6 +40,7 @@ related_entities:
   - DE-IT-ARCHITEKTURRICHTLINIEN
   - EU-INTEROPERABLE-EUROPE-ACT
   - EU-INTEROPERABLE-EUROPE-BOARD
+  - EU-PUBLIC-ADMIN-DATA-SPACE
 relationships:
   - type: governed-by
     target: EU-INTEROPERABLE-EUROPE-ACT
@@ -243,6 +244,12 @@ legal relationship above.
 - `influences` edge (this Framework as target) recorded on
   [[EU-INTEROPERABLE-EUROPE-BOARD]]'s own file — tasked with shaping its
   next revision.
+- **No relationship to [[EU-PUBLIC-ADMIN-DATA-SPACE]] is asserted.**
+  Closed 2026-09-20 as a documented negative on that entity's own file:
+  a dedicated Commission/DSSC webinar deck about that exact data space,
+  read in full, never mentions this Framework, corroborating an earlier
+  negative search of the Interoperable Europe Portal's own data-spaces
+  content.
 
 ## Sources
 

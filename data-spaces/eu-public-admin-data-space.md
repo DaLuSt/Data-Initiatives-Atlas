@@ -22,7 +22,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-19"
+last_verified: "2026-09-20"
 previous_version: null
 successor: null
 
@@ -77,6 +77,10 @@ sources:
     url: "https://www.public-procurement-data-space.europa.eu/en"
     publisher: "European Commission — DG GROW"
     accessed: "2026-09-19"
+  - title: "Webinar: European data spaces for public administrations and the role of data.europa.eu (7 June 2023)"
+    url: "https://data.europa.eu/sites/default/files/course/European%20data%20spaces%20for%20public%20administrations%20and%20data.europa.eu_.pdf"
+    publisher: "data.europa.eu Academy (European Commission DG CNECT, DG GROW, Data Spaces Support Centre)"
+    accessed: "2026-09-20"
 ---
 
 # Common European data space for public administration
@@ -96,6 +100,15 @@ sources:
 > **Deployment project found 2026-09-19** (`discovery/unresolved.md` row
 > #125): the Public Procurement Data Space (PPDS), live since 24 September
 > 2024. See "PPDS, found" below. `coverage` promoted to `medium`.
+>
+> **Closed 2026-09-20** (`discovery/unresolved.md` row #121): the EIF
+> question, the row's last open piece, is now a confirmed documented
+> negative rather than an unresearched gap. A 38-slide EU webinar deck
+> dedicated specifically to this data space and PPDS — covering the Data
+> Governance Act, Data Act, PPDS's own architecture and the Data Spaces
+> Support Centre's role in detail — was read in full and never mentions
+> EIF once. See "The EIF question, closed as a documented negative"
+> below.
 
 ## Description
 
@@ -113,11 +126,12 @@ and everything else the Atlas holds — [[EU-INTEROPERABLE-EUROPE-ACT]],
 [[EU-EIF]], the national interoperability frameworks, the open data portals.
 
 **Most of those connections remain unasserted**, and this is exactly the
-entity where a repository would be most tempted to draw them. One of the
-three temptations is recorded here still open:
+entity where a repository would be most tempted to draw them. All three
+temptations recorded here are now resolved, two positively and one as a
+documented negative:
 
-- [ ] How does the public administration data space relate to [[EU-EIF]]
-  specifically?
+- [x] How does the public administration data space relate to [[EU-EIF]]
+  specifically? **Closed 2026-09-20 as a documented negative** — see below.
 - [x] Does it build on [[EU-SDG]], the Single Digital Gateway? **Answered
   2026-09-19** — see below.
 
@@ -157,11 +171,29 @@ own page lists under this data space — recorded as `governed-by`,
 inferred from proximity. OOTS itself is not modelled as a separate Atlas
 entity (see "Not modelled" below).
 
-The [[EU-EIF]] question above remains fully open — no source read connects
-the European Interoperability Framework to this data space, specifically or
-generally; a further search (2026-09-19) of the Interoperable Europe
-Portal's own "Data Spaces" page found no mention of EIF in its data-spaces
-content.
+## The EIF question, closed as a documented negative — 2026-09-20
+
+The [[EU-EIF]] question was checked twice from independent angles and
+found negative both times. First, a search (2026-09-19) of the
+Interoperable Europe Portal's own "Data Spaces" page found no mention of
+EIF in its data-spaces content. Second, and more thoroughly this pass: a
+38-slide European Commission / Data Spaces Support Centre webinar deck
+titled "European data spaces for public administrations and the role of
+data.europa.eu" (7 June 2023), read in full page by page, is dedicated
+specifically to this data space and its flagship deployment, PPDS. It
+covers the European Data Strategy, the Data Governance Act's four
+pillars, the Data Act's scope, the "data spaces are fish markets, not
+data lakes" framing, PPDS's own architecture and roadmap, and the Data
+Spaces Support Centre's goals, assets and 17-70 engaged initiatives —
+never once naming the European Interoperability Framework.
+
+This is now recorded as a genuine, checked-and-negative finding rather
+than an unresearched gap: two independent Commission-published sources,
+one general (the Interoperable Europe Portal) and one specific
+(a dedicated deep-dive on this exact data space), both omit EIF entirely.
+No relationship is asserted, and none should be inferred from proximity —
+this is the same discipline the Atlas applies to the
+Plattform-Industrie-4.0↔Manufacturing-X and INSPIRE↔UN-GGIM refusals.
 
 ## PPDS, found — 2026-09-19
 
