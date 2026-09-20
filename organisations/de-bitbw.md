@@ -37,6 +37,8 @@ related_entities:
   - DE-HZD
   - DE-IT-NRW
   - DE-AKDB
+  - DE-LDI
+  - DE-IT-NIEDERSACHSEN
 relationships:
   - type: part-of
     target: DE
