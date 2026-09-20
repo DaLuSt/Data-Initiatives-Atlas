@@ -27,7 +27,7 @@ verification: primary-source
 
 start_date: 2008-07-01
 end_date: null
-last_verified: "2026-09-19"
+last_verified: "2026-09-20"
 previous_version: null
 successor: null
 
@@ -114,6 +114,10 @@ sources:
 > low-confidence `related-to` [[EU-GDPR]] edge is added, sourced from
 > two rdw.nl privacy pages read directly. See "A register that is also
 > personal data" below.
+>
+> **Closed 2026-09-20** (`discovery/unresolved.md` row #149): the RDW's
+> consumption of BRP data, described below, is now a typed `uses-data-from`
+> edge recorded on [[NL-RDW]]'s own entity.
 
 ## Description
 
@@ -135,14 +139,12 @@ statement of how the system is meant to work:
 So the RDW **holds** this register, **provides** it, and **consumes**
 [[NL-BRP]].
 
-The Atlas records one of those three. `maintained-by` covers holding and
-providing well enough; **the consumption of BRP data is not modelled**, for
-the same reason the Belastingdienst's use of the WOZ is not — there is no
-relationship type for authorised use.
-
-That the stelsel's own documentation chooses this exact example to explain
-itself, and that the Atlas can express only part of it, is the sharpest
-illustration in this batch of what the missing vocabulary costs.
+**Closed 2026-09-20**: `maintained-by` covers holding and providing well
+enough; the consumption of BRP data is now recorded too, as a
+`uses-data-from` edge on [[NL-RDW]]'s own entity — a new relationship type
+added specifically because the stelsel's own documentation chose this exact
+RDW example to explain itself, and the Atlas could previously express only
+part of it. See metadata/relationship-types.md §2.1.
 
 ## A register that is also personal data — narrowed 2026-09-19
 

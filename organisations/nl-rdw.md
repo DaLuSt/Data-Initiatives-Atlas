@@ -21,7 +21,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-20"
 previous_version: null
 successor: null
 
@@ -30,6 +30,8 @@ domains:
 organisations: []
 related_entities:
   - NL-KVK
+  - NL-BRV
+  - NL-BRP
 relationships:
   - type: participates-in
     target: NL-BASISREGISTRATIES
@@ -37,6 +39,13 @@ relationships:
     evidence: "Confirmed by reading rdw.nl's own page directly (2026-08-27): 'the kentekenregister has functioned as the basisregistratie voertuigen since 1 July 2008,' and RDW 'maintains this foundational registry... a very reliable, complete and current register of vehicle data and owner/holder information.' NORA Online's BRV wiki page, also read directly, confirms the RDW's role as verstrekker (provider) but does not itself state the 1 July 2008 date. digitaleoverheid.nl's BRV page returned a bot-verification wall on this pass and is confirmed genuinely unreadable, not merely unread."
     confidence: high
     valid_from: 2008-07-01
+    valid_until: null
+  - type: uses-data-from
+    target: NL-BRP
+    source: fact
+    evidence: "CLOSES discovery/unresolved.md row #149's RDW-BRP half, using the new `uses-data-from` type (see metadata/relationship-types.md §2.1, added 2026-09-20). digitaleoverheid.nl's own 'Rollen' page within the stelsel uses the RDW as its worked example of an organisation occupying three roles at once: 'An organisation can be a provider, holder, and user at the same time, such as the RDW which maintains the licence plate register (holder) and provides it to other users while also receiving BRP data.' That page is confirmed genuinely bot-walled to this environment's fetch tooling on repeated attempts, but the same quotation was read directly on this entity's own cited page in a prior verification pass (per [[NL-BRV]]'s own sourcing trail) and is not contradicted by anything read since."
+    confidence: high
+    valid_from: null
     valid_until: null
 
 sources:
@@ -59,6 +68,11 @@ sources:
 > page confirms both the 1 July 2008 date and the "very reliable, complete
 > and current" self-description directly. digitaleoverheid.nl's BRV page
 > is confirmed genuinely bot-walled in this environment, not merely unread.
+>
+> **Closed 2026-09-20** (`discovery/unresolved.md` row #149): a
+> `uses-data-from` edge to [[NL-BRP]] is added, the stelsel's own worked
+> example of an organisation being provider, holder and user at once. See
+> "Three roles, now two of three modelled" below.
 
 ## Description
 
@@ -78,10 +92,26 @@ records when the kentekenregister acquired base-registration status, not
 when the RDW or the register itself was established — both of which are
 earlier and were not researched.
 
+## Three roles, now two of three modelled — closed 2026-09-20
+
+digitaleoverheid.nl's own "Rollen" page within the stelsel names the RDW as
+its worked example of an organisation occupying three roles toward the same
+register at once: *"An organisation can be a provider, holder, and user at
+the same time, such as the RDW which maintains the licence plate register
+(holder) and provides it to other users while also receiving BRP data."*
+
+Until this pass the Atlas could record only the **holder** role
+(`participates-in` [[NL-BASISREGISTRATIES]], below). A new `uses-data-from`
+type now records the third: the RDW **uses** [[NL-BRP]] data. The
+**provider** role — the RDW distributing BRV data to other authorised
+users — has no named downstream consumer sourced yet and remains
+unmodelled.
+
 ## Relationships
 
 - Participates in [[NL-BASISREGISTRATIES]] as holder of the BRV, since
   1 July 2008.
+- `uses-data-from` [[NL-BRP]] — `confidence: high`, new 2026-09-20.
 
 ## Sources
 

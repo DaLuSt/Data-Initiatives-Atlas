@@ -27,7 +27,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-20"
 previous_version: null
 successor: null
 
@@ -65,6 +65,13 @@ relationships:
     confidence: high
     valid_from: null
     valid_until: null
+  - type: carries-identifier-of
+    target: NL-NHR
+    source: fact
+    evidence: "CLOSES discovery/unresolved.md row #12/ontology item's BRK-NHR half, using a new relationship type (metadata/relationship-types.md §2.1, added 2026-09-20). catalogus.kadaster.nl's own BRK catalogue page, read directly (2026-08-27), states 'in steeds meer van onze BRK-producten leveren wij voortaan bij organisaties...het KVK-nummer mee' (increasingly, our BRK products now include the KvK number for organisations), naming six specific products including Eigendomsinformatie and BRK Levering. The KvK number is [[NL-NHR]]'s own identifier."
+    confidence: high
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Waar bestaat de BRK uit? — Kadaster"
@@ -95,6 +102,10 @@ sources:
 > Kadasterwet's own official text added as a new source: it confirms the
 > BRK's statutory basis in Article 1a, in the same sentence that establishes
 > the BRT — the two registers genuinely share one statute.
+>
+> **Closed 2026-09-20**: the KvK-number link to [[NL-NHR]], previously
+> recorded only in prose, is now a typed `carries-identifier-of` edge — a
+> new relationship type. See "The KvK number" below.
 
 ## Description
 
@@ -116,28 +127,30 @@ is the clearest statement of why these registers are a system:
 Each register answers one question about the same physical object, which is
 the stelsel's organising idea applied to land.
 
-## The KvK number is a real, sourced key-sharing link
+## The KvK number is a real, sourced key-sharing link — now modelled
 
 The Kadaster's own BRK catalogue has a page for the *Handelsregister*, and
 records that BRK products increasingly carry the **KvK number** for
 organisations. That is a concrete instance of two base registries sharing an
 identifier, sourced from the register's own catalogue rather than inferred.
 
-**It is still not asserted as a relationship.** The Atlas has no type for
-"carries the identifier of", and the candidates all misstate it:
-`references` implies a document citation, `depends-on` implies operational
-dependency, `derived-from` is plainly wrong.
+**Closed 2026-09-20**: a new `carries-identifier-of` type now records this,
+where the previous candidates all misstated it — `references` implies a
+document citation, `depends-on` implies operational dependency,
+`derived-from` is plainly wrong.
 
-This is the fourth time in three batches that a real, well-sourced
-connection has been left unmodelled for want of a relationship type — the
-UN batch found two (the UNESCO agreement and the EU voluntary review), the
-Belastingdienst's WOZ consumption is a third, and this is a fourth. See
-`discovery/unresolved.md`.
+This was the fourth of four real, well-sourced connections left unmodelled
+across three batches for want of a relationship type — the UN batch found
+two (the UNESCO agreement, now `cooperates-with`, and the EU voluntary
+review, now the `publication` entity type), the Belastingdienst's WOZ
+consumption is a third (now `uses-data-from`), and this was the fourth. All
+four are now closed. See metadata/relationship-types.md §2.1.
 
 ## Relationships
 
 - `part-of` [[NL-BASISREGISTRATIES]].
 - `maintained-by` [[NL-KADASTER]].
+- `carries-identifier-of` [[NL-NHR]] — `confidence: high`, new 2026-09-20.
 
 ## Sources
 

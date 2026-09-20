@@ -133,9 +133,12 @@ most direct effect on an individual. The stelsel's design goal — collect
 once, reuse everywhere — is at its most visible and its most consequential
 here.
 
-**The Atlas records none of that consequence**, because the "afnemer"
-relationships that carry it are exactly what the relationship vocabulary
-cannot express. See [[NL-BELASTINGDIENST]].
+**The Atlas records little of that consequence**: the specific downstream
+bodies determining allowances, subsidies and benefits from this one figure
+are not named by any source read, so no "afnemer" edge is asserted from
+this entity specifically. The vocabulary gap itself is now partly closed —
+see the new `uses-data-from` type (metadata/relationship-types.md §2.1,
+2026-09-20), first used on [[NL-BELASTINGDIENST]]'s own WOZ consumption.
 
 ## `authentiek gegeven` is a concept the Atlas has no field for
 
