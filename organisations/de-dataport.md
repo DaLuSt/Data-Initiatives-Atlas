@@ -38,6 +38,8 @@ domains:
 organisations: []
 related_entities:
   - DE
+  - DE-HZD
+  - DE-BITBW
 relationships:
   - type: part-of
     target: DE
@@ -114,6 +116,9 @@ Belgian entities might otherwise suggest.
   and Wikipedia's account of it, not a direct read of the treaty.
 - Any relationship to [[DE-FITKO]] or [[DE-KOSIT]] — no source read
   connects Dataport to the federal IT-cooperation bodies specifically.
+- Any relationship to [[DE-HZD]] (Hesse) or [[DE-BITBW]] (Baden-
+  Württemberg), two more single-Land IT providers now modelled — no
+  source connects them; recorded for navigation only.
 
 ## Relationships
 

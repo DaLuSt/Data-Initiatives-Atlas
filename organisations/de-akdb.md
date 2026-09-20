@@ -38,6 +38,8 @@ domains:
 organisations: []
 related_entities:
   - DE
+  - DE-HZD
+  - DE-BITBW
 relationships:
   - type: part-of
     target: DE
@@ -99,8 +101,10 @@ for consulting, support, sales and training.
 ## Not modelled
 
 - AKDB's specific software products and IT platforms individually.
-- Any relationship to [[DE-DATAPORT]] or other German multi-Land IT
-  providers — no source read connects them.
+- Any relationship to [[DE-DATAPORT]], [[DE-HZD]], [[DE-BITBW]] or other
+  German sub-federal IT providers — no source read connects them; each
+  is recorded here only for navigation, as siblings under the same
+  `discovery/unresolved.md` item #5 finding.
 
 ## Relationships
 

@@ -37,6 +37,8 @@ domains:
 organisations: []
 related_entities:
   - DE
+  - DE-HZD
+  - DE-BITBW
 relationships:
   - type: part-of
     target: DE
@@ -101,6 +103,10 @@ run separately across the state administration.
 - IT.NRW's statistical-office role in detail, or any relationship to
   [[EU-EUROSTAT]] or the European Statistical System — no source read
   this pass connects them.
+- Any relationship to [[DE-HZD]] (Hesse, 2026-09-20) or [[DE-BITBW]]
+  (Baden-Württemberg, 2026-09-20), two more Landesbetrieb-style IT
+  providers now modelled — no source connects them; recorded for
+  navigation only.
 
 ## Relationships
 
