@@ -40,6 +40,7 @@ organisations: []
 related_entities:
   - ES
   - ES-EJIE
+  - ES-CCASA
 relationships:
   - type: part-of
     target: ES
@@ -101,10 +102,10 @@ the Basque Country's and Spain's administrations.
 
 ## Not modelled
 
-- **CCASA and LANTIK**, IZFE's and EJIE's other two NISAE co-members —
-  not independently researched.
-- The equivalent provincial IT companies for Álava and Bizkaia, if any
-  exist — not researched this pass.
+- **LANTIK**, IZFE's and EJIE's last NISAE co-member — attempted
+  2026-09-20 but not created; `bizkaia.eus`/`lantik.bizkaia.eus` returned
+  HTTP 503 on every attempt. **CCASA, the other, is now [[ES-CCASA]]**
+  (Álava's own provincial IT company, added 2026-09-20).
 
 ## Relationships
 
