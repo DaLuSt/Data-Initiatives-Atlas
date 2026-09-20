@@ -25,7 +25,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-20"
 previous_version: null
 successor: null
 
@@ -35,7 +35,14 @@ organisations: []
 related_entities:
   - NL-BRI
   - NL-WOZ
-relationships: []
+relationships:
+  - type: uses-data-from
+    target: NL-WOZ
+    source: fact
+    evidence: "CLOSES discovery/unresolved.md row #149's Belastingdienst-WOZ half, using the new `uses-data-from` type (see metadata/relationship-types.md §2.1, added 2026-09-20). [[NL-WOZ]]'s own entity states the register 'is used by the tax administration, water boards and municipalities for taxation,' sourced from kadaster.nl's and geobasisregistraties.nl's own pages read directly (2026-08-27). The specific list of taxes (owner-occupied home allowance, corporate income tax, gift/inheritance tax, landlord levy) traces to a prior pass's sourcing rather than being independently re-confirmed against primary text this pass — hence `confidence: medium`, not `high`."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Alles over het geregistreerde inkomen"
@@ -61,6 +68,11 @@ sources:
 > CBS as WOZ stakeholders but does not itself name the Belastingdienst or
 > water boards as users — that detail is not independently re-confirmed
 > this pass and is downgraded below.
+>
+> **Closed 2026-09-20** (`discovery/unresolved.md` row #149): the WOZ
+> consumption is now a typed `uses-data-from` edge, the first use of a new
+> relationship type added this pass. See "Holder and user in one
+> organisation" below.
 
 ## Description
 
@@ -92,17 +104,19 @@ vehicle register and also receives BRP data.
 The Belastingdienst is the same pattern on a different pair of registers,
 and it shows why the stelsel is a system rather than a collection.
 
-**The Atlas models only the holder role.** [[NL-BRI]] carries
-`maintained-by` pointing here; **no edge records the WOZ consumption**,
-because the relationship vocabulary has no term for "is an authorised user
-of". `applies-to` would invert the meaning and `depends-on` would overstate
-it.
+[[NL-BRI]] carries `maintained-by` pointing here for the holder role.
+**The WOZ consumption is now modelled too**, as of 2026-09-20: a new
+`uses-data-from` type (metadata/relationship-types.md §2.1) records this
+entity as an authorised user ("afnemer") of [[NL-WOZ]], closing the gap
+`applies-to` would have inverted and `depends-on` would have overstated.
 
-This is the same expressive gap the UN batch hit from a different angle
+This was the same expressive gap the UN batch hit from a different angle
 when it could not record the UNESCO–Commission agreement or the EU voluntary
-review. It is logged in `discovery/unresolved.md`, and it matters more here:
-**the "afnemer" (user) relationship is arguably the whole point of a base
-registry**, and the Atlas cannot express it for any of the ten.
+review — those are resolved via `cooperates-with` and the `publication`
+entity type respectively. **The "afnemer" (user) relationship is arguably
+the whole point of a base registry**, and until this pass the Atlas could
+not express it for any of the ten; [[NL-WOZ]] and [[NL-BRP]] (via
+[[NL-RDW]]) are the first two instances closed.
 
 ## `coverage: low`
 
@@ -112,8 +126,10 @@ recorded, and no attempt was made to describe it more broadly.
 
 ## Relationships
 
-None asserted from this entity. [[NL-BRI]] carries the `maintained-by` edge
-pointing here.
+- `uses-data-from` [[NL-WOZ]] — `confidence: medium`, new 2026-09-20.
+
+[[NL-BRI]] separately carries the `maintained-by` edge pointing here for
+this entity's holder role.
 
 ## Sources
 

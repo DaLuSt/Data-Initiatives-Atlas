@@ -26,7 +26,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-06"
+last_verified: "2026-09-20"
 previous_version: null
 successor: null
 
@@ -93,6 +93,10 @@ sources:
 > **Closed 2026-09-06**: the European network this register belongs to,
 > previously flagged as unmodelled, is now [[EU-BRIS]], which carries an
 > `applies-to` edge to this entity.
+>
+> **Closed 2026-09-20**: the KvK-number link to [[NL-BRK]] is now a typed
+> `carries-identifier-of` edge, recorded on [[NL-BRK]]'s own entity using a
+> new relationship type.
 
 ## Description
 
@@ -123,9 +127,9 @@ legal entities, assigned to the Kamer van Koophandel.
   register is one of the national registers the EU-wide interconnection
   system connects.
 
-**No relationship to [[NL-BRK]] is asserted**, despite the shared KvK
-number, for the reason set out on [[NL-BRP]]: the Atlas has no relationship
-type for a key-sharing coupling between two registers.
+**A relationship to [[NL-BRK]] is now asserted**, closing the gap set out
+on [[NL-BRP]]: a `carries-identifier-of` edge, recorded on [[NL-BRK]]'s own
+entity (BRK carries the KvK number, this register's identifier).
 
 ## Sources
 

@@ -30,7 +30,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-20"
 previous_version: null
 successor: null
 
@@ -103,6 +103,11 @@ sources:
 > merely unread — but the same facts are independently confirmed via
 > kadaster.nl's own LV-WOZ page and [[NL-WAARDERINGSKAMER]]'s own
 > re-verified pages.
+>
+> **Closed 2026-09-20** (`discovery/unresolved.md` row #149): the
+> Belastingdienst's use of this register is now a typed `uses-data-from`
+> edge, recorded on [[NL-BELASTINGDIENST]]'s own entity using a new
+> relationship type. See below.
 
 ## Description
 
@@ -145,10 +150,12 @@ determines the values.
 - `governed-by` [[NL-WET-WOZ]] — confirmed this pass by reading the Act's
   own official text.
 
-**The Belastingdienst's use of this register is not modelled.** It is the
-single most consequential "afnemer" relationship in the stelsel — WOZ values
-feed several national taxes — and the Atlas has no relationship type for
-authorised use. See [[NL-BELASTINGDIENST]].
+**The Belastingdienst's use of this register is now modelled** — closed
+2026-09-20 via a new `uses-data-from` type. It was the single most
+consequential "afnemer" relationship in the stelsel — WOZ values feed
+several national taxes — and the edge is recorded on
+[[NL-BELASTINGDIENST]]'s own entity, per house style for the "downstream"
+(consuming) party. See that entity and metadata/relationship-types.md §2.1.
 
 ## Sources
 

@@ -27,7 +27,7 @@ verification: primary-source
 
 start_date: 2009-07-01
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-20"
 previous_version: null
 successor: null
 
@@ -98,6 +98,9 @@ sources:
 > Kadaster's own BAG page, the Eerste Kamer bill dossier, the official
 > BWBR0023466 text, the IMBAG practitioner handbook, and RvIG's BAG–BRP
 > coupling page. Only NDFR's consolidated text was not re-fetched.
+>
+> **Closed 2026-09-20**: the BAG→BRP identifier coupling is now a typed
+> `carries-identifier-of` edge, recorded on [[NL-BRP]]'s own entity.
 
 ## Description
 
@@ -139,14 +142,15 @@ the graph.**
 The BAG is the most-connected register in the stelsel by description:
 
 - **BAG → BRP.** The RvIG BAG–BRP coupling guidance is the best-sourced
-  inter-register link in the system. See [[NL-BRP]].
+  inter-register link in the system. **Closed 2026-09-20**: [[NL-BRP]] now
+  carries a `carries-identifier-of` edge pointing here, recording the
+  mandatory BAG identification code every current BRP address must carry.
 - **BAG ↔ BRK / BRT.** The address and building registries are described as
   related to the cadastral and topographic base registries in the
-  geo-information domain.
-
-None of these is asserted as a relationship, for the reason given on
-[[NL-BRP]]. They are recorded as `related_entities` associations, which the
-graph shows as such.
+  geo-information domain, but no source read names a specific shared
+  identifier the way the BRK↔NHR and BAG↔BRP cases do. This pair remains
+  unasserted as a relationship, recorded only as a `related_entities`
+  association.
 
 ## Relationships
 

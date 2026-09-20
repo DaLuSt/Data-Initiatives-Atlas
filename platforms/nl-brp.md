@@ -26,7 +26,7 @@ verification: primary-source
 
 start_date: 2014-01-06
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-20"
 previous_version: null
 successor: null
 
@@ -61,6 +61,13 @@ relationships:
     confidence: high
     valid_from: 2014-01-06
     valid_until: null
+  - type: carries-identifier-of
+    target: NL-BAG
+    source: fact
+    evidence: "CLOSES discovery/unresolved.md row #149's BAG-BRP half, using a new relationship type (metadata/relationship-types.md §2.1, added 2026-09-20). Confirmed by reading RvIG's own 'Toelichting — Koppeling BAG-BRP' and 'Koppeling BAG-GBA-BRP' pages directly (2026-08-27): since the mandatory Logisch Ontwerp 2024-Q1 coupling took effect in January 2024, every current residential or postal address in the BRP must carry a BAG identification code and match BAG's own values exactly, with location descriptions, 'dot addresses,' reference addresses and secondary addresses as primary residences now prohibited outright. `carries-identifier-of` records the BAG identification code the BRP's own address fields must carry, distinct from the broader operational coupling described in prose."
+    confidence: high
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Basisregistratie Personen | RvIG"
@@ -89,6 +96,12 @@ sources:
 > **mandatory** coupling in force since January 2024 that bans point
 > addresses, location descriptions and reference addresses outright. The
 > entity's prior text described only the general arrangement.
+>
+> **Closed 2026-09-20** (`discovery/unresolved.md` row #149): the mandatory
+> BAG identification-code requirement is now a typed `carries-identifier-of`
+> edge, a new relationship type. `valid_from` stays `null` — the sources
+> give the month (January 2024) the mandatory coupling took effect, not a
+> specific day, and no day is guessed.
 
 ## Description
 
@@ -126,17 +139,15 @@ That second stage is considerably stronger than the general "coupling"
 description this entity previously carried — it is a hard data-quality
 mandate with monthly compliance reporting, not just a one-off technical link.
 
-**No relationship to [[NL-BAG]] is asserted.** The coupling is documented as
-a technical and administrative arrangement between two registers; the
-Atlas's vocabulary has `depends-on`, which would overstate it, and
-`related-to`, which would say almost nothing. The registers are listed in
-each other's `related_entities` — an association, visible in the graph as
-such — and the substance is recorded here in prose.
-
-That is a deliberate choice, and it is the same one made for the nine other
-registers: **the stelsel's internal couplings are its most interesting
-property and the Atlas can only gesture at them.** See
-[[NL-BASISREGISTRATIES]].
+**A relationship to [[NL-BAG]] is now asserted** for the identifier-coupling
+half of the picture, closed 2026-09-20 via a new `carries-identifier-of`
+type: the mandatory Logisch Ontwerp 2024-Q1 coupling requires every current
+BRP address to carry a BAG identification code and match BAG's own values
+exactly. The broader two-stage administrative history above — the 2011–2012
+one-time technical coupling and the ongoing monthly Kwaliteitsmonitor
+compliance reporting — remains recorded only in prose: `carries-identifier-of`
+captures the shared key, not the surrounding process, and the Atlas has no
+type for the latter.
 
 ## Relationships
 
@@ -146,6 +157,7 @@ property and the Atlas can only gesture at them.** See
   where it had sat at `confidence: low` with a note saying it governs one
   registration rather than the whole system. That note asked for exactly
   this move.
+- `carries-identifier-of` [[NL-BAG]] — `confidence: high`, new 2026-09-20.
 
 ## Sources
 
