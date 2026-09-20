@@ -40,6 +40,8 @@ related_entities:
   - DE
   - DE-HZD
   - DE-BITBW
+  - DE-LDI
+  - DE-IT-NIEDERSACHSEN
 relationships:
   - type: part-of
     target: DE
@@ -116,9 +118,17 @@ Belgian entities might otherwise suggest.
   and Wikipedia's account of it, not a direct read of the treaty.
 - Any relationship to [[DE-FITKO]] or [[DE-KOSIT]] — no source read
   connects Dataport to the federal IT-cooperation bodies specifically.
-- Any relationship to [[DE-HZD]] (Hesse) or [[DE-BITBW]] (Baden-
-  Württemberg), two more single-Land IT providers now modelled — no
-  source connects them; recorded for navigation only.
+- Any relationship to [[DE-HZD]] (Hesse), [[DE-BITBW]] (Baden-
+  Württemberg) or [[DE-LDI]] (Rhineland-Palatinate), more single-Land IT
+  providers now modelled — no source connects them; recorded for
+  navigation only.
+- **How Dataport's Niedersachsen Träger role relates to
+  [[DE-IT-NIEDERSACHSEN]]** (Lower Saxony's own Landesbetrieb, founded
+  2014) — added 2026-09-20. The "narrower relationship than full Träger
+  status" already noted above (tax-administration IT specifically) is
+  consistent with the two coexisting rather than conflicting, but no
+  source read states this explicitly; not investigated further this
+  pass.
 
 ## Relationships
 

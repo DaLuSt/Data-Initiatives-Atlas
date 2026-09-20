@@ -38,6 +38,9 @@ related_entities:
   - DE
   - DE-IT-NRW
   - DE-AKDB
+  - DE-BITBW
+  - DE-LDI
+  - DE-IT-NIEDERSACHSEN
 relationships:
   - type: part-of
     target: DE
