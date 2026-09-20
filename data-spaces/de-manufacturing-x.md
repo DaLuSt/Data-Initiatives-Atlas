@@ -37,6 +37,8 @@ related_entities:
   - DE-FACTORY-X
   - DE-AEROSPACE-X
   - DE-CONSTRUCT-X
+  - DE-HEALTHTRACK-X
+  - DE-PLATTFORM-INDUSTRIE-4-0
 relationships:
   - type: applies-in
     target: DE
@@ -139,11 +141,11 @@ does not contain Catena-X, it builds on it — and that call is now backed by
 primary reading rather than search snippets.
 
 Germany's family, as the sources describe it: **Catena-X** for cars,
-**Manufacturing-X** for factories, and — confirmed this pass via Fraunhofer
-ISST's own page, which names Manufacturing-X's supported projects
-directly — **Construct-X**, **Factory-X** (2024) and **Aerospace-X** as
-lighthouse projects within Manufacturing-X. ISST's page also names
-**HealthTrack-X**, not previously recorded here.
+**Manufacturing-X** for factories, and — confirmed via Fraunhofer ISST's
+own page, which names Manufacturing-X's supported projects directly —
+**Construct-X**, **Factory-X**, **Aerospace-X** and **HealthTrack-X** as
+lighthouse projects within Manufacturing-X, all four now modelled as
+their own Atlas entities (see "Four lighthouse projects" below).
 
 ## The coordination action's own tracking — 2026-09-19
 
@@ -171,24 +173,36 @@ organisational membership. No source states Manufacturing-X is *part of*
 the EU data space, so `related-to` is recorded rather than `part-of` or
 `participates-in`, at `confidence: medium`.
 
-## Three lighthouse projects, now their own entities
+## Four lighthouse projects, now their own entities
 
-`discovery/unresolved.md` row #131 flagged Factory-X, Aerospace-X and
-Construct-X as unmodelled despite being named here as lighthouse
-projects. All three are now Atlas entities, each `part-of` this entity
-and `based-on` [[DE-CATENA-X]]: **Factory-X** ([[DE-FACTORY-X]],
-2026-09-19, mechanical engineering), **Aerospace-X** ([[DE-AEROSPACE-X]],
-2026-09-20, aerospace supply chains, led industrially by Airbus, April
-2024 – June 2026), and **Construct-X** ([[DE-CONSTRUCT-X]], 2026-09-20,
-construction industry, led by Fraunhofer ISST with EU IPCEI-CIS
-co-funding, March 2025 – February 2028).
+`discovery/unresolved.md` row #131 flagged Factory-X, Aerospace-X,
+Construct-X and HealthTrack-X as unmodelled despite being named here as
+supported projects. All four are now Atlas entities: **Factory-X**
+([[DE-FACTORY-X]], 2026-09-19, mechanical engineering), **Aerospace-X**
+([[DE-AEROSPACE-X]], 2026-09-20, aerospace supply chains, led
+industrially by Airbus, April 2024 – June 2026), **Construct-X**
+([[DE-CONSTRUCT-X]], 2026-09-20, construction industry, led by
+Fraunhofer ISST with EU IPCEI-CIS co-funding, March 2025 – February
+2028) and **HealthTrack-X** ([[DE-HEALTHTRACK-X]], 2026-09-20, healthcare
+supply chains, coordinated by Fraunhofer ISST, May 2024 – June 2026).
+The first three carry `based-on` [[DE-CATENA-X]]; HealthTrack-X's own
+page instead states it builds on [[EU-GAIA-X]] directly, so it carries
+that edge instead. HealthTrack-X's `part-of` this entity is sourced from
+this page's own naming of it, not from its own page, which does not
+mention Manufacturing-X.
+
+## The concept base, now modelled — 2026-09-20
+
+**Plattform Industrie 4.0**, the government-industry platform this
+family's concepts build on, is now [[DE-PLATTFORM-INDUSTRIE-4-0]],
+`related-to` this entity. Sourced from the platform's own 2016
+presentation deck, read directly as a local PDF (its live site returns
+the same Radware bot-verification challenge already documented for
+`bundeswirtschaftsministerium.de`). With this, every item named in row
+#131's original wording is modelled.
 
 ## Not modelled
 
-- **HealthTrack-X** — the remaining sibling initiative named directly
-  in Fraunhofer ISST's own page, not independently researched this pass.
-- **Plattform Industrie 4.0**, whose concepts Manufacturing-X builds on and
-  which publishes the Council's material.
 - The **BMWK/BMWE** itself. No German ministry other than [[DE-BMI]] is an
   Atlas entity, so no `part-of` edge is asserted — the same coverage limit
   recorded on [[DE-BND]].
