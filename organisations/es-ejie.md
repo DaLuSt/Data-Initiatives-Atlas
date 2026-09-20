@@ -41,6 +41,7 @@ domains:
 organisations: []
 related_entities:
   - ES
+  - ES-IZFE
 relationships:
   - type: part-of
     target: ES
@@ -102,8 +103,9 @@ more layered ownership.
 
 ## Not modelled
 
-- **CCASA, IZFE and LANTIK**, EJIE's three NISAE co-members — not
-  independently researched this pass.
+- **CCASA and LANTIK**, two of EJIE's three NISAE co-members — not
+  independently researched. **IZFE, the third, is now [[ES-IZFE]]**
+  (Gipuzkoa's own provincial IT company, added 2026-09-20).
 - The **NISAE** interoperability node itself as a separate entity —
   described here in prose as a joint function of the four companies.
 
