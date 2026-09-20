@@ -24,7 +24,7 @@ verification: primary-source
 
 start_date: 2002-05-06
 end_date: null
-last_verified: "2026-09-19"
+last_verified: "2026-09-20"
 previous_version: ES-CESID
 successor: null
 
@@ -82,6 +82,10 @@ sources:
     url: "https://es.wikipedia.org/wiki/Centro_Nacional_de_Inteligencia_(Espa%C3%B1a)"
     publisher: "Wikipedia"
     accessed: "2026-08-26"
+  - title: "Legitimidad y control del Centro Nacional de Inteligencia"
+    url: "http://www.ugr.es/~gesi/congreso/comunicacion31-14.pdf"
+    publisher: "Grupo de Estudios en Seguridad Internacional (GESI), Universidad de Granada"
+    accessed: "2026-09-20"
 ---
 
 # Centro Nacional de Inteligencia (CNI)
@@ -99,6 +103,10 @@ sources:
 > **Narrowed further 2026-09-19** (`discovery/unresolved.md` row #193):
 > the National Police's and Guardia Civil's own information services are
 > now modelled — see "Not modelled" below.
+>
+> **Closed 2026-09-20**: the "common inspection regime" this entity's own
+> notes had flagged as unresearched is not a separate body or instrument
+> at all — see "Not modelled" below.
 
 ## Description
 
@@ -169,8 +177,24 @@ through a body that was already present.
 - ~~The information services of the **National Police** and **Guardia
   Civil**~~ — closed 2026-09-19, now [[ES-COMISARIA-GENERAL-DE-INFORMACION]]
   and [[ES-JEFATURA-DE-INFORMACION]] respectively, both `part-of` [[ES]].
-  The **common inspection regime** the sources mention as covering all of
-  Spain's intelligence bodies remains unresearched.
+- ~~The **common inspection regime** the sources mention as covering all of
+  Spain's intelligence bodies~~ — **closed 2026-09-20**: a GESI (Universidad
+  de Granada) conference paper on the CNI's own control mechanisms, read
+  directly (already a cited source on [[ES-LO-2-2002]]), states plainly
+  that the CNI's judicial-control regime is "diferente del tipo de
+  inspección establecido para el CIFAS o los servicios de información del
+  Cuerpo Nacional de Policía y de la Guardia Civil. Éstos últimos, cuentan
+  con un régimen ordinario o genérico establecido en la Ley de
+  Enjuiciamiento Criminal" (Arts. 545–578 LECrim for entry/search of
+  premises and documents, Arts. 579–588 for interception of
+  communications). There is no separate common-inspection body or
+  instrument to model — "common" here means these three services are
+  simply subject to Spain's **ordinary criminal-procedure code**, the same
+  as any other law-enforcement body, rather than to a CNI-style bespoke
+  regime. `LECrim` (a general 1882 procedural code, not a digital-
+  governance instrument) is deliberately not modelled as an Atlas entity
+  for the same reason ministries aren't: it would be true of nearly every
+  Spanish law-enforcement body and adds no data-governance-relevant edge.
 - The **Comisión Delegada del Gobierno para Asuntos de Inteligencia**, the
   government committee that sets the CNI's annual objectives.
 - The CNI's own **ministry-attachment history** beyond the 2011/2018
