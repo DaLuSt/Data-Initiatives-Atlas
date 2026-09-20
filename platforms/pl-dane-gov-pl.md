@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-20"
 previous_version: null
 successor: null
 
@@ -33,6 +33,7 @@ organisations: []
 related_entities:
   - PL-OTWARTE-DANE
   - PL-MC
+  - PL-DCAT-AP-PL
   - NL-DATA-OVERHEID
   - DE-GOVDATA
   - ES-DATOS-GOB-ES
@@ -132,11 +133,16 @@ approximate launch date (since May 2014) are now recorded. Its exact
 launch date, dataset count and relationship to [[PL-COI]]'s systems
 remain unrecorded.
 
-## Not asserted
+## The DCAT profile link, closed 2026-09-20
 
-**No relationship to a Polish DCAT profile.** [[EU-DCAT-AP]] has four
-national children in the Atlas; whether Poland has a fifth was not
-researched. Queued.
+The note below was stale: [[PL-DCAT-AP-PL]] was created 2026-09-04 as the
+Atlas's fifth national child of [[EU-DCAT-AP]], and its own entity now
+carries `applies-to` this one, sourced from the profile's own "Abstract"
+page naming `dane.gov.pl` directly ("is used to describe the data
+recorded in Polish data portals (e.g. dane.gov.pl)"). This entity's own
+`related_entities` is updated to point to it.
+
+## Not asserted
 
 **No relationship to the other five portals.** They are national solutions
 to a shared problem, which is not a relationship.
