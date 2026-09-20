@@ -50,6 +50,18 @@ Do not invent a new `type` casually. If a batch believes a new type is
 needed, add it here with a definition and a folder mapping (§3) in the same
 commit that introduces the first entity of that type.
 
+**`law` also covers binding intergovernmental instruments that aren't
+ordinary domestic legislation**, where no other type fits better: an EEA
+Joint Committee Decision (e.g. [[INTL-EEA-JCD-154-2018]]), and, as decided
+2026-09-20 closing `discovery/unresolved.md` item #6, a German
+Bund-Länder Verwaltungsvereinbarung (administrative agreement) such as
+[[DE-VV-GDI-DE]] and [[DE-VV-GOVDATA]]. This does not resolve the larger,
+separately-tracked question of whether `law` should itself be split by
+legislative rank (item #11) — it only says where these binding-but-
+non-parliamentary instruments sit within the existing vocabulary, rather
+than leaving them unmodelled or inventing a new `agreement` type for a
+small number of known cases.
+
 ---
 
 ## 2. Identifiers

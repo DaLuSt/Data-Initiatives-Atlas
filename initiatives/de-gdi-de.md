@@ -27,7 +27,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-20"
 previous_version: null
 successor: null
 
@@ -37,6 +37,7 @@ organisations: []
 related_entities:
   - EU-INSPIRE
   - DE-GEOZG
+  - DE-VV-GDI-DE
 relationships:
   - type: implements
     target: EU-INSPIRE
@@ -51,6 +52,13 @@ relationships:
     evidence: "Confirmed by reading lvermgeo.sachsen-anhalt.de directly (2026-08-28): 'The Geodata Access Act (GeoZG) from February 10, 2009, establishes the legal foundation for both the national geodata infrastructure and INSPIRE directive implementation at the federal level.' de.wikipedia.org, also read directly, confirms the federal government and the individual Länder each enacted Geodatenzugangsgesetze/Geodateninfrastrukturgesetze to fulfil the same requirement."
     confidence: high
     valid_from: null
+    valid_until: null
+  - type: governed-by
+    target: DE-VV-GDI-DE
+    source: fact
+    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP (`discovery/unresolved.md` ontology item #6, this entity's own 'not modelled' note). The Verwaltungsvereinbarung between the Bund and all Länder, previously only described in prose, is now its own entity — see [[DE-VV-GDI-DE]] for the ontology decision (`type: law`, 2026-09-20) and full sourcing (mik.brandenburg.de, lvermgeo.sachsen-anhalt.de, both already cited above)."
+    confidence: medium
+    valid_from: 2017-12-05
     valid_until: null
 
 sources:
@@ -79,6 +87,9 @@ sources:
 > and loaded correctly on retry, matching the batch guidance that a single
 > 503 on a known German-government domain is often transient rather than a
 > genuine block). `verification: primary-source`.
+>
+> **Closed 2026-09-20**: the Verwaltungsvereinbarung this entity rests on
+> is now its own entity, [[DE-VV-GDI-DE]] — see "Relationships" below.
 
 ## Description
 
@@ -138,10 +149,12 @@ different policy areas, the same constitutional device.
 That recurrence is a genuine finding about German digital governance rather
 than a coincidence of sourcing — where a Dutch initiative can be
 established by central government decision, a German one that touches Land
-competences needs an interstate agreement. **The Verwaltungsvereinbarung
-itself is not modelled** in either case: it is neither legislation nor
-policy in the Atlas's sense, and there is no entity type for an
-intergovernmental agreement. Logged in `discovery/unresolved.md`.
+competences needs an interstate agreement. **Closed 2026-09-20**: the
+Verwaltungsvereinbarung itself is now modelled, as [[DE-VV-GDI-DE]],
+`type: law` — the same pragmatic fit already used for EEA Joint Committee
+Decisions, another intergovernmental binding instrument that isn't
+ordinary domestic legislation either. See that entity's own file for the
+full ontology decision closing `discovery/unresolved.md` item #6.
 
 ## Relationships
 
@@ -149,6 +162,8 @@ intergovernmental agreement. Logged in `discovery/unresolved.md`.
   high`.
 - `governed-by` [[DE-GEOZG]] — confirmed directly this pass, `confidence:
   high`.
+- `governed-by` [[DE-VV-GDI-DE]] — added 2026-09-20, closing this entity's
+  own previously-flagged "not modelled" note, `confidence: medium`.
 
 Note the type contrast with [[DE-GEOZG]], which
 `implements-requirement-from` the same directive. That is intentional:

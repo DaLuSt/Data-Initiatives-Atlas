@@ -28,7 +28,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-20"
 previous_version: null
 successor: null
 
@@ -40,6 +40,7 @@ related_entities:
   - DE-DCAT-AP-DE
   - DE-DNG
   - NL-DATA-OVERHEID
+  - DE-VV-GOVDATA
 relationships:
   - type: maintained-by
     target: DE-FITKO
@@ -47,6 +48,13 @@ relationships:
     evidence: "Confirmed by reading fitko.de's own product-management page and press release directly (2026-08-28): 'GovData is managed by FITKO as an IT Planning Council product, operational since January 1, 2023.' govdata.de's own help page, also read directly, independently confirms 'product management based at FITKO in Frankfurt' and names SEITENBAU GmbH as the technical operator/host — a fact not previously recorded on this entity."
     confidence: high
     valid_from: 2023-01-01
+    valid_until: null
+  - type: governed-by
+    target: DE-VV-GOVDATA
+    source: fact
+    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP (`discovery/unresolved.md` ontology item #6, this entity's own 'not modelled' note). The Verwaltungsvereinbarung underpinning GovData, previously only described in prose as an unmodelled instrument, is now its own entity — see [[DE-VV-GOVDATA]] for the ontology decision (`type: law`, 2026-09-20) and full sourcing (the agreement's own text and Brandenburg's own Bekanntmachung, both read directly)."
+    confidence: high
+    valid_from: 2014-12-04
     valid_until: null
 
 sources:
@@ -76,6 +84,9 @@ sources:
 
 > **Re-verified 2026-08-28.** All five cited pages read directly.
 > `verification: primary-source`; `confidence` raised to `high`.
+>
+> **Closed 2026-09-20**: the Verwaltungsvereinbarung this entity rests on
+> is now its own entity, [[DE-VV-GOVDATA]] — see "Relationships" below.
 
 ## Description
 
@@ -90,10 +101,11 @@ own product page gives a slightly earlier snapshot of "over 150,000
 datasets" including "19,000 building plans."
 
 Its operational basis is a **Verwaltungsvereinbarung**, an administrative
-agreement. All sixteen Länder and the federation have acceded to it;
-confirmed directly this pass on the FITKO press release, **Saarland's
-accession completed the set**, with IT-Planungsrat chair Patrick Burghardt
-quoted directly: "wir ziehen Bund und Länder an einem Strang."
+agreement — now its own entity, [[DE-VV-GOVDATA]] (closed 2026-09-20).
+All sixteen Länder and the federation have acceded to it; confirmed
+directly this pass on the FITKO press release, **Saarland's accession
+completed the set**, with IT-Planungsrat chair Patrick Burghardt quoted
+directly: "wir ziehen Bund und Länder an einem Strang."
 
 Product management sits at [[DE-FITKO]] in Frankfurt am Main, which took
 GovData into its product management as a **product of the
@@ -126,6 +138,8 @@ instrument in one country and an ordinary government service in the other.
 
 - Maintained by [[DE-FITKO]] — confirmed directly this pass, `confidence:
   high`.
+- `governed-by` [[DE-VV-GOVDATA]] — added 2026-09-20, closing this
+  entity's own previously-flagged "not modelled" note, `confidence: high`.
 
 Inbound: [[DE-DCAT-AP-DE]] `applies-to` this portal.
 
