@@ -35,6 +35,8 @@ related_entities:
   - EU-COMMON-DATA-SPACES
   - EU-DSSC
   - EU-INSIEME
+  - EU-OMEGA-X
+  - EU-ENERSHARE
   - DE-ENDA
 relationships:
   - type: part-of
@@ -62,6 +64,10 @@ sources:
     url: "https://www.ceeds.energy/"
     publisher: "CEEDS"
     accessed: "2026-08-28"
+  - title: "The emerging Common European Energy Data Space — state of play and next steps"
+    url: "https://community.intnet.eu/events/35/the-emerging-common-european-energy-data-space---state-of-play-and-next-steps"
+    publisher: "Int:net (Horizon Europe Coordination and Support Action)"
+    accessed: "2026-09-20"
   - title: "Blueprint of the Common European Energy Data Space, version 2.0, July 2024"
     url: "https://intnet.eu/images/resources/Blueprint_CEEDS_v2.pdf"
     publisher: "int:net (Horizon Europe)"
@@ -76,6 +82,10 @@ sources:
 > not the January 2024 document (SWD(2024) 21 final) the source title
 > claimed. The correct Commission URL is now cited and was read directly.
 > `verification` moves from `search-only` to `primary-source`.
+>
+> **Narrowed 2026-09-20**: the six Horizon Europe predecessor projects are
+> now named — see "The six Horizon Europe projects, named" below — and two
+> of them are modelled as [[EU-OMEGA-X]] and [[EU-ENERSHARE]].
 
 ## Description
 
@@ -121,13 +131,23 @@ sourced from insieme.energy's own site, read directly. **ENDA** is now
 [[DE-ENDA]] (2026-09-20), sourced from dena's own page, read directly —
 but that direct read does **not** itself connect ENDA to CEEDS; the
 "national contribution" framing traces to an unread PDF, and no
-relationship between the two entities is asserted here. The six Horizon
-Europe predecessor projects remain unmodelled — see below.
+relationship between the two entities is asserted here.
+
+## The six Horizon Europe projects, named — 2026-09-20
+
+Int:net's own coordination-site page, read directly, names all six
+Horizon Europe projects the Commission funds to support CEEDS deployment:
+five Innovation Actions — **DATA CELLAR, EDDIE, [[EU-ENERSHARE]],
+[[EU-OMEGA-X]], SYNERGIES** — and one Coordination and Support Action,
+**Int:net** itself. Two are now modelled, each `part-of` this entity:
+[[EU-OMEGA-X]] (Atos-coordinated, Spain, 2022–2025) and [[EU-ENERSHARE]]
+(Engineering-coordinated, Italy, 2022–2025). **DATA CELLAR, EDDIE,
+SYNERGIES and Int:net remain unmodelled.**
 
 ## Not modelled
 
-- The **six Horizon Europe energy data space projects** [[EU-INSIEME]] and
-  CEEDS build on — not individually named by any source read.
+- **DATA CELLAR, EDDIE, SYNERGIES** and **Int:net** — the four remaining
+  named Horizon Europe CEEDS-supporting projects.
 - The **EU action plan on digitalising the energy system** and the 2026
   Strategic Roadmap.
 - Any **energy domain** entity. `DOMAIN-ENERGY` does not exist and is not
