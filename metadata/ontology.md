@@ -201,6 +201,34 @@ relationships").
 `level` (controlled vocabulary): `international`, `regional`, `national`, `subnational`,
 `sectoral`, `local`.
 
+- `international`: scope spans multiple countries by treaty, convention or
+  membership, without being a single regional bloc's own instrument (UN
+  bodies, ISO/IEC, other worldwide organisations).
+- `regional`: scope is a supra-national regional bloc — used for both EU
+  institutions and EU legislation directly applicable across member states.
+- `national`: scope is one country as a whole. The default level for a
+  country's own government bodies, legislation and platforms.
+- `subnational`: scope is bounded to part of one country's territory — a
+  German Land, a Spanish Comunidad Autónoma or province, a Belgian Region
+  or Community — rather than the whole country. Added 2026-08-21 for
+  Belgium's regional digital agencies; see `discovery/unresolved.md` item
+  #5 for the cross-country modelling history.
+- `sectoral`: scope is bounded to one industry or policy sector rather than
+  by geography, regardless of the entity's own `country`/`region` tag.
+  **Documented 2026-09-20** (closing item #10), formalising a convention
+  already in consistent use across 16 files before this note existed:
+  applied both to nationally-constituted bodies whose statutory remit
+  covers one sector only ([[BE-KSZ]]: social security; [[NL-NICTIZ]]:
+  healthcare IT standards; [[NL-ROSA]]: education) and to sector-specific
+  data spaces independent of their own country/region tag ([[DE-CATENA-X]]:
+  automotive, `region: EU`; [[DE-AEROSPACE-X]], [[DE-CONSTRUCT-X]],
+  [[DE-FACTORY-X]], [[DE-HEALTHTRACK-X]]: each one industry). `sectoral` is
+  orthogonal to `country`/`region` — a sectoral entity still carries
+  whichever jurisdiction actually funds or governs it; `level: sectoral`
+  only says that jurisdiction's authority over the entity is bounded to one
+  sector, not that the entity has no country or region at all.
+- `local`: scope is a municipality or other unit below `subnational`.
+
 - `country`: ISO 3166-1 alpha-2 code, or `null` for EU/UN/international
   entities that are not scoped to one country.
 - `region`: a region code such as `EU`, used to tag an entity's regional
