@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: 2026-08-15
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-20"
 previous_version: NL-WBNI
 successor: null
 
@@ -35,6 +35,7 @@ related_entities:
   - EU-NIS2
   - NL-WBNI
   - NL-NCSC
+  - EU-CJEU
 relationships:
   - type: implements-requirement-from
     target: EU-NIS2
@@ -42,6 +43,13 @@ relationships:
     evidence: "Confirmed by reading ncsc.nl's own 'Cyberbeveiligingswet (NIS2)' page directly (2026-08-27): 'De Cyberbeveiligingswet (Cbw) is de Nederlandse implementatie van de Europese NIS2-richtlijn.' nctv.nl's own page, also read directly, corroborates."
     confidence: high
     valid_from: 2026-08-15
+    valid_until: null
+  - type: referred-to-cjeu-over
+    target: EU-NIS2
+    source: fact
+    evidence: "NEW FACT for this entity, added 2026-09-20 using the new `referred-to-cjeu-over` type (metadata/relationship-types.md §2.1). A Hunton Andrews Kurth law-firm alert, read directly on [[ES-LCGC]] and [[FR-NIS2-LOI]] (2026-09-13), states the European Commission referred the Netherlands, alongside Ireland, Spain and France, to the Court of Justice of the EU on 8 July 2026 for failure to notify complete NIS2 transposition, seeking lump-sum and daily financial penalties until full transposition is notified. This entity's own sources (ncsc.nl, nctv.nl) were read before that referral and do not mention it; the fact is cross-applied from the sibling entities' sourcing per the Atlas's established practice, not independently re-confirmed against a Dutch-specific source this pass. The referral predates this Act's own 15 August 2026 entry into force by five weeks — the Netherlands transposed after being referred, not before."
+    confidence: medium
+    valid_from: 2026-07-08
     valid_until: null
   - type: supersedes
     target: NL-WBNI
@@ -85,6 +93,13 @@ sources:
 > in as many words that the Cbw **has** entered into force on that date. It
 > is promoted to `status: active` accordingly, and [[NL-WBNI]] to
 > `superseded`.
+>
+> **Closed 2026-09-20**: a previously-unrecorded fact is added — the
+> Netherlands was one of four member states (with Ireland, Spain, France)
+> the Commission referred to the CJEU on 8 July 2026 over NIS2
+> non-transposition, five weeks before this Act entered into force. This
+> was already documented on [[ES-LCGC]] and [[FR-NIS2-LOI]] but never
+> added here. See "Referred to the CJEU before transposing" below.
 
 ## Description
 
@@ -139,6 +154,22 @@ both dated after 15 August 2026, confirm the act is in force. `status` is
 updated to `active`, `start_date` remains `2026-08-15`, and [[NL-WBNI]]'s
 `status` is updated to `superseded` with `end_date: 2026-08-15` accordingly.
 
+## Referred to the CJEU before transposing — added 2026-09-20
+
+This entity's own sources (`ncsc.nl`, `nctv.nl`) describe the Cbw's
+eventual entry into force but were read before, and do not mention, an
+earlier escalation: on **8 July 2026** the European Commission referred
+the Netherlands — alongside Ireland, Spain and France — to the **Court of
+Justice of the EU** for failure to notify complete NIS2 transposition,
+per a Hunton Andrews Kurth law-firm alert already read directly on
+[[ES-LCGC]] and [[FR-NIS2-LOI]]. That referral came **five weeks before**
+this Act's own 15 August 2026 entry into force — the Netherlands
+transposed only after being referred, joining Belgium's Open Data
+Directive pattern of finishing the job only once the Court was already
+involved. `confidence: medium` because the fact is cross-applied from
+sibling entities' sourcing rather than independently confirmed against a
+Dutch-specific source this pass.
+
 ## Classification
 
 Dutch implementation legislation per `metadata/taxonomy.md` §2:
@@ -149,6 +180,8 @@ Dutch implementation legislation per `metadata/taxonomy.md` §2:
 - Implements requirements from [[EU-NIS2]].
 - Supersedes [[NL-WBNI]] (confirmed in force from 15 August 2026).
 - [[NL-NCSC]] applies to it as sectoral CSIRT.
+- `referred-to-cjeu-over` [[EU-NIS2]] — `confidence: medium`, new
+  2026-09-20.
 
 ## Sources
 

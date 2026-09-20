@@ -25,7 +25,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-13"
+last_verified: "2026-09-20"
 previous_version: null
 successor: null
 
@@ -44,13 +44,21 @@ related_entities:
   - CZ-ZAKON-264-2025
   - ES-LCGC
   - IE-NCS-BILL
+  - EU-CJEU
 relationships:
   - type: implements-requirement-from
     target: EU-NIS2
     source: fact
-    evidence: "Confirmed by reading three independent sources directly (2026-08-26). ANSSI's own MonEspaceNIS2 help page: the bill 'relatif à la résilience des infrastructures critiques et au renforcement de la cybersécurité' was presented to the Council of Ministers on 15 October 2024, adopted by the Senate on 11-12 March 2025, and passed a special-committee vote in the National Assembly on 10 September 2025 — still short of final adoption. nis-2-directive.com states plainly: 'the parliamentary procedure had not been completed and no final transposition law had been promulgated by 6 August 2026 ... the legislative process was still active.' Eversheds Sutherland's own tracker, read independently, agrees: 'France has not transposed NIS2 yet ... the legislative process is still ongoing.' All three confirm the bill transposes NIS2 together with CER and DORA and designates ANSSI as the competent authority once in force. ESCALATION ADDED 2026-09-13: confirmed by reading a Hunton Andrews Kurth law-firm alert directly (already cited on [[ES-LCGC]]): on 8 July 2026 the European Commission referred France, alongside Ireland, Spain and the Netherlands, to the Court of Justice of the EU for failure to notify complete NIS2 transposition, following formal notice on 28 November 2024 and a reasoned opinion on 7 May 2025, with the Commission seeking lump-sum and daily financial penalties until full transposition is notified."
+    evidence: "Confirmed by reading three independent sources directly (2026-08-26). ANSSI's own MonEspaceNIS2 help page: the bill 'relatif à la résilience des infrastructures critiques et au renforcement de la cybersécurité' was presented to the Council of Ministers on 15 October 2024, adopted by the Senate on 11-12 March 2025, and passed a special-committee vote in the National Assembly on 10 September 2025 — still short of final adoption. nis-2-directive.com states plainly: 'the parliamentary procedure had not been completed and no final transposition law had been promulgated by 6 August 2026 ... the legislative process was still active.' Eversheds Sutherland's own tracker, read independently, agrees: 'France has not transposed NIS2 yet ... the legislative process is still ongoing.' All three confirm the bill transposes NIS2 together with CER and DORA and designates ANSSI as the competent authority once in force."
     confidence: medium
     valid_from: null
+    valid_until: null
+  - type: referred-to-cjeu-over
+    target: EU-NIS2
+    source: fact
+    evidence: "Uses the new `referred-to-cjeu-over` type (metadata/relationship-types.md §2.1, added 2026-09-20). ESCALATION ADDED 2026-09-13, confirmed by reading a Hunton Andrews Kurth law-firm alert directly (already cited on [[ES-LCGC]]): on 8 July 2026 the European Commission referred France, alongside Ireland, Spain and the Netherlands, to the Court of Justice of the EU for failure to notify complete NIS2 transposition, following formal notice on 28 November 2024 and a reasoned opinion on 7 May 2025, with the Commission seeking lump-sum and daily financial penalties until full transposition is notified."
+    confidence: medium
+    valid_from: 2026-07-08
     valid_until: null
 
 sources:
@@ -91,6 +99,9 @@ sources:
 > see below. Also fixes a stale cross-reference: [[ES-LCGC]]'s own
 > five-country comparison table still called this entity's status
 > `unknown`, though it moved to `planned` back on 2026-08-26.
+>
+> **Closed 2026-09-20**: the referral is now a typed `referred-to-cjeu-over`
+> edge, a new relationship type.
 >
 > **Verified 2026-08-26, and the contradiction resolved.** ANSSI's own
 > MonEspaceNIS2 page, nis-2-directive.com and Eversheds Sutherland were
@@ -219,3 +230,10 @@ help-centre page — still not a Légifrance citation for a promulgated
 act, since none exists yet — but the Assemblée nationale's own dossier
 législatif page, added and read 2026-09-05, is the first genuinely
 official parliamentary-record citation on this entity.
+
+## Relationships, updated 2026-09-20
+
+- `implements-requirement-from` [[EU-NIS2]].
+- `referred-to-cjeu-over` [[EU-NIS2]] — `confidence: medium`, new
+  2026-09-20, pulled out of the `implements-requirement-from` edge's
+  evidence string into its own typed edge.

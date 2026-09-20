@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: 2019-07-16
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-09-20"
 previous_version: null
 successor: null
 
@@ -145,6 +145,11 @@ sources:
 > returned empty content, consistent with every other EUR-Lex attempt made
 > across this batch, and was not read. `verification` moves from
 > `search-only` to `primary-source`.
+>
+> **Closed 2026-09-20** (`discovery/unresolved.md` row #44): the missing
+> relationship type for "was referred to the Court over" is now filled by
+> `referred-to-cjeu-over`, applied on [[BE-HERGEBRUIK-WET-2023]] and
+> [[NL-WHO]]. See "Enforcement the Atlas can partly model" below.
 
 ## Description
 
@@ -283,30 +288,29 @@ legislator only on **25 December 2023** — twenty-nine months late, and ten
 months after the referral recorded below. Only the federal act is an Atlas
 entity; [[BE-HERGEBRUIK-WET-2023]] explains why the other three are not.
 
-## ⚠ Enforcement the Atlas can only partly model
+## ⚠ Enforcement the Atlas can partly model, closed further 2026-09-20
 
 The Commission opened infringement proceedings against **nineteen member
 states** over this directive, and in **February 2023 referred Belgium,
 Bulgaria, Latvia and the Netherlands to the Court of Justice** for failing to
 transpose it.
 
-**The missing node now exists: [[EU-CJEU]], added 2026-09-05.** The Atlas
-still has no entity type for an individual infringement procedure and no
-relationship type for "was referred to the Court over" — so the specific
-February 2023 referral is not itself modelled as an edge from this
-directive, or from the four member states, to [[EU-CJEU]]. Creating the
-Court did not create that edge, the same lesson the INSPIRE↔UN-GGIM
-refusal on `discovery/candidates.md` recorded: a missing node and a
-missing edge are not the same gap.
+**The missing node closed first: [[EU-CJEU]], added 2026-09-05.** **The
+missing edge closes now**: a new `referred-to-cjeu-over` relationship type
+(metadata/relationship-types.md §2.1) lets [[BE-HERGEBRUIK-WET-2023]] and
+[[NL-WHO]] each carry a typed edge to this directive recording their own
+referral, rather than leaving the fact in prose alone. It means a reader
+can now see from the graph, not just the text, that both instruments'
+transposition followed a Court referral.
 
-That remaining limitation is worth stating on the instrument where it
-bites hardest. It means a reader can see *that* the Netherlands transposed
-in 2024 — three years after the deadline — and cannot see from the graph
-that it was taken to court in between. `discovery/candidates.md` records
-the gap.
+**Bulgaria and Latvia remain unmodelled**, and for a different reason than
+before: no national transposing instrument for either is an Atlas entity,
+so there is nothing to carry the edge. Creating one purely to hold a
+referral fact would be exactly the invention the Atlas refuses. This is now
+a scoping gap, not a vocabulary gap.
 
-The Dutch case is the one the Atlas can partly show: [[NL-WHO]] carries the
-2024 amending act, which is the end of the story whose middle is missing.
-[[BE-HERGEBRUIK-WET-2023]] now carries the Belgian one, with the referral
-recorded in its body as a dated table — prose standing in for structure the
-ontology does not have.
+**A narrower gap remains**: no entity type exists for an individual
+infringement procedure itself (its own stages — formal notice, reasoned
+opinion, referral, judgment — as a first-class object), only the fact of a
+referral as an edge. `discovery/candidates.md` records that larger,
+unaddressed ontology question.

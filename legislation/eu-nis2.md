@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-09-20"
 previous_version: EU-NIS
 successor: null
 
@@ -41,6 +41,7 @@ related_entities:
   - EU-CYBERSECURITY-STRATEGY
   - CZ-ZAKON-264-2025
   - LU-LOI-NIS2
+  - EU-CJEU
 relationships:
   - type: supersedes
     target: EU-NIS
@@ -115,7 +116,7 @@ relationships:
   - type: applies-in
     target: PL
     source: fact
-    evidence: "As an EU directive it requires transposition by all member states, Poland included (EUR-Lex ELI dir/2022/2555). NOT READ - search-only. Poland transposed it by amending the ustawa o krajowym systemie cyberbezpieczenstwa, in force 3 April 2026; Poland exceeded the 17 October 2024 deadline and is in proceedings before the Court of Justice of the European Union (gov.pl/web/baza-wiedzy; itwiz.pl). See PL-KSC."
+    evidence: "As an EU directive it requires transposition by all member states, Poland included (EUR-Lex ELI dir/2022/2555). NOT READ - search-only. Poland transposed it by amending the ustawa o krajowym systemie cyberbezpieczenstwa, in force 3 April 2026; Poland exceeded the 17 October 2024 deadline. CORRECTED 2026-09-20: this evidence previously stated Poland 'is in proceedings before the Court of Justice of the European Union' — [[PL-KSC]]'s own entity (re-verified 2026-08-26, narrowed 2026-09-13) corrects this: Poland reached only the reasoned-opinion stage (7 May 2025) and was NOT among the four member states (Ireland, Spain, France, Netherlands) referred to the CJEU on 8 July 2026, having completed transposition first. See PL-KSC for the full escalation timeline."
     confidence: medium
     valid_from: 2026-04-03
     valid_until: null
@@ -134,6 +135,16 @@ sources:
 > **Verified 2026-08-21.** Every source this entity cites is on a domain the
 > repository owner confirmed read and correct — `europa.eu`. `verification:
 > primary-source`. See `docs/re-verification.md` §"The confirmed domains".
+>
+> **Corrected 2026-09-20.** This entity's own `applies-in PL` evidence and
+> its comparison table both stated Poland "is before the CJEU" for its NIS2
+> delay. [[PL-KSC]]'s own entity had already corrected this on 2026-09-13 —
+> Poland reached only the reasoned-opinion stage and was not among the four
+> states referred on 8 July 2026 — but the correction was never
+> cross-applied here. Fixed now. Separately, four national instruments
+> ([[IE-NCS-BILL]], [[ES-LCGC]], [[FR-NIS2-LOI]], [[NL-CBW]]) now carry a
+> typed `referred-to-cjeu-over` edge for that actual referral, a new
+> relationship type (metadata/relationship-types.md §2.1).
 
 ## Description
 
@@ -151,7 +162,7 @@ requirements, report incidents and register with a supervisory authority.
 | Netherlands | [[NL-CBW]] | 15 Aug 2026 | new act superseding [[NL-WBNI]] |
 | France | [[FR-NIS2-LOI]] | **unknown** | one vehicle for NIS2 + CER + DORA |
 | Spain | [[ES-LCGC]] | **not in force** | draft; would create a national cybersecurity centre |
-| Poland | [[PL-KSC]] | 3 Apr 2026 | **amends** the 2018 KSC act — and Poland is **before the CJEU** for the delay |
+| Poland | [[PL-KSC]] | 3 Apr 2026 | **amends** the 2018 KSC act — reached a reasoned opinion but was **not** referred to the CJEU (corrected 2026-09-20) |
 
 Belgium transposed nearly two years before the Netherlands, and Germany
 amended a standing act where the other two enacted new ones. **France

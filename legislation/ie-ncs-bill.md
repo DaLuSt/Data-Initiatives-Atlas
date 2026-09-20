@@ -25,7 +25,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-09-13"
+last_verified: "2026-09-20"
 previous_version: null
 successor: null
 
@@ -36,6 +36,7 @@ related_entities:
   - EU-NIS2
   - IE-NCSC
   - ES-LCGC
+  - EU-CJEU
 relationships:
   - type: applies-to
     target: IE-NCSC
@@ -50,6 +51,13 @@ relationships:
     evidence: "Confirmed by reading williamfry.com directly (2026-08-22): 'the Network and Information Security Directive (EU) 2022/2555 (NIS2) took effect on 17 October 2024 across the EU,' and 'the General Scheme for the National Cybersecurity Bill is the proposed draft legislation to transpose NIS2 into Irish law.' The Commission's own tracker (digital-strategy.ec.europa.eu, read directly) confirms non-transposition: 'On 7 May 2025 the Commission sent a reasoned opinion for failure to notify full transposition.' globalpolicywatch.com, read directly, reports a further escalation not previously recorded: 'the European Commission referred Ireland and three other Member States to the CJEU for their failure to transpose NIS2' (July 2026)."
     confidence: low
     valid_from: null
+    valid_until: null
+  - type: referred-to-cjeu-over
+    target: EU-NIS2
+    source: fact
+    evidence: "Uses the new `referred-to-cjeu-over` type (metadata/relationship-types.md §2.1, added 2026-09-20), pulling this fact out of the `implements-requirement-from` evidence above into its own typed edge. Confirmed by reading globalpolicywatch.com directly (2026-08-22): 'the European Commission referred Ireland and three other Member States to the CJEU for their failure to transpose NIS2' (July 2026), with the exact date (8 July 2026) and the other three states (Spain, France, Netherlands) confirmed by a Hunton Andrews Kurth law-firm alert read directly 2026-09-13."
+    confidence: low
+    valid_from: 2026-07-08
     valid_until: null
 
 sources:
@@ -120,6 +128,11 @@ originally cited.
 alert, read directly on [[ES-LCGC]], names the referral date (8 July
 2026) and the other three member states precisely: Spain, France and the
 Netherlands.
+
+**Closed 2026-09-20**: this referral is now a typed `referred-to-cjeu-over`
+edge to [[EU-NIS2]], a new relationship type (metadata/relationship-types.md
+§2.1) — previously the fact lived only in this entity's prose and the
+`implements-requirement-from` edge's evidence string.
 
 The Atlas already holds one pending cyber instrument — [[GB-CSRB]], the UK's
 Cyber Security and Resilience Bill. **These two are not the same kind of

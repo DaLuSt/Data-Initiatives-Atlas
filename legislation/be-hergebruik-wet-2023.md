@@ -28,7 +28,7 @@ verification: primary-source
 
 start_date: 2023-12-25
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-09-20"
 previous_version: null
 successor: null
 
@@ -43,6 +43,7 @@ related_entities:
   - BE-VL-BESTUURSDECREET-2021
   - BE-BRU-ORDONNANCE-2021
   - BE-WAL-DECRET-2022
+  - EU-CJEU
 relationships:
   - type: implements-requirement-from
     target: EU-OPEN-DATA-DIRECTIVE
@@ -64,6 +65,13 @@ relationships:
     evidence: "Confirmed by reading the act's own text directly (2026-08-26): it is a Belgian federal act, adopted by the Chamber of Representatives and published in the Belgisch Staatsblad / Moniteur belge. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
     confidence: medium
     valid_from: null
+    valid_until: null
+  - type: referred-to-cjeu-over
+    target: EU-OPEN-DATA-DIRECTIVE
+    source: fact
+    evidence: "Uses the new `referred-to-cjeu-over` type (metadata/relationship-types.md §2.1, added 2026-09-20), pulling this fact out of the dated table in prose into its own typed edge. Confirmed by reading the European Commission's own account of the referral directly (2026-08-26): 'The European Commission decides to refer Belgium, Bulgaria, Latvia and the Netherlands to the Court of Justice of the European Union for failing to enact EU rules on open data and public sector data re-use', dated 15 February 2023."
+    confidence: high
+    valid_from: 2023-02-15
     valid_until: null
 
 sources:
@@ -99,6 +107,10 @@ sources:
 > 25 December 2023 as this entity previously stated — 25 December 2023 is
 > the act's own date (promulgation), confirmed by the EC's implementing-
 > measures register independently. news.belgium.be remains unread (bot-walled).
+>
+> **Closed 2026-09-20**: the 15 February 2023 CJEU referral, previously
+> recorded only in the prose table below, is now a typed
+> `referred-to-cjeu-over` edge — a new relationship type.
 
 ## Description
 
@@ -188,6 +200,9 @@ into force on 17 July 2021** — the deadline itself, to the day.
   the consolidated Justel text of the 2016 act showing the inserted
   Article 1 reference to Directive (EU) 2019/1024.
 - `applies-in` [[BE]] (anchor edge).
+- `referred-to-cjeu-over` [[EU-OPEN-DATA-DIRECTIVE]] — `confidence: high`,
+  new 2026-09-20, pulled out of the dated table above into its own typed
+  edge.
 
 ## Sources
 

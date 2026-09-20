@@ -34,7 +34,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-13"
+last_verified: "2026-09-20"
 previous_version: null
 successor: null
 
@@ -51,13 +51,21 @@ related_entities:
   - BE-NIS2-WET
   - FR-NIS2-LOI
   - IE-NCS-BILL
+  - EU-CJEU
 relationships:
   - type: implements-requirement-from
     target: EU-NIS2
     source: fact
-    evidence: "Confirmed by reading dsn.gob.es's own page directly (2026-08-26): the Anteproyecto incorporates 'la Directiva (UE) 2022/2555 ... conocida como NIS2', and creates the Centro Nacional de Ciberseguridad, attached to the Presidencia del Gobierno, to overcome 'la actual dispersión competencial en materia de ciberseguridad' (the current dispersal of competences in cybersecurity matters). cuatrecasas.com, also read directly, confirms the competence split across the Interior Ministry (Cybersecurity Coordination Office), the Defence Ministry (Centro Criptológico Nacional) and the Digital Transformation Ministry, and the January-2025 approval — though it dates approval one day later than dsn.gob.es (15 January versus 14 January), a minor discrepancy left unresolved. Neither source read gave the specific 24h/72h/one-month notification deadlines or the ten-million-euro penalty figure this entity carries, which rest on nisd2.eu and legiscope.com, not read this pass. CLOSES PART OF A PREVIOUSLY-FLAGGED GAP (discovery/unresolved.md row #91): confirmed by reading a Hunton Andrews Kurth law-firm alert directly (2026-09-13), the European Commission referred Spain, alongside Ireland, France and the Netherlands, to the Court of Justice of the EU on 8 July 2026 for failure to notify complete NIS2 transposition, following formal notice on 28 November 2024 and a reasoned opinion on 7 May 2025, with the Commission seeking lump-sum and daily financial penalties until full transposition is notified — the same escalation already recorded on [[IE-NCS-BILL]]."
+    evidence: "Confirmed by reading dsn.gob.es's own page directly (2026-08-26): the Anteproyecto incorporates 'la Directiva (UE) 2022/2555 ... conocida como NIS2', and creates the Centro Nacional de Ciberseguridad, attached to the Presidencia del Gobierno, to overcome 'la actual dispersión competencial en materia de ciberseguridad' (the current dispersal of competences in cybersecurity matters). cuatrecasas.com, also read directly, confirms the competence split across the Interior Ministry (Cybersecurity Coordination Office), the Defence Ministry (Centro Criptológico Nacional) and the Digital Transformation Ministry, and the January-2025 approval — though it dates approval one day later than dsn.gob.es (15 January versus 14 January), a minor discrepancy left unresolved. Neither source read gave the specific 24h/72h/one-month notification deadlines or the ten-million-euro penalty figure this entity carries, which rest on nisd2.eu and legiscope.com, not read this pass."
     confidence: medium
     valid_from: null
+    valid_until: null
+  - type: referred-to-cjeu-over
+    target: EU-NIS2
+    source: fact
+    evidence: "CLOSES PART OF A PREVIOUSLY-FLAGGED GAP (discovery/unresolved.md row #91), using the new `referred-to-cjeu-over` type (metadata/relationship-types.md §2.1, added 2026-09-20). Confirmed by reading a Hunton Andrews Kurth law-firm alert directly (2026-09-13): the European Commission referred Spain, alongside Ireland, France and the Netherlands, to the Court of Justice of the EU on 8 July 2026 for failure to notify complete NIS2 transposition, following formal notice on 28 November 2024 and a reasoned opinion on 7 May 2025, with the Commission seeking lump-sum and daily financial penalties until full transposition is notified — the same escalation already recorded on [[IE-NCS-BILL]]."
+    confidence: medium
+    valid_from: 2026-07-08
     valid_until: null
 
 sources:
@@ -86,6 +94,9 @@ sources:
 > **Escalation added 2026-09-13**, closing part of `discovery/unresolved.md`
 > row #91. A law-firm alert, read directly, confirms the Commission
 > referred Spain to the CJEU on 8 July 2026 — see below.
+>
+> **Closed 2026-09-20**: the referral is now a typed `referred-to-cjeu-over`
+> edge, a new relationship type.
 >
 > **Verified 2026-08-26.** Two of four cited pages were read directly:
 > dsn.gob.es's own page on the bill and Cuatrecasas's law-firm analysis.
@@ -184,6 +195,9 @@ same escalation.
 
 - `implements-requirement-from` [[EU-NIS2]] — the obligation the draft
   addresses, recorded with no `valid_from` because it has not taken effect.
+- `referred-to-cjeu-over` [[EU-NIS2]] — `confidence: medium`, new
+  2026-09-20, pulled out of the `implements-requirement-from` edge's
+  evidence string into its own typed edge.
 
 ## Sources
 
