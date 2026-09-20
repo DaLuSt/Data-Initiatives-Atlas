@@ -25,7 +25,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-20"
 previous_version: null
 successor: null
 
@@ -35,6 +35,7 @@ related_entities:
   - EU-COMMON-DATA-SPACES
   - EU-DSSC
   - EU-INSIEME
+  - DE-ENDA
 relationships:
   - type: part-of
     target: EU-COMMON-DATA-SPACES
@@ -111,13 +112,17 @@ carries here.
 The same reasoning applies to the nine other data spaces added in this batch.
 Only [[EU-EHDS]] among the fourteen has a Regulation behind it.
 
-## INSIEME, now its own entity — 2026-09-19
+## INSIEME and ENDA, now their own entities
 
-`discovery/unresolved.md` row #132 flagged that INSIEME had no entity of
-its own despite being named here in prose. It is now [[EU-INSIEME]],
-`part-of` this entity, sourced from insieme.energy's own site, read
-directly. The six Horizon Europe predecessor projects and Germany's ENDA
-remain unmodelled — see below.
+`discovery/unresolved.md` row #132 flagged that INSIEME and Germany's
+ENDA had no entities of their own despite being named here in prose.
+**INSIEME** is now [[EU-INSIEME]] (2026-09-19), `part-of` this entity,
+sourced from insieme.energy's own site, read directly. **ENDA** is now
+[[DE-ENDA]] (2026-09-20), sourced from dena's own page, read directly —
+but that direct read does **not** itself connect ENDA to CEEDS; the
+"national contribution" framing traces to an unread PDF, and no
+relationship between the two entities is asserted here. The six Horizon
+Europe predecessor projects remain unmodelled — see below.
 
 ## Not modelled
 
@@ -125,8 +130,6 @@ remain unmodelled — see below.
   CEEDS build on — not individually named by any source read.
 - The **EU action plan on digitalising the energy system** and the 2026
   Strategic Roadmap.
-- Germany's **ENDA** reference architecture project, tested on the
-  Redispatch 3.0 use case, which the sources name as a national contribution.
 - Any **energy domain** entity. `DOMAIN-ENERGY` does not exist and is not
   created here: the Atlas's domain entities record a two-entity threshold,
   and CEEDS would be the only member.
