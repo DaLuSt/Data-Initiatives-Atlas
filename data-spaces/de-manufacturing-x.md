@@ -35,6 +35,7 @@ related_entities:
   - DE-CATENA-X
   - EU-MANUFACTURING-DATA-SPACE
   - DE-FACTORY-X
+  - DE-AEROSPACE-X
 relationships:
   - type: applies-in
     target: DE
@@ -169,19 +170,22 @@ organisational membership. No source states Manufacturing-X is *part of*
 the EU data space, so `related-to` is recorded rather than `part-of` or
 `participates-in`, at `confidence: medium`.
 
-## Factory-X, now its own entity — 2026-09-19
+## Factory-X and Aerospace-X, now their own entities
 
-`discovery/unresolved.md` row #131 flagged Factory-X as unmodelled despite
-being named here as a lighthouse project. It is now [[DE-FACTORY-X]],
-`part-of` this entity and `based-on` [[DE-CATENA-X]], sourced from
-Fraunhofer IOSB's own page and factory-x.org's own page, both read
-directly. Its consortium project ran January 2024 – 30 June 2026.
+`discovery/unresolved.md` row #131 flagged Factory-X and Aerospace-X as
+unmodelled despite being named here as lighthouse projects. **Factory-X**
+is now [[DE-FACTORY-X]] (2026-09-19), `part-of` this entity and
+`based-on` [[DE-CATENA-X]], sourced from Fraunhofer IOSB's own page and
+factory-x.org's own page. **Aerospace-X** is now [[DE-AEROSPACE-X]]
+(2026-09-20), same relationships, sourced from Fraunhofer ISST's and
+Fraunhofer IPT's own pages — an aerospace-supply-chain lighthouse led
+industrially by Airbus, running April 2024 – June 2026.
 
 ## Not modelled
 
-- **Construct-X**, **Aerospace-X** and **HealthTrack-X** —
-  lighthouse projects and sibling initiatives named directly in Fraunhofer
-  ISST's own page.
+- **Construct-X** and **HealthTrack-X** —
+  the remaining lighthouse projects and sibling initiatives named
+  directly in Fraunhofer ISST's own page.
 - **Plattform Industrie 4.0**, whose concepts Manufacturing-X builds on and
   which publishes the Council's material.
 - The **BMWK/BMWE** itself. No German ministry other than [[DE-BMI]] is an
