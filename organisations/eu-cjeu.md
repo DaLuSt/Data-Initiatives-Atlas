@@ -26,7 +26,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-09-20"
 previous_version: null
 successor: null
 
@@ -36,6 +36,13 @@ organisations: []
 related_entities:
   - EU
   - EU-OPEN-DATA-DIRECTIVE
+  - EU-NIS2
+  - BE-HERGEBRUIK-WET-2023
+  - NL-WHO
+  - IE-NCS-BILL
+  - ES-LCGC
+  - FR-NIS2-LOI
+  - NL-CBW
 relationships:
   - type: part-of
     target: EU
@@ -62,6 +69,12 @@ sources:
 > referred to the Court over"). [[EU-OPEN-DATA-DIRECTIVE]]'s own file
 > carries the same flag, for the concrete case of four member states'
 > February 2023 referral over that directive.
+>
+> **Closed 2026-09-20** (`discovery/unresolved.md` row #44): the second
+> of the three components, the relationship type, now exists —
+> `referred-to-cjeu-over`. Six national instruments carry it. The
+> infringement-procedure entity type remains unaddressed. See "What this
+> closes, and what it does not" below.
 
 ## Description
 
@@ -86,17 +99,29 @@ by preliminary rulings referred by national courts.
 
 ## What this closes, and what it does not
 
-This creates the **missing node** [[EU-OPEN-DATA-DIRECTIVE]]'s own file
-named — the graph can now show the Court of Justice as an entity. It does
-**not** close the deeper gap that file also named: there is still no
-entity type for an individual infringement procedure and no relationship
-type for "was referred to the Court over [instrument]." A country's
-specific referral (e.g. Belgium, Bulgaria, Latvia and the Netherlands
-over the Open Data Directive, February 2023) is not itself modelled here
-— only the institution that hears such cases. That narrower gap remains
-open, matching the discipline the INSPIRE↔UN-GGIM edge established: a
-missing node and a missing edge are not the same refusal, and creating
-one does not create the other.
+This created the **missing node** [[EU-OPEN-DATA-DIRECTIVE]]'s own file
+named — the graph can show the Court of Justice as an entity.
+
+**Closed 2026-09-20**: the missing relationship type is filled too. A new
+`referred-to-cjeu-over` type (metadata/relationship-types.md §2.1) lets a
+national transposing instrument carry a typed edge to the EU directive it
+was referred over. Six instruments now carry it: [[BE-HERGEBRUIK-WET-2023]]
+and [[NL-WHO]] (Open Data Directive, 15 February 2023) and
+[[IE-NCS-BILL]], [[ES-LCGC]], [[FR-NIS2-LOI]] and [[NL-CBW]] (NIS2, 8 July
+2026). The edge is recorded on the national instrument, per the type's own
+"referred to the Court over [instrument]" phrasing, rather than as an edge
+into this entity — this entity remains the institution, reachable from
+each referral's own file rather than holding the referrals itself.
+
+**What still does not exist**: an entity type for an individual
+infringement procedure as a first-class object — its own stages (formal
+notice, reasoned opinion, referral, judgment) tracked as one thing with a
+timeline, rather than as prose and a single referral edge. Bulgaria's and
+Latvia's Open Data Directive referrals also remain unlinked, for a
+different reason: neither has a national transposing instrument modelled
+as an Atlas entity to carry the edge. That is now the state of the gap:
+narrower than when this entity was created, and honestly described as
+partial rather than closed.
 
 ## Relationships
 
