@@ -17,12 +17,12 @@ region: EU
 
 status: active
 confidence: medium
-coverage: low
+coverage: medium
 verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-09-20"
 previous_version: null
 successor: null
 
@@ -32,6 +32,7 @@ organisations: []
 related_entities:
   - EU-COMMON-DATA-SPACES
   - EU-DS4SKILLS
+  - EU-EDGE-SKILLS
 relationships:
   - type: part-of
     target: EU-COMMON-DATA-SPACES
@@ -65,6 +66,10 @@ sources:
 > flagged is now partly closed. [[EU-DS4SKILLS]] models one of the two named
 > rollout projects. The ESCO/Europass/European Skills Agenda question was
 > checked directly rather than left as a presumption — see below.
+>
+> **Closed 2026-09-20**: the second rollout project, EDGE-Skills, is now
+> [[EU-EDGE-SKILLS]]. Both named rollout projects are modelled;
+> `coverage` moves to `medium`.
 
 ## Description
 
@@ -82,13 +87,15 @@ That does not make the domain well covered. Six of ten countries still have
 no education entity at all, and the gap is logged in
 `discovery/candidates.md` as part of the lopsided-domain finding.
 
-## ⚠ `coverage: low`, narrowed
+## `coverage: medium`, both rollout projects now modelled
 
-What this data space contains and who deploys it is now partly established.
+What this data space contains and who deploys it is now established.
 Reading digital-strategy.ec.europa.eu's own page directly (2026-09-05): under
 its rollout listing for skills, exactly two projects are named —
-**[[EU-DS4SKILLS]]** and **EDGE-Skills**. The first is now modelled; the
-second is not.
+**[[EU-DS4SKILLS]]** and **[[EU-EDGE-SKILLS]]**. Both are now modelled: DS4Skills
+(2026-09-05) and EDGE-Skills (2026-09-20), the latter sourced from
+Prometheus-X's own whitepaper describing itself as "led by Prometheus-X,"
+uniting 36 organisations from eight EU countries.
 
 How it relates to Europass, ESCO or the European Skills Agenda was checked
 directly this pass, not merely presumed: neither DS4Skills' own site nor
@@ -97,8 +104,6 @@ checked-and-negative finding, not an unresearched gap.
 
 ## Not modelled
 
-- **EDGE-Skills**, the other named rollout project, alongside
-  [[EU-DS4SKILLS]].
 - **ESCO**, **Europass** and the **European Skills Agenda** — previously
   presumed to be the existing EU skills-data machinery this data space
   builds on. Checked directly against [[EU-DS4SKILLS]]'s own sources
