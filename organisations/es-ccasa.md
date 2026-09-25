@@ -41,6 +41,7 @@ related_entities:
   - ES
   - ES-EJIE
   - ES-IZFE
+  - ES-LANTIK
 relationships:
   - type: part-of
     target: ES
@@ -99,17 +100,8 @@ companies — with **EJIE, IZFE and LANTIK** — that jointly constitute the
 Euskadi (NISAE)**, serving the Basque Government and the three Provincial
 Councils (Álava, Bizkaia, Gipuzkoa). CCASA is Álava's own contribution
 to that four-way structure, the oldest of the three provincial companies
-by over two decades.
-
-## Not modelled
-
-- **LANTIK**, the fourth NISAE company (Bizkaia's provincial IT company)
-  — attempted this pass but not created: `lantik.bizkaia.eus` and the
-  `bizkaia.eus` domain family returned HTTP 503 on every attempt (six
-  URLs tried, including official budget-memoria PDFs that plausibly state
-  its exact founding decree), and no independent source was found that
-  could be read directly. Logged as a known source block in
-  `discovery/unresolved.md`.
+by over two decades. All four NISAE companies are now modelled: LANTIK,
+the last, is [[ES-LANTIK]] (Bizkaia, added 2026-09-25).
 
 ## Relationships
 
