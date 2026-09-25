@@ -53,10 +53,13 @@ validation (`CONTRIBUTING.md` — Batch workflow).
   Established the Atlas's first full strategy → EU law → national law
   chain. **Search-only sourcing**, and two entities (`EU-EIDAS2`,
   `EU-EUDI-WALLET`) rest entirely on **secondary** sources and need
-  rebuilding in Batch 8. Not covered: digital sovereignty and EU AI
-  strategy — no distinct, sourceable initiative found for either;
-  digital-infrastructure funding instruments (Digital Europe Programme,
-  EuroHPC) not researched. See `progress/completed.md`.
+  rebuilding in Batch 8. **Digital sovereignty and EU AI strategy closed
+  2026-09-25** — no distinct, sourceable initiative existed for either at
+  the time (`discovery/unresolved.md` rows #39/#40), but both have since
+  been presented by the Commission: [[EU-TECH-SOVEREIGNTY-PACKAGE]]
+  (3 June 2026) and [[EU-AI-CONTINENT-ACTION-PLAN]] (9 April 2025). Not
+  covered: digital-infrastructure funding instruments (Digital Europe
+  Programme, EuroHPC) not researched. See `progress/completed.md`.
 - [x] **Batch 8 — EU Legislation.** Done 2026-08-14, 11 new entities plus 2
   rebuilt (`EU-EIDAS2`, `EU-EUDI-WALLET`) and 7 updated. Added the
   `proposes-to-supersede` relationship type for pending repeals. Closed

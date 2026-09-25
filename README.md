@@ -7,7 +7,7 @@ as an open, connected knowledge graph.**
 
 ### [**→ Open the Interactive Atlas**](https://dalust.github.io/Data-Initiatives-Atlas/)
 
-*Search, filter and explore 653 entities and 8,143 connections across fifty-eight
+*Search, filter and explore 717 entities and 9,060 connections across fifty-eight
 countries — no install, no account.*
 
 [![Validation](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/validate.yml/badge.svg)](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/validate.yml)
@@ -32,15 +32,15 @@ hand-maintained.
 
 | | |
 |---|---|
-| **Entities** | 653 |
-| **Connections** | 8,143 — of which **1,402** are sourced, typed relationships |
+| **Entities** | 717 |
+| **Connections** | 9,060 — of which **1,516** are sourced, typed relationships |
 | **Country scopes** | **58** — 14 with a researched national layer, the rest base anchors |
 | **Layers** | UN · Council of Europe · EU · national · sectoral |
 | **Source of truth** | Git + Markdown/YAML — no database |
 | **Licence** | CC0 1.0 |
-| **✅ Sourcing** | **All 653 entities are `verification: primary-source`** — every cited source has been opened, read and confirmed |
+| **✅ Sourcing** | **All 717 entities are `verification: primary-source`** — every cited source has been opened, read and confirmed |
 
-*Figures as of 2026-09-18. The live counts are always on the site itself.*
+*Figures as of 2026-09-25. The live counts are always on the site itself.*
 
 ### Read this before you cite anything
 
@@ -50,7 +50,7 @@ exactly what it says:
 - **`verification: search-only`** — the URLs in `sources:` were confirmed by
   a search index to exist, but nobody has actually opened and read them yet.
   The claims may well be accurate; they simply haven't been checked against
-  the primary source. **All 653 entities have moved past this stage**, after
+  the primary source. **All 717 entities have moved past this stage**, after
   a sustained multi-batch re-verification effort — none remain `search-only`,
   though a newly-added entity can still start out there before it is
   verified.

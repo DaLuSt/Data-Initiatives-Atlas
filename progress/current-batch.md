@@ -1,6 +1,80 @@
 # Current Batch
 
-**Status:** No batch in progress. **The fourteenth verification-gap
+**Status:** No batch in progress. **The ontology/non-ontology closure
+campaign** (2026-09-19 through 2026-09-25) is the most recent completed
+work, superseding the fourteenth verification-gap push below as the
+latest activity. It ran across roughly two dozen small, independently
+merged PRs rather than one numbered batch — each closing one or a small
+cluster of rows in `discovery/unresolved.md`, validated and merged on
+its own. Summary:
+
+- **Sub-national `level` coverage (Germany, Spain).** Twelve new
+  sub-national IT/digital-government bodies — [[DE-IT-NRW]],
+  [[DE-HZD]], [[DE-BITBW]], [[DE-LDI]], [[DE-IT-NIEDERSACHSEN]],
+  [[ES-CCASA]], [[ES-EJIE]], [[ES-IZFE]], [[ES-MADRID-DIGITAL]],
+  [[ES-AGENCIA-DIGITAL-ANDALUCIA]] among them — narrowing ontology item
+  #5, the "no sub-national `level`" gap flagged as the single
+  highest-value finding of the whole project. Bizkaia's LANTIK remains
+  permanently blocked this session (`bizkaia.eus` HTTP 503 throughout).
+- **Ontology items closed by decision**: #6 (Verwaltungsvereinbarungen
+  and EEA JCDs classified `type: law`), #10 (sectoral-domain
+  documentation), #14 (`start_date`/`end_date` null-plus-prose
+  convention formalised in `metadata/metadata-schema.md`), #34
+  (succession vs. abolition — `status: superseded` + `successor`
+  rather than a new relationship type), #44 (Bulgaria/Latvia Open Data
+  Directive transposition instruments modelled, closing the February
+  2023 CJEU-referral quartet).
+- **Ten `discovery/unresolved.md` rows closed** (non-ontology): **#165**
+  (all six mandatory Dutch-list IETF standards modelled — DNSSEC,
+  HTTPS/HSTS, DKIM, DMARC, SPF, STARTTLS/DANE), **#51** (EU-REG-223-2009
+  scoped out by decision, matching the EU-PSI-DIRECTIVE precedent),
+  **#50** (EuroGeographics' full 60-member roster enumerated via its own
+  WordPress REST API — the rendered members page truncates, the API
+  doesn't), **#83** (France's [[FR-DNRED]] and [[FR-TRACFIN]] modelled,
+  closing [[FR-CNCTR]]'s two missing services), **#161**
+  ([[PL-DANE-GOV-PL]] sourced from its own `api.dane.gov.pl` subdomain,
+  static where the main site is a JS SPA), **#134** ([[NL-IBDS]] /
+  [[NL-DATA-AGENDA-OVERHEID]] linked via the actual Kamerbrief
+  presenting IBDS to parliament), **#166** (ISO/IEC 27002:2022's own
+  text read via `standards.iteh.ai`, an authorised reseller, since
+  `iso.org` itself stays blocked), **#98** ([[BE-BOSA]], [[BE-KSZ]] and
+  [[BE-DIGITAAL-VLAANDEREN]] linked to [[BE-BELGIF]] as three of its
+  six named service integrators — participation, not the ownership
+  claim already and correctly refused), **#3** (verified programmatically
+  against every relationship-class edge in `site/graph.json` that zero
+  entities are disconnected from the graph, closing the oldest open row),
+  **#40** and **#39** (the [[EU-AI-CONTINENT-ACTION-PLAN]] and
+  [[EU-TECH-SOVEREIGNTY-PACKAGE]] modelled — both genuinely didn't exist
+  when Batch 7 first searched for them in 2026-08-14; they were
+  presented by the Commission in April and June 2026 respectively),
+  **#38** (closed by decision — no Atlas entity splits a programme from
+  its single founding Decision; a separate node for Decision (EU)
+  2022/2481 would duplicate [[EU-DIGITAL-DECADE]] with no new fact
+  attached).
+- **Ten new sector domains**, at the repository owner's request, using
+  the Dutch Cyberbeveiligingswet's own eighteen-sector list (Bijlage 1/2,
+  = NIS2 Annex I/II) as the reference: [[DOMAIN-ENERGY]],
+  [[DOMAIN-FINANCE]], [[DOMAIN-WATER]],
+  [[DOMAIN-DIGITAL-INFRASTRUCTURE]], [[DOMAIN-SPACE]],
+  [[DOMAIN-POSTAL]], [[DOMAIN-ENVIRONMENT]], [[DOMAIN-CHEMICALS]],
+  [[DOMAIN-FOOD]] and [[DOMAIN-MANUFACTURING]] — applied to
+  [[NL-CBW]], [[EU-NIS2]] and the manufacturing/energy/finance
+  data-space cluster that previously carried `domains: []`.
+  `metadata/taxonomy.md`'s domain table gained rows for the new slugs
+  plus a missing one for the pre-existing [[DOMAIN-NATIONAL-SECURITY]].
+- **Two egress-block workarounds found and documented** in
+  `discovery/unresolved.md`'s Known source blocks table, reusable on
+  future citations: `iso.org` (blocked) → `standards.iteh.ai`'s free
+  "redline" preview PDFs, an authorised reseller serving genuine © ISO/IEC
+  text; `digitaleoverheid.nl` (bot-walled on rendered pages) → its own
+  WordPress REST API (`wp-json/wp/v2/pages?slug=...`), unblocked and
+  serving identical content.
+- Entity count: 705 → 717. All merged as separate small PRs (roughly
+  PR #299–#325), each independently validated
+  (`tools/build_graph.py` + `validation/run_all.py` + `test_build_graph.py`)
+  before merge — no batch-wide commit.
+
+**Status (previous):** **The fourteenth verification-gap
 push** completed on 2026-08-26 — closing Czechia's tail, right after
 the twelfth (Finland) and thirteenth (Estonia). Full detail moved to
 `progress/completed.md`; summary below.
