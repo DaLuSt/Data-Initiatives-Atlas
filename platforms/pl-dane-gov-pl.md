@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-20"
+last_verified: "2026-09-25"
 previous_version: null
 successor: null
 
@@ -49,12 +49,16 @@ relationships:
   - type: governed-by
     target: PL-OTWARTE-DANE
     source: fact
-    evidence: "Confirmed by reading gov.pl's own Portal Interoperacyjności i Architektury page directly (2026-08-27): the Act of 11 August 2021 on open data and re-use of public sector information establishes a data portal as a database of public sector information resources, alongside the high-value and dynamic data categories, API access to dynamic data and the opening of publicly funded research data. `isap.sejm.gov.pl` remains genuinely CAPTCHA-blocked; `nim.gov.pl`'s cited page now returns HTTP 404 (dead link). dane.gov.pl's own homepage could not be read this pass either — it is a JavaScript-rendered application with no static content for an automated fetch to retrieve. CAVEAT unchanged: the sources establish that the Act provides for a data portal; that dane.gov.pl is that portal is the Atlas connecting the provision to the operating site."
+    evidence: "Confirmed by reading gov.pl's own Portal Interoperacyjności i Architektury page directly (2026-08-27): the Act of 11 August 2021 on open data and re-use of public sector information establishes a data portal as a database of public sector information resources, alongside the high-value and dynamic data categories, API access to dynamic data and the opening of publicly funded research data. `isap.sejm.gov.pl` remains genuinely CAPTCHA-blocked; `nim.gov.pl`'s cited page now returns HTTP 404 (dead link). CAVEAT unchanged: the sources establish that the Act provides for a data portal; that dane.gov.pl is that portal is the Atlas connecting the provision to the operating site."
     confidence: low
     valid_from: 2021-12-08
     valid_until: null
 
 sources:
+  - title: "DANE.GOV.PL API — Swagger UI documentation"
+    url: "https://api.dane.gov.pl/doc"
+    publisher: "dane.gov.pl (Chancellery of the Prime Minister of the Republic of Poland)"
+    accessed: "2026-09-25"
   - title: "Nowa ustawa o otwartych danych — Portal Interoperacyjności i Architektury"
     url: "https://www.gov.pl/web/ia/nowa-ustawa-o-otwartych-danych"
     publisher: "Portal Gov.pl"
@@ -83,6 +87,19 @@ sources:
 > with no static content an automated fetch can retrieve, so the
 > portal's own voice was reached through the Ministry's page about it
 > rather than the portal itself.
+>
+> **Closed 2026-09-25**, row #161: the portal's own site is readable
+> after all, on a different subdomain — `api.dane.gov.pl/doc`, its API
+> documentation, is a static Swagger UI page (not the JavaScript
+> single-page application the main `dane.gov.pl` homepage is), read
+> directly. Its footer names the same operator already sourced from the
+> Ministry's page, one level removed: "Maintened [sic] by the Chancellery
+> of the Prime Minister of the Republic of Poland," linking to
+> `gov.pl/cyfryzacja`. The underlying OpenAPI spec (`api.dane.gov.pl/spec/1.4`),
+> also read directly, adds the API's own stated audience (citizens,
+> companies, NGOs, researchers, officials), a link to its own
+> institution-provider list, and its data-protection-officer contact —
+> the portal's own voice, not a page about it.
 
 ## Description
 
@@ -155,8 +172,9 @@ to a shared problem, which is not a relationship.
 
 ## Sources
 
-Listed in frontmatter, two of four read directly this pass. Neither read
-page is the portal's own site — `dane.gov.pl` itself remains a
-JavaScript-rendered application with no static content to fetch — but
-one is the Ministry of Digitisation's own page naming itself as
-operator, which is the portal's own institutional voice at one remove.
+Listed in frontmatter. `dane.gov.pl`'s own homepage remains a
+JavaScript-rendered application with no static content to fetch, but
+its `api.dane.gov.pl` subdomain — the API documentation and OpenAPI
+spec — is static and was read directly 2026-09-25, closing
+`discovery/unresolved.md` row #161: the portal's own voice, not just a
+page about it.
