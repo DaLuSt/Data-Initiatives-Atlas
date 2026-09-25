@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: 2019-07-16
 end_date: null
-last_verified: "2026-09-20"
+last_verified: "2026-09-25"
 previous_version: null
 successor: null
 
@@ -43,6 +43,8 @@ related_entities:
   - EU-HVD-REGULATION
   - FR-LOI-VALTER
   - EU-CJEU
+  - BG-ZDOI
+  - LV-IAL
 relationships:
   - type: supersedes
     target: EU-PSI-DIRECTIVE
@@ -121,6 +123,20 @@ relationships:
     confidence: medium
     valid_from: 2021-12-08
     valid_until: null
+  - type: applies-in
+    target: BG
+    source: fact
+    evidence: "Confirmed by reading aip-bg.org's own consolidated text of the Закон за достъп до обществена информация directly (2026-09-25): its §1a, added by State Gazette No. 82/2023 (in force 29 September 2023), states the law introduces the provisions of Directive (EU) 2019/1024. See [[BG-ZDOI]] for the full transposing entity and its own `implements-requirement-from` edge, added the same day this scoping gap (item #44) closed."
+    confidence: high
+    valid_from: 2023-09-29
+    valid_until: null
+  - type: applies-in
+    target: LV
+    source: fact
+    evidence: "Confirmed by reading likumi.lv's own text of the Informācijas atklātības likums directly (2026-09-25): its own 'Informatīva atsauce uz Eiropas Savienības direktīvām' section names Directive (EU) 2019/1024. See [[LV-IAL]] for the full transposing entity and its own `implements-requirement-from` edge, added the same day this scoping gap (item #44) closed."
+    confidence: high
+    valid_from: 2022-06-13
+    valid_until: null
 
 sources:
   - title: "European legislation on open data"
@@ -134,6 +150,10 @@ sources:
   - title: "Directive - 2019/1024 - EN - psi directive"
     url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32019L1024"
     publisher: "EUR-Lex (Publications Office of the European Union)"
+  - title: "The European Commission decides to refer Belgium, Bulgaria, Latvia and the Netherlands to the Court of Justice of the European Union for failing to enact EU rules on open data and public sector data re-use"
+    url: "https://digital-strategy.ec.europa.eu/en/news/european-commission-decides-refer-belgium-bulgaria-latvia-and-netherlands-court-justice-european"
+    publisher: "European Commission"
+    accessed: "2026-09-25"
 ---
 
 # Open Data Directive (Directive (EU) 2019/1024)
@@ -150,6 +170,12 @@ sources:
 > relationship type for "was referred to the Court over" is now filled by
 > `referred-to-court-over`, applied on [[BE-HERGEBRUIK-WET-2023]] and
 > [[NL-WHO]]. See "Enforcement the Atlas can partly model" below.
+>
+> **Closed further 2026-09-25**: Bulgaria's and Latvia's own transposing
+> instruments are now [[BG-ZDOI]] and [[LV-IAL]], each carrying
+> `implements-requirement-from` this directive and `referred-to-court-over`
+> [[EU-CJEU]]. All four member states referred in February 2023 now have
+> a modelled transposing instrument carrying both edges.
 
 ## Description
 
@@ -303,11 +329,28 @@ referral, rather than leaving the fact in prose alone. It means a reader
 can now see from the graph, not just the text, that both instruments'
 transposition followed a Court referral.
 
-**Bulgaria and Latvia remain unmodelled**, and for a different reason than
-before: no national transposing instrument for either is an Atlas entity,
+**Bulgaria and Latvia remain unmodelled, and for a different reason than
+before**: no national transposing instrument for either is an Atlas entity,
 so there is nothing to carry the edge. Creating one purely to hold a
 referral fact would be exactly the invention the Atlas refuses. This is now
 a scoping gap, not a vocabulary gap.
+
+**Closed 2026-09-25**: both are now modelled. [[BG-ZDOI]] (Bulgaria's
+Access to Public Information Act) carries the clearest transposition
+citation this Atlas has recorded — a 2023 amendment (State Gazette No.
+82, in force 29 September 2023) adds a clause stating in so many words
+that the law "въвежда разпоредбите на Директива (ЕС) 2019/1024,"
+introduces the provisions of this directive. [[LV-IAL]] (Latvia's
+Informācijas atklātības likums, in force since 1998) names the directive
+in its own "Informatīva atsauce uz Eiropas Savienības direktīvām"
+section, with June 2022 amendments adding the high-value-dataset and
+dynamic-data provisions the directive requires. Both now also carry
+`referred-to-court-over` [[EU-CJEU]] edges (15 February 2023, confirmed
+directly on a Commission subdomain's own news page), completing the
+February 2023 referral quartet alongside [[BE-HERGEBRUIK-WET-2023]] and
+[[NL-WHO]]. Left open: whether either resulting CJEU case was
+subsequently closed, and — for Latvia specifically — why amendments that
+predate the referral by eight months did not avert it.
 
 **A narrower gap remains**: no entity type exists for an individual
 infringement procedure itself (its own stages — formal notice, reasoned

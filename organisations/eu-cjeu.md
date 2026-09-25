@@ -26,7 +26,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-20"
+last_verified: "2026-09-25"
 previous_version: null
 successor: null
 
@@ -43,6 +43,8 @@ related_entities:
   - ES-LCGC
   - FR-NIS2-LOI
   - NL-CBW
+  - BG-ZDOI
+  - LV-IAL
 relationships:
   - type: part-of
     target: EU
@@ -112,6 +114,11 @@ and [[NL-WHO]] (Open Data Directive, 15 February 2023) and
 "referred to the Court over [instrument]" phrasing, rather than as an edge
 into this entity — this entity remains the institution, reachable from
 each referral's own file rather than holding the referrals itself.
+
+**Extended 2026-09-25**: two more instruments carry the same type —
+[[BG-ZDOI]] and [[LV-IAL]] (Open Data Directive, also 15 February 2023),
+closing the last of the four member states referred that day. Eight
+instruments now carry `referred-to-court-over` in total.
 
 **What still does not exist**: an entity type for an individual
 infringement procedure as a first-class object — its own stages (formal
