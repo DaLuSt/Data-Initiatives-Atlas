@@ -14,7 +14,7 @@ region: null
 
 status: active
 confidence: medium
-coverage: low
+coverage: medium
 verification: primary-source
 
 start_date: null
@@ -30,6 +30,11 @@ related_entities:
   - INTL-ISOC
   - INTL-W3C
   - INTL-DNSSEC
+  - INTL-HTTPS-HSTS
+  - INTL-DKIM
+  - INTL-DMARC
+  - INTL-SPF
+  - INTL-STARTTLS-DANE
 relationships:
   - type: part-of
     target: INTL-ISOC
@@ -78,20 +83,18 @@ delegation.
 
 `INTL` scope, not `UN`.
 
-## ⚠ Still thin, but no longer a placeholder
+## ⚠ Thin no longer — six RFCs now connect this entity to real content
 
-`coverage: low` remains accurate: no IETF standard (RFC) is modelled, and
-the IETF's own process, structure and output are not researched beyond its
-relationship to ISOC. But the earlier "no ietf.org source was located" gap
-is closed — three ietf.org/datatracker.ietf.org pages are now read and
-cited, confirming the IETF-ISOC relationship in the primary documents'
-own words rather than resting on a single academic listing.
+`coverage: low` was accurate through 2026-09-19: no IETF standard (RFC)
+was modelled, and the IETF's own process, structure and output were
+unresearched beyond its relationship to ISOC. **Raised to `coverage:
+medium`, 2026-09-25**, once six RFCs (see below) gave this entity real
+outbound content rather than a single relationship.
 
-The IETF is named in Batch 13's scope, which is why it exists here. A
-reader should still expect a thin entity — including it with the weakness
-marked follows the precedent set by [[NL-PETRA]] and [[UN-DATA-COMMONS]] —
-but the thinness is now about breadth of coverage, not depth of sourcing
-for the one relationship the entity asserts.
+The IETF is named in Batch 13's scope, which is why it exists here. The
+IETF's own internal process, structure and output beyond the six
+standards below remain unresearched — a reader should still expect a
+lean entity, just no longer a thin one.
 
 Note that internet protocol standards do underpin parts of the Dutch layer —
 [[NL-PAS-TOE-OF-LEG-UIT]] mandates HTTPS, DNSSEC and mail-security standards
@@ -101,6 +104,14 @@ first IETF RFC modelled as an Atlas standard, `maintained-by` this
 entity, closing part of `discovery/unresolved.md` row #165. The other
 mandatory standards on the same Forum Standaardisatie list — HTTPS/HSTS,
 DKIM, DMARC, SPF, STARTTLS/DANE — remain unmodelled.
+
+**Closed 2026-09-25**: all six of the mandatory IETF-originated
+standards on that list are now Atlas entities — [[INTL-DNSSEC]],
+[[INTL-HTTPS-HSTS]], [[INTL-DKIM]], [[INTL-DMARC]], [[INTL-SPF]] and
+[[INTL-STARTTLS-DANE]], each `maintained-by` this entity. Row #165 is
+closed in full: no IETF RFC modelled as a standard was the row's only
+remaining open question after the 2026-08-28 pass sourced the
+IETF-ISOC relationship.
 
 ## Relationships
 

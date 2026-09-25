@@ -34,6 +34,11 @@ organisations:
   - INTL-IETF
 related_entities:
   - NL-PAS-TOE-OF-LEG-UIT
+  - INTL-HTTPS-HSTS
+  - INTL-DKIM
+  - INTL-DMARC
+  - INTL-SPF
+  - INTL-STARTTLS-DANE
 relationships:
   - type: maintained-by
     target: INTL-IETF
@@ -62,6 +67,11 @@ sources:
 > would connect to real content. That connection is queued, not
 > asserted." Sourced from the IETF's own RFC 4033 text and Forum
 > Standaardisatie's own mandatory-standards list, both read directly.
+>
+> **Row #165 fully closed the same day**: the other five mandatory
+> IETF-originated standards on the same list are now also modelled —
+> [[INTL-HTTPS-HSTS]], [[INTL-DKIM]], [[INTL-DMARC]], [[INTL-SPF]] and
+> [[INTL-STARTTLS-DANE]].
 
 ## Description
 
@@ -86,12 +96,6 @@ connection [[INTL-IETF]]'s own file had flagged as real but unmodelled.
 
 ## Not modelled
 
-- The other IETF-originated standards on the same mandatory list —
-  HTTPS/HSTS (RFC 9110, RFC 6797), DKIM (RFC 6376), DMARC (RFC 7489),
-  SPF, and STARTTLS/DANE (RFC 3207, RFC 7672) — all confirmed present on
-  the same Forum Standaardisatie page but not created as entities this
-  pass. DNSSEC was chosen as the first because item #165's own text
-  named it specifically.
 - No `applies-to` or similar edge is asserted from
   [[NL-PAS-TOE-OF-LEG-UIT]] to this entity; the connection is recorded
   via `related_entities` and this entity's own prose for now.
