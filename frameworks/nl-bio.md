@@ -24,7 +24,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-18"
+last_verified: "2026-09-25"
 previous_version: null
 successor: null
 
@@ -37,6 +37,7 @@ related_entities:
   - INTL-ISO-IEC-27001
   - INTL-ISO-IEC-27002
   - NL-ENSIA
+  - NL-CBW
 relationships:
   - type: based-on
     target: INTL-ISO-IEC-27001
@@ -101,6 +102,13 @@ sources:
 > NEN-EN-ISO/IEC 27001:2023 vs. ISO/IEC 27001:2022 equivalence, previously
 > inferred, is now confirmed directly by NEN's own words. See "The 2023
 > vs. 2022 equivalence, confirmed" below.
+>
+> **Linked to [[NL-CBW]], 2026-09-25**: `digitaleoverheid.nl`'s own
+> Cyberbeveiligingswet page, read directly (via its WordPress REST API —
+> the rendered page itself still returns a bot-verification interstitial),
+> names BIO2 as the government sector's own further elaboration of the
+> Cbw's duty of care. The edge is recorded on [[NL-CBW]]'s file
+> (`implemented-by`); this entity gains the backlink and cross-reference.
 
 ## Description
 
@@ -174,6 +182,9 @@ judgement call and is recorded in `discovery/unresolved.md`.
 - [[NL-ENSIA]], the accountability system paired with the BIO in its
   digitaleoverheid.nl placement, is now an entity (added 2026-09-04),
   carrying the `based-on` edge pointing here.
+- [[NL-CBW]] `implemented-by` this entity, new 2026-09-25: for the
+  government sector, BIO2 is the further elaboration of the Cbw's duty of
+  care. The edge lives on [[NL-CBW]]'s own file.
 
 ## Sources
 

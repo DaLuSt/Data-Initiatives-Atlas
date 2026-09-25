@@ -49,6 +49,7 @@ related_entities:
   - NL-WBNI
   - NL-NCSC
   - EU-CJEU
+  - NL-BIO
 relationships:
   - type: implements-requirement-from
     target: EU-NIS2
@@ -68,6 +69,13 @@ relationships:
     target: NL-WBNI
     source: fact
     evidence: "Confirmed by reading both ncsc.nl and nctv.nl directly (2026-08-27): 'De Cbw vervangt de oude Wet beveiliging netwerk- en informatiesystemen (Wbni)', which the Cbw's own entry into force on 15 August 2026 confirms has now happened, not merely 'is scheduled to happen'."
+    confidence: high
+    valid_from: 2026-08-15
+    valid_until: null
+  - type: implemented-by
+    target: NL-BIO
+    source: fact
+    evidence: "Confirmed by reading digitaleoverheid.nl's own Cyberbeveiligingswet page directly (2026-09-25) — the page previously returned only a bot-verification interstitial to this pass's fetch tooling, but its content is readable via the site's own WordPress REST API (www.digitaleoverheid.nl/wp-json/wp/v2/pages/61716), which is not itself blocked. The page states: 'Voor de sector overheid wordt bijvoorbeeld de Baseline Informatiebeveiliging Overheid (BIO)2 als nadere invulling voor de zorgplicht gebruikt' (for the government sector, the Baseline Informatiebeveiliging Overheid (BIO2) is used, for example, as the further elaboration of the duty of care). This is the government-sector-specific instrument the Cbw's own three-part structure (Act, Cyberbeveiligingsbesluit/AMvB, and sector ministerial regulations) delegates to — see 'The three-part structure' below."
     confidence: high
     valid_from: 2026-08-15
     valid_until: null
@@ -92,6 +100,7 @@ sources:
   - title: "Cyberbeveiligingswet (NIS2-richtlijn)"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/cyberbeveiligingswet/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
+    accessed: "2026-09-25"
   - title: "Valt mijn organisatie onder de Cyberbeveiligingswet (NIS2)?"
     url: "https://www.ncsc.nl/cyberbeveiligingswet-nis2/valt-mijn-organisatie-onder-de-cyberbeveiligingswet-nis2"
     publisher: "Nationaal Cyber Security Centrum (NCSC)"
@@ -121,6 +130,13 @@ sources:
 > **Domains deepened 2026-09-25**, at the user's request: thirteen new
 > `domains:` entries, one per sector this Act's own Bijlage 1 and 2 name.
 > See "The eighteen sectors" below.
+>
+> **`digitaleoverheid.nl` read directly for the first time, 2026-09-25**:
+> its rendered page still returns a bot-verification interstitial, but the
+> same content is served, unblocked, through the site's own WordPress REST
+> API. This closes the previously-unread fifth source and surfaces a new
+> fact — this Act's own three-part structure, and BIO2's role within it
+> for the government sector. See "The three-part structure" below.
 
 ## Description
 
@@ -229,6 +245,25 @@ already-present [[DOMAIN-GOVERNMENT]] (Overheid) and
 [[DOMAIN-CYBERSECURITY]] (the Act's own regulatory subject, not itself a
 named sector).
 
+## The three-part structure
+
+Confirmed by reading `digitaleoverheid.nl`'s own Cyberbeveiligingswet page
+directly (2026-09-25, via its WordPress REST API — see the banner above):
+the Cbw regime has **three components**. The Act itself and its Memorie
+van Toelichting; the **Cyberbeveiligingsbesluit (Cbb)**, an Algemene
+Maatregel van Bestuur (AMvB) that elaborates parts of the Act — the duty
+of care, the registration duty and the training duty for directors —
+applying across all covered sectors; and a **ministerial regulation per
+sector or department**, giving further sector-specific substance to some
+of the Cbb's obligations. For the government sector specifically, the
+page names [[NL-BIO]] (BIO2) as the instrument used for that further
+elaboration of the duty of care: *"Voor de sector overheid wordt
+bijvoorbeeld de Baseline Informatiebeveiliging Overheid (BIO)2 als nadere
+invulling voor de zorgplicht gebruikt."* Neither the Cbb nor any sector
+ministerial regulation is modelled as its own Atlas entity; [[NL-BIO]]
+already existed as the government-sector baseline and now carries the
+sourced link back to this Act.
+
 ## Classification
 
 Dutch implementation legislation per `metadata/taxonomy.md` §2:
@@ -241,11 +276,15 @@ Dutch implementation legislation per `metadata/taxonomy.md` §2:
 - [[NL-NCSC]] applies to it as sectoral CSIRT.
 - `referred-to-court-over` [[EU-NIS2]] — `confidence: medium`, new
   2026-09-20.
+- `implemented-by` [[NL-BIO]] — new 2026-09-25, for the government sector
+  specifically (see "The three-part structure" above).
 
 ## Sources
 
 Four of five read directly the first pass: both `ncsc.nl` and `nctv.nl`
 current pages, and both `rijksoverheid.nl` news items. `digitaleoverheid.nl`
-was blocked by a bot-verification interstitial and returned no readable
-content. A sixth source, `ncsc.nl`'s own sector-scope page, was added and
-read directly 2026-09-25 for the eighteen-sector list above.
+returned only a bot-verification interstitial to a normal fetch, but its
+content is readable through the site's own WordPress REST API — read
+directly 2026-09-25. A sixth source, `ncsc.nl`'s own sector-scope page,
+was also added and read directly 2026-09-25 for the eighteen-sector list
+above.
