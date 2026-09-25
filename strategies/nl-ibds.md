@@ -21,7 +21,7 @@ coverage: medium
 verification: primary-source
 start_date: 2021-11-18
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-09-25"
 previous_version: null
 successor: null
 
@@ -31,6 +31,7 @@ organisations:
   - NL-BZK
 related_entities:
   - NL-FDS
+  - NL-DATA-AGENDA-OVERHEID
 relationships:
   - type: implemented-by
     target: NL-FDS
@@ -38,6 +39,13 @@ relationships:
     evidence: "Confirmed 2026-08-21 on noraonline.nl's 'Federatief Datastelsel' wiki page: 'Samen met stakeholders ontwikkelt de IBDS daarom een Federatief Datastelsel (FDS)' — the IBDS is developing the FDS together with stakeholders. The Beleidsevaluatie Interbestuurlijke Datastrategie (Panteia, 7 January 2026) corroborates this, describing FDS building blocks and target architecture as deliverables of the IBDS's implementation programme (Realisatie IBDS) across 2022-2024."
     confidence: medium
     valid_from: null
+    valid_until: null
+  - type: related-to
+    target: NL-DATA-AGENDA-OVERHEID
+    source: fact
+    evidence: "Confirmed by reading privacy-web.nl's own copy of the Kamerbrief directly (2026-09-25): State Secretary Knops (BZK) opens the IBDS's presentation to parliament by saying 'Twee jaar geleden heb ik de NL DIGITAAL: Data Agenda Overheid gelanceerd... De acties in deze data-agenda zijn grotendeels gerealiseerd' (two years ago I launched the Data Agenda Overheid... the actions in this data agenda have largely been realised), and closes by saying 'In navolging van de Data Agenda Overheid zal uw Kamer regelmatig worden geïnformeerd over de voortgang... van deze Interbestuurlijke Datastrategie' (following the Data Agenda Overheid's practice, parliament will be regularly informed about this strategy's progress). This is the government's own narrative link — the same office presenting IBDS as continuing a reporting practice the Data Agenda Overheid established — not a formal successor claim: the Data Agenda Overheid's own `successor` field already points through NL-DIGIBETER's chain to a different entity. `related-to` rather than a stronger type, since no source states IBDS extends or replaces the Data Agenda Overheid's substantive scope, only its parliamentary-reporting rhythm. Closes discovery/unresolved.md row #134."
+    confidence: medium
+    valid_from: 2021-11-18
     valid_until: null
 
 sources:
@@ -61,12 +69,22 @@ sources:
     url: "https://www.noraonline.nl/wiki/Federatief_Datastelsel"
     publisher: "NORA Online (ICTU)"
     accessed: "2026-08-22"
+  - title: "Kamerbrief over Interbestuurlijke Datastrategie Nederland"
+    url: "https://privacy-web.nl/beleid/kamerbrief-over-interbestuurlijke-datastrategie-nederland/"
+    publisher: "Privacy Web (reproducing State Secretary Knops's 18 November 2021 letter to the Tweede Kamer)"
+    accessed: "2026-09-25"
 ---
 
 # Interbestuurlijke Datastrategie (IBDS)
 
 > **Verified 2026-08-20, deepened 2026-08-21.** Every cited source was read and confirmed to
 > support what this entity says. `verification: primary-source`.
+>
+> **Narrowed 2026-09-25**, closing `discovery/unresolved.md` row #134:
+> the Kamerbrief presenting the IBDS to parliament, read directly, gives
+> the government's own narrative link to [[NL-DATA-AGENDA-OVERHEID]] —
+> a continuation of reporting practice, not a stated succession or
+> substantive extension.
 
 ## Description
 
@@ -98,6 +116,12 @@ absorbed. `confidence` raised from `low` to `medium` on this basis.
 - Implemented by [[NL-FDS]] — now a sourced fact: "Samen met stakeholders
   ontwikkelt de IBDS daarom een Federatief Datastelsel (FDS)" (noraonline.nl).
 - Coordinated within the [[NL-BZK]] digital-government policy remit.
+- `related-to` [[NL-DATA-AGENDA-OVERHEID]] — the Kamerbrief presenting the
+  IBDS, read directly, says its actions were "grotendeels gerealiseerd"
+  (largely realised) and that parliamentary reporting on the IBDS
+  continues "in navolging van" (following) that agenda's own practice.
+  A narrative continuity in the government's own words, not a formal
+  successor claim — see the note above.
 
 ## The programme, year by year
 
@@ -111,4 +135,4 @@ piloted, and the *Interbestuurlijk Kenniscentrum* (IKC) becomes operational;
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter, including the Kamerbrief read directly 2026-09-25.
