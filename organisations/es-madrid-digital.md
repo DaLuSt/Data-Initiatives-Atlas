@@ -47,6 +47,7 @@ related_entities:
   - ES
   - ES-AOC
   - ES-EJIE
+  - ES-AGENCIA-DIGITAL-ANDALUCIA
 relationships:
   - type: part-of
     target: ES
@@ -131,6 +132,9 @@ digital administration, technology and communications.
   name is sourced from the Comunidad's own page only.
 - Madrid Digital's internal organisation and specific digital-service
   portfolio.
+- Any relationship to [[ES-AGENCIA-DIGITAL-ANDALUCIA]] (Andalusia's own
+  digital agency, added 2026-09-25) — no source connects them; recorded
+  for navigation only.
 
 ## Relationships
 
