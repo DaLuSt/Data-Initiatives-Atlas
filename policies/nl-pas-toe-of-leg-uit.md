@@ -33,6 +33,11 @@ organisations:
 related_entities:
   - NL-OBDO
   - INTL-DNSSEC
+  - INTL-HTTPS-HSTS
+  - INTL-DKIM
+  - INTL-DMARC
+  - INTL-SPF
+  - INTL-STARTTLS-DANE
 relationships:
   - type: maintained-by
     target: NL-FORUM-STANDAARDISATIE
@@ -108,6 +113,14 @@ entities. **Narrowed 2026-09-25**: the first is now modelled,
 `discovery/unresolved.md` row #165. The other mandatory IETF-originated
 standards on the list — HTTPS/HSTS, DKIM, DMARC, SPF and STARTTLS/DANE —
 remain unmodelled.
+
+**Closed 2026-09-25**: all six of the mandatory IETF-originated
+standards on the list are now Atlas entities — [[INTL-DNSSEC]],
+[[INTL-HTTPS-HSTS]], [[INTL-DKIM]], [[INTL-DMARC]], [[INTL-SPF]] and
+[[INTL-STARTTLS-DANE]] — each `maintained-by` [[INTL-IETF]] and sourced
+from both the relevant RFC's own text and this policy's own Forum
+Standaardisatie source. Other, non-IETF standards on the wider open-
+standards list remain out of scope for this pass.
 
 ## Relationships
 
