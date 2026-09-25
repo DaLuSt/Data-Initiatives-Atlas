@@ -24,14 +24,15 @@ verification: primary-source
 
 start_date: 2022-12-14
 end_date: 2030-12-31
-last_verified: "2026-08-21"
+last_verified: "2026-09-25"
 previous_version: null
 successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
 organisations: []
-related_entities: []
+related_entities:
+  - EU-TECH-SOVEREIGNTY-PACKAGE
 relationships:
   - type: applies-in
     target: PT
@@ -145,22 +146,37 @@ The Commission's stated vision encompasses "digital sovereignty in an open
 manner", alongside fundamental rights, rule of law, democracy, inclusion,
 accessibility, equality, sustainability, resilience and security.
 
-## On "digital sovereignty"
+## On "digital sovereignty" — closed 2026-09-25
 
-Batch 7's scope lists digital sovereignty as a topic. **No separate entity
-is created for it**, because the sources located treat it as a framing or
-objective within this programme rather than as a named initiative with its
-own governance. Creating an entity for a theme would produce a node with
-nothing verifiable attached. Queued for reconsideration if a distinct
-initiative is identified.
+Batch 7's scope lists digital sovereignty as a topic, and this section
+previously said no separate entity existed for it beyond this programme's
+own framing. That is now out of date: [[EU-TECH-SOVEREIGNTY-PACKAGE]],
+the Commission's own named, dated (3 June 2026), governed initiative —
+the Chips Act 2.0, the Cloud and AI Development Act, the EU Open Source
+Strategy and a Strategic Roadmap for Digitalisation and AI in Energy —
+is now an Atlas entity, closing `discovery/unresolved.md` row #39. No
+relationship between it and this programme is asserted; the Commission's
+own overview page lists both under the same policy umbrella without
+stating either governs or absorbs the other.
 
-## Typing note
+## Typing note — closed 2026-09-25
 
 The programme is established *by* a Decision, which is itself EU
 legislation. The Atlas models the programme, not the Decision, on the
 grounds that the programme is the substantive thing; the Decision is
-recorded in `alternative_names` and as a source. Whether the Decision
-warrants a separate `legislation/` entity is queued.
+recorded in `alternative_names` and as a source. `discovery/unresolved.md`
+row #38 asked whether the Decision warranted its own separate
+`legislation/` entity — closed by decision rather than left queued: no
+Atlas entity currently splits a programme from its single founding
+Decision, and a separate `EU-DIGITAL-DECADE-DECISION` entity would carry
+the same start date, the same OJ citation and the same EUR-Lex source
+already on this file, adding a node with no new fact or relationship
+attached — the same reasoning that refused a standalone entity for
+Directive 2013/37/EU on [[EU-PSI-DIRECTIVE]] (row #47) and for
+Regulation (EC) No 223/2009 (row #51, closed 2026-09-25). If a future
+pass finds the Decision has its own distinct content — amendments,
+infringement history, a repeal — worth recording separately from the
+programme, that would be grounds to split; none is known today.
 
 ## Relationships
 
