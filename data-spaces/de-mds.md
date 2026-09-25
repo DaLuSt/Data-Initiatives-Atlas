@@ -27,7 +27,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-19"
+last_verified: "2026-09-25"
 previous_version: null
 successor: null
 
@@ -160,6 +160,16 @@ coincidence, not a stated relationship, and no edge is asserted on it.
 Two national mobility data spaces now sit unconnected to their apparent
 European parent. That is a visible hole rather than a hidden one, and it is
 logged in `discovery/unresolved.md`.
+
+**A second negative, 2026-09-25**: deployEMDS's own site, read directly
+for [[EU-EMDS]]'s own file, names nine participating countries for its
+use cases — Spain, Hungary, Belgium, France, Portugal, Italy, Bulgaria,
+Sweden and Finland. **Germany is not among them either**, despite
+acatech — a German institution and this entity's own parent company's
+founder/majority shareholder — coordinating the project. The
+organisational overlap runs through one institution's staff and
+governance, not through Germany's own participation in the deployment
+project itself.
 
 ## Relationships
 
