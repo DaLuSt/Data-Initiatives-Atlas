@@ -36,6 +36,7 @@ domains:
 organisations: []
 related_entities:
   - EU-AI-ACT
+  - EU-TECH-SOVEREIGNTY-PACKAGE
 relationships:
   - type: related-to
     target: EU-AI-ACT
@@ -112,6 +113,12 @@ already exists.
 ## Relationships
 
 - `related-to` [[EU-AI-ACT]] — see above.
+- Reached by [[EU-TECH-SOVEREIGNTY-PACKAGE]] (new 2026-09-25), which
+  `related-to` this entity via a shared component — the Cloud and AI
+  Development Act, one of the Tech Sovereignty Package's own two
+  legislative proposals, which the Commission's own page says will
+  "complement and support ... the AI Continent Action Plan." The edge is
+  recorded on that entity's own file.
 
 ## Sources
 
