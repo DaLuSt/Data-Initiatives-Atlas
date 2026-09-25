@@ -30,7 +30,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-19"
+last_verified: "2026-09-25"
 previous_version: null
 successor: null
 
@@ -69,6 +69,10 @@ sources:
     url: "https://www.eea.europa.eu/data-and-maps/data-providers-and-partners/eurogeographics/folder_contents"
     publisher: "European Environment Agency"
     note: "Dead as of 2026-08-28: redirects (302) to https://eurogeographics.org//folder_contents, which returns 404. Not usable as a corroborating source this pass."
+  - title: "EuroGeographics members (WordPress REST API, wp-json/wp/v2/members)"
+    url: "https://eurogeographics.org/wp-json/wp/v2/members?per_page=100"
+    publisher: "EuroGeographics"
+    accessed: "2026-09-25"
 ---
 
 # EuroGeographics
@@ -77,6 +81,19 @@ sources:
 > member, [[DK-KLIMADATASTYRELSEN]], is now confirmed directly on
 > EuroGeographics' own member-profile page. See "Why the members attach
 > with `participates-in` and not `part-of`" below.
+>
+> **Closed 2026-09-25**, row #50: the site's own `members` custom-post-type
+> REST endpoint (`/wp-json/wp/v2/members`), read directly, returns the
+> complete roster — exactly 60 records, matching the homepage's own count.
+> Cross-checked against every Atlas organisation entity: the same six
+> already attached ([[NL-KADASTER]], [[NO-KARTVERKET]], [[CH-SWISSTOPO]],
+> [[GB-OS]], [[IE-TAILTE]], [[DK-KLIMADATASTYRELSEN]]) are the only
+> overlaps — no further Atlas entity is among the 60. The roster's own
+> country taxonomy also resolves the "44 countries" figure precisely: it
+> carries 47 distinct country terms, four of which are UK constituent
+> geographies (England & Wales, Scotland, Northern Ireland, Great
+> Britain) rather than separate sovereign countries — collapsing those
+> to one United Kingdom brings the count to exactly 44.
 >
 > **Re-verified 2026-08-28.** `eurogeographics.org` was previously reported
 > as blocked by the network egress proxy; it is reachable this pass, and
@@ -169,9 +186,18 @@ is now confirmed, and by a stronger route than the composition rule.
 [[DK-KLIMADATASTYRELSEN]]'s own EuroGeographics member profile page,
 read directly, states "Member status: Full" under the English spelling
 "Agency for Climate Data" — a direct membership record rather than an
-inference from the "NMCA of a European country" rule. The full member
-list itself remains unretrieved (see "Sources" below), so this closes one
-member, not the roster.
+inference from the "NMCA of a European country" rule.
+
+**Closed 2026-09-25**: the full roster is now in hand. EuroGeographics'
+own WordPress site exposes its member directory as a REST API
+(`/wp-json/wp/v2/members`), returning all 60 records with each member's
+country via the site's own taxonomy — read directly, not scraped from
+rendered HTML. Checked against every organisation entity in the Atlas:
+the same six already listed above are the complete overlap. No
+seventh Atlas entity turns out to be a EuroGeographics member — Poland's
+Head Office of Geodesy and Cartography (GUGiK) and Germany's Working
+Committee of the Surveying Authorities of the Länder (AdV) are both on
+the roster but neither is an Atlas entity.
 
 ## The edge that is still refused
 
@@ -205,7 +231,8 @@ were read directly this pass (2026-08-28); the European Environment
 Agency's page is dead (302 → 404, see caveat above) and is retained in the
 list only as a record of what was originally cited, not as a live source.
 [[DK-KLIMADATASTYRELSEN]]'s EuroGeographics member profile page was read
-directly on that entity 2026-09-19, not re-fetched here — its own members
-listing page returned truncated content to this pass's fetch tooling and
-could not be enumerated in full, so the wider roster question in
-`discovery/unresolved.md` row #50 stays open beyond this one member.
+directly on that entity 2026-09-19. The rendered members page returns
+truncated content to this pass's fetch tooling, but the site's underlying
+WordPress REST API (`/wp-json/wp/v2/members`) does not — read directly
+2026-09-25, it returns the complete 60-member roster with country data,
+closing `discovery/unresolved.md` row #50.
