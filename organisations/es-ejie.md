@@ -43,6 +43,7 @@ related_entities:
   - ES
   - ES-IZFE
   - ES-CCASA
+  - ES-LANTIK
 relationships:
   - type: part-of
     target: ES
@@ -104,12 +105,11 @@ more layered ownership.
 
 ## Not modelled
 
-- **LANTIK**, the last of EJIE's three NISAE co-members — attempted
-  2026-09-20 but not created; `bizkaia.eus`/`lantik.bizkaia.eus` returned
-  HTTP 503 on every attempt. **IZFE and CCASA, the other two, are now
-  [[ES-IZFE]]** (Gipuzkoa) and **[[ES-CCASA]]** (Álava, added 2026-09-20).
 - The **NISAE** interoperability node itself as a separate entity —
-  described here in prose as a joint function of the four companies.
+  described here in prose as a joint function of the four companies. All
+  four member companies are now modelled: **IZFE** ([[ES-IZFE]],
+  Gipuzkoa), **CCASA** ([[ES-CCASA]], Álava, both added 2026-09-20) and
+  **LANTIK** ([[ES-LANTIK]], Bizkaia, added 2026-09-25).
 
 ## Relationships
 

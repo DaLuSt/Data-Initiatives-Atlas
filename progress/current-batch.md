@@ -1,9 +1,36 @@
 # Current Batch
 
-**Status:** No batch in progress. **The ontology/non-ontology closure
-campaign** (2026-09-19 through 2026-09-25) is the most recent completed
-work, superseding the fourteenth verification-gap push below as the
-latest activity. It ran across roughly two dozen small, independently
+**Status:** No batch in progress. **[[ES-LANTIK]] added 2026-09-25**,
+completing the four-way Basque NISAE quartet ([[ES-EJIE]], [[ES-CCASA]],
+[[ES-IZFE]], [[ES-LANTIK]]) that `discovery/unresolved.md` item #5 has
+tracked since 2026-09-20. `bizkaia.eus` was retried (five URLs) and
+still returned HTTP 503 on every attempt, confirmed blocked across two
+sessions five days apart; sourced instead from `tdigitaleuskadi.wikitoki.org`
+(independent civic-tech site) and `axesor.es` (commercial mercantile
+registry), at `confidence: medium` since neither is a government-side
+source. Entity count 717 → 718. `discovery/reverification-allowlist.md`
+regenerated to match.
+
+**Closed `discovery/unresolved.md` row #47, same session.** Directive
+2013/37/EU's actual amendments to the PSI Directive (2003/98/EC) — scope
+extended to libraries/museums/archives, re-use turned from optional to a
+duty, open/machine-readable format requirement, tightened charging
+rules, time-limited cultural-digitisation exclusivity — are now read
+directly on [[EU-PSI-DIRECTIVE]] via EUR-Lex's TXT/HTML form. The
+decision not to give the amending directive its own entity stands
+unchanged; only the "content not established" gap closed.
+
+**Closed `discovery/unresolved.md` row #48, same session.** Declined to
+model CEN/TC 434 (a committee, not a body — matching the ISO/IEC JTC 1
+precedent), the UBL/CII syntax bindings (technical artefacts of
+[[EU-EN-16931]] itself), or a generic CIUS-mechanism entity — its
+concrete instances ([[DE-XRECHNUNG]], [[IT-FATTURAPA]], [[FR-CIUS-FR]])
+are what's worth modelling, and all three already are.
+
+**The ontology/non-ontology closure
+campaign** (2026-09-19 through 2026-09-25) is the most recent
+batch-scale completed work, superseding the fourteenth verification-gap
+push below as the second-most-recent activity. It ran across roughly two dozen small, independently
 merged PRs rather than one numbered batch — each closing one or a small
 cluster of rows in `discovery/unresolved.md`, validated and merged on
 its own. Summary:

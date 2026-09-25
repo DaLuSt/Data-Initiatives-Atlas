@@ -41,6 +41,7 @@ related_entities:
   - ES
   - ES-EJIE
   - ES-CCASA
+  - ES-LANTIK
 relationships:
   - type: part-of
     target: ES
@@ -88,7 +89,8 @@ euskadi.eus's own NISAE page (already cited on [[ES-EJIE]]): IZFE is one
 of the four public IT companies — with EJIE, CCASA and LANTIK — that
 jointly constitute the Interoperability and Security Node of the
 Administrations of Euskadi, serving the Basque Government and the three
-Provincial Councils.
+Provincial Councils. All four NISAE companies are now modelled: LANTIK,
+the last, is [[ES-LANTIK]] (Bizkaia, added 2026-09-25).
 
 ## What it does
 
@@ -99,13 +101,6 @@ and infrastructure/cybersecurity. Its own budget document adds technical
 detail: two data-processing centres and a dual-star-topology corporate
 network connecting all provincial sites, interconnected with the rest of
 the Basque Country's and Spain's administrations.
-
-## Not modelled
-
-- **LANTIK**, IZFE's and EJIE's last NISAE co-member — attempted
-  2026-09-20 but not created; `bizkaia.eus`/`lantik.bizkaia.eus` returned
-  HTTP 503 on every attempt. **CCASA, the other, is now [[ES-CCASA]]**
-  (Álava's own provincial IT company, added 2026-09-20).
 
 ## Relationships
 
