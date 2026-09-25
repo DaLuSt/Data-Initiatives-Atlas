@@ -22,7 +22,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-25"
 previous_version: null
 successor: null
 
@@ -124,7 +124,11 @@ than an unnamed one.
   Dataspaces outlined in the EU data strategy," which is closer to a sourced
   connection than the prior text's pure association — but the page does not
   name the EMDS specifically, so no relationship type stronger than the
-  existing association is asserted. Worth revisiting.
+  existing association is asserted. **Re-checked 2026-09-25**: still no
+  EMDS-specific mention on re-reading the same page directly. deployEMDS's
+  own site, read directly for [[EU-EMDS]]'s own file, names nine
+  participating countries and the Netherlands is not among them — a
+  documented negative strengthening rather than closing this gap.
 
 ## Sources
 
