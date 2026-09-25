@@ -23,11 +23,12 @@ verification: primary-source
 
 start_date: 2022-07-01
 end_date: 2025-06-30
-last_verified: "2026-09-20"
+last_verified: "2026-09-25"
 previous_version: null
 successor: null
 
-domains: []
+domains:
+  - DOMAIN-ENERGY
 organisations: []
 related_entities:
   - EU-CEEDS
@@ -70,6 +71,9 @@ sources:
 > projects" finding. Sourced from Enershare's own official CORDIS record
 > and its coordinator's own page (`enershare.eu` itself returned HTTP 503
 > on every attempt this pass and is not cited).
+>
+> **Domain added 2026-09-25**: [[DOMAIN-ENERGY]], created because
+> "Energie" is one of the Dutch Cyberbeveiligingswet's own named sectors.
 
 ## Description
 

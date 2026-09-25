@@ -25,11 +25,12 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-19"
+last_verified: "2026-09-25"
 previous_version: null
 successor: null
 
-domains: []
+domains:
+  - DOMAIN-MANUFACTURING
 organisations: []
 related_entities:
   - DE-CATENA-X
@@ -108,6 +109,10 @@ sources:
 > the EU manufacturing data space's own coordination action tracks
 > Manufacturing-X as a recognised initiative. See "The coordination
 > action's own tracking" below.
+>
+> **Domain added 2026-09-25**: [[DOMAIN-MANUFACTURING]], created because
+> "Vervaardiging" is one of the Dutch Cyberbeveiligingswet's own named
+> sectors.
 
 ## Description
 

@@ -25,11 +25,12 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-20"
+last_verified: "2026-09-25"
 previous_version: null
 successor: null
 
-domains: []
+domains:
+  - DOMAIN-ENERGY
 organisations: []
 related_entities:
   - EU-COMMON-DATA-SPACES
@@ -91,6 +92,9 @@ sources:
 > now named AND all six are modelled — see "The six Horizon Europe
 > projects, named and modelled" below. `discovery/unresolved.md` row #132
 > is fully closed and removed from the table.
+>
+> **Domain added 2026-09-25**: [[DOMAIN-ENERGY]], created because
+> "Energie" is one of the Dutch Cyberbeveiligingswet's own named sectors.
 
 ## Description
 

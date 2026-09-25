@@ -25,11 +25,12 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-19"
+last_verified: "2026-09-25"
 previous_version: null
 successor: null
 
-domains: []
+domains:
+  - DOMAIN-MANUFACTURING
 organisations: []
 related_entities:
   - EU-COMMON-DATA-SPACES
@@ -77,6 +78,10 @@ sources:
 > **Partially closed 2026-09-19** (`discovery/unresolved.md` row #120):
 > the Data Space 4.0 coordination action's own tracking of
 > [[DE-MANUFACTURING-X]] as a connected initiative. See below.
+>
+> **Domain added 2026-09-25**: [[DOMAIN-MANUFACTURING]], created because
+> "Vervaardiging" is one of the Dutch Cyberbeveiligingswet's own named
+> sectors.
 
 ## Description
 

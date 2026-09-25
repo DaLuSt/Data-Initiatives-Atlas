@@ -26,11 +26,12 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-20"
+last_verified: "2026-09-25"
 previous_version: null
 successor: null
 
-domains: []
+domains:
+  - DOMAIN-ENERGY
 organisations: []
 related_entities:
   - EU-CEEDS
@@ -58,6 +59,9 @@ sources:
 > named only in [[EU-CEEDS]]'s own "Not modelled" prose, sourced from an
 > unreadable PDF). Sourced from dena's own page, read directly. **The
 > connection to CEEDS itself is not confirmed by this read** — see below.
+>
+> **Domain added 2026-09-25**: [[DOMAIN-ENERGY]], created because
+> "Energie" is one of the Dutch Cyberbeveiligingswet's own named sectors.
 
 ## Description
 

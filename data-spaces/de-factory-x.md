@@ -25,11 +25,12 @@ verification: primary-source
 
 start_date: 2024-01-01
 end_date: 2026-06-30
-last_verified: "2026-09-19"
+last_verified: "2026-09-25"
 previous_version: null
 successor: null
 
-domains: []
+domains:
+  - DOMAIN-MANUFACTURING
 organisations: []
 related_entities:
   - DE-MANUFACTURING-X
@@ -68,6 +69,10 @@ sources:
 > not modelled"). Sourced from Fraunhofer IOSB's own page and factory-x.org's
 > own page, both read directly. Aerospace-X, Construct-X, HealthTrack-X
 > and Plattform Industrie 4.0 remain unmodelled — see "Not modelled" below.
+>
+> **Domain added 2026-09-25**: [[DOMAIN-MANUFACTURING]], created because
+> "Vervaardiging" is one of the Dutch Cyberbeveiligingswet's own named
+> sectors.
 
 ## Description
 

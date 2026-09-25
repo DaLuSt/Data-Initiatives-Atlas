@@ -22,11 +22,12 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-25"
 previous_version: null
 successor: null
 
-domains: []
+domains:
+  - DOMAIN-ENVIRONMENT
 organisations: []
 related_entities:
   - EU-COMMON-DATA-SPACES
@@ -73,6 +74,10 @@ sources:
 > a newly-sourced, if thin, connection to [[EU-INSPIRE]]. `errin.eu`
 > returned HTTP 403 and was not read. `verification` moves from
 > `search-only` to `primary-source`.
+>
+> **Domain added 2026-09-25**: [[DOMAIN-ENVIRONMENT]], created because
+> "Afvalstoffenbeheer" (waste management) is one of the Dutch
+> Cyberbeveiligingswet's own named sectors.
 
 ## Description
 

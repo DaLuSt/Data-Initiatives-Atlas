@@ -54,6 +54,27 @@ useful graph relationships").
 | `DOMAIN-SOCIAL-SECURITY` | Social Security |
 | `DOMAIN-RESEARCH` | Research |
 | `DOMAIN-INFRASTRUCTURE` | Infrastructure |
+| `DOMAIN-NATIONAL-SECURITY` | National Security |
+| `DOMAIN-WATER` | Water |
+| `DOMAIN-DIGITAL-INFRASTRUCTURE` | Digital Infrastructure |
+| `DOMAIN-SPACE` | Space |
+| `DOMAIN-POSTAL` | Postal and Courier Services |
+| `DOMAIN-CHEMICALS` | Chemicals |
+| `DOMAIN-FOOD` | Food |
+| `DOMAIN-MANUFACTURING` | Manufacturing |
+
+The eight new rows from `DOMAIN-NATIONAL-SECURITY` onward were added
+2026-09-25. `DOMAIN-NATIONAL-SECURITY` had already been created as an
+entity in an earlier batch without a row here — added now to close that
+gap. The other seven (`DOMAIN-WATER` through `DOMAIN-MANUFACTURING`)
+reflect the eighteen essential/important sectors listed in Bijlage 1 and
+2 of the Dutch Cyberbeveiligingswet (Cbw) — the national implementation
+of the EU NIS2 Directive — at the user's request, taking that sector list
+as the reference. Of the eighteen Cbw sectors, eleven already had a
+matching Atlas domain (Energy, Finance and Environment were anticipated
+above but not yet created; Government, Mobility, Health, Research and
+Cybersecurity already existed as entities); the other seven needed a new
+slug, listed here.
 
 This list is not closed. Add a row here (with slug) in the same commit that
 first creates the domain entity, so the table always reflects what exists.
