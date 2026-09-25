@@ -1,0 +1,213 @@
+name: Autonomous Knowledge Graph Agent
+
+# Periodically starts the autonomous Claude agent defined in CLAUDE.md.
+#
+# The repository itself is the agent's persistent memory — see CLAUDE.md
+# ("What already exists — use it, don't reinvent it") for where state
+# lives. This workflow does not depend on one Claude process staying alive
+# indefinitely: if it's interrupted (timeout, crash) mid-task, the final
+# step isolates any uncommitted work onto its own branch and opens a PR
+# rather than pushing it — or anything else — directly to `main`. The
+# agent's own normal workflow (branch -> commit -> push -> PR -> validate
+# -> squash-merge) never touches `main` directly either, so a human's
+# concurrent commit to `main` is never at risk of being clobbered by a
+# scheduled run. Note: PRs this job opens use its own GITHUB_TOKEN, so the
+# separate validate.yml CI won't fire on them (GitHub's recursion
+# protection) — see the longer note on step 4 below for what gates the
+# merge instead, and how to change that if you want independent CI too.
+
+on:
+  schedule:
+    # Approximately every 5 hours.
+    - cron: "0 */5 * * *"
+
+  workflow_dispatch:
+    inputs:
+      prompt_override:
+        description: >-
+          Optional replacement for the default agent prompt (advanced use —
+          leave blank for a normal autonomous run).
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: autonomous-agent
+  cancel-in-progress: false
+
+jobs:
+  autonomous-agent:
+    runs-on: ubuntu-latest
+
+    # Leave enough time for the checkpoint step even if the agent runs long.
+    timeout-minutes: 270
+
+    steps:
+      # ------------------------------------------------------------
+      # 1. Checkout repository
+      # ------------------------------------------------------------
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # ------------------------------------------------------------
+      # 2. Configure Git and toolchain
+      # ------------------------------------------------------------
+
+      - name: Configure Git
+        run: |
+          git config user.name "autonomous-data-agent"
+          git config user.email "actions@users.noreply.github.com"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Python dependencies
+        run: pip install -r validation/requirements.txt
+
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+
+      # ------------------------------------------------------------
+      # 3. Inspect current state
+      #
+      # See CLAUDE.md's state-file table — there is no .agent/state.yaml;
+      # progress/current-batch.md and discovery/unresolved.md are the
+      # authoritative persistent state.
+      # ------------------------------------------------------------
+
+      - name: Inspect repository state
+        run: |
+          echo "## Git status"
+          git status --short
+
+          echo ""
+          echo "## progress/current-batch.md (first 40 lines)"
+          head -n 40 progress/current-batch.md
+
+          echo ""
+          echo "## discovery/unresolved.md row count"
+          grep -c '^| [0-9]' discovery/unresolved.md || true
+
+          echo ""
+          echo "## .agent/needs-human/ (open items)"
+          ls -1 .agent/needs-human/ 2>/dev/null | grep -v '^README.md$' || echo "none"
+
+      # ------------------------------------------------------------
+      # 4. Run Claude Code
+      #
+      # CLAUDE.md contains the full operating instructions, including the
+      # PR-based git workflow the agent must follow (never push to `main`
+      # directly). --dangerously-skip-permissions is used because this is
+      # an unattended, isolated, ephemeral runner with no human present to
+      # approve individual tool calls -- do not use that flag when running
+      # Claude Code interactively or on a shared/persistent machine.
+      #
+      # NOTE on GH_TOKEN: this is the job's own ephemeral GITHUB_TOKEN.
+      # GitHub deliberately does not let a GITHUB_TOKEN-authored push or PR
+      # trigger *other* workflow runs (recursion protection), so
+      # .github/workflows/validate.yml will NOT fire on PRs this job opens.
+      # That's why the prompt below tells the agent to treat its own local
+      # validation as authoritative for its own PRs, rather than waiting on
+      # a check that will never appear. If you want genuinely independent
+      # CI to gate agent PRs too, create a fine-grained PAT scoped to this
+      # repo (contents: write, pull requests: write), store it as a repo
+      # secret (e.g. AGENT_GH_PAT), and use that instead of
+      # secrets.GITHUB_TOKEN here -- a PAT-authored PR is not subject to
+      # the same recursion protection, so validate.yml will run on it
+      # normally and can be waited on and required.
+      # ------------------------------------------------------------
+
+      - name: Run autonomous Claude agent
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PROMPT_OVERRIDE: ${{ inputs.prompt_override }}
+        run: |
+          if [ -n "$PROMPT_OVERRIDE" ]; then
+            PROMPT="$PROMPT_OVERRIDE"
+          else
+            PROMPT="Operate as the autonomous knowledge graph agent defined in CLAUDE.md. Read CLAUDE.md first, then progress/current-batch.md and discovery/unresolved.md, to understand current state -- do not assume anything from a previous conversation, you have none. Resume any incomplete task named in progress/current-batch.md's Status line. If none exists, select the highest-priority available task per CLAUDE.md's priority order. Research using primary sources only -- never fabricate an entity, relationship, date or source. Follow the repository's existing PR-based git workflow exactly as CLAUDE.md describes it: branch off origin/main, validate locally (tools/build_graph.py, validation/run_all.py, tools/test_build_graph.py), commit, push, open a PR. You are running inside this scheduled GitHub Actions job and pushing with its own GITHUB_TOKEN, so the separate validate.yml CI workflow will NOT fire on PRs you open (GitHub's recursion protection) -- do not wait for a check that will never appear. Treat your own local validation output as the authoritative gate for your own PRs: squash-merge only once all three local checks are clean. Never commit directly to main. If a decision genuinely cannot be made safely from the evidence, write a .agent/needs-human/ entry instead of guessing. Update progress/current-batch.md before finishing so the next scheduled run can pick up cleanly. Continue to the next highest-priority task if meaningful work remains and time allows; stop and checkpoint cleanly as the time budget runs low."
+          fi
+
+          claude \
+            --dangerously-skip-permissions \
+            "$PROMPT"
+
+      # ------------------------------------------------------------
+      # 5. Final repository inspection
+      # ------------------------------------------------------------
+
+      - name: Final repository inspection
+        if: always()
+        run: |
+          echo "## Final git status"
+          git status --short
+
+          echo ""
+          echo "## Current branch"
+          git branch --show-current
+
+          echo ""
+          echo "## progress/current-batch.md (first 20 lines)"
+          head -n 20 progress/current-batch.md
+
+      # ------------------------------------------------------------
+      # 6. Safety-net checkpoint
+      #
+      # Only reached if the agent's own PR workflow didn't already commit
+      # and push everything (e.g. the process was interrupted by the
+      # timeout). Never touches `main`:
+      #   - if uncommitted changes exist, they are isolated onto a fresh,
+      #     uniquely-named rescue branch and opened as a PR;
+      #   - `main` itself is never written to by this step, so a human's
+      #     concurrent push to `main` during the run is never at risk.
+      # ------------------------------------------------------------
+
+      - name: Isolate and checkpoint any uncommitted work
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No uncommitted changes -- nothing to checkpoint."
+            exit 0
+          fi
+
+          echo "Uncommitted changes found after the agent run. Isolating onto a rescue branch rather than touching main."
+
+          current_branch="$(git branch --show-current)"
+          rescue_branch="agent/checkpoint-$(date -u +%Y%m%d-%H%M%S)"
+
+          if [ "$current_branch" = "main" ] || [ -z "$current_branch" ]; then
+            git checkout -b "$rescue_branch"
+          else
+            rescue_branch="$current_branch"
+          fi
+
+          git add -A
+          git commit -m "agent: checkpoint uncommitted work from an interrupted run" \
+            -m "The autonomous-agent workflow was interrupted (timeout or error) with uncommitted changes still in the working tree. They are committed here, on their own branch, rather than onto main, so a human can review before they merge. See progress/current-batch.md and .agent/needs-human/ for context on what was in progress." || true
+
+          git push -u origin "$rescue_branch" || {
+            echo "::warning::Could not push the rescue branch $rescue_branch. The uncommitted work remains only in this ephemeral runner and will be lost. Check the workflow logs above for what changed."
+            exit 0
+          }
+
+          if ! gh pr view "$rescue_branch" >/dev/null 2>&1; then
+            gh pr create \
+              --title "Agent checkpoint: interrupted run $(date -u +%Y-%m-%d)" \
+              --body "Automated checkpoint from an interrupted autonomous-agent run. The workflow's normal PR-based flow didn't complete before the process ended (timeout or error) -- this PR isolates whatever it had changed so nothing is lost and nothing was pushed to \`main\` directly. Review before merging; check \`progress/current-batch.md\` and \`.agent/needs-human/\` for context." \
+              --base main \
+              --head "$rescue_branch" || echo "::warning::Rescue branch pushed but PR creation failed -- open one manually from $rescue_branch."
+          fi

@@ -119,6 +119,17 @@ contributing as part of a batch:
    `progress/backlog.md` to reflect what changed and what's next, so another
    contributor (human or agent) can pick up without repeating research.
 
+## Autonomous contributions
+
+A scheduled GitHub Actions workflow (`.github/workflows/autonomous-agent.yml`)
+periodically runs Claude Code against this repository, following the
+operating model in `CLAUDE.md`. It works the same batch workflow as a human
+contributor — branch, validate, commit, open a PR, update `progress/` — and
+never pushes to `main` directly. PRs it opens are labelled as such in their
+description; review them the same way you'd review any other PR. See
+`CLAUDE.md` for its priority order and safety rules, including
+`.agent/needs-human/` for questions it couldn't resolve on its own.
+
 ## Style
 
 - Facts only in `description` and the "Description"/"Relationships" prose;

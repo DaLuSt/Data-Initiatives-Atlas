@@ -12,6 +12,7 @@ countries — no install, no account.*
 
 [![Validation](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/validate.yml/badge.svg)](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/validate.yml)
 [![Pages](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/pages.yml/badge.svg)](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/pages.yml)
+[![Autonomous Agent](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/autonomous-agent.yml/badge.svg)](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/autonomous-agent.yml)
 [![Licence: CC0-1.0](https://img.shields.io/badge/licence-CC0--1.0-blue.svg)](LICENSE)
 
 </div>
