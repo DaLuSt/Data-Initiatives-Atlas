@@ -22,7 +22,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-09-25"
 previous_version: null
 successor: null
 
@@ -32,6 +32,7 @@ organisations:
   - NL-FORUM-STANDAARDISATIE
 related_entities:
   - NL-OBDO
+  - INTL-DNSSEC
 relationships:
   - type: maintained-by
     target: NL-FORUM-STANDAARDISATIE
@@ -102,7 +103,11 @@ maintains the list and runs that procedure; the [[NL-OBDO]] takes the
 formal decisions.
 
 The individual standards on the list are Batch 4 scope and are not yet Atlas
-entities.
+entities. **Narrowed 2026-09-25**: the first is now modelled,
+[[INTL-DNSSEC]] (RFC 4033/4034/4035), closing part of
+`discovery/unresolved.md` row #165. The other mandatory IETF-originated
+standards on the list — HTTPS/HSTS, DKIM, DMARC, SPF and STARTTLS/DANE —
+remain unmodelled.
 
 ## Relationships
 

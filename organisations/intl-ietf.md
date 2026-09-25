@@ -19,7 +19,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-25"
 previous_version: null
 successor: null
 
@@ -29,6 +29,7 @@ organisations: []
 related_entities:
   - INTL-ISOC
   - INTL-W3C
+  - INTL-DNSSEC
 relationships:
   - type: part-of
     target: INTL-ISOC
@@ -94,8 +95,12 @@ for the one relationship the entity asserts.
 
 Note that internet protocol standards do underpin parts of the Dutch layer —
 [[NL-PAS-TOE-OF-LEG-UIT]] mandates HTTPS, DNSSEC and mail-security standards
-that originate in IETF RFCs — so a properly researched IETF entity would
-connect to real content. That connection is queued, not asserted.
+that originate in IETF RFCs. **Narrowed 2026-09-25**: one of those
+connections is now real. [[INTL-DNSSEC]] (RFC 4033/4034/4035) is the
+first IETF RFC modelled as an Atlas standard, `maintained-by` this
+entity, closing part of `discovery/unresolved.md` row #165. The other
+mandatory standards on the same Forum Standaardisatie list — HTTPS/HSTS,
+DKIM, DMARC, SPF, STARTTLS/DANE — remain unmodelled.
 
 ## Relationships
 
