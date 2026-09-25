@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-06"
+last_verified: "2026-09-25"
 previous_version: null
 successor: null
 
@@ -37,6 +37,8 @@ related_entities:
   - FR-DRM
   - FR-DRSD
   - FR-DPR
+  - FR-DNRED
+  - FR-TRACFIN
 relationships:
   - type: governed-by
     target: FR-LOI-RENSEIGNEMENT-2015
@@ -73,6 +75,20 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: applies-to
+    target: FR-DNRED
+    source: fact
+    evidence: "[[FR-DNRED]], created 2026-09-25 from the DGDDI's own page and Légifrance's own text of the Arrêté du 29 octobre 2007 (both read directly), confirms it is one of the six premier cercle services this page names. Closes the DNRED half of discovery/unresolved.md row #83."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+  - type: applies-to
+    target: FR-TRACFIN
+    source: fact
+    evidence: "[[FR-TRACFIN]], created 2026-09-25 from Légifrance's own text of its two founding decrees (both read directly), confirms it is one of the six premier cercle services this page names, and — alongside [[FR-DRM]] — one of the two without access to the full range of intelligence-gathering techniques the 2015 law provides. Closes the TRACFIN half of discovery/unresolved.md row #83."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Les principaux services de renseignement"
@@ -101,6 +117,11 @@ sources:
 > now [[FR-DPR]]. `legifrance.gouv.fr` was reachable this pass for its
 > founding law — the block is not universal, matching what [[FR-LIL]]'s
 > 2026-09-05 pass also found.
+>
+> **Closed 2026-09-25**: the two services this page had flagged as
+> missing, [[FR-DNRED]] and [[FR-TRACFIN]], are now modelled, closing
+> `discovery/unresolved.md` row #83. All six premier cercle services this
+> page names are now in the Atlas.
 
 ## Description
 
@@ -134,15 +155,12 @@ collected data**, and refer the matter to the public prosecutor.
 Two different answers to the same problem: stop it in advance, or unwind it
 afterwards through a court.
 
-## The four services, and the two that are not here
+## All six services
 
 Confirmed by reading cnctr.fr's own list directly (2026-08-26): it names
-six principal services — DGSE, DGSI, DRM, DRSD, DNRED and TRACFIN. The
-Atlas holds four — DNRED and TRACFIN are not modelled, as recorded on
-[[FR-DGSE]] — so **the four edges here understate the CNCTR's remit by
-two**. That is a coverage limit of the Atlas, and the entity says so
-rather than letting the graph imply the commission oversees only what
-is drawn.
+six principal services — DGSE, DGSI, DRM, DRSD, DNRED and TRACFIN. All
+six are now modelled: [[FR-DNRED]] and [[FR-TRACFIN]] were added
+2026-09-25, closing the coverage gap this entity previously flagged.
 
 The same page adds a nuance this entity did not previously carry: DRM
 and TRACFIN are the two services that do **not** have access to the
@@ -164,7 +182,8 @@ parliamentary control on that entity.
 ## Relationships
 
 - `governed-by` [[FR-LOI-RENSEIGNEMENT-2015]].
-- `applies-to` [[FR-DGSE]], [[FR-DGSI]], [[FR-DRM]] and [[FR-DRSD]].
+- `applies-to` [[FR-DGSE]], [[FR-DGSI]], [[FR-DRM]], [[FR-DRSD]],
+  [[FR-DNRED]] and [[FR-TRACFIN]].
 
 ## Sources
 
