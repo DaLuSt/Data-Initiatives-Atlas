@@ -25,7 +25,7 @@ verification: primary-source
 
 start_date: 2003-11-17
 end_date: null
-last_verified: "2026-09-13"
+last_verified: "2026-09-25"
 previous_version: null
 successor: EU-OPEN-DATA-DIRECTIVE
 
@@ -48,6 +48,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Directive 2013/37/EU amending Directive 2003/98/EC"
+    url: "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32013L0037"
+    publisher: "EUR-Lex / Publications Office of the European Union"
+    accessed: "2026-09-25"
   - title: "Directive 2003/98/EC on the re-use of public sector information"
     url: "https://eur-lex.europa.eu/eli/dir/2003/98/oj"
     publisher: "EUR-Lex / Publications Office of the European Union"
@@ -64,6 +68,12 @@ sources:
 > **Verified 2026-08-21.** Every source this entity cites is on a domain the
 > repository owner confirmed read and correct — `europa.eu`. `verification:
 > primary-source`. See `docs/re-verification.md` §"The confirmed domains".
+>
+> **Narrowed 2026-09-25**: Directive 2013/37/EU's own content, previously
+> "not established" (`discovery/unresolved.md` row #47), is now read
+> directly via EUR-Lex's TXT/HTML form. See "What the 2013 amendment
+> actually did" below. The decision not to give it a separate entity
+> stands unchanged.
 
 ## Description
 
@@ -109,11 +119,37 @@ stale, since fixed there with a `references` edge (lineage, not
 transposition — no source states FR-LRN as this directive's actual French
 transposing act).
 
+## What the 2013 amendment actually did
+
+**Directive 2013/37/EU of 26 June 2013**, read directly via EUR-Lex's
+TXT/HTML form (2026-09-25), amended 2003/98/EC in five substantive ways:
+
+- **Extended scope** to libraries (including university libraries),
+  museums and archives — previously excluded entirely.
+- **Turned re-use from optional to a duty**: its new Article 3 requires
+  member states to ensure documents falling within the directive's scope
+  "shall be re-usable," an affirmative obligation rather than the
+  original's permissive framing.
+- **Required open, machine-readable formats** for available documents and
+  their metadata, "where possible and appropriate."
+- **Tightened charging rules**, capping most charges at marginal cost,
+  with a specific carve-out letting libraries, museums and archives
+  recover collection costs plus a reasonable return on investment.
+- **Allowed time-limited exclusive digitisation arrangements** for
+  cultural materials, generally capped at ten years, with transparency
+  duties and guaranteed public-sector access once exclusivity ends.
+
+It entered into force, per its own text, "on the twentieth day following
+that of its publication in the Official Journal" and set a transposition
+deadline of **18 July 2015**.
+
 ## Not modelled
 
-- **Directive 2013/37/EU**, the amending directive. Its content was not
-  established, and a separate entity for an amendment that was itself
-  repealed would add a node and no clarity.
+- **Directive 2013/37/EU** still has no entity of its own. Its content is
+  now known (above), but the original reasoning for not splitting it out
+  stands: it was itself repealed by [[EU-OPEN-DATA-DIRECTIVE]] alongside
+  the directive it amended, and a separate node would add nothing a
+  reader can't get from this entity's own prose.
 
 ## Sources
 

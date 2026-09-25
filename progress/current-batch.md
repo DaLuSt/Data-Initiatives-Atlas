@@ -11,6 +11,15 @@ registry), at `confidence: medium` since neither is a government-side
 source. Entity count 717 → 718. `discovery/reverification-allowlist.md`
 regenerated to match.
 
+**Closed `discovery/unresolved.md` row #47, same session.** Directive
+2013/37/EU's actual amendments to the PSI Directive (2003/98/EC) — scope
+extended to libraries/museums/archives, re-use turned from optional to a
+duty, open/machine-readable format requirement, tightened charging
+rules, time-limited cultural-digitisation exclusivity — are now read
+directly on [[EU-PSI-DIRECTIVE]] via EUR-Lex's TXT/HTML form. The
+decision not to give the amending directive its own entity stands
+unchanged; only the "content not established" gap closed.
+
 **The ontology/non-ontology closure
 campaign** (2026-09-19 through 2026-09-25) is the most recent
 batch-scale completed work, superseding the fourteenth verification-gap
