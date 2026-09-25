@@ -22,7 +22,7 @@ coverage: medium
 verification: primary-source
 start_date: "1990-12-20"
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-09-25"
 previous_version: null
 successor: null
 
@@ -53,6 +53,11 @@ sources:
     url: "https://www.gesetze-im-internet.de/bverfschg/BJNR029700990.html"
     publisher: "Bundesministerium der Justiz / juris (Gesetze im Internet)"
     accessed: "2026-09-05"
+  - title: "Bundesverfassungsschutzgesetz (BVerfSchG)"
+    url: "https://bundestag.github.io/gesetze/b/bverfschg/"
+    publisher: "Deutscher Bundestag (community-maintained statute mirror)"
+    accessed: "2026-09-25"
+    note: "gesetze-im-internet.de returned HTTP 503 on repeated attempts this pass; this mirror substitutes for the amendment-history citation."
 ---
 
 # Bundesverfassungsschutzgesetz (BVerfSchG)
@@ -66,6 +71,10 @@ sources:
 > **Updated 2026-09-05**: the act's own consolidated text was found on
 > `gesetze-im-internet.de` and read directly, closing the previously
 > flagged citation gap and sourcing `start_date`.
+>
+> **Narrowed 2026-09-25** (`discovery/unresolved.md` row #194): the
+> amendment history beyond enactment is now sourced too, via
+> `bundestag.github.io`'s community-maintained mirror.
 
 ## Description
 
@@ -96,6 +105,14 @@ left `null`.
 Its structure and amendment history beyond the enactment date remain
 unread — this pass confirmed the citation, not the act's substantive
 provisions.
+
+**Amendment history closed 2026-09-25**: `bundestag.github.io`'s
+community-maintained statute mirror, read directly (the official
+`gesetze-im-internet.de` page returned HTTP 503 on every attempt this
+pass, as it did for [[DE-MADG]] on 2026-09-05), gives the act's own
+"Zuletzt geändert durch" (most recently amended by) line: **"Art. 2 G v.
+20.8.2012 I 1798"** — 20 August 2012. The act's own internal structure
+(its Abschnitte) remains unread.
 
 ## The federal/Länder question this act raises and the Atlas cannot answer
 

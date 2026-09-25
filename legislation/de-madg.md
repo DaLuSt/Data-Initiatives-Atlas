@@ -22,7 +22,7 @@ coverage: medium
 verification: primary-source
 start_date: "1990-12-20"
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-09-25"
 previous_version: null
 successor: null
 
@@ -67,6 +67,10 @@ sources:
 > **Updated 2026-09-05**: the act's own enactment date is now sourced via
 > a community-maintained mirror, `gesetze-im-internet.de` itself being
 > unreachable (HTTP 503) this pass.
+>
+> **Narrowed 2026-09-25** (`discovery/unresolved.md` row #194): the same
+> mirror's amendment-history line closes the row for both this act and
+> [[DE-BVERFSCHG]].
 
 ## Description
 
