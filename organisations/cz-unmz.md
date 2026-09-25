@@ -24,7 +24,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-09-25"
 previous_version: null
 successor: null
 
@@ -83,6 +83,10 @@ sources:
   - title: "European Standards"
     url: "https://www.cencenelec.eu/european-standardization/european-standards/"
     publisher: "CEN-CENELEC"
+  - title: "Membership"
+    url: "https://www.etsi.org/membership"
+    publisher: "ETSI"
+    accessed: "2026-09-25"
 ---
 
 # Úřad pro technickou normalizaci, metrologii a státní zkušebnictví
@@ -93,6 +97,10 @@ sources:
 > a specific legal citation for its role and, unexpectedly, lists ETSI
 > alongside ISO/IEC/CEN/CENELEC among its own cooperation duties — an
 > open question about the membership split noted below, not resolved.
+>
+> **Resolved 2026-09-25**: the ETSI loose end is closed — ETSI's own
+> direct-membership structure means the ISO/IEC/CEN "one national body"
+> question doesn't apply to it. See "A loose end: ETSI" below.
 
 ## Description
 
@@ -122,16 +130,29 @@ Getting this wrong would have been easy — ČAS is the more visible body and
 publishes the English-language standards pages — and the resulting entity
 would have claimed a membership ČAS does not hold.
 
-## A loose end: ETSI
+## A loose end: ETSI, resolved as a structural non-issue
 
-ČAS's own "Standards development" page, read directly this pass, lists
-its own cooperation and membership duties as spanning "ISO, IEC, CEN,
-CENELEC, and ETSI" — adding [[EU-ETSI]] to the list, and doing so on
-ČAS's page rather than ÚNMZ's. Whether ÚNMZ or ČAS holds the formal
-ETSI membership is not established by anything read: it could follow
-the same ÚNMZ-holds-membership pattern, or ETSI could be the one
-standards body where ČAS itself is the member. No relationship to
-[[EU-ETSI]] is asserted from either entity until this is resolved.
+ČAS's own "Standards development" page, read directly, lists its own
+cooperation and membership duties as spanning "ISO, IEC, CEN, CENELEC,
+and ETSI" — adding [[EU-ETSI]] to the list, and doing so on ČAS's page
+rather than ÚNMZ's. Whether ÚNMZ or ČAS holds "the" formal ETSI
+membership was left open pending research.
+
+**Resolved 2026-09-25**: ETSI's own membership page, read directly,
+states ETSI is a direct-membership, multi-stakeholder organisation —
+"more than 30,000 experts, from start-ups and SMEs to research bodies,
+universities, and global corporations" — with named membership pathways
+for public authorities and NSOs (national standards organisations)
+alongside companies and universities, rather than ISO/IEC/CEN's model of
+one designated national body per country. The premise of the original
+question — that exactly one of ÚNMZ or ČAS must hold "the" Czech ETSI
+seat, mirroring the ISO/IEC/CEN split — does not hold structurally:
+either or both could join ETSI directly as separate members, as could
+any other Czech organisation. No relationship to [[EU-ETSI]] is asserted
+from either entity, not because the question is unresolved, but because
+ETSI membership is not the kind of fact this Atlas's `participates-in`
+composition-rule pattern (one state body per international
+standards body) applies to.
 
 ## Relationships
 
