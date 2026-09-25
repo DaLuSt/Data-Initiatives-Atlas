@@ -26,7 +26,7 @@ verification: primary-source
 
 start_date: 2017-03-01
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-25"
 previous_version: null
 successor: null
 
@@ -35,7 +35,15 @@ domains:
 organisations: []
 related_entities:
   - BE-DATA-GOV-BE
-relationships: []
+  - BE-BELGIF
+relationships:
+  - type: participates-in
+    target: BE-BELGIF
+    source: fact
+    evidence: "Confirmed by reading belgif.be's own 'Wat is een dienstenintegrator?' page directly (2026-09-25): 'Momenteel zijn er 6 publieke dienstenintegratoren actief in België' (there are currently 6 public service integrators active in Belgium), naming BCED, FOD BOSA, Fidus, KSZ, VDI and eGezondheid, and stating of BOSA specifically: 'De FOD BOSA is de federale dienstenintegrator (behalve voor de diensten van Sociale Zekerheid)' (FOD BOSA is the federal service integrator, except for Social Security services). This is BELGIF's own site cataloguing BOSA as one of the integrators supporting it — distinct from the `produces`/ownership edge already and correctly refused below. Closes discovery/unresolved.md row #98."
+    confidence: high
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Federale Overheidsdienst Beleid en Ondersteuning"
@@ -70,6 +78,10 @@ sources:
     url: "https://new.drupal.org/node/2336613"
     publisher: "Drupal.org"
     accessed: "2026-08-28"
+  - title: "Wat is een dienstenintegrator?"
+    url: "https://belgif.be/page/integrators.nl.html"
+    publisher: "Belgian Interoperability Framework (BELGIF)"
+    accessed: "2026-09-25"
 ---
 
 # FOD BOSA — Federale Overheidsdienst Beleid en Ondersteuning
@@ -91,6 +103,12 @@ sources:
 > for 100+ government Drupal sites). That brings this entity to 5 of 9
 > sources read directly — a genuine majority — so `verification` is
 > promoted to `primary-source`.
+>
+> **Closed 2026-09-25** (`discovery/unresolved.md` row #98): BELGIF's own
+> site, read directly, lists BOSA as one of Belgium's six public service
+> integrators — a sourced `participates-in` fact, distinct from the
+> `produces`/ownership edge already and correctly refused below. See "One
+> of six service integrators" below.
 
 ## Description
 
@@ -165,10 +183,28 @@ A reader seeing `country: BE` plus "central digital government body" would
 over-read this entity's reach. The same caveat applies to [[DE-BFDI]] in
 Germany, and the Belgian case is sharper: see `countries/be/be.md`.
 
+## One of six service integrators — closed 2026-09-25
+
+`discovery/unresolved.md` row #98 asked whether BOSA connects to
+[[BE-BELGIF]] at all, given that a `produces`/ownership edge was already
+and correctly refused (BELGIF is co-owned by the federal state, the
+Regions and the Communities — precisely not something BOSA owns). BELGIF's
+own site, read directly, answers the narrower question: it names **six
+public service integrators active in Belgium** — BCED, FOD BOSA, Fidus,
+[[BE-KSZ]], [[BE-DIGITAAL-VLAANDEREN]] (as VDI) and eGezondheid — stating
+of BOSA specifically that it "is de federale dienstenintegrator (behalve
+voor de diensten van Sociale Zekerheid)" (is the federal service
+integrator, except for Social Security services). That is a genuine,
+sourced `participates-in` fact — BOSA is catalogued and described on
+BELGIF's own site as one of the integrators supporting it, which is a
+different claim from ownership and was never in tension with the refusal
+above.
+
 ## Relationships
 
-**None asserted from this entity.** It is reached from
-[[BE-DATA-GOV-BE]], which is `maintained-by` BOSA.
+- `participates-in` [[BE-BELGIF]] — new 2026-09-25, sourced from BELGIF's
+  own integrators page. See above.
+- It is reached from [[BE-DATA-GOV-BE]], which is `maintained-by` BOSA.
 
 A `produces` link to [[BE-BELGIF]] was considered and **refused**: BELGIF
 is sourced as a collaborative effort of the federal state, the Regions and
@@ -181,7 +217,8 @@ Five of nine read directly — Wikipedia and the founding Royal Decree of 22
 February 2017 at etaamb.openjustice.be (prior pass), plus three found and
 read this pass (2026-08-28): the European Commission's Interoperable
 Europe governance page for Belgium, GitHub's Fedict organisation profile,
-and Drupal.org's BOSA case study. All three `bosa.belgium.be` pages and the
+and Drupal.org's BOSA case study, plus BELGIF's own integrators page, read
+directly 2026-09-25. All three `bosa.belgium.be` pages and the
 `news.belgium.be` page returned CAPTCHA challenges rather than content
 (retried this pass, still dead); the same wall was found on
 `ccb.belgium.be`, `data.gov.be`, `financien.belgium.be` and

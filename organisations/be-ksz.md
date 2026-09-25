@@ -27,7 +27,7 @@ verification: primary-source
 
 start_date: 1990-01-15
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-09-25"
 previous_version: null
 successor: null
 
@@ -36,6 +36,7 @@ domains:
 organisations: []
 related_entities:
   - BE-KSZ-WET
+  - BE-BELGIF
 relationships:
   - type: governed-by
     target: BE-KSZ-WET
@@ -43,6 +44,13 @@ relationships:
     evidence: "Confirmed by reading the KSZ's own page directly (2026-08-26): its Article 1 establishes 'a public institution with legal personality' under the name Kruispuntbank van de sociale zekerheid; the KSZ's own GDPR register entry, also read directly, cites the same 1990 act as its legal basis for processing under Article 6(1)(c) GDPR."
     confidence: high
     valid_from: 1990-01-15
+    valid_until: null
+  - type: participates-in
+    target: BE-BELGIF
+    source: fact
+    evidence: "Confirmed by reading belgif.be's own 'Wat is een dienstenintegrator?' page directly (2026-09-25): it names KSZ as one of Belgium's six public service integrators, describing it as 'de drijvende kracht en coordinator van e-government in de sociale sector' (the driving force and coordinator of e-government in the social sector) — matching [[BE-BELGIF]]'s own already-recorded description of the KSZ as one of its six supporting integrators."
+    confidence: high
+    valid_from: null
     valid_until: null
 
 sources:
@@ -65,6 +73,10 @@ sources:
     url: "https://gdpr.belgium.be/nl/federal-institutions/kruispuntbank-van-de-sociale-zekerheid"
     publisher: "gdpr.belgium.be (Belgian federal government)"
     accessed: "2026-08-26"
+  - title: "Wat is een dienstenintegrator?"
+    url: "https://belgif.be/page/integrators.nl.html"
+    publisher: "Belgian Interoperability Framework (BELGIF)"
+    accessed: "2026-09-25"
 ---
 
 # Kruispuntbank van de Sociale Zekerheid (KSZ / BCSS)
@@ -73,6 +85,11 @@ sources:
 > KSZ's own page quotes its founding Article 1; its own GDPR register entry
 > gives a different institution count than Wikipedia does — flagged rather
 > than resolved, below. `verification: primary-source`.
+>
+> **Linked to [[BE-BELGIF]], 2026-09-25**: BELGIF's own site, read
+> directly, confirms KSZ as one of Belgium's six public service
+> integrators, closing `discovery/unresolved.md` row #98 alongside
+> [[BE-BOSA]] and [[BE-DIGITAAL-VLAANDEREN]].
 
 ## Description
 
@@ -136,9 +153,12 @@ precedent. Logged in `discovery/unresolved.md`.
 
 - `governed-by` [[BE-KSZ-WET]] — confirmed directly from the KSZ's own
   Article 1 and its GDPR register entry.
+- `participates-in` [[BE-BELGIF]] — new 2026-09-25, sourced from BELGIF's
+  own integrators page.
 
 ## Sources
 
-Four of five read directly this pass — the KSZ's own "what it does" page,
-its founding-act page (quoting Article 1), Wikipedia, and its GDPR register
-entry. The data/services catalogue page was not re-fetched.
+Four of five read directly the first pass — the KSZ's own "what it does"
+page, its founding-act page (quoting Article 1), Wikipedia, and its GDPR
+register entry. The data/services catalogue page was not re-fetched.
+BELGIF's own integrators page was added and read directly 2026-09-25.

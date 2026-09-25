@@ -27,7 +27,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-09-25"
 previous_version: null
 successor: null
 
@@ -37,6 +37,9 @@ organisations: []
 related_entities:
   - EU-EIF
   - BE-DCAT-AP-BE
+  - BE-BOSA
+  - BE-KSZ
+  - BE-DIGITAAL-VLAANDEREN
 relationships:
   - type: based-on
     target: EU-EIF
@@ -66,6 +69,10 @@ sources:
   - title: "Factsheet: Access to Base Registries in Belgium"
     url: "https://interoperable-europe.ec.europa.eu/sites/default/files/inline-files/Belgium%20Factsheet%20Final.pdf"
     publisher: "European Commission — Interoperable Europe"
+  - title: "Wat is een dienstenintegrator?"
+    url: "https://belgif.be/page/integrators.nl.html"
+    publisher: "Belgian Interoperability Framework (BELGIF)"
+    accessed: "2026-09-25"
 ---
 
 # BELGIF — Belgian Interoperability Framework
@@ -76,6 +83,13 @@ sources:
 > same "collaborative effort" description. Only the European Commission
 > factsheet PDF was retrieved but not readable as text. `verification:
 > primary-source`.
+>
+> **Closed 2026-09-25** (`discovery/unresolved.md` row #98): BELGIF's own
+> "Wat is een dienstenintegrator?" page, read directly, names the six
+> public service integrators active in Belgium by name. Three are Atlas
+> entities — [[BE-BOSA]], [[BE-KSZ]] and [[BE-DIGITAAL-VLAANDEREN]] — each
+> now carrying a sourced `participates-in` edge to this entity. BCED,
+> Fidus and eGezondheid remain unmodelled.
 
 ## Description
 
@@ -130,9 +144,34 @@ the federal state, three Regions and three Communities is recorded as
 
 That is a fair summary of what the Atlas can and cannot say about Belgium.
 
+## Six service integrators, named — closed 2026-09-25
+
+The description above already said BELGIF operates "with the active
+support of the six public service integrators," but until now no source
+had named all six or confirmed which are Atlas entities. BELGIF's own
+"Wat is een dienstenintegrator?" page, read directly, names all six:
+
+| Integrator | Role | Atlas entity? |
+|---|---|---|
+| BCED | Regional integrator for Wallonia | No |
+| FOD BOSA | Federal integrator (except Social Security) | [[BE-BOSA]] |
+| Fidus | Regional integrator for Brussels | No |
+| KSZ | Social-security-sector e-government coordinator | [[BE-KSZ]] |
+| VDI | Regional integrator for Flanders | [[BE-DIGITAAL-VLAANDEREN]] |
+| eGezondheid | Health-services portal | No |
+
+Each of the three Atlas entities now carries its own `participates-in`
+edge to this entity, sourced from the same page. This closes
+`discovery/unresolved.md` row #98, which had asked specifically about
+[[BE-BOSA]]: the answer is not ownership (correctly refused on BOSA's own
+file) but participation as one of six named integrators, which is exactly
+what BELGIF's own site records.
+
 ## Relationships
 
 - `based-on` [[EU-EIF]].
+- Reached by [[BE-BOSA]], [[BE-KSZ]] and [[BE-DIGITAAL-VLAANDEREN]], each
+  `participates-in` this entity — see the table above.
 
 **No relationship to [[NL-NORA]] or [[DE-IT-ARCHITEKTURRICHTLINIEN]] is
 asserted.** All three are national architecture or interoperability
@@ -142,8 +181,9 @@ them.
 
 ## Sources
 
-Four of five read directly this pass — the belgif.be "About" and
+Four of five read directly the first pass — the belgif.be "About" and
 "Recommendations" pages, the DCAT-AP specification page, and the
 github.com/belgif organisation page. The European Commission factsheet on
 access to base registries in Belgium was retrieved but returned as an
-unreadable binary PDF and remains unconfirmed.
+unreadable binary PDF and remains unconfirmed. BELGIF's own integrators
+page was added and read directly 2026-09-25.
