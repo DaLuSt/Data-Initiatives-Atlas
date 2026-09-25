@@ -22,7 +22,7 @@ verification: primary-source
 
 start_date: 2024-08-01
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-09-25"
 previous_version: null
 successor: null
 
@@ -36,6 +36,7 @@ related_entities:
   - IE
   - EU-DIGITAL-OMNIBUS
   - EU-DIGITAL-OMNIBUS-AI
+  - EU-AI-CONTINENT-ACTION-PLAN
 relationships:
   - type: applies-in
     target: PT
@@ -354,6 +355,10 @@ Regulation (EU) 2026/1744 is also listed, unchanged from the prior pass.
 - `amends` edge (this Regulation as target) recorded on
   [[EU-DIGITAL-OMNIBUS-AI]]'s own file — Regulation (EU) 2026/1744, the
   instrument that actually changed the AI Act's timetable.
+- `related-to` [[EU-AI-CONTINENT-ACTION-PLAN]] — new 2026-09-25, recorded
+  on that entity's own file. The Action Plan is a competitiveness and
+  adoption strategy, distinct from this Regulation, one of whose five
+  pillars supports this Act's implementation without amending it.
 
 ## Sources
 
