@@ -26,11 +26,12 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-13"
+last_verified: "2026-09-25"
 previous_version: null
 successor: null
 
-domains: []
+domains:
+  - DOMAIN-MANUFACTURING
 organisations: []
 related_entities:
   - INTL-IDS-RAM
@@ -222,11 +223,15 @@ lighthouse projects are now Atlas entities, each `based-on` this one and
 `part-of` [[DE-MANUFACTURING-X]] — [[DE-FACTORY-X]] (mechanical
 engineering), [[DE-AEROSPACE-X]] (aerospace supply chains, led
 industrially by Airbus) and [[DE-CONSTRUCT-X]] (construction industry,
-led by Fraunhofer ISST). HealthTrack-X remains unmodelled, and no
-industry or manufacturing domain entity was created:
-`metadata/taxonomy.md` §1 requires a domain to connect at least two
-entities, and Catena-X alone does not meet the threshold. `domains: []` is
-therefore correct rather than an omission.
+led by Fraunhofer ISST). HealthTrack-X remains unmodelled.
+
+**Closed 2026-09-25**: [[DOMAIN-MANUFACTURING]] now exists, created
+because "Vervaardiging" is one of the seven important-entity sectors
+named in the Dutch Cyberbeveiligingswet's own Bijlage 2 — the threshold
+this entity previously lacked. Catena-X and the rest of the family
+([[DE-MANUFACTURING-X]], [[DE-FACTORY-X]], [[DE-CONSTRUCT-X]],
+[[DE-AEROSPACE-X]], [[EU-MANUFACTURING-DATA-SPACE]] and
+[[DE-PLATTFORM-INDUSTRIE-4-0]]) are all tagged to it.
 
 ## Relationships
 

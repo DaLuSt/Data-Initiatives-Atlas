@@ -23,13 +23,26 @@ verification: primary-source
 
 start_date: 2026-08-15
 end_date: null
-last_verified: "2026-09-20"
+last_verified: "2026-09-25"
 previous_version: NL-WBNI
 successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
   - DOMAIN-CYBERSECURITY
+  - DOMAIN-ENERGY
+  - DOMAIN-MOBILITY
+  - DOMAIN-FINANCE
+  - DOMAIN-WATER
+  - DOMAIN-DIGITAL-INFRASTRUCTURE
+  - DOMAIN-SPACE
+  - DOMAIN-HEALTH
+  - DOMAIN-POSTAL
+  - DOMAIN-ENVIRONMENT
+  - DOMAIN-FOOD
+  - DOMAIN-CHEMICALS
+  - DOMAIN-RESEARCH
+  - DOMAIN-MANUFACTURING
 organisations: []
 related_entities:
   - EU-NIS2
@@ -79,6 +92,10 @@ sources:
   - title: "Cyberbeveiligingswet (NIS2-richtlijn)"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/cyberbeveiligingswet/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
+  - title: "Valt mijn organisatie onder de Cyberbeveiligingswet (NIS2)?"
+    url: "https://www.ncsc.nl/cyberbeveiligingswet-nis2/valt-mijn-organisatie-onder-de-cyberbeveiligingswet-nis2"
+    publisher: "Nationaal Cyber Security Centrum (NCSC)"
+    accessed: "2026-09-25"
 ---
 
 # Cyberbeveiligingswet (Cbw)
@@ -100,6 +117,10 @@ sources:
 > non-transposition, five weeks before this Act entered into force. This
 > was already documented on [[ES-LCGC]] and [[FR-NIS2-LOI]] but never
 > added here. See "Referred to the CJEU before transposing" below.
+>
+> **Domains deepened 2026-09-25**, at the user's request: thirteen new
+> `domains:` entries, one per sector this Act's own Bijlage 1 and 2 name.
+> See "The eighteen sectors" below.
 
 ## Description
 
@@ -170,6 +191,44 @@ involved. `confidence: medium` because the fact is cross-applied from
 sibling entities' sourcing rather than independently confirmed against a
 Dutch-specific source this pass.
 
+## The eighteen sectors
+
+Confirmed by reading `ncsc.nl`'s own "Valt mijn organisatie onder de
+Cyberbeveiligingswet (NIS2)?" page directly (2026-09-25): the Cbw applies
+to roughly 8,000 organisations across **eighteen (very) critical
+sectors**, split across two annexes ("Bijlagen"):
+
+**Bijlage 1 (essential, eleven sectors):** Energie, Vervoer, Bankwezen,
+Drinkwater, Digitale infrastructuur, Beheer van ICT-diensten, Ruimtevaart,
+Infrastructuur financiële markt, Gezondheidszorg, Afvalwater, Overheid.
+
+**Bijlage 2 (important, seven sectors):** Digitale aanbieders,
+Post- en koeriersdiensten, Afvalstoffenbeheer, Levensmiddelen, Chemische
+stoffen, Onderzoek, Vervaardiging.
+
+These are the Cbw's own transposition of [[EU-NIS2]]'s Annex I and II —
+corroborated independently by the European Commission's own
+digital-strategy summary page, read directly, which names the same core
+sectors in English (Energy, Transport, Healthcare, Finance, Water
+management, Digital infrastructure, electronic communications and digital
+service providers, waste and wastewater management, critical product
+manufacturing, postal and courier services, public administration, space).
+`eur-lex.europa.eu` returned empty content for NIS2's own Annex text on
+every attempt this pass.
+
+Thirteen `domains:` entries were added to this entity 2026-09-25 to record
+this scope: [[DOMAIN-ENERGY]], [[DOMAIN-MOBILITY]], [[DOMAIN-FINANCE]]
+(Bankwezen and Infrastructuur financiële markt), [[DOMAIN-WATER]]
+(Drinkwater and Afvalwater), [[DOMAIN-DIGITAL-INFRASTRUCTURE]] (Digitale
+infrastructuur, Beheer van ICT-diensten and Digitale aanbieders),
+[[DOMAIN-SPACE]], [[DOMAIN-HEALTH]], [[DOMAIN-POSTAL]],
+[[DOMAIN-ENVIRONMENT]] (Afvalstoffenbeheer), [[DOMAIN-FOOD]]
+(Levensmiddelen), [[DOMAIN-CHEMICALS]], [[DOMAIN-RESEARCH]] (Onderzoek)
+and [[DOMAIN-MANUFACTURING]] (Vervaardiging) — alongside the
+already-present [[DOMAIN-GOVERNMENT]] (Overheid) and
+[[DOMAIN-CYBERSECURITY]] (the Act's own regulatory subject, not itself a
+named sector).
+
 ## Classification
 
 Dutch implementation legislation per `metadata/taxonomy.md` §2:
@@ -185,7 +244,8 @@ Dutch implementation legislation per `metadata/taxonomy.md` §2:
 
 ## Sources
 
-Four of five read directly this pass: both `ncsc.nl` and `nctv.nl` current
-pages, and both `rijksoverheid.nl` news items. `digitaleoverheid.nl` was
-blocked by a bot-verification interstitial and returned no readable
-content.
+Four of five read directly the first pass: both `ncsc.nl` and `nctv.nl`
+current pages, and both `rijksoverheid.nl` news items. `digitaleoverheid.nl`
+was blocked by a bot-verification interstitial and returned no readable
+content. A sixth source, `ncsc.nl`'s own sector-scope page, was added and
+read directly 2026-09-25 for the eighteen-sector list above.

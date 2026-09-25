@@ -23,11 +23,12 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-18"
+last_verified: "2026-09-25"
 previous_version: null
 successor: null
 
-domains: []
+domains:
+  - DOMAIN-FINANCE
 organisations: []
 related_entities:
   - EU-COMMON-DATA-SPACES
@@ -76,6 +77,10 @@ sources:
 > now modelled as [[EU-ESAP]]; the third is identified and sourced but
 > deliberately not given its own entity. See "The three components,
 > named" below.
+>
+> **Domain added 2026-09-25**: [[DOMAIN-FINANCE]], created because
+> "Bankwezen" and "Infrastructuur financiële markt" are two of the Dutch
+> Cyberbeveiligingswet's own named sectors.
 
 ## Description
 

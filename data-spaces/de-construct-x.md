@@ -27,11 +27,12 @@ verification: primary-source
 
 start_date: 2025-03-01
 end_date: 2028-02-29
-last_verified: "2026-09-20"
+last_verified: "2026-09-25"
 previous_version: null
 successor: null
 
-domains: []
+domains:
+  - DOMAIN-MANUFACTURING
 organisations: []
 related_entities:
   - DE-MANUFACTURING-X
@@ -73,6 +74,10 @@ sources:
 > closed in PR #276 and #285). Sourced from Fraunhofer ISST's own page
 > and Fraunhofer IFF's own press release, both read directly.
 > HealthTrack-X and Plattform Industrie 4.0 remain unmodelled.
+>
+> **Domain added 2026-09-25**: [[DOMAIN-MANUFACTURING]], created because
+> "Vervaardiging" is one of the Dutch Cyberbeveiligingswet's own named
+> sectors.
 
 ## Description
 

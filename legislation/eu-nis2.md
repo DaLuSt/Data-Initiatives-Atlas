@@ -23,13 +23,26 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-20"
+last_verified: "2026-09-25"
 previous_version: EU-NIS
 successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
   - DOMAIN-CYBERSECURITY
+  - DOMAIN-ENERGY
+  - DOMAIN-MOBILITY
+  - DOMAIN-FINANCE
+  - DOMAIN-WATER
+  - DOMAIN-DIGITAL-INFRASTRUCTURE
+  - DOMAIN-SPACE
+  - DOMAIN-HEALTH
+  - DOMAIN-POSTAL
+  - DOMAIN-ENVIRONMENT
+  - DOMAIN-FOOD
+  - DOMAIN-CHEMICALS
+  - DOMAIN-RESEARCH
+  - DOMAIN-MANUFACTURING
 organisations: []
 related_entities:
   - CZ
@@ -128,6 +141,14 @@ sources:
   - title: "EUR-Lex - 02022L2555-20221227"
     url: "https://eur-lex.europa.eu/eli/dir/2022/2555"
     publisher: "EUR-Lex (Publications Office of the European Union)"
+  - title: "NIS2 Directive"
+    url: "https://digital-strategy.ec.europa.eu/en/policies/nis2-directive"
+    publisher: "European Commission (Digital Strategy)"
+    accessed: "2026-09-25"
+  - title: "Valt mijn organisatie onder de Cyberbeveiligingswet (NIS2)?"
+    url: "https://www.ncsc.nl/cyberbeveiligingswet-nis2/valt-mijn-organisatie-onder-de-cyberbeveiligingswet-nis2"
+    publisher: "Nationaal Cyber Security Centrum (NCSC)"
+    accessed: "2026-09-25"
 ---
 
 # NIS2 Directive (Directive (EU) 2022/2555)
@@ -145,6 +166,16 @@ sources:
 > ([[IE-NCS-BILL]], [[ES-LCGC]], [[FR-NIS2-LOI]], [[NL-CBW]]) now carry a
 > typed `referred-to-court-over` edge for that actual referral, a new
 > relationship type (metadata/relationship-types.md §2.1).
+>
+> **Domains deepened 2026-09-25**, at the user's request: thirteen new
+> `domains:` entries reflecting NIS2's actual sector scope (see "Sector
+> scope" below). `eur-lex.europa.eu` returned empty content for this
+> document's own Annex I/II text on every attempt this pass, consistent
+> with `discovery/unresolved.md`'s known block for this domain — the
+> sector list is instead corroborated from two directly-read sources: the
+> European Commission's own digital-strategy summary page, and the Dutch
+> NCSC's own Cyberbeveiligingswet sector page (Bijlage 1/2), which
+> transposes the same Annexes sector-for-sector.
 
 ## Description
 
@@ -188,10 +219,44 @@ replaces the earlier [[NL-WBNI]]. The Dutch transposition ran late: search
 results indicate the Netherlands publicly acknowledged delay in
 implementing NIS2 and CER in October 2024.
 
+## Sector scope
+
+NIS2 designates two tiers of covered sectors — "essential entities"
+(Annex I) and "important entities" (Annex II). `eur-lex.europa.eu`
+returned empty content for this directive's own Annex text on every
+attempt this pass (the same block `discovery/unresolved.md` records for
+this domain generally), so the list below is corroborated from two other
+directly-read primary sources instead: the European Commission's own
+digital-strategy summary page, and the Dutch NCSC's own Cyberbeveiligingswet
+sector page, which names its Bijlage 1 and 2 as transposing NIS2's Annex I
+and II directly.
+
+**Essential (eleven sectors):** Energy, Transport, Banking, Financial
+market infrastructure, Health, Drinking water, Waste water, Digital
+infrastructure, ICT service management, Public administration, Space.
+
+**Important (seven sectors):** Digital providers, Postal and courier
+services, Waste management, Food, Chemicals, Research, Manufacturing.
+
+Each now has an Atlas `domain` entity: [[DOMAIN-ENERGY]],
+[[DOMAIN-MOBILITY]], [[DOMAIN-FINANCE]] (Banking and Financial market
+infrastructure), [[DOMAIN-HEALTH]], [[DOMAIN-WATER]] (Drinking water and
+Waste water), [[DOMAIN-DIGITAL-INFRASTRUCTURE]] (Digital infrastructure,
+ICT service management and Digital providers), [[DOMAIN-GOVERNMENT]],
+[[DOMAIN-SPACE]], [[DOMAIN-POSTAL]], [[DOMAIN-ENVIRONMENT]] (Waste
+management), [[DOMAIN-FOOD]], [[DOMAIN-CHEMICALS]], [[DOMAIN-RESEARCH]]
+and [[DOMAIN-MANUFACTURING]] — fourteen distinct domains covering
+eighteen named sectors, since the Atlas groups a few pairs (Banking with
+Financial market infrastructure; Drinking water with Waste water; the
+three digital/ICT sectors) under one domain rather than distinguishing
+them where no Atlas entity yet needs the finer split.
+
 ## Scope note
 
 Minimal EU anchor entity created in Batch 3 to support the
-transposition chain. Batch 8 should deepen it.
+transposition chain. Batch 8 should deepen it. Its `domains:` field was
+deepened 2026-09-25; its sector-by-country transposition detail remains
+for a future pass.
 
 ## Relationships
 

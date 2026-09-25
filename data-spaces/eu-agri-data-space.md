@@ -20,11 +20,12 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-25"
 previous_version: null
 successor: null
 
-domains: []
+domains:
+  - DOMAIN-FOOD
 organisations: []
 related_entities:
   - EU-COMMON-DATA-SPACES
@@ -58,6 +59,12 @@ sources:
 > the 14 sectors, and a Commission library document dedicated to the
 > agriculture and mobility data spaces confirms and extends the purpose
 > statement. `verification` moves from `search-only` to `primary-source`.
+>
+> **Domain added 2026-09-25**: [[DOMAIN-FOOD]], created because
+> "Levensmiddelen" is one of the Dutch Cyberbeveiligingswet's own named
+> sectors — its own scope, per Regulation (EC) No 178/2002's definition of
+> a food business, reaches primary agricultural production, which is why
+> this entity is tagged here rather than to a separate Agriculture domain.
 
 ## Description
 

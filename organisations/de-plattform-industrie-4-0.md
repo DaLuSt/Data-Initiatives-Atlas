@@ -29,12 +29,13 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-20"
+last_verified: "2026-09-25"
 previous_version: null
 successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
+  - DOMAIN-MANUFACTURING
 organisations: []
 related_entities:
   - DE-MANUFACTURING-X
@@ -73,6 +74,11 @@ sources:
 > bot-verification challenge, the same block already documented on
 > [[DE-MANUFACTURING-X]]. A secondary source (ifm.com) corroborates the
 > joint-ministry leadership and working-group structure independently.
+>
+> **Domain added 2026-09-25**: [[DOMAIN-MANUFACTURING]], created because
+> "Vervaardiging" is one of the Dutch Cyberbeveiligingswet's own named
+> sectors — this entity is the concept base for the whole Manufacturing-X
+> family now tagged to it.
 
 ## Description
 

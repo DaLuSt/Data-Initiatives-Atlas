@@ -27,13 +27,16 @@ verification: primary-source
 
 start_date: 1997-01-01
 end_date: null
-last_verified: "2026-09-06"
+last_verified: "2026-09-25"
 previous_version: null
 successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
   - DOMAIN-CYBERSECURITY
+  - DOMAIN-ENERGY
+  - DOMAIN-POSTAL
+  - DOMAIN-DIGITAL-INFRASTRUCTURE
 organisations: []
 related_entities:
   - LU
@@ -79,6 +82,11 @@ sources:
 > previous day: Luxembourg's NIS2 competent authority was named there but
 > not modelled as its own entity. ILR's own site was read directly for
 > both its general regulatory mandate and its NIS2 role.
+>
+> **Domains deepened 2026-09-25**: [[DOMAIN-ENERGY]], [[DOMAIN-POSTAL]]
+> and [[DOMAIN-DIGITAL-INFRASTRUCTURE]] added, reflecting the electricity,
+> gas, postal and electronic-communications sectors this entity's own
+> description already named among its multi-sector remit.
 
 ## Description
 
