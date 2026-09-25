@@ -21,7 +21,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-19"
+last_verified: "2026-09-25"
 previous_version: null
 successor: null
 
@@ -128,6 +128,20 @@ data-sharing mechanisms set up or proposed in existing ... legislation
 the earlier text over-assumed. No source read names [[NL-NTM]] or any
 other specific national NAP; the country-level connection stays an Atlas
 association via `related_entities` rather than a typed edge.
+
+**Strengthened to a documented negative, 2026-09-25**: [[NL-NTM]]'s own
+site, re-read directly, confirms it contributes to "common European
+Dataspaces (dataruimten)" in general EU-data-strategy language, without
+naming the EMDS specifically — unchanged from the earlier pass. More
+tellingly, deployEMDS's own site, read directly for its use-case list,
+names nine participating countries — Spain, Hungary, Belgium, France,
+Portugal, Italy, Bulgaria, Sweden and Finland — and **the Netherlands is
+not among them**. The Netherlands, despite having one of Europe's
+best-documented national access points, sits outside the EU's own first
+EMDS deployment project entirely. This is silence from a source that
+would very plausibly mention NL-NTM if any connection existed, matching
+the documented-negative pattern already used on [[DE-MDS]] (row #66) for
+its own "Connected Data Space 4.0 Initiatives" list.
 
 ## The coordinator overlap, found on the German side — 2026-09-19
 

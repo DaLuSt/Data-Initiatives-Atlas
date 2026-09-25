@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: 2014-07-23
 end_date: null
-last_verified: "2026-09-19"
+last_verified: "2026-09-25"
 previous_version: null
 successor: null
 
@@ -278,6 +278,11 @@ sources:
 > regulation's own date is now sourced, and its EEA-EFTA applicability is
 > modelled via [[INTL-EEA-JCD-22-2018]], read directly. `confidence`
 > raised to `medium`.
+>
+> **Partly narrowed 2026-09-25**: trust-services categories (signatures,
+> seals, qualified certificates) recorded in prose from Wikipedia,
+> search-only — `eur-lex.europa.eu`'s TXT/HTML form returned empty
+> content for this specific regulation on every attempt.
 
 ## Description
 
@@ -301,9 +306,19 @@ candidate from eIDAS 2.0 (which post-dates the Wdo) to this original
 regulation. Having it as an entity makes that question expressible.
 
 **Its own content beyond the incorporation facts above remains
-unresearched.** The regulation's structure and trust-services provisions
-are still unrecorded; only its enactment date, repeal of the prior
-Directive, and EEA-EFTA applicability are now sourced.
+mostly unresearched.** Only its enactment date, repeal of the prior
+Directive, and EEA-EFTA applicability are sourced by direct reading.
+**Partly narrowed 2026-09-25**: the regulation's trust-services
+categories are now recorded — English Wikipedia's own eIDAS article
+(search-only, `eur-lex.europa.eu`'s TXT/HTML form returned empty
+content for this specific regulation on every attempt this pass, unlike
+other EUR-Lex documents this Atlas has read successfully) describes a
+tiered legal-effect regime for electronic signatures (Art. 25(1)), a
+presumption of integrity for electronic seals (Art. 35(2)), and
+qualified certificates covering time stamps and website authentication.
+These are recorded in prose only, not structured as sourced facts, since
+the description rests on a secondary source rather than the
+regulation's own text.
 
 ## The NL-WDO question remains open
 
