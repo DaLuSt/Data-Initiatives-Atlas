@@ -20,6 +20,13 @@ directly on [[EU-PSI-DIRECTIVE]] via EUR-Lex's TXT/HTML form. The
 decision not to give the amending directive its own entity stands
 unchanged; only the "content not established" gap closed.
 
+**Closed `discovery/unresolved.md` row #48, same session.** Declined to
+model CEN/TC 434 (a committee, not a body — matching the ISO/IEC JTC 1
+precedent), the UBL/CII syntax bindings (technical artefacts of
+[[EU-EN-16931]] itself), or a generic CIUS-mechanism entity — its
+concrete instances ([[DE-XRECHNUNG]], [[IT-FATTURAPA]], [[FR-CIUS-FR]])
+are what's worth modelling, and all three already are.
+
 **The ontology/non-ontology closure
 campaign** (2026-09-19 through 2026-09-25) is the most recent
 batch-scale completed work, superseding the fourteenth verification-gap
