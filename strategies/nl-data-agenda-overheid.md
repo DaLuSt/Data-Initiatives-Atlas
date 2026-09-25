@@ -21,7 +21,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-09-25"
 previous_version: null
 successor: NL-WERKAGENDA-WAARDENGEDREVEN-DIGITALISEREN
 
@@ -41,6 +41,13 @@ relationships:
     confidence: high
     valid_from: null
     valid_until: null
+  - type: related-to
+    target: NL-IBDS
+    source: fact
+    evidence: "Confirmed by reading privacy-web.nl's own copy of the Kamerbrief presenting [[NL-IBDS]] directly (2026-09-25): State Secretary Knops (BZK) says this agenda's actions were 'grotendeels gerealiseerd' (largely realised) and that parliamentary reporting on the IBDS continues 'in navolging van' (following) this agenda's own practice — the government's own narrative link between the two, though not a formal succession: this entity's own `successor` field already runs through [[NL-DIGIBETER]] to a different entity, and no source states IBDS extends or replaces this agenda's substantive scope. Closes discovery/unresolved.md row #134."
+    confidence: medium
+    valid_from: 2021-11-18
+    valid_until: null
 
 sources:
   - title: "NL DIGITAAL: Data Agenda Overheid (confirmed unreadable — garbled PDF binary)"
@@ -57,6 +64,10 @@ sources:
     url: "https://www.binnenlandsbestuur.nl/digitaal/informatiehuishouding/agenda-verantwoord-datagebruik-overheid-naar-kamer"
     publisher: "Binnenlands Bestuur"
     accessed: "2026-08-27"
+  - title: "Kamerbrief over Interbestuurlijke Datastrategie Nederland"
+    url: "https://privacy-web.nl/beleid/kamerbrief-over-interbestuurlijke-datastrategie-nederland/"
+    publisher: "Privacy Web (reproducing State Secretary Knops's 18 November 2021 letter to the Tweede Kamer)"
+    accessed: "2026-09-25"
 ---
 
 # NL DIGITAAL: Data Agenda Overheid
@@ -112,13 +123,21 @@ them.
   coordinating role from its responsibility "voor de digitale overheid en
   het borgen van grondrechten" (for digital government and safeguarding
   fundamental rights).
-- The relationship to [[NL-IBDS]] remains genuinely open — no source read
-  this pass or previously states whether the IBDS extends, replaces, or
-  merely overlaps with this agenda. See `discovery/unresolved.md`.
+- `related-to` [[NL-IBDS]] — **closed 2026-09-25**: the Kamerbrief
+  presenting the IBDS, read directly, is the government's own account
+  of the two agendas' relationship. State Secretary Knops opens by
+  noting this agenda's actions were "grotendeels gerealiseerd" (largely
+  realised), then closes by saying parliamentary reporting on the IBDS
+  continues "in navolging van" (following) this agenda's own practice.
+  That is a narrative continuity, not a stated succession or
+  substantive extension — this agenda's own `successor` still runs
+  through [[NL-DIGIBETER]] to a different entity, so `related-to` is
+  used rather than a stronger type.
 
 ## Sources
 
 Listed in frontmatter. Two new alternate sources read directly this pass
 after the original PDF proved unparseable and parlementairemonitor.nl was
 confirmed to have ceased operations (it now serves only a generic page
-about itself, not the indexed document).
+about itself, not the indexed document). The Kamerbrief presenting
+[[NL-IBDS]] was added and read directly 2026-09-25, closing row #134.
