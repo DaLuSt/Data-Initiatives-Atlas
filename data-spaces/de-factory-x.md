@@ -25,7 +25,7 @@ verification: primary-source
 
 start_date: 2024-01-01
 end_date: 2026-06-30
-last_verified: "2026-09-25"
+last_verified: "2026-09-26"
 previous_version: null
 successor: null
 
@@ -35,6 +35,7 @@ organisations: []
 related_entities:
   - DE-MANUFACTURING-X
   - DE-CATENA-X
+  - DE-PLATTFORM-INDUSTRIE-4-0
 relationships:
   - type: part-of
     target: DE-MANUFACTURING-X
@@ -49,6 +50,13 @@ relationships:
     evidence: "Confirmed by reading factory-x.org's own page directly (2026-09-19), which describes Factory-X as 'an open and collaborative digital ecosystem for factory outfitters and operators, built on the foundations of Catena-X and the principles of Plattform Industrie 4.0.' Fraunhofer IOSB's own page, also read directly, independently corroborates: 'The German Federal Ministry for Economic Affairs and Climate Protection (BMWK) has launched Catena-X, a corresponding data room for the automotive industry. This was followed by the more comprehensive Manufacturing-X initiative,' with Factory-X as its mechanical-engineering-specific lighthouse."
     confidence: high
     valid_from: "2024-01-01"
+    valid_until: null
+  - type: related-to
+    target: DE-PLATTFORM-INDUSTRIE-4-0
+    source: fact
+    evidence: "CLOSES the Plattform Industrie 4.0 gap this entity's own 'Not modelled' section flagged (the platform did not yet exist as an Atlas entity when this file was created 2026-09-19; it was added 2026-09-20 as [[DE-PLATTFORM-INDUSTRIE-4-0]]). No new source read: factory-x.org's own page, already cited above, states Factory-X is 'built on ... the principles of Plattform Industrie 4.0' -- the same evidence already on file, now given its edge. `related-to` matches the type [[DE-PLATTFORM-INDUSTRIE-4-0]]'s own file uses for its edge to [[DE-MANUFACTURING-X]]: a concept/principles basis, not a stated organisational relationship."
+    confidence: medium
+    valid_from: null
     valid_until: null
 
 sources:
@@ -109,8 +117,6 @@ Factory-X initiated, has since passed to **VDI TZ**.
 - **Aerospace-X**, **Construct-X** and **HealthTrack-X** — the other
   lighthouse/sibling projects named on [[DE-MANUFACTURING-X]]'s own entity,
   not independently researched this pass.
-- **Plattform Industrie 4.0** — the concept base Manufacturing-X and
-  Factory-X both build on, named repeatedly but not itself modelled.
 - The **Factory-X kernel**, the decentralised technical architecture
   Fraunhofer ISST co-developed, and the specific open standards it uses
   (AAS, OPC-UA, EDC) — named in search results but not confirmed by a
@@ -118,10 +124,16 @@ Factory-X initiated, has since passed to **VDI TZ**.
 - Factory-X's **47 named partners and ten associated partners**
   individually.
 
+**Plattform Industrie 4.0, linked 2026-09-26**: the concept base
+Manufacturing-X and Factory-X both build on is now [[DE-PLATTFORM-INDUSTRIE-4-0]]
+(created 2026-09-20, after this entity) — the edge below uses evidence
+already on file, not a new source.
+
 ## Relationships
 
 - `part-of` [[DE-MANUFACTURING-X]] — `confidence: high`.
 - `based-on` [[DE-CATENA-X]] — `confidence: high`.
+- `related-to` [[DE-PLATTFORM-INDUSTRIE-4-0]] — `confidence: medium`.
 
 ## Sources
 

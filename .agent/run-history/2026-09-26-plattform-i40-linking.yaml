@@ -1,0 +1,18 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Graph completion: DE-FACTORY-X and DE-AEROSPACE-X (created 2026-09-19/20)
+  each named "Plattform Industrie 4.0" in their own already-cited sources
+  as a concept/lessons basis, but DE-PLATTFORM-INDUSTRIE-4-0 (created
+  2026-09-20) did not yet exist to link to -- both entities' own "Not
+  modelled" sections carried this as a stale gap. Added a related-to edge
+  on each, reusing evidence already on file (no new source read), and
+  cross-referenced DE-PLATTFORM-INDUSTRIE-4-0's own related_entities.
+  DE-CONSTRUCT-X's own cited source was re-checked and confirmed to NOT
+  name the platform, so its "Not modelled" note was corrected to record
+  this as a deliberate non-assertion rather than an oversight.
+prs:
+  - number: 348
+    title: "Link Factory-X and Aerospace-X to Plattform Industrie 4.0"
+outcome: merged
+entity_count_after: 732
