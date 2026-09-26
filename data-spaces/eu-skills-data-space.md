@@ -35,6 +35,7 @@ related_entities:
   - EU-EDGE-SKILLS
   - EU-ESCO
   - EU-EUROPASS
+  - EU-SKILLS-AGENDA
 relationships:
   - type: part-of
     target: EU-COMMON-DATA-SPACES
@@ -104,21 +105,24 @@ directly this pass, not merely presumed: neither DS4Skills' own site nor
 HaDEA's announcement of it mentions any of the three. That is a
 checked-and-negative finding, not an unresearched gap.
 
+## All three presumed connections now researched — 2026-09-26
+
+All three items this data space's file once flagged as "previously
+presumed" existing EU skills-data machinery are now Atlas entities:
+[[EU-ESCO]] (launched 28 July 2017, maintained by DG EMPL),
+[[EU-EUROPASS]] (current legal basis Decision (EU) 2018/646, original
+framework from 2004), and [[EU-SKILLS-AGENDA]] (published 1 July 2020,
+12 actions). Re-checked directly against each one's own page: still no
+stated connection to this data space for any of the three, so
+`related-to` at `confidence: low` is recorded on each entity's own file
+rather than a stronger claim — three independently checked-and-negative
+findings, not unresearched gaps.
+
 ## Not modelled
 
-- The **European Skills Agenda** — previously presumed to be existing
-  EU skills-data machinery this data space builds on. Checked directly
-  against [[EU-DS4SKILLS]]'s own sources (2026-09-05): not mentioned.
-  Still not an Atlas entity, and still not confirmed connected to this
-  data space by any source read.
-
-**ESCO and Europass, researched 2026-09-26**: both now their own
-entities, [[EU-ESCO]] (launched 28 July 2017, maintained by DG EMPL) and
-[[EU-EUROPASS]] (current legal basis Decision (EU) 2018/646, original
-framework from 2004). Re-checked directly against each one's own page:
-still no stated connection to this data space for either, so
-`related-to` at `confidence: low` is recorded on each entity's own file
-rather than a stronger claim.
+Nothing further named by this entity's own sources remains unmodelled;
+see "All three presumed connections now researched" above for the
+history of what was.
 
 ## Sources
 

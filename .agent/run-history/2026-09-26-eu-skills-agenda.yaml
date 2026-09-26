@@ -1,0 +1,14 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Closed the last of three gaps EU-SKILLS-DATA-SPACE's own file had
+  flagged (not a numbered discovery/unresolved.md row): created
+  EU-SKILLS-AGENDA (published 1 July 2020, 12 actions, five-year plan).
+  Together with EU-ESCO and EU-EUROPASS, all three previously-presumed
+  connections are now researched and modelled, each with a
+  checked-and-negative related-to edge to EU-SKILLS-DATA-SPACE rather
+  than an unstated assumption. Sourced from two European Commission
+  pages, both read directly.
+prs: []
+outcome: merged
+entity_count_after: 728
