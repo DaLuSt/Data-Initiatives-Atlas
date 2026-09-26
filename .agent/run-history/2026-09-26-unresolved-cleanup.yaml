@@ -1,0 +1,15 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  At the repository owner's request, cleaned up discovery/unresolved.md
+  by removing rows still carrying a `Closed` status, per the file's own
+  documented convention (2026-09-18: "closed rows are now removed from
+  the table entirely rather than kept with a Closed status"). Only one
+  row had drifted from that convention: #55b (EU-GEANT), carrying
+  "Closed (verification); content still thin" -- removed. No other row
+  in the table carries a Closed status. 65 open rows remain.
+prs:
+  - number: 370
+    title: "Remove the last Closed-status row from discovery/unresolved.md"
+outcome: merged
+entity_count_after: 736
