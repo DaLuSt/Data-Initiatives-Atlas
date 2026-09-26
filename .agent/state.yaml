@@ -16,16 +16,16 @@ updated: "2026-09-26"
 updated_by_session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
 
 graph:
-  entity_count: 720
-  relationship_edges: 1520
-  association_edges: 3130
-  wikilink_edges: 4445
-  edges_total: 9095
+  entity_count: 721
+  relationship_edges: 1522
+  association_edges: 3136
+  wikilink_edges: 4452
+  edges_total: 9110
   countries: 58
   regions: 1
 
 discovery:
-  unresolved_rows_open: 71
+  unresolved_rows_open: 70
   candidates_queued: 0
   research_queue_items: 0
   needs_human_open: 0
@@ -33,8 +33,6 @@ discovery:
 validation_status: clean
 
 last_merged_prs:
-  - number: 328
-    summary: "Autonomous agent GitHub Actions scheduler (AGENTS.md, .agent/, the scheduled workflow)"
   - number: 329
     summary: "Added ES-LANTIK (completing the Basque NISAE quartet); closed discovery/unresolved.md rows #47 and #48"
   - number: 330
@@ -43,6 +41,8 @@ last_merged_prs:
     summary: "Renamed CLAUDE.md to AGENTS.md; built out the full .agent/ structure (state.yaml/current-task.yaml now authoritative)"
   - number: 332
     summary: "Added INTL-OPENPEPPOL and INTL-PEPPOL-BIS-BILLING, closing discovery/unresolved.md row #49 in full"
+  - number: 333
+    summary: "Added NL-NEC, closing discovery/unresolved.md row #28"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,

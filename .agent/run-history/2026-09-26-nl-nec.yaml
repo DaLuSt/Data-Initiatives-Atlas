@@ -1,0 +1,14 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Closed discovery/unresolved.md row #28: created NL-NEC (Stichting
+  Koninklijk Nederlands Elektrotechnisch Comité), the Dutch national
+  electrotechnical standards body, sourced from NEN's own history page
+  and CENELEC's own official members list. Completes the CEN/CENELEC <->
+  NEN/NEC national-counterpart structure EU-CENELEC's own file had
+  flagged as missing since Batch 2.
+prs:
+  - number: 333
+    title: "Close row #28: model NL-NEC, CENELEC's Dutch national counterpart"
+outcome: merged
+entity_count_after: 721
