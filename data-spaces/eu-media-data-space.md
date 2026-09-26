@@ -21,7 +21,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-19"
+last_verified: "2026-09-26"
 previous_version: null
 successor: null
 
@@ -29,6 +29,7 @@ domains: []
 organisations: []
 related_entities:
   - EU-COMMON-DATA-SPACES
+  - EU-MEDIA-FREEDOM-ACT
 relationships:
   - type: part-of
     target: EU-COMMON-DATA-SPACES
@@ -105,8 +106,14 @@ side.
 - TEMS as its own entity — it is the data space's deployment project,
   described in prose here rather than as a separate node.
 - Governance or operators beyond TEMS's own role.
-- The relationship to the **European Media Freedom Act** and to
-  [[EU-AI-ACT]]'s transparency provisions for media.
+- The relationship to [[EU-AI-ACT]]'s transparency provisions for media
+  — not yet researched.
+
+**The European Media Freedom Act, researched 2026-09-26**: now its own
+entity, [[EU-MEDIA-FREEDOM-ACT]] (Regulation (EU) 2024/1083). No source
+read states a direct link between the Regulation and this data space —
+`related-to` at `confidence: low` is recorded on the Regulation's own
+file rather than asserted as a stronger connection.
 
 ## Sources
 
