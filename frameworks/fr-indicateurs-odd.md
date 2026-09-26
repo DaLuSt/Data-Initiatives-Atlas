@@ -27,7 +27,7 @@ verification: primary-source
 
 start_date: 2018-01-01
 end_date: null
-last_verified: "2026-09-19"
+last_verified: "2026-09-26"
 previous_version: null
 successor: null
 
@@ -37,6 +37,7 @@ organisations:
 related_entities:
   - FR-INSEE
   - UN-SDG-INDICATORS
+  - FR-CNIS
 relationships:
   - type: based-on
     target: UN-SDG-INDICATORS
@@ -95,11 +96,13 @@ named on the same page but not independently researched or modelled here.
 
 ## Not modelled
 
-- The **Conseil national de l'information statistique (Cnis)**, the body
-  whose consultation produced the indicator selection.
 - The **Service des données et études statistiques (SDES)**, INSEE's
-  partner on regional disaggregation.
+  partner on regional disaggregation — not independently researched.
 - The **regional/departmental/communal indicator breakdowns** themselves.
+
+**The Cnis, researched 2026-09-26**: now its own entity, [[FR-CNIS]]
+(established 1984), whose consultation produced this indicator set's
+selection.
 
 ## Relationships
 

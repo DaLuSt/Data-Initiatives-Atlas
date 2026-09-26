@@ -16,11 +16,11 @@ updated: "2026-09-26"
 updated_by_session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
 
 graph:
-  entity_count: 730
-  relationship_edges: 1540
-  association_edges: 3173
-  wikilink_edges: 4486
-  edges_total: 9199
+  entity_count: 731
+  relationship_edges: 1542
+  association_edges: 3177
+  wikilink_edges: 4490
+  edges_total: 9209
   countries: 58
   regions: 1
 
@@ -33,14 +33,14 @@ discovery:
 validation_status: clean
 
 last_merged_prs:
-  - number: 339
-    summary: "Added EU-EUROPASS, closing a gap flagged on EU-SKILLS-DATA-SPACE"
   - number: 340
     summary: "Added EU-SKILLS-AGENDA, closing the last gap flagged on EU-SKILLS-DATA-SPACE"
   - number: 341
     summary: "Added EU-EDM, closing a gap flagged on EU-CULTURAL-HERITAGE-DATA-SPACE"
   - number: 342
     summary: "Added ES-LOCALRET, closing a gap flagged on ES-AOC"
+  - number: null
+    summary: "Added FR-CNIS, closing a gap flagged on FR-INDICATEURS-ODD (PR number filled in before merge)"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
