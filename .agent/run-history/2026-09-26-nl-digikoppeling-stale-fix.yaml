@@ -1,0 +1,16 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Quality fix: NL-DIGIKOPPELING's own file carried a "historical note
+  worth flagging" saying corroboration for the College Standaardisatie
+  -> OBDO succession "would resolve the open question ... recorded in
+  discovery/unresolved.md" and that "the question stays open." NL-OBDO's
+  own file had already closed that exact succession on 2026-09-05 (via
+  roraonline.nl's own page, read directly), and it is no longer a
+  discovery/unresolved.md row. Corrected the note to point to the
+  resolution rather than describe a question that no longer exists.
+prs:
+  - number: 360
+    title: "Fix stale College Standaardisatie note on NL-DIGIKOPPELING"
+outcome: merged
+entity_count_after: 734
