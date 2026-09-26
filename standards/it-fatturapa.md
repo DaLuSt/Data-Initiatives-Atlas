@@ -26,7 +26,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-19"
+last_verified: "2026-09-26"
 previous_version: null
 successor: null
 
@@ -100,9 +100,14 @@ indirection.
   entity — described here in prose as the exchange system FatturaPA moves
   through, the same treatment [[DE-XRECHNUNG]] gives [[DE-KOSIT]]'s
   operational role without splitting it further.
-- **CIUS-IT / "FatturaEU"**, the cross-border-facing EN 16931-native
-  profile the SDI maps onto FatturaPA — named on the Commission's page but
-  not independently researched beyond the mapping mechanism above.
+- ~~**CIUS-IT / "FatturaEU"**~~ — **checked 2026-09-26 and corrected**: the
+  Commission's own page, re-read directly, names no such profile. It calls
+  the translation layer only "the Italian CIUS," which is the same
+  mechanism already described above in "A CIUS that translates rather
+  than defines" — not a second, separate entity. This bullet previously
+  treated a name with no source (possibly conflated with a different
+  country's naming pattern) as an unresearched gap; there is nothing
+  further to research here.
 - The **Agenzia delle Entrate** as an organisation entity.
 
 ## Relationships
