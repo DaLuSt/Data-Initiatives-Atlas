@@ -33,6 +33,7 @@
   "confidence_levels": ["high", "medium", "low"],
   "coverage_levels": ["low", "medium", "high"],
   "verification_levels": ["primary-source", "search-only", "unverified"],
+  "organisation_role_levels": ["executive", "consultative", "regulatory", "standards-body", "advisory"],
   "relationship_source_values": ["fact", "interpretation"],
   "relationship_types": [
     "related-to", "influences", "implements", "implemented-by",

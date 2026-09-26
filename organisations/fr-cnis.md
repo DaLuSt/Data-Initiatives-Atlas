@@ -26,6 +26,7 @@ status: active
 confidence: high
 coverage: low
 verification: primary-source
+organisation_role: consultative
 
 start_date: 1984-01-01
 end_date: null

@@ -25,6 +25,7 @@ status: active
 confidence: high
 coverage: low
 verification: primary-source
+organisation_role: standards-body
 
 start_date: 1911-03-17
 end_date: null

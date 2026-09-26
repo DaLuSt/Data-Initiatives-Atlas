@@ -98,6 +98,18 @@ def main() -> int:
         if verification is not None and verification not in schema["verification_levels"]:
             report.error(f"{e.rel_path}: invalid verification '{verification}'")
 
+        organisation_role = fm.get("organisation_role")
+        if organisation_role is not None:
+            if entity_type != "organisation":
+                report.error(
+                    f"{e.rel_path}: 'organisation_role' is only valid on "
+                    f"type 'organisation', found on type '{entity_type}'"
+                )
+            elif organisation_role not in schema["organisation_role_levels"]:
+                report.error(
+                    f"{e.rel_path}: invalid organisation_role '{organisation_role}'"
+                )
+
         # An entity may only claim high confidence if a human/agent actually
         # read a primary source for it.
         if verification in ("search-only", "unverified") and fm.get("confidence") == "high":

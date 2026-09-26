@@ -33,14 +33,14 @@ discovery:
 validation_status: clean
 
 last_merged_prs:
-  - number: 341
-    summary: "Added EU-EDM, closing a gap flagged on EU-CULTURAL-HERITAGE-DATA-SPACE"
   - number: 342
     summary: "Added ES-LOCALRET, closing a gap flagged on ES-AOC"
   - number: 343
     summary: "Added FR-CNIS, closing a gap flagged on FR-INDICATEURS-ODD"
   - number: 344
     summary: "Added BE-IIS (confidence: low), closing a gap flagged on BE-INDICATEURS-DEVELOPPEMENT-DURABLE"
+  - number: 345
+    summary: "Added optional organisation_role field to the ontology (executive/consultative/regulatory/standards-body/advisory), applied to FR-CNIS, BE-IIS, NL-NEC"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,

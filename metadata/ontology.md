@@ -62,6 +62,39 @@ non-parliamentary instruments sit within the existing vocabulary, rather
 than leaving them unmodelled or inventing a new `agreement` type for a
 small number of known cases.
 
+### 1.1 Organisation role (optional)
+
+`type: organisation` is deliberately a big tent — a ministry, an executive
+statistics office, a standards-mirror committee and a consultative council
+all carry the same `type`. That conflated bodies whose function is to
+*deliberate, select or coordinate* with bodies that *execute, publish or
+operate*: e.g. [[FR-CNIS]] and [[BE-IIS]] each select a country's SDG
+indicator set but publish neither the indicators nor anything else
+themselves, and [[NL-NEC]] mirrors CENELEC/IEC standardisation rather than
+running infrastructure — structurally different from an executive body like
+[[BE-STATBEL]], though both are `type: organisation`.
+
+Rather than splitting these into a new `type` (which would force a hard
+line across what is really a spectrum, and relitigate every existing
+`organisation` entity), an optional `organisation_role` field is available
+on `type: organisation` entities only:
+
+| Value | Meaning |
+|---|---|
+| `executive` | Runs, publishes or operates something directly |
+| `consultative` | Deliberates, selects or advises without itself publishing/operating the result |
+| `regulatory` | Sets or enforces binding rules for others |
+| `standards-body` | Develops, mirrors or maintains technical/semantic standards |
+| `advisory` | Provides non-binding expert input, distinct from `consultative` in that it does not select/decide anything |
+
+The field is optional and additive — omitting it says nothing about an
+entity's role, and existing `organisation` entities are not touched
+retroactively. `validate_frontmatter.py` rejects it on any other `type` and
+rejects any value outside this table. Decided 2026-09-26, closing the
+ontology discussion opened by [[FR-CNIS]]/[[BE-IIS]]/[[NL-NEC]] (chose the
+"non-breaking field on the existing type" option over a new `type` or
+prose-only convention).
+
 ---
 
 ## 2. Identifiers
