@@ -1,0 +1,16 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Closed a gap EU-MEDIA-DATA-SPACE's own file had flagged (not a numbered
+  discovery/unresolved.md row): created EU-MEDIA-FREEDOM-ACT (Regulation
+  (EU) 2024/1083), adopted 11 April 2024, main obligations applicable
+  from 8 August 2025. Establishes the European Board for Media Services,
+  replacing ERGA. No source found connects it directly to
+  EU-MEDIA-DATA-SPACE, so a low-confidence related-to edge is recorded
+  rather than a stronger claim. Sourced from EUR-Lex's own text and the
+  Media Board's own official site, both read directly.
+prs:
+  - number: 336
+    title: "Model the European Media Freedom Act"
+outcome: merged
+entity_count_after: 724
