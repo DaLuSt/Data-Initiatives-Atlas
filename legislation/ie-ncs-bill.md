@@ -205,11 +205,10 @@ Atlas, because no other entity's sources give the figures.
   NIS1-based regime) was not confirmed this pass — see the caveat above.
 - Ireland's **NIS1 transposition**, the instrument the 450 operators sit
   under today.
-- The **Cyber Fundamentals Framework (CyFun)**, named by the sources as the
-  NCSC's preferred risk-based framework. CyFun originates with [[BE-CCB]]
-  in Belgium, so an Irish adoption would be a genuine cross-border edge —
-  and no source read states that the Irish NCSC has adopted it as opposed to
-  referring to it.
+- ~~The **Cyber Fundamentals Framework (CyFun)**~~ — **closed 2026-09-26**:
+  now [[BE-CYFUN]]. Ireland's NCSC has "joined ... as a scheme co-owner,"
+  per its own page, read directly — the genuine cross-border edge this
+  bullet anticipated, recorded on [[IE-NCSC]]'s own file.
 
 ## Sources
 

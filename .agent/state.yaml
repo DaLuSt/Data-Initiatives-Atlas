@@ -16,11 +16,11 @@ updated: "2026-09-26"
 updated_by_session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
 
 graph:
-  entity_count: 732
-  relationship_edges: 1547
-  association_edges: 3184
-  wikilink_edges: 4499
-  edges_total: 9230
+  entity_count: 733
+  relationship_edges: 1549
+  association_edges: 3189
+  wikilink_edges: 4508
+  edges_total: 9246
   countries: 58
   regions: 1
 
@@ -33,14 +33,14 @@ discovery:
 validation_status: clean
 
 last_merged_prs:
-  - number: 350
-    summary: "Corrected IT-FATTURAPA's CIUS-IT/FatturaEU note: no such separate profile is named by the cited source"
   - number: 351
     summary: "Checked EU-AI-ACT/media transparency link (documented negative); fixed stale ELDS contradiction on EU-PUBLIC-ADMIN-DATA-SPACE"
   - number: 352
     summary: "Fixed stale Europass/Skills Agenda note on EU-ESCO"
   - number: 353
     summary: "Re-checked row #117 (IE-NCS-BILL): still not enacted, now on Autumn 2026 priority publication list"
+  - number: 354
+    summary: "Added BE-CYFUN (CyberFundamentals Framework), closing a gap flagged on IE-NCS-BILL/IE-NCSC"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
