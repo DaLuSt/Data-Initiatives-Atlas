@@ -25,7 +25,7 @@ graph:
   regions: 1
 
 discovery:
-  unresolved_rows_open: 68
+  unresolved_rows_open: 67
   candidates_queued: 0
   research_queue_items: 0
   needs_human_open: 0
@@ -33,14 +33,14 @@ discovery:
 validation_status: clean
 
 last_merged_prs:
-  - number: 364
-    summary: "Fixed stale 'remains unmodelled' claims on DE-CATENA-X (HealthTrack-X) and DOMAIN-CYBERSECURITY (CSIRT MON)"
   - number: 365
     summary: "Fixed stale Ordnance Survey note on GB-GDS (GB-OS already exists)"
   - number: 366
     summary: "Sourced EU-EIDAS's structure/trust-services via legislation.gov.uk's UK-retained-law mirror (row #35, narrowed)"
   - number: 367
     summary: "Added CH-ISG, closing row #115 (CH-BACS's 24-hour reporting duty statutory basis)"
+  - number: 368
+    summary: "Sourced DE-BVERFSCHG/DE-MADG's internal structure, closing row #194"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,

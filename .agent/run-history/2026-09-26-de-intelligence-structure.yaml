@@ -1,0 +1,15 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Closed discovery/unresolved.md row #194 (DE-BVERFSCHG, DE-MADG): the
+  last remaining clause asked for the acts' internal structure
+  (Abschnitte). bundestag.github.io's community-maintained mirror, read
+  directly, gives BVerfSchG's four Abschnitte (SS1-7 cooperation/tasks,
+  SS8-16 the BfV itself, SS17-26 transmission provisions, S27 final
+  provisions) and confirms MADG has no Abschnitte at all -- a flat
+  15-paragraph sequence. Row fully closed and removed from the table.
+prs:
+  - number: 368
+    title: "Source DE-BVERFSCHG/DE-MADG's internal structure, closing row #194"
+outcome: merged
+entity_count_after: 736

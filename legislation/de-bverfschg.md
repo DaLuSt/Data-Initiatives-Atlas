@@ -22,7 +22,7 @@ coverage: medium
 verification: primary-source
 start_date: "1990-12-20"
 end_date: null
-last_verified: "2026-09-25"
+last_verified: "2026-09-26"
 previous_version: null
 successor: null
 
@@ -75,6 +75,10 @@ sources:
 > **Narrowed 2026-09-25** (`discovery/unresolved.md` row #194): the
 > amendment history beyond enactment is now sourced too, via
 > `bundestag.github.io`'s community-maintained mirror.
+>
+> **Closed 2026-09-26**: the act's internal structure (its four
+> Abschnitte) is now sourced too, via the same mirror — row #194's last
+> remaining clause, for both this act and [[DE-MADG]].
 
 ## Description
 
@@ -111,8 +115,18 @@ community-maintained statute mirror, read directly (the official
 `gesetze-im-internet.de` page returned HTTP 503 on every attempt this
 pass, as it did for [[DE-MADG]] on 2026-09-05), gives the act's own
 "Zuletzt geändert durch" (most recently amended by) line: **"Art. 2 G v.
-20.8.2012 I 1798"** — 20 August 2012. The act's own internal structure
-(its Abschnitte) remains unread.
+20.8.2012 I 1798"** — 20 August 2012.
+
+**Internal structure closed 2026-09-26**: `discovery/unresolved.md` row
+#194's last remaining clause. Confirmed by reading `bundestag.github.io`'s
+mirror directly, the act runs in **four Abschnitte**:
+
+| Abschnitt | §§ | Subject |
+|---|---|---|
+| Erster | 1–7 | Cooperation, tasks of the constitutional-protection authorities |
+| Zweiter | 8–16 | [[DE-BFV]] itself |
+| Dritter | 17–26 | Transmission provisions (Übermittlungsvorschriften) |
+| Vierter | 27 | Final provisions |
 
 ## The federal/Länder question this act raises and the Atlas cannot answer
 
@@ -128,4 +142,6 @@ as describing German domestic intelligence — the same warning
 ## Sources
 
 Listed in frontmatter. The act's own consolidated text at
-gesetze-im-internet.de added and read directly 2026-09-05.
+gesetze-im-internet.de added and read directly 2026-09-05;
+`bundestag.github.io`'s mirror re-read directly 2026-09-26 for the act's
+internal structure.
