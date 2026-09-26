@@ -22,7 +22,7 @@ coverage: medium
 verification: primary-source
 start_date: "1990-12-20"
 end_date: null
-last_verified: "2026-09-25"
+last_verified: "2026-09-26"
 previous_version: null
 successor: null
 
@@ -113,8 +113,20 @@ enactment date, and this pass's WebSearch summary of that same official
 page independently returned the identical 1990-12-20 date.
 `start_date` is now recorded as **20 December 1990**.
 
+## Internal structure, closed 2026-09-26
+
+`discovery/unresolved.md` row #194's last remaining clause asked for the
+act's internal structure. Confirmed by reading `bundestag.github.io`'s
+mirror directly: unlike [[DE-BVERFSCHG]], the MADG has **no Abschnitte**
+— it runs as a flat sequence of 15 paragraphs (§1 Aufgaben through §14
+Besondere Auslandsverwendungen, with an inserted §4a), covering the
+service's tasks, powers, data-collection methods, data
+handling/correction/deletion, and information-transmission rules to and
+from other bodies.
+
 ## Sources
 
 Listed in frontmatter. The bundestag.github.io mirror added and read
 directly 2026-09-05, substituting for the official gesetze-im-internet.de
-page (HTTP 503 on repeated attempts this pass).
+page (HTTP 503 on repeated attempts this pass); re-read directly
+2026-09-26 for the act's internal structure.
