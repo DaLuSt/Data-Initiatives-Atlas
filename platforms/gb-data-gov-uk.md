@@ -24,7 +24,7 @@ coverage: medium
 verification: primary-source
 start_date: 2010-01-01
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-09-26"
 previous_version: null
 successor: null
 
@@ -37,6 +37,7 @@ related_entities:
   - NL-DATA-OVERHEID
   - PL-DANE-GOV-PL
   - EU-OPEN-DATA-DIRECTIVE
+  - GB-NATIONAL-DATA-LIBRARY
 relationships:
   - type: part-of
     target: GB
@@ -71,12 +72,12 @@ sources:
 
 # data.gov.uk
 
-> **Verified 2026-08-22.** en.wikipedia.org's "Data.gov.uk" article and
-> data.gov.uk itself were read directly and confirmed the launch dates and
-> dataset counts below verbatim. A finding worth flagging: the site now
-> brands itself the **"National Data Library"** ("The home of UK public
-> data") rather than data.gov.uk — a rebrand this entity does not yet
-> record and this pass did not chase further.
+> **Verified 2026-08-22; rebrand chased 2026-09-26.** en.wikipedia.org's
+> "Data.gov.uk" article and data.gov.uk itself were read directly and
+> confirmed the launch dates and dataset counts below verbatim. The
+> site's "National Data Library" branding, flagged in the original pass
+> as worth a dedicated look, is now [[GB-NATIONAL-DATA-LIBRARY]] — a
+> £100m DSIT programme, not merely a rebrand of this portal (see below).
 
 ## Description
 
@@ -133,11 +134,22 @@ was used for [[PL-DANE-GOV-PL]], whose operator was also not established.
 None asserted. See above for why the operator is an association rather than
 a typed edge.
 
+## The "National Data Library" rebrand, chased 2026-09-26
+
+The portal's homepage title is now "National Data Library — The home of
+UK public data — data.gov.uk." Chasing this down found it is **not**
+simply a rename of this platform: it is the public-facing branding for a
+**separate, much larger DSIT programme** — [[GB-NATIONAL-DATA-LIBRARY]],
+a £100m initiative announced as part of the government's AI
+Opportunities Action Plan, still in a "discovery phase" with its own
+Expert Advisory Group and pilot projects as of this pass. No source
+states that this dataset catalogue and that programme are
+organisationally the same thing, so the edge between them is
+`related-to`, not a rename — see that entity's own file for the detail.
+
 ## Sources
 
 Listed in frontmatter. Only one is a government source and it is a 2012
 policy paper; the rest are encyclopaedic or portal directories. **No
-data.gov.uk page of its own was cited** before this pass; it has now been
-added and read directly. Its current title, "National Data Library — The
-home of UK public data," is a rebrand not otherwise recorded here and
-worth a dedicated look in a future pass.
+data.gov.uk page of its own was cited** before the 2026-08-22 pass; it
+has since been added and read directly.
