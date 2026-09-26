@@ -10,6 +10,8 @@ summary: >
   number, so a legislation.gov.uk mirror was used instead. Re-checked
   and confirmed no source connects it directly to EU-SKILLS-DATA-SPACE,
   matching EU-ESCO's finding earlier this session.
-prs: []
+prs:
+  - number: 339
+    title: "Model Europass"
 outcome: merged
 entity_count_after: 727
