@@ -1,10 +1,10 @@
 name: Autonomous Knowledge Graph Agent
 
-# Periodically starts the autonomous Claude agent defined in CLAUDE.md.
+# Periodically starts the autonomous Claude agent defined in AGENTS.md.
 #
-# The repository itself is the agent's persistent memory — see CLAUDE.md
-# ("What already exists — use it, don't reinvent it") for where state
-# lives. This workflow does not depend on one Claude process staying alive
+# The repository itself is the agent's persistent memory — see AGENTS.md
+# and .agent/state.yaml for where state lives. This workflow does not
+# depend on one Claude process staying alive
 # indefinitely: if it's interrupted (timeout, crash) mid-task, the final
 # step isolates any uncommitted work onto its own branch and opens a PR
 # rather than pushing it — or anything else — directly to `main`. The
@@ -81,9 +81,8 @@ jobs:
       # ------------------------------------------------------------
       # 3. Inspect current state
       #
-      # See CLAUDE.md's state-file table — there is no .agent/state.yaml;
-      # progress/current-batch.md and discovery/unresolved.md are the
-      # authoritative persistent state.
+      # .agent/state.yaml and .agent/current-task.yaml are the
+      # authoritative persistent state (see AGENTS.md's state-file table).
       # ------------------------------------------------------------
 
       - name: Inspect repository state
@@ -92,8 +91,12 @@ jobs:
           git status --short
 
           echo ""
-          echo "## progress/current-batch.md (first 40 lines)"
-          head -n 40 progress/current-batch.md
+          echo "## .agent/state.yaml"
+          cat .agent/state.yaml
+
+          echo ""
+          echo "## .agent/current-task.yaml"
+          cat .agent/current-task.yaml
 
           echo ""
           echo "## discovery/unresolved.md row count"
@@ -106,8 +109,8 @@ jobs:
       # ------------------------------------------------------------
       # 4. Run Claude Code
       #
-      # CLAUDE.md contains the full operating instructions, including the
-      # PR-based git workflow the agent must follow (never push to `main`
+      # AGENTS.md and .agent/ contain the full operating instructions,
+      # including the PR-based git workflow the agent must follow (never push to `main`
       # directly). --dangerously-skip-permissions is used because this is
       # an unattended, isolated, ephemeral runner with no human present to
       # approve individual tool calls -- do not use that flag when running
@@ -137,7 +140,7 @@ jobs:
           if [ -n "$PROMPT_OVERRIDE" ]; then
             PROMPT="$PROMPT_OVERRIDE"
           else
-            PROMPT="Operate as the autonomous knowledge graph agent defined in CLAUDE.md. Read CLAUDE.md first, then progress/current-batch.md and discovery/unresolved.md, to understand current state -- do not assume anything from a previous conversation, you have none. Resume any incomplete task named in progress/current-batch.md's Status line. If none exists, select the highest-priority available task per CLAUDE.md's priority order. Research using primary sources only -- never fabricate an entity, relationship, date or source. Follow the repository's existing PR-based git workflow exactly as CLAUDE.md describes it: branch off origin/main, validate locally (tools/build_graph.py, validation/run_all.py, tools/test_build_graph.py), commit, push, open a PR. You are running inside this scheduled GitHub Actions job and pushing with its own GITHUB_TOKEN, so the separate validate.yml CI workflow will NOT fire on PRs you open (GitHub's recursion protection) -- do not wait for a check that will never appear. Treat your own local validation output as the authoritative gate for your own PRs: squash-merge only once all three local checks are clean. Never commit directly to main. If a decision genuinely cannot be made safely from the evidence, write a .agent/needs-human/ entry instead of guessing. Update progress/current-batch.md before finishing so the next scheduled run can pick up cleanly. Continue to the next highest-priority task if meaningful work remains and time allows; stop and checkpoint cleanly as the time budget runs low."
+            PROMPT="Operate as the autonomous knowledge graph agent defined in AGENTS.md. Read AGENTS.md first, then .agent/state.yaml and .agent/current-task.yaml, to understand current state -- do not assume anything from a previous conversation, you have none. Resume any in-flight task named in .agent/current-task.yaml. If none exists (status: idle), select the highest-priority available task per .agent/operating-model.md's priority order. Research using primary sources only -- never fabricate an entity, relationship, date or source; see .agent/research-policy.md. Follow the repository's existing PR-based git workflow exactly as .agent/operating-model.md describes it: branch off origin/main, validate locally (tools/build_graph.py, validation/run_all.py, tools/test_build_graph.py -- see .agent/quality-policy.md), commit, push, open a PR. You are running inside this scheduled GitHub Actions job and pushing with its own GITHUB_TOKEN, so the separate validate.yml CI workflow will NOT fire on PRs you open (GitHub's recursion protection) -- do not wait for a check that will never appear. Treat your own local validation output as the authoritative gate for your own PRs: squash-merge only once all three local checks are clean. Never commit directly to main. If a decision genuinely cannot be made safely from the evidence, write a .agent/needs-human/ entry instead of guessing. Update .agent/state.yaml, .agent/current-task.yaml and add a .agent/run-history/ entry before finishing so the next scheduled run can pick up cleanly. Continue to the next highest-priority task if meaningful work remains and time allows; stop and checkpoint cleanly as the time budget runs low."
           fi
 
           claude \
@@ -159,8 +162,12 @@ jobs:
           git branch --show-current
 
           echo ""
-          echo "## progress/current-batch.md (first 20 lines)"
-          head -n 20 progress/current-batch.md
+          echo "## .agent/state.yaml"
+          cat .agent/state.yaml
+
+          echo ""
+          echo "## .agent/current-task.yaml"
+          cat .agent/current-task.yaml
 
       # ------------------------------------------------------------
       # 6. Safety-net checkpoint
@@ -197,7 +204,7 @@ jobs:
 
           git add -A
           git commit -m "agent: checkpoint uncommitted work from an interrupted run" \
-            -m "The autonomous-agent workflow was interrupted (timeout or error) with uncommitted changes still in the working tree. They are committed here, on their own branch, rather than onto main, so a human can review before they merge. See progress/current-batch.md and .agent/needs-human/ for context on what was in progress." || true
+            -m "The autonomous-agent workflow was interrupted (timeout or error) with uncommitted changes still in the working tree. They are committed here, on their own branch, rather than onto main, so a human can review before they merge. See .agent/current-task.yaml and .agent/needs-human/ for context on what was in progress." || true
 
           git push -u origin "$rescue_branch" || {
             echo "::warning::Could not push the rescue branch $rescue_branch. The uncommitted work remains only in this ephemeral runner and will be lost. Check the workflow logs above for what changed."
@@ -207,7 +214,7 @@ jobs:
           if ! gh pr view "$rescue_branch" >/dev/null 2>&1; then
             gh pr create \
               --title "Agent checkpoint: interrupted run $(date -u +%Y-%m-%d)" \
-              --body "Automated checkpoint from an interrupted autonomous-agent run. The workflow's normal PR-based flow didn't complete before the process ended (timeout or error) -- this PR isolates whatever it had changed so nothing is lost and nothing was pushed to \`main\` directly. Review before merging; check \`progress/current-batch.md\` and \`.agent/needs-human/\` for context." \
+              --body "Automated checkpoint from an interrupted autonomous-agent run. The workflow's normal PR-based flow didn't complete before the process ended (timeout or error) -- this PR isolates whatever it had changed so nothing is lost and nothing was pushed to \`main\` directly. Review before merging; check \`.agent/current-task.yaml\` and \`.agent/needs-human/\` for context." \
               --base main \
               --head "$rescue_branch" || echo "::warning::Rescue branch pushed but PR creation failed -- open one manually from $rescue_branch."
           fi

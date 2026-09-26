@@ -123,12 +123,13 @@ contributing as part of a batch:
 
 A scheduled GitHub Actions workflow (`.github/workflows/autonomous-agent.yml`)
 periodically runs Claude Code against this repository, following the
-operating model in `CLAUDE.md`. It works the same batch workflow as a human
-contributor — branch, validate, commit, open a PR, update `progress/` — and
-never pushes to `main` directly. PRs it opens are labelled as such in their
-description; review them the same way you'd review any other PR. See
-`CLAUDE.md` for its priority order and safety rules, including
-`.agent/needs-human/` for questions it couldn't resolve on its own.
+operating model in `AGENTS.md` and `.agent/`. It works the same batch
+workflow as a human contributor — branch, validate, commit, open a PR,
+update `.agent/state.yaml` — and never pushes to `main` directly. PRs it
+opens are labelled as such in their description; review them the same way
+you'd review any other PR. See `AGENTS.md` for its priority order and
+safety rules, including `.agent/needs-human/` for questions it couldn't
+resolve on its own.
 
 ## Style
 
