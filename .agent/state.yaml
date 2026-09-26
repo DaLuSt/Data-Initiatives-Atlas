@@ -39,8 +39,8 @@ last_merged_prs:
     summary: "Added EU-LEGAL-DATA-SPACE, narrowing discovery/unresolved.md row #125"
   - number: 336
     summary: "Added EU-MEDIA-FREEDOM-ACT, closing a gap flagged on EU-MEDIA-DATA-SPACE"
-  - number: null
-    summary: "Added EU-TOURISM-TRANSITION-PATHWAY, closing a gap flagged on EU-TOURISM-DATA-SPACE (PR number filled in before merge)"
+  - number: 337
+    summary: "Added EU-TOURISM-TRANSITION-PATHWAY, closing a gap flagged on EU-TOURISM-DATA-SPACE"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,

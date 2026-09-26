@@ -8,6 +8,8 @@ summary: >
   No source found connects it directly to EU-TOURISM-DATA-SPACE, so a
   low-confidence related-to edge is recorded rather than a stronger
   claim. Sourced from two European Commission pages, both read directly.
-prs: []
+prs:
+  - number: 337
+    title: "Model the EU Transition Pathway for Tourism"
 outcome: merged
 entity_count_after: 725
