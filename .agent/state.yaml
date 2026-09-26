@@ -33,14 +33,14 @@ discovery:
 validation_status: clean
 
 last_merged_prs:
-  - number: 352
-    summary: "Fixed stale Europass/Skills Agenda note on EU-ESCO"
   - number: 353
     summary: "Re-checked row #117 (IE-NCS-BILL): still not enacted, now on Autumn 2026 priority publication list"
   - number: 354
     summary: "Added BE-CYFUN (CyberFundamentals Framework), closing a gap flagged on IE-NCS-BILL/IE-NCSC"
   - number: 355
     summary: "Fixed stale NL-NCSC note on BE-CCB (NL-NCSC already exists elsewhere in the graph)"
+  - number: 356
+    summary: "Re-checked GB-CSRB's parliamentary stage: through Commons, now in Lords committee, still proposed"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,

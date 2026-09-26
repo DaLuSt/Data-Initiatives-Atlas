@@ -26,7 +26,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-09-26"
 previous_version: null
 successor: null
 
@@ -68,6 +68,10 @@ sources:
     url: "https://www.globalpolicywatch.com/2025/11/five-major-changes-to-the-regulation-of-cybersecurity-in-the-uk-under-the-cyber-security-and-resilience-bill/"
     publisher: "Global Policy Watch (Covington)"
     accessed: "2026-08-22"
+  - title: "Cyber Security and Resilience Bill"
+    url: "https://en.wikipedia.org/wiki/Cyber_Security_and_Resilience_Bill"
+    publisher: "Wikipedia"
+    accessed: "2026-09-26"
 ---
 
 # Cyber Security and Resilience Bill
@@ -146,6 +150,20 @@ dated 17 August 2026 and the Atlas **has not established whether that has
 happened** — the same class of uncertainty as [[GB-ICO]]'s Information
 Commission. `proposed` is the honest value while that is unknown, and it
 will be wrong the moment the bill passes.
+
+## Re-checked 2026-09-26: progress through both Houses, still not enacted
+
+Confirmed by reading Wikipedia's own article on the Bill directly: it
+passed **first reading 12 November 2025**, **second reading (Commons) 6
+January 2026**, Commons committee stage running to **24 February 2026**,
+and its **Commons third reading on 16 June 2026**, after which it moved to
+the **House of Lords** for committee stage. As of the article's own
+24 August 2026 update, it remained in **House of Lords committee stage** —
+still `status: proposed`, with no Royal Assent recorded. `commonslibrary.
+parliament.uk` and `bills.parliament.uk` (the official Bill tracker)
+both returned HTTP 403 on every attempt this pass, so the precise current
+Lords stage and any scheduled Report-stage date could not be confirmed
+from Parliament's own source.
 
 ## Relationships
 
