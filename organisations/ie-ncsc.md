@@ -120,9 +120,9 @@ Security Centre:
 | **IE-NCSC** | IE | **will be** the NIS2 competent authority |
 | [[CH-BACS]] | CH | renamed *from* NCSC; still publishes at `ncsc.admin.ch` |
 
-The scoped ID convention keeps them apart, and the Netherlands has a fourth
-NCSC that the Atlas still does not hold — logged since the Belgium batch as
-the reason [[NL-CBW]] is a NIS2 act with no authority attached.
+The scoped ID convention keeps them apart. The Netherlands has a fourth
+NCSC too — **now [[NL-NCSC]]**, created elsewhere this session, closing
+the gap that had left [[NL-CBW]] as a NIS2 act with no authority attached.
 
 The UK/Ireland contrast is the useful one: same name, opposite answers on
 the same question of whether the body is the NIS competent authority.

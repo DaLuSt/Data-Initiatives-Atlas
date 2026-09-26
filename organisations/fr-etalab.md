@@ -24,7 +24,7 @@ verification: primary-source
 
 start_date: 2011-02-21
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-09-26"
 previous_version: null
 successor: null
 
@@ -105,11 +105,13 @@ a separate institution or a shared product:
 | France | **Etalab** | a **department of** [[FR-DINUM]] |
 | Belgium | [[BE-BOSA]] | the same service, no separate body |
 | Germany | [[DE-FITKO]] | a **Bund-Länder institution** running it as a product |
-| Netherlands | — | [[NL-DATA-OVERHEID]] is modelled without a custodian |
+| Netherlands | [[NL-LOGIUS]] | confirmed 2026-08-30 (see below) |
 
-The Dutch row is a gap, not a finding: no custodian was ever established
-for [[NL-DATA-OVERHEID]]. Three countries now have one, which makes the
-omission visible. Logged in `discovery/research-queue.md`.
+**The Dutch gap, closed 2026-08-30**: [[NL-DATA-OVERHEID]] now has a
+custodian — [[NL-LOGIUS]], via KOOP, the operational team behind the
+platform, which has been organisationally part of Logius since 1 January
+2023. Corrected here rather than left as an open row; the finding is on
+[[NL-DATA-OVERHEID]]'s own file.
 
 `start_date: 2011-02-21` is now Etalab's own founding date, confirmed
 by reading fr.wikipedia.org directly this pass — closing the gap this
