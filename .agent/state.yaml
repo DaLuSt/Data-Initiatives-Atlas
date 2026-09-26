@@ -33,14 +33,14 @@ discovery:
 validation_status: clean
 
 last_merged_prs:
-  - number: 346
-    summary: "Backfilled organisation_role onto 24 other statistical bodies (21 executive, 2 regulatory, 1 standards-body)"
   - number: 347
     summary: "Re-checked row #90 (ES-NTI-RISP): DCAT-AP-ES still in administrative processing, now independently corroborated"
   - number: 348
     summary: "Linked DE-FACTORY-X and DE-AEROSPACE-X to DE-PLATTFORM-INDUSTRIE-4-0 using evidence already on file"
   - number: 349
     summary: "Checked ES-AOC's 2025 statutory reform note: a governance-procedure amendment, not a new fact"
+  - number: 350
+    summary: "Corrected IT-FATTURAPA's CIUS-IT/FatturaEU note: no such separate profile is named by the cited source"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,

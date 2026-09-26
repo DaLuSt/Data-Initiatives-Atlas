@@ -1,0 +1,17 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Quality fix on IT-FATTURAPA's "Not modelled" section, which named a
+  "CIUS-IT / FatturaEU" profile as a separate, unresearched entity. Its
+  own cited European Commission page, re-read directly, names no such
+  profile -- it calls the translation layer only "the Italian CIUS,"
+  which is the exact same mechanism the entity's own "A CIUS that
+  translates rather than defines" section already describes in full.
+  The bullet was treating an unsourced name as an open research gap when
+  there was nothing further to research; struck through and corrected
+  rather than acted on as if it named a real missing entity.
+prs:
+  - number: 350
+    title: "Correct IT-FATTURAPA's CIUS-IT/FatturaEU note"
+outcome: merged
+entity_count_after: 732
