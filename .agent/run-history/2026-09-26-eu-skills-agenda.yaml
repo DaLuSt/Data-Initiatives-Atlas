@@ -9,6 +9,8 @@ summary: >
   checked-and-negative related-to edge to EU-SKILLS-DATA-SPACE rather
   than an unstated assumption. Sourced from two European Commission
   pages, both read directly.
-prs: []
+prs:
+  - number: 340
+    title: "Model the European Skills Agenda"
 outcome: merged
 entity_count_after: 728
