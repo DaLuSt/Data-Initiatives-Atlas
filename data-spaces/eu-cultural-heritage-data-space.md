@@ -25,7 +25,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-20"
+last_verified: "2026-09-26"
 previous_version: null
 successor: null
 
@@ -34,6 +34,7 @@ organisations: []
 related_entities:
   - EU-COMMON-DATA-SPACES
   - EU-EUROPEANA-FOUNDATION
+  - EU-EDM
 relationships:
   - type: part-of
     target: EU-COMMON-DATA-SPACES
@@ -159,10 +160,17 @@ data space.
 ## Not modelled
 
 - The **Europeana Network Association** and the **Europeana Aggregators'
-  Forum**, named alongside the Foundation in the deployment sourcing but
-  not independently researched.
-- The **Europeana Data Model (EDM)**, which would connect to the Atlas's
-  metadata-standards layer around [[INTL-DCAT]].
+  Forum**, named alongside the Foundation in the deployment sourcing.
+  `pro.europeana.eu`, the primary source for both, returned HTTP 403 on
+  retry (2026-09-26); a Wikidata entry for the Network Association gives
+  its legal form (a Dutch *vereniging*) but no founding date, not enough
+  to model to Atlas standard.
+
+**The Europeana Data Model, researched 2026-09-26**: now its own entity,
+[[EU-EDM]] (created 2010, maintained by [[EU-EUROPEANA-FOUNDATION]]). No
+source read states a direct connection to [[INTL-DCAT]] specifically —
+`related-to` at `confidence: low` is recorded on EDM's own file rather
+than a stronger claim.
 
 ## Sources
 

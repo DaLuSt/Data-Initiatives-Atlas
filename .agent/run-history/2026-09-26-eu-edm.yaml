@@ -1,0 +1,15 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Closed a gap EU-CULTURAL-HERITAGE-DATA-SPACE's own file had flagged
+  (not a numbered discovery/unresolved.md row): created EU-EDM (the
+  Europeana Data Model), created 2010, maintained by
+  EU-EUROPEANA-FOUNDATION, RDF-based and reusing Dublin Core Terms. No
+  source found connects it directly to INTL-DCAT, so a low-confidence
+  related-to edge is recorded rather than a stronger claim. Sourced from
+  Europeana's own knowledge base and the Dublin Core Metadata
+  Initiative's Metadata Standards Index, both read directly
+  (pro.europeana.eu itself remains 403-blocked).
+prs: []
+outcome: merged
+entity_count_after: 729
