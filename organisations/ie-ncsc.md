@@ -21,7 +21,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-09-26"
 previous_version: null
 successor: null
 
@@ -31,7 +31,15 @@ organisations: []
 related_entities:
   - IE-NCS-BILL
   - EU-NIS2
-relationships: []
+  - BE-CYFUN
+relationships:
+  - type: participates-in
+    target: BE-CYFUN
+    source: fact
+    evidence: "CLOSES this entity's own 'Not modelled' note ('The Cyber Fundamentals Framework (CyFun) -- see IE-NCS-BILL'). Confirmed by reading ncsc.gov.ie's own dedicated CyFun page directly (2026-09-26): 'Ireland has joined the Cyber Fundamentals Framework (CyFun), originally developed in Belgium, as a scheme co-owner,' recommending it as 'a well-recognised, structured, voluntary tool to assist entities in meeting their NIS2 obligations.' `participates-in` reflects a co-ownership/adoption relationship, not authorship -- [[BE-CYFUN]] carries the `maintained-by` edge to [[BE-CCB]], the framework's originator."
+    confidence: high
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "NCSC: NIS2"
@@ -50,6 +58,10 @@ sources:
     url: "https://www.ncsc.gov.ie/"
     publisher: "National Cyber Security Centre (Ireland)"
     accessed: "2026-08-22"
+  - title: "CyFun"
+    url: "https://www.ncsc.gov.ie/CyFun/"
+    publisher: "National Cyber Security Centre (Ireland)"
+    accessed: "2026-09-26"
 ---
 
 # National Cyber Security Centre (IE-NCSC)
@@ -134,8 +146,16 @@ asserted for either department on that basis.
   caveat on whether the Bill's own text, as opposed to the current
   regime, designates it.
 - The NCSC's parent department — see the finding above.
-- The **Cyber Fundamentals Framework (CyFun)** — see [[IE-NCS-BILL]].
+- ~~The **Cyber Fundamentals Framework (CyFun)**~~ — **closed 2026-09-26**:
+  now [[BE-CYFUN]], with this entity's own `participates-in` edge to it
+  (see Relationships below).
+
+## Relationships
+
+- `participates-in` [[BE-CYFUN]] — `confidence: high`, as a scheme
+  co-owner per the NCSC's own page.
 
 ## Sources
 
-Listed in frontmatter, all four read directly this pass.
+Listed in frontmatter, all four read directly this pass. `ncsc.gov.ie/CyFun/`
+added and read directly 2026-09-26 for the CyFun edge above.

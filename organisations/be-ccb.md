@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-26"
 previous_version: null
 successor: null
 
@@ -33,6 +33,7 @@ domains:
 organisations: []
 related_entities:
   - BE-NIS2-WET
+  - BE-CYFUN
 relationships:
   - type: governed-by
     target: BE-NIS2-WET
@@ -142,6 +143,15 @@ to it. Now that two other countries have one, the omission is visible.
 Logged in `discovery/research-queue.md`.
 
 **No relationship between the three authorities is asserted.**
+
+## CyFun, modelled 2026-09-26
+
+The CCB develops the **CyberFundamentals Framework (CyFun)**, now its own
+entity, [[BE-CYFUN]], since Ireland's own NCSC states it has "joined ...
+as a scheme co-owner." CCB's own domain remains bot-walled, so
+[[BE-CYFUN]] carries the `maintained-by` edge to this entity using
+Ireland's own page and a third-party technical source instead — see that
+entity's file for the caveat this leaves.
 
 ## Sources
 

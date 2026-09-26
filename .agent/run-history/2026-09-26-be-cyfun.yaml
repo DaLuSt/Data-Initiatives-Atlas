@@ -1,0 +1,18 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Closed a gap IE-NCS-BILL's and IE-NCSC's own files had flagged (not a
+  numbered discovery/unresolved.md row): created BE-CYFUN, the
+  CyberFundamentals Framework (CyFun), Belgium's cybersecurity maturity
+  framework developed by BE-CCB. CCB's own domain and its affiliated
+  atwork.safeonweb.be remain HTTP 403-blocked (belgium.be-family block),
+  so sourced from Ireland's own NCSC page (which states Ireland "has
+  joined ... as a scheme co-owner") and a third-party technical
+  explainer, both read directly; confidence: medium to reflect the
+  missing CCB-own-domain source. Added IE-NCSC participates-in BE-CYFUN
+  and cross-referenced BE-CCB.
+prs:
+  - number: 354
+    title: "Model CyFun, the Belgian-Irish cybersecurity framework"
+outcome: merged
+entity_count_after: 733
