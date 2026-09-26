@@ -213,7 +213,8 @@ DG GROW (Internal Market, Industry, Entrepreneurship and SMEs), which
 operates it.
 
 The **European Legal Data Space**, the third item named on the same
-Commission page, was not independently researched this pass.
+Commission page, was not independently researched this pass — see
+below, where it was researched two batches later, 2026-09-26.
 
 ## ⚠ `coverage`, promoted to medium
 

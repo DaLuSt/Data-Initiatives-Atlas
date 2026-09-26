@@ -1,0 +1,22 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Two small fixes. (1) EU-MEDIA-DATA-SPACE's "Not modelled" section
+  flagged "the relationship to EU-AI-ACT's transparency provisions for
+  media" as not yet researched. Checked: the AI Act's Article 50
+  deepfake/AI-generated-content disclosure obligations (applicable from
+  2 August 2026) address the same broad subject as the media data space
+  from an unrelated Commission workstream; no source found connects
+  them, the same documented-negative pattern already recorded for
+  EU-AI-ACT/UN-AI-ETHICS-RECOMMENDATION (discovery/unresolved.md item
+  #174). Recorded as a checked negative, not left as an open gap.
+  (2) EU-PUBLIC-ADMIN-DATA-SPACE carried a stale sentence saying the
+  European Legal Data Space "was not independently researched this
+  pass," contradicted two paragraphs later by the note recording that
+  it was researched (as EU-LEGAL-DATA-SPACE) in a later batch. Fixed
+  the internal contradiction with a forward pointer.
+prs:
+  - number: 351
+    title: "Check EU-AI-ACT/media transparency link; fix stale ELDS note"
+outcome: merged
+entity_count_after: 732
