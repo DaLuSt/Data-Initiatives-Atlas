@@ -32,6 +32,8 @@ last_verified:         # required once an entity leaves draft status — ISO dat
 previous_version:      # optional — entity id
 successor:             # optional — entity id
 
+organisation_role:     # optional, type: organisation only — executive | consultative | regulatory | standards-body | advisory (ontology.md §1.1)
+
 domains:               # optional — list of domain entity ids
 organisations:         # optional — list of organisation entity ids (lightweight ref, §relationship-types.md)
 related_entities:      # optional — list of entity ids (lightweight ref)
@@ -100,6 +102,11 @@ sources:               # required for any entity making factual claims
   other than a stub.
 - **previous_version / successor**: chain superseded entities together
   without ever deleting or reusing an ID.
+- **organisation_role**: only valid on `type: organisation`; distinguishes
+  bodies that deliberate/select/coordinate (`consultative`, `advisory`) or
+  set/mirror standards (`regulatory`, `standards-body`) from bodies that
+  execute/publish/operate directly (`executive`). Optional and additive —
+  omit it rather than guess; see `ontology.md` §1.1.
 - **domains / organisations / related_entities / relationships**: see
   `metadata/relationship-types.md`.
 - **sources**: each entry needs `title`, `url`, `publisher`. `accessed` (ISO

@@ -48,8 +48,8 @@ DEFAULT_OUT = REPO_ROOT / "site" / "graph.json"
 # on the critical path even though the detail panel also uses them.
 NODE_DETAIL_FIELDS = (
     "description", "organisations", "sources",
-    "confidence", "coverage", "verification", "last_verified",
-    "start_date", "end_date", "previous_version", "successor",
+    "confidence", "coverage", "verification", "organisation_role",
+    "last_verified", "start_date", "end_date", "previous_version", "successor",
 )
 
 # Frontmatter fields holding lists of entity IDs. These are associations the
@@ -195,6 +195,7 @@ def build(strict_wikilinks: bool = True) -> tuple[dict, list[str], list[str]]:
             "confidence": fm.get("confidence"),
             "coverage": fm.get("coverage"),
             "verification": fm.get("verification"),
+            "organisation_role": fm.get("organisation_role"),
             "last_verified": str(fm.get("last_verified")) if fm.get("last_verified") else None,
             "start_date": str(fm.get("start_date")) if fm.get("start_date") else None,
             "end_date": str(fm.get("end_date")) if fm.get("end_date") else None,

@@ -24,6 +24,7 @@ status: active
 confidence: low
 coverage: low
 verification: primary-source
+organisation_role: consultative
 
 start_date: null
 end_date: null

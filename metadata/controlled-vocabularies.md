@@ -67,6 +67,12 @@ were actually consulted. See `metadata/metadata-schema.md`. Validation
 rejects `confidence: high` on any entity whose `verification` is
 `search-only` or `unverified`.
 
+## `organisation_role`
+
+`executive`, `consultative`, `regulatory`, `standards-body`, `advisory` —
+optional, valid only on `type: organisation`. See
+`metadata/ontology.md` §1.1 and `metadata/metadata-schema.md`.
+
 ## `country`
 
 ISO 3166-1 alpha-2 codes only (e.g. `NL`, `DE`, `BE`, `FR`), or `null`.

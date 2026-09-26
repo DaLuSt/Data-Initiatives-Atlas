@@ -1,0 +1,24 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Ontology change requested by the repository owner: added an optional
+  `organisation_role` field (executive | consultative | regulatory |
+  standards-body | advisory), valid only on `type: organisation`, to
+  distinguish bodies that deliberate/select/coordinate (FR-CNIS, BE-IIS)
+  or set/mirror standards (NL-NEC) from bodies that execute/publish/
+  operate directly (e.g. BE-STATBEL) — all of which previously carried
+  identical `type: organisation` with no way to tell them apart. Chosen
+  over a new `type` (would force a hard line across a spectrum and
+  relitigate existing entities) or a documentation-only convention (not
+  queryable). Documented in metadata/ontology.md §1.1,
+  metadata/metadata-schema.md and metadata/controlled-vocabularies.md;
+  enforced in validation/validate_frontmatter.py; surfaced in
+  tools/build_graph.py's details.json payload. Applied retroactively only
+  to the three entities that motivated the discussion (FR-CNIS, BE-IIS:
+  consultative; NL-NEC: standards-body) — no broader backfill, since the
+  field is optional and additive.
+prs:
+  - number: 345
+    title: "Add optional organisation_role field to the ontology"
+outcome: merged
+entity_count_after: 732
