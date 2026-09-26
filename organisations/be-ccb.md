@@ -135,12 +135,12 @@ authorship.
 |---|---|---|
 | Belgium | **CCB** | [[BE-NIS2-WET]] |
 | Germany | [[DE-BSI]] | [[DE-BSIG]] as revised by [[DE-NIS2UMSUCG]] |
-| Netherlands | *not modelled* | [[NL-CBW]] |
+| Netherlands | [[NL-NCSC]] | `applies-to` [[NL-CBW]] |
 
-The Dutch gap is real and pre-dates this batch: the NCSC has never been an
-Atlas entity, so the Netherlands has a NIS2 act with no authority attached
-to it. Now that two other countries have one, the omission is visible.
-Logged in `discovery/research-queue.md`.
+**The Dutch gap, closed**: the note this pass originally carried here said
+the Dutch NCSC "has never been an Atlas entity." It has since been
+created — [[NL-NCSC]]'s own file records its `applies-to` edge to
+[[NL-CBW]] at `confidence: high`. Corrected here rather than left stale.
 
 **No relationship between the three authorities is asserted.**
 

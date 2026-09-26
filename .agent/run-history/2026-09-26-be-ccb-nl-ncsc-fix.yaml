@@ -1,0 +1,14 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Quality fix: BE-CCB's "third national cybersecurity authority in the
+  Atlas" comparison table still listed the Netherlands as "not modelled,"
+  and its prose said "the NCSC has never been an Atlas entity." NL-NCSC
+  has since been created (with an applies-to edge to NL-CBW, confidence:
+  high) elsewhere this session. Corrected the stale table row and prose
+  rather than leaving a contradiction between two entity files.
+prs:
+  - number: 355
+    title: "Fix stale NL-NCSC note on BE-CCB"
+outcome: merged
+entity_count_after: 733
