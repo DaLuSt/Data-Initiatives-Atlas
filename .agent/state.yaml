@@ -33,14 +33,14 @@ discovery:
 validation_status: clean
 
 last_merged_prs:
-  - number: 348
-    summary: "Linked DE-FACTORY-X and DE-AEROSPACE-X to DE-PLATTFORM-INDUSTRIE-4-0 using evidence already on file"
   - number: 349
     summary: "Checked ES-AOC's 2025 statutory reform note: a governance-procedure amendment, not a new fact"
   - number: 350
     summary: "Corrected IT-FATTURAPA's CIUS-IT/FatturaEU note: no such separate profile is named by the cited source"
   - number: 351
     summary: "Checked EU-AI-ACT/media transparency link (documented negative); fixed stale ELDS contradiction on EU-PUBLIC-ADMIN-DATA-SPACE"
+  - number: 352
+    summary: "Fixed stale Europass/Skills Agenda note on EU-ESCO"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
