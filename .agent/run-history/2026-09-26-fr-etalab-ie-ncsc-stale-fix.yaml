@@ -1,0 +1,17 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Two more stale cross-references found via a sweep for "logged in
+  discovery/research-queue.md" / "logged since" phrasing (the file is
+  now empty, so any remaining reference to an item "logged" there is
+  suspect). FR-ETALAB's open-data-custodian comparison table still
+  listed the Netherlands as having no custodian for NL-DATA-OVERHEID;
+  that gap closed 2026-08-30 (NL-LOGIUS, via KOOP). IE-NCSC's "third
+  naming collision on NCSC" note still said the Netherlands' NCSC "the
+  Atlas still does not hold"; NL-NCSC was created earlier this session.
+  Both corrected.
+prs:
+  - number: 363
+    title: "Fix two more stale cross-references (FR-ETALAB, IE-NCSC)"
+outcome: merged
+entity_count_after: 735
