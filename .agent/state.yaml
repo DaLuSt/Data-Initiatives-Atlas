@@ -1,0 +1,49 @@
+# Authoritative live status for the autonomous agent. Read this first,
+# every session, alongside .agent/current-task.yaml.
+#
+# This file (and current-task.yaml) superseded progress/current-batch.md
+# as the authoritative source for "current state" on 2026-09-26, at the
+# repository owner's explicit request. progress/current-batch.md and
+# progress/completed.md remain the human-readable historical narrative —
+# keep writing batch retrospectives there — but a session should read and
+# update *this* file for anything about where things currently stand.
+#
+# Update this file, by hand, as part of the same commit/PR as any work
+# that changes these numbers or the summary. Regenerate entity_count etc.
+# from site/graph.json's own `stats` block rather than counting by hand.
+
+updated: "2026-09-26"
+updated_by_session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+
+graph:
+  entity_count: 718
+  relationship_edges: 1517
+  association_edges: 3123
+  wikilink_edges: 4435
+  edges_total: 9075
+  countries: 58
+  regions: 1
+
+discovery:
+  unresolved_rows_open: 72
+  candidates_queued: 0
+  research_queue_items: 0
+  needs_human_open: 0
+
+validation_status: clean
+
+last_merged_prs:
+  - number: 328
+    summary: "Autonomous agent GitHub Actions scheduler (AGENTS.md, .agent/, the scheduled workflow)"
+  - number: 329
+    summary: "Added ES-LANTIK (completing the Basque NISAE quartet); closed discovery/unresolved.md rows #47 and #48"
+  - number: 330
+    summary: "Found edoc.coe.int, a third coe.int workaround; narrowed row #179"
+  - number: 331
+    summary: "Renamed CLAUDE.md to AGENTS.md; built out the full .agent/ structure (state.yaml/current-task.yaml now authoritative)"
+
+notes: >
+  See discovery/unresolved.md for the full open-questions list,
+  discovery/candidates.md and discovery/research-queue.md for queued
+  leads (both empty as of this update), and progress/backlog.md for the
+  forward plan. See .agent/current-task.yaml for any in-flight task.

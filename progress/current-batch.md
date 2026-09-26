@@ -1,5 +1,12 @@
 # Current Batch
 
+> **Superseded as the live-status source, 2026-09-26.** `.agent/state.yaml`
+> and `.agent/current-task.yaml` are now authoritative for "what's the
+> current status / is anything in progress" — read those first. This file
+> remains the human-readable batch-by-batch narrative and is still worth
+> updating when a batch finishes, but a session should no longer treat
+> its `Status:` line as the thing to check first.
+
 **Status:** No batch in progress. **New `coe.int`-family workaround
 found 2026-09-26**: `edoc.coe.int`, the Council of Europe's own
 document-publishing subdomain, is reachable where `www.coe.int` and

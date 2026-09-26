@@ -1,0 +1,15 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Renamed CLAUDE.md to AGENTS.md (the cross-tool standard filename Claude
+  Code also auto-discovers) and built out the full .agent/ structure at
+  the repository owner's explicit request: mission.md, operating-model.md,
+  research-policy.md and quality-policy.md split out of the former
+  CLAUDE.md's content; state.yaml and current-task.yaml created as the
+  new authoritative live-status files, superseding progress/current-batch.md
+  in that role; run-history/ created with this entry as its first.
+prs:
+  - number: 331
+    title: "Rename CLAUDE.md to AGENTS.md; build out the full .agent/ structure"
+outcome: merged
+entity_count_after: 718
