@@ -16,16 +16,16 @@ updated: "2026-09-26"
 updated_by_session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
 
 graph:
-  entity_count: 735
-  relationship_edges: 1552
-  association_edges: 3198
-  wikilink_edges: 4520
-  edges_total: 9270
+  entity_count: 736
+  relationship_edges: 1554
+  association_edges: 3203
+  wikilink_edges: 4522
+  edges_total: 9279
   countries: 58
   regions: 1
 
 discovery:
-  unresolved_rows_open: 69
+  unresolved_rows_open: 68
   candidates_queued: 0
   research_queue_items: 0
   needs_human_open: 0
@@ -33,14 +33,14 @@ discovery:
 validation_status: clean
 
 last_merged_prs:
-  - number: 363
-    summary: "Fixed two more stale cross-references: FR-ETALAB (NL custodian) and IE-NCSC (NL-NCSC)"
   - number: 364
     summary: "Fixed stale 'remains unmodelled' claims on DE-CATENA-X (HealthTrack-X) and DOMAIN-CYBERSECURITY (CSIRT MON)"
   - number: 365
     summary: "Fixed stale Ordnance Survey note on GB-GDS (GB-OS already exists)"
   - number: 366
     summary: "Sourced EU-EIDAS's structure/trust-services via legislation.gov.uk's UK-retained-law mirror (row #35, narrowed)"
+  - number: 367
+    summary: "Added CH-ISG, closing row #115 (CH-BACS's 24-hour reporting duty statutory basis)"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,

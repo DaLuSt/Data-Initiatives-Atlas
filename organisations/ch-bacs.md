@@ -24,7 +24,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-09-26"
 previous_version: null
 successor: null
 
@@ -33,6 +33,7 @@ domains:
 organisations: []
 related_entities:
   - CH
+  - CH-ISG
 relationships:
   - type: part-of
     target: CH
@@ -40,6 +41,13 @@ relationships:
     evidence: "Confirmed verbatim by reading ncsc.admin.ch directly (2026-08-22): 'Das Bundesamt für Cybersicherheit (BACS) ist das Kompetenzzentrum des Bundes für Cybersicherheit und damit erste Anlaufstelle...' Independently confirmed on de.wikipedia.org's Bundesamt für Cybersicherheit article. staatskalender.admin.ch was fetched (200) but renders client-side in JavaScript and could not be read. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor."
     confidence: medium
     valid_from: null
+    valid_until: null
+  - type: governed-by
+    target: CH-ISG
+    source: fact
+    evidence: "CLOSES discovery/unresolved.md row #115's residual clause ('The ISG itself is still not an Atlas entity ... nothing exists in the graph to point the edge at'). Confirmed by reading fedlex.admin.ch's own consolidated ISG text directly (2026-09-26, via the filestore HTML path, since the main site renders client-side in JavaScript): Article 74a imposes the reporting duty on entities listed in Article 74b, and Article 74e sets the 24-hour deadline -- article-level detail beyond the Bratschi AG secondary source previously cited. bacs.admin.ch's own page, also read directly, confirms both the ISG and the Cybersecurity Ordinance came into force together on 1 April 2025."
+    confidence: high
+    valid_from: "2025-04-01"
     valid_until: null
 
 sources:
@@ -59,6 +67,14 @@ sources:
     url: "https://www.bratschi.ch/en/publikationen/neue-pflicht-zur-meldung-von-cyberangriffen-fuer-betreiber-kritischer-infrastrukturen"
     publisher: "Bratschi AG"
     accessed: "2026-09-05"
+  - title: "Informationssicherheitsgesetz — consolidated text as of 1 April 2025 (Articles 74a-74e)"
+    url: "https://www.fedlex.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2022/232/20250401/de/html/fedlex-data-admin-ch-eli-cc-2022-232-20250401-de-html.html"
+    publisher: "Fedlex — The Publication Platform of Swiss Law (Federal Chancellery)"
+    accessed: "2026-09-26"
+  - title: "Gesetzliche Grundlagen zur Meldepflicht"
+    url: "https://www.bacs.admin.ch/de/gesetzliche-grundlagen-zur-meldepflicht"
+    publisher: "Bundesamt für Cybersicherheit (BACS)"
+    accessed: "2026-09-26"
 ---
 
 # Bundesamt für Cybersicherheit (BACS)
@@ -120,10 +136,13 @@ enforcement fines up to CHF 100,000) set out in the accompanying
 **Cybersecurity Ordinance (CSV)**. Both entered into force on the same
 1 April 2025 date already recorded here.
 
-The ISG itself is still **not an Atlas entity** — it was not researched
-beyond this single question — so BACS still carries no `governed-by`
-edge, like [[NO-NSM]] and for the same reason: the citation is now
-precise, but nothing exists in the graph to point the edge at.
+**The ISG is now its own entity, [[CH-ISG]]** (created 2026-09-26),
+sourced directly from Fedlex's own text — Article 1 (purpose), the
+Act's adoption (18 December 2020) and entry-into-force dates, and the
+reporting-duty articles (74a, 74b, 74e) at article-level precision. This
+entity now carries a `governed-by` edge to it, closing the gap that
+previously left the citation precise but pointing at nothing in the
+graph.
 
 ## Not modelled
 
@@ -137,3 +156,6 @@ Listed in frontmatter. ncsc.admin.ch and de.wikipedia.org were read
 directly in the 2026-08-22 pass; staatskalender.admin.ch was retrieved
 but not readable (JS-rendered). Bratschi AG's legal publication, added
 and read directly 2026-09-05, names the ISG Article 74a statutory basis.
+Fedlex's own consolidated ISG text and bacs.admin.ch's own page, added
+and read directly 2026-09-26, supply article-level precision and close
+the `governed-by` [[CH-ISG]] edge.

@@ -1,0 +1,21 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Closed discovery/unresolved.md row #115 (Switzerland, CH-BACS's
+  24-hour reporting duty statutory basis). Created CH-ISG
+  (Informationssicherheitsgesetz, SR 128), Switzerland's federal
+  information-security act, adopted 18 December 2020. fedlex.admin.ch's
+  main site renders client-side in JavaScript, but its filestore HTML
+  path (the workaround already documented in discovery/unresolved.md)
+  worked directly, giving Article 1's purpose text and article-level
+  detail for the 2025 reporting-duty amendment (Art. 74a duty, Art. 74b
+  covered entities, Art. 74e 24-hour deadline) -- more precise than the
+  previously-cited secondary legal commentary. bacs.admin.ch's own page
+  independently confirms the 1 April 2025 commencement. Added CH-BACS
+  governed-by CH-ISG, closing the gap that previously left the citation
+  precise but pointing at nothing in the graph.
+prs:
+  - number: 367
+    title: "Model CH-ISG, closing row #115's statutory-basis gap"
+outcome: merged
+entity_count_after: 736
