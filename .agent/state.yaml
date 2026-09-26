@@ -39,8 +39,8 @@ last_merged_prs:
     summary: "Added NL-NEC, closing discovery/unresolved.md row #28"
   - number: 334
     summary: "Added NL-API-STRATEGIE, closing discovery/unresolved.md row #30"
-  - number: null
-    summary: "Added EU-LEGAL-DATA-SPACE, narrowing discovery/unresolved.md row #125 (PR number filled in before merge)"
+  - number: 335
+    summary: "Added EU-LEGAL-DATA-SPACE, narrowing discovery/unresolved.md row #125"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,

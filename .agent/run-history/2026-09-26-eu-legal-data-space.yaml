@@ -8,6 +8,8 @@ summary: >
   file as "not independently researched." Sourced from data.europa.eu's
   own dedicated page and the Interoperable Europe Portal's launch
   announcement, both read directly.
-prs: []
+prs:
+  - number: 335
+    title: "Narrow row #125: model the European Legal Data Space"
 outcome: merged
 entity_count_after: 723
