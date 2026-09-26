@@ -34,6 +34,7 @@ organisations:
 related_entities:
   - BE-BUREAU-FEDERAL-DU-PLAN
   - UN-SDG-INDICATORS
+  - BE-IIS
 relationships:
   - type: based-on
     target: UN-SDG-INDICATORS
@@ -47,6 +48,13 @@ relationships:
     source: fact
     evidence: "Confirmed by reading indicators.be's own page directly (2026-09-19): 'Sur www.indicators.be le Bureau fédéral du Plan présente des indicateurs de développement durable' — the Federal Planning Bureau presents the indicators on indicators.be. The same page states 'Tous ces indicateurs ont été sélectionnés par l'Institut interfédéral de statistique' (all indicators were selected by the Institut interfédéral de la Statistique), a separate coordinating body not independently researched this pass."
     confidence: high
+    valid_from: null
+    valid_until: null
+  - type: related-to
+    target: BE-IIS
+    source: fact
+    evidence: "The Institut interfederal de la Statistique, named above as the body that selected this framework's 84 indicators, is now its own entity: [[BE-IIS]] (researched 2026-09-26, confidence: low — only its own homepage could be read directly this pass; its membership, founding date and governance structure remain unconfirmed)."
+    confidence: medium
     valid_from: null
     valid_until: null
 
@@ -77,13 +85,14 @@ information.
 The same page states the 84 indicators "were selected by the **Institut
 interfédéral de la Statistique**" — a coordinating statistical body
 distinct from the Federal Planning Bureau that publishes them and from
-[[BE-STATBEL]], the federal statistical office. The Institut interfédéral
-de la Statistique is not independently researched or modelled here.
+[[BE-STATBEL]], the federal statistical office. **Researched 2026-09-26**:
+now its own entity, [[BE-IIS]] — deliberately thin and `confidence: low`,
+since only its own homepage could be confirmed by reading directly; its
+membership, founding date, and governance structure are reported in
+search-indexed content but not independently confirmed.
 
 ## Not modelled
 
-- The **Institut interfédéral de la Statistique**, which selected the
-  indicators.
 - The **indicators.be** platform itself as distinct from the indicator
   set it publishes.
 
@@ -91,6 +100,7 @@ de la Statistique is not independently researched or modelled here.
 
 - `based-on` [[UN-SDG-INDICATORS]] — `confidence: medium`.
 - `maintained-by` [[BE-BUREAU-FEDERAL-DU-PLAN]] — `confidence: high`.
+- `related-to` [[BE-IIS]] — `confidence: medium`.
 
 ## Sources
 
