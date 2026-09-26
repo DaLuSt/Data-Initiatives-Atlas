@@ -41,8 +41,8 @@ last_merged_prs:
     summary: "Found edoc.coe.int, a third coe.int workaround; narrowed row #179"
   - number: 331
     summary: "Renamed CLAUDE.md to AGENTS.md; built out the full .agent/ structure (state.yaml/current-task.yaml now authoritative)"
-  - number: null
-    summary: "Added INTL-OPENPEPPOL and INTL-PEPPOL-BIS-BILLING, closing discovery/unresolved.md row #49 in full (PR number filled in before merge)"
+  - number: 332
+    summary: "Added INTL-OPENPEPPOL and INTL-PEPPOL-BIS-BILLING, closing discovery/unresolved.md row #49 in full"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,

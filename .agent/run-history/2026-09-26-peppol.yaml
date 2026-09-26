@@ -8,6 +8,8 @@ summary: >
   FR-CIUS-FR, sourced from OpenPeppol's own documentation). Also
   relabelled row #97 to "Open (deliberate)" for consistency with rows
   #88/#168, the same kind of settled non-assertion.
-prs: []
+prs:
+  - number: 332
+    title: "Close row #49 in full: model OpenPeppol and Peppol BIS Billing"
 outcome: merged
 entity_count_after: 720
