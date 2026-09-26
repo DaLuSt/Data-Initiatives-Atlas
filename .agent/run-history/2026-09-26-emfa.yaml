@@ -9,6 +9,8 @@ summary: >
   EU-MEDIA-DATA-SPACE, so a low-confidence related-to edge is recorded
   rather than a stronger claim. Sourced from EUR-Lex's own text and the
   Media Board's own official site, both read directly.
-prs: []
+prs:
+  - number: 336
+    title: "Model the European Media Freedom Act"
 outcome: merged
 entity_count_after: 724

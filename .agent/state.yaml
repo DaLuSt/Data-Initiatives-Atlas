@@ -39,8 +39,8 @@ last_merged_prs:
     summary: "Added NL-API-STRATEGIE, closing discovery/unresolved.md row #30"
   - number: 335
     summary: "Added EU-LEGAL-DATA-SPACE, narrowing discovery/unresolved.md row #125"
-  - number: null
-    summary: "Added EU-MEDIA-FREEDOM-ACT, closing a gap flagged on EU-MEDIA-DATA-SPACE (PR number filled in before merge)"
+  - number: 336
+    summary: "Added EU-MEDIA-FREEDOM-ACT, closing a gap flagged on EU-MEDIA-DATA-SPACE"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
