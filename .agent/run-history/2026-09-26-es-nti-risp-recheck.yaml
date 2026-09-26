@@ -1,0 +1,18 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Re-checked discovery/unresolved.md row #90 (ES-NTI-RISP): datos.gob.es
+  was in site-wide maintenance on an earlier 2026-09-26 attempt, per
+  .agent/current-task.yaml; retried and found it back up. DCAT-AP-ES
+  remains "in administrative processing" (unchanged since 2026-08-26),
+  now independently corroborated by the standard's own separate GitHub
+  Pages technical-guide site (datosgobes.github.io/DCAT-AP-ES), version
+  1.0.0, dated 6 February 2026, marked "Period of validity: Pending
+  publication." No source found states a later BOE publication, so the
+  based-on EU-DCAT-AP edge stays confidence: low. A thin but genuine
+  re-verification, not a close.
+prs:
+  - number: 347
+    title: "Re-check ES-NTI-RISP's DCAT-AP-ES status (row #90)"
+outcome: merged
+entity_count_after: 732
