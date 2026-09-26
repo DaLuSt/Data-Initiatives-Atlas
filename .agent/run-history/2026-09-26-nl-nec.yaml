@@ -7,6 +7,8 @@ summary: >
   and CENELEC's own official members list. Completes the CEN/CENELEC <->
   NEN/NEC national-counterpart structure EU-CENELEC's own file had
   flagged as missing since Batch 2.
-prs: []
+prs:
+  - number: 333
+    title: "Close row #28: model NL-NEC, CENELEC's Dutch national counterpart"
 outcome: merged
 entity_count_after: 721

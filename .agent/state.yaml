@@ -41,8 +41,8 @@ last_merged_prs:
     summary: "Renamed CLAUDE.md to AGENTS.md; built out the full .agent/ structure (state.yaml/current-task.yaml now authoritative)"
   - number: 332
     summary: "Added INTL-OPENPEPPOL and INTL-PEPPOL-BIS-BILLING, closing discovery/unresolved.md row #49 in full"
-  - number: null
-    summary: "Added NL-NEC, closing discovery/unresolved.md row #28 (PR number filled in before merge)"
+  - number: 333
+    summary: "Added NL-NEC, closing discovery/unresolved.md row #28"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
