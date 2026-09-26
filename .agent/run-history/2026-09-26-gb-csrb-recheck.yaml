@@ -1,0 +1,18 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Re-checked GB-CSRB (UK Cyber Security and Resilience Bill), last
+  verified 2026-08-22. Wikipedia's own article, read directly, gives the
+  full stage progression: first reading 12 November 2025, Commons second
+  reading 6 January 2026, Commons committee to 24 February 2026, Commons
+  third reading 16 June 2026, then House of Lords committee stage,
+  unresolved as of the article's 24 August 2026 update. Still
+  status: proposed, no Royal Assent. commonslibrary.parliament.uk and
+  bills.parliament.uk (the official Bill tracker) both returned HTTP 403
+  on every attempt, so the current precise Lords stage could not be
+  confirmed from Parliament's own source -- narrowed, not closed.
+prs:
+  - number: 356
+    title: "Re-check GB-CSRB's parliamentary stage"
+outcome: merged
+entity_count_after: 733
