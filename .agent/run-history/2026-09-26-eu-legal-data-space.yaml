@@ -1,0 +1,15 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Narrowed discovery/unresolved.md row #125: created EU-LEGAL-DATA-SPACE
+  (the European Legal Data Space), one of the fourteen common European
+  data spaces, launched 31 October 2025 and operated by the Publications
+  Office of the EU. It had been named on EU-PUBLIC-ADMIN-DATA-SPACE's own
+  file as "not independently researched." Sourced from data.europa.eu's
+  own dedicated page and the Interoperable Europe Portal's launch
+  announcement, both read directly.
+prs:
+  - number: 335
+    title: "Narrow row #125: model the European Legal Data Space"
+outcome: merged
+entity_count_after: 723
