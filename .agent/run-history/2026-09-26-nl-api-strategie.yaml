@@ -6,6 +6,8 @@ summary: >
   Standaardisatie's own page and the strategy's own introductory
   document. NL-ADR now carries a part-of edge to it, closing the gap its
   own file had flagged since Batch 4.
-prs: []
+prs:
+  - number: 334
+    title: "Close row #30: model the Nederlandse API Strategie"
 outcome: merged
 entity_count_after: 722
