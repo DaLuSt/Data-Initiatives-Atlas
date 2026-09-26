@@ -1,0 +1,15 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Re-checked discovery/unresolved.md row #117 (IE-NCS-BILL): still not
+  enacted as of late September 2026. The Law Society of Ireland's
+  Gazette, read directly, confirms the Bill is listed for priority
+  publication in the Government's Autumn 2026 legislative programme
+  (Cabinet approval reported 16 September 2026) -- a concrete scheduling
+  placement replacing the entity's previous looser "Q3/Q4 2026 planning
+  assumption." No enactment date given; row narrowed, not closed.
+prs:
+  - number: 353
+    title: "Re-check IE-NCS-BILL enactment status (row #117)"
+outcome: merged
+entity_count_after: 732
