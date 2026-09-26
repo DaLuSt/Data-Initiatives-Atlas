@@ -25,7 +25,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-09-20"
+last_verified: "2026-09-26"
 previous_version: null
 successor: null
 
@@ -61,6 +61,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Eight justice bills on autumn priority list"
+    url: "https://www.lawsociety.ie/gazette/top-stories/2026/september/eight-justice-bills-on-autumn-priority-list-laws-on-citizenship-and-cyber-security-included-eight-justice-bills-are-among-32-listed-for-priority-publication-in-the-governments-legislative-programme-for-the-coming-13-week-autumn-parliamentary-session.-a-f"
+    publisher: "Law Society of Ireland — Gazette"
+    accessed: "2026-09-26"
   - title: "NIS2 Directive implementation in Ireland"
     url: "https://digital-strategy.ec.europa.eu/en/policies/nis2-directive-ireland"
     publisher: "European Commission — Shaping Europe's digital future"
@@ -156,6 +160,19 @@ September and to progress it through its remaining stages as quickly as
 possible." A further WebSearch the same day found no report of enactment
 since. `status: proposed` is confirmed current, not stale, as of this
 re-check.
+
+## Re-checked 2026-09-26: still not enacted, now on the autumn priority list
+
+The Law Society of Ireland's Gazette, read directly (16 September 2026
+Cabinet approval date, as reported): the National Cyber Security Bill is
+one of 32 bills — including eight from the justice area — listed for
+**priority publication** in the Government's legislative programme for
+the coming 13-week autumn parliamentary session. This confirms the Bill
+remains unenacted as of late September 2026, consistent with every
+earlier check, and adds a concrete legislative-programme placement in
+place of the looser "Q3/Q4 2026 planning assumption" this entity
+previously carried. No enactment date is given or implied by a priority
+listing — it states scheduling intent, not a commitment.
 
 ## ⚠ Why `confidence: low`
 
