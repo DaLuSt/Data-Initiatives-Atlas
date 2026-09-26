@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-19"
+last_verified: "2026-09-26"
 previous_version: null
 successor: null
 
@@ -31,6 +31,7 @@ domains: []
 organisations: []
 related_entities:
   - EU-COMMON-DATA-SPACES
+  - EU-TOURISM-TRANSITION-PATHWAY
 relationships:
   - type: part-of
     target: EU-COMMON-DATA-SPACES
@@ -86,9 +87,10 @@ complete set rather than the original core.
 
 ## ⚠ `coverage: medium`, promoted 2026-09-19
 
-Governance and the relationship to the tourism transition pathway remain
-unestablished — see below — but a real deployment project is now sourced,
-promoting this from the thinnest entity in the batch.
+Governance remains unestablished — see below — but a real deployment
+project is now sourced, promoting this from the thinnest entity in the
+batch. The tourism transition pathway question, also open at the time,
+is closed as a documented non-link — see below.
 
 ## DEPLOYTOUR, found — 2026-09-19
 
@@ -113,10 +115,15 @@ unestablished, so `coverage` moves only to `medium`, not `high`.
 
 ## Not modelled
 
-- The **EU tourism transition pathway**, which the sources associate with it.
 - DEPLOYTOUR's own five pilots as separate entities — they are use cases
   within one project, not distinct initiatives.
 - Any governance body or operator beyond DEPLOYTOUR's own role.
+
+**The EU tourism transition pathway, researched 2026-09-26**: now its
+own entity, [[EU-TOURISM-TRANSITION-PATHWAY]] (published 4 February
+2022). No source read states a direct link between the Pathway and this
+data space — `related-to` at `confidence: low` is recorded on the
+Pathway's own file rather than asserted as a stronger connection.
 
 ## Sources
 
