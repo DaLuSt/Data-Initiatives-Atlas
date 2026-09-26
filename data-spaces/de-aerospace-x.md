@@ -25,7 +25,7 @@ verification: primary-source
 
 start_date: 2024-04-01
 end_date: 2026-06-30
-last_verified: "2026-09-25"
+last_verified: "2026-09-26"
 previous_version: null
 successor: null
 
@@ -36,6 +36,7 @@ related_entities:
   - DE-MANUFACTURING-X
   - DE-CATENA-X
   - DE-FACTORY-X
+  - DE-PLATTFORM-INDUSTRIE-4-0
 relationships:
   - type: part-of
     target: DE-MANUFACTURING-X
@@ -50,6 +51,13 @@ relationships:
     evidence: "Confirmed by reading Fraunhofer ISST's own page directly (2026-09-20): the project 'transfers lessons from related efforts like Gaia-X, Catena-X and Industry 4.0 Platform to the aviation sector.' Recorded as `based-on` [[DE-CATENA-X]] on the same basis [[DE-FACTORY-X]] already carries, since Catena-X is the family's own originating data space in the Atlas."
     confidence: medium
     valid_from: "2024-04-01"
+    valid_until: null
+  - type: related-to
+    target: DE-PLATTFORM-INDUSTRIE-4-0
+    source: fact
+    evidence: "CLOSES the Plattform Industrie 4.0 gap this entity's own 'Not modelled' section flagged (the platform did not yet exist as an Atlas entity when this file was created 2026-09-20; [[DE-PLATTFORM-INDUSTRIE-4-0]] was created the same day, order unclear from timestamps alone). No new source read: the `part-of` edge's own evidence above already quotes Fraunhofer ISST's page stating Aerospace-X 'transfers lessons from related efforts like Gaia-X, Catena-X and Industry 4.0 Platform to the aviation sector' -- the same evidence already on file, now given its own edge to the Industrie 4.0 Platform entity specifically, rather than folded into the DE-MANUFACTURING-X edge's evidence alone. `related-to` matches the type [[DE-PLATTFORM-INDUSTRIE-4-0]]'s own file uses for its edge to [[DE-MANUFACTURING-X]]: a concept/lessons basis, not a stated organisational relationship."
+    confidence: medium
+    valid_from: null
     valid_until: null
 
 sources:
@@ -112,15 +120,18 @@ both sources read directly.
 - **Construct-X**, **HealthTrack-X** — the remaining named lighthouse
   projects/siblings on [[DE-MANUFACTURING-X]]'s own entity, not
   independently researched this pass.
-- **Plattform Industrie 4.0** — the concept base Manufacturing-X and its
-  lighthouse projects build on.
 - Aerospace-X's **individual named partners** (Airbus, Rolls-Royce, MTU
   Aero Engines, SAP, Capgemini and others).
+
+**Plattform Industrie 4.0, linked 2026-09-26**: now [[DE-PLATTFORM-INDUSTRIE-4-0]]
+— the edge below reuses the "Industry 4.0 Platform" mention already quoted
+in this entity's own `part-of` evidence, not a new source.
 
 ## Relationships
 
 - `part-of` [[DE-MANUFACTURING-X]] — `confidence: high`.
 - `based-on` [[DE-CATENA-X]] — `confidence: medium`.
+- `related-to` [[DE-PLATTFORM-INDUSTRIE-4-0]] — `confidence: medium`.
 
 ## Sources
 

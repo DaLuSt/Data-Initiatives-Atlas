@@ -27,7 +27,7 @@ verification: primary-source
 
 start_date: 2025-03-01
 end_date: 2028-02-29
-last_verified: "2026-09-25"
+last_verified: "2026-09-26"
 previous_version: null
 successor: null
 
@@ -117,7 +117,12 @@ release description of "a three-year project."
 
 - **HealthTrack-X**, the remaining named sibling on [[DE-MANUFACTURING-X]]'s
   own entity, not independently researched this pass.
-- **Plattform Industrie 4.0**, the concept base the whole family builds on.
+- **Plattform Industrie 4.0**, the concept base the whole family builds
+  on: now [[DE-PLATTFORM-INDUSTRIE-4-0]] and linked from [[DE-FACTORY-X]]
+  and [[DE-AEROSPACE-X]] (2026-09-26). Checked here too: Fraunhofer ISST's
+  own Construct-X page, re-read directly, does **not** mention the
+  platform by name, so no edge is asserted on this entity — a deliberate
+  non-assertion, not an oversight.
 - Construct-X's **individual named partners**.
 - The **Eclipse Dataspace Working Group** and other "domain-agnostic"
   initiatives Construct-X names as connection points.

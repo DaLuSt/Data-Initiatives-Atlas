@@ -29,7 +29,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-25"
+last_verified: "2026-09-26"
 previous_version: null
 successor: null
 
@@ -40,6 +40,8 @@ organisations: []
 related_entities:
   - DE-MANUFACTURING-X
   - DE-CATENA-X
+  - DE-FACTORY-X
+  - DE-AEROSPACE-X
 relationships:
   - type: related-to
     target: DE-MANUFACTURING-X
@@ -134,6 +136,16 @@ government's 2011 high-tech strategy, per English Wikipedia's own
 describe the platform's own founding date), and Manufacturing-X is one
 initiative that grew out of it. `related-to` is recorded rather than a
 more specific type.
+
+**Two lighthouse projects linked 2026-09-26**: [[DE-FACTORY-X]] and
+[[DE-AEROSPACE-X]] were each created 2026-09-19/20, naming this platform's
+principles as something they build on or transfer lessons from, but this
+entity did not exist yet (or was created the same day) to link to. Both
+edges now exist, using evidence already on file at the time — no new
+source was read to add them. [[DE-CONSTRUCT-X]]'s own cited page was
+checked and does **not** mention this platform by name, so no edge is
+asserted there; its own "Not modelled" note stands as a deliberate
+non-assertion, not an oversight.
 
 ## Not modelled
 
