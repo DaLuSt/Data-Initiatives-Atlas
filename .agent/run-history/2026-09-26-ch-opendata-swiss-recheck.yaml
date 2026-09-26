@@ -1,0 +1,18 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Chased CH-OPENDATA-SWISS's own flagged "opendata.swiss next" lead
+  (a stated future portal replacement, "not chased further" in the
+  original pass). Inconclusive: the portal's own dedicated page on the
+  successor returned HTTP 403 on every attempt; BFS's own OGD page, the
+  opendata-swiss GitHub organisation and its documentation handbook were
+  all read directly but none named a replacement platform, standard or
+  timeline. Search-indexed content describing a Piveau/DCAT-AP-CH
+  migration targeting 2026/2027 was found but not read directly, so not
+  asserted -- recorded as a documented inconclusive attempt rather than
+  left silently unchased or overclaimed.
+prs:
+  - number: 359
+    title: "Chase (inconclusively) CH-OPENDATA-SWISS's next-portal lead"
+outcome: merged
+entity_count_after: 734
