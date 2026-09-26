@@ -18,11 +18,17 @@ description: null
 next_step: null
 
 notes: >
-  Idle as of 2026-09-26 (running continuously per user's "keep running
-  until 95% usage" instruction). Row #90 (ES-NTI-RISP) re-checked:
-  datos.gob.es is back up, DCAT-AP-ES is still "in administrative
-  processing" (unchanged), now independently corroborated via the
-  standard's own GitHub Pages technical-guide site. Several remaining
+  Idle as of 2026-09-26. A long continuous run (PRs #347-366) closed
+  several discovery/unresolved.md rows, added new entities (BE-CYFUN,
+  GB-NATIONAL-DATA-LIBRARY, DE-VDE) and fixed a run of stale
+  cross-references found by grepping for "not modelled"/"unmodelled"/
+  "logged in research-queue.md" phrasing across the repo -- a
+  productive pattern worth repeating in a future session, since several
+  entities created mid-session leave sibling files with stale "X is not
+  modelled" claims that nothing currently checks automatically.
+  Stopped 2026-09-26 per explicit user instruction ("Stop at next
+  pass") after PR #366 merged -- do not pick up further work
+  automatically; resume only when asked. Several remaining
   Known-source-block rows (bmi.bund.de, digitale-verwaltung.de,
   geant.org family) were retried 2026-09-26 and confirmed still blocked
   -- no need to retry again soon.

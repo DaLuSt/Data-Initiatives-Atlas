@@ -18,12 +18,12 @@ region: EU
 
 status: active
 confidence: medium
-coverage: low
+coverage: medium
 verification: primary-source
 
 start_date: 2014-07-23
 end_date: null
-last_verified: "2026-09-25"
+last_verified: "2026-09-26"
 previous_version: null
 successor: null
 
@@ -266,6 +266,10 @@ sources:
     url: "https://www.efta.int/sites/default/files/documents/legal-texts/eea/other-legal-documents/adopted-joint-committee-decisions/2018%20-%20English/022-2018.pdf"
     publisher: "European Free Trade Association (EFTA Secretariat)"
     accessed: "2026-09-19"
+  - title: "Regulation (EU) No 910/2014 (eIDAS) — table of contents"
+    url: "https://www.legislation.gov.uk/eur/2014/910/contents"
+    publisher: "legislation.gov.uk (The National Archives) — UK-retained EU law"
+    accessed: "2026-09-26"
 ---
 
 # eIDAS Regulation (Regulation (EU) No 910/2014)
@@ -283,6 +287,12 @@ sources:
 > seals, qualified certificates) recorded in prose from Wikipedia,
 > search-only — `eur-lex.europa.eu`'s TXT/HTML form returned empty
 > content for this specific regulation on every attempt.
+>
+> **Structurally narrowed 2026-09-26**: `eur-lex.europa.eu` still returns
+> empty content for this regulation, but `legislation.gov.uk`'s own
+> UK-retained-law mirror of the full text, read directly, gives the
+> regulation's complete chapter structure and confirms the trust-services
+> categories with article numbers. `coverage` raised to `medium`.
 
 ## Description
 
@@ -305,20 +315,45 @@ government act transposes an EU instrument, and Batch 7 narrowed the
 candidate from eIDAS 2.0 (which post-dates the Wdo) to this original
 regulation. Having it as an entity makes that question expressible.
 
-**Its own content beyond the incorporation facts above remains
-mostly unresearched.** Only its enactment date, repeal of the prior
-Directive, and EEA-EFTA applicability are sourced by direct reading.
-**Partly narrowed 2026-09-25**: the regulation's trust-services
-categories are now recorded — English Wikipedia's own eIDAS article
-(search-only, `eur-lex.europa.eu`'s TXT/HTML form returned empty
-content for this specific regulation on every attempt this pass, unlike
-other EUR-Lex documents this Atlas has read successfully) describes a
-tiered legal-effect regime for electronic signatures (Art. 25(1)), a
-presumption of integrity for electronic seals (Art. 35(2)), and
-qualified certificates covering time stamps and website authentication.
-These are recorded in prose only, not structured as sourced facts, since
-the description rests on a secondary source rather than the
-regulation's own text.
+**Its own content beyond the incorporation facts above was mostly
+unresearched until this pass.** Its enactment date, repeal of the prior
+Directive, and EEA-EFTA applicability were already sourced by direct
+reading; its internal structure and trust-services categories are now
+sourced too.
+
+**Structurally narrowed 2026-09-26**: `eur-lex.europa.eu`'s TXT/HTML
+form still returns empty content for this specific regulation, unlike
+other EUR-Lex documents this Atlas has read successfully — but
+`legislation.gov.uk`'s own mirror of the UK-retained text (the
+regulation remained part of UK law after Brexit under the European
+Union (Withdrawal) Act 2018, subsequently amended for UK-only purposes
+by SI 2019/89), read directly, gives the regulation's full structure:
+
+| Chapter | Contents |
+|---|---|
+| I | General provisions (subject matter, scope, definitions, data protection, internal market principle) |
+| II | Electronic identification (mutual recognition, notification, assurance levels, security breaches, interoperability) |
+| III | Trust services — nine sections covering liability, supervision and each named service |
+| IV | Electronic documents (legal effects) |
+| V | Delegated/implementing powers |
+| VI | Final provisions (review, repeal, transitional measures, entry into force) |
+
+Chapter III's trust-services sections, confirmed by article number:
+**electronic signatures** (Art. 25 legal effects, Art. 26 requirements
+for advanced signatures), **electronic seals** (Art. 35, Art. 36),
+**electronic time stamps** (Art. 41), **electronic registered delivery
+services** (Art. 43), and **website authentication** via qualified
+certificates (Art. 45). This confirms and gives article-level precision
+to the categories the 2026-09-25 pass recorded from Wikipedia alone.
+
+One caveat: `legislation.gov.uk`'s text is the **UK-retained** version,
+kept current with UK-only amendments since Brexit (via SI 2019/89)
+rather than the EU's own consolidated text. The chapter/article
+structure above is treated as reliable for the original regulation —
+this pass did not check SI 2019/89 for whether it altered numbering or
+substance, so this entity does not rely on `legislation.gov.uk` as
+authoritative for the EU's own current in-force text, only for the
+regulation's structural shape.
 
 ## The NL-WDO question remains open
 

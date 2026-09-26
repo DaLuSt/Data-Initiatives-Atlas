@@ -1,0 +1,20 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Further narrowed discovery/unresolved.md row #35: EU-EIDAS's own
+  structure and trust-services provisions were previously sourced only
+  from Wikipedia (search-only), since eur-lex.europa.eu's TXT/HTML form
+  returns empty content for this specific regulation. legislation.gov.uk's
+  own mirror of the UK-retained text, read directly, gives the full
+  six-chapter structure and article-level detail for each trust service
+  (signatures Art. 25-26, seals Art. 35-36, time stamps Art. 41,
+  registered delivery Art. 43, website authentication Art. 45).
+  coverage raised low -> medium. Caveat recorded: this is UK-retained
+  law, not the EU's own consolidated text, so it is treated as reliable
+  for structure/numbering but not as authoritative for the EU's current
+  in-force text.
+prs:
+  - number: 366
+    title: "Source EU-EIDAS's structure via legislation.gov.uk"
+outcome: merged
+entity_count_after: 735
