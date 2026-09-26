@@ -21,6 +21,7 @@ status: active
 confidence: medium
 coverage: low
 verification: primary-source
+organisation_role: regulatory
 start_date: null
 end_date: null
 last_verified: "2026-08-22"

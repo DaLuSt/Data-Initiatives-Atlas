@@ -1,0 +1,27 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Backfilled the organisation_role field (added in PR #345) onto the
+  Atlas's other statistical bodies, at the repository owner's request.
+  21 national/EU/UN statistical offices that publish official statistics
+  themselves tagged executive (AT-STATISTIK, BE-STATBEL, CH-BFS, CZ-CSU,
+  DE-DESTATIS, DK-DST, EE-STATISTIKAAMET, ES-INE, EU-EUROSTAT,
+  FI-TILASTOKESKUS, FR-INSEE, GB-ONS, IE-CSO, IT-ISTAT, LU-STATEC,
+  NL-CBS, NO-SSB, PL-GUS, PT-INE, SE-SCB, UN-UNSD). Two oversight bodies
+  that supervise a statistical office rather than publish statistics
+  themselves tagged regulatory (GB-UKSA, oversees ONS; NL-CCS, former
+  supervisory zbo for CBS, status: superseded). UN-UNSC tagged
+  standards-body (sets international statistical standards/concepts but
+  does not itself compile or publish data — UNSD, already executive,
+  is its secretariat). Excluded several false-positive matches on
+  "statistic" that are not themselves statistical bodies (DE-BFV,
+  DE-BITBW, DE-IT-NRW, DE-IT-NIEDERSACHSEN, DK-KLIMADATASTYRELSEN,
+  EU-EUROGEOGRAPHICS, EU-GEANT, FR-AFNOR, GB-OS, LU-CTIE, NL-DANS,
+  UN-UNESCO, UN-UNECE). No new sources read — classification made from
+  each entity's own already-cited description/evidence, since the field
+  only records a structural role, not a new factual claim.
+prs:
+  - number: 346
+    title: "Backfill organisation_role onto the Atlas's statistical bodies"
+outcome: merged
+entity_count_after: 732
