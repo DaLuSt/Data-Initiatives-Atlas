@@ -39,8 +39,8 @@ last_merged_prs:
     summary: "Added EU-MEDIA-FREEDOM-ACT, closing a gap flagged on EU-MEDIA-DATA-SPACE"
   - number: 337
     summary: "Added EU-TOURISM-TRANSITION-PATHWAY, closing a gap flagged on EU-TOURISM-DATA-SPACE"
-  - number: null
-    summary: "Added EU-ESCO, closing a gap flagged on EU-SKILLS-DATA-SPACE (PR number filled in before merge)"
+  - number: 338
+    summary: "Added EU-ESCO, closing a gap flagged on EU-SKILLS-DATA-SPACE"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
