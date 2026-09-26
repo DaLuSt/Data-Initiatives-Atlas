@@ -28,7 +28,7 @@ verification: primary-source
 
 start_date: 2013-01-01
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-09-26"
 previous_version: null
 successor: null
 
@@ -53,7 +53,7 @@ relationships:
   - type: based-on
     target: EU-DCAT-AP
     source: fact
-    evidence: "Confirmed by reading datos.gob.es's own blog post and migration guide directly (2026-08-26): 'the future new version of the NTI-RISP incorporates DCAT-AP-ES as a reference model'; DCAT-AP-ES aligns with DCAT-AP 2.1.1, the DCAT-AP-HVD 2.2.0 extension, Directive (EU) 2019/1024 on open data and re-use of public sector information, and Implementing Regulation (EU) 2023/138 establishing the list of High-Value Datasets — all four citations confirmed directly in the migration guide's own text, more precisely than the previous search-only evidence. CAVEAT unchanged: the same pages state DCAT-AP-ES remains in administrative processing, and 'application will be mandatory once the modification text of the standard comes into force' — so this descent is not yet in force."
+    evidence: "Confirmed by reading datos.gob.es's own blog post and migration guide directly (2026-08-26): 'the future new version of the NTI-RISP incorporates DCAT-AP-ES as a reference model'; DCAT-AP-ES aligns with DCAT-AP 2.1.1, the DCAT-AP-HVD 2.2.0 extension, Directive (EU) 2019/1024 on open data and re-use of public sector information, and Implementing Regulation (EU) 2023/138 establishing the list of High-Value Datasets — all four citations confirmed directly in the migration guide's own text, more precisely than the previous search-only evidence. CAVEAT unchanged: the same pages state DCAT-AP-ES remains in administrative processing, and 'application will be mandatory once the modification text of the standard comes into force' — so this descent is not yet in force. RE-CHECKED 2026-09-26 (closing discovery/unresolved.md row #90's pending re-verification, datos.gob.es having been in site-wide maintenance on the prior attempt): the standard's own separate technical-guide site (datosgobes.github.io/DCAT-AP-ES), an independent primary source from the datos.gob.es blog/guide already cited, read directly, gives version DCAT-AP-ES 1.0.0, dated 6 February 2026, explicitly marked 'Period of validity: Pending publication' and describing itself as 'currently undergoing administrative processing' -- corroborating, from a second source, that the status is unchanged a month before this recheck. No source found dated after 6 February 2026 states publication in the BOE."
     confidence: low
     valid_from: null
     valid_until: null
@@ -80,14 +80,23 @@ sources:
   - title: "Nuevo impulso a la interoperabilidad de los datos abiertos en España"
     url: "http://espanadigital.gob.es/en/actualidad/nuevo-impulso-la-interoperabilidad-de-los-datos-abiertos-en-espana"
     publisher: "España Digital 2026"
+  - title: "DCAT-AP-ES Technical guide and model"
+    url: "https://datosgobes.github.io/DCAT-AP-ES/en/"
+    publisher: "datos.gob.es"
+    accessed: "2026-09-26"
 ---
 
 # NTI-RISP / DCAT-AP-ES
 
-> **Verified 2026-08-26.** Three of six cited pages were read directly:
-> BOE's own consolidated text of Real Decreto 4/2010, datos.gob.es's blog
-> post, and its DCAT-AP-ES migration guide — the last of which supplied
-> direct citations for both European legal instruments this entity names.
+> **Verified 2026-08-26; re-checked 2026-09-26.** Three of six cited pages
+> were read directly on the original pass: BOE's own consolidated text of
+> Real Decreto 4/2010, datos.gob.es's blog post, and its DCAT-AP-ES
+> migration guide — the last of which supplied direct citations for both
+> European legal instruments this entity names. `discovery/unresolved.md`
+> row #90 flagged datos.gob.es as unreachable (site-wide maintenance) on a
+> 2026-09-26 retry attempt; a second attempt the same day found the site
+> back up, plus an independent corroborating source: the standard's own
+> separate GitHub Pages technical-guide site.
 
 ## Description
 
@@ -147,6 +156,13 @@ the sources are clear that this is what the norm is being aligned to — at
 low confidence and with `valid_from: null`, and states the caveat inside the
 `evidence` string rather than only in this prose.
 
+**Re-checked 2026-09-26**: the standard's own separate technical-guide site
+independently confirms the same status — version **1.0.0**, dated **6
+February 2026**, marked "Period of validity: **Pending publication**" and
+still describing itself as undergoing administrative processing. No source
+found states a later BOE publication date, so the edge remains unchanged at
+`confidence: low`.
+
 This is a different situation from [[ES-LCGC]], which is `status: proposed`
 because the whole instrument is a draft. The NTI-RISP is in force; it is the
 *European alignment* that is mid-flight. The entity is `active` and the
@@ -162,8 +178,10 @@ exist to express.
 
 ## Sources
 
-Listed in frontmatter, three of six read directly this pass: BOE's own
-text of Real Decreto 4/2010 (newly added as a proper citation, previously
-only named in evidence text), the datos.gob.es blog post, and the
-migration guide. The application guide and the España Digital 2026
-announcement were not re-fetched.
+Listed in frontmatter. Original pass (2026-08-26): three of six read
+directly — BOE's own text of Real Decreto 4/2010 (newly added as a proper
+citation, previously only named in evidence text), the datos.gob.es blog
+post, and the migration guide. The application guide and the España
+Digital 2026 announcement were not re-fetched. Re-check (2026-09-26): the
+blog post, migration guide, and the new DCAT-AP-ES technical-guide site
+were all read directly again.

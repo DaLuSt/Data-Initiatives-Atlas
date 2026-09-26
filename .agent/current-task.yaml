@@ -18,12 +18,11 @@ description: null
 next_step: null
 
 notes: >
-  Idle as of 2026-09-26. Highest-priority available work per
-  .agent/operating-model.md: continue closing discovery/unresolved.md
-  rows (69 open as of the last .agent/state.yaml update) — check
-  discovery/candidates.md and discovery/research-queue.md too, though
-  both were empty as of this update. Several remaining Known-source-block
-  rows (bmi.bund.de, digitale-verwaltung.de, geant.org family) were
-  retried 2026-09-26 and confirmed still blocked -- no need to retry
-  again soon. datos.gob.es was in site-wide maintenance 2026-09-26 --
-  worth retrying row #90 (ES-NTI-RISP) once it's back.
+  Idle as of 2026-09-26 (running continuously per user's "keep running
+  until 95% usage" instruction). Row #90 (ES-NTI-RISP) re-checked:
+  datos.gob.es is back up, DCAT-AP-ES is still "in administrative
+  processing" (unchanged), now independently corroborated via the
+  standard's own GitHub Pages technical-guide site. Several remaining
+  Known-source-block rows (bmi.bund.de, digitale-verwaltung.de,
+  geant.org family) were retried 2026-09-26 and confirmed still blocked
+  -- no need to retry again soon.
