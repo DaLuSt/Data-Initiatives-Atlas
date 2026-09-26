@@ -1,0 +1,21 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Closed a gap BE-INDICATEURS-DEVELOPPEMENT-DURABLE's own file had flagged
+  (not a numbered discovery/unresolved.md row): created BE-IIS (Institut
+  interfédéral de Statistique), Belgium's coordinating body for federal
+  and regional statistics, named as the selector of Belgium's 84 SDG
+  indicators. Deliberately thin and confidence: low — belgium.be-family
+  domains returned CAPTCHA/403 as already documented, and a PDF activity
+  report could not be extracted (no PDF-rendering tool in this
+  environment). Only the IIS's own homepage was read directly, confirming
+  its 10th anniversary (19 March 2026) and implied ~2016 operational
+  start; richer detail surfaced only via search-engine summary (a 2014
+  cooperation agreement, board composition, statutory missions) was
+  deliberately excluded per the Atlas's own sourcing-discipline rule that
+  a search summary is a lead, not evidence.
+prs:
+  - number: 344
+    title: "Model BE-IIS, source of Belgium's SDG indicator selection"
+outcome: merged
+entity_count_after: 732
