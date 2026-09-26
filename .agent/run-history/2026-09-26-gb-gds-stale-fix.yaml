@@ -1,0 +1,14 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Quality fix: GB-GDS's own file still said "Ordnance Survey, the UK's
+  national mapping agency, is not modelled either. The UK therefore
+  joins this Atlas with no geospatial entity at all." GB-OS (Ordnance
+  Survey) already exists, created the same day, and its own file
+  explicitly states it closes exactly this gap. Corrected GB-GDS's
+  stale claim to point to GB-OS instead of contradicting it.
+prs:
+  - number: 365
+    title: "Fix stale Ordnance Survey note on GB-GDS"
+outcome: merged
+entity_count_after: 735

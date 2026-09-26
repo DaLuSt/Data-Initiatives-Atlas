@@ -33,14 +33,14 @@ discovery:
 validation_status: clean
 
 last_merged_prs:
-  - number: 361
-    summary: "Added DE-VDE, closing a gap flagged on DE-DKE (VDE holds DKE's day-to-day operational responsibility)"
   - number: 362
     summary: "Fixed stale CSIRT MON note on PL-NASK (PL-CSIRT-MON already exists)"
   - number: 363
     summary: "Fixed two more stale cross-references: FR-ETALAB (NL custodian) and IE-NCSC (NL-NCSC)"
   - number: 364
     summary: "Fixed stale 'remains unmodelled' claims on DE-CATENA-X (HealthTrack-X) and DOMAIN-CYBERSECURITY (CSIRT MON)"
+  - number: 365
+    summary: "Fixed stale Ordnance Survey note on GB-GDS (GB-OS already exists)"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
