@@ -1,0 +1,20 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Closed a gap GB-DATA-GOV-UK's own file had flagged ("a rebrand this
+  entity does not yet record ... worth a dedicated look in a future
+  pass"). Chasing the "National Data Library" branding on data.gov.uk's
+  homepage found it is not simply a rename: it is the public face of a
+  separate, much larger DSIT programme (GB-NATIONAL-DATA-LIBRARY), a
+  GBP100m component of the government's 50-point AI Opportunities Action
+  Plan (early 2025), with its own Expert Advisory Group (Sept 2025),
+  a completed discovery phase (Jan 2026) and five pilot projects.
+  Sourced from Computer Weekly's reporting and DSIT's own public-
+  attitudes research summary on GOV.UK, both read directly. Recorded
+  related-to (not a rename) between the new programme and the existing
+  portal, since no source states they are organisationally the same.
+prs:
+  - number: 358
+    title: "Model the UK's National Data Library programme"
+outcome: merged
+entity_count_after: 734
