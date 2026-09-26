@@ -1,0 +1,20 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Fully closed discovery/unresolved.md row #169 (INTL-OECD-CSSP naming
+  and EU-vs-Commission representation). The entity's core premise --
+  two names (CSSP/CSTAT) and two representation claims (EU/Commission)
+  -- rested on a search-engine summary of Eurostat's own cooperation
+  page, explicitly marked "NOT READ -- search-only" since creation.
+  Reading that page directly for the first time (both URL forms) found
+  no "CSTAT" and no parallel Commission-representation passage anywhere
+  on it -- the competing claims were a search-summary artifact that had
+  never been corroborated. Removed "CSTAT" from alternative_names,
+  raised confidence low->high, and rewrote the entity's prose to
+  document the correction rather than silently deleting the history.
+  Row #169 removed from the table.
+prs:
+  - number: 369
+    title: "Close row #169: INTL-OECD-CSSP's two names/claims were unread search noise"
+outcome: merged
+entity_count_after: 736

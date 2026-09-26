@@ -25,7 +25,7 @@ graph:
   regions: 1
 
 discovery:
-  unresolved_rows_open: 67
+  unresolved_rows_open: 66
   candidates_queued: 0
   research_queue_items: 0
   needs_human_open: 0
@@ -33,14 +33,14 @@ discovery:
 validation_status: clean
 
 last_merged_prs:
-  - number: 365
-    summary: "Fixed stale Ordnance Survey note on GB-GDS (GB-OS already exists)"
   - number: 366
     summary: "Sourced EU-EIDAS's structure/trust-services via legislation.gov.uk's UK-retained-law mirror (row #35, narrowed)"
   - number: 367
     summary: "Added CH-ISG, closing row #115 (CH-BACS's 24-hour reporting duty statutory basis)"
   - number: 368
     summary: "Sourced DE-BVERFSCHG/DE-MADG's internal structure, closing row #194"
+  - number: 369
+    summary: "Closed row #169: INTL-OECD-CSSP's CSTAT/Commission claims were unread search noise, corrected on direct read"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
