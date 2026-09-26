@@ -18,9 +18,9 @@ updated_by_session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
 graph:
   entity_count: 735
   relationship_edges: 1552
-  association_edges: 3197
-  wikilink_edges: 4514
-  edges_total: 9263
+  association_edges: 3198
+  wikilink_edges: 4520
+  edges_total: 9270
   countries: 58
   regions: 1
 
@@ -33,14 +33,14 @@ discovery:
 validation_status: clean
 
 last_merged_prs:
-  - number: 362
-    summary: "Fixed stale CSIRT MON note on PL-NASK (PL-CSIRT-MON already exists)"
   - number: 363
     summary: "Fixed two more stale cross-references: FR-ETALAB (NL custodian) and IE-NCSC (NL-NCSC)"
   - number: 364
     summary: "Fixed stale 'remains unmodelled' claims on DE-CATENA-X (HealthTrack-X) and DOMAIN-CYBERSECURITY (CSIRT MON)"
   - number: 365
     summary: "Fixed stale Ordnance Survey note on GB-GDS (GB-OS already exists)"
+  - number: 366
+    summary: "Sourced EU-EIDAS's structure/trust-services via legislation.gov.uk's UK-retained-law mirror (row #35, narrowed)"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
