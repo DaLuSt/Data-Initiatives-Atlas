@@ -1,0 +1,13 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Closed a gap FR-INDICATEURS-ODD's own file had flagged (not a numbered
+  discovery/unresolved.md row): created FR-CNIS (Conseil national de
+  l'information statistique), established 1984, whose consultation
+  produced France's national SDG indicator set. Sourced from cnis.fr's
+  own homepage and INSEE's own page on the Cnis, both read directly.
+prs:
+  - number: 343
+    title: "Model Cnis, source of France's SDG indicator selection"
+outcome: merged
+entity_count_after: 731
