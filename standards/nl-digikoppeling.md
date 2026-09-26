@@ -106,13 +106,18 @@ the source that would have — returned HTTP 404. It is kept in the text as
 an unconfirmed carry-over rather than deleted, with `confidence: low` on
 that specific relationship.
 
-**A historical note worth flagging.** One source describes Digikoppeling as
-being on the comply-or-explain list "of the College Standaardisatie", while
-Batch 1 sources describe the [[NL-OBDO]] as the deciding body. This is
-consistent with the College having been the earlier decision-making body,
-later succeeded by the OBDO — which would resolve the open question about
-the College's status recorded in `discovery/unresolved.md`. It is
-corroboration, not confirmation, and the question stays open.
+**A historical note, now resolved elsewhere.** One source describes
+Digikoppeling as being on the comply-or-explain list "of the College
+Standaardisatie", while Batch 1 sources describe the [[NL-OBDO]] as the
+deciding body. **Checked 2026-09-26**: [[NL-OBDO]]'s own file closed this
+exact succession on 2026-09-05 — the College Standaardisatie's
+standards-oversight tasks passed to the Nationaal Beraad Digitale Overheid
+at the end of 2014, then to the OBDO on 8 March 2018, per roraonline.nl's
+own "Rijksregister standaarden" page, read directly on that entity. This
+corroborates rather than merely echoes: the two independent mentions
+(Digikoppeling's own comply-or-explain framing here, and the sourced
+succession chain on NL-OBDO) describe the same governance handover from
+two different angles.
 
 ## Relationships
 
