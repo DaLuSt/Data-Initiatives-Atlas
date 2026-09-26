@@ -20,7 +20,7 @@ next_step: null
 notes: >
   Idle as of 2026-09-26. Highest-priority available work per
   .agent/operating-model.md: continue closing discovery/unresolved.md
-  rows (70 open as of the last .agent/state.yaml update) — check
+  rows (69 open as of the last .agent/state.yaml update) — check
   discovery/candidates.md and discovery/research-queue.md too, though
   both were empty as of this update. Several remaining Known-source-block
   rows (bmi.bund.de, digitale-verwaltung.de, geant.org family) were

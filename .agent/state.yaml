@@ -16,16 +16,16 @@ updated: "2026-09-26"
 updated_by_session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
 
 graph:
-  entity_count: 721
-  relationship_edges: 1522
-  association_edges: 3136
-  wikilink_edges: 4452
-  edges_total: 9110
+  entity_count: 722
+  relationship_edges: 1524
+  association_edges: 3141
+  wikilink_edges: 4457
+  edges_total: 9122
   countries: 58
   regions: 1
 
 discovery:
-  unresolved_rows_open: 70
+  unresolved_rows_open: 69
   candidates_queued: 0
   research_queue_items: 0
   needs_human_open: 0
@@ -33,16 +33,14 @@ discovery:
 validation_status: clean
 
 last_merged_prs:
-  - number: 329
-    summary: "Added ES-LANTIK (completing the Basque NISAE quartet); closed discovery/unresolved.md rows #47 and #48"
-  - number: 330
-    summary: "Found edoc.coe.int, a third coe.int workaround; narrowed row #179"
   - number: 331
     summary: "Renamed CLAUDE.md to AGENTS.md; built out the full .agent/ structure (state.yaml/current-task.yaml now authoritative)"
   - number: 332
     summary: "Added INTL-OPENPEPPOL and INTL-PEPPOL-BIS-BILLING, closing discovery/unresolved.md row #49 in full"
   - number: 333
     summary: "Added NL-NEC, closing discovery/unresolved.md row #28"
+  - number: null
+    summary: "Added NL-API-STRATEGIE, closing discovery/unresolved.md row #30 (PR number filled in before merge)"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,

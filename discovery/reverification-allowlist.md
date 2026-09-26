@@ -7,11 +7,11 @@ Generated: 2026-09-26
 
 ## Why this exists
 
-**0 of the Atlas's 721 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
+**0 of the Atlas's 722 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
 
 Closing that debt — the re-verification pass — needs outbound HTTPS to the hosts those URLs point at. In an environment with a restricted egress policy, this is the allowlist to request. A denial shows up as `403 to CONNECT` from the proxy, which is an environment-level network policy and cannot be changed from inside a session. See `discovery/unresolved.md` for the standing record of the sourcing debt.
 
-The Atlas currently cites **2546 source URLs** across **746 hosts**, collapsing to **540 registrable domains**.
+The Atlas currently cites **2548 source URLs** across **746 hosts**, collapsing to **540 registrable domains**.
 
 ## Highest value first
 
@@ -39,8 +39,8 @@ A domain here is an **allowlist pattern**, not a URL. Most of them also happen t
 | `rijksoverheid.nl` | 24 | 20 | `www.rijksoverheid.nl` | ✅ opens |  |
 | `noraonline.nl` | 23 | 21 | `www.noraonline.nl` |  |  |
 | `openjustice.be` | 22 | 18 | `etaamb.openjustice.be` |  |  |
+| `forumstandaardisatie.nl` | 21 | 14 | `www.forumstandaardisatie.nl` |  |  |
 | `belgium.be` | 20 | 12 | `bosa.belgium.be` | ✅ opens |  |
-| `forumstandaardisatie.nl` | 20 | 13 | `www.forumstandaardisatie.nl` |  |  |
 
 **`Opened` and `Content confirmed` are different claims.** The first says the citation points somewhere real. The second says the pages were read and the information on them confirmed correct, which is the only thing that licenses `verification: primary-source`. See `docs/re-verification.md` §"A link check is not a content check".
 

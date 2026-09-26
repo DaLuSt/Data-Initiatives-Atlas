@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-26"
 previous_version: null
 successor: null
 
@@ -34,7 +34,15 @@ organisations:
 related_entities:
   - NL-PAS-TOE-OF-LEG-UIT
   - NL-FORUM-STANDAARDISATIE
+  - NL-API-STRATEGIE
 relationships:
+  - type: part-of
+    target: NL-API-STRATEGIE
+    source: fact
+    evidence: "CLOSES discovery/unresolved.md row #30. NL-API-STRATEGIE, created 2026-09-26, sourced from forumstandaardisatie.nl and the strategy's own introductory document (docs.geostandaarden.nl), both read directly. Version 1.0's own text (gitdocumentatie.logius.nl, already cited on this entity) states the ADR was submitted to Forum Standaardisatie as part of this strategy's normative part."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: maintained-by
     target: NL-LOGIUS
     source: fact
@@ -91,11 +99,9 @@ The ADR originates from the document *API Strategie voor de Nederlandse
 Overheid*, which was split into separate sub-documents; the ADR corresponds
 to part IIa of that strategy — confirmed by version 1.0's own text, read
 directly, which states the standard was submitted to Forum Standaardisatie
-"for inclusion on the Comply or Explain list." **The Nederlandse API
-Strategie as a whole is not modelled as a separate entity** — it is a
-collection of documents, several of which appear on the comply-or-explain
-list. Whether the strategy warrants its own entity, with the ADR as
-`part-of` it, is recorded in `discovery/unresolved.md`.
+"for inclusion on the Comply or Explain list." **Closed 2026-09-26**: the
+strategy is now modelled as [[NL-API-STRATEGIE]], with this entity
+`part-of` it.
 
 **Version history is now sourced rather than vague.** Confirmed directly:
 version 1.0 (9 July 2020) was the original comply-or-explain submission;
@@ -106,6 +112,7 @@ development.
 
 ## Relationships
 
+- `part-of` [[NL-API-STRATEGIE]] — new 2026-09-26, closing row #30.
 - Maintained by [[NL-LOGIUS]] since mid-2020, confirmed directly with a date.
 - Part of the [[NL-PAS-TOE-OF-LEG-UIT]] mandatory standards list, assessed
   through [[NL-FORUM-STANDAARDISATIE]] — confirmed directly.
