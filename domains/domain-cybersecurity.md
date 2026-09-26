@@ -165,8 +165,11 @@ passes; [[PL-NASK]] `implements` [[PL-KSC]] for CSIRT NASK specifically,
 while Poland's CSIRT GOV role sits with [[PL-ABW]], which the Atlas tags to
 [[DOMAIN-NATIONAL-SECURITY]] rather than this domain — the intelligence
 service running a CSIRT function is itself the finding, not an omission to
-fix here. **CSIRT MON remains unmodelled**, because Poland's Ministry of
-National Defence is not an Atlas entity.
+fix here. **CSIRT MON is now [[PL-CSIRT-MON]]** (created 2026-09-06,
+sourced around the CAPTCHA-walled `csirt-mon.wp.mil.pl`), closing all
+three of Poland's national CSIRTs — the Ministry of National Defence
+itself, its formal parent, remains unmodelled, the same coverage limit
+that leaves other Polish services without a ministry parent.
 
 ### 3. A three-layer chain that is nearly complete
 

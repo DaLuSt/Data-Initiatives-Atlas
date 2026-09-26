@@ -1,0 +1,16 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Two more stale cross-references found via a sweep for "remains
+  unmodelled" phrasing. DE-CATENA-X still said "HealthTrack-X remains
+  unmodelled" among the Manufacturing-X lighthouse family; DE-HEALTHTRACK-X
+  already exists (noted it is based-on EU-GAIA-X, not Catena-X, per its
+  own sources, so no based-on edge is claimed for it). DOMAIN-CYBERSECURITY
+  still said "CSIRT MON remains unmodelled, because Poland's Ministry of
+  National Defence is not an Atlas entity" -- the same stale claim just
+  fixed on PL-NASK; PL-CSIRT-MON already exists. Both corrected.
+prs:
+  - number: 364
+    title: "Fix two more stale 'remains unmodelled' claims"
+outcome: merged
+entity_count_after: 735

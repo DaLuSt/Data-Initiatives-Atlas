@@ -223,7 +223,11 @@ lighthouse projects are now Atlas entities, each `based-on` this one and
 `part-of` [[DE-MANUFACTURING-X]] — [[DE-FACTORY-X]] (mechanical
 engineering), [[DE-AEROSPACE-X]] (aerospace supply chains, led
 industrially by Airbus) and [[DE-CONSTRUCT-X]] (construction industry,
-led by Fraunhofer ISST). HealthTrack-X remains unmodelled.
+led by Fraunhofer ISST). **HealthTrack-X is now [[DE-HEALTHTRACK-X]]
+too**, closing the last of the four named lighthouse projects — though
+its own sources name [[EU-GAIA-X]], not this entity, as what it builds
+on, so no `based-on` edge to Catena-X is asserted for it the way the
+other three carry one.
 
 **Closed 2026-09-25**: [[DOMAIN-MANUFACTURING]] now exists, created
 because "Vervaardiging" is one of the seven important-entity sectors
