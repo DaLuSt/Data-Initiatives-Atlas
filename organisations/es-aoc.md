@@ -32,7 +32,7 @@ verification: primary-source
 
 start_date: 2002-03-27
 end_date: null
-last_verified: "2026-09-20"
+last_verified: "2026-09-26"
 previous_version: null
 successor: null
 
@@ -42,6 +42,7 @@ organisations: []
 related_entities:
   - ES
   - ES-MADRID-DIGITAL
+  - ES-LOCALRET
 relationships:
   - type: part-of
     target: ES
@@ -104,8 +105,10 @@ parties are public administrations, and its statutory mandate under Law
 
 ## Not modelled
 
-- **Localret**, the Catalan local-government association that co-founded
-  AOC — not independently researched.
+**Localret, researched 2026-09-26**: now its own entity, [[ES-LOCALRET]]
+(a consortium of Catalan municipalities founded 1997), carrying its own
+`participates-in` edge back to this entity.
+
 - The **Via Oberta** service and AOC's other named e-government
   platforms (eNOTUM, eTRAM, e-FACT) individually.
 - The 2025 statutory reform (Agreement GOV/160/2025) mentioned on AOC's
