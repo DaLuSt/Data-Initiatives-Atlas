@@ -1,0 +1,18 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Closed a gap DE-DKE's own file had flagged ("VDE is not an Atlas
+  entity, so only the DIN half of this joint governance is recorded ...
+  VDE's role is described here in prose"). Created DE-VDE (Verband der
+  Elektrotechnik Elektronik Informationstechnik), Germany's oldest
+  electrotechnical association, founded Berlin 21-22 January 1893,
+  which holds day-to-day operational and legal responsibility for
+  DE-DKE per DE-DKE's own already-cited din.de source. Sourced from
+  VDE's own official history page, read directly, which independently
+  confirms DKE's 1970 founding (its 50th anniversary in 2020). Added
+  DE-VDE participates-in DE-DKE.
+prs:
+  - number: 361
+    title: "Model VDE, DE-DKE's operational co-governor"
+outcome: merged
+entity_count_after: 735

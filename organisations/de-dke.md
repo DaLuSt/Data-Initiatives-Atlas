@@ -28,7 +28,7 @@ verification: primary-source
 
 start_date: 1970-01-01
 end_date: null
-last_verified: "2026-09-04"
+last_verified: "2026-09-26"
 previous_version: null
 successor: null
 
@@ -39,11 +39,12 @@ related_entities:
   - DE-DIN
   - EU-CENELEC
   - INTL-ISO
+  - DE-VDE
 relationships:
   - type: part-of
     target: DE-DIN
     source: fact
-    evidence: "Confirmed by reading din.de's own page directly (2026-09-04), which lists DKE among DIN's own standards committees ('Getting involved > Standards committees > DKE') and states DKE is 'a joint organization of DIN German Institute for Standardization and the VDE Association for Electrical, Electronic & Information Technologies', with VDE handling day-to-day operations. dke.de's own 'About us' page, also read directly, confirms DKE was established in 1970 when DIN and VDE merged all German electrotechnical associations into it, and that DKE's legal standing was further formalised five years later through a Standards Agreement between DIN and the Federal Republic of Germany. No Atlas entity exists for VDE, so only the DIN half of DKE's joint governance is recorded as a typed edge."
+    evidence: "Confirmed by reading din.de's own page directly (2026-09-04), which lists DKE among DIN's own standards committees ('Getting involved > Standards committees > DKE') and states DKE is 'a joint organization of DIN German Institute for Standardization and the VDE Association for Electrical, Electronic & Information Technologies', with VDE handling day-to-day operations. dke.de's own 'About us' page, also read directly, confirms DKE was established in 1970 when DIN and VDE merged all German electrotechnical associations into it, and that DKE's legal standing was further formalised five years later through a Standards Agreement between DIN and the Federal Republic of Germany. VDE is now its own entity, [[DE-VDE]] (created 2026-09-26), which carries the `participates-in` edge to DKE on its own file rather than duplicating it here."
     confidence: medium
     valid_from: 1970-01-01
     valid_until: null
@@ -85,14 +86,15 @@ Kommission Elektrotechnik Elektronik Informationstechnik (DKE)."** Its
 legal standing was further formalised five years later through a
 Standards Agreement between DIN and the Federal Republic of Germany.
 
-## A joint body, one edge recorded
+## A joint body, now with both halves recorded
 
-DKE is **jointly** run by [[DE-DIN]] and the **VDE** (Verband der
+DKE is **jointly** run by [[DE-DIN]] and **VDE** (Verband der
 Elektrotechnik Elektronik Informationstechnik), with day-to-day
 operational and legal responsibility held by VDE — confirmed by reading
-`din.de`'s own page directly. VDE is not an Atlas entity, so only the
-DIN half of this joint governance is recorded as a typed `part-of` edge;
-VDE's role is described here in prose.
+`din.de`'s own page directly. **VDE is now its own entity,
+[[DE-VDE]]** (created 2026-09-26, sourced from VDE's own history page,
+founded 1893), which carries the `participates-in` edge to this entity
+on its own file, per the Atlas's "record the edge once" convention.
 
 ## Germany's electrotechnical voice in three international bodies
 

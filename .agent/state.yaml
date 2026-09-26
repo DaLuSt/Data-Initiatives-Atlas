@@ -16,11 +16,11 @@ updated: "2026-09-26"
 updated_by_session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
 
 graph:
-  entity_count: 734
-  relationship_edges: 1551
-  association_edges: 3193
-  wikilink_edges: 4512
-  edges_total: 9256
+  entity_count: 735
+  relationship_edges: 1552
+  association_edges: 3197
+  wikilink_edges: 4514
+  edges_total: 9263
   countries: 58
   regions: 1
 
@@ -33,14 +33,14 @@ discovery:
 validation_status: clean
 
 last_merged_prs:
-  - number: 357
-    summary: "Found exact commencement date (30 Sep 2026, SI 2026/1015) for GB-ICO's Information Commission transition"
   - number: 358
     summary: "Added GB-NATIONAL-DATA-LIBRARY (GBP100m DSIT programme), closing a gap flagged on GB-DATA-GOV-UK"
   - number: 359
     summary: "Chased (inconclusively) CH-OPENDATA-SWISS's 'opendata.swiss next' lead; documented the attempt"
   - number: 360
     summary: "Fixed stale College Standaardisatie note on NL-DIGIKOPPELING (already resolved on NL-OBDO)"
+  - number: 361
+    summary: "Added DE-VDE, closing a gap flagged on DE-DKE (VDE holds DKE's day-to-day operational responsibility)"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
