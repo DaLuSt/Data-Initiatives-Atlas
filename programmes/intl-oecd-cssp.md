@@ -5,30 +5,29 @@ name: OECD Committee on Statistics and Statistical Policy
 alternative_names:
   - CSSP
   - OECD statistics committee
-  - CSTAT
 description: >
-  The OECD's committee on statistics and statistical policy, named by
-  Eurostat as one of the key international forums in which it represents the
-  European Union, alongside the United Nations Statistical Commission and
-  the Conference of European Statisticians. Eurostat describes these
-  international statistical agencies as cooperating to set up international
-  standards for statistics, improve the comparability of statistical
-  information, improve the coordination of international statistics-related
-  activities, and support national statistical systems financially or
-  technically.
+  The OECD's committee on statistics and statistical policy (CSSP),
+  named by Eurostat as one of the key international forums in which it
+  represents the European Union, alongside the United Nations
+  Statistical Commission and the Conference of European Statisticians.
+  Eurostat describes these international statistical agencies as
+  cooperating to set up international standards for statistics, improve
+  the comparability of statistical information, improve the
+  coordination of international statistics-related activities, and
+  support national statistical systems financially or technically.
 
 level: international
 country: null
 region: null
 
 status: active
-confidence: medium
+confidence: high
 coverage: low
 verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-18"
+last_verified: "2026-09-26"
 previous_version: null
 successor: null
 
@@ -42,8 +41,8 @@ relationships:
   - type: part-of
     target: INTL-OECD
     source: fact
-    evidence: "Eurostat states that it represents the EU in key international forums such as the United Nations Statistical Commission, the Conference of European Statisticians organised by the UNECE, and the OECD's committee on statistics and statistical policy (CSSP); a parallel passage on the same Eurostat page describes Eurostat as representing the European Commission in the OECD's statistics committee (CSTAT) (ec.europa.eu/eurostat Statistics Explained 'Statistical cooperation – introduction'). NOT READ — search-only. PARTIALLY CLOSES discovery/unresolved.md row #169 (2026-09-18): re-reading the OECD's own already-cited BodyID 7229 page in full (previously only its mandate statement was extracted) finds it labels participation as 'EU', not 'Commission': 'The European Union (EU) takes part in the work of the OECD, in accordance with the Supplementary Protocol to the Convention on the Organisation for Economic Co-operation and Development,' and lists a Bureau Member's affiliation as '(EU)' rather than '(European Commission)'. This corroborates the 'EU' framing from the OECD's own side, independent of Eurostat's page, though it does not disprove the parallel Eurostat passage describing Commission representation — both may be true of different aspects of the same participation. The CSSP/CSTAT naming half of this row was separately narrowed 2026-09-05."
-    confidence: medium
+    evidence: "CLOSES discovery/unresolved.md row #169. Confirmed by reading ec.europa.eu/eurostat's own 'Statistical cooperation – introduction' page directly (2026-09-26, both URL forms): 'Eurostat represents the EU in key international forums such as the United Nations Statistical Commission (UNSC), in the Conference of European Statisticians (CES) organised by the UNECE and in the OECD's committee on statistics and statistical policy (CSSP).' A direct read finds no 'CSTAT' anywhere on the page and no parallel passage describing Eurostat representing 'the European Commission' in any OECD body — the two-name, two-representation-claim premise this entity carried since creation rested on a search-engine summary marked 'NOT READ — search-only' and does not survive an actual read of the cited page. Independently, the OECD's own BodyID 7229 page, read directly 2026-09-05 and again 2026-09-18, names only 'CSSP' and labels participation '(EU)', not '(European Commission)' — both of this entity's own primary sources now agree on both points."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -51,9 +50,11 @@ sources:
   - title: "Statistical cooperation — introduction"
     url: "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Statistical_cooperation_-_introduction"
     publisher: "Eurostat — European Commission"
+    accessed: "2026-09-26"
   - title: "Statistical cooperation — introduction (alternate path)"
     url: "https://ec.europa.eu/eurostat/statistics-explained/index.php/Statistical_cooperation_-_introduction"
     publisher: "Eurostat — European Commission"
+    accessed: "2026-09-26"
   - title: "Committee on Statistics and Statistical Policy — On-Line Guide to OECD Intergovernmental Activity"
     url: "https://oecdgroups.oecd.org/Bodies/ShowBodyView.aspx?BodyID=7229&Lang=en"
     publisher: "OECD"
@@ -73,6 +74,14 @@ sources:
 > "EU or Commission" half of the naming question is narrowed — the OECD's
 > own page labels the participation "EU". See "The EU, not the
 > Commission — on the OECD's own page" below.
+>
+> **Fully closed 2026-09-26**: Eurostat's own cooperation page, previously
+> cited but never read directly (marked "search-only"), was read directly
+> for the first time. It does not contain the "CSTAT"/"Commission"
+> passage this entity had carried since creation — that premise came
+> from an unread search summary and does not survive contact with the
+> actual page. `alternative_names` no longer carries "CSTAT";
+> `confidence` raised to `high`.
 
 ## Description
 
@@ -95,20 +104,22 @@ layer and attracted less attention because it is one node rather than nine.
 The same sentence that connects Eurostat to the UN statistical system
 connects it here.
 
-## The name is unsettled, and both versions are recorded
+## The name was never actually unsettled — that came from an unread summary
 
-The sources give **two different names and acronyms** for what appears to be
-the same body:
+This entity was created carrying **two different names and acronyms** for
+what was assumed to be the same body — "CSSP" and "CSTAT" — plus two
+different claims about who is represented ("the EU" vs. "the European
+Commission"), both attributed to "a parallel passage on the same Eurostat
+page." That evidence was explicitly marked `NOT READ — search-only` at
+the time.
 
-| Rendering | Where |
-|---|---|
-| *committee on statistics and statistical policy* (**CSSP**) | the passage naming the EU's three forums |
-| *statistics committee* (**CSTAT**) | a parallel passage on the same Eurostat page describing what Eurostat represents the Commission in |
-
-Both are in `alternative_names`, and the entity is `confidence: low`
-because of it. The two passages also differ on **who is represented** — "the
-EU" in one and "the European Commission" in the other — which is not a
-distinction the Atlas can resolve without reading the page.
+**Reading the page directly, 2026-09-26, finds no such parallel
+passage.** Eurostat's own page names only **CSSP** and states only that
+Eurostat "represents the EU" in it — the same wording, the same forum,
+no second name and no second representation claim anywhere on the page.
+The "CSTAT"/"Commission" pairing was a search-engine-summary artifact
+that this entity carried, honestly flagged as unread, for over a month
+before anyone actually opened the source it was attributed to.
 
 `coverage: low` remains: the committee's composition, meeting cadence and
 outputs beyond its mandate statement are still unrecorded.
@@ -129,13 +140,13 @@ called [[INTL-OECD]] as a whole, though `part-of` [[INTL-OECD]] remains
 the closest available Atlas relationship for a body reporting to that
 organisation's own governing Council.
 
-**The CSSP/CSTAT naming question is now partly resolved.** The OECD's own
-page does **not** mention "CSTAT" anywhere — only "CSSP" appears. This
-does not prove CSTAT is wrong (Eurostat's page may describe a distinct or
-now-renamed body, or use an informal label), but it does mean the OECD's
-own primary source corroborates only one of the two names this entity
-carries. `confidence` moves from `low` to `medium` on the strength of that
-independent confirmation.
+**The CSSP/CSTAT naming question, resolved 2026-09-26.** The OECD's own
+page never mentioned "CSTAT" either — only "CSSP" appears there too. Both
+of this entity's primary sources, now both read directly, agree: the
+body is CSSP, full stop. `confidence` moved from `low` to `medium` on
+2026-09-05 for the OECD-side confirmation, and to `high` on 2026-09-26
+once Eurostat's own page was read directly and found not to contain the
+competing name at all.
 
 ## The EU, not the Commission — on the OECD's own page — 2026-09-18
 
@@ -149,14 +160,12 @@ Organisation for Economic Co-operation and Development."* The page's own
 Bureau listing names a member's affiliation as **"(EU)"**, not "(European
 Commission)".
 
-This corroborates the "EU" framing independently of Eurostat's page, but
-does not disprove the parallel Eurostat passage describing Commission
-representation — an EU-level participation right and a Commission
-official exercising it are not mutually exclusive, and no source read
-states that the two descriptions are describing different things. The row
-is narrowed, not fully closed: the OECD's own document now supports one of
-the two readings with a primary source of its own, where previously only
-Eurostat's page carried either claim.
+This corroborates the "EU" framing independently of Eurostat's page.
+**Closed 2026-09-26**: the "parallel Eurostat passage describing
+Commission representation" this section once hedged around does not
+exist — see "The name was never actually unsettled" above. Both of this
+entity's primary sources agree the participation is described as "the
+EU," and row #169 is fully closed for this entity.
 
 ## Relationships
 
@@ -167,7 +176,7 @@ Eurostat's page carried either claim.
 ## Sources
 
 Three sources: two are the same Eurostat page under its two URL forms
-(recorded honestly rather than padded out), and the OECD's own committee
-page, read directly 2026-09-05 and again in full 2026-09-18, is the first
-source on this entity that is not Eurostat describing OECD from the
-outside.
+(recorded honestly rather than padded out), both read directly for the
+first time 2026-09-26 after being carried as unread search-only citations
+since creation; and the OECD's own committee page, read directly
+2026-09-05 and again in full 2026-09-18.
