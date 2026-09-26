@@ -33,14 +33,14 @@ discovery:
 validation_status: clean
 
 last_merged_prs:
-  - number: 358
-    summary: "Added GB-NATIONAL-DATA-LIBRARY (GBP100m DSIT programme), closing a gap flagged on GB-DATA-GOV-UK"
   - number: 359
     summary: "Chased (inconclusively) CH-OPENDATA-SWISS's 'opendata.swiss next' lead; documented the attempt"
   - number: 360
     summary: "Fixed stale College Standaardisatie note on NL-DIGIKOPPELING (already resolved on NL-OBDO)"
   - number: 361
     summary: "Added DE-VDE, closing a gap flagged on DE-DKE (VDE holds DKE's day-to-day operational responsibility)"
+  - number: 362
+    summary: "Fixed stale CSIRT MON note on PL-NASK (PL-CSIRT-MON already exists)"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,

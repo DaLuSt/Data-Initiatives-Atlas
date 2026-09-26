@@ -1,0 +1,14 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Quality fix: PL-NASK's own "three national CSIRTs" table and prose
+  still said CSIRT MON was "not modelled" because the Polish Ministry
+  of National Defence is not an Atlas entity. PL-CSIRT-MON had already
+  been created (2026-09-06) using alternate sources despite that
+  ministry gap. Corrected the table and prose to reflect all three
+  national CSIRTs now being modelled, and cross-referenced PL-CSIRT-MON.
+prs:
+  - number: 362
+    title: "Fix stale CSIRT MON note on PL-NASK"
+outcome: merged
+entity_count_after: 735

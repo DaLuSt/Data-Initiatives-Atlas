@@ -25,7 +25,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-09-26"
 previous_version: null
 successor: null
 
@@ -37,6 +37,7 @@ related_entities:
   - PL-KSC
   - PL-ABW
   - PL-MC
+  - PL-CSIRT-MON
 relationships:
   - type: governed-by
     target: PL-MC
@@ -86,7 +87,7 @@ independent research-development unit in **1993**, and reached **State
 Research Institute** status in **2017** — none of the three dates precise
 enough to set `start_date`.
 
-## Poland's three national CSIRTs, now two of them modelled
+## Poland's three national CSIRTs, all three now modelled
 
 The Act of **5 July 2018** on the national cybersecurity system — [[PL-KSC]]
 — assigns the national-level CSIRT role to three bodies:
@@ -95,17 +96,20 @@ The Act of **5 July 2018** on the national cybersecurity system — [[PL-KSC]]
 |---|---|---|
 | **CSIRT GOV** | the Internal Security Agency | [[PL-ABW]] `implements` [[PL-KSC]] |
 | **CSIRT NASK** | NASK — State Research Institute | **this entity** |
-| **CSIRT MON** | the Ministry of National Defence | **not modelled** |
+| **CSIRT MON** | the Ministry of National Defence | [[PL-CSIRT-MON]] (created 2026-09-06) |
 
 Together they are described as ensuring a coherent, comprehensive risk
 management system at national level, countering cross-sectoral and
 transboundary threats and coordinating the handling of reported incidents.
 
 The intelligence batch asserted the ABW edge and recorded the other two as
-open. This closes one of them. **CSIRT MON remains unmodelled**, because the
-Polish Ministry of National Defence is not an Atlas entity — the same
-coverage limit that keeps [[PL-SKW]] and [[PL-SWW]] without a ministry
-parent.
+open. Both are now closed: this entity for CSIRT NASK, and
+**[[PL-CSIRT-MON]]**, created 2026-09-06 despite its own team's site
+(`csirt-mon.wp.mil.pl`) being CAPTCHA-walled — modelled instead from
+alternate sources, per that entity's own file. The Polish Ministry of
+National Defence itself remains unmodelled, the same coverage limit that
+keeps [[PL-SKW]] and [[PL-SWW]] without a ministry parent — but the CSIRT
+that sits under it is no longer missing on that account.
 
 ## Not a security agency
 
