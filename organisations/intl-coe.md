@@ -27,7 +27,7 @@ verification: primary-source
 
 start_date: 1949-05-05
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-26"
 previous_version: null
 successor: null
 
@@ -81,6 +81,10 @@ sources:
     url: "https://guides.ll.georgetown.edu/c.php?g=363530&p=4795565"
     publisher: "Georgetown Law Library"
     accessed: "2026-08-28"
+  - title: "Map of the Council of Europe 46 member states (2024)"
+    url: "https://edoc.coe.int/en/map-of-the-member-states/5332-map-of-the-council-of-europe-46-member-states.html"
+    publisher: "Council of Europe — edoc.coe.int"
+    accessed: "2026-09-26"
 ---
 
 # Council of Europe
@@ -196,3 +200,13 @@ Wikipedia article on CoE member states, the EEAS's own page on EU–CoE
 relations, the UK government's own page on its CoE delegation, and a
 Georgetown Law Library research guide. A genuine majority, promoting
 `verification` to `primary-source`.
+
+**New `coe.int`-family workaround found 2026-09-26**: `edoc.coe.int`,
+the Council of Europe's own document-publishing subdomain, is reachable
+where `www.coe.int`, `rm.coe.int`, `pace.coe.int` and
+`commonslibrary.parliament.uk` all still 403 — confirmed directly by
+reading its own "Map of the Council of Europe 46 member states (2024)"
+publication, closing the coe.int-chart clause of
+`discovery/unresolved.md` row #179. `assembly.coe.int` and
+`search.coe.int` were the only two coe.int subdomains previously found
+reachable; this is a third.

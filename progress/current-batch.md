@@ -1,6 +1,14 @@
 # Current Batch
 
-**Status:** No batch in progress. **[[ES-LANTIK]] added 2026-09-25**,
+**Status:** No batch in progress. **New `coe.int`-family workaround
+found 2026-09-26**: `edoc.coe.int`, the Council of Europe's own
+document-publishing subdomain, is reachable where `www.coe.int` and
+`rm.coe.int` still 403. Used to close row #179's 46-state member-count
+chart clause directly on [[INTL-COE]] (its own "Map of the Council of
+Europe 46 member states (2024)" publication). Only JTC 1 (ontology item
+#32) remains open on that row.
+
+**[[ES-LANTIK]] added 2026-09-25**,
 completing the four-way Basque NISAE quartet ([[ES-EJIE]], [[ES-CCASA]],
 [[ES-IZFE]], [[ES-LANTIK]]) that `discovery/unresolved.md` item #5 has
 tracked since 2026-09-20. `bizkaia.eus` was retried (five URLs) and
