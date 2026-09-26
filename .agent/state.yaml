@@ -16,11 +16,11 @@ updated: "2026-09-26"
 updated_by_session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
 
 graph:
-  entity_count: 724
-  relationship_edges: 1528
-  association_edges: 3148
-  wikilink_edges: 4463
-  edges_total: 9139
+  entity_count: 725
+  relationship_edges: 1530
+  association_edges: 3151
+  wikilink_edges: 4466
+  edges_total: 9147
   countries: 58
   regions: 1
 
@@ -33,14 +33,14 @@ discovery:
 validation_status: clean
 
 last_merged_prs:
-  - number: 333
-    summary: "Added NL-NEC, closing discovery/unresolved.md row #28"
   - number: 334
     summary: "Added NL-API-STRATEGIE, closing discovery/unresolved.md row #30"
   - number: 335
     summary: "Added EU-LEGAL-DATA-SPACE, narrowing discovery/unresolved.md row #125"
   - number: 336
     summary: "Added EU-MEDIA-FREEDOM-ACT, closing a gap flagged on EU-MEDIA-DATA-SPACE"
+  - number: null
+    summary: "Added EU-TOURISM-TRANSITION-PATHWAY, closing a gap flagged on EU-TOURISM-DATA-SPACE (PR number filled in before merge)"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,

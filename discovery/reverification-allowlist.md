@@ -7,11 +7,11 @@ Generated: 2026-09-26
 
 ## Why this exists
 
-**0 of the Atlas's 724 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
+**0 of the Atlas's 725 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
 
 Closing that debt — the re-verification pass — needs outbound HTTPS to the hosts those URLs point at. In an environment with a restricted egress policy, this is the allowlist to request. A denial shows up as `403 to CONNECT` from the proxy, which is an environment-level network policy and cannot be changed from inside a session. See `discovery/unresolved.md` for the standing record of the sourcing debt.
 
-The Atlas currently cites **2552 source URLs** across **747 hosts**, collapsing to **540 registrable domains**.
+The Atlas currently cites **2554 source URLs** across **747 hosts**, collapsing to **540 registrable domains**.
 
 ## Highest value first
 
@@ -21,7 +21,7 @@ A domain here is an **allowlist pattern**, not a URL. Most of them also happen t
 
 | Domain | URLs | Entities | Example host | Opened | Content confirmed |
 |---|---|---|---|---|---|
-| `europa.eu` | 348 | 202 | `certification.enisa.europa.eu` | ✅ opens | ✅ 2026-08-21 |
+| `europa.eu` | 350 | 203 | `certification.enisa.europa.eu` | ✅ opens | ✅ 2026-08-21 |
 | `wikipedia.org` | 204 | 178 | `cs.wikipedia.org` | ✅ opens |  |
 | `gouv.fr` | 71 | 27 | `aide.monespacenis2.cyber.gouv.fr` | ✅ opens |  |
 | `gov.pl` | 68 | 27 | `api.dane.gov.pl` | ✅ opens |  |

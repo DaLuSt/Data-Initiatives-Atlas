@@ -1,0 +1,13 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Closed a gap EU-TOURISM-DATA-SPACE's own file had flagged (not a
+  numbered discovery/unresolved.md row): created
+  EU-TOURISM-TRANSITION-PATHWAY (published 4 February 2022, co-created
+  with tourism stakeholders, 27 areas of measures across four domains).
+  No source found connects it directly to EU-TOURISM-DATA-SPACE, so a
+  low-confidence related-to edge is recorded rather than a stronger
+  claim. Sourced from two European Commission pages, both read directly.
+prs: []
+outcome: merged
+entity_count_after: 725
