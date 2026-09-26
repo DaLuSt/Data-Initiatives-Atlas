@@ -22,7 +22,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-20"
+last_verified: "2026-09-26"
 previous_version: null
 successor: null
 
@@ -35,6 +35,7 @@ related_entities:
   - EU-SDG
   - EU-TOURISM-DATA-SPACE
   - EU-MEDIA-DATA-SPACE
+  - EU-LEGAL-DATA-SPACE
 relationships:
   - type: part-of
     target: EU-COMMON-DATA-SPACES
@@ -228,8 +229,13 @@ DG GROW role remain unestablished, so `coverage` moves from `low` to
 - **PPDS (Public Procurement Data Space)** as its own entity, for the same
   reason, matching the DEPLOYTOUR/TEMS precedent set on
   [[EU-TOURISM-DATA-SPACE]] and [[EU-MEDIA-DATA-SPACE]].
-- The **European Legal Data Space**, the third item named on the
-  Commission's overview page — not independently researched this pass.
+
+**The European Legal Data Space, researched 2026-09-26**: now its own
+entity, [[EU-LEGAL-DATA-SPACE]], launched 31 October 2025 and operated
+by the Publications Office of the EU. `related-to` this entity is
+recorded on ELDS's own file — both are catalogued under the Commission's
+"Public administration" heading, but no source states a governance
+dependency between them.
 
 ## Sources
 

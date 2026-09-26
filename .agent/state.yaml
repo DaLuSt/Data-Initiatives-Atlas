@@ -16,11 +16,11 @@ updated: "2026-09-26"
 updated_by_session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
 
 graph:
-  entity_count: 722
-  relationship_edges: 1524
-  association_edges: 3141
-  wikilink_edges: 4457
-  edges_total: 9122
+  entity_count: 723
+  relationship_edges: 1526
+  association_edges: 3145
+  wikilink_edges: 4460
+  edges_total: 9131
   countries: 58
   regions: 1
 
@@ -33,14 +33,14 @@ discovery:
 validation_status: clean
 
 last_merged_prs:
-  - number: 331
-    summary: "Renamed CLAUDE.md to AGENTS.md; built out the full .agent/ structure (state.yaml/current-task.yaml now authoritative)"
   - number: 332
     summary: "Added INTL-OPENPEPPOL and INTL-PEPPOL-BIS-BILLING, closing discovery/unresolved.md row #49 in full"
   - number: 333
     summary: "Added NL-NEC, closing discovery/unresolved.md row #28"
   - number: 334
     summary: "Added NL-API-STRATEGIE, closing discovery/unresolved.md row #30"
+  - number: null
+    summary: "Added EU-LEGAL-DATA-SPACE, narrowing discovery/unresolved.md row #125 (PR number filled in before merge)"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
