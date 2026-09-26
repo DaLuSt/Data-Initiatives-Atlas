@@ -24,6 +24,7 @@ status: active
 confidence: medium
 coverage: medium
 verification: primary-source
+organisation_role: executive
 start_date: 1991-01-01
 end_date: null
 last_verified: "2026-08-22"

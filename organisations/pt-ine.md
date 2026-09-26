@@ -19,6 +19,7 @@ status: active
 confidence: medium
 coverage: low
 verification: primary-source
+organisation_role: executive
 
 start_date: null
 end_date: null

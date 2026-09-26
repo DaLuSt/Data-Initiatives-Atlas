@@ -29,6 +29,7 @@ status: superseded
 confidence: medium
 coverage: low
 verification: primary-source
+organisation_role: regulatory
 
 start_date: 2003-01-01
 end_date: 2017-01-01
