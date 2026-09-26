@@ -101,10 +101,10 @@ fact.
 - **DG EMPL** as a separate organisation entity — the Atlas does not
   model Directorates-General in their own right (a still-open ontology
   question, `discovery/unresolved.md` item #16).
-- **Europass** and the **European Skills Agenda**, the other two items
-  named alongside ESCO on [[EU-SKILLS-DATA-SPACE]]'s file as
-  "previously presumed" connections — not independently researched this
-  pass.
+- ~~**Europass** and the **European Skills Agenda**~~ — **researched
+  later the same day**: now [[EU-EUROPASS]] and [[EU-SKILLS-AGENDA]].
+  [[EU-SKILLS-DATA-SPACE]]'s own file records all three of its
+  "previously presumed" connections as now researched.
 
 ## Relationships
 

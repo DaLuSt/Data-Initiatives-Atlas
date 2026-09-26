@@ -1,0 +1,15 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Quality fix: EU-ESCO's "Not modelled" section still said "Europass and
+  the European Skills Agenda ... not independently researched this
+  pass," but both were researched and created later the same day earlier
+  this session (EU-EUROPASS, EU-SKILLS-AGENDA), and EU-SKILLS-DATA-SPACE's
+  own file already records all three "previously presumed" connections
+  as researched. Corrected the stale claim with wikilinks to the two now-
+  existing entities.
+prs:
+  - number: 352
+    title: "Fix stale Europass/Skills Agenda note on EU-ESCO"
+outcome: merged
+entity_count_after: 732
