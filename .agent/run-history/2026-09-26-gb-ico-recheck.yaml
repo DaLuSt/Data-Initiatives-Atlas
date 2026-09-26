@@ -1,0 +1,19 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Re-checked GB-ICO's long-standing "cannot establish whether the
+  Information Commission transition has happened" open question.
+  legislation.gov.uk's own text of SI 2026/1015 (The Data (Use and
+  Access) Act 2025 (Commencement No. 9 and Transitional and Saving
+  Provisions) Regulations 2026), read directly, gives an exact
+  commencement date: 30 September 2026, made 10 September 2026. As of
+  this re-check (2026-09-26) that date is four days away -- the
+  transition is now scheduled to an exact date rather than "expected
+  during 2026," but has not yet occurred. status: active unchanged, no
+  successor entity created, consistent with the entity's own established
+  reasoning.
+prs:
+  - number: 357
+    title: "Fix a commencement date for GB-ICO's Information Commission transition"
+outcome: merged
+entity_count_after: 733

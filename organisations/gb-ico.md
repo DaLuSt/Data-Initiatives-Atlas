@@ -14,8 +14,8 @@ description: >
   digital service providers. Section 117 of the Data (Use and Access) Act
   2025 establishes an Information Commission to replace it, replacing the
   single Information Commissioner with a board comprising a chair, a chief
-  executive and seven non-executive directors, with the change reported as
-  expected during 2026.
+  executive and seven non-executive directors. A commencement order (SI
+  2026/1015) sets the change for 30 September 2026.
 
 level: national
 country: GB
@@ -27,7 +27,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-09-26"
 previous_version: null
 successor: null
 
@@ -82,6 +82,10 @@ sources:
     url: "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/international-transfers/receiving-personal-information-from-the-eea/"
     publisher: "Information Commissioner's Office (UK)"
     accessed: "2026-08-22"
+  - title: "The Data (Use and Access) Act 2025 (Commencement No. 9 and Transitional and Saving Provisions) Regulations 2026 (SI 2026/1015)"
+    url: "https://www.legislation.gov.uk/uksi/2026/1015/made"
+    publisher: "legislation.gov.uk (The National Archives)"
+    accessed: "2026-09-26"
 ---
 
 # Information Commissioner's Office
@@ -141,6 +145,24 @@ three times before.
 [[ES-LCGC]] is `proposed` because it is a draft. Here the *instrument* is in
 force and the *institutional change it mandates* has an unverified
 completion date. None of the three vocabulary values says that.
+
+## Re-checked 2026-09-26: the completion date is now fixed, and it is days away
+
+The uncertainty above is resolved to a specific date, though not yet to a
+completed fact. Confirmed by reading legislation.gov.uk's own text of The
+Data (Use and Access) Act 2025 (Commencement No. 9 and Transitional and
+Saving Provisions) Regulations 2026 (SI 2026/1015) directly: made on **10
+September 2026**, it "appoint[s] **30 September 2026**" as the date
+sections 117(4)(a), 118 and 119 of [[GB-DUAA]] come into force — the
+sections that abolish the office of Information Commissioner (§118) and
+transfer its functions to the Information Commission (§119).
+
+As of this entity's own re-verification date (2026-09-26), that date is
+**four days away** — the transition is now scheduled, not merely
+"expected," but has **not yet occurred**. `status: active` remains
+correct and no successor entity is created, for the same reasons given
+above; this is simply the first point at which the Atlas can name an
+exact date rather than a season.
 
 ## The seventh data protection authority
 
