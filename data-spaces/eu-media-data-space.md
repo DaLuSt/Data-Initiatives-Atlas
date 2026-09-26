@@ -106,8 +106,18 @@ side.
 - TEMS as its own entity — it is the data space's deployment project,
   described in prose here rather than as a separate node.
 - Governance or operators beyond TEMS's own role.
-- The relationship to [[EU-AI-ACT]]'s transparency provisions for media
-  — not yet researched.
+
+**[[EU-AI-ACT]]'s transparency provisions, checked 2026-09-26**: Article
+50's deepfake- and AI-generated-content-disclosure obligations (applicable
+from 2 August 2026, per the Commission's own FAQ page and guidelines,
+searched but not read directly this pass since no connection was found to
+justify it) are the provisions this row's original wording anticipated.
+No source found states any link between Article 50 and this data space —
+they address the same broad subject (media content) from unrelated
+Commission workstreams, the same "dates line up, chronology is not
+causation" pattern `discovery/unresolved.md` item #174 already records for
+[[EU-AI-ACT]] and [[UN-AI-ETHICS-RECOMMENDATION]]. No relationship
+asserted.
 
 **The European Media Freedom Act, researched 2026-09-26**: now its own
 entity, [[EU-MEDIA-FREEDOM-ACT]] (Regulation (EU) 2024/1083). No source
