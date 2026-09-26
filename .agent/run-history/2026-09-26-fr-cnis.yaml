@@ -6,6 +6,8 @@ summary: >
   l'information statistique), established 1984, whose consultation
   produced France's national SDG indicator set. Sourced from cnis.fr's
   own homepage and INSEE's own page on the Cnis, both read directly.
-prs: []
+prs:
+  - number: 343
+    title: "Model Cnis, source of France's SDG indicator selection"
 outcome: merged
 entity_count_after: 731
