@@ -3,15 +3,15 @@
 > **Generated file — do not hand-edit.** Regenerate with
 > `python tools/source_hosts.py --markdown -o discovery/reverification-allowlist.md`
 
-Generated: 2026-09-25
+Generated: 2026-09-26
 
 ## Why this exists
 
-**0 of the Atlas's 718 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
+**0 of the Atlas's 720 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
 
 Closing that debt — the re-verification pass — needs outbound HTTPS to the hosts those URLs point at. In an environment with a restricted egress policy, this is the allowlist to request. A denial shows up as `403 to CONNECT` from the proxy, which is an environment-level network policy and cannot be changed from inside a session. See `discovery/unresolved.md` for the standing record of the sourcing debt.
 
-The Atlas currently cites **2538 source URLs** across **743 hosts**, collapsing to **538 registrable domains**.
+The Atlas currently cites **2544 source URLs** across **746 hosts**, collapsing to **540 registrable domains**.
 
 ## Highest value first
 
@@ -21,12 +21,12 @@ A domain here is an **allowlist pattern**, not a URL. Most of them also happen t
 
 | Domain | URLs | Entities | Example host | Opened | Content confirmed |
 |---|---|---|---|---|---|
-| `europa.eu` | 343 | 200 | `certification.enisa.europa.eu` | ✅ opens | ✅ 2026-08-21 |
+| `europa.eu` | 344 | 200 | `certification.enisa.europa.eu` | ✅ opens | ✅ 2026-08-21 |
 | `wikipedia.org` | 204 | 178 | `cs.wikipedia.org` | ✅ opens |  |
 | `gouv.fr` | 71 | 27 | `aide.monespacenis2.cyber.gouv.fr` | ✅ opens |  |
 | `gov.pl` | 68 | 27 | `api.dane.gov.pl` | ✅ opens |  |
 | `iso.org` | 65 | 61 | `www.iso.org` | ✅ opens | ✅ 2026-08-21 |
-| `coe.int` | 54 | 43 | `hudoc.echr.coe.int` | ✅ opens | ✅ 2026-08-21 |
+| `coe.int` | 55 | 43 | `edoc.coe.int` | ✅ opens | ✅ 2026-08-21 |
 | `overheid.nl` | 53 | 37 | `data.overheid.nl` | ✅ opens |  |
 | `digitaleoverheid.nl` | 46 | 32 | `www.digitaleoverheid.nl` | ✅ opens |  |
 | `bund.de` | 42 | 23 | `bmds.bund.de` | ✅ opens | ✅ 2026-08-21 |
@@ -488,6 +488,8 @@ parldigi.ch
 parlementairemonitor.nl
 parliament.uk
 pdok.nl
+peppol.eu
+peppol.org
 personalausweisportal.de
 personuvernd.is
 piwikpro.de

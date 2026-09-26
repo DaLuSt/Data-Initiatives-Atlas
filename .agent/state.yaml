@@ -16,16 +16,16 @@ updated: "2026-09-26"
 updated_by_session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
 
 graph:
-  entity_count: 718
-  relationship_edges: 1517
-  association_edges: 3123
-  wikilink_edges: 4435
-  edges_total: 9075
+  entity_count: 720
+  relationship_edges: 1520
+  association_edges: 3130
+  wikilink_edges: 4445
+  edges_total: 9095
   countries: 58
   regions: 1
 
 discovery:
-  unresolved_rows_open: 72
+  unresolved_rows_open: 71
   candidates_queued: 0
   research_queue_items: 0
   needs_human_open: 0
@@ -41,6 +41,8 @@ last_merged_prs:
     summary: "Found edoc.coe.int, a third coe.int workaround; narrowed row #179"
   - number: 331
     summary: "Renamed CLAUDE.md to AGENTS.md; built out the full .agent/ structure (state.yaml/current-task.yaml now authoritative)"
+  - number: null
+    summary: "Added INTL-OPENPEPPOL and INTL-PEPPOL-BIS-BILLING, closing discovery/unresolved.md row #49 in full (PR number filled in before merge)"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
