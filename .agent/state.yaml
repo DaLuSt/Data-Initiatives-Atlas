@@ -39,8 +39,8 @@ last_merged_prs:
     summary: "Added EU-EUROPASS, closing a gap flagged on EU-SKILLS-DATA-SPACE"
   - number: 340
     summary: "Added EU-SKILLS-AGENDA, closing the last gap flagged on EU-SKILLS-DATA-SPACE"
-  - number: null
-    summary: "Added EU-EDM, closing a gap flagged on EU-CULTURAL-HERITAGE-DATA-SPACE (PR number filled in before merge)"
+  - number: 341
+    summary: "Added EU-EDM, closing a gap flagged on EU-CULTURAL-HERITAGE-DATA-SPACE"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,

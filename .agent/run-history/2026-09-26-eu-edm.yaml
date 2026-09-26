@@ -10,6 +10,8 @@ summary: >
   Europeana's own knowledge base and the Dublin Core Metadata
   Initiative's Metadata Standards Index, both read directly
   (pro.europeana.eu itself remains 403-blocked).
-prs: []
+prs:
+  - number: 341
+    title: "Model the Europeana Data Model (EDM)"
 outcome: merged
 entity_count_after: 729
