@@ -111,8 +111,16 @@ parties are public administrations, and its statutory mandate under Law
 
 - The **Via Oberta** service and AOC's other named e-government
   platforms (eNOTUM, eTRAM, e-FACT) individually.
-- The 2025 statutory reform (Agreement GOV/160/2025) mentioned on AOC's
-  own page — not independently researched this pass.
+- **The 2025 statutory reform (Agreement GOV/160/2025), checked
+  2026-09-26**: aoc.cat's own statutes listing, read directly, describes
+  it as "authorizing the modification of articles 7 and 11.1 of the
+  Statutes of the Open Administration Consortium of Catalonia and
+  determining the designation of the represent members of the
+  Generalitat Administration and the independent members" — a governance
+  procedure amendment (board designation process), not a change to the
+  consortium's name, founding date or core membership. Deliberately not
+  modelled as a separate fact or relationship: it does not affect
+  anything else in this entity's frontmatter.
 - Any relationship to [[ES-MADRID-DIGITAL]] (Madrid's own regional IT
   agency, added 2026-09-20) — no source connects them; recorded for
   navigation only, as siblings under `discovery/unresolved.md` item #5.
