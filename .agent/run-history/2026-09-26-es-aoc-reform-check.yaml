@@ -1,0 +1,16 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Checked ES-AOC's own "Not modelled" note on the 2025 statutory reform
+  (Agreement GOV/160/2025). aoc.cat's own statutes listing, read directly,
+  describes it as a governance-procedure amendment (modifying articles 7
+  and 11.1, board-member designation process) -- not a change to the
+  consortium's name, founding date or membership. Recorded as a checked,
+  deliberate non-assertion rather than an unresearched gap; no new fact
+  or relationship added since nothing in the reform affects this entity's
+  frontmatter.
+prs:
+  - number: 349
+    title: "Check ES-AOC's 2025 statutory reform note"
+outcome: merged
+entity_count_after: 732
