@@ -33,14 +33,14 @@ discovery:
 validation_status: clean
 
 last_merged_prs:
-  - number: 355
-    summary: "Fixed stale NL-NCSC note on BE-CCB (NL-NCSC already exists elsewhere in the graph)"
   - number: 356
     summary: "Re-checked GB-CSRB's parliamentary stage: through Commons, now in Lords committee, still proposed"
   - number: 357
     summary: "Found exact commencement date (30 Sep 2026, SI 2026/1015) for GB-ICO's Information Commission transition"
   - number: 358
     summary: "Added GB-NATIONAL-DATA-LIBRARY (GBP100m DSIT programme), closing a gap flagged on GB-DATA-GOV-UK"
+  - number: 359
+    summary: "Chased (inconclusively) CH-OPENDATA-SWISS's 'opendata.swiss next' lead; documented the attempt"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,

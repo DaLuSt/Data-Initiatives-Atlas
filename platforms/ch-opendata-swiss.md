@@ -17,7 +17,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-09-26"
 previous_version: null
 successor: null
 
@@ -80,6 +80,17 @@ administration, operated by [[CH-BFS]].
 A finding worth flagging: the portal's own homepage advertises
 **"opendata.swiss next"** — a stated future replacement for the current
 site — not otherwise recorded here and not chased further this pass.
+
+**Chased 2026-09-26, inconclusively**: `opendata.swiss/en/opendata-swiss-next`
+(the portal's own dedicated page on the successor) returned HTTP 403 on
+every attempt; BFS's own general OGD page, the `opendata-swiss` GitHub
+organisation, and its documentation handbook were all read directly but
+none named a replacement platform, standard or timeline. Search-indexed
+content (not read directly, so not asserted here) describes a migration
+to a semantic/RDF-based platform aligned with DCAT-AP CH, targeting a
+2026/2027 production launch — plausible and consistent with the
+DCAT-AP-family pattern the Atlas already models elsewhere, but not
+confirmed by a source actually opened this pass.
 
 ## A national portal with a custodian, unlike two of its peers
 
