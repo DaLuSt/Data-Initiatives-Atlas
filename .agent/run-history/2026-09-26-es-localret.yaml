@@ -6,6 +6,8 @@ summary: >
   a Catalan municipalist consortium founded 1997 that co-founded ES-AOC
   in 2002. Sourced from Localret's own official page and its Catalan
   Wikipedia article, both read directly.
-prs: []
+prs:
+  - number: 342
+    title: "Model Localret, ES-AOC's co-founding consortium"
 outcome: merged
 entity_count_after: 730

@@ -39,8 +39,8 @@ last_merged_prs:
     summary: "Added EU-SKILLS-AGENDA, closing the last gap flagged on EU-SKILLS-DATA-SPACE"
   - number: 341
     summary: "Added EU-EDM, closing a gap flagged on EU-CULTURAL-HERITAGE-DATA-SPACE"
-  - number: null
-    summary: "Added ES-LOCALRET, closing a gap flagged on ES-AOC (PR number filled in before merge)"
+  - number: 342
+    summary: "Added ES-LOCALRET, closing a gap flagged on ES-AOC"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
