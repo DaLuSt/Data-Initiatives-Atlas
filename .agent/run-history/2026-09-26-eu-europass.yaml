@@ -1,0 +1,15 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Closed a gap EU-SKILLS-DATA-SPACE's own file had flagged (not a
+  numbered discovery/unresolved.md row): created EU-EUROPASS, the EU's
+  free skills/career platform. Current legal basis is Decision (EU)
+  2018/646 (18 April 2018), repealing the original Decision No
+  2241/2004/EC (15 December 2004) that first created Europass.
+  eur-lex.europa.eu returned empty content for the 2018 Decision's CELEX
+  number, so a legislation.gov.uk mirror was used instead. Re-checked
+  and confirmed no source connects it directly to EU-SKILLS-DATA-SPACE,
+  matching EU-ESCO's finding earlier this session.
+prs: []
+outcome: merged
+entity_count_after: 727
