@@ -28,7 +28,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-09-26"
 previous_version: null
 successor: null
 
@@ -132,9 +132,10 @@ add four entities to say one thing.
 ⚠ The **Geospatial Commission** was among the merged teams. It is the body
 that would otherwise be the UK's counterpart to [[NL-KADASTER]] and the
 geospatial authorities in [[DOMAIN-GEOSPATIAL]], and it **no longer exists
-as an independent organisation**. Ordnance Survey, the UK's national mapping
-agency, is not modelled either. The UK therefore joins this Atlas with **no
-geospatial entity at all**.
+as an independent organisation**. **[[GB-OS]] (Ordnance Survey), the UK's
+national mapping agency, is modelled separately** — the UK's geospatial
+layer is represented through Ordnance Survey rather than through the
+now-defunct Geospatial Commission or GDS.
 
 ## Its parent department changed twice in two years
 
