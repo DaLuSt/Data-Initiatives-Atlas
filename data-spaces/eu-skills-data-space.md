@@ -34,6 +34,7 @@ related_entities:
   - EU-DS4SKILLS
   - EU-EDGE-SKILLS
   - EU-ESCO
+  - EU-EUROPASS
 relationships:
   - type: part-of
     target: EU-COMMON-DATA-SPACES
@@ -105,16 +106,18 @@ checked-and-negative finding, not an unresearched gap.
 
 ## Not modelled
 
-- **Europass** and the **European Skills Agenda** — previously presumed
-  to be existing EU skills-data machinery this data space builds on.
-  Checked directly against [[EU-DS4SKILLS]]'s own sources (2026-09-05):
-  neither is mentioned. Still not Atlas entities, and still not
-  confirmed connected to this data space by any source read.
+- The **European Skills Agenda** — previously presumed to be existing
+  EU skills-data machinery this data space builds on. Checked directly
+  against [[EU-DS4SKILLS]]'s own sources (2026-09-05): not mentioned.
+  Still not an Atlas entity, and still not confirmed connected to this
+  data space by any source read.
 
-**ESCO, researched 2026-09-26**: now its own entity, [[EU-ESCO]]
-(launched 28 July 2017, maintained by DG EMPL). Re-checked directly
-against ESCO's own page: still no stated connection to this data space,
-so `related-to` at `confidence: low` is recorded on ESCO's own file
+**ESCO and Europass, researched 2026-09-26**: both now their own
+entities, [[EU-ESCO]] (launched 28 July 2017, maintained by DG EMPL) and
+[[EU-EUROPASS]] (current legal basis Decision (EU) 2018/646, original
+framework from 2004). Re-checked directly against each one's own page:
+still no stated connection to this data space for either, so
+`related-to` at `confidence: low` is recorded on each entity's own file
 rather than a stronger claim.
 
 ## Sources

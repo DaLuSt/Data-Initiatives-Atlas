@@ -16,11 +16,11 @@ updated: "2026-09-26"
 updated_by_session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
 
 graph:
-  entity_count: 726
-  relationship_edges: 1532
-  association_edges: 3154
-  wikilink_edges: 4470
-  edges_total: 9156
+  entity_count: 727
+  relationship_edges: 1534
+  association_edges: 3159
+  wikilink_edges: 4474
+  edges_total: 9167
   countries: 58
   regions: 1
 
@@ -33,14 +33,14 @@ discovery:
 validation_status: clean
 
 last_merged_prs:
-  - number: 335
-    summary: "Added EU-LEGAL-DATA-SPACE, narrowing discovery/unresolved.md row #125"
   - number: 336
     summary: "Added EU-MEDIA-FREEDOM-ACT, closing a gap flagged on EU-MEDIA-DATA-SPACE"
   - number: 337
     summary: "Added EU-TOURISM-TRANSITION-PATHWAY, closing a gap flagged on EU-TOURISM-DATA-SPACE"
   - number: 338
     summary: "Added EU-ESCO, closing a gap flagged on EU-SKILLS-DATA-SPACE"
+  - number: 339
+    summary: "Added EU-EUROPASS, closing a gap flagged on EU-SKILLS-DATA-SPACE"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
