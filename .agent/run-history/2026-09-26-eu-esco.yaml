@@ -1,0 +1,13 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Closed a gap EU-SKILLS-DATA-SPACE's own file had flagged (not a
+  numbered discovery/unresolved.md row): created EU-ESCO (the European
+  multilingual classification of Skills, Competences, Qualifications and
+  Occupations), launched 28 July 2017, maintained by DG EMPL. Re-checked
+  and confirmed no source connects it directly to EU-SKILLS-DATA-SPACE,
+  so a low-confidence related-to edge is recorded rather than a stronger
+  claim. Sourced from the Commission's own ESCO portal, read directly.
+prs: []
+outcome: merged
+entity_count_after: 726
