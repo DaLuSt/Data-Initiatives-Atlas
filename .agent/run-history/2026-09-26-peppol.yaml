@@ -1,0 +1,13 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Closed discovery/unresolved.md row #49 in full: created INTL-OPENPEPPOL
+  (the international non-profit association behind the Peppol network,
+  sourced from its own official pages) and INTL-PEPPOL-BIS-BILLING (a
+  fourth CIUS of EU-EN-16931, alongside DE-XRECHNUNG/IT-FATTURAPA/
+  FR-CIUS-FR, sourced from OpenPeppol's own documentation). Also
+  relabelled row #97 to "Open (deliberate)" for consistency with rows
+  #88/#168, the same kind of settled non-assertion.
+prs: []
+outcome: merged
+entity_count_after: 720
