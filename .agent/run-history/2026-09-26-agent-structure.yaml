@@ -8,6 +8,8 @@ summary: >
   CLAUDE.md's content; state.yaml and current-task.yaml created as the
   new authoritative live-status files, superseding progress/current-batch.md
   in that role; run-history/ created with this entry as its first.
-prs: []
+prs:
+  - number: 331
+    title: "Rename CLAUDE.md to AGENTS.md; build out the full .agent/ structure"
 outcome: merged
 entity_count_after: 718

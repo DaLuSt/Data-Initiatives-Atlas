@@ -39,6 +39,8 @@ last_merged_prs:
     summary: "Added ES-LANTIK (completing the Basque NISAE quartet); closed discovery/unresolved.md rows #47 and #48"
   - number: 330
     summary: "Found edoc.coe.int, a third coe.int workaround; narrowed row #179"
+  - number: 331
+    summary: "Renamed CLAUDE.md to AGENTS.md; built out the full .agent/ structure (state.yaml/current-task.yaml now authoritative)"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
