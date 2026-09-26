@@ -22,7 +22,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-26"
 previous_version: null
 successor: null
 
@@ -32,6 +32,7 @@ organisations: []
 related_entities:
   - EU-CEN
   - EU-ETSI
+  - NL-NEC
 relationships: []
 
 sources:
@@ -80,15 +81,19 @@ mainly through the ISO/IEC standards underpinning [[NL-BIO]], where the IEC
 side of NEN-EN-ISO/IEC 27001 and 27002 runs through the electrotechnical
 chain. That chain cannot be completed until IEC exists (Batch 13).
 
-`coverage: low`. Note the Dutch counterpart structure: [[NL-NEN]] has been
-the name of a cooperation between the NNI foundation and the Dutch
-electrotechnical committee NEC since 2000 — the NEC being CENELEC's national
-counterpart. That was flagged as an open modelling question in Batch 2 and
-remains open.
+`coverage: low`. **The Dutch counterpart, closed 2026-09-26**: [[NL-NEN]]
+has been the name of a cooperation between the NNI foundation and the
+Dutch electrotechnical committee since 2000 — that committee, CENELEC's
+Dutch national counterpart, is now separately modelled as [[NL-NEC]],
+closing the modelling question `discovery/unresolved.md` row #28 raised
+in Batch 2. NEC's own `participates-in` edge to this entity is recorded
+on NEC's file, per the Atlas's one-sided edge convention.
 
 ## Relationships
 
 - Sibling ESO to [[EU-CEN]] and [[EU-ETSI]].
+- [[NL-NEC]] `participates-in` this entity (edge recorded on NL-NEC's own
+  file).
 
 ## Sources
 

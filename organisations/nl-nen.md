@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-09-26"
 previous_version: null
 successor: null
 
@@ -34,6 +34,7 @@ related_entities:
   - NL-FORUM-STANDAARDISATIE
   - EU-CEN
   - INTL-ISO
+  - NL-NEC
 relationships:
   - type: participates-in
     target: EU-CEN
@@ -102,9 +103,11 @@ Instituut and the **Stichting Koninklijk Nederlands Elektrotechnisch
 Comité (NEC)**, the latter founded 17 March 1911 and specialising in
 electrical engineering, information technology and telecommunications
 standardisation. The two bodies maintain separate governance structures
-while sharing facilities in Delft. The `name` field records the
-foundation; the NEC and the combined arrangement are not separately
-modelled, which may need revisiting.
+while sharing facilities in Delft. The `name` field records this
+foundation; **NEC is now separately modelled as [[NL-NEC]]** (created
+2026-09-26), closing `discovery/unresolved.md` row #28 — the combined
+"NEN" cooperative arrangement itself remains unmodelled, described here
+and on NL-NEC in prose only.
 
 **Unconfirmed this pass: the claim that NEN was "a co-founder of ISO in
 1947."** No page read — nen.nl, the NORA wiki, or Dutch Wikipedia —
@@ -129,11 +132,11 @@ internationale normalisatienetwerken CEN en ISO." `participates-in`
 - `participates-in` [[EU-CEN]] and [[INTL-ISO]] — both confirmed by a
   source naming NEN directly, not only by the composition rule (see
   relationship evidence). The ISO edge is new this pass.
-- ISO and IEC remain unmodelled, so those relationships are still
-  unassertable, though nen.nl confirms NEN's membership in both.
-  [[EU-CENELEC]] is the European counterpart of the Dutch NEC, with which
-  NEN has cooperated since 8 May 2000 (date now sourced) — see the open
-  modelling question about whether NEC warrants its own entity.
+- IEC remains unmodelled outside its own entity [[INTL-IEC]], to which
+  NEN itself carries no direct edge — [[EU-CENELEC]] is the European
+  counterpart of the Dutch [[NL-NEC]], with which NEN has cooperated
+  since 8 May 2000 (date now sourced), and NEC (not NEN) is the one that
+  `participates-in` both EU-CENELEC and INTL-IEC directly.
 
 ## Sources
 
