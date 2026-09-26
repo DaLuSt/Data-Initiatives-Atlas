@@ -1,0 +1,13 @@
+date: "2026-09-26"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Closed discovery/unresolved.md row #30: created NL-API-STRATEGIE (the
+  API Strategie voor de Nederlandse Overheid), sourced from Forum
+  Standaardisatie's own page and the strategy's own introductory
+  document. NL-ADR now carries a part-of edge to it, closing the gap its
+  own file had flagged since Batch 4.
+prs:
+  - number: 334
+    title: "Close row #30: model the Nederlandse API Strategie"
+outcome: merged
+entity_count_after: 722
