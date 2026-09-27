@@ -33,8 +33,6 @@ discovery:
 validation_status: clean
 
 last_merged_prs:
-  - number: 370
-    summary: "Removed the last Closed-status row from discovery/unresolved.md, per its own 2026-09-18 convention"
   - number: 371
     summary: "NL-BASISREGISTRATIES: read 3 digitaleoverheid.nl sources directly via WordPress REST API workaround (row #216), 8/8 sources"
   - number: 372
@@ -43,6 +41,8 @@ last_merged_prs:
     summary: "NL-NHR: read digitaleoverheid.nl HR source directly (row #216), added mandatory-use/reporting-duty/data-coupling facts"
   - number: 374
     summary: "NL-BRI/NL-BELASTINGDIENST: read digitaleoverheid.nl BRI source directly (row #216); BRI has no named supervisor"
+  - number: 375
+    summary: "NL-KADASTER: read digitaleoverheid.nl BRK source directly (row #216), 4/5 sources"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
