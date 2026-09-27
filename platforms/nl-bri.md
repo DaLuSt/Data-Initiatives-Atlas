@@ -30,7 +30,7 @@ verification: primary-source
 
 start_date: 2009-01-01
 end_date: null
-last_verified: "2026-08-30"
+last_verified: "2026-09-27"
 previous_version: null
 successor: null
 
@@ -45,7 +45,7 @@ relationships:
   - type: part-of
     target: NL-BASISREGISTRATIES
     source: fact
-    evidence: "Confirmed by reading data.overheid.nl's dataset page for the BRI directly (2026-08-27): it defines a basisregistratie as an officially designated registration that all government bodies must use for public-law tasks, and lists the Belastingdienst as data owner. digitaleoverheid.nl's dedicated BRI page returned a bot-verification wall on two attempts this pass ('Please wait while your request is being verified...') and is confirmed genuinely unreadable in this environment, not merely unread."
+    evidence: "Confirmed by reading data.overheid.nl's dataset page for the BRI directly (2026-08-27): it defines a basisregistratie as an officially designated registration that all government bodies must use for public-law tasks, and lists the Belastingdienst as data owner. Confirmed independently 2026-09-27 by reading digitaleoverheid.nl's own BRI page directly via its WordPress REST API (www.digitaleoverheid.nl/wp-json/wp/v2/pages?slug=bri — the workaround documented in discovery/unresolved.md row #216, the rendered page itself remaining bot-walled): 'In de Basisregistratie Inkomen staat van ongeveer 13 miljoen burgers het verzamelinkomen of het belastbaar jaarloon,' mandatory use for government bodies in force since 1 January 2009, same as the statute."
     confidence: high
     valid_from: null
     valid_until: null
@@ -65,9 +65,11 @@ relationships:
     valid_until: null
 
 sources:
-  - title: "BRI — Stelsel van basisregistraties (confirmed bot-walled, not read)"
+  - title: "BRI — Stelsel van basisregistraties"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/10-basisregistraties/bri/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
+    accessed: "2026-09-27"
+    note: "The rendered page is genuinely bot-walled (JavaScript verification challenge). Read directly via the site's own WordPress REST API instead (www.digitaleoverheid.nl/wp-json/wp/v2/pages?slug=bri) — the workaround documented in discovery/unresolved.md row #216."
   - title: "Alles over het geregistreerde inkomen"
     url: "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/werk_en_inkomen/geregistreerde_inkomen_en_de_inkomensverklaring/alles_over_geregistreerde_inkomen/alles-over-het-geregistreerde-inkomen"
     publisher: "Belastingdienst"
@@ -98,6 +100,13 @@ sources:
 > verified). This is also the tenth and last of the Atlas's basisregistraties
 > to gain a `governed-by` edge, closing the gap [[NL-BASISREGISTRATIES]]
 > flagged as its one remaining open statute.
+>
+> **Closed 2026-09-27**: digitaleoverheid.nl's BRI page, genuinely
+> bot-walled to direct fetch across two prior passes, is now read
+> directly via the site's own WordPress REST API (the workaround
+> documented in `discovery/unresolved.md` row #216) — 5 of 5 sources now
+> read directly. It adds one new fact: **no supervisor (toezichthouder)
+> is named** for this register — see "No named supervisor" below.
 
 ## Description
 
@@ -140,6 +149,20 @@ this entity specifically. The vocabulary gap itself is now partly closed —
 see the new `uses-data-from` type (metadata/relationship-types.md §2.1,
 2026-09-20), first used on [[NL-BELASTINGDIENST]]'s own WOZ consumption.
 
+## No named supervisor — read directly 2026-09-27
+
+digitaleoverheid.nl's own BRI page, read directly via the WordPress REST
+API workaround, gives the register's roles in the same schema as the
+other nine: Opdrachtgever is the Ministry of Finance (AWR art. 2);
+Bronhouder en verstrekker is the [[NL-BELASTINGDIENST]] (AWR art. 21);
+Afnemers are any bestuursorgaan legally authorised to use an income
+datum (AWR art. 21). Where the other nine registers each name a
+Toezichthouder, the BRI's own page states plainly: **"Geen toezichthouder
+benoemd"** (no supervisor appointed). Mandatory use and the reporting
+duty for afnemers have both applied since the same date as the statute
+itself, 1 January 2009 — unlike [[NL-NHR]], where mandatory use phased in
+separately from the statute's own commencement.
+
 ## `authentiek gegeven` is a concept the Atlas has no field for
 
 *Authentiek gegeven* is a specific legal status in the stelsel: a datum
@@ -170,9 +193,11 @@ vocabulary for how data actually moves between them.
 
 ## Sources
 
-Listed in frontmatter, four of five read directly: the Belastingdienst's
-own page, NORA Online and the data.overheid.nl dataset page (prior pass),
-plus `wetten.overheid.nl`'s own consolidated AWR text (this pass,
-2026-08-30). digitaleoverheid.nl's BRI page returned a bot-verification
-wall on two separate attempts and is confirmed genuinely unreadable in this
-environment, not merely unread.
+Listed in frontmatter. **5 of 5 now read directly.** The Belastingdienst's
+own page, NORA Online, the data.overheid.nl dataset page and
+`wetten.overheid.nl`'s own consolidated AWR text (earlier passes); and,
+closing this file 2026-09-27, digitaleoverheid.nl's BRI page via the
+site's own WordPress REST API
+(`www.digitaleoverheid.nl/wp-json/wp/v2/pages?slug=bri`) — the workaround
+documented in `discovery/unresolved.md` row #216. The rendered HTML at
+that URL remains genuinely bot-walled.

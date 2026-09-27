@@ -1,0 +1,21 @@
+date: "2026-09-27"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Item 4 of a 10-item closure task. platforms/nl-bri.md and
+  organisations/nl-belastingdienst.md both cited digitaleoverheid.nl's
+  BRI (Basisregistratie Inkomen) page as genuinely bot-walled across two
+  prior passes. Applied the WordPress REST API workaround
+  (discovery/unresolved.md row #216) to read it directly. Confirms the
+  Belastingdienst as Bronhouder en verstrekker (AWR art. 21) and the
+  Ministry of Finance as Opdrachtgever (AWR art. 2), matching content
+  already carried. One new fact not previously recorded: the BRI has
+  **no supervisor (toezichthouder) named** -- the only one of the ten
+  base registries confirmed to lack one, since all others' Rollen
+  entries name a toezichthouder. Added as a new section on NL-BRI.
+  NL-BRI reaches 5/5 sources read directly; NL-BELASTINGDIENST reaches
+  3/3.
+prs:
+  - number: 374
+    title: "Read NL-BRI/NL-BELASTINGDIENST's digitaleoverheid.nl BRI source directly via WordPress REST API"
+outcome: pending
+entity_count_after: 736
