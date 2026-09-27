@@ -20,7 +20,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-27"
 previous_version: null
 successor: null
 
@@ -35,6 +35,7 @@ sources:
   - title: "ISO/IEC 27001:2022 — Information security management systems"
     url: "https://www.iso.org/standard/27001"
     publisher: "International Organization for Standardization (ISO)"
+    note: "This exact iso.org page remains genuinely bot-walled (domain-wide 403). Substituted 2026-09-27 with a direct read of the standard itself via standards.iteh.ai's free redline preview PDF (catalog 82875, https://cdn.standards.iteh.ai/samples/82875/726bcf58250e43d9a666b4d929c8fbdb/ISO-IEC-27001-2022.pdf) — the same workaround already used to close INTL-ISO-IEC-27001 itself (discovery/unresolved.md row #220)."
   - title: "Information security, cybersecurity and privacy protection — JTC 1"
     url: "https://jtc1info.org/technology/subcommittees/information-security-cybersecurity-privacy-protection/"
     publisher: "ISO/IEC JTC 1"
@@ -43,6 +44,11 @@ sources:
     url: "https://en.wikipedia.org/wiki/International_Electrotechnical_Commission"
     publisher: "Wikipedia"
     accessed: "2026-08-28"
+  - title: "ISO/IEC 27001:2022 — redline preview PDF (catalog 82875)"
+    url: "https://cdn.standards.iteh.ai/samples/82875/726bcf58250e43d9a666b4d929c8fbdb/ISO-IEC-27001-2022.pdf"
+    publisher: "standards.iteh.ai (authorized ISO/IEC standards reseller)"
+    accessed: "2026-09-27"
+    note: "Read directly to substitute for the still-bot-walled iso.org/standard/27001 page above. Its own Foreword names 'Joint Technical Committee ISO/IEC JTC 1, Information Technology, Subcommittee SC 27, Information security, cybersecurity and privacy protection' as the preparing committee — confirming this entity's joint role with INTL-ISO from the standard's own text rather than only from jtc1info.org and Wikipedia."
 ---
 
 # IEC (International Electrotechnical Commission)
@@ -55,6 +61,13 @@ sources:
 > source and also read directly, bringing two of three cited sources to
 > a genuine read. `verification` moves from `search-only` to
 > `primary-source` on that basis.
+>
+> **Closed 2026-09-27**: `iso.org/standard/27001` itself remains
+> bot-walled, but `standards.iteh.ai`'s free redline preview PDF of the
+> standard (catalog 82875) — the same workaround already used to close
+> [[INTL-ISO-IEC-27001]] itself, `discovery/unresolved.md` row #220 —
+> confirms JTC 1/SC 27's joint ISO/IEC authorship directly from the
+> standard's own Foreword. 3 of 4 sources now read directly.
 
 ## Description
 
@@ -89,6 +102,9 @@ queued.
 
 ## Sources
 
-Listed in frontmatter. Two of three read directly this pass —
-jtc1info.org and the Wikipedia IEC article. `iso.org/standard/27001`
-stays unread, blocked domain-wide (see verification note above).
+Listed in frontmatter. **3 of 4 now read directly.** jtc1info.org and
+the Wikipedia IEC article (2026-08-28 pass); and, closing this file
+2026-09-27, `standards.iteh.ai`'s redline preview PDF of ISO/IEC
+27001:2022 itself, substituting for the still-bot-walled
+`iso.org/standard/27001` page (the same workaround already used for
+[[INTL-ISO-IEC-27001]], `discovery/unresolved.md` row #220).
