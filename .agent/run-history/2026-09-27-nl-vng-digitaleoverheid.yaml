@@ -15,7 +15,7 @@ summary: >
   Waterschappen (UvW)' confirms VNG's OBDO membership. Confidence on that
   edge raised medium->high. NL-VNG reaches 3/3 sources read directly.
 prs:
-  - number: null
+  - number: 378
     title: "Read NL-VNG's digitaleoverheid.nl MIDO governance source directly via WordPress REST API"
 outcome: pending
 entity_count_after: 736
