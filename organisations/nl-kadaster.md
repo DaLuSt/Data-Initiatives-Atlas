@@ -22,7 +22,7 @@ verification: primary-source
 
 start_date: 1832-10-01
 end_date: null
-last_verified: "2026-09-06"
+last_verified: "2026-09-27"
 previous_version: null
 successor: null
 
@@ -46,7 +46,7 @@ relationships:
   - type: participates-in
     target: NL-BASISREGISTRATIES
     source: fact
-    evidence: "Confirmed by reading kadaster.nl's own registrations overview directly (2026-08-27): the Kadaster holds five base registrations (BAG, BRK, Rijksdriehoeksmeting, BRT, BGT) plus the Informatiemodel Kadaster (IMKAD). digitaleoverheid.nl's dedicated BRK page returned a bot-verification wall on this pass and NORA Online's BRK wiki page returned HTTP 404 — both confirmed genuinely unreadable, not merely unread. nl.wikipedia.org's own Kadaster article, read directly as a replacement source this pass, independently confirms the Kadaster's role in BRK and BRT ('Sinds 2004 valt de Topografische Dienst onder het Kadaster')."
+    evidence: "Confirmed by reading kadaster.nl's own registrations overview directly (2026-08-27): the Kadaster holds five base registrations (BAG, BRK, Rijksdriehoeksmeting, BRT, BGT) plus the Informatiemodel Kadaster (IMKAD). NORA Online's BRK wiki page returned HTTP 404 and remains confirmed genuinely unreadable. nl.wikipedia.org's own Kadaster article, read directly as a replacement source, independently confirms the Kadaster's role in BRK and BRT ('Sinds 2004 valt de Topografische Dienst onder het Kadaster'). digitaleoverheid.nl's dedicated BRK page, previously confirmed genuinely bot-walled, is now read directly (2026-09-27) via its WordPress REST API (www.digitaleoverheid.nl/wp-json/wp/v2/pages?slug=brk — the workaround documented in discovery/unresolved.md row #216), confirming the same BRK composition (parcels, ownership, mortgages, limited rights, utility networks, cadastral maps) already carried here from kadaster.nl's own page."
     confidence: high
     valid_from: null
     valid_until: null
@@ -67,9 +67,11 @@ sources:
     url: "https://www.kadaster.nl/zakelijk/registraties/basisregistraties/brk"
     publisher: "Kadaster"
     accessed: "2026-08-27"
-  - title: "Basisregistratie Kadaster (BRK) (confirmed bot-walled, not read)"
+  - title: "Basisregistratie Kadaster (BRK)"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/10-basisregistraties/brk/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
+    accessed: "2026-09-27"
+    note: "The rendered page is genuinely bot-walled (JavaScript verification challenge). Read directly via the site's own WordPress REST API instead (www.digitaleoverheid.nl/wp-json/wp/v2/pages?slug=brk) — the workaround documented in discovery/unresolved.md row #216. Shorter than the other basisregistraties pages: no statutory-basis or Rollen section, only the BRK's contents and a pointer to BZK for policy and Kadaster for operational matters."
   - title: "BRK (Basisregistratie Kadaster) (confirmed dead, HTTP 404)"
     url: "https://www.noraonline.nl/wiki/BRK_(Basisregistratie_Kadaster)"
     publisher: "NORA Online (ICTU)"
@@ -92,6 +94,13 @@ sources:
 > **Closed 2026-09-06**: the 1994 autonomisation now has a primary
 > statutory citation — [[NL-ORGANISATIEWET-KADASTER]], read directly on
 > wetten.overheid.nl, giving this entity its first `governed-by` edge.
+>
+> **Closed 2026-09-27**: digitaleoverheid.nl's BRK page, genuinely
+> bot-walled to direct fetch, is now read directly via the site's own
+> WordPress REST API (the workaround documented in
+> `discovery/unresolved.md` row #216) — 4 of 5 sources now read directly
+> (NORA Online's BRK wiki page remains confirmed dead, HTTP 404). It
+> confirms the BRK composition already carried here; no factual change.
 
 ## Description
 
@@ -122,8 +131,10 @@ connecting it to Dutch geo-standardisation.
 
 ## Sources
 
-Listed in frontmatter, three of five read directly this pass — the two
-Kadaster registration pages and Wikipedia (added as a replacement source).
-digitaleoverheid.nl's BRK page is confirmed genuinely bot-walled and NORA
-Online's BRK wiki page is confirmed genuinely dead (HTTP 404); neither
-was reachable this pass.
+Listed in frontmatter. **4 of 5 read directly.** The two Kadaster
+registration pages, Wikipedia (replacement source), and, closing this
+file 2026-09-27, digitaleoverheid.nl's BRK page via the site's own
+WordPress REST API (`www.digitaleoverheid.nl/wp-json/wp/v2/pages?slug=brk`)
+— the workaround documented in `discovery/unresolved.md` row #216. NORA
+Online's BRK wiki page remains confirmed genuinely dead (HTTP 404) and
+unreachable by any means tried.
