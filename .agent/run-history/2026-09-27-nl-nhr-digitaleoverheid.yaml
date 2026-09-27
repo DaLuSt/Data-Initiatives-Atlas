@@ -1,0 +1,22 @@
+date: "2026-09-27"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Item 3 of a 10-item closure task. platforms/nl-nhr.md cited
+  digitaleoverheid.nl's HR (Handelsregister) page as genuinely bot-walled
+  across two prior passes. Applied the WordPress REST API workaround
+  (discovery/unresolved.md row #216) to read it directly. Unlike items 1
+  and 2, this page yielded substantive new facts not previously carried:
+  the mandatory-use phase-in schedule (staged from 1 Jan 2015, complete
+  for all bestuursorganen by 1 Jan 2021), that the reporting-duty article
+  (Handelsregisterwet art. 32) has not yet entered into force, and named
+  data couplings (HR uses BRP and BAG data; delivers BSN, addressable
+  object ID, numbering ID and address data downstream). Added as a new
+  section rather than a new uses-data-from edge, since HR's coupling is a
+  stelsel-wide data dependency rather than KVK acting as a distinct
+  downstream consumer for its own separate purpose (documented reasoning
+  in the file itself). NL-NHR reaches 4/4 sources read directly.
+prs:
+  - number: 373
+    title: "Read NL-NHR's digitaleoverheid.nl HR source directly via WordPress REST API"
+outcome: pending
+entity_count_after: 736
