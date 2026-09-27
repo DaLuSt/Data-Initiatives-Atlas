@@ -23,7 +23,7 @@ summary: >
   representation office. NL-IPO reaches 5/5 sources read directly.
   NL-FDS and NL-NDS updated with cross-references and corrected prose.
 prs:
-  - number: null
+  - number: 377
     title: "Read NL-UVW/NL-IPO's digitaleoverheid.nl sources directly via WordPress REST API"
 outcome: pending
 entity_count_after: 736
