@@ -16,7 +16,7 @@ summary: >
   downstream consumer for its own separate purpose (documented reasoning
   in the file itself). NL-NHR reaches 4/4 sources read directly.
 prs:
-  - number: null
+  - number: 373
     title: "Read NL-NHR's digitaleoverheid.nl HR source directly via WordPress REST API"
 outcome: pending
 entity_count_after: 736
