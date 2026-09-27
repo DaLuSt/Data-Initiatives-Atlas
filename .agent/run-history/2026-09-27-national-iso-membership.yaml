@@ -34,7 +34,7 @@ summary: >
   "stale claim outlives the fact that superseded it" pattern found
   repeatedly elsewhere in this session.
 prs:
-  - number: null
+  - number: 383
     title: "Corroborate PT-IPQ/LU-ILNAS/IE-NSAI/DE-DIN's ISO membership via committee.iso.org"
 outcome: pending
 entity_count_after: 736
