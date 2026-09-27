@@ -19,8 +19,8 @@ graph:
   entity_count: 736
   relationship_edges: 1554
   association_edges: 3203
-  wikilink_edges: 4521
-  edges_total: 9278
+  wikilink_edges: 4524
+  edges_total: 9281
   countries: 58
   regions: 1
 
@@ -33,14 +33,14 @@ discovery:
 validation_status: clean
 
 last_merged_prs:
-  - number: 368
-    summary: "Sourced DE-BVERFSCHG/DE-MADG's internal structure, closing row #194"
   - number: 369
     summary: "Closed row #169: INTL-OECD-CSSP's CSTAT/Commission claims were unread search noise, corrected on direct read"
   - number: 370
     summary: "Removed the last Closed-status row from discovery/unresolved.md, per its own 2026-09-18 convention"
   - number: 371
     summary: "NL-BASISREGISTRATIES: read 3 digitaleoverheid.nl sources directly via WordPress REST API workaround (row #216), 8/8 sources"
+  - number: 372
+    summary: "NL-BRV/NL-RDW: read digitaleoverheid.nl BRV/Rollen sources directly via row #216 workaround, 7/7 and 4/4 sources"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
