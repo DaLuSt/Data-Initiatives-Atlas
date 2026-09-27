@@ -1,0 +1,40 @@
+date: "2026-09-27"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Item 3 (final) of a follow-up 3-item closure task. PT-IPQ, LU-ILNAS,
+  IE-NSAI and DE-DIN all cited iso.org member-directory pages
+  (iso.org/member/<id>.html) that are domain-wide 403-blocked, distinct
+  from the standards-catalogue block the standards.iteh.ai workaround
+  addresses. Found a second, different iso.org workaround this pass:
+  committee.iso.org/iso/home/about/iso_members.htm, a reachable iso.org
+  subdomain, carries ISO's own member table listing every member body
+  with its acronym, tier (Member body / Correspondent / Subscriber) and
+  TC/PDC participation counts.
+
+  Applied to all four entities:
+  - PT-IPQ: edge restored from source:interpretation/confidence:low
+    (a prior downgrade for want of a direct read) to source:fact/high --
+    "Portugal IPQ Member body 503 3".
+  - LU-ILNAS: already-fact edge (sourced from ILNAS's own site)
+    corroborated from ISO's own side, confidence raised medium->high --
+    "Luxembourg ILNAS Member body 176 3".
+  - IE-NSAI: already-fact edge (sourced from Wikipedia) corroborated,
+    confidence raised medium->high -- "Ireland NSAI Member body 377 3".
+  - DE-DIN: current membership corroborated (confidence raised
+    medium->high), though not the specific 1951 accession year, which
+    the page does not give and still rests on the unread member page.
+
+  Also found and fixed a stale cross-reference on DE-DIN's own file: its
+  "asymmetry" section claimed "the Atlas has never been able to record
+  NL-NEN's ISO membership," a refusal from Batch 14 that a later
+  2026-08-27 pass on NL-NEN had already overturned (NEN's own site names
+  ISO membership directly). DE-DIN's last_verified date (2026-09-04)
+  postdated that correction, so the stale claim had survived one
+  re-verification pass already -- the same "unread search noise" /
+  "stale claim outlives the fact that superseded it" pattern found
+  repeatedly elsewhere in this session.
+prs:
+  - number: 383
+    title: "Corroborate PT-IPQ/LU-ILNAS/IE-NSAI/DE-DIN's ISO membership via committee.iso.org"
+outcome: pending
+entity_count_after: 736

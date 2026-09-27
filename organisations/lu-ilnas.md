@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-09-27"
 previous_version: null
 successor: null
 
@@ -62,8 +62,8 @@ relationships:
   - type: participates-in
     target: INTL-ISO
     source: fact
-    evidence: "Confirmed verbatim by reading portail-qualite.public.lu's own 'Découvrir la normalisation' page directly (2026-08-25): 'L'ILNAS représente le Luxembourg au sein des trois organisations internationales de normalisation suivantes' (ILNAS represents Luxembourg within the following three international standardisation organisations), naming 'L'Organisation Internationale de Normalisation (ISO)' first."
-    confidence: medium
+    evidence: "Confirmed verbatim by reading portail-qualite.public.lu's own 'Découvrir la normalisation' page directly (2026-08-25): 'L'ILNAS représente le Luxembourg au sein des trois organisations internationales de normalisation suivantes' (ILNAS represents Luxembourg within the following three international standardisation organisations), naming 'L'Organisation Internationale de Normalisation (ISO)' first. Corroborated from ISO's own side 2026-09-27: `iso.org/member/1776.html` itself remains genuinely bot-walled, but committee.iso.org/iso/home/about/iso_members.htm — a different, reachable iso.org subdomain (the workaround documented in discovery/unresolved.md row #220) — lists 'Luxembourg ILNAS Member body' with 176 TC and 3 PDC participations, confirming full voting membership directly from ISO's own listing."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: participates-in
@@ -93,6 +93,11 @@ sources:
   - title: "ISO — ILNAS"
     url: "https://www.iso.org/member/1776.html"
     publisher: "International Organization for Standardization (ISO)"
+  - title: "ISO — Members"
+    url: "https://committee.iso.org/iso/home/about/iso_members.htm"
+    publisher: "International Organization for Standardization (ISO)"
+    accessed: "2026-09-27"
+    note: "A different, reachable iso.org subdomain, found this pass, substituting for the still-bot-walled iso.org/member/1776.html page above — the workaround documented in discovery/unresolved.md row #220. Its member table lists Luxembourg/ILNAS as a full voting 'Member body' with 176 TC and 3 PDC participations."
   - title: "L'accréditation, de quoi s'agit-il? (FAQ) — OLAS"
     url: "https://portail-qualite.public.lu/fr/accreditation-notification/faq.html"
     publisher: "Le gouvernement du Grand-Duché de Luxembourg (Portail Qualité / OLAS)"
@@ -112,6 +117,13 @@ sources:
 > **Updated 2026-09-05**: OLAS, ILNAS's accreditation function, is now
 > described from the Portail Qualité's own FAQ, closing the
 > previously-flagged "two-thirds of what the institute does" gap.
+>
+> **Closed 2026-09-27**: `iso.org/member/1776.html` itself remains
+> bot-walled, but `committee.iso.org` — a different, reachable `iso.org`
+> subdomain found this pass (`discovery/unresolved.md` row #220) —
+> corroborates ILNAS's ISO membership directly from ISO's own listing.
+> `confidence` on the ISO edge raised medium→high; 4 of 5 sources now
+> read directly.
 
 ## Description
 
@@ -192,13 +204,15 @@ for not creating thin entities.
 
 ## Relationships
 
-- `participates-in` [[EU-CEN]], [[EU-CENELEC]], [[EU-ETSI]], [[INTL-ISO]],
+- `participates-in` [[EU-CEN]], [[EU-CENELEC]], [[EU-ETSI]], [[INTL-ISO]]
+  (`confidence: high`, corroborated 2026-09-27 via `committee.iso.org`),
   [[INTL-IEC]] and [[UN-ITU]].
 
 ## Sources
 
-Listed in frontmatter. `portail-qualite.public.lu` and
-`ilnas.gouvernement.lu` were read directly in the 2026-08-25 pass;
-`iso.org` remains bot-walled (403) even with an honest User-Agent. The
-accreditation FAQ, also on `portail-qualite.public.lu`, added and read
-directly 2026-09-05.
+Listed in frontmatter. **4 of 5 now read directly.**
+`portail-qualite.public.lu` and `ilnas.gouvernement.lu` (2026-08-25
+pass); the accreditation FAQ (2026-09-05); and, closing part of this
+file 2026-09-27, `committee.iso.org`'s own member table, corroborating
+ILNAS's ISO membership. `iso.org/member/1776.html` itself remains
+genuinely bot-walled (403) even with an honest User-Agent.

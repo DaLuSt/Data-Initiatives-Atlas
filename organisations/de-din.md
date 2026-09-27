@@ -26,7 +26,7 @@ verification: primary-source
 
 start_date: 1917-12-22
 end_date: null
-last_verified: "2026-09-04"
+last_verified: "2026-09-27"
 previous_version: null
 successor: null
 
@@ -41,8 +41,8 @@ relationships:
   - type: participates-in
     target: INTL-ISO
     source: fact
-    evidence: "DIN has been the ISO member body for the Federal Republic of Germany since 1951 and is listed as such by ISO (iso.org/member/1511.html; de.wikipedia.org 'Internationale Organisation für Normung'). The ISO member-directory page returned HTTP 403 on two attempts this pass and could not be re-fetched directly; din.de's own history page, read directly this pass, independently confirms DIN's role as Germany's internationally-representing standards body without itself giving the 1951 ISO accession date, so that specific year remains sourced to the previous pass's unread ISO page rather than confirmed by a direct read this pass."
-    confidence: medium
+    evidence: "DIN has been the ISO member body for the Federal Republic of Germany since 1951 and is listed as such by ISO (iso.org/member/1511.html; de.wikipedia.org 'Internationale Organisation für Normung'). The ISO member-directory page returned HTTP 403 on two attempts this pass and could not be re-fetched directly; din.de's own history page, read directly this pass, independently confirms DIN's role as Germany's internationally-representing standards body without itself giving the 1951 ISO accession date, so that specific year remains sourced to the previous pass's unread ISO page rather than confirmed by a direct read this pass. Corroborated from ISO's own side 2026-09-27: iso.org/member/1511.html itself remains genuinely bot-walled, but committee.iso.org/iso/home/about/iso_members.htm — a different, reachable iso.org subdomain (the workaround documented in discovery/unresolved.md row #220) — lists 'Germany DIN Member body' with 785 TC and 3 PDC participations, confirming current full voting membership directly. This does not confirm the specific 1951 accession year, which still rests on the unread member-directory page and is carried as previously sourced."
+    confidence: high
     valid_from: 1951-01-01
     valid_until: null
   - type: participates-in
@@ -72,6 +72,11 @@ sources:
     url: "https://www.din.de/en/din-and-our-partners/din-e-v/history"
     publisher: "DIN Deutsches Institut für Normung"
     accessed: "2026-08-28"
+  - title: "ISO — Members"
+    url: "https://committee.iso.org/iso/home/about/iso_members.htm"
+    publisher: "International Organization for Standardization (ISO)"
+    accessed: "2026-09-27"
+    note: "A different, reachable iso.org subdomain, found this pass, substituting for the still-bot-walled iso.org/member/1511.html page above — the workaround documented in discovery/unresolved.md row #220. Its member table lists Germany/DIN as a full voting 'Member body' with 785 TC and 3 PDC participations, the highest TC-participation count of any national standards body cited in this Atlas. It does not give an accession date."
 ---
 
 # DIN Deutsches Institut für Normung
@@ -85,6 +90,16 @@ sources:
 > unreadable this pass rather than silently dropped. `verification:
 > primary-source`; `confidence` raised to `high`; the founding date is now
 > precise to the day.
+>
+> **Closed 2026-09-27**: `iso.org/member/1511.html` itself remains
+> bot-walled, but `committee.iso.org` — a different, reachable `iso.org`
+> subdomain found this pass (`discovery/unresolved.md` row #220) —
+> confirms DIN's current ISO membership directly (785 TC participations,
+> the highest of any national body this Atlas tracks), though not the
+> specific 1951 accession year. `confidence` on the ISO edge raised
+> medium→high. This same pass also found that [[NL-NEN]]'s ISO membership
+> **is** now recorded — the "asymmetry" section below, unchanged since
+> 2026-08-28, was stale; see the correction inline.
 
 ## Description
 
@@ -134,20 +149,18 @@ DE-DIN ──participates-in──> EU-CEN
        └─participates-in──> INTL-ISO
 ```
 
-This matters because [[NL-NEN]] is the Dutch equivalent and the Atlas has
-**never been able to record its ISO membership**. Batch 14 examined
-`INTL-ISO` → `NL-NEN` and refused it for want of a source; that refusal
-still stands and is unaffected by this entity. The German membership is
-recorded here only because ISO's own member directory page for DIN was
-returned by search in an earlier pass, giving a citation the Dutch case
-never got — even though this pass could not itself re-fetch that specific
-page past a 403.
-
-The asymmetry is real and should not be tidied away: **the Atlas now
-records that Germany is in ISO and does not record that the Netherlands
-is**, purely because of what a search index once surfaced. That is a
-sourcing artefact, not a fact about the world, and it is exactly the kind
-of distortion the `verification` field exists to make visible.
+This matters because [[NL-NEN]] is the Dutch equivalent, and this section
+used to describe an asymmetry: Germany's ISO membership recorded, the
+Netherlands' refused for want of a source (Batch 14). **That asymmetry is
+now stale and corrected 2026-09-27**: [[NL-NEN]]'s own "Over NEN" page,
+read directly in a later pass (2026-08-27, closing `discovery/unresolved.md`'s
+NEN-ISO question), states plainly "NEN is lid van de Europese en
+internationale normalisatienetwerken CEN en ISO" — NL-NEN's `participates-in`
+[[INTL-ISO]] edge has carried `confidence: high` since that pass. This
+entity's own text simply was not updated to reflect it, a stale
+cross-reference of exactly the kind this Atlas has repeatedly found and
+fixed elsewhere. Both Germany and the Netherlands are now recorded as ISO
+members, each on its own sourced basis.
 
 ## Scope note
 
@@ -163,8 +176,9 @@ institute.
 
 ## Relationships
 
-- `participates-in` [[INTL-ISO]] — `confidence: medium` (the specific 1951
-  accession year rests on a page unreachable this pass).
+- `participates-in` [[INTL-ISO]] — `confidence: high` (current membership
+  corroborated via `committee.iso.org`, 2026-09-27; the specific 1951
+  accession year still rests on a page unreachable to this Atlas).
 - `participates-in` [[EU-CEN]] — confirmed directly this pass, `confidence:
   high`.
 - [[DE-DKE]], DIN's electrotechnical-standards counterpart towards
@@ -173,8 +187,11 @@ institute.
 
 ## Sources
 
-Listed in frontmatter. Three of five read directly this pass, including
-DIN's own history page — the previously-flagged gap ("DIN's own site
-(din.de) is not cited") is now closed. `iso.org` (HTTP 403 twice) and
-`quality.de` (empty content twice) are kept listed with those statuses
-noted here rather than silently dropped.
+Listed in frontmatter. **4 of 6 now read directly.** Three read directly
+in the 2026-08-28 pass, including DIN's own history page — the
+previously-flagged gap ("DIN's own site (din.de) is not cited") is now
+closed. And, closing part of this file 2026-09-27, `committee.iso.org`'s
+own member table, corroborating current ISO membership.
+`iso.org/member/1511.html` (HTTP 403) and `quality.de` (empty content)
+remain genuinely unreadable, kept listed with those statuses noted here
+rather than silently dropped.

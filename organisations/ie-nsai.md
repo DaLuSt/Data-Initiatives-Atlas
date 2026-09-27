@@ -19,7 +19,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-09-27"
 previous_version: null
 successor: null
 
@@ -56,8 +56,8 @@ relationships:
   - type: participates-in
     target: INTL-ISO
     source: fact
-    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP. iso.org itself is confirmed domain-wide blocked to this environment's fetch tooling (the same limit logged on other ISO-membership questions in this Atlas), so en.wikipedia.org's dedicated NSAI article was read directly instead (2026-09-05): 'The National Standards Authority of Ireland (NSAI) is the International Organization for Standardization (ISO) member body for Ireland.' An independent, dedicated article stating membership in its own words, the same evidence tier used for GB-BSI and DE-DIN's ISO edges."
-    confidence: medium
+    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP. iso.org itself is confirmed domain-wide blocked to this environment's fetch tooling (the same limit logged on other ISO-membership questions in this Atlas), so en.wikipedia.org's dedicated NSAI article was read directly instead (2026-09-05): 'The National Standards Authority of Ireland (NSAI) is the International Organization for Standardization (ISO) member body for Ireland.' An independent, dedicated article stating membership in its own words, the same evidence tier used for GB-BSI and DE-DIN's ISO edges. Corroborated directly from ISO's own side 2026-09-27: committee.iso.org/iso/home/about/iso_members.htm — a different, reachable iso.org subdomain (the workaround documented in discovery/unresolved.md row #220) — lists 'Ireland NSAI Member body' with 377 TC and 3 PDC participations."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -74,6 +74,11 @@ sources:
     url: "https://en.wikipedia.org/wiki/National_Standards_Authority_of_Ireland"
     publisher: "Wikipedia"
     accessed: "2026-09-05"
+  - title: "ISO — Members"
+    url: "https://committee.iso.org/iso/home/about/iso_members.htm"
+    publisher: "International Organization for Standardization (ISO)"
+    accessed: "2026-09-27"
+    note: "A reachable iso.org subdomain, found this pass (discovery/unresolved.md row #220), corroborating the Wikipedia-sourced ISO edge directly from ISO's own member table: 'Ireland NSAI Member body' with 377 TC and 3 PDC participations — full voting membership, not a lesser tier."
 ---
 
 # National Standards Authority of Ireland (NSAI)
@@ -85,6 +90,12 @@ sources:
 > this pass: the `participates-in` [[EU-CEN]] and [[EU-CENELEC]] edges
 > this entity's own body text already described were missing from its
 > frontmatter `relationships:` list — they are now added.
+>
+> **Closed 2026-09-27**: the Wikipedia-sourced ISO membership is now
+> corroborated directly from ISO's own side, via `committee.iso.org` — a
+> reachable `iso.org` subdomain found this pass (`discovery/unresolved.md`
+> row #220). `confidence` on the ISO edge raised medium→high; 4 of 4
+> sources now read directly.
 
 ## Description
 
@@ -119,6 +130,14 @@ International Organization for Standardization (ISO) member body for
 Ireland." `participates-in` [[INTL-ISO]] is now asserted, the same
 evidence tier [[GB-BSI]] and [[DE-DIN]]'s ISO edges carry.
 
+**Corroborated directly from ISO's own side, 2026-09-27.**
+`committee.iso.org/iso/home/about/iso_members.htm`, a different,
+reachable `iso.org` subdomain (`discovery/unresolved.md` row #220),
+carries ISO's own member table: "Ireland NSAI Member body" with 377 TC
+and 3 PDC participations — full voting membership. `confidence` raised
+medium→high, now resting on ISO's own listing rather than only on
+Wikipedia's characterisation.
+
 ## Not modelled
 
 - Any **Irish Standard**. The same is true of [[GB-BSI]], [[NL-NEN]] and
@@ -128,10 +147,12 @@ evidence tier [[GB-BSI]] and [[DE-DIN]]'s ISO edges carry.
 
 ## Sources
 
-Listed in frontmatter. The first two read directly in the 2026-08-22 pass;
-the Wikipedia article added and read directly 2026-09-05 to close the ISO
-membership question.
+Listed in frontmatter. **4 of 4 now read directly.** The first two read
+directly in the 2026-08-22 pass; the Wikipedia article, 2026-09-05; and,
+closing this file 2026-09-27, `committee.iso.org`'s own member table,
+corroborating the ISO membership from ISO's own side.
 
 ## Relationships
 
-- `participates-in` [[EU-CEN]], [[EU-CENELEC]] and [[INTL-ISO]].
+- `participates-in` [[EU-CEN]], [[EU-CENELEC]] and [[INTL-ISO]]
+  (`confidence: high`, corroborated 2026-09-27 via `committee.iso.org`).

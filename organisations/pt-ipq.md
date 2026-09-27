@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-09-27"
 previous_version: null
 successor: null
 
@@ -59,9 +59,9 @@ relationships:
     valid_until: null
   - type: participates-in
     target: INTL-ISO
-    source: interpretation
-    evidence: "iso.org's own member page for IPQ (iso.org/member/2054) is genuinely bot-walled (403) even with an honest, identifying User-Agent, so this pass could not read ISO's own listing directly. The edge is retained at reduced confidence on the strength of the previously compiled search-index description (ISO's member directory naming IPQ for Portugal) rather than a page read this pass."
-    confidence: low
+    source: fact
+    evidence: "iso.org's own member page for IPQ (iso.org/member/2054) remains genuinely bot-walled (403) even with an honest, identifying User-Agent. Confirmed instead 2026-09-27 via a different, reachable iso.org subdomain — committee.iso.org/iso/home/about/iso_members.htm (the workaround documented in discovery/unresolved.md row #220) — whose member table, read directly, lists 'Portugal IPQ Member body' with 503 TC participations and 3 PDC participations, i.e. full voting Member body status rather than a lesser correspondent or subscriber tier. Restored to `source: fact`/`confidence: high` from the prior pass's downgrade, since ISO's own listing is now genuinely read rather than only recalled from a search index."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -81,6 +81,11 @@ sources:
   - title: "ISO — IPQ, Instituto Português da Qualidade (currently bot-walled)"
     url: "https://www.iso.org/member/2054.html"
     publisher: "International Organization for Standardization (ISO)"
+  - title: "ISO — Members"
+    url: "https://committee.iso.org/iso/home/about/iso_members.htm"
+    publisher: "International Organization for Standardization (ISO)"
+    accessed: "2026-09-27"
+    note: "A different, reachable iso.org subdomain, found this pass, substituting for the still-bot-walled iso.org/member/2054.html page above — the workaround documented in discovery/unresolved.md row #220. Its member table lists Portugal/IPQ as a full voting 'Member body' with 503 TC and 3 PDC participations."
 ---
 
 # Instituto Português da Qualidade
@@ -92,6 +97,13 @@ sources:
 > remains genuinely bot-walled (403) even with an honest User-Agent, so
 > the `INTL-ISO` edge is downgraded to `interpretation`/`low` rather than
 > dropped.
+>
+> **Closed 2026-09-27**: `iso.org/member/2054.html` itself remains
+> bot-walled, but `committee.iso.org` — a different, reachable `iso.org`
+> subdomain found this pass (`discovery/unresolved.md` row #220) — lists
+> ISO's own member table directly, confirming IPQ as a full voting
+> Member body. The `INTL-ISO` edge is restored to `source: fact`,
+> `confidence: high`. 4 of 5 sources now read directly.
 
 ## Description
 
@@ -111,25 +123,35 @@ Qualidade | www.ipq.pt" — a source that states membership rather than a
 rule that implies it, the same upgrade [[PL-PKN]] and its CEN-group
 siblings have not yet had.
 
-## The ISO edge, downgraded rather than dropped
+## The ISO edge, now closed — 2026-09-27
 
-`iso.org`'s own member page for IPQ is genuinely bot-walled (403), even
-with an honest, identifying User-Agent — the same block found on
-`eur-lex.europa.eu`, `www.coe.int` and `unece.org` elsewhere in the
-Atlas. Rather than repeat the previously compiled, unread claim at
-`confidence: medium`, it is retained at `source: interpretation`,
-`confidence: low`, honestly reflecting that ISO's own listing was not
-read this pass either.
+`iso.org`'s own member page for IPQ (`iso.org/member/2054.html`) is
+genuinely bot-walled (403), even with an honest, identifying User-Agent
+— the same block found on `eur-lex.europa.eu`, `www.coe.int` and
+`unece.org` elsewhere in the Atlas. A prior pass retained the edge at
+`source: interpretation`, `confidence: low` for that reason.
+
+This pass finds a different, reachable `iso.org` subdomain instead:
+`committee.iso.org/iso/home/about/iso_members.htm`, read directly,
+carries ISO's own member table in full. Its row for Portugal reads
+"Portugal IPQ Member body 503 3" — country, acronym, membership tier
+(the full voting "Member body" category, not correspondent or
+subscriber), TC participation count and PDC participation count. That
+is a genuine direct read of ISO's own listing, not a recalled search
+snippet, so the edge is restored to `source: fact`, `confidence: high`.
 
 ## Relationships
 
 - `part-of` [[PT]] — anchor edge, confirmed this pass.
 - `participates-in` [[EU-CEN]] — confirmed by name this pass.
 - `participates-in` [[EU-CENELEC]] — same evidentiary basis as CEN.
-- `participates-in` [[INTL-ISO]] — `confidence: low`,
-  `source: interpretation`; `iso.org` remains bot-walled.
+- `participates-in` [[INTL-ISO]] — `confidence: high`, `source: fact`,
+  confirmed 2026-09-27 via `committee.iso.org`'s member table.
 
 ## Sources
 
-Listed in frontmatter. Three of four read directly this pass; `iso.org`
-remains genuinely bot-walled.
+Listed in frontmatter. **4 of 5 now read directly.** ipq.pt,
+cencenelec.eu's "European Standards" page and CEN's member list
+(2026-08-26 pass); and, closing this file 2026-09-27,
+`committee.iso.org`'s own member table, substituting for the still
+bot-walled `iso.org/member/2054.html` page.

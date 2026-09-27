@@ -33,14 +33,14 @@ discovery:
 validation_status: clean
 
 last_merged_prs:
-  - number: 378
-    summary: "NL-VNG: fixed unread digitaleoverheid.nl citation reused from NL-OBDO (row #216)"
   - number: 379
     summary: "INTL-ISO-IEC-27001: read standard's own text directly via standards.iteh.ai redline preview (row #220)"
   - number: 380
     summary: "Housekeeping: rolled .agent/state.yaml forward, recorded 10-item task summary in current-task.yaml"
   - number: 381
     summary: "INTL-ISO: read 27000-family citation via standards.iteh.ai redline preview (row #220); found committee.iso.org member-directory workaround"
+  - number: 382
+    summary: "INTL-IEC: read iso.org/standard/27001 citation via standards.iteh.ai redline preview (row #220)"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
