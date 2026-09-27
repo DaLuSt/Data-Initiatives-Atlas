@@ -19,7 +19,7 @@ summary: >
   login transition period was extended three years, to 1 July 2028.
   NL-WDO reaches 6/6 sources read directly.
 prs:
-  - number: null
+  - number: 376
     title: "Read NL-WDO's digitaleoverheid.nl sources directly via WordPress REST API"
 outcome: pending
 entity_count_after: 736
