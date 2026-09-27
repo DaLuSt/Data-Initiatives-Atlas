@@ -16,7 +16,7 @@ summary: >
   the person/object/organisation domains) not previously recorded,
   added as a new section.
 prs:
-  - number: null
-    title: "Read nl-basisregistraties.md's three digitaleoverheid.nl sources directly via WordPress REST API workaround"
+  - number: 371
+    title: "Read nl-basisregistraties.md's digitaleoverheid.nl sources directly via WordPress REST API"
 outcome: pending
 entity_count_after: 736
