@@ -12,7 +12,7 @@
 # that changes these numbers or the summary. Regenerate entity_count etc.
 # from site/graph.json's own `stats` block rather than counting by hand.
 
-updated: "2026-09-26"
+updated: "2026-09-27"
 updated_by_session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
 
 graph:
@@ -33,14 +33,14 @@ discovery:
 validation_status: clean
 
 last_merged_prs:
-  - number: 366
-    summary: "Sourced EU-EIDAS's structure/trust-services via legislation.gov.uk's UK-retained-law mirror (row #35, narrowed)"
   - number: 367
     summary: "Added CH-ISG, closing row #115 (CH-BACS's 24-hour reporting duty statutory basis)"
   - number: 368
     summary: "Sourced DE-BVERFSCHG/DE-MADG's internal structure, closing row #194"
   - number: 369
     summary: "Closed row #169: INTL-OECD-CSSP's CSTAT/Commission claims were unread search noise, corrected on direct read"
+  - number: 370
+    summary: "Removed the last Closed-status row from discovery/unresolved.md, per its own 2026-09-18 convention"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,

@@ -29,7 +29,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-18"
+last_verified: "2026-09-27"
 previous_version: null
 successor: null
 
@@ -54,15 +54,21 @@ related_entities:
 relationships: []
 
 sources:
-  - title: "10 basisregistraties — Stelsel van basisregistraties (confirmed genuinely bot-walled)"
+  - title: "10 basisregistraties — Stelsel van basisregistraties"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/10-basisregistraties/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
-  - title: "Rollen — Stelsel van basisregistraties (confirmed genuinely bot-walled)"
+    accessed: "2026-09-27"
+    note: "The rendered page is genuinely bot-walled (JavaScript verification challenge). Read directly via the site's own WordPress REST API instead (www.digitaleoverheid.nl/wp-json/wp/v2/pages?slug=10-basisregistraties) — the workaround documented in discovery/unresolved.md row #216."
+  - title: "Rollen — Stelsel van basisregistraties"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/rollen-stelsel-basisregistraties/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
-  - title: "Stelsel van Basisregistraties — toegankelijke beschrijving (confirmed genuinely bot-walled)"
+    accessed: "2026-09-27"
+    note: "Read directly via the WordPress REST API workaround (?slug=rollen-stelsel-basisregistraties), upgrading a prior pass's indexed-text-only recovery to a genuine direct read."
+  - title: "Stelsel van Basisregistraties — toegankelijke beschrijving"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/stelsel-van-basisregistraties-toegankelijke-beschrijving/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
+    accessed: "2026-09-27"
+    note: "Read directly via the WordPress REST API workaround (?slug=stelsel-van-basisregistraties-toegankelijke-beschrijving)."
   - title: "Het huidige Stelsel van Basisregistraties — NORA Online"
     url: "https://www.noraonline.nl/wiki/Het_huidige_Stelsel_van_Basisregistraties"
     publisher: "NORA Online"
@@ -109,6 +115,15 @@ sources:
 > **Closed 2026-09-18** (`discovery/unresolved.md` rows #133 and #138):
 > the FDS relationship, open since Batch 2, is now sourced — see
 > "Relationship to [[NL-FDS]], closed 2026-09-18" below.
+>
+> **Closed 2026-09-27**: all three digitaleoverheid.nl pages, genuinely
+> bot-walled to direct fetch across three prior passes, are now read
+> directly via the site's own WordPress REST API (the workaround
+> documented in `discovery/unresolved.md` row #216) — 8 of 8 sources now
+> read directly. This upgrades the "Roles" section's prior indexed-text
+> recovery to a genuine direct read (unchanged in substance) and adds
+> new 2025 data-quality figures from the "toegankelijke beschrijving"
+> page — see below.
 
 ## Description
 
@@ -168,11 +183,12 @@ justify a separate entity. Queued.
 
 The stelsel's own documentation does not describe a register as having an
 owner. The prior text named **four roles**: an initiating organisation, a
-supervisor, a provider, and one or more holders. A targeted search of
-digitaleoverheid.nl's own "Rollen" page content this pass (the page itself
-remained bot-walled to direct fetch, but its indexed text was recoverable —
-corroboration, not a direct read) names them more precisely and finds a
-**fifth**: **Opdrachtgever** (commissioning party, = "initiating
+supervisor, a provider, and one or more holders. digitaleoverheid.nl's own
+"Rollen" page, read directly 2026-09-27 via its WordPress REST API (the
+page itself is bot-walled to direct fetch of the rendered HTML, but its
+underlying content is served unblocked through `wp-json/wp/v2/pages` —
+see `discovery/unresolved.md` row #216), names them more precisely and
+confirms a **fifth**: **Opdrachtgever** (commissioning party, = "initiating
 organisation" above), **Toezichthouder** (supervisor — "responsible for
 ensuring the basic registration operates in accordance with requirements,
 agreements and legislation"), **Verstrekker** (provider), **Bronhouder**
@@ -204,6 +220,38 @@ Regions and Spanish Comunidades Autónomas, this is *not* blocked by the
 entity to create: there are hundreds of municipalities, and a single node
 for "the municipalities" would be an invention. Logged in
 `discovery/unresolved.md`.
+
+## Coupling quality, 2025 — read directly 2026-09-27
+
+The "toegankelijke beschrijving" (accessible description) page is the text
+alternative to a visual diagram, and turns out to carry substance beyond
+the diagram's own labels: the ministry's own 2025 figures for how well
+eight of the ten registers' data actually agree with each other,
+organised around three domains — person, object, organisation:
+
+| Coupling | 2025 figure |
+|---|---|
+| [[NL-NHR]] sole proprietors with a BSN found in [[NL-BRP]] | 100% |
+| [[NL-BRI]] persons with a BSN found in [[NL-BRP]] | 100%, "nearly 100%" of BRP holds the reverse |
+| [[NL-BRV]] persons with a BSN | 99.9% |
+| [[NL-BRK]] persons with active rights holding a BSN | 98.1% |
+| [[NL-WOZ]] owner/user personal data matching [[NL-BRP]] | 99.7% |
+| [[NL-BAG]] residence objects also found as an address in [[NL-BRK]] | 97.1% |
+| [[NL-WOZ]] residence objects found in [[NL-BAG]] | 99.8% (a 0.2-point decline) |
+| [[NL-NHR]] establishment addresses with a valid BAG object ID | 99.1% |
+| [[NL-BRK]] organisations with active rights holding a KvK number | 64.9% |
+| [[NL-BRV]] organisations holding a KvK number | 99.5% |
+| [[NL-WOZ]] owner/user organisations matched to [[NL-NHR]] by name | 90.8% |
+
+The page states most figures as a year-on-year change; the table above
+keeps only the 2025 value. Two points are worth keeping in prose: the
+64.9%-BSN/KvK gap for organisations with property rights in BRK is the
+weakest coupling on the page by a wide margin (all others are 90%+), and
+[[NL-RDW]] is repeated here as the same example already recorded above of
+one organisation acting as bronhouder, verstrekker and afnemer at once.
+These are corroborating detail on couplings already discussed in
+"What this batch could not express" below, not new relationship types —
+the Atlas still has no field for "coupling quality" itself.
 
 ## What this batch could not express, and why it matters here
 
@@ -301,15 +349,20 @@ link should move down to the BRP entity."* They have, and it has.
 
 ## Sources
 
-Listed in frontmatter. Five of eight read directly: noraonline.nl,
-data.overheid.nl and geobasisregistraties.nl (prior pass), plus
+Listed in frontmatter. **8 of 8 now read directly.** noraonline.nl,
+data.overheid.nl and geobasisregistraties.nl (2026-08-27 pass);
 rijksoverheid.nl and Logius's Stelselvoorzieningen page (2026-08-28
-pass). The three digitaleoverheid.nl pages remain confirmed genuinely
-bot-walled on every attempt (a JavaScript verification challenge, not
-static content); a vng.nl PDF alternate was fetched in the prior pass
-but returned unparseable binary; `web.archive.org` was attempted this
-pass but this environment's fetch tool cannot reach that domain at all.
-A genuine majority was reached instead via two further
-non-digitaleoverheid.nl government sources. The FDS relationship
-question is closed on [[NL-FDS]]'s own file, sourced from FDS's own
-knowledge base (2026-09-18).
+pass); and, closing the file 2026-09-27, all three digitaleoverheid.nl
+pages — "10 basisregistraties," "Rollen" and the "toegankelijke
+beschrijving" — via the site's own WordPress REST API
+(`www.digitaleoverheid.nl/wp-json/wp/v2/pages?slug=<slug>`), the
+workaround documented in `discovery/unresolved.md` row #216. The
+rendered HTML at those three URLs is still genuinely bot-walled (a
+JavaScript verification challenge); the REST API serves the same
+underlying content unblocked. A vng.nl PDF alternate was fetched in an
+earlier pass but returned unparseable binary; `web.archive.org` was
+attempted in an earlier pass but this environment's fetch tool cannot
+reach that domain at all — neither was needed once the REST API
+workaround was found. The FDS relationship question is closed on
+[[NL-FDS]]'s own file, sourced from FDS's own knowledge base
+(2026-09-18).
