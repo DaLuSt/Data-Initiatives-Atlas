@@ -33,16 +33,14 @@ discovery:
 validation_status: clean
 
 last_merged_prs:
-  - number: 372
-    summary: "NL-BRV/NL-RDW: read digitaleoverheid.nl BRV/Rollen sources directly via row #216 workaround, 7/7 and 4/4 sources"
-  - number: 373
-    summary: "NL-NHR: read digitaleoverheid.nl HR source directly (row #216), added mandatory-use/reporting-duty/data-coupling facts"
   - number: 374
     summary: "NL-BRI/NL-BELASTINGDIENST: read digitaleoverheid.nl BRI source directly (row #216); BRI has no named supervisor"
   - number: 375
     summary: "NL-KADASTER: read digitaleoverheid.nl BRK source directly (row #216), 4/5 sources"
   - number: 376
     summary: "NL-WDO: read digitaleoverheid.nl sources directly (row #216); confirmed HTTPS/HSTS mandate, kaderwet, RDI supervisor, 2028 extension"
+  - number: 377
+    summary: "NL-UVW/NL-IPO: read digitaleoverheid.nl sources directly (row #216); IPO gains sourced FDS/NDS participates-in edges"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
