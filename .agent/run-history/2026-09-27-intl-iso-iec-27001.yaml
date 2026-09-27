@@ -27,7 +27,7 @@ summary: >
   9. NL-VNG (#378) - fixed unread citation reused from NL-OBDO
   10. INTL-ISO-IEC-27001 (this PR) - iso.org workaround via standards.iteh.ai
 prs:
-  - number: null
+  - number: 379
     title: "Read INTL-ISO-IEC-27001's text directly via standards.iteh.ai redline preview"
 outcome: pending
 entity_count_after: 736
