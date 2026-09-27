@@ -18,17 +18,25 @@ description: null
 next_step: null
 
 notes: >
-  Idle as of 2026-09-26. A long continuous run (PRs #347-366) closed
-  several discovery/unresolved.md rows, added new entities (BE-CYFUN,
-  GB-NATIONAL-DATA-LIBRARY, DE-VDE) and fixed a run of stale
-  cross-references found by grepping for "not modelled"/"unmodelled"/
-  "logged in research-queue.md" phrasing across the repo -- a
-  productive pattern worth repeating in a future session, since several
-  entities created mid-session leave sibling files with stale "X is not
-  modelled" claims that nothing currently checks automatically.
-  Stopped 2026-09-26 per explicit user instruction ("Stop at next
-  pass") after PR #366 merged -- do not pick up further work
-  automatically; resume only when asked. Several remaining
-  Known-source-block rows (bmi.bund.de, digitale-verwaltung.de,
-  geant.org family) were retried 2026-09-26 and confirmed still blocked
-  -- no need to retry again soon.
+  Idle as of 2026-09-27. At the repository owner's explicit request
+  ("Close 10 items"), 10 items were closed via PRs #371-379 (one PR,
+  #377, covered two items): applying the digitaleoverheid.nl WordPress
+  REST API workaround (discovery/unresolved.md row #216) to every
+  remaining genuinely-bot-walled citation found by grepping the repo for
+  "bot-wall"/"confirmed genuinely" near a digitaleoverheid.nl URL --
+  NL-BASISREGISTRATIES, NL-BRV, NL-RDW, NL-NHR, NL-BRI,
+  NL-BELASTINGDIENST, NL-KADASTER, NL-WDO, NL-UVW, NL-IPO and NL-VNG all
+  closed this way (NL-VNG's case was a different flavour: an evidence
+  string citing a page never listed in that entity's own `sources:`,
+  reused unread from NL-OBDO). That vein is now exhausted -- a
+  repo-wide grep after PR #378 found no remaining genuine
+  digitaleoverheid.nl block. The 10th item used a different known
+  workaround instead (row #220): standards.iteh.ai's redline preview
+  PDFs, already used to close INTL-ISO-IEC-27002, applied again to
+  INTL-ISO-IEC-27001 (catalog 82875), giving its own text for the first
+  time. A useful side-effect: reading IPO's own digitaleoverheid.nl
+  subpage (much richer than the general "Organisaties rondom
+  digitalisering" directory page) surfaced two new sourced
+  `participates-in` edges (NL-FDS, NL-NDS) closing part of NL-NDS's
+  long-flagged co-signatory gap. Resume only when asked; no in-flight
+  task to pick up.
