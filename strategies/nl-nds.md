@@ -142,7 +142,12 @@ the NDS's own relationship to what came before it.
   the "one government" framing is confirmed by rijksoverheid.nl directly,
   though none of the five sources read this pass names VNG, IPO or UvW
   individually; they are carried over from the prior text's characterisation
-  of "municipalities, provinces, water authorities."
+  of "municipalities, provinces, water authorities." **Narrowed 2026-09-27**:
+  [[NL-IPO]] is now named individually, on its own file — digitaleoverheid.nl's
+  own IPO page (read via the WordPress REST API workaround, discovery/unresolved.md
+  row #216) names the NDS explicitly as one of the strategies IPO works on
+  jointly with central government, municipalities and water authorities. VNG
+  and UvW remain unconfirmed individually.
 - Not a confirmed successor to [[NL-DIGIBETER]] or to
   [[NL-WERKAGENDA-WAARDENGEDREVEN-DIGITALISEREN]] — see above; the
   relationship is actively ruled against by this entity's own source,

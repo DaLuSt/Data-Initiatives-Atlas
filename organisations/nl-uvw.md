@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-27"
 previous_version: null
 successor: null
 
@@ -46,9 +46,11 @@ sources:
   - title: "Heidag digitalisering decentrale overheden (confirmed genuinely blocked, HTTP 403)"
     url: "https://unievanwaterschappen.nl/heidag-digitalisering-decentrale-overheden/"
     publisher: "Unie van Waterschappen"
-  - title: "Organisaties rondom digitalisering (confirmed genuinely bot-walled)"
+  - title: "Organisaties rondom digitalisering"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/organisaties-rondom-digitalisering/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
+    accessed: "2026-09-27"
+    note: "The rendered page is genuinely bot-walled (JavaScript verification challenge). Read directly via the site's own WordPress REST API instead (www.digitaleoverheid.nl/wp-json/wp/v2/pages?slug=organisaties-rondom-digitalisering) — the workaround documented in discovery/unresolved.md row #216. Confirms the UvW's digital role in the site's own words: 'ondersteunt gezamenlijke digitale ontwikkelingen, bijvoorbeeld op het gebied van databeheer en informatiebeveiliging' (supports joint digital development, e.g. in data management and information security)."
   - title: "OBDO stelt Architectuur Digitale Overheid 2030 vast"
     url: "https://ibestuur.nl/artikel/obdo-stelt-architectuur-digitale-overheid-2030-vast/"
     publisher: "iBestuur"
@@ -75,6 +77,15 @@ sources:
 > alternates, per the Atlas's established practice of substituting reachable
 > primary-adjacent sources when an entity's original citations are
 > genuinely stuck.
+>
+> **Closed 2026-09-27**: digitaleoverheid.nl's "Organisaties rondom
+> digitalisering" page, genuinely bot-walled to direct fetch, is now read
+> directly via the site's own WordPress REST API (the workaround
+> documented in `discovery/unresolved.md` row #216) — 4 of 5 sources now
+> read directly. It confirms the UvW's digital-development role in the
+> site's own words, matching what this entity's description already
+> carried; the unievanwaterschappen.nl page remains confirmed genuinely
+> blocked (HTTP 403), a separate host this workaround does not apply to.
 
 ## Description
 
@@ -114,5 +125,11 @@ unsourced association rather than an asserted relationship.
 
 ## Sources
 
-Listed in frontmatter. iBestuur, Wikipedia and Het Waterschapshuis read
-directly this pass; both original sources are confirmed genuinely blocked.
+Listed in frontmatter. **4 of 5 read directly.** iBestuur, Wikipedia and
+Het Waterschapshuis (earlier pass); and, closing this file 2026-09-27,
+digitaleoverheid.nl's "Organisaties rondom digitalisering" page via the
+site's own WordPress REST API
+(`www.digitaleoverheid.nl/wp-json/wp/v2/pages?slug=organisaties-rondom-digitalisering`)
+— the workaround documented in `discovery/unresolved.md` row #216.
+unievanwaterschappen.nl's own page remains confirmed genuinely blocked
+(HTTP 403).

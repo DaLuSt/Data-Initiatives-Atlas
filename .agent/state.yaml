@@ -17,10 +17,10 @@ updated_by_session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
 
 graph:
   entity_count: 736
-  relationship_edges: 1554
-  association_edges: 3203
-  wikilink_edges: 4525
-  edges_total: 9282
+  relationship_edges: 1556
+  association_edges: 3206
+  wikilink_edges: 4526
+  edges_total: 9288
   countries: 58
   regions: 1
 
@@ -33,8 +33,6 @@ discovery:
 validation_status: clean
 
 last_merged_prs:
-  - number: 371
-    summary: "NL-BASISREGISTRATIES: read 3 digitaleoverheid.nl sources directly via WordPress REST API workaround (row #216), 8/8 sources"
   - number: 372
     summary: "NL-BRV/NL-RDW: read digitaleoverheid.nl BRV/Rollen sources directly via row #216 workaround, 7/7 and 4/4 sources"
   - number: 373
@@ -43,6 +41,8 @@ last_merged_prs:
     summary: "NL-BRI/NL-BELASTINGDIENST: read digitaleoverheid.nl BRI source directly (row #216); BRI has no named supervisor"
   - number: 375
     summary: "NL-KADASTER: read digitaleoverheid.nl BRK source directly (row #216), 4/5 sources"
+  - number: 376
+    summary: "NL-WDO: read digitaleoverheid.nl sources directly (row #216); confirmed HTTPS/HSTS mandate, kaderwet, RDI supervisor, 2028 extension"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
