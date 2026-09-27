@@ -1,0 +1,20 @@
+date: "2026-09-27"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Item 5 of a 10-item closure task. organisations/nl-kadaster.md cited
+  digitaleoverheid.nl's BRK (Basisregistratie Kadaster) page as genuinely
+  bot-walled. Applied the WordPress REST API workaround
+  (discovery/unresolved.md row #216) to read it directly. Confirms the
+  BRK composition (parcels, ownership, mortgages, limited rights,
+  utility networks, cadastral maps) already carried from kadaster.nl's
+  own page -- no factual change. Unlike the other basisregistraties
+  pages, this one is shorter and has no statutory-basis or Rollen
+  section, only a pointer to BZK for policy and Kadaster for operational
+  matters. NL-KADASTER reaches 4/5 sources read directly (NORA Online's
+  BRK wiki page remains confirmed dead, HTTP 404, and unreachable by any
+  means tried).
+prs:
+  - number: null
+    title: "Read NL-KADASTER's digitaleoverheid.nl BRK source directly via WordPress REST API"
+outcome: pending
+entity_count_after: 736
