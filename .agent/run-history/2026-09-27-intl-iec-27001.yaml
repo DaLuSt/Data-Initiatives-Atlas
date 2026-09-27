@@ -13,7 +13,7 @@ summary: >
   own text rather than only from jtc1info.org and Wikipedia.
   INTL-IEC reaches 3/4 sources read directly.
 prs:
-  - number: null
+  - number: 382
     title: "Read INTL-IEC's iso.org/standard/27001 citation directly via standards.iteh.ai redline preview"
 outcome: pending
 entity_count_after: 736
