@@ -1,0 +1,33 @@
+date: "2026-09-27"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Item 10 (final) of a 10-item closure task. This one uses a different
+  known workaround than items 1-9: standards/intl-iso-iec-27001.md had
+  two iso.org sources unread since creation (iso.org is domain-wide
+  403-blocked, per discovery/unresolved.md row #220). Applied the same
+  standards.iteh.ai redline-preview-PDF workaround already used to close
+  INTL-ISO-IEC-27002 (row #166): a free sample PDF at catalog number
+  82875 reproduces the standard's own Foreword plus clauses 1-6.3 in
+  full. This gives, for the first time, the standard's own internal
+  structure (ten main clauses plus a normative Annex A) and confirms in
+  the standard's own words that the third edition (2022-10) "cancels and
+  replaces the second edition (ISO/IEC 27001:2013)". coverage raised
+  low->medium. INTL-ISO-IEC-27001 reaches 4/6 sources read directly (the
+  two iso.org sources remain genuinely blocked). discovery/unresolved.md
+  row #220 updated to record the second application of this workaround.
+
+  This closes the 10-item task. Summary of all 10 items and their PRs:
+  1. NL-BASISREGISTRATIES (#371) - 3 digitaleoverheid.nl sources, 8/8
+  2. NL-BRV/NL-RDW (#372) - BRV/Rollen sources, 7/7 and 4/4
+  3. NL-NHR (#373) - HR source, new mandatory-use/reporting-duty facts
+  4. NL-BRI/NL-BELASTINGDIENST (#374) - BRI source, no named supervisor
+  5. NL-KADASTER (#375) - BRK source, 4/5
+  6. NL-WDO (#376) - Wdo/FAQ sources, confirmed HTTPS/HSTS mandate
+  7-8. NL-UVW/NL-IPO (#377) - IPO gains sourced FDS/NDS edges
+  9. NL-VNG (#378) - fixed unread citation reused from NL-OBDO
+  10. INTL-ISO-IEC-27001 (this PR) - iso.org workaround via standards.iteh.ai
+prs:
+  - number: 379
+    title: "Read INTL-ISO-IEC-27001's text directly via standards.iteh.ai redline preview"
+outcome: pending
+entity_count_after: 736

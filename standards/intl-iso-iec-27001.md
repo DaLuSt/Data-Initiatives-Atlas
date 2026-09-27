@@ -18,12 +18,12 @@ region: null
 
 status: active
 confidence: medium
-coverage: low
+coverage: medium
 verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-18"
+last_verified: "2026-09-27"
 previous_version: null
 successor: null
 
@@ -40,7 +40,7 @@ relationships:
   - type: maintained-by
     target: INTL-ISO
     source: fact
-    evidence: "Confirmed by reading jtc1info.org and two Wikipedia articles directly (2026-08-28): jtc1info.org states SC 27 is 'responsible for helping to mitigate against the growing problems of cyber risks and attacks' and names ISO/IEC 27001 as one of its standards; Wikipedia's ISO/IEC 27001 article confirms 'The International Organization for Standardization (ISO) and the International Electrotechnical Commission (IEC) jointly publish this standard' under 'ISO/IEC JTC 1/SC 27,' with the current edition '2022,' supplemented by 'ISO/IEC 27001:2022/Amd 1:2024'; Wikipedia's ISO/IEC 27000 family article confirms the family is 'developed jointly by' ISO and IEC. Both `iso.org` sources in the frontmatter list (`/standard/27001`, `/standard/iso-iec-27000-family`) remain unread — `iso.org` is domain-wide 403-blocked for this pass's retrieval tool, confirmed on [[INTL-ISO]]."
+    evidence: "Confirmed by reading jtc1info.org and two Wikipedia articles directly (2026-08-28): jtc1info.org states SC 27 is 'responsible for helping to mitigate against the growing problems of cyber risks and attacks' and names ISO/IEC 27001 as one of its standards; Wikipedia's ISO/IEC 27001 article confirms 'The International Organization for Standardization (ISO) and the International Electrotechnical Commission (IEC) jointly publish this standard' under 'ISO/IEC JTC 1/SC 27,' with the current edition '2022,' supplemented by 'ISO/IEC 27001:2022/Amd 1:2024'; Wikipedia's ISO/IEC 27000 family article confirms the family is 'developed jointly by' ISO and IEC. Both `iso.org` sources in the frontmatter list (`/standard/27001`, `/standard/iso-iec-27000-family`) remain unread — `iso.org` is domain-wide 403-blocked for this pass's retrieval tool, confirmed on [[INTL-ISO]]. Confirmed a second, stronger way 2026-09-27, matching the workaround already used to close [[INTL-ISO-IEC-27002]] (discovery/unresolved.md row #220): standards.iteh.ai, an authorized ISO/IEC standards reseller, serves a free 'redline' preview PDF of the actual ISO/IEC 27001:2022 text (catalog number 82875, matching iso.org/standard/82875.html), read directly — its own Foreword states in as many words 'This document was prepared by Joint Technical Committee ISO/IEC JTC 1, Information Technology, Subcommittee SC 27, Information security, cybersecurity and privacy protection' and 'This third edition cancels and replaces the second edition (ISO/IEC 27001:2013), which has been technically revised,' with 'Copyright Protected Document © ISO/IEC 2022' and ISO's own copyright-office address on every page. `iso.org` itself remains domain-wide blocked, but this is the standard's own published text, not a page about it."
     confidence: high
     valid_from: null
     valid_until: null
@@ -68,6 +68,11 @@ sources:
     url: "https://www.nen.nl/nieuws/ict/iso-iec-27001-europees-aanvaard/"
     publisher: "NEN"
     accessed: "2026-09-18"
+  - title: "ISO/IEC 27001:2022 — redline preview PDF (catalog 82875)"
+    url: "https://cdn.standards.iteh.ai/samples/82875/726bcf58250e43d9a666b4d929c8fbdb/ISO-IEC-27001-2022.pdf"
+    publisher: "standards.iteh.ai (authorized ISO/IEC standards reseller)"
+    accessed: "2026-09-27"
+    note: "iso.org itself remains domain-wide 403-blocked. This free preview PDF reproduces the standard's own published text (Foreword, Introduction, Scope, Normative references, and clauses 4-6.3 in full) rather than a page about it — the same workaround already used to close INTL-ISO-IEC-27002 (discovery/unresolved.md row #220)."
 ---
 
 # ISO/IEC 27001
@@ -87,6 +92,15 @@ sources:
 > **Closed 2026-09-18** (`discovery/unresolved.md` row #33): the
 > NEN-EN-ISO/IEC 27001:2023 vs. ISO/IEC 27001:2022 equivalence flagged
 > below is now confirmed, not inferred, via NEN's own page.
+>
+> **Closed 2026-09-27**: `iso.org` remains domain-wide blocked, but
+> `standards.iteh.ai`'s free "redline" preview PDF (the same workaround
+> already used to close [[INTL-ISO-IEC-27002]], row #220) reproduces the
+> standard's own published text directly — 4 of 6 sources now read
+> directly. This gives, for the first time, the standard's own internal
+> structure (ten main clauses plus a normative Annex A) and confirms the
+> third edition "cancels and replaces the second edition (ISO/IEC
+> 27001:2013)" — see "Structure, read directly" below.
 
 ## Description
 
@@ -123,8 +137,23 @@ states plainly that the European version is equal to the global version
 plus a European foreword, published roughly a year later — which is why
 the two carry different year designations. No longer an inference.
 
-`coverage: low`: the standard's own structure and Annex A controls were not
-researched.
+## Structure, read directly 2026-09-27
+
+`coverage: low` previously stood because the standard's own structure and
+Annex A controls were not researched, only described from outside. The
+redline preview PDF (11 pages of the front matter and body text) closes
+part of that gap. Ten main clauses: 4 Context of the organization,
+5 Leadership, 6 Planning, 7 Support, 8 Operation, 9 Performance
+evaluation, 10 Improvement — plus a normative **Annex A, "Information
+security controls reference"** (the redline stops at clause 6.3;
+Annex A's own content, and clauses 7-10 in full, are not reproduced in
+this free sample). The Foreword confirms this third edition (2022-10)
+"cancels and replaces the second edition (ISO/IEC 27001:2013), which has
+been technically revised," and that its main structural change is
+alignment "with the harmonized structure for management system standards
+and ISO/IEC 27002:2022" — the same edition-to-edition alignment this
+entity already recorded from the outside via Wikipedia, now confirmed
+from the standard's own Foreword. `coverage` raised low→medium.
 
 ## Relationships
 
@@ -134,9 +163,10 @@ researched.
 
 ## Sources
 
-Listed in frontmatter. Three of the original five read directly in the
-2026-08-28 pass — jtc1info.org and two Wikipedia articles added as
-substitutes for the two `iso.org` sources, which stay unread
-(domain-wide block; see verification note above). NEN's own equivalence
-page, added and read directly 2026-09-18, closes the 2023-vs-2022
-edition question.
+Listed in frontmatter. **4 of 6 now read directly.** jtc1info.org and two
+Wikipedia articles (2026-08-28 pass); NEN's own equivalence page
+(2026-09-18), closing the 2023-vs-2022 edition question; and, added
+2026-09-27, standards.iteh.ai's redline preview PDF of the standard's own
+text (catalog 82875) — the workaround already used to close
+[[INTL-ISO-IEC-27002]] (`discovery/unresolved.md` row #220). The two
+`iso.org` sources stay unread (domain-wide 403 block).
