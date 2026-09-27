@@ -14,7 +14,7 @@ summary: >
   BRK wiki page remains confirmed dead, HTTP 404, and unreachable by any
   means tried).
 prs:
-  - number: null
+  - number: 375
     title: "Read NL-KADASTER's digitaleoverheid.nl BRK source directly via WordPress REST API"
 outcome: pending
 entity_count_after: 736
