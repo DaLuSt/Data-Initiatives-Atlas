@@ -26,17 +26,31 @@ notes: >
   "bot-wall"/"confirmed genuinely" near a digitaleoverheid.nl URL --
   NL-BASISREGISTRATIES, NL-BRV, NL-RDW, NL-NHR, NL-BRI,
   NL-BELASTINGDIENST, NL-KADASTER, NL-WDO, NL-UVW, NL-IPO and NL-VNG all
-  closed this way (NL-VNG's case was a different flavour: an evidence
-  string citing a page never listed in that entity's own `sources:`,
-  reused unread from NL-OBDO). That vein is now exhausted -- a
-  repo-wide grep after PR #378 found no remaining genuine
-  digitaleoverheid.nl block. The 10th item used a different known
-  workaround instead (row #220): standards.iteh.ai's redline preview
-  PDFs, already used to close INTL-ISO-IEC-27002, applied again to
-  INTL-ISO-IEC-27001 (catalog 82875), giving its own text for the first
-  time. A useful side-effect: reading IPO's own digitaleoverheid.nl
-  subpage (much richer than the general "Organisaties rondom
-  digitalisering" directory page) surfaced two new sourced
-  `participates-in` edges (NL-FDS, NL-NDS) closing part of NL-NDS's
-  long-flagged co-signatory gap. Resume only when asked; no in-flight
-  task to pick up.
+  closed this way. That vein is now exhausted -- a repo-wide grep after
+  PR #378 found no remaining genuine digitaleoverheid.nl block. The
+  10th item switched to the standards.iteh.ai redline-preview workaround
+  (row #220), already used on INTL-ISO-IEC-27002, applied again to
+  INTL-ISO-IEC-27001 (catalog 82875).
+
+  Immediately after, the owner asked to "pick up 3 more items" (PRs
+  #381-383). All three stayed in the ISO/IEC-standards vein, since it
+  turned out not to be exhausted: INTL-ISO (#381) and INTL-IEC (#382)
+  each had their own unread iso.org standards-catalogue citation, closed
+  the same way (redline PDFs for ISO/IEC 27000:2018 and 27001:2022).
+  While investigating, found a **second, different** iso.org
+  workaround: committee.iso.org/iso/home/about/iso_members.htm is a
+  reachable iso.org subdomain carrying ISO's own full member-body table
+  (acronym, tier, TC/PDC participation counts) -- distinct from the
+  standards-catalogue block, since it addresses the separate
+  iso.org/member/<id>.html block instead. Applied in #383 to PT-IPQ,
+  LU-ILNAS, IE-NSAI and DE-DIN, restoring/upgrading all four
+  ISO-membership edges to source:fact/confidence:high. That same PR
+  also found and fixed a stale cross-reference on DE-DIN's own file
+  (a claim that NL-NEN's ISO membership had "never been recorded,"
+  which a later pass on NL-NEN had already made untrue -- DE-DIN's own
+  last_verified date postdated that correction by over a week).
+
+  Both iso.org workarounds (standards.iteh.ai for standards text,
+  committee.iso.org for the member directory) are now documented in
+  discovery/unresolved.md row #220 for reuse. Resume only when asked;
+  no in-flight task to pick up.
