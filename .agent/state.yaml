@@ -19,8 +19,8 @@ graph:
   entity_count: 736
   relationship_edges: 1554
   association_edges: 3203
-  wikilink_edges: 4524
-  edges_total: 9281
+  wikilink_edges: 4525
+  edges_total: 9282
   countries: 58
   regions: 1
 
@@ -41,6 +41,8 @@ last_merged_prs:
     summary: "NL-BASISREGISTRATIES: read 3 digitaleoverheid.nl sources directly via WordPress REST API workaround (row #216), 8/8 sources"
   - number: 372
     summary: "NL-BRV/NL-RDW: read digitaleoverheid.nl BRV/Rollen sources directly via row #216 workaround, 7/7 and 4/4 sources"
+  - number: 373
+    summary: "NL-NHR: read digitaleoverheid.nl HR source directly (row #216), added mandatory-use/reporting-duty/data-coupling facts"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,

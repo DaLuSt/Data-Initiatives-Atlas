@@ -25,7 +25,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-20"
+last_verified: "2026-09-27"
 previous_version: null
 successor: null
 
@@ -49,9 +49,11 @@ sources:
     url: "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/werk_en_inkomen/geregistreerde_inkomen_en_de_inkomensverklaring/alles_over_geregistreerde_inkomen/alles-over-het-geregistreerde-inkomen"
     publisher: "Belastingdienst"
     accessed: "2026-08-27"
-  - title: "BRI — Stelsel van basisregistraties (confirmed bot-walled, not read)"
+  - title: "BRI — Stelsel van basisregistraties"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/10-basisregistraties/bri/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
+    accessed: "2026-09-27"
+    note: "The rendered page is genuinely bot-walled (JavaScript verification challenge). Read directly via the site's own WordPress REST API instead (www.digitaleoverheid.nl/wp-json/wp/v2/pages?slug=bri) — the workaround documented in discovery/unresolved.md row #216. Confirms the Belastingdienst as Bronhouder en verstrekker of the BRI (Algemene wet inzake rijksbelastingen art. 21) and states no supervisor (toezichthouder) is named for the register — see NL-BRI's own file."
   - title: "Waardering Onroerende Zaken (WOZ) | CBS"
     url: "https://www.cbs.nl/nl-nl/deelnemers-enquetes/decentrale-overheden/vastgoed-overheden/waardering-onroerende-zaken--woz--"
     publisher: "Centraal Bureau voor de Statistiek (CBS)"
@@ -73,6 +75,12 @@ sources:
 > consumption is now a typed `uses-data-from` edge, the first use of a new
 > relationship type added this pass. See "Holder and user in one
 > organisation" below.
+>
+> **Closed 2026-09-27**: digitaleoverheid.nl's BRI page, genuinely
+> bot-walled to direct fetch across two prior passes, is now read
+> directly via the site's own WordPress REST API (the workaround
+> documented in `discovery/unresolved.md` row #216) — 3 of 3 sources now
+> read directly.
 
 ## Description
 
@@ -133,7 +141,9 @@ this entity's holder role.
 
 ## Sources
 
-Listed in frontmatter, two of three read directly this pass —
-belastingdienst.nl's own page and CBS's WOZ page. digitaleoverheid.nl's BRI
-page is confirmed genuinely bot-walled in this environment on two separate
-attempts, not merely unread.
+Listed in frontmatter. **3 of 3 now read directly.** belastingdienst.nl's
+own page and CBS's WOZ page (earlier passes); and, closing this file
+2026-09-27, digitaleoverheid.nl's BRI page via the site's own WordPress
+REST API (`www.digitaleoverheid.nl/wp-json/wp/v2/pages?slug=bri`) — the
+workaround documented in `discovery/unresolved.md` row #216. The rendered
+HTML at that URL remains genuinely bot-walled.
