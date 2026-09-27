@@ -1,0 +1,29 @@
+date: "2026-09-27"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Items 7 and 8 of a 10-item closure task. organisations/nl-uvw.md and
+  organisations/nl-ipo.md both cited digitaleoverheid.nl pages under
+  "Organisaties rondom digitalisering" as genuinely bot-walled. Applied
+  the WordPress REST API workaround (discovery/unresolved.md row #216)
+  to read the general directory page (for UvW) and IPO's own dedicated
+  subpage directly.
+
+  UvW: confirms the digital-development role already carried; no factual
+  change. NL-UVW reaches 4/5 sources read directly.
+
+  IPO: the dedicated subpage is far richer than the general directory and
+  yields a real closure. It names IPO explicitly as a joint worker on the
+  IBDS, the Federatief Datastelsel (FDS) and the NDS -- closing, for IPO
+  specifically, the co-signatory gap NL-NDS's own file has flagged since
+  its creation ("none of the five sources read this pass names VNG, IPO
+  or UvW individually"). Two new `participates-in` edges added (NL-FDS,
+  NL-NDS); the existing NL-IBDS edge upgraded confidence medium->high
+  since IPO is now named by name rather than only by NORA's general
+  description. Also adds IPO's founding year (1986) and its Brussels
+  representation office. NL-IPO reaches 5/5 sources read directly.
+  NL-FDS and NL-NDS updated with cross-references and corrected prose.
+prs:
+  - number: null
+    title: "Read NL-UVW/NL-IPO's digitaleoverheid.nl sources directly via WordPress REST API"
+outcome: pending
+entity_count_after: 736

@@ -33,6 +33,7 @@ organisations:
 related_entities:
   - NL-IBDS
   - NL-BASISREGISTRATIES
+  - NL-IPO
 relationships:
   - type: implements
     target: NL-IBDS
@@ -163,6 +164,9 @@ system.
 - `implements` [[NL-BASISREGISTRATIES]] — closed 2026-09-18, see above.
 - Sits within the [[NL-BZK]] digital-government policy remit.
 - Governance decisions taken via the [[NL-OBDO]] (still unconfirmed).
+- [[NL-IPO]] carries a sourced `participates-in` edge pointing here,
+  added 2026-09-27, naming the FDS as one of the strategies IPO works on
+  jointly with central government, municipalities and water authorities.
 
 ## Sources
 
