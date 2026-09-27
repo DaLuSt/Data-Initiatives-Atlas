@@ -1,0 +1,22 @@
+date: "2026-09-27"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Item 1 of a 10-item closure task. frameworks/nl-basisregistraties.md
+  cited three digitaleoverheid.nl pages ("10 basisregistraties",
+  "Rollen", "toegankelijke beschrijving") that were genuinely bot-walled
+  to direct fetch across three prior passes (a JavaScript verification
+  challenge). Applied the workaround documented in
+  discovery/unresolved.md row #216 -- the site's own WordPress REST API
+  (www.digitaleoverheid.nl/wp-json/wp/v2/pages?slug=<slug>) serves the
+  same underlying content unblocked. All three now read directly,
+  bringing the entity to 8 of 8 sources read directly. The "Rollen"
+  page confirmed the five stelselrollen already recorded (no change in
+  substance, only evidence quality). The "toegankelijke beschrijving"
+  page yielded new 2025 coupling-quality figures (11 data points across
+  the person/object/organisation domains) not previously recorded,
+  added as a new section.
+prs:
+  - number: 371
+    title: "Read nl-basisregistraties.md's digitaleoverheid.nl sources directly via WordPress REST API"
+outcome: pending
+entity_count_after: 736
