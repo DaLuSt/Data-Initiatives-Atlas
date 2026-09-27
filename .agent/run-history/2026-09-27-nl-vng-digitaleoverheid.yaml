@@ -1,0 +1,21 @@
+date: "2026-09-27"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Item 9 of a 10-item closure task. organisations/nl-vng.md's OBDO
+  participation edge cited digitaleoverheid.nl's MIDO governance page in
+  its evidence text since creation, but that page was never listed in
+  this entity's own sources: block, carried no accessed date, and was
+  never independently read for this entity -- it was reused, unread,
+  from NL-OBDO's own sourcing (which does list and read it directly, and
+  needed no fix). Applied the WordPress REST API workaround
+  (discovery/unresolved.md row #216) to read the page directly and add
+  it as a proper source: 'Leden van het OBDO zijn onder andere
+  vertegenwoordigers van ministeries, CIO Rijk, de Vereniging Nederlandse
+  Gemeenten (VNG), het Interprovinciaal Overleg (IPO) en de Unie van
+  Waterschappen (UvW)' confirms VNG's OBDO membership. Confidence on that
+  edge raised medium->high. NL-VNG reaches 3/3 sources read directly.
+prs:
+  - number: null
+    title: "Read NL-VNG's digitaleoverheid.nl MIDO governance source directly via WordPress REST API"
+outcome: pending
+entity_count_after: 736

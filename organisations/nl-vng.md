@@ -21,7 +21,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-20"
+last_verified: "2026-09-27"
 previous_version: null
 successor: null
 
@@ -42,8 +42,8 @@ relationships:
   - type: participates-in
     target: NL-OBDO
     source: fact
-    evidence: "VNG is listed among OBDO members alongside ministries, CIO Rijk, IPO and UvW, per digitaleoverheid.nl MIDO governance page."
-    confidence: medium
+    evidence: "FIXES A SOURCING GAP: this edge cited digitaleoverheid.nl's MIDO governance page in evidence text since creation, but that page was never added to this entity's own `sources:` list, carried no accessed date, and was never independently read for this entity — an unread citation reused from NL-OBDO's own sourcing. Confirmed by reading the page directly 2026-09-27 via its WordPress REST API (www.digitaleoverheid.nl/wp-json/wp/v2/pages?slug=governance — the workaround documented in discovery/unresolved.md row #216, the rendered page itself remaining bot-walled): 'Leden van het OBDO zijn onder andere vertegenwoordigers van ministeries, CIO Rijk, de Vereniging Nederlandse Gemeenten (VNG), het Interprovinciaal Overleg (IPO) en de Unie van Waterschappen (UvW)' (OBDO members include representatives of ministries, CIO Rijk, the VNG, IPO and UvW)."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -56,12 +56,25 @@ sources:
     url: "https://vng.nl/artikelen/governance-digitale-overheid"
     publisher: "Vereniging van Nederlandse Gemeenten (VNG)"
     accessed: "2026-08-20"
+  - title: "Governance Meerjarenprogramma Infrastructuur Digitale overheid (MIDO)"
+    url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/mido/governance/"
+    publisher: "Digitale Overheid (Ministerie van BZK)"
+    accessed: "2026-09-27"
+    note: "Added this pass, closing a sourcing gap: this page was cited in the OBDO-membership edge's evidence since creation but never listed here or independently read. The rendered page is genuinely bot-walled (JavaScript verification challenge). Read directly via the site's own WordPress REST API instead (www.digitaleoverheid.nl/wp-json/wp/v2/pages?slug=governance) — the workaround documented in discovery/unresolved.md row #216."
 ---
 
 # Vereniging van Nederlandse Gemeenten (VNG)
 
 > **Verified 2026-08-20.** Every cited source was read and confirmed to
 > support what this entity says. `verification: primary-source`.
+>
+> **Closed 2026-09-27**: the OBDO-membership edge cited digitaleoverheid.nl's
+> MIDO governance page in evidence text since creation, but that page was
+> never listed in this entity's own `sources:` and was never independently
+> read for this entity — a gap this pass fixes with a genuine direct read
+> via the site's own WordPress REST API (the workaround documented in
+> `discovery/unresolved.md` row #216), confirming VNG's membership in the
+> OBDO's own words. `confidence` on that edge raised medium→high.
 
 ## Description
 
@@ -85,4 +98,8 @@ association itself.
 
 ## Sources
 
-Listed in frontmatter.
+Listed in frontmatter. **3 of 3 now read directly**: the two vng.nl pages
+(earlier pass), and, added 2026-09-27 to close a sourcing gap,
+digitaleoverheid.nl's MIDO governance page via the site's own WordPress
+REST API (`www.digitaleoverheid.nl/wp-json/wp/v2/pages?slug=governance`)
+— the workaround documented in `discovery/unresolved.md` row #216.
