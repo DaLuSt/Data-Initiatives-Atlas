@@ -17,7 +17,7 @@ summary: >
   iso.org/member/<id>.html pages cited on PT-IPQ, LU-ILNAS, IE-NSAI and
   DE-DIN -- queued as items 2-3 of this same follow-up task.
 prs:
-  - number: null
+  - number: 381
     title: "Read INTL-ISO's 27000-family citation directly via standards.iteh.ai redline preview"
 outcome: pending
 entity_count_after: 736
