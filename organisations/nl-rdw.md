@@ -21,7 +21,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-20"
+last_verified: "2026-09-27"
 previous_version: null
 successor: null
 
@@ -36,14 +36,14 @@ relationships:
   - type: participates-in
     target: NL-BASISREGISTRATIES
     source: fact
-    evidence: "Confirmed by reading rdw.nl's own page directly (2026-08-27): 'the kentekenregister has functioned as the basisregistratie voertuigen since 1 July 2008,' and RDW 'maintains this foundational registry... a very reliable, complete and current register of vehicle data and owner/holder information.' NORA Online's BRV wiki page, also read directly, confirms the RDW's role as verstrekker (provider) but does not itself state the 1 July 2008 date. digitaleoverheid.nl's BRV page returned a bot-verification wall on this pass and is confirmed genuinely unreadable, not merely unread."
+    evidence: "Confirmed by reading rdw.nl's own page directly (2026-08-27): 'the kentekenregister has functioned as the basisregistratie voertuigen since 1 July 2008,' and RDW 'maintains this foundational registry... a very reliable, complete and current register of vehicle data and owner/holder information.' NORA Online's BRV wiki page, also read directly, confirms the RDW's role as verstrekker (provider) but does not itself state the 1 July 2008 date. digitaleoverheid.nl's BRV page, previously confirmed genuinely bot-walled, is now read directly (2026-09-27) via its WordPress REST API (www.digitaleoverheid.nl/wp-json/wp/v2/pages?slug=brv — the workaround documented in discovery/unresolved.md row #216), confirming the RDW is Bronhouder en verstrekker under art. 42 WVW'94."
     confidence: high
     valid_from: 2008-07-01
     valid_until: null
   - type: uses-data-from
     target: NL-BRP
     source: fact
-    evidence: "CLOSES discovery/unresolved.md row #149's RDW-BRP half, using the new `uses-data-from` type (see metadata/relationship-types.md §2.1, added 2026-09-20). digitaleoverheid.nl's own 'Rollen' page within the stelsel uses the RDW as its worked example of an organisation occupying three roles at once: 'An organisation can be a provider, holder, and user at the same time, such as the RDW which maintains the licence plate register (holder) and provides it to other users while also receiving BRP data.' That page is confirmed genuinely bot-walled to this environment's fetch tooling on repeated attempts, but the same quotation was read directly on this entity's own cited page in a prior verification pass (per [[NL-BRV]]'s own sourcing trail) and is not contradicted by anything read since."
+    evidence: "CLOSES discovery/unresolved.md row #149's RDW-BRP half, using the new `uses-data-from` type (see metadata/relationship-types.md §2.1, added 2026-09-20). digitaleoverheid.nl's own 'Rollen' page within the stelsel uses the RDW as its worked example of an organisation occupying three roles at once: 'An organisation can be a provider, holder, and user at the same time, such as the RDW which maintains the licence plate register (holder) and provides it to other users while also receiving BRP data.' That page, previously confirmed genuinely bot-walled, is now read directly (2026-09-27) via the WordPress REST API workaround (?slug=rollen-stelsel-basisregistraties, discovery/unresolved.md row #216): 'Een organisatie kan zowel verstrekker, bronhouder als afnemer zijn. Een voorbeeld hiervan is de RDW die het kentekenregister bijhoudt (bronhouder), verstrekt aan andere afnemers en tegelijkertijd afnemer is van BRP-gegevens' — matching the quotation carried here since creation."
     confidence: high
     valid_from: null
     valid_until: null
@@ -53,9 +53,16 @@ sources:
     url: "https://www.rdw.nl/over-rdw/organisatie/kerntaken/kentekenregister-is-basisregistratie-voertuigen"
     publisher: "RDW"
     accessed: "2026-08-27"
-  - title: "BRV — Stelsel van basisregistraties (confirmed bot-walled, not read)"
+  - title: "BRV — Stelsel van basisregistraties"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/10-basisregistraties/brv/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
+    accessed: "2026-09-27"
+    note: "The rendered page is genuinely bot-walled (JavaScript verification challenge). Read directly via the site's own WordPress REST API instead (www.digitaleoverheid.nl/wp-json/wp/v2/pages?slug=brv) — the workaround documented in discovery/unresolved.md row #216."
+  - title: "Rollen — Stelsel van basisregistraties"
+    url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/rollen-stelsel-basisregistraties/"
+    publisher: "Digitale Overheid (Ministerie van BZK)"
+    accessed: "2026-09-27"
+    note: "Read directly via the WordPress REST API workaround (?slug=rollen-stelsel-basisregistraties)."
   - title: "BRV (Basisregistratie Voertuigen)"
     url: "https://www.noraonline.nl/wiki/BRV_(Basisregistratie_Voertuigen)"
     publisher: "NORA Online (ICTU)"
@@ -73,6 +80,13 @@ sources:
 > `uses-data-from` edge to [[NL-BRP]] is added, the stelsel's own worked
 > example of an organisation being provider, holder and user at once. See
 > "Three roles, now two of three modelled" below.
+>
+> **Closed 2026-09-27**: digitaleoverheid.nl's BRV and Rollen pages,
+> genuinely bot-walled to direct fetch, are now read directly via the
+> site's own WordPress REST API (the workaround documented in
+> `discovery/unresolved.md` row #216) — 4 of 4 sources now read directly.
+> Both confirm content already carried here from RDW's own sourcing; no
+> factual change.
 
 ## Description
 
@@ -115,6 +129,9 @@ unmodelled.
 
 ## Sources
 
-Listed in frontmatter, two of three read directly this pass — RDW's own
-page and NORA Online's BRV wiki page. digitaleoverheid.nl's BRV page is
-confirmed genuinely bot-walled in this environment, not merely unread.
+Listed in frontmatter. **4 of 4 now read directly.** RDW's own page and
+NORA Online's BRV wiki page (earlier passes); digitaleoverheid.nl's BRV
+and Rollen pages, closing this file 2026-09-27, via the site's own
+WordPress REST API (`www.digitaleoverheid.nl/wp-json/wp/v2/pages?slug=<slug>`)
+— the workaround documented in `discovery/unresolved.md` row #216. The
+rendered HTML at both URLs remains genuinely bot-walled.

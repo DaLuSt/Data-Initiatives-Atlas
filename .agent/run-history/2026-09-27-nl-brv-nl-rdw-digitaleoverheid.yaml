@@ -1,0 +1,21 @@
+date: "2026-09-27"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Item 2 of a 10-item closure task. platforms/nl-brv.md and
+  organisations/nl-rdw.md both cited digitaleoverheid.nl's BRV page
+  and/or its Rollen page as genuinely bot-walled, not merely unread,
+  across two prior passes each. Applied the WordPress REST API
+  workaround (discovery/unresolved.md row #216) to read both pages
+  directly. Both confirm content already carried in these two entities
+  from secondary corroboration (RDW's own site, per NL-BRV's and
+  NL-RDW's prior sourcing trails) -- no factual change, only an
+  upgrade from unread/indirect to genuinely and directly read. The BRV
+  page additionally supplied the specific statutory roles (Opdrachtgever,
+  Toezichthouder, Bronhouder/verstrekker, Afnemer categories under
+  WVW'94 articles 42-45a), added to NL-BRV's part-of edge evidence.
+  NL-BRV reaches 7/7 sources read directly; NL-RDW reaches 4/4.
+prs:
+  - number: null
+    title: "Read NL-BRV/NL-RDW's digitaleoverheid.nl sources directly via WordPress REST API"
+outcome: pending
+entity_count_after: 736
