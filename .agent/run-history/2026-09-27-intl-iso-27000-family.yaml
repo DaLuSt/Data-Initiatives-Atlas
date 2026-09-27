@@ -1,0 +1,23 @@
+date: "2026-09-27"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Item 1 of a follow-up 3-item closure task. organisations/intl-iso.md
+  cited iso.org's ISO/IEC 27000-family landing page, unread since
+  creation (iso.org domain-wide 403-blocked, discovery/unresolved.md row
+  #220). Substituted a direct read of the standard the page describes,
+  ISO/IEC 27000:2018 itself, via standards.iteh.ai's free redline
+  preview PDF (catalog 73906) -- the same workaround already used to
+  close INTL-ISO-IEC-27001 and -27002. This gives the ISMS family list
+  in the standard's own words (27000 through 27019, plus ISO 27799) and
+  confirms JTC 1/SC 27 authorship. coverage raised low->medium.
+  INTL-ISO reaches 3/4 sources read directly. Also discovered a second,
+  different iso.org workaround while investigating: committee.iso.org's
+  member-directory page is reachable and lists every ISO member body
+  with TC/PDC participation counts, unlike the blocked
+  iso.org/member/<id>.html pages cited on PT-IPQ, LU-ILNAS, IE-NSAI and
+  DE-DIN -- queued as items 2-3 of this same follow-up task.
+prs:
+  - number: null
+    title: "Read INTL-ISO's 27000-family citation directly via standards.iteh.ai redline preview"
+outcome: pending
+entity_count_after: 736

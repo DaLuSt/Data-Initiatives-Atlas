@@ -33,14 +33,14 @@ discovery:
 validation_status: clean
 
 last_merged_prs:
-  - number: 376
-    summary: "NL-WDO: read digitaleoverheid.nl sources directly (row #216); confirmed HTTPS/HSTS mandate, kaderwet, RDI supervisor, 2028 extension"
   - number: 377
     summary: "NL-UVW/NL-IPO: read digitaleoverheid.nl sources directly (row #216); IPO gains sourced FDS/NDS participates-in edges"
   - number: 378
     summary: "NL-VNG: fixed unread digitaleoverheid.nl citation reused from NL-OBDO (row #216)"
   - number: 379
     summary: "INTL-ISO-IEC-27001: read standard's own text directly via standards.iteh.ai redline preview (row #220)"
+  - number: 380
+    summary: "Housekeeping: rolled .agent/state.yaml forward, recorded 10-item task summary in current-task.yaml"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
