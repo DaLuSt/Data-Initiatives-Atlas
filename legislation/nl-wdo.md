@@ -22,7 +22,7 @@ verification: primary-source
 
 start_date: 2023-07-01
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-09-27"
 previous_version: null
 successor: null
 
@@ -38,8 +38,8 @@ relationships:
   - type: influences
     target: NL-PAS-TOE-OF-LEG-UIT
     source: fact
-    evidence: "Confirmed by reading the Wdo's own statutory text at wetten.overheid.nl directly (2026-08-27, BWBR0048156): Article 3 mandates compliance with designated standards for electronic communication, requiring 'a procedure accessible to everyone' and that specifications be 'publicly accessible and freely usable' and remain 'permanently available at reasonable cost' — the open-standards criteria the comply-or-explain regime is built on. The statutory text read does not itself name HTTPS; that specific detail comes from digitaleoverheid.nl, which is confirmed genuinely bot-walled (a JavaScript verification challenge on every fetch attempt this pass) and corroborated only via a WebSearch snippet, not a direct read."
-    confidence: medium
+    evidence: "Confirmed by reading the Wdo's own statutory text at wetten.overheid.nl directly (2026-08-27, BWBR0048156): Article 3 mandates compliance with designated standards for electronic communication, requiring 'a procedure accessible to everyone' and that specifications be 'publicly accessible and freely usable' and remain 'permanently available at reasonable cost' — the open-standards criteria the comply-or-explain regime is built on. The statutory text read does not itself name HTTPS; that specific detail is now confirmed by a genuine direct read (2026-09-27) of digitaleoverheid.nl's own Wdo overview page, via its WordPress REST API (www.digitaleoverheid.nl/wp-json/wp/v2/pages?slug=wet-digitale-overheid-wdo — the workaround documented in discovery/unresolved.md row #216, the rendered page itself remaining bot-walled): 'Sinds 1 juli 2023 ... is bijvoorbeeld de HTTPS-standaard wettelijk verplicht voor publiek toegankelijke overheidswebsites en webapplicaties' (since 1 July 2023, the HTTPS standard is legally mandatory for publicly accessible government websites and web applications), with the HSTS standard additionally required and HTTPS configuration required to meet the NCSC's TLS and web-application guidelines."
+    confidence: high
     valid_from: 2023-07-01
     valid_until: null
 
@@ -60,12 +60,16 @@ sources:
     url: "https://nl.wikipedia.org/wiki/Wet_digitale_overheid"
     publisher: "Wikipedia"
     accessed: "2026-08-27"
-  - title: "Wet digitale overheid (Wdo) (confirmed genuinely bot-walled)"
+  - title: "Wet digitale overheid (Wdo)"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/wetgeving/wet-digitale-overheid-wdo/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
-  - title: "Veelgestelde vragen over de inwerkingtreding van de Wdo (confirmed genuinely bot-walled)"
+    accessed: "2026-09-27"
+    note: "The rendered page is genuinely bot-walled (JavaScript verification challenge). Read directly via the site's own WordPress REST API instead (www.digitaleoverheid.nl/wp-json/wp/v2/pages?slug=wet-digitale-overheid-wdo) — the workaround documented in discovery/unresolved.md row #216."
+  - title: "Veelgestelde vragen over de inwerkingtreding van de Wdo"
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/wetgeving/wet-digitale-overheid/veelgestelde-vragen-over-de-inwerkingtreding-van-de-wdo/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
+    accessed: "2026-09-27"
+    note: "Read directly via the WordPress REST API workaround (?slug=veelgestelde-vragen-over-de-inwerkingtreding-van-de-wdo). A long FAQ (32 questions) mostly about the Stelsel Toegang access system's mechanics, not the Wdo's own legal text; used sparingly here."
 ---
 
 # Wet digitale overheid (Wdo)
@@ -78,6 +82,18 @@ sources:
 > sources (the Wdo's own statutory text, and NORA's wiki) were found and
 > read directly to reach a genuine majority. `verification` moves from
 > `search-only` to `primary-source`.
+>
+> **Closed 2026-09-27**: both digitaleoverheid.nl pages, genuinely
+> bot-walled to direct fetch, are now read directly via the site's own
+> WordPress REST API (the workaround documented in
+> `discovery/unresolved.md` row #216) — 6 of 6 sources now read directly.
+> The HTTPS/HSTS claim, previously carried as unconfirmed, is now
+> confirmed by a genuine direct read (`confidence` raised to `high` on
+> that edge). New facts: the Wdo is a *kaderwet* (framework law); the RDI
+> (Rijksinspectie Digitale Infrastructuur) is the designated supervisor
+> for authentication/authorisation services, with Logius supervising
+> information security; and the transition period for lower-assurance
+> logins was extended three years, to 1 July 2028.
 
 ## Description
 
@@ -107,10 +123,12 @@ read directly) and NORA's wiki (read directly):
 - **Open standards.** Article 3, read directly, mandates designated
   standards for electronic communication meeting open-standard criteria
   (accessible procedure, freely usable, permanently available at reasonable
-  cost). The specific claim that HTTPS is named as legally required could
-  not be confirmed by a direct read this pass — digitaleoverheid.nl, the
-  only source naming HTTPS, is confirmed genuinely bot-walled — and is
-  carried over as unconfirmed rather than deleted.
+  cost). **Confirmed 2026-09-27**: digitaleoverheid.nl's own page, read
+  directly via the WordPress REST API workaround, states that since
+  1 July 2023 the HTTPS standard has been legally mandatory for publicly
+  accessible government websites and web applications, with HSTS
+  additionally required and HTTPS configuration required to meet the
+  NCSC's TLS and web-application guidelines.
 - **Stelsel Toegang**, the access system enabling service providers to
   connect to all recognised login methods — named in the Wdo's own text
   (wetten.overheid.nl) as part of Chapter 5 on data protection and access.
@@ -124,6 +142,28 @@ more precise relationship type is warranted is worth revisiting.
 The Wdo also connects to the identity and access services within
 [[NL-GDI]] operated by [[NL-LOGIUS]], though the specific services covered
 have not been established.
+
+## A kaderwet, its supervisors, and a three-year extension — read directly 2026-09-27
+
+digitaleoverheid.nl's own Wdo overview page, read directly via the
+WordPress REST API workaround, adds three facts not previously carried:
+
+- **The Wdo is a *kaderwet*** (framework law): it regulates general
+  principles, responsibilities and procedures rather than detailed rules,
+  by the page's own description, so that flexibility for new developments
+  is possible.
+- **Supervision is split.** The Rijksinspectie Digitale Infrastructuur
+  (RDI) is designated supervisor for authentication and authorisation
+  services and their compliance with the Wdo and its subordinate
+  regulations; [[NL-LOGIUS]] supervises information security separately.
+  Neither body is a separate Atlas entity; both are named here in prose.
+- **The low-assurance transition period was extended three years**, from
+  1 July 2025 to **1 July 2028**, giving public bodies more time to make
+  substantial- and high-assurance login methods more widely available
+  before lower-assurance methods are phased out. As of the source's own
+  writing, only DigiD is a recognised public login method under the new
+  Stelsel Toegang access system; no private login methods have yet been
+  recognised.
 
 ## Classification
 
@@ -149,7 +189,10 @@ source says otherwise. See `discovery/unresolved.md`.
 
 ## Sources
 
-Listed in frontmatter, three of six read directly this pass — Staatsblad
-2023, 160, the Wdo's own statutory text, and NORA's wiki. Wikipedia was
-also read directly and corroborates the phased 1 July 2023 date. The two
-digitaleoverheid.nl pages are confirmed genuinely bot-walled.
+Listed in frontmatter. **6 of 6 now read directly.** Staatsblad 2023, 160,
+the Wdo's own statutory text, NORA's wiki and Wikipedia (earlier passes);
+and, closing this file 2026-09-27, both digitaleoverheid.nl pages via the
+site's own WordPress REST API
+(`www.digitaleoverheid.nl/wp-json/wp/v2/pages?slug=<slug>`) — the
+workaround documented in `discovery/unresolved.md` row #216. The rendered
+HTML at both URLs remains genuinely bot-walled.

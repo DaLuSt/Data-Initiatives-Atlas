@@ -1,0 +1,25 @@
+date: "2026-09-27"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Item 6 of a 10-item closure task. legislation/nl-wdo.md cited two
+  digitaleoverheid.nl pages (the Wdo overview, and its inwerkingtreding
+  FAQ) as genuinely bot-walled. Applied the WordPress REST API workaround
+  (discovery/unresolved.md row #216) to read both directly. This closes
+  a real, previously-flagged gap: the HTTPS/HSTS statutory-standard claim,
+  carried since creation as unconfirmed ("corroborated only via a
+  WebSearch snippet, not a direct read"), is now confirmed by a genuine
+  direct read -- HTTPS has been legally mandatory for public government
+  websites since 1 July 2023, with HSTS additionally required and
+  HTTPS configuration required to meet NCSC's TLS/web-application
+  guidelines. Confidence on that relationship edge raised medium->high.
+  Three further new facts: the Wdo is a kaderwet (framework law); the
+  RDI (Rijksinspectie Digitale Infrastructuur) is the designated
+  supervisor for authentication/authorisation services, with Logius
+  supervising information security separately; and the low-assurance
+  login transition period was extended three years, to 1 July 2028.
+  NL-WDO reaches 6/6 sources read directly.
+prs:
+  - number: null
+    title: "Read NL-WDO's digitaleoverheid.nl sources directly via WordPress REST API"
+outcome: pending
+entity_count_after: 736
