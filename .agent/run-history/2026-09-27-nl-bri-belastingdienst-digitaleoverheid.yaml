@@ -15,7 +15,7 @@ summary: >
   NL-BRI reaches 5/5 sources read directly; NL-BELASTINGDIENST reaches
   3/3.
 prs:
-  - number: null
+  - number: 374
     title: "Read NL-BRI/NL-BELASTINGDIENST's digitaleoverheid.nl BRI source directly via WordPress REST API"
 outcome: pending
 entity_count_after: 736
