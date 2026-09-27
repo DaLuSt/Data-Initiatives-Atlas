@@ -15,7 +15,7 @@ summary: >
   WVW'94 articles 42-45a), added to NL-BRV's part-of edge evidence.
   NL-BRV reaches 7/7 sources read directly; NL-RDW reaches 4/4.
 prs:
-  - number: null
+  - number: 372
     title: "Read NL-BRV/NL-RDW's digitaleoverheid.nl sources directly via WordPress REST API"
 outcome: pending
 entity_count_after: 736
