@@ -11,7 +11,7 @@ Generated: 2026-09-30
 
 Closing that debt — the re-verification pass — needs outbound HTTPS to the hosts those URLs point at. In an environment with a restricted egress policy, this is the allowlist to request. A denial shows up as `403 to CONNECT` from the proxy, which is an environment-level network policy and cannot be changed from inside a session. See `discovery/unresolved.md` for the standing record of the sourcing debt.
 
-The Atlas currently cites **2591 source URLs** across **764 hosts**, collapsing to **548 registrable domains**.
+The Atlas currently cites **2597 source URLs** across **764 hosts**, collapsing to **548 registrable domains**.
 
 ## Highest value first
 
@@ -22,7 +22,7 @@ A domain here is an **allowlist pattern**, not a URL. Most of them also happen t
 | Domain | URLs | Entities | Example host | Opened | Content confirmed |
 |---|---|---|---|---|---|
 | `europa.eu` | 354 | 206 | `certification.enisa.europa.eu` | ✅ opens | ✅ 2026-08-21 |
-| `wikipedia.org` | 206 | 180 | `ca.wikipedia.org` | ✅ opens |  |
+| `wikipedia.org` | 212 | 184 | `ca.wikipedia.org` | ✅ opens |  |
 | `gouv.fr` | 71 | 27 | `aide.monespacenis2.cyber.gouv.fr` | ✅ opens |  |
 | `iso.org` | 69 | 62 | `committee.iso.org` | ✅ opens | ✅ 2026-08-21 |
 | `gov.pl` | 68 | 27 | `api.dane.gov.pl` | ✅ opens |  |
