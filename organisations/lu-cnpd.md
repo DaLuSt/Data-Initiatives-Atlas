@@ -15,12 +15,12 @@ region: EU
 
 status: active
 confidence: medium
-coverage: low
+coverage: medium
 verification: primary-source
 
-start_date: null
+start_date: 2002-08-02
 end_date: null
-last_verified: "2026-09-13"
+last_verified: "2026-09-30"
 previous_version: null
 successor: null
 
@@ -62,6 +62,10 @@ sources:
     url: "https://cnpd.public.lu/fr/legislation/droit-lux.html"
     publisher: "Commission nationale pour la protection des données (CNPD)"
     accessed: "2026-09-05"
+  - title: "Mémorial A N° 686 du 16 août 2018 (PDF, full text)"
+    url: "https://data.legilux.public.lu/filestore/eli/etat/leg/loi/2018/08/01/a686/jo/fr/pdfa/eli-etat-leg-loi-2018-08-01-a686-jo-fr-pdfa.pdf"
+    publisher: "Journal Officiel du Grand-Duché de Luxembourg (Legilux)"
+    accessed: "2026-09-30"
 ---
 
 # Commission nationale pour la protection des données
@@ -74,6 +78,11 @@ sources:
 >
 > **Updated 2026-09-05**: the act's official title was found and it is
 > now modelled as [[LU-LOI-PROTECTION-DONNEES]].
+>
+> **Closed 2026-09-30**: `legilux.public.lu`'s main site is still an
+> unreadable JavaScript shell, but its `data.legilux.public.lu` filestore
+> mirror now serves the founding act's own text directly, confirming the
+> CNPD's legal form in its own words — see below.
 
 ## Description
 
@@ -119,6 +128,21 @@ static filestore subdomain (a working alternate to the unreadable main
 site), names the CNPD as one of its two supervisory authorities, giving
 this entity a second statutory basis alongside the GDPR one.
 
+**Closed 2026-09-30**: [[LU-LOI-PROTECTION-DONNEES]]'s own text is now
+read directly the same way, via `data.legilux.public.lu`'s filestore
+mirror of Mémorial A No. 686. Article 3 states in so many words: "La
+Commission nationale pour la protection des données, désignée ci-après
+par le terme «CNPD», est un établissement public indépendant doté de la
+personnalité juridique" (an independent public institution with legal
+personality). Article 73 additionally confirms this CNPD continues the
+legal personality, staff and commitments of the body first created by the
+repealed 2 August 2002 act — the CNPD is a continuous institution rather
+than a 2018 creation, even though its current statutory basis dates from
+that year. `start_date` is set to **2 August 2002** on this basis rather
+than left `null` or dated to 2018; the 2002 act itself (not read directly,
+named only by its repeal date in Article 72 of the 2018 law) is not
+independently modelled as a separate Atlas entity.
+
 ## Relationships
 
 - `participates-in` [[EU-EDPB]].
@@ -130,5 +154,7 @@ this entity a second statutory basis alongside the GDPR one.
 
 Listed in frontmatter. The original four read directly in the 2026-08-25
 pass; CNPD's "Droit luxembourgeois" page added and read directly
-2026-09-05. `legilux.public.lu` was tried on both passes and found to be
-a JavaScript single-page application with no static content.
+2026-09-05. `legilux.public.lu`'s main site was tried on both passes and
+found to be a JavaScript single-page application with no static content;
+its `data.legilux.public.lu` filestore mirror, found 2026-09-30, serves
+the founding act's own PDF text directly instead.
