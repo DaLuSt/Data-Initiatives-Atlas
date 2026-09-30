@@ -27,7 +27,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-09-30"
 previous_version: null
 successor: null
 
@@ -39,9 +39,9 @@ relationships:
   - type: part-of
     target: INTL-COE
     source: fact
-    evidence: "NOT independently re-confirmed 2026-08-22: coe.int returns a bot-defense challenge (403, Cloudflare) even with an honest, identifying User-Agent — unlike efta.int, this is a genuine block. The claim (Iceland is one of the 46 member states of the Council of Europe, an intergovernmental organisation separate from the European Union) is retained rather than removed. Anchor edge under metadata/relationship-types.md §2.3: it records Council of Europe membership and asserts no more than that."
-    confidence: medium
-    valid_from: null
+    evidence: "Confirmed 2026-09-30: coe.int itself remains genuinely bot-walled (403) even with an honest, identifying User-Agent, but Wikipedia's own dedicated 'Member states of the Council of Europe' article, read directly, gives a sourced per-country accession table: Iceland joined 7 March 1950. Anchor edge under metadata/relationship-types.md §2.3: it records Council of Europe membership and asserts no more than that."
+    confidence: high
+    valid_from: "1950-03-07"
     valid_until: null
 
 sources:
@@ -59,6 +59,11 @@ sources:
   - title: "The Council of Europe's 46 member states"
     url: "https://www.coe.int/en/web/portal/46-members-states"
     publisher: "Council of Europe"
+    note: "coe.int itself remains genuinely bot-walled (403) and stays cited but unread; the accession date is sourced from Wikipedia below instead."
+  - title: "Member states of the Council of Europe"
+    url: "https://en.wikipedia.org/wiki/Member_states_of_the_Council_of_Europe"
+    publisher: "Wikipedia"
+    accessed: "2026-09-30"
 ---
 
 # Iceland
@@ -69,6 +74,11 @@ sources:
 > identifying User-Agent — unlike `efta.int`, whose apparent block
 > earlier this session turned out to be User-Agent-specific, these two
 > are genuinely closed and stay cited but unread.
+>
+> **Confirmed 2026-09-30**: the Council of Europe membership claim below
+> is now sourced with an accession date — 7 March 1950 — from
+> Wikipedia's dedicated Council of Europe article, since `coe.int` itself
+> remains bot-walled.
 
 ## Description
 
@@ -83,12 +93,12 @@ are now modelled: [[IS-PERSONUVERND]] and [[IS-PERSONUVERNDARLOG]].
 | European Union | Not a member, not a candidate |
 | Euro area | No |
 | Schengen area | Member |
-| Council of Europe | Member since 1950 |
+| Council of Europe | Member since 7 March 1950 |
 | EFTA / EEA | Member of [[INTL-EFTA]]; party to [[INTL-EEA-AGREEMENT]] |
 
-> Accession **years** other than EFTA/EEA come from general reference
-> knowledge rather than from a cited page and are flagged for a future
-> pass. The **EFTA/EEA row** is now directly confirmed — see below.
+> The **EFTA/EEA row** is directly confirmed — see below. The **Council of
+> Europe row** is now sourced too, from Wikipedia's dedicated member-states
+> article (2026-09-30), since `coe.int` itself remains bot-walled.
 
 ## The second EEA EFTA state in the Atlas
 
@@ -136,4 +146,6 @@ framework and no cyber authority. Iceland is also the only member of
 
 Listed in frontmatter. `efta.int` and `government.nl` were read directly
 this pass; `coe.int` and `iso.org` remain bot-walled (403) even with an
-honest User-Agent.
+honest User-Agent. Wikipedia's dedicated Council of Europe member-states
+article, read directly 2026-09-30, supplies the accession date `coe.int`
+itself could not.
