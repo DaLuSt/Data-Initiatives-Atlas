@@ -22,7 +22,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-09-30"
 previous_version: null
 successor: null
 
@@ -34,15 +34,20 @@ relationships:
   - type: part-of
     target: INTL-COE
     source: fact
-    evidence: "NOT independently re-confirmed 2026-08-22: coe.int returns a bot-defense challenge (403, Cloudflare 'Attention Required!') and was not read. The claim (the UK is one of the 46 member states of the Council of Europe, an intergovernmental organisation separate from the European Union) is retained rather than removed, since a bot-wall is not evidence it is wrong. Anchor edge under metadata/relationship-types.md §2.3: it records Council of Europe membership and asserts no more than that. Added in the European country batch so that all fifty anchors carry the same membership edge."
-    confidence: medium
-    valid_from: null
+    evidence: "Confirmed 2026-09-30: coe.int itself remains genuinely bot-walled (403, Cloudflare 'Attention Required!'), but Wikipedia's own dedicated 'Member states of the Council of Europe' article, read directly, gives a sourced per-country accession table: the United Kingdom is a founder member, joining 5 May 1949, the day the Treaty of London was signed. Anchor edge under metadata/relationship-types.md §2.3: it records Council of Europe membership and asserts no more than that."
+    confidence: high
+    valid_from: "1949-05-05"
     valid_until: null
 
 sources:
   - title: "The Council of Europe's 46 member states"
     url: "https://www.coe.int/en/web/portal/46-members-states"
     publisher: "Council of Europe"
+    note: "coe.int itself remains genuinely bot-walled (403) and stays cited but unread; the accession date is sourced from Wikipedia below instead."
+  - title: "Member states of the Council of Europe"
+    url: "https://en.wikipedia.org/wiki/Member_states_of_the_Council_of_Europe"
+    publisher: "Wikipedia"
+    accessed: "2026-09-30"
   - title: "A blueprint for modern digital government"
     url: "https://assets.publishing.service.gov.uk/media/678f6665f4ff8740d978864c/a-blueprint-for-modern-digital-government-web-optimised.pdf"
     publisher: "Department for Science, Innovation and Technology (UK)"
@@ -65,9 +70,11 @@ sources:
 > unattested alternative name "United Kingdom of Great Britain and
 > Northern Ireland" has been removed — it appeared only on the ISO Online
 > Browsing Platform entry, which is bot-walled (403) and was never read.
-> The Council of Europe membership claim below could not be
-> independently re-confirmed this pass — `coe.int` is also bot-walled —
-> and is retained rather than removed; see that relationship's evidence.
+>
+> **Confirmed 2026-09-30**: the Council of Europe membership claim below
+> is now sourced with an accession date — 5 May 1949, as a founder member
+> — from Wikipedia's dedicated article, since `coe.int` itself remains
+> bot-walled; see that relationship's evidence.
 
 ## Description
 
@@ -186,4 +193,6 @@ assimilated-law page were read directly this pass. The ISO Online
 Browsing Platform entry — the citation [[DE]], [[BE]], [[FR]], [[ES]] and
 [[PL]] carry — has been dropped: it is bot-walled (403) and was never
 read, and it supported only the alternative name removed above. `coe.int`
-remains cited but unread, also bot-walled.
+remains cited but unread, also bot-walled; Wikipedia's dedicated Council
+of Europe member-states article, read directly 2026-09-30, supplies the
+accession date instead.
