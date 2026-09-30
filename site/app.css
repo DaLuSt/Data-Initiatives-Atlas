@@ -170,6 +170,12 @@ a:hover { text-decoration: none; }
 
 #filters-toggle { display: none; }
 
+.sponsor-btn {
+  display: inline-flex; align-items: center; gap: .3rem;
+  text-decoration: none; white-space: nowrap; margin-left: auto;
+}
+.sponsor-btn:hover { border-color: #d1467c; color: #d1467c; }
+
 /* ───────────────────────── layout ───────────────────────── */
 
 /* overflow-x: a flex child wider than the viewport (the comparison matrix on
