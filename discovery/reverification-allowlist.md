@@ -3,7 +3,7 @@
 > **Generated file — do not hand-edit.** Regenerate with
 > `python tools/source_hosts.py --markdown -o discovery/reverification-allowlist.md`
 
-Generated: 2026-09-27
+Generated: 2026-09-30
 
 ## Why this exists
 
@@ -11,7 +11,7 @@ Generated: 2026-09-27
 
 Closing that debt — the re-verification pass — needs outbound HTTPS to the hosts those URLs point at. In an environment with a restricted egress policy, this is the allowlist to request. A denial shows up as `403 to CONNECT` from the proxy, which is an environment-level network policy and cannot be changed from inside a session. See `discovery/unresolved.md` for the standing record of the sourcing debt.
 
-The Atlas currently cites **2591 source URLs** across **764 hosts**, collapsing to **548 registrable domains**.
+The Atlas currently cites **2592 source URLs** across **764 hosts**, collapsing to **548 registrable domains**.
 
 ## Highest value first
 
@@ -24,7 +24,7 @@ A domain here is an **allowlist pattern**, not a URL. Most of them also happen t
 | `europa.eu` | 354 | 206 | `certification.enisa.europa.eu` | ✅ opens | ✅ 2026-08-21 |
 | `wikipedia.org` | 206 | 180 | `ca.wikipedia.org` | ✅ opens |  |
 | `gouv.fr` | 71 | 27 | `aide.monespacenis2.cyber.gouv.fr` | ✅ opens |  |
-| `iso.org` | 69 | 62 | `committee.iso.org` | ✅ opens | ✅ 2026-08-21 |
+| `iso.org` | 70 | 62 | `committee.iso.org` | ✅ opens | ✅ 2026-08-21 |
 | `gov.pl` | 68 | 27 | `api.dane.gov.pl` | ✅ opens |  |
 | `coe.int` | 55 | 43 | `edoc.coe.int` | ✅ opens | ✅ 2026-08-21 |
 | `overheid.nl` | 53 | 37 | `data.overheid.nl` | ✅ opens |  |

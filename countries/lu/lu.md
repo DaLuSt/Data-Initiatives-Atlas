@@ -25,7 +25,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-25"
+last_verified: "2026-09-30"
 previous_version: null
 successor: null
 
@@ -57,6 +57,11 @@ sources:
   - title: "ISO — ILNAS"
     url: "https://www.iso.org/member/1776.html"
     publisher: "International Organization for Standardization (ISO)"
+    note: "iso.org/member/1776.html itself remains genuinely bot-walled (403); confirmed instead via committee.iso.org below, the workaround documented in discovery/unresolved.md row #220."
+  - title: "ISO members — committee.iso.org"
+    url: "https://committee.iso.org/iso/home/about/iso_members.htm"
+    publisher: "International Organization for Standardization (ISO)"
+    accessed: "2026-09-30"
 ---
 
 # Luxembourg
@@ -65,6 +70,14 @@ sources:
 > `ctie.gouvernement.lu` were read directly and confirm the 1958
 > membership date verbatim. `iso.org` remains bot-walled (403), even with
 > an honest, identifying User-Agent, and stays cited but unread.
+>
+> **Closed 2026-09-30**: `iso.org/member/1776.html` itself remains
+> bot-walled, but `committee.iso.org` — a different, reachable `iso.org`
+> subdomain (the workaround documented in `discovery/unresolved.md` row
+> #220, already applied to [[LU-ILNAS]]'s own file) — lists "Luxembourg
+> ILNAS Member body" with 176 TC and 3 PDC participations, confirming
+> ILNAS's full voting ISO membership directly rather than only via the
+> bot-walled page.
 
 ## Description
 
@@ -141,5 +154,7 @@ the evidence strings and the cited source both need changing together.
 ## Sources
 
 Listed in frontmatter. `european-union.europa.eu` and
-`ctie.gouvernement.lu` were read directly this pass; `iso.org` remains
-bot-walled (403) even with an honest User-Agent.
+`ctie.gouvernement.lu` were read directly this pass; `iso.org` itself
+remains bot-walled (403) even with an honest User-Agent, but
+`committee.iso.org`, read directly 2026-09-30, confirms ILNAS's ISO
+membership directly instead.
