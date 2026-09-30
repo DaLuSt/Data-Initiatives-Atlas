@@ -11,7 +11,7 @@ Generated: 2026-09-30
 
 Closing that debt — the re-verification pass — needs outbound HTTPS to the hosts those URLs point at. In an environment with a restricted egress policy, this is the allowlist to request. A denial shows up as `403 to CONNECT` from the proxy, which is an environment-level network policy and cannot be changed from inside a session. See `discovery/unresolved.md` for the standing record of the sourcing debt.
 
-The Atlas currently cites **2597 source URLs** across **764 hosts**, collapsing to **548 registrable domains**.
+The Atlas currently cites **2599 source URLs** across **764 hosts**, collapsing to **548 registrable domains**.
 
 ## Highest value first
 
@@ -39,8 +39,8 @@ A domain here is an **allowlist pattern**, not a URL. Most of them also happen t
 | `rijksoverheid.nl` | 24 | 20 | `www.rijksoverheid.nl` | ✅ opens |  |
 | `noraonline.nl` | 23 | 21 | `www.noraonline.nl` |  |  |
 | `openjustice.be` | 22 | 18 | `etaamb.openjustice.be` |  |  |
+| `public.lu` | 21 | 11 | `cnpd.public.lu` | ✅ opens |  |
 | `forumstandaardisatie.nl` | 21 | 14 | `www.forumstandaardisatie.nl` |  |  |
-| `belgium.be` | 20 | 12 | `bosa.belgium.be` | ✅ opens |  |
 
 **`Opened` and `Content confirmed` are different claims.** The first says the citation points somewhere real. The second says the pages were read and the information on them confirmed correct, which is the only thing that licenses `verification: primary-source`. See `docs/re-verification.md` §"A link check is not a content check".
 
@@ -59,7 +59,7 @@ Two things about that list are worth stating precisely:
 - **`legifrance.gouv.fr`, not `gouv.fr`.** The confirmation names one host under the French government namespace. This table collapses all of `gouv.fr` into one row — `cyber.gouv.fr`, `numerique.gouv.fr`, `data.gouv.fr` and the rest — so that row is **not** marked confirmed, and it should not be.
 - **The Legifrance confirmation moved no entity.** Five entities cite it and every one of them also cites something unconfirmed, so none qualified. That is the partial-coverage rule doing its job rather than a defect: a confirmation is not required to yield anything.
 
-**Also checked, outside the table above:** `bundestag.de`, `cencenelec.eu`, `gov.cz`, `gov.pt`, `public.lu`, `unece.org` — the other government namespaces among the Atlas's citations. All serve a site at the apex, which settles the question `gob.es` raised: it is the **sole exception**, not the first of several.
+**Also checked, outside the table above:** `belgium.be`, `bundestag.de`, `cencenelec.eu`, `gov.cz`, `gov.pt`, `unece.org` — the other government namespaces among the Atlas's citations. All serve a site at the apex, which settles the question `gob.es` raised: it is the **sole exception**, not the first of several.
 
 ## Institutional domains
 
