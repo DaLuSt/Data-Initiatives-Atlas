@@ -16,13 +16,13 @@ country: LU
 region: EU
 
 status: active
-confidence: medium
-coverage: low
+confidence: high
+coverage: medium
 verification: primary-source
 
 start_date: 2018-08-01
 end_date: null
-last_verified: "2026-09-13"
+last_verified: "2026-09-30"
 previous_version: null
 successor: null
 
@@ -37,15 +37,15 @@ relationships:
   - type: implements-requirement-from
     target: EU-GDPR
     source: fact
-    evidence: "Confirmed by reading cnpd.public.lu's own 'Droit luxembourgeois' legislation page directly (2026-09-05), which lists two distinct laws both dated 1 August 2018: this one, cited there as 'Loi du 1er août 2018 portant organisation de la Commission nationale pour la protection des données et du régime général sur la protection des données' (Mémorial A reference a686), and a second, separate law on data protection in criminal and national-security matters (a689, implementing the Law Enforcement Directive 2016/680 — not this entity). A WebSearch cross-check independently returned the same a686 title in fuller form, naming it as implementing Regulation (EU) 2016/679 (the GDPR) and repealing the prior law of 2 August 2002. legilux.public.lu itself, which would carry the act's full text, is a JavaScript single-page application returning no static content, confirmed unreadable on a prior pass (LU-CNPD, 2026-08-25) and not re-attempted."
-    confidence: medium
+    evidence: "Confirmed by reading cnpd.public.lu's own 'Droit luxembourgeois' legislation page directly (2026-09-05), which lists two distinct laws both dated 1 August 2018: this one, cited there as 'Loi du 1er août 2018 portant organisation de la Commission nationale pour la protection des données et du régime général sur la protection des données' (Mémorial A reference a686), and a second, separate law on data protection in criminal and national-security matters (a689, implementing the Law Enforcement Directive 2016/680 — not this entity). **Confirmed directly 2026-09-30**: `data.legilux.public.lu`'s filestore subdomain (the workaround documented in discovery/unresolved.md's known-blocks table, already used for LU-LOI-DONNEES-PENAL-2018) serves the Mémorial A No. 686 PDF in full. Article 1(1) states the law and règlement (UE) 2016/679 together govern personal-data processing in Luxembourg; Article 72 expressly repeals 'la loi modifiée du 2 août 2002 relative à la protection des personnes à l'égard du traitement des données à caractère personnel', and Article 73 confirms the CNPD continues that 2002-created body's legal personality."
+    confidence: high
     valid_from: 2018-08-01
     valid_until: null
   - type: applies-to
     target: LU-CNPD
     source: fact
-    evidence: "The act's own title, confirmed by reading cnpd.public.lu's 'Droit luxembourgeois' page directly (2026-09-05), states it is 'portant organisation de la Commission nationale pour la protection des données' (organising the National Commission for Data Protection) — the same title-level evidence tier used for NL-WET-CBS's applies-to NL-CBS edge."
-    confidence: medium
+    evidence: "The act's own title, confirmed by reading cnpd.public.lu's 'Droit luxembourgeois' page directly (2026-09-05), states it is 'portant organisation de la Commission nationale pour la protection des données' (organising the National Commission for Data Protection). **Confirmed directly 2026-09-30** via the Mémorial A No. 686 PDF itself (data.legilux.public.lu filestore): Article 3 states 'La Commission nationale pour la protection des données, désignée ci-après par le terme «CNPD», est un établissement public indépendant doté de la personnalité juridique' (an independent public institution with legal personality)."
+    confidence: high
     valid_from: 2018-08-01
     valid_until: null
 
@@ -57,7 +57,11 @@ sources:
   - title: "Loi du 1er août 2018 portant organisation de la Commission nationale pour la protection des données et du régime général sur la protection des données"
     url: "https://legilux.public.lu/eli/etat/leg/loi/2018/08/01/a686/jo"
     publisher: "Journal Officiel du Grand-Duché de Luxembourg (Legilux)"
-    note: "Confirmed unreadable: legilux.public.lu is a JavaScript single-page application with no static content available to this environment's fetch tooling."
+    note: "The main legilux.public.lu site is a JavaScript single-page application with no static content; the act's own text was read directly 2026-09-30 via the filestore mirror below instead."
+  - title: "Mémorial A N° 686 du 16 août 2018 (PDF, full text)"
+    url: "https://data.legilux.public.lu/filestore/eli/etat/leg/loi/2018/08/01/a686/jo/fr/pdfa/eli-etat-leg-loi-2018-08-01-a686-jo-fr-pdfa.pdf"
+    publisher: "Journal Officiel du Grand-Duché de Luxembourg (Legilux)"
+    accessed: "2026-09-30"
 ---
 
 # Loi du 1er août 2018 (Luxembourg GDPR implementation)
@@ -71,6 +75,14 @@ sources:
 > **Narrowed 2026-09-13**: the companion Mémorial A No. 689 law this
 > entity named but left unmodelled is now [[LU-LOI-DONNEES-PENAL-2018]] —
 > see "Not modelled" below.
+>
+> **Closed 2026-09-30**: `legilux.public.lu`'s own JavaScript shell
+> remains unreadable, but its `data.legilux.public.lu` filestore mirror
+> (the same workaround already used for LU-LOI-DONNEES-PENAL-2018) serves
+> the Mémorial A No. 686 PDF directly, confirming the act's own text —
+> its scope (Article 1), the CNPD's legal form (Article 3) and the 2002
+> predecessor's repeal (Article 72) — rather than only its title via
+> CNPD's own page.
 
 ## Description
 
@@ -89,8 +101,16 @@ official title — `legilux.public.lu` itself, which would carry the act's
 full text, is a JavaScript single-page application returning no static
 content to this environment's fetch tooling, on both this pass and the
 2026-08-25 pass that first found the date. The official title above comes
-from CNPD's own page, not from Legilux directly, and a WebSearch
-cross-check independently returned the same title.
+from CNPD's own page, not from Legilux directly.
+
+**Confirmed directly 2026-09-30**: `data.legilux.public.lu`'s filestore
+mirror serves the Mémorial A No. 686 PDF's full text. Article 1(1) opens
+by naming both this law and Regulation (EU) 2016/679 as the governing
+texts for personal-data processing in Luxembourg; Article 3 establishes
+the CNPD as "un établissement public indépendant doté de la personnalité
+juridique" (an independent public institution with legal personality);
+Article 72 repeals the 2 August 2002 predecessor act; and Article 73
+confirms the CNPD continues that 2002 body's legal personality and staff.
 
 ## The seventh national GDPR instrument
 
@@ -108,12 +128,15 @@ cross-check independently returned the same title.
 
 ## Not modelled
 
-- The act's **section-level content**: what it says about the CNPD's
-  powers, procedures, or Luxembourg-specific derogations. Neither
-  Legilux page was readable this pass.
-- The **2002 predecessor act** the 2018 law repeals, per the WebSearch
-  cross-check — not independently confirmed by a primary source read
-  this pass, and not modelled.
+- The act's full **section-level content** beyond what is cited above —
+  its 76 articles cover the CNPD's detailed powers and procedures, and
+  numerous Luxembourg-specific derogations (e.g. the workplace-monitoring
+  provisions at Article 71, which amend the Code du travail) that this
+  entity does not attempt to catalogue exhaustively.
+- The **2002 predecessor act** the 2018 law repeals — now confirmed
+  directly (Article 72, "la loi modifiée du 2 août 2002... est abrogée")
+  rather than only via a WebSearch cross-check, but still not itself
+  modelled as a separate Atlas entity.
 
 **Closed 2026-09-13**: the Mémorial A No. 689 law of the same date is now
 [[LU-LOI-DONNEES-PENAL-2018]], sourced by reading the Journal Officiel's
@@ -128,6 +151,7 @@ unreadable across two prior passes.
 
 ## Sources
 
-Two sources, one read directly (CNPD's own legislation page). Legilux's
-own text remains confirmed unreadable (JavaScript SPA, no static
-content).
+Three sources, all now read directly: CNPD's own legislation page and,
+as of 2026-09-30, the Mémorial A No. 686 PDF itself via
+`data.legilux.public.lu`'s filestore mirror — `legilux.public.lu`'s main
+site remains a JavaScript SPA with no static content.
