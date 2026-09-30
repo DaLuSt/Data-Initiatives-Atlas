@@ -33,7 +33,7 @@ organisation_role: regulatory
 
 start_date: 2003-01-01
 end_date: 2017-01-01
-last_verified: "2026-09-04"
+last_verified: "2026-09-30"
 previous_version: null
 successor: null
 
@@ -72,6 +72,11 @@ sources:
 > proposal directly this pass found the CCS was **abolished**, not
 > merely unmodelled — this entity records a historical body, `status:
 > superseded`, not a current one.
+>
+> **Closed 2026-09-30**: [[NL-CBS]]'s own file still said "the CCS is
+> still not yet an entity" nine days after this entity was created — a
+> stale cross-reference, now fixed there with a typed `governed-by` edge
+> pointing here.
 
 ## Description
 
