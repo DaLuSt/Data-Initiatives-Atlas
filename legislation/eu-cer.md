@@ -22,7 +22,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-09-30"
 previous_version: null
 successor: null
 
@@ -34,6 +34,7 @@ related_entities:
   - LU
   - PT
   - IE
+  - NL-WWKE
   - EU-NIS2
   - EU-CYBERSECURITY-STRATEGY
 relationships:
@@ -68,9 +69,9 @@ relationships:
   - type: applies-in
     target: NL
     source: fact
-    evidence: "As an EU directive it requires transposition by member states; the Netherlands passed the Wet weerbaarheid kritieke entiteiten alongside the Cyberbeveiligingswet (EUR-Lex ELI dir/2022/2557; rijksoverheid.nl, April 2026). NOT READ — search-only."
-    confidence: medium
-    valid_from: null
+    evidence: "As an EU directive it requires transposition by member states; the Netherlands transposed via the Wet weerbaarheid kritieke entiteiten, passed alongside the Cyberbeveiligingswet (EUR-Lex ELI dir/2022/2557; rijksoverheid.nl, April 2026). **Closed 2026-09-30**: that transposing instrument is now [[NL-WWKE]] (created 2026-09-05), whose own file confirms directly, via nctv.nl read directly, that it implements 'de Critical Entities Resilience Directive (CER-richtlijn)' — the `implements-requirement-from` edge is recorded there rather than duplicated here, per the convention used for EU-NIS2's own national transpositions."
+    confidence: high
+    valid_from: 2026-08-15
     valid_until: null
   - type: applies-in
     target: DE
@@ -122,6 +123,14 @@ sources:
 > **Verified 2026-08-21.** Every source this entity cites is on a domain the
 > repository owner confirmed read and correct — `europa.eu`. `verification:
 > primary-source`. See `docs/re-verification.md` §"The confirmed domains".
+>
+> **Closed 2026-09-30**: this file's own "Dutch counterpart, not yet an
+> entity" section had gone stale — [[NL-WWKE]] was created 2026-09-05,
+> over three weeks before this fix, and now carries the
+> `implements-requirement-from` edge back to this directive. Fixed below,
+> along with a separate stale "Relationships" listing that still named
+> only six of the ten countries this entity's own `applies-in` edges
+> cover.
 
 ## Description
 
@@ -142,23 +151,29 @@ this directive. With CER now an entity, all three elements of that package
 are represented, and the strategy's `influences` relationships can span the
 full package rather than just its cybersecurity half.
 
-## Dutch counterpart, not yet an entity
+## Dutch counterpart, now an entity — closed 2026-09-30
 
-The Netherlands passed the **Wet weerbaarheid kritieke entiteiten** alongside
-the Cyberbeveiligingswet — the Tweede Kamer approved both on 15 April 2026,
-per the source already cited on [[NL-CBW]]. That Dutch act has been queued
-since Batch 3 and remains uncreated; when it is added, it should carry an
-`implements-requirement-from` relationship to this directive, mirroring
-[[NL-CBW]] → [[EU-NIS2]].
+The Netherlands passed the **Wet weerbaarheid kritieke entiteiten**
+alongside the Cyberbeveiligingswet — the Tweede Kamer approved both on 15
+April 2026, per the source already cited on [[NL-CBW]]. That Dutch act,
+queued since Batch 3, was created 2026-09-05 as [[NL-WWKE]] — closing the
+gap this section used to flag. It carries an `implements-requirement-from`
+edge to this directive, confirmed by reading nctv.nl's own page directly,
+mirroring [[NL-CBW]] → [[EU-NIS2]]. This entity's own stale reference to
+the gap (still present as of this file's 2026-08-21 verification, nearly
+a month after NL-WWKE's creation) is fixed here.
 
 `coverage: low`: the directive's substantive obligations were not
 researched.
 
 ## Relationships
 
-- Applies in [[NL]], [[DE]], [[BE]], [[FR]], [[ES]] and [[PL]] — one entity, six
-  countries. Every other member state belongs here too; the
-  `applies-in` relationships are added as countries join the Atlas.
+- Applies in [[PT]], [[LU]], [[CZ]], [[IE]], [[NL]], [[DE]], [[BE]], [[FR]],
+  [[ES]] and [[PL]] — one entity, ten countries so far (this section was
+  stale, still naming only six). Every other member state belongs here
+  too; the `applies-in` relationships are added as countries join the
+  Atlas.
+- Implemented by [[NL-WWKE]] in the Netherlands (see above).
 - Companion to [[EU-NIS2]]; both stem from [[EU-CYBERSECURITY-STRATEGY]].
 
 ## Sources
