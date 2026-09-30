@@ -14,6 +14,7 @@ countries — no install, no account.*
 [![Pages](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/pages.yml/badge.svg)](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/pages.yml)
 [![Autonomous Agent](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/autonomous-agent.yml/badge.svg)](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/autonomous-agent.yml)
 [![Licence: CC0-1.0](https://img.shields.io/badge/licence-CC0--1.0-blue.svg)](LICENSE)
+[![Sponsor](https://img.shields.io/badge/sponsor-%E2%9D%A4-db61a2?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/DaLuSt)
 
 </div>
 
@@ -487,6 +488,14 @@ knowledge layer for data governance and data ecosystems.
 ```
 
 The Netherlands is the first node in the national layer, not the endpoint.
+
+---
+
+## 💜 Support this project
+
+The Atlas is free, open and maintained without funding. If it's useful to
+you, consider [sponsoring it on GitHub](https://github.com/sponsors/DaLuSt)
+— it helps keep the research and the infrastructure going.
 
 ---
 
