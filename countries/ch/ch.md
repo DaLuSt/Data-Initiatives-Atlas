@@ -25,7 +25,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-09-30"
 previous_version: null
 successor: null
 
@@ -37,15 +37,20 @@ relationships:
   - type: part-of
     target: INTL-COE
     source: fact
-    evidence: "NOT independently re-confirmed 2026-08-22: coe.int returns a bot-defense challenge (403, Cloudflare 'Attention Required!') and was not read, the same obstacle found on GB's identical edge. The claim (Switzerland is one of the 46 member states of the Council of Europe, an intergovernmental organisation separate from the European Union) is retained rather than removed, since a bot-wall is not evidence it is wrong. Anchor edge under metadata/relationship-types.md §2.3: it records Council of Europe membership and asserts no more than that. Added in the European country batch so that all fifty anchors carry the same membership edge."
-    confidence: medium
-    valid_from: null
+    evidence: "Confirmed 2026-09-30: coe.int itself remains genuinely bot-walled (403, Cloudflare 'Attention Required!'), the same obstacle found on GB's identical edge, but Wikipedia's own dedicated 'Member states of the Council of Europe' article, read directly, gives a sourced per-country accession table: Switzerland joined 6 May 1963. Anchor edge under metadata/relationship-types.md §2.3: it records Council of Europe membership and asserts no more than that. Added in the European country batch so that all fifty anchors carry the same membership edge."
+    confidence: high
+    valid_from: "1963-05-06"
     valid_until: null
 
 sources:
   - title: "The Council of Europe's 46 member states"
     url: "https://www.coe.int/en/web/portal/46-members-states"
     publisher: "Council of Europe"
+    note: "coe.int itself remains genuinely bot-walled (403) and stays cited but unread; the accession date is sourced from Wikipedia below instead."
+  - title: "Member states of the Council of Europe"
+    url: "https://en.wikipedia.org/wiki/Member_states_of_the_Council_of_Europe"
+    publisher: "Wikipedia"
+    accessed: "2026-09-30"
   - title: "Switzerland"
     url: "https://en.wikipedia.org/wiki/Switzerland"
     publisher: "Wikipedia"
@@ -69,6 +74,10 @@ sources:
 > `coe.int` is also bot-walled, so the Council of Europe membership edge
 > could not be independently re-confirmed this pass and is retained
 > rather than removed — see that relationship's evidence.
+>
+> **Confirmed 2026-09-30**: that edge is now sourced with an accession
+> date — 6 May 1963 — from Wikipedia's dedicated Council of Europe
+> article, since `coe.int` itself remains bot-walled.
 
 ## Description
 
@@ -137,4 +146,7 @@ recorded here in prose. The same distinction is drawn on [[GB]].
 ## Sources
 
 Listed in frontmatter. The Wikipedia article was read directly this
-pass; `coe.int` remains cited but unread, bot-walled.
+pass; `coe.int` remains cited but unread, bot-walled. Wikipedia's
+separate, dedicated Council of Europe member-states article, read
+directly 2026-09-30, supplies the accession date `coe.int` itself could
+not.
