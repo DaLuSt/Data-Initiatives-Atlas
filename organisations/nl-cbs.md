@@ -24,7 +24,7 @@ organisation_role: executive
 
 start_date: null
 end_date: null
-last_verified: "2026-09-13"
+last_verified: "2026-09-30"
 previous_version: null
 successor: null
 
@@ -34,10 +34,18 @@ organisations:
   - NL-EZK
 related_entities:
   - NL-WET-CBS
+  - NL-CCS
   - EU-EUROSTAT
   - EU-REG-223-2009
   - NL-MONITOR-BREDE-WELVAART-SDG
 relationships:
+  - type: governed-by
+    target: NL-CCS
+    source: fact
+    evidence: "CLOSES A STALE CROSS-REFERENCE: this entity's own prose (added 2026-09-05) said 'The CCS is still not yet an entity,' but [[NL-CCS]] was created 2026-09-04 — the day before — and this file's own last_verified date (2026-09-13) postdated that creation by over a week without the cross-reference being fixed. Per NL-CCS's own file, read directly (Kamerstuk 34248, nr. 3, the 2015 abolition proposal, and eerstekamer.nl's bill page for the Wet op het CBS, both read directly 2026-08-27/2026-09-04): the Centrale Commissie voor de Statistiek independently approved the CBS's multi-year and annual work programmes, took part in setting its budget and annual accounts, and supervised its operations from the CBS's own 1 January 2004 ZBO start date until the CCS's abolition took effect 1 January 2017 — a governance relationship, not a lesser one."
+    confidence: high
+    valid_from: 2004-01-01
+    valid_until: 2017-01-01
   - type: part-of
     target: EU-ESS
     source: fact
@@ -75,6 +83,11 @@ sources:
 > (Staatsblad 2003, 516) without substituting for a direct read. `coverage`
 > stays `medium`; `verification` moves from `search-only` to
 > `primary-source` on the strength of the two direct reads.
+>
+> **Closed 2026-09-30**: a stale cross-reference, "the CCS is still not
+> yet an entity," is fixed below — [[NL-CCS]] has existed since
+> 2026-09-04, and now carries the typed `governed-by` edge this entity
+> was missing.
 
 ## Description
 
@@ -115,13 +128,25 @@ without a direct digital-government role.
 above points to it. The responsible ministry was Economic Affairs at the
 time of the 2003 act (per kst-28277-3.html); today's Economische Zaken en
 Klimaat is that same ministry's current, renamed form (confirmed on
-[[NL-EZK]]'s own page). The CCS is still not yet an entity.
+[[NL-EZK]]'s own page).
+
+**Closed 2026-09-30.** The CCS — the Centrale Commissie voor de
+Statistiek, CBS's own statutory supervisor from 2004 until its 2017
+abolition — is now [[NL-CCS]], created 2026-09-04, but this entity's own
+prose had not been updated to reflect it. This entity now carries the
+typed `governed-by` [[NL-CCS]] edge that relationship implies, sourced
+from NL-CCS's own file (in turn sourced from Kamerstuk 34248, nr. 3 and
+eerstekamer.nl's bill page, both read directly).
 
 ## Relationships
 
 - Governed by [[NL-WET-CBS]], under which it became a ZBO on
   1 January 2004 — confirmed this pass by reading both eerstekamer.nl and
   the bill's own explanatory memorandum directly.
+- Governed by [[NL-CCS]] from 1 January 2004 until its abolition on
+  1 January 2017 — the independent supervisory body the Wet op het CBS
+  created alongside the Director-General of Statistics, which approved
+  CBS's work programme and budget and supervised its operations.
 - Participates in the European Statistical System with [[EU-EUROSTAT]].
   The explanatory memorandum, read directly this pass, confirms the CBS
   "executes EU statistical obligations and participates in European
