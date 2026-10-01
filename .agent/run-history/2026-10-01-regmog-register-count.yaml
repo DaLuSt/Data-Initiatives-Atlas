@@ -1,0 +1,21 @@
+date: "2026-10-01"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Took the highest-value open row, #226 (RegMoG: 50 or 51 registers?).
+  Read the government bill (BT-Drs. 19/24226), the Interior Committee's
+  report (BT-Drs. 19/26247) and the promulgated Act, and diffed their
+  Anlagen programmatically rather than by eye. The bill lists 56 entries;
+  the committee's amendments delete five (reasons given in its report),
+  leaving 51, which is the figure the entity's secondary sources use; the
+  promulgated Act lists 50. The row is narrowed, not closed: the 51-to-50
+  step is not explained by any document read, and the Gazette text and the
+  Bundestag's final-vote record are behind JavaScript shells (bgbl.de,
+  dip.bundestag.de).
+
+  A guessed Bundesrat Drucksache number (112/21) turned out to be an
+  unrelated ordinance on dangerous goods; it was discarded, not used.
+prs:
+  - number: 398
+    title: "Trace the RegMoG register count through the bill and committee text"
+outcome: merged
+entity_count_after: 738

@@ -57,6 +57,10 @@ last_merged_prs:
     summary: "Extended the session-cookie workaround to digitale-verwaltung.de and personalausweisportal.de; read the previously-unread citations on DE-FITKO, DE-FIM, DE-BUNDID, DE-MODERNISIERUNGSAGENDA-FOEDERAL, DE-OZG, DE-DATENSTRATEGIE (cabinet decision date 30 Aug 2023 now sourced) and DE-REGMOG (statute read; Anlage lists 50 registers, not 51 -- new row #226)"
   - number: 396
     summary: "Added the Swiss e-ID: CH-BGEID (adopted 20 Dec 2024, approved 28 Sep 2025, not yet in force) and CH-E-ID (planned; introduction postponed 30 Jun 2026); fixed a stale ISG entry on the Swiss index"
+  - number: 397
+    summary: "Housekeeping: rolled state.yaml/current-task.yaml forward after PRs #395-396"
+  - number: 398
+    summary: "Row #226 narrowed: traced the RegMoG Anlage through the government bill (56), the Interior Committee text (51, the figure secondary sources use) and the promulgated Act (50); the final 51-to-50 step is still unexplained"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
