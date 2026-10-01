@@ -1,0 +1,23 @@
+date: "2026-10-01"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Item 11 of a 15-item closure task, found via the same stale-cross-
+  reference sweep as PR #389. EU-CER's own "Dutch counterpart, not yet
+  an entity" section, last verified 2026-08-21, said the Wet
+  weerbaarheid kritieke entiteiten "has been queued since Batch 3 and
+  remains uncreated" -- but it had actually been created as NL-WWKE on
+  2026-09-05, over three weeks before this fix, and NL-WWKE already
+  carried the implements-requirement-from edge back to EU-CER (confirmed
+  by reading nctv.nl directly).
+
+  Fixed the stale section and EU-CER's applies-in NL edge (upgraded from
+  search-only to confidence:high, citing NL-WWKE). Also found and fixed
+  a separate, unrelated staleness in the same file: its own
+  "Relationships" prose section still named only six of the ten
+  countries (PT, LU, CZ, IE were missing) EU-CER's own applies-in edges
+  actually cover.
+prs:
+  - number: 391
+    title: "Fix stale EU-CER cross-reference: NL-WWKE has existed since 2026-09-05"
+outcome: merged
+entity_count_after: 736

@@ -1,0 +1,29 @@
+date: "2026-10-01"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Items 7-8 of a 15-item closure task. LU-LOI-PROTECTION-DONNEES
+  (Luxembourg's GDPR implementing act, Memorial A No. 686) and LU-CNPD
+  both cited legilux.public.lu -- a JavaScript single-page application
+  returning no static content -- as unreadable, confirmed on two prior
+  passes, with only the act's title sourced from CNPD's own site
+  instead.
+
+  data.legilux.public.lu's filestore subdomain (already used for the
+  companion criminal-matters law, LU-LOI-DONNEES-PENAL-2018, on
+  2026-09-13) serves the same Memorial A issue's PDF text directly.
+  Read in full: Article 1(1) confirms the law's scope (alongside
+  Regulation (EU) 2016/679); Article 3 states the CNPD "est un
+  etablissement public independant dote de la personnalite juridique";
+  Article 72 repeals a 2 August 2002 predecessor act; Article 73
+  confirms the CNPD continues that 2002 body's legal personality,
+  staff and commitments.
+
+  This let LU-CNPD carry a sourced start_date (2002-08-02) for the
+  first time instead of null, on the basis that it is a continuous
+  institution rather than a 2018 creation, even though its current
+  statutory basis dates from that year.
+prs:
+  - number: 388
+    title: "Read Luxembourg's GDPR implementation act (Mémorial A No. 686) directly"
+outcome: merged
+entity_count_after: 736

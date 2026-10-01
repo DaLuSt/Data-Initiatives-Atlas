@@ -1,0 +1,24 @@
+date: "2026-10-01"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Item 9 of a 15-item closure task, found via a stale-cross-reference
+  sweep (grepping the repo for "not yet an Atlas entity" / "not
+  modelled" phrasing and cross-checking against actual entity-creation
+  dates). NL-CBS's own prose, added 2026-09-05, read "The CCS is still
+  not yet an entity" -- but NL-CCS (the Centrale Commissie voor de
+  Statistiek, CBS's own 2003-2017 statutory supervisor) had been created
+  the day before, 2026-09-04. NL-CBS's own last_verified date
+  (2026-09-13) postdated that creation by over a week without the
+  cross-reference being fixed.
+
+  Added the governed-by NL-CCS edge NL-CBS was missing (2004-01-01,
+  matching CBS's own ZBO start date, to 2017-01-01, matching CCS's
+  abolition), sourced from NL-CCS's own already-cited primary sources
+  (Kamerstuk 34248 nr. 3, eerstekamer.nl's bill page for the Wet op het
+  CBS). Fixed the stale prose on both files and added the cross-
+  reference to related_entities.
+prs:
+  - number: 389
+    title: "Fix stale NL-CBS/NL-CCS cross-reference with a typed governed-by edge"
+outcome: merged
+entity_count_after: 736

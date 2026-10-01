@@ -1,0 +1,32 @@
+date: "2026-10-01"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Items 12-14 of a 15-item closure task, and the largest find of the
+  batch. bmi.bund.de has returned a consistent HTTP 400 on every attempt
+  since the original Germany cluster pass (discovery/unresolved.md row
+  #217, open since 2026-08-28) -- but it turns out the "block" is a
+  missing session cookie, not a genuine one: the homepage issues an
+  AL_CHK-S cookie via a redirect that a cookie-less request cannot
+  follow, and without it every deep link 400s. A cookie-jar-aware fetch
+  reaches every bmi.bund.de page tried afterwards.
+
+  Applied to all five of DE-BMI's own bmi.bund.de citations, previously
+  "NOT READ -- search-only":
+  - the Nationale Datenstrategie press release confirms, in the BMI's
+    own words, joint presentation by BMDV/BMWK/BMI on 30 August 2023;
+  - the Registermodernisierungsgesetz press release confirms BMI's own
+    6 April 2021 promulgation announcement;
+  - the "zweites Open Data Gesetz" legislative-procedure page confirms
+    BMI's role alongside the BMWi in the Datennutzungsgesetz, dated 22
+    December 2020.
+
+  Upgraded all three produces edges (DE-DATENSTRATEGIE, DE-REGMOG,
+  DE-DNG) from search-only/confidence:medium to a direct, dated,
+  confidence:high primary-source read -- closing discovery/
+  unresolved.md row #217 as a genuine workaround (digitale-
+  verwaltung.de, a separate domain, was not retested and stays blocked).
+prs:
+  - number: 392
+    title: "Read all five of DE-BMI's bmi.bund.de citations directly"
+outcome: merged
+entity_count_after: 736

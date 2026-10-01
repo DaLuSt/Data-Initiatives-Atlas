@@ -1,0 +1,25 @@
+date: "2026-10-01"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Items 1-6 of a 15-item closure task ("pick up 15 items"). GB, NO, IT,
+  IS, CH and LI each carried a part-of INTL-COE edge that was either
+  undated ("retained rather than removed" since coe.int/rm.coe.int stay
+  domain-wide 403-blocked) or, for Italy, prose-only with no typed edge
+  at all. coe.int's other reachable subdomains (assembly.coe.int,
+  search.coe.int, edoc.coe.int) only ever gave the 46-member-state
+  count, never a per-country accession date.
+
+  Found that Wikipedia's dedicated "Member states of the Council of
+  Europe" article, read directly, carries a sourced per-country
+  accession table. Used it to upgrade all six: GB/NO/IT are founders (5
+  May 1949, the Treaty of London signature date), IS joined 7 March
+  1950, CH 6 May 1963, LI 23 November 1978. Italy's edge previously
+  existed only in prose ("one of the ten founding members of INTL-COE")
+  with no frontmatter relationship at all -- added one for the first
+  time, matching the pattern every other European country anchor
+  carries.
+prs:
+  - number: 387
+    title: "Source Council of Europe accession dates for six countries via Wikipedia"
+outcome: merged
+entity_count_after: 736

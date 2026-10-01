@@ -1,0 +1,20 @@
+date: "2026-10-01"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Item 10 of a 15-item closure task. countries/lu/lu.md was the last
+  file in the Atlas still citing the bot-walled iso.org/member/1776.html
+  page as unread (the parallel fix on LU-ILNAS, PT-IPQ, IE-NSAI and
+  DE-DIN happened in PR #383, 2026-09-27, but this country-anchor
+  citation was missed that pass).
+
+  committee.iso.org/iso/home/about/iso_members.htm -- the member-
+  directory workaround documented in discovery/unresolved.md row #220 --
+  lists "Luxembourg ILNAS Member body" with the same 176 TC/3 PDC
+  participation counts already confirmed on LU-ILNAS's own file,
+  corroborating the fact directly rather than leaving it cited-but-
+  unread.
+prs:
+  - number: 390
+    title: "Corroborate Luxembourg's ISO/ILNAS membership via committee.iso.org"
+outcome: merged
+entity_count_after: 736
