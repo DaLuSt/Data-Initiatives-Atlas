@@ -39,7 +39,7 @@ relationships:
     source: fact
     evidence: "Confirmed 2026-09-30: coe.int itself remains genuinely bot-walled (403, Cloudflare 'Attention Required!'), the same obstacle found on GB's identical edge, but Wikipedia's own dedicated 'Member states of the Council of Europe' article, read directly, gives a sourced per-country accession table: Switzerland joined 6 May 1963. Anchor edge under metadata/relationship-types.md §2.3: it records Council of Europe membership and asserts no more than that. Added in the European country batch so that all fifty anchors carry the same membership edge."
     confidence: high
-    valid_from: "1963-05-06"
+    valid_from: 1963-05-06
     valid_until: null
 
 sources:

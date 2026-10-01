@@ -27,7 +27,7 @@ verification: primary-source
 
 start_date: 2017-08-18
 end_date: null
-last_verified: "2026-09-30"
+last_verified: "2026-10-01"
 previous_version: null
 successor: null
 
@@ -56,7 +56,8 @@ sources:
   - title: "FITKO (Föderale IT-Kooperation) — OZG-Grundlagen, Akteure"
     url: "https://www.digitale-verwaltung.de/Webs/DV/DE/onlinezugangsgesetz/ozg-grundlagen/akteure/fitko/fitko-node.html"
     publisher: "Digitale Verwaltung (Bundesministerium des Innern)"
-    note: "digitale-verwaltung.de still returns HTTP 400; not retested against the cookie-jar workaround found 2026-09-30 for bmi.bund.de, a different domain."
+    accessed: "2026-10-01"
+    note: "Read directly 2026-10-01 via the same cookie-jar workaround, which turned out to work on digitale-verwaltung.de too (discovery/unresolved.md row #217)."
   - title: "Upgrade für ein Digitales Deutschland ist da: Das OZG-Änderungsgesetz tritt in Kraft"
     url: "https://www.bmi.bund.de/SharedDocs/kurzmeldungen/DE/2024/07/ozg.html"
     publisher: "Bundesministerium des Innern und für Heimat (BMI)"
@@ -88,8 +89,15 @@ sources:
 > genuine block — a cookie-jar-aware fetch reaches both of the BMI's own
 > pages this entity cites, confirming directly, in the BMI's own words,
 > facts previously sourced only via Wikipedia or via heise.de quoting the
-> BMI second-hand. `digitale-verwaltung.de` is a separate domain and was
-> not retested. See "What changed this pass" below.
+> BMI second-hand. See "What changed this pass" below.
+>
+> **Closed 2026-10-01**: the same workaround also reads
+> `digitale-verwaltung.de`, the entity's last unread original source. Its
+> FITKO page states that FITKO and the BMI together form the **OZG
+> programme management** for the federal digitalisation programme
+> (*Digitalisierungsprogramm Föderal*), with FITKO focused on networking
+> the actors involved and on transparency across the process. All four
+> original sources are now read directly.
 
 ## Description
 
@@ -171,5 +179,6 @@ the facts they would have supported. **Closed 2026-09-30**: `bmi.bund.de`
 is reachable after all with a cookie-jar-aware fetch (discovery/
 unresolved.md row #217) — both of its own pages are now added back and
 read directly, corroborating Wikipedia's and heise.de's accounts in the
-BMI's own words rather than replacing them. `digitale-verwaltung.de`, a
-separate domain, was not retested and remains unread.
+BMI's own words rather than replacing them. **Closed 2026-10-01**: the
+same workaround reaches `digitale-verwaltung.de`, so the FITKO page is now
+read directly too — all four original sources have been read.

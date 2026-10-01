@@ -36,7 +36,7 @@ relationships:
     source: fact
     evidence: "Confirmed 2026-09-30: coe.int itself remains genuinely bot-walled (403, Cloudflare 'Attention Required!'), but Wikipedia's own dedicated 'Member states of the Council of Europe' article, read directly, gives a sourced per-country accession table: the United Kingdom is a founder member, joining 5 May 1949, the day the Treaty of London was signed. Anchor edge under metadata/relationship-types.md §2.3: it records Council of Europe membership and asserts no more than that."
     confidence: high
-    valid_from: "1949-05-05"
+    valid_from: 1949-05-05
     valid_until: null
 
 sources:

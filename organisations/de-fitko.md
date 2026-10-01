@@ -26,7 +26,7 @@ verification: primary-source
 
 start_date: 2020-01-01
 end_date: null
-last_verified: "2026-09-04"
+last_verified: "2026-10-01"
 previous_version: null
 successor: null
 
@@ -58,6 +58,8 @@ sources:
   - title: "FITKO (Föderale IT-Kooperation)"
     url: "https://www.digitale-verwaltung.de/Webs/DV/DE/onlinezugangsgesetz/ozg-grundlagen/akteure/fitko/fitko-node.html"
     publisher: "Digitale Verwaltung (Bundesministerium des Innern)"
+    accessed: "2026-10-01"
+    note: "Read directly via a cookie-jar-aware fetch; the HTTP 400 recorded on 2026-08-28 was a missing session cookie, not a genuine block (discovery/unresolved.md row #217)."
   - title: "Föderale IT-Kooperation"
     url: "https://de.wikipedia.org/wiki/F%C3%B6derale_IT-Kooperation"
     publisher: "Wikipedia"
@@ -70,6 +72,16 @@ sources:
 
 # Föderale IT-Kooperation (FITKO)
 
+> **Closed 2026-10-01** (`discovery/unresolved.md` row #217):
+> `digitale-verwaltung.de`'s HTTP 400 was a missing session cookie, not a
+> genuine block, and its FITKO page is now read directly (see "Sources").
+> It confirms the public-law-institution form, joint Länder-and-federation
+> ownership, Frankfurt seat and IT-Planungsrat mandate already recorded
+> here, names the **first IT-Änderungsstaatsvertrag of 2019** as the legal
+> basis (more precise than "the 2019 IT State Treaty"), and adds that the
+> founding resolution of the IT-Planungsrat fixes FITKO's functions and
+> organs.
+>
 > **Re-verified 2026-08-28.** Three of five cited pages read directly. The
 > factsheet PDF returned only encoded binary to the fetch tool and
 > `digitale-verwaltung.de` returned HTTP 400 on every attempt this pass
@@ -177,7 +189,8 @@ chairing of the architecture board.
 
 ## Sources
 
-Listed in frontmatter. Three of five read directly this pass; the
-factsheet PDF returned only binary and `digitale-verwaltung.de` returned
-HTTP 400 on every attempt, both kept listed with that status noted here
-rather than silently dropped.
+Listed in frontmatter. Three of five were read directly on the 2026-08-28
+pass; the factsheet PDF returned only binary and `digitale-verwaltung.de`
+returned HTTP 400 on every attempt. **Closed 2026-10-01**: the
+`digitale-verwaltung.de` page is now read directly (cookie-jar workaround,
+row #217), leaving only the IT-Planungsrat factsheet PDF unread as text.
