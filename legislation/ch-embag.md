@@ -24,7 +24,7 @@ coverage: medium
 verification: primary-source
 start_date: 2024-01-01
 end_date: null
-last_verified: "2026-09-19"
+last_verified: "2026-10-01"
 previous_version: null
 successor: null
 
@@ -163,6 +163,17 @@ now carries `governed-by` this entity on that basis.
 name beyond DVS's own blog post *about* the act, which is evidence of
 interest, not evidence of a role under it. That edge remains unasserted and
 is logged in `discovery/unresolved.md`.
+
+## Amended by the e-ID Act — 2026-10-01
+
+[[CH-BGEID]], adopted 20 December 2024 and approved by voters on
+28 September 2025 but not yet in force, amends this Act by inserting
+Art. 11 para. 3bis: "Als IKT-Mittel im Sinne der Absätze 1–3 betreibt die
+Bundeskanzlei ein System, das auf der Grundlage der E-ID ... die
+Authentifizierung natürlicher Personen ermöglicht" (the Federal Chancellery
+operates a system that, on the basis of the e-ID, enables authentication of
+natural persons). Read directly in the e-ID Act's own annex. [[CH-BGEID]]
+carries the `amends` edge, per the "record the edge once" convention.
 
 ## Not modelled
 

@@ -25,7 +25,7 @@ verification: primary-source
 
 start_date: 2024-01-01
 end_date: null
-last_verified: "2026-09-13"
+last_verified: "2026-10-01"
 previous_version: null
 successor: null
 
@@ -110,13 +110,23 @@ agreement) makes possible.
 - AGOV's **legal basis** — neither page read this pass states an
   enabling statute or ordinance.
 - The distinction between AGOV's own login-quality levels and any
-  relationship to eIDAS or Swiss federal identity law.
+  relationship to eIDAS.
+- AGOV's relationship to **Swiss federal identity law** is only partly
+  answered (2026-10-01). The e-ID Act [[CH-BGEID]] amends the EMBAG to
+  oblige the Federal Chancellery to operate an e-ID-based authentication
+  system, without naming AGOV; the e-ID programme's own site names AGOV as
+  the authorities' authentication service within the programme. That is
+  recorded as a `related-to` edge on [[CH-E-ID]], not as a statement that
+  AGOV is the system the Act describes.
 
 ## Relationships
 
 - `part-of` [[CH]] — anchor edge.
 - `maintained-by` [[CH-DVS]] — the Federal Chancellery-led body operating
   it, per its own site.
+
+[[CH-E-ID]] carries the `related-to` edge pointing here, per the Atlas's
+"record the edge once" convention.
 
 ## Sources
 

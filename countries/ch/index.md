@@ -19,6 +19,12 @@ Anchor entity: [[CH]]
 > **Updated 2026-09-06**: this page's own "Not modelled" list was stale —
 > [[EU-CH-ADEQUACY]] was added 2026-08-28 but never linked here. Fixed
 > below; see "The EU adequacy decision."
+>
+> **Updated 2026-10-01**: the Swiss e-ID is now an entity —
+> [[CH-BGEID]], the Act, and [[CH-E-ID]], the infrastructure — and this
+> page's "Not modelled" list was stale in a second place:
+> [[CH-ISG]] has existed for some time but was still listed as unmodelled.
+> Both fixed below.
 
 ## Organisations
 
@@ -40,6 +46,11 @@ Anchor entity: [[CH]]
   `implements-requirement-from`)_
 - [[CH-EMBAG]] — the «Digitalisierungsgesetz» _(the Atlas's **first
   statutory open-source mandate**: "Public Money – Public Code")_
+- [[CH-ISG]] — the Informationssicherheitsgesetz _(the statutory basis
+  of [[CH-BACS]]'s reporting duty)_
+- [[CH-BGEID]] — the e-ID Act, adopted by Parliament 20 December 2024 and
+  by voters on 28 September 2025 _(50.39% yes)_; **not yet in force**, and
+  its `amends` edges reach [[CH-ISG]] and [[CH-EMBAG]]
 
 ## Platforms
 
@@ -47,6 +58,8 @@ Anchor entity: [[CH]]
 - [[CH-AGOV]] — passwordless government login spanning federal,
   cantonal and municipal authorities, added 2026-09-13, `maintained-by`
   [[CH-DVS]]
+- [[CH-E-ID]] — the planned state e-ID and the swiyu trust infrastructure,
+  `status: planned`; its introduction was **postponed** on 30 June 2026
 
 ---
 
@@ -110,7 +123,9 @@ was made. Filed as an **EU** entity, for the same reason as
   and its own administration. [[CH-EDOEB]] covers federal bodies and private
   persons only, so a single `country: CH` supervisory authority understates
   the picture by twenty-six. Swiss federalism devolves further than German.
-- The **Informationssicherheitsgesetz (ISG)**, [[CH-BACS]]'s likely
-  statutory basis, and the **Geoinformationsgesetz**, [[CH-SWISSTOPO]]'s.
-- The **Swiss e-ID**, legislated for and not yet an Atlas entity.
+- The **Geoinformationsgesetz**, [[CH-SWISSTOPO]]'s statutory basis.
+  (The **Informationssicherheitsgesetz** used to be listed here as well; it
+  is [[CH-ISG]], modelled, and was a stale entry.)
+- The **first, rejected Swiss e-ID law** and the e-ID **ordinance**; see
+  [[CH-BGEID]].
 - **SNV**, the Swiss national standards body.
