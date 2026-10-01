@@ -21,13 +21,13 @@ country: DE
 region: EU
 
 status: active
-confidence: medium
+confidence: high
 coverage: medium
 verification: primary-source
 
 start_date: 2017-08-18
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-09-30"
 previous_version: null
 successor: null
 
@@ -37,6 +37,7 @@ organisations: []
 related_entities:
   - DE-BUNDID
   - DE-EGOVG
+  - DE-BMI
 relationships: []
 
 sources:
@@ -55,6 +56,17 @@ sources:
   - title: "FITKO (Föderale IT-Kooperation) — OZG-Grundlagen, Akteure"
     url: "https://www.digitale-verwaltung.de/Webs/DV/DE/onlinezugangsgesetz/ozg-grundlagen/akteure/fitko/fitko-node.html"
     publisher: "Digitale Verwaltung (Bundesministerium des Innern)"
+    note: "digitale-verwaltung.de still returns HTTP 400; not retested against the cookie-jar workaround found 2026-09-30 for bmi.bund.de, a different domain."
+  - title: "Upgrade für ein Digitales Deutschland ist da: Das OZG-Änderungsgesetz tritt in Kraft"
+    url: "https://www.bmi.bund.de/SharedDocs/kurzmeldungen/DE/2024/07/ozg.html"
+    publisher: "Bundesministerium des Innern und für Heimat (BMI)"
+    accessed: "2026-09-30"
+    note: "Read directly via a cookie-jar-aware fetch — bmi.bund.de issues a session cookie through a redirect a cookie-less request cannot follow, which previously presented as a consistent HTTP 400 (discovery/unresolved.md row #217)."
+  - title: "Bund hat seine 115 wichtigsten Verwaltungsleistungen bis Ende 2024 erfolgreich digitalisiert"
+    url: "https://www.bmi.bund.de/SharedDocs/pressemitteilungen/DE/2024/12/ozg.html"
+    publisher: "Bundesministerium des Innern und für Heimat (BMI)"
+    accessed: "2026-09-30"
+    note: "Read directly via the same cookie-jar workaround."
 ---
 
 # Onlinezugangsgesetz (OZG)
@@ -70,6 +82,14 @@ sources:
 > read directly. `verification: primary-source`. The previously-refused
 > enactment date is now recorded — found on a source not previously
 > searched for, not guessed.
+>
+> **Closed 2026-09-30** (`discovery/unresolved.md` row #217): `bmi.bund.de`'s
+> apparent HTTP 400 turns out to be a missing session cookie, not a
+> genuine block — a cookie-jar-aware fetch reaches both of the BMI's own
+> pages this entity cites, confirming directly, in the BMI's own words,
+> facts previously sourced only via Wikipedia or via heise.de quoting the
+> BMI second-hand. `digitale-verwaltung.de` is a separate domain and was
+> not retested. See "What changed this pass" below.
 
 ## Description
 
@@ -93,12 +113,20 @@ Two sourced developments, one confirmed in more depth than before:
   than "an upgrade for a digital Germany" alone conveys. The amendment
   legally anchors the **once-only principle** and requires **complete
   end-to-end digitalisation of business-related federal services by
-  2028**, plus a unified **DeutschlandID** citizen account.
-- heise.de, read directly, confirms the federal government **digitalised
+  2028**, plus a unified **DeutschlandID** citizen account. **Confirmed
+  directly 2026-09-30**: the BMI's own announcement of the same date,
+  read directly via the cookie-jar workaround found this pass, matches
+  Wikipedia's account and adds detail — abolishing the written-signature
+  requirement for citizens' applications, a legally enforceable right to
+  digital administrative services after four years, and "Digital Only"
+  for business-related services after five years.
+- The BMI's own December 2024 press release, read directly this pass via
+  the same workaround (previously reachable only second-hand, quoted by
+  heise.de, because `bmi.bund.de` returned a consistent HTTP 400),
+  confirms in its own words that the federal government **digitalised
   all 115 of its OZG-prioritised administrative services by the end of
-  2024** — via the BMI's own December 2024 announcement, which heise.de
-  quotes, even though the BMI's own page could not be fetched directly this
-  pass. heise.de adds that, while the federal target was met, **over 100**
+  2024**. heise.de, also read directly, adds that, while the federal
+  target was met, **over 100**
   of the most-used federal services are additionally available across
   individual Länder and municipalities, with digital residence registration
   specifically live in 15 of Germany's 20 largest cities.
@@ -135,8 +163,13 @@ either and remains unasserted.
 
 ## Sources
 
-Listed in frontmatter. Three of four read directly this pass. `bmi.bund.de`
-(both cited URLs) and `digitale-verwaltung.de` returned HTTP 400 Bad
-Request on every attempt this pass — treated as a genuine, if unexplained,
-block rather than silently dropped — and a Wikipedia article plus a
-heise.de report substitute for the facts they would have supported.
+Listed in frontmatter. Three of the original four were read directly on
+the 2026-08-28 pass; `bmi.bund.de` (both cited URLs) and
+`digitale-verwaltung.de` returned HTTP 400 Bad Request on every attempt
+that pass, so a Wikipedia article and a heise.de report substituted for
+the facts they would have supported. **Closed 2026-09-30**: `bmi.bund.de`
+is reachable after all with a cookie-jar-aware fetch (discovery/
+unresolved.md row #217) — both of its own pages are now added back and
+read directly, corroborating Wikipedia's and heise.de's accounts in the
+BMI's own words rather than replacing them. `digitale-verwaltung.de`, a
+separate domain, was not retested and remains unread.

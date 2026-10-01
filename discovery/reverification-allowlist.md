@@ -11,7 +11,7 @@ Generated: 2026-10-01
 
 Closing that debt — the re-verification pass — needs outbound HTTPS to the hosts those URLs point at. In an environment with a restricted egress policy, this is the allowlist to request. A denial shows up as `403 to CONNECT` from the proxy, which is an environment-level network policy and cannot be changed from inside a session. See `discovery/unresolved.md` for the standing record of the sourcing debt.
 
-The Atlas currently cites **2600 source URLs** across **764 hosts**, collapsing to **548 registrable domains**.
+The Atlas currently cites **2602 source URLs** across **764 hosts**, collapsing to **548 registrable domains**.
 
 ## Highest value first
 
@@ -29,7 +29,7 @@ A domain here is an **allowlist pattern**, not a URL. Most of them also happen t
 | `coe.int` | 55 | 43 | `edoc.coe.int` | ✅ opens | ✅ 2026-08-21 |
 | `overheid.nl` | 53 | 37 | `data.overheid.nl` | ✅ opens |  |
 | `digitaleoverheid.nl` | 48 | 33 | `www.digitaleoverheid.nl` | ✅ opens |  |
-| `bund.de` | 42 | 23 | `bmds.bund.de` | ✅ opens | ✅ 2026-08-21 |
+| `bund.de` | 44 | 24 | `bmds.bund.de` | ✅ opens | ✅ 2026-08-21 |
 | `gob.es` | 39 | 19 | `administracion.gob.es` | ⚠ namespace only — no site at the apex |  |
 | `government.nl` | 39 | 39 | `www.government.nl` | ✅ opens |  |
 | `legislation.gov.uk` | 37 | 29 | `www.legislation.gov.uk` | ✅ opens |  |
