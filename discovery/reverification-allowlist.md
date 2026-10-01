@@ -7,11 +7,11 @@ Generated: 2026-10-01
 
 ## Why this exists
 
-**0 of the Atlas's 736 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
+**0 of the Atlas's 738 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
 
 Closing that debt — the re-verification pass — needs outbound HTTPS to the hosts those URLs point at. In an environment with a restricted egress policy, this is the allowlist to request. A denial shows up as `403 to CONNECT` from the proxy, which is an environment-level network policy and cannot be changed from inside a session. See `discovery/unresolved.md` for the standing record of the sourcing debt.
 
-The Atlas currently cites **2604 source URLs** across **764 hosts**, collapsing to **548 registrable domains**.
+The Atlas currently cites **2617 source URLs** across **766 hosts**, collapsing to **549 registrable domains**.
 
 ## Highest value first
 
@@ -30,12 +30,12 @@ A domain here is an **allowlist pattern**, not a URL. Most of them also happen t
 | `overheid.nl` | 53 | 37 | `data.overheid.nl` | ✅ opens |  |
 | `digitaleoverheid.nl` | 48 | 33 | `www.digitaleoverheid.nl` | ✅ opens |  |
 | `bund.de` | 44 | 24 | `bmds.bund.de` | ✅ opens | ✅ 2026-08-21 |
+| `admin.ch` | 43 | 14 | `www.bacs.admin.ch` |  |  |
 | `gob.es` | 39 | 19 | `administracion.gob.es` | ⚠ namespace only — no site at the apex |  |
 | `government.nl` | 39 | 39 | `www.government.nl` | ✅ opens |  |
 | `legislation.gov.uk` | 37 | 29 | `www.legislation.gov.uk` | ✅ opens |  |
 | `un.org` | 36 | 20 | `docs.un.org` | ✅ opens |  |
 | `boe.es` | 33 | 26 | `www.boe.es` | ✅ opens |  |
-| `admin.ch` | 32 | 12 | `www.bacs.admin.ch` |  |  |
 | `rijksoverheid.nl` | 24 | 20 | `www.rijksoverheid.nl` | ✅ opens |  |
 | `noraonline.nl` | 23 | 21 | `www.noraonline.nl` |  |  |
 | `openjustice.be` | 22 | 18 | `etaamb.openjustice.be` |  |  |
@@ -491,6 +491,7 @@ ordnancesurvey.co.uk
 osborneclarke.com
 osce.org
 pap-mediaroom.pl
+parlament.ch
 parldigi.ch
 parlementairemonitor.nl
 parliament.uk

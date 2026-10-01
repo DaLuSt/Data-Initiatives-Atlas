@@ -29,7 +29,7 @@ verification: primary-source
 
 start_date: "2020-12-18"
 end_date: null
-last_verified: "2026-09-26"
+last_verified: "2026-10-01"
 previous_version: null
 successor: null
 
@@ -122,6 +122,15 @@ kritische Infrastrukturen per 1. April 2025 in Kraft gesetzt."
   ordinance from the act it implements absent a specific reason to.
 - The Act's provisions beyond Article 1 (purpose) and Articles 74a-74e
   (reporting duty) — its full internal structure was not read this pass.
+
+## Amended by the e-ID Act — 2026-10-01
+
+[[CH-BGEID]], adopted 20 December 2024 and approved by voters on
+28 September 2025 but not yet in force, amends this Act's Art. 74b para. 1
+by adding letter v: issuers and verifiers of electronic credentials under
+the e-ID Act join the entities subject to the cyber-attack reporting duty.
+Read directly in the e-ID Act's own annex. [[CH-BGEID]] carries the
+`amends` edge, per the "record the edge once" convention.
 
 ## Relationships
 
