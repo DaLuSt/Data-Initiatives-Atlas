@@ -21,9 +21,9 @@ status: active
 confidence: high
 coverage: medium
 verification: primary-source
-start_date: "2023-09-01"
+start_date: "2023-08-30"
 end_date: null
-last_verified: "2026-09-13"
+last_verified: "2026-10-01"
 previous_version: null
 successor: null
 
@@ -41,6 +41,12 @@ sources:
   - title: "Bundeskabinett beschließt Nationale Datenstrategie"
     url: "https://www.bmi.bund.de/SharedDocs/pressemitteilungen/DE/2023/08/nationale-datenstrategie.html"
     publisher: "Bundesministerium des Innern und für Heimat (BMI)"
+    accessed: "2026-10-01"
+    note: "Read directly via a cookie-jar-aware fetch; the 'error page' recorded on 2026-08-22 was a missing session cookie, not a dead URL (discovery/unresolved.md row #217)."
+  - title: "Bundesregierung will \"mutigere Datenkultur\", Digitalcheck und Bürokratieabbau"
+    url: "https://www.heise.de/news/Bundesregierung-will-mutigere-Datenkultur-Digitalcheck-und-weniger-Buerokratie-9289807.html"
+    publisher: "heise online"
+    accessed: "2026-10-01"
   - title: "Bundeskabinett beschließt Nationale Datenstrategie"
     url: "https://bmdv.bund.de/SharedDocs/DE/Pressemitteilungen/2023/084-neue-datenstrategie-der-bundesregierung.html"
     publisher: "Bundesministerium für Digitales und Verkehr (BMDV)"
@@ -78,6 +84,15 @@ sources:
 > the Bundestag itself confirmed was **not** continued after the May 2025
 > change of government, the Datenstrategie was not abandoned. See
 > "Resolved: still in force" below.
+>
+> **Closed 2026-10-01** (`discovery/unresolved.md` row #217): the BMI
+> press release is not a dead URL — `bmi.bund.de` returns HTTP 400 only
+> without a session cookie. Read directly, it is dated **30 August 2023**
+> and says "Das Bundeskabinett hat heute die neue Nationale
+> Datenstrategie beschlossen", which supplies the **cabinet decision
+> date** this entity said no source stated. `start_date` moves from
+> 1 September 2023 (the Drucksache's date) to 30 August 2023. See
+> "Resolved: the adoption date" below.
 
 ## Description
 
@@ -118,10 +133,28 @@ die Weiterentwicklung der nationalen Datenstrategie ... beraten").
 
 This explains the previously "disagreeing" secondary sources — August and
 September dates were both right, describing different steps of the same
-process, not different events. `start_date` is recorded as the Drucksache's
-own date, **1 September 2023**, as the most citable single date for the
-document's existence; no source read states a separate federal-cabinet
-decision date distinct from this submission.
+process, not different events.
+
+**Updated 2026-10-01 — the cabinet decision date is now sourced.** On the
+2026-08-22 pass `start_date` was recorded as the Drucksache's own date,
+**1 September 2023**, because "no source read states a separate
+federal-cabinet decision date". The BMI's own press release, read directly
+once the session-cookie block on `bmi.bund.de` was understood, is dated
+**30 August 2023** and states "Das Bundeskabinett hat heute die neue
+Nationale Datenstrategie beschlossen, die gemeinsam vom [BMDV], vom [BMWK]
+und vom [BMI] vorgelegt wurde." An independent source agrees: heise online,
+published 30 August 2023, reports that the federal government adopted a
+package of digital initiatives "am Mittwoch" at the close of its Meseberg
+retreat, and 30 August 2023 was a Wednesday. `start_date` is therefore
+**30 August 2023**, the adoption date, with the Drucksache's 1 September
+date kept above as the date of the document's parliamentary existence.
+
+One discrepancy is **left unexplained rather than smoothed over**: the
+Drucksache records transmission to the Bundestag by a BMDV letter dated
+**29 August 2023**, a day *before* the cabinet decision the BMI and heise
+both date to 30 August. No source read accounts for a letter preceding the
+decision it transmits; the likeliest explanation (a letter prepared ahead
+of the Wednesday cabinet meeting) is a guess and is not asserted.
 
 ## Resolved: still in force, closed 2026-09-13
 
@@ -175,10 +208,12 @@ found.
 
 ## Sources
 
-Listed in frontmatter. Two — the BMI and BMDV press releases — no longer
-resolve as of 2026-08-22 (the BMI one returns an error page, the BMDV one a
-404; BMDV itself was folded into [[DE-BMDS]] in 2025, which may explain the
-second). The Bundestag Drucksache and its own textarchiv article, both read
+Listed in frontmatter. Two — the BMI and BMDV press releases — were
+recorded on 2026-08-22 as no longer resolving (the BMI one an error page,
+the BMDV one a 404). **Closed 2026-10-01** for the BMI one: it was a
+missing session cookie, and the page is now read directly. The BMDV one
+is genuinely gone (301 to `bmv.de`, then 404; BMDV itself was folded into
+[[DE-BMDS]] in 2025). The Bundestag Drucksache and its own textarchiv article, both read
 directly, carry the weight of what's asserted here, joined by BMDS's own
 current Open Data page (read directly, 2026-09-13) for the still-in-force
 finding above.

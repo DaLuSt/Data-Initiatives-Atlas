@@ -26,7 +26,7 @@ verification: primary-source
 
 start_date: 2017-01-01
 end_date: null
-last_verified: "2026-09-04"
+last_verified: "2026-10-01"
 previous_version: null
 successor: null
 
@@ -51,8 +51,8 @@ relationships:
   - type: maintained-by
     target: DE-FITKO
     source: fact
-    evidence: "Confirmed by reading docs.fitko.de's own page directly (2026-09-04): the Föderale IT-Kooperation 'coordinates the process across administration levels' for FIM. This is consistent with DE-FITKO's own entity, which lists FIM as a product under FITKO's product management alongside DE-KOSIT and DE-GOVDATA — closing the gap that entity flagged: 'nothing further about it was established even after this pass's direct reads.' docs.fitko.de's dedicated FIM documentation page, not previously found, is the source that closes it."
-    confidence: medium
+    evidence: "Confirmed by reading docs.fitko.de's own page directly (2026-09-04): the Föderale IT-Kooperation 'coordinates the process across administration levels' for FIM. This is consistent with DE-FITKO's own entity, which lists FIM as a product under FITKO's product management alongside DE-KOSIT and DE-GOVDATA — closing the gap that entity flagged: 'nothing further about it was established even after this pass's direct reads.' docs.fitko.de's dedicated FIM documentation page, not previously found, is the source that closes it. **Corroborated 2026-10-01** by a second, independent primary source, digitale-verwaltung.de's own FIM page (read directly via the cookie-jar workaround, row #217): 'Die FITKO kümmert sich neben dem Auf- und Ausbau der entsprechenden Methodenexpertise auch um die kontinuierliche Weiterentwicklung von FIM' (FITKO takes care of building FIM methodology expertise and of FIM's continuous further development) — a stronger statement than 'coordinates the process', hence the confidence rise."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -64,6 +64,8 @@ sources:
   - title: "FIM - Das Föderale Informationsmanagement"
     url: "https://www.digitale-verwaltung.de/Webs/DV/DE/onlinezugangsgesetz/ozg-grundlagen/fim/fim-node.html"
     publisher: "Digitale Verwaltung (Bundesministerium des Innern)"
+    accessed: "2026-10-01"
+    note: "Read directly via a cookie-jar-aware fetch (discovery/unresolved.md row #217)."
   - title: "Föderales Informationsmanagement"
     url: "https://de.wikipedia.org/wiki/F%C3%B6derales_Informationsmanagement"
     publisher: "Wikipedia"
@@ -81,6 +83,15 @@ sources:
 > "Kompass der föderalen IT-Architektur" carries a page on FIM specifically,
 > read directly this pass, that supplies exactly the governance detail,
 > start date and structure the earlier pass could not find.
+>
+> **Closed 2026-10-01** (`discovery/unresolved.md` row #217): the
+> `digitale-verwaltung.de` page this entity cited but never fetched is
+> now read directly. It confirms the three building blocks, records that
+> Bund, Länder and municipalities agreed in the IT-Planungsrat to apply
+> FIM as the uniform method for digitising administrative procedures, adds
+> that the exchange formats for all three blocks are certified under the
+> XÖV standard, and states FITKO's ongoing development role — raising the
+> `maintained-by` edge to `confidence: high`.
 
 ## Description
 
@@ -144,7 +155,8 @@ FIM-derived data field standard is itself cited elsewhere in the Atlas
 ## Sources
 
 Listed in frontmatter. `docs.fitko.de`'s dedicated FIM page and Wikipedia's
-article were both read directly; the `digitale-verwaltung.de` page is
-listed as a source but was not fetched this pass — a prior pass on
-[[DE-FITKO]] and [[DE-OZG]] found the same domain returning HTTP 400 on
-every attempt, so it was not retried here.
+article were both read directly on 2026-09-04. The `digitale-verwaltung.de`
+page was listed but not fetched then, because a prior pass on [[DE-FITKO]]
+and [[DE-OZG]] had found the domain returning HTTP 400; **closed
+2026-10-01** — that 400 was a missing session cookie, and the page is now
+read directly.
