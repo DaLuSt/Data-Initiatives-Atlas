@@ -18,39 +18,68 @@ description: null
 next_step: null
 
 notes: >
-  Idle as of 2026-09-27. At the repository owner's explicit request
-  ("Close 10 items"), 10 items were closed via PRs #371-379 (one PR,
-  #377, covered two items): applying the digitaleoverheid.nl WordPress
-  REST API workaround (discovery/unresolved.md row #216) to every
-  remaining genuinely-bot-walled citation found by grepping the repo for
-  "bot-wall"/"confirmed genuinely" near a digitaleoverheid.nl URL --
-  NL-BASISREGISTRATIES, NL-BRV, NL-RDW, NL-NHR, NL-BRI,
-  NL-BELASTINGDIENST, NL-KADASTER, NL-WDO, NL-UVW, NL-IPO and NL-VNG all
-  closed this way. That vein is now exhausted -- a repo-wide grep after
-  PR #378 found no remaining genuine digitaleoverheid.nl block. The
-  10th item switched to the standards.iteh.ai redline-preview workaround
-  (row #220), already used on INTL-ISO-IEC-27002, applied again to
-  INTL-ISO-IEC-27001 (catalog 82875).
+  Idle as of 2026-10-01. Two owner requests closed since the previous
+  note (PRs #381-384 for "3 more items"): first, a GitHub Sponsors
+  button/link (PRs #385-386, UI + README, no research content). Second,
+  and larger, "pick up 15 items" (PRs #387-393, seven PRs covering all
+  fifteen):
 
-  Immediately after, the owner asked to "pick up 3 more items" (PRs
-  #381-383). All three stayed in the ISO/IEC-standards vein, since it
-  turned out not to be exhausted: INTL-ISO (#381) and INTL-IEC (#382)
-  each had their own unread iso.org standards-catalogue citation, closed
-  the same way (redline PDFs for ISO/IEC 27000:2018 and 27001:2022).
-  While investigating, found a **second, different** iso.org
-  workaround: committee.iso.org/iso/home/about/iso_members.htm is a
-  reachable iso.org subdomain carrying ISO's own full member-body table
-  (acronym, tier, TC/PDC participation counts) -- distinct from the
-  standards-catalogue block, since it addresses the separate
-  iso.org/member/<id>.html block instead. Applied in #383 to PT-IPQ,
-  LU-ILNAS, IE-NSAI and DE-DIN, restoring/upgrading all four
-  ISO-membership edges to source:fact/confidence:high. That same PR
-  also found and fixed a stale cross-reference on DE-DIN's own file
-  (a claim that NL-NEN's ISO membership had "never been recorded,"
-  which a later pass on NL-NEN had already made untrue -- DE-DIN's own
-  last_verified date postdated that correction by over a week).
+  - PR #387: sourced Council of Europe accession dates for GB, NO, IT,
+    IS, CH and LI via Wikipedia's dedicated "Member states of the
+    Council of Europe" article, since coe.int itself stays bot-walled
+    and has no per-country date even through its other reachable
+    subdomains. Italy's edge had been prose-only (no typed relationship
+    at all) and gained one for the first time.
+  - PR #388: read Luxembourg's GDPR implementing act (Memorial A No.
+    686) directly via legilux's data.legilux.public.lu filestore
+    mirror -- the same workaround already used for the companion
+    criminal-matters law. Confirmed LU-CNPD's legal form and its
+    continuity from a 2002 predecessor body abolished by the 2018 act,
+    letting LU-CNPD carry a sourced start_date for the first time.
+  - PR #389: a stale-cross-reference sweep (grepping for "not yet an
+    Atlas entity" phrasing against actual entity-creation dates) found
+    NL-CBS's own prose still said "the CCS is still not yet an entity"
+    nine days after NL-CCS was actually created -- fixed with a typed
+    governed-by edge.
+  - PR #390: the same sweep's iso.org/member/<id>.html check found
+    countries/lu/lu.md was the last file in the Atlas still citing that
+    blocked page unread; closed via committee.iso.org, the same
+    workaround already applied to LU-ILNAS, PT-IPQ, IE-NSAI and DE-DIN.
+  - PR #391: the sweep also found EU-CER's "Dutch counterpart, not yet
+    an entity" section was stale by over three weeks (NL-WWKE was
+    created 2026-09-05); fixed, plus a separate stale Relationships
+    listing naming only six of the entity's own ten applies-in
+    countries.
+  - PR #392: the biggest find of this batch -- bmi.bund.de's apparent
+    domain-wide HTTP 400 (discovery/unresolved.md row #217, open since
+    the original Germany cluster pass) turns out to be a missing
+    session cookie, not a genuine block. A cookie-jar-aware fetch reads
+    every bmi.bund.de page tried. Applied to all five of DE-BMI's own
+    citations, upgrading its three `produces` edges (DE-DATENSTRATEGIE,
+    DE-REGMOG, DE-DNG) from search-only to dated, confidence:high facts.
+  - PR #393: applied the same new bmi.bund.de workaround to DE-OZG's
+    own two BMI citations (previously covered only via Wikipedia/
+    heise.de), corroborating the OZG-Anderungsgesetz's entry into force
+    and the 115-service completion announcement in the BMI's own words.
 
-  Both iso.org workarounds (standards.iteh.ai for standards text,
-  committee.iso.org for the member directory) are now documented in
-  discovery/unresolved.md row #220 for reuse. Resume only when asked;
-  no in-flight task to pick up.
+  Each PR required a follow-up "merge main into branch" commit (and, on
+  four branches, a *second* fix-up commit) because the generated
+  site/graph.json and site/details.json files conflict on every PR that
+  touches them -- the lesson for next time: after resolving such a
+  conflict, always `git add` the regenerated files *after* running
+  `python3 tools/build_graph.py`, not before, or the stale pre-rebuild
+  version silently gets committed instead (CI's own
+  test_generated_graph_matches_repository check catches this, but it
+  wastes a cycle -- caught and fixed on PR #389, #391, #392, #393 before
+  each was merged).
+
+  Two workarounds are newly documented in discovery/unresolved.md for
+  reuse: the bmi.bund.de cookie-jar fix (row #217) and Wikipedia's
+  Council of Europe member-states article for per-country accession
+  dates (row #219). The stale-cross-reference sweep technique (grep for
+  "not yet an Atlas entity" / "not modelled" phrasing, cross-check
+  against actual entity-creation dates) remains productive but is
+  showing diminishing returns -- most of the ~96 hits from this pass's
+  sweep were either already-closed historical narrative or deliberate,
+  reasoned non-model decisions (ministries, DGs, JTC 1, etc.), not
+  genuine gaps.

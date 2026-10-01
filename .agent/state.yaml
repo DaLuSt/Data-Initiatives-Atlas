@@ -12,15 +12,15 @@
 # that changes these numbers or the summary. Regenerate entity_count etc.
 # from site/graph.json's own `stats` block rather than counting by hand.
 
-updated: "2026-09-27"
+updated: "2026-10-01"
 updated_by_session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
 
 graph:
   entity_count: 736
-  relationship_edges: 1556
-  association_edges: 3206
-  wikilink_edges: 4527
-  edges_total: 9289
+  relationship_edges: 1558
+  association_edges: 3210
+  wikilink_edges: 4533
+  edges_total: 9301
   countries: 58
   regions: 1
 
@@ -33,14 +33,24 @@ discovery:
 validation_status: clean
 
 last_merged_prs:
-  - number: 380
-    summary: "Housekeeping: rolled .agent/state.yaml forward, recorded 10-item task summary in current-task.yaml"
-  - number: 381
-    summary: "INTL-ISO: read 27000-family citation via standards.iteh.ai redline preview (row #220); found committee.iso.org member-directory workaround"
-  - number: 382
-    summary: "INTL-IEC: read iso.org/standard/27001 citation via standards.iteh.ai redline preview (row #220)"
-  - number: 383
-    summary: "PT-IPQ/LU-ILNAS/IE-NSAI/DE-DIN: ISO membership corroborated via committee.iso.org (row #220); fixed stale NL-NEN claim on DE-DIN"
+  - number: 385
+    summary: "Added a GitHub Sponsors button to the site (header + footer), per repository owner's explicit request"
+  - number: 386
+    summary: "Added a GitHub Sponsors link/section to README.md, mirroring the site button"
+  - number: 387
+    summary: "GB/NO/IT/IS/CH/LI: sourced Council of Europe accession dates via Wikipedia's dedicated member-states article (row #219); Italy's part-of INTL-COE edge was prose-only and gained a typed relationship for the first time"
+  - number: 388
+    summary: "LU-LOI-PROTECTION-DONNEES/LU-CNPD: read Mémorial A No. 686 directly via legilux's filestore mirror, confirming CNPD's legal form and its continuity from a 2002 predecessor body (LU-CNPD gained a sourced start_date for the first time)"
+  - number: 389
+    summary: "Fixed a stale NL-CBS/NL-CCS cross-reference (\"the CCS is still not yet an entity\", nine days after NL-CCS was created) with a typed governed-by edge"
+  - number: 390
+    summary: "countries/lu/lu.md: corroborated ILNAS's ISO membership via committee.iso.org, the last remaining iso.org/member/<id>.html citation in the Atlas (row #220)"
+  - number: 391
+    summary: "Fixed a stale EU-CER cross-reference (\"Dutch counterpart, not yet an entity\", over three weeks after NL-WWKE was created) plus a separate stale six-of-ten-country Relationships listing"
+  - number: 392
+    summary: "DE-BMI: found a new bmi.bund.de workaround (missing session cookie, not a genuine block) and read all five of its citations directly, upgrading three produces edges from search-only to dated primary-source facts (row #217)"
+  - number: 393
+    summary: "DE-OZG: applied the same bmi.bund.de workaround to corroborate the OZG-Anderungsgesetz's entry into force and the 115-service completion announcement directly in the BMI's own words"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,

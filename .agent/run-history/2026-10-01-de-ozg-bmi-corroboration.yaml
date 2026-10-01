@@ -1,0 +1,24 @@
+date: "2026-10-01"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Item 15 (final) of a 15-item closure task. Applied the bmi.bund.de
+  cookie-jar workaround found this pass on DE-BMI (PR #392) to DE-OZG's
+  own two BMI citations, both dropped on the original 2026-08-28 pass as
+  HTTP 400 and covered only second-hand since (Wikipedia for the
+  OZG-Anderungsgesetz's entry-into-force date, heise.de quoting the BMI
+  for the 115-service completion announcement).
+
+  Reading the BMI's own pages directly confirms both facts in the BMI's
+  own words, with detail the secondary sources did not carry: the
+  OZG-Anderungsgesetz's own announcement adds the written-signature
+  abolition and the four/five-year enforcement deadlines; the December
+  2024 press release independently confirms the 115-service completion
+  heise.de had only quoted at one remove. No new relationship was added
+  -- these are corroborating primary sources for facts already recorded,
+  not a new edge -- but confidence was raised to high and DE-BMI added
+  to related_entities for the cross-reference.
+prs:
+  - number: 393
+    title: "Corroborate DE-OZG's BMI announcements directly via the same workaround"
+outcome: merged
+entity_count_after: 736
