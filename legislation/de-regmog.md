@@ -11,8 +11,9 @@ description: >
   BGBl. I S. 591) introducing the use of an identification number in
   public administration. It makes the tax identification number under
   § 139b Abgabenordnung a change-resistant ordering feature for assigning
-  administrative data to the correct person across the 50 register types
-  listed in the Act's own Anlage (secondary sources say 51), on a phased
+  administrative data to the correct person across the 50 register entries
+  in the promulgated Act's Anlage (the government bill listed 56 and the
+  Bundestag committee's text 51), on a phased
   implementation timeline whose core, the Identitätsnummerngesetz, entered
   into force on 31 August 2023,
   and is the legal basis on which Germany implements the once-only
@@ -65,6 +66,16 @@ sources:
     publisher: "Bundesministerium der Justiz / juris (Gesetze im Internet)"
     accessed: "2026-10-01"
     note: "Article 1 of the RegMoG and its core. Read directly; ISO-8859-1 encoded."
+  - title: "Entwurf eines Gesetzes zur Einführung und Verwendung einer Identifikationsnummer in der öffentlichen Verwaltung (Registermodernisierungsgesetz – RegMoG), Gesetzentwurf der Bundesregierung"
+    url: "https://dserver.bundestag.de/btd/19/242/1924226.pdf"
+    publisher: "Deutscher Bundestag (Drucksache 19/24226, 11 November 2020)"
+    accessed: "2026-10-01"
+    note: "The government bill; its Anlage lists 56 registers."
+  - title: "Beschlussempfehlung und Bericht des Ausschusses für Inneres und Heimat zum RegMoG"
+    url: "https://dserver.bundestag.de/btd/19/262/1926247.pdf"
+    publisher: "Deutscher Bundestag (Drucksache 19/26247, 27 January 2021)"
+    accessed: "2026-10-01"
+    note: "The committee's amendments take the Anlage from 56 to 51 entries."
   - title: "RegMoG Registermodernisierungsgesetz"
     url: "https://www.buzer.de/RegMoG.htm"
     publisher: "buzer.de"
@@ -96,7 +107,9 @@ sources:
 > directly — entry into force 31 August 2023, deadline arithmetic, the
 > Bundesverwaltungsamt as the Registermodernisierungsbehörde, § 4 data,
 > § 16 evaluation — and its Anlage lists **50** registers where this
-> entity's secondary sources say 51.
+> entity's secondary sources say 51. Traced the same day through the
+> government bill (56) and the Interior Committee text (51): the secondary
+> sources' figure is the committee stage; the step to 50 is unexplained.
 >
 > **Closed 2026-10-01** (`discovery/unresolved.md` row #217): the HTTP 400
 > on both `bmi.bund.de` pages was a missing session cookie, not a block.
@@ -174,17 +187,52 @@ RegMoG — is read directly. What it establishes:
   choice between sector-specific and uniform identifiers that the critics
   below dispute.
 
-**An unexplained discrepancy in the register count.** The Act's Anlage,
-read directly in the current consolidated text (last amended by Art. 8f of
-the law of 19 July 2024), numbers **50** register entries. This entity's
-secondary sources say **51** (rehm-Verlag; mgm technology partners'
-"51 of the register types"), having already moved once from an earlier
-"roughly 50". Nothing read explains the gap — a later amendment, a
-different counting rule, or a source error are all possible and none is
-asserted. Some entries are themselves collective ("sämtliche von den
-Architekten- und Ingenieurkammern der Länder ... zu führenden Listen"),
-so "50 entries" is not "50 databases" either way. The primary text is the
-better anchor for the number of listed entries.
+**The register count, traced through three documents — partly explained.**
+Three primary texts, each read directly, give three different numbers:
+
+| Stage | Document | Entries in the Anlage |
+|---|---|---|
+| Government bill, 11 Nov 2020 | Bundestag Drucksache 19/24226 | **56** |
+| Interior Committee text, 27 Jan 2021 | Drucksache 19/26247 | **51** (the bill's 56 less five deleted) |
+| Promulgated Act, current consolidated text | `gesetze-im-internet.de` | **50** |
+
+The committee's amendments delete five entries, "Nummern 32, 40, 41, 46
+und 48": the Schuldnerverzeichnis, the Insolvenzregister, the
+Rechtsdienstleisterregister, the Rechtsanwaltskammern directories and the
+Liegenschaftskataster. Its explanation attributes three of the deletions
+to the Bundesrat's opinion of 6 November 2020 (BR-Drs. 563/20), the
+Liegenschaftskataster to a further Bundesrat point, and the Rechtsanwalts-
+kammer directories to the Bundesrechtsanwaltskammer's objection that they
+do not serve administrative procedures. The committee also renames two
+entries (the civil-status registers and the accident-insurance employers'
+directory) and replaces the EMAS register with the Zulassungsregister for
+environmental verifiers, none of which changes the count.
+
+**So the "51" in this entity's secondary sources (rehm-Verlag; mgm
+technology partners) matches the committee text, not the promulgated
+Act.** Both are accurate for the stage they describe. The Act as
+promulgated has 50.
+
+**What is still unexplained** is the last step, 51 to 50. Compared with the
+committee text, the promulgated Anlage lacks the "Register zum
+vorübergehenden Schutz nach § 91a des Aufenthaltsgesetzes" and the
+"Bauvorlagenberechtigungsverzeichnisse", and adds a new item 43 for all
+lists, directories or registers that the Länder's architects' and
+engineers' chambers keep by law. Nothing in the committee report mentions
+either change, and the promulgated Anlage's Fundstelle, BGBl. I 2021,
+596-597, carries no amendment note. A plenary amendment, a change after the
+Bundestag vote or a later amendment are all possible and none is asserted.
+The Gazette text itself (`bgbl.de` serves only a JavaScript shell) and the
+Bundestag's final-vote record were not read.
+
+Two other details from the same documents. The bill's own problem statement
+cites a 2017 National Regulatory Control Council opinion putting the number
+of central and decentralised data registers at about **220**, the figure
+this entity attributes to walhalla.de. And the committee changed § 16
+para. 2 to require the effectiveness report in the **fifth** year after
+entry into force rather than the sixth, which matches the promulgated text
+read above. Some Anlage entries are collective, so no figure is a count of
+databases.
 
 ## Description
 
@@ -206,7 +254,9 @@ function of a **general personal identifier** (allgemeine Personenkennziffer),
 confirmed directly to be stored as an "additional ordering
 characteristic" (zusätzliches Ordnungsmerkmal) in **51 registers**
 (rehm-Verlag's own figure, read directly, updating the entity's earlier
-"roughly 50" — but see the section above: the Act's own Anlage lists 50) — including the
+"roughly 50" — the figure matches the Bundestag committee's text of
+27 January 2021, while the promulgated Act's Anlage lists 50; see the
+section above) — including the
 residents' register, the driving licence and weapons registers, and with
 pension and health insurance funds. walhalla.de, read directly, adds
 context this entity did not previously carry: the reform addresses
