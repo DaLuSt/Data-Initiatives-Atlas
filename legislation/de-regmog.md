@@ -11,8 +11,10 @@ description: >
   BGBl. I S. 591) introducing the use of an identification number in
   public administration. It makes the tax identification number under
   § 139b Abgabenordnung a change-resistant ordering feature for assigning
-  administrative data to the correct person across roughly 51 registers,
-  on a phased implementation timeline running into at least 2025-2026,
+  administrative data to the correct person across the 50 register types
+  listed in the Act's own Anlage (secondary sources say 51), on a phased
+  implementation timeline whose core, the Identitätsnummerngesetz, entered
+  into force on 31 August 2023,
   and is the legal basis on which Germany implements the once-only
   principle.
 
@@ -27,7 +29,7 @@ verification: primary-source
 
 start_date: 2021-03-28
 end_date: null
-last_verified: "2026-09-18"
+last_verified: "2026-10-01"
 previous_version: null
 successor: null
 
@@ -40,8 +42,8 @@ relationships:
   - type: related-to
     target: EU-SDG
     source: fact
-    evidence: "CLOSES discovery/unresolved.md row #67. mgm-tp.com's own analysis piece (read directly, 2026-09-18) states: 'According to the RegMoG, 51 of the register types are to be provided with an identification number based on the tax number and thus primarily serve the exchange of evidence in the National Once-Only-Technical-System (NOOTS)' and separately, of NOOTS: 'The basis for this is the SDG Regulation adopted by the European Parliament in 2018 ... and lays the European foundation for the implementation of the Once-Only-Technical-System (OOTS). The German version is the National Once-Only Technical System (NOOTS), which is based on the OOTS.' The European Commission's own OOTS Hub page ('The Once-Only view from Germany', digital-building-blocks, read directly) independently corroborates NOOTS as Germany's OOTS implementation, run 'as part of the wider Register Modernisation programme.' `type: related-to` rather than `implements-requirement-from`, because the chain is two-step (RegMoG feeds NOOTS; NOOTS is Germany's instance of the SDG Regulation's OOTS) and no source states RegMoG itself transposes the Regulation — it remains, as this entity's own text says, domestic register law rather than a transposition instrument."
-    confidence: medium
+    evidence: "CLOSES discovery/unresolved.md row #67. mgm-tp.com's own analysis piece (read directly, 2026-09-18) states: 'According to the RegMoG, 51 of the register types are to be provided with an identification number based on the tax number and thus primarily serve the exchange of evidence in the National Once-Only-Technical-System (NOOTS)' and separately, of NOOTS: 'The basis for this is the SDG Regulation adopted by the European Parliament in 2018 ... and lays the European foundation for the implementation of the Once-Only-Technical-System (OOTS). The German version is the National Once-Only Technical System (NOOTS), which is based on the OOTS.' The European Commission's own OOTS Hub page ('The Once-Only view from Germany', digital-building-blocks, read directly) independently corroborates NOOTS as Germany's OOTS implementation, run 'as part of the wider Register Modernisation programme.' `type: related-to` rather than `implements-requirement-from`, because the chain is two-step (RegMoG feeds NOOTS; NOOTS is Germany's instance of the SDG Regulation's OOTS) and no source states RegMoG itself transposes the Regulation — it remains, as this entity's own text says, domestic register law rather than a transposition instrument. **Direct statement found 2026-10-01**: the BMI's own FAQ on the Act (bmi.bund.de, read directly via the cookie-jar workaround, discovery/unresolved.md row #217) says: 'Auch europäische Vorgaben (insb. die sog. \"Single Digital Gateway\"-Verordnung) verpflichten die deutsche Verwaltung zur Umsetzung dieses sog. \"Once-Only\"-Prinzips ... Das Registermodernisierungsgesetz schafft die erforderlichen Voraussetzungen dafür.' (European requirements, in particular the Single Digital Gateway Regulation, oblige German administration to implement the once-only principle; the Registermodernisierungsgesetz creates the necessary prerequisites for it.) The ministry responsible for the Act therefore connects it to the SDG Regulation itself, not only through an analyst's two-step chain, so confidence rises from medium to high. The type stays `related-to`: the FAQ says the Act creates prerequisites for meeting an SDG-driven obligation, not that it transposes the Regulation."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -58,6 +60,11 @@ sources:
     url: "https://netzpolitik.org/2023/registermodernisierung-automatisierung-auf-kosten-der-sicherheit/"
     publisher: "netzpolitik.org"
     accessed: "2026-08-28"
+  - title: "Gesetz zur Einführung und Verwendung einer Identifikationsnummer in der öffentlichen Verwaltung (Identifikationsnummerngesetz — IDNrG)"
+    url: "https://www.gesetze-im-internet.de/idnrg/BJNR059110021.html"
+    publisher: "Bundesministerium der Justiz / juris (Gesetze im Internet)"
+    accessed: "2026-10-01"
+    note: "Article 1 of the RegMoG and its core. Read directly; ISO-8859-1 encoded."
   - title: "RegMoG Registermodernisierungsgesetz"
     url: "https://www.buzer.de/RegMoG.htm"
     publisher: "buzer.de"
@@ -65,9 +72,13 @@ sources:
   - title: "Registermodernisierungsgesetz verkündet"
     url: "https://www.bmi.bund.de/SharedDocs/pressemitteilungen/DE/2021/04/registermodernisierungsgesetz-verkuendet.html"
     publisher: "Bundesministerium des Innern und für Heimat (BMI)"
+    accessed: "2026-10-01"
+    note: "Read directly via a cookie-jar-aware fetch; the HTTP 400 recorded on 2026-08-28 was a missing session cookie, not a genuine block (discovery/unresolved.md row #217)."
   - title: "FAQs zum Registermodernisierungsgesetz"
     url: "https://www.bmi.bund.de/SharedDocs/faqs/DE/themen/moderne-verwaltung/registermodernisierung/registermodernisierung-faq-liste.html"
     publisher: "Bundesministerium des Innern und für Heimat (BMI)"
+    accessed: "2026-10-01"
+    note: "Read directly via the same cookie-jar workaround."
   - title: "The importance of European standards for German register modernization"
     url: "https://insights.mgm-tp.com/en/2024/publicsector/the-importance-of-european-standards-for-german-register-modernization/"
     publisher: "mgm technology partners"
@@ -80,6 +91,20 @@ sources:
 
 # Registermodernisierungsgesetz (RegMoG)
 
+> **Closed 2026-10-01** (`discovery/unresolved.md` row #226 opened): the
+> Act's own statutory text on `gesetze-im-internet.de` is now read
+> directly — entry into force 31 August 2023, deadline arithmetic, the
+> Bundesverwaltungsamt as the Registermodernisierungsbehörde, § 4 data,
+> § 16 evaluation — and its Anlage lists **50** registers where this
+> entity's secondary sources say 51.
+>
+> **Closed 2026-10-01** (`discovery/unresolved.md` row #217): the HTTP 400
+> on both `bmi.bund.de` pages was a missing session cookie, not a block.
+> Both are now read directly. The press release confirms the promulgation
+> date; the FAQ contains a **direct statement connecting the Act to the
+> Single Digital Gateway Regulation**, which the "once-only chain" section
+> below said no source supplied. See "What the ministry's own FAQ says".
+>
 > **Re-verified 2026-08-28.** Both `bmi.bund.de` pages return HTTP 400 Bad
 > Request on every attempt this pass — consistent with the same domain
 > being unreachable across other entities in this batch ([[DE-OZG]]). The
@@ -94,14 +119,81 @@ sources:
 > but by tracing the two-step chain through NOOTS. See "The once-only
 > chain, found" below.
 
+## The statutory text, read directly — 2026-10-01
+
+`gesetze-im-internet.de`, which returned HTTP 503 on the one attempt of
+2026-08-28 and was not retried, loads now, and its text of the **Gesetz zur
+Einführung und Verwendung einer Identifikationsnummer in der öffentlichen
+Verwaltung (Identifikationsnummerngesetz, IDNrG)** — Article 1 of the
+RegMoG — is read directly. What it establishes:
+
+- **Entry into force**: the footnote states the IDNrG entered into force on
+  **31 August 2023** ("gem. Art. 22 Satz 2 iVm Bek. v. 24.8.2023 I Nr. 230
+  mWv 31.8.2023"), while § 12 (the ordinance power) took effect earlier,
+  on **7 April 2021**, under Art. 22 Satz 1. This is the exact date behind
+  the "August 2023" step buzer.de's phased timeline gives below.
+- **Goals (§ 1)**: the tax ID under § 139b AO is introduced as an
+  additional ordering feature in the registers listed in the Anlage in
+  order to assign a natural person's data unambiguously in an
+  administrative procedure, improve data quality, and reduce the
+  resubmission of data public bodies already hold.
+- **Deadline (§ 2)**: register-holding bodies must store the ID and
+  replace the corresponding stored data with the Bundeszentralamt für
+  Steuern's "bis spätestens zum Ablauf des fünften auf das Inkrafttreten
+  dieses Gesetzes folgenden Kalenderjahres" (by the end of the fifth
+  calendar year following entry into force). Applied to a 31 August 2023
+  entry into force this falls at the end of **2028** — the Atlas's own
+  arithmetic on the sourced date, not a figure any source states, and it
+  differs from the end-2026 horizon rehm-Verlag implies from the 2021
+  enactment.
+- **The authority (§ 3)**: the *Registermodernisierungsbehörde* — which
+  maintains the register overview, passes the ID and basic data to
+  register holders and steers the projects — is the **Bundesverwaltungsamt**
+  ("Das Bundesverwaltungsamt nimmt die Aufgaben der
+  Registermodernisierungsbehörde wahr"). The BVA is not an Atlas entity.
+- **Data (§ 4)**: the basic data are the ID, family name, former names,
+  given names, doctorate, date and place of birth, sex, nationalities,
+  current or last known address, date of death, and move-in and move-out
+  dates; the further data are information blocks under the Bundesmeldegesetz
+  and the month and year of the last administrative contact. This matches
+  the BMI FAQ's list below item for item.
+- **Purpose limits (§ 5)**: processing the ID for other purposes is
+  inadmissible except for services under the Onlinezugangsgesetz
+  ([[DE-OZG]]) on a legal basis or with consent, and for a register-based
+  census.
+- **Offence (§ 17)**: unauthorised collection, storage, transmission or
+  dissemination is punishable by up to one year's imprisonment or a fine,
+  prosecuted only on application of the data subject, the controller or the
+  data-protection authorities.
+- **Evaluation (§ 16)**: the ministry must report to the Bundestag in the
+  third year after entry into force and every three years thereafter, and
+  in the fifth year assess effectiveness "unter Einbeziehung von
+  wissenschaftlichem Sachverstand", with recommendations on whether
+  **sector-specific identification numbers** are introduced for other areas
+  or **one uniform number for all registers** is implemented — the same
+  choice between sector-specific and uniform identifiers that the critics
+  below dispute.
+
+**An unexplained discrepancy in the register count.** The Act's Anlage,
+read directly in the current consolidated text (last amended by Art. 8f of
+the law of 19 July 2024), numbers **50** register entries. This entity's
+secondary sources say **51** (rehm-Verlag; mgm technology partners'
+"51 of the register types"), having already moved once from an earlier
+"roughly 50". Nothing read explains the gap — a later amendment, a
+different counting rule, or a source error are all possible and none is
+asserted. Some entries are themselves collective ("sämtliche von den
+Architekten- und Ingenieurkammern der Länder ... zu führenden Listen"),
+so "50 entries" is not "50 databases" either way. The primary text is the
+better anchor for the number of listed entries.
+
 ## Description
 
 The RegMoG is dated **28 March 2021** and was published on **6 April 2021**
-as **BGBl. I S. 591** — the exact citation confirmed directly this pass via
-buzer.de, closing the "no statutory text" gap flagged in the entity's
-earlier text (the official `gesetze-im-internet.de` copy itself returned
-HTTP 503 on this pass's one attempt and was not pursued further given the
-majority already reached).
+as **BGBl. I S. 591** — the exact citation confirmed directly on the
+2026-08-28 pass via buzer.de, closing the "no statutory text" gap flagged
+in the entity's earlier text. (The official `gesetze-im-internet.de` copy
+returned HTTP 503 that day; it is read directly as of 2026-10-01 — see the
+section above.)
 
 It introduces the use of an identification number in public administration,
 so that administrative data can be assigned to the correct person securely
@@ -111,10 +203,10 @@ Identifikationsnummer under **§ 139b Abgabenordnung**.
 
 The sources describe the consequence bluntly: the Steuer-ID takes on the
 function of a **general personal identifier** (allgemeine Personenkennziffer),
-confirmed directly this pass to be stored as an "additional ordering
+confirmed directly to be stored as an "additional ordering
 characteristic" (zusätzliches Ordnungsmerkmal) in **51 registers**
 (rehm-Verlag's own figure, read directly, updating the entity's earlier
-"roughly 50" from a source not specific about the count) — including the
+"roughly 50" — but see the section above: the Act's own Anlage lists 50) — including the
 residents' register, the driving licence and weapons registers, and with
 pension and health insurance funds. walhalla.de, read directly, adds
 context this entity did not previously carry: the reform addresses
@@ -186,6 +278,39 @@ register law, not a transposition instrument, stands.
 is an Atlas entity, and creating a tax statute to hang this on would be
 building the graph around a single reference.
 
+## What the ministry's own FAQ says — 2026-10-01
+
+Read directly (the page was unreachable on every earlier pass, a missing
+session cookie rather than a block): the BMI's FAQ answers "Warum brauchen
+wir das überhaupt?" by tying the Act both to national and to European
+requirements. Once-only electronic exchange of data and evidence is a
+precondition for user-friendly digital administration, and "auch
+europäische Vorgaben (insb. die sog. 'Single Digital Gateway'-Verordnung)
+verpflichten die deutsche Verwaltung zur Umsetzung dieses sog.
+'Once-Only'-Prinzips". Citizens must be unambiguously identifiable when
+using services under the Onlinezugangsgesetz ([[DE-OZG]]), and "das
+Registermodernisierungsgesetz schafft die erforderlichen Voraussetzungen
+dafür".
+
+This is the **direct connection to [[EU-SDG]]** the previous section said
+no source supplied. It does not say the Act *transposes* the Regulation —
+it says the Act creates the prerequisites for meeting an obligation the
+Regulation imposes — so the relationship stays `related-to`, now at
+`confidence: high`. Whether that wording is closer to `implements-
+requirement-from` is a vocabulary judgement, not a sourcing gap, and is
+left as it stands rather than decided on one FAQ answer.
+
+The FAQ also states, in the ministry's own words: the tax ID was chosen
+because it is already stored in many registers and is a "nicht-sprechende"
+(non-speaking) number generated at random, so that using it "bedeutet
+keinen Zugriff auf Steuerdaten"; the basic data stored alongside it
+(family and former names, given names, doctorate, date and place of birth,
+sex, nationalities, current or last known address, information blocks
+under the Bundesmeldegesetz, date of death, move-in and move-out dates and
+the month and year of the last administrative contact) are set out in § 4
+of the Identitätsnummerngesetz (IDNrG); and "es wird kein neuer zentraler
+Datenbestand geschaffen" — the registers' contents are not merged centrally.
+
 ## Contested, and recorded as such
 
 One cited source is a **critical piece from netzpolitik.org**, read
@@ -203,17 +328,25 @@ of employees with register access.
 A general personal identifier is constitutionally contentious in Germany
 for well-known historical reasons, and an Atlas entry that cited only the
 responsible ministry's own material would present a contested measure as
-settled — especially now that the ministry's own pages cannot even be
-fetched this pass.
+settled. (When this was written, on 2026-08-28, the ministry's own pages
+could not be fetched; they can now, and are cited below alongside the
+critics.)
 
 The Atlas records no position on the merits. It records that the measure is
 contested, and specifically how, because that is a fact about the
-initiative.
+initiative. Since 2026-10-01 the ministry's own side is also on record,
+read directly in its FAQ: that no new central data store is created, that
+registers' contents stay where they are, that the number does not replace
+a person's name or ID card towards authorities, and that profile-building
+is "rechtlich ausgeschlossen" (legally excluded) and backed by logging,
+data-protection-officer oversight and criminal penalties of up to one
+year. Those are the ministry's assertions about the design; the critics'
+objections above are not answered by restating them.
 
 ## Relationships
 
-- `related-to` [[EU-SDG]] — closed 2026-09-18, `confidence: medium`. See
-  above.
+- `related-to` [[EU-SDG]] — closed 2026-09-18 at `confidence: medium`,
+  raised to `high` 2026-10-01 on the BMI FAQ's direct statement. See above.
 
 Also reached from [[DE-BMI]], which `produces` it (`valid_until:
 "2025-05-06"` as of the same pass, see [[DE-BMI]]).
@@ -222,7 +355,7 @@ Also reached from [[DE-BMI]], which `produces` it (`valid_until:
 
 Listed in frontmatter — three of the original five plus one added mirror
 were read directly in the 2026-08-28 pass; `bmi.bund.de`'s two pages
-return HTTP 400 on every attempt and are kept listed with that status
-noted here rather than silently dropped. Two sources tracing the NOOTS/OOTS
+returned HTTP 400 on every attempt that pass. **Closed 2026-10-01**: that
+was a missing session cookie, and both are now read directly. Two sources tracing the NOOTS/OOTS
 chain — mgm technology partners' analysis and the European Commission's
 own OOTS Hub page — were added and read directly 2026-09-18.
