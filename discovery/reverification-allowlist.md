@@ -3,7 +3,7 @@
 > **Generated file — do not hand-edit.** Regenerate with
 > `python tools/source_hosts.py --markdown -o discovery/reverification-allowlist.md`
 
-Generated: 2026-09-30
+Generated: 2026-10-01
 
 ## Why this exists
 
