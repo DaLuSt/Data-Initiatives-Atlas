@@ -1,0 +1,28 @@
+date: "2026-10-01"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Created the Swiss e-ID, flagged on countries/ch/index.md as "legislated
+  for and not yet an Atlas entity". Two entities: CH-BGEID (the Act) and
+  CH-E-ID (the infrastructure), from the Act's final-vote text on
+  parlament.ch and the federal e-ID programme's own site, both read
+  directly.
+
+  The Act was adopted 20 Dec 2024 and approved at the 28 Sep 2025
+  referendum (50.39% yes) but is not in force; on 30 Jun 2026 the
+  introduction was postponed with no new date and the trust infrastructure
+  is expected in H1 2027. Its annex amends CH-ISG and CH-EMBAG (both
+  verified in the text); the EMBAG amendment obliges the Federal
+  Chancellery to run an e-ID-based authentication system, which links to
+  CH-AGOV only at medium confidence because no source names AGOV there.
+
+  Deliberately not asserted: voluntariness as a statutory fact (the word
+  does not appear in the text read), the Federal Gazette page number
+  (search snippet only), any relationship to the EU identity framework
+  (no source links them), and applies-in CH before entry into force. Also
+  fixed a stale entry on the Swiss index that still listed the ISG as
+  unmodelled although CH-ISG exists.
+prs:
+  - number: 396
+    title: "Add the Swiss e-ID: CH-BGEID (the Act) and CH-E-ID (the infrastructure)"
+outcome: merged
+entity_count_after: 738

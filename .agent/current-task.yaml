@@ -83,3 +83,47 @@ notes: >
   sweep were either already-closed historical narrative or deliberate,
   reasoned non-model decisions (ministries, DGs, JTC 1, etc.), not
   genuine gaps.
+
+  Follow-up, same day (owner asked to "do all" of a prioritised list,
+  PRs #395-396):
+
+  - PR #395: the owner-requested probe "retest the other hard blocks with
+    the cookie-jar approach". Result: only the Government Site Builder
+    sites are cookie-gated. digitale-verwaltung.de and
+    personalausweisportal.de behave exactly like bmi.bund.de (400 without
+    the AL_CHK-S cookie, 200 with it), so the previously-unread citations
+    on DE-FITKO, DE-FIM, DE-BUNDID, DE-MODERNISIERUNGSAGENDA-FOEDERAL,
+    DE-OZG, DE-DATENSTRATEGIE and DE-REGMOG were read. Material findings:
+    DE-DATENSTRATEGIE's cabinet decision date is 30 Aug 2023 (start_date
+    changed; a 29 Aug transmittal letter is recorded as unexplained);
+    the BMI FAQ connects the RegMoG directly to the SDG Regulation
+    (related-to EU-SDG raised to high, type deliberately unchanged);
+    gesetze-im-internet.de is readable and the Act's Anlage lists 50
+    registers, not the 51 given by secondary sources (new row #226,
+    unresolved); the Foederale Modernisierungsagenda was coordinated by the
+    Bundeskanzleramt, not the BMDS. The other documented blocks are NOT
+    cookie-gated: statbel.fgov.be and bosa.belgium.be return HTTP 200 but
+    an anti-bot CAPTCHA body (a status code alone misleads -- check the
+    text), efta.int/regjeringen.no/unece.org/unctad.org/oecd.org/iso.org are
+    Cloudflare challenges, geant.org and eduroam.org a bare 403. dfn.de was
+    never blocked; its tracker row was simply stale.
+  - PR #396: the Swiss e-ID (CH-BGEID the Act, CH-E-ID the infrastructure),
+    from the Act's final-vote text on parlament.ch and the programme's own
+    site. Adopted 20 Dec 2024, approved 28 Sep 2025 (50.39% yes), NOT in
+    force, introduction postponed 30 Jun 2026. The Gazette page number
+    ("FF 2025 20") came only from a search snippet and is recorded as
+    unconfirmed.
+  - Mistakes made and caught this pass, worth remembering: (1) suggested
+    that EU-CER's related_entities omitting NL/DE/BE/FR/ES/PL was a defect;
+    checking showed it is a repo-wide convention across EU-NIS2, EU-GDPR,
+    EU-Data-Act and others, so nothing was changed. (2) A first draft of
+    CH-BGEID claimed other unenacted instruments reach the country anchor
+    via related_entities; they do not (the test only needs one provenanced
+    relationship in either direction), so the claim was removed.
+    (3) Naive `text.split('---')[1]` frontmatter parsing breaks on URLs
+    containing `---`; use site/graph.json or the repo's own loader.
+
+  Branches still on GitHub that this environment cannot delete (git push
+  --delete returns HTTP 403): claude/atlas-15-items-{coe,lu-legilux,
+  nl-cbs-ccs,lu-iso,eu-cer-wwke,de-bmi,de-ozg} and the branches for #394-396.
+

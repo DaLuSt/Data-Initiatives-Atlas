@@ -16,16 +16,16 @@ updated: "2026-10-01"
 updated_by_session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
 
 graph:
-  entity_count: 736
-  relationship_edges: 1558
-  association_edges: 3210
-  wikilink_edges: 4533
-  edges_total: 9301
+  entity_count: 738
+  relationship_edges: 1565
+  association_edges: 3224
+  wikilink_edges: 4551
+  edges_total: 9340
   countries: 58
   regions: 1
 
 discovery:
-  unresolved_rows_open: 65
+  unresolved_rows_open: 66
   candidates_queued: 0
   research_queue_items: 0
   needs_human_open: 0
@@ -51,6 +51,12 @@ last_merged_prs:
     summary: "DE-BMI: found a new bmi.bund.de workaround (missing session cookie, not a genuine block) and read all five of its citations directly, upgrading three produces edges from search-only to dated primary-source facts (row #217)"
   - number: 393
     summary: "DE-OZG: applied the same bmi.bund.de workaround to corroborate the OZG-Anderungsgesetz's entry into force and the 115-service completion announcement directly in the BMI's own words"
+  - number: 394
+    summary: "Housekeeping: rolled state.yaml/current-task.yaml forward after the 15-item task, one run-history entry per PR"
+  - number: 395
+    summary: "Extended the session-cookie workaround to digitale-verwaltung.de and personalausweisportal.de; read the previously-unread citations on DE-FITKO, DE-FIM, DE-BUNDID, DE-MODERNISIERUNGSAGENDA-FOEDERAL, DE-OZG, DE-DATENSTRATEGIE (cabinet decision date 30 Aug 2023 now sourced) and DE-REGMOG (statute read; Anlage lists 50 registers, not 51 -- new row #226)"
+  - number: 396
+    summary: "Added the Swiss e-ID: CH-BGEID (adopted 20 Dec 2024, approved 28 Sep 2025, not yet in force) and CH-E-ID (planned; introduction postponed 30 Jun 2026); fixed a stale ISG entry on the Swiss index"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
