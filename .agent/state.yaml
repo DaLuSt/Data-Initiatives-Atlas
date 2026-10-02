@@ -86,6 +86,10 @@ last_merged_prs:
     summary: "Housekeeping: recorded #409-410 in state.yaml and run-history"
   - number: 412
     summary: "Backfilled rank for the EU instruments from Official Journal (CELLAR) records that name the adopting body: 30 ordinary, 2 delegated; 154 of 172 legislation entities now carry a rank; row #11 reduced to verification gaps and the code-vs-statute form question"
+  - number: 413
+    summary: "Housekeeping: recorded #411-412 in state.yaml and run-history"
+  - number: 414
+    summary: "Checked the constitutional designations behind rank against the constitutions on constituteproject.org (BE, FR, IT, PT, CZ read; 11 others searched for a higher statutory category, none found); named the remaining gaps (Germany did not load, UK unwritten, two decree/ordinance rank rules not in the text)"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
