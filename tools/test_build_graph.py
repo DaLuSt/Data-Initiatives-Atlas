@@ -568,5 +568,55 @@ class TestLegislationTypes(unittest.TestCase):
                               e.frontmatter.get("id"))
 
 
+class TestRank(unittest.TestCase):
+    """The optional `rank` field (ontology section 1.2)."""
+
+    @classmethod
+    def setUpClass(cls):
+        import validate_frontmatter
+        cls.vf = validate_frontmatter
+        cls.schema = load_schema()
+
+    def _errors(self, entity_type, rank):
+        from common import Report
+        report = Report("t")
+        self.vf.check_rank("x.md", entity_type, rank, self.schema, report)
+        return report.errors
+
+    def test_schema_is_coherent(self):
+        levels = set(self.schema["rank_levels"])
+        legislation = {t for t, f in self.schema["type_folder_map"].items()
+                       if f == "legislation"}
+        self.assertEqual(set(self.schema["rank_by_type"]), legislation - {"agreement"})
+        for entity_type, allowed in self.schema["rank_by_type"].items():
+            self.assertTrue(set(allowed) <= levels, entity_type)
+
+    def test_valid_and_unset_ranks_pass(self):
+        self.assertEqual(self._errors("act", "organic"), [])
+        self.assertEqual(self._errors("act", None), [])
+        self.assertEqual(self._errors("subordinate-legislation", "delegated"), [])
+        self.assertEqual(self._errors("regulation", "delegated"), [])
+
+    def test_bad_ranks_are_rejected(self):
+        self.assertTrue(self._errors("act", "supreme"))                    # unknown value
+        self.assertTrue(self._errors("policy", "organic"))                 # wrong type
+        self.assertTrue(self._errors("soft-law", "ordinary"))              # no rank on soft law
+        self.assertTrue(self._errors("agreement", "ordinary"))             # none on treaties
+        self.assertTrue(self._errors("act", "delegated"))                  # an act is not delegated
+        self.assertTrue(self._errors("subordinate-legislation", "ordinary"))
+
+    def test_rank_reaches_the_details_payload(self):
+        payload, errors, _ = build_graph.build()
+        self.assertFalse(errors)
+        nodes = payload["details"]["nodes"]
+        self.assertEqual(nodes["ES-LOPDGDD"]["rank"], "organic")
+        self.assertEqual(nodes["ES-LEY-37-2007"]["rank"], "ordinary")
+        self.assertNotIn("rank", nodes["DE-BDSG"])  # unset stays unset, never defaulted
+
+    def test_rank_is_shown_in_the_site(self):
+        js = (Path(__file__).resolve().parent.parent / "site" / "app.js").read_text(encoding="utf-8")
+        self.assertIn("d.rank", js)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

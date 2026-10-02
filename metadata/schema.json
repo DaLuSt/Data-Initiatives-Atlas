@@ -38,6 +38,14 @@
   "confidence_levels": ["high", "medium", "low"],
   "coverage_levels": ["low", "medium", "high"],
   "verification_levels": ["primary-source", "search-only", "unverified"],
+  "rank_levels": ["constitutional", "organic", "ordinary", "delegated"],
+  "rank_by_type": {
+    "act": ["constitutional", "organic", "ordinary"],
+    "regulation": ["ordinary", "delegated"],
+    "directive": ["ordinary", "delegated"],
+    "decision": ["ordinary", "delegated"],
+    "subordinate-legislation": ["delegated"]
+  },
   "organisation_role_levels": ["executive", "consultative", "regulatory", "standards-body", "advisory"],
   "relationship_source_values": ["fact", "interpretation"],
   "relationship_types": [
