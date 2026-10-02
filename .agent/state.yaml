@@ -94,6 +94,12 @@ last_merged_prs:
     summary: "Housekeeping: recorded #413-414 in state.yaml and run-history"
   - number: 416
     summary: "Checked Germany's rank basis against the official Basic Law text on gesetze-im-internet.de (Art. 79, 78, 80; no organic category); the UK is the only country row left resting on standard knowledge"
+  - number: 417
+    summary: "Housekeeping: recorded #415-416 in state.yaml and run-history"
+  - number: 418
+    summary: "Moved EU-EIF to soft-law: it is part of Commission Communication COM(2017) 134 (Commission ISA2 page; Publications Office record for CELEX 52017DC0134); five soft-law entities now"
+  - number: 419
+    summary: "Closed the remaining rank verification gaps against official texts: the 2025 UK adequacy decisions are Commission implementing decisions (CELLAR records), the Constitutional Council decision and ratifying statutes for the French ordonnances, Art. 112/164/166/168 of the Portuguese Constitution, legislation.gov.uk for the UK; residual gaps named in row #11"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,

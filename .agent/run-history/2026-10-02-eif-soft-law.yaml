@@ -14,6 +14,8 @@ summary: >
   type soft-law (five soft-law entities now). Both sources added to the
   entity, plus a dated typing note; ontology and soft-law README updated.
   Entity IDs and wikilinks unchanged. 56 tests pass.
-prs: []
-outcome: pending
+prs:
+  - number: 418
+    title: "Move EU-EIF to soft-law"
+outcome: merged
 entity_count_after: 738

@@ -32,6 +32,8 @@ summary: >
   classification, not a constitutional text, and Portugal's residual reinforced-
   value category was not checked. EU-EIF was moved to soft-law separately
   (PR 418). No entity rank values changed in this PR.
-prs: []
-outcome: pending
+prs:
+  - number: 419
+    title: "Close the remaining rank verification gaps against official texts"
+outcome: merged
 entity_count_after: 738
