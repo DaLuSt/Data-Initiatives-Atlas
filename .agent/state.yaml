@@ -90,6 +90,10 @@ last_merged_prs:
     summary: "Housekeeping: recorded #411-412 in state.yaml and run-history"
   - number: 414
     summary: "Checked the constitutional designations behind rank against the constitutions on constituteproject.org (BE, FR, IT, PT, CZ read; 11 others searched for a higher statutory category, none found); named the remaining gaps (Germany did not load, UK unwritten, two decree/ordinance rank rules not in the text)"
+  - number: 415
+    summary: "Housekeeping: recorded #413-414 in state.yaml and run-history"
+  - number: 416
+    summary: "Checked Germany's rank basis against the official Basic Law text on gesetze-im-internet.de (Art. 79, 78, 80; no organic category); the UK is the only country row left resting on standard knowledge"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,

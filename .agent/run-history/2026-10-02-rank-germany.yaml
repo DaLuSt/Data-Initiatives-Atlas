@@ -19,6 +19,8 @@ summary: >
   resting on standard knowledge, plus two decree/ordinance rank rules that the
   constitutional texts for France and Portugal do not state. unresolved.md row
   11 updated.
-prs: []
-outcome: pending
+prs:
+  - number: 416
+    title: "Check Germany's rank basis against the official Basic Law text"
+outcome: merged
 entity_count_after: 738
