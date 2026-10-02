@@ -401,9 +401,9 @@ python tools/build_graph.py
 ```
 
 The graph must always be reproducible from the repository.
-`tools/test_build_graph.py` fails if the committed graph no longer matches
-the entity files, and the deployment workflow regenerates it before
-publishing regardless.
+The generated files are not committed; `tools/test_build_graph.py` asserts
+that two builds of the same data are identical, and the deployment workflow
+regenerates the graph before publishing.
 
 The same rule keeps the two views consistent: **Obsidian** reads the
 Markdown and wikilinks directly, and the **web graph** reads them through the
