@@ -1,0 +1,25 @@
+date: "2026-10-02"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  At the owner's request ("fix the merge-conflict churn"), stopped committing
+  site/graph.json and site/details.json. Read the workflows, tests and docs
+  first: pages.yml already regenerated both files before deploying and
+  build_graph.py --check never compared against a committed copy, so nothing
+  at deploy or CI time depended on them being in git. docs/github-pages.md
+  gave two reasons for committing them (works from a clone; reviewable
+  diffs); both were addressed rather than ignored (a clone needs one build
+  command that graph-development.md already listed; the files are one line
+  each so the diff was never reviewable). The old docs had counted only
+  staleness as the cost, never the merge conflicts.
+
+  Verified in a fresh clone with no generated files, as CI sees it: full
+  validation, both test suites, build --check, a real build leaving git
+  status empty, and the built site served over HTTP (graph.json parses).
+  That clean-clone run caught a bug in my new determinism test (details.json
+  has its own generated_at). I then confirmed the test actually fails when
+  the build is made nondeterministic, since it replaces a real guard.
+prs:
+  - number: 400
+    title: "Stop committing the generated site/graph.json and site/details.json"
+outcome: pending
+entity_count_after: 738

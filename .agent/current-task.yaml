@@ -127,3 +127,14 @@ notes: >
   --delete returns HTTP 403): claude/atlas-15-items-{coe,lu-legilux,
   nl-cbs-ccs,lu-iso,eu-cer-wwke,de-bmi,de-ozg} and the branches for #394-396.
 
+  RESOLVED 2026-10-02 (PR #400): the merge-conflict churn described above
+  came from committing site/graph.json and site/details.json. They are no
+  longer committed (gitignored), so they cannot conflict, and the "git add
+  the regenerated files AFTER build_graph.py" lesson no longer applies.
+  pages.yml already built them before deploying, so nothing at deploy time
+  changed. Tests: the two "committed copy matches" tests were replaced by
+  test_build_is_deterministic (44 tests now). The two reasons docs/
+  github-pages.md gave for committing them are answered in that file's
+  rewritten section. If a branch from before this change still carries the
+  files, take origin/main's side and `git rm --cached` them.
+

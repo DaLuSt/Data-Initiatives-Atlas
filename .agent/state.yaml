@@ -62,6 +62,8 @@ last_merged_prs:
     summary: "Housekeeping: rolled state.yaml/current-task.yaml forward after PRs #395-396"
   - number: 398
     summary: "Row #226 narrowed: traced the RegMoG Anlage through the government bill (56), the Interior Committee text (51, the figure secondary sources use) and the promulgated Act (50); the final 51-to-50 step is still unexplained"
+  - number: 400
+    summary: "Stopped committing the generated site/graph.json and site/details.json (gitignored; pages.yml already built them); replaced the committed-copy tests with test_build_is_deterministic. Removes the merge-conflict churn that hit every parallel PR."
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
