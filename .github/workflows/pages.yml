@@ -73,10 +73,10 @@ jobs:
           ATLAS_BRANCH: ${{ github.event.repository.default_branch }}
         run: python tools/build_graph.py
 
-      # Note: the graph is regenerated above, so what ships is always current
-      # even if the committed copy had drifted. Content-level staleness of the
-      # committed graph.json is asserted by the test step (a raw `git diff`
-      # would always differ, because `generated_at` moves on every build).
+      # Note: site/graph.json and site/details.json are not committed (they
+      # are gitignored), so this step is what produces them. That is safe only
+      # because the build is reproducible, which test_build_graph.py asserts
+      # (test_build_is_deterministic).
 
       - name: Report graph statistics
         run: |

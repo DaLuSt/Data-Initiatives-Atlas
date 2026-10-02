@@ -40,8 +40,8 @@ jobs:
         run: python tools/test_reverify.py
 
       # Proves the graph can still be generated from this branch's data before
-      # it is allowed to reach main. Staleness of the committed graph.json is
-      # asserted by the test step above (it compares content, not timestamps —
-      # a raw `git diff` would always differ because `generated_at` moves).
+      # it is allowed to reach main. The generated files are not committed, so
+      # there is no committed copy to go stale; reproducibility of the build is
+      # asserted by the test step above (test_build_is_deterministic).
       - name: Check the graph builds
         run: python tools/build_graph.py --check

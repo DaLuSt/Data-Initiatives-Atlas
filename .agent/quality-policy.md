@@ -9,7 +9,8 @@ Three checks, run in order, all with zero errors:
 
 1. `python3 tools/build_graph.py` — regenerates `site/graph.json` and
    `site/details.json` from the entity files. Never hand-edit these two
-   generated files.
+   generated files, and never commit them: they are gitignored and CI and
+   the Pages deploy rebuild them.
 2. `python3 validation/run_all.py` — five structural checks: duplicate/
    invalid IDs, malformed or missing frontmatter fields, invalid
    controlled-vocabulary values, broken internal `[[wikilinks]]`, invalid
@@ -18,8 +19,9 @@ Three checks, run in order, all with zero errors:
    are known and not a regression signal — only new errors block a
    merge.
 3. `python3 tools/test_build_graph.py` — the unit test suite (45 tests as
-   of 2026-09-26), including a check that the committed `graph.json`
-   doesn't drift from the entity files that generate it.
+   of 2026-09-26), including a check that the build is deterministic (two
+   builds of the same data agree apart from `generated_at`), which is what
+   makes not committing the generated files safe.
 
 `.github/workflows/validate.yml` runs the same three checks independently
 on every human/external-token PR — see `.agent/operating-model.md`'s git

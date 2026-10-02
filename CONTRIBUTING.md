@@ -57,12 +57,13 @@ vulnerabilities privately, data-integrity problems in a public issue.
    that geography's hub page, add a wikilink to `countries/nl/index.md`,
    `regions/eu/index.md` or `international/un/index.md`.
 8. Run the validation suite (below) and fix anything it flags.
-9. Regenerate the interactive graph and commit the result:
+9. Build the interactive graph to check it still generates:
 
        python tools/build_graph.py
 
-   `site/graph.json` and `site/details.json` are generated — never hand-edit
-   them. See `docs/graph-development.md`.
+   `site/graph.json` and `site/details.json` are generated and **not
+   committed** (they are gitignored; CI and the Pages deploy rebuild them) —
+   never hand-edit them. See `docs/graph-development.md`.
 
 ## Changing an existing entity
 

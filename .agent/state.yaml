@@ -10,7 +10,8 @@
 #
 # Update this file, by hand, as part of the same commit/PR as any work
 # that changes these numbers or the summary. Regenerate entity_count etc.
-# from site/graph.json's own `stats` block rather than counting by hand.
+# from site/graph.json's own `stats` block (run tools/build_graph.py first;
+# the file is gitignored) rather than counting by hand.
 
 updated: "2026-10-01"
 updated_by_session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
@@ -61,6 +62,8 @@ last_merged_prs:
     summary: "Housekeeping: rolled state.yaml/current-task.yaml forward after PRs #395-396"
   - number: 398
     summary: "Row #226 narrowed: traced the RegMoG Anlage through the government bill (56), the Interior Committee text (51, the figure secondary sources use) and the promulgated Act (50); the final 51-to-50 step is still unexplained"
+  - number: 400
+    summary: "Stopped committing the generated site/graph.json and site/details.json (gitignored; pages.yml already built them); replaced the committed-copy tests with test_build_is_deterministic. Removes the merge-conflict churn that hit every parallel PR."
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,

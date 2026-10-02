@@ -494,43 +494,23 @@ class TestSiteArtefacts(unittest.TestCase):
             if url.startswith(("http://", "https://", "//")):
                 self.fail(f"external asset referenced in index.html: {url}")
 
-    def test_generated_graph_matches_repository(self):
-        """The committed graph.json must not drift from the source of truth."""
-        path = self.SITE / "graph.json"
-        if not path.exists():
-            self.skipTest("site/graph.json not built yet")
-        committed = json.loads(path.read_text(encoding="utf-8"))
-        payload, errors, _ = build_graph.build()
+    def test_build_is_deterministic(self):
+        """site/graph.json and site/details.json are not committed: CI and the
+        deploy build them from the entity files. That is only safe if the
+        build is reproducible, so two builds must agree on everything except
+        `generated_at`, which moves on every run."""
+        first, errors, _ = build_graph.build()
         self.assertFalse(errors)
-        fresh = payload["graph"]
-        hint = "site/graph.json is stale — run `python tools/build_graph.py`"
-        # Compare content, not the whole file: `generated_at` moves on every
-        # build, so a byte/timestamp comparison would always report staleness.
-        self.assertEqual(committed["stats"], fresh["stats"], hint)
-        self.assertEqual(committed["facets"], fresh["facets"], hint)
-        self.assertEqual(committed["repository"], fresh["repository"], hint)
-        self.assertEqual(
-            sorted(json.dumps(n, sort_keys=True) for n in committed["nodes"]),
-            sorted(json.dumps(n, sort_keys=True) for n in fresh["nodes"]),
-            hint,
-        )
-        self.assertEqual(
-            sorted(json.dumps(e, sort_keys=True) for e in committed["edges"]),
-            sorted(json.dumps(e, sort_keys=True) for e in fresh["edges"]),
-            hint,
-        )
+        second, errors, _ = build_graph.build()
+        self.assertFalse(errors)
+        def content(payload, key):
+            doc = dict(payload[key])
+            doc.pop("generated_at", None)
+            return json.dumps(doc, sort_keys=True)
 
-    def test_committed_details_match_repository(self):
-        path = self.SITE / "details.json"
-        if not path.exists():
-            self.skipTest("site/details.json not built yet")
-        committed = json.loads(path.read_text(encoding="utf-8"))
-        payload, errors, _ = build_graph.build()
-        self.assertFalse(errors)
-        self.assertEqual(committed["nodes"], payload["details"]["nodes"],
-                         "site/details.json is stale — run `python tools/build_graph.py`")
-        self.assertEqual(committed["edges"], payload["details"]["edges"],
-                         "site/details.json is stale — run `python tools/build_graph.py`")
+        for key, name in (("graph", "graph.json"), ("details", "details.json")):
+            self.assertEqual(content(first, key), content(second, key),
+                             f"{name} content differs between two builds of the same data")
 
 
 if __name__ == "__main__":

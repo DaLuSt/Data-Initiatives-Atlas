@@ -82,8 +82,8 @@ at least one provenanced relationship, domains excepted), node generation,
 edge generation, **relationship direction**, vocabulary
 conformance, phantom-node refusal, dynamic country and **domain** discovery,
 provenance and confidence facet totals, dynamic statistics, the payload
-split, and whether the committed `site/graph.json` still matches the
-repository.
+split, and whether the build is deterministic (the generated files are not
+committed, so they must be reproducible).
 
 ```bash
 # optional browser tests — need Playwright + Chromium
@@ -132,8 +132,8 @@ problem in more detail — start there.
 1. Open the browser console. A failed `fetch` for `graph.json` shows as an
    overlay with the HTTP status.
 2. Check you are on `http://`, not `file://`.
-3. Check `site/graph.json` exists — it is committed, but a fresh clone with a
-   `.gitignore` mishap could lack it.
+3. Check `site/graph.json` exists. It is **not committed**, so a fresh clone
+   has none until you run `python tools/build_graph.py`.
 
 ### A node is missing
 
@@ -160,14 +160,15 @@ the `relationships:` block on `A` says so. See
 `maintained-by` direction (target maintains subject) catches people out, and
 has caught this repository out before.
 
-### The committed graph is stale
+### The graph looks out of date
 
-`test_generated_graph_matches_repository` fails. Run
-`python tools/build_graph.py` and commit both `site/graph.json` and
-`site/details.json`.
+`site/graph.json` and `site/details.json` are not committed, so a stale copy
+can only be one you built earlier. Run `python tools/build_graph.py` again.
 
-The test compares **content**, not the file bytes: `generated_at` changes on
-every build, so a byte comparison would always report staleness.
+If `test_build_is_deterministic` fails, two builds of the same data produced
+different content. That breaks the assumption that makes not committing the
+files safe. The test compares **content**, not bytes: `generated_at` changes
+on every build and is excluded.
 
 ---
 
