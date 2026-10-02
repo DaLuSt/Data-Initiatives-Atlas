@@ -36,6 +36,8 @@ summary: >
   (2009-526 and 2011-12), not read from Legifrance. discovery/unresolved.md
   row 11 is narrowed, not closed: organic vs ordinary law and a soft-law type
   remain open.
-prs: []
-outcome: pending
+prs:
+  - number: 404
+    title: "Split type: law into act, decision, subordinate-legislation and agreement"
+outcome: merged
 entity_count_after: 738

@@ -66,6 +66,10 @@ last_merged_prs:
     summary: "Stopped committing the generated site/graph.json and site/details.json (gitignored; pages.yml already built them); replaced the committed-copy tests with test_build_is_deterministic. Removes the merge-conflict churn that hit every parallel PR."
   - number: 401
     summary: "Gave discovery/candidates.md, research-queue.md and duplicates.md the same master-table overview as unresolved.md; restored the EU-INSPIRE/UN-GGIM non-assertion as unresolved.md row #227"
+  - number: 403
+    summary: "Fixed README and docs/graph-architecture.md, which still described the committed-copy graph test removed in #400"
+  - number: 404
+    summary: "Split type: law into act (122), agreement (7), decision (5) and subordinate-legislation (4) alongside regulation (22) and directive (12); corrected five EU instruments filed under the wrong type; row #11 narrowed (organic vs ordinary law and a soft-law type remain open)"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
