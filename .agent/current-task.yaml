@@ -138,3 +138,10 @@ notes: >
   rewritten section. If a branch from before this change still carries the
   files, take origin/main's side and `git rm --cached` them.
 
+  2026-10-02 (owner request: structure the discovery files like
+  unresolved.md): candidates.md, research-queue.md and duplicates.md now
+  open with a master table in unresolved.md's layout (candidates: C1-C9;
+  queue: Q1..., duplicates: D1..., the latter two currently empty).
+  candidates.md's original body is kept verbatim below the table because
+  entity files cite its section numbers. Restoring the table surfaced one
+  lost pointer, EU-INSPIRE vs UN-GGIM, now unresolved.md row #227.
