@@ -7,22 +7,67 @@ clear enough relationship to the rest of the graph — then delete the row.
 
 Do not add anything here without noting where it was seen.
 
-> **Nothing on this page has been read.** Rows were compiled from
-> search-engine results; the pages cited in *Where seen* were returned by a
-> search index and confirmed to exist, but page retrieval is blocked
-> (`EGRESS_BLOCKED`, 403 at the proxy tunnel). **These are leads, not
-> findings.**
+**Format note (2026-10-02):** this page is now laid out like
+`discovery/unresolved.md`: one master table, sorted by area, followed by
+reference sections. Until now the page led with several screens of batch
+narrative and the actual state of every lead had to be pieced together from
+six numbered sections. Nothing was removed: the original narrative and
+sections are kept **verbatim** below the table, under their original
+numbers, because entity files cite them (`candidates.md §1`, `§2`, `§3`,
+`§4`, `§6`) and quote their text. **Do not renumber the sections.**
 
-> **Proposed IDs are written in `backticks`, not `[[wikilinks]]`.** A
-> wikilink to an entity that does not exist fails Obsidian navigation, and
-> `validate_links` does **not** scan `discovery/` — so wikilinks here are
-> unchecked by tooling and must be verified by hand.
+How the table works:
 
-> **Rows are removed when they close, not struck through.** The record of
-> what closed and why lives in `progress/completed.md` and on the entities
-> themselves.
+- **Closed rows are not listed.** A lead that became an entity is recorded
+  on that entity's own file and in `progress/completed.md`, as in
+  `unresolved.md`. The table lists only what has **no other home**: open
+  leads, leads declined as decisions (so no later session researches them
+  again), leads moved to `unresolved.md`, and one reference measurement.
+- **Row IDs are `C1`, `C2`, …** so they cannot be confused with the numeric
+  row numbers in `unresolved.md`. Like those, they are not renumbered when a
+  row is removed.
+- **Proposed IDs are written in `backticks`, not `[[wikilinks]]`, when the
+  entity does not exist yet.** A wikilink to an entity that does not exist
+  fails Obsidian navigation, and `validate_links` does **not** scan
+  `discovery/`, so wikilinks here are unchecked by tooling and must be
+  verified by hand.
+- **Rows are removed when they close, not struck through.**
+
+> **Historical note, from the page's founding (2026-08):** *"Nothing on
+> this page has been read. Rows were compiled from search-engine results;
+> the pages cited in 'Where seen' were returned by a search index and
+> confirmed to exist, but page retrieval is blocked (`EGRESS_BLOCKED`, 403 at
+> the proxy tunnel). These are leads, not findings."* That described the
+> first batch. Page retrieval has worked since; where a row below has been
+> checked against a page that was read, its detail column says so.
 
 ---
+
+## All candidates
+
+| # | Area | Entity / Topic | Lead | Why it matters / status detail | Status | Noted |
+|---|---|---|---|---|---|---|
+| C1 | Geospatial | [[EU-INSPIRE]] ↔ [[UN-GGIM]] | Is there a sourced relationship between the European spatial-data instrument and the UN geospatial structure? | Never found across four independent attempts (UN batch 2026-08-16; 2026-08-21; twice on 2026-09-05). Creating [[EU-EUROGEOGRAPHICS]] did not close it. Retired as a candidate 2026-09-05 and, per §1, "kept as a standing open question in `discovery/unresolved.md`". **That row was not in `unresolved.md`** when checked on 2026-10-02; it is restored there as row #227. No relationship edge exists between the two entities either (only a prose wikilink). See §1 for the four attempts. | Moved → `unresolved.md` #227 | UN batch 2026-08-16; retired 2026-09-05; pointer checked 2026-10-02 |
+| C2 | UN/international | UN DESA | Should the Department of Economic and Social Affairs be an entity? | **Declined 2026-09-05**: a broad Secretariat department ("the think tank of the UN"), already represented through [[UN-UNSD]] and [[UN-UNCTAD]]'s CSTD work, with no source giving it a distinct enough identity of its own. The same call already made for the World Bank (`unresolved.md` #168). Recorded only here and in §3. | Declined (deliberate) | 2026-09-05 |
+| C3 | Regions | Nordic Council and Benelux | Should either be modelled as a regional body? | **Declined 2026-09-05**: neither has an identified data-governance role in this Atlas's scope, and creating either would be the thin, scope-free entity the taxonomy threshold exists to prevent. Same call as the World Bank. Recorded only here and in §4. | Declined (deliberate) | 2026-09-05 |
+| C4 | Ontology | `level: local` | Is the `local` level needed? | **0 uses** (still 0 on 2026-10-02, against 515 `national`, 102 `regional`, 85 `international`, 23 `subnational` and 13 `sectoral`). It once blocked Flanders, the Comunidades Autónomas and the German Länder, because `regional` means *supra*-national here and nothing meant *sub*-national; `level: subnational` (added 2026-08-21) cleared that. `local` gated one thing, the Dutch municipalities, and that **closed as declined 2026-09-05**: there are hundreds of them, so no single "the municipalities" entity is right, and [[NL-VNG]] is their association, a different thing. That reasoning was said to live in `unresolved.md`'s Basisregistraties section, **which no longer exists there**, so it is kept in full here. | Declined (deliberate) | 2026-08-21; closed 2026-09-05 |
+| C5 | Ontology | `level: sectoral` | Is `sectoral` under-used, or does the subject matter rarely need it? | Barely exercised: 6 uses when measured 2026-08-21, **13 of 738 entities on 2026-10-02**. Whether that reflects the subject matter or under-use has never been examined. The page's own status for it was "Later". | Open (low priority) | 2026-08-21; recount 2026-10-02 |
+| C6 | Ontology | "Modelled on" | Should there be a relationship type for "one law is modelled on another"? | **Deliberately not given a new type, 2026-09-05.** [[LI-DSG]]'s "modelled on the German BDSG" comes from a law-firm commentary describing legislative style, not a sourced statement that the legislature adapted a specific text: the kind of single, weakly sourced instance §2 warned against building a type around. Kept in prose, like StUF (searched for, never given an entity for want of a usable source). See §6. | Declined (deliberate) | 2026-09-05 |
+| C7 | Ontology | Enforcement against a member state | No entity type for an individual infringement procedure | Consolidated into `unresolved.md` #44 on 2026-09-05; [[EU-CJEU]] was created 2026-08-21 and the `referred-to-court-over` type later, but the procedure itself is still not an entity. See §6. | Moved → `unresolved.md` #44 | 2026-09-05 |
+| C8 | Ontology | `type: law` flattens legislative rank | Irish SI vs. Act, Spanish *Ley Orgánica*, German *Gesetz* vs. *Verordnung*, a Joint Committee Decision filed as `law` | Consolidated into `unresolved.md` #11 on 2026-09-05; a taxonomy change touching every legislation entity. See §6. | Moved → `unresolved.md` #11 | 2026-09-05 |
+| C9 | Coverage | Domain coverage | Which domains are thin? (measured as distinct countries with at least one entity listing the domain) | **Reference, re-measured 2026-10-02 across 58 country anchors:** government 23, cybersecurity 14, national security 9, geospatial 8, health 5, energy 3, digital infrastructure 3; **eleven domains sit at 1 or 2 countries**: mobility, postal, research, manufacturing and education at 2; finance, water, space, environment, food and chemicals at 1. §5 holds the 2026-08-21 measurement, which listed eight domains. Mobility has no obvious set of national counterparts to add: [[EU-EMSWE]] and [[UN-LOCODE]] are supra-national. §5 itself calls this "historical reference, not work to do". | Reference | 2026-08-21; re-measured 2026-10-02 |
+
+**1 open, 4 declined as decisions, 3 moved to `unresolved.md`, 1 reference
+measurement.** Closed leads are recorded on their entities; the sections
+below keep the history.
+
+---
+
+## Reference sections
+
+Everything below is the page as it stood before the 2026-10-02 restructure,
+unchanged. The numbered sections are cited from entity files; see the format
+note above.
 
 ## Status: worked through 2026-08-21 (twice), then 2026-09-05
 

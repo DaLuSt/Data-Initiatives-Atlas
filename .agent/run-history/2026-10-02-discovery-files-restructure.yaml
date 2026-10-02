@@ -1,0 +1,19 @@
+date: "2026-10-02"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  At the owner's request, gave discovery/candidates.md, research-queue.md and
+  duplicates.md the same overview structure as unresolved.md: a master table
+  (# / Area / Topic / Lead / detail / Status / Noted) ahead of the reference
+  material. candidates.md got nine rows (C1-C9): one open, four declined as
+  decisions, three moved to unresolved.md, one reference measurement
+  (domain coverage, re-measured 2026-10-02). Its original body was kept
+  byte-for-byte below the table, because entity files cite its section
+  numbers (checked: the old text is a substring of the new file).
+  research-queue.md and duplicates.md have nothing to list, so each gained
+  an empty table with a placeholder row and a layout note.
+  Writing the table showed that the EU-INSPIRE / UN-GGIM non-assertion was
+  recorded only in candidates.md, so a row for it (#227) was added to
+  unresolved.md; dropping it is harmless.
+prs: []
+outcome: pending
+entity_count_after: 738

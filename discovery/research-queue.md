@@ -44,10 +44,20 @@ store findings, and not a historical log.
   closes, its story belongs there and on the entity itself, not in this
   file.
 
-## Nothing is currently queued
+## All queued leads
 
-Every item this file has carried has either become a real entity, been
-found already covered by an existing one, or been judged not worth
-pursuing (and noted as such in `discovery/unresolved.md` where the
-finding itself was worth keeping). Add the next lead above this line,
-one row per item, using a "lead / why it matters / where seen" shape.
+This page uses the same master-table layout as `discovery/unresolved.md`
+(one table, sorted by area; closed rows are deleted, not struck through;
+row IDs are `Q1`, `Q2`, … so they cannot be confused with the numeric rows
+in `unresolved.md`, and are not renumbered when a row is removed).
+
+| # | Area | Entity / Topic | Lead | Why it matters / where seen | Status | Noted |
+|---|---|---|---|---|---|---|
+| – | – | _(nothing is currently queued)_ | | | | |
+
+**Nothing is currently queued.** Every item this file has carried has either
+become a real entity, been found already covered by an existing one, or been
+judged not worth pursuing (and noted as such in `discovery/unresolved.md`
+where the finding itself was worth keeping). Add the next lead as a new row
+in the table above, using the "lead / why it matters / where seen" shape,
+and delete the placeholder row.
