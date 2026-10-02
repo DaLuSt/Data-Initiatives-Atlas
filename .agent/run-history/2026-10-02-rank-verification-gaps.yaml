@@ -1,0 +1,37 @@
+date: "2026-10-02"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Owner said to continue with the remaining suggestions (not the branch
+  clean-up). Closed the verification gaps left on discovery/unresolved.md row 11
+  and in metadata/rank-basis.md, each against a primary or official text:
+
+  - EU-UK-ADEQUACY: read the Publications Office (CELLAR) records for the
+    December 2025 decisions, CELEX 32025D2574 (amending the GDPR decision) and
+    32025D2571 (amending the Law Enforcement Directive decision), and for the
+    June 2025 extensions 32025D1226 and 32025D1225. All four are Commission
+    implementing decisions (resource type DEC_IMPL, author the European
+    Commission). The earlier delegated rank was an inference from the 2021
+    records; it is now confirmed, and the two 2025 records are added to the
+    entity's sources.
+  - France: the Constitutional Council's decision 2020-851/852 QPC of 3 July
+    2020, para. 11, states that an ordinance's provisions acquire legislative
+    value from signature once ratified. Ratification of the two ordonnances was
+    read in statute text: Art. 138 I, 16 of Loi 2009-526 (a copy of the enacted
+    text at data.globalcit.eu) and Art. 1 of Loi 2011-12 (as reproduced by
+    INERIS AIDA and senat.fr). Legifrance itself is Cloudflare-blocked.
+  - Portugal: read the Constitution in the Portuguese text on parlamento.pt.
+    Art. 112(2) gives laws and decree-laws equal value; Art. 166(2) fixes the
+    matters that must take organic-law form and Art. 168(6) the two-thirds
+    matters. None concerns the four Portuguese entities' subjects, so the
+    subject, not only the title, was checked.
+  - United Kingdom: no written constitution. legislation.gov.uk classes Acts as
+    primary and statutory instruments as secondary legislation with no higher
+    statutory category; parliament.uk is Cloudflare-blocked and was not read.
+
+  Residual gaps named in row 11: the UK row rests on legislation.gov.uk's
+  classification, not a constitutional text, and Portugal's residual reinforced-
+  value category was not checked. EU-EIF was moved to soft-law separately
+  (PR 418). No entity rank values changed in this PR.
+prs: []
+outcome: pending
+entity_count_after: 738

@@ -91,6 +91,14 @@ sources:
     url: "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/international-transfers/receiving-personal-information-from-the-eea/"
     publisher: "Information Commissioner's Office (UK)"
     accessed: "2026-08-22"
+  - title: "Commission Implementing Decision (EU) 2025/2574 of 19 December 2025 amending Implementing Decision (EU) 2021/1772 (GDPR adequacy, United Kingdom) — Publications Office record, CELEX 32025D2574"
+    url: "https://publications.europa.eu/resource/celex/32025D2574"
+    publisher: "Publications Office of the European Union (CELLAR)"
+    accessed: "2026-10-02"
+  - title: "Commission Implementing Decision (EU) 2025/2571 of 19 December 2025 amending Implementing Decision (EU) 2021/1773 (Law Enforcement Directive adequacy, United Kingdom) — Publications Office record, CELEX 32025D2571"
+    url: "https://publications.europa.eu/resource/celex/32025D2571"
+    publisher: "Publications Office of the European Union (CELLAR)"
+    accessed: "2026-10-02"
 ---
 
 # UK adequacy decisions
