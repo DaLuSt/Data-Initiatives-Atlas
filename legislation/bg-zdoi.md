@@ -24,6 +24,7 @@ country: BG
 region: EU
 
 status: active
+rank: ordinary
 confidence: high
 coverage: low
 verification: primary-source

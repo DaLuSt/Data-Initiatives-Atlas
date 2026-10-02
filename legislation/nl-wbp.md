@@ -19,6 +19,7 @@ country: NL
 region: EU
 
 status: superseded
+rank: ordinary
 confidence: high
 coverage: low
 verification: primary-source

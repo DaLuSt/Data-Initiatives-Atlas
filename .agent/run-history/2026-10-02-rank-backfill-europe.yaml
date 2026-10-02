@@ -1,0 +1,34 @@
+date: "2026-10-02"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  At the owner's request ("backfill, start with european countries"), set
+  rank on the national acts of every country in the Atlas: 110 newly set
+  ordinary, on top of the 7 Spanish values from the field's own PR, so 115
+  ordinary and 2 organic overall. All entities in the Atlas are European, so
+  this covers every national act; the EU regulations, directives and decisions
+  are the remaining backfill (38 entities, including the UK GDPR).
+
+  Method. Where a legal system has a higher statutory rank, an instrument of
+  that rank carries the marker in its official title (Ley Organica, loi
+  organique, bijzondere wet, Lei Organica, ustavni zakon, legge
+  costituzionale), so an entity whose name lacks it is ordinary. I read all
+  122 act names for markers and found none besides the two Spanish organic
+  laws. The two countries where rank is not visible in a title were checked
+  against primary text: the Austrian E-Government-Gesetz (RIS consolidated
+  text, 2026-10-02, no Verfassungsbestimmung) and Estonia (Constitution Art.
+  104 on constituteproject.org does not list the personal data, public
+  information or cybersecurity acts). Recorded per country in the new
+  metadata/rank-basis.md, which says plainly that only those two rows were
+  checked against a primary text and the rest state standard constitutional
+  designations. Five bills (ES-LCGC, GB-CSRB, IE-NCS-BILL, NL-ARCHIEFWET-2026,
+  FR-NIS2-LOI) are left unset on purpose, and validation now rejects a rank on
+  a proposed or planned instrument.
+
+  Caveats worth review: the two French ordonnances are ordinary because each
+  was ratified by statute, which rests on search results, not Legifrance;
+  IT-CAD is a legislative decree and is ordinary on the rule that a
+  decree with the force of law is. Tests: TestRank grew to 7 (bill rule,
+  rank-basis coverage per country); 56 tests pass.
+prs: []
+outcome: pending
+entity_count_after: 738

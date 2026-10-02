@@ -14,6 +14,7 @@ country: NL
 region: null
 
 status: superseded
+rank: ordinary
 confidence: medium
 coverage: low
 verification: primary-source

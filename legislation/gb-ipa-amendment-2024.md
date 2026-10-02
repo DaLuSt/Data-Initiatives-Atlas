@@ -20,6 +20,7 @@ country: GB
 region: null
 
 status: active
+rank: ordinary
 confidence: high
 coverage: low
 verification: primary-source
