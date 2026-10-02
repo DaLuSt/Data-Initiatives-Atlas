@@ -284,8 +284,8 @@ numbers from a stress test, not a projection.
   truth (README §"Source of Truth"). `graph.json` is a build artefact.
 - **No backend.** The site is static files.
 - **No manual graph data.** Nobody edits `site/graph.json`. It is
-  regenerated from the repository, and a test fails if the committed copy no
-  longer matches the entity files.
+  regenerated from the repository (it is not committed), and a test fails if
+  two builds of the same data differ.
 - **No change to the Markdown or YAML.** The graph reads the existing
   frontmatter and the existing `[[wikilinks]]`. Obsidian compatibility is
   untouched, which is the point of the two-view architecture.
