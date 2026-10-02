@@ -49,12 +49,19 @@ def check_placement(e: common.EntityFile, schema: dict, report: common.Report) -
 
 
 def check_rank(rel_path: str, entity_type, rank, schema: dict,
-               report: common.Report) -> None:
+               report: common.Report, status=None) -> None:
     """`rank` is optional. Where it is set it must be a known value, and the
     entity's type must be one that has a place in a legal hierarchy and allow
     that value (an `act` is never `delegated`; subordinate legislation always is).
+    A bill or draft (`proposed`, `planned`) has no rank until it is enacted.
     """
     if rank is None:
+        return
+    if status in ("proposed", "planned"):
+        report.error(
+            f"{rel_path}: a '{status}' instrument has no rank yet; "
+            f"remove 'rank' until it is enacted"
+        )
         return
     if rank not in schema["rank_levels"]:
         report.error(f"{rel_path}: invalid rank '{rank}'")
@@ -122,7 +129,8 @@ def main() -> int:
         if verification is not None and verification not in schema["verification_levels"]:
             report.error(f"{e.rel_path}: invalid verification '{verification}'")
 
-        check_rank(e.rel_path, entity_type, fm.get("rank"), schema, report)
+        check_rank(e.rel_path, entity_type, fm.get("rank"), schema, report,
+                   fm.get("status"))
 
         organisation_role = fm.get("organisation_role")
         if organisation_role is not None:

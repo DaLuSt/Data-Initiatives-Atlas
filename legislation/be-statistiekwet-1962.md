@@ -18,6 +18,7 @@ country: BE
 region: EU
 
 status: active
+rank: ordinary
 confidence: medium
 coverage: low
 verification: primary-source

@@ -20,6 +20,7 @@ country: BE
 region: EU
 
 status: superseded
+rank: ordinary
 confidence: medium
 coverage: low
 verification: primary-source

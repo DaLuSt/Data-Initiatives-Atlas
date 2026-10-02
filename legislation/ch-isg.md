@@ -23,6 +23,7 @@ country: CH
 region: null
 
 status: active
+rank: ordinary
 confidence: high
 coverage: medium
 verification: primary-source

@@ -22,6 +22,7 @@ country: CH
 region: null
 
 status: adopted
+rank: ordinary
 confidence: high
 coverage: medium
 verification: primary-source

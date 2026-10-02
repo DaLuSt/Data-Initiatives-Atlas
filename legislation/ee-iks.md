@@ -15,6 +15,7 @@ country: EE
 region: EU
 
 status: active
+rank: ordinary
 confidence: medium
 coverage: medium
 verification: primary-source

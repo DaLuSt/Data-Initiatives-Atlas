@@ -175,9 +175,17 @@ Rules for using it:
   has no rank. A treaty is an `agreement`, whose place in a state's hierarchy
   differs by state, so it has no rank either.
 
+- **A bill has no rank.** A `proposed` or `planned` instrument is left unset
+  until it is enacted; validation rejects a rank on one.
+- **Read the rank against the country.** `metadata/rank-basis.md` records, per
+  country, which ranks the legal system has and how an instrument of the
+  higher rank is recognised. Add a row there before setting a rank for a new
+  country.
+
 Added 2026-10-02, closing the organic-versus-ordinary half of
-`discovery/unresolved.md` item #11. Twelve entities carry a value today; the
-rest are unset (see that row for what remains).
+`discovery/unresolved.md` item #11. The national acts of every country in the
+Atlas were then backfilled (115 `ordinary`, 2 `organic`); EU regulations,
+directives and decisions are still unset (see that row).
 
 ## 2. Identifiers
 

@@ -16,6 +16,7 @@ country: BE
 region: null
 
 status: active
+rank: ordinary
 confidence: medium
 coverage: low
 verification: primary-source

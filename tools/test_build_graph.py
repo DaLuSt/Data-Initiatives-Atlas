@@ -577,10 +577,10 @@ class TestRank(unittest.TestCase):
         cls.vf = validate_frontmatter
         cls.schema = load_schema()
 
-    def _errors(self, entity_type, rank):
+    def _errors(self, entity_type, rank, status="active"):
         from common import Report
         report = Report("t")
-        self.vf.check_rank("x.md", entity_type, rank, self.schema, report)
+        self.vf.check_rank("x.md", entity_type, rank, self.schema, report, status)
         return report.errors
 
     def test_schema_is_coherent(self):
@@ -605,13 +605,34 @@ class TestRank(unittest.TestCase):
         self.assertTrue(self._errors("act", "delegated"))                  # an act is not delegated
         self.assertTrue(self._errors("subordinate-legislation", "ordinary"))
 
+    def test_a_bill_has_no_rank_until_enacted(self):
+        self.assertTrue(self._errors("act", "ordinary", status="proposed"))
+        self.assertTrue(self._errors("act", "ordinary", status="planned"))
+        self.assertEqual(self._errors("act", "ordinary", status="adopted"), [])
+        self.assertEqual(self._errors("act", None, status="proposed"), [])
+
     def test_rank_reaches_the_details_payload(self):
         payload, errors, _ = build_graph.build()
         self.assertFalse(errors)
         nodes = payload["details"]["nodes"]
         self.assertEqual(nodes["ES-LOPDGDD"]["rank"], "organic")
         self.assertEqual(nodes["ES-LEY-37-2007"]["rank"], "ordinary")
-        self.assertNotIn("rank", nodes["DE-BDSG"])  # unset stays unset, never defaulted
+        self.assertEqual(nodes["DE-BDSG"]["rank"], "ordinary")
+        # unset stays unset, never defaulted: a bill and an EU regulation
+        self.assertNotIn("rank", nodes["ES-LCGC"])
+        self.assertNotIn("rank", nodes["EU-GDPR"])
+
+    def test_every_country_with_a_ranked_entity_has_a_basis_row(self):
+        """metadata/rank-basis.md must say how rank is read for each country."""
+        import re
+        basis = (Path(__file__).resolve().parent.parent / "metadata" / "rank-basis.md"
+                 ).read_text(encoding="utf-8")
+        listed = set(re.findall(r"^\| ([A-Z]{2}) \|", basis, re.M))
+        missing = {
+            e.frontmatter["country"] for e in load_all_entities()
+            if e.frontmatter.get("rank") and e.frontmatter.get("country")
+        } - listed
+        self.assertFalse(missing, f"countries with a rank but no row in rank-basis.md: {sorted(missing)}")
 
     def test_rank_is_shown_in_the_site(self):
         js = (Path(__file__).resolve().parent.parent / "site" / "app.js").read_text(encoding="utf-8")
