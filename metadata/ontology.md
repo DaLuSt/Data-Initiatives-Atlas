@@ -81,8 +81,9 @@ supranational bodies (see its definition above). It is a separate type with
 its own folder, not part of `legislation/`, because it is not legislation and
 the `legislation` statistic should not count it. The test is whether the
 instrument was adopted by a body in a formal act yet creates no obligation:
-four entities qualify today ([[UN-AI-ETHICS-RECOMMENDATION]],
-[[UN-2030-AGENDA]], [[UN-GDC]], [[UN-FPOS]]). A national government's own
+five entities qualify today ([[UN-AI-ETHICS-RECOMMENDATION]],
+[[UN-2030-AGENDA]], [[UN-GDC]], [[UN-FPOS]] and [[EU-EIF]], a Commission
+Communication). A national government's own
 non-binding plan stays a `policy` or `strategy`, and a measurement
 framework such as [[UN-SDG-INDICATORS]] stays a `framework`.
 

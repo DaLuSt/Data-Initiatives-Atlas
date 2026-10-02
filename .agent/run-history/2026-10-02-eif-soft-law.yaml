@@ -1,0 +1,19 @@
+date: "2026-10-02"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Owner said to continue with the suggestions; one was moving EU-EIF to
+  soft-law. Verified before moving, because the entity file never named the
+  instrument it is: the Commission's own ISA2 page (ec.europa.eu/isa2/eif_en)
+  says the EIF is part of Communication COM(2017)134 adopted on 23 March 2017
+  and lists the Framework as Annex II; the Publications Office record for
+  CELEX 52017DC0134 gives that Communication's title (European
+  Interoperability Framework - Implementation Strategy), author (the European
+  Commission) and resource type (Communication). The record does not list the
+  annex, so the Annex II link rests on the Commission's page. A Communication
+  creates no obligation, so EU-EIF moved from frameworks/ to soft-law/ as
+  type soft-law (five soft-law entities now). Both sources added to the
+  entity, plus a dated typing note; ontology and soft-law README updated.
+  Entity IDs and wikilinks unchanged. 56 tests pass.
+prs: []
+outcome: pending
+entity_count_after: 738
