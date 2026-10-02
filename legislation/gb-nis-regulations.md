@@ -25,6 +25,7 @@ country: GB
 region: null
 
 status: active
+rank: delegated
 confidence: medium
 coverage: medium
 verification: primary-source

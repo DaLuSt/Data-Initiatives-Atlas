@@ -32,6 +32,7 @@ last_verified:         # required once an entity leaves draft status — ISO dat
 previous_version:      # optional — entity id
 successor:             # optional — entity id
 
+rank:                  # optional, legislation types only — constitutional | organic | ordinary | delegated (ontology.md §1.2)
 organisation_role:     # optional, type: organisation only — executive | consultative | regulatory | standards-body | advisory (ontology.md §1.1)
 
 domains:               # optional — list of domain entity ids
@@ -102,6 +103,11 @@ sources:               # required for any entity making factual claims
   other than a stub.
 - **previous_version / successor**: chain superseded entities together
   without ever deleting or reusing an ID.
+- **rank**: where an instrument sits in its legal order. Optional; omit it
+  rather than guess, because unset means "not assessed", not "ordinary". Valid
+  only on `act`, `regulation`, `directive`, `decision` and
+  `subordinate-legislation`, with the combinations in `schema.json`
+  (`rank_by_type`). See `ontology.md` §1.2.
 - **organisation_role**: only valid on `type: organisation`; distinguishes
   bodies that deliberate/select/coordinate (`consultative`, `advisory`) or
   set/mirror standards (`regulatory`, `standards-body`) from bodies that

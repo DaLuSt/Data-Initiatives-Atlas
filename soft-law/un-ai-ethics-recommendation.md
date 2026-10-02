@@ -178,8 +178,8 @@ The Atlas has now hit this from two directions: the Spain batch found that
 `type: law` flattens Spain's constitutional `Ley Orgánica` rank, and this
 batch finds that nothing distinguishes a treaty from a recommendation. They
 are the same missing property at different levels. The second is now
-settled by the `agreement` and `soft-law` types; the first (organic vs.
-ordinary law) is still open, see `discovery/unresolved.md` item #11.
+settled by the `agreement` and `soft-law` types, and the first by the `rank`
+field (`metadata/ontology.md` §1.2).
 
 ## Relationships
 

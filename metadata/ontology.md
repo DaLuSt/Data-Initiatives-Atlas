@@ -70,10 +70,11 @@ important it is.
 decisions; `subordinate-legislation` is named differently on purpose and
 means only the national, ranks-below-a-statute sense.
 
-**Not distinguished.** The split does not separate an organic law from an
-ordinary one (Spain's *Ley Orgánica*), a code from a single statute (Italy's
-CAD), or a constitutional law from either. That is `discovery/unresolved.md`
-item #11, narrowed on 2026-10-02 but still open.
+**Rank within a type.** The type says what kind of instrument it is; an
+optional `rank` field says where it sits in its legal order (§1.2), which is
+how an organic law is told from an ordinary one. A code versus a single
+statute (Italy's CAD) is a difference of form and is still not distinguished
+(`discovery/unresolved.md` item #11).
 
 **Soft law.** `soft-law` holds non-binding instruments of international or
 supranational bodies (see its definition above). It is a separate type with
@@ -99,10 +100,8 @@ types like this:
 National law has its own ladder, which the types only partly follow:
 constitution, then organic law, then ordinary law and decree-law, then
 regulations below a statute. `act` covers the middle rungs together and
-`subordinate-legislation` the bottom one. The Atlas does not model the
-difference between an organic and an ordinary law, because both are binding
-and the difference only matters inside one legal system
-(`discovery/unresolved.md` item #11).
+`subordinate-legislation` the bottom one; the `rank` field (§1.2) records the
+rung.
 
 ### 1.1 Organisation role (optional)
 
@@ -138,6 +137,47 @@ ontology discussion opened by [[FR-CNIS]]/[[BE-IIS]]/[[NL-NEC]] (chose the
 prose-only convention).
 
 ---
+
+
+### 1.2 Legal rank (optional)
+
+The legislation types say what kind of instrument something is. They do not
+say how it ranks against other instruments in its own legal order, and that
+rank can decide whether a provision binds at all: Title X of [[ES-LOPDGDD]]
+binds only because it is an organic law, and an ordinary law such as
+[[ES-LEY-37-2007]] cannot amend it. An optional `rank` field records this.
+
+| Value | Meaning | EU analogue |
+|---|---|---|
+| `constitutional` | A constitution, or a law with constitutional force. No entity uses it yet | The Treaties and the Charter (primary law) |
+| `organic` | A statute of higher rank than an ordinary one, usually passed or amended by a qualified majority and reserved for named subject matter (Spain's *Ley Orgánica*) | None |
+| `ordinary` | An ordinary statute, including a decree-law that has the rank of law | A legislative act adopted under the ordinary legislative procedure |
+| `delegated` | An instrument made under the authority of a statute and ranking below it | Delegated and implementing acts (TFEU Arts 290 and 291) |
+
+Which types may carry which values is fixed in `metadata/schema.json`
+(`rank_by_type`) and enforced by `validate_frontmatter.py`: an `act` may be
+`constitutional`, `organic` or `ordinary`; `subordinate-legislation` is always
+`delegated`; `regulation`, `directive` and `decision` may be `ordinary` or
+`delegated`. No other type may carry a rank, and the field is rejected on
+them.
+
+Rules for using it:
+
+- **Unset means not assessed.** It does not mean `ordinary`. Set a rank only
+  when the entity's own file shows it, such as a title that says *Ley
+  Orgánica* or *Orden*, or an instrument that calls itself an implementing
+  regulation. Not every legal system has an organic rank, so leaving a
+  statute unset is correct unless someone has checked.
+- **Rank is not the same as type.** A Belgian "loi organique" is a body's
+  founding statute (*organieke wet*), not a rank, and does not make an entity
+  `organic`.
+- **Rank is not bindingness.** A non-binding instrument is `soft-law`, which
+  has no rank. A treaty is an `agreement`, whose place in a state's hierarchy
+  differs by state, so it has no rank either.
+
+Added 2026-10-02, closing the organic-versus-ordinary half of
+`discovery/unresolved.md` item #11. Twelve entities carry a value today; the
+rest are unset (see that row for what remains).
 
 ## 2. Identifiers
 

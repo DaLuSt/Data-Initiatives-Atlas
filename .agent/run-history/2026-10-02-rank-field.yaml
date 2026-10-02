@@ -1,0 +1,30 @@
+date: "2026-10-02"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  At the owner's request ("create the rank field"), added an optional rank
+  frontmatter field recording where a legislation entity sits in its legal
+  order: constitutional > organic > ordinary > delegated (a jurisdiction-neutral
+  ladder; the EU analogue is Treaties > legislative acts > delegated and
+  implementing acts). Valid only on act, regulation, directive, decision and
+  subordinate-legislation, with the combinations fixed in schema.json
+  (rank_by_type) and enforced by validate_frontmatter.check_rank (an act is
+  never delegated; subordinate legislation always is). Carried in the details
+  payload and shown as "Legal rank" in the site's detail panel.
+
+  Design rule: unset means not assessed, never ordinary. Twelve entities carry
+  a value, each because its own file shows it: ES-LO-2-2002 and ES-LOPDGDD
+  organic; ES-LEY-11-2002, -37-2007, -39-2015, -40-2015 and ES-RDL-24-2021
+  ordinary; the four subordinate-legislation entities and EU-HVD-REGULATION
+  (titled an implementing regulation) delegated. The other 160 legislation
+  entities are left unset on purpose. I scanned the EU regulations and
+  directives for evidence by text match, found it too weak to set values
+  (a file can cite another instrument's adoption body), and did not use it.
+  The Belgian loi organique entities are founding statutes of bodies, not a
+  rank, so nothing was inferred from that name.
+
+  Tests: TestRank (5), checked by putting rank: delegated on an act file and
+  confirming the validator rejects it. unresolved.md row 11 now covers only
+  the backfill and the code-vs-statute form question.
+prs: []
+outcome: pending
+entity_count_after: 738

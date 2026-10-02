@@ -18,6 +18,7 @@ country: ES
 region: EU
 
 status: active
+rank: delegated
 confidence: high
 coverage: medium
 verification: primary-source

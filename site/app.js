@@ -1372,7 +1372,7 @@
 
     // Only metadata that actually exists (brief §7/§10).
     var meta = [];
-    [["Verification", d.verification], ["Confidence", d.confidence],
+    [["Legal rank", d.rank], ["Verification", d.verification], ["Confidence", d.confidence],
      ["Coverage", d.coverage], ["Last verified", d.last_verified],
      ["Start date", d.start_date], ["End date", d.end_date]].forEach(function (kv) {
       if (kv[1]) meta.push("<dt>" + kv[0] + "</dt><dd>" + esc(titly(String(kv[1]))) + "</dd>");

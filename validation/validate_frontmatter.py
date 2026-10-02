@@ -48,6 +48,30 @@ def check_placement(e: common.EntityFile, schema: dict, report: common.Report) -
         )
 
 
+def check_rank(rel_path: str, entity_type, rank, schema: dict,
+               report: common.Report) -> None:
+    """`rank` is optional. Where it is set it must be a known value, and the
+    entity's type must be one that has a place in a legal hierarchy and allow
+    that value (an `act` is never `delegated`; subordinate legislation always is).
+    """
+    if rank is None:
+        return
+    if rank not in schema["rank_levels"]:
+        report.error(f"{rel_path}: invalid rank '{rank}'")
+        return
+    allowed = schema["rank_by_type"].get(entity_type)
+    if allowed is None:
+        report.error(
+            f"{rel_path}: 'rank' is only valid on legislation types "
+            f"({', '.join(schema['rank_by_type'])}), found on type '{entity_type}'"
+        )
+    elif rank not in allowed:
+        report.error(
+            f"{rel_path}: rank '{rank}' is not allowed on type '{entity_type}' "
+            f"(allowed: {', '.join(allowed)})"
+        )
+
+
 def main() -> int:
     schema = common.load_schema()
     entities = common.load_all_entities()
@@ -97,6 +121,8 @@ def main() -> int:
         verification = fm.get("verification")
         if verification is not None and verification not in schema["verification_levels"]:
             report.error(f"{e.rel_path}: invalid verification '{verification}'")
+
+        check_rank(e.rel_path, entity_type, fm.get("rank"), schema, report)
 
         organisation_role = fm.get("organisation_role")
         if organisation_role is not None:

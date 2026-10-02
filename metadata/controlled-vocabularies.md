@@ -67,6 +67,13 @@ were actually consulted. See `metadata/metadata-schema.md`. Validation
 rejects `confidence: high` on any entity whose `verification` is
 `search-only` or `unverified`.
 
+## `rank`
+
+`constitutional`, `organic`, `ordinary`, `delegated` — optional, valid only on
+legislation types (`act`, `regulation`, `directive`, `decision`,
+`subordinate-legislation`), and only in the combinations listed under
+`rank_by_type` in `metadata/schema.json`. See `metadata/ontology.md` §1.2.
+
 ## `organisation_role`
 
 `executive`, `consultative`, `regulatory`, `standards-body`, `advisory` —
