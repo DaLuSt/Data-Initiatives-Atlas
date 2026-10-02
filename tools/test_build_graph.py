@@ -618,9 +618,11 @@ class TestRank(unittest.TestCase):
         self.assertEqual(nodes["ES-LOPDGDD"]["rank"], "organic")
         self.assertEqual(nodes["ES-LEY-37-2007"]["rank"], "ordinary")
         self.assertEqual(nodes["DE-BDSG"]["rank"], "ordinary")
-        # unset stays unset, never defaulted: a bill and an EU regulation
-        self.assertNotIn("rank", nodes["ES-LCGC"])
-        self.assertNotIn("rank", nodes["EU-GDPR"])
+        self.assertEqual(nodes["EU-GDPR"]["rank"], "ordinary")
+        self.assertEqual(nodes["EU-HVD-REGULATION"]["rank"], "delegated")
+        # unset stays unset, never defaulted: a bill, an EU proposal, the UK GDPR
+        for unset in ("ES-LCGC", "EU-FIDA", "GB-UK-GDPR"):
+            self.assertNotIn("rank", nodes[unset], unset)
 
     def test_every_country_with_a_ranked_entity_has_a_basis_row(self):
         """metadata/rank-basis.md must say how rank is read for each country."""

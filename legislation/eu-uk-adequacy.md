@@ -19,6 +19,7 @@ country: null
 region: EU
 
 status: active
+rank: delegated
 confidence: medium
 coverage: medium
 verification: primary-source
