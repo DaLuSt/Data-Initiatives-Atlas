@@ -78,6 +78,10 @@ last_merged_prs:
     summary: "Housekeeping: recorded #405-406 in state.yaml and run-history"
   - number: 408
     summary: "Added the optional rank field (constitutional / organic / ordinary / delegated) for legislation entities, validated per type; 12 entities set where their own file shows it (Spain's organic vs ordinary laws, subordinate legislation, the HVD implementing regulation), the other 160 deliberately unset; row #11 narrowed to the backfill"
+  - number: 409
+    summary: "Housekeeping: recorded #407-408 in state.yaml and run-history"
+  - number: 410
+    summary: "Backfilled rank for the national acts of every country (110 newly ordinary; 115 ordinary and 2 organic overall); added metadata/rank-basis.md (per-country basis, Austria and Estonia checked against primary text); five bills left unset and validation rejects a rank on a proposed/planned instrument; row #11 now covers the EU backfill"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
