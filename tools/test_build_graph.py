@@ -503,14 +503,14 @@ class TestSiteArtefacts(unittest.TestCase):
         self.assertFalse(errors)
         second, errors, _ = build_graph.build()
         self.assertFalse(errors)
-        g1, g2 = dict(first["graph"]), dict(second["graph"])
-        g1.pop("generated_at", None)
-        g2.pop("generated_at", None)
-        self.assertEqual(json.dumps(g1, sort_keys=True), json.dumps(g2, sort_keys=True),
-                         "graph.json content differs between two builds of the same data")
-        self.assertEqual(json.dumps(first["details"], sort_keys=True),
-                         json.dumps(second["details"], sort_keys=True),
-                         "details.json content differs between two builds of the same data")
+        def content(payload, key):
+            doc = dict(payload[key])
+            doc.pop("generated_at", None)
+            return json.dumps(doc, sort_keys=True)
+
+        for key, name in (("graph", "graph.json"), ("details", "details.json")):
+            self.assertEqual(content(first, key), content(second, key),
+                             f"{name} content differs between two builds of the same data")
 
 
 if __name__ == "__main__":
