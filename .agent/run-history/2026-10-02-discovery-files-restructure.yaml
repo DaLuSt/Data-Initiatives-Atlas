@@ -14,6 +14,8 @@ summary: >
   Writing the table showed that the EU-INSPIRE / UN-GGIM non-assertion was
   recorded only in candidates.md, so a row for it (#227) was added to
   unresolved.md; dropping it is harmless.
-prs: []
-outcome: pending
+prs:
+  - number: 401
+    title: "Give the discovery files the same overview structure as unresolved.md"
+outcome: merged
 entity_count_after: 738

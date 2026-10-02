@@ -64,6 +64,8 @@ last_merged_prs:
     summary: "Row #226 narrowed: traced the RegMoG Anlage through the government bill (56), the Interior Committee text (51, the figure secondary sources use) and the promulgated Act (50); the final 51-to-50 step is still unexplained"
   - number: 400
     summary: "Stopped committing the generated site/graph.json and site/details.json (gitignored; pages.yml already built them); replaced the committed-copy tests with test_build_is_deterministic. Removes the merge-conflict churn that hit every parallel PR."
+  - number: 401
+    summary: "Gave discovery/candidates.md, research-queue.md and duplicates.md the same master-table overview as unresolved.md; restored the EU-INSPIRE/UN-GGIM non-assertion as unresolved.md row #227"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
