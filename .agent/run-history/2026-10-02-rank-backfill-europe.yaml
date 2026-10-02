@@ -29,6 +29,8 @@ summary: >
   IT-CAD is a legislative decree and is ordinary on the rule that a
   decree with the force of law is. Tests: TestRank grew to 7 (bill rule,
   rank-basis coverage per country); 56 tests pass.
-prs: []
-outcome: pending
+prs:
+  - number: 410
+    title: "Backfill rank for the national acts of every country"
+outcome: merged
 entity_count_after: 738
