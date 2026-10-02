@@ -1,6 +1,6 @@
 ---
 id: NL-CBW
-type: law
+type: act
 name: Cyberbeveiligingswet
 alternative_names:
   - Cbw
@@ -267,7 +267,7 @@ sourced link back to this Act.
 ## Classification
 
 Dutch implementation legislation per `metadata/taxonomy.md` §2:
-`type: law`, `level: national`, `country: NL`, `region: EU`.
+`type: act`, `level: national`, `country: NL`, `region: EU`.
 
 ## Relationships
 

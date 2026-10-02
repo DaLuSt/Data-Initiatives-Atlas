@@ -151,10 +151,9 @@ than a coincidence of sourcing — where a Dutch initiative can be
 established by central government decision, a German one that touches Land
 competences needs an interstate agreement. **Closed 2026-09-20**: the
 Verwaltungsvereinbarung itself is now modelled, as [[DE-VV-GDI-DE]],
-`type: law` — the same pragmatic fit already used for EEA Joint Committee
-Decisions, another intergovernmental binding instrument that isn't
-ordinary domestic legislation either. See that entity's own file for the
-full ontology decision closing `discovery/unresolved.md` item #6.
+`type: agreement` (typed `law` when this was written; retyped 2026-10-02
+when `law` was split). See that entity's own file for the ontology decision
+closing `discovery/unresolved.md` item #6.
 
 ## Relationships
 

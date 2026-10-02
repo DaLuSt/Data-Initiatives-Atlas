@@ -1,6 +1,6 @@
 ---
 id: GB-DUAA
-type: law
+type: act
 name: Data (Use and Access) Act 2025
 alternative_names:
   - DUAA

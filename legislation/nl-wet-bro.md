@@ -1,6 +1,6 @@
 ---
 id: NL-WET-BRO
-type: law
+type: act
 name: Wet basisregistratie ondergrond
 alternative_names:
   - Wet BRO

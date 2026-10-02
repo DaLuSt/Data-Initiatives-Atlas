@@ -87,8 +87,9 @@ Batch 3 requires clearly distinguishing several kinds of legally/normatively
 binding text. This is expressed with **two orthogonal fields**, not a single
 flat category:
 
-1. `type` — `law`, `regulation`, `directive` (from the ontology's entity
-   type vocabulary), or, for non-binding instruments, `policy`,
+1. `type` — `act`, `regulation`, `directive`, `decision`,
+   `subordinate-legislation`, `agreement` (from the ontology's entity type
+   vocabulary), or, for non-binding instruments, `policy`,
    `framework`, `standard`.
 2. `level` + `country`/`region` — where it comes from and applies.
 
@@ -97,9 +98,9 @@ Combined, this reproduces the exact classification the brief asks for:
 | Classification | `type` | `level` | `country` | `region` | Notes |
 |---|---|---|---|---|---|
 | EU legislation (regulation) | `regulation` | `regional` | `null` | `EU` | Directly applicable in all member states; use `applies-in` per country |
-| EU legislation (directive) | `directive` | `regional` | `null` | `EU` | Requires national transposition; the transposing act is a separate `law` entity linked with `implements-requirement-from` |
-| Dutch implementation legislation | `law` | `national` | `NL` | `EU` | The `region` field records which EU instrument's obligations it transposes; also set an explicit `implements-requirement-from` relationship to that EU entity |
-| Dutch national legislation | `law` | `national` | `NL` | `null` | No EU origin |
+| EU legislation (directive) | `directive` | `regional` | `null` | `EU` | Requires national transposition; the transposing act is a separate `act` entity linked with `implements-requirement-from` |
+| Dutch implementation legislation | `act` | `national` | `NL` | `EU` | The `region` field records which EU instrument's obligations it transposes; also set an explicit `implements-requirement-from` relationship to that EU entity |
+| Dutch national legislation | `act` | `national` | `NL` | `null` | No EU origin |
 | Policy | `policy` | any | as applicable | as applicable | Non-binding |
 | Guideline | `standard` or `framework` | any | as applicable | as applicable | Use `standard` for a technical/normative guideline, `framework` for a broader governance guideline |
 | Standard | `standard` | any | as applicable | as applicable | |

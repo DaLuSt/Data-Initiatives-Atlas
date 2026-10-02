@@ -1,6 +1,6 @@
 ---
 id: NL-HANDELSREGISTERWET
-type: law
+type: act
 name: Handelsregisterwet 2007
 alternative_names:
   - Handelsregisterwet

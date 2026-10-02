@@ -1,6 +1,6 @@
 ---
 id: DE-GDNG
-type: law
+type: act
 name: Gesundheitsdatennutzungsgesetz
 alternative_names:
   - GDNG

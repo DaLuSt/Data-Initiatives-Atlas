@@ -1,6 +1,6 @@
 ---
 id: NL-WET-BRP
-type: law
+type: act
 name: Wet basisregistratie personen
 alternative_names:
   - Wet BRP

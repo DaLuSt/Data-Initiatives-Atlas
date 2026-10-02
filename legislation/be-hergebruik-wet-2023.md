@@ -1,6 +1,6 @@
 ---
 id: BE-HERGEBRUIK-WET-2023
-type: law
+type: act
 name: Wet van 25 december 2023 tot wijziging van de wet van 4 mei 2016 inzake het hergebruik van overheidsinformatie
 alternative_names:
   - Wet van 25 december 2023

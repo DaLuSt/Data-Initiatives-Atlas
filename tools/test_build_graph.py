@@ -513,5 +513,52 @@ class TestSiteArtefacts(unittest.TestCase):
                              f"{name} content differs between two builds of the same data")
 
 
+class TestLegislationTypes(unittest.TestCase):
+    """`law` was split into several types on 2026-10-02. These tests keep the
+    schema, the stats, the site and the folder layout in step when a
+    legislation type is added or retired."""
+
+    SITE = Path(__file__).resolve().parent.parent / "site"
+
+    @classmethod
+    def setUpClass(cls):
+        cls.schema = load_schema()
+        cls.legislation_types = {
+            t for t, folder in cls.schema["type_folder_map"].items()
+            if folder == "legislation"
+        }
+
+    def test_law_is_retired_and_the_split_types_exist(self):
+        self.assertNotIn("law", self.schema["types"])
+        self.assertEqual(
+            self.legislation_types,
+            {"act", "regulation", "directive", "decision",
+             "subordinate-legislation", "agreement"})
+
+    def test_every_schema_type_has_a_folder_and_a_site_shape(self):
+        self.assertEqual(set(self.schema["types"]),
+                         set(self.schema["type_folder_map"]))
+        js = (self.SITE / "app.js").read_text(encoding="utf-8")
+        block = js[js.index("var TYPE_SHAPE"):]
+        block = block[:block.index("};")]
+        for t in self.schema["types"]:
+            self.assertTrue(t in block or f'"{t}"' in block,
+                            f"type {t!r} has no entry in TYPE_SHAPE (site/app.js)")
+
+    def test_legislation_stat_counts_every_legislation_type(self):
+        graph, errors, _ = build_graph.build()
+        self.assertFalse(errors)
+        nodes = graph["graph"]["nodes"]
+        expected = sum(1 for n in nodes if n.get("type") in self.legislation_types)
+        self.assertEqual(graph["graph"]["stats"]["legislation"], expected)
+        self.assertGreater(expected, 0)
+
+    def test_legislation_folder_holds_only_legislation_types(self):
+        for e in load_all_entities():
+            if e.path.parent.name == "legislation":
+                self.assertIn(e.frontmatter.get("type"), self.legislation_types,
+                              e.frontmatter.get("id"))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

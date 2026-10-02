@@ -1,6 +1,6 @@
 ---
 id: NL-UAVG
-type: law
+type: act
 name: Uitvoeringswet Algemene verordening gegevensbescherming
 alternative_names:
   - UAVG
@@ -126,7 +126,7 @@ independent substantive content does not meet the bar for its own node.
 ## Classification
 
 Per `metadata/taxonomy.md` §2 this is **Dutch implementation legislation**:
-`type: law`, `level: national`, `country: NL`, `region: EU` — the `region`
+`type: act`, `level: national`, `country: NL`, `region: EU` — the `region`
 field recording that its obligations originate in an EU instrument, with the
 `implements-requirement-from` relationship naming which one.
 

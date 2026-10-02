@@ -1,6 +1,6 @@
 ---
 id: GB-SSA-1989
-type: law
+type: act
 name: Security Service Act 1989
 description: >
   United Kingdom act which placed the Security Service (MI5) on a statutory

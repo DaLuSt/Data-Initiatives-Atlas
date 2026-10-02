@@ -1,6 +1,6 @@
 ---
 id: GB-DPA-2018
-type: law
+type: act
 name: Data Protection Act 2018
 description: >
   United Kingdom act which sits alongside UK GDPR and completes the domestic

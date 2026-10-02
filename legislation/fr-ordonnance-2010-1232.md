@@ -1,6 +1,6 @@
 ---
 id: FR-ORDONNANCE-2010-1232
-type: law
+type: act
 name: Ordonnance n° 2010-1232 du 21 octobre 2010 portant diverses dispositions d'adaptation au droit de l'Union européenne en matière d'environnement
 alternative_names:
   - Ordonnance n° 2010-1232

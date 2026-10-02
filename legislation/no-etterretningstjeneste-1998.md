@@ -1,6 +1,6 @@
 ---
 id: NO-ETTERRETNINGSTJENESTE-1998
-type: law
+type: act
 name: Lov om Etterretningstjenesten (1998)
 alternative_names:
   - Etterretningstjenesteloven 1998

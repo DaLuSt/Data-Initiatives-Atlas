@@ -1,6 +1,6 @@
 ---
 id: FR-LIL
-type: law
+type: act
 name: Loi relative à l'informatique, aux fichiers et aux libertés
 alternative_names:
   - Loi Informatique et Libertés

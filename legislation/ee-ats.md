@@ -1,6 +1,6 @@
 ---
 id: EE-ATS
-type: law
+type: act
 name: Avaliku teabe seadus
 alternative_names:
   - Public Information Act

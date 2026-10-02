@@ -1,6 +1,6 @@
 ---
 id: LI-DSG
-type: law
+type: act
 name: Datenschutzgesetz (Liechtenstein)
 alternative_names:
   - DSG

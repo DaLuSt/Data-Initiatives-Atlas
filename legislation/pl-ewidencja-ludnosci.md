@@ -1,6 +1,6 @@
 ---
 id: PL-EWIDENCJA-LUDNOSCI
-type: law
+type: act
 name: Ustawa z dnia 24 września 2010 r. o ewidencji ludności
 alternative_names:
   - Ustawa o ewidencji ludności

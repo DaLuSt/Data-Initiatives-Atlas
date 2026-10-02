@@ -1,6 +1,6 @@
 ---
 id: LV-IAL
-type: law
+type: act
 name: Informācijas atklātības likums
 alternative_names:
   - IAL

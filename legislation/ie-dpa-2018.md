@@ -1,6 +1,6 @@
 ---
 id: IE-DPA-2018
-type: law
+type: act
 name: Data Protection Act 2018
 alternative_names:
   - DPA 2018

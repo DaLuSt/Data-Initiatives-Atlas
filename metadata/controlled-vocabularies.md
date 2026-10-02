@@ -7,8 +7,8 @@ and this file should be fixed to match, since it's what the tooling reads.
 
 ## `type`
 
-`initiative`, `organisation`, `country`, `region`, `policy`, `law`,
-`regulation`, `directive`, `strategy`, `standard`, `framework`, `programme`,
+`initiative`, `organisation`, `country`, `region`, `policy`, `act`,
+`regulation`, `directive`, `decision`, `subordinate-legislation`, `agreement`, `strategy`, `standard`, `framework`, `programme`,
 `data-space`, `platform`, `technology`, `domain`, `publication`
 
 Definitions: `metadata/ontology.md` §1. Folder mapping: `metadata/ontology.md` §3.

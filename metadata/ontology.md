@@ -24,9 +24,12 @@ vocabulary:
 | `country` | A national geographic/jurisdictional anchor node | `NL` |
 | `region` | A regional geographic/jurisdictional anchor node (e.g. the EU) | `EU` |
 | `policy` | A non-binding policy position or plan adopted by an organisation | |
-| `law` | Primary national legislation | `NL-GDPR-UITVOERINGSWET` |
-| `regulation` | A binding EU regulation (directly applicable) or national regulation | `EU-DATA-ACT` |
+| `act` | Primary legislation: a statute with the rank of law, whether passed by a parliament (including a regional parliament's decree or ordinance) or issued by a government under a constitutional power to make law-rank acts (decree-law). Includes bills and draft acts, with `status: proposed`/`planned` | `NL-WDO` |
+| `regulation` | A binding EU regulation (directly applicable), or a national text that is itself a regulation carried over from one (the UK GDPR) | `EU-DATA-ACT` |
 | `directive` | An EU directive (requires national transposition) | `EU-OPEN-DATA-DIRECTIVE` |
+| `decision` | A binding decision of an EU or EEA body addressed to specific recipients: Commission adequacy decisions, EEA Joint Committee Decisions | `EU-CH-ADEQUACY` |
+| `subordinate-legislation` | National legislation made under the authority of an act and ranking below it: statutory instruments, ministerial orders, executive decrees | `IE-PSI-REGULATIONS-2021` |
+| `agreement` | A binding agreement between states, or between the governments of one federation: an international treaty, convention or protocol, or a Bund-Länder Verwaltungsvereinbarung | `UN-AARHUS` |
 | `strategy` | A published strategic plan | `NL-IBDS` |
 | `standard` | A technical or semantic standard | `EU-DCAT-AP` |
 | `framework` | An architecture or governance framework that organises standards/policies | `NL-NORA` |
@@ -37,30 +40,63 @@ vocabulary:
 | `domain` | A subject-matter domain used to classify other entities (Mobility, Health, ...) | `DOMAIN-MOBILITY` |
 | `publication` | An independently significant document (report, study) that is not itself an initiative | |
 
-`law`, `regulation` and `directive` are all filed under `legislation/` (see
-§3). They are kept as separate `type` values because Batch 3 requires
-distinguishing EU regulations, EU directives, Dutch implementation
-legislation and Dutch national legislation from one another, and folding them
-into a single `legislation` type would lose that distinction. Use `country`
-+ `region` on the entity, and `implements` / `implements-requirement-from`
+The six legislation types (`act`, `regulation`, `directive`, `decision`,
+`subordinate-legislation`, `agreement`) are all filed under `legislation/`
+(see §3). They are kept as separate `type` values because they differ in
+legal force and in how they relate to other instruments, and folding them
+into a single `legislation` type would lose that. Use `country` + `region`
+on the entity, and `implements` / `implements-requirement-from`
 relationships (§ relationship-types.md), to express the EU → national
 transposition chain — never a new `type` per country.
+
+**How to choose among them.** Ask what kind of instrument it is, not how
+important it is.
+
+- An EU regulation or directive is `regulation` or `directive`; an EU or EEA
+  body's decision to specific recipients is `decision`.
+- An instrument between governments is an `agreement`.
+- A national instrument made under the authority of a statute, such as a
+  ministerial order or statutory instrument, is `subordinate-legislation`.
+- Everything else national is an `act`. This includes Belgium's regional
+  decrees and ordinances (adopted by regional parliaments), French
+  *ordonnances* that Parliament has ratified, and the Spanish *Real
+  Decreto-ley* and Portuguese *Decreto-Lei* (decree-laws with the rank of
+  law).
+- A bill or draft is typed as the instrument it would become, with
+  `status: proposed` or `planned`; there is no `bill` type.
+
+"Secondary legislation" in EU usage covers regulations, directives and
+decisions; `subordinate-legislation` is named differently on purpose and
+means only the national, ranks-below-a-statute sense.
+
+**Not distinguished.** The split does not separate an organic law from an
+ordinary one (Spain's *Ley Orgánica*), a code from a single statute (Italy's
+CAD), or a constitutional law from either. That is `discovery/unresolved.md`
+item #11, narrowed on 2026-10-02 but still open.
+
+**No `soft-law` type yet.** Non-binding instruments (UN or UNESCO
+recommendations, guidelines) are not legislation and today live as `policy`
+or `framework` entities, for example `UN-AI-ETHICS-RECOMMENDATION`. A
+`soft-law` type should be added, with a folder mapping, in the same commit
+that moves or creates its first entity.
 
 Do not invent a new `type` casually. If a batch believes a new type is
 needed, add it here with a definition and a folder mapping (§3) in the same
 commit that introduces the first entity of that type.
 
-**`law` also covers binding intergovernmental instruments that aren't
-ordinary domestic legislation**, where no other type fits better: an EEA
-Joint Committee Decision (e.g. [[INTL-EEA-JCD-154-2018]]), and, as decided
-2026-09-20 closing `discovery/unresolved.md` item #6, a German
-Bund-Länder Verwaltungsvereinbarung (administrative agreement) such as
-[[DE-VV-GDI-DE]] and [[DE-VV-GOVDATA]]. This does not resolve the larger,
-separately-tracked question of whether `law` should itself be split by
-legislative rank (item #11) — it only says where these binding-but-
-non-parliamentary instruments sit within the existing vocabulary, rather
-than leaving them unmodelled or inventing a new `agreement` type for a
-small number of known cases.
+**History of the legislation types.** Until 2026-10-02 the vocabulary had a
+single `law` type next to `regulation` and `directive`. `law` held national
+statutes, but also instruments that are not statutes: EEA Joint Committee
+Decisions ([[INTL-EEA-JCD-154-2018]]), treaties and conventions
+([[UN-AARHUS]]), Bund-Länder Verwaltungsvereinbarungen ([[DE-VV-GDI-DE]],
+decided 2026-09-20 under `discovery/unresolved.md` item #6 not to merit an
+`agreement` type for two instances), and Irish statutory instruments next to
+Acts. On 2026-10-02 `law` was retired and its 140 entities were reclassified
+into the types above; five EU instruments that had been filed under `law` or
+`regulation` by mistake were corrected at the same time (the PSD2 and
+Environmental Information directives, the FIDA proposal, and the standardisation and
+statistics regulations). The `agreement` type is justified now because it
+holds seven instruments, not two.
 
 ### 1.1 Organisation role (optional)
 
@@ -157,7 +193,7 @@ detect drift between an `id` field and its filename.
 ```
 data-initiatives-atlas/
 ├── initiatives/
-├── legislation/        # law, regulation, directive
+├── legislation/        # act, regulation, directive, decision, subordinate-legislation, agreement
 ├── policies/
 ├── strategies/
 ├── standards/
@@ -188,7 +224,7 @@ machine-readably in `metadata/schema.json` as `type_folder_map`):
 | `type` | Folder |
 |---|---|
 | `initiative` | `initiatives/` |
-| `law`, `regulation`, `directive` | `legislation/` |
+| `act`, `regulation`, `directive`, `decision`, `subordinate-legislation`, `agreement` | `legislation/` |
 | `policy` | `policies/` |
 | `strategy` | `strategies/` |
 | `standard` | `standards/` |
@@ -297,9 +333,10 @@ the EU entity's slug into a national ID.
   `publication` types (defined in README §"What is being mapped?") a home
   without overloading `domains/` or `data-spaces/`. README.md's structure
   diagram has been updated to match.
-- `law`, `regulation` and `directive` share the `legislation/` folder but
-  remain distinct `type` values, required by Batch 3's EU/national
-  distinction.
+- The legislation types share the `legislation/` folder but remain distinct
+  `type` values. Batch 0 had `law`, `regulation` and `directive`; `law` was
+  split into `act`, `decision`, `subordinate-legislation` and `agreement` on
+  2026-10-02 (§1).
 - Relationship provenance is carried in a `relationships:` frontmatter list
   (see `metadata/relationship-types.md`), which adds an explicit `target`
   field to the block sketched in the brief — without a target, a relationship

@@ -1,6 +1,6 @@
 ---
 id: LU-LOI-DONNEES-PENAL-2018
-type: law
+type: act
 name: "Loi du 1er août 2018 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel en matière pénale ainsi qu'en matière de sécurité nationale"
 alternative_names:
   - Luxembourg Law Enforcement Directive Implementation Act

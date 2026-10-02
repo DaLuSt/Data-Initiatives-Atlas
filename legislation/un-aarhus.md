@@ -1,6 +1,6 @@
 ---
 id: UN-AARHUS
-type: law
+type: agreement
 name: Convention on Access to Information, Public Participation in Decision-making and Access to Justice in Environmental Matters
 alternative_names:
   - Aarhus Convention

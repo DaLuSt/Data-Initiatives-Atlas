@@ -1,6 +1,6 @@
 ---
 id: NO-PERSONOPPLYSNINGSLOVEN
-type: law
+type: act
 name: Lov om behandling av personopplysninger
 alternative_names:
   - Personopplysningsloven

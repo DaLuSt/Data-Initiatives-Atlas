@@ -436,6 +436,10 @@ def build(strict_wikilinks: bool = True) -> tuple[dict, list[str], list[str]]:
 
     by_class = Counter(e["class"] for e in edges)
     by_type = Counter(n["type"] for n in nodes if n.get("type"))
+    # Every type filed under legislation/ counts as legislation; read from the
+    # schema so a new legislation type needs no change here.
+    legislation_types = [t for t, folder in schema["type_folder_map"].items()
+                         if folder == "legislation"]
     stats = {
         "entities": len(nodes),
         "relationships": by_class.get("relationship", 0),
@@ -447,7 +451,7 @@ def build(strict_wikilinks: bool = True) -> tuple[dict, list[str], list[str]]:
         "organisations": by_type.get("organisation", 0),
         "standards": by_type.get("standard", 0),
         "initiatives": by_type.get("initiative", 0),
-        "legislation": sum(by_type.get(t, 0) for t in ("law", "regulation", "directive")),
+        "legislation": sum(by_type.get(t, 0) for t in legislation_types),
         "frameworks": by_type.get("framework", 0),
         "data_spaces": by_type.get("data-space", 0),
         "domains": by_type.get("domain", 0),

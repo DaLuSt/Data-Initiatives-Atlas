@@ -1,6 +1,6 @@
 ---
 id: GB-NIS-REGULATIONS
-type: regulation
+type: subordinate-legislation
 name: The Network and Information Systems Regulations 2018
 alternative_names:
   - NIS Regulations 2018

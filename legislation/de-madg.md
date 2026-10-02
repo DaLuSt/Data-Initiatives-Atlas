@@ -1,6 +1,6 @@
 ---
 id: DE-MADG
-type: law
+type: act
 name: Gesetz über den Militärischen Abschirmdienst
 alternative_names:
   - MAD-Gesetz

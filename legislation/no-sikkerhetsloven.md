@@ -1,6 +1,6 @@
 ---
 id: NO-SIKKERHETSLOVEN
-type: law
+type: act
 name: Lov om nasjonal sikkerhet (sikkerhetsloven)
 alternative_names:
   - Sikkerhetsloven

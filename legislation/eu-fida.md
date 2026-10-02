@@ -1,6 +1,6 @@
 ---
 id: EU-FIDA
-type: law
+type: regulation
 name: Regulation on a framework for Financial Data Access
 alternative_names:
   - FIDA

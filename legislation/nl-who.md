@@ -1,6 +1,6 @@
 ---
 id: NL-WHO
-type: law
+type: act
 name: Wet hergebruik van overheidsinformatie
 alternative_names:
   - Who
@@ -130,7 +130,7 @@ beyond its effect on the Who.
 ## Classification
 
 Dutch implementation legislation per `metadata/taxonomy.md` §2:
-`type: law`, `level: national`, `country: NL`, `region: EU`.
+`type: act`, `level: national`, `country: NL`, `region: EU`.
 
 ## Referred to the CJEU before transposing — added 2026-09-20
 

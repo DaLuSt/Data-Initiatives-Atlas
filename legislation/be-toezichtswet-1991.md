@@ -1,6 +1,6 @@
 ---
 id: BE-TOEZICHTSWET-1991
-type: law
+type: act
 name: Wet tot regeling van het toezicht op politie- en inlichtingendiensten en op het Coördinatieorgaan voor de dreigingsanalyse
 alternative_names:
   - Wet van 18 juli 1991

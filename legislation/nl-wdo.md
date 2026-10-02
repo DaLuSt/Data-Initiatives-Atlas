@@ -1,6 +1,6 @@
 ---
 id: NL-WDO
-type: law
+type: act
 name: Wet digitale overheid
 alternative_names:
   - Wdo

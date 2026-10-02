@@ -1,6 +1,6 @@
 ---
 id: NL-KADASTERWET
-type: law
+type: act
 name: Kadasterwet
 alternative_names: []
 description: >

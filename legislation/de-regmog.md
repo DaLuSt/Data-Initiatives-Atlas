@@ -1,6 +1,6 @@
 ---
 id: DE-REGMOG
-type: law
+type: act
 name: Registermodernisierungsgesetz
 alternative_names:
   - RegMoG

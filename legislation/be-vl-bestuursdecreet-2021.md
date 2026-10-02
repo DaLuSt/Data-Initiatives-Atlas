@@ -1,6 +1,6 @@
 ---
 id: BE-VL-BESTUURSDECREET-2021
-type: law
+type: act
 name: Decreet van 2 juli 2021 tot wijziging van het Bestuursdecreet van 7 december 2018
 alternative_names:
   - Vlaams open data-decreet

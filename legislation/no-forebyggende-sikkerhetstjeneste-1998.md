@@ -1,6 +1,6 @@
 ---
 id: NO-FOREBYGGENDE-SIKKERHETSTJENESTE-1998
-type: law
+type: act
 name: Lov om forebyggende sikkerhetstjeneste (sikkerhetsloven)
 alternative_names:
   - Sikkerhetsloven 1998

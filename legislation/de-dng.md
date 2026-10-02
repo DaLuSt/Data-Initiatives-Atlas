@@ -1,6 +1,6 @@
 ---
 id: DE-DNG
-type: law
+type: act
 name: Datennutzungsgesetz
 alternative_names:
   - DNG

@@ -114,7 +114,7 @@ own pages are now read directly, closing that gap, and the adoption date
 Recorded as `policy` rather than `strategy` or `initiative`: it is a
 negotiated set of commitments adopted by member states, closer to a policy
 instrument than to an organisational strategy. It is not binding
-legislation, so `law`/`regulation` would be wrong.
+legislation, so the legislation types (`act`, `regulation`, …) would be wrong.
 
 ## Relationships
 

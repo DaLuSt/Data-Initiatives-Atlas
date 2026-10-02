@@ -1,6 +1,6 @@
 ---
 id: NL-WWKE
-type: law
+type: act
 name: Wet weerbaarheid kritieke entiteiten
 alternative_names:
   - Wwke

@@ -1,6 +1,6 @@
 ---
 id: NL-WET-BAG
-type: law
+type: act
 name: Wet basisregistratie adressen en gebouwen
 alternative_names:
   - Wet BAG

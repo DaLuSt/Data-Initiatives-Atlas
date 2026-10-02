@@ -1,6 +1,6 @@
 ---
 id: INTL-EEA-JCD-22-2018
-type: law
+type: decision
 name: Decision of the EEA Joint Committee No 22/2018
 alternative_names:
   - "2019/2058"

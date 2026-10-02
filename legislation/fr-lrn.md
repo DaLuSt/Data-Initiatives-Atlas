@@ -1,6 +1,6 @@
 ---
 id: FR-LRN
-type: law
+type: act
 name: Loi pour une République numérique
 alternative_names:
   - Loi n° 2016-1321 du 7 octobre 2016

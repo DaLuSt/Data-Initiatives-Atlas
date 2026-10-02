@@ -1,6 +1,6 @@
 ---
 id: BE-BRU-ORDONNANCE-2021
-type: law
+type: act
 name: Ordonnance du 10 décembre 2021 modifiant l'ordonnance du 27 octobre 2016
 alternative_names:
   - Brussels open data ordonnance

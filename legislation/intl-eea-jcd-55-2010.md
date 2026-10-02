@@ -1,6 +1,6 @@
 ---
 id: INTL-EEA-JCD-55-2010
-type: law
+type: decision
 name: Decision of the EEA Joint Committee No 55/2010
 alternative_names:
   - "2010/423"

@@ -1,6 +1,6 @@
 ---
 id: BE-NIS2-WET
-type: law
+type: act
 name: NIS2-wet
 alternative_names:
   - Wet van 26 april 2024

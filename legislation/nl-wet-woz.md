@@ -1,6 +1,6 @@
 ---
 id: NL-WET-WOZ
-type: law
+type: act
 name: Wet waardering onroerende zaken
 alternative_names:
   - Wet WOZ

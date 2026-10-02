@@ -1,6 +1,6 @@
 ---
 id: EU-CH-ADEQUACY
-type: regulation
+type: decision
 name: European Commission adequacy decision for Switzerland
 alternative_names:
   - Decision 2000/518/EC

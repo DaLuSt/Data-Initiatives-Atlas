@@ -1,6 +1,6 @@
 ---
 id: IE-PSI-REGULATIONS-2021
-type: law
+type: subordinate-legislation
 name: European Union (Open Data and Re-use of Public Sector Information) Regulations 2021
 alternative_names:
   - S.I. No. 376/2021
@@ -88,9 +88,9 @@ Ireland transposed by **secondary legislation** — a statutory instrument
 made under the European Communities Acts — where [[IE-DPA-2018]] is an Act of
 the Oireachtas.
 
-That difference is normal in Irish practice and is worth noting because the
-Atlas's `type: law` flattens it. Both are `law`, and only the names and this
-paragraph record that one is primary and one is secondary legislation.
+That difference is normal in Irish practice. Since the 2026-10-02 split of
+`type: law`, the Atlas records it in the type: [[IE-DPA-2018]] is an `act` and
+this instrument is `subordinate-legislation`.
 
 ## Relationships
 

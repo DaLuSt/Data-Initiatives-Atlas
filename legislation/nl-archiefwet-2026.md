@@ -1,6 +1,6 @@
 ---
 id: NL-ARCHIEFWET-2026
-type: law
+type: act
 name: Archiefwet 2026
 alternative_names:
   - Archiefwet 2021

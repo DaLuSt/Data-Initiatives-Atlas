@@ -1,6 +1,6 @@
 ---
 id: DE-PKGRG
-type: law
+type: act
 name: Gesetz über die parlamentarische Kontrolle nachrichtendienstlicher Tätigkeit des Bundes
 alternative_names:
   - PKGrG

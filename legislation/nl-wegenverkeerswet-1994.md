@@ -1,6 +1,6 @@
 ---
 id: NL-WEGENVERKEERSWET-1994
-type: law
+type: act
 name: Wegenverkeerswet 1994
 alternative_names:
   - WVW 1994

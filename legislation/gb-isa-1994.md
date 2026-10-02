@@ -1,6 +1,6 @@
 ---
 id: GB-ISA-1994
-type: law
+type: act
 name: Intelligence Services Act 1994
 description: >
   United Kingdom act which established and regulated the Secret Intelligence

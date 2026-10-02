@@ -1,6 +1,6 @@
 ---
 id: CH-EMBAG
-type: law
+type: act
 name: Bundesgesetz über den Einsatz elektronischer Mittel zur Erfüllung von Behördenaufgaben
 alternative_names:
   - EMBAG

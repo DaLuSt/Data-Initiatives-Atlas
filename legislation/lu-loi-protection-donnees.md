@@ -1,6 +1,6 @@
 ---
 id: LU-LOI-PROTECTION-DONNEES
-type: law
+type: act
 name: "Loi du 1er août 2018 portant organisation de la Commission nationale pour la protection des données et du régime général sur la protection des données"
 alternative_names:
   - "Loi 'Protection des données'"

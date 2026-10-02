@@ -1,6 +1,6 @@
 ---
 id: NL-WBNI
-type: law
+type: act
 name: Wet beveiliging netwerk- en informatiesystemen
 alternative_names:
   - Wbni

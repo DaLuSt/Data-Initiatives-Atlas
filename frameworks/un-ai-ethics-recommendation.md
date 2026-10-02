@@ -169,7 +169,10 @@ This one does not, and is left open.
 A UNESCO Recommendation is **not binding**. [[UN-AARHUS]] is a convention
 and binds its Parties. Both are recorded here with the same vocabulary —
 `UN-AARHUS` as `type: law`, this as `type: framework` — and neither type
-carries the binding/non-binding distinction.
+carried the binding/non-binding distinction. (*Update 2026-10-02:* `law` was
+split and [[UN-AARHUS]] is now `type: agreement`, a binding instrument by
+definition. This recommendation stays `framework`; there is still no
+`soft-law` type, see `metadata/ontology.md` §1.)
 
 The Atlas has now hit this from two directions: the Spain batch found that
 `type: law` flattens Spain's constitutional `Ley Orgánica` rank, and this

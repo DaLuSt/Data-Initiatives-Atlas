@@ -1,6 +1,6 @@
 ---
 id: DE-IFG
-type: law
+type: act
 name: Informationsfreiheitsgesetz
 alternative_names:
   - IFG

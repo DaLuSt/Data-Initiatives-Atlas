@@ -1,6 +1,6 @@
 ---
 id: DE-VV-GOVDATA
-type: law
+type: agreement
 name: Vereinbarung des Bundes und der Länder zum gemeinsamen Betrieb von "GovData - Das Datenportal für Deutschland"
 alternative_names:
   - Verwaltungsvereinbarung GovData
@@ -100,8 +100,9 @@ is not asserted here.
 
 [[DE-VV-GDI-DE]] is the same constitutional device applied to a different
 policy area (spatial data rather than open data), created the same day —
-see that entity's own file for the ontology decision (`type: law`,
-closing `discovery/unresolved.md` item #6) this entity also follows.
+see that entity's own file for the ontology decision (closing
+`discovery/unresolved.md` item #6) this entity also follows. Both are
+`type: agreement`.
 
 ## Relationships
 

@@ -1,6 +1,6 @@
 ---
 id: GB-IPA-2016
-type: law
+type: act
 name: Investigatory Powers Act 2016
 alternative_names:
   - Investigatory Powers Act

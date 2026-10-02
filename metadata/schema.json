@@ -1,16 +1,20 @@
 {
   "$comment": "Machine-readable companion to metadata/metadata-schema.md, metadata/ontology.md and metadata/relationship-types.md. Consumed by validation/*.py. Keep in sync with those documents.",
   "types": [
-    "initiative", "organisation", "country", "region", "policy", "law",
-    "regulation", "directive", "strategy", "standard", "framework",
+    "initiative", "organisation", "country", "region", "policy", "act",
+    "regulation", "directive", "decision", "subordinate-legislation", "agreement",
+    "strategy", "standard", "framework",
     "programme", "data-space", "platform", "technology", "domain",
     "publication"
   ],
   "type_folder_map": {
     "initiative": "initiatives",
-    "law": "legislation",
+    "act": "legislation",
     "regulation": "legislation",
     "directive": "legislation",
+    "decision": "legislation",
+    "subordinate-legislation": "legislation",
+    "agreement": "legislation",
     "policy": "policies",
     "strategy": "strategies",
     "standard": "standards",

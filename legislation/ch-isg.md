@@ -1,6 +1,6 @@
 ---
 id: CH-ISG
-type: law
+type: act
 name: Informationssicherheitsgesetz
 alternative_names:
   - ISG

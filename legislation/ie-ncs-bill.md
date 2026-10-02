@@ -1,6 +1,6 @@
 ---
 id: IE-NCS-BILL
-type: law
+type: act
 name: National Cyber Security Bill
 alternative_names: []
 description: >

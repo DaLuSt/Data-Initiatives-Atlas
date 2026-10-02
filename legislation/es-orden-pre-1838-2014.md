@@ -1,6 +1,6 @@
 ---
 id: ES-ORDEN-PRE-1838-2014
-type: law
+type: subordinate-legislation
 name: "Orden PRE/1838/2014, de 8 de octubre"
 alternative_names:
   - Orden PRE/1838/2014

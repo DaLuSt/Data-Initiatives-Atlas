@@ -1,6 +1,6 @@
 ---
 id: PT-DECRETO-LEI-125-2025
-type: law
+type: act
 name: Decreto-Lei n.º 125/2025
 alternative_names:
   - Regime Jurídico da Cibersegurança

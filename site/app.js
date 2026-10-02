@@ -75,7 +75,8 @@
   // Shape carries type, colour carries level — so neither is the only cue.
   var TYPE_SHAPE = {
     organisation: "round-rectangle", country: "star", region: "star",
-    law: "diamond", regulation: "diamond", directive: "diamond",
+    act: "diamond", regulation: "diamond", directive: "diamond",
+    decision: "diamond", "subordinate-legislation": "diamond", agreement: "diamond",
     policy: "vee", strategy: "triangle", standard: "hexagon",
     framework: "pentagon", programme: "octagon", initiative: "ellipse",
     "data-space": "barrel", platform: "rhomboid", technology: "rhomboid",
