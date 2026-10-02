@@ -33,9 +33,9 @@ Three things a reader should know about how this was done:
   countries marked "no higher rank" the constitution was searched for an
   organic, cardinal, qualified-majority or constitutional-law category of
   statute and none was found. That is negative evidence from an English
-  translation of a particular year, not a legal opinion. Germany's Basic Law
-  did not load and the United Kingdom has no written constitution, so those
-  two rows rest on standard knowledge. If a row is wrong for an entity,
+  translation of a particular year, not a legal opinion. The United Kingdom has
+  no written constitution, so that row rests on standard knowledge. Germany
+  was read in the official German text (below). If a row is wrong for an entity,
   change the entity and the row together.
 
 An instrument with the rank of law that is not an act of parliament (a
@@ -50,7 +50,7 @@ rejects a rank on a `proposed` or `planned` instrument).
 | BG | Ordinary law only, for this purpose | none | Constitution (Bulgaria 2015) searched: "qualified majority" appears only for votes the Constitution names, not as a category of statute. Name read | `ordinary` |
 | CH | Federal acts (*Bundesgesetz*) are the ordinary rank; the Constitution is separate | none needed | Constitution (Switzerland 2014) searched: no higher statutory category found. Four names read | `ordinary` |
 | CZ | Constitutional acts (*ústavní zákon*) and ordinary acts (*zákon*) | "Ústavní zákon" | Constitution (Czechia 2013) read: it "may be supplemented or amended only by constitutional acts", which is the higher category. Four names read | `ordinary` |
-| DE | Federal statutes (*Gesetz*) are one rank; the Basic Law is separate. Consent of the Bundesrat does not change rank | none needed | Basic Law not read (did not load; standard knowledge). Seventeen names read | `ordinary` |
+| DE | Federal statutes (*Gesetz*) are one rank; the Basic Law is separate. Consent of the Bundesrat does not change rank | none needed | Basic Law read in the official German text on gesetze-im-internet.de (the Federal Ministry of Justice, version last amended by Art. 1 of the Act of 22 March 2025, BGBl. 2025 I Nr. 94): Art. 79(1) and (2) say it can be changed only by a statute that expressly alters or supplements its wording, passed by two thirds of the Bundestag and of the Bundesrat; Art. 78 sets when an ordinary federal statute comes into being (Bundesrat consent or no objection), which is procedure, not rank; Art. 80(1) lets a statute authorise ordinances (*Rechtsverordnungen*), the `delegated` rung. No organic or cardinal category of statute appears in the German or the English text. Seventeen names read | `ordinary` |
 | EE | Ordinary acts, and acts that may be passed or amended only by a majority of the Riigikogu's membership (Constitution, Art. 104) | The subject: only the acts listed in Art. 104 | Art. 104 read on constituteproject.org (Estonia 2015): it lists citizenship, elections, parliamentary procedure, the Government, the budget, the Bank of Estonia, the State Audit Office, courts, state of emergency and defence acts. `EE-ATS` (public information), `EE-IKS` (personal data) and `EE-KUBERTURVALISUSE-SEADUS` (cybersecurity) are not on it | All `ordinary` |
 | EU | Primary law (the Treaties), legislative acts of Parliament and Council, and non-legislative acts of the Commission (delegated and implementing acts, decisions) | The adopting body in the Official Journal record | CELLAR record read for 33 instruments (see above) | 30 `ordinary` (12 directives, 18 regulations); `delegated`: `EU-HVD-REGULATION` (implementing regulation), `EU-CH-ADEQUACY` (Commission Decision 2000/518/EC), `EU-UK-ADEQUACY` (see below). Left unset: `EU-DIGITAL-OMNIBUS` and `EU-FIDA` (proposals) |
 | ES | Organic laws (*Ley Orgánica*, Constitution Art. 81) and ordinary laws; decree-laws (*Real Decreto-ley*) have the rank of law | "Ley Orgánica" in the title | Eight entities | `organic`: `ES-LO-2-2002`, `ES-LOPDGDD`; `ordinary`: the other enacted ones; `ES-LCGC` is a draft and unset |
