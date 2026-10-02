@@ -23,6 +23,8 @@ summary: >
   Germany's Basic Law did not load and the UK has no written constitution, so
   those two rows rest on standard knowledge. unresolved.md row 11 updated to
   say exactly this.
-prs: []
-outcome: pending
+prs:
+  - number: 414
+    title: "Check the constitutional designations behind rank against the constitutions"
+outcome: merged
 entity_count_after: 738
