@@ -155,7 +155,7 @@ in the research: an oversight body created by the rules of the house it sits
 in can be reorganised by that house, where one created by statute cannot.
 
 No law entity is created for the Regulamin, because a chamber's standing
-orders are not legislation in the sense the Atlas's `law` type means. The
+orders are not legislation in the sense the Atlas's legislation types (`act` and the others) mean. The
 absence of the edge **is** the finding, and it is why this entity's body says
 so at length rather than leaving a reader to notice the asymmetry in the
 graph.

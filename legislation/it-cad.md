@@ -1,6 +1,6 @@
 ---
 id: IT-CAD
-type: law
+type: act
 name: Codice dell'Amministrazione Digitale
 alternative_names:
   - CAD
@@ -89,10 +89,10 @@ identity, electronic documents, digital signatures, public registers and
 citizens' digital rights all live at one citation, and the 2020 Decreto
 Semplificazioni changed that text rather than sitting beside it.
 
-That is a legislative **form**, not merely a longer act, and the Atlas's
-`type: law` flattens it exactly as it flattens the primary/secondary
-distinction on [[IE-PSI-REGULATIONS-2021]]. Only this paragraph records
-the difference.
+That is a legislative **form**, not merely a longer act. The Atlas files it
+as `type: act`, as it does any statute, so only this paragraph records that
+it is a code. (The primary/secondary distinction, by contrast, is now typed:
+see [[IE-PSI-REGULATIONS-2021]].)
 
 ## Relationships
 

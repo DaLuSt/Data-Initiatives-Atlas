@@ -1,6 +1,6 @@
 ---
 id: EE-IKS
-type: law
+type: act
 name: Isikuandmete kaitse seadus
 alternative_names:
   - Personal Data Protection Act

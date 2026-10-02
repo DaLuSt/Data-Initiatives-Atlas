@@ -1,6 +1,6 @@
 ---
 id: GB-IPA-AMENDMENT-2024
-type: law
+type: act
 name: Investigatory Powers (Amendment) Act 2024
 alternative_names:
   - Investigatory Powers (Amendment) Act

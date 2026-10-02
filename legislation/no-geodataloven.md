@@ -1,6 +1,6 @@
 ---
 id: NO-GEODATALOVEN
-type: law
+type: act
 name: Lov om infrastruktur for geografisk informasjon
 alternative_names:
   - Geodataloven

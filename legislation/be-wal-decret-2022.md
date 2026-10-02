@@ -1,6 +1,6 @@
 ---
 id: BE-WAL-DECRET-2022
-type: law
+type: act
 name: Décret du 24 novembre 2022 relatif à la diffusion et à la réutilisation des informations du secteur public
 alternative_names:
   - Walloon open data décret

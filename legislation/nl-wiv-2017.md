@@ -1,6 +1,6 @@
 ---
 id: NL-WIV-2017
-type: law
+type: act
 name: Wet op de inlichtingen- en veiligheidsdiensten 2017
 alternative_names:
   - Wiv 2017

@@ -1,6 +1,6 @@
 ---
 id: NL-WET-CBS
-type: law
+type: act
 name: Wet op het Centraal bureau voor de statistiek
 alternative_names:
   - Wet op het CBS

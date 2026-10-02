@@ -1,6 +1,6 @@
 ---
 id: PL-ODO
-type: law
+type: act
 name: Ustawa z dnia 10 maja 2018 r. o ochronie danych osobowych
 alternative_names:
   - Ustawa o ochronie danych osobowych

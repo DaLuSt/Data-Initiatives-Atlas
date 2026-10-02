@@ -1,6 +1,6 @@
 ---
 id: EU-ENVIRONMENTAL-INFORMATION-DIRECTIVE
-type: law
+type: directive
 name: Directive 2003/4/EC on public access to environmental information
 alternative_names:
   - Access to Environmental Information Directive

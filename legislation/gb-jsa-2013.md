@@ -1,6 +1,6 @@
 ---
 id: GB-JSA-2013
-type: law
+type: act
 name: Justice and Security Act 2013
 description: >
   United Kingdom act which, in Part 1, re-founded the Intelligence and

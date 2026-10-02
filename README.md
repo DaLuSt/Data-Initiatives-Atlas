@@ -253,8 +253,9 @@ international, regional and national levels.
 
 **Core entity types**
 
-`initiative` · `organisation` · `country` · `region` · `policy` · `law` ·
-`regulation` · `directive` · `strategy` · `standard` · `framework` ·
+`initiative` · `organisation` · `country` · `region` · `policy` · `act` ·
+`regulation` · `directive` · `decision` · `subordinate-legislation` ·
+`agreement` · `strategy` · `standard` · `framework` ·
 `programme` · `data-space` · `platform` · `technology` · `domain` ·
 `publication`
 

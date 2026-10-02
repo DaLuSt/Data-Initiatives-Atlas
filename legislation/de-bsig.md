@@ -1,6 +1,6 @@
 ---
 id: DE-BSIG
-type: law
+type: act
 name: BSI-Gesetz
 alternative_names:
   - BSIG

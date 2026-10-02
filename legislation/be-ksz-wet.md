@@ -1,6 +1,6 @@
 ---
 id: BE-KSZ-WET
-type: law
+type: act
 name: Wet houdende oprichting en organisatie van een Kruispuntbank van de sociale zekerheid
 alternative_names:
   - Wet van 15 januari 1990

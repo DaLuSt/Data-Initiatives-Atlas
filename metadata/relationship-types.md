@@ -127,7 +127,7 @@ the scope it belongs to. Which type depends on what the entity is:
 
 | Entity | Edge | Target |
 |---|---|---|
-| An instrument — `law`, `regulation`, `directive`, `policy`, `strategy`, `framework`, `standard`, `programme`, `data-space` | `applies-in` | its country |
+| An instrument — `act`, `regulation`, `directive`, `decision`, `subordinate-legislation`, `agreement`, `policy`, `strategy`, `framework`, `standard`, `programme`, `data-space` | `applies-in` | its country |
 | A body or platform **of the state** — `organisation`, `platform` | `part-of` | its country |
 | A national body that is **not** part of the state (member-owned, a foundation, a private association) | `related-to` | its country |
 | An EU-scoped entity | `part-of` | `EU` |

@@ -1,6 +1,6 @@
 ---
 id: CH-BGEID
-type: law
+type: act
 name: "Bundesgesetz über den elektronischen Identitätsnachweis und andere elektronische Nachweise"
 alternative_names:
   - E-ID-Gesetz

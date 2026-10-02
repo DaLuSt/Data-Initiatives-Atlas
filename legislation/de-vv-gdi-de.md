@@ -1,6 +1,6 @@
 ---
 id: DE-VV-GDI-DE
-type: law
+type: agreement
 name: Verwaltungsvereinbarung über die Geodateninfrastruktur Deutschland
 alternative_names:
   - VV GDI-DE
@@ -77,21 +77,20 @@ independently-sourced dates are kept rather than reconciled into one:
 1 January 2018** (lvermgeo.sachsen-anhalt.de) — plausibly describing
 signature and entry-into-force as separate events rather than conflicting.
 
-## Why `type: law`
+## Why `type: agreement`
 
 Ontology item #6 flagged that "neither legislation nor policy fits" a
 Bund-Länder Verwaltungsvereinbarung, and "no entity type does either." The
-decision closing that item, 2026-09-20: file it as `type: law` anyway,
-matching the pragmatic treatment this Atlas already gives EEA Joint
-Committee Decisions (`[[INTL-EEA-JCD-154-2018]]` and siblings) — a binding
-intergovernmental instrument that isn't ordinary domestic legislation
-either, but for which `law` is the closest available fit and creating a
-new `agreement` type for two known instances was judged unwarranted (see
-`metadata/ontology.md` §6's design-decisions log). This does **not**
-resolve the separate, larger legislative-rank question (ontology item
-#11) of whether `type: law` should itself be split by rank — it only
-decides where a Verwaltungsvereinbarung sits within the existing
-vocabulary.
+decision closing that item, 2026-09-20: file it as `type: law` anyway, and
+not create an `agreement` type for two known instances (see
+`metadata/ontology.md` §6's design-decisions log).
+
+**Revised 2026-10-02.** When `law` was split by kind of instrument, the
+`agreement` type became worth having: it now holds seven binding agreements
+(this one, [[DE-VV-GOVDATA]], the three Convention 108 texts, the EEA
+Agreement and [[UN-AARHUS]]), not two. This entity is `type: agreement`. The
+rank question within primary legislation (ontology item #11) is narrowed by
+the split but not closed.
 
 ## The second Bund-Länder Verwaltungsvereinbarung in this Atlas
 

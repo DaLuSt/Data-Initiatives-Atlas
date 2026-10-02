@@ -1,6 +1,6 @@
 ---
 id: CH-REVDSG
-type: law
+type: act
 name: Bundesgesetz über den Datenschutz
 alternative_names:
   - revDSG

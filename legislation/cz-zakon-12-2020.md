@@ -1,6 +1,6 @@
 ---
 id: CZ-ZAKON-12-2020
-type: law
+type: act
 name: Zákon o právu na digitální služby a o změně některých zákonů
 alternative_names:
   - "Zákon č. 12/2020 Sb."

@@ -1,6 +1,6 @@
 ---
 id: DE-BNDG
-type: law
+type: act
 name: Gesetz über den Bundesnachrichtendienst
 alternative_names:
   - BND-Gesetz

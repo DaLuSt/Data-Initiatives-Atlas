@@ -1,6 +1,6 @@
 ---
 id: NL-WOO
-type: law
+type: act
 name: Wet open overheid
 alternative_names:
   - Woo
@@ -89,7 +89,7 @@ page. The statutory text itself has still not been consulted.
 
 ## Classification
 
-Dutch national legislation per `metadata/taxonomy.md` §2: `type: law`,
+Dutch national legislation per `metadata/taxonomy.md` §2: `type: act`,
 `level: national`, `country: NL`, `region: null` — no EU instrument
 originates its obligations, which distinguishes it from [[NL-WHO]], covering
 adjacent ground but transposing an EU directive.

@@ -1,6 +1,6 @@
 ---
 id: NL-ORGANISATIEWET-KADASTER
-type: law
+type: act
 name: Organisatiewet Kadaster
 alternative_names:
   - "Wet van 14 februari 1994, houdende verzelfstandiging van de Rijksdienst van het Kadaster en de Openbare Registers"

@@ -1,6 +1,6 @@
 ---
 id: FI-SECONDARY-USE-ACT
-type: law
+type: act
 name: Act on the Secondary Use of Health and Social Data (552/2019)
 alternative_names:
   - Secondary Use Act

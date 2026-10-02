@@ -1,6 +1,6 @@
 ---
 id: INTL-CONVENTION-108-PLUS
-type: law
+type: agreement
 name: Protocol amending the Convention for the Protection of Individuals with regard to Automatic Processing of Personal Data
 alternative_names:
   - Convention 108+

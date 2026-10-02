@@ -1,6 +1,6 @@
 ---
 id: DE-OZG
-type: law
+type: act
 name: Onlinezugangsgesetz
 alternative_names:
   - OZG

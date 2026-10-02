@@ -1,0 +1,41 @@
+date: "2026-10-02"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  At the owner's request ("do the split"), retired type: law and split the
+  legislation types by kind of instrument. Result for the 172 legislation
+  entities: act 122, regulation 22, directive 12, agreement 7, decision 5,
+  subordinate-legislation 4 (143 entity files changed type). Added to
+  schema.json, the folder map, the site's type shapes, the legislation stat
+  (now read from the folder map), the ontology/taxonomy/vocabulary docs, and
+  four tests (TestLegislationTypes) that keep schema, stats, site and
+  folder layout in step. Verified one of them fails when a type is missing
+  from the site.
+
+  Departures from what was proposed to the owner, and why. (1) No soft-law
+  type: no legislation entity is non-binding (UN-AI-ETHICS-RECOMMENDATION is
+  a framework in frameworks/), and the ontology says a type is added with
+  its first entity. (2) A decision type was added, for the five EU/EEA body
+  decisions (two adequacy decisions, three EEA Joint Committee Decisions),
+  which fit neither regulation nor subordinate legislation. (3) The type is
+  named agreement, not treaty, because the two Bund-Laender
+  Verwaltungsvereinbarungen are not treaties. (4) subordinate-legislation,
+  not secondary-legislation, because EU usage of the latter covers
+  regulations and directives.
+
+  Corrections found while classifying: five EU instruments were filed under
+  the wrong type (PSD2 and the Environmental Information Directive as law
+  instead of directive; FIDA and Regulations 1025/2012 and 223/2009 as law
+  instead of regulation). I also found that my earlier claim to the owner
+  that soft-law would "cover UN-AI-ETHICS-RECOMMENDATION" was wrong, since
+  that entity is not typed law.
+
+  Judgement calls to review: the Belgian regional decrees and ordinances, the
+  Spanish Real Decreto-ley, Portuguese Decreto-Lei and the two French
+  ordonnances are typed act, on the basis of their law rank. The French
+  ordonnances rest on search results saying each was ratified by statute
+  (2009-526 and 2011-12), not read from Legifrance. discovery/unresolved.md
+  row 11 is narrowed, not closed: organic vs ordinary law and a soft-law type
+  remain open.
+prs: []
+outcome: pending
+entity_count_after: 738

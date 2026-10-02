@@ -1,6 +1,6 @@
 ---
 id: ES-LOPDGDD
-type: law
+type: act
 name: Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales
 alternative_names:
   - LOPDGDD
@@ -123,12 +123,13 @@ requiring an absolute majority of the Congress to pass or amend, and
 reserved for matters touching fundamental rights. An ordinary Spanish law —
 [[ES-LEY-37-2007]], for instance — cannot amend it.
 
-The Atlas has no field for the rank of an instrument within a national legal
-hierarchy. `type: law` is what both get. The same flattening already applies
-to a German *Gesetz* versus *Verordnung*, a Belgian *wet* versus *koninklijk
-besluit*, and a French *loi* versus *ordonnance*, so this is not a Spanish
-problem — Spain is simply the case where the distinction carries the most
-weight, because the rank is what allows Title X to bind at all.
+The Atlas has no field for the rank *within* primary legislation. Both
+instruments are `type: act` (both were `law` when this section was
+written; `law` was split on 2026-10-02, which separates acts from
+`subordinate-legislation` such as a German *Verordnung* but not an organic
+law from an ordinary one). Spain is the case where that remaining distinction
+carries the most weight, because the rank is what allows Title X to bind at
+all.
 
 Logged in `discovery/unresolved.md`. **No field was added**: five countries
 have now been modelled without one, and adding it would require re-reading

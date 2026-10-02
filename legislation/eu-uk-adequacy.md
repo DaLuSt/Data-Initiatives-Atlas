@@ -1,6 +1,6 @@
 ---
 id: EU-UK-ADEQUACY
-type: regulation
+type: decision
 name: UK adequacy decisions
 alternative_names:
   - adequacy decisions for the UK

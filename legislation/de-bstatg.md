@@ -1,6 +1,6 @@
 ---
 id: DE-BSTATG
-type: law
+type: act
 name: Bundesstatistikgesetz
 alternative_names:
   - BStatG

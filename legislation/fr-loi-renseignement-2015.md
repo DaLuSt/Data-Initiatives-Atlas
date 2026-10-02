@@ -1,6 +1,6 @@
 ---
 id: FR-LOI-RENSEIGNEMENT-2015
-type: law
+type: act
 name: Loi n° 2015-912 du 24 juillet 2015 relative au renseignement
 alternative_names:
   - Loi renseignement

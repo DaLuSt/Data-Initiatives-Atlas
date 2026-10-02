@@ -1,6 +1,6 @@
 ---
 id: BG-ZDOI
-type: law
+type: act
 name: Закон за достъп до обществена информация
 alternative_names:
   - ZDOI

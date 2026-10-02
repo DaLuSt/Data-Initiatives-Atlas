@@ -1,6 +1,6 @@
 ---
 id: PL-USTAWA-CBA-2006
-type: law
+type: act
 name: "Ustawa z dnia 9 czerwca 2006 r. o Centralnym Biurze Antykorupcyjnym"
 alternative_names:
   - "Ustawa o CBA"

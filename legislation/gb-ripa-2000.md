@@ -1,6 +1,6 @@
 ---
 id: GB-RIPA-2000
-type: law
+type: act
 name: Regulation of Investigatory Powers Act 2000
 alternative_names:
   - RIPA

@@ -1,6 +1,6 @@
 ---
 id: FR-LOI-VALTER
-type: law
+type: act
 name: Loi n° 2015-1779 du 28 décembre 2015 relative à la gratuité et aux modalités de la réutilisation des informations du secteur public
 alternative_names:
   - Loi Valter
@@ -128,7 +128,7 @@ act with a name, is the French answer to the Open Data Directive.
 Ordonnance n° 2016-307 and Décret n° 2021-1559 are recorded here rather than
 modelled: a codification instrument that changes no law and a decree
 amending licence lists are both thinner than the threshold the Atlas has
-used for `type: law` elsewhere.
+used for legislation entities elsewhere.
 
 ## The documented negative
 

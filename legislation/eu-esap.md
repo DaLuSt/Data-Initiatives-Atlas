@@ -105,7 +105,7 @@ one, but an ongoing policy strategy pursued through multiple staff working
 documents and progress reports without one citable legal instrument.
 Creating an entity for it would mean picking one of several Commission
 documents to stand in for an open-ended strategy, which is a different
-kind of thing from what `type: law`/`type: regulation` model elsewhere in
+kind of thing from what the legislation types (`act`, `regulation`, …) model elsewhere in
 the Atlas. Recorded here in prose instead, with its own communication
 cited, so the third component is at least named rather than left as an
 unlabelled gap.

@@ -1,6 +1,6 @@
 ---
 id: BE-GDPR-WET
-type: law
+type: act
 name: Wet betreffende de bescherming van natuurlijke personen met betrekking tot de verwerking van persoonsgegevens
 alternative_names:
   - Wet van 30 juli 2018

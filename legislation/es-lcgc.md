@@ -1,6 +1,6 @@
 ---
 id: ES-LCGC
-type: law
+type: act
 name: Anteproyecto de Ley de Coordinación y Gobernanza de la Ciberseguridad
 alternative_names:
   - Ley de Coordinación y Gobernanza de la Ciberseguridad

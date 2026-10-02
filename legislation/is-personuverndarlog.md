@@ -1,6 +1,6 @@
 ---
 id: IS-PERSONUVERNDARLOG
-type: law
+type: act
 name: Lög um persónuvernd og vinnslu persónuupplýsinga nr. 90/2018
 alternative_names:
   - Persónuverndarlög

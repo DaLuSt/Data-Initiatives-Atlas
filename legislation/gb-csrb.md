@@ -1,6 +1,6 @@
 ---
 id: GB-CSRB
-type: law
+type: act
 name: Cyber Security and Resilience (Network and Information Systems) Bill
 alternative_names:
   - Cyber Security and Resilience Bill

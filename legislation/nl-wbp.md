@@ -1,6 +1,6 @@
 ---
 id: NL-WBP
-type: law
+type: act
 name: Wet bescherming persoonsgegevens
 alternative_names:
   - Wbp

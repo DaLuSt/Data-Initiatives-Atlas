@@ -215,7 +215,7 @@ class TestVerdicts(unittest.TestCase):
 
 ENTITY = """---
 id: XX-TEST
-type: law
+type: act
 name: Testwet
 verification: search-only
 last_verified: null

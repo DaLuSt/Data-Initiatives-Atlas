@@ -1,6 +1,6 @@
 ---
 id: AT-EGOVG
-type: law
+type: act
 name: E-Government-Gesetz
 alternative_names:
   - E-GovG

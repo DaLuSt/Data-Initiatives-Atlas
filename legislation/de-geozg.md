@@ -1,6 +1,6 @@
 ---
 id: DE-GEOZG
-type: law
+type: act
 name: Geodatenzugangsgesetz
 alternative_names:
   - GeoZG

@@ -1,6 +1,6 @@
 ---
 id: DE-BDSG
-type: law
+type: act
 name: Bundesdatenschutzgesetz
 alternative_names:
   - BDSG

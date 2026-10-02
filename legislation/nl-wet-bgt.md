@@ -1,6 +1,6 @@
 ---
 id: NL-WET-BGT
-type: law
+type: act
 name: Wet basisregistratie grootschalige topografie
 alternative_names:
   - Wet BGT

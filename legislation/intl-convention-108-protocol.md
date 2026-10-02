@@ -1,6 +1,6 @@
 ---
 id: INTL-CONVENTION-108-PROTOCOL
-type: law
+type: agreement
 name: Additional Protocol to Convention 108 regarding supervisory authorities and transborder data flows
 alternative_names:
   - ETS No. 181

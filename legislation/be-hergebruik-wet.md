@@ -1,6 +1,6 @@
 ---
 id: BE-HERGEBRUIK-WET
-type: law
+type: act
 name: Wet inzake het hergebruik van overheidsinformatie
 alternative_names:
   - Wet van 4 mei 2016

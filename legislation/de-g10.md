@@ -1,6 +1,6 @@
 ---
 id: DE-G10
-type: law
+type: act
 name: Gesetz zur Beschränkung des Brief-, Post- und Fernmeldegeheimnisses
 alternative_names:
   - Artikel 10-Gesetz

@@ -1,6 +1,6 @@
 ---
 id: PL-USKWSWW-2006
-type: law
+type: act
 name: Ustawa o Służbie Kontrwywiadu Wojskowego oraz Służbie Wywiadu Wojskowego
 alternative_names:
   - Ustawa z dnia 9 czerwca 2006 r.

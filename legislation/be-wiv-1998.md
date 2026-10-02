@@ -1,6 +1,6 @@
 ---
 id: BE-WIV-1998
-type: law
+type: act
 name: Wet houdende regeling van de inlichtingen- en veiligheidsdienst
 alternative_names:
   - Wet van 30 november 1998

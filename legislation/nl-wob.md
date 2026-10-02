@@ -1,6 +1,6 @@
 ---
 id: NL-WOB
-type: law
+type: act
 name: Wet openbaarheid van bestuur
 alternative_names:
   - Wob

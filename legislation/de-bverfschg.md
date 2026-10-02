@@ -1,6 +1,6 @@
 ---
 id: DE-BVERFSCHG
-type: law
+type: act
 name: Bundesverfassungsschutzgesetz
 alternative_names:
   - BVerfSchG

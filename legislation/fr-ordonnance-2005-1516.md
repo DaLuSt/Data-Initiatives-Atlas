@@ -1,6 +1,6 @@
 ---
 id: FR-ORDONNANCE-2005-1516
-type: law
+type: act
 name: Ordonnance n° 2005-1516 du 8 décembre 2005 relative aux échanges électroniques entre les usagers et les autorités administratives et entre les autorités administratives
 alternative_names:
   - Ordonnance n° 2005-1516

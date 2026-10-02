@@ -1,6 +1,6 @@
 ---
 id: NL-TWCO
-type: law
+type: act
 name: Tijdelijke wet onderzoeken AIVD en MIVD naar landen met een offensief cyberprogramma
 alternative_names:
   - Tijdelijke wet cyberoperaties

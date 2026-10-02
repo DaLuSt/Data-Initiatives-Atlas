@@ -1,6 +1,6 @@
 ---
 id: EE-KUBERTURVALISUSE-SEADUS
-type: law
+type: act
 name: Küberturvalisuse seadus
 alternative_names:
   - Cybersecurity Act

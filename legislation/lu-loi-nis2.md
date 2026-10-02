@@ -1,6 +1,6 @@
 ---
 id: LU-LOI-NIS2
-type: law
+type: act
 name: "Loi du 5 mai 2026 concernant des mesures destinées à assurer un niveau élevé de cybersécurité"
 alternative_names:
   - "Loi NIS 2"

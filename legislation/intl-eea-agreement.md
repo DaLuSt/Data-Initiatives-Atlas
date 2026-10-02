@@ -1,6 +1,6 @@
 ---
 id: INTL-EEA-AGREEMENT
-type: law
+type: agreement
 name: Agreement on the European Economic Area
 alternative_names:
   - EEA Agreement

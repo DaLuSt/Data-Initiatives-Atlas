@@ -1,6 +1,6 @@
 ---
 id: DE-NIS2UMSUCG
-type: law
+type: act
 name: NIS-2-Umsetzungsgesetz
 alternative_names:
   - NIS2UmsuCG

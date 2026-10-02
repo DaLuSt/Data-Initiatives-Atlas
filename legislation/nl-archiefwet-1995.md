@@ -1,6 +1,6 @@
 ---
 id: NL-ARCHIEFWET-1995
-type: law
+type: act
 name: Archiefwet 1995
 alternative_names:
   - Archiefwet

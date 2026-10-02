@@ -1,6 +1,6 @@
 ---
 id: EU-PSD2
-type: law
+type: directive
 name: Revised Payment Services Directive
 alternative_names:
   - PSD2

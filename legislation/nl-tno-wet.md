@@ -1,6 +1,6 @@
 ---
 id: NL-TNO-WET
-type: law
+type: act
 name: TNO-wet
 alternative_names:
   - Wet van 19 december 1985, houdende regeling van de Nederlandse Organisatie voor toegepast-natuurwetenschappelijk onderzoek TNO

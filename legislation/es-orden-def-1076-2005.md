@@ -1,6 +1,6 @@
 ---
 id: ES-ORDEN-DEF-1076-2005
-type: law
+type: subordinate-legislation
 name: "Orden DEF/1076/2005, de 19 de abril"
 alternative_names:
   - Orden DEF/1076/2005

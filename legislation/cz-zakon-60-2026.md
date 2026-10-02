@@ -1,6 +1,6 @@
 ---
 id: CZ-ZAKON-60-2026
-type: law
+type: act
 name: Zákon o správě dat a řízeném přístupu
 alternative_names:
   - Zákon č. 60/2026 Sb.

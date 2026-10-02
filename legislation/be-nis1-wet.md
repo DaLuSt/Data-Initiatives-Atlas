@@ -1,6 +1,6 @@
 ---
 id: BE-NIS1-WET
-type: law
+type: act
 name: NIS1-wet
 alternative_names:
   - Wet van 7 april 2019

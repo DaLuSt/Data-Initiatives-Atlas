@@ -1,6 +1,6 @@
 ---
 id: DE-IWG
-type: law
+type: act
 name: Informationsweiterverwendungsgesetz
 alternative_names:
   - IWG

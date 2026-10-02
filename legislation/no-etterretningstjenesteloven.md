@@ -1,6 +1,6 @@
 ---
 id: NO-ETTERRETNINGSTJENESTELOVEN
-type: law
+type: act
 name: Lov om Etterretningstjenesten
 alternative_names:
   - Etterretningstjenesteloven
