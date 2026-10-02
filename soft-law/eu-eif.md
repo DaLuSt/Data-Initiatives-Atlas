@@ -1,6 +1,6 @@
 ---
 id: EU-EIF
-type: framework
+type: soft-law
 name: European Interoperability Framework
 alternative_names:
   - EIF
@@ -124,6 +124,14 @@ sources:
   - title: "European Interoperability Framework (EIF)"
     url: "https://interoperable-europe.ec.europa.eu/collection/iopeu-monitoring/european-interoperability-framework-eif"
     publisher: "European Commission — Interoperable Europe Portal"
+  - title: "European Interoperability Framework (EIF) — ISA² programme page"
+    url: "https://ec.europa.eu/isa2/eif_en"
+    publisher: "European Commission — ISA²"
+    accessed: "2026-10-02"
+  - title: "COM(2017) 134 — Communication from the Commission: European Interoperability Framework – Implementation Strategy (Publications Office record, CELEX 52017DC0134)"
+    url: "https://publications.europa.eu/resource/celex/52017DC0134"
+    publisher: "Publications Office of the European Union (CELLAR)"
+    accessed: "2026-10-02"
   - title: "The European Interoperability Framework in detail"
     url: "https://interoperable-europe.ec.europa.eu/collection/iopeu-monitoring/european-interoperability-framework-detail"
     publisher: "European Commission — Interoperable Europe Portal"
@@ -250,6 +258,22 @@ legal relationship above.
   read in full, never mentions this Framework, corroborating an earlier
   negative search of the Interoperable Europe Portal's own data-spaces
   content.
+
+## Typing note — moved to `soft-law` on 2026-10-02
+
+This entity was `type: framework`. It is now `soft-law`, because the
+instrument is a non-binding act of a supranational body. Two sources, both
+read directly on 2026-10-02: the Commission's own ISA² page states that "the
+European Interoperability Framework (EIF) is part of the Communication
+(COM(2017)134) from the European Commission adopted on 23 March 2017", with
+the Framework as Annex II of that Communication; and the Publications Office
+record for CELEX 52017DC0134 gives the Communication's title as *European
+Interoperability Framework – Implementation Strategy*, authored by the
+European Commission, resource type *Communication*. A Commission
+Communication creates no obligation for member states; the Framework gives
+them recommendations, which is what `soft-law` means (`metadata/ontology.md`
+§1). The record does not itself list the annex, so the Annex II link rests on
+the Commission's page, not on the record.
 
 ## Sources
 

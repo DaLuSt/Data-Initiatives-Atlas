@@ -14,6 +14,8 @@ What belongs here:
 - A UN General Assembly resolution that sets out commitments rather than
   obligations ([[UN-2030-AGENDA]], [[UN-GDC]]).
 - Principles adopted by a body and endorsed by a resolution ([[UN-FPOS]]).
+- A Commission Communication that recommends how member states should act
+  ([[EU-EIF]]).
 
 What does not belong here:
 
