@@ -70,6 +70,10 @@ last_merged_prs:
     summary: "Fixed README and docs/graph-architecture.md, which still described the committed-copy graph test removed in #400"
   - number: 404
     summary: "Split type: law into act (122), agreement (7), decision (5) and subordinate-legislation (4) alongside regulation (22) and directive (12); corrected five EU instruments filed under the wrong type; row #11 narrowed (organic vs ordinary law and a soft-law type remain open)"
+  - number: 405
+    summary: "Housekeeping: recorded #403-404 in state.yaml and run-history"
+  - number: 406
+    summary: "Added the soft-law type (own soft-law/ folder, not counted as legislation) and moved UN-2030-AGENDA, UN-GDC, UN-AI-ETHICS-RECOMMENDATION and UN-FPOS into it; recorded the EU hierarchy of legal acts in ontology section 1 as the classification reference; row #11 narrowed to organic vs ordinary law and codes"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,

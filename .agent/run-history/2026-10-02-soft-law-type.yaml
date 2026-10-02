@@ -24,6 +24,8 @@ summary: >
   Title X of ES-LOPDGDD bind), so typing them soft-law would be wrong. They
   stay act. The owner was asked what was meant. unresolved.md row 11 now
   records only organic vs ordinary law and codes as still open.
-prs: []
-outcome: pending
+prs:
+  - number: 406
+    title: "Add a soft-law type and move four non-binding UN instruments into it"
+outcome: merged
 entity_count_after: 738
