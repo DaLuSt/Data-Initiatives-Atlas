@@ -74,6 +74,10 @@ last_merged_prs:
     summary: "Housekeeping: recorded #403-404 in state.yaml and run-history"
   - number: 406
     summary: "Added the soft-law type (own soft-law/ folder, not counted as legislation) and moved UN-2030-AGENDA, UN-GDC, UN-AI-ETHICS-RECOMMENDATION and UN-FPOS into it; recorded the EU hierarchy of legal acts in ontology section 1 as the classification reference; row #11 narrowed to organic vs ordinary law and codes"
+  - number: 407
+    summary: "Housekeeping: recorded #405-406 in state.yaml and run-history"
+  - number: 408
+    summary: "Added the optional rank field (constitutional / organic / ordinary / delegated) for legislation entities, validated per type; 12 entities set where their own file shows it (Spain's organic vs ordinary laws, subordinate legislation, the HVD implementing regulation), the other 160 deliberately unset; row #11 narrowed to the backfill"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
