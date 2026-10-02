@@ -77,6 +77,7 @@
     organisation: "round-rectangle", country: "star", region: "star",
     act: "diamond", regulation: "diamond", directive: "diamond",
     decision: "diamond", "subordinate-legislation": "diamond", agreement: "diamond",
+    "soft-law": "round-diamond",
     policy: "vee", strategy: "triangle", standard: "hexagon",
     framework: "pentagon", programme: "octagon", initiative: "ellipse",
     "data-space": "barrel", platform: "rhomboid", technology: "rhomboid",

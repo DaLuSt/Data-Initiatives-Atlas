@@ -1,6 +1,6 @@
 ---
 id: UN-AI-ETHICS-RECOMMENDATION
-type: framework
+type: soft-law
 name: Recommendation on the Ethics of Artificial Intelligence
 alternative_names:
   - UNESCO Recommendation on the Ethics of AI
@@ -170,18 +170,16 @@ A UNESCO Recommendation is **not binding**. [[UN-AARHUS]] is a convention
 and binds its Parties. Both are recorded here with the same vocabulary —
 `UN-AARHUS` as `type: law`, this as `type: framework` — and neither type
 carried the binding/non-binding distinction. (*Update 2026-10-02:* `law` was
-split and [[UN-AARHUS]] is now `type: agreement`, a binding instrument by
-definition. This recommendation stays `framework`; there is still no
-`soft-law` type, see `metadata/ontology.md` §1.)
+split, so [[UN-AARHUS]] is now `type: agreement`, a binding instrument by
+definition, and this recommendation is now `type: soft-law`. The two are
+distinguished by type; see `metadata/ontology.md` §1.)
 
 The Atlas has now hit this from two directions: the Spain batch found that
 `type: law` flattens Spain's constitutional `Ley Orgánica` rank, and this
 batch finds that nothing distinguishes a treaty from a recommendation. They
-are the same missing property at different levels.
-
-Logged together in `discovery/unresolved.md`. **No field was added** — six
-country and layer batches have run without one, and adding it would require
-re-reading every instrument in the Atlas to populate it honestly.
+are the same missing property at different levels. The second is now
+settled by the `agreement` and `soft-law` types; the first (organic vs.
+ordinary law) is still open, see `discovery/unresolved.md` item #11.
 
 ## Relationships
 

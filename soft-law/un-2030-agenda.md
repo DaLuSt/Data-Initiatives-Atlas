@@ -1,6 +1,6 @@
 ---
 id: UN-2030-AGENDA
-type: policy
+type: soft-law
 name: "Transforming our world: the 2030 Agenda for Sustainable Development"
 alternative_names:
   - 2030 Agenda

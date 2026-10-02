@@ -253,7 +253,7 @@ international, regional and national levels.
 
 **Core entity types**
 
-`initiative` · `organisation` · `country` · `region` · `policy` · `act` ·
+`initiative` · `organisation` · `country` · `region` · `policy` · `soft-law` · `act` ·
 `regulation` · `directive` · `decision` · `subordinate-legislation` ·
 `agreement` · `strategy` · `standard` · `framework` ·
 `programme` · `data-space` · `platform` · `technology` · `domain` ·
@@ -318,6 +318,7 @@ data-initiatives-atlas/
 ├── strategies/
 ├── standards/
 ├── frameworks/
+├── soft-law/
 ├── programmes/
 ├── organisations/
 ├── data-spaces/

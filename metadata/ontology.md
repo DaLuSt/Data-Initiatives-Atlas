@@ -24,6 +24,7 @@ vocabulary:
 | `country` | A national geographic/jurisdictional anchor node | `NL` |
 | `region` | A regional geographic/jurisdictional anchor node (e.g. the EU) | `EU` |
 | `policy` | A non-binding policy position or plan adopted by an organisation | |
+| `soft-law` | A non-binding instrument adopted by an international or supranational body in a formal act: a recommendation, resolution, declaration, compact or set of principles. Not legislation, so it is filed under `soft-law/` | `UN-AI-ETHICS-RECOMMENDATION` |
 | `act` | Primary legislation: a statute with the rank of law, whether passed by a parliament (including a regional parliament's decree or ordinance) or issued by a government under a constitutional power to make law-rank acts (decree-law). Includes bills and draft acts, with `status: proposed`/`planned` | `NL-WDO` |
 | `regulation` | A binding EU regulation (directly applicable), or a national text that is itself a regulation carried over from one (the UK GDPR) | `EU-DATA-ACT` |
 | `directive` | An EU directive (requires national transposition) | `EU-OPEN-DATA-DIRECTIVE` |
@@ -74,29 +75,34 @@ ordinary one (Spain's *Ley Orgánica*), a code from a single statute (Italy's
 CAD), or a constitutional law from either. That is `discovery/unresolved.md`
 item #11, narrowed on 2026-10-02 but still open.
 
-**No `soft-law` type yet.** Non-binding instruments (UN or UNESCO
-recommendations, guidelines) are not legislation and today live as `policy`
-or `framework` entities, for example `UN-AI-ETHICS-RECOMMENDATION`. A
-`soft-law` type should be added, with a folder mapping, in the same commit
-that moves or creates its first entity.
+**Soft law.** `soft-law` holds non-binding instruments of international or
+supranational bodies (see its definition above). It is a separate type with
+its own folder, not part of `legislation/`, because it is not legislation and
+the `legislation` statistic should not count it. The test is whether the
+instrument was adopted by a body in a formal act yet creates no obligation:
+four entities qualify today ([[UN-AI-ETHICS-RECOMMENDATION]],
+[[UN-2030-AGENDA]], [[UN-GDC]], [[UN-FPOS]]). A national government's own
+non-binding plan stays a `policy` or `strategy`, and a measurement
+framework such as [[UN-SDG-INDICATORS]] stays a `framework`.
 
-Do not invent a new `type` casually. If a batch believes a new type is
-needed, add it here with a definition and a folder mapping (§3) in the same
-commit that introduces the first entity of that type.
+**Reference: the EU hierarchy of legal acts.** When a new instrument is hard
+to classify, use the EU's own hierarchy as the model, and map it onto the
+types like this:
 
-**History of the legislation types.** Until 2026-10-02 the vocabulary had a
-single `law` type next to `regulation` and `directive`. `law` held national
-statutes, but also instruments that are not statutes: EEA Joint Committee
-Decisions ([[INTL-EEA-JCD-154-2018]]), treaties and conventions
-([[UN-AARHUS]]), Bund-Länder Verwaltungsvereinbarungen ([[DE-VV-GDI-DE]],
-decided 2026-09-20 under `discovery/unresolved.md` item #6 not to merit an
-`agreement` type for two instances), and Irish statutory instruments next to
-Acts. On 2026-10-02 `law` was retired and its 140 entities were reclassified
-into the types above; five EU instruments that had been filed under `law` or
-`regulation` by mistake were corrected at the same time (the PSD2 and
-Environmental Information directives, the FIDA proposal, and the standardisation and
-statistics regulations). The `agreement` type is justified now because it
-holds seven instruments, not two.
+| EU tier | Instruments | Atlas type |
+|---|---|---|
+| Primary law | The Treaties (TEU, TFEU), the Charter of Fundamental Rights, international agreements the EU concludes | `agreement` |
+| Secondary law, binding | Regulation, directive, decision (TFEU Art. 288) | `regulation`, `directive`, `decision` |
+| Secondary law, non-binding | Recommendations and opinions (TFEU Art. 288), and Commission communications and guidelines | `soft-law` |
+| Tertiary law | Delegated and implementing acts adopted under a basic act | the form they take: `regulation`, `directive` or `decision` (for example [[EU-HVD-REGULATION]], an implementing regulation) |
+
+National law has its own ladder, which the types only partly follow:
+constitution, then organic law, then ordinary law and decree-law, then
+regulations below a statute. `act` covers the middle rungs together and
+`subordinate-legislation` the bottom one. The Atlas does not model the
+difference between an organic and an ordinary law, because both are binding
+and the difference only matters inside one legal system
+(`discovery/unresolved.md` item #11).
 
 ### 1.1 Organisation role (optional)
 
@@ -225,6 +231,7 @@ machine-readably in `metadata/schema.json` as `type_folder_map`):
 |---|---|
 | `initiative` | `initiatives/` |
 | `act`, `regulation`, `directive`, `decision`, `subordinate-legislation`, `agreement` | `legislation/` |
+| `soft-law` | `soft-law/` |
 | `policy` | `policies/` |
 | `strategy` | `strategies/` |
 | `standard` | `standards/` |

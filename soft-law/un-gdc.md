@@ -1,6 +1,6 @@
 ---
 id: UN-GDC
-type: policy
+type: soft-law
 name: Global Digital Compact
 alternative_names:
   - GDC
@@ -111,10 +111,12 @@ own pages are now read directly, closing that gap, and the adoption date
 
 ## Typing note
 
-Recorded as `policy` rather than `strategy` or `initiative`: it is a
-negotiated set of commitments adopted by member states, closer to a policy
-instrument than to an organisational strategy. It is not binding
-legislation, so the legislation types (`act`, `regulation`, …) would be wrong.
+Recorded as `soft-law` since 2026-10-02 (it was `policy`, chosen over
+`strategy` or `initiative`). It is a negotiated set of commitments adopted by
+member states in a General Assembly resolution (A/RES/79/1) and is not
+binding, so the legislation types (`act`, `regulation`, …) are wrong and
+`soft-law` is the type for a non-binding instrument adopted by an
+international body.
 
 ## Relationships
 
