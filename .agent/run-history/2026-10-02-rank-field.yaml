@@ -25,6 +25,8 @@ summary: >
   Tests: TestRank (5), checked by putting rank: delegated on an act file and
   confirming the validator rejects it. unresolved.md row 11 now covers only
   the backfill and the code-vs-statute form question.
-prs: []
-outcome: pending
+prs:
+  - number: 408
+    title: "Add an optional rank field for legislation entities"
+outcome: merged
 entity_count_after: 738
