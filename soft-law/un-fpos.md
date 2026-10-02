@@ -1,6 +1,6 @@
 ---
 id: UN-FPOS
-type: framework
+type: soft-law
 name: Fundamental Principles of Official Statistics
 alternative_names:
   - FPOS

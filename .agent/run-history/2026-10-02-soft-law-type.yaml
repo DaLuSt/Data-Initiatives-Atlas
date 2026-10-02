@@ -1,0 +1,29 @@
+date: "2026-10-02"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Owner follow-up to the law split: add a soft-law type, use the EU hierarchy
+  of legal acts as the reference for classification, move entities that fit,
+  and keep the French ordonnances as act.
+
+  Added type soft-law with its own folder soft-law/ (not legislation/, so the
+  legislation stat does not count it; folder added to validation/common.py,
+  schema.json, the site's type shapes and pages.yml's path filter). Moved the
+  four entities whose own files show a non-binding instrument adopted by an
+  international body: UN-2030-AGENDA and UN-GDC (were policy; General
+  Assembly resolutions A/RES/70/1 and A/RES/79/1), UN-AI-ETHICS-RECOMMENDATION
+  (was framework; a UNESCO Recommendation, stated as not binding) and UN-FPOS
+  (was framework; principles endorsed by resolution 68/261). Left as they
+  were: UN-SDG-INDICATORS (a measurement framework), NL-PAS-TOE-OF-LEG-UIT (a
+  national policy) and EU-EIF (framework; I believe it is a Commission
+  communication but its own file does not say so, so I did not move it on
+  memory). Recorded the EU hierarchy (primary / secondary binding / secondary
+  non-binding / tertiary) mapped onto the types in ontology section 1.
+
+  Instruction not carried out as worded: "classify organic and ordinary as
+  soft law". Organic and ordinary laws are binding (only the organic rank lets
+  Title X of ES-LOPDGDD bind), so typing them soft-law would be wrong. They
+  stay act. The owner was asked what was meant. unresolved.md row 11 now
+  records only organic vs ordinary law and codes as still open.
+prs: []
+outcome: pending
+entity_count_after: 738

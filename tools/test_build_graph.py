@@ -535,6 +535,14 @@ class TestLegislationTypes(unittest.TestCase):
             {"act", "regulation", "directive", "decision",
              "subordinate-legislation", "agreement"})
 
+    def test_soft_law_is_its_own_folder_and_not_counted_as_legislation(self):
+        self.assertEqual(self.schema["type_folder_map"]["soft-law"], "soft-law")
+        self.assertNotIn("soft-law", self.legislation_types)
+        soft = [e for e in load_all_entities() if e.frontmatter.get("type") == "soft-law"]
+        self.assertTrue(soft, "no soft-law entity exists")
+        for e in soft:
+            self.assertEqual(e.path.parent.name, "soft-law", e.frontmatter.get("id"))
+
     def test_every_schema_type_has_a_folder_and_a_site_shape(self):
         self.assertEqual(set(self.schema["types"]),
                          set(self.schema["type_folder_map"]))

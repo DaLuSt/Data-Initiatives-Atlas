@@ -7,7 +7,7 @@ and this file should be fixed to match, since it's what the tooling reads.
 
 ## `type`
 
-`initiative`, `organisation`, `country`, `region`, `policy`, `act`,
+`initiative`, `organisation`, `country`, `region`, `policy`, `soft-law`, `act`,
 `regulation`, `directive`, `decision`, `subordinate-legislation`, `agreement`, `strategy`, `standard`, `framework`, `programme`,
 `data-space`, `platform`, `technology`, `domain`, `publication`
 

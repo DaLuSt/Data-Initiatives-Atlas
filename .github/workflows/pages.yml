@@ -10,6 +10,7 @@ on:
       - "initiatives/**"
       - "legislation/**"
       - "policies/**"
+      - "soft-law/**"
       - "strategies/**"
       - "standards/**"
       - "frameworks/**"

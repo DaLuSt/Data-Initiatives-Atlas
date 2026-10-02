@@ -20,7 +20,7 @@ SCHEMA_PATH = REPO_ROOT / "metadata" / "schema.json"
 
 # Top-level directories that hold entity files directly (by type).
 FLAT_ENTITY_DIRS = [
-    "initiatives", "legislation", "policies", "strategies", "standards",
+    "initiatives", "legislation", "soft-law", "policies", "strategies", "standards",
     "frameworks", "programmes", "organisations", "data-spaces",
     "platforms", "publications", "domains",
 ]
