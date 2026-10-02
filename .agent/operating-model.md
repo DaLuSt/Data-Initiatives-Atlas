@@ -62,9 +62,10 @@ do not push directly to `main`:
 1. `git fetch origin main` (and the shared working branch if one already
    exists remotely — see "Stale shared branches" below).
 2. Branch off `origin/main`.
-3. Make the change (usually: edit/create entity files, edit
-   `discovery/unresolved.md`, regenerate
-   `site/graph.json`/`site/details.json` via `tools/build_graph.py`).
+3. Make the change (usually: edit/create entity files and edit
+   `discovery/unresolved.md`; run `tools/build_graph.py` to check it
+   generates, but `site/graph.json`/`site/details.json` are gitignored and
+   never committed).
 4. Validate locally — see `.agent/quality-policy.md`'s three checks. All
    three must be clean before committing.
 5. Commit with a clear message describing the actual change, ending with:
@@ -101,10 +102,10 @@ do not push directly to `main`:
 **Stale shared branches**: if a prior autonomous run's branch still
 exists on the remote at an already-merged (now-stale) tip, don't
 force-push over it. Recreate the local branch from the remote's actual
-tip, merge `origin/main` into it (a normal merge, not a rebase — resolve
-any conflict in generated files, `site/graph.json`/`site/details.json`,
-by regenerating them with `tools/build_graph.py` rather than
-hand-editing), then continue.
+tip, merge `origin/main` into it (a normal merge, not a rebase), then
+continue. `site/graph.json`/`site/details.json` are no longer committed,
+so they cannot conflict; if an older branch still carries them, take
+`origin/main`'s side (they are deleted there) and `git rm --cached` them.
 
 **Never commit directly to `main`, and never `git add .` blindly.** If
 an autonomous run is interrupted (timeout, crash) with uncommitted

@@ -354,8 +354,8 @@ data-initiatives-atlas/
 │   ├── index.html
 │   ├── app.css
 │   ├── app.js
-│   ├── graph.json      # generated
-│   ├── details.json    # generated
+│   ├── graph.json      # generated, not committed (gitignored)
+│   ├── details.json    # generated, not committed (gitignored)
 │   └── vendor/         # Cytoscape.js, vendored
 └── docs/
     ├── graph.md
@@ -386,13 +386,15 @@ The repository does not require a redesign when a new country is introduced.
 
 ## 🔁 No manual graph maintenance
 
-`site/graph.json` and `site/details.json` are **generated artefacts**.
+`site/graph.json` and `site/details.json` are **generated artefacts**, built
+by CI and the Pages deploy and **not committed** (they are gitignored).
 
 Contributors never edit them, and never edit `site/index.html` to add an
 entity. The source remains **Markdown + YAML frontmatter + `[[wikilinks]]`**
 — nothing else.
 
-Regenerate after changing entity data:
+Build them locally to run the validation tests or to view the site from a
+clone (nothing to commit afterwards):
 
 ```bash
 python tools/build_graph.py

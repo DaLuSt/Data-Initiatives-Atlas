@@ -10,7 +10,8 @@
 #
 # Update this file, by hand, as part of the same commit/PR as any work
 # that changes these numbers or the summary. Regenerate entity_count etc.
-# from site/graph.json's own `stats` block rather than counting by hand.
+# from site/graph.json's own `stats` block (run tools/build_graph.py first;
+# the file is gitignored) rather than counting by hand.
 
 updated: "2026-10-01"
 updated_by_session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
