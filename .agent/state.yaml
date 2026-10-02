@@ -82,6 +82,10 @@ last_merged_prs:
     summary: "Housekeeping: recorded #407-408 in state.yaml and run-history"
   - number: 410
     summary: "Backfilled rank for the national acts of every country (110 newly ordinary; 115 ordinary and 2 organic overall); added metadata/rank-basis.md (per-country basis, Austria and Estonia checked against primary text); five bills left unset and validation rejects a rank on a proposed/planned instrument; row #11 now covers the EU backfill"
+  - number: 411
+    summary: "Housekeeping: recorded #409-410 in state.yaml and run-history"
+  - number: 412
+    summary: "Backfilled rank for the EU instruments from Official Journal (CELLAR) records that name the adopting body: 30 ordinary, 2 delegated; 154 of 172 legislation entities now carry a rank; row #11 reduced to verification gaps and the code-vs-statute form question"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,

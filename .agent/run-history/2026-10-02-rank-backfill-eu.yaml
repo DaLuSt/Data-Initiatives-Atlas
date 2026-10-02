@@ -27,6 +27,8 @@ summary: >
   decisions that the December 2025 decisions amend, and the 2025 records were
   not read. unresolved.md row 11 now lists only the verification gaps and the
   code-vs-statute form question. Tests: 56 pass.
-prs: []
-outcome: pending
+prs:
+  - number: 412
+    title: "Backfill rank for EU instruments from Official Journal records"
+outcome: merged
 entity_count_after: 738
