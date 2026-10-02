@@ -1,0 +1,32 @@
+date: "2026-10-02"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Owner said "continue" after the national backfill. Backfilled rank for the EU
+  instruments: 30 ordinary (12 directives, 18 regulations) and 2 delegated
+  (EU-CH-ADEQUACY, EU-UK-ADEQUACY), on top of EU-HVD-REGULATION. 154 of 172
+  legislation entities now carry a rank.
+
+  Evidence. An EU act's number does not show who adopted it, and a text match
+  on the entity files had proved too weak, so I used the EU Publications
+  Office's own record for each instrument (CELLAR, by CELEX number, requested
+  with Accept: application/xml;notice=object, which works from this
+  environment although EUR-Lex pages return HTTP 202). For 35 CELEX numbers I
+  read the work's author and resource type and checked that each record's
+  CELEX matched the one requested. Parliament and Council as authors of a
+  regulation or directive: ordinary. The Commission as author of an
+  implementing regulation or decision: delegated. All 30 legislative acts came
+  back with Parliament and Council as authors; the Swiss decision is a
+  Commission Decision and the two 2021 UK decisions are Commission
+  Implementing Decisions. The CELEX numbers come from the identifiers already
+  in each entity's names and aliases.
+
+  Left unset on purpose and documented in metadata/rank-basis.md: two EU
+  proposals, the three EEA Joint Committee Decisions (no state hierarchy), the
+  UK GDPR (a UK-law question its file does not answer) and the agreements.
+  EU-UK-ADEQUACY is delegated by inference: the records read are for the 2021
+  decisions that the December 2025 decisions amend, and the 2025 records were
+  not read. unresolved.md row 11 now lists only the verification gaps and the
+  code-vs-statute form question. Tests: 56 pass.
+prs: []
+outcome: pending
+entity_count_after: 738

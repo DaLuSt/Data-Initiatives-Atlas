@@ -184,8 +184,11 @@ Rules for using it:
 
 Added 2026-10-02, closing the organic-versus-ordinary half of
 `discovery/unresolved.md` item #11. The national acts of every country in the
-Atlas were then backfilled (115 `ordinary`, 2 `organic`); EU regulations,
-directives and decisions are still unset (see that row).
+Atlas were then backfilled (115 `ordinary`, 2 `organic`), and the EU
+instruments from their Official Journal records (30 `ordinary`, 3
+`delegated`, with the implementing regulation set earlier). Proposals, the
+EEA Joint Committee Decisions and the UK GDPR stay unset (see
+`metadata/rank-basis.md`).
 
 ## 2. Identifiers
 

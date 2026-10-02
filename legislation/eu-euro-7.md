@@ -22,6 +22,7 @@ country: null
 region: EU
 
 status: adopted
+rank: ordinary
 confidence: high
 coverage: medium
 verification: primary-source
