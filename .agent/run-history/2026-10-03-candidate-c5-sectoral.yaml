@@ -1,0 +1,27 @@
+date: "2026-10-03"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Owner asked to pick up candidate items. discovery/candidates.md had one open
+  lead, C5 (is level: sectoral under-used?); C9 is a reference measurement, the
+  rest are declined or moved. Examined C5 against the data instead of leaving
+  it as "never examined".
+
+  Finding: neither under-used nor rarely needed. sectoral puts a second axis
+  (sector) into a field that is otherwise geographic, and domains already
+  carries sector. 13 entities carry it, the same 13 as at the 2026-09-20 commit
+  that documented the convention (git grep at that commit); the ontology note
+  said 16, which was wrong and is corrected. None of the 60 entity files added
+  since uses it, including nine with a single non-government domain (FR-TRACFIN
+  and FR-DNRED are national). The documented rule fits 70 entities that do not
+  carry it (63 national organisations, 5 platforms, 2 standards with exactly
+  one non-government domain). The 25 sector-specific data spaces split 7
+  sectoral, 15 regional, 3 national, even within one sector. level drives the
+  Global Atlas bands and colours, so the 13 are drawn in a separate bottom band.
+
+  Because adopting any option reverses a convention documented on 2026-09-20,
+  I did not change any entity or the vocabulary. C5 moved to unresolved.md row
+  228 with three options (retire, apply everywhere, narrow) and a
+  recommendation to retire. Counts: candidates open 0, unresolved rows 68.
+prs: []
+outcome: pending
+entity_count_after: 738
