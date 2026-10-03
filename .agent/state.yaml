@@ -110,6 +110,10 @@ last_merged_prs:
     summary: "Retired level: sectoral (unresolved.md #228 option A): the 13 entities became national, the level was removed from the schema, docs and site, DE-HEALTHTRACK-X gained DOMAIN-HEALTH; four entities have no domain that fits their sector"
   - number: 424
     summary: "Cleared the solved items from discovery/candidates.md (rows C1-C8 and the historical body; only the C9 reference measurement stays); declined decisions moved to unresolved.md #229-232, the research lesson to research-policy.md, six stale statements corrected; the old page is at d7d07d1:discovery/candidates.md"
+  - number: 425
+    summary: "Housekeeping: recorded #422-424 in state.yaml and run-history"
+  - number: 426
+    summary: "Added .github/FUNDING.yml (github: DaLuSt) so the repository shows the Sponsor button; refreshed the stale README figures from the build (738 entities, 9,345 connections, 1,565 typed relationships) and replaced the unreproducible '14 researched countries' with the checkable '23 countries with national entities beyond the anchor'"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,

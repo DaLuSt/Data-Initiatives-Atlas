@@ -13,6 +13,8 @@ summary: >
   in the repository, so it became the verifiable "23 with national entities
   beyond the anchor itself" (counted from the graph). "All 738 entities are
   primary-source" was checked and is true. Figures dated 2026-10-03.
-prs: []
-outcome: pending
+prs:
+  - number: 426
+    title: "Add FUNDING.yml and refresh the README figures"
+outcome: merged
 entity_count_after: 738
