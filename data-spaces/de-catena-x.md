@@ -15,7 +15,7 @@ description: >
   vehicle manufacturers, suppliers and service providers along the
   automotive value chain.
 
-level: sectoral
+level: national
 country: DE
 region: EU
 
@@ -194,8 +194,10 @@ either entity**. The `country` field conflates three different things —
 where an initiative originated, where it is governed, and where it
 operates — and industry data spaces routinely differ on all three.
 
-`level: sectoral` is recorded rather than `national`, which is at least
-honest about the second axis. The `country` field is logged as an open
+`level: sectoral` was recorded here, rather than `national`, to be honest
+about the second axis; that level was retired on 2026-10-03
+(`metadata/ontology.md` §4) and this entity is now `national`, with its sector
+carried by `domains`. The `country` field is logged as an open
 ontology question in `discovery/unresolved.md`, now with two supporting
 cases rather than one.
 

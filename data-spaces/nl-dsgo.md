@@ -10,7 +10,7 @@ description: >
   It provides uniform agreements for safe, reliable and controlled access to
   data in digital chain collaboration. An initiative of digiGO.
 
-level: sectoral
+level: national
 country: NL
 region: null
 

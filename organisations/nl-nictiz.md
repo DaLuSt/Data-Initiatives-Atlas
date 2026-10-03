@@ -11,7 +11,7 @@ description: >
   the information standards that allow health information to be recorded,
   exchanged and reused unambiguously.
 
-level: sectoral
+level: national
 country: NL
 region: null
 
@@ -97,10 +97,11 @@ current healthcare information system as needing restructuring for
 capacity and affordability reasons — Nictiz frames its architecture work as
 addressing that directly.
 
-Nictiz is recorded at `level: sectoral` rather than `national` — it is a
-national organisation, but its authority is bounded to the healthcare
-sector rather than government-wide, which the `sectoral` level expresses
-more accurately.
+Nictiz was recorded at `level: sectoral` rather than `national` — it is a
+national organisation whose authority is bounded to the healthcare sector
+rather than government-wide. That level was retired on 2026-10-03
+(`metadata/ontology.md` §4); Nictiz is now `national`, and its sector is
+carried by `domains` ([[DOMAIN-HEALTH]]).
 
 ## Relationships
 

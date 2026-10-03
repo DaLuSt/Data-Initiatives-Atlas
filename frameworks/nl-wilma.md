@@ -16,7 +16,7 @@ description: >
   established autumn 2021, disseminates enterprise-architecture
   knowledge and expertise across the sector.
 
-level: sectoral
+level: national
 country: NL
 region: EU
 

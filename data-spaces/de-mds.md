@@ -16,7 +16,7 @@ description: >
   municipalities. Its infrastructure is compatible with the IDSA and
   Gaia-X.
 
-level: sectoral
+level: national
 country: DE
 region: EU
 

@@ -15,7 +15,7 @@ description: >
   Ministry for Economic Affairs and Energy (BMWE), the project ran from
   May 2024 to June 2026.
 
-level: sectoral
+level: national
 country: DE
 region: EU
 
@@ -30,7 +30,8 @@ last_verified: "2026-09-20"
 previous_version: null
 successor: null
 
-domains: []
+domains:
+  - DOMAIN-HEALTH
 organisations: []
 related_entities:
   - DE-MANUFACTURING-X

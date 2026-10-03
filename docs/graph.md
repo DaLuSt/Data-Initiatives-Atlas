@@ -29,7 +29,7 @@ locally.
 
 | View | What it is for |
 |---|---|
-| **Global Atlas** | The whole landscape, laid out in bands by geographic level — international at the top, regional below it, national below that, sectoral at the bottom — and within each band, one block per scope. Use it to see shape and scale. |
+| **Global Atlas** | The whole landscape, laid out in bands by geographic level — international at the top, regional below it, national below that, subnational at the bottom — and within each band, one block per scope. Use it to see shape and scale. |
 | **Entity Explorer** | One entity and its neighbourhood, drawn as rings by hop distance. Use it to actually read a part of the graph without being overwhelmed. Depth runs 1–4 hops, and each option tells you how many entities it would show before you pick it — on a hub-heavy graph one extra hop can multiply the result several times over. |
 | **Compare** | One supra-national instrument per row, one country per column. Use it to ask *"who did what about this directive?"* — see below. |
 | **List** | A sortable, searchable table of every entity. Use it if you would rather not use a graph at all — it is a complete, non-visual route into the Atlas. |
@@ -151,7 +151,7 @@ navigate, so any view of the graph can be shared or bookmarked.
 ## Reading the picture
 
 - **Colour = geographic level.** Purple international, blue regional, green
-  national, orange sectoral.
+  national, olive subnational.
 - **Shape = entity type.** Diamonds are legislation, rounded rectangles
   organisations, hexagons standards, pentagons frameworks, stars country and
   region anchors, and so on.
@@ -169,7 +169,7 @@ The Global Atlas places nodes rather than simulating them, so the same
 repository always produces the same picture.
 
 - **Vertical band = geographic level**, in order: international, regional,
-  national, sectoral. This is the Atlas's core claim about how instruments
+  national, subnational. This is the Atlas's core claim about how instruments
   descend, and it is the one thing the layout will not trade away.
 - **Block within a band = scope.** For national entities the scope is the
   country, so the national band reads as seven separate clumps rather than

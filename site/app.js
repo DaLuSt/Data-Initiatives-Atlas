@@ -55,14 +55,14 @@
   // nodes: ~1.0s on relationships only, ~1.8s with every edge class on.
   var FORCE_MAX = 900;
 
-  var LEVEL_ORDER = ["international", "regional", "national", "subnational", "sectoral", "local"];
+  var LEVEL_ORDER = ["international", "regional", "national", "subnational", "local"];
   // Confidence is ordinal, not alphabetical — "high, medium, low" reads as a
   // scale, "high, low, medium" reads as a list of three unrelated words.
   var CONFIDENCE_ORDER = ["high", "medium", "low"];
   var LEVEL_COLOR = {
     international: "--lvl-international", regional: "--lvl-regional",
     national: "--lvl-national", subnational: "--lvl-subnational",
-    sectoral: "--lvl-sectoral", local: "--lvl-local"
+    local: "--lvl-local"
   };
   // What "connections" means, spelled out — shared between the sidebar's
   // edge-class checkboxes and the edge detail panel (tapping an edge

@@ -30,7 +30,7 @@
     "country": "countries",
     "region": "regions"
   },
-  "levels": ["international", "regional", "national", "subnational", "sectoral", "local"],
+  "levels": ["international", "regional", "national", "subnational", "local"],
   "statuses": [
     "proposed", "planned", "adopted", "active", "implemented", "superseded",
     "replaced", "completed", "archived", "unknown"

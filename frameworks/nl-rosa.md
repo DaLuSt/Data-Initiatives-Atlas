@@ -12,7 +12,7 @@ description: >
   domains, and is maintained by the Architecture Council (Architectuurraad)
   of Edustandaard.
 
-level: sectoral
+level: national
 country: NL
 region: null
 
@@ -95,8 +95,10 @@ describe internal institutional operations. A coordination advisory group
 aligns ROSA and these sector architectures on terminology, reference
 components and process.
 
-`level: sectoral` rather than `national`, following the same reasoning
-applied to [[NL-NICTIZ]]: national in reach, but bounded to one sector.
+Recorded as `level: sectoral` until 2026-10-03, following the reasoning
+applied to [[NL-NICTIZ]] (national in reach, but bounded to one sector); that
+level was retired (`metadata/ontology.md` §4) and ROSA is now `national`, its
+sector carried by `domains`.
 
 Tagged [[DOMAIN-EDUCATION]], alongside [[NL-SURF]].
 

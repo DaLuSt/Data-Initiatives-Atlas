@@ -37,7 +37,7 @@ hand-maintained.
 | **Entities** | 717 |
 | **Connections** | 9,060 — of which **1,516** are sourced, typed relationships |
 | **Country scopes** | **58** — 14 with a researched national layer, the rest base anchors |
-| **Layers** | UN · Council of Europe · EU · national · sectoral |
+| **Layers** | UN · Council of Europe · EU · national · subnational (sector is carried by `domains`) |
 | **Source of truth** | Git + Markdown/YAML — no database |
 | **Licence** | CC0 1.0 |
 | **✅ Sourcing** | **All 717 entities are `verification: primary-source`** — every cited source has been opened, read and confirmed |
