@@ -356,7 +356,8 @@ relationships").
 - `sectoral`: scope is bounded to one industry or policy sector rather than
   by geography, regardless of the entity's own `country`/`region` tag.
   **Documented 2026-09-20** (closing item #10), formalising a convention
-  already in consistent use across 16 files before this note existed:
+  already in use across 13 files before this note existed (the note first said
+  16; the 13 were counted again on 2026-10-03):
   applied both to nationally-constituted bodies whose statutory remit
   covers one sector only ([[BE-KSZ]]: social security; [[NL-NICTIZ]]:
   healthcare IT standards; [[NL-ROSA]]: education) and to sector-specific
@@ -366,7 +367,10 @@ relationships").
   orthogonal to `country`/`region` — a sectoral entity still carries
   whichever jurisdiction actually funds or governs it; `level: sectoral`
   only says that jurisdiction's authority over the entity is bounded to one
-  sector, not that the entity has no country or region at all.
+  sector, not that the entity has no country or region at all. **Examined
+  2026-10-03:** the rule has not been applied beyond those 13 files, and
+  `domains` already carries sector; see `discovery/unresolved.md` item #228
+  for the evidence and the options (retire, apply everywhere, or narrow).
 - `local`: scope is a municipality or other unit below `subnational`.
 
 - `country`: ISO 3166-1 alpha-2 code, or `null` for EU/UN/international
