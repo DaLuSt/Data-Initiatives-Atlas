@@ -22,6 +22,8 @@ summary: >
   I did not change any entity or the vocabulary. C5 moved to unresolved.md row
   228 with three options (retire, apply everywhere, narrow) and a
   recommendation to retire. Counts: candidates open 0, unresolved rows 68.
-prs: []
-outcome: pending
+prs:
+  - number: 421
+    title: "Examine candidate C5 (level: sectoral) and move it to unresolved.md as #228"
+outcome: merged
 entity_count_after: 738

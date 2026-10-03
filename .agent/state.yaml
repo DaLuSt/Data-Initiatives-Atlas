@@ -100,6 +100,10 @@ last_merged_prs:
     summary: "Moved EU-EIF to soft-law: it is part of Commission Communication COM(2017) 134 (Commission ISA2 page; Publications Office record for CELEX 52017DC0134); five soft-law entities now"
   - number: 419
     summary: "Closed the remaining rank verification gaps against official texts: the 2025 UK adequacy decisions are Commission implementing decisions (CELLAR records), the Constitutional Council decision and ratifying statutes for the French ordonnances, Art. 112/164/166/168 of the Portuguese Constitution, legislation.gov.uk for the UK; residual gaps named in row #11"
+  - number: 420
+    summary: "Housekeeping: recorded #417-419 in state.yaml and run-history"
+  - number: 421
+    summary: "Examined candidate C5 (level: sectoral): neither under-used nor rarely needed, it adds a sector axis to a geographic field that domains already carries; moved to unresolved.md row #228 as an owner decision (retire / apply everywhere / narrow, recommendation: retire); candidates.md now has no open leads"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
