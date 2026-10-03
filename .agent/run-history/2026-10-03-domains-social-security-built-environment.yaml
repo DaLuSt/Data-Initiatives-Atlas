@@ -21,6 +21,8 @@ summary: >
 
   Not done: researching the thin domains (C9). That means adding entities with
   sources read directly, which is open-ended; left as the next step.
-prs: []
-outcome: pending
+prs:
+  - number: 428
+    title: "Add the social security and built environment domains"
+outcome: merged
 entity_count_after: 740
