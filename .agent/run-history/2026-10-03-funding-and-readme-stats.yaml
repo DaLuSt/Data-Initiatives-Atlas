@@ -1,0 +1,18 @@
+date: "2026-10-03"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Owner set up their GitHub Sponsors page and asked for copy plus two
+  follow-ups I had suggested. (1) Added .github/FUNDING.yml (github: DaLuSt) so
+  the repository shows GitHub's Sponsor button; the README badge and the site
+  button already linked to the page. (2) Refreshed the stale README header
+  numbers from the build: 738 entities (was 717), 9,345 connections (was
+  9,060), 1,565 typed relationships (was 1,516). I reworded "sourced, typed
+  relationships" to "typed relationships, each with its provenance", since some
+  relationships are interpretations rather than sourced facts. The claim "14
+  with a researched national layer" could not be reproduced from any definition
+  in the repository, so it became the verifiable "23 with national entities
+  beyond the anchor itself" (counted from the graph). "All 738 entities are
+  primary-source" was checked and is true. Figures dated 2026-10-03.
+prs: []
+outcome: pending
+entity_count_after: 738
