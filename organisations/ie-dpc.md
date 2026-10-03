@@ -113,9 +113,10 @@ the Board by name — a stronger basis than membership inferred from the
 authority simply existing, which is the standard [[DE-BFDI]] declined to
 meet and [[NO-DATATILSYNET]] cannot meet at all.
 
-**The general fix is still outstanding.** Connecting the remaining five
-member-state authorities is logged in `discovery/candidates.md` as the
-highest-value cheap item on that page, and this batch has not done it.
+**The general fix has since been done.** Connecting the remaining
+member-state authorities was the highest-value cheap item on the former
+candidates page, and it was completed later: on 2026-10-03 all 19 national data
+protection authorities in the Atlas carry a typed relationship to [[EU-EDPB]].
 
 ## Not modelled
 

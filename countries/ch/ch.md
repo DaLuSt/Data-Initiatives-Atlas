@@ -133,9 +133,9 @@ recorded here in prose. The same distinction is drawn on [[GB]].
 
 ## Not modelled
 
-- **The EU–Switzerland adequacy decision.** The Atlas holds
-  [[EU-UK-ADEQUACY]] and nothing equivalent for Switzerland, though the same
-  kind of Commission act covers it. Queued in `discovery/candidates.md`.
+- **The EU–Switzerland adequacy decision** is now modelled as
+  [[EU-CH-ADEQUACY]]; it was a gap while the Atlas held only
+  [[EU-UK-ADEQUACY]].
 - **The bilateral agreements** (*Bilaterale I* and *II*) and the framework
   agreement negotiations, which define the whole relationship.
 - **The cantons.** Switzerland is federal, and each canton has its own data

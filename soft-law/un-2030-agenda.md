@@ -97,9 +97,9 @@ its date, its symbol, its structure of 17 goals and 169 targets, and its own
 text. The Agenda was never thinly sourced; it was being looked for in the
 wrong place.
 
-This is the same lesson `discovery/candidates.md` already records at the end
-of the "cheap structural fixes" section: **a refusal for want of a source is
-not the same as a fact being unknowable.**
+This is the same lesson `.agent/research-policy.md` now records (it was first
+written down on the former candidates page): **a refusal for want of a source
+is not the same as a fact being unknowable.**
 
 ## Relationships
 

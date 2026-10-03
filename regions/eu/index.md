@@ -188,7 +188,7 @@ The Atlas's first `type: publication` entities, added 2026-08-21.
 All three now carry `measures` edges to the countries they assess — **62 of
 them**, 27 from DESI and 35 from the benchmark. The `measures` relationship
 type was added on 2026-08-21, one batch after the entities that needed it;
-see `metadata/relationship-types.md` and `discovery/candidates.md` §3 for why
+see `metadata/relationship-types.md` for why
 the separation was deliberate.
 
 ## Standards and reference architectures

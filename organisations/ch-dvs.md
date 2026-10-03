@@ -113,8 +113,8 @@ of this body has nowhere to attach.
 
 The entity is filed `level: national` because that is the closest available
 value, **not because the description is accurate.** This is the clearest
-single illustration of the `level` gap logged in
-`discovery/candidates.md`.
+single illustration of a `level` gap: a body shared by the Confederation, the
+cantons and the communes fits none of the geographic levels.
 
 ## Legal form, governance and predecessor, closed 2026-09-06
 

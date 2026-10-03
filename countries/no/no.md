@@ -140,11 +140,11 @@ Asserting `applies-in` [[NO]] on [[EU-GDPR]] would make the Atlas say
 Norway is in the same position as the Netherlands. It is not, and the
 two-month gap in 2018 is the proof.
 
-**The EEA Agreement and Joint Committee Decision 154/2018 are both queued in
-`discovery/candidates.md`.** Until one of them exists, Norway's route to
-[[EU-GDPR]] is recorded in prose on [[NO-PERSONOPPLYSNINGSLOVEN]] and here,
-and not in the graph. That is an honest under-modelling, not a claim that no
-relationship exists.
+**The EEA Agreement and Joint Committee Decision 154/2018 are now entities:**
+[[INTL-EEA-AGREEMENT]] and [[INTL-EEA-JCD-154-2018]]. Before they existed,
+Norway's route to [[EU-GDPR]] was recorded in prose on
+[[NO-PERSONOPPLYSNINGSLOVEN]] and here, and not in the graph. That was an
+honest under-modelling, not a claim that no relationship existed.
 
 ## Not modelled
 

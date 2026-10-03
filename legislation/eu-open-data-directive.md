@@ -356,5 +356,5 @@ predate the referral by eight months did not avert it.
 **A narrower gap remains**: no entity type exists for an individual
 infringement procedure itself (its own stages — formal notice, reasoned
 opinion, referral, judgment — as a first-class object), only the fact of a
-referral as an edge. `discovery/candidates.md` records that larger,
+referral as an edge. `discovery/unresolved.md` #44 records that larger,
 unaddressed ontology question.

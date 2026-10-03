@@ -1,0 +1,32 @@
+date: "2026-10-03"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Owner asked to remove all solved items from candidates. Every lead on
+  discovery/candidates.md was closed (its own text said "nothing is left on this
+  page to pick up"), so I removed them: table rows C1-C8 and the whole
+  historical body (batch narrative and numbered sections 1-6). Kept only C9,
+  the domain-coverage reference measurement, because it is not a solved item.
+
+  Two things I would have lost by deleting, and moved first. (1) Declined
+  decisions are standing guards against re-researching, so UN DESA, the Nordic
+  Council and Benelux, level: local and "modelled on" became unresolved.md rows
+  229-232 (status Declined (deliberate), the same shape as #168); the level: local
+  counts were recounted. C5 (sectoral, retired the same day) is recorded in
+  ontology section 4. C1, C7 and C8 already had rows (#227, #44, #11). (2) The
+  one methodological lesson in the body, that a refusal for want of a source is
+  not the same as a fact being unknowable, with its four examples, moved to
+  .agent/research-policy.md.
+
+  The old page is recoverable: git show d7d07d1:discovery/candidates.md. The
+  page now says so and lists where each removed row went, because about 50
+  entity files say "candidates.md had flagged..." in the past tense and those
+  stay accurate as history.
+
+  Fixed the stale statements that relied on the removed text: six that said
+  something was still queued or logged there and were already wrong (CH adequacy
+  and the EEA Agreement and JCD 154/2018 exist; all 19 national data protection
+  authorities now connect to EU-EDPB, checked in the graph), plus pointers to
+  unresolved.md #44 and to the research policy. unresolved rows now 71.
+prs: []
+outcome: pending
+entity_count_after: 738
