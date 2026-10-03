@@ -62,6 +62,7 @@ useful graph relationships").
 | `DOMAIN-CHEMICALS` | Chemicals |
 | `DOMAIN-FOOD` | Food |
 | `DOMAIN-MANUFACTURING` | Manufacturing |
+| `DOMAIN-BUILT-ENVIRONMENT` | Built Environment |
 
 The eight new rows from `DOMAIN-NATIONAL-SECURITY` onward were added
 2026-09-25. `DOMAIN-NATIONAL-SECURITY` had already been created as an
@@ -75,6 +76,10 @@ matching Atlas domain (Energy, Finance and Environment were anticipated
 above but not yet created; Government, Mobility, Health, Research and
 Cybersecurity already existed as entities); the other seven needed a new
 slug, listed here.
+
+`DOMAIN-BUILT-ENVIRONMENT` was added 2026-10-03, the same day
+`DOMAIN-SOCIAL-SECURITY` (anticipated above since Batch 0) was first created:
+both replaced the sector signal that `level: sectoral` had carried.
 
 This list is not closed. Add a row here (with slug) in the same commit that
 first creates the domain entity, so the table always reflects what exists.

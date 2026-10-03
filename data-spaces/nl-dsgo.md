@@ -25,7 +25,8 @@ last_verified: "2026-09-04"
 previous_version: null
 successor: null
 
-domains: []
+domains:
+  - DOMAIN-BUILT-ENVIRONMENT
 organisations:
   - NL-GEONOVUM
   - NL-DIGIGO

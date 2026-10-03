@@ -33,6 +33,7 @@ successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
+  - DOMAIN-SOCIAL-SECURITY
 organisations: []
 related_entities:
   - BE-KSZ-WET
@@ -145,9 +146,9 @@ regulation by 28 years, and no source read connects them.
 The KSZ is a federal institution whose authority is bounded to the social
 security sector. It was recorded as `level: sectoral`, like [[NL-NICTIZ]] and
 [[NL-ROSA]]; that level was retired on 2026-10-03 (`metadata/ontology.md`
-§4), so it is now `level: national`. Its domain is [[DOMAIN-GOVERNMENT]]
-because the Atlas has no social-security domain, so the sector is now stated
-only in this text.
+§4), so it is now `level: national`. Its sector is carried by
+[[DOMAIN-SOCIAL-SECURITY]], created for it and [[BE-KSZ-WET]] on 2026-10-03,
+alongside [[DOMAIN-GOVERNMENT]].
 
 ## Relationships
 
