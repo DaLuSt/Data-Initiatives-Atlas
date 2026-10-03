@@ -19,7 +19,7 @@ description: >
   Assurance team of [[NL-ROSA]], maintains and develops ROSA, the
   cross-sector reference architecture for education.
 
-level: sectoral
+level: national
 country: NL
 region: EU
 

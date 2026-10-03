@@ -339,7 +339,7 @@ relationships").
 ## 4. Geographic model
 
 `level` (controlled vocabulary): `international`, `regional`, `national`, `subnational`,
-`sectoral`, `local`.
+`local`.
 
 - `international`: scope spans multiple countries by treaty, convention or
   membership, without being a single regional bloc's own instrument (UN
@@ -353,24 +353,24 @@ relationships").
   or Community — rather than the whole country. Added 2026-08-21 for
   Belgium's regional digital agencies; see `discovery/unresolved.md` item
   #5 for the cross-country modelling history.
-- `sectoral`: scope is bounded to one industry or policy sector rather than
-  by geography, regardless of the entity's own `country`/`region` tag.
-  **Documented 2026-09-20** (closing item #10), formalising a convention
-  already in use across 13 files before this note existed (the note first said
-  16; the 13 were counted again on 2026-10-03):
-  applied both to nationally-constituted bodies whose statutory remit
-  covers one sector only ([[BE-KSZ]]: social security; [[NL-NICTIZ]]:
-  healthcare IT standards; [[NL-ROSA]]: education) and to sector-specific
-  data spaces independent of their own country/region tag ([[DE-CATENA-X]]:
-  automotive, `region: EU`; [[DE-AEROSPACE-X]], [[DE-CONSTRUCT-X]],
-  [[DE-FACTORY-X]], [[DE-HEALTHTRACK-X]]: each one industry). `sectoral` is
-  orthogonal to `country`/`region` — a sectoral entity still carries
-  whichever jurisdiction actually funds or governs it; `level: sectoral`
-  only says that jurisdiction's authority over the entity is bounded to one
-  sector, not that the entity has no country or region at all. **Examined
-  2026-10-03:** the rule has not been applied beyond those 13 files, and
-  `domains` already carries sector; see `discovery/unresolved.md` item #228
-  for the evidence and the options (retire, apply everywhere, or narrow).
+- **`sectoral` (retired 2026-10-03).** Until then `level` had a `sectoral`
+  value for entities "bounded to one industry or policy sector rather than by
+  geography". It was documented on 2026-09-20 (item #10), but only 13
+  entities ever used it, and none added afterwards did. It put a second axis
+  (sector) into a field that is otherwise geographic, `domains` already
+  carries sector, and the rule fitted 70 other entities that did not use it.
+  It also took the 13 out of their country's band in the Global Atlas. All 13
+  had a single `country` and became `national`: [[BE-KSZ]], [[NL-NICTIZ]],
+  [[NL-ROSA]], [[NL-WILMA]], [[NL-DIGIGO]], [[NL-EDUSTANDAARD]], [[NL-DSGO]]
+  and the six German data spaces ([[DE-CATENA-X]], [[DE-AEROSPACE-X]],
+  [[DE-CONSTRUCT-X]], [[DE-FACTORY-X]], [[DE-HEALTHTRACK-X]], [[DE-MDS]]). Sector
+  is expressed with `domains`. Three sectors have no domain to carry them
+  (social security for [[BE-KSZ]], the built environment for [[NL-DIGIGO]]
+  and [[NL-DSGO]]), and [[NL-WILMA]]'s water authorities are not covered by
+  [[DOMAIN-WATER]] (drinking water and waste water only), so for those four
+  the sector now appears only in the entity's text. Adding such domains is a
+  separate decision. A `region: EU` tag on an entity does not change its
+  level.
 - `local`: scope is a municipality or other unit below `subnational`.
 
 - `country`: ISO 3166-1 alpha-2 code, or `null` for EU/UN/international

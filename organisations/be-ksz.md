@@ -16,7 +16,7 @@ description: >
   data is not centralised — it stays in the decentralised databases of the
   authentic sources, and the KSZ itself has no access to it.
 
-level: sectoral
+level: national
 country: BE
 region: null
 
@@ -140,14 +140,14 @@ relationship.
 the same reason it was refused for [[DE-REGMOG]]: the KSZ predates the
 regulation by 28 years, and no source read connects them.
 
-## `level: sectoral`
+## Level and sector
 
-Recorded as `sectoral` rather than `national`: the KSZ is a federal
-institution whose authority is bounded to the social security sector, which
-is the reading already applied to [[NL-NICTIZ]] and [[NL-ROSA]]. The
-convention is now used four times across three countries and should
-probably be written into `metadata/taxonomy.md` rather than remaining a
-precedent. Logged in `discovery/unresolved.md`.
+The KSZ is a federal institution whose authority is bounded to the social
+security sector. It was recorded as `level: sectoral`, like [[NL-NICTIZ]] and
+[[NL-ROSA]]; that level was retired on 2026-10-03 (`metadata/ontology.md`
+§4), so it is now `level: national`. Its domain is [[DOMAIN-GOVERNMENT]]
+because the Atlas has no social-security domain, so the sector is now stated
+only in this text.
 
 ## Relationships
 

@@ -14,7 +14,7 @@ description: >
   Protection (BMWK), the consortium project ran from January 2024 and
   concluded on 30 June 2026.
 
-level: sectoral
+level: national
 country: DE
 region: EU
 

@@ -14,7 +14,7 @@ description: >
   Economic Affairs and Energy (BMWE) with NextGenEU support, the project
   ran from 1 April 2024 to June 2026.
 
-level: sectoral
+level: national
 country: DE
 region: EU
 

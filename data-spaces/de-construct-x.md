@@ -16,7 +16,7 @@ description: >
   Cloud Infrastructure and Services (IPCEI-CIS), the project runs from
   1 March 2025 to 29 February 2028.
 
-level: sectoral
+level: national
 country: DE
 region: EU
 

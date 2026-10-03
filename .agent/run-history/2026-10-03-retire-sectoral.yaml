@@ -1,0 +1,35 @@
+date: "2026-10-03"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Owner said "retire the row #228", read as: implement its option A (retire
+  level: sectoral), then close the row. Retired the level.
+
+  Entities: all 13 sectoral entities have a single country (DE, NL or BE) and
+  became level: national (BE-KSZ, NL-NICTIZ, NL-ROSA, NL-WILMA, NL-DIGIGO,
+  NL-EDUSTANDAARD, NL-DSGO and six German data spaces). Sector is meant to be
+  carried by domains, so I checked each: DE-HEALTHTRACK-X had no domain and
+  gained DOMAIN-HEALTH (its own description says healthcare sector). Four
+  entities lose their only structured sector signal because no domain fits:
+  BE-KSZ (social security), NL-DIGIGO and NL-DSGO (built environment), and
+  NL-WILMA (water authorities; DOMAIN-WATER covers only drinking water and
+  waste water, so I did not tag it). I did not invent domains; recorded in
+  ontology section 4 as a separate decision.
+
+  Vocabulary and site: removed from schema.json levels, controlled-vocabularies,
+  metadata-schema, the entity template, README layers, docs/graph.md, site/app.js
+  (LEVEL_ORDER, LEVEL_COLOR) and app.css (three colour variables). Prose that
+  said an entity was sectoral was updated in four entity files (DE-CATENA-X,
+  NL-NICTIZ, BE-KSZ, NL-ROSA). Historical files are left as written (progress/,
+  run-history, validation/germany-second-country-report.md, and a stale sentence
+  in strategies/de-modernisierungsagenda-foederal.md that also predates
+  subnational).
+
+  Bookkeeping: unresolved.md row 228 deleted (closed rows are deleted); C5 on
+  candidates.md now Declined (deliberate) so nobody re-proposes a sector level;
+  unresolved rows 67. New TestLevels (2 tests): sectoral absent from schema and
+  entities, and every level has a band and a colour in the site while a colour
+  for a retired level fails; checked by putting the sectoral colour back.
+  58 tests pass. Graph stats: associations 3225, wikilinks 4553, edges 9343.
+prs: []
+outcome: pending
+entity_count_after: 738

@@ -641,5 +641,34 @@ class TestRank(unittest.TestCase):
         self.assertIn("d.rank", js)
 
 
+class TestLevels(unittest.TestCase):
+    """`level` is a geographic axis. `sectoral` was retired on 2026-10-03
+    (discovery/unresolved.md item #228); sector is carried by `domains`."""
+
+    SITE = Path(__file__).resolve().parent.parent / "site"
+
+    @classmethod
+    def setUpClass(cls):
+        cls.schema = load_schema()
+
+    def test_sectoral_is_retired(self):
+        self.assertNotIn("sectoral", self.schema["levels"])
+        self.assertEqual(self.schema["levels"],
+                         ["international", "regional", "national", "subnational", "local"])
+        for e in load_all_entities():
+            self.assertNotEqual(e.frontmatter.get("level"), "sectoral", e.frontmatter.get("id"))
+
+    def test_every_level_has_a_band_and_a_colour_in_the_site(self):
+        import re
+        js = (self.SITE / "app.js").read_text(encoding="utf-8")
+        css = (self.SITE / "app.css").read_text(encoding="utf-8")
+        order = re.search(r"var LEVEL_ORDER = \[(.*?)\];", js).group(1)
+        for level in self.schema["levels"]:
+            self.assertIn(f'"{level}"', order, f"{level} missing from LEVEL_ORDER")
+            self.assertIn(f"--lvl-{level}:", css, f"{level} has no colour in app.css")
+        for stale in re.findall(r"--lvl-([a-z]+):", css):
+            self.assertIn(stale, self.schema["levels"], f"app.css has a colour for retired level {stale}")
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

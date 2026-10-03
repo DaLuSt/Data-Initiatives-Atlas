@@ -14,7 +14,7 @@ description: >
   the Digitaal Stelsel Gebouwde Omgeving (DSGO) as one of its
   programmes.
 
-level: sectoral
+level: national
 country: NL
 region: EU
 

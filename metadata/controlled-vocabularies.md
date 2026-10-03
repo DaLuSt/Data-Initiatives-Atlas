@@ -15,7 +15,7 @@ Definitions: `metadata/ontology.md` §1. Folder mapping: `metadata/ontology.md` 
 
 ## `level`
 
-`international`, `regional`, `national`, `subnational`, `sectoral`, `local`
+`international`, `regional`, `national`, `subnational`, `local`
 
 **`regional` means *supra*-national in this Atlas** — above the state, not
 below it. It is what all 68 EU-scoped entities carry. The word is doing an
