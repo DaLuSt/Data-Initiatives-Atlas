@@ -364,13 +364,13 @@ relationships").
   [[NL-ROSA]], [[NL-WILMA]], [[NL-DIGIGO]], [[NL-EDUSTANDAARD]], [[NL-DSGO]]
   and the six German data spaces ([[DE-CATENA-X]], [[DE-AEROSPACE-X]],
   [[DE-CONSTRUCT-X]], [[DE-FACTORY-X]], [[DE-HEALTHTRACK-X]], [[DE-MDS]]). Sector
-  is expressed with `domains`. Three sectors have no domain to carry them
-  (social security for [[BE-KSZ]], the built environment for [[NL-DIGIGO]]
-  and [[NL-DSGO]]), and [[NL-WILMA]]'s water authorities are not covered by
-  [[DOMAIN-WATER]] (drinking water and waste water only), so for those four
-  the sector now appears only in the entity's text. Adding such domains is a
-  separate decision. A `region: EU` tag on an entity does not change its
-  level.
+  is expressed with `domains`. Three sectors had no domain to carry them, and
+  two were created the same day: [[DOMAIN-SOCIAL-SECURITY]] ([[BE-KSZ]],
+  [[BE-KSZ-WET]]) and [[DOMAIN-BUILT-ENVIRONMENT]] ([[NL-DIGIGO]],
+  [[NL-DSGO]]). The third, [[NL-WILMA]]'s water authorities, is not covered by
+  [[DOMAIN-WATER]] (drinking water and waste water only), so its sector still
+  appears only in the entity's text. A `region: EU` tag on an entity does not
+  change its level.
 - `local`: scope is a municipality or other unit below `subnational`.
 
 - `country`: ISO 3166-1 alpha-2 code, or `null` for EU/UN/international

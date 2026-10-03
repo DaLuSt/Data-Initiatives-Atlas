@@ -29,6 +29,7 @@ successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
+  - DOMAIN-SOCIAL-SECURITY
 organisations:
   - BE-KSZ
 related_entities:

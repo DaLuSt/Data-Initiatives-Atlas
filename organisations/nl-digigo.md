@@ -31,6 +31,7 @@ successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
+  - DOMAIN-BUILT-ENVIRONMENT
 organisations: []
 related_entities:
   - NL-DSGO
