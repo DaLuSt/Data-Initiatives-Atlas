@@ -32,3 +32,17 @@ fit to add at all.
   `discovery/unresolved.md`'s "Known source-access blocks" table (with
   any workaround subdomain/URL form found) — it is never a reason to
   assert something unverified instead.
+- **A refusal for want of a source is not the same as a fact being
+  unknowable.** Before declining, look for the instrument that created the
+  thing and for its statement of the rule; the source is often there. It held
+  four times: the national data protection authorities' seat at the
+  [[EU-EDPB]] was in [[EU-GDPR]] Article 68(3) (a member state with more than
+  one authority appoints a joint representative), which unblocked
+  [[DE-BFDI]]; [[IE-NSAI]]'s CEN membership followed from CEN-CENELEC's own
+  statement of the rule (its national members are the standardisation bodies of
+  the 27 EU countries) without reading a member list the Atlas cannot retrieve;
+  the 2030 Agenda was "nothing found" until the search was for the resolution,
+  A/RES/70/1 ([[UN-2030-AGENDA]]); and the EEA supervisory authorities' seat at
+  the Board is stated in [[INTL-EEA-JCD-154-2018]] for [[IS-PERSONUVERND]] and
+  [[LI-DATENSCHUTZSTELLE]]. (Moved here from `discovery/candidates.md` on
+  2026-10-03.)
