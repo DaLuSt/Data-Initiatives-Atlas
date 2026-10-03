@@ -27,6 +27,8 @@ summary: >
   and the EEA Agreement and JCD 154/2018 exist; all 19 national data protection
   authorities now connect to EU-EDPB, checked in the graph), plus pointers to
   unresolved.md #44 and to the research policy. unresolved rows now 71.
-prs: []
-outcome: pending
+prs:
+  - number: 424
+    title: "Clear the solved items from candidates.md"
+outcome: merged
 entity_count_after: 738

@@ -30,6 +30,8 @@ summary: >
   entities, and every level has a band and a colour in the site while a colour
   for a retired level fails; checked by putting the sectoral colour back.
   58 tests pass. Graph stats: associations 3225, wikilinks 4553, edges 9343.
-prs: []
-outcome: pending
+prs:
+  - number: 423
+    title: "Retire level: sectoral (unresolved.md #228, option A)"
+outcome: merged
 entity_count_after: 738

@@ -104,6 +104,12 @@ last_merged_prs:
     summary: "Housekeeping: recorded #417-419 in state.yaml and run-history"
   - number: 421
     summary: "Examined candidate C5 (level: sectoral): neither under-used nor rarely needed, it adds a sector axis to a geographic field that domains already carries; moved to unresolved.md row #228 as an owner decision (retire / apply everywhere / narrow, recommendation: retire); candidates.md now has no open leads"
+  - number: 422
+    summary: "Housekeeping: recorded #420-421 in state.yaml and run-history"
+  - number: 423
+    summary: "Retired level: sectoral (unresolved.md #228 option A): the 13 entities became national, the level was removed from the schema, docs and site, DE-HEALTHTRACK-X gained DOMAIN-HEALTH; four entities have no domain that fits their sector"
+  - number: 424
+    summary: "Cleared the solved items from discovery/candidates.md (rows C1-C8 and the historical body; only the C9 reference measurement stays); declined decisions moved to unresolved.md #229-232, the research lesson to research-policy.md, six stale statements corrected; the old page is at d7d07d1:discovery/candidates.md"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
