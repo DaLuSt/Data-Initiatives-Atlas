@@ -1,5 +1,6 @@
 {
   "$comment": "Machine-readable companion to metadata/metadata-schema.md, metadata/ontology.md and metadata/relationship-types.md. Consumed by validation/*.py. Keep in sync with those documents.",
+  "schema_version": "1.0.0",
   "types": [
     "initiative", "organisation", "country", "region", "policy", "soft-law", "act",
     "regulation", "directive", "decision", "subordinate-legislation", "agreement",
@@ -60,6 +61,11 @@
   "required_fields": [
     "id", "type", "name", "description", "level", "country",
     "status", "confidence", "coverage"
+  ],
+  "optional_fields": [
+    "alternative_names", "name_en", "region", "verification", "start_date", "end_date",
+    "last_verified", "previous_version", "successor", "rank", "organisation_role",
+    "domains", "organisations", "related_entities", "relationships", "sources"
   ],
   "id_scope_pattern": "^(UN|EU|INTL|DOMAIN|[A-Z]{2})(-[A-Z0-9]+(-[A-Z0-9]+)*)?$",
   "anchor_ids": ["NL", "EU", "UN"]

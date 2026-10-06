@@ -413,6 +413,16 @@ generator. Neither is authoritative over the source.
 
 ---
 
+## 🏷️ Versions and releases
+
+The Atlas carries two version numbers: a **schema version** (SemVer, in
+`metadata/schema.json`) that changes when the data model does, and a dated
+**data release** (`YYYY.MM.N`) for each snapshot. Releases are prepared
+automatically from the merged pull requests: [`CHANGELOG.md`](CHANGELOG.md) says
+what changed, the [Releases page](https://github.com/DaLuSt/Data-Initiatives-Atlas/releases)
+holds the tagged snapshots, and [`metadata/versioning.md`](metadata/versioning.md)
+explains the rules. The site's footer shows the release it was built from.
+
 ## 🤝 An open participation model
 
 The Atlas is intended to grow through participation. The Netherlands

@@ -823,6 +823,30 @@ class TestSmallFixes(unittest.TestCase):
         self.assertIn('fetch("graph.json"', self.JS)
 
 
+class TestReleaseInfo(unittest.TestCase):
+    """The graph and the site's footer say which release they are from
+    (metadata/versioning.md)."""
+
+    SITE = Path(__file__).resolve().parent.parent / "site"
+
+    def test_graph_carries_the_schema_version(self):
+        payload, errors, _ = build_graph.build()
+        self.assertFalse(errors)
+        release = payload["graph"]["release"]
+        self.assertEqual(release["schema_version"], load_schema()["schema_version"])
+        for key in release:
+            self.assertIn(key, {"data_release", "schema_version", "released"})
+
+    def test_footer_shows_it_and_links_the_changelog(self):
+        html = (self.SITE / "index.html").read_text(encoding="utf-8")
+        js = (self.SITE / "app.js").read_text(encoding="utf-8")
+        self.assertIn('id="release-info"', html)
+        self.assertIn("function buildReleaseInfo", js)
+        self.assertIn("/CHANGELOG.md", js)
+        boot = js[js.index("function boot()"):][:900]
+        self.assertIn("buildReleaseInfo()", boot)
+
+
 class TestEnglishNames(unittest.TestCase):
     """The optional `name_en` field and how the site shows it. See
     docs/ux-analysis.md, point 8."""

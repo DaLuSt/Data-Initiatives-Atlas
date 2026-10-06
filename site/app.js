@@ -117,6 +117,24 @@
     });
   }
 
+  /** Footer: which release this is, linked to the changelog. */
+  function buildReleaseInfo() {
+    var r = G.release || {};
+    if (!r.data_release && !r.schema_version) return;
+    var repo = G.repository || {};
+    var base = repo.owner && repo.name ? "https://github.com/" + repo.owner + "/" + repo.name : null;
+    var parts = [];
+    if (r.data_release) parts.push("Data release " + esc(r.data_release) +
+      (r.released ? " (" + esc(r.released) + ")" : ""));
+    if (r.schema_version) parts.push("Schema " + esc(r.schema_version));
+    var html = parts.join(" · ");
+    if (base) html += ' · <a href="' + base + "/blob/" + esc(repo.branch || "main") +
+      '/CHANGELOG.md" rel="noopener">Changelog</a> · <a href="' + base + '/releases" rel="noopener">Releases</a>';
+    var el = $("release-info");
+    el.innerHTML = html;
+    el.hidden = false;
+  }
+
   /** Point every node's `label` at the name for the current mode. Everything
    *  else (graph, list, search, compare, detail) reads `label`. */
   function applyNames() {
@@ -138,6 +156,7 @@
         G.nodes.forEach(function (n) { nodeById[n.id] = n; });
         applyNames();
         buildChrome();
+        buildReleaseInfo();
         buildStart();
         initGraph();
         $("loading").hidden = true;

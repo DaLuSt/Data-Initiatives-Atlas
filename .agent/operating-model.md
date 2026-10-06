@@ -66,6 +66,12 @@ do not push directly to `main`:
    `discovery/unresolved.md`; run `tools/build_graph.py` to check it
    generates, but `site/graph.json`/`site/details.json` are gitignored and
    never committed).
+   If the change touches `metadata/schema.json`, bump `schema_version` in the
+   same commit (`metadata/versioning.md`; CI enforces it). Never edit
+   `CHANGELOG.md` or `metadata/version.yaml`: the release pull request, opened
+   automatically and merged by the owner, writes them. Roadmap items are GitHub
+   issues labelled `roadmap` (`docs/roadmap.md`); close the one your PR finishes
+   by writing `Closes #N` in the PR body.
 4. Validate locally — see `.agent/quality-policy.md`'s three checks. All
    three must be clean before committing.
 5. Commit with a clear message describing the actual change, ending with:

@@ -1,0 +1,118 @@
+name: Release pull request
+
+# Opens a pull request that prepares the next data release: the version in
+# metadata/version.yaml, a new CHANGELOG.md entry built from the pull requests
+# merged since the last release, and the release block in .agent/state.yaml.
+# Nothing is tagged or published here. A person merges the pull request, and
+# release-publish.yml then creates the tags and the GitHub Release.
+# Policy: metadata/versioning.md.
+#
+# Two things to know about pull requests opened by a workflow:
+#  * The repository setting "Allow GitHub Actions to create and approve pull
+#    requests" (Settings > Actions > General) must be on, or the last step
+#    fails; the branch is still pushed and the log says where to open the PR.
+#  * They do not trigger validate.yml (GitHub's recursion protection), so this
+#    workflow runs the validation itself before opening the pull request.
+on:
+  schedule:
+    # Mondays, 05:17 UTC.
+    - cron: "17 5 * * 1"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Release even if only housekeeping changed since the last release"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: read
+
+concurrency:
+  group: release-pr
+  cancel-in-progress: false
+
+jobs:
+  release-pr:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r validation/requirements.txt
+
+      - name: Skip if a release pull request is already open
+        id: open
+        run: |
+          n=$(gh pr list --label release --state open --json number --jq length)
+          echo "open=$n" >> "$GITHUB_OUTPUT"
+          if [ "$n" != "0" ]; then echo "A release pull request is already open; nothing to do."; fi
+
+      - name: Roadmap issues closed since the last release
+        if: steps.open.outputs.open == '0'
+        run: |
+          last=$(git tag --list 'data-*' --sort=-creatordate | head -1)
+          if [ -n "$last" ]; then
+            since=$(git log -1 --format=%cI "$last")
+            gh issue list --state closed --label roadmap --search "closed:>$since" \
+              --json number,title --limit 100 > issues.json
+          else
+            echo "[]" > issues.json
+          fi
+          cat issues.json
+
+      - name: Prepare the release
+        id: prepare
+        if: steps.open.outputs.open == '0'
+        run: |
+          force=""
+          if [ "${{ inputs.force }}" = "true" ]; then force="--force"; fi
+          if python tools/release.py prepare --issues-json issues.json $force; then
+            version=$(python -c "import yaml; print(yaml.safe_load(open('metadata/version.yaml'))['data_release'])")
+            echo "version=$version" >> "$GITHUB_OUTPUT"
+            python tools/release.py notes "$version" > release-notes.md
+          else
+            echo "Nothing to release."
+          fi
+
+      - name: Validate the prepared release
+        if: steps.prepare.outputs.version != ''
+        run: |
+          (cd validation && python run_all.py)
+          python tools/build_graph.py --check
+
+      - name: Open the release pull request
+        if: steps.prepare.outputs.version != ''
+        run: |
+          version="${{ steps.prepare.outputs.version }}"
+          branch="release/data-$version"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git add metadata/version.yaml CHANGELOG.md .agent/state.yaml
+          git commit -m "Release data $version"
+          git push origin "$branch"
+          gh label create release --color 0e8a16 --description "Prepares a data release" 2>/dev/null || true
+          {
+            cat release-notes.md
+            echo
+            echo "---"
+            echo "Merging this pull request tags \`data-$version\` and publishes the GitHub Release;"
+            echo "see \`metadata/versioning.md\`. CI does not run on pull requests opened by a"
+            echo "workflow, so validation ran in the workflow that opened this one."
+          } > pr-body.md
+          if ! gh pr create --base main --head "$branch" --title "Release data $version" \
+                 --body-file pr-body.md --label release; then
+            echo "::error::Could not open the pull request. Enable 'Allow GitHub Actions to create and approve pull requests' (Settings > Actions > General), or open one from branch $branch."
+            exit 1
+          fi
