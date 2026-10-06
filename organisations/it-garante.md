@@ -2,9 +2,11 @@
 id: IT-GARANTE
 type: organisation
 name: Garante per la protezione dei dati personali
+name_en: "Italian Data Protection Authority"
 alternative_names:
   - Garante privacy
   - GPDP
+  - "Italian Data Protection Authority"
 description: >
   Italy's independent supervisory authority for the protection of personal
   data, and the Italian member of the European Data Protection Board.
@@ -54,6 +56,10 @@ sources:
     url: "https://www.edpb.europa.eu/about-edpb/about-edpb/members_en"
     publisher: "European Data Protection Board"
     accessed: "2026-08-21"
+  - title: "Garante per la protezione dei dati personali — English home page"
+    url: "https://www.garanteprivacy.it/web/garante-privacy-en"
+    publisher: "Garante per la protezione dei dati personali"
+    accessed: "2026-10-06"
 ---
 
 # Garante per la protezione dei dati personali

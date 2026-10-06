@@ -58,9 +58,12 @@ sources:               # required for any entity making factual claims
   by the site (and switchable there) in the graph, list, search and detail panel.
   It is the Atlas's label, **not necessarily an official translation**: the site
   says so. Set it only where `name` is not already English. Take it from an
-  English name the entity's own sources use, or one already listed in
-  `alternative_names`; do not translate a title yourself and present it as a name.
-  It must not repeat `name`. Absence is normal, and means the site shows `name`.
+  English name the entity's own sources use (a body's English site, an official
+  translation, an English page of the government or the EDPB) and cite that
+  source in `sources`; do not translate a title yourself and present it as a
+  name. It must not repeat `name`, and it must also be listed in
+  `alternative_names` (search and de-duplication read that list). Absence is
+  normal, and means the site shows `name`.
 - **alternative_names**: helps discovery/deduplication; also searched by
   contributors before creating a new entity (README §"Do Not Overwrite").
 - **description**: factual only. Interpretation belongs in `relationships:`

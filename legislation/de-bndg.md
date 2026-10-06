@@ -2,9 +2,11 @@
 id: DE-BNDG
 type: act
 name: Gesetz über den Bundesnachrichtendienst
+name_en: "Act on the Federal Intelligence Service"
 alternative_names:
   - BND-Gesetz
   - BNDG
+  - "Act on the Federal Intelligence Service"
 description: >
   German federal act constituting the Bundesnachrichtendienst and defining
   its tasks and powers. It is one of the three service-specific acts of the
@@ -55,6 +57,10 @@ sources:
     url: "https://www.bfdi.bund.de/DE/Fachthemen/Inhalte/Nachrichtendienste/Kontrollandschaft-Nachrichtendienste-des-Bundes.html"
     publisher: "Bundesbeauftragte für den Datenschutz und die Informationsfreiheit (BfDI)"
     accessed: "2026-08-22"
+  - title: "BfDI (Federal Commissioner for Data Protection and Freedom of Information) — Supervision over federal intelligence services (English)"
+    url: "https://www.bfdi.bund.de/EN/Fachthemen/Inhalte/Nachrichtendienste/Kontrollandschaft-Nachrichtendienste-des-Bundes.html"
+    publisher: "Federal Commissioner for Data Protection and Freedom of Information"
+    accessed: "2026-10-06"
 ---
 
 # BND-Gesetz (BNDG)

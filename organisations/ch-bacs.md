@@ -2,10 +2,12 @@
 id: CH-BACS
 type: organisation
 name: Bundesamt für Cybersicherheit
+name_en: "National Cyber Security Centre"
 alternative_names:
   - BACS
   - OFCS
   - UFCS
+  - "National Cyber Security Centre"
 description: >
   Switzerland's federal office for cybersecurity and the country's
   competence centre for cyber matters, serving as first point of contact for
@@ -75,6 +77,10 @@ sources:
     url: "https://www.bacs.admin.ch/de/gesetzliche-grundlagen-zur-meldepflicht"
     publisher: "Bundesamt für Cybersicherheit (BACS)"
     accessed: "2026-09-26"
+  - title: "National Cyber Security Centre (English site of the Bundesamt für Cybersicherheit)"
+    url: "https://www.bacs.admin.ch/en"
+    publisher: "Swiss Confederation"
+    accessed: "2026-10-06"
 ---
 
 # Bundesamt für Cybersicherheit (BACS)

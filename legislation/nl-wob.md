@@ -2,8 +2,10 @@
 id: NL-WOB
 type: act
 name: Wet openbaarheid van bestuur
+name_en: "Government Information (Public Access) Act"
 alternative_names:
   - Wob
+  - "Government Information (Public Access) Act"
 description: >
   Former Dutch government transparency act, replaced on 1 May 2022 by the
   Wet open overheid. It established a primarily passive disclosure regime,
@@ -41,6 +43,10 @@ sources:
     url: "https://www.kbvg.nl/nieuws-en-opinie/kbvg-nieuws/wet-open-overheid-woo-vervangt-de-wet-openbaarheid-van-bestuur-wob"
     publisher: "Koninklijke Beroepsorganisatie van Gerechtsdeurwaarders (KBvG)"
     accessed: "2026-08-27"
+  - title: "Open data policy (data.overheid.nl, English)"
+    url: "https://data.overheid.nl/en/ondersteuning/open-data/beleid"
+    publisher: "Data overheid (Dutch government open data portal)"
+    accessed: "2026-10-06"
 ---
 
 # Wet openbaarheid van bestuur (Wob)

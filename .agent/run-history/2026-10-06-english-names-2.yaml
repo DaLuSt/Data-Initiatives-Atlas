@@ -1,0 +1,34 @@
+date: "2026-10-06"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Owner asked to continue with the remaining English names (row #233).
+
+  Went through the 61 records still lacking name_en that really are named in
+  another language (excluding English names the word list had caught) and looked
+  for the body's own English page or an official translation. Found and added
+  23, each with the page cited in the file's sources (accessed 2026-10-06) and
+  the name also added to alternative_names: AT-DSB, AT-EGOVG (RIS notes the
+  English translation), CH-BACS, CH-REVDSG (Fedlex English PDF, stated to have
+  no legal force), DE-BAMAD, DE-BFDI (EDPB members page), DE-BFV, DE-BMDS,
+  DE-BNDG, DE-EGOVG (official translation), DE-G10, DE-MADG, DE-PKGRG, DE-UKR
+  (the BfDI English page for the intelligence laws and bodies, text verified
+  against the raw page), ES-NTI-RISP (datos.gob.es English page; read through a
+  fetch tool because curl got a 403), IT-GARANTE, NL-BOMOS, NL-NCTV (the page
+  uses both word orders; the body text matches the Dutch name), NL-TNO-WET,
+  NL-WBNI, NL-WET-BRP, NL-WHO and NL-WOB (data.overheid.nl English page).
+  Every claim was checked against the page text except where noted.
+
+  Validator now also requires name_en to be listed in alternative_names;
+  scoring searches name_en too. Tests: TestEnglishNames gained the alias rule and
+  a check that the 23 cite a source; a mutation removing the alias rule fails it,
+  and removing one alias from a real file makes the validator fail.
+
+  Not found (left unset, tried and recorded in row #233, now about 38 records):
+  Belgian laws and bodies, Swiss EMBAG, the Dutch BAG/BGT/BRO/WOZ/CBS acts, the
+  French ordonnances, Spanish orders and regional agencies, German strategies
+  and Länder IT bodies, PDOK, Red.es, CSSF. A first guess for DE-DIGITALSTRATEGIE
+  came from a page about the 2018 strategy, a different document, and was
+  dropped. Nothing was translated by the session.
+prs: []
+outcome: in-progress
+entity_count_after: 740

@@ -835,10 +835,12 @@ class TestEnglishNames(unittest.TestCase):
         cls.vf = validate_frontmatter
         cls.entities = [e for e in load_all_entities() if e.frontmatter]
 
-    def _errors(self, name, name_en):
+    def _errors(self, name, name_en, aliases=None):
         from common import Report
         report = Report("t")
-        self.vf.check_name_en("x.md", name, name_en, report)
+        if aliases is None:
+            aliases = [name_en] if isinstance(name_en, str) else []
+        self.vf.check_name_en("x.md", name, name_en, aliases, report)
         return report.errors
 
     def test_validator(self):
@@ -849,26 +851,28 @@ class TestEnglishNames(unittest.TestCase):
         self.assertTrue(self._errors("Wet digitale overheid", " Digital Government Act"))
         self.assertTrue(self._errors("Digital Government Act", "digital government act"))
 
+    def test_name_en_must_also_be_an_alternative_name(self):
+        self.assertTrue(self._errors("Wet digitale overheid", "Digital Government Act", ["Wdo"]))
+        self.assertEqual(self._errors("Wet digitale overheid", "Digital Government Act",
+                                      ["Wdo", "digital government act"]), [])
+
     def test_every_value_in_the_repository_is_valid(self):
         n = 0
         for e in self.entities:
             fm = e.frontmatter
             if "name_en" in fm:
                 n += 1
-                self.assertEqual(self._errors(fm.get("name"), fm["name_en"]), [], fm["id"])
+                self.assertEqual(self._errors(fm.get("name"), fm["name_en"],
+                                              fm.get("alternative_names")), [], fm["id"])
         self.assertGreater(n, 100, "the backfill should have set well over a hundred")
 
-    def test_backfilled_values_come_from_existing_alternative_names(self):
-        # The backfill took names the files already listed rather than
-        # translating anything. New values may legitimately come from a source
-        # instead, so this checks the set that was backfilled, not every future one.
-        missing = []
-        for e in self.entities:
-            fm = e.frontmatter
-            if fm.get("name_en") and fm["name_en"].casefold() not in \
-                    [str(a).casefold() for a in (fm.get("alternative_names") or [])]:
-                missing.append(fm["id"])
-        self.assertTrue(len(missing) <= 3, "name_en not among alternative_names: %s" % missing[:5])
+    def test_batch_two_values_cite_the_source_they_came_from(self):
+        # The 2026-10-06 second pass added 23 names from bodies' own English
+        # pages and official translations; each one cites its page in `sources`.
+        cited = [e.frontmatter["id"] for e in self.entities
+                 if e.frontmatter.get("name_en") and any(
+                     str(s.get("accessed")) == "2026-10-06" for s in (e.frontmatter.get("sources") or []))]
+        self.assertGreaterEqual(len(cited), 23)
 
     def test_graph_nodes_carry_name_en(self):
         payload, errors, _ = build_graph.build()
@@ -888,7 +892,7 @@ class TestEnglishNames(unittest.TestCase):
         self.assertIn('params.get("names")', js)
         self.assertIn('p.set("names", nameMode)', js)
         # both names stay searchable whichever is shown
-        self.assertIn("[n.label, n.official, n.id]", js)
+        self.assertIn("[n.label, n.official, n.id].concat(n.name_en", js)
         # the sidebar and the detail panel both say an English name is not
         # necessarily official
         self.assertIn("not necessarily an official translation", html)

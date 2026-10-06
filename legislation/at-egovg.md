@@ -2,9 +2,11 @@
 id: AT-EGOVG
 type: act
 name: E-Government-Gesetz
+name_en: "Federal Act on Provisions Facilitating Electronic Communications with Public Bodies"
 alternative_names:
   - E-GovG
   - Bundesgesetz über Regelungen zur Erleichterung des elektronischen Verkehrs mit öffentlichen Stellen
+  - "Federal Act on Provisions Facilitating Electronic Communications with Public Bodies"
 description: >
   Austrian federal law facilitating electronic transactions with public
   authorities, in force since 1 January 2005 (BGBl. I Nr. 10/2004). Its
@@ -61,6 +63,10 @@ sources:
     url: "https://www.digitalaustria.gv.at/wissenswertes/e-government-a-z/egovernment-gesetz.html"
     publisher: "Digital Austria"
     accessed: "2026-09-04"
+  - title: "E-Government-Gesetz, Bundesrecht konsolidiert (RIS; notes the English translation 'Federal Act on Provisions Facilitating Electronic Communications with Public Bodies')"
+    url: "https://www.ris.bka.gv.at/Dokumente/Bundesnormen/NOR40263219/NOR40263219.html"
+    publisher: "Rechtsinformationssystem des Bundes (RIS)"
+    accessed: "2026-10-06"
 ---
 
 # E-Government-Gesetz

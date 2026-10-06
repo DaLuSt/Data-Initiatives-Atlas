@@ -1877,7 +1877,7 @@
   }
 
   function scoreNode(n, q) {
-    var hay = [n.label, n.official, n.id].concat(n.aliases || []);
+    var hay = [n.label, n.official, n.id].concat(n.name_en ? [n.name_en] : [], n.aliases || []);
     var best = 0;
     for (var i = 0; i < hay.length; i++) {
       var s = String(hay[i]).toLowerCase();

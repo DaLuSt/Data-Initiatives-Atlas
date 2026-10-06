@@ -2,8 +2,10 @@
 id: NL-WBNI
 type: act
 name: Wet beveiliging netwerk- en informatiesystemen
+name_en: "Network and Information Systems Security Act"
 alternative_names:
   - Wbni
+  - "Network and Information Systems Security Act"
 description: >
   Dutch act on the security of network and information systems,
   implementing the original EU NIS Directive. Superseded by the
@@ -59,6 +61,10 @@ sources:
     url: "https://zoek.officielebekendmakingen.nl/stb-2018-389.html"
     publisher: "Overheid.nl (officiële bekendmakingen)"
     accessed: "2026-09-05"
+  - title: "Statutory mandate (NCSC-NL, English)"
+    url: "https://www.ncsc.nl/en/about-us/statutory-mandate"
+    publisher: "Nationaal Cyber Security Centrum"
+    accessed: "2026-10-06"
 ---
 
 # Wet beveiliging netwerk- en informatiesystemen (Wbni)

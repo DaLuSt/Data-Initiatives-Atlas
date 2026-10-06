@@ -2,9 +2,11 @@
 id: DE-EGOVG
 type: act
 name: E-Government-Gesetz
+name_en: "Act to promote electronic government"
 alternative_names:
   - EGovG
   - Gesetz zur Förderung der elektronischen Verwaltung
+  - "Act to promote electronic government"
 description: >
   German federal act promoting electronic administration, enacted as
   Article 1 of the act of 25 July 2013 and largely in force from 1 August
@@ -62,6 +64,10 @@ sources:
     url: "https://docs.fitko.de/kompass/docs/grundlagen-und-rahmen/e-government/"
     publisher: "Föderale IT-Kooperation (FITKO)"
     accessed: "2026-08-22"
+  - title: "Act to promote electronic government (E-Government Act - EgovG), English translation"
+    url: "https://www.gesetze-im-internet.de/englisch_egovg/englisch_egovg.html"
+    publisher: "Federal Ministry of Justice / Federal Office of Justice (Gesetze im Internet)"
+    accessed: "2026-10-06"
 ---
 
 # E-Government-Gesetz (EGovG)

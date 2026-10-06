@@ -2,8 +2,10 @@
 id: NL-TNO-WET
 type: act
 name: TNO-wet
+name_en: "TNO Act"
 alternative_names:
   - Wet van 19 december 1985, houdende regeling van de Nederlandse Organisatie voor toegepast-natuurwetenschappelijk onderzoek TNO
+  - "TNO Act"
 description: >
   The currently operative Dutch act constituting the Nederlandse
   Organisatie voor toegepast-natuurwetenschappelijk onderzoek (TNO) as a
@@ -58,6 +60,10 @@ sources:
     url: "https://nl.wikipedia.org/wiki/Nederlandse_Organisatie_voor_toegepast-natuurwetenschappelijk_onderzoek"
     publisher: "Wikipedia"
     accessed: "2026-08-27"
+  - title: "TNO — Organisation (English; refers to 'the TNO Act')"
+    url: "https://www.tno.nl/en/about-tno/organisation/structure/"
+    publisher: "TNO"
+    accessed: "2026-10-06"
 ---
 
 # TNO-wet

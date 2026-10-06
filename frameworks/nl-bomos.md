@@ -2,8 +2,10 @@
 id: NL-BOMOS
 type: framework
 name: Beheer- en OntwikkelModel voor Open Standaarden
+name_en: "Management and Development Model for Open Standards"
 alternative_names:
   - BOMOS
+  - "Management and Development Model for Open Standards"
 description: >
   Dutch model describing a layered set of activities relevant to developing
   and managing open standards. Used by Dutch standards-management
@@ -66,6 +68,10 @@ sources:
     url: "https://www.forumstandaardisatie.nl/sites/default/files/BFS/4-basisinformatie/publicaties/BOMOS2-deel-1-(de-basis).pdf"
     publisher: "Forum Standaardisatie"
     accessed: "2026-09-05"
+  - title: "BOMOS: The Foundation 3.0.1 (English)"
+    url: "https://logius-standaarden.github.io/publicatie/bomos/fundament/en/3.0.1/"
+    publisher: "Logius"
+    accessed: "2026-10-06"
 ---
 
 # BOMOS

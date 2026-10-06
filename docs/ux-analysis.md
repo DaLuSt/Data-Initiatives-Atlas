@@ -137,8 +137,8 @@ nothing marked it as one, so the site could not use it.
   (`metadata/metadata-schema.md`). It is the Atlas's own label and not
   necessarily an official translation, and the site says so. The validator
   rejects an empty value, stray whitespace, or a value that repeats `name`.
-- **Backfilled for 169 entities, each from an English name the file already
-  listed.** Nothing was translated. A script checked that every value is
+- **Backfilled for 169 entities in the first pass, each from an English name
+  the file already listed.** Nothing was translated. A script checked that every value is
   literally one of that entity's alternative names; where the only English
   form was a nickname or ambiguous (for example two Brussels ordonnances shared
   one alias) the entity was left without one.
@@ -146,11 +146,17 @@ nothing marked it as one, so the site could not use it.
   detail panel. A "Names" control in the sidebar switches to official titles
   only (`names=official` in the address). The detail panel gives both names and
   the caveat. Both names stay searchable whichever is shown.
-- **Not done: about 67 records still have no English name**, because none
-  was in the file and a translation by a session would be a guess presented as
-  a name. They are recorded as `discovery/unresolved.md` row #233; the English
-  name should come from the body's own English page or an official translation.
-  This also stays separate from row #9 (a multilingual `name`), which is open.
+- **Second pass (2026-10-06): 23 more names**, each from the body's own English
+  page or an official translation and cited in that file's `sources` (BfDI's
+  English page for the German intelligence laws and bodies; the Dutch
+  government, NCSC-NL, NCTV and data.overheid.nl pages; the Austrian RIS and
+  Fedlex translations; the EDPB members page; and others). The validator now
+  also requires `name_en` to be listed in `alternative_names`.
+- **Still without an English name: about 38 records**, where no English page
+  or official translation could be read (see `discovery/unresolved.md` row #233
+  for what was tried). A translation by a session would be a guess presented as
+  a name, so they are left. This also stays separate from row #9 (a
+  multilingual `name`), which is open.
 - A side effect: a graph can now mix English and original names (a node
   without `name_en` keeps its official title), which is why the control exists.
 

@@ -2,8 +2,10 @@
 id: NL-WET-BRP
 type: act
 name: Wet basisregistratie personen
+name_en: "Personal Records Database Act"
 alternative_names:
   - Wet BRP
+  - "Personal Records Database Act"
 description: >
   Dutch act forming the basis for the registration of personal data in the
   Basisregistratie Personen. In force since 6 January 2014, it replaced the
@@ -53,6 +55,10 @@ sources:
     url: "https://www.rijksoverheid.nl/onderwerpen/privacy-en-persoonsgegevens/basisregistratie-personen-brp"
     publisher: "Rijksoverheid"
     accessed: "2026-08-27"
+  - title: "Personal Records Database (BRP) (Government.nl)"
+    url: "https://www.government.nl/themes/government-and-democracy/personal-data/personal-records-database-brp"
+    publisher: "Government of the Netherlands"
+    accessed: "2026-10-06"
 ---
 
 # Wet basisregistratie personen (Wet BRP)
