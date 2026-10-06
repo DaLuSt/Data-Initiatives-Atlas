@@ -160,6 +160,10 @@ relationship whose cited page was found by search but never read is tagged
 **source not read**. (In the repository these fields are `verification`,
 `confidence` and `coverage`.)
 
+On a phone the panel sits under the graph instead of over it, so the graph is
+fitted to the space left; it starts as a short strip, and **Show more** opens it
+to most of the screen.
+
 Every panel ends with **Open entity on GitHub**, linking to the Markdown
 file the entity is defined in. The List view links to the same file from
 every row.

@@ -1,0 +1,24 @@
+date: "2026-10-06"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Owner asked to continue with point 5 of the usability review (phones).
+  Measured at 390 x 844 with touch emulation: the top bar took 204 px (24% of
+  the screen), the detail sheet covered 62% of the layout so only 38% of the
+  canvas showed, buttons were 30 px, filter rows 24 px, list names 19 px.
+
+  Changes (site only): below 860 px the top bar is title + Start here + Filters
+  + a heart-only Sponsor button (name kept for screen readers), then the four
+  views full width, then search: 145 px. The detail panel is stacked in the
+  layout column rather than floated, so the canvas shrinks and the graph is
+  fitted to what is left (all 382 px of canvas visible); it starts at 40% and a
+  "Show more / Show less" handle (aria-expanded) takes it to 70%; the close
+  button stays reachable while it scrolls. On touch screens (pointer: coarse)
+  buttons and filter rows are 40 px, tables' and panel's text buttons 31-32 px.
+  Footer text is smaller on phones. Desktop measured unchanged (handle hidden).
+
+  New TestMobileLayout (4 tests); two mutations (drop the column layout, shrink
+  the row height) each fail it. docs/ux-analysis.md and docs/graph.md updated.
+  Not done: points 8, 9; no real-device or landscape test.
+prs: []
+outcome: in-progress
+entity_count_after: 740

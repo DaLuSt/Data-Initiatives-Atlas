@@ -24,7 +24,7 @@ reorder the list below.
 | 2 | Sidebar wording used the repository's internals ("Typed relationships (frontmatter, provenanced)", "Associations", "Wikilinks (Obsidian navigation)"). | **Done 2026-10-06** |
 | 3 | Explorer: the hint said "No entity selected" on a deep link; the graph was fitted before the detail panel narrowed the canvas, so its right side was cut off; the default of 2 hops gave 282 unlabelled entities for a hub like the GDPR. | **Done 2026-10-06** |
 | 4 | Statistics came first in the sidebar; the filters people want (country, type, domain) and the legend needed scrolling. | **Done 2026-10-06** (see below) |
-| 5 | Mobile: the graph is tiny; the detail sheet covers over half the screen, including the list the visitor chose from; view buttons are 30 px high and checkboxes 13 px. | Open |
+| 5 | Mobile: the graph is tiny; the detail sheet covers over half the screen, including the list the visitor chose from; view buttons are 30 px high and checkboxes 13 px. | **Done 2026-10-06** (see below) |
 | 6 | Compare listed countries alphabetically, so the first columns (Albania, Andorra, Argentina, Armenia) were empty and the countries with data were off to the right. | **Done 2026-10-06** |
 | 7 | The detail panel showed internal research notes ("NOT READ — search-only.") in full for every relationship, "Confidence: Low" with no explanation that it describes the Atlas's certainty and not the law, and dates as "2026 08 21". | **Done 2026-10-06** (see below) |
 | 8 | Entity names are official titles in the national language, with no short English display name. Related to `discovery/unresolved.md` row #9 (multilingual names). | Open |
@@ -86,5 +86,24 @@ active ("Filters (2)"). Statistics moved to the bottom; the counts are in the
   of the GDPR's 52). The same caveat appears above the evidence when a link is
   tapped on the canvas. The evidence text itself is unchanged.
 
+## Point 5: phones (2026-10-06)
+Measured at 390 × 844 with touch emulation, before and after:
+
+| | Before | After |
+|---|---|---|
+| Top bar | 204 px (24% of the screen), five rows | 145 px: title, Start here, Filters and a ♥ Sponsor button; the four views on one row; search |
+| Graph visible with an entity open | 38% of the canvas; the rest sat under the sheet | all of it: 382 px, fitted to what is left |
+| Detail panel | a sheet over the canvas, 62% high | a strip under the graph, 40% high, with "Show more" (70%) and "Show less" |
+| View buttons and top-bar buttons | 30 px high | 40 px |
+| Rows to tick in the filters | 24 px, 13 px checkbox | 40 px, 19 px checkbox |
+| Names in the list, relationship links, "Evidence" links | 17 to 19 px | 31 to 32 px |
+
+The panel is stacked in the column instead of floated, so the canvas really
+shrinks and the existing resize-and-fit code fits the graph to the space that is
+left. The ♥ button keeps its name ("Sponsor") for screen readers and as a tooltip.
+The 40 px sizes apply to touch screens (`pointer: coarse`); a narrow desktop
+window keeps the compact sizes. Not measured: a real phone, landscape, or
+screens narrower than 360 px.
+
 ## Suggested order for the rest
-5 (mobile) and 8 (short English display names), then 9.
+8 (short English display names), then 9.

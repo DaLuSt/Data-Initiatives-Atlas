@@ -20,6 +20,8 @@ summary: >
   plus chip, NOT READ marker still present in the data). Mutation check: turning
   the details element into a div fails the test. docs/graph.md and
   docs/ux-analysis.md updated. Not done: points 5, 8, 9.
-prs: []
-outcome: in-progress
+prs:
+  - number: 435
+    title: "Make the detail panel readable"
+outcome: merged
 entity_count_after: 740

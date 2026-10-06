@@ -365,6 +365,9 @@
     $("relayout").addEventListener("click", function () { runLayout(true); });
 
     $("detail-close").addEventListener("click", closeDetail);
+    $("detail-expand").addEventListener("click", function () {
+      setDetailExpanded(!$("detail").classList.contains("is-expanded"));
+    });
     $("filters-toggle").addEventListener("click", function () {
       var open = $("sidebar").classList.toggle("is-open");
       this.setAttribute("aria-expanded", String(open));
@@ -1475,7 +1478,19 @@
     showDetail(id);
   }
 
+  /** On a phone the detail panel sits under the graph and starts as a short
+   *  strip; "Show more" lets it take most of the screen. (Desktop hides the
+   *  button, so the class is harmless there.) */
+  function setDetailExpanded(on) {
+    $("detail").classList.toggle("is-expanded", on);
+    var b = $("detail-expand");
+    b.setAttribute("aria-expanded", on ? "true" : "false");
+    b.textContent = on ? "Show less" : "Show more";
+    if (cy) { cy.resize(); if (view === "explorer") cy.fit(undefined, 40); }
+  }
+
   function closeDetail() {
+    setDetailExpanded(false);
     $("detail").hidden = true;
     if (cy) {
       cy.elements().removeClass("dim hl focus");

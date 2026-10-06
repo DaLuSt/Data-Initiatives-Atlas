@@ -788,6 +788,48 @@ class TestSidebarOrder(unittest.TestCase):
         self.assertIn("updateFilterBadges()", body[:200])
 
 
+class TestMobileLayout(unittest.TestCase):
+    """On a phone the top bar is compact, the detail panel is a strip under the
+    graph (not a sheet over it) and touch targets are 40 px. See
+    docs/ux-analysis.md, point 5."""
+
+    SITE = Path(__file__).resolve().parent.parent / "site"
+    CSS = (SITE / "app.css").read_text(encoding="utf-8")
+    HTML = (SITE / "index.html").read_text(encoding="utf-8")
+    JS = (SITE / "app.js").read_text(encoding="utf-8")
+
+    def phone_block(self):
+        start = self.CSS.index("@media (max-width: 860px) {")
+        return self.CSS[start:self.CSS.index("@media (max-width: 520px)")]
+
+    def test_detail_is_stacked_under_the_canvas_not_floated_over_it(self):
+        block = self.phone_block()
+        self.assertIn("flex-direction: column", block)
+        detail = block[block.index("  .detail {"):]
+        detail = detail[:detail.index("}")]
+        self.assertNotIn("position: absolute", detail)
+        self.assertIn("max-height: 40%", detail)
+
+    def test_handle_expands_and_reports_state(self):
+        self.assertIn('id="detail-expand"', self.HTML)
+        self.assertIn('aria-expanded="false" aria-controls="detail-body"', self.HTML)
+        self.assertIn("function setDetailExpanded", self.JS)
+        close = self.JS[self.JS.index("function closeDetail"):][:200]
+        self.assertIn("setDetailExpanded(false)", close)
+        # hidden on desktop
+        self.assertIn(".detail-handle { display: none; }", self.CSS)
+
+    def test_touch_targets_are_40px(self):
+        coarse = self.CSS[self.CSS.index("@media (pointer: coarse)"):]
+        for rule in (".view-btn, .icon-btn, .secondary, .mini { min-height: 40px; }",
+                     ".check { min-height: 40px;"):
+            self.assertIn(rule, coarse)
+
+    def test_sponsor_button_keeps_an_accessible_name(self):
+        self.assertIn('<span class="sponsor-text">Sponsor</span>', self.HTML)
+        self.assertIn(".sponsor-text { position: absolute;", self.phone_block())
+
+
 class TestDetailPanel(unittest.TestCase):
     """The detail panel explains the Atlas's own record in plain words and keeps
     long evidence out of the way. See docs/ux-analysis.md, point 7."""
