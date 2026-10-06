@@ -37,9 +37,9 @@ plan changes; there is no other schedule.
 The Project board has four columns: **Backlog** (not scheduled), **Next**
 (aimed at the coming release), **In progress**, **Done**. The board's built-in
 workflows move an issue to *Done* when it closes and add new `roadmap` issues to
-*Backlog*. Setting the board up is a few clicks in the GitHub UI, because
-creating a Project needs permissions that the repository's automation does not
-have:
+*Backlog*. Setting the board up is a few clicks in the GitHub UI: Projects can
+only be created through GitHub's GraphQL API, which the agent's environment cannot
+call (issue #444 tracks it).
 
 1. Create a Project (Projects tab, *New project*, Board layout) named *Atlas roadmap*.
 2. In the project's *Workflows*: enable *Item added to project* (Status = Backlog)
