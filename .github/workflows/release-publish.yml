@@ -1,0 +1,60 @@
+name: Publish release
+
+# Runs when a release pull request is merged (it changes metadata/version.yaml
+# on main). Creates the tag data-YYYY.MM.N and a GitHub Release whose notes are
+# the CHANGELOG entry, plus the tag schema-X.Y.Z the first time that schema
+# version is released. Idempotent: a tag or release that exists is left alone,
+# so re-running is safe. Policy: metadata/versioning.md.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "metadata/version.yaml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r validation/requirements.txt
+
+      - name: Create the tags
+        run: |
+          python tools/release.py tags | tee tags.txt
+          while IFS=$'\t' read -r tag state; do
+            if [ "$state" = "missing" ]; then
+              git tag "$tag"
+              git push origin "$tag"
+            fi
+          done < tags.txt
+
+      - name: Create the GitHub Release
+        run: |
+          version=$(python -c "import yaml; print(yaml.safe_load(open('metadata/version.yaml'))['data_release'])")
+          tag="data-$version"
+          if gh release view "$tag" >/dev/null 2>&1; then
+            echo "Release $tag already exists."
+          else
+            python tools/release.py notes "$version" > notes.md
+            gh release create "$tag" --verify-tag --latest \
+              --title "Data release $version" --notes-file notes.md
+          fi

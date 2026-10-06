@@ -105,6 +105,20 @@ The same suite runs automatically on pull requests via
 `.github/workflows/validate.yml`. A PR with failing validation will not be
 merged.
 
+## Versions and releases
+
+The Atlas has a **schema version** (in `metadata/schema.json`) and dated **data
+releases** (`YYYY.MM.N`), described in `metadata/versioning.md` and listed in
+`CHANGELOG.md`. Two rules for contributors:
+
+- If your pull request changes `metadata/schema.json` (a type, level, status,
+  relationship type, rank value or field), bump `schema_version` in the same
+  pull request: MAJOR for a removal or rename, MINOR for an addition, PATCH for a
+  clarification. CI fails a schema change without a bump. List a new optional
+  field in `optional_fields` too.
+- Do not edit `CHANGELOG.md` or `metadata/version.yaml`. A release pull request
+  is opened automatically from the merged pull requests; the owner merges it.
+
 ## Batch workflow
 
 This repository is populated in scoped batches (see `progress/backlog.md`

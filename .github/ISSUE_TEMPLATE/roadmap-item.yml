@@ -1,0 +1,37 @@
+name: Roadmap item
+description: A scoped piece of future work for the Atlas (data, site, schema, research or infrastructure)
+labels: ["roadmap"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Roadmap items are deliverables someone could finish in a few pull requests.
+        Open questions and unsourced leads belong in `discovery/unresolved.md` and
+        `discovery/candidates.md`; link them here if this item comes from one.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options: ["Data (entities and relationships)", "Site and features", "Schema (the data model)", "Research (sources, verification)", "Infrastructure and tooling"]
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Outcome
+      description: What is true when this is done, in a sentence or two.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it matters
+    validations:
+      required: false
+  - type: textarea
+    id: links
+    attributes:
+      label: Where it comes from
+      description: Backlog entry, `unresolved.md` row, candidate, usability finding, or a source.
+    validations:
+      required: false

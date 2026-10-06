@@ -39,6 +39,19 @@ jobs:
       - name: Test the re-verification runner
         run: python tools/test_reverify.py
 
+      # The release tooling: version arithmetic, change classification, the
+      # CHANGELOG entry, the schema-version rule. Pure functions, no network.
+      - name: Test the release tooling
+        run: python tools/test_release.py
+
+      # A change to the data model must come with a schema_version bump
+      # (metadata/versioning.md). Compares schema.json with the base branch.
+      - name: Check the schema version
+        if: github.event_name == 'pull_request'
+        run: |
+          git fetch --depth=1 origin "${{ github.base_ref }}"
+          python tools/release.py check-schema --base-ref "origin/${{ github.base_ref }}"
+
       # Proves the graph can still be generated from this branch's data before
       # it is allowed to reach main. The generated files are not committed, so
       # there is no committed copy to go stale; reproducibility of the build is

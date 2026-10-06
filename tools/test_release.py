@@ -1,0 +1,322 @@
+#!/usr/bin/env python3
+"""Tests for tools/release.py and the release workflows.
+
+Pure functions plus one throw-away git repository; no network, no GitHub.
+
+    python tools/test_release.py
+"""
+
+from __future__ import annotations
+
+import json
+import re
+import subprocess
+import sys
+import tempfile
+import unittest
+from datetime import date
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT / "tools"))
+sys.path.insert(0, str(REPO_ROOT / "validation"))
+
+import release  # noqa: E402
+
+
+class TestVersions(unittest.TestCase):
+    def test_first_release_of_a_month_is_one(self):
+        self.assertEqual(release.next_data_version(date(2026, 10, 6), []), "2026.10.1")
+
+    def test_second_release_in_a_month_increments(self):
+        tags = ["data-2026.10.1", "data-2026.10.2"]
+        self.assertEqual(release.next_data_version(date(2026, 10, 20), tags), "2026.10.3")
+
+    def test_a_new_month_starts_again_at_one(self):
+        self.assertEqual(release.next_data_version(date(2026, 11, 2), ["data-2026.10.4"]), "2026.11.1")
+
+    def test_ten_sorts_after_nine(self):
+        tags = [f"data-2026.10.{n}" for n in range(1, 11)]
+        self.assertEqual(release.next_data_version(date(2026, 10, 30), tags), "2026.10.11")
+
+    def test_other_tags_are_ignored(self):
+        tags = ["schema-1.2.0", "v3", "data-latest", "data-2026.13.1", "data-2026.10.0"]
+        self.assertEqual(release.next_data_version(date(2026, 10, 6), tags), "2026.10.1")
+
+    def test_semver_parsing(self):
+        self.assertEqual(release.semver_tuple("1.10.2"), (1, 10, 2))
+        for bad in ("1.0", "01.0.0", "1.0.0-rc1", "", None):
+            with self.assertRaises(ValueError):
+                release.semver_tuple(bad)
+
+
+class TestClassify(unittest.TestCase):
+    def test_priority_order(self):
+        c = release.classify
+        self.assertEqual(c(["metadata/schema.json", "site/app.js", "legislation/x.md"]), "schema")
+        self.assertEqual(c(["site/app.js", "legislation/x.md", "docs/graph.md"]), "site")
+        self.assertEqual(c(["legislation/x.md", "tools/build_graph.py"]), "data")
+        self.assertEqual(c(["tools/release.py", "docs/x.md"]), "tooling")
+        self.assertEqual(c([".github/workflows/x.yml"]), "tooling")
+        self.assertEqual(c(["docs/ux-analysis.md", ".agent/state.yaml"]), "docs")
+        self.assertEqual(c(["README.md"]), "docs")
+        self.assertEqual(c([".agent/state.yaml", "discovery/candidates.md"]), "housekeeping")
+        self.assertEqual(c([]), "housekeeping")
+
+    def test_ontology_counts_as_schema(self):
+        self.assertEqual(release.classify(["metadata/ontology.md"]), "schema")
+
+    def test_every_data_folder_in_the_schema_is_a_data_dir(self):
+        schema = json.loads((REPO_ROOT / "metadata" / "schema.json").read_text(encoding="utf-8"))
+        for folder in set(schema["type_folder_map"].values()):
+            self.assertEqual(release.classify([f"{folder}/x.md"]), "data", folder)
+
+
+class TestLog(unittest.TestCase):
+    RAW = (
+        "a1\x1fAdd a thing (#12)\x1f2026-10-05T10:00:00+00:00\x1e\n"
+        "b2\x1fDirect commit with no number\x1f2026-10-04T10:00:00+00:00\x1e\n"
+        "c3\x1fRelease data 2026.10.1 (#13)\x1f2026-10-03T10:00:00+00:00\x1e\n"
+        "d4\x1fFix (#14) and more (#15)\x1f2026-10-02T10:00:00+00:00\x1e\n")
+
+    def test_only_numbered_squash_merges_count(self):
+        got = release.parse_log(self.RAW)
+        self.assertEqual([c["number"] for c in got], [12, 13, 15])
+        self.assertEqual(got[0]["title"], "Add a thing")
+        self.assertEqual(got[0]["date"], "2026-10-05")
+        self.assertEqual(got[2]["title"], "Fix (#14) and more")
+
+    def test_release_pull_requests_are_recognised(self):
+        got = release.parse_log(self.RAW)
+        self.assertEqual([release.is_release_change(c) for c in got], [False, True, False])
+
+
+class TestEntry(unittest.TestCase):
+    def change(self, n, title, cat):
+        return {"number": n, "title": title, "category": cat, "sha": "x", "date": "2026-10-05"}
+
+    def render(self, **kw):
+        base = dict(version="2026.10.2", schema="1.1.0", prev_schema="1.0.0", released="2026-10-12",
+                    counts={"entities": 750, "relationships": 1600, "countries": 59},
+                    prev_counts={"entities": 740, "relationships": 1565, "countries": 58},
+                    changes=[], issues=[], baseline=False)
+        base.update(kw)
+        return release.render_entry(**base)
+
+    def test_heading_schema_and_deltas(self):
+        text = self.render()
+        self.assertIn("## Data release 2026.10.2 — 2026-10-12", text)
+        self.assertIn("**Schema 1.1.0** (changed from 1.0.0)", text)
+        self.assertIn("750 entities (+10)", text)
+        self.assertIn("1,600 typed relationships (+35)", text)
+        self.assertIn("59 countries (+1)", text)
+
+    def test_unchanged_schema_is_said_so(self):
+        self.assertIn("(unchanged)", self.render(schema="1.0.0"))
+
+    def test_changes_are_grouped_in_category_order(self):
+        text = self.render(changes=[
+            self.change(5, "Fix a typo", "docs"), self.change(4, "Add Y", "data"),
+            self.change(3, "New panel", "site"), self.change(2, "Add a type", "schema")])
+        order = [text.index(h) for h in ("### Schema", "### Site and features", "### Data", "### Documentation")]
+        self.assertEqual(order, sorted(order))
+        self.assertIn("- New panel (#3)", text)
+        self.assertNotIn("### Tooling", text)
+
+    def test_empty_release_says_so(self):
+        self.assertIn("No pull requests were merged", self.render())
+
+    def test_baseline_lists_no_pull_requests(self):
+        text = self.render(baseline=True, prev_schema=None, prev_counts=None,
+                           changes=[self.change(1, "Old", "data")])
+        self.assertIn("first tagged release", text)
+        self.assertNotIn("(#1)", text)
+        self.assertNotIn("(+", text)
+
+    def test_issues_section(self):
+        text = self.render(issues=[{"number": 7, "title": "CSV export"}])
+        self.assertIn("### Roadmap items completed", text)
+        self.assertIn("- CSV export (#7)", text)
+
+    def test_insert_and_extract_round_trip(self):
+        log = "# Changelog\n\n" + release.START_MARK + "\n\n" + release.END_MARK + "\n"
+        first = self.render(version="2026.10.1", baseline=True, prev_schema=None, prev_counts=None)
+        second = self.render(version="2026.10.2", changes=[self.change(5, "X", "data")])
+        log = release.insert_entry(log, first)
+        log = release.insert_entry(log, second)
+        self.assertLess(log.index("2026.10.2"), log.index("2026.10.1"), "newest first")
+        self.assertIn("- X (#5)", release.entry_for(log, "2026.10.2"))
+        self.assertNotIn("2026.10.1", release.entry_for(log, "2026.10.2"))
+        self.assertIn("first tagged release", release.entry_for(log, "2026.10.1"))
+        self.assertIsNone(release.entry_for(log, "2026.10.9"))
+        self.assertTrue(log.rstrip().endswith(release.END_MARK))
+
+    def test_missing_markers_are_refused(self):
+        with self.assertRaises(ValueError):
+            release.insert_entry("# Changelog\n", "## x\n")
+
+    def test_the_repository_changelog_has_its_markers(self):
+        text = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+        self.assertIn(release.START_MARK, text)
+        self.assertIn(release.END_MARK, text)
+
+
+class TestSchemaRule(unittest.TestCase):
+    def doc(self, version, types=("act",)):
+        return json.dumps({"schema_version": version, "types": list(types)})
+
+    def test_model_change_without_bump_is_an_error(self):
+        err = release.schema_change_error(self.doc("1.0.0"), self.doc("1.0.0", ("act", "decision")))
+        self.assertIn("did not", err)
+
+    def test_model_change_with_bump_is_fine(self):
+        self.assertIsNone(release.schema_change_error(self.doc("1.0.0"), self.doc("1.1.0", ("act", "decision"))))
+
+    def test_version_going_backwards_is_an_error(self):
+        err = release.schema_change_error(self.doc("1.2.0"), self.doc("1.1.0", ("act", "decision")))
+        self.assertIn("backwards", err)
+
+    def test_no_change_is_fine(self):
+        self.assertIsNone(release.schema_change_error(self.doc("1.0.0"), self.doc("1.0.0")))
+
+    def test_bump_alone_is_allowed(self):
+        self.assertIsNone(release.schema_change_error(self.doc("1.0.0"), self.doc("1.0.1")))
+
+    def test_bad_version_is_an_error(self):
+        self.assertIn("MAJOR.MINOR.PATCH", release.schema_change_error(None, self.doc("1.0")))
+
+    def test_first_introduction_of_the_version_is_fine(self):
+        old = json.dumps({"types": ["act"]})
+        self.assertIsNone(release.schema_change_error(old, self.doc("1.0.0", ("act", "x"))))
+
+    def test_the_repository_schema_has_a_valid_version(self):
+        schema = json.loads((REPO_ROOT / "metadata" / "schema.json").read_text(encoding="utf-8"))
+        release.semver_tuple(schema["schema_version"])
+
+    def test_every_field_in_use_is_listed_in_the_schema(self):
+        # Without this, adding an optional field would not change schema.json
+        # and so would slip past the schema-version rule.
+        import common
+        schema = json.loads((REPO_ROOT / "metadata" / "schema.json").read_text(encoding="utf-8"))
+        known = set(schema["required_fields"]) | set(schema["optional_fields"])
+        used = set()
+        for e in common.load_all_entities():
+            if e.frontmatter:
+                used |= set(e.frontmatter)
+        self.assertEqual(sorted(used - known), [], "frontmatter fields missing from schema.json")
+
+
+class TestStateText(unittest.TestCase):
+    STATE = "updated: x\n\nvalidation_status: clean\n\nlast_merged_prs:\n  - number: 1\n"
+
+    def test_adds_the_block_after_validation_status(self):
+        out = release.update_state_text(self.STATE, "2026.10.1", "1.0.0", "2026-10-06")
+        self.assertIn('release:\n  data: "2026.10.1"\n  schema: "1.0.0"\n  released: "2026-10-06"\n', out)
+        self.assertLess(out.index("validation_status"), out.index("release:"))
+        self.assertLess(out.index("release:"), out.index("last_merged_prs"))
+
+    def test_replaces_an_existing_block(self):
+        once = release.update_state_text(self.STATE, "2026.10.1", "1.0.0", "2026-10-06")
+        twice = release.update_state_text(once, "2026.10.2", "1.1.0", "2026-10-12")
+        self.assertEqual(twice.count("release:"), 1)
+        self.assertIn('"2026.10.2"', twice)
+        self.assertNotIn('"2026.10.1"', twice)
+        self.assertIn("last_merged_prs", twice)
+
+
+class TestGit(unittest.TestCase):
+    """changes_since against a real throw-away repository."""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.root = Path(self.tmp.name)
+        self.orig = release.REPO_ROOT
+        release.REPO_ROOT = self.root
+        self.git("init", "-q", "-b", "main")
+        self.git("config", "user.email", "t@example.com")
+        self.git("config", "user.name", "t")
+
+    def tearDown(self):
+        release.REPO_ROOT = self.orig
+        self.tmp.cleanup()
+
+    def git(self, *args):
+        subprocess.run(["git", *args], cwd=self.root, check=True, capture_output=True, text=True)
+
+    def commit(self, subject, path):
+        f = self.root / path
+        f.parent.mkdir(parents=True, exist_ok=True)
+        f.write_text(subject, encoding="utf-8")
+        self.git("add", "-A")
+        self.git("commit", "-q", "-m", subject)
+
+    def test_changes_since_a_tag(self):
+        self.commit("Old data (#1)", "legislation/a.md")
+        self.git("tag", "data-2026.10.1")
+        self.commit("New panel (#2)", "site/app.js")
+        self.commit("Release data 2026.10.2 (#3)", "metadata/version.yaml")
+        self.commit("Add a country (#4)", "countries/xx/xx.md")
+        self.commit("Housekeeping: record #4 (#5)", ".agent/state.yaml")
+        self.commit("Direct commit", "docs/x.md")
+        got = release.changes_since("data-2026.10.1")
+        self.assertEqual([(c["number"], c["category"]) for c in got],
+                         [(5, "housekeeping"), (4, "data"), (2, "site")])
+        self.assertEqual(release.last_data_tag(), "data-2026.10.1")
+
+    def test_no_tag_means_everything(self):
+        self.commit("First (#1)", "legislation/a.md")
+        self.commit("Second (#2)", "docs/a.md")
+        self.assertEqual([c["number"] for c in release.changes_since(None)], [2, 1])
+        self.assertIsNone(release.last_data_tag())
+
+
+class TestWorkflows(unittest.TestCase):
+    WF = REPO_ROOT / ".github" / "workflows"
+
+    def test_workflows_parse_and_call_real_subcommands(self):
+        import yaml
+        for name in ("release-pr.yml", "release-publish.yml", "validate.yml"):
+            text = (self.WF / name).read_text(encoding="utf-8")
+            yaml.safe_load(text)
+            for sub in re.findall(r"tools/release\.py (\S+)", text):
+                self.assertIn(sub, {"plan", "prepare", "notes", "tags", "check-schema"}, f"{name}: {sub}")
+
+    def test_the_release_workflow_never_publishes(self):
+        text = (self.WF / "release-pr.yml").read_text(encoding="utf-8")
+        for forbidden in ("gh release create", "git push origin main", 'git push origin "$tag"'):
+            self.assertTrue(forbidden not in text, f"release-pr.yml must not contain {forbidden!r}")
+        # reading tags is fine; creating one is not
+        self.assertIsNone(re.search(r"git tag (?!--list)", text), "release-pr.yml creates a tag")
+
+    def test_publishing_runs_only_when_the_version_file_changes_on_main(self):
+        import yaml
+        wf = yaml.safe_load((self.WF / "release-publish.yml").read_text(encoding="utf-8"))
+        push = wf[True]["push"]  # PyYAML reads the key `on` as True
+        self.assertEqual(push["branches"], ["main"])
+        self.assertEqual(push["paths"], ["metadata/version.yaml"])
+
+    def test_the_release_title_matches_what_the_tool_skips(self):
+        text = (self.WF / "release-pr.yml").read_text(encoding="utf-8")
+        self.assertIn('--title "Release data $version"', text)
+        self.assertTrue(release.is_release_change({"title": "Release data 2026.10.1"}))
+
+    def test_the_roadmap_label_is_the_same_everywhere(self):
+        template = (REPO_ROOT / ".github" / "ISSUE_TEMPLATE" / "roadmap-item.yml").read_text(encoding="utf-8")
+        workflow = (self.WF / "release-pr.yml").read_text(encoding="utf-8")
+        docs = (REPO_ROOT / "docs" / "roadmap.md").read_text(encoding="utf-8")
+        self.assertIn('labels: ["roadmap"]', template)
+        self.assertIn("--label roadmap", workflow)
+        self.assertIn("`roadmap`", docs)
+        for ref in ("docs/roadmap.md", "metadata/versioning.md"):
+            self.assertTrue((REPO_ROOT / ref).exists(), ref)
+            self.assertIn(ref, (REPO_ROOT / ".agent" / "operating-model.md").read_text(encoding="utf-8") +
+                          (REPO_ROOT / "CONTRIBUTING.md").read_text(encoding="utf-8"))
+
+    def test_ci_checks_the_schema_version_on_pull_requests(self):
+        text = (self.WF / "validate.yml").read_text(encoding="utf-8")
+        self.assertIn("check-schema --base-ref", text)
+        self.assertIn("test_release.py", text)
+
+
+if __name__ == "__main__":
+    unittest.main(verbosity=2)

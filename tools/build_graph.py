@@ -131,6 +131,20 @@ def compact(mapping: dict) -> dict:
     }
 
 
+def release_info(schema: dict) -> dict:
+    """Which release this build is from. `metadata/version.yaml` is written by
+    tools/release.py when a release is prepared; before the first release there
+    is none, and only the schema version is known."""
+    import yaml
+    path = REPO_ROOT / "metadata" / "version.yaml"
+    v = (yaml.safe_load(path.read_text(encoding="utf-8")) or {}) if path.exists() else {}
+    return compact({
+        "data_release": v.get("data_release"),
+        "schema_version": schema.get("schema_version"),
+        "released": str(v["released"]) if v.get("released") else None,
+    })
+
+
 def build(strict_wikilinks: bool = True) -> tuple[dict, list[str], list[str]]:
     """Return (graph, errors, warnings). Never invents a node (brief §27)."""
     errors: list[str] = []
@@ -498,6 +512,7 @@ def build(strict_wikilinks: bool = True) -> tuple[dict, list[str], list[str]]:
         "repository": compact({
             "owner": owner, "name": repo, "branch": git_default_branch(),
         }),
+        "release": release_info(schema),
         "vocabularies": {
             "types": schema.get("types", []),
             "levels": schema.get("levels", []),

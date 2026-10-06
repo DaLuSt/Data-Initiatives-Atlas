@@ -52,6 +52,8 @@ not just in your final chat message.
 | **Specific, scoped research leads** ready to become an entity | `discovery/research-queue.md` |
 | **Suspected duplicate entities** | `discovery/duplicates.md` |
 | Which source domains are reachable/blocked, re-verification targets | `discovery/reverification-allowlist.md` (generated — regenerate with `python tools/source_hosts.py --markdown -o discovery/reverification-allowlist.md`, never hand-edit) |
+| Versions (schema SemVer, dated data releases), the changelog, how releases are made | `metadata/versioning.md`, `CHANGELOG.md`, `tools/release.py` — releases are prepared by an automatic pull request that the owner merges; never edit `CHANGELOG.md` or `metadata/version.yaml` by hand |
+| Roadmap (GitHub issues labelled `roadmap`, a Project board, milestones named after data releases) | `docs/roadmap.md` |
 | Validation | `validation/run_all.py` (5 checks), `tools/test_build_graph.py` (unit tests), `tools/build_graph.py --check` |
 | Graph generation | `tools/build_graph.py` → `site/graph.json` / `site/details.json` |
 
