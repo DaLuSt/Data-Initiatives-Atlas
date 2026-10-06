@@ -122,6 +122,12 @@ last_merged_prs:
     summary: "Housekeeping: recorded #427-428 in state.yaml and run-history"
   - number: 430
     summary: "Usability review of the site (docs/ux-analysis.md) and its first three fixes: the Explorer hint follows the selection, the detail panel no longer cuts the graph off, and the depth is chosen automatically (at most 60 entities) until the visitor picks one; the sidebar's connection classes are now Relationships / Shared context / Mentions; Compare orders countries by recorded data and hides the 17 empty ones behind a checkbox"
+  - number: 431
+    summary: "Housekeeping: recorded #429-430 in state.yaml and run-history"
+  - number: 432
+    summary: "Added a 'Start here' card for first-time visitors (what the picture is, with live counts, and five example links; point 1 of docs/ux-analysis.md)"
+  - number: 433
+    summary: "Sidebar reordered so Filters (Country, Entity type, Domain open) and the Legend come first and Statistics last; headings show what is ticked and the top-bar Filters button shows the number of active groups (point 4 of docs/ux-analysis.md)"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
