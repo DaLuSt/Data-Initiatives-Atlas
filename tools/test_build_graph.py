@@ -788,6 +788,41 @@ class TestSidebarOrder(unittest.TestCase):
         self.assertIn("updateFilterBadges()", body[:200])
 
 
+class TestSmallFixes(unittest.TestCase):
+    """The small items of docs/ux-analysis.md, point 9."""
+
+    SITE = Path(__file__).resolve().parent.parent / "site"
+    HTML = (SITE / "index.html").read_text(encoding="utf-8")
+    JS = (SITE / "app.js").read_text(encoding="utf-8")
+
+    def test_button_names_contain_their_visible_text(self):
+        import re
+        # WCAG 2.5.3 (label in name): an aria-label must contain what is shown.
+        for m in re.finditer(r'<button[^>]*aria-label="([^"]+)"[^>]*>([^<]+)</button>', self.HTML):
+            label, text = m.group(1).lower(), m.group(2).strip().lower()
+            if text.replace("-", "").isalpha():  # skip the + and − glyph buttons
+                self.assertIn(text, label, "aria-label %r must contain %r" % (m.group(1), text))
+
+    def test_wheel_sensitivity_is_left_at_the_default(self):
+        self.assertNotIn("wheelSensitivity", self.JS)
+
+    def test_every_view_has_one_main_landmark(self):
+        for vid in ("stage", "listview", "compareview"):
+            self.assertRegex(self.HTML, r'<main [^>]*id="%s"' % vid)
+
+    def test_detail_sections_are_h3_under_the_h2_title(self):
+        self.assertIn('<div class="d-sec"><h3>', self.JS)
+        self.assertNotIn("<h4>", self.JS)
+
+    def test_copy_link_and_data_downloads(self):
+        self.assertIn('id="copy-link"', self.HTML)
+        self.assertIn("function copyLink", self.JS)
+        for name in ("graph.json", "details.json"):
+            self.assertIn('<a href="%s" download>' % name, self.HTML)
+        # the links must point at what the app itself loads
+        self.assertIn('fetch("graph.json"', self.JS)
+
+
 class TestMobileLayout(unittest.TestCase):
     """On a phone the top bar is compact, the detail panel is a strip under the
     graph (not a sheet over it) and touch targets are 40 px. See

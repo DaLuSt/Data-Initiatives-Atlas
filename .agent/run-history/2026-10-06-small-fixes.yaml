@@ -1,0 +1,25 @@
+date: "2026-10-06"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Owner asked to start on point 9 of the usability review (small things).
+
+  Re-layout: aria-label did not contain its visible text (axe serious); now
+  "Re-layout the graph". Zoom: removed the custom wheelSensitivity (0.25),
+  which made Cytoscape warn in the console; measured one 100-delta tick as
+  ~1.1% zoom with the custom value and ~4.5% with the default, i.e. it was
+  sluggish, not abrupt as the review had guessed (the review's wording is
+  corrected in docs/ux-analysis.md); feel on real hardware not tested.
+  Footer: "Copy link to this view" (clipboard, prompt fallback, live-region
+  confirmation) and download links for graph.json and details.json.
+  Re-running axe turned up two older findings, fixed: detail section headings
+  h4 under an h2 (now h3) and no main landmark in the List and Compare views
+  (now main elements). axe is clean on bare, Explorer and List views.
+
+  New TestSmallFixes (5 tests). Mutations: restoring the old aria-label,
+  restoring wheelSensitivity, and turning the list main back into a section
+  each fail it; the first mutation initially slipped through because the test
+  skipped "Re-layout" (hyphen), which was fixed and re-checked. Not done: CSV
+  export of the List view; point 8.
+prs: []
+outcome: in-progress
+entity_count_after: 740

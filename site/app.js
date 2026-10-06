@@ -363,6 +363,7 @@
     $("zoom-out").addEventListener("click", function () { cy.zoom({ level: cy.zoom() / 1.35, renderedPosition: centre() }); });
     $("fit").addEventListener("click", function () { cy.fit(undefined, 40); });
     $("relayout").addEventListener("click", function () { runLayout(true); });
+    $("copy-link").addEventListener("click", copyLink);
 
     $("detail-close").addEventListener("click", closeDetail);
     $("detail-expand").addEventListener("click", function () {
@@ -431,7 +432,6 @@
     cy = cytoscape({
       container: $("cy"),
       elements: [],
-      wheelSensitivity: 0.25,
       maxZoom: 3,
       minZoom: 0.04,
       textureOnViewport: true,
@@ -1489,6 +1489,23 @@
     if (cy) { cy.resize(); if (view === "explorer") cy.fit(undefined, 40); }
   }
 
+  /** The address already carries the view, focus, depth and filters (the app
+   *  keeps it in step with replaceState), so sharing a view is copying it. */
+  function copyLink() {
+    var b = $("copy-link"), status = $("copy-status");
+    function done(msg) {
+      b.textContent = msg; status.textContent = msg;
+      setTimeout(function () { b.textContent = "Copy link to this view"; status.textContent = ""; }, 2500);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(location.href).then(
+        function () { done("Link copied"); },
+        function () { window.prompt("Copy this link", location.href); });
+    } else {
+      window.prompt("Copy this link", location.href);
+    }
+  }
+
   function closeDetail() {
     setDetailExpanded(false);
     $("detail").hidden = true;
@@ -1669,7 +1686,7 @@
   }
 
   function sec(title, inner) {
-    return '<div class="d-sec"><h4>' + esc(title) + "</h4>" + inner + "</div>";
+    return '<div class="d-sec"><h3>' + esc(title) + "</h3>" + inner + "</div>";
   }
   function link(id) {
     var n = nodeById[id];

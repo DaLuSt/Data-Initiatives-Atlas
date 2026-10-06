@@ -173,6 +173,10 @@ every row.
 `…/#EU-GDPR` opens the Atlas focused on that entity. The URL updates as you
 navigate, so any view of the graph can be shared or bookmarked.
 
+The footer has **Copy link to this view**, which copies that address, and links
+to the generated `graph.json` and `details.json` for anyone who wants the data
+itself.
+
 ---
 
 ## Reading the picture
