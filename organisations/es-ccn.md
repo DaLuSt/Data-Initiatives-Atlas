@@ -2,6 +2,7 @@
 id: ES-CCN
 type: organisation
 name: Centro Criptológico Nacional
+name_en: "National Cryptologic Centre"
 alternative_names:
   - CCN
   - CCN-CERT

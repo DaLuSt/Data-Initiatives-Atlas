@@ -2,6 +2,7 @@
 id: FR-LOI-DPR-2007
 type: act
 name: "Loi n° 2007-1443 du 9 octobre 2007 portant création d'une délégation parlementaire au renseignement"
+name_en: "French Parliamentary Intelligence Delegation Act"
 alternative_names:
   - "Loi du 9 octobre 2007"
   - "French Parliamentary Intelligence Delegation Act"

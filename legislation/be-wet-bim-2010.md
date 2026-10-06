@@ -2,6 +2,7 @@
 id: BE-WET-BIM-2010
 type: act
 name: "Wet van 4 februari 2010 betreffende de methoden voor het verzamelen van gegevens door de inlichtingen- en veiligheidsdiensten"
+name_en: "Belgian Special Intelligence Methods Act"
 alternative_names:
   - "BIM-wet"
   - "Loi du 4 février 2010 relative aux méthodes de recueil des données"

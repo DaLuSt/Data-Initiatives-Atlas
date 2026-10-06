@@ -14,6 +14,7 @@ Do not invent information to fill a field. Omit optional fields, or use
 id:                    # required — see metadata/ontology.md §2
 type:                  # required — controlled vocabulary, ontology.md §1
 name:                  # required — official or commonly recognised name
+name_en:               # optional — short English display name (see Field notes)
 alternative_names:     # optional — list of known aliases/abbreviations
 description:           # required — short factual description, no interpretation
 
@@ -53,6 +54,13 @@ sources:               # required for any entity making factual claims
 - **id**: stable, unique, never reused. Format in `ontology.md` §2.
 - **type**: one value from the entity type table in `ontology.md` §1.
 - **name**: the name used in prose and in wikilinks' display text.
+- **name_en**: a short English name for readers who cannot read `name`, shown
+  by the site (and switchable there) in the graph, list, search and detail panel.
+  It is the Atlas's label, **not necessarily an official translation**: the site
+  says so. Set it only where `name` is not already English. Take it from an
+  English name the entity's own sources use, or one already listed in
+  `alternative_names`; do not translate a title yourself and present it as a name.
+  It must not repeat `name`. Absence is normal, and means the site shows `name`.
 - **alternative_names**: helps discovery/deduplication; also searched by
   contributors before creating a new entity (README §"Do Not Overwrite").
 - **description**: factual only. Interpretation belongs in `relationships:`

@@ -2,6 +2,7 @@
 id: NL-TNO
 type: organisation
 name: Nederlandse Organisatie voor toegepast-natuurwetenschappelijk onderzoek
+name_en: "Netherlands Organisation for Applied Scientific Research"
 alternative_names:
   - TNO
   - Netherlands Organisation for Applied Scientific Research

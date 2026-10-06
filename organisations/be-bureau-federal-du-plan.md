@@ -2,6 +2,7 @@
 id: BE-BUREAU-FEDERAL-DU-PLAN
 type: organisation
 name: Bureau fédéral du Plan
+name_en: "Federal Planning Bureau"
 alternative_names:
   - Federaal Planbureau
   - Federal Planning Bureau

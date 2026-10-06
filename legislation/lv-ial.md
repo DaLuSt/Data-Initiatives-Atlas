@@ -2,6 +2,7 @@
 id: LV-IAL
 type: act
 name: Informācijas atklātības likums
+name_en: "Freedom of Information Law"
 alternative_names:
   - IAL
   - Freedom of Information Law

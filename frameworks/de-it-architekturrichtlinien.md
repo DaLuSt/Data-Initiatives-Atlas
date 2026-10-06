@@ -2,6 +2,7 @@
 id: DE-IT-ARCHITEKTURRICHTLINIEN
 type: framework
 name: Föderale IT-Architekturrichtlinien
+name_en: "Federal IT Architecture Guidelines"
 alternative_names:
   - Föderale IT-Architekturrichtlinie
   - Federal IT Architecture Guidelines

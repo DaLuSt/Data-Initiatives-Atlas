@@ -2,6 +2,7 @@
 id: PL-GUS
 type: organisation
 name: Główny Urząd Statystyczny
+name_en: "Statistics Poland"
 alternative_names:
   - GUS
   - Statistics Poland

@@ -2,6 +2,7 @@
 id: NL-CBS
 type: organisation
 name: Centraal Bureau voor de Statistiek
+name_en: "Statistics Netherlands"
 alternative_names:
   - CBS
   - Statistics Netherlands

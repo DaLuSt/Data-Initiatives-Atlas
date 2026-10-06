@@ -2,6 +2,7 @@
 id: NL-RVO
 type: organisation
 name: Rijksdienst voor Ondernemend Nederland
+name_en: "Netherlands Enterprise Agency"
 alternative_names:
   - RVO
   - Netherlands Enterprise Agency

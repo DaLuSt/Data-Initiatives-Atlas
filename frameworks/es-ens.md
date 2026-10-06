@@ -2,6 +2,7 @@
 id: ES-ENS
 type: framework
 name: Esquema Nacional de Seguridad
+name_en: "Spanish National Security Framework"
 alternative_names:
   - ENS
   - Spanish National Security Framework

@@ -2,6 +2,7 @@
 id: PT-CNCS
 type: organisation
 name: Centro Nacional de Cibersegurança
+name_en: "Portuguese National Cybersecurity Centre"
 alternative_names:
   - CNCS
   - Portuguese National Cybersecurity Centre

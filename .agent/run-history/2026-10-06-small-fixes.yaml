@@ -20,6 +20,8 @@ summary: >
   each fail it; the first mutation initially slipped through because the test
   skipped "Re-layout" (hyphen), which was fixed and re-checked. Not done: CSV
   export of the List view; point 8.
-prs: []
-outcome: in-progress
+prs:
+  - number: 438
+    title: "Small usability fixes (point 9)"
+outcome: merged
 entity_count_after: 740

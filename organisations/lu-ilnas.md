@@ -2,6 +2,7 @@
 id: LU-ILNAS
 type: organisation
 name: Institut luxembourgeois de la normalisation, de l'accréditation, de la sécurité et qualité des produits et services
+name_en: "Luxembourg Institute for Standardization and Accreditation"
 alternative_names:
   - ILNAS
   - Luxembourg Institute for Standardization and Accreditation

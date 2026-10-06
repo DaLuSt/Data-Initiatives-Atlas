@@ -2,6 +2,7 @@
 id: NL-KVK
 type: organisation
 name: Kamer van Koophandel
+name_en: "Netherlands Chamber of Commerce"
 alternative_names:
   - KVK
   - Netherlands Chamber of Commerce

@@ -2,6 +2,7 @@
 id: FR-LOI-VALTER
 type: act
 name: Loi n° 2015-1779 du 28 décembre 2015 relative à la gratuité et aux modalités de la réutilisation des informations du secteur public
+name_en: "French Public Sector Information Re-use Act"
 alternative_names:
   - Loi Valter
   - Loi n° 2015-1779

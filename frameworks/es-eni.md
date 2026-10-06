@@ -2,6 +2,7 @@
 id: ES-ENI
 type: framework
 name: Esquema Nacional de Interoperabilidad
+name_en: "Spanish National Interoperability Framework"
 alternative_names:
   - ENI
   - Spanish National Interoperability Framework

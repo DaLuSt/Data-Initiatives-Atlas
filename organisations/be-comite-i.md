@@ -2,6 +2,7 @@
 id: BE-COMITE-I
 type: organisation
 name: Vast Comité van Toezicht op de inlichtingen- en veiligheidsdiensten
+name_en: "Standing Intelligence Agencies Review Committee"
 alternative_names:
   - Comité I
   - Comité R

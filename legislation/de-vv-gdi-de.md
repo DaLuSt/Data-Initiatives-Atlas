@@ -2,6 +2,7 @@
 id: DE-VV-GDI-DE
 type: agreement
 name: Verwaltungsvereinbarung über die Geodateninfrastruktur Deutschland
+name_en: "GDI-DE Administrative Agreement"
 alternative_names:
   - VV GDI-DE
   - GDI-DE Administrative Agreement

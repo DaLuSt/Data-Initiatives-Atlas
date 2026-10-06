@@ -2,6 +2,7 @@
 id: NL-CTIVD
 type: organisation
 name: Commissie van Toezicht op de Inlichtingen- en Veiligheidsdiensten
+name_en: "Review Committee on the Intelligence and Security Services"
 alternative_names:
   - CTIVD
   - Review Committee on the Intelligence and Security Services

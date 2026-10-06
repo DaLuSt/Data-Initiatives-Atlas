@@ -2,6 +2,7 @@
 id: CZ-UNMZ
 type: organisation
 name: Úřad pro technickou normalizaci, metrologii a státní zkušebnictví
+name_en: "Czech Office for Standards, Metrology and Testing"
 alternative_names:
   - ÚNMZ
   - UNMZ

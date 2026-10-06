@@ -2,6 +2,7 @@
 id: PT-INE
 type: organisation
 name: Instituto Nacional de Estatística (Portugal)
+name_en: "Statistics Portugal"
 alternative_names:
   - INE
   - INE Portugal

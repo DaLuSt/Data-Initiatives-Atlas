@@ -2,6 +2,7 @@
 id: PT-CNPD
 type: organisation
 name: Comissão Nacional de Proteção de Dados
+name_en: "Portuguese Data Protection Authority"
 alternative_names:
   - CNPD
   - Portuguese Data Protection Authority

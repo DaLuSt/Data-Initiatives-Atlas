@@ -2,6 +2,7 @@
 id: PL-UODO
 type: organisation
 name: Urząd Ochrony Danych Osobowych
+name_en: "Personal Data Protection Office"
 alternative_names:
   - UODO
   - PUODO

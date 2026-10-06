@@ -2,6 +2,7 @@
 id: BE-WET-DREIGINGSANALYSE-2006
 type: act
 name: "Wet van 10 juli 2006 betreffende de analyse van de dreiging"
+name_en: "Belgian Threat Analysis Act"
 alternative_names:
   - "Loi du 10 juillet 2006 relative à l'analyse de la menace"
   - "Belgian Threat Analysis Act"

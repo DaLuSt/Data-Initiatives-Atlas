@@ -2,6 +2,7 @@
 id: ES-LCGC
 type: act
 name: Anteproyecto de Ley de Coordinación y Gobernanza de la Ciberseguridad
+name_en: "Spanish Cybersecurity Coordination and Governance Bill"
 alternative_names:
   - Ley de Coordinación y Gobernanza de la Ciberseguridad
   - LCGC

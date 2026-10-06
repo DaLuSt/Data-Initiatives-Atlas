@@ -2,6 +2,7 @@
 id: BE-VL-BESTUURSDECREET-2021
 type: act
 name: Decreet van 2 juli 2021 tot wijziging van het Bestuursdecreet van 7 december 2018
+name_en: "Flemish Open Data Decree"
 alternative_names:
   - Vlaams open data-decreet
   - Flemish Open Data Decree

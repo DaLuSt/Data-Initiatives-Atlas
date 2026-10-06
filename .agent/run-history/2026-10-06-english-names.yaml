@@ -1,0 +1,31 @@
+date: "2026-10-06"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Owner asked to continue with point 8 of the usability review: entity names
+  are official titles in the national language with no short English name.
+
+  Added the optional frontmatter field name_en (validator: non-empty, trimmed,
+  not a repeat of name). Backfilled 169 entities, each from an English name
+  already listed in that entity's alternative_names (a script asserted every
+  value is literally one of them); nothing was translated. Entities whose only
+  English form was a nickname, or that would have collided (the two Brussels
+  ordonnances shared one alias), were left unset. About 67 non-English-named
+  records still have none: recorded as unresolved.md row #233 (English name to
+  come from the body's own page or an official translation); the count is a
+  word-list heuristic.
+
+  Site: node labels follow a name mode ("en" by default, "official" via a new
+  Names panel and names=official in the URL); list, Compare, search and the
+  detail panel use it, the detail panel states both names and that an English
+  name is the Atlas's label, not necessarily an official translation; both
+  names are searchable. build_graph carries name_en in the light payload.
+
+  New TestEnglishNames (5 tests) and the sidebar-order test updated for the new
+  panel; mutations (allow a repeated name, drop applyNames() from boot) each
+  fail the tests. Observed, not fixed: changing depth or names in the Explorer
+  makes Cytoscape log "edge has invalid endpoints" warnings (38 on a depth
+  change; pre-existing, present without name_en). Not tested: how mixed
+  English and original labels read to visitors.
+prs: []
+outcome: in-progress
+entity_count_after: 740

@@ -2,6 +2,7 @@
 id: FR-INSEE
 type: organisation
 name: Institut national de la statistique et des études économiques
+name_en: "National Institute of Statistics and Economic Studies"
 alternative_names:
   - INSEE
   - Insee

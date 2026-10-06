@@ -2,6 +2,7 @@
 id: PL-COI
 type: organisation
 name: Centralny Ośrodek Informatyki
+name_en: "Central IT Centre"
 alternative_names:
   - COI
   - Central IT Centre

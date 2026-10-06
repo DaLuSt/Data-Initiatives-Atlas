@@ -2,6 +2,7 @@
 id: NL-VNG
 type: organisation
 name: Vereniging van Nederlandse Gemeenten
+name_en: "Association of Netherlands Municipalities"
 alternative_names:
   - VNG
   - Association of Netherlands Municipalities

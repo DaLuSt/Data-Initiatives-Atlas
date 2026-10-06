@@ -2,6 +2,7 @@
 id: BE-CCB
 type: organisation
 name: Centrum voor Cybersecurity België
+name_en: "Centre for Cybersecurity Belgium"
 alternative_names:
   - CCB
   - Centre for Cybersecurity Belgium

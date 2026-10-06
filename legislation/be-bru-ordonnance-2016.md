@@ -2,6 +2,7 @@
 id: BE-BRU-ORDONNANCE-2016
 type: act
 name: Ordonnance du 27 octobre 2016 visant à l'établissement d'une politique de données ouvertes
+name_en: "Brussels open data ordonnance (2016)"
 alternative_names:
   - Brussels open data ordonnance (2016)
   - Ordonnance open data 2016

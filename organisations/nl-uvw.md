@@ -2,6 +2,7 @@
 id: NL-UVW
 type: organisation
 name: Unie van Waterschappen
+name_en: "Dutch Water Authorities"
 alternative_names:
   - UvW
   - Dutch Water Authorities

@@ -79,6 +79,23 @@ def check_rank(rel_path: str, entity_type, rank, schema: dict,
         )
 
 
+def check_name_en(rel_path: str, name, name_en, report: common.Report) -> None:
+    """`name_en` is an optional short English display name. Where it is set it
+    must be a non-empty string that says something `name` does not."""
+    if name_en is None:
+        return
+    if not isinstance(name_en, str) or not name_en.strip():
+        report.error(f"{rel_path}: 'name_en' must be a non-empty string")
+        return
+    if name_en != name_en.strip():
+        report.error(f"{rel_path}: 'name_en' has leading or trailing whitespace")
+    if isinstance(name, str) and name_en.strip().casefold() == name.strip().casefold():
+        report.error(
+            f"{rel_path}: 'name_en' repeats 'name'; remove it (an English "
+            f"official name needs no separate English name)"
+        )
+
+
 def main() -> int:
     schema = common.load_schema()
     entities = common.load_all_entities()
@@ -129,6 +146,7 @@ def main() -> int:
         if verification is not None and verification not in schema["verification_levels"]:
             report.error(f"{e.rel_path}: invalid verification '{verification}'")
 
+        check_name_en(e.rel_path, fm.get("name"), fm.get("name_en"), report)
         check_rank(e.rel_path, entity_type, fm.get("rank"), schema, report,
                    fm.get("status"))
 

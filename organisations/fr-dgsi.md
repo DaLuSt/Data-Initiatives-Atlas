@@ -2,6 +2,7 @@
 id: FR-DGSI
 type: organisation
 name: Direction générale de la Sécurité intérieure
+name_en: "Directorate-General for Internal Security"
 alternative_names:
   - DGSI
   - Directorate-General for Internal Security

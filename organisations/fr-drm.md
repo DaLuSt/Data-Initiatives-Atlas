@@ -2,6 +2,7 @@
 id: FR-DRM
 type: organisation
 name: Direction du renseignement militaire
+name_en: "Directorate of Military Intelligence"
 alternative_names:
   - DRM
   - Directorate of Military Intelligence

@@ -2,6 +2,7 @@
 id: FR-CNCTR
 type: organisation
 name: Commission nationale de contrôle des techniques de renseignement
+name_en: "National Commission for the Control of Intelligence Techniques"
 alternative_names:
   - CNCTR
   - National Commission for the Control of Intelligence Techniques

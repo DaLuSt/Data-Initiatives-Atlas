@@ -2,6 +2,7 @@
 id: NL-API-STRATEGIE
 type: framework
 name: API Strategie voor de Nederlandse Overheid
+name_en: "NL API Strategy"
 alternative_names:
   - Nederlandse API Strategie
   - NL API Strategy

@@ -2,6 +2,7 @@
 id: ES-CIFAS
 type: organisation
 name: Centro de Inteligencia de las Fuerzas Armadas
+name_en: "Armed Forces Intelligence Centre"
 alternative_names:
   - CIFAS
   - Armed Forces Intelligence Centre

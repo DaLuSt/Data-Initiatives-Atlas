@@ -2,6 +2,7 @@
 id: FR-INDICATEURS-ODD
 type: framework
 name: Indicateurs pour le suivi national des objectifs de développement durable
+name_en: "French national SDG indicator dashboard"
 alternative_names:
   - Tableau de bord national des ODD
   - French national SDG indicator dashboard

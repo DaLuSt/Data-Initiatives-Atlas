@@ -2,6 +2,7 @@
 id: DE-DESTATIS
 type: organisation
 name: Statistisches Bundesamt
+name_en: "Federal Statistical Office of Germany"
 alternative_names:
   - Destatis
   - StBA

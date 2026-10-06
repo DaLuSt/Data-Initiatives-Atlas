@@ -2,6 +2,7 @@
 id: NL-NWO
 type: organisation
 name: Nederlandse Organisatie voor Wetenschappelijk Onderzoek
+name_en: "Dutch Research Council"
 alternative_names:
   - NWO
   - Dutch Research Council

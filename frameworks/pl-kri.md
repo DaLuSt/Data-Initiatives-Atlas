@@ -2,6 +2,7 @@
 id: PL-KRI
 type: framework
 name: Krajowe Ramy Interoperacyjności
+name_en: "National Interoperability Framework (Poland)"
 alternative_names:
   - KRI
   - National Interoperability Framework (Poland)

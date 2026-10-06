@@ -182,6 +182,7 @@ def build(strict_wikilinks: bool = True) -> tuple[dict, list[str], list[str]]:
         nodes.append(compact({
             "id": eid,
             "label": fm.get("name") or eid,
+            "name_en": fm.get("name_en") or None,
             "type": fm.get("type"),
             "level": fm.get("level"),
             "country": fm.get("country"),

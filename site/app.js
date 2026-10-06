@@ -12,6 +12,10 @@
   var D = null;            // details.json (may still be loading)
   var cy = null;
   var nodeById = Object.create(null);
+  // Which name to show. "en": the short English name where the entity has one,
+  // otherwise the official name. "official": always `name`. n.official keeps
+  // the repository's `name`; n.label is whatever is currently shown.
+  var nameMode = "en";
   var VIEWS = ["atlas", "explorer", "compare", "list"];
   var LAYOUT_MODES = ["grouped", "force", "map"];
   var view = "atlas";      // atlas | explorer | compare | list
@@ -113,6 +117,15 @@
     });
   }
 
+  /** Point every node's `label` at the name for the current mode. Everything
+   *  else (graph, list, search, compare, detail) reads `label`. */
+  function applyNames() {
+    G.nodes.forEach(function (n) {
+      if (n.official === undefined) n.official = n.label;
+      n.label = (nameMode === "en" && n.name_en) ? n.name_en : n.official;
+    });
+  }
+
   // ── boot ─────────────────────────────────────────────────────────────
   function boot() {
     fetch("graph.json", { cache: "no-cache" })
@@ -123,6 +136,7 @@
       .then(function (data) {
         G = data;
         G.nodes.forEach(function (n) { nodeById[n.id] = n; });
+        applyNames();
         buildChrome();
         buildStart();
         initGraph();
@@ -350,6 +364,15 @@
       compareShowEmpty = e.target.checked;
       syncUrl();
       if (view === "compare") renderCompare();
+    });
+
+    $("names-mode").addEventListener("change", function (e) {
+      nameMode = e.target.value === "official" ? "official" : "en";
+      applyNames();
+      syncUrl();
+      $("path-target").value = pathTargetId ? nodeById[pathTargetId].label : "";
+      refresh();
+      if (focusId && !$("detail").hidden) showDetail(focusId);
     });
 
     $("layout-mode").addEventListener("change", function (e) {
@@ -1531,6 +1554,18 @@
     return /NOT READ/.test(text || "");
   }
 
+  /** Under the title: which name this is, and the other one. An English name
+   *  is the Atlas's own label, so the panel says it is not necessarily the
+   *  official translation. */
+  function nameNote(n) {
+    if (!n.name_en || n.name_en === n.official) return "";
+    if (n.label === n.name_en) {
+      return '<p class="hint d-names">Short English name, the Atlas\'s own label and not ' +
+        'necessarily an official translation. Official name: <strong>' + esc(n.official) + "</strong></p>";
+    }
+    return '<p class="hint d-names">In English: <strong>' + esc(n.name_en) + "</strong></p>";
+  }
+
   function showDetail(id) {
     var n = nodeById[id];
     if (!n) return;
@@ -1544,6 +1579,7 @@
     var h = [];
     h.push('<h2 class="d-title" id="detail-title">' + esc(n.label) + "</h2>");
     h.push('<div class="d-id">' + esc(n.id) + "</div>");
+    h.push(nameNote(n));
 
     var chips = [];
     if (n.level) chips.push('<span class="chip lvl" style="background:' +
@@ -1841,7 +1877,7 @@
   }
 
   function scoreNode(n, q) {
-    var hay = [n.label, n.id].concat(n.aliases || []);
+    var hay = [n.label, n.official, n.id].concat(n.aliases || []);
     var best = 0;
     for (var i = 0; i < hay.length; i++) {
       var s = String(hay[i]).toLowerCase();
@@ -2245,6 +2281,9 @@
     if ($("depth")) $("depth").value = String(depth);
 
     compareShowEmpty = params.get("empty") === "1";
+    nameMode = params.get("names") === "official" ? "official" : "en";
+    applyNames();
+    if ($("names-mode")) $("names-mode").value = nameMode;
     layoutMode = LAYOUT_MODES.indexOf(params.get("layout")) >= 0 ? params.get("layout") : "grouped";
     if ($("layout-mode")) $("layout-mode").value = layoutMode;
 
@@ -2281,6 +2320,7 @@
     if (depthUser !== null) p.set("depth", String(depthUser));
     if (compareShowEmpty) p.set("empty", "1");
     if (layoutMode !== "grouped") p.set("layout", layoutMode);
+    if (nameMode !== "en") p.set("names", nameMode);
     var q = $("search") ? $("search").value.trim() : "";
     if (q) p.set("q", q);
     Object.keys(filters).forEach(function (k) {

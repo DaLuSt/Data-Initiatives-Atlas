@@ -2,6 +2,7 @@
 id: ES-INDICADORES-ODS
 type: framework
 name: Indicadores de la Agenda 2030 para el Desarrollo Sostenible
+name_en: "Spanish national SDG indicator set"
 alternative_names:
   - Spanish national SDG indicator set
   - Indicadores ODS España

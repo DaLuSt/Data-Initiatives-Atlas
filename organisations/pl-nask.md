@@ -2,6 +2,7 @@
 id: PL-NASK
 type: organisation
 name: Naukowa i Akademicka Sieć Komputerowa
+name_en: "Research and Academic Computer Network"
 alternative_names:
   - NASK
   - NASK — Państwowy Instytut Badawczy

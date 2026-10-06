@@ -26,7 +26,7 @@ graph:
   regions: 1
 
 discovery:
-  unresolved_rows_open: 71
+  unresolved_rows_open: 72
   candidates_queued: 0
   research_queue_items: 0
   needs_human_open: 0
@@ -134,6 +134,10 @@ last_merged_prs:
     summary: "Detail panel made readable: plain 'About this record' labels, ISO dates, evidence collapsed, 'source not read' tag (point 7 of docs/ux-analysis.md)"
   - number: 436
     summary: "Site usable on a phone: top bar 204 to 145 px, detail panel a strip under the graph with Show more/less, 40 px touch targets (point 5 of docs/ux-analysis.md)"
+  - number: 437
+    summary: "Housekeeping: recorded #436 in state.yaml and run-history"
+  - number: 438
+    summary: "Small usability fixes: Re-layout accessible name, default zoom (no console warning), footer copy-link and data downloads, h3 section headings and a main landmark in every view (point 9 of docs/ux-analysis.md)"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,

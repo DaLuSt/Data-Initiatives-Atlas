@@ -2,6 +2,7 @@
 id: CZ-DIA
 type: organisation
 name: Digitální a informační agentura
+name_en: "Digital and Information Agency"
 alternative_names:
   - DIA
   - Digital and Information Agency

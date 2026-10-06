@@ -2,6 +2,7 @@
 id: DE-VDE
 type: organisation
 name: Verband der Elektrotechnik Elektronik Informationstechnik
+name_en: "Association for Electrical, Electronic and Information Technologies"
 alternative_names:
   - VDE
   - Association for Electrical, Electronic and Information Technologies

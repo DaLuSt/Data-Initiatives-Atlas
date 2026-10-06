@@ -2,6 +2,7 @@
 id: EE-KUBERTURVALISUSE-SEADUS
 type: act
 name: Küberturvalisuse seadus
+name_en: "Estonian Cybersecurity Act"
 alternative_names:
   - Cybersecurity Act
   - Estonian Cybersecurity Act

@@ -2,6 +2,7 @@
 id: PL-SWW
 type: organisation
 name: Służba Wywiadu Wojskowego
+name_en: "Military Intelligence Service"
 alternative_names:
   - SWW
   - Military Intelligence Service

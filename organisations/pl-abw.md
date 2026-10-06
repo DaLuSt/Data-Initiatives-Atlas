@@ -2,6 +2,7 @@
 id: PL-ABW
 type: organisation
 name: Agencja Bezpieczeństwa Wewnętrznego
+name_en: "Internal Security Agency"
 alternative_names:
   - ABW
   - Internal Security Agency

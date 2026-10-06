@@ -2,6 +2,7 @@
 id: FR-LRN
 type: act
 name: Loi pour une République numérique
+name_en: "Digital Republic Act"
 alternative_names:
   - Loi n° 2016-1321 du 7 octobre 2016
   - Loi Lemaire

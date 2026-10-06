@@ -2,6 +2,7 @@
 id: NL-RVIG
 type: organisation
 name: Rijksdienst voor Identiteitsgegevens
+name_en: "Netherlands Identity Data Agency"
 alternative_names:
   - RvIG
   - Netherlands Identity Data Agency

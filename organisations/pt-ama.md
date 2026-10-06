@@ -2,6 +2,7 @@
 id: PT-AMA
 type: organisation
 name: Agência para a Modernização Administrativa
+name_en: "Administrative Modernisation Agency"
 alternative_names:
   - AMA
   - AMA, I.P.

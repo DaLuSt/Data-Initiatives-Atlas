@@ -2,6 +2,7 @@
 id: FR-DPR
 type: organisation
 name: Délégation parlementaire au renseignement
+name_en: "Parliamentary Intelligence Delegation"
 alternative_names:
   - DPR
   - Parliamentary Intelligence Delegation

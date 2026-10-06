@@ -2,6 +2,7 @@
 id: NL-BZK
 type: organisation
 name: Ministerie van Binnenlandse Zaken en Koninkrijksrelaties
+name_en: "Ministry of the Interior and Kingdom Relations"
 alternative_names:
   - BZK
   - Ministry of the Interior and Kingdom Relations

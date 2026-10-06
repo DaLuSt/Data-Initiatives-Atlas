@@ -2,6 +2,7 @@
 id: FR-RGAA
 type: standard
 name: Référentiel Général d'Amélioration de l'Accessibilité
+name_en: "General Accessibility Improvement Framework (France)"
 alternative_names:
   - RGAA
   - General Accessibility Improvement Framework (France)

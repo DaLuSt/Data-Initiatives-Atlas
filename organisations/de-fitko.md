@@ -2,6 +2,7 @@
 id: DE-FITKO
 type: organisation
 name: Föderale IT-Kooperation
+name_en: "Federal IT Cooperation"
 alternative_names:
   - FITKO
   - Federal IT Cooperation

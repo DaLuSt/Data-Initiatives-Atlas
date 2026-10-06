@@ -2,6 +2,7 @@
 id: IT-CIE
 type: platform
 name: Carta d'Identità Elettronica
+name_en: "Electronic Identity Card"
 alternative_names:
   - CIE
   - CIE ID

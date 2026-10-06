@@ -2,6 +2,7 @@
 id: NL-RIVM
 type: organisation
 name: Rijksinstituut voor Volksgezondheid en Milieu
+name_en: "National Institute for Public Health and the Environment"
 alternative_names:
   - RIVM
   - National Institute for Public Health and the Environment

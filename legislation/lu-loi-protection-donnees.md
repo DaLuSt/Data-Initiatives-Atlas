@@ -2,6 +2,7 @@
 id: LU-LOI-PROTECTION-DONNEES
 type: act
 name: "Loi du 1er août 2018 portant organisation de la Commission nationale pour la protection des données et du régime général sur la protection des données"
+name_en: "Luxembourg GDPR Implementation Act"
 alternative_names:
   - "Loi 'Protection des données'"
   - Luxembourg GDPR Implementation Act

@@ -2,6 +2,7 @@
 id: NL-BASISREGISTRATIES
 type: framework
 name: Stelsel van Basisregistraties
+name_en: "System of Base Registries"
 alternative_names:
   - Stelsel van basisregistraties
   - System of Base Registries

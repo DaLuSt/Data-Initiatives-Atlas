@@ -2,6 +2,7 @@
 id: ES-ESPANA-DIGITAL-2026
 type: strategy
 name: España Digital 2026
+name_en: "Spain Digital 2026"
 alternative_names:
   - Agenda España Digital
   - Spain Digital 2026

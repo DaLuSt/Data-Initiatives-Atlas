@@ -2,6 +2,7 @@
 id: BE-VSSE
 type: organisation
 name: Veiligheid van de Staat
+name_en: "State Security Service"
 alternative_names:
   - VSSE
   - Sûreté de l'État

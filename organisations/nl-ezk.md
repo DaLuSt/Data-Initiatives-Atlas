@@ -2,6 +2,7 @@
 id: NL-EZK
 type: organisation
 name: Ministerie van Economische Zaken en Klimaat
+name_en: "Ministry of Economic Affairs and Climate"
 alternative_names:
   - EZK
   - Ministry of Economic Affairs and Climate

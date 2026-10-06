@@ -146,6 +146,15 @@ Relationships marked `source: interpretation` are drawn in the accent
 colour and labelled *interpretation* in the detail panel, because the Atlas
 distinguishes what a source says from what the Atlas concludes.
 
+### Names
+
+Many records are named in their own language. Where the file has a short English
+name (`name_en`), the Atlas shows it by default in the graph, list, comparison
+and search, and the detail panel gives both names. It is the Atlas's own label,
+not necessarily an official translation. The **Names** control in the sidebar
+switches to official titles only; both names stay searchable. Records without an
+English name show their official title either way.
+
 ### Entity details
 
 Click any node, or any entity name in the List view. The panel shows only

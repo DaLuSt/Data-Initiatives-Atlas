@@ -2,6 +2,7 @@
 id: ES-AOC
 type: organisation
 name: Consorci Administració Oberta de Catalunya
+name_en: "Open Administration of Catalonia"
 alternative_names:
   - AOC Consortium
   - Consorci AOC

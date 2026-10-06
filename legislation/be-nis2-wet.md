@@ -2,6 +2,7 @@
 id: BE-NIS2-WET
 type: act
 name: NIS2-wet
+name_en: "Belgian NIS2 Act"
 alternative_names:
   - Wet van 26 april 2024
   - Wet tot vaststelling van een kader voor de cyberbeveiliging van netwerk- en informatiesystemen van algemeen belang voor de openbare veiligheid

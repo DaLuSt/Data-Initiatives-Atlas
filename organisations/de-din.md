@@ -2,6 +2,7 @@
 id: DE-DIN
 type: organisation
 name: DIN Deutsches Institut für Normung
+name_en: "German Institute for Standardisation"
 alternative_names:
   - DIN
   - German Institute for Standardisation

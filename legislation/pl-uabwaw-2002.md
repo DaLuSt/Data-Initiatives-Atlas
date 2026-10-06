@@ -2,6 +2,7 @@
 id: PL-UABWAW-2002
 type: act
 name: Ustawa o Agencji Bezpieczeństwa Wewnętrznego oraz Agencji Wywiadu
+name_en: "Act on the Internal Security Agency and the Foreign Intelligence Agency"
 alternative_names:
   - Ustawa z dnia 24 maja 2002 r.
   - Act on the Internal Security Agency and the Foreign Intelligence Agency

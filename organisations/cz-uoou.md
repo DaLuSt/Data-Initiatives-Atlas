@@ -2,6 +2,7 @@
 id: CZ-UOOU
 type: organisation
 name: Úřad pro ochranu osobních údajů
+name_en: "Czech Office for Personal Data Protection"
 alternative_names:
   - ÚOOÚ
   - UOOU

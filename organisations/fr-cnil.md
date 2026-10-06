@@ -2,6 +2,7 @@
 id: FR-CNIL
 type: organisation
 name: Commission nationale de l'informatique et des libertés
+name_en: "French Data Protection Authority"
 alternative_names:
   - CNIL
   - French Data Protection Authority

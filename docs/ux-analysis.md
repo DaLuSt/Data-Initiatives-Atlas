@@ -27,7 +27,7 @@ reorder the list below.
 | 5 | Mobile: the graph is tiny; the detail sheet covers over half the screen, including the list the visitor chose from; view buttons are 30 px high and checkboxes 13 px. | **Done 2026-10-06** (see below) |
 | 6 | Compare listed countries alphabetically, so the first columns (Albania, Andorra, Argentina, Armenia) were empty and the countries with data were off to the right. | **Done 2026-10-06** |
 | 7 | The detail panel showed internal research notes ("NOT READ — search-only.") in full for every relationship, "Confidence: Low" with no explanation that it describes the Atlas's certainty and not the law, and dates as "2026 08 21". | **Done 2026-10-06** (see below) |
-| 8 | Entity names are official titles in the national language, with no short English display name. Related to `discovery/unresolved.md` row #9 (multilingual names). | Open |
+| 8 | Entity names are official titles in the national language, with no short English display name. Related to `discovery/unresolved.md` row #9 (multilingual names). | **Partly done 2026-10-06** (see below) |
 | 9 | Small things: the Re-layout button's aria-label ("Recalculate layout") does not contain its visible text (axe, serious); a custom wheel sensitivity that Cytoscape warns about (measured later: it made zoom sluggish, not abrupt); no "copy link" or "download data" control. | **Done 2026-10-06** (see below) |
 
 ## What the 2026-10-06 change did
@@ -126,5 +126,36 @@ screens narrower than 360 px.
   are now `main` elements). axe reports nothing on the Atlas, List, Explorer
   and bare views after the change.
 
+## Point 8: English names (2026-10-06)
+About 245 of the 740 entities are named in their own language (a word-list
+count, so approximate): "Autoriteit Persoonsgegevens", "Bundesamt für
+Sicherheit in der Informationstechnik", "Ley Orgánica 3/2018, de 5 de diciembre,
+…". Many files already listed an English name among `alternative_names`, but
+nothing marked it as one, so the site could not use it.
+
+- **New optional field `name_en`**, a short English display name
+  (`metadata/metadata-schema.md`). It is the Atlas's own label and not
+  necessarily an official translation, and the site says so. The validator
+  rejects an empty value, stray whitespace, or a value that repeats `name`.
+- **Backfilled for 169 entities, each from an English name the file already
+  listed.** Nothing was translated. A script checked that every value is
+  literally one of that entity's alternative names; where the only English
+  form was a nickname or ambiguous (for example two Brussels ordonnances shared
+  one alias) the entity was left without one.
+- **The site shows it by default**: in the graph, list, Compare, search and
+  detail panel. A "Names" control in the sidebar switches to official titles
+  only (`names=official` in the address). The detail panel gives both names and
+  the caveat. Both names stay searchable whichever is shown.
+- **Not done: about 67 records still have no English name**, because none
+  was in the file and a translation by a session would be a guess presented as
+  a name. They are recorded as `discovery/unresolved.md` row #233; the English
+  name should come from the body's own English page or an official translation.
+  This also stays separate from row #9 (a multilingual `name`), which is open.
+- A side effect: a graph can now mix English and original names (a node
+  without `name_en` keeps its official title), which is why the control exists.
+
+Not tested: how the mixed labels read to a visitor.
+
 ## Suggested order for the rest
-8 (short English display names).
+Nothing from this review is left except the follow-ups above (the remaining
+English names, a CSV export of the List view).

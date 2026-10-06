@@ -2,6 +2,7 @@
 id: LU-CTIE
 type: organisation
 name: Centre des technologies de l'information de l'État
+name_en: "Government IT Centre"
 alternative_names:
   - CTIE
   - Government IT Centre

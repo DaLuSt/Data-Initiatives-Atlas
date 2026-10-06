@@ -2,6 +2,7 @@
 id: LU-ILR
 type: organisation
 name: Institut Luxembourgeois de Régulation
+name_en: "Luxembourg Institute of Regulation"
 alternative_names:
   - ILR
   - Luxembourg Institute of Regulation

@@ -2,6 +2,7 @@
 id: DE-KOSIT
 type: organisation
 name: Koordinierungsstelle für IT-Standards
+name_en: "Coordination Office for IT Standards"
 alternative_names:
   - KoSIT
   - Coordination Office for IT Standards

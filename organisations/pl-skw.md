@@ -2,6 +2,7 @@
 id: PL-SKW
 type: organisation
 name: Służba Kontrwywiadu Wojskowego
+name_en: "Military Counterintelligence Service"
 alternative_names:
   - SKW
   - Military Counterintelligence Service

@@ -2,6 +2,7 @@
 id: CZ-CSU
 type: organisation
 name: Český statistický úřad
+name_en: "Czech Statistical Office"
 alternative_names:
   - ČSÚ
   - CSU
