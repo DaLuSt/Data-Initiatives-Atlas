@@ -124,9 +124,15 @@
         G = data;
         G.nodes.forEach(function (n) { nodeById[n.id] = n; });
         buildChrome();
+        buildStart();
         initGraph();
         $("loading").hidden = true;
         applyRoute();
+        // A bare address is a first visit (or a shared link to the front
+        // page): explain what is on screen. Any deep link goes straight to its
+        // subject. The page stores nothing between visits, so this is
+        // per-load by design.
+        if (!location.hash) showStart(true, false);
         // Detail prose is not on the critical path.
         fetch("details.json", { cache: "no-cache" })
           .then(function (r) { return r.ok ? r.json() : null; })
@@ -150,6 +156,55 @@
           err.message + ". If you are opening this file directly from disk, " +
           "serve the folder over HTTP instead (see docs/graph-development.md).";
       });
+  }
+
+  // ── "Start here" card ────────────────────────────────────────────────
+  // What the first screen is, and five ways in. Each way in is an ordinary
+  // link to a hash the app already understands, so it works in a new tab and
+  // can be shared. They name the view explicitly (never the bare #ENTITY-ID
+  // form), because only an explicit hash resets the filters: a visitor who has
+  // filtered to one country must not meet an example through that filter.
+  // The ids are checked against the graph by
+  // tools/test_build_graph.py, so a renamed entity cannot leave a dead link.
+  var START_EXAMPLES = [
+    { title: "Follow a chain from a treaty to a regulator",
+      desc: "Convention 108+ reaches the Dutch data protection authority in three steps.",
+      hash: "#view=explorer&focus=INTL-CONVENTION-108-PLUS&to=NL-AP" },
+    { title: "See how an EU directive reaches national law",
+      desc: "The NIS2 Directive and the national laws that carry it into force.",
+      hash: "#view=explorer&focus=EU-NIS2" },
+    { title: "Compare countries, instrument by instrument",
+      desc: "Which countries have a national law behind each EU instrument.",
+      hash: "#view=compare" },
+    { title: "Who sits on the European Data Protection Board?",
+      desc: "The national data protection authorities around the Board.",
+      hash: "#view=explorer&focus=EU-EDPB" },
+    { title: "Browse one country as a table",
+      desc: "Everything the Atlas holds for Germany, as a sortable list.",
+      hash: "#view=list&country=DE" }
+  ];
+
+  function buildStart() {
+    var s = G.stats;
+    $("start-intro").textContent =
+      "The Atlas maps the laws, standards, organisations and platforms that govern " +
+      "data across the UN, the EU and " + s.countries + " countries: " +
+      s.entities.toLocaleString() + " entities joined by " +
+      s.relationships.toLocaleString() + " relationships, each with its source. " +
+      "Every dot is one of them and every line a link. Pick a question to begin.";
+    $("start-list").innerHTML = START_EXAMPLES.map(function (x) {
+      return '<li><a href="' + esc(x.hash) + '">' +
+        '<span class="st-title">' + esc(x.title) + "</span>" +
+        '<span class="st-desc">' + esc(x.desc) + "</span></a></li>";
+    }).join("");
+  }
+
+  function showStart(show, takeFocus) {
+    var card = $("start");
+    if (!card) return;
+    card.hidden = !show;
+    $("start-toggle").setAttribute("aria-expanded", String(show));
+    if (show && takeFocus) card.focus();
   }
 
   // ── chrome: stats, filters, legend ───────────────────────────────────
@@ -327,9 +382,21 @@
       });
     });
 
+    $("start-toggle").addEventListener("click", function () {
+      var open = $("start").hidden;
+      if (open && view !== "atlas" && view !== "explorer") { setView("atlas"); syncUrl(); }
+      showStart(open, open);
+    });
+    $("start-close").addEventListener("click", function () { showStart(false); $("start-toggle").focus(); });
+    // Following an example hides the card; the hashchange does the navigation.
+    $("start-list").addEventListener("click", function (ev) {
+      if (ev.target.closest("a")) showStart(false);
+    });
+
     document.addEventListener("keydown", function (ev) {
       if (ev.key === "Escape") {
         if ($("suggestions").hidden === false) { hideSuggestions(); return; }
+        if (!$("start").hidden) { showStart(false); return; }
         if (!$("detail").hidden) closeDetail();
       }
       if (ev.key === "/" && document.activeElement !== $("search")) {
@@ -1363,6 +1430,7 @@
     // A click, search pick or deep link is not a keyboard move — drop any
     // stale "Keyboard focus" note the status line was carrying.
     kbActive = false;
+    showStart(false);
     autoDepth();
     updateExplorerHint();
     syncUrl();
@@ -1769,6 +1837,7 @@
 
   function setView(v) {
     view = v;
+    showStart(false);
     [["view-atlas", "atlas"], ["view-explorer", "explorer"],
      ["view-compare", "compare"], ["view-list", "list"]]
       .forEach(function (p) {

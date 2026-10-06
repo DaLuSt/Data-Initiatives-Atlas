@@ -36,6 +36,10 @@
     <button id="view-list" class="view-btn" aria-pressed="false">List</button>
   </nav>
 
+  <button id="start-toggle" class="icon-btn" aria-expanded="false" aria-controls="start">
+    Start here
+  </button>
+
   <button id="filters-toggle" class="icon-btn" aria-expanded="false" aria-controls="sidebar">
     Filters
   </button>
@@ -189,6 +193,15 @@
     <p class="empty-note" id="empty-note" hidden>
       No entities match the current filters. <button class="linklike" id="empty-reset">Reset filters</button>
     </p>
+
+    <section class="start" id="start" aria-labelledby="start-h" tabindex="-1" hidden>
+      <button id="start-close" class="icon-btn start-close" aria-label="Close the introduction">✕</button>
+      <h2 id="start-h">Start here</h2>
+      <p id="start-intro"></p>
+      <ul class="start-list" id="start-list"></ul>
+      <p class="start-foot">Or type a name, ID, country or domain in the search box.
+        Press <kbd>/</kbd> to jump to it.</p>
+    </section>
 
     <div class="stage-controls" role="group" aria-label="Graph controls">
       <button id="zoom-in" class="icon-btn" aria-label="Zoom in">+</button>

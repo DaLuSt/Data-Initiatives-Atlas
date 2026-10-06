@@ -20,7 +20,7 @@ reorder the list below.
 
 | # | Finding | Status |
 |---|---|---|
-| 1 | The first screen is a hairball of 1,565 lines: no labels, no introduction, no link to the guide. | Open |
+| 1 | The first screen is a hairball of 1,565 lines: no labels, no introduction, no link to the guide. | **Done 2026-10-06** (see below) |
 | 2 | Sidebar wording used the repository's internals ("Typed relationships (frontmatter, provenanced)", "Associations", "Wikilinks (Obsidian navigation)"). | **Done 2026-10-06** |
 | 3 | Explorer: the hint said "No entity selected" on a deep link; the graph was fitted before the detail panel narrowed the canvas, so its right side was cut off; the default of 2 hops gave 282 unlabelled entities for a hub like the GDPR. | **Done 2026-10-06** |
 | 4 | Statistics come first in the sidebar; the filters people want (country, type, domain) and the legend need scrolling. | Open |
@@ -46,6 +46,19 @@ reorder the list below.
   checkbox ("Also show 17 countries with nothing recorded", `empty=1` in the
   URL). A country filter overrides the hiding.
 
+## Point 1: the "Start here" card (2026-10-06)
+A bare address now opens with a card over the graph that says what the picture
+is (with live counts) and offers five ways in, each an ordinary link to a hash
+the app already understands: a chain from Convention 108+ to the Dutch data
+protection authority, the neighbourhood of the NIS2 Directive, the Compare
+matrix, the European Data Protection Board, and Germany as a table. A "Start
+here" button in the top bar reopens it; Esc or the close button dismisses it;
+any deep link, search pick or view change hides it. The page stores nothing
+between visits, so it shows on every bare visit by design. The examples name
+their view explicitly because only an explicit hash resets the filters, and a
+test checks that every entity they name exists and every chain they promise is
+a real path of typed relationships.
+
 ## Suggested order for the rest
-1 (a "Begin hier" panel of example questions, as deep links that already work),
-then 4, then 7, then 5 and 8.
+4 (filters and legend above the statistics), then 7 (plain-language detail
+panel), then 5 (mobile) and 8 (short English display names).

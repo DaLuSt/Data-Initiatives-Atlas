@@ -264,6 +264,33 @@ a:hover { text-decoration: none; }
 @keyframes spin { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { .spinner { animation-duration: 3s; } }
 
+/* Introduction card: what the picture is, and five ways in. */
+.start {
+  position: absolute; z-index: 18; left: .8rem; top: .8rem;
+  width: min(27rem, calc(100% - 1.6rem)); max-height: calc(100% - 1.6rem);
+  overflow-y: auto; overscroll-behavior: contain;
+  background: var(--surface); border: 1px solid var(--border-strong);
+  border-radius: 10px; box-shadow: 0 8px 28px rgba(0,0,0,.22);
+  padding: 1rem 1.1rem 1rem;
+}
+.start[hidden] { display: none; }
+.start h2 { margin: 0 2rem .4rem 0; font-size: 1.1rem; }
+.start p { margin: 0 0 .75rem; color: var(--text-dim); font-size: .88rem; line-height: 1.45; }
+.start-close { position: absolute; top: .55rem; right: .55rem; }
+.start-list { list-style: none; margin: 0 0 .75rem; padding: 0; display: flex; flex-direction: column; gap: .4rem; }
+.start-list a {
+  display: block; padding: .5rem .65rem; text-decoration: none; color: var(--text);
+  background: var(--surface-2); border: 1px solid var(--border); border-radius: 7px;
+}
+.start-list a:hover { border-color: var(--accent); }
+.start-list .st-title { display: block; font-weight: 600; font-size: .9rem; }
+.start-list .st-desc { display: block; margin-top: .1rem; font-size: .8rem; color: var(--text-dim); }
+.start .start-foot { margin: 0; font-size: .8rem; }
+.start kbd {
+  font: inherit; font-size: .75rem; padding: 0 .3rem; border: 1px solid var(--border-strong);
+  border-radius: 4px; background: var(--surface-2);
+}
+
 .stage-controls {
   position: absolute; z-index: 15; right: .6rem; bottom: .6rem;
   display: flex; flex-direction: column; gap: .3rem;
