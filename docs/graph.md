@@ -25,6 +25,15 @@ locally.
 
 ## What you can do with it
 
+### Start here
+
+A bare address opens with a **Start here** card over the graph. It says what the
+picture is and offers five ways in (a chain from a treaty to a regulator, an EU
+directive and the national laws that carry it, the country comparison, the
+European Data Protection Board, and one country as a table). Each is an ordinary
+link, so it works in a new tab and can be shared. Close it with ✕ or Esc, and
+reopen it from **Start here** in the top bar.
+
 ### Four views
 
 | View | What it is for |

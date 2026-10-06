@@ -700,5 +700,62 @@ class TestSiteWording(unittest.TestCase):
         self.assertIn('if (depthUser !== null) p.set("depth"', js)
 
 
+class TestStartHere(unittest.TestCase):
+    """The "Start here" card links to examples by hash. Every id they name must
+    exist, every chain they promise must be a real path, and every one must
+    name its view explicitly (only an explicit hash resets the filters)."""
+
+    SITE = Path(__file__).resolve().parent.parent / "site"
+
+    @classmethod
+    def setUpClass(cls):
+        import re
+        js = (cls.SITE / "app.js").read_text(encoding="utf-8")
+        block = re.search(r"var START_EXAMPLES = \[(.*?)\n  \];", js, re.S).group(1)
+        cls.hashes = re.findall(r'hash:\s*"(#[^"]+)"', block)
+        cls.graph, errors, _ = build_graph.build()
+        assert not errors
+        cls.nodes = {n["id"] for n in cls.graph["graph"]["nodes"]}
+
+    def _params(self, h):
+        from urllib.parse import parse_qs
+        return {k: v[0] for k, v in parse_qs(h[1:]).items()}
+
+    def test_there_are_examples_and_each_names_its_view(self):
+        self.assertGreaterEqual(len(self.hashes), 3)
+        for h in self.hashes:
+            self.assertIn("view=", h, f"{h} must be an explicit hash, not #ENTITY-ID")
+
+    def test_every_entity_named_exists(self):
+        for h in self.hashes:
+            p = self._params(h)
+            for key in ("focus", "to"):
+                if key in p:
+                    self.assertTrue(p[key] in self.nodes, f"{h}: {key}={p[key]} is not an entity")
+            if "country" in p:
+                self.assertTrue(p["country"] in self.nodes, f"{h}: unknown country {p['country']}")
+
+    def test_every_promised_chain_is_a_path_of_typed_relationships(self):
+        from collections import deque, defaultdict
+        adj = defaultdict(set)
+        for e in self.graph["graph"]["edges"]:
+            if e["class"] == "relationship":
+                adj[e["source"]].add(e["target"]); adj[e["target"]].add(e["source"])
+        checked = 0
+        for h in self.hashes:
+            p = self._params(h)
+            if "to" not in p:
+                continue
+            seen, q = {p["focus"]}, deque([p["focus"]])
+            while q:
+                x = q.popleft()
+                for y in adj[x]:
+                    if y not in seen:
+                        seen.add(y); q.append(y)
+            self.assertTrue(p["to"] in seen, f"{h}: no chain from {p['focus']} to {p['to']}")
+            checked += 1
+        self.assertTrue(checked, "no example promises a chain any more")
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

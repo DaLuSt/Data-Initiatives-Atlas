@@ -1,0 +1,28 @@
+date: "2026-10-06"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Owner asked to continue with point 1 of the usability review (the first
+  screen is a hairball with no introduction), in English. Added a "Start here"
+  card over the graph on a bare address: what the picture is, with live counts
+  from graph.json, and five ways in as ordinary links to hashes the app already
+  understands (Convention 108+ to the Dutch data protection authority as a
+  chain, the neighbourhood of NIS2, the Compare matrix, the European Data
+  Protection Board, Germany as a table). A "Start here" top-bar button reopens
+  it; Esc or the close button dismisses it; any deep link, selection or view
+  change hides it. No localStorage: the page stores nothing between visits
+  (SECURITY.md), so it shows on every bare visit.
+
+  Found while testing: a plain #ENTITY-ID hash does not reset the filters, only
+  a hash with parameters does, so an example opened after another filtered one
+  (country=DE) inherited the filter. The examples therefore all name their view
+  explicitly (#view=explorer&focus=...), and the code comment says why.
+
+  Verified in the browser at desktop and mobile size (first visit, each example,
+  Esc, reopen, focus, deep link shows no card, no console errors) with
+  screenshots. New TestStartHere (3 tests): every example names its view, every
+  entity named exists, every promised chain is a real path of typed
+  relationships; checked by pointing one example at a missing entity.
+  docs/graph.md and docs/ux-analysis.md updated. Not done: points 4, 5, 7, 8, 9.
+prs: []
+outcome: pending
+entity_count_after: 740
