@@ -757,5 +757,36 @@ class TestStartHere(unittest.TestCase):
         self.assertTrue(checked, "no example promises a chain any more")
 
 
+class TestSidebarOrder(unittest.TestCase):
+    """The filters people use come first; statistics (once the first thing in
+    the sidebar) come last. See docs/ux-analysis.md, point 4."""
+
+    SITE = Path(__file__).resolve().parent.parent / "site"
+
+    def test_panels_are_in_use_order(self):
+        import re
+        html = (self.SITE / "index.html").read_text(encoding="utf-8")
+        ids = re.findall(r'<section class="panel" aria-labelledby="([a-z-]+-h)"', html)
+        self.assertEqual(ids, ["explorer-h", "filters-h", "legend-h", "edges-h",
+                               "layout-h", "stats-h"])
+
+    def test_country_type_and_domain_lead_and_are_open(self):
+        import re
+        html = (self.SITE / "index.html").read_text(encoding="utf-8")
+        panel = html[html.index('aria-labelledby="filters-h"'):html.index('aria-labelledby="legend-h"')]
+        details = re.findall(r'<details class="sub"( open)?>\s*<summary>(.*?) <span', panel, re.S)
+        self.assertEqual([d[1] for d in details[:3]], ["Country", "Entity type", "Domain"])
+        self.assertTrue(all(d[0] for d in details[:3]), "the three lead filters must be open")
+        self.assertFalse(any(d[0] for d in details[3:]), "the rest start collapsed")
+        for fid in ("f-country", "f-type", "f-domain"):
+            self.assertIn(f'class="checks scroll filter-scroll" id="{fid}"', panel)
+
+    def test_filter_badges_exist_and_run_on_refresh(self):
+        js = (self.SITE / "app.js").read_text(encoding="utf-8")
+        self.assertIn("function updateFilterBadges", js)
+        body = js[js.index("  function refresh()"):]
+        self.assertIn("updateFilterBadges()", body[:200])
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

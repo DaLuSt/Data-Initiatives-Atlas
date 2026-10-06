@@ -1316,8 +1316,34 @@
     });
   }
 
+  // Section heading counts and the Filters button badge. "(58)" used to be the
+  // number of options whether or not anything was ticked, so a filtered
+  // sidebar looked the same as an unfiltered one once its sections were
+  // collapsed. Now "(3 of 58)" says what is on, and the top-bar button says how
+  // many filter groups are active, which matters most on a phone where the
+  // sidebar is hidden.
+  var FILTER_COUNT_EL = {
+    level: "level-count", country: "country-count", region: "region-count",
+    domain: "domain-count", type: "type-count", status: "status-count",
+    relType: "reltype-count", provenance: "prov-count", confidence: "conf-count"
+  };
+  function updateFilterBadges() {
+    var active = 0;
+    Object.keys(FILTER_COUNT_EL).forEach(function (g) {
+      var el = $(FILTER_COUNT_EL[g]);
+      if (!el) return;
+      var total = document.querySelectorAll('input[data-group="' + g + '"]').length;
+      var on = filters[g].size;
+      if (on) active++;
+      el.textContent = on ? "(" + on + " of " + total + ")" : "(" + total + ")";
+    });
+    var btn = $("filters-toggle");
+    if (btn) btn.textContent = active ? "Filters (" + active + ")" : "Filters";
+  }
+
   function refresh() {
     if (!cy) return;
+    updateFilterBadges();
     // Before the early returns: the counts describe the current focus and
     // filters, and must not go stale behind a view the control is hidden in.
     updateDepthLabels();

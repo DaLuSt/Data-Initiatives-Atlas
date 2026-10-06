@@ -55,13 +55,6 @@
   <!-- ───────────────────────── filters ───────────────────────── -->
   <aside class="sidebar" id="sidebar" aria-label="Filters and statistics">
     <div class="sidebar-inner">
-
-      <section class="panel" aria-labelledby="stats-h">
-        <h2 id="stats-h">Statistics</h2>
-        <dl class="stats" id="stats"></dl>
-        <p class="generated" id="generated"></p>
-      </section>
-
       <section class="panel" aria-labelledby="explorer-h" id="explorer-panel" hidden>
         <h2 id="explorer-h">Explorer</h2>
         <p class="hint" id="explorer-hint">Select an entity to focus the graph on its neighbourhood.</p>
@@ -90,17 +83,45 @@
         <p class="hint" id="path-result" aria-live="polite"></p>
       </section>
 
-      <section class="panel" aria-labelledby="layout-h" id="layout-panel">
-        <h2 id="layout-h">Layout</h2>
-        <label class="field">
-          <span>Global Atlas arrangement</span>
-          <select id="layout-mode">
-            <option value="grouped" selected>Grouped by level and country</option>
-            <option value="force">Connected entities together</option>
-            <option value="map">World map</option>
-          </select>
-        </label>
-        <p class="hint" id="layout-hint"></p>
+      <section class="panel" aria-labelledby="filters-h">
+        <h2 id="filters-h">Filters</h2>
+
+        <details class="sub" open>
+          <summary>Country <span class="count" id="country-count"></span></summary>
+          <div class="checks scroll filter-scroll" id="f-country"></div>
+        </details>
+
+        <details class="sub" open>
+          <summary>Entity type <span class="count" id="type-count"></span></summary>
+          <div class="checks scroll filter-scroll" id="f-type"></div>
+        </details>
+
+        <details class="sub" open>
+          <summary>Domain <span class="count" id="domain-count"></span></summary>
+          <div class="checks scroll filter-scroll" id="f-domain"></div>
+        </details>
+
+        <details class="sub">
+          <summary>Geographic level <span class="count" id="level-count"></span></summary>
+          <div class="checks" id="f-level"></div>
+        </details>
+
+        <details class="sub">
+          <summary>Status <span class="count" id="status-count"></span></summary>
+          <div class="checks" id="f-status"></div>
+        </details>
+
+        <details class="sub">
+          <summary>Region <span class="count" id="region-count"></span></summary>
+          <div class="checks" id="f-region"></div>
+        </details>
+
+        <button id="reset-filters" class="secondary">Reset all filters</button>
+      </section>
+
+      <section class="panel" aria-labelledby="legend-h">
+        <h2 id="legend-h">Legend</h2>
+        <ul class="legend" id="legend"></ul>
       </section>
 
       <section class="panel" aria-labelledby="edges-h">
@@ -130,47 +151,24 @@
         </details>
       </section>
 
-      <section class="panel" aria-labelledby="filters-h">
-        <h2 id="filters-h">Filters</h2>
-
-        <details class="sub" open>
-          <summary>Geographic level <span class="count" id="level-count"></span></summary>
-          <div class="checks" id="f-level"></div>
-        </details>
-
-        <details class="sub" open>
-          <summary>Country <span class="count" id="country-count"></span></summary>
-          <div class="checks" id="f-country"></div>
-        </details>
-
-        <details class="sub">
-          <summary>Region <span class="count" id="region-count"></span></summary>
-          <div class="checks" id="f-region"></div>
-        </details>
-
-        <details class="sub" open>
-          <summary>Domain <span class="count" id="domain-count"></span></summary>
-          <div class="checks scroll" id="f-domain"></div>
-        </details>
-
-        <details class="sub">
-          <summary>Entity type <span class="count" id="type-count"></span></summary>
-          <div class="checks scroll" id="f-type"></div>
-        </details>
-
-        <details class="sub">
-          <summary>Status <span class="count" id="status-count"></span></summary>
-          <div class="checks" id="f-status"></div>
-        </details>
-
-        <button id="reset-filters" class="secondary">Reset all filters</button>
+      <section class="panel" aria-labelledby="layout-h" id="layout-panel">
+        <h2 id="layout-h">Layout</h2>
+        <label class="field">
+          <span>Global Atlas arrangement</span>
+          <select id="layout-mode">
+            <option value="grouped" selected>Grouped by level and country</option>
+            <option value="force">Connected entities together</option>
+            <option value="map">World map</option>
+          </select>
+        </label>
+        <p class="hint" id="layout-hint"></p>
       </section>
 
-      <section class="panel" aria-labelledby="legend-h">
-        <h2 id="legend-h">Legend</h2>
-        <ul class="legend" id="legend"></ul>
+      <section class="panel" aria-labelledby="stats-h">
+        <h2 id="stats-h">Statistics</h2>
+        <dl class="stats" id="stats"></dl>
+        <p class="generated" id="generated"></p>
       </section>
-
     </div>
   </aside>
 

@@ -94,6 +94,14 @@ Selecting a result switches to the Entity Explorer and focuses that entity.
 Everything in the sidebar is derived from the repository at build time — no
 country, level, type or status is hard-coded in the application.
 
+The sidebar is ordered by how often each part is used: the **Explorer** controls
+(in that view), then **Filters** with **Country**, **Entity type** and **Domain**
+open and the rest (level, status, region) collapsed, then the **Legend**, then
+**Connections shown**, **Layout** and **Statistics**. Each heading shows how many
+options are ticked ("Country (2 of 58)"), and the top-bar **Filters** button shows
+how many filter groups are active ("Filters (2)"), which matters most on a phone
+where the sidebar is hidden.
+
 | Filter | Source |
 |---|---|
 | Geographic level | `level` field (`metadata/schema.json` → `levels`) |

@@ -210,6 +210,8 @@ a:hover { text-decoration: none; }
 
 .checks { display: flex; flex-direction: column; gap: .1rem; padding: .35rem 0; }
 .checks.scroll { max-height: 15rem; overflow-y: auto; }
+/* The sidebar's three open filter lists share the first screen, so they are short. */
+.checks.filter-scroll { max-height: 9.5rem; }
 
 .check {
   display: flex; align-items: center; gap: .45rem;
