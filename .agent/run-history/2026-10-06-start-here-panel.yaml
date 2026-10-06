@@ -23,6 +23,8 @@ summary: >
   entity named exists, every promised chain is a real path of typed
   relationships; checked by pointing one example at a missing entity.
   docs/graph.md and docs/ux-analysis.md updated. Not done: points 4, 5, 7, 8, 9.
-prs: []
-outcome: pending
+prs:
+  - number: 432
+    title: "Add a \"Start here\" card for first-time visitors"
+outcome: merged
 entity_count_after: 740

@@ -20,6 +20,8 @@ summary: >
   New TestSidebarOrder (3 tests): panel order, the three lead filters open and
   scroll-limited, badges run on refresh. docs/graph.md and docs/ux-analysis.md
   updated. Not done: points 5, 7, 8, 9.
-prs: []
-outcome: pending
+prs:
+  - number: 433
+    title: "Put the filters first in the sidebar and show what is ticked"
+outcome: merged
 entity_count_after: 740
