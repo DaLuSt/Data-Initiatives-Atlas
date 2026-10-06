@@ -128,6 +128,10 @@ last_merged_prs:
     summary: "Added a 'Start here' card for first-time visitors (what the picture is, with live counts, and five example links; point 1 of docs/ux-analysis.md)"
   - number: 433
     summary: "Sidebar reordered so Filters (Country, Entity type, Domain open) and the Legend come first and Statistics last; headings show what is ticked and the top-bar Filters button shows the number of active groups (point 4 of docs/ux-analysis.md)"
+  - number: 434
+    summary: "Housekeeping: recorded #433 in state.yaml and run-history"
+  - number: 435
+    summary: "Detail panel made readable: plain 'About this record' labels, ISO dates, evidence collapsed, 'source not read' tag (point 7 of docs/ux-analysis.md)"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
