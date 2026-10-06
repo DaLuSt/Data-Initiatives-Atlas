@@ -27,7 +27,7 @@ graph:
 
 discovery:
   unresolved_rows_open: 72
-  candidates_queued: 0
+  candidates_queued: 1
   research_queue_items: 0
   needs_human_open: 0
 
@@ -140,10 +140,12 @@ last_merged_prs:
     summary: "Small usability fixes: Re-layout accessible name, default zoom (no console warning), footer copy-link and data downloads, h3 section headings and a main landmark in every view (point 9 of docs/ux-analysis.md)"
   - number: 439
     summary: "Optional frontmatter field name_en (short English display name), backfilled for 169 entities from names already listed in their alternative_names, and a Names control on the site that shows it (point 8 of docs/ux-analysis.md); remaining records recorded as unresolved row #233"
+  - number: 440
+    summary: "23 more English names (name_en) from bodies' own English pages and official translations, each cited in sources; the validator now also requires name_en to be listed in alternative_names; about 38 records still have none (unresolved row #233)"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
-  discovery/candidates.md (no open leads) and
+  discovery/candidates.md (one lead: the count of UN member states with no country anchor yet, C10) and
   discovery/research-queue.md (empty) for queued leads, and
   progress/backlog.md for the forward plan. All four discovery files now
   share the master-table layout of unresolved.md. See .agent/current-task.yaml for any in-flight task.

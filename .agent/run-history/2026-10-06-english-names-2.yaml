@@ -29,6 +29,8 @@ summary: >
   and Länder IT bodies, PDOK, Red.es, CSSF. A first guess for DE-DIGITALSTRATEGIE
   came from a page about the 2018 strategy, a different document, and was
   dropped. Nothing was translated by the session.
-prs: []
-outcome: in-progress
+prs:
+  - number: 440
+    title: "Add 23 sourced English names (row #233)"
+outcome: merged
 entity_count_after: 740

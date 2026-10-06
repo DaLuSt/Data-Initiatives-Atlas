@@ -1,0 +1,22 @@
+date: "2026-10-06"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Owner asked for the countries still missing from the Atlas to go into the
+  candidates, as a count and without adding the countries.
+
+  Read the UN's member-states page (193 entries, parsed and de-duplicated) and
+  matched each of the 58 country anchors to an entry by name: 56 are UN member
+  states; the other two are the Holy See and Kosovo, which are not in the 193.
+  So 137 UN member states have no anchor. Added candidate C10 with that count,
+  the definition, the source and the date, and the note that the list is not
+  stored; no country is named or added. Updated candidates_queued (0 to 1) and the
+  candidates line in state.yaml, and recorded #440.
+
+  Choices made without being asked: the universe is the 193 UN member states
+  (not ISO 3166, which also covers territories, and not observer states); the
+  owner can change that and the count with it. The name matching was checked by
+  hand for the one ambiguous case (Ireland against the United Kingdom, whose UN
+  name contains it); no other anchor failed to match exactly one entry.
+prs: []
+outcome: in-progress
+entity_count_after: 740
