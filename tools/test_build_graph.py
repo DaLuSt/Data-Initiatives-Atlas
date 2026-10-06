@@ -670,5 +670,35 @@ class TestLevels(unittest.TestCase):
             self.assertIn(stale, self.schema["levels"], f"app.css has a colour for retired level {stale}")
 
 
+class TestSiteWording(unittest.TestCase):
+    """The sidebar is read by people who have never seen the repository. The
+    three connection classes used to be labelled with its internals
+    ("frontmatter", "Obsidian navigation", "provenanced"); keep them in plain
+    words, and keep the Explorer's selection hint tied to the selection."""
+
+    SITE = Path(__file__).resolve().parent.parent / "site"
+
+    def test_connection_labels_use_no_repository_jargon(self):
+        import re
+        js = (self.SITE / "app.js").read_text(encoding="utf-8")
+        block = re.search(r"var CLASS_LABEL = \{(.*?)\};", js, re.S).group(1)
+        labels = " ".join(re.findall(r':\s*"([^"]*)"', block))  # the text, not the keys
+        self.assertTrue(labels)
+        for word in ("frontmatter", "Obsidian", "provenanced", "wikilink", "Wikilink"):
+            self.assertNotIn(word, labels, f"jargon {word!r} is back in CLASS_LABEL")
+
+    def test_explorer_hint_follows_the_selection(self):
+        js = (self.SITE / "app.js").read_text(encoding="utf-8")
+        self.assertIn("function updateExplorerHint", js)
+        # selectEntity must refresh it, or a deep link says "No entity selected"
+        body = js[js.index("function selectEntity"):]
+        body = body[:body.index("function closeDetail")]
+        self.assertIn("updateExplorerHint()", body)
+
+    def test_only_a_chosen_depth_reaches_the_url(self):
+        js = (self.SITE / "app.js").read_text(encoding="utf-8")
+        self.assertIn('if (depthUser !== null) p.set("depth"', js)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

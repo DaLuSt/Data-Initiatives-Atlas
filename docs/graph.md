@@ -107,8 +107,8 @@ regardless of type, level or country. Selecting a domain keeps the entities
 tagged with it **and the domain entity itself** — the hub they all point at,
 which carries no `domains:` of its own.
 
-**Provenance** and **confidence** apply to typed relationships only, because
-associations and wikilinks carry neither. Filtering to `interpretation`
+**Provenance** and **confidence** apply to relationships only, because
+shared-context links and mentions carry neither. Filtering to `interpretation`
 isolates the connections the Atlas concluded rather than read; filtering to
 `low` shows where the Atlas is least sure of its own edges. Both are the
 audit route into the graph, and both were previously visible in the detail
@@ -121,9 +121,9 @@ distinct rather than flattening them into one notion of "connected":
 
 | Class | Drawn as | What it is |
 |---|---|---|
-| **Typed relationships** | solid, arrowed | The `relationships:` block — typed, directed, and carrying `source: fact \| interpretation`, `evidence` and `confidence`. **On by default.** |
-| **Associations** | dashed, no arrow | ID references in `domains:`, `organisations:`, `related_entities:`, `previous_version:` and `successor:`. Real links in the data, but untyped and unprovenanced. |
-| **Wikilinks** | dotted, faint | `[[LINKS]]` in the entity body — the same links Obsidian follows. Navigational rather than semantic. |
+| **Relationships** (typed relationships) | solid, arrowed | The `relationships:` block — typed, directed, and carrying `source: fact \| interpretation`, `evidence` and `confidence`. **On by default.** |
+| **Shared context** (associations) | dashed, no arrow | ID references in `domains:`, `organisations:`, `related_entities:`, `previous_version:` and `successor:`. Real links in the data, but untyped and unprovenanced. |
+| **Mentions** (wikilinks) | dotted, faint | `[[LINKS]]` in the entity body — the same links Obsidian follows. Navigational rather than semantic. |
 
 Relationships marked `source: interpretation` are drawn in the accent
 colour and labelled *interpretation* in the detail panel, because the Atlas

@@ -91,9 +91,9 @@
         <label class="field">
           <span>Global Atlas arrangement</span>
           <select id="layout-mode">
-            <option value="grouped" selected>Grouped — bands by level, blocks by scope</option>
-            <option value="force">Force-directed — connected entities pulled together</option>
-            <option value="map">World map — clusters positioned by real geography</option>
+            <option value="grouped" selected>Grouped by level and country</option>
+            <option value="force">Connected entities together</option>
+            <option value="map">World map</option>
           </select>
         </label>
         <p class="hint" id="layout-hint"></p>
@@ -244,6 +244,10 @@
         <strong>columns</strong> respect the country filter only.
       </p>
       <p class="list-count" id="compare-count" role="status" aria-live="polite"></p>
+      <label class="check compare-toggle" for="compare-empty">
+        <input type="checkbox" id="compare-empty">
+        <span class="cname" id="compare-empty-label">Also show countries with nothing recorded</span>
+      </label>
       <ul class="matrix-legend">
         <li><span class="cell-key is-implemented"></span><span>Implemented — a national entity carries <code>implements-requirement-from</code></span></li>
         <li><span class="cell-key is-applies"></span><span>Applies — <code>applies-in</code> is recorded, but no national instrument is modelled</span></li>

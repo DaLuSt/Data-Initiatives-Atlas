@@ -1,0 +1,31 @@
+date: "2026-10-06"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Owner asked (in Dutch) for a usability analysis of the Atlas site, then to
+  start with points 3, 2 and 6 of it. Analysis: ran the site in headless
+  Chromium (desktop and mobile), axe-core, tabbing and a gzip count; written up
+  in docs/ux-analysis.md (expert review, not user research).
+
+  Point 3, Explorer. Root causes read in app.js: (a) setView wrote "No entity
+  selected" once, before a deep link set the focus; now updateExplorerHint
+  follows the selection. (b) The detail panel is a flex sibling of the canvas,
+  so showing it narrows the canvas after the layout had already fitted the wider
+  one, cutting the graph off; selectEntity now unhides the panel and resizes
+  before the layout, and closeDetail resizes and refits. (c) Depth defaulted to
+  2, which is 282 unlabelled entities for the GDPR; it is now automatic (widest
+  of 1 to 3 hops within 60 entities) until the visitor chooses, tracked as
+  depthUser so only a chosen depth reaches the URL and bare #ENTITY-ID links stay
+  bare. GDPR opens at 1 hop (53), NL-UAVG stays at 2 (54).
+  Point 2, wording: CLASS_LABEL and new CLASS_NAME (Relationships, Shared
+  context, Mentions), stats label, layout option text, hints, edge chips and
+  docs/graph.md table.
+  Point 6, Compare: columns ordered by recorded data, 17 empty countries hidden
+  behind a checkbox (empty=1 in the URL); a country filter overrides.
+
+  Verified in the browser after the change (deep link, plain link, depth choice,
+  close and refit, compare toggle, no console errors) and with screenshots.
+  Three new static tests (TestSiteWording), one checked by putting the old
+  wording back. 61 tests pass. Not done: points 1, 4, 5, 7, 8, 9.
+prs: []
+outcome: pending
+entity_count_after: 740

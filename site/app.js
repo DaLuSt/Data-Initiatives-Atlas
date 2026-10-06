@@ -17,6 +17,16 @@
   var view = "atlas";      // atlas | explorer | compare | list
   var focusId = null;
   var depth = 2;
+  // null = the visitor has not chosen a depth, so the Explorer picks one that
+  // keeps the picture readable (see autoDepth). Only a depth the visitor chose
+  // is written to the URL, so a plain #ENTITY-ID link stays plain.
+  var depthUser = null;
+  // The most entities autoDepth() will put on screen. A hub such as the GDPR
+  // reaches 282 entities in two hops, which is a ring with no labels.
+  var AUTO_DEPTH_MAX = 60;
+  // Compare: show countries with nothing recorded? Off by default, because the
+  // alphabetical front of the table was a wall of dashes.
+  var compareShowEmpty = false;
   // 4 is the ceiling on purpose. Every chain the Atlas is built to show
   // completes inside it — Convention 108+ to a national data protection
   // authority is exactly 4 hops, and it is the longest of them. Past 4 the
@@ -68,9 +78,13 @@
   // edge-class checkboxes and the edge detail panel (tapping an edge
   // directly on the canvas).
   var CLASS_LABEL = {
-    relationship: "Typed relationships (frontmatter, provenanced)",
-    association: "Associations (domains, organisations, related entities, versions)",
-    wikilink: "Wikilinks in the entity text (Obsidian navigation)"
+    relationship: "Relationships: each has a type, a source and its evidence",
+    association: "Shared context: same domain, organisation, related entity or version",
+    wikilink: "Mentions: links inside an entity's own text"
+  };
+  // Short names for the same three classes, for chips, hints and the stats list.
+  var CLASS_NAME = {
+    relationship: "Relationship", association: "Shared context", wikilink: "Mention"
   };
   // Shape carries type, colour carries level — so neither is the only cue.
   var TYPE_SHAPE = {
@@ -143,7 +157,7 @@
     var s = G.stats;
     var rows = [
       ["Entities", s.entities], ["Relationships", s.relationships],
-      ["Associations", s.associations], ["Countries", s.countries],
+      ["Shared-context links", s.associations], ["Countries", s.countries],
       ["Regions", s.regions], ["Organisations", s.organisations],
       ["Legislation", s.legislation], ["Standards", s.standards],
       ["Frameworks", s.frameworks], ["Data spaces", s.data_spaces],
@@ -271,9 +285,16 @@
 
     $("depth").addEventListener("change", function (e) {
       depth = Math.min(MAX_DEPTH, Math.max(1, parseInt(e.target.value, 10) || 2));
+      depthUser = depth;
       updateDepthLabels();
       syncUrl();
       if (view === "explorer") refresh();
+    });
+
+    $("compare-empty").addEventListener("change", function (e) {
+      compareShowEmpty = e.target.checked;
+      syncUrl();
+      if (view === "compare") renderCompare();
     });
 
     $("layout-mode").addEventListener("change", function (e) {
@@ -622,6 +643,22 @@
     return counts;
   }
 
+  /** Pick a depth when the visitor has not chosen one: the widest of 1 to 3
+   *  hops that still shows at most AUTO_DEPTH_MAX entities, and 1 hop when even
+   *  that is more. Past 3 hops this graph is the whole Atlas (see the note on
+   *  depthCounts), so an automatic choice never goes there. */
+  function autoDepth() {
+    if (depthUser !== null) return;
+    var counts = depthCounts();
+    if (!counts) return;
+    var chosen = 1;
+    for (var d = 2; d <= 3; d++) {
+      if (counts[d] <= AUTO_DEPTH_MAX) chosen = d; else break;
+    }
+    depth = chosen;
+    if ($("depth")) $("depth").value = String(depth);
+  }
+
   /** Write those counts into the depth control's own option labels.
    *
    *  Deliberately on the options rather than in the status line: the status
@@ -652,6 +689,9 @@
         hint.textContent = "At this depth the neighbourhood is the whole Atlas.";
       } else if (counts[depth] > total / 2) {
         hint.textContent = "More than half the Atlas — hub nodes connect almost everything.";
+      } else if (depthUser === null) {
+        hint.textContent = "Depth chosen for you: the widest that keeps the view to about " +
+          AUTO_DEPTH_MAX + " entities. Change it above to see more.";
       } else {
         hint.textContent = "";
       }
@@ -1193,7 +1233,7 @@
     } else {
       el.textContent = "Connected entities are pulled together, and typed " +
         "relationships pull hardest — low-confidence ones are held further " +
-        "apart than the rest. Associations pull loosely; wikilinks barely at " +
+        "apart than the rest. Shared-context links pull loosely; mentions barely at " +
         "all, so they sit wherever the other forces leave them. Geographic " +
         "level is no longer shown by position — only by colour.";
     }
@@ -1262,7 +1302,7 @@
     if (pathTargetId === focusId) { el.textContent = "That is the focused entity."; return; }
     if (!lastPath) {
       el.textContent = "No path between these two entities under the current filters. " +
-        "Try enabling Associations or Wikilinks under “Connections shown”, or widening the other filters.";
+        "Try enabling “Shared context” or “Mentions” under “Connections shown”, or widening the other filters.";
       return;
     }
     var hops = lastPath.edges.length;
@@ -1323,7 +1363,13 @@
     // A click, search pick or deep link is not a keyboard move — drop any
     // stale "Keyboard focus" note the status line was carrying.
     kbActive = false;
+    autoDepth();
+    updateExplorerHint();
     syncUrl();
+    // The detail panel is a flex sibling of the canvas, so showing it narrows
+    // the canvas. Make room first, then lay out: fitting the graph to the
+    // wider canvas and shrinking it afterwards cut the right side off.
+    if ($("detail").hidden) { $("detail").hidden = false; if (cy) cy.resize(); }
     if (view === "explorer") refresh();
     else if (cy && cy.getElementById(id).length) {
       highlight(id);
@@ -1337,7 +1383,12 @@
 
   function closeDetail() {
     $("detail").hidden = true;
-    if (cy) cy.elements().removeClass("dim hl focus");
+    if (cy) {
+      cy.elements().removeClass("dim hl focus");
+      // The canvas just got wider; use it.
+      cy.resize();
+      if (view === "explorer") cy.fit(undefined, 40);
+    }
   }
 
   function showDetail(id) {
@@ -1402,7 +1453,7 @@
     if (!rels.out.length && !rels.in.length) {
       h.push(sec("Relationships",
         '<p class="hint">No typed relationship in either direction. Enable ' +
-        '“Associations” or “Wikilinks” in the sidebar to see softer links.</p>'));
+        '“Shared context” or “Mentions” in the sidebar to see softer links.</p>'));
     }
 
     if (d.sources && d.sources.length) {
@@ -1436,11 +1487,11 @@
     var d = edge.data();
     var h = [];
     h.push('<h2 class="d-title" id="detail-title">' +
-      esc(d.type ? titly(d.type) : titly(d.cls)) + "</h2>");
+      esc(d.type ? titly(d.type) : (CLASS_NAME[d.cls] || titly(d.cls))) + "</h2>");
     h.push('<div class="d-id">' + esc(d.source) + " → " + esc(d.target) + "</div>");
 
     var chips = [];
-    chips.push('<span class="chip strong">' + esc(titly(d.cls)) + "</span>");
+    chips.push('<span class="chip strong">' + esc(CLASS_NAME[d.cls] || titly(d.cls)) + "</span>");
     if (d.provenance) chips.push('<span class="chip">' + esc(titly(d.provenance)) + "</span>");
     if (d.confidence) chips.push('<span class="chip">' + esc(titly(d.confidence)) + "</span>");
     h.push('<div class="chips">' + chips.join("") + "</div>");
@@ -1703,6 +1754,19 @@
   }
 
   // ── views ────────────────────────────────────────────────────────────
+  /** The Explorer's hint line must follow the selection. It used to be written
+   *  once, when the view opened, so a deep link such as
+   *  #view=explorer&focus=EU-GDPR said "No entity selected" over a graph that
+   *  was focused on exactly that entity. */
+  function updateExplorerHint() {
+    var el = $("explorer-hint");
+    if (!el) return;
+    el.textContent = focusId && nodeById[focusId]
+      ? "Showing the neighbourhood of " + nodeById[focusId].label +
+        ". Search, or click another entity, to change the focus."
+      : "No entity selected. Search above, or switch to Global Atlas and click a node.";
+  }
+
   function setView(v) {
     view = v;
     [["view-atlas", "atlas"], ["view-explorer", "explorer"],
@@ -1720,10 +1784,7 @@
     // hop distance are the whole point of that view, and Compare/List have
     // no canvas at all.
     $("layout-panel").hidden = v !== "atlas";
-    if (v === "explorer" && !focusId) {
-      $("explorer-hint").textContent =
-        "No entity selected. Search above, or switch to Global Atlas and click a node.";
-    }
+    updateExplorerHint();
     refresh();
     if (v !== "list" && v !== "compare" && cy) cy.resize();
   }
@@ -1828,9 +1889,9 @@
     // Columns follow the country filter alone. The other filters describe
     // instruments, and applying them to the columns would empty the matrix
     // the moment someone filtered by type or level.
-    var cols = G.nodes.filter(function (n) {
+    var allCols = G.nodes.filter(function (n) {
       return n.type === "country" && (!filters.country.size || filters.country.has(n.id));
-    }).sort(function (a, b) { return a.label.localeCompare(b.label); });
+    });
 
     var rows = m.rows.filter(function (n) { return passesNodeFilters(n, true); });
 
@@ -1839,6 +1900,45 @@
       if (im && im.length) return { kind: "implemented", ids: im };
       if ((m.applies[rowId] || {})[countryId]) return { kind: "applies" };
       return { kind: "none" };
+    }
+
+    // Order the columns by how much the Atlas records for each country, not
+    // alphabetically: alphabetical put Albania, Andorra, Argentina and Armenia
+    // first, all of them empty, and the countries with data (the Netherlands,
+    // Germany, Spain) off to the right. Countries with nothing recorded for any
+    // row shown are hidden unless asked for, or unless the visitor filtered to
+    // specific countries, in which case they get exactly the columns they chose.
+    var colTally = Object.create(null);
+    allCols.forEach(function (c) {
+      var t = { implemented: 0, applies: 0 };
+      rows.forEach(function (n) {
+        var s = cellState(n.id, c.id);
+        if (s.kind === "implemented") t.implemented++;
+        else if (s.kind === "applies") t.applies++;
+      });
+      colTally[c.id] = t;
+    });
+    allCols.sort(function (a, b) {
+      return (colTally[b.id].implemented - colTally[a.id].implemented) ||
+        (colTally[b.id].applies - colTally[a.id].applies) ||
+        a.label.localeCompare(b.label);
+    });
+    var hideEmpty = !compareShowEmpty && !filters.country.size;
+    var cols = hideEmpty
+      ? allCols.filter(function (c) { return colTally[c.id].implemented || colTally[c.id].applies; })
+      : allCols;
+    var hiddenCols = allCols.length - cols.length;
+    var emptyCols = allCols.filter(function (c) {
+      return !colTally[c.id].implemented && !colTally[c.id].applies;
+    }).length;
+    var toggle = $("compare-empty");
+    if (toggle) {
+      toggle.checked = compareShowEmpty;
+      toggle.disabled = !!filters.country.size;
+      $("compare-empty-label").textContent = filters.country.size
+        ? "Showing the countries you filtered to"
+        : (compareShowEmpty ? "Also showing the " : "Also show ") +
+          emptyCols.toLocaleString() + " countries with nothing recorded";
     }
 
     // Rank by how much each instrument actually says: implementations first,
@@ -1914,7 +2014,8 @@
 
     $("compare-count").textContent = rows.length
       ? rows.length.toLocaleString() + " instrument" + (rows.length === 1 ? "" : "s") +
-        " × " + cols.length + " countr" + (cols.length === 1 ? "y" : "ies") + " · " +
+        " × " + cols.length + " countr" + (cols.length === 1 ? "y" : "ies") +
+        (hiddenCols ? " (" + hiddenCols + " more with nothing recorded are hidden)" : "") + " · " +
         totals.implemented.toLocaleString() + " implemented · " +
         totals.applies.toLocaleString() + " applying with no national instrument modelled."
       : "No supra-national instrument matches the current filters.";
@@ -1975,9 +2076,11 @@
     syncFilterCheckboxes();
 
     var d = parseInt(params.get("depth"), 10);
-    depth = (d >= 1 && d <= MAX_DEPTH) ? d : 2;
+    depthUser = (d >= 1 && d <= MAX_DEPTH) ? d : null;
+    depth = depthUser !== null ? depthUser : 2;
     if ($("depth")) $("depth").value = String(depth);
 
+    compareShowEmpty = params.get("empty") === "1";
     layoutMode = LAYOUT_MODES.indexOf(params.get("layout")) >= 0 ? params.get("layout") : "grouped";
     if ($("layout-mode")) $("layout-mode").value = layoutMode;
 
@@ -2011,7 +2114,8 @@
   function currentStateParams() {
     var p = new URLSearchParams();
     if (view !== "atlas") p.set("view", view);
-    if (depth !== 2) p.set("depth", String(depth));
+    if (depthUser !== null) p.set("depth", String(depthUser));
+    if (compareShowEmpty) p.set("empty", "1");
     if (layoutMode !== "grouped") p.set("layout", layoutMode);
     var q = $("search") ? $("search").value.trim() : "";
     if (q) p.set("q", q);
