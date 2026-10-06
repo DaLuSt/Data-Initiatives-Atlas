@@ -28,7 +28,7 @@ reorder the list below.
 | 6 | Compare listed countries alphabetically, so the first columns (Albania, Andorra, Argentina, Armenia) were empty and the countries with data were off to the right. | **Done 2026-10-06** |
 | 7 | The detail panel showed internal research notes ("NOT READ — search-only.") in full for every relationship, "Confidence: Low" with no explanation that it describes the Atlas's certainty and not the law, and dates as "2026 08 21". | **Done 2026-10-06** (see below) |
 | 8 | Entity names are official titles in the national language, with no short English display name. Related to `discovery/unresolved.md` row #9 (multilingual names). | Open |
-| 9 | Small things: the Re-layout button's aria-label ("Recalculate layout") does not contain its visible text (axe, serious); zoom feels abrupt (Cytoscape's custom wheel sensitivity warning); no "copy link" or "download data" control. | Open |
+| 9 | Small things: the Re-layout button's aria-label ("Recalculate layout") does not contain its visible text (axe, serious); a custom wheel sensitivity that Cytoscape warns about (measured later: it made zoom sluggish, not abrupt); no "copy link" or "download data" control. | **Done 2026-10-06** (see below) |
 
 ## What the 2026-10-06 change did
 - **Explorer (3):** the hint follows the selection; the detail panel is made
@@ -105,5 +105,26 @@ The 40 px sizes apply to touch screens (`pointer: coarse`); a narrow desktop
 window keeps the compact sizes. Not measured: a real phone, landscape, or
 screens narrower than 360 px.
 
+## Point 9: small things (2026-10-06)
+- **Re-layout** had `aria-label="Recalculate layout"`, which does not contain
+  its visible text (axe, serious: label in name). It is now "Re-layout the
+  graph".
+- **Zoom.** The custom `wheelSensitivity: 0.25` triggered Cytoscape's own console
+  warning that it "will make your app zoom unnaturally when using mainstream
+  mice". Measured in headless Chromium, one wheel tick of 100 zoomed by about
+  1.1% with the custom value and about 4.5% with Cytoscape's default, so the
+  zoom was sluggish rather than abrupt; the setting is removed and the warning
+  is gone. How it feels on a real mouse or trackpad was not tested.
+- **Copy link and data.** The footer has "Copy link to this view" (the address
+  already carries view, focus, depth and filters; the button says "Link copied"
+  and announces it) and download links for `graph.json` and `details.json`. If
+  the clipboard is not available the address is shown in a prompt instead.
+  Not done: a CSV export of the List view.
+- **Found while re-running axe** (both existed before): the detail panel's
+  section headings jumped from h2 to h4 (now h3), and the List and Compare views
+  had no `main` landmark because the only one, the graph, is hidden there (they
+  are now `main` elements). axe reports nothing on the Atlas, List, Explorer
+  and bare views after the change.
+
 ## Suggested order for the rest
-8 (short English display names), then 9.
+8 (short English display names).

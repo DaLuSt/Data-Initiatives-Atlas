@@ -205,14 +205,14 @@
       <button id="zoom-in" class="icon-btn" aria-label="Zoom in">+</button>
       <button id="zoom-out" class="icon-btn" aria-label="Zoom out">−</button>
       <button id="fit" class="icon-btn" aria-label="Fit graph to view">Fit</button>
-      <button id="relayout" class="icon-btn" aria-label="Recalculate layout">Re-layout</button>
+      <button id="relayout" class="icon-btn" aria-label="Re-layout the graph">Re-layout</button>
     </div>
 
     <div class="stage-status" id="stage-status" role="status" aria-live="polite"></div>
   </main>
 
   <!-- ───────────────────────── list view ───────────────────────── -->
-  <section class="listview" id="listview" hidden aria-labelledby="list-h">
+  <main class="listview" id="listview" hidden aria-labelledby="list-h">
     <div class="listview-inner">
       <h2 id="list-h">All entities</h2>
       <p class="hint">
@@ -239,10 +239,10 @@
         </table>
       </div>
     </div>
-  </section>
+  </main>
 
   <!-- ───────────────────────── comparison matrix ───────────────────────── -->
-  <section class="listview" id="compareview" hidden aria-labelledby="compare-h">
+  <main class="listview" id="compareview" hidden aria-labelledby="compare-h">
     <div class="listview-inner compare-inner">
       <!-- Filled by renderCompare(): the country count is data, not copy. -->
       <h2 id="compare-h">One instrument, many countries</h2>
@@ -277,7 +277,7 @@
       </div>
       <p class="hint" id="compare-note"></p>
     </div>
-  </section>
+  </main>
 
   <!-- ───────────────────────── detail panel ───────────────────────── -->
   <aside class="detail" id="detail" hidden aria-labelledby="detail-title" tabindex="-1">
@@ -297,6 +297,13 @@
     Graph rendering by <a href="https://js.cytoscape.org/" rel="noopener">Cytoscape.js</a> (MIT).
     If this project is useful to you, consider
     <a href="https://github.com/sponsors/DaLuSt" target="_blank" rel="noopener">sponsoring it on GitHub</a>.
+  </p>
+  <p class="footer-actions">
+    <button id="copy-link" type="button" class="linkbtn">Copy link to this view</button>
+    · Data:
+    <a href="graph.json" download>graph (JSON)</a>,
+    <a href="details.json" download>entity details (JSON)</a>
+    <span id="copy-status" class="sr-only" role="status" aria-live="polite"></span>
   </p>
 </footer>
 
