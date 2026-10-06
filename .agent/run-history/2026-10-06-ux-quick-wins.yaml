@@ -26,6 +26,8 @@ summary: >
   close and refit, compare toggle, no console errors) and with screenshots.
   Three new static tests (TestSiteWording), one checked by putting the old
   wording back. 61 tests pass. Not done: points 1, 4, 5, 7, 8, 9.
-prs: []
-outcome: pending
+prs:
+  - number: 430
+    title: "Fix the Explorer, plain-language sidebar, order the Compare columns"
+outcome: merged
 entity_count_after: 740
