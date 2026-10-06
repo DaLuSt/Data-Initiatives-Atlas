@@ -118,6 +118,10 @@ last_merged_prs:
     summary: "Housekeeping: recorded #425-426 in state.yaml and run-history"
   - number: 428
     summary: "Created DOMAIN-SOCIAL-SECURITY (BE-KSZ, BE-KSZ-WET) and DOMAIN-BUILT-ENVIRONMENT (NL-DIGIGO, NL-DSGO) to replace the sector signal lost when level: sectoral was retired; 740 entities; thirteen domains now sit at 1-2 countries"
+  - number: 429
+    summary: "Housekeeping: recorded #427-428 in state.yaml and run-history"
+  - number: 430
+    summary: "Usability review of the site (docs/ux-analysis.md) and its first three fixes: the Explorer hint follows the selection, the detail panel no longer cuts the graph off, and the depth is chosen automatically (at most 60 entities) until the visitor picks one; the sidebar's connection classes are now Relationships / Shared context / Mentions; Compare orders countries by recorded data and hides the 17 empty ones behind a checkbox"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
