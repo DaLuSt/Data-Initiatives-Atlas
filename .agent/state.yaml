@@ -138,6 +138,8 @@ last_merged_prs:
     summary: "Housekeeping: recorded #436 in state.yaml and run-history"
   - number: 438
     summary: "Small usability fixes: Re-layout accessible name, default zoom (no console warning), footer copy-link and data downloads, h3 section headings and a main landmark in every view (point 9 of docs/ux-analysis.md)"
+  - number: 439
+    summary: "Optional frontmatter field name_en (short English display name), backfilled for 169 entities from names already listed in their alternative_names, and a Names control on the site that shows it (point 8 of docs/ux-analysis.md); remaining records recorded as unresolved row #233"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,

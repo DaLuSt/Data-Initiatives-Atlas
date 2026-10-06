@@ -2,8 +2,10 @@
 id: DE-BFV
 type: organisation
 name: Bundesamt für Verfassungsschutz
+name_en: "Federal Office for the Protection of the Constitution"
 alternative_names:
   - BfV
+  - "Federal Office for the Protection of the Constitution"
 description: >
   Germany's domestic intelligence service, in the portfolio of the Federal
   Ministry of the Interior. It is responsible for anti-constitutional and
@@ -71,6 +73,10 @@ sources:
     url: "https://geheimdienste.org/recht-und-gesetz"
     publisher: "geheimdienste.org"
     accessed: "2026-08-22"
+  - title: "BfDI (Federal Commissioner for Data Protection and Freedom of Information) — Supervision over federal intelligence services (English)"
+    url: "https://www.bfdi.bund.de/EN/Fachthemen/Inhalte/Nachrichtendienste/Kontrollandschaft-Nachrichtendienste-des-Bundes.html"
+    publisher: "Federal Commissioner for Data Protection and Freedom of Information"
+    accessed: "2026-10-06"
 ---
 
 # Bundesamt für Verfassungsschutz (BfV)

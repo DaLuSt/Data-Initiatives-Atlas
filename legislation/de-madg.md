@@ -2,9 +2,11 @@
 id: DE-MADG
 type: act
 name: Gesetz über den Militärischen Abschirmdienst
+name_en: "Act on the Military Counterintelligence Service"
 alternative_names:
   - MAD-Gesetz
   - MADG
+  - "Act on the Military Counterintelligence Service"
 description: >
   German federal act constituting the Militärischer Abschirmdienst and
   defining its tasks and powers. It is one of the three service-specific
@@ -55,6 +57,10 @@ sources:
     publisher: "Deutscher Bundestag (community-maintained statute mirror)"
     accessed: "2026-09-05"
     note: "gesetze-im-internet.de's own madg_2026 URL for this act returned HTTP 503 on repeated attempts this pass; this mirror substitutes for it and independently confirms the same 20.12.1990 enactment date a WebSearch summary of the official site had also returned."
+  - title: "BfDI (Federal Commissioner for Data Protection and Freedom of Information) — Supervision over federal intelligence services (English)"
+    url: "https://www.bfdi.bund.de/EN/Fachthemen/Inhalte/Nachrichtendienste/Kontrollandschaft-Nachrichtendienste-des-Bundes.html"
+    publisher: "Federal Commissioner for Data Protection and Freedom of Information"
+    accessed: "2026-10-06"
 ---
 
 # MAD-Gesetz (MADG)

@@ -26,6 +26,8 @@ summary: >
   makes Cytoscape log "edge has invalid endpoints" warnings (38 on a depth
   change; pre-existing, present without name_en). Not tested: how mixed
   English and original labels read to visitors.
-prs: []
-outcome: in-progress
+prs:
+  - number: 439
+    title: "Add short English display names (point 8)"
+outcome: merged
 entity_count_after: 740

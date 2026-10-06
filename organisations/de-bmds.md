@@ -2,9 +2,11 @@
 id: DE-BMDS
 type: organisation
 name: Bundesministerium für Digitales und Staatsmodernisierung
+name_en: "Federal Ministry for Digital Transformation and Government Modernisation"
 alternative_names:
   - BMDS
   - Digitalministerium
+  - "Federal Ministry for Digital Transformation and Government Modernisation"
 description: >
   German federal ministry for digital affairs and state modernisation,
   established on 6 May 2025. It bundles competences previously spread
@@ -68,6 +70,10 @@ sources:
     url: "https://netzpolitik.org/2025/neues-digitalministerium-so-will-schwarz-rot-das-land-digitalisieren/"
     publisher: "netzpolitik.org"
     accessed: "2026-08-22"
+  - title: "Federal Ministry for Digital Transformation and Government Modernisation (BMDS), English site"
+    url: "https://bmds.bund.de/en"
+    publisher: "Bundesministerium für Digitales und Staatsmodernisierung"
+    accessed: "2026-10-06"
 ---
 
 # Bundesministerium für Digitales und Staatsmodernisierung (BMDS)

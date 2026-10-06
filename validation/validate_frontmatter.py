@@ -79,9 +79,12 @@ def check_rank(rel_path: str, entity_type, rank, schema: dict,
         )
 
 
-def check_name_en(rel_path: str, name, name_en, report: common.Report) -> None:
+def check_name_en(rel_path: str, name, name_en, alternative_names,
+                  report: common.Report) -> None:
     """`name_en` is an optional short English display name. Where it is set it
-    must be a non-empty string that says something `name` does not."""
+    must be a non-empty string that says something `name` does not, and it must
+    also be listed in `alternative_names` so that search and de-duplication,
+    which read that list, see it."""
     if name_en is None:
         return
     if not isinstance(name_en, str) or not name_en.strip():
@@ -94,6 +97,10 @@ def check_name_en(rel_path: str, name, name_en, report: common.Report) -> None:
             f"{rel_path}: 'name_en' repeats 'name'; remove it (an English "
             f"official name needs no separate English name)"
         )
+        return
+    listed = [str(a).strip().casefold() for a in (alternative_names or [])]
+    if name_en.strip().casefold() not in listed:
+        report.error(f"{rel_path}: 'name_en' must also be listed in 'alternative_names'")
 
 
 def main() -> int:
@@ -146,7 +153,8 @@ def main() -> int:
         if verification is not None and verification not in schema["verification_levels"]:
             report.error(f"{e.rel_path}: invalid verification '{verification}'")
 
-        check_name_en(e.rel_path, fm.get("name"), fm.get("name_en"), report)
+        check_name_en(e.rel_path, fm.get("name"), fm.get("name_en"),
+                      fm.get("alternative_names"), report)
         check_rank(e.rel_path, entity_type, fm.get("rank"), schema, report,
                    fm.get("status"))
 

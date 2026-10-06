@@ -2,9 +2,11 @@
 id: ES-NTI-RISP
 type: standard
 name: Norma Técnica de Interoperabilidad de Reutilización de Recursos de Información
+name_en: "Technical Standard for Interoperability for the Reuse of Information Resources"
 alternative_names:
   - NTI-RISP
   - DCAT-AP-ES
+  - "Technical Standard for Interoperability for the Reuse of Information Resources"
 description: >
   Spanish technical interoperability standard for selecting, identifying,
   describing and making datasets available for re-use, and the regulatory
@@ -84,6 +86,10 @@ sources:
     url: "https://datosgobes.github.io/DCAT-AP-ES/en/"
     publisher: "datos.gob.es"
     accessed: "2026-09-26"
+  - title: "DCAT-AP-ES: A step forward in open data interoperability (datos.gob.es, English)"
+    url: "https://datos.gob.es/en/blog/dcat-ap-es-step-forward-open-data-interoperability"
+    publisher: "datos.gob.es (Spanish Government open data portal)"
+    accessed: "2026-10-06"
 ---
 
 # NTI-RISP / DCAT-AP-ES

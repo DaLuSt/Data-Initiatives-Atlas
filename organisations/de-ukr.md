@@ -2,8 +2,10 @@
 id: DE-UKR
 type: organisation
 name: Unabhängiger Kontrollrat
+name_en: "Independent Oversight Council"
 alternative_names:
   - UKR
+  - "Independent Oversight Council"
 description: >
   Independent German body exercising judicial-style legality control over
   the Bundesnachrichtendienst's intelligence measures. It adopts its own
@@ -74,6 +76,10 @@ sources:
     url: "https://www.bundesregierung.de/breg-de/aktuelles/bundeskabinett-beschliesst-reform-des-rechts-der-nachrichtendienste-2449432"
     publisher: "Presse- und Informationsamt der Bundesregierung"
     accessed: "2026-09-06"
+  - title: "BfDI (Federal Commissioner for Data Protection and Freedom of Information) — Supervision over federal intelligence services (English)"
+    url: "https://www.bfdi.bund.de/EN/Fachthemen/Inhalte/Nachrichtendienste/Kontrollandschaft-Nachrichtendienste-des-Bundes.html"
+    publisher: "Federal Commissioner for Data Protection and Freedom of Information"
+    accessed: "2026-10-06"
 ---
 
 # Unabhängiger Kontrollrat (UKR)

@@ -2,8 +2,10 @@
 id: AT-DSB
 type: organisation
 name: Datenschutzbehörde
+name_en: "Austrian Data Protection Authority"
 alternative_names:
   - DSB
+  - "Austrian Data Protection Authority"
 description: >
   Austria's national supervisory authority for data protection, and the
   Austrian member of the European Data Protection Board.
@@ -53,6 +55,10 @@ sources:
     url: "https://www.edpb.europa.eu/about-edpb/about-edpb/members_en"
     publisher: "European Data Protection Board"
     accessed: "2026-08-21"
+  - title: "Austrian Data Protection Authority (English site)"
+    url: "https://www.data-protection-authority.gv.at"
+    publisher: "Datenschutzbehörde"
+    accessed: "2026-10-06"
 ---
 
 # Datenschutzbehörde

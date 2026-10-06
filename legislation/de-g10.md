@@ -2,9 +2,11 @@
 id: DE-G10
 type: act
 name: Gesetz zur Beschränkung des Brief-, Post- und Fernmeldegeheimnisses
+name_en: "Act on Restrictions on the Secrecy of Mail, Post and Telecommunications"
 alternative_names:
   - Artikel 10-Gesetz
   - G10G
+  - "Act on Restrictions on the Secrecy of Mail, Post and Telecommunications"
 description: >
   German federal act restricting the privacy of correspondence, post and
   telecommunications guaranteed by Article 10 of the Basic Law, and setting
@@ -62,6 +64,10 @@ sources:
     url: "https://de.wikipedia.org/wiki/Artikel_10-Gesetz"
     publisher: "Wikipedia"
     accessed: "2026-09-05"
+  - title: "BfDI (Federal Commissioner for Data Protection and Freedom of Information) — Supervision over federal intelligence services (English)"
+    url: "https://www.bfdi.bund.de/EN/Fachthemen/Inhalte/Nachrichtendienste/Kontrollandschaft-Nachrichtendienste-des-Bundes.html"
+    publisher: "Federal Commissioner for Data Protection and Freedom of Information"
+    accessed: "2026-10-06"
 ---
 
 # Artikel 10-Gesetz (G10)

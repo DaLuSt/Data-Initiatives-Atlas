@@ -2,9 +2,11 @@
 id: CH-REVDSG
 type: act
 name: Bundesgesetz über den Datenschutz
+name_en: "Federal Act on Data Protection (FADP)"
 alternative_names:
   - revDSG
   - DSG
+  - "Federal Act on Data Protection (FADP)"
 description: >
   Switzerland's revised Federal Act on Data Protection, in force since
   1 September 2023 together with the new Data Protection Ordinance. It
@@ -73,6 +75,10 @@ sources:
     url: "https://www.fedlex.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2022/491/20230901/de/pdf-a/fedlex-data-admin-ch-eli-cc-2022-491-20230901-de-pdf-a.pdf"
     publisher: "Fedlex — Die Publikationsplattform des Bundesrechts"
     accessed: "2026-09-19"
+  - title: "Federal Act on Data Protection (Data Protection Act, FADP), English translation (no legal force)"
+    url: "https://www.fedlex.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2022/491/20230901/en/pdf-a/fedlex-data-admin-ch-eli-cc-2022-491-20230901-en-pdf-a.pdf"
+    publisher: "Fedlex"
+    accessed: "2026-10-06"
 ---
 
 # Revidiertes Datenschutzgesetz (revDSG)

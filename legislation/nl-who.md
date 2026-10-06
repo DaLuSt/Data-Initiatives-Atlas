@@ -2,10 +2,12 @@
 id: NL-WHO
 type: act
 name: Wet hergebruik van overheidsinformatie
+name_en: "Reuse of Government Information Act"
 alternative_names:
   - Who
   - hWho
   - Herziene Wet hergebruik van overheidsinformatie
+  - "Reuse of Government Information Act"
 description: >
   Dutch act on the re-use of public sector information. Amended in 2024 by
   the Wet implementatie Open data richtlijn, which transposed EU Directive
@@ -69,6 +71,10 @@ sources:
     url: "https://vng.nl/projecten/wet-hergebruik-van-overheidsinformatie"
     publisher: "Vereniging van Nederlandse Gemeenten (VNG)"
     accessed: "2026-08-27"
+  - title: "Open data policy (data.overheid.nl, English)"
+    url: "https://data.overheid.nl/en/ondersteuning/open-data/beleid"
+    publisher: "Data overheid (Dutch government open data portal)"
+    accessed: "2026-10-06"
 ---
 
 # Wet hergebruik van overheidsinformatie (Who)

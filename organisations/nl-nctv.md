@@ -2,8 +2,10 @@
 id: NL-NCTV
 type: organisation
 name: Nationaal Coördinator Terrorismebestrijding en Veiligheid
+name_en: "National Coordinator for Counterterrorism and Security"
 alternative_names:
   - NCTV
+  - "National Coordinator for Counterterrorism and Security"
 description: >
   Dutch national coordinator for counter-terrorism, cybersecurity, national
   security, crisis management and resilience against state threats.
@@ -58,6 +60,10 @@ sources:
     url: "https://www.nctv.nl/onderwerpen/v/vitale-infrastructuur/wet-weerbaarheid-kritieke-entiteiten"
     publisher: "Nationaal Coördinator Terrorismebestrijding en Veiligheid (NCTV)"
     accessed: "2026-09-05"
+  - title: "National Coordinator for Counterterrorism and Security (English site)"
+    url: "https://english.nctv.nl/"
+    publisher: "Ministry of Justice and Security"
+    accessed: "2026-10-06"
 ---
 
 # NCTV — Nationaal Coördinator Terrorismebestrijding en Veiligheid

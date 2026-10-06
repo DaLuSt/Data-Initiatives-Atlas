@@ -2,10 +2,12 @@
 id: DE-BAMAD
 type: organisation
 name: Bundesamt für den Militärischen Abschirmdienst
+name_en: "Military Counterintelligence Service"
 alternative_names:
   - BAMAD
   - MAD
   - Militärischer Abschirmdienst
+  - "Military Counterintelligence Service"
 description: >
   Germany's military intelligence and counter-intelligence service, assigned
   to the Federal Ministry of Defence. It investigates anti-constitutional or
@@ -65,6 +67,10 @@ sources:
     url: "https://geheimdienste.org/recht-und-gesetz"
     publisher: "geheimdienste.org"
     accessed: "2026-08-22"
+  - title: "BfDI — The Military Counterintelligence Service (English)"
+    url: "https://www.bfdi.bund.de/EN/Buerger/Inhalte/Nachrichtendienste/MilitaerischerAbschirmdienst.html"
+    publisher: "Federal Commissioner for Data Protection and Freedom of Information"
+    accessed: "2026-10-06"
 ---
 
 # Bundesamt für den Militärischen Abschirmdienst (BAMAD / MAD)

@@ -2,9 +2,11 @@
 id: DE-PKGRG
 type: act
 name: Gesetz über die parlamentarische Kontrolle nachrichtendienstlicher Tätigkeit des Bundes
+name_en: "Parliamentary Oversight Panel Act"
 alternative_names:
   - PKGrG
   - Kontrollgremiumgesetz
+  - "Parliamentary Oversight Panel Act"
 description: >
   German federal act governing the parliamentary oversight of federal
   intelligence activity and the Parlamentarisches Kontrollgremium of the
@@ -49,6 +51,10 @@ sources:
     url: "https://de.wikipedia.org/wiki/Parlamentarisches_Kontrollgremium"
     publisher: "Wikipedia"
     accessed: "2026-08-22"
+  - title: "BfDI (Federal Commissioner for Data Protection and Freedom of Information) — Supervision over federal intelligence services (English)"
+    url: "https://www.bfdi.bund.de/EN/Fachthemen/Inhalte/Nachrichtendienste/Kontrollandschaft-Nachrichtendienste-des-Bundes.html"
+    publisher: "Federal Commissioner for Data Protection and Freedom of Information"
+    accessed: "2026-10-06"
 ---
 
 # PKGrG — Kontrollgremiumgesetz

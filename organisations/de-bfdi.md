@@ -2,8 +2,10 @@
 id: DE-BFDI
 type: organisation
 name: Bundesbeauftragte für den Datenschutz und die Informationsfreiheit
+name_en: "Federal Commissioner for Data Protection and Freedom of Information"
 alternative_names:
   - BfDI
+  - "Federal Commissioner for Data Protection and Freedom of Information"
 description: >
   Independent supreme federal authority for data protection and freedom of
   information in Germany, seated in Bonn. It is the data-protection
@@ -81,6 +83,10 @@ sources:
     url: "https://wirtschaftslexikon.gabler.de/definition/bundesbeauftragter-fuer-den-datenschutz-und-die-informationsfreiheit-bfdi-31020"
     publisher: "Gabler Wirtschaftslexikon"
     accessed: "2026-08-22"
+  - title: "European Data Protection Board - Members (English name of the Bundesbeauftragte)"
+    url: "https://www.edpb.europa.eu/about-edpb/about-edpb/members_en"
+    publisher: "European Data Protection Board"
+    accessed: "2026-10-06"
 ---
 
 # Bundesbeauftragte für den Datenschutz und die Informationsfreiheit (BfDI)
