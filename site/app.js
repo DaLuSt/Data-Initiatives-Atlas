@@ -1485,6 +1485,20 @@
     }
   }
 
+  /** What `verification` means, in words. */
+  function sourcesLabel(v) {
+    return { "primary-source": "Read from primary sources",
+             "search-only": "Found by search, not read",
+             "unverified": "Not verified" }[v] || titly(v);
+  }
+
+  /** The repository marks a relationship whose cited page was never opened with
+   *  "NOT READ — search-only." in its evidence. 403 of the 1,565 do. That is
+   *  worth saying before the paragraph rather than inside it. */
+  function evidenceNotRead(text) {
+    return /NOT READ/.test(text || "");
+  }
+
   function showDetail(id) {
     var n = nodeById[id];
     if (!n) return;
@@ -1516,13 +1530,28 @@
     }
 
     // Only metadata that actually exists (brief §7/§10).
+    // The first four describe the Atlas's own record, not the entity, and the
+    // frontmatter names for them (verification, confidence, coverage) mean
+    // little to a visitor. Plain labels, a one-line explanation under the
+    // heading, and the same words in a tooltip. Dates stay ISO: titly() turned
+    // 2026-08-21 into "2026 08 21".
     var meta = [];
-    [["Legal rank", d.rank], ["Verification", d.verification], ["Confidence", d.confidence],
-     ["Coverage", d.coverage], ["Last verified", d.last_verified],
-     ["Start date", d.start_date], ["End date", d.end_date]].forEach(function (kv) {
-      if (kv[1]) meta.push("<dt>" + kv[0] + "</dt><dd>" + esc(titly(String(kv[1]))) + "</dd>");
-    });
-    if (meta.length) h.push(sec("Metadata", '<dl class="kv">' + meta.join("") + "</dl>"));
+    [["Legal rank", d.rank, titly, "Where the instrument sits in its legal order: constitutional, organic, ordinary or delegated."],
+     ["Sourcing", d.verification, sourcesLabel, "Whether the pages cited for this entity were actually read."],
+     ["Atlas confidence", d.confidence, titly, "How much the Atlas trusts its own record of this entity."],
+     ["Research depth", d.coverage, titly, "How thoroughly the entity has been researched."],
+     ["Last checked", d.last_verified, String, "The date the record was last checked against its sources."],
+     ["Start date", d.start_date, String, ""], ["End date", d.end_date, String, ""]]
+      .forEach(function (m) {
+        if (m[1]) meta.push("<dt" + (m[3] ? ' title="' + esc(m[3]) + '"' : "") + ">" + m[0] +
+          "</dt><dd>" + esc(m[2](String(m[1]))) + "</dd>");
+      });
+    if (meta.length) {
+      h.push(sec("About this record",
+        '<p class="hint">Sources, confidence and research depth describe how well the Atlas ' +
+        "knows this entity, not the entity itself. A low-confidence record is an honest one.</p>" +
+        '<dl class="kv">' + meta.join("") + "</dl>"));
+    }
 
     if (d.domains && d.domains.length) {
       h.push(sec("Domains", "<ul>" + d.domains.map(function (x) {
@@ -1599,7 +1628,10 @@
     if (d.cls === "relationship") {
       var key = d.source + "|" + d.target + "|" + (d.type || "");
       var ed = D && D.edges && D.edges[key];
-      if (ed && ed.evidence) h.push(sec("Evidence", '<p class="evidence">' + esc(ed.evidence) + "</p>"));
+      if (ed && ed.evidence) h.push(sec("Evidence",
+        (evidenceNotRead(ed.evidence)
+          ? '<p class="caveat">The page cited for this link was found by search but not opened and read.</p>' : "") +
+        '<p class="evidence">' + esc(ed.evidence) + "</p>"));
       else if (!D) h.push(sec("Evidence", '<p class="hint">Loading…</p>'));
     } else {
       h.push(sec("What this is", '<p class="hint">' + esc(CLASS_LABEL[d.cls] || "") + "</p>"));
@@ -1654,8 +1686,13 @@
         '<span class="rel-type">' + esc(e.type) + "</span>" + link(other) +
         (e.provenance === "interpretation"
           ? ' <span class="rel-interp" title="Atlas interpretation, not a sourced fact">interpretation</span>' : "") +
+        (ed && evidenceNotRead(ed.evidence)
+          ? ' <span class="rel-unread" title="The page cited for this link was found by search but not opened and read.">source not read</span>' : "") +
         "</div>" +
-        (ed && ed.evidence ? '<p class="evidence">' + esc(ed.evidence) + "</p>" : "") +
+        // Collapsed: a hub such as the GDPR has 52 of these, each a paragraph.
+        (ed && ed.evidence
+          ? '<details class="ev"><summary>Evidence</summary><p class="evidence">' +
+            esc(ed.evidence) + "</p></details>" : "") +
         "</li>";
     }).join("") + "</ul>";
   }
