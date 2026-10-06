@@ -2,6 +2,7 @@
 id: PT-ARTE
 type: organisation
 name: Agência para a Reforma Tecnológica do Estado
+name_en: "Agency for the Technological Reform of the State"
 alternative_names:
   - ARTE
   - ARTE, I.P.

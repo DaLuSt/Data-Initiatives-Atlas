@@ -2,6 +2,7 @@
 id: FR-DNRED
 type: organisation
 name: Direction nationale du renseignement et des enquêtes douanières
+name_en: "National Directorate of Customs Intelligence and Investigations"
 alternative_names:
   - DNRED
   - National Directorate of Customs Intelligence and Investigations

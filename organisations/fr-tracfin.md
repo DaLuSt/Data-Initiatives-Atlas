@@ -2,6 +2,7 @@
 id: FR-TRACFIN
 type: organisation
 name: Traitement du renseignement et action contre les circuits financiers clandestins
+name_en: "Financial Intelligence Unit (France)"
 alternative_names:
   - TRACFIN
   - Financial Intelligence Unit (France)

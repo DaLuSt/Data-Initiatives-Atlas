@@ -2,6 +2,7 @@
 id: PT-CMD
 type: platform
 name: Chave Móvel Digital
+name_en: "Digital Mobile Key"
 alternative_names:
   - CMD
   - Digital Mobile Key

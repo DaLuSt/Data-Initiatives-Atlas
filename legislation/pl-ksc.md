@@ -2,6 +2,7 @@
 id: PL-KSC
 type: act
 name: Ustawa o krajowym systemie cyberbezpieczeństwa
+name_en: "National Cybersecurity System Act"
 alternative_names:
   - Ustawa o KSC
   - KSC

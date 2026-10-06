@@ -2,6 +2,7 @@
 id: ES-CNI
 type: organisation
 name: Centro Nacional de Inteligencia
+name_en: "National Intelligence Centre"
 alternative_names:
   - CNI
   - National Intelligence Centre

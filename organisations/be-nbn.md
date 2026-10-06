@@ -2,6 +2,7 @@
 id: BE-NBN
 type: organisation
 name: Bureau de Normalisation / Bureau voor Normalisatie
+name_en: "Belgian standards body"
 alternative_names:
   - NBN
   - Bureau de Normalisation

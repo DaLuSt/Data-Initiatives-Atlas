@@ -2,6 +2,7 @@
 id: PL-KSS
 type: organisation
 name: Komisja do Spraw Służb Specjalnych
+name_en: "Sejm Committee for Special Services"
 alternative_names:
   - KSS
   - Sejm Committee for Special Services

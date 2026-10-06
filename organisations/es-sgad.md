@@ -2,6 +2,7 @@
 id: ES-SGAD
 type: organisation
 name: Secretaría General de Administración Digital
+name_en: "General Secretariat for Digital Administration"
 alternative_names:
   - SGAD
   - General Secretariat for Digital Administration

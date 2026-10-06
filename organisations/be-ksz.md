@@ -2,6 +2,7 @@
 id: BE-KSZ
 type: organisation
 name: Kruispuntbank van de Sociale Zekerheid
+name_en: "Crossroads Bank for Social Security"
 alternative_names:
   - KSZ
   - Banque Carrefour de la Sécurité Sociale

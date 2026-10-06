@@ -2,6 +2,7 @@
 id: PL-OTWARTE-DANE
 type: act
 name: Ustawa z dnia 11 sierpnia 2021 r. o otwartych danych i ponownym wykorzystywaniu informacji sektora publicznego
+name_en: "Polish Open Data Act 2021"
 alternative_names:
   - Ustawa o otwartych danych
   - Polish Open Data Act 2021

@@ -2,6 +2,7 @@
 id: NO-SSB
 type: organisation
 name: Statistisk sentralbyrå
+name_en: "Statistics Norway"
 alternative_names:
   - SSB
   - Statistics Norway

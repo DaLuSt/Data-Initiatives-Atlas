@@ -2,6 +2,7 @@
 id: DE-BSI
 type: organisation
 name: Bundesamt für Sicherheit in der Informationstechnik
+name_en: "Federal Office for Information Security"
 alternative_names:
   - BSI
   - Federal Office for Information Security

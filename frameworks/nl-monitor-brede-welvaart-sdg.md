@@ -2,6 +2,7 @@
 id: NL-MONITOR-BREDE-WELVAART-SDG
 type: framework
 name: Monitor Brede Welvaart en de Sustainable Development Goals
+name_en: "Broad Prosperity and SDG Monitor"
 alternative_names:
   - Monitor Brede Welvaart
   - Broad Prosperity and SDG Monitor

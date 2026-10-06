@@ -2,6 +2,7 @@
 id: CZ-NUKIB
 type: organisation
 name: Národní úřad pro kybernetickou a informační bezpečnost
+name_en: "National Cyber and Information Security Agency"
 alternative_names:
   - NÚKIB
   - NUKIB

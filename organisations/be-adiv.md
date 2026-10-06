@@ -2,6 +2,7 @@
 id: BE-ADIV
 type: organisation
 name: Algemene Dienst Inlichting en Veiligheid
+name_en: "General Intelligence and Security Service"
 alternative_names:
   - ADIV
   - SGRS

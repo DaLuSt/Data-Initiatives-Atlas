@@ -2,6 +2,7 @@
 id: LU-CNPD
 type: organisation
 name: Commission nationale pour la protection des données
+name_en: "Luxembourg Data Protection Authority"
 alternative_names:
   - CNPD
   - CNPD Luxembourg

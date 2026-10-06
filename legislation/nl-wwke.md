@@ -2,6 +2,7 @@
 id: NL-WWKE
 type: act
 name: Wet weerbaarheid kritieke entiteiten
+name_en: "Dutch Critical Entities Resilience Act"
 alternative_names:
   - Wwke
   - Dutch Critical Entities Resilience Act

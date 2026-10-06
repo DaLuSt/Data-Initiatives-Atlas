@@ -2,6 +2,7 @@
 id: FR-SNDS
 type: platform
 name: Système national des données de santé
+name_en: "French National Health Data System"
 alternative_names:
   - SNDS
   - French National Health Data System

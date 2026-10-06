@@ -2,6 +2,7 @@
 id: CH-EDOEB
 type: organisation
 name: Eidgenössischer Datenschutz- und Öffentlichkeitsbeauftragter
+name_en: "Federal Data Protection and Information Commissioner"
 alternative_names:
   - EDÖB
   - PFPDT

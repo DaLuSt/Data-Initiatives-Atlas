@@ -2,6 +2,7 @@
 id: DE-BMV
 type: organisation
 name: Bundesministerium für Verkehr
+name_en: "Federal Ministry for Transport"
 alternative_names:
   - BMV
   - Federal Ministry for Transport

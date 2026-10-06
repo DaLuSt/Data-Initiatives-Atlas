@@ -2,6 +2,7 @@
 id: BE-INDICATEURS-DEVELOPPEMENT-DURABLE
 type: framework
 name: Indicateurs de développement durable
+name_en: "Belgian sustainable development indicators"
 alternative_names:
   - Belgian sustainable development indicators
   - indicators.be

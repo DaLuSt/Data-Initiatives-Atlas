@@ -2,6 +2,7 @@
 id: NL-NEC
 type: organisation
 name: Stichting Koninklijk Nederlands Elektrotechnisch Comité
+name_en: "Royal Netherlands Electrotechnical Committee"
 alternative_names:
   - NEC
   - Nederlands Elektrotechnisch Comité

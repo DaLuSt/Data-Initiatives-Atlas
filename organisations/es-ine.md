@@ -2,6 +2,7 @@
 id: ES-INE
 type: organisation
 name: Instituto Nacional de Estadística
+name_en: "Spanish National Statistics Institute"
 alternative_names:
   - INE
   - Spanish National Statistics Institute

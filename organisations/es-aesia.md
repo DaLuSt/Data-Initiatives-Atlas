@@ -2,6 +2,7 @@
 id: ES-AESIA
 type: organisation
 name: Agencia Española de Supervisión de la Inteligencia Artificial
+name_en: "Spanish Agency for the Supervision of Artificial Intelligence"
 alternative_names:
   - AESIA
   - Spanish Agency for the Supervision of Artificial Intelligence

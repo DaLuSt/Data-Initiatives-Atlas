@@ -2,6 +2,7 @@
 id: FR-CNIS
 type: organisation
 name: Conseil national de l'information statistique
+name_en: "National Council for Statistical Information"
 alternative_names:
   - Cnis
   - National Council for Statistical Information

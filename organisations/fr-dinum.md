@@ -2,6 +2,7 @@
 id: FR-DINUM
 type: organisation
 name: Direction interministérielle du numérique
+name_en: "Interministerial Digital Directorate"
 alternative_names:
   - DINUM
   - Interministerial Digital Directorate

@@ -2,6 +2,7 @@
 id: PL-ODO
 type: act
 name: Ustawa z dnia 10 maja 2018 r. o ochronie danych osobowych
+name_en: "Polish Personal Data Protection Act 2018"
 alternative_names:
   - Ustawa o ochronie danych osobowych
   - Polish Personal Data Protection Act 2018

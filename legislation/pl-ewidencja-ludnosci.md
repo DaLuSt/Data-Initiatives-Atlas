@@ -2,6 +2,7 @@
 id: PL-EWIDENCJA-LUDNOSCI
 type: act
 name: Ustawa z dnia 24 września 2010 r. o ewidencji ludności
+name_en: "Act on Population Records"
 alternative_names:
   - Ustawa o ewidencji ludności
   - Act on Population Records

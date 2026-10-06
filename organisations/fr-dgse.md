@@ -2,6 +2,7 @@
 id: FR-DGSE
 type: organisation
 name: Direction générale de la Sécurité extérieure
+name_en: "Directorate-General for External Security"
 alternative_names:
   - DGSE
   - Directorate-General for External Security

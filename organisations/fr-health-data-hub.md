@@ -2,6 +2,7 @@
 id: FR-HEALTH-DATA-HUB
 type: organisation
 name: Plateforme des données de santé
+name_en: "Health Data Hub"
 alternative_names:
   - Health Data Hub
   - HDH

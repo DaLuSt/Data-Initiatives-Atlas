@@ -2,6 +2,7 @@
 id: ES-LOPDGDD
 type: act
 name: Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales
+name_en: "Spanish Organic Law on Data Protection and the Guarantee of Digital Rights"
 alternative_names:
   - LOPDGDD
   - Ley Orgánica de Protección de Datos Personales y garantía de los derechos digitales

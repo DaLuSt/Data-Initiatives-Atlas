@@ -2,6 +2,7 @@
 id: PT-CARTAO-CIDADAO
 type: platform
 name: Cartão de Cidadão
+name_en: "Citizen Card"
 alternative_names:
   - CC
   - Citizen Card

@@ -2,6 +2,7 @@
 id: BE-HERGEBRUIK-WET-2023
 type: act
 name: Wet van 25 december 2023 tot wijziging van de wet van 4 mei 2016 inzake het hergebruik van overheidsinformatie
+name_en: "Belgian federal Open Data Directive transposition"
 alternative_names:
   - Wet van 25 december 2023
   - Loi du 25 décembre 2023 modifiant la loi du 4 mai 2016 relative à la réutilisation des informations du secteur public

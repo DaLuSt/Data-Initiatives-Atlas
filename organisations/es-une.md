@@ -2,6 +2,7 @@
 id: ES-UNE
 type: organisation
 name: Asociación Española de Normalización
+name_en: "Spanish Association for Standardization"
 alternative_names:
   - UNE
   - AENOR

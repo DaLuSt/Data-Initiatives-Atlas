@@ -2,6 +2,7 @@
 id: DE-NACHHALTIGKEITSINDIKATOREN
 type: framework
 name: Indikatorensatz der Deutschen Nachhaltigkeitsstrategie
+name_en: "German Sustainability Strategy indicator set"
 alternative_names:
   - German Sustainability Strategy indicator set
   - Deutschlands SDG-Indikatoren

@@ -2,6 +2,7 @@
 id: PT-DECRETO-LEI-125-2025
 type: act
 name: Decreto-Lei n.º 125/2025
+name_en: "Portuguese Cybersecurity Legal Regime"
 alternative_names:
   - Regime Jurídico da Cibersegurança
   - Portuguese Cybersecurity Legal Regime

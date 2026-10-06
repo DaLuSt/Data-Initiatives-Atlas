@@ -2,6 +2,7 @@
 id: DE-BSIG
 type: act
 name: BSI-Gesetz
+name_en: "Act on the Federal Office for Information Security"
 alternative_names:
   - BSIG
   - Gesetz über das Bundesamt für Sicherheit in der Informationstechnik

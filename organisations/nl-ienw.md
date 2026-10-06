@@ -2,6 +2,7 @@
 id: NL-IENW
 type: organisation
 name: Ministerie van Infrastructuur en Waterstaat
+name_en: "Ministry of Infrastructure and Water Management"
 alternative_names:
   - IenW
   - Ministry of Infrastructure and Water Management

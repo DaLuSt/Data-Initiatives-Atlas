@@ -2,6 +2,7 @@
 id: NL-WDO
 type: act
 name: Wet digitale overheid
+name_en: "Digital Government Act"
 alternative_names:
   - Wdo
   - Digital Government Act

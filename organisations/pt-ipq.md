@@ -2,6 +2,7 @@
 id: PT-IPQ
 type: organisation
 name: Instituto Português da Qualidade
+name_en: "Portuguese Institute for Quality"
 alternative_names:
   - IPQ
   - Portuguese Institute for Quality

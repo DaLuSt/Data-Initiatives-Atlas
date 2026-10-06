@@ -2,6 +2,7 @@
 id: ES-COMISARIA-GENERAL-DE-INFORMACION
 type: organisation
 name: Comisaría General de Información
+name_en: "General Commissariat of Information"
 alternative_names:
   - CGI
   - General Commissariat of Information

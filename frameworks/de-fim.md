@@ -2,6 +2,7 @@
 id: DE-FIM
 type: framework
 name: Föderales Informationsmanagement
+name_en: "Federal Information Management"
 alternative_names:
   - FIM
   - Federal Information Management

@@ -2,6 +2,7 @@
 id: EE-RIA
 type: organisation
 name: Riigi Infosüsteemi Amet
+name_en: "Information System Authority"
 alternative_names:
   - RIA
   - Information System Authority

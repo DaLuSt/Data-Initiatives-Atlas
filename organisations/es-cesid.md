@@ -2,6 +2,7 @@
 id: ES-CESID
 type: organisation
 name: Centro Superior de Información de la Defensa
+name_en: "Higher Centre for Defence Information"
 alternative_names:
   - CESID
   - Higher Centre for Defence Information

@@ -2,6 +2,7 @@
 id: BE-OCAD
 type: organisation
 name: Coördinatieorgaan voor de Dreigingsanalyse
+name_en: "Coordination Unit for Threat Analysis"
 alternative_names:
   - OCAD
   - OCAM

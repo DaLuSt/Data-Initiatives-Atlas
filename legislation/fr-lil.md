@@ -2,6 +2,7 @@
 id: FR-LIL
 type: act
 name: Loi relative à l'informatique, aux fichiers et aux libertés
+name_en: "French Data Protection Act"
 alternative_names:
   - Loi Informatique et Libertés
   - Loi n° 78-17 du 6 janvier 1978

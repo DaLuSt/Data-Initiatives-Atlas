@@ -2,6 +2,7 @@
 id: IS-PERSONUVERNDARLOG
 type: act
 name: Lög um persónuvernd og vinnslu persónuupplýsinga nr. 90/2018
+name_en: "Icelandic Data Protection Act"
 alternative_names:
   - Persónuverndarlög
   - Act No. 90/2018 on Data Protection and the Processing of Personal Data

@@ -2,6 +2,7 @@
 id: CZ-CAS
 type: organisation
 name: Česká agentura pro standardizaci
+name_en: "Czech Standardization Agency"
 alternative_names:
   - ČAS
   - Czech Standardization Agency

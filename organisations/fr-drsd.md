@@ -2,6 +2,7 @@
 id: FR-DRSD
 type: organisation
 name: Direction du renseignement et de la sécurité de la défense
+name_en: "Directorate of Intelligence and Defence Security"
 alternative_names:
   - DRSD
   - Directorate of Intelligence and Defence Security

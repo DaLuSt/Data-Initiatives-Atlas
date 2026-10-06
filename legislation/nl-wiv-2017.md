@@ -2,6 +2,7 @@
 id: NL-WIV-2017
 type: act
 name: Wet op de inlichtingen- en veiligheidsdiensten 2017
+name_en: "Intelligence and Security Services Act 2017"
 alternative_names:
   - Wiv 2017
   - Sleepwet

@@ -2,6 +2,7 @@
 id: NL-WBP
 type: act
 name: Wet bescherming persoonsgegevens
+name_en: "Dutch Data Protection Act"
 alternative_names:
   - Wbp
   - Dutch Data Protection Act

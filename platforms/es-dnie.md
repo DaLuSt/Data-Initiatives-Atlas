@@ -2,6 +2,7 @@
 id: ES-DNIE
 type: platform
 name: Documento Nacional de Identidad electrónico
+name_en: "Electronic National Identity Document"
 alternative_names:
   - DNIe
   - electronic National Identity Document

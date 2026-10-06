@@ -2,6 +2,7 @@
 id: PL-USKWSWW-2006
 type: act
 name: Ustawa o Służbie Kontrwywiadu Wojskowego oraz Służbie Wywiadu Wojskowego
+name_en: "Act on the Military Counterintelligence Service and the Military Intelligence Service"
 alternative_names:
   - Ustawa z dnia 9 czerwca 2006 r.
   - Act on the Military Counterintelligence Service and the Military Intelligence Service

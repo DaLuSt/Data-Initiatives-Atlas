@@ -2,6 +2,7 @@
 id: PL-USTAWA-STATYSTYCE-1995
 type: act
 name: Ustawa z dnia 29 czerwca 1995 r. o statystyce publicznej
+name_en: "Act on Public Statistics (Poland)"
 alternative_names:
   - Ustawa o statystyce publicznej
   - Act on Public Statistics (Poland)

@@ -2,6 +2,7 @@
 id: ES-AEAD
 type: organisation
 name: Agencia Estatal de Administración Digital
+name_en: "State Agency for Digital Administration"
 alternative_names:
   - AEAD
   - State Agency for Digital Administration

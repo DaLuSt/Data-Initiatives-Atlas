@@ -2,6 +2,7 @@
 id: NL-WOO
 type: act
 name: Wet open overheid
+name_en: "Open Government Act"
 alternative_names:
   - Woo
   - Open Government Act

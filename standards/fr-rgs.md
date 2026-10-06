@@ -2,6 +2,7 @@
 id: FR-RGS
 type: standard
 name: Référentiel Général de Sécurité
+name_en: "General Security Framework (France)"
 alternative_names:
   - RGS
   - General Security Framework (France)

@@ -2,6 +2,7 @@
 id: DE-NFDI
 type: organisation
 name: Nationale Forschungsdateninfrastruktur e.V.
+name_en: "National Research Data Infrastructure (Germany)"
 alternative_names:
   - NFDI
   - National Research Data Infrastructure (Germany)

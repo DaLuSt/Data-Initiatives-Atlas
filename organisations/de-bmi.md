@@ -2,6 +2,7 @@
 id: DE-BMI
 type: organisation
 name: Bundesministerium des Innern
+name_en: "Federal Ministry of the Interior"
 alternative_names:
   - BMI
   - Federal Ministry of the Interior

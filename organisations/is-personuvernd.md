@@ -2,6 +2,7 @@
 id: IS-PERSONUVERND
 type: organisation
 name: Persónuvernd
+name_en: "Icelandic Data Protection Authority"
 alternative_names:
   - Icelandic Data Protection Authority
   - Data Protection Authority (Iceland)

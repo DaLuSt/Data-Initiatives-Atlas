@@ -2,6 +2,7 @@
 id: DE-VV-GOVDATA
 type: agreement
 name: Vereinbarung des Bundes und der Länder zum gemeinsamen Betrieb von "GovData - Das Datenportal für Deutschland"
+name_en: "GovData Administrative Agreement"
 alternative_names:
   - Verwaltungsvereinbarung GovData
   - VV GovData

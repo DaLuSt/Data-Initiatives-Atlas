@@ -2,6 +2,7 @@
 id: BE-STATISTIEKWET-1962
 type: act
 name: Wet van 4 juli 1962 betreffende de openbare statistiek
+name_en: "Belgian Public Statistics Act"
 alternative_names:
   - Loi du 4 juillet 1962 relative à la statistique publique
   - Belgian Public Statistics Act

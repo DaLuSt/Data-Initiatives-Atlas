@@ -2,6 +2,7 @@
 id: BE-HERGEBRUIK-WET
 type: act
 name: Wet inzake het hergebruik van overheidsinformatie
+name_en: "Belgian PSI Re-use Act"
 alternative_names:
   - Wet van 4 mei 2016
   - Loi du 4 mai 2016 relative à la réutilisation des informations du secteur public

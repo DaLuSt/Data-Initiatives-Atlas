@@ -2,6 +2,7 @@
 id: LU-STATEC
 type: organisation
 name: Institut national de la statistique et des études économiques (Luxembourg)
+name_en: "Statistics Luxembourg"
 alternative_names:
   - STATEC
   - Statistics Luxembourg

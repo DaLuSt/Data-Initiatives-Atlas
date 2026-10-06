@@ -2,6 +2,7 @@
 id: CH-BFS
 type: organisation
 name: Bundesamt für Statistik
+name_en: "Federal Statistical Office"
 alternative_names:
   - BFS
   - OFS

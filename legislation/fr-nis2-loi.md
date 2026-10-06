@@ -2,6 +2,7 @@
 id: FR-NIS2-LOI
 type: act
 name: Loi relative à la résilience des infrastructures critiques et au renforcement de la cybersécurité
+name_en: "French NIS2 transposition law"
 alternative_names:
   - Loi Résilience
   - French NIS2 transposition law

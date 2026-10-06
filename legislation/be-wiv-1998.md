@@ -2,6 +2,7 @@
 id: BE-WIV-1998
 type: act
 name: Wet houdende regeling van de inlichtingen- en veiligheidsdienst
+name_en: "Organic Law on the intelligence and security services"
 alternative_names:
   - Wet van 30 november 1998
   - Organieke wet

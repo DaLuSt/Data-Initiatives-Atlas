@@ -2,6 +2,7 @@
 id: FR-AFNOR
 type: organisation
 name: Association française de normalisation
+name_en: "French standards body"
 alternative_names:
   - AFNOR
   - French standards body

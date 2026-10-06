@@ -2,6 +2,7 @@
 id: NL-AP
 type: organisation
 name: Autoriteit Persoonsgegevens
+name_en: "Dutch Data Protection Authority"
 alternative_names:
   - AP
   - Dutch Data Protection Authority

@@ -767,8 +767,8 @@ class TestSidebarOrder(unittest.TestCase):
         import re
         html = (self.SITE / "index.html").read_text(encoding="utf-8")
         ids = re.findall(r'<section class="panel" aria-labelledby="([a-z-]+-h)"', html)
-        self.assertEqual(ids, ["explorer-h", "filters-h", "legend-h", "edges-h",
-                               "layout-h", "stats-h"])
+        self.assertEqual(ids, ["explorer-h", "filters-h", "legend-h", "names-h",
+                               "edges-h", "layout-h", "stats-h"])
 
     def test_country_type_and_domain_lead_and_are_open(self):
         import re
@@ -821,6 +821,78 @@ class TestSmallFixes(unittest.TestCase):
             self.assertIn('<a href="%s" download>' % name, self.HTML)
         # the links must point at what the app itself loads
         self.assertIn('fetch("graph.json"', self.JS)
+
+
+class TestEnglishNames(unittest.TestCase):
+    """The optional `name_en` field and how the site shows it. See
+    docs/ux-analysis.md, point 8."""
+
+    SITE = Path(__file__).resolve().parent.parent / "site"
+
+    @classmethod
+    def setUpClass(cls):
+        import validate_frontmatter
+        cls.vf = validate_frontmatter
+        cls.entities = [e for e in load_all_entities() if e.frontmatter]
+
+    def _errors(self, name, name_en):
+        from common import Report
+        report = Report("t")
+        self.vf.check_name_en("x.md", name, name_en, report)
+        return report.errors
+
+    def test_validator(self):
+        self.assertEqual(self._errors("Wet digitale overheid", None), [])
+        self.assertEqual(self._errors("Wet digitale overheid", "Digital Government Act"), [])
+        self.assertTrue(self._errors("Wet digitale overheid", ""))
+        self.assertTrue(self._errors("Wet digitale overheid", 5))
+        self.assertTrue(self._errors("Wet digitale overheid", " Digital Government Act"))
+        self.assertTrue(self._errors("Digital Government Act", "digital government act"))
+
+    def test_every_value_in_the_repository_is_valid(self):
+        n = 0
+        for e in self.entities:
+            fm = e.frontmatter
+            if "name_en" in fm:
+                n += 1
+                self.assertEqual(self._errors(fm.get("name"), fm["name_en"]), [], fm["id"])
+        self.assertGreater(n, 100, "the backfill should have set well over a hundred")
+
+    def test_backfilled_values_come_from_existing_alternative_names(self):
+        # The backfill took names the files already listed rather than
+        # translating anything. New values may legitimately come from a source
+        # instead, so this checks the set that was backfilled, not every future one.
+        missing = []
+        for e in self.entities:
+            fm = e.frontmatter
+            if fm.get("name_en") and fm["name_en"].casefold() not in \
+                    [str(a).casefold() for a in (fm.get("alternative_names") or [])]:
+                missing.append(fm["id"])
+        self.assertTrue(len(missing) <= 3, "name_en not among alternative_names: %s" % missing[:5])
+
+    def test_graph_nodes_carry_name_en(self):
+        payload, errors, _ = build_graph.build()
+        self.assertFalse(errors)
+        graph = payload["graph"]
+        with_name = {n["id"] for n in graph["nodes"] if n.get("name_en")}
+        expected = {e.frontmatter["id"] for e in self.entities if e.frontmatter.get("name_en")}
+        self.assertEqual(with_name, expected)
+
+    def test_site_wiring(self):
+        js = (self.SITE / "app.js").read_text(encoding="utf-8")
+        html = (self.SITE / "index.html").read_text(encoding="utf-8")
+        self.assertIn('id="names-mode"', html)
+        self.assertIn("function applyNames", js)
+        boot = js[js.index("function boot()"):][:700]
+        self.assertIn("applyNames()", boot)
+        self.assertIn('params.get("names")', js)
+        self.assertIn('p.set("names", nameMode)', js)
+        # both names stay searchable whichever is shown
+        self.assertIn("[n.label, n.official, n.id]", js)
+        # the sidebar and the detail panel both say an English name is not
+        # necessarily official
+        self.assertIn("not necessarily an official translation", html)
+        self.assertIn("official translation", js[js.index("function nameNote"):][:700])
 
 
 class TestMobileLayout(unittest.TestCase):

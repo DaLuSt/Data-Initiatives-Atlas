@@ -2,6 +2,7 @@
 id: FR-RGI
 type: framework
 name: Référentiel général d'interopérabilité
+name_en: "General Interoperability Framework"
 alternative_names:
   - RGI
   - General Interoperability Framework

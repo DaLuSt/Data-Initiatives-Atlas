@@ -2,6 +2,7 @@
 id: ES-INCIBE
 type: organisation
 name: Instituto Nacional de Ciberseguridad
+name_en: "Spanish National Cybersecurity Institute"
 alternative_names:
   - INCIBE
   - Spanish National Cybersecurity Institute

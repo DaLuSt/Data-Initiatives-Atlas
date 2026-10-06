@@ -2,6 +2,7 @@
 id: FR-ANSSI
 type: organisation
 name: Agence nationale de la sécurité des systèmes d'information
+name_en: "French National Cybersecurity Agency"
 alternative_names:
   - ANSSI
   - French National Cybersecurity Agency

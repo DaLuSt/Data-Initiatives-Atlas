@@ -2,6 +2,7 @@
 id: IT-SPID
 type: platform
 name: Sistema Pubblico di Identita Digitale
+name_en: "Public Digital Identity System"
 alternative_names:
   - SPID
   - Sistema Pubblico di Identità Digitale

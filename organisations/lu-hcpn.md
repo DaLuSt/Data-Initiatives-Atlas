@@ -2,6 +2,7 @@
 id: LU-HCPN
 type: organisation
 name: Haut-Commissariat à la Protection Nationale
+name_en: "High Commission for National Protection"
 alternative_names:
   - HCPN
   - High Commission for National Protection

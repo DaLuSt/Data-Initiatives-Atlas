@@ -2,6 +2,7 @@
 id: ES-AEPD
 type: organisation
 name: Agencia Española de Protección de Datos
+name_en: "Spanish Data Protection Agency"
 alternative_names:
   - AEPD
   - Spanish Data Protection Agency

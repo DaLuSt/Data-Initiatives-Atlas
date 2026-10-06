@@ -2,6 +2,7 @@
 id: CZ-ZAKON-60-2026
 type: act
 name: Zákon o správě dat a řízeném přístupu
+name_en: "Act on data management and controlled access"
 alternative_names:
   - Zákon č. 60/2026 Sb.
   - Act on data management and controlled access

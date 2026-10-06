@@ -2,6 +2,7 @@
 id: IT-ISTAT
 type: organisation
 name: Istituto nazionale di statistica
+name_en: "Italian National Institute of Statistics"
 alternative_names:
   - Istat
   - Italian National Institute of Statistics
