@@ -26,7 +26,7 @@ reorder the list below.
 | 4 | Statistics came first in the sidebar; the filters people want (country, type, domain) and the legend needed scrolling. | **Done 2026-10-06** (see below) |
 | 5 | Mobile: the graph is tiny; the detail sheet covers over half the screen, including the list the visitor chose from; view buttons are 30 px high and checkboxes 13 px. | Open |
 | 6 | Compare listed countries alphabetically, so the first columns (Albania, Andorra, Argentina, Armenia) were empty and the countries with data were off to the right. | **Done 2026-10-06** |
-| 7 | The detail panel shows internal research notes ("NOT READ — search-only."), "Confidence: Low" with no explanation that it describes the Atlas's certainty and not the law, and dates as "2026 08 21". | Open |
+| 7 | The detail panel showed internal research notes ("NOT READ — search-only.") in full for every relationship, "Confidence: Low" with no explanation that it describes the Atlas's certainty and not the law, and dates as "2026 08 21". | **Done 2026-10-06** (see below) |
 | 8 | Entity names are official titles in the national language, with no short English display name. Related to `discovery/unresolved.md` row #9 (multilingual names). | Open |
 | 9 | Small things: the Re-layout button's aria-label ("Recalculate layout") does not contain its visible text (axe, serious); zoom feels abrupt (Cytoscape's custom wheel sensitivity warning); no "copy link" or "download data" control. | Open |
 
@@ -71,6 +71,20 @@ Region are collapsed. Domain is open because it now carries the sector that
 active ("Filters (2)"). Statistics moved to the bottom; the counts are in the
 "Start here" card.
 
+## Point 7: the detail panel (2026-10-06)
+- **"About this record"** replaces "Metadata". The labels are plain (Sourcing,
+  Atlas confidence, Research depth, Last checked), `primary-source` reads "Read
+  from primary sources", each has a tooltip, and one visible line says these
+  describe how well the Atlas knows the entity, not the entity itself.
+- **Dates are ISO** ("2026-08-21"); they were passed through a title-casing
+  helper that produced "2026 08 21".
+- **Evidence is collapsed** under an "Evidence" link. A hub such as the GDPR has
+  52 relationships whose evidence runs to a paragraph each (median 464
+  characters, longest 2,202); the panel was about 4,500 px of text.
+- **"source not read"** is a small tag beside a relationship whose evidence
+  carries the repository's `NOT READ — search-only.` flag (403 of the 1,565; 28
+  of the GDPR's 52). The same caveat appears above the evidence when a link is
+  tapped on the canvas. The evidence text itself is unchanged.
+
 ## Suggested order for the rest
-7 (plain-language detail panel), then 5 (mobile) and 8 (short English display
-names), then 9.
+5 (mobile) and 8 (short English display names), then 9.

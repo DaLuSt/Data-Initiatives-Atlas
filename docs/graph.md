@@ -150,9 +150,15 @@ distinguishes what a source says from what the Atlas concludes.
 
 Click any node, or any entity name in the List view. The panel shows only
 metadata that actually exists on that entity — name, ID, type, level,
-country, region, status, description, alternative names, verification,
-confidence, coverage, dates, domains, organisations, version lineage,
-relationships in both directions with their evidence, and sources.
+country, region, status, description, alternative names, an **About this
+record** block (legal rank, sourcing, Atlas confidence, research depth and the
+date last checked, with a line saying these describe how well the Atlas knows
+the entity, not the entity itself), start and end dates, domains,
+organisations, version lineage, relationships in both directions, and sources.
+Each relationship's evidence is collapsed under an **Evidence** link, and a
+relationship whose cited page was found by search but never read is tagged
+**source not read**. (In the repository these fields are `verification`,
+`confidence` and `coverage`.)
 
 Every panel ends with **Open entity on GitHub**, linking to the Markdown
 file the entity is defined in. The List view links to the same file from

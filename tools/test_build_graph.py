@@ -788,5 +788,37 @@ class TestSidebarOrder(unittest.TestCase):
         self.assertIn("updateFilterBadges()", body[:200])
 
 
+class TestDetailPanel(unittest.TestCase):
+    """The detail panel explains the Atlas's own record in plain words and keeps
+    long evidence out of the way. See docs/ux-analysis.md, point 7."""
+
+    ROOT = Path(__file__).resolve().parent.parent
+    JS = (ROOT / "site" / "app.js").read_text(encoding="utf-8")
+
+    def test_plain_labels_and_iso_dates(self):
+        for label in ('"Sourcing"', '"Atlas confidence"', '"Research depth"', '"Last checked"'):
+            self.assertIn(label, self.JS)
+        for old in ('["Verification"', '["Coverage"', '["Confidence"'):
+            self.assertNotIn(old, self.JS)
+        self.assertIn('["Last checked", d.last_verified, String', self.JS)
+        self.assertIn('["Start date", d.start_date, String', self.JS)
+
+    def test_hint_says_it_describes_the_record(self):
+        self.assertIn("not the entity itself", self.JS)
+        self.assertIn('sec("About this record"', self.JS)
+
+    def test_evidence_is_collapsed_and_unread_sources_are_flagged(self):
+        self.assertIn('<details class="ev"><summary>Evidence</summary>', self.JS)
+        self.assertIn("rel-unread", self.JS)
+        self.assertIn("function evidenceNotRead", self.JS)
+
+    def test_not_read_marker_still_present_in_data(self):
+        # The chip is derived from this wording in the evidence text; if the
+        # repository stops writing it, the chip silently disappears.
+        hits = sum(1 for f in (self.ROOT / "legislation").glob("*.md")
+                   if "NOT READ" in f.read_text(encoding="utf-8"))
+        self.assertGreater(hits, 0)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

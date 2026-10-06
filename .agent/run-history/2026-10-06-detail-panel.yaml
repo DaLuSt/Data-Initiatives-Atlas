@@ -1,0 +1,25 @@
+date: "2026-10-06"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Owner asked to continue with the usability review; point 7 was the detail
+  panel, which showed repository field names (Verification, Confidence,
+  Coverage), unexplained "Confidence: Low", dates as "2026 08 21", and every
+  relationship's evidence paragraph in full (52 on the GDPR).
+
+  Panel now has an "About this record" block: Legal rank, Sourcing ("Read from
+  primary sources" / "Found by search, not read" / "Not verified"), Atlas
+  confidence, Research depth, Last checked, with one line saying these describe
+  how well the Atlas knows the entity, not the entity itself, and a tooltip on
+  each label. Dates are shown as ISO (titly() had mangled them). Each
+  relationship's evidence is collapsed under an Evidence link; a relationship
+  whose evidence says "NOT READ" (403 of 1,565) gets a "source not read" chip,
+  and the edge-detail panel states the same caveat. Browser-checked on the
+  GDPR: 52 collapsed blocks, 28 chips, no console errors, canvas resizes.
+
+  New TestDetailPanel (4 tests: labels and ISO dates, hint, collapsed evidence
+  plus chip, NOT READ marker still present in the data). Mutation check: turning
+  the details element into a div fails the test. docs/graph.md and
+  docs/ux-analysis.md updated. Not done: points 5, 8, 9.
+prs: []
+outcome: in-progress
+entity_count_after: 740
