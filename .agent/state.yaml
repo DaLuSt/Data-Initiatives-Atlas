@@ -132,6 +132,8 @@ last_merged_prs:
     summary: "Housekeeping: recorded #433 in state.yaml and run-history"
   - number: 435
     summary: "Detail panel made readable: plain 'About this record' labels, ISO dates, evidence collapsed, 'source not read' tag (point 7 of docs/ux-analysis.md)"
+  - number: 436
+    summary: "Site usable on a phone: top bar 204 to 145 px, detail panel a strip under the graph with Show more/less, 40 px touch targets (point 5 of docs/ux-analysis.md)"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,

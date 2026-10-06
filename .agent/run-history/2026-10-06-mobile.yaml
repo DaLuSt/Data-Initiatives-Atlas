@@ -19,6 +19,8 @@ summary: >
   New TestMobileLayout (4 tests); two mutations (drop the column layout, shrink
   the row height) each fail it. docs/ux-analysis.md and docs/graph.md updated.
   Not done: points 8, 9; no real-device or landscape test.
-prs: []
-outcome: in-progress
+prs:
+  - number: 436
+    title: "Make the site usable on a phone"
+outcome: merged
 entity_count_after: 740
