@@ -23,7 +23,7 @@ reorder the list below.
 | 1 | The first screen is a hairball of 1,565 lines: no labels, no introduction, no link to the guide. | **Done 2026-10-06** (see below) |
 | 2 | Sidebar wording used the repository's internals ("Typed relationships (frontmatter, provenanced)", "Associations", "Wikilinks (Obsidian navigation)"). | **Done 2026-10-06** |
 | 3 | Explorer: the hint said "No entity selected" on a deep link; the graph was fitted before the detail panel narrowed the canvas, so its right side was cut off; the default of 2 hops gave 282 unlabelled entities for a hub like the GDPR. | **Done 2026-10-06** |
-| 4 | Statistics come first in the sidebar; the filters people want (country, type, domain) and the legend need scrolling. | Open |
+| 4 | Statistics came first in the sidebar; the filters people want (country, type, domain) and the legend needed scrolling. | **Done 2026-10-06** (see below) |
 | 5 | Mobile: the graph is tiny; the detail sheet covers over half the screen, including the list the visitor chose from; view buttons are 30 px high and checkboxes 13 px. | Open |
 | 6 | Compare listed countries alphabetically, so the first columns (Albania, Andorra, Argentina, Armenia) were empty and the countries with data were off to the right. | **Done 2026-10-06** |
 | 7 | The detail panel shows internal research notes ("NOT READ — search-only."), "Confidence: Low" with no explanation that it describes the Atlas's certainty and not the law, and dates as "2026 08 21". | Open |
@@ -59,6 +59,18 @@ their view explicitly because only an explicit hash resets the filters, and a
 test checks that every entity they name exists and every chain they promise is
 a real path of typed relationships.
 
+## Point 4: the sidebar order (2026-10-06)
+The sidebar now reads Explorer controls (in that view), Filters, Legend,
+Connections shown, Layout, Statistics. Country, Entity type and Domain are open,
+with short scrolling lists, so all three are on the first screen (measured:
+their headings sit at 42, 223 and 404 px of an 815 px sidebar, where Country
+used to be below 600 px and Domain below 900 px); Geographic level, Status and
+Region are collapsed. Domain is open because it now carries the sector that
+`level: sectoral` used to. Section headings show how many options are ticked
+("Country (2 of 58)"), and the top-bar Filters button shows how many groups are
+active ("Filters (2)"). Statistics moved to the bottom; the counts are in the
+"Start here" card.
+
 ## Suggested order for the rest
-4 (filters and legend above the statistics), then 7 (plain-language detail
-panel), then 5 (mobile) and 8 (short English display names).
+7 (plain-language detail panel), then 5 (mobile) and 8 (short English display
+names), then 9.
