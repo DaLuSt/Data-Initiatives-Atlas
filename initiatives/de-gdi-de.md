@@ -2,9 +2,11 @@
 id: DE-GDI-DE
 type: initiative
 name: Geodateninfrastruktur Deutschland
+name_en: "Spatial Data Infrastructure Germany"
 alternative_names:
   - GDI-DE
   - German Spatial Data Infrastructure
+  - "Spatial Data Infrastructure Germany"
 description: >
   Joint undertaking of the German federation, the Länder and the
   municipalities to make spatial data from different administrative levels
@@ -78,6 +80,10 @@ sources:
     url: "https://de.wikipedia.org/wiki/Geodateninfrastruktur"
     publisher: "Wikipedia"
     accessed: "2026-08-28"
+  - title: "Spatial Data Infrastructure Germany (English site of GDI-DE)"
+    url: "https://www.gdi-de.org/en"
+    publisher: "GDI-DE"
+    accessed: "2026-10-07"
 ---
 
 # Geodateninfrastruktur Deutschland (GDI-DE)

@@ -2,10 +2,12 @@
 id: NO-SIKKERHETSLOVEN
 type: act
 name: Lov om nasjonal sikkerhet (sikkerhetsloven)
+name_en: "Act relating to national security (Security Act)"
 alternative_names:
   - Sikkerhetsloven
   - National Security Act (Norway)
   - "LOV-2018-06-01-24"
+  - "Act relating to national security (Security Act)"
 description: >
   Norway's National Security Act, enacted 1 June 2018 and in force from
   1 January 2019, repealing the 1998 Act on Preventive Security Services
@@ -63,6 +65,10 @@ sources:
     url: "https://lovdata.no/lov/1998-03-20-10"
     publisher: "Lovdata"
     accessed: "2026-09-17"
+  - title: "Act relating to national security (unofficial English translation)"
+    url: "https://lovdata.no/dokument/NLE/lov/2018-06-01-24"
+    publisher: "Lovdata"
+    accessed: "2026-10-07"
 ---
 
 # Lov om nasjonal sikkerhet (sikkerhetsloven)

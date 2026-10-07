@@ -2,9 +2,11 @@
 id: DK-DATAFORDELER
 type: platform
 name: Datafordeleren
+name_en: "Danish Data Distributor"
 alternative_names:
   - Datafordeler
   - The Data Distributor
+  - "Danish Data Distributor"
 description: >
   Denmark's public IT solution for the distribution of basic data — the
   single channel through which Danish authorities' basic data on
@@ -69,6 +71,10 @@ sources:
   - title: "Datafordeleren"
     url: "http://grunddata.dk/datafordeleren/"
     publisher: "Grunddata.dk"
+  - title: "The Danish Data Distributor (English page of Datafordeleren)"
+    url: "https://www.datafordeler.dk/english"
+    publisher: "Datafordeleren"
+    accessed: "2026-10-07"
 ---
 
 # Datafordeleren

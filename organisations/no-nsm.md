@@ -2,6 +2,7 @@
 id: NO-NSM
 type: organisation
 name: Nasjonal sikkerhetsmyndighet
+name_en: "Norwegian National Security Authority"
 alternative_names:
   - NSM
   - Norwegian National Security Authority
@@ -79,6 +80,10 @@ sources:
     url: "https://lovdata.no/dokument/NL/lov/2018-06-01-24"
     publisher: "Lovdata"
     accessed: "2026-09-05"
+  - title: "The Norwegian National Security Authority (English site)"
+    url: "https://nsm.no/en/"
+    publisher: "Nasjonal sikkerhetsmyndighet"
+    accessed: "2026-10-07"
 ---
 
 # Nasjonal sikkerhetsmyndighet (NSM)

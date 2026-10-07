@@ -2,6 +2,7 @@
 id: DE-BDSG
 type: act
 name: Bundesdatenschutzgesetz
+name_en: "Federal Data Protection Act"
 alternative_names:
   - BDSG
   - "BDSG-neu"
@@ -64,6 +65,10 @@ sources:
   - title: "Das neue Bundesdatenschutzgesetz"
     url: "https://www2.deloitte.com/dl/de/pages/legal/articles/neues-bundesdatenschutzgesetz.html"
     publisher: "Deloitte Legal Deutschland"
+  - title: "Federal Data Protection Act (BDSG), English translation"
+    url: "https://www.gesetze-im-internet.de/englisch_bdsg/"
+    publisher: "Federal Ministry of Justice (translation by the Language Service of the Federal Ministry of the Interior)"
+    accessed: "2026-10-07"
 ---
 
 # Bundesdatenschutzgesetz (BDSG)

@@ -2,9 +2,11 @@
 id: DE-DKE
 type: organisation
 name: Deutsche Kommission Elektrotechnik Elektronik Informationstechnik
+name_en: "German Commission for Electrical, Electronic & Information Technologies"
 alternative_names:
   - DKE
   - German Commission for Electrotechnical, Electronic and Information Technologies
+  - "German Commission for Electrical, Electronic & Information Technologies"
 description: >
   German standards committee for electrical engineering, electronics
   and information technology, established in 1970 when DIN and VDE
@@ -65,6 +67,10 @@ sources:
     url: "https://www.dke.de/en/about-us/the-dke-organization"
     publisher: "DKE"
     accessed: "2026-09-04"
+  - title: "German Commission for Electrical, Electronic & Information Technologies (English site of the DKE)"
+    url: "https://www.dke.de/en"
+    publisher: "DKE"
+    accessed: "2026-10-07"
 ---
 
 # DKE — Deutsche Kommission Elektrotechnik Elektronik Informationstechnik

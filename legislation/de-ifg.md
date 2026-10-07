@@ -2,8 +2,10 @@
 id: DE-IFG
 type: act
 name: Informationsfreiheitsgesetz
+name_en: "Federal Act Governing Access to Information held by the Federal Government (Freedom of Information Act)"
 alternative_names:
   - IFG
+  - "Federal Act Governing Access to Information held by the Federal Government (Freedom of Information Act)"
 description: >
   German federal freedom of information act, in force since 1 January 2006.
   Under § 1 IFG every person has an unconditional right of access to
@@ -55,6 +57,10 @@ sources:
     url: "https://de.wikipedia.org/wiki/Informationsfreiheitsgesetz"
     publisher: "Wikipedia"
     accessed: "2026-08-22"
+  - title: "Freedom of Information Act (IFG), English translation"
+    url: "https://www.gesetze-im-internet.de/englisch_ifg/"
+    publisher: "Federal Ministry of Justice (translation by the Language Service of the Federal Ministry of the Interior)"
+    accessed: "2026-10-07"
 ---
 
 # Informationsfreiheitsgesetz (IFG)
