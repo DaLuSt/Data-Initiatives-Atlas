@@ -1,0 +1,41 @@
+date: "2026-10-07"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #459 (United Kingdom gaps) and #457 (a status the vocabulary lacked),
+  using the legislation.gov.uk and GOV.UK pages the fetch tool can read.
+
+  1. The Information Commission. While reading the UK re-use regulations, a
+  footnote on legislation.gov.uk showed the Information Commission in force from
+  30 September 2026. Read GOV.UK's announcement of that day ("Information
+  Commission succeeds the ICO as UK's data protection regulator") and SI 2026/1015
+  (made 10 September 2026; regulation 2 brings sections 117(4)(a), 118 and 119 of
+  the Data (Use and Access) Act 2025 into force on 30 September). GB-ICO had said
+  in writing that it would create no successor until the change was established;
+  it now is. Created GB-INFORMATION-COMMISSION (supersedes GB-ICO, applies-to the
+  DPA 2018 and UK GDPR, anchor edge), set GB-ICO to superseded with end_date
+  2026-09-30 and successor, closed its two applies-to edges, moved the "Information
+  Commission" alias to the new entity, and rewrote GB-DUAA's section 117 paragraph.
+  Not asserted: whether the "ICO" name continues (no source read says so), the
+  NIS competent-authority role (no edge, as before), the old body's international
+  memberships.
+  2. The UK open data instrument. Created GB-RPSI-REGULATIONS-2015 (SI 2015/1415,
+  made 24 June 2015, in force 18 July 2015, implements Directive 2013/37/EU
+  amending 2003/98/EC, revokes the 2005 Regulations): contents page, Explanatory
+  Note and regulation 18 read. No edge to the Open Data Directive: the UK left
+  before its July 2021 deadline, so there is nothing to model. Status active rests
+  on the register's own "no known outstanding effects", said so in the file.
+  3. DCMS and DSIT. The Cabinet Office's GOV.UK fact sheet (22 July 2026,
+  updated 27 July) was read: DSIT's functions "will be redistributed", the "newly
+  expanded Department for Digital, Culture, Media and Sport" brings together
+  telecoms, media and GDS, digital identity moves to it. GB-DCMS renamed to the
+  Digital name (GOV.UK uses it twice), confidence low to medium; online harms and
+  cyber security remain trade-press-only; the written ministerial statement
+  (HLWS298) was refused (403) and not read.
+  Tried and not used: the search results' account of the OSR and OSNI came from
+  search summaries only, so no entity was created for them yet.
+
+  Counts: 742 entities (+2), 1,571 typed relationships (+6), README and state.yaml
+  refreshed. backlog.md's status-gap item notes the ICO case resolved.
+prs: []
+outcome: in-progress
+entity_count_after: 742

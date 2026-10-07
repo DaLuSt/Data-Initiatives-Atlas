@@ -13,7 +13,7 @@ description: >
   controllers, allowing consent for an area of scientific research, aligning
   PECR enforcement with UK GDPR penalties of seventeen and a half million
   pounds or four per cent of global turnover, and establishing smart data
-  schemes. Section 117 establishes an Information Commission to replace the
+  schemes. Section 117 establishes an Information Commission (in operation since 30 September 2026) to replace the
   Information Commissioner's Office. Enhanced notice powers commenced on 19
   August 2025 and the majority of the data protection provisions on 5
   February 2026.
@@ -146,14 +146,19 @@ batches**. `progress/backlog.md` has carried *"decide on an amendment
 relationship type"* since the German batch; this is the strongest case yet,
 because it is the first where every existing workaround is unavailable.
 
-## Section 117, and a status the vocabulary cannot carry
+## Section 117: the Information Commission
 
 Confirmed verbatim by reading § 117 directly at legislation.gov.uk
 (2026-08-22): "A body corporate called the Information Commission is
-established." The Act **establishes** the Information Commission. Whether that body is yet
-constituted is not established — see [[GB-ICO]], where the reasoning for not
-creating a successor entity is set out. The `related-to` edges here point at
-the two instruments, not at the institutional change.
+established." Sections 118 and 119, which abolish the office of Information
+Commissioner and transfer its functions, were brought into force on **30
+September 2026** by SI 2026/1015, and GOV.UK announced on that day that the
+Commission had succeeded the ICO (read 2026-10-07). The institutional change
+is recorded on [[GB-INFORMATION-COMMISSION]] (the successor) and [[GB-ICO]]
+(the superseded Commissioner). Until 30 September this entity could only say the
+Commission was *established*, not that it was constituted; that is why the
+successor entity was created only now. The `related-to` edges here point at the
+two instruments, not at the institutional change.
 
 ## Relationships
 

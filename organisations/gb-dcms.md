@@ -1,30 +1,31 @@
 ---
 id: GB-DCMS
 type: organisation
-name: Department for Culture, Media and Sport
+name: Department for Digital, Culture, Media and Sport
 alternative_names:
+  - Department for Culture, Media and Sport
   - DCMS
-  - Department for Digital, Culture, Media and Sport
   - DDCMS
 description: >
   United Kingdom ministerial department which, following the abolition of
   the Department for Science, Innovation and Technology in July 2026, took
   responsibility for digital transformation and online harms, together with
   cyber security, digital identity, inclusion and infrastructure and the
-  Government Digital Service. Reported as being renamed to the Department
-  for Digital, Culture, Media and Sport on taking on those functions.
+  Government Digital Service. GOV.UK calls it the "newly expanded Department
+  for Digital, Culture, Media and Sport" (fact sheet of 22 July 2026) and names
+  it so as the publisher of its own announcement on 30 September 2026.
 
 level: national
 country: GB
 region: null
 
 status: active
-confidence: low
+confidence: medium
 coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-10-07"
 previous_version: null
 successor: null
 
@@ -37,6 +38,14 @@ related_entities:
 relationships: []
 
 sources:
+  - title: "Machinery of Government changes: Fact Sheet"
+    url: "https://www.gov.uk/government/news/machinery-of-government-changes-fact-sheet"
+    publisher: "GOV.UK (Cabinet Office)"
+    accessed: "2026-10-07"
+  - title: "Information Commission succeeds the ICO as UK's data protection regulator"
+    url: "https://www.gov.uk/government/news/information-commission-succeeds-the-ico-as-uks-data-protection-regulator"
+    publisher: "GOV.UK (Department for Digital, Culture, Media and Sport)"
+    accessed: "2026-10-07"
   - title: "DSIT to be scrapped with 'strengthened DCMS to take responsibility for digital transformation'"
     url: "https://www.publictechnology.net/2026/07/21/government-and-politics/dsit-to-be-scrapped-with-strengthened-dcms-to-take-responsibility-for-digital-transformation/"
     publisher: "PublicTechnology"
@@ -54,7 +63,23 @@ sources:
     accessed: "2026-08-22"
 ---
 
-# Department for Culture, Media and Sport
+# Department for Digital, Culture, Media and Sport
+
+> **Re-read 2026-10-07 against GOV.UK.** The Cabinet Office's "Machinery of
+> Government changes: Fact Sheet" (first published 22 July 2026, updated 27 July)
+> was read directly. It says the functions of the Department for Science,
+> Innovation and Technology "will be redistributed", describes the "newly
+> expanded Department for Digital, Culture, Media and Sport", which "brings
+> together telecoms, media and the Government Digital Service (GDS)", and moves
+> policy on digital identity to it. A second GOV.UK page (the Information
+> Commission announcement of 30 September 2026) names the department the same
+> way as its publisher. That settles the naming (the entity is renamed) and puts
+> the GDS and digital-identity claims on a primary source. **Not on a primary
+> source yet:** online harms, cyber security and "inclusion and infrastructure",
+> which the fact sheet does not mention in the words read; and the written
+> ministerial statement of 21 July 2026 (HLWS298), which the parliamentary site
+> refused (403). `confidence` rises from `low` to `medium` for that reason, no
+> further.
 
 > **Verified 2026-08-22.** Three independent trade-press accounts were read
 > directly, including a written ministerial statement they each quote.
@@ -86,10 +111,9 @@ reporting published within days of the change, including one account of an
 internal document. No machinery-of-government order, departmental page or
 statutory instrument was located.
 
-The naming is unsettled in the sources themselves: the department is
-reported both as **DCMS** and as renamed to the **Department for Digital,
-Culture, Media and Sport (DDCMS)**. Both forms are carried in
-`alternative_names` because the Atlas cannot say which is correct.
+The naming was unsettled in the trade press (**DCMS** or renamed **DDCMS**).
+GOV.UK now uses the longer name (see the note above), so it is the entity's
+`name`; the old form stays in `alternative_names`.
 
 `status: active` is a claim only that the department exists — which is
 uncontroversial — and not that its digital remit is settled.
