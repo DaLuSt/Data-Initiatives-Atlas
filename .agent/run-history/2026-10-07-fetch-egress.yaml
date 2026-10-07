@@ -1,15 +1,19 @@
 date: "2026-10-07"
 session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
 summary: >
-  While closing the rank gaps (roadmap #449) the fetch tool read
-  legislation.gov.uk, which curl cannot. That prompted a re-test of the hosts the
-  repository records as blocked, with the fetch tool: it read the EUR-Lex
-  national-implementation-measures page for Directive 2019/1024 (Belgium's 11
-  measures in full; France's list cut off at item 51 by the tool's ~100,000
-  character page limit), a Légifrance law page (loi 78-17), a legislation.gov.uk
-  Act page and the efta.int homepage; unece.org, unctad.org, iso.org and
-  coe.int still return 403; web.archive.org is still refused by the tool itself;
-  Fedlex returns only a JavaScript notice.
+  While closing the rank gaps (roadmap #449) the fetch tool read EUR-Lex and
+  Légifrance pages, which the repository records as blocked. That prompted a
+  re-test of the recorded hosts, with the fetch tool and with curl. Fetch tool:
+  it read the EUR-Lex national-implementation-measures page for Directive
+  2019/1024 (Belgium's 11 measures in full; France's list cut off at item 51 by
+  the tool's ~100,000 character page limit), a Légifrance law page (loi 78-17), a
+  legislation.gov.uk Act page and the efta.int homepage; unece.org, unctad.org,
+  iso.org and coe.int still return 403; web.archive.org is still refused by the
+  tool itself; Fedlex returns only a JavaScript notice. curl: EUR-Lex does not
+  connect, Légifrance and efta.int return 403, legislation.gov.uk and bfdi.bund.de
+  read normally. A first draft of this entry said curl could not read
+  legislation.gov.uk; that was an assumption from an older note, tested and
+  wrong, and corrected before merge.
 
   Recorded: rows #220, #222, #223 and #225 of discovery/unresolved.md got a
   dated re-test; .agent/research-policy.md has a short lesson (blocked depends on

@@ -47,15 +47,17 @@ fit to add at all.
   [[LI-DATENSCHUTZSTELLE]]. (Moved here from `discovery/candidates.md` on
   2026-10-03.)
 - **"Blocked" depends on the tool, the URL form and the day; test before
-  you write a source off.** `curl` from the sandbox is refused by EUR-Lex,
-  Légifrance and legislation.gov.uk, and the fetch tool (`WebFetch`) is not:
-  on 2026-10-07 it read the EUR-Lex national-measures page for a directive
+  you write a source off.** Tested on 2026-10-07: from the sandbox, `curl` cannot
+  connect to EUR-Lex (the NIM page), gets 403 from Légifrance and `efta.int`, and
+  reads `legislation.gov.uk` and `bfdi.bund.de` normally. The fetch tool
+  (`WebFetch`) read the EUR-Lex national-measures page for a directive
   (`legal-content/EN/NIM/?uri=CELEX:32019L1024`), a Légifrance law
-  (`legifrance.gouv.fr/loda/id/...`) and a legislation.gov.uk Act page, and the
-  `efta.int` homepage. It still gets 403 from `unece.org`, `unctad.org`,
-  `iso.org` and `coe.int`, cannot fetch `web.archive.org` at all, and
-  returns only a JavaScript notice for Fedlex. Pages over about 100,000
-  characters are cut off: read on with the tool's `offset`. The per-host rows are
-  `discovery/unresolved.md` #220, #222, #223 and #225. A failure on one form of
-  a URL is not proof of a block, and a success on one page does not make the
-  whole host reachable.
+  (`legifrance.gouv.fr/loda/id/...`), a legislation.gov.uk Act page and the
+  `efta.int` homepage. The fetch tool still gets 403 from `unece.org`,
+  `unctad.org`, `iso.org` and `coe.int`, cannot fetch `web.archive.org` at all, and
+  returns only a JavaScript notice for Fedlex (whose English PDFs, by their
+  filestore URL, curl can download). Pages over about 100,000 characters are cut
+  off: read on with the tool's `offset`. The per-host rows are
+  `discovery/unresolved.md` #220, #222, #223 and #225. A failure on one form of a
+  URL is not proof of a block, and a success on one page does not make the whole
+  host reachable.
