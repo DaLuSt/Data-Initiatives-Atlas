@@ -2,8 +2,10 @@
 id: DE-BND
 type: organisation
 name: Bundesnachrichtendienst
+name_en: "Federal Intelligence Service"
 alternative_names:
   - BND
+  - "Federal Intelligence Service"
 description: >
   Germany's foreign intelligence service, under the supervision of the Head
   of the Federal Chancellery. It gathers information of foreign and security
@@ -72,6 +74,10 @@ sources:
     url: "https://de.wikipedia.org/wiki/Unabh%C3%A4ngiger_Kontrollrat"
     publisher: "Wikipedia"
     accessed: "2026-08-22"
+  - title: "Federal Intelligence Service (English site of the Bundesnachrichtendienst; the page labels its logo with this name)"
+    url: "https://www.bnd.bund.de/EN/Home/home_node.html"
+    publisher: "Bundesnachrichtendienst"
+    accessed: "2026-10-07"
 ---
 
 # Bundesnachrichtendienst (BND)

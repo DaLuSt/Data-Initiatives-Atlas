@@ -2,9 +2,11 @@
 id: NL-BELASTINGDIENST
 type: organisation
 name: Belastingdienst
+name_en: "Tax Administration"
 alternative_names:
   - Dutch Tax Administration
   - Netherlands Tax Administration
+  - "Tax Administration"
 description: >
   The Dutch tax administration. Within the system of base registries it
   holds the Basisregistratie Inkomen, determining the authentic income
@@ -58,6 +60,10 @@ sources:
     url: "https://www.cbs.nl/nl-nl/deelnemers-enquetes/decentrale-overheden/vastgoed-overheden/waardering-onroerende-zaken--woz--"
     publisher: "Centraal Bureau voor de Statistiek (CBS)"
     accessed: "2026-08-27"
+  - title: "Tax Administration (English site of the Belastingdienst)"
+    url: "https://www.belastingdienst.nl/wps/wcm/connect/en/individuals/individuals"
+    publisher: "Belastingdienst"
+    accessed: "2026-10-07"
 ---
 
 # Belastingdienst

@@ -2,6 +2,7 @@
 id: EE-AKI
 type: organisation
 name: Andmekaitse Inspektsioon
+name_en: "Data Protection Inspectorate"
 alternative_names:
   - AKI
   - Estonian Data Protection Inspectorate
@@ -60,6 +61,10 @@ sources:
     url: "https://www.edpb.europa.eu/estonia-participates-pan-european-role-public-and-private-data-protection-officers-joint_en"
     publisher: "European Data Protection Board"
     accessed: "2026-08-21"
+  - title: "Data Protection Inspectorate (English site of the Andmekaitse Inspektsioon)"
+    url: "https://www.aki.ee/en"
+    publisher: "Andmekaitse Inspektsioon"
+    accessed: "2026-10-07"
 ---
 
 # Andmekaitse Inspektsioon

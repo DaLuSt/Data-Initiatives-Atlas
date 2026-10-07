@@ -2,10 +2,12 @@
 id: NO-PERSONOPPLYSNINGSLOVEN
 type: act
 name: Lov om behandling av personopplysninger
+name_en: "Act relating to the processing of personal data (Personal Data Act)"
 alternative_names:
   - Personopplysningsloven
   - Personal Data Act
   - LOV-2018-06-15-38
+  - "Act relating to the processing of personal data (Personal Data Act)"
 description: >
   Norwegian act of 15 June 2018 on the processing of personal data, in force
   from 20 July 2018. It gives the General Data Protection Regulation effect
@@ -70,6 +72,10 @@ sources:
     url: "https://www.dlapiperdataprotection.com/index.html?t=law&c=NO"
     publisher: "DLA Piper"
     accessed: "2026-08-22"
+  - title: "Act relating to the processing of personal data (unofficial English translation)"
+    url: "https://lovdata.no/dokument/NLE/lov/2018-06-15-38"
+    publisher: "Lovdata"
+    accessed: "2026-10-07"
 ---
 
 # Personopplysningsloven (LOV-2018-06-15-38)

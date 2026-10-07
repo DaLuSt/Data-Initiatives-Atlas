@@ -2,8 +2,10 @@
 id: NO-DIGDIR
 type: organisation
 name: Digitaliseringsdirektoratet
+name_en: "Norwegian Digitalisation Agency"
 alternative_names:
   - Digdir
+  - "Norwegian Digitalisation Agency"
 description: >
   Norway's digitalisation agency, subordinate to the Ministry of
   Digitalisation and Public Governance. It is the government's principal
@@ -51,6 +53,10 @@ sources:
     url: "https://www.digdir.no/digdir/kraftig-vekst-i-bruk-av-felleslosninger/1206"
     publisher: "Digitaliseringsdirektoratet (Digdir)"
     accessed: "2026-08-22"
+  - title: "About the Norwegian Digitalisation Agency"
+    url: "https://www.digdir.no/digdir/about-norwegian-digitalisation-agency/887"
+    publisher: "Digitaliseringsdirektoratet"
+    accessed: "2026-10-07"
 ---
 
 # Digitaliseringsdirektoratet (Digdir)

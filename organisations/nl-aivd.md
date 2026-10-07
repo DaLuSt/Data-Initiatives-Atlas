@@ -2,6 +2,7 @@
 id: NL-AIVD
 type: organisation
 name: Algemene Inlichtingen- en Veiligheidsdienst
+name_en: "General Intelligence and Security Service"
 alternative_names:
   - AIVD
   - General Intelligence and Security Service
@@ -76,6 +77,10 @@ sources:
   - title: "Netherlands — Intelligence and Security Services"
     url: "https://irp.fas.org/world/netherlands/index.html"
     publisher: "Federation of American Scientists, Intelligence Resource Program"
+  - title: "General Intelligence and Security Service (English site of the AIVD)"
+    url: "https://english.aivd.nl/"
+    publisher: "Algemene Inlichtingen- en Veiligheidsdienst"
+    accessed: "2026-10-07"
 ---
 
 # Algemene Inlichtingen- en Veiligheidsdienst (AIVD)

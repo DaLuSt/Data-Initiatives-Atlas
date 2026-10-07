@@ -2,11 +2,13 @@
 id: BE-APD
 type: organisation
 name: Gegevensbeschermingsautoriteit
+name_en: "Data Protection Authority"
 alternative_names:
   - GBA
   - Autorité de protection des données
   - APD
   - Belgian Data Protection Authority
+  - "Data Protection Authority"
 description: >
   Belgian data protection supervisory authority. It supervises compliance
   with the GDPR and the Belgian act of 30 July 2018 implementing it, and
@@ -70,6 +72,10 @@ sources:
     url: "https://gdpr.belgium.be/nl/federal-institutions/kruispuntbank-van-de-sociale-zekerheid"
     publisher: "gdpr.belgium.be (Belgian federal government)"
     accessed: "2026-08-26"
+  - title: "Data Protection Authority (English site of the Gegevensbeschermingsautoriteit)"
+    url: "https://www.dataprotectionauthority.be/citizen"
+    publisher: "Gegevensbeschermingsautoriteit"
+    accessed: "2026-10-07"
 ---
 
 # Gegevensbeschermingsautoriteit (GBA / APD)

@@ -2,6 +2,7 @@
 id: NL-NEN
 type: organisation
 name: Stichting Koninklijk Nederlands Normalisatie Instituut
+name_en: "Royal Netherlands Standardization Institute"
 alternative_names:
   - NEN
   - Royal Netherlands Standardization Institute
@@ -64,6 +65,10 @@ sources:
     url: "https://nl.wikipedia.org/wiki/NEN"
     publisher: "Wikipedia"
     accessed: "2026-08-27"
+  - title: "Royal Netherlands Standardization Institute (English site of NEN)"
+    url: "https://www.nen.nl/en"
+    publisher: "NEN"
+    accessed: "2026-10-07"
 ---
 
 # NEN

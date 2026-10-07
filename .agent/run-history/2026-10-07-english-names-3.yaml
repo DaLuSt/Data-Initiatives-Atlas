@@ -1,0 +1,16 @@
+date: "2026-10-07"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #446, third pass over English display names (name_en). 26 more records
+  now carry one, each read on the body's own English site or from an official or
+  Lovdata translation and cited in that file's sources with accessed 2026-10-07
+  (218 entities in all). The fetch tool gets 503 from gesetze-im-internet.de, but
+  curl with /index.html and an identifying User-Agent reads it; that gave the BDSG,
+  IFG and DNG titles (the site has no English text for the other German acts
+  tried). Not done: the Belgian sites behind a verification challenge, pages with
+  no English name, and JavaScript-only legal databases; row #233 lists them.
+  Nothing was translated by a session; two names (Kartverket, BND) come from
+  running text or a logo label and the source title says so.
+prs: []
+outcome: isolated-on-branch
+entity_count_after: 742

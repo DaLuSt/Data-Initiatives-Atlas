@@ -2,6 +2,7 @@
 id: PL-CBA
 type: organisation
 name: Centralne Biuro Antykorupcyjne
+name_en: "Central Anti-Corruption Bureau"
 alternative_names:
   - CBA
   - Central Anti-Corruption Bureau
@@ -63,6 +64,10 @@ sources:
     url: "https://bip.cba.gov.pl/ftp/prawo/Ustawa_o_CBA_-_tekst_jednolity.pdf"
     publisher: "Centralne Biuro Antykorupcyjne (BIP)"
     accessed: "2026-09-06"
+  - title: "Central Anti-Corruption Bureau (English site)"
+    url: "https://www.cba.gov.pl/en"
+    publisher: "Centralne Biuro Antykorupcyjne"
+    accessed: "2026-10-07"
 ---
 
 # Centralne Biuro Antykorupcyjne (CBA)

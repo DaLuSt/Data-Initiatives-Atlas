@@ -2,6 +2,7 @@
 id: NO-KARTVERKET
 type: organisation
 name: Kartverket
+name_en: "Norwegian Mapping Authority"
 alternative_names:
   - Norwegian Mapping Authority
   - Statens kartverk
@@ -74,6 +75,10 @@ sources:
     url: "https://no.wikipedia.org/wiki/Kartverket"
     publisher: "Wikipedia (norsk bokmål)"
     accessed: "2026-08-22"
+  - title: "Kartverket (English site; the page uses this name in running text)"
+    url: "https://www.kartverket.no/en"
+    publisher: "Kartverket"
+    accessed: "2026-10-07"
 ---
 
 # Kartverket

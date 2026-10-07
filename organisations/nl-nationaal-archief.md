@@ -2,8 +2,10 @@
 id: NL-NATIONAAL-ARCHIEF
 type: organisation
 name: Nationaal Archief
+name_en: "National Archives"
 alternative_names:
   - National Archives of the Netherlands
+  - "National Archives"
 description: >
   The national archive of the Netherlands. It receives government records
   transferred under the Archiefwet and acts as the national expertise centre
@@ -53,6 +55,10 @@ sources:
     url: "https://www.rijksoverheid.nl/themas/overheid-en-democratie/archieven/archieven-van-de-overheid"
     publisher: "Rijksoverheid"
     accessed: "2026-08-27"
+  - title: "National Archives (English site of the Nationaal Archief)"
+    url: "https://www.nationaalarchief.nl/en"
+    publisher: "Nationaal Archief"
+    accessed: "2026-10-07"
 ---
 
 # Nationaal Archief

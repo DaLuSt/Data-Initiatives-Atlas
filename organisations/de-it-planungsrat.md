@@ -2,6 +2,7 @@
 id: DE-IT-PLANUNGSRAT
 type: organisation
 name: IT-Planungsrat
+name_en: "IT Planning Council"
 alternative_names:
   - IT Planning Council
 description: >
@@ -62,6 +63,10 @@ sources:
     url: "https://www.fitko.de/foederale-it-architektur"
     publisher: "Föderale IT-Kooperation (FITKO)"
     accessed: "2026-08-28"
+  - title: "The German IT Planning Council (English site)"
+    url: "https://www.it-planungsrat.de/en"
+    publisher: "IT-Planungsrat"
+    accessed: "2026-10-07"
 ---
 
 # IT-Planungsrat

@@ -152,9 +152,18 @@ nothing marked it as one, so the site could not use it.
   government, NCSC-NL, NCTV and data.overheid.nl pages; the Austrian RIS and
   Fedlex translations; the EDPB members page; and others). The validator now
   also requires `name_en` to be listed in `alternative_names`.
-- **Still without an English name: about 38 records**, where no English page
-  or official translation could be read (see `discovery/unresolved.md` row #233
-  for what was tried). A translation by a session would be a guess presented as
+- **Third pass (2026-10-07): 26 more names** (roadmap #446), from the body's own
+  English site or the official or Lovdata translation, each cited in that file's
+  `sources`: the Danish, Norwegian, Estonian and Belgian data protection bodies,
+  Statistics Estonia, the Norwegian digitalisation, mapping and national
+  security authorities, Germany's IT Planning Council, GDI-DE, DKE, BND and three
+  federal acts (translations on gesetze-im-internet.de), the Dutch AIVD, National
+  Archives, Waarderingskamer, Business Register, Tax Administration and NEN, and
+  others. 218 entities now carry one.
+- **Still without an English name: the records where no English page or official
+  translation could be read** (the earlier estimate of about 38 came from a
+  word-list heuristic and was not recomputed; see `discovery/unresolved.md` row
+  #233 for what was tried). A translation by a session would be a guess presented as
   a name, so they are left. This also stays separate from row #9 (a
   multilingual `name`), which is open.
 - A side effect: a graph can now mix English and original names (a node

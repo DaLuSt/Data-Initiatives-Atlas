@@ -2,6 +2,7 @@
 id: NL-WAARDERINGSKAMER
 type: organisation
 name: Waarderingskamer
+name_en: "Netherlands Council for Real Estate Assessment"
 alternative_names:
   - Netherlands Council for Real Estate Assessment
 description: >
@@ -76,6 +77,10 @@ sources:
     url: "https://www.rijksoverheid.nl/contact/contactgids/waarderingskamer"
     publisher: "Rijksoverheid"
     accessed: "2026-08-27"
+  - title: "Netherlands Council for Real Estate Assessment (English site of the Waarderingskamer)"
+    url: "https://www.waarderingskamer.nl/en"
+    publisher: "Waarderingskamer"
+    accessed: "2026-10-07"
 ---
 
 # Waarderingskamer

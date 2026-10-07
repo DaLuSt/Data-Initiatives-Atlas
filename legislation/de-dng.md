@@ -2,9 +2,11 @@
 id: DE-DNG
 type: act
 name: Datennutzungsgesetz
+name_en: "Act governing the use of public sector data (Data Use Act)"
 alternative_names:
   - DNG
   - Gesetz für die Nutzung von Daten des öffentlichen Sektors
+  - "Act governing the use of public sector data (Data Use Act)"
 description: >
   German federal act on the use of public sector data, enacted as part of
   the "Zweites Open-Data-Gesetz" package and in force from 23 July 2021. It
@@ -74,6 +76,10 @@ sources:
     url: "https://www.bho-legal.com/en/das-neue-datennutzungsgesetz/"
     publisher: "BHO Legal"
     accessed: "2026-08-22"
+  - title: "Data Use Act (DNG), English translation"
+    url: "https://www.gesetze-im-internet.de/englisch_dng/"
+    publisher: "Federal Ministry of Justice (translation by the Language Service of the Federal Ministry of the Interior)"
+    accessed: "2026-10-07"
 ---
 
 # Datennutzungsgesetz (DNG)

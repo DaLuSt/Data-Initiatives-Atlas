@@ -2,6 +2,7 @@
 id: CH-DVS
 type: organisation
 name: Digitale Verwaltung Schweiz
+name_en: "Digital Public Services Switzerland"
 alternative_names:
   - DVS
   - ANS
@@ -69,6 +70,10 @@ sources:
     url: "https://www.efd.admin.ch/de/digitale-verwaltung"
     publisher: "Eidgenössisches Finanzdepartement (EFD)"
     accessed: "2026-09-06"
+  - title: "Digital Public Services Switzerland (English site of Digitale Verwaltung Schweiz)"
+    url: "https://www.digitale-verwaltung-schweiz.ch/en"
+    publisher: "Digitale Verwaltung Schweiz"
+    accessed: "2026-10-07"
 ---
 
 # Digitale Verwaltung Schweiz (DVS)

@@ -2,11 +2,13 @@
 id: NL-NHR
 type: platform
 name: Handelsregister
+name_en: "Business Register"
 alternative_names:
   - NHR
   - Nieuw Handelsregister
   - HR
   - Dutch Business Register
+  - "Business Register"
 description: >
   The Dutch trade register: a public register containing information about
   businesses and legal entities active in the Netherlands, held by the Kamer
@@ -81,6 +83,10 @@ sources:
     url: "https://wetten.overheid.nl/BWBR0021777"
     publisher: "Overheid.nl (Basiswettenbestand)"
     accessed: "2026-08-27"
+  - title: "Business Register (English site of the Kamer van Koophandel)"
+    url: "https://www.kvk.nl/en/"
+    publisher: "Kamer van Koophandel"
+    accessed: "2026-10-07"
 ---
 
 # NHR — Handelsregister

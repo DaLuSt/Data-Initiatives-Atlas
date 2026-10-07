@@ -2,6 +2,7 @@
 id: EE-STATISTIKAAMET
 type: organisation
 name: Statistikaamet
+name_en: "Statistics Estonia"
 alternative_names:
   - Statistics Estonia
 description: >
@@ -71,6 +72,10 @@ sources:
     url: "https://en.wikipedia.org/wiki/Statistics_Estonia"
     publisher: "Wikipedia"
     accessed: "2026-08-22"
+  - title: "Statistics Estonia (English site)"
+    url: "https://www.stat.ee/en"
+    publisher: "Statistikaamet"
+    accessed: "2026-10-07"
 ---
 
 # Statistikaamet — Statistics Estonia

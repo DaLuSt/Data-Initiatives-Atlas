@@ -2,6 +2,7 @@
 id: DK-DATATILSYNET
 type: organisation
 name: Datatilsynet
+name_en: "Danish Data Protection Agency"
 alternative_names:
   - Danish Data Protection Agency
 description: >
@@ -54,6 +55,10 @@ sources:
     url: "https://www.edpb.europa.eu/about-edpb/about-edpb/members_en"
     publisher: "European Data Protection Board"
     accessed: "2026-08-25"
+  - title: "The Danish Data Protection Agency (English site)"
+    url: "https://www.datatilsynet.dk/english"
+    publisher: "Datatilsynet"
+    accessed: "2026-10-07"
 ---
 
 # Datatilsynet

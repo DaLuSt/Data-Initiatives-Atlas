@@ -2,6 +2,7 @@
 id: NO-DATATILSYNET
 type: organisation
 name: Datatilsynet
+name_en: "Norwegian Data Protection Authority"
 alternative_names:
   - Norwegian Data Protection Authority
   - Norwegian DPA
@@ -68,6 +69,10 @@ sources:
     url: "https://eur-lex.europa.eu/eli/dec/2018/1022/oj"
     publisher: "EUR-Lex — Publications Office of the European Union"
     accessed: "2026-09-13"
+  - title: "The Norwegian Data Protection Authority (English site)"
+    url: "https://www.datatilsynet.no/en/"
+    publisher: "Datatilsynet"
+    accessed: "2026-10-07"
 ---
 
 # Datatilsynet
