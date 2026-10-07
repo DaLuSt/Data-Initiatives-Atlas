@@ -1,0 +1,16 @@
+date: "2026-10-07"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  The owner created the Project board and made it public. Found it by reading
+  github.com/DaLuSt?tab=projects: one project, "Atlas roadmap", at
+  https://github.com/users/DaLuSt/projects/1 (the tab's own count said 0 while its
+  search said 1). The board page itself cannot be read by the fetch tool (it shows
+  only the sign-in navigation and "You can't perform that action at this time",
+  with the title "Atlas roadmap - GitHub"), so what could NOT be checked is the
+  Status options, the workflows (auto-add, item closed) and whether the 20 roadmap
+  issues are on it. Linked the board from docs/roadmap.md and the README and
+  closed #444 on the owner's word; if the board does not fill itself, check the
+  Workflows in the project's settings against docs/roadmap.md.
+prs: []
+outcome: in-progress
+entity_count_after: 742

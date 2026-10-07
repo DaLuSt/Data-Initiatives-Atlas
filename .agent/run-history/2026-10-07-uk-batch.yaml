@@ -36,6 +36,8 @@ summary: >
 
   Counts: 742 entities (+2), 1,571 typed relationships (+6), README and state.yaml
   refreshed. backlog.md's status-gap item notes the ICO case resolved.
-prs: []
-outcome: in-progress
+prs:
+  - number: 468
+    title: "UK: the Information Commission succeeds the ICO, the Re-use of PSI Regulations 2015, GOV.UK sources for DCMS and DSIT"
+outcome: merged
 entity_count_after: 742
