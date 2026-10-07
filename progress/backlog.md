@@ -303,7 +303,7 @@ visible from any single entity.
   being replaced by an Information Commission under [[GB-DUAA]] s.117, and
   the Atlas cannot establish whether that has happened. Distinct from
   [[FR-NIS2-LOI]]'s `unknown` (sources conflict) and [[ES-LCGC]]'s
-  `proposed` (still a draft). [[GB-CSRB]] has the same problem. → Roadmap #457.
+  `proposed` (still a draft). [[GB-CSRB]] has the same problem. **Update 2026-10-07:** the `GB-ICO` case itself resolved: the change took effect on 30 September 2026 and is modelled (`GB-INFORMATION-COMMISSION` succeeds `GB-ICO`); the missing status value remains for the next mandated-but-uncompleted change. → Roadmap #457.
 - [x] **An amendment relationship type — fourth data point.** **Done — verified 2026-10-07:** `amends` exists (see above) and is used for `GB-DUAA` and `GB-CSRB`.
 - [x] **A UK geospatial entity.** **Done — verified 2026-10-07:** `GB-OS` and `GB-GEOSPATIAL-STRATEGY` are in `DOMAIN-GEOSPATIAL`.
 - [x] **The Cyber Assessment Framework.** **Done — verified 2026-10-07:** `GB-CAF` exists.

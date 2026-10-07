@@ -25,7 +25,7 @@ coverage: low
 verification: primary-source
 start_date: 2023-02-07
 end_date: 2026-07-21
-last_verified: "2026-08-22"
+last_verified: "2026-10-07"
 previous_version: null
 successor: null
 
@@ -46,6 +46,10 @@ relationships:
     valid_until: 2026-07-21
 
 sources:
+  - title: "Machinery of Government changes: Fact Sheet"
+    url: "https://www.gov.uk/government/news/machinery-of-government-changes-fact-sheet"
+    publisher: "GOV.UK (Cabinet Office)"
+    accessed: "2026-10-07"
   - title: "DSIT to be scrapped with 'strengthened DCMS to take responsibility for digital transformation'"
     url: "https://www.publictechnology.net/2026/07/21/government-and-politics/dsit-to-be-scrapped-with-strengthened-dcms-to-take-responsibility-for-digital-transformation/"
     publisher: "PublicTechnology"
@@ -68,6 +72,14 @@ sources:
 ---
 
 # Department for Science, Innovation and Technology
+
+> **Re-read 2026-10-07 against GOV.UK.** The Cabinet Office's "Machinery of
+> Government changes: Fact Sheet" (first published 22 July 2026) was read
+> directly: "The functions of the Department for Science, Innovation and
+> Technology (DSIT) will be redistributed." That is a primary statement of the
+> abolition's substance. It does not give the date of abolition: **21 July
+> 2026** remains from the trade press and from a written ministerial statement
+> (HLWS298) that the parliamentary site refused (403) and that was not read here.
 
 > **Verified 2026-08-22.** Three independent trade-press accounts —
 > thinkdigitalpartners.com, publictechnology.net and dma.org.uk — were read

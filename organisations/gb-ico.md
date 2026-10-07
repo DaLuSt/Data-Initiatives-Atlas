@@ -5,36 +5,36 @@ name: Information Commissioner's Office
 alternative_names:
   - ICO
   - Information Commissioner
-  - Information Commission
 description: >
   The United Kingdom's independent regulator for data protection and
-  information rights, and the supervisory authority under UK GDPR and the
-  Data Protection Act 2018. It is also a competent authority under the
-  Network and Information Systems Regulations 2018 in relation to relevant
-  digital service providers. Section 117 of the Data (Use and Access) Act
-  2025 establishes an Information Commission to replace it, replacing the
-  single Information Commissioner with a board comprising a chair, a chief
-  executive and seven non-executive directors. A commencement order (SI
-  2026/1015) sets the change for 30 September 2026.
+  information rights until 30 September 2026, and the supervisory authority
+  under UK GDPR and the Data Protection Act 2018. It was also a competent
+  authority under the Network and Information Systems Regulations 2018 in
+  relation to relevant digital service providers. On 30 September 2026 the
+  office of Information Commissioner was abolished and its functions were
+  transferred to the Information Commission (sections 118 and 119 of the Data
+  (Use and Access) Act 2025, commenced by SI 2026/1015); see
+  GB-INFORMATION-COMMISSION.
 
 level: national
 country: GB
 region: null
 
-status: active
+status: superseded
 confidence: medium
 coverage: medium
 verification: primary-source
 start_date: null
-end_date: null
-last_verified: "2026-09-26"
+end_date: 2026-09-30
+last_verified: "2026-10-07"
 previous_version: null
-successor: null
+successor: GB-INFORMATION-COMMISSION
 
 domains:
   - DOMAIN-GOVERNMENT
 organisations: []
 related_entities:
+  - GB-INFORMATION-COMMISSION
   - GB-UK-GDPR
   - GB-DPA-2018
   - GB-DUAA
@@ -52,16 +52,20 @@ relationships:
     evidence: "Confirmed by reading ico.org.uk's 'The Information Commission' page and the DUAA 2025 statute text at legislation.gov.uk (2026-08-22), § 117: 'This section abolishes the office of Information Commissioner and replaces it with the Information Commission... It provides that all references to the Information Commissioner in UK law should be taken to mean the Information Commission.'"
     confidence: medium
     valid_from: null
-    valid_until: null
+    valid_until: 2026-09-30
   - type: applies-to
     target: GB-UK-GDPR
     source: fact
     evidence: "Confirmed by reading en.wikipedia.org's 'Information Commissioner's Office' article (2026-08-22): 'It is the independent regulatory office (national data protection authority) dealing with the Data Protection Act 2018, the General Data Protection Regulation, and the Privacy and Electronic Communications (EC Directive) Regulations 2003 across the UK.'"
     confidence: medium
     valid_from: null
-    valid_until: null
+    valid_until: 2026-09-30
 
 sources:
+  - title: "Information Commission succeeds the ICO as UK's data protection regulator"
+    url: "https://www.gov.uk/government/news/information-commission-succeeds-the-ico-as-uks-data-protection-regulator"
+    publisher: "GOV.UK (Department for Digital, Culture, Media and Sport)"
+    accessed: "2026-10-07"
   - title: "The Information Commission"
     url: "https://ico.org.uk/about-the-ico/what-we-do/legislation-we-cover/data-use-and-access-act-2025/the-data-use-and-access-act-2025-duaa-summary-of-the-changes/the-information-commission/"
     publisher: "Information Commissioner's Office (UK)"
@@ -85,84 +89,56 @@ sources:
   - title: "The Data (Use and Access) Act 2025 (Commencement No. 9 and Transitional and Saving Provisions) Regulations 2026 (SI 2026/1015)"
     url: "https://www.legislation.gov.uk/uksi/2026/1015/made"
     publisher: "legislation.gov.uk (The National Archives)"
-    accessed: "2026-09-26"
+    accessed: "2026-10-07"
 ---
 
 # Information Commissioner's Office
 
-> **Verified 2026-08-22.** ico.org.uk's own "The Information Commission"
-> page, the DUAA 2025 statute text (§ 117) and en.wikipedia.org's ICO
-> article were read directly and confirmed the claims below. The board
-> composition detail (chair, chief executive, seven non-executive
-> directors) and the "expected in 2026" timing were not independently
-> re-confirmed this pass and are retained from the original sourcing.
+> **Re-verified 2026-10-07.** The office this entity describes no longer
+> exists: GOV.UK's announcement of 30 September 2026 and the commencement
+> regulations (SI 2026/1015) were read directly and confirm that the
+> Information Commissioner was abolished and its functions transferred to the
+> Information Commission. The sections below keep the history, because the
+> reasoning in them is the reason this change is recorded as it is.
 
 ## Description
 
-Confirmed by reading legislation.gov.uk's DUAA 2025 text (2026-08-22),
-§ 117: "This section abolishes the office of Information Commissioner and
-replaces it with the Information Commission... It provides that all
-references to the Information Commissioner in UK law should be taken to
-mean the Information Commission." The ICO is the UK's independent regulator for data protection and
-information rights, and the supervisory authority under [[GB-UK-GDPR]] and
-[[GB-DPA-2018]]. It is also a **competent authority under
-[[GB-NIS-REGULATIONS]]** for relevant digital service providers — one of the
-few data protection authorities in the Atlas with a cybersecurity remit in
-statute.
+Until 30 September 2026 the ICO was the UK's independent regulator for data
+protection and information rights, and the supervisory authority under
+[[GB-UK-GDPR]] and [[GB-DPA-2018]]. It was also a **competent authority under
+[[GB-NIS-REGULATIONS]]** for relevant digital service providers, one of the few
+data protection authorities in the Atlas with a cybersecurity remit in statute.
 
-## A transformation the Atlas deliberately does not model
+## Succeeded on 30 September 2026
 
-**Section 117 of [[GB-DUAA]] establishes an *Information Commission* to
-replace the ICO**, swapping the single Information Commissioner for a board
-of a chair, a chief executive and seven non-executive directors, with new
-powers to compel witnesses and request technical reports. The sources
-describe the move as **"expected in spring/summer 2026"**.
+[[GB-DUAA]] §117 established a body corporate called the Information
+Commission; §118 abolished the office of Information Commissioner and §119
+transferred its functions, and the commencement regulations (SI 2026/1015,
+made 10 September 2026) brought both into force on 30 September 2026. GOV.UK
+announced the change that day: "Information Commission succeeds the ICO as UK's
+data protection regulator". The successor is [[GB-INFORMATION-COMMISSION]];
+this entity is `superseded` with `end_date: 2026-09-30` and the two
+`applies-to` edges below are closed on the same date.
 
-This entity is dated 17 August 2026, and re-verified 2026-08-22. One weak
-signal, not a confirmation: en.wikipedia.org's infobox for the ICO lists
-the Information Commissioner as **"Vacant"** as of this reading, consistent
-with a transition in progress but not proof one has completed — a vacancy
-could equally mean an ordinary gap between appointments. The Atlas
-therefore still **cannot establish whether the change has happened**, and
-it does not guess:
+### How the Atlas handled the wait
 
-- `status` stays **`active`** — the regulator exists either way;
-- **no successor entity was created**, on the same reasoning that refused
-  Spain's *Centro Nacional de Ciberseguridad* and Poland's *Agencja
-  Informatyzacji*: a body whose existence is not established does not get an
-  ID;
-- **`Information Commission` is carried in `alternative_names`**, so a
-  reader searching the new name finds this entity.
+From 2026-08-22 until the change, this file declined to model it, on three
+points that turned out to be the right ones to hold:
 
-That last decision is a judgement, and it cuts the other way from the first
-two. If the Commission is now constituted, this entity is filed under a name
-that no longer applies. The alternative — creating an entity for a body that
-may not yet exist — would have been worse, and the Atlas has refused it
-three times before.
+- `status` stayed `active` while the change was only mandated, not completed;
+- **no successor entity was created** while its existence was not established,
+  on the same reasoning that refused Spain's *Centro Nacional de Ciberseguridad*
+  and Poland's *Agencja Informatyzacji*;
+- `Information Commission` was carried as an alias so a reader searching the new
+  name found this entity. That alias moved to the successor's own file on
+  2026-10-07.
 
-⚠ **This is the closest the Atlas has come to a `status` it cannot express.**
-[[FR-NIS2-LOI]] is `unknown` because sources contradict each other;
-[[ES-LCGC]] is `proposed` because it is a draft. Here the *instrument* is in
-force and the *institutional change it mandates* has an unverified
-completion date. None of the three vocabulary values says that.
-
-## Re-checked 2026-09-26: the completion date is now fixed, and it is days away
-
-The uncertainty above is resolved to a specific date, though not yet to a
-completed fact. Confirmed by reading legislation.gov.uk's own text of The
-Data (Use and Access) Act 2025 (Commencement No. 9 and Transitional and
-Saving Provisions) Regulations 2026 (SI 2026/1015) directly: made on **10
-September 2026**, it "appoint[s] **30 September 2026**" as the date
-sections 117(4)(a), 118 and 119 of [[GB-DUAA]] come into force — the
-sections that abolish the office of Information Commissioner (§118) and
-transfer its functions to the Information Commission (§119).
-
-As of this entity's own re-verification date (2026-09-26), that date is
-**four days away** — the transition is now scheduled, not merely
-"expected," but has **not yet occurred**. `status: active` remains
-correct and no successor entity is created, for the same reasons given
-above; this is simply the first point at which the Atlas can name an
-exact date rather than a season.
+On 2026-09-26 the commencement date was fixed by SI 2026/1015 but had not yet
+arrived, so none of this changed until a source dated after 30 September was
+read. This was the closest the Atlas had come to a status it cannot express
+(a mandated change with an unverified completion date); the vocabulary still
+has no value for it, and the question stays open in `progress/backlog.md` and
+roadmap issue #457 for the next such case.
 
 ## The seventh data protection authority
 
