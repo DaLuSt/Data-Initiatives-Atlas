@@ -153,6 +153,14 @@ last_merged_prs:
     summary: "Schema versioning (schema_version 1.0.0, optional_fields, CI rule), dated data releases with an automatic release PR and publish workflow, CHANGELOG.md, tools/release.py, the release shown in the site footer, and the roadmap process (docs/roadmap.md, issue template, labels and milestones; roadmap issues #443-452)"
   - number: 453
     summary: "Release data 2026.10.1, the first release: baseline counts (740 entities, 1,565 typed relationships, 58 countries), schema 1.0.0; prepared by the release workflow, opened by hand because Actions may not create pull requests in this repository"
+  - number: 454
+    summary: "Housekeeping: recorded #441, #442 and the first release in state.yaml and run-history"
+  - number: 455
+    summary: "Explorer rings no longer animate out from the origin, which made Cytoscape log an invalid-endpoints warning per edge (38 on a depth change; roadmap #447)"
+  - number: 456
+    summary: "List view: Download these rows as CSV (site/csv.js, tested under Node; formula-injection guard, BOM; roadmap #445)"
+  - number: 462
+    summary: "Reconciled progress/backlog.md: 39 of 69 unchecked items were done or superseded, the 30 open ones point to roadmap issues #457-461 (roadmap #448)"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,

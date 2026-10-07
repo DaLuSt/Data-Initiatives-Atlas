@@ -20,6 +20,8 @@ summary: >
   the way: my first csv.js contained a literal invisible BOM character instead of
   the ﻿ escape, so my first mutation check did not bite; replaced with the
   escape. Not checked: opening the file in Excel or LibreOffice.
-prs: []
-outcome: in-progress
+prs:
+  - number: 456
+    title: "List view: download the rows on screen as CSV"
+outcome: merged
 entity_count_after: 740
