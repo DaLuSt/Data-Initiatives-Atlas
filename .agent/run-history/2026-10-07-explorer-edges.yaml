@@ -1,0 +1,23 @@
+date: "2026-10-07"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap issue #447: the Entity Explorer logged Cytoscape "Edge has invalid
+  endpoints" warnings whenever the neighbourhood was rebuilt (38 on a depth
+  change from 2 to 3 on NL-AP).
+
+  Cause, found by recording each warned edge's endpoints at the moment of the
+  warning: the elements are removed and re-added on every refresh, so every node
+  starts at (0, 0), and the concentric layout animated them out from there for
+  300 ms (when under 400 nodes); an edge whose two ends were both still at the
+  origin is zero-length. The edge data was fine (no edge lacks an endpoint, none
+  is a self-loop). Fix: the concentric layout no longer animates, since there
+  is no earlier position to animate from.
+
+  Checked in the browser across ten interactions (depth up and down, names
+  toggle both ways, new focus, Atlas and Explorer views, re-layout, a country
+  filter): 0 warnings and 0 errors, against 38 before; the graph still fits the
+  canvas. TestExplorerLayout fails if the layout is animated again. A visible
+  change: the rings no longer bloom out from the centre.
+prs: []
+outcome: in-progress
+entity_count_after: 740
