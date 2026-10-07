@@ -22,6 +22,8 @@ summary: >
   UN-FPOS item was folded into the other; the "13 of 20 instruments" item was
   marked superseded by the live Compare view; the `level: local` item was marked
   decided by unresolved.md #231 (kept, unused).
-prs: []
-outcome: in-progress
+prs:
+  - number: 462
+    title: "Reconcile progress/backlog.md with the current state of the Atlas"
+outcome: merged
 entity_count_after: 740

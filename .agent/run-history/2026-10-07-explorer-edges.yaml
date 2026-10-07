@@ -18,6 +18,8 @@ summary: >
   filter): 0 warnings and 0 errors, against 38 before; the graph still fits the
   canvas. TestExplorerLayout fails if the layout is animated again. A visible
   change: the rings no longer bloom out from the centre.
-prs: []
-outcome: in-progress
+prs:
+  - number: 455
+    title: "Explorer: stop animating the rings out from the origin"
+outcome: merged
 entity_count_after: 740
