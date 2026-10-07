@@ -935,6 +935,68 @@ class TestExplorerLayout(unittest.TestCase):
         self.assertNotIn("animate: n <", block)
 
 
+class TestListCsv(unittest.TestCase):
+    """The List view's CSV download (site/csv.js is tested under Node)."""
+
+    SITE = Path(__file__).resolve().parent.parent / "site"
+
+    def _csv(self, header, rows):
+        import shutil
+        import subprocess
+        node = shutil.which("node")
+        if not node:
+            self.skipTest("node is not installed")
+        script = ("const c=require(%r);const d=JSON.parse(require('fs').readFileSync(0,'utf8'));"
+                  "process.stdout.write(c.toCsv(d.header,d.rows));" % str(self.SITE / "csv.js"))
+        # bytes in and out: text mode would turn the CRLF line endings into LF
+        out = subprocess.run([node, "-e", script],
+                             input=json.dumps({"header": header, "rows": rows}).encode("utf-8"),
+                             capture_output=True, check=True)
+        return out.stdout.decode("utf-8")
+
+    def test_quoting_bom_and_line_endings(self):
+        text = self._csv(["a", "b"], [["x,y", 'he said "hi"'], ["line1\nline2", None]])
+        self.assertTrue(text.startswith("\ufeff"))
+        self.assertTrue(text.endswith("\r\n"))
+        import csv
+        import io
+        rows = list(csv.reader(io.StringIO(text.lstrip("\ufeff"), newline="")))
+        self.assertEqual(rows, [["a", "b"], ["x,y", 'he said "hi"'], ["line1\nline2", ""]])
+
+    def test_formula_starts_are_neutralised(self):
+        import csv
+        import io
+        cells = ["=1+1", "+44 20", "-3", "@SUM(A1)", "\tTab", "plain", "a=b", "'quoted'"]
+        text = self._csv(["c"], [[c] for c in cells])
+        got = [r[0] for r in csv.reader(io.StringIO(text.lstrip("\ufeff"), newline=""))][1:]
+        self.assertEqual(got, ["'=1+1", "'+44 20", "'-3", "'@SUM(A1)", "'\tTab", "plain", "a=b", "'quoted'"])
+
+    def test_every_entity_survives_the_round_trip(self):
+        import csv
+        import io
+        payload, errors, _ = build_graph.build()
+        self.assertFalse(errors)
+        nodes = payload["graph"]["nodes"]
+        header = ["ID", "Official name", "English name"]
+        rows = [[n["id"], n["label"], n.get("name_en") or ""] for n in nodes]
+        text = self._csv(header, rows)
+        back = list(csv.reader(io.StringIO(text.lstrip("\ufeff"), newline="")))
+        self.assertEqual(len(back), len(nodes) + 1)
+        for original, got in zip(rows, back[1:]):
+            self.assertEqual(got[0], original[0])
+            for a, b in zip(original[1:], got[1:]):
+                self.assertEqual(b.lstrip("'") if a[:1] in "=+-@" and a else b, a)
+
+    def test_site_wiring(self):
+        html = (self.SITE / "index.html").read_text(encoding="utf-8")
+        js = (self.SITE / "app.js").read_text(encoding="utf-8")
+        self.assertIn('id="list-csv"', html)
+        self.assertLess(html.index('src="csv.js"'), html.index('src="app.js"'))
+        # the download and the table read the same rows
+        self.assertEqual(js.count("var rows = listRows();"), 2)
+        self.assertIn("AtlasCsv.toCsv(", js)
+
+
 class TestMobileLayout(unittest.TestCase):
     """On a phone the top bar is compact, the detail panel is a strip under the
     graph (not a sheet over it) and touch targets are 40 px. See

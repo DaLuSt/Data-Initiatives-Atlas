@@ -233,6 +233,10 @@
         the sidebar. Every row links to the entity's Markdown source on GitHub.
       </p>
       <p class="list-count" id="list-count" role="status" aria-live="polite"></p>
+      <p class="list-tools">
+        <button id="list-csv" type="button" class="icon-btn">Download these rows as CSV</button>
+        <span id="csv-status" class="sr-only" role="status" aria-live="polite"></span>
+      </p>
       <div class="table-wrap">
         <table class="entity-table">
           <caption class="sr-only">Atlas entities matching the current filters</caption>
@@ -322,6 +326,7 @@
 </footer>
 
 <script src="vendor/cytoscape.min.js"></script>
+<script src="csv.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

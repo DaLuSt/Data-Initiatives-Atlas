@@ -1,0 +1,25 @@
+date: "2026-10-07"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap issue #445: a CSV export of the List view.
+
+  Added "Download these rows as CSV" to the List view. It exports exactly the
+  rows the table shows (the table and the download now share one listRows()
+  function): ID, official name, English name, type, level, country code, scope,
+  status, typed relationships, source-file link, as raw repository values. The
+  CSV helpers are in site/csv.js (pure functions, loaded before app.js) so they
+  can be tested under Node: quoting, CRLF line endings, a leading apostrophe on
+  cells starting with = + - @ tab or CR (spreadsheet formula injection), and a
+  byte-order mark so Excel reads UTF-8.
+
+  Checked: TestListCsv (4 tests, including the round trip of all 740 entities
+  through Node and Python's csv module); mutations removing the formula guard
+  and the BOM each fail it. In the browser the CSV has the same number of rows as
+  the table for all entities (740), country NL + type organisation (50) and a
+  search (36), and the download is announced in a live region. Found and fixed on
+  the way: my first csv.js contained a literal invisible BOM character instead of
+  the ﻿ escape, so my first mutation check did not bite; replaced with the
+  escape. Not checked: opening the file in Excel or LibreOffice.
+prs: []
+outcome: in-progress
+entity_count_after: 740
