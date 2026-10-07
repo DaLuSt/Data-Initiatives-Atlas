@@ -177,6 +177,10 @@ last_merged_prs:
     summary: "Roadmap: linked the public Project board in docs/roadmap.md; recorded #467 and #468"
   - number: 484
     summary: "Docs sweep: README, CONTRIBUTING, CODE_OF_CONDUCT, SECURITY and countries/README corrected against the current Atlas; entity, URL and country counts removed outside the README (figures re-measured there); candidate C10 points to the country-group issues #470-#483"
+  - number: 485
+    summary: "Housekeeping: recorded #469 and #484 in state.yaml and run-history"
+  - number: 486
+    summary: "English names, third pass (roadmap #446): 26 more name_en values from the bodies' own English sites and official or Lovdata translations, each cited in sources; 218 entities now have one; the fetch tool gets 503 from gesetze-im-internet.de but curl with /index.html and an identifying User-Agent reads it (row #233)"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,

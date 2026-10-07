@@ -11,6 +11,8 @@ summary: >
   no English name, and JavaScript-only legal databases; row #233 lists them.
   Nothing was translated by a session; two names (Kartverket, BND) come from
   running text or a logo label and the source title says so.
-prs: []
-outcome: isolated-on-branch
+prs:
+  - number: 486
+    title: "English names: 26 more name_en values from the bodies' own English sites (roadmap #446)"
+outcome: merged
 entity_count_after: 742
