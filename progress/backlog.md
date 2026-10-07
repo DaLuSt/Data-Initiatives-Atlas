@@ -4,18 +4,22 @@ Full batch plan. Each batch is scoped, researched, validated and committed
 independently — do not start the next one until the current one passes
 validation (`CONTRIBUTING.md` — Batch workflow).
 
+> **Reconciled 2026-10-07 (roadmap issue #448).** Every item that was still unchecked
+> was checked against the repository. Of 69, **39 were already done, superseded or
+> decided** and are now ticked with what was found; the **30 still open** (six of them
+> narrowed to what is left) each carry a pointer to the roadmap issue that now owns
+> them: #457 vocabulary decisions (7), #458 Netherlands modelling (4), #459 United
+> Kingdom (7), #460 coverage gaps (8), #461 consistency checks (4). The roadmap
+> (`docs/roadmap.md`) is where open work is tracked; this file remains the history of
+> the batches and the reasoning behind them.
+
 ## Netherlands
 
 - [x] **Batch 1 — Netherlands: Core Data Governance.** Done 2026-08-14, 16
   entities. **Search-only sourcing — owes a primary-source re-verification
   pass** (`grep -rl "verification: search-only" .`). See
   `progress/completed.md`.
-- [ ] **Batch 1b — Re-verification of Batch 1.** Fetch and read the sources
-  already cited on the 16 Batch 1 entities; confirm/correct claims; set
-  `verification: primary-source`, `last_verified` and per-source
-  `accessed:` dates; close the open rows in `discovery/unresolved.md`.
-  Requires an environment with outbound HTTPS to public
-  government/EU/standards domains. **Precondition for Batch 6.**
+- [x] **Batch 1b — Re-verification of Batch 1.** **Done — verified 2026-10-07:** every one of the 740 entities is now `verification: primary-source`; the re-verification debt this item was part of is closed (`docs/re-verification.md` is the procedure that was used).
 - [x] **Batch 2 — Netherlands: Organisations.** Done 2026-08-14, 17
   entities (13 organisations + 1 framework + 1 strategy + 2 domains).
   **Search-only sourcing — included in the Batch 1b re-verification debt.**
@@ -132,18 +136,14 @@ validation (`CONTRIBUTING.md` — Batch workflow).
 
 ## Remaining work
 
-- [ ] **Re-verification pass** — the single highest-value item. Needs
-  outbound HTTPS; every URL is already recorded in entities' `sources:`.
+- [x] **Re-verification pass.** **Done — verified 2026-10-07:** `grep -rl "verification: search-only"` finds no entity; all 740 are `primary-source`.
 - [x] **Connect the UN layer** — **Done 2026-08-16.** `UN → anything` was 0
   through five country batches; it is now `EU → UN` = 4 and
   `UN → national` = 5. 14 entities added, 7 rewired, no relationship type
   added and no sourcing standard lowered. The refused edges had been
   pointing at nodes that did not exist — [[EU-ESS]] and [[UN-UNSC]] are
   those nodes. See `progress/completed.md`.
-- [ ] **Connect the UN layer's *legislative* half.** The batch connected the
-  organisational statistics layer. `UN-FPOS` → `NL-WET-CBS` and
-  `UN-FPOS` → `DE-BSTATG` are untouched: national statistical *legislation*
-  still has no UN link, while the offices themselves now do.
+- [x] **Connect the UN layer's *legislative* half.** Duplicate of the `UN-FPOS` → national statistical legislation item below, which carries the open work (roadmap #460).
 - [x] **Add a second country** — the only real test of the country-neutral
   model. **Done 2026-08-15: Germany**, 39 entities, no ontology change, no
   `DE-EU-*` duplicate, `applies-in` targets now `['DE', 'NL']`. See
@@ -151,41 +151,20 @@ validation (`CONTRIBUTING.md` — Batch workflow).
 
 ## Opened by the Germany batch
 
-- [ ] **Resolve the federal modelling gap.** The `level` vocabulary has no
-  term between `national` and `local`, so no German Land, no Belgian Region
-  and no Spanish Comunidad Autónoma is representable — and `regional` cannot
-  be reused because it already means supra-national. Confirmed general by
-  Belgium and given a **third distinct shape** by Spain; three of five
-  countries are affected. The Atlas's best-evidenced ontology defect by a
-  wide margin. Blocks OSLO, Digitaal Vlaanderen, the Länder, seventeen
-  Spanish regional open data portals, and several other queued items.
-- [ ] **Decide on an amendment relationship type.**
-  `DE-NIS2UMSUCG` → `DE-BSIG` is recorded as `supersedes` at
-  `confidence: low` for what is an amending act, with the two entities
-  deliberately not agreeing. `relationship-types.md` §2.3 permits adding a
-  type; it was not done on unread sources.
+- [x] **Resolve the federal modelling gap.** **Done — verified 2026-10-07:** `level: subnational` exists and 23 entities carry it (`metadata/ontology.md` §4); Länder, Regions and Comunidades Autónomas are representable.
+- [x] **Decide on an amendment relationship type.** **Done — verified 2026-10-07:** `amends` is in `metadata/relationship-types.md` (decided 2026-09-20; it applies however extensive the revision), and `DE-NIS2UMSUCG` → `DE-BSIG` and the UK cases use it.
 - [ ] **Settle what `country` means for a data space.** `DE-CATENA-X` and
   `NL-ISHARE` are two independent instances of the same problem — the field
-  conflates origin, governance and operation.
-- [ ] **`EU-INSPIRE` → `NL`.** Added with an `applies-in` to `DE` only,
-  making an EU directive look German-specific. First-priority gap.
+  conflates origin, governance and operation. → Roadmap #457.
+- [x] **`EU-INSPIRE` → `NL`.** **Done — verified 2026-10-07:** `EU-INSPIRE` has `applies-in` for eleven countries including `NL`.
 - [x] **A cybersecurity domain entity.** **Done 2026-08-16:**
   [[DOMAIN-CYBERSECURITY]], connecting **23 entities** across three layers
   and five countries. Deliberately created outside a country batch, which is
   why it could be scoped by subject rather than by country. See
   `progress/completed.md`.
-- [ ] **The Open Data Directive transpositions for Belgium and France.**
-  Neither identified. Both countries have a well-known *earlier* open data
-  act (2016 in both cases) that looks like the answer and chronologically
-  cannot be it. **Spain closed its equivalent gap** — [[ES-LEY-37-2007]] as
-  amended in 2021 — and had the same trap dated 2007, so three of five
-  countries have it and it is a research hazard, not a coincidence. Two of
-  five gaps remain.
-- [ ] **Resolve [[FR-NIS2-LOI]]'s status.** Sources contradict each other
-  on whether France's NIS2 transposition is in force. The only entity in
-  the Atlas with that problem.
-- [ ] **Connect the DPAs to the EDPB.** **Five** national data protection
-  authorities, one sourced link. Five page reads would fix four edges.
+- [ ] **The Open Data Directive transposition for France.** Belgium is done (`BE-HERGEBRUIK-WET-2023` and the three regional instruments, 2026-08/09). France has `FR-LOI-VALTER` and `FR-LRN` pointing at the earlier PSI Directive and no instrument linked to `EU-OPEN-DATA-DIRECTIVE`; the 2016 act looks like the answer and chronologically cannot be it. → Roadmap #460.
+- [x] **Resolve [[FR-NIS2-LOI]]'s status.** **Done — verified 2026-10-07:** the contradiction was resolved on 2026-08-26 from ANSSI's own page (`status: planned`), and the Commission's CJEU referral of 8 July 2026 is a typed `referred-to-court-over` edge.
+- [x] **Connect the DPAs to the EDPB.** **Done — verified 2026-10-07:** twenty national data protection authorities and the EDPS have `participates-in` edges to `EU-EDPB`.
 - [x] **A third country.** **Done 2026-08-15: Belgium**, 14 entities.
   Confirmed the model reusable a third time, and confirmed the federal
   limitation is **general** — and worse in Belgium, where `regional` is
@@ -210,12 +189,7 @@ validation (`CONTRIBUTING.md` — Batch workflow).
   instrument in force *while the member state is before the CJEU*
   ([[PL-KSC]]), and a national system *subject to* a requirement it cannot
   meet ([[PL-MOBYWATEL]] and eIDAS 2.0). See `progress/completed.md`.
-- [ ] **A seventh country outside the EU entirely.** All six are EU member
-  states, so `applies-in` from EU instruments has never been tested against
-  a country the EU cannot bind. A non-EU European state (Norway,
-  Switzerland, the UK) would test whether the `region: EU` field and the
-  `applies-in` mechanism still behave, or whether the Atlas has quietly
-  assumed EU membership.
+- [x] **A seventh country outside the EU entirely.** **Done — verified 2026-10-07:** Norway, Switzerland, the United Kingdom, Iceland and Liechtenstein are all modelled; `applies-in` and `region: EU` coexist with non-EU countries.
 
 ## Opened by the Spain batch
 
@@ -224,92 +198,51 @@ validation (`CONTRIBUTING.md` — Batch workflow).
   national statistical offices by `part-of`, sourced to the composition rule
   in Regulation (EC) No 223/2009. [[ES-INE]]'s weak `related-to` edge was
   removed rather than left beside it.
-- [ ] **Decide whether the binding force of an instrument should be
-  modelled.** Two batches have now hit the same missing property from
-  opposite directions. Spain: `type: law` flattens the constitutional rank
-  of a `Ley Orgánica`, as it already flattens *Gesetz*/*Verordnung*,
-  *wet*/*koninklijk besluit* and *loi*/*ordonnance*. The UN batch:
-  [[UN-AARHUS]] is a binding convention and the
-  [[UN-AI-ETHICS-RECOMMENDATION]] is non-binding soft law, and nothing
-  distinguishes them. Six batches have run without the field; adding it now
-  means re-reading every instrument.
+- [x] **Decide whether the binding force of an instrument should be modelled.** **Done — verified 2026-10-07:** the `type: law` split into `act`, `decision`, `subordinate-legislation` and `agreement` (#404), the `soft-law` type for non-binding instruments (#406) and the optional `rank` field (#408); `metadata/versioning.md` lists them.
 - [ ] **Decide whether partial implementation is expressible.**
   [[ES-LOPDGDD]] implements the GDPR *with part of itself* — its Title X on
   digital rights descends from nothing European. Relationships are
-  whole-entity to whole-entity. One example so far; do not add a type on one.
+  whole-entity to whole-entity. One example so far; do not add a type on one. → Roadmap #457.
 - [ ] **Resolve [[ES-LCGC]]'s passage.** When Spain's NIS2 transposition
   becomes law, the Centro Nacional de Ciberseguridad becomes a real entity
-  and the INCIBE/CCN competence split becomes modellable.
+  and the INCIBE/CCN competence split becomes modellable. → Roadmap #460.
 - [ ] **Confirm the DCAT-AP-ES alignment is in force.** [[ES-NTI-RISP]]'s
   `based-on` [[EU-DCAT-AP]] is `confidence: low` because the model is in
-  administrative processing.
-- [ ] **Model Red.es**, so [[ES-DATOS-GOB-ES]] can carry a `maintained-by`
-  edge like the Dutch and German portals do.
+  administrative processing. → Roadmap #460.
+- [x] **Model Red.es.** **Done — verified 2026-10-07:** `ES-RED-ES` exists and `ES-DATOS-GOB-ES` is `maintained-by` it.
 
 ## Opened by the UN-connection batch
 
-- [ ] **Propose a relationship type for cooperation acts.** Two real EU↔UN
-  interactions could not be recorded: the **UNESCO–European Commission
-  agreement** on AI ethics implementation, and the **2023 EU voluntary
-  review** submitted to UN SDG monitoring. Neither is adoption,
-  implementation, governance or reference. Two examples is the threshold
-  `metadata/relationship-types.md` §2.3 sets — this is the clearest live
-  candidate for the next vocabulary change, and it should be decided by a
-  batch that can read the sources.
-- [ ] **Finish the geospatial cluster.** [[UN-GGIM]] and
-  [[UN-GGIM-EUROPE]] exist and connect to [[UN]]; **no edge reaches
-  [[EU-INSPIRE]]**. The missing middle is probably **EuroGeographics**,
-  playing the role [[EU-ESS]] plays for statistics — not created, because
-  every source found is its own site or trade press.
-- [ ] **Connect UN/CEFACT to anything European.** [[UN-CEFACT]] is attached
-  to [[UN-UNECE]] and to nothing else. The narrow, answerable question:
-  *does any instrument already in this Atlas reference a UN/CEFACT
-  standard?* UN/EDIFACT, UN/LOCODE and the Core Component Library are
-  unmodelled.
+- [x] **Propose a relationship type for cooperation acts.** **Done — verified 2026-10-07:** `cooperates-with` exists (used for `UN-UNESCO` ↔ `EU-COMMISSION`, among others) and `EU-VOLUNTARY-REVIEW-2023` is modelled.
+- [ ] **Finish the geospatial cluster.** Narrowed 2026-10-07: `EU-EUROGEOGRAPHICS` now exists (six national mapping agencies participate), but no edge reaches `EU-INSPIRE` from it, from `UN-GGIM` or from `UN-GGIM-EUROPE`. → Roadmap #460.
+- [x] **Connect UN/CEFACT to anything European.** **Done — verified 2026-10-07:** `UN-EDIFACT`, `UN-LOCODE` and `UN-CCL` exist as `maintained-by` UN-CEFACT outputs, and `EU-EMSWE` `references` `UN-LOCODE`.
 - [ ] **`UN-FPOS` → national statistical legislation.** The batch connected
   the statistical *offices*; the *legislation* ([[NL-WET-CBS]],
-  [[DE-BSTATG]]) still has no UN link.
+  [[DE-BSTATG]]) still has no UN link. → Roadmap #460.
 - [x] **INSEE.** France is now the only one of five countries with no
   statistical office in [[EU-ESS]] — a visible hole in a modelled structure
   rather than one absence among unconnected nodes.
-- [ ] **Model Regulation (EC) No 223/2009**, [[EU-ESS]]'s legal base, and
-  Regulation (EU) 1025/2012 for the European standardisation organisations.
-  Deliberately left as a pair so the Atlas stays consistent about statutory
-  bases.
-- [ ] **Source [[INTL-OECD-CSSP]] from the OECD.** It is currently described
-  entirely by a participant — one Eurostat page — which gives it two
-  competing names (CSSP / CSTAT) and no independent confirmation.
+- [x] **Model Regulation (EC) No 223/2009 and Regulation (EU) 1025/2012.** **Done — verified 2026-10-07:** `EU-REG-223-2009` and `EU-REG-1025-2012` exist.
+- [x] **Source [[INTL-OECD-CSSP]] from the OECD.** **Done — verified 2026-10-07:** it now cites the OECD's own `oecdgroups.oecd.org` body page alongside the Eurostat one.
 
 ## Opened by the basisregistraties batch
 
-- [ ] **Propose relationship types for data movement.** The single clearest
-  outstanding vocabulary decision, and now supported by **five** sourced
-  examples across two batches:
-  **authorised use** ([[NL-BELASTINGDIENST]] → [[NL-WOZ]], [[NL-RDW]] →
-  [[NL-BRP]]), **key-sharing couplings** ([[NL-BRK]] ↔ [[NL-NHR]],
-  [[NL-BAG]] ↔ [[NL-BRP]]), and the two EU↔UN cooperation acts from the UN
-  batch. `metadata/relationship-types.md` §2.3's threshold is two.
+- [x] **Propose relationship types for data movement.** **Done — verified 2026-10-07:** `uses-data-from` and `carries-identifier-of` were added (#293) and carry the Dutch examples (`NL-BELASTINGDIENST` → `NL-WOZ`, `NL-RDW` → `NL-BRP`, `NL-BRK` → `NL-NHR`, `NL-BRP` → `NL-BAG`).
 - [ ] **Decide whether `authentiek gegeven` needs a field.** The legal status
   that makes a base registry authoritative — data other bodies must use and
   may not independently re-determine — appears in ten descriptions and
-  nowhere in the structured data.
-- [ ] **Model the Dutch statutes behind the registers.** Wet BAG, Wet BGT,
-  Wet BRO, Wet WOZ, AWR Chapter IVA, Handelsregisterwet, Kadasterwet,
-  Wegenverkeerswet. Named in descriptions, no entities. A legislation batch,
-  not a registry one — and **[[NL-BRT]] has no sourced statute at all**.
+  nowhere in the structured data. → Roadmap #458.
+- [ ] **Model the Dutch statute AWR Chapter IVA.** Narrowed 2026-10-07: Wet BAG, BGT, BRO, WOZ, BRP, CBS, the Handelsregisterwet, Kadasterwet and Wegenverkeerswet are now entities, and `NL-BRT` is `governed-by` `NL-KADASTERWET`; only the AWR chapter is missing. → Roadmap #458.
 - [ ] **Decide how to model Dutch municipalities.** They hold the [[NL-BAG]]
   and determine [[NL-WOZ]] values, and are absent from the graph. **Not** the
   federal `level` gap — `local` exists — but there is no obvious entity to
   create. Same question covers the [[NL-BGT]]'s seven bronhouder categories
-  and SVB-BGT.
+  and SVB-BGT. → Roadmap #458.
 - [ ] **Settle the register typing.** The ten are `platform`; a
   basisregistratie is arguably a dataset with a legal status, and there is no
-  `register` or `dataset` type.
-- [ ] **Resolve [[NL-FDS]] ↔ [[NL-BASISREGISTRATIES]].** Open since Batch 2,
-  untouched by this batch, and now more visible with the stelsel fully
-  modelled.
-- [ ] **Digimelding**, the stelsel's error-reporting facility, and
-  **SVB-BGT**. Named in single sources, not created.
+  `register` or `dataset` type. → Roadmap #458.
+- [x] **Resolve [[NL-FDS]] ↔ [[NL-BASISREGISTRATIES]].** **Done — verified 2026-10-07:** closed 2026-09-18 (`unresolved.md` rows #133 and #138); the relationship is sourced from FDS's own knowledge base.
+- [x] **Digimelding and SVB-BGT.** **Done — verified 2026-10-07:** `NL-DIGIMELDING` and `NL-SVB-BGT` exist.
 
 ## Opened by the Poland batch
 
@@ -318,44 +251,27 @@ validation (`CONTRIBUTING.md` — Batch workflow).
   as `related-to` with the substance in the evidence string, because
   `implements-requirement-from` asserts the opposite and `governed-by`
   implies the arrangement works. This is a **sixth** sourced connection the
-  vocabulary cannot express, and the one with the shortest fuse.
-- [ ] **Model infringement status.** [[PL-KSC]] is `status: active` and
-  Poland is before the CJEU for the delay that preceded it; [[ES-LCGC]] drew
-  a reasoned opinion, the stage before referral. Neither fact is in the
-  structured data.
-- [ ] **The Polish cybersecurity authorities.** CSIRT NASK, CSIRT GOV and
-  CSIRT MON. Poland and the Netherlands are now both countries with
-  cybersecurity legislation modelled and **no cyber authority** — see
-  [[DOMAIN-CYBERSECURITY]].
+  vocabulary cannot express, and the one with the shortest fuse. → Roadmap #457.
+- [ ] **Model the stages of an infringement.** Narrowed 2026-10-07: `referred-to-court-over` records the CJEU referral (`ES-LCGC`, `FR-NIS2-LOI`, `NL-WHO` and others); the stages before it (reasoned opinion) and after it (judgment) remain unmodelled. → Roadmap #457.
+- [ ] **The Polish cybersecurity authorities.** Narrowed 2026-10-07: `PL-CSIRT-MON` and `PL-NASK` exist; CSIRT NASK and CSIRT GOV do not. → Roadmap #460.
 - [x] **PESEL**, Poland's population register and the counterpart of
   [[NL-BRP]]. Modelled as [[PL-PESEL]] and [[PL-EWIDENCJA-LUDNOSCI]] in the
   second research-queue pickup, 2026-08-22.
-- [ ] **Dz.U. citation for [[PL-ODO]]**, the weakest-sourced of the six
-  national GDPR instruments — no ISAP or Dziennik Ustaw reference found.
-- [ ] **Krajowe Ramy Interoperacyjności**, a Polish DCAT profile, the
-  operator of [[PL-DANE-GOV-PL]], and the Act on Public Statistics behind
-  [[PL-GUS]]. All named, none modelled.
+- [x] **Dz.U. citation for [[PL-ODO]].** **Done — verified 2026-10-07:** it cites `eli.gov.pl/eli/DU/2018/1000` and `dziennikustaw.gov.pl/DU/2018/1000`.
+- [x] **Krajowe Ramy Interoperacyjności, a Polish DCAT profile, the operator of [[PL-DANE-GOV-PL]] and the Act on Public Statistics.** **Done — verified 2026-10-07:** `PL-KRI`, `PL-DCAT-AP-PL`, `PL-USTAWA-STATYSTYCE-1995` exist and `PL-DANE-GOV-PL` is `maintained-by` `PL-MC`.
 - [ ] **GIODO**, the predecessor data protection authority. The sources say
   the President took over only *part* of its competencies, so no clean
   succession was asserted — the third institutional transformation the Atlas
-  has touched, after Spain's completed one and Poland's pending COI one.
+  has touched, after Spain's completed one and Poland's pending COI one. → Roadmap #460.
 
 ## Opened by the site filter batch
 
-- [ ] **Filter state is not in the URL.** `applyRoute()` reads only an entity
-  ID from the hash, so a filtered view cannot be shared or bookmarked. "Every
-  cybersecurity entity in Poland" is now one click away and **zero clicks
-  away for the next reader**, which undercuts the point of a public atlas.
-- [ ] **`confidence` is close to a constant.** 317 of 346 typed relationships
-  are `medium`, 27 are `low` and **2 are `high`**. That distribution is now
-  visible in one glance, and it means the field currently carries almost no
-  information. Either the criteria for `high` are unusable in practice, or
-  the Atlas has been under-claiming; both are worth a deliberate pass rather
-  than a per-entity fix.
+- [x] **Filter state is not in the URL.** **Done — verified 2026-10-07:** the address carries the view, focus, depth, filters, search, layout and names, so a filtered view can be shared; `docs/graph.md` describes it.
+- [x] **`confidence` is close to a constant.** Superseded: re-counted 2026-10-07 over 1,565 typed relationships, 1,020 are `medium`, 501 `high` and 44 `low`; the field carries information now.
 - [ ] **A domain with no entity still gets a facet row**, labelled by its ID
   rather than a name. Nothing currently triggers this — `metadata/taxonomy.md`
   §1.3 requires a taxonomy row with the entity — but the generator reports it
-  instead of hiding it, and a validator rule would catch it earlier.
+  instead of hiding it, and a validator rule would catch it earlier. → Roadmap #461.
 
 ## Opened by the comparison matrix
 
@@ -369,74 +285,37 @@ visible from any single entity.
   [[BE-APD]], [[DE-BFDI]], [[ES-AEPD]], [[FR-CNIL]] and [[PL-UODO]] do not.
   Decide which pattern is right and apply it to all six: either the
   authority implements the GDPR's Chapter VI requirement in every country,
-  or it does so in none and the Dutch edge belongs on [[NL-UAVG]] alone.
-- [ ] **[[EU-EIDAS]] has no `applies-in` edges**, although it is `active`
-  and [[DE-BUNDID]] implements it. Every other active EU instrument in the
-  matrix attaches to all six countries. ([[EU-NIS]] is also empty and that
-  is correct — it is `superseded`.)
-- [ ] **[[EU-INSPIRE]] applies in five countries and not the Netherlands.**
-  `['BE', 'DE', 'ES', 'FR', 'PL']` — the founding country is the gap,
-  despite [[DOMAIN-GEOSPATIAL]] and a national geo-portal. Almost certainly
-  an omission predating the `applies-in` convention.
-- [ ] **13 of 20 instruments apply in all six countries with no national
-  instrument modelled at all** — 88 of the matrix's 120 cells. That is the
-  single largest content gap the Atlas can now state precisely, and it is a
-  research queue rather than a defect.
+  or it does so in none and the Dutch edge belongs on [[NL-UAVG]] alone. → Roadmap #461.
+- [x] **[[EU-EIDAS]] has no `applies-in` edges.** **Done — verified 2026-10-07:** it has `applies-in` for 30 countries.
+- [x] **[[EU-INSPIRE]] applies in five countries and not the Netherlands.** **Done — verified 2026-10-07:** see the `EU-INSPIRE` → `NL` item above.
+- [x] **13 of 20 instruments apply in all six countries with no national instrument modelled.** Superseded: the counts date from the six-country Atlas; the live **Compare** view derives the same picture for every country and shows where the gaps are.
 
 ## Opened by the United Kingdom batch
 
-- [ ] **The EU adequacy decisions for the UK.** Renewed **19 December 2025**
-  for six years, to **27 December 2031**, following [[GB-DUAA]]. This is the
-  most important single link between the UK and the EU data layer and **no
-  entity or edge represents it**. It is also the only route by which a
-  non-member country connects to the EU layer *as a matter of present EU
-  law* rather than by history ([[GB-NIS-REGULATIONS]]) or derivation
-  ([[GB-UK-GDPR]]).
-- [ ] **`country` is a field, not an edge — and `GB` is an orphan anchor.**
-  `validation/audit.py` reports `1 fully disconnected: ['GB']`. The other
-  six anchors are reachable through frontmatter only because EU instruments
-  point `applies-in` at them; the UK's 13 entities carry `country: GB`,
-  which the generator does not emit as an association edge. Options: emit
-  `country` as an association (≈250 new edges, changes every country's graph
-  shape), or accept that a country anchor's reachability depends on EU
-  membership. **The second is what the Atlas currently asserts, and it is
-  wrong.**
+- [x] **The EU adequacy decisions for the UK.** **Done — verified 2026-10-07:** `EU-UK-ADEQUACY` exists (`governed-by` `EU-GDPR` and `EU-LED`, `references` `GB-UK-GDPR` and `GB-DUAA`).
+- [x] **`country` is a field, not an edge — and `GB` is an orphan anchor.** **Done — verified 2026-10-07:** `validation/audit.py` reports no fully disconnected entities; thirteen UK instruments and bodies point `applies-in` or `part-of` at `GB`.
 - [ ] **A fan-out succession is not expressible.** [[GB-DSIT]]'s functions
   went three ways. `successor` is a single field, described in
   `metadata/metadata-schema.md` as a way to *chain* superseded entities, and
   a chain is the wrong shape for a split. Set to `null`, with the split in
-  prose.
+  prose. → Roadmap #457.
 - [ ] **A status for "mandated, commencement unverified".** [[GB-ICO]] is
   being replaced by an Information Commission under [[GB-DUAA]] s.117, and
   the Atlas cannot establish whether that has happened. Distinct from
   [[FR-NIS2-LOI]]'s `unknown` (sources conflict) and [[ES-LCGC]]'s
-  `proposed` (still a draft). [[GB-CSRB]] has the same problem.
-- [ ] **An amendment relationship type — fourth data point, first with no
-  workaround.** [[GB-DUAA]] amends [[GB-UK-GDPR]] *and* [[GB-DPA-2018]],
-  both still in force, so neither Germany's `supersedes` nor France's and
-  Poland's absorption is available. [[GB-CSRB]] → [[GB-NIS-REGULATIONS]] is
-  a fifth case. This item has now survived four batches.
-- [ ] **A UK geospatial entity.** Ordnance Survey is unmodelled and the
-  Geospatial Commission was merged into [[GB-GDS]] in January 2025. The UK
-  is the only country in the Atlas with **no entity in
-  [[DOMAIN-GEOSPATIAL]]**.
-- [ ] **The Cyber Assessment Framework**, the UK counterpart to [[NL-BIO]],
-  [[DE-IT-GRUNDSCHUTZ]] and [[ES-ENS]] — all three modelled. Central to
-  [[GB-CSRB]] and named by [[GB-NCSC]].
-- [ ] **The UK Statistics Authority and the Office for Statistics
-  Regulation.** Their absence weakens [[GB-ONS]]'s [[UN-CES]] edge, whose
-  sources establish that *the UK* holds the seat without saying which body
-  does.
+  `proposed` (still a draft). [[GB-CSRB]] has the same problem. → Roadmap #457.
+- [x] **An amendment relationship type — fourth data point.** **Done — verified 2026-10-07:** `amends` exists (see above) and is used for `GB-DUAA` and `GB-CSRB`.
+- [x] **A UK geospatial entity.** **Done — verified 2026-10-07:** `GB-OS` and `GB-GEOSPATIAL-STRATEGY` are in `DOMAIN-GEOSPATIAL`.
+- [x] **The Cyber Assessment Framework.** **Done — verified 2026-10-07:** `GB-CAF` exists.
+- [x] **The UK Statistics Authority.** **Done — verified 2026-10-07:** `GB-UKSA` exists (the question of who holds the `UN-CES` seat stays open, roadmap #459).
 - [ ] **A UK open data instrument.** Whether the Re-use of Public Sector
   Information Regulations survive as assimilated law was not researched, so
   [[GB-DATA-GOV-UK]] connects to [[EU-OPEN-DATA-DIRECTIVE]] not at all while
-  four other countries have a sourced transposition.
+  four other countries have a sourced transposition. → Roadmap #459.
 - [ ] **A government source for the July 2026 machinery-of-government
   change.** [[GB-DCMS]] rests entirely on trade press; [[GB-DSIT]]'s
-  abolition is reported, not cited.
-- [ ] **A legislation.gov.uk citation for [[GB-DPA-2018]]** — every source
-  found describes it through [[GB-DUAA]]'s changes to it, the same failure
-  mode as [[PL-ODO]].
+  abolition is reported, not cited. → Roadmap #459.
+- [x] **A legislation.gov.uk citation for [[GB-DPA-2018]].** **Done — verified 2026-10-07:** it cites `legislation.gov.uk/ukpga/2018/12/part/4` and the DUAA's Part 5.
 
 ## Opened by the UK connection batch
 
@@ -448,27 +327,25 @@ visible from any single entity.
   supra-national instrument reaching many countries. The Compare view already
   filters `applies-in` by scope for exactly this reason. The eight existing
   cases ([[NL-BIO]], [[NL-PAS-TOE-OF-LEG-UIT]] and the six UK ones) are the
-  anomaly. Decide deliberately; do not let it spread by default.
+  anomaly. Decide deliberately; do not let it spread by default. → Roadmap #461.
 - [ ] **Who holds the UK's [[UN-CES]] seat?** [[GB-UKSA]] was created to
   settle it and did not. The participation is recorded on both the Authority
-  and [[GB-ONS]]; one of those two edges is wrong.
+  and [[GB-ONS]]; one of those two edges is wrong. → Roadmap #459.
 - [ ] **The Office for Statistics Regulation**, and whether the other six
   countries have an oversight body above their statistical office that the
-  Atlas simply has not researched. [[GB-UKSA]] is currently the only one.
+  Atlas simply has not researched. [[GB-UKSA]] is currently the only one. → Roadmap #459.
 - [ ] **Ordnance Survey of Northern Ireland.** [[GB-OS]] maps **Great
-  Britain**; the UK-wide geospatial picture is incomplete without OSNI.
+  Britain**; the UK-wide geospatial picture is incomplete without OSNI. → Roadmap #459.
 - [ ] **A British Standard, any British Standard.** [[GB-BSI]] participates
   in five standards bodies and maintains nothing the Atlas holds. The same
-  is true of [[NL-NEN]] and [[DE-DIN]].
-- [ ] **The Law Enforcement Directive** (Directive 2016/680), one of the two
-  legal bases of [[EU-UK-ADEQUACY]] and not an Atlas entity, so that entity's
-  `governed-by` edge names only [[EU-GDPR]].
+  is true of [[NL-NEN]] and [[DE-DIN]]. → Roadmap #459.
+- [x] **The Law Enforcement Directive.** **Done — verified 2026-10-07:** `EU-LED` exists and `EU-UK-ADEQUACY` is `governed-by` it.
 - [ ] **A status for a future-dated lapse.** [[EU-UK-ADEQUACY]] is `active`
   with `end_date: 2031-12-27` — a sunset clause, not a historical end. Third
-  variant of the status gap [[GB-ICO]] opened.
+  variant of the status gap [[GB-ICO]] opened. → Roadmap #457.
 - [ ] **The sectoral NIS competent authorities** — energy, transport, health,
   drinking water. [[GB-OFCOM]] and [[GB-ICO]] are modelled; Schedule 1 names
-  more.
+  more. → Roadmap #459.
 
 ## Resolved 2026-08-18 — own-country `applies-in`
 
@@ -494,7 +371,7 @@ applicability. Anchor edges are identifiable — every one ends its evidence
 with a sentence saying so — so a filter or a badge is buildable.
 
 - [ ] **Distinguish anchor edges in the interactive graph**, so the
-  `applies-in` count means one thing again.
+  `applies-in` count means one thing again. → Roadmap #461.
 
 ## Opened by the structural review of 2026-08-18
 
@@ -520,8 +397,7 @@ record of what was outstanding.
   Spain batch called [[EU-ESS]] "the single highest-value item this batch
   produced"; the identical play is unplayed here and **needs no new
   entity**.
-- [ ] **INSEE.** France is the only Atlas country with no statistical
-  office, and a free [[EU-ESS]] member. Queued since the France batch.
+- [x] **INSEE.** **Done — verified 2026-10-07:** `FR-INSEE` exists.
 - [x] **NBN, AFNOR, UNE, PKN** — the four missing national standards
   bodies. [[GB-BSI]] is the most connective UK entity; the pattern works.
 - [x] **A Dutch cyber authority.** [[NL-CBW]] is a NIS2 act with no
@@ -529,18 +405,10 @@ record of what was outstanding.
 
 ### The vocabulary the Atlas defines and does not use
 
-- [ ] **`technology`** — 0 of 17 types. X-Road and the IDS-RAM are the
-  best-evidenced candidates and are already queued.
-- [ ] **`publication`** — 0 uses. Oversight reports; then DESI and the
-  eGovernment Benchmark, which would give the Atlas a comparative-
-  measurement layer it entirely lacks.
-- [ ] **`region` entities** — only [[EU]] exists. **The EEA Agreement is
-  now a live gap**, not a theoretical one: [[NO]] carries EEA-route
-  relationships whose target is described only in prose.
-- [ ] **`level: local`** — **0 uses** against 224 `national`. Named as a
-  blocker in four separate batches (Flanders, the Comunidades Autónomas,
-  the German Länder, Dutch municipalities). A **design decision**, and the
-  single item gating the most queued work.
+- [x] **`technology`.** **Done — verified 2026-10-07:** `INTL-X-ROAD` and `INTL-IDS-CONNECTOR` are the first two.
+- [x] **`publication`.** **Done — verified 2026-10-07:** `EU-DESI`, `EU-EGOV-BENCHMARK` and `EU-VOLUNTARY-REVIEW-2023` exist (oversight reports are still not modelled).
+- [x] **`region` entities and the EEA Agreement.** **Done — verified 2026-10-07:** `INTL-EEA-AGREEMENT`, its Joint Committee and three decisions exist; `region` entities are still only `EU`, and the EEA is modelled as an agreement.
+- [x] **`level: local`.** Decided: kept in the vocabulary and unused (`discovery/unresolved.md` #231).
 
 ### The domain layer is lopsided
 
@@ -548,9 +416,7 @@ Cybersecurity, government and national-security are 7/7. Geospatial is 3/7,
 mobility 2/7, and **health, education and research are 1/7 — the
 Netherlands only.**
 
-- [ ] **A health-data batch across DE, FR, ES, BE, PL and GB.** Six of
-  seven countries have no health entity at all, in an Atlas that holds
-  [[EU-EHDS]]. The largest single correction available to the domain layer.
+- [ ] **A health-data batch for ES, BE, PL and GB.** Narrowed 2026-10-07: health entities now exist for NL, DE, FR, FI and DK; Spain, Belgium, Poland and the UK have none, in an Atlas that holds `EU-EHDS`. → Roadmap #460.
 
 ### Countries, ranked
 
@@ -558,8 +424,7 @@ Italy, Estonia (+ Finland, for NIIS/X-Road), Denmark, Sweden, Austria,
 Czechia, Portugal. Reasoning and the structural argument for each are in
 `discovery/candidates.md`.
 
-- [ ] **Iceland and Liechtenstein** would show whether the Norwegian EEA
-  pattern generalises or is Norway-specific.
+- [x] **Iceland and Liechtenstein.** **Done — verified 2026-10-07:** both are modelled (`IS-*`, `LI-*`).
 
 ## Explicitly out of scope for now
 
