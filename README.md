@@ -423,6 +423,10 @@ what changed, the [Releases page](https://github.com/DaLuSt/Data-Initiatives-Atl
 holds the tagged snapshots, and [`metadata/versioning.md`](metadata/versioning.md)
 explains the rules. The site's footer shows the release it was built from.
 
+What is planned next is on the public
+[Atlas roadmap board](https://github.com/users/DaLuSt/projects/1), fed by the repository's issues labelled
+`roadmap`; [`docs/roadmap.md`](docs/roadmap.md) explains how it works.
+
 ## 🤝 An open participation model
 
 The Atlas is intended to grow through participation. The Netherlands

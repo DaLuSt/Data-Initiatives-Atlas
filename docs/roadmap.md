@@ -1,7 +1,8 @@
 # Roadmap
 
-The roadmap is a set of **GitHub issues labelled `roadmap`**, shown on a
-**Project board**, with each item aimed at a **data release**. It sits beside,
+The roadmap is a set of **GitHub issues labelled `roadmap`**, shown on the
+public **[Atlas roadmap board](https://github.com/users/DaLuSt/projects/1)**, with each item aimed at a **data
+release**. It sits beside,
 not instead of, the repository's research notes:
 
 | Where | What it holds |
@@ -34,16 +35,16 @@ plan changes; there is no other schedule.
 
 ## The board
 
-The Project board has four columns, the values of its **Status** field:
+The [Project board](https://github.com/users/DaLuSt/projects/1) has four columns, the values of its **Status** field:
 **Backlog** (not scheduled), **Next** (aimed at the coming release),
 **In Progress** and **Done**, plus a second view, a table grouped by milestone,
 named *By release*. The board's built-in workflows move an issue to *Done*
 when it closes and add new `roadmap` issues to *Backlog*.
 
-Setting it up is a few minutes in the GitHub UI: Projects v2 can only be created
-through GitHub's GraphQL API or the web UI, and the agent's environment blocks
-GraphQL and every path outside this repository (issue #444 tracks it, with the
-steps below as a checklist):
+It was set up by the owner on 2026-10-07 and made public. Setting one up is a few
+minutes in the GitHub UI: Projects v2 can only be created through GitHub's
+GraphQL API or the web UI, and the agent's environment blocks GraphQL and every
+path outside this repository. The steps, for rebuilding it:
 
 1. <https://github.com/DaLuSt?tab=projects> → *New project* → *Board* → *Atlas roadmap*.
 2. *Settings → Status*: rename *Todo* to *Backlog*, add *Next* after it, keep
