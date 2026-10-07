@@ -30,6 +30,8 @@ summary: >
   Also found while reading #461's list: the domain-facet-row item is already
   guarded, because validate_relationships.check_id_list errors on a `domains:` id
   that is not an entity.
-prs: []
-outcome: in-progress
+prs:
+  - number: 465
+    title: "Rank basis: close the Portuguese and UK gaps, leave the IT-CAD form question for you"
+outcome: merged
 entity_count_after: 740
