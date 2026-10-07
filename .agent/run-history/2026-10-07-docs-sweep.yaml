@@ -1,0 +1,26 @@
+date: "2026-10-07"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Country-group issues and a sweep of the repository's main-page files.
+
+  1. The 137 UN member states with no country anchor (candidate C10) were split
+  into 14 randomly drawn groups (seed 20261007) and filed as roadmap issues
+  #470-#483, sub-issues of #451, labelled `countries`, on milestones 2027.01
+  to 2028.02 with due dates. Each country appears in exactly one issue. The
+  board and its timeline view could not be read from here, so how they display
+  the issues is unchecked. C10 points to the issues and still lists no country.
+  2. README, CONTRIBUTING, CODE_OF_CONDUCT, SECURITY and countries/README were
+  checked against the current Atlas. Entity, URL and country counts were removed
+  everywhere except the README, whose figures were re-measured from a fresh
+  build. Stale statements fixed: "no releases", "almost every entity is
+  search-only", the claim that sub-national levels cannot be represented, a dead
+  README section reference, the validation and test list, the workflows table,
+  the relationship-type list and the repository tree.
+  3. countries/README.md now calls extending to all UN member states an open
+  scope decision tracked in #451; that wording is the agent's reading and is for
+  the owner to confirm.
+prs:
+  - number: 484
+    title: "Docs sweep: correct the main-page files and remove entity counts outside the README"
+outcome: merged
+entity_count_after: 742
