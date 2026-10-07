@@ -322,6 +322,7 @@ a:hover { text-decoration: none; }
 .listview-inner { padding: 1rem; max-width: 70rem; }
 .listview h2 { margin: 0 0 .4rem; font-size: 1.1rem; }
 .list-count { font-size: .82rem; color: var(--text-dim); margin: .4rem 0; }
+.list-tools { margin: .3rem 0 .6rem; }
 .compare-toggle { display: inline-flex; margin: 0 0 .6rem; padding-right: .6rem; }
 
 .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); }

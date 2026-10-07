@@ -41,7 +41,7 @@ reopen it from **Start here** in the top bar.
 | **Global Atlas** | The whole landscape, laid out in bands by geographic level — international at the top, regional below it, national below that, subnational at the bottom — and within each band, one block per scope. Use it to see shape and scale. |
 | **Entity Explorer** | One entity and its neighbourhood, drawn as rings by hop distance. Use it to actually read a part of the graph without being overwhelmed. Depth runs 1–4 hops, and each option tells you how many entities it would show before you pick it — on a hub-heavy graph one extra hop can multiply the result several times over. |
 | **Compare** | One supra-national instrument per row, one country per column. Use it to ask *"who did what about this directive?"* — see below. |
-| **List** | A sortable, searchable table of every entity. Use it if you would rather not use a graph at all — it is a complete, non-visual route into the Atlas. |
+| **List** | A sortable, searchable table of every entity. Use it if you would rather not use a graph at all — it is a complete, non-visual route into the Atlas. **Download these rows as CSV** saves exactly what is on screen (after the search and filters) as a spreadsheet file. |
 
 ### Compare — one instrument, many countries
 

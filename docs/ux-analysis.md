@@ -119,7 +119,7 @@ screens narrower than 360 px.
   already carries view, focus, depth and filters; the button says "Link copied"
   and announces it) and download links for `graph.json` and `details.json`. If
   the clipboard is not available the address is shown in a prompt instead.
-  Not done: a CSV export of the List view.
+  A CSV export of the List view followed on 2026-10-07 (see below).
 - **Found while re-running axe** (both existed before): the detail panel's
   section headings jumped from h2 to h4 (now h3), and the List and Compare views
   had no `main` landmark because the only one, the graph, is hidden there (they
@@ -162,6 +162,18 @@ nothing marked it as one, so the site could not use it.
 
 Not tested: how the mixed labels read to a visitor.
 
+## The List view's CSV (2026-10-07)
+The List view has a "Download these rows as CSV" button. It exports exactly the
+rows on screen (the search, the sidebar filters and the chosen sort), with the
+repository's raw values: ID, official name, English name, type, level, country
+code, scope, status, number of typed relationships, and the link to the entity's
+file. A cell that starts with `=`, `+`, `-` or `@` gets a leading apostrophe so a
+spreadsheet does not run it as a formula, and the file starts with a byte-order
+mark so Excel reads the accents. The quoting is in `site/csv.js`, tested under
+Node (all 740 entities round-trip). Checked in the browser: the CSV and the table
+have the same number of rows for all entities, a country-and-type filter and a
+search. Not checked: opening the file in Excel or LibreOffice.
+
 ## Suggested order for the rest
-Nothing from this review is left except the follow-ups above (the remaining
-English names, a CSV export of the List view).
+Nothing from this review is left except the follow-up above (the remaining
+English names).

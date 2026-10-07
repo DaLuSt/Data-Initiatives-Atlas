@@ -406,6 +406,7 @@
     $("fit").addEventListener("click", function () { cy.fit(undefined, 40); });
     $("relayout").addEventListener("click", function () { runLayout(true); });
     $("copy-link").addEventListener("click", copyLink);
+    $("list-csv").addEventListener("click", downloadListCsv);
 
     $("detail-close").addEventListener("click", closeDetail);
     $("detail-expand").addEventListener("click", function () {
@@ -2013,7 +2014,9 @@
     if (v !== "list" && v !== "compare" && cy) cy.resize();
   }
 
-  function renderList() {
+  /** The rows the List view shows: search and sidebar filters applied, sorted
+   *  as chosen. The CSV download uses the same rows. */
+  function listRows() {
     var q = $("search").value;
     // Not `.filter(passesNodeFilters)` — Array#filter passes the index as the
     // second argument, which would land in `ignoreCountry`.
@@ -2028,15 +2031,55 @@
       return String(a[k] || "").localeCompare(String(b[k] || "")) * dir ||
         a.label.localeCompare(b.label);
     });
+    return rows;
+  }
+
+  function entityUrl(n) {
+    var repo = G.repository || {};
+    return repo.owner && n.path
+      ? "https://github.com/" + repo.owner + "/" + repo.name + "/blob/" +
+        (repo.branch || "main") + "/" + n.path : null;
+  }
+
+  /** Download the rows now on screen as a CSV: raw values (type, level and
+   *  status as in the repository), both names, the country code, and the link
+   *  to each entity's file. */
+  function downloadListCsv() {
+    var rows = listRows();
+    var csv = AtlasCsv.toCsv(
+      ["ID", "Official name", "English name", "Type", "Level", "Country", "Scope",
+       "Status", "Typed relationships", "Source file"],
+      rows.map(function (n) {
+        return [n.id, n.official || n.label, n.name_en || "", n.type, n.level,
+                n.country || "", n.scope || "", n.status, n.rel_degree || 0,
+                entityUrl(n) || ""];
+      }));
+    var blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.href = url;
+    a.download = "atlas-entities-" + new Date().toISOString().slice(0, 10) + ".csv";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+    var msg = "Downloaded " + rows.length.toLocaleString() + " rows";
+    var b = $("list-csv"), status = $("csv-status");
+    b.textContent = msg; status.textContent = msg;
+    setTimeout(function () {
+      b.textContent = "Download these rows as CSV"; status.textContent = "";
+    }, 2500);
+  }
+
+  function renderList() {
+    var q = $("search").value;
+    var rows = listRows();
     $("list-count").textContent = rows.length.toLocaleString() + " of " +
       G.stats.entities.toLocaleString() + " entities" +
       (q.trim() ? ' matching “' + q.trim() + '”' : "") + ".";
 
-    var repo = G.repository || {};
     $("list-body").innerHTML = rows.map(function (n) {
-      var url = repo.owner && n.path
-        ? "https://github.com/" + repo.owner + "/" + repo.name + "/blob/" +
-          (repo.branch || "main") + "/" + n.path : null;
+      var url = entityUrl(n);
       return "<tr>" +
         '<td><button class="namebtn" data-goto="' + esc(n.id) + '">' + esc(n.label) + "</button></td>" +
         "<td><code>" + esc(n.id) + "</code></td>" +
