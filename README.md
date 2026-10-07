@@ -42,7 +42,7 @@ hand-maintained.
 | **Licence** | CC0 1.0 |
 | **✅ Sourcing** | **All 742 entities are `verification: primary-source`** — every cited source has been opened, read and confirmed |
 
-*Figures as of 2026-10-03. The live counts are always on the site itself.*
+*Figures as of 2026-10-07. The live counts are always on the site itself.*
 
 ### Read this before you cite anything
 
@@ -98,7 +98,7 @@ before you rely on it.
 
 | Where | What you get |
 |---|---|
-| **[The interactive graph](https://dalust.github.io/Data-Initiatives-Atlas/)** | Search by name, ID, country, type or domain. Filter by level, country, region, **domain**, type, status, relationship type — and by **provenance and confidence**, so you can isolate what a source states from what the Atlas concludes. A sidebar control switches the Global Atlas between a **grouped** arrangement (bands by level, blocks by country) and a **force-directed** one that pulls connected entities together. The **Compare** view puts one supra-national instrument per row and one country per column, so you can see who implemented what — generated from the graph, not hand-written. Click any entity for its metadata, sourced relationships and citations, and a link to the underlying Markdown. |
+| **[The interactive graph](https://dalust.github.io/Data-Initiatives-Atlas/)** | Search by name, ID, country, type or domain. Filter by level, country, region, **domain**, type, status, relationship type — and by **provenance and confidence**, so you can isolate what a source states from what the Atlas concludes. A sidebar control switches the Global Atlas between a **grouped** arrangement (bands by level, blocks by country) and a **force-directed** one that pulls connected entities together. The **Compare** view puts one supra-national instrument per row and one country per column, so you can see who implemented what — generated from the graph, not hand-written. Click any entity for its metadata, sourced relationships and citations, and a link to the underlying Markdown. Names show in English by default, with the official name alongside. The filtered list can be downloaded as **CSV**, and the address bar holds the whole view, so a link shares it. |
 | **This repository** | The source of truth. Browse `countries/`, `legislation/`, `organisations/` and the rest directly. |
 | **As an Obsidian vault** | Open the repository folder in Obsidian and the `[[wikilinks]]` become a local graph. |
 
@@ -147,9 +147,9 @@ standards, responsible organisations and affected data domains.
 - **United Kingdom** — not below the EU branch, since it is a non-member
   state — with its own national initiative, framework and data ecosystem
 
-The Netherlands is the starting point, not the boundary of the project — and
-since the United Kingdom joined, the EU is not the only route into a national
-scope either.
+The Netherlands is the starting point, not the boundary of the project, and the
+EU is not the only route into a national scope. Which further countries to add
+is on the roadmap (see below).
 
 ---
 
@@ -178,8 +178,8 @@ added later.
 National initiatives, legislation, strategies, frameworks, organisations and
 data ecosystems.
 
-The Netherlands is the first participating country; Germany, Belgium,
-France, Spain, Poland and the United Kingdom followed. Additional countries
+The Netherlands was the first participating country; many others have followed
+(see [`countries/README.md`](countries/README.md)). Additional countries
 can be added **without changing the fundamental information model**:
 
 ```
@@ -198,13 +198,11 @@ Countries should only be added when there is sufficient information and,
 preferably, an active contributor or participating community maintaining
 that national scope.
 
-> **That claim has been tested seven times, and the seventh was the real
-> test.** Adding Germany, Belgium, France, Spain and Poland each required no
-> change to the schema, ontology, taxonomy, relationship types, folder
-> structure or any validation rule — but all five are EU member states. The
-> **United Kingdom is not**, so no EU instrument carries `applies-in` to it
-> and its entities are the first with `region: null`. That needed no change
-> either. See
+> **That claim has been tested repeatedly.** Adding further countries has not
+> required a change to the schema, ontology, taxonomy, relationship types,
+> folder structure or any validation rule, including the **United Kingdom**, which is not an EU member
+> state: no EU instrument carries `applies-in` to it and its entities have
+> `region: null`. See
 > [`countries/README.md`](countries/README.md) and
 > [`validation/germany-second-country-report.md`](validation/germany-second-country-report.md).
 
@@ -286,10 +284,14 @@ levels.
 
 **Relationship types include**
 
-`influences` · `implements` · `implements-requirement-from` · `applies-to` ·
-`applies-in` · `derived-from` · `based-on` · `references` · `related-to` ·
-`depends-on` · `supersedes` · `implemented-by` · `governed-by` ·
-`maintained-by` · `participates-in` · `part-of`
+`influences` · `implements` · `implemented-by` · `implements-requirement-from` ·
+`applies-to` · `applies-in` · `derived-from` · `based-on` · `references` ·
+`related-to` · `depends-on` · `supersedes` · `replaces` ·
+`proposes-to-supersede` · `amends` · `supplements` · `part-of` · `governed-by` ·
+`produces` · `maintained-by` · `owned-by` · `participates-in` · `aligned-with` ·
+`cooperates-with` · `measures` · `uses-data-from` · `carries-identifier-of` ·
+`referred-to-court-over` — each defined, with when to use it, in
+[`metadata/relationship-types.md`](metadata/relationship-types.md)
 
 Every relationship records whether it is a **sourced fact** or an **Atlas
 interpretation**, with the evidence and a confidence level attached.
@@ -308,10 +310,20 @@ countries.
 data-initiatives-atlas/
 ├── README.md
 ├── CONTRIBUTING.md
+├── CODE_OF_CONDUCT.md
+├── SECURITY.md
+├── CHANGELOG.md       # data releases, prepared automatically
+├── AGENTS.md          # operating model for the autonomous agent
 ├── LICENSE
-├── .github/workflows/
-│   ├── validate.yml   # every pull request
-│   └── pages.yml      # deploy, main only
+├── .agent/            # agent state, policies, run history
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   └── workflows/
+│       ├── validate.yml         # every pull request
+│       ├── pages.yml            # deploy, main only
+│       ├── release-pr.yml       # weekly release pull request
+│       ├── release-publish.yml  # tags and Release after merge
+│       └── autonomous-agent.yml # scheduled agent
 ├── initiatives/
 ├── legislation/
 ├── policies/
@@ -331,7 +343,8 @@ data-initiatives-atlas/
 │   ├── be/
 │   ├── fr/
 │   ├── es/
-│   └── pl/
+│   ├── pl/
+│   └── ...             # one folder per country
 ├── regions/eu/
 ├── international/un/
 ├── metadata/
@@ -340,6 +353,9 @@ data-initiatives-atlas/
 │   ├── relationship-types.md
 │   ├── metadata-schema.md
 │   ├── controlled-vocabularies.md
+│   ├── rank-basis.md
+│   ├── versioning.md
+│   ├── version.yaml
 │   └── schema.json
 ├── templates/
 ├── discovery/
@@ -347,15 +363,18 @@ data-initiatives-atlas/
 ├── progress/
 ├── tools/              # generator, reverify, tests
 │   ├── build_graph.py
+│   ├── release.py      # versions, changelog, release PR
 │   ├── reverify.py     # re-verification pass
 │   ├── source_hosts.py # egress allowlist
 │   ├── test_build_graph.py
+│   ├── test_release.py
 │   ├── test_reverify.py
 │   └── test_ui.mjs
 ├── site/               # published GitHub Pages app
 │   ├── index.html
 │   ├── app.css
 │   ├── app.js
+│   ├── csv.js
 │   ├── graph.json      # generated, not committed (gitignored)
 │   ├── details.json    # generated, not committed (gitignored)
 │   └── vendor/         # Cytoscape.js, vendored
@@ -364,6 +383,8 @@ data-initiatives-atlas/
     ├── graph-architecture.md
     ├── graph-development.md
     ├── re-verification.md
+    ├── roadmap.md
+    ├── ux-analysis.md
     └── github-pages.md
 ```
 

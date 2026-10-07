@@ -39,8 +39,8 @@ Examples of unacceptable behavior include:
 
 ## A note specific to this project
 
-The Atlas describes the laws, institutions and digital policies of **seven
-countries and counting**, and the subject matter is inherently political.
+The Atlas describes the laws, institutions and digital policies of **many
+countries, with more to come**, and the subject matter is inherently political.
 Contributors will disagree about how a national instrument should be
 characterised, and those disagreements are welcome — the repository is built
 to hold them, through `source: interpretation`, `confidence` and
@@ -58,10 +58,11 @@ Two related points, because this project's currency is evidence:
   content error. It damages every reader who trusts the graph and every
   contributor who has to find it. See `SECURITY.md`, which explains how to
   report suspected data-integrity problems.
-* **Being wrong is not a violation.** Almost every entity in this Atlas is
-  `verification: search-only` and carries a sourcing caveat. Good-faith
-  errors, corrections and retractions are the normal working mode here, and
-  correcting your own or someone else's mistake is a contribution.
+* **Being wrong is not a violation.** Sourcing is graded openly: each entity
+  states how far it has been verified, and a weakly sourced one carries a
+  caveat. Good-faith errors, corrections and retractions are the normal working
+  mode here, and correcting your own or someone else's mistake is a
+  contribution.
 
 ## Enforcement Responsibilities
 

@@ -95,13 +95,18 @@ containment, so a member-owned cooperative or a foundation takes
 
 ```
 pip install -r validation/requirements.txt
+python tools/build_graph.py
 python validation/run_all.py
+python tools/test_build_graph.py
+python tools/test_reverify.py
+python tools/test_release.py
 ```
 
-This checks: duplicate/invalid IDs, malformed or missing frontmatter fields,
-invalid controlled-vocabulary values, broken internal `[[wikilinks]]`,
-invalid relationship types/targets, and missing/malformed source metadata.
-The same suite runs automatically on pull requests via
+`run_all.py` checks: duplicate/invalid IDs, malformed or missing frontmatter
+fields, invalid controlled-vocabulary values, broken internal `[[wikilinks]]`,
+invalid relationship types/targets, and missing/malformed source metadata. The
+test scripts cover the generator, the re-verification tool and the release
+tooling. The same checks run automatically on pull requests via
 `.github/workflows/validate.yml`. A PR with failing validation will not be
 merged.
 
@@ -119,20 +124,30 @@ releases** (`YYYY.MM.N`), described in `metadata/versioning.md` and listed in
 - Do not edit `CHANGELOG.md` or `metadata/version.yaml`. A release pull request
   is opened automatically from the merged pull requests; the owner merges it.
 
+## Planned work
+
+What is planned next is tracked as GitHub issues labelled `roadmap`, shown on
+the public [Atlas roadmap board](https://github.com/users/DaLuSt/projects/1);
+[`docs/roadmap.md`](docs/roadmap.md) explains how it works. To take an item,
+comment on its issue; to propose one, use the "Roadmap item" issue template.
+Reference the issue in your pull request (`Closes #N`).
+
 ## Batch workflow
 
 This repository is populated in scoped batches (see `progress/backlog.md`
-for the plan and `progress/current-batch.md` for what's active). If you're
-contributing as part of a batch:
+for the older plan and `progress/current-batch.md` for the batch narrative; the
+roadmap issues above are the current plan). If you're contributing as part of
+a batch:
 
 1. Keep the batch's scope tight — don't drift into the next batch's topic.
 2. Validate before committing.
 3. Check for duplicates against everything added so far.
 4. Make one meaningful commit per batch (or per clearly separable chunk of
    a large batch), not one commit per file.
-5. Update `progress/completed.md`, `progress/current-batch.md` and
-   `progress/backlog.md` to reflect what changed and what's next, so another
-   contributor (human or agent) can pick up without repeating research.
+5. Record what changed and what's next, so another contributor (human or
+   agent) can pick up without repeating research: open questions go in
+   `discovery/unresolved.md`, and the plan lives in the roadmap issues. If you
+   are the autonomous agent, also update `.agent/state.yaml` (see `AGENTS.md`).
 
 ## Autonomous contributions
 
@@ -153,6 +168,6 @@ resolve on its own.
 - Use `[[ID]]` wikilinks for every entity mentioned in prose so the
   repository stays navigable in Obsidian without additional tooling.
 - Prefer official/government/EU/UN/standards-body sources over secondary
-  sources (README §12 lists the preference order).
+  sources (`.agent/research-policy.md` lists the preference order).
 - Write in factual, neutral English regardless of the entity's home
   country.
