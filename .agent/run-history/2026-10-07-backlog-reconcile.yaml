@@ -1,0 +1,27 @@
+date: "2026-10-07"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap issue #448: reconcile progress/backlog.md with the current state.
+
+  Extracted the 69 unchecked items and checked each against the repository
+  (entity existence, edges in graph.json, schema vocabularies, counts, sources in
+  the entity files, the audit). Result: 39 were already done, superseded or decided
+  and are ticked with what was found (for example: every entity is now
+  `primary-source`; `amends`, `cooperates-with`, `uses-data-from`,
+  `carries-identifier-of` and `referred-to-court-over` exist; `level: subnational`
+  exists with 23 entities; the EDPB has 20 national authorities attached;
+  EU-INSPIRE applies in NL; the UK adequacy decision, the LED, the CAF and GB-OS
+  are modelled). 30 are still open, six of them narrowed to what is left, and
+  each now points to one of five grouped roadmap issues (#457 vocabulary
+  decisions, #458 Netherlands modelling, #459 United Kingdom, #460 coverage
+  gaps, #461 consistency checks). A note at the top of the file says so.
+
+  Limits: "done" means the thing the item asked for now exists in the repository;
+  I did not re-read the sources behind each entity. The original wording of the
+  done items is in git history. Three small judgement calls: the duplicate
+  UN-FPOS item was folded into the other; the "13 of 20 instruments" item was
+  marked superseded by the live Compare view; the `level: local` item was marked
+  decided by unresolved.md #231 (kept, unused).
+prs: []
+outcome: in-progress
+entity_count_after: 740
