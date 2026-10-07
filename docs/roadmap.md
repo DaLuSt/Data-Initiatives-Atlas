@@ -34,18 +34,27 @@ plan changes; there is no other schedule.
 
 ## The board
 
-The Project board has four columns: **Backlog** (not scheduled), **Next**
-(aimed at the coming release), **In progress**, **Done**. The board's built-in
-workflows move an issue to *Done* when it closes and add new `roadmap` issues to
-*Backlog*. Setting the board up is a few clicks in the GitHub UI: Projects can
-only be created through GitHub's GraphQL API, which the agent's environment cannot
-call (issue #444 tracks it).
+The Project board has four columns, the values of its **Status** field:
+**Backlog** (not scheduled), **Next** (aimed at the coming release),
+**In Progress** and **Done**, plus a second view, a table grouped by milestone,
+named *By release*. The board's built-in workflows move an issue to *Done*
+when it closes and add new `roadmap` issues to *Backlog*.
 
-1. Create a Project (Projects tab, *New project*, Board layout) named *Atlas roadmap*.
-2. In the project's *Workflows*: enable *Item added to project* (Status = Backlog)
-   and *Item closed* (Status = Done); enable *Auto-add to project* for this
-   repository with the filter `is:issue label:roadmap`.
-3. Link the project to the repository.
+Setting it up is a few minutes in the GitHub UI: Projects v2 can only be created
+through GitHub's GraphQL API or the web UI, and the agent's environment blocks
+GraphQL and every path outside this repository (issue #444 tracks it, with the
+steps below as a checklist):
+
+1. <https://github.com/DaLuSt?tab=projects> → *New project* → *Board* → *Atlas roadmap*.
+2. *Settings → Status*: rename *Todo* to *Backlog*, add *Next* after it, keep
+   *In Progress* and *Done*.
+3. *Workflows*: *Item added to project* → Status *Backlog*; *Item closed* → Status
+   *Done*; *Auto-add to project* → this repository, filter
+   `is:issue label:roadmap`.
+4. Add the issues that already exist (auto-add only catches new ones): *+ Add item*,
+   paste `repo:DaLuSt/Data-Initiatives-Atlas label:roadmap is:open`, select all.
+5. *New view → Table*, group by *Milestone*, name it *By release*.
+6. Optionally make the board public and link it to the repository.
 
 ## How an item gets done
 

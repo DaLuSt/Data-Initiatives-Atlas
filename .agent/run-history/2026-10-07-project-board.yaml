@@ -1,0 +1,21 @@
+date: "2026-10-07"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Owner asked for the Project board (roadmap issue #444). It cannot be created
+  from the agent's environment; what was tried, so the next session does not
+  repeat it: `gh api graphql` is refused by this session's GitHub proxy ("GraphQL
+  is not available"); `gh api /users/DaLuSt/projectsV2` (list and create) is
+  refused ("sessions are bound to their configured repositories": only
+  repos/{owner}/{repo}/... paths are served); `repos/.../projects` (classic
+  projects) returns 404 because classic projects are gone. The github MCP server
+  has no Projects tools. Projects v2 has no other route.
+
+  Done instead: issue #444 now carries an exact checklist for the owner (project
+  from the Board template, Status options Backlog / Next / In Progress / Done, the
+  three workflows including auto-add with the filter is:issue label:roadmap,
+  adding the 20 existing roadmap issues, a table view grouped by milestone), and
+  docs/roadmap.md has the same steps. When the board exists: close #444 and add
+  its link to docs/roadmap.md and the README.
+prs: []
+outcome: in-progress
+entity_count_after: 740
