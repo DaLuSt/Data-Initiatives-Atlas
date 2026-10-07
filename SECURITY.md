@@ -62,9 +62,11 @@ anonymous. There is **no bug bounty**; this is an unfunded open-data project.
 
 ## Supported versions
 
-There are no releases and no version branches. **`main` is the only supported
-state**, and the deployed site is always built from it. Fixes land on `main`;
-there is nothing to backport to.
+There are no version branches. **`main` is the only supported state**, and the
+deployed site is always built from it. Fixes land on `main`; there is nothing to
+backport to. The tagged data releases and schema versions (see
+[`metadata/versioning.md`](metadata/versioning.md)) are dated snapshots of
+`main`, not separately maintained lines: a fix is released with the next one.
 
 ## Scope
 
@@ -81,7 +83,9 @@ there is nothing to backport to.
   These scripts are run by contributors on branches they may not have written.
 * **The GitHub Actions workflows** — privilege escalation, secret exposure, or
   a path by which a pull request from a fork could influence what is deployed
-  to Pages.
+  to Pages or what the release workflows (`release-pr.yml`,
+  `release-publish.yml`) tag and publish. The scheduled agent workflow
+  (`autonomous-agent.yml`) is in scope too.
 * **The vendored dependency** — `site/vendor/cytoscape.min.js`
   (Cytoscape.js 3.34.1, MIT). If a vulnerability is published against that
   version, telling us is genuinely useful.
@@ -92,8 +96,8 @@ there is nothing to backport to.
   The Atlas is a catalogue. A vulnerability in a national identity platform
   described by an entity file is not a vulnerability in this repository —
   report it to that system's operator through their own disclosure process.
-* **The external sites we link to.** The Atlas cites roughly 850 URLs across
-  330-odd hosts. Their availability, TLS configuration and content are not
+* **The external sites we link to.** The Atlas cites a large number of URLs
+  across many hosts. Their availability, TLS configuration and content are not
   ours.
 * **Missing security headers on GitHub Pages.** We do not control the
   hosting's response headers.
@@ -109,8 +113,10 @@ does not have to rediscover it:
 * **No cookies, no `localStorage`, no `sessionStorage`.** The page keeps no
   state between visits.
 * **No analytics, no telemetry, no beacons, no third-party scripts or fonts.**
-* **No external network requests.** The only `fetch()` calls are two
-  same-origin requests, for `graph.json` and `details.json`.
+* **No external network requests.** The only `fetch()` calls are same-origin
+  requests, for `graph.json` and `details.json`. The "Copy link" and CSV
+  buttons run in the browser: the CSV is built in memory and handed to the
+  browser as a download, and nothing is uploaded.
 * **No inline event handlers** in `index.html`.
 * **No user input reaches a server**, because there is no server. The search
   box filters an already-downloaded JSON payload in memory.
@@ -150,14 +156,14 @@ show its own uncertainty rather than hide it.
 
 Two things worth knowing before you report one:
 
-* **Most entities are not verified, and say so.** As of the most recent batch,
-  **251 of 258 entities** carry `verification: search-only`: their cited URLs
-  were confirmed by a search index to exist but **were not read**, because the
-  authoring environment blocked page retrieval. Every such entity carries a
-  visible sourcing caveat, `last_verified: null` and no `accessed` dates. An
-  entity being thinly sourced is a **known, documented state**, not a defect
-  to report — see `discovery/unresolved.md` and
-  `discovery/reverification-allowlist.md`.
+* **Each entity says how well it is verified.** The `verification` field is
+  `primary-source` (every cited page was opened and read), `search-only` (the
+  URLs were confirmed by a search index to exist but **were not read**) or
+  `unverified`. A `search-only` entity carries a visible sourcing caveat,
+  `last_verified: null` and no `accessed` dates. An entity being thinly
+  sourced is a **known, documented state**, not a defect to report — see
+  `discovery/unresolved.md` and `discovery/reverification-allowlist.md`. The
+  README says where the Atlas stands today.
 * **A source that contradicts an entity is a good issue.** That is the useful
   report: "this entity says X, this primary source says Y." Include the URL.
 
