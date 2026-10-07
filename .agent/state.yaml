@@ -173,10 +173,14 @@ last_merged_prs:
     summary: "Housekeeping: recorded #463-466 in state.yaml and run-history"
   - number: 468
     summary: "UK: the Information Commission succeeds the ICO on 30 September 2026 (GB-INFORMATION-COMMISSION, GB-ICO superseded), GB-RPSI-REGULATIONS-2015 as the UK open data instrument, GOV.UK sources for DCMS (renamed Department for Digital, Culture, Media and Sport) and DSIT; 742 entities (roadmap #459, #457)"
+  - number: 469
+    summary: "Roadmap: linked the public Project board in docs/roadmap.md; recorded #467 and #468"
+  - number: 484
+    summary: "Docs sweep: README, CONTRIBUTING, CODE_OF_CONDUCT, SECURITY and countries/README corrected against the current Atlas; entity, URL and country counts removed outside the README (figures re-measured there); candidate C10 points to the country-group issues #470-#483"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
-  discovery/candidates.md (one lead: the count of UN member states with no country anchor yet, C10) and
+  discovery/candidates.md (one lead: the count of UN member states with no country anchor yet, C10, now split into issues #470-#483) and
   discovery/research-queue.md (empty) for queued leads, and
   progress/backlog.md for the forward plan. All four discovery files now
   share the master-table layout of unresolved.md. See .agent/current-task.yaml for any in-flight task.
