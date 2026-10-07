@@ -923,6 +923,18 @@ class TestEnglishNames(unittest.TestCase):
         self.assertIn("official translation", js[js.index("function nameNote"):][:700])
 
 
+class TestExplorerLayout(unittest.TestCase):
+    """The Explorer's rings must not animate out from the origin: it made
+    Cytoscape log an "invalid endpoints" warning per edge (issue #447)."""
+
+    JS = (Path(__file__).resolve().parent.parent / "site" / "app.js").read_text(encoding="utf-8")
+
+    def test_concentric_layout_is_not_animated(self):
+        block = self.JS[self.JS.index('name: "concentric"'):][:900]
+        self.assertIn("animate: false", block)
+        self.assertNotIn("animate: n <", block)
+
+
 class TestMobileLayout(unittest.TestCase):
     """On a phone the top bar is compact, the detail panel is a strip under the
     graph (not a sheet over it) and touch targets are 40 px. See

@@ -1236,7 +1236,12 @@
         concentric: function (node) { return 10 - (node.data("hop") || 0); },
         levelWidth: function () { return 1; },
         minNodeSpacing: 46, padding: 50, fit: true,
-        animate: n < 400, animationDuration: 300
+        // Not animated: the elements were just rebuilt, so every node starts at
+        // (0, 0) and animates out from there, and Cytoscape logs "edge has
+        // invalid endpoints" for each edge whose two ends are still on the
+        // same point (38 on a depth change). There is no earlier position to
+        // animate from, so the motion was only the bloom from the origin.
+        animate: false
       }).run();
       return;
     }
