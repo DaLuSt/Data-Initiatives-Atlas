@@ -25,7 +25,7 @@ Three things a reader should know about how this was done:
   authors of a regulation or directive means a legislative act, `ordinary`;
   the Commission as author of an implementing regulation or a decision means
   `delegated`. Each record's CELEX was checked to match the one requested.
-  EUR-Lex pages themselves are not reachable from this environment.
+  EUR-Lex pages themselves are not reachable with `curl` from this environment (the fetch tool read some of them on 2026-10-07; see `.agent/research-policy.md`).
 - **Constitutions were read on constituteproject.org (English text, the
   version named in each row).** For the countries that have a higher statutory
   rank (AT, BE, CZ, EE, FR, IT, PT; ES is covered in the entity files) the
