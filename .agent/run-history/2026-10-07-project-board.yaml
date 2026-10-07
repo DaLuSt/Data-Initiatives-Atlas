@@ -16,6 +16,8 @@ summary: >
   adding the 20 existing roadmap issues, a table view grouped by milestone), and
   docs/roadmap.md has the same steps. When the board exists: close #444 and add
   its link to docs/roadmap.md and the README.
-prs: []
-outcome: in-progress
+prs:
+  - number: 464
+    title: "Roadmap docs: exact steps for the Project board"
+outcome: merged
 entity_count_after: 740

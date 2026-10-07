@@ -21,6 +21,8 @@ summary: >
   pages); metadata/rank-basis.md no longer says EUR-Lex is unreachable full stop.
   Not done: re-running every blocked item; that is the point of the next
   coverage work (roadmap #459, #460).
-prs: []
-outcome: in-progress
+prs:
+  - number: 466
+    title: "Record what the fetch tool and curl can and cannot read (EUR-Lex, Légifrance and others)"
+outcome: merged
 entity_count_after: 740
