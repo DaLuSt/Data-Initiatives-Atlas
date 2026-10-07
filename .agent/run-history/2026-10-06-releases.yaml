@@ -24,16 +24,36 @@ summary: >
   Checked: the full flow (first release, tag, second release with a feature, a
   data change, a housekeeping change and a closed issue, then a release with
   nothing to release) in a scratch clone; mutations of the version arithmetic and
-  the schema rule fail the tests. NOT checked: the two workflows have never run on
-  GitHub; they are verified by parsing and by tests of what they call. Two
+  the schema rule fail the tests. Not checked before merge: the two workflows had never run on
+  GitHub; they were verified by parsing and by tests of what they call (they ran
+  afterwards, see below). Two
   repository settings may block them (Actions allowed to create pull requests;
   see the workflow header).
+
+  After merge (2026-10-06/07): release-pr.yml ran on GitHub. Prepare and
+  validation passed and the branch release/data-2026.10.1 was pushed; opening the
+  pull request failed because "Allow GitHub Actions to create and approve pull
+  requests" is off in this repository's Actions settings, so the PR (#453) was
+  opened by hand from that branch. It was merged on the owner's instruction and
+  release-publish.yml ran on the merge and succeeded: tags data-2026.10.1 and
+  schema-1.0.0 and the GitHub Release "Data release 2026.10.1" exist (checked
+  through the GitHub API). So both workflows have now run on GitHub; the part
+  not yet exercised is a release PR opened by the workflow itself, which needs
+  the Actions setting above. Ten roadmap issues (#443-452), the
+  labels (roadmap, area:*, release) and the milestones 2026.10, 2026.11 and
+  2026.12 were created. The Project board could not be created: Projects v2 is
+  GraphQL-only and GraphQL is not available through this session's GitHub proxy
+  (issue #444, steps in docs/roadmap.md).
 
   Mistake made and undone: a command chain in my scratch-clone simulation broke
   before its `cd` (rsync was not installed), so test commits and a data-2026.10.1
   tag were created in the real local repository. Nothing was pushed; I reset the
   branch to origin/main with --soft, removed the test files and the tag, and
   checked the diff contained only the intended changes.
-prs: []
-outcome: in-progress
+prs:
+  - number: 442
+    title: "Schema versioning, dated data releases with an automatic release PR, changelog and roadmap process"
+  - number: 453
+    title: "Release data 2026.10.1"
+outcome: merged
 entity_count_after: 740
