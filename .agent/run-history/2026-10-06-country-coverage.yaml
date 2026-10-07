@@ -17,6 +17,8 @@ summary: >
   owner can change that and the count with it. The name matching was checked by
   hand for the one ambiguous case (Ireland against the United Kingdom, whose UN
   name contains it); no other anchor failed to match exactly one entry.
-prs: []
-outcome: in-progress
+prs:
+  - number: 441
+    title: "Candidates: 137 UN member states not yet implemented"
+outcome: merged
 entity_count_after: 740
