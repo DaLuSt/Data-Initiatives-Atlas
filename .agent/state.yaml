@@ -33,6 +33,11 @@ discovery:
 
 validation_status: clean
 
+release:
+  data: "2026.10.1"
+  schema: "1.0.0"
+  released: "2026-10-06"
+
 last_merged_prs:
   - number: 385
     summary: "Added a GitHub Sponsors button to the site (header + footer), per repository owner's explicit request"
