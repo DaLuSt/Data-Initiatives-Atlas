@@ -446,6 +446,18 @@
       if (ev.target.closest("a")) showStart(false);
     });
 
+    // "Skip to content" has to land on the main content of the view that is on
+    // screen, not on the wrapper that also holds the 157 filter controls: the
+    // three <main> regions take turns being hidden, and a <main> is not focusable
+    // until it has a tabindex. Without the script the link falls back to #main.
+    document.querySelector(".skip-link").addEventListener("click", function (ev) {
+      var target = document.querySelector("main:not([hidden])");
+      if (!target) return;
+      ev.preventDefault();
+      if (!target.hasAttribute("tabindex")) target.setAttribute("tabindex", "-1");
+      target.focus();
+    });
+
     document.addEventListener("keydown", function (ev) {
       if (ev.key === "Escape") {
         if ($("suggestions").hidden === false) { hideSuggestions(); return; }

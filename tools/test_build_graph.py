@@ -1071,6 +1071,33 @@ class TestDetailPanel(unittest.TestCase):
         self.assertGreater(hits, 0)
 
 
+class TestSkipLink(unittest.TestCase):
+    """"Skip to content" must land on the main area on screen, not on a wrapper that
+    holds the filters (found with a keyboard run on 2026-10-08)."""
+
+    SITE = Path(__file__).resolve().parent.parent / "site"
+
+    def test_the_skip_link_moves_focus_to_the_visible_main(self):
+        app = (self.SITE / "app.js").read_text(encoding="utf-8")
+        self.assertIn('document.querySelector(".skip-link").addEventListener("click"', app)
+        self.assertIn('document.querySelector("main:not([hidden])")', app)
+        self.assertIn('setAttribute("tabindex", "-1")', app)
+
+    def test_there_is_one_skip_link_and_it_is_first(self):
+        html = (self.SITE / "index.html").read_text(encoding="utf-8")
+        self.assertEqual(html.count('class="skip-link"'), 1)
+        self.assertLess(html.index('class="skip-link"'), html.index("<header"))
+
+    def test_the_accessibility_statement_exists_and_is_linked(self):
+        root = Path(__file__).resolve().parent.parent
+        text = (root / "ACCESSIBILITY.md").read_text(encoding="utf-8")
+        for heading in ("## Our commitment", "## Supported environments", "## Known limitations", "## Reporting a barrier"):
+            self.assertIn(heading, text)
+        self.assertTrue((root / ".github" / "ISSUE_TEMPLATE" / "accessibility-barrier.yml").exists())
+        self.assertIn("template=accessibility-barrier.yml", text)
+        self.assertIn("ACCESSIBILITY.md", (root / "README.md").read_text(encoding="utf-8"))
+
+
 class TestAddressAndLinkRobustness(unittest.TestCase):
     """A mistyped link must not break the page, and a data value must not become a script link.
     The two functions are cut out of site/app.js and run under Node."""

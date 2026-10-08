@@ -105,6 +105,8 @@ before you rely on it.
 | **This repository** | The source of truth. Browse `countries/`, `legislation/`, `organisations/` and the rest directly. |
 | **As an Obsidian vault** | Open the repository folder in Obsidian and the `[[wikilinks]]` become a local graph. |
 
+♿ [`ACCESSIBILITY.md`](ACCESSIBILITY.md) says what has been checked, what is known to
+be hard, and how to report a barrier ·
 📖 [`docs/graph.md`](docs/graph.md) is a tour of the site ·
 [`docs/graph-architecture.md`](docs/graph-architecture.md) explains how
 entity files become nodes and edges ·
