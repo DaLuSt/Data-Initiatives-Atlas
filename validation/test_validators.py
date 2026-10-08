@@ -198,6 +198,66 @@ class TestDates(Base):
         self.assertFails("valid_until 2010-01-01 is before valid_from 2020-01-01")
 
 
+class TestPrimarySourceBasis(Base):
+    """`primary-source` has to be visible: an accessed date, or only confirmed domains."""
+
+    def drop_dates(self, rel="organisations/xx-org.md"):
+        import re as _re
+        text = (self.root / rel).read_text(encoding="utf-8")
+        self.write(rel, _re.sub(r'    accessed: .*\n', "", text))
+
+    def test_no_accessed_date_on_an_unconfirmed_domain_fails(self):
+        self.drop_dates()
+        self.assertFails("verification is 'primary-source' but no source has an 'accessed' date")
+
+    def test_one_accessed_date_is_enough(self):
+        text = (self.root / "organisations/xx-org.md").read_text(encoding="utf-8")
+        extra = '  - title: "B"\n    url: "https://example.net/b"\n    publisher: "Example"\n'
+        self.write("organisations/xx-org.md", text.replace("---\n\n#", extra + "---\n\n#", 1))
+        code, out = self.run_all()
+        self.assertEqual(code, 0, out)
+
+    def test_only_confirmed_domains_need_no_date(self):
+        self.drop_dates()
+        self.edit("organisations/xx-org.md", "https://example.org/a", "https://commission.europa.eu/x")
+        code, out = self.run_all()
+        self.assertEqual(code, 0, out)
+
+    def test_one_unconfirmed_source_among_confirmed_ones_fails(self):
+        self.drop_dates()
+        text = (self.root / "organisations/xx-org.md").read_text(encoding="utf-8")
+        self.write("organisations/xx-org.md", text.replace("https://example.org/a", "https://eur-lex.europa.eu/x").replace(
+            "---\n\n#", '  - title: "B"\n    url: "https://example.net/b"\n    publisher: "Example"\n---\n\n#', 1))
+        self.assertFails("verification is 'primary-source'")
+
+    def test_a_lookalike_host_is_not_a_confirmed_domain(self):
+        self.drop_dates()
+        self.edit("organisations/xx-org.md", "https://example.org/a", "https://noteuropa.eu.example.org/x")
+        self.assertFails("verification is 'primary-source'")
+        self.edit("organisations/xx-org.md", "https://noteuropa.eu.example.org/x", "https://fakeeuropa.eu/x")
+        self.assertFails("verification is 'primary-source'")
+
+    def test_an_entity_with_no_sources_is_not_checked(self):
+        text = (self.root / "organisations/xx-org.md").read_text(encoding="utf-8")
+        i = text.index("sources:\n"); j = text.index("---\n\n#")
+        self.write("organisations/xx-org.md", text[:i] + "sources: []\n" + text[j:])
+        code, out = self.run_all()
+        self.assertEqual(code, 0, out)
+
+    def test_search_only_is_not_held_to_it(self):
+        self.drop_dates()
+        self.edit("organisations/xx-org.md", "verification: primary-source", "verification: search-only")
+        self.edit("organisations/xx-org.md", 'last_verified: "2026-10-01"', "last_verified: null")
+        code, out = self.run_all()
+        self.assertEqual(code, 0, out)
+
+    def test_the_confirmed_domains_match_the_documentation(self):
+        doc = (Path(__file__).resolve().parent.parent / "docs" / "re-verification.md").read_text(encoding="utf-8")
+        section = doc[doc.index("## The confirmed domains"):doc.index("### The rule it is applied under")]
+        listed = set(__import__("re").findall(r"\| `([a-z.]+)` \|", section))
+        self.assertEqual(listed, set(validate_sources.CONFIRMED_DOMAINS))
+
+
 class TestStructure(Base):
     def test_the_same_relationship_twice(self):
         text = (self.root / "organisations/xx-org.md").read_text(encoding="utf-8")

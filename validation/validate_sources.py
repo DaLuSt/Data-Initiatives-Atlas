@@ -6,10 +6,40 @@ from __future__ import annotations
 
 import re
 import sys
+from urllib.parse import urlparse
 
 import common
 
 REQUIRED_SOURCE_FIELDS = ("title", "url", "publisher")
+
+# Domains whose pages the repository owner confirmed read and correct on
+# 2026-08-21 (docs/re-verification.md, "The confirmed domains"). An entity all of
+# whose sources are on these needs no per-page `accessed` date to be
+# `primary-source`: the confirmation covers them.
+CONFIRMED_DOMAINS = ("europa.eu", "iso.org", "coe.int", "bund.de", "legifrance.gouv.fr")
+
+
+def on_confirmed_domain(url: str) -> bool:
+    host = (urlparse(url).hostname or "").lower()
+    return any(host == d or host.endswith("." + d) for d in CONFIRMED_DOMAINS)
+
+
+def check_primary_source_basis(rel_path: str, sources: list, report: common.Report) -> None:
+    """`verification: primary-source` means the cited pages were read. That has to
+    be visible in the file: at least one source with an `accessed` date, or every
+    source on a domain the owner confirmed (CONFIRMED_DOMAINS). An entity with no
+    sources (a domain or anchor) has nothing to confirm and is not checked."""
+    dicts = [s for s in sources if isinstance(s, dict)]
+    if not dicts:
+        return
+    if any(s.get("accessed") for s in dicts):
+        return
+    if all(on_confirmed_domain(str(s.get("url") or "")) for s in dicts):
+        return
+    report.error(f"{rel_path}: verification is 'primary-source' but no source has an 'accessed' "
+                 f"date and not every source is on a confirmed domain "
+                 f"({', '.join(CONFIRMED_DOMAINS)}) — add the date the pages were read, or "
+                 f"lower verification")
 
 
 def main() -> int:
@@ -36,6 +66,9 @@ def main() -> int:
                 report.warn(f"{e.rel_path}: no sources listed for an entity with status "
                             f"'{fm.get('status')}' / coverage '{fm.get('coverage')}'")
             continue
+
+        if fm.get("verification") == "primary-source":
+            check_primary_source_basis(e.rel_path, sources, report)
 
         seen_urls: dict[str, int] = {}
         for i, src in enumerate(sources):

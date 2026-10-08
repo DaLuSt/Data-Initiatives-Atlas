@@ -42,12 +42,15 @@ sources:
   - title: "CEN and CENELEC"
     url: "https://www.cencenelec.eu/european-standardization/cen-and-cenelec/"
     publisher: "CEN-CENELEC"
+    accessed: "2026-08-28"
   - title: "Key players in European Standardisation"
     url: "https://single-market-economy.ec.europa.eu/single-market/goods/european-standards/key-players-european-standardisation_en"
     publisher: "European Commission — Internal Market, Industry, Entrepreneurship and SMEs"
+    accessed: "2026-08-28"
   - title: "European Standards"
     url: "https://www.cencenelec.eu/european-standardization/european-standards/"
     publisher: "CEN-CENELEC"
+    accessed: "2026-08-28"
 ---
 
 # CEN (European Committee for Standardisation)
