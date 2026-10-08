@@ -93,7 +93,7 @@ only third-party code (Cytoscape.js) from the same address.
    official name is always available (the "Names" control).
 5. **Dense overview.** The first view draws all entities at once, with labels
    hidden until you zoom in or filter. It is designed to be explored, not read
-   in one pass. How to make the first view friendlier is an open design question.
+   in one pass. The List and Compare views are the plainer way in.
 6. **Text sources.** Quotations and titles come from official documents and
    websites and are shown as they are written there; their own accessibility is
    outside our control.

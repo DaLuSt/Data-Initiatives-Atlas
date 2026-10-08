@@ -91,7 +91,8 @@ side.
    log. It lists what it would change and changes nothing.
 4. Run it again with *dry_run* unticked. After that, events keep it current.
 
-Until the secret exists the workflow succeeds and does nothing. Then, in the
+The token expires: the plan for renewing it and for noticing a failure is in
+[`credentials.md`](credentials.md) (issue #496). Until the secret exists the workflow succeeds and does nothing. Then, in the
 board, add a view with the *Roadmap* layout and set its start and end to
 **Start date** and **Target date**. Views are not available through the
 workflow's token.
