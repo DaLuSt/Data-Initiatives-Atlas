@@ -73,6 +73,7 @@ RELEASES_URL = "https://github.com/DaLuSt/Data-Initiatives-Atlas/releases/tag/"
 LINKEDIN_LIMIT = 3000  # characters LinkedIn accepts in a post
 LINKEDIN_ITEM_LIMIT = 150
 LINKEDIN_ITEMS = 4
+LINKEDIN_HIGHLIGHTS = 6
 
 # Highest first: a pull request is filed under the first category it touches.
 CATEGORIES = (
@@ -215,33 +216,63 @@ def render_entry(*, version: str, schema: str, prev_schema: str | None, released
     return "\n".join(lines).rstrip("\n") + "\n"
 
 
+# What a LinkedIn post may draw on when the entry has no "Highlights" section:
+# these sections, in this order. Tooling, Documentation and Housekeeping are
+# about how the repository is run, not about the Atlas, so they are left out.
+LINKEDIN_SECTIONS = ("Site and features", "Data", "Schema")
+HIGHLIGHTS = "Highlights"
+ROADMAP_DONE = "Roadmap items completed"
+
+
+def entry_sections(entry: str) -> dict[str, list[str]]:
+    """The bullet items of a CHANGELOG entry by `###` section, pull request
+    numbers removed and long items shortened for a post."""
+    sections: dict[str, list[str]] = {}
+    section = ""
+    for line in entry.splitlines():
+        if line.startswith("### "):
+            section = line[4:].strip()
+        elif line.startswith("- ") and section:
+            text = PR_RE.sub("", line[2:]).strip()
+            if len(text) > LINKEDIN_ITEM_LIMIT:
+                text = text[:LINKEDIN_ITEM_LIMIT - 1].rstrip() + "…"
+            sections.setdefault(section, []).append(text)
+    return sections
+
+
+def linkedin_items(entry: str) -> tuple[list[str], bool]:
+    """The items for a post, and whether the list is cut short.
+
+    A "### Highlights" section in the entry (written by the person reviewing the
+    release pull request, in plain language) is used as it is. Without one, items
+    come from Site and features, then Data, then Schema, and only if fewer than
+    LINKEDIN_ITEMS are found, from the completed roadmap items. Tooling,
+    Documentation and Housekeeping are never listed.
+    """
+    sections = entry_sections(entry)
+    if sections.get(HIGHLIGHTS):
+        items = sections[HIGHLIGHTS]
+        return items[:LINKEDIN_HIGHLIGHTS], len(items) > LINKEDIN_HIGHLIGHTS
+    items: list[str] = []
+    for name in LINKEDIN_SECTIONS:
+        items += [t for t in sections.get(name, []) if t not in items]
+    if len(items) < LINKEDIN_ITEMS:
+        items += [t for t in sections.get(ROADMAP_DONE, []) if t not in items]
+    return items[:LINKEDIN_ITEMS], len(items) > LINKEDIN_ITEMS
+
+
 def linkedin_draft(entry: str, version: str) -> str:
     """A plain-text LinkedIn post for one release, built from its CHANGELOG entry.
 
-    LinkedIn does not render Markdown, so the text has none. Pull request numbers
-    are dropped (they mean nothing outside GitHub); at most LINKEDIN_ITEMS items
-    are listed, completed roadmap items first, and the rest are left to the
-    release notes. The draft is for a person to read and post: nothing here
-    talks to LinkedIn.
+    LinkedIn does not render Markdown, so the text has none. See linkedin_items
+    for which changes are listed. The draft is for a person to read and post:
+    nothing here talks to LinkedIn.
     """
     counts = ""
     m = re.search(r"^In the Atlas at this release: (.*)\.\s*$", entry, re.M)
     if m:
         counts = m.group(1)
-
-    roadmap: list[str] = []
-    other: list[str] = []
-    section = ""
-    for line in entry.splitlines():
-        if line.startswith("### "):
-            section = line[4:].strip()
-        elif line.startswith("- "):
-            text = PR_RE.sub("", line[2:]).strip()
-            if len(text) > LINKEDIN_ITEM_LIMIT:
-                text = text[:LINKEDIN_ITEM_LIMIT - 1].rstrip() + "…"
-            (roadmap if section == "Roadmap items completed" else other).append(text)
-    items = roadmap + [t for t in other if t not in roadmap]
-    shown = items[:LINKEDIN_ITEMS]
+    shown, cut = linkedin_items(entry)
 
     out = [f"Data Initiatives Atlas: data release {version}", ""]
     if counts:
@@ -251,8 +282,8 @@ def linkedin_draft(entry: str, version: str) -> str:
     if shown:
         out.append("What changed:")
         out += [f"• {t}" for t in shown]
-        if len(items) > len(shown):
-            out.append(f"…and {len(items) - len(shown)} more in the release notes.")
+        if cut:
+            out.append("…and more in the release notes.")
         out.append("")
     out += [f"Explore the Atlas: {SITE_URL}",
             f"Release notes: {RELEASES_URL}{DATA_TAG_PREFIX}{version}",

@@ -165,13 +165,20 @@ class TestLinkedinDraft(unittest.TestCase):
     ENTRY = (
         "**Schema 1.1.0** (changed from 1.0.0)\n\n"
         "In the Atlas at this release: 745 entities (+5), 1,576 typed relationships (+5), 58 countries (+0).\n\n"
+        "### Schema\n\n- Add the rank field (#400)\n\n"
+        "### Site and features\n\n- List view: download the rows as CSV (#456)\n\n"
         "### Data\n\n- Add three UK competent authorities (#491)\n- France and the Open Data Directive (#490)\n\n"
         "### Tooling\n\n- Board sync (#488)\n\n"
+        "### Documentation\n\n- Roadmap docs (#464)\n\n"
+        "### Housekeeping\n\n- Housekeeping: record #1 in state.yaml (#516)\n\n"
         "### Roadmap items completed\n\n- English names for the records still without one (#446)\n"
     )
 
     def draft(self, entry=None):
         return release.linkedin_draft(entry or self.ENTRY, "2026.11.1")
+
+    def bullets(self, entry=None):
+        return [l[2:] for l in self.draft(entry).splitlines() if l.startswith("• ")]
 
     def test_it_names_the_release_and_links_the_site_and_the_notes(self):
         d = self.draft()
@@ -183,30 +190,62 @@ class TestLinkedinDraft(unittest.TestCase):
         self.assertIn("745 entities (+5), 1,576 typed relationships (+5), 58 countries (+0)", self.draft())
 
     def test_pull_request_numbers_are_dropped(self):
-        d = self.draft()
-        self.assertNotRegex(d, r"\(#\d+\)")
-        self.assertIn("• France and the Open Data Directive", d)
+        self.assertNotRegex(self.draft(), r"\(#\d+\)")
 
-    def test_completed_roadmap_items_come_first(self):
-        bullets = [l for l in self.draft().splitlines() if l.startswith("•")]
-        self.assertTrue(bullets[0].startswith("• English names"))
+    def test_site_then_data_then_schema_in_that_order(self):
+        self.assertEqual(self.bullets(), [
+            "List view: download the rows as CSV",
+            "Add three UK competent authorities",
+            "France and the Open Data Directive",
+            "Add the rank field"])
+
+    def test_tooling_documentation_and_housekeeping_are_never_listed(self):
+        d = self.draft()
+        for internal in ("Board sync", "Roadmap docs", "Housekeeping"):
+            self.assertNotIn(internal, d)
+
+    def test_completed_roadmap_items_only_fill_a_short_list(self):
+        self.assertNotIn("English names", self.draft())  # four items already
+        entry = ("### Data\n\n- One data change (#1)\n\n### Roadmap items completed\n\n"
+                 "- English names for the records still without one (#446)\n")
+        self.assertEqual(self.bullets(entry), ["One data change", "English names for the records still without one"])
+
+    def test_roadmap_items_do_not_count_towards_more_when_the_list_is_full(self):
+        entry = ("### Data\n\n" + "".join(f"- Change {n} (#{n})\n" for n in range(1, 5)) +
+                 "\n### Roadmap items completed\n\n- A roadmap item (#9)\n")
+        self.assertNotIn("and more", self.draft(entry))
+
+    def test_the_same_text_in_two_listed_sections_is_listed_once(self):
+        entry = "### Site and features\n\n- Same (#1)\n\n### Data\n\n- Same (#2)\n"
+        self.assertEqual(self.bullets(entry), ["Same"])
+
+    def test_an_item_that_is_in_two_sections_is_listed_once(self):
+        entry = ("### Data\n\n- Same thing (#1)\n\n### Roadmap items completed\n\n- Same thing (#2)\n")
+        self.assertEqual(self.bullets(entry), ["Same thing"])
+
+    def test_a_highlights_section_is_used_as_written(self):
+        entry = self.ENTRY.replace("### Schema\n", "### Highlights\n\n- 26 more English names for bodies and laws\n"
+                                   "- The Information Commission replaces the ICO\n\n### Schema\n", 1)
+        self.assertEqual(self.bullets(entry), ["26 more English names for bodies and laws",
+                                               "The Information Commission replaces the ICO"])
+        self.assertNotIn("and more", self.draft(entry))
+
+    def test_a_short_list_does_not_say_there_is_more(self):
+        self.assertNotIn("and more in the release notes", self.draft("### Data\n\n- Only one (#1)\n"))
+
+    def test_a_long_list_is_cut_and_says_so(self):
+        entry = "### Data\n\n" + "".join(f"- Item number {n} (#{n})\n" for n in range(1, 10))
+        self.assertEqual(len(self.bullets(entry)), release.LINKEDIN_ITEMS)
+        self.assertIn("…and more in the release notes.", self.draft(entry))
 
     def test_there_is_no_markdown(self):
         d = self.draft()
         for mark in ("**", "###", "`", "]("):
             self.assertNotIn(mark, d)
 
-    def test_a_long_list_is_cut_and_says_so(self):
-        entry = "In the Atlas at this release: 1 entities.\n\n### Data\n\n" + "".join(
-            f"- Item number {n} (#{n})\n" for n in range(1, 10))
-        d = self.draft(entry)
-        self.assertEqual(len([l for l in d.splitlines() if l.startswith("•")]), release.LINKEDIN_ITEMS)
-        self.assertIn("…and 5 more in the release notes.", d)
-
     def test_a_long_item_is_shortened(self):
-        entry = "### Data\n\n- " + "x" * 400 + " (#1)\n"
-        line = [l for l in self.draft(entry).splitlines() if l.startswith("•")][0]
-        self.assertLessEqual(len(line), release.LINKEDIN_ITEM_LIMIT + 3)
+        line = self.bullets("### Data\n\n- " + "x" * 400 + " (#1)\n")[0]
+        self.assertLessEqual(len(line), release.LINKEDIN_ITEM_LIMIT)
         self.assertTrue(line.endswith("…"))
 
     def test_the_baseline_release_is_called_the_first(self):
@@ -222,7 +261,7 @@ class TestLinkedinDraft(unittest.TestCase):
         self.assertNotIn("What changed", d)
 
     def test_it_stays_inside_linkedins_limit(self):
-        entry = "### Data\n\n" + "".join(f"- {'y' * 200} (#{n})\n" for n in range(500))
+        entry = "### Highlights\n\n" + "".join(f"- {'y' * 200} (#{n})\n" for n in range(500))
         self.assertLessEqual(len(self.draft(entry)), release.LINKEDIN_LIMIT)
 
     def test_the_real_changelog_entry_makes_a_draft(self):
@@ -391,6 +430,10 @@ class TestWorkflows(unittest.TestCase):
         self.assertNotIn("api.linkedin.com", text)
         self.assertNotRegex(text, r"secrets\.\w*LINKEDIN")
         self.assertRegex(text, r"issues:\s*write")
+
+    def test_the_release_pull_request_tells_the_reviewer_about_highlights(self):
+        text = (self.WF / "release-pr.yml").read_text(encoding="utf-8")
+        self.assertIn("### Highlights", text)
 
     def test_the_linkedin_step_is_idempotent(self):
         text = (self.WF / "release-publish.yml").read_text(encoding="utf-8")

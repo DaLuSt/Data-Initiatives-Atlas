@@ -57,7 +57,12 @@ since the previous release**.
    `linkedin`, title "Post data release X on LinkedIn"): plain text built from the
    CHANGELOG entry by `python tools/release.py linkedin-draft X`, with the counts,
    up to four changes (completed roadmap items first) and links to the site and the
-   release notes. A person reads it, edits it, posts it by hand and closes the
+   release notes. The reviewer of the release pull request can add a
+   `### Highlights` section (plain-language bullets) under the counts line of the
+   CHANGELOG entry; the draft then uses exactly those. Without one it lists the
+   Site and features, Data and Schema changes, never Tooling, Documentation or
+   Housekeeping, and uses completed roadmap items only to fill a short list. A
+   person reads the draft, edits it, posts it by hand and closes the
    issue. Nothing is sent to LinkedIn by the repository; re-running the workflow
    does not open a second issue.
 
