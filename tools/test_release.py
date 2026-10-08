@@ -210,6 +210,15 @@ class TestLinkedinDraft(unittest.TestCase):
                  "- English names for the records still without one (#446)\n")
         self.assertEqual(self.bullets(entry), ["One data change", "English names for the records still without one"])
 
+    def test_roadmap_items_do_not_count_towards_more_when_the_list_is_full(self):
+        entry = ("### Data\n\n" + "".join(f"- Change {n} (#{n})\n" for n in range(1, 5)) +
+                 "\n### Roadmap items completed\n\n- A roadmap item (#9)\n")
+        self.assertNotIn("and more", self.draft(entry))
+
+    def test_the_same_text_in_two_listed_sections_is_listed_once(self):
+        entry = "### Site and features\n\n- Same (#1)\n\n### Data\n\n- Same (#2)\n"
+        self.assertEqual(self.bullets(entry), ["Same"])
+
     def test_an_item_that_is_in_two_sections_is_listed_once(self):
         entry = ("### Data\n\n- Same thing (#1)\n\n### Roadmap items completed\n\n- Same thing (#2)\n")
         self.assertEqual(self.bullets(entry), ["Same thing"])
