@@ -106,7 +106,7 @@ relationships:
   - type: applies-in
     target: FR
     source: fact
-    evidence: "As an EU directive it requires transposition by all member states, France included (EUR-Lex Directive (EU) 2019/1024). NOT READ — search-only. NO French transposing instrument is recorded: the French open data act found by search is the loi pour une Republique numerique of 2016, which PREDATES this directive and sits in the earlier PSI lineage. See FR-LRN. France is the second country in this Atlas with this gap, after Belgium."
+    evidence: "As an EU directive it requires transposition by all member states, France included (EUR-Lex Directive (EU) 2019/1024). NOT READ — search-only. No standalone French transposing act exists: EUR-Lex's register of national implementing measures (read directly 2026-10-08) lists 52 notified measures, all earlier law, among them Article 16 of the loi pour une Republique numerique of 2016, recorded as an edge on FR-LRN. See FR-LRN."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -301,10 +301,17 @@ The France batch recorded a belief that a 2021 ordinance existed. It does
 not; the ordinance that fits the description transposes Directive
 **2019/790** on copyright. [[FR-LOI-VALTER]] sets that out.
 
-Consequently **no French entity carries `implements-requirement-from` to
-this directive**, and the comparison matrix shows France with an `applies-in`
-edge and an empty implementer cell. That is the finding rather than a gap,
-and it is the only cell in the matrix where the emptiness is deliberate.
+**Update 2026-10-08.** EUR-Lex's register of national implementing measures
+for this directive, read directly, lists 52 measures notified by France, all
+earlier law: articles of the CRPA, of the Code de la recherche and of the Code
+de l'éducation, an article of the loi n° 2020-1674, and **Article 16 of the
+2016 loi pour une République numérique** ([[FR-LRN]]). It lists no act of 2019
+or later, so the finding above stands: France passed nothing new. What changed
+is that France itself presented part of [[FR-LRN]] as implementing the
+directive, so [[FR-LRN]] now carries `implements-requirement-from` to it
+(`confidence: medium`, with the limits stated in the edge). The comparison
+matrix's French cell therefore shows an implementer, and the reading is "existing
+law, notified", not "a transposing act".
 
 ### Belgium transposed four times, and its regions beat its federal state
 

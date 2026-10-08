@@ -30,7 +30,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-25"
+last_verified: "2026-10-08"
 previous_version: null
 successor: null
 
@@ -55,8 +55,19 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: related-to
+    target: EU-INSPIRE
+    source: fact
+    evidence: "Confirmed by reading eurogeographics.org's 'About us' page directly (2026-10-08): it names 'legislation such as the INSPIRE Directive' as the reason authoritative data is accessible through national geoportals, says its ESDIN project (2011) 'helps prepare data for the INSPIRE Directive', and says the results of its EuroRoadS and RISE projects (2008) were 'used to implement INSPIRE'. So EuroGeographics describes itself as a contributor to INSPIRE's implementation; it has no stated formal role under the directive, which is why the edge is related-to and not participates-in or implements. UN-GGIM: Europe's own homepage, read the same day, does not mention INSPIRE, so no edge is recorded for it."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
+  - title: "About us — EuroGeographics"
+    url: "https://eurogeographics.org/about-us/"
+    publisher: "EuroGeographics"
+    accessed: "2026-10-08"
   - title: "Members — EuroGeographics"
     url: "https://eurogeographics.org/our-members/"
     publisher: "EuroGeographics"
