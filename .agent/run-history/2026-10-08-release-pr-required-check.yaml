@@ -1,0 +1,17 @@
+date: "2026-10-08"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  After the owner set the repository rules, verified through the API: delete head
+  branches on merge is on (remote branches went from 156 to 2), and the ruleset on
+  main now requires a pull request and the `validate` status check. Remaining gap:
+  merge commits and rebase merges are still allowed in the repository settings (the
+  ruleset allows squash and merge). Found a consequence of the new rule: the weekly
+  release pull request is opened with the workflow's own GITHUB_TOKEN, which does not
+  trigger validate.yml, so the required check would never report and the PR could not
+  be merged (the ruleset has no bypass actors). Fix: release-pr.yml has actions: write
+  and starts validate.yml on the release branch with `gh workflow run` after opening
+  the PR; the run reports a `validate` check on the branch's head commit. A test pins
+  this. Not verifiable until the next release PR opens (Monday 2026-10-12): that the
+  dispatched run satisfies the ruleset's required check.
+prs: []
+outcome: pending merge
