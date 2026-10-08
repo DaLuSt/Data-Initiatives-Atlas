@@ -7,6 +7,7 @@ implement its own checks.
 
 from __future__ import annotations
 
+import datetime
 import json
 import re
 from dataclasses import dataclass, field
@@ -102,12 +103,35 @@ def parse_entity_file(path: Path) -> EntityFile:
     raw_fm, body = match.group(1), match.group(2)
     try:
         fm = yaml.safe_load(raw_fm)
-    except yaml.YAMLError as exc:
+    except (yaml.YAMLError, ValueError) as exc:
+        # ValueError: PyYAML builds a date for 2020-13-45 and the constructor
+        # raises it, which is not a YAMLError. Without this the whole run died
+        # with a traceback instead of naming the file.
         return EntityFile(path=path, frontmatter=None, body=body, parse_error=f"Malformed YAML: {exc}")
     if not isinstance(fm, dict):
         return EntityFile(path=path, frontmatter=None, body=body, parse_error="Frontmatter did not parse to a mapping.")
     wikilinks = _WIKILINK_RE.findall(text)
     return EntityFile(path=path, frontmatter=fm, body=body, wikilinks=wikilinks)
+
+
+def as_date(value: Any) -> datetime.date | None:
+    """A YAML date, or an ISO `YYYY-MM-DD` string, as a date; None if it is neither."""
+    if isinstance(value, datetime.datetime):
+        return value.date()
+    if isinstance(value, datetime.date):
+        return value
+    if isinstance(value, str):
+        try:
+            return datetime.date.fromisoformat(value.strip())
+        except ValueError:
+            return None
+    return None
+
+
+def is_in_the_future(day: datetime.date) -> bool:
+    """True if `day` is after tomorrow. A day of slack, because the check runs on
+    a UTC runner and the author may be hours ahead of it."""
+    return day > datetime.date.today() + datetime.timedelta(days=1)
 
 
 def load_all_entities(entities_only: bool = True) -> list[EntityFile]:

@@ -58,7 +58,10 @@ exactly what it says:
   verified.
 - **`verification: primary-source`** — someone opened every cited page
   directly, confirmed it supports what the entity says, and recorded the
-  date in `accessed:`. Entities at this level also drop the sourcing caveat
+  date in `accessed:` (for entities whose sources are all on the five domains the
+  repository owner confirmed on 2026-08-21 (`europa.eu`, `iso.org`, `coe.int`,
+  `bund.de`, `legifrance.gouv.fr`) that confirmation stands in for per-page dates;
+  `validation/validate_sources.py` checks one or the other is there). Entities at this level also drop the sourcing caveat
   from their body text, because it is no longer true of them.
 
 This is disclosed rather than buried, and enforced rather than just stated:

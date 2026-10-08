@@ -32,11 +32,32 @@ def check_relationships(e: common.EntityFile, schema: dict, ids: set[str], repor
         report.error(f"{e.rel_path}: 'relationships' must be a list")
         return
 
+    seen: dict[tuple, int] = {}
     for i, rel in enumerate(relationships):
         where = f"{e.rel_path}: relationships[{i}]"
         if not isinstance(rel, dict):
             report.error(f"{where} is not a mapping")
             continue
+
+        key = (rel.get("type"), rel.get("target"))
+        if key in seen:
+            report.error(f"{where}: the same relationship ({key[0]} -> {key[1]}) is already "
+                         f"listed at relationships[{seen[key]}]; merge them or use a different type")
+        else:
+            seen[key] = i
+
+        window = {}
+        for field_name in ("valid_from", "valid_until"):
+            value = rel.get(field_name)
+            if value in (None, ""):
+                continue
+            day = common.as_date(value)
+            if day is None:
+                report.error(f"{where}: {field_name} '{value}' is not a YYYY-MM-DD date")
+            else:
+                window[field_name] = day
+        if len(window) == 2 and window["valid_until"] < window["valid_from"]:
+            report.error(f"{where}: valid_until {window['valid_until']} is before valid_from {window['valid_from']}")
 
         rel_type = rel.get("type")
         if rel_type not in schema["relationship_types"]:

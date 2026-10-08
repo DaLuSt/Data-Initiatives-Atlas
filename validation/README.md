@@ -9,6 +9,17 @@ schema and controlled vocabularies, broken internal wikilinks, relationship
 types and targets, source metadata. Wired into CI via
 `.github/workflows/validate.yml`; a PR with errors will not be merged.
 
+Since 2026-10-08 the rules also cover dates (real `YYYY-MM-DD` values, an end
+not before its start, no verification or access date in the future, a
+relationship's validity window the right way round), duplicate relationships,
+and a national-level entity having a country. An entity marked `primary-source`
+must show it: an `accessed` date on at least one source, or every source on a
+domain the owner confirmed (`docs/re-verification.md`, "The confirmed domains"). Duplicate source URLs and a
+`superseded` entity with no `successor` are warnings, not errors. The rules
+themselves are tested by `python validation/test_validators.py`, which builds a
+tiny repository in a temporary directory and shows each rule firing on a defect
+and staying quiet on a good entity.
+
 ```
 pip install -r validation/requirements.txt
 python validation/run_all.py

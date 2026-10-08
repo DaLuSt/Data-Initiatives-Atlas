@@ -39,9 +39,11 @@ sources:
   - title: "CEN and CENELEC"
     url: "https://www.cencenelec.eu/european-standardization/cen-and-cenelec/"
     publisher: "CEN-CENELEC"
+    accessed: "2026-08-28"
   - title: "European Committee for Electrotechnical Standardization"
     url: "https://en.wikipedia.org/wiki/European_Committee_for_Electrotechnical_Standardization"
     publisher: "Wikipedia"
+    accessed: "2026-08-28"
 ---
 
 # CENELEC
