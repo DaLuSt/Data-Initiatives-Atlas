@@ -30,6 +30,11 @@ summary: >
   previous_version (no check); the generator catches an unknown country code and a
   dangling successor or previous_version but the validators do not (CI runs both);
   pages.yml runs fewer tests than validate.yml.
+  These four leftovers were then filed as roadmap issues: #526 (repair
+  tools/test_ui.mjs and run a smoke subset in CI, 2026.12), #527 (the two
+  successors that do not link back, EU-PSI-DIRECTIVE and NL-DATA-AGENDA-OVERHEID,
+  2026.11), #528 (move the three generator-only checks into the validators,
+  2027.01) and #529 (make pages.yml run what validate.yml runs, 2026.11).
 prs:
   - number: 523
     title: "Site: a mistyped or truncated address no longer reports \"graph could not be loaded\""

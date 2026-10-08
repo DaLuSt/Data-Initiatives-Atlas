@@ -211,6 +211,8 @@ last_merged_prs:
     summary: "Site bug fix from a QA sweep: a mistyped or truncated address (#%, #a%E0%A4) no longer shows 'The graph could not be loaded' (decodeURIComponent threw; now a safeDecode fallback); source links accept only http(s); four tests under Node"
   - number: 524
     summary: "Validation: fixed a crash on an impossible date; new errors for non-ISO or future dates, end before start, a reversed relationship window, duplicate relationships, national level with no country, and a primary-source entity with neither an accessed date nor all sources on a confirmed domain; warnings for duplicate source URLs and superseded with no successor; validation/test_validators.py (25 tests) runs in CI; EU-CEN and EU-CENELEC got the accessed dates their notes state"
+  - number: 525
+    summary: "Housekeeping: recorded #522, #523 and #524 and the site QA and checks audit in state.yaml and run-history"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
