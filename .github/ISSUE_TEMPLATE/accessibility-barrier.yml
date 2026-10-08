@@ -1,0 +1,46 @@
+name: Accessibility barrier
+description: Something on the site, or in this repository, stops you from reading, navigating or using it
+title: "Accessibility: "
+labels: ["accessibility"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for telling us. You do not need to know the cause or the fix, and
+        you do not need to mention a standard. The status of the site and what has
+        been checked is in `ACCESSIBILITY.md`.
+  - type: textarea
+    id: trying
+    attributes:
+      label: What were you trying to do?
+      placeholder: For example, "open the Netherlands entities as a table" or "read the detail panel for NL-UAVG".
+    validations:
+      required: true
+  - type: textarea
+    id: happened
+    attributes:
+      label: What happened instead?
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: Address of the page
+      description: The address in your browser, including everything after the `#` if there is one ("Copy link to this view" in the footer gives it).
+      placeholder: https://dalust.github.io/Data-Initiatives-Atlas/
+    validations:
+      required: false
+  - type: input
+    id: setup
+    attributes:
+      label: Browser, device and any assistive technology
+      description: For example, "Firefox on Windows with NVDA", "Safari on iPhone with VoiceOver", "keyboard only", "200 % zoom".
+    validations:
+      required: false
+  - type: textarea
+    id: idea
+    attributes:
+      label: Anything that would help
+      description: A change you would suggest, or a way you work around it today.
+    validations:
+      required: false

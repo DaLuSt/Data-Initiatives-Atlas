@@ -270,8 +270,14 @@ in. In a dense view the status line tells you so.
 - A skip link, a single `h1`, labelled controls, live regions for status,
   and visible focus outlines.
 - Light and dark themes follow the operating system setting.
-- The canvas itself is not keyboard-traversable. That is a real limitation:
-  the List view exists so the graph is never the only way in.
+- On the graph, once it has focus, the arrow keys move between entities (in the
+  List view's alphabetical order) and <kbd>Enter</kbd> opens the one in focus. The
+  "Skip to content" link moves focus to the main area of the view you are in, so you
+  do not have to tab through the filters first.
+- The drawing itself (layout and lines) is not conveyed to a screen reader; the List
+  view exists so the graph is never the only way in.
+- `ACCESSIBILITY.md` at the top of the repository is the full statement: what has
+  been checked, the known limits and how to report a barrier.
 
 ---
 
