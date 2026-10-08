@@ -1,0 +1,28 @@
+date: "2026-10-08"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  The second data release, and the first one the pipeline made end to end.
+  The weekly release workflow was started by hand (the scheduled run was due
+  Monday 2026-10-12) and opened PR #517; the Actions setting that lets workflows
+  open pull requests works. The changelog filed #465 and #466 (rank-basis and
+  fetch-tool notes) under Schema because tools/release.py counts
+  metadata/rank-basis.md as a schema file; at the owner's request they were moved
+  under Data in the pull request, which also ran CI because the move was pushed
+  with a user credential (pushes by the workflow's own token do not). Merging
+  made the tag data-2026.10.2, the GitHub Release and issue #518, the first
+  LinkedIn draft; the publish workflow succeeded.
+  The draft listed internal roadmap titles ("Reconcile progress/backlog.md…") and
+  "…and 23 more". #518 was rewritten by hand, and PR #519 changed the rule: a
+  Highlights section wins; otherwise Site and features, Data and Schema items
+  (never Tooling, Documentation, Housekeeping), roadmap items only to fill a
+  short list. Not changed: the classification of metadata/rank-basis.md as a
+  schema file (a pull request touching it is still filed under Schema in the
+  changelog; the Highlights section avoids the problem in the post but not in the
+  changelog).
+prs:
+  - number: 517
+    title: "Release data 2026.10.2"
+  - number: 519
+    title: "LinkedIn draft: list Site, Data and Schema changes only, and use a Highlights section when there is one"
+outcome: merged
+entity_count_after: 745
