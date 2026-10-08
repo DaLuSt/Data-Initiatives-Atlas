@@ -181,6 +181,10 @@ last_merged_prs:
     summary: "Housekeeping: recorded #469 and #484 in state.yaml and run-history"
   - number: 486
     summary: "English names, third pass (roadmap #446): 26 more name_en values from the bodies' own English sites and official or Lovdata translations, each cited in sources; 218 entities now have one; the fetch tool gets 503 from gesetze-im-internet.de but curl with /index.html and an identifying User-Agent reads it (row #233)"
+  - number: 487
+    summary: "Housekeeping: recorded #485 and #486 in state.yaml and run-history"
+  - number: 488
+    summary: "Roadmap board sync: tools/project_board.py and the project-board workflow keep the Project board in step with the roadmap issues (adds missing issues, Status Done on close, Start/Target date from the milestone); first real run on 2026-10-08 added 4 closed issues and set dates on 23, a second run changed nothing"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
