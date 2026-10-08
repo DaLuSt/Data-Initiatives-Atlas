@@ -106,6 +106,12 @@
   var css = function (name) {
     return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
   };
+  /** A link target from the data is used only if it is an http(s) address.
+   *  The validators already require this of every source URL; checking again
+   *  here means a bad value could never become a `javascript:` link. */
+  function safeHref(u) {
+    return /^https?:\/\//i.test(String(u || "")) ? String(u) : "";
+  }
   function esc(s) {
     return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
@@ -1675,7 +1681,7 @@
     if (d.sources && d.sources.length) {
       h.push(sec("Sources", "<ul>" + d.sources.map(function (s) {
         var label = esc(s.title || s.url || "Source");
-        var body = s.url ? '<a href="' + esc(s.url) + '" rel="noopener nofollow">' + label + "</a>" : label;
+        var body = safeHref(s.url) ? '<a href="' + esc(safeHref(s.url)) + '" rel="noopener nofollow">' + label + "</a>" : label;
         return "<li>" + body + (s.publisher ? ' <span class="rel-dir">— ' + esc(s.publisher) + "</span>" : "") + "</li>";
       }).join("") + "</ul>"));
     }
@@ -2428,8 +2434,16 @@
     }
   }
 
+  /** decodeURIComponent throws on a stray or truncated percent escape ("#%",
+   *  "#a%E0%A4"), which a mistyped or cut-off shared link can contain. Fall back
+   *  to the text as typed so the page still opens, instead of reporting that the
+   *  graph could not be loaded. */
+  function safeDecode(s) {
+    try { return decodeURIComponent(s); } catch (e) { return s; }
+  }
+
   function applyRoute() {
-    var raw = decodeURIComponent(location.hash.slice(1));
+    var raw = safeDecode(location.hash.slice(1));
     if (!raw) { refresh(); return; }
     if (raw.indexOf("=") < 0) {
       // The original plain form.

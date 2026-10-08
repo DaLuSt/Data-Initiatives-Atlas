@@ -1071,5 +1071,47 @@ class TestDetailPanel(unittest.TestCase):
         self.assertGreater(hits, 0)
 
 
+class TestAddressAndLinkRobustness(unittest.TestCase):
+    """A mistyped link must not break the page, and a data value must not become a script link.
+    The two functions are cut out of site/app.js and run under Node."""
+
+    APP = Path(__file__).resolve().parent.parent / "site" / "app.js"
+
+    def _run(self, names, call):
+        import re
+        import shutil
+        import subprocess
+        node = shutil.which("node")
+        if not node:
+            self.skipTest("node is not installed")
+        text = self.APP.read_text(encoding="utf-8")
+        parts = []
+        for name in names:
+            m = re.search(r"  function %s\([^)]*\) \{.*?\n  \}\n" % name, text, re.S)
+            self.assertIsNotNone(m, name)
+            parts.append(m.group(0))
+        script = "\n".join(parts) + "\nprocess.stdout.write(JSON.stringify(%s));" % call
+        out = subprocess.run([node, "-e", script], capture_output=True, check=True)
+        return json.loads(out.stdout.decode("utf-8"))
+
+    def test_a_broken_percent_escape_does_not_throw(self):
+        got = self._run(["safeDecode"], '["%", "a%E0%A4", "NL-%", "%41%42", "q=%E0%A4%A"].map(safeDecode)')
+        self.assertEqual(got, ["%", "a%E0%A4", "NL-%", "AB", "q=%E0%A4%A"])
+
+    def test_the_address_is_never_decoded_bare(self):
+        import re
+        text = self.APP.read_text(encoding="utf-8")
+        self.assertIsNone(re.search(r"decodeURIComponent\(location\.hash", text))
+        self.assertIn("safeDecode(location.hash", text)
+
+    def test_only_http_and_https_become_links(self):
+        got = self._run(["safeHref"], '["https://a.example/x", "HTTP://a.example", "javascript:alert(1)", "data:text/html,x", "//a.example", "", null, "ftp://a"].map(safeHref)')
+        self.assertEqual(got, ["https://a.example/x", "HTTP://a.example", "", "", "", "", "", ""])
+
+    def test_source_links_go_through_the_guard(self):
+        text = self.APP.read_text(encoding="utf-8")
+        self.assertIn("safeHref(s.url)", text)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
