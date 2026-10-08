@@ -24,7 +24,7 @@ verification: primary-source
 
 start_date: 2016-10-07
 end_date: null
-last_verified: "2026-09-18"
+last_verified: "2026-10-08"
 previous_version: null
 successor: null
 
@@ -45,6 +45,13 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: implements-requirement-from
+    target: EU-OPEN-DATA-DIRECTIVE
+    source: fact
+    evidence: "Confirmed by reading EUR-Lex's register of national implementing measures for Directive (EU) 2019/1024 directly (2026-10-08): France is listed with 52 notified measures, among them 'Article 16 de la LOI n° 2016-1321 du 7 octobre 2016 pour une République numérique' (published in the Journal officiel on 2016-10-08, NIM:202101334), alongside articles of the Code des relations entre le public et l'administration, the Code de la recherche and the Code de l'éducation. All of the notified measures read were adopted before the directive; the register lists no standalone act of 2019 or later. This edge therefore records that France itself notified part of this earlier act as implementing the directive, not that the act was made to transpose it; the act's other provisions are not covered. confidence medium because only the register's titles were read, not Article 16's text."
+    confidence: medium
+    valid_from: null
+    valid_until: null
   - type: references
     target: EU-PSI-DIRECTIVE
     source: fact
@@ -54,6 +61,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Directive (EU) 2019/1024 — national implementing measures (France)"
+    url: "https://eur-lex.europa.eu/legal-content/FR/NIM/?uri=CELEX:32019L1024"
+    publisher: "EUR-Lex (Publications Office of the European Union)"
+    accessed: "2026-10-08"
   - title: "Chronologie juridique de l'open data"
     url: "https://guides.data.gouv.fr/guides/guide-juridique/chronologie-de-lopen-data"
     publisher: "data.gouv.fr"
@@ -96,47 +107,35 @@ confirmed by reading decideo.fr's commentary directly (2026-08-26).
 net neutrality and digital rights — and only its open-data provisions are
 recorded here, because only those were sourced.
 
-## ⚠ This is not France's Open Data Directive transposition
+## France's Open Data Directive transposition: existing law, notified
 
-The same trap Belgium sprang, and it is worth stating in the same terms.
+- This act is from **2016**; [[EU-OPEN-DATA-DIRECTIVE]] is Directive (EU)
+  **2019**/1024. A 2016 act was not made to transpose a 2019 directive.
+- France passed **no standalone Open Data Directive instrument**. (An earlier
+  belief that a 2021 ordinance existed was wrong: the ordinance that fits the
+  description transposes Directive 2019/790 on copyright; see
+  [[FR-LOI-VALTER]].) Its re-use regime was already in place and sits in the
+  Code des relations entre le public et l'administration.
+- EUR-Lex's register of national implementing measures for the directive,
+  read directly on 2026-10-08, lists **France with 52 notified measures**: 
+  articles of that code, of the Code de la recherche and the Code de
+  l'éducation, an article of the loi n° 2020-1674, and **Article 16 of this
+  act**. So France itself presented part of this act as implementing the
+  directive. The Atlas records that as `implements-requirement-from`,
+  `confidence: medium`, and says in the edge what it does and does not mean.
+- The same register shows no French act of 2019 or later, which agrees with the
+  finding in [[EU-OPEN-DATA-DIRECTIVE]] that France did nothing new.
 
-- This act is from **2016**.
-- [[EU-OPEN-DATA-DIRECTIVE]] is Directive (EU) **2019**/1024.
-
-A 2016 act cannot transpose a 2019 directive, so **no
-`implements-requirement-from` is asserted**. The Etalab and data.gouv.fr
-open-data chronologies place this act in a lineage that runs from the 2003
-PSI Directive (2003/98/EC) — **stale as of 2026-09-13, now fixed**: it is
-now an Atlas entity, [[EU-PSI-DIRECTIVE]] (added since this page was
-last touched) — rather than from the Open Data Directive. The chronology
-sources describe a lineage, not a stated transposition, so the edge below
-is recorded as `references` rather than `implements-requirement-from`.
-
-France's actual transposition of Directive (EU) 2019/1024 is understood to
-be a 2021 ordinance, but **no source read identifies it**, so it is not
-recorded. That leaves the four-country picture:
-
-| Country | Open Data Directive transposition |
-|---|---|
-| Netherlands | [[NL-WHO]] — recorded |
-| Germany | [[DE-DNG]] — recorded |
-| Belgium | **not identified** |
-| France | **not identified** |
-| Spain | [[ES-LEY-37-2007]] — recorded, as amended in 2021 |
-
-Two of five countries now have a visible gap here, both for the same
-reason: each has a well-known, easily-found *earlier* open data act that
-looks like the answer and is not. The Atlas records the earlier acts and
-declines to mislabel them.
-
-Both gaps, and the unmodelled PSI Directive that would give these acts
-somewhere to point, are in `discovery/research-queue.md`.
+The earlier lineage edge to [[EU-PSI-DIRECTIVE]] stays: the Etalab and
+data.gouv.fr chronologies place this act in a line that runs from the 2003 PSI
+Directive, and they describe a lineage, not a stated transposition.
 
 ## Relationships
 
 - `applies-in` [[FR]] — anchor edge.
-- `references` [[EU-PSI-DIRECTIVE]] — lineage, not transposition; see
-  above.
+- `implements-requirement-from` [[EU-OPEN-DATA-DIRECTIVE]] — France's own
+  notification of Article 16 to the Commission; see above.
+- `references` [[EU-PSI-DIRECTIVE]] — lineage, not transposition.
 
 **No `implements-requirement-from` is asserted** to
 [[EU-OPEN-DATA-DIRECTIVE]] — `related_entities` records that association
