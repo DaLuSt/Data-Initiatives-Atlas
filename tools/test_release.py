@@ -161,6 +161,78 @@ class TestEntry(unittest.TestCase):
         self.assertIn(release.END_MARK, text)
 
 
+class TestLinkedinDraft(unittest.TestCase):
+    ENTRY = (
+        "**Schema 1.1.0** (changed from 1.0.0)\n\n"
+        "In the Atlas at this release: 745 entities (+5), 1,576 typed relationships (+5), 58 countries (+0).\n\n"
+        "### Data\n\n- Add three UK competent authorities (#491)\n- France and the Open Data Directive (#490)\n\n"
+        "### Tooling\n\n- Board sync (#488)\n\n"
+        "### Roadmap items completed\n\n- English names for the records still without one (#446)\n"
+    )
+
+    def draft(self, entry=None):
+        return release.linkedin_draft(entry or self.ENTRY, "2026.11.1")
+
+    def test_it_names_the_release_and_links_the_site_and_the_notes(self):
+        d = self.draft()
+        self.assertIn("data release 2026.11.1", d)
+        self.assertIn("https://dalust.github.io/Data-Initiatives-Atlas/", d)
+        self.assertIn("/releases/tag/data-2026.11.1", d)
+
+    def test_it_carries_the_counts_from_the_entry(self):
+        self.assertIn("745 entities (+5), 1,576 typed relationships (+5), 58 countries (+0)", self.draft())
+
+    def test_pull_request_numbers_are_dropped(self):
+        d = self.draft()
+        self.assertNotRegex(d, r"\(#\d+\)")
+        self.assertIn("• France and the Open Data Directive", d)
+
+    def test_completed_roadmap_items_come_first(self):
+        bullets = [l for l in self.draft().splitlines() if l.startswith("•")]
+        self.assertTrue(bullets[0].startswith("• English names"))
+
+    def test_there_is_no_markdown(self):
+        d = self.draft()
+        for mark in ("**", "###", "`", "]("):
+            self.assertNotIn(mark, d)
+
+    def test_a_long_list_is_cut_and_says_so(self):
+        entry = "In the Atlas at this release: 1 entities.\n\n### Data\n\n" + "".join(
+            f"- Item number {n} (#{n})\n" for n in range(1, 10))
+        d = self.draft(entry)
+        self.assertEqual(len([l for l in d.splitlines() if l.startswith("•")]), release.LINKEDIN_ITEMS)
+        self.assertIn("…and 5 more in the release notes.", d)
+
+    def test_a_long_item_is_shortened(self):
+        entry = "### Data\n\n- " + "x" * 400 + " (#1)\n"
+        line = [l for l in self.draft(entry).splitlines() if l.startswith("•")][0]
+        self.assertLessEqual(len(line), release.LINKEDIN_ITEM_LIMIT + 3)
+        self.assertTrue(line.endswith("…"))
+
+    def test_the_baseline_release_is_called_the_first(self):
+        entry = ("In the Atlas at this release: 740 entities.\n\nThis is the first tagged release. The changes "
+                 "before it are not listed here: they are in the git history.\n")
+        d = self.draft(entry)
+        self.assertIn("first tagged release of the Atlas", d)
+        self.assertNotIn("• ", d)
+
+    def test_a_release_with_nothing_listed_still_makes_a_post(self):
+        d = self.draft("**Schema 1.0.0**\n")
+        self.assertIn("data release 2026.11.1", d)
+        self.assertNotIn("What changed", d)
+
+    def test_it_stays_inside_linkedins_limit(self):
+        entry = "### Data\n\n" + "".join(f"- {'y' * 200} (#{n})\n" for n in range(500))
+        self.assertLessEqual(len(self.draft(entry)), release.LINKEDIN_LIMIT)
+
+    def test_the_real_changelog_entry_makes_a_draft(self):
+        text = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+        entry = release.entry_for(text, "2026.10.1")
+        d = release.linkedin_draft(entry, "2026.10.1")
+        self.assertIn("740 entities", d)
+        self.assertIn("first tagged release", d)
+
+
 class TestSchemaRule(unittest.TestCase):
     def doc(self, version, types=("act",)):
         return json.dumps({"schema_version": version, "types": list(types)})
@@ -279,7 +351,7 @@ class TestWorkflows(unittest.TestCase):
             text = (self.WF / name).read_text(encoding="utf-8")
             yaml.safe_load(text)
             for sub in re.findall(r"tools/release\.py (\S+)", text):
-                self.assertIn(sub, {"plan", "prepare", "notes", "tags", "check-schema"}, f"{name}: {sub}")
+                self.assertIn(sub, {"plan", "prepare", "notes", "tags", "check-schema", "linkedin-draft"}, f"{name}: {sub}")
 
     def test_the_release_workflow_never_publishes(self):
         text = (self.WF / "release-pr.yml").read_text(encoding="utf-8")
@@ -311,6 +383,18 @@ class TestWorkflows(unittest.TestCase):
             self.assertTrue((REPO_ROOT / ref).exists(), ref)
             self.assertIn(ref, (REPO_ROOT / ".agent" / "operating-model.md").read_text(encoding="utf-8") +
                           (REPO_ROOT / "CONTRIBUTING.md").read_text(encoding="utf-8"))
+
+    def test_the_linkedin_step_only_opens_an_issue_and_never_posts(self):
+        text = (self.WF / "release-publish.yml").read_text(encoding="utf-8")
+        self.assertIn("tools/release.py linkedin-draft", text)
+        self.assertIn("gh issue create", text)
+        self.assertNotIn("api.linkedin.com", text)
+        self.assertNotRegex(text, r"secrets\.\w*LINKEDIN")
+        self.assertRegex(text, r"issues:\s*write")
+
+    def test_the_linkedin_step_is_idempotent(self):
+        text = (self.WF / "release-publish.yml").read_text(encoding="utf-8")
+        self.assertIn('grep -Fxq "$title"', text)
 
     def test_ci_checks_the_schema_version_on_pull_requests(self):
         text = (self.WF / "validate.yml").read_text(encoding="utf-8")

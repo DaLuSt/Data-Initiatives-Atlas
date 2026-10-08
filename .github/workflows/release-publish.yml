@@ -3,8 +3,10 @@ name: Publish release
 # Runs when a release pull request is merged (it changes metadata/version.yaml
 # on main). Creates the tag data-YYYY.MM.N and a GitHub Release whose notes are
 # the CHANGELOG entry, plus the tag schema-X.Y.Z the first time that schema
-# version is released. Idempotent: a tag or release that exists is left alone,
-# so re-running is safe. Policy: metadata/versioning.md.
+# version is released, and opens an issue holding a plain-text LinkedIn post
+# draft for the owner to read and post by hand (nothing is posted automatically).
+# Idempotent: a tag, release or issue that exists is left alone, so re-running
+# is safe. Policy: metadata/versioning.md.
 on:
   push:
     branches: [main]
@@ -14,6 +16,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: release-publish
@@ -58,3 +61,24 @@ jobs:
             gh release create "$tag" --verify-tag --latest \
               --title "Data release $version" --notes-file notes.md
           fi
+
+      - name: Open an issue with a LinkedIn post draft
+        run: |
+          version=$(python -c "import yaml; print(yaml.safe_load(open('metadata/version.yaml'))['data_release'])")
+          title="Post data release $version on LinkedIn"
+          if gh issue list --state all --limit 200 --json title --jq '.[].title' | grep -Fxq "$title"; then
+            echo "Issue '$title' already exists."
+            exit 0
+          fi
+          python tools/release.py linkedin-draft "$version" > post.txt
+          gh label create linkedin --color 0a66c2 --description "A LinkedIn post to publish by hand" 2>/dev/null || true
+          {
+            echo "A draft for the LinkedIn post about this release. Read it, edit it if you like, copy it into LinkedIn, then close this issue. Nothing is posted automatically."
+            echo
+            echo '```text'
+            cat post.txt
+            echo '```'
+            echo
+            echo "Release: https://github.com/${{ github.repository }}/releases/tag/data-$version"
+          } > issue.md
+          gh issue create --title "$title" --body-file issue.md --label linkedin

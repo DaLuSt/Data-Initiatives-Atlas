@@ -53,6 +53,13 @@ since the previous release**.
    (`.github/workflows/release-publish.yml`): the tag `data-2026.10.1` and a
    GitHub Release whose notes are the CHANGELOG entry, plus the tag
    `schema-1.0.0` the first time that schema version is released.
+4. **The same workflow opens an issue with a LinkedIn post draft** (label
+   `linkedin`, title "Post data release X on LinkedIn"): plain text built from the
+   CHANGELOG entry by `python tools/release.py linkedin-draft X`, with the counts,
+   up to four changes (completed roadmap items first) and links to the site and the
+   release notes. A person reads it, edits it, posts it by hand and closes the
+   issue. Nothing is sent to LinkedIn by the repository; re-running the workflow
+   does not open a second issue.
 
 The first release is a baseline: it records the counts and lists no pull requests,
 because the history before it is in git and in `.agent/run-history/`.
