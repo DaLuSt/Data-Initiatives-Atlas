@@ -17,6 +17,7 @@ schema-version change. It never talks to GitHub: the workflows
     python tools/release.py prepare              # write version.yaml, CHANGELOG.md, state.yaml
     python tools/release.py notes 2026.10.1      # the CHANGELOG entry, for the GitHub Release
     python tools/release.py tags                 # tags the current version.yaml needs
+    python tools/release.py linkedin-draft 2026.10.1  # a plain-text post draft for a release
     python tools/release.py check-schema         # CI: schema changed => schema_version changed
 
 Exit codes: 0 = ok, 1 = a check failed or there is nothing to release.
@@ -66,6 +67,12 @@ TOOLING_DIRS = ("tools/", "validation/", ".github/")
 DOC_FILES = ("README.md", "CONTRIBUTING.md", "SECURITY.md", "CODE_OF_CONDUCT.md",
              "AGENTS.md", "CHANGELOG.md")
 HOUSEKEEPING_DIRS = (".agent/", "discovery/", "progress/")
+
+SITE_URL = "https://dalust.github.io/Data-Initiatives-Atlas/"
+RELEASES_URL = "https://github.com/DaLuSt/Data-Initiatives-Atlas/releases/tag/"
+LINKEDIN_LIMIT = 3000  # characters LinkedIn accepts in a post
+LINKEDIN_ITEM_LIMIT = 150
+LINKEDIN_ITEMS = 4
 
 # Highest first: a pull request is filed under the first category it touches.
 CATEGORIES = (
@@ -206,6 +213,55 @@ def render_entry(*, version: str, schema: str, prev_schema: str | None, released
             lines.append(f"- {i['title']} (#{i['number']})")
         lines.append("")
     return "\n".join(lines).rstrip("\n") + "\n"
+
+
+def linkedin_draft(entry: str, version: str) -> str:
+    """A plain-text LinkedIn post for one release, built from its CHANGELOG entry.
+
+    LinkedIn does not render Markdown, so the text has none. Pull request numbers
+    are dropped (they mean nothing outside GitHub); at most LINKEDIN_ITEMS items
+    are listed, completed roadmap items first, and the rest are left to the
+    release notes. The draft is for a person to read and post: nothing here
+    talks to LinkedIn.
+    """
+    counts = ""
+    m = re.search(r"^In the Atlas at this release: (.*)\.\s*$", entry, re.M)
+    if m:
+        counts = m.group(1)
+
+    roadmap: list[str] = []
+    other: list[str] = []
+    section = ""
+    for line in entry.splitlines():
+        if line.startswith("### "):
+            section = line[4:].strip()
+        elif line.startswith("- "):
+            text = PR_RE.sub("", line[2:]).strip()
+            if len(text) > LINKEDIN_ITEM_LIMIT:
+                text = text[:LINKEDIN_ITEM_LIMIT - 1].rstrip() + "…"
+            (roadmap if section == "Roadmap items completed" else other).append(text)
+    items = roadmap + [t for t in other if t not in roadmap]
+    shown = items[:LINKEDIN_ITEMS]
+
+    out = [f"Data Initiatives Atlas: data release {version}", ""]
+    if counts:
+        out += [f"In the Atlas now: {counts}.", ""]
+    if "This is the first tagged release" in entry:
+        out += ["This is the first tagged release of the Atlas.", ""]
+    if shown:
+        out.append("What changed:")
+        out += [f"• {t}" for t in shown]
+        if len(items) > len(shown):
+            out.append(f"…and {len(items) - len(shown)} more in the release notes.")
+        out.append("")
+    out += [f"Explore the Atlas: {SITE_URL}",
+            f"Release notes: {RELEASES_URL}{DATA_TAG_PREFIX}{version}",
+            "",
+            "#opendata #datagovernance #digitalgovernment"]
+    text = "\n".join(out) + "\n"
+    if len(text) > LINKEDIN_LIMIT:  # cannot happen with the limits above; fail loudly if it does
+        raise ValueError(f"draft is {len(text)} characters, over LinkedIn's {LINKEDIN_LIMIT}")
+    return text
 
 
 def insert_entry(changelog: str, entry: str) -> str:
@@ -385,6 +441,15 @@ def cmd_notes(a) -> int:
     return 0
 
 
+def cmd_linkedin_draft(a) -> int:
+    body = entry_for(CHANGELOG_PATH.read_text(encoding="utf-8"), a.version)
+    if body is None:
+        print(f"no CHANGELOG entry for {a.version}", file=sys.stderr)
+        return 1
+    print(linkedin_draft(body, a.version), end="")
+    return 0
+
+
 def cmd_tags(_a) -> int:
     v = read_yaml(VERSION_PATH)
     if not v:
@@ -430,11 +495,13 @@ def main() -> int:
     sp = sub.add_parser("notes")
     sp.add_argument("version")
     sub.add_parser("tags")
+    sp = sub.add_parser("linkedin-draft")
+    sp.add_argument("version")
     sp = sub.add_parser("check-schema")
     sp.add_argument("--base-ref", help="git ref to compare schema.json against, e.g. origin/main")
     a = ap.parse_args()
     return {"plan": cmd_plan, "prepare": cmd_prepare, "notes": cmd_notes,
-            "tags": cmd_tags, "check-schema": cmd_check_schema}[a.cmd](a)
+            "linkedin-draft": cmd_linkedin_draft, "tags": cmd_tags, "check-schema": cmd_check_schema}[a.cmd](a)
 
 
 if __name__ == "__main__":
