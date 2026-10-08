@@ -28,6 +28,7 @@ permissions:
   contents: write
   pull-requests: write
   issues: read
+  actions: write   # to start validate.yml on the release branch (see the last step)
 
 concurrency:
   group: release-pr
@@ -113,10 +114,17 @@ jobs:
             echo
             echo "Merging this pull request tags \`data-$version\` and publishes the GitHub Release;"
             echo "see \`metadata/versioning.md\`. CI does not run on pull requests opened by a"
-            echo "workflow, so validation ran in the workflow that opened this one."
+            echo "workflow, so validation ran in the workflow that opened this one, and"
+            echo "that workflow also started the \`validate\` check on this branch (it appears"
+            echo "a minute after the pull request opens; \`main\` requires it)."
           } > pr-body.md
           if ! gh pr create --base main --head "$branch" --title "Release data $version" \
                  --body-file pr-body.md --label release; then
             echo "::error::Could not open the pull request. Enable 'Allow GitHub Actions to create and approve pull requests' (Settings > Actions > General), or open one from branch $branch."
             exit 1
           fi
+          # `main` requires the `validate` check, and a pull request opened with
+          # the workflow's own token does not trigger it (GitHub's recursion
+          # protection). A run started by hand does count: it reports `validate`
+          # on this branch's head commit, which is what the pull request waits for.
+          gh workflow run validate.yml --ref "$branch"

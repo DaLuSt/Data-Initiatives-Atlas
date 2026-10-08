@@ -464,6 +464,17 @@ class TestWorkflows(unittest.TestCase):
         shared = (REPO_ROOT / ".github" / "actions" / "checks" / "action.yml").read_text(encoding="utf-8")
         self.assertIn("test_release.py", shared)
 
+    def test_the_release_pr_gets_the_required_validate_check(self):
+        """main requires `validate`; a PR opened with GITHUB_TOKEN never triggers it,
+        so the release workflow must start it on the branch itself."""
+        rel = (self.WF / "release-pr.yml").read_text(encoding="utf-8")
+        self.assertIn("actions: write", rel)
+        self.assertIn('gh workflow run validate.yml --ref "$branch"', rel)
+        self.assertLess(rel.index("gh pr create"), rel.index("gh workflow run validate.yml"))
+        val = (self.WF / "validate.yml").read_text(encoding="utf-8")
+        self.assertIn("workflow_dispatch:", val)
+        self.assertRegex(val, r"(?m)^  validate:$")  # the job name main requires
+
     def test_pull_requests_and_deploys_run_the_same_checks(self):
         for name in ("validate.yml", "pages.yml"):
             text = (self.WF / name).read_text(encoding="utf-8")
