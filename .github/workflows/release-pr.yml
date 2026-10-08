@@ -107,6 +107,10 @@ jobs:
             cat release-notes.md
             echo
             echo "---"
+            echo "For the LinkedIn post draft that opens as an issue after the merge, you can add a"
+            echo "\`### Highlights\` section to the CHANGELOG entry (plain-language bullets, under the"
+            echo "counts line); without one the draft lists the Site, Data and Schema changes."
+            echo
             echo "Merging this pull request tags \`data-$version\` and publishes the GitHub Release;"
             echo "see \`metadata/versioning.md\`. CI does not run on pull requests opened by a"
             echo "workflow, so validation ran in the workflow that opened this one."
