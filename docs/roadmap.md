@@ -41,7 +41,8 @@ The [Project board](https://github.com/users/DaLuSt/projects/1) has four columns
 named *By release*. The board's built-in workflows move an issue to *Done*
 when it closes and add new `roadmap` issues to *Backlog*.
 
-It was set up by the owner on 2026-10-07 and made public. Setting one up is a few
+A workflow keeps it in step with the issues (next section). It was set up by
+the owner on 2026-10-07 and made public. Setting one up is a few
 minutes in the GitHub UI: Projects v2 can only be created through GitHub's
 GraphQL API or the web UI, and the agent's environment blocks GraphQL and every
 path outside this repository. The steps, for rebuilding it:
@@ -56,6 +57,44 @@ path outside this repository. The steps, for rebuilding it:
    paste `repo:DaLuSt/Data-Initiatives-Atlas label:roadmap is:open`, select all.
 5. *New view → Table*, group by *Milestone*, name it *By release*.
 6. Optionally make the board public and link it to the repository.
+
+### Automatic sync
+
+`.github/workflows/project-board.yml` runs `tools/project_board.py` whenever a
+`roadmap` issue is opened, closed, reopened, labelled, unlabelled or moved to
+another milestone, and every Monday as a safety net. One run:
+
+- adds every `roadmap` issue that is not on the board yet;
+- sets **Status** to *Done* for a closed issue, and to *Backlog* for an open one
+  that has no status; *Next* and *In Progress* are the owner's choices and are
+  never overwritten;
+- sets **Start date** (first day of the milestone's month) and **Target date**
+  (the milestone's due date), which is what the Roadmap (timeline) layout draws
+  bars from; an issue with no milestone keeps the dates it has;
+- creates the two date fields if the board lacks them.
+
+It never removes an item and never edits an issue. The agent cannot do this
+itself, because its environment blocks GraphQL; the workflow runs on GitHub's
+side.
+
+**One-time setup (owner).**
+
+1. Create a *classic* personal access token with the `project` scope only
+   (<https://github.com/settings/tokens>; a user-owned project cannot be edited
+   with the built-in `GITHUB_TOKEN` or a fine-grained token). Give it an expiry
+   and note the date: when it expires the workflow fails and the board stops
+   updating.
+2. Store it as a **repository secret** named `PROJECT_TOKEN` (repository
+   *Settings → Secrets and variables → Actions → New repository secret*), not in
+   the Claude environment.
+3. *Actions → Roadmap board → Run workflow* with *dry_run* ticked and read the
+   log. It lists what it would change and changes nothing.
+4. Run it again with *dry_run* unticked. After that, events keep it current.
+
+Until the secret exists the workflow succeeds and does nothing. Then, in the
+board, add a view with the *Roadmap* layout and set its start and end to
+**Start date** and **Target date**. Views are not available through the
+workflow's token.
 
 ## How an item gets done
 

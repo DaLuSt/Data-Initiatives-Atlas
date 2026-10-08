@@ -44,6 +44,12 @@ jobs:
       - name: Test the release tooling
         run: python tools/test_release.py
 
+      # The roadmap board sync (tools/project_board.py): the plan for each issue,
+      # an in-memory fake of GitHub's GraphQL API, and the workflow's safety
+      # properties. No network.
+      - name: Test the board sync
+        run: python tools/test_project_board.py
+
       # A change to the data model must come with a schema_version bump
       # (metadata/versioning.md). Compares schema.json with the base branch.
       - name: Check the schema version

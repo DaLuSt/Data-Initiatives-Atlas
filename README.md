@@ -323,6 +323,7 @@ data-initiatives-atlas/
 │       ├── pages.yml            # deploy, main only
 │       ├── release-pr.yml       # weekly release pull request
 │       ├── release-publish.yml  # tags and Release after merge
+│       ├── project-board.yml    # keeps the roadmap board in step
 │       └── autonomous-agent.yml # scheduled agent
 ├── initiatives/
 ├── legislation/
@@ -364,9 +365,11 @@ data-initiatives-atlas/
 ├── tools/              # generator, reverify, tests
 │   ├── build_graph.py
 │   ├── release.py      # versions, changelog, release PR
+│   ├── project_board.py # roadmap board sync (run by a workflow)
 │   ├── reverify.py     # re-verification pass
 │   ├── source_hosts.py # egress allowlist
 │   ├── test_build_graph.py
+│   ├── test_project_board.py
 │   ├── test_release.py
 │   ├── test_reverify.py
 │   └── test_ui.mjs
