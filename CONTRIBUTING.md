@@ -170,6 +170,10 @@ a batch:
   rest is convention until these are set): require a pull request before
   merging; require the `validate` status check; allow squash merging only;
   delete head branches automatically after merge.
+- **The pull request template** (`.github/pull_request_template.md`) asks for the
+  roadmap issue, the sources and the checks. **Dependabot** opens a weekly pull
+  request for newer GitHub Actions and for the validation's Python dependency
+  (`.github/dependabot.yml`); review it like any other change.
 - **Keep branches short.** If a branch has fallen behind `main`, merge `main`
   into it (no rebase of a branch someone else may have pulled).
 
