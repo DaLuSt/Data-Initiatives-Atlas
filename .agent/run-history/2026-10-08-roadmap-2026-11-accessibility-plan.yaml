@@ -1,0 +1,41 @@
+date: "2026-10-08"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap items for 2026.11, the accessibility statement, and a plan of what
+  is aimed at which release.
+  1. #531 (closes #493 Node 24, #529 same checks on deploy, part of #527
+  successors, #494 data-correction form). The deploy workflow changed, so merging
+  it deployed the site with configure-pages v6, upload-pages-artifact v5 and
+  deploy-pages v5: the deploy succeeded (the deploy for the first merge was
+  cancelled by the second, as the workflow is built to do). GitHub closed only #493
+  from the single "Closes" keyword; #494 and #529 were closed by hand. #527 stays
+  open for EU-EIDAS2, which names EU-EIDAS as previous_version while EU-EIDAS has
+  no successor (an amending act, a modelling question).
+  2. #532 ACCESSIBILITY.md and an accessibility-barrier form. Checking the facts
+  with a keyboard run found that "Skip to content" targeted a wrapper holding the
+  157 filter controls and left focus on the body; fixed. docs/graph.md wrongly said
+  the canvas was not keyboard-traversable; corrected. The statement claims no
+  conformance and says what was not checked (no screen reader, only Chromium, no
+  contrast measurement); the 14-day reply promise and the GitHub-profile fallback
+  contact are the owner's to confirm. The owner reported the board's Roadmap view
+  (Start date to Target date) as set up; not verifiable from here.
+  3. The whole of discovery/ was read: 73 open rows in unresolved.md, one reference
+  measurement and one open lead in candidates.md, and nothing in the research
+  queue or the duplicates file. Each row was mapped to a roadmap item or to a
+  recorded decline (docs/roadmap.md, "Where each open question in discovery/
+  lives"). Five issues were added for rows that had none: #533 (founding-six date),
+  #534 (eIDAS cluster), #535 (Germany's three open questions), #536 (Dutch
+  base-registry edges), #537 (EU-UN links). Comments on #457 and #499 list the rows
+  that belong to them (#53, #54, #92 and #19). Six issues with no milestone were
+  given one: #459 to 2026.11, #457 to 2027.02, #460 to 2027.03, #458 to 2027.04,
+  #461 to 2027.06, #451 (umbrella for the country groups) to 2028.02. docs/roadmap.md
+  now has a month-by-month table of the plan. The placements are approximate and
+  the owner's to move.
+  Not verified: how the board displays any of this.
+prs:
+  - number: 531
+    title: "Roadmap 2026.11: Node 24 actions, shared checks for PRs and deploys, succession links, data-correction form"
+  - number: 532
+    title: "Add ACCESSIBILITY.md and a barrier-report form; fix the skip link"
+outcome: merged
+entity_count_after: 745

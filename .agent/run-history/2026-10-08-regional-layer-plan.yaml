@@ -1,0 +1,26 @@
+date: "2026-10-08"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Owner asked for more regions on the roadmap, the same as for countries, using
+  the UN definition of region. The UN Statistics Division's M49 table
+  (https://unstats.un.org/unsd/methodology/m49/overview/) was read on 2026-10-08
+  and parsed: 5 regions, 17 sub-regions, with Sub-Saharan Africa and Latin America
+  and the Caribbean split into intermediate regions; the finest level is 22
+  geographic units (plus Antarctica, which has no issue). Umbrella #539 and one
+  sub-issue per unit (#540-#561, label "regions", milestones 2027.01-2027.11, two per
+  release) were created. Each issue lists the countries and areas M49 places there
+  and how many already have an anchor (Europe: W 9/9, E 10/10, S 15/16, N 10/16;
+  Africa and Asia and Oceania nearly none), and names leads for regional bodies.
+  The leads are from general knowledge and are marked unverified in the issues.
+  Interpretation chosen: the Atlas's "region" type is a bloc (ontology), so the
+  issues are about the regional bodies and instruments of each sub-region, not
+  about anchoring the M49 areas themselves; this is stated in #539 as a decision
+  for the owner, together with whether country anchors should carry their M49
+  region (a separate small schema and site change). Europe goes first because
+  most of its countries already have anchors. docs/roadmap.md has the regions in
+  the month table. Placements are approximate and the owner's to move.
+  Not verified: that the bodies named as leads publish data-governance instruments.
+prs:
+  - number: 538
+    title: "Housekeeping and the release plan"
+outcome: pending merge (added to PR 538)
