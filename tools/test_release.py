@@ -66,6 +66,16 @@ class TestClassify(unittest.TestCase):
     def test_ontology_counts_as_schema(self):
         self.assertEqual(release.classify(["metadata/ontology.md"]), "schema")
 
+    def test_the_rank_basis_is_data_not_schema(self):
+        # it documents how each country's `rank` values were read; the model is unchanged
+        self.assertEqual(release.classify(["metadata/rank-basis.md"]), "data")
+        self.assertEqual(release.classify(["metadata/rank-basis.md", "docs/x.md", ".agent/state.yaml"]), "data")
+
+    def test_the_rank_basis_does_not_outrank_a_site_change_or_a_real_schema_change(self):
+        self.assertEqual(release.classify(["metadata/rank-basis.md", "site/app.js"]), "site")
+        self.assertEqual(release.classify(["metadata/rank-basis.md", "metadata/schema.json"]), "schema")
+        self.assertEqual(release.classify(["metadata/rank-basis.md", "metadata/ontology.md"]), "schema")
+
     def test_every_data_folder_in_the_schema_is_a_data_dir(self):
         schema = json.loads((REPO_ROOT / "metadata" / "schema.json").read_text(encoding="utf-8"))
         for folder in set(schema["type_folder_map"].values()):
