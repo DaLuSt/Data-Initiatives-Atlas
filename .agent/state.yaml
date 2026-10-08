@@ -219,6 +219,8 @@ last_merged_prs:
     summary: "Roadmap 2026.11: Node 24 versions of every action (the Pages deploy ran on them and succeeded); .github/actions/checks is the one set of checks used by validate.yml and pages.yml, with a test that every test file is in it; EU-OPEN-DATA-DIRECTIVE previous_version EU-PSI-DIRECTIVE and a warning when a successor/previous_version is not mirrored; a data-correction issue form"
   - number: 532
     summary: "ACCESSIBILITY.md (commitment, environments, known limits, how to report a barrier; WCAG 2.2 AA as the target, no conformance claim) and an accessibility-barrier issue form; the 'Skip to content' link now moves focus to the visible main area (it used to leave focus on the page body, 123 Tab stops from the graph); docs/graph.md corrected"
+  - number: 538
+    summary: "Housekeeping and the release plan: recorded #531 and #532, read the whole of discovery/, five new roadmap issues (#533-#537), the month-by-month plan in docs/roadmap.md, and (added before merge) the regional layer: umbrella #539 and 22 sub-region issues #540-#561, one per UN M49 sub-region, two per release from 2027.01 to 2027.11"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
