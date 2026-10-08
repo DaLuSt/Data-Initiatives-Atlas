@@ -1,0 +1,56 @@
+name: Atlas checks
+description: >
+  The validation suite and every test suite that needs no network. Used by
+  validate.yml (pull requests and pushes) and pages.yml (deploy), so the two
+  cannot drift apart. A new test file goes here, once.
+
+# The caller checks the repository out and sets Python up first.
+runs:
+  using: composite
+  steps:
+    - name: Install dependencies
+      shell: bash
+      run: pip install -r validation/requirements.txt
+
+    # YAML parses · IDs unique · relationships resolve · links resolve · sources present
+    - name: Run validation suite
+      shell: bash
+      working-directory: validation
+      run: python run_all.py
+
+    # The validators' own rules: each is shown to fire on a defect and to stay
+    # quiet on a good entity, in a temporary repository. No network.
+    - name: Test the validators
+      shell: bash
+      run: python validation/test_validators.py
+
+    # Parsing, node/edge generation, direction preservation, refusal behaviour.
+    - name: Test the graph generator
+      shell: bash
+      run: python tools/test_build_graph.py
+
+    # The re-verification runner. Pure-function tests only — no network, so
+    # this passes identically on a runner with egress and one without.
+    - name: Test the re-verification runner
+      shell: bash
+      run: python tools/test_reverify.py
+
+    # The release tooling: version arithmetic, change classification, the
+    # CHANGELOG entry, the schema-version rule. Pure functions, no network.
+    - name: Test the release tooling
+      shell: bash
+      run: python tools/test_release.py
+
+    # The roadmap board sync (tools/project_board.py): the plan for each issue,
+    # an in-memory fake of GitHub's GraphQL API, and the workflow's safety
+    # properties. No network.
+    - name: Test the board sync
+      shell: bash
+      run: python tools/test_project_board.py
+
+    # Proves the graph can still be generated from this data. The generated files
+    # are not committed, so there is no committed copy to go stale; reproducibility
+    # of the build is asserted by the graph generator tests above.
+    - name: Check the graph builds
+      shell: bash
+      run: python tools/build_graph.py --check

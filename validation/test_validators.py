@@ -258,6 +258,40 @@ class TestPrimarySourceBasis(Base):
         self.assertEqual(listed, set(validate_sources.CONFIRMED_DOMAINS))
 
 
+class TestSuccession(Base):
+    """`successor` and `previous_version` are two ends of one statement."""
+
+    def test_a_successor_that_does_not_name_it_back_warns(self):
+        self.edit("organisations/xx-org.md", "successor: null", "successor: XX-ACT")
+        self.assertOnlyWarns("successor is XX-ACT, but XX-ACT has previous_version 'None' instead of 'XX-ORG'")
+
+    def test_a_previous_version_that_does_not_name_it_back_warns(self):
+        self.edit("legislation/xx-act.md", "previous_version: null", "previous_version: XX-ORG")
+        self.assertOnlyWarns("previous_version is XX-ORG, but XX-ORG has successor 'None' instead of 'XX-ACT'")
+
+    def test_both_ends_written_is_quiet(self):
+        self.edit("organisations/xx-org.md", "successor: null", "successor: XX-ACT")
+        self.edit("legislation/xx-act.md", "previous_version: null", "previous_version: XX-ORG")
+        code, text = self.run_all()
+        self.assertEqual((code, "WARN" in text), (0, False), text)
+
+    def test_two_predecessors_of_one_successor_are_not_reported(self):
+        # A third entity; XX-ACT's single previous_version can name only one predecessor.
+        self.write("organisations/xx-old.md", ORG.replace("XX-ORG", "XX-OLD").replace(
+            "Example Organisation", "Old Organisation").replace("https://example.org/a", "https://example.org/c"))
+        self.edit("organisations/xx-org.md", "successor: null", "successor: XX-ACT")
+        self.edit("organisations/xx-old.md", "successor: null", "successor: XX-ACT")
+        self.edit("legislation/xx-act.md", "previous_version: null", "previous_version: XX-ORG")
+        code, text = self.run_all()
+        self.assertNotIn("successor is XX-ACT", text)
+        self.assertEqual(code, 0, text)
+
+    def test_an_unknown_successor_is_left_to_the_generator(self):
+        self.edit("organisations/xx-org.md", "successor: null", "successor: NOT-AN-ID")
+        code, text = self.run_all()
+        self.assertNotIn("successor is NOT-AN-ID", text)
+
+
 class TestStructure(Base):
     def test_the_same_relationship_twice(self):
         text = (self.root / "organisations/xx-org.md").read_text(encoding="utf-8")
@@ -291,6 +325,7 @@ class TestStructure(Base):
     def test_superseded_with_a_successor_is_quiet(self):
         self.edit("legislation/xx-act.md", "status: active", "status: superseded")
         self.edit("legislation/xx-act.md", "successor: null", "successor: XX-ORG")
+        self.edit("organisations/xx-org.md", "previous_version: null", "previous_version: XX-ACT")
         code, text = self.run_all()
         self.assertEqual((code, "WARN" in text), (0, False), text)
 

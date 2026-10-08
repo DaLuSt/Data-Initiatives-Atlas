@@ -51,7 +51,7 @@ jobs:
       # ------------------------------------------------------------
 
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
@@ -64,11 +64,11 @@ jobs:
           git config user.name "autonomous-data-agent"
           git config user.email "actions@users.noreply.github.com"
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: "20"
 

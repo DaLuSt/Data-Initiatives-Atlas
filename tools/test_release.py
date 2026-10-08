@@ -449,10 +449,42 @@ class TestWorkflows(unittest.TestCase):
         text = (self.WF / "release-publish.yml").read_text(encoding="utf-8")
         self.assertIn('grep -Fxq "$title"', text)
 
+    def test_the_data_correction_form_asks_for_what_a_fix_needs_and_is_linked(self):
+        import yaml
+        form = yaml.safe_load((REPO_ROOT / ".github" / "ISSUE_TEMPLATE" / "data-correction.yml").read_text(encoding="utf-8"))
+        self.assertEqual(form["labels"], ["data-correction"])
+        required = {b["id"] for b in form["body"] if b.get("validations", {}).get("required")}
+        self.assertTrue({"entity", "says", "should", "source"} <= required, required)
+        for doc in ("SECURITY.md", "CONTRIBUTING.md"):
+            self.assertIn("issues/new?template=data-correction.yml", (REPO_ROOT / doc).read_text(encoding="utf-8"), doc)
+
     def test_ci_checks_the_schema_version_on_pull_requests(self):
         text = (self.WF / "validate.yml").read_text(encoding="utf-8")
         self.assertIn("check-schema --base-ref", text)
-        self.assertIn("test_release.py", text)
+        shared = (REPO_ROOT / ".github" / "actions" / "checks" / "action.yml").read_text(encoding="utf-8")
+        self.assertIn("test_release.py", shared)
+
+    def test_pull_requests_and_deploys_run_the_same_checks(self):
+        for name in ("validate.yml", "pages.yml"):
+            text = (self.WF / name).read_text(encoding="utf-8")
+            self.assertIn("uses: ./.github/actions/checks", text, name)
+
+    def test_every_test_file_is_in_the_shared_checks(self):
+        shared = (REPO_ROOT / ".github" / "actions" / "checks" / "action.yml").read_text(encoding="utf-8")
+        tests = sorted(p.name for p in (REPO_ROOT / "tools").glob("test_*.py")) + \
+            sorted(p.name for p in (REPO_ROOT / "validation").glob("test_*.py"))
+        self.assertTrue(tests)
+        for name in tests:
+            self.assertIn(name, shared, f"{name} is not run by .github/actions/checks")
+
+    def test_no_workflow_uses_an_action_known_to_run_on_node_20(self):
+        # Warned about on 2026-10-08 (roadmap #493); these are the Node 24 majors.
+        node20 = ("actions/checkout@v4", "actions/setup-python@v5", "actions/setup-node@v4",
+                  "actions/configure-pages@v5", "actions/upload-pages-artifact@v3", "actions/deploy-pages@v4")
+        for path in sorted(self.WF.glob("*.yml")):
+            text = path.read_text(encoding="utf-8")
+            for old in node20:
+                self.assertNotIn(old, text, f"{path.name} still uses {old}")
 
 
 if __name__ == "__main__":

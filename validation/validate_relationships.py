@@ -120,6 +120,35 @@ def check_every_entity_is_reachable(entities, report: common.Report) -> None:
             )
 
 
+def check_succession_links(entities, report: common.Report) -> None:
+    """`successor` and `previous_version` are two ends of one statement
+    (CONTRIBUTING.md: the new entity's `previous_version` points back). A warning,
+    not an error, when only one end is written.
+
+    The single `previous_version` field cannot hold two predecessors. When two
+    entities name the same successor and that successor's `previous_version` is
+    one of them, the other is a fan-in the model cannot express; that is not
+    reported here (it is the vocabulary question in roadmap #457)."""
+    by_id = {e.frontmatter.get("id"): e.frontmatter for e in entities if not e.parse_error}
+    successors_of: dict[str, set[str]] = {}
+    for own_id, fm in by_id.items():
+        succ = fm.get("successor")
+        if isinstance(succ, str) and succ:
+            successors_of.setdefault(succ, set()).add(own_id)
+    paths = {e.frontmatter.get("id"): e.rel_path for e in entities if not e.parse_error}
+    for own_id, fm in by_id.items():
+        succ = fm.get("successor")
+        if isinstance(succ, str) and succ in by_id:
+            back = by_id[succ].get("previous_version")
+            if back != own_id and not (back in by_id and by_id[back].get("successor") == succ):
+                report.warn(f"{paths[own_id]}: successor is {succ}, but {succ} has previous_version "
+                            f"'{back}' instead of '{own_id}'")
+        prev = fm.get("previous_version")
+        if isinstance(prev, str) and prev in by_id and by_id[prev].get("successor") != own_id:
+            report.warn(f"{paths[own_id]}: previous_version is {prev}, but {prev} has successor "
+                        f"'{by_id[prev].get('successor')}' instead of '{own_id}'")
+
+
 def main() -> int:
     schema = common.load_schema()
     entities = common.load_all_entities()
@@ -136,6 +165,7 @@ def main() -> int:
         check_relationships(e, schema, ids, report)
 
     check_every_entity_is_reachable(entities, report)
+    check_succession_links(entities, report)
 
     return report.print_and_exit_code()
 

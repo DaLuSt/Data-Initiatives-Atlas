@@ -25,7 +25,7 @@ verification: primary-source
 start_date: 2019-07-16
 end_date: null
 last_verified: "2026-09-25"
-previous_version: null
+previous_version: EU-PSI-DIRECTIVE
 successor: null
 
 domains:

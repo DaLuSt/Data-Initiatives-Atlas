@@ -152,7 +152,10 @@ does not say, a `source: fact` edge that is really an interpretation, or a
 fabricated URL.
 
 That is not a security vulnerability and does not need a private report.
-**Please open a normal public issue**, or a pull request that fixes it. Public
+**Please open a normal public issue** (the
+[data correction form](https://github.com/DaLuSt/Data-Initiatives-Atlas/issues/new?template=data-correction.yml)
+asks for the entity ID, the claim and the contradicting page), or a pull request
+that fixes it. Public
 is better here — the correction is the point, and the repository is designed to
 show its own uncertainty rather than hide it.
 

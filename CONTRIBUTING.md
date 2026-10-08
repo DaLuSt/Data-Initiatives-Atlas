@@ -15,6 +15,10 @@ Found a security problem, or a citation that does not support the claim
 attached to it? [`SECURITY.md`](SECURITY.md) says where each goes —
 vulnerabilities privately, data-integrity problems in a public issue.
 
+Spotted a wrong claim but not sure how to fix it? Use the
+[data correction form](https://github.com/DaLuSt/Data-Initiatives-Atlas/issues/new?template=data-correction.yml);
+it asks for the entity ID, the claim, and the page that contradicts it.
+
 ## Before you start
 
 1. **Search first.** Check `initiatives/`, `organisations/`, etc. (by name
