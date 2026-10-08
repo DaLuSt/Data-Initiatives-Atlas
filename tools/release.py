@@ -61,8 +61,13 @@ DATA_DIRS = (
 )
 SCHEMA_FILES = (
     "metadata/schema.json", "metadata/ontology.md", "metadata/metadata-schema.md",
-    "metadata/relationship-types.md", "metadata/taxonomy.md", "metadata/rank-basis.md",
+    "metadata/relationship-types.md", "metadata/taxonomy.md",
 )
+# Documentation of the data itself, not of the data model: a change to it is a
+# data change. (metadata/rank-basis.md records, country by country, how each `rank`
+# value was read; it was filed under Schema until 2026-10-08, which misled the
+# changelog and the LinkedIn draft.)
+DATA_FILES = ("metadata/rank-basis.md",)
 TOOLING_DIRS = ("tools/", "validation/", ".github/")
 DOC_FILES = ("README.md", "CONTRIBUTING.md", "SECURITY.md", "CODE_OF_CONDUCT.md",
              "AGENTS.md", "CHANGELOG.md")
@@ -123,7 +128,7 @@ def classify(files: list[str]) -> str:
         return "schema"
     if any(f.startswith("site/") for f in files):
         return "site"
-    if any_in(DATA_DIRS):
+    if any_in(DATA_DIRS) or any(f in DATA_FILES for f in files):
         return "data"
     if any_in(TOOLING_DIRS):
         return "tooling"
