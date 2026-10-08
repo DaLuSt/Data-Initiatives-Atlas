@@ -213,6 +213,12 @@ last_merged_prs:
     summary: "Validation: fixed a crash on an impossible date; new errors for non-ISO or future dates, end before start, a reversed relationship window, duplicate relationships, national level with no country, and a primary-source entity with neither an accessed date nor all sources on a confirmed domain; warnings for duplicate source URLs and superseded with no successor; validation/test_validators.py (25 tests) runs in CI; EU-CEN and EU-CENELEC got the accessed dates their notes state"
   - number: 525
     summary: "Housekeeping: recorded #522, #523 and #524 and the site QA and checks audit in state.yaml and run-history"
+  - number: 530
+    summary: "Housekeeping: recorded #525 and the four roadmap issues from the checks audit (#526-#529)"
+  - number: 531
+    summary: "Roadmap 2026.11: Node 24 versions of every action (the Pages deploy ran on them and succeeded); .github/actions/checks is the one set of checks used by validate.yml and pages.yml, with a test that every test file is in it; EU-OPEN-DATA-DIRECTIVE previous_version EU-PSI-DIRECTIVE and a warning when a successor/previous_version is not mirrored; a data-correction issue form"
+  - number: 532
+    summary: "ACCESSIBILITY.md (commitment, environments, known limits, how to report a barrier; WCAG 2.2 AA as the target, no conformance claim) and an accessibility-barrier issue form; the 'Skip to content' link now moves focus to the visible main area (it used to leave focus on the page body, 123 Tab stops from the graph); docs/graph.md corrected"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,

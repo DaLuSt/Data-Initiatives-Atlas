@@ -96,6 +96,69 @@ board, add a view with the *Roadmap* layout and set its start and end to
 **Start date** and **Target date**. Views are not available through the
 workflow's token.
 
+## The plan at a glance (snapshot, 2026-10-08)
+
+This is a reading of the milestones on one day, to show roughly what is aimed at
+which release. The live version is the milestones and the board; this table ages.
+Each month is one data release. The country groups (the `Next countries` items under
+#451) are a placeholder pace of one group per month: they are the part of the plan
+most likely to move. A month with many items is not a promise that all of them fit.
+
+| Release | Data and research | Site and tooling | Decisions and schema |
+|---|---|---|---|
+| **2026.10** (now) | Weekly release pull requests continue; LinkedIn post drafts open as issues | Board sync, shared checks, Node 24 actions and the accessibility statement are done | |
+| **2026.11** | #446 English names for the last records; #459 UK gaps; #527 successor links | | |
+| **2026.12** | #495 read the blocked sources on GitHub's runners | #526 repair the browser tests; #496 token expiry plan; #452 test with real visitors | #533 founding-six date; #449 rank gaps; #450 which thin domains to deepen |
+| **2027.01** | #470 countries, group 1; #502 re-check Q1 | #497 accessibility audit; #515 LinkedIn auto-post (needs a LinkedIn app); #528 checks into the validators; #498 release cadence review | |
+| **2027.02** | #471 countries, group 2; #534 eIDAS cluster; #535 Germany's three questions | | #499 records that fit two types; #457 vocabulary decisions |
+| **2027.03** | #472 countries, group 3; #500 data spaces; #501 standards bodies; #460 coverage gaps | | |
+| **2027.04** | #473 countries, group 4; #503 re-check Q2 | #507 load time on slow networks | #506 multilingual names; #458 Dutch registers and authentic data |
+| **2027.05** | #474 countries, group 5; #536 Dutch registry edges; #537 EU and UN links | | |
+| **2027.06** | #475 countries, group 6 | #508 the site at 200 countries | #509 EU institutions; #461 consistency checks |
+| **2027.07** | #476 countries, group 7; #504 re-check Q3 | #510 annual re-verification policy | |
+| **2027.08** | #477 countries, group 8 | | #511 UN system and development banks |
+| **2027.09** | #478 countries, group 9 | #512 linked-data export (a proposal) | |
+| **2027.10** | #479 countries, group 10; #505 re-check Q4 | | |
+| **2027.11** | #480 countries, group 11 | | |
+| **2027.12** | #481 countries, group 12 | | |
+| **2028.01** | #482 countries, group 13 | | #513 is a schema 2.0 needed? |
+| **2028.02** | #483 countries, group 14; #451 (the umbrella for all the country groups) closes | | |
+
+**Dependencies worth knowing.** #495 (blocked sources) comes before the research items
+that were stopped by a blocked page (#534, #535, #537). #458 (Dutch modelling) comes before
+#536. #457 and #499 (vocabulary and types) come before #513 (does the schema need a major
+version). The accessibility audit (#497) rewrites `ACCESSIBILITY.md`.
+
+### Where each open question in `discovery/` lives
+
+Every open row of `discovery/unresolved.md` was read on 2026-10-08. Rows that are recorded
+declines (#229, #230, #231, #232) or deliberate non-assertions (#88, #97, #116) need no work.
+
+| Rows | Roadmap item |
+|---|---|
+| #2 | #533 |
+| #4, #70, #179, #216 to #225 (blocked sources) | #495, then the items that were waiting on a page |
+| #8, #43, #66, #120, #124, #125 | #500 |
+| #9 | #506 |
+| #11 | #449 |
+| #12, #31, #144 | #458, #536 |
+| #13, #44, #53, #54, #92, #93, #153, #154 | #457 |
+| #15, #16 | #509 |
+| #17, #18, #226 | #535 |
+| #19 to #27, #29, #32 | #499 |
+| #35, #36 | #534 |
+| #90, #91, #95, #117, #139 | #502 to #505 (quarterly re-checks) |
+| #141, #150 | #536 |
+| #168 | #511 |
+| #174, #227 | #537 |
+| #187, #200, #209 | #501 |
+| #233 | #446 |
+| #234 | #459 |
+| #5 | mostly done (the `subnational` level exists and is used for Belgium, Germany and Spain); the row is a candidate for closing |
+
+`discovery/candidates.md` C9 (thin domains) is #450 and C10 (countries) is #451 and its
+fourteen groups; `discovery/research-queue.md` and `discovery/duplicates.md` are empty.
+
 ## How an item gets done
 
 - Work happens in ordinary pull requests. The pull request that finishes an
