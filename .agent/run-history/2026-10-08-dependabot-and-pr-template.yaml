@@ -1,0 +1,16 @@
+date: "2026-10-08"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Answered the question whether to add develop and release branches: no, because a
+  data release is a dated snapshot that the site always shows from main, there are no
+  old versions to patch, and a develop branch would mean merging every change twice;
+  tags already mark each release. Added .github/dependabot.yml (weekly, grouped:
+  GitHub Actions in the workflows and the shared composite action, and the
+  validation's Python dependency) and .github/pull_request_template.md (roadmap
+  issue, sources, checks), and described both in CONTRIBUTING.md. Also corrected the
+  stale run-history entry for #566. Suggested to the owner and not done here
+  (settings only the owner can change): a tag ruleset protecting data-* and schema-*,
+  secret scanning with push protection, CODEOWNERS once there is a second contributor.
+  Not verifiable here: that Dependabot opens its first pull requests as configured.
+prs: []
+outcome: pending merge

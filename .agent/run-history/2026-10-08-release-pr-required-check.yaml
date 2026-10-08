@@ -13,5 +13,7 @@ summary: >
   the PR; the run reports a `validate` check on the branch's head commit. A test pins
   this. Not verifiable until the next release PR opens (Monday 2026-10-12): that the
   dispatched run satisfies the ruleset's required check.
-prs: []
-outcome: pending merge
+prs:
+  - number: 566
+    title: "Release PR: start the required validate check on the release branch"
+outcome: merged (the dispatched check is not yet seen working on a real release PR)

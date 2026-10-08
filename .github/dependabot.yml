@@ -1,0 +1,30 @@
+# Weekly checks for newer versions of what the workflows and the validation use.
+# Dependabot opens an ordinary pull request for each group, so `validate` runs on
+# it and the owner merges it like any other change. See CONTRIBUTING.md.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directories:
+      - "/"
+      - "/.github/actions/checks"
+    schedule:
+      interval: weekly
+      day: monday
+    groups:
+      actions:
+        patterns: ["*"]
+    open-pull-requests-limit: 3
+    commit-message:
+      prefix: "Actions"
+
+  - package-ecosystem: pip
+    directory: "/validation"
+    schedule:
+      interval: weekly
+      day: monday
+    groups:
+      validation-dependencies:
+        patterns: ["*"]
+    open-pull-requests-limit: 2
+    commit-message:
+      prefix: "Validation"
