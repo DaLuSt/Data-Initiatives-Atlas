@@ -1,0 +1,39 @@
+date: "2026-10-08"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  A bug sweep of the site and an audit of the validation checks, at the owner's
+  request.
+  1. Site (PR #523). In headless Chromium: 35 odd addresses at three screen sizes,
+  axe-core on 16 views at desktop and phone size (clean), the CSV download for
+  five filter states, a read of every place the page builds HTML from data (all
+  escaped), and a random-action fuzz of 14 sessions of 40 steps (clean). One real
+  bug: decodeURIComponent threw on a stray or truncated percent escape ("#%"),
+  and the load chain reported "The graph could not be loaded" with a misleading
+  hint about opening the file from disk. Fixed with a safeDecode fallback;
+  source links now go through a safeHref http(s) check (defence in depth, the
+  validators already require it). Not covered: other browsers, real devices, a
+  screen reader. The browser test suite tools/test_ui.mjs is stale (it looks for
+  "Wikilinks", now "Mentions") and is not in CI; not repaired.
+  2. Checks (PR #524). 48 deliberate defects were injected one at a time into a
+  scratch copy: 36 were caught, 12 were not, and an impossible date crashed the
+  validator with a traceback. Fixed the crash; added errors for non-ISO or future
+  dates, end before start, a reversed relationship window, duplicate
+  relationships and national level with no country (none fired on the existing
+  data); warnings for duplicate source URLs (4 remain) and superseded with no
+  successor (4 remain). The suspected 45 primary-source entities without accessed
+  dates were mostly not a gap: 19 are source-less domain nodes, 24 rest on the
+  owner's 2026-08-21 confirmation of europa.eu and bund.de (docs/re-verification.md),
+  and 2 (EU-CEN, EU-CENELEC) had notes saying every page was read on 2026-08-28,
+  now recorded. validate_sources now checks that rule. validation/test_validators.py
+  (25 tests, 19 deliberate breakages caught) runs in CI.
+  Still open: 2 entities name a successor that does not link back through
+  previous_version (no check); the generator catches an unknown country code and a
+  dangling successor or previous_version but the validators do not (CI runs both);
+  pages.yml runs fewer tests than validate.yml.
+prs:
+  - number: 523
+    title: "Site: a mistyped or truncated address no longer reports \"graph could not be loaded\""
+  - number: 524
+    title: "Validation: fix a crash on an impossible date and close seven gaps found by injecting defects"
+outcome: merged
+entity_count_after: 745

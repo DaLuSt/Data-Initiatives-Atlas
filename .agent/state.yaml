@@ -205,6 +205,12 @@ last_merged_prs:
     summary: "Housekeeping: recorded #516, #517 and #519 and the 2026.10.2 release in state.yaml and run-history"
   - number: 521
     summary: "Release changelog: metadata/rank-basis.md is filed under Data, not Schema (new DATA_FILES list in tools/release.py); taxonomy.md and relationship-types.md still count as schema"
+  - number: 522
+    summary: "Housekeeping: recorded #520 and #521 in state.yaml and run-history"
+  - number: 523
+    summary: "Site bug fix from a QA sweep: a mistyped or truncated address (#%, #a%E0%A4) no longer shows 'The graph could not be loaded' (decodeURIComponent threw; now a safeDecode fallback); source links accept only http(s); four tests under Node"
+  - number: 524
+    summary: "Validation: fixed a crash on an impossible date; new errors for non-ISO or future dates, end before start, a reversed relationship window, duplicate relationships, national level with no country, and a primary-source entity with neither an accessed date nor all sources on a confirmed domain; warnings for duplicate source URLs and superseded with no successor; validation/test_validators.py (25 tests) runs in CI; EU-CEN and EU-CENELEC got the accessed dates their notes state"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
