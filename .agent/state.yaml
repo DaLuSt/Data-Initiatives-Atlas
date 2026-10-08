@@ -191,6 +191,10 @@ last_merged_prs:
     summary: "France and the Open Data Directive (roadmap #460): EUR-Lex's register of national implementing measures lists 52 notified French measures, all earlier law, including Article 16 of the 2016 Digital Republic Act, so FR-LRN now implements-requirement-from EU-OPEN-DATA-DIRECTIVE (medium confidence, limits stated); EuroGeographics related-to INSPIRE from its own About page"
   - number: 491
     summary: "UK sectoral NIS competent authorities (roadmap #459): GB-GEMA, GB-CAA and GB-DWQR from Schedule 1 to the NIS Regulations 2018, the Utilities Act 2000 s.1, the Civil Aviation Act 1982 s.2 and the regulators' own pages; unresolved row #234 on how GEMA and Ofgem relate; 745 entities"
+  - number: 492
+    summary: "Housekeeping: recorded #489, #490 and #491 in state.yaml and run-history"
+  - number: 514
+    summary: "Releases: release-publish.yml now opens an issue (label linkedin) holding a plain-text LinkedIn post draft built by `tools/release.py linkedin-draft` from the CHANGELOG entry; nothing is posted automatically (automatic posting with an approval step is roadmap #515)"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,

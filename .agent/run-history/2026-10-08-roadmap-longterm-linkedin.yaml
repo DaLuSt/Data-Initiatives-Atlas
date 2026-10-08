@@ -1,0 +1,32 @@
+date: "2026-10-08"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  A longer-term roadmap and a LinkedIn draft for releases.
+  1. Roadmap issues #493 to #513 were created from open rows of
+  discovery/unresolved.md, docs/ux-analysis.md, SECURITY.md and the run logs, on
+  milestones 2026.11 to 2028.01: Node 24 for the Actions (#493), a data-correction
+  issue template (#494), re-verification on GitHub's runners (#495, the idea being
+  that a runner's egress differs from the agent's; untried), PROJECT_TOKEN expiry
+  (#496), an accessibility audit (#497), a release-cadence review (#498), records
+  that fit two types (#499), data spaces (#500), standards bodies (#501), four
+  quarterly re-checks of instruments waiting on events (#502 to #505), multilingual
+  names (#506), load time (#507), the site at 200 countries (#508), EU
+  Directorates-General (#509), an annual re-verification policy (#510), UN system
+  and development banks (#511), a linked-data export proposal (#512) and a schema
+  2.0 review (#513). The board sync added them all (its last run saw 50 roadmap
+  issues, 44 already in step).
+  2. LinkedIn: release-publish.yml now opens an issue with a plain-text post draft
+  when a release is published (tools/release.py linkedin-draft, 11 tests, five
+  mutations caught). Not yet run on GitHub; the first real release is its first
+  run. Automatic posting after the owner approves is roadmap #515; it needs a
+  LinkedIn developer app, and access tokens last 60 days unless the app is an
+  approved partner, so re-authorising about every two months is expected.
+  Also checked and not done: GitHub's GraphQL is refused by the agent's proxy
+  with or without a token (so PROJECT_TOKEN in the agent environment cannot work);
+  #461 was looked at and not started (anchor edges would need a new relationship
+  field or a guess from evidence text).
+prs:
+  - number: 514
+    title: "Releases: open an issue with a LinkedIn post draft when a release is published"
+outcome: merged
+entity_count_after: 745
