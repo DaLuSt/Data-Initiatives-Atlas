@@ -223,6 +223,8 @@ last_merged_prs:
     summary: "Housekeeping and the release plan: recorded #531 and #532, read the whole of discovery/, five new roadmap issues (#533-#537), the month-by-month plan in docs/roadmap.md, and (added before merge) the regional layer: umbrella #539 and 22 sub-region issues #540-#561, one per UN M49 sub-region, two per release from 2027.01 to 2027.11"
   - number: 562
     summary: "docs/credentials.md: the PROJECT_TOKEN expiry plan (#496) and the LinkedIn developer app plan (#515); ACCESSIBILITY.md limit 5 no longer an open design question; the 14-day reply promise accepted by the owner"
+  - number: 563
+    summary: "Housekeeping: recorded #538 (with the regional layer) and #562 (credential plans) as merged"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,

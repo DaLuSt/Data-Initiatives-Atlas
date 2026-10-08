@@ -19,8 +19,10 @@ summary: >
   region (a separate small schema and site change). Europe goes first because
   most of its countries already have anchors. docs/roadmap.md has the regions in
   the month table. Placements are approximate and the owner's to move.
+  The board-sync workflow reacted to the 23 new issues: the burst of runs was
+  cancelled in favour of the newest, and the last one succeeded. Merged with #538.
   Not verified: that the bodies named as leads publish data-governance instruments.
 prs:
   - number: 538
     title: "Housekeeping and the release plan"
-outcome: pending merge (added to PR 538)
+outcome: merged
