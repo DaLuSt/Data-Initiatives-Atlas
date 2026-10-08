@@ -34,9 +34,9 @@ discovery:
 validation_status: clean
 
 release:
-  data: "2026.10.1"
+  data: "2026.10.2"
   schema: "1.0.0"
-  released: "2026-10-06"
+  released: "2026-10-08"
 
 last_merged_prs:
   - number: 385
