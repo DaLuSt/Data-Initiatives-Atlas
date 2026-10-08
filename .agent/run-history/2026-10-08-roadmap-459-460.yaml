@@ -1,0 +1,39 @@
+date: "2026-10-08"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Two roadmap items advanced, using pages the fetch tool can read
+  (legislation.gov.uk, EUR-Lex, the bodies' own sites).
+  1. #460, France: EUR-Lex's register of national implementing measures for
+  Directive (EU) 2019/1024 lists 52 French measures, all earlier law (CRPA
+  articles, Code de la recherche and Code de l'education articles, a 2020 law,
+  and Article 16 of the 2016 Digital Republic Act) and no act of 2019 or later.
+  The finding that France passed nothing new stands; what is new is that France
+  itself notified part of FR-LRN, so FR-LRN got an implements-requirement-from
+  edge to the directive (medium confidence, limits stated in the edge), and the
+  stale prose on FR-LRN (which still said a 2021 ordinance was understood to
+  exist) and the directive's French paragraph were rewritten. EuroGeographics got
+  a related-to edge to INSPIRE from its own About page (it describes itself as a
+  contributor, with no formal role); UN-GGIM: Europe's homepage does not mention
+  INSPIRE, so no edge. Not done: UN-FPOS to national statistics law (no source
+  read says the Dutch CBS act or the German BStatG cites the principles), Polish
+  CSIRT NASK/GOV and GIODO, health entities for ES/BE/PL/GB.
+  2. #459, United Kingdom: Schedule 1 to the NIS Regulations 2018 names bodies and
+  ministerial offices. The three bodies were added: GB-GEMA (Utilities Act 2000
+  s.1, read), GB-CAA (Civil Aviation Act 1982 s.2, read), GB-DWQR (the regulator's
+  own account of s.7 of the Water Industry (Scotland) Act 2002; the Act itself was
+  not read). The ministerial offices were not modelled. Row #234 records that
+  Ofgem's own page does not mention the Authority and the pages that would
+  (ofgem.gov.uk/node/170856, /node/73601) return 403, so Ofgem is not an entity
+  or alias. Still open in #459: the UN-CES seat, the Office for Statistics
+  Regulation, Ordnance Survey of Northern Ireland, a British Standard.
+  #461 was looked at and not started: distinguishing anchor edges needs either a
+  new `anchor` field on relationships (a schema bump and about 190 edits) or a
+  guess from the evidence text; the GDPR-authority edge and the applies-in edges
+  to one's own country are the owner's modelling calls.
+prs:
+  - number: 490
+    title: "France and the Open Data Directive, EuroGeographics and INSPIRE (roadmap #460, two of five items)"
+  - number: 491
+    title: "UK: three more NIS competent authorities, GEMA, CAA and DWQR (roadmap #459)"
+outcome: merged
+entity_count_after: 745

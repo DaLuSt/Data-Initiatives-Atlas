@@ -185,6 +185,12 @@ last_merged_prs:
     summary: "Housekeeping: recorded #485 and #486 in state.yaml and run-history"
   - number: 488
     summary: "Roadmap board sync: tools/project_board.py and the project-board workflow keep the Project board in step with the roadmap issues (adds missing issues, Status Done on close, Start/Target date from the milestone); first real run on 2026-10-08 added 4 closed issues and set dates on 23, a second run changed nothing"
+  - number: 489
+    summary: "Housekeeping: recorded #487 and #488 and the first board sync in state.yaml and run-history"
+  - number: 490
+    summary: "France and the Open Data Directive (roadmap #460): EUR-Lex's register of national implementing measures lists 52 notified French measures, all earlier law, including Article 16 of the 2016 Digital Republic Act, so FR-LRN now implements-requirement-from EU-OPEN-DATA-DIRECTIVE (medium confidence, limits stated); EuroGeographics related-to INSPIRE from its own About page"
+  - number: 491
+    summary: "UK sectoral NIS competent authorities (roadmap #459): GB-GEMA, GB-CAA and GB-DWQR from Schedule 1 to the NIS Regulations 2018, the Utilities Act 2000 s.1, the Civil Aviation Act 1982 s.2 and the regulators' own pages; unresolved row #234 on how GEMA and Ofgem relate; 745 entities"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
