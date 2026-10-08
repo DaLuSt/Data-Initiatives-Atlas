@@ -53,6 +53,7 @@ sources:
   - title: "Andmekaitse Inspektsioon"
     url: "https://www.aki.ee/en"
     publisher: "Andmekaitse Inspektsioon (Estonian Data Protection Inspectorate)"
+    accessed: "2026-10-07"
   - title: "Data Protection in Estonia"
     url: "https://gdprhub.eu/Data_Protection_in_Estonia"
     publisher: "GDPRhub"
@@ -61,10 +62,6 @@ sources:
     url: "https://www.edpb.europa.eu/estonia-participates-pan-european-role-public-and-private-data-protection-officers-joint_en"
     publisher: "European Data Protection Board"
     accessed: "2026-08-21"
-  - title: "Data Protection Inspectorate (English site of the Andmekaitse Inspektsioon)"
-    url: "https://www.aki.ee/en"
-    publisher: "Andmekaitse Inspektsioon"
-    accessed: "2026-10-07"
 ---
 
 # Andmekaitse Inspektsioon

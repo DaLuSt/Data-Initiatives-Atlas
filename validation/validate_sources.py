@@ -37,11 +37,23 @@ def main() -> int:
                             f"'{fm.get('status')}' / coverage '{fm.get('coverage')}'")
             continue
 
+        seen_urls: dict[str, int] = {}
         for i, src in enumerate(sources):
             where = f"{e.rel_path}: sources[{i}]"
             if not isinstance(src, dict):
                 report.error(f"{where} is not a mapping")
                 continue
+            if src.get("url"):
+                if src["url"] in seen_urls:
+                    report.warn(f"{where}: url already cited at sources[{seen_urls[src['url']]}]: {src['url']}")
+                else:
+                    seen_urls[src["url"]] = i
+            if src.get("accessed") not in (None, ""):
+                day = common.as_date(src["accessed"])
+                if day is None:
+                    report.error(f"{where}: accessed '{src['accessed']}' is not a YYYY-MM-DD date")
+                elif common.is_in_the_future(day):
+                    report.error(f"{where}: accessed {day} is in the future")
             for field_name in REQUIRED_SOURCE_FIELDS:
                 if not src.get(field_name):
                     report.error(f"{where}: missing '{field_name}'")

@@ -75,15 +75,11 @@ sources:
   - title: "About the Norwegian National Security Authority"
     url: "https://nsm.no/en/"
     publisher: "Nasjonal sikkerhetsmyndighet (NSM)"
-    accessed: "2026-08-22"
+    accessed: "2026-10-07"
   - title: "Lov om nasjonal sikkerhet (sikkerhetsloven) — LOV-2018-06-01-24"
     url: "https://lovdata.no/dokument/NL/lov/2018-06-01-24"
     publisher: "Lovdata"
     accessed: "2026-09-05"
-  - title: "The Norwegian National Security Authority (English site)"
-    url: "https://nsm.no/en/"
-    publisher: "Nasjonal sikkerhetsmyndighet"
-    accessed: "2026-10-07"
 ---
 
 # Nasjonal sikkerhetsmyndighet (NSM)

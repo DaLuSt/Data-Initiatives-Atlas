@@ -30,6 +30,11 @@ jobs:
         working-directory: validation
         run: python run_all.py
 
+      # The validators' own rules: each is shown to fire on a defect and to stay
+      # quiet on a good entity, in a temporary repository. No network.
+      - name: Test the validators
+        run: python validation/test_validators.py
+
       # Parsing, node/edge generation, direction preservation, refusal behaviour.
       - name: Test the graph generator
         run: python tools/test_build_graph.py

@@ -48,6 +48,28 @@ def check_placement(e: common.EntityFile, schema: dict, report: common.Report) -
         )
 
 
+def check_dates(rel_path: str, fm: dict, report: common.Report) -> None:
+    """start_date, end_date and last_verified are real dates (or empty), the
+    end is not before the start, and a verification date is not in the future.
+    A partial date ("2020") is not a date here: the repository's rule is to leave
+    the field empty and say the precision in prose."""
+    days = {}
+    for key in ("start_date", "end_date", "last_verified"):
+        value = fm.get(key)
+        if value in (None, ""):
+            continue
+        day = common.as_date(value)
+        if day is None:
+            report.error(f"{rel_path}: {key} '{value}' is not a YYYY-MM-DD date "
+                         f"(leave it empty rather than padding a partial date)")
+        else:
+            days[key] = day
+    if "start_date" in days and "end_date" in days and days["end_date"] < days["start_date"]:
+        report.error(f"{rel_path}: end_date {days['end_date']} is before start_date {days['start_date']}")
+    if "last_verified" in days and common.is_in_the_future(days["last_verified"]):
+        report.error(f"{rel_path}: last_verified {days['last_verified']} is in the future")
+
+
 def check_rank(rel_path: str, entity_type, rank, schema: dict,
                report: common.Report, status=None) -> None:
     """`rank` is optional. Where it is set it must be a known value, and the
@@ -152,6 +174,14 @@ def main() -> int:
         verification = fm.get("verification")
         if verification is not None and verification not in schema["verification_levels"]:
             report.error(f"{e.rel_path}: invalid verification '{verification}'")
+
+        check_dates(e.rel_path, fm, report)
+        if fm.get("level") == "national" and fm.get("country") in (None, ""):
+            report.error(f"{e.rel_path}: level 'national' needs a country (use another level "
+                         f"for an entity that is not one country's)")
+        if fm.get("status") == "superseded" and not fm.get("successor"):
+            report.warn(f"{e.rel_path}: status is 'superseded' but 'successor' is not set "
+                        f"(fine if nothing replaced it that the Atlas holds, otherwise name it)")
 
         check_name_en(e.rel_path, fm.get("name"), fm.get("name_en"),
                       fm.get("alternative_names"), report)
