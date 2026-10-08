@@ -44,6 +44,9 @@ organisations:
 related_entities:
   - GB
   - EU-NIS
+  - GB-GEMA
+  - GB-CAA
+  - GB-DWQR
   - GB-CSRB
   - NL-WBNI
 relationships:
@@ -153,17 +156,22 @@ Kingdom)"** — Ofcom, named by its full statutory title. [[GB-ICO]] is named
 for relevant digital service providers. [[GB-NCSC]] is **explicitly not a
 competent authority**, and coordinates instead.
 
-**[[GB-OFCOM]] is now modelled**, so two of the named competent authorities
-are Atlas entities and both carry `applies-to` edges to this instrument.
-**The sectoral departments — energy, transport, health, drinking water — are
-still not**, so the statute names more authorities than the graph shows.
+**[[GB-OFCOM]] is now modelled**, and so, since 2026-10-08, are three of the
+sectoral bodies Schedule 1 names: [[GB-GEMA]] (electricity and gas, jointly with
+the Secretary of State), [[GB-CAA]] (air transport, jointly with the Secretary
+of State) and [[GB-DWQR]] (drinking water in Scotland). All carry `applies-to`
+edges to this instrument. **The ministerial offices and devolved departments the
+Schedule also names** (the Secretaries of State, the Welsh and Scottish
+Ministers, the Department of Finance (Northern Ireland)) **are not modelled**:
+they are offices, not bodies, and no source read ties them to departments the
+Atlas holds.
 
 ## Relationships
 
 - `applies-in` [[GB]].
 - `implements-requirement-from` [[EU-NIS]], valid from 10 May 2018.
 
-[[GB-ICO]] and [[GB-OFCOM]] carry the `applies-to` edges pointing here.
+[[GB-ICO]], [[GB-OFCOM]], [[GB-GEMA]], [[GB-CAA]] and [[GB-DWQR]] carry the `applies-to` edges pointing here.
 
 ## Sources
 
