@@ -21,7 +21,9 @@ entity_count_after: <n>
 ```
 
 Add an entry as part of the same commit that updates `.agent/state.yaml`
-at the end of a run (see `.agent/operating-model.md`'s git workflow, step
+at the end of a run. This file, not `state.yaml`, is where PRs are listed:
+it is one file per session, so parallel sessions do not collide. PRs up to #563
+are in `pr-log-to-2026-10-08.yaml` (see `.agent/operating-model.md`'s git workflow, step
 10). This is a log, not a task queue — `.agent/current-task.yaml` is
 where an in-flight task lives; a run-history entry is written once the
 run is over.

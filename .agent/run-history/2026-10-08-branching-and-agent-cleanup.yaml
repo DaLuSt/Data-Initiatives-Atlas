@@ -1,0 +1,24 @@
+date: "2026-10-08"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Review of the branching strategy for growth: trunk-based development with
+  short-lived branches, one PR per item and squash merges is kept. Found: the
+  ruleset on main only blocks deletion and force-push (no required PR or status
+  check), 156 remote branches because delete_branch_on_merge is off, merge
+  commits and rebase merges still allowed, and .agent/state.yaml touched by 53 of
+  the last 100 commits (the hotspot). Repository changes made: (1) removed
+  .github/workflows/autonomous-agent.yml, because the owner will not run an
+  autonomous agent, and every reference to it (README badge and tree,
+  SECURITY.md scope, AGENTS.md, mission.md, operating-model.md, CONTRIBUTING.md,
+  quality and research policies, needs-human README, versioning.md); the
+  operating model's CI exception for workflow-token PRs went with it;
+  (2) the per-PR log last_merged_prs (93 entries up to #563) moved out of
+  state.yaml into run-history/pr-log-to-2026-10-08.yaml; from now on each
+  session lists its PRs in its own dated run-history file; (3) CONTRIBUTING.md
+  has a "Branches and merging" section and lists the repository settings that
+  would enforce it. Settings only the owner can change: require a pull request
+  and the validate check in the ruleset, squash-only merging, auto-delete head
+  branches, deleting the ANTHROPIC_API_KEY secret if one was set for the removed
+  workflow, and a clean-up of the merged branches.
+prs: []
+outcome: pending merge

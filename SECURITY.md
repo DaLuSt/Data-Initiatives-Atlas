@@ -86,8 +86,7 @@ backport to. The tagged data releases and schema versions (see
   to Pages or what the release workflows (`release-pr.yml`,
   `release-publish.yml`) tag and publish, or what the roadmap-board workflow
   (`project-board.yml`, which uses a `project`-scoped token stored as a
-  repository secret) can do with that token. The scheduled agent workflow
-  (`autonomous-agent.yml`) is in scope too.
+  repository secret) can do with that token.
 * **The vendored dependency** — `site/vendor/cytoscape.min.js`
   (Cytoscape.js 3.34.1, MIT). If a vulnerability is published against that
   version, telling us is genuinely useful.

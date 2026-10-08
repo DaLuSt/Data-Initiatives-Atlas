@@ -12,7 +12,6 @@ countries — no install, no account.*
 
 [![Validation](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/validate.yml/badge.svg)](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/validate.yml)
 [![Pages](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/pages.yml/badge.svg)](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/pages.yml)
-[![Autonomous Agent](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/autonomous-agent.yml/badge.svg)](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/autonomous-agent.yml)
 [![Licence: CC0-1.0](https://img.shields.io/badge/licence-CC0--1.0-blue.svg)](LICENSE)
 [![Sponsor](https://img.shields.io/badge/sponsor-%E2%9D%A4-db61a2?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/DaLuSt)
 
@@ -318,9 +317,9 @@ data-initiatives-atlas/
 ├── CODE_OF_CONDUCT.md
 ├── SECURITY.md
 ├── CHANGELOG.md       # data releases, prepared automatically
-├── AGENTS.md          # operating model for the autonomous agent
+├── AGENTS.md          # operating model for Claude Code sessions
 ├── LICENSE
-├── .agent/            # agent state, policies, run history
+├── .agent/            # session state, policies, run history
 ├── .github/
 │   ├── ISSUE_TEMPLATE/
 │   └── workflows/
@@ -328,8 +327,7 @@ data-initiatives-atlas/
 │       ├── pages.yml            # deploy, main only
 │       ├── release-pr.yml       # weekly release pull request
 │       ├── release-publish.yml  # tags and Release after merge
-│       ├── project-board.yml    # keeps the roadmap board in step
-│       └── autonomous-agent.yml # scheduled agent
+│       └── project-board.yml    # keeps the roadmap board in step
 ├── initiatives/
 ├── legislation/
 ├── policies/

@@ -151,19 +151,35 @@ a batch:
 5. Record what changed and what's next, so another contributor (human or
    agent) can pick up without repeating research: open questions go in
    `discovery/unresolved.md`, and the plan lives in the roadmap issues. If you
-   are the autonomous agent, also update `.agent/state.yaml` (see `AGENTS.md`).
+   are a Claude Code session, also add a run-history file and update the
+   snapshot in `.agent/state.yaml` (see `AGENTS.md`).
 
-## Autonomous contributions
+## Branches and merging
 
-A scheduled GitHub Actions workflow (`.github/workflows/autonomous-agent.yml`)
-periodically runs Claude Code against this repository, following the
-operating model in `AGENTS.md` and `.agent/`. It works the same batch
-workflow as a human contributor — branch, validate, commit, open a PR,
-update `.agent/state.yaml` — and never pushes to `main` directly. PRs it
-opens are labelled as such in their description; review them the same way
-you'd review any other PR. See `AGENTS.md` for its priority order and
-safety rules, including `.agent/needs-human/` for questions it couldn't
-resolve on its own.
+- **Trunk-based.** `main` is the only long-lived branch. Work happens on a
+  short-lived branch cut from `origin/main`, named for the change
+  (`claude/...` for Claude Code sessions, anything clear for a person), and
+  nothing is committed to `main` directly.
+- **One pull request per item, squash-merged.** The `validate` check must be
+  green first. Squash keeps one commit per item, which the release notes are
+  built from. Delete the branch after merging.
+- **Releases are tags**, prepared by the automatic release pull request and
+  never by hand; there are no release or `develop` branches.
+- **Settings that back this up** (owner, *Settings → General* and *Rules*; the
+  ruleset on `main` currently only blocks deletion and force-pushes, so the
+  rest is convention until these are set): require a pull request before
+  merging; require the `validate` status check; allow squash merging only;
+  delete head branches automatically after merge.
+- **Keep branches short.** If a branch has fallen behind `main`, merge `main`
+  into it (no rebase of a branch someone else may have pulled).
+
+## Claude Code sessions
+
+Sessions started by the owner follow the operating model in `AGENTS.md` and
+`.agent/`: the same branch, validate, commit and PR workflow, with the
+repository as the session's memory. See `AGENTS.md` for the priority order
+and safety rules, including `.agent/needs-human/` for questions a session
+couldn't resolve on its own. There is no scheduled or unattended agent.
 
 ## Style
 

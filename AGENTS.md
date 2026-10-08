@@ -1,7 +1,7 @@
-# Autonomous Knowledge Graph Agent — Operating Model
+# Knowledge Graph Sessions — Operating Model
 
-This file is the entry point for any Claude Code session — human-driven
-or scheduled — working on this repository. It is intentionally short: the
+This file is the entry point for any Claude Code session working on this
+repository (there is no scheduled agent; every session is started by a person). It is intentionally short: the
 detail lives in `.agent/` and in the repository's own existing files (see
 below), and this file's job is to point into them, not duplicate them.
 

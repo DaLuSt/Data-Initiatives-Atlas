@@ -1,6 +1,6 @@
 # Operating Model
 
-How an autonomous (or human-driven) session picks work, does it, and gets
+How a session picks work, does it, and gets
 it merged. See `.agent/mission.md` for why, `.agent/research-policy.md`
 for the sourcing rules that apply while doing it, and
 `.agent/quality-policy.md` for the bar a change must clear before it
@@ -22,7 +22,7 @@ writing narrative detail to `progress/completed.md` when a batch
 finishes; update the two YAML files for anything a future session needs
 to check quickly.
 
-## Priority order for autonomous work
+## Priority order for the work
 
 1. **Finish incomplete work.** Check `.agent/current-task.yaml`. If a
    previous session left something mid-flight, continue it before
@@ -80,32 +80,30 @@ do not push directly to `main`:
    ```
 6. Push the branch, open a PR against `main` describing what changed and
    why, with a short test-plan checklist.
-7. **Check for real, independent CI before merging — but know when it
-   won't appear.** `.github/workflows/validate.yml` runs the same three
-   checks independently on every PR, and when a PR was opened by a human
-   or by a session authenticated as a normal user/OAuth app (not a
-   GitHub Actions job token), that check genuinely fires — wait for it
-   (`get_check_runs`, not `get_status`, which does not see Actions
-   results) and require it green before merging.
-   **Exception, and it matters:** if this session is itself running
-   inside a GitHub Actions job (the scheduled `autonomous-agent.yml`
-   workflow) and used that job's own `GITHUB_TOKEN` to push/open the PR,
-   GitHub's recursion-prevention rule means `validate.yml` will **not**
-   fire on that PR at all — don't wait for a check that will never
-   appear. In that specific case, step 4's local validation (identical
-   checks, run directly) is the authoritative gate instead.
-8. **If the gate (real CI, or local validation when CI can't fire per
-   above) passes: squash-merge.** If it fails: do not force-merge. Fix
+7. **Wait for the real CI before merging.** `.github/workflows/validate.yml`
+   runs the checks independently on every PR (wait on the check run, not on
+   `get_status`, which does not see Actions results) and it must be green.
+   Do not merge without the owner's word when they have asked to approve
+   merges. (A PR opened by a workflow's own `GITHUB_TOKEN`, such as the weekly
+   release PR, does not trigger `validate.yml`; that workflow runs the
+   validation itself before opening the PR.)
+8. **If the gate passes: squash-merge** (the only merge method to use; one
+   commit per item keeps the release notes readable). Delete the branch once
+   merged. If it fails: do not force-merge. Fix
    and re-push once. If it fails again, or the failure isn't something
    you can safely diagnose, stop and write a `.agent/needs-human/` entry
    instead of retrying indefinitely.
 9. Sync local `main` (`git fetch && git reset --hard origin/main`),
    delete the local feature branch.
-10. Update `.agent/state.yaml` (and `.agent/current-task.yaml` back to
-    idle) so the next session doesn't repeat the work, and add an entry
-    to `.agent/run-history/`.
+10. Add your own dated file to `.agent/run-history/` (its `prs:` list is the
+    record of what merged; a PR cannot know its own number, so fill it in at
+    the next housekeeping, or leave the title). Update `.agent/state.yaml`
+    only for what is a *snapshot* (counts, release, open-item counts), and
+    put `.agent/current-task.yaml` back to idle. Do not keep a running list
+    of PRs in `state.yaml`: it was the file most PRs touched, so parallel
+    sessions conflicted on it.
 
-**Stale shared branches**: if a prior autonomous run's branch still
+**Stale shared branches**: if a prior session's branch still
 exists on the remote at an already-merged (now-stale) tip, don't
 force-push over it. Recreate the local branch from the remote's actual
 tip, merge `origin/main` into it (a normal merge, not a rebase), then
@@ -114,14 +112,12 @@ so they cannot conflict; if an older branch still carries them, take
 `origin/main`'s side (they are deleted there) and `git rm --cached` them.
 
 **Never commit directly to `main`, and never `git add .` blindly.** If
-an autonomous run is interrupted (timeout, crash) with uncommitted
-changes still in the working tree, the recovery step must isolate that
-work onto its own branch and open a PR for it — never force it onto
-`main`, where it could silently overwrite a human's concurrent commit.
-See `.github/workflows/autonomous-agent.yml`'s final step for how this
-is implemented.
+a session is interrupted (timeout, crash) with uncommitted changes still
+in the working tree, isolate that work onto its own branch and open a PR
+for it — never force it onto `main`, where it could silently overwrite a
+concurrent commit.
 
-## Session shape (for a scheduled/unattended run)
+## Session shape
 
 ```
 Read .agent/state.yaml and .agent/current-task.yaml
