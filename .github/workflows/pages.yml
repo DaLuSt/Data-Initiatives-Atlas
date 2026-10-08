@@ -46,28 +46,15 @@ jobs:
     name: Validate, generate graph, build site
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
-      - name: Install dependencies
-        run: pip install -r validation/requirements.txt
-
-      # A broken repository must never be published. This is the same suite
-      # that guards pull requests.
-      - name: Validate the Atlas
-        working-directory: validation
-        run: python run_all.py
-
-      - name: Test the graph generator
-        run: python tools/test_build_graph.py
-
-      # The re-verification runner. Pure-function tests only — no network, so
-      # this passes identically on a runner with egress and one without.
-      - name: Test the re-verification runner
-        run: python tools/test_reverify.py
+      # A broken repository must never be published. These are the same checks
+      # that guard pull requests (one shared definition, .github/actions/checks).
+      - uses: ./.github/actions/checks
 
       - name: Generate the graph
         env:
@@ -98,9 +85,9 @@ jobs:
               f"{c['label']} ({c['code']}, {c['count']})" for c in g["facets"]["countries"]))
           PY
 
-      - uses: actions/configure-pages@v5
+      - uses: actions/configure-pages@v6
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: site
 
@@ -113,4 +100,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

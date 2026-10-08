@@ -1,0 +1,54 @@
+name: Data correction
+description: A claim in an entity looks wrong, or a cited source does not say what the entity says it does
+title: "Correction: "
+labels: ["data-correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you. The most useful report names the entity, quotes what it says, and
+        gives the page that says otherwise. An entity being thinly sourced is a known,
+        documented state and not a defect; a source that **contradicts** an entity is.
+        A security problem is not a data correction: see `SECURITY.md`.
+  - type: input
+    id: entity
+    attributes:
+      label: Entity ID
+      description: The ID shown in the detail panel or at the top of the entity's file, for example `NL-UAVG`.
+      placeholder: NL-UAVG
+    validations:
+      required: true
+  - type: textarea
+    id: says
+    attributes:
+      label: What the entity says
+      description: Quote the claim (a date, a status, a name, a relationship).
+    validations:
+      required: true
+  - type: textarea
+    id: should
+    attributes:
+      label: What you think is right
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: A page that says so
+      description: A link to the primary source if you have one (a legislation or official site beats a news article).
+      placeholder: https://
+    validations:
+      required: true
+  - type: dropdown
+    id: sure
+    attributes:
+      label: How sure are you?
+      options: ["The source states it plainly", "My reading of the source", "From memory, no source at hand"]
+    validations:
+      required: true
+  - type: textarea
+    id: more
+    attributes:
+      label: Anything else
+    validations:
+      required: false

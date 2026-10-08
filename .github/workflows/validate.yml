@@ -1,7 +1,8 @@
 name: Validate Atlas
 
 # Validation only. This workflow never deploys — publishing to GitHub Pages
-# happens in pages.yml, and only from `main` (brief §17).
+# happens in pages.yml, and only from `main` (brief §17). The checks themselves
+# live in .github/actions/checks, shared with pages.yml.
 on:
   pull_request:
     branches: [main]
@@ -16,44 +17,13 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
-      - name: Install dependencies
-        run: pip install -r validation/requirements.txt
-
-      # YAML parses · IDs unique · relationships resolve · links resolve · sources present
-      - name: Run validation suite
-        working-directory: validation
-        run: python run_all.py
-
-      # The validators' own rules: each is shown to fire on a defect and to stay
-      # quiet on a good entity, in a temporary repository. No network.
-      - name: Test the validators
-        run: python validation/test_validators.py
-
-      # Parsing, node/edge generation, direction preservation, refusal behaviour.
-      - name: Test the graph generator
-        run: python tools/test_build_graph.py
-
-      # The re-verification runner. Pure-function tests only — no network, so
-      # this passes identically on a runner with egress and one without.
-      - name: Test the re-verification runner
-        run: python tools/test_reverify.py
-
-      # The release tooling: version arithmetic, change classification, the
-      # CHANGELOG entry, the schema-version rule. Pure functions, no network.
-      - name: Test the release tooling
-        run: python tools/test_release.py
-
-      # The roadmap board sync (tools/project_board.py): the plan for each issue,
-      # an in-memory fake of GitHub's GraphQL API, and the workflow's safety
-      # properties. No network.
-      - name: Test the board sync
-        run: python tools/test_project_board.py
+      - uses: ./.github/actions/checks
 
       # A change to the data model must come with a schema_version bump
       # (metadata/versioning.md). Compares schema.json with the base branch.
@@ -62,10 +32,3 @@ jobs:
         run: |
           git fetch --depth=1 origin "${{ github.base_ref }}"
           python tools/release.py check-schema --base-ref "origin/${{ github.base_ref }}"
-
-      # Proves the graph can still be generated from this branch's data before
-      # it is allowed to reach main. The generated files are not committed, so
-      # there is no committed copy to go stale; reproducibility of the build is
-      # asserted by the test step above (test_build_is_deterministic).
-      - name: Check the graph builds
-        run: python tools/build_graph.py --check
