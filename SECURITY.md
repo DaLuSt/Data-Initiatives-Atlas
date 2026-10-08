@@ -84,7 +84,9 @@ backport to. The tagged data releases and schema versions (see
 * **The GitHub Actions workflows** — privilege escalation, secret exposure, or
   a path by which a pull request from a fork could influence what is deployed
   to Pages or what the release workflows (`release-pr.yml`,
-  `release-publish.yml`) tag and publish. The scheduled agent workflow
+  `release-publish.yml`) tag and publish, or what the roadmap-board workflow
+  (`project-board.yml`, which uses a `project`-scoped token stored as a
+  repository secret) can do with that token. The scheduled agent workflow
   (`autonomous-agent.yml`) is in scope too.
 * **The vendored dependency** — `site/vendor/cytoscape.min.js`
   (Cytoscape.js 3.34.1, MIT). If a vulnerability is published against that
