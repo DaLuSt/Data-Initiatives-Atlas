@@ -1,0 +1,25 @@
+date: "2026-10-08"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  The roadmap Project board is now kept in step by a GitHub Actions workflow,
+  because Projects v2 needs GraphQL and the agent's environment blocks it (a
+  test showed the proxy refuses GraphQL even with a token set, so a token in the
+  agent's environment cannot work). tools/project_board.py (29 tests against an
+  in-memory fake of the API) adds missing `roadmap` issues, sets Status to Done
+  for closed ones and Backlog for open ones with no status, and sets Start date
+  and Target date from the milestone; .github/workflows/project-board.yml runs it
+  on issue events, on Mondays and by hand. The owner stored a classic token with
+  the `project` scope as the PROJECT_TOKEN repository secret.
+  First run, 2026-10-08, from a manual dispatch: a dry run listed 23 changes, the
+  real run made them (4 closed issues added as Done, the two date fields created,
+  dates set on 23 issues; 6 already in step), and a second dry run reported 0
+  changes. The GraphQL queries had only been exercised against the fake until
+  then. Not checked from here: what the board looks like, and the Roadmap
+  (timeline) layout view, which the owner has to add (views are not in the
+  workflow's reach). The token expires; when it does the workflow fails and the
+  board stops updating.
+prs:
+  - number: 488
+    title: "Roadmap board: a workflow that keeps the Project board in step with the roadmap issues"
+outcome: merged
+entity_count_after: 742
