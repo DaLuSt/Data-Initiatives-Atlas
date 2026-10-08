@@ -15,14 +15,17 @@ summary: >
   "…and 23 more". #518 was rewritten by hand, and PR #519 changed the rule: a
   Highlights section wins; otherwise Site and features, Data and Schema items
   (never Tooling, Documentation, Housekeeping), roadmap items only to fill a
-  short list. Not changed: the classification of metadata/rank-basis.md as a
-  schema file (a pull request touching it is still filed under Schema in the
-  changelog; the Highlights section avoids the problem in the post but not in the
-  changelog).
+  short list. The classification was then changed too (PR #521): metadata/rank-basis.md
+  documents how each country's rank values were read, so it is a data file; it
+  moved out of SCHEMA_FILES into DATA_FILES. taxonomy.md and
+  relationship-types.md still count as schema (they define the vocabularies);
+  published changelog entries were not rewritten.
 prs:
   - number: 517
     title: "Release data 2026.10.2"
   - number: 519
     title: "LinkedIn draft: list Site, Data and Schema changes only, and use a Highlights section when there is one"
+  - number: 521
+    title: "Release changelog: file metadata/rank-basis.md under Data, not Schema"
 outcome: merged
 entity_count_after: 745
