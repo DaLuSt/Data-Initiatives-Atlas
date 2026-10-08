@@ -20,5 +20,7 @@ summary: >
   and the validate check in the ruleset, squash-only merging, auto-delete head
   branches, deleting the ANTHROPIC_API_KEY secret if one was set for the removed
   workflow, and a clean-up of the merged branches.
-prs: []
-outcome: pending merge
+prs:
+  - number: 564
+    title: "Branching: remove the autonomous-agent workflow, move the per-PR log out of state.yaml"
+outcome: merged

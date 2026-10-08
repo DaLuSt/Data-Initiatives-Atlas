@@ -40,7 +40,7 @@ release:
 
 # The per-PR log is no longer kept here: every session recorded its PR in this one
 # file, so parallel sessions collided on it. Each session writes its own dated file in
-# .agent/run-history/ instead (see its README). PRs up to #563:
+# .agent/run-history/ instead (see its README). PRs up to #563 (#564 and later are in the dated files):
 # .agent/run-history/pr-log-to-2026-10-08.yaml. The merge commit on main links a PR.
 
 notes: >
