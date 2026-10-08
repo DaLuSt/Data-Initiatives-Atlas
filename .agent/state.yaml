@@ -195,6 +195,12 @@ last_merged_prs:
     summary: "Housekeeping: recorded #489, #490 and #491 in state.yaml and run-history"
   - number: 514
     summary: "Releases: release-publish.yml now opens an issue (label linkedin) holding a plain-text LinkedIn post draft built by `tools/release.py linkedin-draft` from the CHANGELOG entry; nothing is posted automatically (automatic posting with an approval step is roadmap #515)"
+  - number: 516
+    summary: "Housekeeping: recorded #492 and #514, the longer-term roadmap and the LinkedIn draft in state.yaml and run-history"
+  - number: 517
+    summary: "Release data 2026.10.2: the first release opened by the weekly workflow (after the Actions setting was changed); the owner had #465 and #466 moved from Schema to Data in the changelog before merging; the publish workflow created the tag and Release and opened the first LinkedIn draft issue (#518)"
+  - number: 519
+    summary: "LinkedIn draft rule: a `### Highlights` section in the CHANGELOG entry is used as written; otherwise the Site and features, Data and Schema changes (never Tooling, Documentation or Housekeeping), roadmap items only to fill a short list; the release pull request body tells the reviewer about Highlights"
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
