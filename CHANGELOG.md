@@ -14,11 +14,6 @@ and a dated **data release** (`YYYY.MM.N`) for each snapshot.
 
 In the Atlas at this release: 745 entities (+5), 1,576 typed relationships (+11), 58 countries (+0).
 
-### Schema
-
-- Record what the fetch tool and curl can and cannot read (EUR-Lex, Légifrance and others) (#466)
-- Rank basis: close the Portuguese and UK gaps, leave the IT-CAD form question for you (#465)
-
 ### Site and features
 
 - List view: download the rows on screen as CSV (#456)
@@ -26,6 +21,8 @@ In the Atlas at this release: 745 entities (+5), 1,576 typed relationships (+11)
 
 ### Data
 
+- Record what the fetch tool and curl can and cannot read (EUR-Lex, Légifrance and others) (#466)
+- Rank basis: close the Portuguese and UK gaps, leave the IT-CAD form question for you (#465)
 - UK: the Gas and Electricity Markets Authority, Civil Aviation Authority and Drinking Water Quality Regulator for Scotland as NIS competent authorities (roadmap #459) (#491)
 - France: FR-LRN implements-requirement-from the Open Data Directive (EUR-Lex register); EuroGeographics related-to INSPIRE (roadmap #460) (#490)
 - English names: 26 more name_en values from the bodies' own English sites and official translations (roadmap #446) (#486)
