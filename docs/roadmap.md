@@ -168,7 +168,7 @@ fourteen groups; `discovery/research-queue.md` and `discovery/duplicates.md` are
 
 - Work happens in ordinary pull requests. The pull request that finishes an
   item says `Closes #N` in its body, so the issue closes when it merges.
-- Autonomous sessions pick work by `.agent/operating-model.md`'s priority order;
+- Sessions pick work by `.agent/operating-model.md`'s priority order;
   a roadmap item the owner has put in *Next* comes first.
 - The release pull request lists every closed `roadmap` issue since the last
   release under *Roadmap items completed* (`metadata/versioning.md`).

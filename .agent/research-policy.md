@@ -1,7 +1,7 @@
 # Research Policy (non-negotiable)
 
 These rules apply to every entity, relationship, and claim added to the
-Atlas, by a human or an autonomous session alike. `CONTRIBUTING.md` has
+Atlas, by a person or a Claude Code session alike. `CONTRIBUTING.md` has
 the mechanics of adding an entity; this file is about what makes a claim
 fit to add at all.
 

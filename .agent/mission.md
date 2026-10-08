@@ -4,8 +4,8 @@ The Data Initiatives Atlas is an open, connected knowledge graph of
 data/digital/governance initiatives — laws, organisations, standards,
 platforms, data spaces and programmes — spanning national, EU, UN and
 international scope. `README.md` has the full project overview and
-current entity/connection counts; this file is about *why* an autonomous
-agent works on it and what "good" looks like for that work.
+current entity/connection counts; this file is about *why* Claude Code
+sessions work on it and what "good" looks like for that work.
 
 ## Primary objective
 
@@ -32,12 +32,13 @@ A piece of work (an entity added, a relationship typed, a
    session was interrupted) — never left only in an uncommitted working
    tree.
 
-## Why this runs autonomously
+## Why sessions work this way
 
-The scheduled workflow (`.github/workflows/autonomous-agent.yml`) exists
-so the graph keeps growing between human sessions, using the same
-research and git discipline a human contributor follows —
-`CONTRIBUTING.md` describes that discipline for a human; `AGENTS.md` and
-the rest of `.agent/` describe it for an unattended agent. Autonomy is a
-means of getting more sourced, accurate work done, not licence to relax
-the sourcing bar — see `.agent/research-policy.md`.
+There is no scheduled or unattended agent: the earlier workflow that ran one
+(`autonomous-agent.yml`) was removed on 2026-10-08, because the owner does not
+plan to run it. Every session is started by a person and follows the same
+research and git discipline a human contributor does. `CONTRIBUTING.md`
+describes that discipline; `AGENTS.md` and the rest of `.agent/` give a
+session the memory and the rules. Speed is a means of getting more sourced,
+accurate work done, not licence to relax the sourcing bar — see
+`.agent/research-policy.md`.

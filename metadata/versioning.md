@@ -94,7 +94,7 @@ history is not lost. **Version 1.0.0 is the schema as of the first release.**
 Taken together that is three breaking changes in about three weeks, which is why
 the schema now has a version.
 
-## For an autonomous session
+## For a Claude Code session
 
 If your change touches `metadata/schema.json`, bump `schema_version` in the same
 pull request and add a line under *Schema history* only if you are recording

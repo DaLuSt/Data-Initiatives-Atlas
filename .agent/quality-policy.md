@@ -1,7 +1,7 @@
 # Quality Policy
 
 The bar a change must clear before it merges, and the boundaries no
-session — human or autonomous — may cross.
+session — whoever starts it — may cross.
 
 ## Validation (must be clean before every commit)
 
