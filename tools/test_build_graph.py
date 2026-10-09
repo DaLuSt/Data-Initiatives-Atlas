@@ -10,6 +10,7 @@ the refusal behaviour that stops a malformed repository producing a graph.
 
 from __future__ import annotations
 
+import copy
 import json
 import sys
 import tempfile
@@ -21,7 +22,22 @@ sys.path.insert(0, str(REPO_ROOT / "tools"))
 sys.path.insert(0, str(REPO_ROOT / "validation"))
 
 import build_graph  # noqa: E402
-from common import load_all_entities, load_schema  # noqa: E402
+import common  # noqa: E402
+from common import load_schema  # noqa: E402
+
+_ENTITY_CACHE: dict[bool, list] = {}
+
+
+def load_all_entities(entities_only: bool = True):
+    """`common.load_all_entities`, parsed once per test run.
+
+    Reading and parsing every entity file takes several seconds and a lot of tests do it;
+    each caller still gets its own deep copy, so a test that edits an entity in memory
+    cannot affect another.
+    """
+    if entities_only not in _ENTITY_CACHE:
+        _ENTITY_CACHE[entities_only] = common.load_all_entities(entities_only=entities_only)
+    return copy.deepcopy(_ENTITY_CACHE[entities_only])
 
 
 class TestDataParsing(unittest.TestCase):
