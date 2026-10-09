@@ -19,5 +19,11 @@ summary: >
   ones. Two Dependabot pull requests (#568 pyyaml >=6.0.3, #569 checkout v7 and
   setup-python v7) opened from the new config and passed validate; left for the
   owner to merge.
-prs: []
-outcome: pending merge
+prs:
+  - number: 570
+    title: "UK: add the Office for Statistics Regulation and OS of Northern Ireland (#459); EU-EIDAS2 amends EU-EIDAS (#527)"
+  - number: 568
+    title: "Validation: update pyyaml requirement to >=6.0.3 (Dependabot)"
+  - number: 569
+    title: "Actions: bump checkout and setup-python to v7 (Dependabot)"
+outcome: merged. The first Pages deploy on checkout v7 and setup-python v7 succeeded. #527 closed by the merge; #459 stays open for the UN-CES seat, other countries' oversight bodies and a British Standard.
