@@ -29,13 +29,26 @@ verification: primary-source
 
 start_date: 2026-05-10
 end_date: null
-last_verified: "2026-09-13"
+last_verified: "2026-10-09"
 previous_version: null
 successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
   - DOMAIN-CYBERSECURITY
+  - DOMAIN-ENERGY
+  - DOMAIN-MOBILITY
+  - DOMAIN-FINANCE
+  - DOMAIN-HEALTH
+  - DOMAIN-WATER
+  - DOMAIN-DIGITAL-INFRASTRUCTURE
+  - DOMAIN-SPACE
+  - DOMAIN-POSTAL
+  - DOMAIN-ENVIRONMENT
+  - DOMAIN-CHEMICALS
+  - DOMAIN-FOOD
+  - DOMAIN-MANUFACTURING
+  - DOMAIN-RESEARCH
 organisations:
   - LU-ILR
   - LU-CSSF
@@ -132,6 +145,17 @@ organisation act) — the same shape of carve-out [[NL-WIV-2017]]-style
 regimes and [[FR-NIS2-LOI]]'s CER/DORA bundling both show elsewhere in
 the Atlas's NIS2 layer, though Luxembourg expresses it as an explicit
 statutory exclusion rather than a separate instrument.
+
+## The sectors the act covers
+
+Read directly in the Mémorial A n° 225 (2026-10-09), the act's two annexes list the sectors. **Annexe I,
+secteurs hautement critiques:** Énergie, Transports, Secteur bancaire, Infrastructures des marchés
+financiers, Santé, Eau potable, Eaux usées, Infrastructure numérique, Gestion des services TIC,
+Administration publique and Espace. **Annexe II, autres secteurs critiques:** Services postaux et
+d'expédition, Gestion des déchets, Fabrication, production et distribution de produits chimiques,
+Production, transformation et distribution des denrées alimentaires, Fabrication (manufacturing),
+Fournisseurs numériques and Recherche (organismes de recherche). The domain tags follow these sectors,
+as [[NL-CBW]]'s do; waste management is tagged `DOMAIN-ENVIRONMENT`, as there.
 
 ## Two competent authorities, split by sector
 

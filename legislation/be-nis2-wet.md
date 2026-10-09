@@ -28,13 +28,26 @@ verification: primary-source
 
 start_date: 2024-10-18
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-10-09"
 previous_version: BE-NIS1-WET
 successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
   - DOMAIN-CYBERSECURITY
+  - DOMAIN-ENERGY
+  - DOMAIN-MOBILITY
+  - DOMAIN-FINANCE
+  - DOMAIN-HEALTH
+  - DOMAIN-WATER
+  - DOMAIN-DIGITAL-INFRASTRUCTURE
+  - DOMAIN-SPACE
+  - DOMAIN-POSTAL
+  - DOMAIN-ENVIRONMENT
+  - DOMAIN-CHEMICALS
+  - DOMAIN-FOOD
+  - DOMAIN-MANUFACTURING
+  - DOMAIN-RESEARCH
 organisations:
   - BE-CCB
 related_entities:
@@ -117,6 +130,17 @@ It transposes [[EU-NIS2]] and **replaces [[BE-NIS1-WET]]**, the act of
 - Coordinated by [[BE-CCB]] and the Prime Minister's office; the royal
   decree designates the CCB as national cybersecurity authority and
   national CSIRT, supported by sectoral authorities.
+
+## The sectors the act covers
+
+Read directly on the Justel database (2026-10-09; the text is updated to 19 January 2026), the act's two
+annexes list the sectors. **Bijlage I, zeer kritieke sectoren:** Energie, Vervoer, Bankwezen,
+Infrastructuur voor de financiële markt, Gezondheidszorg, Drinkwater, Afvalwater, Digitale infrastructuur,
+Beheer van ICT-diensten (business-to-business), Overheid and Ruimtevaart. **Bijlage II, andere kritieke
+sectoren:** Post- en koeriersdiensten, Afvalstoffenbeheer, Vervaardiging, productie en distributie van
+chemische stoffen, Productie, verwerking en distributie van levensmiddelen, Vervaardiging (manufacturing),
+Digitale aanbieders and Onderzoek (research organisations). The domain tags follow these sectors, as
+[[NL-CBW]]'s do; waste management is tagged `DOMAIN-ENVIRONMENT`, as there.
 
 ## Three transpositions of one directive — the Atlas's best comparison
 
