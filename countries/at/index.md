@@ -31,3 +31,5 @@ Anchor entity: [[AT]]
 
 - [[AT-EGOVG]] — E-Government-Gesetz _(the E-ID legal basis for
   [[AT-ID-AUSTRIA]]; added 2026-09-04)_
+- [[AT-UIG]] — Umweltinformationsgesetz _(federal act; implements
+  [[EU-ENVIRONMENTAL-INFORMATION-DIRECTIVE]]; added 2026-10-09)_
