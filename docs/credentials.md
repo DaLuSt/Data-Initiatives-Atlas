@@ -126,8 +126,9 @@ personal posting. Check this and the API terms on the screen when creating it.
 3. On the *Auth* tab, add one redirect URL. For a one-off local script,
    `http://localhost:8080/callback` is enough. Note the Client ID and Client
    Secret; the secret is a credential.
-4. Run the authorisation once (script below). LinkedIn shows a consent screen
-   asking for `openid profile w_member_social`; approve it.
+4. Run the authorisation once, on your own computer (`tools/linkedin_auth.py`,
+   built 2026-10-09; see "Running the authorisation script" below). LinkedIn shows
+   a consent screen asking for `openid profile w_member_social`; approve it.
 5. Add to GitHub, *Settings → Environments → New environment* named `linkedin`,
    with **Required reviewers** set to the owner. Then in that environment:
    secrets `LINKEDIN_ACCESS_TOKEN` and `LINKEDIN_AUTHOR_URN`
@@ -137,13 +138,28 @@ personal posting. Check this and the API terms on the screen when creating it.
 Do not put the Client Secret in GitHub unless a refresh flow needs it (see the
 open question below); the access token alone is enough to post.
 
-### What to build (2027.01, #515)
+### Running the authorisation script
 
-1. **`tools/linkedin_auth.py`** (run by the owner, locally): opens the consent
-   URL with a random `state`, receives the redirect on `localhost`, exchanges the
-   code for the token, reads the member ID from the OpenID *userinfo* endpoint,
-   and prints the token, the `urn:li:person:…` value and the expiry date for the
-   owner to paste into GitHub. It never writes them to disk.
+`tools/linkedin_auth.py` is built (standard library only; tests in
+`tools/test_linkedin_auth.py`). It opens the consent URL with a random `state`,
+receives the redirect on `127.0.0.1` only, exchanges the code for the token, reads
+the member ID from the OpenID *userinfo* endpoint, and prints the token, the
+`urn:li:person:…` value and the expiry date for you to paste into GitHub. It
+writes nothing to disk and never prints the Client Secret.
+
+```
+export LINKEDIN_CLIENT_ID=<the Client ID from the Auth tab>
+python3 tools/linkedin_auth.py        # asks for the Client Secret (hidden)
+```
+
+Use `--port N` if 8080 is busy (and add that redirect URL in the app). If it
+reports that the token lacks `w_member_social` or that no member ID came back,
+the matching product has not been added to the app (step 2). Run it again in
+about 50 days to renew the token.
+
+### What is still to build (2027.01, #515)
+
+1. ~~`tools/linkedin_auth.py`~~ built 2026-10-09 (above).
 2. **`tools/linkedin_post.py`**: posts text to `POST https://api.linkedin.com/rest/posts`
    with the headers the Posts API requires (`Authorization: Bearer …`,
    `Linkedin-Version: YYYYMM`, `X-Restli-Protocol-Version: 2.0.0`), a text-only
