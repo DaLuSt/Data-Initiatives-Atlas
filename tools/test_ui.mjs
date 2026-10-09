@@ -1,18 +1,23 @@
 /* Browser tests for the Atlas graph UI (brief §28).
  *
- * These are optional and NOT part of the CI gate: they need Playwright and a
- * Chromium build, which the validation workflow deliberately does not install.
- * The Python suite (tools/test_build_graph.py) is the required gate.
+ * Run in CI by the `browser` job of .github/workflows/validate.yml (the runner's own
+ * Chrome plus the playwright-core client). That job is deliberately not a required check
+ * yet; the Python suites (the shared checks) are.
+ *
+ * A section that throws (a selector that no longer exists, a timeout) is recorded as one
+ * failed check and the run goes on, so one stale selector no longer hides every other
+ * check. Counts come from the data (TOTAL), not from numbers frozen in this file.
  *
  * Run locally:
+ *     python tools/build_graph.py
  *     python -m http.server 8765 --directory site &
- *     npm install playwright && npx playwright install chromium
- *     node tools/test_ui.mjs
+ *     npm install playwright-core            # the client only
+ *     CHROME_PATH=/path/to/chrome node tools/test_ui.mjs
  *
  * Override the target with BASE, and the browser binary with CHROME_PATH.
  */
 
-import { chromium } from 'playwright';
+import { chromium } from 'playwright-core';
 
 const BASE = process.env.BASE || 'http://127.0.0.1:8765';
 const results = [];
@@ -23,12 +28,27 @@ function check(name, ok, extra = '') {
   if (!ok) failed++;
 }
 
+// A section that throws (a selector that no longer exists, a timeout) is one failed check,
+// not the end of the run: every section still gets its turn, and the report lists them all.
+function crash(section, e) {
+  const lines = String(e && e.message || e).split('\n');
+  // The call log's last lines say why an action never ran (not visible, intercepted, ...).
+  const waiting = lines.filter(l => /waiting for|not visible|intercepts|disabled|not stable|retrying/.test(l)).slice(0, 6).map(l => l.trim()).join(' ');
+  check(`section "${section}" ran to the end`, false,
+    (lines[0] + ' ' + waiting.replace(/\x1b\[[0-9;]*m/g, '').trim()).slice(0, 220));
+}
+
+// The number of entities, read from the data the site is built from, so a new entity does
+// not turn a count that was once hard-coded into a failure.
+const TOTAL = await (await fetch(BASE + '/graph.json')).json().then(g => g.stats.entities);
+
 const browser = await chromium.launch(
   process.env.CHROME_PATH ? { executablePath: process.env.CHROME_PATH } : {});
 
 async function newPage(vp) {
   const ctx = await browser.newContext({ viewport: vp });
   const page = await ctx.newPage();
+  page.setDefaultTimeout(6000);   // a stale selector fails in seconds, not half a minute
   const errors = [];
   page.on('console', m => { if (m.type() === 'error') errors.push(m.text()); });
   page.on('pageerror', e => errors.push('PAGEERROR: ' + e.message));
@@ -36,6 +56,12 @@ async function newPage(vp) {
   return { ctx, page, errors };
 }
 
+
+// Some filter groups (Geographic level, Status, Provenance, Confidence) start collapsed in
+// their <details>; a collapsed control is not clickable, so open the group first.
+async function openFilter(page, id) {
+  await page.evaluate(i => { const d = document.getElementById(i).closest('details'); if (d) d.open = true; }, id);
+}
 
 async function search(page, q) {
   await page.fill('#search', '');
@@ -53,47 +79,50 @@ async function search(page, q) {
 
 // ─────────────────────────── desktop ───────────────────────────
 {
-  const { ctx, page, errors } = await newPage({ width: 1440, height: 900 });
+  var { ctx, page, errors } = await newPage({ width: 1440, height: 900 });
+  try {
   await page.goto(BASE + '/index.html', { waitUntil: 'networkidle' });
   await page.waitForFunction(() => document.getElementById('loading').hidden, null, { timeout: 15000 });
 
   check('page loads with no console/page errors', errors.length === 0, errors.slice(0, 4).join(' | '));
 
-  const nodeCount = await page.evaluate(() => document.querySelectorAll('#cy canvas').length);
+  var nodeCount = await page.evaluate(() => document.querySelectorAll('#cy canvas').length);
   check('cytoscape canvas rendered', nodeCount > 0, `${nodeCount} canvases`);
 
-  const stats = await page.textContent('#stats');
+  var stats = await page.textContent('#stats');
   check('stats rendered dynamically', /\d/.test(stats));
 
-  const gen = await page.textContent('#generated');
+  var gen = await page.textContent('#generated');
   check('generation date shown', /Atlas generated: \w/.test(gen), gen.trim());
 
-  const status = await page.textContent('#stage-status');
+  var status = await page.textContent('#stage-status');
   check('status line reports entity counts', /entities/.test(status), status.trim());
 
   // facets discovered dynamically
-  const countries = await page.$$eval('#f-country .check .cname', els => els.map(e => e.textContent));
+  var countries = await page.$$eval('#f-country .check .cname', els => els.map(e => e.textContent));
   check('countries discovered from data (not hard-coded)',
         countries.includes('Netherlands') && countries.includes('Germany'),
         countries.join(','));
 
-  const levels = await page.$$eval('#f-level .check .cname', els => els.map(e => e.textContent));
+  var levels = await page.$$eval('#f-level .check .cname', els => els.map(e => e.textContent));
   check('geographic levels present', levels.length >= 3, levels.join(','));
 
+  } catch (e) { crash('start', e); }
+  try {
   // ── search ──
   await search(page, 'data act');
-  const sug = await page.$$eval('#suggestions li[data-id]', els => els.map(e => e.dataset.id));
+  var sug = await page.$$eval('#suggestions li[data-id]', els => els.map(e => e.dataset.id));
   check('search returns results', sug.length > 0, sug.slice(0, 3).join(','));
   check('search finds EU-DATA-ACT', sug.includes('EU-DATA-ACT'), sug.slice(0, 5).join(','));
 
   // search by ID
   await search(page, 'DE-BDSG');
-  const byId = await page.$$eval('#suggestions li[data-id]', els => els.map(e => e.dataset.id));
+  var byId = await page.$$eval('#suggestions li[data-id]', els => els.map(e => e.dataset.id));
   check('search by ID works', byId[0] === 'DE-BDSG', byId.slice(0, 3).join(','));
 
   // search by country name
   await search(page, 'Germany');
-  const byCountry = await page.$$eval('#suggestions li[data-id]', els => els.map(e => e.dataset.id));
+  var byCountry = await page.$$eval('#suggestions li[data-id]', els => els.map(e => e.dataset.id));
   check('search by country works', byCountry.includes('DE'), byCountry.slice(0, 3).join(','));
 
   // keyboard nav + select
@@ -103,7 +132,7 @@ async function search(page, q) {
   await page.waitForSelector('#detail:not([hidden])', { timeout: 5000 });
   check('keyboard search selection opens detail panel', true);
 
-  const title = await page.textContent('.d-title');
+  var title = await page.textContent('.d-title');
   check('detail panel shows entity name', /Data Act/i.test(title), title);
 
   await page.waitForFunction(() => {
@@ -112,24 +141,24 @@ async function search(page, q) {
   }, null, { timeout: 8000 });
   check('detail description loaded from details.json', true);
 
-  const chips = await page.$$eval('.chips .chip', els => els.map(e => e.textContent));
+  var chips = await page.$$eval('.chips .chip', els => els.map(e => e.textContent));
   check('detail shows type/level/status chips', chips.length >= 3, chips.join(' | '));
 
-  const secs = await page.$$eval('.d-sec h4', els => els.map(e => e.textContent));
+  var secs = await page.$$eval('.d-sec h3', els => els.map(e => e.textContent));
   check('detail shows relationships section', secs.some(s => /Relationship/i.test(s)), secs.join(','));
   check('detail shows sources section', secs.some(s => /Sources/i.test(s)), secs.join(','));
 
   // GitHub link
-  const gh = await page.getAttribute('.ghlink', 'href');
+  var gh = await page.getAttribute('.ghlink', 'href');
   check('GitHub entity link present and well-formed',
         /^https:\/\/github\.com\/[^/]+\/[^/]+\/blob\/[^/]+\/legislation\/eu-data-act\.md$/.test(gh), gh);
 
   // evidence from details.json
-  const ev = await page.$$eval('.evidence', els => els.length);
+  var ev = await page.$$eval('.evidence', els => els.length);
   check('relationship evidence rendered', ev > 0, `${ev} evidence blocks`);
 
   // navigate via a related entity button
-  const relBtn = await page.$('.rel-target');
+  var relBtn = await page.$('.rel-target');
   if (relBtn) {
     const targetId = await relBtn.getAttribute('data-goto');
     await relBtn.click();
@@ -140,6 +169,8 @@ async function search(page, q) {
   await page.click('#detail-close');
   await page.waitForTimeout(200);
 
+  } catch (e) { crash('search', e); }
+  try {
   // ── canvas keyboard navigation ──
   // The canvas used to be a keyboard dead end (List view and search were
   // the only accessible routes in). Arrow keys now cycle the currently
@@ -147,76 +178,78 @@ async function search(page, q) {
   await page.focus('#cy');
   await page.keyboard.press('ArrowRight');
   await page.waitForTimeout(200);
-  const kb1 = await page.evaluate(() => {
+  var kb1 = await page.evaluate(() => {
     const f = document.getElementById('cy')._cyreg.cy.nodes('.focus');
     return { count: f.length, id: f.length ? f.id() : null };
   });
   check('arrow key on the canvas focuses exactly one node', kb1.count === 1, JSON.stringify(kb1));
 
-  const status1 = await page.textContent('#stage-status');
+  var status1 = await page.textContent('#stage-status');
   check('keyboard focus is announced in the status line', /Keyboard focus:/.test(status1), status1.trim());
 
   await page.keyboard.press('ArrowRight');
   await page.waitForTimeout(200);
-  const kb2 = await page.evaluate(() => document.getElementById('cy')._cyreg.cy.nodes('.focus').id());
+  var kb2 = await page.evaluate(() => document.getElementById('cy')._cyreg.cy.nodes('.focus').id());
   check('a second arrow key press moves focus to a different node', kb2 !== kb1.id, `${kb1.id} → ${kb2}`);
 
   await page.keyboard.press('ArrowLeft');
   await page.waitForTimeout(200);
-  const kb3 = await page.evaluate(() => document.getElementById('cy')._cyreg.cy.nodes('.focus').id());
+  var kb3 = await page.evaluate(() => document.getElementById('cy')._cyreg.cy.nodes('.focus').id());
   check('arrow-left moves focus back to the previous node', kb3 === kb1.id, `expected ${kb1.id}, got ${kb3}`);
 
   await page.keyboard.press('Enter');
   await page.waitForSelector('#detail:not([hidden])', { timeout: 5000 });
-  const kbDetailId = await page.textContent('.d-id');
+  var kbDetailId = await page.textContent('.d-id');
   check('Enter opens the detail panel for the keyboard-focused node',
     kbDetailId === kb1.id, `${kbDetailId} vs ${kb1.id}`);
   await page.click('#detail-close');
   await page.waitForTimeout(200);
 
+  } catch (e) { crash('canvas keyboard navigation', e); }
+  try {
   // ── clicking an edge ──
   // Edges carry type, provenance, confidence and evidence, but were not
   // interactive at all before. Cytoscape has no pixel target to click in a
   // headless canvas test, so the tap is emitted on the element directly —
   // the same delegated handler cy.on('tap', 'edge', …) fires either way.
-  const edgeInfo = await page.evaluate(() => {
+  var edgeInfo = await page.evaluate(() => {
     const e = document.getElementById('cy')._cyreg.cy.edges('[cls = "relationship"]').first();
     if (!e.length) return null;
     e.emit('tap');
     return { source: e.data('source'), target: e.data('target'), type: e.data('type') };
   });
   await page.waitForSelector('#detail:not([hidden])', { timeout: 5000 });
-  const edgeTitle = await page.textContent('.d-title');
-  const expectedTitle = edgeInfo
+  var edgeTitle = await page.textContent('.d-title');
+  var expectedTitle = edgeInfo
     ? edgeInfo.type.replace(/[-_]/g, ' ').replace(/\b\w/g, c => c.toUpperCase()) : null;
   check('tapping a relationship edge opens a detail panel titled with its type',
     !!edgeInfo && edgeTitle === expectedTitle, `${edgeTitle} vs ${expectedTitle}`);
 
-  const edgeIdLine = await page.textContent('.d-id');
+  var edgeIdLine = await page.textContent('.d-id');
   check('edge detail states source → target',
     !!edgeInfo && edgeIdLine === `${edgeInfo.source} → ${edgeInfo.target}`, edgeIdLine);
 
-  const edgeSecs = await page.$$eval('.d-sec h4', els => els.map(e => e.textContent));
+  var edgeSecs = await page.$$eval('.d-sec h3', els => els.map(e => e.textContent));
   check('relationship edge detail has a Connects section', edgeSecs.includes('Connects'), edgeSecs.join(','));
 
   // A wikilink is structural, not a sourced claim — the panel should say so
   // rather than showing a blank Evidence section.
-  await page.click('#edge-classes label:has-text("Wikilinks")');
+  await page.click('#edge-classes label:has-text("Mentions")');
   await page.waitForTimeout(600);
-  const hasWikiEdge = await page.evaluate(() => {
+  var hasWikiEdge = await page.evaluate(() => {
     const e = document.getElementById('cy')._cyreg.cy.edges('[cls = "wikilink"]').first();
     if (!e.length) return false;
     e.emit('tap');
     return true;
   });
   await page.waitForTimeout(300);
-  const wikiTitle = await page.textContent('.d-title');
-  const wikiSecs = await page.$$eval('.d-sec h4', els => els.map(e => e.textContent));
-  check('tapping a wikilink edge opens a detail panel titled "Wikilink"',
-    hasWikiEdge && wikiTitle === 'Wikilink', wikiTitle);
+  var wikiTitle = await page.textContent('.d-title');
+  var wikiSecs = await page.$$eval('.d-sec h3', els => els.map(e => e.textContent));
+  check('tapping a wikilink edge opens a detail panel titled "Mention"',
+    hasWikiEdge && wikiTitle === 'Mention', wikiTitle);
   check('wikilink edge detail explains what it is instead of showing evidence',
     hasWikiEdge && wikiSecs.includes('What this is') && !wikiSecs.includes('Evidence'), wikiSecs.join(','));
-  await page.click('#edge-classes label:has-text("Wikilinks")');
+  await page.click('#edge-classes label:has-text("Mentions")');
   await page.waitForTimeout(400);
   await page.click('#detail-close');
   await page.waitForTimeout(200);
@@ -226,9 +259,9 @@ async function search(page, q) {
   await page.reload({ waitUntil: 'networkidle' });
   await page.waitForFunction(() => document.getElementById('loading').hidden, null, { timeout: 15000 });
   await page.waitForSelector('#detail:not([hidden])', { timeout: 8000 });
-  const dlTitle = await page.textContent('.d-title');
+  var dlTitle = await page.textContent('.d-title');
   check('deep link #NL-NORA opens that entity', /NORA|Nederlandse Overheid/i.test(dlTitle), dlTitle);
-  const viewPressed = await page.getAttribute('#view-explorer', 'aria-pressed');
+  var viewPressed = await page.getAttribute('#view-explorer', 'aria-pressed');
   check('deep link switches to Entity Explorer', viewPressed === 'true');
 
   // The original single-entity hash predates the whole state-encoding
@@ -236,14 +269,16 @@ async function search(page, q) {
   // never part of the shareable state, so the address bar must not rewrite
   // #NL-NORA into a longer #focus=NL-NORA&view=explorer form just because
   // it happened to switch views.
-  const urlAfterDeepLink = new URL(page.url()).hash;
+  var urlAfterDeepLink = new URL(page.url()).hash;
   check('a bare deep link stays in its original short form after loading',
     urlAfterDeepLink === '#NL-NORA', urlAfterDeepLink);
 
   // explorer neighbourhood is smaller than the whole graph
-  const st1 = await page.textContent('#stage-status');
+  var st1 = await page.textContent('#stage-status');
   check('explorer shows a neighbourhood, not everything', /neighbourhood/.test(st1), st1.trim());
 
+  } catch (e) { crash('clicking an edge', e); }
+  try {
   // ── shareable filter state in the URL ──
   await page.click('#view-atlas');
   await page.waitForTimeout(300);
@@ -252,21 +287,21 @@ async function search(page, q) {
 
   await page.click('#f-country label:has-text("Germany")');
   await page.waitForTimeout(400);
-  const urlWithFilter = new URL(page.url()).hash;
+  var urlWithFilter = new URL(page.url()).hash;
   check('toggling a filter is reflected in the URL hash', /country=DE/.test(urlWithFilter), urlWithFilter);
 
   await page.reload({ waitUntil: 'networkidle' });
   await page.waitForFunction(() => document.getElementById('loading').hidden, null, { timeout: 15000 });
   await page.waitForTimeout(500);
-  const restoredChecked = await page.isChecked('#f-country input[value="DE"]');
+  var restoredChecked = await page.isChecked('#f-country input[value="DE"]');
   check('reloading a filter URL re-checks the matching checkbox', restoredChecked);
   // Still in the Explorer view left over from the earlier deep link, so the
   // status line reads "<entity> · N-hop neighbourhood · X of Y entities …"
   // rather than starting with the count — match it anywhere in the string.
-  const restoredStatus = await page.textContent('#stage-status');
-  const restoredCount = +(restoredStatus.match(/([\d,]+) of ([\d,]+) entities/) || [0, '0'])[1].replace(/,/g, '');
+  var restoredStatus = await page.textContent('#stage-status');
+  var restoredCount = +(restoredStatus.match(/([\d,]+) of ([\d,]+) entities/) || [0, '0'])[1].replace(/,/g, '');
   check('reloading a filter URL re-applies the filter to the graph',
-    restoredCount > 0 && restoredCount < 652, restoredStatus.trim());
+    restoredCount > 0 && restoredCount < TOTAL, restoredStatus.trim());
 
   // The focused entity (NL-NORA, from the earlier deep link) is still set,
   // so clearing the filter leaves exactly the legacy bare form behind —
@@ -275,7 +310,7 @@ async function search(page, q) {
   // than never having added it.
   await page.click('#reset-filters');
   await page.waitForTimeout(400);
-  const urlAfterReset = new URL(page.url()).hash;
+  var urlAfterReset = new URL(page.url()).hash;
   check('resetting filters with a focus still set collapses back to the bare form',
     urlAfterReset === '#NL-NORA', urlAfterReset || '(empty)');
 
@@ -284,14 +319,14 @@ async function search(page, q) {
   await page.goto(BASE + '/index.html#view=list&level=national&country=DE', { waitUntil: 'networkidle' });
   await page.waitForFunction(() => document.getElementById('loading').hidden, null, { timeout: 15000 });
   await page.waitForSelector('#listview:not([hidden])', { timeout: 8000 });
-  const listViewPressed = await page.getAttribute('#view-list', 'aria-pressed');
+  var listViewPressed = await page.getAttribute('#view-list', 'aria-pressed');
   check('a query-string hash restores the List view', listViewPressed === 'true');
-  const deChecked = await page.isChecked('#f-country input[value="DE"]');
-  const natChecked = await page.isChecked('#f-level input[value="national"]');
+  var deChecked = await page.isChecked('#f-country input[value="DE"]');
+  var natChecked = await page.isChecked('#f-level input[value="national"]');
   check('a query-string hash restores several filters at once', deChecked && natChecked);
-  const listRowsFiltered = await page.$$eval('#list-body tr', r => r.length);
+  var listRowsFiltered = await page.$$eval('#list-body tr', r => r.length);
   check('the restored filters actually narrow the List view',
-    listRowsFiltered > 0 && listRowsFiltered < 652, `${listRowsFiltered} rows`);
+    listRowsFiltered > 0 && listRowsFiltered < TOTAL, `${listRowsFiltered} rows`);
 
   // A hash can also carry a focused entity alongside other state, and the
   // search box restores its text without popping the suggestion dropdown —
@@ -299,12 +334,12 @@ async function search(page, q) {
   await page.goto(BASE + '/index.html#focus=NL-NORA&q=nora', { waitUntil: 'networkidle' });
   await page.waitForFunction(() => document.getElementById('loading').hidden, null, { timeout: 15000 });
   await page.waitForSelector('#detail:not([hidden])', { timeout: 8000 });
-  const focusRestoredTitle = await page.textContent('.d-title');
+  var focusRestoredTitle = await page.textContent('.d-title');
   check('a query-string hash can carry a focus alongside other state',
     /NORA|Nederlandse Overheid/i.test(focusRestoredTitle), focusRestoredTitle);
-  const searchBoxVal = await page.inputValue('#search');
+  var searchBoxVal = await page.inputValue('#search');
   check('a query-string hash restores the search box text', searchBoxVal === 'nora', searchBoxVal);
-  const suggestionsHidden = await page.isHidden('#suggestions');
+  var suggestionsHidden = await page.isHidden('#suggestions');
   check('restoring search text does not pop open the suggestion dropdown', suggestionsHidden);
 
   await page.click('#reset-filters');
@@ -313,19 +348,21 @@ async function search(page, q) {
   await page.click('#detail-close');
   await page.waitForTimeout(300);
 
+  } catch (e) { crash('shareable filter state in the URL', e); }
+  try {
   // ── neighbourhood depth ──
   // The control tops out at 4 on purpose: every chain the Atlas is built to
   // show completes inside it, and past 4 the median neighbourhood is most of
   // the graph. The options carry live counts because depth is not a dial a
   // reader can predict on a hub-heavy graph — one more hop through a country
   // anchor can multiply the result several times over.
-  const depthOpts = await page.$$eval('#depth option', os =>
+  var depthOpts = await page.$$eval('#depth option', os =>
     os.map(o => ({ value: o.value, text: o.textContent.trim() })));
   check('depth control offers 1 to 4 hops and stops there',
     depthOpts.map(o => o.value).join(',') === '1,2,3,4',
     depthOpts.map(o => o.value).join(','));
 
-  const counted = depthOpts.map(o => {
+  var counted = depthOpts.map(o => {
     const m = o.text.match(/([\d,]+) entit/);
     return m ? +m[1].replace(/,/g, '') : null;
   });
@@ -338,16 +375,16 @@ async function search(page, q) {
   // otherwise the number is decoration rather than information.
   await page.selectOption('#depth', '4');
   await page.waitForTimeout(1200);
-  const shown = await page.evaluate(() =>
+  var shown = await page.evaluate(() =>
     document.getElementById('cy')._cyreg.cy.nodes().length);
   check('choosing a depth renders the neighbourhood its label promised',
     shown === counted[3], `label said ${counted[3]}, canvas has ${shown}`);
 
   // Counts describe the *filtered* graph, so they must move when filters do.
-  const beforeDepthFilter = await page.$$eval('#depth option', os => os.map(o => o.textContent.trim()));
+  var beforeDepthFilter = await page.$$eval('#depth option', os => os.map(o => o.textContent.trim()));
   await page.click('#f-country label:has-text("Germany")');
   await page.waitForTimeout(800);
-  const afterDepthFilter = await page.$$eval('#depth option', os => os.map(o => o.textContent.trim()));
+  var afterDepthFilter = await page.$$eval('#depth option', os => os.map(o => o.textContent.trim()));
   check('depth counts respond to filters rather than describing the raw graph',
     JSON.stringify(beforeDepthFilter) !== JSON.stringify(afterDepthFilter),
     afterDepthFilter[3]);
@@ -356,6 +393,8 @@ async function search(page, q) {
   await page.selectOption('#depth', '2');
   await page.waitForTimeout(600);
 
+  } catch (e) { crash('neighbourhood depth', e); }
+  try {
   // ── path finder ──
   // Still Explorer/NL-NORA/depth 2 from the deep link above. NL-EAR is a
   // direct (1-hop) relationship neighbour, well inside the current
@@ -365,28 +404,28 @@ async function search(page, q) {
   await page.waitForSelector('#path-suggestions li[data-id]');
   await page.locator('#path-suggestions li[data-id]').first().click();
   await page.waitForTimeout(600);
-  const pathResultNear = await page.textContent('#path-result');
+  var pathResultNear = await page.textContent('#path-result');
   check('picking a path target renders a hop count and route',
     /1 hop/.test(pathResultNear) && /Enterprise Architectuur/i.test(pathResultNear),
     pathResultNear.trim());
 
-  const pathClasses1 = await page.evaluate(() => {
+  var pathClasses1 = await page.evaluate(() => {
     const cy = document.getElementById('cy')._cyreg.cy;
     return { nodes: cy.nodes('.path-node').length, edges: cy.edges('.path-edge').length };
   });
   check('a found path marks its nodes and edges on the canvas',
     pathClasses1.nodes >= 2 && pathClasses1.edges >= 1, JSON.stringify(pathClasses1));
 
-  const urlWithPath = new URL(page.url()).hash;
+  var urlWithPath = new URL(page.url()).hash;
   check('a path target is reflected in the URL hash', /to=NL-EAR/.test(urlWithPath), urlWithPath);
 
   await page.reload({ waitUntil: 'networkidle' });
   await page.waitForFunction(() => document.getElementById('loading').hidden, null, { timeout: 15000 });
   await page.waitForTimeout(500);
-  const restoredPathTarget = await page.inputValue('#path-target');
+  var restoredPathTarget = await page.inputValue('#path-target');
   check('reloading a path URL restores the target field',
     /Enterprise Architectuur/i.test(restoredPathTarget), restoredPathTarget);
-  const restoredPathResult = await page.textContent('#path-result');
+  var restoredPathResult = await page.textContent('#path-result');
   check('reloading a path URL recomputes the route',
     /1 hop/.test(restoredPathResult), restoredPathResult.trim());
 
@@ -394,13 +433,13 @@ async function search(page, q) {
   // param together — none of the four should be left behind.
   await page.click('#path-clear');
   await page.waitForTimeout(400);
-  const clearedValue = await page.inputValue('#path-target');
-  const clearedResult = await page.textContent('#path-result');
-  const clearedClasses = await page.evaluate(() => {
+  var clearedValue = await page.inputValue('#path-target');
+  var clearedResult = await page.textContent('#path-result');
+  var clearedClasses = await page.evaluate(() => {
     const cy = document.getElementById('cy')._cyreg.cy;
     return cy.nodes('.path-node').length + cy.edges('.path-edge').length;
   });
-  const clearedUrl = new URL(page.url()).hash;
+  var clearedUrl = new URL(page.url()).hash;
   check('clearing the path resets the field, hint, canvas classes and URL',
     clearedValue === '' && clearedResult.trim() === '' && clearedClasses === 0 && !/to=/.test(clearedUrl),
     JSON.stringify({ clearedValue, clearedResult, clearedClasses, clearedUrl }));
@@ -409,14 +448,14 @@ async function search(page, q) {
   // neighbourhood the depth slider currently shows. Path-finding is
   // deliberately not bounded by that slider, so picking it must widen the
   // rendered canvas rather than reporting no path.
-  const depthNodeCountBefore = await page.evaluate(() =>
+  var depthNodeCountBefore = await page.evaluate(() =>
     document.getElementById('cy')._cyreg.cy.nodes().length);
   await page.fill('#path-target', 'NL-VNG');
   await page.waitForSelector('#path-suggestions li[data-id]');
   await page.locator('#path-suggestions li[data-id]').first().click();
   await page.waitForTimeout(600);
-  const pathResultFar = await page.textContent('#path-result');
-  const depthNodeCountAfter = await page.evaluate(() =>
+  var pathResultFar = await page.textContent('#path-result');
+  var depthNodeCountAfter = await page.evaluate(() =>
     document.getElementById('cy')._cyreg.cy.nodes().length);
   check('a path beyond the current depth still renders, extending the neighbourhood',
     /hops/.test(pathResultFar) && depthNodeCountAfter > depthNodeCountBefore,
@@ -433,8 +472,8 @@ async function search(page, q) {
   await page.waitForSelector('#path-suggestions li[data-id]');
   await page.locator('#path-suggestions li[data-id]').first().click();
   await page.waitForTimeout(600);
-  const noPathResult = await page.textContent('#path-result');
-  const noPathNodeCount = await page.evaluate(() =>
+  var noPathResult = await page.textContent('#path-result');
+  var noPathNodeCount = await page.evaluate(() =>
     document.getElementById('cy')._cyreg.cy.nodes().length);
   check('an unreachable target reports no path instead of doing nothing',
     /no path/i.test(noPathResult) && noPathNodeCount === depthNodeCountBefore,
@@ -443,44 +482,47 @@ async function search(page, q) {
   await page.click('#path-clear');
   await page.waitForTimeout(300);
 
+  } catch (e) { crash('path finder', e); }
+  try {
   // ── filters ──
   await page.click('#view-atlas');
   await page.waitForTimeout(500);
-  const beforeFilter = await page.textContent('#stage-status');
-  const m1 = beforeFilter.match(/^([\d,]+) of/);
+  var beforeFilter = await page.textContent('#stage-status');
+  var m1 = beforeFilter.match(/^([\d,]+) of/);
 
   await page.click('#f-country label:has-text("Germany")');
   await page.waitForTimeout(600);
-  const afterFilter = await page.textContent('#stage-status');
-  const m2 = afterFilter.match(/^([\d,]+) of/);
-  const n1 = m1 ? +m1[1].replace(/,/g, '') : -1;
-  const n2 = m2 ? +m2[1].replace(/,/g, '') : -1;
+  var afterFilter = await page.textContent('#stage-status');
+  var m2 = afterFilter.match(/^([\d,]+) of/);
+  var n1 = m1 ? +m1[1].replace(/,/g, '') : -1;
+  var n2 = m2 ? +m2[1].replace(/,/g, '') : -1;
   check('country filter reduces the graph', n2 > 0 && n2 < n1, `${n1} → ${n2}`);
 
   await page.click('#reset-filters');
   await page.waitForTimeout(500);
-  const afterReset = await page.textContent('#stage-status');
-  const m3 = afterReset.match(/^([\d,]+) of/);
+  var afterReset = await page.textContent('#stage-status');
+  var m3 = afterReset.match(/^([\d,]+) of/);
   check('reset filters restores the graph', m3 && +m3[1].replace(/,/g, '') === n1, `${n2} → ${m3 && m3[1]}`);
 
   // level filter
+  await openFilter(page, 'f-level');
   await page.click('#f-level label:has-text("International")');
   await page.waitForTimeout(500);
-  const lvlStatus = await page.textContent('#stage-status');
-  const m4 = lvlStatus.match(/^([\d,]+) of/);
+  var lvlStatus = await page.textContent('#stage-status');
+  var m4 = lvlStatus.match(/^([\d,]+) of/);
   check('level filter works', m4 && +m4[1].replace(/,/g, '') < n1, lvlStatus.trim());
   await page.click('#reset-filters');
   await page.waitForTimeout(400);
 
   // edge class toggle
-  const relOnly = await page.textContent('#stage-status');
-  const e1 = +(relOnly.match(/· ([\d,]+) connections/) || [0, '0'])[1].replace(/,/g, '');
-  await page.click('#edge-classes label:has-text("Wikilinks")');
+  var relOnly = await page.textContent('#stage-status');
+  var e1 = +(relOnly.match(/· ([\d,]+) connections/) || [0, '0'])[1].replace(/,/g, '');
+  await page.click('#edge-classes label:has-text("Mentions")');
   await page.waitForTimeout(700);
-  const withWiki = await page.textContent('#stage-status');
-  const e2 = +(withWiki.match(/· ([\d,]+) connections/) || [0, '0'])[1].replace(/,/g, '');
+  var withWiki = await page.textContent('#stage-status');
+  var e2 = +(withWiki.match(/· ([\d,]+) connections/) || [0, '0'])[1].replace(/,/g, '');
   check('edge-class toggle adds wikilink edges', e2 > e1, `${e1} → ${e2}`);
-  await page.click('#edge-classes label:has-text("Wikilinks")');
+  await page.click('#edge-classes label:has-text("Mentions")');
   await page.waitForTimeout(400);
 
   // relationship type filter
@@ -488,29 +530,31 @@ async function search(page, q) {
   await page.waitForTimeout(200);
   await page.click('#rel-types label:has-text("applies-in")');
   await page.waitForTimeout(600);
-  const relFiltered = await page.textContent('#stage-status');
-  const e3 = +(relFiltered.match(/· ([\d,]+) connections/) || [0, '0'])[1].replace(/,/g, '');
+  var relFiltered = await page.textContent('#stage-status');
+  var e3 = +(relFiltered.match(/· ([\d,]+) connections/) || [0, '0'])[1].replace(/,/g, '');
   check('relationship-type filter narrows edges', e3 > 0 && e3 < e1, `${e1} → ${e3}`);
   await page.click('#reset-filters');
   await page.waitForTimeout(400);
 
+  } catch (e) { crash('filters', e); }
+  try {
   // ── domain filter (taxonomy.md §1.1 — the cross-cutting axis) ──
-  const domains = await page.$$eval('#f-domain .check .cname', els => els.map(e => e.textContent));
+  var domains = await page.$$eval('#f-domain .check .cname', els => els.map(e => e.textContent));
   check('domains discovered from data (not hard-coded)',
     domains.length >= 2 && domains.includes('Cybersecurity'), domains.join(','));
 
   await page.click('#f-domain label:has-text("Cybersecurity")');
   await page.waitForTimeout(600);
-  const domStatus = await page.textContent('#stage-status');
-  const m5 = domStatus.match(/^([\d,]+) of/);
-  const n5 = m5 ? +m5[1].replace(/,/g, '') : -1;
+  var domStatus = await page.textContent('#stage-status');
+  var m5 = domStatus.match(/^([\d,]+) of/);
+  var n5 = m5 ? +m5[1].replace(/,/g, '') : -1;
   check('domain filter narrows the graph to that domain', n5 > 1 && n5 < n1, `${n1} → ${n5}`);
 
   // The domain entity itself carries no `domains:` of its own; it must
   // survive its own filter, or the tagged entities lose their shared hub.
   await page.click('#view-list');
   await page.waitForTimeout(400);
-  const domRows = await page.$$eval('#list-body tr td:first-child', els => els.map(e => e.textContent.trim()));
+  var domRows = await page.$$eval('#list-body tr td:first-child', els => els.map(e => e.textContent.trim()));
   check('domain filter keeps the domain entity itself',
     domRows.some(r => /Cybersecurity/i.test(r)), `${domRows.length} rows`);
   check('domain filter keeps entities tagged with it',
@@ -520,17 +564,20 @@ async function search(page, q) {
   await page.click('#reset-filters');
   await page.waitForTimeout(400);
 
+  } catch (e) { crash('domain filter (taxonomy.md §1.1 — the cross-cutting axis)', e); }
+  try {
   // ── provenance and confidence (auditability) ──
   await page.click('summary:has-text("Provenance")');
   await page.waitForTimeout(200);
-  const provs = await page.$$eval('#f-provenance .check .cname', els => els.map(e => e.textContent));
+  var provs = await page.$$eval('#f-provenance .check .cname', els => els.map(e => e.textContent));
   check('provenance facet uses the repository vocabulary',
     provs.includes('fact') && provs.includes('interpretation'), provs.join(','));
 
+  await openFilter(page, 'f-provenance');
   await page.click('#f-provenance label:has-text("interpretation")');
   await page.waitForTimeout(600);
-  const provStatus = await page.textContent('#stage-status');
-  const e4 = +(provStatus.match(/· ([\d,]+) connections/) || [0, '0'])[1].replace(/,/g, '');
+  var provStatus = await page.textContent('#stage-status');
+  var e4 = +(provStatus.match(/· ([\d,]+) connections/) || [0, '0'])[1].replace(/,/g, '');
   check('provenance filter isolates the Atlas\'s own interpretations',
     e4 > 0 && e4 < e1, `${e1} → ${e4}`);
   await page.click('#reset-filters');
@@ -538,25 +585,28 @@ async function search(page, q) {
 
   await page.click('summary:has-text("Confidence")');
   await page.waitForTimeout(200);
-  const confs = await page.$$eval('#f-confidence .check .cname', els => els.map(e => e.textContent));
+  var confs = await page.$$eval('#f-confidence .check .cname', els => els.map(e => e.textContent));
   check('confidence facet is ordered high → low, not alphabetically',
     confs[0] === 'high' && confs[confs.length - 1] === 'low', confs.join(','));
 
+  await openFilter(page, 'f-confidence');
   await page.click('#f-confidence label:has-text("low")');
   await page.waitForTimeout(600);
-  const confStatus = await page.textContent('#stage-status');
-  const e5 = +(confStatus.match(/· ([\d,]+) connections/) || [0, '0'])[1].replace(/,/g, '');
+  var confStatus = await page.textContent('#stage-status');
+  var e5 = +(confStatus.match(/· ([\d,]+) connections/) || [0, '0'])[1].replace(/,/g, '');
   check('confidence filter narrows edges', e5 > 0 && e5 < e1, `${e1} → ${e5}`);
   await page.click('#reset-filters');
   await page.waitForTimeout(400);
 
+  } catch (e) { crash('provenance and confidence (auditability)', e); }
+  try {
   // ── layered layout: bands by level, blocks by scope ──
   // The layout is deterministic arithmetic, so it can be asserted on. The
   // Cytoscape instance lives in a closure; it is reachable through the
   // container's own registration rather than by exposing a test hook.
   await page.click('#view-atlas');
   await page.waitForTimeout(900);
-  const layout = await page.evaluate(() => {
+  var layout = await page.evaluate(() => {
     const cy = document.getElementById('cy')._cyreg.cy;
     const deg = {};
     cy.edges().forEach(e => {
@@ -632,20 +682,24 @@ async function search(page, q) {
 
   // The bands must still stack in geographic order — that hierarchy is the
   // Atlas's core claim and grouping must not have disturbed it.
-  const bandOrder = ['international', 'regional', 'national', 'sectoral']
+  var bandOrder = ['international', 'regional', 'national', 'sectoral']
     .filter(l => layout.meanY[l] != null);
   check('bands still stack international → regional → national → sectoral',
     bandOrder.every((l, i) => i === 0 || layout.meanY[bandOrder[i - 1]] < layout.meanY[l]),
     bandOrder.map(l => `${l}:${Math.round(layout.meanY[l])}`).join(' < '));
 
+  } catch (e) { crash('layered layout: bands by level, blocks by scope', e); }
+  try {
   // ── force-directed layout (switchable) ──
-  const groupedState = await page.evaluate(() => {
+  await page.click('#view-atlas');
+  await page.waitForSelector('#layout-panel:not([hidden])');
+  var groupedState = await page.evaluate(() => {
     const cy = document.getElementById('cy')._cyreg.cy;
     const bb = cy.elements().boundingBox();
     const ys = new Set(cy.nodes().map(n => Math.round(n.position().y)));
     return { box: { w: Math.round(bb.w), h: Math.round(bb.h) }, distinctY: ys.size };
   });
-  const groupedBox = groupedState.box;
+  var groupedBox = groupedState.box;
   // runLayout() fires the grouped/"preset" layout first (instant) and then,
   // for force mode, a "cose" simulation on top of it — and cose runs its
   // 900 iterations across animation frames, not synchronously, so how long
@@ -667,9 +721,10 @@ async function search(page, q) {
       setTimeout(resolve, 20000);
     });
   });
+  await page.waitForSelector('#layout-mode', { state: 'visible', timeout: 20000 });
   await page.selectOption('#layout-mode', 'force');
   await page.evaluate(() => window.__forceLayoutDone);
-  const force = await page.evaluate(() => {
+  var force = await page.evaluate(() => {
     const cy = document.getElementById('cy')._cyreg.cy;
     const bb = cy.elements().boundingBox();
     // mean edge length per confidence, typed relationships only
@@ -694,7 +749,7 @@ async function search(page, q) {
   // components into a grid via componentSpacing, which routinely lines up
   // several components' worth of nodes on the same row. That's a stable
   // property of this graph and this layout, confirmed by waiting for the
-  // real layoutstop and still landing at 511–519 of 652 — not a race. What
+  // real layoutstop and still landing at 511–519 of 652 (the count then) — not a race. What
   // actually matters is that force looks nothing like the rigid grouped
   // grid, so the check compares against that instead of an absolute count.
   check('force layout rearranges the graph off the grid',
@@ -707,13 +762,13 @@ async function search(page, q) {
   check('low-confidence relationships are held further apart than medium',
     force.lowLen > force.medLen, `low ${force.lowLen} vs medium ${force.medLen}`);
 
-  const forceHint = await page.textContent('#layout-hint');
+  var forceHint = await page.textContent('#layout-hint');
   check('force layout says level is no longer positional',
     /only by colour/i.test(forceHint), forceHint.trim().slice(0, 50) + '…');
 
   await page.selectOption('#layout-mode', 'grouped');
   await page.waitForTimeout(900);
-  const regrouped = await page.evaluate(() => {
+  var regrouped = await page.evaluate(() => {
     const cy = document.getElementById('cy')._cyreg.cy;
     const ys = new Set(cy.nodes().map(n => Math.round(n.position().y)));
     return { distinctY: ys.size, nodes: cy.nodes().length };
@@ -722,10 +777,13 @@ async function search(page, q) {
     regrouped.distinctY < regrouped.nodes * 0.3,
     `${regrouped.distinctY} distinct y for ${regrouped.nodes} nodes`);
 
+  } catch (e) { crash('force-directed layout (switchable)', e); }
+  try {
   // ── world map layout ──
+  await page.waitForSelector('#layout-mode', { state: 'visible', timeout: 20000 });
   await page.selectOption('#layout-mode', 'map');
   await page.waitForTimeout(1200);
-  const mapState = await page.evaluate(() => {
+  var mapState = await page.evaluate(() => {
     const cy = document.getElementById('cy')._cyreg.cy;
     const groups = {};
     cy.nodes().forEach(n => {
@@ -742,7 +800,11 @@ async function search(page, q) {
     // relationships. Two actual countries overlapping would still mean the
     // map is broken.
     const keys = Object.keys(groups);
-    const geoKeys = keys.filter(k => !k.startsWith('scope:'));
+    // A group keyed by region only (the EU's own entities, which have no country) is placed by
+    // the tray and pulled toward the member states its relationships name, so its bounding box
+    // legitimately spans several countries; measure countries against countries.
+    const countryKeys = new Set(cy.nodes().map(n => n.data('country')).filter(Boolean));
+    const geoKeys = keys.filter(k => countryKeys.has(k));
     let overlaps = 0;
     for (let i = 0; i < geoKeys.length; i++) {
       for (let j = i + 1; j < geoKeys.length; j++) {
@@ -782,19 +844,19 @@ async function search(page, q) {
     };
   });
   check('map layout keeps every node — none dropped for lacking a location',
-    mapState.nodes === 652, mapState.nodes);
-  check('map layout country/region clusters do not overlap once decluttered',
-    mapState.overlaps === 0, `${mapState.overlaps} overlapping pairs of ${mapState.geoGroupCount} geographic groups`);
+    mapState.nodes === TOTAL, mapState.nodes);
+  check('map layout country clusters do not overlap once decluttered',
+    mapState.overlaps === 0, `${mapState.overlaps} overlapping pairs of ${mapState.geoGroupCount} country groups`);
   // Norway sits further north than Spain — real latitude order should
   // survive the decluttering, not just "somewhere on the canvas".
-  const noY = (mapState.NO.minY + mapState.NO.maxY) / 2;
-  const esY = (mapState.ES.minY + mapState.ES.maxY) / 2;
+  var noY = (mapState.NO.minY + mapState.NO.maxY) / 2;
+  var esY = (mapState.ES.minY + mapState.ES.maxY) / 2;
   check('map layout preserves north/south order (Norway above Spain)',
     noY < esY, `Norway y=${noY.toFixed(0)}, Spain y=${esY.toFixed(0)}`);
   // Germany sits east of the Netherlands, both west of Spain — the ordering
   // that matters most is the *immediate* neighbour, not the whole continent.
-  const nlX = (mapState.NL.minX + mapState.NL.maxX) / 2;
-  const deX = (mapState.DE.minX + mapState.DE.maxX) / 2;
+  var nlX = (mapState.NL.minX + mapState.NL.maxX) / 2;
+  var deX = (mapState.DE.minX + mapState.DE.maxX) / 2;
   check('map layout preserves east/west order (Germany right of the Netherlands)',
     deX > nlX, `Netherlands x=${nlX.toFixed(0)}, Germany x=${deX.toFixed(0)}`);
 
@@ -831,11 +893,11 @@ async function search(page, q) {
       true, 'INTL-COE or a DOMAIN entity not present — skipped');
   }
 
-  const mapHint = await page.textContent('#layout-hint');
+  var mapHint = await page.textContent('#layout-hint');
   check('map layout hint explains the supra-national panel',
     /EU\/UN\/international/i.test(mapHint), mapHint.trim().slice(0, 60) + '…');
 
-  const mapUrl = new URL(page.url()).hash;
+  var mapUrl = new URL(page.url()).hash;
   check('map layout is reflected in the URL hash', /layout=map/.test(mapUrl), mapUrl);
 
   // A clean URL rather than a bare reload: earlier sections in this suite
@@ -845,11 +907,11 @@ async function search(page, q) {
   await page.goto(BASE + '/index.html#view=atlas&layout=map', { waitUntil: 'networkidle' });
   await page.waitForFunction(() => document.getElementById('loading').hidden, null, { timeout: 15000 });
   await page.waitForTimeout(500);
-  const restoredLayout = await page.$eval('#layout-mode', el => el.value);
-  const restoredNodeCount = await page.evaluate(() =>
+  var restoredLayout = await page.$eval('#layout-mode', el => el.value);
+  var restoredNodeCount = await page.evaluate(() =>
     document.getElementById('cy')._cyreg.cy.nodes().length);
   check('reloading a map layout URL restores the selector and the layout',
-    restoredLayout === 'map' && restoredNodeCount === 652,
+    restoredLayout === 'map' && restoredNodeCount === TOTAL,
     `selector=${restoredLayout}, nodes=${restoredNodeCount}`);
 
   await page.selectOption('#layout-mode', 'grouped');
@@ -863,29 +925,31 @@ async function search(page, q) {
   await page.click('#view-atlas');
   await page.waitForTimeout(700);
 
+  } catch (e) { crash('world map layout', e); }
+  try {
   // ── comparison matrix ──
   await page.click('#view-compare');
   await page.waitForSelector('#compareview:not([hidden])');
-  const cmpHead = await page.$$eval('#compare-head th', e => e.map(x => x.textContent.trim()));
+  var cmpHead = await page.$$eval('#compare-head th', e => e.map(x => x.textContent.trim()));
   check('compare view renders a country column per country',
     cmpHead[0] === 'Instrument' && cmpHead.length >= 3, cmpHead.join(','));
 
-  const cmpHeading = await page.textContent('#compare-h');
+  var cmpHeading = await page.textContent('#compare-h');
   check('compare heading counts countries from the data',
     new RegExp(`One instrument, (no|one|two|three|four|five|six|seven|eight|nine|ten|\\d+) countries`).test(cmpHeading)
       && cmpHeading.includes(['no','one','two','three','four','five','six','seven','eight','nine','ten'][cmpHead.length - 1] || ''),
     cmpHeading.trim());
 
-  const cmpRows = await page.$$eval('#compare-body tr', r => r.length);
+  var cmpRows = await page.$$eval('#compare-body tr', r => r.length);
   check('compare view renders supra-national instruments as rows', cmpRows >= 5, `${cmpRows} rows`);
 
-  const cmpCount = await page.textContent('#compare-count');
+  var cmpCount = await page.textContent('#compare-count');
   check('compare view reports implemented vs applies-only',
     /\d+ implemented · \d+ applying/.test(cmpCount), cmpCount.trim());
 
   // The three cell states must all be present and textually distinguishable —
   // the tint alone is not the signal.
-  const cellKinds = await page.$$eval('#compare-body td', tds => ({
+  var cellKinds = await page.$$eval('#compare-body td', tds => ({
     implemented: tds.filter(t => t.classList.contains('is-implemented')).length,
     applies: tds.filter(t => t.classList.contains('is-applies')).length,
     none: tds.filter(t => !t.className).length
@@ -893,18 +957,18 @@ async function search(page, q) {
   check('compare cells carry all three states',
     cellKinds.implemented > 0 && cellKinds.applies > 0 && cellKinds.none > 0,
     JSON.stringify(cellKinds));
-  const appliesText = await page.textContent('#compare-body td.is-applies');
+  var appliesText = await page.textContent('#compare-body td.is-applies');
   check('applies-only cells say so in words, not only by colour',
     /none modelled/i.test(appliesText), appliesText.trim());
 
   // GDPR and NIS2 are the two instruments implemented in all six countries.
-  const firstRow = await page.textContent('#compare-body tr:first-child th');
+  var firstRow = await page.textContent('#compare-body tr:first-child th');
   check('compare rows are ranked by how much each instrument records',
     /General Data Protection|NIS2/i.test(firstRow), firstRow.replace(/\s+/g, ' ').trim());
 
   // A national implementer with no country of its own (the EU implementing a
   // UN convention) belongs to no column and must not be dropped.
-  const rowNotes = await page.$$eval('#compare-body .row-note', e => e.map(x => x.textContent.trim()));
+  var rowNotes = await page.$$eval('#compare-body .row-note', e => e.map(x => x.textContent.trim()));
   check('supra-national implementers are reported, not dropped',
     rowNotes.length > 0 && /above the national level/i.test(rowNotes[0]), rowNotes.join(' | '));
 
@@ -912,8 +976,8 @@ async function search(page, q) {
   // the columns, not empty the table.
   await page.click('#f-country label:has-text("Germany")');
   await page.waitForTimeout(500);
-  const narrowedHead = await page.$$eval('#compare-head th', e => e.map(x => x.textContent.trim()));
-  const narrowedRows = await page.$$eval('#compare-body tr', r => r.length);
+  var narrowedHead = await page.$$eval('#compare-head th', e => e.map(x => x.textContent.trim()));
+  var narrowedRows = await page.$$eval('#compare-body tr', r => r.length);
   check('country filter narrows compare columns, not rows',
     narrowedHead.length === 2 && narrowedRows === cmpRows,
     `${narrowedHead.join(',')} · ${narrowedRows} rows`);
@@ -923,7 +987,7 @@ async function search(page, q) {
   // Domain, by contrast, describes the instruments and must narrow the rows.
   await page.click('#f-domain label:has-text("Cybersecurity")');
   await page.waitForTimeout(500);
-  const domRowsCmp = await page.$$eval('#compare-body tr', r => r.length);
+  var domRowsCmp = await page.$$eval('#compare-body tr', r => r.length);
   check('domain filter narrows compare rows', domRowsCmp > 0 && domRowsCmp < cmpRows,
     `${cmpRows} → ${domRowsCmp}`);
   await page.click('#reset-filters');
@@ -933,15 +997,17 @@ async function search(page, q) {
   await page.waitForSelector('#detail:not([hidden])');
   check('clicking a compare cell opens the entity', true);
 
+  } catch (e) { crash('comparison matrix', e); }
+  try {
   // ── list view ──
   await page.fill('#search', '');
   await page.waitForTimeout(250);
   await page.click('#view-list');
   await page.waitForSelector('#listview:not([hidden])');
-  const rowCount = await page.$$eval('#list-body tr', r => r.length);
+  var rowCount = await page.$$eval('#list-body tr', r => r.length);
   check('list view renders all entities', rowCount > 100, `${rowCount} rows`);
 
-  const listLinks = await page.$$eval('#list-body a', a => a.map(x => x.href));
+  var listLinks = await page.$$eval('#list-body a', a => a.map(x => x.href));
   check('list rows link to GitHub Markdown',
         listLinks.length > 100 && listLinks.every(h => /github\.com\/.+\/blob\/.+\.md$/.test(h)),
         listLinks[0]);
@@ -949,7 +1015,7 @@ async function search(page, q) {
   // list respects search
   await page.fill('#search', 'gdpr');
   await page.waitForTimeout(500);
-  const filteredRows = await page.$$eval('#list-body tr', r => r.length);
+  var filteredRows = await page.$$eval('#list-body tr', r => r.length);
   check('list view respects search', filteredRows > 0 && filteredRows < rowCount, `${rowCount} → ${filteredRows}`);
   await page.fill('#search', '');
   await page.waitForTimeout(300);
@@ -957,7 +1023,7 @@ async function search(page, q) {
   // sorting
   await page.click('.sortbtn[data-sort="rel_degree"]');
   await page.waitForTimeout(300);
-  const degs = await page.$$eval('#list-body tr td:nth-child(7)', t => t.slice(0, 5).map(x => +x.textContent));
+  var degs = await page.$$eval('#list-body tr td:nth-child(7)', t => t.slice(0, 5).map(x => +x.textContent));
   check('list sorting works', degs.every((v, i, a) => i === 0 || a[i - 1] >= v), degs.join(','));
 
   // list → explorer
@@ -966,23 +1032,25 @@ async function search(page, q) {
   check('clicking a list row opens the entity', true);
 
   check('no console errors after full interaction', errors.length === 0, errors.slice(0, 4).join(' | '));
+  } catch (e) { crash('list view', e); }
   await ctx.close();
 }
 
 // ─────────────────────────── mobile ───────────────────────────
 {
-  const { ctx, page, errors } = await newPage({ width: 390, height: 844 });
+  var { ctx, page, errors } = await newPage({ width: 390, height: 844 });
+  try {
   await page.goto(BASE + '/index.html', { waitUntil: 'networkidle' });
   await page.waitForFunction(() => document.getElementById('loading').hidden, null, { timeout: 15000 });
 
-  const noHScroll = await page.evaluate(() =>
+  var noHScroll = await page.evaluate(() =>
     document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1);
   check('mobile: no horizontal page scroll', noHScroll);
 
-  const toggleVisible = await page.isVisible('#filters-toggle');
+  var toggleVisible = await page.isVisible('#filters-toggle');
   check('mobile: filters toggle is shown', toggleVisible);
 
-  const sidebarHidden = await page.evaluate(() => {
+  var sidebarHidden = await page.evaluate(() => {
     const r = document.getElementById('sidebar').getBoundingClientRect();
     return r.right <= 1;
   });
@@ -990,7 +1058,7 @@ async function search(page, q) {
 
   await page.click('#filters-toggle');
   await page.waitForTimeout(350);
-  const sidebarOpen = await page.evaluate(() => {
+  var sidebarOpen = await page.evaluate(() => {
     const r = document.getElementById('sidebar').getBoundingClientRect();
     return r.right > 50;
   });
@@ -1004,7 +1072,7 @@ async function search(page, q) {
   await page.click('#view-compare');
   await page.waitForSelector('#compareview:not([hidden])');
   await page.waitForTimeout(300);
-  const mCompare = await page.evaluate(() => ({
+  var mCompare = await page.evaluate(() => ({
     page: document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1,
     wrapScrolls: (() => {
       const w = document.querySelector('#compareview .table-wrap');
@@ -1020,23 +1088,25 @@ async function search(page, q) {
   await page.waitForSelector('#suggestions li[data-id]');
   await page.click('#suggestions li[data-id]');
   await page.waitForSelector('#detail:not([hidden])');
-  const mDetail = await page.evaluate(() => {
+  var mDetail = await page.evaluate(() => {
     const r = document.getElementById('detail').getBoundingClientRect();
     return { w: Math.round(r.width), inView: r.left >= -1 && r.right <= window.innerWidth + 1 };
   });
   check('mobile: detail panel fits the viewport', mDetail.inView, JSON.stringify(mDetail));
 
   check('mobile: no console errors', errors.length === 0, errors.slice(0, 3).join(' | '));
+  } catch (e) { crash('start', e); }
   await ctx.close();
 }
 
 // ─────────────────────────── a11y basics ───────────────────────────
 {
-  const { ctx, page, errors } = await newPage({ width: 1280, height: 800 });
+  var { ctx, page, errors } = await newPage({ width: 1280, height: 800 });
+  try {
   await page.goto(BASE + '/index.html', { waitUntil: 'networkidle' });
   await page.waitForFunction(() => document.getElementById('loading').hidden, null, { timeout: 15000 });
 
-  const a11y = await page.evaluate(() => {
+  var a11y = await page.evaluate(() => {
     const out = {};
     out.lang = document.documentElement.lang;
     out.title = document.title;
@@ -1058,9 +1128,10 @@ async function search(page, q) {
 
   // keyboard: Tab reaches the view buttons and "/" focuses search
   await page.keyboard.press('/');
-  const focused = await page.evaluate(() => document.activeElement.id);
+  var focused = await page.evaluate(() => document.activeElement.id);
   check('a11y: "/" focuses search', focused === 'search');
 
+  } catch (e) { crash('start', e); }
   await ctx.close();
 }
 
@@ -1070,7 +1141,8 @@ async function search(page, q) {
 // is tested against a graph too big for it by intercepting graph.json and
 // padding the node list past FORCE_MAX.
 {
-  const { ctx, page, errors } = await newPage({ width: 1400, height: 900 });
+  var { ctx, page, errors } = await newPage({ width: 1400, height: 900 });
+  try {
   await page.route('**/graph.json', async route => {
     const res = await route.fetch();
     const g = await res.json();
@@ -1087,12 +1159,12 @@ async function search(page, q) {
   await page.waitForFunction(() => document.getElementById('loading').hidden, null, { timeout: 20000 });
   await page.waitForTimeout(1500);
 
-  const before = await page.evaluate(() =>
+  var before = await page.evaluate(() =>
     new Set(document.getElementById('cy')._cyreg.cy.nodes()
       .map(n => Math.round(n.position().y))).size);
   await page.selectOption('#layout-mode', 'force');
   await page.waitForTimeout(2000);
-  const after = await page.evaluate(() => ({
+  var after = await page.evaluate(() => ({
     distinctY: new Set(document.getElementById('cy')._cyreg.cy.nodes()
       .map(n => Math.round(n.position().y))).size,
     nodes: document.getElementById('cy')._cyreg.cy.nodes().length,
@@ -1105,6 +1177,7 @@ async function search(page, q) {
     /too many entities/i.test(after.hint) && /grouped layout instead/i.test(after.hint),
     after.hint.trim().slice(0, 70) + '…');
   check('size-guard path logs no errors', errors.length === 0, errors.slice(0, 2).join(' | '));
+  } catch (e) { crash('start', e); }
   await ctx.close();
 }
 

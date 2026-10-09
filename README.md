@@ -371,6 +371,8 @@ data-initiatives-atlas/
 │   ├── project_board.py # roadmap board sync (run by a workflow)
 │   ├── reverify.py     # re-verification pass
 │   ├── source_hosts.py # egress allowlist
+│   ├── test_board_health.py
+│   ├── test_browser_ci.py
 │   ├── test_build_graph.py
 │   ├── test_project_board.py
 │   ├── test_release.py

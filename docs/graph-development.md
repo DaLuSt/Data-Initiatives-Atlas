@@ -86,11 +86,17 @@ split, and whether the build is deterministic (the generated files are not
 committed, so they must be reproducible).
 
 ```bash
-# optional browser tests — need Playwright + Chromium
+# browser tests — the client library plus any Chrome (CI runs them in the `browser` job
+# of validate.yml, on the runner's own Chrome; the job is not a required check yet)
+python tools/build_graph.py
 python -m http.server 8765 --directory site &
-npm install playwright && npx playwright install chromium
-node tools/test_ui.mjs
+npm install playwright-core
+CHROME_PATH=/path/to/chrome node tools/test_ui.mjs
 ```
+
+A section of the suite that throws is recorded as one failed check and the run goes on, so
+a stale selector shows up as one line instead of hiding every check after it; entity counts
+come from `graph.json`, not from numbers frozen in the suite.
 
 124 checks across desktop, mobile (390×844) and accessibility: search by
 name/ID/country, keyboard navigation (including arrow-key traversal of the
@@ -316,8 +322,9 @@ that pack nodes into per-scope/per-country blocks:
     entities drift toward a connected neighbour's border rather than into the
     neighbour's own territory — 350 is the largest value that still keeps
     every pair of clusters non-overlapping against the current data;
-    `test_ui.mjs` checks both that (zero overlap between country/region
-    clusters — a tray entity is allowed to overlap what it gets pulled
+    `test_ui.mjs` checks both that (zero overlap between country
+    clusters (a region-only group such as the EU's own entities spans the member
+    states its relationships name, so it is not measured against them) — a tray entity is allowed to overlap what it gets pulled
     toward) and that the pull is real (a documented cross-border
     relationship ends up closer than its two countries' bare cluster
     separation).

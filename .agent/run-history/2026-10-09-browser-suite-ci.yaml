@@ -1,0 +1,19 @@
+date: "2026-10-09"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #526 (2026.12), work in progress on branch claude/atlas-ui-smoke (not yet a pull request).
+  tools/test_ui.mjs was stale since the sidebar wording changed. Repaired against the current site:
+  "Wikilinks" is "Mentions"; detail sections are h3, not h4; the Geographic level, Status, Provenance and
+  Confidence filter groups start collapsed and are opened first (openFilter); counts frozen at 652 now
+  come from graph.json (TOTAL); the map overlap check compares countries only, because the EU's own
+  region-only group legitimately spans several member states. A section that throws is now one failed
+  check (crash()) instead of the end of the run; actions fail in 6 s instead of 30. One clean run:
+  124/124. NOT yet stable: in two later runs the force-directed layout section failed intermittently on
+  page.selectOption('#layout-mode') ("waiting for element to be visible and enabled"); the cause is
+  being found (the call log is now printed in full). A separate `browser` job in validate.yml (the
+  runner's Chrome plus playwright-core 1.63.0, not a required check) and tools/test_browser_ci.py (15
+  wiring tests, eight deliberate breakages caught) are written; the job has not run on GitHub yet. It
+  changes a workflow, so the pull request will wait for the owner's word, and it should not be opened
+  until the flake is understood.
+prs: []
+outcome: in progress
