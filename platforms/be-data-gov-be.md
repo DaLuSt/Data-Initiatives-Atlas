@@ -2,7 +2,9 @@
 id: BE-DATA-GOV-BE
 type: platform
 name: data.gov.be
+name_en: "Belgian Data Portal"
 alternative_names:
+  - Belgian Data Portal
   - Federaal open data portaal
   - Belgian federal open data portal
 description: >
@@ -90,6 +92,10 @@ sources:
     url: "https://github.com/orgs/Fedict/repositories"
     publisher: "GitHub (Fedict / FPS BOSA)"
     accessed: "2026-08-28"
+  - title: "The Belgian Data Portal (English home page)"
+    url: "https://data.gov.be/en"
+    publisher: "data.gov.be"
+    accessed: "2026-10-09"
 ---
 
 # data.gov.be
