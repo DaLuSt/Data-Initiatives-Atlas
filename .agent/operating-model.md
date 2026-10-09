@@ -85,12 +85,16 @@ do not push directly to `main`:
    `get_status`, which does not see Actions results) and it must be green.
    **Standing permission (owner, 2026-10-09):** a session may squash-merge its
    own pull request once `validate` is green, and tells the owner afterwards.
+   **Turn on auto-merge** (squash; the repository allows it) on each such PR right
+   after opening it, so it merges by itself the moment `validate` passes; the
+   branch protection still requires a PR and a green `validate`.
    Ask first, and wait for the owner's word, for a PR that (a) touches
    workflows, secrets, permissions, rulesets or repository settings, (b)
    changes what is posted publicly (the LinkedIn tools and workflows, the
-   release workflows), or (c) is a release pull request. The owner can revoke or
-   widen this at any time; a session that is unsure treats the PR as one to ask
-   about. (A PR opened by a workflow's own `GITHUB_TOKEN`, such as the weekly
+   release workflows), or (c) is a release pull request: **do not turn
+   auto-merge on for those**, because it would merge them without the word.
+   The owner can revoke or widen this at any time; a session that is unsure
+   treats the PR as one to ask about. (A PR opened by a workflow's own `GITHUB_TOKEN`, such as the weekly
    release PR, does not trigger `validate.yml`; that workflow runs the
    validation itself before opening the PR.)
 8. **If the gate passes: squash-merge** (the only merge method to use; one

@@ -105,12 +105,53 @@ sources:
 """
 
 
+COUNTRY = """---
+id: XX
+type: country
+name: Examplia
+description: >
+  A test country anchor.
+level: national
+country: XX
+region: null
+status: active
+confidence: medium
+coverage: low
+verification: primary-source
+start_date: null
+end_date: null
+last_verified: "2026-10-01"
+previous_version: null
+successor: null
+domains: []
+organisations: []
+related_entities: []
+relationships:
+  - type: related-to
+    target: XX-ORG
+    source: fact
+    evidence: "A test."
+    confidence: medium
+    valid_from: null
+    valid_until: null
+sources:
+  - title: "A page"
+    url: "https://example.org/country"
+    publisher: "Example"
+    accessed: "2026-10-01"
+---
+
+# Examplia
+"""
+
+
 class Base(unittest.TestCase):
     def setUp(self):
         self._tmp = tempfile.TemporaryDirectory()
         self.root = Path(self._tmp.name)
-        for d in ("organisations", "legislation"):
-            (self.root / d).mkdir()
+        for d in ("organisations", "legislation", "countries/xx"):
+            (self.root / d).mkdir(parents=True)
+        self.write("countries/xx/xx.md", COUNTRY)
         self.write("organisations/xx-org.md", ORG)
         self.write("legislation/xx-act.md", ACT)
         self._saved = common.REPO_ROOT
@@ -286,10 +327,61 @@ class TestSuccession(Base):
         self.assertNotIn("successor is XX-ACT", text)
         self.assertEqual(code, 0, text)
 
-    def test_an_unknown_successor_is_left_to_the_generator(self):
+    def test_an_unknown_successor_is_an_error(self):
         self.edit("organisations/xx-org.md", "successor: null", "successor: NOT-AN-ID")
+        self.assertFails("organisations/xx-org.md: successor 'NOT-AN-ID' does not resolve to a known entity")
+
+    def test_an_unknown_previous_version_is_an_error(self):
+        self.edit("legislation/xx-act.md", "previous_version: null", "previous_version: NOT-AN-ID")
+        self.assertFails("legislation/xx-act.md: previous_version 'NOT-AN-ID' does not resolve to a known entity")
+
+    def test_the_unknown_successor_is_not_also_reported_as_a_one_sided_pair(self):
+        self.edit("organisations/xx-org.md", "successor: null", "successor: NOT-AN-ID")
+        _, text = self.run_all()
+        self.assertNotIn("successor is NOT-AN-ID, but", text)
+
+    def test_the_wording_matches_the_generators(self):
+        # tools/build_graph.py says "<field> '<id>' does not resolve to a known entity".
+        gen = (Path(__file__).resolve().parent.parent / "tools" / "build_graph.py").read_text(encoding="utf-8")
+        self.assertIn("does not resolve to a known", gen)
+        self.assertIn("does not resolve to a known entity", (Path(__file__).resolve().parent / "validate_relationships.py").read_text(encoding="utf-8"))
+
+
+class TestCountryAnchor(Base):
+    """An entity's `country` must be a country the Atlas has an anchor for."""
+
+    def test_a_country_without_an_anchor_is_an_error(self):
+        self.edit("organisations/xx-org.md", "country: XX", "country: ZZ")
+        self.assertFails("organisations/xx-org.md: country 'ZZ' has no country anchor in the Atlas")
+
+    def test_the_message_says_what_to_add(self):
+        self.edit("organisations/xx-org.md", "country: XX", "country: ZZ")
+        _, text = self.run_all()
+        self.assertIn("countries/zz/", text)
+
+    def test_a_country_with_an_anchor_passes(self):
         code, text = self.run_all()
-        self.assertNotIn("successor is NOT-AN-ID", text)
+        self.assertEqual(code, 0, text)
+
+    def test_no_country_is_fine(self):
+        self.edit("organisations/xx-org.md", "country: XX", "country: null")
+        self.edit("organisations/xx-org.md", "level: national", "level: international")
+        code, text = self.run_all()
+        self.assertEqual(code, 0, text)
+
+    def test_a_malformed_code_still_gets_its_own_message(self):
+        self.edit("organisations/xx-org.md", "country: XX", "country: xyz")
+        self.assertFails("is not a plausible ISO 3166-1 alpha-2 code")
+
+    def test_removing_the_anchor_breaks_every_entity_that_uses_it(self):
+        (self.root / "countries/xx/xx.md").unlink()
+        code, text = self.run_all()
+        self.assertEqual(code, 1, text)
+        self.assertEqual(text.count("has no country anchor"), 2)  # the organisation and the act
+
+    def test_a_region_is_not_a_country_anchor(self):
+        self.write("countries/xx/xx.md", COUNTRY.replace("type: country", "type: region"))
+        self.assertFails("has no country anchor")
 
 
 class TestStructure(Base):

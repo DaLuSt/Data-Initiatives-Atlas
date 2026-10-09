@@ -137,6 +137,11 @@ def check_succession_links(entities, report: common.Report) -> None:
             successors_of.setdefault(succ, set()).add(own_id)
     paths = {e.frontmatter.get("id"): e.rel_path for e in entities if not e.parse_error}
     for own_id, fm in by_id.items():
+        # A successor or predecessor that is no entity is an error (the generator refuses it too).
+        for field in ("successor", "previous_version"):
+            target = fm.get(field)
+            if isinstance(target, str) and target and target not in by_id:
+                report.error(f"{paths[own_id]}: {field} '{target}' does not resolve to a known entity")
         succ = fm.get("successor")
         if isinstance(succ, str) and succ in by_id:
             back = by_id[succ].get("previous_version")

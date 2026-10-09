@@ -48,6 +48,14 @@ unknown agents; whether to rely on that is a person's call), and whether to run
 `tools/reverify.py` over the entities that cite these hosts (slow). It changes no entity and
 uses no secrets. Locally: `python tools/host_probe.py --offline` lists what would be probed.
 
+**Reading a page a runner can read: Actions → Read pages on a runner → Run workflow**, with
+the https addresses (separated by spaces or commas, at most 25). Each page's visible text, or
+a PDF as it is, is attached to the run as an artifact (30 days), with an index on the summary
+page that says, per address, whether it was readable, a challenge, a JavaScript shell and so
+on. A session downloads the artifact and reads it; it edits no entity. Use it for hosts the
+probe found readable on a runner (`discovery/unresolved.md` row #235). It uses the Atlas's own
+User-Agent, because a browser-like one was worse in the probe.
+
 **Never work around this by disabling TLS verification.** `tools/reverify.py`
 has no such switch and `tools/test_reverify.py` asserts, against the module's
 syntax tree, that none is ever added. A `primary-source` claim made over an

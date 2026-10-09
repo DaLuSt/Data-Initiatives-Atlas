@@ -1,0 +1,17 @@
+date: "2026-10-09"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  The owner agreed to a way for the agent to read pages that only a GitHub runner can read
+  (row #235 of discovery/unresolved.md). Added tools/runner_fetch.py and the manual workflow
+  .github/workflows/fetch-pages.yml ("Read pages on a runner"): https addresses only, at most
+  25 per run, the Atlas's own User-Agent, TLS never relaxed, a pause between pages; each page's
+  visible text (or a PDF as it is) is attached as an artifact with an index saying readable,
+  challenge, shell and so on; one text served for several addresses of one host is marked a
+  shell and dropped; the addresses reach the shell through an environment variable, not the
+  script text; read-only permission, no secrets, nothing committed. 32 tests (they also pass
+  with the network disabled); eight deliberate breakages were each caught; writing the tests
+  found one real bug (a charset declared in quotes was ignored, so a Latin-1 page would have been
+  mangled). It changes a workflow, so the pull request waits for the owner's word. Next use: the
+  Belgian English names for #446 (bosa, data.gov.be and financien are readable on a runner).
+prs: []
+outcome: see git history

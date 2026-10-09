@@ -43,34 +43,35 @@ deleted or renamed secret looks the same as "never set up".
    workflow read a token's own expiry, so this variable is the only way to know
    it in advance.
 3. **Two alarms, one issue.** One open issue titled *Roadmap board sync needs
-   attention* is the single place the owner is told. It is opened (or commented
-   on) by the workflow and closed by it when a run succeeds again.
+   attention* is the single place the owner is told. It is opened by the workflow
+   (once, not once per run) and closed by it when a healthy run finishes.
 4. **Calendar reminder.** The owner also puts a reminder in their own calendar
    14 days before the date. This is the only alarm that does not depend on the
    workflow running.
 
-### What to build (2026.12, #496)
+### How it works (built 2026-10-09, #496)
 
-All in `.github/workflows/project-board.yml` and `tools/project_board.py`, with
-tests in `tools/test_project_board.py` and `tools/test_release.py`:
+`tools/board_health.py` runs as a step of `.github/workflows/project-board.yml`,
+before the sync, on every run (issue events, Mondays, by hand):
 
-1. **Preflight step** (before the sync). Reads `PROJECT_TOKEN_EXPIRES`:
-   - more than 14 days away: nothing;
-   - 14 days or fewer away: a warning annotation, and the issue gets a comment
-     "The token expires on DATE";
-   - past: the step fails with a clear message.
-   If the variable is unset, it prints a notice (as today) and does not fail.
-2. **A missing secret is an error once the board is set up.** Add a repository
-   variable `BOARD_SYNC_ENABLED=true` when the setup is finished. With it set, an
-   empty `PROJECT_TOKEN` fails the run (a deleted secret is then visible).
-3. **Failure issue.** A final step with `if: failure()` and `issues: write`:
-   find the open issue by exact title; if there is none, open it with the run
-   link and the first error line; if there is, add a comment. A step with
-   `if: success()` closes it. Idempotent, like the LinkedIn-draft step in
-   `release-publish.yml`.
-4. **Tests.** The preflight date logic as a pure function (14-day boundary, past,
-   unset, malformed); the workflow's safety properties as the existing tests do
-   (the secret appears only in `env:`, `issues: write` only where needed).
+- **Variable `PROJECT_TOKEN_EXPIRES`** (`YYYY-MM-DD`, set by the owner): more than
+  14 days away, nothing; 14 days or fewer, a warning annotation and the issue below;
+  past, the run **fails** and the sync does not run; a malformed date also fails.
+  Unset, a notice only (the token's expiry then cannot be watched).
+- **Variable `BOARD_SYNC_ENABLED`** = `true` (set it when the board works): a missing
+  `PROJECT_TOKEN` then **fails** the run. Without it, a missing secret stays the quiet
+  "not set up yet" notice.
+- **One issue, "Roadmap board sync needs attention".** A failing run or a token near
+  expiry opens it (labelled `area:infra`, with the run link and the reason); while it
+  is open, later runs add nothing, so an expired token does not produce one comment per
+  issue event. A later *healthy real* run (not a dry run, token not near expiry, secret
+  present) comments and closes it.
+- The workflow's permission is `issues: write` for exactly those two steps; the secret
+  is still passed only through `env:`. Tests: `tools/test_board_health.py`.
+
+**Setting it up (owner, once):** in *Settings → Secrets and variables → Actions →
+Variables* add `PROJECT_TOKEN_EXPIRES` (the date your token expires) and
+`BOARD_SYNC_ENABLED` = `true`.
 
 ### Rotation steps (owner, about 5 minutes; do it before the date)
 

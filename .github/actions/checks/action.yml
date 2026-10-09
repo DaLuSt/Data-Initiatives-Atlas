@@ -68,6 +68,18 @@ runs:
       shell: bash
       run: python tools/test_host_probe.py
 
+    # Reading pages on a runner (tools/runner_fetch.py): the address rules, what is saved for
+    # a page, a PDF, a challenge or a shell, and the properties of fetch-pages.yml. No network.
+    - name: Test the page reader
+      shell: bash
+      run: python tools/test_runner_fetch.py
+
+    # The board's token watch (tools/board_health.py): the expiry arithmetic, the failure
+    # and warning rules, and the properties of the issue steps in project-board.yml.
+    - name: Test the board's token watch
+      shell: bash
+      run: python tools/test_board_health.py
+
     # How the browser suite is wired into CI (tools/test_ui.mjs, the `browser` job of
     # validate.yml): the suite's own conventions and the job's properties. No browser here.
     - name: Test the browser suite's CI wiring

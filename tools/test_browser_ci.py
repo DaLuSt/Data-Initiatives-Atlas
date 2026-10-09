@@ -35,7 +35,10 @@ class TestSuiteSource(unittest.TestCase):
         self.assertGreaterEqual(SUITE.count("} catch (e) { crash("), 15)
         # Every block opened with try { has its catch: the braces balance (node --check) and
         # the two counts agree.
-        self.assertEqual(SUITE.count("\n  try {"), SUITE.count("} catch (e) { crash("))
+        # (pickLayout() has a try of its own, with a different catch: it adds the control's
+        # state to the error, then rethrows into the section's crash().)
+        helpers_with_a_try = SUITE.count("async function pickLayout")
+        self.assertEqual(SUITE.count("\n  try {") - helpers_with_a_try, SUITE.count("} catch (e) { crash("))
 
     def test_a_stale_selector_fails_fast(self):
         self.assertIn("setDefaultTimeout(6000)", SUITE)

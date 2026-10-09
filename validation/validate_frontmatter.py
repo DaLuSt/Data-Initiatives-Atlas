@@ -129,6 +129,10 @@ def main() -> int:
     schema = common.load_schema()
     entities = common.load_all_entities()
     report = common.Report("validate_frontmatter")
+    # The countries the Atlas has an anchor for: an entity's `country` must be one of them.
+    # (tools/build_graph.py also needs a map position for it, and refuses a build without one.)
+    country_anchors = {e.frontmatter.get("id") for e in entities
+                       if not e.parse_error and e.frontmatter.get("type") == "country"}
 
     for e in entities:
         if e.parse_error:
@@ -222,6 +226,12 @@ def main() -> int:
             report.error(
                 f"{e.rel_path}: country '{country}' is not a plausible "
                 f"ISO 3166-1 alpha-2 code (use null if not applicable)"
+            )
+        elif country is not None and country not in country_anchors:
+            report.error(
+                f"{e.rel_path}: country '{country}' has no country anchor in the Atlas "
+                f"(an entity of type 'country' with id {country}, under countries/{str(country).lower()}/; "
+                f"metadata/ontology.md §3.1)"
             )
 
         # A search-only/unverified entity correctly has no last_verified date
