@@ -68,6 +68,8 @@ Kingdom. See [[GB]].
 - [[GB-NIS-REGULATIONS]] — NIS Regulations 2018 _(`implements-requirement-from`
   [[EU-NIS]] — a transposition made **while a member state**, still in
   force)_
+- [[GB-BSA-2022]] — Building Safety Act 2022 _(the built-environment domain's second country;
+  added 2026-10-09)_
 - [[GB-CSRB]] — Cyber Security and Resilience Bill _(`proposed`; the UK's
   answer to the problem [[EU-NIS2]] addresses, and not a transposition of
   it)_

@@ -187,6 +187,8 @@ see `discovery/research-queue.md`._
 
 - [[NL-AP]] — Autoriteit Persoonsgegevens (data protection)
 - [[NL-NATIONAAL-ARCHIEF]] — Nationaal Archief ✅ re-verified 2026-08-27
+- [[NL-UWV]] and [[NL-SVB]] — the employee-insurance and the pension/child-benefit bodies
+  _(established by [[NL-WET-SUWI]]; added 2026-10-09)_
 
 ### Research
 
@@ -244,6 +246,8 @@ threshold and are queued._
 - [[NL-WET-BRP]] — Wet basisregistratie personen ✅ re-verified 2026-08-27
 - [[NL-WET-CBS]] — Wet op het Centraal bureau voor de statistiek
 - [[NL-TNO-WET]] — TNO-wet
+- [[NL-WET-SUWI]] — Wet structuur uitvoeringsorganisatie werk en inkomen _(establishes
+  [[NL-UWV]] and [[NL-SVB]]; added 2026-10-09)_
 
 ### Superseded / forthcoming
 

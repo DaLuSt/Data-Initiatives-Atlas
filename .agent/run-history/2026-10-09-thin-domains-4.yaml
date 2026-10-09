@@ -1,0 +1,12 @@
+date: "2026-10-09"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #450, fourth step: the last three thin domains. Social security: NL-WET-SUWI, NL-UWV, NL-SVB (Wettenbank,
+  read directly) and DE-SGB-X (gesetze-im-internet.de), so the domain covers BE, DE and NL. Built environment:
+  GB-BSA-2022 (legislation.gov.uk), so GB and NL. Education: ES-RED-ES tagged for education and research because its
+  own description and sources state that it runs RedIRIS, so DE, ES and NL. The Building Safety Regulator is not
+  modelled (a new body since S.I. 2026/20, known only from a textual-amendment note). Tried and not read: Danish and
+  Norwegian building-register laws and Estonia's education law (JavaScript shell or blocked). No domain is now thin
+  except built environment at 2 countries. 766 -> 771 entities.
+prs: []
+outcome: see git history

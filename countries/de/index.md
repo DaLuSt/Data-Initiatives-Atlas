@@ -82,6 +82,11 @@ Anchor entity: [[DE]]
 - [[DE-DNG]] — Datennutzungsgesetz _(implements [[EU-OPEN-DATA-DIRECTIVE]])_
   - [[DE-IWG]] — Informationsweiterverwendungsgesetz _(superseded 2021)_
 
+### Social security
+
+- [[DE-SGB-X]] — Sozialgesetzbuch X: administrative procedure and social data protection
+  _(added 2026-10-09)_
+
 ### Administration and registers
 
 - [[DE-EGOVG]] — E-Government-Gesetz _(2013)_
