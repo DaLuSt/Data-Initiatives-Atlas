@@ -1,0 +1,18 @@
+date: "2026-10-09"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #528 (2027.01, done early): the three defects that only tools/build_graph.py --check caught
+  now also fail validation/run_all.py, in the validators' own wording. (1) validate_frontmatter: an
+  entity's `country` must have a country anchor (an entity of type country with that id); the source of
+  valid codes is the anchors themselves (what the generator also uses for the country labels), not a list
+  in schema.json, and all 58 codes in use already have one. (2) and (3) validate_relationships: a
+  `successor` or `previous_version` that names no entity is an error ("<field> '<id>' does not resolve to a
+  known entity", the generator's wording). The generator keeps its refusals as a second line of defence.
+  validation/test_validators.py goes from 30 to 40 tests (the fixture repository gets a country anchor; the
+  old "left to the generator" test became two error tests); five deliberate breakages (no anchor check,
+  region counted as an anchor, no successor error, no previous_version error, a warning instead of an
+  error) were each caught; and the three audit defects, injected into a real entity (organisations/lu-ctie.md,
+  restored), each fail run_all.py with the expected message. Validation passes on the real data (no new
+  errors). Validators only: no workflow is touched.
+prs: []
+outcome: see git history
