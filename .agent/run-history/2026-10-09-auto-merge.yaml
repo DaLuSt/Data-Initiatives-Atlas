@@ -1,0 +1,12 @@
+date: "2026-10-09"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  The owner asked for auto-merge to be turned on for each pull request. The repository setting "Allow
+  auto-merge" was on (the owner enabled it; it cannot be changed from a session). Rule recorded in
+  .agent/operating-model.md step 7: a session turns on auto-merge (squash) on each pull request right
+  after opening it, so it merges when validate passes; but NOT on a pull request in the ask-first
+  categories (workflows, secrets, permissions, rulesets or settings; anything that changes what is posted
+  publicly; release pull requests), because auto-merge would merge those without the owner's word. Turned on
+  for #585 (validators only). Pull requests that already waited for the owner and are not turned on: none.
+prs: []
+outcome: see git history
