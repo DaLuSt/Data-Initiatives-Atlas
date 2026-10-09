@@ -34,6 +34,8 @@ successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
+  - DOMAIN-EDUCATION
+  - DOMAIN-RESEARCH
 organisations: []
 related_entities:
   - ES
@@ -118,6 +120,9 @@ Red.es is not a data body that happens to run other things. Its remit spans:
 - the **`.es` domain registry** — national naming authority
 - **RedIRIS** — the research and education network for Spanish universities
   and public research centres
+
+(Added 2026-10-09: `DOMAIN-EDUCATION` and `DOMAIN-RESEARCH` follow from RedIRIS, as this
+entity's own description and sources state it; no new page was read for that.)
 
 Three of those four are unmodelled. RedIRIS in particular is the Spanish
 counterpart of [[NL-SURF]], and its absence is now a named gap rather than
