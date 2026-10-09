@@ -1209,6 +1209,46 @@ async function search(page, q) {
   await ctx.close();
 }
 
+// ──────────────── accessibility: contrast and target size (roadmap #497) ────────────────
+// WCAG 2.2 AA: text 4.5:1 (1.4.3), graphical objects 3:1 (1.4.11), pointer targets 24 px (2.5.8).
+// axe-core found the first two failing in the dark theme (white text on the light accent colour)
+// and the last on two small controls; these checks keep them fixed, in both colour schemes.
+for (const scheme of ['light', 'dark']) {
+  const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 }, colorScheme: scheme });
+  const page = await ctx.newPage();
+  page.setDefaultTimeout(6000);
+  try {
+    await page.goto(BASE + '/index.html#view=explorer&focus=NL-NORA', { waitUntil: 'networkidle' });
+    await page.waitForFunction(() => document.getElementById('loading').hidden, null, { timeout: 20000 });
+    await page.waitForTimeout(600);
+    const r = await page.evaluate(() => {
+      const rgb = c => (c.match(/[\d.]+/g) || []).slice(0, 3).map(Number);
+      const lum = ([r, g, b]) => { const f = v => { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); }; return .2126 * f(r) + .7152 * f(g) + .0722 * f(b); };
+      const cr = (a, b) => { const [x, y] = [lum(a), lum(b)].sort((p, q) => q - p); return (x + .05) / (y + .05); };
+      const probe = (cls, style) => {          // a throw-away element, styled like the real thing
+        const el = document.createElement('span'); el.className = cls; if (style) el.style.cssText = style;
+        el.textContent = 'x'; document.body.appendChild(el);
+        const cs = getComputedStyle(el); const out = { fg: rgb(cs.color), bg: rgb(cs.backgroundColor) }; el.remove(); return out;
+      };
+      const canvas = rgb(getComputedStyle(document.body).backgroundColor);
+      const levels = ['international', 'regional', 'national', 'subnational', 'local'];
+      const chips = levels.map(l => { const p = probe('chip lvl', 'background:var(--lvl-' + l + ')'); return [l, +cr(p.fg, p.bg).toFixed(2), +cr(p.bg, canvas).toFixed(2)]; });
+      const active = document.querySelector('.view-btn.is-active'); const ac = getComputedStyle(active);
+      const small = [...document.querySelectorAll('.mini, .ev > summary, .view-btn, .icon-btn, .secondary')]
+        .filter(e => e.offsetParent !== null && !e.closest('[hidden]'))
+        .map(e => { const b = e.getBoundingClientRect(); return [e.id || e.className, Math.round(b.width), Math.round(b.height)]; })
+        .filter(([, w, h]) => w < 24 || h < 24);
+      return { chips, activeView: +cr(rgb(ac.color), rgb(ac.backgroundColor)).toFixed(2), small };
+    });
+    const worstChip = r.chips.reduce((a, c) => c[1] < a[1] ? c : a);
+    check(`${scheme}: the active view button's text meets 4.5:1`, r.activeView >= 4.5, `${r.activeView}:1`);
+    check(`${scheme}: every level chip's text meets 4.5:1`, worstChip[1] >= 4.5, `lowest ${worstChip[0]} ${worstChip[1]}:1`);
+    check(`${scheme}: every level colour meets 3:1 against the page`, r.chips.every(c => c[2] >= 3), r.chips.map(c => c[0] + ' ' + c[2]).join(', '));
+    check(`${scheme}: no button or disclosure in view is under 24 px`, r.small.length === 0, JSON.stringify(r.small.slice(0, 3)));
+  } catch (e) { crash(`accessibility contrast and size (${scheme})`, e); }
+  await ctx.close();
+}
+
 await browser.close();
 console.log(results.join('\n'));
 console.log(`\n${results.length - failed}/${results.length} UI checks passed`);

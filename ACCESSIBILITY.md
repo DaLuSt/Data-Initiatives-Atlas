@@ -4,7 +4,7 @@ This is what the Data Initiatives Atlas does about accessibility, what has
 and has not been checked, what is known to be hard, and how to tell us about a
 barrier. It describes the interactive site at
 <https://dalust.github.io/Data-Initiatives-Atlas/> and, more briefly, the
-Markdown files in this repository. Last reviewed **2026-10-08**.
+Markdown files in this repository. Last reviewed **2026-10-09**.
 
 ## Our commitment
 
@@ -35,7 +35,7 @@ only third-party code (Cytoscape.js) from the same address.
 | **Browsers tested** | Chromium (recent, headless) at desktop width (1366 px), phone width (390 px and 320 px), and a width equal to 200 % zoom on a laptop (683 px). Other browsers (Firefox, Safari) have **not** been tested. |
 | **Screen readers** | **None tested.** |
 | **Keyboard** | Tested by scripted key presses in Chromium. |
-| **Colour schemes** | Light and dark follow the operating-system setting. High-contrast modes have **not** been tested. |
+| **Colour schemes** | Light and dark follow the operating-system setting. Chromium's forced-colours mode was run through the automated checks (no violations) but **not looked at by eye**; Windows High Contrast itself has **not** been tested. |
 | **Motion** | The loading spinner and the sidebar slide-in slow down or stop when the system asks for reduced motion. The graph layouts are not animated; the only movement is a 150 ms re-centre when you select an entity or move to one with the arrow keys. |
 
 ## What is in place
@@ -61,11 +61,19 @@ only third-party code (Cytoscape.js) from the same address.
 
 ## What has been checked
 
-- **Automated:** axe-core found no violations on 16 combinations of view and
-  screen size (bare address, List, Compare, the Explorer, a path between two
-  entities, official names, and two layouts, at desktop and phone width) on
-  2026-10-08. Automated tools find only a part of the real problems, so this is
-  a floor, not a pass.
+- **Automated:** axe-core (WCAG 2.2 A and AA rules plus best practice) on 20
+  combinations of view and setup (the Global Atlas, List, Compare, the Explorer
+  and a path, in light, dark, phone width and forced colours) on 2026-10-09:
+  it found two problems (contrast in the dark theme and in one level colour, and
+  two controls under 24 px), now fixed, and **no violations** after. The browser
+  suite in CI keeps those fixed. Automated tools find only a part of the real
+  problems, so this is a floor, not a pass. The scripted checks, their results and
+  what still needs a person are in
+  [`docs/accessibility-audit-2026-10.md`](docs/accessibility-audit-2026-10.md).
+- **Scripted, beyond axe:** all 380 Tab stops show a focus indicator; no
+  horizontal scrolling at 320 px or at 400 % zoom; nothing clips with the
+  WCAG text-spacing overrides; the five level colours are at least 3:1 against the
+  page in both themes.
 - **Scripted:** odd addresses, random sequences of clicks and key presses, and
   the CSV download, in Chromium, for errors and broken states.
 - **Reviewed by the developer** on 2026-10-06 (`docs/ux-analysis.md`): first
@@ -83,8 +91,11 @@ only third-party code (Cytoscape.js) from the same address.
 2. **Reaching the graph by Tab is long without the skip link.** The filters in
    the sidebar come first (about 150 controls). Use "Skip to content", which
    moves focus to the main area of the view you are in.
-3. **Colour on the graph carries meaning** (level, type, selection) and its
-   contrast has **not been measured**.
+3. **Colour on the graph carries meaning** (level, type, selection). The five
+   level colours were measured on 2026-10-09 and are at least 3:1 against the
+   page in both themes; the contrast of the selection and focus highlights, of
+   text over the canvas and of the faint "Shared context" and "Mentions" lines
+   has **not** been measured.
 4. **Names in many languages.** The page language is English, but entity
    names, and some quotations in the detail panel, are in the languages of the
    sources (Dutch, German, French, Spanish and others) and are not marked with a
