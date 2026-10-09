@@ -17,6 +17,10 @@ summary: >
   scope dropped, secret printed, a file written, output not escaped) were each caught
   by a test. It is in the shared checks action. docs/credentials.md has the run
   instructions. Not verified: a real run against LinkedIn, which only the owner can do.
+  The owner then found that creating the app needs a LinkedIn Page and has no company. LinkedIn's
+  help pages (read 2026-10-09) say an individual developer must associate a default Page, that a
+  Page is free and needs only a LinkedIn account, and that the app-to-Page link is permanent;
+  docs/credentials.md now has the steps for creating a Page for the project.
   Still to build for #515 (2027.01): tools/linkedin_post.py and the approval-gated
   workflow job.
 prs: []

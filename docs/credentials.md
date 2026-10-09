@@ -112,14 +112,27 @@ approves**. Until then posting by hand from the issue keeps working.
 
 **Recommendation:** start with the personal profile (nothing to wait for), keep
 the author ID in a secret so a later move to a company page is a configuration
-change plus one new permission, not a rewrite. The app form asks for a LinkedIn
-Page to associate the app with; any page the owner administers will do, even for
-personal posting. Check this and the API terms on the screen when creating it.
+change plus one new permission, not a rewrite. The app form requires a LinkedIn
+Page to associate the app with, even for personal posting; step 0 below creates one
+for an individual developer. Check the API terms on the screen when creating the app.
 
 ### Steps for the owner (about 30 minutes, once; can be done at any time)
 
+0. **Create a LinkedIn Page first if you have none** (an individual developer
+   needs one; a registered company is not required). LinkedIn: *For Business →
+   Create a Company Page*, type **Company**, free, desktop or iOS (not Android).
+   Name it after the project ("Data Initiatives Atlas"), website
+   `https://dalust.github.io/Data-Initiatives-Atlas/`, an industry such as
+   "Technology, Information and Internet", and the Atlas logo. The box that
+   confirms you may act on behalf of the organisation is true here: you own the
+   project. You become the Page's super admin, so approving the app's link to it
+   (which has 30 days) is yours. **The link is permanent**: an app cannot be moved
+   to another Page, so pick a name you can live with. The Page is only formal
+   here; posts still go to your own profile (`w_member_social`).
 1. Go to <https://developer.linkedin.com/>, *My apps → Create app*. Name it
-   after the Atlas; associate a page; upload any logo; accept the terms.
+   after the Atlas; select that Page as the app's Page; upload the logo; accept
+   the terms. If the portal asks you to verify the app with the Page, do it as the
+   Page's admin (follow what the portal shows).
 2. On the app's *Products* tab, add **Share on LinkedIn** (gives
    `w_member_social`) and **Sign In with LinkedIn using OpenID Connect** (gives
    the member's ID).
