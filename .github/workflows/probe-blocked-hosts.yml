@@ -1,0 +1,93 @@
+name: Probe blocked sources
+
+# Finds out which of the hosts the agent's own environment cannot read (unece.org, iso.org,
+# coe.int, eur-lex.europa.eu, efta.int, bmi.bund.de ... the known-block rows of
+# discovery/unresolved.md) a GitHub-hosted runner CAN read, and optionally runs the
+# re-verification tool over the entities that cite them. It is a report for a person or a
+# later session to act on: it changes no entity, commits nothing and uses no secrets.
+# Roadmap #495; tools/host_probe.py, tools/reverify.py, docs/re-verification.md.
+#
+# Start it by hand: Actions > Probe blocked sources > Run workflow. The report is on the
+# run's summary page, and the files are attached to the run as an artifact (kept 30 days).
+on:
+  workflow_dispatch:
+    inputs:
+      hosts:
+        description: "Comma-separated hosts to probe (blank = the known-blocked hosts)"
+        type: string
+        default: ""
+      browser_ua:
+        description: "Also probe with an ordinary browser User-Agent (shows whether a host only refuses unknown agents)"
+        type: boolean
+        default: true
+      reverify:
+        description: "Also run tools/reverify.py over the entities that cite these hosts (slow: up to an hour)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: probe-blocked-hosts
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      HOSTS: ${{ inputs.hosts }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r validation/requirements.txt
+
+      - name: Probe the hosts with the Atlas's own User-Agent
+        run: |
+          mkdir -p report
+          hosts=()
+          if [ -n "$HOSTS" ]; then hosts=(--hosts "$HOSTS"); fi
+          python tools/host_probe.py "${hosts[@]}" --json report/probe-honest.json --markdown report/probe-honest.md > /dev/null
+          cat report/probe-honest.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Probe the hosts with a browser-like User-Agent
+        if: inputs.browser_ua
+        run: |
+          hosts=()
+          if [ -n "$HOSTS" ]; then hosts=(--hosts "$HOSTS"); fi
+          python tools/host_probe.py "${hosts[@]}" --browser-ua --json report/probe-browser.json --markdown report/probe-browser.md > /dev/null
+          { echo; echo "---"; echo; cat report/probe-browser.md; } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Re-verify the entities that cite these hosts
+        if: inputs.reverify
+        run: |
+          hosts=()
+          if [ -n "$HOSTS" ]; then hosts=(--hosts "$HOSTS"); fi
+          python tools/host_probe.py "${hosts[@]}" --list-entities > report/entities.txt
+          args=()
+          while read -r id; do args+=(--id "$id"); done < report/entities.txt
+          # The exit code only says whether some source stayed unreadable; the report is the point.
+          python tools/reverify.py "${args[@]}" --timeout 20 --json > report/reverify.json || true
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json, collections
+          rows = json.load(open("report/reverify.json"))
+          tally = collections.Counter(r["verdict"] for r in rows)
+          print("\n## Re-verification of the entities that cite these hosts\n")
+          for verdict, n in sorted(tally.items()):
+              print(f"- **{verdict}**: {n}")
+          print("\nThe per-source detail is in `reverify.json` in the attached artifact. Nothing was written to any entity.")
+          PY
+
+      - name: Attach the report
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: host-probe-report
+          path: report/
+          retention-days: 30
