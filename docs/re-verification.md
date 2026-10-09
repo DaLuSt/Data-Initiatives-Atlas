@@ -34,6 +34,20 @@ curl -sS "$HTTPS_PROXY/__agentproxy/status"
 `discovery/reverification-allowlist.md` is the list to request. Twenty domains
 cover the bulk of it — `europa.eu` alone unblocks 80 entities.
 
+### Which hosts can a GitHub runner read?
+
+The agent's own environment cannot read several hosts the Atlas cites (unece.org, iso.org,
+coe.int, eur-lex.europa.eu, efta.int, bmi.bund.de and others; `discovery/unresolved.md` rows
+#4, #70 and #216 to #225). A GitHub-hosted runner has different egress. **Actions → Probe
+blocked sources → Run workflow** finds out: it fetches each host's root and a few URLs that
+entities really cite (`tools/host_probe.py`), classifies each answer (readable, a JavaScript
+shell, a bot-defence challenge, denied, not found, ...), and shows the table on the run's
+summary page, with the files attached as an artifact. Options: a list of hosts, whether to
+repeat the probe with an ordinary browser User-Agent (shows whether a host only refuses
+unknown agents; whether to rely on that is a person's call), and whether to run
+`tools/reverify.py` over the entities that cite these hosts (slow). It changes no entity and
+uses no secrets. Locally: `python tools/host_probe.py --offline` lists what would be probed.
+
 **Never work around this by disabling TLS verification.** `tools/reverify.py`
 has no such switch and `tools/test_reverify.py` asserts, against the module's
 syntax tree, that none is ever added. A `primary-source` claim made over an

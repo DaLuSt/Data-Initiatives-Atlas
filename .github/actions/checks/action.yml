@@ -62,6 +62,12 @@ runs:
       shell: bash
       run: python tools/test_linkedin_post.py
 
+    # The blocked-host probe (tools/host_probe.py): classification of each answer,
+    # which URLs are picked, and the properties of probe-blocked-hosts.yml. No network.
+    - name: Test the blocked-host probe
+      shell: bash
+      run: python tools/test_host_probe.py
+
     # Proves the graph can still be generated from this data. The generated files
     # are not committed, so there is no committed copy to go stale; reproducibility
     # of the build is asserted by the graph generator tests above.

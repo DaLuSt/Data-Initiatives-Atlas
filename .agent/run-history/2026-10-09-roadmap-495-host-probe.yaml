@@ -1,0 +1,18 @@
+date: "2026-10-09"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Next roadmap item, #495 (2026.12), the one that unblocks #446 and #459: find out which of
+  the hosts the agent's environment cannot read a GitHub runner can. Added
+  tools/host_probe.py (stdlib plus the re-verification tool's fetch settings; for each of 24
+  known-block hosts it fetches the root and up to three URLs entities cite, and classifies each
+  answer: READABLE, JS_SHELL, CHALLENGE, DENIED, NOT_FOUND, SERVER_ERROR, BLOCKED, ERROR; honest
+  User-Agent by default, a browser-like one only on request; TLS never relaxed; writes only the
+  report files it is told to) and .github/workflows/probe-blocked-hosts.yml (manual; contents read
+  only; no secrets; the report on the run's summary page and as an artifact; an optional, slow
+  re-verification over the 196 entities that cite these hosts; it commits nothing). 46 tests,
+  which also pass with the network disabled; eight deliberate breakages were each caught. One
+  real bug was found by the tests while writing them: asking for 0 cited URLs per host still gave
+  one. docs/re-verification.md has the procedure. The written answer to #495 (which hosts a runner can read)
+  needs a run of the workflow, which is the next step; #495 stays open until it is recorded.
+prs: []
+outcome: see git history
