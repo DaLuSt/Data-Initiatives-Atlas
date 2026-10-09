@@ -1,0 +1,17 @@
+date: "2026-10-09"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #497 (2027.01, started early): the scripted accessibility audit, in docs/accessibility-audit-2026-10.md.
+  axe-core (WCAG 2.2 A/AA plus best practice) on 5 views in 4 setups (20 runs), keyboard focus on all 380 tab
+  stops, target sizes, reflow at 320 px and 400 % zoom, text spacing, headings and landmarks, reduced motion,
+  forced colours, and the contrast of the five graph level colours. Defects found and fixed in site/app.css:
+  white text on the light accent and level colours in the dark theme (2.1 to 2.7:1; a new --on-accent colour,
+  near-black in the dark theme), white text on the light-theme subnational colour (3.72:1; the colour is
+  darker, #5f7a20), and two controls under 24 px (the evidence disclosure and the small buttons). After the
+  fixes axe finds 0 violations in 20 runs. Eight new checks in tools/test_ui.mjs (the CI browser job) hold the
+  fixes in both colour schemes; run against the old CSS five of them fail. ACCESSIBILITY.md is updated (what
+  was checked, graph colour contrast now measured). NOT done, and said so: a screen reader, Firefox and Safari,
+  a person using the site by keyboard, Windows High Contrast by eye, 2.4.11 and 3.2.6, sessions with disabled
+  users (#452); axe left 20 colour-contrast and 12 label-in-name items for a person. #497 stays open for those.
+prs: []
+outcome: see git history
