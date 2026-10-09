@@ -395,6 +395,15 @@ class TestWorkflow(unittest.TestCase):
         self.assertIn("--label linkedin", pub)
         self.assertIn("gh issue list --state all --label linkedin", self.TEXT)
 
+    def test_the_draft_issue_reminds_the_owner_to_post_on_the_page_by_hand(self):
+        pub = (REPO_ROOT / ".github" / "workflows" / "release-publish.yml").read_text(encoding="utf-8")
+        self.assertIn("Also post it on the Data Initiatives Atlas LinkedIn Page, by hand", pub)
+        self.assertIn("docs/linkedin-page-posts.md", pub)
+        # The reminder comes before the draft block, so extraction still finds the draft first.
+        self.assertLess(pub.index("Also post it on the Data Initiatives Atlas LinkedIn Page"), pub.index("echo '```text'"))
+        body = "A draft.\n\n**Also post it on the Data Initiatives Atlas LinkedIn Page, by hand:** x\n\n```text\nThe draft\n```\n"
+        self.assertEqual(lp.extract_draft(body), "The draft\n")
+
     def test_the_text_is_shown_on_the_runs_summary_page(self):
         step = next(s for s in self.job["steps"] if s.get("name") == "Post to LinkedIn")
         self.assertIn("GITHUB_STEP_SUMMARY", step["run"])
