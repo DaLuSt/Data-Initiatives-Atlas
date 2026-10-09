@@ -101,6 +101,20 @@ extend to every United Nations member state is an open scope decision, tracked
 in roadmap issue [#451](https://github.com/DaLuSt/Data-Initiatives-Atlas/issues/451);
 until it is taken, the European rule below is the rule.
 
+### Countries added through the roadmap (UN member states, group by group)
+
+Base anchors with a first sourced slice each, added from the roadmap's country groups
+(`discovery/candidates.md` C10). They are outside the European rule below: the roadmap
+([#451](https://github.com/DaLuSt/Data-Initiatives-Atlas/issues/451)) is extending the Atlas to the UN member states.
+
+| Country | Code | Folder |
+|---|---|---|
+| Kenya | `KE` | [`ke/`](ke/) |
+| Nepal | `NP` | [`np/`](np/) |
+| Philippines | `PH` | [`ph/`](ph/) |
+| Somalia | `SO` | [`so/`](so/) |
+| Uzbekistan | `UZ` | [`uz/`](uz/) |
+
 ### Which states count as European
 
 There is no single authoritative list, so the Atlas states its rule instead
