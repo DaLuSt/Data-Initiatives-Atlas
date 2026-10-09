@@ -30,13 +30,26 @@ verification: primary-source
 
 start_date: 2009-08-20
 end_date: null
-last_verified: "2026-09-20"
+last_verified: "2026-10-09"
 previous_version: null
 successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
   - DOMAIN-CYBERSECURITY
+  - DOMAIN-ENERGY
+  - DOMAIN-MOBILITY
+  - DOMAIN-FINANCE
+  - DOMAIN-HEALTH
+  - DOMAIN-WATER
+  - DOMAIN-DIGITAL-INFRASTRUCTURE
+  - DOMAIN-SPACE
+  - DOMAIN-POSTAL
+  - DOMAIN-ENVIRONMENT
+  - DOMAIN-CHEMICALS
+  - DOMAIN-FOOD
+  - DOMAIN-MANUFACTURING
+  - DOMAIN-RESEARCH
 organisations:
   - DE-BSI
 related_entities:
@@ -60,6 +73,14 @@ sources:
     url: "https://www.deloitte.com/de/de/services/consulting-risk/perspectives/umsetzung-eu-direktive-nis2-nis2umsucg.html"
     publisher: "Deloitte Deutschland"
     accessed: "2026-08-28"
+  - title: "BSIG Anlage 1 — Sektoren besonders wichtiger und wichtiger Einrichtungen (BGBl. 2025 I Nr. 301)"
+    url: "https://www.gesetze-im-internet.de/bsig_2025/anlage_1.html"
+    publisher: "Bundesministerium der Justiz (gesetze-im-internet.de)"
+    accessed: "2026-10-09"
+  - title: "BSIG Anlage 2 — Sektoren wichtiger Einrichtungen (BGBl. 2025 I Nr. 301)"
+    url: "https://www.gesetze-im-internet.de/bsig_2025/anlage_2.html"
+    publisher: "Bundesministerium der Justiz (gesetze-im-internet.de)"
+    accessed: "2026-10-09"
 ---
 
 # BSI-Gesetz (BSIG)
@@ -154,6 +175,21 @@ Where the Atlas has a genuine supersession it still says so on both sides —
 `superseded` and [[DE-DNG]] `supersedes` it. This entity is the other
 pattern: amended, continuing under its own name, and that is now what its
 relationships say.
+
+## The sectors the current act covers
+
+Read directly on gesetze-im-internet.de (2026-10-09), the act's two annexes, introduced by the
+NIS-2-Umsetzungsgesetz (BGBl. 2025 I Nr. 301), list the sectors whose entities fall under it.
+**Anlage 1** (besonders wichtige und wichtige Einrichtungen): Energie, Transport und Verkehr,
+Finanzwesen (Bankwesen, Finanzmarktinfrastrukturen), Gesundheit, Wasser (Trinkwasserversorgung,
+Abwasserbeseitigung), Digitale Infrastruktur and Weltraum (operators of ground infrastructure
+supporting space-based services). **Anlage 2** (wichtige Einrichtungen): Post- und Kurierdienste,
+Abfallbewirtschaftung, Produktion, Herstellung und Handel mit chemischen Stoffen, Produktion,
+Verarbeitung und Vertrieb von Lebensmitteln, Verarbeitendes Gewerbe (medical devices, computer and
+electronic equipment, electrical equipment, machinery, motor vehicles, other vehicles), Anbieter
+digitaler Dienste and Forschung (research institutions). The entity's domain tags follow these
+sectors, as [[NL-CBW]]'s do for the Dutch act; waste management is tagged `DOMAIN-ENVIRONMENT`, as
+there.
 
 ## Relationships
 
