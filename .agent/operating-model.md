@@ -83,8 +83,14 @@ do not push directly to `main`:
 7. **Wait for the real CI before merging.** `.github/workflows/validate.yml`
    runs the checks independently on every PR (wait on the check run, not on
    `get_status`, which does not see Actions results) and it must be green.
-   Do not merge without the owner's word when they have asked to approve
-   merges. (A PR opened by a workflow's own `GITHUB_TOKEN`, such as the weekly
+   **Standing permission (owner, 2026-10-09):** a session may squash-merge its
+   own pull request once `validate` is green, and tells the owner afterwards.
+   Ask first, and wait for the owner's word, for a PR that (a) touches
+   workflows, secrets, permissions, rulesets or repository settings, (b)
+   changes what is posted publicly (the LinkedIn tools and workflows, the
+   release workflows), or (c) is a release pull request. The owner can revoke or
+   widen this at any time; a session that is unsure treats the PR as one to ask
+   about. (A PR opened by a workflow's own `GITHUB_TOKEN`, such as the weekly
    release PR, does not trigger `validate.yml`; that workflow runs the
    validation itself before opening the PR.)
 8. **If the gate passes: squash-merge** (the only merge method to use; one

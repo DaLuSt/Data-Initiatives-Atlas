@@ -1,0 +1,12 @@
+date: "2026-10-09"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  The owner asked why every pull request waited for "merge it", and chose standing permission
+  with exceptions (option 2): a session may squash-merge its own pull request once validate is
+  green and tells the owner afterwards, but asks first for a PR that touches workflows, secrets,
+  permissions, rulesets or repository settings, changes what is posted publicly (the LinkedIn
+  tools and workflows, the release workflows), or is a release pull request. Recorded in
+  .agent/operating-model.md (step 7) so a later session has it. This change is documentation only
+  and is itself outside the exceptions.
+prs: []
+outcome: see git history
