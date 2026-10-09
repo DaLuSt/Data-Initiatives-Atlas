@@ -11,5 +11,9 @@ summary: >
   docs/credentials.md records the decision and the options set aside; #515 was
   updated. Nothing was posted or scheduled through Metricool. The Metricool
   connection is not needed by anything in the repository.
-prs: []
-outcome: pending merge
+prs:
+  - number: 572
+    title: "LinkedIn: record the decision for the own developer app (#515)"
+  - number: 571
+    title: "Housekeeping: record #567, #568, #569 and #570 as merged"
+outcome: merged
