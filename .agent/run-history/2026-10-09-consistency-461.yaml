@@ -1,0 +1,15 @@
+date: "2026-10-09"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #459 and #461 re-read against the data before working them. #459: most of its bullets were already
+  closed by earlier work (OSR and OSNI added, the NIS Schedule 1 authorities already tabulated in
+  GB-NIS-REGULATIONS with the ministerial offices declined as not being bodies, RPSI 2015 linked to
+  GB-DATA-GOV-UK, DCMS and DSIT now cite GOV.UK); Schedule 1 was re-read on legislation.gov.uk today and matches.
+  Still open on #459: the UN-CES seat (unece.org blocked), a British Standard (only BSI's 2009 shop page could be
+  read, not the current edition), and other countries' statistics oversight bodies. #461: decided three of four
+  points (metadata/relationship-types.md section 2.5): the GDPR-authority edge is not an outlier (73 edges of that
+  type, from many entity types), the own-country applies-in edge is the section 2.3 anchor edge and stays, and an
+  unknown domain id already fails validation (now held by a test). The fourth point, showing anchor edges apart on
+  the graph, is a site change and stays open. No entity changed.
+prs: []
+outcome: see git history

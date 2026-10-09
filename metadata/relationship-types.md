@@ -189,6 +189,34 @@ strength of the single well-sourced example the type was added for. A count
 of unmodellable things is not the same as a count of instances of one
 missing type.
 
+### 2.5 Decisions of 2026-10-09 (roadmap #461)
+
+Three questions the data kept raising, each decided by re-reading the data rather than the
+backlog's count of it.
+
+1. **The GDPR's supervisory authority.** The backlog said [[NL-AP]] was the only organisation
+   with `implements-requirement-from` [[EU-GDPR]]. It is not the odd one out: of the 73 edges of
+   this type, 52 go from an `act` or `subordinate-legislation`, and the rest from a platform (12),
+   a standard (3), an organisation (3, among them [[NL-AP]]) and three other types (a directive,
+   a technology and a programme). The type's meaning is "carries out
+   an obligation from a higher instrument", whatever carries it out. **Rule:** a supervisory
+   authority is recorded by `part-of` its country and `participates-in` [[EU-EDPB]] (the Board has
+   one authority per member state, GDPR Article 68(3)). An `implements-requirement-from` edge to the
+   GDPR is allowed where the authority's own source says its tasks derive from it, as for
+   [[NL-AP]], but is not required of the others. No edge is changed.
+2. **`applies-in` to one's own country.** These edges (72 of 471 `applies-in` edges at this date)
+   are the anchor edge of §2.3 for an instrument, and §2.3 requires an anchor edge where no
+   substantive one is yet known, so they cannot be removed. They are kept, and a reader should
+   take them as "this instrument belongs to this country's legal order", not as a finding. The
+   type keeps its wider meaning for an instrument that applies in a country other than its own.
+3. **A domain with no entity.** An unknown domain ID on an entity already fails
+   `validate_relationships.py` ("domains references unknown id"); a test now holds that, so the
+   site's domain filter cannot show a row labelled with a bare ID.
+
+What is **not** decided here: how the interactive graph should show anchor edges apart from
+substantive ones (the fourth point of #461). It changes the site and its facet counts, so it stays
+open on that issue.
+
 ---
 
 ## 3. Facts vs. Atlas interpretation
