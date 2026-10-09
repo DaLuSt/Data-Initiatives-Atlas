@@ -52,6 +52,10 @@ Anchor entity: [[ES]]
   e-government law; added 2026-09-04)_
 - [[ES-LEY-40-2015]] — public sector legal regime _(legal form behind
   [[ES-AEAD]]; added 2026-09-04)_
+- [[ES-LEY-27-2006]] — environmental information, participation and access to
+  justice _(implements [[EU-ENVIRONMENTAL-INFORMATION-DIRECTIVE]]; added 2026-10-09)_
+- [[ES-RDL-19-2018]] — payment services _(implements [[EU-PSD2]]; added
+  2026-10-09)_
 - [[ES-ORDEN-PRE-1838-2014]] — Cl@ve's founding order, publishing the 19
   Sept 2014 Council of Ministers agreement _(added 2026-09-06)_
 

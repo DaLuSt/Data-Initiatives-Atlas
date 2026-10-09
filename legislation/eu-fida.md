@@ -30,7 +30,8 @@ last_verified: "2026-09-18"
 previous_version: null
 successor: null
 
-domains: []
+domains:
+  - DOMAIN-FINANCE
 organisations: []
 related_entities:
   - EU-FINANCIAL-DATA-SPACE

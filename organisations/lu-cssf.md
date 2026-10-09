@@ -34,6 +34,7 @@ successor: null
 domains:
   - DOMAIN-GOVERNMENT
   - DOMAIN-CYBERSECURITY
+  - DOMAIN-FINANCE
 organisations: []
 related_entities:
   - LU

@@ -32,6 +32,8 @@ Anchor entity: [[IE]]
 
 - [[IE-DPA-2018]] — Data Protection Act 2018 _(a national procedural
   statute doing work in twenty-seven member states, through Article 60)_
+- [[IE-SI-133-2007]] — access to information on the environment _(implements
+  [[EU-ENVIRONMENTAL-INFORMATION-DIRECTIVE]]; added 2026-10-09)_
 - [[IE-NCS-BILL]] — National Cyber Security Bill _(`proposed`; the NIS2
   transposition is **overdue**, deadline 17 October 2024 missed)_
 

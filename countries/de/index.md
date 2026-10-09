@@ -93,6 +93,11 @@ Anchor entity: [[DE]]
 - [[DE-BSIG]] — BSI-Gesetz
 - [[DE-NIS2UMSUCG]] — NIS-2-Umsetzungsgesetz _(implements [[EU-NIS2]])_
 
+### Environment
+
+- [[DE-UIG]] — Umweltinformationsgesetz _(federal bodies only; implements
+  [[EU-ENVIRONMENTAL-INFORMATION-DIRECTIVE]]; the Länder have their own acts)_
+
 ### Statistics and geospatial
 
 - [[DE-BSTATG]] — Bundesstatistikgesetz

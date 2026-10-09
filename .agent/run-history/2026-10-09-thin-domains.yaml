@@ -1,0 +1,14 @@
+date: "2026-10-09"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #450 (thin domains), owner chose environment and finance. Four national instruments added from primary
+  texts read directly: DE-UIG (gesetze-im-internet.de), ES-LEY-27-2006 and ES-RDL-19-2018 (BOE), IE-SI-133-2007
+  (Irish Statute Book). Environment 1 -> 4 countries (DE, ES, IE, NL), finance 1 -> 3 (ES, LU, NL); EU-PSD2, EU-FIDA,
+  LU-CSSF and EU-ENVIRONMENTAL-INFORMATION-DIRECTIVE gained the domain tag their own descriptions support. National
+  lists came from EUR-Lex's national-measures pages (fetch tool). DE-UIG's link to the Directive rests on that list
+  plus the act's footnote because the act's text does not cite the Directive (confidence medium). Not added and why:
+  German ZAG (text does not say it implements PSD2), Luxembourg's 2005 law (Legilux JavaScript shell), the French,
+  Dutch, Belgian and Austrian measures (not read). Thin domains 13 -> 10 (mobility reached 3 earlier). 761 -> 765
+  entities.
+prs: []
+outcome: see git history
