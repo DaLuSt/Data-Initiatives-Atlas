@@ -33,9 +33,9 @@ function check(name, ok, extra = '') {
 function crash(section, e) {
   const lines = String(e && e.message || e).split('\n');
   // The call log's last lines say why an action never ran (not visible, intercepted, ...).
-  const waiting = lines.filter(l => /waiting for|not visible|intercepts|disabled|not stable|retrying/.test(l)).slice(0, 6).map(l => l.trim()).join(' ');
+  const waiting = lines.filter(l => /waiting for|not visible|intercepts|disabled|not stable|retrying|state:/.test(l)).slice(0, 6).map(l => l.trim()).join(' ');
   check(`section "${section}" ran to the end`, false,
-    (lines[0] + ' ' + waiting.replace(/\x1b\[[0-9;]*m/g, '').trim()).slice(0, 220));
+    (lines[0] + ' ' + waiting.replace(/\x1b\[[0-9;]*m/g, '').trim()).slice(0, 700));
 }
 
 // The number of entities, read from the data the site is built from, so a new entity does
@@ -61,6 +61,30 @@ async function newPage(vp) {
 // their <details>; a collapsed control is not clickable, so open the group first.
 async function openFilter(page, id) {
   await page.evaluate(i => { const d = document.getElementById(i).closest('details'); if (d) d.open = true; }, id);
+}
+
+// Choosing a layout: on failure, say what state the control was in (hidden? disabled? which
+// view?), because "waiting for element to be visible and enabled" alone does not tell.
+async function pickLayout(page, mode) {
+  try {
+    await pickLayout(page, mode);
+  } catch (e) {
+    const state = await page.evaluate(() => {
+      const el = document.getElementById('layout-mode');
+      const panel = document.getElementById('layout-panel');
+      return {
+        exists: !!el, disabled: el && el.disabled, value: el && el.value,
+        panelHidden: panel && panel.hidden,
+        offsetParent: !!(el && el.offsetParent),
+        explorerPressed: document.getElementById('view-explorer').getAttribute('aria-pressed'),
+        atlasPressed: document.getElementById('view-atlas').getAttribute('aria-pressed'),
+        loading: !document.getElementById('loading').hidden,
+        hash: location.hash
+      };
+    }).catch(() => ({}));
+    e.message += ' | state: ' + JSON.stringify(state);
+    throw e;
+  }
 }
 
 async function search(page, q) {
@@ -722,7 +746,7 @@ async function search(page, q) {
     });
   });
   await page.waitForSelector('#layout-mode', { state: 'visible', timeout: 20000 });
-  await page.selectOption('#layout-mode', 'force');
+  await pickLayout(page, 'force');
   await page.evaluate(() => window.__forceLayoutDone);
   var force = await page.evaluate(() => {
     const cy = document.getElementById('cy')._cyreg.cy;
@@ -766,7 +790,7 @@ async function search(page, q) {
   check('force layout says level is no longer positional',
     /only by colour/i.test(forceHint), forceHint.trim().slice(0, 50) + '…');
 
-  await page.selectOption('#layout-mode', 'grouped');
+  await pickLayout(page, 'grouped');
   await page.waitForTimeout(900);
   var regrouped = await page.evaluate(() => {
     const cy = document.getElementById('cy')._cyreg.cy;
@@ -781,7 +805,7 @@ async function search(page, q) {
   try {
   // ── world map layout ──
   await page.waitForSelector('#layout-mode', { state: 'visible', timeout: 20000 });
-  await page.selectOption('#layout-mode', 'map');
+  await pickLayout(page, 'map');
   await page.waitForTimeout(1200);
   var mapState = await page.evaluate(() => {
     const cy = document.getElementById('cy')._cyreg.cy;
@@ -914,7 +938,7 @@ async function search(page, q) {
     restoredLayout === 'map' && restoredNodeCount === TOTAL,
     `selector=${restoredLayout}, nodes=${restoredNodeCount}`);
 
-  await page.selectOption('#layout-mode', 'grouped');
+  await pickLayout(page, 'grouped');
   await page.waitForTimeout(700);
 
   // The layout switcher governs the Global Atlas only.
@@ -1162,7 +1186,7 @@ async function search(page, q) {
   var before = await page.evaluate(() =>
     new Set(document.getElementById('cy')._cyreg.cy.nodes()
       .map(n => Math.round(n.position().y))).size);
-  await page.selectOption('#layout-mode', 'force');
+  await pickLayout(page, 'force');
   await page.waitForTimeout(2000);
   var after = await page.evaluate(() => ({
     distinctY: new Set(document.getElementById('cy')._cyreg.cy.nodes()
