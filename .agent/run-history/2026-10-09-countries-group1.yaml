@@ -1,0 +1,14 @@
+date: "2026-10-09"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #470 (country group 1 of 14), started early: country anchors and a first sourced slice for five of
+  the ten countries. Kenya (Data Protection Act, Cap. 411C, and the Office of the Data Protection Commissioner;
+  the Act read on a GitHub-hosted runner, ODPC site read directly), the Philippines (Data Privacy Act 2012 and the
+  National Privacy Commission, from the Act on Lawphil), Uzbekistan (Law ЎРҚ-547 on personal data and the State
+  Personalisation Centre it names, read on a runner from Lex.uz), Nepal (Privacy Act 2075, English text of the Law
+  Commission via the ADB) and Somalia (Data Protection Act No. 005 and the Authority, from the Authority's own
+  site only). Atlas: 747 -> 761 entities (9 entities and 5 anchors), 58 -> 63 countries.
+  NOT done: India, Thailand (sites blocked from the agent and from a runner), Haiti, Lao PDR, Timor-Leste;
+  recorded in discovery/unresolved.md row #236. #470 stays open with five boxes ticked.
+prs: []
+outcome: see git history
