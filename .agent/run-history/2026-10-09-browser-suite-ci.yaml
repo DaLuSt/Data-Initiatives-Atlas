@@ -1,0 +1,23 @@
+date: "2026-10-09"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #526 (2026.12). tools/test_ui.mjs was stale since the sidebar wording changed. Repaired against
+  the current site: "Wikilinks" is "Mentions"; detail sections are h3, not h4; the Geographic level, Status,
+  Provenance and Confidence filter groups start collapsed and are opened first (openFilter); counts frozen
+  at 652 now come from graph.json (TOTAL); the map overlap check compares countries only, because the
+  EU's own region-only group legitimately spans several member states. A section that throws is now one
+  failed check (crash()) instead of the end of the run, and an action fails in 6 s instead of 30. One real
+  intermittent failure was tracked down: choosing a layout while the force layout (cose) is still computing
+  on the page's main thread timed out at the 6-second default, though the control was visible and enabled
+  when looked at afterwards; pickLayout() now waits up to 30 s and says what state the control was in if it
+  still fails. (A first version of that helper called itself, which was caught at once.) With the longer wait
+  the suite passed every run (124/124) in a loop of repeated runs; before it, the same section failed in
+  more than half of them. A separate `browser` job in validate.yml (the runner's Chrome plus playwright-core
+  1.63.0; not a required check, so a flaky browser cannot block a merge until it has been green for a while)
+  ran on GitHub for the first time on this branch and passed, together with `validate`.
+  tools/test_browser_ci.py (15 wiring tests; eight deliberate breakages were each caught) is in the shared
+  checks. It changes a workflow, so the pull request waits for the owner's word and has no auto-merge. Note
+  for the owner: the UI is unresponsive for several seconds while the force layout computes (a real,
+  documented behaviour, observed up to ~6.5 s on a fast machine); not changed here.
+prs: []
+outcome: see git history

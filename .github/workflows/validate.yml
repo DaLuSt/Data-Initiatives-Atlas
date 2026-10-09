@@ -32,3 +32,37 @@ jobs:
         run: |
           git fetch --depth=1 origin "${{ github.base_ref }}"
           python tools/release.py check-schema --base-ref "origin/${{ github.base_ref }}"
+
+  # The site in a real browser (tools/test_ui.mjs): load, every view, deep links, search,
+  # filters, layouts, the CSV download, and no console errors, on the runner's own Chrome.
+  # Not a required check yet: it is a separate job on purpose, so a flaky browser cannot
+  # block a merge until it has been green for a while (then add "browser" to the ruleset).
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Build the graph the site loads
+        run: |
+          pip install -r validation/requirements.txt
+          python tools/build_graph.py
+
+      # Only the client library: the browser is the Chrome that GitHub's runners ship with.
+      - name: Install Playwright's client
+        run: npm install --no-save --no-audit --no-fund playwright-core@1.63.0
+
+      - name: Serve the site and run the browser tests
+        run: |
+          export CHROME_PATH="$(command -v google-chrome)"
+          echo "Browser: $CHROME_PATH ($("$CHROME_PATH" --version))"
+          python -m http.server 8765 --directory site > server.log 2>&1 &
+          for i in $(seq 1 20); do
+            curl -sf http://127.0.0.1:8765/index.html > /dev/null && break
+            sleep 1
+          done
+          node tools/test_ui.mjs
