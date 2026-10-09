@@ -12,5 +12,7 @@ summary: >
   (settings only the owner can change): a tag ruleset protecting data-* and schema-*,
   secret scanning with push protection, CODEOWNERS once there is a second contributor.
   Not verifiable here: that Dependabot opens its first pull requests as configured.
-prs: []
-outcome: pending merge
+prs:
+  - number: 567
+    title: "Add Dependabot for Actions and the validation dependency, and a pull request template"
+outcome: merged. Dependabot opened its first two pull requests (#568, #569) the same day, which confirms the configuration works.
