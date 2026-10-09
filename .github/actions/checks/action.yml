@@ -48,6 +48,13 @@ runs:
       shell: bash
       run: python tools/test_project_board.py
 
+    # The LinkedIn authorisation script (tools/linkedin_auth.py): the flow with
+    # LinkedIn replaced by fakes, and the real local redirect receiver on an
+    # ephemeral port. No network.
+    - name: Test the LinkedIn authorisation script
+      shell: bash
+      run: python tools/test_linkedin_auth.py
+
     # Proves the graph can still be generated from this data. The generated files
     # are not committed, so there is no committed copy to go stale; reproducibility
     # of the build is asserted by the graph generator tests above.
