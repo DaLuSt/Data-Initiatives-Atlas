@@ -1,0 +1,14 @@
+date: "2026-10-09"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  The owner set up a GitHub Codespace to run tools/linkedin_auth.py. A Codespace
+  runs on a server, so LinkedIn's redirect to http://localhost:8080/callback in the
+  owner's own browser does not reach the program. Added a paste mode to the script:
+  automatic when CODESPACES=true (also --manual; --listen forces the old receiver);
+  the person approves in their browser, copies the "page cannot be reached" address
+  and pastes it into the terminal; the same state check applies. 13 new tests (51 in
+  all), with two further deliberate breakages caught. docs/credentials.md explains
+  it and advises closing or deleting the Codespace afterwards. Not verified: a real
+  run in a Codespace, which only the owner can do.
+prs: []
+outcome: see git history

@@ -22,6 +22,14 @@ Before running it, in the LinkedIn developer portal:
     export LINKEDIN_CLIENT_ID=...        # the Client ID from the Auth tab
     python tools/linkedin_auth.py        # asks for the Client Secret
 
+In a GitHub Codespace (or over SSH, or in any place where your browser cannot reach
+the program's `localhost`), the redirect cannot arrive by itself. There the script
+runs in **paste mode** (automatic when the CODESPACES variable is set; force it with
+--manual, or force the local receiver with --listen): you approve in your browser, the
+browser then shows "this site can't be reached" for an address starting
+http://localhost:8080/callback?code=..., and you paste that whole address into the
+terminal. The code in it is single-use and useless without the Client Secret.
+
 Standard library only.
 """
 
@@ -161,6 +169,21 @@ def wait_for_code(port: int, state: str, wait: float = WAIT_SECONDS, ready=None)
     return result["code"]
 
 
+def paste_for_code(port: int, state: str, ask=input, say=print) -> str:
+    """Paste mode: the person copies the redirect address from the browser."""
+    say("")
+    say("After you approve, the browser will say the page cannot be reached. That is expected.")
+    say(f"Copy the whole address from the browser's address bar (it starts with {redirect_uri(port)}?code=)")
+    say("and paste it here.")
+    text = ask("Address: ").strip()
+    if not text:
+        raise AuthError("nothing was pasted")
+    url = urllib.parse.urlsplit(text)
+    # A full address, or just the path and query: both end up as /callback?...
+    path = url.path + ("?" + url.query if url.query else "")
+    return parse_callback(path, state)
+
+
 def _esc(text: str) -> str:
     return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
@@ -220,6 +243,11 @@ def report(values: dict, say=print) -> None:
 
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    mode = ap.add_mutually_exclusive_group()
+    mode.add_argument("--manual", action="store_true",
+                      help="paste the redirect address instead of receiving it (automatic in a Codespace)")
+    mode.add_argument("--listen", action="store_true",
+                      help="receive the redirect on this computer, even in a Codespace")
     ap.add_argument("--port", type=int, default=DEFAULT_PORT,
                     help=f"local port for the redirect (default {DEFAULT_PORT}); the redirect URL "
                          "in the LinkedIn app must match")
@@ -234,8 +262,10 @@ def main(argv: list[str] | None = None) -> int:
     if not client_id or not client_secret:
         print("error: the Client ID and Client Secret are both needed", file=sys.stderr)
         return 2
+    manual = args.manual or (os.environ.get("CODESPACES") == "true" and not args.listen)
     try:
-        report(authorise(client_id, client_secret, args.port))
+        report(authorise(client_id, client_secret, args.port,
+                         receive=paste_for_code if manual else wait_for_code))
     except AuthError as err:
         print(f"error: {err}", file=sys.stderr)
         return 1

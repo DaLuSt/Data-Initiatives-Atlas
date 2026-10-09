@@ -165,6 +165,17 @@ export LINKEDIN_CLIENT_ID=<the Client ID from the Auth tab>
 python3 tools/linkedin_auth.py        # asks for the Client Secret (hidden)
 ```
 
+**In a GitHub Codespace** (or anywhere your browser cannot reach the program's
+`localhost`) the script switches to paste mode by itself: it prints the LinkedIn
+address, you open it in your own browser and approve, the browser then says the page
+cannot be reached, and you copy that address (it starts with
+`http://localhost:8080/callback?code=`) from the address bar and paste it into the
+terminal. The code in it is single-use and useless without the Client Secret. Force
+it with `--manual`, or force the normal receiver with `--listen`. Set the Client ID
+with `export LINKEDIN_CLIENT_ID=...` in the Codespace terminal; the Client Secret
+is typed at the hidden prompt. Close the Codespace afterwards (the terminal
+history holds the token) and delete it if you will not use it again.
+
 Use `--port N` if 8080 is busy (and add that redirect URL in the app). If it
 reports that the token lacks `w_member_social` or that no member ID came back,
 the matching product has not been added to the app (step 2). Run it again in
