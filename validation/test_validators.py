@@ -384,6 +384,21 @@ class TestCountryAnchor(Base):
         self.assertFails("has no country anchor")
 
 
+class TestDomains(Base):
+    """A domain on an entity must be a domain entity the Atlas holds (roadmap #461).
+
+    Otherwise the site's domain filter shows a row labelled with the bare ID.
+    """
+
+    def test_an_unknown_domain_is_an_error(self):
+        self.edit("organisations/xx-org.md", "domains: []", "domains:\n  - DOMAIN-NOWHERE")
+        self.assertFails("domains references unknown id 'DOMAIN-NOWHERE'")
+
+    def test_no_domain_is_fine(self):
+        code, text = self.run_all()
+        self.assertEqual(code, 0, text)
+
+
 class TestStructure(Base):
     def test_the_same_relationship_twice(self):
         text = (self.root / "organisations/xx-org.md").read_text(encoding="utf-8")
