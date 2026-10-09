@@ -152,6 +152,76 @@ class TestReceiver(unittest.TestCase):
             la.wait_for_code(0, "ok", wait=0.2)
 
 
+class TestPasteMode(unittest.TestCase):
+    def paste(self, text, state="ok"):
+        said = []
+        return la.paste_for_code(8080, state, ask=lambda prompt: text, say=said.append), said
+
+    def test_a_full_address_gives_the_code(self):
+        code, _ = self.paste("http://localhost:8080/callback?code=THECODE&state=ok")
+        self.assertEqual(code, "THECODE")
+
+    def test_the_path_and_query_alone_also_work(self):
+        code, _ = self.paste("/callback?code=THECODE&state=ok")
+        self.assertEqual(code, "THECODE")
+
+    def test_surrounding_spaces_are_ignored(self):
+        code, _ = self.paste("  http://localhost:8080/callback?code=THECODE&state=ok \n")
+        self.assertEqual(code, "THECODE")
+
+    def test_a_forged_address_is_refused(self):
+        with self.assertRaisesRegex(la.AuthError, "state"):
+            self.paste("http://localhost:8080/callback?code=THECODE&state=forged")
+
+    def test_a_refusal_from_linkedin_is_reported(self):
+        with self.assertRaisesRegex(la.AuthError, "nope"):
+            self.paste("http://localhost:8080/callback?error=access_denied&error_description=nope&state=ok")
+
+    def test_nothing_pasted_is_an_error(self):
+        with self.assertRaisesRegex(la.AuthError, "nothing was pasted"):
+            self.paste("   ")
+
+    def test_the_wrong_address_is_refused(self):
+        with self.assertRaisesRegex(la.AuthError, "unexpected path"):
+            self.paste("https://www.linkedin.com/feed/?code=THECODE&state=ok")
+
+    def test_the_instructions_say_what_to_expect(self):
+        _, said = self.paste("/callback?code=C&state=ok")
+        text = "\n".join(said)
+        self.assertIn("cannot be reached", text)
+        self.assertIn("http://localhost:8080/callback?code=", text)
+
+
+class TestModeChoice(unittest.TestCase):
+    VALUES = {"LINKEDIN_ACCESS_TOKEN": TOKEN, "LINKEDIN_AUTHOR_URN": "urn:li:person:x",
+              "LINKEDIN_TOKEN_EXPIRES": "2026-12-08", "refresh": False}
+
+    def receiver_for(self, env, argv):
+        base = {"LINKEDIN_CLIENT_ID": "cid", "LINKEDIN_CLIENT_SECRET": SECRET}
+        with mock.patch.dict("os.environ", {**base, **env}, clear=False), \
+                mock.patch.object(la, "authorise", return_value=self.VALUES) as auth, \
+                redirect_stdout(io.StringIO()):
+            la.main(argv)
+        return auth.call_args.kwargs["receive"]
+
+    def test_a_codespace_uses_paste_mode(self):
+        self.assertIs(self.receiver_for({"CODESPACES": "true"}, []), la.paste_for_code)
+
+    def test_elsewhere_the_local_receiver_is_used(self):
+        env = {"CODESPACES": ""}
+        self.assertIs(self.receiver_for(env, []), la.wait_for_code)
+
+    def test_manual_forces_paste_mode(self):
+        self.assertIs(self.receiver_for({"CODESPACES": ""}, ["--manual"]), la.paste_for_code)
+
+    def test_listen_forces_the_local_receiver_in_a_codespace(self):
+        self.assertIs(self.receiver_for({"CODESPACES": "true"}, ["--listen"]), la.wait_for_code)
+
+    def test_the_two_flags_cannot_be_combined(self):
+        with self.assertRaises(SystemExit), redirect_stderr(io.StringIO()):
+            la.main(["--manual", "--listen"])
+
+
 def fake_flow(token_reply=None, userinfo=None, receive_code="THECODE"):
     calls = {"exchange": [], "fetch": [], "opened": [], "said": []}
 
