@@ -74,6 +74,12 @@ runs:
       shell: bash
       run: python tools/test_runner_fetch.py
 
+    # The board's token watch (tools/board_health.py): the expiry arithmetic, the failure
+    # and warning rules, and the properties of the issue steps in project-board.yml.
+    - name: Test the board's token watch
+      shell: bash
+      run: python tools/test_board_health.py
+
     # Proves the graph can still be generated from this data. The generated files
     # are not committed, so there is no committed copy to go stale; reproducibility
     # of the build is asserted by the graph generator tests above.

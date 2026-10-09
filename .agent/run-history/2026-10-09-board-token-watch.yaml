@@ -1,0 +1,20 @@
+date: "2026-10-09"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #496 (2026.12): the plan in docs/credentials.md section 1 is now built. Added
+  tools/board_health.py and changed .github/workflows/project-board.yml: a health step before
+  every sync reads the repository variables PROJECT_TOKEN_EXPIRES (a warning from 14 days ahead,
+  a failed run once the date has passed, a failed run for a malformed date) and BOARD_SYNC_ENABLED
+  (a missing secret fails the run once the board is set up, and stays a quiet notice before); a
+  failing run or a token near expiry opens ONE issue, "Roadmap board sync needs attention" (no
+  comment per run), and a later healthy real run closes it. The workflow's permission is issues:
+  write for those two steps only. 26 tests in tools/test_board_health.py (in the shared checks);
+  nine deliberate breakages (a 13-day window, an expired token not failing, a missing secret
+  passing, a malformed date passing, closing on a dry run, closing while still warning, a comment
+  per failure, the health step skipped on issue events, a contents write permission) were each
+  caught. docs/credentials.md describes it. The workflow changes, and so does a permission, so the
+  pull request waits for the owner's word. Owner, after the merge: add the variables
+  PROJECT_TOKEN_EXPIRES (the date the token expires) and BOARD_SYNC_ENABLED=true. Not verified: a
+  real failing run opening the issue, which needs the token to be near expiry or removed.
+prs: []
+outcome: see git history
