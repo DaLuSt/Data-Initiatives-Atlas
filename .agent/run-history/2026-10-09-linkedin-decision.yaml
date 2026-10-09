@@ -1,0 +1,15 @@
+date: "2026-10-09"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  The owner connected Metricool to Claude to automate a weekly release post.
+  getBrandSettings reported that the brand had no social network connected, and the
+  owner found that LinkedIn needs a paid Metricool plan (Metricool's own pricing
+  page lists LinkedIn as excluded from the free plan; Starter is about $20 a month
+  billed annually). Alternatives were compared (Buffer free, Zapier or Make, posting
+  by hand). Decision by the owner: the plan already written for roadmap #515, the
+  owner's own LinkedIn developer app, with the approval-gated GitHub environment.
+  docs/credentials.md records the decision and the options set aside; #515 was
+  updated. Nothing was posted or scheduled through Metricool. The Metricool
+  connection is not needed by anything in the repository.
+prs: []
+outcome: pending merge

@@ -180,12 +180,31 @@ owner to authorise again about every two months. Plan:
   the job could renew the token itself and the reminder becomes a fallback; if
   not, the manual renewal above stays.
 
-### Not recommended
+### Decision and alternatives considered
 
-A no-code connector (Zapier, Make) is quicker but gives a third party access to
-the owner's LinkedIn account and has free-tier limits. Posting without the
-approval step is excluded: a LinkedIn post is public and cannot be fully
-retracted.
+**Decided 2026-10-09: the owner's own LinkedIn developer app, as above.** It costs
+nothing, keeps the account and the approval step inside GitHub, and needs a
+re-authorisation about every 60 days.
+
+Considered and set aside:
+
+- **Metricool** (connected to Claude on 2026-10-09). Its free plan does not
+  include LinkedIn; connecting LinkedIn needs a paid plan (Starter, about $20 a
+  month on annual billing, per Metricool's own pricing page). The connection
+  would also have needed a scheduled Claude session rather than a GitHub workflow.
+  The connector can stay connected or be removed; nothing here depends on it.
+- **Buffer, free plan.** Can schedule LinkedIn posts (3 channels, 10 queued posts
+  per channel, per Buffer's published limits), but no Buffer connector is
+  available to a Claude session, so the text would be pasted in by hand and
+  nothing is automated.
+- **A no-code connector (Zapier, Make).** Quicker, but it gives a third party
+  access to the owner's LinkedIn account and has free-tier limits that were not
+  checked.
+- **Posting by hand** from the draft issue. Free and works today; this stays the
+  fallback whenever the token has expired.
+
+Posting without the approval step is excluded: a LinkedIn post is public and
+cannot be fully retracted.
 
 ### Sources
 
