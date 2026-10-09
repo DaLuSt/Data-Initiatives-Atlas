@@ -161,6 +161,42 @@ class TestRun(unittest.TestCase):
         self.assertEqual({p.host for p in probes}, {"unece.org", "iso.org"})
 
 
+class TestShells(unittest.TestCase):
+    def probes(self, bodies):
+        ents = [ent("E", *[f"https://spa.example/{k}" for k in bodies])]
+        return hp.run(("spa.example",), len(bodies), "UA", 5, 0, ents,
+                      fetcher=lambda u, ua, t: (200, bodies.get(u.rsplit("/", 1)[-1], PAGE), "", False),
+                      sleep=lambda s: None)
+
+    def test_one_page_served_for_many_urls_is_a_shell(self):
+        same = "<html><body>" + "Cookie settings and navigation. " * 20 + "</body></html>"
+        probes = self.probes({"a": same, "b": same, "c": same})
+        self.assertEqual({p.verdict for p in probes if p.url.endswith(("a", "b", "c"))}, {hp.JS_SHELL})
+        self.assertIn("a shell", probes[1].detail)
+
+    def test_different_pages_stay_readable(self):
+        probes = self.probes({"a": PAGE + " one", "b": PAGE + " two"})
+        self.assertEqual({p.verdict for p in probes if p.url.endswith(("a", "b"))}, {hp.READABLE})
+
+    def test_the_same_url_twice_is_not_a_shell(self):
+        a = hp.Probe("h", "https://h/x", 200, hp.READABLE, "500 characters of text", [], "abc")
+        b = hp.Probe("h", "https://h/x", 200, hp.READABLE, "500 characters of text", [], "abc")
+        hp.flag_shells([a, b])
+        self.assertEqual((a.verdict, b.verdict), (hp.READABLE, hp.READABLE))
+
+    def test_the_same_text_on_two_different_hosts_is_not_flagged(self):
+        a = hp.Probe("h1", "https://h1/x", 200, hp.READABLE, "500 characters of text", [], "abc")
+        b = hp.Probe("h2", "https://h2/y", 200, hp.READABLE, "500 characters of text", [], "abc")
+        hp.flag_shells([a, b])
+        self.assertEqual((a.verdict, b.verdict), (hp.READABLE, hp.READABLE))
+
+    def test_unreadable_answers_are_left_alone(self):
+        a = hp.Probe("h", "https://h/x", 403, hp.DENIED, "HTTP 403", [], "abc")
+        b = hp.Probe("h", "https://h/y", 403, hp.DENIED, "HTTP 403", [], "abc")
+        hp.flag_shells([a, b])
+        self.assertEqual((a.verdict, b.verdict), (hp.DENIED, hp.DENIED))
+
+
 class TestVerdictsAndReport(unittest.TestCase):
     def P(self, host, verdict, url="https://x/", detail="d", ents=()):
         return hp.Probe(host, url, 200, verdict, detail, list(ents))
@@ -203,7 +239,7 @@ class TestMain(unittest.TestCase):
 
     def test_it_writes_the_two_report_files_only_where_asked(self):
         with tempfile.TemporaryDirectory() as d, \
-                mock.patch.object(hp, "fetch", return_value=(200, PAGE, "", False)), \
+                mock.patch.object(hp, "fetch", side_effect=lambda u, ua, t: (200, PAGE + u, "", False)), \
                 mock.patch.object(hp.time, "sleep"):
             j, m = Path(d) / "p.json", Path(d) / "p.md"
             code, out = self.run_main(["--hosts", "unece.org", "--per-host", "1", "--json", str(j), "--markdown", str(m)])

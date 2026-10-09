@@ -32,6 +32,7 @@ which was used. TLS verification is never relaxed.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import sys
@@ -82,6 +83,7 @@ class Probe:
     verdict: str = ""
     detail: str = ""
     entities: list[str] = field(default_factory=list)
+    text_hash: str = ""  # of the visible text, to spot one shell served for many URLs
 
 
 def visible_text(html: str) -> str:
@@ -188,7 +190,26 @@ def run(hosts, per_host, ua, timeout, delay, entities=None, fetcher=None, sleep=
                 sleep(delay)
             status, text, error, blocked = fetcher(url, ua, timeout)
             verdict, detail = classify(status, text, error, blocked)
-            probes.append(Probe(host, url, status, verdict, detail, ids))
+            digest = hashlib.sha256(visible_text(text or "").encode("utf-8")).hexdigest()[:16] if text else ""
+            probes.append(Probe(host, url, status, verdict, detail, ids, digest))
+    return flag_shells(probes)
+
+
+def flag_shells(probes: list[Probe]) -> list[Probe]:
+    """Different URLs of one host that return the very same text are one shell, not pages.
+
+    A client-side-rendered site (Fedlex, Legilux's main site) answers every address with the
+    same few hundred characters of boilerplate, which looks "readable" by length alone.
+    """
+    seen: dict[tuple[str, str], list[Probe]] = {}
+    for p in probes:
+        if p.verdict == READABLE and p.text_hash:
+            seen.setdefault((p.host, p.text_hash), []).append(p)
+    for group in seen.values():
+        if len({p.url for p in group}) > 1:
+            for p in group:
+                p.verdict = JS_SHELL
+                p.detail = f"the same {p.detail.split(' ')[0]} characters as {len(group) - 1} other page(s) on this host: a shell"
     return probes
 
 
