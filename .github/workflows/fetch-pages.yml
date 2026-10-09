@@ -1,0 +1,55 @@
+name: Read pages on a runner
+
+# Reads a few web pages on a GitHub-hosted runner and attaches their text. For hosts that
+# the agent's own environment cannot read but a runner can (discovery/unresolved.md row
+# #235: efta.int, the Belgian federal sites, legislation.gov.uk and others). It is a way to
+# read a page, nothing more: it changes no entity, commits nothing and uses no secrets.
+# tools/runner_fetch.py; roadmap #495 and #446.
+#
+# Start it by hand: Actions > Read pages on a runner > Run workflow, with the addresses
+# (https only, separated by spaces or commas, at most 25). The index is on the run's summary
+# page, and each page's text (or a PDF as is) is attached to the run as an artifact for 30 days.
+on:
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: "https addresses to read, separated by spaces or commas (max 25)"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: fetch-pages
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      URLS: ${{ inputs.urls }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r validation/requirements.txt
+
+      - name: Read the pages
+        run: |
+          python tools/runner_fetch.py --urls "$URLS" --out pages > /dev/null
+          cat pages/index.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Attach the pages
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: pages
+          path: pages/
+          retention-days: 30
+          if-no-files-found: ignore
