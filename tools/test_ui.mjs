@@ -67,7 +67,7 @@ async function openFilter(page, id) {
 // view?), because "waiting for element to be visible and enabled" alone does not tell.
 async function pickLayout(page, mode) {
   try {
-    await pickLayout(page, mode);
+    await page.selectOption('#layout-mode', mode);
   } catch (e) {
     const state = await page.evaluate(() => {
       const el = document.getElementById('layout-mode');
