@@ -395,6 +395,15 @@ class TestWorkflow(unittest.TestCase):
         self.assertIn("--label linkedin", pub)
         self.assertIn("gh issue list --state all --label linkedin", self.TEXT)
 
+    def test_the_text_is_shown_on_the_runs_summary_page(self):
+        step = next(s for s in self.job["steps"] if s.get("name") == "Post to LinkedIn")
+        self.assertIn("GITHUB_STEP_SUMMARY", step["run"])
+        self.assertIn("cat post.txt", step["run"])
+        # The summary gets the draft, never anything from the environment's secrets.
+        summary = step["run"][step["run"].index("GITHUB_STEP_SUMMARY") - 600:]
+        self.assertNotIn("LINKEDIN_ACCESS_TOKEN", summary)
+        self.assertNotIn("LINKEDIN_AUTHOR_URN", summary)
+
     def test_the_tool_it_calls_exists(self):
         self.assertTrue((REPO_ROOT / "tools" / "linkedin_post.py").exists())
         self.assertIn("python tools/linkedin_post.py extract", self.TEXT)

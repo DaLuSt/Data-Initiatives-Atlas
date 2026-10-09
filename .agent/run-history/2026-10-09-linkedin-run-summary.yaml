@@ -1,0 +1,13 @@
+date: "2026-10-09"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  The owner could not find what a dry run of "Post release on LinkedIn" would post.
+  The run (completed, success) had printed it in the step log of "Post to LinkedIn" (a 770-character
+  draft for release 2026.10.2, API version 202609, token expiry 2026-12-06 as recorded), where
+  it is not obvious to find; a second run was waiting for approval. The workflow now also writes
+  the text to the run's summary page (GITHUB_STEP_SUMMARY), marked as a dry run when it is one.
+  The first dry run confirmed that the environment's secrets and variables are set and read,
+  that the issue lookup and the extraction work, and that the default API version string is
+  accepted by the tool (LinkedIn itself has not yet been called).
+prs: []
+outcome: see git history
