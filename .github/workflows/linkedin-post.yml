@@ -107,6 +107,21 @@ jobs:
           python tools/linkedin_post.py post --text-file post.txt $flag | tee result.txt
           link=$(sed -n 's/^posted: //p' result.txt)
           echo "link=$link" >> "$GITHUB_OUTPUT"
+          # Put the text on the run's summary page, where it is easy to find.
+          {
+            if [ "$DRY_RUN" = "true" ]; then
+              echo "### LinkedIn post: dry run, nothing was sent"
+            else
+              echo "### LinkedIn post"
+              if [ -n "$link" ]; then echo; echo "Posted: $link"; fi
+            fi
+            echo
+            echo "The text (as in the draft issue; LinkedIn's reserved characters are escaped when sending):"
+            echo
+            echo '```text'
+            cat post.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Record the post on the issue
         if: steps.post.outputs.link != ''
