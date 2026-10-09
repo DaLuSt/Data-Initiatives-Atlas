@@ -36,6 +36,7 @@ domains:
 organisations: []
 related_entities:
   - UN-GGIM
+  - GB-OSNI
   - GB-GEOSPATIAL-STRATEGY
   - GB-ONS
   - NL-KADASTER
@@ -131,7 +132,8 @@ understanding is cited here but produced no asserted relationship.
 
 ⚠ **The name is a trap the Atlas should not fall into twice.** Ordnance
 Survey maps **Great Britain**, not the United Kingdom: Northern Ireland is
-mapped by Ordnance Survey of Northern Ireland, which is not modelled. This
+mapped by Ordnance Survey of Northern Ireland, which is modelled as
+[[GB-OSNI]] (added 2026-10-09). This
 entity carries `country: GB`, and for once the ISO code and the actual
 coverage coincide exactly — unlike every other GB entity, where `GB` is the
 alpha-2 code for a state that includes Northern Ireland.
@@ -140,7 +142,6 @@ alpha-2 code for a state that includes Northern Ireland.
 
 - **The Geospatial Commission** as an independent body — merged into
   [[GB-GDS]] in January 2025.
-- **Ordnance Survey of Northern Ireland**, and the resulting UK-wide gap.
 - **OS MasterMap**, the National Geographic Database and the OS Open Data
   products — the things a reader would most want linked to
   [[DOMAIN-GEOSPATIAL]].

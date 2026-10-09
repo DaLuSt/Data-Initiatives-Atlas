@@ -36,6 +36,10 @@ Kingdom. See [[GB]].
   explicitly **not** the NIS competent authority; `produces` [[GB-CAF]])_
 - [[GB-UKSA]] — UK Statistics Authority _([[GB-ONS]] is its executive
   office; ⚠ did **not** settle which body holds the CES seat)_
+- [[GB-OSNI]] — Ordnance Survey of Northern Ireland _(maps the part of the UK
+  that [[GB-OS]] does not; `subnational`)_
+- [[GB-OSR]] — Office for Statistics Regulation _(the Authority's regulatory
+  arm; `part-of` [[GB-UKSA]])_
 - [[GB-BSI]] — British Standards Institution _(**the most connective UK
   entity**: [[INTL-ISO]], [[INTL-IEC]], [[EU-CEN]], [[EU-CENELEC]],
   [[EU-ETSI]])_
@@ -184,9 +188,6 @@ see [[GB-DI]] for the distinction.
 
 ## Not modelled
 
-- **The Office for Statistics Regulation** — [[GB-ONS]]'s regulator.
-- **Ordnance Survey of Northern Ireland**, leaving a UK-wide geospatial gap:
-  [[GB-OS]] maps Great Britain only.
 - **The sectoral NIS competent authorities** — energy, transport, health and
   drinking water — although [[GB-OFCOM]] and [[GB-ICO]] are now both
   modelled.

@@ -1,0 +1,23 @@
+date: "2026-10-09"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Next roadmap items (2026.11). #527: the last non-reciprocal succession pair,
+  EU-EIDAS2 naming EU-EIDAS as previous_version while EU-EIDAS has no successor,
+  was resolved by the Atlas's own definition of `amends` (the amended instrument
+  continues under its own name): EU-EIDAS2 now has an `amends` edge to EU-EIDAS
+  and no previous_version; the succession warning is gone (confidence medium,
+  because EUR-Lex returned an empty page to the research environment today, row
+  #223). #459: two of the remaining UK gaps closed: GB-OSR (Office for Statistics
+  Regulation, part-of GB-UKSA; read OSR's own site and the Authority's page) and
+  GB-OSNI (Ordnance Survey of Northern Ireland, subnational, part of Land and
+  Property Services; read the Department of Finance, GOV.UK and Spatial NI pages),
+  with the UK hub, GB-UKSA, GB-ONS, GB-OS, the backlog, README and state counts
+  updated (747 entities, 9,435 connections). Still open under #459: who holds the
+  UN-CES seat (unece.org returned 403 again; needs the runner re-verification of
+  #495), whether other countries have an oversight body above their statistics
+  office, and a British Standard. #446 not touched: its sources are the blocked
+  ones. Two Dependabot pull requests (#568 pyyaml >=6.0.3, #569 checkout v7 and
+  setup-python v7) opened from the new config and passed validate; left for the
+  owner to merge.
+prs: []
+outcome: pending merge

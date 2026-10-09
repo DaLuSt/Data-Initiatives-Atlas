@@ -33,6 +33,7 @@ domains:
 organisations: []
 related_entities:
   - GB-ONS
+  - GB-OSR
   - UN-CES
   - INTL-OECD-CSSP
 relationships:
@@ -118,9 +119,9 @@ pass.
 
 The Authority's founding statute (the Statistics and Registration Service Act
 2007 is named in general knowledge but was **not** established from the
-sources found), its board, and its relationship to the Office for Statistics
-Regulation are unrecorded. The OSR — the Authority's regulatory arm — remains
-unmodelled.
+sources found) and its board are unrecorded. The Office for Statistics Regulation, the Authority's
+regulatory arm, was added as [[GB-OSR]] on 2026-10-09 (it carries the `part-of`
+edge pointing here).
 
 ## Relationships
 
