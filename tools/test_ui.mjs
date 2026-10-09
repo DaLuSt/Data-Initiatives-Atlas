@@ -67,7 +67,11 @@ async function openFilter(page, id) {
 // view?), because "waiting for element to be visible and enabled" alone does not tell.
 async function pickLayout(page, mode) {
   try {
-    await page.selectOption('#layout-mode', mode);
+    // The force layout (cose) computes on the page's main thread for several seconds, and
+    // while it does the browser cannot even check that the control is clickable; the failure
+    // that showed up was exactly that (the control was visible and enabled when looked at
+    // afterwards). So wait longer than the default for the page to answer.
+    await page.selectOption('#layout-mode', mode, { timeout: 30000 });
   } catch (e) {
     const state = await page.evaluate(() => {
       const el = document.getElementById('layout-mode');
