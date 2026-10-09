@@ -1,0 +1,16 @@
+date: "2026-10-09"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  The owner asked for an introduction post on the Data Initiatives Atlas (read as the LinkedIn Page made for
+  the app) and for the release to be added to that page too. Drafted both in docs/linkedin-page-posts.md,
+  from README facts and the 2026-10-09 counts (747 entities, 9,435 connections, 58 countries); the intro
+  claims only things the repository shows (relationships carry provenance, all entities primary-source
+  verified, CC0, Git and Markdown, search, compare and path finding on the site, a correction form in the
+  repository: the site itself has no such link, which the first draft wrongly said and was corrected). The
+  release post is the text already posted from the profile for 2026.10.2. Nothing was posted: posting to a
+  Page needs the Community Management API product, which LinkedIn reviews (an approved use case, a verified
+  business email, organisation and domain, an app verified by the Page), and the token on file has the
+  personal permission only, so the Page's posts are for the owner to make by hand unless they choose to
+  apply for access. Not verified: that the reading of "that page" as the LinkedIn Page is what was meant.
+prs: []
+outcome: see git history
