@@ -1,0 +1,13 @@
+date: "2026-10-09"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  The Community Management API turned out not to be available to request for the app, so the Page cannot be
+  posted to automatically. At the owner's request the draft issue that release-publish.yml opens now carries
+  one more line, before the draft: "Also post it on the Data Initiatives Atlas LinkedIn Page, by hand",
+  pointing to docs/linkedin-page-posts.md. A test pins the line and that it sits before the ```text block,
+  so the poster still extracts the draft. Alternatives set out for the owner: post to the Page by hand
+  (recommended), a Zapier two-step Zap (GitHub New Release to LinkedIn Create Company Update; free plan
+  about 15 minutes late; Zapier then holds LinkedIn access), or the API later if the product appears. The
+  change is to a workflow, so the pull request waits for the owner's word and has no auto-merge.
+prs: []
+outcome: see git history

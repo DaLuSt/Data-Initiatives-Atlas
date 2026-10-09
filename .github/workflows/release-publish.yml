@@ -77,6 +77,8 @@ jobs:
           {
             echo "A draft for the LinkedIn post about this release. Read it and edit it if you like. If the LinkedIn workflow is switched on, approve its run in Actions and it posts what is below; otherwise copy it into LinkedIn by hand, then close this issue."
             echo
+            echo "**Also post it on the Data Initiatives Atlas LinkedIn Page, by hand:** the Page cannot be posted to automatically (docs/linkedin-page-posts.md says why). Paste the same text there."
+            echo
             echo '```text'
             cat post.txt
             echo '```'
