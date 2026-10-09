@@ -1,0 +1,15 @@
+date: "2026-10-09"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #446, first use of the "Read pages on a runner" workflow (run 37955428289): six addresses, of
+  which four were read (the English home pages of bosa.belgium.be, data.gov.be and financien.belgium.be,
+  and efta.int) and two were 404 (guessed paths). From the pages themselves: BE-BOSA is "FPS Policy and
+  Support" on its own English home page (abbreviation FPS BOSA), and the portal at data.gov.be calls itself
+  "The Belgian Data Portal". Both got name_en, an alternative_names entry (the validator requires one) and a
+  source dated 2026-10-09. Statbel's own English name ("Statistics Belgium") was not on a page this run
+  could read (statbel.fgov.be answers with a challenge, even from a runner), so it was left. #446 stays
+  open: the count of records still without an English name is not known (the heuristic counts proper
+  nouns), and the Dutch, German and Spanish groups need pages of their own. The workflow works end to end:
+  dispatch, artifact download, text read.
+prs: []
+outcome: see git history

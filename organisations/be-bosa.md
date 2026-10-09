@@ -2,7 +2,9 @@
 id: BE-BOSA
 type: organisation
 name: FOD Beleid en Ondersteuning
+name_en: "FPS Policy and Support"
 alternative_names:
+  - FPS Policy and Support
   - BOSA
   - SPF Stratégie et Appui
   - FOD BOSA
@@ -82,6 +84,10 @@ sources:
     url: "https://belgif.be/page/integrators.nl.html"
     publisher: "Belgian Interoperability Framework (BELGIF)"
     accessed: "2026-09-25"
+  - title: "FPS Policy and Support (English home page)"
+    url: "https://bosa.belgium.be/en"
+    publisher: "FPS Policy and Support (BOSA)"
+    accessed: "2026-10-09"
 ---
 
 # FOD BOSA — Federale Overheidsdienst Beleid en Ondersteuning
