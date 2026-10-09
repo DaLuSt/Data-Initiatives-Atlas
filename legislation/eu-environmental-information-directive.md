@@ -37,6 +37,7 @@ successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
+  - DOMAIN-ENVIRONMENT
 organisations: []
 related_entities:
   - CZ
