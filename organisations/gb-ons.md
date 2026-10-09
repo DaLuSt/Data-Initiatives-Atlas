@@ -138,8 +138,9 @@ European Statistical System and none is asserted. This is the first time the
 Atlas has had a national statistical office that *cannot* join the structure
 the previous five share, and the absence is the informative part.
 
-**The Office for Statistics Regulation is not modelled** — the regulator
-that sets the code of practice for UK official statistics.
+**The Office for Statistics Regulation is modelled as [[GB-OSR]]** (added
+2026-10-09) — the regulator that sets the code of practice for UK official
+statistics, and the Authority's regulatory arm alongside this office.
 
 ⚠ **[[GB-UKSA]] is now modelled, and it did not resolve the caveat.** The
 sources establish that **the UK** is a CES and Bureau member; they do not

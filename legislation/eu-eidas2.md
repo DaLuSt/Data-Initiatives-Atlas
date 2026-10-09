@@ -25,7 +25,7 @@ verification: primary-source
 start_date: 2024-05-20
 end_date: null
 last_verified: "2026-08-21"
-previous_version: EU-EIDAS
+previous_version: null
 successor: null
 
 domains:
@@ -108,6 +108,13 @@ relationships:
     evidence: "As an EU regulation it is directly applicable in all member states, Poland included, and requires every member state to offer a European Digital Identity Wallet. NOT READ - search-only. Reporting states Poland's mObywatel application is architecturally incompatible with eIDAS 2.0 and cannot function as an EUDI Wallet, with replacement promised by the end of 2026 - the Atlas's first sourced national link to this Regulation, and a negative one. See PL-MOBYWATEL."
     confidence: medium
     valid_from: null
+    valid_until: null
+  - type: amends
+    target: EU-EIDAS
+    source: fact
+    evidence: "Regulation (EU) 2024/1183 is titled, in the Official Journal cited in this entity's sources, as amending Regulation (EU) No 910/2014; the amended 910/2014 continues to exist under its own number and date, so this is an amendment, not a supersession (metadata/relationship-types.md, `amends`). Recorded 2026-10-09 in place of `previous_version`, which implied a successor. EUR-Lex returned an empty page to the research environment on 2026-10-09 (discovery/unresolved.md row #223), so the title was not re-read that day (confidence medium for that reason)."
+    confidence: medium
+    valid_from: 2024-05-20
     valid_until: null
   - type: produces
     target: EU-EUDI-WALLET
@@ -290,15 +297,17 @@ acts are not modelled as entities.
 
 ## Amendment, not replacement
 
-This regulation **amends** rather than repeals [[EU-EIDAS]]. `previous_version`
-points at 910/2014 to record the lineage, but no `supersedes` relationship
-is asserted in either direction, because the amended 910/2014 remains the
-operative instrument as modified. This differs from the
+This regulation **amends** rather than repeals [[EU-EIDAS]], recorded as an
+`amends` relationship. It has no `previous_version` (it was set until
+2026-10-09, but that field implies the other instrument has a `successor`, and
+[[EU-EIDAS]] has none): no `supersedes` relationship is asserted in either
+direction, because the amended 910/2014 remains the operative instrument as
+modified. This differs from the
 [[EU-NIS]] → [[EU-NIS2]] case, which is an outright repeal.
 
 ## Relationships
 
-- Amends [[EU-EIDAS]] (lineage recorded via `previous_version`).
+- Amends [[EU-EIDAS]].
 - Produces / establishes [[EU-EUDI-WALLET]].
 - Applies in [[NL]], [[DE]], [[BE]], [[FR]], [[ES]] and [[PL]] — one entity, six
   countries. Every other member state belongs here too; the

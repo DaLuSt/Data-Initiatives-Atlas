@@ -331,11 +331,8 @@ visible from any single entity.
 - [ ] **Who holds the UK's [[UN-CES]] seat?** [[GB-UKSA]] was created to
   settle it and did not. The participation is recorded on both the Authority
   and [[GB-ONS]]; one of those two edges is wrong. → Roadmap #459.
-- [ ] **The Office for Statistics Regulation**, and whether the other six
-  countries have an oversight body above their statistical office that the
-  Atlas simply has not researched. [[GB-UKSA]] is currently the only one. → Roadmap #459.
-- [ ] **Ordnance Survey of Northern Ireland.** [[GB-OS]] maps **Great
-  Britain**; the UK-wide geospatial picture is incomplete without OSNI. → Roadmap #459.
+- [x] **The Office for Statistics Regulation.** **Done — verified 2026-10-09:** `GB-OSR` exists, `part-of` `GB-UKSA`. Still open, and now only a question: whether the other six countries have an oversight body above their statistical office that the Atlas has not researched (roadmap #459 stays open for it).
+- [x] **Ordnance Survey of Northern Ireland.** **Done — verified 2026-10-09:** `GB-OSNI` exists (`subnational`; part of Land and Property Services, itself not modelled).
 - [ ] **A British Standard, any British Standard.** [[GB-BSI]] participates
   in five standards bodies and maintains nothing the Atlas holds. The same
   is true of [[NL-NEN]] and [[DE-DIN]]. → Roadmap #459.
