@@ -1,0 +1,19 @@
+date: "2026-10-09"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Ran the Probe blocked sources workflow (run 37944716719) on a GitHub runner: 76 URLs on 24
+  hosts, honest and browser-like User-Agent. The answer to #495 is in discovery/unresolved.md row
+  #235. In short: efta.int, the Belgian federal hosts (bosa, data.gov.be, financien), legislation.gov.uk,
+  web.archive.org, bizkaia.eus and several filestore subdomains are readable from a runner; unece.org,
+  unctad.org, rm.coe.int, eur-lex (a 202 challenge), geant.org, eduroam.org, ccb.belgium.be, and the
+  German bmi.bund.de and digitale-verwaltung.de (400, the cookie case) are not. The browser-like agent
+  was worse than the honest one (it turned efta.int and the Belgian hosts into challenges), so the honest
+  agent stays the default. The classifier wrongly counted Fedlex's JavaScript shell as readable (three
+  different addresses all returned the same 2,383 characters); host_probe.py now marks the same text on
+  several URLs of one host as a shell (5 new tests; a mutation was caught). Consequences for the
+  roadmap: #459 (the UN CES seat) stays blocked because unece.org does; #446's Belgian names would need
+  pages that a runner can read but the agent cannot, which needs a fetch-these-URLs input on the workflow
+  (not built; it changes a workflow, so it would be asked first). #449 turned out to be mostly closed
+  already; one owner decision (IT-CAD) remains.
+prs: []
+outcome: see git history

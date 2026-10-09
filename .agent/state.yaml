@@ -26,7 +26,7 @@ graph:
   regions: 1
 
 discovery:
-  unresolved_rows_open: 73
+  unresolved_rows_open: 74
   candidates_queued: 1
   research_queue_items: 0
   needs_human_open: 0
