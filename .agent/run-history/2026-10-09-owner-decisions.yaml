@@ -1,0 +1,10 @@
+date: "2026-10-09"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  The owner decided four open roadmap items on 2026-10-09. #449: decline modelling a code as a field (IT-CAD stays
+  `rank: ordinary`); row #11 of discovery/unresolved.md is now a Declined row. #533: membership dates follow the
+  Union's own list (a rule in metadata/ontology.md section 6); row #2 removed. #452: deferred until the manual
+  checks of #497 are done, moved to the 2027.02 milestone, commented. #450: environment and finance chosen as the
+  domains to deepen; that work is a separate PR. unresolved_rows_open 75 -> 74.
+prs: []
+outcome: see git history

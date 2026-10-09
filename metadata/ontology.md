@@ -407,3 +407,9 @@ the EU entity's slug into a national ID.
 - Country/region/UN anchor entities use their bare scope code as `id`
   (`NL`, `EU`, `UN`) rather than a `<SCOPE>-SLUG` form, since they are the
   scope.
+- **Membership dates follow the Union's own list** (decided 2026-10-09, roadmap #533). An entity's
+  date for when a country joined the EU is the date the Union's "EU countries" page gives: for
+  Belgium, Germany, France, Italy, Luxembourg and the Netherlands that is 1 January 1958, the entry
+  into force of the Treaty of Rome. The signature date (25 March 1957) is recorded in the entity's
+  body where it matters. The same holds for later accessions: the date is the one the Union's list
+  gives, not the signature or ratification date, and the evidence string cites that list.
