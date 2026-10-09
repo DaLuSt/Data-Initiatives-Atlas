@@ -4,7 +4,9 @@ name: Publish release
 # on main). Creates the tag data-YYYY.MM.N and a GitHub Release whose notes are
 # the CHANGELOG entry, plus the tag schema-X.Y.Z the first time that schema
 # version is released, and opens an issue holding a plain-text LinkedIn post
-# draft for the owner to read and post by hand (nothing is posted automatically).
+# draft for the owner to read and post by hand. The separate workflow linkedin-post.yml can
+# post it after the owner approves a run; it is off until the variable LINKEDIN_POST_ENABLED
+# is set (docs/credentials.md).
 # Idempotent: a tag, release or issue that exists is left alone, so re-running
 # is safe. Policy: metadata/versioning.md.
 on:
@@ -73,7 +75,7 @@ jobs:
           python tools/release.py linkedin-draft "$version" > post.txt
           gh label create linkedin --color 0a66c2 --description "A LinkedIn post to publish by hand" 2>/dev/null || true
           {
-            echo "A draft for the LinkedIn post about this release. Read it, edit it if you like, copy it into LinkedIn, then close this issue. Nothing is posted automatically."
+            echo "A draft for the LinkedIn post about this release. Read it and edit it if you like. If the LinkedIn workflow is switched on, approve its run in Actions and it posts what is below; otherwise copy it into LinkedIn by hand, then close this issue."
             echo
             echo '```text'
             cat post.txt
