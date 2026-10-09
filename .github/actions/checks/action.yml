@@ -55,6 +55,13 @@ runs:
       shell: bash
       run: python tools/test_linkedin_auth.py
 
+    # The LinkedIn poster (tools/linkedin_post.py) with LinkedIn replaced by a fake,
+    # and the properties of linkedin-post.yml (protected environment, no double post,
+    # secrets only in the posting step). No network.
+    - name: Test the LinkedIn poster
+      shell: bash
+      run: python tools/test_linkedin_post.py
+
     # Proves the graph can still be generated from this data. The generated files
     # are not committed, so there is no committed copy to go stale; reproducibility
     # of the build is asserted by the graph generator tests above.

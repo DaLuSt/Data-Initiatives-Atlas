@@ -181,38 +181,54 @@ reports that the token lacks `w_member_social` or that no member ID came back,
 the matching product has not been added to the app (step 2). Run it again in
 about 50 days to renew the token.
 
-### What is still to build (2027.01, #515)
+### How the posting works (built 2026-10-09)
 
-1. ~~`tools/linkedin_auth.py`~~ built 2026-10-09 (above).
-2. **`tools/linkedin_post.py`**: posts text to `POST https://api.linkedin.com/rest/posts`
-   with the headers the Posts API requires (`Authorization: Bearer …`,
-   `Linkedin-Version: YYYYMM`, `X-Restli-Protocol-Version: 2.0.0`), a text-only
-   body (`author`, `commentary`, `visibility: PUBLIC`, `distribution.feedDistribution:
-   MAIN_FEED`, `lifecycleState: PUBLISHED`), and treats `201` with an `x-restli-id`
-   response header as success. HTTP is injectable, so it is tested against a
-   mock, like `project_board.py`.
-3. **Workflow job** after the draft step in `release-publish.yml`, with
-   `environment: linkedin` (so it waits for the owner's approval), reading the
-   **issue body at the moment of approval** so that anything the owner edited in
-   the draft is what gets posted. Draft limit: 3,000 characters, which the draft
-   rule already respects.
-4. **Result.** On success: comment on the issue with the post link (built from
-   the returned ID), close it. On failure: comment with the error (never the
-   token), leave it open, and say "post by hand".
-5. **Safety tests**, as for the board: the token appears only in `env:`, the job
-   runs only through the protected environment, no other workflow can post, a
-   draft over 3,000 characters is refused before any request.
+- **`tools/linkedin_post.py`** posts a text-only public post to
+  `POST https://api.linkedin.com/rest/posts` with the headers the Posts API requires
+  (`Authorization: Bearer …`, `Linkedin-Version: YYYYMM`,
+  `X-Restli-Protocol-Version: 2.0.0`) and treats `201` with an `x-restli-id` header as
+  success; the link is `https://www.linkedin.com/feed/update/<id>/`. LinkedIn's
+  "little text" format reserves `\ | { } @ [ ] ( ) < > # * _ ~`, so every one is
+  escaped with a backslash except a `#` that starts a hashtag (`#opendata`; `#459` is
+  text). Over 3,000 characters, a malformed author ID or an expired token is refused
+  before anything is sent. HTTP is injectable and the tests use a fake LinkedIn.
+- **`.github/workflows/linkedin-post.yml`** runs in the environment `linkedin`, so it
+  waits for you (the required reviewer) to approve each run. It reads the issue
+  "Post data release X on LinkedIn" **after** the approval, so edits you make to the
+  draft while it waits are what is posted. On success it comments the link, labels the
+  issue `linkedin-posted` and closes it. On failure it comments, leaves the issue open
+  and says to post by hand. A closed or already-posted issue is skipped, so a re-run
+  cannot post twice. Only this workflow's posting step sees the secrets.
+- **API version.** LinkedIn only supports each monthly version for about a year (the
+  October 2025 one is sunset on 15 October 2026). The tool uses last month's version
+  unless the variable `LINKEDIN_API_VERSION` (`YYYYMM`) is set; if LinkedIn answers
+  "426" or says the version is not active, set that variable to a current one.
+
+### Switching it on
+
+1. In the environment `linkedin` you should have the secrets `LINKEDIN_ACCESS_TOKEN`
+   and `LINKEDIN_AUTHOR_URN` and the variable `LINKEDIN_TOKEN_EXPIRES` (done).
+2. **Try it without posting:** *Actions → Post release on LinkedIn → Run workflow*
+   with the latest release (for example `2026.10.2`) and *dry_run* ticked. Approve the
+   run when GitHub asks; the log shows exactly what would be posted.
+3. **First real post:** run it again with *dry_run* unticked, read the draft in the
+   issue first (edit it if you like), approve, and check your profile. The first real
+   post is the first real test; you can delete it on LinkedIn if something is wrong.
+4. **Automatic from then on:** add the **repository** variable
+   `LINKEDIN_POST_ENABLED` = `true` (*Settings → Secrets and variables → Actions →
+   Variables*). After each release is published, the workflow starts and waits for your
+   approval. Delete the variable to switch it off.
 
 ### The 60-day token
 
 LinkedIn issues access tokens with a 60-day life, so an ordinary app needs the
 owner to authorise again about every two months. Plan:
 
-- `LINKEDIN_TOKEN_EXPIRES` is read when the draft issue is opened; if it is within
-  14 days, the issue starts with "The LinkedIn token expires on DATE; run
-  `tools/linkedin_auth.py` and update the environment secret."
-- A `401` on posting is reported on the issue in the same words, and the post
-  is left for the owner to make by hand.
+- `LINKEDIN_TOKEN_EXPIRES` (set by `tools/linkedin_auth.py`, a day before the real
+  expiry) is read when posting: within 14 days the run's log carries a warning, and
+  after it the tool refuses to post and says to run `tools/linkedin_auth.py` again.
+- A `401` from LinkedIn is reported on the issue in the same words, and the post is
+  left for the owner to make by hand.
 - Re-authorising is the owner's 5-minute step 4–5 above.
 - **Open question for the build:** the token response may also carry a refresh
   token. LinkedIn's documentation says refresh tokens are available only to some

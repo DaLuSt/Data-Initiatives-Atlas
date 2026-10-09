@@ -1,0 +1,27 @@
+date: "2026-10-09"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  The owner ran the authorisation and created the secrets and variables in the
+  GitHub environment `linkedin`. Built the posting for roadmap #515 ahead of 2027.01:
+  tools/linkedin_post.py (stdlib only; text-only public post via the Posts API with the
+  documented headers; 201 plus x-restli-id is success; LinkedIn's little-text reserved
+  characters escaped except real hashtags; refuses over 3,000 characters, a bad author
+  URN or an expired token; warns 14 days before expiry; never prints the token) and
+  .github/workflows/linkedin-post.yml (runs only in the environment `linkedin`, so it
+  waits for the owner's approval; reads the draft issue after the approval so edits are
+  posted; skips a closed or already-posted issue so it cannot post twice; comments the
+  link, labels and closes the issue on success; comments and leaves it open on failure;
+  secrets only in the posting step; automatic runs only when the repository variable
+  LINKEDIN_POST_ENABLED is true, manual runs are a dry run by default). The facts were
+  read on Microsoft Learn on 2026-10-09: the Posts API (endpoint, headers, 201, x-restli-id,
+  the October 2025 version's sunset on 15 October 2026) and the little text format
+  (reserved characters). tools/test_linkedin_post.py has 61 tests; ten deliberate
+  breakages (no escaping, expiry ignored, dry run still sending, any status accepted, token
+  printed, no environment, no enabling variable, closing on failure, manual runs not dry
+  by default, skip guard removed) were each caught. Not verified: a real post, and the API
+  version default (last month, overridable with LINKEDIN_API_VERSION). The environment's
+  secrets and reviewer could not be read from this session (the API path is not permitted),
+  so their presence is the owner's word. Next, by the owner: a dry run from Actions, then a
+  real run, then the variable LINKEDIN_POST_ENABLED.
+prs: []
+outcome: see git history
