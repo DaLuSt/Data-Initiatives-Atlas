@@ -1,0 +1,13 @@
+date: "2026-10-10"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #537 (EU and UN links never sourced). With the Publications Office resolver the two instruments were read
+  in full from the Official Journal. EU AI Act (Regulation 2024/1689, ~580,000 characters): no mention of UNESCO,
+  the OECD or the Council of Europe, so no edge to UN-AI-ETHICS-RECOMMENDATION and row #174 is closed as "no source
+  states it". INSPIRE Directive (2007/2/EC): no mention of the UN or UN-GGIM. The link that exists runs the other
+  way: UN-GGIM: Europe's core-data working group selected 14 INSPIRE themes (GIS Resources, 28 July 2016,
+  republishing the committee's release, read on a runner through fetch-pages.yml --log, the first live use of the
+  log feature); recorded as a medium-confidence `references` edge on UN-GGIM-EUROPE, row #227 closed. The working
+  group's own report could not be read (files moved, old host 401). Rows #174 and #227 removed.
+prs: []
+outcome: see git history

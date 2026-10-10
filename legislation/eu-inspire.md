@@ -151,6 +151,10 @@ sources:
     url: "https://www.geonovum.nl/geo-standaarden/inspire"
     publisher: "Geonovum"
     accessed: "2026-09-05"
+  - title: "Directive 2007/2/EC of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE) (Official Journal L 108, 25.4.2007)"
+    url: "https://publications.europa.eu/resource/celex/32007L0002"
+    publisher: "Publications Office of the European Union (EUR-Lex / CELLAR)"
+    accessed: "2026-10-10"
 ---
 
 # INSPIRE Directive
@@ -256,6 +260,14 @@ enacted 3 September 2010) — the same EEA-chain pattern already modelled
 for [[EU-GDPR]] and Norway via [[INTL-EEA-JCD-154-2018]]. No `applies-in`
 edge to [[NO]] is asserted on this directive itself; [[NO-GEODATALOVEN]]
 carries `implements-requirement-from` back to it instead.
+
+## No reference to the UN in the Directive's text, 2026-10-10
+
+Directive 2007/2/EC was read in full from the Official Journal (Publications Office resolver). It never
+mentions the United Nations or UN-GGIM and says only that implementing rules "take account of relevant,
+existing international standards". The connection to the UN structure runs the other way, through
+[[UN-GGIM-EUROPE]]: its core-data working group selected 14 INSPIRE themes (a secondary source, recorded on that
+entity). That is a `references` edge from the UN-GGIM side; the Directive points at nothing in the UN structure.
 
 ## Relationships
 
