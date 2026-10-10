@@ -1,0 +1,10 @@
+date: "2026-10-10"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #446, fourth pass: 22 English-language home pages read on a GitHub-hosted runner (fetch-pages.yml). Five
+  organisations got a sourced name_en: NL-NCSC, AT-BRZ, CH-SWISSTOPO, DE-DFN and BE-STATBEL (229 entities now carry
+  name_en). The rest gave nothing usable: pages that serve the Dutch menu or the Dutch name, 404/500 answers
+  (Nictiz, Geonovum, Forum Standaardisatie, ProRail, gematik, Dataport, Digdir) and a JavaScript shell (LHC.lu); the
+  list is in discovery/unresolved.md row #233. Nothing was translated by a session.
+prs: []
+outcome: see git history

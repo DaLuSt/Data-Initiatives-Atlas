@@ -2,7 +2,9 @@
 id: DE-DFN
 type: organisation
 name: DFN-Verein
+name_en: "German National Research and Education Network"
 alternative_names:
+  - German National Research and Education Network
   - DFN
   - Deutsches Forschungsnetz
   - Verein zur Förderung eines Deutschen Forschungsnetzes e. V.
@@ -78,6 +80,10 @@ sources:
   - title: "NRENs — About GÉANT"
     url: "https://about.geant.org/nrens/"
     publisher: "GÉANT Association"
+  - title: "DFN – German National Research and Education Network (English home page)"
+    url: "https://www.dfn.de/en/"
+    publisher: "DFN-Verein"
+    accessed: "2026-10-10"
 ---
 
 # DFN-Verein
