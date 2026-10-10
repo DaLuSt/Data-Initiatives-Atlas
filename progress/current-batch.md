@@ -13,7 +13,7 @@ document-publishing subdomain, is reachable where `www.coe.int` and
 `rm.coe.int` still 403. Used to close row #179's 46-state member-count
 chart clause directly on [[INTL-COE]] (its own "Map of the Council of
 Europe 46 member states (2024)" publication). Only JTC 1 (ontology item
-#32) remains open on that row.
+#32) remained open on that row; it was decided on 2026-10-09 (not modelled, `metadata/ontology.md` §6).
 
 **[[ES-LANTIK]] added 2026-09-25**,
 completing the four-way Basque NISAE quartet ([[ES-EJIE]], [[ES-CCASA]],

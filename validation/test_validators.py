@@ -399,6 +399,51 @@ class TestDomains(Base):
         self.assertEqual(code, 0, text)
 
 
+class TestStaleRowReferences(Base):
+    """A file that calls a row of discovery/unresolved.md open must name a row the table still has."""
+
+    UNRESOLVED = "| # | Area |\n|---|---|\n| 5 | Spain |\n| 9 | Poland |\n"
+
+    def setUp(self):
+        super().setUp()
+        (self.root / "discovery").mkdir()
+        self.write("discovery/unresolved.md", self.UNRESOLVED)
+
+    def body(self, sentence):
+        path = self.root / "legislation" / "xx-act.md"
+        path.write_text(path.read_text(encoding="utf-8") + "\n" + sentence + "\n", encoding="utf-8")
+
+    def test_an_open_row_that_is_gone_is_a_warning(self):
+        self.body("The question stays open in row #32 of the table.")
+        self.assertOnlyWarns("calls row #32 of discovery/unresolved.md open")
+
+    def test_a_row_that_still_exists_is_quiet(self):
+        self.body("The question stays open in row #5 of the table.")
+        code, text = self.run_all()
+        self.assertEqual(code, 0, text)
+        self.assertNotIn("calls row", text)
+
+    def test_a_closed_row_may_be_cited_after_it_is_gone(self):
+        self.body("This closes row #32, which is gone from the table.")
+        code, text = self.run_all()
+        self.assertNotIn("calls row", text)
+
+    def test_a_row_cited_without_saying_it_is_open_is_quiet(self):
+        self.body("See row #32 for the history.")
+        code, text = self.run_all()
+        self.assertNotIn("calls row", text)
+
+    def test_without_the_table_nothing_is_checked(self):
+        (self.root / "discovery" / "unresolved.md").unlink()
+        self.body("The question stays open in row #32 of the table.")
+        code, text = self.run_all()
+        self.assertNotIn("calls row", text)
+
+    def test_every_number_of_a_list_is_checked(self):
+        self.body("Rows #5 and #77 are still open.")
+        self.assertOnlyWarns("calls row #77")
+
+
 class TestStructure(Base):
     def test_the_same_relationship_twice(self):
         text = (self.root / "organisations/xx-org.md").read_text(encoding="utf-8")

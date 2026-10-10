@@ -86,6 +86,18 @@ runs:
       shell: bash
       run: python tools/test_browser_ci.py
 
+    # The headline numbers in README.md and .agent/state.yaml (tools/update_counts.py):
+    # the rewriting rules, and that the numbers in the repository match the data.
+    - name: Test the count updater
+      shell: bash
+      run: python tools/test_update_counts.py
+
+    # Fails when a change to the data left the README or state.yaml numbers behind.
+    # Fix: python tools/update_counts.py
+    - name: Check the headline numbers
+      shell: bash
+      run: python tools/update_counts.py --check
+
     # Proves the graph can still be generated from this data. The generated files
     # are not committed, so there is no committed copy to go stale; reproducibility
     # of the build is asserted by the graph generator tests above.

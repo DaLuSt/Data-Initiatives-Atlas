@@ -159,6 +159,65 @@ class TestRun(unittest.TestCase):
             self.assertEqual({s.verdict for s in saved}, {host_probe.READABLE})
 
 
+class TestLog(unittest.TestCase):
+    """The text of the pages goes to the job log, guarded, so it can be read without a download."""
+
+    def run_pages(self, bodies, **kw):
+        pages = {u: page(u, body=(HTML + b).encode()) for u, b in bodies.items()}
+        d = tempfile.TemporaryDirectory()
+        self.addCleanup(d.cleanup)
+        out = Path(d.name)
+        saved = rf.run(list(pages), out, 0, fetcher=lambda u: pages[u], sleep=lambda s: None)
+        return rf.render_log(saved, out, token="tok", **kw)
+
+    def test_the_text_is_inside_a_stop_commands_guard(self):
+        log = self.run_pages({"https://a.org/1": "hello there"})
+        lines = log.splitlines()
+        self.assertEqual(lines[0], "::stop-commands::tok")
+        self.assertEqual(lines[-1], "::tok::")
+        self.assertIn("hello there", log)
+
+    def test_a_page_cannot_run_a_workflow_command(self):
+        log = self.run_pages({"https://a.org/1": "x\n::error::boom\n::set-output name=a::b\n"})
+        before_guard_ends = log.rsplit("::tok::", 1)[0]
+        self.assertTrue(before_guard_ends.startswith("::stop-commands::tok"))
+        self.assertIn("::error::boom", before_guard_ends)   # shown, but inside the guard
+
+    def test_the_guard_token_is_random_when_not_given(self):
+        a = rf.render_log([], Path("."))
+        b = rf.render_log([], Path("."))
+        self.assertNotEqual(a.splitlines()[0], b.splitlines()[0])
+        self.assertGreaterEqual(len(a.splitlines()[0]) - len("::stop-commands::"), 32)
+
+    def test_a_long_page_is_cut_and_says_so(self):
+        log = self.run_pages({"https://a.org/1": "z" * 500}, per_page=100)
+        self.assertIn("[cut: 100 of ", log)
+        self.assertLess(log.count("z"), 150)
+
+    def test_the_total_is_capped_across_pages(self):
+        # each page starts with ~750 characters of the fixture's text, then its own marker letters
+        log = self.run_pages({"https://a.org/1": "Q" * 300, "https://b.org/1": "W" * 300}, per_page=1000, total=1100)
+        self.assertGreater(log.count("Q"), 200)
+        self.assertEqual(log.count("W"), 0)
+        self.assertIn("[cut:", log)
+
+    def test_a_page_that_was_not_read_is_listed_without_text(self):
+        pages = {"https://a.org/1": page("https://a.org/1", status=403, body=b"Access Denied captcha")}
+        with tempfile.TemporaryDirectory() as d:
+            saved = rf.run(list(pages), Path(d), 0, fetcher=lambda u: pages[u], sleep=lambda s: None)
+            log = rf.render_log(saved, Path(d), token="tok")
+        self.assertIn("1. CHALLENGE: https://a.org/1", log)
+
+    def test_the_flag_is_off_unless_asked(self):
+        with tempfile.TemporaryDirectory() as d, mock.patch.object(rf, "run", return_value=[]):
+            with redirect_stdout(io.StringIO()) as plain:
+                rf.main(["--urls", "https://a.org/1", "--out", d])
+            with redirect_stdout(io.StringIO()) as logged:
+                rf.main(["--urls", "https://a.org/1", "--out", d, "--log"])
+        self.assertNotIn("stop-commands", plain.getvalue())
+        self.assertIn("::stop-commands::", logged.getvalue())
+
+
 class TestMain(unittest.TestCase):
     def test_bad_input_exits_2_and_fetches_nothing(self):
         err = io.StringIO()
@@ -226,6 +285,11 @@ class TestWorkflow(unittest.TestCase):
         self.assertNotIn("${{ inputs.urls }}", "\n".join(s.get("run", "") for s in self.job["steps"]))
         run = next(s["run"] for s in self.job["steps"] if s.get("name") == "Read the pages")
         self.assertIn('--urls "$URLS"', run)
+
+    def test_the_text_is_printed_to_the_log_with_the_guard_on(self):
+        run = next(s["run"] for s in self.job["steps"] if s.get("name") == "Read the pages")
+        self.assertIn("--log", run)
+        self.assertNotIn("/dev/null", run)
 
     def test_the_pages_are_attached_even_if_a_step_fails(self):
         step = next(s for s in self.job["steps"] if s.get("uses", "").startswith("actions/upload-artifact"))
