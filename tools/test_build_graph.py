@@ -359,6 +359,46 @@ class TestGraphGeneration(unittest.TestCase):
             self.assertIn(key, keys)
 
 
+class TestScopeEdges(unittest.TestCase):
+    """Roadmap #461: a relationship that only places an entity in a country, region or the
+    UN is marked `anchor`, so the site can count and hide it apart from substantive edges."""
+
+    @classmethod
+    def setUpClass(cls):
+        payload, errors, _ = build_graph.build()
+        assert not errors, errors
+        cls.graph = payload["graph"]
+        cls.nodes = {n["id"]: n for n in cls.graph["nodes"]}
+
+    def anchored(self):
+        return [e for e in self.graph["edges"] if e.get("anchor")]
+
+    def test_there_are_scope_edges_and_the_stat_counts_them(self):
+        self.assertTrue(self.anchored())
+        self.assertEqual(self.graph["stats"]["scope_edges"], len(self.anchored()))
+
+    def test_a_scope_edge_is_a_scope_type_aimed_at_a_country_or_region(self):
+        for e in self.anchored():
+            self.assertEqual(e["class"], "relationship", e)
+            self.assertIn(e["type"], build_graph.SCOPE_EDGE_TYPES, e)
+            self.assertIn(self.nodes[e["target"]]["type"], ("country", "region"), e)
+
+    def test_every_applies_in_to_an_anchor_is_marked(self):
+        for e in self.graph["edges"]:
+            if e.get("type") == "applies-in" and self.nodes[e["target"]]["type"] in ("country", "region"):
+                self.assertTrue(e.get("anchor"), e)
+
+    def test_a_substantive_edge_is_never_marked(self):
+        for e in self.graph["edges"]:
+            if e.get("type") in ("implements-requirement-from", "participates-in", "amends", "supersedes"):
+                self.assertFalse(e.get("anchor"), e)
+
+    def test_associations_and_mentions_are_never_marked(self):
+        for e in self.graph["edges"]:
+            if e["class"] != "relationship":
+                self.assertFalse(e.get("anchor"), e)
+
+
 class TestGeographicData(unittest.TestCase):
     """Country/region centroids for the site's geographic map layout."""
 

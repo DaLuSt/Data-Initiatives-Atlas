@@ -56,6 +56,8 @@ NODE_DETAIL_FIELDS = (
 # repository records, not entries in the relationship vocabulary, so they are
 # emitted as a separate edge class rather than given an invented type name.
 ASSOCIATION_LIST_FIELDS = ("domains", "organisations", "related_entities")
+# Relationship types that, aimed at a country, region or UN anchor, only state scope.
+SCOPE_EDGE_TYPES = ("applies-in", "part-of", "related-to")
 
 # Frontmatter fields holding a single entity ID (temporal lineage).
 ASSOCIATION_SCALAR_FIELDS = ("previous_version", "successor")
@@ -317,6 +319,19 @@ def build(strict_wikilinks: bool = True) -> tuple[dict, list[str], list[str]]:
     if errors:
         return ({}, errors, warnings)
 
+    # --- scope edges (roadmap #461) --------------------------------------
+    # A relationship that only places an entity in a country, a region or the
+    # UN (`applies-in`, `part-of`, `related-to` to an anchor) says "this
+    # belongs to that scope", not "these two entities are related". It is
+    # marked `anchor: true` so the site can count and hide those apart from
+    # the substantive edges (metadata/relationship-types.md section 2.3).
+    anchor_node_ids = {eid for eid, e in by_id.items()
+                       if e.frontmatter.get("type") in ("country", "region")}
+    for edge in edges:
+        if (edge["class"] == "relationship" and edge.get("type") in SCOPE_EDGE_TYPES
+                and edge["target"] in anchor_node_ids):
+            edge["anchor"] = True
+
     # --- degrees (used for level-of-detail rendering) --------------------
     degree = Counter()
     rel_degree = Counter()
@@ -462,6 +477,7 @@ def build(strict_wikilinks: bool = True) -> tuple[dict, list[str], list[str]]:
         "associations": by_class.get("association", 0),
         "wikilinks": by_class.get("wikilink", 0),
         "edges_total": len(edges),
+        "scope_edges": sum(1 for e in edges if e.get("anchor")),
         "countries": len(country_counts),
         "regions": len(region_counts),
         "organisations": by_type.get("organisation", 0),
