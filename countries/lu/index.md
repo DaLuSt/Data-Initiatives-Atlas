@@ -52,6 +52,11 @@ Anchor entity: [[LU]]
 - [[LU-CIRCL]] — CIRCL, private-sector/municipal/NGO CSIRT, added
   2026-09-12
 
+### Regional
+
+- [[INTL-BENELUX]] — Benelux Union, and its [[INTL-BENELUX-DIGITAL-2016]] declaration of the three
+  Prime Ministers _(added 2026-10-10)_
+
 ## Legislation
 
 - [[LU-LOI-PROTECTION-DONNEES]] — Luxembourg's GDPR implementation act,

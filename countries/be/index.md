@@ -64,6 +64,11 @@ Anchor entity: [[BE]]
   wallonne des Télécommunications, 2015)_
 - [[BE-PARADIGM]] — Brussels-Capital _(formerly CIRB/CIBG, founded 1987)_
 
+### Regional
+
+- [[INTL-BENELUX]] — Benelux Union, and its [[INTL-BENELUX-DIGITAL-2016]] declaration of the three
+  Prime Ministers _(added 2026-10-10)_
+
 ## Legislation
 
 ### Sub-federal (`level: subnational`, added 2026-08-21)

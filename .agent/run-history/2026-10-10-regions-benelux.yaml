@@ -1,0 +1,13 @@
+date: "2026-10-10"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #540 (Western Europe) and #541 (Northern Europe), started early. Benelux: INTL-BENELUX (Benelux Union)
+  and INTL-BENELUX-DIGITAL-2016 (the Prime Ministers' Digital Benelux declaration, 3 October 2016), read on a
+  GitHub-hosted runner from benelux.int; this reverses the Benelux half of the 2026-09-05 decline in
+  discovery/unresolved.md row #230 because an instrument with data-exchange, eHealth-interoperability and
+  cybersecurity measures was found. Nordic Council of Ministers: Digital North 2.0 is known only from search results
+  (norden.org answers 403 to the agent and to a runner), so nothing is added and row #230 says what would unblock
+  it. Council of the Baltic Sea States not looked at. The Benelux entities are level regional with no region anchor
+  and anchor edges to BE, NL and LU.
+prs: []
+outcome: see git history

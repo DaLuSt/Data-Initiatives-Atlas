@@ -213,6 +213,11 @@ see `discovery/research-queue.md`._
   data-exchange standards; maintains [[NL-ROSA]] _(founded 2004;
   added 2026-09-04)_
 
+### Regional
+
+- [[INTL-BENELUX]] — Benelux Union, and its [[INTL-BENELUX-DIGITAL-2016]] declaration of the three
+  Prime Ministers _(added 2026-10-10)_
+
 ## Domains
 
 - [[DOMAIN-GOVERNMENT]] — Government
