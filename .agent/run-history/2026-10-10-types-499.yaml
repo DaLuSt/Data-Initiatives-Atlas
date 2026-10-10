@@ -1,0 +1,14 @@
+date: "2026-10-10"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #499 (records that fit two types): one rule and a decision for each record, written in
+  metadata/ontology.md section 6. The rule: file a record under the type its own primary source gives it, else
+  under the type of what it does; name the other fit in prose; retype only when a filter gives a misleading answer;
+  add a type only under the relationship-types section 2.4 test. Every listed record stays as typed (EU-SEMIC and
+  EU-DSSC organisation, UN-CES programme, NL-HEALTH-RI data-space, NL-NDW platform, NL-FDS framework,
+  NL-COMMON-GROUND initiative, NL-GDI platform, NL-BASISREGISTRATIES framework, the ten basisregistraties platform,
+  NL-BIO one entity with versions); ISO/IEC JTC 1 is not modelled. The register-typing question moves to #458. Rows
+  #20-#27, #29, #31 and #32 of discovery/unresolved.md are removed (decided); no entity changed except the one
+  sentence in EU-EN-16931 that cited row #32.
+prs: []
+outcome: see git history

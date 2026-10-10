@@ -413,3 +413,29 @@ the EU entity's slug into a national ID.
   into force of the Treaty of Rome. The signature date (25 March 1957) is recorded in the entity's
   body where it matters. The same holds for later accessions: the date is the one the Union's list
   gives, not the signature or ratification date, and the evidence string cites that list.
+
+### Records that fit two types (decided 2026-10-09, roadmap #499)
+
+**Rule.** When a record fits two types, it is filed under the type its **own primary source** gives
+it ("framework", "initiative", "programme", a register, an agency); if the source uses several
+words, under the type of what it **does** (a system that runs is a `platform`, a body that decides
+is an `organisation`, a set of agreements is a `framework`). The other fit is named in the entity's
+prose, so a reader who searches by it is pointed to the record. A type is **not** changed for style,
+and an existing record is retyped only when a filter or the folder gives a misleading answer. A new
+type is added only under `metadata/relationship-types.md` §2.4's test (a clear semantic need, at
+least one real example, a `schema_version` bump), never to settle one record.
+
+| Record | Fits | Decision | Why |
+|---|---|---|---|
+| [[EU-SEMIC]], [[EU-DSSC]] | `organisation`, programme, "action" | stay `organisation` | the best available fit; the sources call SEMIC an action and give DSSC no clear legal form |
+| [[UN-CES]] | `programme`, `organisation` | stays `programme` | convened by [[UN-UNECE]], the same reading as [[UN-GGIM]] |
+| [[NL-HEALTH-RI]] | `data-space`, `organisation` | stays one `data-space` | the infrastructure has no name of its own, so a split would invent one |
+| [[NL-NDW]] | `platform`, `organisation` | stays `platform` | typed by its primary function, though it is a partnership of 19 governments |
+| [[NL-FDS]] | `framework`, `initiative`, `programme` | stays `framework` | its own sources call it an *afsprakenstelsel*, a system of agreements |
+| [[NL-COMMON-GROUND]] | `initiative`, `framework`, `programme` | stays `initiative` | the sources use it as a vision first; the programme is a part of it |
+| [[NL-GDI]] | `platform`, `framework` | stays `platform` | its own name is an infrastructure; the agreements inside it are described in prose |
+| [[NL-BASISREGISTRATIES]] | `framework`, `platform` | stays `framework` | it is the *stelsel*, not a single register |
+| the ten basisregistraties | `platform`, a missing `register` type | stay `platform` | no `register` or `dataset` type exists and one would touch ten files and the schema; the question moves to #458 (register typing), where authentic data is decided |
+| [[NL-BIO]] | one entity or two | stays one with versions | BIO2 is a new version of a continuously named baseline, unlike Wob and Woo or Archiefwet 1995 and 2026, which are separate instruments with their own legal basis; split it if a re-verification contradicts this |
+| ISO/IEC JTC 1 | an entity or none | not modelled | it sits between the two organisations and the standards; model it when a source ties a standard to it by name |
+
