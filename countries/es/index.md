@@ -47,6 +47,8 @@ Anchor entity: [[ES]]
   2021** _(the standing Spanish re-use regime)_
   - [[ES-RDL-24-2021]] — the omnibus decree-law whose Book Three did the
     amending _(the actual Open Data Directive transposition)_
+- [[ES-PLO-IA]] — organic AI governance bill _(`proposed`; in the Congreso, amendment period closed
+  30 June 2026; adapts Spain to [[EU-AI-ACT]]; added 2026-10-10)_
 - [[ES-LCGC]] — NIS2 transposition _(⚠ `status: proposed` — still a draft)_
 - [[ES-LEY-39-2015]] — common administrative procedure _(repealed the 2007
   e-government law; added 2026-09-04)_

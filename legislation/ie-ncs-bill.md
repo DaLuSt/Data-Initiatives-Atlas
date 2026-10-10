@@ -25,7 +25,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-09-26"
+last_verified: "2026-10-10"
 previous_version: null
 successor: null
 
@@ -65,6 +65,10 @@ sources:
     url: "https://www.lawsociety.ie/gazette/top-stories/2026/september/eight-justice-bills-on-autumn-priority-list-laws-on-citizenship-and-cyber-security-included-eight-justice-bills-are-among-32-listed-for-priority-publication-in-the-governments-legislative-programme-for-the-coming-13-week-autumn-parliamentary-session.-a-f"
     publisher: "Law Society of Ireland — Gazette"
     accessed: "2026-09-26"
+  - title: "Government pledge on delayed cyber bill"
+    url: "https://www.lawsociety.ie/gazette/top-stories/2026/october/government-pledge-on-delayed-cyber-bill/"
+    publisher: "Law Society of Ireland — Gazette"
+    accessed: "2026-10-10"
   - title: "NIS2 Directive implementation in Ireland"
     url: "https://digital-strategy.ec.europa.eu/en/policies/nis2-directive-ireland"
     publisher: "European Commission — Shaping Europe's digital future"
@@ -173,6 +177,10 @@ earlier check, and adds a concrete legislative-programme placement in
 place of the looser "Q3/Q4 2026 planning assumption" this entity
 previously carried. No enactment date is given or implied by a priority
 listing — it states scheduling intent, not a commitment.
+
+## Re-checked 2026-10-10: still not enacted, still being drafted
+
+The Law Society of Ireland's Gazette, read directly (7 October 2026), reports that the Government launched its third national cyber-security strategy, covering the period to 2030, and that the strategy "states that the Department of Justice, Home Affairs and Migration is working with the Office of Parliamentary Counsel and the Attorney General's office to prepare a draft of the National Cyber Security Bill ... to Government". The bill's general scheme was published in 2024 and the bill is "included for priority publication in the Government's autumn legislative programme". The same article repeats that the Commission referred Ireland to the Court of Justice in July for failing to transpose NIS2. So the bill is still a draft being prepared for Government, not yet published or before the Oireachtas. The strategy document itself was not read.
 
 ## ⚠ Why `confidence: low`
 
