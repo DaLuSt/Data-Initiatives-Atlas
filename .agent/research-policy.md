@@ -56,7 +56,11 @@ fit to add at all.
   `efta.int` homepage. The fetch tool still gets 403 from `unece.org`,
   `unctad.org`, `iso.org` and `coe.int`, cannot fetch `web.archive.org` at all, and
   returns only a JavaScript notice for Fedlex (whose English PDFs, by their
-  filestore URL, curl can download). Pages over about 100,000 characters are cut
+  filestore URL, curl can download). The full text of an EU act, where EUR-Lex's
+  own `TXT/HTML` page is empty, is served by the Publications Office resolver:
+  `curl -H 'Accept: application/xhtml+xml' -H 'Accept-Language: eng'
+  https://publications.europa.eu/resource/celex/<CELEX>` (tested 2026-10-10 on
+  32014R0910). Pages over about 100,000 characters are cut
   off: read on with the tool's `offset`. The per-host rows are
   `discovery/unresolved.md` #220, #222, #223 and #225. A failure on one form of a
   URL is not proof of a block, and a success on one page does not make the whole

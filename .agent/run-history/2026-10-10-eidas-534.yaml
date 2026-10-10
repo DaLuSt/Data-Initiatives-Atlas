@@ -1,0 +1,13 @@
+date: "2026-10-10"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #534 (the eIDAS cluster). Found a way to read EU acts that EUR-Lex returns empty: the Publications Office
+  resolver https://publications.europa.eu/resource/celex/<CELEX> with Accept: application/xhtml+xml and
+  Accept-Language: eng (recorded in discovery/unresolved.md row #223 and .agent/research-policy.md). EU-EIDAS is now
+  sourced from Regulation (EU) No 910/2014's own Official Journal text: citation, entry into force (20th day after
+  28.8.2014), application from 1 July 2016 with exceptions, Article 1, the six chapters with article ranges;
+  confidence raised to high. NL-WDO: the Eerste Kamer dossier (Kamerstuk 34972 nr. AE and AF, read directly) states
+  that the eIDAS obligations apply to the Netherlands whether or not the Wdo takes effect, so the Wdo is not a
+  transposition; a sourced `related-to` edge is recorded on NL-WDO. Rows #35 and #36 closed (removed).
+prs: []
+outcome: see git history

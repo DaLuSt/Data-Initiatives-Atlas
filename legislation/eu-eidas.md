@@ -18,13 +18,13 @@ region: EU
 
 status: active
 rank: ordinary
-confidence: medium
+confidence: high
 coverage: medium
 verification: primary-source
 
 start_date: 2014-07-23
 end_date: null
-last_verified: "2026-09-26"
+last_verified: "2026-10-10"
 previous_version: null
 successor: null
 
@@ -271,6 +271,10 @@ sources:
     url: "https://www.legislation.gov.uk/eur/2014/910/contents"
     publisher: "legislation.gov.uk (The National Archives) — UK-retained EU law"
     accessed: "2026-09-26"
+  - title: "Regulation (EU) No 910/2014 of 23 July 2014 on electronic identification and trust services (Official Journal L 257/73, 28.8.2014)"
+    url: "https://publications.europa.eu/resource/celex/32014R0910"
+    publisher: "Publications Office of the European Union (EUR-Lex / CELLAR)"
+    accessed: "2026-10-10"
 ---
 
 # eIDAS Regulation (Regulation (EU) No 910/2014)
@@ -356,18 +360,47 @@ substance, so this entity does not rely on `legislation.gov.uk` as
 authoritative for the EU's own current in-force text, only for the
 regulation's structural shape.
 
-## The NL-WDO question remains open
+## Read from the regulation's own text, 2026-10-10
 
-Even with this entity in place, **no relationship to [[NL-WDO]] is
-asserted.** The reasoning chain "the Wdo concerns digital identity → eIDAS
-concerns digital identity → therefore the Wdo transposes eIDAS" is exactly
-the kind of plausible inference the Atlas's provenance rules exclude. A
-source stating the transposition is still required. See
-`discovery/unresolved.md`.
+The Publications Office's resolver serves the Official Journal text that EUR-Lex's `TXT/HTML` form
+returns empty for: `https://publications.europa.eu/resource/celex/32014R0910` with the request headers
+`Accept: application/xhtml+xml` and `Accept-Language: eng` (workaround recorded in
+`discovery/unresolved.md` row #223). Read directly, it gives:
+
+- **Citation and dates.** "REGULATION (EU) No 910/2014 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of
+  23 July 2014 on electronic identification and trust services for electronic transactions in the internal
+  market and repealing Directive 1999/93/EC", Official Journal L 257/73, 28.8.2014, based on Article 114 TFEU,
+  adopted under the ordinary legislative procedure.
+- **Entry into force and application (Article 52).** It enters into force "on the twentieth day following that
+  of its publication", so 17 September 2014 (Article 52(2)(a) lists provisions that apply from that day);
+  it "shall apply from 1 July 2016", except for several provisions: some apply from
+  17 September 2014, and most of Articles 6 to 12 (electronic identification) apply from dates tied to the
+  implementing acts (Article 52(2)(a) to (c)).
+- **Article 1, subject matter.** It "lays down the conditions under which Member States recognise electronic
+  identification means of natural and legal persons falling under a notified electronic identification scheme of
+  another Member State", and "lays down rules for trust services, in particular for electronic transactions".
+- **Structure.** Chapter I General provisions (Articles 1 to 5, Article 3 being the definitions); Chapter II
+  Electronic identification (Articles 6 to 12); Chapter III Trust services (Articles 13 to 45, in sections);
+  Chapter IV Electronic documents (Article 46); Chapter V Delegations of power and implementing provisions
+  (Articles 47 and 48); Chapter VI Final provisions (Articles 49 to 52).
+
+This replaces the structure taken from the UK-retained copy on legislation.gov.uk (above): it is the EU's own
+text as first published, and the chapter and article numbering matches. It is the text **as published in
+2014**; the regulation as amended by [[EU-EIDAS2]] was not read here.
+
+## The NL-WDO question, answered 2026-10-10
+
+The question this entity was created to ask is answered, and the answer is on [[NL-WDO]]: the
+Staatssecretaris's letter of 3 March 2023 (Kamerstuk 34972 nr. AE, read directly) says the eIDAS obligations
+apply to the Netherlands whether or not the Wdo takes effect, and that the Wdo lets the Netherlands admit private
+login means that meet Dutch requirements. So the Wdo does **not** transpose this regulation (a regulation applies
+directly); it is `related-to` it, recorded on [[NL-WDO]] with the quotation. The provenance rule held: the
+relationship was asserted only once a source stated it.
 
 ## Relationships
 
 - Amended by [[EU-EIDAS2]].
+- [[NL-WDO]] is `related-to` it (not a transposition), recorded on that entity.
 - `applies-in` [[NO]] and [[IS]], `applies-in` [[LI]] at lower confidence
   — via [[INTL-EEA-JCD-22-2018]], read directly 2026-09-19.
 
