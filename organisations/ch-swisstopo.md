@@ -2,7 +2,9 @@
 id: CH-SWISSTOPO
 type: organisation
 name: swisstopo
+name_en: "Federal Office of Topography swisstopo"
 alternative_names:
+  - Federal Office of Topography swisstopo
   - Bundesamt für Landestopografie
   - Federal Office of Topography
 description: >
@@ -59,6 +61,10 @@ sources:
     url: "https://www.swisstopo.admin.ch/en/home.html"
     publisher: "Federal Office of Topography swisstopo"
     accessed: "2026-08-22"
+  - title: "Federal Office of Topography swisstopo (English home page)"
+    url: "https://www.swisstopo.admin.ch/en"
+    publisher: "Bundesamt für Landestopografie swisstopo"
+    accessed: "2026-10-10"
 ---
 
 # swisstopo

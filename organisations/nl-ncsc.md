@@ -2,7 +2,9 @@
 id: NL-NCSC
 type: organisation
 name: Nationaal Cyber Security Centrum
+name_en: "National Cyber Security Centre (NCSC-NL)"
 alternative_names:
+  - National Cyber Security Centre (NCSC-NL)
   - NCSC
   - NCSC-NL
   - Versterkt NCSC
@@ -68,6 +70,10 @@ sources:
   - title: "DTC en NCSC fuseren tot één Nederlandse cybersecurityorganisatie"
     url: "https://www.techzine.nl/nieuws/security/570635/dtc-en-ncsc-fuseren-tot-een-nederlandse-cybersecurityorganisatie/"
     publisher: "Techzine"
+  - title: "National Cyber Security Centre (English home page)"
+    url: "https://www.ncsc.nl/english"
+    publisher: "Nationaal Cyber Security Centrum (NCSC-NL)"
+    accessed: "2026-10-10"
 ---
 
 # Nationaal Cyber Security Centrum (NCSC)

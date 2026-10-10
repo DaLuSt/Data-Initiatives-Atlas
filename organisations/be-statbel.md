@@ -2,7 +2,9 @@
 id: BE-STATBEL
 type: organisation
 name: Statbel
+name_en: "Statbel (the Belgian statistical office)"
 alternative_names:
+  - Statbel (the Belgian statistical office)
   - Algemene Directie Statistiek
   - Statistics Belgium
   - Direction générale Statistique
@@ -83,6 +85,10 @@ sources:
     url: "https://ec.europa.eu/eurostat/web/products-eurostat-news/-/cn-20220518-1"
     publisher: "Eurostat — European Commission"
     accessed: "2026-08-27"
+  - title: "Statbel – the Belgian statistical office (English home page)"
+    url: "https://statbel.fgov.be/en"
+    publisher: "Statbel"
+    accessed: "2026-10-10"
 ---
 
 # Statbel (Algemene Directie Statistiek)

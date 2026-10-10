@@ -2,7 +2,9 @@
 id: AT-BRZ
 type: organisation
 name: Bundesrechenzentrum
+name_en: "Austrian Federal Computing Center"
 alternative_names:
+  - Austrian Federal Computing Center
   - BRZ
   - Austrian Federal Computing Centre
 description: >
@@ -48,7 +50,7 @@ sources:
   - title: "Austrian Federal Computing Center - BRZ"
     url: "https://www.brz.gv.at/en/"
     publisher: "Bundesrechenzentrum (BRZ)"
-    accessed: "2026-08-26"
+    accessed: "2026-10-10"
   - title: "Organisation - BRZ"
     url: "https://www.brz.gv.at/wer-wir-sind/organisation.html"
     publisher: "Bundesrechenzentrum (BRZ)"
