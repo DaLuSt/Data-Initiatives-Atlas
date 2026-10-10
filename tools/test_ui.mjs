@@ -553,6 +553,19 @@ async function search(page, q) {
   await page.click('#edge-classes label:has-text("Mentions")');
   await page.waitForTimeout(400);
 
+  // scope edges (roadmap #461): hideable apart from the substantive relationships
+  var scopeBox = await page.$('#edge-scope input[data-group="anchor"]');
+  check('a "hide scope edges" control exists', !!scopeBox);
+  if (scopeBox) {
+    await page.click('#edge-scope label');
+    await page.waitForTimeout(700);
+    var noScope = await page.textContent('#stage-status');
+    var e2s = +(noScope.match(/· ([\d,]+) connections/) || [0, '0'])[1].replace(/,/g, '');
+    check('hiding scope edges removes some connections', e2s > 0 && e2s < e1, `${e1} → ${e2s}`);
+    await page.click('#edge-scope label');
+    await page.waitForTimeout(500);
+  }
+
   // relationship type filter
   await page.click('summary:has-text("Relationship types")');
   await page.waitForTimeout(200);

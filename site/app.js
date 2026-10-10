@@ -45,7 +45,8 @@
     level: new Set(), country: new Set(), region: new Set(),
     type: new Set(), status: new Set(), domain: new Set(),
     relType: new Set(), provenance: new Set(), confidence: new Set(),
-    edgeClass: new Set(["relationship"])
+    edgeClass: new Set(["relationship"]),
+    anchor: new Set()
   };
   var listSort = { key: "label", dir: 1 };
   // grouped | force. Session-only on purpose: the page stores nothing between
@@ -283,6 +284,14 @@
         : c === "association" ? G.stats.associations : G.stats.wikilinks;
       return check("edgeClass", c, CLASS_LABEL[c] || titly(c), n, filters.edgeClass.has(c));
     }).join("");
+
+    // Scope edges (roadmap #461): relationships that only place an entity in a
+    // country, region or the UN. Counted apart and hideable, so the other
+    // relationship counts mean "these two entities are related".
+    if ($("edge-scope")) {
+      $("edge-scope").innerHTML = check("anchor", "hide", "Hide scope edges (to a country, region or the UN)",
+        G.stats.scope_edges, filters.anchor.has("hide"));
+    }
 
     facetInto("rel-types", "relType", G.facets.relationship_types, "reltype-count", { raw: true });
     facetInto("f-provenance", "provenance", G.facets.provenances, "prov-count", { raw: true });
@@ -678,6 +687,7 @@
   function passesEdgeFilters(e) {
     if (!filters.edgeClass.has(e.class)) return false;
     if (e.class !== "relationship") return true;
+    if (e.anchor && filters.anchor.has("hide")) return false;
     // Provenance and confidence exist only on relationship edges, so they
     // narrow that class alone — an association is neither a fact nor an
     // interpretation and is not silently dropped by these filters.
@@ -880,7 +890,8 @@
         data: {
           id: "e" + i, source: e.source, target: e.target,
           type: e.type || e.field || "", cls: e.class,
-          provenance: e.provenance || "", confidence: e.confidence || ""
+          provenance: e.provenance || "", confidence: e.confidence || "",
+          anchor: e.anchor ? "1" : ""
         }
       });
     });
@@ -1726,6 +1737,7 @@
 
     var chips = [];
     chips.push('<span class="chip strong">' + esc(CLASS_NAME[d.cls] || titly(d.cls)) + "</span>");
+    if (d.anchor) chips.push('<span class="chip">Scope edge</span>');
     if (d.provenance) chips.push('<span class="chip">' + esc(titly(d.provenance)) + "</span>");
     if (d.confidence) chips.push('<span class="chip">' + esc(titly(d.confidence)) + "</span>");
     h.push('<div class="chips">' + chips.join("") + "</div>");

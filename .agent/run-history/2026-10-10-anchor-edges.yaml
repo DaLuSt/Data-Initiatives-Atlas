@@ -1,0 +1,11 @@
+date: "2026-10-10"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #461, fourth point: scope edges on the graph. build_graph.py marks a relationship `anchor: true` when its
+  type is applies-in, part-of or related-to and its target is a country or region anchor (673 edges); stats gain
+  scope_edges. The site gets a "Hide scope edges" box in "Connections shown" (off by default; address parameter
+  anchor=hide) and a "Scope edge" chip in the edge detail. Five unit tests (TestScopeEdges) and two browser checks
+  hold it. Decision text in metadata/relationship-types.md section 2.5, point 4. Relationship-type counts are not
+  split. WIP until the browser suite and the unit tests are green.
+prs: []
+outcome: see git history

@@ -213,9 +213,13 @@ backlog's count of it.
    `validate_relationships.py` ("domains references unknown id"); a test now holds that, so the
    site's domain filter cannot show a row labelled with a bare ID.
 
-What is **not** decided here: how the interactive graph should show anchor edges apart from
-substantive ones (the fourth point of #461). It changes the site and its facet counts, so it stays
-open on that issue.
+4. **Anchor edges on the graph.** `build_graph.py` marks a relationship `anchor: true` when its type
+   is `applies-in`, `part-of` or `related-to` and its target is a country or region anchor (including
+   the EU and the UN). The count is `stats.scope_edges`; the site's "Connections shown" panel has a
+   "Hide scope edges" box (off by default, so nothing disappears unasked), the edge detail panel shows a
+   "Scope edge" chip, and the address carries `anchor=hide`. The relationship-type counts are not
+   split: a type that is mostly scope (`applies-in`) still counts all its edges, and the box is what
+   separates them. The mark is derived, never written in a file.
 
 ---
 
