@@ -19,6 +19,7 @@ from __future__ import annotations
 
 import argparse
 import re
+import secrets
 import sys
 import time
 import urllib.error
@@ -35,6 +36,8 @@ import reverify  # noqa: E402  (honest User-Agent, TLS context, markup stripping
 
 MAX_URLS = 25
 MAX_BYTES = 5_000_000
+LOG_PER_PAGE = 8_000   # characters of one page shown in the job log
+LOG_TOTAL = 120_000    # characters of all pages together
 TEXT_TYPES = ("text/", "application/xhtml", "application/xml", "application/json")
 
 
@@ -159,6 +162,31 @@ def flag_repeats(saved: list[Saved], out: Path) -> None:
                 s.detail = f"the same text as {len(group) - 1} other page(s) on this host: a shell"
 
 
+def render_log(saved: list[Saved], out: Path, per_page: int = LOG_PER_PAGE, total: int = LOG_TOTAL,
+               token: str | None = None) -> str:
+    """The text of the pages that were read, for the job log, so it can be read without downloading
+    the artifact. The text comes from the open web, so it is wrapped in `::stop-commands::` : without
+    that, a page containing a line such as `::set-output ...` or `::error::` would be run as a
+    workflow command. Each page is cut at `per_page` characters and the whole at `total`."""
+    token = token or secrets.token_hex(16)
+    lines = [f"::stop-commands::{token}"]
+    used = 0
+    for i, s in enumerate(saved, 1):
+        if not s.file.endswith(".txt"):
+            lines.append(f"===== {i}. {s.verdict}: {s.url} ({s.detail})")
+            continue
+        body = (out / s.file).read_text(encoding="utf-8")
+        text = body.split("\n\n", 1)[-1]
+        room = min(per_page, max(total - used, 0))
+        shown = text[:room]
+        used += len(shown)
+        cut = f" [cut: {len(shown)} of {len(text)} characters]" if len(shown) < len(text) else ""
+        lines.append(f"===== {i}. {s.verdict}: {s.url}{cut}")
+        lines.append(shown)
+    lines.append(f"::{token}::")
+    return "\n".join(lines)
+
+
 def render_index(saved: list[Saved]) -> str:
     lines = ["# Pages read on this machine", "",
              f"{len(saved)} address(es); the Atlas's own User-Agent; nothing in the repository was changed.", "",
@@ -187,6 +215,8 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--urls", required=True, help="https addresses separated by spaces or commas (max 25)")
     ap.add_argument("--out", default="report", help="directory for the files (default: report)")
     ap.add_argument("--delay", type=float, default=1.0, help="seconds between pages")
+    ap.add_argument("--log", action="store_true",
+                    help="also print the text of the pages read (cut per page), guarded against workflow commands")
     args = ap.parse_args(argv)
     try:
         urls = parse_urls(args.urls)
@@ -195,6 +225,8 @@ def main(argv: list[str] | None = None) -> int:
         return 2
     saved = run(urls, Path(args.out), args.delay)
     print(render_index(saved))
+    if args.log:
+        print(render_log(saved, Path(args.out)))
     return 0
 
 

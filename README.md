@@ -35,13 +35,13 @@ hand-maintained.
 |---|---|
 | **Entities** | 774 |
 | **Connections** | 9,644 — of which **1,618** are typed relationships, each with its provenance |
-| **Country scopes** | **58** — 23 with national entities beyond the anchor itself, the rest base anchors |
+| **Country scopes** | **63** — 28 with national entities beyond the anchor itself, the rest base anchors |
 | **Layers** | UN · Council of Europe · EU · national · subnational (sector is carried by `domains`) |
 | **Source of truth** | Git + Markdown/YAML — no database |
 | **Licence** | CC0 1.0 |
 | **✅ Sourcing** | **All 774 entities are `verification: primary-source`** — every cited source has been opened, read and confirmed |
 
-*Figures as of 2026-10-08. The live counts are always on the site itself.*
+*Figures as of 2026-10-10. The live counts are always on the site itself.*
 
 ### Read this before you cite anything
 
