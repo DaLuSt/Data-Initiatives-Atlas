@@ -87,7 +87,7 @@ committed, so they must be reproducible).
 
 ```bash
 # browser tests — the client library plus any Chrome (CI runs them in the `browser` job
-# of validate.yml, on the runner's own Chrome; the job is not a required check yet)
+# of validate.yml, on the runner's own Chrome; the job is a required check since 2026-10-10)
 python tools/build_graph.py
 python -m http.server 8765 --directory site &
 npm install playwright-core
