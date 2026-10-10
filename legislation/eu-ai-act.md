@@ -248,6 +248,10 @@ sources:
     url: "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
     publisher: "EUR-Lex (Publications Office of the European Union)"
     accessed: "2026-09-05"
+  - title: "Regulation (EU) 2024/1689 of 13 June 2024 laying down harmonised rules on artificial intelligence (Official Journal L, 12.7.2024)"
+    url: "https://publications.europa.eu/resource/celex/32024R1689"
+    publisher: "Publications Office of the European Union (EUR-Lex / CELLAR)"
+    accessed: "2026-10-10"
 ---
 
 # Artificial Intelligence Act (Regulation (EU) 2024/1689)
@@ -346,6 +350,19 @@ research queue had flagged as missing is now recorded in `sources`. The
 two `artificialintelligenceact.eu` pages and Wikipedia remain read
 directly and cited alongside it; the EUR-Lex ELI record for the amending
 Regulation (EU) 2026/1744 is also listed, unchanged from the prior pass.
+
+## No reference to UNESCO or other international AI instruments, 2026-10-10
+
+Regulation (EU) 2024/1689 was read in full from the Official Journal (L series, 12.7.2024; about 580,000
+characters, through the Publications Office resolver). The text **never mentions UNESCO, the OECD or the
+Council of Europe**. It names the United Nations only for two conventions on rights (the Convention on the
+Rights of the Child, with General Comment No 25, in a recital on children, and the Convention on the Rights
+of Persons with Disabilities in recital 80). Recital 12 says the definition of an AI system "should be closely
+aligned with the work of international organisations working on AI", naming none, and a recital on voluntary
+codes points to "the Union's Ethics Guidelines for Trustworthy AI". So there is **no sourced relationship**
+between the Act and [[UN-AI-ETHICS-RECOMMENDATION]] (UNESCO, 2021): the dates line up, the Act does not cite
+the recommendation, and the Atlas asserts no edge. This closes `discovery/unresolved.md` row #174 as "no source
+states it", after a search of the instrument itself.
 
 ## Relationships
 

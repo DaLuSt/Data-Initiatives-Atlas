@@ -26,7 +26,7 @@ verification: primary-source
 
 start_date: 2014-10-01
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-10-10"
 previous_version: null
 successor: null
 
@@ -44,8 +44,23 @@ relationships:
     confidence: high
     valid_from: 2014-10-01
     valid_until: null
+  - type: references
+    target: EU-INSPIRE
+    source: fact
+    evidence: "ANSWERS discovery/unresolved.md row #227 (read 2026-10-10, GIS Resources, 28 July 2016, a republication of UN-GGIM: Europe's own release, 'Source: UN-GGIM: Europe'): 'The report, which is the first deliverable of the Working Group on core data, has identified 14 INSPIRE themes which can support the UN's sustainable development goals (SDGs)'; the Chair of the Executive Committee is quoted: 'Our research has focused on determining which themes within INSPIRE are useful for this process', and UN-GGIM: Europe 'will now contribute its findings to help establish an agreed set of global fundamental geospatial data themes'. So one working group of this committee used INSPIRE's themes as its candidate list. Typed `references`, not `based-on` or `aligned-with`: the committee cites and selects from the Directive's themes; nothing read says INSPIRE is governed by, derived from or part of the UN structure. Confidence is low-to-medium because the source is a trade-press republication; the report itself (UN-GGIM: Europe's Working Group A / Core Data scope) could not be read, since un-ggim-europe.org has moved those files (404) and its old host asks for a login (401)."
+    confidence: medium
+    valid_from: 2016-07-28
+    valid_until: null
 
 sources:
+  - title: "UN-GGIM: Europe – Research Identifies 14 'Core' INSPIRE Themes for Global Sustainable Development Goals"
+    url: "https://gisresources.com/?p=18304"
+    publisher: "GIS Resources (republishing a UN-GGIM: Europe release)"
+    accessed: "2026-10-10"
+  - title: "UN-GGIM: Europe (home page)"
+    url: "https://un-ggim-europe.org/"
+    publisher: "UN-GGIM: Europe"
+    accessed: "2026-10-10"
   - title: "About Us | UN-GGIM: Europe"
     url: "https://un-ggim-europe.org/about-us/"
     publisher: "UN-GGIM: Europe"
@@ -83,28 +98,27 @@ Its aim is to contribute to more effective management and availability of
 geospatial information in Europe and to keep the Regional Committee's work
 aligned to the global UN-GGIM programme. It operates through working groups.
 
-## The INSPIRE link was looked for and not found
+## The INSPIRE link, found 2026-10-10 (in a secondary source)
 
-`discovery/candidates.md` set this up precisely:
+Looked for in five attempts and not found, until a trade-press republication of UN-GGIM: Europe's own
+2016 release was read on a GitHub-hosted runner (GIS Resources, 28 July 2016, "Source: UN-GGIM: Europe").
+It says the **first deliverable of the Working Group on core data identified 14 INSPIRE themes** that support
+the SDGs, because the research "focused on determining which themes within INSPIRE are useful", and that the
+committee would contribute the findings to the global work on fundamental geospatial data themes. The themes it
+names: administrative units, statistical units, geographical names, addresses, cadastral parcels, area
+management/restriction/regulation and reporting units, governmental services, elevation, land cover, land use,
+orthoimagery, buildings, transport networks and hydrography.
 
-> *INSPIRE is discussed in its context, though **no source read states a
-> relationship** — that is the thing to verify.*
+That is a sourced relationship between this committee's working group and [[EU-INSPIRE]]'s themes, recorded
+above as `references` (not `based-on`, `aligned-with` or `part-of`). What it is **not** is a relationship
+between the Directive and the UN structure: the text of Directive 2007/2/EC, read in full from the Official
+Journal on 2026-10-10, never mentions the United Nations or UN-GGIM, and says only that implementing rules
+should "take account of relevant, existing international standards". The earlier EuroGeographics
+presentation (2016, to an INSPIRE audience) remains evidence only that the two communities talk to each other.
 
-It was searched for and **it is still not established.** What the searches
-returned is real but insufficient: a 2016 EuroGeographics presentation
-titled *"UN-GGIM: An Overview"* delivered to an **INSPIRE Knowledge Exchange
-Network webinar**, and general discussion of INSPIRE data harmonisation in
-UN-GGIM: Europe's working-group context.
-
-A presentation given by a third party to an INSPIRE audience about UN-GGIM
-is evidence that the two communities talk to each other. **It is not
-evidence that [[EU-INSPIRE]] is derived from, governed by, aligned with or
-part of anything in the UN-GGIM structure**, and no such edge is asserted.
-
-So this batch closed three of the four clusters in `candidates.md` and left
-the geospatial one **structurally incomplete on purpose**: the UN parent
-exists, the European regional committee exists, and the edge to the European
-instrument does not, because nothing read supports one.
+Still unread: the working group's report itself. un-ggim-europe.org has moved its old uploads (the former
+`/wp-content/uploads/...` addresses answer 404) and its previous host answers 401, so the 14-theme list rests on
+the republication.
 
 ## The missing European node is probably EuroGeographics
 
@@ -128,6 +142,8 @@ research-queue item is now better evidenced than before. Queued in
 ## Relationships
 
 - `part-of` [[UN-GGIM]].
+- `references` [[EU-INSPIRE]]: its core-data working group's first deliverable selected 14 INSPIRE themes (secondary source,
+  read 2026-10-10).
 
 ## Sources
 

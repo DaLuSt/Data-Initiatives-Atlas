@@ -181,6 +181,10 @@ are the same missing property at different levels. The second is now
 settled by the `agreement` and `soft-law` types, and the first by the `rank`
 field (`metadata/ontology.md` §1.2).
 
+## Not cited by the EU AI Act, 2026-10-10
+
+The full text of [[EU-AI-ACT]] was read and does not mention this recommendation or UNESCO (see that entity). No edge between them is asserted; the dates line up, which is chronology, not a source.
+
 ## Relationships
 
 - `maintained-by` [[UN-UNESCO]].
