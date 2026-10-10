@@ -6,6 +6,6 @@ summary: >
   scope_edges. The site gets a "Hide scope edges" box in "Connections shown" (off by default; address parameter
   anchor=hide) and a "Scope edge" chip in the edge detail. Five unit tests (TestScopeEdges) and two browser checks
   hold it. Decision text in metadata/relationship-types.md section 2.5, point 4. Relationship-type counts are not
-  split. WIP until the browser suite and the unit tests are green.
+  split. Browser suite 134/134, unit tests green.
 prs: []
 outcome: see git history
