@@ -402,7 +402,8 @@ class TestDomains(Base):
 class TestStaleRowReferences(Base):
     """A file that calls a row of discovery/unresolved.md open must name a row the table still has."""
 
-    UNRESOLVED = "| # | Area |\n|---|---|\n| 5 | Spain |\n| 9 | Poland |\n"
+    UNRESOLVED = ("| # | A | T | Q | D | S | N |\n|---|---|---|---|---|---|---|\n"
+                  "| 5 | Spain | x | q | d | Open | 2026-10-10 |\n| 9 | Poland | x | q | d | Open | 2026-10-10 |\n")
 
     def setUp(self):
         super().setUp()
@@ -442,6 +443,52 @@ class TestStaleRowReferences(Base):
     def test_every_number_of_a_list_is_checked(self):
         self.body("Rows #5 and #77 are still open.")
         self.assertOnlyWarns("calls row #77")
+
+
+class TestUnresolvedTable(Base):
+    """The master table of discovery/unresolved.md: seven cells a row, working detail links, no long unlinked cell."""
+
+    HEAD = "| # | Area | Topic | Question | Detail | Status | Noted |\n|---|---|---|---|---|---|---|\n"
+
+    def setUp(self):
+        super().setUp()
+        (self.root / "discovery" / "unresolved").mkdir(parents=True)
+
+    def table(self, *rows):
+        self.write("discovery/unresolved.md", self.HEAD + "\n".join(rows) + "\n")
+
+    def test_a_good_table_is_quiet(self):
+        self.table("| 1 | Spain | x | q | short | Open | 2026-10-10 |")
+        code, text = self.run_all()
+        self.assertEqual(code, 0, text)
+
+    def test_a_row_with_the_wrong_number_of_cells_is_an_error(self):
+        self.table("| 1 | Spain | x | q | has a stray | pipe | Open | 2026-10-10 |")
+        self.assertFails("row #1 has 8 cells, not 7")
+
+    def test_an_escaped_pipe_is_not_a_cell_break(self):
+        self.table("| 1 | Spain | x | q | a title \\| with a pipe | Open | 2026-10-10 |")
+        code, text = self.run_all()
+        self.assertEqual(code, 0, text)
+
+    def test_a_detail_link_to_a_missing_section_is_an_error(self):
+        self.table("| 1 | Spain | x | q | excerpt … [full detail](unresolved/spain.md#row-1) | Open | 2026-10-10 |")
+        self.assertFails("points at a section that does not exist")
+
+    def test_a_detail_link_to_an_existing_section_is_quiet(self):
+        self.write("discovery/unresolved/spain.md", '# Spain\n\n<a id="row-1"></a>\n## Row 1\n\ntext\n')
+        self.table("| 1 | Spain | x | q | excerpt … [full detail](unresolved/spain.md#row-1) | Open | 2026-10-10 |")
+        code, text = self.run_all()
+        self.assertEqual(code, 0, text)
+
+    def test_a_link_to_another_rows_section_is_an_error(self):
+        self.write("discovery/unresolved/spain.md", '<a id="row-2"></a>\n## Row 2\n')
+        self.table("| 1 | Spain | x | q | excerpt … [full detail](unresolved/spain.md#row-2) | Open | 2026-10-10 |")
+        self.assertFails("points at a section that does not exist")
+
+    def test_a_long_cell_with_no_link_is_a_warning(self):
+        self.table("| 1 | Spain | x | q | " + "long " * 200 + " | Open | 2026-10-10 |")
+        self.assertOnlyWarns("the detail cell is")
 
 
 class TestStructure(Base):
