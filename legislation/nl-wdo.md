@@ -24,7 +24,7 @@ verification: primary-source
 
 start_date: 2023-07-01
 end_date: null
-last_verified: "2026-09-27"
+last_verified: "2026-10-10"
 previous_version: null
 successor: null
 
@@ -44,8 +44,23 @@ relationships:
     confidence: high
     valid_from: 2023-07-01
     valid_until: null
+  - type: related-to
+    target: EU-EIDAS
+    source: fact
+    evidence: "ANSWERS discovery/unresolved.md row #36 (read directly 2026-10-10, Kamerstuk 34972 nr. AE, the letter of the Staatssecretaris van Binnenlandse Zaken en Koninkrijksrelaties of 3 March 2023 to the Eerste Kamer, on zoek.officielebekendmakingen.nl). It states that the eIDAS Regulation applies to the Netherlands whether or not the Wdo enters into force: 'Indien de beide wetsvoorstellen niet in werking treden, dan blijft de situatie dat de verplichtingen uit de huidige eIDAS-verordening voor Nederland blijven gelden en dus ook Nederlanders met erkende inlogmiddelen (zowel publieke als private) uit andere lidstaten bij de Nederlandse overheid moeten kunnen inloggen. Met de Wet digitale overheid en de bijhorende novelle hebben wij in Nederland de mogelijkheid om private middelen toe te laten op grond van onder meer de novelle-eisen.' So the Wdo does not transpose the regulation (a regulation is directly applicable and nothing here says otherwise); it sits beside its cross-border acceptance obligation and lets the Netherlands admit private login means that meet Dutch requirements. Typed `related-to`, not `implements-requirement-from`. The Eerste Kamer committee report (nr. AF, 17 March 2023) records the same scope debate: the Landsadvocaat's advice is that eIDAS is in principle limited to cross-border authentication."
+    confidence: medium
+    valid_from: 2023-07-01
+    valid_until: null
 
 sources:
+  - title: "Kamerstuk 34972, nr. AE — Wet digitale overheid: brief van de Staatssecretaris (juridische analyses van de Landsadvocaat), 3 maart 2023"
+    url: "https://zoek.officielebekendmakingen.nl/kst-34972-AE.html"
+    publisher: "Overheid.nl — Officiële bekendmakingen (Eerste Kamer)"
+    accessed: "2026-10-10"
+  - title: "Kamerstuk 34972, nr. AF — Wet digitale overheid: verslag van een schriftelijk overleg, 17 maart 2023"
+    url: "https://zoek.officielebekendmakingen.nl/kst-34972-AF.html"
+    publisher: "Overheid.nl — Officiële bekendmakingen (Eerste Kamer)"
+    accessed: "2026-10-10"
   - title: "Staatsblad 2023, 160 (inwerkingtredingsbesluit)"
     url: "https://zoek.officielebekendmakingen.nl/stb-2023-160.html"
     publisher: "Overheid.nl — Officiële bekendmakingen"
@@ -171,23 +186,27 @@ WordPress REST API workaround, adds three facts not previously carried:
 
 Dutch national legislation: `region` is `null` rather than `EU`.
 
-**Batch 8 examined this and left it unchanged.** Both [[EU-EIDAS]]
-(Regulation 910/2014) and [[EU-EIDAS2]] (Regulation 2024/1183) now exist as
-entities, and eIDAS 2.0 can be ruled out on dates — the Wdo came into force
-in July 2023, before eIDAS 2.0 entered into force in May 2024. The original
-eIDAS Regulation remains the plausible candidate.
+**The question is answered, 2026-10-10.** Batch 8 left the Wdo without a relationship to [[EU-EIDAS]]
+because no source said how they relate. The Eerste Kamer dossier does: the Staatssecretaris's letter of
+3 March 2023 (Kamerstuk 34972 nr. AE, read directly) says the obligations of the eIDAS Regulation apply to
+the Netherlands whether or not the Wdo and its novelle enter into force, and that the Wdo gives the
+Netherlands the possibility to admit private login means that meet Dutch requirements. So the Wdo is **not**
+a transposition of 910/2014 (a regulation applies directly, and nothing read says otherwise); it is
+`related-to` it, and the edge is recorded on this entity with that quotation. [[EU-EIDAS2]] stays ruled out on
+dates (the Wdo, July 2023, predates it, May 2024). `region` stays `null`: this is Dutch national legislation.
 
-But plausible is not sourced. No source read states that the Wdo transposes
-910/2014, and the inference "both concern digital identity, therefore one
-transposes the other" is precisely what the Atlas's provenance rules
-exclude. `region` stays `null` and no relationship is asserted until a
-source says otherwise. See `discovery/unresolved.md`.
+The same dossier records a legal debate worth knowing: the Landsadvocaat's analysis (summarised in nr. AE and
+discussed in nr. AF, 17 March 2023) is that the Regulation is in principle limited to cross-border
+authentication, but that the notion of a cross-border situation is read so widely (dual nationals, a Dutch
+citizen working in Belgium with a Belgian means) that applying it broadly is the practical course.
 
 ## Relationships
 
 - Influences [[NL-PAS-TOE-OF-LEG-UIT]] by giving statutory force to
   designated open standards.
 - Relates to [[NL-GDI]] and [[NL-LOGIUS]] through the Stelsel Toegang.
+- `related-to` [[EU-EIDAS]]: not a transposition; sits beside the Regulation's cross-border acceptance
+  obligation (Kamerstuk 34972 nr. AE, read directly 2026-10-10).
 
 ## Sources
 

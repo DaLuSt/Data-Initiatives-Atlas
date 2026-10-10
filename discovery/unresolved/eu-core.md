@@ -5,13 +5,6 @@ The full text of the "Why it matters / status detail" column for the rows of
 row, its question, status and date and a short excerpt; **edit the long history here**, in the row's
 section, and keep the excerpt in the table in step with it. Row numbers are never reused.
 
-<a id="row-35"></a>
-## Row 35 — [[EU-EIDAS]]
-
-*Area: EU core.*
-
-Created purely so the [[NL-WDO]] question is expressible; its only source is the amending regulation. **Narrowed 2026-09-19**: its enactment date (23 July 2014), OJ citation, and EEA-EFTA applicability (via [[INTL-EEA-JCD-22-2018]], read directly) are now sourced. The regulation's own structure and trust-services provisions remain unresearched. **Partly narrowed 2026-09-25**: trust-services categories (electronic signatures, seals, qualified certificates) are now recorded in prose, sourced from Wikipedia only — `eur-lex.europa.eu`'s TXT/HTML form, which has worked for other EU instruments, returned empty content for this specific regulation on every attempt. **Structurally narrowed 2026-09-26**: `eur-lex.europa.eu` still returns empty content, but `legislation.gov.uk`'s own mirror of the UK-retained text, read directly, gives the full six-chapter structure and article-level detail for each trust service (signatures Art. 25-26, seals Art. 35-36, time stamps Art. 41, registered delivery Art. 43, website authentication Art. 45) — treated as reliable for structure/numbering, not as authoritative for the EU's own current in-force text, since it is UK-retained law. `coverage` raised to medium.
-
 <a id="row-43"></a>
 ## Row 43 — [[EU-EMDS]] ↔ [[NL-NTM]]
 
