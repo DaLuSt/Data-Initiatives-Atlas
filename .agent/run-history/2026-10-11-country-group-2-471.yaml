@@ -1,0 +1,14 @@
+date: "2026-10-11"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #471 (country group 2). Added eight of ten countries from their own government pages, each as an anchor plus
+  a thin first slice, nothing guessed: Benin (Digital Code 2017-20 and the APDP, cited on the Presidency's privacy page),
+  Botswana (Data Protection Act 2024 and the Commission, from the Attorney General's Chambers' e-Laws listing), Egypt
+  (MCIT and ITIDA from their English pages), Guyana (Data Protection Act 2023, from the published Bill), Iraq (the
+  e-signature law 78/2012, full English translation), Samoa (the National Digital Identification Act 2024 and the
+  Bureau of Statistics), Solomon Islands (Ministry of Communication and Aviation) and Uganda (NITA-U and its Personal
+  Data Protection Office). Yemen and Equatorial Guinea not added. Several data-protection laws are known from secondary
+  sources only and are not entities. Row #237 opened. A runner run failed in one second because an http:// address
+  was passed (the workflow takes https only).
+prs: []
+outcome: see git history
