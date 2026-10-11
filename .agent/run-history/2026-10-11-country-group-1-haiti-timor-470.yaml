@@ -1,0 +1,12 @@
+date: "2026-10-11"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #470 (country group 1), second pass. Haiti: the ONI's own site carries the full text of the decree of 1 June
+  2005 on national identification (read directly); added HT, HT-ONI (start 1987-09-21, from the decree's citation of
+  the 1987 decree that created the Office) and HT-DECRET-2005-ID; no data-protection act recorded (none in the decree;
+  the 2017 bill and 2018 arrêté stay unread leads). Timor-Leste: tic.gov.tl and pdhj.tl read directly; added TL,
+  TL-TIC and TL-PDHJ; no data-protection act recorded because both sources say none is in force. Lao PDR still open:
+  mtc.gov.la lists law categories without titles and the Official Gazette's search cannot be driven by a plain fetch.
+  India and Thailand unchanged (403 challenge). 63 -> 65 countries. Row #236 updated.
+prs: []
+outcome: see git history
