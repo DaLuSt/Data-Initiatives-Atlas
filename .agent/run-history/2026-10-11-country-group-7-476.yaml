@@ -1,0 +1,10 @@
+date: "2026-10-11"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #476 (country group 7), a short search-first pass. Added Jamaica (the Data Protection Act 2020 and the Office
+  of the Information Commissioner, read on the Office of the Prime Minister's page). Pakistan's draft bill address was
+  a 404; Saudi Arabia known from law-firm sources only; seven countries not searched. Row #242 opened. The yield of
+  groups 6 and 7 (3 of 20 countries, two of them thin) shows the limit is the hosts: most government sites in these
+  groups return 403 or 503 to both the agent and the runner.
+prs: []
+outcome: see git history
