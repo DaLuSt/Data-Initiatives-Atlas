@@ -53,7 +53,8 @@ in `unresolved.md`, and are not renumbered when a row is removed).
 
 | # | Area | Entity / Topic | Lead | Why it matters / where seen | Status | Noted |
 |---|---|---|---|---|---|---|
-| – | – | _(nothing is currently queued)_ | | | | |
+| 1 | Statistics oversight | Italy: Commissione per la garanzia della qualità dell'informazione statistica (COGIS) | A body under d.lgs. 322/1989 art. 12 (name changed in 2012-13) that checks impartiality and quality of the national statistical system; five members, five-year terms, Istat's president attends. Create it when a page can be read: the annual reports are at presidenza.governo.it/COGIS/ (the 2025 report returned HTTP 503 on 2026-10-11) | The UK's OSR, France's ASP and the EU's ESGAB are in; roadmap #459 asked whether other countries have the same layer. Facts here are from search results only | Open | 2026-10-11 |
+| 2 | Statistics oversight | Other countries: Ireland (National Statistics Board), Spain and Portugal (Consejo / Conselho Superior de Estatística), Austria (Statistikrat), Sweden (Statistikrådet), Germany (Statistischer Beirat) | Whether each has a body above or beside its statistical office, and what its own site says | Only names from the agent's own knowledge, no search done; do not create from this row | Open | 2026-10-11 |
 
 **Nothing is currently queued.** Every item this file has carried has either
 become a real entity, been found already covered by an existing one, or been
