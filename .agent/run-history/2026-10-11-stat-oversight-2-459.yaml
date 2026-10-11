@@ -1,0 +1,12 @@
+date: "2026-10-11"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #459, second pass on statistics oversight bodies. Added AT-STATISTIKRAT (Statistics Austria's own page: 16
+  members, five-year terms, annual report on compliance with the statistical principles of section 24 of the
+  Bundesstatistikgesetz 2000) and IE-NSB (nsb.ie: statutory since November 1994 under the Statistics Act 1993, steers the
+  CSO's strategy; a steering board, not a compliance watchdog, said in its text). Spain's Consejo Superior de Estadistica
+  was read on ine.es and is a consultative social-participation body (Ley 12/1989 art. 37), so it was not added.
+  Italy's COGIS (annual report 503) and Portugal, Sweden, Germany stay queued. The Austrian Act and the Irish Act were
+  not read, so no act entities were created.
+prs: []
+outcome: see git history
