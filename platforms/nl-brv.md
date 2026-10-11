@@ -68,8 +68,8 @@ relationships:
   - type: related-to
     target: EU-GDPR
     source: interpretation
-    evidence: "NARROWS discovery/unresolved.md row #141, does not close it. rdw.nl's own privacy-statement page, read directly (2026-09-19), names the AVG ('Algemene Verordening Gegevensbescherming (AVG), de wet die in Nederland en de Europese Unie de bescherming van persoonsgegevens regelt') as the law governing how the RDW handles the personal data it processes, and a separate rdw.nl page, also read directly, states 'Voor het kentekenregister en het Nationaal Parkeer Register heeft een onafhankelijk instituut vastgesteld dat de RDW aan alle privacy-aspecten voldoet' (an independent institute has determined the RDW complies with all privacy aspects for the kentekenregister and the National Parking Register) and that owner name/address data ('de tenaamgestelde') is not public. No single sentence read on any rdw.nl page names the AVG and the kentekenregister/BRV together in the same statement, so this stops short of the sourced fact the row asks for; it is recorded as `source: interpretation` at `confidence: low` rather than left as a bare legal inference from 'contains personal data' alone."
-    confidence: low
+    evidence: "NARROWS discovery/unresolved.md row #141, does not close it. rdw.nl's own privacy-statement page, read directly (2026-09-19), names the AVG ('Algemene Verordening Gegevensbescherming (AVG), de wet die in Nederland en de Europese Unie de bescherming van persoonsgegevens regelt') as the law governing how the RDW handles the personal data it processes, and a separate rdw.nl page, also read directly, states 'Voor het kentekenregister en het Nationaal Parkeer Register heeft een onafhankelijk instituut vastgesteld dat de RDW aan alle privacy-aspecten voldoet' (an independent institute has determined the RDW complies with all privacy aspects for the kentekenregister and the National Parking Register) and that owner name/address data ('de tenaamgestelde') is not public. No single sentence read on any rdw.nl page names the AVG and the kentekenregister/BRV together in the same statement, so this stops short of the sourced fact the row asks for; it is recorded as `source: interpretation` rather than left as a bare legal inference from 'contains personal data' alone. **2026-10-11 (roadmap #536, row #141 closed)**: rdw.nl's 'Gegevens die de RDW registreert' page, read directly, states the first half of that inference in the register's own words: 'In het kentekenregister registreren we voertuigen en de personen, bedrijven of andere organisaties' tied to them, and that market parties never receive personal data for commercial purposes; the page does not mention the AVG. Together with the privacy statement's AVG sentence this makes the edge a conclusion from two statements on the owner's own site, not from outside knowledge, so confidence moves from low to medium. The single sentence naming both was looked for on rdw.nl and not found; it is not expected, since RDW's statement is general. The UAVG is still not named by any source and no edge to it is asserted."
+    confidence: medium
     valid_from: null
     valid_until: null
 
@@ -175,6 +175,15 @@ kentekenregister together, so the connection is recorded as a low-confidence
 `related-to` [[EU-GDPR]] edge rather than the direct sourced fact the row
 originally asked for. **No relationship to [[NL-UAVG]] specifically is
 asserted** — nothing read names it at all, only the AVG.
+
+**Closed 2026-10-11** (roadmap #536, row #141). rdw.nl's page on the data
+RDW registers says the kentekenregister records vehicles *and* the persons,
+companies or organisations tied to them, which is the register's own
+statement that it holds personal data. With the AVG sentence above, the
+`related-to` edge is a conclusion from two statements on RDW's own site and
+is raised to `confidence: medium`. A single sentence naming the AVG and the
+register together was searched for and not found, and the Atlas will not wait
+for one: RDW's privacy statement is written for the organisation as a whole.
 
 ## Relationships
 

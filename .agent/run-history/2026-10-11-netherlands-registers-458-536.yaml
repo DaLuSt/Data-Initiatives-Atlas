@@ -1,0 +1,15 @@
+date: "2026-10-11"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #458 and #536 (the Dutch base-registry cluster). Decisions recorded in metadata/ontology.md section 6:
+  authentic data stays a membership of NL-BASISREGISTRATIES, not a field (revisit when a second country gives its
+  registers the same legal status); municipalities, provinces and water boards stay prose, linked via NL-VNG; registers
+  stay platform; Besluit/Regeling beneath a register statute are added only when an edge needs them or they hold a fact
+  the statute does not. Entities: NL-AWR (Hoofdstuk IVA basis of NL-BRI; NL-BRI governed-by moved to it; the page was
+  read directly, only the table of contents and original act date shown) and NL-DEFENSIE (the last BGT bronhouder; the
+  "no ministries" convention in NL-BGT did not exist, NL-BZK, NL-EZK and NL-IENW are entities). Row #141 closed:
+  rdw.nl states the kentekenregister records the persons tied to vehicles, so the GDPR edge on NL-BRV is raised from
+  low to medium; the single sentence naming both was not found and is not expected. Rows #141, #144, #150 removed; the
+  emptied discovery/unresolved/netherlands.md was deleted.
+prs: []
+outcome: see git history

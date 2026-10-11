@@ -96,8 +96,9 @@ as further governing PST's data handling.
 No separate `NO-POLITILOVEN` entity is created for the general Police
 Act: creating one to carry a single chapter would overstate what PST
 itself rests on, matching the threshold already applied elsewhere in the
-Atlas to provisions embedded in general statutes (e.g. the Dutch AWR's
-Chapter IVA). The relationship is recorded in prose rather than as a
+Atlas to provisions embedded in general statutes (until 2026-10-11 the Dutch
+AWR's Chapter IVA; [[NL-AWR]] is now an entity because it is the only statute
+behind its register). The relationship is recorded in prose rather than as a
 `governed-by` edge.
 
 ## One of Norway's three security services

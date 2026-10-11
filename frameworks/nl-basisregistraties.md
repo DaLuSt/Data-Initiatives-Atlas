@@ -299,7 +299,7 @@ closed 2026-08-30 via a research-queue pickup:**
 | [[NL-BRK]] | [[NL-KADASTERWET]] |
 | [[NL-BRT]] | [[NL-KADASTERWET]] — **the same act** |
 | [[NL-BRP]] | [[NL-WET-BRP]] — from Batch 3 |
-| [[NL-BRI]] | Chapter IVA (articles 21–22i) of the AWR, via `governed-by` → [[NL-BASISREGISTRATIES]] itself, the AWR not being a separate Atlas entity — confirmed directly against `wetten.overheid.nl`'s own text, correcting a previously-unchecked citation of "21 to 21k" to the true range, 21 to 22i |
+| [[NL-BRI]] | Chapter IVA (articles 21–22i) of the AWR, now [[NL-AWR]] (an entity since 2026-10-11; before that the edge pointed at this framework) — confirmed directly against `wetten.overheid.nl`'s own text, correcting a previously-unchecked citation of "21 to 21k" to the true range, 21 to 22i |
 
 ### Seven statutes, nine registers
 
