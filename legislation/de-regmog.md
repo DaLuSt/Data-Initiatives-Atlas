@@ -77,6 +77,16 @@ sources:
     publisher: "Deutscher Bundestag (Drucksache 19/26247, 27 January 2021)"
     accessed: "2026-10-01"
     note: "The committee's amendments take the Anlage from 56 to 51 entries."
+  - title: "Gesetzesbeschluss des Deutschen Bundestages: Registermodernisierungsgesetz (RegMoG)"
+    url: "https://dserver.bundestag.de/brd/2021/0121-21.pdf"
+    publisher: "Bundesrat (Drucksache 121/21, 12 February 2021)"
+    accessed: "2026-10-11"
+    note: "The Bundestag's vote of 28 January 2021, with its amendments (Maßgaben) to the bill; item 1 j) sets the Anlage at 51 entries."
+  - title: "Beschluss des Bundesrates: Registermodernisierungsgesetz (RegMoG)"
+    url: "https://dserver.bundestag.de/brd/2021/0121-21B.pdf"
+    publisher: "Bundesrat (Drucksache 121/21 (Beschluss), 5 March 2021)"
+    accessed: "2026-10-11"
+    note: "Consent to the Act, plus a resolution asking the Government to replace the Anlage's 'Bauvorlagenberechtigungsverzeichnisse' (Nr. 44) with the architects' and engineers' chambers' lists."
   - title: "RegMoG Registermodernisierungsgesetz"
     url: "https://www.buzer.de/RegMoG.htm"
     publisher: "buzer.de"
@@ -110,7 +120,10 @@ sources:
 > § 16 evaluation — and its Anlage lists **50** registers where this
 > entity's secondary sources say 51. Traced the same day through the
 > government bill (56) and the Interior Committee text (51): the secondary
-> sources' figure is the committee stage; the step to 50 is unexplained.
+> sources' figure is the committee stage. **Narrowed 2026-10-11**: the
+> Bundestag's vote and the Bundesrat's consent were read directly; the
+> Bauvorlagen item's replacement is explained and the removal of the § 91a
+> register is not (see the register-count section below).
 >
 > **Closed 2026-10-01** (`discovery/unresolved.md` row #217): the HTTP 400
 > on both `bmi.bund.de` pages was a missing session cookie, not a block.
@@ -195,6 +208,8 @@ Three primary texts, each read directly, give three different numbers:
 |---|---|---|
 | Government bill, 11 Nov 2020 | Bundestag Drucksache 19/24226 | **56** |
 | Interior Committee text, 27 Jan 2021 | Drucksache 19/26247 | **51** (the bill's 56 less five deleted) |
+| Adopted by the Bundestag, 28 Jan 2021 | Bundesrat Drucksache 121/21 (Gesetzesbeschluss) | **51**, the committee's amendments taken over unchanged |
+| Bundesrat consent, 5 Mar 2021 | Bundesrat Drucksache 121/21 (Beschluss) | **51**, with a request to reword Nr. 44 |
 | Promulgated Act, current consolidated text | `gesetze-im-internet.de` | **50** |
 
 The committee's amendments delete five entries, "Nummern 32, 40, 41, 46
@@ -214,17 +229,37 @@ technology partners) matches the committee text, not the promulgated
 Act.** Both are accurate for the stage they describe. The Act as
 promulgated has 50.
 
-**What is still unexplained** is the last step, 51 to 50. Compared with the
-committee text, the promulgated Anlage lacks the "Register zum
-vorübergehenden Schutz nach § 91a des Aufenthaltsgesetzes" and the
-"Bauvorlagenberechtigungsverzeichnisse", and adds a new item 43 for all
-lists, directories or registers that the Länder's architects' and
-engineers' chambers keep by law. Nothing in the committee report mentions
-either change, and the promulgated Anlage's Fundstelle, BGBl. I 2021,
-596-597, carries no amendment note. A plenary amendment, a change after the
-Bundestag vote or a later amendment are all possible and none is asserted.
-The Gazette text itself (`bgbl.de` serves only a JavaScript shell) and the
-Bundestag's final-vote record were not read.
+**The last step, 51 to 50, is now half explained.** The Bundestag's own
+vote of 28 January 2021 (Gesetzesbeschluss, Bundesrat Drucksache 121/21,
+read directly) adopted the committee's amendments, so the Anlage the
+Bundestag passed has **51** entries. It still contained the "Register zum
+vorübergehenden Schutz nach § 91a des Aufenthaltsgesetzes" (Nr. 41) and the
+"Bauvorlagenberechtigungsverzeichnisse" (Nr. 44). The promulgated Anlage has
+neither; it has instead a new item 43, "sämtliche von den Architekten- und
+Ingenieurkammern der Länder auf gesetzlicher Grundlage zu führenden Listen,
+Verzeichnisse oder Register".
+
+- **The Bauvorlagen item** is explained. On 5 March 2021 the Bundesrat
+  consented to the Act and resolved to ask the Government to replace the term
+  "Bauvorlagenberechtigungsverzeichnisse" in "Anlage Nummer 44" with exactly
+  that wording, because the chambers keep further lists (recognised experts,
+  structural designers, test engineers) and the architects have no separate
+  Bauvorlage register at all (Drucksache 121/21 (Beschluss)). The promulgated
+  text carries the requested wording, so it was applied before or at
+  promulgation (28 March 2021). The document read calls it a request for
+  "nächstmöglich" (at the next opportunity); the mechanism that put it into
+  the Act as signed (a correction before promulgation or otherwise) is not
+  documented in anything read. This replacement does not change the count.
+- **The § 91a AufenthG register** is **not explained**. It is in the 51 and
+  not in the 50, and neither the Bundesrat's resolution nor the committee
+  report mentions it. That one removal is the whole 51 to 50 difference.
+
+The Bundestag's plenary record of 28 January 2021 (206th sitting, Plenarprotokoll
+19/206, searched in full) has the debate on the Act but no mention of the
+§ 91a register, the Bauvorlagen item or any change to the Anlage. The Gazette
+text itself (`bgbl.de` serves only a JavaScript shell) was not read, and the
+promulgated Anlage's Fundstelle, BGBl. I 2021, 596-597, carries no amendment
+note.
 
 Two other details from the same documents. The bill's own problem statement
 cites a 2017 National Regulatory Control Council opinion putting the number
