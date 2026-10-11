@@ -1,0 +1,12 @@
+date: "2026-10-11"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #459, "do other countries have an oversight body above their statistics office". Added EU-ESGAB and its
+  establishing Decision EU-DECISION-235-2008 (the Decision read in full from the Official Journal via the Publications
+  Office resolver; Eurostat's ESGAB page read directly) and FR-ASP (Insee's and the Cnis's pages on the Autorite de la
+  statistique publique read directly; article 144 of the 2008 LME law and decree 2009-250 as stated there; membership
+  rules in the 1951 law not checked on Legifrance). Italy's COGIS found by search but its annual report returned 503,
+  so it is queued, not created; the remaining countries are queued as unresearched. 65 -> 65 countries, three entities
+  added. The UN-CES seat and the British Standard questions stay open (unece.org blocked, no readable current edition).
+prs: []
+outcome: see git history
