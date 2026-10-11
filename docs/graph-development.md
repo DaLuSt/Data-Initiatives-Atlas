@@ -328,13 +328,18 @@ that pack nodes into per-scope/per-country blocks:
     toward) and that the pull is real (a documented cross-border
     relationship ends up closer than its two countries' bare cluster
     separation).
-  - The panel's own starting position anchors to countries with at least
-    `TRAY_ANCHOR_MIN_ENTITIES` entities, not the single leftmost circle
-    overall — a country whose only content so far is its own anchor node
-    (Mexico, Argentina, Cape Verde…) can sit at an extreme longitude with
-    nothing else nearby, and anchoring the panel to it stranded every
-    supra-national entity tens of thousands of pixels from Europe, where
-    almost all of their actual relationships point. Tray-origin nodes also
+  - The panel's own starting position is anchored by quantile
+    (`TRAY_ANCHOR_QUANTILE`, 5% of all mapped entities, counted from the
+    west), not to the single leftmost circle overall and not to "countries
+    with at least N entities" — a country whose only content so far is its
+    own anchor node (Mexico, Argentina, Cape Verde…) can sit at an extreme
+    longitude with nothing else nearby, and anchoring the panel to it
+    stranded every supra-national entity tens of thousands of pixels from
+    Europe, where almost all of their actual relationships point. A fixed
+    count per country failed on 2026-10-11, when Canada reached five
+    entities and pulled the panel 30,000 px west of the 12,000 px a panel
+    entity may drift; every far-flung country crosses any such count
+    eventually. Tray-origin nodes also
     use a far weaker home spring and longer drift cap (`TRAY_HOME_SPRING`,
     `TRAY_MAX_DRIFT`) than country-anchored ones, since the panel is a
     parking spot for whatever the relationship pull doesn't reach, not a
