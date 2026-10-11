@@ -1,0 +1,11 @@
+date: "2026-10-11"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #473 (country group 4). Added four of ten: Chile (law 21.719 and the Agency, from the Diario Oficial of 17
+  June 2025 and the Academia Judicial; the Agency is planned, main provisions in force 1 December 2026), Togo (law
+  2019-014 and the IPDCP, read in the Journal officiel special number through an AFAPDP copy), Ethiopia (ECA only) and
+  Paraguay (MITIC only). The DPRK, Dominica, Kazakhstan, Myanmar, Namibia and Qatar not added (JavaScript shells, 403s,
+  timeouts, unresolved addresses). Row #239 opened. The Chile Diario Oficial PDF was found by search and read through
+  the fetch tool's saved copy of the binary, then pdftotext.
+prs: []
+outcome: see git history
