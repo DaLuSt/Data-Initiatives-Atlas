@@ -9,6 +9,9 @@ summary: >
   and engineers' chambers' lists, which is the wording in the promulgated Anlage (replacement, count unchanged). The
   removal of the § 91a register (51 to 50) is not explained by anything read, including the plenary record
   (Plenarprotokoll 19/206, searched in full). Row #226 narrowed to that one removal; the Gazette text is the
-  remaining source. DE-KOSIT/DE-FITKO and DE-BUNDID (the other two questions) not touched.
+  remaining source. The other two questions decided: DE-KOSIT is governed-by DE-IT-PLANUNGSRAT (high, created by its
+  decision 2010/19) and related-to DE-FITKO (medium) instead of a low-confidence part-of, with the Bremen hosting told in
+  text (relationship-types.md section 2.6; row #17 closed); DE-BUNDID stays a rename with a stated revisit trigger (a
+  source giving the DeutschlandID its own operator, legal basis or cut-over date; row #18 closed).
 prs: []
 outcome: see git history

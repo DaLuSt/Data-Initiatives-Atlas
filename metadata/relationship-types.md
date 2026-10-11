@@ -221,6 +221,21 @@ backlog's count of it.
    split: a type that is mostly scope (`applies-in`) still counts all its edges, and the box is what
    separates them. The mark is derived, never written in a file.
 
+### 2.6 Decisions of 2026-10-11 (roadmap #535)
+
+1. **A Land-hosted office inside a federal cooperation** ([[DE-KOSIT]], [[DE-FITKO]]; closes
+   `discovery/unresolved.md` row #17). Neither `part-of` nor `cooperates-with` is asserted, because
+   no source says the office is a unit of the cooperation (`part-of`) or that the two have an
+   agreement between them (`cooperates-with`, §2.1). **Rule:** record the body that created and
+   directs the office with `governed-by`; record the cooperation it works under with a plain
+   `related-to`; tell the host Land in the entity text, because the Atlas has no sub-national
+   level. No new type: §2.4 asks for a case the existing types cannot hold, and this one is held by
+   two true statements. [[DE-KOSIT]] is the first case.
+2. **A rename with no new thing** ([[DE-BUNDID]] to DeutschlandID; closes row #18). A new name for
+   a service that has the same operator, legal basis and users is an `alternative_name`, not a
+   `supersedes` edge. **Revisit** when a source gives the successor an operator, a legal basis or a
+   cut-over date of its own.
+
 ---
 
 ## 3. Facts vs. Atlas interpretation

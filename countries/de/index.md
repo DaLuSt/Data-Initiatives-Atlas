@@ -190,9 +190,10 @@ same ministry as [[DE-BSI]] and [[DE-DESTATIS]].
 - **Any Land or municipality.** The Atlas `level` vocabulary has no term
   between `national` and `local`, so the sixteen Länder — and the sixteen
   INSPIRE transposition acts, the sixteen Land data protection authorities,
-  and the Land-hosted [[DE-KOSIT]] — are not representable. This is the
-  German batch's principal finding about the ontology and is logged in
-  `discovery/unresolved.md`.
+  and the Land-hosted [[DE-KOSIT]] — are not representable as such (the
+  KoSIT's hosting in Bremen is told in its text; its edges are
+  `metadata/relationship-types.md` §2.6). This is the German batch's
+  principal finding about the ontology.
 - **Verwaltungsvereinbarungen** — the Bund-Länder administrative agreements
   underpinning [[DE-GOVDATA]] and [[DE-GDI-DE]]. No entity type fits.
 - Individual XÖV standards, gematik, national Gaia-X hubs,

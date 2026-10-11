@@ -37,12 +37,20 @@ domains:
 organisations: []
 related_entities:
   - DE-FITKO
+  - DE-IT-PLANUNGSRAT
 relationships:
-  - type: part-of
+  - type: governed-by
+    target: DE-IT-PLANUNGSRAT
+    source: fact
+    evidence: "de.wikipedia.org's dedicated KoSIT article, read directly (2026-08-28): the KoSIT was formally created by IT-Planungsrat decision 2010/19 of 24 September 2010 (as the OSCI-Leitstelle, renamed KoSIT on 1 April 2011), and the IT-Planungsrat assigned it its four responsibilities (XÖV development and operation, coordination and public relations, secure data transport, the standardisation agenda). xoev.de's own page, also read directly, says its creation 'followed constitutional amendments and an IT state treaty'. Recorded 2026-10-11 as the substantive edge in place of the earlier low-confidence part-of FITKO (roadmap #535, unresolved row #17 closed)."
+    confidence: high
+    valid_from: null
+    valid_until: null
+  - type: related-to
     target: DE-FITKO
     source: fact
-    evidence: "Confirmed by reading xoev.de's own page directly (2026-08-28): the KoSIT's creation 'followed constitutional amendments and an IT state treaty,' and it is organisationally located in Bremen's e-government department. docs.fitko.de's own page, also read directly, describes FITKO as operating the technical infrastructure for the documentation portal covering FIM and XÖV interoperability, but does not itself state a direct organisational 'part-of' relationship between KoSIT and FITKO — consistent with the tension already flagged in this entity's body between KoSIT's Bremen hosting and its being 'brought together under the roof of' FITKO. de.wikipedia.org, also read directly, independently confirms KoSIT's Bremen location and its formal creation by IT-Planungsrat decision 2010/19 of 24 September 2010, renamed from 'OSCI-Leitstelle' on 1 April 2011."
-    confidence: low
+    evidence: "Two sourced statements that a single part-of cannot hold together: the KoSIT is located in the e-government unit of Bremen's core administration (xoev.de and Wikipedia, both read directly 2026-08-28), and it is one of the bodies brought together under the FITKO's roof (geodaten.niedersachsen.de, as recorded on DE-IT-PLANUNGSRAT; docs.fitko.de describes FITKO running the FIM/XÖV documentation infrastructure but does not itself state an organisational part-of). Decision 2026-10-11 (roadmap #535, metadata/relationship-types.md §2.6): a Land-hosted office working inside a federal cooperation is recorded by this plain association plus the governance edge above, and the hosting is told in the entity text; part-of is not asserted because neither source says the KoSIT is a unit of the FITKO."
+    confidence: medium
     valid_from: null
     valid_until: null
 
@@ -100,36 +108,33 @@ Its role is the closest German analogue to [[NL-LOGIUS]]'s standards
 custody and to [[NL-FORUM-STANDAARDISATIE]]'s coordination function. **No
 relationship to either is asserted.**
 
-## ⚠ A hosting arrangement the model handles awkwardly
+## A Land-hosted office inside a federal cooperation
 
-Two sourced statements sit uneasily together, and this pass's direct
-reading does not resolve the tension — if anything it sharpens it:
+Two sourced statements sit side by side, and both are kept:
 
 1. The KoSIT is located in the Bremen state administration, confirmed
-   directly on two independent pages this pass.
+   directly on two independent pages.
 2. The KoSIT is among the institutions brought together *under the roof of*
-   the [[DE-FITKO]] — a description this entity has always carried, but
-   which docs.fitko.de's own page (read directly this pass) does not
-   itself restate in so many words; it describes FITKO operating shared
+   the [[DE-FITKO]], a description docs.fitko.de's own page (read directly)
+   does not restate in so many words; it describes FITKO operating shared
    technical infrastructure for FIM/XÖV documentation without asserting a
-   formal `part-of` relationship.
+   formal containment.
 
-Both can be true — a Land-hosted office operating within a federal
-cooperation structure is an ordinary German arrangement — but the Atlas has
-no way to say that cleanly. `part-of` [[DE-FITKO]] is recorded at
-**`confidence: low`** for exactly this reason, and Bremen is not modelled
-at all, because the Atlas has no sub-national level (see
-`countries/de/index.md`).
-
-This is the second country's most useful finding about the ontology: the
-`level` vocabulary is adequate for a unitary state and lossy for a federal
-one. Logged in `discovery/unresolved.md`.
+A Land-hosted office operating within a federal cooperation structure is an
+ordinary German arrangement. **Decision, 2026-10-11 (roadmap #535, row #17
+closed):** the model needs no second edge type. The office is `governed-by`
+the [[DE-IT-PLANUNGSRAT]] that created it (high confidence, sourced) and
+`related-to` the [[DE-FITKO]] (medium confidence), and the Bremen hosting is
+told here, because the Atlas has no sub-national level (see
+`countries/de/index.md`). The earlier `part-of` [[DE-FITKO]] at low
+confidence asserted containment that no source states, and
+`cooperates-with` would assert a formal agreement between the two that no
+source describes either. See `metadata/relationship-types.md` §2.6.
 
 ## Relationships
 
-- `part-of` [[DE-FITKO]] — at low confidence, see above; this pass's direct
-  reading kept it at low rather than raising it, since no page states the
-  relationship as plainly as the entity's prose does.
+- `governed-by` [[DE-IT-PLANUNGSRAT]] — created by its decision 2010/19.
+- `related-to` [[DE-FITKO]] — under its roof, hosted in Bremen; see above.
 
 Inbound: [[DE-XRECHNUNG]] and [[DE-XOEV]] are both `maintained-by` this
 entity.
