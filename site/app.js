@@ -1125,21 +1125,37 @@
     // grouped layout's international band is (metadata/ontology.md §2.1),
     // so switching between Map and Grouped doesn't reshuffle it.
     //
-    // Its X position is anchored to countries with at least a handful of
-    // entities, not the single leftmost circle overall — a country whose
-    // only content so far is its own anchor node (Mexico, Argentina, Cape
-    // Verde…) can sit at an extreme longitude with nothing to keep it
-    // company, and anchoring to it would strand the tray tens of thousands
-    // of pixels from the part of the Atlas anyone is actually looking at.
-    // The tray belongs beside the substantial part of the map, not beside
-    // whichever country has the least content.
-    var TRAY_ANCHOR_MIN_ENTITIES = 5;
-    var anchorCircles = circles.filter(function (c) {
-      return c.block.list.length >= TRAY_ANCHOR_MIN_ENTITIES;
+    // Its X position is anchored to the substantial part of the map, not to
+    // the single leftmost circle overall — a country whose only content so
+    // far is its own anchor node (Mexico, Argentina, Cape Verde…) can sit at
+    // an extreme longitude with nothing to keep it company, and anchoring to
+    // it would strand the tray tens of thousands of pixels from the part of
+    // the Atlas anyone is actually looking at.
+    //
+    // "Substantial" used to mean "a country with at least five entities".
+    // That broke the day Canada reached five (anchor plus four): its
+    // longitude put the tray ~30,000 px further west, past the 12,000 px a
+    // tray entity may drift, and the Council of Europe stopped reaching its
+    // member states. A count per country is the wrong unit — every new
+    // far-flung country crosses it eventually — so the tray is anchored by
+    // quantile instead: walking the circles from the west, the first one at
+    // which TRAY_ANCHOR_QUANTILE of all mapped entities lie at or west of it
+    // sets the edge. A handful of western outliers, however many countries
+    // they are, never reach that share on their own.
+    var TRAY_ANCHOR_QUANTILE = 0.05;
+    var totalMapped = 0;
+    circles.forEach(function (c) { totalMapped += c.block.list.length; });
+    var byLeftEdge = circles.slice().sort(function (a, b) {
+      return (a.cx - a.r) - (b.cx - b.r);
     });
-    if (!anchorCircles.length) anchorCircles = circles;
-    var minX = 0;
-    anchorCircles.forEach(function (c) { minX = Math.min(minX, c.cx - c.r); });
+    var minX = 0, seen = 0;
+    for (var ci = 0; ci < byLeftEdge.length; ci++) {
+      seen += byLeftEdge[ci].block.list.length;
+      if (seen >= totalMapped * TRAY_ANCHOR_QUANTILE) {
+        minX = Math.min(0, byLeftEdge[ci].cx - byLeftEdge[ci].r);
+        break;
+      }
+    }
 
     var trayOrder = ["INTL", "UN", "DOMAIN"];
     var trayKeys = Object.keys(trayGroups).sort(function (a, b) {
