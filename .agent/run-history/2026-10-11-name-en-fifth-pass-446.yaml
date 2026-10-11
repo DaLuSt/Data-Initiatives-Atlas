@@ -1,0 +1,12 @@
+date: "2026-10-11"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #446, fifth pass at English names. Fourteen English pages tried on a runner (fetch-pages.yml) for Kadaster,
+  PKN, AgID, the Polish digital ministry, UWV, SVB, the Liechtenstein data protection office, the Norwegian intelligence
+  service, Riigi Teataja, the Basque IZFE/EJIE, the Polish Foreign Intelligence Agency and the Danish health data
+  agency: none gave an English name for the body (shells, 403/404, challenges, or the English page keeps the original
+  name). A one-off count found 240 records outside GB/IE/EU/UN without name_en, most of them brand or proper names.
+  Rule recorded in row #233: add a name_en when a record is next re-verified and its own source gives one, not in bulk
+  passes. Nothing translated by a session.
+prs: []
+outcome: see git history
