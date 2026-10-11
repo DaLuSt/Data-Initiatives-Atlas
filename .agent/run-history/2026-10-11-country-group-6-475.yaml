@@ -1,0 +1,12 @@
+date: "2026-10-11"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #475 (country group 6), first pass, searching for official pages first as the group 5 lesson said. Added the
+  United Arab Emirates (the federal personal-data law, the decree-law that set up the UAE Data Office and the Office,
+  from the UAE Government's portal) and Singapore (the PDPC only, thin: its About page is a shell). Eight countries not
+  added: Nigeria, Indonesia, Viet Nam, Zambia (403s, certificate errors, 503s on the agent and the runner), Sierra Leone
+  (404 on the addresses search gave), El Salvador, Cuba, Nicaragua (no official page reached). Row #241 opened. The
+  search-first approach cut wasted runner runs (one runner run for nine addresses, all blocked) but the main limit is the
+  hosts, not the guessing.
+prs: []
+outcome: see git history
