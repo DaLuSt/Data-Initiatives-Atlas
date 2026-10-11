@@ -1,0 +1,12 @@
+date: "2026-10-11"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #472 (country group 3). Added six of ten: Canada (PIPEDA, Privacy Act, OPC, Directive on Open Government,
+  all read on Government of Canada sites), Sri Lanka (the Data Protection Authority's home and background pages: Act
+  No. 9 of 2022 passed 19 March 2022, Part V in force 17 July 2023), Gabon (law 025/2023 read in the Journal officiel
+  through an AFAPDP copy; creates the APDPVP), Sao Tome and Principe (Lei 03/2016 in a French rendering; ANPDP in
+  Article 44), The Gambia (the 2024 Bill on the National Assembly's site, status proposed) and Malawi (MACRA only).
+  Algeria, Belize, Honduras and Mauritania not added (JavaScript shell, 500, scanned PDF, 403 challenge, 404). Row #238
+  opened. An OPC entity was first written with a name_en equal to its name and rejected by the validator; removed.
+prs: []
+outcome: see git history
