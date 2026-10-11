@@ -153,9 +153,18 @@ same operator, the same legal basis. Creating `DE-DEUTSCHLANDID` with a
 describe.
 
 *DeutschlandID* is recorded as an `alternative_name`, which is where the
-Atlas puts a name a thing is also known by. If the transition turns out to
-involve a genuinely distinct service, this is the entity to revisit.
-Logged in `discovery/unresolved.md`.
+Atlas puts a name a thing is also known by.
+
+**Decision, 2026-10-11 (roadmap #535, row #18 closed):** the rename model
+stays. Every source read (Brandenburg's OZG page, digitale-verwaltung.de's
+BundID page, the BMDS page) describes one account being developed, not a
+second service going live beside it, and no source gives the DeutschlandID
+a launch date, an operator or a legal basis of its own. Creating an entity
+for something that is not yet a separate thing would invent a successor.
+**Revisit when** a source states one of those three about the DeutschlandID
+that differs from BundID's (a different operator, a different statute, or a
+cut-over date on which BundID is switched off); then add the entity and a
+`supersedes` edge, and set `successor` here.
 
 ## ⚠ eIDAS: a relationship recorded at low confidence
 
