@@ -48,6 +48,7 @@ related_entities:
   - NL-SVB-BGT
   - NL-RIJKSWATERSTAAT
   - NL-PRORAIL
+  - NL-DEFENSIE
   - NL-RVO
 relationships:
   - type: governed-by
@@ -146,9 +147,9 @@ the Atlas can name. Of the seven bronhouder categories:
 - ~~[[NL-PRORAIL]] and [[NL-RVO]] — unmodelled~~ — closed 2026-09-13.
   ProRail (the state-owned rail infrastructure manager) is confirmed as a
   named bronhouder by SVB-BGT's own site; RVO is confirmed as a named
-  board representative by SVB-BGT's own "Bestuursleden" page. **Only the
-  Ministry of Defence remains unmodelled**, matching the Atlas's
-  convention of not modelling ministries in their own right;
+  board representative by SVB-BGT's own "Bestuursleden" page. The last one,
+  the Ministry of Defence, is now [[NL-DEFENSIE]] (2026-10-11; the supposed
+  convention against modelling ministries did not exist);
 - ~~**SVB-BGT** — no entity; named in one source only~~ — closed
   2026-09-06, now [[NL-SVB-BGT]], sourced from its own site directly:
   a foundation (statutes ratified 15 April 2014) coordinating all seven

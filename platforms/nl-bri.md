@@ -41,6 +41,7 @@ organisations:
 related_entities:
   - NL-BASISREGISTRATIES
   - NL-BELASTINGDIENST
+  - NL-AWR
 relationships:
   - type: part-of
     target: NL-BASISREGISTRATIES
@@ -57,9 +58,9 @@ relationships:
     valid_from: 2009-01-01
     valid_until: null
   - type: governed-by
-    target: NL-BASISREGISTRATIES
+    target: NL-AWR
     source: fact
-    evidence: "Confirmed by reading wetten.overheid.nl's own consolidated text of the Algemene wet inzake rijksbelastingen (BWBR0002320) directly (2026-08-30): Hoofdstuk IVA, titled 'Basisregistratie inkomen', runs from article 21 to article 22i — not 21 to 21k as this entity previously stated, a citation inherited from Wikipedia and never independently checked against primary legal text. Article 21 opens: 'In dit hoofdstuk en de daarop berustende bepalingen wordt verstaan onder: a. basisregistratie: verzameling gegevens waarvan bij wet is bepaald dat deze authentieke gegevens bevat...' and Article 21a states plainly: 'Er is een basisregistratie inkomen waarin inkomensgegevens met bijbehorende temporele en meta-kenmerken zijn opgenomen' (there is a base registry of income in which income data with associated temporal and meta characteristics are recorded) — closing the research-queue item that had stood open since the register batch, since the AWR itself is not modelled as a separate Atlas entity and this is the closest the ontology allows to a `governed-by` edge for the chapter that constitutes the BRI."
+    evidence: "Confirmed by reading wetten.overheid.nl's own consolidated text of the Algemene wet inzake rijksbelastingen (BWBR0002320) directly (2026-08-30, table of contents re-read 2026-10-11): Hoofdstuk IVA, titled 'Basisregistratie inkomen', runs from article 21 to article 22i — not 21 to 21k as this entity previously stated. Article 21 opens: 'In dit hoofdstuk en de daarop berustende bepalingen wordt verstaan onder: a. basisregistratie: verzameling gegevens waarvan bij wet is bepaald dat deze authentieke gegevens bevat...' and Article 21a states plainly: 'Er is een basisregistratie inkomen waarin inkomensgegevens met bijbehorende temporele en meta-kenmerken zijn opgenomen' (there is a base registry of income). [[NL-AWR]] became an entity on 2026-10-11 (roadmap #458); this edge replaces the one that pointed at NL-BASISREGISTRATIES for want of it."
     confidence: high
     valid_from: null
     valid_until: null
@@ -184,12 +185,9 @@ vocabulary for how data actually moves between them.
 
 - `part-of` [[NL-BASISREGISTRATIES]].
 - `maintained-by` [[NL-BELASTINGDIENST]].
-- `governed-by` [[NL-BASISREGISTRATIES]] — the closest the ontology allows,
-  since the AWR itself is not a separate Atlas entity (no law entity was
-  created for any of the other nine registers' statutes that already
-  existed as general acts, e.g. [[NL-KADASTERWET]] and [[NL-WET-WOZ]]).
-  The chapter citation (articles 21–22i) is now confirmed directly against
-  primary legal text.
+- `governed-by` [[NL-AWR]] — Chapter IVA, articles 21–22i, confirmed
+  directly against primary legal text. Until 2026-10-11 this edge pointed at
+  [[NL-BASISREGISTRATIES]] because the AWR was not an entity.
 
 ## Sources
 

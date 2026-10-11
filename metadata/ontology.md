@@ -435,7 +435,38 @@ least one real example, a `schema_version` bump), never to settle one record.
 | [[NL-COMMON-GROUND]] | `initiative`, `framework`, `programme` | stays `initiative` | the sources use it as a vision first; the programme is a part of it |
 | [[NL-GDI]] | `platform`, `framework` | stays `platform` | its own name is an infrastructure; the agreements inside it are described in prose |
 | [[NL-BASISREGISTRATIES]] | `framework`, `platform` | stays `framework` | it is the *stelsel*, not a single register |
-| the ten basisregistraties | `platform`, a missing `register` type | stay `platform` | no `register` or `dataset` type exists and one would touch ten files and the schema; the question moves to #458 (register typing), where authentic data is decided |
+| the ten basisregistraties | `platform`, a missing `register` type | stay `platform` | no `register` or `dataset` type exists and one would touch ten files and the schema; decided in the section below (roadmap #458) |
 | [[NL-BIO]] | one entity or two | stays one with versions | BIO2 is a new version of a continuously named baseline, unlike Wob and Woo or Archiefwet 1995 and 2026, which are separate instruments with their own legal basis; split it if a re-verification contradicts this |
 | ISO/IEC JTC 1 | an entity or none | not modelled | it sits between the two organisations and the standards; model it when a source ties a standard to it by name |
+
+### The Dutch base registries (decided 2026-10-11, roadmap #458 and #536)
+
+The Netherlands is the best-covered country and its register cluster is the pattern other countries'
+registers will copy, so the four questions it raised are answered here.
+
+1. **Authentic data (*authentiek gegeven*) is not a field.** The status (data that other bodies must
+   use and may not re-determine) belongs to a register because a statute makes it a *basisregistratie*,
+   and all ten registers carry a `part-of` edge to [[NL-BASISREGISTRATIES]], whose entity states
+   the status and the definition from the AWR. A boolean field would be true for exactly those ten
+   records and repeat the edge. **Revisit** when a second country's sources give its registers the same
+   legal status as a category worth filtering (a lead to check, not a finding: Belgium's *authentieke
+   bronnen*); then add an optional field under `metadata/metadata-schema.md` and a `schema_version` bump.
+2. **Municipalities, provinces and water boards are not entities.** The sources name them only as a class
+   (every municipality holds the BAG, determines WOZ values, is a BGT *bronhouder*), no source gives the
+   class an actor of its own, and an entity per municipality is a different project. They are told in the
+   text of the register, and [[NL-VNG]] is the link where a source ties them to it. `level: local` stays
+   unused (`discovery/unresolved.md` row #231).
+3. **Registers stay `platform`.** A `register` type would retype ten Dutch records and, to be consistent,
+   those of other countries, for no question the site answers today. Revisit under
+   `metadata/relationship-types.md` §2.4 if a filter needs registers apart from platforms.
+4. **Subordinate instruments beneath a register statute (*Besluit*, *Regeling*) are not modelled by
+   default.** The register's statute is the entity; the decree and the ministerial regulation beneath it
+   are told in its prose. One is added when an Atlas edge needs it as a target or when it holds a fact the
+   statute does not (the BRO's amendment that made the drinking-water companies source holders, Stb. 2025,
+   35, is such a fact and sits in the [[NL-BRO]] text). No set is added in bulk.
+5. **Ministries are modelled.** The note in [[NL-BGT]] that the Atlas does not model ministries in their
+   own right described a convention that does not exist ([[NL-BZK]], [[NL-EZK]], [[NL-IENW]] are
+   entities); the Ministry of Defence is now [[NL-DEFENSIE]].
+6. **The statute behind each register exists.** [[NL-AWR]] was the last missing; it is recorded for its
+   Hoofdstuk IVA, which is [[NL-BRI]]'s basis.
 
