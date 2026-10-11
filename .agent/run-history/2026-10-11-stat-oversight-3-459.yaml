@@ -1,0 +1,11 @@
+date: "2026-10-11"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #459, third pass on bodies beside or above statistical offices. Added SE-ROS (Statistics Sweden's own page:
+  established 1 February 2002, directive 2016:822, advises and supports Statistics Sweden's coordination, chaired by its
+  Director General) and DE-STATISTISCHER-BEIRAT (paragraph 4 BStatG read on gesetze-im-internet.de: advises the Federal
+  Statistical Office and represents the users). Both entity texts say they are advice and coordination bodies, not
+  independent watchdogs like GB-OSR, FR-ASP and EU-ESGAB. Portugal's Conselho Superior de Estatistica stays queued (the
+  Diario da Republica is a JavaScript shell). Queue row 2 rewritten.
+prs: []
+outcome: see git history
