@@ -14,6 +14,11 @@ and a dated **data release** (`YYYY.MM.N`) for each snapshot.
 
 In the Atlas at this release: 855 entities (+110), 1,704 typed relationships (+128), 89 countries (+31).
 
+### Highlights
+
+- Coverage grows from 58 to 89 countries, each added from official sources; what could not be read is recorded openly.
+- The site is more accessible: an accessibility statement, a barrier-report form, a working "Skip to content" link and contrast fixes.
+
 ### Schema
 
 - Netherlands registers (#458, #536): decisions, NL-AWR, NL-DEFENSIE (#609)
