@@ -34,9 +34,9 @@ discovery:
 validation_status: clean
 
 release:
-  data: "2026.10.2"
+  data: "2026.10.3"
   schema: "1.0.0"
-  released: "2026-10-08"
+  released: "2026-10-12"
 
 # The per-PR log is no longer kept here: every session recorded its PR in this one
 # file, so parallel sessions collided on it. Each session writes its own dated file in
