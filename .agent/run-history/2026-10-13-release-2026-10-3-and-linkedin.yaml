@@ -9,9 +9,10 @@ summary: >
   did start, at 13:11 UTC (about eight hours late), and correctly did nothing (only housekeeping since). The
   LinkedIn post job was skipped because LINKEDIN_POST_ENABLED was not "true"; the owner set it, and the next job failed
   with ModuleNotFoundError: yaml (the automatic path imported PyYAML in a job that installs nothing). Fixed in #624
-  (sed instead of yaml, two tests); the owner asked for the merge and it was merged. Release 2026.10.3 itself still
-  has to be posted by running "Post release on LinkedIn" by hand with version 2026.10.3 (dry run first) or by pasting
-  the text from #623.
+  (sed instead of yaml, two tests); the owner asked for the merge and it was merged. The owner then ran "Post release on LinkedIn"
+  by hand for 2026.10.3 (a dry run at 05:52 UTC, a real run at 05:53, both successful); the post went out, issue #623 was
+  labelled linkedin-posted and closed with a comment linking the post. That proves the posting step, the token and the
+  environment approval; what stays untested is the automatic run after the next release.
 prs:
   - number: 622
     title: "Release data 2026.10.3"
