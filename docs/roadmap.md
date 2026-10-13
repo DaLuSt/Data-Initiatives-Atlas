@@ -97,7 +97,7 @@ board, add a view with the *Roadmap* layout and set its start and end to
 **Start date** and **Target date**. Views are not available through the
 workflow's token.
 
-## The plan at a glance (snapshot, 2026-10-08)
+## The plan at a glance (snapshot, 2026-10-13)
 
 This is a reading of the milestones on one day, to show roughly what is aimed at
 which release. The live version is the milestones and the board; this table ages.
@@ -107,58 +107,61 @@ most likely to move. From 2027.01 the plan also adds the regional layer (#539, t
 sub-regions, two per month, ending 2027.11): each sub-region's regional bodies and
 instruments, not the country anchors. A month with many items is not a promise that all of them fit.
 
+**Done so far (24 items, 2026-10-07 to 2026-10-13):** the first release and the board (#443, #444);
+CSV export and the Explorer fix (#445, #447); the backlog reconciled (#448); the constitutional-rank gaps and the
+founding-six date (#449, #533); the consistency checks (#461) and the move of the generator-only checks into the
+validators (#528); the Dutch registers (#458, #536); the eIDAS cluster (#534); the EU and UN links (#537); the
+Node 24 actions, the data-correction form and the same checks for deploys (#493, #494, #529); the blocked sources
+read on runners (#495); the browser tests (#526); successor links (#527); automatic LinkedIn posts (#515); the
+types decision (#499); load time (#507); the release review (#498); and the Directorates-General (#509).
+Part of #500 (what `country` means) and of #508 (the Country filter) is done; the rest of each is below.
+
 | Release | Data and research | Site and tooling | Decisions and schema |
 |---|---|---|---|
-| **2026.10** (now) | Weekly release pull requests continue; LinkedIn post drafts open as issues | Board sync, shared checks (one list, `tools/check_all.py`), Node 24 actions, the accessibility statement, #507 load time and the #508 scale check (map decision open) are done | |
-| **2026.11** | #446 English names for the last records; #459 UK gaps; #527 successor links | | |
-| **2026.12** | #495 read the blocked sources on GitHub's runners | #526 repair the browser tests; #496 token expiry plan; #452 test with real visitors | #533 founding-six date; #449 rank gaps; #450 which thin domains to deepen |
-| **2027.01** | regions: #540 W Europe and #541 N Europe; #470 countries, group 1; #502 re-check Q1 | #497 accessibility audit; #515 LinkedIn auto-post (needs a LinkedIn app); #528 checks into the validators; #498 release cadence review | |
-| **2027.02** | regions: #542 S Europe and #543 E Europe; #471 countries, group 2; #534 eIDAS cluster; #535 Germany's three questions | | #499 records that fit two types; #457 vocabulary decisions |
-| **2027.03** | regions: #544 N America and #545 S America; #472 countries, group 3; #500 data spaces; #501 standards bodies; #460 coverage gaps | | |
-| **2027.04** | regions: #546 C America and #547 Caribbean; #473 countries, group 4; #503 re-check Q2 | | #506 multilingual names; #458 Dutch registers and authentic data |
-| **2027.05** | regions: #548 N Africa and #549 W Africa; #474 countries, group 5; #536 Dutch registry edges; #537 EU and UN links | | |
-| **2027.06** | regions: #550 E Africa and #551 Middle Africa; #475 countries, group 6 | #508 the site at 200 countries | #509 EU institutions; #461 consistency checks |
-| **2027.07** | regions: #552 S Africa and #553 W Asia; #476 countries, group 7; #504 re-check Q3 | #510 annual re-verification policy | |
-| **2027.08** | regions: #554 C Asia and #555 S Asia; #477 countries, group 8 | | #511 UN system and development banks |
-| **2027.09** | regions: #556 E Asia and #557 SE Asia; #478 countries, group 9 | #512 linked-data export (a proposal) | |
-| **2027.10** | regions: #558 Australia and NZ and #559 Melanesia; #479 countries, group 10; #505 re-check Q4 | | |
-| **2027.11** | regions: #560 Micronesia and #561 Polynesia (#539, the umbrella for the regions, closes); #480 countries, group 11 | | |
-| **2027.12** | #481 countries, group 12 | | |
-| **2028.01** | #482 countries, group 13 | | #513 is a schema 2.0 needed? |
-| **2028.02** | #483 countries, group 14; #451 (the umbrella for all the country groups) closes | | |
+| **2026.11** | #446 English names for the last records; #459 UK gaps | #578 renew the LinkedIn token |  |
+| **2026.12** | #450 thin domains (what is left) | #496 token expiry (owner sets the variables) |  |
+| **2027.01** | regions: #540 W Europe and #541 N Europe; #470 countries, group 1; #502 re-check Q1 | #497 manual accessibility checks |  |
+| **2027.02** | regions: #542 S Europe and #543 E Europe; #471 countries, group 2; #535 Germany's § 91a question | #452 test with real visitors and devices | #457 vocabulary decisions |
+| **2027.03** | regions: #544 N America and #545 S America; #472 countries, group 3; #460 coverage gaps; #500 data spaces (three parts left); #501 standards bodies |  |  |
+| **2027.04** | regions: #546 C America and #547 Caribbean; #473 countries, group 4; #503 re-check Q2 |  | #506 multilingual names |
+| **2027.05** | regions: #548 N Africa and #549 W Africa; #474 countries, group 5 |  |  |
+| **2027.06** | regions: #550 E Africa and #551 Middle Africa; #475 countries, group 6 | #508 the site at 200 countries (map decision open) |  |
+| **2027.07** | regions: #552 S Africa and #553 W Asia; #476 countries, group 7; #504 re-check Q3 | #510 annual re-verification policy |  |
+| **2027.08** | regions: #554 C Asia and #555 S Asia; #477 countries, group 8 |  | #511 UN system and development banks |
+| **2027.09** | regions: #556 E Asia and #557 SE Asia; #478 countries, group 9 | #512 linked-data export (a proposal) |  |
+| **2027.10** | regions: #558 Australia and NZ and #559 Melanesia; #479 countries, group 10; #505 re-check Q4 |  |  |
+| **2027.11** | regions: #560 Micronesia and #561 Polynesia; #480 countries, group 11; #539 the regional layer (umbrella) |  |  |
+| **2027.12** | #481 countries, group 12 |  |  |
+| **2028.01** | #482 countries, group 13 |  | #513 is a schema 2.0 needed? |
+| **2028.02** | #483 countries, group 14; #451 the country groups (umbrella) |  |  |
 
-**Dependencies worth knowing.** #495 (blocked sources) comes before the research items
-that were stopped by a blocked page (#534, #535, #537). #458 (Dutch modelling) comes before
-#536. #457 and #499 (vocabulary and types) come before #513 (does the schema need a major
-version). The accessibility audit (#497) rewrites `ACCESSIBILITY.md`.
-The regional layer (#539) needs the owner's answer on whether regions are blocs only (the
-recommendation) before #540 starts; #511 (UN system) holds the UN regional commissions.
+**Dependencies worth knowing.** #457 (vocabulary decisions) comes before #513 (does the schema need a
+major version). The manual accessibility checks (#497) update `ACCESSIBILITY.md`. #508 waits for the owner's
+decision on the world map (`.agent/needs-human/world-map-fit.md`). The regional layer (#539) needs the owner's
+answer on whether regions are blocs only (the recommendation) before #540 starts; #511 (UN system) holds the UN
+regional commissions. #578 (the LinkedIn token) and #496 (the board token) need the owner.
 
 ### Where each open question in `discovery/` lives
 
-Every open row of `discovery/unresolved.md` was read on 2026-10-08. Rows that are recorded
-declines (#229, #230, #231, #232) or deliberate non-assertions (#88, #97, #116) need no work.
+Every open row of `discovery/unresolved.md` was matched to an item on 2026-10-13. Rows that are
+recorded declines (#229, #230, #231, #232) or deliberate non-assertions (#88, #97, #116) need no work.
 
 | Rows | Roadmap item |
 |---|---|
-| #2 | #533 |
-| #4, #70, #179, #216 to #225 (blocked sources) | #495, then the items that were waiting on a page |
-| #8, #43, #66, #120, #124, #125 | #500 |
+| #43, #66, #120, #124, #125 | #500 (row #8, what `country` means, is decided) |
+| #4, #70, #179, #216 to #220, #222 to #225 (blocked sources) | the items that were waiting on a page; #495 found what a runner can read (row #235 records it) |
 | #9 | #506 |
-| #11 | #449 |
-| #12, #31, #144 | #458, #536 |
+| #11 | declined by the owner on 2026-10-09; the row keeps the unranked instruments |
+| #12 | the Dutch registers, decided in #458 and #536; the row keeps the vocabulary questions |
 | #13, #44, #53, #54, #92, #93, #153, #154 | #457 |
-| #15, #16 | #509 |
-| #17, #18, #226 | #535 |
-| #19 to #27, #29, #32 | #499 |
-| #35, #36 | #534 |
-| #90, #91, #95, #117, #139 | #502 to #505 (quarterly re-checks) |
-| #141, #150 | #536 |
+| #19 | #499 (the rule is decided; whether the health data space is split from its regulation is the row's question) |
+| #90, #91, #117, #139 | #502 to #505 (quarterly re-checks) |
 | #168 | #511 |
-| #174, #227 | #537 |
 | #187, #200, #209 | #501 |
+| #226 | #535 |
 | #233 | #446 |
 | #234 | #459 |
+| #236 to #242 | #470 to #476 (the countries of each group whose laws were not read) |
 | #5 | mostly done (the `subnational` level exists and is used for Belgium, Germany and Spain); the row is a candidate for closing |
 
 `discovery/candidates.md` C9 (thin domains) is #450 and C10 (countries) is #451 and its

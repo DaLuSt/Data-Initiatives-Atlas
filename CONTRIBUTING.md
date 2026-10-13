@@ -113,8 +113,9 @@ fields, invalid controlled-vocabulary values, broken internal `[[wikilinks]]`,
 invalid relationship types/targets, and missing/malformed source metadata. The
 test scripts cover the generator, the re-verification tool and the release
 tooling. The same checks run automatically on pull requests via
-`.github/workflows/validate.yml`. A PR with failing validation will not be
-merged.
+`.github/workflows/validate.yml`, which also runs the site in a real browser
+(`tools/test_ui.mjs`; see `docs/graph-development.md` to run it yourself if you change
+`site/`). A PR with failing validation will not be merged.
 
 ## Versions and releases
 

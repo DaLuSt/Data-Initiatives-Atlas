@@ -205,7 +205,16 @@ about 50 days to renew the token.
   unless the variable `LINKEDIN_API_VERSION` (`YYYYMM`) is set; if LinkedIn answers
   "426" or says the version is not active, set that variable to a current one.
 
-### Switching it on
+### Status (2026-10-13)
+
+It is switched on and the posting step works: the owner ran *Post release on LinkedIn* by
+hand for release 2026.10.3 (a dry run, then a real run, both approved in the `linkedin`
+environment), the post went out, and the owner confirmed it works. `LINKEDIN_POST_ENABLED`
+is set. **Not yet seen:** the automatic start after a release is published; the first
+release after 2026-10-13 is its first test (the job's first automatic attempt failed on a missing
+PyYAML and was fixed in #624). The token expires on **2026-12-06**; renewing it is roadmap #578.
+
+### Switching it on (the steps used)
 
 1. In the environment `linkedin` you should have the secrets `LINKEDIN_ACCESS_TOKEN`
    and `LINKEDIN_AUTHOR_URN` and the variable `LINKEDIN_TOKEN_EXPIRES` (done).

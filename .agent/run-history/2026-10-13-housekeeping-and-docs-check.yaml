@@ -1,0 +1,20 @@
+date: "2026-10-13"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Housekeeping and a check that the README, the documents in docs/ and the roadmap are up to date (the owner wrote
+  "docx"; the repository has no .docx files, so docs/ was checked). Found and fixed: the README's repository tree
+  left out 3 of the 8 workflows, 13 tool files, 3 of the 12 docs, ACCESSIBILITY.md and the shared action (now complete, with a
+  line on each); docs/roadmap.md's plan table still listed finished items and its question-to-item table pointed at 26
+  closed rows (the table is rebuilt from the live milestones, the done items are one paragraph, rows #236 to #242 are
+  mapped); docs/github-pages.md described two workflows, "32 generator tests" and no browser job (now the shared
+  checks, the browser job and a table of the other six workflows); docs/graph-development.md had a 58-country sample
+  output, "41 tests" and "124 checks" (now check_all.py and no frozen counts); docs/graph.md gains the Find a country
+  box; docs/re-verification.md says the debt is closed (0 search-only); docs/credentials.md has a status block (LinkedIn
+  posting works, automatic start untested, token expires 2026-12-06); .agent/quality-policy.md and operating-model.md
+  said "three checks" (now check_all.py); CONTRIBUTING.md mentions the browser suite; ACCESSIBILITY.md notes the new
+  control; discovery/candidates.md C10 re-measured against the UN's list (106 of 193 not yet implemented, 87 of the 89
+  anchors are UN members); run-history entries for #630, #632 and #633 closed with their pull requests. Left alone as
+  history: progress/, docs/ux-analysis.md, docs/linkedin-page-posts.md (dated snapshots). Candidates for closing, not
+  closed: unresolved.md row #5 (the subnational level) and row #19 (under the #499 rule).
+prs: []
+outcome: in-progress

@@ -7,5 +7,7 @@ summary: >
   #508 waiting on that decision). No open pull requests. Owner-side items unchanged: delete the stale remote branch
   claude/atlas-tooling-counts; set PROJECT_TOKEN_EXPIRES and BOARD_SYNC_ENABLED; the LinkedIn token needs renewing
   before 2026-12-06 (#578); the first automatic LinkedIn post after the next release is still untested.
-prs: []
-outcome: in-progress
+prs:
+  - number: 630
+    title: "Housekeeping: close the #507, #508 and CI-speed entries; record the world-map decision"
+outcome: merged (#630)

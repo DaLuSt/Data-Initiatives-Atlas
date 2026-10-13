@@ -316,18 +316,25 @@ data-initiatives-atlas/
 ├── CONTRIBUTING.md
 ├── CODE_OF_CONDUCT.md
 ├── SECURITY.md
+├── ACCESSIBILITY.md   # what has been checked, known barriers, how to report one
 ├── CHANGELOG.md       # data releases, prepared automatically
 ├── AGENTS.md          # operating model for Claude Code sessions
 ├── LICENSE
 ├── .agent/            # session state, policies, run history
 ├── .github/
 │   ├── ISSUE_TEMPLATE/
+│   ├── actions/checks/          # the one set of checks, shared by validate and pages
+│   ├── dependabot.yml
+│   ├── pull_request_template.md
 │   └── workflows/
-│       ├── validate.yml         # every pull request
+│       ├── validate.yml         # every pull request: checks and the browser suite
 │       ├── pages.yml            # deploy, main only
 │       ├── release-pr.yml       # weekly release pull request
 │       ├── release-publish.yml  # tags and Release after merge
-│       └── project-board.yml    # keeps the roadmap board in step
+│       ├── linkedin-post.yml    # posts a release after the owner approves
+│       ├── project-board.yml    # keeps the roadmap board in step
+│       ├── fetch-pages.yml      # by hand: read pages only a runner can read
+│       └── probe-blocked-hosts.yml  # by hand: which blocked hosts a runner can read
 ├── initiatives/
 ├── legislation/
 ├── policies/
@@ -365,20 +372,24 @@ data-initiatives-atlas/
 ├── discovery/
 ├── validation/
 ├── progress/
-├── tools/              # generator, reverify, tests
-│   ├── build_graph.py
-│   ├── release.py      # versions, changelog, release PR
-│   ├── project_board.py # roadmap board sync (run by a workflow)
-│   ├── reverify.py     # re-verification pass
-│   ├── source_hosts.py # egress allowlist
-│   ├── check_all.py    # every network-free check, as CI runs them
-│   ├── test_board_health.py
-│   ├── test_browser_ci.py
-│   ├── test_build_graph.py
-│   ├── test_project_board.py
-│   ├── test_release.py
-│   ├── test_reverify.py
-│   └── test_ui.mjs
+├── tools/              # generator, release, board, LinkedIn, tests
+│   ├── build_graph.py       # entity files -> graph.json and details.json
+│   ├── check_all.py         # every network-free check, as CI runs them
+│   ├── country_centroids.py # where each country sits on the world map
+│   ├── release.py           # versions, changelog, release PR
+│   ├── update_counts.py     # keeps the README and state.yaml numbers in step
+│   ├── project_board.py     # roadmap board sync (run by a workflow)
+│   ├── board_health.py      # the board token's expiry watch
+│   ├── linkedin_auth.py     # one-time LinkedIn authorisation
+│   ├── linkedin_post.py     # posts a release on LinkedIn
+│   ├── reverify.py          # re-verification pass
+│   ├── runner_fetch.py      # reads pages on a GitHub runner
+│   ├── host_probe.py        # which blocked hosts a runner can read
+│   ├── source_hosts.py      # egress allowlist
+│   ├── scale_fixture.py     # a test copy of the Atlas with about 195 countries
+│   ├── measure_load.mjs     # time to first graph on a throttled connection
+│   ├── test_*.py            # one test file per tool (all listed in check_all.py)
+│   └── test_ui.mjs          # the site in a real browser
 ├── site/               # published GitHub Pages app
 │   ├── index.html
 │   ├── app.css
@@ -388,15 +399,18 @@ data-initiatives-atlas/
 │   ├── details.json    # generated, not committed (gitignored)
 │   └── vendor/         # Cytoscape.js, vendored
 └── docs/
-    ├── graph.md
-    ├── graph-architecture.md
-    ├── graph-development.md
-    ├── performance.md
-    ├── re-verification.md
-    ├── roadmap.md
-    ├── scale-check.md
-    ├── ux-analysis.md
-    └── github-pages.md
+    ├── graph.md                     # a tour of the site
+    ├── graph-architecture.md        # how entity files become nodes and edges
+    ├── graph-development.md         # building and testing the site
+    ├── github-pages.md              # the workflows and the deploy
+    ├── roadmap.md                   # the board, milestones and the plan
+    ├── re-verification.md           # reading the sources again
+    ├── credentials.md               # the tokens the workflows need, and renewing them
+    ├── linkedin-page-posts.md       # drafts for the LinkedIn Page
+    ├── performance.md               # load time and its budget
+    ├── scale-check.md               # the site at about 200 countries
+    ├── ux-analysis.md               # the usability review of 2026-10
+    └── accessibility-audit-2026-10.md
 ```
 
 </details>

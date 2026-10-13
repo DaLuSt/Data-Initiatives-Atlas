@@ -61,10 +61,10 @@ Environment:
 Output on success:
 
 ```
-build_graph: 516 entities, 6170 edges (1095 relationship, 2016 association, 3059 wikilink)
-             58 countries, 1 region(s), 17 entity types in use
-build_graph: wrote site/graph.json (503 KB)
-build_graph: wrote site/details.json (697 KB)
+build_graph: 856 entities, 10142 edges (1708 relationship, 3630 association, 4804 wikilink)
+             89 countries, 1 region(s), 21 entity types in use
+build_graph: wrote site/graph.json (1154 KB)
+build_graph: wrote site/details.json (1990 KB)
 ```
 
 ---
@@ -72,8 +72,14 @@ build_graph: wrote site/details.json (697 KB)
 ## Tests
 
 ```bash
-python tools/test_build_graph.py          # required — 41 tests, no extra deps
+python tools/check_all.py                 # everything CI runs, about a minute (needs only PyYAML)
+python tools/test_build_graph.py          # just the generator's tests
 ```
+
+`check_all.py` is the one list of checks that CI runs (`.github/actions/checks`): the validation suite, every
+test suite that needs no network, the headline numbers and `build_graph.py --check`. The generator's tests
+share one build of the real data (`real_build()` in the test file), so adding a test that reads the graph
+costs no extra build.
 
 Covers: YAML parsing (including the **`NO` boolean trap** — `country: NO`
 unquoted parses as `False` under YAML 1.1), file discovery, ID uniqueness,
@@ -98,7 +104,7 @@ A section of the suite that throws is recorded as one failed check and the run g
 a stale selector shows up as one line instead of hiding every check after it; entity counts
 come from `graph.json`, not from numbers frozen in the suite.
 
-124 checks across desktop, mobile (390×844) and accessibility: search by
+The checks run across desktop, mobile (390×844) and accessibility: search by
 name/ID/country, keyboard navigation (including arrow-key traversal of the
 canvas itself), tapping a node or an edge, detail panel content, GitHub
 links, deep links, shareable filter/view/depth/search/path/layout state in
