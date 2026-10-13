@@ -1,0 +1,15 @@
+date: "2026-10-13"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  The owner asked whether the pipelines could be simplified or made faster and then said "Do it". Measured the
+  `validate` job (the checks step took about 113 s on the runner) and changed three things. (1) Tests: the graph
+  generator suite built the real data 15 times; ten of those now share one build (real_build() in
+  tools/test_build_graph.py, deep-copied per test), 51 s to 18 s. The validators parsed every entity file five times in
+  one process; the YAML result is now kept by text in validation/common.py, run_all.py 23 s to 5 s. All 15 checks:
+  69 s locally. (2) tools/check_all.py is now the one list of checks; the shared action runs it, a session runs the
+  same command, and a new test file is added to the list once (tools/test_release.py checks that). (3) validate.yml
+  cancels the older run when a pull request gets a new push; other runs get their own group (the run id) so a commit on
+  main is never left unchecked. Not changed, with reasons: checks still run twice on a merge (validate and the Pages
+  build), the browser job stays one job, no pip or npm caching (a second each).
+prs: []
+outcome: in-progress

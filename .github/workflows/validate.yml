@@ -13,6 +13,13 @@ on:
 permissions:
   contents: read
 
+# A new push to a pull request makes the run for the older commit pointless, so it is cancelled.
+# Nothing else is: a run on `main` or one started by hand has its own group (its run id), because
+# a shared group would drop all but the newest queued run and leave a commit without a result.
+concurrency:
+  group: ${{ github.event_name == 'pull_request' && format('pull-request-{0}', github.event.pull_request.number) || github.run_id }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
 jobs:
   validate:
     runs-on: ubuntu-latest
