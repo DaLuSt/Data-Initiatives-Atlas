@@ -172,34 +172,22 @@ This is a specific, named, dated commitment rather than the general
 it does not on its own resolve WirtschaftsWoche's separate scepticism
 about adoption depth within Europe.
 
-## ⚠ `country: DE` is the weakest field in this entity
+## Why `country: DE`
 
-Catena-X is recorded as German on the basis of German origin and German
-institutional backing — the cited Fraunhofer institutes, ARENA2036, the
-German automotive industry — a basis unchanged by this pass's fetches,
-which if anything sharpen the point: ARENA2036's own page frames Catena-X's
-purpose as serving "the international competitiveness of the German **and
-European** automotive industry" without calling the network itself German.
+**Decided 2026-10-13 (roadmap #500, `metadata/ontology.md` §4 and §6):** `country` is the country whose law
+the governing body is established under, not where the data space operates. The body is the *Catena-X
+Automotive Network e.V.*; *e.V.* (*eingetragener Verein*) is a German legal form, so `country: DE` holds. The
+register entry itself was not read, and the earlier reasoning, German origin and German institutional backing,
+is not what the field now rests on. ARENA2036's own page frames the purpose as serving "the international
+competitiveness of the German **and European** automotive industry" without calling the network German, which
+is why `region: EU` is recorded beside it.
 
-That is a thin basis, and it is the **same problem [[NL-ISHARE]] already
-has**. iSHARE was recorded `country: NL` for its Dutch origin while
-operating at ishare.eu in a European data-space context; its entity body
-calls this "exactly the case the `country` field handles least well" and
-flags it as provisional. Catena-X is the identical case in a second
-country, with a Shanghai hub and a Chinese industry agreement making it
-sharper still.
+The Shanghai hub and the CAAM and VDA China agreement described above are operation in another country. They
+are not a second `country`. An `applies-in` edge to China is added when its anchor exists (roadmap #481,
+#482). [[NL-ISHARE]] is settled the same way.
 
-Two independent instances mean this is **a property of the model, not of
-either entity**. The `country` field conflates three different things —
-where an initiative originated, where it is governed, and where it
-operates — and industry data spaces routinely differ on all three.
-
-`level: sectoral` was recorded here, rather than `national`, to be honest
-about the second axis; that level was retired on 2026-10-03
-(`metadata/ontology.md` §4) and this entity is now `national`, with its sector
-carried by `domains`. The `country` field is logged as an open
-ontology question in `discovery/unresolved.md`, now with two supporting
-cases rather than one.
+`level: sectoral` was recorded here until that level was retired on 2026-10-03 (`metadata/ontology.md`
+§4); the entity is `national`, with its sector carried by `domains`.
 
 ## The IDS reference architecture is not an entity
 

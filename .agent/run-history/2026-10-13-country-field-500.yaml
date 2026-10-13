@@ -1,0 +1,14 @@
+date: "2026-10-13"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #500 (data spaces), first part: row #8, what `country` means for an initiative that operates across
+  borders. Decision in metadata/ontology.md §4 and §6: `country` is the country whose law the governing body is
+  established under, not where it operates; wider reach goes in `region`, and operation in another country is an
+  `applies-in` edge once a source states it and the anchor exists; a body with no seat has country null. iSHARE had
+  been settled on this basis on 2026-09-05; Catena-X rests on the Catena-X Automotive Network e.V., a German legal
+  form (the register entry was not read). DE-CATENA-X's "weakest field" section rewritten, a pointer added to
+  NL-ISHARE, row #8 closed. The other three parts of #500 (Manufacturing-X to the EU manufacturing data space,
+  cultural heritage with media and tourism, governance of the tourism, media and public-administration data spaces)
+  need sources not found yet and stay open (rows #120, #124, #125); #500 stays open.
+prs: []
+outcome: in-progress
