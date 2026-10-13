@@ -132,6 +132,21 @@ async function search(page, q) {
         countries.includes('Netherlands') && countries.includes('Germany'),
         countries.join(','));
 
+  // Find a country (roadmap #508): the list narrows by name, ignoring case and accents, and a
+  // ticked country stays in view.
+  await page.fill('#country-find', 'GERMA');
+  var found = await page.$$eval('#f-country .check:not([hidden]) .cname', els => els.map(e => e.textContent));
+  check('country box narrows the list by name', found.length >= 1 && found.length < countries.length &&
+        found.every(n => /germa/i.test(n)), found.join(','));
+  await page.fill('#country-find', 'zzzz-no-such-country');
+  check('country box says when nothing matches',
+        (await page.$$eval('#f-country .check:not([hidden])', els => els.length)) === 0 &&
+        await page.isVisible('#country-find-none'));
+  await page.fill('#country-find', '');
+  check('clearing the country box shows the whole list',
+        (await page.$$eval('#f-country .check:not([hidden])', els => els.length)) === countries.length &&
+        !(await page.isVisible('#country-find-none')));
+
   var levels = await page.$$eval('#f-level .check .cname', els => els.map(e => e.textContent));
   check('geographic levels present', levels.length >= 3, levels.join(','));
 

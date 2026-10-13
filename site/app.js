@@ -378,6 +378,25 @@
       }
     });
 
+    // Find a country: narrows the Country list by name as the visitor types.
+    // A ticked country stays in view so a selection can never be hidden.
+    var find = $("country-find");
+    if (find) {
+      var fold = function (t) {
+        return String(t).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+      };
+      find.addEventListener("input", function () {
+        var q = fold(find.value).trim(), shown = 0;
+        $("f-country").querySelectorAll(".check").forEach(function (row) {
+          var on = row.querySelector("input").checked;
+          var hit = !q || on || fold(row.querySelector(".cname").textContent).indexOf(q) !== -1;
+          row.hidden = !hit;
+          if (hit) shown++;
+        });
+        $("country-find-none").hidden = shown > 0;
+      });
+    }
+
     $("reset-filters").addEventListener("click", resetFilters);
     $("empty-reset").addEventListener("click", resetFilters);
 

@@ -1,0 +1,14 @@
+date: "2026-10-13"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #508 (the site at about 200 countries). Built a test copy with 194 country anchors and 1,087 entities
+  (tools/scale_fixture.py, new; placeholders only, outside the repository) and checked it at desktop and phone size,
+  measuring layouts from node positions. Grouped layout: no overlapping blocks, still fits at 0.073 zoom. Compare:
+  empty columns are already hidden by default and the instrument column and header stay in view; no change. Country
+  filter: a flat list of 194 in a five-row box; fixed with a "Find a country" box (name, ignoring case and accents; a
+  ticked country stays visible; 3 new browser checks, 137 in all). World map: spread over about 125,000 px against a
+  minimum zoom of 0.04, so Fit cannot show the whole map, at 89 countries as well as at 194; not caused by growth and
+  left as a design decision for the owner (docs/scale-check.md lists three options). Load time at 1,087 entities:
+  5.2 s on Slow 4G with 4x CPU, over the 5 s budget of #507. Closed #507 (merged #627) before starting.
+prs: []
+outcome: in-progress

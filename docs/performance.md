@@ -54,7 +54,8 @@ over-counted, which is the cautious direction):
 | 1,710 (2x) | 219 KB | 976 KB | 7.5 s | 5.8 s |
 | 4,275 (5x) | 540 KB | 2.4 MB | 12.7 s | 8.7 s |
 
-Growth is roughly linear in entities. Going from 89 to about 195 country
+A direct measurement on the 194-country test build of `docs/scale-check.md` (1,087 entities) gave 5.2 s,
+in line with this table. Growth is roughly linear in entities. Going from 89 to about 195 country
 anchors (#508) adds about 100 entities, roughly 12%; the entities written for
 each country add more over time.
 

@@ -9,5 +9,7 @@ summary: >
   1,000 entities), plus gzipped size limits (graph 250 KB, details 1 MB, first-graph path 450 KB) enforced by
   TestLoadBudget. details.json was already fetched after the first graph, and a test now says so. initGraph adds only
   the filtered elements, so there was no boot-time edge cost to remove. The phone is emulated, not a real device.
-prs: []
-outcome: in-progress
+prs:
+  - number: 627
+    title: "Load time: measure it, set a budget, guard the file sizes (#507)"
+outcome: merged (#627)
