@@ -16,5 +16,7 @@ summary: >
   anchors are UN members); run-history entries for #630, #632 and #633 closed with their pull requests. Left alone as
   history: progress/, docs/ux-analysis.md, docs/linkedin-page-posts.md (dated snapshots). Candidates for closing, not
   closed: unresolved.md row #5 (the subnational level) and row #19 (under the #499 rule).
-prs: []
-outcome: in-progress
+prs:
+  - number: 634
+    title: "Housekeeping and a docs check: README tree, roadmap plan, workflows page, test commands and statuses brought up to date"
+outcome: merged (#634)

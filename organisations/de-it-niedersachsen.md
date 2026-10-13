@@ -93,7 +93,7 @@ rather than [[DE-IT-NRW]]'s multi-body merger.
   notes its Niedersachsen relationship is narrower than full Träger
   status (tax-administration IT specifically), which is consistent with
   the two coexisting, but no source read states this explicitly. Logged
-  as an open question in `discovery/unresolved.md` item #5.
+  as an open question in `discovery/unresolved.md` (item #5, now closed; the question is row #243).
 
 ## Relationships
 

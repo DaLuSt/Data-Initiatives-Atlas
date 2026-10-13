@@ -219,9 +219,11 @@ The EHDS is recorded as **one entity typed `data-space`**, not split into a
 regulation plus a data space, even though Regulation (EU) 2025/327 is
 substantial legislation. The reasoning matches [[NL-BIO]] and
 [[NL-HEALTH-RI]]: the regulation and the space it establishes share one
-name and one identity in the sources. If a future batch needs to cite the
-regulation as legislation in its own right, it should be split. Flagged in
-`discovery/unresolved.md`.
+name and one identity in the sources. **Decided 2026-10-13** under the rule for
+records that fit two types (`metadata/ontology.md` §6, roadmap #499 and #500): it stays one
+`data-space`. It is split the first time an Atlas entity has to point at the regulation as an act, such
+as a national instrument that `implements-requirement-from` it, or an `amends` edge to the instruments
+it amends. (This answers row #19 of `discovery/unresolved.md`, now closed.)
 
 **EUR-Lex citation added 2026-09-05, full text read 2026-09-19.** A prior
 pass found `eur-lex.europa.eu` returning empty content on the ELI record.
@@ -243,7 +245,7 @@ row #19's premise — "no EUR-Lex citation was located" — is corrected by
 this and the 2026-09-05 pass; the citation exists and now reaches the
 regulation's own text. Row #19's actual question — whether to split the
 regulation from the data-space entity, discussed earlier in this section —
-is unaffected by the citation gap closing.
+was unaffected by the citation gap closing and was decided on 2026-10-13 (one entity).
 
 ## Relationships
 
