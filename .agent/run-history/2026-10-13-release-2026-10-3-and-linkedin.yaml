@@ -1,0 +1,20 @@
+date: "2026-10-13"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Data release 2026.10.3. The Monday 05:17 UTC schedule had not fired by 06:01, so release-pr.yml was started by hand
+  (safe: it skips when a release PR is open); it opened #622 (855 entities, 1,704 typed relationships, 89 countries, 46
+  merged PRs). A `### Highlights` section (coverage 58 to 89 countries; accessibility) was added to the CHANGELOG entry
+  on the release branch, the LinkedIn draft checked, CI green, and the owner merged #622 at 11:39 UTC; the publish
+  workflow created the tag data-2026.10.3, the GitHub Release and the LinkedIn draft issue #623. The scheduled run
+  did start, at 13:11 UTC (about eight hours late), and correctly did nothing (only housekeeping since). The
+  LinkedIn post job was skipped because LINKEDIN_POST_ENABLED was not "true"; the owner set it, and the next job failed
+  with ModuleNotFoundError: yaml (the automatic path imported PyYAML in a job that installs nothing). Fixed in #624
+  (sed instead of yaml, two tests); the owner asked for the merge and it was merged. Release 2026.10.3 itself still
+  has to be posted by running "Post release on LinkedIn" by hand with version 2026.10.3 (dry run first) or by pasting
+  the text from #623.
+prs:
+  - number: 622
+    title: "Release data 2026.10.3"
+  - number: 624
+    title: "LinkedIn workflow: read the data release without PyYAML"
+outcome: merged
