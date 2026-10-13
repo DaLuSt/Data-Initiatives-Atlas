@@ -1,0 +1,15 @@
+date: "2026-10-14"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #498 (review the release cadence and changelog after three releases). Checked the three releases
+  (2026.10.1, .2, .3) and their changelog entries: weekly pull request with a skip for housekeeping-only weeks, the
+  YYYY.MM.N numbering and the separate schema track all work and stay. Two changes. (1) Housekeeping entries
+  ("Housekeeping: record #x as merged") were 11 of the 46 lines of the 2026.10.3 entry; they are now one line with a
+  count and the numbers. (2) A gap: releases counted from the previous tag, but the tag is the release pull request's
+  merge, so a pull request merged or a roadmap issue closed between the preparation of an entry and its merge would be
+  in no release. None was lost (all 93 merged pull requests and all 16 closed roadmap issues are listed), but nothing
+  prevented it. prepare now records prepared_from and prepared_at in metadata/version.yaml and the next release counts
+  from them (tools/release.py since; release-pr.yml uses it); the first run after this falls back to the tag. Decision
+  table written in metadata/versioning.md. 3 new tests (72 in tools/test_release.py).
+prs: []
+outcome: in-progress

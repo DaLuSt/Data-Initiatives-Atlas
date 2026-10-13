@@ -70,12 +70,32 @@ since the previous release**.
    issue. Nothing is sent to LinkedIn by the repository; re-running the workflow
    does not open a second issue.
 
+A release counts the pull requests merged **since the commit the previous release was
+prepared from**, which `prepare` records as `prepared_from` (and `prepared_at`) in
+`metadata/version.yaml`. It does not count from the previous tag: the tag is the release pull
+request's merge, which can come hours or days after the entry was written, and a pull request
+merged in between is older than the tag but in no entry. Roadmap issues closed since
+`prepared_at` are listed the same way (`python tools/release.py since`).
+
 The first release is a baseline: it records the counts and lists no pull requests,
 because the history before it is in git and in `.agent/run-history/`.
 
 Tags are named `data-YYYY.MM.N` and `schema-X.Y.Z` so the two tracks never
 collide. The site's footer shows the data release and schema version it was built
 from, linked to the changelog.
+
+## Review after three releases (2026-10-13, roadmap #498)
+
+Three data releases were made in the first week and a half: 2026.10.1 (6 October), 2026.10.2
+(8 October) and 2026.10.3 (12 October). What was checked and decided:
+
+| Question | Finding | Decision |
+|---|---|---|
+| Is a weekly release pull request right? | It skips itself when only housekeeping was merged, so there was no empty release. Releases came faster than weekly because the owner started the workflow by hand when a milestone was done; that works. | Keep weekly, plus by hand when wanted. |
+| Is `YYYY.MM.N` working? | N restarts each month and the three numbers read correctly in tags, notes and the footer. | Keep. |
+| Does the changelog read well outside the project? | The 2026.10.3 entry lists 46 pull requests; 11 of them were "Housekeeping: record #x as merged", a quarter of the entry and no use to a reader. The `### Highlights` section the reviewer added was what made it readable. | Housekeeping is now one line with a count and the numbers. Reviewers keep writing Highlights. |
+| Is "Roadmap items completed" complete? | Every roadmap issue closed since the previous release is listed in all three entries (16 in 2026.10.3, checked against the issue list). A pull request or issue closed between the preparation of an entry and the merge of its release pull request would have been listed in no release; none was lost yet, but nothing prevented it. | Fixed: releases count from the commit and the moment the previous entry was prepared, not from its tag. |
+| Do schema versions need their own cadence? | The schema stayed at 1.0.0 through all three releases; a model change already bumps it in its own pull request and CI checks that. | No separate cadence. |
 
 ## Schema history before versioning
 
