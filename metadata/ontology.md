@@ -374,7 +374,9 @@ relationships").
 - `local`: scope is a municipality or other unit below `subnational`.
 
 - `country`: ISO 3166-1 alpha-2 code, or `null` for EU/UN/international
-  entities that are not scoped to one country.
+  entities that are not scoped to one country. For an organisation, data space or framework it is the
+  country whose law the **body that governs it is established under**, not where it operates (decided
+  2026-10-13, roadmap #500, below).
 - `region`: a region code such as `EU`, used to tag an entity's regional
   scope. Never used as a substitute for `country`.
 
@@ -497,3 +499,22 @@ edge. Both are answered; the rows are closed.
    instrument. **Revisit** if a question the site should answer needs "which body adopted this"; then add
    one `adopted-by` type under `metadata/relationship-types.md` §2.4 and use it systematically, with a
    `schema_version` bump.
+
+### `country` for an initiative that operates across borders (decided 2026-10-13, roadmap #500)
+
+`discovery/unresolved.md` row #8 asked what `country` means when a data space starts in one country and
+operates in several. The field had been used for three different things: where an initiative began, where
+its governing body is established, and where it operates. [[NL-ISHARE]] had already been settled on the second
+(2026-09-05), and [[DE-CATENA-X]] was the same case with a Shanghai hub.
+
+1. **`country` is the country whose law the governing body is established under.** For iSHARE that is the
+   Dutch foundation, domiciled in Rotterdam; for Catena-X it is the *Catena-X Automotive Network e.V.*, an
+   *eingetragener Verein*, which is a German legal form (the register entry was not read). Where the
+   origin and the seat differ, the seat decides, and the text says so.
+2. **Operation elsewhere is not a second `country`.** `region` carries the wider reach (`EU` for both), and an
+   `applies-in` edge to another country's anchor records operation there once a source states it and the anchor
+   exists. Catena-X's Shanghai hub and its agreement with the China Association of Automobile Manufacturers
+   are told in its text; the edge to China waits for the anchor (roadmap #481, #482).
+3. **A body with no single seat has `country: null`** and the level it really has (`international` or
+   `regional`), as the EU's and the UN's bodies do. Nothing in the Atlas needs that for an industry data
+   space today.

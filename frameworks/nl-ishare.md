@@ -112,6 +112,9 @@ corrected this pass** — see below.
 
 ## A Dutch entity operating across borders — settled, 2026-09-05
 
+> The rule behind this, for any initiative that operates across borders, was written down on 2026-10-13
+> (`metadata/ontology.md` §6, roadmap #500): `country` is where the governing body is established.
+
 iSHARE is recorded as `country: NL`, and this pass confirms that is still
 the right answer rather than a stale placeholder. Reading ishare.eu's own
 "Foundation Structure" page directly: the **iSHARE Foundation**, the
