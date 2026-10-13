@@ -154,15 +154,14 @@ recorded declines (#229, #230, #231, #232) or deliberate non-assertions (#88, #9
 | #11 | declined by the owner on 2026-10-09; the row keeps the unranked instruments |
 | #12 | the Dutch registers, decided in #458 and #536; the row keeps the vocabulary questions |
 | #13, #44, #53, #54, #92, #93, #153, #154 | #457 |
-| #19 | #499 (the rule is decided; whether the health data space is split from its regulation is the row's question) |
 | #90, #91, #117, #139 | #502 to #505 (quarterly re-checks) |
 | #168 | #511 |
 | #187, #200, #209 | #501 |
 | #226 | #535 |
+| #243 | none yet (Lower Saxony: Dataport and IT.Niedersachsen; a source is needed) |
 | #233 | #446 |
 | #234 | #459 |
 | #236 to #242 | #470 to #476 (the countries of each group whose laws were not read) |
-| #5 | mostly done (the `subnational` level exists and is used for Belgium, Germany and Spain); the row is a candidate for closing |
 
 `discovery/candidates.md` C9 (thin domains) is #450 and C10 (countries) is #451 and its
 fourteen groups; `discovery/research-queue.md` and `discovery/duplicates.md` are empty.

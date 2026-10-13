@@ -1,0 +1,13 @@
+date: "2026-10-13"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  The owner said "Close and do housekeeping" after the offer to close two rows of discovery/unresolved.md. Row #19
+  (should the health data space be split from its regulation): decided under the #499 rule, EU-EHDS stays one
+  data-space, with the condition for splitting it written in metadata/ontology.md §6 and in the entity's modelling note.
+  Row #5 (no sub-national level): the level exists and is used for Belgium, Germany and Spain, so the ontology question
+  is closed; further sub-national units are coverage. Its detail held one genuinely open thread, how Dataport and
+  IT.Niedersachsen divide Lower Saxony's IT, which would have been lost; it is now row #243. The detail section of
+  row #5 is removed, the roadmap's question table and the cross-reference notes updated (entity files that cite
+  "item #5" in their creation notes are left as written, as the convention for closed rows allows). Open rows 56 to 55.
+prs: []
+outcome: in-progress

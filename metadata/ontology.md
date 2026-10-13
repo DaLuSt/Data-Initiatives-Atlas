@@ -438,6 +438,7 @@ least one real example, a `schema_version` bump), never to settle one record.
 | [[NL-GDI]] | `platform`, `framework` | stays `platform` | its own name is an infrastructure; the agreements inside it are described in prose |
 | [[NL-BASISREGISTRATIES]] | `framework`, `platform` | stays `framework` | it is the *stelsel*, not a single register |
 | the ten basisregistraties | `platform`, a missing `register` type | stay `platform` | no `register` or `dataset` type exists and one would touch ten files and the schema; decided in the section below (roadmap #458) |
+| [[EU-EHDS]] | `data-space`, `regulation` | stays one `data-space` | Regulation (EU) 2025/327 and the space it establishes share one name and one identity in the sources, and it is the only common data space with its own regulation, so the instrument is the space's legal form; the entity's `alternative_names` and text name the regulation. **Split it** the first time an Atlas entity has to point at the regulation as an act: a national instrument that `implements-requirement-from` it, or an `amends` edge to the instruments it amends |
 | [[NL-BIO]] | one entity or two | stays one with versions | BIO2 is a new version of a continuously named baseline, unlike Wob and Woo or Archiefwet 1995 and 2026, which are separate instruments with their own legal basis; split it if a re-verification contradicts this |
 | ISO/IEC JTC 1 | an entity or none | not modelled | it sits between the two organisations and the standards; model it when a source ties a standard to it by name |
 
