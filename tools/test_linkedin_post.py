@@ -342,6 +342,24 @@ class TestWorkflow(unittest.TestCase):
     def test_least_privilege(self):
         self.assertEqual(self.wf["permissions"], {"contents": "read", "issues": "write"})
 
+    def test_the_job_does_not_import_yaml_it_never_installs(self):
+        # The automatic path (no `version` input) once read metadata/version.yaml with
+        # `python -c "import yaml ..."`; the job installs nothing, so the bare runner Python
+        # has no PyYAML and the step failed with ModuleNotFoundError (2026-10-12).
+        installs = "pip install" in self.TEXT
+        self.assertTrue(installs or "import yaml" not in self.TEXT,
+                        "the workflow imports yaml but does not install PyYAML")
+
+    def test_the_version_is_found_without_python_when_no_input_is_given(self):
+        import re, subprocess
+        step = next(s for s in self.job["steps"] if s.get("id") == "draft")
+        line = next(l for l in step["run"].splitlines() if "metadata/version.yaml" in l)
+        self.assertIn("data_release", line)
+        out = subprocess.run(["bash", "-c", line.split("=", 1)[0].strip() + "=" + line.split("=", 1)[1].strip() + '; echo "$version"'],
+                             cwd=REPO_ROOT, capture_output=True, text=True)
+        expected = re.search(r'data_release: "?([^"\n]+)"?', (REPO_ROOT / "metadata" / "version.yaml").read_text()).group(1)
+        self.assertEqual(out.stdout.strip(), expected)
+
     def test_one_post_at_a_time(self):
         self.assertEqual(self.wf["concurrency"]["group"], "linkedin-post")
         self.assertIs(self.wf["concurrency"]["cancel-in-progress"], False)

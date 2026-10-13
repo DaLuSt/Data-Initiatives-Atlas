@@ -1,0 +1,12 @@
+date: "2026-10-12"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  The LinkedIn post workflow failed in its first step ("Find the release and its draft issue") with
+  ModuleNotFoundError: No module named 'yaml'. When no version is given (the automatic path after "Publish release",
+  and any re-run of it) the step read metadata/version.yaml with `python -c "import yaml ..."`, but the job installs
+  nothing, so the runner's bare Python has no PyYAML. The automatic path therefore could never have worked; the manual
+  path (version given) did not import yaml. Fixed by reading the one line with sed; two tests added (the workflow must not
+  import yaml without installing it; the sed line returns the current data release), the first verified to fail on the old
+  workflow. This touches a workflow file, so the pull request is left for the owner to merge (no auto-merge).
+prs: []
+outcome: see git history
