@@ -6,10 +6,12 @@ How the Interactive Atlas is built and published.
 
 ---
 
-## The two workflows
+## Validation and deployment
 
 Validation and deployment are deliberately separate, so an unvalidated pull
-request can never reach the published site.
+request can never reach the published site. Both run **the same checks**, one
+list in `tools/check_all.py` that the shared action `.github/actions/checks`
+calls, so the two cannot drift apart.
 
 ```
    Pull request                          Push to main
@@ -18,30 +20,34 @@ request can never reach the published site.
  .github/workflows/                  .github/workflows/
     validate.yml                         pages.yml
         │                                     │
-   validate YAML                        validate YAML
-   validate IDs                         validate IDs
-   validate relationships               validate relationships
-   validate links                       validate links
-   validate sources                     validate sources
-   graph generator tests                graph generator tests
-   graph builds (--check)               generate graph
-        │                                     │
-        ▼                                     ▼
-    PASS / FAIL                          build site
-   (no deployment)                            │
-                                              ▼
-                                      deploy to GitHub Pages
+  every check (check_all.py)          every check (check_all.py)
+  + the schema-version rule           generate graph
+  + the site in a real browser        │
+        │                              build site
+        ▼                                     │
+    PASS / FAIL                               ▼
+   (no deployment)                    deploy to GitHub Pages
 ```
 
 ### `validate.yml` — pull requests
 
 Runs on `pull_request` → `main`, on `push` → `main`, and on demand
-(`workflow_dispatch`).
+(`workflow_dispatch`). Two jobs run side by side, and both are required checks
+on `main`:
 
-1. `validation/run_all.py` — the five repository checks.
-2. `tools/test_build_graph.py` — 32 generator tests.
-3. `tools/build_graph.py --check` — proves the graph still builds from this
-   branch's data, without writing anything.
+- **`validate`** runs `tools/check_all.py`: the five repository checks
+  (`validation/run_all.py`), every test suite that needs no network (the
+  validators, the graph generator, the release tooling, the board sync, the
+  LinkedIn tools, the page reader and the rest), the headline-numbers check and
+  `tools/build_graph.py --check`. On a pull request it also checks that a change to
+  `metadata/schema.json` carries a `schema_version` bump. Run
+  `python tools/check_all.py` to do the same locally; it takes about a minute.
+- **`browser`** builds the graph, serves `site/` and runs `tools/test_ui.mjs`
+  in the runner's own Chrome: every view, deep links, search, filters, layouts,
+  the CSV download and no console errors.
+
+A new push to a pull request cancels the older run for that pull request; runs on
+`main` and runs started by hand are never cancelled.
 
 **It never deploys.** There are no `pages` permissions in this workflow at
 all.
@@ -50,11 +56,10 @@ all.
 
 Runs on `push` → `main` when relevant paths change, and on demand.
 
-It re-runs the full validation suite and the generator tests *before*
-building, so a commit that reached `main` with broken data fails the deploy
-rather than publishing a broken Atlas. It then regenerates the graph, writes
-a statistics summary to the job summary, and uploads `site/` as the Pages
-artefact.
+It re-runs the same checks *before* building, so a commit that reached `main`
+with broken data fails the deploy rather than publishing a broken Atlas. It then
+regenerates the graph, writes a statistics summary to the job summary, and
+uploads `site/` as the Pages artefact.
 
 The `paths:` filter covers every entity folder, `metadata/`, `tools/`,
 `validation/`, `site/` and the workflow itself. A change to `progress/` or
@@ -63,6 +68,22 @@ graph.
 
 `concurrency: pages` with `cancel-in-progress: true` means a rapid series of
 merges deploys the newest commit rather than queueing.
+
+### The other workflows
+
+These do not touch the deployed site.
+
+| Workflow | What it does |
+|---|---|
+| `release-pr.yml` | Opens the weekly release pull request (Monday, or by hand) |
+| `release-publish.yml` | After a release pull request merges: the tag, the GitHub Release and the LinkedIn draft issue |
+| `linkedin-post.yml` | Posts a release on LinkedIn after the owner approves it in the `linkedin` environment |
+| `project-board.yml` | Keeps the roadmap board in step with the issues |
+| `fetch-pages.yml` | By hand: reads pages that only a GitHub runner can read |
+| `probe-blocked-hosts.yml` | By hand: tests which blocked hosts a runner can read |
+
+`metadata/versioning.md` describes the release workflows, `docs/roadmap.md` the board and
+`docs/credentials.md` the tokens they need.
 
 ---
 

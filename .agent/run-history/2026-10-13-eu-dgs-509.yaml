@@ -11,5 +11,7 @@ summary: >
   GROW as unestablished). The adoption step (Parliament and Council) is declined: the type does not imply it (the
   Commission and the Council adopt some acts alone), the uniform edges would add nothing, and a revisit condition is
   written. Stale statements in EU-ESCO and EU-COMMISSION corrected.
-prs: []
-outcome: in-progress
+prs:
+  - number: 632
+    title: "EU Directorates-General and the adoption step (#509): rule, DG EMPL, rows #15 and #16 closed"
+outcome: merged (#632); #509 closed

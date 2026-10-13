@@ -72,8 +72,8 @@ do not push directly to `main`:
    automatically and merged by the owner, writes them. Roadmap items are GitHub
    issues labelled `roadmap` (`docs/roadmap.md`); close the one your PR finishes
    by writing `Closes #N` in the PR body.
-4. Validate locally — see `.agent/quality-policy.md`'s three checks. All
-   three must be clean before committing.
+4. Validate locally — `python3 tools/check_all.py`, see `.agent/quality-policy.md`.
+   It must be clean before committing.
 5. Commit with a clear message describing the actual change, ending with:
    ```
    Co-Authored-By: Claude <noreply@anthropic.com>
@@ -136,7 +136,7 @@ Resume incomplete work, or pick the next item per the priority order above
         ↓
 Research (primary sources only) → edit entity files / discovery files
         ↓
-Rebuild the graph, validate locally (three checks in quality-policy.md)
+Rebuild the graph, validate locally (`tools/check_all.py`, see quality-policy.md)
         ↓
 Commit → push → open PR → wait for CI → merge on green
         ↓

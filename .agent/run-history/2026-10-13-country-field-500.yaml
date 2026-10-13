@@ -10,5 +10,7 @@ summary: >
   NL-ISHARE, row #8 closed. The other three parts of #500 (Manufacturing-X to the EU manufacturing data space,
   cultural heritage with media and tourism, governance of the tourism, media and public-administration data spaces)
   need sources not found yet and stay open (rows #120, #124, #125); #500 stays open.
-prs: []
-outcome: in-progress
+prs:
+  - number: 633
+    title: "Data spaces (#500): what country means for an initiative that operates across borders; row #8 closed"
+outcome: merged (#633); #500 stays open for its other three parts

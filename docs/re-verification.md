@@ -10,6 +10,11 @@ it; the judgment half is yours.
 
 ## The state of the debt
 
+**Status (2026-10-13): the debt is closed.** All 856 entities are `verification: primary-source`; the
+count below is 0, and the figures in the history further down are what each pass found on its date. The
+procedure still applies to any new entity that starts `search-only`, and to the re-reading of sources
+over time (roadmap #510 decides how old `last_verified` may get).
+
 ```bash
 # how many entities still owe the pass
 grep -rl "verification: search-only" --include=*.md . | grep -v node_modules | wc -l

@@ -98,7 +98,7 @@ The sidebar is ordered by how often each part is used: the **Explorer** controls
 (in that view), then **Filters** with **Country**, **Entity type** and **Domain**
 open and the rest (level, status, region) collapsed, then the **Legend**, then
 **Connections shown**, **Layout** and **Statistics**. Each heading shows how many
-options are ticked ("Country (2 of 58)"), and the top-bar **Filters** button shows
+options are ticked ("Country (2 of 89)"), and the top-bar **Filters** button shows
 how many filter groups are active ("Filters (2)"), which matters most on a phone
 where the sidebar is hidden.
 
@@ -117,6 +117,9 @@ where the sidebar is hidden.
 
 When a new country or domain joins the Atlas it appears in its filter
 automatically. Nothing in `site/` needs editing.
+
+The Country list is long and grows with the Atlas, so a **Find a country** box above it narrows it by name (case and
+accents are ignored; a ticked country always stays in view).
 
 The **domain** filter is the cross-cutting axis described in
 `metadata/taxonomy.md` §1.1: it answers *"what connects to cybersecurity?"*

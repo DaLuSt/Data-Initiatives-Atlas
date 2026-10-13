@@ -5,27 +5,41 @@ session — whoever starts it — may cross.
 
 ## Validation (must be clean before every commit)
 
-Three checks, run in order, all with zero errors:
+One command runs everything CI runs, with zero errors expected:
 
-1. `python3 tools/build_graph.py` — regenerates `site/graph.json` and
-   `site/details.json` from the entity files. Never hand-edit these two
-   generated files, and never commit them: they are gitignored and CI and
-   the Pages deploy rebuild them.
-2. `python3 validation/run_all.py` — five structural checks: duplicate/
+```
+python3 tools/check_all.py          # about a minute; --fast stops at the first failure
+```
+
+It rebuilds nothing you need to commit and includes, in order:
+
+1. `python3 validation/run_all.py` — five structural checks: duplicate/
    invalid IDs, malformed or missing frontmatter fields, invalid
    controlled-vocabulary values, broken internal `[[wikilinks]]`, invalid
    relationship types/targets, missing/malformed source metadata. The
    handful of pre-existing `http://` warnings from `validate_sources.py`
    are known and not a regression signal — only new errors block a
    merge.
-3. `python3 tools/test_build_graph.py` — the unit test suite (45 tests as
-   of 2026-09-26), including a check that the build is deterministic (two
-   builds of the same data agree apart from `generated_at`), which is what
-   makes not committing the generated files safe.
+2. Every test suite that needs no network: the validators' own tests, the
+   graph generator (including a check that the build is deterministic — two
+   builds of the same data agree apart from `generated_at`, which is what
+   makes not committing the generated files safe), the release tooling, the
+   board sync, the LinkedIn tools, the page reader and the rest.
+3. `python3 tools/update_counts.py --check` (the README and `state.yaml` numbers
+   match the data; fix with `python3 tools/update_counts.py`) and
+   `python3 tools/build_graph.py --check`.
 
-`.github/workflows/validate.yml` runs the same three checks independently
-on every human/external-token PR — see `.agent/operating-model.md`'s git
-workflow for when that check does and doesn't fire.
+`tools/build_graph.py` regenerates `site/graph.json` and `site/details.json`
+from the entity files. Never hand-edit these two generated files, and never
+commit them: they are gitignored and CI and the Pages deploy rebuild them.
+
+If a change touches `site/`, also run the browser suite (`tools/test_ui.mjs`,
+see `docs/graph-development.md`); CI runs it as the required `browser` check.
+
+`.github/workflows/validate.yml` runs the same list (job `validate`) and the browser
+suite (job `browser`) on every pull request and every push to `main`; a new push to a
+pull request cancels the older run. See `.agent/operating-model.md`'s git workflow for
+when a pull request opened by a workflow gets the check.
 
 ## Quality issues validation can't catch
 

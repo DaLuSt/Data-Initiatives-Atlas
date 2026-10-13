@@ -78,6 +78,9 @@ only third-party code (Cytoscape.js) from the same address.
   the CSV download, in Chromium, for errors and broken states.
 - **Reviewed by the developer** on 2026-10-06 (`docs/ux-analysis.md`): first
   screen, wording, mobile layout, detail panel.
+- **Added since the audit:** the "Find a country" box above the Country filter (2026-10-13). It has a label
+  for screen readers, is reached in the normal Tab order and its behaviour is checked by the browser suite, but the axe run
+  above did not include it.
 - **Not done:** a manual WCAG 2.2 audit; testing with NVDA, JAWS, VoiceOver or
   TalkBack; testing in Firefox or Safari; sessions with disabled users.
 
