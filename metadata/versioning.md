@@ -47,6 +47,10 @@ since the previous release**.
    entities, relationships and countries with the change since the last release.
    It is skipped when nothing but housekeeping was merged, or when a release pull
    request is already open.
+   The weekly run is set for Monday 05:17 UTC but GitHub starts scheduled runs when it
+   has capacity: on 2026-10-12 it started at 13:11 UTC, nearly eight hours late. If you
+   need the pull request sooner, start the workflow by hand; it skips itself when a
+   release pull request is already open, so a late scheduled run does no harm.
 2. **You review and merge it.** Nothing is tagged or published before that.
    Edit the CHANGELOG entry in the pull request if the wording needs it.
 3. **Merging creates the tags and the GitHub Release**
