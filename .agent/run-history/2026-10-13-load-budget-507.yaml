@@ -1,0 +1,13 @@
+date: "2026-10-13"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #507 (load time on slow networks). Measured the first graph with Chrome network and CPU throttling
+  (tools/measure_load.mjs, new): 0.7 s unthrottled, 4.7 s on Slow 4G with a 4x CPU slowdown, 5.9 s on Fast 3G, 15.0 s on
+  Slow 3G with 6x CPU. Gzipped sizes at 855 entities: graph.json 112 KB, details.json 489 KB, first-graph path 294 KB.
+  CPU, not bytes, dominates (3.0 s with only the 4x CPU slowdown). Scaled copies project 7.5 s at 2x entities and 12.7 s
+  at 5x. Budget written in docs/performance.md: first graph 5 s on Slow 4G + 4x CPU (met, little room; reached at about
+  1,000 entities), plus gzipped size limits (graph 250 KB, details 1 MB, first-graph path 450 KB) enforced by
+  TestLoadBudget. details.json was already fetched after the first graph, and a test now says so. initGraph adds only
+  the filtered elements, so there was no boot-time edge cost to remove. The phone is emulated, not a real device.
+prs: []
+outcome: in-progress
