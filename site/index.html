@@ -88,7 +88,11 @@
 
         <details class="sub" open>
           <summary>Country <span class="count" id="country-count"></span></summary>
+          <label class="sr-only" for="country-find">Find a country in this list</label>
+          <input id="country-find" class="combo-input filter-find" type="search" autocomplete="off" spellcheck="false"
+                 placeholder="Find a country" aria-controls="f-country">
           <div class="checks scroll filter-scroll" id="f-country"></div>
+          <p class="hint" id="country-find-none" role="status" hidden>No country in the list matches.</p>
         </details>
 
         <details class="sub" open>

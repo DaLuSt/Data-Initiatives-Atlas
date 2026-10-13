@@ -213,6 +213,10 @@ a:hover { text-decoration: none; }
 }
 .sub .count { color: var(--text-dim); font-weight: 400; font-size: .78rem; }
 
+/* The Country list grows with the Atlas (roadmap #508); this box narrows it by name. */
+.filter-find { padding: .3rem .55rem; font-size: .82rem; margin-top: .35rem; }
+.check[hidden] { display: none; }
+
 .checks { display: flex; flex-direction: column; gap: .1rem; padding: .35rem 0; }
 .checks.scroll { max-height: 15rem; overflow-y: auto; }
 /* The sidebar's three open filter lists share the first screen, so they are short. */
