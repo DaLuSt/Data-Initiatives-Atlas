@@ -66,7 +66,9 @@ jobs:
         run: |
           version="$INPUT_VERSION"
           if [ -z "$version" ]; then
-            version=$(python -c "import yaml; print(yaml.safe_load(open('metadata/version.yaml'))['data_release'])")
+            # No PyYAML on the bare runner Python (this job installs nothing), so read the
+            # one line with sed instead of importing yaml.
+            version=$(sed -n 's/^data_release: *"\{0,1\}\([^"]*\)"\{0,1\} *$/\1/p' metadata/version.yaml | head -1)
           fi
           case "$version" in
             [0-9][0-9][0-9][0-9].[0-9][0-9].[0-9]*) ;;
