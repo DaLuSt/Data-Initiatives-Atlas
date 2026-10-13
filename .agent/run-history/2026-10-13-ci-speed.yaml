@@ -11,5 +11,7 @@ summary: >
   cancels the older run when a pull request gets a new push; other runs get their own group (the run id) so a commit on
   main is never left unchecked. Not changed, with reasons: checks still run twice on a merge (validate and the Pages
   build), the browser job stays one job, no pip or npm caching (a second each).
-prs: []
-outcome: in-progress
+prs:
+  - number: 629
+    title: "CI speed: one list of checks, shared builds in the tests, cancel superseded PR runs"
+outcome: merged (#629); validate job 48 s on the runner, from about 115 s

@@ -1,0 +1,11 @@
+date: "2026-10-13"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Housekeeping after #627 (load budget), #628 (scale check) and #629 (CI speed). Closed the run-history entries for
+  #508 and the CI work with their pull requests; wrote the world-map question as .agent/needs-human/world-map-fit.md
+  (needs_human_open 0 to 1) so it does not live only in an issue comment; updated the roadmap snapshot (#507 done,
+  #508 waiting on that decision). No open pull requests. Owner-side items unchanged: delete the stale remote branch
+  claude/atlas-tooling-counts; set PROJECT_TOKEN_EXPIRES and BOARD_SYNC_ENABLED; the LinkedIn token needs renewing
+  before 2026-12-06 (#578); the first automatic LinkedIn post after the next release is still untested.
+prs: []
+outcome: in-progress

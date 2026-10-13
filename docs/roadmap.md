@@ -109,13 +109,13 @@ instruments, not the country anchors. A month with many items is not a promise t
 
 | Release | Data and research | Site and tooling | Decisions and schema |
 |---|---|---|---|
-| **2026.10** (now) | Weekly release pull requests continue; LinkedIn post drafts open as issues | Board sync, shared checks, Node 24 actions and the accessibility statement are done | |
+| **2026.10** (now) | Weekly release pull requests continue; LinkedIn post drafts open as issues | Board sync, shared checks (one list, `tools/check_all.py`), Node 24 actions, the accessibility statement, #507 load time and the #508 scale check (map decision open) are done | |
 | **2026.11** | #446 English names for the last records; #459 UK gaps; #527 successor links | | |
 | **2026.12** | #495 read the blocked sources on GitHub's runners | #526 repair the browser tests; #496 token expiry plan; #452 test with real visitors | #533 founding-six date; #449 rank gaps; #450 which thin domains to deepen |
 | **2027.01** | regions: #540 W Europe and #541 N Europe; #470 countries, group 1; #502 re-check Q1 | #497 accessibility audit; #515 LinkedIn auto-post (needs a LinkedIn app); #528 checks into the validators; #498 release cadence review | |
 | **2027.02** | regions: #542 S Europe and #543 E Europe; #471 countries, group 2; #534 eIDAS cluster; #535 Germany's three questions | | #499 records that fit two types; #457 vocabulary decisions |
 | **2027.03** | regions: #544 N America and #545 S America; #472 countries, group 3; #500 data spaces; #501 standards bodies; #460 coverage gaps | | |
-| **2027.04** | regions: #546 C America and #547 Caribbean; #473 countries, group 4; #503 re-check Q2 | #507 load time on slow networks | #506 multilingual names; #458 Dutch registers and authentic data |
+| **2027.04** | regions: #546 C America and #547 Caribbean; #473 countries, group 4; #503 re-check Q2 | | #506 multilingual names; #458 Dutch registers and authentic data |
 | **2027.05** | regions: #548 N Africa and #549 W Africa; #474 countries, group 5; #536 Dutch registry edges; #537 EU and UN links | | |
 | **2027.06** | regions: #550 E Africa and #551 Middle Africa; #475 countries, group 6 | #508 the site at 200 countries | #509 EU institutions; #461 consistency checks |
 | **2027.07** | regions: #552 S Africa and #553 W Asia; #476 countries, group 7; #504 re-check Q3 | #510 annual re-verification policy | |

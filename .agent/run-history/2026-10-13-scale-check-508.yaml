@@ -10,5 +10,7 @@ summary: >
   minimum zoom of 0.04, so Fit cannot show the whole map, at 89 countries as well as at 194; not caused by growth and
   left as a design decision for the owner (docs/scale-check.md lists three options). Load time at 1,087 entities:
   5.2 s on Slow 4G with 4x CPU, over the 5 s budget of #507. Closed #507 (merged #627) before starting.
-prs: []
-outcome: in-progress
+prs:
+  - number: 628
+    title: "Scale check at 194 countries: a Find a country box and the findings (#508)"
+outcome: merged (#628); issue #508 stays open for the world-map decision, recorded in .agent/needs-human/world-map-fit.md
