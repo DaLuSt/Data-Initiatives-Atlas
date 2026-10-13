@@ -1196,5 +1196,53 @@ class TestAddressAndLinkRobustness(unittest.TestCase):
         self.assertIn("safeHref(s.url)", text)
 
 
+class TestLoadBudget(unittest.TestCase):
+    """The size budget in docs/performance.md (roadmap #507). GitHub Pages sends
+    text files gzipped, so the budget is in gzipped bytes. The thresholds are
+    about 2x today's sizes: the test fails when growth is about to make the
+    first graph slow on a phone, not on every added entity."""
+
+    SITE = REPO_ROOT / "site"
+    GRAPH_MAX = 250_000      # graph.json, gzipped
+    DETAILS_MAX = 1_000_000  # details.json, gzipped; loaded after the first graph
+    CRITICAL_MAX = 450_000   # everything the first graph waits for, gzipped
+
+    @classmethod
+    def setUpClass(cls):
+        import gzip
+        payload, errors, _ = build_graph.build()
+        assert not errors
+        def packed(doc):
+            raw = json.dumps(doc, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+            return len(gzip.compress(raw, 6))
+        cls.graph = packed(payload["graph"])
+        cls.details = packed(payload["details"])
+        cls.static = sum(
+            len(gzip.compress((cls.SITE / f).read_bytes(), 6))
+            for f in ("index.html", "app.css", "app.js", "csv.js", "vendor/cytoscape.min.js"))
+
+    def test_graph_json_within_budget(self):
+        self.assertLessEqual(self.graph, self.GRAPH_MAX,
+                             f"graph.json is {self.graph:,} bytes gzipped; budget {self.GRAPH_MAX:,} "
+                             "(docs/performance.md says what to do when it grows)")
+
+    def test_details_json_within_budget(self):
+        self.assertLessEqual(self.details, self.DETAILS_MAX,
+                             f"details.json is {self.details:,} bytes gzipped; budget {self.DETAILS_MAX:,}")
+
+    def test_first_graph_path_within_budget(self):
+        total = self.static + self.graph
+        self.assertLessEqual(total, self.CRITICAL_MAX,
+                             f"page + scripts + graph.json are {total:,} bytes gzipped; budget {self.CRITICAL_MAX:,}")
+
+    def test_details_are_not_on_the_first_graph_path(self):
+        """details.json is fetched after the graph is shown; if the boot code
+        waited for it, the budget above would be the wrong one."""
+        text = (self.SITE / "app.js").read_text(encoding="utf-8")
+        boot = text[text.index("function boot"):text.index('fetch("details.json"')]
+        self.assertIn('fetch("graph.json"', boot)
+        self.assertNotIn("details.json", boot)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
