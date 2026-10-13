@@ -114,9 +114,9 @@ class TestTheRepositoryIsInStep(unittest.TestCase):
                          "run: python tools/update_counts.py")
 
     def test_the_check_is_in_the_shared_checks(self):
-        action = (REPO_ROOT / ".github" / "actions" / "checks" / "action.yml").read_text(encoding="utf-8")
-        self.assertIn("python tools/update_counts.py --check", action)
-        self.assertIn("python tools/test_update_counts.py", action)
+        checks = (REPO_ROOT / "tools" / "check_all.py").read_text(encoding="utf-8")
+        self.assertIn('"tools/update_counts.py", "--check"', checks)
+        self.assertIn("tools/test_update_counts.py", checks)
 
 
 if __name__ == "__main__":

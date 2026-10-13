@@ -7,6 +7,7 @@ implement its own checks.
 
 from __future__ import annotations
 
+import copy
 import datetime
 import json
 import re
@@ -94,6 +95,29 @@ def iter_markdown_files(entities_only: bool = True):
             yield path
 
 
+_YAML_CACHE: dict[str, tuple[Any, str | None]] = {}
+
+
+def _load_frontmatter(raw_fm: str) -> tuple[Any, str | None]:
+    """The parsed frontmatter text, or an error message.
+
+    Parsing is the slow part of every run, and run_all.py and the test suites read the same
+    files over and over in one process. The result depends only on the text, so it is kept by
+    text; each caller gets its own copy, so one that edits what it was given cannot affect
+    another.
+    """
+    if raw_fm not in _YAML_CACHE:
+        try:
+            _YAML_CACHE[raw_fm] = (yaml.safe_load(raw_fm), None)
+        except (yaml.YAMLError, ValueError) as exc:
+            # ValueError: PyYAML builds a date for 2020-13-45 and the constructor
+            # raises it, which is not a YAMLError. Without this the whole run died
+            # with a traceback instead of naming the file.
+            _YAML_CACHE[raw_fm] = (None, f"Malformed YAML: {exc}")
+    fm, error = _YAML_CACHE[raw_fm]
+    return copy.deepcopy(fm), error
+
+
 def parse_entity_file(path: Path) -> EntityFile:
     text = path.read_text(encoding="utf-8")
     match = _FRONTMATTER_RE.match(text)
@@ -101,13 +125,9 @@ def parse_entity_file(path: Path) -> EntityFile:
         return EntityFile(path=path, frontmatter=None, body=text,
                            parse_error="No YAML frontmatter block found (expected leading '---' ... '---').")
     raw_fm, body = match.group(1), match.group(2)
-    try:
-        fm = yaml.safe_load(raw_fm)
-    except (yaml.YAMLError, ValueError) as exc:
-        # ValueError: PyYAML builds a date for 2020-13-45 and the constructor
-        # raises it, which is not a YAMLError. Without this the whole run died
-        # with a traceback instead of naming the file.
-        return EntityFile(path=path, frontmatter=None, body=body, parse_error=f"Malformed YAML: {exc}")
+    fm, error = _load_frontmatter(raw_fm)
+    if error:
+        return EntityFile(path=path, frontmatter=None, body=body, parse_error=error)
     if not isinstance(fm, dict):
         return EntityFile(path=path, frontmatter=None, body=body, parse_error="Frontmatter did not parse to a mapping.")
     wikilinks = _WIKILINK_RE.findall(text)

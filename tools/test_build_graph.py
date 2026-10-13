@@ -40,6 +40,21 @@ def load_all_entities(entities_only: bool = True):
     return copy.deepcopy(_ENTITY_CACHE[entities_only])
 
 
+_BUILD_CACHE: list = []
+
+
+def real_build():
+    """`build_graph.build()` on the repository's own data, run once per test run.
+
+    A build takes about four seconds and a dozen tests read its result. Each caller gets a deep
+    copy, so a test that edits the payload cannot affect another. Tests that build from patched
+    data, and the determinism test, call `build_graph.build()` themselves on purpose.
+    """
+    if not _BUILD_CACHE:
+        _BUILD_CACHE.append(build_graph.build())
+    return copy.deepcopy(_BUILD_CACHE[0])
+
+
 class TestDataParsing(unittest.TestCase):
     """§28 — YAML parses, Markdown discovered, IDs unique."""
 
@@ -133,7 +148,7 @@ class TestGraphGeneration(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        payload, errors, warnings = build_graph.build()
+        payload, errors, warnings = real_build()
         assert not errors, f"build reported errors: {errors}"
         cls.graph = payload["graph"]
         cls.details = payload["details"]
@@ -365,7 +380,7 @@ class TestScopeEdges(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        payload, errors, _ = build_graph.build()
+        payload, errors, _ = real_build()
         assert not errors, errors
         cls.graph = payload["graph"]
         cls.nodes = {n["id"]: n for n in cls.graph["nodes"]}
@@ -404,7 +419,7 @@ class TestGeographicData(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        payload, errors, warnings = build_graph.build()
+        payload, errors, warnings = real_build()
         assert not errors, f"build reported errors: {errors}"
         cls.graph = payload["graph"]
 
@@ -610,7 +625,7 @@ class TestLegislationTypes(unittest.TestCase):
                             f"type {t!r} has no entry in TYPE_SHAPE (site/app.js)")
 
     def test_legislation_stat_counts_every_legislation_type(self):
-        graph, errors, _ = build_graph.build()
+        graph, errors, _ = real_build()
         self.assertFalse(errors)
         nodes = graph["graph"]["nodes"]
         expected = sum(1 for n in nodes if n.get("type") in self.legislation_types)
@@ -668,7 +683,7 @@ class TestRank(unittest.TestCase):
         self.assertEqual(self._errors("act", None, status="proposed"), [])
 
     def test_rank_reaches_the_details_payload(self):
-        payload, errors, _ = build_graph.build()
+        payload, errors, _ = real_build()
         self.assertFalse(errors)
         nodes = payload["details"]["nodes"]
         self.assertEqual(nodes["ES-LOPDGDD"]["rank"], "organic")
@@ -769,7 +784,7 @@ class TestStartHere(unittest.TestCase):
         js = (cls.SITE / "app.js").read_text(encoding="utf-8")
         block = re.search(r"var START_EXAMPLES = \[(.*?)\n  \];", js, re.S).group(1)
         cls.hashes = re.findall(r'hash:\s*"(#[^"]+)"', block)
-        cls.graph, errors, _ = build_graph.build()
+        cls.graph, errors, _ = real_build()
         assert not errors
         cls.nodes = {n["id"] for n in cls.graph["graph"]["nodes"]}
 
@@ -886,7 +901,7 @@ class TestReleaseInfo(unittest.TestCase):
     SITE = Path(__file__).resolve().parent.parent / "site"
 
     def test_graph_carries_the_schema_version(self):
-        payload, errors, _ = build_graph.build()
+        payload, errors, _ = real_build()
         self.assertFalse(errors)
         release = payload["graph"]["release"]
         self.assertEqual(release["schema_version"], load_schema()["schema_version"])
@@ -955,7 +970,7 @@ class TestEnglishNames(unittest.TestCase):
         self.assertGreaterEqual(len(cited), 23)
 
     def test_graph_nodes_carry_name_en(self):
-        payload, errors, _ = build_graph.build()
+        payload, errors, _ = real_build()
         self.assertFalse(errors)
         graph = payload["graph"]
         with_name = {n["id"] for n in graph["nodes"] if n.get("name_en")}
@@ -1030,7 +1045,7 @@ class TestListCsv(unittest.TestCase):
     def test_every_entity_survives_the_round_trip(self):
         import csv
         import io
-        payload, errors, _ = build_graph.build()
+        payload, errors, _ = real_build()
         self.assertFalse(errors)
         nodes = payload["graph"]["nodes"]
         header = ["ID", "Official name", "English name"]
@@ -1210,7 +1225,7 @@ class TestLoadBudget(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         import gzip
-        payload, errors, _ = build_graph.build()
+        payload, errors, _ = real_build()
         assert not errors
         def packed(doc):
             raw = json.dumps(doc, ensure_ascii=False, separators=(",", ":")).encode("utf-8")

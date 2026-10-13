@@ -461,8 +461,7 @@ class TestWorkflows(unittest.TestCase):
     def test_ci_checks_the_schema_version_on_pull_requests(self):
         text = (self.WF / "validate.yml").read_text(encoding="utf-8")
         self.assertIn("check-schema --base-ref", text)
-        shared = (REPO_ROOT / ".github" / "actions" / "checks" / "action.yml").read_text(encoding="utf-8")
-        self.assertIn("test_release.py", shared)
+        self.assertIn("test_release.py", self.CHECKS)
 
     def test_the_release_pr_gets_the_required_validate_check(self):
         """main requires `validate`; a PR opened with GITHUB_TOKEN never triggers it,
@@ -475,18 +474,30 @@ class TestWorkflows(unittest.TestCase):
         self.assertIn("workflow_dispatch:", val)
         self.assertRegex(val, r"(?m)^  validate:$")  # the job name main requires
 
+    CHECKS = (REPO_ROOT / "tools" / "check_all.py").read_text(encoding="utf-8")
+
+    def test_the_shared_action_runs_the_one_list_of_checks(self):
+        shared = (REPO_ROOT / ".github" / "actions" / "checks" / "action.yml").read_text(encoding="utf-8")
+        self.assertIn("python tools/check_all.py", shared)
+
+    def test_a_new_push_cancels_only_the_older_run_for_the_same_pull_request(self):
+        text = (self.WF / "validate.yml").read_text(encoding="utf-8")
+        self.assertIn("cancel-in-progress: ${{ github.event_name == 'pull_request' }}", text)
+        # Anything but a pull request gets a group of its own (the run id): a shared group
+        # keeps only the newest queued run, which would leave a commit on main unchecked.
+        self.assertIn("|| github.run_id }}", text)
+
     def test_pull_requests_and_deploys_run_the_same_checks(self):
         for name in ("validate.yml", "pages.yml"):
             text = (self.WF / name).read_text(encoding="utf-8")
             self.assertIn("uses: ./.github/actions/checks", text, name)
 
     def test_every_test_file_is_in_the_shared_checks(self):
-        shared = (REPO_ROOT / ".github" / "actions" / "checks" / "action.yml").read_text(encoding="utf-8")
         tests = sorted(p.name for p in (REPO_ROOT / "tools").glob("test_*.py")) + \
             sorted(p.name for p in (REPO_ROOT / "validation").glob("test_*.py"))
         self.assertTrue(tests)
         for name in tests:
-            self.assertIn(name, shared, f"{name} is not run by .github/actions/checks")
+            self.assertIn(name, self.CHECKS, f"{name} is not run by tools/check_all.py")
 
     def test_no_workflow_uses_an_action_known_to_run_on_node_20(self):
         # Warned about on 2026-10-08 (roadmap #493); these are the Node 24 majors.

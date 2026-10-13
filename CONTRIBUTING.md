@@ -100,11 +100,13 @@ containment, so a member-owned cooperative or a foundation takes
 ```
 pip install -r validation/requirements.txt
 python tools/build_graph.py
-python validation/run_all.py
-python tools/test_build_graph.py
-python tools/test_reverify.py
-python tools/test_release.py
+python tools/check_all.py
 ```
+
+`check_all.py` is the whole list CI runs (the validation suite, every test suite and the
+two consistency checks), about a minute; `--list` shows it and `--fast` stops at the first
+failure. A new test file is added to it, once. Each part can still be run on its own, for
+example `python validation/run_all.py` or `python tools/test_build_graph.py`.
 
 `run_all.py` checks: duplicate/invalid IDs, malformed or missing frontmatter
 fields, invalid controlled-vocabulary values, broken internal `[[wikilinks]]`,
