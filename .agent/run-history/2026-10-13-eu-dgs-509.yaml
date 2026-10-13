@@ -1,0 +1,15 @@
+date: "2026-10-13"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #509 (EU institutions: the Directorates-General and the adoption step; rows #15 and #16 closed). Read the
+  Commission's own pages for DG CNECT, DG DIGIT, DG MOVE, DG EMPL and DG GROW directly (commission.europa.eu answers
+  a plain request). Decision recorded in metadata/ontology.md §6: a Directorate-General is an entity when an Atlas
+  entity's own read source says it develops, maintains or provides it and its own page has been read (Eurostat was
+  already modelled that way). One is created, EU-DG-EMPL, with maintained-by edges from EU-ESCO and EU-EUROPASS (their
+  pages say DG EMPL develops/maintains/provides them). The others are not created: no Atlas entity has a read source
+  tying it to one (DCAT-AP's DG CONNECT claim was never re-confirmed; the public-administration data space records DG
+  GROW as unestablished). The adoption step (Parliament and Council) is declined: the type does not imply it (the
+  Commission and the Council adopt some acts alone), the uniform edges would add nothing, and a revisit condition is
+  written. Stale statements in EU-ESCO and EU-COMMISSION corrected.
+prs: []
+outcome: in-progress

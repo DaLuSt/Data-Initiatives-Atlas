@@ -94,14 +94,16 @@ communications that open the EU policy chains ([[EU-DATA-STRATEGY]],
 [[EU-CYBERSECURITY-STRATEGY]]), and originator of the legislative proposals
 that become the regulations and directives in `legislation/`.
 
-## Directorates-General not modelled
+## Directorates-General
 
-Batch 9's scope names "relevant Directorates-General". **None is created.**
-DG CONNECT is named in sources as a co-initiator of [[EU-DCAT-AP]], but no
-research was done into the DG structure, and no source describing DG CNECT
-or DG DIGIT was returned. Creating DG entities from a single passing
-mention would repeat the [[NL-PETRA]] mistake. Queued in
-`discovery/research-queue.md`.
+Batch 9 created none, because no source describing a Directorate-General had
+been read and a single passing mention would have repeated the [[NL-PETRA]]
+mistake. **Decided 2026-10-13 (roadmap #509):** a Directorate-General is an
+entity when an Atlas entity's own read source says the department develops,
+maintains or provides it, and the department's own Commission page has been
+read. The rule, and the departments checked, are in `metadata/ontology.md` §6.
+Today that is [[EU-DG-EMPL]] (ESCO and Europass) and [[EU-EUROSTAT]], which
+was modelled the same way before the question was asked.
 
 `coverage: low` for the same reason: this entity records the Commission's
 role in the chains the Atlas already holds, not the institution itself.
