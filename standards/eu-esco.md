@@ -36,13 +36,21 @@ domains:
 organisations: []
 related_entities:
   - EU-SKILLS-DATA-SPACE
+  - EU-DG-EMPL
 relationships:
   - type: part-of
     target: EU
     source: fact
-    evidence: "Confirmed by reading esco.ec.europa.eu's own 'What is ESCO' page directly (2026-09-26): ESCO is 'the European multilingual classification of Skills, Competences and Occupations,' developed and maintained by the European Commission's DG EMPL, with its first complete version launched 28 July 2017. It covers 3,039 occupations and 13,939 linked skills across 28 languages. Anchor edge under metadata/relationship-types.md §2.3, asserting EU-wide scope via `level: regional`, `region: EU` -- DG EMPL itself is not modelled as a separate entity, matching the Atlas's convention of not modelling Directorates-General in their own right (discovery/unresolved.md ontology item #16)."
+    evidence: "Confirmed by reading esco.ec.europa.eu's own 'What is ESCO' page directly (2026-09-26): ESCO is 'the European multilingual classification of Skills, Competences and Occupations,' developed and maintained by the European Commission's DG EMPL, with its first complete version launched 28 July 2017. It covers 3,039 occupations and 13,939 linked skills across 28 languages. Anchor edge under metadata/relationship-types.md §2.3, asserting EU-wide scope via `level: regional`, `region: EU` (DG EMPL became its own entity on 2026-10-13, EU-DG-EMPL, roadmap #509)."
     confidence: high
     valid_from: "2017-07-28"
+    valid_until: null
+  - type: maintained-by
+    target: EU-DG-EMPL
+    source: fact
+    evidence: "esco.ec.europa.eu's own 'What is ESCO' page, read directly (2026-09-26): ESCO is 'developed and maintained by the European Commission's DG EMPL'. The department's own page was read on 2026-10-13 (roadmap #509) and the entity created."
+    confidence: high
+    valid_from: null
     valid_until: null
   - type: related-to
     target: EU-SKILLS-DATA-SPACE
@@ -98,9 +106,9 @@ fact.
 
 ## Not modelled
 
-- **DG EMPL** as a separate organisation entity — the Atlas does not
-  model Directorates-General in their own right (a still-open ontology
-  question, `discovery/unresolved.md` item #16).
+- ~~**DG EMPL** as a separate organisation entity~~ — **now
+  [[EU-DG-EMPL]]** (2026-10-13, roadmap #509; the rule is in
+  `metadata/ontology.md` §6).
 - ~~**Europass** and the **European Skills Agenda**~~ — **researched
   later the same day**: now [[EU-EUROPASS]] and [[EU-SKILLS-AGENDA]].
   [[EU-SKILLS-DATA-SPACE]]'s own file records all three of its
@@ -109,6 +117,7 @@ fact.
 ## Relationships
 
 - `part-of` [[EU]] (anchor edge, `level: regional`, `region: EU`).
+- `maintained-by` [[EU-DG-EMPL]].
 - `related-to` [[EU-SKILLS-DATA-SPACE]] — `confidence: low`, no direct
   source connects them.
 

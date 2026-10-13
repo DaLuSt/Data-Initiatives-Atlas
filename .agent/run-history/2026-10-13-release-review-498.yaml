@@ -1,4 +1,4 @@
-date: "2026-10-14"
+date: "2026-10-13"
 session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
 summary: >
   Roadmap #498 (review the release cadence and changelog after three releases). Checked the three releases
@@ -11,5 +11,7 @@ summary: >
   prevented it. prepare now records prepared_from and prepared_at in metadata/version.yaml and the next release counts
   from them (tools/release.py since; release-pr.yml uses it); the first run after this falls back to the tag. Decision
   table written in metadata/versioning.md. 3 new tests (72 in tools/test_release.py).
-prs: []
-outcome: in-progress
+prs:
+  - number: 631
+    title: "Release review (#498): count from the previous preparation, not its tag; one line for housekeeping"
+outcome: merged (#631); #498 closed

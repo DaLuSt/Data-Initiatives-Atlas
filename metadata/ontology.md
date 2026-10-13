@@ -470,3 +470,30 @@ registers will copy, so the four questions it raised are answered here.
 6. **The statute behind each register exists.** [[NL-AWR]] was the last missing; it is recorded for its
    Hoofdstuk IVA, which is [[NL-BRI]]'s basis.
 
+
+### The EU's Directorates-General and the adoption step (decided 2026-10-13, roadmap #509)
+
+`discovery/unresolved.md` rows #15 and #16 asked whether the Atlas should show which part of the
+Commission owns an instrument, and whether Parliament's and the Council's adoption of an instrument is an
+edge. Both are answered; the rows are closed.
+
+1. **A Directorate-General is an entity when an Atlas entity's own read source says the department
+   develops, maintains or provides it, and the department's own page on commission.europa.eu has been
+   read.** It is an `organisation` (`level: regional`, `region: EU`), `part-of` [[EU-COMMISSION]] and
+   [[EU]], and the entity it runs points at it with `maintained-by` (or `owned-by` where a source says the
+   department is accountable). [[EU-EUROSTAT]] was modelled this way before the question was asked. The
+   ID is `EU-DG-<abbreviation>`. People (Directors-General, Commissioners) are not recorded.
+2. **Today that is one department:** [[EU-DG-EMPL]], for [[EU-ESCO]] and [[EU-EUROPASS]], whose own pages
+   say it develops, maintains or provides them. The pages of DG CNECT, DG DIGIT, DG MOVE and DG GROW were
+   also read on 2026-10-13; they confirm the departments and what they do, but no Atlas entity has a read
+   source that ties it to one of them. [[EU-DCAT-AP]]'s "joint initiative of DG CONNECT" is carried
+   forward from an earlier description and was not re-confirmed, and [[EU-PUBLIC-ADMIN-DATA-SPACE]]'s own
+   file records DG GROW's role as unestablished. A department with only an anchor edge would answer no
+   question, so none is created for them. The next one is made when a source for an Atlas entity names it.
+3. **The adoption step is not modelled.** Edges from Parliament and the Council to each regulation,
+   directive and decision would be about 32 uniform edges for the ordinary legislative procedure, and the
+   type does not imply them (the Commission adopts implementing and delegated acts alone; the Council
+   adopts many decisions alone). The informative case is the exception, and it is told in the prose of the
+   instrument. **Revisit** if a question the site should answer needs "which body adopted this"; then add
+   one `adopted-by` type under `metadata/relationship-types.md` §2.4 and use it systematically, with a
+   `schema_version` bump.

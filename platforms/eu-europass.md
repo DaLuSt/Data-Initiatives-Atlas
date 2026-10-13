@@ -39,6 +39,7 @@ organisations: []
 related_entities:
   - EU-SKILLS-DATA-SPACE
   - EU-ESCO
+  - EU-DG-EMPL
 relationships:
   - type: part-of
     target: EU
@@ -46,6 +47,13 @@ relationships:
     evidence: "Closes a gap EU-SKILLS-DATA-SPACE's own file had flagged (not a numbered discovery/unresolved.md row: Europass was 'previously presumed' to be existing EU skills-data machinery, then checked against EU-DS4SKILLS's sources on 2026-09-05 and found unmentioned). Confirmed by reading europass.europa.eu's own 'About Europass' page directly (2026-09-26): the European Commission, via DG EMPL, provides it free of charge, offering a CV editor, cover letter editor, Diploma/Certificate Supplements, Mobility documentation, digital skills testing, opportunity matching and European Digital Credentials storage. legislation.gov.uk's own mirror of Decision (EU) 2018/646, also read directly (eur-lex.europa.eu returned empty content for this CELEX number on every attempt), confirms the Decision's date (18 April 2018), its title ('a common framework for the provision of better services for skills and qualifications (Europass)'), and that it repeals the original Decision No 2241/2004/EC of 15 December 2004 -- the date recorded as `start_date`, since that is when the Europass framework itself began, not when the current legal basis was adopted. Anchor edge under metadata/relationship-types.md §2.3, asserting EU-wide scope via `level: regional`, `region: EU`."
     confidence: high
     valid_from: "2004-12-15"
+    valid_until: null
+  - type: maintained-by
+    target: EU-DG-EMPL
+    source: fact
+    evidence: "europass.europa.eu's own 'About Europass' page, read directly (2026-09-26), says the platform is provided free of charge by the Commission's Directorate-General for Employment, Social Affairs and Inclusion (DG EMPL). The department's own page was read on 2026-10-13 (roadmap #509) and the entity created."
+    confidence: high
+    valid_from: null
     valid_until: null
   - type: related-to
     target: EU-SKILLS-DATA-SPACE
@@ -117,6 +125,7 @@ interpretation`, `confidence: low` rather than asserted as fact.
 ## Relationships
 
 - `part-of` [[EU]] (anchor edge, `level: regional`, `region: EU`).
+- `maintained-by` [[EU-DG-EMPL]].
 - `related-to` [[EU-SKILLS-DATA-SPACE]] — `confidence: low`, no direct
   source connects them.
 
