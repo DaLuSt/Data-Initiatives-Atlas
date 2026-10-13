@@ -62,9 +62,11 @@ jobs:
       - name: Roadmap issues closed since the last release
         if: steps.open.outputs.open == '0'
         run: |
-          last=$(git tag --list 'data-*' --sort=-creatordate | head -1)
-          if [ -n "$last" ]; then
-            since=$(git log -1 --format=%cI "$last")
+          # From the commit the previous release was prepared from, not from its tag: the tag is
+          # the release pull request's merge, hours or days later, and an issue closed in
+          # between would belong to no release.
+          since=$(python tools/release.py since)
+          if [ -n "$since" ]; then
             gh issue list --state closed --label roadmap --search "closed:>$since" \
               --json number,title --limit 100 > issues.json
           else

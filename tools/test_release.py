@@ -209,6 +209,15 @@ class TestLinkedinDraft(unittest.TestCase):
             "France and the Open Data Directive",
             "Add the rank field"])
 
+    def test_housekeeping_is_one_line_with_a_count(self):
+        changes = [{"number": n, "title": f"Housekeeping: record #{n}", "date": "2026-10-12",
+                    "category": "housekeeping"} for n in (10, 11, 12)]
+        entry = release.render_entry(version="2026.10.4", schema="1.0.0", prev_schema="1.0.0",
+                                     released="2026-10-19", counts={"entities": 1, "relationships": 1, "countries": 1}, prev_counts=None,
+                                     changes=changes, issues=[], baseline=False)
+        self.assertIn("- 3 pull requests that only record progress in the repository's own files (#10, #11, #12)", entry)
+        self.assertNotIn("Housekeeping: record #10", entry)
+
     def test_tooling_documentation_and_housekeeping_are_never_listed(self):
         d = self.draft()
         for internal in ("Board sync", "Roadmap docs", "Housekeeping"):
@@ -384,6 +393,33 @@ class TestGit(unittest.TestCase):
                          [(5, "housekeeping"), (4, "data"), (2, "site")])
         self.assertEqual(release.last_data_tag(), "data-2026.10.1")
 
+    def test_a_pull_request_merged_while_the_release_waited_is_in_the_next_release(self):
+        """The release pull request merges after the pull requests that landed since it
+        was prepared, so they sit before its tag. Counting from the tag lost them."""
+        self.commit("Old data (#1)", "legislation/a.md")
+        self.git("tag", "data-2026.10.1")
+        self.commit("Data in release 2 (#2)", "legislation/b.md")
+        prepared = subprocess.run(["git", "rev-parse", "HEAD"], cwd=self.root, check=True,
+                                  capture_output=True, text=True).stdout.strip()
+        self.commit("Data merged while the release waited (#3)", "legislation/c.md")
+        self.commit("Release data 2026.10.2 (#4)", "metadata/version.yaml")
+        self.git("tag", "data-2026.10.2")
+        self.commit("Data after the release (#5)", "legislation/d.md")
+        prev = {"prepared_from": prepared}
+        start = release.release_start(prev, "data-2026.10.2")
+        self.assertEqual(start, prepared)
+        self.assertEqual([c["number"] for c in release.changes_since(start)], [5, 3])
+        # Counting from the tag, as before, loses #3.
+        self.assertEqual([c["number"] for c in release.changes_since("data-2026.10.2")], [5])
+
+    def test_without_a_record_the_tag_is_the_start(self):
+        self.commit("Old data (#1)", "legislation/a.md")
+        self.git("tag", "data-2026.10.1")
+        self.assertEqual(release.release_start({}, "data-2026.10.1"), "data-2026.10.1")
+        self.assertEqual(release.release_start({"prepared_from": "0" * 40}, "data-2026.10.1"),
+                         "data-2026.10.1")
+        self.assertIsNone(release.release_start({}, None))
+
     def test_no_tag_means_everything(self):
         self.commit("First (#1)", "legislation/a.md")
         self.commit("Second (#2)", "docs/a.md")
@@ -399,8 +435,8 @@ class TestWorkflows(unittest.TestCase):
         for name in ("release-pr.yml", "release-publish.yml", "validate.yml"):
             text = (self.WF / name).read_text(encoding="utf-8")
             yaml.safe_load(text)
-            for sub in re.findall(r"tools/release\.py (\S+)", text):
-                self.assertIn(sub, {"plan", "prepare", "notes", "tags", "check-schema", "linkedin-draft"}, f"{name}: {sub}")
+            for sub in re.findall(r"tools/release\.py ([\w-]+)", text):
+                self.assertIn(sub, {"plan", "prepare", "notes", "tags", "since", "check-schema", "linkedin-draft"}, f"{name}: {sub}")
 
     def test_the_release_workflow_never_publishes(self):
         text = (self.WF / "release-pr.yml").read_text(encoding="utf-8")

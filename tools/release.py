@@ -17,6 +17,7 @@ schema-version change. It never talks to GitHub: the workflows
     python tools/release.py prepare              # write version.yaml, CHANGELOG.md, state.yaml
     python tools/release.py notes 2026.10.1      # the CHANGELOG entry, for the GitHub Release
     python tools/release.py tags                 # tags the current version.yaml needs
+    python tools/release.py since                # when the next release's changes begin (a timestamp)
     python tools/release.py linkedin-draft 2026.10.1  # a plain-text post draft for a release
     python tools/release.py check-schema         # CI: schema changed => schema_version changed
 
@@ -207,8 +208,15 @@ def render_entry(*, version: str, schema: str, prev_schema: str | None, released
             shown = True
             lines.append(f"### {label}")
             lines.append("")
-            for c in items:
-                lines.append(f"- {c['title']} (#{c['number']})")
+            if key == "housekeeping":
+                # These only record progress in the repository's own state files. Listed one by
+                # one they were a quarter of an entry and said nothing to a reader.
+                refs = ", ".join(f"#{c['number']}" for c in items)
+                noun = "pull request" if len(items) == 1 else "pull requests"
+                lines.append(f"- {len(items)} {noun} that only record progress in the repository's own files ({refs})")
+            else:
+                for c in items:
+                    lines.append(f"- {c['title']} (#{c['number']})")
             lines.append("")
         if not shown:
             lines += ["No pull requests were merged since the previous release.", ""]
@@ -384,6 +392,26 @@ def changes_since(tag: str | None) -> list[dict]:
     return changes
 
 
+def release_start(prev: dict, tag: str | None) -> str | None:
+    """Where the next release's changes begin.
+
+    The previous release recorded the commit of `main` it was prepared from
+    (`prepared_from` in version.yaml). Starting there, not at the tag, keeps the
+    pull requests merged while the release pull request waited for review: they are
+    older than the tag (the release merges after them) but newer than the entry
+    that was written, so counting from the tag would list them in no release.
+    Falls back to the tag when there is no record, or the commit is not in this history.
+    """
+    sha = (prev or {}).get("prepared_from")
+    if sha:
+        try:
+            git("merge-base", "--is-ancestor", str(sha), "HEAD")
+            return str(sha)
+        except subprocess.CalledProcessError:
+            pass
+    return tag
+
+
 def last_data_tag() -> str | None:
     versions = parse_data_versions(existing_tags())
     if not versions:
@@ -407,7 +435,8 @@ def plan(today: date, issues: list[dict]) -> dict:
     prev_tag = last_data_tag()
     prev = read_yaml(VERSION_PATH)
     version = next_data_version(today, tags)
-    changes = changes_since(prev_tag)
+    start = release_start(prev, prev_tag)
+    changes = changes_since(start)
     schema = current_schema_version()
     counts = graph_counts()
     entry = render_entry(
@@ -417,6 +446,8 @@ def plan(today: date, issues: list[dict]) -> dict:
     releasable = [c for c in changes if c["category"] != "housekeeping"]
     return {"version": version, "schema": schema, "prev_tag": prev_tag, "entry": entry,
             "counts": counts, "changes": changes, "releasable": releasable,
+            "prepared_from": git("rev-parse", "HEAD").strip(),
+            "prepared_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
             "baseline": prev_tag is None, "released": today.isoformat()}
 
 
@@ -454,6 +485,8 @@ def cmd_prepare(a) -> int:
         f"data_release: \"{p['version']}\"\n"
         f"schema_version: \"{p['schema']}\"\n"
         f"released: \"{p['released']}\"\n"
+        f"prepared_from: \"{p['prepared_from']}\"\n"
+        f"prepared_at: \"{p['prepared_at']}\"\n"
         "counts:\n"
         f"  entities: {p['counts']['entities']}\n"
         f"  relationships: {p['counts']['relationships']}\n"
@@ -465,6 +498,21 @@ def cmd_prepare(a) -> int:
             STATE_PATH.read_text(encoding="utf-8"), p["version"], p["schema"], p["released"]),
             encoding="utf-8")
     print(f"prepared data release {p['version']} (schema {p['schema']})")
+    return 0
+
+
+def cmd_since(_a) -> int:
+    """When the next release's changes begin, as a timestamp the workflow can search issues from."""
+    prev = read_yaml(VERSION_PATH)
+    start = release_start(prev, last_data_tag())
+    if start and start == (prev or {}).get("prepared_from") and prev.get("prepared_at"):
+        # The moment the previous entry was written: an issue closed after it is in no entry yet
+        # (the commit's own date can be hours earlier and would list some twice).
+        print(prev["prepared_at"])
+    elif start:
+        print(git("log", "-1", "--format=%cI", start).strip())
+    else:
+        print("")
     return 0
 
 
@@ -531,13 +579,14 @@ def main() -> int:
     sp = sub.add_parser("notes")
     sp.add_argument("version")
     sub.add_parser("tags")
+    sub.add_parser("since")
     sp = sub.add_parser("linkedin-draft")
     sp.add_argument("version")
     sp = sub.add_parser("check-schema")
     sp.add_argument("--base-ref", help="git ref to compare schema.json against, e.g. origin/main")
     a = ap.parse_args()
     return {"plan": cmd_plan, "prepare": cmd_prepare, "notes": cmd_notes,
-            "linkedin-draft": cmd_linkedin_draft, "tags": cmd_tags, "check-schema": cmd_check_schema}[a.cmd](a)
+            "linkedin-draft": cmd_linkedin_draft, "tags": cmd_tags, "since": cmd_since, "check-schema": cmd_check_schema}[a.cmd](a)
 
 
 if __name__ == "__main__":
