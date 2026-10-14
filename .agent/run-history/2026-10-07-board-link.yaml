@@ -12,5 +12,5 @@ summary: >
   closed #444 on the owner's word; if the board does not fill itself, check the
   Workflows in the project's settings against docs/roadmap.md.
 prs: []
-outcome: in-progress
+outcome: done (the board has been in use since; #444 closed on 2026-10-07)
 entity_count_after: 742
