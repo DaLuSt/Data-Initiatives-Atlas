@@ -73,6 +73,12 @@ Not given a rank, on purpose:
 - **EEA Joint Committee Decisions** (`INTL-EEA-JCD-*`) are decisions of a
   body created by an international agreement. They sit in no state's
   hierarchy and are not EU acts, so none of the four values fits.
+- **CEFTA Joint Committee Decisions** (`INTL-CEFTA-JC-*`) are the same kind of
+  instrument, adopted by the body of a free trade agreement's Parties, and are
+  left unranked for the same reason.
+- **Eurasian Economic Union instruments** (`INTL-EAEU-*`, `INTL-EEC-*`): a treaty,
+  its protocol and a decision of the Union's regulatory commission. They belong to
+  a supranational legal order whose hierarchy the Atlas has not read, so none is ranked.
 - **`GB-UK-GDPR`** is retained EU law carried into UK domestic law. Its
   domestic rank is a question of UK law that its own file does not answer, so
   it stays unset.
