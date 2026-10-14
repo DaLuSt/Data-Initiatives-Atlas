@@ -1,0 +1,19 @@
+date: "2026-10-14"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  The owner asked for another hour of roadmap items. Regions again (#542, #543, #541). Union for the Mediterranean:
+  its site answers a plain request; read the Ministerial Declaration on the Digital Economy of 30 September 2014 (the
+  Secretariat's PDF is a draft, Version 5a, so the entity is medium confidence and the adopted wording is a gap), the
+  press release that reports what was adopted, the working group's Rules of Procedure and two pages. Three entities:
+  the UfM, the declaration (soft-law, references eIDAS and GEANT from the draft) and the Digital Economy and Internet
+  Access Expert Working Group. No member edges (no readable list of the 43 Member States). The Rules of Procedure
+  name DG CONNECT as the EU's representative in the group; that is not enough for a Directorate-General entity under the
+  rule recorded for #509. CIS: iacis.ru resets the agent's connection, so two pages were read on a GitHub runner
+  (fetch-pages, run 38602033388; the artifact downloads with curl against api.github.com): two entities, the
+  Interparliamentary Assembly and its Model Information Code of 23 November 2012 (known from one sentence, text not
+  read). The Council of the Baltic Sea States and the Visegrad Group front pages were scanned and hold nothing on data;
+  BSEC resets the agent's connection and timed out on the runner. Row #246 records the gaps. 5 new entities (867 to 872).
+  Mistake of mine this session: a cleanup command with a glob after a directory change was refused by the safety check;
+  nothing was removed.
+prs: []
+outcome: in-progress
