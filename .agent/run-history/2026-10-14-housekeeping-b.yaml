@@ -1,0 +1,13 @@
+date: "2026-10-14"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Housekeeping after #638. Closed the run-history entries for #637 and #638; mapped row #246 to #542 and #543 in
+  docs/roadmap.md; checked that the README and state.yaml numbers match the data (872 entities, 58 open rows). No
+  open pull requests. Unchanged owner-side items: delete the stale remote branches claude/atlas-tooling-counts and
+  claude/atlas-group5-474; set PROJECT_TOKEN_EXPIRES and BOARD_SYNC_ENABLED; renew the LinkedIn token before 2026-12-06
+  (#578); and, if the owner wants to post to the Page instead of the profile, request the Community Management API
+  and re-authorise with an organisation scope (the authorisation script needs a --page option first; not built).
+  The first automatic LinkedIn post after the next release is still untested; the next release pull request is due
+  on Monday 2026-10-19.
+prs: []
+outcome: in-progress

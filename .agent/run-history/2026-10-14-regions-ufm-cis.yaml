@@ -15,5 +15,7 @@ summary: >
   BSEC resets the agent's connection and timed out on the runner. Row #246 records the gaps. 5 new entities (867 to 872).
   Mistake of mine this session: a cleanup command with a glob after a directory change was refused by the safety check;
   nothing was removed.
-prs: []
-outcome: in-progress
+prs:
+  - number: 638
+    title: "Regions (#541-#543): the Union for the Mediterranean's digital declaration and the CIS Assembly's model code"
+outcome: merged (#638); #542 and #543 stay open

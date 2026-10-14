@@ -8,5 +8,7 @@ summary: >
   to delete (the agent's proxy blocks remote deletion): claude/atlas-tooling-counts and claude/atlas-group5-474. The
   first automatic LinkedIn post after the next release is still untested; the next release pull request is due on
   Monday 2026-10-19.
-prs: []
-outcome: in-progress
+prs:
+  - number: 637
+    title: "Housekeeping: close the open run-history entries, correct the regions count, map rows #244 and #245"
+outcome: merged (#637)

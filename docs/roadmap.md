@@ -161,6 +161,7 @@ recorded declines (#229, #230, #231, #232) or deliberate non-assertions (#88, #9
 | #243 | none yet (Lower Saxony: Dataport and IT.Niedersachsen; a source is needed) |
 | #244 | #542 (CEFTA's digital instruments: what is left unread) |
 | #245 | #543 (the Eurasian Economic Union's digital instruments: what is left unread) |
+| #246 | #542, #543 (the Union for the Mediterranean and the CIS Assembly: what is left unread; the bodies looked at with nothing found) |
 | #233 | #446 |
 | #234 | #459 |
 | #236 to #242 | #470 to #476 (the countries of each group whose laws were not read) |
