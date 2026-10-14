@@ -9,5 +9,7 @@ summary: >
   IT.Niedersachsen divide Lower Saxony's IT, which would have been lost; it is now row #243. The detail section of
   row #5 is removed, the roadmap's question table and the cross-reference notes updated (entity files that cite
   "item #5" in their creation notes are left as written, as the convention for closed rows allows). Open rows 56 to 55.
-prs: []
-outcome: in-progress
+prs:
+  - number: 635
+    title: "Close rows #5 and #19 of unresolved.md; keep the Lower Saxony question as row #243"
+outcome: merged (#635)

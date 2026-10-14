@@ -1,0 +1,12 @@
+date: "2026-10-14"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Housekeeping after #636. Closed the run-history entries that still said in-progress (#636 itself, the rows #5 and #19
+  closure as #635, and the 2026-10-07 board link, whose outcome the board's use since then settles); corrected the
+  regions entry's count (CEFTA is 6 entities, not 7; 11 new entities, 856 to 867); mapped rows #244 and #245 to #542 and
+  #543 in docs/roadmap.md. Counts and state.yaml checked against the data. Two stale remote branches remain for the owner
+  to delete (the agent's proxy blocks remote deletion): claude/atlas-tooling-counts and claude/atlas-group5-474. The
+  first automatic LinkedIn post after the next release is still untested; the next release pull request is due on
+  Monday 2026-10-19.
+prs: []
+outcome: in-progress
