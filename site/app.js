@@ -692,7 +692,7 @@
   // WCAG 2.2 1.4.13: Escape dismisses it, the pointer may move onto it, and it
   // stays until the pointer leaves, focus moves or it is dismissed.
   var CARD_DELAY = 350, CARD_LEAVE = 250;
-  var cardEl = null, cardShowTimer = null, cardHideTimer = null;
+  var cardEl = null, cardBody = null, cardShowTimer = null, cardHideTimer = null;
 
   function canHover() {
     return !!(window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches);
@@ -737,11 +737,17 @@
 
   function cardElement() {
     if (cardEl) return cardEl;
+    // The outer element is a named region, so the card is never page content outside a
+    // landmark (axe "region"); the inner one is the tooltip itself.
     cardEl = document.createElement("div");
-    cardEl.id = "hovercard";
     cardEl.className = "hovercard";
-    cardEl.setAttribute("role", "tooltip");
+    cardEl.setAttribute("role", "region");
+    cardEl.setAttribute("aria-label", "Entity summary");
     cardEl.hidden = true;
+    cardBody = document.createElement("div");
+    cardBody.id = "hovercard";
+    cardBody.setAttribute("role", "tooltip");
+    cardEl.appendChild(cardBody);
     cardEl.addEventListener("mouseenter", function () { clearTimeout(cardHideTimer); });
     cardEl.addEventListener("mouseleave", scheduleHideCard);
     document.body.appendChild(cardEl);
@@ -753,7 +759,7 @@
     if (!n || !rect) return;
     clearTimeout(cardShowTimer); clearTimeout(cardHideTimer);
     var el = cardElement();
-    el.innerHTML = cardHtml(n);
+    cardBody.innerHTML = cardHtml(n);
     el.hidden = false;
     // Beside the thing it describes, flipped or clamped to stay on screen.
     var w = el.offsetWidth, h = el.offsetHeight, vw = window.innerWidth, vh = window.innerHeight;
@@ -1691,7 +1697,9 @@
       msg = (f ? f.label : focusId) + " · " + depth + "-hop neighbourhood · " + msg;
     }
     if (nn > LOD_LABELS) {
-      msg += " · labels off (filter or use Explorer)";
+      msg += canHover()
+        ? " · labels off (rest the pointer on a dot to see what it is; or filter, or use Explorer)"
+        : " · labels off (filter or use Explorer)";
     } else if (nn && cy.zoom() * 9 < 8) {
       msg += " · zoom in for labels";
     }

@@ -1256,12 +1256,14 @@ async function search(page, q) {
     const bb = n.renderedBoundingBox({ includeLabels: false, includeOverlays: false, includeEdges: false }), c = document.getElementById('cy').getBoundingClientRect();
     return { x: c.left + (bb.x1 + bb.x2) / 2, y: c.top + (bb.y1 + bb.y2) / 2 };
   });
+  check('hover card: with labels off, the status line says a resting pointer shows what a dot is',
+        /rest the pointer on a dot/.test(await page.textContent('#stage-status')));
   await page.mouse.move(at.x + 400, at.y + 300);
   await page.mouse.move(at.x, at.y);
   await page.waitForTimeout(700);
   var card = await page.evaluate(() => {
     const el = document.getElementById('hovercard');
-    return el && !el.hidden ? { text: el.textContent, role: el.getAttribute('role') } : null;
+    return el && el.getClientRects().length > 0 ? { text: el.textContent, role: el.getAttribute('role') } : null;
   });
   check('hover card: resting on a node shows a card', !!card);
   check('hover card: it names the entity, its type and its relationships',
@@ -1331,11 +1333,39 @@ async function search(page, q) {
     const bb = n.renderedBoundingBox({ includeLabels: false, includeOverlays: false, includeEdges: false }), c = document.getElementById('cy').getBoundingClientRect();
     return { x: c.left + (bb.x1 + bb.x2) / 2, y: c.top + (bb.y1 + bb.y2) / 2 };
   });
+  check('hover card: on a touch screen the status line does not promise a hover',
+        !/rest the pointer/.test(await page.textContent('#stage-status')));
   await page.touchscreen.tap(at.x, at.y);
   await page.waitForTimeout(900);
   check('hover card: a tap opens the detail panel', await page.isVisible('#detail'));
-  check('hover card: a tap shows no card', !(await page.evaluate(() => { const el = document.getElementById('hovercard'); return !!el && !el.hidden; })));
+  check('hover card: a tap shows no card', !(await page.evaluate(() => { const el = document.getElementById('hovercard'); return !!el && el.getClientRects().length > 0; })));
   } catch (e) { crash('hover card on touch', e); }
+  await ctx.close();
+}
+
+// The hover card's text contrast in both colour schemes (WCAG 1.4.3), measured on the real card.
+for (const scheme of ['light', 'dark']) {
+  const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 }, colorScheme: scheme });
+  const page = await ctx.newPage();
+  page.setDefaultTimeout(6000);
+  try {
+    await page.goto(BASE + '/index.html', { waitUntil: 'networkidle' });
+    await page.waitForFunction(() => document.getElementById('loading').hidden, null, { timeout: 15000 });
+    await page.click('#start-close').catch(() => {});
+    await page.click('#view-list'); await page.waitForTimeout(600);
+    await page.locator('#list-body .namebtn').first().hover(); await page.waitForTimeout(700);
+    const r = await page.evaluate(() => {
+      const rgb = s => s.match(/\d+(\.\d+)?/g).slice(0, 3).map(Number);
+      const lum = ([r, g, b]) => { const f = v => { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); }; return .2126 * f(r) + .7152 * f(g) + .0722 * f(b); };
+      const cr = (a, b) => { const [x, y] = [lum(a), lum(b)].sort((p, q) => q - p); return (x + .05) / (y + .05); };
+      const card = document.querySelector('.hovercard');
+      const bg = rgb(getComputedStyle(card).backgroundColor);
+      const pick = sel => { const el = card.querySelector(sel); return el ? +cr(rgb(getComputedStyle(el).color), bg).toFixed(2) : null; };
+      return { title: pick('.hc-title'), meta: pick('.hc-meta'), desc: pick('.hc-desc'), chips: [...card.querySelectorAll('.chip')].map(c => +cr(rgb(getComputedStyle(c).color), rgb(getComputedStyle(c).backgroundColor)).toFixed(2)) };
+    });
+    check(`${scheme}: hover card title and detail text meet 4.5:1`, [r.title, r.meta].every(v => v !== null && v >= 4.5), JSON.stringify(r));
+    check(`${scheme}: hover card chips meet 4.5:1`, r.chips.length > 0 && r.chips.every(v => v >= 4.5), r.chips.join(', '));
+  } catch (e) { crash(`hover card contrast (${scheme})`, e); }
   await ctx.close();
 }
 

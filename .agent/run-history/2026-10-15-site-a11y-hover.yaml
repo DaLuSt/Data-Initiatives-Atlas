@@ -1,0 +1,15 @@
+date: "2026-10-15"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  The owner asked for items that improve the site. The open roadmap items on the site are blocked on people (#452, #497
+  need real visitors or a manual audit) or on the owner (#645, the world map; #508 waits on it), so the work was the
+  loose ends of the two newest features. (1) axe-core on the hover card and the Country filter box, light and dark,
+  graph and List view, with the card showing: one finding, the card sat outside any landmark (moderate, "region");
+  fixed with a named region around the tooltip; now no violations. (2) 4 new browser checks for the card's text and chip
+  contrast in both themes. (3) With labels off the status line now says that resting the pointer on a dot shows what it
+  is (not on touch); 2 checks. Browser suite 161/161. ACCESSIBILITY.md says what axe covered and that a screen-reader
+  pass is still not done. Still incomplete in axe's own words (needs a person): colour contrast of the zoom-out button,
+  the status line and the List sort button, and the label-in-name check on the + and - zoom buttons (symbols, not
+  words). Not built: anything for the map (waiting on #645).
+prs: []
+outcome: in-progress

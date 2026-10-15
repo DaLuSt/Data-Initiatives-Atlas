@@ -97,7 +97,8 @@ country or region, the first sentence of its description and the number of typed
 focus on a name in the List or Compare views, or arrow-key focus on the graph, shows it too. <kbd>Esc</kbd>
 dismisses it, you can move the pointer onto it, and it goes when the pointer leaves. Clicking still opens the
 detail panel. On a touch screen there is no hover, so a tap opens the panel as before and no card appears.
-The sentence comes from `details.json`, which arrives just after the first graph, so a card shown in the first
+When the graph is too big for labels, the status line under it says that resting the pointer on a dot shows what it
+is (not shown on touch screens). The sentence comes from `details.json`, which arrives just after the first graph, so a card shown in the first
 moments has no sentence yet.
 
 ### Filters
