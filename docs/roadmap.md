@@ -107,19 +107,19 @@ most likely to move. From 2027.01 the plan also adds the regional layer (#539, t
 sub-regions, two per month, ending 2027.11): each sub-region's regional bodies and
 instruments, not the country anchors. A month with many items is not a promise that all of them fit.
 
-**Done so far (26 items, 2026-10-07 to 2026-10-15):** the first release and the board (#443, #444);
+**Done so far (27 items, 2026-10-07 to 2026-10-15):** the first release and the board (#443, #444);
 CSV export and the Explorer fix (#445, #447); the backlog reconciled (#448); the constitutional-rank gaps and the
 founding-six date (#449, #533); the consistency checks (#461) and the move of the generator-only checks into the
 validators (#528); the Dutch registers (#458, #536); the eIDAS cluster (#534); the EU and UN links (#537); the
 Node 24 actions, the data-correction form and the same checks for deploys (#493, #494, #529); the blocked sources
 read on runners (#495); the browser tests (#526); successor links (#527); automatic LinkedIn posts (#515); the
-types decision (#499); load time (#507); the release review (#498); the Directorates-General (#509); and the hover card with an entity's core information (#640).
+types decision (#499); load time (#507); the release review (#498); the Directorates-General (#509); the hover card with an entity's core information (#640); and the board token's expiry plan (#496).
 Part of #500 (what `country` means) and of #508 (the Country filter) is done; the rest of each is below.
 
 | Release | Data and research | Site and tooling | Decisions and schema |
 |---|---|---|---|
 | **2026.11** | #446 English names for the last records; #459 UK gaps | #578 renew the LinkedIn token |  |
-| **2026.12** | #450 thin domains (what is left) | #496 token expiry (owner sets the variables) |  |
+| **2026.12** | #450 thin domains (what is left) |  |  |
 | **2027.01** | regions: #540 W Europe and #541 N Europe; #470 countries, group 1; #502 re-check Q1 | #497 manual accessibility checks |  |
 | **2027.02** | regions: #542 S Europe and #543 E Europe; #471 countries, group 2; #535 Germany's § 91a question | #452 test with real visitors and devices | #457 vocabulary decisions |
 | **2027.03** | regions: #544 N America and #545 S America; #472 countries, group 3; #460 coverage gaps; #500 data spaces (three parts left); #501 standards bodies |  |  |
@@ -139,7 +139,7 @@ Part of #500 (what `country` means) and of #508 (the Country filter) is done; th
 major version). The manual accessibility checks (#497) update `ACCESSIBILITY.md`. #508 waits for the owner's
 decision on the world map (`.agent/needs-human/world-map-fit.md`). The regional layer (#539) needs the owner's
 answer on whether regions are blocs only (the recommendation) before #540 starts; #511 (UN system) holds the UN
-regional commissions. #578 (the LinkedIn token) and #496 (the board token) need the owner.
+regional commissions. #578 (the LinkedIn token) needs the owner.
 
 ### Where each open question in `discovery/` lives
 
