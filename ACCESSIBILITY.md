@@ -84,7 +84,9 @@ only third-party code (Cytoscape.js) from the same address.
 - **Added since the audit:** the hover card on entities (2026-10-15). It follows WCAG 2.2 1.4.13: Escape dismisses it, the
   pointer can move onto it and it stays until dismissed or the pointer or focus leaves; it is a `tooltip` and is not in the
   Tab order. Keyboard users get it on focus in the List and Compare views and with the arrow keys on the graph. The browser
-  suite checks these, but the axe run above did not include it.
+  suite checks these and the card's text contrast in both themes. axe-core (2026-10-15, light and dark, graph and List view,
+  with the card showing, and with the Country filter box in use) reported no violations; it first reported one, that the card
+  sat outside any landmark, now fixed. A screen-reader pass has not been done.
 - **Not done:** a manual WCAG 2.2 audit; testing with NVDA, JAWS, VoiceOver or
   TalkBack; testing in Firefox or Safari; sessions with disabled users.
 
