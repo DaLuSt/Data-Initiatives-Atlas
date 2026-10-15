@@ -1,0 +1,12 @@
+date: "2026-10-15"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  The owner asked to add to the roadmap a hover on entities that shows their core information. Opened roadmap issue
+  #640 (area:site, milestone 2026.11): a card on pointer hover and on keyboard focus with name, type, level, country,
+  status, the first sentence of the description and the relationship count. Recorded in the issue: the description is in
+  details.json, which loads after the first graph, so the card must work without it; touch devices have no hover and a
+  tap should keep opening the detail panel; WCAG 2.2 1.4.13 (dismissible, hoverable, persistent); the canvas has no DOM per
+  node, so one positioned element driven by Cytoscape mouse events; nothing per node at boot, checked against the load
+  budget; browser-suite checks listed. docs/roadmap.md plan table updated. Nothing built.
+prs: []
+outcome: in-progress
