@@ -1,0 +1,13 @@
+date: "2026-10-15"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Housekeeping after #642 (the hover card, #640 closed). Closed the run-history entries for #639, #641 and #642 (none
+  is left in-progress). Checked: README and state.yaml match the data (872 entities, 58 open rows); the roadmap's done
+  paragraph already lists #640 (26 items done, 60 roadmap issues open); no open pull requests. Owner-side items
+  unchanged: delete the stale remote branches claude/atlas-tooling-counts and claude/atlas-group5-474; set
+  PROJECT_TOKEN_EXPIRES and BOARD_SYNC_ENABLED; renew the LinkedIn token before 2026-12-06 (#578); the owner's decision
+  on the world map (.agent/needs-human/world-map-fit.md, #508). Not done on the hover card: axe on the card and a
+  screen-reader pass. The next release pull request is due Monday 2026-10-19; its automatic LinkedIn post is still
+  untested.
+prs: []
+outcome: in-progress

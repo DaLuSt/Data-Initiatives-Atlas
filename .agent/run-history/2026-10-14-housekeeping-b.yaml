@@ -9,5 +9,7 @@ summary: >
   and re-authorise with an organisation scope (the authorisation script needs a --page option first; not built).
   The first automatic LinkedIn post after the next release is still untested; the next release pull request is due
   on Monday 2026-10-19.
-prs: []
-outcome: in-progress
+prs:
+  - number: 639
+    title: "Housekeeping: close the open run-history entries; map row #246"
+outcome: merged (#639)
