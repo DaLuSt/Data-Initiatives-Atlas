@@ -1,0 +1,16 @@
+date: "2026-10-15"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #640, the hover card, built. One element (role tooltip) shared by the graph, the List view and the Compare
+  matrix: name (and the other-language name), level, type, status, country or region, the first sentence of the
+  description (from details.json when it has arrived) and the typed-relationship count. Shown after 350 ms of a resting
+  pointer, on keyboard focus (List and Compare buttons, arrow-key focus on the canvas); Escape dismisses it, the pointer
+  can move onto it, it goes 250 ms after the pointer leaves; not on touch (media query hover: hover and pointer: fine).
+  Found while testing: Cytoscape's own mouseover never reached a hub, because the lines over it take the hit-test, so the
+  node under the pointer is found by position, once per frame (1.1 ms at 872 nodes, 2.3 ms at 4x CPU; recorded in
+  docs/performance.md). After a click the browser repeats a mousemove under a resting pointer, which re-showed the card;
+  fixed by muting until the pointer moves. The Compare cells lost their native title, which would have doubled the
+  tooltip. 18 new browser checks (155 in all). docs/graph.md, ACCESSIBILITY.md, docs/performance.md and the roadmap
+  updated. Not run: axe on the card; a screen-reader pass.
+prs: []
+outcome: in-progress

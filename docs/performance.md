@@ -78,6 +78,13 @@ double, but reading the table above, the time budget is reached at about 1,000
 entities, because time is dominated by CPU, not bytes. That is the first thing
 to fix when it comes, not the file sizes.
 
+## The hover card
+
+The hover card (roadmap #640) finds the node under the pointer by scanning the visible nodes once per animation
+frame while the pointer moves over the graph, because on a hub the lines drawn over a node take the pointer's
+hit-test from Cytoscape. Measured: 1.1 ms per pointer move over 872 nodes (2.3 ms with the 4x CPU slowdown) and 3.0 ms
+over the 1,087-node test copy. Nothing runs at boot and nothing runs when the pointer is still.
+
 ## What to do when the budget is missed
 
 In order of expected effect:

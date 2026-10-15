@@ -89,6 +89,17 @@ isolated ones. Arrow keys navigate the list, <kbd>Enter</kbd> opens.
 
 Selecting a result switches to the Entity Explorer and focuses that entity.
 
+### The hover card
+
+Rest the pointer on an entity — a dot in the graph, a name in the List view or an entity in a Compare
+cell — and a small card shows its core information: name (and the other-language name), level, type, status,
+country or region, the first sentence of its description and the number of typed relationships. Keyboard
+focus on a name in the List or Compare views, or arrow-key focus on the graph, shows it too. <kbd>Esc</kbd>
+dismisses it, you can move the pointer onto it, and it goes when the pointer leaves. Clicking still opens the
+detail panel. On a touch screen there is no hover, so a tap opens the panel as before and no card appears.
+The sentence comes from `details.json`, which arrives just after the first graph, so a card shown in the first
+moments has no sentence yet.
+
 ### Filters
 
 Everything in the sidebar is derived from the repository at build time — no
