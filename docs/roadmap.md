@@ -118,7 +118,7 @@ Part of #500 (what `country` means) and of #508 (the Country filter) is done; th
 
 | Release | Data and research | Site and tooling | Decisions and schema |
 |---|---|---|---|
-| **2026.11** | #446 English names for the last records; #459 UK gaps | #578 renew the LinkedIn token |  |
+| **2026.11** | #446 English names for the last records; #459 UK gaps | #578 renew the LinkedIn token; #640 hover card with an entity's core information |  |
 | **2026.12** | #450 thin domains (what is left) | #496 token expiry (owner sets the variables) |  |
 | **2027.01** | regions: #540 W Europe and #541 N Europe; #470 countries, group 1; #502 re-check Q1 | #497 manual accessibility checks |  |
 | **2027.02** | regions: #542 S Europe and #543 E Europe; #471 countries, group 2; #535 Germany's § 91a question | #452 test with real visitors and devices | #457 vocabulary decisions |
