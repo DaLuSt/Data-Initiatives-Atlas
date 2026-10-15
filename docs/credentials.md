@@ -73,6 +73,9 @@ before the sync, on every run (issue events, Mondays, by hand):
 Variables* add `PROJECT_TOKEN_EXPIRES` (the date your token expires) and
 `BOARD_SYNC_ENABLED` = `true`.
 
+**Status (2026-10-15):** the owner has set both variables. A dry run of the workflow the same day passed its
+token-health step without a warning and synced the board. The expiry date itself is not recorded in the repository.
+
 ### Rotation steps (owner, about 5 minutes; do it before the date)
 
 1. Create a new classic token at <https://github.com/settings/tokens> with

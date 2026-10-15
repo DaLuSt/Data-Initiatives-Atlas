@@ -1,0 +1,14 @@
+date: "2026-10-15"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  The owner reported that BOARD_SYNC_ENABLED and PROJECT_TOKEN_EXPIRES are set. The agent cannot read repository
+  variables (the proxy blocks them), so it started the Roadmap board workflow by hand with dry_run ticked: every step
+  passed (the secret check, the token-health check, the sync), with no warning annotation and the two issue steps
+  skipped, which is what a healthy token and set variables look like. It cannot tell the expiry date. Roadmap #496 (the
+  plan for the expiring PROJECT_TOKEN and a visible failure) is complete: the plan (docs/credentials.md, #562), the
+  failing-sync issue and the 14-day warning (#583), and now the variables. docs/credentials.md has a status note and
+  docs/roadmap.md moves #496 to done (27 items). Also noticed on that run: GitHub will move the ubuntu-latest label to
+  Ubuntu 26 on 2026-10-19, the day the weekly release pull request is due; the browser job relies on the runner's own
+  Chrome and the checks on Python 3.12, so a pin to ubuntu-24.04 is offered to the owner, not made.
+prs: []
+outcome: in-progress
