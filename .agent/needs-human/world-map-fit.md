@@ -1,7 +1,7 @@
 # What should the world map do at about 200 countries?
 
 ## Context
-Roadmap #508 (open). In the Global Atlas, the "World map" arrangement places each country's cluster by
+Roadmap #508 (open) and #645 (the decision, on the roadmap since 2026-10-15). In the Global Atlas, the "World map" arrangement places each country's cluster by
 longitude at 360 px per degree and keeps large clusters apart. The page's minimum zoom is 0.04. Details and
 numbers are in `docs/scale-check.md`.
 

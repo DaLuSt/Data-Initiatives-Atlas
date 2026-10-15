@@ -1,0 +1,14 @@
+date: "2026-10-15"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  The owner reported that the two stale remote branches are deleted (checked: only main remains on the remote) and that
+  a reminder for the LinkedIn token (#578, due before 2026-12-06) is set, and asked for the world-map decision to go on
+  the roadmap. Opened roadmap issue #645 (area:site, milestone 2026.12): the owner chooses among three options (lower
+  the minimum zoom; scale the map down with one dot per country that opens on zoom; keep it and say so), the choice is
+  recorded in docs/graph-development.md, and options 1 and 2 are then built and tested. Recommendation written in the
+  issue (option 2 if the map is an overview, option 3 if it is for exploring one region). #508 stays open for the map
+  part and now points to #645. docs/roadmap.md plan table and dependency sentence updated; the needs-human file points
+  to #645. Owner-side items left: the world-map choice itself; the LinkedIn token renewal; the ubuntu-latest to Ubuntu
+  26 move on 2026-10-19 (a pin to ubuntu-24.04 offered, not made).
+prs: []
+outcome: in-progress

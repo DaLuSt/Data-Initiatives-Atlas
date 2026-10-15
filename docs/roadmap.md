@@ -119,7 +119,7 @@ Part of #500 (what `country` means) and of #508 (the Country filter) is done; th
 | Release | Data and research | Site and tooling | Decisions and schema |
 |---|---|---|---|
 | **2026.11** | #446 English names for the last records; #459 UK gaps | #578 renew the LinkedIn token |  |
-| **2026.12** | #450 thin domains (what is left) |  |  |
+| **2026.12** | #450 thin domains (what is left) | #645 the world map: decide what it is for, then make it usable | The owner's choice among three options (#645) |
 | **2027.01** | regions: #540 W Europe and #541 N Europe; #470 countries, group 1; #502 re-check Q1 | #497 manual accessibility checks |  |
 | **2027.02** | regions: #542 S Europe and #543 E Europe; #471 countries, group 2; #535 Germany's § 91a question | #452 test with real visitors and devices | #457 vocabulary decisions |
 | **2027.03** | regions: #544 N America and #545 S America; #472 countries, group 3; #460 coverage gaps; #500 data spaces (three parts left); #501 standards bodies |  |  |
@@ -137,7 +137,7 @@ Part of #500 (what `country` means) and of #508 (the Country filter) is done; th
 
 **Dependencies worth knowing.** #457 (vocabulary decisions) comes before #513 (does the schema need a
 major version). The manual accessibility checks (#497) update `ACCESSIBILITY.md`. #508 waits for the owner's
-decision on the world map (`.agent/needs-human/world-map-fit.md`). The regional layer (#539) needs the owner's
+decision on the world map (#645, `.agent/needs-human/world-map-fit.md`). The regional layer (#539) needs the owner's
 answer on whether regions are blocs only (the recommendation) before #540 starts; #511 (UN system) holds the UN
 regional commissions. #578 (the LinkedIn token) needs the owner.
 
