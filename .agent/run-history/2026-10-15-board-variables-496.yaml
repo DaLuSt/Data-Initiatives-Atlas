@@ -10,5 +10,7 @@ summary: >
   docs/roadmap.md moves #496 to done (27 items). Also noticed on that run: GitHub will move the ubuntu-latest label to
   Ubuntu 26 on 2026-10-19, the day the weekly release pull request is due; the browser job relies on the runner's own
   Chrome and the checks on Python 3.12, so a pin to ubuntu-24.04 is offered to the owner, not made.
-prs: []
-outcome: in-progress
+prs:
+  - number: 644
+    title: "Board token variables set: record it and close #496's plan"
+outcome: merged (#644); #496 closed
