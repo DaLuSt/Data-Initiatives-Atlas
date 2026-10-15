@@ -442,6 +442,7 @@
     $("copy-link").addEventListener("click", copyLink);
     $("list-csv").addEventListener("click", downloadListCsv);
 
+    wireCardButtons();
     $("detail-close").addEventListener("click", closeDetail);
     $("detail-expand").addEventListener("click", function () {
       setDetailExpanded(!$("detail").classList.contains("is-expanded"));
@@ -488,6 +489,7 @@
 
     document.addEventListener("keydown", function (ev) {
       if (ev.key === "Escape") {
+        if (cardVisible()) { hideCardNow(); return; }
         if ($("suggestions").hidden === false) { hideSuggestions(); return; }
         if (!$("start").hidden) { showStart(false); return; }
         if (!$("detail").hidden) closeDetail();
@@ -631,6 +633,42 @@
     // Edges carry real data (type, provenance, confidence, evidence) but
     // look like plain lines — a pointer cursor is the only hint that they
     // are tappable at all.
+    // The hover card (roadmap #640): a node under a resting pointer. Not on touch
+    // screens, where a tap already opens the detail panel and has no "resting".
+    // Found by the pointer's own position, not by Cytoscape's mouseover: on a hub the
+    // lines drawn over a node take the pointer's hit-test, so the node never "hears" it.
+    var hoverFrame = 0, hoverNode = null, lastPointer = { x: 0, y: 0 }, mutedAt = null;
+    $("cy").addEventListener("mousemove", function (ev) {
+      lastPointer = { x: ev.clientX, y: ev.clientY };
+      // After a click the browser repeats a mousemove at the same spot when the layout
+      // changes under a resting pointer; that is not a new reason to show a card.
+      if (mutedAt) {
+        if (Math.abs(ev.clientX - mutedAt.x) + Math.abs(ev.clientY - mutedAt.y) < 6) return;
+        mutedAt = null;
+      }
+      if (hoverFrame || ev.buttons || !canHover()) return;
+      var x = ev.clientX, y = ev.clientY;
+      hoverFrame = requestAnimationFrame(function () {
+        hoverFrame = 0;
+        var c = $("cy").getBoundingClientRect(), best = null, bestD = Infinity;
+        cy.nodes().forEach(function (n) {
+          var p = n.renderedPosition(), r = Math.max(n.renderedWidth(), n.renderedHeight()) / 2 + 3;
+          var d = Math.hypot(p.x - (x - c.left), p.y - (y - c.top));
+          if (d <= r && d < bestD) { best = n; bestD = d; }
+        });
+        var id = best ? best.id() : null;
+        if (id === (hoverNode && hoverNode.id())) return;
+        hoverNode = best;
+        if (best) scheduleCard(id, function () { return nodeRect(best); });
+        else scheduleHideCard();
+      });
+    });
+    $("cy").addEventListener("mouseleave", function () { hoverNode = null; scheduleHideCard(); });
+    cy.on("tapstart", function () {
+      mutedAt = { x: lastPointer.x, y: lastPointer.y };
+      if (hoverFrame) { cancelAnimationFrame(hoverFrame); hoverFrame = 0; }
+    });
+    cy.on("tapstart drag zoom pan", function () { hoverNode = null; hideCardNow(); });
     cy.on("mouseover", "edge", function () { $("cy").style.cursor = "pointer"; });
     cy.on("mouseout", "edge", function () { $("cy").style.cursor = ""; });
 
@@ -645,6 +683,117 @@
       var dir = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[ev.key];
       if (dir) { ev.preventDefault(); moveKbFocus(dir); }
     });
+  }
+
+  // ── hover card (roadmap #640) ────────────────────────────────────────
+  // One element, shared by the graph, the List view and the Compare matrix: the
+  // entity's core information where the pointer rests or keyboard focus sits, so
+  // a visitor can tell what a dot or a row is without opening the detail panel.
+  // WCAG 2.2 1.4.13: Escape dismisses it, the pointer may move onto it, and it
+  // stays until the pointer leaves, focus moves or it is dismissed.
+  var CARD_DELAY = 350, CARD_LEAVE = 250;
+  var cardEl = null, cardShowTimer = null, cardHideTimer = null;
+
+  function canHover() {
+    return !!(window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches);
+  }
+
+  /** The first sentence of a description, cut short if it is very long. */
+  function firstSentence(t) {
+    t = String(t || "").replace(/\s+/g, " ").trim();
+    var m = t.match(/^(.+?[.!?])\s+(?=[A-Z])/);
+    var out = m ? m[1] : t;
+    return out.length > 240 ? out.slice(0, 237).replace(/\s+\S*$/, "") + "…" : out;
+  }
+
+  function cardHtml(n) {
+    var d = (D && D.nodes && D.nodes[n.id]) || {};
+    var h = ['<div class="hc-title">' + esc(n.label) + "</div>"];
+    if (n.name_en && n.official && n.name_en !== n.official) {
+      h.push('<div class="hc-sub">' + (n.label === n.name_en
+        ? esc(n.official) : "In English: " + esc(n.name_en)) + "</div>");
+    }
+    var chips = [];
+    if (n.level) chips.push('<span class="chip lvl" style="background:' +
+      css(LEVEL_COLOR[n.level] || "--text-dim") + '">' + esc(titly(n.level)) + "</span>");
+    if (n.type) chips.push('<span class="chip strong">' + esc(titly(n.type)) + "</span>");
+    if (n.status) chips.push('<span class="chip">' + esc(titly(n.status)) + "</span>");
+    if (n.country) chips.push('<span class="chip">' + esc(countryLabel(n.country)) + "</span>");
+    else if (n.region) chips.push('<span class="chip">' + esc(n.region) + "</span>");
+    h.push('<div class="chips">' + chips.join("") + "</div>");
+    // The description lives in details.json, which arrives after the first graph.
+    if (d.description) h.push('<p class="hc-desc">' + esc(firstSentence(d.description)) + "</p>");
+    var rels = n.rel_degree || 0;
+    h.push('<div class="hc-meta">' + rels.toLocaleString() + " typed " +
+      (rels === 1 ? "relationship" : "relationships") + " · " + esc(n.id) + "</div>");
+    return h.join("");
+  }
+
+  function nodeRect(node) {
+    var bb = node.renderedBoundingBox({ includeLabels: false, includeOverlays: false, includeEdges: false }),
+      c = $("cy").getBoundingClientRect();
+    return { left: c.left + bb.x1, right: c.left + bb.x2, top: c.top + bb.y1, bottom: c.top + bb.y2 };
+  }
+
+  function cardElement() {
+    if (cardEl) return cardEl;
+    cardEl = document.createElement("div");
+    cardEl.id = "hovercard";
+    cardEl.className = "hovercard";
+    cardEl.setAttribute("role", "tooltip");
+    cardEl.hidden = true;
+    cardEl.addEventListener("mouseenter", function () { clearTimeout(cardHideTimer); });
+    cardEl.addEventListener("mouseleave", scheduleHideCard);
+    document.body.appendChild(cardEl);
+    return cardEl;
+  }
+
+  function showCardNow(id, rect) {
+    var n = nodeById[id];
+    if (!n || !rect) return;
+    clearTimeout(cardShowTimer); clearTimeout(cardHideTimer);
+    var el = cardElement();
+    el.innerHTML = cardHtml(n);
+    el.hidden = false;
+    // Beside the thing it describes, flipped or clamped to stay on screen.
+    var w = el.offsetWidth, h = el.offsetHeight, vw = window.innerWidth, vh = window.innerHeight;
+    var x = rect.right + 8;
+    if (x + w > vw - 8) x = Math.max(8, rect.left - 8 - w);
+    var y = Math.min(Math.max(8, rect.top), Math.max(8, vh - h - 8));
+    el.style.left = Math.round(x) + "px";
+    el.style.top = Math.round(y) + "px";
+  }
+
+  function scheduleCard(id, rectFn) {
+    clearTimeout(cardShowTimer); clearTimeout(cardHideTimer);
+    cardShowTimer = setTimeout(function () { showCardNow(id, rectFn()); }, CARD_DELAY);
+  }
+  function scheduleHideCard() {
+    clearTimeout(cardShowTimer); clearTimeout(cardHideTimer);
+    cardHideTimer = setTimeout(hideCardNow, CARD_LEAVE);
+  }
+  function hideCardNow() {
+    clearTimeout(cardShowTimer); clearTimeout(cardHideTimer);
+    if (cardEl) cardEl.hidden = true;
+  }
+  function cardVisible() { return !!(cardEl && !cardEl.hidden); }
+
+  /** The List view's and Compare matrix's entity buttons: pointer rest and keyboard focus. */
+  function wireCardButtons() {
+    var SEL = ".namebtn[data-goto]";
+    function button(ev) { return ev.target && ev.target.closest ? ev.target.closest(SEL) : null; }
+    document.addEventListener("mouseover", function (ev) {
+      var b = button(ev);
+      if (b && canHover()) scheduleCard(b.dataset.goto, function () { return b.getBoundingClientRect(); });
+    });
+    document.addEventListener("mouseout", function (ev) { if (button(ev)) scheduleHideCard(); });
+    document.addEventListener("focusin", function (ev) {
+      var b = button(ev);
+      if (b && b.matches(":focus-visible")) showCardNow(b.dataset.goto, b.getBoundingClientRect());
+    });
+    document.addEventListener("focusout", function (ev) { if (button(ev)) hideCardNow(); });
+    document.addEventListener("click", function (ev) { if (button(ev)) hideCardNow(); });
+    window.addEventListener("scroll", hideCardNow, true);
   }
 
   // ── keyboard traversal of the canvas ─────────────────────────────────
@@ -676,8 +825,13 @@
     syncUrl();
     highlight(id);
     var node = cy.getElementById(id);
+    hideCardNow();
     if (node.length) {
-      cy.animate({ center: { eles: node }, zoom: Math.max(cy.zoom(), 0.9) }, { duration: 150 });
+      cy.animate({ center: { eles: node }, zoom: Math.max(cy.zoom(), 0.9) }, {
+        duration: 150,
+        // Keyboard focus gets the card too, once the node has settled in view.
+        complete: function () { if (focusId === id && kbActive) showCardNow(id, nodeRect(node)); }
+      });
     }
     // Reuses the status line rather than adding a second live region — it is
     // already aria-live="polite" and already describes the current view.
@@ -1465,6 +1619,7 @@
     if (view === "list") { renderList(); return; }
     if (view === "compare") { renderCompare(); return; }
 
+    hideCardNow();
     var els = currentElements();
     cy.elements().remove();
     cy.add(els);
@@ -1567,6 +1722,7 @@
   // ── selection + detail panel ─────────────────────────────────────────
   function selectEntity(id, fromGraph) {
     if (!nodeById[id]) return;
+    hideCardNow();
     focusId = id;
     // A click, search pick or deep link is not a keyboard move — drop any
     // stale "Keyboard focus" note the status line was carrying.
@@ -2329,8 +2485,7 @@
           // stays in the accessible name and the tooltip, not in the grid.
           return '<td class="is-implemented">' + s.ids.map(function (id) {
             var e = nodeById[id] || {};
-            return '<button class="namebtn cell-entity" data-goto="' + esc(id) + '"' +
-              (e.label ? ' title="' + esc(e.label) + '"' : "") + ">" +
+            return '<button class="namebtn cell-entity" data-goto="' + esc(id) + '">' +
               esc(id) + (e.label ? '<span class="sr-only"> — ' + esc(e.label) + "</span>" : "") +
               (e.status ? '<span class="cell-status">' + esc(titly(e.status)) + "</span>" : "") +
               "</button>";

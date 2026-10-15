@@ -81,6 +81,10 @@ only third-party code (Cytoscape.js) from the same address.
 - **Added since the audit:** the "Find a country" box above the Country filter (2026-10-13). It has a label
   for screen readers, is reached in the normal Tab order and its behaviour is checked by the browser suite, but the axe run
   above did not include it.
+- **Added since the audit:** the hover card on entities (2026-10-15). It follows WCAG 2.2 1.4.13: Escape dismisses it, the
+  pointer can move onto it and it stays until dismissed or the pointer or focus leaves; it is a `tooltip` and is not in the
+  Tab order. Keyboard users get it on focus in the List and Compare views and with the arrow keys on the graph. The browser
+  suite checks these, but the axe run above did not include it.
 - **Not done:** a manual WCAG 2.2 audit; testing with NVDA, JAWS, VoiceOver or
   TalkBack; testing in Firefox or Safari; sessions with disabled users.
 

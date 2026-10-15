@@ -1237,6 +1237,108 @@ async function search(page, q) {
   await ctx.close();
 }
 
+// ──────────────── hover card (roadmap #640) ────────────────
+// The core information of an entity where the pointer rests or keyboard focus sits: in the
+// graph, the List view and the Compare matrix. WCAG 2.2 1.4.13: Escape dismisses it, the pointer
+// may move onto it. Not on touch screens, where a tap opens the detail panel as before.
+{
+  var { ctx, page, errors } = await newPage({ width: 1440, height: 900 });
+  try {
+  await page.goto(BASE + '/index.html', { waitUntil: 'networkidle' });
+  await page.waitForFunction(() => document.getElementById('loading').hidden, null, { timeout: 15000 });
+  await page.click('#start-close').catch(() => {});
+  await page.waitForTimeout(500);
+  // A node in the middle of the screen: zoom in on a known entity and read where it is drawn.
+  const at = await page.evaluate(() => {
+    const cy = document.getElementById('cy')._cyreg.cy;
+    const n = cy.getElementById('EU-GDPR');
+    cy.zoom({ level: 1.2, position: n.position() }); cy.center(n);
+    const bb = n.renderedBoundingBox({ includeLabels: false, includeOverlays: false, includeEdges: false }), c = document.getElementById('cy').getBoundingClientRect();
+    return { x: c.left + (bb.x1 + bb.x2) / 2, y: c.top + (bb.y1 + bb.y2) / 2 };
+  });
+  await page.mouse.move(at.x + 400, at.y + 300);
+  await page.mouse.move(at.x, at.y);
+  await page.waitForTimeout(700);
+  var card = await page.evaluate(() => {
+    const el = document.getElementById('hovercard');
+    return el && !el.hidden ? { text: el.textContent, role: el.getAttribute('role') } : null;
+  });
+  check('hover card: resting on a node shows a card', !!card);
+  check('hover card: it names the entity, its type and its relationships',
+        !!card && /General Data Protection Regulation/i.test(card.text) && /Regulation/.test(card.text) &&
+        /typed relationships?/.test(card.text), card ? card.text.slice(0, 160) : 'no card');
+  check('hover card: it carries the first sentence of the description',
+        !!card && card.text.length > 140, card ? String(card.text.length) : '');
+  check('hover card: it is a tooltip for assistive technology', !!card && card.role === 'tooltip');
+
+  // Hoverable: the pointer can move onto the card without it vanishing.
+  const box = await page.evaluate(() => { const r = document.getElementById('hovercard').getBoundingClientRect(); return { x: r.left + r.width / 2, y: r.top + r.height / 2 }; });
+  await page.mouse.move(box.x, box.y, { steps: 6 });
+  await page.waitForTimeout(500);
+  check('hover card: it stays while the pointer is on it', await page.isVisible('#hovercard'));
+  // Dismissible: Escape closes it without moving the pointer.
+  await page.keyboard.press('Escape');
+  check('hover card: Escape dismisses it', !(await page.isVisible('#hovercard')));
+  // It goes when the pointer leaves.
+  await page.mouse.move(at.x, at.y); await page.waitForTimeout(700);
+  await page.mouse.move(at.x + 500, at.y + 350, { steps: 4 }); await page.waitForTimeout(700);
+  check('hover card: it goes when the pointer leaves', !(await page.isVisible('#hovercard')));
+  // Clicking still opens the detail panel, and the card does not stay on top of it.
+  await page.mouse.move(at.x, at.y); await page.waitForTimeout(600);
+  await page.mouse.click(at.x, at.y); await page.waitForTimeout(500);
+  check('hover card: a click still opens the detail panel', await page.isVisible('#detail'));
+  check('hover card: it is gone once the panel opens', !(await page.isVisible('#hovercard')));
+
+  // The List view: a name button.
+  await page.click('#view-list'); await page.waitForTimeout(600);
+  const rowBtn = page.locator('#list-body .namebtn').first();
+  await rowBtn.hover(); await page.waitForTimeout(700);
+  check('hover card: resting on a name in the List view shows it', await page.isVisible('#hovercard'));
+  await page.mouse.move(5, 5); await page.waitForTimeout(600);
+  // Keyboard focus: Tab onto a name button shows it too.
+  await page.keyboard.press('Shift');
+  await rowBtn.focus(); await page.waitForTimeout(200);
+  check('hover card: keyboard focus on a name shows it', await page.isVisible('#hovercard'));
+  await page.keyboard.press('Escape');
+  check('hover card: Escape dismisses the keyboard card', !(await page.isVisible('#hovercard')));
+
+  // The Compare matrix: an entity in a cell.
+  await page.click('#view-compare'); await page.waitForTimeout(700);
+  const cell = page.locator('#compare-body .cell-entity').first();
+  await cell.hover(); await page.waitForTimeout(700);
+  check('hover card: resting on an entity in the Compare matrix shows it', await page.isVisible('#hovercard'));
+  check('hover card: the cell no longer carries a native tooltip as well',
+        (await cell.getAttribute('title')) === null);
+  check('hover card: no console errors', errors.length === 0, errors.slice(0, 3).join(' | '));
+  } catch (e) { crash('hover card', e); }
+  await ctx.close();
+}
+{
+  // A touch screen has no hover: a tap opens the detail panel and shows no card.
+  const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, hasTouch: true, isMobile: true });
+  const page = await ctx.newPage();
+  page.setDefaultTimeout(6000);
+  try {
+  await page.goto(BASE + '/index.html', { waitUntil: 'networkidle' });
+  await page.waitForFunction(() => document.getElementById('loading').hidden, null, { timeout: 15000 });
+  await page.click('#start-close').catch(() => {});
+  const matches = await page.evaluate(() => window.matchMedia('(hover: hover) and (pointer: fine)').matches);
+  check('hover card: the touch emulation reports no fine pointer or hover', matches === false);
+  const at = await page.evaluate(() => {
+    const cy = document.getElementById('cy')._cyreg.cy;
+    const n = cy.getElementById('EU-GDPR');
+    cy.zoom({ level: 1.2, position: n.position() }); cy.center(n);
+    const bb = n.renderedBoundingBox({ includeLabels: false, includeOverlays: false, includeEdges: false }), c = document.getElementById('cy').getBoundingClientRect();
+    return { x: c.left + (bb.x1 + bb.x2) / 2, y: c.top + (bb.y1 + bb.y2) / 2 };
+  });
+  await page.touchscreen.tap(at.x, at.y);
+  await page.waitForTimeout(900);
+  check('hover card: a tap opens the detail panel', await page.isVisible('#detail'));
+  check('hover card: a tap shows no card', !(await page.evaluate(() => { const el = document.getElementById('hovercard'); return !!el && !el.hidden; })));
+  } catch (e) { crash('hover card on touch', e); }
+  await ctx.close();
+}
+
 // ──────────────── accessibility: contrast and target size (roadmap #497) ────────────────
 // WCAG 2.2 AA: text 4.5:1 (1.4.3), graphical objects 3:1 (1.4.11), pointer targets 24 px (2.5.8).
 // axe-core found the first two failing in the dark theme (white text on the light accent colour)

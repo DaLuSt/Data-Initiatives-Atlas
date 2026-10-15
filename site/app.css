@@ -560,3 +560,17 @@ a:hover { text-decoration: none; }
   .linkbtn, .footer-actions a { padding-block: .35rem; }
   .ev > summary { padding-block: .45rem; }
 }
+
+/* Hover card (roadmap #640): the core information of the entity under the pointer or focus. */
+.hovercard {
+  position: fixed; z-index: 60; max-width: min(22rem, calc(100vw - 16px));
+  padding: .6rem .75rem; background: var(--surface); color: var(--text);
+  border: 1px solid var(--border-strong); border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.22); font-size: .84rem; line-height: 1.35;
+}
+.hovercard[hidden] { display: none; }
+.hovercard .hc-title { font-weight: 600; font-size: .92rem; }
+.hovercard .hc-sub { color: var(--text-dim); font-size: .78rem; margin-top: .1rem; }
+.hovercard .chips { margin: .45rem 0; }
+.hovercard .hc-desc { margin: 0 0 .45rem; }
+.hovercard .hc-meta { color: var(--text-dim); font-size: .76rem; }
