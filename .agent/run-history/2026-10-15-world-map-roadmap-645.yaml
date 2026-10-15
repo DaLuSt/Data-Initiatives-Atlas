@@ -10,5 +10,7 @@ summary: >
   part and now points to #645. docs/roadmap.md plan table and dependency sentence updated; the needs-human file points
   to #645. Owner-side items left: the world-map choice itself; the LinkedIn token renewal; the ubuntu-latest to Ubuntu
   26 move on 2026-10-19 (a pin to ubuntu-24.04 offered, not made).
-prs: []
-outcome: in-progress
+prs:
+  - number: 646
+    title: "Roadmap: the world-map decision is #645 (2026.12); #508 waits on it"
+outcome: merged (#646)

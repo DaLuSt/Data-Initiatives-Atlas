@@ -8,5 +8,7 @@ summary: >
   GB-BS-10012, type standard, status archived (no successor), maintained-by GB-BSI, aligned-with EU-GDPR, part-of GB;
   the standard's text was not read (it is sold). The UN-CES seat (needs unece.org, which answers 403) and Portugal's
   Conselho Superior de Estatistica stay open on #459. 872 to 873 entities.
-prs: []
-outcome: in-progress
+prs:
+  - number: 647
+    title: "UK (#459): BS 10012, the British Standard for personal information management, withdrawn in April 2026"
+outcome: merged (#647); #459 stays open (UN-CES seat, Portugal's council)

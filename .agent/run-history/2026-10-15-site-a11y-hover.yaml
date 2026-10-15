@@ -11,5 +11,7 @@ summary: >
   pass is still not done. Still incomplete in axe's own words (needs a person): colour contrast of the zoom-out button,
   the status line and the List sort button, and the label-in-name check on the + and - zoom buttons (symbols, not
   words). Not built: anything for the map (waiting on #645).
-prs: []
-outcome: in-progress
+prs:
+  - number: 648
+    title: "Site: hover card inside a landmark (axe), contrast checks for it, and a status-line hint"
+outcome: merged (#648)

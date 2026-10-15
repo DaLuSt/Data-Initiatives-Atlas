@@ -9,5 +9,7 @@ summary: >
   on the world map (.agent/needs-human/world-map-fit.md, #508). Not done on the hover card: axe on the card and a
   screen-reader pass. The next release pull request is due Monday 2026-10-19; its automatic LinkedIn post is still
   untested.
-prs: []
-outcome: in-progress
+prs:
+  - number: 643
+    title: "Housekeeping: close the open run-history entries after the hover card"
+outcome: merged (#643)

@@ -1,0 +1,12 @@
+date: "2026-10-15"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Housekeeping after #648. Closed the five run-history entries still marked in-progress (#643, #644, #646, #647,
+  #648). Checked: README and state.yaml match the data (873 entities, 58 open rows); no open pull requests; the remote
+  has only main (the owner deleted the two stale branches). Owner-side items now: the world-map choice (#645, milestone
+  2026.12); the LinkedIn token renewal before 2026-12-06 (#578, the owner has set a reminder); and whether to pin the
+  workflows to ubuntu-24.04 before GitHub moves ubuntu-latest to Ubuntu 26 on Monday 2026-10-19, the day the weekly
+  release pull request is due (offered, not made). Open items for the agent need a browser: the UN-CES seat and
+  Portugal's statistics council (#459), the hover card's screen-reader pass.
+prs: []
+outcome: in-progress
