@@ -12,5 +12,7 @@ summary: >
   fixed by muting until the pointer moves. The Compare cells lost their native title, which would have doubled the
   tooltip. 18 new browser checks (155 in all). docs/graph.md, ACCESSIBILITY.md, docs/performance.md and the roadmap
   updated. Not run: axe on the card; a screen-reader pass.
-prs: []
-outcome: in-progress
+prs:
+  - number: 642
+    title: "Hover card: an entity's core information on hover and focus (#640)"
+outcome: merged (#642); #640 closed
