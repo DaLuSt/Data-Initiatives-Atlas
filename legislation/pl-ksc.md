@@ -44,6 +44,12 @@ successor: null
 domains:
   - DOMAIN-GOVERNMENT
   - DOMAIN-CYBERSECURITY
+  - DOMAIN-SPACE
+  - DOMAIN-POSTAL
+  - DOMAIN-MANUFACTURING
+  - DOMAIN-CHEMICALS
+  - DOMAIN-FOOD
+  - DOMAIN-WATER
 organisations: []
 related_entities:
   - PL
@@ -202,6 +208,17 @@ is separately named.
 Three countries, three amendment situations, and the Atlas has now handled
 them three different ways. `progress/backlog.md` carries *"decide on an
 amendment relationship type"*; this is the third data point for it.
+
+## The sectors the amendment adds, and the domain tags (2026-10-16)
+
+gov.pl's own knowledge-base page on the amendment (a source of this entity, re-read 2026-10-16) says it "extends the catalogue
+of entities of the national cybersecurity system with new sectors and branches of the economy: ICT service management,
+electronic communications, space, postal services, manufacturing, nuclear energy facilities, production and distribution of
+chemicals, of machinery and equipment (including electronic and transport), production and distribution of food,
+wastewater discharge, waste management". The domains tagged above are the ones that list names: space, postal, manufacturing,
+chemicals, food, and water (wastewater). This is the page's summary of the Act, not the Act's annexes, which were not read, so
+the tags say "the Act's scope names the sector", as for [[DE-BSIG]], [[BE-NIS2-WET]] and [[LU-LOI-NIS2]], without a list of
+entity types. Electronic communications, ICT services, nuclear and waste management have no domain of their own and are not tagged.
 
 ## Signed with a request to the Constitutional Tribunal (found 2026-10-16)
 

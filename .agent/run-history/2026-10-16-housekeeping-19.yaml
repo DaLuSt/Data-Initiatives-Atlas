@@ -1,0 +1,12 @@
+date: "2026-10-16"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Housekeeping, docs check and roadmap pick-up. Issue audit: 60 open issues, all roadmap-labelled; no open PRs; only
+  main on the remote; the docs/roadmap.md plan table matches the live milestones. Docs: done count in the roadmap fixed
+  to 26 items; sample build output in docs/graph-development.md updated to current sizes. Roadmap #450: legislation/pl-ksc.md
+  tagged with the six domains the NIS2 amendment adds (space, postal, manufacturing, chemicals, food, water), backed by
+  gov.pl's own knowledge-base page re-read 2026-10-16; candidates C9 updated. Built environment stays at 2 countries
+  (Danish and Norwegian building-register laws are on JavaScript shells or return 405). Left for the owner to close #450.
+  Roadmap #502: CH-BGEID re-checked on eid.admin.ch, no post newer than 15 Sep 2026, no new date; status unchanged.
+prs: []
+outcome: in-progress
