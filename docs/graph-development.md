@@ -269,7 +269,9 @@ that pack nodes into per-scope/per-country blocks:
     85 entities. If it fails again, raise `blockGapY` — not `blockGapX`,
     which does not move the binding pair.
 - **Force** — `cose` with `forceOptions()`, seeded from the grouped
-  positions (`randomize: false`) so it is reproducible. Gated by `FORCE_MAX`;
+  positions (`randomize: false`) so it is reproducible. Gated by `FORCE_MAX`
+  (1,100 since 2026-10-16; the full graph passed the old limit of 900 and took
+  ~12 s to lay out at 902 nodes, so the limit is a stopgap: see roadmap #508);
   above it the grouped layout is kept and the sidebar explains why. Tune
   distance in `idealEdgeLength()`.
   - The default filters leave the graph in 44 disconnected components (see

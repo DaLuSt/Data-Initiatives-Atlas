@@ -68,7 +68,12 @@
   // simulation costs iterations over every node pair, and blocking the UI
   // thread for several seconds is worse than declining. Measured at 258
   // nodes: ~1.0s on relationships only, ~1.8s with every edge class on.
-  var FORCE_MAX = 900;
+  // Raised from 900 to 1100 on 2026-10-16 when the full graph reached 902
+  // nodes: at 902 the simulation took ~12s in headless Chrome here (tools/
+  // test_ui.mjs exercises it on the whole graph). That is already past
+  // "several seconds", so this is headroom for the next data releases, not a
+  // judgement that 12s is fine: see roadmap #508 for the real fix.
+  var FORCE_MAX = 1100;
 
   var LEVEL_ORDER = ["international", "regional", "national", "subnational", "local"];
   // Confidence is ordinal, not alphabetical — "high, medium, low" reads as a
