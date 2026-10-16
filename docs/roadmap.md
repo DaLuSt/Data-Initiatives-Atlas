@@ -107,7 +107,7 @@ most likely to move. From 2027.01 the plan also adds the regional layer (#539, t
 sub-regions, two per month, ending 2027.11): each sub-region's regional bodies and
 instruments, not the country anchors. A month with many items is not a promise that all of them fit.
 
-**Done so far (27 items, 2026-10-07 to 2026-10-15):** the first release and the board (#443, #444);
+**Done so far (26 items, 2026-10-07 to 2026-10-16):** the first release and the board (#443, #444);
 CSV export and the Explorer fix (#445, #447); the backlog reconciled (#448); the constitutional-rank gaps and the
 founding-six date (#449, #533); the consistency checks (#461) and the move of the generator-only checks into the
 validators (#528); the Dutch registers (#458, #536); the eIDAS cluster (#534); the EU and UN links (#537); the

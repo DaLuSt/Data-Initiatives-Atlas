@@ -10,5 +10,5 @@ summary: >
   stays proposed. ES-NTI-RISP: one search found no BOE resolution updating it in 2026 (datos.gob.es says DCAT-AP-ES is
   the standard to consider in the new version, September 2025); no change. Not re-checked: NL-BRO, PL-MOBYWATEL (already
   searched 2026-10-10), CH-BGEID. No new entities.
-prs: []
-outcome: in-progress
+prs: [650]
+outcome: merged (#650)
