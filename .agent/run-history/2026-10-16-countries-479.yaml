@@ -1,0 +1,13 @@
+date: "2026-10-16"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #479 (country group 10). Added Australia (Privacy Act 1988 and the Data Availability and Transparency Act
+  2022 from the Federal Register of Legislation and its API; the Office of the Australian Information Commissioner from
+  its own site) and Panama (ANTAI, Law 81 of 2019, its regulation Executive Decree 285 of 2021 and the open data policy,
+  all from ANTAI's pages; the legal texts were not read). New finding: the Federal Register marks the DAT Act 2022 as
+  self-ceasing on 1 April 2027; the statutory review's outcome is unread because finance.gov.au returned a 403, so the
+  Act stays active with no end date and the question goes to the Q1 2027 re-check. New unresolved row #247. Eight
+  countries of the group not added (sites that did not answer or returned 403). Anchors now 97; 98 of 193 UN members
+  have none.
+prs: []
+outcome: in-progress
