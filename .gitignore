@@ -9,3 +9,4 @@ node_modules/
 # every pull request once any other pull request has merged.
 site/graph.json
 site/details.json
+site/layout.json

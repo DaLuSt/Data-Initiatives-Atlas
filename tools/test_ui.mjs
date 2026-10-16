@@ -1211,7 +1211,10 @@ async function search(page, q) {
     g.stats.entities = base + 1000;
     await route.fulfill({ response: res, body: JSON.stringify(g) });
   });
-  await page.goto(BASE + '/index.html', { waitUntil: 'networkidle' });
+  // all=1: the padding is national, so the overview (which leaves national entities out)
+  // would hide it. The padding has no stored position either, which is the second reason the
+  // force layout cannot use the build-time layout here and must decline.
+  await page.goto(BASE + '/index.html#all=1', { waitUntil: 'networkidle' });
   await page.waitForFunction(() => document.getElementById('loading').hidden, null, { timeout: 20000 });
   await page.waitForTimeout(1500);
 
@@ -1234,6 +1237,146 @@ async function search(page, q) {
     after.hint.trim().slice(0, 70) + '…');
   check('size-guard path logs no errors', errors.length === 0, errors.slice(0, 2).join(' | '));
   } catch (e) { crash('start', e); }
+  await ctx.close();
+}
+
+// ──────────────── the overview and the stored layout (roadmap #508) ────────────────
+// The first screen draws the international and regional bodies and every country, not every
+// entity, and the force layout draws positions worked out at build time (site/layout.json)
+// instead of running the simulation in the visitor's browser.
+{
+  var { ctx, page, errors } = await newPage({ width: 1400, height: 900 });
+  try {
+  const state = () => page.evaluate(() => {
+    const cy = document.getElementById('cy')._cyreg.cy;
+    const note = document.getElementById('overview-note');
+    return { nodes: cy.nodes().length, note: note.hidden ? '' : note.textContent,
+             source: document.getElementById('cy').dataset.forceSource,
+             nonOverview: cy.nodes().filter(n => !['international', 'regional'].includes(n.data('level')) &&
+               !['country', 'region'].includes(n.data('type'))).length,
+             status: document.getElementById('stage-status').textContent };
+  });
+  const total = () => page.evaluate(() => Number(document.getElementById('stage-status').textContent.match(/of ([\d,]+) entities/)[1].replace(/,/g, '')));
+
+  await page.goto(BASE + '/index.html', { waitUntil: 'networkidle' });
+  await page.waitForFunction(() => document.getElementById('loading').hidden, null, { timeout: 20000 });
+  await page.click('#start-close').catch(() => {});   // the first-visit card sits over the note
+  var first = await state();
+  var all = await total();
+  check('a bare address opens on the overview, not on every entity',
+    first.nodes > 100 && first.nodes < all * 0.6 && first.nonOverview === 0,
+    `${first.nodes} of ${all} drawn, ${first.nonOverview} outside the overview`);
+  check('the overview says what it is and offers the rest',
+    /overview/i.test(first.note) && new RegExp('Show all ' + all.toLocaleString('en-US') + ' entities').test(first.note), first.note.slice(0, 90));
+
+  await page.click('#overview-all');
+  await page.waitForTimeout(600);
+  var everything = await state();
+  check('"Show all" draws every entity and the address remembers it',
+    everything.nodes === all && /all=1/.test(page.url()) && /Back to the overview/.test(everything.note),
+    `${everything.nodes} drawn · ${page.url().split('#')[1]}`);
+
+  await page.click('#overview-back');
+  await page.waitForTimeout(600);
+  var back = await state();
+  check('"Back to the overview" returns to it and drops all=1 from the address',
+    back.nodes === first.nodes && !/all=1/.test(page.url()), `${back.nodes} drawn · ${page.url().split('#')[1] || ''}`);
+
+  // Anything chosen ends the overview by itself: a filter narrows from the whole Atlas.
+  await page.goto(BASE + '/index.html#country=NL', { waitUntil: 'networkidle' });
+  await page.waitForFunction(() => document.getElementById('loading').hidden, null, { timeout: 20000 });
+  var nl = await state();
+  check('a country filter shows that country in full and no overview note',
+    nl.nodes > first.nodes * 0.2 && nl.note === '' && nl.nonOverview > 50, `${nl.nodes} drawn, ${nl.nonOverview} outside the overview`);
+
+  await page.goto(BASE + '/index.html', { waitUntil: 'networkidle' });
+  await page.waitForFunction(() => document.getElementById('loading').hidden, null, { timeout: 20000 });
+  await page.click('#start-close').catch(() => {});
+  await page.fill('#search', 'Autoriteit Persoonsgegevens');
+  await page.waitForSelector('#suggestions:not([hidden]) [role="option"]', { timeout: 4000 }).catch(() => {});
+  await page.keyboard.press('ArrowDown');
+  await page.keyboard.press('Enter');
+  await page.waitForTimeout(900);
+  var picked = await page.evaluate(() => {
+    const cy = document.getElementById('cy')._cyreg.cy;
+    return { onScreen: cy.nodes('.focus').length, nodes: cy.nodes().length };
+  });
+  check('picking an entity that is not in the overview brings it on screen',
+    picked.onScreen === 1, `${picked.onScreen} focused node, ${picked.nodes} drawn`);
+
+  // ── the stored layout ──
+  await page.goto(BASE + '/index.html#layout=force', { waitUntil: 'networkidle' });
+  await page.waitForFunction(() => document.getElementById('loading').hidden, null, { timeout: 20000 });
+  var t0 = Date.now();
+  var forced = await state();
+  check('force layout draws the stored layout, with no simulation to wait for',
+    forced.source === 'stored' && Date.now() - t0 < 3000, `source=${forced.source}`);
+  var hint = await page.textContent('#layout-hint');
+  check('the hint says where the positions come from',
+    /worked out when the site was built/i.test(hint), hint.trim().slice(0, 60) + '…');
+  var spread = await page.evaluate(() => {
+    const cy = document.getElementById('cy')._cyreg.cy;
+    const bb = cy.elements().boundingBox();
+    return { w: Math.round(bb.w), h: Math.round(bb.h), distinctY: new Set(cy.nodes().map(n => Math.round(n.position().y))).size, n: cy.nodes().length };
+  });
+  check('the stored layout is spread out, not a grid or a point',
+    spread.w > 400 && spread.h > 400 && spread.distinctY > spread.n * 0.5, JSON.stringify(spread));
+
+  // A filtered view keeps each entity where it sits in the full picture.
+  var posAll = await page.evaluate(() => {
+    const cy = document.getElementById('cy')._cyreg.cy; const o = {};
+    cy.nodes().forEach(n => { o[n.id()] = [Math.round(n.position().x), Math.round(n.position().y)]; });
+    return o;
+  });
+  await page.goto(BASE + '/index.html#layout=force&all=1&country=NL', { waitUntil: 'networkidle' });
+  await page.waitForFunction(() => document.getElementById('loading').hidden, null, { timeout: 20000 });
+  var nlPos = await page.evaluate(() => {
+    const cy = document.getElementById('cy')._cyreg.cy; const o = {};
+    cy.nodes().forEach(n => { o[n.id()] = [Math.round(n.position().x), Math.round(n.position().y)]; });
+    return o;
+  });
+  var shared = Object.keys(nlPos).filter(id => posAll[id]);
+  // fit() rescales and recentres, so compare shape, not coordinates: the same two entities keep
+  // the same distance ratio. Take the means of x-order agreement instead of absolute values.
+  var order = (pos, ids) => ids.slice().sort((a, b) => pos[a][0] - pos[b][0] || a.localeCompare(b));
+  var sameOrder = shared.length >= 3 && JSON.stringify(order(posAll, shared)) === JSON.stringify(order(nlPos, shared));
+  check('a filtered view keeps the entities in the same left-to-right order as the full layout',
+    sameOrder || shared.length < 3, `${shared.length} entities in both`);
+
+  // A stored layout built for another graph is ignored, never shown.
+  await page.route('**/layout.json', async route => {
+    const res = await route.fetch(); const d = await res.json();
+    d.fingerprint = 'not-this-graph';
+    await route.fulfill({ response: res, body: JSON.stringify(d) });
+  });
+  await page.goto('about:blank');   // a hash-only change would not reload the page, and the file is read at load
+  await page.goto(BASE + '/index.html#layout=force&country=NL', { waitUntil: 'networkidle' });
+  await page.waitForFunction(() => document.getElementById('loading').hidden, null, { timeout: 20000 });
+  await page.waitForTimeout(2500);
+  var stale = await state();
+  check('a stored layout with another fingerprint is ignored and the page runs the simulation',
+    stale.source === 'live', `source=${stale.source}`);
+  await page.unroute('**/layout.json');
+
+  // Missing altogether: the page works as it did before the file existed.
+  await page.route('**/layout.json', route => route.fulfill({ status: 404, body: 'no' }));
+  await page.goto('about:blank');   // a hash-only change would not reload the page, and the file is read at load
+  await page.goto(BASE + '/index.html#layout=force&country=NL', { waitUntil: 'networkidle' });
+  await page.waitForFunction(() => document.getElementById('loading').hidden, null, { timeout: 20000 });
+  await page.waitForTimeout(2500);
+  var missing = await state();
+  check('with no stored layout the page still draws, by simulation',
+    missing.source === 'live' && missing.nodes > 50, `source=${missing.source}, ${missing.nodes} nodes`);
+  await page.unroute('**/layout.json');
+
+  // Connections other than typed relationships were not part of the stored layout.
+  await page.goto(BASE + '/index.html#layout=force&country=NL&edgeClass=relationship,association', { waitUntil: 'networkidle' });
+  await page.waitForFunction(() => document.getElementById('loading').hidden, null, { timeout: 20000 });
+  await page.waitForTimeout(2500);
+  var broadened = await state();
+  check('shared-context links are not in the stored layout, so that view is simulated',
+    broadened.source === 'live', `source=${broadened.source}`);
+  } catch (e) { crash('overview and stored layout', e); }
   await ctx.close();
 }
 

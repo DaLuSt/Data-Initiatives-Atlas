@@ -17,6 +17,7 @@ Exit codes: 0 = graph written, 1 = refused (see the reported errors).
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import subprocess
@@ -36,6 +37,7 @@ from common import (  # noqa: E402  (path set above)
 from country_centroids import COUNTRY_CENTROIDS, REGION_CENTROIDS  # noqa: E402
 
 DEFAULT_OUT = REPO_ROOT / "site" / "graph.json"
+FORCE_OPTIONS_JS = REPO_ROOT / "site" / "force-options.js"
 
 # The payload is split so the graph can render before the heavy prose has
 # loaded (brief §24: design for 1,000+ nodes). `graph.json` carries only what
@@ -145,6 +147,29 @@ def release_info(schema: dict) -> dict:
         "schema_version": schema.get("schema_version"),
         "released": str(v["released"]) if v.get("released") else None,
     })
+
+
+def layout_fingerprint(nodes: list[dict], edges: list[dict]) -> str:
+    """Names the exact graph a stored layout was computed for.
+
+    `tools/build_layout.mjs` lays out every entity with the typed relationships
+    (the page's default edge class) and writes `site/layout.json` with this
+    value; the page uses that layout only if it finds the same value in
+    `graph.json`. It covers the entity ids, those relationships and the force
+    layout's tuning (`site/force-options.js`), so a new entity, a new
+    relationship or a changed number makes a stored layout stale at once and
+    the page falls back to running the simulation itself.
+    """
+    h = hashlib.sha256()
+    h.update(FORCE_OPTIONS_JS.read_bytes())
+    for nid in sorted(n["id"] for n in nodes):
+        h.update(b"\nN" + nid.encode("utf-8"))
+    rel = sorted((e["source"], e["target"], e.get("type", ""), e.get("provenance", ""),
+                  e.get("confidence", ""))
+                 for e in edges if e.get("class") == "relationship")
+    for row in rel:
+        h.update(("\nE" + "|".join(row)).encode("utf-8"))
+    return h.hexdigest()[:16]
 
 
 def build(strict_wikilinks: bool = True) -> tuple[dict, list[str], list[str]]:
@@ -538,6 +563,7 @@ def build(strict_wikilinks: bool = True) -> tuple[dict, list[str], list[str]]:
         },
         "facets": facets,
         "stats": stats,
+        "layout_fingerprint": layout_fingerprint(light_nodes, light_edges),
         "nodes": light_nodes,
         "edges": light_edges,
     }

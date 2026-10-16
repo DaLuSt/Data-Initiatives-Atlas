@@ -1234,7 +1234,8 @@ class TestLoadBudget(unittest.TestCase):
         cls.details = packed(payload["details"])
         cls.static = sum(
             len(gzip.compress((cls.SITE / f).read_bytes(), 6))
-            for f in ("index.html", "app.css", "app.js", "csv.js", "vendor/cytoscape.min.js"))
+            for f in ("index.html", "app.css", "app.js", "csv.js", "force-options.js",
+                      "vendor/cytoscape.min.js"))
 
     def test_graph_json_within_budget(self):
         self.assertLessEqual(self.graph, self.GRAPH_MAX,
@@ -1257,6 +1258,88 @@ class TestLoadBudget(unittest.TestCase):
         boot = text[text.index("function boot"):text.index('fetch("details.json"')]
         self.assertIn('fetch("graph.json"', boot)
         self.assertNotIn("details.json", boot)
+
+
+class TestStoredLayout(unittest.TestCase):
+    """The whole-graph force layout stored at build time (roadmap #508):
+    `tools/build_layout.mjs` writes site/layout.json, and the page uses it only
+    when its fingerprint equals graph.json's `layout_fingerprint`."""
+
+    SITE = REPO_ROOT / "site"
+    LAYOUT_MAX = 60_000      # layout.json, gzipped; about 10 KB at 900 entities
+
+    @classmethod
+    def setUpClass(cls):
+        payload, errors, _ = real_build()
+        assert not errors
+        cls.graph = payload["graph"]
+
+    def test_fingerprint_is_in_the_graph(self):
+        fp = self.graph.get("layout_fingerprint")
+        self.assertRegex(fp or "", r"^[0-9a-f]{16}$")
+
+    def test_fingerprint_follows_the_nodes_the_relationships_and_the_tuning(self):
+        nodes, edges = self.graph["nodes"], self.graph["edges"]
+        base = build_graph.layout_fingerprint(nodes, edges)
+        self.assertEqual(base, build_graph.layout_fingerprint(list(reversed(nodes)), list(reversed(edges))),
+                         "order of nodes and edges must not matter")
+        extra = nodes + [{"id": "ZZ-NEW"}]
+        self.assertNotEqual(base, build_graph.layout_fingerprint(extra, edges), "a new entity")
+        rel = next(e for e in edges if e["class"] == "relationship")
+        dropped = [e for e in edges if e is not rel]
+        self.assertNotEqual(base, build_graph.layout_fingerprint(nodes, dropped), "a removed relationship")
+        # Connections that are not typed relationships are not part of the layout.
+        shared = [e for e in edges if e["class"] != "relationship"]
+        some = next(iter(shared))
+        self.assertEqual(base, build_graph.layout_fingerprint(nodes, [e for e in edges if e is not some]),
+                         "a shared-context link or mention does not change the stored layout")
+        original = build_graph.FORCE_OPTIONS_JS
+        with tempfile.TemporaryDirectory() as tmp:
+            changed = Path(tmp) / "force-options.js"
+            changed.write_text(original.read_text(encoding="utf-8") + "\n// tuning changed\n", encoding="utf-8")
+            build_graph.FORCE_OPTIONS_JS = changed
+            try:
+                self.assertNotEqual(base, build_graph.layout_fingerprint(nodes, edges), "the tuning")
+            finally:
+                build_graph.FORCE_OPTIONS_JS = original
+
+    def test_build_layout_covers_every_entity_and_is_reproducible(self):
+        import gzip
+        import shutil
+        import subprocess
+        if not shutil.which("node"):
+            self.skipTest("node is not installed")
+        with tempfile.TemporaryDirectory() as tmp:
+            g = Path(tmp) / "graph.json"
+            g.write_text(json.dumps(self.graph), encoding="utf-8")
+            outs = []
+            for i in (1, 2):
+                out = Path(tmp) / f"layout{i}.json"
+                subprocess.run(["node", str(REPO_ROOT / "tools" / "build_layout.mjs"), str(out), str(g)],
+                               check=True, capture_output=True, timeout=300)
+                outs.append(out)
+            self.assertEqual(outs[0].read_bytes(), outs[1].read_bytes(), "two runs differ")
+            doc = json.loads(outs[0].read_text(encoding="utf-8"))
+            self.assertEqual(doc["fingerprint"], self.graph["layout_fingerprint"])
+            self.assertEqual(set(doc["positions"]), {n["id"] for n in self.graph["nodes"]})
+            for xy in doc["positions"].values():
+                self.assertEqual(len(xy), 2)
+                self.assertTrue(all(isinstance(v, int) for v in xy))
+            self.assertLessEqual(len(gzip.compress(outs[0].read_bytes(), 6)), self.LAYOUT_MAX)
+
+    def test_site_wiring(self):
+        html = (self.SITE / "index.html").read_text(encoding="utf-8")
+        js = (self.SITE / "app.js").read_text(encoding="utf-8")
+        self.assertLess(html.index('src="force-options.js"'), html.index('src="app.js"'))
+        # the page and the build step share one tuning file, not two copies
+        self.assertIn("AtlasForce.options(", js)
+        self.assertNotIn("nodeRepulsion", js)
+        # a layout is used only for the graph it was built for
+        self.assertIn("lay.fingerprint === data.layout_fingerprint", js)
+        # it is fetched beside graph.json, not after the first graph
+        boot = js[js.index("function boot"):js.index('fetch("details.json"')]
+        self.assertIn("fetchLayout()", boot)
+        self.assertIn('fetch("layout.json"', js)
 
 
 if __name__ == "__main__":

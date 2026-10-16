@@ -58,6 +58,7 @@ jobs:
         run: |
           pip install -r validation/requirements.txt
           python tools/build_graph.py
+          node tools/build_layout.mjs
 
       # Only the client library: the browser is the Chrome that GitHub's runners ship with.
       - name: Install Playwright's client

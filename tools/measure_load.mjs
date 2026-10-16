@@ -16,6 +16,7 @@
  * model of a slow phone, not a phone.
  *
  * SITE=/path/to/a/copy measures another folder (a scaled-up test copy, for example);
+ * HASH='#all=1' loads a particular address (the overview is the default; #all=1 is every entity);
  * PROFILE=<regex> keeps only the profiles whose name matches (PROFILE='Slow 4G|Fast 3G').
  */
 
@@ -64,7 +65,7 @@ for (const p of profiles) {
     await cdp.send('Network.emulateNetworkConditions', { offline: false, latency: p.rtt, downloadThroughput: p.down, uploadThroughput: p.up });
     await cdp.send('Emulation.setCPUThrottlingRate', { rate: p.cpu });
     const t0 = Date.now();
-    await page.goto(base + '/index.html', { waitUntil: 'commit' });
+    await page.goto(base + '/index.html' + (process.env.HASH || ''), { waitUntil: 'commit' });
     await page.waitForFunction(() => { const l = document.getElementById('loading'); return l && l.hidden && document.querySelectorAll('canvas').length > 0; }, null, { timeout: 180000 });
     first.push(Date.now() - t0);
     await page.waitForFunction(() => { const e = performance.getEntriesByName(location.origin + '/details.json'); return e.length > 0 && e[0].responseEnd > 0; }, null, { timeout: 180000 });

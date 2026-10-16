@@ -5,8 +5,8 @@ older phone wait for the first graph, and what happens as the Atlas grows?
 
 ## How the page loads
 
-1. `index.html`, `app.css`, `app.js`, `csv.js` and `vendor/cytoscape.min.js`.
-2. `graph.json` (nodes and edges). The first graph is drawn when it arrives.
+1. `index.html`, `app.css`, `app.js`, `csv.js`, `force-options.js` and `vendor/cytoscape.min.js`.
+2. `graph.json` (nodes and edges), and `layout.json` (the stored force layout, about 10 KB gzipped) fetched beside it. The first graph is drawn when both have arrived; a missing `layout.json` is not an error.
 3. `details.json` (the long evidence text). It is fetched **after** the first
    graph, so the detail panel fills in a moment later. `TestLoadBudget` checks
    that the boot code does not wait for it.
@@ -85,13 +85,42 @@ frame while the pointer moves over the graph, because on a hub the lines drawn o
 hit-test from Cytoscape. Measured: 1.1 ms per pointer move over 872 nodes (2.3 ms with the 4x CPU slowdown) and 3.0 ms
 over the 1,087-node test copy. Nothing runs at boot and nothing runs when the pointer is still.
 
+## The overview and the stored layout (2026-10-16, roadmap #508)
+
+The graph reached 902 entities, and two changes keep it cheap from here on.
+
+- **The first screen is an overview**: the international and regional entities
+  and every country (307 of 902 today), not every entity. "Show all" draws the
+  rest. What is drawn is what costs, so this scales with the number of
+  countries and bodies, not with every entity written for each country.
+- **The force layout is stored, not simulated.** `tools/build_layout.mjs`
+  works the whole layout out at build time (3.5 s in Node) and the page draws
+  it. The live simulation took about **12 s** at 902 entities in headless
+  Chrome and 1.0 s at 258; stored, switching to the force layout is instant at
+  any size. It is used only for typed relationships, the default; with shared
+  context links or mentions switched on the page still simulates, and refuses
+  above `FORCE_MAX` (900) nodes.
+
+Measured on 2026-10-16, median of 3, `tools/measure_load.mjs` (902 entities):
+
+| Profile | Every entity (`#all=1`, the old default) | Overview (the new default) |
+|---|---|---|
+| No throttling | 0.6 s | 0.4 s |
+| Slow 4G, 4x CPU slowdown | 4.3 s | 3.3 s |
+
+So the first graph is about a quarter faster, not several times faster: much of
+the cost at boot is the page and Cytoscape themselves, and the overview still
+draws 307 nodes and 834 connections. The larger effect is on the layouts:
+force goes from "declined above 900, and 12 s below" to instant.
+
 ## What to do when the budget is missed
 
 In order of expected effect:
 
-1. Lay out less at boot: show the country and supranational level first and
-   add detail when a visitor asks for it, or cut the force layout's iterations
-   for the first draw.
+1. ~~Lay out less at boot~~ (done 2026-10-16: the overview and the stored
+   layout). Next in this line: collapse each country into one node and
+   expand it on a click, so the overview stays the size of the number of
+   countries however much each one holds.
 2. Split `graph.json` by level so the first draw reads a smaller file.
 3. Drop fields the first draw does not use from `graph.json` and move them to
    `details.json`.
@@ -102,9 +131,11 @@ Compression, the usual first fix, is already in place on GitHub Pages.
 
 ```
 python tools/build_graph.py
+node tools/build_layout.mjs
 npm install playwright-core
 CHROME_PATH=/path/to/chrome node tools/measure_load.mjs
 ```
 
-`SITE=<folder>` measures another copy of the site; `PROFILE=<regex>` keeps only
+`SITE=<folder>` measures another copy of the site; `HASH='#all=1'` loads a
+particular address (the default is the overview); `PROFILE=<regex>` keeps only
 the profiles whose name matches.
