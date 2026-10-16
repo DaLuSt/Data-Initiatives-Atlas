@@ -10,5 +10,5 @@ summary: >
   Agenda Digital 2030 annex not) and Nigeria (roadmap #475; the Commission's own site answered 200 after a 403 on 11 Oct; the General Application and Implementation Directive 2025 read in full, the Act not). Not added: Maldives (a bill in Parliament per search summaries only), Grenada, Saint
   Vincent and the Grenadines, the Dominican Republic (no official page reached). Anchors now 94; 101 of 193 UN members
   have none. Rows #240, #241 and #242 and candidates C10 updated.
-prs: []
-outcome: in-progress
+prs: [652, 653]
+outcome: merged (#652); #653 adds Nigeria
