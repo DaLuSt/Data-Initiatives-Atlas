@@ -23,7 +23,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-10-09"
+last_verified: "2026-10-16"
 previous_version: null
 successor: null
 
@@ -64,6 +64,13 @@ sources:
 ## Stage, from the Boletín
 
 The Mesa of the Congreso, meeting on 8 June 2026, entrusted the opinion (*Dictamen*) to the Comisión de Economía, Comercio y Transformación Digital and published the bill with a period for amendments of fifteen working days, ending on 30 June 2026. What happened after that date was not read: the Congreso's follow-up page for file 121/000096 was not checked, so the Atlas does not say where the bill stands now.
+
+### Re-checked 2026-10-16 (roadmap #502)
+
+The next publications of the bill in the Boletín follow the same address pattern (`BOCG-15-A-97-2.PDF` to `-5.PDF`);
+all four returned HTTP 404 on 2026-10-16, so no later number (amendments, the report of the *ponencia*, the opinion of the
+committee) had been published at that address. That is consistent with the bill still being at the amendment stage, but it is
+an absence, not a statement: the Congreso's own file page, which would say the stage, was not read. `status` stays `proposed`.
 
 ## Content, from the explanatory memorandum
 
