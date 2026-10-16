@@ -30,7 +30,7 @@ verification: primary-source
 
 start_date: 2024-12-20
 end_date: null
-last_verified: "2026-10-01"
+last_verified: "2026-10-16"
 previous_version: null
 successor: null
 
@@ -198,6 +198,9 @@ The programme's own record of how the date has moved:
   can be issued.
 - **15 Sep 2026**: the Federal Office of Justice published a WTO tender
   for a launch communication campaign "from 2027 onwards".
+- **Re-checked 2026-10-16** (roadmap #502): the programme's blog and front
+  page (eid.admin.ch) show no post newer than 15 Sep 2026, so no new date for
+  entry into force; status stays `adopted`.
 
 ## Not modelled
 
