@@ -1,0 +1,14 @@
+date: "2026-10-16"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #474 and #476 (country groups 5 and 7), a search-first pass for countries earlier tried by guessed addresses.
+  Added four country anchors, each with a first slice read from an official page: Vanuatu (Data Protection and Privacy
+  Act No. 13 of 2024, read in full from CERT Vanuatu; assent 5 Dec 2024, commencement 2 Jan 2025 per its cover page),
+  Barbados (the Data Protection Commission's government page, which names the Data Protection Act 2019-29; the Act was
+  not read), Seychelles (the Information Commission's own page, which names the Data Protection Act 2023; the Gazette PDF
+  returned a 403) and Bolivia (AGETIC's mission and normative pages; Supreme Decrees 5340 and 5367 read in full, the
+  Agenda Digital 2030 annex not). Not added: Maldives (a bill in Parliament per search summaries only), Grenada, Saint
+  Vincent and the Grenadines, the Dominican Republic (no official page reached). Anchors now 93; 102 of 193 UN members
+  have none. Rows #240 and #242 and candidates C10 updated.
+prs: []
+outcome: in-progress
