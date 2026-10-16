@@ -37,7 +37,7 @@ verification: primary-source
 
 start_date: 2026-04-03
 end_date: null
-last_verified: "2026-09-13"
+last_verified: "2026-10-16"
 previous_version: null
 successor: null
 
@@ -70,6 +70,14 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "KSC podpisane przez Nawrockiego - część przepisów do Trybunału Konstytucyjnego"
+    url: "https://gsmonline.pl/artykuly/ksc-podpisane-przez-nawrcokiego-czesc-przepisow-do-trybunalu-konstytucyjnego"
+    publisher: "GSMonline.pl"
+    accessed: "2026-10-16"
+  - title: "Poland's amendment to the National Cybersecurity System Act has been signed by the President"
+    url: "https://www.osborneclarke.com/insights/polands-amendment-national-cybersecurity-system-act-has-been-signed-president"
+    publisher: "Osborne Clarke"
+    accessed: "2026-10-16"
   - title: "Nowelizacja ustawy o krajowym systemie cyberbezpieczeństwa — Baza wiedzy"
     url: "https://www.gov.pl/web/baza-wiedzy/nowelizacja-ustawy-o-krajowym-systemie-cyberbezpieczenstwa"
     publisher: "Portal Gov.pl"
@@ -194,6 +202,12 @@ is separately named.
 Three countries, three amendment situations, and the Atlas has now handled
 them three different ways. `progress/backlog.md` carries *"decide on an
 amendment relationship type"*; this is the third data point for it.
+
+## Signed with a request to the Constitutional Tribunal (found 2026-10-16)
+
+Roadmap #502's early re-check found something the entity did not say. The President signed the amendment but announced a request to the Constitutional Tribunal for **follow-up review** (*kontrola następcza*) of "the provisions that impose duties on businesses" (GSMonline.pl, quoting the President's statement, read directly). He said the Act "strengthens defence mechanisms ... and makes it possible to eliminate high-risk suppliers", and that business complaints that the duties are "excessive and disproportionate" should be examined by the Tribunal. The referral did not stop the Act from entering into force on 3 April 2026, as above (reports said it would, unless the Tribunal ordered an interim measure; none was found). Osborne Clarke (read directly) confirms the signature and the one-month entry into force, and describes the high-risk-supplier power and the fines (up to EUR 10 million or 2% of turnover for essential entities); it does not mention the referral. Search results suggest the date of signature was in February 2026.
+
+**Not found:** that the request was filed (a case number), when the Tribunal will hear it, or any ruling. If it strikes provisions down, parts of the Act would stop applying, which `status: active` would not show; the quarterly pass (#502) should look at the Tribunal's own site (`trybunal.gov.pl`, not tried).
 
 ## Not modelled
 
