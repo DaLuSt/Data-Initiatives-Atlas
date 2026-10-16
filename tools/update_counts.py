@@ -73,7 +73,7 @@ def numbers(stats: dict, countries_with_entities: int, unresolved_rows: int) -> 
 def patch_readme(text: str, n: dict, as_of: str | None) -> str:
     """Rewrite the counts in the README. A pattern that is not found is an error, not a silent skip."""
     steps = [
-        (r"(explore )[\d,]+( entities and )[\d,]+( connections across )[a-z-]+(\s+countries)",
+        (r"(explore )[\d,]+( entities and )[\d,]+( connections across )[a-z\s-]+?(\s+countries)",
          lambda m: f"{m.group(1)}{commas(n['entities'])}{m.group(2)}{commas(n['connections'])}"
                    f"{m.group(3)}{words(n['countries'])}{m.group(4)}"),
         (r"(\| \*\*Entities\*\* \| )[\d,]+( \|)", lambda m: f"{m.group(1)}{commas(n['entities'])}{m.group(2)}"),

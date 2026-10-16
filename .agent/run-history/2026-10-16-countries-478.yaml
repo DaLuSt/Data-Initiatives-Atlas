@@ -1,0 +1,14 @@
+date: "2026-10-16"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #478 (country group 9). Added New Zealand (Office of the Privacy Commissioner, Privacy Act 2020, Privacy
+  Amendment Act 2025, all from the Commissioner's pages), Peru (Law 29733 and Legislative Decree 1412 read as text, the
+  2024 regulation from two Ministry of Justice press notes, the authority and the Digital Government Secretariat),
+  Ecuador (the Organic Law on Personal Data Protection as published in the Registro Oficial, and the Superintendency's
+  home page) and Trinidad and Tobago (Data Protection Act No. 13 of 2011 as text, recorded `adopted` because commencement
+  is by Proclamation that was not read). Six countries of the group not tried. Anchors now 101; 94 of 193 UN members have
+  none. Row #248 added. Two things on the way: tools/update_counts.py could not write the country count past
+  "one hundred" (its pattern did not allow spaces in the number words; fixed), and a map-layout browser check drifted
+  (ratio 0.4 to 0.62 as the tray grew with the country count; loosened from 0.5 to 0.75 with the reason in the test).
+prs: []
+outcome: in-progress
