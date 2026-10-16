@@ -61,6 +61,13 @@ jobs:
           ATLAS_BRANCH: ${{ github.event.repository.default_branch }}
         run: python tools/build_graph.py
 
+      # The whole-graph force layout, worked out once here so visitors' browsers
+      # do not have to (site/layout.json, not committed either). If this step
+      # were skipped the site would still work: the page ignores a missing or
+      # out-of-date layout and runs the simulation itself.
+      - name: Lay the graph out
+        run: node tools/build_layout.mjs
+
       # Note: site/graph.json and site/details.json are not committed (they
       # are gitignored), so this step is what produces them. That is safe only
       # because the build is reproducible, which test_build_graph.py asserts

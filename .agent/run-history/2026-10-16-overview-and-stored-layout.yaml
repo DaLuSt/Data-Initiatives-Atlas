@@ -1,0 +1,20 @@
+date: "2026-10-16"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #508 (the site as the Atlas grows), after the owner chose "cached positions and a default subset".
+  (1) The first screen is now an overview: the international and regional entities and every country (307 of 902), not
+  every entity; "Show all" (all=1 in the address) draws the rest. The overview is derived, not a stored filter: it is
+  what an untouched Atlas view shows, so it ends when anything is chosen and returns when it is cleared. (2) The force
+  layout is computed once at build time: tools/build_layout.mjs runs the vendored Cytoscape headless with the tuning
+  now shared in site/force-options.js (3.5 s, seeded, reproducible) and writes site/layout.json (about 10 KB
+  gzipped, gitignored like graph.json). graph.json carries a layout_fingerprint (entity ids, typed relationships, the
+  tuning file); the page uses the stored layout only if the fingerprints match, only for typed relationships, and only if
+  every visible node has a position, so a stale or missing file is never shown, only unused. pages.yml and the browser
+  job build it. The live simulation took about 12 s at 902 entities; stored, the force layout is instant at any size.
+  FORCE_MAX goes back to 900 (it now guards only the live path). Measured: first graph 4.3 s to 3.3 s on Slow 4G with
+  4x CPU, 0.6 s to 0.4 s unthrottled: about a quarter faster, not several times. Browser suite 161 to 174 checks;
+  TestStoredLayout added. A bug found on the way: leaving a reference to a removed variable in boot() broke the page
+  while the old test run still passed, because the unit tests were run after the browser suite rather than before.
+  Not done: collapsing a country into one node, Web Worker layout, splitting details.json.
+prs: []
+outcome: in-progress

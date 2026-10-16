@@ -52,6 +52,15 @@
   // grouped | force. Session-only on purpose: the page stores nothing between
   // visits (see SECURITY.md), so this is deliberately not persisted.
   var layoutMode = "grouped";
+  // The whole-graph force layout computed at build time (site/layout.json), or
+  // null when it is missing or was built for a different graph. See
+  // storedPositions().
+  var layoutCache = null;
+  // How the last force layout got its positions: "stored" | "live" | "".
+  var forceSource = "";
+  // The first screen is an overview, not all entities (see overviewActive()).
+  // True once the visitor has chosen to see everything; kept in the address.
+  var showAll = false;
   var sugIndex = -1, sugItems = [];
   var pathTargetId = null;
   var pathSugIndex = -1, pathSugItems = [];
@@ -63,17 +72,16 @@
 
   // Above this many visible nodes, drop labels.
   var LOD_LABELS = 260;
-  // Above this many, refuse the force layout and stay grouped. Unlike the
+  // Above this many, refuse a *live* force layout and stay grouped. Unlike the
   // grouped layout — pure arithmetic, no threshold needed — a force
   // simulation costs iterations over every node pair, and blocking the UI
   // thread for several seconds is worse than declining. Measured at 258
-  // nodes: ~1.0s on relationships only, ~1.8s with every edge class on.
-  // Raised from 900 to 1100 on 2026-10-16 when the full graph reached 902
-  // nodes: at 902 the simulation took ~12s in headless Chrome here (tools/
-  // test_ui.mjs exercises it on the whole graph). That is already past
-  // "several seconds", so this is headroom for the next data releases, not a
-  // judgement that 12s is fine: see roadmap #508 for the real fix.
-  var FORCE_MAX = 1100;
+  // nodes: ~1.0s on relationships only, ~1.8s with every edge class on; at 902
+  // nodes ~12s. The usual case never meets this: with typed relationships
+  // only (the default) the page draws the layout stored at build time instead,
+  // for any number of nodes (storedPositions()), so this limit only bites when
+  // shared-context links or mentions are switched on over a large view.
+  var FORCE_MAX = 900;
 
   var LEVEL_ORDER = ["international", "regional", "national", "subnational", "local"];
   // Confidence is ordinal, not alphabetical — "high, medium, low" reads as a
@@ -157,11 +165,31 @@
   }
 
   // ── boot ─────────────────────────────────────────────────────────────
+  // The stored layout is small (about 10 KB gzipped) and is fetched beside the
+  // graph, because a link that opens straight onto the force layout must not
+  // start the slow live simulation just before the stored one arrives. Any
+  // failure leaves it null and the page works as it did without it.
+  // Used only for the graph it was built for; anything else is ignored.
+  function adoptLayout(data, lay) {
+    layoutCache = (lay && lay.positions && data.layout_fingerprint &&
+      lay.fingerprint === data.layout_fingerprint) ? lay : null;
+  }
+
+  function fetchLayout() {
+    return fetch("layout.json", { cache: "no-cache" })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .catch(function () { return null; });
+  }
+
   function boot() {
+    var stored = fetchLayout();
     fetch("graph.json", { cache: "no-cache" })
       .then(function (r) {
         if (!r.ok) throw new Error("graph.json — HTTP " + r.status);
         return r.json();
+      })
+      .then(function (data) {
+        return stored.then(function (lay) { adoptLayout(data, lay); return data; });
       })
       .then(function (data) {
         G = data;
@@ -236,7 +264,9 @@
       "data across the UN, the EU and " + s.countries + " countries: " +
       s.entities.toLocaleString() + " entities joined by " +
       s.relationships.toLocaleString() + " relationships, each with its source. " +
-      "Every dot is one of them and every line a link. Pick a question to begin.";
+      "Every dot is one of them and every line a link. The first screen is an overview " +
+      "(the international and regional bodies and every country); a button under the " +
+      "graph shows all of them. Pick a question to begin.";
     $("start-list").innerHTML = START_EXAMPLES.map(function (x) {
       return '<li><a href="' + esc(x.hash) + '">' +
         '<span class="st-title">' + esc(x.title) + "</span>" +
@@ -849,6 +879,40 @@
     updateStatus();
   }
 
+  // ── the overview ─────────────────────────────────────────────────────
+  // The first screen draws the international and regional bodies and every
+  // country, not every entity: the cost of the graph is what is drawn, and a
+  // visitor who wants one country's instruments filters to it, which narrows
+  // from the whole Atlas as always. The overview is not a filter the visitor
+  // has set: it is what an *untouched* Atlas view shows, so it ends by itself
+  // the moment anything is chosen (a filter, an entity, a path) and comes back
+  // when they are cleared. "Show all" is the one thing that is remembered, and
+  // it is in the address (all=1) so a shared link shows what its sender saw.
+  function inOverview(n) {
+    return n.level === "international" || n.level === "regional" ||
+      n.type === "country" || n.type === "region";
+  }
+
+  function filtersUntouched() {
+    var clean = true;
+    Object.keys(filters).forEach(function (k) {
+      if (k === "edgeClass") {
+        if (!(filters.edgeClass.size === 1 && filters.edgeClass.has("relationship"))) clean = false;
+      } else if (filters[k].size) clean = false;
+    });
+    return clean;
+  }
+
+  function overviewActive() {
+    return view === "atlas" && !showAll && !focusId && !pathTargetId && filtersUntouched();
+  }
+
+  function setShowAll(v) {
+    showAll = v;
+    syncUrl();
+    refresh();
+  }
+
   // `ignoreCountry` exists for the comparison matrix, where country selects
   // the columns. Rows there are supra-national instruments with `country:
   // null`, so applying the country filter to them would empty the table.
@@ -1028,7 +1092,10 @@
     var hops = null;
     lastPath = null;
     var okNodes = Object.create(null);
-    G.nodes.forEach(function (n) { if (passesNodeFilters(n)) okNodes[n.id] = n; });
+    var overview = overviewActive();
+    G.nodes.forEach(function (n) {
+      if (passesNodeFilters(n) && (!overview || inOverview(n))) okNodes[n.id] = n;
+    });
 
     var edges = G.edges.filter(function (e) {
       return passesEdgeFilters(e) && okNodes[e.source] && okNodes[e.target];
@@ -1453,6 +1520,31 @@
     return pos;
   }
 
+  /** The build-time layout, for the nodes on screen — or null when it cannot
+   *  be trusted for this view. It is the layout of the whole Atlas over typed
+   *  relationships (tools/build_layout.mjs), so it is used only when that is
+   *  also what the page is showing: the default "Connections shown", and a
+   *  fingerprint that matches this graph.json. A filtered view then simply
+   *  shows its entities where they sit in the full picture, which is cheap at
+   *  any size and keeps the map the same from one view to the next. */
+  function storedPositions(nodes) {
+    if (!layoutCache) return null;
+    if (!(filters.edgeClass.size === 1 && filters.edgeClass.has("relationship"))) return null;
+    var pos = Object.create(null), ok = true;
+    nodes.forEach(function (node) {
+      var p = layoutCache.positions[node.id()];
+      if (!p) ok = false; else pos[node.id()] = { x: p[0], y: p[1] };
+    });
+    return ok ? pos : null;
+  }
+
+  // A hook for the browser tests, and a plain-text record of what drew the
+  // current graph, for anyone inspecting the page.
+  function markLayoutSource() {
+    var el = $("cy");
+    if (el) el.setAttribute("data-force-source", forceSource);
+  }
+
   function runLayout(force) {
     var n = cy.nodes().length;
     if (!n) return;
@@ -1488,78 +1580,39 @@
     // The grouped layout is O(n log n) arithmetic with no simulation to
     // converge, so it needs no size threshold. LOD_LABELS still thins labels;
     // see applyLOD().
+    var stored = view === "atlas" && layoutMode === "force" ? storedPositions(cy.nodes()) : null;
+    if (stored) {
+      cy.layout({
+        name: "preset", positions: stored, fit: true, padding: 50, animate: false
+      }).run();
+      forceSource = "stored";
+      markLayoutSource();
+      updateLayoutHint(n);
+      return;
+    }
+
     var positions = layeredPositions(cy.nodes());
     var groupedOnly = view !== "atlas" || layoutMode !== "force" || n > FORCE_MAX;
+    forceSource = "";
     cy.layout({
       name: "preset", positions: positions,
       fit: groupedOnly, padding: 50, animate: false
     }).run();
     updateLayoutHint(n);
-    if (groupedOnly) return;
+    if (groupedOnly) { markLayoutSource(); return; }
 
     // Force-directed relaxation, seeded by the grouped layout above rather
     // than randomised. Two things follow from that: the result is
     // reproducible for a given graph, and the simulation starts from an
     // arrangement that already means something instead of from noise.
+    forceSource = "live";
+    markLayoutSource();
     cy.layout(forceOptions()).run();
   }
 
-  /** Edge weight drives distance — "strongly connected nodes closer".
-   *
-   *  Rest lengths follow the Atlas's own hierarchy of evidence. Two things
-   *  about how much of that actually survives the simulation, both measured
-   *  rather than assumed:
-   *
-   *  - **It works where the spring is strong.** Typed relationships are the
-   *    tightest class (mean 72px against 132px for associations with every
-   *    edge class on), and low-confidence relationships sit visibly further
-   *    apart than medium ones — 203px against 166px, over 27 edges and 317.
-   *  - **A slack spring is not a long one.** Wikilinks are given almost no
-   *    elasticity so 1,392 of them cannot reshape the graph; the cost is that
-   *    they do not hold their rest length either. They float at whatever
-   *    ambient spacing the other forces produce (~82px), *shorter* than
-   *    associations. Springs pull; they do not push.
-   *
-   *  `confidence: high` has no visible effect and no claim is made for it:
-   *  only 2 of 354 typed relationships carry it, so any mean over them is
-   *  noise. See progress/backlog.md — the field is close to a constant.
-   */
-  function idealEdgeLength(edge) {
-    var cls = edge.data("cls");
-    if (cls === "wikilink") return 420;
-    if (cls === "association") return 230;
-    if (edge.data("provenance") === "interpretation") return 140;
-    var c = edge.data("confidence");
-    return c === "high" ? 40 : c === "low" ? 130 : 70;
-  }
-
-  function forceOptions() {
-    return {
-      name: "cose",
-      randomize: false,          // seeded from the grouped layout — see above
-      animate: false, fit: true, padding: 50,
-      // The default view is 44 disconnected components. Without generous
-      // spacing they are flung apart and the canvas becomes mostly whitespace.
-      componentSpacing: 130,
-      nodeOverlap: 14,
-      nodeRepulsion: function (node) {
-        // Damp the mega-hubs. DOMAIN-GOVERNMENT touches 206 of 258 entities;
-        // at uniform repulsion it drags the entire graph into a ball around
-        // itself. Letting repulsion grow with degree makes a hub hold its
-        // neighbours at arm's length instead of swallowing them.
-        return 9000 + Math.min(node.degree(), 60) * 2600;
-      },
-      idealEdgeLength: idealEdgeLength,
-      edgeElasticity: function (edge) {
-        // Only typed relationships get to pull hard; the other two classes
-        // are navigational and should not reshape the graph.
-        var cls = edge.data("cls");
-        return cls === "relationship" ? 160 : cls === "association" ? 20 : 5;
-      },
-      gravity: 40, numIter: 900,
-      initialTemp: 200, coolingFactor: 0.95, minTemp: 1
-    };
-  }
+  // The force layout's tuning lives in force-options.js, shared with the build
+  // step that stores a whole-graph layout (tools/build_layout.mjs).
+  function forceOptions() { return AtlasForce.options(false); }
 
   function updateLayoutHint(n) {
     var el = $("layout-hint");
@@ -1573,6 +1626,12 @@
       el.textContent = "Bands are geographic levels; blocks inside a band are " +
         "scopes, and each block is ordered by how connected its members are " +
         "in the current view.";
+    } else if (forceSource === "stored") {
+      el.textContent = "Positions come from a layout of the whole Atlas worked out " +
+        "when the site was built: connected entities are pulled together and " +
+        "typed relationships pull hardest. A filtered view shows each entity " +
+        "where it sits in that full picture. Geographic level is no longer " +
+        "shown by position — only by colour.";
     } else if (n > FORCE_MAX) {
       el.textContent = "Too many entities on screen (" + n.toLocaleString() +
         ") to lay out by simulation — showing the grouped layout instead. " +
@@ -1714,6 +1773,31 @@
       msg += " · Keyboard focus: " + (nodeById[focusId] || {}).label;
     }
     $("stage-status").textContent = msg;
+    updateOverviewNote();
+  }
+
+  /** The line under the graph that says the first screen is an overview and
+   *  offers the way out; when everything is shown and nothing is chosen, the
+   *  way back. Silent in every other state. */
+  function updateOverviewNote() {
+    var el = $("overview-note");
+    if (!el) return;
+    var total = G.stats.entities;
+    if (overviewActive()) {
+      el.hidden = false;
+      el.innerHTML = "<span>Overview: the international and regional bodies and every country. " +
+        "Filter or pick an entity to bring in the rest.</span> " +
+        '<button class="linklike" id="overview-all">Show all ' + total.toLocaleString() + " entities</button>";
+      $("overview-all").addEventListener("click", function () { setShowAll(true); });
+    } else if (view === "atlas" && showAll && !focusId && !pathTargetId && filtersUntouched()) {
+      el.hidden = false;
+      el.innerHTML = '<span>Showing every entity.</span> ' +
+        '<button class="linklike" id="overview-back">Back to the overview</button>';
+      $("overview-back").addEventListener("click", function () { setShowAll(false); });
+    } else {
+      el.hidden = true;
+      el.textContent = "";
+    }
   }
 
   function highlight(id) {
@@ -1736,6 +1820,8 @@
   function selectEntity(id, fromGraph) {
     if (!nodeById[id]) return;
     hideCardNow();
+    // Choosing an entity ends the overview, and the entity may not be in it.
+    var wasOverview = overviewActive();
     focusId = id;
     // A click, search pick or deep link is not a keyboard move — drop any
     // stale "Keyboard focus" note the status line was carrying.
@@ -1748,8 +1834,13 @@
     // the canvas. Make room first, then lay out: fitting the graph to the
     // wider canvas and shrinking it afterwards cut the right side off.
     if ($("detail").hidden) { $("detail").hidden = false; if (cy) cy.resize(); }
-    if (view === "explorer") refresh();
-    else if (cy && cy.getElementById(id).length) {
+    if (view === "explorer" || (wasOverview && cy)) {
+      refresh();
+      if (view !== "explorer" && !fromGraph && cy.getElementById(id).length) {
+        cy.animate({ center: { eles: cy.getElementById(id) }, zoom: Math.max(cy.zoom(), 0.9) },
+          { duration: 250 });
+      }
+    } else if (cy && cy.getElementById(id).length) {
       highlight(id);
       if (!fromGraph) {
         cy.animate({ center: { eles: cy.getElementById(id) }, zoom: Math.max(cy.zoom(), 0.9) },
@@ -2586,6 +2677,7 @@
     if ($("names-mode")) $("names-mode").value = nameMode;
     layoutMode = LAYOUT_MODES.indexOf(params.get("layout")) >= 0 ? params.get("layout") : "grouped";
     if ($("layout-mode")) $("layout-mode").value = layoutMode;
+    showAll = params.get("all") === "1";
 
     var q = params.get("q");
     // Setting .value directly does not fire the "input" event that would
@@ -2620,6 +2712,7 @@
     if (depthUser !== null) p.set("depth", String(depthUser));
     if (compareShowEmpty) p.set("empty", "1");
     if (layoutMode !== "grouped") p.set("layout", layoutMode);
+    if (showAll) p.set("all", "1");
     if (nameMode !== "en") p.set("names", nameMode);
     var q = $("search") ? $("search").value.trim() : "";
     if (q) p.set("q", q);

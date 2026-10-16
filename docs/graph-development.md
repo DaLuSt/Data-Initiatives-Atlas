@@ -13,8 +13,9 @@ needs:
 pip install -r validation/requirements.txt
 ```
 
-The browser tests additionally need Node.js and Playwright, but they are
-optional and are not part of CI.
+The browser tests and the layout step (`tools/build_layout.mjs`) additionally
+need Node.js; the browser tests also need Playwright. CI runs the browser tests
+in the `browser` job.
 
 ---
 
@@ -27,11 +28,18 @@ python validation/run_all.py
 # 2. Regenerate the graph from the Markdown/YAML
 python tools/build_graph.py
 
-# 3. Serve the site — it must be served over HTTP, not opened as a file://
+# 3. Work out the whole-graph force layout (about 4 s; needs Node)
+node tools/build_layout.mjs
+
+# 4. Serve the site — it must be served over HTTP, not opened as a file://
 python -m http.server 8765 --directory site
 
-# 4. Open http://127.0.0.1:8765/
+# 5. Open http://127.0.0.1:8765/
 ```
+
+Step 3 is optional for looking around: without `site/layout.json` the page works, but
+it logs a 404 for the file, and the force layout runs the slow live simulation instead
+of drawing the stored positions. The browser tests expect the file, as CI builds it.
 
 `file://` does not work: the app `fetch()`es `graph.json`, and browsers block
 cross-origin requests for `file://` documents. The app detects this and says
@@ -95,6 +103,7 @@ committed, so they must be reproducible).
 # browser tests — the client library plus any Chrome (CI runs them in the `browser` job
 # of validate.yml, on the runner's own Chrome; the job is a required check since 2026-10-10)
 python tools/build_graph.py
+node tools/build_layout.mjs
 python -m http.server 8765 --directory site &
 npm install playwright-core
 CHROME_PATH=/path/to/chrome node tools/test_ui.mjs
@@ -186,6 +195,38 @@ on every build and is excluded.
 
 ## Adding a feature
 
+### The overview and the stored layout
+
+Two things keep the page fast as the Atlas grows (roadmap #508, numbers in
+`docs/performance.md`).
+
+**The overview.** A bare address opens on the international and regional
+entities and every country (`inOverview()`), not on every entity. It is not a
+filter the visitor set: `overviewActive()` is true exactly when the Atlas view
+is untouched (no filter, no focus, no path, default connections) and "Show all"
+has not been chosen, so it ends by itself when anything is chosen and returns
+when it is cleared. "Show all" is remembered as `all=1` in the address. The
+List and Compare views are not affected. If the overview's definition changes,
+`test_ui.mjs` (the overview section) and the Start card's wording follow.
+
+**The stored layout.** `tools/build_layout.mjs` lays out every entity over the
+typed relationships with the vendored Cytoscape and `site/force-options.js`,
+using a seeded random-number generator, and writes `site/layout.json`
+(`{ fingerprint, positions }`, about 10 KB gzipped). `build_graph.py` puts the
+matching `layout_fingerprint` in `graph.json`: a hash of the entity ids, the
+typed relationships and `force-options.js`. The page uses the stored positions
+only when the two fingerprints are equal, only when the connections shown are
+typed relationships alone, and only when every node on screen has a position;
+otherwise it runs the simulation as before. So a stale or missing file is never
+shown, only unused, and editing a number in `force-options.js` invalidates every
+stored layout until `build_layout.mjs` runs again. `layout.json` is not
+committed: `pages.yml` and the `browser` job build it after `build_graph.py`.
+
+A filtered view shows its entities where they sit in the full layout (it does
+not re-lay-out the subset), which is cheap at any size and keeps the map
+the same from one view to the next; the cost is gaps where the filtered-out
+entities were.
+
 ### A new filter
 
 1. Make sure the facet is emitted by `build_graph.py` (`facets` in `build()`).
@@ -268,12 +309,13 @@ that pack nodes into per-scope/per-country blocks:
     radius. That margin ran out at 447 vs 464 when the Dutch block reached
     85 entities. If it fails again, raise `blockGapY` — not `blockGapX`,
     which does not move the binding pair.
-- **Force** — `cose` with `forceOptions()`, seeded from the grouped
-  positions (`randomize: false`) so it is reproducible. Gated by `FORCE_MAX`
-  (1,100 since 2026-10-16; the full graph passed the old limit of 900 and took
-  ~12 s to lay out at 902 nodes, so the limit is a stopgap: see roadmap #508);
-  above it the grouped layout is kept and the sidebar explains why. Tune
-  distance in `idealEdgeLength()`.
+- **Force** — `cose`, tuned in `site/force-options.js` (shared with the build
+  step). With typed relationships only, the default, the page draws the layout
+  stored at build time (`site/layout.json`, see below) for any number of nodes;
+  otherwise it runs the simulation itself, seeded from the grouped positions
+  (`randomize: false`) so it is reproducible. The live simulation is gated by
+  `FORCE_MAX` (900); above it the grouped layout is kept and the sidebar
+  explains why. Tune distance in `idealEdgeLength()` (in `force-options.js`).
   - The default filters leave the graph in 44 disconnected components (see
     `componentSpacing`'s own comment), and cose lays each one out on its own
     before packing the components into a grid — which routinely lines up
