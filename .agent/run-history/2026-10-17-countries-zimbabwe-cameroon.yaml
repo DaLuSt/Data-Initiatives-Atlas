@@ -7,5 +7,5 @@ summary: >
   ICT agency ANTIC's own site (in French); the agency, the 2010 cybersecurity and cybercrime law and the 2023 online
   child-protection charter law, the last two known by title and date only. No general data protection law is named on
   ANTIC's list. Rows #248 and #251 updated. Anchors now 111; 84 of 193 UN members have none.
-prs: []
-outcome: in-progress
+prs: [661]
+outcome: merged (#661)
