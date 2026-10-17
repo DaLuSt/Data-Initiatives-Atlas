@@ -7,7 +7,7 @@ as an open, connected knowledge graph.**
 
 ### [**→ Open the Interactive Atlas**](https://dalust.github.io/Data-Initiatives-Atlas/)
 
-*Search, filter and explore 951 entities and 10,967 connections across one hundred and nine
+*Search, filter and explore 959 entities and 11,024 connections across one hundred and eleven
 countries — no install, no account.*
 
 [![Validation](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/validate.yml/badge.svg)](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/validate.yml)
@@ -33,15 +33,15 @@ hand-maintained.
 
 | | |
 |---|---|
-| **Entities** | 951 |
-| **Connections** | 10,967 — of which **1,895** are typed relationships, each with its provenance |
-| **Country scopes** | **109** — 74 with national entities beyond the anchor itself, the rest base anchors |
+| **Entities** | 959 |
+| **Connections** | 11,024 — of which **1,906** are typed relationships, each with its provenance |
+| **Country scopes** | **111** — 76 with national entities beyond the anchor itself, the rest base anchors |
 | **Layers** | UN · Council of Europe · EU · national · subnational (sector is carried by `domains`) |
 | **Source of truth** | Git + Markdown/YAML — no database |
 | **Licence** | CC0 1.0 |
-| **✅ Sourcing** | **All 951 entities are `verification: primary-source`** — every cited source has been opened, read and confirmed |
+| **✅ Sourcing** | **All 959 entities are `verification: primary-source`** — every cited source has been opened, read and confirmed |
 
-*Figures as of 2026-10-16. The live counts are always on the site itself.*
+*Figures as of 2026-10-17. The live counts are always on the site itself.*
 
 ### Read this before you cite anything
 
@@ -51,7 +51,7 @@ exactly what it says:
 - **`verification: search-only`** — the URLs in `sources:` were confirmed by
   a search index to exist, but nobody has actually opened and read them yet.
   The claims may well be accurate; they simply haven't been checked against
-  the primary source. **All 951 entities have moved past this stage**, after
+  the primary source. **All 959 entities have moved past this stage**, after
   a sustained multi-batch re-verification effort — none remain `search-only`,
   though a newly-added entity can still start out there before it is
   verified.
