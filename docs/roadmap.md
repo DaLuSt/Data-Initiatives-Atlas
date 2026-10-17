@@ -114,7 +114,7 @@ validators (#528); the Dutch registers (#458, #536); the eIDAS cluster (#534); t
 Node 24 actions, the data-correction form and the same checks for deploys (#493, #494, #529); the blocked sources
 read on runners (#495); the browser tests (#526); successor links (#527); automatic LinkedIn posts (#515); the
 types decision (#499); load time (#507); the release review (#498); the Directorates-General (#509); the hover card with an entity's core information (#640); and the board token's expiry plan (#496).
-Part of #500 (what `country` means) and of #508 (the Country filter) is done; the rest of each is below.
+Part of #500 (what `country` means) and of #508 (the Country filter, the overview as the first screen, and the force layout stored at build time) is done; the rest of each is below. The country groups have each had a first slice; how many of the 193 UN member states still have no anchor is in `discovery/candidates.md` C10 (it was 97 anchors on 2026-10-16 and about 114 a day later). The groups' issues stay open for the countries whose laws could not be read.
 
 | Release | Data and research | Site and tooling | Decisions and schema |
 |---|---|---|---|
@@ -164,7 +164,7 @@ recorded declines (#229, #230, #231, #232) or deliberate non-assertions (#88, #9
 | #246 | #542, #543 (the Union for the Mediterranean and the CIS Assembly: what is left unread; the bodies looked at with nothing found) |
 | #233 | #446 |
 | #234 | #459 |
-| #236 to #242 | #470 to #476 (the countries of each group whose laws were not read) |
+| #236 to #242, #247 to #253 | #470 to #483 (the countries of each group whose laws were not read) |
 
 `discovery/candidates.md` C9 (thin domains) is #450 and C10 (countries) is #451 and its
 fourteen groups; `discovery/research-queue.md` and `discovery/duplicates.md` are empty.

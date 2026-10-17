@@ -16,5 +16,5 @@ summary: >
   TestStoredLayout added. A bug found on the way: leaving a reference to a removed variable in boot() broke the page
   while the old test run still passed, because the unit tests were run after the browser suite rather than before.
   Not done: collapsing a country into one node, Web Worker layout, splitting details.json.
-prs: []
-outcome: in-progress
+prs: [655]
+outcome: merged (#655)

@@ -10,5 +10,5 @@ summary: >
   none. Row #248 added. Two things on the way: tools/update_counts.py could not write the country count past
   "one hundred" (its pattern did not allow spaces in the number words; fixed), and a map-layout browser check drifted
   (ratio 0.4 to 0.62 as the tray grew with the country count; loosened from 0.5 to 0.75 with the reason in the test).
-prs: []
-outcome: in-progress
+prs: [656]
+outcome: merged (#656)
