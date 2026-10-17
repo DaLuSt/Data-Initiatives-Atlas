@@ -20,7 +20,7 @@ coverage: medium
 verification: primary-source
 start_date: 2018-01-01
 end_date: null
-last_verified: "2026-09-13"
+last_verified: "2026-10-17"
 previous_version: null
 successor: null
 
@@ -112,6 +112,10 @@ ENSIA methodology.
   wijzigingen") that designates drinking-water companies as data holders
   — named by the Tweede Kamer's own bill index but not itself read this
   pass, and not to be confused with the now-closed 35088 above.
+
+## Re-checked 2026-10-17 (roadmap #502)
+
+The BRO programme's own site (basisregistratieondergrond.nl, read directly) still says the Act "is van kracht" from 1 January 2018, that the Minister of Housing and Spatial Planning ("Volkshuisvesting en Ruimtelijke Ordening") is responsible for the design and management of the registration and supervises its use, and that TNO carries out the practical work on the Minister's behalf. Its news of 2 October 2026 shows the registration still widening in practice: new registration objects (SAD and SLD) in the environmental-quality domain, with the interface moved to SIKB0101 version 15, and a consultation on the future "Bronhouderportaal". **Nothing read changes the Act's status or dates; the draft amendment of the Regeling basisregistratie ondergrond that search results gave for 1 July 2026 was not found on this site**, and wetten.overheid.nl returned a protocol error, so the consolidated text could not be compared.
 
 ## Relationships
 
