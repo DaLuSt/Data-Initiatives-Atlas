@@ -9,5 +9,5 @@ summary: >
   Act stays active with no end date and the question goes to the Q1 2027 re-check. New unresolved row #247. Eight
   countries of the group not added (sites that did not answer or returned 403). Anchors now 97; 98 of 193 UN members
   have none.
-prs: []
-outcome: in-progress
+prs: [654]
+outcome: merged (#654)

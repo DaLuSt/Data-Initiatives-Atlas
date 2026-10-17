@@ -7,5 +7,5 @@ summary: >
   2026 known by title only, because their promulgation decrees on the site are scanned images with no extractable text:
   whether they replace the 2021 law and the CIL is unread (row #252: needs OCR or another copy). Anchors now 113; 82 of
   193 UN members have none.
-prs: []
-outcome: in-progress
+prs: [662]
+outcome: merged (#662)

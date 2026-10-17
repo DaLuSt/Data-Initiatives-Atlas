@@ -10,5 +10,5 @@ summary: >
   which holds the OPEN Government Data Act, and the E-Government Act of 2002, whose Title V the Evidence Act repealed) and
   Data.gov's page. Rows #249 to #251 added; 23 countries of those groups not added (sites not answering, 403, or not
   tried). Anchors now 105; 90 of 193 UN members have none.
-prs: []
-outcome: in-progress
+prs: [657]
+outcome: merged (#657)

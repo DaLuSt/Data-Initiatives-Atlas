@@ -1,0 +1,13 @@
+date: "2026-10-17"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Housekeeping. Issues: 60 open, all roadmap-labelled, none outside the roadmap; one open pull request (#663, auto-merge on).
+  Closed the ten run-history entries still marked in-progress (#649, #651, #652 to #657, #659 to #662; #663's own
+  entry stays open until it merges). Docs: the roadmap's mapping table now covers rows #247 to #253 against #477 to
+  #483, and its done paragraph says what is done of #508 (overview, stored layout) and where the country groups stand
+  (114 anchors, 81 of 193 UN members left); the sample build output in docs/graph-development.md is current (967
+  entities). README and state.yaml match the data (update_counts --check). Found: 52 remote branches have
+  accumulated, all of them squash-merged except #663's and release/data-2026.10.3; they were not deleted (the agent
+  does not delete remote branches); the repository setting "Automatically delete head branches" would stop it.
+prs: []
+outcome: in-progress
