@@ -8,5 +8,5 @@ summary: >
   members have none.
   Also roadmap #502: NL-BRO re-checked on the BRO programme's own site (Act still in force since 2018, minister VRO, new registration objects in the
   environmental-quality domain); the 1 July 2026 Regeling amendment was not found and wetten.overheid.nl did not load. Status unchanged.
-prs: []
-outcome: in-progress
+prs: [663]
+outcome: merged (#663)

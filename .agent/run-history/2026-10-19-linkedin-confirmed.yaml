@@ -1,0 +1,8 @@
+date: "2026-10-19"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  The owner reported that the automatic LinkedIn release post works: they reviewed it and it was published without
+  issue (the post for data release 2026.10.4, #666). Nothing to change in the pipeline. The token itself still
+  expires on 2026-12-06 (#578, owner side).
+prs: []
+outcome: recorded
