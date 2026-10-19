@@ -26,6 +26,14 @@ class TestSuiteSource(unittest.TestCase):
         r = subprocess.run([node, "--check", str(REPO_ROOT / "tools" / "test_ui.mjs")], capture_output=True, text=True)
         self.assertEqual(r.returncode, 0, r.stderr)
 
+    def test_every_top_level_section_belongs_to_a_shard(self):
+        # A bare `{` or a loop at the top level would run in both shards (or in neither, once
+        # a shard is named), so each is gated by runs('desktop') or runs('rest').
+        import re
+        self.assertNotRegex(SUITE, r"(?m)^(\{|for \(const scheme)")
+        self.assertEqual(len(re.findall(r"(?m)^if \(runs\('desktop'\)\)", SUITE)), 1)
+        self.assertGreaterEqual(len(re.findall(r"(?m)^if \(runs\('rest'\)\)", SUITE)), 8)
+
     def test_it_uses_the_client_library_only(self):
         self.assertIn("from 'playwright-core'", SUITE)
         self.assertNotIn("from 'playwright'", SUITE)
@@ -93,6 +101,11 @@ class TestWorkflow(unittest.TestCase):
 
     def test_the_suite_is_run_against_the_local_server(self):
         self.assertIn("node tools/test_ui.mjs", self.shell)
+        # Both shards run, and a failure in either one fails the job.
+        self.assertIn("UI_SHARD=desktop", self.shell)
+        self.assertIn("UI_SHARD=rest", self.shell)
+        self.assertEqual(self.shell.count('|| status=1'), 2)
+        self.assertIn('exit "$status"', self.shell)
         self.assertIn("--directory site", self.shell)
         self.assertIn("8765", self.shell)
 

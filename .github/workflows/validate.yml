@@ -73,4 +73,15 @@ jobs:
             curl -sf http://127.0.0.1:8765/index.html > /dev/null && break
             sleep 1
           done
-          node tools/test_ui.mjs
+          # Two shards side by side (UI_SHARD in tools/test_ui.mjs): the long desktop walk-through
+          # and every other section. Each has its own browser pages, so they share nothing; the
+          # job takes as long as the longer one instead of the sum. Either failing fails the job.
+          UI_SHARD=desktop node tools/test_ui.mjs > ui-desktop.log 2>&1 &
+          desktop=$!
+          UI_SHARD=rest node tools/test_ui.mjs > ui-rest.log 2>&1 &
+          rest=$!
+          status=0
+          wait "$desktop" || status=1
+          wait "$rest" || status=1
+          cat ui-desktop.log ui-rest.log
+          exit "$status"

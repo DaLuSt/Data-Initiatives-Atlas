@@ -44,7 +44,8 @@ on `main`:
   `python tools/check_all.py` to do the same locally; it takes about a minute.
 - **`browser`** builds the graph, serves `site/` and runs `tools/test_ui.mjs`
   in the runner's own Chrome: every view, deep links, search, filters, layouts,
-  the CSV download and no console errors.
+  the CSV download and no console errors. It runs the suite as two shards side
+  by side (`UI_SHARD`, see `docs/graph-development.md`).
 
 A new push to a pull request cancels the older run for that pull request; runs on
 `main` and runs started by hand are never cancelled.

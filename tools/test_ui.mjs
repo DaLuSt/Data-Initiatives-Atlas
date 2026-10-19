@@ -14,7 +14,8 @@
  *     npm install playwright-core            # the client only
  *     CHROME_PATH=/path/to/chrome node tools/test_ui.mjs
  *
- * Override the target with BASE, and the browser binary with CHROME_PATH.
+ * Override the target with BASE, and the browser binary with CHROME_PATH. UI_SHARD=desktop or
+ * UI_SHARD=rest runs half of the suite (CI runs both at once).
  */
 
 import { chromium } from 'playwright-core';
@@ -41,6 +42,12 @@ function crash(section, e) {
 // The number of entities, read from the data the site is built from, so a new entity does
 // not turn a count that was once hard-coded into a failure.
 const TOTAL = await (await fetch(BASE + '/graph.json')).json().then(g => g.stats.entities);
+
+// UI_SHARD runs part of the suite: `desktop` is the long, stateful 1440 px walk-through, `rest`
+// is every other section (each has its own page and shares no state with it). With no value
+// everything runs, in the order below. CI runs the two shards side by side.
+const SHARD = process.env.UI_SHARD || '';
+const runs = name => !SHARD || SHARD === name;
 
 const browser = await chromium.launch(
   process.env.CHROME_PATH ? { executablePath: process.env.CHROME_PATH } : {});
@@ -106,7 +113,7 @@ async function search(page, q) {
 }
 
 // ─────────────────────────── desktop ───────────────────────────
-{
+if (runs('desktop')) {
   var { ctx, page, errors } = await newPage({ width: 1440, height: 900 });
   try {
   await page.goto(BASE + '/index.html', { waitUntil: 'networkidle' });
@@ -1097,7 +1104,7 @@ async function search(page, q) {
 }
 
 // ─────────────────────────── mobile ───────────────────────────
-{
+if (runs('rest')) {
   var { ctx, page, errors } = await newPage({ width: 390, height: 844 });
   try {
   await page.goto(BASE + '/index.html', { waitUntil: 'networkidle' });
@@ -1160,7 +1167,7 @@ async function search(page, q) {
 }
 
 // ─────────────────────────── a11y basics ───────────────────────────
-{
+if (runs('rest')) {
   var { ctx, page, errors } = await newPage({ width: 1280, height: 800 });
   try {
   await page.goto(BASE + '/index.html', { waitUntil: 'networkidle' });
@@ -1200,7 +1207,7 @@ async function search(page, q) {
 // branch were identical. This one is supposed to gate something real, so it
 // is tested against a graph too big for it by intercepting graph.json and
 // padding the node list past FORCE_MAX.
-{
+if (runs('rest')) {
   var { ctx, page, errors } = await newPage({ width: 1400, height: 900 });
   try {
   await page.route('**/graph.json', async route => {
@@ -1248,7 +1255,7 @@ async function search(page, q) {
 // The first screen draws the international and regional bodies and every country, not every
 // entity, and the force layout draws positions worked out at build time (site/layout.json)
 // instead of running the simulation in the visitor's browser.
-{
+if (runs('rest')) {
   var { ctx, page, errors } = await newPage({ width: 1400, height: 900 });
   try {
   const state = () => page.evaluate(() => {
@@ -1388,7 +1395,7 @@ async function search(page, q) {
 // The core information of an entity where the pointer rests or keyboard focus sits: in the
 // graph, the List view and the Compare matrix. WCAG 2.2 1.4.13: Escape dismisses it, the pointer
 // may move onto it. Not on touch screens, where a tap opens the detail panel as before.
-{
+if (runs('rest')) {
   var { ctx, page, errors } = await newPage({ width: 1440, height: 900 });
   try {
   await page.goto(BASE + '/index.html', { waitUntil: 'networkidle' });
@@ -1462,7 +1469,7 @@ async function search(page, q) {
   } catch (e) { crash('hover card', e); }
   await ctx.close();
 }
-{
+if (runs('rest')) {
   // A touch screen has no hover: a tap opens the detail panel and shows no card.
   const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, hasTouch: true, isMobile: true });
   const page = await ctx.newPage();
@@ -1491,7 +1498,7 @@ async function search(page, q) {
 }
 
 // The hover card's text contrast in both colour schemes (WCAG 1.4.3), measured on the real card.
-for (const scheme of ['light', 'dark']) {
+if (runs('rest')) for (const scheme of ['light', 'dark']) {
   const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 }, colorScheme: scheme });
   const page = await ctx.newPage();
   page.setDefaultTimeout(6000);
@@ -1520,7 +1527,7 @@ for (const scheme of ['light', 'dark']) {
 // WCAG 2.2 AA: text 4.5:1 (1.4.3), graphical objects 3:1 (1.4.11), pointer targets 24 px (2.5.8).
 // axe-core found the first two failing in the dark theme (white text on the light accent colour)
 // and the last on two small controls; these checks keep them fixed, in both colour schemes.
-for (const scheme of ['light', 'dark']) {
+if (runs('rest')) for (const scheme of ['light', 'dark']) {
   const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 }, colorScheme: scheme });
   const page = await ctx.newPage();
   page.setDefaultTimeout(6000);
