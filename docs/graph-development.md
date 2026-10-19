@@ -109,6 +109,11 @@ npm install playwright-core
 CHROME_PATH=/path/to/chrome node tools/test_ui.mjs
 ```
 
+CI runs the suite as two shards at once, `UI_SHARD=desktop` (the long 1440 px walk-through, 112 checks) and
+`UI_SHARD=rest` (every other section, 62 checks), so the job takes about 90 s instead of 140 s on a laptop and in CI alike.
+Run one shard by itself when you are working on that part; with no `UI_SHARD` everything runs. A new top-level
+section in `test_ui.mjs` must start with `if (runs('rest')) {` (or `runs('desktop')`): `tools/test_browser_ci.py` fails on a bare block.
+
 A section of the suite that throws is recorded as one failed check and the run goes on, so
 a stale selector shows up as one line instead of hiding every check after it; entity counts
 come from `graph.json`, not from numbers frozen in the suite.

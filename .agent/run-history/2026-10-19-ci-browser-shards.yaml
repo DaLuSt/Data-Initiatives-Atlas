@@ -1,0 +1,14 @@
+date: "2026-10-19"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Owner asked for ways to optimise the pipelines. Measured the last runs: a pull request's checks take about 2m30,
+  of which the `browser` job is 2m40 (the browser suite 2m21, of which 56 s are fixed waits) and `validate` 54 s,
+  so the browser job decides when auto-merge fires. The suite's nine top-level sections have their own pages and share
+  no state, so `UI_SHARD` splits them into `desktop` (112 checks, the long walk-through) and `rest` (62 checks);
+  validate.yml runs both at once and fails if either fails. Locally 139 s became 88 s with the same 174 checks.
+  tools/test_browser_ci.py guards that no top-level section escapes a shard. Not done (smaller or riskier): replacing
+  the 96 fixed waits in the suite with state waits; running check_all's independent checks in parallel (validate is not
+  the long pole); caching pip and the Playwright client (about 8 s each); pages.yml repeats the checks (about 55 s) after
+  every merge, which does not block anything.
+prs: []
+outcome: in-progress
