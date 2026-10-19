@@ -8,6 +8,75 @@ and a dated **data release** (`YYYY.MM.N`) for each snapshot.
 
 <!-- releases:start -->
 
+## Data release 2026.10.4 — 2026-10-19
+
+**Schema 1.0.0** (unchanged)
+
+In the Atlas at this release: 976 entities (+121), 1,944 typed relationships (+240), 114 countries (+25).
+
+### Schema
+
+- Close rows #5 and #19 of unresolved.md; keep the Lower Saxony question as row #243 (#635)
+- Data spaces (#500): what country means for an initiative that operates across borders; row #8 closed (#633)
+- EU Directorates-General and the adoption step (#509): rule, DG EMPL, rows #15 and #16 closed (#632)
+
+### Site and features
+
+- Site (#508): an overview as the first screen, and the force layout stored at build time (#655)
+- Countries (#479): Australia and Panama; force-layout limit raised to 1,100 (#654)
+- Site: hover card inside a landmark (axe), contrast checks for it, and a status-line hint (#648)
+- Hover card: an entity's core information on hover and focus (#640) (#642)
+- Scale check at 194 countries: a Find a country box and the findings (#508) (#628)
+
+### Data
+
+- Countries (#480): Côte d'Ivoire; re-check (#502): NL-BRO (#663)
+- Regions (#541): the Nordic Council of Ministers and its 2025-2030 digitalisation programme (#665)
+- Countries (#477): Costa Rica and Burkina Faso (#662)
+- Countries (#478, #483): Zimbabwe and Cameroon (#661)
+- Countries (#481, #483): Ghana and Colombia (#660)
+- Countries (#482, #483): China and Tanzania (#659)
+- Countries (#481, #482, #483): Brazil, Japan and Malaysia (#657)
+- Countries (#478): New Zealand, Peru, Ecuador and Trinidad and Tobago (#656)
+- Countries (#475, #476): Nigeria and Pakistan, from official sites (#653)
+- Countries (#474, #476): Vanuatu, Barbados, Seychelles and Bolivia, each from an official page (#652)
+- Housekeeping and #450: tag Poland's NIS2 act with its six added sectors; docs counts (#651)
+- Re-check (#502): PL-KSC was signed with a Constitutional Tribunal referral; the Spanish AI bill's stage (#650)
+- UK (#459): BS 10012, the British Standard for personal information management, withdrawn in April 2026 (#647)
+- Regions (#541-#543): the Union for the Mediterranean's digital declaration and the CIS Assembly's model code (#638)
+- Regions (#542, #543): CEFTA's digital decisions and the Eurasian Economic Union's e-signature rules (#636)
+
+### Tooling
+
+- Release review (#498): count from the previous preparation, not its tag; one line for housekeeping (#631)
+- CI speed: one list of checks, shared builds in the tests, cancel superseded PR runs (#629)
+- Load time: measure it, set a budget, guard the file sizes (#507) (#627)
+- LinkedIn workflow: read the data release without PyYAML (#624)
+
+### Documentation
+
+- Housekeeping: run-history closed, roadmap and build-output docs current (#664)
+- Roadmap: the world-map decision is #645 (2026.12); #508 waits on it (#646)
+- Board token variables set: record it and close #496's plan (#644)
+- Roadmap: add the hover card (#640) to the 2026.11 plan (#641)
+- Housekeeping: close the open run-history entries; map row #246 (#639)
+- Housekeeping: close the open run-history entries, correct the regions count, map rows #244 and #245 (#637)
+- Housekeeping and a docs check: README tree, roadmap plan, workflows page, test commands and statuses brought up to date (#634)
+- Housekeeping: close the #507, #508 and CI-speed entries; record the world-map decision (#630)
+- Housekeeping: release 2026.10.3, the LinkedIn fix and the late schedule (#625)
+
+### Housekeeping
+
+- 3 pull requests that only record progress in the repository's own files (#649, #643, #626)
+
+### Roadmap items completed
+
+- Hover card: show an entity's core information when the pointer rests on it (#640)
+- EU institutions: the Directorates-General and the legislative-adoption step (#509)
+- Load time on slow networks: the size of graph.json and details.json (#507)
+- Review the release cadence and the changelog after the first three data releases (#498)
+- Plan for the PROJECT_TOKEN expiring: rotation steps and a visible failure (#496)
+
 ## Data release 2026.10.3 — 2026-10-12
 
 **Schema 1.0.0** (unchanged)
