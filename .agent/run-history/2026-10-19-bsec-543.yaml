@@ -8,5 +8,5 @@ summary: >
   anchors. Row #246 updated. Equatorial Guinea and Yemen tried again for #471: no official source reachable, so the row
   #237 note records it and the issue closes with them listed as unreadable.
   Also housekeeping on the issues: stale checkboxes ticked on #470-#473.
-prs: []
-outcome: in-progress
+prs: [669]
+outcome: merged (#669)

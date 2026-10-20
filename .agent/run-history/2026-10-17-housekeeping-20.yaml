@@ -9,5 +9,5 @@ summary: >
   entities). README and state.yaml match the data (update_counts --check). Found: 52 remote branches have
   accumulated, all of them squash-merged except #663's and release/data-2026.10.3; they were not deleted (the agent
   does not delete remote branches); the repository setting "Automatically delete head branches" would stop it.
-prs: []
-outcome: in-progress
+prs: [664]
+outcome: merged (#664)

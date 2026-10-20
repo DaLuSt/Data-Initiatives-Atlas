@@ -113,20 +113,20 @@ founding-six date (#449, #533); the consistency checks (#461) and the move of th
 validators (#528); the Dutch registers (#458, #536); the eIDAS cluster (#534); the EU and UN links (#537); the
 Node 24 actions, the data-correction form and the same checks for deploys (#493, #494, #529); the blocked sources
 read on runners (#495); the browser tests (#526); successor links (#527); automatic LinkedIn posts (#515); the
-types decision (#499); load time (#507); the release review (#498); the Directorates-General (#509); the hover card with an entity's core information (#640); and the board token's expiry plan (#496).
+types decision (#499); load time (#507); the release review (#498); the Directorates-General (#509); the hover card with an entity's core information (#640); the board token's expiry plan (#496); the age rule and report for `last_verified` (#510); thin domains (#450, built environment stays at 2 countries and is recorded in `discovery/candidates.md` C9); and country group 2 (#471, two countries unreadable: row #237).
 Part of #500 (what `country` means) and of #508 (the Country filter, the overview as the first screen, and the force layout stored at build time) is done; the rest of each is below. The country groups have each had a first slice; how many of the 193 UN member states still have no anchor is in `discovery/candidates.md` C10 (it was 97 anchors on 2026-10-16 and about 114 a day later). The groups' issues stay open for the countries whose laws could not be read.
 
 | Release | Data and research | Site and tooling | Decisions and schema |
 |---|---|---|---|
 | **2026.11** | #446 English names for the last records; #459 UK gaps | #578 renew the LinkedIn token |  |
-| **2026.12** | #450 thin domains (what is left) | #645 the world map: decide what it is for, then make it usable | The owner's choice among three options (#645) |
+| **2026.12** | | #645 the world map: decide what it is for, then make it usable | The owner's choice among three options (#645) |
 | **2027.01** | regions: #540 W Europe and #541 N Europe; #470 countries, group 1; #502 re-check Q1 | #497 manual accessibility checks |  |
-| **2027.02** | regions: #542 S Europe and #543 E Europe; #471 countries, group 2; #535 Germany's § 91a question | #452 test with real visitors and devices | #457 vocabulary decisions |
+| **2027.02** | regions: #542 S Europe and #543 E Europe; #535 Germany's § 91a question | #452 test with real visitors and devices | #457 vocabulary decisions |
 | **2027.03** | regions: #544 N America and #545 S America; #472 countries, group 3; #460 coverage gaps; #500 data spaces (three parts left); #501 standards bodies |  |  |
 | **2027.04** | regions: #546 C America and #547 Caribbean; #473 countries, group 4; #503 re-check Q2 |  | #506 multilingual names |
 | **2027.05** | regions: #548 N Africa and #549 W Africa; #474 countries, group 5 |  |  |
 | **2027.06** | regions: #550 E Africa and #551 Middle Africa; #475 countries, group 6 | #508 the site at 200 countries (map decision open) |  |
-| **2027.07** | regions: #552 S Africa and #553 W Asia; #476 countries, group 7; #504 re-check Q3 | #510 annual re-verification policy |  |
+| **2027.07** | regions: #552 S Africa and #553 W Asia; #476 countries, group 7; #504 re-check Q3 |  |  |
 | **2027.08** | regions: #554 C Asia and #555 S Asia; #477 countries, group 8 |  | #511 UN system and development banks |
 | **2027.09** | regions: #556 E Asia and #557 SE Asia; #478 countries, group 9 | #512 linked-data export (a proposal) |  |
 | **2027.10** | regions: #558 Australia and NZ and #559 Melanesia; #479 countries, group 10; #505 re-check Q4 |  |  |

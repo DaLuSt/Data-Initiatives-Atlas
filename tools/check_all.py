@@ -46,6 +46,8 @@ CHECKS: list[tuple[str, list[str], str]] = [
     ("Test the page reader", ["python", "tools/test_runner_fetch.py"], "."),
     # The board's token watch (tools/board_health.py) and the issue steps in project-board.yml.
     ("Test the board's token watch", ["python", "tools/test_board_health.py"], "."),
+    # The age report for `last_verified` (tools/verification_age.py, roadmap #510).
+    ("Test the verification age report", ["python", "tools/test_verification_age.py"], "."),
     # How the browser suite is wired into CI. No browser here.
     ("Test the browser suite's CI wiring", ["python", "tools/test_browser_ci.py"], "."),
     # The headline numbers in README.md and .agent/state.yaml: the rewriting rules, and that they match the data.

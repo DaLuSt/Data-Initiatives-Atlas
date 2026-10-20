@@ -10,5 +10,5 @@ summary: >
   the 96 fixed waits in the suite with state waits; running check_all's independent checks in parallel (validate is not
   the long pole); caching pip and the Playwright client (about 8 s each); pages.yml repeats the checks (about 55 s) after
   every merge, which does not block anything.
-prs: []
-outcome: in-progress
+prs: [670]
+outcome: merged (#670)
