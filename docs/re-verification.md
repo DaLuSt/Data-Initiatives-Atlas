@@ -13,7 +13,7 @@ it; the judgment half is yours.
 **Status (2026-10-13): the debt is closed.** All 856 entities are `verification: primary-source`; the
 count below is 0, and the figures in the history further down are what each pass found on its date. The
 procedure still applies to any new entity that starts `search-only`, and to the re-reading of sources
-over time (roadmap #510 decides how old `last_verified` may get).
+over time (the rule for how old `last_verified` may get is [below](#how-old-may-last_verified-get)).
 
 ```bash
 # how many entities still owe the pass
@@ -25,6 +25,41 @@ python tools/source_hosts.py
 # regenerate the committed worklist (it is a generated artefact — do not edit)
 python tools/source_hosts.py --markdown -o discovery/reverification-allowlist.md
 ```
+
+## How old may `last_verified` get
+
+*Decided for roadmap #510, 2026-10-20. The numbers are a default; change them here and in
+`tools/verification_age.py` together.*
+
+`verification: primary-source` with a `last_verified` date means: on that date the cited sources were
+opened and read and the entity matched them. It says nothing about the pages afterwards, so the claim
+ages.
+
+**The rule.** An entity is **due soon** 9 months after its `last_verified` date and **overdue** at 12
+months. Overdue does not change `verification`: the entity stays `primary-source`, because it was read.
+What changes is the headline. The README may say "every entity is primary-source, every source read"
+only while nothing is overdue; once something is, it says how many entities were verified within the last
+12 months instead. A date moves only by reading: never bump `last_verified` without opening the sources.
+
+**The report.** `python tools/verification_age.py` counts the entities by state and month and lists the
+oldest; `--due` lists everything due soon or overdue; `--markdown` makes a table for a pull request or
+an issue; `--asof 2027-06-01` shows who will be due by then, to plan a cycle. It reads the data and
+changes nothing. `--fail-on-overdue` exits 1 if anything is overdue; it is deliberately not part of CI,
+since a calendar date passing would turn every pull request red at once.
+
+**Who and when.** A session started by a person, oldest first, in the quarter the report shows entities
+as due soon. When this was written every entity had been verified between 2026-08 and 2026-10, so the first entities
+become due soon in 2027-05 and the first become overdue in 2027-08; the quarterly event re-checks
+(#502 to #505) re-read some of them earlier and move their dates.
+
+**When a source has changed since it was read.** Re-read it, then:
+- the claim still holds: confirm it and set `last_verified` to the day you read it;
+- the claim has changed (a new date, a replaced law, a renamed body): correct the entity, say what changed
+  in a short "Re-checked" note in the body, as the NL-BRO re-check does, and set `last_verified`;
+- the page has moved: find the new address and replace the URL; if there is none, keep the old one, do
+  not bump the date, and record the entity in `discovery/unresolved.md`;
+- the page cannot be read from here (a challenge page, a JavaScript shell): use the runner reader
+  (above); if that fails too, leave the date alone and say so in `discovery/unresolved.md`.
 
 ## Prerequisite: outbound HTTPS
 

@@ -1,0 +1,12 @@
+date: "2026-10-20"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Housekeeping and two roadmap items closed. Run-history entries for #664, #665, #669 and #670 closed. Roadmap #510:
+  the rule for how old `last_verified` may get (due soon at 9 months, overdue at 12; overdue changes the README's
+  headline, not the entity) is in docs/re-verification.md, with tools/verification_age.py (counts by state and month,
+  --due, --markdown, --asof, --fail-on-overdue, not wired into CI) and its tests, registered in check_all. Roadmap
+  #450 closed: every thin domain is at 3 or more countries except built environment (2; the Danish and Norwegian
+  building-register laws were unreadable), which stays recorded in discovery/candidates.md C9. #471 was closed on
+  2026-10-19. docs/roadmap.md updated. The sharded browser job measured 1m49 on its first pull request (was 2m42).
+prs: []
+outcome: in-progress
