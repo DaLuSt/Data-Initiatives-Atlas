@@ -200,3 +200,10 @@ Schedule 1 to the NIS Regulations 2018 names the Authority, a body corporate cre
 
 Each of these is a candidate for a pass with a browser or a runner, none needs its own roadmap item.
 
+<a id="row-257"></a>
+## Row 257 — CARICOM and the CTU: what is left unread
+
+*Area: Regions (roadmap #547, Caribbean).*
+
+**2026-10-23.** Read directly: `caricom.org`'s Member States and Secretariat pages, the Secretariat's Privacy and Data Protection Rules (PDF, in effect 28 October 2020), the Caribbean Telecommunications Union's home page and Single ICT Space page, and CARICOM's news item of 16 February 2022. **Not read:** the Revised Treaty of Chaguaramas (2002) and any founding dates; the Vision and Roadmap for the Single ICT Space (approved by the Heads in February 2017; a "View or Download" link on the CTU page); what the Heads decided in July 2022 on a single regional telecommunications regulator; who adopted the Secretariat's Rules and by what act; the CTU's treaty and member list (so no CTU country edges); the CARICOM Regional Digital Development Strategy of 2013 (known only from a search result); CARICOM IMPACS, CARICAD and CBU, named in the ICT cluster; the CARICOM Model Legislation on data protection and cybercrime and the CARICOM cybersecurity action plan (not looked for on a primary page). Ten of the fifteen Member States have no country anchor (Antigua and Barbuda, Bahamas, Belize, Dominica, Grenada, Montserrat, Saint Lucia, St Kitts and Nevis, St Vincent and the Grenadines, Suriname), so CARICOM has edges to five only. The Organisation of Eastern Caribbean States and the Association of Caribbean States (the other leads in #547) were not yet looked at; `oecs.int` and `acs-aec.org` were not tried. The Secretariat's Rules are filed as `policy` although they bind its staff: see #457.
+
