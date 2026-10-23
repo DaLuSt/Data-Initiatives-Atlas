@@ -6,5 +6,5 @@ summary: >
   deposited and five signed-only anchors; the treaty PDF is a scan with no text), the AU Data Policy Framework (endorsed
   2-3 February 2022, read in part) and the Digital Transformation Strategy 2020-2030 (known from a footnote), plus the AU
   itself. Row #259.
-prs: []
-outcome: in-progress
+prs: [677]
+outcome: merged (#677)
