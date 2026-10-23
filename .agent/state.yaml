@@ -13,20 +13,20 @@
 # from site/graph.json's own `stats` block (run tools/build_graph.py first;
 # the file is gitignored) rather than counting by hand.
 
-updated: "2026-10-19"
+updated: "2026-10-23"
 updated_by_session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
 
 graph:
-  entity_count: 980
-  relationship_edges: 1962
-  association_edges: 4161
-  wikilink_edges: 5117
-  edges_total: 11240
+  entity_count: 983
+  relationship_edges: 1974
+  association_edges: 4181
+  wikilink_edges: 5121
+  edges_total: 11276
   countries: 114
   regions: 1
 
 discovery:
-  unresolved_rows_open: 65
+  unresolved_rows_open: 66
   candidates_queued: 1
   research_queue_items: 0
   needs_human_open: 1
