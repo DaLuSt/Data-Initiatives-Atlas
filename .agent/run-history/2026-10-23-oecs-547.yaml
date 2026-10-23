@@ -7,5 +7,5 @@ summary: >
   the Regional Strategy for the Development of Statistics 2017-2030 (title only). No OECS Member State has a country
   anchor, so no country edges. The Data Governance Charter is behind a challenge page (not modelled); the ACS site
   answered 522. Row #258.
-prs: []
-outcome: in-progress
+prs: [676]
+outcome: merged (#676)
