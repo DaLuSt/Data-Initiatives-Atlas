@@ -5,5 +5,5 @@ summary: >
   and the one-page summary of its Regional Digital Market Roadmap (presidential mandate of 11 December 2020; three
   pillars, the second covering e-signature interoperability, privacy, personal data protection and free data flow,
   cybersecurity). Edges to the four members (medium). The Andean Community still not modelled. Row #265.
-prs: []
-outcome: in-progress
+prs: [683]
+outcome: merged (#683)
