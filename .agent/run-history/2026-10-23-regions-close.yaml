@@ -8,5 +8,5 @@ summary: >
   norden.org is under maintenance and the Finnish press release is behind a challenge; the EAEU Treaty; the BSEC
   Charter; further bodies not looked at on their own sites) is in row #256 rather than in an open issue. These are
   closures on "every lead exhausted, gaps recorded", not on "every instrument read", and can be reopened.
-prs: []
-outcome: in-progress
+prs: [674]
+outcome: merged (#674)

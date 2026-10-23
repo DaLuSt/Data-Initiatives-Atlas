@@ -17,16 +17,16 @@ updated: "2026-10-23"
 updated_by_session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
 
 graph:
-  entity_count: 986
-  relationship_edges: 1989
-  association_edges: 4203
-  wikilink_edges: 5125
-  edges_total: 11317
+  entity_count: 991
+  relationship_edges: 2007
+  association_edges: 4229
+  wikilink_edges: 5133
+  edges_total: 11369
   countries: 114
   regions: 1
 
 discovery:
-  unresolved_rows_open: 68
+  unresolved_rows_open: 69
   candidates_queued: 1
   research_queue_items: 0
   needs_human_open: 1
