@@ -5,5 +5,5 @@ summary: >
   publication of the SADC Model Law on Data Protection (validated in Gaborone in March 2012, adopted by the SADC ICT
   ministers in Mauritius in November 2012; read in part), plus the 2001 Declaration on ICT (named only). Edges to the
   seven members with an anchor. Row #262.
-prs: []
-outcome: in-progress
+prs: [680]
+outcome: merged (#680)
