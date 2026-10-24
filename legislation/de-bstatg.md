@@ -39,7 +39,7 @@ sources:
   - title: "BStatG — Gesetz über die Statistik für Bundeszwecke"
     url: "https://www.gesetze-im-internet.de/bstatg_1987/BJNR004620987.html"
     publisher: "Bundesministerium der Justiz / juris (Gesetze im Internet)"
-    accessed: "2026-08-22"
+    accessed: "2026-09-05"
   - title: "Gesetzliche Grundlagen — Statistisches Bundesamt"
     url: "https://www.destatis.de/DE/Ueber-uns/Aufgaben/gesetze.html"
     publisher: "Statistisches Bundesamt (Destatis)"
@@ -52,10 +52,6 @@ sources:
     url: "https://www.anwalt.org/bundesstatistikgesetz-bstatg/"
     publisher: "anwalt.org"
     accessed: "2026-08-22"
-  - title: "BStatG — Gesetz über die Statistik für Bundeszwecke (re-read for UN-FPOS)"
-    url: "https://www.gesetze-im-internet.de/bstatg_1987/BJNR004620987.html"
-    publisher: "Bundesministerium der Justiz / juris (Gesetze im Internet)"
-    accessed: "2026-09-05"
 ---
 
 # Bundesstatistikgesetz (BStatG)

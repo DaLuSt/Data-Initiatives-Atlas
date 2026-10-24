@@ -54,7 +54,7 @@ sources:
     publisher: "Postal and Telecommunications Regulatory Authority of Zimbabwe (POTRAZ)"
     accessed: "2026-10-16"
   - title: "Cyber and Data Protection Act [Chapter 12:07] (Act 5 of 2021), as published by POTRAZ"
-    url: "http://www.potraz.gov.zw/wp-content/uploads/2026/02/ACT-CDPA.pdf"
+    url: "https://www.potraz.gov.zw/wp-content/uploads/2026/02/ACT-CDPA.pdf"
     publisher: "Postal and Telecommunications Regulatory Authority of Zimbabwe (POTRAZ)"
     accessed: "2026-10-16"
     note: "Read as text, 12 pages: 'Act re-gazetted with new title on 11 March 2022: Law reviser'; commencement 3 December 2021."

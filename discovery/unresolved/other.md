@@ -298,3 +298,33 @@ Each of these is a candidate for a pass with a browser or a runner, none needs i
 
 **2026-10-23.** Read directly on `forumsec.org`: the About us page (founded 1971; 18 members), the 2050 Strategy page, the Technology and Connectivity page (six priority areas identified by Pacific ICT Ministers) and the Secretariat's Personal Information Protection Policy (P014, five pages, read in full; header "2021, Version 1.1", signature block "Approved 28 July 2023, Effective 22 March 2023"). **Not read:** the Pacific ICT Ministerial Declaration (Lagatoi) of 28 August 2023, a 1.6 MB scan with no text layer on the website of Papua New Guinea's ICT department (needs OCR); the 2050 Strategy PDF and its Implementation Plan 2023-2030; the Forum Leaders' communiqués. Search results (not recorded) report that the 2026 Leaders' communiqué endorsed Pacific Digital and Artificial Intelligence Technology Principles and a Pacific AI Governance Framework to be considered in 2027, and that all Forum Members are now connected to undersea cables; neither was found on a Forum page. The Forum's treaty and the Secretariat's host are unread. The Secretariat's policy lists no date of adoption of the 2021 first version. Five of the 18 members (Australia, New Zealand, Samoa, the Solomon Islands, Vanuatu) have a country anchor. The Pacific Community (SPC, `spc.int` loads) and its Pacific Data Hub (`pacificdata.org` answers 403) were not looked at; the ITU's ICB4PAC project produced only cybercrime and ICT-sector texts, not data protection.
 
+<a id="row-245"></a>
+## Row 245 — Regions: What is left unread of the Eurasian Economic Union's digital instruments?
+
+*Area: Regions.*
+
+Read directly on eaeunion.org and eec.eaeunion.org on 2026-10-14: the Union's home page and two Commission news items (the Board's 22 August 2023 decision on mutual recognition of electronic signatures in B2G interactions; the Third Major Protocol of 25 May 2023). Not read: the Treaty on the EAEU and its Annex 3 (cannot be reached through the English pages; the 'digital-agenda' page returns 404); the text, number and rules of the Board decision; the Third Major Protocol's text and whether it has entered into force; the Union's Digital Agenda until 2025 (Supreme Council Decision No. 12 of 11 October 2017), known only from secondary sources, so not modelled. Kazakhstan, a Member State, has no country anchor yet, so no edge to it exists. A Russian-language copy of the legal texts may unblock this.
+
+
+<a id="row-246"></a>
+## Row 246 — Regions: What is left unread of the Union for the Mediterranean's and the CIS Assembly's digital work, and what do the other bodies hold?
+
+*Area: Regions.*
+
+Read directly on ufmsecretariat.org on 2026-10-14: the Ministerial Declaration of 30 September 2014 (the Secretariat's PDF is a **draft**, Version 5a of 18 September; the adopted text was not found), the press release, the DEWoG's Rules of Procedure and two pages. Not read: the adopted declaration; a list of the 43 Member States (no page that could be read gave names, so no member edges); the DEWoG's 2016 work plan and observers list; whether the 'Regional Platform on Digital Economy and Internet Access' is the DEWoG renamed; the Euromed Regulator Group (EMERG), named in the declaration and not modelled; the Mediterranean digital ministers' 2023 statement. Looked at and nothing found on their front pages: the Council of the Baltic Sea States and the Visegrad Group. iacis.ru (the CIS Interparliamentary Assembly) is not reachable from here but two of its pages were read on a runner on 2026-10-14: the Assembly and its 2012 Model Information Code are modelled ([[INTL-IPA-CIS]]), but the Code's text, the revised Model Law on Personal Data (in draft in 2017) and the Commonwealth's own site (e-cis.info) were not read. bsec-organization.org (the Black Sea Economic Cooperation organisation) loaded on 2026-10-19 and is now modelled ([[INTL-BSEC]], its ICT working group, the 2023 economic agenda and the 2018 Baku declaration); its Charter, the Baku declaration's text and the agenda's text were not read.
+
+<a id="row-271"></a>
+## Row 271 — Regions #552, #554, #556, #557, #558: what was left when they were closed
+
+*Area: Regions.*
+
+**2026-10-24.** Roadmap items #552 (Southern Africa), #554 (Central Asia), #556 (Eastern Asia), #557 (South-eastern Asia) and #558 (Australia and New Zealand) were closed because every lead in their issues had been looked at, with sources read directly where a site answered; the gaps are below so a later session can pick them up without a roadmap item (as in row #256 for #540 to #544).
+
+- **Southern Africa (#552):** SADC, its 2012 data protection model law and its 2001 ICT declaration (row #262). Unread: the SADC Treaty, the 2001 declaration, the two companion HIPSSA model laws, a revision of the model law (a secondary source says one is under way), CRASA. The EGEE-ICT draft model law (row #267) also names SADC as a client.
+- **Central Asia (#554):** the SCO and its 2009 information security agreement (row #269) and the Eurasian Economic Union (row #245, added under #543). Unread: the agreement's text and parties, the SCO Charter and the ten members by name. Kazakhstan, Tajikistan and Turkmenistan have no country anchor (Kyrgyzstan and Uzbekistan do).
+- **Eastern Asia (#556):** APEC and the Global CBPR Forum (row #263). The issue's other named lead, ASEAN+3, was **not looked at**; no body of the ASEAN or EU kind exists for the sub-region. Unread: the APEC Roadmap, the CBPR system's own documents, the Global CBPR Framework.
+- **South-eastern Asia (#557):** ASEAN's two data frameworks (row #261). Unread: the Charter, the Digital Economy Framework Agreement, the Model Contractual Clauses, the Digital Data Governance Framework's adoption date.
+- **Australia and New Zealand (#558):** APEC (row #263) and the Pacific Islands Forum (row #270). Unread: the Lagatoi Declaration (a scan), the 2050 Strategy, the Leaders' communiqués. The Forum's other sub-regions (#559 to #561) stay open: the Melanesian Spearhead Group and the Pacific Community were not looked at.
+
+Each is a candidate for a pass with a browser, OCR or a runner; none needs its own roadmap item.
+

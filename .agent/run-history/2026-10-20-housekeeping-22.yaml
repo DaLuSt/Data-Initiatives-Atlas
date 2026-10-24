@@ -8,5 +8,5 @@ summary: >
   #450 closed: every thin domain is at 3 or more countries except built environment (2; the Danish and Norwegian
   building-register laws were unreadable), which stays recorded in discovery/candidates.md C9. #471 was closed on
   2026-10-19. docs/roadmap.md updated. The sharded browser job measured 1m49 on its first pull request (was 2m42).
-prs: []
-outcome: in-progress
+prs: [671]
+outcome: merged (#671)

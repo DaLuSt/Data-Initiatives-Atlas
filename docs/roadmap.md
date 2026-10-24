@@ -97,7 +97,7 @@ board, add a view with the *Roadmap* layout and set its start and end to
 **Start date** and **Target date**. Views are not available through the
 workflow's token.
 
-## The plan at a glance (snapshot, 2026-10-13)
+## The plan at a glance (snapshot, 2026-10-24)
 
 This is a reading of the milestones on one day, to show roughly what is aimed at
 which release. The live version is the milestones and the board; this table ages.
@@ -107,13 +107,13 @@ most likely to move. From 2027.01 the plan also adds the regional layer (#539, t
 sub-regions, two per month, ending 2027.11): each sub-region's regional bodies and
 instruments, not the country anchors. A month with many items is not a promise that all of them fit.
 
-**Done so far (26 items, 2026-10-07 to 2026-10-16):** the first release and the board (#443, #444);
+**Done so far (39 items, 2026-10-07 to 2026-10-24):** the first release and the board (#443, #444);
 CSV export and the Explorer fix (#445, #447); the backlog reconciled (#448); the constitutional-rank gaps and the
 founding-six date (#449, #533); the consistency checks (#461) and the move of the generator-only checks into the
 validators (#528); the Dutch registers (#458, #536); the eIDAS cluster (#534); the EU and UN links (#537); the
 Node 24 actions, the data-correction form and the same checks for deploys (#493, #494, #529); the blocked sources
 read on runners (#495); the browser tests (#526); successor links (#527); automatic LinkedIn posts (#515); the
-types decision (#499); load time (#507); the release review (#498); the Directorates-General (#509); the hover card with an entity's core information (#640); the board token's expiry plan (#496); the age rule and report for `last_verified` (#510); thin domains (#450, built environment stays at 2 countries and is recorded in `discovery/candidates.md` C9); country group 2 (#471, two countries unreadable: row #237); and the regional items for Western, Northern, Southern and Eastern Europe and Northern America (#540 to #544, closed with what could not be read in row #256).
+types decision (#499); load time (#507); the release review (#498); the Directorates-General (#509); the hover card with an entity's core information (#640); the board token's expiry plan (#496); the age rule and report for `last_verified` (#510); thin domains (#450, built environment stays at 2 countries and is recorded in `discovery/candidates.md` C9); country group 2 (#471, two countries unreadable: row #237); and the regional items for Western, Northern, Southern and Eastern Europe and Northern America (#540 to #544, closed with what could not be read in row #256); and the regional items for Southern Africa, Central Asia, Eastern Asia, South-eastern Asia and Australia and New Zealand (#552, #554, #556, #557, #558, closed with what could not be read in row #271).
 Part of #500 (what `country` means) and of #508 (the Country filter, the overview as the first screen, and the force layout stored at build time) is done; the rest of each is below. The country groups have each had a first slice; how many of the 193 UN member states still have no anchor is in `discovery/candidates.md` C10 (it was 97 anchors on 2026-10-16 and about 114 a day later). The groups' issues stay open for the countries whose laws could not be read.
 
 | Release | Data and research | Site and tooling | Decisions and schema |
@@ -126,10 +126,10 @@ Part of #500 (what `country` means) and of #508 (the Country filter, the overvie
 | **2027.04** | regions: #546 C America and #547 Caribbean; #473 countries, group 4; #503 re-check Q2 |  | #506 multilingual names |
 | **2027.05** | regions: #548 N Africa and #549 W Africa; #474 countries, group 5 |  |  |
 | **2027.06** | regions: #550 E Africa and #551 Middle Africa; #475 countries, group 6 | #508 the site at 200 countries (map decision open) |  |
-| **2027.07** | regions: #552 S Africa and #553 W Asia; #476 countries, group 7; #504 re-check Q3 |  |  |
-| **2027.08** | regions: #554 C Asia and #555 S Asia; #477 countries, group 8 |  | #511 UN system and development banks |
-| **2027.09** | regions: #556 E Asia and #557 SE Asia; #478 countries, group 9 | #512 linked-data export (a proposal) |  |
-| **2027.10** | regions: #558 Australia and NZ and #559 Melanesia; #479 countries, group 10; #505 re-check Q4 |  |  |
+| **2027.07** | regions: #553 W Asia; #476 countries, group 7; #504 re-check Q3 |  |  |
+| **2027.08** | regions: #555 S Asia; #477 countries, group 8 |  | #511 UN system and development banks |
+| **2027.09** | #478 countries, group 9 | #512 linked-data export (a proposal) |  |
+| **2027.10** | regions: #559 Melanesia; #479 countries, group 10; #505 re-check Q4 |  |  |
 | **2027.11** | regions: #560 Micronesia and #561 Polynesia; #480 countries, group 11; #539 the regional layer (umbrella) |  |  |
 | **2027.12** | #481 countries, group 12 |  |  |
 | **2028.01** | #482 countries, group 13 |  | #513 is a schema 2.0 needed? |
@@ -165,6 +165,14 @@ recorded declines (#229, #230, #231, #232) or deliberate non-assertions (#88, #9
 | #233 | #446 |
 | #234 | #459 |
 | #236 to #242, #247 to #253 | #470 to #483 (the countries of each group whose laws were not read) |
+| #254 | #544 (closed; the USMCA's unread chapters and the 2026 joint review) |
+| #255, #265 | #545 (MERCOSUR and the Pacific Alliance; the Andean Community is not modelled) |
+| #256, #271 | the closed regional items #540 to #544, #552, #554, #556, #557, #558: what was left when each was closed |
+| #257, #258, #264 | #547 (CARICOM, the OECS and HIPCAR; the Association of Caribbean States is unread) |
+| #259, #260, #267, #268 | #548 to #551 (the African Union, ECOWAS, COMESA and the EGEE-ICT draft, CEMAC) |
+| #261 to #263, #269 | #554, #556, #557, #552 (closed: ASEAN, APEC and the Global CBPR Forum, the SCO, SADC) |
+| #266 | #553 (the GCC) |
+| #270 | #558 to #561 (the Pacific Islands Forum; #558 closed) |
 
 `discovery/candidates.md` C9 (thin domains) is #450 and C10 (countries) is #451 and its
 fourteen groups; `discovery/research-queue.md` and `discovery/duplicates.md` are empty.
