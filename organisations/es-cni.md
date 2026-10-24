@@ -84,7 +84,7 @@ sources:
     publisher: "Wikipedia"
     accessed: "2026-08-26"
   - title: "Legitimidad y control del Centro Nacional de Inteligencia"
-    url: "http://www.ugr.es/~gesi/congreso/comunicacion31-14.pdf"
+    url: "https://www.ugr.es/~gesi/congreso/comunicacion31-14.pdf"
     publisher: "Grupo de Estudios en Seguridad Internacional (GESI), Universidad de Granada"
     accessed: "2026-09-20"
 ---

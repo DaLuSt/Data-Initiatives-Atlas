@@ -1,0 +1,132 @@
+date: "2026-10-01"
+session: "moved on 2026-10-24 from .agent/current-task.yaml"
+summary: >
+  Idle as of 2026-10-01. Two owner requests closed since the previous
+  note (PRs #381-384 for "3 more items"): first, a GitHub Sponsors
+  button/link (PRs #385-386, UI + README, no research content). Second,
+  and larger, "pick up 15 items" (PRs #387-393, seven PRs covering all
+  fifteen):
+
+  - PR #387: sourced Council of Europe accession dates for GB, NO, IT,
+    IS, CH and LI via Wikipedia's dedicated "Member states of the
+    Council of Europe" article, since coe.int itself stays bot-walled
+    and has no per-country date even through its other reachable
+    subdomains. Italy's edge had been prose-only (no typed relationship
+    at all) and gained one for the first time.
+  - PR #388: read Luxembourg's GDPR implementing act (Memorial A No.
+    686) directly via legilux's data.legilux.public.lu filestore
+    mirror -- the same workaround already used for the companion
+    criminal-matters law. Confirmed LU-CNPD's legal form and its
+    continuity from a 2002 predecessor body abolished by the 2018 act,
+    letting LU-CNPD carry a sourced start_date for the first time.
+  - PR #389: a stale-cross-reference sweep (grepping for "not yet an
+    Atlas entity" phrasing against actual entity-creation dates) found
+    NL-CBS's own prose still said "the CCS is still not yet an entity"
+    nine days after NL-CCS was actually created -- fixed with a typed
+    governed-by edge.
+  - PR #390: the same sweep's iso.org/member/<id>.html check found
+    countries/lu/lu.md was the last file in the Atlas still citing that
+    blocked page unread; closed via committee.iso.org, the same
+    workaround already applied to LU-ILNAS, PT-IPQ, IE-NSAI and DE-DIN.
+  - PR #391: the sweep also found EU-CER's "Dutch counterpart, not yet
+    an entity" section was stale by over three weeks (NL-WWKE was
+    created 2026-09-05); fixed, plus a separate stale Relationships
+    listing naming only six of the entity's own ten applies-in
+    countries.
+  - PR #392: the biggest find of this batch -- bmi.bund.de's apparent
+    domain-wide HTTP 400 (discovery/unresolved.md row #217, open since
+    the original Germany cluster pass) turns out to be a missing
+    session cookie, not a genuine block. A cookie-jar-aware fetch reads
+    every bmi.bund.de page tried. Applied to all five of DE-BMI's own
+    citations, upgrading its three `produces` edges (DE-DATENSTRATEGIE,
+    DE-REGMOG, DE-DNG) from search-only to dated, confidence:high facts.
+  - PR #393: applied the same new bmi.bund.de workaround to DE-OZG's
+    own two BMI citations (previously covered only via Wikipedia/
+    heise.de), corroborating the OZG-Anderungsgesetz's entry into force
+    and the 115-service completion announcement in the BMI's own words.
+
+  Each PR required a follow-up "merge main into branch" commit (and, on
+  four branches, a *second* fix-up commit) because the generated
+  site/graph.json and site/details.json files conflict on every PR that
+  touches them -- the lesson for next time: after resolving such a
+  conflict, always `git add` the regenerated files *after* running
+  `python3 tools/build_graph.py`, not before, or the stale pre-rebuild
+  version silently gets committed instead (CI's own
+  test_generated_graph_matches_repository check catches this, but it
+  wastes a cycle -- caught and fixed on PR #389, #391, #392, #393 before
+  each was merged).
+
+  Two workarounds are newly documented in discovery/unresolved.md for
+  reuse: the bmi.bund.de cookie-jar fix (row #217) and Wikipedia's
+  Council of Europe member-states article for per-country accession
+  dates (row #219). The stale-cross-reference sweep technique (grep for
+  "not yet an Atlas entity" / "not modelled" phrasing, cross-check
+  against actual entity-creation dates) remains productive but is
+  showing diminishing returns -- most of the ~96 hits from this pass's
+  sweep were either already-closed historical narrative or deliberate,
+  reasoned non-model decisions (ministries, DGs, JTC 1, etc.), not
+  genuine gaps.
+
+  Follow-up, same day (owner asked to "do all" of a prioritised list,
+  PRs #395-396):
+
+  - PR #395: the owner-requested probe "retest the other hard blocks with
+    the cookie-jar approach". Result: only the Government Site Builder
+    sites are cookie-gated. digitale-verwaltung.de and
+    personalausweisportal.de behave exactly like bmi.bund.de (400 without
+    the AL_CHK-S cookie, 200 with it), so the previously-unread citations
+    on DE-FITKO, DE-FIM, DE-BUNDID, DE-MODERNISIERUNGSAGENDA-FOEDERAL,
+    DE-OZG, DE-DATENSTRATEGIE and DE-REGMOG were read. Material findings:
+    DE-DATENSTRATEGIE's cabinet decision date is 30 Aug 2023 (start_date
+    changed; a 29 Aug transmittal letter is recorded as unexplained);
+    the BMI FAQ connects the RegMoG directly to the SDG Regulation
+    (related-to EU-SDG raised to high, type deliberately unchanged);
+    gesetze-im-internet.de is readable and the Act's Anlage lists 50
+    registers, not the 51 given by secondary sources (new row #226,
+    unresolved); the Foederale Modernisierungsagenda was coordinated by the
+    Bundeskanzleramt, not the BMDS. The other documented blocks are NOT
+    cookie-gated: statbel.fgov.be and bosa.belgium.be return HTTP 200 but
+    an anti-bot CAPTCHA body (a status code alone misleads -- check the
+    text), efta.int/regjeringen.no/unece.org/unctad.org/oecd.org/iso.org are
+    Cloudflare challenges, geant.org and eduroam.org a bare 403. dfn.de was
+    never blocked; its tracker row was simply stale.
+  - PR #396: the Swiss e-ID (CH-BGEID the Act, CH-E-ID the infrastructure),
+    from the Act's final-vote text on parlament.ch and the programme's own
+    site. Adopted 20 Dec 2024, approved 28 Sep 2025 (50.39% yes), NOT in
+    force, introduction postponed 30 Jun 2026. The Gazette page number
+    ("FF 2025 20") came only from a search snippet and is recorded as
+    unconfirmed.
+  - Mistakes made and caught this pass, worth remembering: (1) suggested
+    that EU-CER's related_entities omitting NL/DE/BE/FR/ES/PL was a defect;
+    checking showed it is a repo-wide convention across EU-NIS2, EU-GDPR,
+    EU-Data-Act and others, so nothing was changed. (2) A first draft of
+    CH-BGEID claimed other unenacted instruments reach the country anchor
+    via related_entities; they do not (the test only needs one provenanced
+    relationship in either direction), so the claim was removed.
+    (3) Naive `text.split('---')[1]` frontmatter parsing breaks on URLs
+    containing `---`; use site/graph.json or the repo's own loader.
+
+  Branches still on GitHub that this environment cannot delete (git push
+  --delete returns HTTP 403): claude/atlas-15-items-{coe,lu-legilux,
+  nl-cbs-ccs,lu-iso,eu-cer-wwke,de-bmi,de-ozg} and the branches for #394-396.
+
+  RESOLVED 2026-10-02 (PR #400): the merge-conflict churn described above
+  came from committing site/graph.json and site/details.json. They are no
+  longer committed (gitignored), so they cannot conflict, and the "git add
+  the regenerated files AFTER build_graph.py" lesson no longer applies.
+  pages.yml already built them before deploying, so nothing at deploy time
+  changed. Tests: the two "committed copy matches" tests were replaced by
+  test_build_is_deterministic (44 tests now). The two reasons docs/
+  github-pages.md gave for committing them are answered in that file's
+  rewritten section. If a branch from before this change still carries the
+  files, take origin/main's side and `git rm --cached` them.
+
+  2026-10-02 (owner request: structure the discovery files like
+  unresolved.md): candidates.md, research-queue.md and duplicates.md now
+  open with a master table in unresolved.md's layout (candidates: C1-C9;
+  queue: Q1..., duplicates: D1..., the latter two currently empty).
+  candidates.md's original body is kept verbatim below the table because
+  entity files cite its section numbers. Restoring the table surfaced one
+  lost pointer, EU-INSPIRE vs UN-GGIM, now unresolved.md row #227.
+prs: [381, 382, 383, 384, 385, 386, 387, 388, 389, 390, 391, 392, 393]
+outcome: recorded

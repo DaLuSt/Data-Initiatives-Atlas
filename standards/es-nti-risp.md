@@ -71,7 +71,7 @@ sources:
   - title: "DCAT-AP-ES: A step forward in open data interoperability"
     url: "https://datos.gob.es/en/blog/dcat-ap-es-step-forward-open-data-interoperability"
     publisher: "datos.gob.es"
-    accessed: "2026-08-26"
+    accessed: "2026-10-06"
   - title: "Guide to migrating to DCAT-AP-ES"
     url: "https://datos.gob.es/en/conocimiento/guide-migrating-dcat-ap-es"
     publisher: "datos.gob.es"
@@ -80,16 +80,12 @@ sources:
     url: "https://datos.gob.es/es/documentacion/guia-de-aplicacion-de-la-norma-tecnica-de-interoperabilidad-de-reutilizacion-de"
     publisher: "datos.gob.es"
   - title: "Nuevo impulso a la interoperabilidad de los datos abiertos en España"
-    url: "http://espanadigital.gob.es/en/actualidad/nuevo-impulso-la-interoperabilidad-de-los-datos-abiertos-en-espana"
+    url: "https://espanadigital.gob.es/en/actualidad/nuevo-impulso-la-interoperabilidad-de-los-datos-abiertos-en-espana"
     publisher: "España Digital 2026"
   - title: "DCAT-AP-ES Technical guide and model"
     url: "https://datosgobes.github.io/DCAT-AP-ES/en/"
     publisher: "datos.gob.es"
     accessed: "2026-09-26"
-  - title: "DCAT-AP-ES: A step forward in open data interoperability (datos.gob.es, English)"
-    url: "https://datos.gob.es/en/blog/dcat-ap-es-step-forward-open-data-interoperability"
-    publisher: "datos.gob.es (Spanish Government open data portal)"
-    accessed: "2026-10-06"
 ---
 
 # NTI-RISP / DCAT-AP-ES

@@ -62,7 +62,7 @@ sources:
     publisher: "Boletín Oficial del Estado (BOE)"
     accessed: "2026-08-26"
   - title: "AESIA | España Digital 2026"
-    url: "http://espanadigital.gob.es/en/measure/aesia"
+    url: "https://espanadigital.gob.es/en/measure/aesia"
     publisher: "España Digital 2026"
   - title: "Escrivá: «La Agencia Española de Supervisión de la Inteligencia Artificial es pionera en Europa»"
     url: "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/transformacion-digital-y-funcion-publica/paginas/2024/190624-escriva-aesia-ia.aspx"

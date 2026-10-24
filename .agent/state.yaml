@@ -13,7 +13,7 @@
 # from site/graph.json's own `stats` block (run tools/build_graph.py first;
 # the file is gitignored) rather than counting by hand.
 
-updated: "2026-10-23"
+updated: "2026-10-24"
 updated_by_session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
 
 graph:
@@ -26,7 +26,7 @@ graph:
   regions: 1
 
 discovery:
-  unresolved_rows_open: 82
+  unresolved_rows_open: 81
   candidates_queued: 1
   research_queue_items: 0
   needs_human_open: 1

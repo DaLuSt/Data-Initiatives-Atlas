@@ -59,7 +59,7 @@ sources:
   - title: "BOMOS: The Foundation 3.0.1"
     url: "https://logius-standaarden.github.io/publicatie/bomos/fundament/en/3.0.1/"
     publisher: "Logius"
-    accessed: "2026-08-27"
+    accessed: "2026-10-06"
   - title: "Het Beheer- en Ontwikkelmodel voor Open Standaarden (BOMOS) — presentatie"
     url: "https://www.forumstandaardisatie.nl/vergaderingen/2022/fs-20220608-5-presentatie-bomos"
     publisher: "Forum Standaardisatie"
@@ -68,10 +68,6 @@ sources:
     url: "https://www.forumstandaardisatie.nl/sites/default/files/BFS/4-basisinformatie/publicaties/BOMOS2-deel-1-(de-basis).pdf"
     publisher: "Forum Standaardisatie"
     accessed: "2026-09-05"
-  - title: "BOMOS: The Foundation 3.0.1 (English)"
-    url: "https://logius-standaarden.github.io/publicatie/bomos/fundament/en/3.0.1/"
-    publisher: "Logius"
-    accessed: "2026-10-06"
 ---
 
 # BOMOS
