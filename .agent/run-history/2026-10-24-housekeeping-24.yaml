@@ -1,0 +1,15 @@
+date: "2026-10-24"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Second large housekeeping run of the day. Audits that found nothing to fix: relative links in every Markdown file
+  (all resolve), the detail-link anchors of discovery/unresolved.md, the README tree against the files, the "no country
+  anchor" and "not yet an Atlas entity" statements against the current anchors, every entity being verification:
+  primary-source (1,032 of 1,032), workflow health (the only non-success runs are board syncs cancelled by their own
+  concurrency rule). Fixed or brought up to date: docs/performance.md re-measured at 1,032 entities as its own rule asks
+  (first graph 3.5 s on Slow 4G with the 4x CPU slowdown against the 5 s budget, graph.json 130 KB and details.json
+  537 KB gzipped; the next measurement is due at about 1,250), the status line of docs/re-verification.md, the
+  non-standard status of row #230, a fresh domain-coverage measurement in candidate C9 (government 79 countries, built
+  environment still 2), and the previous housekeeping entry closed. The browser suite, run locally at 1,032 entities as
+  two shards, passes (112 and 62 checks, 85 s).
+prs: []
+outcome: in-progress
