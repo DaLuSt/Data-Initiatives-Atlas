@@ -11,5 +11,5 @@ summary: >
   milestone table, the mapping of rows #254 to #271); run-history entries for #671 and #688 closed; the 2026-10-01
   narrative moved out of .agent/current-task.yaml into its own run-history file. The remaining warnings are the
   four deliberate `successor: null` entries and plain-http addresses whose hosts do not answer over https from here.
-prs: []
-outcome: in-progress
+prs: [689]
+outcome: merged (#689)

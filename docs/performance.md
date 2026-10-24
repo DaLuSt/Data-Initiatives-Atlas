@@ -63,17 +63,17 @@ each country add more over time.
 
 | Measure | Budget | Now |
 |---|---|---|
-| First graph, Slow 4G + 4x CPU | 5 s | 4.7 s |
-| `graph.json`, gzipped | 250 KB | 112 KB |
-| `details.json`, gzipped | 1 MB | 489 KB |
-| Page + scripts + `graph.json`, gzipped | 450 KB | 294 KB |
+| First graph, Slow 4G + 4x CPU | 5 s | 3.5 s (overview, 1,032 entities, 2026-10-24) |
+| `graph.json`, gzipped | 250 KB | 130 KB |
+| `details.json`, gzipped | 1 MB | 537 KB |
+| Page + scripts + `graph.json`, gzipped | 450 KB | 314 KB |
 
 The three size lines are enforced by `TestLoadBudget` in
 `tools/test_build_graph.py`; they fail at about twice today's size. The time
 line is not a CI check (timings depend on the machine); re-measure with
-`tools/measure_load.mjs` at about 950 entities and at each further 250.
+`tools/measure_load.mjs` at each further 250 entities (last done at 1,032 on 2026-10-24; next at about 1,250).
 
-**The time budget is met, with little room.** The size budget leaves room to
+**The time budget is met, with little room** (written at 855 entities; the overview of 2026-10-16 below moved the first graph from 4.7 s to about 3.3 s, and 1,032 entities measure 3.5 s). The size budget leaves room to
 double, but reading the table above, the time budget is reached at about 1,000
 entities, because time is dominated by CPU, not bytes. That is the first thing
 to fix when it comes, not the file sizes.
@@ -112,6 +112,13 @@ So the first graph is about a quarter faster, not several times faster: much of
 the cost at boot is the page and Cytoscape themselves, and the overview still
 draws 307 nodes and 834 connections. The larger effect is on the layouts:
 force goes from "declined above 900, and 12 s below" to instant.
+
+### Re-measured at 1,032 entities (2026-10-24)
+
+Same machine and method as above, median of 3, the overview as the default: **0.6 s** unthrottled and **3.5 s** on Slow 4G with the
+4x CPU slowdown (`details.json` arrived at 0.8 s and 6.5 s). Gzipped: `graph.json` 130 KB, `details.json` 537 KB, the page and its
+scripts 183 KB (314 KB with `graph.json`). Entities grew 14% since 902 (2026-10-16) and the first graph 6% (3.3 s to 3.5 s), because the
+overview grows with the number of bodies and countries, not with every entity. The budget of 5 s still has 1.5 s of room.
 
 ## What to do when the budget is missed
 
