@@ -18,14 +18,14 @@ level: regional
 country: null
 region: EU
 
-status: active
+status: completed
 confidence: medium
 coverage: low
 verification: primary-source
 
 start_date: 2023-01-01
 end_date: 2026-06-30
-last_verified: "2026-09-20"
+last_verified: "2026-10-25"
 previous_version: null
 successor: null
 
@@ -47,7 +47,7 @@ sources:
   - title: "EDDIE — CORDIS project record (Grant Agreement 101069510)"
     url: "https://cordis.europa.eu/project/id/101069510"
     publisher: "European Commission — CORDIS"
-    accessed: "2026-09-20"
+    accessed: "2026-10-25"
   - title: "The emerging Common European Energy Data Space — state of play and next steps"
     url: "https://community.intnet.eu/events/35/the-emerging-common-european-energy-data-space---state-of-play-and-next-steps"
     publisher: "Int:net (Horizon Europe Coordination and Support Action)"
@@ -100,6 +100,10 @@ Support Action.
 - **SYNERGIES** and **Int:net** — the remaining named projects.
 - EDDIE's **Common Information Model** and individual pilot deployments,
   described on `eddie.energy` but not read directly this pass.
+
+## Re-checked 2026-10-25
+
+The CORDIS record (read directly again) now shows **"Project closed"** with the end date 30 June 2026, so `status` is `completed`; it was `active` while the project was running. No follow-up project or successor was found on the record.
 
 ## Relationships
 

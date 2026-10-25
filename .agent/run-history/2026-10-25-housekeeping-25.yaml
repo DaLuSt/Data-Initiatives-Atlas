@@ -1,0 +1,18 @@
+date: "2026-10-25"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Third large housekeeping run. New audits: every run-history file parses and has its fields (the only entry still
+  open was the previous one, now closed); entity dates (end before start, last_verified in the future, active after
+  the end date) found two Horizon Europe projects still `active` after their end dates: EU-EDDIE (ended 30 June 2026)
+  and EU-SYNERGIES (ended 28 February 2026). Their CORDIS records, read again, say "Project closed", so both are now
+  `completed` with a "Re-checked 2026-10-25" note. Name collisions across all entities are only same-named bodies in
+  different countries (no duplicate within a country). The eleven `adopted`, nine `proposed` and five `planned`
+  entities were scanned for an event that has happened: none had (the Swiss e-ID is postponed to the first half of
+  2027; Euro 7 applies from 29 November 2026). Recorded in the docs: the closing rule for exploratory roadmap items
+  (every lead looked at, gaps in a row; docs/roadmap.md) and the auto-merge fallback (.agent/operating-model.md).
+  Disclosure: PR #670 (the browser job in two shards) changed .github/workflows/validate.yml and had auto-merge turned
+  on, although .agent/operating-model.md says to ask the owner first for a workflow change and not to turn auto-merge
+  on; it came from the owner's request to optimise the pipelines, but the separate word was not asked for. Its checks
+  passed and the job went from 2m42 to 1m49.
+prs: []
+outcome: in-progress

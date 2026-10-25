@@ -98,7 +98,10 @@ do not push directly to `main`:
    release PR, does not trigger `validate.yml`; that workflow runs the
    validation itself before opening the PR.)
 8. **If the gate passes: squash-merge** (the only merge method to use; one
-   commit per item keeps the release notes readable). Delete the branch once
+   commit per item keeps the release notes readable). Auto-merge can lag: if
+   both checks are green and the PR is `clean` several minutes later (it happened
+   once, on #681), squash-merge it yourself; that is what the standing permission
+   in step 7 covers. Delete the branch once
    merged. If it fails: do not force-merge. Fix
    and re-push once. If it fails again, or the failure isn't something
    you can safely diagnose, stop and write a `.agent/needs-human/` entry
