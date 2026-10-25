@@ -17,14 +17,14 @@ level: regional
 country: null
 region: EU
 
-status: active
+status: completed
 confidence: medium
 coverage: low
 verification: primary-source
 
 start_date: 2022-09-01
 end_date: 2026-02-28
-last_verified: "2026-09-20"
+last_verified: "2026-10-25"
 previous_version: null
 successor: null
 
@@ -45,7 +45,7 @@ sources:
   - title: "SYNERGIES — CORDIS project record (Grant Agreement 101069839)"
     url: "https://cordis.europa.eu/project/id/101069839"
     publisher: "European Commission — CORDIS"
-    accessed: "2026-09-20"
+    accessed: "2026-10-25"
   - title: "The emerging Common European Energy Data Space — state of play and next steps"
     url: "https://community.intnet.eu/events/35/the-emerging-common-european-energy-data-space---state-of-play-and-next-steps"
     publisher: "Int:net (Horizon Europe Coordination and Support Action)"
@@ -90,6 +90,10 @@ Coordination and Support Action, remains.**
 - **Int:net** — the sixth and last named project.
 - SYNERGIES' individual **pilot sites and use cases**, described only
   categorically on the CORDIS record.
+
+## Re-checked 2026-10-25
+
+The CORDIS record (read directly again) now shows **"Project closed"** with the end date 28 February 2026, so `status` is `completed`; it was `active` while the project was running. No follow-up project or successor was found on the record.
 
 ## Relationships
 

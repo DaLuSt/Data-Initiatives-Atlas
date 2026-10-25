@@ -11,5 +11,5 @@ summary: >
   non-standard status of row #230, a fresh domain-coverage measurement in candidate C9 (government 79 countries, built
   environment still 2), and the previous housekeeping entry closed. The browser suite, run locally at 1,032 entities as
   two shards, passes (112 and 62 checks, 85 s).
-prs: []
-outcome: in-progress
+prs: [690]
+outcome: merged (#690)

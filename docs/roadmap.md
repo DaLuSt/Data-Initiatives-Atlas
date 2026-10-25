@@ -181,6 +181,11 @@ fourteen groups; `discovery/research-queue.md` and `discovery/duplicates.md` are
 
 - Work happens in ordinary pull requests. The pull request that finishes an
   item says `Closes #N` in its body, so the issue closes when it merges.
+- An exploratory item (a region, a country group) is closed when **every lead named in its
+  issue has been looked at** and what could not be read is recorded in a row of
+  `discovery/unresolved.md`, linked from the closing comment (rows #256 and #271 are the
+  model). That is a statement about leads, not about every instrument being read; the
+  comment says which lead, if any, was not looked at, and the issue can be reopened.
 - Sessions pick work by `.agent/operating-model.md`'s priority order;
   a roadmap item the owner has put in *Next* comes first.
 - The release pull request lists every closed `roadmap` issue since the last
