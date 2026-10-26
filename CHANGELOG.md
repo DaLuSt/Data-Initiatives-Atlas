@@ -8,6 +8,64 @@ and a dated **data release** (`YYYY.MM.N`) for each snapshot.
 
 <!-- releases:start -->
 
+## Data release 2026.10.5 — 2026-10-26
+
+**Schema 1.0.0** (unchanged)
+
+In the Atlas at this release: 1,032 entities (+56), 2,167 typed relationships (+223), 114 countries (+0).
+
+### Data
+
+- Housekeeping: two closed Horizon projects completed; closing rule and auto-merge fallback documented (#691)
+- Housekeeping: warnings 26 to 13, docs current, run-history closed; regions #552, #554, #556, #557, #558 closed (#689)
+- Regions (#558): the Pacific Islands Forum, its 2050 Strategy, the Lagatoi Declaration and its personal information policy (#688)
+- Regions (#554): the SCO, its information security expert group and the 2009 agreement (#687)
+- Regions (#551): CEMAC and its directive on the rights of users of electronic communications (#686)
+- Regions (#550): COMESA, the EGEE-ICT programme and its draft data protection model law (#685)
+- Regions (#553): the GCC and its 2023 personal information protection framework (#684)
+- Regions (#545): the Pacific Alliance and its Regional Digital Market roadmap (#683)
+- Regions (#547): HIPCAR and its privacy and data protection model legislation (#682)
+- Regions (#556): APEC's Privacy Framework and Roadmap, and the Global CBPR Forum and its Declaration (#681)
+- Regions (#552): SADC, its data protection model law and its 2001 ICT declaration (#680)
+- Regions (#557): ASEAN's Framework on Personal Data Protection and Framework on Digital Data Governance (#679)
+- Regions (#549): ECOWAS and its 2010 Supplementary Act on personal data protection (#678)
+- Regions (#548): the African Union, the Malabo Convention, the Data Policy Framework and the Digital Transformation Strategy (#677)
+- Regions (#547): the OECS, its Revised Treaty, the Regional Data Governance Council and the statistics strategy (#676)
+- Regions (#547): CARICOM, its Secretariat's data protection rules, the CTU and the Single ICT Space (#675)
+- Regions (#545): MERCOSUR, its electronic commerce subgroup and the 2021 e-commerce agreement (#673)
+- Regions (#544): the USMCA, its digital trade chapter and the Free Trade Commission (#672)
+- Regions (#543): the Black Sea Economic Cooperation organisation and its ICT work (#669)
+
+### Tooling
+
+- Housekeeping: #510 age rule and report for last_verified; run-history closed (#671)
+- CI: run the browser suite as two parallel shards (#670)
+
+### Documentation
+
+- Housekeeping: performance re-measured at 1,032 entities, C9 re-measured, status lines current (#690)
+- Regions (#540-#544): closed, with the gaps recorded in row #256 (#674)
+
+### Housekeeping
+
+- 1 pull request that only record progress in the repository's own files (#668)
+
+### Roadmap items completed
+
+- Next regions: Australia and New Zealand (Oceania), regional bodies and instruments (#558)
+- Next regions: South-eastern Asia (Asia), regional bodies and instruments (#557)
+- Next regions: Eastern Asia (Asia), regional bodies and instruments (#556)
+- Next regions: Central Asia (Asia), regional bodies and instruments (#554)
+- Next regions: Southern Africa (Africa), regional bodies and instruments (#552)
+- Next regions: Northern America (Americas), regional bodies and instruments (#544)
+- Next regions: Eastern Europe (Europe), regional bodies and instruments (#543)
+- Next regions: Southern Europe (Europe), regional bodies and instruments (#542)
+- Next regions: Northern Europe (Europe), regional bodies and instruments (#541)
+- Next regions: Western Europe (Europe), regional bodies and instruments (#540)
+- Annual re-verification: how old may `last_verified` get, and who checks (#510)
+- Next countries, group 02 of 14 (10): Benin, Botswana, Egypt, +7 (#471)
+- Thin domains: 13 of 20 domains appear in only one or two countries (#450)
+
 ## Data release 2026.10.4 — 2026-10-19
 
 **Schema 1.0.0** (unchanged)
