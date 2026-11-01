@@ -330,3 +330,10 @@ Read directly on ufmsecretariat.org on 2026-10-14: the Ministerial Declaration o
 
 Each is a candidate for a pass with a browser, OCR or a runner; none needs its own roadmap item.
 
+<a id="row-272"></a>
+## Row 272 — Health-data bodies for Poland, Spain, the UK and Belgium: what is unread
+
+*Area: Health (roadmap #460, "Health data": entities for ES, BE, PL, GB in an Atlas that holds `EU-EHDS`).*
+
+**2026-11-01.** One page each, read directly: Poland's Centrum e-Zdrowia home page (Polish; the e-zdrowie P1 system, a CSIRT of its own with nearly 1,400 incidents up to September 2026), Spain's Ministry of Health Salud Digital page (the National Health Data Space under development, the SNS Data Office created), Health Data Research UK's About page (an independent charity, 31 locations, nine funders) and Sciensano's About page (Belgium's public health institute, established by the Law of 25 February 2018). **Not read:** Poland's act on the healthcare information system and the P1 modules; the Polish Ministry of Health (`gov.pl/web/zdrowie` answers, not read) and its CSIRT-level relation to CSIRT NASK and CSIRT GOV (still unmodelled: part of #460); Spain's Digital Health Strategy, AI and Cybersecurity strategies of the SNS, the Digital Clinical Record and the ODSNS's creating act and date; the UK's NHS England (`england.nhs.uk` answers 202 with no body), NHS Digital (403), the National Data Guardian and the Secure Data Environments; Belgium's healthdata.be (503), the eHealth platform and the federal health data law. The EHDS edge for Spain is medium confidence: the page says Spain takes part in European initiatives, not that the national space builds on the European one.
+
