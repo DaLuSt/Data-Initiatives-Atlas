@@ -1,0 +1,12 @@
+date: "2026-11-01"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #550 (Eastern Africa) and #551 (Middle Africa), last open leads. IGAD from igad.int (home, History, Digital
+  Integration pages and two news items): the organisation, the HDMI project, and the planned Regional AI Framework and
+  Strategy. ECCAS from ceeac-eccas.org (one news item; the home page shows unrelated spam links, so only the Commission's
+  own item was relied on): the organisation and the planned cross-border data governance framework. EAC: eac.int refuses
+  curl, so its home page and three pages were read through the fetch tool (a model's summary); the organisation, the AI
+  Strategy and Digital Transformation Strategy (adopted 27-31 October 2026), EARDIP and the Open Data Portal, all with the
+  caveat in each entity. Row #274. #545 and #460 closed earlier in the session.
+prs: []
+outcome: in-progress
