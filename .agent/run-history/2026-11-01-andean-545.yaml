@@ -7,5 +7,5 @@ summary: >
   Cartagena Agreement (39-page text read; signed 26 May 1969; no data provision found). Decisions unread. UNASUR's home
   page shows no data instrument; oas.org answers 403 to curl and to the fetch tool. Row #265 updated. The item is closed
   under the closing rule in docs/roadmap.md. Run-history for #697 and #460 closed.
-prs: []
-outcome: in-progress
+prs: [699]
+outcome: merged (#699)
