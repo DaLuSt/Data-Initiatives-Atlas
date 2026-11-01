@@ -5,5 +5,5 @@ summary: >
   403 to the agent, the fetch tool and a runner) and Portugal's Conselho Superior de Estatística (JavaScript shell); both
   recorded in row #280 and the issue closed under the closing rule. docs/roadmap.md updated for the items closed on
   2026-11-01 and the mapping of rows #272 to #280.
-prs: []
-outcome: in-progress
+prs: [705]
+outcome: merged (#705)
