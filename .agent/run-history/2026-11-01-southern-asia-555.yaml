@@ -6,5 +6,5 @@ summary: >
   publication on its Data page. SAARC: saarc-sec.org is a JavaScript shell with only the title in its HTML, and the fetch
   tool returned nothing, so it is recorded as unread. Row #276. #559, #560 and #561 closed after #701 merged (MSG and the
   Polynesian Leaders Group unreadable, recorded in row #275).
-prs: []
-outcome: in-progress
+prs: [702]
+outcome: merged (#702)
