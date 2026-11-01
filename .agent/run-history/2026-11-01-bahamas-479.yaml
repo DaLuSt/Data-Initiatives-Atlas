@@ -5,5 +5,5 @@ summary: >
   governance page): the anchor, URCA and the two 2009 Acts. No data protection law found on a readable page. Auto-merge did
   not fire on #719 after both checks were green; merged with the MCP tool as documented in the operating model. Row #247,
   candidate C10 (65 of 193 left; 130 anchors).
-prs: []
-outcome: in-progress
+prs: [720]
+outcome: merged (#720)
