@@ -5,5 +5,5 @@ summary: >
   runs (AU #677, ECOWAS #678). The Arab Maghreb Union's home page (via the fetch tool) names no data instrument; uemoa.int
   and lasportal.org cannot be read. Row #279. Also closed in this run under the closing rule: #460, #545, #550, #551,
   #555, #559, #560, #561, #553, #546, #547.
-prs: []
-outcome: in-progress
+prs: [704]
+outcome: merged (#704)
