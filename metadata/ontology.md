@@ -519,3 +519,21 @@ its governing body is established, and where it operates. [[NL-ISHARE]] had alre
 3. **A body with no single seat has `country: null`** and the level it really has (`international` or
    `regional`), as the EU's and the UN's bodies do. Nothing in the Atlas needs that for an industry data
    space today.
+
+### Multilateral development banks and the World Bank Group (decided 2026-11-01, roadmap #511; a default the owner can change)
+
+`discovery/unresolved.md` row #168 left the World Bank out because its institutions are, formally, UN
+specialised agencies, and the UN or not-UN call looked risky. The Atlas does not need to make it.
+
+1. **In scope when a multilateral body runs a published data programme** (a data platform, a data policy, a
+   report on data) that other Atlas entities already relate to. Nothing is added for a bank's lending alone.
+2. **Filed as `organisation` at `level: international` with `country: null`**, under the prefix `INTL-` unless
+   the body is a UN-system body proper (`UN-`: UNESCO, ITU, UNCTAD). The Atlas **does not assert** whether the
+   World Bank Group is a UN specialised agency; it records what the body's own pages say about itself.
+3. **UN DESA stays declined** (row #229); the World Bank Group is the first addition under this rule
+   ([[INTL-WBG]], its two data platforms and its World Development Report on data). The regional development
+   banks (ADB, AIIB, EBRD, EIB; AfDB, IDB and the IMF refuse the agent) are candidates, one at a time, when
+   a data programme of theirs is read.
+4. **Revisit** if the owner wants the UN family drawn as a boundary on the site: then add a `un_system` flag
+   (a schema change, with a `schema_version` bump) instead of overloading the ID prefix.
+

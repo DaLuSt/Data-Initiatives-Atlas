@@ -1,0 +1,13 @@
+date: "2026-11-01"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #511 (UN system and development banks), high-reward pick: the World Bank Group, long left out on purpose
+  (row #168). A default scope rule is written into metadata/ontology.md section 6 (a multilateral body is in scope when
+  it runs a published data programme; filed as an international organisation; the UN specialised-agency question is
+  not asserted; UN DESA stays declined) and flagged as a default the owner can change. Four entities from the Bank's own
+  pages: the World Bank Group, World Bank Open Data (WDI, Atlas of Global Development 2026, Data360), the Data Catalog
+  and World Development Report 2021: Data for Better Lives. The IMF, the African Development Bank and the
+  Inter-American Development Bank refuse the agent; the other banks were not read. Row #168. #511 stays open for the
+  owner's word on the rule.
+prs: []
+outcome: in-progress
