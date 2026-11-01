@@ -7,5 +7,5 @@ summary: >
   founding or succession, so no entity. UN-FPOS to national statistics law: no source. Row #273 holds the record; the
   two waiting-on-event items stay in rows #91 and #90. The item is closed under the closing rule in docs/roadmap.md,
   naming the two leads that could not be looked at.
-prs: []
-outcome: in-progress
+prs: [698]
+outcome: merged (#698)
