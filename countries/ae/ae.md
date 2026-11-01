@@ -30,6 +30,9 @@ related_entities:
   - AE-PDPL-45-2021
   - AE-DECREE-LAW-44-2021
   - AE-DATA-OFFICE
+  - AE-TDRA
+  - AE-TELECOM-LAW-3-2003
+  - AE-TDRA-OPEN-DATA-POLICY
 relationships: []
 
 sources:
