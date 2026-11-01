@@ -159,6 +159,8 @@ Schedule 1 to the NIS Regulations 2018 names the Authority, a body corporate cre
 
 **Updated 2026-11-01 (roadmap #479): the Bahamas added.** `urcabahamas.bs`, the Utilities Regulation and Competition Authority's own site, answers (the earlier probe tried `bahamas.gov.bs`, which answers 403): its governance page was read directly. [[BS]], [[BS-URCA]], [[BS-URCA-ACT-2009]] and [[BS-COMMUNICATIONS-ACT-2009]] added. **Still unread:** both Acts' texts and the amendments listed (2010 to 2015); **the Data Protection (Privacy of Personal Information) Act and its commissioner**, for which no readable page was found; the Utilities Appeal Tribunal Act 2009 and the Authority's decisions.
 
+**Updated 2026-11-01 (roadmap #479): Saint Lucia added.** The earlier probe found `gov.lc` unreachable, but the Attorney General Chambers' own site (`attorneygeneralchambers.com`) hosts the Revised Laws of Saint Lucia (2023): the Data Protection Act's contents, commencement note and section 1 were read directly (Act 11 of 2011; Act 2 of 2015 in force 13 April 2015; Part I, sections 32 to 43 of Part III, Part VI and Schedule 2(a) to (g) in force 31 January 2023 by S.I. 4/2023). [[LC]], [[LC-DPA-2011]], [[LC-DPA-AMENDMENT-2015]] and [[LC-DATA-PROTECTION-COMMISSIONER]] added. **Still unread:** the Act's sections one by one, Act 2 of 2015 itself, S.I. 4/2023, whether a Commissioner has been appointed (Part 2, the Part that creates the office, is not in the list of provisions in force), and the Computer Misuse Act, also on the same site.
+
 <a id="row-248"></a>
 ## Row 248 — Country group 9 (roadmap #478): Antigua and Barbuda, Eswatini, Mozambique, Saint Kitts and Nevis, Sudan
 
