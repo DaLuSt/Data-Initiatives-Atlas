@@ -6,5 +6,5 @@ summary: >
   October 2021 on personal data and privacy (in force on publication, 15 October 2021; supervisory authority defined as the
   public authority in charge of cyber security), the NCSA, RURA and the Ministry of ICT and Innovation. The earlier probe had
   used wrong addresses. Row #247, candidate C10 (67 of 193 left; 128 anchors).
-prs: []
-outcome: in-progress
+prs: [718]
+outcome: merged (#718)
