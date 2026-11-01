@@ -8,5 +8,5 @@ summary: >
   curl, so its home page and three pages were read through the fetch tool (a model's summary); the organisation, the AI
   Strategy and Digital Transformation Strategy (adopted 27-31 October 2026), EARDIP and the Open Data Portal, all with the
   caveat in each entity. Row #274. #545 and #460 closed earlier in the session.
-prs: []
-outcome: in-progress
+prs: [700]
+outcome: merged (#700)
