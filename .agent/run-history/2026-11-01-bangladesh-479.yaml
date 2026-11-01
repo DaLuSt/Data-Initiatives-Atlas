@@ -6,5 +6,5 @@ summary: >
   with English titles that are renderings of the Bengali and no listing date taken as an enactment date. The gazette PDFs
   extract in a legacy font; Act numbers 63, 80 and 99 of 2026 visible, not mapped to titles. Row #247, candidate C10 (66 of
   193 left; 129 anchors).
-prs: []
-outcome: in-progress
+prs: [719]
+outcome: merged (#719)
