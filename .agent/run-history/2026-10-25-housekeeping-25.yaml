@@ -14,5 +14,5 @@ summary: >
   on, although .agent/operating-model.md says to ask the owner first for a workflow change and not to turn auto-merge
   on; it came from the owner's request to optimise the pipelines, but the separate word was not asked for. Its checks
   passed and the job went from 2m42 to 1m49.
-prs: []
-outcome: in-progress
+prs: [691]
+outcome: merged (#691)
