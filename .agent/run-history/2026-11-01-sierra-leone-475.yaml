@@ -5,5 +5,5 @@ summary: >
   Mandate, Acts and cybersecurity pages): the anchor, NatCA (established under the NatCA Act 2022, successor to NATCOM) and
   the 2022 Act. The National Cybersecurity Strategy (2021-2025) it cites is not modelled. Row #241, candidate C10 (56 of 193
   left; 139 anchors).
-prs: []
-outcome: in-progress
+prs: [727]
+outcome: merged (#727)
