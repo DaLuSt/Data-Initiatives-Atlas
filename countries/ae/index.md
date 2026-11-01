@@ -10,8 +10,14 @@ Anchor entity: [[AE]]
 ## Organisations
 
 - [[AE-DATA-OFFICE]]
+- [[AE-TDRA]]
 
 ## Legislation
 
 - [[AE-PDPL-45-2021]]
 - [[AE-DECREE-LAW-44-2021]]
+- [[AE-TELECOM-LAW-3-2003]]
+
+## Policy
+
+- [[AE-TDRA-OPEN-DATA-POLICY]]
