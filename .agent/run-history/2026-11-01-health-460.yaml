@@ -6,5 +6,5 @@ summary: >
   Data Space (planned) and the SNS Data Office, Health Data Research UK and Sciensano in Belgium (founded by the Law of
   25 February 2018). Legal bases and strategies unread; healthdata.be 503, NHS England 202 empty, NHS Digital 403.
   Row #272. Polish CSIRT NASK/GOV and GIODO (the other open parts of #460) not touched.
-prs: []
-outcome: in-progress
+prs: [696]
+outcome: merged (#696)
