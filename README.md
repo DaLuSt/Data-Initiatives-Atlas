@@ -7,7 +7,7 @@ as an open, connected knowledge graph.**
 
 ### [**→ Open the Interactive Atlas**](https://dalust.github.io/Data-Initiatives-Atlas/)
 
-*Search, filter and explore 1,095 entities and 12,371 connections across one hundred and nineteen
+*Search, filter and explore 1,097 entities and 12,378 connections across one hundred and twenty
 countries — no install, no account.*
 
 [![Validation](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/validate.yml/badge.svg)](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/validate.yml)
@@ -33,13 +33,13 @@ hand-maintained.
 
 | | |
 |---|---|
-| **Entities** | 1,095 |
-| **Connections** | 12,371 — of which **2,281** are typed relationships, each with its provenance |
-| **Country scopes** | **119** — 84 with national entities beyond the anchor itself, the rest base anchors |
+| **Entities** | 1,097 |
+| **Connections** | 12,378 — of which **2,282** are typed relationships, each with its provenance |
+| **Country scopes** | **120** — 85 with national entities beyond the anchor itself, the rest base anchors |
 | **Layers** | UN · Council of Europe · EU · national · subnational (sector is carried by `domains`) |
 | **Source of truth** | Git + Markdown/YAML — no database |
 | **Licence** | CC0 1.0 |
-| **✅ Sourcing** | **All 1,095 entities are `verification: primary-source`** — every cited source has been opened, read and confirmed |
+| **✅ Sourcing** | **All 1,097 entities are `verification: primary-source`** — every cited source has been opened, read and confirmed |
 
 *Figures as of 2026-11-01. The live counts are always on the site itself.*
 
@@ -51,7 +51,7 @@ exactly what it says:
 - **`verification: search-only`** — the URLs in `sources:` were confirmed by
   a search index to exist, but nobody has actually opened and read them yet.
   The claims may well be accurate; they simply haven't been checked against
-  the primary source. **All 1,095 entities have moved past this stage**, after
+  the primary source. **All 1,097 entities have moved past this stage**, after
   a sustained multi-batch re-verification effort — none remain `search-only`,
   though a newly-added entity can still start out there before it is
   verified.
