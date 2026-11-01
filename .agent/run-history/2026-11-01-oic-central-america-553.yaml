@@ -7,5 +7,5 @@ summary: >
   SIECA with its Digital Trade Platform (PDCC) from their own sites. Unreadable: League of Arab States (503), SICA (403),
   OAS (403); the Association of Caribbean States read through the fetch tool shows no data instrument. Rows #277, #278.
   #555 closed after #702 merged.
-prs: []
-outcome: in-progress
+prs: [703]
+outcome: merged (#703)
