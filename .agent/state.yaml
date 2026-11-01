@@ -17,12 +17,12 @@ updated: "2026-11-01"
 updated_by_session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
 
 graph:
-  entity_count: 1184
-  relationship_edges: 2386
-  association_edges: 5056
-  wikilink_edges: 5564
-  edges_total: 13006
-  countries: 142
+  entity_count: 1189
+  relationship_edges: 2392
+  association_edges: 5076
+  wikilink_edges: 5577
+  edges_total: 13045
+  countries: 143
   regions: 1
 
 discovery:
