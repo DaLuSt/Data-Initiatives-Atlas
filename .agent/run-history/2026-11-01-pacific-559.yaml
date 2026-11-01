@@ -7,5 +7,5 @@ summary: >
   and (from the menu only) the Pacific Data Hub, whose site answers a Cloudflare challenge. MSG (bot-protection page) and
   the Polynesian Leaders Group (no answer) not modelled. Row #275. #550 and #551 closed earlier in the run, the three
   Oceania items closed after this merge under the closing rule in docs/roadmap.md.
-prs: []
-outcome: in-progress
+prs: [701]
+outcome: merged (#701)
