@@ -113,7 +113,7 @@ founding-six date (#449, #533); the consistency checks (#461) and the move of th
 validators (#528); the Dutch registers (#458, #536); the eIDAS cluster (#534); the EU and UN links (#537); the
 Node 24 actions, the data-correction form and the same checks for deploys (#493, #494, #529); the blocked sources
 read on runners (#495); the browser tests (#526); successor links (#527); automatic LinkedIn posts (#515); the
-types decision (#499); load time (#507); the release review (#498); the Directorates-General (#509); the hover card with an entity's core information (#640); the board token's expiry plan (#496); the age rule and report for `last_verified` (#510); thin domains (#450, built environment stays at 2 countries and is recorded in `discovery/candidates.md` C9); country group 2 (#471, two countries unreadable: row #237); and the regional items for Western, Northern, Southern and Eastern Europe and Northern America (#540 to #544, closed with what could not be read in row #256); and the regional items for Southern Africa, Central Asia, Eastern Asia, South-eastern Asia and Australia and New Zealand (#552, #554, #556, #557, #558, closed with what could not be read in row #271).
+types decision (#499); load time (#507); the release review (#498); the Directorates-General (#509); the hover card with an entity's core information (#640); the board token's expiry plan (#496); the age rule and report for `last_verified` (#510); thin domains (#450, built environment stays at 2 countries and is recorded in `discovery/candidates.md` C9); country group 2 (#471, two countries unreadable: row #237); and the regional items for Western, Northern, Southern and Eastern Europe and Northern America (#540 to #544, closed with what could not be read in row #256); and the regional items for Southern Africa, Central Asia, Eastern Asia, South-eastern Asia and Australia and New Zealand (#552, #554, #556, #557, #558, closed with what could not be read in row #271); and, on 2026-11-01, #460 (coverage gaps, row #273), #459 (UK gaps, row #280), the regional items for South America, Central America, the Caribbean, Northern, Western, Eastern and Middle Africa, Western Asia, Southern Asia, Melanesia, Micronesia and Polynesia (#545 to #551, #553, #555, #559 to #561, closed with what could not be read in rows #265 and #274 to #279).
 Part of #500 (what `country` means) and of #508 (the Country filter, the overview as the first screen, and the force layout stored at build time) is done; the rest of each is below. The country groups have each had a first slice; how many of the 193 UN member states still have no anchor is in `discovery/candidates.md` C10 (it was 97 anchors on 2026-10-16 and about 114 a day later). The groups' issues stay open for the countries whose laws could not be read.
 
 | Release | Data and research | Site and tooling | Decisions and schema |
@@ -163,16 +163,19 @@ recorded declines (#229, #230, #231, #232) or deliberate non-assertions (#88, #9
 | #245 | #543 (the Eurasian Economic Union's digital instruments: what is left unread) |
 | #246 | #542, #543 (the Union for the Mediterranean and the CIS Assembly: what is left unread; the bodies looked at with nothing found) |
 | #233 | #446 |
-| #234 | #459 |
+| #234, #280 | #459 (closed: the UN-CES seat and Portugal's statistics council need a browser) |
 | #236 to #242, #247 to #253 | #470 to #483 (the countries of each group whose laws were not read) |
 | #254 | #544 (closed; the USMCA's unread chapters and the 2026 joint review) |
-| #255, #265 | #545 (MERCOSUR and the Pacific Alliance; the Andean Community is not modelled) |
+| #255, #265 | #545 (closed: MERCOSUR, the Pacific Alliance and the Andean Community; UNASUR and the OAS unread) |
 | #256, #271 | the closed regional items #540 to #544, #552, #554, #556, #557, #558: what was left when each was closed |
-| #257, #258, #264 | #547 (CARICOM, the OECS and HIPCAR; the Association of Caribbean States is unread) |
-| #259, #260, #267, #268 | #548 to #551 (the African Union, ECOWAS, COMESA and the EGEE-ICT draft, CEMAC) |
+| #257, #258, #264, #278 | #547 (closed: CARICOM, the OECS and HIPCAR; the Association of Caribbean States shows no data instrument) |
+| #259, #260, #267, #268, #274, #279 | #548 to #551 (closed: the African Union, ECOWAS, COMESA and the EGEE-ICT draft, CEMAC, IGAD, the East African Community, ECCAS; the Arab Maghreb Union and UEMOA unread) |
 | #261 to #263, #269 | #554, #556, #557, #552 (closed: ASEAN, APEC and the Global CBPR Forum, the SCO, SADC) |
-| #266 | #553 (the GCC) |
-| #270 | #558 to #561 (the Pacific Islands Forum; #558 closed) |
+| #266, #277 | #553 (closed: the GCC and the OIC; the League of Arab States unread) |
+| #270, #275 | #558 to #561 (closed: the Pacific Islands Forum and the Pacific Community; the Melanesian Spearhead Group and the Polynesian Leaders Group unread) |
+| #276 | #555 (closed: BIMSTEC; SAARC unread) |
+| #273 | #460 (closed: what was declined and what waits) |
+| #272 | health-data bodies added under #460 (legal bases and strategies unread) |
 
 `discovery/candidates.md` C9 (thin domains) is #450 and C10 (countries) is #451 and its
 fourteen groups; `discovery/research-queue.md` and `discovery/duplicates.md` are empty.
