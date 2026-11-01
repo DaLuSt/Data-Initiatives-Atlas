@@ -5,5 +5,13 @@ summary: >
   Development's home and About pages: server-rendered, Kazakh only): the anchor and the Ministry, whose listed
   competences include personal data and its protection and data management. No law read (adilet.zan.kz is a JavaScript
   page); the English name is marked as this session's rendering. Row #239, candidate C10 (70 of 193 left; 125 anchors).
-prs: []
-outcome: in-progress
+prs: [714]
+outcome: merged (#714)
+# Session close (2-hour pickup, 13:30 to 15:20 UTC, 2026-11-01): PRs #694 to #714. Roadmap items closed under the closing
+# rule: #460, #459, #545 to #551, #553, #555, #559 to #561 (#511 left for the owner; #539 left for the owner's three
+# decisions). Entities added for India, the World Bank Group, health data (PL, ES, GB, BE), Kuwait, the Andean Community,
+# IGAD, ECCAS, the EAC, the Pacific Community, BIMSTEC, the OIC, COMTELCA/SIECA, the Dominican Republic, Papua New Guinea,
+# Bahrain, Fiji, Mongolia, Saudi Arabia, Qatar, Oman and Kazakhstan. Candidate C10: 70 of 193 UN members left (125 anchors).
+# Still unreadable by any session: UEMOA, the League of Arab States, SICA, the OAS, SAARC, the MSG, the PLG, SDAIA, the
+# Thai, Indonesian and Vietnamese authorities, unece.org. Next pickup: more country slices from sites that answer the agent
+# in a non-English language (Oman and Kazakhstan showed Arabic and Kazakh pages answer when English ones do not).
