@@ -8,6 +8,82 @@ and a dated **data release** (`YYYY.MM.N`) for each snapshot.
 
 <!-- releases:start -->
 
+## Data release 2026.11.1 — 2026-11-02
+
+**Schema 1.0.0** (unchanged)
+
+In the Atlas at this release: 1,206 entities (+174), 2,409 typed relationships (+242), 148 countries (+34).
+
+### Schema
+
+- Multilateral bodies (#511): a default scope rule and the World Bank Group's data programmes (#695)
+
+### Data
+
+- Add Jordan (roadmap #480); record Dominica search (#734)
+- Add Saint Kitts and Nevis and Sudan, finishing group 9 (roadmap #478) (#733)
+- Add Antigua and Barbuda and Mozambique (roadmap #478) (#732)
+- Add Eswatini: ESCCOM, Data Protection Act 2022, SzCIRT (roadmap #478) (#731)
+- Countries (#479): Saint Lucia, with the Data Protection Act from the Attorney General Chambers' Revised Laws (#730)
+- Countries (#476): Grenada, with the Data Protection Bill 2023 read from the Parliament's site (#729)
+- Countries (#477): Kiribati, with its Data Protection Act 2025 and Cybersecurity Act 2026 (#728)
+- Countries (#475): Sierra Leone, from the National Communications Authority's own site (#727)
+- Countries (#481): Niger, from the electronic communications and posts authority's page (#726)
+- Countries (#475): Indonesia, from the ministry's legal documentation site (#725)
+- Countries (#470): Thailand, from the Electronic Transactions Development Agency's English pages (#724)
+- Countries (#476): the Maldives, from the Communications Authority's own site (#723)
+- Countries (#472, #475, #481): Honduras, Nicaragua and Mali (#722)
+- Countries (#473): Namibia, from the Communications Regulatory Authority's own site (#721)
+- Countries (#479): the Bahamas, from the Utilities Regulation and Competition Authority's page (#720)
+- Countries (#479): Bangladesh, from the ICT Division's list of laws (#719)
+- Countries (#479): Rwanda, with the personal data law read from the Official Gazette (#718)
+- Countries (#482): Brunei Darussalam, from AITI's own sites (#717)
+- Countries (#477): Lebanon; the UAE's telecommunications regulator (#716)
+- Countries (#473): Kazakhstan, from the Ministry of Artificial Intelligence and Digital Development's pages (#714)
+- Countries (#483): Oman, from the Telecommunications Regulatory Authority's Arabic pages (#713)
+- Countries (#473): Qatar, from the Communications Regulatory Authority's English site (#712)
+- Countries (#476): Saudi Arabia, from the National Cybersecurity Authority's English site (#711)
+- Countries (#482): Mongolia, from the Communications Regulatory Commission's English pages (#710)
+- Countries (#480): Fiji, from the Government's DigitalFIJI page (#709)
+- Countries (#480): Bahrain, from the National Portal and the National Cyber Security Centre (#708)
+- Countries (#480): Papua New Guinea, from the Department of ICT's own site (#707)
+- Countries (#474): the Dominican Republic, from INDOTEL's own site (#706)
+- Regions (#553, #546, #547): the OIC, COMTELCA, SIECA and the Central American Digital Trade Platform (#703)
+- Regions (#555): BIMSTEC and its Charter; SAARC unreadable (#702)
+- Regions (#559, #560, #561): the Pacific Community and its statistics work (#701)
+- Regions (#550, #551): IGAD, ECCAS and the East African Community (#700)
+- Regions (#545): the Andean Community and its statistics programme (#699)
+- Countries (#479): Kuwait, from the regulator's own site (#697)
+- Coverage (#460): health-data bodies for Poland, Spain, the UK and Belgium (#696)
+- Countries (#470): India, from the Press Information Bureau's explainer of the DPDP Rules (#694)
+
+### Documentation
+
+- Roadmap (#459): close the UK gaps; update the roadmap's closed items (#705)
+
+### Housekeeping
+
+- 3 pull requests that only record progress in the repository's own files (#715, #704, #698)
+
+### Roadmap items completed
+
+- Next regions: Polynesia (Oceania), regional bodies and instruments (#561)
+- Next regions: Micronesia (Oceania), regional bodies and instruments (#560)
+- Next regions: Melanesia (Oceania), regional bodies and instruments (#559)
+- Next regions: Southern Asia (Asia), regional bodies and instruments (#555)
+- Next regions: Western Asia (Asia), regional bodies and instruments (#553)
+- Next regions: Middle Africa (Africa), regional bodies and instruments (#551)
+- Next regions: Eastern Africa (Africa), regional bodies and instruments (#550)
+- Next regions: Western Africa (Africa), regional bodies and instruments (#549)
+- Next regions: Northern Africa (Africa), regional bodies and instruments (#548)
+- Next regions: Caribbean (Americas), regional bodies and instruments (#547)
+- Next regions: Central America (Americas), regional bodies and instruments (#546)
+- Next regions: South America (Americas), regional bodies and instruments (#545)
+- Next countries, group 09 of 14 (10): Antigua and Barbuda, Ecuador, Eswatini, +7 (#478)
+- Next countries, group 01 of 14 (10): Haiti, India, Kenya, +7 (#470)
+- Coverage gaps from earlier batches: France's Open Data transposition, UN statistics law, geospatial cluster, Poland, health (#460)
+- United Kingdom: the entities and sources still missing (#459)
+
 ## Data release 2026.10.5 — 2026-10-26
 
 **Schema 1.0.0** (unchanged)
