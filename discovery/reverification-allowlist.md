@@ -3,15 +3,15 @@
 > **Generated file — do not hand-edit.** Regenerate with
 > `python tools/source_hosts.py --markdown -o discovery/reverification-allowlist.md`
 
-Generated: 2026-10-24
+Generated: 2026-11-02
 
 ## Why this exists
 
-**0 of the Atlas's 1032 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
+**0 of the Atlas's 1206 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
 
 Closing that debt — the re-verification pass — needs outbound HTTPS to the hosts those URLs point at. In an environment with a restricted egress policy, this is the allowlist to request. A denial shows up as `403 to CONNECT` from the proxy, which is an environment-level network policy and cannot be changed from inside a session. See `discovery/unresolved.md` for the standing record of the sourcing debt.
 
-The Atlas currently cites **3145 source URLs** across **895 hosts**, collapsing to **646 registrable domains**.
+The Atlas currently cites **3385 source URLs** across **957 hosts**, collapsing to **695 registrable domains**.
 
 ## Highest value first
 
@@ -24,16 +24,16 @@ A domain here is an **allowlist pattern**, not a URL. Most of them also happen t
 | `europa.eu` | 372 | 216 | `certification.enisa.europa.eu` | ✅ opens | ✅ 2026-08-21 |
 | `wikipedia.org` | 212 | 184 | `ca.wikipedia.org` | ✅ opens |  |
 | `gouv.fr` | 71 | 27 | `aide.monespacenis2.cyber.gouv.fr` | ✅ opens |  |
+| `gov.pl` | 71 | 29 | `api.dane.gov.pl` | ✅ opens |  |
 | `iso.org` | 70 | 62 | `committee.iso.org` | ✅ opens | ✅ 2026-08-21 |
-| `gov.pl` | 69 | 27 | `api.dane.gov.pl` | ✅ opens |  |
 | `overheid.nl` | 59 | 43 | `data.overheid.nl` | ✅ opens |  |
 | `coe.int` | 55 | 43 | `edoc.coe.int` | ✅ opens | ✅ 2026-08-21 |
 | `bund.de` | 53 | 26 | `bmds.bund.de` | ✅ opens | ✅ 2026-08-21 |
 | `legislation.gov.uk` | 49 | 35 | `www.legislation.gov.uk` | ✅ opens |  |
 | `digitaleoverheid.nl` | 48 | 33 | `www.digitaleoverheid.nl` | ✅ opens |  |
 | `admin.ch` | 46 | 14 | `www.bacs.admin.ch` |  |  |
+| `gob.es` | 41 | 21 | `administracion.gob.es` | ⚠ namespace only — no site at the apex |  |
 | `government.nl` | 40 | 40 | `www.government.nl` | ✅ opens |  |
-| `gob.es` | 39 | 19 | `administracion.gob.es` | ⚠ namespace only — no site at the apex |  |
 | `un.org` | 36 | 20 | `docs.un.org` | ✅ opens |  |
 | `boe.es` | 35 | 28 | `www.boe.es` | ✅ opens |  |
 | `gesetze-im-internet.de` | 25 | 17 | `www.gesetze-im-internet.de` |  |  |
@@ -91,6 +91,7 @@ data.gov
 data.gov.uk
 destatis.de
 digitaleoverheid.nl
+eac.int
 ecowas.int
 efta.int
 eftacourt.int
@@ -104,33 +105,55 @@ gchq.gov.uk
 gdi-de.org
 geonovum.nl
 gesetze-im-internet.de
+gov.ae
+gov.ag
 gov.au
 gov.bb
+gov.bd
 gov.be
+gov.bh
+gov.bn
 gov.br
 gov.cn
 gov.co
 gov.cz
 gov.eg
+gov.fj
 gov.gh
 gov.gy
 gov.ie
+gov.in
 gov.iq
 gov.it
 gov.jm
+gov.jo
 gov.kg
+gov.ki
+gov.kn
+gov.kw
+gov.kz
+gov.lb
 gov.lk
+gov.mn
+gov.mv
 gov.my
+gov.mz
 gov.ng
 gov.np
+gov.om
 gov.pg
 gov.pk
 gov.pl
 gov.pt
 gov.py
+gov.qa
+gov.rw
+gov.sa
 gov.sb
 gov.scot
+gov.sd
 gov.sg
+gov.sl
 gov.so
 gov.tl
 gov.uk
@@ -143,6 +166,7 @@ govdata.de
 government.is
 government.nl
 govinfo.gov
+igad.int
 internationaldataspaces.org
 intnet.eu
 iso.org
@@ -167,7 +191,9 @@ overheid.nl
 rijksoverheid.nl
 sadc.int
 service.gov.uk
+sieca.int
 spatialni.gov.uk
+spc.int
 statbel.fgov.be
 statisticsauthority.gov.uk
 trade.gov
@@ -209,6 +235,7 @@ alianzapacifico.net
 alston.com
 altinn.no
 ambitcompliance.ie
+amrtp.ml
 anabad.org
 antic.cm
 anwalt.org
@@ -218,6 +245,7 @@ apec.org
 app.ch
 april.org
 araba.eus
+arcep.ne
 arena2036.de
 arnoldporter.com
 arslege.pl
@@ -227,11 +255,13 @@ asean.org
 assemblee-nationale.fr
 assembly.gm
 atlassian.net
+attorneygeneralchambers.com
 automotiveit.eu
 autoriteitpersoonsgegevens.nl
 aventris.fr
 axesor.es
 b3-it.de
+bahrain.bh
 banquedesterritoires.fr
 basisregistratieondergrond.nl
 bayern.de
@@ -239,6 +269,7 @@ be.brussels
 belastingdienst.nl
 bestmag.co.uk
 bho-legal.com
+bimstec.org
 binnenlandsbestuur.nl
 bipt.be
 bitbw.de
@@ -273,6 +304,7 @@ cbs.nl
 ccdr-n.pt
 cci-paris-idf.fr
 cci.fr
+ceeac-eccas.org
 ceeds.energy
 cepal.org
 certificeringsadvies.nl
@@ -296,8 +328,12 @@ comiteri.be
 commport.com
 communicatierijk.nl
 computerweekly.com
+comtelca.org
 comunidad.madrid
+comunidadandina.org
 congreso.es
+contentstack.io
+cran.na
 cso.ie
 cssf.lu
 ctivd.nl
@@ -426,6 +462,7 @@ globalcbpr.org
 globalpolicywatch.com
 glomas.de
 go.cr
+go.id
 go.jp
 go.ke
 go.kr
@@ -433,19 +470,24 @@ go.ug
 gob.ar
 gob.bo
 gob.cl
+gob.do
 gob.ec
 gob.es
+gob.hn
+gob.ni
 gob.pa
 gob.pe
 gouv.bj
 gouv.fr
 gouv.ht
 gouvernement.lu
+grenadaparliament.gd
 grunddata.dk
 gsmonline.pl
 gub.uy
 gv.at
 haufe.de
+hdruk.ac.uk
 health-ri.nl
 heise.de
 hessen.de
@@ -565,6 +607,7 @@ odissei-data.nl
 odoserwis.pl
 oecd.org
 officielebekendmakingen.nl
+oic-oci.org
 oiger.de
 om.nl
 omega-x.eu
@@ -574,8 +617,10 @@ opendata.swiss
 openjustice.be
 openkritis.de
 opennederland.nl
+or.th
 ordnancesurvey.co.uk
 org.nz
+org.sz
 org.tt
 org.za
 osborneclarke.com
@@ -626,12 +671,14 @@ rivm.nl
 rlp.de
 roraonline.nl
 rtp.pt
+rura.rw
 rvig.nl
 sachsen-anhalt.de
 safeonweb.be
 sapo.pt
 scb.se
 sciencedirect.com
+sciensano.be
 scoop4c.eu
 secjur.com
 sectsco.org
@@ -696,6 +743,7 @@ unizar.es
 unmz.cz
 unsceb.org
 urbact.eu
+urcabahamas.bs
 uv.es
 vbo-feb.be
 vde.com
@@ -719,6 +767,7 @@ wikipedia.org
 wikitoki.org
 wikixl.nl
 williamfry.com
+worldbank.org
 wrangu.com
 wto.org
 wur.nl
