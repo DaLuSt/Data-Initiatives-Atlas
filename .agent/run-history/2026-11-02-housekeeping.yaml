@@ -6,5 +6,5 @@ summary: >
   Checked: no entity is due or overdue on the verification-age rule (1206 ok); the data release PR #735 is open for the owner
   to merge and was not touched. Merged claude/atlas-pickup-50 to 57 and claude/atlas-housekeeping-25 remain on the remote;
   not deleted.
-prs: []
-outcome: in-progress
+prs: [736]
+outcome: merged (#736)
