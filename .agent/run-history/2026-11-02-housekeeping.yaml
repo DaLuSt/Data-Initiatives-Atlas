@@ -1,0 +1,10 @@
+date: "2026-11-02"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Housekeeping: regenerated discovery/reverification-allowlist.md (new source hosts from the country additions), recorded
+  roadmap #470 and #478 as closed and the 148-anchor count in docs/roadmap.md, closed the Jordan run-history entry (#734).
+  Checked: no entity is due or overdue on the verification-age rule (1206 ok); the data release PR #735 is open for the owner
+  to merge and was not touched. Merged claude/atlas-pickup-50 to 57 and claude/atlas-housekeeping-25 remain on the remote;
+  not deleted.
+prs: []
+outcome: in-progress
