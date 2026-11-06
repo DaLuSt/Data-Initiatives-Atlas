@@ -18,7 +18,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-11-01"
+last_verified: "2026-11-06"
 previous_version: null
 successor: null
 
@@ -43,7 +43,7 @@ sources:
   - title: "Lesotho Communications Authority, Legislation"
     url: "https://lca.org.ls/legislation/"
     publisher: "Lesotho Communications Authority"
-    accessed: "2026-11-01"
+    accessed: "2026-11-06"
 ---
 
 # Communications Act 2012 (Lesotho)

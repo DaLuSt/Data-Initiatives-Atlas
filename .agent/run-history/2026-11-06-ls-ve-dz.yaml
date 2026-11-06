@@ -5,5 +5,5 @@ summary: >
   Ley Orgánica de Telecomunicaciones) and Algeria (ARPCE, loi 18-04), each from the regulator's own site through a
   summarising fetch tool, so no start dates are asserted. Belize looked at (no Act named on the pages read), nothing added.
   Rows #249 and #238, candidate C10 (43 of 193 left; 152 anchors).
-prs: []
-outcome: in-progress
+prs: [739]
+outcome: merged (#739)

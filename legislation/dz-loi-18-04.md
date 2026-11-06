@@ -19,7 +19,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-11-01"
+last_verified: "2026-11-06"
 previous_version: null
 successor: null
 
@@ -44,7 +44,7 @@ sources:
   - title: "ARPCE (Autorité de Régulation de la Poste et des Communications Électroniques), site"
     url: "https://www.arpce.dz/fr"
     publisher: "ARPCE, Algeria"
-    accessed: "2026-11-01"
+    accessed: "2026-11-06"
 ---
 
 # Law No. 18-04 on posts and electronic communications (Algeria)

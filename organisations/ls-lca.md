@@ -19,7 +19,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-11-01"
+last_verified: "2026-11-06"
 previous_version: null
 successor: null
 
@@ -34,7 +34,7 @@ relationships:
   - type: part-of
     target: LS
     source: fact
-    evidence: "Scope anchor under metadata/relationship-types.md §2.3. The LCA's home page (read 2026-11-01 through a summarising fetch tool): a statutory body, established in June 2000, regulating Lesotho's communications sector."
+    evidence: "Scope anchor under metadata/relationship-types.md §2.3. The LCA's home page (read 2026-11-06 through a summarising fetch tool): a statutory body, established in June 2000, regulating Lesotho's communications sector."
     confidence: high
     valid_from: null
     valid_until: null
@@ -50,11 +50,11 @@ sources:
   - title: "Lesotho Communications Authority, home page"
     url: "https://www.lca.org.ls"
     publisher: "Lesotho Communications Authority"
-    accessed: "2026-11-01"
+    accessed: "2026-11-06"
   - title: "Lesotho Communications Authority, Legislation"
     url: "https://lca.org.ls/legislation/"
     publisher: "Lesotho Communications Authority"
-    accessed: "2026-11-01"
+    accessed: "2026-11-06"
 ---
 
 # Lesotho Communications Authority (LCA)

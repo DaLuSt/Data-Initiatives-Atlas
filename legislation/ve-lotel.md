@@ -19,7 +19,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-11-01"
+last_verified: "2026-11-06"
 previous_version: null
 successor: null
 
@@ -44,7 +44,7 @@ sources:
   - title: "CONATEL, Leyes (Marco Legal)"
     url: "https://conatel.gob.ve/leyes/"
     publisher: "CONATEL, Venezuela"
-    accessed: "2026-11-01"
+    accessed: "2026-11-06"
 ---
 
 # Ley Orgánica de Telecomunicaciones (Venezuela)
