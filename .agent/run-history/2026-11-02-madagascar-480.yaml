@@ -5,5 +5,5 @@ summary: >
   Assembly's PDFs answer 403; artec.mg answers 503, so the regulator's name is from press reports). Djibouti and Tajikistan
   looked at through search only (no official page reached), nothing added. Row #253, candidate C10 (46 of 193 left; 149
   anchors).
-prs: []
-outcome: in-progress
+prs: [737]
+outcome: merged (#737)
