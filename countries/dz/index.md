@@ -5,7 +5,7 @@ the Atlas.
 
 Anchor entity: [[DZ]]
 
-> A first sourced slice (2026-11-01). See `countries/README.md` on the participation model.
+> A first sourced slice (2026-11-06). See `countries/README.md` on the participation model.
 
 ## Organisations
 
