@@ -5,5 +5,5 @@ summary: >
   Príncipe (AGER, Lei 3/2004) and Nauru (Nauru Communications Authority and the Communications and Broadcasting Act 2018,
   from WIPO Lex's copy), each through a summarising fetch tool, so no start dates are asserted. Group 3 is complete. Row
   #238 and #253, candidate C10 (34 of 193 left; 161 anchors).
-prs: []
-outcome: in-progress
+prs: [742]
+outcome: merged (#742)
