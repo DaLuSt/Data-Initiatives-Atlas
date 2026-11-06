@@ -6,5 +6,5 @@ summary: >
   and the Grenadines (NTRC, Telecommunications Act), the regulators through a summarising fetch tool, so no start dates are
   asserted. Dates in the earlier Lesotho, Venezuela and Algeria files corrected from 2026-11-01 to 2026-11-06. Rows #249,
   #238 and #242, candidate C10 (40 of 193 left; 155 anchors).
-prs: []
-outcome: in-progress
+prs: [740]
+outcome: merged (#740)
