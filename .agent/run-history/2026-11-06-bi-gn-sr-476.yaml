@@ -5,5 +5,5 @@ summary: >
   Loi L/2015/018/AN, and the cybersecurity and personal data Law L/2015/037/AN without an authority) and Suriname (TAS,
   Wet Telecommunicatievoorzieningen), each from the regulator's own site through a summarising fetch tool, so no start dates
   are asserted. Cambodia (403) and Iran (503) tried, unreachable. Row #242, candidate C10 (37 of 193 left; 158 anchors).
-prs: []
-outcome: in-progress
+prs: [741]
+outcome: merged (#741)

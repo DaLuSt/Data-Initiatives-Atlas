@@ -1,14 +1,10 @@
 ---
 id: ST
 type: country
-name: "Sao Tome and Principe"
-alternative_names:
-  - "São Tomé and Príncipe"
-  - "São Tomé e Príncipe"
+name: "São Tomé and Príncipe"
 description: >
-  Country anchor entity for Sao Tome and Principe. A base anchor: it exists
-  because the Atlas models the sourced national entities listed in its
-  index, and it carries no more than that.
+  Country anchor entity for São Tomé and Príncipe. A base anchor: it exists because the Atlas models the sourced national entities listed in
+  its index, and it carries no more than that.
 
 level: national
 country: ST
@@ -21,29 +17,29 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-10-11"
+last_verified: "2026-11-06"
 previous_version: null
 successor: null
 
 domains: []
 organisations: []
 related_entities:
-  - ST-LEI-03-2016
-  - ST-ANPDP
+  - ST-AGER
+  - ST-LEI-3-2004
 relationships: []
 
 sources:
-  - title: "Loi n° 03/2016 — Protection des Données Personnelles (French translation hosted by the AFAPDP)"
-    url: "https://www.afapdp.org/wp-content/uploads/2022/02/Loi-de-Protection-des-Donnes-Personnlles-03_2016.pdf"
-    publisher: "Assembleia Nacional de São Tomé e Príncipe (copy hosted by the Association francophone des autorités de protection des données personnelles)"
-    accessed: "2026-10-11"
+  - title: "AGER (Autoridade Geral de Regulação), São Tomé e Príncipe, página inicial"
+    url: "https://www.ager.st"
+    publisher: "AGER, São Tomé e Príncipe"
+    accessed: "2026-11-06"
 ---
 
-# Sao Tome and Principe
+# São Tomé and Príncipe
 
 ## Description
 
-Sao Tome and Principe (ISO 3166-1 alpha-2: **`ST`**) is a **base country anchor**. It carries the 2016 personal-data law ([[ST-LEI-03-2016]]) and the agency it provides for ([[ST-ANPDP]]), read in a French rendering hosted by the AFAPDP.
+São Tomé and Príncipe (ISO 3166-1 alpha-2: **`ST`**) is a **base country anchor**. It carries the telecommunications regulator ([[ST-AGER]]) and the law Lei n.º 3/2004 (Lei Base das Telecomunicações) ([[ST-LEI-3-2004]]), from the regulator's own site; the law's text was not opened. Everything here is from the regulator's own site. The pages were read through a fetch tool that returns a model's summary, so the entities say so. None of the texts was opened.
 
 ## What this anchor does not yet carry
 
