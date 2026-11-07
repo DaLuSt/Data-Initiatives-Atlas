@@ -13,16 +13,16 @@
 # from site/graph.json's own `stats` block (run tools/build_graph.py first;
 # the file is gitignored) rather than counting by hand.
 
-updated: "2026-11-06"
+updated: "2026-11-07"
 updated_by_session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
 
 graph:
-  entity_count: 1251
-  relationship_edges: 2456
-  association_edges: 5293
-  wikilink_edges: 5705
-  edges_total: 13454
-  countries: 161
+  entity_count: 1256
+  relationship_edges: 2460
+  association_edges: 5307
+  wikilink_edges: 5713
+  edges_total: 13480
+  countries: 163
   regions: 1
 
 discovery:
