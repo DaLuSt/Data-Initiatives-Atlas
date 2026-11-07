@@ -36,7 +36,7 @@ relationships:
   - type: applies-in
     target: KR
     source: fact
-    evidence: "The decision’s EUR-Lex text (read 2026-11-07 through a summarising fetch tool): title and date as above; recital 5 on the PIPA; recital 12 on the PIPC; the preamble cites Article 45(3) GDPR. Article 1's wording was not located in the part of the text read."
+    evidence: "The decision’s EUR-Lex text (read 2026-11-07 through a summarising fetch tool): title and date as above; recital 5 on the PIPA; recital 12 on the PIPC; the preamble cites Article 45(3) GDPR. Article 1(1): 'the Republic of Korea ensures an adequate level of protection for personal data transferred from the European Union' to entities subject to the PIPA, as complemented by Annex I (additional safeguards) and Annex II (representations); Article 1(2) excludes religious organisations for missionary activities, political parties for nominating candidates and entities overseen by the Financial Services Commission under the Credit Information Act; Article 3(4) has the first review after three years from notification and then at least every four years."
     confidence: high
     valid_from: 2021-12-17
     valid_until: null
