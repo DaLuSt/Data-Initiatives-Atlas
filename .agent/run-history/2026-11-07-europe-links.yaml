@@ -1,0 +1,16 @@
+date: "2026-11-07"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Asked to stop country additions and pick up roadmap items on connections to Europe and beyond. The open items on that
+  theme are #500 (national data spaces and the EU spaces), #501 (standards bodies) and #535 (Germany); #511 and #539 wait
+  on the owner. Looked again, no entity changed. #500: a search found nothing that states a Commission link for
+  Manufacturing-X (it describes itself as an ecosystem built on Catena-X and framed by the Data Act and the DGA), and no
+  named operator for the media or public administration data spaces or for the successor of the Data Spaces Support Centre
+  (its project ended in March 2026 per one page). #535: the KoSIT and BundID questions were already decided on 2026-10-11
+  (metadata/relationship-types.md 2.6); only the RegMoG register count (50 or 51) remains, which needs bgbl.de or the
+  Bundestag record, still unreadable (row #235: bmi.bund.de and digitale-verwaltung.de answer 400 from a runner; fitko.de
+  and it-planungsrat.de read but do not state KoSIT's hosting or FITKO's legal form; xoev.de answers 403). #501: row #235
+  already records iso.org, unece.org and iec.ch as blocked from a runner on 2026-10-10. Nothing to add without a new
+  source or the owner's decisions.
+prs: []
+outcome: in-progress

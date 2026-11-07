@@ -6,5 +6,5 @@ summary: >
   Corporation, status unknown, from the FSM Code through a summarising fetch tool). Cambodia (403), Iran (503), Djibouti
   (host does not resolve), Turkmenistan and Tajikistan (secondary sources only) recorded. Rows #247, #240 and #253,
   candidate C10 (31 of 193 left; 164 anchors).
-prs: []
-outcome: in-progress
+prs: [744]
+outcome: merged (#744)
