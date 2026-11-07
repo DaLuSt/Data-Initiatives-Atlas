@@ -6,7 +6,7 @@ alternative_names:
   - Implementing Decision (EU) 2019/419
   - Japanese adequacy decision
 description: >
-  Commission Implementing Decision (EU) 2019/419 of 23 January 2019 (C(2019) 304), adopted under Article 45(3) GDPR, on the adequate protection of personal data by Japan under the Act on the Protection of Personal Information (APPI). The finding applies subject to the Supplementary Rules (Annex I) adopted by Japan’s Personal Information Protection Commission and to the Japanese government’s representations and commitments (Annex II); recital 78 restricts onward transfers. The Commission’s adequacy page lists a report on the first periodic review.
+  Commission Implementing Decision (EU) 2019/419 of 23 January 2019 (C(2019) 304), adopted under Article 45(3) GDPR, on the adequate protection of personal data by Japan under the Act on the Protection of Personal Information (APPI). The finding applies subject to the Supplementary Rules (Annex I) adopted by Japan’s Personal Information Protection Commission and to the Japanese government’s representations and commitments (Annex II); recital 78 restricts onward transfers. Its Article 3(4) review (within two years of notification, then at least every four years) has produced a first periodic review report, which the Commission’s adequacy page lists.
 
 level: regional
 country: null
@@ -37,7 +37,7 @@ relationships:
   - type: applies-in
     target: JP
     source: fact
-    evidence: "The decision’s EUR-Lex text and its National Archives mirror (read 2026-11-07 through a summarising fetch tool): title, date and notification number as above; recital 4 applies the finding to organisations within the APPI 'subject to the additional conditions referred to in this Decision'. Article 1's wording was not located in the part of the text read."
+    evidence: "The decision’s EUR-Lex text and its National Archives mirror (read 2026-11-07 through a summarising fetch tool): title, date and notification number as above; recital 4 applies the finding to organisations within the APPI 'subject to the additional conditions referred to in this Decision'. Article 1(1): 'Japan ensures an adequate level of protection for personal data transferred from the European Union' to business operators subject to the APPI, as supplemented by the Supplementary Rules in Annex I; Article 1(2) excludes press, academic, religious and political bodies to the extent they process data for those purposes; Article 3(4) has a re-evaluation within two years of notification and at least every four years after."
     confidence: high
     valid_from: 2019-01-23
     valid_until: null
@@ -77,7 +77,7 @@ sources:
 
 ## What it says
 
-Commission Implementing Decision (EU) 2019/419 of 23 January 2019 (C(2019) 304), adopted under Article 45(3) GDPR, on the adequate protection of personal data by Japan under the Act on the Protection of Personal Information (APPI). The finding applies subject to the Supplementary Rules (Annex I) adopted by Japan’s Personal Information Protection Commission and to the Japanese government’s representations and commitments (Annex II); recital 78 restricts onward transfers. The Commission’s adequacy page lists a report on the first periodic review.
+Commission Implementing Decision (EU) 2019/419 of 23 January 2019 (C(2019) 304), adopted under Article 45(3) GDPR, on the adequate protection of personal data by Japan under the Act on the Protection of Personal Information (APPI). The finding applies subject to the Supplementary Rules (Annex I) adopted by Japan’s Personal Information Protection Commission and to the Japanese government’s representations and commitments (Annex II); recital 78 restricts onward transfers. Its Article 3(4) review (within two years of notification, then at least every four years) has produced a first periodic review report, which the Commission’s adequacy page lists.
 
 It was adopted under the GDPR itself (Article 45(3)), so it carries a periodic review at least every four years (Article 45(3)).
 

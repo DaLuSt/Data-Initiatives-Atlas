@@ -34,7 +34,7 @@ relationships:
   - type: applies-in
     target: US
     source: fact
-    evidence: "The decision’s EUR-Lex text (read 2026-11-07 through a summarising fetch tool, first 100,000 of about 434,000 characters): title, number, notification and publication data as above. Article 1 and the review clause were not in the part read; the scope (participating organisations) is as the Commission’s adequacy page states."
+    evidence: "The decision’s EUR-Lex text (read 2026-11-07 through a summarising fetch tool, first 100,000 of about 434,000 characters): title, number, notification and publication data as above. Article 1: the United States 'ensures an adequate level of protection for personal data transferred from the Union to organisations in the United States' that appear on the Data Privacy Framework List kept by the US Department of Commerce; Article 3(4): after one year the Commission evaluates the finding, with later periodicity to be decided in consultation with the Article 93(1) Committee and the EDPB."
     confidence: high
     valid_from: 2023-07-10
     valid_until: null
