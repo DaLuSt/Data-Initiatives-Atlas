@@ -57,6 +57,8 @@ Anchor entity: [[EU]]
   (2001, commercial organisations), [[EU-AR-ADEQUACY]] (2003),
   [[EU-AD-ADEQUACY]] (2010), [[EU-UY-ADEQUACY]] (2012) and
   [[EU-NZ-ADEQUACY]] (2012)
+- [[EU-ADEQUACY-REVIEW-2024]] — the Commission's 15 January 2024 report finding that the
+  eleven pre-GDPR decisions still hold _(COM(2024) 7)_
 
 ### Transport and trade
 
