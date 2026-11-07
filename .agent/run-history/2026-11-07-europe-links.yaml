@@ -12,5 +12,5 @@ summary: >
   and it-planungsrat.de read but do not state KoSIT's hosting or FITKO's legal form; xoev.de answers 403). #501: row #235
   already records iso.org, unece.org and iec.ch as blocked from a runner on 2026-10-10. Nothing to add without a new
   source or the owner's decisions.
-prs: []
-outcome: in-progress
+prs: [745]
+outcome: merged (#745)

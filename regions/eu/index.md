@@ -50,6 +50,13 @@ Anchor entity: [[EU]]
 - [[EU-UK-ADEQUACY]] — two decisions, 2021, with a sunset clause
 - [[EU-CH-ADEQUACY]] — one decision, **2000**, with none _(Decision
   2000/518/EC, still in force under Article 45(9) GDPR)_ ✅ 2026-08-28
+- Beyond Europe, added 2026-11-07 _(row #282; nine of the Commission's 17
+  decisions)_: [[EU-JP-ADEQUACY]] (2019), [[EU-KR-ADEQUACY]] (2021),
+  [[EU-US-ADEQUACY]] (2023, Data Privacy Framework participants only),
+  [[EU-BR-ADEQUACY]] (2026), and the pre-GDPR decisions [[EU-CA-ADEQUACY]]
+  (2001, commercial organisations), [[EU-AR-ADEQUACY]] (2003),
+  [[EU-AD-ADEQUACY]] (2010), [[EU-UY-ADEQUACY]] (2012) and
+  [[EU-NZ-ADEQUACY]] (2012)
 
 ### Transport and trade
 
