@@ -21,7 +21,7 @@ coverage: low
 verification: primary-source
 start_date: 2023-06-08
 end_date: null
-last_verified: "2026-10-23"
+last_verified: "2026-11-07"
 previous_version: null
 successor: null
 
@@ -42,11 +42,24 @@ related_entities:
   - SN
   - ST
   - TG
+  - AO
+  - CG
+  - GN
+  - LS
+  - MG
+  - MZ
+  - MR
+  - NA
+  - NE
+  - RW
   - CM
   - GM
   - NG
   - ZA
   - TN
+  - TD
+  - SD
+  - SL
 relationships:
   - type: applies-in
     target: BJ
@@ -104,6 +117,76 @@ relationships:
     confidence: high
     valid_from: null
     valid_until: null
+  - type: applies-in
+    target: AO
+    source: fact
+    evidence: "The AU status list of 2 February 2026 (read directly 2026-11-07, re-read from the same PDF) records Angola as having ratified or acceded on 21/02/2020 and deposited its instrument on 11/05/2020. The convention entered into force on 8 June 2023 after the 15th deposit; the date it takes effect for this State was not read."
+    confidence: high
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: CG
+    source: fact
+    evidence: "The AU status list of 2 February 2026 (read directly 2026-11-07, re-read from the same PDF) records Congo as having ratified or acceded on 24/09/2020 and deposited its instrument on 23/10/2020. The convention entered into force on 8 June 2023 after the 15th deposit; the date it takes effect for this State was not read."
+    confidence: high
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: GN
+    source: fact
+    evidence: "The AU status list of 2 February 2026 (read directly 2026-11-07, re-read from the same PDF) records Guinea as having ratified or acceded on 31/07/2018 and deposited its instrument on 16/10/2018. The convention entered into force on 8 June 2023 after the 15th deposit; the date it takes effect for this State was not read."
+    confidence: high
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: LS
+    source: fact
+    evidence: "The AU status list of 2 February 2026 (read directly 2026-11-07, re-read from the same PDF) records Lesotho as having ratified or acceded on 05/02/2025 and deposited its instrument on 16/02/2025. The convention entered into force on 8 June 2023 after the 15th deposit; the date it takes effect for this State was not read."
+    confidence: high
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: MG
+    source: fact
+    evidence: "The AU status list of 2 February 2026 (read directly 2026-11-07, re-read from the same PDF) records Madagascar as having ratified or acceded on 17/07/2025 and deposited its instrument on 15/09/2025. The convention entered into force on 8 June 2023 after the 15th deposit; the date it takes effect for this State was not read."
+    confidence: high
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: MZ
+    source: fact
+    evidence: "The AU status list of 2 February 2026 (read directly 2026-11-07, re-read from the same PDF) records Mozambique as having ratified or acceded on 02/12/2019 and deposited its instrument on 21/01/2020. The convention entered into force on 8 June 2023 after the 15th deposit; the date it takes effect for this State was not read."
+    confidence: high
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: MR
+    source: fact
+    evidence: "The AU status list of 2 February 2026 (read directly 2026-11-07, re-read from the same PDF) records Mauritania as having ratified or acceded on 19/04/2023 and deposited its instrument on 09/05/2023. The convention entered into force on 8 June 2023 after the 15th deposit; the date it takes effect for this State was not read."
+    confidence: high
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: NA
+    source: fact
+    evidence: "The AU status list of 2 February 2026 (read directly 2026-11-07, re-read from the same PDF) records Namibia as having ratified or acceded on 25/01/2019 and deposited its instrument on 01/02/2019. The convention entered into force on 8 June 2023 after the 15th deposit; the date it takes effect for this State was not read."
+    confidence: high
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: NE
+    source: fact
+    evidence: "The AU status list of 2 February 2026 (read directly 2026-11-07, re-read from the same PDF) records Niger as having ratified or acceded on 22/02/2022 and deposited its instrument on 16/03/2022. The convention entered into force on 8 June 2023 after the 15th deposit; the date it takes effect for this State was not read."
+    confidence: high
+    valid_from: null
+    valid_until: null
+  - type: applies-in
+    target: RW
+    source: fact
+    evidence: "The AU status list of 2 February 2026 (read directly 2026-11-07, re-read from the same PDF) records Rwanda as having ratified or acceded on 14/11/2019 and deposited its instrument on 21/11/2019. The convention entered into force on 8 June 2023 after the 15th deposit; the date it takes effect for this State was not read."
+    confidence: high
+    valid_from: null
+    valid_until: null
   - type: related-to
     target: CM
     source: fact
@@ -140,6 +223,27 @@ relationships:
     valid_from: null
     valid_until: null
   - type: related-to
+    target: TD
+    source: fact
+    evidence: "The AU status list of 2 February 2026 (read directly 2026-11-07, re-read from the same PDF) records Chad as having signed on 14/06/2015 and as not having ratified or deposited, so the convention is not recorded as applying there."
+    confidence: high
+    valid_from: null
+    valid_until: null
+  - type: related-to
+    target: SD
+    source: fact
+    evidence: "The AU status list of 2 February 2026 (read directly 2026-11-07, re-read from the same PDF) records Sudan as having signed on 15/03/2023 and as not having ratified or deposited, so the convention is not recorded as applying there."
+    confidence: high
+    valid_from: null
+    valid_until: null
+  - type: related-to
+    target: SL
+    source: fact
+    evidence: "The AU status list of 2 February 2026 (read directly 2026-11-07, re-read from the same PDF) records Sierra Leone as having signed on 29/01/2016 and as not having ratified or deposited, so the convention is not recorded as applying there."
+    confidence: high
+    valid_from: null
+    valid_until: null
+  - type: related-to
     target: INTL-AU
     source: fact
     evidence: "The treaty page and status list are the African Union's own (au.int, read directly 2026-10-23); the convention was 'adopted by the Twentythird Ordinary Session of the Assembly, held in Malabo, Equatorial Guinea, 27th June 2014'."
@@ -171,11 +275,11 @@ sources:
 
 ## What is sourced
 
-Adopted by the 23rd Ordinary Session of the Assembly in Malabo, Equatorial Guinea, on 27 June 2014 (date of adoption, 27 June 2014; date of last signature, 11 May 2020). Status list of 2 February 2026: 55 countries listed, 21 have signed, 20 have ratified or acceded and deposited. "This Convention entered into force on 8th June 2023, after the deposit of the 15th instrument of ratification." Deposited and anchored in the Atlas: Benin, Cabo Verde, Côte d'Ivoire, Ghana, Mauritius, Senegal, Sao Tome and Principe, Togo. Signed but not deposited, with an anchor: Cameroon, The Gambia, Nigeria, South Africa, Tunisia. The other States that deposited (Angola, Congo, Democratic Republic of the Congo, Guinea, Lesotho, Madagascar, Mauritania, Mozambique, Namibia, Niger, Rwanda, Zambia) have no country anchor yet, so no edge.
+Adopted by the 23rd Ordinary Session of the Assembly in Malabo, Equatorial Guinea, on 27 June 2014 (date of adoption, 27 June 2014; date of last signature, 11 May 2020). Status list of 2 February 2026: 55 countries listed, 21 have signed, 20 have ratified or acceded and deposited. "This Convention entered into force on 8th June 2023, after the deposit of the 15th instrument of ratification." Deposited and anchored in the Atlas: Angola, Benin, Cabo Verde, Congo, Côte d'Ivoire, Ghana, Guinea, Lesotho, Madagascar, Mauritania, Mauritius, Mozambique, Namibia, Niger, Rwanda, Senegal, Sao Tome and Principe, Togo (18 of the 20; re-read from the same status list on 2026-11-07, after ten more anchors were added). Signed but not deposited, with an anchor: Cameroon, Chad, The Gambia, Nigeria, Sierra Leone, South Africa, Sudan, Tunisia. The other two States that deposited, the Democratic Republic of the Congo and Zambia, have no anchor yet.
 
 ## Relationships
 
-`applies-in` the eight States with an anchor that deposited; `related-to` the five that only signed, the African Union and the Data Policy Framework.
+`applies-in` the eighteen States with an anchor that deposited; `related-to` the eight that only signed, the African Union and the Data Policy Framework.
 
 ## Sources
 
