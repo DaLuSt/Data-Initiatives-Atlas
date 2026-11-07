@@ -7,5 +7,5 @@ summary: >
   EUR-Lex and the National Archives mirror through a summarising fetch tool (Articles 1 to 4 of the Japan, Korea and US decisions reached with offsets).
   Faroe Islands, Guernsey, Isle of Man, Jersey, Israel and the European Patent Organisation not modelled (no anchors). Row
   #282.
-prs: []
-outcome: in-progress
+prs: [746]
+outcome: merged (#746)
