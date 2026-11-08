@@ -6,24 +6,24 @@ alternative_names:
   - "Ley Orgánica de IA"
   - "121/000096"
 description: >
-  Spanish Government bill before the Congreso de los Diputados (file
-  121/000096, published 12 June 2026), to adapt Spanish law to the EU AI
-  Regulation (Regulation (EU) 2024/1689): it designates the national
-  competent authorities, as article 70.1 of the Regulation requires, and
-  regulates governance and supervision. Its amendment period closed on 30
-  June 2026; it is not law.
+  Spanish Government bill that was before the Congreso de los Diputados (file 121/000096, XV Legislatura; presented on
+  28 May 2026 and published on 12 June 2026), to adapt Spanish law to the EU AI Regulation (Regulation (EU) 2024/1689): it
+  would have designated the national competent authorities, as article 70.1 of the Regulation requires, and regulated
+  governance and supervision. It never became law. The Cortes Generales were dissolved by Real Decreto 806/2026 of 5 October
+  2026, and the Congreso's own file page records the initiative as caducado, the expiry published in the Boletín Oficial de
+  las Cortes Generales (Serie D, núm. 610) on 4 November 2026.
 
 level: national
 country: ES
 region: EU
 
-status: proposed
+status: archived
 confidence: medium
 coverage: low
 verification: primary-source
 start_date: null
-end_date: null
-last_verified: "2026-10-16"
+end_date: 2026-10-06
+last_verified: "2026-11-08"
 previous_version: null
 successor: null
 
@@ -51,6 +51,18 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Proyecto de Ley Orgánica para el buen uso y la gobernanza de la inteligencia artificial (121/000096): ficha de la iniciativa, resultado de tramitación Caducado"
+    url: "https://www.congreso.es/web/guest/indice-de-iniciativas?p_p_id=iniciativas&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&_iniciativas_mode=mostrarDetalle&_iniciativas_legislatura=XV&_iniciativas_id=121/000096"
+    publisher: "Congreso de los Diputados (Cortes Generales)"
+    accessed: "2026-11-08"
+  - title: "Real Decreto 806/2026, de 5 de octubre, de disolución del Congreso de los Diputados y del Senado y de convocatoria de elecciones (BOE núm. 248, 6 de octubre de 2026)"
+    url: "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20742"
+    publisher: "Boletín Oficial del Estado"
+    accessed: "2026-11-08"
+  - title: "Reglamento del Congreso de los Diputados, Título XIII (artículo 207)"
+    url: "https://www.congreso.es/es/cem/tit13"
+    publisher: "Congreso de los Diputados (Cortes Generales)"
+    accessed: "2026-11-08"
   - title: "Proyecto de Ley Orgánica para el buen uso y la gobernanza de la inteligencia artificial (121/000096), Boletín Oficial de las Cortes Generales, Serie A, núm. 97-1, 12 de junio de 2026"
     url: "https://www.congreso.es/public_oficiales/L15/CONG/BOCG/A/BOCG-15-A-97-1.PDF"
     publisher: "Congreso de los Diputados (Cortes Generales)"
@@ -59,6 +71,8 @@ sources:
 
 # Proyecto de Ley Orgánica para el buen uso y la gobernanza de la inteligencia artificial
 
+> **Lapsed, checked 2026-11-08** (roadmap #502, ahead of its Q1 2027 pass). The Congreso's file page for 121/000096 was read directly: *Resultado tramitación: Caducado*, concluded from 6 October 2026, expiry published in BOCG D-610 on 4 November 2026. Cause: the Cortes were dissolved by Real Decreto 806/2026 (BOE of 6 October 2026, read directly; elections on 29 November 2026), and article 207 of the Reglamento del Congreso (read on congreso.es) lapses every pending matter on dissolution except those the Constitution gives to the Diputación Permanente. `status: archived`, `end_date: 2026-10-06`. A new bill would be a new instrument and would need its own entity; the Government that follows the elections decides whether to send one.
+>
 > **Verified 2026-10-10.** The bill's publication in the Boletín Oficial de las Cortes Generales (Serie A, núm. 97-1, 12 June 2026) was read directly, including the explanatory memorandum and article 1. This closes `discovery/unresolved.md` row #95: the stage is now sourced. It is **not law**: `status: proposed`, no `rank` (an organic law only once enacted), no start date.
 
 ## Stage, from the Boletín
@@ -78,4 +92,4 @@ The memorandum describes a law of forty-one articles in five chapters, two addit
 
 ## Relationships
 
-Applies in [[ES]] (as a bill); implements [[EU-AI-ACT]].
+Applies in [[ES]] (as a bill, now lapsed); implements [[EU-AI-ACT]].

@@ -8,8 +8,9 @@ alternative_names:
   - LCGC
   - Spanish Cybersecurity Coordination and Governance Bill
 description: >
-  Spanish draft law transposing the NIS2 Directive, approved by the Council
-  of Ministers on 14 January 2025 and still in parliamentary process. It
+  Spanish draft law (anteproyecto) transposing the NIS2 Directive, approved by the Council
+  of Ministers on 14 January 2025. It was not sent to the Cortes as a bill, and its handling has stopped since the Cortes were
+  dissolved on 5 October 2026 for elections on 29 November 2026. It
   would create a Centro Nacional de Ciberseguridad and distribute
   competences between the Ministry of the Interior, the Ministry of Defence
   through the Centro Criptológico Nacional, and the Ministry for Digital
@@ -35,7 +36,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-20"
+last_verified: "2026-11-08"
 previous_version: null
 successor: null
 
@@ -70,6 +71,14 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Real Decreto 806/2026, de 5 de octubre, de disolución del Congreso de los Diputados y del Senado y de convocatoria de elecciones (BOE núm. 248, 6 de octubre de 2026)"
+    url: "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20742"
+    publisher: "Boletín Oficial del Estado"
+    accessed: "2026-11-08"
+  - title: "Ciberataques en sectores críticos: a la espera de NIS2 (26 October 2026)"
+    url: "https://www.cuatrecasas.com/es/spain/propiedad-intelectual/art/ciberataques-sectores-criticos-espera-nis2"
+    publisher: "Cuatrecasas"
+    accessed: "2026-11-08"
   - title: "Anteproyecto de Ley de Coordinación y Gobernanza de la Ciberseguridad"
     url: "https://www.dsn.gob.es/en/node/24160"
     publisher: "Departamento de Seguridad Nacional — Gobierno de España"
@@ -91,6 +100,8 @@ sources:
 ---
 
 # LCGC — Anteproyecto de Ley de Coordinación y Gobernanza de la Ciberseguridad
+
+> **Re-checked 2026-11-08** (roadmap #502). The record said the draft was 'still in parliamentary process'; no source read ever showed it in the Cortes, and a law-firm article of 26 October 2026 (Cuatrecasas, a secondary source, read through a summarising fetch tool) says it was never approved as a *proyecto de ley* or sent to the Cortes, so the dissolution does not lapse it, and its handling has stopped because of the election call; a Government in caretaker status cannot send bills to the Cortes (article 21.5 of Ley 50/1997, as that article cites it). The dissolution itself is sourced on the BOE (Real Decreto 806/2026, read directly). What the next Government does with the text is open. `status` stays `proposed`; Spain's infringement (referred to the CJEU on 8 July 2026) is unchanged.
 
 > **Escalation added 2026-09-13**, closing part of `discovery/unresolved.md`
 > row #91. A law-firm alert, read directly, confirms the Commission
