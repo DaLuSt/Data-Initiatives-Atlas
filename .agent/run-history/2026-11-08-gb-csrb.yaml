@@ -5,5 +5,5 @@ summary: >
   Report stage completed 26 October 2026 with two Government defeats; Third Reading scheduled for 2 November 2026; no Royal
   Assent found. Stays proposed. India's Data Protection Board looked at: only third-party pages say applications were invited
   on 6 May 2026 and that no Chairperson or Members have been appointed; nothing changed.
-prs: []
-outcome: in-progress
+prs: [752]
+outcome: merged (#752)
