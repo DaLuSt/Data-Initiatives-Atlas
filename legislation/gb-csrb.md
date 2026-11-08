@@ -26,7 +26,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-09-26"
+last_verified: "2026-11-08"
 previous_version: null
 successor: null
 
@@ -72,9 +72,19 @@ sources:
     url: "https://en.wikipedia.org/wiki/Cyber_Security_and_Resilience_Bill"
     publisher: "Wikipedia"
     accessed: "2026-09-26"
+  - title: "Cyber Security and Resilience Bill: Government defeated twice as Lords demand stronger protections (29 October 2026)"
+    url: "https://vinciworks.com/blog/cyber-security-bill-amendments/"
+    publisher: "VinciWorks (compliance training provider, secondary)"
+    accessed: "2026-11-08"
+  - title: "Cybersecurity Awareness Month: update on the Cyber Security and Resilience Bill (15 October 2026)"
+    url: "https://www.hilldickinson.com/our-view/articles/cybersecurity-awareness-month-update-on-the-cyber-security-and-resilience-bill/"
+    publisher: "Hill Dickinson (law firm, secondary)"
+    accessed: "2026-11-08"
 ---
 
 # Cyber Security and Resilience Bill
+
+> **Re-checked 2026-11-08** (re-verification of pending instruments). Two law-firm and training-provider articles read through a summarising fetch tool: the Lords completed Report stage on **26 October 2026**, the Government was defeated twice (amendments 163 and 164, by 202 to 155 and 194 to 155), and Third Reading in the Lords was scheduled for **2 November 2026**, after which the bill returns to the Commons; a search result says the Lords finished its scrutiny on 2 November. No source read says it has received Royal Assent. bills.parliament.uk answers 403 here, so this is not from the Parliament record. `status` stays `proposed`.
 
 > **Verified 2026-08-22.** gov.uk's own "Summary of the Bill" factsheet
 > and Global Policy Watch's legal commentary were read directly and
