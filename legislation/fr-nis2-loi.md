@@ -11,7 +11,7 @@ description: >
   the Critical Entities Resilience Directive and DORA, into French law. It
   will designate ANSSI as the competent national authority for cybersecurity
   and bring roughly 15,000 entities into scope, against about 500 under
-  the NIS1 regime. Still a bill as of August 2026, not yet promulgated —
+  the NIS1 regime. Still a bill as of 8 November 2026, not yet promulgated: its debate in the Assemblée nationale's public session is listed from 9 November 2026 —
   see the entity body for how the sources' earlier contradiction was
   resolved.
 
@@ -26,7 +26,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-20"
+last_verified: "2026-11-08"
 previous_version: null
 successor: null
 
@@ -91,9 +91,15 @@ sources:
     url: "https://www.hunton.com/privacy-and-cybersecurity-law-blog/european-commission-refers-four-member-states-to-cjeu-over-nis2-transposition-delays"
     publisher: "Hunton Andrews Kurth"
     accessed: "2026-09-13"
+  - title: "NIS 2 : le projet de loi Résilience revient à l'Assemblée nationale le 9 novembre, un mois après son retrait (5 November 2026)"
+    url: "https://www.leto.legal/news/nis-2-projet-loi-resilience-assemblee-nationale-9-novembre-2026"
+    publisher: "Leto (law firm news, secondary)"
+    accessed: "2026-11-08"
 ---
 
 # Loi Résilience — France's NIS2 transposition (still a bill)
+
+> **Re-checked 2026-11-08.** The Assemblée nationale's dossier (DLR5L17N50731), read directly, still shows the Senate's adoption on 12 March 2025, the special committee's text (n° 1779) of 10 September 2025 and, as the last step, a public session listed for Monday 9 November 2026; no adoption is shown. A Leto article of 5 November 2026 (secondary) says the conférence des présidents removed the bill from the sittings of 7 and 9 October 2026 without a new date, and that the debates run from 9 to 13 November 2026 on the special committee's text. Nothing after that was read, so the bill's fate in the Assemblée is unknown. `status` stays `planned`.
 
 > **Escalation added 2026-09-13.** A law-firm alert, read directly,
 > confirms the Commission referred France to the CJEU on 8 July 2026 —

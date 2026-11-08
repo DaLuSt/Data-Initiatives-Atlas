@@ -9,5 +9,5 @@ summary: >
   stays proposed, its handling stopped by the election call. Unchanged on a fresh search: Ireland's bill (not introduced,
   per a status page of early October 2026), the Swiss e-ID (introduction postponed on 30 June 2026), Poland's mObywatel
   wallet (pilot planned for December 2026). Not re-checked: NL-BRO phases, DCAT-AP-ES.
-prs: []
-outcome: in-progress
+prs: [750]
+outcome: merged (#750)

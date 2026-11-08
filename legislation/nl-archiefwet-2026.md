@@ -16,14 +16,14 @@ level: national
 country: NL
 region: null
 
-status: planned
+status: adopted
 confidence: medium
 coverage: medium
 verification: primary-source
 
 start_date: 2027-01-01
 end_date: null
-last_verified: "2026-09-13"
+last_verified: "2026-11-08"
 previous_version: NL-ARCHIEFWET-1995
 successor: null
 
@@ -68,6 +68,8 @@ sources:
 ---
 
 # Archiefwet 2026
+
+> **Re-checked 2026-11-08.** The Eerste Kamer's dossier 35968, read directly, shows the bill adopted by the Tweede Kamer on 18 February 2025 with unanimous votes, handled as a *hamerstuk* by the Eerste Kamer on 12 May 2026, the publication dated 19 June 2026, and the entry into force 'op een bij koninklijk besluit te bepalen tijdstip'. `status` moves from `planned` to `adopted`, the vocabulary's word for an enacted instrument not yet in force (`metadata/controlled-vocabularies.md`); `start_date` stays the intended 1 January 2027.
 
 > **Narrowed 2026-09-13**, closing part of `discovery/unresolved.md` row
 > #198. Nationaal Archief's own news item confirms the intended

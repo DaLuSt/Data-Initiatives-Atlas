@@ -22,7 +22,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-10-11"
+last_verified: "2026-11-08"
 previous_version: null
 successor: null
 
@@ -60,6 +60,8 @@ sources:
 ---
 
 # Agencia de Protección de Datos Personales (Chile)
+
+> **Re-checked 2026-11-08.** Its council has not been appointed (PPC Land, 28 October 2026, secondary: a first slate was withdrawn and the Senate rejected a second on 20 May 2026 for want of two-thirds; the 1 June 2026 deadline passed). The postponement bill described on [[CL-LEY-21719]] would move the start to 15 October 2027, raise the council from three to five members and require nominees nine months before entry into force (Emol, secondary). It stays `planned`.
 
 > **Created 2026-10-11** (roadmap #473, Chile). Known from the law's title and the Diario Oficial's recitals; the law's articles on the Agency were not read. **Status `planned`:** the law creates the Agency but its main provisions enter into force on 1 December 2026, and secondary sources say it is not yet constituted.
 
