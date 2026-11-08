@@ -3,15 +3,15 @@
 > **Generated file — do not hand-edit.** Regenerate with
 > `python tools/source_hosts.py --markdown -o discovery/reverification-allowlist.md`
 
-Generated: 2026-11-02
+Generated: 2026-11-08
 
 ## Why this exists
 
-**0 of the Atlas's 1206 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
+**0 of the Atlas's 1275 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
 
 Closing that debt — the re-verification pass — needs outbound HTTPS to the hosts those URLs point at. In an environment with a restricted egress policy, this is the allowlist to request. A denial shows up as `403 to CONNECT` from the proxy, which is an environment-level network policy and cannot be changed from inside a session. See `discovery/unresolved.md` for the standing record of the sourcing debt.
 
-The Atlas currently cites **3385 source URLs** across **957 hosts**, collapsing to **695 registrable domains**.
+The Atlas currently cites **3492 source URLs** across **984 hosts**, collapsing to **718 registrable domains**.
 
 ## Highest value first
 
@@ -21,21 +21,21 @@ A domain here is an **allowlist pattern**, not a URL. Most of them also happen t
 
 | Domain | URLs | Entities | Example host | Opened | Content confirmed |
 |---|---|---|---|---|---|
-| `europa.eu` | 372 | 216 | `certification.enisa.europa.eu` | ✅ opens | ✅ 2026-08-21 |
+| `europa.eu` | 392 | 226 | `certification.enisa.europa.eu` | ✅ opens | ✅ 2026-08-21 |
 | `wikipedia.org` | 212 | 184 | `ca.wikipedia.org` | ✅ opens |  |
 | `gouv.fr` | 71 | 27 | `aide.monespacenis2.cyber.gouv.fr` | ✅ opens |  |
 | `gov.pl` | 71 | 29 | `api.dane.gov.pl` | ✅ opens |  |
 | `iso.org` | 70 | 62 | `committee.iso.org` | ✅ opens | ✅ 2026-08-21 |
 | `overheid.nl` | 59 | 43 | `data.overheid.nl` | ✅ opens |  |
+| `legislation.gov.uk` | 55 | 41 | `www.legislation.gov.uk` | ✅ opens |  |
 | `coe.int` | 55 | 43 | `edoc.coe.int` | ✅ opens | ✅ 2026-08-21 |
 | `bund.de` | 53 | 26 | `bmds.bund.de` | ✅ opens | ✅ 2026-08-21 |
-| `legislation.gov.uk` | 49 | 35 | `www.legislation.gov.uk` | ✅ opens |  |
 | `digitaleoverheid.nl` | 48 | 33 | `www.digitaleoverheid.nl` | ✅ opens |  |
 | `admin.ch` | 46 | 14 | `www.bacs.admin.ch` |  |  |
 | `gob.es` | 41 | 21 | `administracion.gob.es` | ⚠ namespace only — no site at the apex |  |
 | `government.nl` | 40 | 40 | `www.government.nl` | ✅ opens |  |
+| `boe.es` | 37 | 30 | `www.boe.es` | ✅ opens |  |
 | `un.org` | 36 | 20 | `docs.un.org` | ✅ opens |  |
-| `boe.es` | 35 | 28 | `www.boe.es` | ✅ opens |  |
 | `gesetze-im-internet.de` | 25 | 17 | `www.gesetze-im-internet.de` |  |  |
 | `rijksoverheid.nl` | 24 | 20 | `www.rijksoverheid.nl` | ✅ opens |  |
 | `noraonline.nl` | 23 | 21 | `www.noraonline.nl` |  |  |
@@ -107,11 +107,13 @@ geonovum.nl
 gesetze-im-internet.de
 gov.ae
 gov.ag
+gov.ao
 gov.au
 gov.bb
 gov.bd
 gov.be
 gov.bh
+gov.bi
 gov.bn
 gov.br
 gov.cn
@@ -120,6 +122,7 @@ gov.cz
 gov.eg
 gov.fj
 gov.gh
+gov.gn
 gov.gy
 gov.ie
 gov.in
@@ -157,6 +160,7 @@ gov.sl
 gov.so
 gov.tl
 gov.uk
+gov.vn
 gov.vu
 gov.ws
 gov.za
@@ -225,6 +229,7 @@ afapdp.org
 afdsd.fr
 afnor.org
 aftermarket-trends.de
+ager.st
 agoria.be
 aip-bg.org
 aivd.nl
@@ -246,8 +251,11 @@ app.ch
 april.org
 araba.eus
 arcep.ne
+arcep.td
+are.mr
 arena2036.de
 arnoldporter.com
+arpce.dz
 arslege.pl
 art.cm
 artci.ci
@@ -405,6 +413,7 @@ ecp.nl
 edibasics.com
 edustandaard.nl
 eerstekamer.nl
+emol.com
 eng.it
 eos-utvalget.no
 eosc.eu
@@ -433,6 +442,7 @@ forschungsinformationssystem.de
 forsvaret.no
 forumsec.org
 fraunhofer.de
+fsmlaw.org
 gabler.de
 gaia-x-hub.de
 gaia-x.at
@@ -473,10 +483,13 @@ gob.cl
 gob.do
 gob.ec
 gob.es
+gob.gt
 gob.hn
 gob.ni
 gob.pa
 gob.pe
+gob.sv
+gob.ve
 gouv.bj
 gouv.fr
 gouv.ht
@@ -492,6 +505,7 @@ health-ri.nl
 heise.de
 hessen.de
 hetwaterschapshuis.nl
+hilldickinson.com
 hoganlovells.com
 hunton.com
 hypotheses.org
@@ -502,6 +516,7 @@ ibpt.be
 ibsa.brussels
 ico.org.uk
 ictoblog.nl
+ictpolicyafrica.org
 ictu.nl
 ietf.org
 ifm.com
@@ -555,6 +570,7 @@ legalgeek.pl
 legiscope.com
 lejdd.fr
 lemauricien.com
+leto.legal
 lex.uz
 lexgo.be
 lexisnexis.co.uk
@@ -602,6 +618,7 @@ nsai.ie
 nsb.ie
 nsi.bg
 nsm.no
+ntrc.vc
 nwo.nl
 odissei-data.nl
 odoserwis.pl
@@ -619,6 +636,7 @@ openkritis.de
 opennederland.nl
 or.th
 ordnancesurvey.co.uk
+org.ls
 org.nz
 org.sz
 org.tt
@@ -641,6 +659,7 @@ pkn.pl
 plan.be
 plattform-i40.de
 politykabezpieczenstwa.pl
+ppc.land
 prebes.be
 privacy-web.nl
 privacyworld.blog
@@ -655,6 +674,7 @@ pubaffairsbruxelles.eu
 public.lu
 publicapis.io
 publictechnology.net
+puc.bz
 quality.de
 rdw.nl
 red.es
@@ -686,6 +706,7 @@ security-insider.de
 securitymadein.lu
 senat.fr
 service-architecture.com
+sgg.cg
 sgrs.be
 sidn.nl
 simontbraun.eu
@@ -706,6 +727,7 @@ sva.nl
 svb-bgt.nl
 tailte.ie
 tanzlii.org
+tas.sr
 taylorwessing.com
 taz.de
 tcontas.pt
@@ -749,6 +771,7 @@ vbo-feb.be
 vde.com
 vdek.com
 viafirma.com
+vinciworks.com
 vlaamsartsensyndicaat.be
 vlaanderen.be
 vlex.be

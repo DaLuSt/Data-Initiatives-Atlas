@@ -1,0 +1,8 @@
+date: "2026-11-09"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Housekeeping: regenerated discovery/reverification-allowlist.md (new source hosts), recorded #472 and #476 as closed and the
+  167-anchor count in docs/roadmap.md, closed the Guatemala run-history entry (#754). Checked: no entity is due or overdue on
+  the verification-age rule (1275 ok); no pull request is open.
+prs: []
+outcome: in-progress
