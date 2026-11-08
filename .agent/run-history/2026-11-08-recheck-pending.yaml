@@ -8,5 +8,5 @@ summary: >
   Chile: the bill to postpone Ley 21.719 to 15 October 2027 passed the Senate floor on 28 October 2026 (33 to 6, per Emol) and
   is in the Chamber; the Agency's council is still not appointed (per PPC Land); both secondary, because senado.cl and camara.cl
   answer 403; Ley 21.719's status moves from active to adopted (main provisions not yet in force).
-prs: []
-outcome: in-progress
+prs: [751]
+outcome: merged (#751)
