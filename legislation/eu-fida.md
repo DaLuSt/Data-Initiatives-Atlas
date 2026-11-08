@@ -26,7 +26,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-18"
+last_verified: "2026-11-09"
 previous_version: null
 successor: null
 
@@ -61,9 +61,15 @@ sources:
     url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A52023PC0360"
     publisher: "EUR-Lex (Publications Office of the European Union)"
     accessed: "2026-09-05"
+  - title: "EU Commission to withdraw financial data access proposal, draft shows (MLex, 3 November 2026)"
+    url: "https://www.mlex.com/mlex/articles/2545816"
+    publisher: "MLex (paywalled; headline and search summary only)"
+    accessed: "2026-11-09"
 ---
 
 # Regulation on a framework for Financial Data Access (FIDA)
+
+> **Re-checked 2026-11-09.** No provisional agreement was found. A search summary of an MLex article of 3 November 2026 (paywalled, not read) says a **draft** of the Commission's 2027 work programme lists the proposal for withdrawal within six months; a Council working document (WK 5041/2026) is described as a Commission non-paper on options for finalising the trilogue, saying the Council had not reached sufficient convergence. A draft work programme is not a decision, so `status` stays `proposed`.
 
 > **Created 2026-09-05**, closing part of the gap
 > [[EU-FINANCIAL-DATA-SPACE]] itself flagged: "FIDA is not modelled, and

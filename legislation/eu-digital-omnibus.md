@@ -27,7 +27,7 @@ verification: primary-source
 
 start_date: 2025-11-19
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-11-09"
 previous_version: null
 successor: null
 
@@ -96,9 +96,15 @@ sources:
   - title: "The EC's Digital Omnibus proposal — re-writing the EU's digital rulebook"
     url: "https://www.taylorwessing.com/en/insights-and-events/insights/2025/11/rd-the-ecs-digital-omnibus-proposal-re-writing-the-eus-digital-rulebook"
     publisher: "Taylor Wessing"
+  - title: "Digital Omnibus: EU Council establishes position (27 October 2026)"
+    url: "https://www.cuatrecasas.com/en/latam/intellectual-property/art/digital-omnibus-eu-council-establishes-position"
+    publisher: "Cuatrecasas (law firm, secondary)"
+    accessed: "2026-11-09"
 ---
 
 # Digital Omnibus (proposal)
+
+> **Re-checked 2026-11-09.** A Cuatrecasas article of 27 October 2026 (secondary, read through a summarising fetch tool) says the Member States' ambassadors approved the Council's negotiating mandate on the data part on **21 October 2026** (published on 22 October as document 14756/26): the Council rejects the change to the definition of personal data and handles pseudonymisation in a new Article 25a GDPR, keeps the cookie rules in the ePrivacy Directive, keeps the 96-hour breach-reporting timeline with a larger role for the EDPB, and keeps the Platform-to-Business Regulation. The European Parliament had not set its position, so trilogues had not started. The Council's own document was not read. `status` stays `proposed`.
 
 > **Re-verified 2026-08-28, one significant correction.** This entity's
 > identifying CELEX/COM number was wrong: **COM(2025) 836** is a distinct

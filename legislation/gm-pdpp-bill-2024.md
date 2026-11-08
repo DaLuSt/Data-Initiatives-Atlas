@@ -8,19 +8,19 @@ description: >
   Bill of The Gambia, published by the National Assembly, setting data-
   protection principles, data-subject rights, offences and controller
   duties, with the Information Commission as the supervisory Commission.
-  Whether it has been assented to is not established.
+  The National Assembly's own bill page lists it as assented (timeline entry of 15 July 2026); the date it took effect is not established.
 
 level: national
 country: GM
 region: null
 
-status: proposed
+status: adopted
 confidence: medium
 coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-10-11"
+last_verified: "2026-11-09"
 previous_version: null
 successor: null
 
@@ -43,9 +43,15 @@ sources:
     url: "https://assembly.gm/documents/364/download"
     publisher: "National Assembly of The Gambia"
     accessed: "2026-10-11"
+  - title: "Data Protection and Privacy Bill, 2024 — bill page (current stage Assented)"
+    url: "https://assembly.gm/bills/364"
+    publisher: "National Assembly of The Gambia"
+    accessed: "2026-11-09"
 ---
 
 # Personal Data Protection and Privacy Bill, 2024 (The Gambia)
+
+> **Re-checked 2026-11-09.** The Assembly's own bill page (assembly.gm/bills/364, read directly through a summarising fetch tool) shows *Current Stage: Assented*, *Status: Published*, and a single timeline entry, 'July 15, 2026 at 10:25 AM', updated by an Assembly staff member; it lists no first reading, committee or passing dates and no bill number. Secondary sources reported the Assembly passing the bill on 29 September 2025, and one legal-reference site gives assent by the President on 7 November 2025, which does not match the 15 July 2026 entry, so the **assent date is unresolved**: the entry may record when the page was updated, not the assent. `status` moves from `proposed` to `adopted` (assented, in force not established). The Act's own gazette notice was not found.
 
 > **Created 2026-10-11** (roadmap #472, The Gambia). The text read is the Bill as published by the National Assembly; it is filed as `proposed` because **assent was not established**. Secondary sources report the Assembly passing it on 29 September 2025 and disagree on whether it has become law; none was read.
 
