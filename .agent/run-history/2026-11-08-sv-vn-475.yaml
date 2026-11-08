@@ -6,5 +6,5 @@ summary: >
   from a State Bank of Viet Nam page through a summarising fetch tool). Guatemala (no general data protection law found; the
   Decreto 94-96 telecommunications law via WIPO Lex) and Laos (no official text found) searched, nothing added. Row #241,
   candidate C10 (29 of 193 left; 166 anchors).
-prs: []
-outcome: in-progress
+prs: [753]
+outcome: merged (#753)
