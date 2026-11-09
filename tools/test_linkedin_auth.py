@@ -387,5 +387,54 @@ class TestSafetyOfTheSource(unittest.TestCase):
         self.assertIn("tools/linkedin_auth.py", text)
 
 
+class TestPageFlow(unittest.TestCase):
+    PAGE_REPLY = {"access_token": TOKEN, "expires_in": 5184000, "scope": "w_organization_social"}
+
+    def test_the_page_asks_only_for_the_organisation_permission(self):
+        url = la.build_authorize_url("cid", 8080, "S", la.PAGE_SCOPES)
+        scope = urllib.parse.parse_qs(urllib.parse.urlsplit(url).query)["scope"][0]
+        self.assertEqual(scope, "w_organization_social")
+
+    def test_the_page_flow_returns_the_pages_three_values_and_looks_nothing_up(self):
+        calls, kw = fake_flow(token_reply=self.PAGE_REPLY)
+        v = la.authorise("cid", SECRET, 8080, organization_id="123456789", **kw)
+        self.assertEqual(v["LINKEDIN_PAGE_ACCESS_TOKEN"], TOKEN)
+        self.assertEqual(v["LINKEDIN_PAGE_URN"], "urn:li:organization:123456789")
+        self.assertEqual(v["LINKEDIN_PAGE_TOKEN_EXPIRES"], "2026-12-08")
+        self.assertEqual(calls["fetch"], [])
+        self.assertIn("scope=w_organization_social", calls["opened"][0])
+
+    def test_the_profile_values_are_not_in_the_pages_result(self):
+        _, kw = fake_flow(token_reply=self.PAGE_REPLY)
+        v = la.authorise("cid", SECRET, 8080, organization_id="1", **kw)
+        self.assertNotIn("LINKEDIN_ACCESS_TOKEN", v)
+        self.assertNotIn("LINKEDIN_AUTHOR_URN", v)
+
+    def test_a_token_without_the_organisation_permission_is_refused(self):
+        _, kw = fake_flow(token_reply={"access_token": TOKEN, "scope": "r_liteprofile"})
+        with self.assertRaisesRegex(la.AuthError, "w_organization_social"):
+            la.authorise("cid", SECRET, 8080, organization_id="1", **kw)
+
+    def test_a_page_number_that_is_not_digits_is_refused_before_anything_opens(self):
+        calls, kw = fake_flow(token_reply=self.PAGE_REPLY)
+        with self.assertRaises(la.AuthError):
+            la.authorise("cid", SECRET, 8080, organization_id="my-page", **kw)
+        self.assertEqual(calls["opened"], [])
+
+    def test_the_report_names_the_pages_environment_and_values(self):
+        said = []
+        la.report({"LINKEDIN_PAGE_ACCESS_TOKEN": TOKEN, "LINKEDIN_PAGE_URN": "urn:li:organization:1",
+                   "LINKEDIN_PAGE_TOKEN_EXPIRES": "2026-12-08", "refresh": False}, said.append)
+        text = "\n".join(said)
+        for needle in ("Environments > linkedin-page", "LINKEDIN_PAGE_ACCESS_TOKEN", "urn:li:organization:1",
+                       "LINKEDIN_PAGE_TOKEN_EXPIRES"):
+            self.assertIn(needle, text)
+
+    def test_the_page_secret_is_never_shown_except_the_token(self):
+        calls, kw = fake_flow(token_reply=self.PAGE_REPLY)
+        la.authorise("cid", SECRET, 8080, organization_id="1", **kw)
+        self.assertNotIn(SECRET, "\n".join(calls["said"]))
+
+
 if __name__ == "__main__":
     unittest.main()

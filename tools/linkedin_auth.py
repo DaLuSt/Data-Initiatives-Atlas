@@ -30,6 +30,18 @@ browser then shows "this site can't be reached" for an address starting
 http://localhost:8080/callback?code=..., and you paste that whole address into the
 terminal. The code in it is single-use and useless without the Client Secret.
 
+The LinkedIn Page has its own app (LinkedIn allows the Community Management API only on an app
+that has no other product) and its own environment. For it, run
+
+    export LINKEDIN_CLIENT_ID=...        # the Page app's Client ID
+    python tools/linkedin_auth.py --page --organization-id 123456789
+
+It asks for the permission `w_organization_social` only, needs no OpenID product (the
+Page's number is given, not looked up) and prints the values for the environment
+`linkedin-page`: LINKEDIN_PAGE_ACCESS_TOKEN, LINKEDIN_PAGE_URN (urn:li:organization:<id>)
+and LINKEDIN_PAGE_TOKEN_EXPIRES. The person who approves the consent screen must be an
+administrator of the Page. See docs/credentials.md, section 3.
+
 Standard library only.
 """
 
@@ -56,6 +68,8 @@ USERINFO_URL = "https://api.linkedin.com/v2/userinfo"
 # openid + profile identify the member (the `sub` becomes the author ID);
 # w_member_social is the permission to post on the member's behalf.
 SCOPES = ("openid", "profile", "w_member_social")
+# The Page's app: the Community Management API's permission to post for an organisation.
+PAGE_SCOPES = ("w_organization_social",)
 DEFAULT_PORT = 8080
 CALLBACK_PATH = "/callback"
 WAIT_SECONDS = 300
@@ -69,13 +83,13 @@ def redirect_uri(port: int) -> str:
     return f"http://localhost:{port}{CALLBACK_PATH}"
 
 
-def build_authorize_url(client_id: str, port: int, state: str) -> str:
+def build_authorize_url(client_id: str, port: int, state: str, scopes: tuple = SCOPES) -> str:
     query = urllib.parse.urlencode({
         "response_type": "code",
         "client_id": client_id,
         "redirect_uri": redirect_uri(port),
         "state": state,
-        "scope": " ".join(SCOPES),
+        "scope": " ".join(scopes),
     }, quote_via=urllib.parse.quote)
     return f"{AUTHORIZE_URL}?{query}"
 
@@ -192,10 +206,19 @@ def _esc(text: str) -> str:
 
 def authorise(client_id: str, client_secret: str, port: int = DEFAULT_PORT, *,
               open_browser=webbrowser.open, say=print, receive=wait_for_code,
-              exchange=post_form, fetch=get_json, today: dt.date | None = None) -> dict:
-    """Run the flow; return the three values. All I/O is injectable for tests."""
+              exchange=post_form, fetch=get_json, today: dt.date | None = None,
+              organization_id: str | None = None) -> dict:
+    """Run the flow; return the three values. All I/O is injectable for tests.
+
+    With `organization_id` the flow is the Page's: the permission is w_organization_social,
+    nothing is looked up, and the values carry the LINKEDIN_PAGE_* names.
+    """
+    page = organization_id is not None
+    if page and not str(organization_id).isdigit():
+        raise AuthError("the Page's number must be digits only (the number in the Page admin URL, "
+                        "linkedin.com/company/<number>/admin/)")
     state = secrets.token_urlsafe(24)
-    url = build_authorize_url(client_id, port, state)
+    url = build_authorize_url(client_id, port, state, PAGE_SCOPES if page else SCOPES)
     say("Opening LinkedIn in your browser. If nothing opens, paste this address into it:")
     say(url)
     open_browser(url)
@@ -210,6 +233,16 @@ def authorise(client_id: str, client_secret: str, port: int = DEFAULT_PORT, *,
     access = token.get("access_token")
     if not access:
         raise AuthError("LinkedIn's reply had no access_token")
+    if page:
+        if "w_organization_social" not in str(token.get("scope", "w_organization_social")):
+            raise AuthError("the token does not carry w_organization_social; is the Community Management "
+                            "API approved on the app, and was it approved on the consent screen?")
+        return {
+            "LINKEDIN_PAGE_ACCESS_TOKEN": access,
+            "LINKEDIN_PAGE_URN": f"urn:li:organization:{organization_id}",
+            "LINKEDIN_PAGE_TOKEN_EXPIRES": expiry_date(token.get("expires_in", 5184000), today),
+            "refresh": "refresh_token" in token,
+        }
     if "w_member_social" not in str(token.get("scope", "w_member_social")):
         raise AuthError("the token does not carry w_member_social; is the 'Share on LinkedIn' "
                         "product added to the app, and was it approved on the consent screen?")
@@ -226,14 +259,19 @@ def authorise(client_id: str, client_secret: str, port: int = DEFAULT_PORT, *,
 
 
 def report(values: dict, say=print) -> None:
+    page = "LINKEDIN_PAGE_ACCESS_TOKEN" in values
+    prefix = "LINKEDIN_PAGE" if page else "LINKEDIN"
+    token_name = prefix + "_ACCESS_TOKEN"
+    urn_name = "LINKEDIN_PAGE_URN" if page else "LINKEDIN_AUTHOR_URN"
+    w = 29 if page else 24
     say("")
-    say("Done. In GitHub, open Settings > Environments > linkedin and add:")
-    say("  Secret    LINKEDIN_ACCESS_TOKEN   (the token below)")
-    say("  Secret    LINKEDIN_AUTHOR_URN     " + values["LINKEDIN_AUTHOR_URN"])
-    say("  Variable  LINKEDIN_TOKEN_EXPIRES  " + values["LINKEDIN_TOKEN_EXPIRES"])
+    say(f"Done. In GitHub, open Settings > Environments > {'linkedin-page' if page else 'linkedin'} and add:")
+    say(f"  Secret    {token_name:<{w}}(the token below)")
+    say(f"  Secret    {urn_name:<{w}}" + values[urn_name])
+    say(f"  Variable  {prefix + '_TOKEN_EXPIRES':<{w}}" + values[prefix + "_TOKEN_EXPIRES"])
     say("")
-    say("LINKEDIN_ACCESS_TOKEN (copy it now; this script does not save it):")
-    say(values["LINKEDIN_ACCESS_TOKEN"])
+    say(f"{token_name} (copy it now; this script does not save it):")
+    say(values[token_name])
     say("")
     if values["refresh"]:
         say("Note: LinkedIn also issued a refresh token. This script does not print or keep it;")
@@ -248,6 +286,10 @@ def main(argv: list[str] | None = None) -> int:
                       help="paste the redirect address instead of receiving it (automatic in a Codespace)")
     mode.add_argument("--listen", action="store_true",
                       help="receive the redirect on this computer, even in a Codespace")
+    ap.add_argument("--page", action="store_true",
+                    help="authorise the LinkedIn Page's app (w_organization_social) instead of the profile")
+    ap.add_argument("--organization-id", default=os.environ.get("LINKEDIN_ORGANIZATION_ID", "").strip(),
+                    help="with --page: the Page's number (or set LINKEDIN_ORGANIZATION_ID)")
     ap.add_argument("--port", type=int, default=DEFAULT_PORT,
                     help=f"local port for the redirect (default {DEFAULT_PORT}); the redirect URL "
                          "in the LinkedIn app must match")
@@ -262,10 +304,16 @@ def main(argv: list[str] | None = None) -> int:
     if not client_id or not client_secret:
         print("error: the Client ID and Client Secret are both needed", file=sys.stderr)
         return 2
+    if args.page and not args.organization_id:
+        args.organization_id = input("The Page's number (digits, from linkedin.com/company/<number>/admin/): ").strip()
+    if args.organization_id and not args.page:
+        print("error: --organization-id is only for --page", file=sys.stderr)
+        return 2
     manual = args.manual or (os.environ.get("CODESPACES") == "true" and not args.listen)
     try:
         report(authorise(client_id, client_secret, args.port,
-                         receive=paste_for_code if manual else wait_for_code))
+                         receive=paste_for_code if manual else wait_for_code,
+                         organization_id=args.organization_id if args.page else None))
     except AuthError as err:
         print(f"error: {err}", file=sys.stderr)
         return 1

@@ -413,13 +413,14 @@ class TestWorkflow(unittest.TestCase):
         self.assertIn("--label linkedin", pub)
         self.assertIn("gh issue list --state all --label linkedin", self.TEXT)
 
-    def test_the_draft_issue_reminds_the_owner_to_post_on_the_page_by_hand(self):
+    def test_the_draft_issue_reminds_the_owner_to_post_on_the_page(self):
         pub = (REPO_ROOT / ".github" / "workflows" / "release-publish.yml").read_text(encoding="utf-8")
-        self.assertIn("Also post it on the Data Initiatives Atlas LinkedIn Page, by hand", pub)
+        self.assertIn("Also post it on the Data Initiatives Atlas LinkedIn Page.", pub)
+        self.assertIn("Post release on LinkedIn Page", pub)
         self.assertIn("docs/linkedin-page-posts.md", pub)
         # The reminder comes before the draft block, so extraction still finds the draft first.
         self.assertLess(pub.index("Also post it on the Data Initiatives Atlas LinkedIn Page"), pub.index("echo '```text'"))
-        body = "A draft.\n\n**Also post it on the Data Initiatives Atlas LinkedIn Page, by hand:** x\n\n```text\nThe draft\n```\n"
+        body = "A draft.\n\n**Also post it on the Data Initiatives Atlas LinkedIn Page.** x\n\n```text\nThe draft\n```\n"
         self.assertEqual(lp.extract_draft(body), "The draft\n")
 
     def test_the_text_is_shown_on_the_runs_summary_page(self):
@@ -435,6 +436,190 @@ class TestWorkflow(unittest.TestCase):
         self.assertTrue((REPO_ROOT / "tools" / "linkedin_post.py").exists())
         self.assertIn("python tools/linkedin_post.py extract", self.TEXT)
         self.assertIn("python tools/linkedin_post.py post", self.TEXT)
+
+
+PAGE = "urn:li:organization:123456789"
+
+
+class TestPagePost(unittest.TestCase):
+    """The same poster, in the name of the LinkedIn Page (--page)."""
+
+    def go(self, **kw):
+        args = dict(text="Hello Page\n", author=PAGE, token=TOKEN, version="202610", today=TODAY,
+                    sender=fake_sender(), say=lambda *_: None, page=True)
+        args.update(kw)
+        return lp.post(**args)
+
+    def test_the_post_is_made_in_the_name_of_the_page(self):
+        seen = []
+        self.go(sender=fake_sender(seen=seen))
+        self.assertEqual(json.loads(seen[0].data)["author"], PAGE)
+
+    def test_the_text_sent_is_the_same_as_for_the_profile(self):
+        page, profile = [], []
+        self.go(sender=fake_sender(seen=page))
+        self.go(author=AUTHOR, page=False, sender=fake_sender(seen=profile))
+        self.assertEqual(json.loads(page[0].data)["commentary"], json.loads(profile[0].data)["commentary"])
+
+    def test_a_person_is_refused_as_the_page(self):
+        with self.assertRaisesRegex(lp.PostError, "LINKEDIN_PAGE_URN must look like urn:li:organization"):
+            self.go(author=AUTHOR)
+
+    def test_a_page_id_that_is_not_a_number_is_refused(self):
+        with self.assertRaises(lp.PostError):
+            self.go(author="urn:li:organization:abc")
+
+    def test_a_missing_token_names_the_pages_secret(self):
+        with self.assertRaisesRegex(lp.PostError, "LINKEDIN_PAGE_ACCESS_TOKEN is not set"):
+            self.go(token="")
+
+    def test_an_expired_token_names_the_pages_renewal(self):
+        with self.assertRaisesRegex(lp.PostError, r"linkedin_auth\.py --page"):
+            self.go(expires="2026-10-01")
+
+    def test_a_bad_expiry_names_the_pages_variable(self):
+        with self.assertRaisesRegex(lp.PostError, "LINKEDIN_PAGE_TOKEN_EXPIRES"):
+            self.go(expires="soon")
+
+    def test_errors_name_the_pages_permission_and_environment(self):
+        for status, needle in ((401, "linkedin-page"), (403, "w_organization_social")):
+            with self.subTest(status=status):
+                with self.assertRaises(lp.PostError) as cm:
+                    self.go(sender=fake_sender(status=status, body="nope"))
+                self.assertIn(needle, str(cm.exception))
+                self.assertNotIn("w_member_social", str(cm.exception))
+
+    def test_a_dry_run_sends_nothing(self):
+        seen, said = [], []
+        self.assertIsNone(self.go(dry_run=True, token="", sender=fake_sender(seen=seen), say=said.append))
+        self.assertEqual(seen, [])
+        self.assertIn(PAGE, said[0])
+
+    def test_main_reads_the_pages_variables_not_the_profiles(self):
+        env = {"LINKEDIN_PAGE_URN": PAGE, "LINKEDIN_PAGE_ACCESS_TOKEN": TOKEN,
+               "LINKEDIN_PAGE_TOKEN_EXPIRES": "2027-01-01", "LINKEDIN_AUTHOR_URN": AUTHOR,
+               "LINKEDIN_ACCESS_TOKEN": "profile-token"}
+        with tempfile.NamedTemporaryFile("w", suffix=".txt", delete=False) as fh:
+            fh.write("hi")
+        out = io.StringIO()
+        with mock.patch.dict("os.environ", env, clear=True), \
+                mock.patch.object(lp, "post", return_value="https://x/") as p, redirect_stdout(out):
+            code = lp.main(["post", "--page", "--text-file", fh.name])
+        self.assertEqual(code, 0)
+        args = p.call_args
+        self.assertEqual(args.args[1], PAGE)
+        self.assertEqual(args.args[2], TOKEN)
+        self.assertEqual(args.kwargs["expires"], "2027-01-01")
+        self.assertIs(args.kwargs["page"], True)
+
+    def test_main_without_page_still_uses_the_profile(self):
+        env = {"LINKEDIN_PAGE_URN": PAGE, "LINKEDIN_PAGE_ACCESS_TOKEN": "page-token",
+               "LINKEDIN_AUTHOR_URN": AUTHOR, "LINKEDIN_ACCESS_TOKEN": TOKEN}
+        with tempfile.NamedTemporaryFile("w", suffix=".txt", delete=False) as fh:
+            fh.write("hi")
+        with mock.patch.dict("os.environ", env, clear=True), \
+                mock.patch.object(lp, "post", return_value="https://x/") as p, redirect_stdout(io.StringIO()):
+            lp.main(["post", "--text-file", fh.name])
+        self.assertEqual(p.call_args.args[1], AUTHOR)
+        self.assertEqual(p.call_args.args[2], TOKEN)
+        self.assertIs(p.call_args.kwargs["page"], False)
+
+
+class TestPageWorkflow(unittest.TestCase):
+    PATH = REPO_ROOT / ".github" / "workflows" / "linkedin-page-post.yml"
+    TEXT = PATH.read_text(encoding="utf-8")
+    PROFILE = (REPO_ROOT / ".github" / "workflows" / "linkedin-post.yml").read_text(encoding="utf-8")
+
+    @classmethod
+    def setUpClass(cls):
+        import yaml
+        cls.wf = yaml.safe_load(cls.TEXT)
+        cls.job = cls.wf["jobs"]["post"]
+        cls.on = cls.wf.get("on", cls.wf.get(True))
+
+    def step(self, name):
+        return next(s for s in self.job["steps"] if s.get("name") == name)
+
+    def test_it_runs_only_in_its_own_protected_environment(self):
+        self.assertEqual(self.job["environment"], "linkedin-page")
+
+    def test_it_is_a_separate_pipeline_from_the_profile_post(self):
+        self.assertNotEqual(self.wf["name"], "Post release on LinkedIn")
+        self.assertEqual(self.wf["concurrency"]["group"], "linkedin-page-post")
+        self.assertIs(self.wf["concurrency"]["cancel-in-progress"], False)
+
+    def test_it_cannot_be_started_by_a_pull_request_or_a_push(self):
+        self.assertEqual(set(self.on), {"workflow_run", "workflow_dispatch"})
+        wr = self.on["workflow_run"]
+        self.assertEqual((wr["workflows"], wr["branches"]), (["Publish release"], ["main"]))
+
+    def test_the_automatic_path_has_its_own_switch(self):
+        cond = self.job["if"]
+        self.assertIn("vars.LINKEDIN_PAGE_POST_ENABLED == 'true'", cond)
+        self.assertNotIn("vars.LINKEDIN_POST_ENABLED", cond)
+        self.assertIn("workflow_run.conclusion == 'success'", cond)
+
+    def test_a_manual_run_is_a_dry_run_by_default(self):
+        self.assertIs(self.on["workflow_dispatch"]["inputs"]["dry_run"]["default"], True)
+
+    def test_least_privilege(self):
+        self.assertEqual(self.wf["permissions"], {"contents": "read", "issues": "write"})
+
+    def test_the_pages_secrets_appear_only_in_the_posting_step(self):
+        for step in self.job["steps"]:
+            self.assertNotIn("secrets.", json.dumps(step.get("run", "")), step.get("name"))
+        self.assertEqual(self.TEXT.count("secrets.LINKEDIN_PAGE_ACCESS_TOKEN"), 1)
+        self.assertEqual(self.TEXT.count("secrets.LINKEDIN_PAGE_URN"), 1)
+        env = self.step("Post to the LinkedIn Page")["env"]
+        self.assertIn("secrets.LINKEDIN_PAGE_ACCESS_TOKEN", env["LINKEDIN_PAGE_ACCESS_TOKEN"])
+
+    def test_it_never_uses_the_profiles_secrets(self):
+        self.assertNotIn("secrets.LINKEDIN_ACCESS_TOKEN", self.TEXT)
+        self.assertNotIn("secrets.LINKEDIN_AUTHOR_URN", self.TEXT)
+        self.assertNotIn("secrets.LINKEDIN_PAGE_ACCESS_TOKEN", self.PROFILE)
+
+    def test_it_posts_the_same_draft_as_the_profile(self):
+        # Same issue, same extraction, read after the approval.
+        for needle in ('title="Post data release $version on LinkedIn"', "--label linkedin ",
+                       "python tools/linkedin_post.py extract --issue-body-file issue.md",
+                       "Read after the approval"):
+            self.assertIn(needle, self.TEXT)
+            self.assertIn(needle, self.PROFILE)
+        self.assertIn("python tools/linkedin_post.py post --page --text-file post.txt", self.TEXT)
+
+    def test_it_will_not_post_twice_and_works_on_a_closed_issue(self):
+        run = self.step("Find the release and its draft issue")["run"]
+        self.assertIn("linkedin-page-posted", run)
+        self.assertNotIn('"$state" != "OPEN"', run)  # the profile post closes the issue first
+        self.assertNotIn(",linkedin-posted,", run)   # the profile's label says nothing about the Page
+        rec = self.step("Record the post on the issue")
+        self.assertIn("linkedin-page-posted", rec["run"])
+
+    def test_it_never_closes_the_issue(self):
+        self.assertNotIn("gh issue close", self.TEXT)
+
+    def test_a_failure_is_reported_on_the_issue(self):
+        fail = self.step("Say it failed")
+        self.assertIn("failure()", fail["if"])
+        self.assertIn("by hand", fail["run"])
+        self.assertIn("--page", fail["run"])
+
+    def test_the_version_input_is_validated_and_found_without_python(self):
+        run = self.step("Find the release and its draft issue")["run"]
+        self.assertIn("is not a data release", run)
+        self.assertIn("metadata/version.yaml", run)
+        self.assertNotIn("import yaml", self.TEXT)
+
+    def test_actions_are_on_current_node_versions(self):
+        for step in self.job["steps"]:
+            uses = step.get("uses", "")
+            if uses.startswith(("actions/checkout", "actions/setup-python")):
+                self.assertRegex(uses, r"@v[7-9]")
+
+    def test_the_summary_shows_the_draft_and_no_secret(self):
+        run = self.step("Post to the LinkedIn Page")["run"]
+        self.assertIn("GITHUB_STEP_SUMMARY", run)
+        self.assertNotIn("LINKEDIN_PAGE_ACCESS_TOKEN", run[run.index("GITHUB_STEP_SUMMARY") - 600:])
 
 
 if __name__ == "__main__":

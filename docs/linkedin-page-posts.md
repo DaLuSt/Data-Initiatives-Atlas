@@ -8,14 +8,17 @@ are plain text, because LinkedIn does not render Markdown, and each is under Lin
 ## How they get onto the Page
 
 Posts to the **personal profile** are automated (the release workflow, `docs/credentials.md`
-section 2). Posts to a **Page** are not, and probably should not be: a Page needs the
-*Community Management API* product (permission `w_organization_social`), and LinkedIn reviews that
-request. Its review looks at an approved use case, a verified business email, a verified
-organisation and website domain, and an app verified by the Page (LinkedIn's own pages on access to
-the Community Management API, read 2026-10-09). An unfunded open-data project may well not pass it,
-and the token on file has the personal permission only (`w_member_social`), which does not post to a
-Page. For about one post a month, posting by hand from the Page is the honest choice. If you would
-rather apply, say so and it can be set up as a new roadmap item.
+section 2). Posts to the **Page** can be automated too, with a second, separate pipeline
+(`.github/workflows/linkedin-page-post.yml`, "Post release on LinkedIn Page", built 2026-11-09,
+`docs/credentials.md` section 3). It posts the *same text* as the profile, from the same draft issue,
+after its own approval. It is **switched off** until the owner has done what only the owner can:
+a Page needs the *Community Management API* product (permission `w_organization_social`), LinkedIn
+reviews that request (an approved use case, a verified business email, a verified organisation and
+website domain, and an app verified by the Page, per LinkedIn's own pages read 2026-10-09), and it
+must sit on its own app because LinkedIn allows that product only on an app with no other product.
+An unfunded open-data project may not pass the review. Until it does, or if it does not, post to the
+Page by hand: paste the draft from the issue "Post data release X on LinkedIn" into the Page, which
+is what the issue reminds you of. Nothing is lost either way.
 
 ## 1. Introduction post
 
