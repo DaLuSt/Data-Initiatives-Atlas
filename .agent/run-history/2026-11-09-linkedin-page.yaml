@@ -1,0 +1,10 @@
+date: "2026-11-09"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Owner request (Dutch): a second release LinkedIn pipeline that posts the same message to the Page. Built
+  linkedin-page-post.yml (own environment linkedin-page, own switch LINKEDIN_PAGE_POST_ENABLED, never closes the
+  issue, own label linkedin-page-posted), tools/linkedin_post.py --page, tools/linkedin_auth.py --page, tests, and
+  docs/credentials.md section 3. Switched off: needs a separate Page app with LinkedIn's Community Management API
+  approval, which only the owner can request and which may be refused; nothing has been posted to a Page.
+prs: []
+outcome: in-progress

@@ -10,6 +10,7 @@ built yet; the build items are the roadmap issues named in each section. Written
 |---|---|---|---|
 | `PROJECT_TOKEN` (classic personal access token, `project` scope) | `project-board.yml` keeps the public Project board in step with the roadmap issues | Chosen by the owner when the token was created (not readable from the repository) | [#496](https://github.com/DaLuSt/Data-Initiatives-Atlas/issues/496), 2026.12 |
 | LinkedIn access token (OAuth, `w_member_social`) | Posting a data release to LinkedIn after the owner approves | **60 days** (LinkedIn's authorization-code flow documents 60 days for access tokens) | [#515](https://github.com/DaLuSt/Data-Initiatives-Atlas/issues/515), 2027.01 |
+| LinkedIn Page access token (OAuth, `w_organization_social`, a second app) | Posting the same text to the Data Initiatives Atlas LinkedIn Page after the owner approves (section 3) | Also about 60 days | Needs LinkedIn's approval of the Community Management API first |
 
 Common rules for both: the secret lives only in GitHub (*Settings → Secrets and
 variables → Actions*), never in the repository, an issue, a workflow log or the
@@ -282,3 +283,76 @@ life; the consent and `state` parameters) and *Posts API* (endpoint, required
 headers, `201` with `x-restli-id`, `w_member_social` and `w_organization_social`),
 on Microsoft Learn, read 2026-10-08. LinkedIn changes versions and products;
 re-read them when building.
+
+---
+
+## 3. The LinkedIn Page pipeline (second release post)
+
+The release workflow already posts the release text to the owner's **profile** (section 2). A second, independent
+pipeline posts **the same text** to the **Data Initiatives Atlas Page**. It is built and switched off: it does
+nothing until the owner has the Page's own app approved by LinkedIn and has added its secrets (below).
+
+### What was built (2026-11-09)
+
+- **`.github/workflows/linkedin-page-post.yml`**, "Post release on LinkedIn Page". Same shape as the profile workflow:
+  it finds the issue "Post data release X on LinkedIn", reads its first ` ```text ` block *after* the approval (so
+  the owner's edits to the draft are what both the profile and the Page get), and posts it. It runs in its own GitHub
+  Environment, **`linkedin-page`**, so it has its own required reviewer, its own approval and its own secrets. The
+  automatic path (after "Publish release" succeeds) runs only when the repository variable
+  **`LINKEDIN_PAGE_POST_ENABLED`** is `true`; by hand (*Actions → Post release on LinkedIn Page → Run workflow*) it is a
+  dry run unless unticked.
+- **How it differs from the profile workflow.** It never closes the issue (the profile post does). It records its own
+  post with the label `linkedin-page-posted` and a comment, and it skips only when that label is there, so it works on an
+  issue that the profile post has already closed, and the two never block each other. Both can wait for their own
+  approval at the same time.
+- **`tools/linkedin_post.py post --page`** posts in the name of `urn:li:organization:<number>` with the Page's own
+  variables (`LINKEDIN_PAGE_ACCESS_TOKEN`, `LINKEDIN_PAGE_URN`, `LINKEDIN_PAGE_TOKEN_EXPIRES`), and its error messages
+  name the Page's permission and environment instead of the profile's. The request is the same Posts API call as for
+  the profile (`POST https://api.linkedin.com/rest/posts`), with the Page as `author`.
+- **`tools/linkedin_auth.py --page --organization-id <number>`** runs the authorisation for the Page's app: it asks
+  for `w_organization_social` only, looks nothing up (no OpenID product is needed, the Page's number is given) and
+  prints the three values for the environment `linkedin-page`. The person who approves the consent screen must be an
+  administrator of the Page.
+
+### Why a second app and a second environment
+
+LinkedIn's partner support guide (read through search on 2026-11-09, on Microsoft Learn) says the Community Management
+API, the product that carries `w_organization_social`, must be the **only product on its developer app**; an app that
+already has *Share on LinkedIn* cannot add it. The Page therefore needs a **new app**, a separate token and a separate
+environment. Keeping the profile and the Page apart also means that if one token expires or one app is refused, the other
+pipeline keeps working.
+
+### What only the owner can do (the part that may not succeed)
+
+1. **Get access.** Create a new LinkedIn developer app for the Page (associated with the Page, verified by a Page
+   administrator) and request the **Community Management API** on it. LinkedIn reviews that request. Search results
+   citing LinkedIn's migration guide say these APIs are available only to **registered legal organisations for
+   commercial use cases** and that a Development tier (limited calls, to be used within twelve months) comes before a
+   Standard tier; that was not read from LinkedIn's pages directly and LinkedIn changes it, so read the current terms
+   before applying. An unfunded open-data project may not qualify. If LinkedIn refuses, the pipeline stays off and
+   the Page is posted to by hand from the same draft issue (`docs/linkedin-page-posts.md`), which loses nothing.
+2. **Add the app's redirect URL** `http://localhost:8080/callback` and run, on your own computer (or in paste mode in a
+   Codespace, as in section 2): `export LINKEDIN_CLIENT_ID=<the Page app's Client ID>` then
+   `python tools/linkedin_auth.py --page --organization-id <the Page's number>`. The Page's number is the one in the
+   Page's admin address when you are signed in as an administrator (it looks like `linkedin.com/company/<number>/admin/`; check it on your own Page).
+3. **In GitHub**, *Settings → Environments → New environment* named `linkedin-page`, with yourself as a required
+   reviewer; add the secrets `LINKEDIN_PAGE_ACCESS_TOKEN` and `LINKEDIN_PAGE_URN` and the variable
+   `LINKEDIN_PAGE_TOKEN_EXPIRES` that the script prints.
+4. **Try it without posting:** *Actions → Post release on LinkedIn Page → Run workflow* for the latest release,
+   dry run ticked; approve it in the `linkedin-page` environment. The run's summary shows the text.
+5. **Post once for real** by unticking dry run (the first real post is the test; the Page's post can be deleted on
+   LinkedIn if something is wrong), then set the repository variable `LINKEDIN_PAGE_POST_ENABLED` to `true`. From then on
+   every release opens one approval for the profile and one for the Page.
+
+### The 60-day token
+
+Same as section 2: the token lasts about 60 days; `LINKEDIN_PAGE_TOKEN_EXPIRES` is a day early; the poster warns in
+the last 14 days and refuses to post after the date, saying to run `tools/linkedin_auth.py --page` again. A `401` is
+reported on the issue in the same words and nothing is posted.
+
+### Not verified
+
+No post has been made to a Page, because no Page app exists yet: the code is tested against a fake LinkedIn (the same
+way as the profile poster was before its first real post), not against LinkedIn. The one assumption not confirmed from
+a LinkedIn page read directly is that a Page post uses the same `POST /rest/posts` call with an organization `author`;
+LinkedIn's Posts API documentation lists `w_organization_social` for it (section 2, Sources).

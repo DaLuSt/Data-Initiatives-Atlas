@@ -11,6 +11,16 @@ member's token, and prints the link to the post. It talks to LinkedIn's Posts AP
     LINKEDIN_API_VERSION    YYYYMM of the Posts API (default: last month) (optional)
 
     python tools/linkedin_post.py post --text-file post.txt [--dry-run]
+    python tools/linkedin_post.py post --page --text-file post.txt [--dry-run]   # the LinkedIn Page
+
+With --page the post goes out in the name of the Data Initiatives Atlas Page, with the
+Page's own app and token (docs/credentials.md, section 3):
+
+    LINKEDIN_PAGE_ACCESS_TOKEN   from tools/linkedin_auth.py --page          (secret)
+    LINKEDIN_PAGE_URN            urn:li:organization:<id>                    (secret)
+    LINKEDIN_PAGE_TOKEN_EXPIRES  YYYY-MM-DD, from tools/linkedin_auth.py --page (optional)
+    LINKEDIN_API_VERSION         as above
+
     python tools/linkedin_post.py extract --issue-body-file issue.md   # the draft in an issue
 
 Exit status: 0 posted (or a dry run), 1 the post failed, 2 refused before sending
@@ -36,6 +46,7 @@ WARN_DAYS = 14
 # be shown as itself (Microsoft Learn, Posts API > little text format).
 RESERVED = "\\|{}@[]()<>#*_~"
 AUTHOR_RE = re.compile(r"^urn:li:(person|organization):[A-Za-z0-9_-]+$")
+PAGE_RE = re.compile(r"^urn:li:organization:[0-9]+$")
 
 
 class PostError(Exception):
@@ -72,14 +83,14 @@ def default_version(today: dt.date | None = None) -> str:
     return f"{last.year}{last.month:02d}"
 
 
-def days_left(expires: str, today: dt.date | None = None) -> int | None:
+def days_left(expires: str, today: dt.date | None = None, name: str = "LINKEDIN_TOKEN_EXPIRES") -> int | None:
     """Days until the token's recorded expiry date; None when it is not recorded."""
     if not expires:
         return None
     try:
         when = dt.date.fromisoformat(expires.strip())
     except ValueError:
-        raise PostError(f"LINKEDIN_TOKEN_EXPIRES is not a YYYY-MM-DD date: {expires!r}", 2) from None
+        raise PostError(f"{name} is not a YYYY-MM-DD date: {expires!r}", 2) from None
     return (when - (today or dt.date.today())).days
 
 
@@ -112,13 +123,23 @@ def send(req: urllib.request.Request) -> tuple[int, dict, str]:
         raise PostError(f"could not reach LinkedIn: {err.reason}") from None
 
 
-def explain(status: int, body: str) -> str:
+def explain(status: int, body: str, page: bool = False) -> str:
     snippet = re.sub(r"\s+", " ", body)[:300]
+    if page:
+        renew = ("the Page's token is expired or revoked: run tools/linkedin_auth.py --page again and update "
+                 "the LINKEDIN_PAGE_ACCESS_TOKEN secret and the LINKEDIN_PAGE_TOKEN_EXPIRES variable "
+                 "in the environment linkedin-page")
+        refused = ("LinkedIn refused the permission: does the Page's app have the Community Management API "
+                   "approved (w_organization_social), is the person who authorised the token an administrator "
+                   "of the Page, and does LINKEDIN_PAGE_URN name that Page?")
+    else:
+        renew = ("the token is expired or revoked: run tools/linkedin_auth.py again and update the "
+                 "LINKEDIN_ACCESS_TOKEN secret and the LINKEDIN_TOKEN_EXPIRES variable")
+        refused = ("LinkedIn refused the permission: is 'Share on LinkedIn' (w_member_social) on the app, "
+                   "and does LINKEDIN_AUTHOR_URN belong to the person who authorised the token?")
     hints = {
-        401: "the token is expired or revoked: run tools/linkedin_auth.py again and update the "
-             "LINKEDIN_ACCESS_TOKEN secret and the LINKEDIN_TOKEN_EXPIRES variable",
-        403: "LinkedIn refused the permission: is 'Share on LinkedIn' (w_member_social) on the app, "
-             "and does LINKEDIN_AUTHOR_URN belong to the person who authorised the token?",
+        401: renew,
+        403: refused,
         422: "LinkedIn rejected the text or the request",
         426: "LinkedIn does not accept this API version: set LINKEDIN_API_VERSION to a current "
              "YYYYMM (see the versions listed in LinkedIn's migration guide)",
@@ -128,23 +149,32 @@ def explain(status: int, body: str) -> str:
 
 
 def post(text: str, author: str, token: str, *, version: str | None = None, expires: str = "",
-         dry_run: bool = False, today: dt.date | None = None, sender=send, say=print) -> str | None:
-    """Post `text`. Returns the post's link, or None for a dry run."""
+         dry_run: bool = False, today: dt.date | None = None, sender=send, say=print,
+         page: bool = False) -> str | None:
+    """Post `text`. Returns the post's link, or None for a dry run.
+
+    With page=True the author must be a Page (urn:li:organization:<number>) and the
+    messages name the Page's variables instead of the profile's.
+    """
     text = text.strip() + "\n"
     if len(text) > LIMIT:
         raise PostError(f"the post is {len(text)} characters; LinkedIn's limit is {LIMIT}", 2)
     if not text.strip():
         raise PostError("the post is empty", 2)
-    if not AUTHOR_RE.match(author or ""):
+    if page:
+        if not PAGE_RE.match(author or ""):
+            raise PostError("LINKEDIN_PAGE_URN must look like urn:li:organization:<number>", 2)
+    elif not AUTHOR_RE.match(author or ""):
         raise PostError("LINKEDIN_AUTHOR_URN must look like urn:li:person:<id>", 2)
     if not token and not dry_run:
-        raise PostError("LINKEDIN_ACCESS_TOKEN is not set", 2)
-    left = days_left(expires, today)
+        raise PostError(("LINKEDIN_PAGE_ACCESS_TOKEN" if page else "LINKEDIN_ACCESS_TOKEN") + " is not set", 2)
+    auth_cmd = "tools/linkedin_auth.py --page" if page else "tools/linkedin_auth.py"
+    left = days_left(expires, today, "LINKEDIN_PAGE_TOKEN_EXPIRES" if page else "LINKEDIN_TOKEN_EXPIRES")
     if left is not None and left < 0:
-        raise PostError(f"the token expired {-left} day(s) ago ({expires}): run tools/linkedin_auth.py "
+        raise PostError(f"the token expired {-left} day(s) ago ({expires}): run {auth_cmd} "
                         "again and update the secret and the variable", 2)
     if left is not None and left <= WARN_DAYS:
-        say(f"warning: the token runs out in {left} day(s) ({expires}); run tools/linkedin_auth.py soon")
+        say(f"warning: the token runs out in {left} day(s) ({expires}); run {auth_cmd} soon")
     version = version or default_version(today)
     if dry_run:
         say(f"dry run: would post {len(text)} characters as {author} (API version {version}):")
@@ -152,7 +182,7 @@ def post(text: str, author: str, token: str, *, version: str | None = None, expi
         return None
     status, headers, body = sender(build_request(text, author, token, version))
     if status != 201:
-        raise PostError(explain(status, body))
+        raise PostError(explain(status, body, page))
     ident = headers.get("x-restli-id", "")
     if not ident:
         raise PostError("LinkedIn accepted the post but returned no post ID, so the link is unknown; "
@@ -166,6 +196,8 @@ def main(argv: list[str] | None = None) -> int:
     p = sub.add_parser("post", help="post the text in a file")
     p.add_argument("--text-file", required=True)
     p.add_argument("--dry-run", action="store_true", help="show what would be posted; send nothing")
+    p.add_argument("--page", action="store_true",
+                   help="post as the LinkedIn Page, with the LINKEDIN_PAGE_* variables")
     e = sub.add_parser("extract", help="print the draft from an issue body")
     e.add_argument("--issue-body-file", required=True)
     args = ap.parse_args(argv)
@@ -177,10 +209,12 @@ def main(argv: list[str] | None = None) -> int:
             return 0
         with open(args.text_file, encoding="utf-8") as fh:
             text = fh.read()
-        link = post(text, os.environ.get("LINKEDIN_AUTHOR_URN", "").strip(),
-                    os.environ.get("LINKEDIN_ACCESS_TOKEN", "").strip(),
+        names = (("LINKEDIN_PAGE_URN", "LINKEDIN_PAGE_ACCESS_TOKEN", "LINKEDIN_PAGE_TOKEN_EXPIRES") if args.page
+                 else ("LINKEDIN_AUTHOR_URN", "LINKEDIN_ACCESS_TOKEN", "LINKEDIN_TOKEN_EXPIRES"))
+        link = post(text, os.environ.get(names[0], "").strip(),
+                    os.environ.get(names[1], "").strip(),
                     version=os.environ.get("LINKEDIN_API_VERSION", "").strip() or None,
-                    expires=os.environ.get("LINKEDIN_TOKEN_EXPIRES", "").strip(), dry_run=args.dry_run)
+                    expires=os.environ.get(names[2], "").strip(), dry_run=args.dry_run, page=args.page)
         if link:
             print(f"posted: {link}")
         return 0

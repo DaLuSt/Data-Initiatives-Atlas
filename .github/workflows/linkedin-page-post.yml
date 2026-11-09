@@ -1,0 +1,151 @@
+name: Post release on LinkedIn Page
+
+# Posts the same draft as "Post release on LinkedIn" (the issue "Post data release X on
+# LinkedIn") to the Data Initiatives Atlas LinkedIn Page, after the owner approves. It is a
+# second, independent pipeline: its own workflow, its own GitHub Environment `linkedin-page`
+# (with its own required reviewer and its own secrets) and its own app and token, because
+# LinkedIn allows the Community Management API, which is what posting to a Page needs, only
+# on an app that has no other product. Nothing is posted without the approval; the issue
+# body is read AFTER it, so edits the owner makes to the draft before approving are what
+# goes to the Page, the same words as on the profile.
+#
+# Two ways in:
+#  * automatically, after "Publish release" succeeds, but only when the repository variable
+#    LINKEDIN_PAGE_POST_ENABLED is "true" (off by default, so nothing waits for an approval
+#    until the Page's app is approved by LinkedIn and the owner has tried it once by hand);
+#  * by hand (Actions > Post release on LinkedIn Page > Run workflow) for a given release,
+#    with "dry_run" ticked by default: it shows what would be posted and sends nothing.
+#
+# The secrets live in the environment `linkedin-page` and are used only by the posting step:
+#   LINKEDIN_PAGE_ACCESS_TOKEN, LINKEDIN_PAGE_URN (secrets); LINKEDIN_PAGE_TOKEN_EXPIRES and,
+#   optionally, LINKEDIN_API_VERSION (variables). Set up, renewal and what the tool does:
+#   docs/credentials.md, section 3. A failed post leaves a comment on the issue, so the post
+#   can be made by hand from the Page.
+#
+# This workflow never closes the issue (the profile workflow does, once it has posted): it
+# records its own post with the label `linkedin-page-posted` and a comment, and it works on
+# an issue that is already closed.
+on:
+  workflow_run:
+    workflows: ["Publish release"]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Data release to post, e.g. 2026.10.3 (the issue 'Post data release X on LinkedIn')"
+        required: true
+        type: string
+      dry_run:
+        description: "Show what would be posted and send nothing"
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+  issues: write
+
+# One Page post at a time; a second run waits instead of racing the first.
+concurrency:
+  group: linkedin-page-post
+  cancel-in-progress: false
+
+jobs:
+  post:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.workflow_run.conclusion == 'success' && vars.LINKEDIN_PAGE_POST_ENABLED == 'true')
+    runs-on: ubuntu-latest
+    environment: linkedin-page
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Find the release and its draft issue
+        id: draft
+        env:
+          INPUT_VERSION: ${{ inputs.version }}
+        run: |
+          version="$INPUT_VERSION"
+          if [ -z "$version" ]; then
+            # No PyYAML on the bare runner Python (this job installs nothing), so read the
+            # one line with sed instead of importing yaml.
+            version=$(sed -n 's/^data_release: *"\{0,1\}\([^"]*\)"\{0,1\} *$/\1/p' metadata/version.yaml | head -1)
+          fi
+          case "$version" in
+            [0-9][0-9][0-9][0-9].[0-9][0-9].[0-9]*) ;;
+            *) echo "::error::'$version' is not a data release like 2026.10.3"; exit 1 ;;
+          esac
+          title="Post data release $version on LinkedIn"
+          number=$(gh issue list --state all --label linkedin --limit 200 --json number,title \
+                     --jq ".[] | select(.title == \"$title\") | .number" | head -1)
+          if [ -z "$number" ]; then
+            echo "::error::No issue titled '$title'."; exit 1
+          fi
+          labels=$(gh issue view "$number" --json labels --jq '[.labels[].name] | join(",")')
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "number=$number" >> "$GITHUB_OUTPUT"
+          # The issue may already be closed (the profile post closes it); only this
+          # pipeline's own label says the Page has been posted to.
+          if echo ",$labels," | grep -q ",linkedin-page-posted,"; then
+            echo "Issue #$number is already marked as posted to the Page: nothing to do."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+            # Read after the approval, so the owner's edits are what is posted.
+            gh issue view "$number" --json body --jq .body > issue.md
+          fi
+
+      - name: Post to the LinkedIn Page
+        id: post
+        if: steps.draft.outputs.skip == 'false'
+        env:
+          LINKEDIN_PAGE_ACCESS_TOKEN: ${{ secrets.LINKEDIN_PAGE_ACCESS_TOKEN }}
+          LINKEDIN_PAGE_URN: ${{ secrets.LINKEDIN_PAGE_URN }}
+          LINKEDIN_PAGE_TOKEN_EXPIRES: ${{ vars.LINKEDIN_PAGE_TOKEN_EXPIRES }}
+          LINKEDIN_API_VERSION: ${{ vars.LINKEDIN_API_VERSION }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          python tools/linkedin_post.py extract --issue-body-file issue.md > post.txt
+          flag=""
+          if [ "$DRY_RUN" = "true" ]; then flag="--dry-run"; fi
+          python tools/linkedin_post.py post --page --text-file post.txt $flag | tee result.txt
+          link=$(sed -n 's/^posted: //p' result.txt)
+          echo "link=$link" >> "$GITHUB_OUTPUT"
+          # Put the text on the run's summary page, where it is easy to find.
+          {
+            if [ "$DRY_RUN" = "true" ]; then
+              echo "### LinkedIn Page post: dry run, nothing was sent"
+            else
+              echo "### LinkedIn Page post"
+              if [ -n "$link" ]; then echo; echo "Posted: $link"; fi
+            fi
+            echo
+            echo "The text (as in the draft issue; LinkedIn's reserved characters are escaped when sending):"
+            echo
+            echo '```text'
+            cat post.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Record the post on the issue
+        if: steps.post.outputs.link != ''
+        env:
+          NUMBER: ${{ steps.draft.outputs.number }}
+          LINK: ${{ steps.post.outputs.link }}
+        run: |
+          gh label create linkedin-page-posted --color 0a66c2 --description "Posted to the LinkedIn Page by the workflow" 2>/dev/null || true
+          gh issue edit "$NUMBER" --add-label linkedin-page-posted
+          gh issue comment "$NUMBER" --body "Posted to the LinkedIn Page: $LINK"
+
+      - name: Say it failed
+        if: failure() && steps.draft.outputs.number != ''
+        env:
+          NUMBER: ${{ steps.draft.outputs.number }}
+        run: |
+          gh issue comment "$NUMBER" --body "The workflow could not post this to the LinkedIn Page. Read the run's log (${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}); it says why and what to do (an expired token is fixed with tools/linkedin_auth.py --page, see docs/credentials.md, section 3). Nothing was posted to the Page: post it by hand from the draft above."
