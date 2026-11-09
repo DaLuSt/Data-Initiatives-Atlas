@@ -29,6 +29,7 @@ related_entities:
   - BF-LOI-001-2021
   - BF-LOI-037-2026
   - BF-LOI-ORG-038-2026
+  - BF-ARCOD
 relationships: []
 
 sources:

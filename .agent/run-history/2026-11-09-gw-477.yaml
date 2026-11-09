@@ -5,5 +5,5 @@ summary: >
   fetch tool). Afghanistan (ATRA's site shows only a name; the 2010 law is on ACKU and WTO pages, the latter 403), Cuba
   (Decreto-Ley 35/2021 copy on a Cuban university-hosted site resets the connection; mincom 503), Iran, Palau and Syria tried,
   nothing added. Row #252, candidate C10 (25 of 193 left; 170 anchors).
-prs: []
-outcome: in-progress
+prs: [757]
+outcome: merged (#757)

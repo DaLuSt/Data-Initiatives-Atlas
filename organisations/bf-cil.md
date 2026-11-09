@@ -11,7 +11,7 @@ description: >
   Burkina Faso's data protection authority: an independent administrative authority with administrative and management autonomy,
   created by article 45 of law 001-2021/AN to see that the law is respected, to inform data subjects and controllers of their rights and
   obligations and to control the use of ICT in personal data processing. In August 2026 the National Assembly also passed an organic law
-  on a communication and data protection regulator, whose effect on the CIL was not read.
+  on a communication and data protection regulator, the ARCOD ([[BF-ARCOD]]); its article 72 keeps the CIL competent for pending files until the ARCOD is effectively set up (read from the promulgation decree), so the CIL stays active for now.
 
 level: national
 country: BF
