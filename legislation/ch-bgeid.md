@@ -30,7 +30,7 @@ verification: primary-source
 
 start_date: 2024-12-20
 end_date: null
-last_verified: "2026-10-16"
+last_verified: "2026-11-09"
 previous_version: null
 successor: null
 
@@ -60,6 +60,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Staatliche E-ID"
+    url: "https://www.bj.admin.ch/de/staatliche-e-id"
+    publisher: "Bundesamt für Justiz"
+    accessed: "2026-11-09"
   - title: "Bundesgesetz über den elektronischen Identitätsnachweis und andere elektronische Nachweise (E-ID-Gesetz, BGEID) — Vorlage der Redaktionskommission für die Schlussabstimmung"
     url: "https://www.parlament.ch/centers/eparl/curia/2023/20230073/Schlussabstimmungstext%201%20NS%20D.pdf"
     publisher: "Das Schweizer Parlament"
@@ -201,6 +205,10 @@ The programme's own record of how the date has moved:
 - **Re-checked 2026-10-16** (roadmap #502): the programme's blog and front
   page (eid.admin.ch) show no post newer than 15 Sep 2026, so no new date for
   entry into force; status stays `adopted`.
+
+## Re-checked 2026-11-09: still not in force
+
+The Federal Office of Justice's page "Staatliche E-ID" (bj.admin.ch), read directly, lists as its latest entry 30 June 2026: a new timeline in which security takes priority over the planned launch, the e-ID's introduction is delayed and the trust infrastructure is expected to begin operating in the first half of 2027; it gives no entry-into-force date for the Act. The programme's older site eid.admin.ch carries a notice that it will no longer be maintained from 27 October 2026 and points to swiyu.admin.ch, which answered 503 and could not be read. A February 2026 federal release, as reported by search, said the Federal Council's entry into force awaits the Federal Supreme Court's decision on the referendum complaints; that was not read directly and no ruling was found. `status: adopted` stands.
 
 ## Not modelled
 

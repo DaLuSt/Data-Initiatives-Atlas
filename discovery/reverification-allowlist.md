@@ -3,15 +3,15 @@
 > **Generated file — do not hand-edit.** Regenerate with
 > `python tools/source_hosts.py --markdown -o discovery/reverification-allowlist.md`
 
-Generated: 2026-11-08
+Generated: 2026-11-09
 
 ## Why this exists
 
-**0 of the Atlas's 1275 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
+**0 of the Atlas's 1286 entities have never had a cited source read.** Their `sources:` URLs were confirmed to exist by a search index and nothing more, which is what `verification: search-only` records.
 
 Closing that debt — the re-verification pass — needs outbound HTTPS to the hosts those URLs point at. In an environment with a restricted egress policy, this is the allowlist to request. A denial shows up as `403 to CONNECT` from the proxy, which is an environment-level network policy and cannot be changed from inside a session. See `discovery/unresolved.md` for the standing record of the sourcing debt.
 
-The Atlas currently cites **3492 source URLs** across **984 hosts**, collapsing to **718 registrable domains**.
+The Atlas currently cites **3511 source URLs** across **989 hosts**, collapsing to **721 registrable domains**.
 
 ## Highest value first
 
@@ -31,7 +31,7 @@ A domain here is an **allowlist pattern**, not a URL. Most of them also happen t
 | `coe.int` | 55 | 43 | `edoc.coe.int` | ✅ opens | ✅ 2026-08-21 |
 | `bund.de` | 53 | 26 | `bmds.bund.de` | ✅ opens | ✅ 2026-08-21 |
 | `digitaleoverheid.nl` | 48 | 33 | `www.digitaleoverheid.nl` | ✅ opens |  |
-| `admin.ch` | 46 | 14 | `www.bacs.admin.ch` |  |  |
+| `admin.ch` | 47 | 14 | `www.bacs.admin.ch` |  |  |
 | `gob.es` | 41 | 21 | `administracion.gob.es` | ⚠ namespace only — no site at the apex |  |
 | `government.nl` | 40 | 40 | `www.government.nl` | ✅ opens |  |
 | `boe.es` | 37 | 30 | `www.boe.es` | ✅ opens |  |
@@ -254,6 +254,7 @@ arcep.ne
 arcep.td
 are.mr
 arena2036.de
+arn.gw
 arnoldporter.com
 arpce.dz
 arslege.pl
@@ -576,6 +577,7 @@ lexgo.be
 lexisnexis.co.uk
 lexisnexis.com
 lexlege.pl
+liblaw.org
 likumi.lv
 linklaters.com
 localret.cat
@@ -587,6 +589,7 @@ manufacturingdataspace-csa.eu
 mbkaya.com
 medialaws.eu
 mgm-tp.com
+mlex.com
 mobilithek.info
 mobility-data-space.de
 mobility-dataspace.eu
