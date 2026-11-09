@@ -1,10 +1,10 @@
 # Written by tools/release.py when a release is prepared. Do not edit by hand.
-data_release: "2026.11.1"
+data_release: "2026.11.2"
 schema_version: "1.0.0"
-released: "2026-11-02"
-prepared_from: "56fbc679ff583b5ecd908b21cf0569949f09afda"
-prepared_at: "2026-11-02T13:32:07Z"
+released: "2026-11-09"
+prepared_from: "3ea8cf4607084ec1db4f930baba3cb5296387210"
+prepared_at: "2026-11-09T13:55:35Z"
 counts:
-  entities: 1206
-  relationships: 2409
-  countries: 148
+  entities: 1285
+  relationships: 2514
+  countries: 169
