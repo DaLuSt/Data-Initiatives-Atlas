@@ -5,5 +5,5 @@ summary: >
   articles of the three parts (electronic transactions, personal data protection, cybersecurity) and the closing articles.
   Records the national-authority duty (article 11), the formalities (article 10), transfers (articles 14-15) and entry into
   force (article 36). The middle articles of each part were not read and the entity says so.
-prs: []
-outcome: in-progress
+prs: [760]
+outcome: merged
