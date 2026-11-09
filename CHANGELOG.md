@@ -8,6 +8,47 @@ and a dated **data release** (`YYYY.MM.N`) for each snapshot.
 
 <!-- releases:start -->
 
+## Data release 2026.11.2 — 2026-11-09
+
+**Schema 1.0.0** (unchanged)
+
+In the Atlas at this release: 1,285 entities (+79), 2,514 typed relationships (+105), 169 countries (+21).
+
+### Data
+
+- Countries (#477): Guinea-Bissau (#757)
+- Countries (#477): Liberia and Tuvalu (#756)
+- Housekeeping: reverification allowlist, roadmap closed items, run-history (#755)
+- Countries (#477): Guatemala (#754)
+- Countries (#475): El Salvador and Viet Nam (#753)
+- Re-check: UK Cyber Security and Resilience Bill through the Lords (#752)
+- Re-check pending instruments: Archiefwet 2026, the French NIS2 bill, Chile's postponement bill (#751)
+- Re-check (#502): Spain's Cortes dissolved; the AI bill lapsed, the NIS2 draft was never in the Cortes (#750)
+- Malabo Convention: ten more States with an anchor (#749)
+- The Commission's 2024 review of the pre-GDPR adequacy decisions (COM(2024) 7) (#748)
+- Adequacy decisions: Article 1 and the review clauses of the Japan, Korea and US decisions (#747)
+- EU adequacy decisions beyond Europe: nine added next to the UK's and Switzerland's (#746)
+- Countries (#479, #474): Congo and Micronesia (#744)
+- Countries (#479): Angola, from INACOM's own site (#743)
+- Countries (#472, #480): Belize, Nauru and São Tomé and Príncipe, finishing group 3 (#742)
+- Countries (#476): Burundi, Guinea and Suriname, finishing group 7 (#741)
+- Countries (#481, #472, #476): Chad, Mauritania and Saint Vincent and the Grenadines (#740)
+- Countries (#481, #472): Lesotho, Venezuela and Algeria from their regulators (#739)
+- Add Madagascar (roadmap #480); record Djibouti and Tajikistan (#737)
+
+### Documentation
+
+- Housekeeping: reverification allowlist, roadmap closed items, run-history (#736)
+
+### Housekeeping
+
+- 1 pull request that only record progress in the repository's own files (#745)
+
+### Roadmap items completed
+
+- Next countries, group 07 of 14 (10): Burundi, Grenada, Guinea, +7 (#476)
+- Next countries, group 03 of 14 (10): Algeria, Belize, Canada, +7 (#472)
+
 ## Data release 2026.11.1 — 2026-11-02
 
 **Schema 1.0.0** (unchanged)
