@@ -6,5 +6,5 @@ summary: >
   "Work is ongoing."; still not enacted, Oireachtas pages 403. Swiss E-ID Act: the Federal Office of Justice page's latest
   entry is 30 June 2026 (trust infrastructure expected H1 2027, no entry-into-force date); swiyu.admin.ch 503. Both keep
   their status. Row 117 updated.
-prs: []
-outcome: in-progress
+prs: [761]
+outcome: merged
