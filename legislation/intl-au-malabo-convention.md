@@ -8,8 +8,9 @@ alternative_names:
 description: >
   The African Union treaty adopted at Malabo on 27 June 2014 on cybersecurity and personal data protection. It
   entered into force on 8 June 2023 after the 15th instrument of ratification; the AU's status list of 2 February 2026
-  shows 21 signatures and 20 States that have deposited. The treaty text on au.int is a scanned image with no
-  readable text, so what it provides is not recorded here.
+  shows 21 signatures and 20 States that have deposited. It has three parts: electronic transactions, personal data
+  protection (each State Party sets up an independent national protection authority) and cybersecurity. The treaty
+  text on au.int is a scan; the articles listed below were read from page images.
 
 level: regional
 country: null
@@ -21,7 +22,7 @@ coverage: low
 verification: primary-source
 start_date: 2023-06-08
 end_date: null
-last_verified: "2026-11-07"
+last_verified: "2026-11-09"
 previous_version: null
 successor: null
 
@@ -271,11 +272,22 @@ sources:
 
 # African Union Convention on Cyber Security and Personal Data Protection (Malabo Convention)
 
-> **Created 2026-10-23** (roadmap #548 and the other African sub-regions: bodies that span them are added once). From the African Union's own treaty page and status list, read directly. **The treaty text on au.int is a scan with no extractable text, so no article was read**; `start_date` is the date it entered into force, from the status list's note.
+> **Created 2026-10-23** (roadmap #548 and the other African sub-regions: bodies that span them are added once). From the African Union's own treaty page and status list, read directly. **The treaty text on au.int is a scan with no extractable text; on 2026-11-09 the English text was read from page images (see "What the treaty text provides")**; `start_date` is the date it entered into force, from the status list's note.
 
 ## What is sourced
 
 Adopted by the 23rd Ordinary Session of the Assembly in Malabo, Equatorial Guinea, on 27 June 2014 (date of adoption, 27 June 2014; date of last signature, 11 May 2020). Status list of 2 February 2026: 55 countries listed, 21 have signed, 20 have ratified or acceded and deposited. "This Convention entered into force on 8th June 2023, after the deposit of the 15th instrument of ratification." Deposited and anchored in the Atlas: Angola, Benin, Cabo Verde, Congo, Côte d'Ivoire, Ghana, Guinea, Lesotho, Madagascar, Mauritania, Mauritius, Mozambique, Namibia, Niger, Rwanda, Senegal, Sao Tome and Principe, Togo (18 of the 20; re-read from the same status list on 2026-11-07, after ten more anchors were added). Signed but not deposited, with an anchor: Cameroon, Chad, The Gambia, Nigeria, Sierra Leone, South Africa, Sudan, Tunisia. The other two States that deposited, the Democratic Republic of the Congo and Zambia, have no anchor yet.
+
+## What the treaty text provides
+
+Read on 2026-11-09 from page images of the English text on au.int (37 pages): the preamble, article 1 (definitions), the headings and opening articles of the three parts, and the closing articles. Read, not summarised from a secondary source:
+
+- **Electronic transactions** (Chapter I, articles 2–7): scope of electronic commerce, rules on advertising and direct marketing by electronic means (consent), and electronic signatures.
+- **Personal data protection** (Chapter II): article 8 requires each State Party to establish a legal framework protecting privacy; article 10 sets preliminary formalities (a declaration or an authorisation before the national protection authority, with authorisation required for, among others, genetic and health research, data on offences and convictions, interconnection of files and biometric data); article 11 requires each State Party to establish **an independent administrative authority** responsible for personal data protection, whose members are bound by professional secrecy and cannot also be members of government or work in the ICT business; transfers of personal data to a non-AU third country need an adequate level of protection or an authorisation (articles 14–15); data subjects have rights of information and access (articles 16–17).
+- **Cybersecurity** (Chapter III): article 26 requires each State Party to adopt a national cybersecurity system.
+- **Final provisions** (articles 33–38): open to signature, ratification or accession by AU Member States; article 36 puts entry into force thirty days after the Chairperson of the AU Commission receives the 15th instrument of ratification; amendment; the Chairperson of the Commission is depositary.
+
+Not read: the middle articles of each part (for example the rest of the data subjects' rights, the detail of the cybersecurity and criminal-law provisions) were not opened; nothing here should be taken as a complete summary of those parts.
 
 ## Relationships
 
