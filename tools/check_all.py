@@ -40,6 +40,8 @@ CHECKS: list[tuple[str, list[str], str]] = [
     ("Test the LinkedIn authorisation script", ["python", "tools/test_linkedin_auth.py"], "."),
     # The LinkedIn poster and the properties of linkedin-post.yml (protected environment, no double post).
     ("Test the LinkedIn poster", ["python", "tools/test_linkedin_post.py"], "."),
+    # The scheduled idea posts: the draw of the time, the queue, the log, and linkedin-ideas.yml.
+    ("Test the LinkedIn idea posts", ["python", "tools/test_linkedin_ideas.py"], "."),
     # The blocked-host probe (tools/host_probe.py) and probe-blocked-hosts.yml.
     ("Test the blocked-host probe", ["python", "tools/test_host_probe.py"], "."),
     # Reading pages on a runner (tools/runner_fetch.py) and fetch-pages.yml.

@@ -1,0 +1,11 @@
+date: "2026-11-13"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Owner request: an automatic twice-weekly LinkedIn post, Tuesday and Thursday, each at a random time between 08:00
+  and 22:00. Built linkedin-ideas.yml (wakes every 15 minutes on those days; a no-secrets job decides, a second job in
+  the environment linkedin-ideas posts), tools/linkedin_ideas.py (the day's time drawn from a hash of the date, the queue
+  from docs/linkedin-page-posts.md section 3 with hold lines, a log issue as the ledger, one attempt a day) and 58
+  offline tests. Off until the owner creates the environment linkedin-ideas without a required reviewer, copies the
+  profile secrets into it and sets LINKEDIN_IDEAS_ENABLED. Profile only; the Page is not included.
+prs: []
+outcome: in-progress

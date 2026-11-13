@@ -6,5 +6,5 @@ summary: >
   a kind, and a "check before posting" line where a fact is date-sensitive or rests on a secondary source. Corrected
   one claim in the first batch: the Atlas does have a relationship type for a referral to the Court
   (referred-to-court-over); what it lacks is the infringement procedure as a thing. No Atlas data changed.
-prs: []
-outcome: in-progress
+prs: [765]
+outcome: merged
