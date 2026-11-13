@@ -23,6 +23,7 @@ Anchor entity: [[NL]]
 - [[NL-IBDS]] — Interbestuurlijke Datastrategie
 - [[NL-DIGIBETER]] — NL DIGIbeter: Agenda Digitale Overheid
 - [[NL-DATA-AGENDA-OVERHEID]] — NL DIGITAAL: Data Agenda Overheid
+- [[NL-WERKAGENDA-WAARDENGEDREVEN-DIGITALISEREN]] — Werkagenda Waardengedreven Digitaliseren _(superseded)_
 
 ## Policies
 
@@ -57,6 +58,12 @@ Anchor entity: [[NL]]
 - [[NL-BIO]] — Baseline Informatiebeveiliging Overheid _(current version BIO2)_
   - [[NL-ENSIA]] — accountability system for municipal information
     security, `based-on` BIO _(since 1 July 2017; added 2026-09-04)_
+
+### Further entries
+
+- [[NL-API-STRATEGIE]] — API Strategie voor de Nederlandse Overheid (NL API Strategy)
+- [[NL-MONITOR-BREDE-WELVAART-SDG]] — Monitor Brede Welvaart en de Sustainable Development Goals (Broad Prosperity and SDG Monitor)
+- [[NL-WILMA]] — Waterschaps Informatie & Logisch Model Architectuur
 
 ## Standards
 
@@ -218,6 +225,12 @@ see `discovery/research-queue.md`._
 - [[INTL-BENELUX]] — Benelux Union, and its [[INTL-BENELUX-DIGITAL-2016]] declaration of the three
   Prime Ministers _(added 2026-10-10)_
 
+### Further entries
+
+- [[NL-DEFENSIE]] — Ministerie van Defensie (Ministry of Defence)
+- [[NL-EZK]] — Ministerie van Economische Zaken en Klimaat (Ministry of Economic Affairs and Climate)
+- [[NL-NEC]] — Stichting Koninklijk Nederlands Elektrotechnisch Comité (Royal Netherlands Electrotechnical Committee)
+
 ## Domains
 
 - [[DOMAIN-GOVERNMENT]] — Government
@@ -260,6 +273,18 @@ threshold and are queued._
 - [[NL-WBNI]] — Wet beveiliging netwerk- en informatiesystemen _(ends 15 Aug 2026)_
 - [[NL-ARCHIEFWET-2026]] — Archiefwet 2026 _(enacted, Stb. 2026, 149; in force 1 Jan 2027 by KB)_ ✅ re-verified 2026-08-27
 - [[NL-WBP]] — Wet bescherming persoonsgegevens _(superseded by [[NL-UAVG]], 25 May 2018; added 2026-09-13)_
+
+### Further entries
+
+- [[NL-AWR]] — Algemene wet inzake rijksbelastingen (General State Taxes Act)
+- [[NL-HANDELSREGISTERWET]] — Handelsregisterwet 2007
+- [[NL-KADASTERWET]] — Kadasterwet
+- [[NL-ORGANISATIEWET-KADASTER]] — Organisatiewet Kadaster
+- [[NL-WEGENVERKEERSWET-1994]] — Wegenverkeerswet 1994
+- [[NL-WET-BAG]] — Wet basisregistratie adressen en gebouwen
+- [[NL-WET-BGT]] — Wet basisregistratie grootschalige topografie
+- [[NL-WET-BRO]] — Wet basisregistratie ondergrond
+- [[NL-WET-WOZ]] — Wet waardering onroerende zaken
 
 ## Applicable EU legislation
 

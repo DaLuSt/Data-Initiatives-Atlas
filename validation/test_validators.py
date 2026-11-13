@@ -154,6 +154,8 @@ class Base(unittest.TestCase):
         self.write("countries/xx/xx.md", COUNTRY)
         self.write("organisations/xx-org.md", ORG)
         self.write("legislation/xx-act.md", ACT)
+        # Every entity of a country is listed on the country's index page (TestCountryIndex).
+        self.write("countries/xx/index.md", "# XX\n\nAnchor entity: [[XX]]\n\n- [[XX-ORG]]\n- [[XX-ACT]]\n")
         self._saved = common.REPO_ROOT
         common.REPO_ROOT = self.root
 
@@ -322,6 +324,7 @@ class TestSuccession(Base):
             "Example Organisation", "Old Organisation").replace("https://example.org/a", "https://example.org/c"))
         self.edit("organisations/xx-org.md", "successor: null", "successor: XX-ACT")
         self.edit("organisations/xx-old.md", "successor: null", "successor: XX-ACT")
+        self.edit("countries/xx/index.md", "- [[XX-ACT]]\n", "- [[XX-ACT]]\n- [[XX-OLD]]\n")
         self.edit("legislation/xx-act.md", "previous_version: null", "previous_version: XX-ORG")
         code, text = self.run_all()
         self.assertNotIn("successor is XX-ACT", text)
@@ -489,6 +492,48 @@ class TestUnresolvedTable(Base):
     def test_a_long_cell_with_no_link_is_a_warning(self):
         self.table("| 1 | Spain | x | q | " + "long " * 200 + " | Open | 2026-10-10 |")
         self.assertOnlyWarns("the detail cell is")
+
+
+class TestCountryIndex(Base):
+    """Every entity of a country is linked from countries/<iso>/index.md, and the page's own links are checked."""
+
+    INDEX = "# XX\n\nAnchor entity: [[XX]]\n\n## Organisations\n\n- [[XX-ORG]]\n\n## Legislation\n\n- [[XX-ACT]] and [[XX-ACT|the Act]]\n"
+
+    def gaps(self):
+        entities = common.load_all_entities(entities_only=True)
+        return validate_links.country_index_gaps(entities, validate_links.load_index_links())
+
+    def test_a_complete_index_is_quiet(self):
+        self.write("countries/xx/index.md", self.INDEX)
+        self.assertEqual(self.gaps(), [])
+        code, out = self.run_all()
+        self.assertNotIn("does not link", out)
+
+    def test_an_entity_missing_from_the_index_is_an_error(self):
+        self.write("countries/xx/index.md", self.INDEX.replace("- [[XX-ORG]]\n", ""))
+        self.assertEqual(self.gaps(), [("XX-ORG", "XX")])
+        code, out = self.run_all()
+        self.assertNotEqual(code, 0)
+        self.assertIn("countries/xx/index.md: does not link [[XX-ORG]]", out)
+
+    def test_a_country_with_entities_and_no_index_page_is_an_error(self):
+        (self.root / "countries" / "xx" / "index.md").unlink()
+        self.assertEqual(self.gaps(), [("XX-ACT", "XX"), ("XX-ORG", "XX")])
+
+    def test_the_anchor_itself_need_not_be_listed(self):
+        self.write("countries/xx/index.md", self.INDEX.replace("Anchor entity: [[XX]]\n\n", ""))
+        self.assertEqual(self.gaps(), [])
+
+    def test_a_link_with_a_label_counts(self):
+        self.write("countries/xx/index.md", "- [[XX-ORG|the body]]\n- [[XX-ACT|the Act]]\n")
+        self.assertEqual(self.gaps(), [])
+
+    def test_a_broken_link_on_an_index_page_is_an_error(self):
+        # The hub pages have no frontmatter; their links used to go unchecked.
+        self.write("countries/xx/index.md", self.INDEX + "\n- [[XX-GONE]]\n")
+        code, out = self.run_all()
+        self.assertNotEqual(code, 0)
+        self.assertIn("countries/xx/index.md: broken wikilink [[XX-GONE]]", out)
 
 
 class TestStructure(Base):

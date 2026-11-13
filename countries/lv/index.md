@@ -19,6 +19,7 @@ _None yet._
 ## Legislation
 
 _None yet._
+- [[LV-IAL]] — Informācijas atklātības likums (Freedom of Information Law)
 
 ## Frameworks and standards
 

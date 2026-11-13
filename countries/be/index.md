@@ -69,6 +69,13 @@ Anchor entity: [[BE]]
 - [[INTL-BENELUX]] — Benelux Union, and its [[INTL-BENELUX-DIGITAL-2016]] declaration of the three
   Prime Ministers _(added 2026-10-10)_
 
+### Further entries
+
+- [[BE-AGG]] — Antiterroristische Gemengde Groep _(superseded)_
+- [[BE-BUREAU-FEDERAL-DU-PLAN]] — Bureau fédéral du Plan (Federal Planning Bureau)
+- [[BE-IIS]] — Institut interfédéral de Statistique
+- [[BE-SCIENSANO]] — Sciensano
+
 ## Legislation
 
 ### Sub-federal (`level: subnational`, added 2026-08-21)
@@ -97,12 +104,18 @@ Anchor entity: [[BE]]
     entity has flagged since the Belgium batch — twenty-nine months late)_
 - [[BE-KSZ-WET]] — Wet van 15 januari 1990 _(the oldest instrument in the Atlas)_
 
+### Further entries
+
+- [[BE-STATISTIEKWET-1962]] — Wet van 4 juli 1962 betreffende de openbare statistiek (Belgian Public Statistics Act)
+
 ## Frameworks and standards
 
 - [[BE-BELGIF]] — Belgian Interoperability Framework _(`based-on` [[EU-EIF]])_
 - [[BE-DCAT-AP-BE]] — Belgian federal DCAT profile _(`based-on` [[EU-DCAT-AP]])_
 - [[BE-OSLO]] — Flemish semantic interoperability vocabularies
   _(`maintained-by` [[BE-DIGITAAL-VLAANDEREN]]; added 2026-09-04)_
+- [[BE-CYFUN]] — CyberFundamentals Framework
+- [[BE-INDICATEURS-DEVELOPPEMENT-DURABLE]] — Indicateurs de développement durable (Belgian sustainable development indicators)
 
 ## Platforms
 

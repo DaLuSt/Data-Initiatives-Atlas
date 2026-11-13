@@ -1,0 +1,10 @@
+date: "2026-11-13"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #769. Added the 92 entities that their own country's index page did not link (18 pages; Germany 20, the
+  Netherlands 16, Spain 15, the United Kingdom 11), each as one line with the entity's own name, under the section that
+  fits its type. validate_links.py now fails when an entity with a country is missing from countries/<iso>/index.md, and
+  checks the links on the index pages themselves, which it never did because they have no frontmatter (none was broken).
+  CONTRIBUTING.md step 7 says so. Six new validator tests.
+prs: []
+outcome: in-progress

@@ -63,6 +63,7 @@ Anchor entity: [[LU]]
   1 August 2018
 - [[LU-LOI-NIS2]] — Luxembourg's NIS2 transposition, in force from
   10 May 2026, repealing the country's prior NIS1-era act
+- [[LU-LOI-DONNEES-PENAL-2018]] — Loi du 1er août 2018 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel en matière pénale ainsi qu'en matière de sécurité nationale (Luxembourg Law Enforcement Directive Implementation Act)
 
 ## Platforms
 

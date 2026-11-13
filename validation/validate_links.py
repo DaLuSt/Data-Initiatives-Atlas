@@ -66,6 +66,38 @@ def stale_row_references(text: str, open_rows: set[int]) -> list[int]:
     return stale
 
 
+def country_index_gaps(entities, index_links: dict[str, set[str] | None]) -> list[tuple[str, str]]:
+    """(entity id, country code) for each entity with a `country:` that its country's index page does not link.
+
+    `index_links` maps a lower-case country code to the ids linked from `countries/<code>/index.md`, or to None
+    when that page does not exist. The country's own anchor is exempt (the page names it as its anchor anyway).
+    """
+    gaps: list[tuple[str, str]] = []
+    for e in entities:
+        fm = e.frontmatter or {}
+        code, ident = fm.get("country"), fm.get("id")
+        if not code or not ident or fm.get("type") == "country":
+            continue
+        links = index_links.get(str(code).lower())
+        if links is None or ident not in links:
+            gaps.append((str(ident), str(code)))
+    return sorted(gaps)
+
+
+def load_index_links() -> dict[str, set[str] | None]:
+    out: dict[str, set[str] | None] = {}
+    root = common.REPO_ROOT / "countries"
+    if root.is_dir():
+        for folder in root.iterdir():
+            index = folder / "index.md"
+            if folder.is_dir():
+                # An index page has no frontmatter, so read its links from the text itself.
+                out[folder.name.lower()] = (
+                    {t.strip() for t in common._WIKILINK_RE.findall(index.read_text(encoding="utf-8"))}
+                    if index.exists() else None)
+    return out
+
+
 def main() -> int:
     entities = common.load_all_entities(entities_only=True)
     ids = common.known_ids(entities)
@@ -84,7 +116,12 @@ def main() -> int:
     # every non-excluded Markdown file, not just entity files.
     for path in common.iter_markdown_files(entities_only=False):
         e = common.parse_entity_file(path)
-        for target in e.wikilinks:
+        links = e.wikilinks
+        if e.frontmatter is None and path.name == "index.md":
+            # parse_entity_file collects links only from a file with frontmatter; the hub pages
+            # (countries/*/index.md and the like) have none, so their links were never checked.
+            links = common._WIKILINK_RE.findall(path.read_text(encoding="utf-8"))
+        for target in links:
             target = target.strip()
             if target not in ids:
                 report.error(f"{e.rel_path}: broken wikilink [[{target}]] — no entity with that id")
@@ -92,6 +129,13 @@ def main() -> int:
             for n in stale_row_references(path.read_text(encoding="utf-8"), open_rows):
                 report.warn(f"{e.rel_path}: calls row #{n} of discovery/unresolved.md open, but the table has no such "
                             f"row (closed rows are removed): update the sentence")
+
+    # Every entity of a country is listed on that country's index page (roadmap #769): the page is how a
+    # reader of the repository finds what the Atlas holds for a country, and a missing line was the
+    # "stale country anchor" defect that nothing used to catch.
+    for ident, code in country_index_gaps(entities, load_index_links()):
+        report.error(f"countries/{code.lower()}/index.md: does not link [[{ident}]], which has country: {code}; "
+                     f"add a line for it under the section that fits")
 
     return report.print_and_exit_code()
 

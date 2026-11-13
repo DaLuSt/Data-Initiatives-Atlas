@@ -42,6 +42,7 @@ Anchor entity: [[CZ]]
   **abolished**: the inspectors of the previous act)_
 - [[CZ-ZAKON-264-2025]] — Czechia's NIS2 transposition, in effect from
   1 November 2025, repealing the 2014 Cybersecurity Act
+- [[CZ-ZAKON-12-2020]] — Zákon o právu na digitální služby a o změně některých zákonů (Act on the Right to Digital Services)
 
 ## Platforms
 

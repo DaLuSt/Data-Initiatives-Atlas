@@ -38,6 +38,19 @@ Anchor entity: [[ES]]
 - [[ES-INE]] — national statistical office
 - [[ES-RED-ES]] — public business entity operating [[ES-DATOS-GOB-ES]]
   _(also the `.es` registry, RedIRIS and ONTSI)_
+- [[ES-AGENCIA-DIGITAL-ANDALUCIA]] — Agencia Digital de Andalucía _(subnational)_
+- [[ES-AOC]] — Consorci Administració Oberta de Catalunya (Open Administration of Catalonia) _(subnational)_
+- [[ES-CCASA]] — Centro de Cálculo de Álava _(subnational)_
+- [[ES-CESID]] — Centro Superior de Información de la Defensa (Higher Centre for Defence Information) _(superseded)_
+- [[ES-COMISARIA-GENERAL-DE-INFORMACION]] — Comisaría General de Información (General Commissariat of Information)
+- [[ES-EJIE]] — Eusko Jaurlaritzaren Informatika Elkartea _(subnational)_
+- [[ES-IZFE]] — Informatika Zerbitzuen Foru Elkartea _(subnational)_
+- [[ES-JEFATURA-DE-INFORMACION]] — Jefatura de Información
+- [[ES-LANTIK]] — Lantik _(subnational)_
+- [[ES-LOCALRET]] — Consorci Localret _(subnational)_
+- [[ES-MADRID-DIGITAL]] — Agencia para la Administración Digital de la Comunidad de Madrid _(subnational)_
+- [[ES-ODSNS]] — Oficina del Dato del Sistema Nacional de Salud
+- [[ES-UNE]] — Asociación Española de Normalización (Spanish Association for Standardization)
 
 ## Legislation
 
@@ -68,6 +81,7 @@ Anchor entity: [[ES]]
 - [[ES-ENS]] — Esquema Nacional de Seguridad _(reaches suppliers, not just
   administrations)_
 - [[ES-NTI-RISP]] — the re-use technical norm, carrying **DCAT-AP-ES**
+- [[ES-INDICADORES-ODS]] — Indicadores de la Agenda 2030 para el Desarrollo Sostenible (Spanish national SDG indicator set)
 
 ## Platforms
 
@@ -81,6 +95,10 @@ Anchor entity: [[ES]]
 ## Strategy
 
 - [[ES-ESPANA-DIGITAL-2026]] — national digital roadmap
+
+## Data spaces
+
+- [[ES-ENDS]] — Espacio Nacional de Datos de Salud _(planned)_
 
 ---
 

@@ -14,6 +14,7 @@ Anchor entity: [[SE]]
 - [[SE-DIGG]] — Agency for Digital Government
 - [[SE-IMY]] — Swedish Authority for Privacy Protection
 - [[SE-SCB]] — Statistics Sweden
+- [[SE-ROS]] — Rådet för den officiella statistiken (Council for Official Statistics)
 
 ## Platforms and portals
 

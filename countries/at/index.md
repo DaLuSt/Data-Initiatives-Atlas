@@ -21,6 +21,7 @@ Anchor entity: [[AT]]
 - [[AT-BRZ]] — Bundesrechenzentrum
 - [[AT-DSB]] — Datenschutzbehorde
 - [[AT-STATISTIK]] — Statistics Austria
+- [[AT-STATISTIKRAT]] — Statistikrat (Statistical Council)
 
 ## Platforms and portals
 

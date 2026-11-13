@@ -68,6 +68,20 @@ Anchor entity: [[DE]]
   produces German ID cards and passports, supports eID integration
   _(100% federally owned since 2009; added 2026-09-05)_
 
+### Further entries
+
+- [[DE-AKDB]] — Anstalt für Kommunale Datenverarbeitung in Bayern _(subnational)_
+- [[DE-BITBW]] — IT Baden-Württemberg _(subnational)_
+- [[DE-DATAPORT]] — Dataport _(subnational)_
+- [[DE-G10-KOMMISSION]] — G10-Kommission
+- [[DE-HZD]] — Hessische Zentrale für Datenverarbeitung _(subnational)_
+- [[DE-IT-NIEDERSACHSEN]] — Landesbetrieb IT.Niedersachsen _(subnational)_
+- [[DE-IT-NRW]] — Landesbetrieb Information und Technik Nordrhein-Westfalen _(subnational)_
+- [[DE-LDI]] — Landesbetrieb Daten und Information _(subnational)_
+- [[DE-PLATTFORM-INDUSTRIE-4-0]] — Plattform Industrie 4.0
+- [[DE-STATISTISCHER-BEIRAT]] — Statistischer Beirat (Statistical Advisory Council)
+- [[DE-VDE]] — Verband der Elektrotechnik Elektronik Informationstechnik (Association for Electrical, Electronic and Information Technologies)
+
 ## Legislation
 
 ### Health
@@ -108,6 +122,11 @@ Anchor entity: [[DE]]
 - [[DE-BSTATG]] — Bundesstatistikgesetz
 - [[DE-GEOZG]] — Geodatenzugangsgesetz _(implements [[EU-INSPIRE]])_
 
+### Further entries
+
+- [[DE-VV-GDI-DE]] — Verwaltungsvereinbarung über die Geodateninfrastruktur Deutschland (GDI-DE Administrative Agreement)
+- [[DE-VV-GOVDATA]] — Vereinbarung des Bundes und der Länder zum gemeinsamen Betrieb von "GovData - Das Datenportal für Deutschland (GovData Administrative Agreement)
+
 ## Standards and frameworks
 
 - [[DE-XOEV]] — XML in der öffentlichen Verwaltung _(standards family)_
@@ -117,6 +136,7 @@ Anchor entity: [[DE]]
 - [[DE-IT-ARCHITEKTURRICHTLINIEN]] — Föderale IT-Architekturrichtlinien
 - [[DE-FIM]] — Föderales Informationsmanagement _(IT-Planungsrat
   application since 2017; added 2026-09-04)_
+- [[DE-NACHHALTIGKEITSINDIKATOREN]] — Indikatorensatz der Deutschen Nachhaltigkeitsstrategie (German Sustainability Strategy indicator set)
 
 ## Platforms
 
@@ -128,6 +148,12 @@ Anchor entity: [[DE]]
 
 - [[DE-MDS]] — Mobility Data Space _(traded data)_
 - [[DE-CATENA-X]] — automotive data ecosystem, based on [[EU-GAIA-X]]
+- [[DE-AEROSPACE-X]] — Aerospace-X _(completed)_
+- [[DE-CONSTRUCT-X]] — Construct-X
+- [[DE-ENDA]] — dena-ENDA
+- [[DE-FACTORY-X]] — Factory-X _(completed)_
+- [[DE-HEALTHTRACK-X]] — HealthTrack-X _(completed)_
+- [[DE-MANUFACTURING-X]] — Manufacturing-X
 
 ---
 

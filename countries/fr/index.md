@@ -33,6 +33,11 @@ Anchor entity: [[FR]]
 - [[FR-ANSSI]] — national cybersecurity authority
 - [[FR-AFNOR]] — national standards body
 - [[FR-INSEE]] — national statistical institute
+- [[FR-ASP]] — Autorité de la statistique publique (Public Statistics Authority)
+- [[FR-CNIS]] — Conseil national de l'information statistique (National Council for Statistical Information)
+- [[FR-DNRED]] — Direction nationale du renseignement et des enquêtes douanières (National Directorate of Customs Intelligence and Investigations)
+- [[FR-FRANCE-TITRES]] — Agence nationale des titres sécurisés
+- [[FR-TRACFIN]] — Traitement du renseignement et action contre les circuits financiers clandestins (Financial Intelligence Unit (France))
 
 ## Legislation
 
@@ -59,6 +64,8 @@ Anchor entity: [[FR]]
   [[FR-DINUM]] and [[FR-ANSSI]]; added 2026-09-04)_
 - [[FR-RGAA]] — Référentiel Général d'Amélioration de l'Accessibilité
   _(maintained by [[FR-DINUM]] since 2019; added 2026-09-04)_
+- [[FR-CIUS-FR]] — CIUS-FR
+- [[FR-INDICATEURS-ODD]] — Indicateurs pour le suivi national des objectifs de développement durable (French national SDG indicator dashboard)
 
 ## Platforms
 
