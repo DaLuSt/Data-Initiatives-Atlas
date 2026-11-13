@@ -47,6 +47,12 @@ Kingdom. See [[GB]].
   UK's [[DOMAIN-GEOSPATIAL]] gap — but maps **Great Britain**, not the UK)_
 - [[GB-OFCOM]] — Ofcom _(NIS competent authority for digital
   infrastructure, alongside [[GB-ICO]] for digital service providers)_
+- [[GB-CAA]] — Civil Aviation Authority
+- [[GB-DWQR]] — Drinking Water Quality Regulator for Scotland _(subnational)_
+- [[GB-GEMA]] — Gas and Electricity Markets Authority
+- [[GB-HDRUK]] — Health Data Research UK
+- [[GB-INFORMATION-COMMISSION]] — Information Commission
+- [[GB-IPT]] — Investigatory Powers Tribunal
 
 ## Frameworks and strategies
 
@@ -56,6 +62,8 @@ Kingdom. See [[GB]].
 - [[GB-GEOSPATIAL-STRATEGY]] — UK Geospatial Strategy 2030 _(⚠
   `confidence: low`; no owner establishable after the Geospatial Commission
   was merged into [[GB-GDS]])_
+- [[GB-BS-10012]] — BS 10012:2017+A1:2018 Data protection. Specification for a personal information management system _(archived)_
+- [[GB-NATIONAL-DATA-LIBRARY]] — National Data Library
 
 ## Legislation
 
@@ -73,6 +81,9 @@ Kingdom. See [[GB]].
 - [[GB-CSRB]] — Cyber Security and Resilience Bill _(`proposed`; the UK's
   answer to the problem [[EU-NIS2]] addresses, and not a transposition of
   it)_
+- [[GB-IPA-AMENDMENT-2024]] — Investigatory Powers (Amendment) Act 2024
+- [[GB-RIPA-2000]] — Regulation of Investigatory Powers Act 2000
+- [[GB-RPSI-REGULATIONS-2015]] — The Re-use of Public Sector Information Regulations 2015
 
 ## Platforms
 

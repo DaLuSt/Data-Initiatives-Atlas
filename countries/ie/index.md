@@ -27,6 +27,7 @@ Anchor entity: [[IE]]
   valuation merged into one body on 1 March 2023)_
 - [[IE-NSAI]] — National Standards Authority of Ireland _(`participates-in`
   [[EU-CEN]] and [[EU-CENELEC]])_
+- [[IE-NSB]] — National Statistics Board
 
 ## Legislation
 
@@ -36,6 +37,7 @@ Anchor entity: [[IE]]
   [[EU-ENVIRONMENTAL-INFORMATION-DIRECTIVE]]; added 2026-10-09)_
 - [[IE-NCS-BILL]] — National Cyber Security Bill _(`proposed`; the NIS2
   transposition is **overdue**, deadline 17 October 2024 missed)_
+- [[IE-PSI-REGULATIONS-2021]] — European Union (Open Data and Re-use of Public Sector Information) Regulations 2021
 
 ## Platforms
 

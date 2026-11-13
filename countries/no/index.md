@@ -60,6 +60,8 @@ Anchor entity: [[NO]]
 - [[NO-GEODATALOVEN]] — Act on Infrastructure for Geographic
   Information, LOV-2010-09-03-56, added 2026-09-13, transposing
   [[EU-INSPIRE]] via [[INTL-EEA-JCD-55-2010]]
+- [[NO-ETTERRETNINGSTJENESTE-1998]] — Lov om Etterretningstjenesten (1998) _(superseded)_
+- [[NO-FOREBYGGENDE-SIKKERHETSTJENESTE-1998]] — Lov om forebyggende sikkerhetstjeneste (sikkerhetsloven) _(superseded)_
 
 ## Platforms
 

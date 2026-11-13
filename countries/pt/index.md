@@ -39,6 +39,7 @@ Anchor entity: [[PT]]
   now identified by number and date, transposes the Open Data Directive
 - [[PT-DECRETO-LEI-125-2025]] — transposes NIS2, in force since 3 April
   2026
+- [[PT-LEI-43-2004]] — Lei n.º 43/2004, de 18 de agosto (CNPD Organisation Act)
 
 ## Platforms
 

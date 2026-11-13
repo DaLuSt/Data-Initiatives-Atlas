@@ -28,3 +28,7 @@ Anchor entity: [[IT]]
 - [[IT-SPID]] — Sistema Pubblico di Identita Digitale
 - [[IT-CIE]] — Carta d'Identità Elettronica _([[IT-CAD]] Art. 66; added
   2026-09-04)_
+
+## Standards and frameworks
+
+- [[IT-FATTURAPA]] — FatturaPA

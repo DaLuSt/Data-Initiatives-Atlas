@@ -19,6 +19,7 @@ _None yet._
 ## Legislation
 
 _None yet._
+- [[BG-ZDOI]] — Закон за достъп до обществена информация
 
 ## Frameworks and standards
 

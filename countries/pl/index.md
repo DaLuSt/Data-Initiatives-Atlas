@@ -37,6 +37,7 @@ Anchor entity: [[PL]]
 - [[PL-PKN]] — standards body _(CEN/CENELEC member since 1 January 2004,
   now dated precisely)_
 - Intelligence and security services — see below.
+- [[PL-CEZ]] — Centrum e-Zdrowia
 
 ## Legislation
 
@@ -70,6 +71,7 @@ Anchor entity: [[PL]]
   [[PL-MC]], confirmed 2026-08-27)_
 - [[PL-PESEL]] — population register and identification number
   _(`maintained-by` [[PL-COI]] since 1 March 2015)_
+- [[PL-E-ZDROWIE-P1]] — e-zdrowie (P1)
 
 ## Frameworks and standards
 

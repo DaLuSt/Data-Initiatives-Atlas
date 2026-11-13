@@ -10,7 +10,9 @@ Anchor entity: [[ST]]
 ## Organisations
 
 - [[ST-AGER]]
+- [[ST-ANPDP]] — Agência Nacional de Protecção de Dados Pessoais (National Personal Data Protection Agency)
 
 ## Legislation
 
 - [[ST-LEI-3-2004]]
+- [[ST-LEI-03-2016]] — Lei n.º 03/2016 — Proteção de Dados Pessoais (Law No. 03/2016 on the Protection of Personal Data)

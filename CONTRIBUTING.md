@@ -57,9 +57,12 @@ it asks for the entity ID, the claim, and the page that contradicts it.
    national body that is not part of the state. An anchor edge asserts scope
    and nothing more; log the missing substantive edge in
    `discovery/unresolved.md`. `type: domain` entities are exempt.
-7. If this entity is NL/EU/UN-scoped, and is important enough to belong on
-   that geography's hub page, add a wikilink to `countries/nl/index.md`,
-   `regions/eu/index.md` or `international/un/index.md`.
+7. If the entity has a `country:`, add a line for it to that country's
+   `countries/<iso>/index.md`, under the section that fits (validation fails
+   without it: every entity of a country is listed on the country's page). An
+   EU- or UN-scoped entity that is important enough to belong on that
+   geography's hub page gets a wikilink in `regions/eu/index.md` or
+   `international/un/index.md`.
 8. Run the validation suite (below) and fix anything it flags.
 9. Build the interactive graph to check it still generates:
 

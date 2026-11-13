@@ -13,5 +13,5 @@ process_note: >
   turned it on and both merged. Both pipelines are off by default (LINKEDIN_PAGE_POST_ENABLED, LINKEDIN_IDEAS_ENABLED)
   and nothing was posted. Told to the owner on 2026-11-13. From here on, a pull request that touches workflows or the
   LinkedIn tools is opened without auto-merge and waits for the owner.
-prs: []
-outcome: in-progress
+prs: [776]
+outcome: merged
