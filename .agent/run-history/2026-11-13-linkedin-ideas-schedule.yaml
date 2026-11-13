@@ -7,5 +7,5 @@ summary: >
   from docs/linkedin-page-posts.md section 3 with hold lines, a log issue as the ledger, one attempt a day) and 58
   offline tests. Off until the owner creates the environment linkedin-ideas without a required reviewer, copies the
   profile secrets into it and sets LINKEDIN_IDEAS_ENABLED. Profile only; the Page is not included.
-prs: []
-outcome: in-progress
+prs: [766]
+outcome: merged
