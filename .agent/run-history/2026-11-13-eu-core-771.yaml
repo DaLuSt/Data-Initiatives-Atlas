@@ -1,0 +1,12 @@
+date: "2026-11-13"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #771, first three of nine. EU-DSA (Regulation (EU) 2022/2065), EU-DMA (Regulation (EU) 2022/1925) and
+  EU-EPRIVACY-DIRECTIVE (Directive 2002/58/EC) added, each read directly from the Publications Office (curl, the resolver
+  by CELEX number; the ePrivacy Directive only as a PDF of the 2002 Official Journal, so its later amendments were not
+  read and the entity says so). Edges: applies-in EU; DSA and DMA references EU-GDPR, DSA references the ePrivacy
+  Directive; the ePrivacy Directive related-to EU-GDPR as an interpretation. Three rows removed from the research queue
+  (eight left); candidate C11 and the Digital Omnibus now point at the new entities. Left for #771: the Cyber Resilience
+  Act, DORA, the European Data Innovation Board, the AI Office, data.europa.eu and the Once-Only Technical System.
+prs: []
+outcome: in-progress
