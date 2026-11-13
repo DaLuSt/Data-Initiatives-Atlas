@@ -27,8 +27,8 @@ graph:
 
 discovery:
   unresolved_rows_open: 92
-  candidates_queued: 1
-  research_queue_items: 0
+  candidates_queued: 2
+  research_queue_items: 11
   needs_human_open: 1
 
 validation_status: clean
@@ -45,7 +45,7 @@ release:
 
 notes: >
   See discovery/unresolved.md for the full open-questions list,
-  discovery/candidates.md (one lead: the count of UN member states with no country anchor yet, C10, now split into issues #470-#483) and
-  discovery/research-queue.md (empty) for queued leads, and
+  discovery/candidates.md (two leads: C10, the count of UN member states with no country anchor yet, split into issues #470-#483, and C11, the EU KIDS Act) and
+  discovery/research-queue.md (eleven leads: two statistics councils and nine EU core instruments and bodies, roadmap #771) for queued leads, and
   progress/backlog.md for the forward plan. All four discovery files now
   share the master-table layout of unresolved.md. See .agent/current-task.yaml for any in-flight task.

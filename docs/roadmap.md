@@ -135,6 +135,12 @@ Part of #500 (what `country` means) and of #508 (the Country filter, the overvie
 | **2028.01** | #482 countries, group 13 |  | #513 is a schema 2.0 needed? |
 | **2028.02** | #483 countries, group 14; #451 the country groups (umbrella) |  |  |
 
+**Added by the repository scan of 2026-11-13, not yet scheduled (no milestone):** #767 Wikipedia citations; #768
+summarised reads; #769 country index pages and a check for them; #770 national laws with no body attached; #771 EU
+core instruments the Atlas lacks (leads in `discovery/research-queue.md`); #772 link previews and discoverability;
+#773 workflow hardening; #774 graph depth; #775 dates of entry into force. The scan itself is
+`docs/repo-scan-2026-11.md`.
+
 **Dependencies worth knowing.** #457 (vocabulary decisions) comes before #513 (does the schema need a
 major version). The manual accessibility checks (#497) update `ACCESSIBILITY.md`. #508 waits for the owner's
 decision on the world map (#645, `.agent/needs-human/world-map-fit.md`). The regional layer (#539) needs the owner's

@@ -1,10 +1,12 @@
 # Credentials that expire: plans for `PROJECT_TOKEN` and LinkedIn
 
-Two automations need a credential that GitHub cannot supply by itself, and both
+The automations here need a credential that GitHub cannot supply by itself, and the
 credentials expire. This page is the plan for each: what breaks, how the owner
-renews it, and how a failure is made visible instead of silent. Nothing here is
-built yet; the build items are the roadmap issues named in each section. Written
-2026-10-08.
+renews it, and how a failure is made visible instead of silent. Written
+2026-10-08 as a plan; sections 1 and 2 have since been built and are in use,
+section 3 (the Page) is built and waits for LinkedIn's approval of a second app,
+and section 4 (the scheduled idea posts) is built and switched off until the owner
+sets it up. Each section says what its own state is.
 
 | Credential | For | Lifetime | Roadmap |
 |---|---|---|---|
