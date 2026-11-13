@@ -1,0 +1,10 @@
+date: "2026-11-13"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Owner request: LinkedIn idea posts from a European data architect's view (policy, with a nod to metadata). Wrote 45
+  (the first five drafted in chat, 40 more) into docs/linkedin-page-posts.md, section 3, each with its Atlas entity IDs,
+  a kind, and a "check before posting" line where a fact is date-sensitive or rests on a secondary source. Corrected
+  one claim in the first batch: the Atlas does have a relationship type for a referral to the Court
+  (referred-to-court-over); what it lacks is the infringement procedure as a thing. No Atlas data changed.
+prs: []
+outcome: in-progress
