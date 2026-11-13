@@ -17,18 +17,18 @@ updated: "2026-11-13"
 updated_by_session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
 
 graph:
-  entity_count: 1286
-  relationship_edges: 2518
-  association_edges: 5439
-  wikilink_edges: 5792
-  edges_total: 13749
+  entity_count: 1289
+  relationship_edges: 2525
+  association_edges: 5455
+  wikilink_edges: 5801
+  edges_total: 13781
   countries: 169
   regions: 1
 
 discovery:
   unresolved_rows_open: 92
   candidates_queued: 2
-  research_queue_items: 11
+  research_queue_items: 8
   needs_human_open: 1
 
 validation_status: clean
@@ -46,6 +46,6 @@ release:
 notes: >
   See discovery/unresolved.md for the full open-questions list,
   discovery/candidates.md (two leads: C10, the count of UN member states with no country anchor yet, split into issues #470-#483, and C11, the EU KIDS Act) and
-  discovery/research-queue.md (eleven leads: two statistics councils and nine EU core instruments and bodies, roadmap #771) for queued leads, and
+  discovery/research-queue.md (eight leads: two statistics councils and six EU core instruments and bodies, roadmap #771) for queued leads, and
   progress/backlog.md for the forward plan. All four discovery files now
   share the master-table layout of unresolved.md. See .agent/current-task.yaml for any in-flight task.

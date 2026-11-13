@@ -6,5 +6,5 @@ summary: >
   fits its type. validate_links.py now fails when an entity with a country is missing from countries/<iso>/index.md, and
   checks the links on the index pages themselves, which it never did because they have no frontmatter (none was broken).
   CONTRIBUTING.md step 7 says so. Six new validator tests.
-prs: []
-outcome: in-progress
+prs: [778]
+outcome: merged

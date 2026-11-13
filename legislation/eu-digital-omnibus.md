@@ -40,6 +40,7 @@ related_entities:
   - EU-FREE-FLOW-NON-PERSONAL-DATA
   - EU-DATA-ACT
   - EU-GDPR
+  - EU-EPRIVACY-DIRECTIVE
 relationships:
   - type: proposes-to-supersede
     target: EU-DGA
@@ -139,7 +140,7 @@ November 2025, and this entity had conflated them:
 |---|---|---|
 | COM number | **COM(2025) 837** | COM(2025) 836 |
 | Name | "Digital Omnibus" | "Digital Omnibus **on AI**" |
-| Scope | Repeals [[EU-DGA]], [[EU-OPEN-DATA-DIRECTIVE]] and [[EU-FREE-FLOW-NON-PERSONAL-DATA]] into [[EU-DATA-ACT]]; amends [[EU-GDPR]], ePrivacy, Data Act | Amends [[EU-AI-ACT]], the EASA Regulation, the Machinery Regulation |
+| Scope | Repeals [[EU-DGA]], [[EU-OPEN-DATA-DIRECTIVE]] and [[EU-FREE-FLOW-NON-PERSONAL-DATA]] into [[EU-DATA-ACT]]; amends [[EU-GDPR]], the ePrivacy Directive ([[EU-EPRIVACY-DIRECTIVE]]), Data Act | Amends [[EU-AI-ACT]], the EASA Regulation, the Machinery Regulation |
 | Status (28 Aug 2026) | Proposed — under negotiation | **Adopted** as Regulation (EU) 2026/1744, in force 27 July 2026 |
 
 The previously-cited CELEX number (`52025PC0836`) and alternative name

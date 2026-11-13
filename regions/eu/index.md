@@ -35,6 +35,7 @@ Anchor entity: [[EU]]
 - [[EU-GDPR]] — General Data Protection Regulation (Reg. 2016/679) → [[NL-UAVG]]
 - [[EU-DGA]] — Data Governance Act (Reg. 2022/868) ⚠ repeal proposed ✅ 2026-08-28
 - [[EU-DATA-ACT]] — Data Act (Reg. 2023/2854)
+- [[EU-EPRIVACY-DIRECTIVE]] — Directive on privacy and electronic communications (Dir. 2002/58/EC), read in its 2002 text; the [[EU-DIGITAL-OMNIBUS]] would amend it (added 2026-11-13)
 - [[EU-OPEN-DATA-DIRECTIVE]] — Open Data Directive (Dir. 2019/1024) ⚠ repeal proposed → [[NL-WHO]] ✅ 2026-08-28
   - [[EU-HVD-REGULATION]] — Commission Implementing Regulation (EU)
     2023/138, the high-value-datasets list (Article 14(1)) ✅ 2026-09-06
@@ -95,6 +96,11 @@ Anchor entity: [[EU]]
   infrastructure _(referenced by [[EU-GREEN-DEAL-DATA-SPACE]])_
 - [[EU-ENVIRONMENTAL-INFORMATION-DIRECTIVE]] — Directive 2003/4/EC on
   public access to environmental information
+
+### Platforms and digital markets
+
+- [[EU-DSA]] — Digital Services Act (Reg. 2022/2065), applies since 17 Feb 2024; `references` [[EU-GDPR]] and [[EU-EPRIVACY-DIRECTIVE]] (added 2026-11-13)
+- [[EU-DMA]] — Digital Markets Act (Reg. 2022/1925), applies since 2 May 2023; `references` [[EU-GDPR]] (added 2026-11-13)
 
 ### AI
 
