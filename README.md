@@ -41,7 +41,7 @@ hand-maintained.
 | **Licence** | CC0 1.0 |
 | **✅ Sourcing** | **All 1,286 entities are `verification: primary-source`** — every cited source has been opened, read and confirmed |
 
-*Figures as of 2026-11-09. The live counts are always on the site itself.*
+*Figures as of 2026-11-13. The live counts are always on the site itself.*
 
 ### Read this before you cite anything
 
