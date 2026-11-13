@@ -1,0 +1,158 @@
+name: Post an idea on LinkedIn
+
+# Posts one of the "idea posts" in docs/linkedin-page-posts.md (section 3) to the owner's
+# LinkedIn profile, twice a week, on Tuesday and Thursday at a random time between 08:00 and
+# 22:00 (Europe/Amsterdam). Unlike the release posts there is no approval step per post: the
+# review happens when a post is merged into the file, and a post that carries a line starting
+# "*Check before posting" or "*Hold" is never posted by this workflow. It is off until the
+# repository variable LINKEDIN_IDEAS_ENABLED is "true", and setting that variable to anything
+# else stops it at once.
+#
+# How the time is random: a cron cannot pick a random time, so the workflow wakes every 15
+# minutes on Tuesdays and Thursdays and the first job asks tools/linkedin_ideas.py whether
+# the day's time has passed. That time is drawn once per day from a hash of the date, so every
+# wake-up of the day agrees on it. GitHub starts scheduled runs late at busy times, so a post
+# goes out some minutes after its drawn time, never before it. A day on which the schedule is
+# missed entirely gets no post (the window closes at 22:00).
+#
+# What has been posted is kept in the comments of one log issue ("LinkedIn idea posts: log",
+# label linkedin-ideas), one line per attempt; the next post is the lowest-numbered one not yet
+# posted and not held. At most one attempt per day: a failure is logged and the next try is
+# on the next Tuesday or Thursday.
+#
+# The first job (decide) has no secrets and no environment, so the 15-minute wake-ups never
+# touch them. Only the second job (post) runs in the environment `linkedin-ideas`, which
+# holds the profile's token. The environment has no required reviewer, because nobody could
+# approve a post at a random time; it is restricted to the main branch instead.
+# Set up, switching on and what to do when it fails: docs/credentials.md, section 4.
+on:
+  schedule:
+    # UTC. 05:00-21:59 UTC covers 08:00-22:00 in Amsterdam in both summer (UTC+2) and winter
+    # (UTC+1) time; the local day and time are checked by the tool.
+    - cron: "*/15 5-21 * * 2,4"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Show which post would go out and send nothing"
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+  issues: write
+
+# One run at a time; a second wake-up waits instead of racing the first.
+concurrency:
+  group: linkedin-ideas
+  cancel-in-progress: false
+
+jobs:
+  decide:
+    if: github.event_name == 'workflow_dispatch' || vars.LINKEDIN_IDEAS_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      OWNER: ${{ github.repository_owner }}
+    outputs:
+      due: ${{ steps.decide.outputs.due }}
+      number: ${{ steps.decide.outputs.number }}
+      date: ${{ steps.decide.outputs.date }}
+      issue: ${{ steps.log.outputs.issue }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Find or create the log issue
+        id: log
+        run: |
+          title="LinkedIn idea posts: log"
+          number=$(gh issue list --state all --label linkedin-ideas --limit 50 --json number,title \
+                     --jq ".[] | select(.title == \"$title\") | .number" | head -1)
+          if [ -z "$number" ]; then
+            gh label create linkedin-ideas --color 0a66c2 --description "The log of the scheduled LinkedIn idea posts" 2>/dev/null || true
+            url=$(gh issue create --title "$title" --label linkedin-ideas --body "One comment per attempt of the scheduled LinkedIn idea posts (.github/workflows/linkedin-ideas.yml). Leave this issue open. Do not edit the comments: the next post is chosen from them. To skip a post by hand, comment \"Posted idea post N on YYYY-MM-DD: by hand\" as yourself; to take it out of the rotation for good, add a line starting \"*Hold\" under it in docs/linkedin-page-posts.md.")
+            number="${url##*/}"
+          fi
+          echo "issue=$number" >> "$GITHUB_OUTPUT"
+          gh issue view "$number" --json comments > comments.json
+
+      - name: Is a post due?
+        id: decide
+        env:
+          EVENT: ${{ github.event_name }}
+        run: |
+          flag=""
+          # A manual run means "show me the next one now": it ignores the day and the time.
+          if [ "$EVENT" = "workflow_dispatch" ]; then flag="--force"; fi
+          python tools/linkedin_ideas.py decide --comments-file comments.json --trusted "github-actions,github-actions[bot],$OWNER" $flag | tee decision.txt >> "$GITHUB_OUTPUT"
+          {
+            echo "### LinkedIn idea post"
+            echo
+            sed -n 's/^reason=/- /p' decision.txt
+            sed -n 's/^target=/- Today'"'"'s drawn time: /p' decision.txt
+            sed -n 's/^number=\(.\+\)$/- Next post: number \1/p' decision.txt
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  post:
+    needs: decide
+    if: needs.decide.outputs.due == 'true'
+    runs-on: ubuntu-latest
+    environment: linkedin-ideas
+    env:
+      GH_TOKEN: ${{ github.token }}
+      NUMBER: ${{ needs.decide.outputs.number }}
+      DAY: ${{ needs.decide.outputs.date }}
+      ISSUE: ${{ needs.decide.outputs.issue }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Post to LinkedIn
+        id: post
+        env:
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_AUTHOR_URN: ${{ secrets.LINKEDIN_AUTHOR_URN }}
+          LINKEDIN_TOKEN_EXPIRES: ${{ vars.LINKEDIN_TOKEN_EXPIRES }}
+          LINKEDIN_API_VERSION: ${{ vars.LINKEDIN_API_VERSION }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          python tools/linkedin_ideas.py text "$NUMBER" > post.txt
+          flag=""
+          if [ "$DRY_RUN" = "true" ]; then flag="--dry-run"; fi
+          python tools/linkedin_post.py post --text-file post.txt $flag | tee result.txt
+          link=$(sed -n 's/^posted: //p' result.txt)
+          echo "link=$link" >> "$GITHUB_OUTPUT"
+          {
+            if [ "$DRY_RUN" = "true" ]; then
+              echo "### LinkedIn idea post $NUMBER: dry run, nothing was sent"
+            else
+              echo "### LinkedIn idea post $NUMBER"
+              if [ -n "$link" ]; then echo; echo "Posted: $link"; fi
+            fi
+            echo
+            echo '```text'
+            cat post.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Log the post
+        if: steps.post.outputs.link != ''
+        env:
+          LINK: ${{ steps.post.outputs.link }}
+        run: |
+          body=$(python tools/linkedin_ideas.py record posted --number "$NUMBER" --date "$DAY" --text "$LINK")
+          gh issue comment "$ISSUE" --body "$body"
+
+      - name: Log the failure
+        # A failed dry run is not an attempt: only a real run uses up the day.
+        if: failure() && inputs.dry_run != true
+        run: |
+          body=$(python tools/linkedin_ideas.py record failed --number "$NUMBER" --date "$DAY" \
+                   --text "see ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}; nothing was posted; the next try is the next Tuesday or Thursday")
+          gh issue comment "$ISSUE" --body "$body"

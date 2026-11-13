@@ -82,7 +82,13 @@ secondary source, or is likely to change, the line "Check before posting" under 
 **Kinds:** Fact (a verified event), Number (a statistic of the graph), Metadata (a modelling lesson),
 Observation (a pattern across entities), Policy (an instrument seen from a European angle), Architecture
 (how data systems are built), Confession (a limit of the Atlas), Process (how it is made), Question.
-**A suggested rhythm:** one post a week, alternating a Fact with a Metadata or Confession post, and
+**Automatic posting.** The workflow "Post an idea on LinkedIn" posts these, in order, to the owner's profile
+every Tuesday and Thursday at a random time between 08:00 and 22:00 once it is switched on
+(`docs/credentials.md` section 4). A post with a "Check before posting" line under it, or a line starting
+`*Hold`, is never posted automatically. To pull a post from the rotation add such a line under it; to put one
+in, remove the line after checking its facts. To add posts, add them to the end of this section with the next
+number and the same shape. The workflow reads this file as it is on `main`.
+**A suggested rhythm for posting by hand:** one post a week, alternating a Fact with a Metadata or Confession post, and
 leave the Explore link out of every third post (LinkedIn tends to reach fewer people with links).
 
 ### Post 1. One regulation, three dates
