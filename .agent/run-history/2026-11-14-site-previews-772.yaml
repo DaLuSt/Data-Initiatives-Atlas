@@ -8,5 +8,5 @@ summary: >
   crawler would read, and the site is one page (docs/github-pages.md says so). Eight new tests (TestLinkPreview); the
   browser suite was run locally. Not checked: how LinkedIn itself renders the preview, which needs the owner's account
   (Post Inspector).
-prs: []
-outcome: in-progress
+prs: [782]
+outcome: merged

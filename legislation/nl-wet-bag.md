@@ -28,7 +28,8 @@ successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
-organisations: []
+organisations:
+  - NL-KADASTER
 related_entities:
   - NL-BASISREGISTRATIES
 relationships:
@@ -93,6 +94,10 @@ Wet BAG was enacted 24 January 2008, which is now recorded as `start_date`.
 - `applies-in` [[NL]] — an anchor edge.
 
 The substantive edge runs the other way: [[NL-BAG]] `governed-by` this act.
+
+## Which body
+
+[[NL-KADASTER]] is listed under `organisations` because it maintains [[NL-BAG]], which this instrument governs (the edges are on [[NL-BAG]]). That is an association drawn from edges the Atlas already holds, not a statement of the instrument's text: which authority supervises compliance with it was not read. (Added 2026-11-14, roadmap #770.)
 
 ## Sources
 
