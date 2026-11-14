@@ -9,5 +9,5 @@ summary: >
   both sources are in each entity's sources. Only the strict boilerplate was replaced: 161 other "NOT READ" strings
   remain (national transposition statements, DESI's measures edges, the Digital Decade and EIF edges, and the
   Environmental Information Directive, whose text the Publications Office did not serve as XHTML).
-prs: []
-outcome: in-progress
+prs: [781]
+outcome: merged

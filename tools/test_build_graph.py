@@ -562,6 +562,8 @@ class TestSiteArtefacts(unittest.TestCase):
         import re
         for m in re.finditer(r'<(?:script|link)[^>]*?(?:src|href)="([^"]+)"', html):
             url = m.group(1)
+            if 'rel="canonical"' in m.group(0):
+                continue  # the page's own address, for search engines; nothing is fetched from it
             if url.startswith(("http://", "https://", "//")):
                 self.fail(f"external asset referenced in index.html: {url}")
 
@@ -1209,6 +1211,72 @@ class TestAddressAndLinkRobustness(unittest.TestCase):
     def test_source_links_go_through_the_guard(self):
         text = self.APP.read_text(encoding="utf-8")
         self.assertIn("safeHref(s.url)", text)
+
+
+class TestLinkPreview(unittest.TestCase):
+    """What a shared link to the site shows, and what a search engine reads (roadmap #772)."""
+
+    SITE = REPO_ROOT / "site"
+    HTML = (SITE / "index.html").read_text(encoding="utf-8")
+    URL = "https://dalust.github.io/Data-Initiatives-Atlas/"
+
+    def meta(self, key):
+        import re
+        m = re.search(r'<meta (?:property|name)="%s" content="([^"]*)">' % re.escape(key), self.HTML)
+        self.assertIsNotNone(m, f"no meta tag {key}")
+        return m.group(1)
+
+    def test_open_graph_tags_are_there(self):
+        self.assertEqual(self.meta("og:type"), "website")
+        self.assertEqual(self.meta("og:url"), self.URL)
+        self.assertIn("Data Initiatives Atlas", self.meta("og:title"))
+        self.assertGreater(len(self.meta("og:description")), 60)
+
+    def test_the_picture_is_an_absolute_address_of_a_file_that_exists(self):
+        # Sites that show a preview fetch the picture themselves, so a relative address does not work.
+        image = self.meta("og:image")
+        self.assertTrue(image.startswith(self.URL), image)
+        self.assertTrue((self.SITE / image[len(self.URL):]).is_file(), image)
+        self.assertEqual(self.meta("twitter:image"), image)
+        self.assertEqual(self.meta("twitter:card"), "summary_large_image")
+
+    def test_the_picture_has_the_size_the_tags_state(self):
+        import struct
+        data = (self.SITE / "og-image.png").read_bytes()
+        self.assertEqual(data[:8], b"\x89PNG\r\n\x1a\n")
+        width, height = struct.unpack(">II", data[16:24])
+        self.assertEqual((str(width), str(height)), (self.meta("og:image:width"), self.meta("og:image:height")))
+        self.assertEqual((width, height), (1200, 630))
+        self.assertLess(len(data), 300_000, "the preview picture should stay small")
+
+    def test_the_picture_is_described_for_people_who_cannot_see_it(self):
+        self.assertGreater(len(self.meta("og:image:alt")), 30)
+
+    def test_the_canonical_address_is_the_site(self):
+        self.assertIn(f'<link rel="canonical" href="{self.URL}">', self.HTML)
+
+    def test_the_structured_data_is_valid_and_states_the_licence(self):
+        import re
+        block = re.search(r'<script type="application/ld\+json">(.*?)</script>', self.HTML, re.S)
+        self.assertIsNotNone(block)
+        doc = json.loads(block.group(1))
+        self.assertEqual(doc["@type"], "Dataset")
+        self.assertEqual(doc["url"], self.URL)
+        self.assertEqual(doc["license"], "https://creativecommons.org/publicdomain/zero/1.0/")
+        self.assertIn("CC0", (REPO_ROOT / "LICENSE").read_text(encoding="utf-8")[:200])
+        for d in doc["distribution"]:
+            self.assertTrue(d["contentUrl"].startswith(self.URL))
+            self.assertIn(d["contentUrl"][len(self.URL):], ("graph.json", "details.json"))
+
+    def test_no_counts_are_frozen_into_the_preview(self):
+        # A preview is cached by the site that shows it; a number of entities in it would go stale.
+        import re
+        for key in ("og:title", "og:description", "twitter:title", "twitter:description", "og:image:alt"):
+            self.assertIsNone(re.search(r"\d{3,}", self.meta(key)), key)
+
+    def test_the_card_the_picture_is_made_from_is_kept(self):
+        self.assertTrue((REPO_ROOT / "docs" / "assets" / "og-card.html").is_file())
+        self.assertTrue((REPO_ROOT / "tools" / "build_og_image.mjs").is_file())
 
 
 class TestLoadBudget(unittest.TestCase):
