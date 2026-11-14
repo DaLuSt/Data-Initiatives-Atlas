@@ -50,6 +50,7 @@ jobs:
   decide:
     if: github.event_name == 'workflow_dispatch' || vars.LINKEDIN_IDEAS_ENABLED == 'true'
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     env:
       GH_TOKEN: ${{ github.token }}
       OWNER: ${{ github.repository_owner }}
@@ -100,6 +101,7 @@ jobs:
     needs: decide
     if: needs.decide.outputs.due == 'true'
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     environment: linkedin-ideas
     env:
       GH_TOKEN: ${{ github.token }}

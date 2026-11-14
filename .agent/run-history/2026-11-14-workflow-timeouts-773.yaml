@@ -1,0 +1,10 @@
+date: "2026-11-14"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #773, the first part: every job in every workflow now has a timeout-minutes (ten jobs in eight workflows had
+  none), and a test fails when a job is added without one. Opened without auto-merge, because it touches workflows and
+  the operating model asks for the owner's word. Left for #773: pinning actions by commit (the owner's call), a shared
+  composite for the LinkedIn workflows' common steps, a lighter decide job, code scanning, and tests for
+  source_hosts.py and country_centroids.py.
+prs: []
+outcome: in-progress
