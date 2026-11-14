@@ -125,5 +125,18 @@ class TestWorkflow(unittest.TestCase):
         self.assertIn("node_modules/", (REPO_ROOT / ".gitignore").read_text(encoding="utf-8"))
 
 
+class TestEveryWorkflow(unittest.TestCase):
+    """Roadmap #773: no job may run for GitHub's six-hour default when it hangs."""
+
+    def test_every_job_has_a_time_limit(self):
+        import yaml
+        for path in sorted((REPO_ROOT / ".github" / "workflows").glob("*.yml")):
+            wf = yaml.safe_load(path.read_text(encoding="utf-8"))
+            for name, job in wf["jobs"].items():
+                with self.subTest(workflow=path.name, job=name):
+                    self.assertIn("timeout-minutes", job)
+                    self.assertLessEqual(job["timeout-minutes"], 120)
+
+
 if __name__ == "__main__":
     unittest.main()
