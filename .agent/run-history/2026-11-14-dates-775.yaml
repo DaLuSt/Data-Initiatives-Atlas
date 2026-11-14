@@ -1,0 +1,12 @@
+date: "2026-11-14"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #775, a first slice. Four laws that were `adopted` with no start date because their dates had come through a
+  summarising fetch tool now have the date read directly: WIPO Lex's pages can be downloaded with curl, and for three of
+  the four they carry the law's text. NR-COMMUNICATIONS-BROADCASTING-ACT-2018 (2018-05-10, section 2 and the
+  certification line), TV-TTC-ACT (1994-02-01, 2008 Revised Edition), JO-TELECOM-LAW-13-1995 (1995-10-01, with article
+  4(a) establishing the TRC) and GT-LEY-GENERAL-TELECOM-94-96 (1996-11-17, record only; the text is a linked PDF, not
+  read). All four are now `active`; each says what was not re-read and that later amendments were not checked. 67 adopted
+  laws still have no start date.
+prs: []
+outcome: in-progress
