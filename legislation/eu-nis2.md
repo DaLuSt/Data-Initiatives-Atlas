@@ -56,6 +56,8 @@ related_entities:
   - CZ-ZAKON-264-2025
   - LU-LOI-NIS2
   - EU-CJEU
+  - EU-CRA
+  - EU-DORA
 relationships:
   - type: supersedes
     target: EU-NIS

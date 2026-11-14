@@ -78,6 +78,8 @@ Anchor entity: [[EU]]
 - [[EU-NIS2]] — NIS2 Directive (Dir. 2022/2555) → [[NL-CBW]]
 - [[EU-CER]] — Critical Entities Resilience Directive (Dir. 2022/2557)
 - [[EU-CYBERSECURITY-ACT]] — Cybersecurity Act (Reg. 2019/881, adopted 17 Apr 2019) ✅ 2026-08-28
+- [[EU-CRA]] — Cyber Resilience Act (Reg. 2024/2847), in force, applies generally from 11 Dec 2027 (reporting from 11 Sep 2026); `references` [[EU-NIS2]] and [[EU-CYBERSECURITY-ACT]] (added 2026-11-14)
+- [[EU-DORA]] — Digital Operational Resilience Act (Reg. 2022/2554), applies since 17 Jan 2025; the sector-specific act for finance under [[EU-NIS2]] (added 2026-11-14)
 
 ### Public services, interoperability and mobility
 
@@ -162,6 +164,8 @@ NL-CBS ──participates-in──→ EU-EUROSTAT  (European Statistical System)
 
 ### Agencies and supervisors
 - [[EU-ENISA]] — cybersecurity _(under [[EU-CYBERSECURITY-ACT]])_
+- [[EU-AI-OFFICE]] — the Commission's AI function _(`part-of` [[EU-COMMISSION]], under [[EU-AI-ACT]] Article 64; added 2026-11-14)_
+- [[EU-EDIB]] — European Data Innovation Board _(the expert group of [[EU-DGA]] Article 29; added 2026-11-14)_
 - [[EU-EDPB]] — data protection board _(members include [[NL-AP]])_
 - [[EU-EDPS]] — data protection supervisor
 - [[EU-EUROSTAT]] — statistics _(ESS partner of [[NL-CBS]])_
@@ -187,6 +191,13 @@ was invisible until it was modelled. The **edge type differs by legal shape**:
 `part-of` for the ESS, whose members are constitutionally components of it
 under [[EU-REG-223-2009]], and `participates-in` for the other two, whose
 members are members of an association.
+
+## Platforms
+
+- [[EU-DATA-EUROPA-EU]] — data.europa.eu, the portal for European open data, managed by [[EU-PUBLICATIONS-OFFICE]] (added 2026-11-14)
+- [[EU-OOTS]] — Once-Only Technical System, the evidence-exchange system of [[EU-SDG]] Article 14 (added 2026-11-14)
+- [[EU-BRIS]] — Business Registers Interconnection System
+- [[EU-EUROPASS]] — Europass
 
 ## Publications — the measurement layer
 
