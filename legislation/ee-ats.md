@@ -30,7 +30,8 @@ successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
-organisations: []
+organisations:
+  - EE-RIA
 related_entities:
   - EE
   - EE-RIHA
@@ -83,6 +84,10 @@ seventeenth whose Open Data Directive position is unrecorded. No
 here: Estonia was **not** among the nineteen member states served with
 letters of formal notice in September 2021, which suggests it notified on
 time, but that is an inference and the instrument is unidentified.
+
+## Which body
+
+[[EE-RIA]] is listed under `organisations` because it maintains [[EE-RIHA]], which this instrument governs (the edges are on [[EE-RIHA]]). That is an association drawn from edges the Atlas already holds, not a statement of the instrument's text: which authority supervises compliance with it was not read. (Added 2026-11-14, roadmap #770.)
 
 ## Sources
 

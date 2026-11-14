@@ -37,7 +37,8 @@ successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
-organisations: []
+organisations:
+  - PL-MC
 related_entities:
   - PL
   - EU-OPEN-DATA-DIRECTIVE
@@ -145,6 +146,10 @@ entity. It is named and dated in the evidence string. Creating a repealed
 Polish act solely to carry one edge would be inconsistent with how the
 Spanish, Belgian and French earlier acts are handled — of which only two
 exist as entities, and both for independent reasons.
+
+## Which body
+
+[[PL-MC]] is listed under `organisations` because it maintains [[PL-DANE-GOV-PL]], which this instrument governs (the edges are on [[PL-DANE-GOV-PL]]). That is an association drawn from edges the Atlas already holds, not a statement of the instrument's text: which authority supervises compliance with it was not read. (Added 2026-11-14, roadmap #770.)
 
 ## Sources
 
