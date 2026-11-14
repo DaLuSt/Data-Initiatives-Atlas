@@ -32,6 +32,7 @@ domains:
 organisations: []
 related_entities:
   - EU-PUBLIC-ADMIN-DATA-SPACE
+  - EU-OOTS
 relationships:
   - type: applies-in
     target: PT

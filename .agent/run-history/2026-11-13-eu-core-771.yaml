@@ -8,5 +8,5 @@ summary: >
   Directive; the ePrivacy Directive related-to EU-GDPR as an interpretation. Three rows removed from the research queue
   (eight left); candidate C11 and the Digital Omnibus now point at the new entities. Left for #771: the Cyber Resilience
   Act, DORA, the European Data Innovation Board, the AI Office, data.europa.eu and the Once-Only Technical System.
-prs: []
-outcome: in-progress
+prs: [779]
+outcome: merged

@@ -38,6 +38,7 @@ related_entities:
   - IE
   - EU-DATA-STRATEGY
   - EU-DIGITAL-OMNIBUS
+  - EU-EDIB
 relationships:
   - type: applies-in
     target: PT

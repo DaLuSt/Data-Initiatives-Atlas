@@ -38,6 +38,7 @@ related_entities:
   - EU-DIGITAL-OMNIBUS
   - EU-DIGITAL-OMNIBUS-AI
   - EU-AI-CONTINENT-ACTION-PLAN
+  - EU-AI-OFFICE
 relationships:
   - type: applies-in
     target: PT
