@@ -121,7 +121,7 @@ Explore: https://dalust.github.io/Data-Initiatives-Atlas/
 
 ### Post 2. An adequacy decision is a record with a review clock
 
-*Kind: Metadata. Atlas entities: EU-AD-ADEQUACY, EU-AR-, EU-BR-, EU-CA-, EU-JP-, EU-KR-, EU-NZ-, EU-US-, EU-UY-ADEQUACY, EU-ADEQUACY-REVIEW-2024.*
+*Kind: Metadata. Atlas entities: EU-AD-ADEQUACY, EU-AR-, EU-BR-, EU-CA-, EU-CH-, EU-JP-, EU-KR-, EU-NZ-, EU-UK-, EU-US-, EU-UY-ADEQUACY, EU-ADEQUACY-REVIEW-2024.*
 
 ```text
 An adequacy decision is not a permission slip. It is a record with a review clock.
@@ -133,11 +133,12 @@ When people say "the EU has adequacy with country X", they usually mean one fact
 3. a jurisdiction it applies in,
 4. a date by which someone has to look again.
 
-The Data Initiatives Atlas now models nine of them: Andorra, Argentina, Brazil, Canada, Japan, Korea, New Zealand, the US and Uruguay.
+The Data Initiatives Atlas now models eleven of them: Andorra, Argentina, Brazil, Canada, Japan, Korea, New Zealand, Switzerland, the United Kingdom, the US and Uruguay.
 
 What the sources show once you read them:
-• Five were adopted under the old Directive 95/46/EC and carry on under the GDPR until amended or repealed. Their first review report, COM(2024) 7, arrived on 15 January 2024 and covered eleven countries and territories.
+• Six were adopted under the old Directive 95/46/EC and carry on under the GDPR until amended or repealed. The first review report on the pre-GDPR decisions, COM(2024) 7, arrived on 15 January 2024 and covered eleven countries and territories.
 • The ones adopted under the GDPR itself have review clocks written into the text. Japan: within two years, then at least every four. Korea: three years, then every four.
+• The United Kingdom's even has an expiry date: renewed on 19 December 2025 for six years, the decisions lapse on 27 December 2031 unless extended.
 • Brazil is the newest: the decision of 26 January 2026 points at Brazil's LGPD.
 
 The metadata lesson: the interesting field is not "adequate: yes". It is "next review due". It is easy to overlook, and it is exactly the thing that tells you whether a data flow still stands on solid ground.
