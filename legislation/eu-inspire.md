@@ -59,29 +59,29 @@ relationships:
   - type: applies-in
     target: PT
     source: fact
-    evidence: "As an EU directive, INSPIRE Directive is binding on every member state as to the result to be achieved and requires national transposition, and Portugal is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
-    confidence: medium
+    evidence: "Directive 2007/2/EC of 14 March 2007, read directly 2026-11-14 from the Official Journal text (Publications Office, CELEX 32007L0002): Article 24(1), Member States bring into force the measures necessary to comply 'by 15 May 2009', and its final article reads 'This Directive is addressed to the Member States.' Portugal is on the EU's own list of its 27 member countries, 'EU Member State since 1986' (european-union.europa.eu, 'EU countries', read directly 2026-11-14)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: LU
     source: fact
-    evidence: "As an EU directive, INSPIRE Directive is binding on every member state as to the result to be achieved and requires national transposition, and Luxembourg is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
-    confidence: medium
+    evidence: "Directive 2007/2/EC of 14 March 2007, read directly 2026-11-14 from the Official Journal text (Publications Office, CELEX 32007L0002): Article 24(1), Member States bring into force the measures necessary to comply 'by 15 May 2009', and its final article reads 'This Directive is addressed to the Member States.' Luxembourg is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: CZ
     source: fact
-    evidence: "As an EU directive, INSPIRE Directive is binding on every member state as to the result to be achieved and requires national transposition, and Czechia is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
-    confidence: medium
+    evidence: "Directive 2007/2/EC of 14 March 2007, read directly 2026-11-14 from the Official Journal text (Publications Office, CELEX 32007L0002): Article 24(1), Member States bring into force the measures necessary to comply 'by 15 May 2009', and its final article reads 'This Directive is addressed to the Member States.' Czechia is on the EU's own list of its 27 member countries, 'EU Member State since 2004' (european-union.europa.eu, 'EU countries', read directly 2026-11-14)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: IE
     source: fact
-    evidence: "As an EU directive, INSPIRE Directive is binding on every member state as to the result to be achieved and requires national transposition, and Ireland is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
-    confidence: medium
+    evidence: "Directive 2007/2/EC of 14 March 2007, read directly 2026-11-14 from the Official Journal text (Publications Office, CELEX 32007L0002): Article 24(1), Member States bring into force the measures necessary to comply 'by 15 May 2009', and its final article reads 'This Directive is addressed to the Member States.' Ireland is on the EU's own list of its 27 member countries, 'EU Member State since 1973' (european-union.europa.eu, 'EU countries', read directly 2026-11-14)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
@@ -155,6 +155,10 @@ sources:
     url: "https://publications.europa.eu/resource/celex/32007L0002"
     publisher: "Publications Office of the European Union (EUR-Lex / CELLAR)"
     accessed: "2026-10-10"
+  - title: "EU countries"
+    url: "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
+    publisher: "European Union"
+    accessed: "2026-11-14"
 ---
 
 # INSPIRE Directive

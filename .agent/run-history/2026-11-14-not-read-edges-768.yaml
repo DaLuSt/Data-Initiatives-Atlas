@@ -1,0 +1,13 @@
+date: "2026-11-14"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #768, a first slice. 208 applies-in edges on fifteen EU instruments (ten regulations, five directives) carried
+  the boilerplate "As an EU regulation ... and X is a member state ... NOT READ — search-only" although the entities are
+  primary-source. Each act's Official Journal text was downloaded from the Publications Office and its closing formula
+  (regulations) or transposition and addressees articles (directives) read directly; the EU's own list of its 27 member
+  countries was read directly too (both pages of it). The evidence now quotes those, the edges are confidence high, and
+  both sources are in each entity's sources. Only the strict boilerplate was replaced: 161 other "NOT READ" strings
+  remain (national transposition statements, DESI's measures edges, the Digital Decade and EIF edges, and the
+  Environmental Information Directive, whose text the Publications Office did not serve as XHTML).
+prs: []
+outcome: in-progress

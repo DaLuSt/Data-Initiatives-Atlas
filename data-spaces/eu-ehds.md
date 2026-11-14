@@ -49,29 +49,29 @@ relationships:
   - type: applies-in
     target: PT
     source: fact
-    evidence: "European Health Data Space is an EU-level instrument addressed to the member states, and Portugal is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
-    confidence: medium
+    evidence: "Regulation (EU) 2025/327 of 11 February 2025, read directly 2026-11-14 from the Official Journal text (Publications Office, CELEX 32025R0327): after Article 105 (Entry into force and application) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Portugal is on the EU's own list of its 27 member countries, 'EU Member State since 1986' (european-union.europa.eu, 'EU countries', read directly 2026-11-14)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: LU
     source: fact
-    evidence: "European Health Data Space is an EU-level instrument addressed to the member states, and Luxembourg is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
-    confidence: medium
+    evidence: "Regulation (EU) 2025/327 of 11 February 2025, read directly 2026-11-14 from the Official Journal text (Publications Office, CELEX 32025R0327): after Article 105 (Entry into force and application) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Luxembourg is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: CZ
     source: fact
-    evidence: "European Health Data Space is an EU-level instrument addressed to the member states, and Czechia is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
-    confidence: medium
+    evidence: "Regulation (EU) 2025/327 of 11 February 2025, read directly 2026-11-14 from the Official Journal text (Publications Office, CELEX 32025R0327): after Article 105 (Entry into force and application) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Czechia is on the EU's own list of its 27 member countries, 'EU Member State since 2004' (european-union.europa.eu, 'EU countries', read directly 2026-11-14)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: IE
     source: fact
-    evidence: "European Health Data Space is an EU-level instrument addressed to the member states, and Ireland is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
-    confidence: medium
+    evidence: "Regulation (EU) 2025/327 of 11 February 2025, read directly 2026-11-14 from the Official Journal text (Publications Office, CELEX 32025R0327): after Article 105 (Entry into force and application) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Ireland is on the EU's own list of its 27 member countries, 'EU Member State since 1973' (european-union.europa.eu, 'EU countries', read directly 2026-11-14)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
@@ -138,6 +138,14 @@ sources:
     url: "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32025R0327"
     publisher: "EUR-Lex (Publications Office of the European Union)"
     accessed: "2026-09-19"
+  - title: "Official Journal text (CELEX 32025R0327)"
+    url: "https://publications.europa.eu/resource/celex/32025R0327"
+    publisher: "Publications Office of the European Union"
+    accessed: "2026-11-14"
+  - title: "EU countries"
+    url: "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
+    publisher: "European Union"
+    accessed: "2026-11-14"
 ---
 
 # European Health Data Space (EHDS)
