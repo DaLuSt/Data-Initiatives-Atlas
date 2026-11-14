@@ -9,5 +9,5 @@ summary: >
   amends an act that is linked (Saint Lucia). Each entity says it is an association, not a reading of the law. The other
   33 were sorted: 24 already name a body in prose that is not an Atlas entity, or say why none is linked; 9 say nothing
   (listed on the issue). No source was read for this slice.
-prs: []
-outcome: in-progress
+prs: [784]
+outcome: merged
