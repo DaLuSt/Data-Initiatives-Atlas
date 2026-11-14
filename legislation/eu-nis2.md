@@ -69,8 +69,8 @@ relationships:
   - type: applies-in
     target: PT
     source: fact
-    evidence: "As an EU directive, NIS2 Directive is binding on every member state as to the result to be achieved and requires national transposition, and Portugal is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
-    confidence: medium
+    evidence: "Directive (EU) 2022/2555 of 14 December 2022, read directly 2026-11-14 from the Official Journal text (Publications Office, CELEX 32022L2555): Article 41(1), 'By 17 October 2024, Member States shall adopt and publish the measures necessary to comply with this Directive', and its final article reads 'This Directive is addressed to the Member States.' Portugal is on the EU's own list of its 27 member countries, 'EU Member State since 1986' (european-union.europa.eu, 'EU countries', read directly 2026-11-14)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
@@ -152,6 +152,14 @@ sources:
     url: "https://www.ncsc.nl/cyberbeveiligingswet-nis2/valt-mijn-organisatie-onder-de-cyberbeveiligingswet-nis2"
     publisher: "Nationaal Cyber Security Centrum (NCSC)"
     accessed: "2026-09-25"
+  - title: "Official Journal text (CELEX 32022L2555)"
+    url: "https://publications.europa.eu/resource/celex/32022L2555"
+    publisher: "Publications Office of the European Union"
+    accessed: "2026-11-14"
+  - title: "EU countries"
+    url: "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
+    publisher: "European Union"
+    accessed: "2026-11-14"
 ---
 
 # NIS2 Directive (Directive (EU) 2022/2555)

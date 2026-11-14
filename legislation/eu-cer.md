@@ -42,29 +42,29 @@ relationships:
   - type: applies-in
     target: PT
     source: fact
-    evidence: "As an EU directive, Critical Entities Resilience Directive is binding on every member state as to the result to be achieved and requires national transposition, and Portugal is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
-    confidence: medium
+    evidence: "Directive (EU) 2022/2557 of 14 December 2022, read directly 2026-11-14 from the Official Journal text (Publications Office, CELEX 32022L2557): Article 26(1), 'By 17 October 2024, Member States shall adopt and publish the measures necessary to comply with this Directive', and its final article reads 'This Directive is addressed to the Member States.' Portugal is on the EU's own list of its 27 member countries, 'EU Member State since 1986' (european-union.europa.eu, 'EU countries', read directly 2026-11-14)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: LU
     source: fact
-    evidence: "As an EU directive, Critical Entities Resilience Directive is binding on every member state as to the result to be achieved and requires national transposition, and Luxembourg is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
-    confidence: medium
+    evidence: "Directive (EU) 2022/2557 of 14 December 2022, read directly 2026-11-14 from the Official Journal text (Publications Office, CELEX 32022L2557): Article 26(1), 'By 17 October 2024, Member States shall adopt and publish the measures necessary to comply with this Directive', and its final article reads 'This Directive is addressed to the Member States.' Luxembourg is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: CZ
     source: fact
-    evidence: "As an EU directive, Critical Entities Resilience Directive is binding on every member state as to the result to be achieved and requires national transposition, and Czechia is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
-    confidence: medium
+    evidence: "Directive (EU) 2022/2557 of 14 December 2022, read directly 2026-11-14 from the Official Journal text (Publications Office, CELEX 32022L2557): Article 26(1), 'By 17 October 2024, Member States shall adopt and publish the measures necessary to comply with this Directive', and its final article reads 'This Directive is addressed to the Member States.' Czechia is on the EU's own list of its 27 member countries, 'EU Member State since 2004' (european-union.europa.eu, 'EU countries', read directly 2026-11-14)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: IE
     source: fact
-    evidence: "As an EU directive, Critical Entities Resilience Directive is binding on every member state as to the result to be achieved and requires national transposition, and Ireland is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
-    confidence: medium
+    evidence: "Directive (EU) 2022/2557 of 14 December 2022, read directly 2026-11-14 from the Official Journal text (Publications Office, CELEX 32022L2557): Article 26(1), 'By 17 October 2024, Member States shall adopt and publish the measures necessary to comply with this Directive', and its final article reads 'This Directive is addressed to the Member States.' Ireland is on the EU's own list of its 27 member countries, 'EU Member State since 1973' (european-union.europa.eu, 'EU countries', read directly 2026-11-14)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
@@ -117,6 +117,14 @@ sources:
   - title: "Directive (EU) 2022/2557 — PDF text"
     url: "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022L2557"
     publisher: "EUR-Lex (Publications Office of the European Union)"
+  - title: "Official Journal text (CELEX 32022L2557)"
+    url: "https://publications.europa.eu/resource/celex/32022L2557"
+    publisher: "Publications Office of the European Union"
+    accessed: "2026-11-14"
+  - title: "EU countries"
+    url: "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
+    publisher: "European Union"
+    accessed: "2026-11-14"
 ---
 
 # Critical Entities Resilience Directive (Directive (EU) 2022/2557)

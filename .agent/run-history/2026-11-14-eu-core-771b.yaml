@@ -9,5 +9,5 @@ summary: >
   in a search result) is not recorded. The six EU rows leave the research queue (two leads left). regions/eu/index.md
   gets a Platforms section. Not modelled and said so: the European Supervisory Authorities, the AI Board, national
   market surveillance authorities, the national portals' links to data.europa.eu.
-prs: []
-outcome: in-progress
+prs: [780]
+outcome: merged

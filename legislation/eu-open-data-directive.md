@@ -57,22 +57,22 @@ relationships:
   - type: applies-in
     target: PT
     source: fact
-    evidence: "As an EU directive, Open Data Directive is binding on every member state as to the result to be achieved and requires national transposition, and Portugal is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
-    confidence: medium
+    evidence: "Directive (EU) 2019/1024 of 20 June 2019, read directly 2026-11-14 from the Official Journal text (Publications Office, CELEX 32019L1024): Article 17(1), Member States bring into force the measures necessary to comply 'by 17 July 2021', and its final article reads 'This Directive is addressed to the Member States.' Portugal is on the EU's own list of its 27 member countries, 'EU Member State since 1986' (european-union.europa.eu, 'EU countries', read directly 2026-11-14)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: LU
     source: fact
-    evidence: "As an EU directive, Open Data Directive is binding on every member state as to the result to be achieved and requires national transposition, and Luxembourg is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
-    confidence: medium
+    evidence: "Directive (EU) 2019/1024 of 20 June 2019, read directly 2026-11-14 from the Official Journal text (Publications Office, CELEX 32019L1024): Article 17(1), Member States bring into force the measures necessary to comply 'by 17 July 2021', and its final article reads 'This Directive is addressed to the Member States.' Luxembourg is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: CZ
     source: fact
-    evidence: "As an EU directive, Open Data Directive is binding on every member state as to the result to be achieved and requires national transposition, and Czechia is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
-    confidence: medium
+    evidence: "Directive (EU) 2019/1024 of 20 June 2019, read directly 2026-11-14 from the Official Journal text (Publications Office, CELEX 32019L1024): Article 17(1), Member States bring into force the measures necessary to comply 'by 17 July 2021', and its final article reads 'This Directive is addressed to the Member States.' Czechia is on the EU's own list of its 27 member countries, 'EU Member State since 2004' (european-union.europa.eu, 'EU countries', read directly 2026-11-14)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
@@ -155,6 +155,14 @@ sources:
     url: "https://digital-strategy.ec.europa.eu/en/news/european-commission-decides-refer-belgium-bulgaria-latvia-and-netherlands-court-justice-european"
     publisher: "European Commission"
     accessed: "2026-09-25"
+  - title: "Official Journal text (CELEX 32019L1024)"
+    url: "https://publications.europa.eu/resource/celex/32019L1024"
+    publisher: "Publications Office of the European Union"
+    accessed: "2026-11-14"
+  - title: "EU countries"
+    url: "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
+    publisher: "European Union"
+    accessed: "2026-11-14"
 ---
 
 # Open Data Directive (Directive (EU) 2019/1024)
