@@ -1,0 +1,44 @@
+<!doctype html>
+<!-- The source of site/og-image.png, the picture a shared link to the Atlas shows (roadmap #772).
+     Render it at 1200 x 630 with: node tools/build_og_image.mjs
+     It carries no counts on purpose: the picture is cached by the sites that show it and would go stale. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  html, body { margin: 0; }
+  body { width: 1200px; height: 630px; background: #f6f7f9; color: #16191f;
+         font-family: "Liberation Sans", "DejaVu Sans", Arial, sans-serif; position: relative; overflow: hidden; }
+  .band { position: absolute; left: 0; top: 0; bottom: 0; width: 18px; background: #1c5fd6; }
+  .text { position: absolute; left: 86px; top: 150px; width: 640px; }
+  h1 { font-size: 68px; line-height: 1.08; margin: 0 0 28px; letter-spacing: -1px; font-weight: 700; }
+  p.sub { font-size: 31px; line-height: 1.35; margin: 0; color: #3b4352; }
+  p.foot { position: absolute; left: 86px; bottom: 62px; margin: 0; font-size: 24px; color: #545c6b; }
+  p.foot b { color: #1c5fd6; font-weight: 700; }
+  svg { position: absolute; right: 60px; top: 95px; }
+</style>
+</head>
+<body>
+<div class="band"></div>
+<div class="text">
+  <h1>Data Initiatives Atlas</h1>
+  <p class="sub">An open map of who governs data, and how it all connects.</p>
+</div>
+<p class="foot"><b>Open data, CC0</b> &nbsp;·&nbsp; laws, bodies, standards and data spaces, each with its source</p>
+<svg width="440" height="440" viewBox="0 0 440 440" role="img" aria-label="A small network of five connected nodes">
+  <g stroke="#b3bac6" stroke-width="5" fill="none" stroke-linecap="round">
+    <line x1="220" y1="210" x2="110" y2="90"/>
+    <line x1="220" y1="210" x2="350" y2="110"/>
+    <line x1="220" y1="210" x2="330" y2="340"/>
+    <line x1="220" y1="210" x2="95" y2="320"/>
+    <line x1="110" y1="90" x2="350" y2="110"/>
+    <line x1="95" y1="320" x2="330" y2="340"/>
+  </g>
+  <circle cx="220" cy="210" r="46" fill="#1668b8"/>
+  <circle cx="110" cy="90" r="34" fill="#7b4fbd"/>
+  <circle cx="350" cy="110" r="30" fill="#1b7f5e"/>
+  <circle cx="330" cy="340" r="36" fill="#5f7a20"/>
+  <circle cx="95" cy="320" r="28" fill="#99562c"/>
+</svg>
+</body>
+</html>
