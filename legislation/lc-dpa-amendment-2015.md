@@ -25,7 +25,8 @@ successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
-organisations: []
+organisations:
+  - LC-DATA-PROTECTION-COMMISSIONER
 related_entities:
   - LC
   - LC-DPA-2011
@@ -63,3 +64,8 @@ sources:
 ## Relationships
 
 Amends [[LC-DPA-2011]]; applies in [[LC]].
+
+## Which body
+
+[[LC-DATA-PROTECTION-COMMISSIONER]] is listed under `organisations` because this Act amends [[LC-DPA-2011]], the Act that entity is linked to. That is an association drawn from edges the Atlas already holds; what this amending Act itself says about the Commissioner was not read for it. (Added 2026-11-14, roadmap #770.)
+

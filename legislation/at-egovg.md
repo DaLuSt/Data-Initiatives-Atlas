@@ -36,7 +36,8 @@ successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
-organisations: []
+organisations:
+  - AT-BRZ
 related_entities:
   - AT
   - AT-ID-AUSTRIA
@@ -154,6 +155,10 @@ not read this pass.
 
 None asserted from this entity. [[AT-ID-AUSTRIA]] should carry the
 inbound `governed-by` edge to this law.
+
+## Which body
+
+[[AT-BRZ]] is listed under `organisations` because it maintains [[AT-ID-AUSTRIA]], which this instrument governs (the edges are on [[AT-ID-AUSTRIA]]). That is an association drawn from edges the Atlas already holds, not a statement of the instrument's text: which authority supervises compliance with it was not read. (Added 2026-11-14, roadmap #770.)
 
 ## Sources
 

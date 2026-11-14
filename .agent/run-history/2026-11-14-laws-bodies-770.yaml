@@ -1,0 +1,13 @@
+date: "2026-11-14"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #770, a first slice. Of the 43 national laws with no link to any organisation, ten now list one under
+  `organisations`, each drawn from edges the Atlas already holds: nine through a platform, framework or standard that the
+  law governs and that an organisation maintains (the Dutch base-registry acts to Kadaster, TNO and the RDW; the Austrian
+  E-Government Act to the BRZ; the Belgian re-use act to BOSA; the Estonian Public Information Act to RIA; the French
+  2005 ordinance to DINUM and ANSSI; the Polish open data act to the Ministry of Digital Affairs) and one because it
+  amends an act that is linked (Saint Lucia). Each entity says it is an association, not a reading of the law. The other
+  33 were sorted: 24 already name a body in prose that is not an Atlas entity, or say why none is linked; 9 say nothing
+  (listed on the issue). No source was read for this slice.
+prs: []
+outcome: in-progress

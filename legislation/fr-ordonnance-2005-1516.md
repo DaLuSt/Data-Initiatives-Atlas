@@ -32,7 +32,9 @@ successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
-organisations: []
+organisations:
+  - FR-ANSSI
+  - FR-DINUM
 related_entities:
   - FR
   - FR-RGI
@@ -92,6 +94,10 @@ descendants.
 ## Relationships
 
 - `applies-in` [[FR]] (anchor edge).
+
+## Which body
+
+[[FR-ANSSI]] is listed under `organisations` because it maintains [[FR-RGS]], which this instrument governs (the edges are on [[FR-RGS]]); [[FR-DINUM]] is listed under `organisations` because it maintains [[FR-RGI]] and maintains [[FR-RGS]], which this instrument governs (the edges are on [[FR-RGI]] and [[FR-RGS]]). That is an association drawn from edges the Atlas already holds, not a statement of the instrument's text: which authority supervises compliance with it was not read. (Added 2026-11-14, roadmap #770.)
 
 ## Sources
 

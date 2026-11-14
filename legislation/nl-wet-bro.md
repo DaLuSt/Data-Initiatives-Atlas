@@ -26,7 +26,8 @@ successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
-organisations: []
+organisations:
+  - NL-TNO
 related_entities:
   - NL-BASISREGISTRATIES
 relationships:
@@ -120,6 +121,10 @@ The BRO programme's own site (basisregistratieondergrond.nl, read directly) stil
 ## Relationships
 
 - `applies-in` [[NL]] — an anchor edge.
+
+## Which body
+
+[[NL-TNO]] is listed under `organisations` because it maintains [[NL-BRO]], which this instrument governs (the edges are on [[NL-BRO]]). That is an association drawn from edges the Atlas already holds, not a statement of the instrument's text: which authority supervises compliance with it was not read. (Added 2026-11-14, roadmap #770.)
 
 ## Sources
 

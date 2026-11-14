@@ -31,7 +31,8 @@ successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
-organisations: []
+organisations:
+  - BE-BOSA
 related_entities:
   - EU-PSI-DIRECTIVE
   - BE
@@ -180,6 +181,10 @@ above. `related_entities` records the association for navigation only.
 - `implements-requirement-from` [[EU-PSI-DIRECTIVE]] — confirmed directly
   from the act's own Article 1.
 - `applies-in` [[BE]] — anchor edge.
+
+## Which body
+
+[[BE-BOSA]] is listed under `organisations` because it maintains [[BE-DATA-GOV-BE]], which this instrument governs (the edges are on [[BE-DATA-GOV-BE]]). That is an association drawn from edges the Atlas already holds, not a statement of the instrument's text: which authority supervises compliance with it was not read. (Added 2026-11-14, roadmap #770.)
 
 ## Sources
 

@@ -7,7 +7,7 @@ as an open, connected knowledge graph.**
 
 ### [**→ Open the Interactive Atlas**](https://dalust.github.io/Data-Initiatives-Atlas/)
 
-*Search, filter and explore 1,295 entities and 13,849 connections across one hundred and sixty-nine
+*Search, filter and explore 1,295 entities and 13,872 connections across one hundred and sixty-nine
 countries — no install, no account.*
 
 [![Validation](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/validate.yml/badge.svg)](https://github.com/DaLuSt/Data-Initiatives-Atlas/actions/workflows/validate.yml)
@@ -34,7 +34,7 @@ hand-maintained.
 | | |
 |---|---|
 | **Entities** | 1,295 |
-| **Connections** | 13,849 — of which **2,540** are typed relationships, each with its provenance |
+| **Connections** | 13,872 — of which **2,540** are typed relationships, each with its provenance |
 | **Country scopes** | **169** — 134 with national entities beyond the anchor itself, the rest base anchors |
 | **Layers** | UN · Council of Europe · EU · national · subnational (sector is carried by `domains`) |
 | **Source of truth** | Git + Markdown/YAML — no database |
