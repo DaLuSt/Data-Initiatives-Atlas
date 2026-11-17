@@ -77,36 +77,36 @@ relationships:
   - type: applies-in
     target: DE
     source: fact
-    evidence: "As an EU directive it requires transposition by all member states, Germany included (EUR-Lex ELI dir/2022/2557). NOT READ — search-only. Unlike the Netherlands entry above, NO German transposing instrument has been identified: none was returned by search, and none is recorded in this Atlas. The relationship rests solely on the directive binding every member state."
-    confidence: medium
+    evidence: "Directive (EU) 2022/2557 of 14 December 2022, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32022L2557): Article 26(1), 'By 17 October 2024, Member States shall adopt and publish the measures necessary to comply with this Directive', and its final article reads 'This Directive is addressed to the Member States.' Germany is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU directive it requires transposition by all member states, Germany included (EUR-Lex ELI dir/2022/2557). Unlike the Netherlands entry above, NO German transposing instrument has been identified: none was returned by search, and none is recorded in this Atlas. The relationship rests solely on the directive binding every member state."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: BE
     source: fact
-    evidence: "As an EU directive it requires transposition by all member states, Belgium included (EUR-Lex ELI dir/2022/2557). NOT READ — search-only. As with Germany above, NO Belgian transposing instrument has been identified; the relationship rests solely on the directive binding every member state."
-    confidence: medium
+    evidence: "Directive (EU) 2022/2557 of 14 December 2022, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32022L2557): Article 26(1), 'By 17 October 2024, Member States shall adopt and publish the measures necessary to comply with this Directive', and its final article reads 'This Directive is addressed to the Member States.' Belgium is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU directive it requires transposition by all member states, Belgium included (EUR-Lex ELI dir/2022/2557). As with Germany above, NO Belgian transposing instrument has been identified; the relationship rests solely on the directive binding every member state."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: FR
     source: fact
-    evidence: "As an EU directive it requires transposition by all member states, France included (EUR-Lex ELI dir/2022/2557). NOT READ — search-only. France's 'loi Resilience' is sourced as transposing REC, NIS2 and DORA together, but that instrument's status is contested and no relationship to it is asserted from this entity; see FR-NIS2-LOI."
-    confidence: medium
+    evidence: "Directive (EU) 2022/2557 of 14 December 2022, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32022L2557): Article 26(1), 'By 17 October 2024, Member States shall adopt and publish the measures necessary to comply with this Directive', and its final article reads 'This Directive is addressed to the Member States.' France is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU directive it requires transposition by all member states, France included (EUR-Lex ELI dir/2022/2557). France's 'loi Resilience' is sourced as transposing REC, NIS2 and DORA together, but that instrument's status is contested and no relationship to it is asserted from this entity; see FR-NIS2-LOI."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: ES
     source: fact
-    evidence: "As an EU directive it requires transposition by all member states, Spain included (EUR-Lex ELI dir/2022/2557). NOT READ - search-only. No Spanish transposing instrument was identified in this batch and none is asserted."
-    confidence: medium
+    evidence: "Directive (EU) 2022/2557 of 14 December 2022, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32022L2557): Article 26(1), 'By 17 October 2024, Member States shall adopt and publish the measures necessary to comply with this Directive', and its final article reads 'This Directive is addressed to the Member States.' Spain is on the EU's own list of its 27 member countries, 'EU Member State since 1986' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU directive it requires transposition by all member states, Spain included (EUR-Lex ELI dir/2022/2557). No Spanish transposing instrument was identified in this batch and none is asserted."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: PL
     source: fact
-    evidence: "As an EU directive it requires transposition by all member states, Poland included (EUR-Lex ELI dir/2022/2557). NOT READ - search-only. No Polish transposing instrument was identified in this batch and none is asserted."
-    confidence: medium
+    evidence: "Directive (EU) 2022/2557 of 14 December 2022, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32022L2557): Article 26(1), 'By 17 October 2024, Member States shall adopt and publish the measures necessary to comply with this Directive', and its final article reads 'This Directive is addressed to the Member States.' Poland is on the EU's own list of its 27 member countries, 'EU Member State since 2004' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU directive it requires transposition by all member states, Poland included (EUR-Lex ELI dir/2022/2557). No Polish transposing instrument was identified in this batch and none is asserted."
+    confidence: high
     valid_from: null
     valid_until: null
 

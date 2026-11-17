@@ -72,50 +72,50 @@ relationships:
   - type: applies-in
     target: IE
     source: fact
-    evidence: "As an EU regulation the GDPR is binding in its entirety and directly applicable in all member states; Ireland gave it further effect through the Data Protection Act 2018, which establishes the Data Protection Commission as the supervisory authority, and the Commission conducts inquiries in accordance with that Act and Article 60 of the GDPR (dataprotection.ie 'Inquiry into TikTok Technology Limited'; irishstatutebook.ie No. 7 of 2018; edpb.europa.eu). NOT READ — search-only. See IE-DPA-2018."
-    confidence: medium
+    evidence: "Regulation (EU) 2016/679 of 27 April 2016, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32016R0679): after Article 99 (Entry into force and application) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Ireland is on the EU's own list of its 27 member countries, 'EU Member State since 1973' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation the GDPR is binding in its entirety and directly applicable in all member states; Ireland gave it further effect through the Data Protection Act 2018, which establishes the Data Protection Commission as the supervisory authority, and the Commission conducts inquiries in accordance with that Act and Article 60 of the GDPR (dataprotection.ie 'Inquiry into TikTok Technology Limited'; irishstatutebook.ie No. 7 of 2018; edpb.europa.eu). See IE-DPA-2018."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: NL
     source: fact
-    evidence: "As an EU regulation the GDPR is directly applicable in all member states; the Netherlands adopted the UAVG as implementing legislation, in force from the GDPR's date of application. NOT READ — search-only."
-    confidence: medium
+    evidence: "Regulation (EU) 2016/679 of 27 April 2016, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32016R0679): after Article 99 (Entry into force and application) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' The Netherlands is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation the GDPR is directly applicable in all member states; the Netherlands adopted the UAVG as implementing legislation, in force from the GDPR's date of application."
+    confidence: high
     valid_from: 2018-05-25
     valid_until: null
   - type: applies-in
     target: DE
     source: fact
-    evidence: "As an EU regulation the GDPR is directly applicable in all member states; Germany adopted the Bundesdatenschutzgesetz as part of the Datenschutz-Anpassungs- und -Umsetzungsgesetz EU, applicable since 25 May 2018, which supplements and concretises the GDPR where its opening clauses permit (dsgvo-gesetz.de/bdsg; activemind.de). NOT READ — search-only."
-    confidence: medium
+    evidence: "Regulation (EU) 2016/679 of 27 April 2016, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32016R0679): after Article 99 (Entry into force and application) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Germany is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation the GDPR is directly applicable in all member states; Germany adopted the Bundesdatenschutzgesetz as part of the Datenschutz-Anpassungs- und -Umsetzungsgesetz EU, applicable since 25 May 2018, which supplements and concretises the GDPR where its opening clauses permit (dsgvo-gesetz.de/bdsg; activemind.de)."
+    confidence: high
     valid_from: 2018-05-25
     valid_until: null
   - type: applies-in
     target: BE
     source: fact
-    evidence: "As an EU regulation the GDPR is directly applicable in all member states; Belgium adopted the wet van 30 juli 2018 as implementing legislation, in force from 5 September 2018, supplementing the GDPR where it left room for national legislators (ejustice.just.fgov.be ELI wet/2018/07/30; gegevensbeschermingsautoriteit.be). NOT READ — search-only."
-    confidence: medium
+    evidence: "Regulation (EU) 2016/679 of 27 April 2016, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32016R0679): after Article 99 (Entry into force and application) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Belgium is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation the GDPR is directly applicable in all member states; Belgium adopted the wet van 30 juli 2018 as implementing legislation, in force from 5 September 2018, supplementing the GDPR where it left room for national legislators (ejustice.just.fgov.be ELI wet/2018/07/30; gegevensbeschermingsautoriteit.be)."
+    confidence: high
     valid_from: 2018-09-05
     valid_until: null
   - type: applies-in
     target: FR
     source: fact
-    evidence: "As an EU regulation the GDPR is directly applicable in all member states; France brought the loi n° 78-17 of 6 January 1978 into conformity by the law of 20 June 2018 and the ordinance of 12 December 2018, deliberately amending the existing act rather than replacing it (cnil.fr; entreprises.cci-paris-idf.fr). NOT READ — search-only."
-    confidence: medium
+    evidence: "Regulation (EU) 2016/679 of 27 April 2016, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32016R0679): after Article 99 (Entry into force and application) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' France is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation the GDPR is directly applicable in all member states; France brought the loi n° 78-17 of 6 January 1978 into conformity by the law of 20 June 2018 and the ordinance of 12 December 2018, deliberately amending the existing act rather than replacing it (cnil.fr; entreprises.cci-paris-idf.fr)."
+    confidence: high
     valid_from: 2018-06-20
     valid_until: null
   - type: applies-in
     target: ES
     source: fact
-    evidence: "As an EU regulation the GDPR is directly applicable in all member states; Spain adopted Ley Organica 3/2018 of 5 December, in force from 7 December 2018, which supplements the GDPR with national provisions and adds a catalogue of digital rights the previous data protection law did not contemplate (BOE-A-2018-16673; aepd.es). NOT READ - search-only."
-    confidence: medium
+    evidence: "Regulation (EU) 2016/679 of 27 April 2016, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32016R0679): after Article 99 (Entry into force and application) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Spain is on the EU's own list of its 27 member countries, 'EU Member State since 1986' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation the GDPR is directly applicable in all member states; Spain adopted Ley Organica 3/2018 of 5 December, in force from 7 December 2018, which supplements the GDPR with national provisions and adds a catalogue of digital rights the previous data protection law did not contemplate (BOE-A-2018-16673; aepd.es)."
+    confidence: high
     valid_from: 2018-12-07
     valid_until: null
   - type: applies-in
     target: PL
     source: fact
-    evidence: "As an EU regulation the GDPR is directly applicable in all member states; Poland adopted the ustawa z dnia 10 maja 2018 r. o ochronie danych osobowych, and from 25 May 2018 the President of the Office for Personal Data Protection became the competent supervisory body, replacing the Generalny Inspektor Ochrony Danych Osobowych (uodo.gov.pl; politykabezpieczenstwa.pl). NOT READ - search-only. See PL-ODO."
-    confidence: medium
+    evidence: "Regulation (EU) 2016/679 of 27 April 2016, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32016R0679): after Article 99 (Entry into force and application) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Poland is on the EU's own list of its 27 member countries, 'EU Member State since 2004' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation the GDPR is directly applicable in all member states; Poland adopted the ustawa z dnia 10 maja 2018 r. o ochronie danych osobowych, and from 25 May 2018 the President of the Office for Personal Data Protection became the competent supervisory body, replacing the Generalny Inspektor Ochrony Danych Osobowych (uodo.gov.pl; politykabezpieczenstwa.pl). See PL-ODO."
+    confidence: high
     valid_from: 2018-05-25
     valid_until: null
   - type: applies-in

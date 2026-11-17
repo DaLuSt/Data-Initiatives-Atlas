@@ -6,5 +6,5 @@ summary: >
   and others) are now empty, each entity with an "Edge dates" note. The Norwegian Intelligence Service's edge keeps
   2021-01-01 and now says where the day comes from (the Act's own entity, from lovdata.no). The validator warning of
   #789 now covers valid_from on edges too; it reports zero. Closes the run-history entries for #787, #788, #789.
-prs: []
-outcome: in-progress
+prs: [790]
+outcome: merged

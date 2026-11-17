@@ -71,43 +71,43 @@ relationships:
   - type: applies-in
     target: NL
     source: fact
-    evidence: "As an EU regulation the DGA is directly applicable in all member states; it entered into force 23 June 2022 and applies from 24 September 2023 (EUR-Lex ELI reg/2022/868). NOT READ — search-only."
-    confidence: medium
+    evidence: "Regulation (EU) 2022/868 of 30 May 2022, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32022R0868): after Article 38 (Entry into force and application) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' The Netherlands is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation the DGA is directly applicable in all member states; it entered into force 23 June 2022 and applies from 24 September 2023 (EUR-Lex ELI reg/2022/868)."
+    confidence: high
     valid_from: 2023-09-24
     valid_until: null
   - type: applies-in
     target: DE
     source: fact
-    evidence: "As an EU regulation the DGA is directly applicable in all member states, Germany included; it entered into force 23 June 2022 and applies from 24 September 2023 (EUR-Lex ELI reg/2022/868). NOT READ — search-only."
-    confidence: medium
+    evidence: "Regulation (EU) 2022/868 of 30 May 2022, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32022R0868): after Article 38 (Entry into force and application) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Germany is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation the DGA is directly applicable in all member states, Germany included; it entered into force 23 June 2022 and applies from 24 September 2023 (EUR-Lex ELI reg/2022/868)."
+    confidence: high
     valid_from: 2023-09-24
     valid_until: null
   - type: applies-in
     target: BE
     source: fact
-    evidence: "As an EU regulation the DGA is directly applicable in all member states, Belgium included; it entered into force 23 June 2022 and applies from 24 September 2023 (EUR-Lex ELI reg/2022/868). NOT READ — search-only."
-    confidence: medium
+    evidence: "Regulation (EU) 2022/868 of 30 May 2022, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32022R0868): after Article 38 (Entry into force and application) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Belgium is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation the DGA is directly applicable in all member states, Belgium included; it entered into force 23 June 2022 and applies from 24 September 2023 (EUR-Lex ELI reg/2022/868)."
+    confidence: high
     valid_from: 2023-09-24
     valid_until: null
   - type: applies-in
     target: FR
     source: fact
-    evidence: "As an EU regulation the DGA is directly applicable in all member states, France included; it entered into force 23 June 2022 and applies from 24 September 2023 (EUR-Lex ELI reg/2022/868). NOT READ — search-only."
-    confidence: medium
+    evidence: "Regulation (EU) 2022/868 of 30 May 2022, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32022R0868): after Article 38 (Entry into force and application) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' France is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation the DGA is directly applicable in all member states, France included; it entered into force 23 June 2022 and applies from 24 September 2023 (EUR-Lex ELI reg/2022/868)."
+    confidence: high
     valid_from: 2023-09-24
     valid_until: null
   - type: applies-in
     target: ES
     source: fact
-    evidence: "As an EU regulation the Data Governance Act is directly applicable in all member states, Spain included (EUR-Lex ELI reg/2022/868). NOT READ - search-only. No Spanish competent body for data intermediation or data altruism is recorded in this Atlas."
-    confidence: medium
+    evidence: "Regulation (EU) 2022/868 of 30 May 2022, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32022R0868): after Article 38 (Entry into force and application) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Spain is on the EU's own list of its 27 member countries, 'EU Member State since 1986' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation the Data Governance Act is directly applicable in all member states, Spain included (EUR-Lex ELI reg/2022/868). No Spanish competent body for data intermediation or data altruism is recorded in this Atlas."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: PL
     source: fact
-    evidence: "As an EU regulation the Data Governance Act is directly applicable in all member states, Poland included (EUR-Lex ELI reg/2022/868). NOT READ - search-only. No Polish competent body for data intermediation or data altruism is recorded in this Atlas."
-    confidence: medium
+    evidence: "Regulation (EU) 2022/868 of 30 May 2022, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32022R0868): after Article 38 (Entry into force and application) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Poland is on the EU's own list of its 27 member countries, 'EU Member State since 2004' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation the Data Governance Act is directly applicable in all member states, Poland included (EUR-Lex ELI reg/2022/868). No Polish competent body for data intermediation or data altruism is recorded in this Atlas."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: implements

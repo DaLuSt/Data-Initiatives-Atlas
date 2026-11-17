@@ -65,43 +65,43 @@ relationships:
   - type: applies-in
     target: NL
     source: fact
-    evidence: "The regulation establishes a single digital gateway for citizens and businesses across the internal market and has applied since 12 December 2020 (EUR-Lex summary of the single digital gateway). NOT READ — search-only."
-    confidence: medium
+    evidence: "Regulation (EU) 2018/1724 of 2 October 2018, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32018R1724): after Article 39 (Entry into force) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' The Netherlands is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: The regulation establishes a single digital gateway for citizens and businesses across the internal market and has applied since 12 December 2020 (EUR-Lex summary of the single digital gateway)."
+    confidence: high
     valid_from: 2020-12-12
     valid_until: null
   - type: applies-in
     target: DE
     source: fact
-    evidence: "The regulation establishes a single digital gateway for citizens and businesses across the internal market and has applied since 12 December 2020, binding all member states including Germany (EUR-Lex summary of the single digital gateway). NOT READ — search-only. UPDATED 2026-09-18 (closes discovery/unresolved.md row #67): Germany's once-only vehicle, the Registermodernisierungsgesetz, is now connected via a two-step chain rather than left fully unconnected — see [[DE-REGMOG]]'s own `related-to` edge, sourced to mgm technology partners' analysis and the Commission's own OOTS Hub page. RegMoG does not itself transpose this Regulation; it feeds registers into NOOTS, Germany's own instance of the Regulation's Once-Only Technical System."
-    confidence: medium
+    evidence: "Regulation (EU) 2018/1724 of 2 October 2018, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32018R1724): after Article 39 (Entry into force) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Germany is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: The regulation establishes a single digital gateway for citizens and businesses across the internal market and has applied since 12 December 2020, binding all member states including Germany (EUR-Lex summary of the single digital gateway). UPDATED 2026-09-18 (closes discovery/unresolved.md row #67): Germany's once-only vehicle, the Registermodernisierungsgesetz, is now connected via a two-step chain rather than left fully unconnected — see [[DE-REGMOG]]'s own `related-to` edge, sourced to mgm technology partners' analysis and the Commission's own OOTS Hub page. RegMoG does not itself transpose this Regulation; it feeds registers into NOOTS, Germany's own instance of the Regulation's Once-Only Technical System."
+    confidence: high
     valid_from: 2020-12-12
     valid_until: null
   - type: applies-in
     target: BE
     source: fact
-    evidence: "The regulation establishes a single digital gateway and has applied since 12 December 2020, binding all member states including Belgium (EUR-Lex summary of the single digital gateway). NOT READ — search-only. Belgium's once-only mechanism, the Kruispuntbank van de Sociale Zekerheid, is recorded in this Atlas but is NOT asserted to implement this regulation — it predates it by 28 years and no source read connects them."
-    confidence: medium
+    evidence: "Regulation (EU) 2018/1724 of 2 October 2018, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32018R1724): after Article 39 (Entry into force) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Belgium is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: The regulation establishes a single digital gateway and has applied since 12 December 2020, binding all member states including Belgium (EUR-Lex summary of the single digital gateway). Belgium's once-only mechanism, the Kruispuntbank van de Sociale Zekerheid, is recorded in this Atlas but is NOT asserted to implement this regulation — it predates it by 28 years and no source read connects them."
+    confidence: high
     valid_from: 2020-12-12
     valid_until: null
   - type: applies-in
     target: FR
     source: fact
-    evidence: "The regulation establishes a single digital gateway and has applied since 12 December 2020, binding all member states including France (EUR-Lex summary). NOT READ — search-only. FranceConnect is recorded in this Atlas but is NOT asserted to implement this regulation — no source read connects them."
-    confidence: medium
+    evidence: "Regulation (EU) 2018/1724 of 2 October 2018, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32018R1724): after Article 39 (Entry into force) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' France is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: The regulation establishes a single digital gateway and has applied since 12 December 2020, binding all member states including France (EUR-Lex summary). FranceConnect is recorded in this Atlas but is NOT asserted to implement this regulation — no source read connects them."
+    confidence: high
     valid_from: 2020-12-12
     valid_until: null
   - type: applies-in
     target: ES
     source: fact
-    evidence: "As an EU regulation the Single Digital Gateway Regulation is directly applicable in all member states, Spain included (EUR-Lex ELI reg/2018/1724). NOT READ - search-only. Spain's Punto de Acceso General (administracion.gob.es) is cited as a source in this batch but no source read connects it to this Regulation, so no relationship is asserted."
-    confidence: medium
+    evidence: "Regulation (EU) 2018/1724 of 2 October 2018, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32018R1724): after Article 39 (Entry into force) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Spain is on the EU's own list of its 27 member countries, 'EU Member State since 1986' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation the Single Digital Gateway Regulation is directly applicable in all member states, Spain included (EUR-Lex ELI reg/2018/1724). Spain's Punto de Acceso General (administracion.gob.es) is cited as a source in this batch but no source read connects it to this Regulation, so no relationship is asserted."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: PL
     source: fact
-    evidence: "As an EU regulation the Single Digital Gateway Regulation is directly applicable in all member states, Poland included (EUR-Lex ELI reg/2018/1724). NOT READ - search-only."
-    confidence: medium
+    evidence: "Regulation (EU) 2018/1724 of 2 October 2018, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32018R1724): after Article 39 (Entry into force) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Poland is on the EU's own list of its 27 member countries, 'EU Member State since 2004' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation the Single Digital Gateway Regulation is directly applicable in all member states, Poland included (EUR-Lex ELI reg/2018/1724)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in

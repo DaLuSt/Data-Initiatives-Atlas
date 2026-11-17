@@ -94,15 +94,15 @@ relationships:
   - type: applies-in
     target: DE
     source: fact
-    evidence: "Germany transposed the directive into national law through the federal Geodatenzugangsgesetz and the corresponding acts of the individual Länder; the GeoZG forms the legal basis for implementing the INSPIRE directive at federal level (gdi-de.org/en/praxis-projekte/inspire-umsetzung; mik.brandenburg.de; gdi.bayern.de). NOT READ — search-only."
-    confidence: medium
+    evidence: "Directive 2007/2/EC of 14 March 2007, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32007L0002): Article 24(1), Member States bring into force the measures necessary to comply 'by 15 May 2009', and its final article reads 'This Directive is addressed to the Member States.' Germany is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: Germany transposed the directive into national law through the federal Geodatenzugangsgesetz and the corresponding acts of the individual Länder; the GeoZG forms the legal basis for implementing the INSPIRE directive at federal level (gdi-de.org/en/praxis-projekte/inspire-umsetzung; mik.brandenburg.de; gdi.bayern.de)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: BE
     source: fact
-    evidence: "Federal DCAT-AP 2 is the profile developed by the Belgian federal administrations involved in the implementation of the INSPIRE Directive, and contains a mapping between INSPIRE and DCAT-AP elements (belgif.be/page/specification/dcat-ap.en.html; github.com/belgif/inspire-dcat). NOT READ — search-only. Note this evidences Belgian INSPIRE implementation activity, not a Belgian transposing act, which was not identified."
-    confidence: medium
+    evidence: "Directive 2007/2/EC of 14 March 2007, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32007L0002): Article 24(1), Member States bring into force the measures necessary to comply 'by 15 May 2009', and its final article reads 'This Directive is addressed to the Member States.' Belgium is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: Federal DCAT-AP 2 is the profile developed by the Belgian federal administrations involved in the implementation of the INSPIRE Directive, and contains a mapping between INSPIRE and DCAT-AP elements (belgif.be/page/specification/dcat-ap.en.html; github.com/belgif/inspire-dcat). Note this evidences Belgian INSPIRE implementation activity, not a Belgian transposing act, which was not identified."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
@@ -115,15 +115,15 @@ relationships:
   - type: applies-in
     target: ES
     source: fact
-    evidence: "As an EU directive it requires transposition by all member states, Spain included (EUR-Lex ELI dir/2007/2). NOT READ - search-only. No Spanish transposing instrument was identified in this batch and none is asserted."
-    confidence: medium
+    evidence: "Directive 2007/2/EC of 14 March 2007, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32007L0002): Article 24(1), Member States bring into force the measures necessary to comply 'by 15 May 2009', and its final article reads 'This Directive is addressed to the Member States.' Spain is on the EU's own list of its 27 member countries, 'EU Member State since 1986' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU directive it requires transposition by all member states, Spain included (EUR-Lex ELI dir/2007/2). No Spanish transposing instrument was identified in this batch and none is asserted."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: PL
     source: fact
-    evidence: "As an EU directive it requires transposition by all member states, Poland included (EUR-Lex ELI dir/2007/2). NOT READ - search-only. No Polish transposing instrument was identified in this batch and none is asserted."
-    confidence: medium
+    evidence: "Directive 2007/2/EC of 14 March 2007, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32007L0002): Article 24(1), Member States bring into force the measures necessary to comply 'by 15 May 2009', and its final article reads 'This Directive is addressed to the Member States.' Poland is on the EU's own list of its 27 member countries, 'EU Member State since 2004' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU directive it requires transposition by all member states, Poland included (EUR-Lex ELI dir/2007/2). No Polish transposing instrument was identified in this batch and none is asserted."
+    confidence: high
     valid_from: null
     valid_until: null
 

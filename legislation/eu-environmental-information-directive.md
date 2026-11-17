@@ -58,71 +58,71 @@ relationships:
   - type: applies-in
     target: PT
     source: fact
-    evidence: "As an EU directive, Directive 2003/4/EC on public access to environmental information is binding on every member state as to the result to be achieved and requires national transposition, and Portugal is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
-    confidence: medium
+    evidence: "Directive 2003/4/EC of 28 January 2003, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32003L0004): Article 10, Member States bring into force the measures necessary to comply 'by 14 February 2005', and its final article reads 'This Directive is addressed to the Member States.' Portugal is on the EU's own list of its 27 member countries, 'EU Member State since 1986' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU directive, Directive 2003/4/EC on public access to environmental information is binding on every member state as to the result to be achieved and requires national transposition, and Portugal is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: LU
     source: fact
-    evidence: "As an EU directive, Directive 2003/4/EC on public access to environmental information is binding on every member state as to the result to be achieved and requires national transposition, and Luxembourg is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
-    confidence: medium
+    evidence: "Directive 2003/4/EC of 28 January 2003, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32003L0004): Article 10, Member States bring into force the measures necessary to comply 'by 14 February 2005', and its final article reads 'This Directive is addressed to the Member States.' Luxembourg is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU directive, Directive 2003/4/EC on public access to environmental information is binding on every member state as to the result to be achieved and requires national transposition, and Luxembourg is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: CZ
     source: fact
-    evidence: "As an EU directive, Directive 2003/4/EC on public access to environmental information is binding on every member state as to the result to be achieved and requires national transposition, and Czechia is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
-    confidence: medium
+    evidence: "Directive 2003/4/EC of 28 January 2003, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32003L0004): Article 10, Member States bring into force the measures necessary to comply 'by 14 February 2005', and its final article reads 'This Directive is addressed to the Member States.' Czechia is on the EU's own list of its 27 member countries, 'EU Member State since 2004' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU directive, Directive 2003/4/EC on public access to environmental information is binding on every member state as to the result to be achieved and requires national transposition, and Czechia is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: IE
     source: fact
-    evidence: "As an EU directive, Directive 2003/4/EC on public access to environmental information is binding on every member state as to the result to be achieved and requires national transposition, and Ireland is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
-    confidence: medium
+    evidence: "Directive 2003/4/EC of 28 January 2003, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32003L0004): Article 10, Member States bring into force the measures necessary to comply 'by 14 February 2005', and its final article reads 'This Directive is addressed to the Member States.' Ireland is on the EU's own list of its 27 member countries, 'EU Member State since 1973' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU directive, Directive 2003/4/EC on public access to environmental information is binding on every member state as to the result to be achieved and requires national transposition, and Ireland is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: NL
     source: fact
-    evidence: "As an EU directive it requires transposition by all member states, the Netherlands included; the implementation date was 14 February 2005 (eur-lex.europa.eu CELEX 32003L0004; ELI dir/2003/4/oj). NOT READ — search-only. No Dutch transposing instrument was identified and none is asserted."
-    confidence: medium
+    evidence: "Directive 2003/4/EC of 28 January 2003, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32003L0004): Article 10, Member States bring into force the measures necessary to comply 'by 14 February 2005', and its final article reads 'This Directive is addressed to the Member States.' The Netherlands is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU directive it requires transposition by all member states, the Netherlands included; the implementation date was 14 February 2005 (eur-lex.europa.eu CELEX 32003L0004; ELI dir/2003/4/oj). No Dutch transposing instrument was identified and none is asserted."
+    confidence: high
     valid_from: 2005-02-14
     valid_until: null
   - type: applies-in
     target: DE
     source: fact
-    evidence: "As an EU directive it requires transposition by all member states, Germany included; the implementation date was 14 February 2005 (eur-lex.europa.eu CELEX 32003L0004). NOT READ — search-only. No German transposing instrument was identified and none is asserted."
-    confidence: medium
+    evidence: "Directive 2003/4/EC of 28 January 2003, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32003L0004): Article 10, Member States bring into force the measures necessary to comply 'by 14 February 2005', and its final article reads 'This Directive is addressed to the Member States.' Germany is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU directive it requires transposition by all member states, Germany included; the implementation date was 14 February 2005 (eur-lex.europa.eu CELEX 32003L0004). No German transposing instrument was identified and none is asserted."
+    confidence: high
     valid_from: 2005-02-14
     valid_until: null
   - type: applies-in
     target: BE
     source: fact
-    evidence: "As an EU directive it requires transposition by all member states, Belgium included; the implementation date was 14 February 2005 (eur-lex.europa.eu CELEX 32003L0004). NOT READ — search-only. No Belgian transposing instrument was identified and none is asserted."
-    confidence: medium
+    evidence: "Directive 2003/4/EC of 28 January 2003, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32003L0004): Article 10, Member States bring into force the measures necessary to comply 'by 14 February 2005', and its final article reads 'This Directive is addressed to the Member States.' Belgium is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU directive it requires transposition by all member states, Belgium included; the implementation date was 14 February 2005 (eur-lex.europa.eu CELEX 32003L0004). No Belgian transposing instrument was identified and none is asserted."
+    confidence: high
     valid_from: 2005-02-14
     valid_until: null
   - type: applies-in
     target: FR
     source: fact
-    evidence: "As an EU directive it requires transposition by all member states, France included; the implementation date was 14 February 2005 (eur-lex.europa.eu CELEX 32003L0004). NOT READ — search-only. No French transposing instrument was identified and none is asserted."
-    confidence: medium
+    evidence: "Directive 2003/4/EC of 28 January 2003, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32003L0004): Article 10, Member States bring into force the measures necessary to comply 'by 14 February 2005', and its final article reads 'This Directive is addressed to the Member States.' France is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU directive it requires transposition by all member states, France included; the implementation date was 14 February 2005 (eur-lex.europa.eu CELEX 32003L0004). No French transposing instrument was identified and none is asserted."
+    confidence: high
     valid_from: 2005-02-14
     valid_until: null
   - type: applies-in
     target: ES
     source: fact
-    evidence: "As an EU directive it requires transposition by all member states, Spain included; the implementation date was 14 February 2005 (eur-lex.europa.eu CELEX 32003L0004). NOT READ — search-only. No Spanish transposing instrument was identified and none is asserted."
-    confidence: medium
+    evidence: "Directive 2003/4/EC of 28 January 2003, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32003L0004): Article 10, Member States bring into force the measures necessary to comply 'by 14 February 2005', and its final article reads 'This Directive is addressed to the Member States.' Spain is on the EU's own list of its 27 member countries, 'EU Member State since 1986' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU directive it requires transposition by all member states, Spain included; the implementation date was 14 February 2005 (eur-lex.europa.eu CELEX 32003L0004). No Spanish transposing instrument was identified and none is asserted."
+    confidence: high
     valid_from: 2005-02-14
     valid_until: null
   - type: applies-in
     target: PL
     source: fact
-    evidence: "As an EU directive it requires transposition by all member states, Poland included; the implementation date was 14 February 2005 (eur-lex.europa.eu CELEX 32003L0004). NOT READ - search-only. No Polish transposing instrument was identified and none is asserted."
-    confidence: medium
+    evidence: "Directive 2003/4/EC of 28 January 2003, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32003L0004): Article 10, Member States bring into force the measures necessary to comply 'by 14 February 2005', and its final article reads 'This Directive is addressed to the Member States.' Poland is on the EU's own list of its 27 member countries, 'EU Member State since 2004' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU directive it requires transposition by all member states, Poland included; the implementation date was 14 February 2005 (eur-lex.europa.eu CELEX 32003L0004). No Polish transposing instrument was identified and none is asserted."
+    confidence: high
     valid_from: 2005-02-14
     valid_until: null
 
@@ -148,6 +148,14 @@ sources:
   - title: "Report on the application of Directive 2003/4/EC on public access to environmental information"
     url: "https://aarhusclearinghouse.unece.org/resources/report-application-directive-20034ec-public-access-environmental-information"
     publisher: "Aarhus Clearinghouse — UNECE"
+  - title: "Official Journal text (CELEX 32003L0004)"
+    url: "https://publications.europa.eu/resource/celex/32003L0004"
+    publisher: "Publications Office of the European Union"
+    accessed: "2026-11-17"
+  - title: "EU countries"
+    url: "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
+    publisher: "European Union"
+    accessed: "2026-11-14"
 ---
 
 # Directive 2003/4/EC — public access to environmental information

@@ -78,50 +78,50 @@ relationships:
   - type: applies-in
     target: IE
     source: fact
-    evidence: "As an EU directive the Open Data Directive is binding on every member state as to the result to be achieved and requires national transposition, and Ireland is a member state; Ireland operates the national open data portal data.gov.ie (eur-lex.europa.eu; digital-strategy.ec.europa.eu 'Open Data Directive'; data.gov.ie). NOT READ — search-only. Ireland's transposing instrument was NOT identified — see IE-DATA-GOV-IE."
-    confidence: medium
+    evidence: "Directive (EU) 2019/1024 of 20 June 2019, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32019L1024): Article 17(1), Member States bring into force the measures necessary to comply 'by 17 July 2021', and its final article reads 'This Directive is addressed to the Member States.' Ireland is on the EU's own list of its 27 member countries, 'EU Member State since 1973' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU directive the Open Data Directive is binding on every member state as to the result to be achieved and requires national transposition, and Ireland is a member state; Ireland operates the national open data portal data.gov.ie (eur-lex.europa.eu; digital-strategy.ec.europa.eu 'Open Data Directive'; data.gov.ie). Ireland's transposing instrument was NOT identified — see IE-DATA-GOV-IE."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: NL
     source: fact
-    evidence: "Transposed into Dutch law via the Wet implementatie Open data richtlijn, which amended the Wet hergebruik van overheidsinformatie (rijksoverheid.nl, eerstekamer.nl dossier 36.382). NOT READ — search-only."
-    confidence: medium
+    evidence: "Directive (EU) 2019/1024 of 20 June 2019, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32019L1024): Article 17(1), Member States bring into force the measures necessary to comply 'by 17 July 2021', and its final article reads 'This Directive is addressed to the Member States.' The Netherlands is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: Transposed into Dutch law via the Wet implementatie Open data richtlijn, which amended the Wet hergebruik van overheidsinformatie (rijksoverheid.nl, eerstekamer.nl dossier 36.382)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: DE
     source: fact
-    evidence: "The Datennutzungsgesetz implements the requirements of Directive (EU) 2019/1024 and replaced the Informationsweiterverwendungsgesetz; it came into force on 23 July 2021 (de.wikipedia.org 'Datennutzungsgesetz'; bho-legal.com; de.digital). NOT READ — search-only."
-    confidence: medium
+    evidence: "Directive (EU) 2019/1024 of 20 June 2019, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32019L1024): Article 17(1), Member States bring into force the measures necessary to comply 'by 17 July 2021', and its final article reads 'This Directive is addressed to the Member States.' Germany is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: The Datennutzungsgesetz implements the requirements of Directive (EU) 2019/1024 and replaced the Informationsweiterverwendungsgesetz; it came into force on 23 July 2021 (de.wikipedia.org 'Datennutzungsgesetz'; bho-legal.com; de.digital)."
+    confidence: high
     valid_from: 2021-07-23
     valid_until: null
   - type: applies-in
     target: BE
     source: fact
-    evidence: "As an EU directive it requires transposition by all member states, Belgium included (EUR-Lex Directive (EU) 2019/1024). NOT READ — search-only. NO Belgian transposing instrument is recorded in this Atlas: the Belgian open data act found by search is the wet van 4 mei 2016, which PREDATES this directive and is sourced as aligning with the earlier PSI Directive instead. See BE-HERGEBRUIK-WET."
-    confidence: medium
+    evidence: "Directive (EU) 2019/1024 of 20 June 2019, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32019L1024): Article 17(1), Member States bring into force the measures necessary to comply 'by 17 July 2021', and its final article reads 'This Directive is addressed to the Member States.' Belgium is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU directive it requires transposition by all member states, Belgium included (EUR-Lex Directive (EU) 2019/1024). NO Belgian transposing instrument is recorded in this Atlas: the Belgian open data act found by search is the wet van 4 mei 2016, which PREDATES this directive and is sourced as aligning with the earlier PSI Directive instead. See BE-HERGEBRUIK-WET."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: FR
     source: fact
-    evidence: "As an EU directive it requires transposition by all member states, France included (EUR-Lex Directive (EU) 2019/1024). NOT READ — search-only. No standalone French transposing act exists: EUR-Lex's register of national implementing measures (read directly 2026-10-08) lists 52 notified measures, all earlier law, among them Article 16 of the loi pour une Republique numerique of 2016, recorded as an edge on FR-LRN. See FR-LRN."
-    confidence: medium
+    evidence: "Directive (EU) 2019/1024 of 20 June 2019, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32019L1024): Article 17(1), Member States bring into force the measures necessary to comply 'by 17 July 2021', and its final article reads 'This Directive is addressed to the Member States.' France is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU directive it requires transposition by all member states, France included (EUR-Lex Directive (EU) 2019/1024). No standalone French transposing act exists: EUR-Lex's register of national implementing measures (read directly 2026-10-08) lists 52 notified measures, all earlier law, among them Article 16 of the loi pour une Republique numerique of 2016, recorded as an edge on FR-LRN. See FR-LRN."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: ES
     source: fact
-    evidence: "As an EU directive it requires transposition by all member states, Spain included; Spain transposed it through Real Decreto-ley 24/2021 of 2 November, an omnibus instrument transposing eight directives, which amended Ley 37/2007 on the re-use of public sector information - ten articles, an additional provision, the sole transitory provision and the annex modified, three new articles added (BOE-A-2021-17910; ecija.com; datos.gob.es). NOT READ - search-only. See ES-LEY-37-2007."
-    confidence: medium
+    evidence: "Directive (EU) 2019/1024 of 20 June 2019, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32019L1024): Article 17(1), Member States bring into force the measures necessary to comply 'by 17 July 2021', and its final article reads 'This Directive is addressed to the Member States.' Spain is on the EU's own list of its 27 member countries, 'EU Member State since 1986' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU directive it requires transposition by all member states, Spain included; Spain transposed it through Real Decreto-ley 24/2021 of 2 November, an omnibus instrument transposing eight directives, which amended Ley 37/2007 on the re-use of public sector information - ten articles, an additional provision, the sole transitory provision and the annex modified, three new articles added (BOE-A-2021-17910; ecija.com; datos.gob.es). See ES-LEY-37-2007."
+    confidence: high
     valid_from: 2021-11-02
     valid_until: null
   - type: applies-in
     target: PL
     source: fact
-    evidence: "As an EU directive it requires transposition by all member states, Poland included; Poland transposed it by the ustawa z dnia 11 sierpnia 2021 r. o otwartych danych i ponownym wykorzystywaniu informacji sektora publicznego (Dz.U. 2021 poz. 1641), effective 8 December 2021, which fully repeals the earlier act of 25 February 2016 (isap.sejm.gov.pl WDU20210001641; gov.pl/web/ia). NOT READ - search-only. See PL-OTWARTE-DANE."
-    confidence: medium
+    evidence: "Directive (EU) 2019/1024 of 20 June 2019, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32019L1024): Article 17(1), Member States bring into force the measures necessary to comply 'by 17 July 2021', and its final article reads 'This Directive is addressed to the Member States.' Poland is on the EU's own list of its 27 member countries, 'EU Member State since 2004' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU directive it requires transposition by all member states, Poland included; Poland transposed it by the ustawa z dnia 11 sierpnia 2021 r. o otwartych danych i ponownym wykorzystywaniu informacji sektora publicznego (Dz.U. 2021 poz. 1641), effective 8 December 2021, which fully repeals the earlier act of 25 February 2016 (isap.sejm.gov.pl WDU20210001641; gov.pl/web/ia). See PL-OTWARTE-DANE."
+    confidence: high
     valid_from: 2021-12-08
     valid_until: null
   - type: applies-in

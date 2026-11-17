@@ -77,43 +77,43 @@ relationships:
   - type: applies-in
     target: NL
     source: fact
-    evidence: "As an EU regulation it is directly applicable in all member states; EU countries create health data access bodies during the 2027-2029 preparation phase (Reg. (EU) 2025/327; multiple legal analyses). NOT READ — search-only."
-    confidence: medium
+    evidence: "Regulation (EU) 2025/327 of 11 February 2025, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32025R0327): after Article 105 (Entry into force and application) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' The Netherlands is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation it is directly applicable in all member states; EU countries create health data access bodies during the 2027-2029 preparation phase (Reg. (EU) 2025/327; multiple legal analyses)."
+    confidence: high
     valid_from: 2025-03-26
     valid_until: null
   - type: applies-in
     target: DE
     source: fact
-    evidence: "As an EU regulation it is directly applicable in all member states, Germany included; EU countries create health data access bodies during the 2027-2029 preparation phase (Reg. (EU) 2025/327; multiple legal analyses). NOT READ — search-only. No German health data access body or implementing instrument is recorded in this Atlas."
-    confidence: medium
+    evidence: "Regulation (EU) 2025/327 of 11 February 2025, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32025R0327): after Article 105 (Entry into force and application) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Germany is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation it is directly applicable in all member states, Germany included; EU countries create health data access bodies during the 2027-2029 preparation phase (Reg. (EU) 2025/327; multiple legal analyses). No German health data access body or implementing instrument is recorded in this Atlas."
+    confidence: high
     valid_from: 2025-03-26
     valid_until: null
   - type: applies-in
     target: BE
     source: fact
-    evidence: "As an EU regulation it is directly applicable in all member states, Belgium included; EU countries create health data access bodies during the 2027-2029 preparation phase (Reg. (EU) 2025/327). NOT READ — search-only. No Belgian health data access body is recorded in this Atlas."
-    confidence: medium
+    evidence: "Regulation (EU) 2025/327 of 11 February 2025, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32025R0327): after Article 105 (Entry into force and application) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Belgium is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation it is directly applicable in all member states, Belgium included; EU countries create health data access bodies during the 2027-2029 preparation phase (Reg. (EU) 2025/327). No Belgian health data access body is recorded in this Atlas."
+    confidence: high
     valid_from: 2025-03-26
     valid_until: null
   - type: applies-in
     target: FR
     source: fact
-    evidence: "As an EU regulation it is directly applicable in all member states, France included; EU countries create health data access bodies during the 2027-2029 preparation phase (Reg. (EU) 2025/327). NOT READ — search-only. No French health data access body is recorded in this Atlas."
-    confidence: medium
+    evidence: "Regulation (EU) 2025/327 of 11 February 2025, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32025R0327): after Article 105 (Entry into force and application) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' France is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation it is directly applicable in all member states, France included; EU countries create health data access bodies during the 2027-2029 preparation phase (Reg. (EU) 2025/327). No French health data access body is recorded in this Atlas."
+    confidence: high
     valid_from: 2025-03-26
     valid_until: null
   - type: applies-in
     target: ES
     source: fact
-    evidence: "As an EU regulation it is directly applicable in all member states, Spain included; EU countries create health data access bodies during the 2027-2029 preparation phase (Reg. (EU) 2025/327). NOT READ - search-only. No Spanish health data access body is recorded in this Atlas."
-    confidence: medium
+    evidence: "Regulation (EU) 2025/327 of 11 February 2025, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32025R0327): after Article 105 (Entry into force and application) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Spain is on the EU's own list of its 27 member countries, 'EU Member State since 1986' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation it is directly applicable in all member states, Spain included; EU countries create health data access bodies during the 2027-2029 preparation phase (Reg. (EU) 2025/327). No Spanish health data access body is recorded in this Atlas."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: PL
     source: fact
-    evidence: "As an EU regulation it is directly applicable in all member states, Poland included; EU countries create health data access bodies during the 2027-2029 preparation phase (Reg. (EU) 2025/327). NOT READ - search-only. No Polish health data access body is recorded in this Atlas."
-    confidence: medium
+    evidence: "Regulation (EU) 2025/327 of 11 February 2025, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32025R0327): after Article 105 (Entry into force and application) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Poland is on the EU's own list of its 27 member countries, 'EU Member State since 2004' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation it is directly applicable in all member states, Poland included; EU countries create health data access bodies during the 2027-2029 preparation phase (Reg. (EU) 2025/327). No Polish health data access body is recorded in this Atlas."
+    confidence: high
     valid_from: 2025-03-26
     valid_until: null
 
