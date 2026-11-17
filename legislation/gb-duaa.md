@@ -29,7 +29,7 @@ coverage: medium
 verification: primary-source
 start_date: 2025-06-19
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-11-17"
 previous_version: null
 successor: null
 
@@ -51,19 +51,19 @@ relationships:
     confidence: medium
     valid_from: 2025-06-19
     valid_until: null
-  - type: related-to
+  - type: amends
     target: GB-UK-GDPR
     source: fact
-    evidence: "Confirmed by reading privacyworld.blog and privacymatters.dlapiper.com (2026-08-22): both confirm the automated decision-making changes permitting reliance on legitimate interests, and the GBP 17.5 million / 4% PECR-enforcement alignment; commencement of the majority of provisions on 5 February 2026 is confirmed on cliffordchance.com. CAVEAT: recorded as related-to because the Atlas has no relationship type for amendment; see progress/backlog.md."
-    confidence: medium
-    valid_from: 2026-02-05
+    evidence: "The Act's text on legislation.gov.uk, read directly 2026-11-17: section 70(1), 'The UK GDPR is amended in accordance with subsections (2) to (5)', and (2) inserts into Article 6(1) a new point (ea), processing 'necessary for the purposes of a recognised legitimate interest'. Typed `amends` since the type exists (it did not when this edge was first recorded, on 2026-08-22, from privacyworld.blog and privacymatters.dlapiper.com). `valid_from` is empty: the Act's sections commence on different dates and the commencement of section 70 was not read."
+    confidence: high
+    valid_from: null
     valid_until: null
-  - type: related-to
+  - type: amends
     target: GB-DPA-2018
     source: fact
-    evidence: "Confirmed by reading legislation.gov.uk (2026-08-22), § 117: 'The Data Protection Act 2018 is amended in accordance with subsections (2) to (5)... After section 114 insert— \"The Information Commission ... 114A The Information Commission (1) A body corporate called the Information Commission is established.\"' This is a direct textual amendment of the 2018 Act. CAVEAT: recorded as related-to because the Atlas has no relationship type for amendment."
-    confidence: medium
-    valid_from: 2026-02-05
+    evidence: "Confirmed by reading legislation.gov.uk (2026-08-22), § 117: 'The Data Protection Act 2018 is amended in accordance with subsections (2) to (5)... After section 114 insert— \"The Information Commission ... 114A The Information Commission (1) A body corporate called the Information Commission is established.\"' This is a direct textual amendment of the 2018 Act. Re-read directly 2026-11-17 (section 117(1) as quoted) and typed `amends`, which did not exist as a type when this edge was first recorded. `valid_from` is empty: section 117 commenced on 30 September 2026 (SI 2026/1015, recorded on [[GB-INFORMATION-COMMISSION]]), and other amendments of the 2018 Act in the Act may commence on other dates, which were not read."
+    confidence: high
+    valid_from: null
     valid_until: null
 
 sources:
@@ -87,6 +87,14 @@ sources:
     url: "https://www.alston.com/en/insights/publications/2026/01/uk-data-use-and-access-act-2025"
     publisher: "Alston & Bird"
     accessed: "2026-08-22"
+  - title: "Data (Use and Access) Act 2025, section 70"
+    url: "https://www.legislation.gov.uk/ukpga/2025/18/section/70"
+    publisher: "legislation.gov.uk (The National Archives)"
+    accessed: "2026-11-17"
+  - title: "Data (Use and Access) Act 2025, section 117"
+    url: "https://www.legislation.gov.uk/ukpga/2025/18/section/117"
+    publisher: "legislation.gov.uk (The National Archives)"
+    accessed: "2026-11-17"
 ---
 
 # Data (Use and Access) Act 2025
@@ -123,7 +131,11 @@ What it does, from the sources found:
 
 ## The amendment question, for the fourth time
 
-The Atlas still has no relationship type for *"amends"*, and this is the
+> **Resolved, 2026-11-17.** The Atlas has had an `amends` type since this section was
+> written (`metadata/relationship-types.md`), and both edges below now use it, read
+> directly from sections 70 and 117. The history is kept because it is why the type exists.
+
+At the time, the Atlas had no relationship type for *"amends"*, and this was the
 fourth batch to want one.
 
 | Batch | Amending instrument | What the Atlas did |
@@ -157,24 +169,26 @@ Commission had succeeded the ICO (read 2026-10-07). The institutional change
 is recorded on [[GB-INFORMATION-COMMISSION]] (the successor) and [[GB-ICO]]
 (the superseded Commissioner). Until 30 September this entity could only say the
 Commission was *established*, not that it was constituted; that is why the
-successor entity was created only now. The `related-to` edges here point at the
+successor entity was created only now. The `amends` edges here point at the
 two instruments, not at the institutional change.
 
 ## Relationships
 
 - `applies-in` [[GB]].
-- `related-to` [[GB-UK-GDPR]] — amendment, from 5 February 2026.
-- `related-to` [[GB-DPA-2018]] — amendment, from 5 February 2026.
+- `amends` [[GB-UK-GDPR]] — section 70(1), read directly 2026-11-17.
+- `amends` [[GB-DPA-2018]] — section 117(1), read directly 2026-11-17.
 
 [[EU-UK-ADEQUACY]] carries a `references` edge pointing here: the European
 Commission renewed the UK's adequacy **after** this Act, having satisfied
 itself the changes did not break equivalence.
 
-Both carry the amendment in the `evidence` string because the type does not
-carry it.
+Until 2026-11-17 both were `related-to`, with the amendment only in the `evidence`
+string. The commencement of each amendment varies by section and was not read, so neither
+edge carries a `valid_from` (the 5 February 2026 date they had came from law-firm commentary
+about most of the Act's data protection provisions).
 
 ## Sources
 
-Listed in frontmatter. One official (legislation.gov.uk); the remaining four
-are law-firm commentary, which is why `confidence` is medium and why the
+Listed in frontmatter. Three official (legislation.gov.uk: Part 5 and sections 70 and
+117); the remaining four are law-firm commentary, which is why `confidence` is medium and why the
 commencement dates in particular want a primary citation.

@@ -1,0 +1,11 @@
+date: "2026-11-17"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #774, a first slice: a scan of the 369 related-to edges for evidence that already states a more precise
+  relation found 50 candidates; most are right as related-to on a closer read. Two were related-to only because the
+  `amends` type did not exist when they were recorded: GB-DUAA now `amends` GB-UK-GDPR and GB-DPA-2018, each read
+  directly on legislation.gov.uk (sections 70(1) and 117(1)), confidence high, valid_from empty because commencement
+  varies by section. Its body's "amendment question" section is marked resolved. GB-CSRB's edge to the NIS Regulations
+  stays related-to and says why (a bill; no type for a proposed amendment).
+prs: []
+outcome: in-progress
