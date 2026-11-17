@@ -21,9 +21,9 @@ confidence: medium
 coverage: low
 verification: primary-source
 
-start_date: null
+start_date: 2024-07-12
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-11-17"
 previous_version: null
 successor: null
 
@@ -303,6 +303,10 @@ legal relationship above.
 - [[EU-EIF]] is `governed-by` this Act (Article 6) — see above.
 - `governed-by` edge (this Act as target) recorded on
   [[EU-INTEROPERABLE-EUROPE-BOARD]]'s own file — the Board it establishes.
+
+## Date, read directly 2026-11-17
+
+`start_date` is now 2024-07-12, from the Official Journal text (Publications Office, CELEX 32024R0903), read directly (roadmap #775). Article 23: it enters into force on the twentieth day following its publication (22 March 2024) and 'shall apply from 12 July 2024', except Article 3(1) to (4) and Article 17, which apply from 12 January 2025. As for the other EU regulations in the Atlas, `start_date` is the date of general application.
 
 ## Sources
 

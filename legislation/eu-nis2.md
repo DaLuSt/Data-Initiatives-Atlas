@@ -22,9 +22,9 @@ confidence: low
 coverage: low
 verification: primary-source
 
-start_date: null
+start_date: 2023-01-16
 end_date: null
-last_verified: "2026-09-25"
+last_verified: "2026-11-17"
 previous_version: EU-NIS
 successor: null
 
@@ -278,6 +278,10 @@ for a future pass.
   [[FR-NIS2-LOI]].
   **No relationship between the three national acts is asserted** —
   they are siblings, and this entity is the relationship they share.
+
+## Date, read directly 2026-11-17
+
+`start_date` is now 2023-01-16, from the Official Journal text (Publications Office, CELEX 32022L2555), read directly (roadmap #775). Article 45: it enters into force on the twentieth day following its publication in the Official Journal, which was on 27 December 2022 (OJ L 333); the twentieth day is 16 January 2023. Member States apply their transposing measures from 18 October 2024 (Article 41(1)).
 
 ## Sources
 
