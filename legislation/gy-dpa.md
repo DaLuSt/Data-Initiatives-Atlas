@@ -27,9 +27,11 @@ successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
-organisations: []
+organisations:
+  - GY-DATA-PROTECTION-COMMISSIONER
 related_entities:
   - GY
+  - GY-DATA-PROTECTION-COMMISSIONER
 relationships:
   - type: applies-in
     target: GY
@@ -62,4 +64,4 @@ Entered as `active` because the Act is reported enacted; whether it is in force 
 
 ## Relationships
 
-Applies in [[GY]] (anchor edge).
+Applies in [[GY]] (anchor edge). Part VII establishes the [[GY-DATA-PROTECTION-COMMISSIONER]] (sections 72 and 73, read 2026-11-17).

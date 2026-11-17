@@ -7,5 +7,5 @@ summary: >
   in countries/gt/index.md. Also: NL-DIGID's note on the EUDI wallet no longer says "by the end of 2026" but gives
   the Article 5a(1) rule, as EU-EIDAS2 and EU-EUDI-WALLET do since #793. Closes the run-history entries for #791 and
   #793.
-prs: []
-outcome: in-progress
+prs: [794]
+outcome: merged

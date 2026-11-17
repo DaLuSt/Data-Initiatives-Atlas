@@ -46,6 +46,13 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: governed-by
+    target: AE-PDPL-45-2021
+    source: fact
+    evidence: "The UAE Government's portal page 'Data protection laws', read directly 2026-11-17 (page updated 4 December 2025): 'The UAE Data Office will act as the federal data regulator in the UAE. The office which is affiliated with the UAE Cabinet will be responsible for:', listing among its tasks 'proposing and approving the standards for monitoring Personal Data Protection Law' and 'issuing guidelines and instructions for the implementation of the law'. The Decree-Law's own text (Arabic only) was not read, so the article giving these tasks is not cited."
+    confidence: medium
+    valid_from: null
+    valid_until: null
 
 sources:
   - title: "Data protection laws — The Official Portal of the UAE Government"
