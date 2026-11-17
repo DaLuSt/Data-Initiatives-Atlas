@@ -24,7 +24,7 @@ confidence: medium
 coverage: low
 verification: primary-source
 
-start_date: 1997-01-01
+start_date: null
 end_date: null
 last_verified: "2026-09-26"
 previous_version: null
@@ -41,7 +41,7 @@ relationships:
     source: fact
     evidence: "Closes a gap ES-AOC's own file had flagged ('Localret ... not independently researched') -- graph completion, not a numbered discovery/unresolved.md row. Confirmed by reading localret.cat's own 'Who We Are' page directly (2026-09-26): 'the local consortium formed by the local administrations of Catalonia to support municipalities in their digital transformation,' headquartered in Barcelona. ca.wikipedia.org's own 'Localret' article, also read directly, independently gives the 1997 founding year, names FMC and ACM as founders, states it integrated 784 municipalities (99% of Catalonia's population) at founding, and confirms it co-founded the AOC Consortium in 2002 -- matching ES-AOC's own already-sourced account of Localret representing local governments in the 2001 pact. Anchor edge under metadata/relationship-types.md §2.3, asserting Catalan sub-federal scope via `level: subnational`, matching ES-AOC's own treatment."
     confidence: medium
-    valid_from: "1997-01-01"
+    valid_from: null
     valid_until: null
   - type: participates-in
     target: ES-AOC
@@ -103,6 +103,10 @@ than a looser association.
 
 - `part-of` [[ES]] (anchor edge, `level: subnational`).
 - `participates-in` [[ES-AOC]] — `confidence: high`, co-founder.
+
+## Year only (2026-11-17)
+
+The sources read give the year 1997, not a day. `start_date` was `1997-01-01`, a placeholder for "in 1997" that `metadata/metadata-schema.md` rules out, and is now empty; so are the 1 `valid_from` dates that repeated it. The year stays in the description and the text above.
 
 ## Sources
 

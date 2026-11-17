@@ -26,7 +26,7 @@ confidence: medium
 coverage: low
 verification: primary-source
 
-start_date: 2009-01-01
+start_date: null
 end_date: null
 last_verified: "2026-09-20"
 previous_version: null
@@ -45,7 +45,7 @@ relationships:
     source: fact
     evidence: "Confirmed by reading IT.NRW's own 'Geschichte' page directly (2026-09-20): the organisation was formed in 2009 by merging the Landesamt für Datenverarbeitung und Statistik (LDS NRW, which had itself evolved from the 1948 Statistical State Office and been converted to a Landesbetrieb in 2001) with the three Gemeinsame Gebietsrechenzentren (GGRZ) in Hagen, Köln and Münster. IT.NRW's legal form is explicitly stated as a Landesbetrieb — 'a legally dependent, organisationally separated part of the state administration' oriented toward cost recovery rather than a separate legal person — making it a more direct part of the North Rhine-Westphalian state than [[DE-DATAPORT]] (a multi-Land public-law institution) or [[DE-AKDB]] (owned by municipal associations). Anchor edge under metadata/relationship-types.md §2.3, asserting sub-federal scope via `level: subnational`."
     confidence: high
-    valid_from: 2009-01-01
+    valid_from: null
     valid_until: null
 
 sources:
@@ -111,6 +111,10 @@ run separately across the state administration.
 ## Relationships
 
 - `part-of` [[DE]] (anchor edge, `level: subnational`).
+
+## Year only (2026-11-17)
+
+The sources read give the year 2009, not a day. `start_date` was `2009-01-01`, a placeholder for "in 2009" that `metadata/metadata-schema.md` rules out, and is now empty; so are the 1 `valid_from` dates that repeated it. The year stays in the description and the text above.
 
 ## Sources
 

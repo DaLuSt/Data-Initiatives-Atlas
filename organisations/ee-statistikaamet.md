@@ -26,7 +26,7 @@ confidence: medium
 coverage: medium
 verification: primary-source
 organisation_role: executive
-start_date: 1991-01-01
+start_date: null
 end_date: null
 last_verified: "2026-08-22"
 previous_version: null
@@ -155,6 +155,10 @@ establishes what that shared role means for either body's scope.
   en.wikipedia.org names.
 - `part-of` [[EU-ESS]] — on the agency's own description of its
   membership, corroborated by its own legal-acts page.
+
+## Year only (2026-11-17)
+
+The sources read give the year 1991, not a day. `start_date` was `1991-01-01`, a placeholder for "in 1991" that `metadata/metadata-schema.md` rules out, and is now empty. The year stays in the description and the text above.
 
 ## Sources
 

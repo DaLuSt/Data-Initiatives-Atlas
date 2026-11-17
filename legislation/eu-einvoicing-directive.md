@@ -23,9 +23,9 @@ confidence: medium
 coverage: medium
 verification: primary-source
 
-start_date: 2014-01-01
+start_date: 2014-05-26
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-11-17"
 previous_version: null
 successor: null
 
@@ -56,6 +56,10 @@ sources:
     url: "https://en.wikipedia.org/wiki/CEN/TC_434"
     publisher: "Wikipedia"
     accessed: "2026-08-28"
+  - title: "Official Journal text (CELEX 32014L0055)"
+    url: "https://publications.europa.eu/resource/celex/32014L0055"
+    publisher: "Publications Office of the European Union"
+    accessed: "2026-11-17"
 ---
 
 # eInvoicing Directive (2014/55/EU)
@@ -106,6 +110,10 @@ Atlas a standards-body EU→national chain, which nothing else did.
   graph as a section of [[CZ-NUKIB]].
 - The directive's **transposition** in any member state.
 - **Peppol** and the transport layer, which the directive does not specify.
+
+## Date, read directly 2026-11-17
+
+`start_date` was 2014-01-01, a placeholder for the year. The Directive's Official Journal text (Publications Office, CELEX 32014L0055), read directly, gives the real date: Article 13, it enters into force on the twentieth day following its publication, which was on 6 May 2014 (OJ L 133), so 26 May 2014. Member States had to apply the measures by 27 November 2018 (Article 11(1)).
 
 ## Sources
 

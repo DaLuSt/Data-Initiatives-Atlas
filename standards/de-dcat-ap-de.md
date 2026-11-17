@@ -23,7 +23,7 @@ confidence: high
 coverage: medium
 verification: primary-source
 
-start_date: 2019-01-01
+start_date: null
 end_date: null
 last_verified: "2026-09-18"
 previous_version: null
@@ -194,6 +194,10 @@ for GovData-portal data providers, with later deadlines for other
 systems tied to their own metadata-model change cycles — all details
 finer than anything in the secondary sources this entity previously
 rested on.
+
+## Year only (2026-11-17)
+
+The sources read give the year 2019, not a day. `start_date` was `2019-01-01`, a placeholder for "in 2019" that `metadata/metadata-schema.md` rules out, and is now empty. The year stays in the description and the text above.
 
 ## Sources
 

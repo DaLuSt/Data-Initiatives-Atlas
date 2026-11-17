@@ -27,7 +27,7 @@ confidence: medium
 coverage: low
 verification: primary-source
 
-start_date: 2010-01-01
+start_date: null
 end_date: null
 last_verified: "2026-09-26"
 previous_version: null
@@ -46,7 +46,7 @@ relationships:
     source: fact
     evidence: "Closes a gap EU-CULTURAL-HERITAGE-DATA-SPACE's own file had flagged (not a numbered discovery/unresolved.md row: EDM 'would connect to the Atlas's metadata-standards layer around INTL-DCAT' but was not independently researched). Confirmed by reading europeana.atlassian.net's own Europeana Knowledge Base page on EDM directly (2026-09-26, pro.europeana.eu itself remains 403-blocked as already recorded on EU-CULTURAL-HERITAGE-DATA-SPACE): EDM is 'developed collaboratively with technical experts, especially from the EuropeanaTech community' and 'continues to evolve through community-driven processes coordinated by Europeana.' The Dublin Core Metadata Initiative's own Metadata Standards Index, also read directly, independently states 'EDM is maintained by the Europeana Foundation, based in The Hague, Netherlands,' gives its creation year (2010) and version history (5.2.8 in October 2017), and confirms it is RDF-based and 'reuses many Dublin Core Terms properties.'"
     confidence: high
-    valid_from: "2010-01-01"
+    valid_from: null
     valid_until: null
   - type: related-to
     target: INTL-DCAT
@@ -128,6 +128,10 @@ asserted as fact.
 - `maintained-by` [[EU-EUROPEANA-FOUNDATION]] — `confidence: high`.
 - `related-to` [[INTL-DCAT]] — `confidence: low`, no direct source
   connects them.
+
+## Year only (2026-11-17)
+
+The sources read give the year 2010, not a day. `start_date` was `2010-01-01`, a placeholder for "in 2010" that `metadata/metadata-schema.md` rules out, and is now empty; so are the 1 `valid_from` dates that repeated it. The year stays in the description and the text above.
 
 ## Sources
 

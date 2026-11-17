@@ -25,7 +25,7 @@ confidence: medium
 coverage: low
 verification: primary-source
 
-start_date: 2005-01-01
+start_date: null
 end_date: null
 last_verified: "2026-09-04"
 previous_version: null
@@ -42,7 +42,7 @@ relationships:
     source: fact
     evidence: "Confirmed by reading hetwaterschapshuis.nl's own pages directly (2026-09-04): 'Alle 21 waterschappen in Nederland hebben gezamenlijk de Gemeenschappelijke Regeling het Waterschapshuis ingesteld' (all 21 Dutch water authorities jointly established the Gemeenschappelijke Regeling Het Waterschapshuis), founded around 2004-2005 because the water authorities could no longer solve their fast-changing ICT challenges individually. NL-UVW is the water authorities' own umbrella association, a distinct body from this operational joint arrangement, so cooperates-with rather than part-of is asserted."
     confidence: medium
-    valid_from: 2005-01-01
+    valid_from: null
     valid_until: null
 
 sources:
@@ -100,6 +100,10 @@ national teams.
 
 - `cooperates-with` [[NL-UVW]] — the water authorities' own umbrella
   association, a distinct body from this operational joint arrangement.
+
+## Year only (2026-11-17)
+
+The sources read give the year 2005, not a day. `start_date` was `2005-01-01`, a placeholder for "in 2005" that `metadata/metadata-schema.md` rules out, and is now empty; so are the 1 `valid_from` dates that repeated it. The year stays in the description and the text above.
 
 ## Sources
 

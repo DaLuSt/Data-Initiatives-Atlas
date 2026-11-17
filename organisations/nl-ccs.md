@@ -31,7 +31,7 @@ coverage: low
 verification: primary-source
 organisation_role: regulatory
 
-start_date: 2003-01-01
+start_date: null
 end_date: 2017-01-01
 last_verified: "2026-09-30"
 previous_version: null
@@ -49,7 +49,7 @@ relationships:
     source: fact
     evidence: "Confirmed by reading eerstekamer.nl's own bill page for the Wet op het CBS directly (2026-08-27, carried on NL-WET-CBS's own entity): the 2003 act establishing CBS as a zelfstandig bestuursorgaan gave the CCS independent governance of the work programme alongside the Director-General. Confirmed independently by reading zoek.officielebekendmakingen.nl's own text of Kamerstuk 34248, nr. 3 directly (2026-09-04), the 2015 legislative proposal to abolish the CCS: it describes the CCS's original role as approving the DG CBS's multi-year programmes, annual reports and budgets, calling the two-zbo structure 'een onnodig zware inrichting' (an unnecessarily heavy governance structure)."
     confidence: high
-    valid_from: 2003-01-01
+    valid_from: null
     valid_until: 2017-01-01
 
 sources:
@@ -118,6 +118,10 @@ role is materially narrower than the CCS's own supervisory powers.
 ## Relationships
 
 - `governed-by` [[NL-WET-CBS]] — historical, `valid_until: 2017-01-01`.
+
+## Year only (2026-11-17)
+
+The sources read give the year 2003, not a day. `start_date` was `2003-01-01`, a placeholder for "in 2003" that `metadata/metadata-schema.md` rules out, and is now empty; so are the 1 `valid_from` dates that repeated it. The year stays in the description and the text above.
 
 ## Sources
 

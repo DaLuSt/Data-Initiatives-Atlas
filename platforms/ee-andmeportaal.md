@@ -21,7 +21,7 @@ confidence: medium
 coverage: medium
 verification: primary-source
 
-start_date: 2025-01-01
+start_date: null
 end_date: null
 last_verified: "2026-08-26"
 previous_version: null
@@ -109,6 +109,10 @@ this pass, is watching the merge actually complete on a public timeline.
 - `maintained-by` [[EE-RIA]].
 - `replaces` [[EE-RIHA]]'s data-description role, a transition RIA's
   own page dates to "the end of 2026."
+
+## Year only (2026-11-17)
+
+The sources read give the year 2025, not a day. `start_date` was `2025-01-01`, a placeholder for "in 2025" that `metadata/metadata-schema.md` rules out, and is now empty. The year stays in the description and the text above.
 
 ## Sources
 

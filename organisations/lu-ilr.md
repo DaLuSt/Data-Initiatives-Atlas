@@ -26,7 +26,7 @@ confidence: medium
 coverage: medium
 verification: primary-source
 
-start_date: 1997-01-01
+start_date: null
 end_date: null
 last_verified: "2026-09-25"
 previous_version: null
@@ -48,7 +48,7 @@ relationships:
     source: fact
     evidence: "Confirmed by reading myilr.lu's own 'What is the ILR' page directly (2026-09-06): 'The ILR guarantees and supervises, in the consumer's interests, the smooth running of the markets on the basis of effective and sustainable competition, while guaranteeing a basic universal service' — an independent Luxembourg public authority regulating electronic communications, electricity, gas, postal services, rail, airport charges and radio frequencies, established 1997 and expanded to its current scope in 2000. Anchor edge under metadata/relationship-types.md §2.3."
     confidence: medium
-    valid_from: 1997-01-01
+    valid_from: null
     valid_until: null
   - type: governed-by
     target: LU-LOI-NIS2
@@ -136,6 +136,10 @@ banking and financial-market infrastructure.
 - `part-of` [[LU]] — an anchor edge.
 - `governed-by` [[LU-LOI-NIS2]] — the Act assigning ILR its NIS2
   competent-authority function.
+
+## Year only (2026-11-17)
+
+The sources read give the year 1997, not a day. `start_date` was `1997-01-01`, a placeholder for "in 1997" that `metadata/metadata-schema.md` rules out, and is now empty; so are the 1 `valid_from` dates that repeated it. The year stays in the description and the text above.
 
 ## Sources
 

@@ -39,7 +39,7 @@ status: active
 confidence: medium
 coverage: low
 verification: primary-source
-start_date: 2020-01-01
+start_date: 2020-03-15
 end_date: null
 last_verified: "2026-10-01"
 previous_version: null
@@ -202,12 +202,12 @@ class TestGoodRepository(Base):
 
 class TestDates(Base):
     def test_an_impossible_date_is_reported_not_a_crash(self):
-        self.edit("organisations/xx-org.md", "start_date: 2020-01-01", "start_date: 2020-13-45")
+        self.edit("organisations/xx-org.md", "start_date: 2020-03-15", "start_date: 2020-13-45")
         self.assertFails("xx-org.md")  # named, and the run completed
 
     def test_end_before_start(self):
         self.edit("organisations/xx-org.md", "end_date: null", "end_date: 2019-01-01")
-        self.assertFails("end_date 2019-01-01 is before start_date 2020-01-01")
+        self.assertFails("end_date 2019-01-01 is before start_date 2020-03-15")
 
     def test_a_partial_date_is_not_a_date(self):
         self.edit("organisations/xx-org.md", "end_date: null", 'end_date: "2025"')
@@ -534,6 +534,27 @@ class TestCountryIndex(Base):
         code, out = self.run_all()
         self.assertNotEqual(code, 0)
         self.assertIn("countries/xx/index.md: broken wikilink [[XX-GONE]]", out)
+
+
+class TestPaddedStartDate(Base):
+    """A 1 January start date must be backed by the day written in the entity (metadata-schema.md)."""
+
+    def test_the_helper(self):
+        f = validate_frontmatter.padded_start_date
+        self.assertTrue(f("founded in 2018", "2018-01-01"))
+        self.assertFalse(f("in force from 1 January 2018", "2018-01-01"))
+        self.assertFalse(f("in werking per 1 januari 2016", "2016-01-01"))
+        self.assertFalse(f("anything", "2018-03-01"))
+        self.assertFalse(f("anything", None))
+
+    def test_a_padded_date_warns_and_a_written_one_is_quiet(self):
+        self.edit("organisations/xx-org.md", "start_date: 2020-03-15", "start_date: 2020-01-01")
+        code, out = self.run_all()
+        self.assertEqual(code, 0, out)
+        self.assertIn("start_date 2020-01-01 is 1 January", out)
+        self.edit("organisations/xx-org.md", "A test organisation.", "A test organisation, set up on 1 January 2020.")
+        code, out = self.run_all()
+        self.assertNotIn("is 1 January", out)
 
 
 class TestStructure(Base):

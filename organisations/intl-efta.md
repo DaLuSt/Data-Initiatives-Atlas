@@ -23,7 +23,7 @@ confidence: medium
 coverage: medium
 verification: primary-source
 
-start_date: 1960-01-01
+start_date: null
 end_date: null
 last_verified: "2026-08-22"
 previous_version: null
@@ -131,6 +131,10 @@ European integration frameworks are ordered, and states move up them.
 - The **EFTA Council**, the **EFTA Secretariat** and the **Standing
   Committee** — EFTA's own institutions, as opposed to the EEA institutions
   above.
+
+## Year only (2026-11-17)
+
+The sources read give the year 1960, not a day. `start_date` was `1960-01-01`, a placeholder for "in 1960" that `metadata/metadata-schema.md` rules out, and is now empty. The year stays in the description and the text above.
 
 ## Sources
 

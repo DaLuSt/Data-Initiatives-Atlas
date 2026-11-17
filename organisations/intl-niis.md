@@ -20,7 +20,7 @@ confidence: medium
 coverage: medium
 verification: primary-source
 
-start_date: 2017-01-01
+start_date: null
 end_date: null
 last_verified: "2026-08-28"
 previous_version: null
@@ -85,7 +85,7 @@ sources:
 > understanding (signed digitally — described as "the world's first
 > digitally signed international agreement"), with NIIS itself
 > established as the operating organisation in 2017. That is consistent
-> with, not a correction of, the entity's `start_date: 2017-01-01` and
+> with, not a correction of, the entity's founding year, 2017 (`start_date` is empty: no source gives the day), and
 > the description's "established in 2017" — 2013 is the political
 > precursor, 2017 the organisation's actual founding — but is recorded
 > here since it was not visible before the page was read.
@@ -116,6 +116,10 @@ or autonomous territories the `level` vocabulary cannot express.
   `participates-in` and `part-of` and no way to say "associate". The three
   members carry `part-of`; Ukraine's partnership is recorded here in prose.
 - The Faroe Islands and Åland, for the `level` reason.
+
+## Year only (2026-11-17)
+
+The sources read give the year 2017, not a day. `start_date` was `2017-01-01`, a placeholder for "in 2017" that `metadata/metadata-schema.md` rules out, and is now empty. The year stays in the description and the text above.
 
 ## Sources
 

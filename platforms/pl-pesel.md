@@ -25,7 +25,7 @@ status: active
 confidence: medium
 coverage: medium
 verification: primary-source
-start_date: 1977-01-01
+start_date: null
 end_date: null
 last_verified: "2026-08-22"
 previous_version: null
@@ -114,7 +114,7 @@ This does not fully match en.wikipedia.org/wiki/PESEL, read the same
 pass, which states the number has been "used in Poland since 1979"
 without giving a launch mechanism. Both claims are retained rather than
 reconciled: the Polish article is more specific and internally
-consistent (pilot 1977, full rollout 1984), so `start_date` follows it,
+consistent (pilot 1977, full rollout 1984), so the year 1977 follows it (`start_date` is empty: no day is given),
 but the discrepancy is not resolved.
 
 ## Origins under a different government, for a different purpose
@@ -158,6 +158,10 @@ identity-card and civil-status records.
 - `governed-by` [[PL-EWIDENCJA-LUDNOSCI]].
 - `maintained-by` [[PL-COI]], with a date (1 March 2015) and mechanism
   (the State Registers System) neither source gave on its own.
+
+## Year only (2026-11-17)
+
+The sources read give the year 1977, not a day. `start_date` was `1977-01-01`, a placeholder for "in 1977" that `metadata/metadata-schema.md` rules out, and is now empty. The year stays in the description and the text above.
 
 ## Sources
 
