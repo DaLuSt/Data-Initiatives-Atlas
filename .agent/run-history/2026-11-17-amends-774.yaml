@@ -7,5 +7,5 @@ summary: >
   directly on legislation.gov.uk (sections 70(1) and 117(1)), confidence high, valid_from empty because commencement
   varies by section. Its body's "amendment question" section is marked resolved. GB-CSRB's edge to the NIS Regulations
   stays related-to and says why (a bill; no type for a proposed amendment).
-prs: []
-outcome: in-progress
+prs: [791]
+outcome: merged
