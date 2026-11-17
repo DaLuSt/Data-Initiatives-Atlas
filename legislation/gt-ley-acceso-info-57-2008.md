@@ -27,9 +27,11 @@ successor: null
 domains:
   - DOMAIN-GOVERNMENT
   - DOMAIN-DIGITAL-INFRASTRUCTURE
-organisations: []
+organisations:
+  - GT-PDH
 related_entities:
   - GT
+  - GT-PDH
 relationships:
   - type: applies-in
     target: GT
@@ -53,3 +55,5 @@ sources:
 ## Relationships
 
 Applies in [[GT]]; no general data protection law was found.
+
+Articles 46 to 49 make the [[GT-PDH]] (Procurador de los Derechos Humanos) the regulatory authority for access to public information (read 2026-11-17).

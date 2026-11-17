@@ -160,7 +160,8 @@ and businesses.
 
 **No relationship to [[EU-EIDAS2]] or [[EU-EUDI-WALLET]] is asserted.**
 Nothing read connects DigiD to the European Digital Identity Wallet every
-member state must offer by the end of 2026, and [[EU-EUDI-WALLET]]'s own
+member state must offer within 24 months of its implementing acts'
+entry into force (eIDAS 2 Article 5a(1), recorded on [[EU-EIDAS2]]), and [[EU-EUDI-WALLET]]'s own
 entity records the Dutch candidate — the **publieke NL-wallet** — as a
 separate, still-in-development effort with no Atlas entity of its own.
 The eIDAS-1.0 notification and the EUDI Wallet mandate are distinct

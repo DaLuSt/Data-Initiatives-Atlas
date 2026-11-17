@@ -1,0 +1,11 @@
+date: "2026-11-17"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Scan issue #770 (laws with no body): Guatemala's Public Information Access Law (Decreto 57-2008) gets its
+  regulatory authority, the Procurador de los Derechos Humanos (GT-PDH), created from articles 46 to 49 and 69 of
+  the Law's text, read directly. status unknown: pdh.org.gt returned HTTP 403 and Decreto 54-86 was not read. Listed
+  in countries/gt/index.md. Also: NL-DIGID's note on the EUDI wallet no longer says "by the end of 2026" but gives
+  the Article 5a(1) rule, as EU-EIDAS2 and EU-EUDI-WALLET do since #793. Closes the run-history entries for #791 and
+  #793.
+prs: []
+outcome: in-progress

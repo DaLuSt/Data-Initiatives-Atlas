@@ -11,5 +11,5 @@ summary: >
   own title shows it would also amend the Single Digital Gateway Regulation, Regulation 2018/1725, NIS2 and CER and
   repeal the platform-to-business Regulation, recorded in prose. Belgium's and Germany's part-of EU edges no longer
   claim accession "on 1 January 1958": the EU's list gives the year only.
-prs: []
-outcome: in-progress
+prs: [793]
+outcome: merged
