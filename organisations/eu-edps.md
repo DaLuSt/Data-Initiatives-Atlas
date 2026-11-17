@@ -34,7 +34,7 @@ relationships:
   - type: part-of
     target: EU
     source: fact
-    evidence: "The EDPS is the independent authority supervising processing of personal data by EU institutions and bodies (edps.europa.eu). NOT READ — search-only."
+    evidence: "Regulation (EU) 2018/1725 (CELEX 32018R1725), read directly 2026-11-17 from the Official Journal text: Article 52(1), \"The European Data Protection Supervisor is hereby established\", and 52(2), it 'shall be responsible for ensuring that the fundamental rights and freedoms of natural persons, and in particular their right to data protection, are respected by Union institutions and bodies'. Article 55(1): it acts 'with complete independence'. A body established by Union law, hence `part-of` the EU as its scope anchor; it is not one of the institutions TEU Article 13(1) lists."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -53,6 +53,10 @@ sources:
   - title: "Official Journal text (CELEX 32016R0679)"
     url: "https://publications.europa.eu/resource/celex/32016R0679"
     publisher: "Publications Office of the European Union"
+    accessed: "2026-11-17"
+  - title: "Regulation (EU) 2018/1725, Articles 52 and 55"
+    url: "https://eur-lex.europa.eu/eli/reg/2018/1725/oj/eng"
+    publisher: "EUR-Lex (Publications Office of the European Union)"
     accessed: "2026-11-17"
 ---
 
