@@ -26,7 +26,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-11-17"
 previous_version: null
 successor: null
 
@@ -52,8 +52,8 @@ relationships:
   - type: participates-in
     target: EU-EUROGEOGRAPHICS
     source: fact
-    evidence: "EuroGeographics is the membership association for the European National Mapping, Cadastral and Land Registry Authorities, an international not-for-profit association (AISBL/IVZW under Belgian law, BCE 833 607 112) bringing together 63 organisations from 46 countries covering the whole of geographical Europe (eurogeographics.org/our-members/; eurogeographics.org). NOT READ — search-only. Membership follows from the sourced composition rule rather than from a source naming this authority, the same basis on which the national standardisation bodies were attached to EU-CEN. This entity is Great Britain's national mapping agency."
-    confidence: medium
+    evidence: "EuroGeographics' own member list, read directly 2026-11-17: the members feed (eurogeographics.org/members/feed/) lists this authority, and its member page (eurogeographics.org/members/ordnance-survey/) gives 'National name Ordnance Survey', 'Member status Full', 'Founded 1791'. Replaces evidence that inferred membership from the association's composition rule without a source naming this authority."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -74,6 +74,10 @@ sources:
     url: "https://www.ons.gov.uk/news/statementsandletters/anambitiouspartnershipprogrammebetweenonsandosmemorandumofunderstanding"
     publisher: "Office for National Statistics (UK)"
     accessed: "2026-08-22"
+  - title: "EuroGeographics member page"
+    url: "https://eurogeographics.org/members/ordnance-survey/"
+    publisher: "EuroGeographics"
+    accessed: "2026-11-17"
 ---
 
 # Ordnance Survey
@@ -84,6 +88,9 @@ sources:
 > places. `eurogeographics.org`'s members page was fetched but its member
 > list did not render as extractable text, so that relationship's
 > composition-rule basis is unchanged rather than newly confirmed.
+>
+> **2026-11-17:** the member list was read through the site's RSS feed, and Ordnance Survey's own member
+> page ("Member status Full") now sources the EuroGeographics edge directly.
 
 ## Description
 

@@ -22,7 +22,7 @@ verification: primary-source
 
 start_date: 1832-10-01
 end_date: null
-last_verified: "2026-09-27"
+last_verified: "2026-11-17"
 previous_version: null
 successor: null
 
@@ -53,8 +53,8 @@ relationships:
   - type: participates-in
     target: EU-EUROGEOGRAPHICS
     source: fact
-    evidence: "EuroGeographics is the membership association for the European National Mapping, Cadastral and Land Registry Authorities, an international not-for-profit association (AISBL/IVZW under Belgian law, BCE 833 607 112) bringing together 63 organisations from 46 countries covering the whole of geographical Europe (eurogeographics.org/our-members/; eurogeographics.org). NOT READ this pass — eurogeographics.org was not re-fetched. Membership follows from the sourced composition rule rather than from a source naming this authority, the same basis on which the national standardisation bodies were attached to EU-CEN. This entity is the Netherlands' national land registry, cadastre and mapping agency."
-    confidence: medium
+    evidence: "EuroGeographics' own member list, read directly 2026-11-17: the members feed (eurogeographics.org/members/feed/) lists this authority, and its member page (eurogeographics.org/members/cadastre-land-registry-and-mapping-agency/) gives 'National name Dienst voor het Kadaster en de openbare registers', 'English spelling Cadastre, Land Registry and Mapping Agency', 'Member status Full'. Replaces evidence that inferred membership from the association's composition rule without a source naming this authority."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -79,6 +79,10 @@ sources:
     url: "https://nl.wikipedia.org/wiki/Kadaster_(Nederland)"
     publisher: "Wikipedia"
     accessed: "2026-08-27"
+  - title: "EuroGeographics member page"
+    url: "https://eurogeographics.org/members/cadastre-land-registry-and-mapping-agency/"
+    publisher: "EuroGeographics"
+    accessed: "2026-11-17"
 ---
 
 # Kadaster
