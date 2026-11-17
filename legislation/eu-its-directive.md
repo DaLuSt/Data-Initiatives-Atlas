@@ -21,9 +21,9 @@ confidence: medium
 coverage: low
 verification: primary-source
 
-start_date: null
+start_date: 2010-08-26
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-11-17"
 previous_version: null
 successor: null
 
@@ -177,6 +177,10 @@ source rather than modelled as its own entity.
   countries. Every other member state belongs here too; the
   `applies-in` relationships are added as countries join the Atlas.
 - Underpins [[NL-NTM]] (relationship recorded on that entity).
+
+## Date, read directly 2026-11-17
+
+`start_date` is now 2010-08-26, from the Official Journal text (Publications Office, CELEX 32010L0040), read directly (roadmap #775). Article 19: it enters into force on the 20th day following its publication in the Official Journal, which was on 6 August 2010; the 20th day is 26 August 2010. Transposition was due by 27 February 2012 (Article 18(1)).
 
 ## Sources
 

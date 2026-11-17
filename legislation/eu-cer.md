@@ -21,9 +21,9 @@ confidence: medium
 coverage: low
 verification: primary-source
 
-start_date: null
+start_date: 2023-01-16
 end_date: null
-last_verified: "2026-09-30"
+last_verified: "2026-11-17"
 previous_version: null
 successor: null
 
@@ -184,6 +184,10 @@ researched.
   Atlas.
 - Implemented by [[NL-WWKE]] in the Netherlands (see above).
 - Companion to [[EU-NIS2]]; both stem from [[EU-CYBERSECURITY-STRATEGY]].
+
+## Date, read directly 2026-11-17
+
+`start_date` is now 2023-01-16, from the Official Journal text (Publications Office, CELEX 32022L2557), read directly (roadmap #775). Article 28: it enters into force on the twentieth day following its publication in the Official Journal, which was on 27 December 2022 (OJ L 333); the twentieth day is 16 January 2023. Member States apply their transposing measures from 18 October 2024 (Article 26(1)).
 
 ## Sources
 

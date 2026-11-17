@@ -1,0 +1,11 @@
+date: "2026-11-17"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #775, a second slice: the four EU acts in the Atlas that were active with no start_date now have one, from
+  their Official Journal texts (Publications Office): NIS2 and CER 2023-01-16 (entry into force, the convention for
+  directives), the ITS Directive 2010-08-26, the Interoperable Europe Act 2024-07-12 (date of general application, the
+  convention for regulations). Each entity has a "Date, read directly" section with the article and how the day was
+  counted. Tried and blocked for #767 on the same day: gesetze-im-internet.de resets the connection (curl) and answers
+  503 (fetch tool), so the German laws' Wikipedia citations could not be replaced.
+prs: []
+outcome: in-progress
