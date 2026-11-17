@@ -22,7 +22,7 @@ organisation_role: executive
 
 start_date: null
 end_date: null
-last_verified: "2026-09-17"
+last_verified: "2026-11-17"
 previous_version: null
 successor: null
 
@@ -36,14 +36,14 @@ relationships:
   - type: part-of
     target: EU-COMMISSION
     source: fact
-    evidence: "The European Statistical System is the partnership between the Community statistical authority, which is the Commission (Eurostat), and the national statistical institutes (eurostat Statistics Explained; Reg. (EC) 223/2009). NOT READ — search-only."
+    evidence: "Regulation (EC) No 223/2009 (CELEX 32009R0223), read directly 2026-11-17 from the Official Journal text: Article 4, the ESS 'is the partnership between the Community statistical authority, which is the Commission (Eurostat), and the national statistical institutes (NSIs) and other national authorities responsible in each Member State for the development, production and dissemination of European statistics'; Article 6(1), 'The Community statistical authority, as designated by the Commission to develop, produce and disseminate European statistics, shall be referred to as \"the Commission (Eurostat)\"'."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: part-of
     target: EU-ESS
     source: fact
-    evidence: "The European Statistical System is the partnership between the Community statistical authority, which is the Commission (Eurostat), and the national statistical institutes and other national authorities responsible in each member state for the development, production and dissemination of European statistics; the ESS Committee is chaired by Eurostat (ec.europa.eu/eurostat/web/european-statistical-system; EUR-Lex CELEX 32009R0223; cso.ie European Statistical System page). NOT READ — search-only."
+    evidence: "Regulation (EC) No 223/2009 (CELEX 32009R0223), read directly 2026-11-17 from the Official Journal text: Article 4, the ESS 'is the partnership between the Community statistical authority, which is the Commission (Eurostat), and the national statistical institutes (NSIs) and other national authorities responsible in each Member State for the development, production and dissemination of European statistics'; Article 7(2), the ESS Committee 'shall be chaired by the Commission (Eurostat)'."
     confidence: medium
     valid_from: 2009-03-11
     valid_until: null
@@ -87,6 +87,10 @@ sources:
     url: "https://ec.europa.eu/eurostat/documents/64157/4372828/DE-description.pdf/443916f8-e119-45d0-a04c-bafe2666c834"
     publisher: "Eurostat (European Commission)"
     accessed: "2026-09-17"
+  - title: "Regulation (EC) No 223/2009 on European statistics, Articles 4, 6 and 7"
+    url: "https://eur-lex.europa.eu/eli/reg/2009/223/oj/eng"
+    publisher: "EUR-Lex (Publications Office of the European Union)"
+    accessed: "2026-11-17"
 ---
 
 # Eurostat
