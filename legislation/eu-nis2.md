@@ -62,8 +62,8 @@ relationships:
   - type: supersedes
     target: EU-NIS
     source: fact
-    evidence: "The NIS2 Directive repeals Directive (EU) 2016/1148 with effect from 18 October 2024 (EUR-Lex consolidated text of Dir. 2022/2555). NOT READ — search-only."
-    confidence: medium
+    evidence: "Directive (EU) 2022/2555, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32022L2555): Article 44, 'Directive (EU) 2016/1148 is repealed with effect from 18 October 2024. References to the repealed Directive shall be construed as references to this Directive'."
+    confidence: high
     valid_from: 2024-10-18
     valid_until: null
   - type: applies-in

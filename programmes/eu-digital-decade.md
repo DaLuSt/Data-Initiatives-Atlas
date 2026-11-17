@@ -24,7 +24,7 @@ verification: primary-source
 
 start_date: 2022-12-14
 end_date: 2030-12-31
-last_verified: "2026-09-25"
+last_verified: "2026-11-17"
 previous_version: null
 successor: null
 
@@ -37,71 +37,71 @@ relationships:
   - type: applies-in
     target: PT
     source: fact
-    evidence: "Digital Decade Policy Programme 2030 is an EU-level instrument addressed to the member states, and Portugal is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
-    confidence: medium
+    evidence: "Decision (EU) 2022/2481 of 14 December 2022 establishing the Digital Decade Policy Programme 2030, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32022D2481): Article 7(1), 'By 9 October 2023, each Member State shall submit to the Commission its national roadmap'; Article 6(1), the Commission reports annually on the state of the Digital Decade. Portugal is on the EU's own list of its 27 member countries, 'EU Member State since 1986' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: Digital Decade Policy Programme 2030 is an EU-level instrument addressed to the member states, and Portugal is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: LU
     source: fact
-    evidence: "Digital Decade Policy Programme 2030 is an EU-level instrument addressed to the member states, and Luxembourg is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
-    confidence: medium
+    evidence: "Decision (EU) 2022/2481 of 14 December 2022 establishing the Digital Decade Policy Programme 2030, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32022D2481): Article 7(1), 'By 9 October 2023, each Member State shall submit to the Commission its national roadmap'; Article 6(1), the Commission reports annually on the state of the Digital Decade. Luxembourg is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: Digital Decade Policy Programme 2030 is an EU-level instrument addressed to the member states, and Luxembourg is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: CZ
     source: fact
-    evidence: "Digital Decade Policy Programme 2030 is an EU-level instrument addressed to the member states, and Czechia is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
-    confidence: medium
+    evidence: "Decision (EU) 2022/2481 of 14 December 2022 establishing the Digital Decade Policy Programme 2030, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32022D2481): Article 7(1), 'By 9 October 2023, each Member State shall submit to the Commission its national roadmap'; Article 6(1), the Commission reports annually on the state of the Digital Decade. Czechia is on the EU's own list of its 27 member countries, 'EU Member State since 2004' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: Digital Decade Policy Programme 2030 is an EU-level instrument addressed to the member states, and Czechia is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: IE
     source: fact
-    evidence: "Digital Decade Policy Programme 2030 is an EU-level instrument addressed to the member states, and Ireland is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu). NOT READ — search-only."
-    confidence: medium
+    evidence: "Decision (EU) 2022/2481 of 14 December 2022 establishing the Digital Decade Policy Programme 2030, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32022D2481): Article 7(1), 'By 9 October 2023, each Member State shall submit to the Commission its national roadmap'; Article 6(1), the Commission reports annually on the state of the Digital Decade. Ireland is on the EU's own list of its 27 member countries, 'EU Member State since 1973' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: Digital Decade Policy Programme 2030 is an EU-level instrument addressed to the member states, and Ireland is a member state (eur-lex.europa.eu; digital-strategy.ec.europa.eu)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: NL
     source: fact
-    evidence: "The programme requires annual progress reports and national strategic roadmaps from member states (EUR-Lex summary of Decision (EU) 2022/2481). NOT READ — search-only."
-    confidence: medium
+    evidence: "Decision (EU) 2022/2481 of 14 December 2022 establishing the Digital Decade Policy Programme 2030, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32022D2481): Article 7(1), 'By 9 October 2023, each Member State shall submit to the Commission its national roadmap'; Article 6(1), the Commission reports annually on the state of the Digital Decade. The Netherlands is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: The programme requires annual progress reports and national strategic roadmaps from member states (EUR-Lex summary of Decision (EU) 2022/2481)."
+    confidence: high
     valid_from: 2022-12-14
     valid_until: null
   - type: applies-in
     target: DE
     source: fact
-    evidence: "The programme requires annual progress reports and national strategic roadmaps from member states, Germany included (EUR-Lex summary of Decision (EU) 2022/2481). NOT READ — search-only."
-    confidence: medium
+    evidence: "Decision (EU) 2022/2481 of 14 December 2022 establishing the Digital Decade Policy Programme 2030, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32022D2481): Article 7(1), 'By 9 October 2023, each Member State shall submit to the Commission its national roadmap'; Article 6(1), the Commission reports annually on the state of the Digital Decade. Germany is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: The programme requires annual progress reports and national strategic roadmaps from member states, Germany included (EUR-Lex summary of Decision (EU) 2022/2481)."
+    confidence: high
     valid_from: 2022-12-14
     valid_until: null
   - type: applies-in
     target: BE
     source: fact
-    evidence: "The programme requires annual progress reports and national strategic roadmaps from member states, Belgium included (EUR-Lex summary of Decision (EU) 2022/2481). NOT READ — search-only."
-    confidence: medium
+    evidence: "Decision (EU) 2022/2481 of 14 December 2022 establishing the Digital Decade Policy Programme 2030, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32022D2481): Article 7(1), 'By 9 October 2023, each Member State shall submit to the Commission its national roadmap'; Article 6(1), the Commission reports annually on the state of the Digital Decade. Belgium is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: The programme requires annual progress reports and national strategic roadmaps from member states, Belgium included (EUR-Lex summary of Decision (EU) 2022/2481)."
+    confidence: high
     valid_from: 2022-12-14
     valid_until: null
   - type: applies-in
     target: FR
     source: fact
-    evidence: "The programme requires annual progress reports and national strategic roadmaps from member states, France included (EUR-Lex summary of Decision (EU) 2022/2481). NOT READ — search-only."
-    confidence: medium
+    evidence: "Decision (EU) 2022/2481 of 14 December 2022 establishing the Digital Decade Policy Programme 2030, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32022D2481): Article 7(1), 'By 9 October 2023, each Member State shall submit to the Commission its national roadmap'; Article 6(1), the Commission reports annually on the state of the Digital Decade. France is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: The programme requires annual progress reports and national strategic roadmaps from member states, France included (EUR-Lex summary of Decision (EU) 2022/2481)."
+    confidence: high
     valid_from: 2022-12-14
     valid_until: null
   - type: applies-in
     target: ES
     source: fact
-    evidence: "The programme requires annual progress reports and national strategic roadmaps from member states, Spain included (EUR-Lex summary of Decision (EU) 2022/2481). NOT READ - search-only. Espana Digital 2026 is Spain's national digital roadmap but no source read connects it to this Decision, so no relationship is asserted."
-    confidence: medium
+    evidence: "Decision (EU) 2022/2481 of 14 December 2022 establishing the Digital Decade Policy Programme 2030, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32022D2481): Article 7(1), 'By 9 October 2023, each Member State shall submit to the Commission its national roadmap'; Article 6(1), the Commission reports annually on the state of the Digital Decade. Spain is on the EU's own list of its 27 member countries, 'EU Member State since 1986' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: The programme requires annual progress reports and national strategic roadmaps from member states, Spain included (EUR-Lex summary of Decision (EU) 2022/2481). Espana Digital 2026 is Spain's national digital roadmap but no source read connects it to this Decision, so no relationship is asserted."
+    confidence: high
     valid_from: 2022-12-14
     valid_until: null
   - type: applies-in
     target: PL
     source: fact
-    evidence: "The programme requires annual progress reports and national strategic roadmaps from member states, Poland included (EUR-Lex summary of Decision (EU) 2022/2481). NOT READ - search-only."
-    confidence: medium
+    evidence: "Decision (EU) 2022/2481 of 14 December 2022 establishing the Digital Decade Policy Programme 2030, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32022D2481): Article 7(1), 'By 9 October 2023, each Member State shall submit to the Commission its national roadmap'; Article 6(1), the Commission reports annually on the state of the Digital Decade. Poland is on the EU's own list of its 27 member countries, 'EU Member State since 2004' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: The programme requires annual progress reports and national strategic roadmaps from member states, Poland included (EUR-Lex summary of Decision (EU) 2022/2481)."
+    confidence: high
     valid_from: 2022-12-14
     valid_until: null
 
@@ -115,6 +115,14 @@ sources:
   - title: "2030 policy programme 'Path to the Digital Decade' — Legislative Train Schedule"
     url: "https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-path-to-the-digital-decade"
     publisher: "European Parliament"
+  - title: "Official Journal text (CELEX 32022D2481)"
+    url: "https://publications.europa.eu/resource/celex/32022D2481"
+    publisher: "Publications Office of the European Union"
+    accessed: "2026-11-17"
+  - title: "EU countries"
+    url: "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
+    publisher: "European Union"
+    accessed: "2026-11-14"
 ---
 
 # Digital Decade Policy Programme 2030
