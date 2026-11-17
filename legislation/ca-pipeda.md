@@ -10,6 +10,7 @@ description: >
   rules for the collection, use and disclosure of personal information in
   the course of commercial activities and for employee information of
   federal works.
+  Assented to on 13 April 2000; Parts 2, 3 and 4 came into force on 1 May 2000 and Part 1 on 1 January 2001 (SI/2000-29), as the consolidated text's own note records. `start_date` is the first of these (the Atlas records the first date of a staged commencement).
 
 level: national
 country: CA
@@ -19,9 +20,9 @@ status: active
 confidence: high
 coverage: low
 verification: primary-source
-start_date: null
+start_date: 2000-05-01
 end_date: null
-last_verified: "2026-10-11"
+last_verified: "2026-11-17"
 previous_version: null
 successor: null
 
@@ -46,6 +47,10 @@ sources:
     url: "https://laws-lois.justice.gc.ca/eng/acts/P-8.6/"
     publisher: "Department of Justice Canada"
     accessed: "2026-10-11"
+  - title: "PIPEDA, full text — Justice Laws Website"
+    url: "https://laws-lois.justice.gc.ca/eng/acts/P-8.6/FullText.html"
+    publisher: "Department of Justice Canada"
+    accessed: "2026-11-17"
   - title: "PIPEDA, Part 1 — Justice Laws Website"
     url: "https://laws-lois.justice.gc.ca/eng/acts/P-8.6/page-1.html"
     publisher: "Department of Justice Canada"
@@ -54,7 +59,7 @@ sources:
 
 # Personal Information Protection and Electronic Documents Act (PIPEDA)
 
-> **Created 2026-10-11** (roadmap #472, Canada). The Justice Laws Website's table of contents and Part 1 were read directly. The date of assent and the later parts were not read.
+> **Created 2026-10-11** (roadmap #472, Canada). The Justice Laws Website's table of contents and Part 1 were read directly. The later parts were not read. **Dated 2026-11-17** from the full text: "Assented to 2000-04-13" and the coming-into-force note on section 72, "[Note: Parts 2, 3 and 4 in force May 1, 2000; Part 1 in force January 1, 2001, see SI/2000-29; Part 5 in force June 1, 2009, see SI/2009-42.]" `start_date` is 1 May 2000, the first part in force; the privacy rules of Part 1 apply from 1 January 2001.
 
 ## What is sourced
 

@@ -8,5 +8,5 @@ summary: >
   law now lists the office. Checked and not linked: China's Data Security Law, Article 6 (NPC English text, read
   directly), names only "the national cyberspace affairs department", not a body by name, so no organisation is
   linked to it. Closes the run-history entry for #794.
-prs: []
-outcome: in-progress
+prs: [795]
+outcome: merged

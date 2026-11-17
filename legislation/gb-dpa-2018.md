@@ -8,6 +8,7 @@ description: >
   national law and the regimes outside its scope. It was substantially
   amended by the Data (Use and Access) Act 2025, whose main data protection
   provisions came into force on 5 February 2026.
+  Passed on 23 May 2018, when section 212(2) brought its first provisions into force; Parts 2 to 6, among others, followed on 25 May 2018 (SI 2018/625, regulation 2). `start_date` is the first of these (the date of Royal Assent) (the Atlas records the first date of a staged commencement).
 
 level: national
 country: GB
@@ -18,9 +19,9 @@ rank: ordinary
 confidence: medium
 coverage: low
 verification: primary-source
-start_date: null
+start_date: 2018-05-23
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-11-17"
 previous_version: null
 successor: null
 
@@ -58,6 +59,14 @@ sources:
     url: "https://www.legislation.gov.uk/ukpga/2025/18/part/5"
     publisher: "legislation.gov.uk (The National Archives)"
     accessed: "2026-08-22"
+  - title: "Data Protection Act 2018, introductory text (as enacted) and section 212"
+    url: "https://www.legislation.gov.uk/ukpga/2018/12/section/212"
+    publisher: "The National Archives (legislation.gov.uk)"
+    accessed: "2026-11-17"
+  - title: "The Data Protection Act 2018 (Commencement No. 1 and Transitional and Saving Provisions) Regulations 2018 (SI 2018/625), regulation 2"
+    url: "https://www.legislation.gov.uk/uksi/2018/625/regulation/2/made"
+    publisher: "The National Archives (legislation.gov.uk)"
+    accessed: "2026-11-17"
 ---
 
 # Data Protection Act 2018
@@ -65,6 +74,10 @@ sources:
 > **Verified 2026-08-22.** The statute text at legislation.gov.uk was found
 > and read directly — the entity's own flagged gap ("no legislation.gov.uk
 > citation for the Act itself") is now closed.
+>
+> **Dated 2026-11-17**, read directly: the enacted introductory text gives "[23rd May 2018]"; section
+> 212(2) brings sections 1, 3, 182 and a few others into force "on the day on which this Act is passed";
+> regulation 2 of SI 2018/625 brings section 2 and Parts 2 to 6, among others, into force "on 25th May 2018".
 
 ## Description
 

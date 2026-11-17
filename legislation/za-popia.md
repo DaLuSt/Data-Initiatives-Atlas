@@ -10,7 +10,7 @@ description: >
   South Africa's personal-information protection law (Act 4 of 2013), which
   sets minimum conditions for the lawful processing of personal information
   by public and private bodies and establishes the Information Regulator. It
-  commenced in parts between 2014 and 2021.
+  commenced in parts between 2014 and 2021: its first provisions on 11 April 2014 (Gazette 37544), most of the processing rules on 1 July 2020 (Gazette 43461).
 
 level: national
 country: ZA
@@ -20,9 +20,9 @@ status: active
 confidence: high
 coverage: low
 verification: primary-source
-start_date: null
+start_date: 2014-04-11
 end_date: null
-last_verified: "2026-10-11"
+last_verified: "2026-11-17"
 previous_version: null
 successor: null
 
@@ -45,7 +45,7 @@ sources:
   - title: "Protection of Personal Information Act 4 of 2013 — South African Government"
     url: "https://www.gov.za/documents/protection-personal-information-act"
     publisher: "Government of South Africa (gov.za)"
-    accessed: "2026-10-11"
+    accessed: "2026-11-17"
   - title: "Information Regulator (South Africa) — home"
     url: "https://inforegulator.org.za/"
     publisher: "Information Regulator (South Africa)"
@@ -60,7 +60,7 @@ sources:
 
 The Act aims, per the Regulator's site, "to promote the protection of personal information processed by public and private bodies by, among others, introducing certain conditions for the lawful processing of personal information so as to establish minimum requirements for the processing of such information". It provides for the establishment of an Information Regulator ([[ZA-INFO-REGULATOR]]). It came into force in stages, per the commencement notices on gov.za: section 1, Part A of Chapter 5 (sections 39 to 54) and sections 112 and 113 on **11 April 2014**; sections 2 to 38, 55 to 109, 111 and 114(1) to (3) on **1 July 2020**; sections 110 and 114(4) on 30 June 2021; and section 58(2) on 1 July 2021. Section 55 requires responsible parties to register their Information Officers with the Regulator before those officers act.
 
-The Start date is left empty because commencement is by parts; the entity does not pick one.
+`start_date` is **11 April 2014**, the first commencement, re-read on gov.za's page on 2026-11-17 ("Commencement 11 April 2014, Section 1, Part A of Chapter 5 (Sections 39 to 54), Sections 112 and 113 (Gazette 37544 ...)"). Until then it was left empty because commencement is by parts; it now follows the rule [[CH-EMBAG]] set for staged commencement, recording the first. The processing conditions most readers mean apply from 1 July 2020.
 
 ## Relationships
 
