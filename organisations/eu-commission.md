@@ -40,7 +40,7 @@ relationships:
   - type: part-of
     target: EU
     source: fact
-    evidence: "The European Commission is the EU's executive body and holds the right of legislative initiative under the ordinary legislative procedure (consilium.europa.eu; europarl.europa.eu). NOT READ — search-only."
+    evidence: "Treaty on European Union (consolidated, CELEX 12016M/TXT), read directly 2026-11-17 from the Publications Office text: Article 13(1), \"The Union's institutions shall be: — the European Parliament, — the European Council, — the Council, — the European Commission ...\"; Article 17(1), \"The Commission shall promote the general interest of the Union and take appropriate initiatives to that end\", and 17(2), \"Union legislative acts may only be adopted on the basis of a Commission proposal, except where the Treaties provide otherwise.\""
     confidence: medium
     valid_from: null
     valid_until: null
@@ -54,7 +54,7 @@ relationships:
   - type: produces
     target: EU-CYBERSECURITY-STRATEGY
     source: fact
-    evidence: "On 16 December 2020 the European Commission and the High Representative presented the EU Cybersecurity Strategy (digital-strategy.ec.europa.eu). Co-authored with the High Representative, who is not an Atlas entity. NOT READ — search-only."
+    evidence: "JOIN(2020) 18 final, read directly 2026-11-17 from the Publications Office text (CELEX 52020JC0018): 'EUROPEAN COMMISSION Brussels, 16.12.2020 JOIN(2020) 18 final JOINT COMMUNICATION TO THE EUROPEAN PARLIAMENT AND THE COUNCIL The EU's Cybersecurity Strategy for the Digital Decade'. A joint communication, so co-authored with the High Representative, who is not an Atlas entity; the document's signature block was not read."
     confidence: medium
     valid_from: 2020-12-16
     valid_until: null
@@ -76,6 +76,14 @@ sources:
   - title: "COM(2020) 66 final (CELEX 52020DC0066)"
     url: "https://publications.europa.eu/resource/celex/52020DC0066"
     publisher: "Publications Office of the European Union"
+    accessed: "2026-11-17"
+  - title: "Treaty on European Union (consolidated version 2016), Articles 13 to 17"
+    url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016M/TXT"
+    publisher: "EUR-Lex (Publications Office of the European Union)"
+    accessed: "2026-11-17"
+  - title: "JOIN(2020) 18 final — The EU's Cybersecurity Strategy for the Digital Decade"
+    url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52020JC0018"
+    publisher: "EUR-Lex (Publications Office of the European Union)"
     accessed: "2026-11-17"
 ---
 
