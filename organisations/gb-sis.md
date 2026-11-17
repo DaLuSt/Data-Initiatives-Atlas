@@ -50,7 +50,7 @@ relationships:
     source: fact
     evidence: "Confirmed by reading the ISA 1994 statute text at legislation.gov.uk (2026-08-22): the long title covers 'the Secret Intelligence Service and the Government Communications Headquarters', enacted 26 May 1994; § 1(1) sets out SIS's functions, exercisable 'in the interests of national security, with particular reference to the defence and foreign policies of Her Majesty's Government'."
     confidence: medium
-    valid_from: 1994-01-01
+    valid_from: null
     valid_until: null
   - type: governed-by
     target: GB-IPA-2016
@@ -116,6 +116,10 @@ rather than modelled as a live relationship.
 ## Relationships
 
 - `governed-by` [[GB-ISA-1994]], [[GB-IPA-2016]] and [[GB-DPA-2018]] (Part 4).
+
+## Edge dates (2026-11-17)
+
+The `valid_from` of `governed-by` [[GB-ISA-1994]] was 1994-01-01, a placeholder for the year 1994 that `metadata/metadata-schema.md` rules out; no source read gives the day, so it is now empty. The year is in the edge's evidence or the text above.
 
 ## Sources
 

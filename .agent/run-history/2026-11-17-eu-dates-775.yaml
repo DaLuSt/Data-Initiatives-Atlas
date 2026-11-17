@@ -7,5 +7,5 @@ summary: >
   convention for regulations). Each entity has a "Date, read directly" section with the article and how the day was
   counted. Tried and blocked for #767 on the same day: gesetze-im-internet.de resets the connection (curl) and answers
   503 (fetch tool), so the German laws' Wikipedia citations could not be replaced.
-prs: []
-outcome: in-progress
+prs: [788]
+outcome: merged

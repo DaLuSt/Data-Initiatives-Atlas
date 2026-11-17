@@ -42,7 +42,7 @@ relationships:
     source: fact
     evidence: "Confirmed by reading the JSA 2013 statute text at legislation.gov.uk (2026-08-22), § 1(1)-(2): 'There is to be a body known as the Intelligence and Security Committee of Parliament ... The ISC is to consist of nine members who are to be drawn both from the members of the House of Commons and from the members of the House of Lords', enacted 25 April 2013."
     confidence: medium
-    valid_from: 2013-01-01
+    valid_from: null
     valid_until: null
   - type: applies-to
     target: GB-MI5
@@ -135,6 +135,10 @@ asks whether particular uses of particular powers were lawful.
 
 - `governed-by` [[GB-JSA-2013]].
 - `applies-to` [[GB-MI5]], [[GB-SIS]] and [[GB-GCHQ]].
+
+## Edge dates (2026-11-17)
+
+The `valid_from` of `governed-by` [[GB-JSA-2013]] was 2013-01-01, a placeholder for the year 2013 that `metadata/metadata-schema.md` rules out; no source read gives the day, so it is now empty. The year is in the edge's evidence or the text above.
 
 ## Sources
 

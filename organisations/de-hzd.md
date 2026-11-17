@@ -47,7 +47,7 @@ relationships:
     source: fact
     evidence: "Confirmed by reading hzd.hessen.de's own '55 Jahre HZD' chronicle pages directly (2026-09-20): a formal contract between the Land and municipal parties was signed 12 May 1969 proposing the organisational vehicle, and the Hessisches Datenverarbeitungsverbundgesetz came into force in 1970 establishing HZD (de.wikipedia.org, also read directly, independently confirms the statute's name and 1970 date, and adds that HZD 'wurde Landesbetrieb nach §26 der Hessischen Landeshaushaltsordnung' in 1989). hzd.hessen.de's own chronicle separately confirms the Landesbetrieb transition occurred around 1989 ('Leonhard Ermer kehrte 1989 zurück' as the director who shaped HZD 'as a Landesbetrieb') and that its current mandate derives from 'dem Datenverarbeitungsverbundgesetz, der Betriebsordnung der HZD und den Vorgaben der Landesregierung.' Same Landesbetrieb legal form as [[DE-IT-NRW]] (formed 2009) — 'a legally dependent, organisationally separated part of the state administration' — making `part-of` a direct fit. Anchor edge under metadata/relationship-types.md §2.3, asserting Hessian sub-federal scope via `level: subnational`."
     confidence: high
-    valid_from: 1970-01-01
+    valid_from: null
     valid_until: null
 
 sources:
@@ -122,6 +122,10 @@ exact day the Datenverarbeitungsverbundgesetz took effect, so
 ## Relationships
 
 - `part-of` [[DE]] (anchor edge, `level: subnational`).
+
+## Edge dates (2026-11-17)
+
+The `valid_from` of `part-of` [[DE]] was 1970-01-01, a placeholder for the year 1970 that `metadata/metadata-schema.md` rules out; no source read gives the day, so it is now empty. The year is in the edge's evidence or the text above.
 
 ## Sources
 

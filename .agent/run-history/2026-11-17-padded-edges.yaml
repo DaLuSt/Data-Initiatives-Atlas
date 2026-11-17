@@ -1,0 +1,10 @@
+date: "2026-11-17"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Follow-up to #789: eleven relationship valid_from dates on 1 January whose day no source in the entity writes (DIN's
+  ISO seat 1951, the UK intelligence agencies' statutes, NWO, Rijkswaterstaat, ID Austria, DESI's Digital Decade link
+  and others) are now empty, each entity with an "Edge dates" note. The Norwegian Intelligence Service's edge keeps
+  2021-01-01 and now says where the day comes from (the Act's own entity, from lovdata.no). The validator warning of
+  #789 now covers valid_from on edges too; it reports zero. Closes the run-history entries for #787, #788, #789.
+prs: []
+outcome: in-progress

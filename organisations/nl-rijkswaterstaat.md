@@ -52,7 +52,7 @@ relationships:
     source: fact
     evidence: "Confirmed already on NL-PDOK's own file, reading pdok.nl's own 'Over PDOK' page directly: PDOK was established in 2013 as a collaboration between Kadaster, several ministries, Rijkswaterstaat and Geonovum."
     confidence: high
-    valid_from: 2013-01-01
+    valid_from: null
     valid_until: null
   - type: participates-in
     target: NL-NDW
@@ -118,6 +118,10 @@ actually was.
 - `participates-in` [[NL-PDOK]] — founding partner since 2013.
 - `participates-in` [[NL-NDW]] — named government partner.
 - `participates-in` [[NL-BGT]] — named bronhouder, added 2026-09-06.
+
+## Edge dates (2026-11-17)
+
+The `valid_from` of `participates-in` [[NL-PDOK]] was 2013-01-01, a placeholder for the year 2013 that `metadata/metadata-schema.md` rules out; no source read gives the day, so it is now empty. The year is in the edge's evidence or the text above.
 
 ## Sources
 

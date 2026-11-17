@@ -9,5 +9,5 @@ summary: >
   read in their founding laws on WIPO Lex (NR-NCA, JO-TRC, TV-TTC): all claims matched except that Nauru's Authority is
   "responsible to", not "answerable to", the Minister, and that the 2017 Act's repeal, earlier from search results, is in
   the Act itself (section 115). The previous two run-history entries are closed (#783, #785).
-prs: []
-outcome: in-progress
+prs: [787]
+outcome: merged

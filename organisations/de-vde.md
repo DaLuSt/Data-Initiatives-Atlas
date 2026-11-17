@@ -44,7 +44,7 @@ relationships:
     source: fact
     evidence: "Closes a gap DE-DKE's own file had flagged ('VDE is not an Atlas entity, so only the DIN half of this joint governance is recorded ... VDE's role is described here in prose'). Confirmed by reading VDE's own 'History' page directly (vde.com/en/about-us/history, 2026-09-26): 'The foundation conference of the VDE takes place in Berlin from January 21 to 22[, 1893]' and, on the same timeline, 'In order to combine electrotechnical standardization work, DIN and VDE establish the \"German Electrotechnical Commission in DIN and VDE\"' (i.e. DKE), with the page separately marking DKE's 50th anniversary in 2020 -- consistent with DE-DKE's own recorded 1970 founding. DE-DKE's own file, already citing din.de directly, states VDE holds 'day-to-day operational and legal responsibility' for DKE -- a substantive governance role, not mere membership, but `participates-in` is used since no source states VDE `governs` or `owns` DKE outright, and DIN remains DKE's own `part-of` anchor on DE-DKE's file."
     confidence: high
-    valid_from: "1970-01-01"
+    valid_from: null
     valid_until: null
 
 sources:
@@ -96,6 +96,10 @@ had no ID of its own.
 ## Relationships
 
 - `participates-in` [[DE-DKE]] — `confidence: high`.
+
+## Edge dates (2026-11-17)
+
+The `valid_from` of `participates-in` [[DE-DKE]] was 1970-01-01, a placeholder for the year 1970 that `metadata/metadata-schema.md` rules out; no source read gives the day, so it is now empty. The year is in the edge's evidence or the text above.
 
 ## Sources
 

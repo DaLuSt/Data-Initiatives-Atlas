@@ -198,7 +198,13 @@ def main() -> int:
             report.error(f"{e.rel_path}: invalid verification '{verification}'")
 
         check_dates(e.rel_path, fm, report)
-        if padded_start_date(e.path.read_text(encoding="utf-8"), fm.get("start_date")):
+        text = e.path.read_text(encoding="utf-8")
+        for rel in fm.get("relationships") or []:
+            if isinstance(rel, dict) and padded_start_date(text, rel.get("valid_from")):
+                report.warn(f"{e.rel_path}: the {rel.get('type')} edge to {rel.get('target')} has valid_from "
+                            f"{rel.get('valid_from')}, 1 January, and the day is not written anywhere in the entity; "
+                            f"if the source gives only the year, leave valid_from empty")
+        if padded_start_date(text, fm.get("start_date")):
             report.warn(f"{e.rel_path}: start_date {fm.get('start_date')} is 1 January and the day is not written anywhere "
                         f"in the entity; if the source gives only the year, leave start_date empty and say the year in prose")
         if fm.get("level") == "national" and fm.get("country") in (None, ""):
