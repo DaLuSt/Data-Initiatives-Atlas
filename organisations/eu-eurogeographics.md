@@ -210,6 +210,9 @@ Head Office of Geodesy and Cartography (GUGiK) and Germany's Working
 Committee of the Surveying Authorities of the Länder (AdV) are both on
 the roster but neither is an Atlas entity.
 
+**2026-11-17**: the five members' own edges, which still gave the composition rule as their basis, now quote
+each authority's member page (read directly through the site's members feed), as [[DK-KLIMADATASTYRELSEN]]'s does.
+
 ## The edge that is still refused
 
 `discovery/candidates.md` also carried *"[[EU-INSPIRE]] → the UN-GGIM

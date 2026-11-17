@@ -8,5 +8,5 @@ summary: >
   30 May 2003 on japaneselawtranslation.go.jp; the page's text does not carry the supplementary provisions); El
   Salvador's cybersecurity law (the Diario Oficial PDF on transparencia.mh.gob.sv holds only the personal data law's
   pages). Closes the run-history entry for #795.
-prs: []
-outcome: in-progress
+prs: [796]
+outcome: merged

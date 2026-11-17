@@ -23,7 +23,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-09-13"
+last_verified: "2026-11-17"
 previous_version: null
 successor: null
 
@@ -46,8 +46,8 @@ relationships:
   - type: participates-in
     target: EU-EUROGEOGRAPHICS
     source: fact
-    evidence: "EuroGeographics is the membership association for the European National Mapping, Cadastral and Land Registry Authorities, an international not-for-profit association (AISBL/IVZW under Belgian law, BCE 833 607 112) bringing together 63 organisations from 46 countries covering the whole of geographical Europe (eurogeographics.org/our-members/; eurogeographics.org). NOT READ — search-only. Membership follows from the sourced composition rule rather than from a source naming this authority, the same basis on which the national standardisation bodies were attached to EU-CEN. This entity is Norway's national mapping and cadastre authority."
-    confidence: medium
+    evidence: "EuroGeographics' own member list, read directly 2026-11-17: the members feed (eurogeographics.org/members/feed/) lists this authority, and its member page (eurogeographics.org/members/norwegian-mapping-authority/) gives 'National name Kartverket (Statens Kartverk)', 'English spelling Norwegian Mapping Authority', 'Member status Full', website https://kartverket.no/. Replaces evidence that inferred membership from the association's composition rule without a source naming this authority."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: participates-in
@@ -79,6 +79,10 @@ sources:
     url: "https://www.kartverket.no/en"
     publisher: "Kartverket"
     accessed: "2026-10-07"
+  - title: "EuroGeographics member page"
+    url: "https://eurogeographics.org/members/norwegian-mapping-authority/"
+    publisher: "EuroGeographics"
+    accessed: "2026-11-17"
 ---
 
 # Kartverket

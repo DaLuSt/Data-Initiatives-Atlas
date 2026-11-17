@@ -1,0 +1,11 @@
+date: "2026-11-17"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #768, a sixth slice: the five "NOT READ" participates-in EU-EUROGEOGRAPHICS edges (NL-KADASTER,
+  NO-KARTVERKET, GB-OS, CH-SWISSTOPO, IE-TAILTE), which inferred membership from the association's composition rule,
+  now quote each authority's own EuroGeographics member page, found through the site's members RSS feed and read
+  directly ("Member status Full" for four; Tailte Éireann's page shows no status and a template error in its English
+  name field, recorded in the evidence). Confidence medium to high. Notes added on GB-OS and EU-EUROGEOGRAPHICS.
+  Closes the run-history entries for #796 and #797.
+prs: []
+outcome: in-progress
