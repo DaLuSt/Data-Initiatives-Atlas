@@ -51,7 +51,7 @@ relationships:
   - type: related-to
     target: GB-NIS-REGULATIONS
     source: fact
-    evidence: "Confirmed by reading gov.uk's 'Summary of the Bill' factsheet (2026-08-22): 'Since then, cyber criminals are exploiting new routes – managed service providers, data centres and critical parts of supply chains – to threaten our way of life ... By bringing into scope more of the core services.' This describes an extension of, not a replacement for, the NIS Regulations 2018 framework. CAVEAT: recorded as related-to because the Atlas has no relationship type for amendment."
+    evidence: "Confirmed by reading gov.uk's 'Summary of the Bill' factsheet (2026-08-22): 'Since then, cyber criminals are exploiting new routes – managed service providers, data centres and critical parts of supply chains – to threaten our way of life ... By bringing into scope more of the core services.' This describes an extension of, not a replacement for, the NIS Regulations 2018 framework. Kept as related-to (reviewed 2026-11-17): the Atlas now has an `amends` type, but this is a bill, and `amends` would state a change that has not been made; there is no type for a proposed amendment (`proposes-to-supersede` is for replacement)."
     confidence: medium
     valid_from: null
     valid_until: null
