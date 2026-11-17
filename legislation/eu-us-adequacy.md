@@ -19,7 +19,7 @@ coverage: medium
 verification: primary-source
 start_date: 2023-07-10
 end_date: null
-last_verified: "2026-11-07"
+last_verified: "2026-11-17"
 previous_version: null
 successor: null
 
@@ -34,7 +34,7 @@ relationships:
   - type: applies-in
     target: US
     source: fact
-    evidence: "The decision’s EUR-Lex text (read 2026-11-07 through a summarising fetch tool, first 100,000 of about 434,000 characters): title, number, notification and publication data as above. Article 1: the United States 'ensures an adequate level of protection for personal data transferred from the Union to organisations in the United States' that appear on the Data Privacy Framework List kept by the US Department of Commerce; Article 3(4): after one year the Commission evaluates the finding, with later periodicity to be decided in consultation with the Article 93(1) Committee and the EDPB."
+    evidence: "The decision’s EUR-Lex text (re-read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32023D1795, XHTML), which confirms every quotation here; first re-read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32023D1795, XHTML), which confirms every quotation here; first read 2026-11-07 through a summarising fetch tool): title, number, notification and publication data as above. Article 1: the United States 'ensures an adequate level of protection for personal data transferred from the Union to organisations in the United States' that appear on the Data Privacy Framework List kept by the US Department of Commerce; Article 3(4): after one year the Commission evaluates the finding, with later periodicity to be decided in consultation with the Article 93(1) Committee and the EDPB."
     confidence: high
     valid_from: 2023-07-10
     valid_until: null
@@ -55,11 +55,17 @@ sources:
     url: "https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/adequacy-decisions_en"
     publisher: "European Commission"
     accessed: "2026-11-07"
+  - title: "Official Journal text (CELEX 32023D1795)"
+    url: "https://publications.europa.eu/resource/celex/32023D1795"
+    publisher: "Publications Office of the European Union"
+    accessed: "2026-11-17"
 ---
 
 # European Commission adequacy decision for the EU-US Data Privacy Framework
 
 > **Created 2026-11-07** (data-sharing links beyond Europe). The decision’s own text and the Commission’s adequacy page were read through a fetch tool that returns a model’s summary unless stated in the evidence; the Brazil decision was read in full from the Commission’s PDF.
+>
+> **Re-read directly 2026-11-17** (roadmap #768). The decision's Official Journal text was downloaded from the Publications Office and its enacting terms read in full: every quotation and article reference in the evidence above matches it.
 
 ## What it says
 

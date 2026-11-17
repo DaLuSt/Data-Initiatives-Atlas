@@ -7,7 +7,7 @@ alternative_names:
   - "هيئة تنظيم قطاع الاتصالات"
 description: >
   Jordan's regulator for telecommunications, information technology and postal services, as its own site describes the sectors it covers (Arabic: هيئة تنظيم قطاع الاتصالات). It runs electronic services (spectrum, the ETAS approval system, automated number management) and publishes statistical reports.
-  WIPO Lex's summary of Law No. 13 of 1995 says article 4(a) establishes the Commission, answerable to the Minister, with a financially and administratively independent juridical personality, headquartered in Amman (article 5), with a Board of five full-time members appointed by the Council of Ministers (article 8(a)). The site's 'About' page and its Laws list were not read.
+  Law No. 13 of 1995, read directly in English on WIPO Lex, establishes it in article 4(a), 'answerable to the Minister', as 'a financially and administratively independent juridical personality'; its headquarters are in Amman (article 5), and a Board of Commissioners of 'five full-time members appointed by a resolution of the Council of Ministers' administers it (article 8(a)). The site's 'About' page and its Laws list were not read.
 
 level: national
 country: JO
@@ -20,7 +20,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-11-01"
+last_verified: "2026-11-17"
 previous_version: null
 successor: null
 
@@ -35,7 +35,7 @@ relationships:
   - type: part-of
     target: JO
     source: fact
-    evidence: "Scope anchor under metadata/relationship-types.md §2.3. WIPO Lex's page for Law No. 13 of 1995 (read 2026-11-01 through a summarising fetch tool): article 4(a) establishes the Commission; a statutory body answerable to the Minister."
+    evidence: "Scope anchor under metadata/relationship-types.md §2.3. Law No. 13 of 1995 on WIPO Lex, downloaded and read directly 2026-11-17 (first read 2026-11-01 through a summarising fetch tool): article 4(a), 'A Commission called the Telecommunications Regulatory Commission answerable to the Minister shall be established in the Kingdom'."
     confidence: high
     valid_from: null
     valid_until: null
@@ -55,12 +55,12 @@ sources:
   - title: "Law No. 13 of 1995 on Telecommunications, amended by Law No. 21 of 2011 (WIPO Lex)"
     url: "https://www.wipo.int/wipolex/en/legislation/details/14952"
     publisher: "WIPO Lex (World Intellectual Property Organization)"
-    accessed: "2026-11-01"
+    accessed: "2026-11-17"
 ---
 
 # Telecommunications Regulatory Commission (Jordan)
 
-> **Created 2026-11-01** (roadmap #480). From the Commission's home page and WIPO Lex's page for the Law, read through a summarising fetch tool. `start_date` empty: the Law's dates are in the Law's entity, not asserted for the body.
+> **Created 2026-11-01** (roadmap #480). From the Commission's home page and WIPO Lex's page for the Law, first read through a summarising fetch tool; the Law's articles 4(a), 5 and 8(a) were **re-read directly 2026-11-17** (roadmap #768). `start_date` empty: the Law's dates are in the Law's entity, not asserted for the body.
 
 ## Relationships
 

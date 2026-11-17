@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: 2024-01-15
 end_date: null
-last_verified: "2026-11-07"
+last_verified: "2026-11-17"
 previous_version: null
 successor: null
 
@@ -42,42 +42,42 @@ relationships:
   - type: measures
     target: EU-AD-ADEQUACY
     source: fact
-    evidence: "COM(2024) 7 final (EUR-Lex, read 2026-11-07 through a summarising fetch tool): Andorra is one of the eleven countries and territories reviewed, and the report concludes that it 'continues to provide an adequate level of protection for personal data transferred from the EU'."
+    evidence: "COM(2024) 7 final (EUR-Lex, re-read directly 2026-11-17 from the Publications Office (CELEX 52024DC0007), which confirms the quotation; first read 2026-11-07 through a summarising fetch tool): Andorra is one of the eleven countries and territories reviewed, and the report concludes that it 'continues to provide an adequate level of protection for personal data transferred from the EU'."
     confidence: medium
     valid_from: 2024-01-15
     valid_until: null
   - type: measures
     target: EU-AR-ADEQUACY
     source: fact
-    evidence: "COM(2024) 7 final (EUR-Lex, read 2026-11-07 through a summarising fetch tool): Argentina is one of the eleven countries and territories reviewed, and the report concludes that it 'continues to provide an adequate level of protection for personal data transferred from the EU'."
+    evidence: "COM(2024) 7 final (EUR-Lex, re-read directly 2026-11-17 from the Publications Office (CELEX 52024DC0007), which confirms the quotation; first read 2026-11-07 through a summarising fetch tool): Argentina is one of the eleven countries and territories reviewed, and the report concludes that it 'continues to provide an adequate level of protection for personal data transferred from the EU'."
     confidence: medium
     valid_from: 2024-01-15
     valid_until: null
   - type: measures
     target: EU-CA-ADEQUACY
     source: fact
-    evidence: "COM(2024) 7 final (EUR-Lex, read 2026-11-07 through a summarising fetch tool): Canada is one of the eleven countries and territories reviewed, and the report concludes that it 'continues to provide an adequate level of protection for personal data transferred from the EU'. For Canada the report says the finding is limited to recipients subject to PIPEDA, which is under legislative reform."
+    evidence: "COM(2024) 7 final (EUR-Lex, re-read directly 2026-11-17 from the Publications Office (CELEX 52024DC0007), which confirms the quotation; first read 2026-11-07 through a summarising fetch tool): Canada is one of the eleven countries and territories reviewed, and the report concludes that it 'continues to provide an adequate level of protection for personal data transferred from the EU'. For Canada the report says the finding is limited to recipients subject to PIPEDA, which is under legislative reform."
     confidence: medium
     valid_from: 2024-01-15
     valid_until: null
   - type: measures
     target: EU-NZ-ADEQUACY
     source: fact
-    evidence: "COM(2024) 7 final (EUR-Lex, read 2026-11-07 through a summarising fetch tool): New Zealand is one of the eleven countries and territories reviewed, and the report concludes that it 'continues to provide an adequate level of protection for personal data transferred from the EU'."
+    evidence: "COM(2024) 7 final (EUR-Lex, re-read directly 2026-11-17 from the Publications Office (CELEX 52024DC0007), which confirms the quotation; first read 2026-11-07 through a summarising fetch tool): New Zealand is one of the eleven countries and territories reviewed, and the report concludes that it 'continues to provide an adequate level of protection for personal data transferred from the EU'."
     confidence: medium
     valid_from: 2024-01-15
     valid_until: null
   - type: measures
     target: EU-UY-ADEQUACY
     source: fact
-    evidence: "COM(2024) 7 final (EUR-Lex, read 2026-11-07 through a summarising fetch tool): Uruguay is one of the eleven countries and territories reviewed, and the report concludes that it 'continues to provide an adequate level of protection for personal data transferred from the EU'."
+    evidence: "COM(2024) 7 final (EUR-Lex, re-read directly 2026-11-17 from the Publications Office (CELEX 52024DC0007), which confirms the quotation; first read 2026-11-07 through a summarising fetch tool): Uruguay is one of the eleven countries and territories reviewed, and the report concludes that it 'continues to provide an adequate level of protection for personal data transferred from the EU'."
     confidence: medium
     valid_from: 2024-01-15
     valid_until: null
   - type: measures
     target: EU-CH-ADEQUACY
     source: fact
-    evidence: "COM(2024) 7 final (EUR-Lex, read 2026-11-07 through a summarising fetch tool): Switzerland is one of the eleven countries and territories reviewed, and the report concludes that it 'continues to provide an adequate level of protection for personal data transferred from the EU'."
+    evidence: "COM(2024) 7 final (EUR-Lex, re-read directly 2026-11-17 from the Publications Office (CELEX 52024DC0007), which confirms the quotation; first read 2026-11-07 through a summarising fetch tool): Switzerland is one of the eleven countries and territories reviewed, and the report concludes that it 'continues to provide an adequate level of protection for personal data transferred from the EU'."
     confidence: medium
     valid_from: 2024-01-15
     valid_until: null
@@ -91,11 +91,15 @@ sources:
     url: "https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/adequacy-decisions_en"
     publisher: "European Commission"
     accessed: "2026-11-07"
+  - title: "Official Journal text (CELEX 52024DC0007)"
+    url: "https://publications.europa.eu/resource/celex/52024DC0007"
+    publisher: "Publications Office of the European Union"
+    accessed: "2026-11-17"
 ---
 
 # Report on the first review of the adequacy decisions adopted under Directive 95/46/EC (COM(2024) 7)
 
-> **Created 2026-11-07** (data-sharing links beyond Europe). Read on EUR-Lex through a fetch tool that returns a model's summary; the country-by-country conclusions are the tool's reading of the report's section 4 and were not checked against the full text.
+> **Created 2026-11-07** (data-sharing links beyond Europe). First read on EUR-Lex through a fetch tool that returns a model's summary. **Re-read directly 2026-11-17** (roadmap #768) from the Publications Office (CELEX 52024DC0007): the conclusion for each of the eleven countries and territories in section 4 was checked against the full text, and each reads '[country] continues to provide an adequate level of protection for personal data transferred from the EU' (for Canada, 'to recipients subject to PIPEDA').
 
 ## What it does
 
