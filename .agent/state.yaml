@@ -18,10 +18,17 @@ updated_by_session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
 
 graph:
   entity_count: 1296
+<<<<<<< Updated upstream
   relationship_edges: 2542
   association_edges: 5502
   wikilink_edges: 5841
   edges_total: 13885
+=======
+  relationship_edges: 2543
+  association_edges: 5502
+  wikilink_edges: 5841
+  edges_total: 13886
+>>>>>>> Stashed changes
   countries: 169
   regions: 1
 

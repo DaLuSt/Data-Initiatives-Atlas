@@ -9,7 +9,7 @@ Anchor entity: [[GY]]
 
 ## Organisations
 
-_None yet._
+- [[GY-DATA-PROTECTION-COMMISSIONER]]
 
 ## Legislation
 
