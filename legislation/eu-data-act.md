@@ -69,43 +69,43 @@ relationships:
   - type: applies-in
     target: NL
     source: fact
-    evidence: "As an EU regulation the Data Act is directly applicable in all member states; published in the OJ on 13 December 2023 and applicable from 12 September 2025 (EUR-Lex ELI reg/2023/2854). NOT READ — search-only."
-    confidence: medium
+    evidence: "Regulation (EU) 2023/2854 of 13 December 2023, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32023R2854): after Article 50 (Entry into force and application) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' The Netherlands is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation the Data Act is directly applicable in all member states; published in the OJ on 13 December 2023 and applicable from 12 September 2025 (EUR-Lex ELI reg/2023/2854)."
+    confidence: high
     valid_from: 2025-09-12
     valid_until: null
   - type: applies-in
     target: DE
     source: fact
-    evidence: "As an EU regulation the Data Act is directly applicable in all member states, Germany included; published in the OJ on 13 December 2023 and applicable from 12 September 2025 (EUR-Lex ELI reg/2023/2854). NOT READ — search-only. No German implementing or accompanying instrument is recorded in this Atlas."
-    confidence: medium
+    evidence: "Regulation (EU) 2023/2854 of 13 December 2023, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32023R2854): after Article 50 (Entry into force and application) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Germany is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation the Data Act is directly applicable in all member states, Germany included; published in the OJ on 13 December 2023 and applicable from 12 September 2025 (EUR-Lex ELI reg/2023/2854). No German implementing or accompanying instrument is recorded in this Atlas."
+    confidence: high
     valid_from: 2025-09-12
     valid_until: null
   - type: applies-in
     target: BE
     source: fact
-    evidence: "As an EU regulation the Data Act is directly applicable in all member states, Belgium included; published in the OJ on 13 December 2023 and applicable from 12 September 2025 (EUR-Lex ELI reg/2023/2854). NOT READ — search-only."
-    confidence: medium
+    evidence: "Regulation (EU) 2023/2854 of 13 December 2023, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32023R2854): after Article 50 (Entry into force and application) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Belgium is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation the Data Act is directly applicable in all member states, Belgium included; published in the OJ on 13 December 2023 and applicable from 12 September 2025 (EUR-Lex ELI reg/2023/2854)."
+    confidence: high
     valid_from: 2025-09-12
     valid_until: null
   - type: applies-in
     target: FR
     source: fact
-    evidence: "As an EU regulation the Data Act is directly applicable in all member states, France included; published in the OJ on 13 December 2023 and applicable from 12 September 2025 (EUR-Lex ELI reg/2023/2854). NOT READ — search-only."
-    confidence: medium
+    evidence: "Regulation (EU) 2023/2854 of 13 December 2023, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32023R2854): after Article 50 (Entry into force and application) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' France is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation the Data Act is directly applicable in all member states, France included; published in the OJ on 13 December 2023 and applicable from 12 September 2025 (EUR-Lex ELI reg/2023/2854)."
+    confidence: high
     valid_from: 2025-09-12
     valid_until: null
   - type: applies-in
     target: ES
     source: fact
-    evidence: "As an EU regulation the Data Act is directly applicable in all member states, Spain included; published in the OJ on 13 December 2023 and applicable from 12 September 2025 (EUR-Lex ELI reg/2023/2854). NOT READ - search-only."
-    confidence: medium
+    evidence: "Regulation (EU) 2023/2854 of 13 December 2023, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32023R2854): after Article 50 (Entry into force and application) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Spain is on the EU's own list of its 27 member countries, 'EU Member State since 1986' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation the Data Act is directly applicable in all member states, Spain included; published in the OJ on 13 December 2023 and applicable from 12 September 2025 (EUR-Lex ELI reg/2023/2854)."
+    confidence: high
     valid_from: 2025-09-12
     valid_until: null
   - type: applies-in
     target: PL
     source: fact
-    evidence: "As an EU regulation the Data Act is directly applicable in all member states, Poland included; published in the OJ on 13 December 2023 and applicable from 12 September 2025 (EUR-Lex ELI reg/2023/2854). NOT READ - search-only."
-    confidence: medium
+    evidence: "Regulation (EU) 2023/2854 of 13 December 2023, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32023R2854): after Article 50 (Entry into force and application) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Poland is on the EU's own list of its 27 member countries, 'EU Member State since 2004' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation the Data Act is directly applicable in all member states, Poland included; published in the OJ on 13 December 2023 and applicable from 12 September 2025 (EUR-Lex ELI reg/2023/2854)."
+    confidence: high
     valid_from: 2025-09-12
     valid_until: null
   - type: applies-in

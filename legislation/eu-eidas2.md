@@ -70,43 +70,43 @@ relationships:
   - type: applies-in
     target: NL
     source: fact
-    evidence: "The Regulation mandates all Member States to provide European Digital Identity Wallets by the end of 2026 (Reg. (EU) 2024/1183; EUR-Lex ELI reg/2024/1183). NOT READ — search-only."
-    confidence: medium
+    evidence: "Regulation (EU) 2024/1183 of 11 April 2024, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32024R1183): after Article 2 (Entry into force) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' The Netherlands is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: The Regulation mandates all Member States to provide European Digital Identity Wallets by the end of 2026 (Reg. (EU) 2024/1183; EUR-Lex ELI reg/2024/1183)."
+    confidence: high
     valid_from: 2024-05-20
     valid_until: null
   - type: applies-in
     target: DE
     source: fact
-    evidence: "The Regulation mandates all Member States, Germany included, to provide European Digital Identity Wallets by the end of 2026 (Reg. (EU) 2024/1183; EUR-Lex ELI reg/2024/1183). NOT READ — search-only. Germany's BundID/DeutschlandID is recorded in this Atlas but is NOT asserted to implement this regulation — no source read connects them."
-    confidence: medium
+    evidence: "Regulation (EU) 2024/1183 of 11 April 2024, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32024R1183): after Article 2 (Entry into force) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Germany is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: The Regulation mandates all Member States, Germany included, to provide European Digital Identity Wallets by the end of 2026 (Reg. (EU) 2024/1183; EUR-Lex ELI reg/2024/1183). Germany's BundID/DeutschlandID is recorded in this Atlas but is NOT asserted to implement this regulation — no source read connects them."
+    confidence: high
     valid_from: 2024-05-20
     valid_until: null
   - type: applies-in
     target: BE
     source: fact
-    evidence: "The Regulation mandates all Member States, Belgium included, to provide European Digital Identity Wallets by the end of 2026 (Reg. (EU) 2024/1183; EUR-Lex ELI reg/2024/1183). NOT READ — search-only. No Belgian digital identity scheme is recorded in this Atlas."
-    confidence: medium
+    evidence: "Regulation (EU) 2024/1183 of 11 April 2024, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32024R1183): after Article 2 (Entry into force) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Belgium is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: The Regulation mandates all Member States, Belgium included, to provide European Digital Identity Wallets by the end of 2026 (Reg. (EU) 2024/1183; EUR-Lex ELI reg/2024/1183). No Belgian digital identity scheme is recorded in this Atlas."
+    confidence: high
     valid_from: 2024-05-20
     valid_until: null
   - type: applies-in
     target: FR
     source: fact
-    evidence: "The Regulation mandates all Member States, France included, to provide European Digital Identity Wallets by the end of 2026 (Reg. (EU) 2024/1183). NOT READ — search-only for this specific applies-in edge. Updated 2026-09-05: France Identité, now its own entity (FR-FRANCE-IDENTITE, split out of FR-FRANCECONNECT), carries a sourced implements-requirement-from edge to EU-EUDI-WALLET — the Regulation's central reform — following its designation by the European Commission as France's future wallet. See FR-FRANCE-IDENTITE for the direct sourcing; that edge targets EU-EUDI-WALLET rather than this Regulation, matching the convention DE-BUNDID already established."
-    confidence: medium
+    evidence: "Regulation (EU) 2024/1183 of 11 April 2024, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32024R1183): after Article 2 (Entry into force) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' France is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: The Regulation mandates all Member States, France included, to provide European Digital Identity Wallets by the end of 2026 (Reg. (EU) 2024/1183). for this specific applies-in edge. Updated 2026-09-05: France Identité, now its own entity (FR-FRANCE-IDENTITE, split out of FR-FRANCECONNECT), carries a sourced implements-requirement-from edge to EU-EUDI-WALLET — the Regulation's central reform — following its designation by the European Commission as France's future wallet. See FR-FRANCE-IDENTITE for the direct sourcing; that edge targets EU-EUDI-WALLET rather than this Regulation, matching the convention DE-BUNDID already established."
+    confidence: high
     valid_from: 2024-05-20
     valid_until: null
   - type: applies-in
     target: ES
     source: fact
-    evidence: "As an EU regulation it is directly applicable in all member states, Spain included, and requires every member state to offer a European Digital Identity Wallet. NOT READ - search-only. No Spanish wallet is recorded in this Atlas; Cl@ve is an identification scheme and no source read connects it to this Regulation. See ES-CLAVE."
-    confidence: medium
+    evidence: "Regulation (EU) 2024/1183 of 11 April 2024, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32024R1183): after Article 2 (Entry into force) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Spain is on the EU's own list of its 27 member countries, 'EU Member State since 1986' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation it is directly applicable in all member states, Spain included, and requires every member state to offer a European Digital Identity Wallet. No Spanish wallet is recorded in this Atlas; Cl@ve is an identification scheme and no source read connects it to this Regulation. See ES-CLAVE."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: PL
     source: fact
-    evidence: "As an EU regulation it is directly applicable in all member states, Poland included, and requires every member state to offer a European Digital Identity Wallet. NOT READ - search-only. Reporting states Poland's mObywatel application is architecturally incompatible with eIDAS 2.0 and cannot function as an EUDI Wallet, with replacement promised by the end of 2026 - the Atlas's first sourced national link to this Regulation, and a negative one. See PL-MOBYWATEL."
-    confidence: medium
+    evidence: "Regulation (EU) 2024/1183 of 11 April 2024, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32024R1183): after Article 2 (Entry into force) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Poland is on the EU's own list of its 27 member countries, 'EU Member State since 2004' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation it is directly applicable in all member states, Poland included, and requires every member state to offer a European Digital Identity Wallet. Reporting states Poland's mObywatel application is architecturally incompatible with eIDAS 2.0 and cannot function as an EUDI Wallet, with replacement promised by the end of 2026 - the Atlas's first sourced national link to this Regulation, and a negative one. See PL-MOBYWATEL."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: amends

@@ -69,43 +69,43 @@ relationships:
   - type: applies-in
     target: NL
     source: fact
-    evidence: "The regulation establishes a framework for cross-border interoperability of systems used to provide or manage public services in the EU, covering member-state public sector bodies (EUR-Lex ELI reg/2024/903; EUR-Lex summary). NOT READ — search-only."
-    confidence: medium
+    evidence: "Regulation (EU) 2024/903 of 13 March 2024, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32024R0903): after Article 23 (Entry into force) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' The Netherlands is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: The regulation establishes a framework for cross-border interoperability of systems used to provide or manage public services in the EU, covering member-state public sector bodies (EUR-Lex ELI reg/2024/903; EUR-Lex summary)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: DE
     source: fact
-    evidence: "The regulation establishes a framework for cross-border interoperability of systems used to provide or manage public services in the EU, covering member-state public sector bodies in all member states including Germany (EUR-Lex ELI reg/2024/903; EUR-Lex summary). NOT READ — search-only."
-    confidence: medium
+    evidence: "Regulation (EU) 2024/903 of 13 March 2024, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32024R0903): after Article 23 (Entry into force) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Germany is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: The regulation establishes a framework for cross-border interoperability of systems used to provide or manage public services in the EU, covering member-state public sector bodies in all member states including Germany (EUR-Lex ELI reg/2024/903; EUR-Lex summary)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: BE
     source: fact
-    evidence: "The regulation establishes a framework for cross-border interoperability of systems used to provide or manage public services in the EU, covering member-state public sector bodies in all member states including Belgium (EUR-Lex ELI reg/2024/903). NOT READ — search-only."
-    confidence: medium
+    evidence: "Regulation (EU) 2024/903 of 13 March 2024, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32024R0903): after Article 23 (Entry into force) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Belgium is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: The regulation establishes a framework for cross-border interoperability of systems used to provide or manage public services in the EU, covering member-state public sector bodies in all member states including Belgium (EUR-Lex ELI reg/2024/903)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: FR
     source: fact
-    evidence: "The regulation establishes a framework for cross-border interoperability of systems used to provide or manage public services in the EU, covering member-state public sector bodies in all member states including France (EUR-Lex ELI reg/2024/903). NOT READ — search-only."
-    confidence: medium
+    evidence: "Regulation (EU) 2024/903 of 13 March 2024, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32024R0903): after Article 23 (Entry into force) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' France is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: The regulation establishes a framework for cross-border interoperability of systems used to provide or manage public services in the EU, covering member-state public sector bodies in all member states including France (EUR-Lex ELI reg/2024/903)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: ES
     source: fact
-    evidence: "As an EU regulation it is directly applicable in all member states, Spain included (EUR-Lex ELI reg/2024/903). NOT READ - search-only. No Spanish Interoperable Europe national competent authority is recorded in this Atlas."
-    confidence: medium
+    evidence: "Regulation (EU) 2024/903 of 13 March 2024, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32024R0903): after Article 23 (Entry into force) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Spain is on the EU's own list of its 27 member countries, 'EU Member State since 1986' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation it is directly applicable in all member states, Spain included (EUR-Lex ELI reg/2024/903). No Spanish Interoperable Europe national competent authority is recorded in this Atlas."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: PL
     source: fact
-    evidence: "As an EU regulation it is directly applicable in all member states, Poland included (EUR-Lex ELI reg/2024/903). NOT READ - search-only. No Polish Interoperable Europe national competent authority is recorded in this Atlas."
-    confidence: medium
+    evidence: "Regulation (EU) 2024/903 of 13 March 2024, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32024R0903): after Article 23 (Entry into force) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Poland is on the EU's own list of its 27 member countries, 'EU Member State since 2004' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation it is directly applicable in all member states, Poland included (EUR-Lex ELI reg/2024/903). No Polish Interoperable Europe national competent authority is recorded in this Atlas."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in

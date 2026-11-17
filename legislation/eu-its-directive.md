@@ -68,43 +68,43 @@ relationships:
   - type: applies-in
     target: NL
     source: fact
-    evidence: "Member States have established national access points (NAPs) under delegated regulations supplementing Directive 2010/40/EU, organising access to and reuse of transport-related data (transport.ec.europa.eu National Access Points; EUR-Lex CELEX 32010L0040). NOT READ — search-only."
-    confidence: medium
+    evidence: "Directive 2010/40/EU of 7 July 2010, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32010L0040): Article 18(1), Member States bring into force the measures necessary to comply 'by 27 February 2012', and its final article reads 'This Directive is addressed to the Member States.' The Netherlands is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: Member States have established national access points (NAPs) under delegated regulations supplementing Directive 2010/40/EU, organising access to and reuse of transport-related data (transport.ec.europa.eu National Access Points; EUR-Lex CELEX 32010L0040)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: DE
     source: fact
-    evidence: "The Mobilithek is Germany's National Access Point for mobility data, having replaced the Mobility Data Marketplace in that role, and implements requirements from the delegated regulations on the European ITS Directive (bmv.de 'Mobilithek'; forschungsinformationssystem.de). NOT READ — search-only."
-    confidence: medium
+    evidence: "Directive 2010/40/EU of 7 July 2010, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32010L0040): Article 18(1), Member States bring into force the measures necessary to comply 'by 27 February 2012', and its final article reads 'This Directive is addressed to the Member States.' Germany is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: The Mobilithek is Germany's National Access Point for mobility data, having replaced the Mobility Data Marketplace in that role, and implements requirements from the delegated regulations on the European ITS Directive (bmv.de 'Mobilithek'; forschungsinformationssystem.de)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: BE
     source: fact
-    evidence: "Member States have established national access points (NAPs) under the delegated regulations supplementing Directive 2010/40/EU (transport.ec.europa.eu National Access Points; EUR-Lex CELEX 32010L0040). NOT READ — search-only. No Belgian national access point is recorded in this Atlas."
-    confidence: medium
+    evidence: "Directive 2010/40/EU of 7 July 2010, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32010L0040): Article 18(1), Member States bring into force the measures necessary to comply 'by 27 February 2012', and its final article reads 'This Directive is addressed to the Member States.' Belgium is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: Member States have established national access points (NAPs) under the delegated regulations supplementing Directive 2010/40/EU (transport.ec.europa.eu National Access Points; EUR-Lex CELEX 32010L0040). No Belgian national access point is recorded in this Atlas."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: FR
     source: fact
-    evidence: "Member States have established national access points under the delegated regulations supplementing Directive 2010/40/EU (transport.ec.europa.eu National Access Points). NOT READ — search-only. No French national access point is recorded in this Atlas."
-    confidence: medium
+    evidence: "Directive 2010/40/EU of 7 July 2010, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32010L0040): Article 18(1), Member States bring into force the measures necessary to comply 'by 27 February 2012', and its final article reads 'This Directive is addressed to the Member States.' France is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: Member States have established national access points under the delegated regulations supplementing Directive 2010/40/EU (transport.ec.europa.eu National Access Points). No French national access point is recorded in this Atlas."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: ES
     source: fact
-    evidence: "As an EU directive it requires transposition by all member states, Spain included. NOT READ - search-only. No Spanish transposing instrument was identified in this batch and none is asserted."
-    confidence: medium
+    evidence: "Directive 2010/40/EU of 7 July 2010, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32010L0040): Article 18(1), Member States bring into force the measures necessary to comply 'by 27 February 2012', and its final article reads 'This Directive is addressed to the Member States.' Spain is on the EU's own list of its 27 member countries, 'EU Member State since 1986' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU directive it requires transposition by all member states, Spain included. No Spanish transposing instrument was identified in this batch and none is asserted."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: PL
     source: fact
-    evidence: "As an EU directive it requires transposition by all member states, Poland included. NOT READ - search-only. No Polish transposing instrument was identified in this batch and none is asserted."
-    confidence: medium
+    evidence: "Directive 2010/40/EU of 7 July 2010, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32010L0040): Article 18(1), Member States bring into force the measures necessary to comply 'by 27 February 2012', and its final article reads 'This Directive is addressed to the Member States.' Poland is on the EU's own list of its 27 member countries, 'EU Member State since 2004' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU directive it requires transposition by all member states, Poland included. No Polish transposing instrument was identified in this batch and none is asserted."
+    confidence: high
     valid_from: null
     valid_until: null
 

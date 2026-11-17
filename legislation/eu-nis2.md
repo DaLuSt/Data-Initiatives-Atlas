@@ -90,50 +90,50 @@ relationships:
   - type: applies-in
     target: IE
     source: fact
-    evidence: "NIS2 is binding on every member state as to the result to be achieved and required transposition by 17 October 2024; Ireland did not meet that deadline and intends to transpose through the National Cyber Security Bill, assigning competent-authority functions to the National Cyber Security Centre and CSIRT-IE (digital-strategy.ec.europa.eu 'NIS2 Directive implementation in Ireland'; ncsc.gov.ie/nis2; williamfry.com). NOT READ — search-only. See IE-NCS-BILL — the transposition is overdue and not yet enacted."
-    confidence: medium
+    evidence: "Directive (EU) 2022/2555 of 14 December 2022, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32022L2555): Article 41(1), 'By 17 October 2024, Member States shall adopt and publish the measures necessary to comply with this Directive', and its final article reads 'This Directive is addressed to the Member States.' Ireland is on the EU's own list of its 27 member countries, 'EU Member State since 1973' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: NIS2 is binding on every member state as to the result to be achieved and required transposition by 17 October 2024; Ireland did not meet that deadline and intends to transpose through the National Cyber Security Bill, assigning competent-authority functions to the National Cyber Security Centre and CSIRT-IE (digital-strategy.ec.europa.eu 'NIS2 Directive implementation in Ireland'; ncsc.gov.ie/nis2; williamfry.com). See IE-NCS-BILL — the transposition is overdue and not yet enacted."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: NL
     source: fact
-    evidence: "The Dutch Cyberbeveiligingswet is the national implementation of NIS2 (ncsc.nl, nctv.nl, rijksoverheid.nl). NOT READ — search-only."
-    confidence: medium
+    evidence: "Directive (EU) 2022/2555 of 14 December 2022, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32022L2555): Article 41(1), 'By 17 October 2024, Member States shall adopt and publish the measures necessary to comply with this Directive', and its final article reads 'This Directive is addressed to the Member States.' The Netherlands is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: The Dutch Cyberbeveiligingswet is the national implementation of NIS2 (ncsc.nl, nctv.nl, rijksoverheid.nl)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: DE
     source: fact
-    evidence: "The NIS-2-Umsetzungsgesetz implements the EU minimum cybersecurity standards of the NIS2 Directive into German law; it was published in the Bundesgesetzblatt on 5 December 2025 and entered into force on 6 December 2025 with no transition period (bsi.bund.de press release 251205; twobirds.com; deloitte.com). NOT READ — search-only."
-    confidence: medium
+    evidence: "Directive (EU) 2022/2555 of 14 December 2022, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32022L2555): Article 41(1), 'By 17 October 2024, Member States shall adopt and publish the measures necessary to comply with this Directive', and its final article reads 'This Directive is addressed to the Member States.' Germany is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: The NIS-2-Umsetzungsgesetz implements the EU minimum cybersecurity standards of the NIS2 Directive into German law; it was published in the Bundesgesetzblatt on 5 December 2025 and entered into force on 6 December 2025 with no transition period (bsi.bund.de press release 251205; twobirds.com; deloitte.com)."
+    confidence: high
     valid_from: 2025-12-06
     valid_until: null
   - type: applies-in
     target: BE
     source: fact
-    evidence: "The Belgian law of 26 April 2024 transposes Directive (EU) 2022/2555 into Belgian law and replaces the NIS1 law of 7 April 2019; it was published in the Belgisch Staatsblad on 17 May 2024 and entered into force, with its royal decree, on 18 October 2024 (ccb.belgium.be/nl/nis2; eubelius.com). NOT READ — search-only."
-    confidence: medium
+    evidence: "Directive (EU) 2022/2555 of 14 December 2022, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32022L2555): Article 41(1), 'By 17 October 2024, Member States shall adopt and publish the measures necessary to comply with this Directive', and its final article reads 'This Directive is addressed to the Member States.' Belgium is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: The Belgian law of 26 April 2024 transposes Directive (EU) 2022/2555 into Belgian law and replaces the NIS1 law of 7 April 2019; it was published in the Belgisch Staatsblad on 17 May 2024 and entered into force, with its royal decree, on 18 October 2024 (ccb.belgium.be/nl/nis2; eubelius.com)."
+    confidence: high
     valid_from: 2024-10-18
     valid_until: null
   - type: applies-in
     target: FR
     source: fact
-    evidence: "France transposes the directive through the 'loi Resilience' on the resilience of critical infrastructures and the strengthening of cybersecurity, which designates ANSSI as competent national authority (aventris.fr; nis-2-directive.com France; eversheds-sutherland). NOT READ — search-only. WARNING: the instrument's status is contested across sources and France missed the 17 October 2024 transposition deadline; see FR-NIS2-LOI."
-    confidence: medium
+    evidence: "Directive (EU) 2022/2555 of 14 December 2022, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32022L2555): Article 41(1), 'By 17 October 2024, Member States shall adopt and publish the measures necessary to comply with this Directive', and its final article reads 'This Directive is addressed to the Member States.' France is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: France transposes the directive through the 'loi Resilience' on the resilience of critical infrastructures and the strengthening of cybersecurity, which designates ANSSI as competent national authority (aventris.fr; nis-2-directive.com France; eversheds-sutherland). WARNING: the instrument's status is contested across sources and France missed the 17 October 2024 transposition deadline; see FR-NIS2-LOI."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: ES
     source: fact
-    evidence: "As an EU directive it requires transposition by all member states, Spain included (EUR-Lex ELI dir/2022/2555). NOT READ - search-only. Spain has NOT transposed it: the Anteproyecto de Ley de Coordinacion y Gobernanza de la Ciberseguridad was approved by the Council of Ministers on 14 January 2025 and remains in process, Spain missed the 17 October 2024 deadline, and the Commission issued a reasoned opinion in May 2025 (dsn.gob.es; cuatrecasas.com). See ES-LCGC."
-    confidence: medium
+    evidence: "Directive (EU) 2022/2555 of 14 December 2022, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32022L2555): Article 41(1), 'By 17 October 2024, Member States shall adopt and publish the measures necessary to comply with this Directive', and its final article reads 'This Directive is addressed to the Member States.' Spain is on the EU's own list of its 27 member countries, 'EU Member State since 1986' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU directive it requires transposition by all member states, Spain included (EUR-Lex ELI dir/2022/2555). Spain has NOT transposed it: the Anteproyecto de Ley de Coordinacion y Gobernanza de la Ciberseguridad was approved by the Council of Ministers on 14 January 2025 and remains in process, Spain missed the 17 October 2024 deadline, and the Commission issued a reasoned opinion in May 2025 (dsn.gob.es; cuatrecasas.com). See ES-LCGC."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: PL
     source: fact
-    evidence: "As an EU directive it requires transposition by all member states, Poland included (EUR-Lex ELI dir/2022/2555). NOT READ - search-only. Poland transposed it by amending the ustawa o krajowym systemie cyberbezpieczenstwa, in force 3 April 2026; Poland exceeded the 17 October 2024 deadline. CORRECTED 2026-09-20: this evidence previously stated Poland 'is in proceedings before the Court of Justice of the European Union' — [[PL-KSC]]'s own entity (re-verified 2026-08-26, narrowed 2026-09-13) corrects this: Poland reached only the reasoned-opinion stage (7 May 2025) and was NOT among the four member states (Ireland, Spain, France, Netherlands) referred to the CJEU on 8 July 2026, having completed transposition first. See PL-KSC for the full escalation timeline."
-    confidence: medium
+    evidence: "Directive (EU) 2022/2555 of 14 December 2022, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32022L2555): Article 41(1), 'By 17 October 2024, Member States shall adopt and publish the measures necessary to comply with this Directive', and its final article reads 'This Directive is addressed to the Member States.' Poland is on the EU's own list of its 27 member countries, 'EU Member State since 2004' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU directive it requires transposition by all member states, Poland included (EUR-Lex ELI dir/2022/2555). Poland transposed it by amending the ustawa o krajowym systemie cyberbezpieczenstwa, in force 3 April 2026; Poland exceeded the 17 October 2024 deadline. CORRECTED 2026-09-20: this evidence previously stated Poland 'is in proceedings before the Court of Justice of the European Union' — [[PL-KSC]]'s own entity (re-verified 2026-08-26, narrowed 2026-09-13) corrects this: Poland reached only the reasoned-opinion stage (7 May 2025) and was NOT among the four member states (Ireland, Spain, France, Netherlands) referred to the CJEU on 8 July 2026, having completed transposition first. See PL-KSC for the full escalation timeline."
+    confidence: high
     valid_from: 2026-04-03
     valid_until: null
 

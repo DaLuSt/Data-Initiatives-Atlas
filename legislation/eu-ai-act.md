@@ -71,43 +71,43 @@ relationships:
   - type: applies-in
     target: NL
     source: fact
-    evidence: "As an EU regulation the AI Act is directly applicable in all member states; it entered into force on 1 August 2024 with phased application (artificialintelligenceact.eu Article 113; EUR-Lex). NOT READ — search-only."
-    confidence: medium
+    evidence: "Regulation (EU) 2024/1689 of 13 June 2024, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32024R1689): after Article 113 (Entry into force and application) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' The Netherlands is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation the AI Act is directly applicable in all member states; it entered into force on 1 August 2024 with phased application (artificialintelligenceact.eu Article 113; EUR-Lex)."
+    confidence: high
     valid_from: 2024-08-01
     valid_until: null
   - type: applies-in
     target: DE
     source: fact
-    evidence: "As an EU regulation the AI Act is directly applicable in all member states, Germany included; it entered into force on 1 August 2024 with phased application (artificialintelligenceact.eu Article 113; EUR-Lex). NOT READ — search-only. No German implementing or accompanying instrument is recorded in this Atlas."
-    confidence: medium
+    evidence: "Regulation (EU) 2024/1689 of 13 June 2024, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32024R1689): after Article 113 (Entry into force and application) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Germany is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation the AI Act is directly applicable in all member states, Germany included; it entered into force on 1 August 2024 with phased application (artificialintelligenceact.eu Article 113; EUR-Lex). No German implementing or accompanying instrument is recorded in this Atlas."
+    confidence: high
     valid_from: 2024-08-01
     valid_until: null
   - type: applies-in
     target: BE
     source: fact
-    evidence: "As an EU regulation the AI Act is directly applicable in all member states, Belgium included; it entered into force on 1 August 2024 with phased application (artificialintelligenceact.eu Article 113; EUR-Lex). NOT READ — search-only."
-    confidence: medium
+    evidence: "Regulation (EU) 2024/1689 of 13 June 2024, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32024R1689): after Article 113 (Entry into force and application) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Belgium is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation the AI Act is directly applicable in all member states, Belgium included; it entered into force on 1 August 2024 with phased application (artificialintelligenceact.eu Article 113; EUR-Lex)."
+    confidence: high
     valid_from: 2024-08-01
     valid_until: null
   - type: applies-in
     target: FR
     source: fact
-    evidence: "As an EU regulation the AI Act is directly applicable in all member states, France included; it entered into force on 1 August 2024 with phased application (EUR-Lex). NOT READ — search-only."
-    confidence: medium
+    evidence: "Regulation (EU) 2024/1689 of 13 June 2024, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32024R1689): after Article 113 (Entry into force and application) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' France is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation the AI Act is directly applicable in all member states, France included; it entered into force on 1 August 2024 with phased application (EUR-Lex)."
+    confidence: high
     valid_from: 2024-08-01
     valid_until: null
   - type: applies-in
     target: ES
     source: fact
-    evidence: "As an EU regulation it is directly applicable in all member states, Spain included; Spain designated the Agencia Espanola de Supervision de la Inteligencia Artificial as its national competent and market surveillance authority under Article 70, the agency having been created in 2023 ahead of the Regulation's entry into force (protecciondata.es; lamoncloa.gob.es). NOT READ - search-only. See ES-AESIA."
-    confidence: medium
+    evidence: "Regulation (EU) 2024/1689 of 13 June 2024, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32024R1689): after Article 113 (Entry into force and application) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Spain is on the EU's own list of its 27 member countries, 'EU Member State since 1986' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation it is directly applicable in all member states, Spain included; Spain designated the Agencia Espanola de Supervision de la Inteligencia Artificial as its national competent and market surveillance authority under Article 70, the agency having been created in 2023 ahead of the Regulation's entry into force (protecciondata.es; lamoncloa.gob.es). See ES-AESIA."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
     target: PL
     source: fact
-    evidence: "As an EU regulation it is directly applicable in all member states, Poland included. NOT READ - search-only. No Polish AI supervisory authority was identified in this batch and none is asserted."
-    confidence: medium
+    evidence: "Regulation (EU) 2024/1689 of 13 June 2024, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32024R1689): after Article 113 (Entry into force and application) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Poland is on the EU's own list of its 27 member countries, 'EU Member State since 2004' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation it is directly applicable in all member states, Poland included. No Polish AI supervisory authority was identified in this batch and none is asserted."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in
