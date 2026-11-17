@@ -117,6 +117,10 @@ Atlas entities.
 - The **Etterretningsskolen** (Intelligence School), named on the
   service's own site but not investigated further this pass.
 
+## Edge date (2026-11-17)
+
+The `governed-by` edge's `valid_from`, 2021-01-01, is the day the Act entered into force: 'in force from 1 January 2021', as [[NO-ETTERRETNINGSTJENESTELOVEN]] records from lovdata.no's text.
+
 ## Sources
 
 Listed in frontmatter, both read directly 2026-09-13.

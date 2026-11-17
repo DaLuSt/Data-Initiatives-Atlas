@@ -52,7 +52,7 @@ relationships:
     source: fact
     evidence: "Confirmed by reading the ISA 1994 statute text at legislation.gov.uk (2026-08-22), § 3(1): 'There shall continue to be a Government Communications Headquarters ... and ... its functions shall be— (a) to monitor, make use of or interfere with electromagnetic, acoustic and other emissions and any equipment producing such emissions and to obtain and provide information derived from or related to such emissions.'"
     confidence: medium
-    valid_from: 1994-01-01
+    valid_from: null
     valid_until: null
   - type: governed-by
     target: GB-IPA-2016
@@ -136,6 +136,10 @@ an intelligence service in its own right.
 
 The `part-of` edge runs **from** [[GB-NCSC]] **to** this entity, and is
 asserted there — the Atlas never mirrors a relationship onto both ends.
+
+## Edge dates (2026-11-17)
+
+The `valid_from` of `governed-by` [[GB-ISA-1994]] was 1994-01-01, a placeholder for the year 1994 that `metadata/metadata-schema.md` rules out; no source read gives the day, so it is now empty. The year is in the edge's evidence or the text above.
 
 ## Sources
 

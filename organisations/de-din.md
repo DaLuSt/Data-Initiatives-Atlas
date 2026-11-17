@@ -44,7 +44,7 @@ relationships:
     source: fact
     evidence: "DIN has been the ISO member body for the Federal Republic of Germany since 1951 and is listed as such by ISO (iso.org/member/1511.html; de.wikipedia.org 'Internationale Organisation für Normung'). The ISO member-directory page returned HTTP 403 on two attempts this pass and could not be re-fetched directly; din.de's own history page, read directly this pass, independently confirms DIN's role as Germany's internationally-representing standards body without itself giving the 1951 ISO accession date, so that specific year remains sourced to the previous pass's unread ISO page rather than confirmed by a direct read this pass. Corroborated from ISO's own side 2026-09-27: iso.org/member/1511.html itself remains genuinely bot-walled, but committee.iso.org/iso/home/about/iso_members.htm — a different, reachable iso.org subdomain (the workaround documented in discovery/unresolved.md row #220) — lists 'Germany DIN Member body' with 785 TC and 3 PDC participations, confirming current full voting membership directly. This does not confirm the specific 1951 accession year, which still rests on the unread member-directory page and is carried as previously sourced."
     confidence: high
-    valid_from: 1951-01-01
+    valid_from: null
     valid_until: null
   - type: participates-in
     target: EU-CEN
@@ -185,6 +185,10 @@ institute.
 - [[DE-DKE]], DIN's electrotechnical-standards counterpart towards
   [[EU-CENELEC]], carries the inbound `part-of` edge pointing here —
   closed 2026-09-04.
+
+## Edge dates (2026-11-17)
+
+The `valid_from` of `participates-in` [[INTL-ISO]] was 1951-01-01, a placeholder for the year 1951 that `metadata/metadata-schema.md` rules out; no source read gives the day, so it is now empty. The year is in the edge's evidence or the text above.
 
 ## Sources
 

@@ -10,5 +10,5 @@ summary: >
   they began that day; the e-invoicing Directive gets its real date, 2014-05-26, read from its Official Journal text.
   Five body sentences that described the old placeholders were rewritten. A validator warning now flags any new
   1 January start date whose day is not written in the entity.
-prs: []
-outcome: in-progress
+prs: [789]
+outcome: merged

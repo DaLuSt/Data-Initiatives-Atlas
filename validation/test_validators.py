@@ -53,7 +53,7 @@ relationships:
     source: fact
     evidence: "A test."
     confidence: medium
-    valid_from: 2020-01-01
+    valid_from: 2020-03-15
     valid_until: null
 sources:
   - title: "A page"
@@ -238,7 +238,7 @@ class TestDates(Base):
 
     def test_a_relationship_that_ends_before_it_starts(self):
         self.edit("organisations/xx-org.md", "valid_until: null", "valid_until: 2010-01-01")
-        self.assertFails("valid_until 2010-01-01 is before valid_from 2020-01-01")
+        self.assertFails("valid_until 2010-01-01 is before valid_from 2020-03-15")
 
 
 class TestPrimarySourceBasis(Base):
@@ -555,6 +555,12 @@ class TestPaddedStartDate(Base):
         self.edit("organisations/xx-org.md", "A test organisation.", "A test organisation, set up on 1 January 2020.")
         code, out = self.run_all()
         self.assertNotIn("is 1 January", out)
+
+    def test_a_padded_edge_date_warns(self):
+        self.edit("organisations/xx-org.md", "valid_from: 2020-03-15", "valid_from: 2019-01-01")
+        code, out = self.run_all()
+        self.assertEqual(code, 0, out)
+        self.assertIn("has valid_from 2019-01-01, 1 January", out)
 
 
 class TestStructure(Base):

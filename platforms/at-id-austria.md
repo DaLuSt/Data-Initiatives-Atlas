@@ -53,7 +53,7 @@ relationships:
     source: fact
     evidence: "A research-queue pickup (2026-09-04) closed the 'four statutes, no legal-basis entity' gap this file previously carried unconfirmed. Reading ris.bka.gv.at's own consolidated E-Government-Gesetz text directly finds its §§4-7 define the E-ID (Elektronischer Identitätsnachweis) function ID Austria implements: a personal binding combining a qualified electronic signature with an encrypted Stammzahl and sector-specific identifier (bPK), with registration from age 14 via passport authorities or police. The Meldegesetz 1991, Passgesetz 1992 and Personenstandsgesetz 2013 — the other three statutes this file previously named — were also read directly and each cites the E-GovG's own E-ID function rather than granting one independently, so only the E-GovG carries this edge."
     confidence: medium
-    valid_from: 2005-01-01
+    valid_from: null
     valid_until: null
 
 sources:
@@ -146,6 +146,10 @@ statutory basis — is now closed with a single `governed-by` edge to
 - `part-of` [[AT]].
 - `maintained-by` [[AT-BRZ]].
 - `governed-by` [[AT-EGOVG]] — closed 2026-09-04.
+
+## Edge dates (2026-11-17)
+
+The `valid_from` of `governed-by` [[AT-EGOVG]] was 2005-01-01, a placeholder for the year 2005 that `metadata/metadata-schema.md` rules out; no source read gives the day, so it is now empty. The year is in the edge's evidence or the text above.
 
 ## Sources
 

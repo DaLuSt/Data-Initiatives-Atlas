@@ -79,7 +79,7 @@ relationships:
     source: fact
     evidence: "The Commission's DESI page (digital-strategy.ec.europa.eu/en/policies/desi, last updated 7 August 2024), read directly 2026-11-17: 'As of 2023, and in line with the Digital Decade Policy Programme 2030, DESI is now integrated into the State of the Digital Decade report and used to monitor progress towards the digital targets.'"
     confidence: high
-    valid_from: 2023-01-01
+    valid_from: null
     valid_until: null
 
   - type: measures
@@ -374,6 +374,10 @@ could not be `applies-in`.
 ## Read directly, 2026-11-17
 
 The Commission's DESI page was downloaded and read directly (roadmap #768), replacing 29 evidence strings that were marked "NOT READ — search-only". It says DESI ran "from 2014 to 2022" and that the Commission has monitored Member States "since 2014"; it gives a year, not a day, so `start_date` and the edges' `valid_from`, which were 2014-01-01, are now empty rather than a padded date (README, "How to verify an entity"). Since 2023 DESI is part of the State of the Digital Decade report, which is why the entity stays `active`. The country reports the page links were not opened.
+
+## Edge dates (2026-11-17)
+
+The `valid_from` of `part-of` [[EU-DIGITAL-DECADE]] was 2023-01-01, a placeholder for the year 2023 that `metadata/metadata-schema.md` rules out; no source read gives the day, so it is now empty. The year is in the edge's evidence or the text above.
 
 ## Sources
 

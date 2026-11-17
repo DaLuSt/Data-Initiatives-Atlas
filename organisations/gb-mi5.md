@@ -54,7 +54,7 @@ relationships:
     source: fact
     evidence: "Confirmed by reading the SSA 1989 statute text at legislation.gov.uk (2026-08-22): 'An Act to place the Security Service on a statutory basis; to enable certain actions to be taken on the authority of warrants issued by the Secretary of State', enacted 27 April 1989."
     confidence: medium
-    valid_from: 1989-01-01
+    valid_from: null
     valid_until: null
   - type: governed-by
     target: GB-IPA-2016
@@ -187,6 +187,10 @@ so no `part-of` is asserted — as for [[FR-DGSI]], [[NL-MIVD]] and
 ## Relationships
 
 - `governed-by` [[GB-SSA-1989]], [[GB-IPA-2016]] and [[GB-DPA-2018]].
+
+## Edge dates (2026-11-17)
+
+The `valid_from` of `governed-by` [[GB-SSA-1989]] was 1989-01-01, a placeholder for the year 1989 that `metadata/metadata-schema.md` rules out; no source read gives the day, so it is now empty. The year is in the edge's evidence or the text above.
 
 ## Sources
 

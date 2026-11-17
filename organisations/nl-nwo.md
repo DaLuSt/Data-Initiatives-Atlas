@@ -57,7 +57,7 @@ relationships:
     source: fact
     evidence: "Confirmed by reading nwo.nl's own page on DANS directly (2026-09-04): DANS operates as an institute of both KNAW and NWO jointly."
     confidence: high
-    valid_from: 2005-01-01
+    valid_from: null
     valid_until: null
 
 sources:
@@ -113,6 +113,10 @@ NWO jointly runs [[NL-DANS]] together with KNAW, confirmed by reading
 ## Year only (2026-11-17)
 
 The sources read give the year 1950, not a day. `start_date` was `1950-01-01`, a placeholder for "in 1950" that `metadata/metadata-schema.md` rules out, and is now empty; so are the 1 `valid_from` dates that repeated it. The year stays in the description and the text above.
+
+## Edge dates (2026-11-17)
+
+The `valid_from` of `cooperates-with` [[NL-DANS]] was 2005-01-01, a placeholder for the year 2005 that `metadata/metadata-schema.md` rules out; no source read gives the day, so it is now empty. The year is in the edge's evidence or the text above.
 
 ## Sources
 
