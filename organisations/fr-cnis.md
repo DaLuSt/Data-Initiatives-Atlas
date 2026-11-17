@@ -29,7 +29,7 @@ coverage: low
 verification: primary-source
 organisation_role: consultative
 
-start_date: 1984-01-01
+start_date: null
 end_date: null
 last_verified: "2026-09-26"
 previous_version: null
@@ -47,7 +47,7 @@ relationships:
     source: fact
     evidence: "Closes a gap FR-INDICATEURS-ODD's own file had flagged (not a numbered discovery/unresolved.md row: 'the Cnis... the body whose consultation produced the indicator selection' was named but not independently researched). Confirmed by reading cnis.fr's own homepage directly (2026-09-26): the Cnis was 'officially established in 1984, evolving from an earlier committee established by the 1951 law governing France's public statistical system,' and describes its role as facilitating 'concertation' between statisticians and the public, evaluating proposed statistical operations and issuing opinions on surveys. insee.fr's own page on the Cnis, also read directly, independently confirms its role coordinating statistics producers and users and describes its two specialised committees (the Comité du label for survey labelling and the Comité du contentieux for non-response sanctions). Both sources confirm the Economy Modernisation Law of 4 August 2008 and its 3 March 2009 implementing decree reformed public-statistics governance into an independent three-pillar structure including the Cnis. Anchor edge under metadata/relationship-types.md §2.3, asserting French national scope via `level: national`."
     confidence: high
-    valid_from: "1984-01-01"
+    valid_from: null
     valid_until: null
   - type: related-to
     target: FR-INDICATEURS-ODD
@@ -120,6 +120,10 @@ entity closes.
 
 - `part-of` [[FR]] (anchor edge, `level: national`).
 - `related-to` [[FR-INDICATEURS-ODD]] — `confidence: medium`.
+
+## Year only (2026-11-17)
+
+The sources read give the year 1984, not a day. `start_date` was `1984-01-01`, a placeholder for "in 1984" that `metadata/metadata-schema.md` rules out, and is now empty; so are the 1 `valid_from` dates that repeated it. The year stays in the description and the text above.
 
 ## Sources
 

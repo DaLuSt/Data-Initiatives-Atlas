@@ -26,7 +26,7 @@ confidence: medium
 coverage: low
 verification: primary-source
 
-start_date: 2019-01-01
+start_date: null
 end_date: null
 last_verified: "2026-09-26"
 previous_version: null
@@ -45,7 +45,7 @@ relationships:
     source: fact
     evidence: "NARROWS discovery/unresolved.md row #30. Confirmed by reading forumstandaardisatie.nl's own 'Informatie aanbieden via API's' page directly (2026-09-26): the Kennisplatform API's published the first version of the API Strategie voor de Nederlandse Overheid in 2019, with Forum Standaardisatie 'actief deelnemer' (an active participant) in its API Strategy and Policy working group; the strategy itself is described as 'bestaat uit een informatief deel over beleid, gebruikerswensen, architectuur en een normatief deel met ontwerprichtlijnen voor API's' (consisting of an informative part on policy, user needs, architecture and a normative part with design rules for APIs). docs.geostandaarden.nl's own introductory document, also read directly, independently confirms the strategy is 'further developed and managed by the Knowledge Platform for APIs' and lists its component modules (architecture, user needs, normative standards including the API Design Rules, and modular extensions for geospatial, transport security, access control, naming and hypermedia). Anchor edge under metadata/relationship-types.md §2.3, asserting Dutch national scope via `level: national`, `country: NL`."
     confidence: medium
-    valid_from: "2019-01-01"
+    valid_from: null
     valid_until: null
 
 sources:
@@ -104,6 +104,10 @@ here.
 ## Relationships
 
 - `part-of` [[NL]] (anchor edge, `level: national`).
+
+## Year only (2026-11-17)
+
+The sources read give the year 2019, not a day. `start_date` was `2019-01-01`, a placeholder for "in 2019" that `metadata/metadata-schema.md` rules out, and is now empty; so are the 1 `valid_from` dates that repeated it. The year stays in the description and the text above.
 
 ## Sources
 

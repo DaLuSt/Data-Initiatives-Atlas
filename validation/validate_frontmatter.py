@@ -48,6 +48,24 @@ def check_placement(e: common.EntityFile, schema: dict, report: common.Report) -
         )
 
 
+# A start date on 1 January is usually a year padded into a day. The schema rules that out
+# (metadata/metadata-schema.md, start_date), so such a date must be backed by the day written
+# somewhere in the entity, in one of the languages the Atlas reads.
+_FIRST_OF_JANUARY = (r"\b1(?:st)? January,? {y}", r"January 1,? {y}", r"\b1\.\s?1\.\s?{y}", r"\b1(?:er)? janvier {y}",
+                     r"\b1\.\s?Januar {y}", r"\b1 januari {y}", r"\b1 de enero de {y}", r"\b1 stycznia {y}",
+                     r"\b1\. januar {y}", r"\b1 de janeiro de {y}", r"\b1\.\s?tammikuuta {y}", r"\b01/01/{y}",
+                     r"\b01\.01\.{y}", r"\b1 jaanuar")
+
+
+def padded_start_date(text: str, start) -> bool:
+    """True when `start` is 1 January and the entity's text never writes that day."""
+    day = common.as_date(start)
+    if day is None or (day.month, day.day) != (1, 1):
+        return False
+    y = str(day.year)
+    return not any(re.search(p.format(y=y), text, re.I) for p in _FIRST_OF_JANUARY)
+
+
 def check_dates(rel_path: str, fm: dict, report: common.Report) -> None:
     """start_date, end_date and last_verified are real dates (or empty), the
     end is not before the start, and a verification date is not in the future.
@@ -180,6 +198,9 @@ def main() -> int:
             report.error(f"{e.rel_path}: invalid verification '{verification}'")
 
         check_dates(e.rel_path, fm, report)
+        if padded_start_date(e.path.read_text(encoding="utf-8"), fm.get("start_date")):
+            report.warn(f"{e.rel_path}: start_date {fm.get('start_date')} is 1 January and the day is not written anywhere "
+                        f"in the entity; if the source gives only the year, leave start_date empty and say the year in prose")
         if fm.get("level") == "national" and fm.get("country") in (None, ""):
             report.error(f"{e.rel_path}: level 'national' needs a country (use another level "
                          f"for an entity that is not one country's)")

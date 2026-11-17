@@ -23,7 +23,7 @@ confidence: medium
 coverage: medium
 verification: primary-source
 
-start_date: 2024-01-01
+start_date: null
 end_date: 2026-06-30
 last_verified: "2026-09-26"
 previous_version: null
@@ -42,14 +42,14 @@ relationships:
     source: fact
     evidence: "PARTIALLY CLOSES discovery/unresolved.md row #131. Confirmed by reading Fraunhofer IOSB's own Factory-X page and factory-x.org's own page directly (2026-09-19): Fraunhofer ISST's own Manufacturing-X page (already cited on [[DE-MANUFACTURING-X]]) names Factory-X among Manufacturing-X's supported lighthouse projects; factory-x.org's own page states Factory-X 'functions as a lighthouse project within the broader Manufacturing-X initiative,' adding that 'collaboration among the Manufacturing-X projects and within the MX community continues' after Factory-X's own conclusion."
     confidence: high
-    valid_from: "2024-01-01"
+    valid_from: null
     valid_until: null
   - type: based-on
     target: DE-CATENA-X
     source: fact
     evidence: "Confirmed by reading factory-x.org's own page directly (2026-09-19), which describes Factory-X as 'an open and collaborative digital ecosystem for factory outfitters and operators, built on the foundations of Catena-X and the principles of Plattform Industrie 4.0.' Fraunhofer IOSB's own page, also read directly, independently corroborates: 'The German Federal Ministry for Economic Affairs and Climate Protection (BMWK) has launched Catena-X, a corresponding data room for the automotive industry. This was followed by the more comprehensive Manufacturing-X initiative,' with Factory-X as its mechanical-engineering-specific lighthouse."
     confidence: high
-    valid_from: "2024-01-01"
+    valid_from: null
     valid_until: null
   - type: related-to
     target: DE-PLATTFORM-INDUSTRIE-4-0
@@ -134,6 +134,10 @@ already on file, not a new source.
 - `part-of` [[DE-MANUFACTURING-X]] — `confidence: high`.
 - `based-on` [[DE-CATENA-X]] — `confidence: high`.
 - `related-to` [[DE-PLATTFORM-INDUSTRIE-4-0]] — `confidence: medium`.
+
+## Year only (2026-11-17)
+
+The sources read give the year 2024, not a day. `start_date` was `2024-01-01`, a placeholder for "in 2024" that `metadata/metadata-schema.md` rules out, and is now empty; so are the 2 `valid_from` dates that repeated it. The year stays in the description and the text above.
 
 ## Sources
 

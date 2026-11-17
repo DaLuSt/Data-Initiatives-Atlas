@@ -21,7 +21,7 @@ confidence: medium
 coverage: medium
 verification: primary-source
 
-start_date: 2018-01-01
+start_date: null
 end_date: null
 last_verified: "2026-09-05"
 previous_version: null
@@ -133,7 +133,7 @@ cross-border reach. No successor entity or `country: null` is warranted:
 the sourced fact is a Dutch foundation operating internationally, not a
 European body that absorbed a Dutch one.
 
-`start_date: 2018-01-01` is a **placeholder for "in 2018"**.
+`start_date` is empty: the sources give 2018, not a day (see "Year only").
 
 ## Relationships
 
@@ -166,6 +166,10 @@ afsprakenstelsels governing sectoral data sharing through uniform
 agreements — the same family observation already recorded on
 [[EU-DSSC-BLUEPRINT]]. It is an Atlas reading, not a sourced link, and it is
 labelled as one.
+
+## Year only (2026-11-17)
+
+The sources read give the year 2018, not a day. `start_date` was `2018-01-01`, a placeholder for "in 2018" that `metadata/metadata-schema.md` rules out, and is now empty. The year stays in the description and the text above.
 
 ## Sources
 

@@ -21,7 +21,7 @@ confidence: medium
 coverage: medium
 verification: primary-source
 
-start_date: 2014-01-01
+start_date: null
 end_date: null
 last_verified: "2026-09-13"
 previous_version: null
@@ -85,8 +85,8 @@ opposite of most chains in this Atlas:
 | 1994 | Adopted by the UN Statistical Commission |
 | 2014 | Formally endorsed by the General Assembly, resolution 68/261 |
 
-`start_date: 2014-01-01` records the General Assembly endorsement year and
-is a **placeholder** — the resolution's date was not established. The 1994
+`start_date` is empty: the General Assembly endorsement was in 2014, but the
+resolution's date was not established (see "Year only"). The 1994
 and 1991 steps are recorded here in prose rather than as separate entities.
 
 The principles also govern SDG indicator practice: SDG indicators are to be
@@ -113,6 +113,10 @@ row #195's remaining "UN-FPOS half."
 ## Relationships
 
 - Maintained by [[UN-UNSD]].
+
+## Year only (2026-11-17)
+
+The sources read give the year 2014, not a day. `start_date` was `2014-01-01`, a placeholder for "in 2014" that `metadata/metadata-schema.md` rules out, and is now empty. The year stays in the description and the text above.
 
 ## Sources
 

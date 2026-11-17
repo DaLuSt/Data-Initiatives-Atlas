@@ -26,7 +26,7 @@ status: active
 confidence: medium
 coverage: low
 verification: primary-source
-start_date: 1994-01-01
+start_date: null
 end_date: null
 last_verified: "2026-08-22"
 previous_version: null
@@ -49,7 +49,7 @@ relationships:
     source: fact
     evidence: "Confirmed by reading efta.int's own 'EEA Institutions - Two Pillar Structure' page directly (2026-08-22, fetched with an honest, identifying User-Agent — efta.int returns a bot-defense challenge to a browser User-Agent but real content to one that names itself as a bot): 'In the EFTA pillar, certain EU bodies are mirrored, such as a surveillance authority and a court of justice.' Corroborated by reading en.wikipedia.org/wiki/EFTA_Surveillance_Authority and en.wikipedia.org/wiki/European_Free_Trade_Association directly: the Authority 'monitors compliance with the Agreement on the European Economic Area (EEA) in Iceland, Liechtenstein and Norway (the EEA EFTA States)', and 'Since Switzerland is not an EEA member, it does not participate in these institutions.' Its jurisdiction is exactly the three EEA EFTA states, not the four EFTA states, so it is anchored to the Agreement rather than to [[INTL-EFTA]] under metadata/relationship-types.md §2.3 — the anchor with the matching scope is chosen over the anchor with the matching name. `eftasurv.int` remains genuinely unreadable even with an honest User-Agent: it is a JavaScript single-page application with no static content ('You need to enable JavaScript to run this app.'), and efta.int has no dedicated subpage for the Authority (guessed paths 404)."
     confidence: medium
-    valid_from: 1994-01-01
+    valid_from: null
     valid_until: null
   - type: related-to
     target: INTL-EFTA
@@ -163,6 +163,10 @@ falls outside its jurisdiction entirely.
 - Its **internal organisation and staffing** (90 employees of 22
   nationalities, per the Wikipedia article).
 - Individual **infringement cases and referrals** to the EFTA Court.
+
+## Start date (2026-11-17)
+
+`start_date` was 1994-01-01, with no source in this entity for the day; it is now empty, as are the 1 `valid_from` dates that repeated it. The EEA Agreement this body serves entered into force on 1 January 1994 ([[INTL-EEA-AGREEMENT]]), but no page read says the body began work on that day.
 
 ## Sources
 

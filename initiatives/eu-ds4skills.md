@@ -20,7 +20,7 @@ confidence: medium
 coverage: low
 verification: primary-source
 
-start_date: 2025-01-01
+start_date: null
 end_date: null
 last_verified: "2026-09-05"
 previous_version: null
@@ -37,7 +37,7 @@ relationships:
     source: fact
     evidence: "CLOSES PART OF A PREVIOUSLY-FLAGGED GAP. Confirmed by reading digital-strategy.ec.europa.eu's own 'Common European data spaces' page directly (2026-09-05): under the page's rollout listing for the Skills data space, it names exactly two projects, DS4Skills and EDGE-Skills, with no further description on that page. DS4Skills' own site (ds4skills.eu, read directly) describes itself as 'A common European Data Space for Skills that connects key stakeholders across Europe.' The Health and Digital Executive Agency's (HaDEA) own announcement, read directly, calls it 'Europe's first Data Space for Skills,' states it was 'officially launched in January 2025,' is 'co-funded by the European Commission' and 'coordinated by DIGITALEUROPE' with '22 partners.' Neither the HaDEA announcement nor the ds4skills.eu page mentions ESCO, Europass or the European Skills Agenda — that part of the entity's own flagged gap is checked and remains unconnected, not merely unresearched."
     confidence: medium
-    valid_from: 2025-01-01
+    valid_from: null
     valid_until: null
 
 sources:
@@ -99,6 +99,10 @@ of them.
 ## Relationships
 
 - `part-of` [[EU-SKILLS-DATA-SPACE]].
+
+## Year only (2026-11-17)
+
+The sources read give the year 2025, not a day. `start_date` was `2025-01-01`, a placeholder for "in 2025" that `metadata/metadata-schema.md` rules out, and is now empty; so are the 1 `valid_from` dates that repeated it. The year stays in the description and the text above.
 
 ## Sources
 

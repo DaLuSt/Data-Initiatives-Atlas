@@ -26,7 +26,7 @@ confidence: medium
 coverage: medium
 verification: primary-source
 
-start_date: 2017-01-01
+start_date: null
 end_date: null
 last_verified: "2026-09-19"
 previous_version: null
@@ -161,11 +161,15 @@ read the sources.
 - `based-on` [[UN-SDG-INDICATORS]].
 - `maintained-by` [[EU-EUROSTAT]].
 
+## Year only (2026-11-17)
+
+The sources read give the year 2017, not a day. `start_date` was `2017-01-01`, a placeholder for "in 2017" that `metadata/metadata-schema.md` rules out, and is now empty. The year stays in the description and the text above.
+
 ## Sources
 
 Listed in frontmatter — four Eurostat pages, including the 2017 news item
 announcing the establishment of the indicator list, which is the basis for
-the `start_date`. Each national statistical office's own page on its
+the year 2017 (the `start_date` itself is empty, see "Year only"). Each national statistical office's own page on its
 country's indicator set was read directly on the corresponding entity —
 [[DE-NACHHALTIGKEITSINDIKATOREN]], [[FR-INDICATEURS-ODD]],
 [[BE-INDICATEURS-DEVELOPPEMENT-DURABLE]],

@@ -28,7 +28,7 @@ confidence: medium
 coverage: low
 verification: primary-source
 
-start_date: 1970-01-01
+start_date: null
 end_date: null
 last_verified: "2026-09-26"
 previous_version: null
@@ -48,7 +48,7 @@ relationships:
     source: fact
     evidence: "Confirmed by reading din.de's own page directly (2026-09-04), which lists DKE among DIN's own standards committees ('Getting involved > Standards committees > DKE') and states DKE is 'a joint organization of DIN German Institute for Standardization and the VDE Association for Electrical, Electronic & Information Technologies', with VDE handling day-to-day operations. dke.de's own 'About us' page, also read directly, confirms DKE was established in 1970 when DIN and VDE merged all German electrotechnical associations into it, and that DKE's legal standing was further formalised five years later through a Standards Agreement between DIN and the Federal Republic of Germany. VDE is now its own entity, [[DE-VDE]] (created 2026-09-26), which carries the `participates-in` edge to DKE on its own file rather than duplicating it here."
     confidence: medium
-    valid_from: 1970-01-01
+    valid_from: null
     valid_until: null
   - type: participates-in
     target: EU-CENELEC
@@ -121,6 +121,10 @@ itself, which the Atlas already records as Germany's member in
 
 - `part-of` [[DE-DIN]].
 - `participates-in` [[EU-CENELEC]].
+
+## Year only (2026-11-17)
+
+The sources read give the year 1970, not a day. `start_date` was `1970-01-01`, a placeholder for "in 1970" that `metadata/metadata-schema.md` rules out, and is now empty; so are the 1 `valid_from` dates that repeated it. The year stays in the description and the text above.
 
 ## Sources
 

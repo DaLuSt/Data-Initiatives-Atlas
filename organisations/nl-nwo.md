@@ -32,7 +32,7 @@ confidence: medium
 coverage: low
 verification: primary-source
 
-start_date: 1950-01-01
+start_date: null
 end_date: null
 last_verified: "2026-09-04"
 previous_version: null
@@ -50,7 +50,7 @@ relationships:
     source: fact
     evidence: "Confirmed by reading nl.wikipedia.org's own NWO article directly (2026-09-04): NWO originated in 1950 as ZWO (Nederlandse Organisatie voor Zuiver-Wetenschappelijk Onderzoek), which did not focus on applied research (reserved for TNO). In 1988 ZWO's mandate expanded to strategic and application-oriented research, prompting the transformation into NWO, formalised under the 'Wet op de Nederlandse organisatie voor wetenschappelijk onderzoek' enacted 7 July 1987, establishing NWO as a zelfstandig bestuursorgaan under the Ministry of Education, Culture and Science (OCW). Corroborated by reading nwo.nl's own 'About NWO' page directly, confirming NWO's current funding role and scale, though that page does not itself state the founding history. OCW is not an Atlas entity, so the anchor edge is asserted at country scope. Anchor edge under metadata/relationship-types.md §2.3."
     confidence: medium
-    valid_from: 1950-01-01
+    valid_from: null
     valid_until: null
   - type: cooperates-with
     target: NL-DANS
@@ -109,6 +109,10 @@ NWO jointly runs [[NL-DANS]] together with KNAW, confirmed by reading
 - `part-of` [[NL]] (anchor edge). OCW is not an Atlas entity, so no
   edge is asserted to it directly.
 - `cooperates-with` [[NL-DANS]], which it jointly runs with KNAW.
+
+## Year only (2026-11-17)
+
+The sources read give the year 1950, not a day. `start_date` was `1950-01-01`, a placeholder for "in 1950" that `metadata/metadata-schema.md` rules out, and is now empty; so are the 1 `valid_from` dates that repeated it. The year stays in the description and the text above.
 
 ## Sources
 

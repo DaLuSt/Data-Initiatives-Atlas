@@ -28,7 +28,7 @@ confidence: medium
 coverage: medium
 verification: primary-source
 
-start_date: 2013-01-01
+start_date: null
 end_date: null
 last_verified: "2026-09-26"
 previous_version: null
@@ -177,6 +177,10 @@ exist to express.
   Real Decreto 4/2010; `confidence: high`.
 - `based-on` [[EU-DCAT-AP]] — `confidence: low`, unchanged: the
   administrative-processing caveat still stands, see above.
+
+## Year only (2026-11-17)
+
+The sources read give the year 2013, not a day. `start_date` was `2013-01-01`, a placeholder for "in 2013" that `metadata/metadata-schema.md` rules out, and is now empty. The year stays in the description and the text above.
 
 ## Sources
 

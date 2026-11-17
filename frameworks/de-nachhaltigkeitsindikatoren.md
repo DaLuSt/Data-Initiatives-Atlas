@@ -24,7 +24,7 @@ confidence: medium
 coverage: low
 verification: primary-source
 
-start_date: 2006-01-01
+start_date: null
 end_date: null
 last_verified: "2026-09-19"
 previous_version: null
@@ -49,7 +49,7 @@ relationships:
     source: fact
     evidence: "Confirmed by reading destatis.de's own page directly (2026-09-19): 'Das Statistische Bundesamt ist damit beauftragt, die Messung der nationalen Indikatoren, fachlich unabhängig, mit eigenen Daten aus der amtlichen Statistik zu stützen' — the Federal Statistical Office has been tasked, since 2006, with measuring the national indicators independently using its own official statistical data, and publishes an Indikatorenbericht for the strategy every two years ('im zweijährigen Rhythmus')."
     confidence: high
-    valid_from: "2006-01-01"
+    valid_from: null
     valid_until: null
 
 sources:
@@ -108,6 +108,10 @@ asserted between any of the five.
 
 - `based-on` [[UN-SDG-INDICATORS]] — `confidence: medium`.
 - `maintained-by` [[DE-DESTATIS]] — `confidence: high`.
+
+## Year only (2026-11-17)
+
+The sources read give the year 2006, not a day. `start_date` was `2006-01-01`, a placeholder for "in 2006" that `metadata/metadata-schema.md` rules out, and is now empty; so are the 1 `valid_from` dates that repeated it. The year stays in the description and the text above.
 
 ## Sources
 

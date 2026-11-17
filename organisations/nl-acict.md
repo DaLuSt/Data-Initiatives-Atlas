@@ -30,7 +30,7 @@ confidence: medium
 coverage: low
 verification: primary-source
 
-start_date: 2014-01-01
+start_date: null
 end_date: null
 last_verified: "2026-09-04"
 previous_version: null
@@ -47,7 +47,7 @@ relationships:
     source: fact
     evidence: "Confirmed by reading adviescollegeicttoetsing.nl's own news article directly (2026-09-04): the college began in 2014 as Bureau ICT-toetsing (BIT), created on advice of the parliamentary Elias Commission, was rebranded Adviescollege ICT-toetsing in 2021, and gained permanent statutory (wettelijke) status on 1 July 2024 through its own Instellingswet, converting it from a temporary bureau into a standing advisory college. Anchor edge under metadata/relationship-types.md §2.3."
     confidence: high
-    valid_from: 2014-01-01
+    valid_from: null
     valid_until: null
 
 sources:
@@ -89,6 +89,10 @@ operating history.
 ## Relationships
 
 - `part-of` [[NL]] (anchor edge).
+
+## Year only (2026-11-17)
+
+The sources read give the year 2014, not a day. `start_date` was `2014-01-01`, a placeholder for "in 2014" that `metadata/metadata-schema.md` rules out, and is now empty; so are the 1 `valid_from` dates that repeated it. The year stays in the description and the text above.
 
 ## Sources
 

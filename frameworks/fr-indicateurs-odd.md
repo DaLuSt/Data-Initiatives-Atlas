@@ -26,7 +26,7 @@ confidence: medium
 coverage: low
 verification: primary-source
 
-start_date: 2018-01-01
+start_date: null
 end_date: null
 last_verified: "2026-09-26"
 previous_version: null
@@ -45,14 +45,14 @@ relationships:
     source: fact
     evidence: "PARTIALLY CLOSES discovery/unresolved.md row #175. Confirmed by reading insee.fr's own page directly (2026-09-19): the 98-indicator dashboard tracks France's progress on the 17 UN SDGs and was selected as 'pertinent by comparison to French strategies,' complementing rather than replacing France's continued participation in the UN's own 231-indicator global reporting system — the same partial-descent shape [[EU-SDG-INDICATORS]] and [[DE-NACHHALTIGKEITSINDIKATOREN]] both carry from the same UN list, each with a different indicator count and selection basis."
     confidence: medium
-    valid_from: "2018-01-01"
+    valid_from: null
     valid_until: null
   - type: maintained-by
     target: FR-INSEE
     source: fact
     evidence: "Confirmed by reading insee.fr's own page directly (2026-09-19): 'À l'issue d'une concertation menée sous l'égide du Conseil national de l'Information statistique (CNIS) a été proposé mi-2018 un tableau de bord de 98 indicateurs' — following consultation led by the Cnis, a 98-indicator dashboard was proposed mid-2018 — and 'c'est ce tableau de bord qui est publié ici. Ses données sont actualisées annuellement' — this dashboard is published on INSEE's own site with data updated annually. The page also names the Service des données et études statistiques (SDES) as a partner supplying regional/departmental/communal disaggregations."
     confidence: high
-    valid_from: "2018-01-01"
+    valid_from: null
     valid_until: null
 
 sources:
@@ -109,6 +109,10 @@ selection.
 
 - `based-on` [[UN-SDG-INDICATORS]] — `confidence: medium`.
 - `maintained-by` [[FR-INSEE]] — `confidence: high`.
+
+## Year only (2026-11-17)
+
+The sources read give the year 2018, not a day. `start_date` was `2018-01-01`, a placeholder for "in 2018" that `metadata/metadata-schema.md` rules out, and is now empty; so are the 2 `valid_from` dates that repeated it. The year stays in the description and the text above.
 
 ## Sources
 

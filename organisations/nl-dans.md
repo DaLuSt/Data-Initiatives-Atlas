@@ -24,7 +24,7 @@ confidence: medium
 coverage: low
 verification: primary-source
 
-start_date: 2005-01-01
+start_date: null
 end_date: null
 last_verified: "2026-09-04"
 previous_version: null
@@ -42,7 +42,7 @@ relationships:
     source: fact
     evidence: "Confirmed by reading nwo.nl's own page directly (2026-09-04): DANS 'operates as an institute of KNAW... and NWO', described as the Dutch national centre of expertise and repository for research data. Confirmed independently by reading the Dutch Wikipedia article directly, which dates DANS's founding to 2005, consolidating the Steinmetz Archive (1964), the Dutch Historical Data Archive (1989), the Scientific Statistical Agency (1994), the Dutch Institute for Scientific Information Services (1997) and the Electronic Depot of Netherlands Archaeology (2004). Neither KNAW nor NWO is an Atlas entity, so the anchor edge is asserted at country scope rather than to either joint parent, the same pattern used for NL-SURF. Anchor edge under metadata/relationship-types.md §2.3."
     confidence: medium
-    valid_from: 2005-01-01
+    valid_from: null
     valid_until: null
 
 sources:
@@ -88,6 +88,10 @@ country scope, the same pattern used for [[NL-SURF]].
 ## Relationships
 
 - `part-of` [[NL]] (anchor edge).
+
+## Year only (2026-11-17)
+
+The sources read give the year 2005, not a day. `start_date` was `2005-01-01`, a placeholder for "in 2005" that `metadata/metadata-schema.md` rules out, and is now empty; so are the 1 `valid_from` dates that repeated it. The year stays in the description and the text above.
 
 ## Sources
 

@@ -30,7 +30,7 @@ confidence: high
 coverage: medium
 verification: primary-source
 
-start_date: 1984-01-01
+start_date: null
 end_date: null
 last_verified: "2026-08-28"
 previous_version: null
@@ -153,6 +153,10 @@ governance detail (board, decision-making) is still not recorded.
 - `related-to` [[DE]] — anchor edge; an e. V. is not part of the state.
 - `participates-in` [[EU-GEANT]] — confirmed directly this pass on DFN's
   own site and independently on Wikipedia, `confidence: high`.
+
+## Year only (2026-11-17)
+
+The sources read give the year 1984, not a day. `start_date` was `1984-01-01`, a placeholder for "in 1984" that `metadata/metadata-schema.md` rules out, and is now empty. The year stays in the description and the text above.
 
 ## Sources
 

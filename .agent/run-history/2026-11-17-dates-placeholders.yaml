@@ -1,0 +1,14 @@
+date: "2026-11-17"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmaps #768 and #775. (1) EU-DESI: the Commission's DESI page read directly; its 29 "NOT READ — search-only"
+  evidence strings replaced with quotations. (2) While doing so, found that its start date 2014-01-01 was a placeholder
+  for "in 2014", which metadata/metadata-schema.md rules out ("fix them at reverification"). A scan of every entity
+  whose start_date is 1 January of a year and whose text never writes that day found 33 more. 30 are now null, with
+  the valid_from dates that repeated them, and a "Year only" note; the EEA Joint Committee and the EFTA Surveillance
+  Authority likewise, with a note that the EEA Agreement entered into force on 1 January 1994 but no page read says
+  they began that day; the e-invoicing Directive gets its real date, 2014-05-26, read from its Official Journal text.
+  Five body sentences that described the old placeholders were rewritten. A validator warning now flags any new
+  1 January start date whose day is not written in the entity.
+prs: []
+outcome: in-progress

@@ -23,7 +23,7 @@ confidence: medium
 coverage: low
 verification: primary-source
 
-start_date: 2024-01-01
+start_date: null
 end_date: null
 last_verified: "2026-10-01"
 previous_version: null
@@ -44,14 +44,14 @@ relationships:
     source: fact
     evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP (CH-DVS's own file: 'a Swiss analogue to GB-ONE-LOGIN not yet an Atlas entity'). Confirmed by reading agov.ch's own page directly (2026-09-13): AGOV is 'das neue Behörden-Login der Schweiz' (Switzerland's new government login), 'eine Dienstleistung des Bundes' (a federal service). Anchor edge under metadata/relationship-types.md §2.3."
     confidence: medium
-    valid_from: 2024-01-01
+    valid_from: null
     valid_until: null
   - type: maintained-by
     target: CH-DVS
     source: fact
     evidence: "Confirmed by reading agov.ch's own page directly (2026-09-13): AGOV is operated by 'Digitale Verwaltung Schweiz' (Digital Administration Switzerland — CH-DVS) in collaboration with cantons, municipalities, the Federal Chancellery and the Federal IT Office. Independently corroborated by admin.ch's own bwo.admin.ch news page, read directly, which states the Federal Chancellery leads AGOV as part of the Digitale Verwaltung Schweiz initiative."
     confidence: high
-    valid_from: 2024-01-01
+    valid_from: null
     valid_until: null
 
 sources:
@@ -127,6 +127,10 @@ agreement) makes possible.
 
 [[CH-E-ID]] carries the `related-to` edge pointing here, per the Atlas's
 "record the edge once" convention.
+
+## Year only (2026-11-17)
+
+The sources read give the year 2024, not a day. `start_date` was `2024-01-01`, a placeholder for "in 2024" that `metadata/metadata-schema.md` rules out, and is now empty; so are the 2 `valid_from` dates that repeated it. The year stays in the description and the text above.
 
 ## Sources
 

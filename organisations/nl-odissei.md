@@ -23,7 +23,7 @@ confidence: medium
 coverage: low
 verification: primary-source
 
-start_date: 2016-01-01
+start_date: null
 end_date: null
 last_verified: "2026-09-05"
 previous_version: null
@@ -90,6 +90,10 @@ convention already used for [[NL-SURF]] and [[NL-NICTIZ]].
 
 - `related-to` [[NL]] — anchor edge; member-owned consortium, not part of
   the state.
+
+## Year only (2026-11-17)
+
+The sources read give the year 2016, not a day. `start_date` was `2016-01-01`, a placeholder for "in 2016" that `metadata/metadata-schema.md` rules out, and is now empty. The year stays in the description and the text above.
 
 ## Sources
 
