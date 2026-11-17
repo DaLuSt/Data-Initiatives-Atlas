@@ -1,0 +1,13 @@
+date: "2026-11-17"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #768, a second slice: entities whose sources had been read through a summarising fetch tool, re-read directly.
+  Five EU adequacy decisions (Argentina, Canada, Japan, Korea, United States) and the 2024 review report COM(2024) 7 from
+  the Publications Office (two of the decisions only as PDFs of the Official Journal); every quotation and article
+  reference in their evidence matched, and the review's conclusion was checked for all eleven countries and territories.
+  One correction: Japan's Article 1(2) also excludes professional writers, which the summary had dropped. Three regulators
+  read in their founding laws on WIPO Lex (NR-NCA, JO-TRC, TV-TTC): all claims matched except that Nauru's Authority is
+  "responsible to", not "answerable to", the Minister, and that the 2017 Act's repeal, earlier from search results, is in
+  the Act itself (section 115). The previous two run-history entries are closed (#783, #785).
+prs: []
+outcome: in-progress

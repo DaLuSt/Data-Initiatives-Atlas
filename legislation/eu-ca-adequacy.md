@@ -19,7 +19,7 @@ coverage: medium
 verification: primary-source
 start_date: 2001-12-20
 end_date: null
-last_verified: "2026-11-07"
+last_verified: "2026-11-17"
 previous_version: null
 successor: null
 
@@ -42,7 +42,7 @@ relationships:
   - type: references
     target: CA-PIPEDA
     source: fact
-    evidence: "The decision’s title and Article 1 (mirror and EUR-Lex, read 2026-11-07 through a summarising fetch tool) are about recipients subject to the Canadian Personal Information Protection and Electronic Documents Act; the Commission’s adequacy page says commercial organisations only."
+    evidence: "The decision’s title and Article 1 (mirror and EUR-Lex, re-read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32002D0002, PDF), which confirms every quotation here; first read 2026-11-07 through a summarising fetch tool) are about recipients subject to the Canadian Personal Information Protection and Electronic Documents Act; the Commission’s adequacy page says commercial organisations only."
     confidence: medium
     valid_from: 2001-12-20
     valid_until: null
@@ -60,11 +60,17 @@ sources:
     url: "https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/adequacy-decisions_en"
     publisher: "European Commission"
     accessed: "2026-11-07"
+  - title: "Official Journal text (CELEX 32002D0002)"
+    url: "https://publications.europa.eu/resource/celex/32002D0002"
+    publisher: "Publications Office of the European Union"
+    accessed: "2026-11-17"
 ---
 
 # European Commission adequacy decision for Canada
 
 > **Created 2026-11-07** (data-sharing links beyond Europe). The decision’s own text and the Commission’s adequacy page were read through a fetch tool that returns a model’s summary unless stated in the evidence; the Brazil decision was read in full from the Commission’s PDF.
+>
+> **Re-read directly 2026-11-17** (roadmap #768). The decision's Official Journal text was downloaded from the Publications Office and its enacting terms read in full: every quotation and article reference in the evidence above matches it.
 
 ## What it says
 

@@ -8,5 +8,5 @@ summary: >
   4(a) establishing the TRC) and GT-LEY-GENERAL-TELECOM-94-96 (1996-11-17, record only; the text is a linked PDF, not
   read). All four are now `active`; each says what was not re-read and that later amendments were not checked. 67 adopted
   laws still have no start date.
-prs: []
-outcome: in-progress
+prs: [785]
+outcome: merged

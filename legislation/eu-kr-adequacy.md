@@ -19,7 +19,7 @@ coverage: medium
 verification: primary-source
 start_date: 2021-12-17
 end_date: null
-last_verified: "2026-11-07"
+last_verified: "2026-11-17"
 previous_version: null
 successor: null
 
@@ -36,7 +36,7 @@ relationships:
   - type: applies-in
     target: KR
     source: fact
-    evidence: "The decision’s EUR-Lex text (read 2026-11-07 through a summarising fetch tool): title and date as above; recital 5 on the PIPA; recital 12 on the PIPC; the preamble cites Article 45(3) GDPR. Article 1(1): 'the Republic of Korea ensures an adequate level of protection for personal data transferred from the European Union' to entities subject to the PIPA, as complemented by Annex I (additional safeguards) and Annex II (representations); Article 1(2) excludes religious organisations for missionary activities, political parties for nominating candidates and entities overseen by the Financial Services Commission under the Credit Information Act; Article 3(4) has the first review after three years from notification and then at least every four years."
+    evidence: "The decision’s EUR-Lex text (re-read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32022D0254, XHTML), which confirms every quotation here; first read 2026-11-07 through a summarising fetch tool): title and date as above; recital 5 on the PIPA; recital 12 on the PIPC; the preamble cites Article 45(3) GDPR. Article 1(1): 'the Republic of Korea ensures an adequate level of protection for personal data transferred from the European Union' to entities subject to the PIPA, as complemented by Annex I (additional safeguards) and Annex II (representations); Article 1(2) excludes religious organisations for missionary activities, political parties for nominating candidates and entities overseen by the Financial Services Commission under the Credit Information Act; Article 3(4) has the first review after three years from notification and then at least every four years."
     confidence: high
     valid_from: 2021-12-17
     valid_until: null
@@ -57,11 +57,17 @@ sources:
     url: "https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/adequacy-decisions_en"
     publisher: "European Commission"
     accessed: "2026-11-07"
+  - title: "Official Journal text (CELEX 32022D0254)"
+    url: "https://publications.europa.eu/resource/celex/32022D0254"
+    publisher: "Publications Office of the European Union"
+    accessed: "2026-11-17"
 ---
 
 # European Commission adequacy decision for the Republic of Korea
 
 > **Created 2026-11-07** (data-sharing links beyond Europe). The decision’s own text and the Commission’s adequacy page were read through a fetch tool that returns a model’s summary unless stated in the evidence; the Brazil decision was read in full from the Commission’s PDF.
+>
+> **Re-read directly 2026-11-17** (roadmap #768). The decision's Official Journal text was downloaded from the Publications Office and its enacting terms read in full: every quotation and article reference in the evidence above matches it.
 
 ## What it says
 

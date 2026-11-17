@@ -6,5 +6,5 @@ summary: >
   the operating model asks for the owner's word. Left for #773: pinning actions by commit (the owner's call), a shared
   composite for the LinkedIn workflows' common steps, a lighter decide job, code scanning, and tests for
   source_hosts.py and country_centroids.py.
-prs: []
-outcome: in-progress
+prs: [783]
+outcome: merged

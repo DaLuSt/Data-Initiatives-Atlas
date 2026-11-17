@@ -19,7 +19,7 @@ coverage: medium
 verification: primary-source
 start_date: 2003-06-30
 end_date: null
-last_verified: "2026-11-07"
+last_verified: "2026-11-17"
 previous_version: null
 successor: null
 
@@ -33,7 +33,7 @@ relationships:
   - type: applies-in
     target: AR
     source: fact
-    evidence: "The decision’s EUR-Lex text (read 2026-11-07 through a summarising fetch tool): Article 1, 'Argentina is regarded as providing an adequate level of protection for personal data transferred from the Community'; done at Brussels on 30 June 2003; OJ L 168 of 5 July 2003."
+    evidence: "The decision’s EUR-Lex text (re-read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32003D0490, PDF), which confirms every quotation here; first read 2026-11-07 through a summarising fetch tool): Article 1, 'Argentina is regarded as providing an adequate level of protection for personal data transferred from the Community'; done at Brussels on 30 June 2003; OJ L 168 of 5 July 2003."
     confidence: high
     valid_from: 2003-06-30
     valid_until: null
@@ -51,11 +51,17 @@ sources:
     url: "https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/adequacy-decisions_en"
     publisher: "European Commission"
     accessed: "2026-11-07"
+  - title: "Official Journal text (CELEX 32003D0490)"
+    url: "https://publications.europa.eu/resource/celex/32003D0490"
+    publisher: "Publications Office of the European Union"
+    accessed: "2026-11-17"
 ---
 
 # European Commission adequacy decision for Argentina
 
 > **Created 2026-11-07** (data-sharing links beyond Europe). The decision’s own text and the Commission’s adequacy page were read through a fetch tool that returns a model’s summary unless stated in the evidence; the Brazil decision was read in full from the Commission’s PDF.
+>
+> **Re-read directly 2026-11-17** (roadmap #768). The decision's Official Journal text was downloaded from the Publications Office and its enacting terms read in full: every quotation and article reference in the evidence above matches it.
 
 ## What it says
 
