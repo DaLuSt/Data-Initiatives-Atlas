@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-11-17"
 previous_version: null
 successor: null
 
@@ -41,8 +41,8 @@ relationships:
   - type: part-of
     target: EU-DATA-STRATEGY
     source: fact
-    evidence: "Common European data spaces in strategic sectors and domains of public interest is the fourth pillar of the European strategy for data (COM(2020)66; digital-strategy.ec.europa.eu). NOT READ — search-only."
-    confidence: medium
+    evidence: "The Communication 'A European strategy for data', COM(2020) 66 final of 19.2.2020, read directly 2026-11-17 from the Publications Office (CELEX 52020DC0066): 'The actions are based on four pillars', the fourth being 'D. Common European data spaces in strategic sectors and domains of public interest'."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -53,6 +53,10 @@ sources:
   - title: "Data spaces — SEMIC Support Centre"
     url: "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/data-spaces"
     publisher: "European Commission — Interoperable Europe Portal"
+  - title: "COM(2020) 66 final (CELEX 52020DC0066)"
+    url: "https://publications.europa.eu/resource/celex/52020DC0066"
+    publisher: "Publications Office of the European Union"
+    accessed: "2026-11-17"
 ---
 
 # Common European Data Spaces

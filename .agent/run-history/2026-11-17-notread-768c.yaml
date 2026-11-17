@@ -9,5 +9,5 @@ summary: >
   find them. The Environmental Information Directive was read as a PDF (the resolver serves no XHTML for it). 17
   "NOT READ" strings remain in entity files, all with claims of their own (Digital Decade, EIF, the Commission, ENISA
   and others).
-prs: []
-outcome: in-progress
+prs: [792]
+outcome: merged

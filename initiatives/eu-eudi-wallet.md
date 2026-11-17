@@ -9,8 +9,11 @@ description: >
   Secure electronic identification tool established under the European
   Digital Identity Framework Regulation, allowing individuals and businesses
   to store, manage and share identity data and electronic attestations for
-  public and private services across borders. Member states must provide at
-  least one wallet by the end of 2026.
+  public and private services across borders. Each member state provides at
+  least one wallet within 24 months of the entry into force of the
+  implementing acts named in Article 5a(23) and 5c(6) of the amended eIDAS
+  Regulation (Article 5a(1)); the end of 2026 often reported follows from
+  those acts' date, which was not read.
 
 level: regional
 country: null
@@ -23,7 +26,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-11-17"
 previous_version: null
 successor: null
 
@@ -36,8 +39,8 @@ relationships:
   - type: based-on
     target: EU-EIDAS2
     source: fact
-    evidence: "The establishment of an EU-wide framework for European Digital Identity Wallet schemes is the central reform introduced by Regulation (EU) 2024/1183 (EUR-Lex; European Commission digital-building-blocks). NOT READ — search-only."
-    confidence: medium
+    evidence: "Regulation (EU) 2024/1183, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32024R1183): Article 5a(1), inserted into Regulation (EU) No 910/2014, 'each Member State shall provide at least one European Digital Identity Wallet within 24 months of the date of entry into force of the implementing acts referred to in paragraph 23 of this Article and in Article 5c(6)'; Article 5a(2), wallets may be provided directly by a Member State, under its mandate, or independently but recognised by it."
+    confidence: high
     valid_from: 2024-05-20
     valid_until: null
 
@@ -52,6 +55,10 @@ sources:
     url: "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/identiteit/edi-wallet/"
     publisher: "Digitale Overheid (Ministerie van BZK)"
     accessed: "2026-09-05"
+  - title: "Official Journal text (CELEX 32024R1183)"
+    url: "https://publications.europa.eu/resource/celex/32024R1183"
+    publisher: "Publications Office of the European Union"
+    accessed: "2026-11-17"
 ---
 
 # European Digital Identity Wallet (EUDI Wallet)
@@ -76,7 +83,7 @@ private services, across borders within the Union. Reported credential types
 include identity documents, professional certificates, business licences,
 education diplomas and health credentials.
 
-Member states are mandated to provide wallets **by the end of 2026**.
+Member states are mandated to provide wallets within **24 months of the entry into force of the implementing acts** named in Article 5a(23) and 5c(6) (Article 5a(1), read directly 2026-11-17 in Regulation (EU) 2024/1183). The "end of 2026" that sources and this entity used to give is that period counted from the implementing acts' date, which the Atlas has not read; it is not a date written in the Regulation.
 
 ## Status reasoning — confirmed still correct, 2026-09-05
 
@@ -88,8 +95,8 @@ explicitly "nog in ontwikkeling en komt later beschikbaar" (still in
 development and becomes available later). Its national implementing
 legislation is still being prepared and was expected to go to public
 consultation only by the end of 2026 — meaning the Dutch wallet is likely
-to arrive **after** the EU-wide end-2026 deadline this entity's own
-`description` records, not by it. No source read states any member state
+to arrive **after** the end-2026 date commonly reported for the EU-wide
+deadline (see above for what the Regulation itself says), not by it. No source read states any member state
 has a wallet in production.
 
 The conservative reading was the right call: `active` would have asserted

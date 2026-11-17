@@ -10,7 +10,10 @@ description: >
   Regulation (EU) 2024/1183 of 11 April 2024, amending Regulation (EU) No
   910/2014 to establish the European Digital Identity Framework. Its central
   reform is an EU-wide framework for European Digital Identity Wallet
-  schemes, which member states must provide by the end of 2026.
+  schemes: each member state provides at least one wallet within 24 months
+  of the entry into force of the implementing acts named in Article 5a(23)
+  and 5c(6) (Article 5a(1)); the end of 2026 often reported follows from
+  those acts' date, which was not read.
 
 level: regional
 country: null
@@ -24,7 +27,7 @@ verification: primary-source
 
 start_date: 2024-05-20
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-11-17"
 previous_version: null
 successor: null
 
@@ -70,28 +73,28 @@ relationships:
   - type: applies-in
     target: NL
     source: fact
-    evidence: "Regulation (EU) 2024/1183 of 11 April 2024, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32024R1183): after Article 2 (Entry into force) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' The Netherlands is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: The Regulation mandates all Member States to provide European Digital Identity Wallets by the end of 2026 (Reg. (EU) 2024/1183; EUR-Lex ELI reg/2024/1183)."
+    evidence: "Regulation (EU) 2024/1183 of 11 April 2024, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32024R1183): after Article 2 (Entry into force) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' The Netherlands is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: The Regulation mandates all Member States to provide European Digital Identity Wallets by the end of 2026 (Reg. (EU) 2024/1183; EUR-Lex ELI reg/2024/1183). Correction, 2026-11-17: Article 5a(1), read directly, sets the deadline as 24 months after the entry into force of the implementing acts named in Article 5a(23) and 5c(6), not a calendar date; the end of 2026 is that period as commonly counted."
     confidence: high
     valid_from: 2024-05-20
     valid_until: null
   - type: applies-in
     target: DE
     source: fact
-    evidence: "Regulation (EU) 2024/1183 of 11 April 2024, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32024R1183): after Article 2 (Entry into force) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Germany is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: The Regulation mandates all Member States, Germany included, to provide European Digital Identity Wallets by the end of 2026 (Reg. (EU) 2024/1183; EUR-Lex ELI reg/2024/1183). Germany's BundID/DeutschlandID is recorded in this Atlas but is NOT asserted to implement this regulation — no source read connects them."
+    evidence: "Regulation (EU) 2024/1183 of 11 April 2024, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32024R1183): after Article 2 (Entry into force) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Germany is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: The Regulation mandates all Member States, Germany included, to provide European Digital Identity Wallets by the end of 2026 (Reg. (EU) 2024/1183; EUR-Lex ELI reg/2024/1183). Germany's BundID/DeutschlandID is recorded in this Atlas but is NOT asserted to implement this regulation — no source read connects them. Correction, 2026-11-17: Article 5a(1), read directly, sets the deadline as 24 months after the entry into force of the implementing acts named in Article 5a(23) and 5c(6), not a calendar date; the end of 2026 is that period as commonly counted."
     confidence: high
     valid_from: 2024-05-20
     valid_until: null
   - type: applies-in
     target: BE
     source: fact
-    evidence: "Regulation (EU) 2024/1183 of 11 April 2024, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32024R1183): after Article 2 (Entry into force) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Belgium is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: The Regulation mandates all Member States, Belgium included, to provide European Digital Identity Wallets by the end of 2026 (Reg. (EU) 2024/1183; EUR-Lex ELI reg/2024/1183). No Belgian digital identity scheme is recorded in this Atlas."
+    evidence: "Regulation (EU) 2024/1183 of 11 April 2024, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32024R1183): after Article 2 (Entry into force) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Belgium is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: The Regulation mandates all Member States, Belgium included, to provide European Digital Identity Wallets by the end of 2026 (Reg. (EU) 2024/1183; EUR-Lex ELI reg/2024/1183). No Belgian digital identity scheme is recorded in this Atlas. Correction, 2026-11-17: Article 5a(1), read directly, sets the deadline as 24 months after the entry into force of the implementing acts named in Article 5a(23) and 5c(6), not a calendar date; the end of 2026 is that period as commonly counted."
     confidence: high
     valid_from: 2024-05-20
     valid_until: null
   - type: applies-in
     target: FR
     source: fact
-    evidence: "Regulation (EU) 2024/1183 of 11 April 2024, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32024R1183): after Article 2 (Entry into force) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' France is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: The Regulation mandates all Member States, France included, to provide European Digital Identity Wallets by the end of 2026 (Reg. (EU) 2024/1183). for this specific applies-in edge. Updated 2026-09-05: France Identité, now its own entity (FR-FRANCE-IDENTITE, split out of FR-FRANCECONNECT), carries a sourced implements-requirement-from edge to EU-EUDI-WALLET — the Regulation's central reform — following its designation by the European Commission as France's future wallet. See FR-FRANCE-IDENTITE for the direct sourcing; that edge targets EU-EUDI-WALLET rather than this Regulation, matching the convention DE-BUNDID already established."
+    evidence: "Regulation (EU) 2024/1183 of 11 April 2024, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32024R1183): after Article 2 (Entry into force) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' France is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: The Regulation mandates all Member States, France included, to provide European Digital Identity Wallets by the end of 2026 (Reg. (EU) 2024/1183). for this specific applies-in edge. Updated 2026-09-05: France Identité, now its own entity (FR-FRANCE-IDENTITE, split out of FR-FRANCECONNECT), carries a sourced implements-requirement-from edge to EU-EUDI-WALLET — the Regulation's central reform — following its designation by the European Commission as France's future wallet. See FR-FRANCE-IDENTITE for the direct sourcing; that edge targets EU-EUDI-WALLET rather than this Regulation, matching the convention DE-BUNDID already established. Correction, 2026-11-17: Article 5a(1), read directly, sets the deadline as 24 months after the entry into force of the implementing acts named in Article 5a(23) and 5c(6), not a calendar date; the end of 2026 is that period as commonly counted."
     confidence: high
     valid_from: 2024-05-20
     valid_until: null
@@ -105,7 +108,7 @@ relationships:
   - type: applies-in
     target: PL
     source: fact
-    evidence: "Regulation (EU) 2024/1183 of 11 April 2024, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32024R1183): after Article 2 (Entry into force) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Poland is on the EU's own list of its 27 member countries, 'EU Member State since 2004' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation it is directly applicable in all member states, Poland included, and requires every member state to offer a European Digital Identity Wallet. Reporting states Poland's mObywatel application is architecturally incompatible with eIDAS 2.0 and cannot function as an EUDI Wallet, with replacement promised by the end of 2026 - the Atlas's first sourced national link to this Regulation, and a negative one. See PL-MOBYWATEL."
+    evidence: "Regulation (EU) 2024/1183 of 11 April 2024, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32024R1183): after Article 2 (Entry into force) it closes, 'This Regulation shall be binding in its entirety and directly applicable in all Member States.' Poland is on the EU's own list of its 27 member countries, 'EU Member State since 2004' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: As an EU regulation it is directly applicable in all member states, Poland included, and requires every member state to offer a European Digital Identity Wallet. Reporting states Poland's mObywatel application is architecturally incompatible with eIDAS 2.0 and cannot function as an EUDI Wallet, with replacement promised by the end of 2026 - the Atlas's first sourced national link to this Regulation, and a negative one. See PL-MOBYWATEL. Correction, 2026-11-17: Article 5a(1), read directly, sets the deadline as 24 months after the entry into force of the implementing acts named in Article 5a(23) and 5c(6), not a calendar date; the end of 2026 is that period as commonly counted."
     confidence: high
     valid_from: null
     valid_until: null
@@ -119,8 +122,8 @@ relationships:
   - type: produces
     target: EU-EUDI-WALLET
     source: fact
-    evidence: "The most important reform of Regulation 910/2014 introduced by this Regulation is the establishment of an EU-wide framework for European Digital Identity Wallet schemes (EUR-Lex; European Commission digital-building-blocks). NOT READ — search-only."
-    confidence: medium
+    evidence: "Regulation (EU) 2024/1183, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32024R1183): Article 5a(1), inserted into Regulation (EU) No 910/2014, 'each Member State shall provide at least one European Digital Identity Wallet within 24 months of the date of entry into force of the implementing acts referred to in paragraph 23 of this Article and in Article 5c(6)'; Article 5a(2), wallets may be provided directly by a Member State, under its mandate, or independently but recognised by it."
+    confidence: high
     valid_from: 2024-05-20
     valid_until: null
   - type: applies-in

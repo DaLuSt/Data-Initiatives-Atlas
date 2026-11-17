@@ -26,7 +26,7 @@ verification: primary-source
 
 start_date: 2003-11-17
 end_date: null
-last_verified: "2026-09-25"
+last_verified: "2026-11-17"
 previous_version: null
 successor: EU-OPEN-DATA-DIRECTIVE
 
@@ -43,8 +43,8 @@ relationships:
   - type: applies-in
     target: EU
     source: fact
-    evidence: "Directive 2003/98/EC of the European Parliament and of the Council of 17 November 2003 on the re-use of public sector information was an EU directive addressed to the member states; it was amended by Directive 2013/37/EU and recast as Directive (EU) 2019/1024 on open data and the re-use of public sector information, which repealed it (eur-lex.europa.eu ELI dir/2003/98; eur-lex.europa.eu ELI dir/2019/1024 'open data and the reuse of public-sector information'; digital-strategy.ec.europa.eu 'Open Data Directive'). NOT READ — search-only."
-    confidence: medium
+    evidence: "Directive 2003/98/EC of 17 November 2003 on the re-use of public sector information, read directly 2026-11-17 from its Official Journal text (Publications Office, CELEX 32003L0098, PDF of OJ L 345, 31.12.2003): Article 15, 'This Directive is addressed to the Member States.' Its repeal and recast by Directive (EU) 2019/1024 is recorded on [[EU-OPEN-DATA-DIRECTIVE]]."
+    confidence: high
     valid_from: 2003-11-17
     valid_until: null
 
@@ -62,6 +62,10 @@ sources:
   - title: "Open data and the reuse of public-sector information (summary)"
     url: "https://eur-lex.europa.eu/EN/legal-content/summary/open-data-and-the-reuse-of-public-sector-information.html"
     publisher: "EUR-Lex / Publications Office of the European Union"
+  - title: "Official Journal text (CELEX 32003L0098)"
+    url: "https://publications.europa.eu/resource/celex/32003L0098"
+    publisher: "Publications Office of the European Union"
+    accessed: "2026-11-17"
 ---
 
 # PSI Directive (2003/98/EC)

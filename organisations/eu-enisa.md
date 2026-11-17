@@ -21,7 +21,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-13"
+last_verified: "2026-11-17"
 previous_version: null
 successor: null
 
@@ -37,15 +37,15 @@ relationships:
   - type: part-of
     target: EU
     source: fact
-    evidence: "ENISA is the European Union Agency for Cybersecurity, established under Regulation (EU) 2019/881 (EUR-Lex summary of the Cybersecurity Act). NOT READ — search-only."
-    confidence: medium
+    evidence: "Regulation (EU) 2019/881, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32019R0881): Article 1(1)(a) names ENISA 'the European Union Agency for Cybersecurity', and Article 3(1) gives it its tasks 'across the Union', including supporting 'Member States, Union institutions, bodies, offices and agencies'."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: governed-by
     target: EU-CYBERSECURITY-ACT
     source: fact
-    evidence: "Regulation (EU) 2019/881 is on ENISA and on ICT cybersecurity certification; ENISA has a reinforced role to strengthen EU cybersecurity and facilitate uptake of certification (EUR-Lex summary of the EU Cybersecurity Act). NOT READ — search-only."
-    confidence: medium
+    evidence: "Regulation (EU) 2019/881, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32019R0881): Article 1(1), the Regulation lays down '(a) objectives, tasks and organisational matters relating to ENISA (the European Union Agency for Cybersecurity)'; Article 3(1), 'ENISA shall carry out the tasks assigned to it under this Regulation for the purpose of achieving a high common level of cybersecurity across the Union'."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: participates-in
@@ -67,6 +67,10 @@ sources:
     url: "https://interoperable-europe.ec.europa.eu/collection/governance-board/board"
     publisher: "European Commission — Interoperable Europe Portal"
     accessed: "2026-09-13"
+  - title: "Official Journal text (CELEX 32019R0881)"
+    url: "https://publications.europa.eu/resource/celex/32019R0881"
+    publisher: "Publications Office of the European Union"
+    accessed: "2026-11-17"
 ---
 
 # ENISA (European Union Agency for Cybersecurity)

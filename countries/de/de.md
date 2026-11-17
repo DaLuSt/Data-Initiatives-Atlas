@@ -22,7 +22,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-11-17"
 previous_version: null
 successor: null
 
@@ -34,7 +34,7 @@ relationships:
   - type: part-of
     target: EU
     source: fact
-    evidence: "Germany is one of the 27 member states of the European Union, having acceded on 1 January 1958; the Union's own list of EU countries records its accession date together with its Schengen and euro status (european-union.europa.eu 'EU countries'). NOT READ — search-only. Anchor edge under metadata/relationship-types.md §2.3: it records EU membership and asserts no more than that. Added in the European country batch so that all fifty anchors carry the same membership edge."
+    evidence: "Germany is one of the 27 member countries on the EU's own list (european-union.europa.eu, 'EU countries', read directly 2026-11-14), which gives 'EU Member State since 1958'. The earlier record said it acceded on 1 January 1958; the list gives the year only, so the day is not asserted here."
     confidence: medium
     valid_from: null
     valid_until: null

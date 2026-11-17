@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-11-17"
 previous_version: null
 successor: null
 
@@ -47,8 +47,8 @@ relationships:
   - type: produces
     target: EU-DATA-STRATEGY
     source: fact
-    evidence: "The European Commission published the Communication 'A European strategy for data' on 19 February 2020 (COM(2020) 66; digital-strategy.ec.europa.eu). NOT READ — search-only."
-    confidence: medium
+    evidence: "The Communication 'A European strategy for data', COM(2020) 66 final of 19.2.2020, read directly 2026-11-17 from the Publications Office (CELEX 52020DC0066): 'The actions are based on four pillars', the fourth being 'D. Common European data spaces in strategic sectors and domains of public interest'."
+    confidence: high
     valid_from: 2020-02-19
     valid_until: null
   - type: produces
@@ -61,8 +61,8 @@ relationships:
   - type: produces
     target: EU-DIGITAL-OMNIBUS
     source: fact
-    evidence: "The European Commission introduced the Digital Omnibus Regulation proposal on 19 November 2025 (COM(2025) 836). NOT READ — search-only."
-    confidence: medium
+    evidence: "The proposal itself, read directly 2026-11-17 from the Publications Office (COM(2025) 837 final, PDF): 'EUROPEAN COMMISSION Brussels, 19.11.2025 COM(2025) 837 final 2025/0360 (COD) Proposal for a REGULATION ... (Digital Omnibus)'. The earlier record cited COM(2025) 836, which is the separate proposal on the AI Act (now [[EU-DIGITAL-OMNIBUS-AI]]); corrected here."
+    confidence: high
     valid_from: 2025-11-19
     valid_until: null
 
@@ -73,6 +73,10 @@ sources:
   - title: "Ordinary legislative procedure — overview"
     url: "https://www.europarl.europa.eu/olp/en/ordinary-legislative-procedure/overview"
     publisher: "European Parliament"
+  - title: "COM(2020) 66 final (CELEX 52020DC0066)"
+    url: "https://publications.europa.eu/resource/celex/52020DC0066"
+    publisher: "Publications Office of the European Union"
+    accessed: "2026-11-17"
 ---
 
 # European Commission

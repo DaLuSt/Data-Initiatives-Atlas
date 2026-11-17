@@ -24,7 +24,7 @@ verification: primary-source
 
 start_date: 2018-05-25
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-11-17"
 previous_version: null
 successor: null
 
@@ -44,8 +44,8 @@ relationships:
   - type: references
     target: INTL-CONVENTION-108
     source: fact
-    evidence: "Recital 105 of the GDPR indicates that the European Commission will take into account a third country's accession to Convention 108 in its adequacy findings; the modernised Convention and the GDPR are described as compatible instruments addressing similar challenges (iapp.org 'Modernized CoE Convention 108: A global standard on data protection'; caseguard.com 'The Modernization of Convention 108'; ambitcompliance.ie 'From Convention 108 to GDPR'). NOT READ — search-only."
-    confidence: medium
+    evidence: "Regulation (EU) 2016/679, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32016R0679): recital 105, 'In particular, the third country's accession to the Council of Europe Convention of 28 January 1981 for the Protection of Individuals with regard to the Automatic Processing of Personal Data and its Additional Protocol should be taken into account.' The earlier record's statement that the modernised Convention and the GDPR are 'compatible instruments' came from a secondary source and is not repeated here."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-in

@@ -10,8 +10,12 @@ description: >
   European Commission legislative proposal of 19 November 2025 to simplify
   the EU digital rulebook. It would repeal the Data Governance Act, the Open
   Data Directive and the Free Flow of Non-Personal Data Regulation,
-  transferring them into the Data Act, and would amend the GDPR, the
-  ePrivacy Directive and the Data Act. Not adopted; distinct from the
+  transferring them into the Data Act. Its title, read directly in
+  COM(2025) 837 final, says it amends Regulations (EU) 2016/679 (GDPR),
+  2018/1724 (Single Digital Gateway), 2018/1725 and 2023/2854 (Data Act) and
+  Directives 2002/58/EC (ePrivacy), 2022/2555 (NIS2) and 2022/2557 (CER),
+  and repeals Regulations 2018/1807, 2019/1150 and 2022/868 and Directive
+  2019/1024. Not adopted; distinct from the
   sibling "Digital Omnibus on AI" proposal (COM(2025) 836), which amends
   the AI Act separately and has since been adopted as Regulation (EU)
   2026/1744.
@@ -27,7 +31,7 @@ verification: primary-source
 
 start_date: 2025-11-19
 end_date: null
-last_verified: "2026-11-09"
+last_verified: "2026-11-17"
 previous_version: null
 successor: null
 
@@ -101,6 +105,10 @@ sources:
     url: "https://www.cuatrecasas.com/en/latam/intellectual-property/art/digital-omnibus-eu-council-establishes-position"
     publisher: "Cuatrecasas (law firm, secondary)"
     accessed: "2026-11-09"
+  - title: "COM(2025) 837 final (CELEX 52025PC0837), the proposal"
+    url: "https://publications.europa.eu/resource/celex/52025PC0837"
+    publisher: "Publications Office of the European Union"
+    accessed: "2026-11-17"
 ---
 
 # Digital Omnibus (proposal)
@@ -205,6 +213,10 @@ proposal text itself before being relied upon in detail.
   completing this row).
 - References (amends) [[EU-DATA-ACT]] and [[EU-GDPR]].
 - **No relationship to [[EU-AI-ACT]]** — corrected in the 2026-08-28 pass; see above.
+
+## The proposal's own title, read 2026-11-17
+
+The proposal was downloaded from the Publications Office (COM(2025) 837 final, 2025/0360 (COD), Brussels, 19.11.2025) and its title read directly: "Proposal for a REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL amending Regulations (EU) 2016/679, (EU) 2018/1724, (EU) 2018/1725, (EU) 2023/2854 and Directives 2002/58/EC, (EU) 2022/2555 and (EU) 2022/2557 as regards the simplification of the digital legislative framework, and repealing Regulations (EU) 2018/1807, (EU) 2019/1150, (EU) 2022/868, and Directive (EU) 2019/1024 (Digital Omnibus)". The Atlas had recorded it as amending only the GDPR, the ePrivacy Directive and the Data Act; it also amends the Single Digital Gateway Regulation ([[EU-SDG]]), Regulation (EU) 2018/1725 (data protection by EU institutions), [[EU-NIS2]] and [[EU-CER]], and it also repeals Regulation (EU) 2019/1150 (platform-to-business relations), which is not an Atlas entity. The Atlas has no type for a proposed amendment, so these are recorded here, not as edges; the three `proposes-to-supersede` edges stand.
 
 ## Sources
 

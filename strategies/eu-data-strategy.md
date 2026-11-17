@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: 2020-02-19
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-11-17"
 previous_version: null
 successor: null
 
@@ -36,8 +36,8 @@ relationships:
   - type: produces
     target: EU-COMMON-DATA-SPACES
     source: fact
-    evidence: "One of the strategy's four pillars is common European data spaces in strategic sectors and domains of public interest; the Commission intends to fund EU-wide interoperable data spaces (COM(2020)66; digital-strategy.ec.europa.eu strategy-data). NOT READ — search-only."
-    confidence: medium
+    evidence: "The Communication 'A European strategy for data', COM(2020) 66 final of 19.2.2020, read directly 2026-11-17 from the Publications Office (CELEX 52020DC0066): 'The actions are based on four pillars', the fourth being 'D. Common European data spaces in strategic sectors and domains of public interest'."
+    confidence: high
     valid_from: 2020-02-19
     valid_until: null
 
@@ -48,6 +48,10 @@ sources:
   - title: "A European strategy for data"
     url: "https://digital-strategy.ec.europa.eu/en/policies/strategy-data"
     publisher: "European Commission — Shaping Europe's digital future"
+  - title: "COM(2020) 66 final (CELEX 52020DC0066)"
+    url: "https://publications.europa.eu/resource/celex/52020DC0066"
+    publisher: "Publications Office of the European Union"
+    accessed: "2026-11-17"
 ---
 
 # A European strategy for data

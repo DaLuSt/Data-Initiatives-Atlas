@@ -21,7 +21,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-11-17"
 previous_version: null
 successor: null
 
@@ -41,8 +41,8 @@ relationships:
   - type: participates-in
     target: EU-EDPB
     source: fact
-    evidence: "The EDPS has the right to appoint one representative to the EDPB, facilitating close cooperation between the two (edpb.europa.eu; edps.europa.eu). NOT READ — search-only."
-    confidence: medium
+    evidence: "Regulation (EU) 2016/679, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32016R0679): Article 68(3), 'The Board shall be composed of the head of one supervisory authority of each Member State and of the European Data Protection Supervisor, or their respective representatives.'"
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -50,6 +50,10 @@ sources:
   - title: "EDPB and EDPS support strengthening EU's cybersecurity — press release"
     url: "https://www.edps.europa.eu/press-publications/press-news/press-releases/2026/edpb-and-edps-support-strengthening-eus-cybersecurity-and-easing-compliance-while-protecting-individuals-personal-data_en"
     publisher: "European Data Protection Supervisor"
+  - title: "Official Journal text (CELEX 32016R0679)"
+    url: "https://publications.europa.eu/resource/celex/32016R0679"
+    publisher: "Publications Office of the European Union"
+    accessed: "2026-11-17"
 ---
 
 # European Data Protection Supervisor (EDPS)
