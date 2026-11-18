@@ -25,7 +25,7 @@ verification: primary-source
 
 start_date: 2002-07-31
 end_date: null
-last_verified: "2026-11-13"
+last_verified: "2026-11-18"
 previous_version: null
 successor: null
 
@@ -44,15 +44,19 @@ relationships:
     confidence: high
     valid_from: 2002-07-31
     valid_until: null
-  - type: related-to
+  - type: references
     target: EU-GDPR
-    source: interpretation
-    evidence: "Article 1(2) says the Directive's provisions 'particularise and complement Directive 95/46/EC'. That directive is not an Atlas entity; the GDPR is the Atlas's entity for the general data protection regime that followed it. How the GDPR itself treats references to Directive 95/46/EC was not read for this entity, so the edge is the Atlas's own reading and not a statement of either text. The Digital Services Act names the two side by side (Article 2(4)(g))."
-    confidence: medium
+    source: fact
+    evidence: "Directive 2002/58/EC, Article 1(2): its provisions 'particularise and complement Directive 95/46/EC'. Regulation (EU) 2016/679, read directly 2026-11-18 from the Official Journal text (Publications Office, CELEX 32016R0679): Article 94(1), 'Directive 95/46/EC is repealed with effect from 25 May 2018', and 94(2), 'References to the repealed Directive shall be construed as references to this Regulation.' So the Directive's reference is, by the GDPR's own rule, a reference to the GDPR. Article 95 sets the other side: the GDPR 'shall not impose additional obligations' on providers of publicly available electronic communications services 'in relation to matters for which they are subject to specific obligations with the same objective set out in Directive 2002/58/EC'. Retyped from `related-to` on 2026-11-18 (roadmap #774)."
+    confidence: high
     valid_from: null
     valid_until: null
 
 sources:
+  - title: "Regulation (EU) 2016/679 (GDPR), Articles 94 and 95, Official Journal text"
+    url: "https://publications.europa.eu/resource/celex/32016R0679"
+    publisher: "Publications Office of the European Union"
+    accessed: "2026-11-18"
   - title: "Directive 2002/58/EC (Directive on privacy and electronic communications), Official Journal text"
     url: "https://publications.europa.eu/resource/celex/32002L0058"
     publisher: "Publications Office of the European Union"
@@ -92,7 +96,9 @@ GDPR among the acts it leaves untouched. The proposed EU KIDS Act does the same 
 
 ## Not modelled
 
-- **Directive 95/46/EC** and **Directive 97/66/EC** are not Atlas entities.
+- **Directive 95/46/EC** and **Directive 97/66/EC** are not Atlas entities. The edge to [[EU-GDPR]] is `references`
+  because GDPR Article 94(2) turns references to Directive 95/46/EC into references to the GDPR, and Article 95 keeps
+  the two from overlapping (read directly 2026-11-18).
 - National transpositions (for example the telecommunications acts several country entities cite) are not linked: no
   national act was read for a statement that it implements this Directive.
 - The amendment the [[EU-DIGITAL-OMNIBUS]] proposes is recorded on that entity, in prose, not as an edge here.

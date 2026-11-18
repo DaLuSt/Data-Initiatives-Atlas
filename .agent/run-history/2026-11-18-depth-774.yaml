@@ -1,0 +1,15 @@
+date: "2026-11-18"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #774 (graph depth), a slice: three related-to edges between the most connected EU instruments retyped to
+  references, each read directly from the Official Journal text. EU-EPRIVACY-DIRECTIVE to EU-GDPR (GDPR Article
+  94(2) turns the Directive's references to Directive 95/46/EC into references to the GDPR; Article 95 keeps the two
+  apart); EU-FREE-FLOW-NON-PERSONAL-DATA to EU-GDPR (Regulation 2018/1807 Article 2(2), mixed data sets); EU-LED to
+  EU-GDPR (Directive 2016/680 Article 9(1) and (2)). Looked at and left as related-to, with the reason already in
+  the evidence: the AI continent action plan to the AI Act (support for implementing an existing Regulation, not an
+  implementing instrument). Not yet examined: the edges at the top of the degree list that link international
+  organisations and candidate countries to the EU (Council of Europe, CEFTA, Kosovo, the EEA Joint Committee, the UfM,
+  OpenPeppol) and Benelux to its members; whether a precise type fits them is for a later pass.
+  Closes the run-history entry for #799 if it has merged.
+prs: []
+outcome: in-progress

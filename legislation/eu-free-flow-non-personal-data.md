@@ -26,7 +26,7 @@ verification: primary-source
 
 start_date: 2019-05-28
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-11-18"
 previous_version: null
 successor: null
 
@@ -45,15 +45,19 @@ relationships:
     confidence: high
     valid_from: 2019-05-28
     valid_until: null
-  - type: related-to
+  - type: references
     target: EU-GDPR
     source: fact
-    evidence: "Confirmed by reading legislation.gov.uk's own text directly (2026-09-05): the Regulation states it explicitly complements rather than replaces data protection law, and that GDPR's rules on personal data 'are not affected by this Regulation' — the two regimes are deliberately kept distinct, with mixed datasets receiving coordinated treatment under both."
+    evidence: "Regulation (EU) 2018/1807, read directly 2026-11-18 from the Official Journal text (Publications Office, CELEX 32018R1807): Article 2(1), it 'applies to the processing of electronic data other than personal data in the Union'; Article 2(2), 'In the case of a data set composed of both personal and non-personal data, this Regulation applies to the non-personal data part of the data set. Where personal and non-personal data in a data set are inextricably linked, this Regulation shall not prejudice the application of Regulation (EU) 2016/679.' First recorded 2026-09-05 as `related-to` from the legislation.gov.uk mirror; retyped 2026-11-18 (roadmap #774): the Regulation names the GDPR to carve its own scope around it, which is a reference, not a dependency or an amendment."
     confidence: high
     valid_from: null
     valid_until: null
 
 sources:
+  - title: "Regulation (EU) 2018/1807, Article 2, Official Journal text"
+    url: "https://publications.europa.eu/resource/celex/32018R1807"
+    publisher: "Publications Office of the European Union"
+    accessed: "2026-11-18"
   - title: "Regulation (EU) 2018/1807 of the European Parliament and of the Council of 14 November 2018 on a framework for the free flow of non-personal data in the European Union"
     url: "https://www.legislation.gov.uk/eur/2018/1807/2020-01-31"
     publisher: "legislation.gov.uk (UK retained-EU-law mirror)"
@@ -115,8 +119,8 @@ remains a proposal, not adopted law.
 ## Relationships
 
 - Applies in [[EU]] — directly applicable EU regulation, anchor edge.
-- Related to [[EU-GDPR]] — deliberately non-overlapping regimes for
-  non-personal vs. personal data.
+- `references` [[EU-GDPR]]: Article 2(2) applies the Regulation to the non-personal part of a mixed data set and
+  leaves the GDPR unprejudiced where the two are inextricably linked (read directly 2026-11-18; `related-to` until then).
 - [[EU-DIGITAL-OMNIBUS]] proposes to repeal this Regulation — the typed
   `proposes-to-supersede` edge is recorded on that entity, pointing here,
   matching the convention already used for its edges to [[EU-DGA]] and

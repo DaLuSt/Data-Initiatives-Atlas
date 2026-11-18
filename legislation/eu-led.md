@@ -30,7 +30,7 @@ verification: primary-source
 
 start_date: 2016-04-27
 end_date: null
-last_verified: "2026-09-17"
+last_verified: "2026-11-18"
 previous_version: null
 successor: null
 
@@ -43,15 +43,19 @@ related_entities:
   - EU-UK-ADEQUACY
   - LU-LOI-DONNEES-PENAL-2018
 relationships:
-  - type: related-to
+  - type: references
     target: EU-GDPR
     source: fact
-    evidence: "Confirmed by reading eur-lex.europa.eu's own TXT/HTML text of CELEX:32016L0680 directly (2026-09-12): adopted the same day as the GDPR (27 April 2016) as its complementary instrument — the GDPR applies to general data processing by public and private entities, while this Directive specifically addresses law enforcement processing for criminal purposes, with the GDPR applying when law enforcement authorities process data outside that mandate. Recorded as `related-to` rather than a directional type, since neither instrument implements or is governed by the other — they divide the same subject matter by scope."
+    evidence: "Directive (EU) 2016/680, read directly 2026-11-18 from the Official Journal text (Publications Office, CELEX 32016L0680): Article 9(1), where personal data collected for law enforcement purposes are processed for other purposes, 'Regulation (EU) 2016/679 shall apply unless the processing is carried out in an activity which falls outside the scope of Union law'; Article 9(2), where competent authorities perform other tasks, 'Regulation (EU) 2016/679 shall apply to processing for such purposes'. First recorded 2026-09-12 as `related-to` (two instruments dividing one subject by scope, adopted the same day, 27 April 2016); retyped 2026-11-18 (roadmap #774) to `references`, because the Directive names the GDPR to hand over the processing it does not cover. Neither implements nor governs the other, which is still true."
     confidence: high
     valid_from: 2016-04-27
     valid_until: null
 
 sources:
+  - title: "Directive (EU) 2016/680, Article 9, Official Journal text"
+    url: "https://publications.europa.eu/resource/celex/32016L0680"
+    publisher: "Publications Office of the European Union"
+    accessed: "2026-11-18"
   - title: "Directive (EU) 2016/680 of the European Parliament and of the Council of 27 April 2016"
     url: "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016L0680"
     publisher: "EUR-Lex"
@@ -102,9 +106,11 @@ governed by the other, so the relationship recorded here is `related-to`.
 
 ## Relationships
 
-- `related-to` [[EU-GDPR]] — complementary EU data-protection instrument,
+- `references` [[EU-GDPR]] — complementary EU data-protection instrument,
   adopted the same day, dividing scope by processing purpose rather than
-  one implementing the other.
+  one implementing the other. Article 9(1) and (2) name the GDPR as the law
+  for processing outside the law-enforcement purposes (read directly
+  2026-11-18; `related-to` until then).
 
 [[IE-DPA-2018]] carries the inverse `implements-requirement-from` edge
 pointing here, and [[EU-UK-ADEQUACY]] a second `governed-by` edge
