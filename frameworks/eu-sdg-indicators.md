@@ -7,13 +7,13 @@ alternative_names:
   - EU SDG indicator list
 description: >
   The indicator set against which Eurostat monitors the European Union's
-  progress towards the Sustainable Development Goals, comprising around 100
-  indicators — reported as 102 in one Eurostat source. Eurostat coordinates
-  its development using statistics from the European Statistical System and
-  publishes annual assessment reports. Of the 100 EU indicators, 55 are
-  derived from or similar to the list of SDG indicators drawn up by the UN;
-  the selected EU indicators have strong links with EU policies and
-  initiatives and complement the UN global indicators from an EU angle. The
+  progress towards the Sustainable Development Goals. Established in July
+  2017 with 100 indicators, it has 102 in the 2026 monitoring report, of
+  which 34 are multi-purpose and around two-thirds are aligned with the UN
+  SDG indicators. Eurostat coordinates its development using statistics from
+  the European Statistical System and publishes annual assessment reports;
+  the indicators have strong links with EU policies and complement the UN
+  global indicators from an EU angle. The
   European Commission contributed to the UN's global SDG monitoring in 2023
   through the first EU voluntary review.
 
@@ -28,7 +28,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-19"
+last_verified: "2026-11-18"
 previous_version: null
 successor: null
 
@@ -48,14 +48,14 @@ relationships:
   - type: based-on
     target: UN-SDG-INDICATORS
     source: fact
-    evidence: "Of the 100 EU indicators, 55 are derived from or similar to the list of SDG indicators drawn up by the UN; the selected EU indicators have strong links with EU policies and initiatives and complement from an EU angle the UN global indicators by referring to goals and targets specified in the 2030 Agenda (ec.europa.eu/eurostat 'SDG – Introduction'; ec.europa.eu/eurostat/web/sdi/information-data; ec.europa.eu/eurostat news 'New EU SDG indicator list established'). NOT READ — search-only."
+    evidence: "Eurostat's Statistics Explained article 'SDG – Introduction' (2026 edition, data extracted April 2026), read directly 2026-11-18: 'Out of the 102 indicators, 34 are ‘multi-purpose’' and 'Around two-thirds of the current EU SDG indicators are aligned with the UN SDG indicators.' Eurostat's news item of 7 July 2017, read directly: the indicators 'complement from an EU angle the UN global indicators, which refer to the goals and targets specified in the 2030 Agenda'. The earlier '55 of the 100' figure was not found on any page read and is dropped."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: maintained-by
     target: EU-EUROSTAT
     source: fact
-    evidence: "Eurostat regularly monitors the EU's progress towards the SDGs, publishing annual assessment reports, and coordinates the development of the EU SDG indicator set using high-quality statistics from the European Statistical System; Eurostat monitors progress along a set of around 100 indicators (ec.europa.eu/eurostat 'SDG – Introduction'; ec.europa.eu/eurostat/web/sdi/publications). NOT READ — search-only."
+    evidence: "Eurostat's 'Information on data' page for the SDG indicators, read directly 2026-11-18: 'Eurostat regularly monitors the EU’s progress towards the SDGs, publishing annual assessment reports. Making use of high-quality statistics of the European Statistical System and complementary data from partner institutions, Eurostat coordinates the development of the EU SDG indicator set and keeps it up to date.'"
     confidence: medium
     valid_from: null
     valid_until: null
@@ -88,24 +88,31 @@ sources:
 ## Description
 
 Eurostat monitors the EU's progress towards the Sustainable Development
-Goals against a set of around **100 indicators** — one Eurostat source says
-102 — coordinating its development using statistics from [[EU-ESS]] and
-publishing annual assessment reports.
+Goals against a set that Eurostat's 2017 news item gives as **100 indicators**
+and the 2026 monitoring report as **102**, coordinating its development using
+statistics from [[EU-ESS]] and publishing annual assessment reports.
 
-**55 of the 100 are derived from or similar to the UN list.** The rest have
-strong links to EU policies and complement the global indicators from an EU
-angle.
+**Around two-thirds are aligned with the UN SDG indicators** (Statistics
+Explained, "SDG – Introduction", 2026 edition, read directly 2026-11-18). The
+rest have strong links to EU policies and complement the global indicators
+from an EU angle.
+
+> **Corrected 2026-11-18.** This entity said "55 of the 100 are derived from or
+> similar to the UN list", from search results. None of the four Eurostat pages
+> it cites, read directly, gives that figure; the current one gives "around
+> two-thirds" of 102.
 
 ## A quantified descent, which is unusual here
 
 Most `based-on` edges in the Atlas are qualitative: a national profile is
 "a German adaptation of DCAT-AP", a framework "is based on" another. This
-one has a number attached — **55 of 100** — which makes it the most
-precisely specified derivation in the Atlas.
+one has a proportion attached — **around two-thirds of 102** — which makes it
+one of the more precisely specified derivations in the Atlas.
 
 It is also honest about being partial in both directions. The EU set is not
-a subset of the global framework (45 indicators are EU-specific) and not a
-superset (the global framework has 234). `based-on` is the right type
+a subset of the global framework (about a third of the indicators are not
+aligned with it) and not a superset (the UN General Assembly's list covered 232
+indicators when it was adopted in July 2017, per the same Eurostat page). `based-on` is the right type
 precisely because it does not claim either.
 
 ## The `applies-in` question, and why there is no answer here
