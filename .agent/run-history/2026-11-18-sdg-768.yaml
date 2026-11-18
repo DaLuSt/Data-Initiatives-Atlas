@@ -7,5 +7,5 @@ summary: >
   gives 102 indicators, 34 multi-purpose, "around two-thirds" aligned with the UN SDG indicators, and a UN list of 232
   indicators at its adoption in July 2017 (the entity had 234). Description, prose and both edges corrected; the
   comparison on DE-NACHHALTIGKEITSINDIKATOREN updated. Closes the run-history entry for #798.
-prs: []
-outcome: in-progress
+prs: [799]
+outcome: merged
