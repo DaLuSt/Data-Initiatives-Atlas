@@ -10,6 +10,6 @@ summary: >
   implementing instrument). Not yet examined: the edges at the top of the degree list that link international
   organisations and candidate countries to the EU (Council of Europe, CEFTA, Kosovo, the EEA Joint Committee, the UfM,
   OpenPeppol) and Benelux to its members; whether a precise type fits them is for a later pass.
-  Closes the run-history entry for #799 if it has merged.
+  Closes the run-history entry for #799.
 prs: []
 outcome: in-progress
