@@ -1,0 +1,11 @@
+date: "2026-11-18"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #768, a seventh slice: EU-SDG-INDICATORS' two "NOT READ — search-only" edges read directly from the four
+  Eurostat pages the entity cites. The reading corrected the entity: its "55 of the 100 indicators are derived from
+  or similar to the UN list" is on none of those pages; Statistics Explained's "SDG – Introduction" (2026 edition)
+  gives 102 indicators, 34 multi-purpose, "around two-thirds" aligned with the UN SDG indicators, and a UN list of 232
+  indicators at its adoption in July 2017 (the entity had 234). Description, prose and both edges corrected; the
+  comparison on DE-NACHHALTIGKEITSINDIKATOREN updated. Closes the run-history entry for #798.
+prs: []
+outcome: in-progress
