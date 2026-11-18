@@ -70,8 +70,9 @@ sources:
 Germany's own indicator set for measuring progress on the **German
 Sustainability Strategy**, incorporating "at least one indicator for each
 of the 17 [UN Sustainable Development] Goals" — confirmed by reading
-destatis.de directly. Unlike [[EU-SDG-INDICATORS]]'s quantified "55 of
-100" descent from the UN list, the German set's alignment is described
+destatis.de directly. Unlike [[EU-SDG-INDICATORS]]'s stated proportion
+("around two-thirds" of its 102 indicators aligned with the UN list; an
+earlier "55 of 100" figure there was corrected on 2026-11-18), the German set's alignment is described
 only qualitatively in the source read this pass: goal-by-goal coverage,
 not a counted overlap.
 
