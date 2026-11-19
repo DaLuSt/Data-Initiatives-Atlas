@@ -8,5 +8,5 @@ summary: >
   re-read: gesetze-im-internet.de still has no connection and bgbl.de is a JavaScript application; the Bundestag's
   DIP API needs a key. Found: dserver.bundestag.de serves Drucksachen as PDFs with a text layer, a route for other
   German entities whose statutes are blocked. Recorded as discovery/unresolved.md row #284. Closes the run-history entry for #804.
-prs: []
-outcome: in-progress
+prs: [805]
+outcome: merged
