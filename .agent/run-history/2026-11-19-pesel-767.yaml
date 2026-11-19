@@ -6,7 +6,6 @@ summary: >
   directly; confidence medium to high. Its maintained-by PL-COI edge still rests on Wikipedia and says why: Article
   6(2) gives the register's maintenance to the minister for digital affairs and does not name COI, COI's "O nas" page
   no longer lists PESEL, and gov.pl reset every connection on 2026-11-19. PL-SKW and PL-SWW lose a redundant
-  Wikipedia sentence from edges already read from the Journal of Laws. Closes the run-history entry for #802 if it
-  has merged.
+  Wikipedia sentence from edges already read from the Journal of Laws. Closes the run-history entry for #802.
 prs: []
 outcome: in-progress
