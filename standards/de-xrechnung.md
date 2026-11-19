@@ -44,14 +44,14 @@ relationships:
   - type: based-on
     target: EU-EN-16931
     source: fact
-    evidence: "KoSIT's own XRechnung page (xeinkauf.de/xrechnung/), read directly 2026-11-19: 'XRechnung bezeichnet den Standard zur elektronischen Rechnungsstellung bei öffentlichen Auftraggebern und setzt die Richtlinie 2014/55/EU in Deutschland maßgeblich um. Dabei besteht der Standard XRechnung aus der CIUS XRechnung sowie der Extension XRechnung'; among its aims, 'Ausgestaltung der durch die EN 16931-1 möglichen Spielräume auf semantischer Ebene'; and 'Die CIUS wird im Kapitel 7 der EN 16931-1 beschrieben und erlaubt im Wesentlichen, die Business Terms (BT) und Business Rules (BR) weiter zu konkretisieren', while an Extension 'ergänzt eine Extension die EN 16931-1 um weitere, zusätzliche Spezifizierungen'. First closed 2026-08-28 from de.wikipedia.org, cleartax.com and the Commission's CIUS-compliance page; the maintainer's own page replaces them, 2026-11-19 (roadmap #767)."
+    evidence: "KoSIT's own XRechnung page (xeinkauf.de/xrechnung/), read directly 2026-11-19: 'XRechnung bezeichnet den Standard zur elektronischen Rechnungsstellung bei öffentlichen Auftraggebern und setzt die Richtlinie 2014/55/EU in Deutschland maßgeblich um. Dabei besteht der Standard XRechnung aus der CIUS XRechnung sowie der Extension XRechnung'; among its aims, 'Ausgestaltung der durch die EN 16931-1 möglichen Spielräume auf semantischer Ebene'; and 'Die CIUS wird im Kapitel 7 der EN 16931-1 beschrieben und erlaubt im Wesentlichen, die Business Terms (BT) und Business Rules (BR) weiter zu konkretisieren', while an Extension 'ergänzt eine Extension die EN 16931-1 um weitere, zusätzliche Spezifizierungen'. First closed 2026-08-28 from Wikipedia, cleartax.com and the Commission's CIUS-compliance page; the maintainer's own page replaces them, 2026-11-19 (roadmap #767)."
     confidence: high
     valid_from: null
     valid_until: null
   - type: maintained-by
     target: DE-KOSIT
     source: fact
-    evidence: "KoSIT's own XRechnung page (xeinkauf.de/xrechnung/), read directly 2026-11-19: 'Der Standard XRechnung wird seit dem 01. Januar 2019 von der KoSIT auf Basis eines Betriebskonzepts betrieben, das vom IT-Planungsrat verabschiedet wurde', and 'Der Standard XRechnung wird von der KoSIT im Auftrag des IT-Planungsrats betrieben'. The page's contact block is the 'Koordinierungsstelle für IT Standards (KoSIT)' at the Senator für Finanzen, Bremen. Replaces the earlier secondary citation (de.wikipedia.org; xoev.de's support page was 404, and xoev.de answered 403 on 2026-11-19), roadmap #767."
+    evidence: "KoSIT's own XRechnung page (xeinkauf.de/xrechnung/), read directly 2026-11-19: 'Der Standard XRechnung wird seit dem 01. Januar 2019 von der KoSIT auf Basis eines Betriebskonzepts betrieben, das vom IT-Planungsrat verabschiedet wurde', and 'Der Standard XRechnung wird von der KoSIT im Auftrag des IT-Planungsrats betrieben'. The page's contact block is the 'Koordinierungsstelle für IT Standards (KoSIT)' at the Senator für Finanzen, Bremen. Replaces the earlier secondary citation (Wikipedia; xoev.de's support page was 404, and xoev.de answered 403 on 2026-11-19), roadmap #767."
     confidence: high
     valid_from: 2019-01-01
     valid_until: null
