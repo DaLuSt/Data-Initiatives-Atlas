@@ -7,6 +7,6 @@ summary: >
   which names the five as "służby specjalne", both read directly from the Sejm's ELI service, api.sejm.gov.pl, which
   answers without the CAPTCHA that blocks sejm.gov.pl (recorded as discovery/unresolved.md row #283). Confidence
   medium to high. The reading settles the entity's recorded conflict on the committee's size: Article 137(1) says no
-  more than 7 deputies, not arslege.pl's 8. Closes the run-history entry for #801 if it has merged.
+  more than 7 deputies, not arslege.pl's 8. Closes the run-history entry for #801.
 prs: []
 outcome: in-progress

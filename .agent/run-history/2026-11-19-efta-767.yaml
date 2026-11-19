@@ -10,5 +10,5 @@ summary: >
   Prose still sourced only to Wikipedia (the Court's history and judges, the Authority's staffing) is marked as such.
   Re-tried and still blocked: gesetze-im-internet.de (no connection) and coe.int (403). Closes the run-history entry
   for #800.
-prs: []
-outcome: in-progress
+prs: [801]
+outcome: merged
