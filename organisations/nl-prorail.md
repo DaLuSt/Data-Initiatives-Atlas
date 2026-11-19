@@ -24,7 +24,7 @@ verification: primary-source
 
 start_date: 2005-01-01
 end_date: null
-last_verified: "2026-09-13"
+last_verified: "2026-11-19"
 previous_version: null
 successor: null
 
@@ -41,8 +41,8 @@ relationships:
   - type: part-of
     target: NL
     source: fact
-    evidence: "Scope anchor under metadata/relationship-types.md §2.3. Confirmed by reading nl.wikipedia.org's own article directly (2026-09-13): ProRail B.V. is wholly owned, via the holding company Railinfratrust B.V., by the Dutch State ('volledig eigendom van de Nederlandse Staat')."
-    confidence: medium
+    evidence: "Scope anchor under metadata/relationship-types.md §2.3. ProRail's own 'Organisatie' page, read directly 2026-11-19: 'ProRail is een niet-beursgenoteerde vennootschap. ... De Nederlandse staat is, via Railinfratrust bv, de enige aandeelhouder van ProRail bv. Het aandeelhouderschap is ondergebracht bij het ministerie van Infrastructuur en Waterstaat.' Replaces the earlier Wikipedia citation (roadmap #767). A wholly state-owned company, not a ministry or agency, so the anchor stays at country scope rather than [[NL-IENW]], which holds the shares."
+    confidence: high
     valid_from: 2005-01-01
     valid_until: null
   - type: participates-in
@@ -54,6 +54,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Organisatie"
+    url: "https://www.prorail.nl/over-ons/organisatie"
+    publisher: "ProRail (prorail.nl)"
+    accessed: "2026-11-19"
   - title: "ProRail"
     url: "https://nl.wikipedia.org/wiki/ProRail"
     publisher: "Wikipedia"
