@@ -1,0 +1,12 @@
+date: "2026-11-19"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #767, a third slice, using the Sejm's ELI service found for #802. PL-PESEL's governed-by edge drops its
+  Wikipedia corroboration for Articles 6(1)-(2) of the Act on population registration (Dz.U. 2026 poz. 384), read
+  directly; confidence medium to high. Its maintained-by PL-COI edge still rests on Wikipedia and says why: Article
+  6(2) gives the register's maintenance to the minister for digital affairs and does not name COI, COI's "O nas" page
+  no longer lists PESEL, and gov.pl reset every connection on 2026-11-19. PL-SKW and PL-SWW lose a redundant
+  Wikipedia sentence from edges already read from the Journal of Laws. Closes the run-history entry for #802 if it
+  has merged.
+prs: []
+outcome: in-progress
