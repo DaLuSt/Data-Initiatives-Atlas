@@ -28,7 +28,7 @@ coverage: medium
 verification: primary-source
 start_date: 2021-07-23
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-11-19"
 previous_version: DE-IWG
 successor: null
 
@@ -43,19 +43,23 @@ relationships:
   - type: implements-requirement-from
     target: EU-OPEN-DATA-DIRECTIVE
     source: fact
-    evidence: "Confirmed by reading de.wikipedia.org's 'Datennutzungsgesetz' article (2026-08-22): the DNG 'dient der Umsetzung der PSI-Richtlinie', citing 'Richtlinie (EU) 2019/1024 des Europäischen Parlaments und des Rates vom 20. Juni 2019 über offene Daten und die Weiterverwendung von Informationen des öffentlichen Sektors' directly."
+    evidence: "The Federal Government's bill, Bundestag Drucksache 19/27442 of 9 March 2021 ('Entwurf eines Gesetzes zur Änderung des E-Government-Gesetzes und zur Einführung des Gesetzes für die Nutzung von Daten des öffentlichen Sektors'), read directly 2026-11-19 from dserver.bundestag.de, of which Article 2 is the DNG: its footnote reads 'Dieses Gesetz dient der Umsetzung der Richtlinie (EU) 2019/1024 des Europäischen Parlaments und des Rates vom 20. Juni 2019 über offene Daten und die Weiterverwendung von Informationen des öffentlichen Sektors (ABl. L 172 vom 26.6.2019, S. 56)', and the explanatory memorandum to Article 3 notes that 'die Umsetzungsfrist der Richtlinie (EU) 2019/1024 bereits am 17. Juli 2021 endet'. This is the bill as introduced; the enacted text in the Federal Law Gazette was not read (gesetze-im-internet.de and bgbl.de could not be read on 2026-11-19), so `confidence` stays medium. Replaces the earlier secondary citation (Wikipedia), roadmap #767."
     confidence: medium
     valid_from: 2021-07-23
     valid_until: null
   - type: supersedes
     target: DE-IWG
     source: fact
-    evidence: "Confirmed by reading de.wikipedia.org's 'Datennutzungsgesetz' article (2026-08-22): the DNG 'löste das Informationsweiterverwendungsgesetz (IWG) ab', and the statute text itself (gesetze-im-internet.de) confirms entry into force '23. Juli 2021'."
+    evidence: "The Federal Government's bill, Bundestag Drucksache 19/27442 of 9 March 2021 ('Entwurf eines Gesetzes zur Änderung des E-Government-Gesetzes und zur Einführung des Gesetzes für die Nutzung von Daten des öffentlichen Sektors'), read directly 2026-11-19 from dserver.bundestag.de, of which Article 2 is the DNG: Article 3 ('Inkrafttreten, Außerkrafttreten'), 'Dieses Gesetz tritt am Tag nach der Verkündung in Kraft. Gleichzeitig tritt das Informationsweiterverwendungsgesetz vom 13. Dezember 2006 (BGBl. I S. 2913) ... außer Kraft', and the summary, the DNG 'das das Informationsweiterverwendungsgesetz ablöst'. The date, 23 July 2021, is from the statute text on gesetze-im-internet.de, read earlier. The enacted text was not read on 2026-11-19, so `confidence` stays medium. Replaces the earlier secondary citation (Wikipedia), roadmap #767."
     confidence: medium
     valid_from: 2021-07-23
     valid_until: null
 
 sources:
+  - title: "Gesetzentwurf der Bundesregierung, Drucksache 19/27442 (9 March 2021), Articles 2 and 3"
+    url: "https://dserver.bundestag.de/btd/19/274/1927442.pdf"
+    publisher: "Deutscher Bundestag"
+    accessed: "2026-11-19"
   - title: "DNG — Gesetz für die Nutzung von Daten des öffentlichen Sektors"
     url: "https://www.gesetze-im-internet.de/dng/DNG.pdf"
     publisher: "Bundesministerium der Justiz / juris (Gesetze im Internet)"
@@ -87,6 +91,11 @@ sources:
 > **Verified 2026-08-22.** The consolidated statute text at
 > gesetze-im-internet.de and de.wikipedia.org's "Datennutzungsgesetz"
 > article were read directly and confirmed the claims below.
+>
+> **2026-11-19:** the two edges that rested on Wikipedia now quote the Federal Government's bill,
+> Bundestag Drucksache 19/27442, read directly: Article 2 is the DNG, its footnote names Directive (EU)
+> 2019/1024, and Article 3 repeals the IWG on entry into force. The enacted text was not re-read
+> (gesetze-im-internet.de and bgbl.de could not be reached), so both stay at medium confidence.
 
 ## Description
 

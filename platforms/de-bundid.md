@@ -43,21 +43,21 @@ relationships:
   - type: governed-by
     target: DE-OZG
     source: fact
-    evidence: "digitale-verwaltung.de's own BundID page (read directly 2026-10-01 via the cookie-jar workaround, discovery/unresolved.md row #217): the BundID is provided 'als Basisdienst im OZG-Kontext', identity data is stored under '§ 8 OZG', and a transitional rule in '§3 OZGÄndG' keeps the Länder accounts running until they can switch to the BundID. The de.wikipedia.org citation this edge first rested on (2026-08-22) is dropped, 2026-11-19 (roadmap #767)."
+    evidence: "digitale-verwaltung.de's own BundID page (read directly 2026-10-01 via the cookie-jar workaround, discovery/unresolved.md row #217): the BundID is provided 'als Basisdienst im OZG-Kontext', identity data is stored under '§ 8 OZG', and a transitional rule in '§3 OZGÄndG' keeps the Länder accounts running until they can switch to the BundID. The Wikipedia citation this edge first rested on (2026-08-22) is dropped, 2026-11-19 (roadmap #767)."
     confidence: high
     valid_from: null
     valid_until: null
   - type: implements-requirement-from
     target: EU-EIDAS
     source: fact
-    evidence: "digitale-verwaltung.de's own BundID page (read directly 2026-10-01 via the cookie-jar workaround, discovery/unresolved.md row #217): 'Registrierung und Anmeldung bei der BundID erfolgen nach den Vorgaben der europäischen Verordnung über elektronische Identifizierung und Vertrauensdienste (eIDAS-VO)', and among the admitted means 'gemäß eIDAS-VO zugelassene Identifizierungsmittel der EU-Mitgliedstaaten'. bmds.bund.de confirms EU eIDs from other member states are an accepted access method. Medium, not high: the source states conformity with eIDAS requirements, not that BundID transposes the regulation. The de.wikipedia.org citation this edge first rested on is dropped, 2026-11-19 (roadmap #767)."
+    evidence: "digitale-verwaltung.de's own BundID page (read directly 2026-10-01 via the cookie-jar workaround, discovery/unresolved.md row #217): 'Registrierung und Anmeldung bei der BundID erfolgen nach den Vorgaben der europäischen Verordnung über elektronische Identifizierung und Vertrauensdienste (eIDAS-VO)', and among the admitted means 'gemäß eIDAS-VO zugelassene Identifizierungsmittel der EU-Mitgliedstaaten'. bmds.bund.de confirms EU eIDs from other member states are an accepted access method. Medium, not high: the source states conformity with eIDAS requirements, not that BundID transposes the regulation. The Wikipedia citation this edge first rested on is dropped, 2026-11-19 (roadmap #767)."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: maintained-by
     target: DE-BMDS
     source: fact
-    evidence: "digitale-verwaltung.de's own BundID page (read directly 2026-10-01 via the cookie-jar workaround, discovery/unresolved.md row #217): 'Die BundID wird als Basisdienst im Sinne des Onlinezugangsgesetzes (OZG) zentral vom Bundesministerium für Digitales und Staatsmodernisierung betrieben und weiterentwickelt'. The de.wikipedia.org citation this edge first rested on is dropped, 2026-11-19 (roadmap #767)."
+    evidence: "digitale-verwaltung.de's own BundID page (read directly 2026-10-01 via the cookie-jar workaround, discovery/unresolved.md row #217): 'Die BundID wird als Basisdienst im Sinne des Onlinezugangsgesetzes (OZG) zentral vom Bundesministerium für Digitales und Staatsmodernisierung betrieben und weiterentwickelt'. The Wikipedia citation this edge first rested on is dropped, 2026-11-19 (roadmap #767)."
     confidence: high
     valid_from: null
     valid_until: null
