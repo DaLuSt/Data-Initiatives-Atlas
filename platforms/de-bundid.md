@@ -27,7 +27,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-10-01"
+last_verified: "2026-11-19"
 previous_version: null
 successor: null
 
@@ -43,21 +43,21 @@ relationships:
   - type: governed-by
     target: DE-OZG
     source: fact
-    evidence: "Confirmed by reading de.wikipedia.org's 'BundID' article (2026-08-22): 'Die gesetzliche Grundlage der BundID findet sich im Onlinezugangsgesetz (OZG).' **Corroborated 2026-10-01** by a primary source, digitale-verwaltung.de's own BundID page (read directly via the cookie-jar workaround, discovery/unresolved.md row #217): the BundID is provided 'als Basisdienst im OZG-Kontext', identity data is stored under '§ 8 OZG', and a transitional rule in '§3 OZGÄndG' keeps the Länder accounts running until they can switch to the BundID."
+    evidence: "digitale-verwaltung.de's own BundID page (read directly 2026-10-01 via the cookie-jar workaround, discovery/unresolved.md row #217): the BundID is provided 'als Basisdienst im OZG-Kontext', identity data is stored under '§ 8 OZG', and a transitional rule in '§3 OZGÄndG' keeps the Länder accounts running until they can switch to the BundID. The de.wikipedia.org citation this edge first rested on (2026-08-22) is dropped, 2026-11-19 (roadmap #767)."
     confidence: high
     valid_from: null
     valid_until: null
   - type: implements-requirement-from
     target: EU-EIDAS
     source: fact
-    evidence: "Confirmed by reading de.wikipedia.org's 'BundID' article (2026-08-22): 'Anmeldung und Registrierung der ... von der Bundesministerium für Digitales und Staatsmodernisierung betriebenen BundID erfolgen nach den Vorgaben der europäischen eIDAS-Verordnung.' bmds.bund.de confirms EU eIDs from other member states are an accepted access method. **Corroborated 2026-10-01** by a government primary source: digitale-verwaltung.de's BundID page (read directly, row #217) says 'Registrierung und Anmeldung bei der BundID erfolgen nach den Vorgaben der europäischen Verordnung über elektronische Identifizierung und Vertrauensdienste (eIDAS-VO)' and lists the admitted means, including 'gemäß eIDAS-VO zugelassene Identifizierungsmittel der EU-Mitgliedstaaten'. Raised from low to medium, not high: the source states conformity with eIDAS requirements, not that BundID transposes the regulation."
+    evidence: "digitale-verwaltung.de's own BundID page (read directly 2026-10-01 via the cookie-jar workaround, discovery/unresolved.md row #217): 'Registrierung und Anmeldung bei der BundID erfolgen nach den Vorgaben der europäischen Verordnung über elektronische Identifizierung und Vertrauensdienste (eIDAS-VO)', and among the admitted means 'gemäß eIDAS-VO zugelassene Identifizierungsmittel der EU-Mitgliedstaaten'. bmds.bund.de confirms EU eIDs from other member states are an accepted access method. Medium, not high: the source states conformity with eIDAS requirements, not that BundID transposes the regulation. The de.wikipedia.org citation this edge first rested on is dropped, 2026-11-19 (roadmap #767)."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: maintained-by
     target: DE-BMDS
     source: fact
-    evidence: "Confirmed by reading de.wikipedia.org's 'BundID' article (2026-08-22): the article names the Bundesministerium für Digitales und Staatsmodernisierung as the operator, and bmds.bund.de's own 'BundID' page is published under the ministry's domain. **Corroborated 2026-10-01** by digitale-verwaltung.de's own BundID page (read directly, row #217): 'Die BundID wird als Basisdienst im Sinne des Onlinezugangsgesetzes (OZG) zentral vom Bundesministerium für Digitales und Staatsmodernisierung betrieben und weiterentwickelt' — operated and further developed centrally by the BMDS, stated by a government source rather than inferred from Wikipedia and a domain name."
+    evidence: "digitale-verwaltung.de's own BundID page (read directly 2026-10-01 via the cookie-jar workaround, discovery/unresolved.md row #217): 'Die BundID wird als Basisdienst im Sinne des Onlinezugangsgesetzes (OZG) zentral vom Bundesministerium für Digitales und Staatsmodernisierung betrieben und weiterentwickelt'. The de.wikipedia.org citation this edge first rested on is dropped, 2026-11-19 (roadmap #767)."
     confidence: high
     valid_from: null
     valid_until: null
@@ -121,6 +121,10 @@ sources:
 > or portals; and that the OZG-Änderungsgesetz envisages developing it into
 > the central German citizen account. Three edges are raised accordingly.
 > `start_date` stays `null`: the source gives only a month.
+>
+> **2026-11-19:** all three edges now rest on that government page alone; the de.wikipedia.org citations
+> they first carried are dropped from the evidence (roadmap #767). The article stays listed in `sources`
+> as what was first read.
 
 ## Description
 
