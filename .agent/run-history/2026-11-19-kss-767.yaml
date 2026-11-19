@@ -1,0 +1,12 @@
+date: "2026-11-19"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #767 (Wikipedia citations), a second slice: PL-KSS's five applies-to edges (ABW, AW, CBA, SKW, SWW) no
+  longer rest on pl.wikipedia.org and the arslege.pl mirror. They quote the official consolidated Regulamin Sejmu
+  (M.P. 2026 poz. 573, annex point 2 and Article 139(3)) and Article 11 of the ABW and AW Act (Dz.U. 2026 poz. 937),
+  which names the five as "służby specjalne", both read directly from the Sejm's ELI service, api.sejm.gov.pl, which
+  answers without the CAPTCHA that blocks sejm.gov.pl (recorded as discovery/unresolved.md row #283). Confidence
+  medium to high. The reading settles the entity's recorded conflict on the committee's size: Article 137(1) says no
+  more than 7 deputies, not arslege.pl's 8. Closes the run-history entry for #801 if it has merged.
+prs: []
+outcome: in-progress
