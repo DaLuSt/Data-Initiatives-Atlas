@@ -1,0 +1,14 @@
+date: "2026-11-19"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #767 (Wikipedia citations), a slice: the ten edges of INTL-EFTA, INTL-EFTA-COURT and
+  INTL-EFTA-SURVEILLANCE-AUTHORITY no longer rest on Wikipedia. They quote the EEA Agreement's Articles 108 and 109
+  (Publications Office, CELEX 21994A0103(01)) and efta.int's "EEA EFTA States" and "Two Pillar Structure" pages, all
+  read directly. Two changes came out of the reading: the Surveillance Authority's edge to the Commission becomes
+  cooperates-with on Article 109(2) (#774), and its "Why it exists" section is corrected from Opinion 1/91 itself,
+  which speaks of a proposed Court of the European Economic Area, not of the Court of Justice exercising those roles.
+  Prose still sourced only to Wikipedia (the Court's history and judges, the Authority's staffing) is marked as such.
+  Re-tried and still blocked: gesetze-im-internet.de (no connection) and coe.int (403). Closes the run-history entry
+  for #800.
+prs: []
+outcome: in-progress

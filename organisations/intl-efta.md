@@ -25,7 +25,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-11-19"
 previous_version: null
 successor: null
 
@@ -41,26 +41,30 @@ relationships:
   - type: related-to
     target: INTL-EEA-AGREEMENT
     source: fact
-    evidence: "Confirmed verbatim by reading efta.int's own 'The European Free Trade Association' page directly (2026-08-22, fetched with an honest, identifying User-Agent — efta.int returns a bot-defense challenge to a browser User-Agent but real content to one that names itself as a bot): 'The European Free Trade Association (EFTA) is the intergovernmental organisation of Iceland, Liechtenstein, Norway and Switzerland. It was set up in 1960 by its then seven Member States for the promotion of free trade and economic integration between its members,' and its main tasks include 'Managing the Agreement on the European Economic Area (EEA Agreement), which brings together the Member States of the European Union and three of the EFTA States – Iceland, Liechtenstein and Norway – in a single market.' Corroborated by reading en.wikipedia.org/wiki/European_Free_Trade_Association directly: 'To participate in the EU's single market, Iceland, Liechtenstein, and Norway are parties to the Agreement on a European Economic Area (EEA) ... Switzerland has a set of multilateral agreements with the EU and its member states instead.'"
+    evidence: "Confirmed verbatim by reading efta.int's own 'The European Free Trade Association' page directly (2026-08-22, fetched with an honest, identifying User-Agent — efta.int returns a bot-defense challenge to a browser User-Agent but real content to one that names itself as a bot): 'The European Free Trade Association (EFTA) is the intergovernmental organisation of Iceland, Liechtenstein, Norway and Switzerland. It was set up in 1960 by its then seven Member States for the promotion of free trade and economic integration between its members,' and its main tasks include 'Managing the Agreement on the European Economic Area (EEA Agreement), which brings together the Member States of the European Union and three of the EFTA States – Iceland, Liechtenstein and Norway – in a single market.' On the EEA side, efta.int's 'EEA EFTA States' page (read directly 2026-11-19): Iceland, Liechtenstein and Norway 'go by the term \"EEA EFTA States\" in order to clarify that the other EFTA State, Switzerland, is not party to the EEA Agreement. However, in the EEA Agreement and the legal texts linked to it ... the term \"EFTA States\" refers to the three EEA EFTA States and is understood to exclude Switzerland.' (Secondary corroboration replaced 2026-11-19, roadmap #767.)"
     confidence: medium
     valid_from: null
     valid_until: null
   - type: related-to
     target: INTL-EFTA-SURVEILLANCE-AUTHORITY
     source: fact
-    evidence: "Confirmed by reading en.wikipedia.org/wiki/European_Free_Trade_Association directly (2026-08-22): 'The EFTA Surveillance Authority and the EFTA Court regulate the activities of the EFTA members in respect of their obligations in the European Economic Area (EEA). Since Switzerland is not an EEA member, it does not participate in these institutions.' Recorded here as `related-to` rather than `part-of` for the same reason the Authority's own entity gives: its jurisdiction (the three EEA EFTA states) does not match EFTA's own membership (which includes Switzerland)."
+    evidence: "Established by the 'EFTA States' under the EEA Agreement, Article 108(1) (read directly 2026-11-19 from the Publications Office text, CELEX 21994A0103(01)): 'The EFTA States shall establish an independent surveillance authority (EFTA Surveillance Authority) as well as procedures similar to those existing in the Community including procedures for ensuring the fulfilment of obligations under this Agreement'; in the EEA Agreement that term covers only Iceland, Liechtenstein and Norway (efta.int's 'EEA EFTA States' page (read directly 2026-11-19): Iceland, Liechtenstein and Norway 'go by the term \"EEA EFTA States\" in order to clarify that the other EFTA State, Switzerland, is not party to the EEA Agreement. However, in the EEA Agreement and the legal texts linked to it ... the term \"EFTA States\" refers to the three EEA EFTA States and is understood to exclude Switzerland.'). Recorded as `related-to` rather than `part-of` for the same reason the Authority's own entity gives: its jurisdiction does not match EFTA's membership, which includes Switzerland. Replaces the earlier secondary citation, 2026-11-19 (roadmap #767)."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: related-to
     target: INTL-EFTA-COURT
     source: fact
-    evidence: "Confirmed by reading en.wikipedia.org/wiki/European_Free_Trade_Association directly (2026-08-22), same passage as the Surveillance Authority edge above. Recorded as `related-to` rather than `part-of` for the same reason: the Court's jurisdiction excludes Switzerland."
+    evidence: "Established by the 'EFTA States' under the EEA Agreement, Article 108(2) (read directly 2026-11-19 from the Publications Office text, CELEX 21994A0103(01)): 'The EFTA States shall establish a court of justice (EFTA Court). The EFTA Court shall, in accordance with a separate agreement between the EFTA States, with regard to the application of this Agreement be competent, in particular, for: (a) actions concerning the surveillance procedure regarding the EFTA States'; as for the Surveillance Authority, the term excludes Switzerland (efta.int's 'EEA EFTA States' page (read directly 2026-11-19): Iceland, Liechtenstein and Norway 'go by the term \"EEA EFTA States\" in order to clarify that the other EFTA State, Switzerland, is not party to the EEA Agreement. However, in the EEA Agreement and the legal texts linked to it ... the term \"EFTA States\" refers to the three EEA EFTA States and is understood to exclude Switzerland.'). `related-to` rather than `part-of` for the same reason. Replaces the earlier secondary citation, 2026-11-19 (roadmap #767)."
     confidence: medium
     valid_from: null
     valid_until: null
 
 sources:
+  - title: "Agreement on the European Economic Area, Articles 108 and 109 (Official Journal text, CELEX 21994A0103(01))"
+    url: "https://publications.europa.eu/resource/celex/21994A0103(01)"
+    publisher: "Publications Office of the European Union"
+    accessed: "2026-11-19"
   - title: "The European Free Trade Association"
     url: "https://www.efta.int/about-efta/european-free-trade-association"
     publisher: "European Free Trade Association (EFTA)"
@@ -89,6 +93,9 @@ sources:
 > supplies the EFTA/EEA split. The gap this entity's own "Not modelled"
 > section named — the EFTA Surveillance Authority, the EFTA Court and the
 > EEA Joint Committee — is closed: all three are now Atlas entities.
+>
+> **2026-11-19:** the three edges no longer lean on Wikipedia. They quote the EEA Agreement's
+> Article 108 and efta.int's "EEA EFTA States" page, both read directly.
 
 ## Description
 
