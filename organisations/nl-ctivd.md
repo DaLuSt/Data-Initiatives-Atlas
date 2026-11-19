@@ -24,7 +24,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-19"
+last_verified: "2026-11-19"
 previous_version: null
 successor: null
 
@@ -55,12 +55,16 @@ relationships:
   - type: governed-by
     target: NL-WIV-2017
     source: fact
-    evidence: "Confirmed by reading nl.wikipedia.org's 'Wet op de inlichtingen- en veiligheidsdiensten 2017' article directly (2026-08-27): the Wiv 2017 established the CTIVD's current form, expanding it to include separate audit and complaint-handling divisions. ctivd.nl, also read directly, describes the commission's function under that act."
+    evidence: "the Wet op de inlichtingen- en veiligheidsdiensten 2017 (BWBR0039896), read directly 2026-11-19 on wetten.overheid.nl: Article 97(1), 'Er is een commissie van toezicht op de inlichtingen- en veiligheidsdiensten'; 97(2), it consists of 'a. een afdeling toezicht, en b. een afdeling klachtbehandeling'; 97(3)(a), the supervision division is charged with 'het toezicht op de rechtmatigheid van de uitvoering van hetgeen bij of krachtens deze wet en de Wet veiligheidsonderzoeken is gesteld'. ctivd.nl, also read directly, describes the commission's function under that Act. `valid_from` is 1 May 2018, when the remainder of the Act entered into force (Stb. 2018, 119, per the citation page recorded on [[NL-WIV-2017]]). The page notes a future amendment of Article 97 from 1 March 2027, not read. Replaces the earlier secondary citation, 2026-11-19 (roadmap #767)."
     confidence: high
     valid_from: 2018-05-01
     valid_until: null
 
 sources:
+  - title: "Wet op de inlichtingen- en veiligheidsdiensten 2017 (BWBR0039896)"
+    url: "https://wetten.overheid.nl/BWBR0039896/"
+    publisher: "wetten.overheid.nl (Overheid.nl)"
+    accessed: "2026-11-19"
   - title: "Rechtseenheidoverleg"
     url: "https://www.ctivd.nl/over-ctivd/rechtseenheidoverleg"
     publisher: "Commissie van Toezicht op de Inlichtingen- en Veiligheidsdiensten (CTIVD)"

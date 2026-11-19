@@ -1,0 +1,13 @@
+date: "2026-11-19"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #767, a sixth slice: five Dutch edges that rested on nl.wikipedia.org now quote primary sources, read
+  directly. NL-TIB and NL-CTIVD governed-by NL-WIV-2017 from the Act on wetten.overheid.nl (Articles 32 and 97); the
+  TIB's operational start of 1 April 2018, known only from Wikipedia, is no longer used. NL-NWO part-of NL from
+  nwo.nl ("zelfstandig bestuursorgaan", under OCW); NL-PRORAIL part-of NL from prorail.nl (the State, via
+  Railinfratrust bv, is the sole shareholder). NL-RVO's anchor is upgraded to part-of NL-EZK, from rvo.nl's "een
+  agentschap van het ministerie van Economische Zaken en Klimaat"; the old evidence said neither ministry was an
+  Atlas entity, but NL-EZK is, and RVO's page names only that ministry, so the description is adjusted. Confidence
+  medium to high on the anchors. Closes the run-history entry for #805.
+prs: []
+outcome: in-progress

@@ -34,7 +34,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-04"
+last_verified: "2026-11-19"
 previous_version: null
 successor: null
 
@@ -48,8 +48,8 @@ relationships:
   - type: part-of
     target: NL
     source: fact
-    evidence: "Confirmed by reading nl.wikipedia.org's own NWO article directly (2026-09-04): NWO originated in 1950 as ZWO (Nederlandse Organisatie voor Zuiver-Wetenschappelijk Onderzoek), which did not focus on applied research (reserved for TNO). In 1988 ZWO's mandate expanded to strategic and application-oriented research, prompting the transformation into NWO, formalised under the 'Wet op de Nederlandse organisatie voor wetenschappelijk onderzoek' enacted 7 July 1987, establishing NWO as a zelfstandig bestuursorgaan under the Ministry of Education, Culture and Science (OCW). Corroborated by reading nwo.nl's own 'About NWO' page directly, confirming NWO's current funding role and scale, though that page does not itself state the founding history. OCW is not an Atlas entity, so the anchor edge is asserted at country scope. Anchor edge under metadata/relationship-types.md §2.3."
-    confidence: medium
+    evidence: "Anchor edge under metadata/relationship-types.md §2.3. nwo.nl's own 'Bestuur en organisatie' page, read directly 2026-11-19: 'NWO is een zelfstandig bestuursorgaan met wettelijk vastgelegde taken. De organisatie valt onder de verantwoordelijkheid van het ministerie van Onderwijs, Cultuur en Wetenschap.' OCW is not an Atlas entity, so the anchor is asserted at country scope. The founding history (ZWO in 1950, the 1987 NWO Act) is in the prose and comes from Wikipedia; this edge no longer rests on it (roadmap #767)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: cooperates-with
@@ -61,6 +61,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Bestuur en organisatie"
+    url: "https://www.nwo.nl/organisatie"
+    publisher: "NWO (nwo.nl)"
+    accessed: "2026-11-19"
   - title: "About NWO"
     url: "https://www.nwo.nl/en/about-nwo"
     publisher: "NWO — Dutch Research Council"

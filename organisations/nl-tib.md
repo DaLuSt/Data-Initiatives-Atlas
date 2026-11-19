@@ -24,7 +24,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-19"
+last_verified: "2026-11-19"
 previous_version: null
 successor: null
 
@@ -41,7 +41,7 @@ relationships:
   - type: applies-to
     target: NL-AIVD
     source: fact
-    evidence: "Confirmed by reading tib-ivd.nl's own 'Taken en bevoegdheden' page directly (2026-08-27): the TIB reviews whether special powers used by the AIVD and MIVD are lawful, assessing ministerial authorisation against four criteria — necessity, proportionality, subsidiarity and targeted application (specificity) — and 'het oordeel van de TIB is bindend' (the TIB's judgment is binding). nl.wikipedia.org's dedicated TIB article, also read directly, corroborates the four-criteria test and the binding effect."
+    evidence: "Confirmed by reading tib-ivd.nl's own 'Taken en bevoegdheden' page directly (2026-08-27): the TIB reviews whether special powers used by the AIVD and MIVD are lawful, assessing ministerial authorisation against four criteria — necessity, proportionality, subsidiarity and targeted application (specificity) — and 'het oordeel van de TIB is bindend' (the TIB's judgment is binding). The binding effect is also in the Act itself, the Wet op de inlichtingen- en veiligheidsdiensten 2017 (BWBR0039896), read directly 2026-11-19 on wetten.overheid.nl: Article 32(2), 'Het oordeel van de toetsingscommissie is bindend'."
     confidence: high
     valid_from: null
     valid_until: null
@@ -55,7 +55,7 @@ relationships:
   - type: governed-by
     target: NL-WIV-2017
     source: fact
-    evidence: "Confirmed by reading nl.wikipedia.org's dedicated TIB article directly (2026-08-27): the TIB was established 1 September 2017 by the Wiv 2017 but became operationally active only 1 April 2018 — itself part of why the wider act's entry into force slipped from 1 January to 1 May 2018, per the Wiv 2017's own Wikipedia article, also read directly this pass."
+    evidence: "Established by the Wet op de inlichtingen- en veiligheidsdiensten 2017 (BWBR0039896), read directly 2026-11-19 on wetten.overheid.nl: Article 32(1), 'Er is een toetsingscommissie inzet bevoegdheden', and 32(2), it 'is belast met het toetsen van de rechtmatigheid van de door Onze betrokken Minister verleende toestemming' for the powers the Article lists, and 'Het oordeel van de toetsingscommissie is bindend'. Articles 33 to 37 set its composition and review procedure. `valid_from` is 1 May 2018, when the remainder of the Act entered into force (Stb. 2018, 119, per the citation page recorded on [[NL-WIV-2017]]). The operational start of 1 April 2018 comes from Wikipedia only and is not used here. Replaces the earlier secondary citation, 2026-11-19 (roadmap #767)."
     confidence: high
     valid_from: 2018-05-01
     valid_until: null
@@ -68,6 +68,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Wet op de inlichtingen- en veiligheidsdiensten 2017 (BWBR0039896)"
+    url: "https://wetten.overheid.nl/BWBR0039896/"
+    publisher: "wetten.overheid.nl (Overheid.nl)"
+    accessed: "2026-11-19"
   - title: "Taken en bevoegdheden"
     url: "https://www.tib-ivd.nl/wat-doet-de-tib/taken-en-bevoegdheden"
     publisher: "Toetsingscommissie Inzet Bevoegdheden (TIB)"

@@ -7,9 +7,10 @@ alternative_names:
   - RVO
   - Netherlands Enterprise Agency
 description: >
-  Dutch executive agency (baten-lastenagentschap) of the Ministry of
-  Economic Affairs and the Ministry of Agriculture, Fisheries, Food
-  Security and Nature, established 1 January 2014 from the merger of
+  Dutch executive agency of the Ministry of Economic Affairs and Climate,
+  as its own site puts it, working for almost all ministries (Wikipedia
+  also names the agriculture ministry as a parent), established 1 January
+  2014 (the day from Wikipedia; RVO's own history page gives the year) from the merger of
   Dienst Regelingen and Agentschap NL. Administers subsidies, permits
   and international-business support for entrepreneurs, and represents
   the agricultural bronhouder interest on the board of the Stichting
@@ -26,7 +27,7 @@ verification: primary-source
 
 start_date: 2014-01-01
 end_date: null
-last_verified: "2026-09-13"
+last_verified: "2026-11-19"
 previous_version: null
 successor: null
 
@@ -36,15 +37,16 @@ domains:
 organisations: []
 related_entities:
   - NL
+  - NL-EZK
   - NL-BGT
   - NL-SVB-BGT
 relationships:
   - type: part-of
-    target: NL
+    target: NL-EZK
     source: fact
-    evidence: "Scope anchor under metadata/relationship-types.md §2.3. Confirmed by reading nl.wikipedia.org's own article directly (2026-09-13): RVO is an executive agency ('baten-lastenagentschap') of the Ministry of Economic Affairs and the Ministry of Agriculture, Nature and Food Quality — two ministries, neither an Atlas entity, so the anchor edge is asserted at country scope, matching the convention used elsewhere (e.g. [[NL-NWO]], [[NL-RIVM]])."
-    confidence: medium
-    valid_from: 2014-01-01
+    evidence: "RVO's own 'Organisatie' page, read directly 2026-11-19 (page checked by RVO on 4 November 2026): 'We zijn een agentschap van het ministerie van Economische Zaken en Klimaat maar voeren opdrachten uit voor bijna alle ministeries, decentrale overheden en de EU.' Upgraded 2026-11-19 from an anchor `part-of` [[NL]], recorded from Wikipedia on 2026-09-13 with the remark that neither ministry was an Atlas entity; [[NL-EZK]] is one, and reaches [[NL]] itself, as [[NL-RIJKSWATERSTAAT]] reaches it through [[NL-IENW]]. Wikipedia also named the Ministry of Agriculture as a second parent ministry; RVO's page names only EZK, and says it works for almost all ministries. `valid_from` is empty: RVO's history page gives 'RVO bestaat sinds 2014' without a day, and when the agency came under the ministry in its present name was not read (roadmap #767)."
+    confidence: high
+    valid_from: null
     valid_until: null
   - type: participates-in
     target: NL-BGT
@@ -55,6 +57,14 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Onze geschiedenis"
+    url: "https://www.rvo.nl/onderwerpen/over-ons/onze-geschiedenis"
+    publisher: "Rijksdienst voor Ondernemend Nederland (rvo.nl)"
+    accessed: "2026-11-19"
+  - title: "Organisatie"
+    url: "https://www.rvo.nl/over-ons/organisatie"
+    publisher: "Rijksdienst voor Ondernemend Nederland (rvo.nl)"
+    accessed: "2026-11-19"
   - title: "Rijksdienst voor Ondernemend Nederland"
     url: "https://nl.wikipedia.org/wiki/Rijksdienst_voor_Ondernemend_Nederland"
     publisher: "Wikipedia"
@@ -106,7 +116,8 @@ source read states this division of labour explicitly.
 
 ## Relationships
 
-- `part-of` [[NL]] — anchor edge.
+- `part-of` [[NL-EZK]] — "een agentschap van het ministerie van Economische Zaken en Klimaat", on RVO's own
+  page (read 2026-11-19); upgraded from an anchor `part-of` [[NL]], as [[NL-RIJKSWATERSTAAT]] was.
 - `participates-in` [[NL-BGT]] — named board representative, via
   [[NL-SVB-BGT]].
 
