@@ -27,7 +27,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-11-19"
 previous_version: null
 successor: null
 
@@ -44,8 +44,8 @@ relationships:
   - type: governed-by
     target: PL-EWIDENCJA-LUDNOSCI
     source: fact
-    evidence: "Confirmed verbatim by reading gov.pl's own 'Czym jest numer PESEL' page directly (2026-08-22): its 'Podstawa prawna' section cites 'Ustawa z dnia 24 września 2010 r. o ewidencji ludności (Dz. U. z 2015 r. poz. 388)' as the legal basis for the PESEL number, alongside a 2012 ministerial regulation on assigning and changing it. Corroborated on pl.wikipedia.org/wiki/PESEL: 'Od 1 marca 2015 podstawę prawną funkcjonowania systemu stanowi ustawa o ewidencji ludności z 24 września 2010.'"
-    confidence: medium
+    evidence: "Confirmed verbatim by reading gov.pl's own 'Czym jest numer PESEL' page directly (2026-08-22): its 'Podstawa prawna' section cites 'Ustawa z dnia 24 września 2010 r. o ewidencji ludności (Dz. U. z 2015 r. poz. 388)' as the legal basis for the PESEL number, alongside a 2012 ministerial regulation on assigning and changing it. The Act itself, consolidated text of 12 March 2026 (Dz.U. 2026 poz. 384), read directly 2026-11-19 from the Sejm's ELI service (api.sejm.gov.pl): Article 6(1), 'Rejestr PESEL jest centralnym zbiorem danych, o których mowa w art. 8, prowadzonym w systemie teleinformatycznym'; Article 6(2), its maintenance and development are ensured by 'minister właściwy do spraw informatyzacji'. Replaces the earlier secondary corroboration (pl.wikipedia.org), 2026-11-19 (roadmap #767)."
+    confidence: high
     valid_from: 2015-03-01
     valid_until: null
   - type: maintained-by
@@ -57,6 +57,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Ustawa o ewidencji ludności, consolidated text (Dz.U. 2026 poz. 384), Articles 6 and 8"
+    url: "https://api.sejm.gov.pl/eli/acts/DU/2026/384/text.pdf"
+    publisher: "Sejm Rzeczypospolitej Polskiej (ELI service)"
+    accessed: "2026-11-19"
   - title: "Czym jest numer PESEL"
     url: "https://www.gov.pl/web/gov/czym-jest-numer-pesel"
     publisher: "Portal Gov.pl"
@@ -81,6 +85,13 @@ sources:
 > JavaScript challenge to every fetch regardless of User-Agent and
 > remains unread — see [[PL-EWIDENCJA-LUDNOSCI]] for what that costs this
 > entity's legal citation.
+>
+> **2026-11-19:** the Act itself is now read, from the Sejm's ELI service (`api.sejm.gov.pl`, which
+> has no JavaScript challenge; `discovery/unresolved.md` row #283). Articles 6 and 8 of the consolidated
+> text (Dz.U. 2026 poz. 384) source the `governed-by` edge. The `maintained-by` [[PL-COI]] edge still
+> rests on Wikipedia: the Act names the minister for digital affairs as the one who ensures the register's
+> maintenance and development (Article 6(2)) and does not name COI; COI's own "O nas" page, re-read the same
+> day, no longer lists PESEL; and gov.pl reset every connection.
 
 ## Description
 
@@ -147,9 +158,9 @@ identity-card and civil-status records.
   named on Polish Wikipedia.
 - The **specific data fields** the register holds (name, parents' names
   and PESEL numbers, place and country of birth, marital status, and
-  more) and the rules for assigning PESEL numbers to foreign nationals —
-  both catalogued on pl.wikipedia.org/wiki/PESEL and nowhere in this
-  entity.
+  more) and the rules for assigning PESEL numbers to foreign nationals.
+  The data fields are listed in Article 8 of the Act (read 2026-11-19);
+  they are not copied here.
 - The **check-digit algorithm** and the century-encoding scheme for the
   birth-month field — mechanical detail, not an Atlas relationship.
 
