@@ -29,7 +29,7 @@ coverage: low
 verification: primary-source
 start_date: 1994-01-01
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-11-19"
 previous_version: null
 successor: null
 
@@ -47,26 +47,34 @@ relationships:
   - type: part-of
     target: INTL-EEA-AGREEMENT
     source: fact
-    evidence: "Confirmed by reading en.wikipedia.org/wiki/EFTA_Court directly (2026-08-22): 'According to Article 108(2) of the EEA Agreement of 2 May 1992, the EFTA States taking part in the EEA Agreement shall establish a court of justice. That obligation was complied with by the conclusion of the \"Surveillance and Court Agreement\" (SCA).' Corroborated by reading efta.int's own 'EEA Institutions - Two Pillar Structure' page directly (fetched with an honest, identifying User-Agent — efta.int returns a bot-defense challenge to a browser User-Agent but real content to one that names itself as a bot): 'In the EFTA pillar, certain EU bodies are mirrored, such as a surveillance authority and a court of justice.' Its jurisdiction is exactly the three EEA EFTA states (Iceland, Liechtenstein, Norway), matching INTL-EEA-AGREEMENT's own party list rather than the four states of [[INTL-EFTA]], so the Agreement is the anchor under metadata/relationship-types.md §2.3."
-    confidence: medium
+    evidence: "Established under the EEA Agreement, Article 108(2) (read directly 2026-11-19 from the Publications Office text, CELEX 21994A0103(01)): 'The EFTA States shall establish a court of justice (EFTA Court). The EFTA Court shall, in accordance with a separate agreement between the EFTA States, with regard to the application of this Agreement be competent, in particular, for: (a) actions concerning the surveillance procedure regarding the EFTA States'. Its place in the EFTA pillar: efta.int's 'EEA Institutions - Two Pillar Structure' page (re-read directly 2026-11-19): 'In the EFTA pillar, certain EU bodies are mirrored, such as a surveillance authority and a court of justice.' Its jurisdiction is the three EEA EFTA states (efta.int's 'EEA EFTA States' page (read directly 2026-11-19): Iceland, Liechtenstein and Norway 'go by the term \"EEA EFTA States\" in order to clarify that the other EFTA State, Switzerland, is not party to the EEA Agreement. However, in the EEA Agreement and the legal texts linked to it ... the term \"EFTA States\" refers to the three EEA EFTA States and is understood to exclude Switzerland.'), matching [[INTL-EEA-AGREEMENT]]'s parties rather than the four states of [[INTL-EFTA]], so the Agreement is the anchor under metadata/relationship-types.md §2.3. Replaces the earlier secondary evidence, 2026-11-19 (roadmap #767)."
+    confidence: high
     valid_from: 1994-01-01
     valid_until: null
   - type: related-to
     target: INTL-EFTA
     source: fact
-    evidence: "Confirmed by reading en.wikipedia.org/wiki/European_Free_Trade_Association directly (2026-08-22): 'The EFTA Surveillance Authority and the EFTA Court regulate the activities of the EFTA members in respect of their obligations in the European Economic Area (EEA). Since Switzerland is not an EEA member, it does not participate in these institutions.' Named for and closely tied to EFTA, but its jurisdiction does not match EFTA's own membership, so `related-to` rather than `part-of`."
+    evidence: "Named for EFTA and established by the 'EFTA States' (the EEA Agreement, Article 108(2) (read directly 2026-11-19 from the Publications Office text, CELEX 21994A0103(01)): 'The EFTA States shall establish a court of justice (EFTA Court). The EFTA Court shall, in accordance with a separate agreement between the EFTA States, with regard to the application of this Agreement be competent, in particular, for: (a) actions concerning the surveillance procedure regarding the EFTA States'), a term the Agreement uses for Iceland, Liechtenstein and Norway only (efta.int's 'EEA EFTA States' page (read directly 2026-11-19): Iceland, Liechtenstein and Norway 'go by the term \"EEA EFTA States\" in order to clarify that the other EFTA State, Switzerland, is not party to the EEA Agreement. However, in the EEA Agreement and the legal texts linked to it ... the term \"EFTA States\" refers to the three EEA EFTA States and is understood to exclude Switzerland.'). Its jurisdiction does not match EFTA's own membership, so `related-to` rather than `part-of`. Replaces the earlier secondary citation, 2026-11-19 (roadmap #767)."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: related-to
     target: INTL-EFTA-SURVEILLANCE-AUTHORITY
     source: fact
-    evidence: "Confirmed by reading en.wikipedia.org/wiki/EFTA_Surveillance_Authority directly (2026-08-22): infringement proceedings opened by the Authority are 'a three-step procedure which may result in ESA referring the case to the EFTA Court.' Both bodies were established by the same Surveillance and Court Agreement."
+    evidence: "The same Article creates both: the EEA Agreement, Article 108(2) (read directly 2026-11-19 from the Publications Office text, CELEX 21994A0103(01)): 'The EFTA States shall establish a court of justice (EFTA Court). The EFTA Court shall, in accordance with a separate agreement between the EFTA States, with regard to the application of this Agreement be competent, in particular, for: (a) actions concerning the surveillance procedure regarding the EFTA States'; Article 108(1) creates the Surveillance Authority. Replaces the earlier secondary citation, 2026-11-19 (roadmap #767)."
     confidence: medium
     valid_from: null
     valid_until: null
 
 sources:
+  - title: "Agreement on the European Economic Area, Articles 108 and 109 (Official Journal text, CELEX 21994A0103(01))"
+    url: "https://publications.europa.eu/resource/celex/21994A0103(01)"
+    publisher: "Publications Office of the European Union"
+    accessed: "2026-11-19"
+  - title: "EEA EFTA States"
+    url: "https://www.efta.int/eea-relations-eu/eea-institutions-two-pillar-structure/eea-efta-states"
+    publisher: "European Free Trade Association (efta.int)"
+    accessed: "2026-11-19"
   - title: "EEA Institutions - Two Pillar Structure"
     url: "https://www.efta.int/eea-relations-eu/eea-institutions-two-pillar-structure"
     publisher: "European Free Trade Association (EFTA)"
@@ -100,6 +108,10 @@ sources:
 > hearings, not institutional description. Two Wikipedia articles, read
 > directly and cross-checked against each other, fill in the detail
 > neither official site carries.
+>
+> **2026-11-19:** the three edges now quote the EEA Agreement's Article 108(2) and efta.int, read
+> directly. The Court's history (judges, the 1996 move from Geneva to Luxembourg) still comes from
+> Wikipedia only; `eftacourt.int` still serves only its docket.
 
 ## Description
 
