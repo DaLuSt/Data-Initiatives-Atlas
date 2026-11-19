@@ -26,7 +26,7 @@ verification: primary-source
 
 start_date: 2019-01-01
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-11-19"
 previous_version: null
 successor: null
 
@@ -44,14 +44,14 @@ relationships:
   - type: based-on
     target: EU-EN-16931
     source: fact
-    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP. Confirmed by reading de.wikipedia.org's dedicated XRechnung article, cleartax.com's own EN 16931/Germany explainer, and the European Commission's own digital-building-blocks CIUS-compliance page directly (2026-08-28): Wikipedia states 'XRechnung implements the European standard EN 16931-1' as a 'Core Invoice Usage Specification (CIUS)' and that 'all invoices conforming to XRechnung are also conforming to EN 16931-1.' cleartax.com states plainly: 'EN 16931 is the European e-invoice recipe everyone must follow. XRechnung is the German version of that recipe, customised to meet local rules' — supporting both UBL 2.1 and UN/CEFACT CII syntaxes and adding German-specific mandatory fields (e.g. the Leitweg-ID routing identifier) while remaining 'automatically compliant with EN 16931.' The European Commission's own page, read directly, independently confirms the general CIUS/CORE compliance mechanism a national specification like XRechnung operates under. This was previously the sharpest documented refusal in the German batch ('a refusal that visibly costs something'); it is closed this pass by direct reading rather than by search snippets."
+    evidence: "KoSIT's own XRechnung page (xeinkauf.de/xrechnung/), read directly 2026-11-19: 'XRechnung bezeichnet den Standard zur elektronischen Rechnungsstellung bei öffentlichen Auftraggebern und setzt die Richtlinie 2014/55/EU in Deutschland maßgeblich um. Dabei besteht der Standard XRechnung aus der CIUS XRechnung sowie der Extension XRechnung'; among its aims, 'Ausgestaltung der durch die EN 16931-1 möglichen Spielräume auf semantischer Ebene'; and 'Die CIUS wird im Kapitel 7 der EN 16931-1 beschrieben und erlaubt im Wesentlichen, die Business Terms (BT) und Business Rules (BR) weiter zu konkretisieren', while an Extension 'ergänzt eine Extension die EN 16931-1 um weitere, zusätzliche Spezifizierungen'. First closed 2026-08-28 from de.wikipedia.org, cleartax.com and the Commission's CIUS-compliance page; the maintainer's own page replaces them, 2026-11-19 (roadmap #767)."
     confidence: high
     valid_from: null
     valid_until: null
   - type: maintained-by
     target: DE-KOSIT
     source: fact
-    evidence: "Confirmed by reading de.wikipedia.org's dedicated XRechnung article directly (2026-08-28): 'The Coordination Office for IT Standards (KoSIT) has managed XRechnung since January 1, 2019.' The originally-cited xoev.de operations/support page now returns HTTP 404 and was not readable this pass; Wikipedia's independent, dedicated article substitutes for it."
+    evidence: "KoSIT's own XRechnung page (xeinkauf.de/xrechnung/), read directly 2026-11-19: 'Der Standard XRechnung wird seit dem 01. Januar 2019 von der KoSIT auf Basis eines Betriebskonzepts betrieben, das vom IT-Planungsrat verabschiedet wurde', and 'Der Standard XRechnung wird von der KoSIT im Auftrag des IT-Planungsrats betrieben'. The page's contact block is the 'Koordinierungsstelle für IT Standards (KoSIT)' at the Senator für Finanzen, Bremen. Replaces the earlier secondary citation (de.wikipedia.org; xoev.de's support page was 404, and xoev.de answered 403 on 2026-11-19), roadmap #767."
     confidence: high
     valid_from: 2019-01-01
     valid_until: null
@@ -64,6 +64,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "XRechnung — KoSIT (xeinkauf.de)"
+    url: "https://xeinkauf.de/xrechnung/"
+    publisher: "Koordinierungsstelle für IT-Standards (KoSIT)"
+    accessed: "2026-11-19"
   - title: "XRechnung"
     url: "https://de.wikipedia.org/wiki/XRechnung"
     publisher: "Wikipedia"
@@ -94,6 +98,11 @@ sources:
 > read directly to close the entity's previously flagged and most visible
 > refusal: the EU→DE link via EN 16931. `verification: primary-source`;
 > `confidence` raised to `high`.
+>
+> **2026-11-19:** the maintainer's own page, KoSIT's `xeinkauf.de/xrechnung/`, read directly, now sources
+> the EN 16931 and KoSIT edges (CIUS and Extension to EN 16931-1; operated by KoSIT since 1 January 2019
+> for the IT-Planungsrat). The [[DE-XOEV]] edge still rests on Wikipedia: KoSIT's page does not mention XÖV,
+> and `xoev.de` answered 403.
 
 ## Description
 

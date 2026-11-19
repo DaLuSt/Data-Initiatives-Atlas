@@ -1,0 +1,11 @@
+date: "2026-11-19"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #767, a fourth slice. DE-XRECHNUNG's edges to EN 16931 and KoSIT now quote KoSIT's own XRechnung page
+  (xeinkauf.de/xrechnung/), read directly: XRechnung consists of a CIUS and an Extension to EN 16931-1, and KoSIT
+  has operated it since 1 January 2019 for the IT-Planungsrat. Its XÖV edge still rests on Wikipedia (the page does
+  not mention XÖV; xoev.de answered 403). DE-BUNDID's three edges drop their Wikipedia citations and rest on
+  digitale-verwaltung.de's BundID page, already read directly on 2026-10-01. Closes the run-history entry for #803
+  if it has merged.
+prs: []
+outcome: in-progress
