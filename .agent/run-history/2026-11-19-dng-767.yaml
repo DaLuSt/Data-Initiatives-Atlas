@@ -7,6 +7,6 @@ summary: >
   repealing the IWG on entry into force. Both stay at medium confidence because the enacted text could not be
   re-read: gesetze-im-internet.de still has no connection and bgbl.de is a JavaScript application; the Bundestag's
   DIP API needs a key. Found: dserver.bundestag.de serves Drucksachen as PDFs with a text layer, a route for other
-  German entities whose statutes are blocked. Closes the run-history entry for #804 if it has merged.
+  German entities whose statutes are blocked. Recorded as discovery/unresolved.md row #284. Closes the run-history entry for #804.
 prs: []
 outcome: in-progress
