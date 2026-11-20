@@ -38,7 +38,7 @@ site, the tools. It is made from the **pull requests squash-merged into `main`
 since the previous release**.
 
 1. **A release pull request is opened automatically**
-   (`.github/workflows/release-pr.yml`, weekly, or by hand with *Run workflow*).
+   (`.github/workflows/release-pr.yml`, monthly on the 1st, or by hand with *Run workflow*).
    It runs `python tools/release.py prepare`, which writes `metadata/version.yaml`,
    a new entry at the top of `CHANGELOG.md` and the `release:` block in
    `.agent/state.yaml`. The entry lists the merged pull requests under *Schema*,
@@ -47,7 +47,8 @@ since the previous release**.
    entities, relationships and countries with the change since the last release.
    It is skipped when nothing but housekeeping was merged, or when a release pull
    request is already open.
-   The weekly run is set for Monday 05:17 UTC but GitHub starts scheduled runs when it
+   The monthly run is set for the 1st of the month, 05:17 UTC (weekly on Mondays until
+   2026-11-20, changed at the owner's request), but GitHub starts scheduled runs when it
    has capacity: on 2026-10-12 it started at 13:11 UTC, nearly eight hours late. If you
    need the pull request sooner, start the workflow by hand; it skips itself when a
    release pull request is already open, so a late scheduled run does no harm.
@@ -91,7 +92,7 @@ Three data releases were made in the first week and a half: 2026.10.1 (6 October
 
 | Question | Finding | Decision |
 |---|---|---|
-| Is a weekly release pull request right? | It skips itself when only housekeeping was merged, so there was no empty release. Releases came faster than weekly because the owner started the workflow by hand when a milestone was done; that works. | Keep weekly, plus by hand when wanted. |
+| Is a weekly release pull request right? | It skips itself when only housekeeping was merged, so there was no empty release. Releases came faster than weekly because the owner started the workflow by hand when a milestone was done; that works. | Keep weekly, plus by hand when wanted. **Changed 2026-11-20:** monthly, on the 1st, at the owner's request; by hand still works. |
 | Is `YYYY.MM.N` working? | N restarts each month and the three numbers read correctly in tags, notes and the footer. | Keep. |
 | Does the changelog read well outside the project? | The 2026.10.3 entry lists 46 pull requests; 11 of them were "Housekeeping: record #x as merged", a quarter of the entry and no use to a reader. The `### Highlights` section the reviewer added was what made it readable. | Housekeeping is now one line with a count and the numbers. Reviewers keep writing Highlights. |
 | Is "Roadmap items completed" complete? | Every roadmap issue closed since the previous release is listed in all three entries (16 in 2026.10.3, checked against the issue list). A pull request or issue closed between the preparation of an entry and the merge of its release pull request would have been listed in no release; none was lost yet, but nothing prevented it. | Fixed: releases count from the commit and the moment the previous entry was prepared, not from its tag. |

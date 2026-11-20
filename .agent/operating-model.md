@@ -94,7 +94,7 @@ do not push directly to `main`:
    release workflows), or (c) is a release pull request: **do not turn
    auto-merge on for those**, because it would merge them without the word.
    The owner can revoke or widen this at any time; a session that is unsure
-   treats the PR as one to ask about. (A PR opened by a workflow's own `GITHUB_TOKEN`, such as the weekly
+   treats the PR as one to ask about. (A PR opened by a workflow's own `GITHUB_TOKEN`, such as the monthly
    release PR, does not trigger `validate.yml`; that workflow runs the
    validation itself before opening the PR.)
 8. **If the gate passes: squash-merge** (the only merge method to use; one

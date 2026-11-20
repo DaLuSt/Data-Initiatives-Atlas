@@ -15,8 +15,10 @@ name: Release pull request
 #    workflow runs the validation itself before opening the pull request.
 on:
   schedule:
-    # Mondays, 05:17 UTC.
-    - cron: "17 5 * * 1"
+    # The 1st of every month, 05:17 UTC (monthly since 2026-11-20; it was weekly, on Mondays).
+    # A cron cannot say "the first Monday": with both a day of the month and a day of the
+    # week set, it runs on either. A release can still be started by hand at any time.
+    - cron: "17 5 1 * *"
   workflow_dispatch:
     inputs:
       force:

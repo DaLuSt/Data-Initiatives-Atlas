@@ -41,7 +41,7 @@ hand-maintained.
 | **Licence** | CC0 1.0 |
 | **✅ Sourcing** | **All 1,297 entities are `verification: primary-source`** — every cited source has been opened, read and confirmed |
 
-*Figures as of 2026-11-19. The live counts are always on the site itself.*
+*Figures as of 2026-11-20. The live counts are always on the site itself.*
 
 ### Read this before you cite anything
 
@@ -329,7 +329,7 @@ data-initiatives-atlas/
 │   └── workflows/
 │       ├── validate.yml         # every pull request: checks and the browser suite
 │       ├── pages.yml            # deploy, main only
-│       ├── release-pr.yml       # weekly release pull request
+│       ├── release-pr.yml       # monthly release pull request
 │       ├── release-publish.yml  # tags and Release after merge
 │       ├── linkedin-post.yml    # posts a release after the owner approves
 │       ├── project-board.yml    # keeps the roadmap board in step

@@ -1,0 +1,11 @@
+date: "2026-11-20"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  At the owner's request, the release pull request (and with it the release and its LinkedIn post) is opened
+  monthly instead of weekly: release-pr.yml's cron moves from Mondays 05:17 UTC to the 1st of each month at 05:17
+  UTC. A cron cannot express "the first Monday" (a day of the month and a day of the week together mean either), so
+  the 1st was chosen. Starting the workflow by hand still works. metadata/versioning.md, docs/github-pages.md, the
+  README tree and .agent/operating-model.md say monthly now. Opened without auto-merge (operating model step 7: a
+  workflow change that sets what is posted publicly). Closes the run-history entry for #806.
+prs: []
+outcome: in-progress
