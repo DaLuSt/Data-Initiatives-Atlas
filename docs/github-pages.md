@@ -76,7 +76,7 @@ These do not touch the deployed site.
 
 | Workflow | What it does |
 |---|---|
-| `release-pr.yml` | Opens the weekly release pull request (Monday, or by hand) |
+| `release-pr.yml` | Opens the monthly release pull request (the 1st of the month, or by hand) |
 | `release-publish.yml` | After a release pull request merges: the tag, the GitHub Release and the LinkedIn draft issue |
 | `linkedin-post.yml` | Posts a release on LinkedIn after the owner approves it in the `linkedin` environment |
 | `project-board.yml` | Keeps the roadmap board in step with the issues |
