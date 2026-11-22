@@ -1,0 +1,15 @@
+date: "2026-11-22"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #775. Four start dates from the laws' own texts. JP-APPI 2003-05-30 and JP-MYNUMBER-ACT 2013-05-31,
+  read through e-Gov's law-data API (laws.e-gov.go.jp/api/1/lawdata/<law id>, XML; the e-Gov pages themselves are
+  JavaScript); both are the first date of a staged commencement. BE-HERGEBRUIK-WET 2016-06-03: Art. 24 (in force
+  on publication) and the publication date read on etaamb.openjustice.be, a copy of the Belgisch Staatsblad,
+  because ejustice.just.fgov.be rejects every request (new discovery/unresolved.md row #285).
+  MN-LAW-PERSONAL-INFORMATION-2021 2022-05-01 from Article 32.1 on legalinfo.mn. The Commission's link for
+  MN-LAW-ELECTRONIC-SIGNATURES-2011 opens a 2021 revised edition in force from 1 May 2022; whether it repealed the
+  2011 law was not read, so that is row #286 rather than a status change. Tried and left: the Kiribati acts
+  (the published PDFs leave the commencement date blank), MN-LAW-COMMUNICATIONS-2001 (no in-force article
+  found), CA-PRIVACY-ACT, AT-UIG (ris.bka.gv.at 503). Closes the run-history entry for #829.
+prs: []
+outcome: in-progress

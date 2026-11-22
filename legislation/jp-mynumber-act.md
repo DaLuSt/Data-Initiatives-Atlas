@@ -7,10 +7,11 @@ alternative_names:
   - "Act on the Use of Numbers to Identify a Specific Individual in Administrative Procedures (My Number Act)"
   - "My Number Act"
   - "マイナンバー法"
+  - "Act No. 27 of 2013"
 description: >
   The Japanese statute behind the My Number identification number, named on the Personal Information Protection Commission's page as
   one of the two Acts the Commission supervises (for 'specific personal information') and for which the Digital Agency is responsible.
-  The Act's text, number and date were not read.
+  It is Act No. 27 of 2013 (Heisei 25), promulgated 31 May 2013; Chapter 1 and some other provisions took effect that day, the rest on dates set by Cabinet Order (e-Gov law data).
 
 level: national
 country: JP
@@ -20,9 +21,9 @@ status: active
 confidence: medium
 coverage: low
 verification: primary-source
-start_date: null
+start_date: 2013-05-31
 end_date: null
-last_verified: "2026-10-16"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -52,6 +53,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "行政手続における特定の個人を識別するための番号の利用等に関する法律 (平成二十五年法律第二十七号) — e-Gov law data"
+    url: "https://laws.e-gov.go.jp/api/1/lawdata/425AC0000000027"
+    publisher: "e-Gov (Digital Agency, Japan)"
+    accessed: "2026-11-22"
   - title: "Roles and Responsibilities — Personal Information Protection Commission"
     url: "https://www.ppc.go.jp/en/aboutus/roles/"
     publisher: "Personal Information Protection Commission (Japan)"
@@ -60,7 +65,9 @@ sources:
 
 # My Number Act (Japan)
 
-> **Created 2026-10-16** (roadmap #482, Japan). Known only from one page of the Commission; neither the Act's number nor its date was read, so **no date is recorded**.
+> **Created 2026-10-16** (roadmap #482, Japan). Known only from one page of the Commission; neither the Act's number nor its date was read, so **no date was recorded** (since read; see the dated note below).
+
+> **Dated 2026-11-22** (roadmap #775). The Act's own text from e-Gov's law-data API (law ID 425AC0000000027), read directly: 行政手続における特定の個人を識別するための番号の利用等に関する法律, Act No. 27 of Heisei 25 (2013), promulgated 31 May 2013. Supplementary Provisions Article 1: the Act takes effect on a day set by Cabinet Order within three years of promulgation, but the provisions in item 1 (Chapter 1, Articles 24, 65 and 66 and some supplementary articles) take effect '公布の日' (on the day of promulgation); later items follow by Cabinet Order. `start_date` is 31 May 2013, the first date of the staged commencement. The Cabinet Order dates themselves were not read.
 
 ## What is sourced
 

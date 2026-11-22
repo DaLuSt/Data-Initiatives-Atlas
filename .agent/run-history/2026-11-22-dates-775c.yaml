@@ -9,5 +9,5 @@ summary: >
   yet, so its end_date stays the intended 2027-01-01. Tried and left: CA-PRIVACY-ACT (the consolidated text
   has no in-force note), AT-UIG (ris.bka.gv.at returned 503). discovery/unresolved.md row #219 records the
   eeas.europa.eu route for Council of Europe facts. Closes the run-history entry for #828.
-prs: []
-outcome: in-progress
+prs: [829]
+outcome: merged

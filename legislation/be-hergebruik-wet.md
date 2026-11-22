@@ -12,6 +12,7 @@ description: >
   sector information, described as the regulatory framework for open data
   in Belgium and as aligned with the European PSI Directive on the re-use of
   public sector information.
+  Promulgated 4 May 2016 and in force on its publication in the Belgisch Staatsblad on 3 June 2016 (Art. 24).
 
 level: national
 country: BE
@@ -23,9 +24,9 @@ confidence: medium
 coverage: medium
 verification: primary-source
 
-start_date: null
+start_date: 2016-06-03
 end_date: null
-last_verified: "2026-09-06"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -80,6 +81,8 @@ sources:
 > (Justel) text, both on Belgium's statute-book mirrors, and a BIPT
 > sectoral page have all been read directly. `news.belgium.be` was not
 > read. `verification: primary-source`.
+
+> **Dated 2026-11-22** (roadmap #775). The Act's text on etaamb.openjustice.be (a copy of the Belgisch Staatsblad that says so itself; numac 2016009236), read directly: 'Art. 24. Deze wet treedt in werking op de dag van publicatie in het Belgisch Staatsblad', with 'pub. 03/06/2016 prom. 04/05/2016'. `start_date` is therefore 3 June 2016. The official ejustice.just.fgov.be pages (including the ELI address) answer with 'Request Rejected' to this environment, so the publication date is read from the copy, not the official site.
 
 ## Description
 
