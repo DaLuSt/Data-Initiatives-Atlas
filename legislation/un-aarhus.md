@@ -28,7 +28,7 @@ verification: primary-source
 
 start_date: 2001-10-30
 end_date: null
-last_verified: "2026-09-12"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -45,7 +45,7 @@ relationships:
   - type: maintained-by
     target: UN-UNECE
     source: fact
-    evidence: "unece.org's own Aarhus Convention pages returned HTTP 403 on every attempt this pass (a domain-wide block affecting essentially all of unece.org this session — confirmed by testing the bare unece.org root, which also 403s). Per this batch's instruction to seek alternates when original sources are stuck, Wikipedia's Aarhus Convention article and the OSCE Aarhus Centres' own 'about' page were fetched directly instead and corroborate the Convention's UNECE administration in near-identical terms: OSCE states it is a 'United Nations Economic Commission for Europe (UNECE) Convention,' and Wikipedia confirms 'UNECE ... maintains the convention. It serves as the administrative body, hosting the official convention website, maintaining the clearinghouse, and administering the Compliance Committee.' The European Commission's own aarhus_en page (this entity's fourth original source) WAS read directly and independently confirms the EU and 27 Member States are all Parties."
+    evidence: "unece.org's own Aarhus Convention pages returned HTTP 403 on every attempt this pass (a domain-wide block affecting essentially all of unece.org this session — confirmed by testing the bare unece.org root, which also 403s). Per this batch's instruction to seek alternates when original sources are stuck, the OSCE Aarhus Centres' own 'about' page was read directly instead: it calls it a 'United Nations Economic Commission for Europe (UNECE) Convention'. Directive 2003/4/EC, recital 5 (Official Journal text, read directly 2026-11-22), likewise names it 'the UN/ECE Convention on Access to Information, Public Participation in Decision-Making and Access to Justice in Environmental Matters'. An encyclopedia's description of UNECE's secretariat role was dropped from this evidence (roadmap #767). The European Commission's own aarhus_en page (this entity's fourth original source) WAS read directly and independently confirms the EU and 27 Member States are all Parties."
     confidence: high
     valid_from: null
     valid_until: null
@@ -100,6 +100,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Directive 2003/4/EC on public access to environmental information, recital 5 (Official Journal text, CELEX 32003L0004)"
+    url: "https://publications.europa.eu/resource/celex/32003L0004"
+    publisher: "Publications Office of the European Union"
+    accessed: "2026-11-22"
   - title: "Introduction: Aarhus Convention"
     url: "https://unece.org/environment-policy/public-participation/aarhus-convention/introduction"
     publisher: "United Nations Economic Commission for Europe (UNECE)"

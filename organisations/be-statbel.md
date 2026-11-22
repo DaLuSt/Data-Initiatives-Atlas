@@ -26,7 +26,7 @@ organisation_role: executive
 
 start_date: null
 end_date: null
-last_verified: "2026-09-04"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -55,7 +55,7 @@ relationships:
   - type: part-of
     target: EU-ESS
     source: fact
-    evidence: "The European Statistical System is the partnership between the Community statistical authority, which is the Commission (Eurostat), and the national statistical institutes and other national authorities responsible in each member state for the development, production and dissemination of European statistics; the ESS Committee is composed of NSI representatives and chaired by Eurostat (ec.europa.eu/eurostat/web/european-statistical-system; EUR-Lex CELEX 32009R0223; cso.ie European Statistical System page). Statbel is the Belgian NSI. Corroborated by reading Wikipedia's Statistics Belgium page directly (2026-08-26), which independently states Statbel 'serves as Belgium's official representative to Eurostat and the OECD'. Further corroborated by reading ec.europa.eu's own Eurostat news page directly (2026-08-27): Belgium's statistical system underwent an ESS peer review in December 2021, one of '31 ESS members' whose reports were published on Eurostat's own website — Statbel's participation in that peer-review cycle is itself evidence of ESS membership. This relationship was added in the UN batch (2026-08-16) correcting this entity's own earlier body text, which wrongly claimed no such link existed; see below."
+    evidence: "The European Statistical System is the partnership between the Community statistical authority, which is the Commission (Eurostat), and the national statistical institutes and other national authorities responsible in each member state for the development, production and dissemination of European statistics; the ESS Committee is composed of NSI representatives and chaired by Eurostat (ec.europa.eu/eurostat/web/european-statistical-system; EUR-Lex CELEX 32009R0223; cso.ie European Statistical System page). Statbel is the Belgian NSI. Further corroborated by reading ec.europa.eu's own Eurostat news page directly (2026-08-27): Belgium's statistical system underwent an ESS peer review in December 2021, one of '31 ESS members' whose reports were published on Eurostat's own website — Statbel's participation in that peer-review cycle is itself evidence of ESS membership. This relationship was added in the UN batch (2026-08-16) correcting this entity's own earlier body text, which wrongly claimed no such link existed; see below. An encyclopedia corroboration was dropped from this evidence on 2026-11-22 (roadmap #767)."
     confidence: high
     valid_from: null
     valid_until: null
