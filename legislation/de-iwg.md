@@ -24,7 +24,7 @@ verification: primary-source
 
 start_date: 2006-12-19
 end_date: 2021-07-23
-last_verified: "2026-08-28"
+last_verified: "2026-11-22"
 previous_version: null
 successor: DE-DNG
 
@@ -38,7 +38,7 @@ relationships:
   - type: implements-requirement-from
     target: EU-PSI-DIRECTIVE
     source: fact
-    evidence: "Confirmed by reading a dedicated Wikipedia article on the IWG itself directly (2026-08-28), found via search after the entity's original three sources (all about the DNG, mentioning the IWG only in passing) proved insufficient: the IWG 'transposed Richtlinie 2003/98/EG über die Weiterverwendung von Informationen des öffentlichen Sektors (Directive 2003/98/EC on the reuse of public sector information), which required implementation by July 1, 2005,' and the IWG itself was enacted 13 December 2006 and entered into force 19 December 2006. The de.wikipedia.org 'Datennutzungsgesetz' page, also read directly, independently confirms the DNG 'löste das Informationsweiterverwendungsgesetz (IWG) ab' (replaced the IWG). Directive 2003/98/EC is EU-PSI-DIRECTIVE in this Atlas, recorded against it rather than EU-OPEN-DATA-DIRECTIVE because the IWG predates the 2019 recast; see EU-PSI-DIRECTIVE."
+    evidence: "Confirmed by reading a dedicated Wikipedia article on the IWG itself directly (2026-08-28), found via search after the entity's original three sources (all about the DNG, mentioning the IWG only in passing) proved insufficient: the IWG 'transposed Richtlinie 2003/98/EG über die Weiterverwendung von Informationen des öffentlichen Sektors (Directive 2003/98/EC on the reuse of public sector information), which required implementation by July 1, 2005,' and the IWG itself was enacted 13 December 2006 and entered into force 19 December 2006. That the DNG replaced the IWG is now read in the government bill itself (Drucksache 19/27442, Article 3), on [[DE-DNG]]. Directive 2003/98/EC is EU-PSI-DIRECTIVE in this Atlas, recorded against it rather than EU-OPEN-DATA-DIRECTIVE because the IWG predates the 2019 recast; see EU-PSI-DIRECTIVE."
     confidence: high
     valid_from: 2006-12-19
     valid_until: 2021-07-23

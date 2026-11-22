@@ -32,7 +32,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -56,7 +56,7 @@ relationships:
   - type: participates-in
     target: EU-GEANT
     source: fact
-    evidence: "Confirmed by reading dfn.de's own 'International' page directly (2026-08-28): 'X-WiN is linked to GÉANT with 600 gigabit-per-second connection,' and 'these networks are connected to one another through GÉANT, a backbone network that is organized and administered by the GÉANT Association in Amsterdam.' en.wikipedia.org's dedicated Deutsches Forschungsnetz article, also read directly, independently confirms DFN's connection runs through GÉANT2 at 100G at the network's super core. The GÉANT Association's own pages (geant.org, about.geant.org) returned HTTP 403 on two attempts each this pass and could not be read directly; DFN's own site and Wikipedia substitute for the composition-rule evidence used previously."
+    evidence: "Confirmed by reading dfn.de's own 'International' page directly (2026-08-28): 'X-WiN is linked to GÉANT with 600 gigabit-per-second connection,' and 'these networks are connected to one another through GÉANT, a backbone network that is organized and administered by the GÉANT Association in Amsterdam.' The GÉANT Association's own pages (geant.org, about.geant.org) returned HTTP 403 on two attempts each this pass and could not be read directly; DFN's own site substitutes for the composition-rule evidence used previously. A Wikipedia corroboration was dropped from this evidence on 2026-11-22 (roadmap #767); the primary source above carries the edge."
     confidence: high
     valid_from: null
     valid_until: null

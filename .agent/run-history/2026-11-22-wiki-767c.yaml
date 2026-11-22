@@ -9,5 +9,5 @@ summary: >
   GB-IPCO governed-by the IPA 2016 (section 227), GB-NCSC produces GB-CAF and GB-CAF applies-in GB (the NCSC's CAF
   page, version 4.0). Left: NL-NICTIZ (its "foundation" status is on no page of its own site that answered) and
   GB-CAF's aligned-with ISO 27001 (the NCSC page does not mention ISO). The #767 grep count goes from 82 to 71.
-prs: []
-outcome: in-progress
+prs: [812]
+outcome: merged

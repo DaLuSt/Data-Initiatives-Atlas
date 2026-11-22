@@ -1,0 +1,13 @@
+date: "2026-11-22"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #767, an eighth slice: nine German edges whose evidence already rested on a primary source lose the
+  Wikipedia sentence that only corroborated or added history (DE-BFDI, DE-BITBW, DE-IT-NIEDERSACHSEN, DE-HZD,
+  DE-DFN, DE-GDI-DE, DE-BMV, DE-DESTATIS governed-by DE-BSTATG, DE-IWG, whose "replaced by the DNG" now points to
+  the bill read for DE-DNG). DE-IWG's edge to the PSI Directive itself still rests on a Wikipedia article (written
+  with a capital W, which the issue's lowercase grep does not count). Looked at and left: DE-BSI and DE-DESTATIS
+  part-of DE-BMI, which name the ministry only on Wikipedia; the bundestag/gesetze mirror's BSIG is the 2020/21 text,
+  older than the 2025 NIS2 rewrite, so it is not used. The #767 grep count goes from 82 to 73 on its own, 62 with
+  #812. A case-insensitive count that ignores the provenance notes finds 112 edges in 97 files still resting at least partly on Wikipedia after this slice; the issue's lowercase grep undercounts them. Closes the run-history entry for #812.
+prs: []
+outcome: in-progress
