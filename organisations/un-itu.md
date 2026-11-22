@@ -22,7 +22,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -36,12 +36,16 @@ relationships:
   - type: part-of
     target: UN
     source: fact
-    evidence: "Confirmed by reading itu.int's own page directly (2026-08-28): the ITU became a UN specialised agency through a special agreement effective 1 January 1949, and participates in UN governance as an observer in the Main Committees of the General Assembly and ECOSOC, plus membership of the Chief Executive Board. The OECD iLibrary source returned HTTP 403 on every attempt this pass and could not be read; Wikipedia's ITU article was fetched directly as a substitute and independently corroborates the same 1949 effective date (agreement signed 15 November 1947) and the radio-spectrum/satellite-orbit mandate, so it replaces the OECD citation below rather than merely supplementing it."
+    evidence: "Confirmed by reading itu.int's own page directly (2026-08-28): the ITU became a UN specialised agency through a special agreement effective 1 January 1949, and participates in UN governance as an observer in the Main Committees of the General Assembly and ECOSOC, plus membership of the Chief Executive Board. The UN's own 'UN System' page (un.org/en/about-us/un-system), read directly 2026-11-22: 'The International Telecommunication Union is the United Nations specialized agency for information and communication technologies.' The OECD iLibrary source returned HTTP 403; an encyclopedia corroboration of the 1947 signature date was dropped from this evidence (roadmap #767)."
     confidence: high
     valid_from: null
     valid_until: null
 
 sources:
+  - title: "The UN System"
+    url: "https://www.un.org/en/about-us/un-system"
+    publisher: "United Nations (un.org)"
+    accessed: "2026-11-22"
   - title: "ITU as a UN Specialized Agency"
     url: "https://www.itu.int/en/un/Pages/un-agency.aspx"
     publisher: "International Telecommunication Union"

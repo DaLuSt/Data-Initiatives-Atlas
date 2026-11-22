@@ -1,0 +1,12 @@
+date: "2026-11-22"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #767, a fourteenth slice: six edges no longer rest on Wikipedia. EU-EN-16931 implements-requirement-from
+  the e-invoicing Directive now quotes Directive 2014/55/EU Articles 3(1) and 7 and Implementing Decision 2017/1870
+  Article 1; INTL-X-ROAD maintained-by INTL-NIIS quotes niis.org's history page (the Parties formed NIIS "to
+  administer the X-Road development"). UN-ITU part-of UN gains the UN's own "UN System" page ("the United Nations
+  specialized agency for information and communication technologies"). UN-UNCTAD, UN-UNECE and UN-UNSC part-of UN
+  keep their UN-family primary sources and drop the encyclopedia sentences that only added dates. Closes the
+  run-history entry for #821 if it has merged.
+prs: []
+outcome: in-progress
