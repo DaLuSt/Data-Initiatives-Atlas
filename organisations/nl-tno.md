@@ -39,9 +39,9 @@ relationships:
   - type: governed-by
     target: NL-TNO-WET
     source: fact
-    evidence: "Corrected this pass (2026-08-27): reading wetten.overheid.nl's own TNO-wet text directly (BWBR0003906) shows the statute currently governing TNO is the act of 19 December 1985, in force 1 May 1986 — NOT the 1930/1932 act this relationship previously cited alone. The 1985 act replaced the 1930 one. TNO's own organisational continuity traces to the 1930 founding (organisaties.overheid.nl lists TNO as active '01-01-1931 to present'; the earlier history, from Wikipedia, is in the prose and not needed for this edge), but the currently operative constituting statute — what [[NL-TNO-WET]] now represents — is the 1985/1986 recasting."
+    evidence: "wetten.overheid.nl's own TNO-wet (BWBR0003906), read directly 2026-08-27 and again 2026-11-22. Article 3: 'Er is een Nederlandse Organisatie voor toegepast-natuurwetenschappelijk onderzoek TNO'. The act's information page records it as a new regulation ('Nieuwe-regeling') signed 19-12-1985, published in Stb. 1985, 762, in force 01-05-1986 by Stb. 1986, 214. It replaced the 1930 act; TNO itself dates from 1930/1931 (organisaties.overheid.nl lists it as active from 01-01-1931), but this edge is to the act now in force, so it starts on 1 May 1986. Corrected 2026-11-22: valid_from was 1932-05-01, the earlier act's date."
     confidence: high
-    valid_from: 1932-05-01
+    valid_from: 1986-05-01
     valid_until: null
 
 sources:

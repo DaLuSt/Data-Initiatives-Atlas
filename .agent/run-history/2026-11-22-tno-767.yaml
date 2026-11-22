@@ -1,0 +1,11 @@
+date: "2026-11-22"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #767. NL-TNO's governed-by NL-TNO-WET edge no longer mentions the encyclopedia and its valid_from is
+  corrected from 1932-05-01 to 1986-05-01: wetten.overheid.nl's information page for BWBR0003906, read directly,
+  records the TNO-wet as a new regulation (Stb. 1985, 762) in force 01-05-1986 (Stb. 1986, 214). The 1932 date
+  belonged to the act it replaced. unece.org still returns 403, and Regulation (EU) 2019/1239 (read through
+  publications.europa.eu) names UN/LOCODE without saying who maintains it, so the UN/CEFACT edges stay as they are.
+  Closes the run-history entry for #824.
+prs: []
+outcome: in-progress

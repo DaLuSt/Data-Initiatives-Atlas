@@ -8,5 +8,5 @@ summary: >
   2023 onwards is added to discovery/unresolved.md row #284. PL-USKWSWW-2006 applies-in PL now quotes the
   consolidated Act (Dz.U. 2026 poz. 157, Articles 1 to 3) from the Sejm's ELI service, and PL-EWIDENCJA-LUDNOSCI's
   edge points to the Act read on 2026-11-19 instead of an encyclopedia. Closes the run-history entry for #823.
-prs: []
-outcome: in-progress
+prs: [824]
+outcome: merged
