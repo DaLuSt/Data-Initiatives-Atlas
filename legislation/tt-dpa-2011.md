@@ -20,15 +20,17 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-10-16"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
-organisations: []
+organisations:
+  - TT-INFORMATION-COMMISSIONER
 related_entities:
   - TT
+  - TT-INFORMATION-COMMISSIONER
 relationships:
   - type: related-to
     target: TT
@@ -60,3 +62,7 @@ sources:
 ## Not recorded (leads only)
 
 Search summaries say the Act was proclaimed in part: sections 1 to 6, 7 to 18, 22, 23, 25(1), 26, 28 and 42(a) and (b), by Legal Notices 2 of 2012 and 220 of 2021 (one source says only Parts I and II), and that the Office of the Information Commissioner is not yet established. None of this was read from a Legal Notice or a government page (`discovery/unresolved.md`). A better-sourced reading would let this entity become `active` with a start date, or stay `adopted` with the proclaimed sections listed, once the vocabulary question on partial implementation (roadmap #457) is decided.
+
+## The body it sets up (2026-11-22)
+
+Part II establishes the Office of the Information Commissioner ([[TT-INFORMATION-COMMISSIONER]], sections 7 to 9, read directly).
