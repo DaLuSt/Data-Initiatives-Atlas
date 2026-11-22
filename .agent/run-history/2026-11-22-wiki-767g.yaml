@@ -8,5 +8,5 @@ summary: >
   primary source does not need: DE-FITKO (service.bund.de), BE-STATBEL (Regulation 223/2009 and Eurostat's pages),
   NL-DANS (nwo.nl), EU-EHDS (the Parliament's Legislative Observatory), DE-IT-GRUNDSCHUTZ (a provenance note
   reworded). Closes the run-history entry for #820.
-prs: []
-outcome: in-progress
+prs: [821]
+outcome: merged
