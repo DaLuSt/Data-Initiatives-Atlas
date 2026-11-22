@@ -25,7 +25,7 @@ verification: primary-source
 
 start_date: 1932-05-01
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -39,7 +39,7 @@ relationships:
   - type: governed-by
     target: NL-TNO-WET
     source: fact
-    evidence: "Corrected this pass (2026-08-27): reading wetten.overheid.nl's own TNO-wet text directly (BWBR0003906) shows the statute currently governing TNO is the act of 19 December 1985, in force 1 May 1986 — NOT the 1930/1932 act this relationship previously cited alone. The 1985 act replaced the 1930 one. TNO's own organisational continuity traces to the 1930 founding (organisaties.overheid.nl lists TNO as active '01-01-1931 to present'; nl.wikipedia.org, read directly, confirms the 1930 act's 1 May 1932 commencement and traces TNO's establishment to the Lorentz Commission of 1918 and the Went Commission of 1923), but the currently operative constituting statute — what [[NL-TNO-WET]] now represents — is the 1985/1986 recasting."
+    evidence: "Corrected this pass (2026-08-27): reading wetten.overheid.nl's own TNO-wet text directly (BWBR0003906) shows the statute currently governing TNO is the act of 19 December 1985, in force 1 May 1986 — NOT the 1930/1932 act this relationship previously cited alone. The 1985 act replaced the 1930 one. TNO's own organisational continuity traces to the 1930 founding (organisaties.overheid.nl lists TNO as active '01-01-1931 to present'; the earlier history, from Wikipedia, is in the prose and not needed for this edge), but the currently operative constituting statute — what [[NL-TNO-WET]] now represents — is the 1985/1986 recasting."
     confidence: high
     valid_from: 1932-05-01
     valid_until: null

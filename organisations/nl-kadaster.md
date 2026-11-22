@@ -22,7 +22,7 @@ verification: primary-source
 
 start_date: 1832-10-01
 end_date: null
-last_verified: "2026-11-17"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -46,7 +46,7 @@ relationships:
   - type: participates-in
     target: NL-BASISREGISTRATIES
     source: fact
-    evidence: "Confirmed by reading kadaster.nl's own registrations overview directly (2026-08-27): the Kadaster holds five base registrations (BAG, BRK, Rijksdriehoeksmeting, BRT, BGT) plus the Informatiemodel Kadaster (IMKAD). NORA Online's BRK wiki page returned HTTP 404 and remains confirmed genuinely unreadable. nl.wikipedia.org's own Kadaster article, read directly as a replacement source, independently confirms the Kadaster's role in BRK and BRT ('Sinds 2004 valt de Topografische Dienst onder het Kadaster'). digitaleoverheid.nl's dedicated BRK page, previously confirmed genuinely bot-walled, is now read directly (2026-09-27) via its WordPress REST API (www.digitaleoverheid.nl/wp-json/wp/v2/pages?slug=brk — the workaround documented in discovery/unresolved.md row #216), confirming the same BRK composition (parcels, ownership, mortgages, limited rights, utility networks, cadastral maps) already carried here from kadaster.nl's own page."
+    evidence: "Confirmed by reading kadaster.nl's own registrations overview directly (2026-08-27): the Kadaster holds five base registrations (BAG, BRK, Rijksdriehoeksmeting, BRT, BGT) plus the Informatiemodel Kadaster (IMKAD). NORA Online's BRK wiki page returned HTTP 404 and remains confirmed genuinely unreadable. digitaleoverheid.nl's dedicated BRK page, previously confirmed genuinely bot-walled, is now read directly (2026-09-27) via its WordPress REST API (www.digitaleoverheid.nl/wp-json/wp/v2/pages?slug=brk — the workaround documented in discovery/unresolved.md row #216), confirming the same BRK composition (parcels, ownership, mortgages, limited rights, utility networks, cadastral maps) already carried here from kadaster.nl's own page. A Wikipedia citation was dropped from this evidence on 2026-11-22 (roadmap #767)."
     confidence: high
     valid_from: null
     valid_until: null

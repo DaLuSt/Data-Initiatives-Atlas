@@ -26,7 +26,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: 2026-09-30
-last_verified: "2026-10-07"
+last_verified: "2026-11-22"
 previous_version: null
 successor: GB-INFORMATION-COMMISSION
 
@@ -56,12 +56,16 @@ relationships:
   - type: applies-to
     target: GB-UK-GDPR
     source: fact
-    evidence: "Confirmed by reading en.wikipedia.org's 'Information Commissioner's Office' article (2026-08-22): 'It is the independent regulatory office (national data protection authority) dealing with the Data Protection Act 2018, the General Data Protection Regulation, and the Privacy and Electronic Communications (EC Directive) Regulations 2003 across the UK.'"
-    confidence: medium
+    evidence: "The Data Protection Act 2018, section 115, read directly 2026-11-22 on legislation.gov.uk: as enacted, '(1) The Commissioner is to be the supervisory authority in the United Kingdom for the purposes of Article 51 of the GDPR'; in the version in force on 1 January 2025, '(2) General functions are conferred on the Commissioner by— (a) Article 57 of the UK GDPR (tasks), and (b) Article 58 of the UK GDPR (powers)'. The current text gives these functions to the Information Commission, which replaced the Commissioner on 30 September 2026 (the `valid_until` of this edge). A Wikipedia citation was dropped from this evidence on 2026-11-22 (roadmap #767)."
+    confidence: high
     valid_from: null
     valid_until: 2026-09-30
 
 sources:
+  - title: "Data Protection Act 2018, section 115 (as enacted and as on 1 January 2025)"
+    url: "https://www.legislation.gov.uk/ukpga/2018/12/section/115/2025-01-01"
+    publisher: "legislation.gov.uk (The National Archives)"
+    accessed: "2026-11-22"
   - title: "Information Commission succeeds the ICO as UK's data protection regulator"
     url: "https://www.gov.uk/government/news/information-commission-succeeds-the-ico-as-uks-data-protection-regulator"
     publisher: "GOV.UK (Department for Digital, Culture, Media and Sport)"

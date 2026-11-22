@@ -25,7 +25,7 @@ verification: primary-source
 
 start_date: 2017-10-26
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -39,7 +39,7 @@ relationships:
   - type: part-of
     target: NL
     source: fact
-    evidence: "Anchor edge (metadata/relationship-types.md §2.3): EZK is a ministry of the Dutch state. Confirmed by reading rijksoverheid.nl's own ministry page directly (2026-09-05): it works 'toward a productive, resilient, and sustainable economy' across entrepreneurship, innovation, climate policy and digitalisation. nl.wikipedia.org, read directly the same pass, confirms the ministry was renamed 'Economische Zaken en Klimaat' in 2017 when the third Rutte cabinet took office, succeeding the 2010-2017 'Economische Zaken, Landbouw en Innovatie' ministry; the cabinet itself (and so the rename) is dated 26 October 2017 by a WebSearch cross-check of parlement.com and Rijksoverheid's own cabinet-history page."
+    evidence: "Anchor edge (metadata/relationship-types.md §2.3): EZK is a ministry of the Dutch state. Confirmed by reading rijksoverheid.nl's own ministry page directly (2026-09-05): it works 'toward a productive, resilient, and sustainable economy' across entrepreneurship, innovation, climate policy and digitalisation. The ministry's history (the 2017 rename) is in the prose, not in this anchor edge. A Wikipedia citation was dropped from this evidence on 2026-11-22 (roadmap #767)."
     confidence: high
     valid_from: 2017-10-26
     valid_until: null

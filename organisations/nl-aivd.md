@@ -24,7 +24,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -42,7 +42,7 @@ relationships:
   - type: part-of
     target: NL-BZK
     source: fact
-    evidence: "Confirmed by reading aivd.nl's own 'Wet op de inlichtingen- en veiligheidsdiensten' page directly (2026-08-27): the AIVD operates under the Wiv 2017 to safeguard national security under ministerial responsibility. en.wikipedia.org's 'General Intelligence and Security Service' article, also read directly, states in as many words that the AIVD 'falls under the Ministry of the Interior and Kingdom Relations', with that Minister holding political responsibility for the service's actions. irp.fas.org was not re-fetched this pass."
+    evidence: "Confirmed by reading aivd.nl's own 'Wet op de inlichtingen- en veiligheidsdiensten' page directly (2026-08-27): the AIVD operates under the Wiv 2017 to safeguard national security under ministerial responsibility. The Act itself names the minister: the Wiv 2017, Article 1(c), read directly 2026-11-22 on wetten.overheid.nl, defines 'Onze betrokken Minister' as '1°. ten aanzien van de Algemene Inlichtingen- en Veiligheidsdienst: Onze Minister van Binnenlandse Zaken en Koninkrijksrelaties'. A Wikipedia citation was dropped from this evidence on 2026-11-22 (roadmap #767). irp.fas.org was not re-fetched this pass."
     confidence: high
     valid_from: null
     valid_until: null
@@ -62,6 +62,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Wet op de inlichtingen- en veiligheidsdiensten 2017 (BWBR0039896)"
+    url: "https://wetten.overheid.nl/BWBR0039896/"
+    publisher: "wetten.overheid.nl (Overheid.nl)"
+    accessed: "2026-11-22"
   - title: "Wet op de inlichtingen- en veiligheidsdiensten"
     url: "https://www.aivd.nl/onderwerpen/wet-op-de-inlichtingen-en-veiligheidsdiensten"
     publisher: "Algemene Inlichtingen- en Veiligheidsdienst (AIVD)"

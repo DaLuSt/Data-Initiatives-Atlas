@@ -22,7 +22,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-09-17"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -41,8 +41,8 @@ relationships:
   - type: governed-by
     target: GB-IPA-2016
     source: fact
-    evidence: "Confirmed by reading en.wikipedia.org's 'Investigatory Powers Commissioner' article (2026-08-22): 'It merged the previous offices of the Office of the Surveillance Commissioners, the Interception of Communications Commissioner's Office and the Intelligence Service Commissioner's Office into one office with oversight over these areas along with the Office for Communications Data Authorisations.'"
-    confidence: medium
+    evidence: "The Investigatory Powers Act 2016, section 227, read directly 2026-11-22 on legislation.gov.uk: '(1) The Prime Minister must appoint— (a) the Investigatory Powers Commissioner, and (b) such number of other Judicial Commissioners as the Prime Minister considers necessary', and '(2) A person is not to be appointed ... unless the person holds or has held a high judicial office'. The office's history (the three offices it merged) is in the prose. A Wikipedia citation was dropped from this evidence on 2026-11-22 (roadmap #767)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: applies-to
@@ -75,6 +75,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Investigatory Powers Act 2016, section 227"
+    url: "https://www.legislation.gov.uk/ukpga/2016/25/section/227"
+    publisher: "legislation.gov.uk (The National Archives)"
+    accessed: "2026-11-22"
   - title: "What we do"
     url: "https://www.ipco.org.uk/what-we-do/"
     publisher: "Investigatory Powers Commissioner's Office (IPCO)"

@@ -28,7 +28,7 @@ verification: primary-source
 
 start_date: 2010-10-14
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -42,7 +42,7 @@ relationships:
   - type: part-of
     target: NL
     source: fact
-    evidence: "Anchor edge (metadata/relationship-types.md §2.3): IenW is a ministry of the Dutch state. Confirmed by reading rijksoverheid.nl's own ministry page directly (2026-09-05), corroborated by en.wikipedia.org read directly the same pass: established 14 October 2010 as the Ministry of Infrastructure and the Environment, from a merger of the Ministry of Transport and Water Management and the Ministry of Housing, Spatial Planning and the Environment; renamed in 2017 when environmental responsibilities were transferred elsewhere."
+    evidence: "Anchor edge (metadata/relationship-types.md §2.3): IenW is a ministry of the Dutch state. Confirmed by reading rijksoverheid.nl's own ministry page directly (2026-09-05). The ministry's history (its 2010 creation from a merger, the 2017 rename) is in the prose, not in this anchor edge. A Wikipedia citation was dropped from this evidence on 2026-11-22 (roadmap #767)."
     confidence: high
     valid_from: 2010-10-14
     valid_until: null
