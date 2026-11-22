@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-18"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -40,7 +40,7 @@ relationships:
   - type: maintained-by
     target: FR-ETALAB
     source: fact
-    evidence: "Confirmed by reading data.gouv.fr's own organisation page for Etalab directly (2026-08-26): 'Etalab est un département de la direction interministérielle du numérique (DINUM)' which 'administre' the portal — corroborated by data.gouv.fr's own homepage, read directly, which describes the platform as 'La plateforme des données publiques françaises' (the French public-data platform), 'Utilisez, partagez et améliorez les données publiques' (use, share and improve public data), matching this entity's description. fr.wikipedia.org's Etalab page, read independently, confirms the same administering relationship."
+    evidence: "Confirmed by reading data.gouv.fr's own organisation page for Etalab directly (2026-08-26): 'Etalab est un département de la direction interministérielle du numérique (DINUM)' which 'administre' the portal — corroborated by data.gouv.fr's own homepage, read directly, which describes the platform as 'La plateforme des données publiques françaises' (the French public-data platform), 'Utilisez, partagez et améliorez les données publiques' (use, share and improve public data), matching this entity's description. An encyclopedia corroboration was dropped from this evidence on 2026-11-22 (roadmap #767)."
     confidence: medium
     valid_from: null
     valid_until: null

@@ -12,5 +12,5 @@ summary: >
   edges drop an encyclopedia sentence their primary sources do not need (UN-HLPF, CZ-ZAKON-110-2019). Left:
   Estonia (riigiteataja.ee needs JavaScript). New provenance notes say "encyclopedia" so the issue's count stays
   meaningful. Closes the run-history entry for #816.
-prs: []
-outcome: in-progress
+prs: [817]
+outcome: merged

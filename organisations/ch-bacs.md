@@ -26,7 +26,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-09-26"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -40,7 +40,7 @@ relationships:
   - type: part-of
     target: CH
     source: fact
-    evidence: "Confirmed verbatim by reading ncsc.admin.ch directly (2026-08-22): 'Das Bundesamt für Cybersicherheit (BACS) ist das Kompetenzzentrum des Bundes für Cybersicherheit und damit erste Anlaufstelle...' Independently confirmed on de.wikipedia.org's Bundesamt für Cybersicherheit article. staatskalender.admin.ch was fetched (200) but renders client-side in JavaScript and could not be read. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor."
+    evidence: "Confirmed verbatim by reading ncsc.admin.ch directly (2026-08-22): 'Das Bundesamt für Cybersicherheit (BACS) ist das Kompetenzzentrum des Bundes für Cybersicherheit und damit erste Anlaufstelle...' An encyclopedia corroboration was dropped from this evidence on 2026-11-22 (roadmap #767). staatskalender.admin.ch was fetched (200) but renders client-side in JavaScript and could not be read. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor."
     confidence: medium
     valid_from: null
     valid_until: null
