@@ -7,7 +7,6 @@ summary: >
   December 2012, published 7 January 2013, on IMPO), both approving the Convention and its 2001 Additional
   Protocol. The deposit of the instruments with the Council of Europe, which is what makes each a Party, is still
   read only through the encyclopedia (coe.int is blocked), and the evidence says so. Mexico's Diario Oficial failed
-  certificate verification (hostname mismatch) and was not read. Closes the run-history entry for #819 if it has
-  merged.
+  certificate verification (hostname mismatch) and was not read. Closes the run-history entry for #819.
 prs: []
 outcome: in-progress
