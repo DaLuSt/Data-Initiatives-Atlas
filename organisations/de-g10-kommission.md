@@ -40,7 +40,7 @@ relationships:
   - type: governed-by
     target: DE-G10
     source: fact
-    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP on DE-G10 and DE-PKGR. gesetze-im-internet.de's own text of the G10 act returned HTTP 503 on repeated attempts this pass; bundestag.github.io's community-maintained statute mirror, read directly, substitutes: Section 15(1) establishes the G10-Kommission ('Die G 10-Kommission besteht aus dem Vorsitzenden, der die Befähigung zum Richteramt besitzen muss, und drei Beisitzern sowie vier stellvertretenden Mitgliedern...'), and Section 15(5) gives it the decision authority quoted in the description. de.wikipedia.org's 'Artikel 10-Gesetz' article, read directly and independently, corroborates in its own words: 'Die G 10-Kommission entscheidet von Amts wegen als unabhängiges und an keine Weisungen gebundenes Organ über die Notwendigkeit und Zulässigkeit sämtlicher durch die Nachrichtendienste' [vorgenommenen Beschränkungsmaßnahmen]."
+    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP on DE-G10 and DE-PKGR. gesetze-im-internet.de's own text of the G10 act returned HTTP 503 on repeated attempts this pass; bundestag.github.io's community-maintained statute mirror, read directly, substitutes: Section 15(1) establishes the G10-Kommission ('Die G 10-Kommission besteht aus dem Vorsitzenden, der die Befähigung zum Richteramt besitzen muss, und drei Beisitzern sowie vier stellvertretenden Mitgliedern...'), and Section 15(5) gives it the decision authority quoted in the description."
     confidence: medium
     valid_from: 2001-06-26
     valid_until: null

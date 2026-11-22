@@ -39,7 +39,7 @@ relationships:
   - type: applies-to
     target: DE-BND
     source: fact
-    evidence: "Confirmed by reading de.wikipedia.org's 'Unabhängiger Kontrollrat' page (2026-08-22): the UKR was legally established on 22 April 2021 (part of a BND-Gesetz amendment implementing Bundesverfassungsgericht and Bundesverwaltungsgericht requirements) and took over its duties on 1 January 2022, with its remit being the Bundesnachrichtendienst. A pending reform (per taz.de and vorwaerts.de, not independently read) would extend this to the Bundesamt für Verfassungsschutz."
+    evidence: "The Council's own site (ukrat.de), read directly 2026-11-22. 'Auftrag': 'Der Unabhängige Kontrollrat ist für die Rechtskontrolle der technischen Maßnahmen des BND zuständig' (it also reviews service regulations for further intelligence means at the MAD). 'Entstehung': after the Federal Constitutional Court's May 2020 judgment the BND-Gesetz was amended and a fully independent oversight body created; 'Die Rechtsgrundlage des Unabhängigen Kontrollrates findet sich aktuell im BND-Gesetz. Seit 2022 überwacht der Kontrollrat als oberste Bundesbehörde die technische Aufklärung des BND.'"
     confidence: medium
     valid_from: null
     valid_until: null
@@ -52,6 +52,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Unabhängiger Kontrollrat — Auftrag"
+    url: "https://ukrat.de/der-kontrollrat/auftrag"
+    publisher: "Unabhängiger Kontrollrat"
+    accessed: "2026-11-22"
   - title: "Unabhängiger Kontrollrat"
     url: "https://de.wikipedia.org/wiki/Unabh%C3%A4ngiger_Kontrollrat"
     publisher: "Wikipedia"
