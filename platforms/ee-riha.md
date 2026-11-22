@@ -40,7 +40,7 @@ relationships:
   - type: governed-by
     target: EE-ATS
     source: fact
-    evidence: "Confirmed by reading en.wikipedia.org's RIHA article directly (2026-08-26): 'It is regulated by the Public Information Act and a special regulation.'"
+    evidence: "The Information System Authority's own RIHA page (ria.ee), read directly 2026-11-22: 'Administration system for the state information system RIHA contains the descriptions of state information systems and data'; its related legal links are the 'Regulation of the administration system for the state information system' (riigiteataja.ee/akt/106082019018) and the 'Public Information Act' (riigiteataja.ee/en/eli/ee/522032022002/consolide/current). The Act and the regulation themselves were not read: Riigi Teataja needs JavaScript."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -53,6 +53,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "RIHA and RIHAKE — Information System Authority"
+    url: "https://www.ria.ee/en/state-information-system/data-based-governance-and-reuse-data/administration-system-riha-and-rihake"
+    publisher: "Information System Authority (RIA)"
+    accessed: "2026-11-22"
   - title: "Administration system for the state information system RIHA"
     url: "https://en.wikipedia.org/wiki/Administration_system_for_the_state_information_system_RIHA"
     publisher: "Wikipedia"

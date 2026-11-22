@@ -11,5 +11,5 @@ summary: >
   standards page; the 2010/19 founding decision still rests on an encyclopedia and is marked. Its alternative
   name "Institut für IT-Standardisierung" is added. #535 still waits only on the RegMoG Gazette text (pre-2023,
   not readable). Closes the run-history entry for #830.
-prs: []
-outcome: in-progress
+prs: [831]
+outcome: merged

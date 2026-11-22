@@ -40,12 +40,16 @@ relationships:
   - type: applies-in
     target: EE
     source: fact
-    evidence: "Confirmed by reading en.wikipedia.org's RIHA article directly (2026-08-26), which cites the Public Information Act (Riigikogu, RT I 2000, 92, 597) as regulating RIHA. No source read gives an exact enactment day beyond the year embedded in the Riigi Teataja citation, so `start_date` is left unset rather than guessed — the entity previously carried a fabricated 2000-01-01. Anchor edge under metadata/relationship-types.md §2.3."
+    evidence: "The Information System Authority's own RIHA page (ria.ee), read directly 2026-11-22, lists the 'Public Information Act' among RIHA's legal acts and links to its consolidated English text on Riigi Teataja (ELI 522032022002); the same page says that the Data Protection Inspectorate, in the RIHA approval process, checks whether planned data processing corresponds to the principles of the Constitution, the Personal Data Protection Act and the Public Information Act. The original publication reference (RT I 2000, 92, 597) still rests on an encyclopedia, because Riigi Teataja itself needs JavaScript (roadmap #767). No source read gives an exact day of entry into force, so `start_date` stays unset. Anchor edge under metadata/relationship-types.md §2.3."
     confidence: medium
     valid_from: null
     valid_until: null
 
 sources:
+  - title: "RIHA and RIHAKE — Information System Authority"
+    url: "https://www.ria.ee/en/state-information-system/data-based-governance-and-reuse-data/administration-system-riha-and-rihake"
+    publisher: "Information System Authority (RIA)"
+    accessed: "2026-11-22"
   - title: "Administration system for the state information system RIHA"
     url: "https://en.wikipedia.org/wiki/Administration_system_for_the_state_information_system_RIHA"
     publisher: "Wikipedia"
