@@ -30,7 +30,7 @@ verification: primary-source
 
 start_date: 1947-03-28
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -45,7 +45,7 @@ relationships:
   - type: part-of
     target: UN
     source: fact
-    evidence: "Two of the four originally-cited pages (unece.org/mission, unece.org/history-1) returned HTTP 403 this pass — `unece.org` is blocked domain-wide this session, confirmed by testing the bare root domain, which also 403s. The other two were read directly: ungeneva.org's UNECE profile confirms 'set up in 1947 by ECOSOC' and 'one of five regional commissions of the United Nations'; sdgs.un.org's UN DESA entry confirms UNECE's pan-European mandate and 2030-Agenda-implementation role but does not restate the founding date. Wikipedia's UNECE article was fetched directly as a substitute for the two blocked pages and independently confirms the precise date and resolution number: 'established on 28 March 1947 by the Economic and Social Council through Resolution 36(IV)', 56 member states, and — a bonus detail — explicitly names the Conference of European Statisticians and UN/CEFACT as related bodies within UNECE's structure."
+    evidence: "Two of the four originally-cited pages (unece.org/mission, unece.org/history-1) returned HTTP 403 this pass — `unece.org` is blocked domain-wide this session, confirmed by testing the bare root domain, which also 403s. The other two were read directly: ungeneva.org's UNECE profile confirms 'set up in 1947 by ECOSOC' and 'one of five regional commissions of the United Nations'; sdgs.un.org's UN DESA entry confirms UNECE's pan-European mandate and 2030-Agenda-implementation role but does not restate the founding date. The precise founding date and resolution number (28 March 1947, Resolution 36(IV)) came from an encyclopedia article and are kept in the prose only; ungeneva.org's 'set up in 1947 by ECOSOC' and 'one of five regional commissions of the United Nations' carry this edge (roadmap #767)."
     confidence: high
     valid_from: 1947-03-28
     valid_until: null
