@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: 2025-03-26
 end_date: null
-last_verified: "2026-09-19"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -42,7 +42,7 @@ relationships:
   - type: part-of
     target: EU-COMMON-DATA-SPACES
     source: fact
-    evidence: "Confirmed by reading Wikipedia's 'European Health Data Space' article directly (2026-08-28), corroborated by the European Parliament's own Legislative Observatory (OEIL) procedure summary, also read directly: Regulation (EU) 2025/327 was adopted by Parliament vote 24 April 2024 and Council vote 21 January 2025, published in the Official Journal 5 March 2025, and entered into force 26 March 2025 — health is one of the 14 common European data spaces named in the Commission's January 2024 staff working document (SWD(2024) 21 final), which earlier batches of this Atlas confirmed lists agriculture, energy, health, cultural heritage, mobility and the other data spaces by name."
+    evidence: "Confirmed by reading the European Parliament's own Legislative Observatory (OEIL) procedure summary directly (2026-08-28; an encyclopedia article read the same day agreed and is no longer relied on, roadmap #767): Regulation (EU) 2025/327 was adopted by Parliament vote 24 April 2024 and Council vote 21 January 2025, published in the Official Journal 5 March 2025, and entered into force 26 March 2025 — health is one of the 14 common European data spaces named in the Commission's January 2024 staff working document (SWD(2024) 21 final), which earlier batches of this Atlas confirmed lists agriculture, energy, health, cultural heritage, mobility and the other data spaces by name."
     confidence: high
     valid_from: null
     valid_until: null

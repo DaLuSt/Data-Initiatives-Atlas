@@ -27,7 +27,7 @@ verification: primary-source
 
 start_date: 2020-01-01
 end_date: null
-last_verified: "2026-10-01"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -43,7 +43,7 @@ relationships:
   - type: governed-by
     target: DE-IT-PLANUNGSRAT
     source: fact
-    evidence: "Confirmed by reading de.wikipedia.org's dedicated FITKO article and service.bund.de's own page directly (2026-08-28): FITKO is 'a German lawful public institution' created under the 2019 IT-Staatsvertrag and established 1 January 2020, functioning as 'the operational foundation for the IT Planning Council'; service.bund.de states plainly that FITKO was 'created' by the IT-Planungsrat 'as an agile organization to implement its decisions,' with the IT-Planungsrat setting policy direction and FITKO executing it. fitko.de's own homepage, also read directly, confirms FITKO implements IT-Planungsrat decisions while the council sets 'politisch-strategische' direction."
+    evidence: "Confirmed by reading service.bund.de's own page directly (2026-08-28); its legal form and 2020 founding date, from an encyclopedia article, are in the prose and not relied on here (roadmap #767). service.bund.de states plainly that FITKO was 'created' by the IT-Planungsrat 'as an agile organization to implement its decisions,' with the IT-Planungsrat setting policy direction and FITKO executing it. fitko.de's own homepage, also read directly, confirms FITKO implements IT-Planungsrat decisions while the council sets 'politisch-strategische' direction."
     confidence: high
     valid_from: null
     valid_until: null

@@ -27,7 +27,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -43,7 +43,7 @@ relationships:
   - type: maintained-by
     target: DE-BSI
     source: fact
-    evidence: "Confirmed by reading bsi.bund.de's own two pages directly (2026-08-28): 'BSI-Standards' (bsi.bund.de/DE/.../bsi-standards_node.html) and the English 'IT-Grundschutz' page (bsi.bund.de/EN/.../it-grundschutz_node.html) both state the BSI developed and maintains IT-Grundschutz and the BSI-Standards 200-1 to 200-4. This closes the previously-flagged gap of no bsi.bund.de citation on this entity; both pages were located via a targeted search after the entity's original sources (Wikipedia and consultancy explainers) returned no bsi.bund.de URL."
+    evidence: "Confirmed by reading bsi.bund.de's own two pages directly (2026-08-28): 'BSI-Standards' (bsi.bund.de/DE/.../bsi-standards_node.html) and the English 'IT-Grundschutz' page (bsi.bund.de/EN/.../it-grundschutz_node.html) both state the BSI developed and maintains IT-Grundschutz and the BSI-Standards 200-1 to 200-4. This closes the previously-flagged gap of no bsi.bund.de citation on this entity; both pages were located via a targeted search after the entity's original sources (an encyclopedia article and consultancy explainers) returned no bsi.bund.de URL."
     confidence: high
     valid_from: null
     valid_until: null
