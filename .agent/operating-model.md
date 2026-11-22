@@ -124,6 +124,14 @@ continue. `site/graph.json`/`site/details.json` are no longer committed,
 so they cannot conflict; if an older branch still carries them, take
 `origin/main`'s side (they are deleted there) and `git rm --cached` them.
 
+**Generated counts after a merge** (learned twice, on 2026-11-17 and 2026-11-22): `README.md` and
+`.agent/state.yaml` carry counts that `tools/update_counts.py` writes, so merging `origin/main` into
+a branch nearly always conflicts on them. Before `git add`, run `git diff --name-only --diff-filter=U`;
+if those two files are listed, take main's copies (`git checkout origin/main -- README.md
+.agent/state.yaml`), re-apply any hand edit the branch made to them, and run `update_counts.py`
+again. `git add -A` on an unresolved merge commits the conflict markers, and `update_counts.py`
+then fails with "README.md has no text matching". Run `tools/check_all.py --fast` before pushing.
+
 **Never commit directly to `main`, and never `git add .` blindly.** If
 a session is interrupted (timeout, crash) with uncommitted changes still
 in the working tree, isolate that work onto its own branch and open a PR
