@@ -29,7 +29,7 @@ organisation_role: executive
 
 start_date: null
 end_date: null
-last_verified: "2026-09-17"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -52,7 +52,7 @@ relationships:
   - type: governed-by
     target: DE-BSTATG
     source: fact
-    evidence: "Confirmed by reading destatis.de's own 'Gesetzliche Grundlagen' page directly (2026-08-28): 'without legal foundation, official statistics cannot be created in Germany,' naming the Bundesstatistikgesetz (BStatG) as the primary legal framework requiring Destatis to provide and disseminate statistical information while maintaining data protection and statistical confidentiality. de.wikipedia.org, also read directly, independently confirms the BStatG (Gesetz über die Statistik für Bundeszwecke) establishes Destatis's obligations of objectivity, neutrality and scientific independence."
+    evidence: "Confirmed by reading destatis.de's own 'Gesetzliche Grundlagen' page directly (2026-08-28): 'without legal foundation, official statistics cannot be created in Germany,' naming the Bundesstatistikgesetz (BStatG) as the primary legal framework requiring Destatis to provide and disseminate statistical information while maintaining data protection and statistical confidentiality. A Wikipedia corroboration was dropped from this evidence on 2026-11-22 (roadmap #767); the primary source above carries the edge."
     confidence: high
     valid_from: null
     valid_until: null

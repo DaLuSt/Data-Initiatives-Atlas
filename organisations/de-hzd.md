@@ -27,7 +27,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-20"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -45,7 +45,7 @@ relationships:
   - type: part-of
     target: DE
     source: fact
-    evidence: "Confirmed by reading hzd.hessen.de's own '55 Jahre HZD' chronicle pages directly (2026-09-20): a formal contract between the Land and municipal parties was signed 12 May 1969 proposing the organisational vehicle, and the Hessisches Datenverarbeitungsverbundgesetz came into force in 1970 establishing HZD (de.wikipedia.org, also read directly, independently confirms the statute's name and 1970 date, and adds that HZD 'wurde Landesbetrieb nach §26 der Hessischen Landeshaushaltsordnung' in 1989). hzd.hessen.de's own chronicle separately confirms the Landesbetrieb transition occurred around 1989 ('Leonhard Ermer kehrte 1989 zurück' as the director who shaped HZD 'as a Landesbetrieb') and that its current mandate derives from 'dem Datenverarbeitungsverbundgesetz, der Betriebsordnung der HZD und den Vorgaben der Landesregierung.' Same Landesbetrieb legal form as [[DE-IT-NRW]] (formed 2009) — 'a legally dependent, organisationally separated part of the state administration' — making `part-of` a direct fit. Anchor edge under metadata/relationship-types.md §2.3, asserting Hessian sub-federal scope via `level: subnational`."
+    evidence: "Confirmed by reading hzd.hessen.de's own '55 Jahre HZD' chronicle pages directly (2026-09-20): a formal contract between the Land and municipal parties was signed 12 May 1969 proposing the organisational vehicle, and the Hessisches Datenverarbeitungsverbundgesetz came into force in 1970 establishing HZD. hzd.hessen.de's own chronicle separately confirms the Landesbetrieb transition occurred around 1989 ('Leonhard Ermer kehrte 1989 zurück' as the director who shaped HZD 'as a Landesbetrieb') and that its current mandate derives from 'dem Datenverarbeitungsverbundgesetz, der Betriebsordnung der HZD und den Vorgaben der Landesregierung.' Same Landesbetrieb legal form as [[DE-IT-NRW]] (formed 2009) — 'a legally dependent, organisationally separated part of the state administration' — making `part-of` a direct fit. Anchor edge under metadata/relationship-types.md §2.3, asserting Hessian sub-federal scope via `level: subnational`. A Wikipedia corroboration was dropped from this evidence on 2026-11-22 (roadmap #767); the primary source above carries the edge."
     confidence: high
     valid_from: null
     valid_until: null

@@ -25,7 +25,7 @@ verification: primary-source
 
 start_date: 2015-07-01
 end_date: null
-last_verified: "2026-09-20"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -43,7 +43,7 @@ relationships:
   - type: part-of
     target: DE
     source: fact
-    evidence: "Confirmed by reading bitbw.de's own homepage directly (2026-09-20): 'Die Landesoberbehörde IT Baden-Württemberg (abgekürzt BITBW) ist seit dem 1. Juli 2015 der zentrale IT-Dienstleister des Landes Baden-Württemberg. Sie wurde als Landesoberbehörde im Geschäftsbereich des Innenministeriums errichtet und wird als Landesbetrieb geführt.' de.wikipedia.org, also read directly, independently confirms the same date and dual legal characterisation (established as a Landesoberbehörde, operated as a Landesbetrieb), and adds that its predecessor, the Informatikzentrum Landesverwaltung Baden-Württemberg (IZLBW), was 'gleichzeitig dadurch aufgelöst' (simultaneously dissolved). Fourth German sub-federal IT provider in this Atlas after [[DE-DATAPORT]], [[DE-AKDB]] and [[DE-IT-NRW]]/[[DE-HZD]]; unlike the multi-Land [[DE-DATAPORT]], BITBW serves a single Land. Anchor edge under metadata/relationship-types.md §2.3, asserting Baden-Württemberg sub-federal scope via `level: subnational`."
+    evidence: "Confirmed by reading bitbw.de's own homepage directly (2026-09-20): 'Die Landesoberbehörde IT Baden-Württemberg (abgekürzt BITBW) ist seit dem 1. Juli 2015 der zentrale IT-Dienstleister des Landes Baden-Württemberg. Sie wurde als Landesoberbehörde im Geschäftsbereich des Innenministeriums errichtet und wird als Landesbetrieb geführt.' A Wikipedia corroboration was dropped from this evidence on 2026-11-22 (roadmap #767); the primary source above carries the edge. Fourth German sub-federal IT provider in this Atlas after [[DE-DATAPORT]], [[DE-AKDB]] and [[DE-IT-NRW]]/[[DE-HZD]]; unlike the multi-Land [[DE-DATAPORT]], BITBW serves a single Land. Anchor edge under metadata/relationship-types.md §2.3, asserting Baden-Württemberg sub-federal scope via `level: subnational`."
     confidence: high
     valid_from: 2015-07-01
     valid_until: null

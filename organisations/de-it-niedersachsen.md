@@ -26,7 +26,7 @@ verification: primary-source
 
 start_date: 2014-01-01
 end_date: null
-last_verified: "2026-09-20"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -42,7 +42,7 @@ relationships:
   - type: part-of
     target: DE
     source: fact
-    evidence: "Confirmed by reading niedersachsen.de's own Interior Ministry page directly (2026-09-20): 'Der Landesbetrieb IT.Niedersachsen besteht seit dem 01. Januar 2014' (has existed since 1 January 2014), formed from 'dem ehemaligen Landesbetrieb für Statistik und Kommunikationstechnologie Niedersachsen (LSKN)' (the former State Office for Statistics and Communications Technology Lower Saxony), operating as a central IT service provider for Lower Saxony's state administration under the oversight of the Ministry for Interior Affairs and Sports. de.wikipedia.org, also read directly, independently confirms the same founding date and the LSKN predecessor being dissolved when IT.Niedersachsen was created. Same Landesbetrieb legal form as [[DE-IT-NRW]], [[DE-HZD]], [[DE-BITBW]] and [[DE-LDI]]. Anchor edge under metadata/relationship-types.md §2.3, asserting Lower Saxony sub-federal scope via `level: subnational`."
+    evidence: "Confirmed by reading niedersachsen.de's own Interior Ministry page directly (2026-09-20): 'Der Landesbetrieb IT.Niedersachsen besteht seit dem 01. Januar 2014' (has existed since 1 January 2014), formed from 'dem ehemaligen Landesbetrieb für Statistik und Kommunikationstechnologie Niedersachsen (LSKN)' (the former State Office for Statistics and Communications Technology Lower Saxony), operating as a central IT service provider for Lower Saxony's state administration under the oversight of the Ministry for Interior Affairs and Sports. A Wikipedia corroboration was dropped from this evidence on 2026-11-22 (roadmap #767); the primary source above carries the edge. Same Landesbetrieb legal form as [[DE-IT-NRW]], [[DE-HZD]], [[DE-BITBW]] and [[DE-LDI]]. Anchor edge under metadata/relationship-types.md §2.3, asserting Lower Saxony sub-federal scope via `level: subnational`."
     confidence: high
     valid_from: 2014-01-01
     valid_until: null

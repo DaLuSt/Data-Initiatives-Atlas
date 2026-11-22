@@ -29,7 +29,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-20"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -51,7 +51,7 @@ relationships:
   - type: governed-by
     target: DE-GEOZG
     source: fact
-    evidence: "Confirmed by reading lvermgeo.sachsen-anhalt.de directly (2026-08-28): 'The Geodata Access Act (GeoZG) from February 10, 2009, establishes the legal foundation for both the national geodata infrastructure and INSPIRE directive implementation at the federal level.' de.wikipedia.org, also read directly, confirms the federal government and the individual Länder each enacted Geodatenzugangsgesetze/Geodateninfrastrukturgesetze to fulfil the same requirement."
+    evidence: "Confirmed by reading lvermgeo.sachsen-anhalt.de directly (2026-08-28): 'The Geodata Access Act (GeoZG) from February 10, 2009, establishes the legal foundation for both the national geodata infrastructure and INSPIRE directive implementation at the federal level.' A Wikipedia corroboration was dropped from this evidence on 2026-11-22 (roadmap #767); the primary source above carries the edge."
     confidence: high
     valid_from: null
     valid_until: null
