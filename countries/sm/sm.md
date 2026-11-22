@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -35,12 +35,16 @@ relationships:
   - type: part-of
     target: INTL-COE
     source: fact
-    evidence: "Confirmed by reading two Wikipedia articles directly (2026-08-27) after coe.int itself proved genuinely, domain-wide bot-walled (403) on every path tried: the 'Member states of the Council of Europe' article's own accession table gives San Marino's accession date as 16 November 1988; the general 'Council of Europe' article corroborates current membership. ISO's OBP is also confirmed blocked (403) — it is a JavaScript application, not a static page. Anchor edge under metadata/relationship-types.md §2.3: it records Council of Europe membership and asserts no more than that."
+    evidence: "The Council of Europe's own poster 'Map of the Council of Europe 46 member states' (edoc.coe.int, designed February 2024), read directly 2026-11-22 as a PDF, lists San Marino among the 46 member states. The accession date in `valid_from` (1988-11-16) is from an encyclopedia's accession table, read earlier, because the Council's own chart of signatures on coe.int cannot be read from here; it is not in the poster. Anchor edge under metadata/relationship-types.md §2.3: it records Council of Europe membership and asserts no more than that. Replaces encyclopedia evidence for the membership itself (roadmap #767)."
     confidence: high
     valid_from: 1988-11-16
     valid_until: null
 
 sources:
+  - title: "Map of the Council of Europe 46 member states (2024)"
+    url: "https://edoc.coe.int/en/map-of-the-member-states/5332-map-of-the-council-of-europe-46-member-states.html"
+    publisher: "Council of Europe (edoc.coe.int)"
+    accessed: "2026-11-22"
   - title: "SM — San Marino (ISO 3166-1 country code)"
     url: "https://www.iso.org/obp/ui/#iso:code:3166:SM"
     publisher: "International Organization for Standardization (ISO)"
