@@ -24,15 +24,17 @@ verification: primary-source
 
 start_date: 2018-11-09
 end_date: 2026-08-15
-last_verified: "2026-09-05"
+last_verified: "2026-11-22"
 previous_version: null
 successor: NL-CBW
 
 domains:
   - DOMAIN-GOVERNMENT
   - DOMAIN-CYBERSECURITY
-organisations: []
+organisations:
+  - NL-NCSC
 related_entities:
+  - NL-NCSC
   - NL-CBW
   - EU-NIS
 relationships:
@@ -136,6 +138,15 @@ directly.
 
 - Superseded by [[NL-CBW]] (recorded on that entity, with `successor` set
   here) — confirmed in force from 15 August 2026.
+
+## Who carried it out (2026-11-22)
+
+Read directly on wetten.overheid.nl (BWBR0041515, the last version, in force from 1 October 2024 to 14 August
+2026): Article 1 defines "Onze Minister" as the Minister van Justitie en Veiligheid, and Article 2 makes that
+Minister "a. het centrale contactpunt; b. voor aanbieders van een essentiële dienst: het CSIRT; c. de instantie
+voor de behandeling van vrijwillige meldingen". The Act names the Minister, not [[NL-NCSC]]; that the NCSC did
+this work for the Minister is the Atlas's reading of NL-NCSC's own description (it operates under the ministry),
+so it is listed under `organisations` and not as a typed edge. The ministry itself is not an Atlas entity.
 
 ## Sources
 

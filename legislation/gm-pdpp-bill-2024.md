@@ -20,15 +20,17 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-11-09"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
-organisations: []
+organisations:
+  - GM-INFORMATION-COMMISSION
 related_entities:
   - GM
+  - GM-INFORMATION-COMMISSION
 relationships:
   - type: applies-in
     target: GM
@@ -66,3 +68,7 @@ The interim framework, per a secondary source, is Part XIII of the Information a
 ## Relationships
 
 Applies in [[GM]] (anchor edge, as a bill).
+
+## The supervisory body (2026-11-22)
+
+Part VIII (sections 38 to 41) gives data protection to the Information Commission established under the Access to Information Act 2021, [[GM-INFORMATION-COMMISSION]] (read directly).
