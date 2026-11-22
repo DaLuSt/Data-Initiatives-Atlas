@@ -3,16 +3,18 @@
 
 Used by .github/workflows/linkedin-ideas.yml. The posts live in section 3 of
 docs/linkedin-page-posts.md ("### Post N. Title" followed by a ```text block). Twice a week
-(Tuesday and Thursday, local time) the workflow runs every 15 minutes; this tool decides
-whether the moment has come to post, and which post is next. Nothing here talks to LinkedIn
-or to GitHub: the workflow does that, and tools/linkedin_post.py does the posting.
+(every Saturday, and one weekday drawn at random for each week, local time) the workflow
+runs every 15 minutes; this tool decides whether the moment has come to post, and which post
+is next. Nothing here talks to LinkedIn or to GitHub: the workflow does that, and
+tools/linkedin_post.py does the posting.
 
-The time of day is drawn once per day, pseudo-randomly, from a hash of the date: a minute
-between 08:00 and 22:00 local time. The same date always gives the same minute, so every
-15-minute run of that day agrees on it without keeping any state. A run is "due" when the
-drawn minute has passed, the day is Tuesday or Thursday, it is before 22:00, and the log
-issue holds no entry for today (posted or failed): at most one attempt a day, so a failing
-token cannot post or comment every 15 minutes.
+The days and the time are drawn pseudo-randomly from hashes, so they need no stored state.
+The second posting day of a week is drawn from a hash of the ISO year and week: one of Monday
+to Friday, the same for every run of that week. The time of day is drawn from a hash of the
+date: a minute from 16:00 to 19:44 local time, so that the next 15-minute run, at the latest
+19:45, posts it before 20:00. A run is "due" when the day is a posting day, the drawn minute
+has passed, it is before 20:00, and the log issue holds no entry for today (posted or failed):
+at most one attempt a day, so a failing token cannot post or comment every 15 minutes.
 
 What has been posted is kept in the comments of one log issue, one line per attempt:
 
@@ -48,9 +50,15 @@ from zoneinfo import ZoneInfo
 REPO_ROOT = Path(__file__).resolve().parent.parent
 BANK = REPO_ROOT / "docs" / "linkedin-page-posts.md"
 DEFAULT_TZ = "Europe/Amsterdam"
-POST_DAYS = (1, 3)              # Tuesday and Thursday (Monday is 0)
-WINDOW_START = 8 * 60           # 08:00, in minutes after midnight
-WINDOW_END = 22 * 60            # 22:00: the drawn minute is always before this
+SATURDAY = 5                    # Monday is 0
+WEEKDAYS = (0, 1, 2, 3, 4)      # the second posting day of a week is one of Monday to Friday
+DAY_NAMES = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+WINDOW_START = 16 * 60          # 16:00, in minutes after midnight
+WINDOW_END = 20 * 60            # 20:00: nothing is posted at or after this
+WAKE_EVERY = 15                 # the workflow's cron step, in minutes
+# The drawn minute stays a full wake-up step before the end, so the run that catches it
+# (at most WAKE_EVERY minutes later) is still inside the window: 16:00 to 19:44.
+DRAW_END = WINDOW_END - WAKE_EVERY
 BANK_START = "## 3. Idea posts"
 HOLD_RE = re.compile(r"^\*(Check before posting|Hold)", re.M)
 LEDGER_RE = re.compile(r"^(Posted|Failed) idea post (\d+) on (\d{4}-\d{2}-\d{2}):", re.M)
@@ -95,9 +103,21 @@ def parse_bank(markdown: str) -> list[Idea]:
 
 
 def target_minute(day: dt.date, salt: str = "") -> int:
-    """The minute of the day (local), from 08:00 up to 21:59, at which `day`'s post is due."""
+    """The minute of the day (local), from 16:00 up to 19:44, at which `day`'s post is due."""
     digest = hashlib.sha256(f"{day.isoformat()}|{salt}".encode()).hexdigest()
-    return WINDOW_START + int(digest, 16) % (WINDOW_END - WINDOW_START)
+    return WINDOW_START + int(digest, 16) % (DRAW_END - WINDOW_START)
+
+
+def week_day(day: dt.date, salt: str = "") -> int:
+    """The weekday (Monday is 0) drawn as the second posting day of `day`'s ISO week."""
+    year, week, _ = day.isocalendar()
+    digest = hashlib.sha256(f"week {year}-W{week:02d}|{salt}".encode()).hexdigest()
+    return WEEKDAYS[int(digest, 16) % len(WEEKDAYS)]
+
+
+def post_days(day: dt.date, salt: str = "") -> tuple[int, int]:
+    """The two posting days (weekday numbers, in order) of `day`'s ISO week."""
+    return (week_day(day, salt), SATURDAY)
 
 
 def hhmm(minute: int) -> str:
@@ -144,15 +164,17 @@ def decide(ideas: list[Idea], comments: list[dict], now: dt.datetime, *, trusted
         return d(False, "the queue is empty: every post is posted or held")
     if force:
         return d(True, "a manual run: posting the next one now")
-    if day.weekday() not in POST_DAYS:
-        return d(False, "not a Tuesday or Thursday")
+    days = post_days(day, salt)
+    if day.weekday() not in days:
+        names = " and ".join(DAY_NAMES[x] for x in days)
+        return d(False, f"not a posting day: this week's are {names}")
     if day in attempted:
         return d(False, "already tried today")
     minute = now.hour * 60 + now.minute
     if minute < target:
         return d(False, f"too early: today's time is {hhmm(target)}")
     if minute >= WINDOW_END:
-        return d(False, f"missed: today's time was {hhmm(target)} and the window closed at 22:00")
+        return d(False, f"missed: today's time was {hhmm(target)} and the window closed at {hhmm(WINDOW_END)}")
     return d(True, f"today's time ({hhmm(target)}) has passed")
 
 
@@ -173,7 +195,7 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--bank", default=str(BANK))
     sub = ap.add_subparsers(dest="cmd", required=True)
     sub.add_parser("queue", help="print the posts, which are held, and the next one")
-    d = sub.add_parser("decide", help="print key=value lines: due, number, date, target, reason")
+    d = sub.add_parser("decide", help="print key=value lines: due, number, date, target, days, reason")
     d.add_argument("--comments-file", required=True, help="JSON list of the log issue's comments (gh issue view --json comments)")
     d.add_argument("--now", help="ISO time to use instead of the clock (tests); naive means local")
     d.add_argument("--tz", default=DEFAULT_TZ)
@@ -217,6 +239,7 @@ def main(argv: list[str] | None = None) -> int:
         print(f"number={dec.number if dec.number is not None else ''}")
         print(f"date={dec.date}")
         print(f"target={dec.target}")
+        print(f"days={' and '.join(DAY_NAMES[x] for x in post_days(now.date()))}")
         print(f"reason={dec.reason}")
         return 0
     except (IdeaError, OSError, ValueError, KeyError) as err:
