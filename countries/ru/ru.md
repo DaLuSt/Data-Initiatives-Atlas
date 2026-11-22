@@ -35,12 +35,16 @@ relationships:
   - type: part-of
     target: INTL-COE
     source: fact
-    evidence: "Confirmed by reading two Wikipedia articles directly (2026-08-27) after coe.int itself proved genuinely, domain-wide bot-walled (403) on every path tried: the 'Member states of the Council of Europe' article's own accession table gives Russia's accession date as 28 February 1996, matching this entity's existing figure exactly; the general 'Council of Europe' article confirms 'Russia became the first country expelled from the Council, following its 2022 invasion of Ukraine.' The 16 March 2022 expulsion date was not independently re-confirmed to the day this pass (it was sourced to commonslibrary.parliament.uk and coe.int in the prior pass; coe.int is now confirmed unreadable). ISO's OBP is also confirmed blocked (403) — it is a JavaScript application, not a static page. The edge carries a closed validity interval: a membership that ended is a different fact from one that never existed."
+    evidence: "The EU Delegation to the Council of Europe's own news item (eeas.europa.eu, 17 March 2022), read directly 2026-11-22: 'On 16 March, the Committee of Ministers of the Council of Europe, after consultation with the Parliamentary Assembly, decided by consensus that the Russian Federation ceases to be a member immediately', 'adopted by consensus the resolution to cease Russian membership as of 16 March', and 'Russia joined the Council of Europe on 28 February 1996.' coe.int itself, where the Committee of Ministers' resolution is published, is blocked to this environment (403). The edge carries a closed validity interval: a membership that ended is a different fact from one that never existed."
     confidence: high
     valid_from: 1996-02-28
     valid_until: 2022-03-16
 
 sources:
+  - title: "Committee of Ministers decides Russia ceases to be a member of the Council of Europe"
+    url: "https://www.eeas.europa.eu/delegations/council-europe/committee-ministers-decides-russia-ceases-be-member-council-europe_en"
+    publisher: "European External Action Service (EU Delegation to the Council of Europe)"
+    accessed: "2026-11-22"
   - title: "RU — Russia (ISO 3166-1 country code)"
     url: "https://www.iso.org/obp/ui/#iso:code:3166:RU"
     publisher: "International Organization for Standardization (ISO)"

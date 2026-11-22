@@ -9,5 +9,5 @@ summary: >
   and is marked (roadmap #767). XK related-to EU now cites Council Decision 2016/342 concluding the
   Stabilisation and Association Agreement (signed 22 October 2015); the 2022 membership application still rests
   on an encyclopedia and is marked. Closes the run-history entry for #826.
-prs: []
-outcome: in-progress
+prs: [827]
+outcome: merged

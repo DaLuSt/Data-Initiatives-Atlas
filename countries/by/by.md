@@ -35,12 +35,16 @@ relationships:
   - type: related-to
     target: INTL-COE
     source: fact
-    evidence: "Confirmed by reading Wikipedia's 'Member states of the Council of Europe' article directly (2026-08-27), after coe.int itself proved genuinely, domain-wide bot-walled (403) on every path tried: 'Belarus applied for full membership on 12 March 1993' but has never been admitted, and it is absent from the article's own table of 46 current members — a date and detail this entity did not previously carry. The general 'Council of Europe' article corroborates: after 1989, 'all European post-Soviet states except Belarus and Kazakhstan' joined. ISO's OBP is also confirmed blocked (403). Anchor edge recording non-membership and a suspended relationship, not membership."
+    evidence: "Belarus's own Ministry of Foreign Affairs page on the Council of Europe (mfa.gov.by), read directly 2026-11-22: 'On September 16, 1992 the Parliamentary Assembly of the Council of Europe (PACE) granted the Special Guest status to the Supreme Soviet of the Republic of Belarus. On March 12, 1993 Belarus applied for membership in the Council of Europe. However, in January 1997, the PACE Bureau decided to suspend the Special Guest status for the Belarusian Parliament. The consideration of the application of the Republic of Belarus to join the Council of Europe was also suspended.' The page predates 2022 (it still counts 47 member states). The Council of Europe's own poster 'Map of the Council of Europe 46 member states' (edoc.coe.int, read directly 2026-11-22) does not list Belarus among the 46; Belarus appears on it only as a geographic label. Anchor edge recording non-membership and a suspended relationship, not membership."
     confidence: high
     valid_from: null
     valid_until: null
 
 sources:
+  - title: "Council of Europe — Multilateral cooperation"
+    url: "https://mfa.gov.by/en/mulateral/organization/list/bceb2bae0fb895c5.html"
+    publisher: "Ministry of Foreign Affairs of the Republic of Belarus"
+    accessed: "2026-11-22"
   - title: "BY — Belarus (ISO 3166-1 country code)"
     url: "https://www.iso.org/obp/ui/#iso:code:3166:BY"
     publisher: "International Organization for Standardization (ISO)"
