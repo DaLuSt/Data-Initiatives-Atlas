@@ -26,7 +26,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-30"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -38,12 +38,16 @@ relationships:
   - type: part-of
     target: INTL-COE
     source: fact
-    evidence: "Confirmed 2026-09-30: coe.int itself remains genuinely bot-walled (403) even with an honest, identifying User-Agent, but Wikipedia's own dedicated 'Member states of the Council of Europe' article, read directly, gives a sourced per-country accession table: Liechtenstein joined 23 November 1978. Anchor edge under metadata/relationship-types.md §2.3: it records Council of Europe membership and asserts no more than that."
+    evidence: "The Council of Europe's own poster 'Map of the Council of Europe 46 member states' (edoc.coe.int, designed February 2024), read directly 2026-11-22 as a PDF, lists Liechtenstein among the 46 member states. The accession date in `valid_from` (1978-11-23) is from an encyclopedia's accession table, read earlier, because the Council's own chart of signatures on coe.int cannot be read from here; it is not in the poster. Anchor edge under metadata/relationship-types.md §2.3: it records Council of Europe membership and asserts no more than that. Replaces encyclopedia evidence for the membership itself (roadmap #767)."
     confidence: high
     valid_from: 1978-11-23
     valid_until: null
 
 sources:
+  - title: "Map of the Council of Europe 46 member states (2024)"
+    url: "https://edoc.coe.int/en/map-of-the-member-states/5332-map-of-the-council-of-europe-46-member-states.html"
+    publisher: "Council of Europe (edoc.coe.int)"
+    accessed: "2026-11-22"
   - title: "The European Free Trade Association"
     url: "https://www.efta.int/about-efta/european-free-trade-association"
     publisher: "European Free Trade Association (EFTA)"

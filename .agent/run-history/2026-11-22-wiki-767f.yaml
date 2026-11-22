@@ -9,5 +9,5 @@ summary: >
   (the 2014 decree on Légifrance), FR-ETALAB part-of FR-DINUM and FR-DATA-GOUV maintained-by FR-ETALAB
   (data.gouv.fr), CH-BACS part-of CH (ncsc.admin.ch), ES-CNI governed-by ES-LEY-11-2002 (boe.es). Closes the
   run-history entry for #817.
-prs: []
-outcome: in-progress
+prs: [818]
+outcome: merged
