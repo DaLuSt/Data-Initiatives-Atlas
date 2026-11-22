@@ -31,7 +31,7 @@ verification: primary-source
 
 start_date: 2003-01-28
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -51,7 +51,7 @@ relationships:
   - type: implements-requirement-from
     target: UN-AARHUS
     source: fact
-    evidence: "Confirmed by reading environment.ec.europa.eu's own 'Aarhus Convention and the EU' page directly (2026-08-28): 'The EU and its 27 Member States are all Parties to the Aarhus Convention', and this directive 'aims to ensure that environmental information is systematically made available by the authorities to the public' — implementing the Convention's first pillar (access to information). Wikipedia's 'Directive on public access to environmental information' article, also read directly, states plainly: 'the directive implements the Convention.'"
+    evidence: "Confirmed by reading environment.ec.europa.eu's own 'Aarhus Convention and the EU' page directly (2026-08-28): 'The EU and its 27 Member States are all Parties to the Aarhus Convention', and this directive 'aims to ensure that environmental information is systematically made available by the authorities to the public' — implementing the Convention's first pillar (access to information). The Directive itself, read directly 2026-11-22 from the Official Journal text (Publications Office, CELEX 32003L0004), recital 5: 'On 25 June 1998 the European Community signed the UN/ECE Convention on Access to Information, Public Participation in Decision-Making and Access to Justice in Environmental Matters (‘the Aarhus Convention’). Provisions of Community law must be consistent with that Convention with a view to its conclusion by the European Community.' Replaces an encyclopedia citation (roadmap #767)."
     confidence: high
     valid_from: 2003-01-28
     valid_until: null

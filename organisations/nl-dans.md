@@ -26,7 +26,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-04"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -40,7 +40,7 @@ relationships:
   - type: part-of
     target: NL
     source: fact
-    evidence: "Confirmed by reading nwo.nl's own page directly (2026-09-04): DANS 'operates as an institute of KNAW... and NWO', described as the Dutch national centre of expertise and repository for research data. Confirmed independently by reading the Dutch Wikipedia article directly, which dates DANS's founding to 2005, consolidating the Steinmetz Archive (1964), the Dutch Historical Data Archive (1989), the Scientific Statistical Agency (1994), the Dutch Institute for Scientific Information Services (1997) and the Electronic Depot of Netherlands Archaeology (2004). Neither KNAW nor NWO is an Atlas entity, so the anchor edge is asserted at country scope rather than to either joint parent, the same pattern used for NL-SURF. Anchor edge under metadata/relationship-types.md §2.3."
+    evidence: "Confirmed by reading nwo.nl's own page directly (2026-09-04): DANS 'operates as an institute of KNAW... and NWO', described as the Dutch national centre of expertise and repository for research data. Its founding history, from an encyclopedia article, is in the prose and not needed for this edge (roadmap #767). Neither KNAW nor NWO is an Atlas entity, so the anchor edge is asserted at country scope rather than to either joint parent, the same pattern used for NL-SURF. Anchor edge under metadata/relationship-types.md §2.3."
     confidence: medium
     valid_from: null
     valid_until: null
