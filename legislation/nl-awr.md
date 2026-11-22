@@ -24,16 +24,18 @@ verification: primary-source
 
 start_date: 1959-07-02
 end_date: null
-last_verified: "2026-10-11"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
-organisations: []
+organisations:
+  - NL-BELASTINGDIENST
 related_entities:
   - NL-BRI
   - NL-BASISREGISTRATIES
+  - NL-BELASTINGDIENST
 relationships:
   - type: applies-in
     target: NL
@@ -79,3 +81,7 @@ entity does not repeat it.
 - `applies-in` NL (anchor edge).
 
 Inbound: [[NL-BRI]] is `governed-by` this entity.
+
+## Who keeps the income registry (2026-11-22)
+
+Read directly on wetten.overheid.nl (BWBR0002320): Article 21a(1), "Er is een basisregistratie inkomen"; Article 21b(2), "De inspecteur is belast met de uitvoering van de basisregistratie inkomen", and 21b(3), the inspector ensures the income data are correct, complete and current. The Act's text read here does not define "inspecteur" in one sentence; Article 56 speaks of "iedere door Onze Minister aangewezen andere ambtenaar van de rijksbelastingdienst", so the inspector is an official of the tax administration, [[NL-BELASTINGDIENST]]. That last step is the Atlas's reading, which is why it is a reference under `organisations` and not a typed edge.

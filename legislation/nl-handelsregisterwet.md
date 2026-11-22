@@ -20,15 +20,17 @@ coverage: low
 verification: primary-source
 start_date: 2007-03-22
 end_date: null
-last_verified: "2026-09-06"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
-organisations: []
+organisations:
+  - NL-KVK
 related_entities:
   - NL-BASISREGISTRATIES
+  - NL-KVK
 relationships:
   - type: applies-in
     target: NL
@@ -78,6 +80,10 @@ the Union through the Business Registers Interconnection System, now
 ## Relationships
 
 - `applies-in` [[NL]] — an anchor edge.
+
+## Who keeps it (2026-11-22)
+
+Article 3(1): "Het handelsregister wordt gehouden door de Kamer", the Kamer van Koophandel ([[NL-KVK]], Article 1), which is also the controller for its processing (Article 3(2)). Read directly on wetten.overheid.nl; recorded as a `governed-by` edge on [[NL-KVK]].
 
 ## Sources
 
