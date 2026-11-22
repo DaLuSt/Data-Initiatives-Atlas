@@ -15,6 +15,7 @@ description: >
   health and social data for those secondary purposes. It is the basis for the
   social and health data permit authority Findata, established the same year.
   The act is not applied to clinical trials.
+  In force on 1 May 2019; some provisions apply later (section 13 from 1 November 2019, the Kanta services from 1 January 2021, sections 19, 20(3), 21–34 and 55 from 1 May 2021), as the Act's own transitional section records.
 
 level: national
 country: FI
@@ -26,9 +27,9 @@ confidence: medium
 coverage: medium
 verification: primary-source
 
-start_date: null
+start_date: 2019-05-01
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -50,6 +51,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Laki sosiaali- ja terveystietojen toissijaisesta käytöstä 552/2019 (alkuperäinen)"
+    url: "https://www.finlex.fi/fi/laki/alkup/2019/20190552"
+    publisher: "Finlex (Ministry of Justice, Finland)"
+    accessed: "2026-11-22"
   - title: "Legislation — Findata"
     url: "https://findata.fi/en/services-and-instructions/legislation/"
     publisher: "Findata"
@@ -83,6 +88,8 @@ sources:
 > `start_date: 2019-01-01` is corrected: findata.fi states the Act
 > "entered into force in May 2019," a month, not the day this entity
 > had fabricated.
+
+> **Dated 2026-11-22** (roadmap #775). The original Act on Finlex (2019/552), read directly: 'Tämä laki tulee voimaan 1 päivänä toukokuuta 2019.' The same section applies section 13 (advisory service) from 1 November 2019, the Act to the Kanta services from 1 January 2021, and sections 19, 20(3), 21–34 and 55 (logs, secure processing environments, clinical findings) from 1 May 2021; some disclosure deadlines in sections 47(4) and 48 apply from 1 January 2021 or 1 January 2024. `start_date` is 1 May 2019, the first date of the staged commencement, which matches findata.fi's 'entered into force in May 2019'.
 
 ## Description
 
@@ -144,6 +151,10 @@ behind it, corrected this pass to **unset**. findata.fi states the Act
 "entered into force in May 2019," which is now recorded in the
 `applies-in` relationship's evidence text; no source read gives an exact
 day, so none is guessed.
+
+**Update 2026-11-22:** the Act's own text on Finlex now gives the exact
+day, 1 May 2019, so `start_date` is set (see the dated note above). Several
+provisions apply later; the note lists them.
 
 ## Relationships
 

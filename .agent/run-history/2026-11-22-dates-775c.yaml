@@ -1,0 +1,13 @@
+date: "2026-11-22"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #775. Five start dates from the laws' own official records. FI-SECONDARY-USE-ACT 2019-05-01 (Finlex
+  original text, with the later-applying sections listed). NL-ARCHIEFWET-1995 1996-01-01, NL-WET-SUWI
+  2002-01-01 and NL-WOB 1992-05-01 (wetten.overheid.nl information pages; the Wob's repeal on 2022-05-01
+  matches its end_date). GB-UK-GDPR 2020-12-31, IP completion day at 11.00 p.m. (EUWA 2018 s3(1) and EUWAA
+  2020 s39 on legislation.gov.uk). wetten.overheid.nl shows the Archiefwet 1995's repeal with no in-force date
+  yet, so its end_date stays the intended 2027-01-01. Tried and left: CA-PRIVACY-ACT (the consolidated text
+  has no in-force note), AT-UIG (ris.bka.gv.at returned 503). discovery/unresolved.md row #219 records the
+  eeas.europa.eu route for Council of Europe facts. Closes the run-history entry for #828.
+prs: []
+outcome: in-progress

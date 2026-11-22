@@ -12,6 +12,7 @@ description: >
   January 2024. It operates alongside the Data Protection Act 2018 and was
   substantially amended by the Data (Use and Access) Act 2025, whose main
   data protection provisions came into force on 5 February 2026.
+  It became part of domestic law at IP completion day, 31 December 2020 at 11.00 p.m. (European Union (Withdrawal) Act 2018 s3(1); European Union (Withdrawal Agreement) Act 2020 s39).
 
 level: national
 country: GB
@@ -21,9 +22,9 @@ status: active
 confidence: medium
 coverage: medium
 verification: primary-source
-start_date: null
+start_date: 2020-12-31
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -59,6 +60,14 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "European Union (Withdrawal Agreement) Act 2020, section 39 (as enacted)"
+    url: "https://www.legislation.gov.uk/ukpga/2020/1/section/39/enacted"
+    publisher: "legislation.gov.uk (The National Archives)"
+    accessed: "2026-11-22"
+  - title: "European Union (Withdrawal) Act 2018, section 3 (as at 1 January 2021)"
+    url: "https://www.legislation.gov.uk/ukpga/2018/16/section/3/2021-01-01"
+    publisher: "legislation.gov.uk (The National Archives)"
+    accessed: "2026-11-22"
   - title: "Retained EU Law (Revocation and Reform) Act 2023 — Explanatory Notes"
     url: "https://www.legislation.gov.uk/ukpga/2023/28/notes/division/7/index.htm"
     publisher: "legislation.gov.uk (The National Archives)"
@@ -82,6 +91,8 @@ sources:
 > gov.scot's "Assimilated law" page were read directly and confirmed the
 > renaming date below. `commonslibrary.parliament.uk` returned a
 > bot-defense challenge (403) and was not read this pass.
+
+> **Dated 2026-11-22** (roadmap #775). legislation.gov.uk, read directly. Section 3(1) of the European Union (Withdrawal) Act 2018, as in force on 1 January 2021: 'Direct EU legislation, so far as operative immediately before IP completion day, forms part of domestic law on and after IP completion day.' Section 39(1) of the European Union (Withdrawal Agreement) Act 2020 (as enacted): '"IP completion day" means 31 December 2020 at 11.00 p.m'. `start_date` is therefore 2020-12-31; the hour is UK time, which was midnight in Brussels. The GDPR itself applied in the UK from 25 May 2018 as EU law; this entity is the domestic copy, so it starts at IP completion day.
 
 ## Description
 

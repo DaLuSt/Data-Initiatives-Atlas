@@ -10,6 +10,7 @@ description: >
   information in good, orderly and accessible condition, and to transfer
   records to an archive service in principle after twenty years. Due to be
   replaced on 1 January 2027.
+  In force on 1 January 1996 (Stb. 1995, 276; in force by Stb. 1995, 671), per wetten.overheid.nl.
 
 level: national
 country: NL
@@ -21,9 +22,9 @@ confidence: medium
 coverage: medium
 verification: primary-source
 
-start_date: null
+start_date: 1996-01-01
 end_date: 2027-01-01
-last_verified: "2026-08-27"
+last_verified: "2026-11-22"
 previous_version: null
 successor: NL-ARCHIEFWET-2026
 
@@ -43,6 +44,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Archiefwet 1995 — BWBR0007376 (informatie)"
+    url: "https://wetten.overheid.nl/BWBR0007376/informatie"
+    publisher: "Overheid.nl (wetten.overheid.nl)"
+    accessed: "2026-11-22"
   - title: "Archiefwet — Kennisbank"
     url: "https://www.nationaalarchief.nl/archiveren/kennisbank/archiefwet"
     publisher: "Nationaal Archief"
@@ -65,6 +70,8 @@ sources:
 > precisely via [[NL-ARCHIEFWET-2026]]'s own re-verification this pass:
 > the successor act was signed 13 May 2026 and published as Stb. 2026, 149
 > on 19 June 2026, with entry into force still set by royal decree.
+
+> **Dated 2026-11-22** (roadmap #775). wetten.overheid.nl's information page for the Archiefwet 1995 (BWBR0007376), read directly, records it as a new regulation ('Nieuwe-regeling') in force 01-01-1996, published as Stb. 1995, 276, in force by Stb. 1995, 671. The same page reads 'Intrekking regeling zonder datum inwerkingtreding aanwezig': the repeal by the Archiefwet 2026 is on record, but no in-force date for it had been set on 22 November 2026. `end_date` stays the intended 1 January 2027 that nationaalarchief.nl and rijksoverheid.nl give, until a royal decree fixes it.
 
 ## Description
 
