@@ -1,0 +1,14 @@
+date: "2026-11-22"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #770, a fourth slice. Two new regulator entities, each sourced from the law's own text read directly:
+  TT-INFORMATION-COMMISSIONER (Trinidad and Tobago's Data Protection Act 2011, Part II, sections 7 to 9; status
+  unknown, since the Proclamation was not read) and GM-INFORMATION-COMMISSION (The Gambia's Data Protection and
+  Privacy Bill 2024, Part VIII, which gives data protection to the Information Commission of the Access to
+  Information Act 2021; status unknown). NL-WBNI lists NL-NCSC: the Act's Article 2 makes the Minister of Justice
+  and Security the CSIRT for essential services; that the NCSC did that work is the Atlas's reading, so it is a
+  reference. The recount of laws with no body, now also counting an organisation in the law's own related_entities,
+  is 41 before this slice (GB-RPSI-REGULATIONS-2015 was already linked to the Information Commission that way, on
+  purpose). Closes the run-history entry for #814.
+prs: []
+outcome: in-progress

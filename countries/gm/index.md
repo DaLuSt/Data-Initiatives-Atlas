@@ -9,7 +9,7 @@ Anchor entity: [[GM]]
 
 ## Organisations
 
-_None yet._
+- [[GM-INFORMATION-COMMISSION]]
 
 ## Legislation
 
