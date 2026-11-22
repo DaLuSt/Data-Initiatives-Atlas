@@ -24,7 +24,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-09-26"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -42,12 +42,16 @@ relationships:
   - type: part-of
     target: GB
     source: fact
-    evidence: "Confirmed by reading en.wikipedia.org's 'Data.gov.uk' article (2026-08-22): 'data.gov.uk is a UK Government project to make available non-personal UK government data as open data. It was launched as closed beta in 30 September 2009, and publicly launched in January 2010 ... As of February 2015, it contained over 19,343 datasets, rising to over 40,000 in 2017, and more than 47,000 by 2023.' Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
-    confidence: medium
+    evidence: "Scope anchor under metadata/relationship-types.md §2.3. data.gov.uk's own About page, read directly 2026-11-22: 'Since 2010, the data.gov.uk website, now known as the National Data Library, has been helping people to find and use open government data ... The website is run by the Government Digital Service (GDS) in the Department for Science, Innovation and Technology (DSIT).' Its footer: '© Crown copyright'. The launch dates and dataset counts an encyclopedia article gave are in the prose and not relied on here (roadmap #767)."
+    confidence: high
     valid_from: null
     valid_until: null
 
 sources:
+  - title: "About the National Data Library (data.gov.uk)"
+    url: "https://www.data.gov.uk/about"
+    publisher: "Government Digital Service, DSIT (data.gov.uk)"
+    accessed: "2026-11-22"
   - title: "National Data Library — the home of UK public data"
     url: "https://www.data.gov.uk/"
     publisher: "GOV.UK"

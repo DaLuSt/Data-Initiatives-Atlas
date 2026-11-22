@@ -22,7 +22,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -43,7 +43,7 @@ relationships:
   - type: maintained-by
     target: AT-BRZ
     source: fact
-    evidence: "Confirmed verbatim by reading brz.gv.at's own Open Data page directly (2026-08-26): 'Das BRZ betreibt den zentralen österreichischen Datenkatalog (data.gv.at) für den österreichischen Bund sowie die nationalen und internationalen Schnittstellen (EU-Datenportal) zu diesem Datenkatalog' (the BRZ operates the central Austrian data catalogue for the federal government, as well as the national and international interfaces — the EU data portal — to it). The same page dates the launch to 2014 and gives an updated dataset count: 'aktuell sind über 27.000 veröffentlichten Datensätze verfügbar' (currently over 27,000 published datasets are available) — higher than the 20,700 this entity previously carried, unread, from a Wikipedia mention with no figure of its own."
+    evidence: "Confirmed verbatim by reading brz.gv.at's own Open Data page directly (2026-08-26): 'Das BRZ betreibt den zentralen österreichischen Datenkatalog (data.gv.at) für den österreichischen Bund sowie die nationalen und internationalen Schnittstellen (EU-Datenportal) zu diesem Datenkatalog' (the BRZ operates the central Austrian data catalogue for the federal government, as well as the national and international interfaces — the EU data portal — to it). The same page dates the launch to 2014 and gives an updated dataset count: 'aktuell sind über 27.000 veröffentlichten Datensätze verfügbar' (currently over 27,000 published datasets are available) — higher than the 20,700 this entity previously carried, unread, from an encyclopedia mention with no figure of its own (roadmap #767)."
     confidence: medium
     valid_from: null
     valid_until: null

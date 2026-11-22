@@ -32,7 +32,7 @@ verification: primary-source
 
 start_date: 2009-05-16
 end_date: null
-last_verified: "2026-09-04"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -47,7 +47,7 @@ relationships:
   - type: maintained-by
     target: FR-DINUM
     source: fact
-    evidence: "Confirmed by reading numerique.gouv.fr's own RGAA page directly (2026-09-04): 'La Direction interministérielle du numérique (DINUM) crée et maintient le RGAA' (DINUM creates and maintains the RGAA), alongside associated resources and tools. Corroborated by reading the French Wikipedia RGAA article directly (2026-09-04), which independently states DINUM has overseen the RGAA's evolution since October 2019, with the latest version, 4.1, released 16 February 2021."
+    evidence: "Confirmed by reading numerique.gouv.fr's own RGAA page directly (2026-09-04): 'La Direction interministérielle du numérique (DINUM) crée et maintient le RGAA' (DINUM creates and maintains the RGAA), alongside associated resources and tools. An encyclopedia corroboration was dropped from this evidence on 2026-11-22 (roadmap #767)."
     confidence: high
     valid_from: null
     valid_until: null

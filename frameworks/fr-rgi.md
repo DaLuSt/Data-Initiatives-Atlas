@@ -27,7 +27,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-18"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -43,7 +43,7 @@ relationships:
   - type: maintained-by
     target: FR-DINUM
     source: fact
-    evidence: "Confirmed verbatim by reading numerique.gouv.fr's own RGI page directly (2026-08-26): 'Le RGI est défini dans l'ordonnance n° 2005-1516 du 8 décembre 2005 relative aux échanges électroniques entre les usagers et les autorités administratives et entre les autorités administratives. Dans l'article 11 de cette ordonnance, le RGI fixe les règles techniques permettant d'assurer l'interopérabilité des systèmes d'information' (the RGI is defined in ordonnance n° 2005-1516 of 8 December 2005 ... under Article 11 of that ordinance, the RGI sets the technical rules ensuring interoperability of information systems) — DINUM's own page, not a hosted PDF or Wikipedia, now carries the legal-foundation claim."
+    evidence: "Confirmed verbatim by reading numerique.gouv.fr's own RGI page directly (2026-08-26): 'Le RGI est défini dans l'ordonnance n° 2005-1516 du 8 décembre 2005 relative aux échanges électroniques entre les usagers et les autorités administratives et entre les autorités administratives. Dans l'article 11 de cette ordonnance, le RGI fixe les règles techniques permettant d'assurer l'interopérabilité des systèmes d'information' (the RGI is defined in ordonnance n° 2005-1516 of 8 December 2005 ... under Article 11 of that ordinance, the RGI sets the technical rules ensuring interoperability of information systems) — DINUM's own page, not a hosted PDF or an encyclopedia, now carries the legal-foundation claim (roadmap #767)."
     confidence: medium
     valid_from: null
     valid_until: null

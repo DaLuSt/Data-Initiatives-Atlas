@@ -26,7 +26,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-26"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -39,14 +39,14 @@ relationships:
   - type: part-of
     target: ES
     source: fact
-    evidence: "Closes a gap ES-AOC's own file had flagged ('Localret ... not independently researched') -- graph completion, not a numbered discovery/unresolved.md row. Confirmed by reading localret.cat's own 'Who We Are' page directly (2026-09-26): 'the local consortium formed by the local administrations of Catalonia to support municipalities in their digital transformation,' headquartered in Barcelona. ca.wikipedia.org's own 'Localret' article, also read directly, independently gives the 1997 founding year, names FMC and ACM as founders, states it integrated 784 municipalities (99% of Catalonia's population) at founding, and confirms it co-founded the AOC Consortium in 2002 -- matching ES-AOC's own already-sourced account of Localret representing local governments in the 2001 pact. Anchor edge under metadata/relationship-types.md §2.3, asserting Catalan sub-federal scope via `level: subnational`, matching ES-AOC's own treatment."
+    evidence: "Closes a gap ES-AOC's own file had flagged ('Localret ... not independently researched') -- graph completion, not a numbered discovery/unresolved.md row. Confirmed by reading localret.cat's own 'Who We Are' page directly (2026-09-26): 'the local consortium formed by the local administrations of Catalonia to support municipalities in their digital transformation,' headquartered in Barcelona. Its founding details, from an encyclopedia article, are in the prose and not relied on for this edge (roadmap #767). Anchor edge under metadata/relationship-types.md §2.3, asserting Catalan sub-federal scope via `level: subnational`, matching ES-AOC's own treatment."
     confidence: medium
     valid_from: null
     valid_until: null
   - type: participates-in
     target: ES-AOC
     source: fact
-    evidence: "Confirmed on both ES-AOC's own page (aoc.cat, already cited on ES-AOC) and ca.wikipedia.org's Localret article, both stating Localret represented local governments in the 23 July 2001 pact and 27 March 2002 resolution that created the AOC Consortium -- Localret co-founded AOC, it does not merely relate to it."
+    evidence: "Confirmed on ES-AOC's own page (aoc.cat, already cited on ES-AOC), stating Localret represented local governments in the 23 July 2001 pact and 27 March 2002 resolution that created the AOC Consortium -- Localret co-founded AOC, it does not merely relate to it. An encyclopedia corroboration was dropped from this evidence on 2026-11-22 (roadmap #767)."
     confidence: high
     valid_from: "2002-03-27"
     valid_until: null
