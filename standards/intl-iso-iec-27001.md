@@ -40,12 +40,16 @@ relationships:
   - type: maintained-by
     target: INTL-ISO
     source: fact
-    evidence: "Confirmed by reading jtc1info.org and two Wikipedia articles directly (2026-08-28): jtc1info.org states SC 27 is 'responsible for helping to mitigate against the growing problems of cyber risks and attacks' and names ISO/IEC 27001 as one of its standards; Wikipedia's ISO/IEC 27001 article confirms 'The International Organization for Standardization (ISO) and the International Electrotechnical Commission (IEC) jointly publish this standard' under 'ISO/IEC JTC 1/SC 27,' with the current edition '2022,' supplemented by 'ISO/IEC 27001:2022/Amd 1:2024'; Wikipedia's ISO/IEC 27000 family article confirms the family is 'developed jointly by' ISO and IEC. Both `iso.org` sources in the frontmatter list (`/standard/27001`, `/standard/iso-iec-27000-family`) remain unread — `iso.org` is domain-wide 403-blocked for this pass's retrieval tool, confirmed on [[INTL-ISO]]. Confirmed a second, stronger way 2026-09-27, matching the workaround already used to close [[INTL-ISO-IEC-27002]] (discovery/unresolved.md row #220): standards.iteh.ai, an authorized ISO/IEC standards reseller, serves a free 'redline' preview PDF of the actual ISO/IEC 27001:2022 text (catalog number 82875, matching iso.org/standard/82875.html), read directly — its own Foreword states in as many words 'This document was prepared by Joint Technical Committee ISO/IEC JTC 1, Information Technology, Subcommittee SC 27, Information security, cybersecurity and privacy protection' and 'This third edition cancels and replaces the second edition (ISO/IEC 27001:2013), which has been technically revised,' with 'Copyright Protected Document © ISO/IEC 2022' and ISO's own copyright-office address on every page. `iso.org` itself remains domain-wide blocked, but this is the standard's own published text, not a page about it."
+    evidence: "The committee's own site, committee.iso.org/home/jtc1sc27 (ISO/IEC JTC 1/SC 27, 'Information security, cybersecurity and privacy protection'), read directly 2026-11-22: 'SC 27 can boast the development of the most internationally used information security management standard of all time ISO/IEC 27001, as well the industry best practice set of information security controls ISO/IEC 27002'. jtc1info.org, read directly 2026-08-28, also names ISO/IEC 27001 among SC 27's standards. SC 27 is a subcommittee of the joint ISO/IEC technical committee JTC 1, so the standard is maintained jointly with the IEC."
     confidence: high
     valid_from: null
     valid_until: null
 
 sources:
+  - title: "ISO/IEC JTC 1/SC 27 — About"
+    url: "https://committee.iso.org/home/jtc1sc27"
+    publisher: "ISO/IEC JTC 1/SC 27"
+    accessed: "2026-11-22"
   - title: "ISO/IEC 27001:2022 — Information security management systems"
     url: "https://www.iso.org/standard/27001"
     publisher: "International Organization for Standardization (ISO)"

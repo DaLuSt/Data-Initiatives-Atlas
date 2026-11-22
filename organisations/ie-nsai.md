@@ -56,7 +56,7 @@ relationships:
   - type: participates-in
     target: INTL-ISO
     source: fact
-    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP. iso.org itself is confirmed domain-wide blocked to this environment's fetch tooling (the same limit logged on other ISO-membership questions in this Atlas), so en.wikipedia.org's dedicated NSAI article was read directly instead (2026-09-05): 'The National Standards Authority of Ireland (NSAI) is the International Organization for Standardization (ISO) member body for Ireland.' An independent, dedicated article stating membership in its own words, the same evidence tier used for GB-BSI and DE-DIN's ISO edges. Corroborated directly from ISO's own side 2026-09-27: committee.iso.org/iso/home/about/iso_members.htm — a different, reachable iso.org subdomain (the workaround documented in discovery/unresolved.md row #220) — lists 'Ireland NSAI Member body' with 377 TC and 3 PDC participations."
+    evidence: "ISO's own member list on committee.iso.org (iso_members.htm), read directly 2026-09-27 and again 2026-11-22, lists 'Ireland NSAI Member body' (381 technical committee participations on 2026-11-22). iso.org itself is blocked to this environment; committee.iso.org is the reachable ISO subdomain recorded in discovery/unresolved.md row #220."
     confidence: high
     valid_from: null
     valid_until: null

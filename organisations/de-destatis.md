@@ -45,7 +45,7 @@ relationships:
   - type: part-of
     target: DE-BMI
     source: fact
-    evidence: "Confirmed by reading de.wikipedia.org's dedicated Destatis article directly (2026-08-28): the Statistisches Bundesamt 'operates as a federal authority under the Bundesministerium des Innern (Federal Ministry of the Interior).' destatis.de's own 'Aufgaben' and 'Gesetzliche Grundlagen' pages, also read directly, describe Destatis's tasks and legal basis without themselves naming the parent ministry on those specific pages."
+    evidence: "destatis.de's own 'Organisation' page, read directly 2026-11-22: 'Das Statistische Bundesamt ist eine Bundesoberbehörde, die zum Geschäftsbereich des Bundesministeriums des Innern und für Heimat (BMI) gehört. Das BMI übt die Dienstaufsicht aus.' The same page adds that subject-matter supervision (Fachaufsicht) lies with the federal ministries responsible for each statistic."
     confidence: high
     valid_from: null
     valid_until: null
@@ -71,6 +71,10 @@ relationships:
     valid_from: null
     valid_until: null
 sources:
+  - title: "Statistisches Bundesamt — Organisation"
+    url: "https://www.destatis.de/DE/Ueber-uns/Organisation/_inhalt.html"
+    publisher: "Statistisches Bundesamt (Destatis)"
+    accessed: "2026-11-22"
   - title: "Aufgaben — Statistisches Bundesamt"
     url: "https://www.destatis.de/DE/Ueber-uns/Aufgaben/_inhalt.html"
     publisher: "Statistisches Bundesamt (Destatis)"

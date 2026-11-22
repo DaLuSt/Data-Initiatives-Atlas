@@ -41,7 +41,7 @@ relationships:
   - type: part-of
     target: DE-BMI
     source: fact
-    evidence: "Confirmed by reading de.wikipedia.org's dedicated BSI article directly (2026-08-28): the BSI is 'a German federal superior authority responsible for IT security' that 'reports to the Bundesministerium des Innern (Federal Ministry of the Interior)' as 'a subordinate agency within this ministry's administrative jurisdiction.' bsi.bund.de's own 'Auftrag' page, also read directly, confirms the BSI is a federal authority (Bundesamt) without itself naming the parent ministry on that specific page."
+    evidence: "bsi.bund.de's own 'Organisation und Aufbau' page, read directly 2026-11-22: 'Das BSI ist im Geschäftsbereich des Bundesministeriums des Innern angesiedelt und hat seinen Dienstsitz in Bonn.'"
     confidence: high
     valid_from: null
     valid_until: null
@@ -61,6 +61,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "BSI — Organisation und Aufbau"
+    url: "https://www.bsi.bund.de/DE/Das-BSI/Organisation-und-Aufbau/organisation-und-aufbau_node.html"
+    publisher: "Bundesamt für Sicherheit in der Informationstechnik (BSI)"
+    accessed: "2026-11-22"
   - title: "BSI — Bundesamt für Sicherheit in der Informationstechnik"
     url: "https://www.bsi.bund.de/"
     publisher: "Bundesamt für Sicherheit in der Informationstechnik (BSI)"
