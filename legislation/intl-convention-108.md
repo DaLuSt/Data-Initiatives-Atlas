@@ -31,7 +31,7 @@ verification: primary-source
 
 start_date: 1981-01-28
 end_date: null
-last_verified: "2026-09-18"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -55,7 +55,7 @@ relationships:
   - type: applies-in
     target: AR
     source: fact
-    evidence: "Eight non-Council of Europe countries from Africa and Latin America have ratified Convention 108: Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia and Uruguay (en.wikipedia.org 'Convention for the Protection of Individuals with Regard to Automatic Processing of Personal Data', citing the Council of Europe chart of signatures and ratifications; wto.org 'Facilitating transborder data flows: Convention 108'). Wikipedia read directly 2026-08-28, confirming the eight-state list; the wto.org PDF was fetched but returned unreadable binary/compressed content, not extractable text — a tool limitation on that specific PDF, not a site block."
+    evidence: "Argentina's approval, read directly 2026-11-22 on InfoLEG (the Ministry of Justice's legal database): Ley 27.483, sanctioned 6 December 2018 and published in the Boletín Oficial on 2 January 2019, Article 1, 'Apruébase el Convenio para la Protección de las Personas con respecto al Tratamiento Automatizado de Datos de Carácter Personal, suscripto en la ciudad de Estrasburgo ... el día 28 de enero de 1981 ... y el Protocolo Adicional', the 2001 protocol on supervisory authorities and transborder flows. That is parliamentary approval; the deposit of the instrument with the Council of Europe, and so the date the Convention bound Argentina, was not read on a primary page (coe.int is blocked). Eight non-Council of Europe countries from Africa and Latin America have ratified Convention 108: Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia and Uruguay (en.wikipedia.org 'Convention for the Protection of Individuals with Regard to Automatic Processing of Personal Data', citing the Council of Europe chart of signatures and ratifications; wto.org 'Facilitating transborder data flows: Convention 108'). Wikipedia read directly 2026-08-28, confirming the eight-state list; the wto.org PDF was fetched but returned unreadable binary/compressed content, not extractable text — a tool limitation on that specific PDF, not a site block."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -111,12 +111,20 @@ relationships:
   - type: applies-in
     target: UY
     source: fact
-    evidence: "Eight non-Council of Europe countries from Africa and Latin America have ratified Convention 108: Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia and Uruguay; Uruguay was the first non-European state to accede (en.wikipedia.org 'Convention for the Protection of Individuals with Regard to Automatic Processing of Personal Data'; wto.org 'Facilitating transborder data flows: Convention 108'). Wikipedia read directly 2026-08-28, confirming the eight-state list; the wto.org PDF was fetched but returned unreadable binary/compressed content, not extractable text — a tool limitation on that specific PDF, not a site block."
+    evidence: "Uruguay's approval, read directly 2026-11-22 on IMPO (the Official Gazette's legal database): Ley 19.030, promulgated 27 December 2012 and published 7 January 2013, Artículo Único, 'Apruébanse el Convenio N° 108 del Consejo de Europa para la protección de las Personas con Respecto al Tratamiento Automatizado de Datos de Carácter Personal de 28 de enero de 1981 adoptado en Estrasburgo y el Protocolo Adicional ... adoptado en Estrasburgo, el 8 de noviembre de 2001'. That is parliamentary approval; the deposit with the Council of Europe was not read on a primary page (coe.int is blocked). Eight non-Council of Europe countries from Africa and Latin America have ratified Convention 108: Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia and Uruguay; Uruguay was the first non-European state to accede (en.wikipedia.org 'Convention for the Protection of Individuals with Regard to Automatic Processing of Personal Data'; wto.org 'Facilitating transborder data flows: Convention 108'). Wikipedia read directly 2026-08-28, confirming the eight-state list; the wto.org PDF was fetched but returned unreadable binary/compressed content, not extractable text — a tool limitation on that specific PDF, not a site block."
     confidence: medium
     valid_from: null
     valid_until: null
 
 sources:
+  - title: "Ley 19.030 (Uruguay), approving Convention 108 and its Additional Protocol (IMPO)"
+    url: "https://www.impo.com.uy/bases/leyes/19030-2012"
+    publisher: "IMPO, Centro de Información Oficial (Uruguay)"
+    accessed: "2026-11-22"
+  - title: "Ley 27.483 (Argentina), approving Convention 108 and its Additional Protocol (InfoLEG)"
+    url: "https://servicios.infoleg.gob.ar/infolegInternet/anexos/315000-319999/318245/norma.htm"
+    publisher: "InfoLEG, Ministerio de Justicia y Derechos Humanos (Argentina)"
+    accessed: "2026-11-22"
   - title: "Convention 108 and Protocols"
     url: "https://www.coe.int/en/web/data-protection/convention108-and-protocol"
     publisher: "Council of Europe"
