@@ -24,7 +24,7 @@ verification: primary-source
 
 start_date: 2011-02-21
 end_date: null
-last_verified: "2026-09-26"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -38,7 +38,7 @@ relationships:
   - type: part-of
     target: FR-DINUM
     source: fact
-    evidence: "Confirmed verbatim by reading data.gouv.fr's own organisation page directly (2026-08-26): 'Etalab est un département de la direction interministérielle du numérique (DINUM), dont les missions et l'organisation sont fixées par le décret du 30 Octobre 2019' (Etalab is a department of DINUM, whose missions and organisation are set by the decree of 30 October 2019). fr.wikipedia.org's page, also read directly, adds a founding date this entity previously said was unestablished: 'La mission Etalab a été créée par décret le 21 février 2011' (the Etalab mission was created by decree on 21 February 2011), originally placed under the Prime Minister's authority and attached to the Secrétariat général du Gouvernement, before becoming a DINUM department in 2019."
+    evidence: "Confirmed verbatim by reading data.gouv.fr's own organisation page directly (2026-08-26): 'Etalab est un département de la direction interministérielle du numérique (DINUM), dont les missions et l'organisation sont fixées par le décret du 30 Octobre 2019' (Etalab is a department of DINUM, whose missions and organisation are set by the decree of 30 October 2019). The 2011 founding of the Etalab mission is in the prose, from an encyclopedia article; this edge does not need it (roadmap #767)."
     confidence: medium
     valid_from: 2019-10-30
     valid_until: null

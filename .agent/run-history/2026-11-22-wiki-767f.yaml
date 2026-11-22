@@ -1,0 +1,13 @@
+date: "2026-11-22"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #767, a tenth slice: seven edges no longer rest on Wikipedia. NO-ALTINN maintained-by NO-DIGDIR now
+  quotes Altinn's own "Om Altinn" page ("Digitaliseringsdirektoratet er ansvarlig for altinn.no"), medium to high;
+  the 2020 transfer date stays in the prose with its encyclopedia source named. FI-PALVELUVAYLA based-on X-Road is
+  rewritten from niis.org's history page alone, re-read directly; three dates only an encyclopedia gave are no
+  longer used. Five edges drop an encyclopedia sentence their primary source does not need: FR-DGSI part-of FR
+  (the 2014 decree on Légifrance), FR-ETALAB part-of FR-DINUM and FR-DATA-GOUV maintained-by FR-ETALAB
+  (data.gouv.fr), CH-BACS part-of CH (ncsc.admin.ch), ES-CNI governed-by ES-LEY-11-2002 (boe.es). Closes the
+  run-history entry for #817 if it has merged.
+prs: []
+outcome: in-progress

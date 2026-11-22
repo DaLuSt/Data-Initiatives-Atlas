@@ -25,7 +25,7 @@ verification: primary-source
 
 start_date: 2002-05-06
 end_date: null
-last_verified: "2026-09-20"
+last_verified: "2026-11-22"
 previous_version: ES-CESID
 successor: null
 
@@ -44,7 +44,7 @@ relationships:
   - type: governed-by
     target: ES-LEY-11-2002
     source: fact
-    evidence: "Confirmed by reading the act's own text at boe.es directly (2026-08-26, BOE-A-2002-8628): Article 7.1 attaches the CNI to the Ministry of Defence; Article 7.2 gives it 'autonomía funcional bajo la figura de Organismo público con personalidad jurídica propia y plena capacidad de obrar'; Article 1 gives its mission of supplying the President of Government and Cabinet with information and analysis. es.wikipedia.org, also read directly, adds a fact this entity did not carry: the CNI's Ministry attachment has changed twice — under the Presidency Ministry from 2011, moved back to Defence only in 2018 by Pedro Sánchez's government. Article 7.1's Defence attachment is therefore current, not original."
+    evidence: "Confirmed by reading the act's own text at boe.es directly (2026-08-26, BOE-A-2002-8628): Article 7.1 attaches the CNI to the Ministry of Defence; Article 7.2 gives it 'autonomía funcional bajo la figura de Organismo público con personalidad jurídica propia y plena capacidad de obrar'; Article 1 gives its mission of supplying the President of Government and Cabinet with information and analysis. The history of the CNI's ministry attachment, from an encyclopedia article, is in the prose and not needed for this edge (roadmap #767)."
     confidence: medium
     valid_from: 2002-05-06
     valid_until: null
