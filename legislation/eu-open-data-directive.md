@@ -24,7 +24,7 @@ verification: primary-source
 
 start_date: 2019-07-16
 end_date: null
-last_verified: "2026-09-25"
+last_verified: "2026-11-22"
 previous_version: EU-PSI-DIRECTIVE
 successor: null
 
@@ -92,7 +92,7 @@ relationships:
   - type: applies-in
     target: DE
     source: fact
-    evidence: "Directive (EU) 2019/1024 of 20 June 2019, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32019L1024): Article 17(1), Member States bring into force the measures necessary to comply 'by 17 July 2021', and its final article reads 'This Directive is addressed to the Member States.' Germany is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). Not read, from the earlier search-only record: The Datennutzungsgesetz implements the requirements of Directive (EU) 2019/1024 and replaced the Informationsweiterverwendungsgesetz; it came into force on 23 July 2021 (de.wikipedia.org 'Datennutzungsgesetz'; bho-legal.com; de.digital)."
+    evidence: "Directive (EU) 2019/1024 of 20 June 2019, read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32019L1024): Article 17(1), Member States bring into force the measures necessary to comply 'by 17 July 2021', and its final article reads 'This Directive is addressed to the Member States.' Germany is on the EU's own list of its 27 member countries, 'EU Member State since 1958' (european-union.europa.eu, 'EU countries', read directly 2026-11-14). The German transposing act, the Datennutzungsgesetz ([[DE-DNG]]), is Article 2 of the Federal Government's bill, Bundestag Drucksache 19/27442 (read directly 2026-11-19), whose footnote reads 'Dieses Gesetz dient der Umsetzung der Richtlinie (EU) 2019/1024' and whose Article 3 repeals the Informationsweiterverwendungsgesetz on entry into force; the date, 23 July 2021, is the statute text's, as recorded on [[DE-DNG]]. Replaces an encyclopedia citation (roadmap #767)."
     confidence: high
     valid_from: 2021-07-23
     valid_until: null

@@ -25,7 +25,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-12"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -41,8 +41,8 @@ relationships:
   - type: governed-by
     target: CZ-ZAKON-12-2020
     source: fact
-    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP (discovery/unresolved.md row #185). Confirmed already on this entity's own description and by cs.wikipedia.org, read directly: DIA was established by amendment 471/2022 to Act No 12/2020 Sb., on the right to digital services, effective 1 January 2023. The original 2020 Act is now [[CZ-ZAKON-12-2020]], read directly via psp.cz's own legislative record (2026-09-12); amendment 471/2022 itself is not separately modelled."
-    confidence: medium
+    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP (discovery/unresolved.md row #185). Act No. 12/2020 Sb., as amended by Act No. 471/2022 Sb., read directly 2026-11-22 on zakonyprolidi.cz: § 2a(1) establishes the Agency and § 2a(3) gives it its tasks, among them 'a) plní koordinační úlohu v oblasti digitálních služeb a digitálních úkonů podle tohoto zákona' and 'c) plní koordinační úlohu v oblasti evidence a sdílení dat'. The original 2020 Act is [[CZ-ZAKON-12-2020]], read via psp.cz's legislative record (2026-09-12); amendment 471/2022 is not separately modelled. Replaces an encyclopedia citation (roadmap #767)."
+    confidence: high
     valid_from: 2023-01-01
     valid_until: null
   - type: implements
@@ -55,12 +55,16 @@ relationships:
   - type: part-of
     target: CZ
     source: fact
-    evidence: "Confirmed by reading cs.wikipedia.org's DIA article directly (2026-08-26): 'Agentura byla zřízena novelou 471/2022 Sb. zákona č. 12/2020 Sb., o právu na digitální služby k 1. lednu 2023 a plnou působnost přebrala od 1. dubna 2023' (the agency was established by amendment 471/2022 Sb. to Act No. 12/2020 Sb., on the right to digital services, with effect from 1 January 2023, and took over full authority from 1 April 2023) — matching this entity's existing claim exactly. Anchor edge under metadata/relationship-types.md §2.3."
-    confidence: medium
+    evidence: "Scope anchor under metadata/relationship-types.md §2.3. Act No. 12/2020 Sb., § 2a, read directly 2026-11-22 on zakonyprolidi.cz: '(1) Zřizuje se Digitální a informační agentura (dále jen „Agentura“) se sídlem v Praze. (2) Agentura je ústředním správním úřadem pro elektronickou identifikaci a služby vytvářející důvěru a pro informační systémy veřejné správy.' A central administrative authority of the Czech State. The transitional provisions of amendment 471/2022 Sb., on the same page, say the Ministry of the Interior exercised its competences until 31 March 2023. The 1 January 2023 effective date came from an encyclopedia article and is not relied on (roadmap #767)."
+    confidence: high
     valid_from: null
     valid_until: null
 
 sources:
+  - title: "Zákon č. 12/2020 Sb., o právu na digitální služby, § 2a and the transitional provisions of 471/2022 Sb. (zakonyprolidi.cz)"
+    url: "https://www.zakonyprolidi.cz/cs/2020-12"
+    publisher: "zakonyprolidi.cz (AION CS), text of the Sbírka zákonů"
+    accessed: "2026-11-22"
   - title: "Digitální a informační agentura"
     url: "https://www.dia.gov.cz/cs"
     publisher: "Digitální a informační agentura (DIA)"
