@@ -8,6 +8,6 @@ summary: >
   longer used. Five edges drop an encyclopedia sentence their primary source does not need: FR-DGSI part-of FR
   (the 2014 decree on Légifrance), FR-ETALAB part-of FR-DINUM and FR-DATA-GOUV maintained-by FR-ETALAB
   (data.gouv.fr), CH-BACS part-of CH (ncsc.admin.ch), ES-CNI governed-by ES-LEY-11-2002 (boe.es). Closes the
-  run-history entry for #817 if it has merged.
+  run-history entry for #817.
 prs: []
 outcome: in-progress
