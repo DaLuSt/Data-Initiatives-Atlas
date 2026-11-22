@@ -1,0 +1,12 @@
+date: "2026-11-22"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #767. EE-RIHA governed-by EE-ATS and EE-ATS applies-in EE now quote the Information System Authority's
+  own RIHA page on ria.ee, which lists the Public Information Act and the RIHA regulation as RIHA's legal acts and
+  links to them on Riigi Teataja; the Act's original publication reference (RT I 2000, 92, 597) still rests on an
+  encyclopedia and is marked, because Riigi Teataja needs JavaScript. Tried and left: NL-PETRA based-on NL-NORA
+  (noraonline.nl now shows a bot check), the remaining undated Caribbean and Gulf laws (their official law sites
+  do not resolve from this environment, and qanoon.om is not an official source). Closes the run-history entry
+  for #831.
+prs: []
+outcome: in-progress
