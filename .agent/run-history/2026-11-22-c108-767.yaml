@@ -8,5 +8,5 @@ summary: >
   Protocol. The deposit of the instruments with the Council of Europe, which is what makes each a Party, is still
   read only through the encyclopedia (coe.int is blocked), and the evidence says so. Mexico's Diario Oficial failed
   certificate verification (hostname mismatch) and was not read. Closes the run-history entry for #819.
-prs: []
-outcome: in-progress
+prs: [820]
+outcome: merged
