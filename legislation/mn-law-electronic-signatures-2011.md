@@ -48,6 +48,8 @@ sources:
 
 > **Created 2026-11-01** (roadmap #482). Known from the Commission's list only; the date is presumed to be the adoption date. `start_date` is empty: no commencement date was read.
 
+> **Open question, 2026-11-22** (roadmap #775). The link the Commission's list gives for this row opens, on legalinfo.mn, a law of **17 December 2021** with the same title (ЦАХИМ ГАРЫН ҮСГИЙН ТУХАЙ), marked a revised edition (Шинэчилсэн найруулга), whose Article 35.1 applies it from 1 May 2022 (https://legalinfo.mn/mn/detail?lawId=16390355252531, read directly). A revised edition normally replaces the earlier law, which would make this 2011 entity superseded, but no repeal provision was read, so its `status` and dates are left as they are. Tracked in `discovery/unresolved.md`.
+
 ## Relationships
 
 Applies in [[MN]]; listed by [[MN-CRC]].

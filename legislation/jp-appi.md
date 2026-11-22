@@ -13,6 +13,7 @@ description: >
   supervises across the private sector, administrative agencies, incorporated administrative agencies and local governments. The
   Commission's site publishes a consolidated text as of 1 April 2023, when the amended Acts entered full force, and notes that only
   the Japanese text has legal effect. The Act's text was not read.
+  Promulgated on 30 May 2003 and in force that day, except Chapters 4 to 6 (the obligations of businesses), which took effect on a day set by Cabinet Order within two years (e-Gov law data, Supplementary Provisions Article 1).
 
 level: national
 country: JP
@@ -22,9 +23,9 @@ status: active
 confidence: high
 coverage: low
 verification: primary-source
-start_date: null
+start_date: 2003-05-30
 end_date: null
-last_verified: "2026-10-16"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -46,6 +47,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "個人情報の保護に関する法律 (平成十五年法律第五十七号) — e-Gov law data"
+    url: "https://laws.e-gov.go.jp/api/1/lawdata/415AC0000000057"
+    publisher: "e-Gov (Digital Agency, Japan)"
+    accessed: "2026-11-22"
   - title: "Roles and Responsibilities — Personal Information Protection Commission"
     url: "https://www.ppc.go.jp/en/aboutus/roles/"
     publisher: "Personal Information Protection Commission (Japan)"
@@ -59,7 +64,9 @@ sources:
 
 # Act on the Protection of Personal Information (Japan)
 
-> **Created 2026-10-16** (roadmap #482, Japan). Known from the Commission's pages; the Act's text was not read. **No `start_date`**: the pages give the Act's number and year (No. 57 of 2003) and a series of amendments, not a date of entry into force, and the Act has been amended more than once (the Commission's outline names the 2020 Amendment; only the 2017 and 2023 effective dates appear on the pages read).
+> **Created 2026-10-16** (roadmap #482, Japan). Known from the Commission's pages; the Act's text was not read then (it has been since; see the dated note below). **No `start_date` at creation**: the pages give the Act's number and year (No. 57 of 2003) and a series of amendments, not a date of entry into force, and the Act has been amended more than once (the Commission's outline names the 2020 Amendment; only the 2017 and 2023 effective dates appear on the pages read).
+
+> **Dated 2026-11-22** (roadmap #775). The Act's own text from e-Gov's law-data API (law ID 415AC0000000057), read directly: Act No. 57 of Heisei 15 (2003), promulgated 30 May 2003. Supplementary Provisions Article 1 (施行期日): 'この法律は、公布の日から施行する。ただし、第四章から第六章まで及び附則第二条から第六条までの規定は、公布の日から起算して二年を超えない範囲内において政令で定める日から施行する。' (in force on the day of promulgation, except Chapters 4 to 6 and Supplementary Articles 2 to 6, which take effect on a day set by Cabinet Order within two years). `start_date` is 30 May 2003, the first date of the staged commencement; the Cabinet Order date for Chapters 4 to 6 was not read.
 
 ## What is sourced
 
