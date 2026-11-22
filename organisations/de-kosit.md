@@ -5,6 +5,7 @@ name: Koordinierungsstelle für IT-Standards
 name_en: "Coordination Office for IT Standards"
 alternative_names:
   - KoSIT
+  - "Institut für IT-Standardisierung"
   - Coordination Office for IT Standards
 description: >
   German coordination office for IT standards, formally created by
@@ -12,10 +13,11 @@ description: >
   coordinating the development and operation of IT standards for data
   exchange in public administration. Originally the OSCI-Leitstelle,
   renamed KoSIT on 1 April 2011 as its remit expanded to the XÖV framework.
-  It is located organisationally in the e-government unit of the core
-  administration of the Free Hanseatic City of Bremen, is brought together
-  under the roof of the FITKO, and publishes and maintains the XRechnung
-  standard.
+  It is located organisationally in a unit of Department 4 of Bremen's
+  Senator for Finance, works for the FITKO under a framework agreement made
+  on behalf of the IT-Planungsrat, and publishes and maintains the XRechnung
+  standard. FITKO's own page calls it the "Institut für IT-Standardisierung –
+  Koordinierungsstelle für IT-Standards für den Bund und die Länder".
 
 level: national
 country: DE
@@ -28,7 +30,7 @@ verification: primary-source
 
 start_date: 2010-09-24
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -42,19 +44,23 @@ relationships:
   - type: governed-by
     target: DE-IT-PLANUNGSRAT
     source: fact
-    evidence: "de.wikipedia.org's dedicated KoSIT article, read directly (2026-08-28): the KoSIT was formally created by IT-Planungsrat decision 2010/19 of 24 September 2010 (as the OSCI-Leitstelle, renamed KoSIT on 1 April 2011), and the IT-Planungsrat assigned it its four responsibilities (XÖV development and operation, coordination and public relations, secure data transport, the standardisation agenda). xoev.de's own page, also read directly, says its creation 'followed constitutional amendments and an IT state treaty'. Recorded 2026-10-11 as the substantive edge in place of the earlier low-confidence part-of FITKO (roadmap #535, unresolved row #17 closed)."
+    evidence: "Read directly 2026-11-22. FITKO's own page on federal IT standards (fitko.de): 'Das Institut für IT-Standardisierung – Koordinierungsstelle für IT-Standards für den Bund und die Länder (KoSIT) betreibt die IT-Standards des IT-Planungsrats', and 'Die Rahmenvereinbarung zwischen FITKO und KoSIT regelt die grundsätzliche Beziehung zwischen beiden Institutionen im Auftrag des IT-Planungsrats.' The IT-Planungsrat's own standards page (it-planungsrat.de) names the KoSIT as the operator ('Betreiber') of the XÖV framework, which 'wird von der Koordinierungsstelle für IT-Standards (KoSIT) betrieben und weiterentwickelt'. xoev.de, read directly 2026-08-28, says its creation 'followed constitutional amendments and an IT state treaty'. The founding details (IT-Planungsrat decision 2010/19 of 24 September 2010, as the OSCI-Leitstelle, renamed KoSIT on 1 April 2011) still rest on an encyclopedia (roadmap #767). Recorded 2026-10-11 as the substantive edge in place of the earlier low-confidence part-of FITKO (roadmap #535)."
     confidence: high
     valid_from: null
     valid_until: null
   - type: related-to
     target: DE-FITKO
     source: fact
-    evidence: "Two sourced statements that a single part-of cannot hold together: the KoSIT is located in the e-government unit of Bremen's core administration (xoev.de and Wikipedia, both read directly 2026-08-28), and it is one of the bodies brought together under the FITKO's roof (geodaten.niedersachsen.de, as recorded on DE-IT-PLANUNGSRAT; docs.fitko.de describes FITKO running the FIM/XÖV documentation infrastructure but does not itself state an organisational part-of). Decision 2026-10-11 (roadmap #535, metadata/relationship-types.md §2.6): a Land-hosted office working inside a federal cooperation is recorded by this plain association plus the governance edge above, and the hosting is told in the entity text; part-of is not asserted because neither source says the KoSIT is a unit of the FITKO."
+    evidence: "FITKO's own page on federal IT standards (fitko.de), read directly 2026-11-22: the KoSIT 'berät bei Standardisierungsvorhaben im Auftrag der FITKO'; 'Das Institut ist verwaltungsorganisatorisch beim Referat der Abteilung 4 der Senatorin für Finanzen der Freien Hansestadt Bremen angesiedelt'; 'Die Rahmenvereinbarung zwischen FITKO und KoSIT regelt die grundsätzliche Beziehung zwischen beiden Institutionen im Auftrag des IT-Planungsrats. Die konkreten Aufgaben der KoSIT werden in Einzelvereinbarungen zwischen der FITKO und der KoSIT geregelt'; and FITKO commissions partners 'wie z.B. die Koordinierungsstelle für IT-Standards (KoSIT)' to maintain recognised standards. So the KoSIT is a Bremen-hosted institution that works for the FITKO under a framework agreement, not a unit of it: this plain association (metadata/relationship-types.md §2.6, decided 2026-10-11 under roadmap #535) plus the governance edge above, with the hosting told in the entity text."
     confidence: medium
     valid_from: null
     valid_until: null
 
 sources:
+  - title: "Föderale IT-Standards — FITKO"
+    url: "https://www.fitko.de/foederale-it-architektur/standards"
+    publisher: "FITKO (Föderale IT-Kooperation)"
+    accessed: "2026-11-22"
   - title: "Startseite — Koordinierungsstelle für IT-Standards"
     url: "https://www.xoev.de/startseite-1459"
     publisher: "Koordinierungsstelle für IT-Standards (KoSIT)"
@@ -110,15 +116,16 @@ relationship to either is asserted.**
 
 ## A Land-hosted office inside a federal cooperation
 
-Two sourced statements sit side by side, and both are kept:
-
-1. The KoSIT is located in the Bremen state administration, confirmed
-   directly on two independent pages.
-2. The KoSIT is among the institutions brought together *under the roof of*
-   the [[DE-FITKO]], a description docs.fitko.de's own page (read directly)
-   does not restate in so many words; it describes FITKO operating shared
-   technical infrastructure for FIM/XÖV documentation without asserting a
-   formal containment.
+FITKO's own page on federal IT standards, read directly 2026-11-22, now
+states the arrangement in one place: the KoSIT is "verwaltungsorganisatorisch
+beim Referat der Abteilung 4 der Senatorin für Finanzen der Freien
+Hansestadt Bremen angesiedelt", it advises "im Auftrag der FITKO", and a
+framework agreement between FITKO and KoSIT, made "im Auftrag des
+IT-Planungsrats", governs the relationship, with individual agreements for
+specific tasks. That replaces the earlier pair of statements (Bremen
+hosting from xoev.de and an encyclopedia; "under the roof of" the FITKO
+from geodaten.niedersachsen.de), and confirms that the KoSIT is not a unit
+of the [[DE-FITKO]].
 
 A Land-hosted office operating within a federal cooperation structure is an
 ordinary German arrangement. **Decision, 2026-10-11 (roadmap #535, row #17

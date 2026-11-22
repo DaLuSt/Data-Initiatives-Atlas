@@ -11,5 +11,5 @@ summary: >
   2011 law was not read, so that is row #286 rather than a status change. Tried and left: the Kiribati acts
   (the published PDFs leave the commencement date blank), MN-LAW-COMMUNICATIONS-2001 (no in-force article
   found), CA-PRIVACY-ACT, AT-UIG (ris.bka.gv.at 503). Closes the run-history entry for #829.
-prs: []
-outcome: in-progress
+prs: [830]
+outcome: merged
