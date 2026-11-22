@@ -22,7 +22,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -34,12 +34,16 @@ relationships:
   - type: related-to
     target: INTL-CONVENTION-108
     source: fact
-    evidence: "Confirmed by reading en.wikipedia.org's own article directly (2026-08-27): 'Being non–Council of Europe states, Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia, and Uruguay have acceded to the treaty.' Independently confirmed by reading Argentina's own government's press release directly (2026-08-28, argentina.gob.ar 'Argentina, Estado Parte del Convenio 108'): Argentina became the 54th state to join Convention 108, with President Mauricio Macri and Foreign Minister Jorge Faurie depositing the instruments of accession with the Council of Europe's Secretary General on 25 February 2019, and the Convention and its Additional Protocol entering into force for Argentina on 1 June 2019 — a more precise date than this entity previously carried. ISO's OBP remains confirmed genuinely bot-walled (403) and the WTO PDF remains confirmed genuinely unreadable (an image-based scan), but 2 of the entity's 3 cited sources are now read directly: a majority. Anchor edge under metadata/relationship-types.md §2.3: this country is in the Atlas because the Convention reaches it, and the edge records nothing beyond being a party to that treaty."
+    evidence: "Argentina's approval, read directly 2026-11-22 on InfoLEG (the Ministry of Justice's legal database): Ley 27.483, sanctioned 6 December 2018 and published in the Boletín Oficial on 2 January 2019, Article 1, 'Apruébase el Convenio para la Protección de las Personas con respecto al Tratamiento Automatizado de Datos de Carácter Personal, suscripto en la ciudad de Estrasburgo ... el día 28 de enero de 1981 ... y el Protocolo Adicional', the 2001 protocol on supervisory authorities and transborder flows. That is parliamentary approval; the deposit of the instrument with the Council of Europe, and so the date the Convention bound Argentina, was not read on a primary page (coe.int is blocked). Confirmed by reading en.wikipedia.org's own article directly (2026-08-27): 'Being non–Council of Europe states, Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia, and Uruguay have acceded to the treaty.' Independently confirmed by reading Argentina's own government's press release directly (2026-08-28, argentina.gob.ar 'Argentina, Estado Parte del Convenio 108'): Argentina became the 54th state to join Convention 108, with President Mauricio Macri and Foreign Minister Jorge Faurie depositing the instruments of accession with the Council of Europe's Secretary General on 25 February 2019, and the Convention and its Additional Protocol entering into force for Argentina on 1 June 2019 — a more precise date than this entity previously carried. ISO's OBP remains confirmed genuinely bot-walled (403) and the WTO PDF remains confirmed genuinely unreadable (an image-based scan), but 2 of the entity's 3 cited sources are now read directly: a majority. Anchor edge under metadata/relationship-types.md §2.3: this country is in the Atlas because the Convention reaches it, and the edge records nothing beyond being a party to that treaty."
     confidence: high
     valid_from: 2019-06-01
     valid_until: null
 
 sources:
+  - title: "Ley 27.483 (Argentina), approving Convention 108 and its Additional Protocol (InfoLEG)"
+    url: "https://servicios.infoleg.gob.ar/infolegInternet/anexos/315000-319999/318245/norma.htm"
+    publisher: "InfoLEG, Ministerio de Justicia y Derechos Humanos (Argentina)"
+    accessed: "2026-11-22"
   - title: "AR — Argentina (ISO 3166-1 country code)"
     url: "https://www.iso.org/obp/ui/#iso:code:3166:AR"
     publisher: "International Organization for Standardization (ISO)"

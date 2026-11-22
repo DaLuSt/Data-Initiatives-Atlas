@@ -9,5 +9,5 @@ summary: >
   each evidence string says so. Left: RU (expelled in 2022, not on the poster), BY and VA (not members), and the
   Convention 108 edges. discovery/unresolved.md row #219 records the PDF route. Closes the run-history entry for
   #818.
-prs: []
-outcome: in-progress
+prs: [819]
+outcome: merged

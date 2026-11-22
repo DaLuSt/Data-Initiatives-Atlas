@@ -22,7 +22,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -34,12 +34,16 @@ relationships:
   - type: related-to
     target: INTL-CONVENTION-108
     source: fact
-    evidence: "Confirmed by reading en.wikipedia.org's own article directly (2026-08-27): 'Being non–Council of Europe states, Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia, and Uruguay have acceded to the treaty.' Independently confirmed by reading Uruguay's own data protection authority's site directly (2026-08-28, gub.uy 'Uruguay ratificó la Convención 108 modernizada', URCDP — Unidad Reguladora y de Control de Datos Personales): 'Uruguay se constituyó como el primer país no europeo miembro del Convenio 108' (Uruguay became the first non-European country to join Convention 108), approved by Law No. 19.030 of 23 December 2012, and separately confirms Uruguay was Latin America's first country to ratify Convention 108+ (Law No. 19.948, 16 April 2021) — this independently confirms, in the treaty custodian's own regulator's words, the claim the prior pass could not corroborate. ISO's OBP remains confirmed genuinely bot-walled (403) and the WTO PDF remains confirmed genuinely unreadable (an image-based scan), but 2 of the entity's 3 cited sources are now read directly: a majority."
+    evidence: "Uruguay's approval, read directly 2026-11-22 on IMPO (the Official Gazette's legal database): Ley 19.030, promulgated 27 December 2012 and published 7 January 2013, Artículo Único, 'Apruébanse el Convenio N° 108 del Consejo de Europa para la protección de las Personas con Respecto al Tratamiento Automatizado de Datos de Carácter Personal de 28 de enero de 1981 adoptado en Estrasburgo y el Protocolo Adicional ... adoptado en Estrasburgo, el 8 de noviembre de 2001'. That is parliamentary approval; the deposit with the Council of Europe was not read on a primary page (coe.int is blocked). Confirmed by reading en.wikipedia.org's own article directly (2026-08-27): 'Being non–Council of Europe states, Argentina, Cabo Verde, Mauritius, Mexico, Morocco, Senegal, Tunisia, and Uruguay have acceded to the treaty.' Independently confirmed by reading Uruguay's own data protection authority's site directly (2026-08-28, gub.uy 'Uruguay ratificó la Convención 108 modernizada', URCDP — Unidad Reguladora y de Control de Datos Personales): 'Uruguay se constituyó como el primer país no europeo miembro del Convenio 108' (Uruguay became the first non-European country to join Convention 108), approved by Law No. 19.030 of 23 December 2012, and separately confirms Uruguay was Latin America's first country to ratify Convention 108+ (Law No. 19.948, 16 April 2021) — this independently confirms, in the treaty custodian's own regulator's words, the claim the prior pass could not corroborate. ISO's OBP remains confirmed genuinely bot-walled (403) and the WTO PDF remains confirmed genuinely unreadable (an image-based scan), but 2 of the entity's 3 cited sources are now read directly: a majority."
     confidence: high
     valid_from: 2012-12-23
     valid_until: null
 
 sources:
+  - title: "Ley 19.030 (Uruguay), approving Convention 108 and its Additional Protocol (IMPO)"
+    url: "https://www.impo.com.uy/bases/leyes/19030-2012"
+    publisher: "IMPO, Centro de Información Oficial (Uruguay)"
+    accessed: "2026-11-22"
   - title: "UY — Uruguay (ISO 3166-1 country code)"
     url: "https://www.iso.org/obp/ui/#iso:code:3166:UY"
     publisher: "International Organization for Standardization (ISO)"
