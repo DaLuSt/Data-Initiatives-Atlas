@@ -9,5 +9,5 @@ summary: >
   agentschap van het ministerie van Economische Zaken en Klimaat"; the old evidence said neither ministry was an
   Atlas entity, but NL-EZK is, and RVO's page names only that ministry, so the description is adjusted. Confidence
   medium to high on the anchors. Closes the run-history entry for #805.
-prs: []
-outcome: in-progress
+prs: [806]
+outcome: merged

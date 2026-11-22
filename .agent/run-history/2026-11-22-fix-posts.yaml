@@ -11,5 +11,5 @@ summary: >
   "November 2026" in posts 6, 7, 8, 9, 10, 33 and 45 (45 also reorders: the EDPB, 93, now has more connections than
   INSPIRE, 90). Figures checked and still right: posts 4, 20, 22, 25, 40 to 44. Opened without auto-merge (operating
   model step 7: post text); supersedes #777.
-prs: []
-outcome: in-progress
+prs: [811]
+outcome: merged

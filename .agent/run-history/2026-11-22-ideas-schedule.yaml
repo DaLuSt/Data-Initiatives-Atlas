@@ -10,5 +10,5 @@ summary: >
   test replays a year of the real cron wake-ups across both clock changes: two posts every week, the second on
   Saturday, all between 16:00 and 20:00. docs/credentials.md section 4 and the bank's preamble updated. Opened without
   auto-merge (operating model step 7: a workflow change that sets what is posted publicly).
-prs: []
-outcome: in-progress
+prs: [810]
+outcome: merged

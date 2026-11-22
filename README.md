@@ -329,7 +329,7 @@ data-initiatives-atlas/
 │   └── workflows/
 │       ├── validate.yml         # every pull request: checks and the browser suite
 │       ├── pages.yml            # deploy, main only
-│       ├── release-pr.yml       # weekly release pull request
+│       ├── release-pr.yml       # monthly release pull request
 │       ├── release-publish.yml  # tags and Release after merge
 │       ├── linkedin-post.yml    # posts a release after the owner approves
 │       ├── project-board.yml    # keeps the roadmap board in step
