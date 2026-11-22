@@ -8,6 +8,7 @@ description: >
   Dutch independent administrative body that carries out the employee
   insurances: disability, sickness benefit and unemployment benefit. It is
   established by the Wet SUWI and keeps the polisadministratie.
+  Established on 1 January 2002, when the Wet SUWI came into force.
 
 level: national
 country: NL
@@ -18,9 +19,9 @@ organisation_role: executive
 confidence: medium
 coverage: low
 verification: primary-source
-start_date: null
+start_date: 2002-01-01
 end_date: null
-last_verified: "2026-10-09"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -42,9 +43,9 @@ relationships:
   - type: related-to
     target: NL-WET-SUWI
     source: fact
-    evidence: "Established and given its tasks by the Wet SUWI ([[NL-WET-SUWI]]), article 2, read directly (2026-10-09)."
+    evidence: "Established and given its tasks by the Wet SUWI ([[NL-WET-SUWI]]), article 2, read directly (2026-10-09). `valid_from` is 1 January 2002, the date wetten.overheid.nl's information page for the Act (BWBR0013060), read directly 2026-11-22, gives for the whole Act (Stb. 2001, 624; in force by Stb. 2001, 682)."
     confidence: high
-    valid_from: null
+    valid_from: 2002-01-01
     valid_until: null
 
 sources:
@@ -57,6 +58,8 @@ sources:
 # Uitvoeringsinstituut werknemersverzekeringen
 
 > **Verified 2026-10-09 against the Wet SUWI only.** The body's own site was not read.
+
+> **Dated 2026-11-22** (roadmap #775). wetten.overheid.nl, read directly: Article 2(1) of the Wet SUWI, 'Er is een Uitvoeringsinstituut werknemersverzekeringen, dat belast is met de taken, bedoeld in hoofdstuk 5', and the Act's information page (BWBR0013060), which gives a single commencement for the new regulation, 01-01-2002 (Stb. 2001, 624; in force by Stb. 2001, 682). `start_date` is 1 January 2002.
 
 ## Description
 

@@ -13,6 +13,7 @@ description: >
   establishment in the Union is in Ireland, which includes much of the
   technology sector, and conducts inquiries under the Article 60
   cooperation procedure.
+  Established on 25 May 2018, the establishment day appointed under section 9 of the Data Protection Act 2018 (S.I. No. 175 of 2018).
 
 level: national
 country: IE
@@ -22,9 +23,9 @@ status: active
 confidence: medium
 coverage: medium
 verification: primary-source
-start_date: null
+start_date: 2018-05-25
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -52,6 +53,14 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Data Protection Act 2018, section 10 (as enacted)"
+    url: "https://www.irishstatutebook.ie/eli/2018/act/7/section/10/enacted/en/html"
+    publisher: "Office of the Attorney General (irishstatutebook.ie)"
+    accessed: "2026-11-22"
+  - title: "S.I. No. 175/2018 — Data Protection Act 2018 (Establishment Day) Order 2018"
+    url: "https://www.irishstatutebook.ie/eli/2018/si/175/made/en/html"
+    publisher: "Office of the Attorney General (irishstatutebook.ie)"
+    accessed: "2026-11-22"
   - title: "Inquiry into TikTok Technology Limited"
     url: "https://www.dataprotection.ie/en/dpc-guidance/decisions/inquiry-tiktok-technology-limited"
     publisher: "Data Protection Commission (Ireland)"
@@ -74,6 +83,8 @@ sources:
 
 > **Verified 2026-08-21.** Every cited source was read and confirmed to
 > support what this entity says. `verification: primary-source`.
+
+> **Dated 2026-11-22** (roadmap #775). irishstatutebook.ie, read directly. Data Protection Act 2018, section 10(1): 'On the establishment day there shall stand established a body to be known as An Coimisiún um Chosaint Sonraí or, in the English language, the Data Protection Commission'. S.I. No. 175 of 2018, the Data Protection Act 2018 (Establishment Day) Order 2018, Article 2: 'The 25th day of May 2018 is appointed as the establishment day for the purposes of the Data Protection Act 2018.' `start_date` is 25 May 2018.
 
 ## Description
 

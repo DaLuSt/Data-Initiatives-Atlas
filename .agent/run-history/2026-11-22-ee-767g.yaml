@@ -8,5 +8,5 @@ summary: >
   (noraonline.nl now shows a bot check), the remaining undated Caribbean and Gulf laws (their official law sites
   do not resolve from this environment, and qanoon.om is not an official source). Closes the run-history entry
   for #831.
-prs: []
-outcome: in-progress
+prs: [832]
+outcome: merged
