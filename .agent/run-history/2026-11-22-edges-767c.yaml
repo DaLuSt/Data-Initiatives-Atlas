@@ -1,0 +1,13 @@
+date: "2026-11-22"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #767. Seven edges no longer rest on an encyclopedia. DE-BSI and DE-DESTATIS part-of DE-BMI now quote
+  the agencies' own organisation pages (bsi.bund.de "im Geschäftsbereich des Bundesministeriums des Innern";
+  destatis.de "zum Geschäftsbereich des Bundesministeriums des Innern und für Heimat (BMI)"). EE-E-RESIDENCY
+  part-of EE quotes e-resident.gov.ee. IE-NSAI and DE-DIN participates-in INTL-ISO rest on ISO's own member list
+  on committee.iso.org, re-read today. INTL-ISO-IEC-27001 maintained-by INTL-ISO quotes the SC 27 committee's
+  own page; INTL-ISO-IEC-27002 keeps the standard's own Foreword and drops the encyclopedia sentence. Tried and
+  left as they are: EE-STATISTIKAAMET (stat.ee does not name the ministry; Riigi Teataja still needs JavaScript),
+  NL-NICTIZ (nictiz.nl's about page does not state the VWS funding). Closes the run-history entry for #825.
+prs: []
+outcome: in-progress

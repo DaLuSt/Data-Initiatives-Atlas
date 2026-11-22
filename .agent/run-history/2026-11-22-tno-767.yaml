@@ -7,5 +7,5 @@ summary: >
   belonged to the act it replaced. unece.org still returns 403, and Regulation (EU) 2019/1239 (read through
   publications.europa.eu) names UN/LOCODE without saying who maintains it, so the UN/CEFACT edges stay as they are.
   Closes the run-history entry for #824.
-prs: []
-outcome: in-progress
+prs: [825]
+outcome: merged

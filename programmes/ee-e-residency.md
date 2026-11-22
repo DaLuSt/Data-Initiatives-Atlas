@@ -38,12 +38,16 @@ relationships:
   - type: part-of
     target: EE
     source: fact
-    evidence: "Confirmed by reading en.wikipedia.org's e-Residency article directly (2026-08-26): 'e-Residency of Estonia... is a program launched by Estonia on 1 December 2014. The program allows non-Estonians access to Estonian services such as company formation, banking, payment processing, and taxation.' Anchor edge under metadata/relationship-types.md §2.3."
+    evidence: "e-resident.gov.ee's own home page, read directly 2026-11-22: 'E-Residency of Estonia is a government-issued digital identity which gives global entrepreneurs remote access to the world's most digital country', and 'Estonia was the first country to offer e-Residency, starting in 2014.' Anchor edge under metadata/relationship-types.md §2.3."
     confidence: medium
     valid_from: null
     valid_until: null
 
 sources:
+  - title: "e-Residency of Estonia"
+    url: "https://www.e-resident.gov.ee/"
+    publisher: "Republic of Estonia (e-Residency programme)"
+    accessed: "2026-11-22"
   - title: "E-Residency of Estonia"
     url: "https://en.wikipedia.org/wiki/E-Residency_of_Estonia"
     publisher: "Wikipedia"
