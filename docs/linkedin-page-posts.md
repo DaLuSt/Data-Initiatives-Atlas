@@ -3,7 +3,11 @@
 Drafts for the **Data Initiatives Atlas** LinkedIn Page. Sections 1 and 2 were written 2026-10-09,
 with the figures of that day (747 entities, 9,435 connections, 58 countries). Section 3 is a bank of
 45 **idea posts** written 2026-11-13 with the figures of that day (1,286 entities, 13,749 connections,
-169 countries; the live counts are on the site). They are plain text, because LinkedIn does not
+169 countries; the live counts are on the site). On 2026-11-22 the posts were checked against the Atlas:
+the figures in posts 6 to 10, 33 and 45 were brought up to date and dated "November 2026", and posts 2,
+17, 18 and 19 were corrected (eleven adequacy decisions, not nine; the Digital Omnibus's full scope; the
+AI omnibus was proposed, not published, on the same day as its sibling; the EUDI wallet deadline is 24
+months after the implementing acts, not a fixed end of 2026). They are plain text, because LinkedIn does not
 render Markdown, and each is under LinkedIn's 3,000-character limit. Read them, change what you
 like, and post them from the Page or the profile.
 
@@ -121,7 +125,7 @@ Explore: https://dalust.github.io/Data-Initiatives-Atlas/
 
 ### Post 2. An adequacy decision is a record with a review clock
 
-*Kind: Metadata. Atlas entities: EU-AD-ADEQUACY, EU-AR-, EU-BR-, EU-CA-, EU-JP-, EU-KR-, EU-NZ-, EU-US-, EU-UY-ADEQUACY, EU-ADEQUACY-REVIEW-2024.*
+*Kind: Metadata. Atlas entities: EU-AD-ADEQUACY, EU-AR-, EU-BR-, EU-CA-, EU-CH-, EU-JP-, EU-KR-, EU-NZ-, EU-UK-, EU-US-, EU-UY-ADEQUACY, EU-ADEQUACY-REVIEW-2024.*
 
 ```text
 An adequacy decision is not a permission slip. It is a record with a review clock.
@@ -133,11 +137,12 @@ When people say "the EU has adequacy with country X", they usually mean one fact
 3. a jurisdiction it applies in,
 4. a date by which someone has to look again.
 
-The Data Initiatives Atlas now models nine of them: Andorra, Argentina, Brazil, Canada, Japan, Korea, New Zealand, the US and Uruguay.
+The Data Initiatives Atlas now models eleven of them: Andorra, Argentina, Brazil, Canada, Japan, Korea, New Zealand, Switzerland, the United Kingdom, the US and Uruguay.
 
 What the sources show once you read them:
-• Five were adopted under the old Directive 95/46/EC and carry on under the GDPR until amended or repealed. Their first review report, COM(2024) 7, arrived on 15 January 2024 and covered eleven countries and territories.
+• Six were adopted under the old Directive 95/46/EC and carry on under the GDPR until amended or repealed. The first review report on the pre-GDPR decisions, COM(2024) 7, arrived on 15 January 2024 and covered eleven countries and territories.
 • The ones adopted under the GDPR itself have review clocks written into the text. Japan: within two years, then at least every four. Korea: three years, then every four.
+• The United Kingdom's even has an expiry date: renewed on 19 December 2025 for six years, the decisions lapse on 27 December 2031 unless extended.
 • Brazil is the newest: the decision of 26 January 2026 points at Brazil's LGPD.
 
 The metadata lesson: the interesting field is not "adequate: yes". It is "next review due". It is easy to overlook, and it is exactly the thing that tells you whether a data flow still stands on solid ground.
@@ -232,7 +237,7 @@ Explore: https://dalust.github.io/Data-Initiatives-Atlas/
 *Kind: Number. Atlas entities: site statistics (provenance).*
 
 ```text
-Of the 2,518 typed relationships in the Data Initiatives Atlas, 2,476 are sourced facts. 42 are our own interpretation.
+Of the 2,545 typed relationships in the Data Initiatives Atlas (November 2026), 2,503 are sourced facts. 42 are our own interpretation.
 
 That is 98.3 to 1.7, and the 1.7 is labelled.
 
@@ -254,12 +259,12 @@ Explore: https://dalust.github.io/Data-Initiatives-Atlas/
 *Kind: Metadata. Atlas entities: site statistics (edges).*
 
 ```text
-The Data Initiatives Atlas has 13,749 connections. Only 2,518 of them are relationships.
+The Data Initiatives Atlas has 13,901 connections (November 2026). Only 2,545 of them are relationships.
 
 The rest:
-• 5,792 wikilinks: one entity mentions another in its text.
-• 5,439 associations: links that come from an entity's own fields, such as related entities, domains and organisations.
-• 2,518 typed relationships, each with a type, a provenance and the evidence behind it.
+• 5,849 wikilinks: one entity mentions another in its text.
+• 5,507 associations: links that come from an entity's own fields, such as related entities, domains and organisations.
+• 2,545 typed relationships, each with a type, a provenance and the evidence behind it.
 
 I keep three classes apart on purpose. "These two things are mentioned together" is a very different statement from "this regulation applies in this country", and mixing them is how knowledge graphs turn into hairballs that look impressive and answer nothing.
 
@@ -281,7 +286,7 @@ Explore: https://dalust.github.io/Data-Initiatives-Atlas/
 ```text
 A confession from the data model of the Data Initiatives Atlas.
 
-We have 29 relationship types. The most common is "applies-in" (721), then "part-of" (455). The third most common is "related-to" (369), about 15 percent of all typed relationships.
+We have 28 relationship types. The most common is "applies-in" (726), then "part-of" (461). The third most common is "related-to" (364), about 14 percent of all typed relationships (November 2026).
 
 "related-to" is the junk drawer. It is what you reach for when you know two things belong together and cannot yet say how. Every data model has one: "other", "misc", "see also", "linked".
 
@@ -301,7 +306,7 @@ What percentage of your relationships are "other"? And does anyone own shrinking
 ```text
 A coverage confession.
 
-Of the 1,286 entities in the Data Initiatives Atlas, 898 are tagged with the domain "government". Cybersecurity has 96, health 28, energy 10, finance 10, space 6, chemicals 6, and built environment just 3.
+Of the 1,297 entities in the Data Initiatives Atlas (November 2026), 904 are tagged with the domain "government". Cybersecurity has 98, health 28, finance 11, energy 10, space 6, chemicals 6, and built environment just 3.
 
 That is not because data governance in energy or health does not matter. It is because we started where the sources are open and the instruments are visible: public-sector data, interoperability, open data and NIS2. The sector annexes of the NIS2 national laws then pulled in some food, chemicals, postal and space.
 
@@ -329,7 +334,7 @@ What you get for free:
 • Diffs. When a bill becomes an act, the change is one line in a status field and everyone can see it.
 • No lock-in. Take the repository and walk away.
 
-It also suits the subject. Legislation is itself versioned text: acts are amended, repealed and consolidated, and the Atlas holds twenty "amends" relationships between them. A repository is a natural home for a thing that is mostly diffs.
+It also suits the subject. Legislation is itself versioned text: acts are amended, repealed and consolidated, and the Atlas holds 22 "amends" relationships between them. A repository is a natural home for a thing that is mostly diffs.
 
 The price: no fancy queries until you build them, and humans have to be disciplined about frontmatter. We have validators for that.
 
@@ -484,7 +489,7 @@ The European Commission proposed the Digital Omnibus on 19 November 2025. If ado
 • the Open Data Directive,
 • the Free Flow of Non-Personal Data Regulation.
 
-It would also amend the GDPR, the ePrivacy Directive and the Data Act itself. Reportedly the Council's ambassadors approved a negotiating mandate on the data part on 21 October 2026.
+It would also amend the GDPR, the ePrivacy Directive, the Data Act itself, the Single Digital Gateway Regulation, the data protection rules for the EU institutions, NIS2 and the CER Directive, and repeal the platform-to-business Regulation as well. That is what its own title says, and it is a longer list than most summaries give. Reportedly the Council's ambassadors approved a negotiating mandate on the data part on 21 October 2026.
 
 For anyone modelling this, it raises a question I find fascinating: how do you represent a law that has not been adopted but says it will replace three others? The Data Initiatives Atlas has a relationship type for exactly this, "proposes to supersede", used three times. It does not change the status of the existing laws. They remain active. It only says that a proposal intends to replace them.
 
@@ -508,7 +513,7 @@ The AI Act's general application date for high-risk systems under Annex III was 
 
 It is now 2 December 2027.
 
-That was done by the "Digital Omnibus on AI", adopted on 8 July 2026, published in the Official Journal on 24 July and in force from 27 July 2026, as Regulation (EU) 2026/1744. It amends the AI Act, the EASA Regulation and the Machinery Regulation. It was published on the same day as its sibling, the broader Digital Omnibus proposal, but negotiated and adopted independently.
+That was done by the "Digital Omnibus on AI", adopted on 8 July 2026, published in the Official Journal on 24 July and in force from 27 July 2026, as Regulation (EU) 2026/1744. It amends the AI Act, the EASA Regulation and the Machinery Regulation. It was proposed on the same day as its sibling, the broader Digital Omnibus, on 19 November 2025, but negotiated and adopted independently.
 
 Two lessons for people who keep compliance calendars:
 1. A date in a regulation is not a constant. It is a property of the current consolidated version, and it can change under you.
@@ -523,18 +528,18 @@ Explore: https://dalust.github.io/Data-Initiatives-Atlas/
 #AIAct #compliance #EUregulation #metadata #datagovernance
 ```
 
-### Post 19. The wallet deadline: the end of 2026
+### Post 19. The wallet deadline is a countdown, not a date
 
 *Kind: Fact. Atlas entities: EU-EIDAS2, EU-EUDI-WALLET, CH-E-ID.*
 
 ```text
-Regulation (EU) 2024/1183, "eIDAS 2", was adopted on 11 April 2024 and entered into force on 20 May 2024. Its central reform is an EU-wide framework for European Digital Identity Wallets, which Member States must provide by the end of 2026.
+Regulation (EU) 2024/1183, "eIDAS 2", was adopted on 11 April 2024 and entered into force on 20 May 2024. Its central reform is an EU-wide framework for European Digital Identity Wallets. You will often read that Member States must provide one by the end of 2026. The Regulation itself says something else: within 24 months of the entry into force of the implementing acts it names (Article 5a(1)). The end of 2026 is that countdown, counted from a date the law does not print.
 
 In the Data Initiatives Atlas the law is "active" and the wallet itself is "planned". Two different statuses for two different things, and I think that distinction matters: a regulation can be fully in force while the thing it requires still does not exist.
 
 Switzerland, outside the EU, shows the same gap from another side. Its e-ID Act was adopted by parliament on 20 December 2024 and approved by voters on 28 September 2025. Its wallet, swiyu, was in public beta and, on 30 June 2026, the launch was postponed. The trust infrastructure is now expected in the first half of 2027.
 
-Law, deadline, thing. Three separate things, three separate dates, three different risks.
+Law, deadline, thing. Three separate things, three separate dates, three different risks. And a deadline written as "24 months after X" is a derived date: store X too, or you cannot check it.
 
 If your product depends on the wallet, which one are you tracking?
 
@@ -543,7 +548,7 @@ Explore: https://dalust.github.io/Data-Initiatives-Atlas/
 #eIDAS #digitalidentity #EUDI #interoperability #datagovernance
 ```
 
-*Check before posting: Deadline is end of 2026: check progress in the Member States before posting.*
+*Check before posting: the deadline runs from the implementing acts' entry into force (eIDAS 2 Article 5a(1)), and the Swiss launch date has moved once. Check both, and progress in the Member States, before posting.*
 
 ### Post 20. Same word, different thing: the data space
 
@@ -853,7 +858,7 @@ Read a few new laws and you notice that most of them are not new. They are diffs
 • The UK's Investigatory Powers Act 2016 was amended in 2024.
 • New Zealand's Privacy Act 2020 was amended in 2025.
 
-The Data Initiatives Atlas has twenty "amends" relationships. That is a small number against 355 laws, and it means two things. First, we have probably only recorded the amendments we happened to see. Second, anything that looks at a law as a single document and not as a stack of amendments is going to be wrong somewhere.
+The Data Initiatives Atlas has 22 "amends" relationships (November 2026). That is a small number against 360 laws, and it means two things. First, we have probably only recorded the amendments we happened to see. Second, anything that looks at a law as a single document and not as a stack of amendments is going to be wrong somewhere.
 
 This is why the repository model suits the subject. In Git, a change is a diff on top of what came before. In law, it is much the same, with worse tooling.
 
@@ -1113,11 +1118,13 @@ Explore: https://dalust.github.io/Data-Initiatives-Atlas/
 ```text
 A small experiment. In the Data Initiatives Atlas, which legislative node has the most connections?
 
-1. The GDPR, with 180.
-2. NIS2, with 148.
-3. The Open Data Directive, with 136.
-4. eIDAS, with 105.
-5. INSPIRE, with 90. The European Data Protection Board is close behind, with 89.
+1. The GDPR, with 189.
+2. NIS2, with 156.
+3. The Open Data Directive, with 138.
+4. eIDAS, with 107.
+5. INSPIRE, with 90. The European Data Protection Board, a body and not a law, has overtaken it with 93.
+
+(Counts of November 2026.)
 
 Would you have guessed that order? I would have put the Open Data Directive lower, and I would not have expected NIS2 to be that close to the GDPR in only two years.
 
@@ -1132,7 +1139,7 @@ Explore: https://dalust.github.io/Data-Initiatives-Atlas/
 #GDPR #NIS2 #datagovernance #knowledgegraph #networkanalysis
 ```
 
-*Check before posting: Degrees are as of 2026-11-13 and move whenever entities are added.*
+*Check before posting: Degrees are as of 2026-11-22 and move whenever entities are added.*
 
 ## Before posting
 
