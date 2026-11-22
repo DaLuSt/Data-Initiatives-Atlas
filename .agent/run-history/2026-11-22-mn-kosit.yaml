@@ -1,0 +1,15 @@
+date: "2026-11-22"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmaps #775, #767 and #535. New entity MN-LAW-ELECTRONIC-SIGNATURES-2021 (revised edition of 17 December
+  2021, in force 1 May 2022, Article 35.1), read on legalinfo.mn; it supersedes MN-LAW-ELECTRONIC-SIGNATURES-2011,
+  whose own legalinfo.mn page prints the repealing law (the 2011 law is invalid from the revised edition's start),
+  so the 2011 entity is now superseded with end_date 2022-05-01. discovery/unresolved.md row #286 is removed under
+  the closed-rows convention. DE-KOSIT's governed-by DE-IT-PLANUNGSRAT and related-to DE-FITKO edges now quote
+  FITKO's own standards page (KoSIT runs the IT-Planungsrat's standards, works "im Auftrag der FITKO" under a
+  framework agreement, and sits in Department 4 of Bremen's Senator for Finance) and the IT-Planungsrat's own
+  standards page; the 2010/19 founding decision still rests on an encyclopedia and is marked. Its alternative
+  name "Institut für IT-Standardisierung" is added. #535 still waits only on the RegMoG Gazette text (pre-2023,
+  not readable). Closes the run-history entry for #830.
+prs: []
+outcome: in-progress
