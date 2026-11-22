@@ -24,15 +24,17 @@ verification: primary-source
 
 start_date: 2014-01-06
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
-organisations: []
+organisations:
+  - NL-BZK
 related_entities:
   - NL-BASISREGISTRATIES
+  - NL-BZK
 relationships:
   - type: applies-to
     target: NL-BASISREGISTRATIES
@@ -43,6 +45,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Wet basisregistratie personen (BWBR0033715)"
+    url: "https://wetten.overheid.nl/BWBR0033715/"
+    publisher: "wetten.overheid.nl (Overheid.nl)"
+    accessed: "2026-11-22"
   - title: "Wetgeving Basisregistratie Personen"
     url: "https://www.rvig.nl/wetgeving-basisregistratie-personen"
     publisher: "Rijksdienst voor Identiteitsgegevens (RvIG)"
@@ -103,6 +109,10 @@ which is no longer accurate.
   still short of naming a specific obligation this Act imposes under the
   GDPR/UAVG; no relationship is asserted, consistent with the prior pass's
   caution.
+
+## Who keeps it (2026-11-22)
+
+Read directly on wetten.overheid.nl (BWBR0033715): Article 1.1(a) defines "Onze Minister" as the Minister of Binnenlandse Zaken en Koninkrijksrelaties ([[NL-BZK]]). Article 1.4 splits the keeping of the register: "Het college van burgemeester en wethouders is verantwoordelijk voor het bijhouden van persoonsgegevens in de basisregistratie overeenkomstig afdeling 1 van hoofdstuk 2" (residents), and the Minister for sections 2 and 3 of that chapter; Article 1.5 makes the Minister responsible for supplying the data. The Act, as read, names no agency: [[NL-RVIG]], which the Atlas records as maintaining the register ([[NL-BRP]]), does not appear in these articles, and its place within the ministry is not recorded. So only the ministry is listed under `organisations`; the municipalities are not an Atlas entity.
 
 ## Sources
 

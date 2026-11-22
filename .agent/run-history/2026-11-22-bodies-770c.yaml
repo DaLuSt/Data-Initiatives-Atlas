@@ -1,0 +1,13 @@
+date: "2026-11-22"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #770 (laws with no body), a third slice: three Dutch laws get the body that keeps them, read directly on
+  wetten.overheid.nl. NL-KVK governed-by NL-HANDELSREGISTERWET (Article 3(1), "Het handelsregister wordt gehouden
+  door de Kamer"; Article 1 defines the Kamer). NL-WET-BRP lists NL-BZK (Article 1.1(a) and 1.4: the municipal
+  executive and the Minister of BZK keep the register). NL-AWR lists NL-BELASTINGDIENST (Article 21b(2), the
+  inspecteur runs the income registry; that the inspecteur is a tax-administration official is read from Article
+  56, so it is a reference and not a typed edge). The list of national laws with no organisation pointing at them
+  is 54 before this slice, recomputed counting organisations' related_entities as well as their edges. Closes the
+  run-history entry for #813 if it has merged.
+prs: []
+outcome: in-progress

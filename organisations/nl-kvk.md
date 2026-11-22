@@ -22,7 +22,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-21"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -31,6 +31,7 @@ domains:
 organisations: []
 related_entities:
   - NL-KADASTER
+  - NL-HANDELSREGISTERWET
 relationships:
   - type: participates-in
     target: NL-BASISREGISTRATIES
@@ -39,8 +40,19 @@ relationships:
     confidence: medium
     valid_from: null
     valid_until: null
+  - type: governed-by
+    target: NL-HANDELSREGISTERWET
+    source: fact
+    evidence: "The Handelsregisterwet 2007 (BWBR0021777), read directly 2026-11-22 on wetten.overheid.nl: Article 2, 'Er is een handelsregister van ondernemingen en rechtspersonen'; Article 3(1), 'Het handelsregister wordt gehouden door de Kamer', and 3(2), 'Ten aanzien van verwerkingen ten behoeve van het handelsregister is de Kamer verwerkingsverantwoordelijke'; Article 1 defines 'Kamer' as 'de Kamer van Koophandel, genoemd in artikel 2 van de Wet op de Kamer van Koophandel'. Added 2026-11-22 (roadmap #770, laws with no body)."
+    confidence: high
+    valid_from: null
+    valid_until: null
 
 sources:
+  - title: "Handelsregisterwet 2007 (BWBR0021777)"
+    url: "https://wetten.overheid.nl/BWBR0021777/"
+    publisher: "wetten.overheid.nl (Overheid.nl)"
+    accessed: "2026-11-22"
   - title: "Kamer van Koophandel"
     url: "https://en.wikipedia.org/wiki/Kamer_van_Koophandel"
     publisher: "Wikipedia"
