@@ -10,5 +10,5 @@ summary: >
   reference. The recount of laws with no body, now also counting an organisation in the law's own related_entities,
   is 41 before this slice (GB-RPSI-REGULATIONS-2015 was already linked to the Information Commission that way, on
   purpose). Closes the run-history entry for #814.
-prs: []
-outcome: in-progress
+prs: [815]
+outcome: merged

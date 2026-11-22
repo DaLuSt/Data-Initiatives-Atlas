@@ -7,6 +7,10 @@ Anchor entity: [[VU]]
 
 > A first sourced slice (2026-10-16). See `countries/README.md` on the participation model.
 
+## Organisations
+
+- [[VU-DIGITAL-SAFETY-AUTHORITY]]
+
 ## Legislation
 
 - [[VU-DPPA-2024]]

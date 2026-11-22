@@ -1,0 +1,12 @@
+date: "2026-11-22"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #770, a fifth slice: Vanuatu's data protection law gets its enforcing body. The Data Protection and
+  Privacy Act No. 13 of 2024 defines its Deputy Commissioner as one "appointed under the Digital Safety Authority
+  Act No. 15 of 2024"; that Act, found on cert.gov.vu's legislation page and read directly, establishes the Digital
+  Safety Authority as a body corporate (section 2) and lets its Commissioner appoint a Deputy Commissioner of Data
+  Protection and Privacy (section 22) who determines data protection complaints (section 24(2)(b)). New entity
+  VU-DIGITAL-SAFETY-AUTHORITY (status unknown: no appointment read), part-of VU and governed-by VU-DPPA-2024, listed
+  in countries/vu/index.md. The law's own note that the Authority's Act was not read is updated. Closes the run-history entry for #815. A merge of main was pushed once with conflict markers in README.md and state.yaml (the same slip as on 2026-11-17) and fixed by the next commit, before the PR was opened; the steps to avoid it are now in .agent/operating-model.md.
+prs: []
+outcome: in-progress
