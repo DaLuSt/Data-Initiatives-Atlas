@@ -6,5 +6,5 @@ summary: >
   Innovation and Technology"), medium to high. FR-RGAA, DE-DATAPORT, ES-LOCALRET (both edges) drop the encyclopedia
   sentence their primary sources do not need; FR-RGI and AT-DATA-GV-AT have provenance notes reworded. Europeana's
   sites answered 403, so EU-EUROPEANA-FOUNDATION stays. Closes the run-history entry for #822.
-prs: []
-outcome: in-progress
+prs: [823]
+outcome: merged
