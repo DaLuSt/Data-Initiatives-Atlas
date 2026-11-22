@@ -28,7 +28,7 @@ verification: primary-source
 
 start_date: 2025-05-06
 end_date: null
-last_verified: "2026-09-04"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -43,7 +43,7 @@ relationships:
   - type: produces
     target: DE-MOBILITHEK
     source: fact
-    evidence: "Confirmed by reading bmv.de's own site directly (2026-09-04): the ministry's SharedDocs article on Mobilithek is published under the bmv.de domain and describes the platform as Germany's national data-exchange platform for mobility information. This is the ministry's current identity: de.wikipedia.org's dedicated article, read directly, confirms 'Mit der Bildung des Kabinetts Merz am 6. Mai 2025 wurde das Ministerium in Bundesministerium für Verkehr umbenannt' (with the formation of the Merz cabinet on 6 May 2025, the ministry was renamed the Bundesministerium für Verkehr), the same date DE-MOBILITHEK's own re-verification pass flagged as an unreconciled naming inconsistency between its BMV-labelled and BMDV-labelled sources."
+    evidence: "Confirmed by reading bmv.de's own site directly (2026-09-04): the ministry's SharedDocs article on Mobilithek is published under the bmv.de domain and describes the platform as Germany's national data-exchange platform for mobility information. The 2025 rename to Bundesministerium für Verkehr is in the prose; it is not needed for this edge. A Wikipedia corroboration was dropped from this evidence on 2026-11-22 (roadmap #767); the primary source above carries the edge."
     confidence: medium
     valid_from: 2025-05-06
     valid_until: null

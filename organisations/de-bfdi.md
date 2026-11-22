@@ -24,7 +24,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -46,7 +46,7 @@ relationships:
   - type: applies-to
     target: DE-BDSG
     source: fact
-    evidence: "Confirmed by reading bfdi.bund.de's 'Aufgaben und Befugnisse der BfDI' page (2026-08-22): 'Die BfDI ist die datenschutzrechtliche Aufsichtsbehörde über alle öffentlichen Stellen des Bundes wie auch für bestimmte Träger der sozialen Sicherung. Außerdem beaufsichtigt sie die Finanzbehörden und die Telekommunikations- und Postdienstunternehmen.' de.wikipedia.org confirms the office is bound by §11 and §12 BDSG (term of office and remuneration), which is the BfDI's own statutory basis under the Bundesdatenschutzgesetz."
+    evidence: "Confirmed by reading bfdi.bund.de's 'Aufgaben und Befugnisse der BfDI' page (2026-08-22): 'Die BfDI ist die datenschutzrechtliche Aufsichtsbehörde über alle öffentlichen Stellen des Bundes wie auch für bestimmte Träger der sozialen Sicherung. Außerdem beaufsichtigt sie die Finanzbehörden und die Telekommunikations- und Postdienstunternehmen.' A Wikipedia corroboration was dropped from this evidence on 2026-11-22 (roadmap #767); the primary source above carries the edge."
     confidence: medium
     valid_from: null
     valid_until: null
