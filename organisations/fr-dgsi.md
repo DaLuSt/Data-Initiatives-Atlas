@@ -25,7 +25,7 @@ verification: primary-source
 
 start_date: 2014-04-30
 end_date: null
-last_verified: "2026-09-18"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -51,7 +51,7 @@ relationships:
   - type: part-of
     target: FR
     source: fact
-    evidence: "Confirmed by reading fr.wikipedia.org's DGSI article directly (2026-08-26): DGSI was established by decree of 30 April 2014 ('fondé par décret le 30 avril 2014'), its missions set out in Article 2 of that decree. Independently confirmed by reading the decree's own text directly on Légifrance (2026-08-28, décret n° 2014-445 du 30 avril 2014): Article 1 establishes DGSI as an active police service ('service actif de la police nationale') tasked with gathering, centralising and exploiting intelligence concerning national security across French territory, and Article 4 confirms its structure of a central administration plus territorial services under the sole authority of the director general. This is DGSI's own founding legal instrument, read directly — the strongest possible source for this edge, notwithstanding that DGSI's own website remains bot-walled. Anchor edge under metadata/relationship-types.md §2.3."
+    evidence: "The decree's own text, read directly on Légifrance (2026-08-28, décret n° 2014-445 du 30 avril 2014): Article 1 establishes DGSI as an active police service ('service actif de la police nationale') tasked with gathering, centralising and exploiting intelligence concerning national security across French territory, and Article 4 confirms its structure of a central administration plus territorial services under the sole authority of the director general. This is DGSI's own founding legal instrument, read directly — the strongest possible source for this edge, notwithstanding that DGSI's own website remains bot-walled. Anchor edge under metadata/relationship-types.md §2.3. An encyclopedia corroboration was dropped from this evidence on 2026-11-22 (roadmap #767)."
     confidence: high
     valid_from: null
     valid_until: null

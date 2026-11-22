@@ -24,7 +24,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -48,7 +48,7 @@ relationships:
   - type: based-on
     target: INTL-X-ROAD
     source: fact
-    evidence: "Confirmed by reading niis.org's own history page and en.wikipedia.org's X-Road article directly (2026-08-26): cooperation began in 2013 when the Prime Ministers of Estonia and Finland signed a Memorandum of Understanding — 'considered to be the world's first digitally signed international agreement' — to develop and jointly manage X-Road; NIIS itself, per Wikipedia, 'was founded jointly in June 2017 by Finland and Estonia'; X-Road's central components were released under the MIT licence on 3 October 2016 (niis.org's history page dates the publication to '2015-2016' without a specific day); by 7 February 2018 Finland's and Estonia's data exchange layers were connected to one another."
+    evidence: "niis.org's own history page, re-read directly 2026-11-22: 'The cooperation on X-Road between Estonia and Finland officially started in 2013 when the Prime Ministers of Estonia and Finland, Andrus Ansip and Jyrki Katainen, signed the Memorandum of Understanding', for 'developing and maintaining a software environment enabling secure connectivity, searches and data transfers between various governmental and private databases – the X-Road', 'considered to be the world's first digitally signed international agreement'; the parties then formed a jointly managed organisation, the Nordic Institute for Interoperability Solutions, to administer its development; the X-Road core was published under the MIT licence 'in two parts in 2015–2016'. Dates the earlier evidence took from an encyclopedia (NIIS founded June 2017, the 3 October 2016 release, the 7 February 2018 interconnection) are not repeated (roadmap #767)."
     confidence: medium
     valid_from: null
     valid_until: null

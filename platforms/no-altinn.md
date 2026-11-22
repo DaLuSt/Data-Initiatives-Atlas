@@ -18,7 +18,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-09-13"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -41,12 +41,16 @@ relationships:
   - type: maintained-by
     target: NO-DIGDIR
     source: fact
-    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP (discovery/unresolved.md row #110). Upgraded from `source: interpretation` (a publisher footer alone) by reading no.wikipedia.org's own Brønnøysundregistrene article directly (2026-09-13), which states explicitly: 'Brønnøysundregistrene hadde frem til 1. januar 2020 forvaltningsansvar for Altinn. Da ble Altinn en del av Digitaliseringsdirektoratet sammen med tidligere Direktoratet for forvaltning og IKT' (Brønnøysundregistrene held administrative responsibility for Altinn until 1 January 2020, when Altinn became part of Digitaliseringsdirektoratet together with the former Directorate for Administration and ICT). This is an explicit operating-transfer statement, not an inference from a footer, though it rests on a secondary (Wikipedia) rather than primary source — `confidence: medium` rather than `high`. Independently, altinn.no's own footer (read 2026-08-22) already named Digdir as publisher, and brreg.no's own history page, read directly this pass, does not contradict the transfer (it only dates Altinn's 2003 founding and does not itself discuss the 2020 change)."
-    confidence: medium
+    evidence: "CLOSES A PREVIOUSLY-FLAGGED GAP (discovery/unresolved.md row #110). Altinn's own 'Om Altinn' page (info.altinn.no/om-altinn/), read directly 2026-11-22: 'Digitaliseringsdirektoratet er ansvarlig for altinn.no', and the page's footer gives Digitaliseringsdirektoratet's address and organisation number (991 825 827). That administrative responsibility passed from Brønnøysundregistrene to Digitaliseringsdirektoratet on 1 January 2020 was read in an encyclopedia article (2026-09-13) and is kept in the prose, not relied on here (roadmap #767)."
+    confidence: high
     valid_from: 2020-01-01
     valid_until: null
 
 sources:
+  - title: "Om Altinn"
+    url: "https://info.altinn.no/om-altinn/"
+    publisher: "Altinn (Digitaliseringsdirektoratet)"
+    accessed: "2026-11-22"
   - title: "Altinn"
     url: "https://www.altinn.no/"
     publisher: "Altinn / Digitaliseringsdirektoratet"
