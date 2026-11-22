@@ -25,7 +25,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -52,12 +52,16 @@ relationships:
   - type: applies-in
     target: GB
     source: fact
-    evidence: "Confirmed by reading en.wikipedia.org's 'Cyber Assessment Framework' article (2026-08-22): the CAF was 'developed by the United Kingdom's National Cyber Security Centre (NCSC) in 2018 for overlooking the security of operations, to meet the Security of Network & Information Systems Regulations (NIS Regulations) by supporting Critical National Infrastructure (CNI) requirements.'"
-    confidence: medium
+    evidence: "The NCSC's own CAF collection page (ncsc.gov.uk/collection/cyber-assessment-framework, version 4.0, reviewed 30 October 2026), read directly 2026-11-22: 'The Cyber Assessment Framework (CAF) is the UK's approach to assessing and improving cyber resilience', and 'It is used across sectors currently regulated under NIS and wider CNI, government and other sectors where maintaining operational resilience is essential.' A Wikipedia citation was dropped from this evidence on 2026-11-22 (roadmap #767)."
+    confidence: high
     valid_from: null
     valid_until: null
 
 sources:
+  - title: "Cyber Assessment Framework (version 4.0)"
+    url: "https://www.ncsc.gov.uk/collection/cyber-assessment-framework"
+    publisher: "National Cyber Security Centre (ncsc.gov.uk)"
+    accessed: "2026-11-22"
   - title: "Cyber Assessment Framework"
     url: "https://en.wikipedia.org/wiki/Cyber_Assessment_Framework"
     publisher: "Wikipedia"

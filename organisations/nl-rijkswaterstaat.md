@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-06"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -43,7 +43,7 @@ relationships:
   - type: part-of
     target: NL-IENW
     source: fact
-    evidence: "Confirmed by reading rijkswaterstaat.nl's own 'Onze organisatie' page directly (2026-09-05): it is the 'uitvoeringsorganisatie' of the Ministerie van Infrastructuur en Waterstaat, and rijksfinancien.nl's own budget documentation, also consulted, names it 'Agentschap Rijkswaterstaat.' en.wikipedia.org's own account of the ministry, also read directly, names Rijkswaterstaat as one of its executive agencies. Upgraded same-day from an anchor `part-of` [[NL]] edge, recorded before [[NL-IENW]] existed as an Atlas entity."
+    evidence: "Confirmed by reading rijkswaterstaat.nl's own 'Onze organisatie' page directly (2026-09-05): it is the 'uitvoeringsorganisatie' of the Ministerie van Infrastructuur en Waterstaat, and rijksfinancien.nl's own budget documentation, also consulted, names it 'Agentschap Rijkswaterstaat.' A Wikipedia citation was dropped from this evidence on 2026-11-22 (roadmap #767). Upgraded same-day from an anchor `part-of` [[NL]] edge, recorded before [[NL-IENW]] existed as an Atlas entity."
     confidence: high
     valid_from: null
     valid_until: null

@@ -25,7 +25,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-27"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -40,7 +40,7 @@ relationships:
   - type: related-to
     target: NL
     source: fact
-    evidence: "Confirmed by reading surf.nl/en directly (2026-08-27): SURF describes itself as 'the collaborative organisation for IT in Dutch education and research', with '33 Communities' and '8500+ Members' across MBO, HBO and WO institutions. nl.wikipedia.org's SURF article, also read directly, confirms the 1986 founding by astrophysicist Hans Rosenberg of Utrecht University and the cooperative-association ('coöperatieve vereniging') structure. `related-to` and not `part-of`: SURF is member-owned, not a body of the Dutch state, so structural containment is not claimed. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor."
+    evidence: "Confirmed by reading surf.nl/en directly (2026-08-27): SURF describes itself as 'the collaborative organisation for IT in Dutch education and research', with '33 Communities' and '8500+ Members' across MBO, HBO and WO institutions. SURF's Dutch 'Over SURF' page, read directly 2026-11-22: 'SURF is de ict-coöperatie van het Nederlandse onderwijs en onderzoek. De leden zijn eigenaar van SURF'. The 1986 founding is in the prose and comes from Wikipedia; this edge no longer rests on it (roadmap #767). `related-to` and not `part-of`: SURF is member-owned, not a body of the Dutch state, so structural containment is not claimed. Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor."
     confidence: high
     valid_from: null
     valid_until: null
@@ -53,6 +53,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Over SURF"
+    url: "https://www.surf.nl/over-surf"
+    publisher: "SURF (surf.nl)"
+    accessed: "2026-11-22"
   - title: "SURF is de ict-coöperatie van onderwijs en onderzoek"
     url: "https://www.surf.nl/en"
     publisher: "SURF"

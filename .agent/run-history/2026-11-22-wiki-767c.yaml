@@ -1,0 +1,13 @@
+date: "2026-11-22"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #767, a seventh slice: eleven edges no longer rest on Wikipedia. Where the evidence already had a primary
+  source and Wikipedia only added history, the Wikipedia sentence is dropped (NL-EZK, NL-IENW, NL-KADASTER,
+  NL-RIJKSWATERSTAAT, NL-TNO). Where Wikipedia carried the claim, a primary source now does, read directly:
+  NL-AIVD part-of NL-BZK (Wiv 2017 Article 1(c), the minister for the AIVD), NL-SURF (surf.nl, "De leden zijn
+  eigenaar van SURF"), GB-ICO applies-to UK GDPR (DPA 2018 section 115, as enacted and as on 1 January 2025),
+  GB-IPCO governed-by the IPA 2016 (section 227), GB-NCSC produces GB-CAF and GB-CAF applies-in GB (the NCSC's CAF
+  page, version 4.0). Left: NL-NICTIZ (its "foundation" status is on no page of its own site that answered) and
+  GB-CAF's aligned-with ISO 27001 (the NCSC page does not mention ISO). The #767 grep count goes from 82 to 71.
+prs: []
+outcome: in-progress
