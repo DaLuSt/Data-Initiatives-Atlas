@@ -10,6 +10,7 @@ description: >
   Former Dutch government transparency act, replaced on 1 May 2022 by the
   Wet open overheid. It established a primarily passive disclosure regime,
   under which government information was disclosed on request.
+  In force from 1 May 1992 (Stb. 1991, 703; in force by Stb. 1992, 185) until its repeal on 1 May 2022 (Stb. 2021, 499), per wetten.overheid.nl.
 
 level: national
 country: NL
@@ -21,9 +22,9 @@ confidence: medium
 coverage: low
 verification: primary-source
 
-start_date: null
+start_date: 1992-05-01
 end_date: 2022-05-01
-last_verified: "2026-08-27"
+last_verified: "2026-11-22"
 previous_version: null
 successor: NL-WOO
 
@@ -35,6 +36,10 @@ related_entities:
 relationships: []
 
 sources:
+  - title: "Wet openbaarheid van bestuur — BWBR0005252 (informatie)"
+    url: "https://wetten.overheid.nl/BWBR0005252/informatie"
+    publisher: "Overheid.nl (wetten.overheid.nl)"
+    accessed: "2026-11-22"
   - title: "Wet open overheid (Woo)"
     url: "https://www.rijksoverheid.nl/themas/overheid-en-democratie/wet-open-overheid-woo"
     publisher: "Rijksoverheid"
@@ -53,6 +58,8 @@ sources:
 
 > **Verified 2026-08-27.** Both cited pages were read directly.
 > `verification` moves from `search-only` to `primary-source`.
+
+> **Dated 2026-11-22** (roadmap #775). wetten.overheid.nl's information page for the Wob (BWBR0005252), read directly, records it as a new regulation ('Nieuwe-regeling') in force 01-05-1992, published as Stb. 1991, 703, in force by Stb. 1992, 185, and its repeal ('Intrekking-regeling') in force 01-05-2022 by Stb. 2021, 499, which matches `end_date`.
 
 ## Description
 

@@ -9,5 +9,5 @@ summary: >
   Tried and left as they are: the Holy See's observer status (70.coe.int does not answer; coe.int and
   pace.coe.int return 403), and the eight non-European Convention 108 parties (rm.coe.int and the treaty
   office return 403; edoc.coe.int has no list of parties). Closes the run-history entry for #827.
-prs: []
-outcome: in-progress
+prs: [828]
+outcome: merged

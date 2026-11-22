@@ -33,6 +33,8 @@ Wikipedia/CORDIS/archived-page alternates substituted; `geant.org` itself never 
 
 `assembly.coe.int` (a different subdomain) is reachable and closed the last Convention-108-family gap (2026-09-05). **A third subdomain, `edoc.coe.int`, found reachable 2026-09-26** — the Council's own document-publishing site, used to confirm the 46-member-states chart directly on [[INTL-COE]]. `www.coe.int`/`rm.coe.int` themselves remain unread throughout. **Per-country accession dates found 2026-09-30**: `coe.int` itself (including `edoc.coe.int`'s poster page, which only gives the 46-count, not individual countries) still cannot answer *which* country joined *when* — but Wikipedia's own dedicated "Member states of the Council of Europe" article, read directly, carries a sourced per-country accession table. Used to upgrade six country anchors' `part-of` [[INTL-COE]] edges from a retained-but-unconfirmed claim to a dated fact: [[GB]], [[NO]] and [[IT]] (founders, 5 May 1949), [[IS]] (7 March 1950), [[CH]] (6 May 1963) and [[LI]] (23 November 1978). Worth trying on any other country anchor whose CoE edge still lacks a date.
 
+**2026-11-22:** the EU Delegation to the Council of Europe publishes news items on `eeas.europa.eu` that are readable here. Its item of 17 March 2022 ("Committee of Ministers decides Russia ceases to be a member of the Council of Europe") sources [[RU]]'s accession (28 February 1996) and exclusion (16 March 2022). `pace.coe.int` returns 403 and `70.coe.int` does not answer.
+
 <a id="row-220"></a>
 ## Row 220 — `iso.org`
 
