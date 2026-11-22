@@ -24,7 +24,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-28"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -38,7 +38,7 @@ relationships:
   - type: maintained-by
     target: INTL-NIIS
     source: fact
-    evidence: "Confirmed by reading all three cited pages directly (2026-08-28), plus x-road.global's own history page as a fourth check: Wikipedia's X-Road article states NIIS was 'founded jointly by Finland and Estonia in June 2017' and '[develops], verif[ies], and audit[s] X-Road's source code,' with the source released under the MIT License and made public on 3 October 2016; niis.org's History page and e-estonia.com both confirm NIIS's mission is to manage X-Road's development. x-road.global/xroad-history independently corroborates the MIT-licensed, NIIS-governed model and the Estonia-Finland-Iceland membership timeline."
+    evidence: "niis.org's own History page, re-read directly 2026-11-22: after the 2013 Memorandum of Understanding between Estonia and Finland, 'The Parties decided to deepen the cooperation in a more formal yet flexible manner by forming a separate jointly managed special purpose organisation to administer the X-Road development – the Nordic Institute for Interoperability Solutions', and the X-Road core was published 'as open source under the MIT licence ... in two parts in 2015–2016'. e-estonia.com and x-road.global's history page, read 2026-08-28, give NIIS the same role. The founding month (June 2017) and the 3 October 2016 release day came from an encyclopedia article and are not relied on (roadmap #767)."
     confidence: high
     valid_from: null
     valid_until: null

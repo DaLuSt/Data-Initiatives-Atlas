@@ -21,7 +21,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-09-05"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -35,7 +35,7 @@ relationships:
   - type: part-of
     target: UN
     source: fact
-    evidence: "unctad.org, dig.watch and sdg.iisd.org remain blocked this pass (all HTTP 403), consistent with every prior attempt. But the substantive claim this entity exists to record is now confirmed by a genuinely stronger source than any of those: reading un.org's own official 'Annex I: Global Digital Compact' page directly (2026-09-05) — the UN General Assembly's own text, adopted as part of Resolution A/RES/79/1, the Pact for the Future — quotes paragraph 48 verbatim: 'we request the Commission on Science and Technology for Development to establish a dedicated working group to engage in a comprehensive and inclusive multi-stakeholder dialogue on data governance at all levels as relevant for development.' This is the primary legal instrument establishing the working group, read directly rather than corroborated by WebSearch synthesis, closing the gap the prior pass left open. UNCTAD's general 1964-founding/195-member-state/Geneva-secretariat facts were separately confirmed in the prior pass via Wikipedia, geneva.china-mission.gov.cn and inclusiveias.com."
+    evidence: "unctad.org, dig.watch and sdg.iisd.org remain blocked this pass (all HTTP 403), consistent with every prior attempt. But the substantive claim this entity exists to record is now confirmed by a genuinely stronger source than any of those: reading un.org's own official 'Annex I: Global Digital Compact' page directly (2026-09-05) — the UN General Assembly's own text, adopted as part of Resolution A/RES/79/1, the Pact for the Future — quotes paragraph 48 verbatim: 'we request the Commission on Science and Technology for Development to establish a dedicated working group to engage in a comprehensive and inclusive multi-stakeholder dialogue on data governance at all levels as relevant for development.' This is the primary legal instrument establishing the working group, read directly rather than corroborated by WebSearch synthesis, closing the gap the prior pass left open. UNCTAD's general 1964-founding, membership and Geneva-secretariat facts, confirmed in an earlier pass through secondary sources (an encyclopedia among them), are in the prose and not relied on for this edge (roadmap #767)."
     confidence: high
     valid_from: null
     valid_until: null
