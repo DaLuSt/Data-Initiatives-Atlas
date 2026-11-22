@@ -1,0 +1,14 @@
+date: "2026-11-22"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  At the owner's request (who has switched the idea posts on), the scheduled LinkedIn idea posts move from Tuesday
+  and Thursday, 08:00-22:00, to every Saturday plus one weekday (Monday to Friday) drawn at random for each ISO
+  week, at a random time between 16:00 and 20:00 Amsterdam time. tools/linkedin_ideas.py draws the week's weekday
+  from a hash of the ISO week and the minute from 16:00 to 19:44 (one 15-minute wake-up before the 20:00 close, so a
+  late draw is never missed, which the old 21:59 draw against a 22:00 close could be); `decide` also prints the
+  week's two days for the run summary. The cron becomes every 15 minutes, 14:00-18:45 UTC, Monday to Saturday. A new
+  test replays a year of the real cron wake-ups across both clock changes: two posts every week, the second on
+  Saturday, all between 16:00 and 20:00. docs/credentials.md section 4 and the bank's preamble updated. Opened without
+  auto-merge (operating model step 7: a workflow change that sets what is posted publicly).
+prs: [810]
+outcome: merged

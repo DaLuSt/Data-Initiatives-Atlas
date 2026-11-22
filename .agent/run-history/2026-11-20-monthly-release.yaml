@@ -7,5 +7,5 @@ summary: >
   the 1st was chosen. Starting the workflow by hand still works. metadata/versioning.md, docs/github-pages.md, the
   README tree and .agent/operating-model.md say monthly now. Opened without auto-merge (operating model step 7: a
   workflow change that sets what is posted publicly). Closes the run-history entry for #806.
-prs: []
-outcome: in-progress
+prs: [807]
+outcome: merged

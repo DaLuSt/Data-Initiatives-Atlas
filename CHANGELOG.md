@@ -8,6 +8,49 @@ and a dated **data release** (`YYYY.MM.N`) for each snapshot.
 
 <!-- releases:start -->
 
+## Data release 2026.11.3 — 2026-11-16
+
+**Schema 1.0.0** (unchanged)
+
+In the Atlas at this release: 1,295 entities (+10), 2,540 typed relationships (+26), 169 countries (+0).
+
+### Site and features
+
+- Site: a shared link now shows a title, a description and a picture (#782)
+
+### Data
+
+- Four laws get a start date, read directly from WIPO Lex (#785)
+- Link ten national laws to the body the Atlas already connects them to (#784)
+- Replace 208 "NOT READ" edges on fifteen EU instruments with direct reads (#781)
+- EU core: the Cyber Resilience Act, DORA, the Data Innovation Board, the AI Office, data.europa.eu and the OOTS (#780)
+- EU core: the Digital Services Act, the Digital Markets Act and the ePrivacy Directive (#779)
+- Country index pages list every entity of the country, and validation checks it (#778)
+- Re-check Ireland's cyber bill and the Swiss E-ID Act against primary pages (#761)
+- Malabo Convention: what the treaty text provides, read from page images (#760)
+- Burkina Faso: the two 2026 laws read from the decrees' scans; the ARCOD added (#759)
+
+### Tooling
+
+- Workflows: a time limit on every job (waits for the owner) (#783)
+- A scheduled LinkedIn idea post: Tuesday and Thursday at a random time (#766)
+- A second release LinkedIn pipeline: the same post on the Page (#764)
+
+### Documentation
+
+- Repository scan of 2026-11-13: findings recorded, leads queued, bookkeeping fixed (#776)
+- LinkedIn: a bank of 45 idea posts in docs/linkedin-page-posts.md (#765)
+
+### Housekeeping
+
+- 1 pull request that only record progress in the repository's own files (#763)
+
+### Roadmap items completed
+
+- Link previews and discoverability of the site (Open Graph, structured data, sitemap) (#772)
+- EU core instruments and bodies the Atlas does not hold yet (#771)
+- Country index pages: list every entity of the country, and check it automatically (#769)
+
 ## Data release 2026.11.2 — 2026-11-09
 
 **Schema 1.0.0** (unchanged)

@@ -84,8 +84,14 @@ def at(y, m, d, hh=12, mm=0):
     return dt.datetime(y, m, d, hh, mm, tzinfo=AMS)
 
 
-def tuesday():
-    return dt.date(2026, 11, 17)  # a Tuesday
+def saturday():
+    return dt.date(2026, 11, 21)  # a Saturday: always a posting day
+
+
+def drawn_weekday(day):
+    """The date of the second posting day (Monday to Friday) drawn for `day`'s week."""
+    monday = day - dt.timedelta(days=day.weekday())
+    return monday + dt.timedelta(days=li.week_day(day))
 
 
 class TestParseBank(unittest.TestCase):
@@ -144,28 +150,58 @@ class TestTheRealBank(unittest.TestCase):
 
 
 class TestTargetTime(unittest.TestCase):
-    def test_always_between_08_and_22(self):
+    def test_always_from_16_00_to_19_44(self):
         day = dt.date(2026, 1, 1)
         for n in range(1500):
             m = li.target_minute(day + dt.timedelta(days=n))
-            self.assertGreaterEqual(m, 8 * 60)
-            self.assertLess(m, 22 * 60)
+            self.assertGreaterEqual(m, 16 * 60)
+            self.assertLess(m, 19 * 60 + 45)
+
+    def test_a_full_wake_up_step_is_left_before_20_00(self):
+        # The run that catches a drawn minute comes at most 15 minutes later, still before 20:00.
+        self.assertEqual(li.WINDOW_END - li.DRAW_END, li.WAKE_EVERY)
+        self.assertEqual((li.WINDOW_START, li.WINDOW_END), (16 * 60, 20 * 60))
 
     def test_the_same_day_gives_the_same_time(self):
-        self.assertEqual(li.target_minute(tuesday()), li.target_minute(tuesday()))
+        self.assertEqual(li.target_minute(saturday()), li.target_minute(saturday()))
 
-    def test_it_is_spread_over_the_day_and_not_a_constant(self):
+    def test_it_is_spread_over_the_window_and_not_a_constant(self):
         times = {li.target_minute(dt.date(2026, 1, 1) + dt.timedelta(days=n)) for n in range(400)}
-        self.assertGreater(len(times), 200)
-        hours = {t // 60 for t in times}
-        self.assertEqual(hours, set(range(8, 22)))
+        self.assertGreater(len(times), 150)
+        self.assertEqual({t // 60 for t in times}, {16, 17, 18, 19})
 
     def test_a_different_salt_gives_a_different_draw(self):
         days = [dt.date(2026, 1, 1) + dt.timedelta(days=n) for n in range(30)]
         self.assertNotEqual([li.target_minute(d) for d in days], [li.target_minute(d, "x") for d in days])
 
     def test_hhmm(self):
-        self.assertEqual(li.hhmm(8 * 60 + 5), "08:05")
+        self.assertEqual(li.hhmm(16 * 60 + 5), "16:05")
+
+
+class TestPostDays(unittest.TestCase):
+    WEEKS = [dt.date(2026, 1, 5) + dt.timedelta(weeks=n) for n in range(200)]  # Mondays
+
+    def test_saturday_is_always_a_posting_day(self):
+        for monday in self.WEEKS:
+            self.assertEqual(li.post_days(monday)[1], li.SATURDAY)
+
+    def test_the_second_day_is_a_weekday_and_the_same_all_week(self):
+        for monday in self.WEEKS:
+            days = {li.week_day(monday + dt.timedelta(days=k)) for k in range(7)}
+            self.assertEqual(len(days), 1, monday)
+            self.assertIn(days.pop(), range(0, 5))
+
+    def test_every_weekday_comes_up_and_it_is_not_a_constant(self):
+        drawn = [li.week_day(monday) for monday in self.WEEKS]
+        for wd in range(5):
+            self.assertGreater(drawn.count(wd), 20, li.DAY_NAMES[wd])
+
+    def test_a_different_salt_gives_a_different_draw(self):
+        self.assertNotEqual([li.week_day(m) for m in self.WEEKS], [li.week_day(m, "x") for m in self.WEEKS])
+
+    def test_the_week_is_the_iso_week(self):
+        # 2026-12-31 (Thursday) and 2027-01-02 (Saturday) are in the same ISO week, 2026-W53.
+        self.assertEqual(li.week_day(dt.date(2026, 12, 31)), li.week_day(dt.date(2027, 1, 2)))
 
 
 class TestLedger(unittest.TestCase):
@@ -200,67 +236,71 @@ class TestDecide(unittest.TestCase):
         m = li.target_minute(day) + extra_minutes
         return dt.datetime(day.year, day.month, day.day, m // 60, m % 60, tzinfo=AMS)
 
-    def test_due_on_a_tuesday_once_the_drawn_time_has_passed(self):
-        d = self.decide(self.after_target(tuesday()))
+    def test_due_on_a_saturday_once_the_drawn_time_has_passed(self):
+        d = self.decide(self.after_target(saturday()))
         self.assertTrue(d.due)
         self.assertEqual(d.number, 2)  # post 1 is held
 
     def test_not_due_before_the_drawn_time(self):
-        m = li.target_minute(tuesday()) - 1
-        d = self.decide(dt.datetime(2026, 11, 17, m // 60, m % 60, tzinfo=AMS))
+        m = li.target_minute(saturday()) - 1
+        d = self.decide(dt.datetime(2026, 11, 21, m // 60, m % 60, tzinfo=AMS))
         self.assertFalse(d.due)
         self.assertIn("too early", d.reason)
 
-    def test_due_on_a_thursday_and_not_on_other_days(self):
-        thursday = dt.date(2026, 11, 19)
-        self.assertTrue(self.decide(self.after_target(thursday)).due)
-        for offset in (-1, 1, 3, 4, 5, 6):  # Mon, Wed, Fri, Sat, Sun
-            day = tuesday() + dt.timedelta(days=offset)
-            d = self.decide(at(day.year, day.month, day.day, 21, 59))
+    def test_due_on_the_drawn_weekday_and_not_on_other_days(self):
+        wd = drawn_weekday(saturday())
+        self.assertTrue(self.decide(self.after_target(wd)).due)
+        monday = saturday() - dt.timedelta(days=5)
+        for k in range(7):
+            day = monday + dt.timedelta(days=k)
+            if day in (wd, saturday()):
+                continue
+            d = self.decide(at(day.year, day.month, day.day, 19, 59))
             self.assertFalse(d.due, day.strftime("%a"))
-            self.assertIn("Tuesday or Thursday", d.reason)
+            self.assertIn("not a posting day", d.reason)
+            self.assertIn(f"{li.DAY_NAMES[wd.weekday()]} and Saturday", d.reason)
 
     def test_only_one_attempt_a_day(self):
-        now = self.after_target(tuesday(), 30)
-        for body in ("Posted idea post 2 on 2026-11-17: x", "Failed idea post 2 on 2026-11-17: x"):
+        now = self.after_target(saturday(), 10)
+        for body in ("Posted idea post 2 on 2026-11-21: x", "Failed idea post 2 on 2026-11-21: x"):
             self.assertFalse(self.decide(now, [comment(body)]).due, body)
 
     def test_the_next_post_skips_posted_and_held_ones(self):
-        now = self.after_target(dt.date(2026, 11, 19))
-        d = self.decide(now, [comment("Posted idea post 2 on 2026-11-17: x")])
+        now = self.after_target(saturday())
+        d = self.decide(now, [comment("Posted idea post 2 on 2026-11-14: x")])
         self.assertEqual(d.number, 3)  # 1 and 4 are held, 2 is posted
 
     def test_a_failed_post_is_tried_again_next_time(self):
-        now = self.after_target(dt.date(2026, 11, 19))
-        d = self.decide(now, [comment("Failed idea post 2 on 2026-11-17: token")])
+        now = self.after_target(saturday())
+        d = self.decide(now, [comment("Failed idea post 2 on 2026-11-14: token")])
         self.assertEqual(d.number, 2)
 
-    def test_the_window_closes_at_22(self):
-        # Find a day whose drawn time is before 22:00 (all are) and run just after the window.
-        d = self.decide(at(2026, 11, 17, 22, 5))
+    def test_the_window_closes_at_20(self):
+        d = self.decide(at(2026, 11, 21, 20, 5))
         self.assertFalse(d.due)
         self.assertIn("missed", d.reason)
+        self.assertIn("closed at 20:00", d.reason)
 
     def test_an_empty_queue_is_reported_and_posts_nothing(self):
         done = [comment("Posted idea post 2 on 2026-11-10: x"), comment("Posted idea post 3 on 2026-11-12: x")]
-        d = self.decide(self.after_target(tuesday()), done)
+        d = self.decide(self.after_target(saturday()), done)
         self.assertFalse(d.due)
         self.assertIn("queue is empty", d.reason)
 
     def test_force_ignores_day_time_and_todays_attempt_but_not_the_queue(self):
         self.assertTrue(self.decide(at(2026, 11, 15, 3, 0), force=True).due)  # a Sunday at 03:00
-        self.assertTrue(self.decide(at(2026, 11, 17, 9, 0), [comment("Failed idea post 2 on 2026-11-17: x")], force=True).due)
+        self.assertTrue(self.decide(at(2026, 11, 21, 9, 0), [comment("Failed idea post 2 on 2026-11-21: x")], force=True).due)
         done = [comment("Posted idea post 2 on 2026-11-10: x"), comment("Posted idea post 3 on 2026-11-12: x")]
-        self.assertFalse(self.decide(at(2026, 11, 17, 9, 0), done, force=True).due)
+        self.assertFalse(self.decide(at(2026, 11, 21, 9, 0), done, force=True).due)
 
     def test_the_decision_names_the_day_and_the_time(self):
-        d = self.decide(self.after_target(tuesday()))
-        self.assertEqual(d.date, "2026-11-17")
-        self.assertRegex(d.target, r"^\d\d:\d\d$")
+        d = self.decide(self.after_target(saturday()))
+        self.assertEqual(d.date, "2026-11-21")
+        self.assertRegex(d.target, r"^1[6-9]:\d\d$")
 
     def test_a_week_has_exactly_two_posting_days_and_one_post_each(self):
-        # Walk a whole week in 15-minute steps: exactly two posts, one on Tuesday, one on Thursday,
-        # each after its drawn time, with the ledger growing as the workflow would write it.
+        # Walk a whole week in 15-minute steps: exactly two posts, on the drawn weekday and on
+        # Saturday, each after its drawn time, with the ledger growing as the workflow writes it.
         comments, posts = [], []
         start = dt.datetime(2026, 11, 16, 0, 0, tzinfo=AMS)
         for step in range(7 * 24 * 4):
@@ -270,21 +310,49 @@ class TestDecide(unittest.TestCase):
                 posts.append((now, d.number))
                 comments.append(comment(li.record_line("posted", d.number, d.date, "https://x/")))
         self.assertEqual(len(posts), 2)
-        self.assertEqual([p[0].strftime("%a") for p in posts], ["Tue", "Thu"])
+        self.assertEqual([p[0].date() for p in posts], [drawn_weekday(saturday()), saturday()])
         for now, _ in posts:
             minute = now.hour * 60 + now.minute
             self.assertGreaterEqual(minute, li.target_minute(now.date()))
             self.assertLess(minute - li.target_minute(now.date()), 15)
+            self.assertLess(minute, 20 * 60)
         self.assertEqual([p[1] for p in posts], [2, 3])
 
+    def test_a_year_of_the_real_cron_gives_two_posts_every_week_between_16_and_20(self):
+        # Wake exactly when the workflow's cron does (UTC: every 15 minutes, 14:00-18:45, Monday to
+        # Saturday), across both clock changes: every ISO week gets its two posts, none is missed.
+        extra = "".join(f"### Post {n}. T{n}\n\n```text\nText {n}\n```\n\n" for n in range(10, 200))
+        many = li.parse_bank(BANK.replace("## Before posting", extra + "## Before posting"))
+        comments, posts = [], []
+        utc = dt.timezone.utc
+        day = dt.date(2026, 1, 5)  # a Monday
+        for _ in range(52 * 7):
+            if day.weekday() <= 5:
+                for hour in range(14, 19):
+                    for minute in (0, 15, 30, 45):
+                        now = dt.datetime(day.year, day.month, day.day, hour, minute, tzinfo=utc).astimezone(AMS)
+                        d = li.decide(many, comments, now, trusted=TRUSTED)
+                        if d.due:
+                            posts.append(now)
+                            comments.append(comment(li.record_line("posted", d.number, d.date, "x")))
+            day += dt.timedelta(days=1)
+        weeks = {}
+        for now in posts:
+            weeks.setdefault(now.date().isocalendar()[:2], []).append(now)
+            self.assertTrue(16 * 60 <= now.hour * 60 + now.minute < 20 * 60, now)
+        self.assertEqual(len(weeks), 52)
+        for key, times in weeks.items():
+            self.assertEqual([t.weekday() for t in times][-1], li.SATURDAY, key)
+            self.assertEqual(len(times), 2, key)
+
     def test_the_summer_and_winter_clocks_both_fall_inside_the_cron_hours(self):
-        # The cron fires 05:00-21:59 UTC. Every local minute from 08:00 to 21:59 must be covered
-        # in winter (UTC+1) and in summer (UTC+2) time.
+        # The cron fires 14:00-18:45 UTC. The first and last drawn local minutes, 16:00 and 19:44,
+        # must be covered in winter (UTC+1) and in summer (UTC+2) time.
         for month in (1, 7):
-            for local in (8 * 60, 21 * 60 + 59):
+            for local in (16 * 60, 19 * 60 + 44):
                 when = dt.datetime(2026, month, 15, local // 60, local % 60, tzinfo=AMS)
                 utc = when.astimezone(dt.timezone.utc)
-                self.assertTrue(5 <= utc.hour <= 21, (month, local, utc))
+                self.assertTrue(14 <= utc.hour <= 18, (month, local, utc))
 
 
 class TestRecordLine(unittest.TestCase):
@@ -325,14 +393,15 @@ class TestMain(unittest.TestCase):
         return f.name
 
     def test_decide_prints_key_value_lines_for_the_output_file(self):
-        m = li.target_minute(tuesday()) + 5
-        now = f"2026-11-17T{m // 60:02d}:{m % 60:02d}:00"
+        m = li.target_minute(saturday()) + 5
+        now = f"2026-11-21T{m // 60:02d}:{m % 60:02d}:00"
         code, out, _ = self.run_main(["--bank", self.bank_file(), "decide", "--comments-file",
                                       self.comments_file([]), "--now", now])
         self.assertEqual(code, 0)
         lines = dict(l.split("=", 1) for l in out.strip().splitlines())
-        self.assertEqual(set(lines), {"due", "number", "date", "target", "reason"})
-        self.assertEqual((lines["due"], lines["number"], lines["date"]), ("true", "2", "2026-11-17"))
+        self.assertEqual(set(lines), {"due", "number", "date", "target", "days", "reason"})
+        self.assertEqual((lines["due"], lines["number"], lines["date"]), ("true", "2", "2026-11-21"))
+        self.assertTrue(lines["days"].endswith(" and Saturday"), lines["days"])
 
     def test_decide_when_not_due_prints_an_empty_number(self):
         code, out, _ = self.run_main(["--bank", self.bank_file(), "decide", "--comments-file",
@@ -386,16 +455,16 @@ class TestWorkflow(unittest.TestCase):
     def step(self, job, name):
         return next(s for s in job["steps"] if s.get("name") == name)
 
-    def test_it_runs_every_15_minutes_on_tuesday_and_thursday_only(self):
+    def test_it_runs_every_15_minutes_from_monday_to_saturday(self):
         (sched,) = self.on["schedule"]
         minute, hour, dom, month, dow = sched["cron"].split()
-        self.assertEqual((minute, dom, month, dow), ("*/15", "*", "*", "2,4"))
-        self.assertEqual(hour, "5-21")
+        self.assertEqual((minute, dom, month, dow), (f"*/{li.WAKE_EVERY}", "*", "*", "1-6"))
+        self.assertEqual(hour, "14-18")
 
-    def test_the_cron_hours_cover_08_to_22_in_amsterdam(self):
+    def test_the_cron_hours_cover_16_to_20_in_amsterdam(self):
         lo, hi = (int(x) for x in self.on["schedule"][0]["cron"].split()[1].split("-"))
-        self.assertLessEqual(lo, 8 - 2)   # 08:00 in summer time is 06:00 UTC
-        self.assertGreaterEqual(hi, 21)   # 21:59 in winter time is 20:59 UTC, summer 19:59
+        self.assertLessEqual(lo, 16 - 2)  # 16:00 in summer time is 14:00 UTC
+        self.assertGreaterEqual(hi, 18)   # 19:44 in winter time is 18:44 UTC, summer 17:44
 
     def test_it_cannot_be_started_by_a_pull_request_or_a_push(self):
         self.assertEqual(set(self.on), {"schedule", "workflow_dispatch"})

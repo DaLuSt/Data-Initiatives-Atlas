@@ -12,7 +12,7 @@ sets it up. Each section says what its own state is.
 |---|---|---|---|
 | `PROJECT_TOKEN` (classic personal access token, `project` scope) | `project-board.yml` keeps the public Project board in step with the roadmap issues | Chosen by the owner when the token was created (not readable from the repository) | [#496](https://github.com/DaLuSt/Data-Initiatives-Atlas/issues/496), 2026.12 |
 | LinkedIn access token (OAuth, `w_member_social`) | Posting a data release to LinkedIn after the owner approves | **60 days** (LinkedIn's authorization-code flow documents 60 days for access tokens) | [#515](https://github.com/DaLuSt/Data-Initiatives-Atlas/issues/515), 2027.01 |
-| LinkedIn access token again, in a second environment (`linkedin-ideas`) | The scheduled idea posts, Tuesday and Thursday (section 4) | The same token and expiry date as the release posts | Needs the same renewal |
+| LinkedIn access token again, in a second environment (`linkedin-ideas`) | The scheduled idea posts, Saturday and one random weekday (section 4) | The same token and expiry date as the release posts | Needs the same renewal |
 | LinkedIn Page access token (OAuth, `w_organization_social`, a second app) | Posting the same text to the Data Initiatives Atlas LinkedIn Page after the owner approves (section 3) | Also about 60 days | Needs LinkedIn's approval of the Community Management API first |
 
 Common rules for both: the secret lives only in GitHub (*Settings → Secrets and
@@ -364,23 +364,26 @@ LinkedIn's Posts API documentation lists `w_organization_social` for it (section
 
 ---
 
-## 4. The scheduled idea posts (Tuesday and Thursday)
+## 4. The scheduled idea posts (Saturday and one random weekday)
 
 Twice a week the owner's LinkedIn profile gets one of the **idea posts** in section 3 of
-`docs/linkedin-page-posts.md`, on a Tuesday and a Thursday, at a random time between 08:00 and 22:00
-(Europe/Amsterdam). Built 2026-11-13; **switched off** until the steps below are done.
+`docs/linkedin-page-posts.md`: every Saturday, and on one weekday (Monday to Friday) drawn at random for each
+week, at a random time between 16:00 and 20:00 (Europe/Amsterdam). Until 2026-11-22 it was Tuesday and Thursday,
+08:00 to 22:00; changed at the owner's request. Built 2026-11-13; **switched off** until the steps below are done.
 
 ### How it works
 
-- **`.github/workflows/linkedin-ideas.yml`**, "Post an idea on LinkedIn". On Tuesdays and Thursdays it wakes
-  every 15 minutes. Its first job, `decide`, has no secrets and no environment: it asks
+- **`.github/workflows/linkedin-ideas.yml`**, "Post an idea on LinkedIn". From Monday to Saturday it wakes
+  every 15 minutes between 14:00 and 18:45 UTC (16:00 to 19:45 in Amsterdam in winter, later in summer). Its first job, `decide`, has no secrets and no environment: it asks
   `tools/linkedin_ideas.py` whether the day's time has passed and which post is next. Only when a post is due does
   the second job, `post`, start, in the GitHub Environment **`linkedin-ideas`**, and call the same
   `tools/linkedin_post.py` that the release posts use.
-- **The random time.** A cron cannot pick a random time. The tool draws one minute between 08:00 and 21:59 for
-  each date from a hash of the date, so every wake-up of that day agrees on it without keeping state. GitHub starts
-  scheduled runs late at busy times, so a post goes out up to some minutes after its drawn time, never before. If
-  GitHub skips every wake-up of a day until 22:00, that day has no post.
+- **The random day and time.** A cron cannot pick either. The tool draws the week's second day (Monday to Friday)
+  from a hash of the ISO week, and one minute from 16:00 to 19:44 for each date from a hash of the date, so every
+  wake-up agrees on both without keeping state. The draw stops at 19:44 so that the next 15-minute wake-up, at the
+  latest 19:45, still posts before 20:00. GitHub starts scheduled runs late at busy times, so a post goes out up to
+  some minutes after its drawn time, never before. If GitHub skips every wake-up of a day until 20:00, that day has
+  no post. The run summary shows the week's two days and the day's drawn time.
 - **The queue.** The posts in the file, in order, skipping the ones already posted and the ones on hold. A post is
   on hold when the lines under it include one that starts `*Check before posting` or `*Hold`: that is how a post
   whose facts go stale, or one you want to pull, stays out of the rotation (32 of the 45 are in it today, about
@@ -389,7 +392,7 @@ Twice a week the owner's LinkedIn profile gets one of the **idea posts** in sect
 - **The log.** One issue, "LinkedIn idea posts: log" (label `linkedin-ideas`), created by the first run. Each attempt
   adds one comment: `Posted idea post N on YYYY-MM-DD: <link>` or `Failed idea post N on YYYY-MM-DD: <why>`. The next
   post is chosen from these comments, and only comments by the Actions bot and by you count. There is at most one
-  attempt a day: after a failure nothing more is tried until the next Tuesday or Thursday, so a broken token
+  attempt a day: after a failure nothing more is tried until the next posting day, so a broken token
   produces one comment and not one every 15 minutes. To skip a post, comment `Posted idea post N on <today>: by hand`
   as yourself.
 - **No approval per post.** A post at a random time cannot wait for someone to click, so this pipeline has no required
@@ -410,7 +413,7 @@ Twice a week the owner's LinkedIn profile gets one of the **idea posts** in sect
    creates the log issue if there is none and writes nothing to it.
 4. Read the posts that are not on hold (`python tools/linkedin_ideas.py queue` lists them), then set the repository
    variable `LINKEDIN_IDEAS_ENABLED` to `true` (*Settings → Secrets and variables → Actions → Variables*). The next
-   Tuesday or Thursday after the drawn time, the first post goes out. Set it to anything else, or delete it, to stop
+   posting day after the drawn time, the first post goes out. Set it to anything else, or delete it, to stop
    at once.
 
 ### Limits and what is not built
@@ -419,7 +422,7 @@ Twice a week the owner's LinkedIn profile gets one of the **idea posts** in sect
   Page variant can be added to this workflow in the same way, and nothing here blocks it.
 - It posts **text only**: no image, no link preview. LinkedIn tends to reach fewer people with a link in the text;
   the posts say where to look without forcing it.
-- The 15-minute wake-ups show up as many short runs on Tuesdays and Thursdays in the Actions tab (the `decide` job
+- The 15-minute wake-ups show up as many short runs every afternoon from Monday to Saturday in the Actions tab (the `decide` job
   ends in seconds). With the variable off they do not run at all.
 - Not tested against LinkedIn: the code, the draw, the queue and the workflow's shape are tested offline
   (`tools/test_linkedin_ideas.py`); the posting step is the one already used for the release posts.

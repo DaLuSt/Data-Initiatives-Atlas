@@ -1,24 +1,25 @@
 name: Post an idea on LinkedIn
 
 # Posts one of the "idea posts" in docs/linkedin-page-posts.md (section 3) to the owner's
-# LinkedIn profile, twice a week, on Tuesday and Thursday at a random time between 08:00 and
-# 22:00 (Europe/Amsterdam). Unlike the release posts there is no approval step per post: the
+# LinkedIn profile, twice a week: every Saturday, and on one weekday (Monday to Friday) drawn at
+# random for each week, at a random time between 16:00 and 20:00 (Europe/Amsterdam). Unlike the release posts there is no approval step per post: the
 # review happens when a post is merged into the file, and a post that carries a line starting
 # "*Check before posting" or "*Hold" is never posted by this workflow. It is off until the
 # repository variable LINKEDIN_IDEAS_ENABLED is "true", and setting that variable to anything
 # else stops it at once.
 #
-# How the time is random: a cron cannot pick a random time, so the workflow wakes every 15
-# minutes on Tuesdays and Thursdays and the first job asks tools/linkedin_ideas.py whether
-# the day's time has passed. That time is drawn once per day from a hash of the date, so every
-# wake-up of the day agrees on it. GitHub starts scheduled runs late at busy times, so a post
-# goes out some minutes after its drawn time, never before it. A day on which the schedule is
-# missed entirely gets no post (the window closes at 22:00).
+# How the day and the time are random: a cron cannot pick either, so the workflow wakes every
+# 15 minutes in the afternoon from Monday to Saturday, and the first job asks
+# tools/linkedin_ideas.py whether today is a posting day and the day's time has passed. The
+# week's second day is drawn from a hash of the ISO week and the time (16:00 to 19:44) from a
+# hash of the date, so every wake-up agrees on both. GitHub starts scheduled runs late at busy
+# times, so a post goes out some minutes after its drawn time, never before it. A day on which
+# the schedule is missed entirely gets no post (the window closes at 20:00).
 #
 # What has been posted is kept in the comments of one log issue ("LinkedIn idea posts: log",
 # label linkedin-ideas), one line per attempt; the next post is the lowest-numbered one not yet
 # posted and not held. At most one attempt per day: a failure is logged and the next try is
-# on the next Tuesday or Thursday.
+# on the next posting day.
 #
 # The first job (decide) has no secrets and no environment, so the 15-minute wake-ups never
 # touch them. Only the second job (post) runs in the environment `linkedin-ideas`, which
@@ -27,9 +28,9 @@ name: Post an idea on LinkedIn
 # Set up, switching on and what to do when it fails: docs/credentials.md, section 4.
 on:
   schedule:
-    # UTC. 05:00-21:59 UTC covers 08:00-22:00 in Amsterdam in both summer (UTC+2) and winter
-    # (UTC+1) time; the local day and time are checked by the tool.
-    - cron: "*/15 5-21 * * 2,4"
+    # UTC, Monday to Saturday. 14:00-18:45 UTC covers 16:00-19:45 in Amsterdam in both summer
+    # (UTC+2) and winter (UTC+1) time; the local day and time are checked by the tool.
+    - cron: "*/15 14-18 * * 1-6"
   workflow_dispatch:
     inputs:
       dry_run:
@@ -93,6 +94,7 @@ jobs:
             echo "### LinkedIn idea post"
             echo
             sed -n 's/^reason=/- /p' decision.txt
+            sed -n 's/^days=/- This week'"'"'s posting days: /p' decision.txt
             sed -n 's/^target=/- Today'"'"'s drawn time: /p' decision.txt
             sed -n 's/^number=\(.\+\)$/- Next post: number \1/p' decision.txt
           } >> "$GITHUB_STEP_SUMMARY"
@@ -156,5 +158,5 @@ jobs:
         if: failure() && inputs.dry_run != true
         run: |
           body=$(python tools/linkedin_ideas.py record failed --number "$NUMBER" --date "$DAY" \
-                   --text "see ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}; nothing was posted; the next try is the next Tuesday or Thursday")
+                   --text "see ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}; nothing was posted; the next try is the next posting day")
           gh issue comment "$ISSUE" --body "$body"
