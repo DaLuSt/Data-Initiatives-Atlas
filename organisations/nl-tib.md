@@ -12,6 +12,7 @@ description: >
   responsible minister has decided, and consists of three members — at
   least two with a judicial background — plus a secretary and technical
   advisor.
+  Established on 1 September 2017, when Article 32(1) of the Wiv 2017 came into force (Stb. 2017, 318); its review task followed on 1 May 2018.
 
 level: national
 country: NL
@@ -22,9 +23,9 @@ confidence: high
 coverage: medium
 verification: primary-source
 
-start_date: null
+start_date: 2017-09-01
 end_date: null
-last_verified: "2026-11-19"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -55,9 +56,9 @@ relationships:
   - type: governed-by
     target: NL-WIV-2017
     source: fact
-    evidence: "Established by the Wet op de inlichtingen- en veiligheidsdiensten 2017 (BWBR0039896), read directly 2026-11-19 on wetten.overheid.nl: Article 32(1), 'Er is een toetsingscommissie inzet bevoegdheden', and 32(2), it 'is belast met het toetsen van de rechtmatigheid van de door Onze betrokken Minister verleende toestemming' for the powers the Article lists, and 'Het oordeel van de toetsingscommissie is bindend'. Articles 33 to 37 set its composition and review procedure. `valid_from` is 1 May 2018, when the remainder of the Act entered into force (Stb. 2018, 119, per the citation page recorded on [[NL-WIV-2017]]). The operational start of 1 April 2018 comes from Wikipedia only and is not used here. Replaces the earlier secondary citation, 2026-11-19 (roadmap #767)."
+    evidence: "Established by the Wet op de inlichtingen- en veiligheidsdiensten 2017 (BWBR0039896), read directly 2026-11-19 on wetten.overheid.nl: Article 32(1), 'Er is een toetsingscommissie inzet bevoegdheden', and 32(2), it 'is belast met het toetsen van de rechtmatigheid van de door Onze betrokken Minister verleende toestemming' for the powers the Article lists, and 'Het oordeel van de toetsingscommissie is bindend'. Articles 33 to 37 set its composition and review procedure. `valid_from` is 1 September 2017: the commencement decree of 19 August 2017 (Stb. 2017, 318, read directly on zoek.officielebekendmakingen.nl 2026-11-22) brought 'de artikelen 1, 32, eerste lid, 33, 34, 35, 97, eerste en tweede lid, 98, 99, 100, 101, 103, 104, 105, 106 en 170' into force 'met ingang van 1 september 2017', so the commission existed from then; Article 32(2), its review task, came into force with the rest of the Act on 1 May 2018 (Stb. 2018, 119). Corrected 2026-11-22: `valid_from` was 2018-05-01. The operational start of 1 April 2018 comes from an encyclopedia only and is not used here. Replaces the earlier secondary citation, 2026-11-19 (roadmap #767)."
     confidence: high
-    valid_from: 2018-05-01
+    valid_from: 2017-09-01
     valid_until: null
   - type: references
     target: NL-TWCO
@@ -68,6 +69,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Besluit van 19 augustus 2017 tot vaststelling van het tijdstip van inwerkingtreding van enkele onderdelen van de Wiv 2017 (Stb. 2017, 318)"
+    url: "https://zoek.officielebekendmakingen.nl/stb-2017-318.html"
+    publisher: "Overheid.nl (officielebekendmakingen.nl)"
+    accessed: "2026-11-22"
   - title: "Wet op de inlichtingen- en veiligheidsdiensten 2017 (BWBR0039896)"
     url: "https://wetten.overheid.nl/BWBR0039896/"
     publisher: "wetten.overheid.nl (Overheid.nl)"
@@ -97,6 +102,8 @@ sources:
 > NL-CTIVD already documented the TIB-to-CTIVD oversight shift but this
 > entity did not. **Closed fully, same day**: [[NL-TWCO]]'s own text,
 > re-read article by article, names the specific powers that move.
+
+> **Dated 2026-11-22** (roadmap #775). The commencement decree for the first phase of the Wiv 2017 (Besluit van 19 augustus 2017, Stb. 2017, 318), read directly on zoek.officielebekendmakingen.nl: 'treden de artikelen 1, 32, eerste lid, 33, 34, 35, … van de Wet op de inlichtingen- en veiligheidsdiensten 2017 in werking met ingang van 1 september 2017'. Article 32(1) reads 'Er is een toetsingscommissie inzet bevoegdheden', so `start_date` is 1 September 2017. wetten.overheid.nl's information page for the Act (BWBR0039896) shows the same two phases: 01-09-2017 (Stb. 2017, 318) and 01-05-2018 (Stb. 2018, 119).
 
 ## Description
 
@@ -134,7 +141,8 @@ Minister, who may proceed against it, with recourse to the Conseil d'État.
 [[NL-WIV-2017]] was to enter into force on 1 January 2018. It entered into
 force on **1 May 2018** instead. Reading the Wikipedia article on the TIB
 directly gives a sharper picture than "candidates took longer to find": the
-TIB was established by the Wiv 2017 as of **1 September 2017** but did not
+TIB was established by the Wiv 2017 as of **1 September 2017** (now read in
+the commencement decree itself, Stb. 2017, 318) but did not
 become operational until **1 April 2018** — a six-month gap the article
 attributes to the need to align the new commission's working method with
 European case law requirements, not only staffing. Early operation was

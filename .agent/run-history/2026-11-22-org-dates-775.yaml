@@ -1,0 +1,14 @@
+date: "2026-11-22"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #775, organisations. IE-DPC start_date 2018-05-25 (Data Protection Act 2018 s10 and the Establishment
+  Day Order, S.I. No. 175 of 2018, on irishstatutebook.ie). NL-TIB start_date 2017-09-01 from the Wiv 2017's
+  first-phase commencement decree (Stb. 2017, 318, read on zoek.officielebekendmakingen.nl), which brought Article
+  32(1) into force; its governed-by NL-WIV-2017 edge's valid_from is corrected from 2018-05-01 to 2017-09-01.
+  NL-CTIVD's edge keeps 2018-05-01, with the reason now stated (its task in Article 97(3) and the Wiv 2002's
+  repeal came with the second phase). NL-UWV start_date 2002-01-01 from the Wet SUWI (Article 2 and the Act's
+  single commencement date on wetten.overheid.nl); its related-to edge gains the same valid_from. Tried: the UK
+  Statistics Authority's founding sections on legislation.gov.uk (every request answered 202 this pass). Closes
+  the run-history entry for #832.
+prs: []
+outcome: in-progress
