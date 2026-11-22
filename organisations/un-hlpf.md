@@ -25,7 +25,7 @@ coverage: low
 verification: primary-source
 start_date: 2013-07-09
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -40,7 +40,7 @@ relationships:
   - type: part-of
     target: UN
     source: fact
-    evidence: "Confirmed verbatim by reading sustainabledevelopment.un.org's own 'High-level Political Forum on Sustainable Development' page directly (2026-08-22): 'The High-level Political Forum on Sustainable Development (HLPF) is the central United Nations platform for the follow-up and review of the 2030 Agenda for Sustainable Development and its 17 Sustainable Development Goals (SDGs).' Corroborated by reading en.wikipedia.org/wiki/High-level_Political_Forum_on_Sustainable_Development directly, whose infobox names its parent organisations as 'United Nations Economic and Social Council' and 'United Nations General Assembly' — both principal UN organs, neither separately modelled in the Atlas — so this anchors directly to [[UN]] under metadata/relationship-types.md §2.3. `hlpf.un.org`, the Forum's own subdomain and the URL already cited on [[EU-VOLUNTARY-REVIEW-2023]], returns a bot-defense challenge (403) even with an honest, identifying User-Agent; `sustainabledevelopment.un.org` — a different UN Department of Economic and Social Affairs subdomain carrying the same content — was not blocked and is cited instead."
+    evidence: "Confirmed verbatim by reading sustainabledevelopment.un.org's own 'High-level Political Forum on Sustainable Development' page directly (2026-08-22): 'The High-level Political Forum on Sustainable Development (HLPF) is the central United Nations platform for the follow-up and review of the 2030 Agenda for Sustainable Development and its 17 Sustainable Development Goals (SDGs).' The Forum meets under the auspices of UN principal organs, neither separately modelled in the Atlas, so this anchors directly to [[UN]] under metadata/relationship-types.md §2.3; the names of those organs came from an encyclopedia and are not relied on (roadmap #767). `hlpf.un.org`, the Forum's own subdomain and the URL already cited on [[EU-VOLUNTARY-REVIEW-2023]], returns a bot-defense challenge (403) even with an honest, identifying User-Agent; `sustainabledevelopment.un.org` — a different UN Department of Economic and Social Affairs subdomain carrying the same content — was not blocked and is cited instead."
     confidence: medium
     valid_from: 2013-07-09
     valid_until: null

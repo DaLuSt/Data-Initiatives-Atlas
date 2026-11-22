@@ -21,7 +21,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-08-26"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -43,12 +43,16 @@ relationships:
   - type: applies-to
     target: CZ-ZAKON-110-2019
     source: fact
-    evidence: "Confirmed by reading cs.wikipedia.org's ÚOOÚ article directly (2026-08-26): 'Činnost úřadu vymezuje zákon č. 110/2019 Sb., o zpracování osobních údajů' (the office's activity is defined by Act No. 110/2019 Sb., on the processing of personal data). The same article confirms in its own words: 'Zákon č. 110/2019 Sb. ... již funkci inspektorů neuvádí, stávající inspektoři ale dokončili své funkční období podle původních právních předpisů' (Act No. 110/2019 no longer includes the position of inspectors, but the existing inspectors completed their term under the original rules), naming all seven inspectors and their appointment dates: they were appointed by the President of the Republic on the Senate's proposal for ten-year terms."
-    confidence: medium
+    evidence: "Act No. 110/2019 Sb., read directly 2026-11-22 on zakonyprolidi.cz: § 1(e), the Act governs 'postavení a pravomoc Úřadu pro ochranu osobních údajů (dále jen „Úřad“)', and § 50(1), 'Úřad je ústředním správním úřadem pro oblast ochrany osobních údajů v rozsahu stanoveném tímto zákonem, jinými právními předpisy, mezinárodními smlouvami ... a přímo použitelnými předpisy Evropské unie.' The history of the office's inspectors, which an encyclopedia article supplied, is in the prose and not needed here (roadmap #767)."
+    confidence: high
     valid_from: null
     valid_until: null
 
 sources:
+  - title: "Zákon č. 110/2019 Sb., o zpracování osobních údajů (zakonyprolidi.cz)"
+    url: "https://www.zakonyprolidi.cz/cs/2019-110"
+    publisher: "zakonyprolidi.cz (AION CS), text of the Sbírka zákonů"
+    accessed: "2026-11-22"
   - title: "Úřad pro ochranu osobních údajů"
     url: "https://www.uoou.gov.cz/"
     publisher: "Úřad pro ochranu osobních údajů (ÚOOÚ)"

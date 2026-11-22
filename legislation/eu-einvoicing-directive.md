@@ -25,7 +25,7 @@ verification: primary-source
 
 start_date: 2014-05-26
 end_date: null
-last_verified: "2026-11-17"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -39,7 +39,7 @@ relationships:
   - type: applies-in
     target: EU
     source: fact
-    evidence: "Confirmed by reading en.wikipedia.org's own 'CEN/TC 434' article directly (2026-08-28): 'CEN/TC 434 was established in 2014' and 'has developed the European Standard on Electronic Invoicing (EN 16931-1) and other ancillary standardization deliverables required by the European Union's directive on electronic invoicing in public procurement' — EN 16931-1:2017 was published 28 June 2017. ec.europa.eu's own Digital Building Blocks page, also read directly, confirms the operative obligation: 'Public entities are required by Directive 2014/55 to be able to receive and process invoices that comply with the European eInvoicing standard.'"
+    evidence: "Directive 2014/55/EU, read directly 2026-11-22 from the Official Journal text (Publications Office, CELEX 32014L0055): Article 7, 'Member States shall ensure that contracting authorities and contracting entities receive and process electronic invoices which comply with the European standard on electronic invoicing'; Article 11(1), transposition 'at the latest by 27 November 2018'; Article 14, 'This Directive is addressed to the Member States.' ec.europa.eu's Digital Building Blocks page, read directly earlier, states the same obligation. Replaces the earlier encyclopedia citation (roadmap #767)."
     confidence: high
     valid_from: null
     valid_until: null
