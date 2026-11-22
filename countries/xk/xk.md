@@ -36,12 +36,16 @@ relationships:
   - type: related-to
     target: EU
     source: fact
-    evidence: "Kosovo applied to join the European Union in December 2022 and is listed as a potential candidate rather than a candidate country; its Stabilisation and Association Agreement with the EU has been in force since 2016. The December 2022 application date and potential-candidate status are confirmed on en.wikipedia.org/wiki/Kosovo ('On 15 December 2022 Kosovo filed a formal application to become a member of the European Union'); the enlargement.ec.europa.eu page was read but its Kosovo-specific detail is rendered client-side and did not appear in the retrieved page text, so it corroborates the page's existence rather than these specific dates. The 2016 SAA date was not independently re-confirmed this pass. Anchor edge: it records an accession relationship in progress and asserts nothing about recognition."
+    evidence: "Council Decision (EU, Euratom) 2016/342 of 12 February 2016, read directly through publications.europa.eu (CELEX 32016D0342), concludes on behalf of the Union 'the Stabilisation and Association Agreement between the European Union and the European Atomic Energy Community, of the one part, and Kosovo', signed on behalf of the Union on 22 October 2015; the Decision notes that the Agreement's entry-into-force date is published separately in the Official Journal, and that notice was not read. Kosovo's formal application for EU membership on 15 December 2022 and its potential-candidate status still rest on an encyclopedia; enlargement.ec.europa.eu renders its Kosovo detail client-side (roadmap #767). Anchor edge: it records an accession relationship in progress and asserts nothing about recognition (the Decision itself states it is without prejudice to positions on status)."
     confidence: medium
     valid_from: null
     valid_until: null
 
 sources:
+  - title: "Council Decision (EU, Euratom) 2016/342 on the conclusion of the Stabilisation and Association Agreement with Kosovo"
+    url: "https://publications.europa.eu/resource/celex/32016D0342"
+    publisher: "Publications Office of the European Union"
+    accessed: "2026-11-22"
   - title: "Candidate countries and potential candidates"
     url: "https://enlargement.ec.europa.eu/enlargement-policy/candidate-countries-and-potential-candidates_en"
     publisher: "European Commission — Enlargement and Eastern Neighbourhood"

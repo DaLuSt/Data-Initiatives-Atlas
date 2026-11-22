@@ -36,7 +36,7 @@ relationships:
   - type: participates-in
     target: EU-EDPB
     source: fact
-    evidence: "Article 68(3) GDPR, read directly on gdpr-info.eu (2026-08-26), provides that the European Data Protection Board shall be composed of the head of one supervisory authority of each Member State and of the European Data Protection Supervisor, or their respective representatives; the Úřad pro ochranu osobních údajů is Czechia's supervisory authority. No page read (including ÚOOÚ's own site and its Wikipedia article) names EDPB membership in ÚOOÚ's own words, so this stays on the composition-rule tier rather than a direct statement."
+    evidence: "The EDPB's own members page (edpb.europa.eu, About EDPB > Members), read directly 2026-11-22, lists for the Czech Republic the 'Office for Personal Data Protection', Pplk. Sochora 27, Prague 7, uoou.gov.cz. Article 68(3) GDPR, read directly on gdpr-info.eu (2026-08-26), provides that the Board is composed of the head of one supervisory authority of each Member State and of the European Data Protection Supervisor, or their representatives."
     confidence: medium
     valid_from: null
     valid_until: null
@@ -49,6 +49,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "EDPB — Members"
+    url: "https://www.edpb.europa.eu/about-edpb/about-edpb/members_en"
+    publisher: "European Data Protection Board"
+    accessed: "2026-11-22"
   - title: "Zákon č. 110/2019 Sb., o zpracování osobních údajů (zakonyprolidi.cz)"
     url: "https://www.zakonyprolidi.cz/cs/2019-110"
     publisher: "zakonyprolidi.cz (AION CS), text of the Sbírka zákonů"

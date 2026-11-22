@@ -9,5 +9,5 @@ summary: >
   own page; INTL-ISO-IEC-27002 keeps the standard's own Foreword and drops the encyclopedia sentence. Tried and
   left as they are: EE-STATISTIKAAMET (stat.ee does not name the ministry; Riigi Teataja still needs JavaScript),
   NL-NICTIZ (nictiz.nl's about page does not state the VWS funding). Closes the run-history entry for #825.
-prs: []
-outcome: in-progress
+prs: [826]
+outcome: merged
