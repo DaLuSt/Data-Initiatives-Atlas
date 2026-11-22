@@ -26,7 +26,7 @@ coverage: low
 verification: primary-source
 start_date: 2015-03-01
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -42,12 +42,16 @@ relationships:
   - type: applies-in
     target: "PL"
     source: fact
-    evidence: "Confirmed verbatim by reading gov.pl's own 'Czym jest numer PESEL' page directly (2026-08-22), whose 'Podstawa prawna' (legal basis) section cites 'Ustawa z dnia 24 września 2010 r. o ewidencji ludności (Dz. U. z 2015 r. poz. 388)'. Corroborated by reading pl.wikipedia.org/wiki/PESEL directly: 'Od 1 marca 2015 podstawę prawną funkcjonowania systemu stanowi ustawa o ewidencji ludności z 24 września 2010' (Since 1 March 2015 the legal basis for the system's operation is the population records act of 24 September 2010). Anchor edge under metadata/relationship-types.md §2.3."
+    evidence: "Confirmed verbatim by reading gov.pl's own 'Czym jest numer PESEL' page directly (2026-08-22), whose 'Podstawa prawna' (legal basis) section cites 'Ustawa z dnia 24 września 2010 r. o ewidencji ludności (Dz. U. z 2015 r. poz. 388)'. The Act itself, consolidated text of 12 March 2026 (Dz.U. 2026 poz. 384), was read directly on 2026-11-19 from the Sejm's ELI service: Article 6(1), 'Rejestr PESEL jest centralnym zbiorem danych ... prowadzonym w systemie teleinformatycznym'. Replaces an encyclopedia corroboration (roadmap #767). Anchor edge under metadata/relationship-types.md §2.3."
     confidence: medium
     valid_from: 2015-03-01
     valid_until: null
 
 sources:
+  - title: "Ustawa o ewidencji ludności, consolidated text (Dz.U. 2026 poz. 384)"
+    url: "https://api.sejm.gov.pl/eli/acts/DU/2026/384/text.pdf"
+    publisher: "Sejm Rzeczypospolitej Polskiej (ELI service)"
+    accessed: "2026-11-22"
   - title: "Czym jest numer PESEL"
     url: "https://www.gov.pl/web/gov/czym-jest-numer-pesel"
     publisher: "Portal Gov.pl"

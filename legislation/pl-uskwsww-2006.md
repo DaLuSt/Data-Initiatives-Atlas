@@ -24,7 +24,7 @@ verification: primary-source
 
 start_date: 2006-06-09
 end_date: null
-last_verified: "2026-09-18"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -40,12 +40,16 @@ relationships:
   - type: applies-in
     target: PL
     source: fact
-    evidence: "Confirmed by reading bip.abw.gov.pl's own page on the College for Special Services directly (2026-08-26): 'Szef ABW, Szef AW, Szef Centralnego Biura Antykorupcyjnego, Szef Służby Kontrwywiadu Wojskowego, Szef Służby Wywiadu Wojskowego' names the heads of SKW and SWW among the College's members, alongside pl.wikipedia.org's article on the Sejm's oversight committee, also read directly, which confirms both services and this Act's role constituting them. Neither page carries the Act's own text or a Dz.U. citation — no official Polish government URL was found for this Act, in contrast to [[PL-UABWAW-2002]]. Anchor edge under metadata/relationship-types.md §2.3. CLOSED 2026-09-18 — see below: dziennikustaw.gov.pl's own scanned Journal of Laws PDF (Dz.U. 2006 Nr 104 poz. 709), read directly, supplies the Act's own article text."
+    evidence: "Anchor edge under metadata/relationship-types.md §2.3. The Act's consolidated text (Dz.U. 2026 poz. 157, announced 5 February 2026), read directly 2026-11-22 from the Sejm's ELI service (api.sejm.gov.pl): Article 1, 'Tworzy się Służbę Kontrwywiadu Wojskowego, zwaną dalej „SKW”, jako służbę specjalną', and Article 2, 'Tworzy się Służbę Wywiadu Wojskowego, zwaną dalej „SWW”, jako służbę specjalną', each for the defence of the State and the Armed Forces of the Republic of Poland; Article 3(1), their heads are 'centralnymi organami administracji rządowej'. The original Journal of Laws (Dz.U. 2006 Nr 104 poz. 709) was read on 2026-09-18 from dziennikustaw.gov.pl's scan. bip.abw.gov.pl's College for Special Services page (2026-08-26) names both heads. Replaces an encyclopedia corroboration (roadmap #767)."
     confidence: high
     valid_from: null
     valid_until: null
 
 sources:
+  - title: "Ustawa o Służbie Kontrwywiadu Wojskowego oraz Służbie Wywiadu Wojskowego, consolidated text (Dz.U. 2026 poz. 157)"
+    url: "https://api.sejm.gov.pl/eli/acts/DU/2026/157/text.pdf"
+    publisher: "Sejm Rzeczypospolitej Polskiej (ELI service)"
+    accessed: "2026-11-22"
   - title: "Kolegium ds. służb specjalnych"
     url: "https://bip.abw.gov.pl/bip/nadzor-i-kontrola/kolegium-ds-sluzb-spec/18,Kolegium-ds-sluzb-specjalnych.html"
     publisher: "Agencja Bezpieczeństwa Wewnętrznego (BIP)"

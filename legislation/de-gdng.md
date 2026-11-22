@@ -21,9 +21,9 @@ rank: ordinary
 confidence: medium
 coverage: low
 verification: primary-source
-start_date: "2024-03-26"
+start_date: "2024-03-27"
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -38,12 +38,16 @@ relationships:
   - type: applies-in
     target: DE
     source: fact
-    evidence: "Confirmed by reading de.wikipedia.org's 'Gesundheitsdatennutzungsgesetz' article (2026-08-22): the GDNG is a German federal act ('Erlassen am: 22. März 2024, Inkrafttreten am: 26. März 2024'), and the Forschungsdatenzentrum Gesundheit nach § 303d SGB V is named directly among its datenhaltende Stellen (§ 2 Nr. 3 GDNG)."
-    confidence: medium
+    evidence: "The Federal Law Gazette text, read directly 2026-11-22 on recht.bund.de (BGBl. 2024 I Nr. 102): 'Gesetz zur verbesserten Nutzung von Gesundheitsdaten. Vom 22. März 2024', 'Ausgegeben zu Bonn am 26. März 2024'; Article 1 is the 'Gesundheitsdatennutzungsgesetz – GDNG', whose § 2 Nr. 3 names among the 'datenhaltende Stellen' 'das Forschungsdatenzentrum Gesundheit nach § 303d des Fünften Buches Sozialgesetzbuch'; Article 6(1), 'Dieses Gesetz tritt vorbehaltlich des Absatzes 2 am Tag nach der Verkündung in Kraft', so on 27 March 2024 (Article 6(2): three points of Article 3 on 31 March 2024). A German federal act; replaces an encyclopedia citation that gave 26 March 2024 as the day of entry into force (roadmap #767)."
+    confidence: high
     valid_from: null
     valid_until: null
 
 sources:
+  - title: "Gesetz zur verbesserten Nutzung von Gesundheitsdaten, BGBl. 2024 I Nr. 102"
+    url: "https://www.recht.bund.de/bgbl/1/2024/102/VO.html"
+    publisher: "Bundesgesetzblatt (Bundesministerium der Justiz und für Verbraucherschutz, recht.bund.de)"
+    accessed: "2026-11-22"
   - title: "Digitalisierung im Gesundheitswesen"
     url: "https://www.bundesregierung.de/breg-de/aktuelles/digitalisierung-im-gesundheitswesen-2447110"
     publisher: "Die Bundesregierung"
@@ -81,10 +85,14 @@ is what [[EU-EHDS]] is being built to harmonise.
 ## The date gap, resolved
 
 The original two sources described the act's effects but not its date.
-de.wikipedia.org's dedicated GDNG article, read 2026-08-22, gives it
-directly: "Fundstellennachweis: 860-5-86. Erlassen am: 22. März 2024.
-Inkrafttreten am: 26. März 2024." `start_date` is now recorded as **26
-March 2024**, the date the act entered into force, rather than left null.
+An encyclopedia article, read 2026-08-22, gave "Erlassen am: 22. März 2024. Inkrafttreten am: 26. März 2024",
+and `start_date` was set to 26 March 2024.
+
+> **Corrected 2026-11-22.** The Federal Law Gazette itself (BGBl. 2024 I Nr. 102, read directly on
+> recht.bund.de) was issued on 26 March 2024 ("Ausgegeben zu Bonn am 26. März 2024"), and Article 6(1)
+> puts the Act in force "am Tag nach der Verkündung": **27 March 2024**, now the `start_date`. 26 March
+> is the day of promulgation, not of entry into force. Article 6(2) brings three points of Article 3
+> (amendments to SGB V) into force on 31 March 2024.
 
 ## What is deliberately not asserted, and why `coverage: low`
 

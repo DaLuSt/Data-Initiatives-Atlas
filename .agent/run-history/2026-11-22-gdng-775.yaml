@@ -1,0 +1,13 @@
+date: "2026-11-22"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmaps #775 and #767. DE-GDNG's start date is corrected from 2024-03-26 to 2024-03-27: the Federal Law Gazette
+  (BGBl. 2024 I Nr. 102, read directly on recht.bund.de) was issued on 26 March 2024 and Article 6(1) puts the Act
+  in force "am Tag nach der Verkündung"; the encyclopedia date was the day of promulgation. Its applies-in edge now
+  quotes the Gazette (and § 2 Nr. 3 on the Forschungsdatenzentrum Gesundheit). recht.bund.de serving BGBl. I from
+  2023 onwards is added to discovery/unresolved.md row #284. PL-USKWSWW-2006 applies-in PL now quotes the
+  consolidated Act (Dz.U. 2026 poz. 157, Articles 1 to 3) from the Sejm's ELI service, and PL-EWIDENCJA-LUDNOSCI's
+  edge points to the Act read on 2026-11-19 instead of an encyclopedia. Closes the run-history entry for #823 if
+  it has merged.
+prs: []
+outcome: in-progress
