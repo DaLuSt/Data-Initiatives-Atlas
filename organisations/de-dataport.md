@@ -29,7 +29,7 @@ verification: primary-source
 
 start_date: 2004-01-01
 end_date: null
-last_verified: "2026-09-20"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -46,7 +46,7 @@ relationships:
   - type: part-of
     target: DE
     source: fact
-    evidence: "Confirmed by reading dataport.de's own 'Das Unternehmen' page directly (2026-09-20): Dataport is an Anstalt des öffentlichen Rechts headquartered in Altenholz, Schleswig-Holstein, with roughly 6,200 employees, functioning as the IT service provider for public administration for its Träger states. German Wikipedia's own Dataport article, also read directly, gives the Staatsvertrag basis (signed 27 August 2003, in force 1 January 2004) and the accession dates for later Träger — Mecklenburg-Vorpommern and Bremen (1 January 2006), Niedersachsen (1 January 2010), Schleswig-Holstein's municipal IT association ITVSH (1 January 2012) and Sachsen-Anhalt (1 January 2013). A search-only Bremen government Senate communication (finanzen.bremen.de, not independently fetched) corroborates the Sachsen-Anhalt accession date. Anchor edge under metadata/relationship-types.md §2.3, asserting sub-federal scope via `level: subnational` — the same treatment given to Belgium's regional digital agencies, though Dataport is unusual in spanning six Länder under one Staatsvertrag rather than serving a single sub-national unit."
+    evidence: "Confirmed by reading dataport.de's own 'Das Unternehmen' page directly (2026-09-20): Dataport is an Anstalt des öffentlichen Rechts headquartered in Altenholz, Schleswig-Holstein, with roughly 6,200 employees, functioning as the IT service provider for public administration for its Träger states. The Staatsvertrag dates and the accession dates of later Träger, from an encyclopedia article, are in the prose and not relied on for this edge (roadmap #767). Anchor edge under metadata/relationship-types.md §2.3, asserting sub-federal scope via `level: subnational` — the same treatment given to Belgium's regional digital agencies, though Dataport is unusual in spanning six Länder under one Staatsvertrag rather than serving a single sub-national unit."
     confidence: medium
     valid_from: 2004-01-01
     valid_until: null

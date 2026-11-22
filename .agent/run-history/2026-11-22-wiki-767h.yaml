@@ -8,5 +8,5 @@ summary: >
   specialized agency for information and communication technologies"). UN-UNCTAD, UN-UNECE and UN-UNSC part-of UN
   keep their UN-family primary sources and drop the encyclopedia sentences that only added dates. Closes the
   run-history entry for #821.
-prs: []
-outcome: in-progress
+prs: [822]
+outcome: merged

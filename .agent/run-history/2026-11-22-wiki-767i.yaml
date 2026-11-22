@@ -1,0 +1,10 @@
+date: "2026-11-22"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #767, a fifteenth slice: seven edges no longer rest on Wikipedia. GB-DATA-GOV-UK part-of GB now quotes
+  data.gov.uk's own About page ("run by the Government Digital Service (GDS) in the Department for Science,
+  Innovation and Technology"), medium to high. FR-RGAA, DE-DATAPORT, ES-LOCALRET (both edges) drop the encyclopedia
+  sentence their primary sources do not need; FR-RGI and AT-DATA-GV-AT have provenance notes reworded. Europeana's
+  sites answered 403, so EU-EUROPEANA-FOUNDATION stays. Closes the run-history entry for #822.
+prs: []
+outcome: in-progress
