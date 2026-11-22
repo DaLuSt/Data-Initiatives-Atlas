@@ -23,7 +23,7 @@ coverage: low
 verification: primary-source
 start_date: 2023-03-01
 end_date: null
-last_verified: "2026-11-17"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -37,8 +37,8 @@ relationships:
   - type: part-of
     target: IE
     source: fact
-    evidence: "Confirmed by reading tailte.ie directly (2026-08-22), which lists Property Registration, Valuations and GeoHive Geospatial Data among its services. The merger itself and its date are confirmed on en.wikipedia.org's Ordnance Survey Ireland article, read directly: 'Dissolved 1 March 2023 ... a new body called Tailte Éireann, which also incorporates the Property Registration Authority and the Valuation Office.' Anchor edge — added under the rule in metadata/relationship-types.md §2.3 that every entity must reach its scope anchor. It asserts scope and nothing more."
-    confidence: medium
+    evidence: "Scope anchor under metadata/relationship-types.md §2.3. The Tailte Éireann Act 2022 (No. 50 of 2022), read directly 2026-11-22 on the Irish Statute Book: section 7(1), 'There shall stand established on the establishment day a body which shall be known as Tailte Éireann to perform the functions conferred on it by or under this Act', and 7(2), it 'shall be a body corporate'; section 27, the Property Registration Authority and Ordnance Survey Ireland are 'dissolved on the establishment day'; section 6, the Minister appoints that day by order. tailte.ie, read directly 2026-08-22, lists Property Registration, Valuations and GeoHive among its services. The establishment day itself (1 March 2023, the `start_date`) comes from an encyclopedia article; the order appointing it was not read (roadmap #767)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: participates-in
@@ -50,6 +50,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Tailte Éireann Act 2022 (No. 50 of 2022), sections 6, 7 and 27"
+    url: "https://www.irishstatutebook.ie/eli/2022/act/50/enacted/en/print.html"
+    publisher: "Irish Statute Book (Office of the Attorney General)"
+    accessed: "2026-11-22"
   - title: "Tailte Éireann"
     url: "https://www.tailte.ie/"
     publisher: "Tailte Éireann"

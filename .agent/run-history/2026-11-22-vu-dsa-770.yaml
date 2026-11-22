@@ -8,5 +8,5 @@ summary: >
   Protection and Privacy (section 22) who determines data protection complaints (section 24(2)(b)). New entity
   VU-DIGITAL-SAFETY-AUTHORITY (status unknown: no appointment read), part-of VU and governed-by VU-DPPA-2024, listed
   in countries/vu/index.md. The law's own note that the Authority's Act was not read is updated. Closes the run-history entry for #815. A merge of main was pushed once with conflict markers in README.md and state.yaml (the same slip as on 2026-11-17) and fixed by the next commit, before the PR was opened; the steps to avoid it are now in .agent/operating-model.md.
-prs: []
-outcome: in-progress
+prs: [816]
+outcome: merged

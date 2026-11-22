@@ -26,7 +26,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-11-22"
 previous_version: null
 successor: null
 
@@ -44,8 +44,8 @@ relationships:
   - type: part-of
     target: INTL-EEA-AGREEMENT
     source: fact
-    evidence: "Confirmed verbatim by reading efta.int's own 'EEA Joint Committee' page directly (2026-08-22), fetched with an honest, identifying User-Agent rather than a browser-spoofing one — efta.int returns a bot-defense challenge (403) to a browser User-Agent, but 200s and serves real content to a UA that names itself as a bot, the same pattern tools/reverify.py's own UA gets, and the opposite of every other bot-walled host found this session: 'The EEA Joint Committee is responsible for the management of the EEA Agreement and typically meets eight times a year. It is a forum in which views are exchanged and decisions are taken by consensus to incorporate EU legislation into the EEA Agreement.' The page's own breadcrumb places it under 'EEA Institutions - Two Pillar Structure', confirming it is an institution of the Agreement itself. Corroborated independently by reading en.wikipedia.org/wiki/EEA_Joint_Committee and en.wikipedia.org/wiki/European_Free_Trade_Association directly. Anchor edge under metadata/relationship-types.md §2.3: this Committee is not merely scoped like the Agreement, it is the Agreement's own institution and the mechanism by which the Agreement is amended."
-    confidence: medium
+    evidence: "The EEA Agreement, Article 92(1), read directly 2026-11-22 from the Publications Office text (CELEX 21994A0103(01)): 'An EEA Joint Committee is hereby established. It shall ensure the effective implementation and operation of this Agreement. To this end, it shall carry out exchanges of views and information and take decisions in the cases provided for in this Agreement.' efta.int's own 'EEA Joint Committee' page, read directly 2026-08-22: it 'is responsible for the management of the EEA Agreement' and takes decisions by consensus to incorporate EU legislation. Anchor edge under metadata/relationship-types.md §2.3: the Committee is an institution the Agreement itself establishes. Replaces encyclopedia corroboration (roadmap #767)."
+    confidence: high
     valid_from: null
     valid_until: null
   - type: produces
@@ -64,6 +64,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Agreement on the European Economic Area, Articles 92 to 94 (Official Journal text, CELEX 21994A0103(01))"
+    url: "https://publications.europa.eu/resource/celex/21994A0103(01)"
+    publisher: "Publications Office of the European Union"
+    accessed: "2026-11-22"
   - title: "EEA Joint Committee"
     url: "https://www.efta.int/eea-relations-eu/eea-institutions-two-pillar-structure/eea-joint-committee"
     publisher: "European Free Trade Association (EFTA)"
