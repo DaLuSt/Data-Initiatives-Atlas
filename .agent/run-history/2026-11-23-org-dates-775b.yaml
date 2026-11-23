@@ -1,0 +1,16 @@
+date: "2026-11-23"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #775, organisations. GB-UKSA 2007-12-01 (Statistics and Registration Service Act 2007 s1, in force
+  1.12.2007 by S.I. 2007/3388; functions from 1 April 2008 by S.I. 2008/839), and its "founding statute not
+  established" paragraph is rewritten. GB-OFCOM 2002-07-01 (Office of Communications Act 2002 s1(1), in force
+  1.7.2002 by S.I. 2002/1483). IE-NSAI 1997-04-14 (S.I. No. 176 of 1997, the establishment day). IE-NSB
+  1994-11-01 (Statistics Act 1993 s8(3), in force 1 November 1994 by S.I. No. 323 of 1994). IE-CSO gets the
+  same statutory date as a note only: it existed earlier as an administrative office whose founding date was
+  not read. Convention used throughout: start_date is the legal creation of the body (as for NL-TIB), with the
+  start of its functions told in prose. Tried and left: GB-CAA (no commencement annotation on the 1971 Act),
+  GB-IPCO (an office, no commencement annotation on IPA s227), GB-HDRUK (Companies House shows company 10887014
+  incorporated 27 July 2017 at 215 Euston Road, but HDR UK's own page did not load to tie it to charity
+  1194431). Closes the run-history entry for #833.
+prs: [834]
+outcome: merged

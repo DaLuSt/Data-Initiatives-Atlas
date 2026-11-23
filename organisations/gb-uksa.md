@@ -12,6 +12,7 @@ description: >
   Office for National Statistics is its executive office. It carries the
   United Kingdom's multilateral statistical engagement, including membership
   of the Conference of European Statisticians and its Bureau.
+  Established as the Statistics Board by section 1 of the Statistics and Registration Service Act 2007, in force on 1 December 2007; its statistical functions began on 1 April 2008.
 
 level: national
 country: GB
@@ -22,9 +23,9 @@ confidence: medium
 coverage: low
 verification: primary-source
 organisation_role: regulatory
-start_date: null
+start_date: 2007-12-01
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-11-23"
 previous_version: null
 successor: null
 
@@ -46,6 +47,18 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Statistics and Registration Service Act 2007, section 1"
+    url: "https://www.legislation.gov.uk/ukpga/2007/18/section/1"
+    publisher: "legislation.gov.uk (The National Archives)"
+    accessed: "2026-11-23"
+  - title: "About the UK Statistics Authority"
+    url: "https://uksa.statisticsauthority.gov.uk/about-the-authority/"
+    publisher: "UK Statistics Authority"
+    accessed: "2026-11-23"
+  - title: "Statistics and Registration Service Act 2007 (Commencement No. 2 and Transitional Provision) Order 2008 (S.I. 2008/839)"
+    url: "https://www.legislation.gov.uk/uksi/2008/839/made"
+    publisher: "legislation.gov.uk (The National Archives)"
+    accessed: "2026-11-23"
   - title: "Working internationally — UK Statistics Authority"
     url: "https://uksa.statisticsauthority.gov.uk/about-the-authority/working-internationally/"
     publisher: "UK Statistics Authority"
@@ -67,6 +80,8 @@ sources:
 > that relationship's evidence — because `unece.org` is bot-walled and the
 > UKSA page that originally supported it no longer states it. The claim is
 > retained, not removed.
+
+> **Dated 2026-11-23** (roadmap #775). legislation.gov.uk, read directly. Statistics and Registration Service Act 2007, section 1(1): 'There is to be a body corporate to be known as the Statistics Board'; its commencement annotation reads 'S. 1 in force at 1.12.2007 by S.I. 2007/3388, art. 2(a)'. The Commencement No. 2 Order (S.I. 2008/839) brought the rest of the Act into force on 1 April 2008, including the Board's functions on official and national statistics (sections 8, 9 and 12 to 23). The Authority's own pages say it 'was established under the Statistics and Registration Service Act 2007' and, on its home page, 'established in 2008'. `start_date` is the legal creation, 1 December 2007, as for [[NL-TIB]]; the 2008 date is when it took up its functions.
 
 ## Description
 
@@ -117,9 +132,11 @@ pass.
 
 ## `coverage: low`
 
-The Authority's founding statute (the Statistics and Registration Service Act
-2007 is named in general knowledge but was **not** established from the
-sources found) and its board are unrecorded. The Office for Statistics Regulation, the Authority's
+The Authority's founding statute is now read (2026-11-22, see the dated note
+above): section 1 of the Statistics and Registration Service Act 2007 creates
+the Statistics Board, and the Authority's own "About the Authority" page says
+it "was established under the Statistics and Registration Service Act 2007".
+Its board is unrecorded. The Office for Statistics Regulation, the Authority's
 regulatory arm, was added as [[GB-OSR]] on 2026-10-09 (it carries the `part-of`
 edge pointing here).
 
