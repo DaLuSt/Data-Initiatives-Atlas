@@ -29,7 +29,8 @@ successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
-organisations: []
+organisations:
+  - IE-INFORMATION-COMMISSIONER
 related_entities:
   - EU-OPEN-DATA-DIRECTIVE
   - IE-DATA-GOV-IE

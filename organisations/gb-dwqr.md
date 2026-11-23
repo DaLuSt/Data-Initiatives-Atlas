@@ -22,7 +22,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-10-08"
+last_verified: "2026-11-23"
 previous_version: null
 successor: null
 
@@ -45,6 +45,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Water Industry (Scotland) Act 2002, section 7"
+    url: "https://www.legislation.gov.uk/asp/2002/3/section/7"
+    publisher: "legislation.gov.uk (The National Archives)"
+    accessed: "2026-11-23"
   - title: "The Network and Information Systems Regulations 2018, Schedule 1"
     url: "https://www.legislation.gov.uk/uksi/2018/506/schedule/1"
     publisher: "legislation.gov.uk (The National Archives)"
@@ -74,8 +78,14 @@ drinking water supply and distribution in Scotland.
 
 ## Not asserted
 
-- The text of section 7 of the 2002 Act, which was not read: the statutory basis
-  is the regulator's own account.
+- A start date. Section 7 of the 2002 Act, read directly on legislation.gov.uk
+  on 2026-11-23, provides that "The Scottish Ministers may appoint a person to be
+  known as the Drinking Water Quality Regulator for Scotland … to exercise the
+  functions conferred on the Regulator by this Part", with the general function of
+  "seeking to ensure that the drinking water quality duties imposed on a public
+  water supplier are complied with". The role exists by appointment, and the page
+  carries no commencement annotation, so no date is recorded. This confirms the
+  regulator's own account of its statutory basis.
 - Any cyber-security function: the About page mentions neither the NIS
   Regulations nor cyber security.
 - The English, Welsh and Northern Irish authorities for drinking water, which
