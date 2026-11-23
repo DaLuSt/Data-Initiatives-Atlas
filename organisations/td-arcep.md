@@ -20,7 +20,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-11-06"
+last_verified: "2026-11-23"
 previous_version: null
 successor: null
 
@@ -35,7 +35,7 @@ relationships:
   - type: part-of
     target: TD
     source: fact
-    evidence: "Scope anchor under metadata/relationship-types.md §2.3. ARCEP's home page (read 2026-11-06 through a summarising fetch tool): the regulator for electronic communications and postal services; its Laws page lists Loi N°013/PR/2014 on the regulation of electronic communications and postal activities."
+    evidence: "Scope anchor under metadata/relationship-types.md §2.3. ARCEP's home page and Laws page (first read 2026-11-06 through a summarising fetch tool; re-read directly 2026-11-23): the 'Autorité de Régulation des Communications Électroniques et des Postes'; its Laws page lists 'Loi N°013/PR/2014 portant régulation des communications électroniques et des activités postales', beside Lois N°012, 014 and 015/PR/2014."
     confidence: high
     valid_from: null
     valid_until: null

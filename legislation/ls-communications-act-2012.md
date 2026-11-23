@@ -18,7 +18,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-11-06"
+last_verified: "2026-11-23"
 previous_version: null
 successor: null
 
@@ -34,7 +34,7 @@ relationships:
   - type: applies-in
     target: LS
     source: fact
-    evidence: "The LCA's Legislation page (read 2026-11-06 through a summarising fetch tool): 'Communications Act 2012', principal legislation."
+    evidence: "The LCA's Legislation page (first read 2026-11-06 through a summarising fetch tool; re-read directly 2026-11-23): the principal legislation, under which 'the Authority in discharging its functions under the Communications Act No. 4 of 2012 and the subsidiary legislation may issue enforcement orders, conditions of service to service providers, guidelines and prescribe procedures for licencing and dispute resolution'."
     confidence: medium
     valid_from: null
     valid_until: null

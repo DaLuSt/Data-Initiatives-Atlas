@@ -12,5 +12,5 @@ summary: >
   (recitals 1-2) and the Argentine and Uruguayan approval laws. Tried and left: EU-EUROPEANA-FOUNDATION (the
   Commission's Europeana page says nothing of the data space), DE-XRECHNUNG based-on DE-XOEV (xeinkauf.de's
   XRechnung page names the IT-Planungsrat decision of 22 June 2017 and EN 16931 but not XÖV).
-prs: []
-outcome: in-progress
+prs: [847]
+outcome: merged

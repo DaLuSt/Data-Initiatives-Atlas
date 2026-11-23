@@ -20,7 +20,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-11-01"
+last_verified: "2026-11-23"
 previous_version: null
 successor: null
 
@@ -35,14 +35,14 @@ relationships:
   - type: part-of
     target: SD
     source: fact
-    evidence: "Scope anchor under metadata/relationship-types.md §2.3. The Ministry's page (read 2026-11-01 through a summarising fetch tool): a statutory regulatory authority under the supervision of the minister for the telecommunications sector."
+    evidence: "Scope anchor under metadata/relationship-types.md §2.3. The Ministry's page (first read 2026-11-01 through a summarising fetch tool; re-read directly 2026-11-23): 'The Telecommunications and Post Regulatory Authority is the regulatory body responsible for regulating Telecommunications and post in Sudan … It is subject to the supervision of the minister responsible for the telecommunications sector in carrying out its duties'."
     confidence: high
     valid_from: null
     valid_until: null
   - type: governed-by
     target: SD-TELECOM-POST-ACT-2018
     source: fact
-    evidence: "The same page: the Authority operates under the new telecommunications and Post Act of 2018, which replaced the 2001 Act."
+    evidence: "The same page, re-read directly 2026-11-23: 'In early 2018 AD, the new telecommunications and Post Act for the year 2018 was approved, which came as an alternative to the telecommunications Act of 2001, according to which the name of the National Telecommunications Corporation was changed to a new name: Telecommunications and Post Regulatory Authority.'"
     confidence: medium
     valid_from: null
     valid_until: null

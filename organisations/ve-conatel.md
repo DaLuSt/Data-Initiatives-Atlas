@@ -20,7 +20,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-11-06"
+last_verified: "2026-11-23"
 previous_version: null
 successor: null
 
@@ -35,7 +35,7 @@ relationships:
   - type: part-of
     target: VE
     source: fact
-    evidence: "Scope anchor under metadata/relationship-types.md §2.3. CONATEL's home page and Marco Legal page (read 2026-11-06 through a summarising fetch tool): the regulator ('ente regulador'), competent under article 37 of the LOTEL."
+    evidence: "Scope anchor under metadata/relationship-types.md §2.3. CONATEL's home page and Marco Legal page (first read 2026-11-06 through a summarising fetch tool; the Marco Legal page re-read directly 2026-11-23): 'La Comisión Nacional de Telecomunicaciones ejerce funciones regulatorias en ejercicio de las atribuciones conferidas en el numeral 1 del artículo 37 de la Ley Orgánica de Telecomunicaciones', and the page quotes article 37: 'Son competencias de la Comisión Nacional de Telecomunicaciones las siguientes: 1. Dictar las normas y planes de telecomunicaciones'."
     confidence: high
     valid_from: null
     valid_until: null

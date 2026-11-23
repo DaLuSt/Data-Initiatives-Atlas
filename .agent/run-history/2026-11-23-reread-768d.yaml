@@ -1,0 +1,13 @@
+date: "2026-11-23"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #768, ten entities re-read directly after a summarised first read. Regulators: TD-ARCEP, DZ-ARPCE
+  (adds that it was created by loi 2000-03 of 5 August 2000, since repealed by loi 18-04), VE-CONATEL (article 37(1)
+  of the LOTEL quoted), AO-INACOM (Decreto Presidencial 243/14 confirmed; its 9 September 2014 date is marked as
+  from the summarised read), SD-TPRA (ministerial supervision and the 2018 Act replacing the 2001 Act quoted),
+  FM-FSMTC (FSM Code §§ 201-202). Laws: TD-LOI-013-2014 (its PDF read: adopted by the National Assembly on
+  11 February 2014; the promulgation date in the scan is illegible, so no start_date), LS-COMMUNICATIONS-ACT-2012
+  (it is Act No. 4 of 2012), DZ-LOI-18-04, VE-LOTEL. Not reached: BI-ARCT and GW-ARN-TIC (82-byte pages), ST-AGER,
+  BZ-PUC. Closes the run-history entry for #847.
+prs: []
+outcome: in-progress
