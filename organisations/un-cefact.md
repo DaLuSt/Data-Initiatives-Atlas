@@ -3,6 +3,7 @@ id: UN-CEFACT
 type: organisation
 name: United Nations Centre for Trade Facilitation and Electronic Business
 alternative_names:
+  - "Centre for the Facilitation of Procedures and Practices for Administration, Commerce and Transport"
   - UN/CEFACT
 description: >
   Subsidiary intergovernmental body of the United Nations Economic
@@ -49,6 +50,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Mandate, terms of reference and procedures for UN/CEFACT (TRADE/R.650/Rev.2, 4 May 2000)"
+    url: "https://digitallibrary.un.org/record/414942/files/%5BE_ECE_%5DTRADE_R.650_Rev.2-EN.pdf"
+    publisher: "United Nations (UN Digital Library)"
+    accessed: "2026-11-23"
   - title: "UN/CEFACT, report of the twelfth session (ECE/TRADE/CEFACT/2006/18, 14 September 2006)"
     url: "https://digitallibrary.un.org/record/582956/files/%5BE_%5DECE_TRADE_CEFACT_2006_18-EN.pdf"
     publisher: "United Nations (UN Digital Library)"
@@ -134,12 +139,22 @@ produces; none has an entity, because none was researched.
 ## `coverage: low`
 
 Its governance, plenary structure and relationship to ECOSOC beyond "focal
-point" remain unrecorded. One new fact did surface this pass, from Wikipedia
-rather than UNECE: UN/CEFACT was **created in 1996**, building on UNECE trade
-facilitation work dating to 1957. Per this batch's date-fabrication
-discipline, `start_date` is left `null` rather than set to a padded
-`1996-01-01` — a year is not a day — but the year itself is now recorded in
-prose here.
+point" remain unrecorded.
+
+**Founding, read 2026-11-23** (closing `discovery/unresolved.md` row #209).
+An encyclopedia had given "created in 1996". The Centre's own revised
+mandate (TRADE/R.650/Rev.2, 4 May 2000, read directly from the UN Digital
+Library) is more exact: the original text of its mandate "was approved by
+UN/CEFACT's predecessor, WP.4, at its final meeting in September 1996 and
+subsequently approved by the Committee on the Development of Trade in
+December 1996. Following these approvals, the United Nation Economic
+Commission for Europe confirmed the establishment of UN/CEFACT at an
+inter-sessional meeting in February 1997 and the first meeting of the Centre
+was held in March 1997." The same document records the change of name from
+"Centre for the Facilitation of Procedures and Practices for Administration,
+Commerce and Transport" to the present one. So UN/CEFACT was decided in 1996
+and established in **February 1997**; no day is given, so `start_date`
+stays `null`.
 
 ## Relationships
 

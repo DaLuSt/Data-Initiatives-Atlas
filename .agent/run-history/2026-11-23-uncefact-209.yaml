@@ -1,0 +1,12 @@
+date: "2026-11-23"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #767, closing discovery/unresolved.md row #209 (UN/CEFACT's founding year). UN/CEFACT's revised mandate
+  (TRADE/R.650/Rev.2, 4 May 2000, UN Digital Library, read directly): the mandate text was approved by WP.4 in
+  September 1996 and by the Committee on the Development of Trade in December 1996, and the UNECE "confirmed the
+  establishment of UN/CEFACT at an inter-sessional meeting in February 1997"; the first meeting was in March 1997.
+  The encyclopedia's "created in 1996" is replaced; start_date stays null (no day given). Its former name, "Centre
+  for the Facilitation of Procedures and Practices for Administration, Commerce and Transport", is added as an
+  alternative name. Row #209 is removed under the closed-rows convention. Built on #842's branch; the next session closes #842's run-history entry and this one.
+prs: []
+outcome: in-progress
