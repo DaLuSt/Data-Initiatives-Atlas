@@ -36,7 +36,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-11-08"
+last_verified: "2026-11-23"
 previous_version: null
 successor: null
 
@@ -101,7 +101,7 @@ sources:
 
 # LCGC — Anteproyecto de Ley de Coordinación y Gobernanza de la Ciberseguridad
 
-> **Re-checked 2026-11-08** (roadmap #502). The record said the draft was 'still in parliamentary process'; no source read ever showed it in the Cortes, and a law-firm article of 26 October 2026 (Cuatrecasas, a secondary source, read through a summarising fetch tool) says it was never approved as a *proyecto de ley* or sent to the Cortes, so the dissolution does not lapse it, and its handling has stopped because of the election call; a Government in caretaker status cannot send bills to the Cortes (article 21.5 of Ley 50/1997, as that article cites it). The dissolution itself is sourced on the BOE (Real Decreto 806/2026, read directly). What the next Government does with the text is open. `status` stays `proposed`; Spain's infringement (referred to the CJEU on 8 July 2026) is unchanged.
+> **Re-checked 2026-11-08** (roadmap #502). The record said the draft was 'still in parliamentary process'; no source read ever showed it in the Cortes, and a law-firm article of 26 October 2026 (Cuatrecasas, a secondary source; first read through a summarising fetch tool, re-read directly 2026-11-23, which confirms the wording: the Anteproyecto 'no llegó a ser aprobado como proyecto de ley ni remitido a las Cortes Generales —por lo que no le alcanza la caducidad que la disolución produce sobre las iniciativas pendientes ante las Cámaras— y que el Gobierno en funciones no puede presentar proyectos de ley (art. 21.5 de la Ley 50/1997…)') says it was never approved as a *proyecto de ley* or sent to the Cortes, so the dissolution does not lapse it, and its handling has stopped because of the election call; a Government in caretaker status cannot send bills to the Cortes (article 21.5 of Ley 50/1997, as that article cites it). The dissolution itself is sourced on the BOE (Real Decreto 806/2026, read directly). What the next Government does with the text is open. `status` stays `proposed`; Spain's infringement (referred to the CJEU on 8 July 2026) is unchanged.
 
 > **Escalation added 2026-09-13**, closing part of `discovery/unresolved.md`
 > row #91. A law-firm alert, read directly, confirms the Commission

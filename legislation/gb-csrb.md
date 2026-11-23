@@ -26,7 +26,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-11-08"
+last_verified: "2026-11-23"
 previous_version: null
 successor: null
 
@@ -57,6 +57,14 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Cyber Security and Resilience (Network and Information Systems) Bill — stages (UK Parliament Bills API, bill 4035)"
+    url: "https://bills-api.parliament.uk/api/v1/Bills/4035/Stages?Take=50"
+    publisher: "UK Parliament"
+    accessed: "2026-11-23"
+  - title: "Lords divisions on the bill, 26 October 2026 (UK Parliament Lords Votes API)"
+    url: "https://lordsvotes-api.parliament.uk/data/Divisions/search?SearchTerm=Cyber%20Security&StartDate=2026-10-26&EndDate=2026-10-26"
+    publisher: "UK Parliament"
+    accessed: "2026-11-23"
   - title: "Cyber Security and Resilience (Network and Information Systems) Bill 2024-26 — research briefing CBP-10442"
     url: "https://commonslibrary.parliament.uk/research-briefings/cbp-10442/"
     publisher: "House of Commons Library"
@@ -85,6 +93,8 @@ sources:
 # Cyber Security and Resilience Bill
 
 > **Re-checked 2026-11-08** (re-verification of pending instruments). Two law-firm and training-provider articles read through a summarising fetch tool: the Lords completed Report stage on **26 October 2026**, the Government was defeated twice (amendments 163 and 164, by 202 to 155 and 194 to 155), and Third Reading in the Lords was scheduled for **2 November 2026**, after which the bill returns to the Commons; a search result says the Lords finished its scrutiny on 2 November. No source read says it has received Royal Assent. bills.parliament.uk answers 403 here, so this is not from the Parliament record. `status` stays `proposed`.
+
+> **Re-read 2026-11-23 from Parliament's own record** (roadmap #768). The website bills.parliament.uk still answers 403, but Parliament's APIs do not. The Bills API (bills-api.parliament.uk, bill 4035, "Cyber Security and Resilience (Network and Information Systems) Bill") lists: Commons first reading 12 November 2025; carried over and reintroduced on 14 May 2026; Commons report and third reading 16 June 2026; Lords first reading 17 June, second reading 14 July, committee 1, 3 and 7 September, **report 26 October** and **third reading 2 November 2026**; a Commons carry-over motion on 4 November; and **consideration of Lords amendments** set for **24 November 2026**. Its record has `isAct: false`. The Lords Votes API (lordsvotes-api.parliament.uk) shows two divisions on 26 October carried against the Not-Contents: amendment 163 (moved by Lord Birt, 202 to 155) and amendment 164 (moved by Viscount Camrose, 194 to 155), both inserting new clauses after clause 58. That the Government opposed them, and so was "defeated", is the articles' description and not in the vote records. `status` stays `proposed`.
 
 > **Verified 2026-08-22.** gov.uk's own "Summary of the Bill" factsheet
 > and Global Policy Watch's legal commentary were read directly and

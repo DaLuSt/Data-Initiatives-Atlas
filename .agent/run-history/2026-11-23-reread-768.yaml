@@ -1,0 +1,16 @@
+date: "2026-11-23"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #768 (sources read through a summarising tool), four entities re-read directly. ES-LCGC: the Cuatrecasas
+  article (26 October 2026) confirms the note's wording on the Anteproyecto never reaching the Cortes. EU-EDIB: the
+  Commission's "Data Governance Act explained" page confirms the quotation and lists the Board's members; the edge
+  goes from medium to high. GB-CSRB: Parliament's Bills API (bill 4035) gives every stage (Lords report 26 October,
+  third reading 2 November, Commons consideration of Lords amendments set for 24 November 2026; not an Act) and the
+  Lords Votes API the two divisions of 26 October (amendment 163, 202 to 155; 164, 194 to 155); new
+  discovery/unresolved.md row #288 records the API route around the 403 on parliament.uk sites. EU-DIGITAL-OMNIBUS:
+  the Council's own mandate (ST 14756/26, Coreper 21 October, dated 22 October 2026) was read; it confirms the dates
+  and shows that the Council does not keep the P2B Regulation untouched but amends it, deleting Articles 2(11),
+  2(12), 6, 8-10, 12-14, 16, 17 and 18(2)-(4) (Article 10(1), page 168, read as an image for the strikethrough).
+  Closes the run-history entry for #836.
+prs: []
+outcome: in-progress

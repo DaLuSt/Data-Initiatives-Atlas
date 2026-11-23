@@ -31,7 +31,7 @@ verification: primary-source
 
 start_date: 2025-11-19
 end_date: null
-last_verified: "2026-11-17"
+last_verified: "2026-11-23"
 previous_version: null
 successor: null
 
@@ -83,6 +83,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Council of the EU, ST 14756/26 INIT — Digital Omnibus, mandate for negotiations with the European Parliament (22 October 2026)"
+    url: "https://data.consilium.europa.eu/doc/document/ST-14756-2026-INIT/en/pdf"
+    publisher: "Council of the European Union"
+    accessed: "2026-11-23"
   - title: "COM(2025) 837 — proposal document"
     url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:52025PC0837"
     publisher: "EUR-Lex (Publications Office of the European Union)"
@@ -114,6 +118,8 @@ sources:
 # Digital Omnibus (proposal)
 
 > **Re-checked 2026-11-09.** A Cuatrecasas article of 27 October 2026 (secondary, read through a summarising fetch tool) says the Member States' ambassadors approved the Council's negotiating mandate on the data part on **21 October 2026** (published on 22 October as document 14756/26): the Council rejects the change to the definition of personal data and handles pseudonymisation in a new Article 25a GDPR, keeps the cookie rules in the ePrivacy Directive, keeps the 96-hour breach-reporting timeline with a larger role for the EDPB, and keeps the Platform-to-Business Regulation. The European Parliament had not set its position, so trilogues had not started. The Council's own document was not read. `status` stays `proposed`.
+
+> **Council document read 2026-11-23** (roadmap #768). The Council's own document is served by its register (data.consilium.europa.eu, ST 14756/26 INIT, 179 pages) and was read directly. It is an "OUTCOME OF PROCEEDINGS" of 22 October 2026, "Mandate for negotiations with the European Parliament", with "the text of the mandate … as agreed by the Permanent Representatives Committee at its meeting on 21 October 2026", changes to the Commission proposal "marked in bold and deletions in strikethrough"; that confirms both dates above. One point is **more precise than the article's summary**: the Council does not simply keep the Platform-to-Business Regulation. In Article 10(1) (page 168, read as an image because a text extraction loses the strikethrough) it strikes "Regulation 2019/1150/EU is repealed with effect from …" and puts instead that the Regulation "is amended as follows: Articles 2(11), 2(12), 6, 8 to 10, 12 to 14, 16, 17, and 18 paragraphs (2) to (4), are deleted". The Regulation survives in the mandate, with those provisions deleted. The article's other points (the definition of personal data, Article 25a, the cookie rules, the 96-hour timeline) were not checked against the marked-up text and still rest on the article.
 
 > **Re-verified 2026-08-28, one significant correction.** This entity's
 > identifying CELEX/COM number was wrong: **COM(2025) 836** is a distinct
