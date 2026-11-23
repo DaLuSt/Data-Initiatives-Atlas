@@ -19,7 +19,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-11-06"
+last_verified: "2026-11-23"
 previous_version: null
 successor: null
 
@@ -35,7 +35,7 @@ relationships:
   - type: applies-in
     target: VC
     source: fact
-    evidence: "The NTRC's Legislation page (read 2026-11-06 through a summarising fetch tool): the Act, with its regulations."
+    evidence: "The NTRC's Legislation page (first read 2026-11-06 through a summarising fetch tool; re-read directly 2026-11-23) lists under Acts the 'Telecommunications Act (Cap 418) of the Revised Laws of St. Vincent and the Grenadines of 2009', followed by the ECTEL Treaty 2000 and regulations such as the Telecommunications (Universal Service Fund Contribution) Order 2017."
     confidence: medium
     valid_from: null
     valid_until: null

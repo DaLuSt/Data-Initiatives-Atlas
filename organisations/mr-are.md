@@ -21,7 +21,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-11-06"
+last_verified: "2026-11-23"
 previous_version: null
 successor: null
 
@@ -36,14 +36,14 @@ relationships:
   - type: part-of
     target: MR
     source: fact
-    evidence: "Scope anchor under metadata/relationship-types.md §2.3. ARE's home page (read 2026-11-06 through a summarising fetch tool): a multisectoral regulatory authority under Loi n° 2001-18 of 21 January 2001, with a Conseil National de Régulation."
+    evidence: "Scope anchor under metadata/relationship-types.md §2.3. ARE's home page (first read 2026-11-06 through a summarising fetch tool; re-read directly 2026-11-23): a news item cites 'l'article 29 de la loi n° 2001-18 du 21 janvier 2001 relative à l'Autorité de Régulation multisectorielle', under which the new President of the Conseil National de Régulation took the oath on 27 August 2026."
     confidence: high
     valid_from: null
     valid_until: null
   - type: governed-by
     target: MR-LOI-2013-025
     source: fact
-    evidence: "ARE's Textes de références page (read through a summarising fetch tool): Loi 2013-025 on electronic communications, amended by Loi 2022-014, is the telecommunications law the authority applies."
+    evidence: "ARE's Textes de références page (first read through a summarising fetch tool; re-read directly 2026-11-23) lists 'Loi 2022-014 modifiant et complétant certaines dispositions de la loi n° 2013-025', 'Loi 2013-025 portant sur les communications électroniques' and 'Loi 2001-18 portant sur l'Autorité de Régulation', with the earlier 'Loi 99-019 portant sur les Télécommunications ( abrogée )'."
     confidence: medium
     valid_from: null
     valid_until: null

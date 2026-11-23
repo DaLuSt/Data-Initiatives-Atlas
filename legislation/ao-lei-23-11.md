@@ -19,7 +19,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-11-06"
+last_verified: "2026-11-23"
 previous_version: null
 successor: null
 
@@ -35,7 +35,7 @@ relationships:
   - type: applies-in
     target: AO
     source: fact
-    evidence: "INACOM's electronic communications legislation page (read 2026-11-06 through a summarising fetch tool): 'Lei n.º 23/11 de 20 de Junho'."
+    evidence: "INACOM's electronic communications legislation page (first read 2026-11-06 through a summarising fetch tool; re-read directly 2026-11-23): 'Lei n.º 23/11 de 20 de Junho Das Comunicações Electrónicas e dos Serviços da Sociedade da Informação'."
     confidence: medium
     valid_from: null
     valid_until: null

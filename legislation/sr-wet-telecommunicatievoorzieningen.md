@@ -19,7 +19,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-11-06"
+last_verified: "2026-11-23"
 previous_version: null
 successor: null
 
@@ -35,7 +35,7 @@ relationships:
   - type: applies-in
     target: SR
     source: fact
-    evidence: "TAS's Wetgeving page (read 2026-11-06 through a summarising fetch tool): 'Wet Telecommunicatievoorzieningen' as printed."
+    evidence: "TAS's Wetgeving page (first read 2026-11-06 through a summarising fetch tool; re-read directly 2026-11-23) lists 'Wet Telecommunicatievoorzieningen' and the 'Memorie van toelichting op de wet Telecommunicatievoorzieningen', after the State decrees (Staatsbesluiten) made under it."
     confidence: medium
     valid_from: null
     valid_until: null

@@ -9,5 +9,5 @@ summary: >
   11 February 2014; the promulgation date in the scan is illegible, so no start_date), LS-COMMUNICATIONS-ACT-2012
   (it is Act No. 4 of 2012), DZ-LOI-18-04, VE-LOTEL. Not reached: BI-ARCT and GW-ARN-TIC (82-byte pages), ST-AGER,
   BZ-PUC. Closes the run-history entry for #847.
-prs: []
-outcome: in-progress
+prs: [848]
+outcome: merged
