@@ -9,5 +9,5 @@ summary: >
   (406), and a quote-matching pass over TD-ARCEP, GW-ARN-TIC, DZ-ARPCE, VE-CONATEL and AO-INACOM, whose evidence
   paraphrases rather than quotes, so nothing could be confirmed mechanically. Closes the run-history entry for #842;
   #843 (built on #842's branch) is still open.
-prs: []
-outcome: in-progress
+prs: [844]
+outcome: merged

@@ -7,6 +7,6 @@ summary: >
   establishment of UN/CEFACT at an inter-sessional meeting in February 1997"; the first meeting was in March 1997.
   The encyclopedia's "created in 1996" is replaced; start_date stays null (no day given). Its former name, "Centre
   for the Facilitation of Procedures and Practices for Administration, Commerce and Transport", is added as an
-  alternative name. Row #209 is removed under the closed-rows convention. Built on #842's branch; the next session closes #842's run-history entry and this one.
-prs: []
-outcome: in-progress
+  alternative name. Row #209 is removed under the closed-rows convention. Built on #842's branch (#842's entry was closed by #844).
+prs: [843]
+outcome: merged

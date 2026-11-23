@@ -5,7 +5,7 @@ summary: >
   Administrative Indépendante dotée de la personnalité morale de droit public et d'une autonomie de gestion
   administrative et financière". VC-NTRC: the Legislation page lists the Telecommunications Act (Cap 418, Revised
   Laws 2009) and the ECTEL Treaty 2000. ST-AGER's pages returned too little text to confirm the Decreto-Lei 14/2005
-  claim. The Holy See's Council of Europe observer status was tried again: every source is on coe.int (403). The
-  run-history entries for #843 and #844 are left for the next session to close.
-prs: []
-outcome: in-progress
+  claim. The Holy See's Council of Europe observer status was tried again: every source is on coe.int (403). The run-history
+  entries for #843 and #844 were closed in the follow-up housekeeping pull request.
+prs: [845]
+outcome: merged
