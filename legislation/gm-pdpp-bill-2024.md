@@ -20,7 +20,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-11-22"
+last_verified: "2026-11-23"
 previous_version: null
 successor: null
 
@@ -53,7 +53,7 @@ sources:
 
 # Personal Data Protection and Privacy Bill, 2024 (The Gambia)
 
-> **Re-checked 2026-11-09.** The Assembly's own bill page (assembly.gm/bills/364, read directly through a summarising fetch tool) shows *Current Stage: Assented*, *Status: Published*, and a single timeline entry, 'July 15, 2026 at 10:25 AM', updated by an Assembly staff member; it lists no first reading, committee or passing dates and no bill number. Secondary sources reported the Assembly passing the bill on 29 September 2025, and one legal-reference site gives assent by the President on 7 November 2025, which does not match the 15 July 2026 entry, so the **assent date is unresolved**: the entry may record when the page was updated, not the assent. `status` moves from `proposed` to `adopted` (assented, in force not established). The Act's own gazette notice was not found.
+> **Re-checked 2026-11-09.** The Assembly's own bill page (assembly.gm/bills/364; first read through a summarising fetch tool, re-read directly 2026-11-23 with the same result, roadmap #768) shows *Current Stage: Assented*, *Status: Published*, and a single timeline entry, 'July 15, 2026 at 10:25 AM', updated by an Assembly staff member; it lists no first reading, committee or passing dates and no bill number. Secondary sources reported the Assembly passing the bill on 29 September 2025, and one legal-reference site gives assent by the President on 7 November 2025, which does not match the 15 July 2026 entry, so the **assent date is unresolved**: the entry may record when the page was updated, not the assent. `status` moves from `proposed` to `adopted` (assented, in force not established). The Act's own gazette notice was not found.
 
 > **Created 2026-10-11** (roadmap #472, The Gambia). The text read is the Bill as published by the National Assembly; it is filed as `proposed` because **assent was not established**. Secondary sources report the Assembly passing it on 29 September 2025 and disagree on whether it has become law; none was read.
 
