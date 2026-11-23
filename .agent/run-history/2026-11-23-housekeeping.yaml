@@ -1,0 +1,16 @@
+date: "2026-11-23"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Housekeeping and roadmap #767. Housekeeping: no open pull requests; the two remote branches left
+  (claude/atlas-adequacy-67, claude/atlas-pickup-23) were checked and their content is on main through later PRs
+  (a post-merge commit on the first was superseded by the 17 November re-reads; PR #658 on the second was closed
+  unmerged and the US anchor arrived later), but deleting them was refused by the session's permission check, so
+  they remain for the owner; local branches were pruned. EU-US-ADEQUACY's evidence carried a duplicated
+  "re-read directly 2026-11-17 ..." clause, now removed (the only such duplicate found). Progress comments with the
+  current measures were posted on #767 (19 un-noted encyclopedia edges), #768 (39), #770 (33) and #775 (66 adopted
+  laws undated). #767: INTL-CONVENTION-108 maintained-by INTL-COE now rests on Council Decision (EU) 2019/682
+  (recitals 1-2) and the Argentine and Uruguayan approval laws. Tried and left: EU-EUROPEANA-FOUNDATION (the
+  Commission's Europeana page says nothing of the data space), DE-XRECHNUNG based-on DE-XOEV (xeinkauf.de's
+  XRechnung page names the IT-Planungsrat decision of 22 June 2017 and EN 16931 but not XÖV).
+prs: []
+outcome: in-progress
