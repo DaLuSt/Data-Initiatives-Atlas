@@ -8,5 +8,5 @@ summary: >
   gives "Awaiting Parliament's position in 1st reading" and no withdrawal; `status` stays `proposed`. GM-PDPP-BILL-2024 (#768): the National
   Assembly's bill page, re-read directly, still shows Assented / Published with one entry of 15 July 2026. Closes the
   run-history entry for #839.
-prs: []
-outcome: in-progress
+prs: [840]
+outcome: merged

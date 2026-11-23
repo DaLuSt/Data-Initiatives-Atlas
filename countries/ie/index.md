@@ -28,6 +28,7 @@ Anchor entity: [[IE]]
 - [[IE-NSAI]] — National Standards Authority of Ireland _(`participates-in`
   [[EU-CEN]] and [[EU-CENELEC]])_
 - [[IE-NSB]] — National Statistics Board
+- [[IE-INFORMATION-COMMISSIONER]] — Information Commissioner _(also the Commissioner for Environmental Information and the appeal body for re-use of public sector information)_
 
 ## Legislation
 
