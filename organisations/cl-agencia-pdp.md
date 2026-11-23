@@ -22,7 +22,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-11-08"
+last_verified: "2026-11-23"
 previous_version: null
 successor: null
 
@@ -32,6 +32,7 @@ organisations: []
 related_entities:
   - CL
   - CL-LEY-21719
+  - CL-LEY-21855
 relationships:
   - type: part-of
     target: CL
@@ -60,6 +61,8 @@ sources:
 ---
 
 # Agencia de Protección de Datos Personales (Chile)
+
+> **Council enlarged, read 2026-11-23.** [[CL-LEY-21855]] (Diario Oficial, 23 November 2026, read directly) changes article 30 quáter of Ley 21.719 from 'tres consejeros' to 'cinco consejeros', with six-year terms and partial renewal every two years, and postpones the law's entry into force, and so the Agency's start, to 15 October 2027. It also requires the first proposal of councillors to be sent to the Senate at the latest nine months before that date.
 
 > **Re-checked 2026-11-08.** Its council has not been appointed (PPC Land, 28 October 2026, secondary: a first slate was withdrawn and the Senate rejected a second on 20 May 2026 for want of two-thirds; the 1 June 2026 deadline passed). The postponement bill described on [[CL-LEY-21719]] would move the start to 15 October 2027, raise the council from three to five members and require nominees nine months before entry into force (Emol, secondary). It stays `planned`.
 
