@@ -13,5 +13,5 @@ summary: >
   adopted laws with no organisation linked either way) goes from 40 to 38 (GB-RPSI-REGULATIONS-2015 already counted as linked through another entity's related_entities). Not done: IE-PSI-REGULATIONS-2021 and
   IE-SI-133-2007 (no Irish Information Commissioner entity), NL-KADASTERWET (wetten.overheid.nl answered with an
   "Even geduld" holding page for the rest of the session). Closes the run-history entry for #834.
-prs: []
-outcome: in-progress
+prs: [835]
+outcome: merged

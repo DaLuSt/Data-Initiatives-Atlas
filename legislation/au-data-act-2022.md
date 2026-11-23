@@ -28,7 +28,8 @@ successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
-organisations: []
+organisations:
+  - AU-OAIC
 related_entities:
   - AU
   - AU-PRIVACY-ACT-1988

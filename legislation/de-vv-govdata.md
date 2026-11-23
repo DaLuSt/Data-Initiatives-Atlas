@@ -40,7 +40,8 @@ successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
-organisations: []
+organisations:
+  - DE-IT-PLANUNGSRAT
 related_entities:
   - DE-GOVDATA
   - DE-VV-GDI-DE
@@ -54,6 +55,13 @@ relationships:
     valid_from: 2014-12-04
     valid_until: null
 
+  - type: references
+    target: DE-IT-PLANUNGSRAT
+    source: fact
+    evidence: "The agreement's text as published by Brandenburg (bravors.brandenburg.de, 'Bekanntmachung der Vereinbarung des Bundes und der Länder zum gemeinsamen Betrieb von \"GovData - Das Datenportal für Deutschland\" vom 16. März 2015'), read directly 2026-11-23: § 2(1), 'Die Vereinbarungspartner verantworten gemeinschaftlich den Betrieb, die Pflege und Fortentwicklung von GovData als nationalem Open-Data-Portal'; § 2(2), 'GovData wird als Anwendung im Aktionsplan des IT-Planungsrates auf der Grundlage von § 1 Abs. 1 Nr. 3 des Vertrages zur Ausführung von Artikel 91c GG geführt. Der IT-Planungsrat beschließt über die Finanzierung (Finanzbedarf und Finanzierungsschlüssel) und die strategische Weiterentwicklung von GovData.' The preamble adds that GovData 'soll in künftige institutionelle Strukturen des IT-Planungsrates überführt werden', and the Geschäfts- und Koordinierungsstelle works with the IT-Planungsrat's own office. `references`, because the agreement assigns decisions to the IT-Planungsrat without itself being an instrument of it."
+    confidence: high
+    valid_from: null
+    valid_until: null
 sources:
   - title: "Vereinbarung des Bundes und der Länder zum gemeinsamen Betrieb von \"GovData - Das Datenportal für Deutschland\" (Verwaltungsvereinbarung GovData)"
     url: "https://www.govdata.de/fileadmin/Verwaltungsvereinbarung_GovData_finale_Fassung.pdf"
