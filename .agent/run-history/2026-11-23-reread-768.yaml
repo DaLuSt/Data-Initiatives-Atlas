@@ -12,5 +12,5 @@ summary: >
   and shows that the Council does not keep the P2B Regulation untouched but amends it, deleting Articles 2(11),
   2(12), 6, 8-10, 12-14, 16, 17 and 18(2)-(4) (Article 10(1), page 168, read as an image for the strikethrough).
   Closes the run-history entry for #836.
-prs: []
-outcome: in-progress
+prs: [837]
+outcome: merged
