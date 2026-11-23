@@ -50,7 +50,18 @@ relationships:
     valid_from: null
     valid_until: null
 
+  - type: governed-by
+    target: CI-LOI-2017-803
+    source: fact
+    evidence: "Loi n° 2017-803 du 7 décembre 2017 d'orientation de la Société de l'Information en Côte d'Ivoire, read directly 2026-11-23 as the scanned PDF that ARTCI publishes among its own legal texts (artci.ci, loi_2017_803.pdf; the scan has no text layer and was read as page images). Article 29: 'L'Autorité de Régulation des Télécommunications/TIC publie, chaque année avant le 31 décembre et à compter de la deuxième année suivant l'entrée en vigueur de la présente loi, un bilan global sur la couverture du territoire en réseaux ou infrastructures de Télécommunications/TIC à très haut débit ouverts au public'; operators must also send it each year their list of newly covered zones. Article 28: a refusal by operators to communicate deployment information 'fait l'objet de sanctions par l'organe en charge de la régulation des Télécommunications/TIC'."
+    confidence: high
+    valid_from: null
+    valid_until: null
 sources:
+  - title: "Loi n° 2017-803 du 07 décembre 2017 d'orientation de la Société de l'Information en Côte d'Ivoire (scan)"
+    url: "https://www.artci.ci/wp-content/uploads/2024/05/loi_2017_803.pdf"
+    publisher: "ARTCI"
+    accessed: "2026-11-23"
   - title: "A propos de l'ARTCI"
     url: "https://artci.ci/a-propos-de-lartci/"
     publisher: "Autorité de Régulation des Télécommunications/TIC de Côte d'Ivoire"

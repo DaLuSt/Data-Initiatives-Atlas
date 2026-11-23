@@ -48,7 +48,18 @@ relationships:
     valid_from: null
     valid_until: null
 
+  - type: related-to
+    target: AU-DATA-ACT-2022
+    source: fact
+    evidence: "The Data Availability and Transparency Act 2022, compilation No. 4 (C2024C00820, 11 December 2024), read directly 2026-11-23 as the PDF served by the Federal Register of Legislation's API (api.prod.legislation.gov.au): section 16F(1), a contravention of an APP-equivalence term of a data sharing agreement is 'taken to be: (a) an interference with the privacy of the individual for the purposes of the Privacy Act 1988', with the note that it 'may be the subject of a complaint under section 36 of the Privacy Act 1988'; 16F(2)(b), where the act 'is the subject of a complaint to, or an investigation by, the Information Commissioner under Part V of the Privacy Act 1988'. Section 37(5) requires data scheme entities to give the National Data Commissioner a copy of any eligible data breach statement 'required to give the Information Commissioner under section 26WK of the Privacy Act 1988', and 37(5A) lets the Information Commissioner pass such statements to the National Data Commissioner. `related-to`: the Act's own regulator is the National Data Commissioner, which is not an Atlas entity; the Information Commissioner (the head of the OAIC) handles the privacy side under the Privacy Act."
+    confidence: high
+    valid_from: null
+    valid_until: null
 sources:
+  - title: "Data Availability and Transparency Act 2022, compilation No. 4 (C2024C00820), PDF via the Federal Register of Legislation API"
+    url: "https://api.prod.legislation.gov.au/v1/documents(titleid='C2022A00011',start=2024-12-11,retrospectivestart=2024-12-11,rectificationversionnumber=0,type='Primary',uniqueTypeNumber=0,volumeNumber=0,format='Pdf')"
+    publisher: "Office of Parliamentary Counsel (Federal Register of Legislation)"
+    accessed: "2026-11-23"
   - title: "About the OAIC"
     url: "https://www.oaic.gov.au/about-the-OAIC"
     publisher: "Office of the Australian Information Commissioner"
