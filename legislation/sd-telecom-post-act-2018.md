@@ -18,7 +18,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-11-01"
+last_verified: "2026-11-23"
 previous_version: null
 successor: null
 
@@ -34,7 +34,7 @@ relationships:
   - type: applies-in
     target: SD
     source: fact
-    evidence: "The Ministry's page (read 2026-11-01 through a summarising fetch tool) refers to 'the new telecommunications and Post Act for the year 2018', which replaced the 2001 telecommunications act."
+    evidence: "The Ministry's page (first read 2026-11-01 through a summarising fetch tool; re-read directly 2026-11-23): 'In early 2018 AD, the new telecommunications and Post Act for the year 2018 was approved, which came as an alternative to the telecommunications Act of 2001, according to which the name of the National Telecommunications Corporation was changed to a new name: Telecommunications and Post Regulatory Authority.'"
     confidence: medium
     valid_from: null
     valid_until: null
