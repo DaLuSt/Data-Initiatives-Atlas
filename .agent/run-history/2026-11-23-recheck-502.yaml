@@ -10,5 +10,5 @@ summary: >
   Oireachtas API lists no cyber or network-and-information bill among the 343 current or enacted bills since
   1 January 2025, so it is still not initiated. CH-BGEID: bj.admin.ch's latest entry is still 30 June 2026, no
   commencement date. Closes the run-history entry for #838.
-prs: []
-outcome: in-progress
+prs: [839]
+outcome: merged

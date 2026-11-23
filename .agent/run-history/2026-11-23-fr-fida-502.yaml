@@ -1,0 +1,12 @@
+date: "2026-11-23"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #502, two more re-checks. FR-NIS2-LOI: the Assemblée nationale's dossier now shows its first reading
+  completed, "Texte adopté ... modifié par l'Assemblée nationale ... le 17 novembre 2026, T.A. n° 366" (online
+  23 November); the Houses have not yet agreed on one text, so `status` stays `planned`. The LinkedIn idea post on NIS2
+  numbers already says to re-check France before posting. EU-FIDA: the Parliament's Legislative Observatory
+  gives "Awaiting Parliament's position in 1st reading" and no withdrawal; `status` stays `proposed`. GM-PDPP-BILL-2024 (#768): the National
+  Assembly's bill page, re-read directly, still shows Assented / Published with one entry of 15 July 2026. Closes the
+  run-history entry for #839.
+prs: []
+outcome: in-progress
