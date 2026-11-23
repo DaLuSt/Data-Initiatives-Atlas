@@ -1,0 +1,13 @@
+date: "2026-11-23"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #768, three regulators' pages re-read directly after first being read through a summarising tool.
+  LS-LCA: the home page confirms "a statutory body, established in June 2000". MZ-INCM: the Legislação
+  Institucional page confirms Decreto n.º 39/2021 (17 June) as the organic statute and adds the earlier one,
+  Decreto n.º 32/2001 (6 November). SR-TAS: the Wetgeving page confirms "Staatsbesluit no. 32: 26 maart 1998
+  Instelling TAS", and shows the page reuses "no. 32" for a 2007 decree, so the numbers are labels. Tried: BZ-PUC
+  (406), and a quote-matching pass over TD-ARCEP, GW-ARN-TIC, DZ-ARPCE, VE-CONATEL and AO-INACOM, whose evidence
+  paraphrases rather than quotes, so nothing could be confirmed mechanically. Closes the run-history entry for #842;
+  #843 (built on #842's branch) is still open.
+prs: []
+outcome: in-progress

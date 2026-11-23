@@ -19,7 +19,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-11-06"
+last_verified: "2026-11-23"
 previous_version: null
 successor: null
 
@@ -34,7 +34,7 @@ relationships:
   - type: part-of
     target: LS
     source: fact
-    evidence: "Scope anchor under metadata/relationship-types.md §2.3. The LCA's home page (read 2026-11-06 through a summarising fetch tool): a statutory body, established in June 2000, regulating Lesotho's communications sector."
+    evidence: "Scope anchor under metadata/relationship-types.md §2.3. The LCA's home page (first read 2026-11-06 through a summarising fetch tool; re-read directly 2026-11-23): 'Lesotho Communications Authority (LCA) is a statutory body, established in June 2000, with the mandate of regulating the communications sector in Lesotho. This mandate entails: granting licences to operators; promoting fair competition'."
     confidence: high
     valid_from: null
     valid_until: null
@@ -59,7 +59,7 @@ sources:
 
 # Lesotho Communications Authority (LCA)
 
-> **Created 2026-11-06** (roadmap #481). From the regulator's own pages through a summarising fetch tool. `start_date` empty: the site gives 'June 2000' only.
+> **Created 2026-11-06** (roadmap #481). From the regulator's own pages through a summarising fetch tool; the home page was re-read directly on 2026-11-23 (roadmap #768) and confirms the quotation. `start_date` empty: the site gives 'June 2000' only.
 
 ## Relationships
 

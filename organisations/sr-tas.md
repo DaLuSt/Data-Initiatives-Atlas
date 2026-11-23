@@ -20,7 +20,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-11-06"
+last_verified: "2026-11-23"
 previous_version: null
 successor: null
 
@@ -35,7 +35,7 @@ relationships:
   - type: part-of
     target: SR
     source: fact
-    evidence: "Scope anchor under metadata/relationship-types.md §2.3. TAS's home page and Wetgeving page (read 2026-11-06 through a summarising fetch tool): the authority set up by the State decree of 26 March 1998 ('Instelling TAS')."
+    evidence: "Scope anchor under metadata/relationship-types.md §2.3. TAS's home page and Wetgeving page (first read 2026-11-06 through a summarising fetch tool; the Wetgeving page re-read directly 2026-11-23): the authority set up by the State decree of 26 March 1998, listed as 'Staatsbesluit no. 32: 26 maart 1998 Instelling TAS'. The same list also labels a 2007 decree 'Staatsbesluit no. 32: 10 maart 2007 Randapparatuur en Interne netwerken', so the numbers are the page's labels, not decree numbers to rely on."
     confidence: high
     valid_from: null
     valid_until: null
@@ -60,7 +60,7 @@ sources:
 
 # Telecommunications Authority Suriname (TAS)
 
-> **Created 2026-11-06** (roadmap #476). From the regulator's own pages through a summarising fetch tool. `start_date` empty: the title 'Staatsbesluit no. 32: 26 maart 1998 Instelling TAS' is a listing label, the decree was not opened.
+> **Created 2026-11-06** (roadmap #476). From the regulator's own pages through a summarising fetch tool; the Wetgeving page was re-read directly on 2026-11-23 (roadmap #768) and confirms the listing. `start_date` empty: the title 'Staatsbesluit no. 32: 26 maart 1998 Instelling TAS' is a listing label, the decree was not opened.
 
 ## Relationships
 
