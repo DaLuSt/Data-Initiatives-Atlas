@@ -74,7 +74,18 @@ relationships:
     valid_from: null
     valid_until: null
 
+  - type: related-to
+    target: GB-IPA-AMENDMENT-2024
+    source: fact
+    evidence: "The Investigatory Powers (Amendment) Act 2024, read directly 2026-11-23 on legislation.gov.uk: its Part 2 is headed 'Oversight arrangements' (section 7, Deputy Investigatory Powers Commissioners; 8, delegation of functions; 9, Temporary Judicial Commissioners; 10, main functions of the Investigatory Powers Commissioner). Section 10 amends section 229 of the 2016 Act, inserting subsection (3E): 'The Investigatory Powers Commissioner must keep under review (including by way of audit, inspection and investigation) compliance by any part of His Majesty's forces, or by any part of the Ministry of Defence, with policies governing— (a) the use of surveillance outside the United Kingdom, and (b) the use and conduct of covert human intelligence sources outside the United Kingdom'. `related-to`, not `governed-by`: the 2024 Act amends the Commissioner's functions in [[GB-IPA-2016]], which is the governing edge. The commencement date of Part 2 was not read, so `valid_from` is unset."
+    confidence: high
+    valid_from: null
+    valid_until: null
 sources:
+  - title: "Investigatory Powers (Amendment) Act 2024, section 10 (as enacted)"
+    url: "https://www.legislation.gov.uk/ukpga/2024/9/section/10/enacted"
+    publisher: "legislation.gov.uk (The National Archives)"
+    accessed: "2026-11-23"
   - title: "Investigatory Powers Act 2016, section 227"
     url: "https://www.legislation.gov.uk/ukpga/2016/25/section/227"
     publisher: "legislation.gov.uk (The National Archives)"
