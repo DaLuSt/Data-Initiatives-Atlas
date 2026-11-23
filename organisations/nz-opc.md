@@ -47,6 +47,13 @@ relationships:
     valid_from: null
     valid_until: null
 
+  - type: related-to
+    target: NZ-PRIVACY-AMENDMENT-ACT-2025
+    source: fact
+    evidence: "The Privacy Commissioner's own Privacy Act page (privacy.org.nz), read directly 2026-11-23: 'The Privacy Amendment Act 2025 brought into force information privacy principle (IPP) 3A from 1 May 2026, adding to the Privacy Act's set of 13 IPPs. IPP3A is a new notification obligation, covering the collection of personal information other than from the individual concerned', and 'We have guidance on the new IPP3A. A number of codes of practice have also been amended following consultation to include new rule 3A.' `related-to`, at medium confidence: the Commissioner's page shows it explaining the amendment and amending its codes of practice for it, but the Amendment Act's own text was not read, so no statutory role is asserted."
+    confidence: medium
+    valid_from: 2026-05-01
+    valid_until: null
 sources:
   - title: "Who we are — Office of the Privacy Commissioner"
     url: "https://www.privacy.org.nz/about-us/who-we-are/"

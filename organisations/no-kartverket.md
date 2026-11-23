@@ -58,7 +58,18 @@ relationships:
     valid_from: null
     valid_until: null
 
+  - type: governed-by
+    target: NO-GEODATALOVEN
+    source: fact
+    evidence: "The Geodata Regulation (geodataforskriften, FOR-2012-08-08-797), read directly 2026-11-23 on lovdata.no, made under sections 2 to 10 of the Geodata Act (LOV-2010-09-03-56): § 4, 'Nasjonal geodatakoordinator. Statens kartverk er nasjonal geodatakoordinator.' The Act itself, also read directly, provides in § 3 that 'En nasjonal geodatakoordinator skal koordinere arbeidet med landets infrastruktur for geografisk informasjon' and leaves the coordinator's tasks and organisation to regulation. The regulation has been in force since 08.08.2012 and was last amended by FOR-2024-12-12-3070."
+    confidence: high
+    valid_from: 2012-08-08
+    valid_until: null
 sources:
+  - title: "Forskrift om infrastruktur for geografisk informasjon (geodataforskriften) — FOR-2012-08-08-797"
+    url: "https://lovdata.no/dokument/SF/forskrift/2012-08-08-797"
+    publisher: "Lovdata"
+    accessed: "2026-11-23"
   - title: "Kartverket"
     url: "https://www.kartverket.no/"
     publisher: "Kartverket (Norwegian Mapping Authority)"
