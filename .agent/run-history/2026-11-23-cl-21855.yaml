@@ -11,5 +11,5 @@ summary: >
   the Diario Oficial edition route around the 403s on senado.cl and camara.cl. LinkedIn idea post 34 (Chile,
   "Eighteen days before a date that may move") is now out of date; post text needs the owner, so it is flagged,
   not edited. Closes the run-history entry for #837.
-prs: []
-outcome: in-progress
+prs: [838]
+outcome: merged
