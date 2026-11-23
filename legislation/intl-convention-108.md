@@ -48,7 +48,7 @@ relationships:
   - type: maintained-by
     target: INTL-COE
     source: fact
-    evidence: "Convention 108 is a Council of Europe treaty, ETS No. 108, opened for signature in Strasbourg on 28 January 1981 and administered by the Council of Europe, which publishes it in its treaty series alongside its protocols and convenes the Committee of Convention 108. NOT directly read on coe.int — both coe.int pages returned HTTP 403 on retry 2026-08-28; the block is domain-wide, confirmed across every coe.int and rm.coe.int path tried this pass (see INTL-COE), and web.archive.org cannot be reached at all by this environment's tool. Confirmed instead by reading four independent, genuinely different sources directly this pass (2026-08-28): a Georgetown Law Library research guide ('The Convention, which entered into force in 1985, is the first legally binding international instrument on data protection and is open to signature by countries that are not members of the Council of Europe,' citing E.T.S. 108); a legal-industry explainer (Wrangu) naming the Council of Europe as the treaty's administrator and giving its OECD-collaboration backstory; a compliance blog (Ambit Compliance) confirming 'In 1981, the Council of Europe adopted Convention 108, the first legally binding international instrument focused on data protection'; and a law-firm blog (Reed Smith) confirming Convention 108 as 'the first binding international instrument protecting individuals' data rights.' Also corroborated indirectly by Wikipedia and cnpd.public.lu (Luxembourg's DPA), both read directly in prior passes. None of these is the Council of Europe's own statement of custodianship, but four independent secondary sources converging on the same custodianship fact is a genuine, if indirect, majority."
+    evidence: "Council Decision (EU) 2019/682 of 9 April 2019, read directly 2026-11-23 through publications.europa.eu (CELEX 32019D0682), names it 'the Council of Europe Convention for the protection of individuals with regard to automatic processing of personal data (ETS No 108) (‘Convention 108’)' (recital 1), and recital 2 records that 'The Protocol amending Convention 108 … was adopted by the Committee of Ministers of the Council of Europe on 18 May 2018'. The national approval laws read for [[AR]] (Ley 27.483) and [[UY]] (Ley 19.030) give the Convention as adopted in Strasbourg on 28 January 1981. coe.int itself, where the Council publishes the treaty, answers 403."
     confidence: high
     valid_from: null
     valid_until: null
@@ -117,6 +117,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Council Decision (EU) 2019/682 authorising Member States to ratify the Protocol amending Convention 108"
+    url: "https://publications.europa.eu/resource/celex/32019D0682"
+    publisher: "Publications Office of the European Union"
+    accessed: "2026-11-23"
   - title: "Ley 19.030 (Uruguay), approving Convention 108 and its Additional Protocol (IMPO)"
     url: "https://www.impo.com.uy/bases/leyes/19030-2012"
     publisher: "IMPO, Centro de Información Oficial (Uruguay)"

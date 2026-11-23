@@ -34,7 +34,7 @@ relationships:
   - type: applies-in
     target: US
     source: fact
-    evidence: "The decision’s EUR-Lex text (re-read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32023D1795, XHTML), which confirms every quotation here; first re-read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32023D1795, XHTML), which confirms every quotation here; first read 2026-11-07 through a summarising fetch tool): title, number, notification and publication data as above. Article 1: the United States 'ensures an adequate level of protection for personal data transferred from the Union to organisations in the United States' that appear on the Data Privacy Framework List kept by the US Department of Commerce; Article 3(4): after one year the Commission evaluates the finding, with later periodicity to be decided in consultation with the Article 93(1) Committee and the EDPB."
+    evidence: "The decision’s EUR-Lex text (re-read directly 2026-11-17 from the Official Journal text (Publications Office, CELEX 32023D1795, XHTML), which confirms every quotation here; first read 2026-11-07 through a summarising fetch tool): title, number, notification and publication data as above. Article 1: the United States 'ensures an adequate level of protection for personal data transferred from the Union to organisations in the United States' that appear on the Data Privacy Framework List kept by the US Department of Commerce; Article 3(4): after one year the Commission evaluates the finding, with later periodicity to be decided in consultation with the Article 93(1) Committee and the EDPB."
     confidence: high
     valid_from: 2023-07-10
     valid_until: null
