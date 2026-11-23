@@ -40,6 +40,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Statistics Act, 1993, section 8"
+    url: "https://www.irishstatutebook.ie/1993/en/act/pub/0021/sec0008.html"
+    publisher: "Office of the Attorney General (irishstatutebook.ie)"
+    accessed: "2026-11-23"
   - title: "Central Statistics Office"
     url: "https://www.cso.ie/en/"
     publisher: "Central Statistics Office (Ireland)"
@@ -62,6 +66,8 @@ sources:
 > **Updated 2026-09-13**: two stale claims corrected below — [[FR-INSEE]]
 > is an Atlas entity (France was never the exception this section
 > claimed) and [[NO-SSB]] now carries `participates-in` [[EU-ESS]].
+
+> **Statutory date read 2026-11-23** (roadmap #775). irishstatutebook.ie, read directly: Statistics Act 1993, section 8(1), 'There is hereby established an Office to be known as the Central Statistics Office to exercise the functions conferred on it by this Act', and S.I. No. 323 of 1994, which brought the Act into operation on 1 November 1994. The Office existed before that as an administrative office, and its original founding date was not read, so `start_date` stays unset rather than recording the 1994 statutory date as its start.
 
 ## Description
 

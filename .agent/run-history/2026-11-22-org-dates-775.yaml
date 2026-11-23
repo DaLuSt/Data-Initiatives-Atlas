@@ -10,5 +10,5 @@ summary: >
   single commencement date on wetten.overheid.nl); its related-to edge gains the same valid_from. Tried: the UK
   Statistics Authority's founding sections on legislation.gov.uk (every request answered 202 this pass). Closes
   the run-history entry for #832.
-prs: []
-outcome: in-progress
+prs: [833]
+outcome: merged

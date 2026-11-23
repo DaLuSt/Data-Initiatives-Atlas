@@ -8,6 +8,7 @@ description: >
   Ireland's national standards body, responsible for publishing Irish
   Standards and representing Ireland in European and international
   standardisation. It is Ireland's member of CEN, CENELEC and ISO.
+  Established on 14 April 1997, the establishment day appointed under section 6 of the National Standards Authority of Ireland Act 1996 (S.I. No. 176 of 1997).
 
 level: national
 country: IE
@@ -17,9 +18,9 @@ status: active
 confidence: medium
 coverage: low
 verification: primary-source
-start_date: null
+start_date: 1997-04-14
 end_date: null
-last_verified: "2026-09-27"
+last_verified: "2026-11-23"
 previous_version: null
 successor: null
 
@@ -62,6 +63,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "S.I. No. 176/1997 — National Standards Authority of Ireland Act, 1996 (Commencement and Establishment Day) Order, 1997"
+    url: "https://www.irishstatutebook.ie/1997/en/si/0176.html"
+    publisher: "Office of the Attorney General (irishstatutebook.ie)"
+    accessed: "2026-11-23"
   - title: "National Standards Authority of Ireland"
     url: "https://www.nsai.ie/"
     publisher: "National Standards Authority of Ireland (NSAI)"
@@ -96,6 +101,8 @@ sources:
 > reachable `iso.org` subdomain found this pass (`discovery/unresolved.md`
 > row #220). `confidence` on the ISO edge raised medium→high; 4 of 4
 > sources now read directly.
+
+> **Dated 2026-11-23** (roadmap #775). irishstatutebook.ie, read directly. National Standards Authority of Ireland Act 1996, section 6(1): 'There shall stand established, on such day as the Minister may by order appoint ("the establishment day"), a body to be known as The National Standards Authority of Ireland'. S.I. No. 176 of 1997, Article 3: 'The 14th day of April, 1997, is hereby appointed as the establishment day on which the National Standards Authority of Ireland shall stand established.' (Article 2 brought the rest of the Act, other than Part IV, into operation on 1 January 1997.) `start_date` is 14 April 1997.
 
 ## Description
 
