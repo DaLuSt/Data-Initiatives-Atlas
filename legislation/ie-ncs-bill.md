@@ -25,7 +25,7 @@ coverage: medium
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-11-09"
+last_verified: "2026-11-23"
 previous_version: null
 successor: null
 
@@ -189,6 +189,10 @@ The Law Society of Ireland's Gazette, read directly (7 October 2026), reports th
 ## Re-checked 2026-11-09: still not enacted; the Government's own programme read
 
 The Government Legislation Programme for the Autumn 2026 session (assets.gov.ie), downloaded and read as a text-layer PDF, lists the National Cyber Security Bill under the Department of Justice, Home Affairs and Migration in the "Legislation for Priority Publication" list (32 bills). Its entry reads: "The Bill will transpose the EU Directive on measures for a high common level of cybersecurity across the Union into national law. It will incorporate provisions to establish the National Cyber Security Centre on a statutory basis and provide for related matters." Status text: "Work is ongoing." So the bill is scheduled for publication this session but, on the Government's own document, is not yet published. The Oireachtas bills pages answered 403, so the Houses' own record could not be read; no source found says the bill has been introduced.
+
+## Re-checked 2026-11-23: still not initiated in the Oireachtas
+
+The Oireachtas's own legislation API (`api.oireachtas.ie/v1/legislation`, read directly), asked for every current or enacted bill since 1 January 2025, returns 343 bills; none has "cyber" or "network and information" in its short title. So the National Cyber Security Bill has still not been initiated in either House, consistent with the Government programme's "Work is ongoing" (re-check of 2026-11-09). `status: proposed` stays.
 
 ## ⚠ Why `confidence: low`
 

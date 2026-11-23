@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: 2027-01-01
 end_date: null
-last_verified: "2026-11-08"
+last_verified: "2026-11-23"
 previous_version: NL-ARCHIEFWET-1995
 successor: null
 
@@ -43,6 +43,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Besluit van 29 oktober 2026, houdende vaststelling van het tijdstip van inwerkingtreding van de Archiefwet 2026, het Archiefbesluit 2026, en het Besluit diploma's archivarissen (Stb. 2026, 375)"
+    url: "https://zoek.officielebekendmakingen.nl/stb-2026-375.html"
+    publisher: "Overheid.nl (officielebekendmakingen.nl)"
+    accessed: "2026-11-23"
   - title: "Archiefwet 2026 (35.968)"
     url: "https://www.eerstekamer.nl/wetsvoorstel/35968_archiefwet_2026"
     publisher: "Eerste Kamer der Staten-Generaal"
@@ -71,6 +75,8 @@ sources:
 
 > **Re-checked 2026-11-08.** The Eerste Kamer's dossier 35968, read directly, shows the bill adopted by the Tweede Kamer on 18 February 2025 with unanimous votes, handled as a *hamerstuk* by the Eerste Kamer on 12 May 2026, the publication dated 19 June 2026, and the entry into force 'op een bij koninklijk besluit te bepalen tijdstip'. `status` moves from `planned` to `adopted`, the vocabulary's word for an enacted instrument not yet in force (`metadata/controlled-vocabularies.md`); `start_date` stays the intended 1 January 2027.
 
+> **Entry into force fixed, read 2026-11-23** (roadmaps #502 and #775). The royal decree is out: Stb. 2026, 375 (Besluit van 29 oktober 2026, uitgegeven 9 november 2026), read directly 2026-11-23 on zoek.officielebekendmakingen.nl: 'De Archiefwet 2026, het Archiefbesluit 2026 en het Besluit diploma’s archivarissen treden in werking met ingang van 1 januari 2027.' `start_date` 1 January 2027 is now the decreed date, not an estimate. It was found through the government's publication repository (repository.overheid.nl/sru), because wetten.overheid.nl had not yet recorded it on 22 November.
+
 > **Narrowed 2026-09-13**, closing part of `discovery/unresolved.md` row
 > #198. Nationaal Archief's own news item confirms the intended
 > commencement date was originally 1 July 2026, postponed by Minister
@@ -93,8 +99,9 @@ was **signed 13 May 2026** and **published as Stb. 2026, 149 on 19 June
 2026**, under the official title "Wet van 13 mei 2026 tot intrekking van de
 Archiefwet 1995 en vervanging door een nieuwe Archiefwet." Its own Article
 12.14 leaves the exact entry-into-force date to a royal decree not yet
-issued — it does **not** fix 1 January 2027 in the Act's own text. That date
-is the intended commencement stated consistently by nationaalarchief.nl's
+issued — it does **not** fix 1 January 2027 in the Act's own text. (The
+decree has since been issued: Stb. 2026, 375 fixes 1 January 2027; see the
+dated note above.) That date was at first the intended commencement stated consistently by nationaalarchief.nl's
 own knowledge base and by rijksoverheid.nl, both read directly this pass,
 and is recorded here as the best-available estimate rather than a date the
 Act itself confirms.

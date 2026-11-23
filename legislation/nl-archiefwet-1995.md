@@ -24,7 +24,7 @@ verification: primary-source
 
 start_date: 1996-01-01
 end_date: 2027-01-01
-last_verified: "2026-11-22"
+last_verified: "2026-11-23"
 previous_version: null
 successor: NL-ARCHIEFWET-2026
 
@@ -44,6 +44,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Besluit van 29 oktober 2026, houdende vaststelling van het tijdstip van inwerkingtreding van de Archiefwet 2026, het Archiefbesluit 2026, en het Besluit diploma's archivarissen (Stb. 2026, 375)"
+    url: "https://zoek.officielebekendmakingen.nl/stb-2026-375.html"
+    publisher: "Overheid.nl (officielebekendmakingen.nl)"
+    accessed: "2026-11-23"
   - title: "Archiefwet 1995 — BWBR0007376 (informatie)"
     url: "https://wetten.overheid.nl/BWBR0007376/informatie"
     publisher: "Overheid.nl (wetten.overheid.nl)"
@@ -71,7 +75,7 @@ sources:
 > the successor act was signed 13 May 2026 and published as Stb. 2026, 149
 > on 19 June 2026, with entry into force still set by royal decree.
 
-> **Dated 2026-11-22** (roadmap #775). wetten.overheid.nl's information page for the Archiefwet 1995 (BWBR0007376), read directly, records it as a new regulation ('Nieuwe-regeling') in force 01-01-1996, published as Stb. 1995, 276, in force by Stb. 1995, 671. The same page reads 'Intrekking regeling zonder datum inwerkingtreding aanwezig': the repeal by the Archiefwet 2026 is on record, but no in-force date for it had been set on 22 November 2026. `end_date` stays the intended 1 January 2027 that nationaalarchief.nl and rijksoverheid.nl give, until a royal decree fixes it.
+> **Dated 2026-11-22** (roadmap #775). wetten.overheid.nl's information page for the Archiefwet 1995 (BWBR0007376), read directly, records it as a new regulation ('Nieuwe-regeling') in force 01-01-1996, published as Stb. 1995, 276, in force by Stb. 1995, 671. The same page reads 'Intrekking regeling zonder datum inwerkingtreding aanwezig': the repeal by the Archiefwet 2026 is on record, which was read as 'no in-force date set'. **Corrected 2026-11-23:** the date had in fact been set; wetten.overheid.nl had not yet recorded it. Stb. 2026, 375 (Besluit van 29 oktober 2026, uitgegeven 9 november 2026), read directly 2026-11-23 on zoek.officielebekendmakingen.nl: 'De Archiefwet 2026, het Archiefbesluit 2026 en het Besluit diploma’s archivarissen treden in werking met ingang van 1 januari 2027.' The Archiefwet 2026 repeals this Act, so `end_date` 1 January 2027 is now the decreed date.
 
 ## Description
 

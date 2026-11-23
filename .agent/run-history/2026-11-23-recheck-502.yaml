@@ -1,0 +1,14 @@
+date: "2026-11-23"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #502 (instruments waiting on events), three re-checks. NL-ARCHIEFWET-2026: the commencement decree is out,
+  Stb. 2026, 375 (29 October, published 9 November 2026): the Act enters into force on 1 January 2027, so its
+  start_date and NL-ARCHIEFWET-1995's end_date are now decreed, not intended. This corrects the 22 November note on
+  NL-ARCHIEFWET-1995 (from #829), which read wetten.overheid.nl's "zonder datum inwerkingtreding" as "no date set";
+  the site had not yet recorded the decree. Found through repository.overheid.nl's SRU interface, recorded with
+  wetten.overheid.nl's lag and "Even geduld" holding page as discovery/unresolved.md row #290. IE-NCS-BILL: the
+  Oireachtas API lists no cyber or network-and-information bill among the 343 current or enacted bills since
+  1 January 2025, so it is still not initiated. CH-BGEID: bj.admin.ch's latest entry is still 30 June 2026, no
+  commencement date. Closes the run-history entry for #838.
+prs: []
+outcome: in-progress
