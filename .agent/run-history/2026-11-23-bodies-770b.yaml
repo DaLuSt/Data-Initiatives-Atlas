@@ -1,0 +1,18 @@
+date: "2026-11-23"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #770 (laws with no body), a fifth slice, plus a correction. AU-OAIC related-to AU-DATA-ACT-2022: the Act
+  (compilation 4, read as the PDF served by the Federal Register of Legislation's API) routes APP-equivalence
+  breaches to complaints and investigations by the Information Commissioner (s16F) and links its data-breach
+  statements to the National Data Commissioner (s37(5)-(5A)); the National Data Commissioner itself has no entity.
+  DE-VV-GOVDATA references DE-IT-PLANUNGSRAT (§ 2(2): GovData is in the IT-Planungsrat's action plan, which decides
+  its financing and strategy), read on bravors.brandenburg.de. CI-ARTCI governed-by CI-LOI-2017-803 (Articles 28
+  and 29: sanctions and the annual very-high-speed coverage report), read as page images of the scan ARTCI
+  publishes. GN-LOI-2015-037 is renamed to Law L/2016/037/AN: its own first page (ARPT's embedded scan) prints
+  2016, and the 2015 in ARPT's page title is a misprint; the ID is kept (IDs are permanent) and the old number is an
+  alternative name. New discovery/unresolved.md row #287: legislation.gov.au's API route to Act PDFs. The #770
+  measure is 35 after this slice and #835. Not done: PT-LEI-26-2016 (it names the CADA, which has no entity),
+  DE-VV-GDI-DE (the BKG has no entity), Guinea's supervising authority (in the 56 scanned pages not read). Closes
+  the run-history entry for #835.
+prs: []
+outcome: in-progress
