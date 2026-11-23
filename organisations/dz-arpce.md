@@ -20,7 +20,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-11-06"
+last_verified: "2026-11-23"
 previous_version: null
 successor: null
 
@@ -35,7 +35,7 @@ relationships:
   - type: part-of
     target: DZ
     source: fact
-    evidence: "Scope anchor under metadata/relationship-types.md §2.3. ARPCE's French site (read 2026-11-06 through a summarising fetch tool): an independent institution with legal personality and financial autonomy."
+    evidence: "Scope anchor under metadata/relationship-types.md §2.3. ARPCE's French site (first read 2026-11-06 through a summarising fetch tool; re-read directly 2026-11-23): 'L'Autorité de Régulation de la Poste et des Communications Electroniques (ARPCE) … est une institution indépendante dotée de la personnalité morale et de l’autonomie financière, créée par la loi n°2000-03 … correspondant au 5 août 2000, modifiée et complétée, fixant les règles générales relatives à la poste et aux télécommunications, abrogée par la loi n°18-04'."
     confidence: high
     valid_from: null
     valid_until: null

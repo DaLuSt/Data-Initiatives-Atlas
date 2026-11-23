@@ -20,7 +20,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-11-06"
+last_verified: "2026-11-23"
 previous_version: null
 successor: null
 
@@ -35,7 +35,7 @@ relationships:
   - type: part-of
     target: AO
     source: fact
-    evidence: "Scope anchor under metadata/relationship-types.md §2.3. INACOM's home page and legislation page (read 2026-11-06 through a summarising fetch tool): the regulator of electronic communications and postal services, with its organic statute Decreto Presidencial n.º 243/14 of 9 September 2014."
+    evidence: "Scope anchor under metadata/relationship-types.md §2.3. INACOM's home page and legislation page (first read 2026-11-06 through a summarising fetch tool; the legislation page re-read directly 2026-11-23): the regulator of electronic communications and postal services; the legislation page lists 'Decreto Presidencial n.º243/14 Aprova o Estatuto Orgânico do Instituto Angolano das Comunicações abreviadamente e designado «INACOM»'. The date 9 September 2014 is from the first, summarised read; the listing re-read does not show it."
     confidence: high
     valid_from: null
     valid_until: null

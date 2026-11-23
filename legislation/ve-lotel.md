@@ -19,7 +19,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-11-06"
+last_verified: "2026-11-23"
 previous_version: null
 successor: null
 
@@ -35,7 +35,7 @@ relationships:
   - type: applies-in
     target: VE
     source: fact
-    evidence: "CONATEL's Marco Legal page (read 2026-11-06 through a summarising fetch tool): lists the 'Ley Orgánica de Telecomunicaciones (LOTEL)' with a PDF and cites its article 37(1)."
+    evidence: "CONATEL's Marco Legal page (first read 2026-11-06 through a summarising fetch tool; re-read directly 2026-11-23): 'La Comisión Nacional de Telecomunicaciones ejerce funciones regulatorias en ejercicio de las atribuciones conferidas en el numeral 1 del artículo 37 de la Ley Orgánica de Telecomunicaciones', quoting article 37."
     confidence: medium
     valid_from: null
     valid_until: null

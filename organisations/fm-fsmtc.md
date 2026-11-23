@@ -20,7 +20,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-11-07"
+last_verified: "2026-11-23"
 previous_version: null
 successor: null
 
@@ -35,7 +35,7 @@ relationships:
   - type: part-of
     target: FM
     source: fact
-    evidence: "Scope anchor under metadata/relationship-types.md §2.3. The FSM Code, Title 21, Chapter 2 (read 2026-11-07 through a summarising fetch tool): section 202 establishes the Corporation as a public corporation under FSM law."
+    evidence: "Scope anchor under metadata/relationship-types.md §2.3. The FSM Code, Title 21, Chapter 2 (fsmlaw.org; first read 2026-11-07 through a summarising fetch tool, re-read directly 2026-11-23): section 201 cites it as the 'Federated States of Micronesia Telecommunications Corporation Act of 1981'; section 202, 'Establishment of Corporation. The Telecommunications Corporation of the Federated States of Micronesia is hereby established as a public corporation under the laws of the Federated States of Micronesia' (source: PL 2-10)."
     confidence: high
     valid_from: null
     valid_until: null

@@ -19,7 +19,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-11-06"
+last_verified: "2026-11-23"
 previous_version: null
 successor: null
 
@@ -35,7 +35,7 @@ relationships:
   - type: applies-in
     target: DZ
     source: fact
-    evidence: "ARPCE's French site (read 2026-11-06 through a summarising fetch tool): names loi n° 18-04 as the current law and loi n° 2000-03 as repealed."
+    evidence: "ARPCE's French site (first read 2026-11-06 through a summarising fetch tool; re-read directly 2026-11-23): ARPCE was 'créée par la loi n°2000-03 … correspondant au 5 août 2000, modifiée et complétée, fixant les règles générales relatives à la poste et aux télécommunications, abrogée par la loi n°18-04'."
     confidence: medium
     valid_from: null
     valid_until: null
