@@ -39,12 +39,16 @@ relationships:
   - type: maintained-by
     target: UN-CEFACT
     source: fact
-    evidence: "Both cited unece.org pages returned HTTP 403 again this pass — `unece.org` is blocked domain-wide this session (confirmed by testing the bare root domain), and `web.archive.org` (suggested as a next step) cannot be reached at all by this environment's fetch tool (a tool-level restriction, confirmed by testing the bare domain). Wikipedia's EDIFACT article was fetched directly (prior pass) and confirms 'the ongoing maintenance and development falls under UN/CEFACT..., which operates within the UN Economic Commission for Europe'. Two further independent EDI-industry pages were found and read directly this pass (2026-08-28) — commport.com and edibasics.com — both stating in near-identical wording: 'The work of maintenance and further development of this standard is done through the United Nations Centre for Trade Facilitation and Electronic Business (UN/CEFACT) under the UN Economic Commission for Europe.' The near-identical phrasing across the two suggests both are reproducing UNECE's own text rather than independently verifying it, which is disclosed here rather than treated as three independent confirmations — but both are genuine, live, independently-hosted pages actually fetched and read this pass, not search snippets, so both count toward the source tally. That is 3 of 5 cited sources read directly (Wikipedia, commport.com, edibasics.com) against the two still-dead unece.org originals — a real, if not overwhelming, majority."
+    evidence: "The report of UN/CEFACT's twelfth session (ECE/TRADE/CEFACT/2006/18, 14 September 2006), read directly 2026-11-23 from the UN Digital Library (unece.org answers 403): UN/CEFACT's Applied Technologies Group 'had processed 145 Data Maintenance Requests (DMR) for the D.05B UN/EDIFACT Directory and 112 for the D.06A UN/EDIFACT Directory', and was working on transformation rules from UML to UN/EDIFACT. That is a 2006 record of the maintenance; current maintenance pages on unece.org could not be read."
     confidence: medium
     valid_from: null
     valid_until: null
 
 sources:
+  - title: "UN/CEFACT, report of the twelfth session (ECE/TRADE/CEFACT/2006/18, 14 September 2006)"
+    url: "https://digitallibrary.un.org/record/582956/files/%5BE_%5DECE_TRADE_CEFACT_2006_18-EN.pdf"
+    publisher: "United Nations (UN Digital Library)"
+    accessed: "2026-11-22"
   - title: "UN/CEFACT — United Nations Centre for Trade Facilitation and Electronic Business"
     url: "https://unece.org/trade/uncefact"
     publisher: "United Nations Economic Commission for Europe"

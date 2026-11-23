@@ -42,12 +42,16 @@ relationships:
   - type: maintained-by
     target: UN-CEFACT
     source: fact
-    evidence: "Both originally-cited unece.org pages returned HTTP 403 this pass (domain-wide block, confirmed by testing the bare root). eur-lex.europa.eu's own page for Regulation (EU) 2019/1239 also failed to return readable content (empty response). Per this batch's source-substitution instruction, legislation.gov.uk's UK retained-EU-law text of the same regulation was fetched directly instead and confirms, in the regulation's own words: 'A Common Location Database should be established which holds a reference list of location codes, including the United Nations Code for Trade and Transport Locations (UN/LOCODE), the SafeSeaNet-specific codes, and the port facility codes as registered in [IMO GISIS]' (Article 15 / Article 2(1)). Wikipedia's UN/LOCODE article, also read directly, independently confirms UNECE develops and maintains it, though it does not itself mention the EMSWE regulation."
+    evidence: "The report of UN/CEFACT's twelfth session (ECE/TRADE/CEFACT/2006/18, 14 September 2006), read directly 2026-11-23 from the UN Digital Library (unece.org answers 403): UN/CEFACT's group 'had also revised and approved code list updates to the following UNECE Recommendations', including 'Update 2/2005 of UN/LOCODE (a biannual update based on Recommendation 16 - Codes for Trade and Transport Locations)'. That is a 2006 record of the maintenance; current maintenance pages on unece.org could not be read. Regulation (EU) 2019/1239, read directly through publications.europa.eu, names UN/LOCODE among the location codes of the Common Location Database but not who maintains it."
     confidence: high
     valid_from: null
     valid_until: null
 
 sources:
+  - title: "UN/CEFACT, report of the twelfth session (ECE/TRADE/CEFACT/2006/18, 14 September 2006)"
+    url: "https://digitallibrary.un.org/record/582956/files/%5BE_%5DECE_TRADE_CEFACT_2006_18-EN.pdf"
+    publisher: "United Nations (UN Digital Library)"
+    accessed: "2026-11-22"
   - title: "UN/LOCODE — Code List by Country and Territory"
     url: "https://unece.org/trade/cefact/unlocode-code-list-country-and-territory"
     publisher: "United Nations Economic Commission for Europe"
