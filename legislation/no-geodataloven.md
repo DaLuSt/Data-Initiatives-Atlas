@@ -32,7 +32,8 @@ successor: null
 
 domains:
   - DOMAIN-GEOSPATIAL
-organisations: []
+organisations:
+  - NO-KARTVERKET
 related_entities:
   - "NO"
   - EU-INSPIRE

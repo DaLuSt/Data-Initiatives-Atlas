@@ -1,0 +1,17 @@
+date: "2026-11-23"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #770 (laws with no body), a fourth slice: four laws get the body that runs them, each read directly.
+  GB-RPSI-REGULATIONS-2015: regulation 18 applies FOIA 2000 ss50-58 (decisions and enforcement notices by the
+  Commissioner) to re-use, so GB-ICO applies-to it from 2015-07-18 to 2026-09-30 and GB-INFORMATION-COMMISSION
+  from 2026-09-30 (medium, via DUAA 2025 s117 as on its other edges). NO-GEODATALOVEN: geodataforskriften
+  (FOR-2012-08-08-797) § 4, "Statens kartverk er nasjonal geodatakoordinator", so NO-KARTVERKET governed-by it.
+  GB-IPA-AMENDMENT-2024: Part 2 "Oversight arrangements" and section 10 amend the Investigatory Powers
+  Commissioner's functions, so GB-IPCO related-to it (the governing edge stays on GB-IPA-2016).
+  NZ-PRIVACY-AMENDMENT-ACT-2025: the Privacy Commissioner's own page explains IPP 3A and its amended codes, so
+  NZ-OPC related-to it at medium confidence (the Act's text was not read). The #770 measure (national active or
+  adopted laws with no organisation linked either way) goes from 40 to 38 (GB-RPSI-REGULATIONS-2015 already counted as linked through another entity's related_entities). Not done: IE-PSI-REGULATIONS-2021 and
+  IE-SI-133-2007 (no Irish Information Commissioner entity), NL-KADASTERWET (wetten.overheid.nl answered with an
+  "Even geduld" holding page for the rest of the session). Closes the run-history entry for #834.
+prs: [835]
+outcome: merged

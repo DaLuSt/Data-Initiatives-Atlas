@@ -61,6 +61,13 @@ relationships:
     valid_from: null
     valid_until: 2026-09-30
 
+  - type: applies-to
+    target: GB-RPSI-REGULATIONS-2015
+    source: fact
+    evidence: "The Re-use of Public Sector Information Regulations 2015 (S.I. 2015/1415), read directly 2026-11-23 on legislation.gov.uk: regulation 18(1), 'the relevant enforcement and appeals provisions of the 2000 Act apply for the purposes of these Regulations as they apply for the purposes of the 2000 Act', which regulation 18(2) lists as the Freedom of Information Act 2000's 'section 50 (application for decision by Commissioner); (b) section 51 (information notices); (c) section 52 (enforcement notices); … (f) section 57 (appeal against notices served under Part IV)'; regulation 20 provides for information sharing between 'The Information Commissioner' and the Scottish Information Commissioner on appeals under regulations 18 or 19. The Commissioner therefore decided complaints about re-use from the Regulations' entry into force until the Information Commission took over its functions."
+    confidence: high
+    valid_from: 2015-07-18
+    valid_until: 2026-09-30
 sources:
   - title: "Data Protection Act 2018, section 115 (as enacted and as on 1 January 2025)"
     url: "https://www.legislation.gov.uk/ukpga/2018/12/section/115/2025-01-01"

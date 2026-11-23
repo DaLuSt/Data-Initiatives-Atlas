@@ -37,7 +37,9 @@ successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
-organisations: []
+organisations:
+  - GB-ICO
+  - GB-INFORMATION-COMMISSION
 related_entities:
   - GB
   - GB-DATA-GOV-UK

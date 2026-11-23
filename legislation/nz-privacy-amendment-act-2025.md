@@ -24,7 +24,8 @@ successor: null
 
 domains:
   - DOMAIN-GOVERNMENT
-organisations: []
+organisations:
+  - NZ-OPC
 related_entities:
   - NZ
   - NZ-PRIVACY-ACT-2020

@@ -33,7 +33,8 @@ successor: null
 
 domains:
   - DOMAIN-NATIONAL-SECURITY
-organisations: []
+organisations:
+  - GB-IPCO
 related_entities:
   - GB
   - GB-IPA-2016

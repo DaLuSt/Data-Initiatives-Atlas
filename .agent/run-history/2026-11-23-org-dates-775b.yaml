@@ -12,5 +12,5 @@ summary: >
   GB-IPCO (an office, no commencement annotation on IPA s227), GB-HDRUK (Companies House shows company 10887014
   incorporated 27 July 2017 at 215 Euston Road, but HDR UK's own page did not load to tie it to charity
   1194431). Closes the run-history entry for #833.
-prs: []
-outcome: in-progress
+prs: [834]
+outcome: merged

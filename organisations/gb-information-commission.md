@@ -72,6 +72,13 @@ relationships:
     valid_from: 2026-09-30
     valid_until: null
 
+  - type: applies-to
+    target: GB-RPSI-REGULATIONS-2015
+    source: fact
+    evidence: "The Re-use of Public Sector Information Regulations 2015 (S.I. 2015/1415), read directly 2026-11-23 on legislation.gov.uk: regulation 18(1), 'the relevant enforcement and appeals provisions of the 2000 Act apply for the purposes of these Regulations as they apply for the purposes of the 2000 Act', which regulation 18(2) lists as the Freedom of Information Act 2000's 'section 50 (application for decision by Commissioner); (b) section 51 (information notices); (c) section 52 (enforcement notices); … (f) section 57 (appeal against notices served under Part IV)'; regulation 20 provides for information sharing between 'The Information Commissioner' and the Scottish Information Commissioner on appeals under regulations 18 or 19. The Commission inherits that role on the same basis as its edges to GB-DPA-2018 and GB-UK-GDPR: references to the Information Commissioner in UK law are to be read as references to the Information Commission (DUAA 2025 s.117, as quoted on ico.org.uk). Whether the 2015 Regulations were themselves amended to name the Commission was not read."
+    confidence: medium
+    valid_from: 2026-09-30
+    valid_until: null
 sources:
   - title: "Information Commission succeeds the ICO as UK's data protection regulator"
     url: "https://www.gov.uk/government/news/information-commission-succeeds-the-ico-as-uks-data-protection-regulator"
