@@ -23,7 +23,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-11-14"
+last_verified: "2026-11-23"
 previous_version: null
 successor: null
 
@@ -48,8 +48,8 @@ relationships:
   - type: part-of
     target: EU
     source: fact
-    evidence: "Article 29(1) of Regulation (EU) 2022/868 makes it a Commission expert group at Union level. The Commission's page 'Data Governance Act explained' (last updated 3 July 2026, read 2026-11-14 through a summarising fetch tool) says: 'As provided in the DGA, the Commission established the European Data Innovation Board (EDIB)'."
-    confidence: medium
+    evidence: "Article 29(1) of Regulation (EU) 2022/868 makes it a Commission expert group at Union level. The Commission's page 'Data Governance Act explained' (first read 2026-11-14 through a summarising fetch tool; re-read directly 2026-11-23, page last updated 23 November 2026) says: 'As provided in the DGA, the Commission established the European Data Innovation Board (EDIB)', and lists its members: Member State competent authorities for data intermediation and for data altruism, the European Data Protection Board, the European Data Protection Supervisor, ENISA, the Commission, the EU SME Envoy, and other representatives selected through a call for experts."
+    confidence: high
     valid_from: null
     valid_until: null
 
@@ -68,7 +68,8 @@ sources:
 
 > **Created 2026-11-14** (roadmap #771). Articles 1, 29 and 30 (points a to d) and 38 of the Data Governance Act were read
 > directly from the Official Journal text. That the Board exists today rests on the Commission's own explainer page,
-> read through a summarising fetch tool, so `confidence` is medium.
+> read through a summarising fetch tool, so `confidence` was medium. **Re-read directly 2026-11-23** (roadmap #768): the
+> page confirms the quotation and lists the Board's members, so the edge is now `high`.
 
 ## What the sources say
 
@@ -99,4 +100,4 @@ sources:
 
 ## Sources
 
-Listed in frontmatter. The Regulation was read directly; the Commission page through a summarising fetch tool.
+Listed in frontmatter. The Regulation was read directly; the Commission page first through a summarising fetch tool, then directly on 2026-11-23.
