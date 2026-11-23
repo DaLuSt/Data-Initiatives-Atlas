@@ -1,0 +1,13 @@
+date: "2026-11-23"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #767. Three UN/CEFACT edges leave Wikipedia, read in UN documents served by the UN Digital Library
+  (unece.org and its subdomains answer 403). UN-CEFACT part-of UN-UNECE: its 2004 mandate (TRADE/R.650/Rev.3)
+  says the UNECE "established UN/CEFACT", and its 2006 session report (ECE/TRADE/CEFACT/2006/18) that after the
+  2005 reform "UN/CEFACT's new parent body was the Committee on Trade", of which it is a subsidiary body.
+  UN-EDIFACT and UN-LOCODE maintained-by UN-CEFACT: the same report records UN/CEFACT processing data maintenance
+  requests for the D.05B and D.06A UN/EDIFACT directories and approving UN/LOCODE update 2/2005 (a 2006 record,
+  said so in the evidence). discovery/unresolved.md row #209 notes the Digital Library route for the founding
+  year. Closes the run-history entry for #841.
+prs: []
+outcome: in-progress

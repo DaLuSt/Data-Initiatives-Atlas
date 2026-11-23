@@ -10,5 +10,5 @@ summary: >
   Industry (Scotland) Act 2002 is now read (appointment by the Scottish Ministers; no start date, as the role is by
   appointment and the page has no commencement annotation). Tried and left: INTL-CEFTA (entry into force differs by
   party). Closes the run-history entry for #840.
-prs: []
-outcome: in-progress
+prs: [841]
+outcome: merged
