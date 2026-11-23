@@ -19,7 +19,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-11-06"
+last_verified: "2026-11-23"
 previous_version: null
 successor: null
 
@@ -34,7 +34,7 @@ relationships:
   - type: part-of
     target: VC
     source: fact
-    evidence: "Scope anchor under metadata/relationship-types.md §2.3. The NTRC's home page and Legislation page (read 2026-11-06 through a summarising fetch tool): the national telecommunications regulator, working under the Telecommunications Act."
+    evidence: "Scope anchor under metadata/relationship-types.md §2.3. The NTRC's home page and Legislation page (first read 2026-11-06 through a summarising fetch tool; re-read directly 2026-11-23): the National Telecommunications Regulatory Commission of St. Vincent and the Grenadines; the Legislation page lists under Acts the 'Telecommunications Act (Cap 418) of the Revised Laws of St. Vincent and the Grenadines of 2009' and under Treaty the 'ECTEL Treaty 2000', followed by regulations such as the Telecommunications (Universal Service Fund Contribution) Order 2017."
     confidence: high
     valid_from: null
     valid_until: null

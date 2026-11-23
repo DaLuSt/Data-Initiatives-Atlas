@@ -20,7 +20,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-11-06"
+last_verified: "2026-11-23"
 previous_version: null
 successor: null
 
@@ -35,7 +35,7 @@ relationships:
   - type: part-of
     target: GN
     source: fact
-    evidence: "Scope anchor under metadata/relationship-types.md §2.3. ARPT's home page (read 2026-11-06 through a summarising fetch tool): an independent administrative authority with public-law legal personality and administrative and financial autonomy."
+    evidence: "Scope anchor under metadata/relationship-types.md §2.3. ARPT's home page (first read 2026-11-06 through a summarising fetch tool; re-read directly 2026-11-23): 'L’ARPT est une Autorité Administrative Indépendante dotée de la personnalité morale de droit public et d’une autonomie de gestion administrative et financière.'"
     confidence: high
     valid_from: null
     valid_until: null
