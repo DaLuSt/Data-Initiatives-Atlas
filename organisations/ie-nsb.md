@@ -9,6 +9,7 @@ description: >
   Act 1993, that steers the strategic direction of the Central Statistics
   Office and sets priorities for official statistics in Ireland. It has
   eight members.
+  Its statutory basis, section 8(3) of the Statistics Act 1993, came into operation on 1 November 1994 (S.I. No. 323 of 1994).
 
 level: national
 country: IE
@@ -19,9 +20,9 @@ organisation_role: advisory
 confidence: medium
 coverage: low
 verification: primary-source
-start_date: null
+start_date: 1994-11-01
 end_date: null
-last_verified: "2026-10-11"
+last_verified: "2026-11-23"
 previous_version: null
 successor: null
 
@@ -48,6 +49,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "S.I. No. 323/1994 — Statistics Act, 1993 (Commencement) Order, 1994"
+    url: "https://www.irishstatutebook.ie/1994/en/si/0323.html"
+    publisher: "Office of the Attorney General (irishstatutebook.ie)"
+    accessed: "2026-11-23"
   - title: "About us — National Statistics Board"
     url: "https://nsb.ie/aboutus/"
     publisher: "National Statistics Board (Ireland)"
@@ -57,6 +62,8 @@ sources:
 # National Statistics Board (Ireland)
 
 > **Created 2026-10-11** (roadmap #459). The Board's own site was read directly; the Statistics Act 1993 itself was not, and gov.ie's page on the Board returned HTTP 403. The Board is a strategy-setting body over the statistical office, not an independence-compliance watchdog like [[GB-OSR]] or [[FR-ASP]].
+
+> **Dated 2026-11-23** (roadmap #775). irishstatutebook.ie, read directly. Statistics Act 1993, section 8(3): 'There shall be a National Statistics Board'. S.I. No. 323 of 1994, Article 2: 'The 1st day of November, 1994, is hereby appointed as the day on which the Statistics Act, 1993 (No. 21 of 1993), shall come into operation.' That matches the Board's own statement that it was 'established on a statutory basis in November 1994'. `start_date` is 1 November 1994, the statutory establishment; the Board existed as a non-statutory body from 1986.
 
 ## Description
 

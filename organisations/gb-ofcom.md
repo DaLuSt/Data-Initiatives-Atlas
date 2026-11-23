@@ -11,6 +11,7 @@ description: >
   competent authorities under those Regulations, which take a
   sector-by-sector approach rather than appointing a single central
   authority.
+  Established as a body corporate by section 1 of the Office of Communications Act 2002, in force on 1 July 2002.
 
 level: national
 country: GB
@@ -20,9 +21,9 @@ status: active
 confidence: medium
 coverage: low
 verification: primary-source
-start_date: null
+start_date: 2002-07-01
 end_date: null
-last_verified: "2026-08-22"
+last_verified: "2026-11-23"
 previous_version: null
 successor: null
 
@@ -44,6 +45,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Office of Communications Act 2002, section 1"
+    url: "https://www.legislation.gov.uk/ukpga/2002/11/section/1"
+    publisher: "legislation.gov.uk (The National Archives)"
+    accessed: "2026-11-23"
   - title: "The Network and Information Systems Regulations 2018"
     url: "https://www.legislation.gov.uk/uksi/2018/506"
     publisher: "legislation.gov.uk (The National Archives)"
@@ -63,6 +68,8 @@ sources:
 > **Verified 2026-08-22.** The NIS Regulations 2018 statute text at
 > legislation.gov.uk was read directly, confirming Schedule 1's exact
 > wording for Ofcom's designation.
+
+> **Dated 2026-11-23** (roadmap #775). legislation.gov.uk, read directly. Office of Communications Act 2002, section 1(1): 'There shall be a body corporate to be known as the Office of Communications (in this Act referred to as "OFCOM")'. Its commencement annotation: 's. 1(1)-(6)(9)(10) in force at 1.7.2002 by S.I. 2002/1483, art. 2; s. 1(7)(8) in force at 29.11.2002 by S.I. 2002/2955, art. 2'. `start_date` is 1 July 2002, when the body was created; when it took over the functions of the earlier regulators was not read.
 
 ## Description
 
