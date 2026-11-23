@@ -43,12 +43,20 @@ relationships:
   - type: part-of
     target: UN-UNECE
     source: fact
-    evidence: "All four originally-cited unece.org pages returned HTTP 403 on every attempt this pass, including a bare-root-domain test — `unece.org` is blocked domain-wide this session. Per this batch's source-substitution instruction, three alternates were fetched directly and corroborate the claim: Wikipedia's UN/CEFACT article states it is 'created in 1996 as part of the United Nations Economic Commission for Europe (UNECE)... an intergovernmental body within UNECE's framework, with UNECE providing secretarial support'; service-architecture.com states UN/CEFACT 'is situated in the Economic Commission for Europe (UN/ECE)... and reports to ECOSOC'; and Nigeria's NEPC page (a national trade-promotion agency reporting on its own UN/CEFACT Bureau seat) independently describes it as 'an intergovernmental body...within the framework of...ECOSOC', without naming UNECE specifically. Two of the three name UNECE explicitly; the third corroborates the ECOSOC half of the claim."
+    evidence: "Two UN documents, read directly 2026-11-23 as PDFs from the UN Digital Library (unece.org itself answers 403). UN/CEFACT's mandate (TRADE/R.650/Rev.3, 9 March 2004, Economic Commission for Europe): 'Trade facilitation … [is] central to the remit of the United Nations Economic Commission for Europe (UNECE). The UNECE, which acts as the focal point within the United Nations for these matters, established UN/CEFACT with the mandate to achieve improved worldwide coordination and cooperation in these areas', and 'The Centre will report to the Committee for Trade, Industry and Enterprise Development and, if requested, directly present reports on its activities to the UNECE.' The report of UN/CEFACT's twelfth session (ECE/TRADE/CEFACT/2006/18): after the UNECE reform concluded in 2005, 'UN/CEFACT's new parent body was the Committee on Trade', supported by 'its three subsidiary bodies', the first being UN/CEFACT."
     confidence: high
     valid_from: null
     valid_until: null
 
 sources:
+  - title: "UN/CEFACT, report of the twelfth session (ECE/TRADE/CEFACT/2006/18, 14 September 2006)"
+    url: "https://digitallibrary.un.org/record/582956/files/%5BE_%5DECE_TRADE_CEFACT_2006_18-EN.pdf"
+    publisher: "United Nations (UN Digital Library)"
+    accessed: "2026-11-23"
+  - title: "Mandate, terms of reference and procedures for UN/CEFACT (TRADE/R.650/Rev.3, 9 March 2004)"
+    url: "https://digitallibrary.un.org/record/517382/files/%5BE_ECE_%5DTRADE_R.650_Rev.3-EN.pdf"
+    publisher: "United Nations (UN Digital Library)"
+    accessed: "2026-11-22"
   - title: "Trade Facilitation and E-business (UN/CEFACT)"
     url: "https://unece.org/trade/uncefact"
     publisher: "United Nations Economic Commission for Europe (UNECE)"
