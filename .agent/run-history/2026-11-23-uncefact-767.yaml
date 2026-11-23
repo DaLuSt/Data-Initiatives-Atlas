@@ -9,5 +9,5 @@ summary: >
   requests for the D.05B and D.06A UN/EDIFACT directories and approving UN/LOCODE update 2/2005 (a 2006 record,
   said so in the evidence). discovery/unresolved.md row #209 notes the Digital Library route for the founding
   year. Closes the run-history entry for #841.
-prs: []
-outcome: in-progress
+prs: [842]
+outcome: merged

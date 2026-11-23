@@ -20,7 +20,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-11-01"
+last_verified: "2026-11-23"
 previous_version: null
 successor: null
 
@@ -35,7 +35,7 @@ relationships:
   - type: part-of
     target: MZ
     source: fact
-    evidence: "Scope anchor under metadata/relationship-types.md §2.3. INCM's home page and Legislação Institucional page (read 2026-11-01 through a summarising fetch tool): a statutory public institute with its own organic statute (Decreto n.º 39/2021) regulating the postal and telecommunications sectors."
+    evidence: "Scope anchor under metadata/relationship-types.md §2.3. INCM's home page and Legislação Institucional page (first read 2026-11-01 through a summarising fetch tool): a statutory public institute regulating the postal and telecommunications sectors. The Legislação Institucional page, re-read directly 2026-11-23, lists 'Decreto n.º 39-2021 de 17 de Junho – Estatuto Organico do INCM' and, before it, 'Decreto n° 32-2001, de 6 de Novembro – Estatuto Orgânico do INCM', with the internal rules (Diploma Ministerial n.º 139-2021)."
     confidence: high
     valid_from: null
     valid_until: null
@@ -64,7 +64,7 @@ sources:
 
 # National Institute of Communications of Mozambique (INCM)
 
-> **Created 2026-11-01** (roadmap #478). From the regulator's own pages, read through a summarising fetch tool. `start_date` empty: the site says 'since 1992' only; no founding instrument was named.
+> **Created 2026-11-01** (roadmap #478). From the regulator's own pages, read through a summarising fetch tool; the legislation page was re-read directly on 2026-11-23 (roadmap #768), which adds the earlier organic statute of 6 November 2001. `start_date` empty: the site says 'since 1992' only, and no founding instrument from 1992 is listed.
 
 ## Relationships
 
