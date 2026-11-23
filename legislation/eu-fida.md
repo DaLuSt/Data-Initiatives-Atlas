@@ -26,7 +26,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-11-09"
+last_verified: "2026-11-23"
 previous_version: null
 successor: null
 
@@ -53,6 +53,10 @@ relationships:
     valid_until: null
 
 sources:
+  - title: "Legislative Observatory — procedure file 2023/0205(COD)"
+    url: "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2023/0205(COD)"
+    publisher: "European Parliament"
+    accessed: "2026-11-23"
   - title: "Framework for financial data access (FIDA)"
     url: "https://finance.ec.europa.eu/digital-finance/framework-financial-data-access_en"
     publisher: "European Commission — Finance"
@@ -70,6 +74,8 @@ sources:
 # Regulation on a framework for Financial Data Access (FIDA)
 
 > **Re-checked 2026-11-09.** No provisional agreement was found. A search summary of an MLex article of 3 November 2026 (paywalled, not read) says a **draft** of the Commission's 2027 work programme lists the proposal for withdrawal within six months; a Council working document (WK 5041/2026) is described as a Commission non-paper on options for finalising the trilogue, saying the Council had not reached sufficient convergence. A draft work programme is not a decision, so `status` stays `proposed`.
+
+> **Re-checked 2026-11-23** (roadmap #502). The European Parliament's Legislative Observatory (oeil.europarl.europa.eu, procedure 2023/0205(COD)), read directly, gives the "Stage reached in procedure" as "Awaiting Parliament's position in 1st reading" and lists no withdrawal; its most recent entries are the rapporteurs' meetings of January 2026. The draft work-programme report above is still unconfirmed. `status` stays `proposed`.
 
 > **Created 2026-09-05**, closing part of the gap
 > [[EU-FINANCIAL-DATA-SPACE]] itself flagged: "FIDA is not modelled, and

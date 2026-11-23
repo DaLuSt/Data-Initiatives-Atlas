@@ -26,7 +26,7 @@ verification: primary-source
 
 start_date: null
 end_date: null
-last_verified: "2026-11-08"
+last_verified: "2026-11-23"
 previous_version: null
 successor: null
 
@@ -100,6 +100,8 @@ sources:
 # Loi Résilience — France's NIS2 transposition (still a bill)
 
 > **Re-checked 2026-11-08.** The Assemblée nationale's dossier (DLR5L17N50731), read directly, still shows the Senate's adoption on 12 March 2025, the special committee's text (n° 1779) of 10 September 2025 and, as the last step, a public session listed for Monday 9 November 2026; no adoption is shown. A Leto article of 5 November 2026 (secondary) says the conférence des présidents removed the bill from the sittings of 7 and 9 October 2026 without a new date, and that the debates run from 9 to 13 November 2026 on the special committee's text. Nothing after that was read, so the bill's fate in the Assemblée is unknown. `status` stays `planned`.
+
+> **Re-checked 2026-11-23** (roadmap #502). The Assemblée nationale's dossier (DLR5L17N50731), read directly again, now shows the first reading in the Assemblée completed: "Texte adopté ✅ Mardi 17 novembre 2026 — Projet de loi, modifié par l'Assemblée nationale, relatif à la résilience des infrastructures critiques et au renforcement de la cybersécurité le 17 novembre 2026, T.A. n° 366", put online on 23 November 2026. The Assemblée amended the Senate's text, so the Houses have not yet agreed on one text; the dossier also records that the Government engaged the accelerated procedure on 15 October 2024. No further step is listed yet. Not law: `status` stays `planned`.
 
 > **Escalation added 2026-09-13.** A law-firm alert, read directly,
 > confirms the Commission referred France to the CJEU on 8 July 2026 —
