@@ -1,0 +1,13 @@
+date: "2026-11-24"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Roadmap #768, last slice of the session (work done 2026-11-23). MZ-CYBERSECURITY-LAW-13-2026 and
+  MZ-TELECOM-LAW-4-2016 re-read directly on INCM's telecom legislation page. GN-LOI-2015-018: its own page and the
+  first page of its scanned PDF confirm the number L/2015/018/AN (unlike its sibling L/2016/037, whose page title
+  was wrong); the day is blank, and the 13 August 2015 date appears only in the page address, so no start_date.
+  Not reachable: VN-LAW-91-2025 (sbv.gov.vn shell), LR-LTA-CYBERSECURITY-REGS-2026 (liblaw.org shell), and the
+  Belize, Guinea-Bissau, Burundi and São Tomé sources. Session housekeeping, for the owner: two stale remote
+  branches (claude/atlas-adequacy-67, claude/atlas-pickup-23) are fully superseded on main but could not be deleted
+  from this session (permission refused). Closes the run-history entry for #849.
+prs: []
+outcome: in-progress
