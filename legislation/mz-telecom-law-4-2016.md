@@ -19,7 +19,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-11-01"
+last_verified: "2026-11-23"
 previous_version: null
 successor: null
 
@@ -35,7 +35,7 @@ relationships:
   - type: applies-in
     target: MZ
     source: fact
-    evidence: "INCM's Legislação das Telecomunicações page (read 2026-11-01 through a summarising fetch tool) cites 'Lei n.º 4/2016, de 3 de Junho, Lei das Telecomunicações' in the body of its Roaming Regulation."
+    evidence: "INCM's Legislação das Telecomunicações page (first read 2026-11-01 through a summarising fetch tool; re-read directly 2026-11-23) cites the law as the legal basis of a regulation, 'ao abrigo do disposto da alínea c), do artigo 13, conjugado com o n.º 3 do artigo 33 ambos da Lei n.º 4/2016, de 3 de Junho, Lei das Telecomunicações'."
     confidence: medium
     valid_from: null
     valid_until: null

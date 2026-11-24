@@ -19,7 +19,7 @@ coverage: low
 verification: primary-source
 start_date: null
 end_date: null
-last_verified: "2026-11-01"
+last_verified: "2026-11-23"
 previous_version: null
 successor: null
 
@@ -35,7 +35,7 @@ relationships:
   - type: applies-in
     target: MZ
     source: fact
-    evidence: "INCM's Legislação das Telecomunicações page (read 2026-11-01 through a summarising fetch tool) lists 'Lei N.º 13/2026 – Lei de Segurança Cibernética' with no date."
+    evidence: "INCM's Legislação das Telecomunicações page (first read 2026-11-01 through a summarising fetch tool; re-read directly 2026-11-23) lists 'Lei N.º 13/2026 – Lei de Segurança Cibernética' with no date and the summary 'Estabelece o regime jurídico aplicável à Segurança Cibernética, visando garantir a segurança do Estado, das instituições, do cidadão, bem como assegurar a protecção de redes de comunicação'."
     confidence: medium
     valid_from: null
     valid_until: null
