@@ -1,0 +1,12 @@
+date: "2026-11-24"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Owner request: create and queue idea posts for six months. Twenty-one posts (46 to 66) added to section 3 of
+  docs/linkedin-page-posts.md, bringing the posts eligible for automatic posting from 32 to 53, which fills every
+  slot of tools/linkedin_ideas.py's schedule from 27 November 2026 to 26 May 2027 (post 46 is due on 16 March 2027).
+  Each post rests on facts read in primary sources on 2026-11-22/23 and recorded in the listed Atlas entities; all
+  entity IDs exist; opinions are marked; none uses live counts or future-tense dates that could go stale, so none
+  carries a "Check before posting" line. The "Before posting" notes say so. Post text needs the owner, so the pull
+  request is opened without auto-merge.
+prs: []
+outcome: in-progress

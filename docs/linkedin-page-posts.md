@@ -1141,11 +1141,422 @@ Explore: https://dalust.github.io/Data-Initiatives-Atlas/
 
 *Check before posting: Degrees are as of 2026-11-22 and move whenever entities are added.*
 
+### Post 46. A body can exist before it has work to do
+
+*Kind: Metadata. Atlas entities: NL-TIB, NL-WIV-2017.*
+
+```text
+The Dutch review board for intelligence powers, the TIB, existed for eight months before it had a task.
+
+The Intelligence and Security Services Act 2017 came into force in two phases. A royal decree of 19 August 2017 (Stb. 2017, 318) switched on a handful of articles from 1 September 2017, among them Article 32(1): "Er is een toetsingscommissie inzet bevoegdheden". The board was there. Its actual job, reviewing whether ministerial authorisations of special powers are lawful, sits in Article 32(2), and that came into force with the rest of the Act on 1 May 2018.
+
+In the Data Initiatives Atlas the TIB's edge to the Act first started on 1 May 2018. We corrected it to 1 September 2017 after reading the decree itself.
+
+The lesson for anyone who models organisations: "when did it start?" has at least two answers, the day the law creates the body and the day it can act. Pick one convention, write it down, and record the other date in the text.
+
+Which date does your organisation register use?
+
+Explore: https://dalust.github.io/Data-Initiatives-Atlas/
+
+#metadata #datamodelling #Netherlands #intelligenceoversight #datagovernance
+```
+
+### Post 47. The UK GDPR started at eleven at night
+
+*Kind: Fact. Atlas entities: GB-UK-GDPR, EU-GDPR.*
+
+```text
+The UK GDPR has a start time, not just a start date.
+
+Section 3(1) of the European Union (Withdrawal) Act 2018 says that direct EU legislation "forms part of domestic law on and after IP completion day". Section 39 of the European Union (Withdrawal Agreement) Act 2020 defines that day precisely: "31 December 2020 at 11.00 p.m". Eleven at night in London was midnight in Brussels.
+
+So the UK GDPR is not the GDPR that applied in the UK from 25 May 2018. It is a domestic copy that began at a fixed moment and has been amended separately since. In the Data Initiatives Atlas they are two entities, with two start dates, and the UK one starts on 31 December 2020.
+
+For anyone who keeps a register of applicable law, this is the cleanest example I know of why the instrument and its copy need separate records: same text on day one, different histories from day two.
+
+How does your register handle a law that was copied into another legal order?
+
+Explore: https://dalust.github.io/Data-Initiatives-Atlas/
+
+#UKGDPR #GDPR #Brexit #dataprotection #legalmetadata
+```
+
+### Post 48. The page title said 2015, the law said 2016
+
+*Kind: Confession. Atlas entities: GN-LOI-2015-037, GN-ARPT.*
+
+```text
+For more than two weeks the Data Initiatives Atlas carried a Guinean law under the wrong number.
+
+The telecoms regulator's website lists it as "LOI L/2015/037/AN, relative à la cyber sécurité et à la protection des données à caractère personnel". We copied that. When we finally opened the scanned law embedded on the same page, its first page reads "Loi N° L/2016/037/AN". The page's own web address had said 2016 all along.
+
+We corrected the name and kept the old number as an alternative name, so a search for it still finds the record. We did not change the identifier: identifiers in the Atlas are permanent, because renaming one breaks every link that points to it.
+
+Two lessons. A listing page is a pointer, not the source; read the document itself. And when your source was wrong, keep the wrong value findable rather than erasing it, because someone else copied it too.
+
+What is your rule when the catalogue and the document disagree?
+
+#metadata #dataquality #Guinea #legislation #provenance
+```
+
+### Post 49. When a revision is a repeal
+
+*Kind: Metadata. Atlas entities: MN-LAW-ELECTRONIC-SIGNATURES-2011, MN-LAW-ELECTRONIC-SIGNATURES-2021.*
+
+```text
+Mongolia's telecoms regulator lists the "Law of Mongolia on electronic signatures" under the date 15 December 2011. Follow the link and you land on a different law with the same title, dated 17 December 2021 and marked as a revised edition.
+
+The 2011 page on Mongolia's legal information system settles it. A separate law of 17 December 2021 declares the 2011 law invalid, from the day the revised edition takes effect, and the revised edition's Article 35.1 sets that day at 1 May 2022.
+
+In the Data Initiatives Atlas these are now two entities: the 2011 law, superseded, with an end date of 1 May 2022, and the 2021 law, in force from that day, with a "supersedes" edge between them.
+
+A revised edition looks like an update. Legally, here, it is a new law and a repeal. If your register overwrites the old record with the new text, you lose the answer to "which law applied to this signature in 2020?"
+
+Do you model revisions as updates or as successors?
+
+Explore: https://dalust.github.io/Data-Initiatives-Atlas/
+
+#Mongolia #esignature #legalmetadata #versioning #datagovernance
+```
+
+### Post 50. Decided in 1996, established in 1997
+
+*Kind: Fact. Atlas entities: UN-CEFACT, UN-UNECE.*
+
+```text
+When was UN/CEFACT, the UN body behind EDIFACT and the UN/LOCODE, founded? The encyclopedia says 1996. Its own revised mandate of 2000 tells a longer story.
+
+The mandate text was approved by its predecessor, Working Party 4, in September 1996 and by the Committee on the Development of Trade in December 1996. The UN Economic Commission for Europe then "confirmed the establishment of UN/CEFACT at an inter-sessional meeting in February 1997", and the Centre first met in March 1997. It also had a longer name then: the "Centre for the Facilitation of Procedures and Practices for Administration, Commerce and Transport".
+
+So 1996 is the year of the decision and February 1997 the year of the body. The Data Initiatives Atlas now records 1997 in the text, and leaves the start date empty, because no source gives the day.
+
+A year is not a date. If your register pads it to 1 January, it invents a fact.
+
+How does your register store a date when only the month is known?
+
+Explore: https://dalust.github.io/Data-Initiatives-Atlas/
+
+#UNCEFACT #standards #tradefacilitation #metadata #provenance
+```
+
+### Post 51. One person, three titles
+
+*Kind: Observation. Atlas entities: IE-INFORMATION-COMMISSIONER, IE-SI-133-2007, IE-PSI-REGULATIONS-2021.*
+
+```text
+In Ireland, the person who decides freedom of information appeals also decides two other kinds of appeal, under two other titles.
+
+The environmental information regulations of 2007 establish the office of Commissioner for Environmental Information, and add that its holder "shall be the person who, for the time being, holds the office of Information Commissioner". The open data and re-use regulations of 2021 define an "Appeal Commissioner" the same way, and send appeals against a refusal to allow re-use, a charge or a condition there.
+
+So one office answers three questions: may I see this document, may I see this environmental information, and may I re-use this public data.
+
+In the Data Initiatives Atlas this is one organisation with three names and two "governed-by" edges. Modelling it as three bodies would have been easy and wrong.
+
+For a data team, it matters in practice: the route for challenging a refusal to publish a dataset may run through an office whose name has nothing to do with open data.
+
+Do you know who hears appeals on data re-use in your country?
+
+#Ireland #opendata #accesstoinformation #reuse #datagovernance
+```
+
+### Post 52. The statute creates the body, an order switches it on
+
+*Kind: Architecture. Atlas entities: IE-DPC, IE-NSAI.*
+
+```text
+Irish statutes often create a public body in two steps, and the second step is not in the statute.
+
+The Data Protection Act 2018, section 10: "On the establishment day there shall stand established a body to be known as … the Data Protection Commission." Which day? The Data Protection Act 2018 (Establishment Day) Order 2018 answers: "The 25th day of May 2018 is appointed as the establishment day."
+
+The same pattern created the National Standards Authority of Ireland. Its Act of 1996 let the Minister appoint the establishment day; an order of 11 April 1997 brought most of the Act into force from 1 January 1997 and appointed 14 April 1997 as the day the Authority "shall stand established".
+
+For a register of public bodies this means the statute alone never gives you the start date. You need the order, and the order is a separate document with its own number.
+
+If you track when an organisation came into being, are you reading the act or the order?
+
+Explore: https://dalust.github.io/Data-Initiatives-Atlas/
+
+#Ireland #publicsector #legalmetadata #registers #datagovernance
+```
+
+### Post 53. Created in 2007, working in 2008
+
+*Kind: Question. Atlas entities: GB-UKSA, GB-OFCOM.*
+
+```text
+When did the UK Statistics Authority start? Three honest answers.
+
+The Statistics and Registration Service Act 2007, section 1: "There is to be a body corporate to be known as the Statistics Board." That section came into force on 1 December 2007. The Board's statistical functions came into force on 1 April 2008. And the Authority's own home page says it was "established in 2008".
+
+Ofcom has the same shape. Section 1 of the Office of Communications Act 2002 created it as a body corporate, in force on 1 July 2002, well before it took over the work of the regulators it replaced.
+
+The Data Initiatives Atlas picked one convention and wrote it down: the start date is the day the law creates the body, and the day it starts working goes in the text. So the Authority starts on 1 December 2007 and Ofcom on 1 July 2002.
+
+I can argue the other way too. A body with no functions does not do much.
+
+Which date would you put in the field: the day it exists, or the day it works?
+
+Explore: https://dalust.github.io/Data-Initiatives-Atlas/
+
+#metadata #UK #statistics #datamodelling #publicsector
+```
+
+### Post 54. A law that starts in stages
+
+*Kind: Observation. Atlas entities: JP-APPI, FI-SECONDARY-USE-ACT.*
+
+```text
+"In force since" is a single field in most registers. Laws are often not that simple.
+
+Japan's Act on the Protection of Personal Information, Act No. 57 of 2003, took effect on the day of promulgation, 30 May 2003, except Chapters 4 to 6, the obligations of businesses, which followed on a day set by Cabinet Order within two years.
+
+Finland's Act on the Secondary Use of Health and Social Data came into force on 1 May 2019. Its own transitional section then applies some parts later: the advisory service from 1 November 2019, the national Kanta services from 1 January 2021, and the rules on secure processing environments from 1 May 2021.
+
+The Data Initiatives Atlas records the first date of a staged commencement and lists the later steps in the text. That is a compromise. A lawyer asking "did the logging duty apply in 2020?" needs the steps, not the field.
+
+If your compliance register has one date per law, which one did you choose, and does everyone reading it know?
+
+#dataprotection #Japan #Finland #legislation #compliance
+```
+
+### Post 55. The database said no date, the gazette disagreed
+
+*Kind: Confession. Atlas entities: NL-ARCHIEFWET-1995, NL-ARCHIEFWET-2026.*
+
+```text
+On 22 November 2026 I wrote in the Data Initiatives Atlas that no date had been set for the repeal of the Dutch Archives Act 1995. The next day I had to correct it.
+
+The national legislation database showed the repeal "zonder datum inwerkingtreding", without an entry-into-force date. I read that as "not yet decided". It meant "not yet entered in this database". The royal decree had been published on 9 November 2026 as Stb. 2026, 375: "De Archiefwet 2026 … treden in werking met ingang van 1 januari 2027."
+
+I found it by searching the government's publication repository directly, which lists every Staatsblad issue as it appears.
+
+The lesson I took: a consolidated database is a derived product. It lags behind the official publication, sometimes by weeks. When it says "no date", check the gazette before you write "no date" yourself.
+
+Which of your sources is a derived product you treat as the original?
+
+Explore: https://dalust.github.io/Data-Initiatives-Atlas/
+
+#Netherlands #archives #provenance #dataquality #legislation
+```
+
+### Post 56. The website is blocked, the API is not
+
+*Kind: Process. Atlas entities: GB-CSRB, AU-DATA-ACT-2022, CL-LEY-21855, NL-ARCHIEFWET-2026.*
+
+```text
+A practical note for anyone who verifies facts with automated tools: many official websites refuse them, and many of the same institutions publish an API that does not.
+
+From the Data Initiatives Atlas's own work in November 2026:
+• The UK Parliament's bill pages answered "forbidden". Its Bills API gave every stage of the Cyber Security and Resilience Bill, and the Lords Votes API the divisions of 26 October.
+• Australia's Federal Register of Legislation is a JavaScript application. Its API serves each compilation of the Data Availability and Transparency Act as a PDF with a text layer.
+• Chile's Senate website was blocked. Its public web service gave the full passage of the bill that became Ley 21.855.
+• The Dutch legislation database showed a holding page. The publication repository answered a search and pointed to the decree.
+
+Each route is written down in the Atlas, so the next check starts there.
+
+Open data people often treat the API as the advanced option. For verification, it is often the only one that works.
+
+Which official API do you rely on that most people do not know exists?
+
+#opendata #API #verification #publicsector #datagovernance
+```
+
+### Post 57. Named by regulation, not by the Act
+
+*Kind: Policy. Atlas entities: NO-GEODATALOVEN, NO-KARTVERKET.*
+
+```text
+Read Norway's Geodata Act from 2010 and you will not find the name of the body that coordinates the national geodata infrastructure.
+
+Section 3 says: "En nasjonal geodatakoordinator skal koordinere arbeidet med landets infrastruktur for geografisk informasjon", a national geodata coordinator shall coordinate the work, and leaves the coordinator's tasks and organisation to regulation. The Geodata Regulation of 2012 then says, in section 4, in one line: "Statens kartverk er nasjonal geodatakoordinator."
+
+In my reading, that is deliberate. The Act defines a role; the regulation fills it. Changing who holds the role then needs a new regulation, not a new Act.
+
+It also means that a register that only reads statutes will list this law with no responsible body. Until we read the regulation, the Data Initiatives Atlas did exactly that.
+
+If your map of who does what stops at the act of parliament, how many roles are you missing?
+
+#Norway #geodata #INSPIRE #regulation #datagovernance
+```
+
+### Post 58. Who maintains a German government standard?
+
+*Kind: Architecture. Atlas entities: DE-KOSIT, DE-FITKO, DE-IT-PLANUNGSRAT.*
+
+```text
+Germany's XML standards for government data exchange, the XÖV family and XRechnung among them, are run by an institute in Bremen. Its legal place is a good lesson in federal architecture.
+
+FITKO, the federal-state IT cooperation, describes it on its own site. The KoSIT "betreibt die IT-Standards des IT-Planungsrats", runs the standards of the IT Planning Council. It advises "im Auftrag der FITKO". It sits administratively in a unit of Department 4 of Bremen's Senator for Finance. And a framework agreement between FITKO and KoSIT, made on behalf of the IT Planning Council, governs the relationship, with separate agreements for specific tasks.
+
+So it is not a unit of FITKO, and not a federal agency. The Data Initiatives Atlas records it as governed by the IT Planning Council and related to FITKO, and tells the Bremen hosting in the text.
+
+When you depend on a standard, do you know who maintains it, under whose mandate, and what happens if that agreement changes?
+
+Explore: https://dalust.github.io/Data-Initiatives-Atlas/
+
+#Germany #standards #XRechnung #interoperability #egovernment
+```
+
+### Post 59. Modelling a membership that never happened
+
+*Kind: Metadata. Atlas entities: RU, BY, INTL-COE.*
+
+```text
+A knowledge graph is good at saying who is a member. It is harder to say who was, and who never became one.
+
+Russia joined the Council of Europe on 28 February 1996. On 16 March 2022 the Committee of Ministers decided that it "ceases to be a member immediately". In the Data Initiatives Atlas that is one edge with both dates: a membership that ended is a different fact from one that never existed.
+
+Belarus is the other case. Its own foreign ministry says it received special guest status in the Parliamentary Assembly on 16 September 1992, applied for membership on 12 March 1993, and saw both suspended in January 1997. It never joined. The Atlas records that as a plain association with the history in the evidence, not as membership.
+
+If your data model has only "member: yes or no", both countries look the same: no. They are not the same.
+
+How does your data model tell "left", "never joined" and "suspended" apart?
+
+Explore: https://dalust.github.io/Data-Initiatives-Atlas/
+
+#CouncilofEurope #datamodelling #knowledgegraph #metadata #history
+```
+
+### Post 60. "1:1"
+
+*Kind: Policy. Atlas entities: DE-IWG, EU-PSI-DIRECTIVE, DE-DNG.*
+
+```text
+Two characters in a German government bill say a lot about how a country transposes EU law: "1:1".
+
+The bill for Germany's Re-use of Public Sector Information Act, Bundestag document 16/2453 of 25 August 2006, opens with its aim: "Mit dem IWG soll die Richtlinie 2003/98/EG … 1:1 umgesetzt werden." The Directive on the re-use of public sector information was to be transposed one to one: no more, no less.
+
+In my reading, that choice has consequences: a one-to-one transposition adds no national ambition on top of the directive, so the national law has to move when the directive moves. When the EU recast the rules as the Open Data Directive, Germany replaced the IWG with a new Data Use Act, the DNG.
+
+The Data Initiatives Atlas links each national act to the directive it implements, so you can see which countries copied and which added.
+
+When your country transposes a data directive, do you want "1:1", or something more?
+
+#opendata #PSI #Germany #transposition #EUlaw
+```
+
+### Post 61. Standards are maintained, not just published
+
+*Kind: Architecture. Atlas entities: UN-CEFACT, UN-EDIFACT, UN-LOCODE.*
+
+```text
+We tend to think of a standard as a document. The work is in keeping it alive.
+
+The report of UN/CEFACT's twelfth session, held in Geneva in May 2006, gives a glimpse. One working group "had processed 145 Data Maintenance Requests for the D.05B UN/EDIFACT Directory and 112 for the D.06A UN/EDIFACT Directory". Another had approved code list updates, including "Update 2/2005 of UN/LOCODE (a biannual update based on Recommendation 16 - Codes for Trade and Transport Locations)".
+
+Two directory releases, more than 250 change requests, a location code list updated twice a year. That is what "maintained by" means in practice.
+
+The Data Initiatives Atlas records it as an edge: EDIFACT and LOCODE "maintained-by" UN/CEFACT. The edge is short. The work behind it is not.
+
+When your organisation adopts a standard or a code list, do you also budget for following its maintenance releases?
+
+Explore: https://dalust.github.io/Data-Initiatives-Atlas/
+
+#standards #EDIFACT #UNLOCODE #codelists #interoperability
+```
+
+### Post 62. The law that created the regulator is gone, the regulator is not
+
+*Kind: Observation. Atlas entities: DZ-ARPCE, DZ-LOI-18-04, MZ-INCM.*
+
+```text
+A regulator usually outlives the law that created it.
+
+Algeria's Post and Electronic Communications Regulatory Authority describes itself as "créée par la loi n°2000-03 … du 5 août 2000", a law "abrogée par la loi n°18-04", repealed by the 2018 law. The authority carried on under the new law.
+
+Mozambique's communications regulator lists two organic statutes on its own legislation page: one of 6 November 2001 and one of 17 June 2021. Same institute, a new founding text.
+
+For a register this means the "established by" field is a history, not a value. If it holds only the founding law, a reader may conclude the body rests on a repealed act. If it holds only the current law, the founding date looks twenty years too late.
+
+The Data Initiatives Atlas keeps the current basis as a typed edge and the founding law in the text, with its date.
+
+How does your register show that an organisation's legal basis changed while the organisation did not?
+
+#regulation #telecoms #Algeria #Mozambique #legalmetadata
+```
+
+### Post 63. "Part of" hides two kinds of supervision
+
+*Kind: Metadata. Atlas entities: DE-DESTATIS, DE-BMI, DE-BSI.*
+
+```text
+In the Data Initiatives Atlas, Germany's Federal Statistical Office is "part-of" the Federal Ministry of the Interior. Its own organisation page shows that this one edge hides two relationships.
+
+Destatis says it is a federal higher authority "die zum Geschäftsbereich des Bundesministeriums des Innern und für Heimat (BMI) gehört. Das BMI übt die Dienstaufsicht aus." The Interior Ministry supervises it as an organisation: staff, budget, structure. But "die Fachaufsicht liegt bei den für die jeweiligen Statistiken zuständigen Bundesministerien": supervision of the content lies with whichever ministry is responsible for each statistic.
+
+So, for instance, a statistic that belongs to another ministry's field answers on substance to that ministry, while the office as a whole answers to the Interior Ministry.
+
+A single "part-of" is fine for a map. It is not enough for questions like "who can tell this agency what to publish?"
+
+Does your organisation register distinguish administrative from subject-matter supervision?
+
+#Germany #statistics #governance #datamodelling #publicsector
+```
+
+### Post 64. One regulator, four sectors
+
+*Kind: Observation. Atlas entities: MR-ARE, MR-LOI-2013-025, BZ-PUC.*
+
+```text
+Mauritania does not have a telecoms regulator. It has a multisector regulator that also does telecoms.
+
+The Autorité de Régulation was set up by Law 2001-18 of 21 January 2001, "relative à l'Autorité de Régulation multisectorielle". Its own list of reference texts shows the range: the electronic communications law of 2013 and its 2022 amendment, the Water Code, the Postal law, and two Electricity Codes, the older one marked as repealed.
+
+Mauritania is not alone. Belize's Public Utilities Commission, also in the Atlas, regulates electricity, water and telecommunications.
+
+For a map of data governance it matters, because the same body that sets telecoms rules, including on subscriber data, also regulates water and power. A search for "telecoms regulator" that expects a telecoms-only body will miss it.
+
+Does your country regulate digital infrastructure on its own, or together with other utilities?
+
+Explore: https://dalust.github.io/Data-Initiatives-Atlas/
+
+#Mauritania #regulation #telecoms #utilities #datagovernance
+```
+
+### Post 65. Re-use complaints borrow the freedom of information machinery
+
+*Kind: Policy. Atlas entities: GB-RPSI-REGULATIONS-2015, GB-ICO, GB-INFORMATION-COMMISSION.*
+
+```text
+If a UK public body refuses to let you re-use its information, who do you complain to? The answer is in one regulation, and it does not create anything new.
+
+Regulation 18 of the Re-use of Public Sector Information Regulations 2015 says that "the relevant enforcement and appeals provisions of the 2000 Act apply for the purposes of these Regulations". The 2000 Act is the Freedom of Information Act, and the provisions listed include section 50, application for decision by the Commissioner, and section 52, enforcement notices.
+
+So re-use complaints run through the freedom of information machinery of the Information Commissioner, and since 30 September 2026 of the Information Commission that took over its functions. The Data Initiatives Atlas now links the Regulations to both, with dates.
+
+Reusing existing enforcement is efficient. It also means a re-use dispute is decided by a body whose daily work is access to documents, not open data.
+
+Is that a strength or a weakness for open data in practice?
+
+Explore: https://dalust.github.io/Data-Initiatives-Atlas/
+
+#opendata #UK #reuse #FOI #datagovernance
+```
+
+### Post 66. The encyclopedia was close, the gazette was exact
+
+*Kind: Process. Atlas entities: DE-GDNG.*
+
+```text
+Germany's Health Data Use Act, the GDNG, came into force on 27 March 2024. For a while, the Data Initiatives Atlas said 26 March.
+
+The 26th came from an encyclopedia. The Federal Law Gazette, BGBl. 2024 I No. 102, shows why it is off by one: the issue was "Ausgegeben zu Bonn am 26. März 2024", and Article 6(1) puts the Act in force "am Tag nach der Verkündung", the day after promulgation. Promulgation day and entry-into-force day are both real dates. They are different facts.
+
+This is one of many corrections from a project to replace encyclopedia citations in the Atlas with primary sources. Most of the time the encyclopedia was right. When it was wrong, it was usually wrong in exactly this way: close, plausible, and about a neighbouring fact.
+
+For anyone building a register: a secondary source is a good map to the primary one. It is a poor substitute for it.
+
+What is the most plausible wrong date you have found in your own data?
+
+#Germany #healthdata #provenance #dataquality #legislation
+```
+
 ## Before posting
 
 - Sections 1 and 2: the figures in post 1 are as of 2026-10-09; update them to the live counts on the site
   if you post later. Section 2 is the text posted from the profile for release 2026.10.2.
-- Section 3: figures are as of 2026-11-13. The posts marked "Check before posting" depend on dates that
+- Section 3: posts 46 to 66 were added on 2026-11-24 to fill the queue to the end of May 2027. Their facts were read in primary sources on 2026-11-22/23 and are written to stay true when posted (past tense for events, no live counts), so none carries a "Check before posting" line.
+- Section 3: figures in posts 1 to 45 are as of 2026-11-13. The posts marked "Check before posting" depend on dates that
   move (Euro 7 applies from 29 November 2026; Chile's 1 December 2026 date and its postponement bill; the
   Swiss e-ID and the EU KIDS Act; the Irish and French NIS2 bills; India's Data Protection Board; the
   Convention 108+ ratification count; the Digital Omnibus). Re-check those on the day.
