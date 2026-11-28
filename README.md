@@ -375,7 +375,6 @@ data-initiatives-atlas/
 ├── tools/              # generator, release, board, LinkedIn, tests
 │   ├── build_graph.py       # entity files -> graph.json and details.json
 │   ├── check_all.py         # every network-free check, as CI runs them
-│   ├── country_centroids.py # where each country sits on the world map
 │   ├── release.py           # versions, changelog, release PR
 │   ├── update_counts.py     # keeps the README and state.yaml numbers in step
 │   ├── project_board.py     # roadmap board sync (run by a workflow)

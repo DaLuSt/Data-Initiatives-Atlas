@@ -29,7 +29,7 @@ discovery:
   unresolved_rows_open: 98
   candidates_queued: 2
   research_queue_items: 2
-  needs_human_open: 1
+  needs_human_open: 0
 
 validation_status: clean
 

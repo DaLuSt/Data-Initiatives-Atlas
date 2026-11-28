@@ -842,147 +842,24 @@ if (runs('desktop')) {
 
   } catch (e) { crash('force-directed layout (switchable)', e); }
   try {
-  // ── world map layout ──
+  // ── layout switcher ──
+  // The world map layout was removed on 2026-11-28 (roadmap #645 closed): the selector offers
+  // two layouts, and an old link with layout=map opens the grouped layout instead.
   await page.waitForSelector('#layout-mode', { state: 'visible', timeout: 20000 });
-  await pickLayout(page, 'map');
-  await page.waitForTimeout(1200);
-  var mapState = await page.evaluate(() => {
-    const cy = document.getElementById('cy')._cyreg.cy;
-    const groups = {};
-    cy.nodes().forEach(n => {
-      const key = n.data('country') || n.data('region') || ('scope:' + n.data('scope'));
-      if (!groups[key]) groups[key] = { minX: Infinity, maxX: -Infinity, minY: Infinity, maxY: -Infinity };
-      const g = groups[key], x = n.position('x'), y = n.position('y');
-      g.minX = Math.min(g.minX, x); g.maxX = Math.max(g.maxX, x);
-      g.minY = Math.min(g.minY, y); g.maxY = Math.max(g.maxY, y);
-    });
-    // Only country/region clusters carry a real position worth protecting
-    // from overlap — a "scope:" key is the supra-national tray, which is
-    // now deliberately allowed to blend into the map (or into another
-    // tray section) as its members get pulled toward their real
-    // relationships. Two actual countries overlapping would still mean the
-    // map is broken.
-    const keys = Object.keys(groups);
-    // A group keyed by region only (the EU's own entities, which have no country) is placed by
-    // the tray and pulled toward the member states its relationships name, so its bounding box
-    // legitimately spans several countries; measure countries against countries.
-    const countryKeys = new Set(cy.nodes().map(n => n.data('country')).filter(Boolean));
-    const geoKeys = keys.filter(k => countryKeys.has(k));
-    let overlaps = 0;
-    for (let i = 0; i < geoKeys.length; i++) {
-      for (let j = i + 1; j < geoKeys.length; j++) {
-        const a = groups[geoKeys[i]], b = groups[geoKeys[j]];
-        if (a.minX <= b.maxX && b.minX <= a.maxX && a.minY <= b.maxY && b.minY <= a.maxY) overlaps++;
-      }
-    }
-    // DK-GRUNDDATA carries a documented related-to edge straight to
-    // NL-BASISREGISTRATIES (programmes/dk-grunddata.md) — a real
-    // cross-border relationship this layout is now supposed to visibly
-    // shorten, not just avoid distorting the country order for.
-    const dk = cy.getElementById('DK-GRUNDDATA'), nl = cy.getElementById('NL-BASISREGISTRATIES');
-    const relatedPairDist = dk.length && nl.length
-      ? Math.hypot(dk.position('x') - nl.position('x'), dk.position('y') - nl.position('y'))
-      : null;
-
-    // The Council of Europe has real relationship edges to two dozen
-    // member states (metadata/ontology.md's INTL scope) — it should have
-    // visibly left the tray for somewhere near them. Compare it against a
-    // DOMAIN-scoped entity, which (under the default relationship-only
-    // filter) has none: domains are tagged via an association edge, not a
-    // relationship, so a domain has nothing to pull it and stays exactly
-    // where the tray puts it — the fair "unpulled" baseline for how far
-    // from Germany a tray entity would sit with no relationships at all.
-    const coe = cy.getElementById('INTL-COE');
-    const coePos = coe.length ? coe.position() : null;
-    const domainSample = cy.nodes('[scope = "DOMAIN"]')[0];
-    const domainPos = domainSample ? domainSample.position() : null;
-    const deCentre = groups['DE']
-      ? { x: (groups['DE'].minX + groups['DE'].maxX) / 2, y: (groups['DE'].minY + groups['DE'].maxY) / 2 }
-      : null;
-
-    return {
-      nodes: cy.nodes().length, groupCount: keys.length, geoGroupCount: geoKeys.length, overlaps,
-      NO: groups['NO'], ES: groups['ES'], NL: groups['NL'], DE: groups['DE'], DK: groups['DK'],
-      relatedPairDist, coePos, domainPos, deCentre
-    };
-  });
-  check('map layout keeps every node — none dropped for lacking a location',
-    mapState.nodes === TOTAL, mapState.nodes);
-  check('map layout country clusters do not overlap once decluttered',
-    mapState.overlaps === 0, `${mapState.overlaps} overlapping pairs of ${mapState.geoGroupCount} country groups`);
-  // Norway sits further north than Spain — real latitude order should
-  // survive the decluttering, not just "somewhere on the canvas".
-  var noY = (mapState.NO.minY + mapState.NO.maxY) / 2;
-  var esY = (mapState.ES.minY + mapState.ES.maxY) / 2;
-  check('map layout preserves north/south order (Norway above Spain)',
-    noY < esY, `Norway y=${noY.toFixed(0)}, Spain y=${esY.toFixed(0)}`);
-  // Germany sits east of the Netherlands, both west of Spain — the ordering
-  // that matters most is the *immediate* neighbour, not the whole continent.
-  var nlX = (mapState.NL.minX + mapState.NL.maxX) / 2;
-  var deX = (mapState.DE.minX + mapState.DE.maxX) / 2;
-  check('map layout preserves east/west order (Germany right of the Netherlands)',
-    deX > nlX, `Netherlands x=${nlX.toFixed(0)}, Germany x=${deX.toFixed(0)}`);
-
-  // Geography places the cluster; relationships should still nudge an
-  // individual entity toward whatever it is actually connected to — a
-  // country-only placement would leave two related entities exactly as far
-  // apart as their countries happen to be, however closely they relate.
-  if (mapState.relatedPairDist != null && mapState.DK && mapState.NL) {
-    const dkCx = (mapState.DK.minX + mapState.DK.maxX) / 2;
-    const dkCy = (mapState.DK.minY + mapState.DK.maxY) / 2;
-    const nlCx = (mapState.NL.minX + mapState.NL.maxX) / 2;
-    const nlCy = (mapState.NL.minY + mapState.NL.maxY) / 2;
-    const blockDist = Math.hypot(dkCx - nlCx, dkCy - nlCy);
-    check('a cross-border relationship pulls its two entities closer than their countries\' bare separation',
-      mapState.relatedPairDist < blockDist,
-      `edge endpoints ${mapState.relatedPairDist.toFixed(0)}px apart vs ${blockDist.toFixed(0)}px between DK/NL cluster centres`);
-  } else {
-    check('a cross-border relationship pulls its two entities closer than their countries\' bare separation',
-      true, 'DK-GRUNDDATA/NL-BASISREGISTRATIES relationship not present — skipped');
-  }
-
-  // A supra-national body with real edges to member states should have
-  // travelled noticeably closer to them than a tray entity with no edges
-  // at all — the fix this session is specifically about, not just "the
-  // tray doesn't overlap the map".
-  if (mapState.coePos && mapState.domainPos && mapState.deCentre) {
-    const coeDist = Math.hypot(mapState.coePos.x - mapState.deCentre.x, mapState.coePos.y - mapState.deCentre.y);
-    const domainDist = Math.hypot(mapState.domainPos.x - mapState.deCentre.x, mapState.domainPos.y - mapState.deCentre.y);
-    // 0.5 until 2026-10-16, when the 101st country anchor took the ratio from 0.4 to 0.62: the
-    // tray (where entities without a location sit) grows with the number of countries, so
-    // a fixed ratio drifts as the Atlas does. Closer by a quarter still says "pulled toward".
-    // The map layout's usefulness at this size is roadmap #645.
-    check('a well-connected supra-national body ends up far closer to its member states than an unconnected tray entity',
-      coeDist < domainDist * 0.75,
-      `Council of Europe ${coeDist.toFixed(0)}px from Germany vs an unpulled domain entity's ${domainDist.toFixed(0)}px`);
-  } else {
-    check('a well-connected supra-national body ends up far closer to its member states than an unconnected tray entity',
-      true, 'INTL-COE or a DOMAIN entity not present — skipped');
-  }
-
-  var mapHint = await page.textContent('#layout-hint');
-  check('map layout hint explains the supra-national panel',
-    /EU\/UN\/international/i.test(mapHint), mapHint.trim().slice(0, 60) + '…');
-
-  var mapUrl = new URL(page.url()).hash;
-  check('map layout is reflected in the URL hash', /layout=map/.test(mapUrl), mapUrl);
-
-  // A clean URL rather than a bare reload: earlier sections in this suite
-  // leave a focus set, and reloading with a focus but no explicit view
-  // intentionally lands in Explorer (the legacy bare-#ID behaviour) —
-  // not what this check is testing.
+  var layoutOpts = await page.$$eval('#layout-mode option', os => os.map(o => o.value));
+  check('the layout selector offers the grouped and force layouts only',
+    layoutOpts.join(',') === 'grouped,force', layoutOpts.join(','));
+  // A clean URL rather than a bare reload: earlier sections in this suite leave a focus set,
+  // and reloading with a focus but no explicit view intentionally lands in Explorer.
   await page.goto(BASE + '/index.html#view=atlas&layout=map', { waitUntil: 'networkidle' });
   await page.waitForFunction(() => document.getElementById('loading').hidden, null, { timeout: 15000 });
   await page.waitForTimeout(500);
-  var restoredLayout = await page.$eval('#layout-mode', el => el.value);
-  var restoredNodeCount = await page.evaluate(() =>
+  var oldMapLayout = await page.$eval('#layout-mode', el => el.value);
+  var oldMapNodes = await page.evaluate(() =>
     document.getElementById('cy')._cyreg.cy.nodes().length);
-  check('reloading a map layout URL restores the selector and the layout',
-    restoredLayout === 'map' && restoredNodeCount === TOTAL,
-    `selector=${restoredLayout}, nodes=${restoredNodeCount}`);
-
-  await pickLayout(page, 'grouped');
-  await page.waitForTimeout(700);
+  check('an old layout=map link opens the grouped layout with every entity',
+    oldMapLayout === 'grouped' && oldMapNodes === TOTAL,
+    `selector=${oldMapLayout}, nodes=${oldMapNodes}`);
 
   // The layout switcher governs the Global Atlas only.
   await page.click('#view-explorer');
@@ -992,7 +869,7 @@ if (runs('desktop')) {
   await page.click('#view-atlas');
   await page.waitForTimeout(700);
 
-  } catch (e) { crash('world map layout', e); }
+  } catch (e) { crash('layout switcher', e); }
   try {
   // ── comparison matrix ──
   await page.click('#view-compare');

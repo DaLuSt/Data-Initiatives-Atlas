@@ -40,7 +40,7 @@ reorder the list below.
 - **Wording (2):** the three connection classes are now "Relationships",
   "Shared context" and "Mentions", with one-line explanations; the layout
   options are "Grouped by level and country", "Connected entities together" and
-  "World map". `docs/graph.md` keeps the technical names in brackets.
+  "World map" (the world map was removed on 2026-11-28, #645). `docs/graph.md` keeps the technical names in brackets.
 - **Compare (6):** columns are ordered by how much the Atlas records for each
   country, and the 17 countries with nothing recorded are hidden behind a
   checkbox ("Also show 17 countries with nothing recorded", `empty=1` in the
