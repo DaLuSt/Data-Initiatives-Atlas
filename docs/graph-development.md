@@ -125,10 +125,8 @@ links, deep links, shareable filter/view/depth/search/path/layout state in
 the URL hash, every filter, edge-class toggles, path-finding between two
 entities (including a path beyond the current depth, a clear action, and
 the no-path-found case), **the layered layout's block grouping and band
-order**, **the world map layout's geographic ordering, its country/region
-clusters never overlapping, a cross-border relationship visibly pulling
-its two entities closer together, and a supra-national body pulling far
-closer to its member states than an unconnected one**, the comparison
+order**, the layout selector (and an old `layout=map` link opening the
+grouped layout), the comparison
 matrix, the list view and its sorting, and console-error freedom
 throughout.
 
@@ -264,24 +262,6 @@ the critical path (`graph.json`) or in `NODE_DETAIL_FIELDS`
 (`details.json`): if search or filtering needs it, it must be in the light
 payload.
 
-### Country/region centroids
-
-`tools/country_centroids.py` holds a static ISO 3166-1 alpha-2 → (lat, lon)
-table (sourced from a public-domain dataset, see the module docstring for
-provenance) plus a small, hand-maintained `REGION_CENTROIDS` table for
-political groupings like `EU`. `build_graph.py` emits these onto
-`facets.countries[].{lat,lon}` and `facets.regions[].{lat,lon}` for the
-World map layout (see "Restyling" below) to read, so the site itself never
-computes or fetches any geographic data.
-
-The country table is deliberately comprehensive (nearly all ISO codes, not
-just the ~60 currently in use): the Atlas discovers countries from the data
-as they are added, and a new country should not need a companion PR here.
-If one ever does — a code with no entry in either table — `build_graph.py`
-refuses the build, the same way a dangling relationship target does, rather
-than silently shipping a graph the map view then has nowhere to place a
-piece of.
-
 ### A new view
 
 `setView()` toggles `#stage`, `#listview` and `#compareview`, then calls
@@ -299,10 +279,11 @@ first.
 
 ### Restyling
 
-Node **position** has three modes, switched from the sidebar and dispatched
-in `runLayout()`. `sizeBlock()` (sort by connectivity, pick a grid size) and
-`placeBlock()` (drop a sized grid at a centre point) are shared by the two
-that pack nodes into per-scope/per-country blocks:
+Node **position** has two modes, switched from the sidebar and dispatched
+in `runLayout()`. `sizeBlock()` sorts a block's nodes by connectivity and
+picks its grid size. (A third mode, the world map, was removed on
+2026-11-28, roadmap #645; it and `tools/country_centroids.py` are in the git
+history if it comes back.)
 
 - **Grouped** (default) — `layeredPositions()`: bands by level, blocks by
   scope within a band, connectivity order within a block. Pure arithmetic,
@@ -332,80 +313,6 @@ that pack nodes into per-scope/per-country blocks:
     property of this graph and this layout, not a race. The check now
     compares against the grouped layout's own distinct-y count instead of
     an absolute number, which is what actually mattered.
-- **World map** — `mapPositions()`: each country's (or region's) block is
-  centred on its real centroid (`tools/country_centroids.py`, via facets),
-  projected with a plain equirectangular transform (`x = lon`, `y = -lat`,
-  scaled by `MAP_SCALE`). Entities with neither a country nor a region — the
-  `EU`/`UN`/`INTL`/`DOMAIN` scopes (metadata/ontology.md §2.1) that have no
-  single true location — start in a panel beside the map instead of a
-  fabricated point (pinning "Council of Europe" to Strasbourg would need the
-  same sourcing rigor as any other fact here, and a convention with several
-  depositaries has no one point to pin at all), then get pulled toward
-  whatever they actually connect to — see `relaxTowardEdges()` below.
-  - A country's true centroid is routinely closer to its neighbours than its
-    own entity cluster is wide (the Netherlands and Belgium are under 1.5°
-    apart; either cluster alone can be a thousand pixels across), so overlap
-    at the raw projected position is the normal case, not a bug.
-    `declutterCircles()` resolves it: circles are pushed apart only enough
-    to stop overlapping, with a small spring pulling each one back toward
-    its true position every iteration so a crowded region spreads out
-    locally instead of the correction cascading across the whole map. The
-    earlier version had no spring and pushed straight to zero overlap every
-    pair, full strength — with a dozen large mutually-overlapping circles
-    (western Europe) that cascaded until the Netherlands drifted past
-    Portugal's true position. `test_ui.mjs` asserts immediate-neighbour
-    ordering survives (Norway stays north of Spain, Germany stays east of
-    the Netherlands) as well as zero overlap.
-  - `MAP_SCALE` trades off against that cascade: too small, and block size
-    dominates the declutter pass and can invert real ordering between close
-    neighbours; too large, and distant countries end up needing an
-    impractically zoomed-out canvas. 360 was tuned against the current ~60
-    countries and their entity counts — if it drifts again as the Atlas
-    grows, re-tune this constant before touching the declutter algorithm
-    itself.
-  - Country placement alone leaves an individual entity exactly as far from
-    a related entity as their two countries happen to be, however direct
-    the relationship — two national base-registry programmes that reference
-    each other still rendered on opposite sides of their blocks, since nothing
-    about `declutterCircles()` looks at edges at all, only country shapes.
-    `relaxTowardEdges()` runs after the country blocks are placed: a small
-    mass-spring pass where every node has a spring back to its block position
-    (`RELATION_HOME_SPRING`) and a spring toward every entity it actually has
-    an edge to (`RELATION_PULL`, normalised by degree so a hub's dozens of
-    edges do not each pull at full strength). `RELATION_MAX_DRIFT` hard-caps
-    how far any single node may move from its block position, so a country's
-    entities drift toward a connected neighbour's border rather than into the
-    neighbour's own territory — 350 is the largest value that still keeps
-    every pair of clusters non-overlapping against the current data;
-    `test_ui.mjs` checks both that (zero overlap between country
-    clusters (a region-only group such as the EU's own entities spans the member
-    states its relationships name, so it is not measured against them) — a tray entity is allowed to overlap what it gets pulled
-    toward) and that the pull is real (a documented cross-border
-    relationship ends up closer than its two countries' bare cluster
-    separation).
-  - The panel's own starting position is anchored by quantile
-    (`TRAY_ANCHOR_QUANTILE`, 5% of all mapped entities, counted from the
-    west), not to the single leftmost circle overall and not to "countries
-    with at least N entities" — a country whose only content so far is its
-    own anchor node (Mexico, Argentina, Cape Verde…) can sit at an extreme
-    longitude with nothing else nearby, and anchoring the panel to it
-    stranded every supra-national entity tens of thousands of pixels from
-    Europe, where almost all of their actual relationships point. A fixed
-    count per country failed on 2026-10-11, when Canada reached five
-    entities and pulled the panel 30,000 px west of the 12,000 px a panel
-    entity may drift; every far-flung country crosses any such count
-    eventually. Tray-origin nodes also
-    use a far weaker home spring and longer drift cap (`TRAY_HOME_SPRING`,
-    `TRAY_MAX_DRIFT`) than country-anchored ones, since the panel is a
-    parking spot for whatever the relationship pull doesn't reach, not a
-    fact worth preserving the way a country's centroid is — a body like the
-    Council of Europe, with real edges to two dozen member states, ends up
-    rendering near Europe as a result, not at a hard-coded point.
-    `test_ui.mjs` checks it against a domain entity, which (tagged only via
-    an association, not a relationship) has nothing pulling it under the
-    default filters and stays exactly where the panel puts it — the fair
-    "unpulled" baseline for how far from a real country a panel entity
-    would otherwise sit.
 
 `LOD_LABELS` still thins labels above 260 visible nodes.
 

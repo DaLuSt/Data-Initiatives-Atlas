@@ -119,13 +119,13 @@ Part of #500 (what `country` means) and of #508 (the Country filter, the overvie
 | Release | Data and research | Site and tooling | Decisions and schema |
 |---|---|---|---|
 | **2026.11** | #446 English names for the last records; #459 UK gaps | #578 renew the LinkedIn token |  |
-| **2026.12** | | #645 the world map: decide what it is for, then make it usable | The owner's choice among three options (#645) |
+| **2026.12** | | | |
 | **2027.01** | #470 countries, group 1; #502 re-check Q1 | #497 manual accessibility checks |  |
 | **2027.02** | #535 Germany's § 91a question | #452 test with real visitors and devices | #457 vocabulary decisions |
 | **2027.03** | regions: #545 S America; #472 countries, group 3; #460 coverage gaps; #500 data spaces (three parts left); #501 standards bodies |  |  |
 | **2027.04** | regions: #546 C America and #547 Caribbean; #473 countries, group 4; #503 re-check Q2 |  | #506 multilingual names |
 | **2027.05** | regions: #548 N Africa and #549 W Africa; #474 countries, group 5 |  |  |
-| **2027.06** | regions: #550 E Africa and #551 Middle Africa; #475 countries, group 6 | #508 the site at 200 countries (map decision open) |  |
+| **2027.06** | regions: #550 E Africa and #551 Middle Africa; #475 countries, group 6 | #508 the site at 200 countries |  |
 | **2027.07** | regions: #553 W Asia; #476 countries, group 7; #504 re-check Q3 |  |  |
 | **2027.08** | regions: #555 S Asia; #477 countries, group 8 |  | #511 UN system and development banks |
 | **2027.09** | #478 countries, group 9 | #512 linked-data export (a proposal) |  |
@@ -142,8 +142,8 @@ core instruments the Atlas lacks (leads in `discovery/research-queue.md`); #772 
 `docs/repo-scan-2026-11.md`.
 
 **Dependencies worth knowing.** #457 (vocabulary decisions) comes before #513 (does the schema need a
-major version). The manual accessibility checks (#497) update `ACCESSIBILITY.md`. #508 waits for the owner's
-decision on the world map (#645, `.agent/needs-human/world-map-fit.md`). The regional layer (#539) needs the owner's
+major version). The manual accessibility checks (#497) update `ACCESSIBILITY.md`. The world map layout was
+removed on 2026-11-28 (#645 closed, the owner's call). The regional layer (#539) needs the owner's
 answer on whether regions are blocs only (the recommendation) before #540 starts; #511 (UN system) holds the UN
 regional commissions. #578 (the LinkedIn token) needs the owner.
 

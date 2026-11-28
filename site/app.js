@@ -17,7 +17,7 @@
   // the repository's `name`; n.label is whatever is currently shown.
   var nameMode = "en";
   var VIEWS = ["atlas", "explorer", "compare", "list"];
-  var LAYOUT_MODES = ["grouped", "force", "map"];
+  var LAYOUT_MODES = ["grouped", "force"];
   var view = "atlas";      // atlas | explorer | compare | list
   var focusId = null;
   var depth = 2;
@@ -655,7 +655,7 @@
     });
 
     // Labels are governed by min-zoomed-font-size, so tell the user why the
-    // map is unlabelled rather than leaving them to guess.
+    // graph is unlabelled rather than leaving them to guess.
     var zoomHintTimer = null;
     cy.on("zoom", function () {
       clearTimeout(zoomHintTimer);
@@ -1150,9 +1150,7 @@
   }
 
   /** Sort a group of nodes most-connected-first and size the grid it packs
-   *  into — shared by the grouped layout's per-scope blocks and the map
-   *  layout's per-country clusters, which pack a group of nodes the same
-   *  way and differ only in *where* the result gets placed. */
+   *  into, for the grouped layout's per-scope blocks. */
   function sizeBlock(list, deg) {
     list = list.slice().sort(function (a, b) {
       return (deg[b.id()] || 0) - (deg[a.id()] || 0) ||
@@ -1161,17 +1159,6 @@
     });
     var cols = Math.max(2, Math.min(8, Math.ceil(Math.sqrt(list.length * 1.4))));
     return { list: list, cols: cols, rows: Math.ceil(list.length / cols) };
-  }
-
-  /** Place a sized block's nodes into a grid centred on (cx, cy). */
-  function placeBlock(block, cx, cy, gapX, gapY, pos) {
-    var x0 = cx - (block.cols * gapX) / 2, y0 = cy - (block.rows * gapY) / 2;
-    block.list.forEach(function (n, i) {
-      pos[n.id()] = {
-        x: x0 + (i % block.cols) * gapX,
-        y: y0 + Math.floor(i / block.cols) * gapY
-      };
-    });
   }
 
   /** Degree over the *visible* edges, not the whole Atlas — the ordering
@@ -1270,263 +1257,13 @@
     return pos;
   }
 
-  // Pixels per degree of latitude/longitude in the map layout's simple
-  // equirectangular projection (x = lon, y = -lat). Not to scale against
-  // gapX/gapY on purpose: two neighbouring countries' true centroids are
-  // routinely closer together than their entity clusters are wide (the
-  // Netherlands and Belgium are ~150km apart — under 1.5° — while either
-  // cluster alone can be over a thousand pixels across), so overlap between
-  // clusters is the normal case here, not a bug. declutterCircles() is what
-  // actually keeps them apart; this constant only sets their *starting*
-  // point and so which side of a crowded region a cluster starts nudging
-  // apart from.
-  var MAP_SCALE = 360;
-
-  /** Push apart any circles that overlap, while pulling every circle gently
-   *  back toward its true projected ("home") position — a Dorling-cartogram
-   *  declutter: overlap is resolved, but only as much as it has to be, so a
-   *  crowded region (the Benelux countries, the Balkans) spreads out
-   *  relative to the rest of the map instead of the whole layout cascading.
-   *
-   *  Earlier version pushed straight to zero overlap on every pair, full
-   *  strength, every iteration. That is exact for one pair in isolation, but
-   *  with a dozen large mutually-overlapping circles (western Europe) each
-   *  pairwise fix ignored every other constraint on the same circle, and the
-   *  fixes compounded: the Netherlands drifted thousands of pixels west,
-   *  past Portugal's true position, well past where its overlaps required.
-   *  Damping the push and adding the home spring bounds that: a circle only
-   *  moves as far as the crowd around it actually forces it to.
-   *
-   *  Mutates `circles` in place. O(circles² × iterations), which is cheap
-   *  regardless of how many entities are on screen: circles are countries
-   *  and regions, at most a few dozen, never individual nodes. */
-  function declutterCircles(circles, padding) {
-    var n = circles.length;
-    circles.forEach(function (c) { c.hx = c.cx; c.hy = c.cy; });
-    var damping = 0.5, spring = 0.04;
-    for (var iter = 0; iter < 300; iter++) {
-      for (var i = 0; i < n; i++) {
-        for (var j = i + 1; j < n; j++) {
-          var a = circles[i], b = circles[j];
-          var dx = b.cx - a.cx, dy = b.cy - a.cy;
-          var dist = Math.sqrt(dx * dx + dy * dy);
-          var minDist = a.r + b.r + padding;
-          if (dist < minDist) {
-            // Two circles landing on the same exact point (should not
-            // happen with real, distinct centroids) would otherwise divide
-            // by zero — push them apart along an arbitrary axis instead.
-            var ux = dist > 0.01 ? dx / dist : 1;
-            var uy = dist > 0.01 ? dy / dist : 0;
-            var push = (minDist - dist) / 2 * damping;
-            a.cx -= ux * push; a.cy -= uy * push;
-            b.cx += ux * push; b.cy += uy * push;
-          }
-        }
-      }
-      circles.forEach(function (c) {
-        c.cx += (c.hx - c.cx) * spring;
-        c.cy += (c.hy - c.cy) * spring;
-      });
-    }
-  }
-
-  /** Geographic layout: each country's (or region's) cluster sits at its
-   *  real-world centroid (tools/country_centroids.py, via facets), rather
-   *  than an arbitrary grid slot — "what does the Atlas look like laid over
-   *  an actual map" (brief). Entities with neither a country nor a region —
-   *  EU/UN/INTL/DOMAIN-scoped bodies without a single true location — sit in
-   *  a fixed panel beside the map instead of a fabricated point: pinning
-   *  "UN" to Geneva or New York would be inventing a fact the generator
-   *  itself refuses to (build_graph.py's dangling-target refusal, brief §27).
-   */
-  function mapPositions(nodes) {
-    var gapX = 165, gapY = 105, padding = 90;
-    var deg = visibleDegree();
-
-    var countryGeo = Object.create(null), regionGeo = Object.create(null);
-    (G.facets.countries || []).forEach(function (c) { countryGeo[c.code] = c; });
-    (G.facets.regions || []).forEach(function (r) { regionGeo[r.code] = r; });
-
-    var geoGroups = Object.create(null), trayGroups = Object.create(null);
-    nodes.forEach(function (n) {
-      var country = n.data("country"), region = n.data("region");
-      var geo = country ? countryGeo[country] : (region ? regionGeo[region] : null);
-      if (geo) {
-        var key = country || region;
-        (geoGroups[key] || (geoGroups[key] = { geo: geo, list: [] })).list.push(n);
-      } else {
-        var k = n.data("scope") || "—";
-        (trayGroups[k] || (trayGroups[k] = [])).push(n);
-      }
-    });
-
-    var pos = Object.create(null);
-    var circles = Object.keys(geoGroups).map(function (key) {
-      var g = geoGroups[key], block = sizeBlock(g.list, deg);
-      var w = block.cols * gapX, h = block.rows * gapY;
-      return {
-        cx: g.geo.lon * MAP_SCALE, cy: -g.geo.lat * MAP_SCALE,
-        r: Math.sqrt(w * w + h * h) / 2, block: block
-      };
-    });
-    declutterCircles(circles, padding);
-    circles.forEach(function (c) { placeBlock(c.block, c.cx, c.cy, gapX, gapY, pos); });
-
-    // The tray sits left of the decluttered map, ordered the same way the
-    // grouped layout's international band is (metadata/ontology.md §2.1),
-    // so switching between Map and Grouped doesn't reshuffle it.
-    //
-    // Its X position is anchored to the substantial part of the map, not to
-    // the single leftmost circle overall — a country whose only content so
-    // far is its own anchor node (Mexico, Argentina, Cape Verde…) can sit at
-    // an extreme longitude with nothing to keep it company, and anchoring to
-    // it would strand the tray tens of thousands of pixels from the part of
-    // the Atlas anyone is actually looking at.
-    //
-    // "Substantial" used to mean "a country with at least five entities".
-    // That broke the day Canada reached five (anchor plus four): its
-    // longitude put the tray ~30,000 px further west, past the 12,000 px a
-    // tray entity may drift, and the Council of Europe stopped reaching its
-    // member states. A count per country is the wrong unit — every new
-    // far-flung country crosses it eventually — so the tray is anchored by
-    // quantile instead: walking the circles from the west, the first one at
-    // which TRAY_ANCHOR_QUANTILE of all mapped entities lie at or west of it
-    // sets the edge. A handful of western outliers, however many countries
-    // they are, never reach that share on their own.
-    var TRAY_ANCHOR_QUANTILE = 0.05;
-    var totalMapped = 0;
-    circles.forEach(function (c) { totalMapped += c.block.list.length; });
-    var byLeftEdge = circles.slice().sort(function (a, b) {
-      return (a.cx - a.r) - (b.cx - b.r);
-    });
-    var minX = 0, seen = 0;
-    for (var ci = 0; ci < byLeftEdge.length; ci++) {
-      seen += byLeftEdge[ci].block.list.length;
-      if (seen >= totalMapped * TRAY_ANCHOR_QUANTILE) {
-        minX = Math.min(0, byLeftEdge[ci].cx - byLeftEdge[ci].r);
-        break;
-      }
-    }
-
-    var trayOrder = ["INTL", "UN", "DOMAIN"];
-    var trayKeys = Object.keys(trayGroups).sort(function (a, b) {
-      var ia = trayOrder.indexOf(a), ib = trayOrder.indexOf(b);
-      if (ia < 0) ia = trayOrder.length;
-      if (ib < 0) ib = trayOrder.length;
-      return ia - ib || a.localeCompare(b);
-    });
-    var trayX = minX - 480, ty = 0;
-    trayKeys.forEach(function (k) {
-      var block = sizeBlock(trayGroups[k], deg);
-      placeBlock(block, trayX, ty + (block.rows * gapY) / 2, gapX, gapY, pos);
-      ty += block.rows * gapY + 190;
-    });
-
-    // Only geographic (country/region) entities have a true position for
-    // relaxTowardEdges() to protect — the tray is a parking spot for
-    // whatever the relationship pull doesn't reach, not a fact worth
-    // preserving the way a country's centroid is, so tray-origin nodes get
-    // a much longer leash there.
-    var anchored = Object.create(null);
-    Object.keys(geoGroups).forEach(function (key) {
-      geoGroups[key].list.forEach(function (n) { anchored[n.id()] = true; });
-    });
-
-    return relaxTowardEdges(nodes, pos, deg, anchored);
-  }
-
-  // How far an individual entity may drift from the position mapPositions()
-  // assigned it, toward the entities it actually shares an edge with.
-  // Without this, two heavily-connected entities in neighbouring countries
-  // render wherever their own country's grid happens to put them — which
-  // can be opposite corners of their respective blocks, visually distant
-  // despite being directly related, undermining the reason to look at a map
-  // of relationships at all. The cap keeps a country's entities moving
-  // toward a connected neighbour's border rather than into the neighbour's
-  // own territory, so the map is still recognisably geographic.
-  var RELATION_PULL = 0.07;
-  var RELATION_HOME_SPRING = 0.12;
-  var RELATION_MAX_DRIFT = 350;
-  var RELATION_ITERATIONS = 150;
-
-  // Tray-origin entities — EU/UN/INTL/DOMAIN-scoped bodies with no country
-  // or region (mapPositions()'s `anchored` map) — have no true position for
-  // the cap above to protect, so a body like the Council of Europe, with
-  // real edges to two dozen countries, would otherwise still render stuck
-  // in the tray, tens of thousands of pixels from any of them: a much
-  // weaker home spring and a far longer leash let it actually travel to
-  // where its relationships point. A tray entity with no visible edges has
-  // nothing to pull it and simply stays put.
-  var TRAY_HOME_SPRING = 0.006;
-  var TRAY_MAX_DRIFT = 12000;
-
-  /** Mass-spring relaxation, not a real physics simulation: every node has
-   *  one spring back to its `homePos` (from the block it was placed in) and
-   *  one spring per edge pulling it toward whatever it is connected to.
-   *  `deg` normalises the edge springs — without it, a hub with dozens of
-   *  edges would pull, and be pulled, far harder than a node with one, and
-   *  run straight through its drift cap regardless of the cap's intent.
-   *  `anchored[id]` picks which spring/cap pair a node uses — see the two
-   *  constant pairs above. O((nodes + edges) × iterations), with no
-   *  pairwise term, so it stays cheap at the Atlas's current size (a few
-   *  thousand edges at most, with every optional edge class on). */
-  function relaxTowardEdges(nodes, homePos, deg, anchored) {
-    var edges = [];
-    cy.edges().forEach(function (e) {
-      edges.push({ source: e.data("source"), target: e.data("target") });
-    });
-
-    var pos = Object.create(null);
-    nodes.forEach(function (n) {
-      var h = homePos[n.id()];
-      pos[n.id()] = { x: h.x, y: h.y };
-    });
-
-    for (var iter = 0; iter < RELATION_ITERATIONS; iter++) {
-      var force = Object.create(null);
-      nodes.forEach(function (n) { force[n.id()] = { x: 0, y: 0 }; });
-
-      edges.forEach(function (e) {
-        var a = pos[e.source], b = pos[e.target];
-        if (!a || !b) return;
-        var dx = b.x - a.x, dy = b.y - a.y;
-        var pa = RELATION_PULL / (deg[e.source] || 1);
-        var pb = RELATION_PULL / (deg[e.target] || 1);
-        force[e.source].x += dx * pa; force[e.source].y += dy * pa;
-        force[e.target].x -= dx * pb; force[e.target].y -= dy * pb;
-      });
-
-      nodes.forEach(function (n) {
-        var id = n.id(), h = homePos[id], p = pos[id];
-        var spring = anchored[id] ? RELATION_HOME_SPRING : TRAY_HOME_SPRING;
-        force[id].x += (h.x - p.x) * spring;
-        force[id].y += (h.y - p.y) * spring;
-      });
-
-      nodes.forEach(function (n) {
-        var id = n.id(), h = homePos[id], p = pos[id], f = force[id];
-        var nx = p.x + f.x, ny = p.y + f.y;
-        var dx = nx - h.x, dy = ny - h.y;
-        var dist = Math.sqrt(dx * dx + dy * dy);
-        var cap = anchored[id] ? RELATION_MAX_DRIFT : TRAY_MAX_DRIFT;
-        if (dist > cap) {
-          var k = cap / dist;
-          nx = h.x + dx * k; ny = h.y + dy * k;
-        }
-        p.x = nx; p.y = ny;
-      });
-    }
-
-    return pos;
-  }
-
   /** The build-time layout, for the nodes on screen — or null when it cannot
    *  be trusted for this view. It is the layout of the whole Atlas over typed
    *  relationships (tools/build_layout.mjs), so it is used only when that is
    *  also what the page is showing: the default "Connections shown", and a
    *  fingerprint that matches this graph.json. A filtered view then simply
    *  shows its entities where they sit in the full picture, which is cheap at
-   *  any size and keeps the map the same from one view to the next. */
+   *  any size and keeps the picture the same from one view to the next. */
   function storedPositions(nodes) {
     if (!layoutCache) return null;
     if (!(filters.edgeClass.size === 1 && filters.edgeClass.has("relationship"))) return null;
@@ -1565,15 +1302,6 @@
         // animate from, so the motion was only the bloom from the origin.
         animate: false
       }).run();
-      return;
-    }
-
-    if (view === "atlas" && layoutMode === "map") {
-      cy.layout({
-        name: "preset", positions: mapPositions(cy.nodes()),
-        fit: true, padding: 50, animate: false
-      }).run();
-      updateLayoutHint(n);
       return;
     }
 
@@ -1617,12 +1345,7 @@
   function updateLayoutHint(n) {
     var el = $("layout-hint");
     if (!el) return;
-    if (layoutMode === "map") {
-      el.textContent = "Each country's (or region's) entities are clustered at its " +
-        "real-world location; crowded areas spread apart just enough not to " +
-        "overlap. Entities with no single location — EU/UN/international " +
-        "bodies — sit in a panel to the left of the map instead.";
-    } else if (layoutMode !== "force") {
+    if (layoutMode !== "force") {
       el.textContent = "Bands are geographic levels; blocks inside a band are " +
         "scopes, and each block is ordered by how connected its members are " +
         "in the current view.";

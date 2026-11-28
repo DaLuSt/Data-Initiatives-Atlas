@@ -1,0 +1,14 @@
+date: "2026-11-28"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  The owner asked to remove the world map view and everything about it, because it only confused, and may revisit
+  it later. Removed: the "World map" option and its layout code in site/app.js (mapPositions, the declutter and
+  relaxation passes and their constants), tools/country_centroids.py and the lat/lon it put on the country and
+  region facets in graph.json (with the build refusal for a code without a centroid), the map's unit and browser
+  tests, its sections in docs/graph-development.md and docs/scale-check.md, the roadmap entries, and
+  .agent/needs-human/world-map-fit.md. An old link with layout=map opens the grouped layout; a browser test checks
+  it. Roadmap #645 closed as not planned; #508 stays open for its other items. Everything removed is in the git
+  history. Also ticked the nine open country-group issues (#473 to #483) against countries/: 25 countries still
+  have no anchor. Records PR #852 as merged.
+prs: []
+outcome: in-progress
