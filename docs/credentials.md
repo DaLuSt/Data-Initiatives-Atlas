@@ -382,12 +382,17 @@ week, at a random time between 16:00 and 20:00 (Europe/Amsterdam). Until 2026-11
   from a hash of the ISO week, and one minute from 16:00 to 19:44 for each date from a hash of the date, so every
   wake-up agrees on both without keeping state. The draw stops at 19:44 so that the next 15-minute wake-up, at the
   latest 19:45, still posts before 20:00. GitHub starts scheduled runs late at busy times, so a post goes out up to
-  some minutes after its drawn time, never before. If GitHub skips every wake-up of a day until 20:00, that day has
-  no post. The run summary shows the week's two days and the day's drawn time.
+  some minutes after its drawn time, never before. GitHub can also start runs hours late or drop most of them: in
+  the week of 23 November 2026 only one run a day started, around 23:30 local time, so the first two posts were
+  missed. Since then a run that starts after 20:00 on a posting day with no attempt yet still posts ("catching
+  up", until midnight local time), and a second schedule wakes the workflow at 19:37, 20:37 and 21:37 UTC, still
+  the same day in Amsterdam in summer and winter time. A day with no run at all before midnight has no post; a
+  manual run ("Run workflow", dry run off) posts the next one at once. The run summary shows the week's two days
+  and the day's drawn time.
 - **The queue.** The posts in the file, in order, skipping the ones already posted and the ones on hold. A post is
   on hold when the lines under it include one that starts `*Check before posting` or `*Hold`: that is how a post
-  whose facts go stale, or one you want to pull, stays out of the rotation (32 of the 45 are in it today, about
-  sixteen weeks). The text is read from the file on `main` at the moment of posting, so an edit that is merged
+  whose facts go stale, or one you want to pull, stays out of the rotation (53 of the 66 are in it since 24 November 2026, to the end of
+  May 2027). The text is read from the file on `main` at the moment of posting, so an edit that is merged
   before then is what goes out.
 - **The log.** One issue, "LinkedIn idea posts: log" (label `linkedin-ideas`), created by the first run. Each attempt
   adds one comment: `Posted idea post N on YYYY-MM-DD: <link>` or `Failed idea post N on YYYY-MM-DD: <why>`. The next

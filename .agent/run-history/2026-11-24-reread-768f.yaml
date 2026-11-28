@@ -9,5 +9,5 @@ summary: >
   Belize, Guinea-Bissau, Burundi and São Tomé sources. Session housekeeping, for the owner: two stale remote
   branches (claude/atlas-adequacy-67, claude/atlas-pickup-23) are fully superseded on main but could not be deleted
   from this session (permission refused). Closes the run-history entry for #849.
-prs: []
-outcome: in-progress
+prs: [850]
+outcome: merged

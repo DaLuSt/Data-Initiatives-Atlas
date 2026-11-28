@@ -1,0 +1,14 @@
+date: "2026-11-28"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  The first idea posts did not appear. Cause: GitHub started the "*/15 14-18" schedule only once a day, around
+  22:30-23:30 UTC (runs 6-10, 24-27 November), after the 20:00 posting window, so Friday 27 November's post was
+  "missed: today's time was 18:27 and the window closed at 20:00" (replayed locally from the run's timestamp).
+  With the owner's go-ahead, a manual run (dry run off) posted idea post 2 on 2026-11-28 (logged on #809); today's
+  slot is therefore used, and post 3 is next on Wednesday 2 December. Fix, for the owner's review: a run that starts
+  after 20:00 on a posting day with no attempt yet now posts ("catching up", until midnight local time), the drawn
+  times are unchanged, and a second schedule wakes the workflow at 19:37, 20:37 and 21:37 UTC (still the same day
+  in Amsterdam in summer and winter). Tests updated and added (67 pass); docs/credentials.md section 4 and the bank's
+  preamble describe it. Also records PR #851 (posts 46 to 66) as merged.
+prs: []
+outcome: in-progress
