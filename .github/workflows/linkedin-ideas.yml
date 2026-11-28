@@ -13,8 +13,11 @@ name: Post an idea on LinkedIn
 # tools/linkedin_ideas.py whether today is a posting day and the day's time has passed. The
 # week's second day is drawn from a hash of the ISO week and the time (16:00 to 19:44) from a
 # hash of the date, so every wake-up agrees on both. GitHub starts scheduled runs late at busy
-# times, so a post goes out some minutes after its drawn time, never before it. A day on which
-# the schedule is missed entirely gets no post (the window closes at 20:00).
+# times, so a post goes out some minutes after its drawn time, never before it. GitHub can also
+# start them hours late or drop most of them (in November 2026 only one run a day started, near
+# midnight), so a run that starts after 20:00 on a posting day with no attempt yet still posts
+# (catching up, until midnight local time), and a second, hourly schedule wakes the workflow in
+# the evening so such a day has more chances.
 #
 # What has been posted is kept in the comments of one log issue ("LinkedIn idea posts: log",
 # label linkedin-ideas), one line per attempt; the next post is the lowest-numbered one not yet
@@ -31,6 +34,9 @@ on:
     # UTC, Monday to Saturday. 14:00-18:45 UTC covers 16:00-19:45 in Amsterdam in both summer
     # (UTC+2) and winter (UTC+1) time; the local day and time are checked by the tool.
     - cron: "*/15 14-18 * * 1-6"
+    # Evening catch-up wake-ups, UTC: 19:37, 20:37 and 21:37 are still the same day in Amsterdam
+    # in summer (21:37 to 23:37) and in winter (20:37 to 22:37).
+    - cron: "37 19-21 * * 1-6"
   workflow_dispatch:
     inputs:
       dry_run:

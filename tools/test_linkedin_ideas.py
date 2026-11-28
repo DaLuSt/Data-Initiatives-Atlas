@@ -275,11 +275,16 @@ class TestDecide(unittest.TestCase):
         d = self.decide(now, [comment("Failed idea post 2 on 2026-11-14: token")])
         self.assertEqual(d.number, 2)
 
-    def test_the_window_closes_at_20(self):
-        d = self.decide(at(2026, 11, 21, 20, 5))
+    def test_a_late_run_catches_up_until_midnight(self):
+        # GitHub started the only run of Friday 27 November 2026 at 23:36 local time.
+        for h, m in ((20, 5), (23, 36), (23, 59)):
+            d = self.decide(at(2026, 11, 21, h, m))
+            self.assertTrue(d.due, (h, m))
+            self.assertIn("catching up", d.reason)
+
+    def test_catching_up_still_makes_one_attempt_a_day(self):
+        d = self.decide(at(2026, 11, 21, 23, 36), [comment("Failed idea post 2 on 2026-11-21: x")])
         self.assertFalse(d.due)
-        self.assertIn("missed", d.reason)
-        self.assertIn("closed at 20:00", d.reason)
 
     def test_an_empty_queue_is_reported_and_posts_nothing(self):
         done = [comment("Posted idea post 2 on 2026-11-10: x"), comment("Posted idea post 3 on 2026-11-12: x")]
@@ -456,7 +461,7 @@ class TestWorkflow(unittest.TestCase):
         return next(s for s in job["steps"] if s.get("name") == name)
 
     def test_it_runs_every_15_minutes_from_monday_to_saturday(self):
-        (sched,) = self.on["schedule"]
+        sched = self.on["schedule"][0]
         minute, hour, dom, month, dow = sched["cron"].split()
         self.assertEqual((minute, dom, month, dow), (f"*/{li.WAKE_EVERY}", "*", "*", "1-6"))
         self.assertEqual(hour, "14-18")
@@ -465,6 +470,18 @@ class TestWorkflow(unittest.TestCase):
         lo, hi = (int(x) for x in self.on["schedule"][0]["cron"].split()[1].split("-"))
         self.assertLessEqual(lo, 16 - 2)  # 16:00 in summer time is 14:00 UTC
         self.assertGreaterEqual(hi, 18)   # 19:44 in winter time is 18:44 UTC, summer 17:44
+
+    def test_the_evening_catch_up_wake_ups_stay_on_the_same_local_day(self):
+        self.assertEqual(len(self.on["schedule"]), 2)
+        minute, hours, dom, month, dow = self.on["schedule"][1]["cron"].split()
+        self.assertEqual((dom, month, dow), ("*", "*", "1-6"))
+        lo, hi = (int(x) for x in hours.split("-"))
+        for month_ in (1, 7):  # winter and summer time
+            for hour in (lo, hi):
+                utc = dt.datetime(2026, month_, 15, hour, int(minute), tzinfo=dt.timezone.utc)
+                local = utc.astimezone(li.ZoneInfo(li.DEFAULT_TZ))
+                self.assertEqual(local.date(), utc.date(), (month_, hour))
+                self.assertGreaterEqual(local.hour * 60 + local.minute, li.WINDOW_END, (month_, hour))
 
     def test_it_cannot_be_started_by_a_pull_request_or_a_push(self):
         self.assertEqual(set(self.on), {"schedule", "workflow_dispatch"})

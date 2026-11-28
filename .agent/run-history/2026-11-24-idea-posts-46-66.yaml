@@ -10,5 +10,5 @@ summary: >
   rewritten with a device each (a quiz, a poll, a detective story, a countdown, metaphors such as a reboot, a garden,
   the ship of Theseus, an off-by-one error), keeping every fact and quotation. Post text needs the owner, so the pull
   request is opened without auto-merge.
-prs: []
-outcome: in-progress
+prs: [851]
+outcome: merged

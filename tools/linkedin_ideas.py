@@ -54,11 +54,15 @@ SATURDAY = 5                    # Monday is 0
 WEEKDAYS = (0, 1, 2, 3, 4)      # the second posting day of a week is one of Monday to Friday
 DAY_NAMES = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
 WINDOW_START = 16 * 60          # 16:00, in minutes after midnight
-WINDOW_END = 20 * 60            # 20:00: nothing is posted at or after this
+WINDOW_END = 20 * 60            # 20:00: the end of the window the posting time is drawn from
 WAKE_EVERY = 15                 # the workflow's cron step, in minutes
 # The drawn minute stays a full wake-up step before the end, so the run that catches it
-# (at most WAKE_EVERY minutes later) is still inside the window: 16:00 to 19:44.
+# (at most WAKE_EVERY minutes later) is normally still inside the window: 16:00 to 19:44.
 DRAW_END = WINDOW_END - WAKE_EVERY
+# GitHub can start scheduled runs hours late, or drop most of them (in November 2026 only one run
+# a day started, around 23:30 local time). A run that starts after the window, on a posting day
+# that has had no attempt yet, still posts: catching up is better than losing the day. The local
+# day ends at midnight, so the latest catch-up is 23:59.
 BANK_START = "## 3. Idea posts"
 HOLD_RE = re.compile(r"^\*(Check before posting|Hold)", re.M)
 LEDGER_RE = re.compile(r"^(Posted|Failed) idea post (\d+) on (\d{4}-\d{2}-\d{2}):", re.M)
@@ -174,7 +178,7 @@ def decide(ideas: list[Idea], comments: list[dict], now: dt.datetime, *, trusted
     if minute < target:
         return d(False, f"too early: today's time is {hhmm(target)}")
     if minute >= WINDOW_END:
-        return d(False, f"missed: today's time was {hhmm(target)} and the window closed at {hhmm(WINDOW_END)}")
+        return d(True, f"catching up: today's time was {hhmm(target)} and this run started after {hhmm(WINDOW_END)}")
     return d(True, f"today's time ({hhmm(target)}) has passed")
 
 
