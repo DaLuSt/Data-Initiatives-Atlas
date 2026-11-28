@@ -1,0 +1,20 @@
+date: "2026-11-28"
+session: "session_01Qe7qNwdUnJrG4j57hHgS4Q"
+summary: >
+  Three small pieces from open roadmap issues. #773: tools/source_hosts.py had no tests; tools/test_source_hosts.py
+  adds 17 (registrable domains, the institutional sort, collect() on a fake entity set, the report's parts, the CLI)
+  and is in tools/check_all.py, which now runs 18 checks. The generated discovery/reverification-allowlist.md was
+  stale (dated 2026-11-09, 1,286 entities) and is regenerated. The other #773 items (pinning actions by commit, a
+  shared LinkedIn action, CodeQL) touch workflows and are left for the owner. #770: four Spanish laws now say which
+  body their own BOE text names, read 2026-11-28: Ley 27/2006 (every "autoridad pública", Art. 2.4; review under
+  Art. 20), RDL 19/2018 (the Banco de España authorises payment institutions, Art. 11.2; not an entity yet),
+  Ley 37/2007 (the body holding the documents, Art. 10.1; the ministry's high-value list through the División
+  Oficina del Dato, Art. 3 ter.3; sanctions by the competent bodies, Art. 11) and RDL 24/2021 (which brought the
+  Art. 3 ter role in). None links an organisation, because none of the bodies is an entity. #775: Malaysia's PDPA
+  2010 is dated 15 November 2013 from the data protection department's own pages (the Act's text for s. 1(2), and
+  its page on the commencement order); the Philippines (privacy.gov.ph, officialgazette.gov.ph: 403), Jamaica
+  (oic.gov.jm: JavaScript) and Canada (the consolidated Act gives no commencement date) were tried and are not
+  dated. Riigi Teataja's JSON interface was found and recorded in discovery/unresolved.md's source-block table; it
+  gives metadata, not text. Records #853 as merged.
+prs: []
+outcome: in-progress
