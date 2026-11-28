@@ -10,5 +10,5 @@ summary: >
   it. Roadmap #645 closed as not planned; #508 stays open for its other items. Everything removed is in the git
   history. Also ticked the nine open country-group issues (#473 to #483) against countries/: 25 countries still
   have no anchor. Records PR #852 as merged.
-prs: []
-outcome: in-progress
+prs: [853]
+outcome: merged

@@ -54,6 +54,8 @@ CHECKS: list[tuple[str, list[str], str]] = [
     ("Test the browser suite's CI wiring", ["python", "tools/test_browser_ci.py"], "."),
     # The headline numbers in README.md and .agent/state.yaml: the rewriting rules, and that they match the data.
     ("Test the count updater", ["python", "tools/test_update_counts.py"], "."),
+    # The generator of discovery/reverification-allowlist.md: domains, counts and the report's parts.
+    ("Test the source-host report", ["python", "tools/test_source_hosts.py"], "."),
     # Fails when a change to the data left the README or state.yaml numbers behind. Fix: python tools/update_counts.py
     ("Check the headline numbers", ["python", "tools/update_counts.py", "--check"], "."),
     # Proves the graph can still be generated from this data (the generated files are not committed).
